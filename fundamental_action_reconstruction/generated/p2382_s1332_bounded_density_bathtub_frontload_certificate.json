@@ -1,0 +1,383 @@
+{
+  "bounded_density_bathtub_frontload_theorem": {
+    "artifact_replay": {
+      "p2377_packet_id": "P2377",
+      "p2379_packet_id": "P2379",
+      "p2380_packet_id": "P2380",
+      "p2381_packet_id": "P2381"
+    },
+    "bounded_density_bathtub_frontload_certificate": {
+      "bathtub_variational_reduction": {
+        "closed_form_weight": "W_M(d)=M*log((1+beta_tors*d+(d^eta-beta_tors*d)/M)/(1+beta_tors*d))",
+        "contrast_function": "q(s)=A_s(5)-3*A_s(1)",
+        "density_class": "0<=rho(s)<=M, integral_0^1 rho(s) ds=1",
+        "maximizer_when_q_decreases": "rho_M(s)=M on 0<=s<=1/M and 0 otherwise",
+        "qprime_formula": "q'(s)=3*Delta1^2/u1(s)^2-Delta5^2/u5(s)^2"
+      },
+      "dense_cap_threshold_audit": {
+        "cap_test_exceeds_all_grid_thresholds": true,
+        "evaluated_points": 6561,
+        "grid_points_per_axis": 81,
+        "max_cap_threshold_row": {
+          "beta_tors": 0.1,
+          "cap_threshold_gt": 1.574821357435363,
+          "early_interval_length_lt": 0.6349926582330111,
+          "early_support_fraction_lt": 0.6349926582330111,
+          "endpoint_cap_over_uniform": 1.574821357435363,
+          "eta": 1.8
+        }
+      },
+      "midpoint_replay_at_worst_corner": {
+        "absolute_error": 2.24773535340006e-08,
+        "closed_form_q_integral": 1.411521119955523,
+        "midpoint_q_integral": 1.4115210974781696,
+        "steps": 20000
+      },
+      "qprime_monotonicity_certificate": {
+        "consequence": "q(s)=A5(s)-3*A1(s) is strictly decreasing on the audited rectangle, so the bathtub maximizer under 0<=rho<=M puts all permitted density at earliest transport time.",
+        "failure_count": 0,
+        "interval_box_count": 32768,
+        "interval_grid_per_axis": 32,
+        "qprime_strictly_negative_on_all_boxes": true,
+        "worst_qprime_box": {
+          "beta_tors_interval": {
+            "hi": 0.003125,
+            "lo": 0.0
+          },
+          "eta_interval": {
+            "hi": 1.8062500000000001,
+            "lo": 1.8
+          },
+          "qprime_interval": {
+            "hi": -0.10183877475857073,
+            "lo": -0.23176391455391632
+          },
+          "s_interval": {
+            "hi": 1.0,
+            "lo": 0.96875
+          }
+        }
+      },
+      "rectangle_cap_acceptance_certificate": {
+        "density_cap_test_M": 1.6,
+        "failure_count": 0,
+        "interval_box_count": 16384,
+        "interval_grid_per_axis": 128,
+        "strictly_positive_margin_on_all_boxes": true,
+        "worst_corner_replay": {
+          "W1": 0.6608197019896755,
+          "W5": 3.3939802259245497,
+          "a": 1.1308053746346958,
+          "a_over_b": 0.3308275319314663,
+          "b": 3.4181114492881797,
+          "beta_tors": 0.1,
+          "d5_chamber": true,
+          "d5_margin_b_minus_3a": 0.02569532538409236,
+          "density_cap_M": 1.6,
+          "early_interval_length_1_over_M": 0.625,
+          "eta": 1.8
+        },
+        "worst_margin_box": {
+          "W1_interval": {
+            "hi": 0.6624263251718078,
+            "lo": 0.660067645571599
+          },
+          "W5_interval": {
+            "hi": 3.4021059426681166,
+            "lo": 3.3934806347507305
+          },
+          "beta_tors_interval": {
+            "hi": 0.1,
+            "lo": 0.09921875000000001
+          },
+          "eta_interval": {
+            "hi": 1.8015625,
+            "lo": 1.8
+          },
+          "margin_interval": {
+            "hi": 0.03607721138188946,
+            "lo": 0.02037586466387653
+          }
+        }
+      },
+      "rectangle_worst_cap_source_obligation": {
+        "below_threshold_negative_control": {
+          "W1": 0.658916742583113,
+          "W5": 3.3625760212968427,
+          "a": 1.128902415228133,
+          "a_over_b": 0.3333333334341123,
+          "b": 3.3867072446604727,
+          "beta_tors": 0.1,
+          "d5_chamber": false,
+          "d5_margin_b_minus_3a": -1.0239267211886727e-09,
+          "density_cap_M": 1.5748213564353628,
+          "early_interval_length_1_over_M": 0.6349926586362268,
+          "eta": 1.8
+        },
+        "below_threshold_support_score": {
+          "a_over_b": 0.3333333334341123,
+          "d5_chamber": false,
+          "maximizer_count": 24,
+          "maximizer_h1_h5_pair_distribution": {
+            "3,3": 24
+          },
+          "maximum_score": 13.546828979665818
+        },
+        "beta_tors": 0.1,
+        "cap_test_positive_replay": {
+          "W1": 0.6608197019896755,
+          "W5": 3.3939802259245497,
+          "a": 1.1308053746346958,
+          "a_over_b": 0.3308275319314663,
+          "b": 3.4181114492881797,
+          "beta_tors": 0.1,
+          "d5_chamber": true,
+          "d5_margin_b_minus_3a": 0.02569532538409236,
+          "density_cap_M": 1.6,
+          "early_interval_length_1_over_M": 0.625,
+          "eta": 1.8
+        },
+        "cap_test_support_score": {
+          "a_over_b": 0.3308275319314663,
+          "d5_chamber": true,
+          "maximizer_count": 12,
+          "maximizer_h1_h5_pair_distribution": {
+            "0,4": 12
+          },
+          "maximum_score": 13.672445797152719
+        },
+        "cap_threshold_gt": 1.574821357435363,
+        "early_interval_length_lt": 0.6349926582330111,
+        "early_support_fraction_lt": 0.6349926582330111,
+        "endpoint_cap_over_uniform": 1.574821357435363,
+        "eta": 1.8
+      },
+      "sample_local_cap_table": [
+        {
+          "beta_tors": 0.0,
+          "cap_test_chamber_margin": 0.30230299088399937,
+          "cap_test_margin": 0.22926291467035775,
+          "cap_test_support_score": {
+            "a_over_b": 0.30840748542719115,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.170790098284893
+          },
+          "cap_threshold_gt": 1.3707370853296423,
+          "early_interval_length_lt": 0.7295345042477746,
+          "early_support_fraction_lt": 0.7295345042477746,
+          "endpoint_cap_over_uniform": 1.3707370853296423,
+          "eta": 1.8
+        },
+        {
+          "beta_tors": 0.01,
+          "cap_test_chamber_margin": 0.2633684448033633,
+          "cap_test_margin": 0.2055353979473591,
+          "cap_test_support_score": {
+            "a_over_b": 0.3112037565845811,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.868262208145692
+          },
+          "cap_threshold_gt": 1.394464602052641,
+          "early_interval_length_lt": 0.7171211076480593,
+          "early_support_fraction_lt": 0.7171211076480593,
+          "endpoint_cap_over_uniform": 1.394464602052641,
+          "eta": 1.8
+        },
+        {
+          "beta_tors": 0.1,
+          "cap_test_chamber_margin": 0.02569532538409236,
+          "cap_test_margin": 0.0251786425646372,
+          "cap_test_support_score": {
+            "a_over_b": 0.3308275319314663,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 13.672445797152719
+          },
+          "cap_threshold_gt": 1.574821357435363,
+          "early_interval_length_lt": 0.6349926582330111,
+          "early_support_fraction_lt": 0.6349926582330111,
+          "endpoint_cap_over_uniform": 1.574821357435363,
+          "eta": 1.8
+        },
+        {
+          "beta_tors": 0.0,
+          "cap_test_chamber_margin": 0.5403965503956338,
+          "cap_test_margin": 0.36632283328797555,
+          "cap_test_support_score": {
+            "a_over_b": 0.2912541521896911,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 17.12316433633143
+          },
+          "cap_threshold_gt": 1.2336771667120245,
+          "early_interval_length_lt": 0.8105848328742138,
+          "early_support_fraction_lt": 0.8105848328742138,
+          "endpoint_cap_over_uniform": 1.2336771667120245,
+          "eta": 1.9
+        },
+        {
+          "beta_tors": 0.01,
+          "cap_test_chamber_margin": 0.5011259218310018,
+          "cap_test_margin": 0.34841804821006184,
+          "cap_test_support_score": {
+            "a_over_b": 0.2936070540609216,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.819292116256246
+          },
+          "cap_threshold_gt": 1.2515819517899383,
+          "early_interval_length_lt": 0.7989888305514947,
+          "early_support_fraction_lt": 0.7989888305514947,
+          "endpoint_cap_over_uniform": 1.2515819517899383,
+          "eta": 1.9
+        },
+        {
+          "beta_tors": 0.1,
+          "cap_test_chamber_margin": 0.26047029601034577,
+          "cap_test_margin": 0.22078865255851943,
+          "cap_test_support_score": {
+            "a_over_b": 0.30956488777474345,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 14.611545679657732
+          },
+          "cap_threshold_gt": 1.3792113474414807,
+          "early_interval_length_lt": 0.7250520392360893,
+          "early_support_fraction_lt": 0.7250520392360893,
+          "endpoint_cap_over_uniform": 1.3792113474414807,
+          "eta": 1.9
+        },
+        {
+          "beta_tors": 0.0,
+          "cap_test_chamber_margin": 0.7811888281434753,
+          "cap_test_margin": 0.47852199923262684,
+          "cap_test_support_score": {
+            "a_over_b": 0.2757437114663606,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 18.086333447322797
+          },
+          "cap_threshold_gt": 1.1214780007673733,
+          "early_interval_length_lt": 0.8916804425193792,
+          "early_support_fraction_lt": 0.8916804425193792,
+          "endpoint_cap_over_uniform": 1.1214780007673733,
+          "eta": 2.0
+        },
+        {
+          "beta_tors": 0.01,
+          "cap_test_chamber_margin": 0.7416254863876484,
+          "cap_test_margin": 0.4647064390057454,
+          "cap_test_support_score": {
+            "a_over_b": 0.2777224096587933,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 17.781290374482833
+          },
+          "cap_threshold_gt": 1.1352935609942547,
+          "early_interval_length_lt": 0.8808294474287612,
+          "early_support_fraction_lt": 0.8808294474287612,
+          "endpoint_cap_over_uniform": 1.1352935609942547,
+          "eta": 2.0
+        },
+        {
+          "beta_tors": 0.1,
+          "cap_test_chamber_margin": 0.4983671782657728,
+          "cap_test_margin": 0.3720210409039917,
+          "cap_test_support_score": {
+            "a_over_b": 0.2906369455230401,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.56313320867944
+          },
+          "cap_threshold_gt": 1.2279789590960084,
+          "early_interval_length_lt": 0.8143462007982304,
+          "early_support_fraction_lt": 0.8143462007982304,
+          "endpoint_cap_over_uniform": 1.2279789590960084,
+          "eta": 2.0
+        }
+      ]
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "probe_id": "P2382_S1332_BOUNDED_DENSITY_BATHTUB_FRONTLOAD_CERTIFICATE",
+    "source_artifacts": {
+      "P2377_TRANSPORT_PRIMITIVE": "fundamental_action_reconstruction/generated/p2377_s1327_damping_compression_transport_primitive_uniform_coupling_theorem.json",
+      "P2379_FRONT_LOADED_PROFILE": "fundamental_action_reconstruction/generated/p2379_s1329_front_loaded_normalized_transport_density_existence_probe.json",
+      "P2380_RECTANGLE_MONOTONICITY": "fundamental_action_reconstruction/generated/p2380_s1330_front_loaded_profile_rectangle_monotonicity_certificate.json",
+      "P2381_AFFINE_SOURCE_OBLIGATION": "fundamental_action_reconstruction/generated/p2381_s1331_affine_frontload_source_obligation_theorem.json"
+    },
+    "theorem_export": {
+      "claim": "For the audited P2377 homotopy, the d5-vs-h1 decision for arbitrary normalized bounded densities reduces to a one-dimensional bathtub problem. Interval arithmetic certifies q(s)=A5(s)-3*A1(s) is decreasing on the P2376 rectangle, so the optimal M-capped unit density is the early bang-bang profile. At the worst corner (eta=9/5,beta_tors=0.1), the cap threshold is about 1.5748213574; the explicit cap M=1.6 is rectangle-uniformly sufficient.",
+      "not_licensed": [
+        "strict variational source theorem deriving an M-capped bang-bang density from nadsoliton dynamics",
+        "promotion of rho_M or W_M into L_total",
+        "claim that the cap M source is strict-core supplied",
+        "QW-2191 discharge",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Replaces the affine-only profile with a variational reduction over all normalized densities satisfying 0<=rho<=M.",
+        "Exports the closed-form capped bang-bang transport weight W_M(d).",
+        "Provides interval acceptance for M=1.6 and a below-threshold negative control at the worst corner."
+      ],
+      "theorem_name": "P2382 bounded-density bathtub frontload certificate"
+    },
+    "theorem_fingerprint_sha256": "5a6825117e66330e856a726df6d6bef943eac1b0364196c92814721bd921f0df"
+  },
+  "gatekeeper_checks": {
+    "below_threshold_negative_control_fails_d5": true,
+    "cap_test_rectangle_margin_positive": true,
+    "cap_test_selects_d5_supports": true,
+    "docs_updated_with_p2382_bathtub_certificate": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2377_loaded": true,
+    "p2379_loaded": true,
+    "p2380_loaded": true,
+    "p2381_loaded": true,
+    "qprime_negative_certified": true,
+    "source_artifacts_present": true,
+    "worst_cap_threshold_below_cap_test": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2382",
+  "produced_by": "p2382_s1332_bounded_density_bathtub_frontload_certificate.py",
+  "recommended_next_honest_step": "P2382 reduces arbitrary normalized M-bounded profile selection to an early bang-bang source obligation. A future strict theorem must derive a bounded source with M exceeding the certified cap threshold, or keep that cap/frontload as an explicit non-strict premise.",
+  "result_kind": "BOUNDED_DENSITY_BATHTUB_FRONTLOAD_CERTIFICATE",
+  "schema_version": "p2382_s1332_v1",
+  "stage_id": "S1332",
+  "status": "OPEN_PROGRESS_BOUNDED_DENSITY_BATHTUB_FRONTLOAD_CERTIFICATE_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}
