@@ -280,3 +280,167 @@ This is still premise-based.  The phase origin and handedness are not derived fr
 ---
 
 This sheet is intentionally operational and strict-lane only. It does **not** claim theorem-grade global closure, selector closure (`QW-2191`), nor full ToE closure.
+
+## P2367/S1317 selector phase-origin admissibility no-go boundary
+
+`P2367/S1317` continues the selector audit after `P2366/S1316` by separating two facts that must not be conflated:
+
+```text
+chiral bispectrum orientation marker  !=  strict-core source origin
+```
+
+The finite computation verifies that, for each fixed chiral orientation, the twelve source choices form one free transitive `C12` translation orbit.  Hence any translation-invariant strict-core score is constant on the source orbit and cannot localize `chi11_selector_source`.
+
+The audited candidate classes are:
+
+```text
+translation-invariant powers / histograms        -> rejected as source localizers
+complete translation-invariant bispectrum        -> source-blind, but useful as chiral orientation marker
+non-coprime raw phase modes                      -> rejected as full source localizers because they alias
+coprime phase + calibrated phase-origin reference -> best operational candidate, but premise-based
+```
+
+This preserves the P2366 positive boundary: coprime phases can recover source only after a phase-origin reference is supplied.  It also preserves the hard limit: no strict-core phase-origin theorem, no `beta_tors -> chi11` theorem, no legacy role transfer, no QW-2191 discharge, and no ToE closure are claimed.
+
+## P2368/S1318 self-recorded endpoint anchor selector candidate
+
+`P2368/S1318` takes the next selector step after the P2367 no-go boundary.  Instead of asking a translation-invariant scalar to choose an absolute source, it audits a conditional **self-recorded ordered d5 endpoint anchor**:
+
+```text
+ordered d5 support + self-recorded arrow action -> ledger (2,2,2,1,1)
+ledger endpoint values -> source/orientation extractor
+```
+
+The finite certificate enumerates all 35 positive five-part ledgers of total 8 and finds a unique lexicographic `(ripple, arrow)` minimizer `(2,2,2,1,1)`.  Given that ordered ledger on the d5 path, the endpoint extractor recovers all 24 source/orientation rows and is D12-equivariant over 576 shift/reflection cases.
+
+This is stronger than a bare Fourier phase-origin premise because the source/orientation are read from structured finite self-record data.  It still does not close QW-2191: strict nadsoliton dynamics has not yet derived the d5 support, the self-recorded arrow action, the endpoint-valued ledger, or the endpoint-source convention.  No `beta_tors -> chi11` theorem, no legacy role transfer, and no ToE closure are claimed.
+
+## P2369/S1319 closed-form ledger uniqueness theorem
+
+`P2369/S1319` strengthens the P2368 ledger step from finite enumeration to a closed-form integer proof.  For five positive integer slots with total 8, convex smoothing gives the ripple lower bound:
+
+```text
+sum e_i^2 >= 2*1^2 + 3*2^2 = 14
+```
+
+and equality holds exactly on the ten permutations of the multiset `{2,2,2,1,1}`.  The self-recorded arrow penalty
+
+```text
+A(e)=sum_i max(0, e_{i+1}-e_i)
+```
+
+is zero exactly for the nonincreasing permutation, so the lexicographic `(ripple, arrow)` action uniquely selects `(2,2,2,1,1)`.  The same packet also checks the exact identity `(12^5)*(2^8/3^5)=4^9`, i.e. the ledger product is consistent with `eta=9/5`.
+
+This closes only the finite ledger-uniqueness subclaim.  It still does not derive the ordered d5 support, the self-recorded arrow action, or the endpoint-source convention from strict nadsoliton dynamics; it does not discharge QW-2191 and does not transfer legacy physical roles.
+
+## P2370/S1320 distance-5 band-pass support closed-form theorem
+
+`P2370/S1320` addresses the support-side premise left open by P2369.  It does not derive the band-pass action, but it proves the finite consequence if such an action is admitted.  Because `gcd(5,12)=1`, the distance-5 graph is a single 12-cycle.  Therefore any five-node support has at most four internal distance-5 edges, and equality holds exactly for a connected five-node path in that cycle:
+
+```text
+max h5 = 4
+argmax h5 = 12 translated distance-5 paths
+```
+
+The proof is closed-form and is cross-checked against all `binom(12,5)=792` supports.  Combined with P2369, the finite support and finite ledger uniqueness subclaims are isolated.  The remaining missing premise is now sharper: derive the distance-5 band-pass action and path-order/arrow convention from bridge-completed nadsoliton dynamics, or mark them as non-strict selector/source premises.  This does not choose a unique translate/source and does not discharge QW-2191.
+
+## P2371/S1321 full-Aut unit-band obstruction for band-pass derivation
+
+`P2371/S1321` proves a negative selector-side statement about the remaining P2370 premise.  If a support action is full-`Aut(Z12)` invariant on unit bands, it must weight the distance-1 and distance-5 unit bands equally.  On five-node supports the invariant score
+
+```text
+h_unit = h1 + h5
+```
+
+is maximized by 24 mixed supports with `(h1,h5)=(3,3)`, not by the 12 distance-5 paths with `(h1,h5)=(0,4)`.  For nonnegative linear scores `a*h1+b*h5`, the distance-5 path orbit is uniquely selected only in the symmetry-breaking chamber:
+
+```text
+a/b < 1/3.
+```
+
+Thus the distance-5 band-pass polarity cannot be silently obtained from full-`Aut(Z12)` unit-band symmetry.  The next real target is a bridge-completed dynamical export of this polarity inequality, or an explicit non-strict selector/source premise.  QW-2191 remains open.
+
+## P2372/S1322 bridge-kernel direct band-polarity audit
+
+`P2372/S1322` tests the most direct possible bridge-completed source for the P2371 polarity inequality: use the completed strict kernel values themselves as pair weights for `a*h1+b*h5`:
+
+```text
+a = K_strict(1),  b = K_strict(5).
+```
+
+The result is negative.  With the P2363/P2371 parameters,
+
+```text
+K_strict(1)/K_strict(5) ~= 19.476247 >> 1/3,
+```
+
+so direct kernel pair weights are far outside the d5 chamber and select distance-1 path supports, not the distance-5 path supports.  The amplitude-normalized legacy kernel is also not a licensed rescue: its `K_legacy(5)` is negative and legacy physical-role transfer remains forbidden.
+
+Thus the band-polarity source is still not exported by direct `K(d)` pair weights.  The honest next target is a separate bridge-completed dynamical term with effective `h1/h5` coefficient ratio `<1/3`, or else an explicit non-strict selector/source premise.
+
+## P2373/S1323 bridge-kernel polarity correction cone
+
+`P2373/S1323` converts the negative P2372 direct-kernel audit into quantitative necessary correction bounds.  Starting from
+
+```text
+a0 = K_strict(1),  b0 = K_strict(5),  a0/b0 ~= 19.476247,
+```
+
+the P2371 d5 chamber `a/b<1/3` can be reached only by a large extra polarity term.  Closed-form thresholds are:
+
+```text
+pure h5 boost:        lambda > 3*a0 - b0
+pure h1 suppression:  mu     > a0 - b0/3
+antisymmetric +h5-h1: gamma  > (3*a0 - b0)/4
+```
+
+The probe verifies that just-above-threshold corrections select the 12 d5 path supports on all 792 supports.  This is not a derivation of such a term; it only quantifies what a bridge-completed dynamical source would have to export.  Without such a source, the band-polarity premise remains non-strict and QW-2191 remains open.
+
+## P2374/S1324 damping-compression polarity candidate
+
+`P2374/S1324` audits the first bridge-side feature found after the P2373 correction cone: the strict nonlinear damping/compression surplus
+
+```text
+C(d) = log((1 + beta*d^eta)/(1 + beta_tors*d)).
+```
+
+On the audited `d=1,5` pair this gives `C1/C5 ~= 0.235429`, which lies inside the P2371 d5 chamber `a/b<1/3`.  The same probe also derives the exact blend condition against the failed direct strict-kernel weights:
+
+```text
+(K1 + tau*C1)/(K5 + tau*C5) < 1/3
+iff tau > (3*K1 - K5)/(C5 - 3*C1).
+```
+
+For the current canonical constants the threshold is `tau > 1.6259309081595656`, and the just-above-threshold blend selects the 12 d5 path supports on all 792 supports.  This is a candidate source direction, not a strict dynamical source theorem: without a variational/transport theorem promoting `C(d)` to the selector action, QW-2191 remains open and no legacy role transfer is licensed.
+
+## P2375/S1325 damping-compression polarity interval robustness
+
+`P2375/S1325` strengthens P2374 from a single canonical `beta_tors=0.01` check to an interval theorem.  For
+
+```text
+C(d) = log((1 + d^(9/5))/(1 + beta_tors*d)),   beta_tors in [0, 0.1],
+```
+
+the d5 chamber inequality `C(1)/C(5)<1/3` is equivalent to the positive-margin condition
+
+```text
+F(x) = (1 + 5^(9/5))*(1+x)^3 - 8*(1+5*x) > 0.
+```
+
+Since `F(0)>0` and `F'(x)=3*(1+5^(9/5))*(1+x)^2-40` is already positive at `x=0` and increasing on the interval, the chamber inequality holds throughout `[0,0.1]`.  Endpoint/canonical/midpoint scans again select the 12 d5 supports on all 792 supports.  This removes a fine-tuning worry for the compression-polarity candidate, but it still does not derive the variational/transport source required to promote `C(d)` into a strict selector action.
+
+## P2376/S1326 damping-compression eta/beta rectangle robustness
+
+`P2376/S1326` extends P2375 from a one-parameter `beta_tors` interval to the rectangle
+
+```text
+eta in [9/5, 2],   beta_tors in [0, 0.1].
+```
+
+For `C(d)=log((1+d^eta)/(1+beta_tors*d))`, the d5 chamber condition `C(1)/C(5)<1/3` is again equivalent to
+
+```text
+F(eta,x) = (1 + 5^eta)*(1+x)^3 - 8*(1+5*x) > 0.
+```
+
+The proof checks that `F` is increasing in both `eta` and `x` on the audited rectangle, so its minimum is at `(eta,x)=(9/5,0)`, where the margin is already positive.  A 3x3 grid scan over all 792 supports confirms the d5 path selection throughout the sampled rectangle.  This closes an eta/beta fine-tuning worry for the candidate, but it still does not supply the missing variational/transport source theorem.

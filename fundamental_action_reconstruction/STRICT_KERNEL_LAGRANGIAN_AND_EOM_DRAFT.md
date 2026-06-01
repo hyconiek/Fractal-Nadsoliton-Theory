@@ -314,3 +314,90 @@ The P2362/S1312 supplement records this as a separation principle: continue nonp
 2. Produce machine-checkable residual-zero tables for each field equation.
 3. Separate strict dynamical source claims from finite bridge-comparison facts.
 4. Link any eventual physical-role updates to the separate strict role-transfer audit rather than to the Lagrangian scaffold alone.
+
+## P2367/S1317 selector admissibility boundary, still parallel to EOM
+
+`P2367/S1317` is a selector-lane continuation of `P2366/S1316`, not a new prerequisite for EOM/Lagrangian execution.  It proves a finite admissibility boundary for the phase-origin candidate:
+
+```text
+for fixed orientation: source choices = one free transitive C12 orbit
+therefore: translation-invariant strict-core scores are source-blind
+```
+
+The computation explicitly checks complete Fourier power data and complete bispectrum data as source-blind invariant examples, while keeping the chiral bispectrum as an orientation marker.  Non-coprime phase modes alias sources; coprime phase modes recover all sources only with a calibrated phase-origin reference.
+
+Therefore the strongest current selector candidate remains:
+
+```text
+chiral bispectrum + coprime phase + phase-origin reference
+```
+
+but the honest status is still premise-based.  The phase-origin reference has not been derived as strict-core data, and the result does not prove `beta_tors -> chi11`, does not transfer legacy physical roles, does not discharge QW-2191, and does not close the theory.
+
+## P2368/S1318 selector candidate, still not an EOM prerequisite
+
+`P2368/S1318` continues the selector lane without changing the EOM/Lagrangian status.  It audits a conditional self-recorded endpoint candidate:
+
+```text
+all positive ledgers of total 8 on five ordered slots
+  -- lexicographic ripple/arrow action --> unique (2,2,2,1,1)
+  -- endpoint-valued d5 path extractor --> source + orientation
+```
+
+The computation checks 35 ledgers, 24 source/orientation rows, and 576 D12 shift/reflection equivariance cases.  The result is compatible with P2367 because it uses equivariant ordered path data, not a translation-invariant scalar score.
+
+This remains a candidate, not selector closure.  The strict theory still has to derive the d5 support, arrow action, endpoint-valued ledger, and endpoint-source convention from bridge-completed nadsoliton dynamics before it can be promoted to a strict selector theorem.
+
+## P2369/S1319 closed-form proof of the finite ledger subclaim
+
+`P2369/S1319` improves the selector-side P2368 calculation by replacing the raw ledger enumeration with a closed-form convexity proof:
+
+```text
+five positive slots, total 8 -> minimum ripple 14
+minimizers -> all permutations of {2,2,2,1,1}
+arrow penalty A=sum max(0,e_{i+1}-e_i) -> unique nonincreasing winner (2,2,2,1,1)
+```
+
+This is useful for the selector lane because it isolates the remaining real missing premise.  The finite ledger uniqueness is no longer the bottleneck; the bottleneck is now deriving the ordered d5 support and the arrow/action convention from bridge-completed nadsoliton dynamics.  EOM/Lagrangian residual work remains separate and is not blocked by this selector subclaim.
+
+## P2370/S1320 support theorem boundary
+
+`P2370/S1320` closes another finite selector subclaim without changing the EOM/Lagrangian lane.  If a distance-5 band-pass support action is admitted, then the selected supports are exactly the 12 translated five-node paths in the distance-5 cycle.  The proof uses the cycle bound `edges <= vertices-1` for a proper connected induced path and verifies the result against all 792 five-node supports.
+
+Together with P2369, this means the finite support/ledger combinatorics are no longer the main obstruction.  The honest remaining selector problem is dynamical/provenance-level: derive the band-pass action and path-order/arrow convention from bridge-completed nadsoliton dynamics, or keep them explicitly non-strict.  EOM/Lagrangian residual work remains parallel.
+
+## P2371/S1321 band-polarity obstruction, still selector-side
+
+`P2371/S1321` sharpens the P2370 support theorem.  A full-`Aut(Z12)` unit-band support action cannot distinguish the distance-5 band from the distance-1 unit band: maximizing `h1+h5` selects 24 mixed supports with `(h1,h5)=(3,3)`, not the P2370 d5 paths.  A linear score `a*h1+b*h5` selects the d5 path orbit only when `a/b<1/3`, which is exactly the missing band-polarity/source inequality.
+
+This is a selector provenance obstruction, not an EOM/Lagrangian blocker.  The honest next task is to derive that polarity inequality from bridge-completed nadsoliton dynamics or keep it marked as an explicit non-strict selector premise.
+
+## P2372/S1322 direct kernel-pair polarity audit
+
+`P2372/S1322` checks whether the bridge-completed strict kernel values can directly supply the selector-side band-polarity inequality from P2371.  They cannot: `K_strict(1)/K_strict(5)` is about `19.476247`, while the d5 chamber requires `a/b<1/3` for a nonnegative score `a*h1+b*h5`.
+
+This keeps the selector provenance problem honest.  The direct kernel is already useful for bridge-completed moment transport into `L_total`, but direct pair weights do not derive the d5 support selector.  Search instead for a separate dynamical term or keep the band-polarity premise non-strict; EOM/Lagrangian work remains parallel.
+
+## P2373/S1323 polarity correction cone, still not an EOM closure
+
+`P2373/S1323` gives the quantitative target left by P2372.  Direct `K(d)` pair weights fail the d5 chamber, so any dynamical selector term must contribute enough h5 boost, h1 suppression, or antisymmetric `+h5-h1` polarity to force `a/b<1/3`.  The minimal closed-form thresholds are computed and checked against all 792 supports.
+
+This is useful for future dynamics work because it gives a numeric acceptance test for a proposed bridge-completed source term.  It does not add such a term to `L_total`, does not close selector/QW-2191, and does not block ordinary EOM/Lagrangian residual work.
+
+## P2374/S1324 damping-compression candidate, not L_total promotion
+
+`P2374/S1324` follows the P2373 correction-cone recommendation by testing a concrete bridge-side feature: the strict nonlinear damping/compression surplus `C(d)=log((1+beta*d^eta)/(1+beta_tors*d))`.  As a finite pair-feature it has the right d5 polarity (`C1/C5 ~= 0.235429 < 1/3`) and a closed-form blend threshold `tau>(3*K1-K5)/(C5-3*C1)` for overcoming the direct strict-kernel pair weights.
+
+This is the most promising audited selector-side candidate direction so far, but it is still not an EOM/Lagrangian term and not a selector closure.  The honest next step is to derive a variational or transport-level source theorem for `C(d)`; otherwise it remains a quantified non-strict selector premise while ordinary EOM/Lagrangian residual work continues in parallel.
+
+## P2375/S1325 compression candidate robustness, still source-open
+
+`P2375/S1325` proves that the P2374 compression-polarity candidate is not tuned to the single legacy value `beta_tors=0.01`.  On the interval `beta_tors in [0,0.1]`, the inequality `C(1)/C(5)<1/3` follows from a closed-form positive margin `F(x)=(1+5^(9/5))*(1+x)^3-8*(1+5*x)` with positive increasing derivative.
+
+This strengthens the selector-side candidate as an acceptance target for dynamics, but it is still not an `L_total` term, not a variational source theorem, and not a `QW-2191` discharge.  The next honest move remains to derive a transport/variational source for `C(d)` or keep the candidate explicitly non-strict.
+
+## P2376/S1326 eta/beta robustness, finite proof boundary
+
+`P2376/S1326` proves that the P2374/P2375 compression-polarity candidate survives the audited parameter rectangle `eta in [9/5,2]`, `beta_tors in [0,0.1]`.  The proof uses the bivariate margin `F(eta,x)=(1+5^eta)*(1+x)^3-8*(1+5*x)` and shows it is increasing in both variables on the rectangle, with a positive lower-left corner.
+
+This is the point where finite robustness should not be widened further without a new risk.  The next honest move is no longer another local support scan; it is to derive, or fail to derive, a transport/variational source theorem that turns the robust `C(d)` polarity into an actual selector action.  Until then it remains outside `L_total` and does not close `QW-2191`.

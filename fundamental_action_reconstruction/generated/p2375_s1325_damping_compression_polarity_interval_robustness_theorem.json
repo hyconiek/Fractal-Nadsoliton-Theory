@@ -1,0 +1,168 @@
+{
+  "damping_compression_polarity_interval_robustness_theorem": {
+    "artifact_replay": {
+      "p2373_packet_id": "P2373",
+      "p2374_packet_id": "P2374",
+      "scratch_damping_status": "legacy-linear-torsion-denominator-separated-from-strict-nonlinear-d-eta-compression-no-bridge-theorem"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "probe_id": "P2375_S1325_DAMPING_COMPRESSION_POLARITY_INTERVAL_ROBUSTNESS_THEOREM",
+    "robustness_certificate": {
+      "interval": {
+        "beta_tors_max": 0.1,
+        "beta_tors_min": 0.0,
+        "canonical_beta_tors": 0.01
+      },
+      "proof_summary": {
+        "derivative_positive_on_interval": true,
+        "margin_positive_on_interval": true,
+        "not_fine_tuned_to_beta_tors_0_01": true,
+        "therefore_C1_over_C5_lt_one_third_for_all_interval": true
+      },
+      "sample_score_audits": [
+        {
+          "C1": 0.6931471805599453,
+          "C1_over_C5": 0.23490874262030684,
+          "C5": 2.9507083168901427,
+          "beta_tors": 0.0,
+          "exponentiated_margin": 11.119491591942388,
+          "margin_C5_minus_3C1": 0.8712667752103069,
+          "score_audit": {
+            "a_over_b": 0.23490874262030684,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 11.80283326756057,
+            "weights": {
+              "a_h1": 0.6931471805599453,
+              "b_h5": 2.9507083168901427
+            }
+          }
+        },
+        {
+          "C1": 0.6831968497067772,
+          "C1_over_C5": 0.2354294000560429,
+          "C5": 2.9019181527207105,
+          "beta_tors": 0.01,
+          "exponentiated_margin": 11.298831306669838,
+          "margin_C5_minus_3C1": 0.8523276036003788,
+          "score_audit": {
+            "a_over_b": 0.2354294000560429,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 11.607672610882842,
+            "weights": {
+              "a_h1": 0.6831968497067772,
+              "b_h5": 2.9019181527207105
+            }
+          }
+        },
+        {
+          "C1": 0.6443570163905132,
+          "C1_over_C5": 0.23623894270919554,
+          "C5": 2.727564765575933,
+          "beta_tors": 0.05,
+          "exponentiated_margin": 12.133201454122311,
+          "margin_C5_minus_3C1": 0.7944937164043933,
+          "score_audit": {
+            "a_over_b": 0.23623894270919554,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 10.910259062303732,
+            "weights": {
+              "a_h1": 0.6443570163905132,
+              "b_h5": 2.727564765575933
+            }
+          }
+        },
+        {
+          "C1": 0.5978370007556204,
+          "C1_over_C5": 0.2348840372868392,
+          "C5": 2.545243208781978,
+          "beta_tors": 0.1,
+          "exponentiated_margin": 13.448043308875327,
+          "margin_C5_minus_3C1": 0.7517322065151169,
+          "score_audit": {
+            "a_over_b": 0.2348840372868392,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 10.180972835127912,
+            "weights": {
+              "a_h1": 0.5978370007556204,
+              "b_h5": 2.545243208781978
+            }
+          }
+        }
+      ],
+      "symbolic_inequality": {
+        "derivative": "F'(x)=3*(1+5^(9/5))*(1+x)^2 - 40",
+        "derivative_is_increasing_on_interval": true,
+        "derivative_min_at_zero": 17.358474775827162,
+        "equivalent_positive_margin": "F(x)=(1+5^(9/5))*(1+x)^3 - 8*(1+5*x) > 0",
+        "margin_at_interval_max": 13.448043308875327,
+        "margin_min_at_zero": 11.119491591942388,
+        "strict_d5_denominator_1_plus_5_eta": 19.11949159194239,
+        "target": "C1/C5 < 1/3"
+      }
+    },
+    "source_artifacts": {
+      "P2373_CORRECTION_CONE": "fundamental_action_reconstruction/generated/p2373_s1323_bridge_kernel_polarity_correction_cone_theorem.json",
+      "P2374_DAMPING_COMPRESSION_CANDIDATE": "fundamental_action_reconstruction/generated/p2374_s1324_damping_compression_band_polarity_candidate_theorem.json",
+      "SCRATCH_DAMPING_SEPARATION": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_damping_compression_separation_certificate_report.json"
+    },
+    "theorem_export": {
+      "claim": "For every beta_tors in [0,0.1], the strict nonlinear damping/compression surplus C(d)=log((1+d^(9/5))/(1+beta_tors*d)) satisfies C(1)/C(5)<1/3. Equivalently, F(x)=(1+5^(9/5))*(1+x)^3-8*(1+5*x) is positive on the interval because F(0)>0 and F'(0)>0 with F' increasing. Thus the P2374 d5-polarity candidate is interval-robust in beta_tors, not a fine-tuned artifact of beta_tors=0.01.",
+      "not_licensed": [
+        "strict dynamical source theorem for C(d)",
+        "derivation of eta=9/5 or beta=1 from nadsoliton dynamics",
+        "promotion of C(d) into L_total or selector action without a variational/transport theorem",
+        "QW-2191 discharge",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Closed-form interval proof for the P2374 chamber inequality over beta_tors in [0,0.1].",
+        "Endpoint/canonical/midpoint support scans verify d5 path selection on all 792 five-node supports.",
+        "Links the result to the prior damping-separation certificate without claiming a source theorem."
+      ],
+      "theorem_name": "P2375 damping-compression polarity interval robustness theorem"
+    },
+    "theorem_fingerprint_sha256": "0d8a53243da702fbc562a227736b0e4a7c8436a3e6d146b47b309fc0538dbe26"
+  },
+  "gatekeeper_checks": {
+    "all_sample_audits_select_d5_paths": true,
+    "canonical_ratio_matches_p2374": true,
+    "derivative_positive_on_interval": true,
+    "docs_updated_with_p2375_robustness": true,
+    "margin_positive_on_interval": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2373_loaded": true,
+    "p2374_loaded": true,
+    "scratch_damping_separation_loaded": true,
+    "source_artifacts_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2375",
+  "produced_by": "p2375_s1325_damping_compression_polarity_interval_robustness_theorem.py",
+  "recommended_next_honest_step": "Use the robust C(d) chamber result as an acceptance target for a real variational/transport source theorem; prove that theorem or keep the compression polarity as a quantified non-strict selector premise.",
+  "result_kind": "DAMPING_COMPRESSION_POLARITY_INTERVAL_ROBUSTNESS_THEOREM",
+  "schema_version": "p2375_s1325_v1",
+  "stage_id": "S1325",
+  "status": "OPEN_PROGRESS_DAMPING_COMPRESSION_POLARITY_INTERVAL_ROBUST_NO_QW2191_DISCHARGE",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}
