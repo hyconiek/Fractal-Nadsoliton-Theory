@@ -1,0 +1,539 @@
+{
+  "gatekeeper_checks": {
+    "all_seven_proper_role_subsets_fail": true,
+    "each_role_derivative_has_unique_support": true,
+    "fingerprint_stable": true,
+    "only_full_role_mask_closes_role_transfer": true,
+    "only_full_role_mask_closes_toe": true,
+    "p2399_minimum_toe_distance_is_three": true,
+    "rg_nonduplication_audit_ran": true,
+    "three_one_missing_nearest_misses": true,
+    "toe_and_role_anf_are_same_degree3_monomial": true
+  },
+  "global_status": "OPEN_PROGRESS_FULL_THREE_ROLE_SUCCESSOR_MONOMIAL_CERTIFIED_CONDITIONAL_ONLY",
+  "nearest_lift_role_successor_lattice_certificate": {
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds the older four-atom legacy-role minimal-obligation lattice and P2399's lift-distance spectrum. P2400 only computes the three-role successor subset lattice at the P2399 nearest non-role-complete lift row where chi11 is already fixed true.",
+      "patterns": {
+        "P2399|role-closed lift-distance spectrum|nearest ToE rows|minimum ToE lift distance": {
+          "count": 82,
+          "samples": [
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:70:        \"P2399|S1349|role-closed lift distance|lift distance spectrum|distance-to-closure spectrum\",",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:93:            \"P2399 therefore does not redo the global seven-atom obstruction; it computes the exact lift-distance spectrum from the P2396/P2397 role-closed quotient.\"",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:209:## P2399/S1349 role-closed lift-distance spectrum certificate",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:211:`P2399/S1349` lifts the P2398 quotient result back toward the seven-atom frontier by computing exact Hamming/lift distances from every P2396 role-closed row to each target.  This does not redo the global nearest-miss theorem; it asks a narrower question: how far is the current role-closed quotient from role-transfer and ToE once non-role progress is allowed?",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:218:## P2399/S1349 lift-distance guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:220:`P2399/S1349` computes the exact lift-distance spectrum from the role-closed quotient.  Even at the nearest row where APD, phase/frequency, damping, and `chi11` are all present, the ToE/role-transfer lift still has distance `3` because the three role-successor atoms remain missing.",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:239:        \"theorem_name\": \"P2399_T1_role_closed_lift_distance_spectrum\",",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:272:        \"packet_id\": \"P2399\",",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:297:                \"# P2399 S1349: role-closed lift-distance spectrum certificate\",",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:303:                \"P2399/S1349 computes the exact Hamming/lift-distance spectrum from the P2396/P2397 role-closed quotient.\",",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:678:## P2399/S1349 lift-distance guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:680:`P2399/S1349` computes the exact lift-distance spectrum from the role-closed quotient.  Even at the nearest row where APD, phase/frequency, damping, and `chi11` are all present, the ToE/role-transfer lift still has distance `3` because the three role-successor atoms remain missing.",
+            "fundamental_action_reconstruction/test_p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:24:class P2399RoleClosedLiftDistanceSpectrumCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:35:        self.assertEqual(self.payload[\"packet_id\"], \"P2399\")",
+            "fundamental_action_reconstruction/test_p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:66:        self.assertIn(\"role-closed lift-distance spectrum\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:67:        self.assertIn(\"P2399/S1349 role-closed\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))"
+          ]
+        },
+        "P2400|S1350|nearest-lift role-successor lattice|role-successor subset lattice|nearest lift role lattice": {
+          "count": 121,
+          "samples": [
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:24:class P2400NearestLiftRoleSuccessorLatticeCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:35:        self.assertEqual(self.payload[\"packet_id\"], \"P2400\")",
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:36:        self.assertEqual(self.payload[\"stage_id\"], \"S1350\")",
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:63:        self.assertIn(\"nearest-lift role-successor lattice\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:64:        self.assertIn(\"P2400/S1350 nearest-lift\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:65:        self.assertIn(\"P2400/S1350 role-successor\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:684:## P2400/S1350 role-successor lattice guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:686:`P2400/S1350` fixes all non-role bridge/selector atoms true and still finds that role-transfer/ToE require the full three-role successor monomial.  Thus no one-role or two-role partial package can justify a role-bearing `L_total` term.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:692:`P2401/S1351` ranks role-successor proof orders but keeps the P2400 closure rule intact: no one-atom or two-atom prefix licenses role-bearing `L_total`.  The best order can guide proof search, not Lagrangian promotion.",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:21:    \"P2400_ROLE_LATTICE\": GEN / \"p2400_s1350_nearest_lift_role_successor_lattice_certificate.json\",",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:75:        \"P2400|nearest-lift role-successor lattice|full three-role successor monomial\",",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:96:            \"but no role-local marginal credit certificate over the P2400 three-role successor lattice.\"",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:179:`P2402/S1352` complements P2401 by computing role-local marginal credit over all six proof orders.  This is not the older global frontier influence report; it only asks how much each of the three role-successor atoms contributes to unlocking the P2394 role claims inside the P2400 lattice.",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:189:For physical claims only, the vector is `3/2, 1, 1/2`.  This supports prioritizing `alpha_geo` for first proof-search clarification, while preserving the P2400 rule that all three atoms are still required for full role-transfer/ToE readiness.",
+            "fundamental_action_reconstruction/p2402_s1352_role_successor_marginal_credit_certificate.py:208:    p2400_theorem = artifacts[\"P2400_ROLE_LATTICE\"].get(\"nearest_lift_role_successor_lattice_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/generated/p2402_s1352_role_successor_marginal_credit_certificate.json:426:      \"finding\": \"Repo grep finds a global frontier atom-influence/Banzhaf-style scratch report and P2401 unlock timing, but no role-local marginal credit certificate over the P2400 three-role successor lattice.\","
+          ]
+        },
+        "alpha_geo_electroweak_role_theorem|beta_tors_strict_role_theorem|beta_power_hierarchy_successor_theorem": {
+          "count": 1357,
+          "samples": [
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:66:                \"alpha_geo_electroweak_role_theorem\",",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:67:                \"beta_power_hierarchy_successor_theorem\",",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:68:                \"beta_tors_strict_role_theorem\",",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:71:        self.assertEqual(frontier[\"successor_atom_degrees\"][\"beta_tors_strict_role_theorem\"], 2)",
+            "fundamental_action_reconstruction/test_p2397_s1347_role_closed_toe_projection_certificate.py:55:                \"alpha_geo_electroweak_role_theorem\",",
+            "fundamental_action_reconstruction/test_p2397_s1347_role_closed_toe_projection_certificate.py:56:                \"beta_tors_strict_role_theorem\",",
+            "fundamental_action_reconstruction/test_p2397_s1347_role_closed_toe_projection_certificate.py:57:                \"beta_power_hierarchy_successor_theorem\",",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:86:| `alpha_geo_electroweak_role_theorem` | strict role theorem for the legacy electroweak-scale claim | open |",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:87:| `beta_tors_strict_role_theorem` | strict successor theorem for the legacy torsion parameter | open |",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:88:| `beta_power_hierarchy_successor_theorem` | strict successor theorem for the legacy hierarchy claim | open |",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:37:    \"alpha_geo_electroweak_role_theorem\",",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:38:    \"beta_tors_strict_role_theorem\",",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:39:    \"beta_power_hierarchy_successor_theorem\",",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:43:    \"legacy_weinberg_sin2_theta_role_transfer\": {\"alpha_geo_electroweak_role_theorem\"},",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:45:        \"alpha_geo_electroweak_role_theorem\",",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:46:        \"beta_tors_strict_role_theorem\","
+          ]
+        },
+        "legacy_role_transfer_minimal_obligation_lattice|minimal obligation set|global_minimal_obligation_sets": {
+          "count": 67,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_SOURCE_COVERAGE_AUDIT.md:24:| Role-transfer and selector boundaries | `STRICT_KERNEL_LEGACY_ROLE_TRANSFER_AUDIT_DRAFT.md`; `N103_CURRENT_STRICT_SIDE_GRAVITY_HIERARCHY_ROLE_EQUIVALENCE_BOUNDARY_THEOREM.md`; `n87_current_strict_side_fine_structure_role_equivalence_boundary_theorem.py`; `bridge_strict_completion_legacy_role_transfer_pre_audit_certificate_probe.py`; `bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_probe.py`; `bridge_strict_completion_anchor_h1_generator_classification_certificate_probe.py`; `bridge_strict_completion_theorem_frontier_low_weight_extension_certificate_probe.py` | Establishes that strict-side candidate objects may exist while legacy semantic role-transfer verdicts remain missing. |",
+            "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_SOURCE_COVERAGE_AUDIT.md:89:fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_probe.py",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_release_scaffold_certificate_report.json:97:    \"role_transfer_minimal_obligation_lattice\": \"fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_report.json\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_release_scaffold_certificate_probe.py:32:    \"role_transfer_minimal_obligation_lattice\": HERE / \"bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_report.json\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_report.json:11:    \"legacy_role_transfer_minimal_obligation_lattice_certified\": true,",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_report.json:355:    \"legacy_role_transfer_minimal_obligation_lattice\": \"minimal-role-transfer-obligation-lattice-enumerated-all-theorem-atoms-missing\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_report.json:441:    \"legacy_role_transfer_minimal_obligation_lattice_step\": \"The minimal-obligation lattice enumerates all 16 subsets of four missing theorem atoms and finds one all-role minimal set of size 4: alpha_geo electroweak role, beta_tors strict role, beta-power hierarchy successor, and chi11 selector/source; beta_tors is the shared bottleneck for three roles, but no atom is exported.\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_report.json:482:    \"legacy_role_transfer_minimal_obligation_lattice\": \"fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_report.json\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:74:    \"legacy_role_transfer_minimal_obligation_lattice\": HERE / \"bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_report.json\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:159:    legacy_role_transfer_minimal_obligation_lattice = loaded[\"legacy_role_transfer_minimal_obligation_lattice\"]",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:383:        \"legacy_role_transfer_minimal_obligation_sources_pass\": set(legacy_role_transfer_minimal_obligation_lattice[\"source_reports\"]) == {\"role_transfer_pre_audit\", \"symbolic_cancellation\", \"component_gap_matrix\", \"legacy_bridge_guardrail\"},",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:384:        \"legacy_role_transfer_minimal_obligation_enumeration_pass\": legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"total_subset_count_checked\"] == 16 and legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"theorem_atom_count\"] == 4,",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:385:        \"legacy_role_transfer_minimal_obligation_global_set_pass\": legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"global_minimal_obligation_size\"] == 4 and legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"global_minimal_obligation_count\"] == 1,",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:386:        \"legacy_role_transfer_minimal_obligation_beta_bottleneck_pass\": legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"beta_tors_atom_is_shared_by_three_roles\"],",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:387:        \"legacy_role_transfer_minimal_obligation_limits_preserved\": legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"all_atoms_missing_now\"] and not legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"role_transfer_theorem_exported\"] and not legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"q2191_discharged\"] and not legacy_role_transfer_minimal_obligation_lattice[\"role_transfer_minimal_obligation_summary\"][\"toe_closure_claimed\"],",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_certificate_chain_integrity_probe.py:528:            \"legacy_role_transfer_minimal_obligation_lattice_certified\": cross_checks[\"legacy_role_transfer_minimal_obligation_sources_pass\"] and cross_checks[\"legacy_role_transfer_minimal_obligation_enumeration_pass\"] and cross_checks[\"legacy_role_transfer_minimal_obligation_global_set_pass\"] and cross_checks[\"legacy_role_transfer_minimal_obligation_beta_bottleneck_pass\"] and cross_checks[\"legacy_role_transfer_minimal_obligation_limits_preserved\"],"
+          ]
+        },
+        "proper subsets fail|single role atom|two role atoms|all three role atoms": {
+          "count": 20,
+          "samples": [
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:213:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:891:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.",
+            "fundamental_action_reconstruction/p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:73:        \"proper subsets fail|single role atom|two role atoms|all three role atoms\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:102:        \"proper subsets fail|single role atom|two role atoms|all three role atoms\": {",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:105:            \"fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:213:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:106:            \"fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:891:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:107:            \"fundamental_action_reconstruction/p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:73:        \\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:108:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:102:        \\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\": {\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:109:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:105:            \\\"fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:213:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:110:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:106:            \\\"fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:891:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:111:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:107:            \\\"fundamental_action_reconstruction/p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:73:        \\\\\\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\\\\\",\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:112:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:108:            \\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:102:        \\\\\\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\\\\\": {\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:113:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:109:            \\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:105:            \\\\\\\"fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:213:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\\\\\\\",\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:114:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:110:            \\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:106:            \\\\\\\"fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:891:The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.\\\\\\\",\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:115:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:111:            \\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:107:            \\\\\\\"fundamental_action_reconstruction/p2400_s1350_nearest_lift_role_successor_lattice_certificate.py:73:        \\\\\\\\\\\\\\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\\\\\\\\\\\\\",\\\\\\\",\\\",\",",
+            "fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:116:            \"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:112:            \\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:108:            \\\\\\\"fundamental_action_reconstruction/generated/p2400_s1350_nearest_lift_role_successor_lattice_certificate.json:102:        \\\\\\\\\\\\\\\"proper subsets fail|single role atom|two role atoms|all three role atoms\\\\\\\\\\\\\\\": {\\\\\\\",\\\",\","
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "role_successor_lattice": {
+      "fixed_nonrole_context": {
+        "chi11_selector_source": true,
+        "strict_damping_beta_eta_source": true,
+        "strict_dynamical_source_for_A_P_D": true,
+        "strict_phase_frequency_source": true
+      },
+      "nearest_one_role_missing_masks": [
+        3,
+        5,
+        6
+      ],
+      "proper_subset_fail_masks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "role_atoms": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_tors_strict_role_theorem",
+        "beta_power_hierarchy_successor_theorem"
+      ],
+      "role_transfer_true_masks": [
+        7
+      ],
+      "rows": [
+        {
+          "active_role_atoms": [],
+          "missing_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_tors_strict_role_theorem",
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_count": 3,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": false,
+            "beta_power_hierarchy_successor_theorem": false,
+            "beta_tors_strict_role_theorem": false
+          },
+          "role_mask": 0,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "alpha_geo_electroweak_role_theorem"
+          ],
+          "missing_role_atoms": [
+            "beta_tors_strict_role_theorem",
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_count": 2,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": true,
+            "beta_power_hierarchy_successor_theorem": false,
+            "beta_tors_strict_role_theorem": false
+          },
+          "role_mask": 1,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_count": 2,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": false,
+            "beta_power_hierarchy_successor_theorem": false,
+            "beta_tors_strict_role_theorem": true
+          },
+          "role_mask": 2,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_atoms": [
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_count": 1,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": true,
+            "beta_power_hierarchy_successor_theorem": false,
+            "beta_tors_strict_role_theorem": true
+          },
+          "role_mask": 3,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_count": 2,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": false,
+            "beta_power_hierarchy_successor_theorem": true,
+            "beta_tors_strict_role_theorem": false
+          },
+          "role_mask": 4,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_power_hierarchy_successor_theorem"
+          ],
+          "missing_role_atoms": [
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_count": 1,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": true,
+            "beta_power_hierarchy_successor_theorem": true,
+            "beta_tors_strict_role_theorem": false
+          },
+          "role_mask": 5,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "beta_power_hierarchy_successor_theorem",
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_atoms": [
+            "alpha_geo_electroweak_role_theorem"
+          ],
+          "missing_role_count": 1,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": false,
+            "beta_power_hierarchy_successor_theorem": true,
+            "beta_tors_strict_role_theorem": true
+          },
+          "role_mask": 6,
+          "target_signature_bridge_role_selector_toe": "1010",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": false,
+            "selector_qw2191_closure": true,
+            "toe_closure": false
+          }
+        },
+        {
+          "active_role_atoms": [
+            "alpha_geo_electroweak_role_theorem",
+            "beta_power_hierarchy_successor_theorem",
+            "beta_tors_strict_role_theorem"
+          ],
+          "missing_role_atoms": [],
+          "missing_role_count": 0,
+          "role_assignment": {
+            "alpha_geo_electroweak_role_theorem": true,
+            "beta_power_hierarchy_successor_theorem": true,
+            "beta_tors_strict_role_theorem": true
+          },
+          "role_mask": 7,
+          "target_signature_bridge_role_selector_toe": "1111",
+          "target_values": {
+            "bridge_theorem_level_closure": true,
+            "role_transfer_theorem_level_closure": true,
+            "selector_qw2191_closure": true,
+            "toe_closure": true
+          }
+        }
+      ],
+      "target_anf_by_role_atoms": {
+        "bridge_theorem_level_closure": [
+          {
+            "degree": 0,
+            "mask": 0,
+            "monomial": "1"
+          }
+        ],
+        "role_transfer_theorem_level_closure": [
+          {
+            "degree": 3,
+            "mask": 7,
+            "monomial": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem"
+          }
+        ],
+        "selector_qw2191_closure": [
+          {
+            "degree": 0,
+            "mask": 0,
+            "monomial": "1"
+          }
+        ],
+        "toe_closure": [
+          {
+            "degree": 3,
+            "mask": 7,
+            "monomial": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem"
+          }
+        ]
+      },
+      "target_truth_vectors_by_mask_0_to_7": {
+        "bridge_theorem_level_closure": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "role_transfer_theorem_level_closure": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "selector_qw2191_closure": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "toe_closure": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "toe_boolean_derivative_support_by_role_atom": {
+        "alpha_geo_electroweak_role_theorem": [
+          {
+            "lower_mask": 6,
+            "other_roles_true": "beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem",
+            "upper_mask": 7
+          }
+        ],
+        "beta_power_hierarchy_successor_theorem": [
+          {
+            "lower_mask": 3,
+            "other_roles_true": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem",
+            "upper_mask": 7
+          }
+        ],
+        "beta_tors_strict_role_theorem": [
+          {
+            "lower_mask": 5,
+            "other_roles_true": "alpha_geo_electroweak_role_theorem*beta_power_hierarchy_successor_theorem",
+            "upper_mask": 7
+          }
+        ]
+      },
+      "toe_true_masks": [
+        7
+      ]
+    },
+    "source_artifact_statuses": {
+      "FRONTIER_TRUTH_TABLE": "all-2pow7-frontier-assignments-enumerated-current-assignment-closes-no-target",
+      "P2399_LIFT_DISTANCE": "PASS_ROLE_CLOSED_LIFT_DISTANCE_THREE_ROLE_SUCCESSORS_REQUIRED",
+      "ROLE_MINIMAL_OBLIGATION_LATTICE": "minimal-role-transfer-obligation-lattice-enumerated-all-theorem-atoms-missing"
+    },
+    "target_definitions": {
+      "bridge_theorem_level_closure": [
+        "strict_dynamical_source_for_A_P_D",
+        "strict_phase_frequency_source",
+        "strict_damping_beta_eta_source"
+      ],
+      "role_transfer_theorem_level_closure": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_tors_strict_role_theorem",
+        "beta_power_hierarchy_successor_theorem",
+        "chi11_selector_source"
+      ],
+      "selector_qw2191_closure": [
+        "chi11_selector_source"
+      ],
+      "toe_closure": "bridge AND role_transfer AND selector"
+    },
+    "theorem_export": {
+      "fixed_nonrole_context": {
+        "chi11_selector_source": true,
+        "strict_damping_beta_eta_source": true,
+        "strict_dynamical_source_for_A_P_D": true,
+        "strict_phase_frequency_source": true
+      },
+      "nearest_one_role_missing_masks": [
+        3,
+        5,
+        6
+      ],
+      "not_licensed": [
+        "No role-successor atom is exported by this conditional lattice.",
+        "No one-role or two-role subset licenses role transfer.",
+        "No ToE closure is claimed without all three explicit role-successor theorems.",
+        "No L_total or SM/GR role-bearing term is promoted here."
+      ],
+      "older_four_atom_lattice_context": null,
+      "p2399_minimum_toe_lift_distance": 3,
+      "proper_subset_fail_count": 7,
+      "role_atoms": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_tors_strict_role_theorem",
+        "beta_power_hierarchy_successor_theorem"
+      ],
+      "role_transfer_role_anf": [
+        {
+          "degree": 3,
+          "mask": 7,
+          "monomial": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem"
+        }
+      ],
+      "role_transfer_true_masks": [
+        7
+      ],
+      "theorem_name": "P2400_T1_nearest_lift_three_role_successor_lattice",
+      "toe_boolean_derivative_support_by_role_atom": {
+        "alpha_geo_electroweak_role_theorem": [
+          {
+            "lower_mask": 6,
+            "other_roles_true": "beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem",
+            "upper_mask": 7
+          }
+        ],
+        "beta_power_hierarchy_successor_theorem": [
+          {
+            "lower_mask": 3,
+            "other_roles_true": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem",
+            "upper_mask": 7
+          }
+        ],
+        "beta_tors_strict_role_theorem": [
+          {
+            "lower_mask": 5,
+            "other_roles_true": "alpha_geo_electroweak_role_theorem*beta_power_hierarchy_successor_theorem",
+            "upper_mask": 7
+          }
+        ]
+      },
+      "toe_role_anf": [
+        {
+          "degree": 3,
+          "mask": 7,
+          "monomial": "alpha_geo_electroweak_role_theorem*beta_tors_strict_role_theorem*beta_power_hierarchy_successor_theorem"
+        }
+      ],
+      "toe_true_masks": [
+        7
+      ]
+    },
+    "theorem_fingerprint_sha256": "74bd3941cf4d1f5c642617e67ed62490b920fead22790d519fcc232c3f83d4af"
+  },
+  "packet_id": "P2400",
+  "recommended_next_honest_step": "If pursuing role transfer, construct one of the three explicit role-successor theorems and rerun the lattice; do not promote partial role subsets.",
+  "result_kind": "NEAREST_LIFT_ROLE_SUCCESSOR_LATTICE_CERTIFICATE",
+  "schema_version": "p2400_s1350_v1",
+  "stage_id": "S1350",
+  "status": "PASS_NEAREST_LIFT_REQUIRES_FULL_THREE_ROLE_SUCCESSOR_MONOMIAL"
+}

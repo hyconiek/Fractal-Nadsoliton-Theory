@@ -638,3 +638,63 @@ For the Lagrangian/EOM lane this matters because the missing object is now narro
 The computed minimal-support table has the selector target realized by `strict_internal_selector_P1343_P1348` and no realized selector support using `auxiliary_beta_tors_to_chi11`.  Therefore a future `L_total` source term should not be aimed at confirming the retired auxiliary assumption.  If a `beta_tors`-dependent term is ever proposed, it must be justified by a separate legacy role-transfer theorem after bridge completion, not by selector necessity.
 
 No legacy physical-role transfer, completed bridge, cap-density source theorem, SM/GR numeric extraction, or ToE closure follows.
+
+## P2393/S1343 normalized kernel boundary residual, no L_total promotion
+
+`P2393/S1343` certifies a narrow kernel identity useful as a boundary negative control: normalized legacy linear damping is the `eta=1` boundary slice of the strict kernel family when the phase, frequency, and damping symbols are explicitly matched.  The finite residual audit then compares that normalized legacy slice with the current strict target and finds a nonzero residual; after P2394 this is not an APD-bridge gap, because the finite APD comparison witness already supplies `K_strict = K_legacy*A*P*D`.
+
+Consequently, the Lagrangian/EOM draft may use P2393 only as a boundary-condition/negative-control certificate.  It may not promote the legacy physical roles into `L_total`, may not revive `beta_tors -> chi11` as a selector target, and may not claim role-transfer or ToE closure.
+
+## P2394/S1344 APD bridge rebase, Lagrangian role-transfer frontier
+
+`P2394/S1344` prevents the Lagrangian/EOM lane from misreading P2393.  The current bridge input is the already assembled finite APD comparison witness `K_strict = K_legacy*A*P*D`; P2393 is only an `eta=1` boundary negative control.  With strict selector/`chi11` available in declared scope, the next honest Lagrangian-side task is not to re-prove APD or revive `beta_tors -> chi11`, but to audit whether any legacy physical roles survive after the bridge.
+
+The role-transfer truth table leaves the legacy Weinberg, alpha-EM, and beta-power gravity roles unlicensed at the current assignment.  Any future `L_total` term using `alpha_geo`, `beta_tors`, or `beta^N` as physical legacy roles must pass that role-transfer audit first.
+
+## P2395/S1345 retained-negative role rebase, strict successor branch open
+
+`P2395/S1345` applies the post-bridge role audit to the Lagrangian/EOM lane.  Since `N73/N90/N106` already close the unchanged retained branches negatively on the current repo state, no `L_total` term may import the old Weinberg, fine-structure, or gravity-hierarchy formulas by literal inheritance.
+
+The only honest active branch is a modified strict-successor branch.  It remains open for all three roles and depends on the `alpha_geo`, `beta_tors`, and beta-power successor atoms computed by P2395.  Thus P2395 blocks silent legacy-role import while preserving a precise successor-theorem frontier.
+
+## P2396/S1346 role-package closure rebase for Lagrangian use
+
+`P2396/S1346` prevents a Lagrangian/EOM overread of P2395.  Since `N83/N99/N115/N116` already close the current-state legacy role package negatively, the P2395 modified-successor flags are future-only conditional slots.  They are not current licenses to import Weinberg, fine-structure, or gravity-hierarchy semantics into `L_total`.
+
+Any future role-bearing `L_total` term must bring new explicit successor evidence first.  Until then, the current-state role-transfer count is zero.
+
+## P2397/S1347 role-closed ToE projection for Lagrangian/EOM
+
+`P2397/S1347` computes the P2396 role-closed slice of the existing ToE truth table.  Across all 16 assignments of the remaining non-role atoms, role-transfer and ToE closure stay false.  Therefore even a future non-role source advance in APD, phase/frequency, damping, or `chi11` cannot by itself license a role-bearing `L_total` term while the legacy role package remains closed on the current repo state.
+
+Future explicit role-successor evidence would be a different slice; P2397 does not forbid it forever.
+
+## P2398/S1348 quotient ANF guard for Lagrangian/EOM
+
+`P2398/S1348` turns the P2397 role-closed slice into an exact quotient ANF.  In that quotient, `role_transfer=0` and `toe=0` as polynomials, while bridge and selector remain non-role targets.  Therefore a role-bearing `L_total` term cannot be justified by any combination of APD, phase/frequency, damping, or `chi11` source progress alone.
+
+Only new explicit role-successor evidence changes the quotient.
+
+## P2399/S1349 lift-distance guard for Lagrangian/EOM
+
+`P2399/S1349` computes the exact lift-distance spectrum from the role-closed quotient.  Even at the nearest row where APD, phase/frequency, damping, and `chi11` are all present, the ToE/role-transfer lift still has distance `3` because the three role-successor atoms remain missing.
+
+Thus a role-bearing `L_total` term still requires explicit role-successor evidence rather than additional non-role source bookkeeping alone.
+
+## P2400/S1350 role-successor lattice guard for Lagrangian/EOM
+
+`P2400/S1350` fixes all non-role bridge/selector atoms true and still finds that role-transfer/ToE require the full three-role successor monomial.  Thus no one-role or two-role partial package can justify a role-bearing `L_total` term.
+
+The calculation is conditional on future role evidence and exports no physical-role theorem by itself.
+
+## P2401/S1351 unlock-order guard for Lagrangian/EOM
+
+`P2401/S1351` ranks role-successor proof orders but keeps the P2400 closure rule intact: no one-atom or two-atom prefix licenses role-bearing `L_total`.  The best order can guide proof search, not Lagrangian promotion.
+
+## P2402/S1352 marginal-credit guard for Lagrangian/EOM
+
+`P2402/S1352` assigns proof-search marginal credit to role-successor atoms, but the credit score is not a Lagrangian license.  Even the top-scoring `alpha_geo` atom only guides which proof to try first; role-bearing `L_total` still waits for the full three-role monomial.
+
+## P2403/S1353 strict-primary physics-generation guard for Lagrangian/EOM
+
+`P2403/S1353` rebases future physics-generation work onto the strict kernel as the primary candidate, with the legacy kernel retained as bridge/construction data.  This strengthens the reason to test strict for masses, gravity, and Lagrangian roles, but it does not license importing old legacy role terms into `L_total` without the separate role-successor theorems.

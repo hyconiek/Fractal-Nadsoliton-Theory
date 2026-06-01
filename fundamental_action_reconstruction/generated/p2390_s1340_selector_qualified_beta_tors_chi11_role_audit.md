@@ -8,10 +8,10 @@ The old wording 'no beta_tors -> chi11' remains scientifically meaningful only a
 
 ## Grep/nonduplication audit
 
-- Searched files: `12625`.
-- beta_tors/chi11 literal matches: `601` across `317` files.
-- selector-source matches: `728` across `495` files.
-- role-transfer matches: `1366` across `711` files.
+- Searched files: `12669`.
+- beta_tors/chi11 literal matches: `643` across `332` files.
+- selector-source matches: `734` across `496` files.
+- role-transfer matches: `1571` across `748` files.
 - Finding: Existing reports already discuss beta_tors->chi11 as a candidate/non-theorem and P1343/P1348 as selector closure. P2390 therefore does not try to re-prove the selector; it audits whether that selector is sufficient to license legacy beta_tors->chi11 role transfer.
 
 ## Boolean implication certificate
