@@ -1287,3 +1287,87 @@ Therefore pointwise conditioning cannot by itself become a strict observable/sou
 `P2447/S1397` refines the P2446 grid obstruction with a continuous one-dimensional optimization witness.  A golden-section refinement over the audited pointwise window finds a stationary conditioning maximum near `d=0.785288904663`, with negative finite-difference second-derivative witnesses and a positive conditioning gap above `d=1`.
 
 This strengthens the selector obstruction rather than closing it: even the continuous conditioning optimum is not a strict point-coordinate selector, not an admissible observable/source theorem, and not a gauge-slice theorem.
+
+## P2448/S1398 strict pointwise rank-lift global stationary-census certificate
+
+`P2448/S1398` extends the P2447 local stationary refinement to a finite derivative-sign census over `d in [0,5]`.  The census finds three stationary roots on the audited interval: two near-zero local minima and one local maximum near `d=0.7852889045`; the local maximum also dominates both interval boundaries and matches the P2447 refined point.
+
+This is still a finite conditioning/global-census statement, not an analytic interval root-exclusion theorem, not a point-coordinate selector theorem, not a strict observable/source theorem, and not a gauge-slice theorem.  It therefore cannot promote a pointwise row into `L_total` or discharge `QW-2191`.
+
+## P2449/S1399 strict pointwise rank-lift projection-reduction certificate
+
+`P2449/S1399` reduces the P2448 four-by-four normalized determinant calculation to a one-row nullspace projection identity.  If `b_0,b_1,b_2` are the normalized inherited moment rows and `a` is their cofactor-null vector, then every pointwise candidate row `g(d)` has rank-lift volume `|a·g(d)|/||g(d)||`.  The zero-volume stationary roots are therefore `a·g(d)=0`, while nonzero stationary roots satisfy the analytic factor `2(a·g)'||g||^2 - (a·g)(||g||^2)'=0`.
+
+The replay matches the P2448 roots and maximum, but it is still a projection-reduction audit, not an exact interval root-exclusion theorem, not a point-coordinate selector theorem, and not source/gauge authority for `L_total`.
+
+## P2450/S1400 strict pointwise projection root-isolation margin certificate
+
+`P2450/S1400` adds a sampled root-isolation margin audit on top of the P2449 projection reduction.  It isolates the two `a·g(d)=0` roots and the one stationary-factor root in explicit sign-changing windows, checks sampled monotonicity inside those windows, and audits the complementary cells with a sampled derivative-bound margin test.
+
+This is stronger than a raw root scan, but it is still explicitly finite and sampled: it does not export an exact interval root-exclusion theorem, point-coordinate selector, source theorem, gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2451/S1401 strict pointwise projection interval-enclosure root-exclusion audit
+
+`P2451/S1401` replaces the P2450 midpoint-margin complement audit with direct interval enclosures of the two scalar projection functions on `1e-4` complement cells.  On the P2450 root-window complements, interval evaluation of `a·g(d)` and of the stationary factor excludes zero in every audited cell.
+
+This is a stronger finite enclosure audit than sampled midpoint margins, but it is still not a symbolic proof or directed-rounding exact interval theorem.  It exports no point-coordinate selector, no source/gauge theorem, no role-bearing `L_total`, no `QW-2191` discharge, and no ToE closure.
+
+## P2452/S1402 strict pointwise interval-precondition rational certificate
+
+`P2452/S1402` audits the exact rational preconditions behind the P2451 interval enclosure: with `omega=743/4000`, `phi=13/80`, and `d in [0,5]`, the phase interval is exactly `[13/80,873/800]`, and `873/800 < 333/212 < pi/2` using the Archimedean lower bound `333/106 < pi`.  The P2451 complement starts also satisfy `d>0`, so the `log(d)`, `d^(9/5)`, `d^(4/5)`, and denominator-positivity assumptions are explicitly separated from floating interval evaluation.
+
+This certifies only interval-evaluation preconditions.  It does not certify directed rounding, symbolic root exclusion, a point-coordinate selector, source/gauge authority, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2453/S1403 strict pointwise directed-decimal weakest-cell replay certificate
+
+`P2453/S1403` replays the two weakest P2451 complement cells with a higher-precision Decimal interval backend and monotone Taylor endpoint enclosures for `sin` and `cos`.  The zero-projection weakest cell and stationary-factor weakest cell both remain strictly positive and zero-excluding under this independent endpoint replay.
+
+This is only a weakest-cell backend cross-check, not a full directed-rounding interval theorem or symbolic root-exclusion proof.  It exports no point-coordinate selector, source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2454/S1404 strict pointwise directed-decimal weakest-band replay certificate
+
+`P2454/S1404` extends P2453 from a single weakest cell per family to a forward weakest-band replay: twelve adjacent complement cells are replayed for both the zero-projection amplitude and the stationary factor using the same Decimal/Taylor endpoint backend.  Every replayed critical-band cell remains zero-excluding.
+
+This is still not a full complement directed-rounding interval theorem or symbolic root-exclusion proof.  It exports no point-coordinate selector, source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2455/S1405 strict pointwise directed-decimal weakest-band separation-monotonicity certificate
+
+`P2455/S1405` audits the P2454 critical bands one level deeper: in each replayed forward band, the Decimal/Taylor separation from zero is strictly increasing cell-by-cell.  Thus the boundary cell adjacent to the excluded root window is the actual weakest replayed cell for both the zero-projection amplitude and the stationary factor.
+
+This is still a bounded critical-band shape audit, not a full complement directed-rounding theorem, symbolic root exclusion, selector/source theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate
+
+`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.
+
+This is a bounded all-boundary replay, not a full complement directed-rounding theorem, symbolic root-exclusion proof, selector/source theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2457/S1407 strict pointwise Decimal root-boundary separation-shape certificate
+
+`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.
+
+This is still a finite boundary-band shape audit.  It is not a full complement directed-rounding theorem, symbolic root-exclusion theorem, point-coordinate selector, strict observable/source theorem, gauge-slice theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2458/S1408 strict pointwise interval-Decimal weakest-cell alignment certificate
+
+`P2458/S1408` cross-checks the P2451 floating interval weakest cells against the later P2456/P2457 Decimal boundary chain.  For both the zero-projection amplitude and the stationary factor, the P2451 weakest complement cell is exactly found as the nearest P2456 root-window boundary cell and is covered by the P2457 monotone/sign-coherent boundary-shape audit.
+
+This is a backend-chain alignment certificate only.  It does not upgrade floating intervals into a directed-rounding theorem, does not prove symbolic root exclusion, and exports no point-coordinate selector, source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2459/S1409 strict pointwise interval-Decimal coverage-gap ledger certificate
+
+`P2459/S1409` records the coverage gap between the P2451 floating-interval complement audit and the later P2456/P2458 Decimal boundary chain.  The Decimal chain aligns the weakest cells, but it covers only the bounded root-window boundary subset: 36 replayed Decimal boundary cells versus 99,882 P2451 complement cells, leaving 99,846 complement cells not replayed by the Decimal boundary chain.
+
+This is an honesty ledger, not a failure of P2451: P2451 remains the broad floating-interval audit, while P2456-P2458 are targeted Decimal boundary/weakest-cell checks.  The ledger exports no directed-rounding interval theorem, symbolic root-exclusion theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2460/S1410 strict pointwise interval-Decimal gap-sentinel replay certificate
+
+`P2460/S1410` responds to the P2459 coverage-gap ledger without pretending to close it: for every P2451 complement segment, it selects stratified sentinel cells from the part not already covered by the P2456 Decimal boundary chain and replays those sentinels with the Decimal/Taylor backend.  All 25 selected gap sentinels remain zero-excluding.
+
+This is a stratified gap-sentinel replay, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2461/S1411 strict pointwise interval-Decimal gap weakest-neighborhood replay certificate
+
+`P2461/S1411` strengthens the P2460 gap-sentinel check by taking the weakest unreplayed-gap sentinel in each scalar family and replaying its local neighboring cells with the same Decimal/Taylor backend.  The replay covers 8 local gap-neighborhood cells in total and every replayed cell remains zero-excluding.
+
+This is a local weakest-neighborhood replay, not an exhaustive Decimal full-complement replay, directed-rounding interval theorem, symbolic root-exclusion theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
