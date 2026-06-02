@@ -1097,3 +1097,27 @@ This is not a rollback of P2413-P2416; it is the proof-theoretic nonpromotion gu
 The first nontrivial component unlocks occur at size two: the amplitude pair, the damping pair, and the selector pair.  The phase/frequency/topological component still has minimal size three because it needs `phase_frequency_dynamic_source_theorem`, `topological_bit_transport_selector_theorem`, and `chi11_selector_source_theorem`.  `chi11_selector_source_theorem` remains the highest-incidence source atom because it belongs to both the phase/topological and selector-source components.
 
 This is a proof-search lattice, not a source theorem: it ranks where new source evidence could first unlock components, but it does not discharge any atom, complete the bridge, license role transfer, promote `L_total`, or close ToE.
+
+## P2419/S1369 chi11 phase-selector coupling cut certificate
+
+`P2419/S1369` refines the P2418 source-unlock lattice at the phase/selector overlap.  The finite audit over all `2^8=256` source masks classifies the readiness quadrants for `phase_frequency_topological_bit_passage` and `selector_source_premise`: neither ready, phase-only ready, selector-only ready, or both ready.
+
+The shared cut is explicit: both components require `chi11_selector_source_theorem`.  The unique minimal phase/selector co-readiness set is `{phase_frequency_dynamic_source_theorem, topological_bit_transport_selector_theorem, chi11_selector_source_theorem, qw2191_symmetry_breaking_or_internal_source_theorem}`.  Deleting `chi11_selector_source_theorem` from that set blocks both phase/topological passage and selector premise, while deleting `qw2191_symmetry_breaking_or_internal_source_theorem` blocks selector only.
+
+This is only a coupling/cut theorem for proof search.  It does not export a chi11 source, does not discharge QW-2191, does not complete the bridge, and does not license role transfer, role-bearing `L_total`, or ToE closure.
+
+## P2420/S1370 bridge-selector nonclosure reason matrix certificate
+
+`P2420/S1370` answers the closure objection directly.  The current positive evidence has two gates: `apd_value_bridge_witness` from P2416 and `chi11_phase_selector_cut_mechanism` from P2419.  Those are not the same as `source_obligation_discharge`, `chi11_source_export`, `qw2191_selector_discharge`, `role_transfer_audit_license`, or `role_bearing_ltotal_export`.
+
+The finite matrix over seven closure gates has `128` rows.  Holding the APD value bridge and selector cut/mechanism fixed true leaves a `32`-row subcube; only the all-gates row closes ToE, so `31/32` such rows remain nonclosures.  From the current mask, the minimum repair distance to ToE closure is five theorem gates: source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.
+
+Therefore the honest answer is: the repo has value-level bridge evidence and a selector-location/cut mechanism, but not the source theorem, not the selector-source discharge, not the role-transfer audit, and not the role-bearing Lagrangian/ToE composition theorem.
+
+## P2421/S1371 bridge-selector closure prime-implicant/failure-cover certificate
+
+`P2421/S1371` turns the P2420 seven-gate nonclosure matrix into an exact Boolean theorem.  The ToE-ready predicate has one true mask, the all-gates mask `127`, and its algebraic normal form has one degree-seven term: the product of APD value bridge, source discharge, chi11 selector cut, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.
+
+The dual failure cover is the seven-literal DNF `not gate_1 OR ... OR not gate_7`.  Each missing gate has a Boolean-derivative nearest edge at the all-but-that-gate mask, so no missing gate is redundant and no proper subset can be promoted to closure.
+
+This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.
