@@ -382,7 +382,7 @@
           ]
         },
         "new_packet": {
-          "count": 19,
+          "count": 24,
           "samples": [
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1231:## P2438/S1388 strict-kernel SM/GR generation obligation matrix certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1233:`P2438/S1388` starts the strict-side replacement for the discarded legacy-value derivations: it treats the target as `K_strict_gate -> coefficients -> L_SM + L_GR -> observables`, not as legacy `alpha_geo/beta_tors` inheritance.  The certificate builds an 8-obligation matrix for strict kernel identity/domain, kernel-to-coefficient map, SM gauge couplings, SM matter/Higgs/Yukawa export, GR/background-independence, curvature-squared/unitarity completion, QW-2191 selector uniqueness, and strict observable-value generation.",
@@ -398,15 +398,20 @@
             "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:279:        \"packet_id\": \"P2438\",",
             "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:280:        \"stage_id\": \"S1388\",",
             "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:303:                \"# P2438 S1388: strict-kernel SM/GR generation obligation matrix certificate\",",
+            "fundamental_action_reconstruction/p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:104:        \"p2438_input\": \"P2438|S1388|strict kernel SM GR generation|strict_kernel_to_coefficient_map_theorem\",",
+            "fundamental_action_reconstruction/p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:24:    \"P2438_SM_GR_OBLIGATION_MATRIX\": GEN / \"p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.json\",",
+            "fundamental_action_reconstruction/p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:355:        \"p2438_no_strict_generation_inherited\": sources[\"P2438_SM_GR_OBLIGATION_MATRIX\"]",
             "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:14:class P2438StrictKernelSmGrGenerationObligationMatrixCertificateTest(unittest.TestCase):",
             "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2438\")",
             "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1388\")",
             "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:63:        self.assertIn(\"P2438/S1388\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:64:        self.assertIn(\"P2438/S1388\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:64:        self.assertIn(\"P2438/S1388\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:11:P2438 = ROOT / \"generated\" / \"p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:17:        if not P2438.exists():"
           ]
         },
         "selector_and_qw2191": {
-          "count": 6734,
+          "count": 6742,
           "samples": [
             "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
             "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
