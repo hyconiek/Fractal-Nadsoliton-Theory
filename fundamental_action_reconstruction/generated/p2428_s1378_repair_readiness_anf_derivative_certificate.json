@@ -1,0 +1,430 @@
+{
+  "gatekeeper_checks": {
+    "bridge_derivative_only_source": true,
+    "chi11_still_open": true,
+    "fingerprint_stable": true,
+    "five_gates": true,
+    "ltotal_derivative_only_ltotal": true,
+    "ltotal_still_blocked": true,
+    "p2427_factor_inherited": true,
+    "p2427_product_inherited": true,
+    "p2427_weight_support_empty_inherited": true,
+    "qw2191_still_open": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "selector_derivatives_pair_only": true,
+    "selector_pair": true,
+    "single_prime_each": true,
+    "source_still_open": true,
+    "toe_all_five": true,
+    "toe_derivative_nearest_misses": true,
+    "toe_still_open": true,
+    "truth_table_32": true
+  },
+  "global_status": "OPEN_PROGRESS_REPAIR_READINESS_ANF_DERIVATIVE_CERTIFIED_NO_THEOREM_GATE_DISCHARGED",
+  "packet_id": "P2428",
+  "recommended_next_honest_step": "Use the derivative supports to target actual theorem work: chi11 plus QW-2191 for selector readiness, and all five missing gates for ToE, without treating ANF structure as a discharge.",
+  "repair_readiness_anf_derivative_certificate": {
+    "finite_witness_certificate": {
+      "anf_degrees": {
+        "bridge_source_ready": 1,
+        "role_bearing_ltotal_ready": 1,
+        "role_transfer_ready": 1,
+        "selector_source_ready": 2,
+        "toe_ready": 5
+      },
+      "anf_polynomials": {
+        "bridge_source_ready": "source_obligation_discharge",
+        "role_bearing_ltotal_ready": "role_bearing_ltotal_export",
+        "role_transfer_ready": "role_transfer_audit_license",
+        "selector_source_ready": "chi11_source_export * qw2191_selector_discharge",
+        "toe_ready": "source_obligation_discharge * chi11_source_export * qw2191_selector_discharge * role_transfer_audit_license * role_bearing_ltotal_export"
+      },
+      "anf_terms": {
+        "bridge_source_ready": [
+          [
+            "source_obligation_discharge"
+          ]
+        ],
+        "role_bearing_ltotal_ready": [
+          [
+            "role_bearing_ltotal_export"
+          ]
+        ],
+        "role_transfer_ready": [
+          [
+            "role_transfer_audit_license"
+          ]
+        ],
+        "selector_source_ready": [
+          [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ]
+        ],
+        "toe_ready": [
+          [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        ]
+      },
+      "derivative_edge_counts": {
+        "bridge_source_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 16
+        },
+        "role_bearing_ltotal_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 16,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "role_transfer_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 16,
+          "source_obligation_discharge": 0
+        },
+        "selector_source_ready": {
+          "chi11_source_export": 8,
+          "qw2191_selector_discharge": 8,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "toe_ready": {
+          "chi11_source_export": 1,
+          "qw2191_selector_discharge": 1,
+          "role_bearing_ltotal_export": 1,
+          "role_transfer_audit_license": 1,
+          "source_obligation_discharge": 1
+        }
+      },
+      "essential_gate_sets": {
+        "bridge_source_ready": [
+          "source_obligation_discharge"
+        ],
+        "role_bearing_ltotal_ready": [
+          "role_bearing_ltotal_export"
+        ],
+        "role_transfer_ready": [
+          "role_transfer_audit_license"
+        ],
+        "selector_source_ready": [
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ],
+        "toe_ready": [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge",
+          "role_transfer_audit_license",
+          "role_bearing_ltotal_export"
+        ]
+      },
+      "gate_count": 5,
+      "p2427_all_tables_factor_inherited": true,
+      "p2427_product_assignment_count_inherited": 4608,
+      "p2427_weight_side_support_empty_inherited": [],
+      "prime_implicant_counts": {
+        "bridge_source_ready": 1,
+        "role_bearing_ltotal_ready": 1,
+        "role_transfer_ready": 1,
+        "selector_source_ready": 1,
+        "toe_ready": 1
+      },
+      "prime_implicants": {
+        "bridge_source_ready": [
+          [
+            "source_obligation_discharge"
+          ]
+        ],
+        "role_bearing_ltotal_ready": [
+          [
+            "role_bearing_ltotal_export"
+          ]
+        ],
+        "role_transfer_ready": [
+          [
+            "role_transfer_audit_license"
+          ]
+        ],
+        "selector_source_ready": [
+          [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ]
+        ],
+        "toe_ready": [
+          [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        ]
+      },
+      "truth_table_size": 32
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds older ANF/Boolean-derivative certificates and P2427 projection independence, but no production P24xx certificate computing the exact ANF, prime implicants, and derivative-edge supports for the current five-gate repair readiness predicates.",
+      "patterns": {
+        "anf_prior": {
+          "count": 126,
+          "samples": [
+            "fundamental_action_reconstruction/N514_CURRENT_FIRST_STRICT_ZN_ELEMENT_ORDER_REFERENCE_FOURIER_DEFECT_NONVANISHING_THEOREM.md:214:Let `μ` be the Möbius function. Use the identity",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1123:This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1171:## P2428/S1378 repair-readiness ANF and derivative certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1173:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:872:## P2398/S1348 role-closed quotient ANF certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:874:`P2398/S1348` strengthens P2397 by computing the algebraic normal form of the P2396 role-closed quotient instead of only counting truth-table rows.  On the four free non-role variables, the quotient ANF is:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:972:`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:672:## P2398/S1348 quotient ANF guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:674:`P2398/S1348` turns the P2397 role-closed slice into an exact quotient ANF.  In that quotient, `role_transfer=0` and `toe=0` as polynomials, while bridge and selector remain non-role targets.  Therefore a role-bearing `L_total` term cannot be justified by any combination of APD, phase/frequency, damping, or `chi11` source progress alone.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:720:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:772:`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:798:## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:127:## 3.2 Boolean normal form (GF(2) ANF)",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:135:The Boolean normal form also has a local derivative reading.  For each open atom `a`, take the Boolean derivative of `toe_closure` by flipping only `a` while holding the other six atoms fixed.  The derivative support has size `1` for every atom, and the unique support point is exactly the six-atom nearest miss where all other atoms are already true.",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:11:- Bridge ANF: `[{'mask': 7, 'degree': 3, 'monomial': 'strict_dynamical_source_for_A_P_D*strict_phase_frequency_source*strict_damping_beta_eta_source'}]`.",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:12:- Selector ANF: `[{'mask': 8, 'degree': 1, 'monomial': 'chi11_selector_source'}]`.",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:1:# P2398 S1348: role-closed quotient ANF certificate",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:3:Status: `PASS_ROLE_CLOSED_QUOTIENT_ANF_ROLE_AND_TOE_ZERO`",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:7:P2398/S1348 computes the exact ANF on the P2396/P2397 role-closed quotient.",
+            "fundamental_action_reconstruction/generated/p2398_s1348_role_closed_quotient_anf_certificate.md:9:## Quotient ANF"
+          ]
+        },
+        "new_packet": {
+          "count": 39,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1171:## P2428/S1378 repair-readiness ANF and derivative certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1173:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1179:`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:720:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:798:## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:800:`P2428/S1378` computes that role-bearing `L_total` readiness is the single literal `role_bearing_ltotal_export`, while ToE readiness is the degree-five monomial over all missing gates.  No APD value witness, chi11 cut, weighted order, or projection-independence fact supplies those literals; they require separate theorem export.",
+            "fundamental_action_reconstruction/generated/p2428_s1378_repair_readiness_anf_derivative_certificate.md:1:# P2428 S1378: repair-readiness ANF derivative certificate",
+            "fundamental_action_reconstruction/p2271_s1221_strict_nu_branch_group_policy_symbolic_vs_empirical_derivative_slack_probe.py:116:            \"theorem_scope_limit\": \"surrogate derivative-sensitivity comparison only; not strict-core selector closure and not ToE closure\",",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:226:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:15:OUT = GEN / \"p2428_s1378_repair_readiness_anf_derivative_certificate.json\"",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:16:MD = GEN / \"p2428_s1378_repair_readiness_anf_derivative_certificate.md\"",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:207:## P2428/S1378 repair-readiness ANF and derivative certificate",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:209:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:214:## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:216:`P2428/S1378` computes that role-bearing `L_total` readiness is the single literal `role_bearing_ltotal_export`, while ToE readiness is the degree-five monomial over all missing gates.  No APD value witness, chi11 cut, weighted order, or projection-independence fact supplies those literals; they require separate theorem export.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:230:        \"theorem_name\": \"P2428_T1_repair_readiness_anf_derivative_certificate\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:303:        \"packet_id\": \"P2428\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:304:        \"stage_id\": \"S1378\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:307:        \"repair_readiness_anf_derivative_certificate\": {",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:324:    theorem = payload[\"repair_readiness_anf_derivative_certificate\"][\"theorem_export\"]"
+          ]
+        },
+        "nonpromotion_prior": {
+          "count": 1061,
+          "samples": [
+            "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:123:- No ToE closure is claimed.",
+            "fundamental_action_reconstruction/F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md:102:`F127` does not discharge:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:136:`F128` does not discharge:",
+            "fundamental_action_reconstruction/F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md:134:`F129` does not discharge:",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:127:`F130` does not discharge:",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:136:`F131` does not discharge:",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:142:`F132` does not discharge:",
+            "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md:126:`F138` does not discharge:",
+            "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md:152:`F139` does not discharge:",
+            "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md:186:`F140` does not discharge:",
+            "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md:196:`F141` does not discharge:",
+            "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md:201:`F142` does not discharge:",
+            "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md:184:`F143` does not discharge:",
+            "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:172:`F144` does not discharge:",
+            "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md:189:`F145` does not discharge:",
+            "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md:187:`F146` does not discharge:",
+            "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md:201:`F147` does not discharge:",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:235:`F148` does not discharge:",
+            "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md:243:`F149` does not discharge:"
+          ]
+        },
+        "p2427_input": {
+          "count": 26,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1165:## P2427/S1377 weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1167:`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1173:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:794:## P2427/S1377 weight-repair projection independence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:796:`P2427/S1377` certifies that all readiness predicates have empty weight-side support: their contingency tables factor through the repair subcube only.  Thus no weighted cost/order term can enter a role-bearing `L_total` as a surrogate for missing source, selector, QW-2191, or role-transfer theorems.",
+            "fundamental_action_reconstruction/generated/p2427_s1377_weight_repair_projection_independence_certificate.md:1:# P2427 S1377: weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:266:## P2427/S1377 weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:268:`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:273:## P2427/S1377 weight-repair projection independence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:275:`P2427/S1377` certifies that all readiness predicates have empty weight-side support: their contingency tables factor through the repair subcube only.  Thus no weighted cost/order term can enter a role-bearing `L_total` as a surrogate for missing source, selector, QW-2191, or role-transfer theorems.",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:293:        \"theorem_name\": \"P2427_T1_weight_repair_projection_independence_certificate\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:382:        \"packet_id\": \"P2427\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:408:                \"# P2427 S1377: weight-repair projection independence certificate\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:92:        \"new_packet\": \"P2427|S1377|weight repair projection|projection independence|repair.*independence\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:182:    p2427 = theorem(sources[\"P2427_INDEPENDENCE\"], \"weight_repair_projection_independence_certificate\")",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:19:    \"P2427_INDEPENDENCE\": GEN / \"p2427_s1377_weight_repair_projection_independence_certificate.json\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:209:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:89:        \"p2427_input\": \"P2427|projection independence|weight-repair projection|empty weight-side support\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:97:            \"Repo grep finds older ANF/Boolean-derivative certificates and P2427 projection independence, but no production \"",
+            "fundamental_action_reconstruction/test_p2427_s1377_weight_repair_projection_independence_certificate.py:17:class P2427WeightRepairProjectionIndependenceCertificateTest(unittest.TestCase):"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2427_INDEPENDENCE": "PASS_WEIGHT_REPAIR_PROJECTION_INDEPENDENCE_NO_GATE_DISCHARGE_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "anf_degrees": {
+        "bridge_source_ready": 1,
+        "role_bearing_ltotal_ready": 1,
+        "role_transfer_ready": 1,
+        "selector_source_ready": 2,
+        "toe_ready": 5
+      },
+      "anf_polynomials": {
+        "bridge_source_ready": "source_obligation_discharge",
+        "role_bearing_ltotal_ready": "role_bearing_ltotal_export",
+        "role_transfer_ready": "role_transfer_audit_license",
+        "selector_source_ready": "chi11_source_export * qw2191_selector_discharge",
+        "toe_ready": "source_obligation_discharge * chi11_source_export * qw2191_selector_discharge * role_transfer_audit_license * role_bearing_ltotal_export"
+      },
+      "chi11_source_exported": false,
+      "derivative_edge_counts": {
+        "bridge_source_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 16
+        },
+        "role_bearing_ltotal_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 16,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "role_transfer_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 16,
+          "source_obligation_discharge": 0
+        },
+        "selector_source_ready": {
+          "chi11_source_export": 8,
+          "qw2191_selector_discharge": 8,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "toe_ready": {
+          "chi11_source_export": 1,
+          "qw2191_selector_discharge": 1,
+          "role_bearing_ltotal_export": 1,
+          "role_transfer_audit_license": 1,
+          "source_obligation_discharge": 1
+        }
+      },
+      "essential_gate_sets": {
+        "bridge_source_ready": [
+          "source_obligation_discharge"
+        ],
+        "role_bearing_ltotal_ready": [
+          "role_bearing_ltotal_export"
+        ],
+        "role_transfer_ready": [
+          "role_transfer_audit_license"
+        ],
+        "selector_source_ready": [
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ],
+        "toe_ready": [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge",
+          "role_transfer_audit_license",
+          "role_bearing_ltotal_export"
+        ]
+      },
+      "gate_count": 5,
+      "not_licensed": [
+        "ANF/derivative structure is a blocker map, not a theorem-gate discharge.",
+        "The selector monomial still requires both chi11 source export and QW-2191 discharge.",
+        "The ToE monomial still requires all five missing theorem gates.",
+        "No source, selector, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2427_all_tables_factor_inherited": true,
+      "p2427_product_assignment_count_inherited": true,
+      "p2427_weight_side_support_empty_inherited": true,
+      "prime_implicant_counts": {
+        "bridge_source_ready": 1,
+        "role_bearing_ltotal_ready": 1,
+        "role_transfer_ready": 1,
+        "selector_source_ready": 1,
+        "toe_ready": 1
+      },
+      "prime_implicants": {
+        "bridge_source_ready": [
+          [
+            "source_obligation_discharge"
+          ]
+        ],
+        "role_bearing_ltotal_ready": [
+          [
+            "role_bearing_ltotal_export"
+          ]
+        ],
+        "role_transfer_ready": [
+          [
+            "role_transfer_audit_license"
+          ]
+        ],
+        "selector_source_ready": [
+          [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ]
+        ],
+        "toe_ready": [
+          [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        ]
+      },
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_licensed": false,
+      "selector_requires_chi11_and_qw2191_pair": true,
+      "single_prime_implicant_per_readiness_predicate": true,
+      "source_obligation_discharge_exported": false,
+      "theorem_name": "P2428_T1_repair_readiness_anf_derivative_certificate",
+      "toe_closure_exported": false,
+      "toe_derivative_edges_are_nearest_misses": true,
+      "toe_prime_implicant_is_all_five_gates": true,
+      "truth_table_size": 32
+    },
+    "theorem_fingerprint_sha256": "501e21cb05d5eca984aa158828089f2c3405e9ec5073247e666d5e03cc233c9c"
+  },
+  "result_kind": "REPAIR_READINESS_ANF_DERIVATIVE_CERTIFICATE",
+  "schema_version": "p2428_s1378_v1",
+  "stage_id": "S1378",
+  "status": "PASS_REPAIR_READINESS_ANF_DERIVATIVE_NO_GATE_DISCHARGE_NO_CLOSURE"
+}

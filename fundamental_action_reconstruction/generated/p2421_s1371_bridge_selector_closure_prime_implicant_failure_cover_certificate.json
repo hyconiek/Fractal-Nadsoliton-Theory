@@ -1,0 +1,613 @@
+{
+  "bridge_selector_closure_prime_implicant_failure_cover_certificate": {
+    "finite_witness_certificate": {
+      "anf_terms": [
+        {
+          "degree": 7,
+          "gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "mask": 127
+        }
+      ],
+      "closure_gates": [
+        "apd_value_bridge_witness",
+        "source_obligation_discharge",
+        "chi11_phase_selector_cut_mechanism",
+        "chi11_source_export",
+        "qw2191_selector_discharge",
+        "role_transfer_audit_license",
+        "role_bearing_ltotal_export"
+      ],
+      "current_mask": 5,
+      "current_missing_gates": [
+        "source_obligation_discharge",
+        "chi11_source_export",
+        "qw2191_selector_discharge",
+        "role_transfer_audit_license",
+        "role_bearing_ltotal_export"
+      ],
+      "current_repair_distance": 5,
+      "current_true_gates": [
+        "apd_value_bridge_witness",
+        "chi11_phase_selector_cut_mechanism"
+      ],
+      "derivative_rows": [
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "apd_value_bridge_witness",
+          "high_mask": 127,
+          "low_mask": 126,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "source_obligation_discharge",
+          "high_mask": 127,
+          "low_mask": 125,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "chi11_phase_selector_cut_mechanism",
+          "high_mask": 127,
+          "low_mask": 123,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "chi11_source_export",
+          "high_mask": 127,
+          "low_mask": 119,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "qw2191_selector_discharge",
+          "high_mask": 127,
+          "low_mask": 111,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "role_transfer_audit_license",
+          "high_mask": 127,
+          "low_mask": 95,
+          "toe_high": true,
+          "toe_low": false
+        },
+        {
+          "boolean_derivative_at_nearest_edge": 1,
+          "gate": "role_bearing_ltotal_export",
+          "high_mask": 127,
+          "low_mask": 63,
+          "toe_high": true,
+          "toe_low": false
+        }
+      ],
+      "failure_cover_rows": [
+        {
+          "cover_literal": "not apd_value_bridge_witness",
+          "covered_failure_count": 64,
+          "missing_gate": "apd_value_bridge_witness",
+          "nearest_miss_mask_when_only_this_gate_missing": 126
+        },
+        {
+          "cover_literal": "not source_obligation_discharge",
+          "covered_failure_count": 64,
+          "missing_gate": "source_obligation_discharge",
+          "nearest_miss_mask_when_only_this_gate_missing": 125
+        },
+        {
+          "cover_literal": "not chi11_phase_selector_cut_mechanism",
+          "covered_failure_count": 64,
+          "missing_gate": "chi11_phase_selector_cut_mechanism",
+          "nearest_miss_mask_when_only_this_gate_missing": 123
+        },
+        {
+          "cover_literal": "not chi11_source_export",
+          "covered_failure_count": 64,
+          "missing_gate": "chi11_source_export",
+          "nearest_miss_mask_when_only_this_gate_missing": 119
+        },
+        {
+          "cover_literal": "not qw2191_selector_discharge",
+          "covered_failure_count": 64,
+          "missing_gate": "qw2191_selector_discharge",
+          "nearest_miss_mask_when_only_this_gate_missing": 111
+        },
+        {
+          "cover_literal": "not role_transfer_audit_license",
+          "covered_failure_count": 64,
+          "missing_gate": "role_transfer_audit_license",
+          "nearest_miss_mask_when_only_this_gate_missing": 95
+        },
+        {
+          "cover_literal": "not role_bearing_ltotal_export",
+          "covered_failure_count": 64,
+          "missing_gate": "role_bearing_ltotal_export",
+          "nearest_miss_mask_when_only_this_gate_missing": 63
+        }
+      ],
+      "failure_dnf_literals": [
+        "not apd_value_bridge_witness",
+        "not source_obligation_discharge",
+        "not chi11_phase_selector_cut_mechanism",
+        "not chi11_source_export",
+        "not qw2191_selector_discharge",
+        "not role_transfer_audit_license",
+        "not role_bearing_ltotal_export"
+      ],
+      "full_mask": 127,
+      "nearest_miss_rows": [
+        {
+          "mask": 126,
+          "missing_gate": "apd_value_bridge_witness",
+          "repair_by_adding": "apd_value_bridge_witness",
+          "toe_ready": false,
+          "true_gates": [
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 125,
+          "missing_gate": "source_obligation_discharge",
+          "repair_by_adding": "source_obligation_discharge",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 123,
+          "missing_gate": "chi11_phase_selector_cut_mechanism",
+          "repair_by_adding": "chi11_phase_selector_cut_mechanism",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 119,
+          "missing_gate": "chi11_source_export",
+          "repair_by_adding": "chi11_source_export",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 111,
+          "missing_gate": "qw2191_selector_discharge",
+          "repair_by_adding": "qw2191_selector_discharge",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 95,
+          "missing_gate": "role_transfer_audit_license",
+          "repair_by_adding": "role_transfer_audit_license",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "mask": 63,
+          "missing_gate": "role_bearing_ltotal_export",
+          "repair_by_adding": "role_bearing_ltotal_export",
+          "toe_ready": false,
+          "true_gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ]
+        }
+      ],
+      "nonclosure_hamming_distribution_from_current": {
+        "0": 1,
+        "1": 7,
+        "2": 21,
+        "3": 35,
+        "4": 35,
+        "5": 20,
+        "6": 7,
+        "7": 1
+      },
+      "p2420_current_repair_distance_inherited": 5,
+      "p2420_minimal_toe_masks_inherited": [
+        127
+      ],
+      "p2420_subcube_failure_count_inherited": 31,
+      "prime_implicants": [
+        {
+          "degree": 7,
+          "gates": [
+            "apd_value_bridge_witness",
+            "source_obligation_discharge",
+            "chi11_phase_selector_cut_mechanism",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "mask": 127
+        }
+      ],
+      "proper_failure_count": 127,
+      "success_cnf_unit_clauses": [
+        "apd_value_bridge_witness",
+        "source_obligation_discharge",
+        "chi11_phase_selector_cut_mechanism",
+        "chi11_source_export",
+        "qw2191_selector_discharge",
+        "role_transfer_audit_license",
+        "role_bearing_ltotal_export"
+      ],
+      "truth_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "truth_vector_true_count": 1
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds P2420's seven-gate nonclosure matrix and older generic prime-implicant/failure-cover work, but no production P24xx certificate extracting the exact prime implicant and dual failure cover for the bridge-selector closure gate itself.",
+      "patterns": {
+        "closure_gate_prior": {
+          "count": 84,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1111:`P2420/S1370` answers the closure objection directly.  The current positive evidence has two gates: `apd_value_bridge_witness` from P2416 and `chi11_phase_selector_cut_mechanism` from P2419.  Those are not the same as `source_obligation_discharge`, `chi11_source_export`, `qw2191_selector_discharge`, `role_transfer_audit_license`, or `role_bearing_ltotal_export`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1129:The finite subcube separates partial unlocks from closure.  Source discharge alone unlocks bridge-source readiness; role-transfer and role-bearing `L_total` each have singleton local unlocks; selector-source readiness has no singleton unlock and requires the pair `chi11_source_export + qw2191_selector_discharge`.  ToE readiness still has exactly one repair row: all five missing gates.",
+            "fundamental_action_reconstruction/generated/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.md:13:- Current missing gates: `['source_obligation_discharge', 'chi11_source_export', 'qw2191_selector_discharge', 'role_transfer_audit_license', 'role_bearing_ltotal_export']`.",
+            "fundamental_action_reconstruction/generated/p2422_s1372_current_missing_gate_repair_subcube_certificate.md:13:- ToE-ready added gates: `['source_obligation_discharge', 'chi11_source_export', 'qw2191_selector_discharge', 'role_transfer_audit_license', 'role_bearing_ltotal_export']`.",
+            "fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:306:        \"chi11_source_exported\": False,",
+            "fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:310:        \"role_bearing_ltotal_exported\": False,",
+            "fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:344:        \"chi11_source_still_open\": not theorem_export[\"chi11_source_exported\"],",
+            "fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:348:        \"ltotal_still_blocked\": not theorem_export[\"role_bearing_ltotal_exported\"],",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:218:            \"blocking_input\": \"P2419 chi11_source_exported=false and chi11_not_sufficient_for_phase/selector=true\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:265:            \"p2419_chi11_source_exported\": p2419.get(\"chi11_source_exported\"),",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:275:`P2420/S1370` answers the closure objection directly.  The current positive evidence has two gates: `apd_value_bridge_witness` from P2416 and `chi11_phase_selector_cut_mechanism` from P2419.  Those are not the same as `source_obligation_discharge`, `chi11_source_export`, `qw2191_selector_discharge`, `role_transfer_audit_license`, or `role_bearing_ltotal_export`.",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:30:    \"source_obligation_discharge\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:323:        \"chi11_source_exported\": False,",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:327:        \"role_bearing_ltotal_exported\": False,",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:32:    \"chi11_source_export\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:33:    \"qw2191_selector_discharge\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:352:        \"chi11_source_still_open\": not theorem_export[\"chi11_source_exported\"],",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:356:        \"ltotal_still_blocked\": not theorem_export[\"role_bearing_ltotal_exported\"],",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:35:    \"role_bearing_ltotal_export\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:39:SOURCE_GATE = \"source_obligation_discharge\""
+          ]
+        },
+        "new_packet": {
+          "count": 29,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1117:## P2421/S1371 bridge-selector closure prime-implicant/failure-cover certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1119:`P2421/S1371` turns the P2420 seven-gate nonclosure matrix into an exact Boolean theorem.  The ToE-ready predicate has one true mask, the all-gates mask `127`, and its algebraic normal form has one degree-seven term: the product of APD value bridge, source discharge, chi11 selector cut, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1123:This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1127:`P2422/S1372` expands the P2421 current gap into the exact `2^5=32` repair subcube over the five missing theorem gates: source discharge, chi11 source export, QW-2191 selector discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:770:## P2421/S1371 bridge-selector closure prime-implicant guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:772:`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.",
+            "fundamental_action_reconstruction/generated/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.md:1:# P2421 S1371: bridge-selector closure prime-implicant/failure-cover certificate",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:249:## P2421/S1371 bridge-selector closure prime-implicant/failure-cover certificate",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:251:`P2421/S1371` turns the P2420 seven-gate nonclosure matrix into an exact Boolean theorem.  The ToE-ready predicate has one true mask, the all-gates mask `127`, and its algebraic normal form has one degree-seven term: the product of APD value bridge, source discharge, chi11 selector cut, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:255:This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:258:## P2421/S1371 bridge-selector closure prime-implicant guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:260:`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:274:        \"theorem_name\": \"P2421_T1_bridge_selector_closure_prime_implicant_failure_cover_certificate\",",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:337:        \"packet_id\": \"P2421\",",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:338:        \"stage_id\": \"S1371\",",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:363:                \"# P2421 S1371: bridge-selector closure prime-implicant/failure-cover certificate\",",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:84:        \"new_packet\": \"P2421|S1371|bridge selector closure prime|closure prime implicant|failure cover certificate\",",
+            "fundamental_action_reconstruction/p2422_s1372_current_missing_gate_repair_subcube_certificate.py:100:        \"p2421_input\": \"P2421|prime implicant|failure cover|current missing gates|current_repair_distance\",",
+            "fundamental_action_reconstruction/p2422_s1372_current_missing_gate_repair_subcube_certificate.py:108:            \"Repo grep finds P2421's all-gates prime implicant and generic repair language, but no production P24xx \"",
+            "fundamental_action_reconstruction/p2422_s1372_current_missing_gate_repair_subcube_certificate.py:175:    p2421 = p2421_theorem(sources[\"P2421_PRIME_IMPLICANT_FAILURE_COVER\"])"
+          ]
+        },
+        "p2420_input": {
+          "count": 32,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1109:## P2420/S1370 bridge-selector nonclosure reason matrix certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1111:`P2420/S1370` answers the closure objection directly.  The current positive evidence has two gates: `apd_value_bridge_witness` from P2416 and `chi11_phase_selector_cut_mechanism` from P2419.  Those are not the same as `source_obligation_discharge`, `chi11_source_export`, `qw2191_selector_discharge`, `role_transfer_audit_license`, or `role_bearing_ltotal_export`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1113:The finite matrix over seven closure gates has `128` rows.  Holding the APD value bridge and selector cut/mechanism fixed true leaves a `32`-row subcube; only the all-gates row closes ToE, so `31/32` such rows remain nonclosures.  From the current mask, the minimum repair distance to ToE closure is five theorem gates: source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1119:`P2421/S1371` turns the P2420 seven-gate nonclosure matrix into an exact Boolean theorem.  The ToE-ready predicate has one true mask, the all-gates mask `127`, and its algebraic normal form has one degree-seven term: the product of APD value bridge, source discharge, chi11 selector cut, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:766:## P2420/S1370 bridge-selector nonclosure guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:768:`P2420/S1370` separates bridge value evidence and selector-cut evidence from the missing theorem gates needed for closure.  Since the current mask has only `apd_value_bridge_witness` and `chi11_phase_selector_cut_mechanism`, while source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export remain absent, no `L_total` or ToE closure can be promoted from the bridge/selector bookkeeping.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:772:`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.",
+            "fundamental_action_reconstruction/generated/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.md:17:- Current repair distance to ToE: `5`.",
+            "fundamental_action_reconstruction/generated/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.md:1:# P2420 S1370: bridge-selector nonclosure reason matrix certificate",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:273:## P2420/S1370 bridge-selector nonclosure reason matrix certificate",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:275:`P2420/S1370` answers the closure objection directly.  The current positive evidence has two gates: `apd_value_bridge_witness` from P2416 and `chi11_phase_selector_cut_mechanism` from P2419.  Those are not the same as `source_obligation_discharge`, `chi11_source_export`, `qw2191_selector_discharge`, `role_transfer_audit_license`, or `role_bearing_ltotal_export`.",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:277:The finite matrix over seven closure gates has `128` rows.  Holding the APD value bridge and selector cut/mechanism fixed true leaves a `32`-row subcube; only the all-gates row closes ToE, so `31/32` such rows remain nonclosures.  From the current mask, the minimum repair distance to ToE closure is five theorem gates: source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:282:## P2420/S1370 bridge-selector nonclosure guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:284:`P2420/S1370` separates bridge value evidence and selector-cut evidence from the missing theorem gates needed for closure.  Since the current mask has only `apd_value_bridge_witness` and `chi11_phase_selector_cut_mechanism`, while source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export remain absent, no `L_total` or ToE closure can be promoted from the bridge/selector bookkeeping.",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:298:        \"theorem_name\": \"P2420_T1_bridge_selector_nonclosure_reason_matrix_certificate\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:362:        \"packet_id\": \"P2420\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:389:                \"# P2420 S1370: bridge-selector nonclosure reason matrix certificate\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:405:                f\"- Current repair distance to ToE: `{theorem['current_to_toe_minimum_repair_distance']}`.\",",
+            "fundamental_action_reconstruction/p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.py:94:        \"new_packet\": \"P2420|S1370|bridge selector nonclosure|why.*not.*close|domyk|nonclosure reason matrix\",",
+            "fundamental_action_reconstruction/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.py:19:    \"P2420_NONCLOSURE_MATRIX\": GEN / \"p2420_s1370_bridge_selector_nonclosure_reason_matrix_certificate.json\","
+          ]
+        },
+        "prime_implicant_prior": {
+          "count": 58,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1002:The dual failure cover is the twelve-term DNF saying that any missing ontology guard atom, strict internal-completion atom, or role-successor atom blocks `L_total`/ToE projection.  The repair spectrum contains `4095` failure assignments with distance distribution `binomial(12,k)` by the number of missing atoms, and the nearest failures are exactly the twelve one-atom-missing masks.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1121:The dual failure cover is the seven-literal DNF `not gate_1 OR ... OR not gate_7`.  Each missing gate has a Boolean-derivative nearest edge at the all-but-that-gate mask, so no missing gate is redundant and no proper subset can be promoted to closure.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1123:This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:972:`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:980:`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:996:`P2410/S1360` expands the P2409 quotient CNF back to the full P2406 twelve-atom staged barrier.  The finite enumeration checks all `3^12 - 1` nonempty non-tautological clauses and finds the exact success-side prime implicates to be the twelve positive unit obligations:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:720:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:724:`P2409/S1359` gives the Lagrangian/EOM guard in CNF form: a role-bearing `L_total` must satisfy the three unit obligations `O`, `S`, and `R`.  Equivalently, every proposed shortcut is covered by the failure DNF `not O OR not S OR not R`; a missing ontology guard, strict completion, or role-successor projection blocks Lagrangian promotion.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:772:`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.",
+            "fundamental_action_reconstruction/generated/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.md:7:P2408/S1358 proves the P2407 quotient barrier is the unique prime implicant O*S*R and audits its Boolean derivative edges.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:12:- Success CNF: `O_ontology_guard_package AND S_strict_internal_completion_package AND R_role_successor_projection_package`.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:13:- Success prime implicate count: `3`.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:14:- Failure DNF: `not O_ontology_guard_package OR not S_strict_internal_completion_package OR not R_role_successor_projection_package`.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:23:- No ToE closure follows from the CNF/failure-cover duality alone.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:7:P2409/S1359 proves the dual CNF/failure-cover ledger for the P2407/P2408 quotient barrier.",
+            "fundamental_action_reconstruction/generated/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.md:20:- Unit prime implicates are proof obligations, not role exports.",
+            "fundamental_action_reconstruction/generated/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.md:24:- No ToE closure follows from the twelve-atom CNF/failure-cover certificate alone.",
+            "fundamental_action_reconstruction/generated/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.md:17:- The unique prime implicant is a closure obligation, not a proof that its gates are discharged.",
+            "fundamental_action_reconstruction/generated/p2421_s1371_bridge_selector_closure_prime_implicant_failure_cover_certificate.md:18:- The failure cover blocks every proper subset from ToE promotion.",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:217:`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself."
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2420_NONCLOSURE_MATRIX": "PASS_BRIDGE_SELECTOR_MECHANISM_NONCLOSURE_REASON_MATRIX_NO_TOE_CLOSURE"
+    },
+    "theorem_export": {
+      "all_derivative_edges_decisive": true,
+      "anf_degree": 7,
+      "anf_term_count": 1,
+      "chi11_source_exported": false,
+      "closure_gate_count": 7,
+      "current_mask": 5,
+      "current_missing_gate_count": 5,
+      "current_missing_gates": [
+        "source_obligation_discharge",
+        "chi11_source_export",
+        "qw2191_selector_discharge",
+        "role_transfer_audit_license",
+        "role_bearing_ltotal_export"
+      ],
+      "current_repair_distance": 5,
+      "failure_cover_literal_count": 7,
+      "failure_cover_rows_count": 7,
+      "full_mask": 127,
+      "nearest_miss_count": 7,
+      "not_licensed": [
+        "The unique prime implicant is a closure obligation, not a proof that its gates are discharged.",
+        "The failure cover blocks every proper subset from ToE promotion.",
+        "No source, chi11, QW-2191, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2420_minimal_toe_masks_inherited": true,
+      "p2420_repair_distance_inherited": true,
+      "p2420_subcube_failure_count_inherited": true,
+      "prime_implicant_count": 1,
+      "prime_implicant_masks": [
+        127
+      ],
+      "proper_failure_count": 127,
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_licensed": false,
+      "source_obligation_discharge_exported": false,
+      "success_cnf_unit_clause_count": 7,
+      "theorem_name": "P2421_T1_bridge_selector_closure_prime_implicant_failure_cover_certificate",
+      "toe_closure_exported": false,
+      "total_assignment_count": 128,
+      "truth_vector_true_count": 1
+    },
+    "theorem_fingerprint_sha256": "3ce5c46632f98ac1858b72c26cb853d027b7d778fc6f1ea78dc480fc8b75c222"
+  },
+  "gatekeeper_checks": {
+    "all_127_proper_masks_fail": true,
+    "all_128_assignments": true,
+    "all_derivatives_decisive": true,
+    "anf_degree_seven": true,
+    "chi11_still_open": true,
+    "current_missing_five_gates": true,
+    "current_repair_distance_five": true,
+    "fingerprint_stable": true,
+    "full_mask_127": true,
+    "ltotal_still_blocked": true,
+    "one_true_mask": true,
+    "p2420_minimal_mask_inherited": true,
+    "p2420_repair_distance_inherited": true,
+    "p2420_subcube_failure_inherited": true,
+    "qw2191_still_open": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "seven_cnf_units": true,
+    "seven_failure_literals": true,
+    "seven_gates": true,
+    "seven_nearest_misses": true,
+    "single_anf_term": true,
+    "source_still_open": true,
+    "toe_still_open": true,
+    "unique_prime_implicant": true
+  },
+  "global_status": "OPEN_PROGRESS_PRIME_IMPLICANT_CERTIFIED_NO_CLOSURE_GATE_DISCHARGED",
+  "packet_id": "P2421",
+  "recommended_next_honest_step": "Pick one of the five current missing gates and attempt a real theorem; do not weaken the unique all-gates prime implicant or bypass the seven-literal failure cover.",
+  "result_kind": "BRIDGE_SELECTOR_CLOSURE_PRIME_IMPLICANT_FAILURE_COVER_CERTIFICATE",
+  "schema_version": "p2421_s1371_v1",
+  "stage_id": "S1371",
+  "status": "PASS_UNIQUE_PRIME_IMPLICANT_FAILURE_COVER_NO_GATE_DISCHARGE"
+}

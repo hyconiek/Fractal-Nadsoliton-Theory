@@ -1,0 +1,530 @@
+{
+  "gatekeeper_checks": {
+    "chi11_still_open": true,
+    "class_counts_expected": true,
+    "fingerprint_stable": true,
+    "four_pareto_orders": true,
+    "ltotal_still_blocked": true,
+    "no_unique_first_gate": true,
+    "objective_vectors_expected": true,
+    "p2423_admissible_orders_inherited": true,
+    "p2423_ltotal_step_inherited": true,
+    "p2423_role_step_inherited": true,
+    "pareto_class_counts_expected": true,
+    "pareto_vectors_expected": true,
+    "qw2191_still_open": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "six_admissible_orders": true,
+    "source_still_open": true,
+    "three_source_frontier_gates": true,
+    "toe_still_open": true,
+    "two_dominated_orders": true
+  },
+  "global_status": "OPEN_PROGRESS_SOURCE_FRONTIER_PARETO_CERTIFIED_NO_SOURCE_GATE_DISCHARGED",
+  "packet_id": "P2424",
+  "recommended_next_honest_step": "Add a real external/source-cost premise if one wants to choose between bridge-first and selector-pair-first; otherwise either Pareto class is only a proof-search order, not a closure theorem.",
+  "result_kind": "SOURCE_FRONTIER_PARETO_ORDER_CERTIFICATE",
+  "schema_version": "p2424_s1374_v1",
+  "source_frontier_pareto_order_certificate": {
+    "finite_witness_certificate": {
+      "admissible_order_rows": [
+        {
+          "bridge_source_ready_step": 1,
+          "class": "bridge_first_pareto",
+          "first_three_source_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            1,
+            3
+          ],
+          "order": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 1,
+          "class": "bridge_first_pareto",
+          "first_three_source_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "chi11_source_export"
+          ],
+          "objective_vector_bridge_selector": [
+            1,
+            3
+          ],
+          "order": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 2,
+          "class": "mixed_split_dominated",
+          "first_three_source_gates": [
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            2,
+            3
+          ],
+          "order": [
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 3,
+          "class": "selector_pair_first_pareto",
+          "first_three_source_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "source_obligation_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            3,
+            2
+          ],
+          "order": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 2,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 2,
+          "class": "mixed_split_dominated",
+          "first_three_source_gates": [
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "objective_vector_bridge_selector": [
+            2,
+            3
+          ],
+          "order": [
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 3,
+          "class": "selector_pair_first_pareto",
+          "first_three_source_gates": [
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "source_obligation_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            3,
+            2
+          ],
+          "order": [
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 2,
+          "toe_ready_step": 5
+        }
+      ],
+      "class_counts": {
+        "bridge_first_pareto": 2,
+        "mixed_split_dominated": 2,
+        "selector_pair_first_pareto": 2
+      },
+      "dominated_order_rows": [
+        {
+          "bridge_source_ready_step": 2,
+          "class": "mixed_split_dominated",
+          "first_three_source_gates": [
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            2,
+            3
+          ],
+          "order": [
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 2,
+          "class": "mixed_split_dominated",
+          "first_three_source_gates": [
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "objective_vector_bridge_selector": [
+            2,
+            3
+          ],
+          "order": [
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        }
+      ],
+      "first_gate_counts": {
+        "chi11_source_export": 2,
+        "qw2191_selector_discharge": 2,
+        "source_obligation_discharge": 2
+      },
+      "objective_vector_counts": {
+        "[1, 3]": 2,
+        "[2, 3]": 2,
+        "[3, 2]": 2
+      },
+      "p2423_admissible_order_count_inherited": 6,
+      "p2423_ltotal_step_distribution_inherited": {
+        "5": 6
+      },
+      "p2423_role_transfer_step_distribution_inherited": {
+        "4": 6
+      },
+      "pareto_class_counts": {
+        "bridge_first_pareto": 2,
+        "selector_pair_first_pareto": 2
+      },
+      "pareto_first_gate_counts": {
+        "chi11_source_export": 1,
+        "qw2191_selector_discharge": 1,
+        "source_obligation_discharge": 2
+      },
+      "pareto_objective_vector_counts": {
+        "[1, 3]": 2,
+        "[3, 2]": 2
+      },
+      "pareto_order_rows": [
+        {
+          "bridge_source_ready_step": 1,
+          "class": "bridge_first_pareto",
+          "first_three_source_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            1,
+            3
+          ],
+          "order": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 1,
+          "class": "bridge_first_pareto",
+          "first_three_source_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "chi11_source_export"
+          ],
+          "objective_vector_bridge_selector": [
+            1,
+            3
+          ],
+          "order": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 3,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 3,
+          "class": "selector_pair_first_pareto",
+          "first_three_source_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "source_obligation_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            3,
+            2
+          ],
+          "order": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 2,
+          "toe_ready_step": 5
+        },
+        {
+          "bridge_source_ready_step": 3,
+          "class": "selector_pair_first_pareto",
+          "first_three_source_gates": [
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "source_obligation_discharge"
+          ],
+          "objective_vector_bridge_selector": [
+            3,
+            2
+          ],
+          "order": [
+            "qw2191_selector_discharge",
+            "chi11_source_export",
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "role_bearing_ltotal_ready_step": 5,
+          "role_transfer_ready_step": 4,
+          "selector_source_ready_step": 2,
+          "toe_ready_step": 5
+        }
+      ],
+      "source_frontier_gates": [
+        "source_obligation_discharge",
+        "chi11_source_export",
+        "qw2191_selector_discharge"
+      ]
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds P2423's admissible order poset and generic Pareto/frontier material, but no production P24xx certificate classifying the six admissible first-three source orders into bridge-first, selector-pair-first, and dominated mixed strategies.",
+      "patterns": {
+        "new_packet": {
+          "count": 29,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1141:## P2424/S1374 source-frontier Pareto order certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1143:`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1151:`P2425/S1375` turns the P2424 two-class Pareto frontier into an exact weighted-cost half-space.  With positive weights `w_bridge` and `w_selector`, the bridge-first vector `[1,3]` has cost `w_bridge + 3*w_selector`, while the selector-pair-first vector `[3,2]` has cost `3*w_bridge + 2*w_selector`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:782:## P2424/S1374 source-frontier Pareto guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:784:`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/generated/p2424_s1374_source_frontier_pareto_order_certificate.md:17:- Two source-frontier Pareto classes remain incomparable without an extra cost/source premise.",
+            "fundamental_action_reconstruction/generated/p2424_s1374_source_frontier_pareto_order_certificate.md:1:# P2424 S1374: source-frontier Pareto order certificate",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:184:## P2424/S1374 source-frontier Pareto order certificate",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:186:`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:193:## P2424/S1374 source-frontier Pareto guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:195:`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:209:        \"theorem_name\": \"P2424_T1_source_frontier_pareto_order_certificate\",",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:232:            \"Two source-frontier Pareto classes remain incomparable without an extra cost/source premise.\",",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:261:        \"packet_id\": \"P2424\",",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:262:        \"stage_id\": \"S1374\",",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:287:                \"# P2424 S1374: source-frontier Pareto order certificate\",",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:79:        \"new_packet\": \"P2424|S1374|source frontier Pareto|source-frontier Pareto|Pareto order certificate\",",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:151:    p2424 = p2424_theorem(sources[\"P2424_SOURCE_FRONTIER_PARETO\"])",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:187:`P2425/S1375` turns the P2424 two-class Pareto frontier into an exact weighted-cost half-space.  With positive weights `w_bridge` and `w_selector`, the bridge-first vector `[1,3]` has cost `w_bridge + 3*w_selector`, while the selector-pair-first vector `[3,2]` has cost `3*w_bridge + 2*w_selector`.",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:18:    \"P2424_SOURCE_FRONTIER_PARETO\": GEN / \"p2424_s1374_source_frontier_pareto_order_certificate.json\","
+          ]
+        },
+        "p2423_input": {
+          "count": 28,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1133:## P2423/S1373 admissible repair-order poset certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1135:`P2423/S1373` adds proof-order discipline to the P2422 repair subcube.  It enumerates all `5! = 120` orders of the five missing gates and imposes the guardrail precedence relation: source discharge, chi11 source export, and QW-2191 selector discharge must precede role-transfer audit; role-transfer audit must precede role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1137:Only `6` orders survive as admissible linear extensions.  In every admissible order, role-transfer readiness first appears at step `4`, role-bearing `L_total` and ToE first appear at step `5`, and the first three steps are exactly a permutation of the bridge/selector source gates.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1143:`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:778:## P2423/S1373 admissible repair-order poset guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:780:`P2423/S1373` proves that role-transfer and role-bearing `L_total` are order-constrained: source discharge plus the chi11/QW-2191 selector pair must come first, role-transfer can only appear at step 4, and `L_total`/ToE only at step 5.  Therefore no reordered shortcut can promote partial repair work into a role-bearing Lagrangian or ToE closure.",
+            "fundamental_action_reconstruction/generated/p2423_s1373_admissible_repair_order_poset_certificate.md:1:# P2423 S1373: admissible repair-order poset certificate",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:228:## P2423/S1373 admissible repair-order poset certificate",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:230:`P2423/S1373` adds proof-order discipline to the P2422 repair subcube.  It enumerates all `5! = 120` orders of the five missing gates and imposes the guardrail precedence relation: source discharge, chi11 source export, and QW-2191 selector discharge must precede role-transfer audit; role-transfer audit must precede role-bearing `L_total` export.",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:232:Only `6` orders survive as admissible linear extensions.  In every admissible order, role-transfer readiness first appears at step `4`, role-bearing `L_total` and ToE first appear at step `5`, and the first three steps are exactly a permutation of the bridge/selector source gates.",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:237:## P2423/S1373 admissible repair-order poset guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:239:`P2423/S1373` proves that role-transfer and role-bearing `L_total` are order-constrained: source discharge plus the chi11/QW-2191 selector pair must come first, role-transfer can only appear at step 4, and `L_total`/ToE only at step 5.  Therefore no reordered shortcut can promote partial repair work into a role-bearing Lagrangian or ToE closure.",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:253:        \"theorem_name\": \"P2423_T1_admissible_repair_order_poset_certificate\",",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:306:        \"packet_id\": \"P2423\",",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:332:                \"# P2423 S1373: admissible repair-order poset certificate\",",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:88:        \"new_packet\": \"P2423|S1373|admissible repair order|repair order poset|proof-order poset\",",
+            "fundamental_action_reconstruction/p2423_s1373_admissible_repair_order_poset_certificate.py:98:            \"that imposes the guardrail precedence relation on the five current missing gates and enumerates only the admissible linear extensions.\"",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:160:    p2423 = p2423_theorem(sources[\"P2423_REPAIR_ORDER_POSET\"])",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:186:`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:18:    \"P2423_REPAIR_ORDER_POSET\": GEN / \"p2423_s1373_admissible_repair_order_poset_certificate.json\","
+          ]
+        },
+        "pareto_prior": {
+          "count": 3588,
+          "samples": [
+            "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:82:- reviewer-sensitive mass-precision frontier (`QW-2205`),",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:290:## 6) Current strict frontier reminders (what is still open)",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:75:   frontier),",
+            "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:72:`AX10` does not change the strict-core blockers. The honest residual frontier",
+            "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:78:`AX11` does not change the strict-core blockers. The honest residual frontier",
+            "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:80:`AX12` does not change the strict-core blockers. The honest residual frontier",
+            "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:82:`AX13` does not change the strict-core blockers. The honest residual frontier",
+            "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:92:`AX14` does not change the strict-core blockers. The honest residual frontier",
+            "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:12:   ingredient frontier,",
+            "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:80:4. the strict-core frontier remains unchanged.",
+            "fundamental_action_reconstruction/AX2_AXIOM_LANE_ACTUAL_BASIS_PAIR_AND_ORIENTATION_SLICE_INSTANCE.md:67:`AX2` does not change the strict-core blockers. The honest residual frontier remains:",
+            "fundamental_action_reconstruction/AX3_AXIOM_LANE_SIGMA_INT_RESIDUAL_DATUM_BRIDGE_INSTANCE.md:76:`AX3` does not change the strict-core blockers. The honest residual frontier remains:",
+            "fundamental_action_reconstruction/AX4_AXIOM_LANE_SELECTOR_FAMILY_ROBUSTNESS_AUDIT.md:84:`AX4` does not change the strict-core blockers. The honest residual frontier remains:",
+            "fundamental_action_reconstruction/AX5_AXIOM_LANE_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md:94:`AX5` does not change the strict-core blockers. The honest residual frontier remains:",
+            "fundamental_action_reconstruction/AX6_AXIOM_LANE_CLOSURE_PACKET.md:70:`AX6` does not change the strict-core blockers. The honest residual frontier remains:",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:137:- strict-core frontier preserved unchanged,",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:25:- leave the strict-core frontier unchanged.",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:49:3. whether anything in `AX1..AX6` changes the active strict-core frontier.",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:74:### 3. Residual frontier",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:76:The strict-core residual frontier is unchanged:"
+          ]
+        },
+        "source_frontier_prior": {
+          "count": 39,
+          "samples": [
+            "fundamental_action_reconstruction/F972_CURRENT_STRICT_T173_T176_EXISTING_F966_NON_SAME_LANE_ROUTE_CONTRACT_TO_EXPORTED_STRICT_SELECTOR_SOURCE_FRONTIER_SUBROUTE_PACKET.md:11:It records only that the best already exported anchoring subroute is the strict selector-source frontier that rejoins existing `T173`.",
+            "fundamental_action_reconstruction/F972_CURRENT_STRICT_T173_T176_EXISTING_F966_NON_SAME_LANE_ROUTE_CONTRACT_TO_EXPORTED_STRICT_SELECTOR_SOURCE_FRONTIER_SUBROUTE_PACKET.md:50:3. the strongest already exported subroute is the strict selector-source frontier,",
+            "fundamental_action_reconstruction/N124_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM.md:18:strict-core internal selector source frontier itself?",
+            "fundamental_action_reconstruction/N124_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM.md:64:> strict-core internal selector source frontier, while still leaving open",
+            "fundamental_action_reconstruction/N327_CURRENT_FIRST_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_THEOREM.md:32:   - the current strict-core internal selector-source frontier is still",
+            "fundamental_action_reconstruction/P1115_CURRENT_STRICT_T173_T176_EXISTING_F966_NON_SAME_LANE_ROUTE_CONTRACT_TO_EXPORTED_STRICT_SELECTOR_SOURCE_FRONTIER_SUBROUTE_DECISION_AUDIT_PROBE.md:20:namely the strict selector-source frontier,",
+            "fundamental_action_reconstruction/P1115_CURRENT_STRICT_T173_T176_EXISTING_F966_NON_SAME_LANE_ROUTE_CONTRACT_TO_EXPORTED_STRICT_SELECTOR_SOURCE_FRONTIER_SUBROUTE_DECISION_AUDIT_PROBE.md:46:6. `P1048` already rejoin that selector-source frontier to existing `T173`.",
+            "fundamental_action_reconstruction/P1115_CURRENT_STRICT_T173_T176_EXISTING_F966_NON_SAME_LANE_ROUTE_CONTRACT_TO_EXPORTED_STRICT_SELECTOR_SOURCE_FRONTIER_SUBROUTE_DECISION_AUDIT_PROBE.md:47:7. therefore the strongest already exported subroute inside the live `F966` contract is the strict selector-source frontier rejoining `T173`.",
+            "fundamental_action_reconstruction/P1116_CURRENT_STRICT_T173_T176_EXISTING_F972_SELECTOR_SOURCE_SUBROUTE_TO_EXISTING_F960_ACTIVE_BRIDGE_FRONTIER_ROUTE_DECISION_AUDIT_PROBE.md:11:should current work stay at the generic T173 selector-source frontier level",
+            "fundamental_action_reconstruction/P1116_CURRENT_STRICT_T173_T176_EXISTING_F972_SELECTOR_SOURCE_SUBROUTE_TO_EXISTING_F960_ACTIVE_BRIDGE_FRONTIER_ROUTE_DECISION_AUDIT_PROBE.md:41:1. `P1115/F972` already freeze the strongest exported non-same-lane subroute as the strict selector-source frontier rejoining `T173`.",
+            "fundamental_action_reconstruction/P113_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_PROBE.md:58:the package-level strict-core internal selector source frontier must be re-evaluated after the sigma-int operator-stage export",
+            "fundamental_action_reconstruction/P307_CURRENT_ACTUAL_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_PROBE.md:33:`N124` closes the current strict-core internal selector-source frontier",
+            "fundamental_action_reconstruction/README.md:2474:  selector source frontier jest juz zamkniety negatywnie,",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1129:The finite subcube separates partial unlocks from closure.  Source discharge alone unlocks bridge-source readiness; role-transfer and role-bearing `L_total` each have singleton local unlocks; selector-source readiness has no singleton unlock and requires the pair `chi11_source_export + qw2191_selector_discharge`.  ToE readiness still has exactly one repair row: all five missing gates.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1143:`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1145:The finite Pareto audit has two incomparable optimal classes.  If `source_obligation_discharge` is first, bridge-source readiness occurs at step `1` and selector-source readiness at step `3`.  If the `chi11_source_export + qw2191_selector_discharge` pair is first, selector-source readiness occurs at step `2` and bridge-source readiness at step `3`.  The two mixed orders are dominated because they delay selector-source readiness to step `3` without improving bridge-source readiness beyond step `2`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:776:`P2422/S1372` shows that the current bridge-selector closure gap decomposes into five missing theorem gates, with selector-source readiness requiring the chi11/QW-2191 pair and ToE requiring all five.  Partial repair rows cannot be promoted to a role-bearing `L_total` term or ToE closure.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:784:`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/T62_CURRENT_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_SPEC.md:43:     selector-source frontier,",
+            "fundamental_action_reconstruction/f972_current_strict_t173_t176_existing_f966_non_same_lane_route_contract_to_exported_strict_selector_source_frontier_subroute_packet.py:104:    add_check(\"packet_exported_on_current_repo_state\", packet_exported_on_current_repo_state, True, \"Therefore the current repo exports one honest packet anchoring the live F966 contract on the already exported strict selector-source frontier subroute.\")"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2423_REPAIR_ORDER_POSET": "PASS_ADMISSIBLE_REPAIR_ORDER_POSET_NO_GATE_DISCHARGE"
+    },
+    "theorem_export": {
+      "admissible_order_count": 6,
+      "chi11_source_exported": false,
+      "class_counts": {
+        "bridge_first_pareto": 2,
+        "mixed_split_dominated": 2,
+        "selector_pair_first_pareto": 2
+      },
+      "dominated_order_count": 2,
+      "first_gate_counts": {
+        "chi11_source_export": 2,
+        "qw2191_selector_discharge": 2,
+        "source_obligation_discharge": 2
+      },
+      "not_licensed": [
+        "Pareto optimality ranks admissible proof orders but does not discharge a source theorem.",
+        "Two source-frontier Pareto classes remain incomparable without an extra cost/source premise.",
+        "No unique first source gate is selected internally.",
+        "No role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "objective_vector_counts": {
+        "[1, 3]": 2,
+        "[2, 3]": 2,
+        "[3, 2]": 2
+      },
+      "p2423_admissible_order_count_inherited": true,
+      "p2423_ltotal_step_distribution_inherited": true,
+      "p2423_role_transfer_step_distribution_inherited": true,
+      "pareto_class_counts": {
+        "bridge_first_pareto": 2,
+        "selector_pair_first_pareto": 2
+      },
+      "pareto_first_gate_counts": {
+        "chi11_source_export": 1,
+        "qw2191_selector_discharge": 1,
+        "source_obligation_discharge": 2
+      },
+      "pareto_objective_vector_counts": {
+        "[1, 3]": 2,
+        "[3, 2]": 2
+      },
+      "pareto_order_count": 4,
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_licensed": false,
+      "source_frontier_gate_count": 3,
+      "source_obligation_discharge_exported": false,
+      "theorem_name": "P2424_T1_source_frontier_pareto_order_certificate",
+      "toe_closure_exported": false,
+      "unique_pareto_first_gate_selected": false
+    },
+    "theorem_fingerprint_sha256": "98e29ef56c124f3c05c30691a94bdd98be54228d1bb7794178fc122956ca8c85"
+  },
+  "stage_id": "S1374",
+  "status": "PASS_SOURCE_FRONTIER_PARETO_ORDER_NO_UNIQUE_SOURCE_GATE_NO_DISCHARGE"
+}

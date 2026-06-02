@@ -1,0 +1,407 @@
+{
+  "gatekeeper_checks": {
+    "bridge_and_selector_ready": true,
+    "chi11_not_exported_here": true,
+    "fingerprint_stable": true,
+    "ltotal_not_next": true,
+    "ltotal_still_blocked": true,
+    "p2432_no_role_after_first_inherited": true,
+    "p2432_selector_first_inherited": true,
+    "p2432_source_first_inherited": true,
+    "qw2191_not_exported_here": true,
+    "remaining_role_and_ltotal": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_next": true,
+    "role_transfer_still_blocked": true,
+    "same_convergence_gate_set": true,
+    "source_not_exported_here": true,
+    "toe_not_ready": true,
+    "toe_still_open": true,
+    "two_convergence_states": true
+  },
+  "global_status": "OPEN_PROGRESS_SOURCE_SELECTOR_CONVERGENCE_CERTIFIED_ROLE_TRANSFER_NEXT_NO_THEOREM_GATE_DISCHARGED",
+  "packet_id": "P2433",
+  "recommended_next_honest_step": "If source and selector pair become actual theorems, target role-transfer next; do not skip to role-bearing L_total.",
+  "result_kind": "SOURCE_SELECTOR_CONVERGENCE_ROLE_TRANSFER_GATE_CERTIFICATE",
+  "schema_version": "p2433_s1383_v1",
+  "source_selector_convergence_role_transfer_gate_certificate": {
+    "finite_witness_certificate": {
+      "convergence_gate_sets": [
+        [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ],
+        [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ]
+      ],
+      "convergence_state_count": 2,
+      "convergence_state_rows": [
+        {
+          "admissible_singletons_after_convergence": [
+            [
+              "role_transfer_audit_license"
+            ]
+          ],
+          "candidate_rows_size_le_2_after_convergence": [
+            {
+              "admissible_after_convergence": true,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_bearing_ltotal_export"
+              ]
+            },
+            {
+              "admissible_after_convergence": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license"
+              ]
+            },
+            {
+              "admissible_after_convergence": true,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": true
+              },
+              "remaining_after_candidate": []
+            }
+          ],
+          "discharged_gate_set": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "discharged_sequence": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "inadmissible_singletons_after_convergence": [
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "readiness_after_convergence": {
+            "bridge_source_ready": true,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": true,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_convergence": 2,
+          "remaining_gates_after_convergence": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "state_name": "source_then_selector_pair"
+        },
+        {
+          "admissible_singletons_after_convergence": [
+            [
+              "role_transfer_audit_license"
+            ]
+          ],
+          "candidate_rows_size_le_2_after_convergence": [
+            {
+              "admissible_after_convergence": true,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_bearing_ltotal_export"
+              ]
+            },
+            {
+              "admissible_after_convergence": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license"
+              ]
+            },
+            {
+              "admissible_after_convergence": true,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": true
+              },
+              "remaining_after_candidate": []
+            }
+          ],
+          "discharged_gate_set": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "discharged_sequence": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "source_obligation_discharge"
+          ],
+          "inadmissible_singletons_after_convergence": [
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "readiness_after_convergence": {
+            "bridge_source_ready": true,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": true,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_convergence": 2,
+          "remaining_gates_after_convergence": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "state_name": "selector_pair_then_source"
+        }
+      ],
+      "p2432_role_transfer_not_after_first_branches_inherited": [
+        false,
+        false
+      ],
+      "p2432_selector_pair_next_inherited": [
+        [
+          "source_obligation_discharge"
+        ],
+        [
+          "source_obligation_discharge",
+          "role_transfer_audit_license"
+        ]
+      ],
+      "p2432_source_first_next_inherited": [
+        [
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ]
+      ]
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds P2432 branch residual transitions and generic source/selector/role language, but no production P24xx certificate proving that both antichain orders converge to the same role-transfer-admissible, L_total-blocked state.",
+      "patterns": {
+        "new_packet": {
+          "count": 32,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1201:## P2433/S1383 source-selector convergence role-transfer gate certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1203:`P2433/S1383` follows P2432 one step further: after either source-first then selector-pair, or selector-pair-first then source, both branches reach the same discharged theorem-gate set `{source_obligation_discharge, chi11_source_export, qw2191_selector_discharge}`.  At that convergence state, bridge-source and selector-source readiness are true, and `role_transfer_audit_license` becomes the admissible singleton next target.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1209:`P2434/S1384` takes the P2433 source+selector convergence as a hypothetical input and enumerates the remaining role-transfer obligation lattice for the four legacy physical-role claims: Weinberg angle, inverse alpha_EM, beta-power gravity hierarchy, and beta_tors -> chi_11 orientation.  The lattice has 64 masks over six post-convergence obligations; the current mask transfers zero claims.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1211:The role-transfer audit license and role-bearing `L_total` export are necessary but not sufficient: each legacy role still needs its claim-specific strict successor theorem.  Therefore even post-P2433 convergence cannot silently transfer `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1`, `beta^N`, or `beta_tors -> chi_11`; the certificate is a conditional audit map, not a role theorem.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:818:## P2433/S1383 source-selector convergence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:820:`P2433/S1383` shows that once source and the chi11/QW-2191 selector pair are both discharged, role-transfer becomes the next admissible singleton target, but role-bearing `L_total` is still blocked.  The Lagrangian/EOM draft may use this as proof-order guidance only; it cannot write the role-bearing term before the role-transfer and `L_total` theorem gates are exported.",
+            "fundamental_action_reconstruction/generated/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.md:1:# P2433 S1383: source-selector convergence role-transfer gate certificate",
+            "fundamental_action_reconstruction/generated/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.md:16:- P2434 assumes only a hypothetical post-P2433 convergence state; it does not discharge source or selector gates.",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:111:        \"new_packet\": \"P2433|S1383|source selector convergence|role-transfer gate|convergence role-transfer\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:214:## P2433/S1383 source-selector convergence role-transfer gate certificate",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:216:`P2433/S1383` follows P2432 one step further: after either source-first then selector-pair, or selector-pair-first then source, both branches reach the same discharged theorem-gate set `{source_obligation_discharge, chi11_source_export, qw2191_selector_discharge}`.  At that convergence state, bridge-source and selector-source readiness are true, and `role_transfer_audit_license` becomes the admissible singleton next target.",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:221:## P2433/S1383 source-selector convergence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:223:`P2433/S1383` shows that once source and the chi11/QW-2191 selector pair are both discharged, role-transfer becomes the next admissible singleton target, but role-bearing `L_total` is still blocked.  The Lagrangian/EOM draft may use this as proof-order guidance only; it cannot write the role-bearing term before the role-transfer and `L_total` theorem gates are exported.",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:238:        \"theorem_name\": \"P2433_T1_source_selector_convergence_role_transfer_gate_certificate\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:305:        \"packet_id\": \"P2433\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:306:        \"stage_id\": \"S1383\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:330:                \"# P2433 S1383: source-selector convergence role-transfer gate certificate\",",
+            "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:129:        \"p2433_input\": \"P2433|source-selector convergence|role-transfer gate|role_transfer_audit_license\",",
+            "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:138:            \"certificate enumerating the post-P2433 conditional role-claim obligation lattice and proving role-transfer is not automatic.\"",
+            "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:19:    \"P2433_CONVERGENCE\": GEN / \"p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.json\","
+          ]
+        },
+        "nonpromotion_prior": {
+          "count": 1075,
+          "samples": [
+            "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:123:- No ToE closure is claimed.",
+            "fundamental_action_reconstruction/F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md:102:`F127` does not discharge:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:136:`F128` does not discharge:",
+            "fundamental_action_reconstruction/F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md:134:`F129` does not discharge:",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:127:`F130` does not discharge:",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:136:`F131` does not discharge:",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:142:`F132` does not discharge:",
+            "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md:126:`F138` does not discharge:",
+            "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md:152:`F139` does not discharge:",
+            "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md:186:`F140` does not discharge:",
+            "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md:196:`F141` does not discharge:",
+            "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md:201:`F142` does not discharge:",
+            "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md:184:`F143` does not discharge:",
+            "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:172:`F144` does not discharge:",
+            "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md:189:`F145` does not discharge:",
+            "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md:187:`F146` does not discharge:",
+            "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md:201:`F147` does not discharge:",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:235:`F148` does not discharge:",
+            "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md:243:`F149` does not discharge:"
+          ]
+        },
+        "p2432_input": {
+          "count": 41,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1151:`P2425/S1375` turns the P2424 two-class Pareto frontier into an exact weighted-cost half-space.  With positive weights `w_bridge` and `w_selector`, the bridge-first vector `[1,3]` has cost `w_bridge + 3*w_selector`, while the selector-pair-first vector `[3,2]` has cost `3*w_bridge + 2*w_selector`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1153:Therefore bridge-first is selected iff `w_selector < 2*w_bridge`, selector-pair-first is selected iff `w_selector > 2*w_bridge`, and the two classes tie exactly on `w_selector = 2*w_bridge`.  The mixed split vector `[2,3]` is always dominated because its cost exceeds bridge-first by `w_bridge > 0`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1161:The weighted choice never discharges repair obligations.  There are `144` ToE-ready product rows, exactly one all-five-gate repair row for each weight assignment, and `4464` proper repair failures.  The empty-repair slice has all `144` weight assignments but still has all five theorem gates missing, regardless of whether the weight side says bridge-first, selector-pair-first, or tie.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1195:## P2432/S1382 post-antichain branch residual transition certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1197:`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1203:`P2433/S1383` follows P2432 one step further: after either source-first then selector-pair, or selector-pair-first then source, both branches reach the same discharged theorem-gate set `{source_obligation_discharge, chi11_source_export, qw2191_selector_discharge}`.  At that convergence state, bridge-source and selector-source readiness are true, and `role_transfer_audit_license` becomes the admissible singleton next target.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:784:`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:788:`P2425/S1375` proves that choosing between bridge-first and selector-pair-first requires an extra weight/source-cost premise (`w_selector` compared with `2*w_bridge`).  Since that premise is not exported internally, the weighted tie-break cannot be promoted into source discharge, role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:814:## P2432/S1382 post-antichain branch residual guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:816:`P2432/S1382` shows that neither first branch licenses role-transfer or role-bearing `L_total` immediately.  After source-first the selector pair remains next; after selector-pair-first source remains next.  No branch transition can be inserted into `L_total` as discharged dynamics.",
+            "fundamental_action_reconstruction/generated/p2432_s1382_post_antichain_branch_residual_transition_certificate.md:1:# P2432 S1382: post-antichain branch residual transition certificate",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:195:`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:274:            \"Add a real external/source-cost premise if one wants to choose between bridge-first and selector-pair-first; \"",
+            "fundamental_action_reconstruction/p2424_s1374_source_frontier_pareto_order_certificate.py:89:            \"certificate classifying the six admissible first-three source orders into bridge-first, selector-pair-first, \"",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:187:`P2425/S1375` turns the P2424 two-class Pareto frontier into an exact weighted-cost half-space.  With positive weights `w_bridge` and `w_selector`, the bridge-first vector `[1,3]` has cost `w_bridge + 3*w_selector`, while the selector-pair-first vector `[3,2]` has cost `3*w_bridge + 2*w_selector`.",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:189:Therefore bridge-first is selected iff `w_selector < 2*w_bridge`, selector-pair-first is selected iff `w_selector > 2*w_bridge`, and the two classes tie exactly on `w_selector = 2*w_bridge`.  The mixed split vector `[2,3]` is always dominated because its cost exceeds bridge-first by `w_bridge > 0`.",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:196:`P2425/S1375` proves that choosing between bridge-first and selector-pair-first requires an extra weight/source-cost premise (`w_selector` compared with `2*w_bridge`).  Since that premise is not exported internally, the weighted tie-break cannot be promoted into source discharge, role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:78:        \"p2424_input\": \"P2424|source-frontier Pareto|bridge-first|selector-pair-first|unique first gate\",",
+            "fundamental_action_reconstruction/p2425_s1375_source_frontier_weighted_tiebreak_premise_certificate.py:87:            \"certificate deriving the exact weighted-cost half-space needed to select bridge-first versus selector-pair-first.\"",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:241:The weighted choice never discharges repair obligations.  There are `144` ToE-ready product rows, exactly one all-five-gate repair row for each weight assignment, and `4464` proper repair failures.  The empty-repair slice has all `144` weight assignments but still has all five theorem gates missing, regardless of whether the weight side says bridge-first, selector-pair-first, or tie."
+          ]
+        },
+        "role_prior": {
+          "count": 2924,
+          "samples": [
+            "fundamental_action_reconstruction/B2_INTERNAL_ORIENTATION_DATUM_SOURCE_AUDIT.md:16:- \"czy istnieje juz strict-admissible derivation albo theorem-level source takiego selectora?\"",
+            "fundamental_action_reconstruction/B2_INTERNAL_ORIENTATION_DATUM_SOURCE_AUDIT.md:179:- nie ma jeszcze podstaw, by twierdzic, ze repo ma **sign-sensitive** strict source selectora/orientacji,",
+            "fundamental_action_reconstruction/C36_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT.md:109:- `C36_B1 := no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available`",
+            "fundamental_action_reconstruction/C36_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT.md:64:### 1. Branch source jest zgodny ze strict selector track tylko jako overlay",
+            "fundamental_action_reconstruction/C37_RESIDUAL_ORIENTATION_DATUM_INTERNALIZATION_CANDIDATE_AUDIT.md:10:- `C36_B1 := no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available`",
+            "fundamental_action_reconstruction/C37_RESIDUAL_ORIENTATION_DATUM_INTERNALIZATION_CANDIDATE_AUDIT.md:110:- `C36_B1 := no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available`",
+            "fundamental_action_reconstruction/D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md:108:1. continue strict internal selector-source exports and their scope extension under `QW-2191` discipline (no implied selector closure),",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:100:        +--> role-transfer theorem         [open]",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:104:Thus the current honest claim is: the repository has a finite, auditable bridge-comparison ledger from the legacy intermediate kernel to the strict kernel. It does not yet have a strict dynamical source theorem for the bridge factors or the selector bit.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:128:2. Add theorem-grade derivations or explicit axioms for the strict source atoms: APD source, phase/frequency source, damping beta/eta source, and `chi_11` selector source.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:129:3. Complete the separate strict role-transfer audit after the bridge is no longer only finite-comparison scope.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:39:        |  still missing source/selector/role-transfer theorems",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:41:[frontier: strict sources + selector + role transfer]",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:117:`F128` exports one explicit future-only source-topology selector-promotion",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:35:Freeze one explicit future-only source-topology selector-promotion target:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:97:2. observer is not part of the source-topology selector promotion domain,",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:51:3. a source-side target strictly before selector promotion.",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:52:3. a source-side target strictly before selector promotion.",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:52:3. a source-side target strictly before selector promotion.",
+            "fundamental_action_reconstruction/F133_FIRST_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:66:2. a source-side packet strictly before selector promotion,"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2432_TRANSITION": "PASS_POST_ANTICHAIN_BRANCH_TRANSITION_NO_GATE_DISCHARGE_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "admissible_singletons_after_convergence": [
+        [
+          "role_transfer_audit_license"
+        ]
+      ],
+      "chi11_source_exported_by_this_certificate": false,
+      "convergence_gate_sets": [
+        [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ],
+        [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ]
+      ],
+      "convergence_state_count": 2,
+      "convergence_states_have_same_gate_set": true,
+      "inadmissible_singletons_after_convergence": [
+        [
+          "role_bearing_ltotal_export"
+        ]
+      ],
+      "not_licensed": [
+        "Convergence after hypothetical source/selector discharge is not current discharge by this certificate.",
+        "Role-transfer becomes an admissible next target only after source and selector are actually discharged.",
+        "Role-bearing L_total remains blocked until role-transfer is discharged.",
+        "No source, selector, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2432_role_transfer_not_after_first_branches_inherited": true,
+      "p2432_selector_pair_next_inherited": true,
+      "p2432_source_first_next_inherited": true,
+      "qw2191_discharged_by_this_certificate": false,
+      "readiness_after_convergence": {
+        "bridge_source_ready": true,
+        "role_bearing_ltotal_ready": false,
+        "role_transfer_ready": false,
+        "selector_source_ready": true,
+        "toe_ready": false
+      },
+      "remaining_gates_after_convergence": [
+        "role_transfer_audit_license",
+        "role_bearing_ltotal_export"
+      ],
+      "role_bearing_ltotal_admissible_after_source_selector_convergence": false,
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_admissible_after_source_selector_convergence": true,
+      "role_transfer_licensed": false,
+      "source_obligation_discharge_exported_by_this_certificate": false,
+      "theorem_name": "P2433_T1_source_selector_convergence_role_transfer_gate_certificate",
+      "toe_closure_exported": false,
+      "toe_ready_after_source_selector_convergence": false
+    },
+    "theorem_fingerprint_sha256": "a29c0f492137ae2f021eaf74b1cb33e7a53178d4d5d0c89e38a2f5ce9c1b14e1"
+  },
+  "stage_id": "S1383",
+  "status": "PASS_SOURCE_SELECTOR_CONVERGENCE_ROLE_TRANSFER_NEXT_NO_GATE_DISCHARGE_NO_CLOSURE"
+}

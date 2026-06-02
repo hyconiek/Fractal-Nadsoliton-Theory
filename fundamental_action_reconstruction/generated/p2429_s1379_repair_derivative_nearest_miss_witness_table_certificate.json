@@ -1,0 +1,2390 @@
+{
+  "gatekeeper_checks": {
+    "chi11_still_open": true,
+    "fingerprint_stable": true,
+    "ltotal_only_ltotal_export": true,
+    "ltotal_still_blocked": true,
+    "p2428_derivatives_inherited": true,
+    "p2428_selector_inherited": true,
+    "p2428_toe_inherited": true,
+    "qw2191_still_open": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "selector_only_pair": true,
+    "source_still_open": true,
+    "target_gate_pairs_10": true,
+    "toe_missing_before_one": true,
+    "toe_nearest_miss_5": true,
+    "toe_one_per_gate": true,
+    "toe_still_open": true,
+    "truth_table_32": true,
+    "witness_counts_by_target": true,
+    "witness_rows_69": true
+  },
+  "global_status": "OPEN_PROGRESS_REPAIR_DERIVATIVE_WITNESSES_CERTIFIED_NO_THEOREM_GATE_DISCHARGED",
+  "packet_id": "P2429",
+  "recommended_next_honest_step": "Use the witness rows to choose an actual theorem target; do not treat any derivative edge as the discharge of its gate.",
+  "repair_derivative_nearest_miss_witness_table_certificate": {
+    "finite_witness_certificate": {
+      "missing_count_after_distribution": {
+        "0": 10,
+        "1": 18,
+        "2": 24,
+        "3": 14,
+        "4": 3
+      },
+      "missing_count_before_distribution": {
+        "1": 10,
+        "2": 18,
+        "3": 24,
+        "4": 14,
+        "5": 3
+      },
+      "p2428_derivative_edge_counts_inherited": {
+        "bridge_source_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 16
+        },
+        "role_bearing_ltotal_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 16,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "role_transfer_ready": {
+          "chi11_source_export": 0,
+          "qw2191_selector_discharge": 0,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 16,
+          "source_obligation_discharge": 0
+        },
+        "selector_source_ready": {
+          "chi11_source_export": 8,
+          "qw2191_selector_discharge": 8,
+          "role_bearing_ltotal_export": 0,
+          "role_transfer_audit_license": 0,
+          "source_obligation_discharge": 0
+        },
+        "toe_ready": {
+          "chi11_source_export": 1,
+          "qw2191_selector_discharge": 1,
+          "role_bearing_ltotal_export": 1,
+          "role_transfer_audit_license": 1,
+          "source_obligation_discharge": 1
+        }
+      },
+      "p2428_selector_pair_inherited": true,
+      "p2428_toe_derivative_edges_inherited": true,
+      "target_gate_pairs_with_witnesses": [
+        "bridge_source_ready::source_obligation_discharge",
+        "role_bearing_ltotal_ready::role_bearing_ltotal_export",
+        "role_transfer_ready::role_transfer_audit_license",
+        "selector_source_ready::chi11_source_export",
+        "selector_source_ready::qw2191_selector_discharge",
+        "toe_ready::chi11_source_export",
+        "toe_ready::qw2191_selector_discharge",
+        "toe_ready::role_bearing_ltotal_export",
+        "toe_ready::role_transfer_audit_license",
+        "toe_ready::source_obligation_discharge"
+      ],
+      "toe_nearest_miss_missing_before_distribution": {
+        "1": 5
+      },
+      "toe_nearest_miss_rows": [
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 30,
+          "before_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 29,
+          "before_missing_gates": [
+            "chi11_source_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 27,
+          "before_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 23,
+          "before_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 15,
+          "before_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        }
+      ],
+      "witness_count_by_gate": {
+        "chi11_source_export": 9,
+        "qw2191_selector_discharge": 9,
+        "role_bearing_ltotal_export": 17,
+        "role_transfer_audit_license": 17,
+        "source_obligation_discharge": 17
+      },
+      "witness_count_by_target": {
+        "bridge_source_ready": 16,
+        "role_bearing_ltotal_ready": 16,
+        "role_transfer_ready": 16,
+        "selector_source_ready": 16,
+        "toe_ready": 5
+      },
+      "witness_count_by_target_gate": {
+        "bridge_source_ready": {
+          "source_obligation_discharge": 16
+        },
+        "role_bearing_ltotal_ready": {
+          "role_bearing_ltotal_export": 16
+        },
+        "role_transfer_ready": {
+          "role_transfer_audit_license": 16
+        },
+        "selector_source_ready": {
+          "chi11_source_export": 8,
+          "qw2191_selector_discharge": 8
+        },
+        "toe_ready": {
+          "chi11_source_export": 1,
+          "qw2191_selector_discharge": 1,
+          "role_bearing_ltotal_export": 1,
+          "role_transfer_audit_license": 1,
+          "source_obligation_discharge": 1
+        }
+      },
+      "witness_row_count": 69,
+      "witness_rows": [
+        {
+          "after_added_gates": [
+            "source_obligation_discharge"
+          ],
+          "after_mask": 1,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [],
+          "before_mask": 0,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 4,
+          "missing_count_before": 5,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "after_mask": 3,
+          "after_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export"
+          ],
+          "before_mask": 2,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 5,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 4,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 7,
+          "after_missing_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 6,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 9,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 8,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 11,
+          "after_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 10,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 13,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 12,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 15,
+          "after_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 14,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 17,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 16,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 19,
+          "after_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 18,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 21,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 20,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 23,
+          "after_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 22,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 25,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 24,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 27,
+          "after_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 26,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 29,
+          "after_missing_gates": [
+            "chi11_source_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 28,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 30,
+          "before_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "bridge_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 6,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 4,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 7,
+          "after_missing_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 5,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 14,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 12,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 15,
+          "after_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 13,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 22,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 20,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 23,
+          "after_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 21,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 30,
+          "after_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 28,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 29,
+          "before_missing_gates": [
+            "chi11_source_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 6,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export"
+          ],
+          "before_mask": 2,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_mask": 7,
+          "after_missing_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "before_mask": 3,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 14,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 10,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 15,
+          "after_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 11,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 22,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 18,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 23,
+          "after_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 19,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 30,
+          "after_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 26,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 27,
+          "before_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "selector_source_ready"
+        },
+        {
+          "after_added_gates": [
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 8,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [],
+          "before_mask": 0,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 4,
+          "missing_count_before": 5,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 9,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge"
+          ],
+          "before_mask": 1,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 10,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export"
+          ],
+          "before_mask": 2,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 11,
+          "after_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "before_mask": 3,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 12,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 4,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 13,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 5,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 14,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 6,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_mask": 15,
+          "after_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 7,
+          "before_missing_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 24,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 16,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 25,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 17,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 26,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 18,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 27,
+          "after_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 19,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 28,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 20,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 29,
+          "after_missing_gates": [
+            "chi11_source_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 21,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 30,
+          "after_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 22,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 23,
+          "before_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "role_transfer_ready"
+        },
+        {
+          "after_added_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 16,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [],
+          "before_mask": 0,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 4,
+          "missing_count_before": 5,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 17,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge"
+          ],
+          "before_mask": 1,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 18,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export"
+          ],
+          "before_mask": 2,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 19,
+          "after_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "before_mask": 3,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 20,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 4,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 21,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 5,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 22,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 6,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 23,
+          "after_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "before_mask": 7,
+          "before_missing_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 24,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 8,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 3,
+          "missing_count_before": 4,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 25,
+          "after_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 9,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 26,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 10,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 27,
+          "after_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 11,
+          "before_missing_gates": [
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 28,
+          "after_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 12,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 2,
+          "missing_count_before": 3,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 29,
+          "after_missing_gates": [
+            "chi11_source_export"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 13,
+          "before_missing_gates": [
+            "chi11_source_export",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 30,
+          "after_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 14,
+          "before_missing_gates": [
+            "source_obligation_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 1,
+          "missing_count_before": 2,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 15,
+          "before_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "role_bearing_ltotal_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 30,
+          "before_missing_gates": [
+            "source_obligation_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "source_obligation_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 29,
+          "before_missing_gates": [
+            "chi11_source_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "chi11_source_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 27,
+          "before_missing_gates": [
+            "qw2191_selector_discharge"
+          ],
+          "before_ready": false,
+          "gate_flipped": "qw2191_selector_discharge",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_bearing_ltotal_export"
+          ],
+          "before_mask": 23,
+          "before_missing_gates": [
+            "role_transfer_audit_license"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_transfer_audit_license",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        },
+        {
+          "after_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ],
+          "after_mask": 31,
+          "after_missing_gates": [],
+          "after_ready": true,
+          "before_added_gates": [
+            "source_obligation_discharge",
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license"
+          ],
+          "before_mask": 15,
+          "before_missing_gates": [
+            "role_bearing_ltotal_export"
+          ],
+          "before_ready": false,
+          "gate_flipped": "role_bearing_ltotal_export",
+          "missing_count_after": 0,
+          "missing_count_before": 1,
+          "target": "toe_ready"
+        }
+      ]
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds older scratch Boolean derivative witness reports and the new P2428 derivative-count certificate, but no production P24xx certificate materializing every current five-gate repair derivative edge as explicit nearest-miss witness rows.",
+      "patterns": {
+        "new_packet": {
+          "count": 28,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1177:## P2429/S1379 repair derivative nearest-miss witness table certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1179:`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1185:`P2430/S1380` takes the P2429 derivative witness table and computes the dual cover problem over theorem gates.  Bridge, role-transfer, and role-bearing `L_total` each have a singleton minimal witness cover; selector has the minimal pair `chi11_source_export + qw2191_selector_discharge`; ToE and the global derivative witness table have the unique minimal cover consisting of all five missing theorem gates.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:802:## P2429/S1379 derivative witness table guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:804:`P2429/S1379` makes every derivative edge explicit.  The role-bearing `L_total` derivative has witnesses only for the `role_bearing_ltotal_export` gate, and ToE has one nearest-miss witness for each missing gate; finite witness rows remain obstruction evidence and cannot be inserted into `L_total` as discharged dynamics.",
+            "fundamental_action_reconstruction/generated/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.md:1:# P2429 S1379: repair derivative nearest-miss witness table certificate",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:191:## P2429/S1379 repair derivative nearest-miss witness table certificate",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:193:`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:198:## P2429/S1379 derivative witness table guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:200:`P2429/S1379` makes every derivative edge explicit.  The role-bearing `L_total` derivative has witnesses only for the `role_bearing_ltotal_export` gate, and ToE has one nearest-miss witness for each missing gate; finite witness rows remain obstruction evidence and cannot be inserted into `L_total` as discharged dynamics.",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:222:        \"theorem_name\": \"P2429_T1_repair_derivative_nearest_miss_witness_table_certificate\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:290:        \"packet_id\": \"P2429\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:291:        \"stage_id\": \"S1379\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:315:                \"# P2429 S1379: repair derivative nearest-miss witness table certificate\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:87:        \"new_packet\": \"P2429|S1379|derivative nearest-miss|nearest miss witness|derivative witness table\",",
+            "fundamental_action_reconstruction/p2430_s1380_repair_derivative_witness_cover_minimality_certificate.py:158:    p2429 = theorem(sources[\"P2429_WITNESS_TABLE\"], \"repair_derivative_nearest_miss_witness_table_certificate\")",
+            "fundamental_action_reconstruction/p2430_s1380_repair_derivative_witness_cover_minimality_certificate.py:195:`P2430/S1380` takes the P2429 derivative witness table and computes the dual cover problem over theorem gates.  Bridge, role-transfer, and role-bearing `L_total` each have a singleton minimal witness cover; selector has the minimal pair `chi11_source_export + qw2191_selector_discharge`; ToE and the global derivative witness table have the unique minimal cover consisting of all five missing theorem gates.",
+            "fundamental_action_reconstruction/p2430_s1380_repair_derivative_witness_cover_minimality_certificate.py:19:    \"P2429_WITNESS_TABLE\": GEN / \"p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.json\",",
+            "fundamental_action_reconstruction/p2430_s1380_repair_derivative_witness_cover_minimality_certificate.py:89:        \"p2429_input\": \"P2429|derivative nearest-miss|witness table|target/gate pairs\",",
+            "fundamental_action_reconstruction/p2430_s1380_repair_derivative_witness_cover_minimality_certificate.py:97:            \"Repo grep finds earlier failure-cover/hitting-set motifs and P2429 derivative witness rows, but no production \""
+          ]
+        },
+        "nonpromotion_prior": {
+          "count": 1064,
+          "samples": [
+            "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:123:- No ToE closure is claimed.",
+            "fundamental_action_reconstruction/F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md:102:`F127` does not discharge:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:136:`F128` does not discharge:",
+            "fundamental_action_reconstruction/F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md:134:`F129` does not discharge:",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:127:`F130` does not discharge:",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:136:`F131` does not discharge:",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:142:`F132` does not discharge:",
+            "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md:126:`F138` does not discharge:",
+            "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md:152:`F139` does not discharge:",
+            "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md:186:`F140` does not discharge:",
+            "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md:196:`F141` does not discharge:",
+            "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md:201:`F142` does not discharge:",
+            "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md:184:`F143` does not discharge:",
+            "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:172:`F144` does not discharge:",
+            "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md:189:`F145` does not discharge:",
+            "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md:187:`F146` does not discharge:",
+            "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md:201:`F147` does not discharge:",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:235:`F148` does not discharge:",
+            "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md:243:`F149` does not discharge:"
+          ]
+        },
+        "p2428_input": {
+          "count": 27,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1171:## P2428/S1378 repair-readiness ANF and derivative certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1173:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1179:`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:798:## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:800:`P2428/S1378` computes that role-bearing `L_total` readiness is the single literal `role_bearing_ltotal_export`, while ToE readiness is the degree-five monomial over all missing gates.  No APD value witness, chi11 cut, weighted order, or projection-independence fact supplies those literals; they require separate theorem export.",
+            "fundamental_action_reconstruction/generated/p2428_s1378_repair_readiness_anf_derivative_certificate.md:1:# P2428 S1378: repair-readiness ANF derivative certificate",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:207:## P2428/S1378 repair-readiness ANF and derivative certificate",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:209:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:214:## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:216:`P2428/S1378` computes that role-bearing `L_total` readiness is the single literal `role_bearing_ltotal_export`, while ToE readiness is the degree-five monomial over all missing gates.  No APD value witness, chi11 cut, weighted order, or projection-independence fact supplies those literals; they require separate theorem export.",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:230:        \"theorem_name\": \"P2428_T1_repair_readiness_anf_derivative_certificate\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:303:        \"packet_id\": \"P2428\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:329:                \"# P2428 S1378: repair-readiness ANF derivative certificate\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:88:        \"new_packet\": \"P2428|S1378|repair readiness ANF|readiness.*derivative|gate derivative\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:98:            \"P24xx certificate computing the exact ANF, prime implicants, and derivative-edge supports for the current five-gate \"",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:167:    p2428 = theorem(sources[\"P2428_ANF_DERIVATIVE\"], \"repair_readiness_anf_derivative_certificate\")",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:18:    \"P2428_ANF_DERIVATIVE\": GEN / \"p2428_s1378_repair_readiness_anf_derivative_certificate.json\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:193:`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:88:        \"p2428_input\": \"P2428|repair-readiness ANF|ANF derivative|derivative-edge supports\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:96:            \"Repo grep finds older scratch Boolean derivative witness reports and the new P2428 derivative-count certificate, \""
+          ]
+        },
+        "witness_prior": {
+          "count": 10,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:137:This gives seven explicit essentiality witnesses: each atom is not merely present syntactically in the degree-7 monomial; each atom has a finite truth-table row showing that its absence alone keeps ToE false and its addition alone turns the ToE bit true.  These derivative witnesses remain readiness evidence only, not source theorems.",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:89:        \"witness_prior\": \"Boolean derivative witness|nearest-miss derivative|edge witness|essentiality witness\",",
+            "fundamental_action_reconstruction/p2429_s1379_repair_derivative_nearest_miss_witness_table_certificate.py:96:            \"Repo grep finds older scratch Boolean derivative witness reports and the new P2428 derivative-count certificate, \"",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_probe.py:193:            \"limit_step\": \"This is an essentiality witness over the audited Boolean frontier; it exports no source theorem, no bridge theorem, no role-transfer theorem, no QW-2191 discharge, and no ToE closure.\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_probe.py:196:            \"No Boolean derivative witness is promoted to a source theorem.\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_probe.py:211:        \"## ToE nearest-miss derivative witnesses\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_report.md:39:- No Boolean derivative witness is promoted to a source theorem.",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_report.md:5:## ToE nearest-miss derivative witnesses",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_toe_boolean_essentiality_certificate_probe.py:77:        self.assertIn(\"essentiality witness\", proof[\"limit_step\"])",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_toe_boolean_essentiality_certificate_probe.py:79:        self.assertIn(\"No Boolean derivative witness is promoted\", hard_limits)"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2428_ANF_DERIVATIVE": "PASS_REPAIR_READINESS_ANF_DERIVATIVE_NO_GATE_DISCHARGE_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "chi11_source_exported": false,
+      "gate_count": 5,
+      "missing_count_after_distribution": {
+        "0": 10,
+        "1": 18,
+        "2": 24,
+        "3": 14,
+        "4": 3
+      },
+      "missing_count_before_distribution": {
+        "1": 10,
+        "2": 18,
+        "3": 24,
+        "4": 14,
+        "5": 3
+      },
+      "not_licensed": [
+        "Derivative witness rows certify essential blockers, not theorem-gate discharge.",
+        "The five ToE nearest misses remain five missing theorem obligations.",
+        "The selector witness rows still require both chi11 source export and QW-2191 discharge.",
+        "No source, selector, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2428_derivative_edge_counts_inherited": true,
+      "p2428_selector_pair_inherited": true,
+      "p2428_toe_derivative_edges_inherited": true,
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "role_bearing_ltotal_witnesses_only_ltotal_export": true,
+      "role_transfer_licensed": false,
+      "selector_derivative_witnesses_only_chi11_qw2191": true,
+      "source_obligation_discharge_exported": false,
+      "target_count": 5,
+      "target_gate_pair_with_witness_count": 10,
+      "target_gate_pairs_with_witnesses": [
+        "bridge_source_ready::source_obligation_discharge",
+        "role_bearing_ltotal_ready::role_bearing_ltotal_export",
+        "role_transfer_ready::role_transfer_audit_license",
+        "selector_source_ready::chi11_source_export",
+        "selector_source_ready::qw2191_selector_discharge",
+        "toe_ready::chi11_source_export",
+        "toe_ready::qw2191_selector_discharge",
+        "toe_ready::role_bearing_ltotal_export",
+        "toe_ready::role_transfer_audit_license",
+        "toe_ready::source_obligation_discharge"
+      ],
+      "theorem_name": "P2429_T1_repair_derivative_nearest_miss_witness_table_certificate",
+      "toe_closure_exported": false,
+      "toe_nearest_miss_missing_before_distribution": {
+        "1": 5
+      },
+      "toe_nearest_miss_one_per_gate": true,
+      "toe_nearest_miss_row_count": 5,
+      "truth_table_size": 32,
+      "witness_count_by_gate": {
+        "chi11_source_export": 9,
+        "qw2191_selector_discharge": 9,
+        "role_bearing_ltotal_export": 17,
+        "role_transfer_audit_license": 17,
+        "source_obligation_discharge": 17
+      },
+      "witness_count_by_target": {
+        "bridge_source_ready": 16,
+        "role_bearing_ltotal_ready": 16,
+        "role_transfer_ready": 16,
+        "selector_source_ready": 16,
+        "toe_ready": 5
+      },
+      "witness_count_by_target_gate": {
+        "bridge_source_ready": {
+          "source_obligation_discharge": 16
+        },
+        "role_bearing_ltotal_ready": {
+          "role_bearing_ltotal_export": 16
+        },
+        "role_transfer_ready": {
+          "role_transfer_audit_license": 16
+        },
+        "selector_source_ready": {
+          "chi11_source_export": 8,
+          "qw2191_selector_discharge": 8
+        },
+        "toe_ready": {
+          "chi11_source_export": 1,
+          "qw2191_selector_discharge": 1,
+          "role_bearing_ltotal_export": 1,
+          "role_transfer_audit_license": 1,
+          "source_obligation_discharge": 1
+        }
+      },
+      "witness_row_count": 69
+    },
+    "theorem_fingerprint_sha256": "a0f06f7404ab2a54ad1ff134ab84a3c526ebc64dcae04eb1095dd08fefe2544d"
+  },
+  "result_kind": "REPAIR_DERIVATIVE_NEAREST_MISS_WITNESS_TABLE_CERTIFICATE",
+  "schema_version": "p2429_s1379_v1",
+  "stage_id": "S1379",
+  "status": "PASS_REPAIR_DERIVATIVE_WITNESS_TABLE_NO_GATE_DISCHARGE_NO_CLOSURE"
+}
