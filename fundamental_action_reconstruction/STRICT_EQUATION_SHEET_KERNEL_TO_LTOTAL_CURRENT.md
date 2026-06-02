@@ -1032,3 +1032,68 @@ alpha_geo^{-1} K_legacy_ont(d) = L_shape(d).
 The proof checks the exact zero condition `3d == 4 mod 12`, which has no solution, and the denominator `(100+d)/100 > 0`, so the positive scalar `alpha_geo=4 ln 2` removes only the global amplitude and preserves signs.
 
 This is a bridge ingredient, not a full amplitude source theorem and not a role-safe amplitude absorption theorem: it does not transfer `sin^2(theta_W)=alpha_geo/12`, does not complete `K_legacy_ont -> K_strict_gate`, and does not affect QW-2191, `L_total`, or ToE closure.
+
+## P2414/S1364 strict damping parameter identifiability and nonabsorption certificate
+
+`P2414/S1364` follows the P2413 amplitude witness by isolating the damping/compression row.  It treats the strict denominator samples as accepted finite data
+
+```text
+S(d) = 1 + beta*d^eta = 1 + d^(9/5),        d=1..11.
+```
+
+Within that accepted strict denominator model, `beta` is identified by `S(1)-1=1`, and `eta` is identified by `eta=log(S(d)-1)/log(d)=9/5` for every `d>=2`; equivalently `(S(d)-1)^5=d^9` on the finite algebraic cover.  A reduced rational grid `p/q` with `p<=30`, `q<=10` has the unique match `9/5`.
+
+The same certificate proves nonabsorption into the legacy linear torsion denominator: matching `1+gamma*d` to `1+d^(9/5)` at a positive node forces `gamma=d^(4/5)`, which is strictly increasing, so no single `beta_tors`-style linear parameter matches two positive nodes; the legacy `beta_tors=1/100` matches no positive strict node.
+
+This identifies accepted strict damping parameters and proves a linear-denominator no-go only.  It does not export a strict dynamic source for `beta,eta`, does not prove `beta_tors -> beta/eta`, does not complete the damping bridge, and does not license role transfer, QW-2191 discharge, `L_total`, or ToE closure.
+
+## P2415/S1365 phase/frequency affine-transport nonautomorphism certificate
+
+`P2415/S1365` isolates the S2 phase/frequency row after the amplitude and damping witnesses.  It exports the finite continuous transport
+
+```text
+x(d) = (theta_S(d)-phi_L)/omega_L,
+theta_L(x(d)) = theta_S(d),
+```
+
+with `omega_L=pi/4`, `phi_L=pi/6`, `omega_S=743/4000`, and `phi_S=13/80` on `d=0..11`.  The computation checks all 12 transported nodes, all 48 `Aut(Z12)` unit+offset reindexings, and the best scalar replacement from the legacy cosine carrier to the strict cosine carrier.
+
+The result is positive only as a phase-coordinate transport witness: affine transport has zero numerical residual on the audited rows, but it is not a discrete `Z12` automorphism, no unit+offset reindexing reproduces the strict sign pattern, and the best scalar replacement has nonzero residual.  The phase-factor signs match the inherited Z2/GF(2) phase chain.
+
+This does not derive `omega,phi` from strict dynamics, does not export an orientation/selector source, does not discharge QW-2191, does not complete the bridge, and does not license legacy role transfer, `L_total`, or ToE closure.
+
+## P2416/S1366 APD multiplicative bridge-assembly necessity certificate
+
+`P2416/S1366` assembles the three value-level bridge factors certified separately by P2413/P2414/P2415:
+
+```text
+K_strict_gate(d) / K_legacy_ont(d)
+  = alpha_geo^{-1} * P_phase(d) * D_compression(d),
+P_phase(d)=cos(theta_S(d))/cos(theta_L(d)),
+D_compression(d)=(1+beta_tors*d)/(1+d^(9/5)).
+```
+
+On `d=0..11`, the full `alpha_normalization + phase_frequency_transport + damping_compression` product is the unique exact subset without an extra scalar.  The subset `phase_frequency_transport + damping_compression` becomes exact only after a post-hoc global scalar, so missing alpha is scalar-repairable but still not licensed as a physical-role theorem.  Missing phase or missing damping is not repairable by any single scalar.
+
+This is a finite value-level assembly witness only.  It does not export strict dynamic sources for the factors, does not provide the selector/source premise, does not complete the full bridge, and does not license legacy role transfer, `L_total`, QW-2191 discharge, or ToE closure.
+
+## P2417/S1367 APD witness-to-source nonpromotion matrix certificate
+
+`P2417/S1367` audits the tempting overread after P2413-P2416.  The amplitude, damping, phase, and APD assembly witnesses are all positive as value-level evidence, but they are not source-obligation theorems.  The certificate maps those four artifacts against the eight P2411 bridge-source atoms and records a zero discharge matrix:
+
+```text
+current_source_discharge_mask = 0,
+full_source_discharge_mask = 255.
+```
+
+Thus the value-level APD identity does not discharge `amplitude_dynamic_source_theorem`, `phase_frequency_dynamic_source_theorem`, `strict_compression_dynamic_source_theorem`, `chi11_selector_source_theorem`, QW-2191 source, or the role-safe amplitude/source obligations.  All 255 proper source masks remain bridge-source failures, with eight one-atom-missing nearest masks.
+
+This is not a rollback of P2413-P2416; it is the proof-theoretic nonpromotion guard: value witnesses remain useful bridge ingredients, but they do not become source, selector, role-transfer, `L_total`, or ToE closure theorems.
+
+## P2418/S1368 bridge source marginal-unlock lattice certificate
+
+`P2418/S1368` starts from the P2417 zero source-discharge mask and enumerates the full `2^8=256` source-obligation lattice from P2411.  The empty/current mask readies only `residual_strict_additions_inventory`; no singleton source atom unlocks a non-residual bridge component.
+
+The first nontrivial component unlocks occur at size two: the amplitude pair, the damping pair, and the selector pair.  The phase/frequency/topological component still has minimal size three because it needs `phase_frequency_dynamic_source_theorem`, `topological_bit_transport_selector_theorem`, and `chi11_selector_source_theorem`.  `chi11_selector_source_theorem` remains the highest-incidence source atom because it belongs to both the phase/topological and selector-source components.
+
+This is a proof-search lattice, not a source theorem: it ranks where new source evidence could first unlock components, but it does not discharge any atom, complete the bridge, license role transfer, promote `L_total`, or close ToE.
