@@ -930,3 +930,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2461/S1411 Decimal gap weakest-neighborhood replay guard
 
 `P2461/S1411` probes the local neighborhoods around the weakest P2460 gap sentinels.  It improves local gap diagnostics but does not close the full P2459 complement gap and adds no selector/source/gauge authority for `L_total`.
+
+## P2462/S1412 Decimal gap dyadic-refinement replay guard
+
+`P2462/S1412` probes the eighth-step midpoints between the P2460 quarter sentinels inside the unreplayed complement segments.  It improves stratified gap diagnostics but still leaves the full P2459 complement gap open and adds no selector/source/gauge authority for `L_total`.
+
+## P2463/S1413 Decimal adaptive dyadic weakest-flank replay guard
+
+`P2463/S1413` probes non-anchor neighbors around the weakest P2462 dyadic cells.  It improves adaptive gap diagnostics and exposes local smaller-separation flanks, but it still leaves the full P2459 complement gap open and adds no selector/source/gauge authority for `L_total`.
+
+## P2464/S1414 Decimal adaptive flank descent-extension replay guard
+
+`P2464/S1414` extends from the weakest P2463 flank cells along the local decreasing-separation side.  It improves adaptive descent diagnostics but remains finite sampled evidence, leaves the full P2459 complement gap open, and adds no selector/source/gauge authority for `L_total`.
+
+## P2465/S1415 Decimal adaptive descent-horizon ledger guard
+
+`P2465/S1415` records that the P2464 descent remains unbracketed over a 32-cell horizon in both scalar families.  It improves adaptive diagnostics by locating the next horizon endpoint, but it remains finite sampled evidence and adds no selector/source/gauge authority for `L_total`.
