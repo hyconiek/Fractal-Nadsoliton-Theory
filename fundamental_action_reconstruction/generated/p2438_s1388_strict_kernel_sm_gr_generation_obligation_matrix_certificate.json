@@ -1,0 +1,886 @@
+{
+  "gatekeeper_checks": {
+    "all_targets_blocked": true,
+    "current_mask_zero": true,
+    "eight_obligations": true,
+    "fingerprint_stable": true,
+    "full_mask_255": true,
+    "minimum_missing_at_least_five": true,
+    "no_ltotal_export": true,
+    "no_qw2191_discharge": true,
+    "no_strict_sm_gr_generation_export": true,
+    "no_toe_export": true,
+    "no_value_generator_export": true,
+    "p1421_qw2191_missing": true,
+    "p1646_scaffold_open": true,
+    "p1705_qg_required": true,
+    "p1981_background_open": true,
+    "p2437_no_strict_value_generator": true,
+    "rg_audit_ran": true,
+    "six_targets": true
+  },
+  "global_status": "OPEN_PROGRESS_STRICT_SM_GR_GENERATION_WORKLIST_EXPORTED_NO_CLOSURE",
+  "packet_id": "P2438",
+  "recommended_next_honest_step": "Build the strict kernel-to-coefficient map and strict observable-value generator before attempting SM/GR constants.",
+  "result_kind": "STRICT_KERNEL_SM_GR_GENERATION_OBLIGATION_MATRIX_CERTIFICATE",
+  "schema_version": "p2438_s1388_v1",
+  "stage_id": "S1388",
+  "status": "PASS_STRICT_KERNEL_SM_GR_GENERATION_OBLIGATION_MATRIX_ALL_TARGETS_BLOCKED_NO_CLOSURE",
+  "strict_kernel_sm_gr_generation_obligation_matrix_certificate": {
+    "finite_obligation_matrix": {
+      "obligation_rows": [
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_kernel_identity_and_domain_theorem",
+          "partial_evidence": [
+            "P1567 local strict parameter identifiability only",
+            "P2437 strict tuple audit"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_kernel_to_coefficient_map_theorem",
+          "partial_evidence": [
+            "P1567 names the chain but leaves full 4-parameter map open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "sm_gauge_group_and_coupling_export_theorem",
+          "partial_evidence": [
+            "P1646 exports SM/GR scaffold, not coupling derivation"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_matter_higgs_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "sm_fermion_yukawa_higgs_export_theorem",
+          "partial_evidence": [
+            "P1705 exports spinor variation templates, full curved export open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "gr_metric_eh_and_background_independence_theorem",
+          "partial_evidence": [
+            "P1981 exports R2 lapse obligation and keeps background independence open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "curvature_squared_completion_and_unitarity_theorem",
+          "partial_evidence": [
+            "P1981 leaves Ricci2/Riemann2/Gauss-Bonnet and unitarity open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "qw2191_selector_uniqueness_discharge_theorem",
+          "partial_evidence": [
+            "P1421 precheck says uniqueness certificate and QW-2191 discharge are missing"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_observable_value_generator_theorem",
+          "partial_evidence": [
+            "P2437 says no strict physical-value generator is exported"
+          ]
+        }
+      ],
+      "target_rows": [
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_SM_gauge_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_SM_matter_higgs_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_GR_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "missing_obligation_count": 7,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 7,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem"
+          ],
+          "target": "SM_GR_coupled_EOM_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 7,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 7,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "physical_constants_generated_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "missing_obligation_count": 8,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 8,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "strict_toe_ready"
+        }
+      ]
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds strict-only SM/GR scaffolds and selector/GR obligations, but no production P24xx certificate proving that K_strict already generates SM+GR physical values. The honest next step is an obligation matrix, not closure.",
+      "patterns": {
+        "legacy_value_block": {
+          "count": 405,
+          "samples": [
+            "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:170:  strict-derivation proof dla `G`, `alpha_EM` albo Einstein-Hilbert layer,",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:114:Until that audit is theorem-grade, the following legacy roles remain blocked from silent transfer: `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)`, the `beta^N` gravity hierarchy, and the candidate `beta_tors -> chi_11` selector story.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:120:- No `beta_tors -> chi_11` theorem is claimed.",
+            "fundamental_action_reconstruction/F14_LEGACY_FINE_STRUCTURE_RETAINED_BRANCH_REFINEMENT_PACKET.md:27:   `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,",
+            "fundamental_action_reconstruction/F154_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_PACKET.md:31:sin^2(theta_W)=alpha_geo/12",
+            "fundamental_action_reconstruction/F154_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_PACKET.md:75:   legacy `alpha_geo/12` Weinberg semantics are not currently absorbed into an",
+            "fundamental_action_reconstruction/F155_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_CLAIM_SPECIFIC_AMPLITUDE_NONABSORPTION_WITNESS_PACKET.md:30:sin^2(theta_W)=alpha_geo/12",
+            "fundamental_action_reconstruction/F1_CANONICAL_INFORMATIONAL_FRACTAL_SUBSTRATE_PARAMETER_PACKET.md:129:- strict derivation of `alpha_EM^-1` from `alpha_geo/(2*beta_tors)`,",
+            "fundamental_action_reconstruction/F4_LEGACY_PHYSICAL_ROLE_TRANSFER_CLASSIFICATION_PACKET.md:31:   `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)` remains a legacy-side",
+            "fundamental_action_reconstruction/F7_LEGACY_WEINBERG_RETAINED_BRANCH_REFINEMENT_PACKET.md:27:   `sin^2(theta_W)=alpha_geo/12`,",
+            "fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md:112:- `sin^2(theta_W)=alpha_geo/12` is marked",
+            "fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md:114:- `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)` is marked",
+            "fundamental_action_reconstruction/N264_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_THEOREM.md:28:   `alpha_geo/12` absorption,",
+            "fundamental_action_reconstruction/N68_CURRENT_LEGACY_WEINBERG_RETAINED_SUBBRANCH_OBSTRUCTION_THEOREM.md:28:>    `sin^2(theta_W)=alpha_geo/12`,",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:22:   `sin^2(theta_W)=alpha_geo/12` nor an algebraically identical literal form.",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:28:> `sin^2(theta_W)=alpha_geo/12`.",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:41:  they literally retained the old `alpha_geo/12` Weinberg formula,",
+            "fundamental_action_reconstruction/N70_CURRENT_STRICT_SIDE_WEINBERG_ROLE_EQUIVALENCE_BOUNDARY_THEOREM.md:34:> `sin^2(theta_W)=alpha_geo/12`.",
+            "fundamental_action_reconstruction/N73_CURRENT_LEGACY_WEINBERG_RETAINED_BRANCH_FULL_NEGATIVE_CLOSURE_THEOREM.md:28:> 1. no literal strict-side retention of `sin^2(theta_W)=alpha_geo/12`,",
+            "fundamental_action_reconstruction/N85_CURRENT_LEGACY_FINE_STRUCTURE_RETAINED_SUBBRANCH_OBSTRUCTION_THEOREM.md:28:>    `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,",
+            "fundamental_action_reconstruction/N86_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_FINE_STRUCTURE_FORMULA.md:22:   `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)` nor an algebraically",
+            "fundamental_action_reconstruction/N86_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_FINE_STRUCTURE_FORMULA.md:29:> `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`.",
+            "fundamental_action_reconstruction/N86_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_FINE_STRUCTURE_FORMULA.md:42:  they literally retained the old `alpha_EM^-1` legacy formula,",
+            "fundamental_action_reconstruction/N87_CURRENT_STRICT_SIDE_FINE_STRUCTURE_ROLE_EQUIVALENCE_BOUNDARY_THEOREM.md:34:> `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`.",
+            "fundamental_action_reconstruction/N90_CURRENT_LEGACY_FINE_STRUCTURE_RETAINED_BRANCH_FULL_NEGATIVE_CLOSURE_THEOREM.md:29:>    `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,",
+            "fundamental_action_reconstruction/P1355_PRE_CLOSURE_PHYSICAL_CONSTANT_DERIVATION_REVALIDATION_MATRIX_POST_R81_PL.md:25:| `sin^2(theta_W)=alpha_geo/12` jako bezpośrednia legacy tożsamość | Nie przenosi się automatycznie do strict | Traktować jako legacy lineage marker, nie strict theorem | Można używać tylko jako historyczny punkt odniesienia |",
+            "fundamental_action_reconstruction/P1355_PRE_CLOSURE_PHYSICAL_CONSTANT_DERIVATION_REVALIDATION_MATRIX_POST_R81_PL.md:26:| `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)` | Bez jawnego strict successor verdict | Nie używać jako aktualnego strict wyjścia | Dopuścić tylko jako tezę do ponownego testu przez host map + residuale |",
+            "fundamental_action_reconstruction/P1359_TEX_DERIVATION_REANALYSIS_LEGACY_TO_R81_STRICT_CORRECTION_PACKET_PL.md:18:1. `sin^2(theta_W)=alpha_geo/12` jako centralna formuła,",
+            "fundamental_action_reconstruction/P1359_TEX_DERIVATION_REANALYSIS_LEGACY_TO_R81_STRICT_CORRECTION_PACKET_PL.md:38:| `sin^2(theta_W)=alpha_geo/12` jako finalny dowód | traktować jako legacy-identity; w strict wymaga osobnego successor/provenance map |",
+            "fundamental_action_reconstruction/P1364_STRICT_ASYMMETRY_SOURCE_AND_PRECLOSURE_METHOD_RECONCILIATION_PACKET_PL.md:46:1. jawnie zmapować wkład `alpha_geo_strict_derived_v1` oraz `S_strict_internal_v1` do każdej stałej (`g1,g2,g3,alpha_EM_inv,sin2_theta`),"
+          ]
+        },
+        "new_packet": {
+          "count": 19,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1231:## P2438/S1388 strict-kernel SM/GR generation obligation matrix certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1233:`P2438/S1388` starts the strict-side replacement for the discarded legacy-value derivations: it treats the target as `K_strict_gate -> coefficients -> L_SM + L_GR -> observables`, not as legacy `alpha_geo/beta_tors` inheritance.  The certificate builds an 8-obligation matrix for strict kernel identity/domain, kernel-to-coefficient map, SM gauge couplings, SM matter/Higgs/Yukawa export, GR/background-independence, curvature-squared/unitarity completion, QW-2191 selector uniqueness, and strict observable-value generation.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:838:## P2438/S1388 strict SM/GR generation guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:840:`P2438/S1388` moves the Lagrangian/EOM target away from legacy constants and onto a strict-only generation chain.  Existing SM/GR scaffold terms may stay as scaffolds, but no coefficient, physical constant, selector choice, GR completion, or role-bearing `L_total` term is licensed until the eight strict generation obligations are actually discharged.",
+            "fundamental_action_reconstruction/generated/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.md:1:# P2438 S1388: strict-kernel SM/GR generation obligation matrix certificate",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:142:        \"new_packet\": \"P2438|S1388|strict kernel SM GR generation|SM GR generation obligation|strict observable value generator\",",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:196:## P2438/S1388 strict-kernel SM/GR generation obligation matrix certificate",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:198:`P2438/S1388` starts the strict-side replacement for the discarded legacy-value derivations: it treats the target as `K_strict_gate -> coefficients -> L_SM + L_GR -> observables`, not as legacy `alpha_geo/beta_tors` inheritance.  The certificate builds an 8-obligation matrix for strict kernel identity/domain, kernel-to-coefficient map, SM gauge couplings, SM matter/Higgs/Yukawa export, GR/background-independence, curvature-squared/unitarity completion, QW-2191 selector uniqueness, and strict observable-value generation.",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:203:## P2438/S1388 strict SM/GR generation guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:205:`P2438/S1388` moves the Lagrangian/EOM target away from legacy constants and onto a strict-only generation chain.  Existing SM/GR scaffold terms may stay as scaffolds, but no coefficient, physical constant, selector choice, GR completion, or role-bearing `L_total` term is licensed until the eight strict generation obligations are actually discharged.",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:220:        \"theorem_name\": \"P2438_T1_strict_kernel_sm_gr_generation_obligation_matrix_certificate\",",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:279:        \"packet_id\": \"P2438\",",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:280:        \"stage_id\": \"S1388\",",
+            "fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:303:                \"# P2438 S1388: strict-kernel SM/GR generation obligation matrix certificate\",",
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:14:class P2438StrictKernelSmGrGenerationObligationMatrixCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2438\")",
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1388\")",
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:63:        self.assertIn(\"P2438/S1388\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:64:        self.assertIn(\"P2438/S1388\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+          ]
+        },
+        "selector_and_qw2191": {
+          "count": 6734,
+          "samples": [
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:295:3. Do not claim strict-core selector closure unless a genuinely strict internal selector source is exported.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:107:- brak pelnej unikalnosci reprezentacji przez obstruction `QW-2191`,",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:178:| pelna unikalnosc representation map | `blocked` | `QW-2191` |",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:63:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:112:- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel‑alone,",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:133:| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:33:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:97:`QW-2191` daje jawny obstruction theorem:",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:115:4. **Zadanie na Przyszłość:** Najwyższym priorytetem teoretycznym jest teraz wykazanie, w jaki sposób asymetria Shannon'a ($\\alpha_{\\text{geo}} = 4 \\ln 2$) na pierścieniu nad12-sigma w pełni znosi przeszkodę selektora `QW-2191`, umożliwiając jednoznaczne wyłonienie generacji cząstek w ścisłym rdzeniu.",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:97:### 4.1. Przeszkoda Selektora `QW-2191`",
+            "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:83:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:97:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:102:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:88:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:104:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:90:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:105:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:91:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:103:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:117:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:11:- `QW-2191` still obstructs kernel-alone uniqueness,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:18:- keep `QW-2191` undischarged,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:27:     `QW-2191`,"
+          ]
+        },
+        "sm_gr_scaffold": {
+          "count": 529,
+          "samples": [
+            "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:3:Status: `A8_EXECUTED_STRICT_SCOPE_PARTIAL_FOUNDATIONAL_GRAVITY_BOUNDARY_EXPLICIT`",
+            "fundamental_action_reconstruction/P1370_FULL_THEORY_BRIDGE_OBLIGATIONS_PACKET_PL.md:23:5. końcowe twierdzenie spinające `F_nadsoliton => L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1372_B1_ASSUMPTION_REGISTER_AND_NO_SILENT_TRANSFER_AUDIT_PACKET_PL.md:11:Bez tego każda próba teoremu B1 (`F_Nadsoliton => L_SM + L_GR`) pozostaje",
+            "fundamental_action_reconstruction/P1372_B1_ASSUMPTION_REGISTER_AND_NO_SILENT_TRANSFER_AUDIT_PACKET_PL.md:37:- `F_Nadsoliton => L_SM + L_GR` pełna identyfikacja -> `open`",
+            "fundamental_action_reconstruction/P1372_B1_ASSUMPTION_REGISTER_AND_NO_SILENT_TRANSFER_AUDIT_PACKET_PL.md:55:- `L_GR` jest już wyprowadzony,",
+            "fundamental_action_reconstruction/P1373_B1_THEOREM_OR_OBSTRUCTION_NOTE_PL.md:57:Część `L_GR` pozostaje osobnym obowiązkiem i nie jest tu domykana.",
+            "fundamental_action_reconstruction/P1374_L_B1_01_OPERATOR_CONSTRUCTION_ATTEMPT_PL.md:49:`F_Nadsoliton => L_SM + L_GR` pozostaje **OPEN**.",
+            "fundamental_action_reconstruction/P1379_FIRST_FULL_L_B1_02_FORMAL_PASS_FAIL_RUN_PL.md:35:całego celu `F_Nadsoliton => L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1382_STRICT_ONLY_CMIX_COMMUTATOR_ATLAS_INDEPENDENCE_ATTEMPT_PL.md:9:`F_Nadsoliton => L_SM + L_GR`:",
+            "fundamental_action_reconstruction/P1383_STRICT_ONLY_CMIX_COMMUTATOR_GLOBALIZATION_ATTEMPT_PL.md:47:bo to aktualnie najwęższy blocker na drodze `F_Nadsoliton => L_SM + L_GR` w strict lane.",
+            "fundamental_action_reconstruction/P1384_STRICT_ONLY_SELECTOR_COMPATIBILITY_DISCHARGE_ATTEMPT_PL.md:9:w torze strict-only (`F_Nadsoliton => L_SM + L_GR`) bez mostu do legacy.",
+            "fundamental_action_reconstruction/P1385_STRICT_ONLY_L_B1_03_EXPORT_ATTEMPT_PL.md:10:`F_Nadsoliton => L_SM + L_GR` bez mostu do legacy.",
+            "fundamental_action_reconstruction/P1386_STRICT_ONLY_COUNTEREXAMPLE_CE4_CE6_RESOLUTION_ATTEMPT_PL.md:10:`F_Nadsoliton => L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1392_STRICT_ONLY_NEW_PROVIDER_CLASS_ANCHOR_DESIGN_PACKET_PL.md:10:`F_Nadsoliton => L_SM + L_GR` bez mostu do legacy.",
+            "fundamental_action_reconstruction/P1392_STRICT_ONLY_NEW_PROVIDER_CLASS_ANCHOR_DESIGN_PACKET_PL.md:40:- To jest domknięcie metodologiczno-operacyjne, nie pełny theorem-level bridge do `L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1397_STRICT_ONLY_PC3_PROVIDER_BASELINE_DESIGN_PL.md:5:`F_Nadsoliton ⇒ L_SM + L_GR` bez bridge do legacy.",
+            "fundamental_action_reconstruction/P1402_STRICT_ONLY_PC4_PROVIDER_BASELINE_DESIGN_PL.md:5:`F_Nadsoliton ⇒ L_SM + L_GR`, bez bridge do legacy i bez powrotu do pętli `PC3`.",
+            "fundamental_action_reconstruction/P1407_STRICT_ONLY_PC5_PROVIDER_BASELINE_DESIGN_PL.md:5:`F_Nadsoliton ⇒ L_SM + L_GR`, bez bridge do legacy.",
+            "fundamental_action_reconstruction/P1411_STRICT_ONLY_PC6_PROVIDER_BASELINE_DESIGN_PL.md:5:`F_Nadsoliton ⇒ L_SM + L_GR` bez bridge do legacy.",
+            "fundamental_action_reconstruction/P1412_STRICT_ONLY_FNADSOLITON_TO_LSM_PLUS_LGR_NEXT_HONEST_STEP_PACKET_EN_PL.md:116:- and it prevents narrative overclaim on `F_nadsoliton => L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1412_STRICT_ONLY_FNADSOLITON_TO_LSM_PLUS_LGR_NEXT_HONEST_STEP_PACKET_EN_PL.md:11:F_nadsoliton => L_SM + L_GR",
+            "fundamental_action_reconstruction/P1412_STRICT_ONLY_FNADSOLITON_TO_LSM_PLUS_LGR_NEXT_HONEST_STEP_PACKET_EN_PL.md:1:# P1412 Strict-Only F(Nadsoliton) => L_SM + L_GR Next Honest Step Packet (EN/PL)",
+            "fundamental_action_reconstruction/P1412_STRICT_ONLY_FNADSOLITON_TO_LSM_PLUS_LGR_NEXT_HONEST_STEP_PACKET_EN_PL.md:27:**Decision D3:** Candidate exports to `L_SM + L_GR` stay in `candidate` status unless the selector-source test passes on both:",
+            "fundamental_action_reconstruction/P1414_SST1C_TRANSPORT_ROBUSTNESS_PACKET_EN_PL.md:20:- strict promotion toward `L_SM + L_GR` remains blocked.",
+            "fundamental_action_reconstruction/P1416_PC7_FIRST_TRANSPORT_RUN_PACKET_EN_PL.md:25:So promotion toward `L_SM + L_GR` remains blocked.",
+            "fundamental_action_reconstruction/P1429_FNADSOLITON_TO_LSM_LGR_STRICT_NEXT_HONEST_STEP_PACKET_EN_PL.md:13:L_SM + L_GR compatibility witness,",
+            "fundamental_action_reconstruction/P1429_FNADSOLITON_TO_LSM_LGR_STRICT_NEXT_HONEST_STEP_PACKET_EN_PL.md:1:# P1429 — F-Nadsoliton ⇒ L_SM + L_GR: Strict Next Honest Step (No Legacy Bridge)",
+            "fundamental_action_reconstruction/P1429_FNADSOLITON_TO_LSM_LGR_STRICT_NEXT_HONEST_STEP_PACKET_EN_PL.md:29:  for the route `F-Nadsoliton => L_SM + L_GR`.",
+            "fundamental_action_reconstruction/P1429_FNADSOLITON_TO_LSM_LGR_STRICT_NEXT_HONEST_STEP_PACKET_EN_PL.md:59:3. Candidate is exportable into explicit `L_SM + L_GR` projection compatibility check.",
+            "fundamental_action_reconstruction/P1429_FNADSOLITON_TO_LSM_LGR_STRICT_NEXT_HONEST_STEP_PACKET_EN_PL.md:79:`F-Nadsoliton => L_SM + L_GR`"
+          ]
+        },
+        "strict_sm_gr_route": {
+          "count": 714,
+          "samples": [
+            "fundamental_action_reconstruction/B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md:272:   - jawnie zamrozic residual sign jako gauge/convention layer i kontynuowac strict-only ToE closure pod `QW-2191` dyscyplina.",
+            "fundamental_action_reconstruction/B8_SELECTOR_TRACK_ANTI_OVERCLAIM_AUDIT.md:133:1. kontynuowac strict-only ToE closure **pod `QW-2191` dyscyplina** (bez implied selector closure),",
+            "fundamental_action_reconstruction/F216_FIRST_ACTUAL_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_PACKET.md:86:legacy kernel retired to archival; strict-only ToE closure is Priority 1",
+            "fundamental_action_reconstruction/F309_FIRST_ACTUAL_STRICT_ALPHA_GEO_EQUIPARTITION_WITNESS_16_MICROSTATE_STRICT_DERIVATION_SOURCE_UPGRADE_PACKET.md:30:   - strict-only closure priority; `4 ln 2` is permitted as strict-side premise",
+            "fundamental_action_reconstruction/N327_CURRENT_FIRST_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_THEOREM.md:55:   strict-only closure priority; no legacy physical-role transfer).",
+            "fundamental_action_reconstruction/N411_CURRENT_FIRST_STRICT_ALPHA_GEO_EQUIPARTITION_WITNESS_16_MICROSTATE_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_THEOREM.md:64:strict-only closure work without implying selector closure or ToE closure.",
+            "fundamental_action_reconstruction/N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md:84:strategically, strict-only ToE closure continuation per `S2`.",
+            "fundamental_action_reconstruction/N499_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_THETA_PAIR_UPGRADE_THEOREM.md:95:and strict-only ToE-closure continuation per S2.",
+            "fundamental_action_reconstruction/N750_CURRENT_STRICT_T208_STRICT_SOURCE_SHANNON_MINIMAL_DESIGNATED_PAIR12_ENTRY_LANE_PROVIDER_SHIFT_REQUIREMENT_BOUNDARY_THEOREM.md:32:3. `S2` as the current strict strategic priority packet requiring strict-only",
+            "fundamental_action_reconstruction/N750_CURRENT_STRICT_T208_STRICT_SOURCE_SHANNON_MINIMAL_DESIGNATED_PAIR12_ENTRY_LANE_PROVIDER_SHIFT_REQUIREMENT_BOUNDARY_THEOREM.md:46:4. `S2` already freezes that strict-only closure remains the active priority",
+            "fundamental_action_reconstruction/N8_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_OBSTRUCTION_AFTER_TARGET_SLOT_EXPORT_THEOREM.md:75:Proceed under explicit `QW-2191` discipline (no implied selector closure) and continue strict-only ToE closure",
+            "fundamental_action_reconstruction/P1144_POST_MERGE_STRICT_RIGOR_NEXT_HONEST_STEP_PACKET.md:39:Choose the next step as a **strict-only candidate construction gate** (not a",
+            "fundamental_action_reconstruction/P1144_POST_MERGE_STRICT_RIGOR_NEXT_HONEST_STEP_PACKET.md:49:1. strict-only route first,",
+            "fundamental_action_reconstruction/P1146_STRICT_SHANNON_SELECTOR_CANDIDATE_GRID_NONCLOSURE_PROBE_PACKET.md:8:Perform a concrete follow-up to `P1145`: run a reproducible strict-only probe",
+            "fundamental_action_reconstruction/P1191_CLOSING_CANDIDATE_THEORETICAL_DOSSIER.md:34:- i przez to stworzyć drogę do strict-only domknięcia programu.",
+            "fundamental_action_reconstruction/P1312_STRICT_ONLY_QW2191_CLOSURE_PROOF_OBLIGATIONS_CHECKLIST_PL.md:11:- Brak claimów globalnej closure poza strict-only lane.",
+            "fundamental_action_reconstruction/P1312_STRICT_ONLY_QW2191_CLOSURE_PROOF_OBLIGATIONS_CHECKLIST_PL.md:14:## Checklist proof-obligations (strict-only)",
+            "fundamental_action_reconstruction/P1312_STRICT_ONLY_QW2191_CLOSURE_PROOF_OBLIGATIONS_CHECKLIST_PL.md:4:Ten dokument definiuje **minimalny uczciwy pakiet dowodowy strict-only**, który musi zostać spełniony, aby:",
+            "fundamental_action_reconstruction/P1312_STRICT_ONLY_QW2191_CLOSURE_PROOF_OBLIGATIONS_CHECKLIST_PL.md:61:- [ ] Export packet rozdziela strict-only od NB-only.",
+            "fundamental_action_reconstruction/P1312_STRICT_ONLY_QW2191_CLOSURE_PROOF_OBLIGATIONS_CHECKLIST_PL.md:66:`QW-2191 = CLOSED (strict-only)` jest dopuszczalne **wyłącznie jeśli O1–O7 = PASS**.",
+            "fundamental_action_reconstruction/P1313_O3_NONUNIQUENESS_EXCLUSION_EXECUTION_PLAN_PL.md:12:2. nie miesza strict-only z NB-only,",
+            "fundamental_action_reconstruction/P1313_O3_NONUNIQUENESS_EXCLUSION_EXECUTION_PLAN_PL.md:1:# P1313 — O3 Nonuniqueness Exclusion (strict-only) — execution plan, theorem skeleton, and audit protocol (PL)",
+            "fundamental_action_reconstruction/P1313_O3_NONUNIQUENESS_EXCLUSION_EXECUTION_PLAN_PL.md:8:Ten pakiet realizuje **następny uczciwy krok z P1312**: uruchomienie `O3 Nonuniqueness exclusion` jako bramki krytycznej przed jakimkolwiek claimem `QW-2191 = CLOSED` w lane strict-only.",
+            "fundamental_action_reconstruction/P1314_O3_STEP1_STRICT_CANDIDATE_CLASS_CATALOG_FREEZE_PL.md:9:- zamrozić skończony katalog klas kandydatów strict-only,",
+            "fundamental_action_reconstruction/P1315_O3_STEP2_R_COMMON_NORMALIZATION_AND_TRANSLATION_MAPS_PL.md:16:- Brak mieszania strict-only z NB-only.",
+            "fundamental_action_reconstruction/P1315_O3_STEP2_R_COMMON_NORMALIZATION_AND_TRANSLATION_MAPS_PL.md:1:# P1315 — O3.2 R_common normalization and translation maps (strict-only, PL)",
+            "fundamental_action_reconstruction/P1316_O3_STEP3_PAIRWISE_DIRECTION_SEPARATION_MATRIX_PL.md:1:# P1316 — O3.3 Pairwise direction-separation matrix (strict-only, PL)",
+            "fundamental_action_reconstruction/P1316_O3_STEP3_PAIRWISE_DIRECTION_SEPARATION_MATRIX_PL.md:32:| Para | Werdykt | Uzasadnienie strict-only |",
+            "fundamental_action_reconstruction/P1317_O3_STEP4_COUNTEREXAMPLE_SWEEP_EXECUTION_REPORT_PL.md:1:# P1317 — O3.4 Counterexample sweep execution report (strict-only, PL)",
+            "fundamental_action_reconstruction/P1318_O3_STEP5_INDEPENDENT_REPLAY_AND_ADVERSARIAL_AUDIT_REPORT_PL.md:1:# P1318 — O3.5 Independent replay and adversarial audit report (strict-only, PL)"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "theorem_export": {
+      "all_targets_blocked_now": true,
+      "current_discharge_mask": 0,
+      "full_discharge_mask": 255,
+      "legacy_value_route_retired_as_generator": true,
+      "maximum_missing_obligations_for_target": 8,
+      "minimum_missing_obligations_for_any_target": 5,
+      "not_licensed": [
+        "Strict SM/GR scaffold presence is not strict SM/GR value generation.",
+        "No legacy alpha_geo/beta_tors value route is used as a generator.",
+        "No QW-2191 discharge, strict observable-value generator, role-bearing L_total export, or ToE closure is exported."
+      ],
+      "obligation_count": 8,
+      "obligation_names": [
+        "strict_kernel_identity_and_domain_theorem",
+        "strict_kernel_to_coefficient_map_theorem",
+        "sm_gauge_group_and_coupling_export_theorem",
+        "sm_fermion_yukawa_higgs_export_theorem",
+        "gr_metric_eh_and_background_independence_theorem",
+        "curvature_squared_completion_and_unitarity_theorem",
+        "qw2191_selector_uniqueness_discharge_theorem",
+        "strict_observable_value_generator_theorem"
+      ],
+      "obligation_rows": [
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_kernel_identity_and_domain_theorem",
+          "partial_evidence": [
+            "P1567 local strict parameter identifiability only",
+            "P2437 strict tuple audit"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_kernel_to_coefficient_map_theorem",
+          "partial_evidence": [
+            "P1567 names the chain but leaves full 4-parameter map open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "sm_gauge_group_and_coupling_export_theorem",
+          "partial_evidence": [
+            "P1646 exports SM/GR scaffold, not coupling derivation"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_matter_higgs_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "sm_fermion_yukawa_higgs_export_theorem",
+          "partial_evidence": [
+            "P1705 exports spinor variation templates, full curved export open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "gr_metric_eh_and_background_independence_theorem",
+          "partial_evidence": [
+            "P1981 exports R2 lapse obligation and keeps background independence open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_GR_ready",
+            "SM_GR_coupled_EOM_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "curvature_squared_completion_and_unitarity_theorem",
+          "partial_evidence": [
+            "P1981 leaves Ricci2/Riemann2/Gauss-Bonnet and unitarity open"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "SM_GR_coupled_EOM_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "qw2191_selector_uniqueness_discharge_theorem",
+          "partial_evidence": [
+            "P1421 precheck says uniqueness certificate and QW-2191 discharge are missing"
+          ]
+        },
+        {
+          "blocks_targets": [
+            "L_SM_gauge_ready",
+            "L_SM_matter_higgs_ready",
+            "L_GR_ready",
+            "physical_constants_generated_ready",
+            "strict_toe_ready"
+          ],
+          "currently_discharged": false,
+          "obligation": "strict_observable_value_generator_theorem",
+          "partial_evidence": [
+            "P2437 says no strict physical-value generator is exported"
+          ]
+        }
+      ],
+      "p1421_qw2191_missing_inherited": true,
+      "p1646_scaffold_open_inherited": true,
+      "p1705_qg_required_inherited": true,
+      "p1981_background_open_inherited": true,
+      "p2437_no_strict_value_generator_inherited": true,
+      "qw2191_discharged": false,
+      "ready_target_count_now": 0,
+      "ready_targets_now": [],
+      "role_bearing_ltotal_exported": false,
+      "source_statuses": {
+        "P1421_SELECTOR_PRECHECK": "NO_FALSE_PASS",
+        "P1646_SM_GR_SCAFFOLD": "KEEP_OPEN_P1646_GAUGE_METRIC_H2_SCAFFOLD_EXPORTED",
+        "P1705_VARIATIONAL_OBJECTS": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "P1981_GR_R2_OBLIGATION": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "P2437_LEGACY_METHOD_AUDIT": "PASS_LEGACY_KERNEL_PHYSICAL_VALUE_METHODOLOGY_AUDIT_NO_STRICT_VALUE_GENERATOR_NO_BETA_TORS_CHI11_THEOREM"
+      },
+      "strict_generation_route": "K_strict_gate -> coefficients -> L_SM + L_GR -> EOM/observables",
+      "strict_observable_value_generator_exported": false,
+      "strict_sm_gr_generation_theorem_exported": false,
+      "target_count": 6,
+      "target_names": [
+        "L_SM_gauge_ready",
+        "L_SM_matter_higgs_ready",
+        "L_GR_ready",
+        "SM_GR_coupled_EOM_ready",
+        "physical_constants_generated_ready",
+        "strict_toe_ready"
+      ],
+      "target_rows": [
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_SM_gauge_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_SM_matter_higgs_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "missing_obligation_count": 5,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 5,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "L_GR_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "missing_obligation_count": 7,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 7,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem"
+          ],
+          "target": "SM_GR_coupled_EOM_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "missing_obligation_count": 7,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 7,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "physical_constants_generated_ready"
+        },
+        {
+          "currently_discharged_obligations": [],
+          "incidence_bits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "missing_obligation_count": 8,
+          "missing_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "ready_now": false,
+          "required_obligation_count": 8,
+          "required_obligations": [
+            "strict_kernel_identity_and_domain_theorem",
+            "strict_kernel_to_coefficient_map_theorem",
+            "sm_gauge_group_and_coupling_export_theorem",
+            "sm_fermion_yukawa_higgs_export_theorem",
+            "gr_metric_eh_and_background_independence_theorem",
+            "curvature_squared_completion_and_unitarity_theorem",
+            "qw2191_selector_uniqueness_discharge_theorem",
+            "strict_observable_value_generator_theorem"
+          ],
+          "target": "strict_toe_ready"
+        }
+      ],
+      "theorem_name": "P2438_T1_strict_kernel_sm_gr_generation_obligation_matrix_certificate",
+      "toe_closure_exported": false
+    },
+    "theorem_fingerprint_sha256": "3d1f845747f319a58bd4d6b8ec7833b62f95d3854dcd6f1fceae584c529fecfd"
+  }
+}

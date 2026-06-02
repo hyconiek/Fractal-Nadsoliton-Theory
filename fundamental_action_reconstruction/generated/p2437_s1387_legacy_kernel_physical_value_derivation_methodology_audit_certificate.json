@@ -1,0 +1,422 @@
+{
+  "gatekeeper_checks": {
+    "alpha_em_numeric_matches_formula": true,
+    "beta_tors_chi11_is_assumption": true,
+    "fingerprint_stable": true,
+    "four_claims_audited": true,
+    "k1_guardrail_detected": true,
+    "legacy_claims_not_strict_generated": true,
+    "legacy_kernel_not_physically_sufficient": true,
+    "no_beta_tors_chi11_theorem": true,
+    "no_legacy_transfer": true,
+    "no_ltotal_export": true,
+    "no_strict_value_theorem": true,
+    "no_toe_export": true,
+    "p2436_inherited": true,
+    "rg_audit_ran": true,
+    "s2_guardrail_detected": true,
+    "strict_kernel_generation_required": true,
+    "strict_kernel_generator_not_exported": true,
+    "weak_numeric_matches_formula": true
+  },
+  "global_status": "OPEN_PROGRESS_LEGACY_VALUE_METHODOLOGY_AUDITED_STRICT_KERNEL_GENERATION_REQUIRED",
+  "legacy_kernel_physical_value_derivation_methodology_audit_certificate": {
+    "legacy_methodology_rows": [
+      {
+        "claim_id": "legacy_weak_mixing_angle",
+        "legacy_formula": "sin^2(theta_W)=alpha_geo/12",
+        "legacy_inputs": {
+          "alpha_geo": 2.772588722239781
+        },
+        "legacy_kernel_only_physically_sufficient": false,
+        "legacy_numeric_value": 0.23104906018664842,
+        "methodology_flags": [
+          "uses_legacy_alpha_geo_not_strict_kernel_generated_value",
+          "divisor_12_is_structural_postulate_not_derived_from_strict_kernel_dynamics",
+          "repo_revalidation_marks_formula_heuristic_not_strictly_derived"
+        ],
+        "reclassified_verdict": "legacy_model_or_search_assumption_not_current_strict_physical_derivation",
+        "required_next_strict_work": "derive this value from the full strict kernel/strict source theorem, or reject/replace the legacy role.",
+        "strict_kernel_generated": false
+      },
+      {
+        "claim_id": "legacy_inverse_alpha_em",
+        "legacy_formula": "alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)",
+        "legacy_inputs": {
+          "alpha_geo": 2.772588722239781,
+          "beta_tors": 0.01
+        },
+        "legacy_kernel_only_physically_sufficient": false,
+        "legacy_numeric_value": 137.24314175086917,
+        "methodology_flags": [
+          "uses_legacy_alpha_geo_and_hard_beta_tors",
+          "depends_on_linear_torsion_damping_parameter_absent_from_strict_kernel_tuple",
+          "repo_revalidation_marks_formula_model_level_or_partial_not_strict_derivation"
+        ],
+        "reclassified_verdict": "legacy_model_or_search_assumption_not_current_strict_physical_derivation",
+        "required_next_strict_work": "derive this value from the full strict kernel/strict source theorem, or reject/replace the legacy role.",
+        "strict_kernel_generated": false
+      },
+      {
+        "claim_id": "legacy_beta_power_gravity_hierarchy",
+        "legacy_formula": "G_eff/G_0=(beta_tors)^N, example N=20",
+        "legacy_inputs": {
+          "N_example": 20,
+          "beta_tors": 0.01
+        },
+        "legacy_kernel_only_physically_sufficient": false,
+        "legacy_numeric_value": 1.0000000000000003e-40,
+        "methodology_flags": [
+          "uses_beta_tors_power_scaling_ansatz",
+          "strict_kernel_uses_beta_d_eta_nonlinear_compression_not_legacy_beta_tors_power_hierarchy",
+          "repo_revalidation_marks_exact_gravity_hierarchy_not_full_independent_proof"
+        ],
+        "reclassified_verdict": "legacy_model_or_search_assumption_not_current_strict_physical_derivation",
+        "required_next_strict_work": "derive this value from the full strict kernel/strict source theorem, or reject/replace the legacy role.",
+        "strict_kernel_generated": false
+      },
+      {
+        "claim_id": "legacy_torsion_to_chi11_orientation",
+        "legacy_formula": "candidate beta_tors -> chi_11 selector/orientation source",
+        "legacy_inputs": {
+          "beta_tors": 0.01
+        },
+        "legacy_kernel_only_physically_sufficient": false,
+        "legacy_numeric_value": null,
+        "methodology_flags": [
+          "selector_mechanism_search_assumption_not_a_physical_value_derivation",
+          "does_not_discharge_QW_2191",
+          "does_not_export_internal_strict_selector_source"
+        ],
+        "reclassified_verdict": "legacy_model_or_search_assumption_not_current_strict_physical_derivation",
+        "required_next_strict_work": "derive this value from the full strict kernel/strict source theorem, or reject/replace the legacy role.",
+        "strict_kernel_generated": false
+      }
+    ],
+    "rg_methodology_audit": {
+      "finding": "Repo grep finds legacy physical-value formulas built from alpha_geo/beta_tors and multiple existing warnings that these are heuristic/model-level/role-transfer-limited. It does not find a production P24xx certificate reclassifying those formulas as strict-kernel-generated physical values.",
+      "patterns": {
+        "beta_tors_chi11_selector_assumption": {
+          "count": 7554,
+          "samples": [
+            "./AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+            "./AGENT_GUARDRAIL_ACKNOWLEDGEMENT.md:9:- Selector and noncyclic (`QW-2191`, `QW-2381/2382/2383`) constraints.",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2455:## 84) QW-2191: theorem-level obstruction of full mode-index uniqueness (`L3/L18/L19`) - `STRICT_OBSTRUCTION_PROVEN`",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2457:Krok `QW-2191` formalizuje granice domkniecia z `QW-2190`.",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2463:(co jest jawnie raportowane numerycznie w `QW-2191`).",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2491:Po udowodnieniu granicy axiom-free (`QW-2191`) wprowadzono jawny postulat selekcji:",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2531:- bez tego aksjomatu obowiazuje theorem-level obstruction z `QW-2191`.",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2628:Krok `QW-2195` formalizuje stan po `QW-2125` i `QW-2191..QW-2193`.",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2634:- `QW-2191`: theorem-level obstruction axiom-free (degeneracje i rodzina `O(2)`).",
+            "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2681:- `QW-2191`: axiom-free obstruction theorem,",
+            "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:377:Uzasadnienie: `QW-2191` przechodzi `MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE_PASS_STRICT` (`9/10`) i formalizuje granice domkniecia unikalnosci z samego kernela: obecne frozen `K_total` ma wielokrotne zdegenerowane podprzestrzenie wlasne (pary `lambda_i=lambda_{i+1}`), co indukuje ciagla rodzine rotacji `O(2)` zachowujacych inwariancje podprzestrzeni modowych oraz embedded Lie-closure (`SU(3)`, `SU(2)`) przy residualach maszynowych. To dowodzi, ze pelna fizyczna unikalnosc przypisania indeksow modow nie jest wyprowadzalna z aktualnych aksjomatow bez dodatkowego jawnego postulatu selekcji/symmetry-breaking.",
+            "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:404:- spiecie granic: `QW-2191` (obstruction axiom-free), `QW-2192` (axiom-augmented closure), `QW-2193` (robustness rodziny).",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:109:**Strict status:** repo nie eksportuje strict‑core „time‑arrow selektora” jako składnika rozładowującego `QW-2191`",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:143:degeneracjach (tam, gdzie standardowo wchodzi „measurement basis”) nadal zahacza o `QW-2191`.",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:165:    Q[\"QW-2191: ciągła rodzina O(2)\\n(unikatowość otwarta)\"]",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:178:Aktualny najostrzejszy strict frontier dla `QW-2191` na `pair1` jest dziś taki:",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:52:  (`QW-2191`) i nie wolno jej „zagadać”.",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:6:- Ten plik **nie** ogłasza: strict‑core selektora, rozładowania `QW-2191`, strict theta‑exportu ani domknięcia ToE.",
+            "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:95:przy degeneracji (`QW-2191` pozostaje otwarte). Dlatego wszelkie „kolaps jest wyprowadzony” musi być dziś oznaczone",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10011:   - albo probowac rozladowac `QW-2191`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10046:   - `P37_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10070:   - albo probowac rozladowac `QW-2191`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10106:   - `P38_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10130:   - albo probowac rozladowac `QW-2191`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10167:   - `P39_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10191:   - albo probowac rozladowac `QW-2191`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10230:   - `P40_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10286:   - `P41_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10337:   - `P42_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10388:   - `P43_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,"
+          ]
+        },
+        "legacy_kernel_inputs": {
+          "count": 6249,
+          "samples": [
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:102:print(f\"  α_geo = {alpha_geo:.6f}\")",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:105:print(f\"  β_tors (kinematic viscosity) = {beta_tors:.6f}\")",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:131:#   ν = kinematic viscosity (beta_tors)",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:133:# CRITICAL INSIGHT: beta_tors = 0.01 represents a DIMENSIONLESS parameter",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:169:nu_vacuum = beta_tors",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:302:# In network units, derive a_0 from beta_tors",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:304:a_0_mond = beta_tors  # Characteristic acceleration scale from viscosity",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:527:    phi_vacuum += dt_vortex * (beta_tors * lap_phi + source)",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:86:alpha_geo = 4 * np.log(2)",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:89:beta_tors = 0.01  # Kinematic viscosity of vacuum",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:93:    return (alpha_geo * np.exp(1j * (omega * d + phi))) / (1 + beta_tors * d)",
+            "./# QW-495 TO QW-499: TURBULENT ETHER .py:945:beta_stab = beta_tors",
+            "./100_QUICK_WIN_INTEGRATION.py:57:alpha_geo = 2.77",
+            "./100_QUICK_WIN_INTEGRATION.py:58:beta_tors = 0.01",
+            "./100_QUICK_WIN_INTEGRATION.py:65:def kernel_K(d, alpha=alpha_geo, beta=beta_tors, omega=omega, phi=phi_base):",
+            "./100_QUICK_WIN_INTEGRATION.py:90:print(f\"  α_geo = {alpha_geo}, β_tors = {beta_tors}\")",
+            "./101_QUICK_WIN_QFT.py:56:alpha_geo = 2.77",
+            "./101_QUICK_WIN_QFT.py:57:beta_tors = 0.01",
+            "./101_QUICK_WIN_QFT.py:65:def kernel_K(d, alpha=alpha_geo, beta=beta_tors, omega=omega, phi=phi_base):",
+            "./101_QUICK_WIN_QFT.py:90:print(f\"  α_geo = {alpha_geo}, β_tors = {beta_tors}\")",
+            "./102_QUICK_WIN_EXPERIMENTAL.py:42:alpha_geo = 2.77",
+            "./102_QUICK_WIN_EXPERIMENTAL.py:43:beta_tors = 0.01",
+            "./102_QUICK_WIN_EXPERIMENTAL.py:50:    return alpha_geo * np.cos(omega * d + phi) / (1.0 + beta_tors * d)",
+            "./102_QUICK_WIN_EXPERIMENTAL.py:66:print(f\"Core: α={alpha_geo}, β={beta_tors}, λ_max={lambda_max:.4f}, modes={n_modes}\")",
+            "./103_QUICK_WIN_RG.py:116:    K_scaled = alpha_geo * np.cos(omega * (s * D) + phi) / (1.0 + beta_tors * (s * D))",
+            "./103_QUICK_WIN_RG.py:130:    K_scaled = alpha_geo * np.cos(omega * (s * D) + phi) / (1.0 + beta_tors * (s * D))",
+            "./103_QUICK_WIN_RG.py:151:KA = alpha_geo * np.cos(omega * (sA * DA) + phi) / (1.0 + beta_tors * (sA * DA))",
+            "./103_QUICK_WIN_RG.py:157:KB = alpha_geo * np.cos(omega * (sB * DB) + phi) / (1.0 + beta_tors * (sB * DB))",
+            "./103_QUICK_WIN_RG.py:17:alpha_geo = 2.77",
+            "./103_QUICK_WIN_RG.py:18:beta_tors = 0.01"
+          ]
+        },
+        "legacy_value_formulas": {
+          "count": 244,
+          "samples": [
+            "./52 ZADANIE QW1-QW5.py:1342:G_eff_improved = G_N * (1.0 + alpha_correction * np.log(r / r0)) * (1.0 + beta_tors_unified * r)",
+            "./52 ZADANIE QW1-QW5.py:1430:G_eff_2 = G_N * np.exp(-beta_tors_unified * (r - r0)**2)",
+            "./52 ZADANIE QW1-QW5.py:1438:G_eff_3 = G_N * (1.0 + alpha_correction * np.log(1 + r/r0) + beta_tors_unified * r)",
+            "./AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+            "./FIN_Theory_Final_Report_Book.tex:386:QW-557 & Universal Scaling Laws ($N=10 \\to 20$) & $\\beta^N$ scaling valid \\\\",
+            "./FIN_Theory_Final_Report_Book_v2.tex:410:QW-557 & Universal Scaling Laws ($N=10 \\to 20$) & $\\beta^N$ scaling valid \\\\",
+            "./FIN_Theory_Final_Report_Book_v3.tex:427:QW-557 & Universal Scaling Laws ($N=10 \\to 20$) & $\\beta^N$ scaling valid \\\\",
+            "./FIN_Theory_Final_Report_Book_v4.tex:427:QW-557 & Universal Scaling Laws ($N=10 \\to 20$) & $\\beta^N$ scaling valid \\\\",
+            "./FULL_LOG_COMPRESSED_EXTREME_QW420_1200.md:3135:| `odkrycie_fraktalne_warstwy.md` | Hierarchia $\\beta^N$ działa | ✅ Konsystentny ($a_0 = \\beta$) |",
+            "./QW-480 TO QW-484.py:68:# G_eff(N) = G_0 * (beta_tors)^N",
+            "./QW-480 TO QW-484.py:79:# G_observed = G_0 * beta^N",
+            "./QW-510 TO QW-514.py:1081:# Method: Use scaling law H_N = H_0 * beta^N",
+            "./QW-510 TO QW-514.py:1088:# Hubble parameter should vary with layer according to H_N = H_0 * beta^N",
+            "./QW-510 TO QW-514.py:1111:# Then H(N) = H_0 * (beta^N / beta^20) = H_0 * beta^(N-20)",
+            "./QW-510 TO QW-514.py:365:    \"\"\"Scale coupling strength: g_eff(N) = g_0 * beta^N\"\"\"",
+            "./QW-510 TO QW-514.py:381:    \"\"\"Scale energy: E_N = E_0 * beta^N (from force scaling)\"\"\"",
+            "./QW-510 TO QW-514.py:469:# Energy scaling: E_eff = E_0 * beta^N",
+            "./QW-586_Fractal_MOND.py:14:    # From QW-480: G(N) = G_0 * beta^N",
+            "./QW-586_Fractal_MOND.py:21:        - Strength: G_N = G_0 * beta^N",
+            "./QW-625_4Bit_Physics.py:108:# alpha_EM^-1 = 4*pi^3 + pi^2 + pi ? (Heisenberg approx ~ 137)",
+            "./QW-625_4Bit_Physics.py:111:# Let's try: alpha_EM^-1 = 16 * (pi^2 - 1)?",
+            "./QW-625_4Bit_Physics.py:114:# Let's try: alpha_EM^-1 = 4*ln(2) * (something)",
+            "./QW-625_4Bit_Physics.py:27:print(f\"Target: alpha_EM^-1 = {ALPHA_EM_INV_TARGET:.10f}\")",
+            "./QW-625_4Bit_Physics.py:33:print(\"Searching for algebraic relation: alpha_EM^-1 = f(alpha_geo, pi, phi)...\")",
+            "./QW-625_4Bit_Physics.py:5:# Hypothesis 1: alpha_EM^-1 (137.036) is related to alpha_geo (4ln2) and geometry (pi, phi)",
+            "./QW-651_652_Extension.py:133:print(\"  => Hypothesis: sin^2(theta_W) = Alpha / 12\")",
+            "./QW_1703_CLAIMS_VS_COMPUTATION_AUDIT.py:54:    # 1) Weinberg (as stated in README: sin^2(theta_W) = alpha_geo / 12)",
+            "./QW_2040_NADSOLITON_CRITICAL_CHARACTERISTICS_INTEGRITY_AUDIT.py:161:        f\"- alpha_EM^-1 rel_err: {r2039['relative_to_tex_canonical']['alpha_em_inv_rel_err']:.3e}\",",
+            "./QW_2081_MISSING14_STRICT_RIGOR_FRONTIER.py:215:                \"method\": \"MZ=MW(delta_r=0)/sqrt(1-sin^2(theta_W)) from QW-2072\",",
+            "./README.md:1006:  cited as if they already inherited the old `alpha_geo/beta_tors/beta^N`"
+          ]
+        },
+        "new_packet": {
+          "count": 29,
+          "samples": [
+            "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1225:## P2437/S1387 legacy-kernel physical-value methodology audit certificate",
+            "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1227:`P2437/S1387` re-audits the old attempts to read physical values from the legacy kernel.  The grep/methodology audit finds that `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)`, and `beta^N` hierarchy claims were built from legacy `alpha_geo`/`beta_tors` bookkeeping and were already marked heuristic/model-level/partial rather than strict derivations.  The proposed `beta_tors -> chi_11` link is reclassified as a selector-mechanism search assumption, not a theorem or physical-value derivation.",
+            "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1229:The audit therefore changes the honest target: physical values must be generated by the full strict kernel and its strict source/selector theorems, not inherited from the incomplete legacy kernel.  P2437 exports no rejection theorem for all possible successors, but it blocks treating legacy formulas as physically meaningful strict values without a new strict-kernel derivation.",
+            "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1235:The current matrix is intentionally negative: all six SM/GR generation targets remain not ready, because the repo has scaffolds and partial variational witnesses but no theorem-grade strict observable generator or QW-2191 discharge.  This is the first strict-only SM/GR worklist after P2437, not a closure claim.",
+            "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:834:## P2437/S1387 legacy-value methodology guard for Lagrangian/EOM",
+            "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:836:`P2437/S1387` forbids inserting legacy Weinberg, alpha_EM, gravity-hierarchy, or `beta_tors -> chi_11` terms into the strict Lagrangian/EOM as if they were generated by `K_strict_gate`.  Until the full strict kernel exports physical-value generators, those legacy formulas remain methodology-audited model/search assumptions rather than role-bearing dynamics.",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:141:        \"new_packet\": \"P2437|S1387|legacy kernel physical value|physical value methodology|strict kernel generated values\",",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:183:## P2437/S1387 legacy-kernel physical-value methodology audit certificate",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:185:`P2437/S1387` re-audits the old attempts to read physical values from the legacy kernel.  The grep/methodology audit finds that `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)`, and `beta^N` hierarchy claims were built from legacy `alpha_geo`/`beta_tors` bookkeeping and were already marked heuristic/model-level/partial rather than strict derivations.  The proposed `beta_tors -> chi_11` link is reclassified as a selector-mechanism search assumption, not a theorem or physical-value derivation.",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:187:The audit therefore changes the honest target: physical values must be generated by the full strict kernel and its strict source/selector theorems, not inherited from the incomplete legacy kernel.  P2437 exports no rejection theorem for all possible successors, but it blocks treating legacy formulas as physically meaningful strict values without a new strict-kernel derivation.",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:190:## P2437/S1387 legacy-value methodology guard for Lagrangian/EOM",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:192:`P2437/S1387` forbids inserting legacy Weinberg, alpha_EM, gravity-hierarchy, or `beta_tors -> chi_11` terms into the strict Lagrangian/EOM as if they were generated by `K_strict_gate`.  Until the full strict kernel exports physical-value generators, those legacy formulas remain methodology-audited model/search assumptions rather than role-bearing dynamics.",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:209:        \"theorem_name\": \"P2437_T1_legacy_kernel_physical_value_derivation_methodology_audit_certificate\",",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:272:        \"packet_id\": \"P2437\",",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:273:        \"stage_id\": \"S1387\",",
+            "./fundamental_action_reconstruction/p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:298:                \"# P2437 S1387: legacy-kernel physical-value derivation methodology audit certificate\",",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:146:        \"legacy_value_block\": \"P2437|legacy.*physical-value|beta_tors -> chi_11|alpha_geo/12|alpha_EM\",",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:200:The current matrix is intentionally negative: all six SM/GR generation targets remain not ready, because the repo has scaffolds and partial variational witnesses but no theorem-grade strict observable generator or QW-2191 discharge.  This is the first strict-only SM/GR worklist after P2437, not a closure claim.",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:22:    \"P2437_LEGACY_METHOD_AUDIT\": GEN / \"p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.json\",",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:241:        \"p2437_no_strict_value_generator_inherited\": sources[\"P2437_LEGACY_METHOD_AUDIT\"]",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:86:    \"strict_kernel_identity_and_domain_theorem\": [\"P1567 local strict parameter identifiability only\", \"P2437 strict tuple audit\"],",
+            "./fundamental_action_reconstruction/p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:93:    \"strict_observable_value_generator_theorem\": [\"P2437 says no strict physical-value generator is exported\"],",
+            "./fundamental_action_reconstruction/test_p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:15:class P2437LegacyKernelPhysicalValueMethodologyAuditCertificateTest(unittest.TestCase):",
+            "./fundamental_action_reconstruction/test_p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:26:        self.assertEqual(self.payload[\"packet_id\"], \"P2437\")",
+            "./fundamental_action_reconstruction/test_p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:27:        self.assertEqual(self.payload[\"stage_id\"], \"S1387\")",
+            "./fundamental_action_reconstruction/test_p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:59:        self.assertIn(\"P2437/S1387\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "./fundamental_action_reconstruction/test_p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.py:60:        self.assertIn(\"P2437/S1387\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "./fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:11:P2437 = ROOT / \"generated\" / \"p2437_s1387_legacy_kernel_physical_value_derivation_methodology_audit_certificate.json\"",
+            "./fundamental_action_reconstruction/test_p2438_s1388_strict_kernel_sm_gr_generation_obligation_matrix_certificate.py:17:        if not P2437.exists():"
+          ]
+        },
+        "prior_negative_methodology": {
+          "count": 641,
+          "samples": [
+            "./0.1 MATHEMATICAL CONSISTENCY ✅ VERIFIED.py:565:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.2 CRITICAL REVIEW OF THE THEORY.py:529:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.3 NON-TRIVIAL GROUND STATE DISCOVERY.py:496:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.4 IN-DEPTH ANALYSIS OF PROVIDED SOLUTION & REPORT.py:490:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.7 IMPLEMENTACJA STABILNEGO SOLWERA DLA MODELU KREACJI POPRZEZ REZONANSOWE SAMOSPRZĘŻENIE FRAKTALNEGO SUPERSOLITONA.py:613:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.8 DYNAMIC STABILIZATION VS POTENTIAL STABILIZATION COMPARISON.py:601:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./0.9 created production-ready script.py:585:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./39mergepopr_ENHANCED.py:106:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./39mergepopr_ORIGINAL.py:106:    print(\"⚠️ Particle fallback to hardcoded SM masses.\")",
+            "./AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+            "./AGENTS.md:31:- Artifact-sensitive upstream classes may be reopened when the task is explicitly to build or audit the `legacy -> strict` completion bridge, its missing strict-side characteristics, or its role-transfer theorem.",
+            "./AGENTS.md:35:- Highest theoretical priority is now the `legacy -> strict` completion bridge plus the subsequent role-transfer audit.",
+            "./AGENTS.md:49:_Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel; role-transfer audit required after bridge completion)._",
+            "./Global_Fractal_Correlations_in_GW_Noise_Preprint_Release_5_0.tex:92:    \\item \\textbf{Method-repair versus scientific claim:} QW-2116 confirms protocol repair (no hardcoded observation, aligned $n$, calibrated null/permutation tests), but the scientific branch verdict remains \\texttt{GW\\_CROSS\\_HURST\\_ANOMALY\\_NOT\\_ROBUST}.",
+            "./PHYSICIST_REVIEW_V3_2.md:33:**Assessment: PHILOSOPHICALLY SOUND, PHYSICALLY HEURISTIC.**",
+            "./QW-340 do QW-344.py:290:# PROBLEM ZIDENTYFIKOWANY: Macierz ma diagonalę = 100000 (hardcoded!)",
+            "./QW-370 TO QW-374 draft.py:104:QW-370: 88.5% constants hardcoded, 0% derived from geometry → TAUTOLOGICAL",
+            "./QW-370 TO QW-374 draft.py:119:    TAUTOLOGY (QW-370): 88.5% of physical constants are manually fitted, not derived from fractal geometry",
+            "./QW-370 TO QW-374 draft.py:1392:2. 97_QUICK_WIN_NO_TAUTOLOGY.py: for d in deltas:",
+            "./QW-370 TO QW-374 draft.py:155:# Goal: Check if constants (α_geo, β_tors, 1/137) are hardcoded or derived from fractal geometry",
+            "./QW-370 TO QW-374 draft.py:176:    'alpha_geo': {'hardcoded': [], 'derived': [], 'context': []},",
+            "./QW-370 TO QW-374 draft.py:177:    'beta_tors': {'hardcoded': [], 'derived': [], 'context': []},",
+            "./QW-370 TO QW-374 draft.py:178:    'fine_structure_137': {'hardcoded': [], 'derived': [], 'context': []}",
+            "./QW-370 TO QW-374 draft.py:1792:    'Key_Finding': f\"{qw370_results['pct_hardcoded']:.1f}% constants hardcoded\"",
+            "./QW-370 TO QW-374 draft.py:1862:print(f\"    Finding: {qw370_results['total_hardcoded']}/{qw370_results['total_hardcoded']+qw370_results['total_derived']} constants hardcoded\")",
+            "./QW-370 TO QW-374 draft.py:1863:print(f\"    - alpha_geo: {qw370_results['evidence'][0]['hardcoded']} hardcoded, {qw370_results['evidence'][0]['derived']} derived\")",
+            "./QW-370 TO QW-374 draft.py:1864:print(f\"    - beta_tors: {qw370_results['evidence'][1]['hardcoded']} hardcoded, {qw370_results['evidence'][1]['derived']} derived\")",
+            "./QW-370 TO QW-374 draft.py:1865:print(f\"    - 1/137: {qw370_results['evidence'][2]['hardcoded']} references (all hardcoded)\")",
+            "./QW-370 TO QW-374 draft.py:1906:print(\"\\n1. TAUTOLOGY (QW-370): 88.5% of constants are hardcoded\")",
+            "./QW-370 TO QW-374 draft.py:1945:QW-370      Wheeler-Bit Audit   Physical Constants      1/10 TAUTOLOGY - Constants are overwhelmingly hardcoded, not emergent from geometry       88.5% constants hardcoded"
+          ]
+        },
+        "strict_kernel_generation": {
+          "count": 1944,
+          "samples": [
+            "./AGENTS.md:13:- `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` is restored as an **intermediate bridge kernel** on the path toward identifying the strict kernel.",
+            "./AGENTS.md:14:- `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)` is the later completed/enriched strict working kernel: current bridge work may treat it as a strict completion of the legacy kernel only through explicit completion-map evidence.",
+            "./AGENTS.md:15:- The legacy kernel is not a co-equal final kernel and it is not a silent substitute for the strict kernel: it omits strict-side characteristics of the nadsoliton, including the nonlinear compression/damping structure and the certified phase/topological data.",
+            "./AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+            "./AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+            "./AGENTS.md:29:- In `A1/A4/A8`, treat `K_strict_gate` as the completed/enriched strict continuation of the legacy intermediate kernel only where the explicit bridge-completion certificate licenses it; otherwise keep the layers separated.",
+            "./AGENT_GUARDRAIL_ACKNOWLEDGEMENT.md:5:- Kernel split non-substitution between `K_legacy_ont` and `K_strict_gate`.",
+            "./AGENT_SESSION_NOTE_2026-05-14.md:7:- Kernel split preserved: no substitution of `K_strict_gate` for `K_legacy_ont` was introduced.",
+            "./GUARDRAIL_ACKNOWLEDGEMENT_2026-05-11.md:5:- Kernel split distinction is preserved (`K_legacy_ont` vs `K_strict_gate`).",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:2433:     - `K_eta(d)=cos(omega*d+phi)/(1+beta*d^eta)`,",
+            "./PLAN_NAPRAWA_TOE_ROBOCZY.md:3776:   - `K(d)=cos(omega*d+phi)/(1+beta*d^eta)` zamiast liniowego mianownika `1+beta*d`.",
+            "./QW_1942_FINAL_SINGLE_KERNEL_TOE_GATE.py:8:- strict kernel-derived flavor pass (QW-1940),",
+            "./QW_2139_KERNEL_GREEN_STATUS_3D_ENERGY_GATE.py:133:            \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\",",
+            "./QW_2139_KERNEL_GREEN_STATUS_3D_ENERGY_GATE.py:52:    omega = 0.18575",
+            "./QW_2139_KERNEL_GREEN_STATUS_3D_ENERGY_GATE.py:55:    eta = 1.8",
+            "./QW_2140_KERNEL_INVERSE_FINITE_DOMAIN_GATE.py:140:            \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\",",
+            "./QW_2140_KERNEL_INVERSE_FINITE_DOMAIN_GATE.py:91:    omega = 0.18575",
+            "./QW_2140_KERNEL_INVERSE_FINITE_DOMAIN_GATE.py:94:    eta = 1.8",
+            "./QW_2141_CONTINUUM_WEAK_DISTRIBUTION_PROXY_GATE.py:134:    omega = 0.18575",
+            "./QW_2141_CONTINUUM_WEAK_DISTRIBUTION_PROXY_GATE.py:137:    eta = 1.8",
+            "./QW_2141_CONTINUUM_WEAK_DISTRIBUTION_PROXY_GATE.py:182:            \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\",",
+            "./README.md:1005:  roles onto `K_strict_gate`, so strict-kernel operational outputs may not be",
+            "./README.md:1221:  exports neither a rigorous legacy-to-strict kernel identification nor a",
+            "./README.md:12:- In particular, treat `K_strict_gate` as an operational control kernel unless and until a rigorous `legacy -> strict` bridge (or non-bridge theorem) is explicitly exported.",
+            "./README.md:352:- $\\omega = 0.18575$",
+            "./README.md:355:- $\\eta = 1.80000$",
+            "./README.md:919:  gate kernel `cos(omega*d+phi)/(1+beta*d^eta)`, with no rigorous bridge yet,",
+            "./README.md:929:  silent ontological uses of `K_strict_gate` remain artifact-sensitive",
+            "./README.md:998:  `legacy -> strict kernel` bridge or non-bridge question; `QW-2191` remains",
+            "./RELEASE_4_9.md:307:- `omega = 0.185750`"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2436_FRONTIER": "PASS_CLAIM_SPECIFIC_SUCCESSOR_FRONTIER_ANTICHAIN_NO_ROLE_TRANSFER_NO_CLOSURE"
+    },
+    "strict_kernel_absence_rows": [
+      {
+        "legacy_role_formula_containing_parameter": false,
+        "physical_value_generator_exported": false,
+        "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+        "strict_kernel_parameter": "omega",
+        "strict_value": 0.18575
+      },
+      {
+        "legacy_role_formula_containing_parameter": false,
+        "physical_value_generator_exported": false,
+        "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+        "strict_kernel_parameter": "phi",
+        "strict_value": 0.1625
+      },
+      {
+        "legacy_role_formula_containing_parameter": false,
+        "physical_value_generator_exported": false,
+        "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+        "strict_kernel_parameter": "beta",
+        "strict_value": 1.0
+      },
+      {
+        "legacy_role_formula_containing_parameter": false,
+        "physical_value_generator_exported": false,
+        "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+        "strict_kernel_parameter": "eta",
+        "strict_value": 1.8
+      }
+    ],
+    "theorem_export": {
+      "all_legacy_claims_not_physically_sufficient_from_legacy_kernel_only": true,
+      "all_legacy_claims_reclassified_not_strict_generated": true,
+      "audited_legacy_claim_count": 4,
+      "audited_legacy_claim_ids": [
+        "legacy_weak_mixing_angle",
+        "legacy_inverse_alpha_em",
+        "legacy_beta_power_gravity_hierarchy",
+        "legacy_torsion_to_chi11_orientation"
+      ],
+      "beta_tors_chi11_theorem_exported": false,
+      "beta_tors_to_chi11_reclassified_as_search_assumption": true,
+      "k1_kernel_split_guardrail_detected": true,
+      "legacy_alpha_geo": 2.772588722239781,
+      "legacy_beta_power_n20_numeric": 1.0000000000000003e-40,
+      "legacy_beta_tors": 0.01,
+      "legacy_inverse_alpha_em_numeric": 137.24314175086917,
+      "legacy_role_claim_transferred_by_this_certificate": false,
+      "legacy_weak_mixing_numeric": 0.23104906018664842,
+      "not_licensed": [
+        "Legacy numerical agreement or near-agreement is not a strict physical derivation from the full strict kernel.",
+        "The old beta_tors -> chi_11 idea is treated here only as a selector-mechanism search assumption.",
+        "This audit does not prove final rejection of every possible strict successor; it blocks silent inheritance from the incomplete legacy kernel.",
+        "No strict physical-value generator, beta_tors -> chi_11 theorem, role-bearing L_total export, or ToE closure is exported."
+      ],
+      "p2436_claim_specific_frontier_inherited": true,
+      "role_bearing_ltotal_exported": false,
+      "s2_no_silent_role_transfer_detected": true,
+      "strict_kernel_parameter_audit_rows": [
+        {
+          "legacy_role_formula_containing_parameter": false,
+          "physical_value_generator_exported": false,
+          "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+          "strict_kernel_parameter": "omega",
+          "strict_value": 0.18575
+        },
+        {
+          "legacy_role_formula_containing_parameter": false,
+          "physical_value_generator_exported": false,
+          "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+          "strict_kernel_parameter": "phi",
+          "strict_value": 0.1625
+        },
+        {
+          "legacy_role_formula_containing_parameter": false,
+          "physical_value_generator_exported": false,
+          "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+          "strict_kernel_parameter": "beta",
+          "strict_value": 1.0
+        },
+        {
+          "legacy_role_formula_containing_parameter": false,
+          "physical_value_generator_exported": false,
+          "reason": "Current strict tuple is a gate-kernel parameter, not an exported Standard-Model value generator in this audit.",
+          "strict_kernel_parameter": "eta",
+          "strict_value": 1.8
+        }
+      ],
+      "strict_kernel_physical_value_generator_exported_in_current_repo": false,
+      "strict_kernel_should_be_generation_source_for_physical_values": true,
+      "strict_kernel_tuple": {
+        "beta": 1.0,
+        "eta": 1.8,
+        "omega": 0.18575,
+        "phi": 0.1625
+      },
+      "strict_physical_value_theorem_exported": false,
+      "theorem_name": "P2437_T1_legacy_kernel_physical_value_derivation_methodology_audit_certificate",
+      "toe_closure_exported": false
+    },
+    "theorem_fingerprint_sha256": "3af2d78d401913d4fea62e8f874f32d53efbaedb41ab9f4df4d4c31490946945"
+  },
+  "packet_id": "P2437",
+  "recommended_next_honest_step": "Stop using legacy alpha_geo/beta_tors formulas as physical-value derivations; build strict-kernel physical-value generators or reject/replace each legacy role.",
+  "result_kind": "LEGACY_KERNEL_PHYSICAL_VALUE_DERIVATION_METHODOLOGY_AUDIT_CERTIFICATE",
+  "schema_version": "p2437_s1387_v1",
+  "stage_id": "S1387",
+  "status": "PASS_LEGACY_KERNEL_PHYSICAL_VALUE_METHODOLOGY_AUDIT_NO_STRICT_VALUE_GENERATOR_NO_BETA_TORS_CHI11_THEOREM"
+}

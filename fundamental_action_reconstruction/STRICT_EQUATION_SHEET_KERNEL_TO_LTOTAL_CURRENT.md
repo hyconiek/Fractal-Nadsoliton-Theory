@@ -1121,3 +1121,115 @@ Therefore the honest answer is: the repo has value-level bridge evidence and a s
 The dual failure cover is the seven-literal DNF `not gate_1 OR ... OR not gate_7`.  Each missing gate has a Boolean-derivative nearest edge at the all-but-that-gate mask, so no missing gate is redundant and no proper subset can be promoted to closure.
 
 This is still a nonclosure theorem: it identifies the exact closure prime implicant and the exact failure cover, but it exports none of the missing source, selector, QW-2191, role-transfer, or `L_total` theorems.
+
+## P2422/S1372 current missing-gate repair subcube certificate
+
+`P2422/S1372` expands the P2421 current gap into the exact `2^5=32` repair subcube over the five missing theorem gates: source discharge, chi11 source export, QW-2191 selector discharge, role-transfer license, and role-bearing `L_total` export.
+
+The finite subcube separates partial unlocks from closure.  Source discharge alone unlocks bridge-source readiness; role-transfer and role-bearing `L_total` each have singleton local unlocks; selector-source readiness has no singleton unlock and requires the pair `chi11_source_export + qw2191_selector_discharge`.  ToE readiness still has exactly one repair row: all five missing gates.
+
+Thus P2422 is a proof-search repair map, not a theorem discharge.  It identifies which missing gates would unlock which intermediate predicates, but exports no source theorem, no chi11 source, no QW-2191 discharge, no role-transfer license, no `L_total`, and no ToE closure.
+
+## P2423/S1373 admissible repair-order poset certificate
+
+`P2423/S1373` adds proof-order discipline to the P2422 repair subcube.  It enumerates all `5! = 120` orders of the five missing gates and imposes the guardrail precedence relation: source discharge, chi11 source export, and QW-2191 selector discharge must precede role-transfer audit; role-transfer audit must precede role-bearing `L_total` export.
+
+Only `6` orders survive as admissible linear extensions.  In every admissible order, role-transfer readiness first appears at step `4`, role-bearing `L_total` and ToE first appear at step `5`, and the first three steps are exactly a permutation of the bridge/selector source gates.
+
+This is an order certificate, not a theorem discharge: it narrows the legal proof-search sequence but exports no source theorem, no chi11 source, no QW-2191 discharge, no role-transfer license, no `L_total`, and no ToE closure.
+
+## P2424/S1374 source-frontier Pareto order certificate
+
+`P2424/S1374` refines the six P2423 admissible orders by looking only at the first-three source frontier before role-transfer.  The objectives are earliest bridge-source readiness and earliest selector-source readiness.
+
+The finite Pareto audit has two incomparable optimal classes.  If `source_obligation_discharge` is first, bridge-source readiness occurs at step `1` and selector-source readiness at step `3`.  If the `chi11_source_export + qw2191_selector_discharge` pair is first, selector-source readiness occurs at step `2` and bridge-source readiness at step `3`.  The two mixed orders are dominated because they delay selector-source readiness to step `3` without improving bridge-source readiness beyond step `2`.
+
+This is a proof-search ordering theorem only: it does not pick a unique first gate without an extra cost/source premise and exports no source, selector, QW-2191, role-transfer, `L_total`, or ToE theorem.
+
+## P2425/S1375 source-frontier weighted tie-break premise certificate
+
+`P2425/S1375` turns the P2424 two-class Pareto frontier into an exact weighted-cost half-space.  With positive weights `w_bridge` and `w_selector`, the bridge-first vector `[1,3]` has cost `w_bridge + 3*w_selector`, while the selector-pair-first vector `[3,2]` has cost `3*w_bridge + 2*w_selector`.
+
+Therefore bridge-first is selected iff `w_selector < 2*w_bridge`, selector-pair-first is selected iff `w_selector > 2*w_bridge`, and the two classes tie exactly on `w_selector = 2*w_bridge`.  The mixed split vector `[2,3]` is always dominated because its cost exceeds bridge-first by `w_bridge > 0`.
+
+The finite `12 x 12` positive integer grid confirms the symbolic split: `108` bridge-first wins, `30` selector-pair wins, `6` ties, and `0` dominated wins.  This is a tie-break premise map, not an internal source theorem; without an exported weight/source-cost premise the repo still cannot choose a unique first gate or close role/`L_total`/ToE.
+
+## P2426/S1376 weighted tie-break x repair-subcube nonpromotion product certificate
+
+`P2426/S1376` takes the Cartesian product of the P2425 `12 x 12` positive weight grid with the P2422 `2^5=32` repair subcube.  The resulting finite audit has `4608` rows.
+
+The weighted choice never discharges repair obligations.  There are `144` ToE-ready product rows, exactly one all-five-gate repair row for each weight assignment, and `4464` proper repair failures.  The empty-repair slice has all `144` weight assignments but still has all five theorem gates missing, regardless of whether the weight side says bridge-first, selector-pair-first, or tie.
+
+Thus even an explicit weighted tie-break premise would only choose a proof-search order; it would not export source discharge, chi11 source, QW-2191 discharge, role-transfer license, role-bearing `L_total`, or ToE closure.
+
+## P2427/S1377 weight-repair projection independence certificate
+
+`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.
+
+The consequence is sharper than a count check: changing the weighted proof-search preference changes only order labels.  It never changes which source, chi11, QW-2191, role-transfer, or role-bearing `L_total` gate is present, so it cannot be promoted into bridge closure, role transfer, or ToE closure.
+
+## P2428/S1378 repair-readiness ANF and derivative certificate
+
+`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.
+
+The derivative audit makes the blocker structure explicit: bridge, role-transfer, and role-bearing `L_total` have singleton essential gates; selector has exactly the chi11/QW-2191 pair; ToE has all five gates as essential, each only at the four-other-gates nearest miss.  This is a Boolean obstruction certificate, not a theorem-gate discharge.
+
+## P2429/S1379 repair derivative nearest-miss witness table certificate
+
+`P2429/S1379` materializes the P2428 derivative counts as explicit finite witness rows.  The current five-gate repair layer has `69` derivative witness edges in total across `10` target/gate pairs: `16` for bridge-source readiness, `16` for selector-source readiness, `16` for role-transfer readiness, `16` for role-bearing `L_total` readiness, and `5` ToE nearest-miss edges.
+
+The ToE rows are exactly the five four-other-gates nearest misses: each missing theorem gate has one witness where adding that gate flips ToE from false to true.  These witnesses identify essential blockers, but they are not source, selector, QW-2191, role-transfer, `L_total`, or ToE theorem exports.
+
+## P2430/S1380 repair derivative witness-cover minimality certificate
+
+`P2430/S1380` takes the P2429 derivative witness table and computes the dual cover problem over theorem gates.  Bridge, role-transfer, and role-bearing `L_total` each have a singleton minimal witness cover; selector has the minimal pair `chi11_source_export + qw2191_selector_discharge`; ToE and the global derivative witness table have the unique minimal cover consisting of all five missing theorem gates.
+
+The cover lattice has `32` rows: exactly `1` row covers all global/ToE derivative witnesses and `31` proper rows leave at least one required witness gate uncovered.  Existing value evidence (`apd_value_bridge_witness`, `chi11_phase_selector_cut_mechanism`) covers no theorem-gate witness requirement, so the cover certificate is a target-selection guide, not closure.
+
+## P2431/S1381 admissible next theorem-target antichain certificate
+
+`P2431/S1381` combines the P2430 witness-cover minimum with repair-order precedence.  From the current zero-discharge state, the admissible singleton theorem targets are exactly `source_obligation_discharge`, `chi11_source_export`, and `qw2191_selector_discharge`; `role_transfer_audit_license` and `role_bearing_ltotal_export` are inadmissible as first moves.
+
+On candidates of size at most two, the minimal readiness-complete admissible antichain is `source_obligation_discharge` versus the selector pair `chi11_source_export + qw2191_selector_discharge`.  This identifies the next real theorem-target fork, but it still exports no source, selector, QW-2191, role-transfer, `L_total`, or ToE theorem.
+
+## P2432/S1382 post-antichain branch residual transition certificate
+
+`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source.
+
+Thus both branches still converge on the same five-gate theorem cover before ToE: source, chi11, QW-2191, role-transfer, and role-bearing `L_total`.  The transition map is a proof-search guide only and exports no theorem gate.
+
+## P2433/S1383 source-selector convergence role-transfer gate certificate
+
+`P2433/S1383` follows P2432 one step further: after either source-first then selector-pair, or selector-pair-first then source, both branches reach the same discharged theorem-gate set `{source_obligation_discharge, chi11_source_export, qw2191_selector_discharge}`.  At that convergence state, bridge-source and selector-source readiness are true, and `role_transfer_audit_license` becomes the admissible singleton next target.
+
+The certificate also proves the remaining limit: `role_bearing_ltotal_export` is still not admissible until role-transfer is actually discharged, and ToE remains false until both role-transfer and role-bearing `L_total` are exported.  Convergence therefore licenses a next target, not closure.
+
+## P2434/S1384 conditional legacy role-transfer claim lattice certificate
+
+`P2434/S1384` takes the P2433 source+selector convergence as a hypothetical input and enumerates the remaining role-transfer obligation lattice for the four legacy physical-role claims: Weinberg angle, inverse alpha_EM, beta-power gravity hierarchy, and beta_tors -> chi_11 orientation.  The lattice has 64 masks over six post-convergence obligations; the current mask transfers zero claims.
+
+The role-transfer audit license and role-bearing `L_total` export are necessary but not sufficient: each legacy role still needs its claim-specific strict successor theorem.  Therefore even post-P2433 convergence cannot silently transfer `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1`, `beta^N`, or `beta_tors -> chi_11`; the certificate is a conditional audit map, not a role theorem.
+
+## P2435/S1385 legacy role-claim implication separability certificate
+
+`P2435/S1385` computes the implication/separability poset induced by the P2434 64-mask role lattice.  The four legacy role claims have GF(2) obligation-incidence rank 4, so the claim rows remain independent as audit targets.  The only nontrivial implication is `legacy_inverse_alpha_em -> legacy_weak_mixing_angle`, because the inverse-alpha claim requires the alpha successor plus beta_tors successor and therefore contains the weaker alpha-only Weinberg successor requirements.
+
+All other ordered claim pairs have explicit separating masks.  Thus P2435 refines the role-transfer audit: strict alpha_EM success would imply the weak-mixing successor only at the role-obligation level, but neither implication exports either theorem, and no gravity or beta_tors -> chi_11 role can be imported by alpha/Weinberg progress.
+
+## P2436/S1386 claim-specific successor frontier antichain certificate
+
+`P2436/S1386` projects the P2435 separability result onto the post-common-gate frontier where role-transfer audit license and role-bearing `L_total` export are assumed only as bookkeeping premises.  The remaining four claim-specific successors form a 16-mask lattice.  From the empty successor mask, only `alpha_geo_strict_role_successor_theorem` unlocks a legacy role claim, namely the weak-mixing/Weinberg role; `beta_tors`, nonlinear hierarchy, and chi11 orientation successors unlock zero claims alone.
+
+The minimal all-role antichain is the full four-successor set `{alpha_geo, beta_tors, strict_nonlinear_hierarchy, chi11_orientation}`.  Thus alpha progress may open Weinberg first, but alpha alone cannot import alpha_EM, gravity hierarchy, or beta_tors -> chi_11 roles; those remain claim-specific theorem targets.
+
+## P2437/S1387 legacy-kernel physical-value methodology audit certificate
+
+`P2437/S1387` re-audits the old attempts to read physical values from the legacy kernel.  The grep/methodology audit finds that `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)`, and `beta^N` hierarchy claims were built from legacy `alpha_geo`/`beta_tors` bookkeeping and were already marked heuristic/model-level/partial rather than strict derivations.  The proposed `beta_tors -> chi_11` link is reclassified as a selector-mechanism search assumption, not a theorem or physical-value derivation.
+
+The audit therefore changes the honest target: physical values must be generated by the full strict kernel and its strict source/selector theorems, not inherited from the incomplete legacy kernel.  P2437 exports no rejection theorem for all possible successors, but it blocks treating legacy formulas as physically meaningful strict values without a new strict-kernel derivation.
+
+## P2438/S1388 strict-kernel SM/GR generation obligation matrix certificate
+
+`P2438/S1388` starts the strict-side replacement for the discarded legacy-value derivations: it treats the target as `K_strict_gate -> coefficients -> L_SM + L_GR -> observables`, not as legacy `alpha_geo/beta_tors` inheritance.  The certificate builds an 8-obligation matrix for strict kernel identity/domain, kernel-to-coefficient map, SM gauge couplings, SM matter/Higgs/Yukawa export, GR/background-independence, curvature-squared/unitarity completion, QW-2191 selector uniqueness, and strict observable-value generation.
+
+The current matrix is intentionally negative: all six SM/GR generation targets remain not ready, because the repo has scaffolds and partial variational witnesses but no theorem-grade strict observable generator or QW-2191 discharge.  This is the first strict-only SM/GR worklist after P2437, not a closure claim.

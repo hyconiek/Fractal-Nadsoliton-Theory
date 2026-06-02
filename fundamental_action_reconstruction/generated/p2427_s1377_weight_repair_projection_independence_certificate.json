@@ -1,0 +1,509 @@
+{
+  "gatekeeper_checks": {
+    "all_tables_factor": true,
+    "chi11_still_open": true,
+    "conditional_missing_identical": true,
+    "conditional_readiness_identical": true,
+    "empty_repair_support_for_winner": true,
+    "empty_weight_support_for_readiness": true,
+    "fingerprint_stable": true,
+    "gate_inclusions_half_subcube": true,
+    "ltotal_still_blocked": true,
+    "missing_distribution_binomial": true,
+    "p2426_no_gate_reduction_inherited": true,
+    "p2426_product_inherited": true,
+    "p2426_toe_count_inherited": true,
+    "p2426_winner_counts_inherited": true,
+    "product_4608": true,
+    "qw2191_still_open": true,
+    "repair_readiness_counts_expected": true,
+    "repair_subcube_32": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "source_still_open": true,
+    "toe_still_open": true,
+    "weight_counts_match_p2425": true,
+    "weight_grid_144": true,
+    "weighted_choice_discharges_no_gate": true
+  },
+  "global_status": "OPEN_PROGRESS_WEIGHT_REPAIR_INDEPENDENCE_CERTIFIED_NO_THEOREM_GATE_DISCHARGED",
+  "packet_id": "P2427",
+  "recommended_next_honest_step": "Use the independence certificate as a guardrail: proof-search weights may prioritize work, but source/selector/role gates must still be discharged by independent theorem work, especially chi11 and QW-2191.",
+  "result_kind": "WEIGHT_REPAIR_PROJECTION_INDEPENDENCE_CERTIFICATE",
+  "schema_version": "p2427_s1377_v1",
+  "stage_id": "S1377",
+  "status": "PASS_WEIGHT_REPAIR_PROJECTION_INDEPENDENCE_NO_GATE_DISCHARGE_NO_CLOSURE",
+  "weight_repair_projection_independence_certificate": {
+    "finite_witness_certificate": {
+      "conditional_missing_count_distribution": {
+        "bridge_first_pareto": {
+          "0": "1/32",
+          "1": "5/32",
+          "2": "5/16",
+          "3": "5/16",
+          "4": "5/32",
+          "5": "1/32"
+        },
+        "bridge_selector_tie": {
+          "0": "1/32",
+          "1": "5/32",
+          "2": "5/16",
+          "3": "5/16",
+          "4": "5/32",
+          "5": "1/32"
+        },
+        "selector_pair_first_pareto": {
+          "0": "1/32",
+          "1": "5/32",
+          "2": "5/16",
+          "3": "5/16",
+          "4": "5/32",
+          "5": "1/32"
+        }
+      },
+      "conditional_readiness_distributions": {
+        "bridge_source_ready": {
+          "bridge_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "bridge_selector_tie": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "selector_pair_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          }
+        },
+        "role_bearing_ltotal_ready": {
+          "bridge_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "bridge_selector_tie": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "selector_pair_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          }
+        },
+        "role_transfer_ready": {
+          "bridge_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "bridge_selector_tie": {
+            "false": "1/2",
+            "true": "1/2"
+          },
+          "selector_pair_first_pareto": {
+            "false": "1/2",
+            "true": "1/2"
+          }
+        },
+        "selector_source_ready": {
+          "bridge_first_pareto": {
+            "false": "3/4",
+            "true": "1/4"
+          },
+          "bridge_selector_tie": {
+            "false": "3/4",
+            "true": "1/4"
+          },
+          "selector_pair_first_pareto": {
+            "false": "3/4",
+            "true": "1/4"
+          }
+        },
+        "toe_ready": {
+          "bridge_first_pareto": {
+            "false": "31/32",
+            "true": "1/32"
+          },
+          "bridge_selector_tie": {
+            "false": "31/32",
+            "true": "1/32"
+          },
+          "selector_pair_first_pareto": {
+            "false": "31/32",
+            "true": "1/32"
+          }
+        }
+      },
+      "gate_inclusion_contingency_tables": {
+        "chi11_source_export": {
+          "bridge_first_pareto": {
+            "absent": 1728,
+            "present": 1728
+          },
+          "bridge_selector_tie": {
+            "absent": 96,
+            "present": 96
+          },
+          "selector_pair_first_pareto": {
+            "absent": 480,
+            "present": 480
+          }
+        },
+        "qw2191_selector_discharge": {
+          "bridge_first_pareto": {
+            "absent": 1728,
+            "present": 1728
+          },
+          "bridge_selector_tie": {
+            "absent": 96,
+            "present": 96
+          },
+          "selector_pair_first_pareto": {
+            "absent": 480,
+            "present": 480
+          }
+        },
+        "role_bearing_ltotal_export": {
+          "bridge_first_pareto": {
+            "absent": 1728,
+            "present": 1728
+          },
+          "bridge_selector_tie": {
+            "absent": 96,
+            "present": 96
+          },
+          "selector_pair_first_pareto": {
+            "absent": 480,
+            "present": 480
+          }
+        },
+        "role_transfer_audit_license": {
+          "bridge_first_pareto": {
+            "absent": 1728,
+            "present": 1728
+          },
+          "bridge_selector_tie": {
+            "absent": 96,
+            "present": 96
+          },
+          "selector_pair_first_pareto": {
+            "absent": 480,
+            "present": 480
+          }
+        },
+        "source_obligation_discharge": {
+          "bridge_first_pareto": {
+            "absent": 1728,
+            "present": 1728
+          },
+          "bridge_selector_tie": {
+            "absent": 96,
+            "present": 96
+          },
+          "selector_pair_first_pareto": {
+            "absent": 480,
+            "present": 480
+          }
+        }
+      },
+      "gate_inclusion_counts": {
+        "chi11_source_export": 16,
+        "qw2191_selector_discharge": 16,
+        "role_bearing_ltotal_export": 16,
+        "role_transfer_audit_license": 16,
+        "source_obligation_discharge": 16
+      },
+      "missing_count_contingency_table": {
+        "bridge_first_pareto": {
+          "0": 108,
+          "1": 540,
+          "2": 1080,
+          "3": 1080,
+          "4": 540,
+          "5": 108
+        },
+        "bridge_selector_tie": {
+          "0": 6,
+          "1": 30,
+          "2": 60,
+          "3": 60,
+          "4": 30,
+          "5": 6
+        },
+        "selector_pair_first_pareto": {
+          "0": 30,
+          "1": 150,
+          "2": 300,
+          "3": 300,
+          "4": 150,
+          "5": 30
+        }
+      },
+      "p2426_product_assignment_count_inherited": 4608,
+      "p2426_toe_ready_product_count_inherited": 144,
+      "p2426_weight_winner_counts_inherited": {
+        "bridge_first_pareto": 3456,
+        "bridge_selector_tie": 192,
+        "selector_pair_first_pareto": 960
+      },
+      "p2426_weighted_choice_reduces_missing_gate_count_inherited": false,
+      "readiness_contingency_tables": {
+        "bridge_source_ready": {
+          "bridge_first_pareto": {
+            "false": 1728,
+            "true": 1728
+          },
+          "bridge_selector_tie": {
+            "false": 96,
+            "true": 96
+          },
+          "selector_pair_first_pareto": {
+            "false": 480,
+            "true": 480
+          }
+        },
+        "role_bearing_ltotal_ready": {
+          "bridge_first_pareto": {
+            "false": 1728,
+            "true": 1728
+          },
+          "bridge_selector_tie": {
+            "false": 96,
+            "true": 96
+          },
+          "selector_pair_first_pareto": {
+            "false": 480,
+            "true": 480
+          }
+        },
+        "role_transfer_ready": {
+          "bridge_first_pareto": {
+            "false": 1728,
+            "true": 1728
+          },
+          "bridge_selector_tie": {
+            "false": 96,
+            "true": 96
+          },
+          "selector_pair_first_pareto": {
+            "false": 480,
+            "true": 480
+          }
+        },
+        "selector_source_ready": {
+          "bridge_first_pareto": {
+            "false": 2592,
+            "true": 864
+          },
+          "bridge_selector_tie": {
+            "false": 144,
+            "true": 48
+          },
+          "selector_pair_first_pareto": {
+            "false": 720,
+            "true": 240
+          }
+        },
+        "toe_ready": {
+          "bridge_first_pareto": {
+            "false": 3348,
+            "true": 108
+          },
+          "bridge_selector_tie": {
+            "false": 186,
+            "true": 6
+          },
+          "selector_pair_first_pareto": {
+            "false": 930,
+            "true": 30
+          }
+        }
+      },
+      "repair_assignment_count": 32,
+      "repair_missing_count_distribution": {
+        "0": 1,
+        "1": 5,
+        "2": 10,
+        "3": 10,
+        "4": 5,
+        "5": 1
+      },
+      "repair_readiness_true_counts": {
+        "bridge_source_ready": 16,
+        "role_bearing_ltotal_ready": 16,
+        "role_transfer_ready": 16,
+        "selector_source_ready": 8,
+        "toe_ready": 1
+      },
+      "weight_counts": {
+        "bridge_first_pareto": 108,
+        "bridge_selector_tie": 6,
+        "selector_pair_first_pareto": 30
+      }
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds P2426's product-level nonpromotion language and older generic projection/factorization language, but no production P24xx certificate that proves the weight projection and repair-gate projection have exact independent contingency tables across all readiness predicates.",
+      "patterns": {
+        "independence_prior": {
+          "count": 3753,
+          "samples": [
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:166:$\\Phi$ is not treated as an independent ontological substrate; it is an internal order/coherence projection used in the",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:43:There is no independent informational substrate underneath it.",
+            "fundamental_action_reconstruction/A3_KERNEL_ANALYSIS_SPEC.md:157:- lista projection-before-claim constraints dla przyszlych etapow.",
+            "fundamental_action_reconstruction/A7_POSITIVITY_UNITARITY_PACKAGE_SPEC.md:135:| projection-before-claim kernel discipline | `established` | `A3` |",
+            "fundamental_action_reconstruction/AX9_INFORMATIONAL_NADSOLITON_PRIMACY_AXIOM_PACKET.md:48:1. internal pre-observer channels must be interpreted as internal projections",
+            "fundamental_action_reconstruction/C10_PSI_SECTOR_HOST_IDENTIFICATION_AUDIT.md:35:   - second-variation carrier and projection discipline.",
+            "fundamental_action_reconstruction/C11_PSI_SECTOR_BLOCK_EXTRACTION_AUDIT.md:35:   - second-variation carrier and physical projection discipline.",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:161:- czyli jawny quotient / projection map od control pullback orbit family",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:26:   - projection-before-claim discipline,",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:28:   - rozdzial: orientation moduli / orthogonal shape sector po odjeciu modow zerowych.",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:48:1. najpierw quotient / projection away od orbit tangents i zero modes,",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:63:- najpierw quotient / projection,",
+            "fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md:97:  - quotient / projection away od orbit tangents i zero modes zgodnie z `A3`,",
+            "fundamental_action_reconstruction/C27_ZERO_MODE_QUOTIENT_CANDIDATE_PACKET.md:117:| reduced target after zero-mode projection exists as class | `present_partial` | `A3` |",
+            "fundamental_action_reconstruction/C27_ZERO_MODE_QUOTIENT_CANDIDATE_PACKET.md:28:   - projection-before-claim discipline.",
+            "fundamental_action_reconstruction/C27_ZERO_MODE_QUOTIENT_CANDIDATE_PACKET.md:60:  `orthogonal shape sector after zero-mode projection`.",
+            "fundamental_action_reconstruction/C27_ZERO_MODE_QUOTIENT_CANDIDATE_PACKET.md:85:  `Q_zero : ambient orientation-related fluctuations -> delta n_perp^A after zero-mode projection`,",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:135:| overlap compatibility law under orthogonal transition exists | `present_partial` | tak |",
+            "fundamental_action_reconstruction/C5_PROJECTED_HESSIAN_SELECTOR_METRIC_BRIDGE.md:116:| positivity certificate for that projection | `not_shown` | `A7` nie daje tego na tej plaszczyznie |",
+            "fundamental_action_reconstruction/C5_PROJECTED_HESSIAN_SELECTOR_METRIC_BRIDGE.md:23:   - projection-before-claim discipline."
+          ]
+        },
+        "new_packet": {
+          "count": 37,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1165:## P2427/S1377 weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1167:`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1173:`P2428/S1378` removes another ambiguity from the P2422--P2427 repair layer by computing the exact Boolean ANF, prime implicants, and derivative-edge supports for the five readiness predicates on the five missing theorem gates.  The ANFs are single monomials: bridge=`source_obligation_discharge`, selector=`chi11_source_export * qw2191_selector_discharge`, role-transfer=`role_transfer_audit_license`, role-bearing `L_total`=`role_bearing_ltotal_export`, and ToE=`all five gates`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:794:## P2427/S1377 weight-repair projection independence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:796:`P2427/S1377` certifies that all readiness predicates have empty weight-side support: their contingency tables factor through the repair subcube only.  Thus no weighted cost/order term can enter a role-bearing `L_total` as a surrogate for missing source, selector, QW-2191, or role-transfer theorems.",
+            "fundamental_action_reconstruction/generated/p2427_s1377_weight_repair_projection_independence_certificate.md:1:# P2427 S1377: weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:16:OUT = GEN / \"p2427_s1377_weight_repair_projection_independence_certificate.json\"",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:17:MD = GEN / \"p2427_s1377_weight_repair_projection_independence_certificate.md\"",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:266:## P2427/S1377 weight-repair projection independence certificate",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:268:`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:273:## P2427/S1377 weight-repair projection independence guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:275:`P2427/S1377` certifies that all readiness predicates have empty weight-side support: their contingency tables factor through the repair subcube only.  Thus no weighted cost/order term can enter a role-bearing `L_total` as a surrogate for missing source, selector, QW-2191, or role-transfer theorems.",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:293:        \"theorem_name\": \"P2427_T1_weight_repair_projection_independence_certificate\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:382:        \"packet_id\": \"P2427\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:383:        \"stage_id\": \"S1377\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:386:        \"weight_repair_projection_independence_certificate\": {",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:403:    theorem = payload[\"weight_repair_projection_independence_certificate\"][\"theorem_export\"]",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:408:                \"# P2427 S1377: weight-repair projection independence certificate\",",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:92:        \"new_packet\": \"P2427|S1377|weight repair projection|projection independence|repair.*independence\",",
+            "fundamental_action_reconstruction/p2428_s1378_repair_readiness_anf_derivative_certificate.py:182:    p2427 = theorem(sources[\"P2427_INDEPENDENCE\"], \"weight_repair_projection_independence_certificate\")"
+          ]
+        },
+        "nonpromotion_prior": {
+          "count": 1058,
+          "samples": [
+            "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:123:- No ToE closure is claimed.",
+            "fundamental_action_reconstruction/F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md:102:`F127` does not discharge:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:136:`F128` does not discharge:",
+            "fundamental_action_reconstruction/F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md:134:`F129` does not discharge:",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:127:`F130` does not discharge:",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:136:`F131` does not discharge:",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:142:`F132` does not discharge:",
+            "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md:126:`F138` does not discharge:",
+            "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md:152:`F139` does not discharge:",
+            "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md:186:`F140` does not discharge:",
+            "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md:196:`F141` does not discharge:",
+            "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md:201:`F142` does not discharge:",
+            "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md:184:`F143` does not discharge:",
+            "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:172:`F144` does not discharge:",
+            "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md:189:`F145` does not discharge:",
+            "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md:187:`F146` does not discharge:",
+            "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md:201:`F147` does not discharge:",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:235:`F148` does not discharge:",
+            "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md:243:`F149` does not discharge:"
+          ]
+        },
+        "p2426_input": {
+          "count": 29,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1157:## P2426/S1376 weighted tie-break x repair-subcube nonpromotion product certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1159:`P2426/S1376` takes the Cartesian product of the P2425 `12 x 12` positive weight grid with the P2422 `2^5=32` repair subcube.  The resulting finite audit has `4608` rows.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1161:The weighted choice never discharges repair obligations.  There are `144` ToE-ready product rows, exactly one all-five-gate repair row for each weight assignment, and `4464` proper repair failures.  The empty-repair slice has all `144` weight assignments but still has all five theorem gates missing, regardless of whether the weight side says bridge-first, selector-pair-first, or tie.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1167:`P2427/S1377` refines P2426 by proving an exact projection-independence fact: the weighted frontier side and the five-gate repair side factor as independent finite contingencies.  For every weight-winner class, the repair distribution is the same `2^5=32` subcube distribution, including the same ToE-ready count `1`, selector-ready count `8`, bridge-source count `16`, and missing-count profile `1/5/10/10/5/1`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:790:## P2426/S1376 weighted tie-break x repair-subcube guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:792:`P2426/S1376` proves that the weighted source-frontier tie-break is orthogonal to theorem-gate repair: every non-all-gates repair row remains a ToE failure across all weights.  Therefore no weighted order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/generated/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.md:1:# P2426 S1376: weighted tie-break x repair-subcube nonpromotion product certificate",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:237:## P2426/S1376 weighted tie-break x repair-subcube nonpromotion product certificate",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:239:`P2426/S1376` takes the Cartesian product of the P2425 `12 x 12` positive weight grid with the P2422 `2^5=32` repair subcube.  The resulting finite audit has `4608` rows.",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:241:The weighted choice never discharges repair obligations.  There are `144` ToE-ready product rows, exactly one all-five-gate repair row for each weight assignment, and `4464` proper repair failures.  The empty-repair slice has all `144` weight assignments but still has all five theorem gates missing, regardless of whether the weight side says bridge-first, selector-pair-first, or tie.",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:246:## P2426/S1376 weighted tie-break x repair-subcube guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:248:`P2426/S1376` proves that the weighted source-frontier tie-break is orthogonal to theorem-gate repair: every non-all-gates repair row remains a ToE failure across all weights.  Therefore no weighted order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:262:        \"theorem_name\": \"P2426_T1_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate\",",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:329:        \"packet_id\": \"P2426\",",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:355:                \"# P2426 S1376: weighted tie-break x repair-subcube nonpromotion product certificate\",",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:87:        \"new_packet\": \"P2426|S1376|weighted tiebreak repair|weight.*repair subcube|nonpromotion product\",",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:89:        \"p2422_input\": \"P2422|repair subcube|proper repair failures|toe_ready_repair_count\",",
+            "fundamental_action_reconstruction/p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.py:96:            \"Repo grep finds P2425's weighted tie-break and P2422's repair subcube, but no production P24xx product \"",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:101:            \"Repo grep finds P2426's product-level nonpromotion language and older generic projection/factorization language, \"",
+            "fundamental_action_reconstruction/p2427_s1377_weight_repair_projection_independence_certificate.py:20:    \"P2426_PRODUCT\": GEN / \"p2426_s1376_weighted_tiebreak_repair_subcube_nonpromotion_product_certificate.json\","
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2426_PRODUCT": "PASS_WEIGHTED_REPAIR_PRODUCT_NO_GATE_DISCHARGE_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "all_readiness_tables_factor_by_weight_x_repair": true,
+      "chi11_source_exported": false,
+      "conditional_missing_count_distribution_identical_across_weight_winners": true,
+      "conditional_readiness_distributions_identical_across_weight_winners": true,
+      "gate_inclusion_counts": {
+        "chi11_source_export": 16,
+        "qw2191_selector_discharge": 16,
+        "role_bearing_ltotal_export": 16,
+        "role_transfer_audit_license": 16,
+        "source_obligation_discharge": 16
+      },
+      "not_licensed": [
+        "Projection independence is not a theorem-gate discharge.",
+        "Weight winner labels have empty support on repair readiness predicates.",
+        "Repair subsets have empty support on weighted frontier winner predicates.",
+        "No source, selector, QW-2191, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2426_product_assignment_count_inherited": true,
+      "p2426_toe_ready_product_count_inherited": true,
+      "p2426_weight_winner_counts_inherited": true,
+      "p2426_weighted_choice_reduces_missing_gate_count_inherited": true,
+      "product_assignment_count": 4608,
+      "qw2191_discharged": false,
+      "repair_assignment_count": 32,
+      "repair_missing_count_distribution": {
+        "0": 1,
+        "1": 5,
+        "2": 10,
+        "3": 10,
+        "4": 5,
+        "5": 1
+      },
+      "repair_readiness_true_counts": {
+        "bridge_source_ready": 16,
+        "role_bearing_ltotal_ready": 16,
+        "role_transfer_ready": 16,
+        "selector_source_ready": 8,
+        "toe_ready": 1
+      },
+      "repair_side_support_for_weight_winner_predicate": [],
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_licensed": false,
+      "source_obligation_discharge_exported": false,
+      "theorem_name": "P2427_T1_weight_repair_projection_independence_certificate",
+      "toe_closure_exported": false,
+      "weight_assignment_count": 144,
+      "weight_counts": {
+        "bridge_first_pareto": 108,
+        "bridge_selector_tie": 6,
+        "selector_pair_first_pareto": 30
+      },
+      "weight_side_support_for_repair_readiness_predicates": [],
+      "weighted_choice_discharges_repair_gate": false
+    },
+    "theorem_fingerprint_sha256": "edb7272bf980c5c70c5bf067517aba3e6db0bb795341df10170933d4cea1f67e"
+  }
+}

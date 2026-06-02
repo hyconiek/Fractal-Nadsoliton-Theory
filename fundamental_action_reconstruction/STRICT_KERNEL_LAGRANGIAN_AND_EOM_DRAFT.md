@@ -770,3 +770,71 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2421/S1371 bridge-selector closure prime-implicant guard for Lagrangian/EOM
 
 `P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.
+
+## P2422/S1372 current missing-gate repair subcube guard for Lagrangian/EOM
+
+`P2422/S1372` shows that the current bridge-selector closure gap decomposes into five missing theorem gates, with selector-source readiness requiring the chi11/QW-2191 pair and ToE requiring all five.  Partial repair rows cannot be promoted to a role-bearing `L_total` term or ToE closure.
+
+## P2423/S1373 admissible repair-order poset guard for Lagrangian/EOM
+
+`P2423/S1373` proves that role-transfer and role-bearing `L_total` are order-constrained: source discharge plus the chi11/QW-2191 selector pair must come first, role-transfer can only appear at step 4, and `L_total`/ToE only at step 5.  Therefore no reordered shortcut can promote partial repair work into a role-bearing Lagrangian or ToE closure.
+
+## P2424/S1374 source-frontier Pareto guard for Lagrangian/EOM
+
+`P2424/S1374` shows that the first-three source frontier has two incomparable Pareto classes, bridge-first and selector-pair-first.  Because no unique first theorem gate is selected internally, no Pareto order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.
+
+## P2425/S1375 source-frontier weighted tie-break guard for Lagrangian/EOM
+
+`P2425/S1375` proves that choosing between bridge-first and selector-pair-first requires an extra weight/source-cost premise (`w_selector` compared with `2*w_bridge`).  Since that premise is not exported internally, the weighted tie-break cannot be promoted into source discharge, role-transfer, role-bearing `L_total`, or ToE closure.
+
+## P2426/S1376 weighted tie-break x repair-subcube guard for Lagrangian/EOM
+
+`P2426/S1376` proves that the weighted source-frontier tie-break is orthogonal to theorem-gate repair: every non-all-gates repair row remains a ToE failure across all weights.  Therefore no weighted order can be promoted into role-transfer, role-bearing `L_total`, or ToE closure.
+
+## P2427/S1377 weight-repair projection independence guard for Lagrangian/EOM
+
+`P2427/S1377` certifies that all readiness predicates have empty weight-side support: their contingency tables factor through the repair subcube only.  Thus no weighted cost/order term can enter a role-bearing `L_total` as a surrogate for missing source, selector, QW-2191, or role-transfer theorems.
+
+## P2428/S1378 repair-readiness ANF derivative guard for Lagrangian/EOM
+
+`P2428/S1378` computes that role-bearing `L_total` readiness is the single literal `role_bearing_ltotal_export`, while ToE readiness is the degree-five monomial over all missing gates.  No APD value witness, chi11 cut, weighted order, or projection-independence fact supplies those literals; they require separate theorem export.
+
+## P2429/S1379 derivative witness table guard for Lagrangian/EOM
+
+`P2429/S1379` makes every derivative edge explicit.  The role-bearing `L_total` derivative has witnesses only for the `role_bearing_ltotal_export` gate, and ToE has one nearest-miss witness for each missing gate; finite witness rows remain obstruction evidence and cannot be inserted into `L_total` as discharged dynamics.
+
+## P2430/S1380 repair derivative witness-cover guard for Lagrangian/EOM
+
+`P2430/S1380` proves that covering all derivative witnesses for role-bearing `L_total` and ToE still requires the missing theorem-gate exports themselves.  A witness-cover minimum cannot be replaced by APD value evidence, a chi11 cut mechanism, a proof-order preference, or any Lagrangian term until those theorem gates are actually discharged.
+
+## P2431/S1381 admissible next theorem-target guard for Lagrangian/EOM
+
+`P2431/S1381` proves that role-transfer and role-bearing `L_total` are not admissible first theorem targets under the current source/selector gaps.  The Lagrangian/EOM draft may mention the source-vs-selector target fork, but cannot promote either fork into discharged dynamics before the corresponding theorem is actually proved.
+
+## P2432/S1382 post-antichain branch residual guard for Lagrangian/EOM
+
+`P2432/S1382` shows that neither first branch licenses role-transfer or role-bearing `L_total` immediately.  After source-first the selector pair remains next; after selector-pair-first source remains next.  No branch transition can be inserted into `L_total` as discharged dynamics.
+
+## P2433/S1383 source-selector convergence guard for Lagrangian/EOM
+
+`P2433/S1383` shows that once source and the chi11/QW-2191 selector pair are both discharged, role-transfer becomes the next admissible singleton target, but role-bearing `L_total` is still blocked.  The Lagrangian/EOM draft may use this as proof-order guidance only; it cannot write the role-bearing term before the role-transfer and `L_total` theorem gates are exported.
+
+## P2434/S1384 conditional legacy-role lattice guard for Lagrangian/EOM
+
+`P2434/S1384` blocks the tempting shortcut from role-transfer admissibility to role-bearing terms.  Even after hypothetical source+selector convergence, `L_total` may not contain legacy Weinberg, alpha_EM, gravity-hierarchy, or beta_tors -> chi_11 role terms until the role-transfer audit license, role-bearing `L_total` export, and the relevant claim-specific successor theorem are all actually exported.
+
+## P2435/S1385 legacy role-claim separability guard for Lagrangian/EOM
+
+`P2435/S1385` shows that the legacy role package is not one monolithic `L_total` insertion.  The role-claim obligation rows have rank 4 and all non-alpha_EM -> Weinberg pairs are separated by finite masks, so the Lagrangian/EOM draft must keep Weinberg, alpha_EM, gravity hierarchy, and beta_tors -> chi_11 role successors as separate theorem targets.
+
+## P2436/S1386 claim-specific successor frontier guard for Lagrangian/EOM
+
+`P2436/S1386` shows that even after common role-transfer and `L_total` gates are treated as hypothetical premises, the claim-specific successors still gate which legacy role terms may appear.  The Lagrangian/EOM draft may not insert alpha_EM, gravity-hierarchy, or beta_tors -> chi_11 terms from alpha/Weinberg progress; the full four-successor antichain is still required for all four legacy roles.
+
+## P2437/S1387 legacy-value methodology guard for Lagrangian/EOM
+
+`P2437/S1387` forbids inserting legacy Weinberg, alpha_EM, gravity-hierarchy, or `beta_tors -> chi_11` terms into the strict Lagrangian/EOM as if they were generated by `K_strict_gate`.  Until the full strict kernel exports physical-value generators, those legacy formulas remain methodology-audited model/search assumptions rather than role-bearing dynamics.
+
+## P2438/S1388 strict SM/GR generation guard for Lagrangian/EOM
+
+`P2438/S1388` moves the Lagrangian/EOM target away from legacy constants and onto a strict-only generation chain.  Existing SM/GR scaffold terms may stay as scaffolds, but no coefficient, physical constant, selector choice, GR completion, or role-bearing `L_total` term is licensed until the eight strict generation obligations are actually discharged.

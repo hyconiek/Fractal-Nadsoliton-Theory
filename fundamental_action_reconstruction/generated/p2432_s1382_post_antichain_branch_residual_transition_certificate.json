@@ -1,0 +1,1107 @@
+{
+  "gatekeeper_checks": {
+    "chi11_still_open": true,
+    "fingerprint_stable": true,
+    "ltotal_not_after_either": true,
+    "ltotal_still_blocked": true,
+    "p2430_global_cover_inherited": true,
+    "p2431_antichain_inherited": true,
+    "p2431_ltotal_not_first_inherited": true,
+    "p2431_role_transfer_not_first_inherited": true,
+    "qw2191_still_open": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_not_after_selector_pair_first": true,
+    "role_transfer_not_after_source_first": true,
+    "role_transfer_still_blocked": true,
+    "selector_pair_first_next_source_or_source_role": true,
+    "selector_pair_first_remaining_3": true,
+    "source_first_next_selector_pair": true,
+    "source_first_remaining_4": true,
+    "source_still_open": true,
+    "toe_still_open": true,
+    "two_branches": true
+  },
+  "global_status": "OPEN_PROGRESS_POST_ANTICHAIN_TRANSITIONS_CERTIFIED_NO_THEOREM_GATE_DISCHARGED",
+  "packet_id": "P2432",
+  "post_antichain_branch_residual_transition_certificate": {
+    "finite_witness_certificate": {
+      "branch_count": 2,
+      "branch_transition_rows": [
+        {
+          "admissible_candidate_count_size_le_2_after_branch": 3,
+          "admissible_singletons_after_branch": [
+            [
+              "chi11_source_export"
+            ],
+            [
+              "qw2191_selector_discharge"
+            ]
+          ],
+          "branch_gates": [
+            "source_obligation_discharge"
+          ],
+          "branch_name": "source_first_branch",
+          "candidate_row_count_size_le_2_after_branch": 10,
+          "candidate_rows_size_le_2_after_branch": [
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "chi11_source_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": false
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "qw2191_selector_discharge"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": false
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": true,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "chi11_source_export",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "chi11_source_export",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "chi11_source_export"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "unlocks_any_readiness_target": true
+            }
+          ],
+          "inadmissible_candidate_count_size_le_2_after_branch": 7,
+          "inadmissible_singletons_after_branch": [
+            [
+              "role_transfer_audit_license"
+            ],
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "minimal_readiness_complete_candidates_after_branch": [
+            [
+              "chi11_source_export",
+              "qw2191_selector_discharge"
+            ]
+          ],
+          "readiness_after_branch": {
+            "bridge_source_ready": true,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": false,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_branch": 4,
+          "remaining_gates_after_branch": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "admissible_candidate_count_size_le_2_after_branch": 2,
+          "admissible_singletons_after_branch": [
+            [
+              "source_obligation_discharge"
+            ]
+          ],
+          "branch_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "branch_name": "selector_pair_first_branch",
+          "candidate_row_count_size_le_2_after_branch": 6,
+          "candidate_rows_size_le_2_after_branch": [
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "source_obligation_discharge"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "source_obligation_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "source_obligation_discharge",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "source_obligation_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "source_obligation_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge"
+              ],
+              "unlocks_any_readiness_target": true
+            }
+          ],
+          "inadmissible_candidate_count_size_le_2_after_branch": 4,
+          "inadmissible_singletons_after_branch": [
+            [
+              "role_transfer_audit_license"
+            ],
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "minimal_readiness_complete_candidates_after_branch": [
+            [
+              "source_obligation_discharge"
+            ],
+            [
+              "source_obligation_discharge",
+              "role_transfer_audit_license"
+            ]
+          ],
+          "readiness_after_branch": {
+            "bridge_source_ready": false,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": true,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_branch": 3,
+          "remaining_gates_after_branch": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        }
+      ],
+      "p2430_global_minimal_cover_inherited": [
+        [
+          "source_obligation_discharge",
+          "chi11_source_export",
+          "qw2191_selector_discharge",
+          "role_transfer_audit_license",
+          "role_bearing_ltotal_export"
+        ]
+      ],
+      "p2431_antichain_inherited": [
+        [
+          "source_obligation_discharge"
+        ],
+        [
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ]
+      ],
+      "p2431_ltotal_not_first_inherited": false,
+      "p2431_role_transfer_not_first_inherited": false
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds P2431's next-target antichain and generic residual/transition language, but no production P24xx certificate computing the post-antichain residual transition map for the source-first and selector-pair-first branches.",
+      "patterns": {
+        "new_packet": {
+          "count": 35,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1195:## P2432/S1382 post-antichain branch residual transition certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1197:`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1203:`P2433/S1383` follows P2432 one step further: after either source-first then selector-pair, or selector-pair-first then source, both branches reach the same discharged theorem-gate set `{source_obligation_discharge, chi11_source_export, qw2191_selector_discharge}`.  At that convergence state, bridge-source and selector-source readiness are true, and `role_transfer_audit_license` becomes the admissible singleton next target.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:814:## P2432/S1382 post-antichain branch residual guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:816:`P2432/S1382` shows that neither first branch licenses role-transfer or role-bearing `L_total` immediately.  After source-first the selector pair remains next; after selector-pair-first source remains next.  No branch transition can be inserted into `L_total` as discharged dynamics.",
+            "fundamental_action_reconstruction/generated/p2235_s1185_strict_nu_branch_residual_to_modeled_affine_surrogate_probe.md:1:# P2235 S1185: strict nu-branch residual->modeled affine surrogate probe",
+            "fundamental_action_reconstruction/generated/p2432_s1382_post_antichain_branch_residual_transition_certificate.md:1:# P2432 S1382: post-antichain branch residual transition certificate",
+            "fundamental_action_reconstruction/p2235_s1185_strict_nu_branch_residual_to_modeled_affine_surrogate_probe.py:96:            \"# P2235 S1185: strict nu-branch residual->modeled affine surrogate probe\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:104:        \"new_packet\": \"P2432|S1382|post-antichain|branch residual|residual transition\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:114:            \"P24xx certificate computing the post-antichain residual transition map for the source-first and selector-pair-first branches.\"",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:240:## P2432/S1382 post-antichain branch residual transition certificate",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:242:`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source.",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:247:## P2432/S1382 post-antichain branch residual guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:249:`P2432/S1382` shows that neither first branch licenses role-transfer or role-bearing `L_total` immediately.  After source-first the selector pair remains next; after selector-pair-first source remains next.  No branch transition can be inserted into `L_total` as discharged dynamics.",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:264:        \"theorem_name\": \"P2432_T1_post_antichain_branch_residual_transition_certificate\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:331:        \"packet_id\": \"P2432\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:332:        \"stage_id\": \"S1382\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:356:                \"# P2432 S1382: post-antichain branch residual transition certificate\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:112:        \"p2432_input\": \"P2432|post-antichain branch|branch residual transition|source-first|selector-pair-first\",",
+            "fundamental_action_reconstruction/p2433_s1383_source_selector_convergence_role_transfer_gate_certificate.py:120:            \"Repo grep finds P2432 branch residual transitions and generic source/selector/role language, but no production \""
+          ]
+        },
+        "nonpromotion_prior": {
+          "count": 1073,
+          "samples": [
+            "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:123:- No ToE closure is claimed.",
+            "fundamental_action_reconstruction/F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md:102:`F127` does not discharge:",
+            "fundamental_action_reconstruction/F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md:136:`F128` does not discharge:",
+            "fundamental_action_reconstruction/F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md:134:`F129` does not discharge:",
+            "fundamental_action_reconstruction/F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md:127:`F130` does not discharge:",
+            "fundamental_action_reconstruction/F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md:136:`F131` does not discharge:",
+            "fundamental_action_reconstruction/F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md:142:`F132` does not discharge:",
+            "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md:126:`F138` does not discharge:",
+            "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md:152:`F139` does not discharge:",
+            "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md:186:`F140` does not discharge:",
+            "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md:196:`F141` does not discharge:",
+            "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md:201:`F142` does not discharge:",
+            "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md:184:`F143` does not discharge:",
+            "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md:172:`F144` does not discharge:",
+            "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md:189:`F145` does not discharge:",
+            "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md:187:`F146` does not discharge:",
+            "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md:201:`F147` does not discharge:",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:235:`F148` does not discharge:",
+            "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md:243:`F149` does not discharge:"
+          ]
+        },
+        "p2431_input": {
+          "count": 27,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1189:## P2431/S1381 admissible next theorem-target antichain certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1191:`P2431/S1381` combines the P2430 witness-cover minimum with repair-order precedence.  From the current zero-discharge state, the admissible singleton theorem targets are exactly `source_obligation_discharge`, `chi11_source_export`, and `qw2191_selector_discharge`; `role_transfer_audit_license` and `role_bearing_ltotal_export` are inadmissible as first moves.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1197:`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:810:## P2431/S1381 admissible next theorem-target guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:812:`P2431/S1381` proves that role-transfer and role-bearing `L_total` are not admissible first theorem targets under the current source/selector gaps.  The Lagrangian/EOM draft may mention the source-vs-selector target fork, but cannot promote either fork into discharged dynamics before the corresponding theorem is actually proved.",
+            "fundamental_action_reconstruction/generated/p2431_s1381_admissible_next_theorem_target_antichain_certificate.md:1:# P2431 S1381: admissible next theorem-target antichain certificate",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:100:        \"new_packet\": \"P2431|S1381|next theorem target|target antichain|admissible next theorem\",",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:110:            \"P24xx certificate combining the cover with the precedence guardrails to compute the admissible next theorem-target antichain.\"",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:233:## P2431/S1381 admissible next theorem-target antichain certificate",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:235:`P2431/S1381` combines the P2430 witness-cover minimum with repair-order precedence.  From the current zero-discharge state, the admissible singleton theorem targets are exactly `source_obligation_discharge`, `chi11_source_export`, and `qw2191_selector_discharge`; `role_transfer_audit_license` and `role_bearing_ltotal_export` are inadmissible as first moves.",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:240:## P2431/S1381 admissible next theorem-target guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:242:`P2431/S1381` proves that role-transfer and role-bearing `L_total` are not admissible first theorem targets under the current source/selector gaps.  The Lagrangian/EOM draft may mention the source-vs-selector target fork, but cannot promote either fork into discharged dynamics before the corresponding theorem is actually proved.",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:256:        \"theorem_name\": \"P2431_T1_admissible_next_theorem_target_antichain_certificate\",",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:317:        \"packet_id\": \"P2431\",",
+            "fundamental_action_reconstruction/p2431_s1381_admissible_next_theorem_target_antichain_certificate.py:343:                \"# P2431 S1381: admissible next theorem-target antichain certificate\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:105:        \"p2431_input\": \"P2431|admissible next theorem-target|target antichain|source-vs-selector\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:113:            \"Repo grep finds P2431's next-target antichain and generic residual/transition language, but no production \"",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:19:    \"P2431_ANTICHAIN\": GEN / \"p2431_s1381_admissible_next_theorem_target_antichain_certificate.json\",",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:225:    p2431 = theorem(sources[\"P2431_ANTICHAIN\"], \"admissible_next_theorem_target_antichain_certificate\")",
+            "fundamental_action_reconstruction/p2432_s1382_post_antichain_branch_residual_transition_certificate.py:242:`P2432/S1382` follows the two P2431 admissible next-target branches.  If `source_obligation_discharge` is proved first, bridge readiness opens but the next readiness-complete target remains the selector pair `chi11_source_export + qw2191_selector_discharge`; role-transfer and role-bearing `L_total` remain blocked.  If the selector pair is proved first, selector readiness opens and the next singleton target is `source_obligation_discharge`; a size-two candidate may include `source_obligation_discharge + role_transfer_audit_license`, but role-transfer is not admissible without source."
+          ]
+        },
+        "transition_prior": {
+          "count": 966,
+          "samples": [
+            "fundamental_action_reconstruction/B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md:278:`H41/H40` (globalny selector atlas + globalny selector transition/gluing object na `C_v1`), uściślone jako target spec `T170`.",
+            "fundamental_action_reconstruction/B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md:69:      natomiast nie zachodzi jako operatorowa równość macierzowa `O_jk O_ij = O_ik` na pełnym nośniku. Nie wolno więc promować oriented liftu do operatorowego transition groupoid.",
+            "fundamental_action_reconstruction/B8_SELECTOR_TRACK_ANTI_OVERCLAIM_AUDIT.md:78:   - dodatkowo: oriented transport na `{pair1..pair5}` pozostaje jawnie warstwą konwencji (sign‑tracked) i nie wolno go promować do operatorowego transition groupoid (`P471`, `N512`).",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:112:  `G_12` albo odpowiadajacego jej transition angle.",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:123:- `C30_B1 := no_explicit_serialized_transition_matrix_or_transition_angle_between_the_two_local_pair_frames_for_assembling_a_single_reduced_control_plane`",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:135:| overlap compatibility law under orthogonal transition exists | `present_partial` | tak |",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:136:| explicit serialized transition matrix `G_12` exists | `not_shown` | nadal brak |",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:137:| explicit transition angle exists | `not_shown` | nadal brak |",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:145:- ze transition angle jest wyprowadzony z fizyki jednego nadsolitonu,",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:162:- zawężenie `C29_B1` do braku jawnego `G_12` / transition angle,",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:169:  transition angle `alpha_12`,",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:17:- bez twierdzenia, ze istnieje juz jawnie wyeksportowany transition matrix lub transition angle.",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:19:## Update (2026-03-15): transition angle w deklarowanym scope sigma-int jest juz wyeksportowany (bez globalnego gluing)",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:23:- oraz jawny derived transition angle `alpha_12 := (theta_2 - theta_1) mod 2π` jako osobny artefakt (`F457`).",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:25:To **supersedes** historyczne “not_shown” dla *transition angle* w **tym zadeklarowanym scope**.",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:28:- nie ma globalnego selector transition/gluing object lifting local compatibility law do globalnej struktury (por. `H40_B1`),",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:29:- nie powstaje w ten sposob jawny “transition matrix” jako transport miedzy rozlacznymi parami modow w sensie globalnym,",
+            "fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md:99:- jesli istnieje pair-to-pair transition `G_12`,",
+            "fundamental_action_reconstruction/C31_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT.md:106:- transition angle nie jest juz nieznana klasa obiektu,",
+            "fundamental_action_reconstruction/C31_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT.md:10:- `C30_B1 := no_explicit_serialized_transition_matrix_or_transition_angle_between_the_two_local_pair_frames_for_assembling_a_single_reduced_control_plane`"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2430_COVER": "PASS_REPAIR_DERIVATIVE_WITNESS_COVER_MINIMALITY_NO_GATE_DISCHARGE_NO_CLOSURE",
+      "P2431_ANTICHAIN": "PASS_ADMISSIBLE_NEXT_TARGET_ANTICHAIN_NO_GATE_DISCHARGE_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "branch_count": 2,
+      "branch_transition_rows": [
+        {
+          "admissible_candidate_count_size_le_2_after_branch": 3,
+          "admissible_singletons_after_branch": [
+            [
+              "chi11_source_export"
+            ],
+            [
+              "qw2191_selector_discharge"
+            ]
+          ],
+          "branch_gates": [
+            "source_obligation_discharge"
+          ],
+          "branch_name": "source_first_branch",
+          "candidate_row_count_size_le_2_after_branch": 10,
+          "candidate_rows_size_le_2_after_branch": [
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "chi11_source_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": false
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "qw2191_selector_discharge"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": false
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": true,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "chi11_source_export",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "chi11_source_export",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "qw2191_selector_discharge",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "chi11_source_export"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "qw2191_selector_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "chi11_source_export",
+                "qw2191_selector_discharge"
+              ],
+              "unlocks_any_readiness_target": true
+            }
+          ],
+          "inadmissible_candidate_count_size_le_2_after_branch": 7,
+          "inadmissible_singletons_after_branch": [
+            [
+              "role_transfer_audit_license"
+            ],
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "minimal_readiness_complete_candidates_after_branch": [
+            [
+              "chi11_source_export",
+              "qw2191_selector_discharge"
+            ]
+          ],
+          "readiness_after_branch": {
+            "bridge_source_ready": true,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": false,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_branch": 4,
+          "remaining_gates_after_branch": [
+            "chi11_source_export",
+            "qw2191_selector_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        },
+        {
+          "admissible_candidate_count_size_le_2_after_branch": 2,
+          "admissible_singletons_after_branch": [
+            [
+              "source_obligation_discharge"
+            ]
+          ],
+          "branch_gates": [
+            "chi11_source_export",
+            "qw2191_selector_discharge"
+          ],
+          "branch_name": "selector_pair_first_branch",
+          "candidate_row_count_size_le_2_after_branch": 6,
+          "candidate_rows_size_le_2_after_branch": [
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "source_obligation_discharge"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "source_obligation_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 1,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge",
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": true,
+              "candidate_gates": [
+                "source_obligation_discharge",
+                "role_transfer_audit_license"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": false,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_bearing_ltotal_export"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "source_obligation_discharge",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "role_transfer_audit_license"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": true,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": false,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "role_transfer_audit_license"
+              ],
+              "unlocks_any_readiness_target": true
+            },
+            {
+              "admissible_after_branch": false,
+              "candidate_gates": [
+                "role_transfer_audit_license",
+                "role_bearing_ltotal_export"
+              ],
+              "candidate_size": 2,
+              "missing_predecessors": [
+                "source_obligation_discharge"
+              ],
+              "readiness_unlocks": {
+                "bridge_source_ready": false,
+                "role_bearing_ltotal_ready": true,
+                "role_transfer_ready": true,
+                "selector_source_ready": false,
+                "toe_ready": false
+              },
+              "remaining_after_candidate": [
+                "source_obligation_discharge"
+              ],
+              "unlocks_any_readiness_target": true
+            }
+          ],
+          "inadmissible_candidate_count_size_le_2_after_branch": 4,
+          "inadmissible_singletons_after_branch": [
+            [
+              "role_transfer_audit_license"
+            ],
+            [
+              "role_bearing_ltotal_export"
+            ]
+          ],
+          "minimal_readiness_complete_candidates_after_branch": [
+            [
+              "source_obligation_discharge"
+            ],
+            [
+              "source_obligation_discharge",
+              "role_transfer_audit_license"
+            ]
+          ],
+          "readiness_after_branch": {
+            "bridge_source_ready": false,
+            "role_bearing_ltotal_ready": false,
+            "role_transfer_ready": false,
+            "selector_source_ready": true,
+            "toe_ready": false
+          },
+          "remaining_gate_count_after_branch": 3,
+          "remaining_gates_after_branch": [
+            "source_obligation_discharge",
+            "role_transfer_audit_license",
+            "role_bearing_ltotal_export"
+          ]
+        }
+      ],
+      "chi11_source_exported": false,
+      "not_licensed": [
+        "Branch transitions are proof-search state updates, not theorem-gate discharge.",
+        "Role-transfer is not admissible until source and the chi11/QW-2191 selector pair are both discharged.",
+        "Role-bearing L_total remains behind role-transfer in both branches.",
+        "No source, selector, role-transfer, role-bearing L_total, or ToE theorem is exported."
+      ],
+      "p2430_global_minimal_cover_inherited": true,
+      "p2431_antichain_inherited": true,
+      "p2431_ltotal_not_first_inherited": true,
+      "p2431_role_transfer_not_first_inherited": true,
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_admissible_after_either_first_branch": false,
+      "role_bearing_ltotal_exported": false,
+      "role_transfer_admissible_after_selector_pair_first": false,
+      "role_transfer_admissible_after_source_first": false,
+      "role_transfer_licensed": false,
+      "selector_pair_first_next_minimal_readiness_candidates": [
+        [
+          "source_obligation_discharge"
+        ],
+        [
+          "source_obligation_discharge",
+          "role_transfer_audit_license"
+        ]
+      ],
+      "selector_pair_first_remaining_gate_count": 3,
+      "source_first_next_minimal_readiness_candidates": [
+        [
+          "chi11_source_export",
+          "qw2191_selector_discharge"
+        ]
+      ],
+      "source_first_remaining_gate_count": 4,
+      "source_obligation_discharge_exported": false,
+      "theorem_name": "P2432_T1_post_antichain_branch_residual_transition_certificate",
+      "toe_closure_exported": false
+    },
+    "theorem_fingerprint_sha256": "6bf29389156c6db7a8d741b8d5e30c7f6f97f78b09cc823c963883fe034ea96b"
+  },
+  "recommended_next_honest_step": "After choosing either antichain branch, prove the complementary source/selector branch next; only then can role-transfer become admissible.",
+  "result_kind": "POST_ANTICHAIN_BRANCH_RESIDUAL_TRANSITION_CERTIFICATE",
+  "schema_version": "p2432_s1382_v1",
+  "stage_id": "S1382",
+  "status": "PASS_POST_ANTICHAIN_BRANCH_TRANSITION_NO_GATE_DISCHARGE_NO_CLOSURE"
+}
