@@ -1,32 +1,32 @@
 {
   "gatekeeper_checks": {
-    "best_candidate_k_at_d_1": true,
-    "best_volume_above_threshold": true,
+    "baseline_best_inherited": true,
+    "best_candidate_stable": true,
+    "configuration_grid_complete": true,
     "fingerprint_stable": true,
+    "no_gauge_fixing_export": true,
     "no_ltotal_export": true,
     "no_observable_source_export": true,
     "no_qw2191_discharge": true,
     "no_toe_export": true,
     "no_value_generator_export": true,
     "rg_audit_ran": true,
-    "robust_candidate_count_six": true,
-    "twelve_candidates_inherited": true,
-    "twelve_conditioned_rows": true,
-    "weakest_candidate_k_at_d_20": true,
-    "weakest_volume_below_threshold": true
+    "robust_set_stable": true,
+    "robust_threshold_gap_positive": true,
+    "top_six_order_stable": true
   },
-  "global_status": "OPEN_PROGRESS_RANK_LIFT_CONDITIONING_FRONTIER_EXPORTED_NO_CLOSURE",
-  "packet_id": "P2444",
-  "recommended_next_honest_step": "Try to prove strict source admissibility for the best-conditioned rank-lift singleton, or explain why it is a gauge choice rather than a physical observable.",
-  "result_kind": "STRICT_MOMENT_RANK_LIFT_CONDITIONING_CERTIFICATE",
-  "schema_version": "p2444_s1394_v1",
-  "stage_id": "S1394",
-  "status": "PASS_STRICT_MOMENT_RANK_LIFT_CONDITIONING_FRONTIER_NO_SOURCE_THEOREM",
-  "strict_moment_rank_lift_conditioning_certificate": {
+  "global_status": "OPEN_PROGRESS_CONDITIONING_STABILITY_FRONTIER_EXPORTED_NO_CLOSURE",
+  "packet_id": "P2445",
+  "recommended_next_honest_step": "Use the stable P2444/P2445 frontier to attempt an admissibility or gauge-fixing theorem for K_at_d_1, while keeping it outside L_total until that theorem is supplied.",
+  "result_kind": "STRICT_MOMENT_RANK_LIFT_CONDITIONING_STABILITY_CERTIFICATE",
+  "schema_version": "p2445_s1395_v1",
+  "stage_id": "S1395",
+  "status": "PASS_STRICT_MOMENT_RANK_LIFT_CONDITIONING_STABILITY_NO_SOURCE_THEOREM",
+  "strict_moment_rank_lift_conditioning_stability_certificate": {
     "rg_nonduplication_audit": {
       "patterns": {
         "candidate_constraints": {
-          "count": 693,
+          "count": 701,
           "samples": [
             "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:1:# AX14 Canonical Ontology Supported Preobserver Direct M2 Psi7 Source Action Coherence Instance",
             "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:3:Status: `AX14_EXECUTED_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_USE_INSTANCE_NO_FALSE_PASS`",
@@ -66,7 +66,7 @@
           ]
         },
         "closure_blockers": {
-          "count": 10961,
+          "count": 10966,
           "samples": [
             "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
             "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
@@ -105,57 +105,54 @@
             "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:75:5. actual ToE closure,"
           ]
         },
-        "conditioning_language": {
-          "count": 75,
+        "new_packet": {
+          "count": 30,
           "samples": [
-            "fundamental_action_reconstruction/P1571_S521_STRICT_SEMIGLOBAL_STABILITY_SCAN_PACKET_PL.md:34:`FAIL_T1570C_CANDIDATE` (worst-point conditioning still above threshold).",
-            "fundamental_action_reconstruction/P2025_S975_STRICT_CUTKOSKY_SAME_SCHEME_COHOMOLOGY_AMPLITUDE_BRIDGE_SEED_THEOREM.md:168:matrix coefficients, conditioning, and residual diagnostics under explicit",
-            "fundamental_action_reconstruction/P2025_S975_STRICT_CUTKOSKY_SAME_SCHEME_COHOMOLOGY_AMPLITUDE_BRIDGE_SEED_THEOREM.md:216:FD-vs-symbolic checks, grid/tolerance robustness, bootstrap/conditioning,",
-            "fundamental_action_reconstruction/P2025_S975_STRICT_CUTKOSKY_SAME_SCHEME_COHOMOLOGY_AMPLITUDE_BRIDGE_SEED_THEOREM.md:57:transport conditioning (`cond(T)`), exported as a strict OPEN triage signal for",
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1267:## P2444/S1394 strict moment rank-lift conditioning certificate",
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1269:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1271:The conditioning winner is still only a candidate: numerical conditioning does not prove admissibility as a strict observable/source constraint, does not discharge `QW-2191`, and does not export a physical-value generator.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1273:## P2445/S1395 strict moment rank-lift conditioning stability certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1275:`P2445/S1395` audits whether the P2444 conditioning frontier is a finite-difference or quadrature-mesh artifact.  It recomputes the singleton supplemental-candidate normalized rank-lift volumes across derivative-step scales and quadrature resolutions, then checks whether the best singleton and robust candidate set remain invariant.",
-            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:862:## P2444/S1394 rank-lift conditioning guard",
-            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:864:`P2444/S1394` ranks supplemental constraints by numerical conditioning, but no conditioned row may be inserted into `L_total` until a strict observable/source or gauge-fixing theorem licenses that row.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1281:`P2446/S1396` follows the stable P2444/P2445 pointwise candidate `K_at_d_1` by scanning a dense pointwise `d`-window with analytic gradients.  The scan shows that `d=1` is a well-conditioned rank-lift point but is not uniquely selected by conditioning alone: nearby/alternative point samples also rank-lift, and the finite conditioning maximum in the audited window occurs away from `d=1`.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:866:## P2445/S1395 rank-lift conditioning stability guard",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:868:`P2445/S1395` may stabilize the P2444 ordering against numerical-discretization objections, but stable conditioning still cannot insert a supplemental row into `L_total` without a strict observable/source theorem or a lawful gauge-fixing theorem.",
-            "fundamental_action_reconstruction/p1573_s523_strict_chart_transition_continuity_checkpoint.py:84:    # define overlap via nearest in conditioning margin",
-            "fundamental_action_reconstruction/p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py:7663:    # build robust ranking from the 7-task evidence with numpy/scipy/sympy diagnostics.",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:125:## P2444/S1394 strict moment rank-lift conditioning certificate",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:127:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:129:The conditioning winner is still only a candidate: numerical conditioning does not prove admissibility as a strict observable/source constraint, does not discharge `QW-2191`, and does not export a physical-value generator.",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:132:## P2444/S1394 rank-lift conditioning guard",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:134:`P2444/S1394` ranks supplemental constraints by numerical conditioning, but no conditioned row may be inserted into `L_total` until a strict observable/source or gauge-fixing theorem licenses that row.",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:14:OUT = GEN / \"p2444_s1394_strict_moment_rank_lift_conditioning_certificate.json\"",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:156:        \"theorem_name\": \"P2444_T1_strict_moment_rank_lift_conditioning_certificate\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:158:        \"conditioning_threshold_normalized_volume\": ROBUST_NORMALIZED_VOLUME_THRESHOLD,",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:15:MD = GEN / \"p2444_s1394_strict_moment_rank_lift_conditioning_certificate.md\"",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:175:            \"Numerical rank-lift conditioning is not an admissibility theorem for a supplemental constraint.\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:205:        \"strict_moment_rank_lift_conditioning_certificate\": {",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:217:    theorem = payload[\"strict_moment_rank_lift_conditioning_certificate\"][\"theorem_export\"]",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:222:                \"# P2444 S1394: strict moment rank-lift conditioning certificate\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:231:                f\"- Best normalized volume: `{theorem['best_conditioned_normalized_volume']}`.\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:60:        \"new_packet\": \"P2444|S1394|rank lift conditioning|rank-lift conditioning|strict moment rank lift conditioning\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:62:        \"conditioning_language\": \"conditioning|normalized volume|determinant margin|rank-lift margin|robust rank\",",
-            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:14:OUT = GEN / \"p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.json\"",
-            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:15:MD = GEN / \"p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.md\"",
             "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:162:## P2445/S1395 strict moment rank-lift conditioning stability certificate",
-            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:164:`P2445/S1395` audits whether the P2444 conditioning frontier is a finite-difference or quadrature-mesh artifact.  It recomputes the singleton supplemental-candidate normalized rank-lift volumes across derivative-step scales and quadrature resolutions, then checks whether the best singleton and robust candidate set remain invariant."
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:164:`P2445/S1395` audits whether the P2444 conditioning frontier is a finite-difference or quadrature-mesh artifact.  It recomputes the singleton supplemental-candidate normalized rank-lift volumes across derivative-step scales and quadrature resolutions, then checks whether the best singleton and robust candidate set remain invariant.",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:169:## P2445/S1395 rank-lift conditioning stability guard",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:171:`P2445/S1395` may stabilize the P2444 ordering against numerical-discretization objections, but stable conditioning still cannot insert a supplemental row into `L_total` without a strict observable/source theorem or a lawful gauge-fixing theorem.",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:230:        \"theorem_name\": \"P2445_T1_strict_moment_rank_lift_conditioning_stability_certificate\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:254:            \"Finite-difference and mesh stability is not an admissibility theorem for a supplemental constraint.\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:259:            \"Use the stable P2444/P2445 frontier to attempt an admissibility or gauge-fixing theorem for K_at_d_1, while keeping it outside L_total until that theorem is supplied.\"",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:280:        \"packet_id\": \"P2445\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:281:        \"stage_id\": \"S1395\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:301:                \"# P2445 S1395: strict moment rank-lift conditioning stability certificate\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:67:        \"new_packet\": \"P2445|S1395|rank-lift conditioning stability|conditioning stability|finite-difference stability|mesh stability\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:69:        \"stability_language\": \"finite-difference step|derivative step|quadrature steps|mesh stability|conditioning stability|robust set invariant\",",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:155:`P2446/S1396` follows the stable P2444/P2445 pointwise candidate `K_at_d_1` by scanning a dense pointwise `d`-window with analytic gradients.  The scan shows that `d=1` is a well-conditioned rank-lift point but is not uniquely selected by conditioning alone: nearby/alternative point samples also rank-lift, and the finite conditioning maximum in the audited window occurs away from `d=1`.",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:175:    p2445 = sources[\"P2445_STABILITY\"].get(\"strict_moment_rank_lift_conditioning_stability_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:194:        \"inherited_stability_certificate\": \"P2445/S1395\",",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:19:    \"P2445_STABILITY\": GEN / \"p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.json\",",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:70:        \"p2445_input\": \"P2445|S1395|conditioning stability|stable P2444/P2445 frontier|K_at_d_1\",",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:14:class P2445StrictMomentRankLiftConditioningStabilityCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2445\")",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1395\")",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:66:        self.assertIn(\"conditioning stability certificate\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:67:        self.assertIn(\"P2445/S1395\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:68:        self.assertIn(\"P2445/S1395\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:11:P2445 = ROOT / \"generated\" / \"p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:17:        if not P2445.exists():"
           ]
         },
-        "new_packet": {
-          "count": 37,
+        "p2444_input": {
+          "count": 44,
           "samples": [
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1267:## P2444/S1394 strict moment rank-lift conditioning certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1269:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1273:## P2445/S1395 strict moment rank-lift conditioning stability certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1275:`P2445/S1395` audits whether the P2444 conditioning frontier is a finite-difference or quadrature-mesh artifact.  It recomputes the singleton supplemental-candidate normalized rank-lift volumes across derivative-step scales and quadrature resolutions, then checks whether the best singleton and robust candidate set remain invariant.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1281:`P2446/S1396` follows the stable P2444/P2445 pointwise candidate `K_at_d_1` by scanning a dense pointwise `d`-window with analytic gradients.  The scan shows that `d=1` is a well-conditioned rank-lift point but is not uniquely selected by conditioning alone: nearby/alternative point samples also rank-lift, and the finite conditioning maximum in the audited window occurs away from `d=1`.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:862:## P2444/S1394 rank-lift conditioning guard",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:864:`P2444/S1394` ranks supplemental constraints by numerical conditioning, but no conditioned row may be inserted into `L_total` until a strict observable/source or gauge-fixing theorem licenses that row.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:866:## P2445/S1395 rank-lift conditioning stability guard",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:868:`P2445/S1395` may stabilize the P2444 ordering against numerical-discretization objections, but stable conditioning still cannot insert a supplemental row into `L_total` without a strict observable/source theorem or a lawful gauge-fixing theorem.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:872:`P2446/S1396` blocks the silent promotion of the stable `K_at_d_1` row into `L_total`: pointwise rank-lift conditioning does not select the evaluation coordinate and does not supply admissibility or gauge-fixing authority.",
             "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:125:## P2444/S1394 strict moment rank-lift conditioning certificate",
             "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:127:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
             "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:132:## P2444/S1394 rank-lift conditioning guard",
@@ -177,186 +174,36 @@
             "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:301:                \"# P2445 S1395: strict moment rank-lift conditioning stability certificate\",",
             "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:67:        \"new_packet\": \"P2445|S1395|rank-lift conditioning stability|conditioning stability|finite-difference stability|mesh stability\",",
             "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:68:        \"p2444_input\": \"P2444|S1394|rank-lift conditioning|normalized rank-lift volume|best-conditioned candidate\",",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:14:class P2444StrictMomentRankLiftConditioningCertificateTest(unittest.TestCase):",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2444\")",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1394\")",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:50:        self.assertIn(\"rank-lift conditioning certificate\", MD.read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:51:        self.assertIn(\"P2444/S1394\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:52:        self.assertIn(\"P2444/S1394\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:155:`P2446/S1396` follows the stable P2444/P2445 pointwise candidate `K_at_d_1` by scanning a dense pointwise `d`-window with analytic gradients.  The scan shows that `d=1` is a well-conditioned rank-lift point but is not uniquely selected by conditioning alone: nearby/alternative point samples also rank-lift, and the finite conditioning maximum in the audited window occurs away from `d=1`.",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:162:`P2446/S1396` blocks the silent promotion of the stable `K_at_d_1` row into `L_total`: pointwise rank-lift conditioning does not select the evaluation coordinate and does not supply admissibility or gauge-fixing authority.",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:221:            \"Pointwise rank-lift conditioning does not select a unique evaluation coordinate d_ref.\",",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:70:        \"p2445_input\": \"P2445|S1395|conditioning stability|stable P2444/P2445 frontier|K_at_d_1\","
           ]
         },
-        "p2443_input": {
-          "count": 26,
+        "stability_language": {
+          "count": 10,
           "samples": [
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1261:## P2443/S1393 strict moment supplemental-constraint rank-lift certificate",
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1263:`P2443/S1393` audits which finite supplemental constraints can remove the P2442 local null direction.  It enumerates raw moment candidates `(M0..M3)` and pointwise strict-kernel sample candidates, computes each candidate gradient against `(omega, phi, beta, eta)`, and checks whether appending that row lifts the P2441/P2442 moment-coefficient Jacobian rank from `3` to `4`.",
-            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1269:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
-            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:858:## P2443/S1393 supplemental-constraint rank-lift guard",
-            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:860:`P2443/S1393` identifies finite candidate constraints that would lift the local moment-coefficient rank, but it does not license adding any of them to `L_total`.  A candidate must still be justified as a strict observable/source theorem or gauge-fixing theorem before it can close the P2442 null direction.",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:157:## P2443/S1393 strict moment supplemental-constraint rank-lift certificate",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:159:`P2443/S1393` audits which finite supplemental constraints can remove the P2442 local null direction.  It enumerates raw moment candidates `(M0..M3)` and pointwise strict-kernel sample candidates, computes each candidate gradient against `(omega, phi, beta, eta)`, and checks whether appending that row lifts the P2441/P2442 moment-coefficient Jacobian rank from `3` to `4`.",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:164:## P2443/S1393 supplemental-constraint rank-lift guard",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:166:`P2443/S1393` identifies finite candidate constraints that would lift the local moment-coefficient rank, but it does not license adding any of them to `L_total`.  A candidate must still be justified as a strict observable/source theorem or gauge-fixing theorem before it can close the P2442 null direction.",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:187:        \"theorem_name\": \"P2443_T1_strict_moment_supplemental_constraint_rank_lift_certificate\",",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:234:        \"packet_id\": \"P2443\",",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:235:        \"stage_id\": \"S1393\",",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:255:                \"# P2443 S1393: strict moment supplemental-constraint rank-lift certificate\",",
-            "fundamental_action_reconstruction/p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:66:        \"new_packet\": \"P2443|S1393|supplemental constraint rank lift|rank-lift certificate|moment supplemental constraint\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:127:`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:146:    p2443 = sources[\"P2443_RANK_LIFT\"].get(\"strict_moment_supplemental_constraint_rank_lift_certificate\", {}).get(\"theorem_export\", {})",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:18:    \"P2443_RANK_LIFT\": GEN / \"p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.json\",",
-            "fundamental_action_reconstruction/p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:61:        \"p2443_input\": \"P2443|S1393|supplemental-constraint rank-lift|rank-lifting candidate\",",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:14:class P2443StrictMomentSupplementalConstraintRankLiftCertificateTest(unittest.TestCase):",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2443\")",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1393\")",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:52:        self.assertIn(\"supplemental-constraint rank-lift certificate\", MD.read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:53:        self.assertIn(\"P2443/S1393\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.py:54:        self.assertIn(\"P2443/S1393\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:11:P2443 = ROOT / \"generated\" / \"p2443_s1393_strict_moment_supplemental_constraint_rank_lift_certificate.json\"",
-            "fundamental_action_reconstruction/test_p2444_s1394_strict_moment_rank_lift_conditioning_certificate.py:17:        if not P2443.exists():"
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1273:## P2445/S1395 strict moment rank-lift conditioning stability certificate",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:866:## P2445/S1395 rank-lift conditioning stability guard",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:162:## P2445/S1395 strict moment rank-lift conditioning stability certificate",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:169:## P2445/S1395 rank-lift conditioning stability guard",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:254:            \"Finite-difference and mesh stability is not an admissibility theorem for a supplemental constraint.\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:301:                \"# P2445 S1395: strict moment rank-lift conditioning stability certificate\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:67:        \"new_packet\": \"P2445|S1395|rank-lift conditioning stability|conditioning stability|finite-difference stability|mesh stability\",",
+            "fundamental_action_reconstruction/p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:69:        \"stability_language\": \"finite-difference step|derivative step|quadrature steps|mesh stability|conditioning stability|robust set invariant\",",
+            "fundamental_action_reconstruction/p2446_s1396_strict_pointwise_rank_lift_selector_obstruction_certificate.py:70:        \"p2445_input\": \"P2445|S1395|conditioning stability|stable P2444/P2445 frontier|K_at_d_1\",",
+            "fundamental_action_reconstruction/test_p2445_s1395_strict_moment_rank_lift_conditioning_stability_certificate.py:66:        self.assertIn(\"conditioning stability certificate\", MD.read_text(encoding=\"utf-8\"))"
           ]
         }
       },
       "tool": "rg"
     },
     "theorem_export": {
-      "best_conditioned_candidate_id": "K_at_d_1",
-      "best_conditioned_candidate_kind": "kernel_sample",
-      "best_conditioned_normalized_volume": 0.020925092943529396,
-      "best_conditioned_rank_lift_margin": 0.4119700991627941,
-      "conditioned_candidate_rows_descending": [
-        {
-          "abs_null_direction_dot": 0.13876029213469332,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_1",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.3368212703220017,
-          "normalized_rank_lift_volume": 0.020925092943529396,
-          "rank_lift_margin": 0.4119700991627941,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.06380708794716725,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_0",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.16178577438297204,
-          "normalized_rank_lift_volume": 0.020032275864059746,
-          "rank_lift_margin": 0.3943924500810928,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.10779105839905205,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_0.5",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.2996359164243219,
-          "normalized_rank_lift_volume": 0.01827218847422073,
-          "rank_lift_margin": 0.3597401128855542,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.05497500547125219,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_2",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.31213707047599004,
-          "normalized_rank_lift_volume": 0.00894585039189246,
-          "rank_lift_margin": 0.17612456408147437,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.18332629236071746,
-          "augmented_rank": 4,
-          "candidate_id": "M0",
-          "candidate_kind": "raw_moment",
-          "gradient_norm": 2.0608504904136455,
-          "normalized_rank_lift_volume": 0.004518351038248293,
-          "rank_lift_margin": 0.08895661922758935,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.016619876298975683,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_0.25",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.22991983107904182,
-          "normalized_rank_lift_volume": 0.003671580502844459,
-          "rank_lift_margin": 0.07228552761619811,
-          "robust_rank_lift_candidate": true
-        },
-        {
-          "abs_null_direction_dot": 0.004233165920880517,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_5",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.24054568726974446,
-          "normalized_rank_lift_volume": 0.0008938598205607141,
-          "rank_lift_margin": 0.017598178412292657,
-          "robust_rank_lift_candidate": false
-        },
-        {
-          "abs_null_direction_dot": 2.1639249098272324,
-          "augmented_rank": 4,
-          "candidate_id": "M2",
-          "candidate_kind": "raw_moment",
-          "gradient_norm": 123.19669382695372,
-          "normalized_rank_lift_volume": 0.0008921642835097708,
-          "rank_lift_margin": 0.01756479693251148,
-          "robust_rank_lift_candidate": false
-        },
-        {
-          "abs_null_direction_dot": 0.002003362034207576,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_10",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.14222849862263587,
-          "normalized_rank_lift_volume": 0.0007154421341330086,
-          "rank_lift_margin": 0.014085517695879958,
-          "robust_rank_lift_candidate": false
-        },
-        {
-          "abs_null_direction_dot": 0.06090141341261642,
-          "augmented_rank": 4,
-          "candidate_id": "M1",
-          "candidate_kind": "raw_moment",
-          "gradient_norm": 4.910025666065566,
-          "normalized_rank_lift_volume": 0.0006300069047966548,
-          "rank_lift_margin": 0.012403481683104336,
-          "robust_rank_lift_candidate": false
-        },
-        {
-          "abs_null_direction_dot": 42.57484580409721,
-          "augmented_rank": 4,
-          "candidate_id": "M3",
-          "candidate_kind": "raw_moment",
-          "gradient_norm": 4083.041722288262,
-          "normalized_rank_lift_volume": 0.0005296280348926386,
-          "rank_lift_margin": 0.010427237510626504,
-          "robust_rank_lift_candidate": false
-        },
-        {
-          "abs_null_direction_dot": 9.715103354731094e-05,
-          "augmented_rank": 4,
-          "candidate_id": "K_at_d_20",
-          "candidate_kind": "kernel_sample",
-          "gradient_norm": 0.061811166533876256,
-          "normalized_rank_lift_volume": 7.983295133915065e-05,
-          "rank_lift_margin": 0.0015717392017519408,
-          "robust_rank_lift_candidate": false
-        }
-      ],
-      "conditioning_threshold_normalized_volume": 0.001,
-      "inherited_candidate_count": 12,
-      "next_honest_step": "Try to prove strict source admissibility for the best-conditioned rank-lift singleton, or explain why it is a gauge choice rather than a physical observable.",
-      "not_licensed": [
-        "Numerical rank-lift conditioning is not an admissibility theorem for a supplemental constraint.",
-        "The best-conditioned singleton is still only a candidate until a strict observable/source theorem licenses it.",
-        "No strict physical-value generator, QW-2191 discharge, role-bearing L_total export, or ToE closure is exported."
-      ],
-      "qw2191_discharged": false,
-      "robust_rank_lift_candidate_count": 6,
-      "robust_rank_lift_candidate_ids": [
+      "all_configurations_preserve_best_candidate": true,
+      "all_configurations_preserve_robust_set": true,
+      "all_configurations_preserve_top_six_order": true,
+      "baseline_best_candidate_id": "K_at_d_1",
+      "baseline_robust_candidate_ids": [
         "K_at_d_1",
         "K_at_d_0",
         "K_at_d_0.5",
@@ -364,26 +211,421 @@
         "M0",
         "K_at_d_0.25"
       ],
-      "robust_rank_lift_candidate_ids_by_kind": {
-        "kernel_sample": [
-          "K_at_d_1",
-          "K_at_d_0",
-          "K_at_d_0.5",
-          "K_at_d_2",
-          "K_at_d_0.25"
-        ],
-        "raw_moment": [
-          "M0"
-        ]
-      },
+      "baseline_top_six_candidate_ids": [
+        "K_at_d_1",
+        "K_at_d_0",
+        "K_at_d_0.5",
+        "K_at_d_2",
+        "M0",
+        "K_at_d_0.25"
+      ],
+      "conditioning_threshold_normalized_volume": 0.001,
+      "configuration_count": 12,
+      "configuration_results": [
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.02092509294272624,
+          "finite_difference_step_scale": 0.5,
+          "quadrature_steps": 10000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295914306502e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092943529396,
+          "finite_difference_step_scale": 1.0,
+          "quadrature_steps": 10000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295133915065e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092946340342,
+          "finite_difference_step_scale": 2.0,
+          "quadrature_steps": 10000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983292048493407e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092963637353,
+          "finite_difference_step_scale": 5.0,
+          "quadrature_steps": 10000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983270436838338e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.02092509294272624,
+          "finite_difference_step_scale": 0.5,
+          "quadrature_steps": 20000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295914306502e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092943529396,
+          "finite_difference_step_scale": 1.0,
+          "quadrature_steps": 20000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295133915065e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092946340342,
+          "finite_difference_step_scale": 2.0,
+          "quadrature_steps": 20000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983292048493407e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092963637353,
+          "finite_difference_step_scale": 5.0,
+          "quadrature_steps": 20000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983270436838338e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.02092509294272624,
+          "finite_difference_step_scale": 0.5,
+          "quadrature_steps": 40000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295914306502e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092943529396,
+          "finite_difference_step_scale": 1.0,
+          "quadrature_steps": 40000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983295133915065e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092946340342,
+          "finite_difference_step_scale": 2.0,
+          "quadrature_steps": 40000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983292048493407e-05
+        },
+        {
+          "best_candidate_id": "K_at_d_1",
+          "best_normalized_volume": 0.020925092963637353,
+          "finite_difference_step_scale": 5.0,
+          "quadrature_steps": 40000,
+          "robust_candidate_count": 6,
+          "robust_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "top_six_candidate_ids": [
+            "K_at_d_1",
+            "K_at_d_0",
+            "K_at_d_0.5",
+            "K_at_d_2",
+            "M0",
+            "K_at_d_0.25"
+          ],
+          "weakest_candidate_id": "K_at_d_20",
+          "weakest_normalized_volume": 7.983270436838338e-05
+        }
+      ],
+      "finite_difference_step_scales": [
+        0.5,
+        1.0,
+        2.0,
+        5.0
+      ],
+      "gauge_fixing_theorem_exported_by_this_certificate": false,
+      "inherited_conditioning_certificate": "P2444/S1394",
+      "max_conditioning_volume_spread_across_grid": 1.0238964788869542e-09,
+      "maximum_nonrobust_candidate_volume_across_grid": 0.0008938598388165723,
+      "minimum_robust_candidate_volume_across_grid": 0.003671580500935806,
+      "next_honest_step": "Use the stable P2444/P2445 frontier to attempt an admissibility or gauge-fixing theorem for K_at_d_1, while keeping it outside L_total until that theorem is supplied.",
+      "not_licensed": [
+        "Finite-difference and mesh stability is not an admissibility theorem for a supplemental constraint.",
+        "A stable best-conditioned singleton remains only a candidate until a strict observable/source theorem or lawful gauge-fixing theorem licenses it.",
+        "No strict physical-value generator, QW-2191 discharge, role-bearing L_total export, or ToE closure is exported."
+      ],
+      "quadrature_steps": [
+        10000,
+        20000,
+        40000
+      ],
+      "qw2191_discharged": false,
       "role_bearing_ltotal_exported": false,
       "strict_observable_source_constraint_exported_by_this_certificate": false,
       "strict_physical_value_generator_exported": false,
-      "theorem_name": "P2444_T1_strict_moment_rank_lift_conditioning_certificate",
+      "theorem_name": "P2445_T1_strict_moment_rank_lift_conditioning_stability_certificate",
       "toe_closure_exported": false,
-      "weakest_conditioned_candidate_id": "K_at_d_20",
-      "weakest_conditioned_normalized_volume": 7.983295133915065e-05
+      "volume_ranges_by_candidate": [
+        {
+          "candidate_id": "K_at_d_0",
+          "max_normalized_volume": 0.020032275864059746,
+          "min_normalized_volume": 0.020032275864059746,
+          "spread_normalized_volume": 0.0
+        },
+        {
+          "candidate_id": "K_at_d_0.25",
+          "max_normalized_volume": 0.0036715805196952073,
+          "min_normalized_volume": 0.003671580500935806,
+          "spread_normalized_volume": 1.8759401150536537e-11
+        },
+        {
+          "candidate_id": "K_at_d_0.5",
+          "max_normalized_volume": 0.018272188484424943,
+          "min_normalized_volume": 0.018272188473979725,
+          "spread_normalized_volume": 1.0445217607513158e-11
+        },
+        {
+          "candidate_id": "K_at_d_1",
+          "max_normalized_volume": 0.020925092963637353,
+          "min_normalized_volume": 0.02092509294272624,
+          "spread_normalized_volume": 2.091111311885996e-11
+        },
+        {
+          "candidate_id": "K_at_d_10",
+          "max_normalized_volume": 0.0007154422133569508,
+          "min_normalized_volume": 0.0007154421316762198,
+          "spread_normalized_volume": 8.168073097232498e-11
+        },
+        {
+          "candidate_id": "K_at_d_2",
+          "max_normalized_volume": 0.008945850428651685,
+          "min_normalized_volume": 0.008945850390537689,
+          "spread_normalized_volume": 3.811399633402157e-11
+        },
+        {
+          "candidate_id": "K_at_d_20",
+          "max_normalized_volume": 7.983295914306502e-05,
+          "min_normalized_volume": 7.983270436838338e-05,
+          "spread_normalized_volume": 2.5477468164412497e-10
+        },
+        {
+          "candidate_id": "K_at_d_5",
+          "max_normalized_volume": 0.0008938598388165723,
+          "min_normalized_volume": 0.0008938598199327508,
+          "spread_normalized_volume": 1.8883821481345542e-11
+        },
+        {
+          "candidate_id": "M0",
+          "max_normalized_volume": 0.0045183518135379856,
+          "min_normalized_volume": 0.004518350789641507,
+          "spread_normalized_volume": 1.0238964788869542e-09
+        },
+        {
+          "candidate_id": "M1",
+          "max_normalized_volume": 0.0006300075541839265,
+          "min_normalized_volume": 0.0006300068351336342,
+          "spread_normalized_volume": 7.190502922900174e-10
+        },
+        {
+          "candidate_id": "M2",
+          "max_normalized_volume": 0.0008921643104353547,
+          "min_normalized_volume": 0.000892163999386419,
+          "spread_normalized_volume": 3.110489357402435e-10
+        },
+        {
+          "candidate_id": "M3",
+          "max_normalized_volume": 0.0005296280595703961,
+          "min_normalized_volume": 0.0005296277735418977,
+          "spread_normalized_volume": 2.860284984123468e-10
+        }
+      ]
     },
-    "theorem_fingerprint_sha256": "5f259c807be3be23a438691289a49737118fa5c80694dc6e97609ec55253548b"
+    "theorem_fingerprint_sha256": "4d76c685fea25086ff0d5009d5d2ef587dd4f98021cd2e0a4c81ea0e20d84daf"
   }
 }

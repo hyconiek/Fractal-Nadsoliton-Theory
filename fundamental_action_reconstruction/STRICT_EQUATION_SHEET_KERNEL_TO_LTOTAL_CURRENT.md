@@ -1269,3 +1269,21 @@ The result is a rank-lift frontier, not a physical-value theorem: many singleton
 `P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.
 
 The conditioning winner is still only a candidate: numerical conditioning does not prove admissibility as a strict observable/source constraint, does not discharge `QW-2191`, and does not export a physical-value generator.
+
+## P2445/S1395 strict moment rank-lift conditioning stability certificate
+
+`P2445/S1395` audits whether the P2444 conditioning frontier is a finite-difference or quadrature-mesh artifact.  It recomputes the singleton supplemental-candidate normalized rank-lift volumes across derivative-step scales and quadrature resolutions, then checks whether the best singleton and robust candidate set remain invariant.
+
+The stability result is numerical robustness only: it does not prove that any candidate is an admissible strict observable/source constraint, does not supply a gauge-fixing theorem, and does not export a physical-value generator.
+
+## P2446/S1396 strict pointwise rank-lift selector obstruction certificate
+
+`P2446/S1396` follows the stable P2444/P2445 pointwise candidate `K_at_d_1` by scanning a dense pointwise `d`-window with analytic gradients.  The scan shows that `d=1` is a well-conditioned rank-lift point but is not uniquely selected by conditioning alone: nearby/alternative point samples also rank-lift, and the finite conditioning maximum in the audited window occurs away from `d=1`.
+
+Therefore pointwise conditioning cannot by itself become a strict observable/source selector, a lawful gauge choice, or a role-bearing coefficient source.  A separate theorem must select the point coordinate, the observable meaning, or the gauge slice before a pointwise row can replace the strict moment route.
+
+## P2447/S1397 strict pointwise rank-lift stationary-refinement certificate
+
+`P2447/S1397` refines the P2446 grid obstruction with a continuous one-dimensional optimization witness.  A golden-section refinement over the audited pointwise window finds a stationary conditioning maximum near `d=0.785288904663`, with negative finite-difference second-derivative witnesses and a positive conditioning gap above `d=1`.
+
+This strengthens the selector obstruction rather than closing it: even the continuous conditioning optimum is not a strict point-coordinate selector, not an admissible observable/source theorem, and not a gauge-slice theorem.
