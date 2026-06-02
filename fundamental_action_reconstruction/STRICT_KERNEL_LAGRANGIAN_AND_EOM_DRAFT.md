@@ -874,3 +874,59 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2447/S1397 stationary pointwise selector guard
 
 `P2447/S1397` shows that refining the pointwise conditioning search moves the best-conditioned coordinate away from `d=1`; no pointwise row may enter `L_total` until an independent selector/source/gauge theorem chooses and licenses the coordinate.
+
+## P2448/S1398 global pointwise census guard
+
+`P2448/S1398` confirms that the best pointwise rank-lift conditioning coordinate on the audited interval is the same refined `d≈0.7852889045` stationary maximum, but this global census supplies no selector/source/gauge authority.  Pointwise conditioning remains inadmissible as a role-bearing `L_total` row without a separate theorem.
+
+## P2449/S1399 projection-reduction guard
+
+`P2449/S1399` makes the pointwise rank-lift computation more theorem-shaped by reducing determinant volume to a nullspace projection and splitting stationary points into zero-projection roots and analytic stationary-factor roots.  This improves the proof audit of the obstruction, but still exports no selector/source/gauge permission to add a pointwise row to `L_total`.
+
+## P2450/S1400 projection root-isolation guard
+
+`P2450/S1400` strengthens the P2449 projection route with sign-changing root windows, sampled monotonicity, and complementary sampled-Lipschitz exclusion margins.  The result remains a finite proof-audit margin certificate only; no pointwise root or coordinate is licensed as a selector/source/gauge row for `L_total`.
+
+## P2451/S1401 interval-enclosure root-exclusion guard
+
+`P2451/S1401` gives a finite interval-enclosure replay of the P2450 complement exclusion for the projection amplitude and stationary factor.  The result remains a numerical enclosure audit rather than exact selector/source/gauge authority, so no pointwise coordinate or root is admitted into `L_total`.
+
+## P2452/S1402 rational interval-precondition guard
+
+`P2452/S1402` proves the rational phase/domain preconditions used by the P2451 interval audit, including the monotone trigonometric phase band and positive log/power domains.  These preconditions strengthen the audit hygiene but still do not license any pointwise coordinate as a selector/source/gauge row for `L_total`.
+
+## P2453/S1403 directed-decimal weakest-cell replay guard
+
+`P2453/S1403` independently replays the weakest P2451 cells with Decimal/Taylor endpoint enclosures, strengthening confidence in the interval audit bottleneck cells.  It remains a numerical backend cross-check and does not license any pointwise coordinate as a selector/source/gauge row for `L_total`.
+
+## P2454/S1404 directed-decimal weakest-band replay guard
+
+`P2454/S1404` broadens the Decimal/Taylor replay from the weakest cells to adjacent critical bands, increasing backend confidence in the most fragile complement region.  It remains a bounded numerical replay and does not license any pointwise coordinate as a selector/source/gauge row for `L_total`.
+
+## P2455/S1405 directed-decimal weakest-band monotonicity guard
+
+`P2455/S1405` shows that the Decimal/Taylor zero-separation margins increase away from the root-window boundary across the P2454 critical bands.  This strengthens the bottleneck-cell audit but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.
+
+## P2456/S1406 Decimal root-window boundary replay guard
+
+`P2456/S1406` checks all P2450 root-window boundaries with local Decimal/Taylor boundary bands, not only the single weakest P2454 band.  This improves coverage of root-adjacent complement cells but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.
+
+## P2457/S1407 Decimal root-boundary separation-shape guard
+
+`P2457/S1407` strengthens the P2456 boundary replay by checking monotone separation away from every audited root-window boundary plus opposite two-sided signs.  This helps prevent misreading isolated boundary samples as accidental sign margins, but it remains bounded numerical shape evidence and adds no selector/source/gauge authority for `L_total`.
+
+## P2458/S1408 interval-Decimal weakest-cell alignment guard
+
+`P2458/S1408` verifies that the weakest P2451 interval cells are not orphaned from the later Decimal chain: they coincide with nearest P2456 boundary rows and are protected by P2457 shape witnesses.  This improves audit traceability but remains backend consistency evidence, not selector/source/gauge authority for `L_total`.
+
+## P2459/S1409 interval-Decimal coverage-gap guard
+
+`P2459/S1409` prevents overclaiming the Decimal boundary chain as full complement coverage: it quantifies the gap between the 36 Decimal boundary cells and the 99,882 P2451 complement cells.  This improves proof hygiene but adds no selector/source/gauge authority for `L_total`.
+
+## P2460/S1410 Decimal gap-sentinel replay guard
+
+`P2460/S1410` probes the P2459 unreplayed complement gap with stratified Decimal/Taylor sentinels in each complement segment.  It improves gap diagnostics but still leaves the full complement gap open and adds no selector/source/gauge authority for `L_total`.
+
+## P2461/S1411 Decimal gap weakest-neighborhood replay guard
+
+`P2461/S1411` probes the local neighborhoods around the weakest P2460 gap sentinels.  It improves local gap diagnostics but does not close the full P2459 complement gap and adds no selector/source/gauge authority for `L_total`.

@@ -1,0 +1,709 @@
+{
+  "gatekeeper_checks": {
+    "all_boundary_bands_exclude_zero": true,
+    "fingerprint_stable": true,
+    "minimum_decimal_separation_positive": true,
+    "no_full_complement_theorem": true,
+    "no_gauge_slice_export": true,
+    "no_ltotal_export": true,
+    "no_observable_source_export": true,
+    "no_pointwise_selector_export": true,
+    "no_qw2191_discharge": true,
+    "no_symbolic_root_exclusion": true,
+    "no_toe_export": true,
+    "no_value_generator_export": true,
+    "p2455_bands_strictly_increasing_inherited": true,
+    "rg_audit_ran": true,
+    "stationary_boundary_band_count": true,
+    "total_boundary_band_count": true,
+    "total_replayed_boundary_cell_count": true,
+    "zero_boundary_band_count": true
+  },
+  "packet_id": "P2456",
+  "schema_version": "p2456_s1406_v1",
+  "stage_id": "S1406",
+  "status": "PASS_STRICT_POINTWISE_DECIMAL_ROOT_WINDOW_BOUNDARY_BAND_REPLAY_NO_FULL_INTERVAL_SELECTOR_SOURCE_THEOREM",
+  "strict_pointwise_decimal_root_window_boundary_band_replay_certificate": {
+    "input_fingerprints": {
+      "P2449_PROJECTION_REDUCTION": "e698712f1840591e551e569b8d46be92638e30e2163753154e1c75fda4b2ca74",
+      "P2450_ROOT_ISOLATION_MARGIN": "85d12914d8e2c9b9c97a407c397bd0a2800d542dfef9997825ca62029e55cdec",
+      "P2455_WEAKEST_BAND_MONOTONICITY": "30640ea56fe31b9d451dcfbfed22a100c59940f7382b5fd4c97cdc534f5ced81"
+    },
+    "inputs": {
+      "P2449_PROJECTION_REDUCTION": "fundamental_action_reconstruction/generated/p2449_s1399_strict_pointwise_rank_lift_projection_reduction_certificate.json",
+      "P2450_ROOT_ISOLATION_MARGIN": "fundamental_action_reconstruction/generated/p2450_s1400_strict_pointwise_projection_root_isolation_margin_certificate.json",
+      "P2455_WEAKEST_BAND_MONOTONICITY": "fundamental_action_reconstruction/generated/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.json"
+    },
+    "rg_nonduplication_audit": {
+      "patterns": {
+        "backend_language": {
+          "count": 32,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1323:`P2453/S1403` replays the two weakest P2451 complement cells with a higher-precision Decimal interval backend and monotone Taylor endpoint enclosures for `sin` and `cos`.  The zero-projection weakest cell and stationary-factor weakest cell both remain strictly positive and zero-excluding under this independent endpoint replay.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1329:`P2454/S1404` extends P2453 from a single weakest cell per family to a forward weakest-band replay: twelve adjacent complement cells are replayed for both the zero-projection amplitude and the stationary factor using the same Decimal/Taylor endpoint backend.  Every replayed critical-band cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1341:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1347:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:900:`P2453/S1403` independently replays the weakest P2451 cells with Decimal/Taylor endpoint enclosures, strengthening confidence in the interval audit bottleneck cells.  It remains a numerical backend cross-check and does not license any pointwise coordinate as a selector/source/gauge row for `L_total`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:912:`P2456/S1406` checks all P2450 root-window boundaries with local Decimal/Taylor boundary bands, not only the single weakest P2454 band.  This improves coverage of root-adjacent complement cells but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2451_s1401_strict_pointwise_projection_interval_enclosure_root_exclusion_audit.py:142:        \"interval_language\": \"interval enclosure|interval arithmetic|zero-excluding interval|complement cell enclosure|monotone sin\",",
+            "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:188:        \"new_packet\": \"P2453|S1403|directed decimal weakest-cell|Taylor endpoint replay|decimal weakest cell\",",
+            "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:191:        \"backend_language\": \"Decimal interval|Taylor endpoint|alternating series|directed decimal|weakest-cell replay\",",
+            "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:273:`P2453/S1403` replays the two weakest P2451 complement cells with a higher-precision Decimal interval backend and monotone Taylor endpoint enclosures for `sin` and `cos`.  The zero-projection weakest cell and stationary-factor weakest cell both remain strictly positive and zero-excluding under this independent endpoint replay.",
+            "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:280:`P2453/S1403` independently replays the weakest P2451 cells with Decimal/Taylor endpoint enclosures, strengthening confidence in the interval audit bottleneck cells.  It remains a numerical backend cross-check and does not license any pointwise coordinate as a selector/source/gauge row for `L_total`.",
+            "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:335:            \"Extend the Decimal/Taylor endpoint backend to every P2451 complement cell, or replace it with a formal directed-rounding interval backend.\"",
+            "fundamental_action_reconstruction/p2454_s1404_strict_pointwise_directed_decimal_weakest_band_replay_certificate.py:141:`P2454/S1404` extends P2453 from a single weakest cell per family to a forward weakest-band replay: twelve adjacent complement cells are replayed for both the zero-projection amplitude and the stationary factor using the same Decimal/Taylor endpoint backend.  Every replayed critical-band cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2454_s1404_strict_pointwise_directed_decimal_weakest_band_replay_certificate.py:206:            \"Extend the Decimal/Taylor endpoint backend from the weakest bands to all complement cells, or replace it with a formal directed-rounding interval backend.\"",
+            "fundamental_action_reconstruction/p2454_s1404_strict_pointwise_directed_decimal_weakest_band_replay_certificate.py:73:        \"p2453_input\": \"P2453|S1403|directed decimal weakest-cell|Taylor endpoint replay|Decimal/Taylor\",",
+            "fundamental_action_reconstruction/p2454_s1404_strict_pointwise_directed_decimal_weakest_band_replay_certificate.py:75:        \"backend_language\": \"Decimal interval|Taylor endpoint|alternating series|directed decimal|zero-excluding\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:61:        \"backend_language\": \"Decimal interval|Taylor endpoint|zero-excluding|Decimal separation\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:161:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:168:`P2456/S1406` checks all P2450 root-window boundaries with local Decimal/Taylor boundary bands, not only the single weakest P2454 band.  This improves coverage of root-adjacent complement cells but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:226:            \"Extend Decimal/Taylor replay from boundary bands to all complement cells, or replace the bounded replay with a formal directed-rounding interval proof.\"",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:275:        f\"All boundary bands exclude zero: `{t['all_boundary_bands_exclude_zero']}`.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:276:        f\"Minimum Decimal separation across all boundary bands: `{t['minimum_decimal_separation_across_all_boundary_bands']}`.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:72:        \"new_packet\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:74:        \"boundary_language\": \"root-window boundary|left boundary band|right boundary band|boundary-adjacent cells\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:75:        \"backend_language\": \"Decimal interval|Taylor endpoint|zero-excluding|boundary band\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:150:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:208:            \"Near-to-far monotone Decimal separation across finite boundary bands is not a full complement directed-rounding theorem.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:263:        f\"All boundary bands strictly increase separation away from the root window: `{t['all_boundary_bands_strictly_increase_separation_away_from_root_window']}`.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:264:        f\"All boundary bands are sign-coherent: `{t['all_boundary_bands_are_sign_coherent']}`.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:266:        f\"Minimum first separation difference across boundary bands: `{t['minimum_first_separation_difference_across_boundary_bands']}`.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:59:        \"p2456_input\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:61:        \"decimal_backend\": \"Decimal interval|Taylor endpoint|zero-excluding|Decimal separation\","
+          ]
+        },
+        "boundary_language": {
+          "count": 20,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1339:## P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1341:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1347:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:908:`P2455/S1405` shows that the Decimal/Taylor zero-separation margins increase away from the root-window boundary across the P2454 critical bands.  This strengthens the bottleneck-cell audit but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:910:## P2456/S1406 Decimal root-window boundary replay guard",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:916:`P2457/S1407` strengthens the P2456 boundary replay by checking monotone separation away from every audited root-window boundary plus opposite two-sided signs.  This helps prevent misreading isolated boundary samples as accidental sign margins, but it remains bounded numerical shape evidence and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:99:`P2455/S1405` shows that the Decimal/Taylor zero-separation margins increase away from the root-window boundary across the P2454 critical bands.  This strengthens the bottleneck-cell audit but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:159:## P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:161:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:166:## P2456/S1406 Decimal root-window boundary replay guard",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:221:            \"All-root-window boundary-band replay is still bounded numerical evidence, not a full complement directed-rounding interval theorem.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:267:        \"# P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:280:        \"This is a bounded all-root-window boundary-band replay only.  It exports no full complement directed-rounding interval theorem, no symbolic root-exclusion theorem, no point-coordinate selector, no strict observable/source theorem, no gauge-slice theorem, no physical-value generator, no QW-2191 discharge, no role-bearing `L_total`, and no ToE closure.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:72:        \"new_packet\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:74:        \"boundary_language\": \"root-window boundary|left boundary band|right boundary band|boundary-adjacent cells\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:150:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:157:`P2457/S1407` strengthens the P2456 boundary replay by checking monotone separation away from every audited root-window boundary plus opposite two-sided signs.  This helps prevent misreading isolated boundary samples as accidental sign margins, but it remains bounded numerical shape evidence and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:270:        \"This is a bounded root-window boundary separation-shape audit only.  It exports no full complement directed-rounding interval theorem, no symbolic root-exclusion theorem, no analytic monotonicity theorem, no point-coordinate selector, no strict observable/source theorem, no gauge-slice theorem, no physical-value generator, no QW-2191 discharge, no role-bearing `L_total`, and no ToE closure.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:59:        \"p2456_input\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:55:        self.assertIn(\"root-window boundary-band replay certificate\", MD.read_text(encoding=\"utf-8\"))"
+          ]
+        },
+        "closure_blockers": {
+          "count": 11010,
+          "samples": [
+            "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:301:1. ToE closure,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:107:- brak pelnej unikalnosci reprezentacji przez obstruction `QW-2191`,",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:178:| pelna unikalnosc representation map | `blocked` | `QW-2191` |",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:63:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:112:- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel\u2011alone,",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:133:| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:33:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:97:`QW-2191` daje jawny obstruction theorem:",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:115:4. **Zadanie na Przysz\u0142o\u015b\u0107:** Najwy\u017cszym priorytetem teoretycznym jest teraz wykazanie, w jaki spos\u00f3b asymetria Shannon'a ($\\alpha_{\\text{geo}} = 4 \\ln 2$) na pier\u015bcieniu nad12-sigma w pe\u0142ni znosi przeszkod\u0119 selektora `QW-2191`, umo\u017cliwiaj\u0105c jednoznaczne wy\u0142onienie generacji cz\u0105stek w \u015bcis\u0142ym rdzeniu.",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:97:### 4.1. Przeszkoda Selektora `QW-2191`",
+            "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:83:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:97:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:102:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:88:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:104:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:90:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:105:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:91:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:103:- `QW-2191`,",
+            "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:117:- strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:11:- `QW-2191` still obstructs kernel-alone uniqueness,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:18:- keep `QW-2191` undischarged,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:27:     `QW-2191`,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:69:- `QW-2191` discharge,",
+            "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:71:- ToE closure,",
+            "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:74:4. actual global `QW-2191` discharge,",
+            "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:75:5. actual ToE closure,"
+          ]
+        },
+        "new_packet": {
+          "count": 32,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1339:## P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1341:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1347:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:910:## P2456/S1406 Decimal root-window boundary replay guard",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:912:`P2456/S1406` checks all P2450 root-window boundaries with local Decimal/Taylor boundary bands, not only the single weakest P2454 band.  This improves coverage of root-adjacent complement cells but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:916:`P2457/S1407` strengthens the P2456 boundary replay by checking monotone separation away from every audited root-window boundary plus opposite two-sided signs.  This helps prevent misreading isolated boundary samples as accidental sign margins, but it remains bounded numerical shape evidence and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:159:## P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:161:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:166:## P2456/S1406 Decimal root-window boundary replay guard",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:168:`P2456/S1406` checks all P2450 root-window boundaries with local Decimal/Taylor boundary bands, not only the single weakest P2454 band.  This improves coverage of root-adjacent complement cells but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:198:        \"theorem_name\": \"P2456_T1_strict_pointwise_decimal_root_window_boundary_band_replay_certificate\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:221:            \"All-root-window boundary-band replay is still bounded numerical evidence, not a full complement directed-rounding interval theorem.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:251:        \"packet_id\": \"P2456\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:252:        \"stage_id\": \"S1406\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:267:        \"# P2456/S1406 strict pointwise Decimal root-window boundary-band replay certificate\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:280:        \"This is a bounded all-root-window boundary-band replay only.  It exports no full complement directed-rounding interval theorem, no symbolic root-exclusion theorem, no point-coordinate selector, no strict observable/source theorem, no gauge-slice theorem, no physical-value generator, no QW-2191 discharge, no role-bearing `L_total`, and no ToE closure.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:72:        \"new_packet\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:100:        \"distance_ordering_rule\": \"left bands are reversed from P2456 storage; right bands keep P2456 order\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:150:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:157:`P2457/S1407` strengthens the P2456 boundary replay by checking monotone separation away from every audited root-window boundary plus opposite two-sided signs.  This helps prevent misreading isolated boundary samples as accidental sign margins, but it remains bounded numerical shape evidence and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:169:    p2456 = sources[\"P2456_ROOT_WINDOW_BOUNDARY_BAND_REPLAY\"].get(",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:180:        \"inherited_root_window_boundary_band_replay_certificate\": \"P2456/S1406\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:18:    \"P2456_ROOT_WINDOW_BOUNDARY_BAND_REPLAY\": GEN / \"p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.json\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:59:        \"p2456_input\": \"P2456|S1406|root-window boundary band|boundary-band replay|two-sided root-window\",",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:15:class P2456StrictPointwiseDecimalRootWindowBoundaryBandReplayCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:26:        self.assertEqual(self.payload[\"packet_id\"], \"P2456\")",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:27:        self.assertEqual(self.payload[\"stage_id\"], \"S1406\")",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:55:        self.assertIn(\"root-window boundary-band replay certificate\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:56:        self.assertIn(\"P2456/S1406\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:57:        self.assertIn(\"P2456/S1406\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:12:P2456 = ROOT / \"generated\" / \"p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:18:        if not P2456.exists():"
+          ]
+        },
+        "p2455_input": {
+          "count": 34,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1333:## P2455/S1405 strict pointwise directed-decimal weakest-band separation-monotonicity certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1335:`P2455/S1405` audits the P2454 critical bands one level deeper: in each replayed forward band, the Decimal/Taylor separation from zero is strictly increasing cell-by-cell.  Thus the boundary cell adjacent to the excluded root window is the actual weakest replayed cell for both the zero-projection amplitude and the stationary factor.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1341:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:906:## P2455/S1405 directed-decimal weakest-band monotonicity guard",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:908:`P2455/S1405` shows that the Decimal/Taylor zero-separation margins increase away from the root-window boundary across the P2454 critical bands.  This strengthens the bottleneck-cell audit but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2454_s1404_strict_pointwise_directed_decimal_weakest_band_replay_certificate.py:257:        f\"Minimum Decimal separation across bands: `{t['minimum_decimal_separation_across_bands']}`.\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:115:        \"theorem_name\": \"P2455_T1_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:136:            \"Critical-band separation monotonicity is not a full complement directed-rounding interval theorem.\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:165:        \"packet_id\": \"P2455\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:166:        \"stage_id\": \"S1405\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:183:        \"# P2455/S1405 strict pointwise directed-decimal weakest-band separation-monotonicity certificate\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:195:        \"This is a bounded weakest-band separation-shape audit only.  It exports no full complement directed-rounding interval theorem, no symbolic root-exclusion theorem, no point-coordinate selector, no strict observable/source theorem, no gauge-slice theorem, no physical-value generator, no QW-2191 discharge, no role-bearing `L_total`, and no ToE closure.\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:58:        \"new_packet\": \"P2455|S1405|weakest-band separation|separation monotonicity|Decimal separation monotone\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:61:        \"backend_language\": \"Decimal interval|Taylor endpoint|zero-excluding|Decimal separation\",",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:90:## P2455/S1405 strict pointwise directed-decimal weakest-band separation-monotonicity certificate",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:92:`P2455/S1405` audits the P2454 critical bands one level deeper: in each replayed forward band, the Decimal/Taylor separation from zero is strictly increasing cell-by-cell.  Thus the boundary cell adjacent to the excluded root window is the actual weakest replayed cell for both the zero-projection amplitude and the stationary factor.",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:97:## P2455/S1405 directed-decimal weakest-band monotonicity guard",
+            "fundamental_action_reconstruction/p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:99:`P2455/S1405` shows that the Decimal/Taylor zero-separation margins increase away from the root-window boundary across the P2454 critical bands.  This strengthens the bottleneck-cell audit but remains bounded numerical evidence, not selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:161:`P2456/S1406` broadens the P2454/P2455 Decimal/Taylor replay from the single weakest forward band to every root-window boundary in the P2450 isolation certificate.  Six boundary-adjacent complement cells are replayed on each available left/right side of every zero-projection and stationary-factor root window, and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:181:    p2455 = sources[\"P2455_WEAKEST_BAND_MONOTONICITY\"].get(\"strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:200:        \"inherited_weakest_band_monotonicity_certificate\": \"P2455/S1405\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:276:        f\"Minimum Decimal separation across all boundary bands: `{t['minimum_decimal_separation_across_all_boundary_bands']}`.\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:28:    \"P2455_WEAKEST_BAND_MONOTONICITY\": GEN / \"p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.json\",",
+            "fundamental_action_reconstruction/p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:73:        \"p2455_input\": \"P2455|S1405|weakest-band separation|separation monotonicity|Decimal separation\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:208:            \"Near-to-far monotone Decimal separation across finite boundary bands is not a full complement directed-rounding theorem.\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:60:        \"shape_language\": \"boundary monotonicity|separation monotonicity|opposite boundary sign|two-sided boundary sign|distance from boundary\",",
+            "fundamental_action_reconstruction/p2457_s1407_strict_pointwise_decimal_root_boundary_separation_shape_certificate.py:61:        \"decimal_backend\": \"Decimal interval|Taylor endpoint|zero-excluding|Decimal separation\",",
+            "fundamental_action_reconstruction/test_p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:15:class P2455StrictPointwiseDirectedDecimalWeakestBandSeparationMonotonicityCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:26:        self.assertEqual(self.payload[\"packet_id\"], \"P2455\")",
+            "fundamental_action_reconstruction/test_p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:27:        self.assertEqual(self.payload[\"stage_id\"], \"S1405\")",
+            "fundamental_action_reconstruction/test_p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:59:        self.assertIn(\"P2455/S1405\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.py:60:        self.assertIn(\"P2455/S1405\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:12:P2455 = ROOT / \"generated\" / \"p2455_s1405_strict_pointwise_directed_decimal_weakest_band_separation_monotonicity_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2456_s1406_strict_pointwise_decimal_root_window_boundary_band_replay_certificate.py:18:        if not P2455.exists():"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "theorem_export": {
+      "all_boundary_bands_exclude_zero": true,
+      "boundary_band_cell_count_requested": 6,
+      "boundary_band_cell_width": 0.0001,
+      "bounded_all_root_window_boundary_replay_exported": true,
+      "full_complement_directed_rounding_interval_theorem_exported_by_this_certificate": false,
+      "gauge_slice_theorem_exported_by_this_certificate": false,
+      "inherited_root_isolation_margin_certificate": "P2450/S1400",
+      "inherited_weakest_band_monotonicity_certificate": "P2455/S1405",
+      "minimum_decimal_separation_across_all_boundary_bands": "5.06293652999729190722297749614506090018367516699953176293930422739711844797226919218097E-7",
+      "next_honest_step": "Extend Decimal/Taylor replay from boundary bands to all complement cells, or replace the bounded replay with a formal directed-rounding interval proof.",
+      "not_licensed": [
+        "All-root-window boundary-band replay is still bounded numerical evidence, not a full complement directed-rounding interval theorem.",
+        "Boundary-band zero exclusion does not prove symbolic root exclusion and does not choose a point-coordinate selector.",
+        "No strict observable/source theorem, gauge-slice theorem, physical-value generator, QW-2191 discharge, role-bearing L_total export, or ToE closure is exported."
+      ],
+      "p2455_bands_strictly_increasing_inherited": true,
+      "pointwise_coordinate_selector_exported_by_this_certificate": false,
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "stationary_factor_boundary_band_replays": [
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "stationary_factor",
+          "minimum_decimal_separation_from_zero": "0.000006276541097240278608325237825121668036231985579206473470837076899652786394958654973259684",
+          "root_d": 0.7852889044322362,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000008783867127428015023489908056442254687097395954149571946662763764089830591178595783188250",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000008783867127428015023489908056442254687097395954149571946662763764089830591178595783188250",
+                "lo": "-0.000016755629796542819060258253218566148407001428631251224716280509589827059569164008455374824"
+              },
+              "index": 0,
+              "left": 0.7826889044322363,
+              "right": 0.7827889044322363
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000008282146570327501591532509731858668399496228993121882539395346448334267102044768915971848",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000008282146570327501591532509731858668399496228993121882539395346448334267102044768915971848",
+                "lo": "-0.000016252687464852745155040953916031274766255776266225200423429307015487723156891268170529603"
+              },
+              "index": 1,
+              "left": 0.7827889044322363,
+              "right": 0.7828889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000007780553661551015444115470619168511349711495181978588611614726096541379722637525063509370",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000007780553661551015444115470619168511349711495181978588611614726096541379722637525063509370",
+                "lo": "-0.000015749872719991653895034093190328092186660587924087128846827090309490490692710117159708742"
+              },
+              "index": 2,
+              "left": 0.7828889044322362,
+              "right": 0.7829889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000007279088428333507345317541156720222230320184347147998987342597441447158964664803020846740",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000007279088428333507345317541156720222230320184347147998987342597441447158964664803020846740",
+                "lo": "-0.000015247185589379561979196462942509871178427357455721961763226473090933914690232800052905714"
+              },
+              "index": 3,
+              "left": 0.7829889044322362,
+              "right": 0.7830889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000006777750897851100119283358023830970567340918358115679415065286006064997214479128723742847",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000006777750897851100119283358023830970567340918358115679415065286006064997214479128723742847",
+                "lo": "-0.000014744626100409409538059838356036897993135774589577912810821408325695835719672825870097164"
+              },
+              "index": 4,
+              "left": 0.7830889044322362,
+              "right": 0.7831889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000006276541097240278608325237825121668036231985579206473470837076899652786394958654973259684",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.000006276541097240278608325237825121668036231985579206473470837076899652786394958654973259684",
+                "lo": "-0.000014242194280426395582582104778347117317116029656310518240628831130922362747479892746888802"
+              },
+              "index": 5,
+              "left": 0.7831889044322362,
+              "right": 0.7832889044322362
+            }
+          ],
+          "side": "left"
+        },
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "stationary_factor",
+          "minimum_decimal_separation_from_zero": "0.000006247255757165808424986318342635543297570922825839240116619680443515548030976965475173127",
+          "root_d": 0.7852889044322362,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000006247255757165808424986318342635543297570922825839240116619680443515548030976965475173127",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000014162756282447029250874038307823949713718215338159546110371901629955878222016912134965664",
+                "lo": "0.000006247255757165808424986318342635543297570922825839240116619680443515548030976965475173127"
+              },
+              "index": 0,
+              "left": 0.7872889044322362,
+              "right": 0.7873889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000006744301360409155316163580189544863351612919950702043744042100828028848270709111707216101",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000014658577495897123687241078394447350398802111766046670977527935603811348725944849599325150",
+                "lo": "0.000006744301360409155316163580189544863351612919950702043744042100828028848270709111707216101"
+              },
+              "index": 1,
+              "left": 0.7873889044322362,
+              "right": 0.7874889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000007241218159716246732689078646166104165550957448389227067306767775217413865775915085233124",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000015154269853376829023988349861246002526957148265047655705418632124225634867220996847246480",
+                "lo": "0.000007241218159716246732689078646166104165550957448389227067306767775217413865775915085233124"
+              },
+              "index": 2,
+              "left": 0.7874889044322362,
+              "right": 0.7875889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000007738006129637879131042516029425843020936201832232280019809428705657654338188483173697311",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000015649833329639880942929905884851363977039267598917331621556419875476343977383402833315827",
+                "lo": "0.000007738006129637879131042516029425843020936201832232280019809428705657654338188483173697311"
+              },
+              "index": 3,
+              "left": 0.7875889044322362,
+              "right": 0.7876889044322362
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000008234665244771232459609610034113579251599613218855079546667903720014969689552934407696825",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000016145267899478358127834421961590555683881568075884047950858746455835161361128380436577582",
+                "lo": "0.000008234665244771232459609610034113579251599613218855079546667903720014969689552934407696825"
+              },
+              "index": 4,
+              "left": 0.7876889044322362,
+              "right": 0.7877889044322361
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.000008731195479740817911807644685254424689100206259501736389794850959705557115077985202043083",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000016640573537743181232015136437281767163223906080919796847139458658803396417612444947791264",
+                "lo": "0.000008731195479740817911807644685254424689100206259501736389794850959705557115077985202043083"
+              },
+              "index": 5,
+              "left": 0.7877889044322361,
+              "right": 0.7878889044322361
+            }
+          ],
+          "side": "right"
+        }
+      ],
+      "strict_observable_source_constraint_exported_by_this_certificate": false,
+      "strict_physical_value_generator_exported": false,
+      "symbolic_root_exclusion_theorem_exported_by_this_certificate": false,
+      "theorem_name": "P2456_T1_strict_pointwise_decimal_root_window_boundary_band_replay_certificate",
+      "toe_closure_exported": false,
+      "total_boundary_band_count": 6,
+      "total_replayed_boundary_cell_count": 36,
+      "zero_projection_boundary_band_replays": [
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "zero_projection_amplitude",
+          "minimum_decimal_separation_from_zero": "0.00004334618020519645953396026824564234173107221415582413243124950684289373830824362446438172",
+          "root_d": 0.21223939395855995,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005446326738459223814809857202813095169965253939174999608268280948774072773618544661675668",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00005896847499676635237680836801237444652567647981953325087103378435713872845227203071571970",
+                "lo": "0.00005446326738459223814809857202813095169965253939174999608268280948774072773618544661675668"
+              },
+              "index": 0,
+              "left": 0.20963939395856002,
+              "right": 0.20973939395856
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005224010682511052795219182826986516053106784277122018295112898957551903614591993439980055",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00005674636623937109460803677737353773128741062672479155209391149520133680507077211754696775",
+                "lo": "0.00005224010682511052795219182826986516053106784277122018295112898957551903614591993439980055"
+              },
+              "index": 1,
+              "left": 0.20973939395856,
+              "right": 0.20983939395856
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005001681728777988248126794548924438464800548450550113550456235664908234186644277189819743",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00005452412809492395611651257662462927030164974839696119374355652659476829191115699882300402",
+                "lo": "0.00005001681728777988248126794548924438464800548450550113550456235664908234186644277189819743"
+              },
+              "index": 2,
+              "left": 0.20983939395856,
+              "right": 0.20993939395855998
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004779339931239539036899995391017813952446421440941572707824154754480672660163248932442506",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00005230176110333175172015033762968060544567652713384817950150066268036318362686270319057429",
+                "lo": "0.00004779339931239539036899995391017813952446421440941572707824154754480672660163248932442506"
+              },
+              "index": 3,
+              "left": 0.20993939395855998,
+              "right": 0.21003939395855997
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004556985343846295621554723844273973409478683292054040678982089494417278031711195456237799",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00005007926580420699150012594524494697055567176719505703904000911724801075809884705234301045",
+                "lo": "0.00004556985343846295621554723844273973409478683292054040678982089494417278031711195456237799"
+              },
+              "index": 4,
+              "left": 0.21003939395855997,
+              "right": 0.21013939395855996
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004334618020519645953396026824564234173107221415582413243124950684289373830824362446438172",
+              "decimal_taylor_interval_value": {
+                "hi": "0.00004785664273687225071624720414151687692415980716162360993111978805121298849716787607605464",
+                "lo": "0.00004334618020519645953396026824564234173107221415582413243124950684289373830824362446438172"
+              },
+              "index": 5,
+              "left": 0.21013939395855996,
+              "right": 0.21023939395855995
+            }
+          ],
+          "side": "left"
+        },
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "zero_projection_amplitude",
+          "minimum_decimal_separation_from_zero": "0.00004337429511456965229152044660713399594310043824649094424958843241168312239153704618880822",
+          "root_d": 0.21223939395855995,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004337429511456965229152044660713399594310043824649094424958843241168312239153704618880822",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00004337429511456965229152044660713399594310043824649094424958843241168312239153704618880822",
+                "lo": "-0.00004792746372137842951869350361753208520042495629568327972677068241612464426434899404704699"
+              },
+              "index": 0,
+              "left": 0.21423939395855995,
+              "right": 0.21433939395855994
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004560180128343720435167715531700855977539248231782856815138932828437603274782703045059632",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00004560180128343720435167715531700855977539248231782856815138932828437603274782703045059632",
+                "lo": "-0.00005015600297902128563237682272659319206977991625978489955232018131976222678699344662831173"
+              },
+              "index": 1,
+              "left": 0.21433939395855994,
+              "right": 0.21443939395855993
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00004782941230393795908585795827006343941841859005394380921775544784398601673813335438193103",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00004782941230393795908585795827006343941841859005394380921775544784398601673813335438193103",
+                "lo": "-0.00005238464668392612787602318676895009357037869097581625256340585278551517929324369598265515"
+              },
+              "index": 2,
+              "left": 0.21443939395855993,
+              "right": 0.21453939395855992
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005005712764947540524803636998619894361573439554782652517123564614106515518094433897920897",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00005005712764947540524803636998619894361573439554782652517123564614106515518094433897920897",
+                "lo": "-0.00005461339430959736722787629931869231439674840205753423088059822765601009207162572854277795"
+              },
+              "index": 3,
+              "left": 0.21453939395855992,
+              "right": 0.2146393939585599
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005228494679373931525682345659784276223501165974027502377548652323072460600291293065627669",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00005228494679373931525682345659784276223501165974027502377548652323072460600291293065627669",
+                "lo": "-0.00005684224532982782750271542340980167514224560589154504872255843106893000772356244427987781"
+              },
+              "index": 4,
+              "left": 0.2146393939585599,
+              "right": 0.2147393939585599
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "0.00005451286921070839553626667858576714340267500979697076014590755633713808158121722153196125",
+              "decimal_taylor_interval_value": {
+                "hi": "-0.00005451286921070839553626667858576714340267500979697076014590755633713808158121722153196125",
+                "lo": "-0.00005907119921869501669881796010660987653202805476832051310815596643802492881969476679296099"
+              },
+              "index": 5,
+              "left": 0.2147393939585599,
+              "right": 0.2148393939585599
+            }
+          ],
+          "side": "right"
+        },
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "zero_projection_amplitude",
+          "minimum_decimal_separation_from_zero": "5.07355456570088982569364690907013373994368687125123403325921192056706758727873983892546E-7",
+          "root_d": 4.056893978208217,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.96773908034390043742111323654819895160744659562241388552243376141081467491187097819104E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-6.96773908034390043742111323654819895160744659562241388552243376141081467491187097819104E-7",
+                "lo": "-0.000001233978367154765595276493855510807699784729085295993547277960386946977688849887934892040"
+              },
+              "index": 0,
+              "left": 4.054293978208219,
+              "right": 4.054393978208219
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.58881763867357637784352030952022329409751588114998015599662744527966071238023943465310E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-6.58881763867357637784352030952022329409751588114998015599662744527966071238023943465310E-7",
+                "lo": "-0.000001196051329743787525446057553983812497049037497714679956976317060663232227046438846462869"
+              },
+              "index": 1,
+              "left": 4.054393978208219,
+              "right": 4.054493978208218
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.20993847047451616518530063980816786453041493795777084981612962714274972437515737761521E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-6.20993847047451616518530063980816786453041493795777084981612962714274972437515737761521E-7",
+                "lo": "-0.000001158128522276771733311541327358417774873417889862234640389328509469995072221734439127842"
+              },
+              "index": 2,
+              "left": 4.054493978208218,
+              "right": 4.054593978208218
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.83110157168218721165628027456795175953347179814959394652978792988548522805580656182419E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-5.83110157168218721165628027456795175953347179814959394652978792988548522805580656182419E-7",
+                "lo": "-0.000001120209944330920941429861161393852967600587681946329718743915286390331814531263557856653"
+              },
+              "index": 3,
+              "left": 4.054593978208218,
+              "right": 4.054693978208218
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.45230693812884582137920765729035947439788233473429204753992056009945294695163033234492E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-5.45230693812884582137920765729035947439788233473429204753992056009945294695163033234492E-7",
+                "lo": "-0.000001082295595494603916075013323153599033740464101664216781108705214554643917811722432906503"
+              },
+              "index": 4,
+              "left": 4.054693978208218,
+              "right": 4.054793978208218
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.07355456570088982569364690907013373994368687125123403325921192056706758727873983892546E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "-5.07355456570088982569364690907013373994368687125123403325921192056706758727873983892546E-7",
+                "lo": "-0.000001044385475350861603282136172111320901276574478559277420726718703328417561897191301589204"
+              },
+              "index": 5,
+              "left": 4.054793978208218,
+              "right": 4.054893978208217
+            }
+          ],
+          "side": "left"
+        },
+        {
+          "all_cells_exclude_zero": true,
+          "band_cell_count": 6,
+          "family": "zero_projection_amplitude",
+          "minimum_decimal_separation_from_zero": "5.06293652999729190722297749614506090018367516699953176293930422739711844797226919218097E-7",
+          "root_d": 4.056893978208217,
+          "rows": [
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.06293652999729190722297749614506090018367516699953176293930422739711844797226919218097E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001041895696282642682419947963131283643097208343048831021949974703749258267162319737555846",
+                "lo": "5.06293652999729190722297749614506090018367516699953176293930422739711844797226919218097E-7"
+              },
+              "index": 0,
+              "left": 4.058893978208217,
+              "right": 4.058993978208217
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.44026541636694748548256027212728615263632889403354202713941984204408339258140618857690E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001079593810402195818472959723677332408312642904985193920104691420623791339927159013870941",
+                "lo": "5.44026541636694748548256027212728615263632889403354202713941984204408339258140618857690E-7"
+              },
+              "index": 1,
+              "left": 4.058993978208217,
+              "right": 4.0590939782082165
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "5.81755219358169548860224459872867251702849990874724637657494873682864992768687261688929E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001117287716184529689051291967566860500839419770994877754226967165646221292154574834038025",
+                "lo": "5.81755219358169548860224459872867251702849990874724637657494873682864992768687261688929E-7"
+              },
+              "index": 2,
+              "left": 4.0590939782082165,
+              "right": 4.059193978208216
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.19479686576904527660853405368689152420189107123728954819110781919955544299259134424679E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001154977414042166831083370055972733319147692378467194239749854296109521998846828564005720",
+                "lo": "6.19479686576904527660853405368689152420189107123728954819110781919955544299259134424679E-7"
+              },
+              "index": 3,
+              "left": 4.059193978208216,
+              "right": 4.059293978208216
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.57199943708096185377037051340259006606221640631749096035695786586565410581442756424651E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001192662904384720913108705220273507385389190257869057528446714076337534755453371230242061",
+                "lo": "6.57199943708096185377037051340259006606221640631749096035695786586565410581442756424651E-7"
+              },
+              "index": 4,
+              "left": 4.059293978208216,
+              "right": 4.059393978208216
+            },
+            {
+              "decimal_interval_excludes_zero": true,
+              "decimal_separation_from_zero": "6.94915991162787186304872070830493672939325397300893281743301823620264322182793812362723E-7",
+              "decimal_taylor_interval_value": {
+                "hi": "0.000001230344187625684690894442446644088020685227860507242517456502361437896702436452154878852",
+                "lo": "6.94915991162787186304872070830493672939325397300893281743301823620264322182793812362723E-7"
+              },
+              "index": 5,
+              "left": 4.059393978208216,
+              "right": 4.059493978208216
+            }
+          ],
+          "side": "right"
+        }
+      ]
+    }
+  }
+}
