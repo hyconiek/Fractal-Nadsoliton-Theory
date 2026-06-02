@@ -758,3 +758,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2418/S1368 bridge source marginal-unlock guard for Lagrangian/EOM
 
 `P2418/S1368` shows that from the current zero source-discharge mask, no singleton source atom unlocks a non-residual bridge component; even the first pair unlocks are only proof-search targets.  Therefore no marginal source-priority score can be used as a role-bearing `L_total` term or as bridge/ToE closure.
+
+## P2419/S1369 chi11 phase-selector coupling guard for Lagrangian/EOM
+
+`P2419/S1369` proves that `chi11_selector_source_theorem` is a common necessary source-obligation cut for the phase/topological and selector components, but also proves that `chi11` alone is not sufficient for either component and that `qw2191_symmetry_breaking_or_internal_source_theorem` remains an independent selector obligation.  Therefore the overlap cannot be used as a role-bearing `L_total` term, selector closure, or ToE closure.
+
+## P2420/S1370 bridge-selector nonclosure guard for Lagrangian/EOM
+
+`P2420/S1370` separates bridge value evidence and selector-cut evidence from the missing theorem gates needed for closure.  Since the current mask has only `apd_value_bridge_witness` and `chi11_phase_selector_cut_mechanism`, while source discharge, chi11 source export, QW-2191 discharge, role-transfer license, and role-bearing `L_total` export remain absent, no `L_total` or ToE closure can be promoted from the bridge/selector bookkeeping.
+
+## P2421/S1371 bridge-selector closure prime-implicant guard for Lagrangian/EOM
+
+`P2421/S1371` proves that role-bearing `L_total`/ToE promotion in the bridge-selector lane has the unique prime implicant containing all seven closure gates.  Any missing gate triggers the dual failure cover, so APD value exactness or selector-cut localization cannot be used as a Lagrangian shortcut.
