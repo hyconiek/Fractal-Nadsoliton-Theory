@@ -738,3 +738,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2413/S1363 amplitude scalar-normalization guard for Lagrangian/EOM
 
 `P2413/S1363` permits only the scalar bridge witness `alpha_geo^{-1} K_legacy_ont = L_shape` on the audited domain.  It does not license an `alpha_geo` electroweak Lagrangian term, role-safe amplitude absorption, full bridge completion, or any `L_total` promotion.
+
+## P2414/S1364 strict damping nonabsorption guard for Lagrangian/EOM
+
+`P2414/S1364` allows the strict denominator data `1+d^(9/5)` to be recognized as finitely identifying `beta=1, eta=9/5` inside the accepted strict model, while proving that this cannot be absorbed into a legacy `1+beta_tors*d` denominator.  Since no strict dynamic source, damping bridge theorem, or role-transfer theorem is exported, no nonlinear-compression expression can yet be promoted to a role-bearing `L_total` term.
+
+## P2415/S1365 phase/frequency nonautomorphism guard for Lagrangian/EOM
+
+`P2415/S1365` permits only the finite affine phase-coordinate witness `theta_L(x(d))=theta_S(d)` and explicitly rejects treating it as a `Z12` reindexing, scalar replacement, selector-source theorem, or full bridge completion.  Therefore phase/frequency bookkeeping still cannot be promoted into a role-bearing `L_total` term.
+
+## P2416/S1366 APD assembly guard for Lagrangian/EOM
+
+`P2416/S1366` allows the finite quotient identity `K_strict/K_legacy = alpha^{-1}*P_phase*D_compression` as value-level bridge bookkeeping.  Because the certificate still exports no strict dynamic source, selector source, full bridge theorem, or role-transfer theorem, the APD product cannot be promoted into a role-bearing `L_total` term.
+
+## P2417/S1367 APD witness-to-source nonpromotion guard for Lagrangian/EOM
+
+`P2417/S1367` records that positive value-level APD witnesses from P2413-P2416 discharge zero P2411 source-obligation atoms.  Therefore the Lagrangian/EOM lane still cannot promote APD bookkeeping to a role-bearing `L_total` term without new source, selector, full-bridge, and role-transfer theorems.
+
+## P2418/S1368 bridge source marginal-unlock guard for Lagrangian/EOM
+
+`P2418/S1368` shows that from the current zero source-discharge mask, no singleton source atom unlocks a non-residual bridge component; even the first pair unlocks are only proof-search targets.  Therefore no marginal source-priority score can be used as a role-bearing `L_total` term or as bridge/ToE closure.

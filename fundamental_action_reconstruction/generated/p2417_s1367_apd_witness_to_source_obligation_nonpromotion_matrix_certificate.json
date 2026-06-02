@@ -1,0 +1,356 @@
+{
+  "apd_witness_to_source_obligation_nonpromotion_matrix_certificate": {
+    "finite_witness_certificate": {
+      "all_recent_witnesses_positive": true,
+      "artifact_columns": [
+        "P2413_amplitude_scalar_witness",
+        "P2414_damping_parameter_witness",
+        "P2415_phase_affine_witness",
+        "P2416_apd_value_assembly_witness"
+      ],
+      "artifact_positive_flags": {
+        "P2413_amplitude_scalar_witness": true,
+        "P2414_damping_parameter_witness": true,
+        "P2415_phase_affine_witness": true,
+        "P2416_apd_value_assembly_witness": true
+      },
+      "bridge_source_ready_from_current_artifacts": false,
+      "current_source_discharge_mask": 0,
+      "discharged_atoms": [],
+      "full_bridge_theorem_exported": false,
+      "full_source_discharge_mask": 255,
+      "nearest_miss_count": 8,
+      "nearest_miss_masks": [
+        254,
+        253,
+        251,
+        247,
+        239,
+        223,
+        191,
+        127
+      ],
+      "no_p2413_to_p2416_artifact_discharges_source_atom": true,
+      "nonpromotion_matrix_rows": [
+        {
+          "atom_index": 0,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2413 removes a scalar but explicitly exports no amplitude dynamic source.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "amplitude_dynamic_source_theorem"
+        },
+        {
+          "atom_index": 1,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2413 blocks role-safe alpha_geo absorption and P2416 keeps role transfer closed.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "role_safe_amplitude_absorption_map_theorem"
+        },
+        {
+          "atom_index": 2,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2415 transports phase coordinates but exports no omega/phi dynamic source.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "phase_frequency_dynamic_source_theorem"
+        },
+        {
+          "atom_index": 3,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2415 matches inherited GF(2) bits but exports no selector/topological source theorem.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "topological_bit_transport_selector_theorem"
+        },
+        {
+          "atom_index": 4,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2414 identifies strict beta/eta samples but exports no beta_tors -> beta/eta completion-map theorem.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "legacy_linear_to_strict_nonlinear_compression_map_theorem"
+        },
+        {
+          "atom_index": 5,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2414/P2416 keep strict compression source absent despite value-level damping factors.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "strict_compression_dynamic_source_theorem"
+        },
+        {
+          "atom_index": 6,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "P2412/P2415 preserve selector-scope separation; no chi11 source theorem is exported.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "chi11_selector_source_theorem"
+        },
+        {
+          "atom_index": 7,
+          "discharged": false,
+          "discharged_by_artifacts": {
+            "P2413_amplitude_scalar_witness": false,
+            "P2414_damping_parameter_witness": false,
+            "P2415_phase_affine_witness": false,
+            "P2416_apd_value_assembly_witness": false
+          },
+          "nonpromotion_reason": "QW-2191 remains open without symmetry-breaking or internal selector source evidence.",
+          "positive_witness_artifacts_present": [
+            "P2413_amplitude_scalar_witness",
+            "P2414_damping_parameter_witness",
+            "P2415_phase_affine_witness",
+            "P2416_apd_value_assembly_witness"
+          ],
+          "source_obligation_atom": "qw2191_symmetry_breaking_or_internal_source_theorem"
+        }
+      ],
+      "p2411_full_bridge_rule_inherited": true,
+      "proper_subset_failure_count": 255,
+      "role_transfer_licensed": false,
+      "source_obligation_assignment_count": 256,
+      "source_obligation_atoms": [
+        "amplitude_dynamic_source_theorem",
+        "role_safe_amplitude_absorption_map_theorem",
+        "phase_frequency_dynamic_source_theorem",
+        "topological_bit_transport_selector_theorem",
+        "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+        "strict_compression_dynamic_source_theorem",
+        "chi11_selector_source_theorem",
+        "qw2191_symmetry_breaking_or_internal_source_theorem"
+      ],
+      "toe_closure_exported": false,
+      "value_witness_to_source_nonpromotion_ready": true
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds the P2411 source-obligation hypergraph and the P2413-P2416 value witnesses, but no production matrix proving that those witnesses do not discharge any P2411 source obligation atom.",
+      "patterns": {
+        "new_packet": {
+          "count": 31,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1080:## P2417/S1367 APD witness-to-source nonpromotion matrix certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1082:`P2417/S1367` audits the tempting overread after P2413-P2416.  The amplitude, damping, phase, and APD assembly witnesses are all positive as value-level evidence, but they are not source-obligation theorems.  The certificate maps those four artifacts against the eight P2411 bridge-source atoms and records a zero discharge matrix:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1095:`P2418/S1368` starts from the P2417 zero source-discharge mask and enumerates the full `2^8=256` source-obligation lattice from P2411.  The empty/current mask readies only `residual_strict_additions_inventory`; no singleton source atom unlocks a non-residual bridge component.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:754:## P2417/S1367 APD witness-to-source nonpromotion guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:756:`P2417/S1367` records that positive value-level APD witnesses from P2413-P2416 discharge zero P2411 source-obligation atoms.  Therefore the Lagrangian/EOM lane still cannot promote APD bookkeeping to a role-bearing `L_total` term without new source, selector, full-bridge, and role-transfer theorems.",
+            "fundamental_action_reconstruction/generated/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.md:1:# P2417 S1367: APD witness-to-source nonpromotion matrix certificate",
+            "fundamental_action_reconstruction/generated/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.md:7:P2417/S1367 maps positive P2413-P2416 value witnesses to the eight P2411 source-obligation atoms and proves zero source discharge.",
+            "fundamental_action_reconstruction/generated/p2418_s1368_bridge_source_marginal_unlock_lattice_certificate.md:7:P2418/S1368 enumerates the source-obligation marginal-unlock lattice from the P2417 zero source mask.",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:189:## P2417/S1367 APD witness-to-source nonpromotion matrix certificate",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:191:`P2417/S1367` audits the tempting overread after P2413-P2416.  The amplitude, damping, phase, and APD assembly witnesses are all positive as value-level evidence, but they are not source-obligation theorems.  The certificate maps those four artifacts against the eight P2411 bridge-source atoms and records a zero discharge matrix:",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:203:## P2417/S1367 APD witness-to-source nonpromotion guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:205:`P2417/S1367` records that positive value-level APD witnesses from P2413-P2416 discharge zero P2411 source-obligation atoms.  Therefore the Lagrangian/EOM lane still cannot promote APD bookkeeping to a role-bearing `L_total` term without new source, selector, full-bridge, and role-transfer theorems.",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:219:        \"theorem_name\": \"P2417_T1_apd_witness_to_source_obligation_nonpromotion_matrix_certificate\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:267:        \"packet_id\": \"P2417\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:268:        \"stage_id\": \"S1367\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:292:                \"# P2417 S1367: APD witness-to-source nonpromotion matrix certificate\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:298:                \"P2417/S1367 maps positive P2413-P2416 value witnesses to the eight P2411 source-obligation atoms and proves zero source discharge.\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:83:        \"new_packet\": \"P2417|S1367|witness to source obligation|source obligation nonpromotion|APD witness nonpromotion\","
+          ]
+        },
+        "nonpromotion_limits": {
+          "count": 228,
+          "samples": [
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:100:        +--> role-transfer theorem         [open]",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:39:        |  still missing source/selector/role-transfer theorems",
+            "fundamental_action_reconstruction/F151_FIRST_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_PACKET.md:74:3. not a current role-transfer theorem.",
+            "fundamental_action_reconstruction/F180_FIRST_ACTUAL_FRACTAL_INFORMATION_NADSOLITON_PAIR_POPULATION_ANCHOR_ACTUAL_CARRIER_NONEXPORT_BOUNDARY_PACKET.md:64:   - but still unpopulated and not exported as a fractal source carrier.",
+            "fundamental_action_reconstruction/F253_FIRST_CURRENT_LEGACY_TO_STRICT_BRIDGE_CLOSURE_WITNESS_TARGET_PACKET.md:70:4. no role-transfer theorem is claimed,",
+            "fundamental_action_reconstruction/F255_FIRST_ACTUAL_LEGACY_TO_STRICT_BRIDGE_CLOSURE_WITNESS_SUPPORT_WITNESS_PACKET.md:45:4. one explicit reminder that no role-transfer theorem is present.",
+            "fundamental_action_reconstruction/F256_FIRST_ACTUAL_LEGACY_TO_STRICT_BRIDGE_CLOSURE_WITNESS_SUPPORT_SUPPORT_PACKET.md:46:4. one explicit reminder that no role-transfer theorem is present.",
+            "fundamental_action_reconstruction/F257_FIRST_ACTUAL_LEGACY_TO_STRICT_BRIDGE_CLOSURE_WITNESS_SUPPORT_SUPPORT_WITNESS_PACKET.md:46:4. one explicit reminder that no role-transfer theorem is present.",
+            "fundamental_action_reconstruction/F258_FIRST_ACTUAL_LEGACY_TO_STRICT_BRIDGE_CLOSURE_NONCYCLIC_PROGRESSION_SPLIT_TARGET_PACKET.md:57:5. no actual role-transfer theorem exists,",
+            "fundamental_action_reconstruction/F297_FIRST_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_CONTRACTION_PARAMETER_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_PACKET.md:19:(`T126/F279`), and the repo does not export any strict derivation/source-upgrade",
+            "fundamental_action_reconstruction/F305_FIRST_CURRENT_STRICT_T144_T149_PREBRIDGE_DISCHARGE_ROADMAP_PACKET.md:95:explicit role-transfer theorem.",
+            "fundamental_action_reconstruction/F5_LEGACY_PHYSICAL_ROLE_PARTITION_REFINEMENT_PACKET.md:67:- that any role-transfer theorem is already present,",
+            "fundamental_action_reconstruction/N124_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM.md:28:   the current strict-core `psi0` route does not export a selector source and",
+            "fundamental_action_reconstruction/N369_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_BRIDGE_CLOSURE_NONCYCLIC_PROGRESSION_SPLIT_TARGET_THEOREM.md:44:5. no actual role-transfer theorem exists,",
+            "fundamental_action_reconstruction/N380_CURRENT_FIRST_ACTUAL_STRICT_FRACTAL_LIGHT_PATH_PAIR_MAP_RULE_CANDIDATE_THEOREM.md:34:   - the strict core still does not export an actual phase source route as an",
+            "fundamental_action_reconstruction/N409_CURRENT_FIRST_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_CONTRACTION_PARAMETER_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_THEOREM.md:24:     does not export an **actual** source-side provider-object carrier layer;",
+            "fundamental_action_reconstruction/N65_CURRENT_LEGACY_PHYSICAL_ROLE_TRANSFER_TO_STRICT_GATE_KERNEL_OBSTRUCTION_THEOREM.md:68:1. either add one explicit bridge or role-transfer theorem,",
+            "fundamental_action_reconstruction/N844_CURRENT_STRICT_QW2191_LAMBDA_BRANCH_INFO_PRIMARY_SCPC_LIKE_SELECTOR_PROVIDER_SHIFT_CANDIDATE_REFERENCE_LANE_ADMISSION_THEOREM.md:49:   - a strict selector-source theorem,"
+          ]
+        },
+        "p2411_obligations": {
+          "count": 29,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1089:Thus the value-level APD identity does not discharge `amplitude_dynamic_source_theorem`, `phase_frequency_dynamic_source_theorem`, `strict_compression_dynamic_source_theorem`, `chi11_selector_source_theorem`, QW-2191 source, or the role-safe amplitude/source obligations.  All 255 proper source masks remain bridge-source failures, with eight one-atom-missing nearest masks.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1097:The first nontrivial component unlocks occur at size two: the amplitude pair, the damping pair, and the selector pair.  The phase/frequency/topological component still has minimal size three because it needs `phase_frequency_dynamic_source_theorem`, `topological_bit_transport_selector_theorem`, and `chi11_selector_source_theorem`.  `chi11_selector_source_theorem` remains the highest-incidence source atom because it belongs to both the phase/topological and selector-source components.",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:31:    \"amplitude_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:33:    \"phase_frequency_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:36:    \"strict_compression_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:37:    \"chi11_selector_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:45:        \"amplitude_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:49:        \"phase_frequency_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:51:        \"chi11_selector_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:55:        \"strict_compression_dynamic_source_theorem\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:58:        \"chi11_selector_source_theorem\",",
+            "fundamental_action_reconstruction/p2412_s1362_chi11_selector_scope_separation_certificate.py:171:        \"bridge_chi11_source_is_p2411_top_priority\": \"chi11_selector_source_theorem\" in p2411_top_atoms,",
+            "fundamental_action_reconstruction/p2412_s1362_chi11_selector_scope_separation_certificate.py:96:        \"p2411_bridge\": \"P2411|chi11_selector_source_theorem|QW-2191|bridge-source hypergraph\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:128:        \"amplitude_dynamic_source_theorem\": \"P2413 removes a scalar but explicitly exports no amplitude dynamic source.\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:130:        \"phase_frequency_dynamic_source_theorem\": \"P2415 transports phase coordinates but exports no omega/phi dynamic source.\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:133:        \"strict_compression_dynamic_source_theorem\": \"P2414/P2416 keep strict compression source absent despite value-level damping factors.\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:134:        \"chi11_selector_source_theorem\": \"P2412/P2415 preserve selector-scope separation; no chi11 source theorem is exported.\",",
+            "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:198:Thus the value-level APD identity does not discharge `amplitude_dynamic_source_theorem`, `phase_frequency_dynamic_source_theorem`, `strict_compression_dynamic_source_theorem`, `chi11_selector_source_theorem`, QW-2191 source, or the role-safe amplitude/source obligations.  All 255 proper source masks remain bridge-source failures, with eight one-atom-missing nearest masks."
+          ]
+        },
+        "recent_value_witnesses": {
+          "count": 158,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1022:## P2413/S1363 amplitude scalar-normalization bridge witness certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1024:`P2413/S1363` takes the first S2 bridge component, amplitude normalization, and exports a narrow exact witness rather than another global obstruction ledger.  On the audited `d=0..11` domain,",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1036:## P2414/S1364 strict damping parameter identifiability and nonabsorption certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1038:`P2414/S1364` follows the P2413 amplitude witness by isolating the damping/compression row.  It treats the strict denominator samples as accepted finite data",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1048:This identifies accepted strict damping parameters and proves a linear-denominator no-go only.  It does not export a strict dynamic source for `beta,eta`, does not prove `beta_tors -> beta/eta`, does not complete the damping bridge, and does not license role transfer, QW-2191 discharge, `L_total`, or ToE closure.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1050:## P2415/S1365 phase/frequency affine-transport nonautomorphism certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1052:`P2415/S1365` isolates the S2 phase/frequency row after the amplitude and damping witnesses.  It exports the finite continuous transport",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1065:## P2416/S1366 APD multiplicative bridge-assembly necessity certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1067:`P2416/S1366` assembles the three value-level bridge factors certified separately by P2413/P2414/P2415:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1078:This is a finite value-level assembly witness only.  It does not export strict dynamic sources for the factors, does not provide the selector/source premise, does not complete the full bridge, and does not license legacy role transfer, `L_total`, QW-2191 discharge, or ToE closure.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1082:`P2417/S1367` audits the tempting overread after P2413-P2416.  The amplitude, damping, phase, and APD assembly witnesses are all positive as value-level evidence, but they are not source-obligation theorems.  The certificate maps those four artifacts against the eight P2411 bridge-source atoms and records a zero discharge matrix:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1091:This is not a rollback of P2413-P2416; it is the proof-theoretic nonpromotion guard: value witnesses remain useful bridge ingredients, but they do not become source, selector, role-transfer, `L_total`, or ToE closure theorems.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:15:with the currently audited finite strict damping parameters",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:738:## P2413/S1363 amplitude scalar-normalization guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:740:`P2413/S1363` permits only the scalar bridge witness `alpha_geo^{-1} K_legacy_ont = L_shape` on the audited domain.  It does not license an `alpha_geo` electroweak Lagrangian term, role-safe amplitude absorption, full bridge completion, or any `L_total` promotion.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:742:## P2414/S1364 strict damping nonabsorption guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:744:`P2414/S1364` allows the strict denominator data `1+d^(9/5)` to be recognized as finitely identifying `beta=1, eta=9/5` inside the accepted strict model, while proving that this cannot be absorbed into a legacy `1+beta_tors*d` denominator.  Since no strict dynamic source, damping bridge theorem, or role-transfer theorem is exported, no nonlinear-compression expression can yet be promoted to a role-bearing `L_total` term.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:746:## P2415/S1365 phase/frequency nonautomorphism guard for Lagrangian/EOM"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2411_BRIDGE_SOURCE_HYPERGRAPH": "PASS_BRIDGE_SOURCE_OBLIGATION_HYPERGRAPH_FULL_MASK_ONLY_NO_ROLE_TRANSFER",
+      "P2413_AMPLITUDE_SCALAR_WITNESS": "PASS_AMPLITUDE_SCALAR_WITNESS_NO_ROLE_TRANSFER_NO_FULL_BRIDGE",
+      "P2414_DAMPING_NONABSORPTION": "PASS_STRICT_DAMPING_PARAMETERS_IDENTIFIED_FROM_ACCEPTED_SAMPLES_NO_SOURCE_NO_ABSORPTION",
+      "P2415_PHASE_AFFINE_TRANSPORT": "PASS_PHASE_FREQUENCY_AFFINE_TRANSPORT_WITNESS_NO_SOURCE_NO_SELECTOR_CLOSURE",
+      "P2416_APD_VALUE_ASSEMBLY": "PASS_APD_VALUE_ASSEMBLY_EXACT_NO_SOURCE_NO_ROLE_TRANSFER"
+    },
+    "theorem_export": {
+      "all_recent_witnesses_positive": true,
+      "artifact_column_count": 4,
+      "bridge_source_ready_from_current_artifacts": false,
+      "current_source_discharge_mask": 0,
+      "discharged_atoms": [],
+      "full_bridge_theorem_exported": false,
+      "full_source_discharge_mask": 255,
+      "nearest_miss_count": 8,
+      "no_p2413_to_p2416_artifact_discharges_source_atom": true,
+      "not_licensed": [
+        "No P2413-P2416 value witness is promoted to a P2411 source-obligation theorem.",
+        "No selector-source theorem or QW-2191 discharge follows from the APD value witnesses.",
+        "No full bridge theorem follows from the current zero source-discharge mask.",
+        "No role-transfer theorem, role-bearing L_total term, or ToE closure follows."
+      ],
+      "p2411_full_bridge_rule_inherited": true,
+      "proper_subset_failure_count": 255,
+      "role_transfer_licensed": false,
+      "source_obligation_assignment_count": 256,
+      "source_obligation_atom_count": 8,
+      "theorem_name": "P2417_T1_apd_witness_to_source_obligation_nonpromotion_matrix_certificate",
+      "toe_closure_exported": false,
+      "value_witness_to_source_nonpromotion_ready": true
+    },
+    "theorem_fingerprint_sha256": "9a7310c17c3fb6adc594cd41a26f7588336825dc2dc5706047b50320a942a8ea"
+  },
+  "gatekeeper_checks": {
+    "all_256_assignments_counted": true,
+    "bridge_source_not_ready": true,
+    "current_source_discharge_mask_zero": true,
+    "eight_source_atoms_mapped": true,
+    "fingerprint_stable": true,
+    "four_recent_artifacts_mapped": true,
+    "full_bridge_still_open": true,
+    "full_source_mask_255": true,
+    "nearest_miss_count_eight": true,
+    "no_artifact_promoted_to_source_atom": true,
+    "no_discharged_atoms": true,
+    "nonpromotion_certificate_ready": true,
+    "p2411_full_bridge_rule_inherited": true,
+    "proper_subset_failures_255": true,
+    "recent_value_witnesses_positive": true,
+    "rg_nonduplication_audit_ran": true,
+    "role_transfer_still_blocked": true,
+    "toe_still_open": true
+  },
+  "global_status": "OPEN_PROGRESS_VALUE_WITNESSES_NONPROMOTED_TO_SOURCE_ATOMS",
+  "packet_id": "P2417",
+  "recommended_next_honest_step": "Prove one real P2411 source-obligation atom, especially chi11/selector source or a dynamic APD source; do not promote value witnesses by bookkeeping.",
+  "result_kind": "APD_WITNESS_TO_SOURCE_OBLIGATION_NONPROMOTION_MATRIX_CERTIFICATE",
+  "schema_version": "p2417_s1367_v1",
+  "stage_id": "S1367",
+  "status": "PASS_VALUE_WITNESSES_POSITIVE_SOURCE_DISCHARGE_ZERO_NO_BRIDGE_CLOSURE"
+}
