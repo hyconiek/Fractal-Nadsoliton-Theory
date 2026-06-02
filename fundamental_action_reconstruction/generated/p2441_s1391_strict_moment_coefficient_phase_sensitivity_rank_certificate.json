@@ -1,0 +1,428 @@
+{
+  "gatekeeper_checks": {
+    "fingerprint_stable": true,
+    "four_parameters": true,
+    "jacobian_rank_three": true,
+    "no_ltotal_export": true,
+    "no_phase_invariance_theorem_export": true,
+    "no_qw2191_discharge": true,
+    "no_toe_export": true,
+    "no_value_generator_export": true,
+    "p1562_replay_close": true,
+    "p2440_not_replacement": true,
+    "p2440_phase_null_inherited": true,
+    "phi_column_nonzero": true,
+    "phi_sweep_changes_coefficients": true,
+    "phi_sweep_four_rows": true,
+    "rg_audit_ran": true,
+    "three_coefficients": true
+  },
+  "global_status": "OPEN_PROGRESS_STRICT_MOMENT_PHASE_SENSITIVITY_EXPORTED_NO_CLOSURE",
+  "packet_id": "P2441",
+  "recommended_next_honest_step": "Construct a phase/topology-sensitive strict coefficient map, or prove an explicit phase-invariance theorem identifying which coefficients may lawfully ignore phi.",
+  "result_kind": "STRICT_MOMENT_COEFFICIENT_PHASE_SENSITIVITY_RANK_CERTIFICATE",
+  "schema_version": "p2441_s1391_v1",
+  "stage_id": "S1391",
+  "status": "PASS_STRICT_MOMENT_COEFFICIENT_PHASE_SENSITIVE_NO_GENERATOR",
+  "strict_moment_coefficient_phase_sensitivity_rank_certificate": {
+    "rg_nonduplication_audit": {
+      "patterns": {
+        "bridge_completed_moments": {
+          "count": 53,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:152:`P2364/S1314` adds a bridge-completed FRW residual table for scalar/gauge/gravity residual rows.  It uses the `P2363` APD-completed moment source, not raw legacy moments, and instantiates a named spatially flat constant-\\(H\\) FRW minisuperspace slice:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:203:`P2365/S1315` promotes the FRW gravity rows by adding the explicit nonminimal FRW metric variation of the `P1866/P2363` term",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:371:The result is negative.  With the P2363/P2371 parameters,",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:39:`P2363/S1313` adds bridge-completed moment transport: the legacy bridge kernel may feed this map only after the explicit APD completion",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:47:is multiplied into \\(K_{\\text{legacy\\_ont}}\\).  Then \\(K_{\\text{legacy\\_ont}}Q_{\\mathrm{APD}}=K_{\\text{strict}}\\), so the completed moments match \\((c_0,c_1,c_2)\\) exactly.  Raw legacy moments, including amplitude-normalized raw legacy moments, are not admissible substitutes for the strict \\(L_{\\text{total}}\\) coefficient input.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:194:`P2364/S1314` turns the `P2363` bridge-completed moments into a named-background scalar/gauge/gravity residual table.  The coefficient source is explicitly:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:200:and not raw legacy moments.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:379:This keeps the selector provenance problem honest.  The direct kernel is already useful for bridge-completed moment transport into `L_total`, but direct pair weights do not derive the d5 support selector.  Search instead for a separate dynamical term or keep the band-polarity premise non-strict; EOM/Lagrangian work remains parallel.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:69:`P2363/S1313` records the bridge-completed moment transport from the legacy intermediate kernel into the strict `L_total` coefficient map.  The admissible route is:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:79:After this APD completion is applied, the moments extracted at `d_ref=1` have zero symbolic residual against the strict `c0,c1,c2` moments, and the induced `m2_eff`, `lam_eff`, `y_eff`, `g_eff`, and `xi_eff` map matches `P1866`.  The negative control is also part of the result: raw legacy moments, including amplitude-normalized raw legacy moments, do not match the strict moments and cannot be used as silent substitutes.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:81:This is bridge-completed moment transport for the Lagrangian/EOM track only.  It does not derive a strict source theorem for the APD factors, does not transfer legacy physical roles, and does not close selector/QW-2191.",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:205:        \"theorem_name\": \"P2363 bridge-completed moment transport into strict L_total couplings\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:217:            \"A finite canonical witness shows raw legacy moments and amplitude-normalized legacy moments do not match strict moments.\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:230:        \"probe_id\": \"P2363_S1313_LEGACY_STRICT_BRIDGE_MOMENT_LAGRANGIAN_TRANSPORT\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:337:        \"packet_id\": \"P2363\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:338:        \"stage_id\": \"S1313\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:345:            \"Use the now-certified bridge-completed moments as the input to a 4D covariant \"",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:357:                \"# P2363 S1313: legacy->strict bridge moment transport into L_total\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:363:                \"P2363/S1313 certifies bridge-completed moment transport: applying the explicit APD completion factor to the legacy kernel gives the same `c0,c1,c2` moments and effective `L_total` couplings as the strict kernel.\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:36:    \"P2363/S1313\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:37:    \"bridge-completed moment transport\",",
+            "fundamental_action_reconstruction/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py:38:    \"raw legacy moments\",",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:113:    p2363 = artifacts[\"P2363_BRIDGE_COMPLETED_MOMENTS\"]",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:265:            \"Using the P2363 bridge-completed moments as the coefficient source, one can export \"",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:275:            \"The coefficient source is the P2363 APD-completed bridge moment map, not raw legacy moments.\",",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:27:    \"P2363_BRIDGE_COMPLETED_MOMENTS\": GEN",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:328:            \"source\": \"P2363 bridge-completed APD moment transport\",",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:334:                \"source_certificate\": \"P2363 proves APD-completed bridge moments equal these strict moments.\",",
+            "fundamental_action_reconstruction/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:439:                \"P2364/S1314 exports a bridge-completed FRW residual table for scalar/gauge/gravity residual rows using the P2363 APD-completed moment source.\",",
+            "fundamental_action_reconstruction/p2365_s1315_bridge_completed_frw_nonminimal_metric_variation_residual_probe.py:166:            \"The coefficient source remains P2363 APD-completed bridge moments.\",",
+            "fundamental_action_reconstruction/p2365_s1315_bridge_completed_frw_nonminimal_metric_variation_residual_probe.py:189:            \"source\": \"P2363 bridge-completed APD moment transport\",",
+            "fundamental_action_reconstruction/p2365_s1315_bridge_completed_frw_nonminimal_metric_variation_residual_probe.py:21:    \"P2363_BRIDGE_COMPLETED_MOMENTS\": GEN",
+            "fundamental_action_reconstruction/p2365_s1315_bridge_completed_frw_nonminimal_metric_variation_residual_probe.py:80:    p2363 = artifacts[\"P2363_BRIDGE_COMPLETED_MOMENTS\"]",
+            "fundamental_action_reconstruction/p2366_s1316_selector_candidate_phase_reference_chi11_audit_probe.py:225:    p2363 = artifacts[\"P2363_BRIDGE_COMPLETED_MOMENTS\"]",
+            "fundamental_action_reconstruction/p2366_s1316_selector_candidate_phase_reference_chi11_audit_probe.py:30:    \"P2363_BRIDGE_COMPLETED_MOMENTS\": GEN"
+          ]
+        },
+        "new_packet": {
+          "count": 25,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1249:## P2441/S1391 strict moment coefficient phase-sensitivity rank certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1251:`P2441/S1391` audits the actual P1562 strict moment coefficient route, not the P1664 algebraic replay ansatz.  A finite-difference Jacobian for `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)` with respect to `(omega, phi, beta, eta)` has rank `3`, and its `phi` column is nonzero.  Small phase sweeps around the current `QW-2049` phase change all three moment-derived effective coefficients.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1257:`P2442/S1392` turns the P2441 phase-sensitive moment route into a local identifiability audit.  The Jacobian from four strict kernel parameters `(omega, phi, beta, eta)` to the three P1562-style moment coefficients has rank `3`, so it has a one-dimensional local nullspace.  A normalized null direction changes all four kernel parameters while leaving the three moment coefficients unchanged to first order.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:850:## P2441/S1391 strict moment phase-sensitivity guard",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:852:`P2441/S1391` shows that the P1562 moment-derived effective coefficients are locally sensitive to `phi`.  Any Lagrangian coefficient source that drops `phi` must now carry an explicit phase-invariance theorem before it can replace the strict moment route or feed final SM/GR constants.",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:211:## P2441/S1391 strict moment coefficient phase-sensitivity rank certificate",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:213:`P2441/S1391` audits the actual P1562 strict moment coefficient route, not the P1664 algebraic replay ansatz.  A finite-difference Jacobian for `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)` with respect to `(omega, phi, beta, eta)` has rank `3`, and its `phi` column is nonzero.  Small phase sweeps around the current `QW-2049` phase change all three moment-derived effective coefficients.",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:218:## P2441/S1391 strict moment phase-sensitivity guard",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:220:`P2441/S1391` shows that the P1562 moment-derived effective coefficients are locally sensitive to `phi`.  Any Lagrangian coefficient source that drops `phi` must now carry an explicit phase-invariance theorem before it can replace the strict moment route or feed final SM/GR constants.",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:247:        \"theorem_name\": \"P2441_T1_strict_moment_coefficient_phase_sensitivity_rank_certificate\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:300:        \"packet_id\": \"P2441\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:301:        \"stage_id\": \"S1391\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:321:                \"# P2441 S1391: strict moment coefficient phase-sensitivity rank certificate\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:86:        \"new_packet\": \"P2441|S1391|strict moment coefficient phase sensitivity|moment coefficient phase sensitivity|phase sensitivity rank certificate\",",
+            "fundamental_action_reconstruction/p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:190:`P2442/S1392` turns the P2441 phase-sensitive moment route into a local identifiability audit.  The Jacobian from four strict kernel parameters `(omega, phi, beta, eta)` to the three P1562-style moment coefficients has rank `3`, so it has a one-dimensional local nullspace.  A normalized null direction changes all four kernel parameters while leaving the three moment coefficients unchanged to first order.",
+            "fundamental_action_reconstruction/p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:19:    \"P2441_PHASE_SENSITIVITY\": GEN / \"p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.json\",",
+            "fundamental_action_reconstruction/p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:209:    p2441 = sources[\"P2441_PHASE_SENSITIVITY\"].get(\"strict_moment_coefficient_phase_sensitivity_rank_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:66:        \"p2441_input\": \"P2441|S1391|phase-sensitivity rank|moment coefficient phase\",",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:14:class P2441StrictMomentCoefficientPhaseSensitivityRankCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2441\")",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1391\")",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:54:        self.assertIn(\"P2441/S1391\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:55:        self.assertIn(\"P2441/S1391\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:11:P2441 = ROOT / \"generated\" / \"p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2442_s1392_strict_moment_coefficient_local_identifiability_nullspace_certificate.py:17:        if not P2441.exists():"
+          ]
+        },
+        "p1562_moment_route": {
+          "count": 156,
+          "samples": [
+            "fundamental_action_reconstruction/P1562_S512_STRICT_KERNEL_TO_LAGRANGIAN_COEFFICIENT_DERIVATION_PACKET_PL.md:1:# P1562 S512 Strict-Kernel To Lagrangian Coefficient Derivation Packet (No Legacy Bridge)",
+            "fundamental_action_reconstruction/P1562_S512_STRICT_KERNEL_TO_LAGRANGIAN_COEFFICIENT_DERIVATION_PACKET_PL.md:3:Status: `P1562_PROPOSED_STRICT_KERNEL_TO_LAGRANGIAN_COEFFICIENT_DERIVATION_PACKET`",
+            "fundamental_action_reconstruction/P1563_S513_STRICT_KERNEL_TO_EULER_LAGRANGE_EOM_EXPORT_PACKET_PL.md:12:## Wejście (z P1562)",
+            "fundamental_action_reconstruction/P1563_S513_STRICT_KERNEL_TO_EULER_LAGRANGE_EOM_EXPORT_PACKET_PL.md:16:- `lambda_sm_eff`,",
+            "fundamental_action_reconstruction/P1563_S513_STRICT_KERNEL_TO_EULER_LAGRANGE_EOM_EXPORT_PACKET_PL.md:17:- `kappa_gr_eff`,",
+            "fundamental_action_reconstruction/P1563_S513_STRICT_KERNEL_TO_EULER_LAGRANGE_EOM_EXPORT_PACKET_PL.md:18:- `epsilon_mix_eff`.",
+            "fundamental_action_reconstruction/P1567_S517_STRICT_KERNEL_PARAMETER_INVERSION_AND_IDENTIFIABILITY_PACKET_PL.md:19:`(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)`",
+            "fundamental_action_reconstruction/P1568_S518_STRICT_UNDERDETERMINED_ORBIT_WITNESS_AND_4TH_OBSERVABLE_PACKET_PL.md:23:- Bundle EOM-obserwowalnych: `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)`.",
+            "fundamental_action_reconstruction/P1569_S519_STRICT_LOCAL_UNIQUENESS_THEOREM_CANDIDATE_PACKET_PL.md:11:`(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff, xi_phase_curv)`",
+            "fundamental_action_reconstruction/P1569_S519_STRICT_LOCAL_UNIQUENESS_THEOREM_CANDIDATE_PACKET_PL.md:18:- `lambda_sm_eff = |cos(phi)|/(1+0.3*beta)`",
+            "fundamental_action_reconstruction/P1569_S519_STRICT_LOCAL_UNIQUENESS_THEOREM_CANDIDATE_PACKET_PL.md:19:- `kappa_gr_eff = (omega^2 + 0.5*eta)/(0.2 + |cos(phi)|)`",
+            "fundamental_action_reconstruction/P1569_S519_STRICT_LOCAL_UNIQUENESS_THEOREM_CANDIDATE_PACKET_PL.md:20:- `epsilon_mix_eff = (beta*eta + 0.1*omega)/(1+|sin(phi)|)`",
+            "fundamental_action_reconstruction/P1570_S520_STRICT_CLOSED_FORM_JACOBIAN_HESSIAN_AND_STABILITY_BOUND_PACKET_PL.md:16:`F(p) = (lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff, xi_phase_curv)`",
+            "fundamental_action_reconstruction/P1571_S521_STRICT_SEMIGLOBAL_STABILITY_SCAN_PACKET_PL.md:17:`(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff, xi_phase_curv)`.",
+            "fundamental_action_reconstruction/P1573_S523_STRICT_CHART_TRANSITION_CONTINUITY_PACKET_PL.md:17:`x = (lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff, xi_phase_curv)`.",
+            "fundamental_action_reconstruction/P1577_S527_STRICT_SM_GR_BUNDLE_ROBUSTNESS_WITNESS_PACKET_PL.md:14:   - kanał `SM` (na `lambda_sm_eff`),",
+            "fundamental_action_reconstruction/P1577_S527_STRICT_SM_GR_BUNDLE_ROBUSTNESS_WITNESS_PACKET_PL.md:15:   - kanał `GR` (na `kappa_gr_eff`).",
+            "fundamental_action_reconstruction/P1592_S542_STRICT_PROGRESS_SYNTHESIS_AND_NEXT_STEP_PACKET_PL.md:14:- Raport scala artefakty `P1562`, `P1563`, `P1591`.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1251:`P2441/S1391` audits the actual P1562 strict moment coefficient route, not the P1664 algebraic replay ansatz.  A finite-difference Jacobian for `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)` with respect to `(omega, phi, beta, eta)` has rank `3`, and its `phi` column is nonzero.  Small phase sweeps around the current `QW-2049` phase change all three moment-derived effective coefficients.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1257:`P2442/S1392` turns the P2441 phase-sensitive moment route into a local identifiability audit.  The Jacobian from four strict kernel parameters `(omega, phi, beta, eta)` to the three P1562-style moment coefficients has rank `3`, so it has a one-dimensional local nullspace.  A normalized null direction changes all four kernel parameters while leaving the three moment coefficients unchanged to first order.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:852:`P2441/S1391` shows that the P1562 moment-derived effective coefficients are locally sensitive to `phi`.  Any Lagrangian coefficient source that drops `phi` must now carry an explicit phase-invariance theorem before it can replace the strict moment route or feed final SM/GR constants.",
+            "fundamental_action_reconstruction/p1358_r81_strict_kernel_value_generator_checkpoint.py:18:def _moment(order: int, n: int, omega: float, phi: float, beta: float, eta: float) -> float:",
+            "fundamental_action_reconstruction/p1358_r81_strict_kernel_value_generator_checkpoint.py:40:    m0 = _moment(0, a.n_grid, a.omega, a.phi, a.beta, a.eta)",
+            "fundamental_action_reconstruction/p1358_r81_strict_kernel_value_generator_checkpoint.py:41:    m1 = _moment(1, a.n_grid, a.omega, a.phi, a.beta, a.eta)",
+            "fundamental_action_reconstruction/p1358_r81_strict_kernel_value_generator_checkpoint.py:42:    m2 = _moment(2, a.n_grid, a.omega, a.phi, a.beta, a.eta)",
+            "fundamental_action_reconstruction/p1358_r81_strict_kernel_value_generator_checkpoint.py:43:    m3 = _moment(3, a.n_grid, a.omega, a.phi, a.beta, a.eta)",
+            "fundamental_action_reconstruction/p1367_hebbian_mode_gain_test_checkpoint.py:18:def moment(order: int, n: int, omega: float, phi: float, beta: float, eta: float) -> float:",
+            "fundamental_action_reconstruction/p1367_hebbian_mode_gain_test_checkpoint.py:70:    m0, m1, m2, m3 = [moment(i, a.n_grid, a.omega, a.phi, a.beta, a.eta) for i in range(4)]",
+            "fundamental_action_reconstruction/p1368_gain_suppress_sweep_and_holdout_readiness_checkpoint.py:18:def moment(order: int, n: int, omega: float, phi: float, beta: float, eta: float) -> float:",
+            "fundamental_action_reconstruction/p1368_gain_suppress_sweep_and_holdout_readiness_checkpoint.py:61:    m0, m1, m2, m3 = [moment(i, a.n_grid, a.omega, a.phi, a.beta, a.eta) for i in range(4)]",
+            "fundamental_action_reconstruction/p1562_s512_strict_kernel_to_lagrangian_coefficient_derivation_checkpoint.py:13:def moment(n: int, D: float, steps: int, omega: float, phi: float, beta: float, eta: float) -> float:",
+            "fundamental_action_reconstruction/p1562_s512_strict_kernel_to_lagrangian_coefficient_derivation_checkpoint.py:37:    M0 = moment(0, **params)",
+            "fundamental_action_reconstruction/p1562_s512_strict_kernel_to_lagrangian_coefficient_derivation_checkpoint.py:38:    M1 = moment(1, **params)",
+            "fundamental_action_reconstruction/p1562_s512_strict_kernel_to_lagrangian_coefficient_derivation_checkpoint.py:39:    M2 = moment(2, **params)",
+            "fundamental_action_reconstruction/p1562_s512_strict_kernel_to_lagrangian_coefficient_derivation_checkpoint.py:40:    M3 = moment(3, **params)"
+          ]
+        },
+        "p2440_input": {
+          "count": 27,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1243:## P2440/S1390 current strict tuple coefficient replay rank certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1245:`P2440/S1390` performs a bounded computational replay of the `P1664` algebraic coefficient ansatz at the current `QW-2049` strict tuple.  The replay exports numeric coefficients and a finite-difference Jacobian rank fact, but it also proves the ansatz has a `phi`-null direction: the coefficient formulas recover `omega`, `beta`, `eta`, and `A` locally, while the phase/topological parameter `phi` is not represented.  Therefore the replay is only a diagnostic coefficient candidate, not a strict physical-value generator or selector theorem.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1253:Therefore `P2440`'s phase-null replay is not an admissible replacement for the strict moment route unless a separate theorem proves phase/topology invariance for the physical coefficient map.  This remains a sensitivity/obstruction certificate only: it exports no SM/GR physical-value generator, no `QW-2191` discharge, and no role-bearing `L_total` closure.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:846:## P2440/S1390 current-tuple coefficient replay guard",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:848:`P2440/S1390` allows the `P1664` formulas to be replayed at the current strict tuple only as a diagnostic coefficient ansatz.  Because the replay Jacobian has a `phi`-null direction and no selector/observable theorem, the resulting coefficients cannot be inserted into the Lagrangian as final SM/GR physical constants or as a closure of `QW-2191`.",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:102:        \"new_packet\": \"P2440|S1390|current strict tuple coefficient replay|coefficient replay rank|phase-null coefficient replay\",",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:221:## P2440/S1390 current strict tuple coefficient replay rank certificate",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:223:`P2440/S1390` performs a bounded computational replay of the `P1664` algebraic coefficient ansatz at the current `QW-2049` strict tuple.  The replay exports numeric coefficients and a finite-difference Jacobian rank fact, but it also proves the ansatz has a `phi`-null direction: the coefficient formulas recover `omega`, `beta`, `eta`, and `A` locally, while the phase/topological parameter `phi` is not represented.  Therefore the replay is only a diagnostic coefficient candidate, not a strict physical-value generator or selector theorem.",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:228:## P2440/S1390 current-tuple coefficient replay guard",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:230:`P2440/S1390` allows the `P1664` formulas to be replayed at the current strict tuple only as a diagnostic coefficient ansatz.  Because the replay Jacobian has a `phi`-null direction and no selector/observable theorem, the resulting coefficients cannot be inserted into the Lagrangian as final SM/GR physical constants or as a closure of `QW-2191`.",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:272:        \"theorem_name\": \"P2440_T1_current_strict_tuple_coefficient_replay_rank_certificate\",",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:333:        \"packet_id\": \"P2440\",",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:334:        \"stage_id\": \"S1390\",",
+            "fundamental_action_reconstruction/p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:354:                \"# P2440 S1390: current strict tuple coefficient replay rank certificate\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:20:    \"P2440_REPLAY_RANK\": GEN / \"p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.json\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:215:Therefore `P2440`'s phase-null replay is not an admissible replacement for the strict moment route unless a separate theorem proves phase/topology invariance for the physical coefficient map.  This remains a sensitivity/obstruction certificate only: it exports no SM/GR physical-value generator, no `QW-2191` discharge, and no role-bearing `L_total` closure.",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:244:        sources[\"P2440_REPLAY_RANK\"].get(\"current_strict_tuple_coefficient_replay_rank_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:333:                f\"- P2440 phase-null inherited: `{theorem['p2440_phase_null_inherited']}`.\",",
+            "fundamental_action_reconstruction/p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:87:        \"p2440_input\": \"P2440|S1390|phase-null coefficient replay|coefficient replay rank\",",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:14:class P2440CurrentStrictTupleCoefficientReplayRankCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2440\")",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1390\")",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:58:        self.assertIn(\"coefficient replay rank certificate\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:59:        self.assertIn(\"P2440/S1390\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.py:60:        self.assertIn(\"P2440/S1390\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:11:P2440 = ROOT / \"generated\" / \"p2440_s1390_current_strict_tuple_coefficient_replay_rank_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2441_s1391_strict_moment_coefficient_phase_sensitivity_rank_certificate.py:17:        if not P2440.exists():"
+          ]
+        },
+        "phase_selector_language": {
+          "count": 14769,
+          "samples": [
+            "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:162:2. albo skomitowac i zamrozic ten cykl jako `phase-1 constructive audit complete`.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:134:K_{\\mathrm{sg}}(d) = \\frac{\\cos(\\omega d+\\phi_{\\mathrm{kernel}})}{1+\\beta d^{\\eta}}, \\qquad (\\omega,\\phi_{\\mathrm{kernel}},\\beta,\\eta)=(0.18575, 0.16250, 1.0, 1.8).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:139:- $\\phi_{\\mathrm{kernel}}$: phase constant in $K_{\\mathrm{sg}}$ (dimensionless parameter),",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:141:- $\\phi(x)$: legacy alias for $\\Phi(x)$ in older formulas.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:163:\\Phi(x)\\in\\mathbb{R}, \\qquad \\phi(x)\\equiv \\Phi(x) \\text{ (legacy alias only)}.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:199:V_{\\Phi}(\\Phi) := \\frac{1}{2} m_{\\phi}^2\\,\\Phi^2 + \\frac{1}{4} \\lambda_{\\phi}\\,\\Phi^4,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:218:\\mathcal{L}_{\\mathrm{core}} = \\frac{1}{2}\\,\\partial_\\mu \\phi\\,\\partial^\\mu \\phi + \\frac{1}{2}\\sum_{i=0}^{11}\\partial_\\mu \\psi_i\\,\\partial^\\mu \\psi_i - V_{\\Phi}(\\phi) - V_{\\Psi}(\\Psi) - V_{\\mathrm{Y}}(\\Psi,\\phi) - V_{\\mathrm{mix}}(\\Psi).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:235:\\psi_i(x)\\equiv v_{\\psi i}, \\qquad \\phi(x)\\equiv v_{\\phi}.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:245:\\psi_i = v_{\\psi i}+\\eta_i, \\qquad \\phi = v_\\phi+\\eta_\\phi.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:251:\\eta = (\\eta_0,\\ldots,\\eta_{11},\\eta_\\phi),",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:256:1. diagonal $\\Psi$ entries carry: $3g4_{\\psi i}v_{\\psi i}^2 + 5g6_{\\psi i}v_{\\psi i}^4 + 2gY_i v_\\phi^2 + m_{\\psi i}^2$",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:258:3. $\\Psi$--$\\Phi$ cross terms carry: $4gY_i \\, v_\\phi \\, v_{\\psi i}$",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:271:“Matter” is intended to arise as **nonlinear**, spatially localized and/or topologically stabilized excitations of the",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:303:3. strict-derived vacuum values $(v_{\\psi i}, v_\\phi)$,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:100:- `phi(r) -> phi_inf`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:101:- `(rho_inf, phi_inf)` musi byc punktem krytycznym `V_eff`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:102:- `partial_rho V_eff(rho_inf, phi_inf) = 0`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:103:- `partial_phi V_eff(rho_inf, phi_inf) = 0`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:110:| istnienie radialnych profili `rho(r), phi(r)` | `forced` | bez nich nie ma tla supersolitonowego |",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:111:| dodatni i regularny `K(rho,phi)` wzdluz tla | `forced` | inaczej matching traci sens jako baza do `A3` |",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:127:  - projekcja `G_AB` na tangent tla musi dawac dodatni `K(rho,phi)`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:186:- podstawione rownania E-L dla `rho` i `phi`,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:29:   - `Phi(x) = phi(r)`.",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:30:   - na poziomie ontologii programu `phi(r)` jest warstwa efektywnego porzadku wyekstrahowana z `Psi`, a nie drugim wspolfundamentalnym bytem.",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:44:  r^(d-1) ( 1/2 K(rho,phi) (rho')^2 + 1/2 (phi')^2 - V_eff(rho,phi) )",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:45:  - r^(d-3) T_top(rho,phi; n, B)",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:50:- `K(rho,phi)` jest efektywna metryka pola `G_AB` wzdluz tangensa tla,",
+            "fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md:51:- `V_eff(rho,phi) = V(rho,phi) + U_mix(rho,phi)`,"
+          ]
+        },
+        "rank_or_jacobian": {
+          "count": 2131,
+          "samples": [
+            "fundamental_action_reconstruction/AX17_STRICT_SIDE_POSITIVE_WINDOW_DELTA_D_MAXIMAL_STEP_CONVENTION_ACCEPTANCE_PACKET.md:39:   - delta_d nonuniqueness/sensitivity is explicitly recorded (no false pass).",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:119:   rank-one ray projector induced by `E_orient_preLM_v1`,",
+            "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md:69:   by forgetting frame labels and keeping only the normalized rank-one ray",
+            "fundamental_action_reconstruction/F327_FIRST_CURRENT_STRICT_SIGMA_INT_POSITIVE_WINDOW_DELTA_D_STEP_STRICT_PROVENANCE_TARGET_PACKET.md:47:   - explicit delta_d sensitivity / nonuniqueness in the theta-pair output,",
+            "fundamental_action_reconstruction/F327_FIRST_CURRENT_STRICT_SIGMA_INT_POSITIVE_WINDOW_DELTA_D_STEP_STRICT_PROVENANCE_TARGET_PACKET.md:8:After the positive-window corridor (`T119`) and after the delta_d sensitivity",
+            "fundamental_action_reconstruction/F328_FIRST_ACTUAL_STRICT_SIGMA_INT_POSITIVE_WINDOW_DELTA_D_STEP_STRICT_PROVENANCE_SOURCE_UPGRADE_PACKET.md:33:   - delta_d nonuniqueness/sensitivity is explicit (no false pass),",
+            "fundamental_action_reconstruction/F328_FIRST_ACTUAL_STRICT_SIGMA_INT_POSITIVE_WINDOW_DELTA_D_STEP_STRICT_PROVENANCE_SOURCE_UPGRADE_PACKET.md:8:After the positive-window corridor spec (`T119`) and the delta_d sensitivity",
+            "fundamental_action_reconstruction/F456_CURRENT_STRICT_SIGMA_INT_ORIENTATION_SLICE_TO_A1_PAIR1_OPERATOR_BRIDGE_PACKET.md:30:and define the **rank‑one projector** on `V_1`:",
+            "fundamental_action_reconstruction/F460_CURRENT_STRICT_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENPROJECTORS_EXPORT_PACKET.md:20:P_j := |v_j><v_j|   (rank‑one eigenprojectors)",
+            "fundamental_action_reconstruction/F793_CURRENT_STRICT_ALPHA_S_NORMALIZATION_BOUNDARY_RULE_TARGET_PACKET.md:36:   source-authority ranking.",
+            "fundamental_action_reconstruction/H37_SIGN_DISTINCTION_STATE_AUDIT.md:43:- `P692`: audits that the exported directed closure outputs (premise-based + convention-scoped) induce the same rank‑1 output projector as the exported projective closure output projector (`F672`), i.e. they define the same output ray within tolerance.",
+            "fundamental_action_reconstruction/H40_GLOBAL_SELECTOR_TRANSITION_OBJECT_AUDIT.md:47:- `P692/N692`: audits and packages that the exported directed closure outputs induce the same rank‑1 output projector as the exported projective closure output projector (`F672`), i.e. they define the same output ray (projective downstream invariance; directed lifts are convention/gauge).",
+            "fundamental_action_reconstruction/N425_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_STRICT_DERIVED_V1_THETA_CANDIDATE_POPULATION_RECORD_POSITIVE_WINDOW_THEOREM.md:39:   `P403/N437` record explicit delta_d sensitivity,",
+            "fundamental_action_reconstruction/N437_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_THETA_PAIR_DELTA_D_NONUNIQUENESS_THEOREM.md:39:   - delta_d sensitivity audit (current strict tuple; fixed strict provenance inputs; varying `delta_d` inside the corridor).",
+            "fundamental_action_reconstruction/N439_CURRENT_FIRST_STRICT_SIGMA_INT_POSITIVE_WINDOW_DELTA_D_STEP_STRICT_PROVENANCE_TARGET_THEOREM.md:8:After `T119` and the delta_d sensitivity audit (`P403/N437`), the strict sigma-int",
+            "fundamental_action_reconstruction/N441_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_THETA_PAIR_EPS_NONUNIQUENESS_THEOREM.md:39:   - eps sensitivity audit (current strict tuple; fixed strict provenance inputs; varying `eps` inside `[0,1]`).",
+            "fundamental_action_reconstruction/N442_CURRENT_FIRST_STRICT_SIGMA_INT_TO_THETA_SELECTOR_INGREDIENT_O2_CUT_STRICT_CORE_UPGRADE_INCOMPATIBILITY_BOUNDARY_THEOREM.md:17:From `T159/P406/P409/P408` and the parameter-sensitivity theorems (`N437`, `N441`), the current repo state",
+            "fundamental_action_reconstruction/N502_CURRENT_FIRST_STRICT_RESIDUAL_Z2_SIGN_FREEZE_FOR_EXPORTED_DOWNSTREAM_OBJECTS_GAUGE_IRRELEVANCE_PACKAGE_THEOREM.md:57:By `F456`, the exported operator is the rank‑one projector:",
+            "fundamental_action_reconstruction/N504_CURRENT_FIRST_STRICT_PSI_HESSIAN_EIGENPROJECTOR_SIGN_GAUGE_IRRELEVANCE_THEOREM.md:20:if downstream objects are expressed projectively (rank‑one eigenprojectors) or via squared overlaps,",
+            "fundamental_action_reconstruction/N504_CURRENT_FIRST_STRICT_PSI_HESSIAN_EIGENPROJECTOR_SIGN_GAUGE_IRRELEVANCE_THEOREM.md:31:   - strict-derived export of the rank-one spectral projectors `P_j := |v_j><v_j|` (sign-gauge invariant packaging of `F459`).",
+            "fundamental_action_reconstruction/N504_CURRENT_FIRST_STRICT_PSI_HESSIAN_EIGENPROJECTOR_SIGN_GAUGE_IRRELEVANCE_THEOREM.md:41:Let `v` be any real column vector and define the rank‑one projector:",
+            "fundamental_action_reconstruction/N505_CURRENT_FIRST_STRICT_PSI_HESSIAN_PAIR_PLANE_MIXING_VALUE_INSTANTIATION_THEOREM.md:8:`F459`/`F460` export a strict-derived diagonal/local `Psi` Hessian eigensystem (as eigenvalues + rank‑one eigenprojectors).",
+            "fundamental_action_reconstruction/N506_CURRENT_FIRST_STRICT_PAIR1_PAIR2_CHART_TRANSPORT_OPERATOR_PROJECTOR_SIGN_GAUGE_IRRELEVANCE_THEOREM.md:34:For any real unit vector `u`, define the rank‑one projector:",
+            "fundamental_action_reconstruction/N509_CURRENT_FIRST_STRICT_PAIR12345_CHART_GLUED_PROJECTOR_OPERATOR_SECTION_LOCAL_COCYCLE_THEOREM.md:40:1. projector operators `A_1..A_5` (rank‑one projectors on the `n=12` carrier),",
+            "fundamental_action_reconstruction/N510_CURRENT_FIRST_STRICT_PAIR12345_CHART_GLUED_PROJECTOR_OPERATOR_SECTION_FULL_COCYCLE_THEOREM.md:40:1. projector operators `A_1..A_5` (rank‑one projectors on the `n=12` carrier),",
+            "fundamental_action_reconstruction/N519_CURRENT_FIRST_STRICT_RESIDUAL_Z2_SIGN_FREEZE_EXTENDED_TO_GLOBAL_PROJECTIVE_SELECTOR_OBJECTS_GAUGE_IRRELEVANCE_THEOREM.md:50:The exported global projective selector state object (`F470`) is encoded at chart level by a **rank‑one projector section**:",
+            "fundamental_action_reconstruction/N524_CURRENT_FIRST_STRICT_T171_GLOBAL_DIRECTED_SELECTOR_STATE_DATUM_DISCHARGE_THEOREM.md:59:since a global sign flip does not change rank-one projectors/spans.",
+            "fundamental_action_reconstruction/N680_CURRENT_STRICT_T173_PROJECTIVE_STRICT_CORE_SELECTOR_CLOSURE_DISCHARGE_THEOREM.md:29:5. `P680` — a conservative audit probe reports the exported projective closure observable is numerically consistent with a rank‑1 projector",
+            "fundamental_action_reconstruction/N680_CURRENT_STRICT_T173_PROJECTIVE_STRICT_CORE_SELECTOR_CLOSURE_DISCHARGE_THEOREM.md:37:> output observable is a well-defined chartwise-glued rank‑1 projector in the `(o_+,o_-)` output basis.",
+            "fundamental_action_reconstruction/N692_CURRENT_STRICT_T173_PROJECTIVE_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_THEOREM.md:26:   - `P692` audits that each directed closure output vector induces the same rank‑1 output projector as the projective closure output projector (within tolerance).",
+            "fundamental_action_reconstruction/N692_CURRENT_STRICT_T173_PROJECTIVE_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_THEOREM.md:32:1. The projective closure output projector on `Q_out = span{o_+,o_-}` is a well-defined rank‑1 projector (projective output ray).",
+            "fundamental_action_reconstruction/N692_CURRENT_STRICT_T173_PROJECTIVE_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_THEOREM.md:33:2. The exported directed closure outputs (in the declared scopes) define output vectors whose induced rank‑1 projectors agree with that projective output projector.",
+            "fundamental_action_reconstruction/P1128_CURRENT_STRICT_T173_T176_EXISTING_S3_T332_F960_SOURCE_SIDE_ORIENTED_MEMORY_RULE_LOCAL_OPERATOR_FORM_TARGET_ADMISSION_PROBE.md:81:   - inversion sensitivity on the surviving `pair1/pair2` split,",
+            "fundamental_action_reconstruction/P1152_STRICT_CANDIDATE_REGISTRY_RUNNER_PACKET.md:48:## P1177 extension (`--rank-by-safe-margin`)",
+            "fundamental_action_reconstruction/P1152_STRICT_CANDIDATE_REGISTRY_RUNNER_PACKET.md:50:Dodano tryb `--rank-by-safe-margin`: po zakończeniu runu rejestru runner"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "theorem_export": {
+      "base_coefficients": {
+        "epsilon_mix_eff": 18.138172400709188,
+        "kappa_gr_eff": 11.914038521398066,
+        "lambda_sm_eff": 0.3322022823074632
+      },
+      "base_dimensionless_ratios": {
+        "R1": 0.3322022823074632,
+        "R2": -11.803680165027778,
+        "R3": -232.2353581968145
+      },
+      "base_moments": {
+        "M0": 1.2300294762045925,
+        "M1": 0.4086185993006191,
+        "M2": -14.518874530675655,
+        "M3": -285.65633599901366
+      },
+      "coefficient_order": [
+        "lambda_sm_eff",
+        "kappa_gr_eff",
+        "epsilon_mix_eff"
+      ],
+      "every_phi_sweep_row_changes_a_coefficient": true,
+      "jacobian_column_norms": {
+        "beta": 7.432209399807223,
+        "eta": 36.33293157372276,
+        "omega": 142.6722667196983,
+        "phi": 14.221800887991094
+      },
+      "jacobian_numeric": [
+        [
+          -2.720565591074475,
+          -1.340973269181589,
+          0.17546178992522418,
+          1.794250172433102
+        ],
+        [
+          -75.6404740948291,
+          8.973619433483293,
+          -7.425883246270359,
+          -36.24958154846425
+        ],
+        [
+          -120.94003841784938,
+          -10.95150973391412,
+          -0.25141148665142055,
+          1.682385396032752
+        ]
+      ],
+      "jacobian_real_rank": 3,
+      "next_honest_step": "Construct a phase/topology-sensitive strict coefficient map, or prove an explicit phase-invariance theorem identifying which coefficients may lawfully ignore phi.",
+      "not_licensed": [
+        "P1562-style moment coefficients are locally phase-sensitive at the current strict tuple.",
+        "A phase-null coefficient ansatz cannot replace the moment route without a separate phase-invariance theorem.",
+        "This sensitivity certificate is not a Standard-Model/GR physical-value generator.",
+        "No QW-2191 discharge, role-bearing L_total export, or ToE closure is exported."
+      ],
+      "p1562_comparison": {
+        "max_abs_delta": 1.4377591384118205e-07,
+        "p1562_steps": 200000,
+        "p2441_steps": 20000,
+        "row_count": 3,
+        "rows": [
+          {
+            "coefficient": "lambda_sm_eff",
+            "delta": -1.0305111924902022e-07,
+            "p1562_value": 0.33220238535858243,
+            "p2441_replay_value": 0.3322022823074632
+          },
+          {
+            "coefficient": "kappa_gr_eff",
+            "delta": -1.4377591384118205e-07,
+            "p1562_value": 11.91403866517398,
+            "p2441_replay_value": 11.914038521398066
+          },
+          {
+            "coefficient": "epsilon_mix_eff",
+            "delta": -2.5856003560420504e-08,
+            "p1562_value": 18.13817242656519,
+            "p2441_replay_value": 18.138172400709188
+          }
+        ]
+      },
+      "p2440_not_a_replacement_for_phase_sensitive_moment_route": true,
+      "p2440_phase_null_inherited": true,
+      "parameter_order": [
+        "omega",
+        "phi",
+        "beta",
+        "eta"
+      ],
+      "phi_column": [
+        -1.340973269181589,
+        8.973619433483293,
+        -10.95150973391412
+      ],
+      "phi_column_nonzero": true,
+      "phi_sweep_row_count": 4,
+      "phi_sweep_rows": [
+        {
+          "coefficient_deltas_from_current_phi": {
+            "epsilon_mix_eff": 0.5538024151884606,
+            "kappa_gr_eff": -0.4325067142806933,
+            "lambda_sm_eff": 0.06526824746849497
+          },
+          "coefficients": {
+            "epsilon_mix_eff": 18.691974815897648,
+            "kappa_gr_eff": 11.481531807117372,
+            "lambda_sm_eff": 0.39747052977595815
+          },
+          "max_abs_delta": 0.5538024151884606,
+          "phi_delta": -0.05
+        },
+        {
+          "coefficient_deltas_from_current_phi": {
+            "epsilon_mix_eff": 0.10974725996746315,
+            "kappa_gr_eff": -0.08905961431417886,
+            "lambda_sm_eff": 0.013335201600929047
+          },
+          "coefficients": {
+            "epsilon_mix_eff": 18.24791966067665,
+            "kappa_gr_eff": 11.824978907083887,
+            "lambda_sm_eff": 0.34553748390839223
+          },
+          "max_abs_delta": 0.10974725996746315,
+          "phi_delta": -0.01
+        },
+        {
+          "coefficient_deltas_from_current_phi": {
+            "epsilon_mix_eff": -0.10929118565202955,
+            "kappa_gr_eff": 0.09042847587529046,
+            "lambda_sm_eff": -0.013486005716461302
+          },
+          "coefficients": {
+            "epsilon_mix_eff": 18.028881215057158,
+            "kappa_gr_eff": 12.004466997273356,
+            "lambda_sm_eff": 0.3187162765910019
+          },
+          "max_abs_delta": 0.10929118565202955,
+          "phi_delta": 0.01
+        },
+        {
+          "coefficient_deltas_from_current_phi": {
+            "epsilon_mix_eff": -0.5423810982524664,
+            "kappa_gr_eff": 0.46682286612724866,
+            "lambda_sm_eff": -0.069047263105183
+          },
+          "coefficients": {
+            "epsilon_mix_eff": 17.59579130245672,
+            "kappa_gr_eff": 12.380861387525314,
+            "lambda_sm_eff": 0.2631550192022802
+          },
+          "max_abs_delta": 0.5423810982524664,
+          "phi_delta": 0.05
+        }
+      ],
+      "qw2191_discharged": false,
+      "role_bearing_ltotal_exported": false,
+      "strict_params_used": {
+        "D": 25.0,
+        "beta": 1.0,
+        "eta": 1.8,
+        "omega": 0.18575,
+        "phi": 0.1625,
+        "steps": 20000
+      },
+      "strict_phase_invariance_theorem_exported_by_this_certificate": false,
+      "strict_physical_value_generator_exported": false,
+      "theorem_name": "P2441_T1_strict_moment_coefficient_phase_sensitivity_rank_certificate",
+      "toe_closure_exported": false
+    },
+    "theorem_fingerprint_sha256": "99f4aaca5083183966058673f4c741873dbfe628d948d70a4017f78acd07eff9"
+  }
+}

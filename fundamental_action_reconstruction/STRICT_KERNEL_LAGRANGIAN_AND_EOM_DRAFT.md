@@ -838,3 +838,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2438/S1388 strict SM/GR generation guard for Lagrangian/EOM
 
 `P2438/S1388` moves the Lagrangian/EOM target away from legacy constants and onto a strict-only generation chain.  Existing SM/GR scaffold terms may stay as scaffolds, but no coefficient, physical constant, selector choice, GR completion, or role-bearing `L_total` term is licensed until the eight strict generation obligations are actually discharged.
+
+## P2439/S1389 coefficient-source guard for Lagrangian/EOM
+
+`P2439/S1389` blocks promotion of the current coefficient scaffolds into a role-bearing `L_total`.  `P1563` may be cited only as a current-tuple effective three-coefficient chain; `P1664/P1692` may be cited only as a local manifest/replay on a non-current tuple; and `P1910` may be cited only as an open placeholder counterterm table.  No SM/GR physical constants, selector choice, or observable generator is licensed by these sources.
+
+## P2440/S1390 current-tuple coefficient replay guard
+
+`P2440/S1390` allows the `P1664` formulas to be replayed at the current strict tuple only as a diagnostic coefficient ansatz.  Because the replay Jacobian has a `phi`-null direction and no selector/observable theorem, the resulting coefficients cannot be inserted into the Lagrangian as final SM/GR physical constants or as a closure of `QW-2191`.
+
+## P2441/S1391 strict moment phase-sensitivity guard
+
+`P2441/S1391` shows that the P1562 moment-derived effective coefficients are locally sensitive to `phi`.  Any Lagrangian coefficient source that drops `phi` must now carry an explicit phase-invariance theorem before it can replace the strict moment route or feed final SM/GR constants.
+
+## P2442/S1392 local-identifiability guard
+
+`P2442/S1392` shows that the current three moment-derived coefficients underdetermine the four-parameter strict kernel at the local linear level.  These coefficients may remain diagnostic/effective inputs, but they cannot alone define the final role-bearing `L_total` coefficient source without an extra independent constraint or a proved gauge-redundancy theorem for the null direction.
+
+## P2443/S1393 supplemental-constraint rank-lift guard
+
+`P2443/S1393` identifies finite candidate constraints that would lift the local moment-coefficient rank, but it does not license adding any of them to `L_total`.  A candidate must still be justified as a strict observable/source theorem or gauge-fixing theorem before it can close the P2442 null direction.
+
+## P2444/S1394 rank-lift conditioning guard
+
+`P2444/S1394` ranks supplemental constraints by numerical conditioning, but no conditioned row may be inserted into `L_total` until a strict observable/source or gauge-fixing theorem licenses that row.

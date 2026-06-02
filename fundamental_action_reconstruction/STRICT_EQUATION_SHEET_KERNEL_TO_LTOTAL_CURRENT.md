@@ -1233,3 +1233,39 @@ The audit therefore changes the honest target: physical values must be generated
 `P2438/S1388` starts the strict-side replacement for the discarded legacy-value derivations: it treats the target as `K_strict_gate -> coefficients -> L_SM + L_GR -> observables`, not as legacy `alpha_geo/beta_tors` inheritance.  The certificate builds an 8-obligation matrix for strict kernel identity/domain, kernel-to-coefficient map, SM gauge couplings, SM matter/Higgs/Yukawa export, GR/background-independence, curvature-squared/unitarity completion, QW-2191 selector uniqueness, and strict observable-value generation.
 
 The current matrix is intentionally negative: all six SM/GR generation targets remain not ready, because the repo has scaffolds and partial variational witnesses but no theorem-grade strict observable generator or QW-2191 discharge.  This is the first strict-only SM/GR worklist after P2437, not a closure claim.
+
+## P2439/S1389 strict coefficient-source consistency audit
+
+`P2439/S1389` audits the existing strict coefficient sources before any renewed SM/GR value derivation.  The finite audit separates the current-tuple three-effective-coefficient chain (`P1563/P1641`), the fuller but tuple-mismatched local manifest/inversion chain (`P1664/P1692`), and the open loop-counterterm placeholder table (`P1910`).  None is promoted to a current strict SM/GR physical-value generator: the first is too low-dimensional, the second is not the current `QW-2049` tuple and is only local, and the third has unevaluated symbolic placeholders.
+
+Consequently the next honest coefficient step is not to insert legacy constants or reuse the tuple-mismatched manifest as if it were final, but to construct a current-`K_strict_gate` coefficient map that simultaneously covers SM gauge, matter/Higgs/Yukawa, GR, selector uniqueness, and observable-value generation.
+
+## P2440/S1390 current strict tuple coefficient replay rank certificate
+
+`P2440/S1390` performs a bounded computational replay of the `P1664` algebraic coefficient ansatz at the current `QW-2049` strict tuple.  The replay exports numeric coefficients and a finite-difference Jacobian rank fact, but it also proves the ansatz has a `phi`-null direction: the coefficient formulas recover `omega`, `beta`, `eta`, and `A` locally, while the phase/topological parameter `phi` is not represented.  Therefore the replay is only a diagnostic coefficient candidate, not a strict physical-value generator or selector theorem.
+
+This certificate also quarantines old closure flags when they conflict with the current P2438/P2439 no-closure state: local coefficient replay must not be read as `QW-2191` discharge, ToE closure, SM/GR value generation, or role-bearing `L_total` export.
+
+## P2441/S1391 strict moment coefficient phase-sensitivity rank certificate
+
+`P2441/S1391` audits the actual P1562 strict moment coefficient route, not the P1664 algebraic replay ansatz.  A finite-difference Jacobian for `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)` with respect to `(omega, phi, beta, eta)` has rank `3`, and its `phi` column is nonzero.  Small phase sweeps around the current `QW-2049` phase change all three moment-derived effective coefficients.
+
+Therefore `P2440`'s phase-null replay is not an admissible replacement for the strict moment route unless a separate theorem proves phase/topology invariance for the physical coefficient map.  This remains a sensitivity/obstruction certificate only: it exports no SM/GR physical-value generator, no `QW-2191` discharge, and no role-bearing `L_total` closure.
+
+## P2442/S1392 strict moment coefficient local-identifiability nullspace certificate
+
+`P2442/S1392` turns the P2441 phase-sensitive moment route into a local identifiability audit.  The Jacobian from four strict kernel parameters `(omega, phi, beta, eta)` to the three P1562-style moment coefficients has rank `3`, so it has a one-dimensional local nullspace.  A normalized null direction changes all four kernel parameters while leaving the three moment coefficients unchanged to first order.
+
+Therefore even the phase-sensitive three-coefficient moment map is not by itself an injective strict kernel source or full physical-value generator.  A strict SM/GR coefficient theorem still needs an extra independent observable/source constraint, or an explicit reduction theorem explaining why the null direction is physically gauge/redundant.
+
+## P2443/S1393 strict moment supplemental-constraint rank-lift certificate
+
+`P2443/S1393` audits which finite supplemental constraints can remove the P2442 local null direction.  It enumerates raw moment candidates `(M0..M3)` and pointwise strict-kernel sample candidates, computes each candidate gradient against `(omega, phi, beta, eta)`, and checks whether appending that row lifts the P2441/P2442 moment-coefficient Jacobian rank from `3` to `4`.
+
+The result is a rank-lift frontier, not a physical-value theorem: many singleton candidates are mathematically independent of the null direction, but none is yet proven to be an admissible strict observable/source constraint, selector theorem, or SM/GR value generator.
+
+## P2444/S1394 strict moment rank-lift conditioning certificate
+
+`P2444/S1394` refines the P2443 rank-lift frontier by adding conditioning diagnostics.  For each singleton supplemental candidate it computes gradient norm, null-direction margin, and row-normalized augmented determinant volume.  This separates mathematically rank-lifting candidates from better-conditioned rank-lifting candidates.
+
+The conditioning winner is still only a candidate: numerical conditioning does not prove admissibility as a strict observable/source constraint, does not discharge `QW-2191`, and does not export a physical-value generator.
