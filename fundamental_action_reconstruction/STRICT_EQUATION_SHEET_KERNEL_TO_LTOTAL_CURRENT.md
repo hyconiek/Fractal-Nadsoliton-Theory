@@ -1371,3 +1371,27 @@ This is a stratified gap-sentinel replay, not a full complement Decimal replay, 
 `P2461/S1411` strengthens the P2460 gap-sentinel check by taking the weakest unreplayed-gap sentinel in each scalar family and replaying its local neighboring cells with the same Decimal/Taylor backend.  The replay covers 8 local gap-neighborhood cells in total and every replayed cell remains zero-excluding.
 
 This is a local weakest-neighborhood replay, not an exhaustive Decimal full-complement replay, directed-rounding interval theorem, symbolic root-exclusion theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2462/S1412 strict pointwise interval-Decimal gap dyadic-refinement replay certificate
+
+`P2462/S1412` refines the P2460 gap-sentinel ledger without pretending to close the P2459 gap: in each unreplayed complement segment it replays the dyadic midpoints between the P2460 quarter sentinels (`1/8`, `3/8`, `5/8`, `7/8`) using the same Decimal/Taylor backend.  The replay adds 20 non-quarter-sentinel refinement cells and every replayed cell remains zero-excluding.
+
+This is a dyadic refinement replay between already-audited sentinels, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2463/S1413 strict pointwise interval-Decimal adaptive dyadic weakest-flank replay certificate
+
+`P2463/S1413` follows the P2462 dyadic refinement by taking the weakest P2462 dyadic cell in each scalar family and replaying the nearby non-anchor flank cells within radius 4.  The replay adds 16 non-anchor flank cells, all remain zero-excluding, and it records that smaller Decimal separations than the P2462 dyadic anchors are found locally without turning that observation into a monotonicity or full-complement theorem.
+
+This is an adaptive weakest-flank replay and descent diagnostic, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2464/S1414 strict pointwise interval-Decimal adaptive flank descent-extension replay certificate
+
+`P2464/S1414` continues the P2463 adaptive descent diagnostic by extending one-sided from each family's weakest P2463 flank cell for four additional unreplayed complement cells in the empirically decreasing direction.  The replay adds 8 descent-extension cells, all remain zero-excluding, and the Decimal separations strictly decrease from the P2463 anchor along each audited extension.
+
+This is a finite one-sided descent-extension replay, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2465/S1415 strict pointwise interval-Decimal adaptive descent-horizon ledger certificate
+
+`P2465/S1415` extends the P2464 one-sided descent from each family's P2464 endpoint through a 32-cell Decimal/Taylor horizon.  The replay adds 64 horizon cells, all remain zero-excluding, and the separations strictly decrease throughout the audited horizon; therefore no local bracket is found inside this finite horizon.
+
+This is an unbracketed descent-horizon ledger, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.

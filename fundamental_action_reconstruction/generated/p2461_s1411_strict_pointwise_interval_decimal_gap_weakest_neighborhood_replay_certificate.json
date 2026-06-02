@@ -42,7 +42,7 @@
     "rg_nonduplication_audit": {
       "patterns": {
         "closure_blockers": {
-          "count": 11030,
+          "count": 11035,
           "samples": [
             "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
             "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
@@ -82,7 +82,7 @@
           ]
         },
         "decimal_backend": {
-          "count": 34,
+          "count": 37,
           "samples": [
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1323:`P2453/S1403` replays the two weakest P2451 complement cells with a higher-precision Decimal interval backend and monotone Taylor endpoint enclosures for `sin` and `cos`.  The zero-projection weakest cell and stationary-factor weakest cell both remain strictly positive and zero-excluding under this independent endpoint replay.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1329:`P2454/S1404` extends P2453 from a single weakest cell per family to a forward weakest-band replay: twelve adjacent complement cells are replayed for both the zero-projection amplitude and the stationary factor using the same Decimal/Taylor endpoint backend.  Every replayed critical-band cell remains zero-excluding.",
@@ -90,6 +90,7 @@
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1347:`P2457/S1407` audits the P2456 all-root-window boundary replay as a shape statement: after ordering each boundary band by increasing distance from its adjacent root-window boundary, Decimal/Taylor separation from zero strictly increases in every audited band, each band is sign-coherent, and the two sides of each audited root window have opposite zero-excluding signs.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1365:`P2460/S1410` responds to the P2459 coverage-gap ledger without pretending to close it: for every P2451 complement segment, it selects stratified sentinel cells from the part not already covered by the P2456 Decimal boundary chain and replays those sentinels with the Decimal/Taylor backend.  All 25 selected gap sentinels remain zero-excluding.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1371:`P2461/S1411` strengthens the P2460 gap-sentinel check by taking the weakest unreplayed-gap sentinel in each scalar family and replaying its local neighboring cells with the same Decimal/Taylor backend.  The replay covers 8 local gap-neighborhood cells in total and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1377:`P2462/S1412` refines the P2460 gap-sentinel ledger without pretending to close the P2459 gap: in each unreplayed complement segment it replays the dyadic midpoints between the P2460 quarter sentinels (`1/8`, `3/8`, `5/8`, `7/8`) using the same Decimal/Taylor backend.  The replay adds 20 non-quarter-sentinel refinement cells and every replayed cell remains zero-excluding.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:900:`P2453/S1403` independently replays the weakest P2451 cells with Decimal/Taylor endpoint enclosures, strengthening confidence in the interval audit bottleneck cells.  It remains a numerical backend cross-check and does not license any pointwise coordinate as a selector/source/gauge row for `L_total`.",
             "fundamental_action_reconstruction/p2451_s1401_strict_pointwise_projection_interval_enclosure_root_exclusion_audit.py:142:        \"interval_language\": \"interval enclosure|interval arithmetic|zero-excluding interval|complement cell enclosure|monotone sin\",",
             "fundamental_action_reconstruction/p2453_s1403_strict_pointwise_directed_decimal_weakest_cell_replay_certificate.py:188:        \"new_packet\": \"P2453|S1403|directed decimal weakest-cell|Taylor endpoint replay|decimal weakest cell\",",
@@ -121,13 +122,14 @@
           ]
         },
         "neighborhood_language": {
-          "count": 1,
+          "count": 2,
           "samples": [
-            "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:79:        \"neighborhood_language\": \"weakest sentinel neighborhood|sentinel neighborhood|neighbor cells|local gap neighborhood\","
+            "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:79:        \"neighborhood_language\": \"weakest sentinel neighborhood|sentinel neighborhood|neighbor cells|local gap neighborhood\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:85:        \"p2461_input\": \"P2461|S1411|gap weakest neighborhood|weakest gap neighborhood|local gap neighborhood\","
           ]
         },
         "new_packet": {
-          "count": 18,
+          "count": 25,
           "samples": [
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1369:## P2461/S1411 strict pointwise interval-Decimal gap weakest-neighborhood replay certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1371:`P2461/S1411` strengthens the P2460 gap-sentinel check by taking the weakest unreplayed-gap sentinel in each scalar family and replaying its local neighboring cells with the same Decimal/Taylor backend.  The replay covers 8 local gap-neighborhood cells in total and every replayed cell remains zero-excluding.",
@@ -142,22 +144,31 @@
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:247:        \"stage_id\": \"S1411\",",
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:262:        \"# P2461/S1411 strict pointwise interval-Decimal gap weakest-neighborhood replay certificate\",",
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:77:        \"new_packet\": \"P2461|S1411|gap weakest neighborhood|weakest gap neighborhood|gap-neighborhood replay\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:203:    p2461 = sources[\"P2461_GAP_WEAKEST_NEIGHBORHOOD\"].get(\"strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:214:        \"inherited_gap_weakest_neighborhood_replay\": \"P2461/S1411\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:295:        f\"P2461 weakest-neighborhood cells inherited: `{t['p2461_total_neighborhood_replay_count_inherited']}`.\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:36:    \"P2461_GAP_WEAKEST_NEIGHBORHOOD\": GEN / \"p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.json\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:85:        \"p2461_input\": \"P2461|S1411|gap weakest neighborhood|weakest gap neighborhood|local gap neighborhood\",",
             "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:15:class P2461StrictPointwiseIntervalDecimalGapWeakestNeighborhoodReplayCertificateTest(unittest.TestCase):",
             "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:26:        self.assertEqual(self.payload[\"packet_id\"], \"P2461\")",
             "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:27:        self.assertEqual(self.payload[\"stage_id\"], \"S1411\")",
             "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:66:        self.assertIn(\"P2461/S1411\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:67:        self.assertIn(\"P2461/S1411\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+            "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:67:        self.assertIn(\"P2461/S1411\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:13:P2461 = ROOT / \"generated\" / \"p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.json\"",
+            "fundamental_action_reconstruction/test_p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:21:        if not P2461.exists():"
           ]
         },
         "p2460_input": {
-          "count": 32,
+          "count": 48,
           "samples": [
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1363:## P2460/S1410 strict pointwise interval-Decimal gap-sentinel replay certificate",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1365:`P2460/S1410` responds to the P2459 coverage-gap ledger without pretending to close it: for every P2451 complement segment, it selects stratified sentinel cells from the part not already covered by the P2456 Decimal boundary chain and replays those sentinels with the Decimal/Taylor backend.  All 25 selected gap sentinels remain zero-excluding.",
             "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1371:`P2461/S1411` strengthens the P2460 gap-sentinel check by taking the weakest unreplayed-gap sentinel in each scalar family and replaying its local neighboring cells with the same Decimal/Taylor backend.  The replay covers 8 local gap-neighborhood cells in total and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1377:`P2462/S1412` refines the P2460 gap-sentinel ledger without pretending to close the P2459 gap: in each unreplayed complement segment it replays the dyadic midpoints between the P2460 quarter sentinels (`1/8`, `3/8`, `5/8`, `7/8`) using the same Decimal/Taylor backend.  The replay adds 20 non-quarter-sentinel refinement cells and every replayed cell remains zero-excluding.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:926:## P2460/S1410 Decimal gap-sentinel replay guard",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:928:`P2460/S1410` probes the P2459 unreplayed complement gap with stratified Decimal/Taylor sentinels in each complement segment.  It improves gap diagnostics but still leaves the full complement gap open and adds no selector/source/gauge authority for `L_total`.",
             "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:932:`P2461/S1411` probes the local neighborhoods around the weakest P2460 gap sentinels.  It improves local gap diagnostics but does not close the full P2459 complement gap and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:936:`P2462/S1412` probes the eighth-step midpoints between the P2460 quarter sentinels inside the unreplayed complement segments.  It improves stratified gap diagnostics but still leaves the full P2459 complement gap open and adds no selector/source/gauge authority for `L_total`.",
             "fundamental_action_reconstruction/p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:210:## P2460/S1410 strict pointwise interval-Decimal gap-sentinel replay certificate",
             "fundamental_action_reconstruction/p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:212:`P2460/S1410` responds to the P2459 coverage-gap ledger without pretending to close it: for every P2451 complement segment, it selects stratified sentinel cells from the part not already covered by the P2456 Decimal boundary chain and replays those sentinels with the Decimal/Taylor backend.  All 25 selected gap sentinels remain zero-excluding.",
             "fundamental_action_reconstruction/p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:217:## P2460/S1410 Decimal gap-sentinel replay guard",
@@ -177,13 +188,14 @@
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:35:    \"P2460_GAP_SENTINEL_REPLAY\": GEN / \"p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.json\",",
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:78:        \"p2460_input\": \"P2460|S1410|gap sentinel replay|unreplayed gap sentinel|stratified sentinel\",",
             "fundamental_action_reconstruction/p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:99:    raise ValueError(f\"family not found in P2460: {family}\")",
-            "fundamental_action_reconstruction/test_p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:15:class P2460StrictPointwiseIntervalDecimalGapSentinelReplayCertificateTest(unittest.TestCase):",
-            "fundamental_action_reconstruction/test_p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:26:        self.assertEqual(self.payload[\"packet_id\"], \"P2460\")",
-            "fundamental_action_reconstruction/test_p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:27:        self.assertEqual(self.payload[\"stage_id\"], \"S1410\")",
-            "fundamental_action_reconstruction/test_p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:66:        self.assertIn(\"P2460/S1410\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.py:67:        self.assertIn(\"P2460/S1410\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
-            "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:12:P2460 = ROOT / \"generated\" / \"p2460_s1410_strict_pointwise_interval_decimal_gap_sentinel_replay_certificate.json\"",
-            "fundamental_action_reconstruction/test_p2461_s1411_strict_pointwise_interval_decimal_gap_weakest_neighborhood_replay_certificate.py:18:        if not P2460.exists():"
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:121:    return {fraction_to_index(fraction, max_index) for fraction in P2460_SENTINEL_FRACTIONS}",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:180:`P2462/S1412` refines the P2460 gap-sentinel ledger without pretending to close the P2459 gap: in each unreplayed complement segment it replays the dyadic midpoints between the P2460 quarter sentinels (`1/8`, `3/8`, `5/8`, `7/8`) using the same Decimal/Taylor backend.  The replay adds 20 non-quarter-sentinel refinement cells and every replayed cell remains zero-excluding.",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:187:`P2462/S1412` probes the eighth-step midpoints between the P2460 quarter sentinels inside the unreplayed complement segments.  It improves stratified gap diagnostics but still leaves the full P2459 complement gap open and adds no selector/source/gauge authority for `L_total`.",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:202:    p2460 = sources[\"P2460_GAP_SENTINEL_REPLAY\"].get(\"strict_pointwise_interval_decimal_gap_sentinel_replay_certificate\", {}).get(\"theorem_export\", {})",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:213:        \"inherited_gap_sentinel_replay\": \"P2460/S1410\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:220:        \"p2460_quarter_sentinel_fractions_avoided\": [str(value) for value in P2460_SENTINEL_FRACTIONS],",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:294:        f\"P2460 gap sentinels inherited: `{t['p2460_total_gap_sentinel_replay_count_inherited']}`.\",",
+            "fundamental_action_reconstruction/p2462_s1412_strict_pointwise_interval_decimal_gap_dyadic_refinement_replay_certificate.py:299:        f\"All refinement indexes avoid P2460 quarter sentinels: `{t['all_refinement_indexes_avoid_p2460_quarter_sentinels']}`.\","
           ]
         }
       },
