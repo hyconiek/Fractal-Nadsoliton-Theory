@@ -862,3 +862,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2444/S1394 rank-lift conditioning guard
 
 `P2444/S1394` ranks supplemental constraints by numerical conditioning, but no conditioned row may be inserted into `L_total` until a strict observable/source or gauge-fixing theorem licenses that row.
+
+## P2445/S1395 rank-lift conditioning stability guard
+
+`P2445/S1395` may stabilize the P2444 ordering against numerical-discretization objections, but stable conditioning still cannot insert a supplemental row into `L_total` without a strict observable/source theorem or a lawful gauge-fixing theorem.
+
+## P2446/S1396 pointwise selector obstruction guard
+
+`P2446/S1396` blocks the silent promotion of the stable `K_at_d_1` row into `L_total`: pointwise rank-lift conditioning does not select the evaluation coordinate and does not supply admissibility or gauge-fixing authority.
+
+## P2447/S1397 stationary pointwise selector guard
+
+`P2447/S1397` shows that refining the pointwise conditioning search moves the best-conditioned coordinate away from `d=1`; no pointwise row may enter `L_total` until an independent selector/source/gauge theorem chooses and licenses the coordinate.
