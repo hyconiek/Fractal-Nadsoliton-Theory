@@ -1010,3 +1010,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2476/S1426 P2459 critical-halo order classification guard
 
 `P2476/S1426` adds an order-classification guard to the finite-grid bookkeeping behind `L_total`: P2475 critical halos are checked for strict local minima, one-sided boundary minima, and lower-neighbor exceptions.  This improves proof hygiene around weakest-witness language, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2477/S1427 P2459 lower-neighbor exception expanded-halo replay guard
+
+`P2477/S1427` adds an exception-targeted expanded-halo guard to the finite-grid bookkeeping behind `L_total`: the unique P2476 lower-neighbor exception is replayed with a radius-four Decimal/Taylor strip around the original center and the lowest lower-neighbor anchor.  This improves localization of the finite weakest flank, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2478/S1428 P2459 left-boundary descent-flank extension replay guard
+
+`P2478/S1428` adds a one-sided flank-extension guard to the finite-grid bookkeeping behind `L_total`: the P2477 left-boundary minimum is extended by `16` fresh left-flank cells and replayed with the Decimal/Taylor backend.  This improves localization of the finite descent direction, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2479/S1429 P2459 segment-start left-prefix replay guard
+
+`P2479/S1429` adds a complete one-sided finite-prefix guard to the bookkeeping behind `L_total`: the P2478 left-boundary flank is extended to the segment-start boundary and `1116` prefix cells are replayed with the Decimal/Taylor backend.  This improves finite descent-prefix localization, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2480/S1430 P2459 segment-start cell dyadic-refinement replay guard
+
+`P2480/S1430` adds a cell-internal refinement guard to the finite-grid bookkeeping behind `L_total`: the P2479 segment-start minimum cell is split into `128` dyadic subcells and replayed with Decimal/Taylor arithmetic.  This improves local finite resolution of the weakest boundary cell, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
