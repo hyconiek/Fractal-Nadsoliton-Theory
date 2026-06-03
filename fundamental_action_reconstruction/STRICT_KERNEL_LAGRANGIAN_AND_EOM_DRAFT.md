@@ -1026,3 +1026,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2480/S1430 P2459 segment-start cell dyadic-refinement replay guard
 
 `P2480/S1430` adds a cell-internal refinement guard to the finite-grid bookkeeping behind `L_total`: the P2479 segment-start minimum cell is split into `128` dyadic subcells and replayed with Decimal/Taylor arithmetic.  This improves local finite resolution of the weakest boundary cell, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2481/S1431 P2459 boundary-handoff collar replay guard
+
+`P2481/S1431` adds a boundary-handoff collar guard behind `L_total`: the P2456 covered right-boundary band adjacent to the P2479 segment-start cell is replayed together with the P2480 dyadic refinement.  This prevents overreading the P2480 leftmost subcell as the whole local bottleneck and keeps `134` fresh Decimal evaluation rows separate from P2459 coverage-cell counting; it remains finite seam evidence only and does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2482/S1432 P2459 boundary-band weakest-cell dyadic-refinement replay guard
+
+`P2482/S1432` adds a cell-internal refinement guard for the weakest P2481 boundary-band row behind `L_total`.  The `128` fresh Decimal evaluations are diagnostic subcell rows inside one inherited P2456 covered-boundary-chain cell, not new P2459 coverage cells; the result remains finite seam evidence only and does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2483/S1433 P2459 root-window-adjacent nested boundary ladder replay guard
+
+`P2483/S1433` adds a nested one-sided boundary-ladder guard for the weakest P2482 subcell behind `L_total`.  Its `16` fresh Decimal evaluations are diagnostic nested rows anchored at the root-window side of one inherited covered-boundary-chain cell, not new P2459 coverage cells; the result remains finite one-sided seam evidence and does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, root-window closure, or ToE closure.
