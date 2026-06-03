@@ -1457,3 +1457,9 @@ This is a two-tail endpoint-to-boundary ledger, not a full complement Decimal re
 `P2467/S1417` responds to the P2466 next-step prompt by auditing the opposite, non-descent-side tails from the same P2465/P2466 adaptive endpoints.  It does not replay the full opposite tails; instead it replays deterministic endpoint-band plus dyadic-fraction sentinels in each opposite tail using the same Decimal/Taylor backend.  The selected opposite-tail sentinels remain zero-excluding and are disjoint from the P2466 descent-tail rows.
 
 This is an opposite-tail sentinel ledger, not an opposite-tail full replay, full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2468/S1418 strict pointwise interval-Decimal chunked opposite-tail replay ledger certificate
+
+`P2468/S1418` is the proof-hygiene continuation after P2467.  Because a full opposite-tail replay was too heavy for the interactive run, it records a deterministic chunked opposite-tail replay ledger: each P2467 opposite tail is split into stable chunks and endpoint, midpoint, and float-min-risk sentinels are replayed by the same Decimal/Taylor backend.  The replayed chunk sentinels remain zero-excluding, have positive Decimal separation, and are disjoint from the P2466 descent-tail rows.
+
+This is not an opposite-tail full replay, remaining-complement replay, full P2459 complement replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
