@@ -978,3 +978,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2468/S1418 Decimal chunked opposite-tail replay ledger guard
 
 `P2468/S1418` adds a deterministic chunked replay of endpoint/midpoint/min-risk sentinels across the two P2467 opposite tails.  It strengthens tail proof hygiene and gives an explicit uncovered-budget ledger, but it does not make `L_total` role-bearing and does not export selector/source/gauge authority, a physical-value generator, `QW-2191` closure, or ToE closure.
+
+## P2469/S1419 Decimal full opposite-tail replay guard
+
+`P2469/S1419` gives `L_total` bookkeeping a stronger negative-control input by replaying every P2467 opposite-tail cell with the Decimal/Taylor backend.  The result is a tail-only computational exclusion certificate: it improves coverage accounting but leaves the remaining P2459 complement budget, selector/source obstruction, gauge status, physical-value generation, role-bearing status, and ToE closure open.
+
+## P2470/S1420 Decimal full remaining non-tail complement replay guard
+
+`P2470/S1420` completes the current finite P2459 unreplayed-by-boundary-chain ledger by adding a full Decimal/Taylor replay of the non-tail remainder left after P2466 and P2469.  It strengthens finite-grid exclusion bookkeeping for `L_total`, but it remains computational proof hygiene rather than selector/source closure, gauge closure, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2471/S1421 P2459 finite partition witness guard
+
+`P2471/S1421` audits the finite-grid coverage claim behind P2466+P2469+P2470 by proving an indexed disjoint partition of the P2459 unreplayed-by-boundary-chain cells.  This improves `L_total` bookkeeping hygiene but does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2472/S1422 P2459 finite partition seam replay guard
+
+`P2472/S1422` strengthens the finite-grid bookkeeping behind `L_total` by checking the transition seams between P2466, P2469, and P2470 partition classes and replaying seam cells.  It does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
