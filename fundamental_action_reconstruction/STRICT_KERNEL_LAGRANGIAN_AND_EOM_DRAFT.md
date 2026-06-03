@@ -1106,3 +1106,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2500/S1450 third-derivative formula provenance guard
 
 `P2500/S1450` symbolically verifies the third-derivative formulas and implicit `x'''` chain identity used by P2499.  It strengthens the local inflection-uniqueness guard against formula-transcription error, but still exports no nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2501/S1451 interval-Newton inflection-root enclosure guard
+
+`P2501/S1451` contracts the P2498/P2499 local inflection bracket by an interval-Newton step using the formula-audited `x'''` denominator.  The contracted enclosure is a strict subset of the refined window and inherits local uniqueness from P2499, but it still exports no nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2502/S1452 bridge minimal-triple frontier guard
+
+`P2502/S1452` enumerates all three-atom theorem-frontier extensions and identifies the unique bridge-closing strict-source triple while preserving the role-transfer, selector/QW-2191, and ToE blockers.  The P2493--P2501 curvature chain remains finite compression evidence only; it does not license a role-bearing `L_total` term or a nonlinear compression-flow source theorem.
+
+## P2503/S1453 strict damping marginal RG-flow candidate guard
+
+`P2503/S1453` records a symbolic candidate flow that would supply the strict damping exponent if a future theorem derives `delta=14/5-4 log(2)`.  It is useful theorem-prep for the P2502 strict-source triple, but it is not yet a nonlinear compression-flow source theorem and does not license a role-bearing `L_total` term.
+
+## P2504/S1454 constant-coefficient RG uniqueness guard
+
+`P2504/S1454` proves that the P2503 marginal-flow parameters are unique inside the constant-coefficient running-beta ansatz.  The result is theorem-prep for `strict_damping_beta_eta_source`, not a nonlinear compression-flow source theorem or a license for role-bearing `L_total`.
+
+## P2505/S1455 finite-node RG-flow nullspace guard
+
+`P2505/S1455` shows that finite strict damping samples admit nonconstant running-beta perturbations that vanish at all audited nodes.  Therefore P2504 remains an ansatz-scoped uniqueness result and cannot by itself license a nonlinear compression-flow source theorem or role-bearing `L_total` term.
+
+## P2506/S1456 minimum-roughness RG selector candidate guard
+
+`P2506/S1456` shows that a postulated minimum-roughness action would select the constant P2503 running-beta flow against the P2505 nullspace.  Because the action is not derived from strict nadsoliton dynamics, it remains theorem-prep and does not license a nonlinear compression-flow source theorem or role-bearing `L_total`.
