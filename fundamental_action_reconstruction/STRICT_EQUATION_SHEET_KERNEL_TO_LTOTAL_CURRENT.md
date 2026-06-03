@@ -1463,3 +1463,29 @@ This is an opposite-tail sentinel ledger, not an opposite-tail full replay, full
 `P2468/S1418` is the proof-hygiene continuation after P2467.  Because a full opposite-tail replay was too heavy for the interactive run, it records a deterministic chunked opposite-tail replay ledger: each P2467 opposite tail is split into stable chunks and endpoint, midpoint, and float-min-risk sentinels are replayed by the same Decimal/Taylor backend.  The replayed chunk sentinels remain zero-excluding, have positive Decimal separation, and are disjoint from the P2466 descent-tail rows.
 
 This is not an opposite-tail full replay, remaining-complement replay, full P2459 complement replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2469/S1419 strict pointwise interval-Decimal full opposite-tail replay certificate
+
+`P2469/S1419` upgrades the P2468 chunked ledger into a full computational Decimal/Taylor replay of every cell in the two P2467 opposite tails.  All `45165` inherited opposite-tail cells are replayed, all replayed intervals exclude zero, the minimum Decimal separation remains positive, and the replay index sets remain disjoint from the P2466 descent-tail rows.
+
+This is only a full replay of the two P2467 opposite tails.  It is not a full P2459 remaining-complement replay, not a directed-rounding interval theorem, not a symbolic root-exclusion theorem, not a selector/source/gauge theorem, not a physical-value generator, not a role-bearing `L_total`, not a `QW-2191` discharge, not a legacy-role transfer, and not ToE closure.
+
+## P2470/S1420 strict pointwise interval-Decimal full remaining non-tail complement replay certificate
+
+`P2470/S1420` replays the remaining P2459 unreplayed-by-boundary-chain cells that were not already covered by the P2466 descent tails or the P2469 full opposite-tail replay.  The new replay covers `48320` remaining non-tail cells, all replayed intervals exclude zero, and the combined P2466+P2469+P2470 finite Decimal/Taylor ledger covers the full `99846` P2459 unreplayed-by-boundary-chain budget.
+
+For a non-specialist: this closes the current finite checklist of leftover interval cells in the audited numerical grid.  It still does not prove that every possible real point is excluded by a symbolic theorem; it says that every cell in this particular certified finite audit ledger has now been replayed by the Decimal/Taylor backend.
+
+This is not a directed-rounding interval theorem, not a symbolic root-exclusion theorem, not an analytic monotonicity theorem, not a selector/source/gauge theorem, not a physical-value generator, not a role-bearing `L_total`, not a `QW-2191` discharge, not a legacy-role transfer, and not ToE closure.
+
+## P2471/S1421 strict pointwise interval-Decimal P2459 finite partition witness certificate
+
+`P2471/S1421` adds an independent set-partition witness for the finite P2459 unreplayed-by-boundary-chain universe.  It rebuilds the audited cell universe from P2450/P2451/P2456, then proves by indexed set accounting that P2466 descent tails, P2469 opposite tails, and P2470 remaining non-tail cells form a disjoint partition of all `99846` P2459 cells.
+
+This is a stronger bookkeeping theorem for the finite audit ledger: it checks that no P2459 cell was counted twice and no P2459 cell was missed.  It remains finite-grid proof hygiene, not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
+
+## P2472/S1422 strict pointwise interval-Decimal P2459 partition seam replay audit
+
+`P2472/S1422` audits the off-by-one seams of the P2471 finite partition witness.  It rebuilds the selected P2459 segment classifications, checks that class transitions are adjacent-index seams, and replays boundary-edge plus transition-edge cells with the Decimal/Taylor backend.  All seam cells remain zero-excluding with positive Decimal separation.
+
+This is a local seam/off-by-one audit for the finite partition ledger.  It is not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
