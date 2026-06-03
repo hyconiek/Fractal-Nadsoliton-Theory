@@ -64,7 +64,9 @@ b) Fermion sector
 
 c) Gauge sector
 \[
-\mathcal L_{\text{gauge}}=-\frac14 F_{\mu\nu}F^{\mu\nu}.
+\mathcal L_{\text{gauge}}=
+-\frac14 Z_A F_{\mu\nu}F^{\mu\nu}
++\frac12 g_{\text{eff}}(A_\mu A^\mu)\phi^2.
 \]
 
 d) Gravity + nonminimal coupling density
@@ -82,6 +84,54 @@ Equivalent project statement in current repo chain:
 \[
 L_{\text{total}} = L_{\text{scalar}} + L_{\text{fermion}} + L_{\text{gauge}} + \sqrt{-g}\left[\frac{R-2\Lambda}{2\kappa^2}+\xi_{\text{eff}}\phi^2R\right].
 \]
+
+## 4.1) Covariant presentation and promotion status
+
+The section-3 decomposition is the compact coefficient-level presentation.
+The covariant density form used for theorem-building should be read with the
+same coefficient provenance but with the usual curved-background structures:
+
+\[
+\mathcal L_{\phi}^{\mathrm{cov}}=
+\sqrt{-g}\left[
+\frac12 g^{\mu\nu}(\nabla_\mu\phi)(\nabla_\nu\phi)
+-\frac12m_{\mathrm{eff}}^2\phi^2
+-\frac{\lambda_{\mathrm{eff}}}{4}\phi^4
++\xi_{\mathrm{eff}}\phi^2R
+\right],
+\]
+
+\[
+\mathcal L_{\psi}^{\mathrm{cov}}=
+\sqrt{-g}\,\bar\psi\left(i\gamma^a e_a{}^\mu D_\mu-y_{\mathrm{eff}}\phi\right)\psi,
+\]
+
+\[
+\mathcal L_A^{\mathrm{cov}}=
+\sqrt{-g}\left[
+-\frac14 Z_A F^a_{\mu\nu}F_a{}^{\mu\nu}
++\frac12g_{\mathrm{eff}}(A^a_\mu A_a{}^\mu)\phi^2
+\right],
+\]
+
+\[
+\mathcal L_g^{\mathrm{cov}}=
+\sqrt{-g}\frac{R-2\Lambda}{2\kappa^2}.
+\]
+
+This is a presentation upgrade, not a new theorem gate.  Current admissibility
+status:
+
+```text
+strict moment coefficient source       -> admitted as effective/scaffold input
+APD-completed legacy moment transport  -> admitted only after Q_APD completion
+fermion spin connection notation       -> covariant row present; full residual table open
+gauge/BRST/Cutkosky completion         -> open
+nonminimal xi_eff phi^2 R term          -> FRW lift present; off-FRW tensor table open
+selector/source terms                   -> not admitted into L_total here
+legacy physical-role terms              -> not admitted into L_total here
+role-bearing L_total / ToE closure      -> not exported
+```
 
 ## 5) EOM generation rule (current gate discipline)
 
@@ -160,7 +210,7 @@ The bridge-completed scalar row is derived from the effective minisuperspace den
 \[
 E_{\phi}^{\mathrm{FRW}}=
 \ddot\phi+3H\dot\phi
-m_{\mathrm{eff}}^2\phi+\lambda_{\mathrm{eff}}\phi^3
++m_{\mathrm{eff}}^2\phi+\lambda_{\mathrm{eff}}\phi^3
 -g_{\mathrm{eff}}A^2\phi
 -2\xi_{\mathrm{eff}}R_{\mathrm{FRW}}\phi.
 \]
@@ -1395,3 +1445,9 @@ This is a finite one-sided descent-extension replay, not a full complement Decim
 `P2465/S1415` extends the P2464 one-sided descent from each family's P2464 endpoint through a 32-cell Decimal/Taylor horizon.  The replay adds 64 horizon cells, all remain zero-excluding, and the separations strictly decrease throughout the audited horizon; therefore no local bracket is found inside this finite horizon.
 
 This is an unbracketed descent-horizon ledger, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2466/S1416 strict pointwise interval-Decimal adaptive descent tail-boundary ledger certificate
+
+`P2466/S1416` continues the P2465 unbracketed horizon from each family's P2465 endpoint all the way to the corresponding boundary side of the same unreplayed complement segment.  The replay adds the remaining descent-direction tail cells, all remain zero-excluding, and the certificate records whether the finite tail stays strictly decreasing or encounters a local bracket.
+
+This is a two-tail endpoint-to-boundary ledger, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.

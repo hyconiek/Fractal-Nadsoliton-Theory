@@ -103,6 +103,26 @@ L_total = L_scalar + L_fermion + L_gauge + L_gravity
 
 This is the human-readable form of the strict symbolic export. The probe also stores a one-dimensional expanded expression for `L_scalar`, `L_fermion`, `L_gauge`, and `L_gravity_density`.
 
+### 4.1 Covariant presentation status
+
+`STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md` carries the fuller equation-sheet presentation.  The compact scaffold above should be read as a coefficient-level release form; the covariant theorem-building notation uses:
+
+```text
+sqrt(-g)*[1/2*g^munu*nabla_mu Phi*nabla_nu Phi
+          - 1/2*m2_eff*Phi^2
+          - 1/4*lam_eff*Phi^4
+          + xi_eff*Phi^2*R]
+
+sqrt(-g)*psibar*(i*gamma^a*e_a^mu*D_mu - y_eff*Phi)*psi
+
+sqrt(-g)*[-1/4*Z_A*F^a_munu*F_a^munu
+          + 1/2*g_eff*(A^a_mu*A_a^mu)*Phi^2]
+
+sqrt(-g)*(R - 2*Lambda)/(2*kappa^2)
+```
+
+This is a notation/status upgrade only.  It does not add selector/source terms, legacy physical-role terms, final SM/GR observable generators, role-bearing `L_total`, or ToE closure.  Full fermion/spin-connection residual tables, gauge/BRST/Cutkosky completion, off-FRW nonminimal tensor rows, renormalized stress-energy, and atlas/background-independence remain open.
+
 ## 5. Euler-Lagrange / EOM scaffold
 
 P2362/S1312 makes the current release discipline explicit: EOM/Lagrangian track is selector-independent.  The selector closure is a parallel problem; it is not a prerequisite for continuing the Lagrangian variation, termwise EOM export, or residual-zero auditing.  The selector/QW-2191 lane becomes relevant only when a claim selects a physical branch/source or promotes dynamics to global closure.
@@ -946,3 +966,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2465/S1415 Decimal adaptive descent-horizon ledger guard
 
 `P2465/S1415` records that the P2464 descent remains unbracketed over a 32-cell horizon in both scalar families.  It improves adaptive diagnostics by locating the next horizon endpoint, but it remains finite sampled evidence and adds no selector/source/gauge authority for `L_total`.
+
+## P2466/S1416 Decimal adaptive descent tail-boundary ledger guard
+
+`P2466/S1416` extends the P2465 adaptive descent endpoints to their segment-side boundaries.  It improves finite tail coverage for the selected scalar families, but it does not cover the full P2459 complement and adds no selector/source/gauge authority for `L_total`.
