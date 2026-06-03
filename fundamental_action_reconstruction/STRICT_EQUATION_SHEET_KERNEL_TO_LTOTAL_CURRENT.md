@@ -1633,3 +1633,27 @@ This is still not a formal proof backend for directed-rounding real analysis and
 `P2496/S1446` audits the inverse branch used by P2493--P2495.  On the legacy normalized branch interval `x in [0,2]`, `mpmath.iv` encloses the legacy derivative in a strictly negative interval, so the audited branch is injective on that interval.  The strict normalized targets for the ten curvature samples and the twelve Z12 nodes lie in the corresponding legacy output range, with positive right-end margins and only the expected `d=0` left-end equality.  Thus the finite inverse-branch calls used by the curvature certificates have an existence/uniqueness bracket rather than being unbracketed point solves.
 
 This is a finite interval/bracketing certificate, not a global analytic branch theorem or a formal directed-rounding proof backend.  It exports no curvature source, no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2497/S1447 phase-normalized curvature inflection-window interval isolation certificate
+
+`P2497/S1447` upgrades the P2493--P2496 curvature audit from isolated sample signs to an adaptive interval-slab exclusion on the audited domain `d in [0.0001, 11]`.  The script encloses `x''(d)` on the positive side `[0.0001, 0.3495]` and the negative side `[0.3498, 11]` using the phase-normalized inverse branch and `mpmath.iv` derivative expressions.  Every accepted slab excludes zero with the expected sign, while the point root estimate lies inside the remaining window `[0.3495, 0.3498]`; the endpoint intervals of that window have opposite strict signs.
+
+This is a finite adaptive interval-slab isolation certificate for the audited branch, not a formal directed-rounding proof backend, global analytic inflection uniqueness theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2498/S1448 phase-normalized curvature inflection-window refinement certificate
+
+`P2498/S1448` contracts the P2497 unresolved inflection window from `[0.3495, 0.3498]` to `[0.34961674, 0.34961675]`.  Inside the old P2497 window, adaptive `mpmath.iv` slab exclusions certify positive curvature on the left shoulder and negative curvature on the right shoulder, while the P2497 outside-window exclusion is inherited for the rest of the audited domain.  The point root estimate remains inside the refined window, giving a much narrower finite localization of the compression-curvature sign flip.
+
+This remains a finite interval-backed refinement certificate, not a formal directed-rounding proof backend, global analytic inflection uniqueness theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2499/S1449 phase-normalized curvature local inflection-uniqueness certificate
+
+`P2499/S1449` adds a third-derivative interval check on the P2498 refined window `[0.34961674, 0.34961675]`.  The endpoint `x''` intervals have opposite strict signs, and the computed interval for `x'''` is strictly negative across the refined window.  Within the finite audited interval backend, this upgrades the refined window from a mere sign-change bracket to a local uniqueness certificate for the curvature zero in that window, while inheriting the P2498 outside-window zero exclusion for the rest of the audited domain.
+
+This is still a finite `mpmath.iv` certificate, not a formal directed-rounding backend, global analytic inflection theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2500/S1450 phase-normalized third-derivative symbolic identity audit
+
+`P2500/S1450` audits the formula provenance behind the P2499 third-derivative interval.  A `sympy` symbolic check verifies that the implemented legacy and strict third-derivative product-rule formulas match direct differentiation, and that the implicit identity for `x'''` follows from differentiating `L_norm(x(d)) = S_strict_norm(d)` three times.  This supports the P2499 local uniqueness computation by removing a formula-transcription ambiguity from the interval backend.
+
+This is a symbolic formula audit plus inherited finite interval evidence, not a formal directed-rounding backend, global analytic inflection theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
