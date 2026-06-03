@@ -1759,3 +1759,45 @@ This is a sharper source-target certificate, not a source theorem.  It blocks tw
 `P2517/S1467` refines the P2516 dual-key source acceptance matrix by separating strict theorem status from axiom-augmented status.  Each required key, `beta_eta_numeric_source` and `m2_operator_signature_source`, is classified as `absent`, `axiom`, or `strict`.  The ternary table has exactly one strict accepting row: both keys strict.  Rows with a missing key remain blocked, while rows where both keys are present but at least one key is supplied by axiom are explicitly non-strict/axiom-augmented only.
 
 This prevents a common false pass: adding the numeric target or the `m=2` operator signature as an axiom may define a non-strict working closure, but it is not a strict source theorem and does not complete the damping bridge, role-transfer audit, QW-2191 selector closure, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2518/S1468 biharmonic affine-slope nonidentifiability certificate
+
+`P2518/S1468` sharpens the P2516/P2517 two-key boundary by proving a concrete separation theorem: the `m=2` biharmonic operator signature cannot by itself identify the numeric strict damping slope.  For `J_2[y]=1/2 int (y''(ell))^2 d ell`, every affine running exponent `y(ell)=a ell+b` has `y''=y'''=y''''=0`, so the energy, biharmonic Euler-Lagrange residual, and natural-boundary concomitant all vanish for a continuum of slopes.  The strict candidate `delta=4/5` is therefore only one member of the zero-energy affine family unless an independent numeric source/node theorem supplies it.
+
+The finite polynomial audit confirms the rank/nullity boundary on monomials through degree 8: `D^2` has a two-dimensional affine kernel, and `D^4` has a larger four-dimensional kernel.  This exports an operator-signature/numeric-key separation certificate only; it does not export `beta_eta_numeric_source`, `m2_operator_signature_source`, strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2519/S1469 biharmonic endpoint-anchor acceptance certificate
+
+`P2519/S1469` follows the P2518 affine-slope nonidentifiability theorem with a minimal conditional acceptance audit.  The `m=2` biharmonic signature leaves the whole affine family `y(ell)=a ell+b` invisible, but two strict endpoint node anchors, `y(0)=0` and `y(log 11)=(4/5) log 11`, would pin the affine kernel because the anchor matrix determinant is `log 11 > 0`.  Under those anchors the reconstructed flow is `y(ell)=(4/5)ell`, giving `beta=1` and `eta=9/5`, and the finite all-node design audit on `d=1..11` has zero residual within arithmetic tolerance.
+
+This is only a conditional numeric-target acceptance theorem: it identifies the minimal endpoint data that would turn the P2518 nonidentifiability into a pinned affine flow, but it does not source those endpoint anchors.  Therefore it exports no `beta_eta_numeric_source`, no `m2_operator_signature_source`, no strict damping source closure, no bridge completion, no role-transfer theorem, no QW-2191 discharge, no role-bearing `L_total`, no physical-value generator, and no ToE closure.
+
+## P2520/S1470 endpoint-anchor subkey lattice certificate
+
+`P2520/S1470` refines the P2519 conditional endpoint-anchor acceptance result into a rank/subkey lattice.  The numeric anchor target decomposes into two independent endpoint source obligations: the left beta-normalization anchor `y(0)=0`, and the right endpoint value anchor `y(log 11)=(4/5)log 11`.  The affine constraint matrix has rank/nullity profile: no anchors leaves `(b,a)` two-dimensional, the left anchor fixes `b=0` but leaves slope free, the right anchor leaves a one-parameter intercept/slope tradeoff, and only both anchors give rank 2 and the unique target `b=0, a=4/5`, hence `beta=1, eta=9/5`.
+
+The finite candidate-pair audit confirms the same proper-subkey obstruction on an explicit intercept/slope grid: only `(log beta, delta)=(0,4/5)` passes both anchors.  This exports a refined source-obligation normal form only; it does not source either endpoint subkey, does not export `beta_eta_numeric_source`, does not source the `m=2` operator signature, and exports no strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2521/S1471 single nonzero node-anchor equivalence certificate
+
+`P2521/S1471` refines the P2520 endpoint-subkey lattice by separating endpoint sufficiency from endpoint uniqueness.  Once the left beta-normalization anchor `y(0)=0` is admitted, any one nonzero strict node anchor `y(log d*)=(4/5)log d*` with `d*>1` pins the affine kernel, because the determinant of `[[1,0],[1,log d*]]` is `log d*>0`.  The finite audit checks every `d*=2..11`: each node reconstructs `delta=4/5`, `eta=9/5`, and all strict nodes `d=1..11` with zero residual within arithmetic tolerance.
+
+Therefore the previous right endpoint `d*=11` is sufficient but not algebraically unique.  This exports a single-node equivalence/placement-nonidentifiability theorem only: it does not source the left normalization anchor, does not source which nonzero node/value is strict, does not export `beta_eta_numeric_source`, does not source the `m=2` operator signature, and exports no strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2522/S1472 two-node anchor basis equivalence certificate
+
+`P2522/S1472` continues P2521 by showing that the left-normalization-plus-one-node basis is itself not unique.  For the affine running exponent `y=b+a ell`, any two distinct strict node anchors `y(log d_i)=(4/5)log d_i` and `y(log d_j)=(4/5)log d_j` have determinant `log(d_j/d_i) != 0` and solve `b=0`, `a=4/5`, hence `beta=1`, `eta=9/5`.  The finite audit checks all 55 distinct node pairs in `d=1..11`: every pair derives the left normalization, pins the same slope, and reconstructs all audited strict nodes with zero residual within arithmetic tolerance.
+
+This exports an anchor-basis equivalence theorem only.  It does not source which node pair/value basis strict dynamics supplies, does not export `beta_eta_numeric_source`, does not source the `m=2` operator signature, and exports no strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2523/S1473 pairwise secant consistency certificate
+
+`P2523/S1473` turns the P2522 node-pair basis equivalence into a basis-independent finite consistency audit.  For the strict target node data `y_d=(4/5)log d` on `d=1..11`, all 55 pairwise secants have slope `4/5`, all 165 triangle additive `y`-cocycles vanish, and the affine projection on columns `[1, log(d)]` recovers intercept `0`, slope `4/5`, hence `beta=1`, `eta=9/5`, with zero residual within arithmetic tolerance.
+
+This is a consistency certificate for already supplied node data, not a source theorem for those data.  It does not export `beta_eta_numeric_source`, does not source the `m=2` operator signature, and exports no strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2524/S1474 affine-consistency continuum nonidentifiability certificate
+
+`P2524/S1474` is the converse guard for P2523.  The P2523 pairwise-secant and triangle-cocycle predicates certify that supplied node data are affine in `ell=log d`, but affine consistency alone leaves the continuum `y_d=b+a log d`.  The finite grid audit checks 35 intercept/slope candidates: every affine candidate has constant pairwise secants and zero additive triangle cocycles, while the strict target `(b,a)=(0,4/5)` is only one accepted member.
+
+Thus basis-independent affine consistency is a necessary consistency check but not a numeric source theorem.  It does not export `beta_eta_numeric_source`, does not source the `m=2` operator signature, and exports no strict damping source closure, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
