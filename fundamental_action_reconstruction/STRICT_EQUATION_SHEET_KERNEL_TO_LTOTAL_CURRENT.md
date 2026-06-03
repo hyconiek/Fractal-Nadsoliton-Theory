@@ -1585,3 +1585,21 @@ For a non-specialist: P2486 proved the derivative was positive on the weakest ch
 `P2488/S1438` compresses the P2487 collar-wide derivative sweep into a finite lemma.  The proof obligations are explicit: the P2487 derivative rows match the P2481 collar rows, every checked row has positive projection-amplitude value, every checked row has a positive projection-amplitude derivative interval, consecutive collar rows are exactly adjacent, and row-to-row separations increase.  Under those finite preconditions, P2488 exports a checked-collar-only piecewise monotone-increasing and zero-excluding lemma for the boundary handoff collar.  It is a proof-compression step over existing diagnostics, not a new coverage replay, not a root-window theorem, not global analytic monotonicity, not directed rounding, and not selector/source or ToE closure.
 
 For a non-specialist: P2487 contained many derivative rows.  P2488 states the actual finite lemma those rows support: on the checked collar outside the root window, the function is positive and increasing piece by piece.  This clarifies the proof status without pretending to solve the root window or continuum.
+
+## P2489/S1439 strict pointwise interval-Decimal P2459 boundary-handoff collar cumulative derivative barrier certificate
+
+`P2489/S1439` converts the P2487 positive derivative intervals and the P2488 checked-collar lemma into a finite cumulative lower-barrier calculation.  Starting from the left collar amplitude lower bound, it sums `derivative_lower_bound * row_width` across the same `134` adjacent P2481 collar rows and verifies that every entry barrier, row gain, and exit barrier remains strictly positive.  This is a finite integrated-derivative barrier over the checked collar only: it adds no P2459 coverage, does not use directed rounding, and does not prove the excluded root window, global analytic monotonicity, selector/source closure, legacy-role transfer, or ToE closure.
+
+For a non-specialist: P2488 said the checked seam is positive and increasing piece by piece.  P2489 records the corresponding cumulative safety margin: even if we transport only the certified minimum derivative through each tiny row, the running lower bound stays positive all the way across the checked collar.
+
+## P2490/S1440 legacy-strict bridge plus role-transfer two-stage closure lattice certificate
+
+`P2490/S1440` combines the P2411 bridge-obligation hypergraph with the P2434 conditional role-transfer claim lattice into one finite two-stage closure lattice.  The computation enumerates `16384 = 2^8 * 2^6` bridge/role assignments and verifies that end-to-end closure for all audited legacy role claims occurs in exactly one assignment: all eight bridge atoms plus all six post-bridge role obligations.  The current state has zero bridge atoms, zero role obligations, zero transferred role claims, and needs fourteen new atoms for this all-role end-to-end closure.
+
+For a non-specialist: this is a bookkeeping theorem about what remains open.  It does not add a new physical formula.  It proves that even a completed bridge would still not automatically transfer legacy roles unless the separate role-transfer and claim-specific successor obligations are also supplied.
+
+## P2491/S1441 legacy-strict bridge/role claim pivotality matrix certificate
+
+`P2491/S1441` refines the P2490 two-stage lattice by computing a claim-specific Boolean pivotality matrix across the same fourteen open atoms.  For each atom and each audited legacy role claim, it enumerates all one-bit flips in the `2^14` combined bridge/role lattice and counts exactly when that atom is pivotal for end-to-end claim readiness.  The result confirms that all bridge atoms are equally prerequisite for every role claim, while the top post-bridge role-stage atoms are `role_transfer_audit_license` and `role_bearing_ltotal_export`.  This is a sensitivity certificate only: no bridge atom, selector source, QW-2191 discharge, role-transfer license, physical-value generator, or ToE closure is exported.
+
+For a non-specialist: P2490 said all gates must be supplied.  P2491 asks which missing gates are pivotal for which legacy claims.  It quantifies the bottlenecks without pretending that any of them has been proved.

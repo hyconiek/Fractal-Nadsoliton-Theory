@@ -1058,3 +1058,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2488/S1438 P2459 boundary-handoff collar monotonicity lemma guard
 
 `P2488/S1438` turns the P2487 finite collar derivative sweep into a compact checked-collar lemma behind `L_total`: positive value plus positive derivative on all `134` P2481 collar rows implies finite piecewise monotonicity and zero exclusion on that checked collar only.  It reuses existing diagnostic rows, adds no P2459 coverage, and does not export directed rounding, root-window exclusion, global analytic monotonicity, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2489/S1439 P2459 boundary-handoff collar cumulative derivative barrier guard
+
+`P2489/S1439` adds a finite cumulative derivative lower-barrier guard behind `L_total`: the same `134` P2487/P2488 collar rows are integrated with certified lower derivative gains, producing a positive running lower barrier from the left anchor to the collar right endpoint.  The guard is still collar-local and proof-compressive; it does not export directed rounding, root-window exclusion, global analytic monotonicity, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2490/S1440 two-stage bridge/role closure lattice guard
+
+`P2490/S1440` records a finite two-stage guard behind `L_total`: bridge completion and post-bridge legacy-role transfer are separate gates.  Across the `16384` combined assignments, all-role closure appears only in the single all-atoms assignment, while the current state remains at zero transferred legacy role claims.  The guard does not export selector/source discharge, QW-2191 closure, role-bearing `L_total`, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2491/S1441 bridge/role claim pivotality guard
+
+`P2491/S1441` adds a claim-specific pivotality guard behind `L_total`: every audited legacy-role claim still depends on all bridge atoms, and the strongest post-bridge role-stage bottlenecks are the role-transfer audit license and role-bearing `L_total` export.  The guard is a finite Boolean sensitivity audit and does not export selector/source discharge, QW-2191 closure, role-transfer, physical-value generation, or ToE closure.
