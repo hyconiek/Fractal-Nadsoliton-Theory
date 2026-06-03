@@ -1202,3 +1202,17 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2524/S1474 affine-consistency continuum guard
 
 `P2524/S1474` records that constant pairwise secants and zero triangle cocycles only prove affine node-data form, not the strict values `b=0` and `a=4/5`.  A role-bearing damping source must still supply the numeric intercept/slope data, so no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+`P2525/S1475` narrows the numeric-source obligation by showing that a sourced multiplicative log-character law would supply the beta-normalization subkey `log beta=0`.  This is only a conditional subkey: the law itself is not sourced here, the slope `delta=4/5` is not selected, and no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+`P2526/S1476` records that a multiplicative node law, even if sourced, leaves a five-dimensional prime-character freedom on the audited `d=1..11` monoid.  The strict damping term still needs a source for prime log-proportionality and for the numeric slope `delta=4/5`, in addition to the `m=2` operator signature; no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+`P2527/S1477` shows that a sourced prime log-proportionality law would reduce the P2526 five-dimensional prime-character freedom to a one-dimensional slope line, but it would not choose the strict slope `delta=4/5`.  The damping term still needs a numeric slope source and the `m=2` operator-signature source; no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+`P2528/S1478` shows that single prime-value anchors are sufficient but placement-nonunique slope keys on the P2527 slope line.  Since the prime anchor placement/value remains unsourced, this still does not export `beta_eta_numeric_source`, the `m=2` operator-signature source, nonlinear compression-flow source, or a role-bearing `L_total` term.
+
+`P2529/S1479` records the current strict damping source normal form after the multiplicative/prime-character audits: `beta_eta_numeric_source = multiplicative_character_law_source AND prime_log_proportionality_source AND slope_value_or_prime_anchor_source`, and `strict_damping_beta_eta_source` additionally requires `m2_operator_signature_source`.  Since these are only conditional subkeys here, no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+`P2530/S1480` records the explicit all-but-one rejection witnesses for the current strict damping source contract.  It proves irredundancy of the four conditional keys but exports none of their sources, so no nonlinear compression-flow source, role-bearing `L_total`, bridge completion, role-transfer theorem, QW-2191 discharge, or ToE closure is licensed.
+
+`P2531/S1481` marks the four-key strict damping source boundary: all four P2530 keys must be strict theorems for strict source acceptance.  Any axiom-supplied key remains non-strict, and any absent key blocks the source; therefore no nonlinear compression-flow source, role-bearing `L_total`, bridge completion, role-transfer theorem, QW-2191 discharge, or ToE closure is licensed.
