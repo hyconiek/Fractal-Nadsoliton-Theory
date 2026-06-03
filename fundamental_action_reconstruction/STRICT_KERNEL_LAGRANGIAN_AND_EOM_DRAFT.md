@@ -1142,3 +1142,35 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2509/S1459 minimum-roughness variational well-posedness guard
 
 `P2509/S1459` proves that, if the P2506 roughness action is admitted, the strict damping node data have the unique `H^2` minimizer `y0(ell)=delta ell` by P2508 node-coercivity.  This is still conditional selector support only: it does not derive a strict nonlinear compression-flow source or license a role-bearing `L_total` term.
+
+## P2510/S1460 roughness KKT stationarity guard
+
+`P2510/S1460` records the variational normal-equation/KKT witness for the postulated strict damping roughness selector: `y0(ell)=delta ell` is stationary with zero distributional node multipliers and zero natural-boundary residuals, and finite polynomial KKT systems replay the affine solution.  This strengthens the internal variational bookkeeping after P2509 but remains conditional on the roughness functional being supplied; it is not a nonlinear compression-flow source theorem and is not a license for a role-bearing `L_total` term.
+
+## P2511/S1461 natural spline collapse guard
+
+`P2511/S1461` verifies that the postulated strict damping roughness minimizer can also be obtained through the natural-cubic-spline normal form: linear-in-`ell` node data give zero spline second-derivative knots and a collapse to `y0(ell)=delta ell`.  This strengthens the conditional variational bookkeeping but remains dependent on the roughness functional being supplied; it is not a nonlinear compression-flow source theorem and does not license a role-bearing `L_total` term.
+
+## P2512/S1462 quadratic source admissibility guard
+
+`P2512/S1462` tests candidate local quadratic source operators for the postulated strict damping selector.  It shows that unforced `y^2` mass terms violate stationarity on explicit node-vanishing witnesses, while derivative-only quadratic terms remain stationary at `y0(ell)=delta ell`; hence the source problem is narrowed but not closed, because the strict dynamics still must choose the derivative order/coefficient and supply the action rather than assume it.  No nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed.
+
+## P2513/S1463 derivative-order nonidentifiability guard
+
+`P2513/S1463` shows that derivative-only quadratic selector stationarity is underdetermined: `H1`, `H2`, and mixed derivative-only energies all select `y0(ell)=delta ell` on the audited node data.  Therefore a role-bearing strict action would still need an independent source principle choosing the derivative order/coefficient; no nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed.
+
+## P2514/S1464 higher-order selector nonidentifiability guard
+
+`P2514/S1464` extends the derivative-only ambiguity: `J_m[y]=int(D^m y)^2` for `m=1..10` can select the same affine strict damping node reconstruction under the current node constraints, with finite Gram checks through `m=6`.  Therefore a role-bearing strict action still needs an independent source principle for the derivative order/coefficient; no nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed.
+
+## P2515/S1465 operator-order signature acceptance guard
+
+`P2515/S1465` records that the derivative-order ambiguity can be broken only at the operator-signature/source level: `m=2` means a fourth-order/biharmonic Euler-Lagrange signature with node-fixed boundary jet `[2]` and free-boundary jets `[2,3]`, but the affine solution itself satisfies every audited derivative-only order.  Therefore no nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed until strict dynamics export the operator signature.
+
+## P2516/S1466 dual-key strict damping source guard
+
+`P2516/S1466` records that a future strict damping action/source must provide two independent keys: the numeric strict damping target `beta=1, eta=9/5` and the `m=2` biharmonic operator signature.  Either key alone is a proper-subset obstruction, so the current conditional selector chain still cannot license a nonlinear compression-flow source theorem or role-bearing `L_total` term.
+
+## P2517/S1467 dual-key axiom boundary guard
+
+`P2517/S1467` marks the strict damping source boundary: both P2516 keys must be strict theorems for strict source acceptance.  Any axiom-supplied key is non-strict by construction, and any missing key blocks the source.  Therefore no nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed by axiom-augmented bookkeeping.

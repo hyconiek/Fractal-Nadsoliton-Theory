@@ -1711,3 +1711,51 @@ This is a real selector-support/coercivity theorem for the postulated roughness 
 `P2509/S1459` uses the P2508 node-vanishing `H^2` coercivity theorem to close the variational well-posedness of the postulated P2506 minimum-roughness selector.  For the affine constraint set `A={y in H^2: y(log d)=delta log d, d=1..11}`, the candidate `y0(ell)=delta ell` has zero roughness.  Every admissible `y` decomposes uniquely as `y=y0+p` with `p` in the node-vanishing tangent space, and `J[y0+p]=int (p''(ell))^2 d ell`; P2508 coercivity makes this strictly positive for every nonzero perturbation.  Thus the constant-flow reconstruction is the unique minimizer of the postulated roughness problem.
 
 This upgrades selector support from a candidate to a well-posed conditional variational theorem, but it still does not derive the roughness action from nadsoliton dynamics.  Therefore `strict_damping_beta_eta_source` remains unexported, and there is no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2510/S1460 strict damping RG roughness KKT stationarity certificate
+
+`P2510/S1460` adds the Euler-Lagrange/KKT stationarity layer for the same postulated P2506/P2509 minimum-roughness selector.  The weak normal equation is `int y'' v'' = sum_i mu_i v(log i)` under the node constraints `y(log d)=delta log d`.  For the P2509 minimizer `y0(ell)=delta ell`, `y0''=0` and `y0''''=0`, so the distributional stationarity equation is satisfied with all node multipliers `mu_i=0`; the natural boundary residuals are also zero.  A finite polynomial KKT audit on monomial spaces through degrees 12 and 14 independently recovers the same affine coefficient vector and zero multipliers, with full-rank KKT matrices and tiny solve residuals.
+
+This is theorem-prep for the conditional selector only.  It does not derive the roughness action from strict nadsoliton dynamics and does not export `strict_damping_beta_eta_source`, a bridge theorem, a role-transfer theorem, QW-2191 discharge, a physical-value generator, or ToE closure.
+
+## P2511/S1461 strict damping RG natural spline collapse certificate
+
+`P2511/S1461` recasts the P2509/P2510 postulated roughness selector as the classical natural-cubic-spline interpolation problem on nodes `ell_d=log(d)` with data `y_d=delta log(d)`.  Since every divided slope `(y_{d+1}-y_d)/(ell_{d+1}-ell_d)` is exactly `delta`, the natural-spline second-derivative tridiagonal system has zero right-hand side.  The tridiagonal matrix has positive leading principal minors and positive Cholesky-equivalent pivots, hence the only natural second-derivative knot vector is zero.  The resulting piecewise cubic has zero quadratic/cubic coefficients and collapses to `y0(ell)=delta ell`.
+
+This is an independent finite spline-form theorem witness for the conditional selector, not a source theorem.  It does not derive the roughness action from strict nadsoliton dynamics and does not export `strict_damping_beta_eta_source`, a bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2512/S1462 strict damping RG quadratic source admissibility audit
+
+`P2512/S1462` audits what a future strict source theorem must still supply after the P2509--P2511 conditional selector chain.  For the local quadratic family `S[y]=1/2 int (c0*y^2+c1*(y')^2+c2*(y'')^2)d ell`, the first variation at `y0(ell)=delta ell` on node-vanishing perturbations is `c0 int y0*p + c1 delta (p(L)-p(0)) + c2 int y0''*p''`.  Because node-vanishing gives `p(0)=p(L)=0` and `y0''=0`, derivative-only terms are stationary, but an unforced mass term requires `int ell*p=0` for all node-vanishing `p`, which is false.  The finite polynomial witness family `R(ell)*ell^k` supplies explicit nonzero mass moments while preserving zero derivative-only residuals.
+
+This narrows the source acceptance target but does not close it.  The audit identifies a real obstruction for unforced mass-like quadratic sources and a real ambiguity among derivative-only quadratic sources; it still does not derive the roughness action/order/coefficient from strict nadsoliton dynamics and exports no `strict_damping_beta_eta_source`, bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2513/S1463 strict damping RG derivative-order nonidentifiability certificate
+
+`P2513/S1463` follows the P2512 source-admissibility audit by proving that stationarity and node data do not identify the derivative order of the postulated selector.  For node-vanishing perturbations `p`, both `J1[y]=int(y')^2` and `J2[y]=int(y'')^2` select the same affine strict damping reconstruction `y0(ell)=delta ell`: `J1[y0+p]-J1[y0]=int(p')^2` and `J2[y0+p]-J2[y0]=int(p'')^2`.  Finite closed-form Gram audits on the polynomial tangent family `R(ell)*ell^k` verify positive leading minors and pivots for `H1`, `H2`, and mixed nonnegative derivative-only quadratic selectors.
+
+This is a negative/source-target theorem: it strengthens the claim that a future strict source theorem must choose the Sobolev/derivative order and coefficient from nadsoliton dynamics.  It does not derive that source and exports no `strict_damping_beta_eta_source`, bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2514/S1464 strict damping RG higher-order selector nonidentifiability certificate
+
+`P2514/S1464` strengthens the P2513 negative/source-target result from the `H1/H2` pair to a whole derivative-order tower.  For every `1 <= m <= 10`, the derivative-only functional `J_m[y]=int (D^m y)^2 d ell` has the same affine strict damping node reconstruction `y0(ell)=delta ell` as a minimizer; a zero-energy tangent perturbation would be a polynomial of degree at most `m-1`, and the eleven node conditions force it to vanish for all audited theorem orders.  A finite closed-form Gram audit over `R(ell)*ell^k`, `k=0..3`, verifies positive leading minors and Cholesky-equivalent pivots for derivative orders `1..6`.
+
+This is a stronger nonidentifiability theorem, not a closure theorem.  It shows that node data plus stationarity/coercivity admit a tower of derivative-only selectors, so a future strict source theorem must still choose the derivative order/coefficient from nadsoliton dynamics.  It exports no `strict_damping_beta_eta_source`, bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2515/S1465 strict damping RG operator-order signature acceptance audit
+
+`P2515/S1465` converts the P2514 derivative-order tower ambiguity into a source-acceptance target.  For `J_m[y]=1/2 int (D^m y)^2 d ell`, the Euler-Lagrange signature is `(-1)^m D^{2m}y`, with node-fixed boundary derivative orders `m..2m-2` and free-boundary derivative orders `m..2m-1`.  These operator signatures are pairwise distinct even though the affine strict damping node solution `y0(ell)=delta ell` satisfies every audited node-fixed stationarity signature.  The finite monomial operator audit through `m=1..6` verifies the expected ranks and kernel dimensions for `D^m` and `D^{2m}`.
+
+Thus the P2506 roughness selector corresponds to the `m=2` biharmonic/fourth-order signature, but P2515 does not derive that signature from strict dynamics.  It only states a sharper acceptance boundary: a future strict source theorem must export the `m=2` operator signature (or justify another order) from the nadsoliton dynamics before `strict_damping_beta_eta_source` can be claimed.  No bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure is exported.
+
+## P2516/S1466 strict damping dual-key source acceptance matrix
+
+`P2516/S1466` combines the P2414 numeric damping result with the P2515 operator-signature result into a two-key source acceptance normal form.  P2414 identifies the strict denominator target `beta=1, eta=9/5` from accepted samples and proves it is not legacy linear `beta_tors` absorption, but it does not source the numbers.  P2515 identifies the P2506 roughness selector as the `m=2` biharmonic/fourth-order operator signature, but it does not source that signature.  The acceptance matrix is therefore `strict_damping_beta_eta_source = beta_eta_numeric_source AND m2_operator_signature_source`; every proper subset is rejected.
+
+This is a sharper source-target certificate, not a source theorem.  It blocks two common false closures: numeric `beta/eta` without an operator signature, and an operator signature without strict numeric damping source.  It exports no damping-compression bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure.
+
+## P2517/S1467 strict damping dual-key axiom boundary certificate
+
+`P2517/S1467` refines the P2516 dual-key source acceptance matrix by separating strict theorem status from axiom-augmented status.  Each required key, `beta_eta_numeric_source` and `m2_operator_signature_source`, is classified as `absent`, `axiom`, or `strict`.  The ternary table has exactly one strict accepting row: both keys strict.  Rows with a missing key remain blocked, while rows where both keys are present but at least one key is supplied by axiom are explicitly non-strict/axiom-augmented only.
+
+This prevents a common false pass: adding the numeric target or the `m=2` operator signature as an axiom may define a non-strict working closure, but it is not a strict source theorem and does not complete the damping bridge, role-transfer audit, QW-2191 selector closure, role-bearing `L_total`, physical-value generator, or ToE closure.
