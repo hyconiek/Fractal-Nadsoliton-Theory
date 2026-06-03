@@ -1603,3 +1603,33 @@ For a non-specialist: this is a bookkeeping theorem about what remains open.  It
 `P2491/S1441` refines the P2490 two-stage lattice by computing a claim-specific Boolean pivotality matrix across the same fourteen open atoms.  For each atom and each audited legacy role claim, it enumerates all one-bit flips in the `2^14` combined bridge/role lattice and counts exactly when that atom is pivotal for end-to-end claim readiness.  The result confirms that all bridge atoms are equally prerequisite for every role claim, while the top post-bridge role-stage atoms are `role_transfer_audit_license` and `role_bearing_ltotal_export`.  This is a sensitivity certificate only: no bridge atom, selector source, QW-2191 discharge, role-transfer license, physical-value generator, or ToE closure is exported.
 
 For a non-specialist: P2490 said all gates must be supplied.  P2491 asks which missing gates are pivotal for which legacy claims.  It quantifies the bottlenecks without pretending that any of them has been proved.
+
+## P2492/S1442 legacy-strict claim-specific minimal completion package certificate
+
+`P2492/S1442` converts the P2490 two-stage bridge/role lattice and P2491 claim-pivotality matrix into exact current-state minimal completion packages for each audited legacy physical-role claim.  From the current empty export state, every audited physical claim still requires all eight bridge atoms plus the two common post-bridge role gates `role_transfer_audit_license` and `role_bearing_ltotal_export`.  The weakest package is the weak-mixing successor package of size eleven; the inverse-alpha package strictly extends it by the `beta_tors` successor, while the gravity and torsion/chi11 packages require their own successor atoms.  The all-role package is exactly the union of the four physical-claim packages and has size fourteen.
+
+This is a package/minimality certificate only.  It exports no bridge atom, no selector/source theorem, no QW-2191 discharge, no role-transfer license, no role-bearing `L_total`, no physical-value generator, no legacy-role transfer, and no ToE closure.
+
+## P2493/S1443 phase-normalized compression curvature nonaffine certificate
+
+`P2493/S1443` turns the phase-normalized legacy-to-strict output-matching branch into a differential curvature audit.  On the branch `L_norm(x(d)) = S_strict_norm(d)`, implicit differentiation gives `x' = S'(d)/L'(x)` and `x'' = (S''(d)-L''(x)*(x')^2)/L'(x)`.  The finite sample has nonzero curvature at all ten audited points, positive curvature near the origin, negative curvature on the tail, an inflection bracket between `d=0.1` and `d=0.5`, and negative Z12 second differences from `d=1` through `d=10`.  Therefore a pure affine phase/distance bridge is ruled out on this audited branch: any future bridge must supply a genuinely nonlinear compression-flow source.
+
+This is a nonaffine constraint certificate only.  It does not export a curvature dynamic source, a damping bridge atom, a strict compression source theorem, selector/source closure, QW-2191 discharge, role-transfer, role-bearing `L_total`, physical-value generation, or ToE closure.
+
+## P2494/S1444 phase-normalized compression curvature multiprecision stability certificate
+
+`P2494/S1444` replays the P2493 curvature computation at `50`, `80`, and `120` decimal digits of `mpmath` precision.  Across all precision levels, the ten sample curvature signs remain stable, all ten audited curvatures remain nonzero, the inflection sign-change bracket remains certified, and the Z12 second-difference sign sequence remains negative.  The `80 -> 120` drift is recorded for both sample `x''` values and the inflection root, giving a finite numerical stability check for the P2493 nonaffine conclusion.
+
+This is not directed-rounding interval arithmetic and not a strict dynamic source theorem.  It exports no curvature source, no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2495/S1445 phase-normalized compression curvature interval-enclosure certificate
+
+`P2495/S1445` replays the P2493/P2494 nonaffine curvature signs with `mpmath.iv` interval enclosures.  Using 120-digit point solves for the inverse branch centers, a declared `1e-40` branch-radius enclosure, and 100-digit interval arithmetic for the derivative expressions, all ten audited `x''` intervals are strictly signed with the P2493/P2494 sign pattern, and all Z12 second-difference intervals are strictly negative.  This gives a finite interval-enclosure check that the P2493 nonaffine signs are not merely point-evaluation artifacts.
+
+This is still not a formal proof backend for directed-rounding real analysis and not a strict dynamic source theorem.  It exports no curvature source, no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2496/S1446 phase-normalized inverse-branch existence/uniqueness certificate
+
+`P2496/S1446` audits the inverse branch used by P2493--P2495.  On the legacy normalized branch interval `x in [0,2]`, `mpmath.iv` encloses the legacy derivative in a strictly negative interval, so the audited branch is injective on that interval.  The strict normalized targets for the ten curvature samples and the twelve Z12 nodes lie in the corresponding legacy output range, with positive right-end margins and only the expected `d=0` left-end equality.  Thus the finite inverse-branch calls used by the curvature certificates have an existence/uniqueness bracket rather than being unbracketed point solves.
+
+This is a finite interval/bracketing certificate, not a global analytic branch theorem or a formal directed-rounding proof backend.  It exports no curvature source, no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
