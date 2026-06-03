@@ -1693,3 +1693,21 @@ This is a nonuniqueness/limitation certificate, not a source theorem.  It does n
 `P2506/S1456` conditionally addresses the P2505 finite-node nullspace by auditing a concrete selector candidate: minimize `J[y]=int_0^log(11) (y''(ell))^2 d ell` for the running exponent `y(ell)=log B(ell)` subject to the strict finite-node constraints.  The constant P2503 flow has zero roughness, and the zero-energy affine constraints force `y(ell)=delta ell`; the explicit P2505 nullspace perturbation has positive scaled roughness energy.  Thus the constant-coefficient flow is selected if this minimum-roughness action is admitted.
 
 This is a conditional selector-candidate certificate, not a derived strict damping source.  It does not derive the roughness action from nadsoliton dynamics, does not export `strict_damping_beta_eta_source`, and exports no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2507/S1457 strict damping RG roughness-nullspace coercivity certificate
+
+`P2507/S1457` strengthens the conditional P2506 minimum-roughness selector by auditing coercivity on a finite polynomial nullspace family.  For perturbations `p(ell)=R(ell) q(ell)`, `R(ell)=ell prod_{d=2}^{11}(ell-log(d))`, and `deg q<=3`, the roughness quadratic form `int_0^log(11) (p''(ell))^2 d ell` is evaluated by closed-form polynomial antiderivatives, with split quadrature retained only as a cross-check.  The resulting Gram audit has positive Cholesky pivots and positive leading principal minors.  Symbolically, zero roughness would force an affine perturbation, and the node constraints at `d=1,2` eliminate every nonzero affine perturbation.
+
+This supports the conditional selector against a broader finite polynomial nullspace than the single P2505 witness.  It still does not derive the roughness action from nadsoliton dynamics, does not export `strict_damping_beta_eta_source`, and exports no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2508/S1458 strict damping RG Sobolev node-coercivity theorem certificate
+
+`P2508/S1458` upgrades the P2507 finite polynomial Gram audit to a functional-analytic node-coercivity theorem for the postulated P2506 roughness selector.  On the partition `I_d=[log(d),log(d+1)]`, `d=1..10`, every admitted perturbation `p in H^2([0,log(11)])` with `p(log d)=0` at all audited nodes has zero endpoint trace on each subinterval.  The Dirichlet Poincare/Wirtinger bounds give `||p||_L2^2 <= (log(2)^4/pi^4) J[p]` and `||p'||_L2^2 <= (log(2)^2/pi^2) J[p]`, where `J[p]=int (p''(ell))^2 d ell`; hence the roughness form is coercive on the node-vanishing Sobolev perturbation class.
+
+This is a real selector-support/coercivity theorem for the postulated roughness functional, not a source theorem.  The roughness action itself is still not derived from nadsoliton dynamics, `strict_damping_beta_eta_source` remains unexported, and there is no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2509/S1459 strict damping RG minimum-roughness variational well-posedness certificate
+
+`P2509/S1459` uses the P2508 node-vanishing `H^2` coercivity theorem to close the variational well-posedness of the postulated P2506 minimum-roughness selector.  For the affine constraint set `A={y in H^2: y(log d)=delta log d, d=1..11}`, the candidate `y0(ell)=delta ell` has zero roughness.  Every admissible `y` decomposes uniquely as `y=y0+p` with `p` in the node-vanishing tangent space, and `J[y0+p]=int (p''(ell))^2 d ell`; P2508 coercivity makes this strictly positive for every nonzero perturbation.  Thus the constant-flow reconstruction is the unique minimizer of the postulated roughness problem.
+
+This upgrades selector support from a candidate to a well-posed conditional variational theorem, but it still does not derive the roughness action from nadsoliton dynamics.  Therefore `strict_damping_beta_eta_source` remains unexported, and there is no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.

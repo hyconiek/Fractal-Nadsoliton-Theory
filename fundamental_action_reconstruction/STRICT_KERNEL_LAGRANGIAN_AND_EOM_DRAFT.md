@@ -1130,3 +1130,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2506/S1456 minimum-roughness RG selector candidate guard
 
 `P2506/S1456` shows that a postulated minimum-roughness action would select the constant P2503 running-beta flow against the P2505 nullspace.  Because the action is not derived from strict nadsoliton dynamics, it remains theorem-prep and does not license a nonlinear compression-flow source theorem or role-bearing `L_total`.
+
+## P2507/S1457 roughness-nullspace coercivity guard
+
+`P2507/S1457` verifies that the postulated P2506 roughness functional is coercive on an audited finite polynomial node-vanishing nullspace using a closed-form Gram antiderivative, positive Cholesky pivots, positive leading principal minors, and a tight split-quadrature cross-check.  This is selector-support theorem-prep only: it does not turn the postulated action into a strict nonlinear compression-flow source or a role-bearing `L_total` term.
+
+## P2508/S1458 Sobolev node-coercivity guard
+
+`P2508/S1458` promotes the P2507 finite nullspace check to a node-vanishing `H^2` coercivity theorem for the postulated roughness selector, with explicit Poincare constants controlled by the largest node spacing `log(2)`.  It remains selector-support theorem-prep only: no strict nonlinear compression-flow source, no derived roughness action, and no role-bearing `L_total` term are licensed.
+
+## P2509/S1459 minimum-roughness variational well-posedness guard
+
+`P2509/S1459` proves that, if the P2506 roughness action is admitted, the strict damping node data have the unique `H^2` minimizer `y0(ell)=delta ell` by P2508 node-coercivity.  This is still conditional selector support only: it does not derive a strict nonlinear compression-flow source or license a role-bearing `L_total` term.
