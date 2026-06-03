@@ -974,3 +974,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2467/S1417 Decimal opposite-tail sentinel ledger guard
 
 `P2467/S1417` adds a finite opposite-side audit after P2466 by replaying endpoint-band plus dyadic sentinels on the non-descent tails.  It improves bidirectional tail hygiene for the selected scalar families, but it is not a full-tail or full-complement proof and adds no selector/source/gauge authority for `L_total`.
+
+## P2468/S1418 Decimal chunked opposite-tail replay ledger guard
+
+`P2468/S1418` adds a deterministic chunked replay of endpoint/midpoint/min-risk sentinels across the two P2467 opposite tails.  It strengthens tail proof hygiene and gives an explicit uncovered-budget ledger, but it does not make `L_total` role-bearing and does not export selector/source/gauge authority, a physical-value generator, `QW-2191` closure, or ToE closure.
