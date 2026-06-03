@@ -1090,3 +1090,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2496/S1446 inverse-branch existence/uniqueness guard
 
 `P2496/S1446` adds a finite bracketing guard behind the P2493--P2495 curvature audits: the legacy normalized branch is interval-monotone on `[0,2]`, and all audited strict normalized targets are bracketed in its range.  This licenses the finite inverse-branch evaluations used by the curvature guards, but does not export a global branch theorem, nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2497/S1447 curvature inflection-window isolation guard
+
+`P2497/S1447` adds an adaptive interval-slab guard behind the nonaffine compression conclusion: outside the narrow audited window `[0.3495, 0.3498]`, the phase-normalized branch curvature is interval-excluded from zero with the expected sign.  This makes the observed curvature sign flip a localized compression-flow obstruction rather than a sparse-sample artifact, but it still does not export a nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2498/S1448 curvature inflection-window refinement guard
+
+`P2498/S1448` refines the P2497 localized sign-change window to `[0.34961674, 0.34961675]` by interval-excluding zero on both shoulders of the old window.  This sharpens the nonaffine compression-flow obstruction without promoting it to a source theorem, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2499/S1449 local inflection-uniqueness guard
+
+`P2499/S1449` checks the third derivative on the P2498 refined window and certifies that `x''` is interval-decreasing there with opposite endpoint signs.  This turns the localized sign-change guard into a finite local uniqueness guard for the audited branch, without exporting a nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2500/S1450 third-derivative formula provenance guard
+
+`P2500/S1450` symbolically verifies the third-derivative formulas and implicit `x'''` chain identity used by P2499.  It strengthens the local inflection-uniqueness guard against formula-transcription error, but still exports no nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
