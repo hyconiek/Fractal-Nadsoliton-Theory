@@ -1038,3 +1038,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2483/S1433 P2459 root-window-adjacent nested boundary ladder replay guard
 
 `P2483/S1433` adds a nested one-sided boundary-ladder guard for the weakest P2482 subcell behind `L_total`.  Its `16` fresh Decimal evaluations are diagnostic nested rows anchored at the root-window side of one inherited covered-boundary-chain cell, not new P2459 coverage cells; the result remains finite one-sided seam evidence and does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, root-window closure, or ToE closure.
+
+## P2484/S1434 P2459 boundary-side dyadic secant margin replay guard
+
+`P2484/S1434` adds a finite dyadic secant-margin guard behind `L_total` for the same root-window-adjacent inherited P2456 boundary-chain subcell audited by P2482/P2483.  Its `32` fresh Decimal evaluations and `31` consecutive secant margins are diagnostic rows, not new P2459 coverage cells; the packet does not export directed rounding, analytic monotonicity, root-window exclusion, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2485/S1435 P2459 boundary-side secant-curvature stability guard
+
+`P2485/S1435` adds a deeper finite secant-curvature stability guard behind `L_total`: `64` diagnostic Decimal rows, `63` positive lower-bound secant margins, and `62` positive finite margin drifts in one inherited P2456 covered-boundary-chain subcell.  It remains diagnostic finite arithmetic and does not export directed rounding, analytic monotonicity/convexity, root-window exclusion, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2486/S1436 P2459 boundary-cell derivative monotonicity guard
+
+`P2486/S1436` adds a one-cell interval derivative-sign guard behind `L_total`: the same inherited P2456 boundary-chain subcell audited by P2482/P2485 has positive projection-amplitude value and positive projection-amplitude derivative under the strict Decimal/Taylor interval backend.  The certificate is local to that inherited cell and does not export directed rounding, root-window exclusion, global analytic monotonicity, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2487/S1437 P2459 boundary-handoff collar derivative sweep guard
+
+`P2487/S1437` adds a finite collar-wide derivative-sign guard behind `L_total`: `134` diagnostic interval-derivative rows across the P2481 handoff collar, all with positive projection-amplitude value and positive projection-amplitude derivative.  The guard remains finite and local to the inherited collar; it does not export directed rounding, root-window exclusion, global analytic monotonicity, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
+
+## P2488/S1438 P2459 boundary-handoff collar monotonicity lemma guard
+
+`P2488/S1438` turns the P2487 finite collar derivative sweep into a compact checked-collar lemma behind `L_total`: positive value plus positive derivative on all `134` P2481 collar rows implies finite piecewise monotonicity and zero exclusion on that checked collar only.  It reuses existing diagnostic rows, adds no P2459 coverage, and does not export directed rounding, root-window exclusion, global analytic monotonicity, selector/source/gauge authority, physical-value generation, legacy-role transfer, or ToE closure.
