@@ -1070,3 +1070,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2491/S1441 bridge/role claim pivotality guard
 
 `P2491/S1441` adds a claim-specific pivotality guard behind `L_total`: every audited legacy-role claim still depends on all bridge atoms, and the strongest post-bridge role-stage bottlenecks are the role-transfer audit license and role-bearing `L_total` export.  The guard is a finite Boolean sensitivity audit and does not export selector/source discharge, QW-2191 closure, role-transfer, physical-value generation, or ToE closure.
+
+## P2492/S1442 claim-specific minimal completion package guard
+
+`P2492/S1442` adds a claim-specific minimal-package guard behind `L_total`: any audited legacy-role successor must first carry the full eight-atom bridge package and the shared post-bridge role-transfer/role-bearing-`L_total` core.  Claim-specific atoms then separate weak-mixing, inverse-alpha, gravity-hierarchy, and torsion-to-chi11 successor routes.  The guard is finite bookkeeping/minimality evidence and does not export selector/source closure, QW-2191 discharge, role-transfer, physical-value generation, or ToE closure.
+
+## P2493/S1443 nonaffine compression curvature guard
+
+`P2493/S1443` adds a differential guard behind `L_total`: the phase-normalized branch that matches strict damping output to legacy normalized output has nonzero `x''`, changes curvature sign from near-origin positive to tail negative, and has negative Z12 second differences.  Thus a role-bearing strict compression term cannot be justified by an affine bridge; it still needs a real nonlinear compression-flow source.  No QW-2191 discharge, role-transfer, physical-value generator, or ToE closure is exported.
+
+## P2494/S1444 multiprecision curvature stability guard
+
+`P2494/S1444` strengthens the P2493 nonaffine compression guard by replaying the curvature signs, inflection bracket, and Z12 concavity at `50/80/120` decimal digits.  The stability check supports the finite nonaffine obstruction but remains non-directed numerical evidence; it does not export a nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2495/S1445 interval-enclosed curvature guard
+
+`P2495/S1445` strengthens the P2493/P2494 nonaffine compression guard by enclosing the sample `x''` signs and Z12 second differences in `mpmath.iv` intervals.  The strict signs survive the declared branch-radius enclosure, so the affine-bridge obstruction is numerically interval-stable; nevertheless no nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure is exported.
+
+## P2496/S1446 inverse-branch existence/uniqueness guard
+
+`P2496/S1446` adds a finite bracketing guard behind the P2493--P2495 curvature audits: the legacy normalized branch is interval-monotone on `[0,2]`, and all audited strict normalized targets are bracketed in its range.  This licenses the finite inverse-branch evaluations used by the curvature guards, but does not export a global branch theorem, nonlinear compression-flow source, bridge atom, role-transfer theorem, QW-2191 discharge, or ToE closure.
