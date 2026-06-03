@@ -1451,3 +1451,9 @@ This is an unbracketed descent-horizon ledger, not a full complement Decimal rep
 `P2466/S1416` continues the P2465 unbracketed horizon from each family's P2465 endpoint all the way to the corresponding boundary side of the same unreplayed complement segment.  The replay adds the remaining descent-direction tail cells, all remain zero-excluding, and the certificate records whether the finite tail stays strictly decreasing or encounters a local bracket.
 
 This is a two-tail endpoint-to-boundary ledger, not a full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2467/S1417 strict pointwise interval-Decimal opposite-tail sentinel ledger certificate
+
+`P2467/S1417` responds to the P2466 next-step prompt by auditing the opposite, non-descent-side tails from the same P2465/P2466 adaptive endpoints.  It does not replay the full opposite tails; instead it replays deterministic endpoint-band plus dyadic-fraction sentinels in each opposite tail using the same Decimal/Taylor backend.  The selected opposite-tail sentinels remain zero-excluding and are disjoint from the P2466 descent-tail rows.
+
+This is an opposite-tail sentinel ledger, not an opposite-tail full replay, full complement Decimal replay, directed-rounding interval theorem, symbolic root-exclusion theorem, analytic monotonicity theorem, selector/source/gauge theorem, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.

@@ -970,3 +970,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2466/S1416 Decimal adaptive descent tail-boundary ledger guard
 
 `P2466/S1416` extends the P2465 adaptive descent endpoints to their segment-side boundaries.  It improves finite tail coverage for the selected scalar families, but it does not cover the full P2459 complement and adds no selector/source/gauge authority for `L_total`.
+
+## P2467/S1417 Decimal opposite-tail sentinel ledger guard
+
+`P2467/S1417` adds a finite opposite-side audit after P2466 by replaying endpoint-band plus dyadic sentinels on the non-descent tails.  It improves bidirectional tail hygiene for the selected scalar families, but it is not a full-tail or full-complement proof and adds no selector/source/gauge authority for `L_total`.
