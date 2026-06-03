@@ -1657,3 +1657,39 @@ This is still a finite `mpmath.iv` certificate, not a formal directed-rounding b
 `P2500/S1450` audits the formula provenance behind the P2499 third-derivative interval.  A `sympy` symbolic check verifies that the implemented legacy and strict third-derivative product-rule formulas match direct differentiation, and that the implicit identity for `x'''` follows from differentiating `L_norm(x(d)) = S_strict_norm(d)` three times.  This supports the P2499 local uniqueness computation by removing a formula-transcription ambiguity from the interval backend.
 
 This is a symbolic formula audit plus inherited finite interval evidence, not a formal directed-rounding backend, global analytic inflection theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2501/S1451 phase-normalized curvature interval-Newton root enclosure certificate
+
+`P2501/S1451` applies a finite interval-Newton contraction to the P2498/P2499 refined inflection window.  With `f(d)=x''(d)`, midpoint `m=0.349616745`, and the P2499/P2500-audited negative interval for `f'(d)=x'''(d)`, the image `m - f(m)/f'([0.34961674,0.34961675])` is a strict subset of the starting window, approximately `[0.3496167445840840099, 0.3496167445840840974]`.  Endpoint curvature signs on the contracted interval remain opposite, and P2499 monotonicity supplies local uniqueness inside the contracted enclosure.
+
+This is a finite `mpmath.iv` interval-Newton enclosure and formula-audited numerical contraction, not a formal directed-rounding backend, global analytic inflection theorem, or nonlinear compression-flow source theorem.  It exports no damping bridge atom, no strict compression source, no selector/source closure, no QW-2191 discharge, no role-transfer, no role-bearing `L_total`, no physical-value generation, and no ToE closure.
+
+## P2502/S1452 strict-completion bridge minimal-triple frontier certificate
+
+`P2502/S1452` pivots from further local curvature narrowing to the current bridge-completion theorem frontier.  It exhaustively enumerates all `35` three-atom extensions of the seven open strict-completion atoms and finds exactly one triple that closes the bridge target: `{strict_dynamical_source_for_A_P_D, strict_phase_frequency_source, strict_damping_beta_eta_source}`.  That triple closes only bridge theorem-level readiness, not role-transfer, selector/QW-2191, or ToE.  The P2493--P2501 curvature enclosure chain is inherited as finite compression evidence, but it is not one of the open theorem-source atoms and therefore does not by itself change the frontier signature.
+
+This is a finite theorem-frontier enumeration and planning certificate, not a bridge theorem, source theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.  It redirects the next honest bridge move toward actual strict-source atoms rather than more local root contraction.
+
+## P2503/S1453 strict damping marginal RG-flow candidate certificate
+
+`P2503/S1453` attacks the `strict_damping_beta_eta_source` atom from the P2502 bridge triple by auditing an exact candidate marginal flow.  With `gamma_F=D_f-1=4 log(2)-1` and `delta=14/5-4 log(2)`, the symbolic law `dB/dell=delta*B` gives `B(ell)=beta0 exp(delta ell)` and exactly reconstructs the strict denominator exponent: `gamma_F+delta=9/5`.  The symbolic ODE residual and denominator residual are zero, and finite rows show that omitting `delta` leaves a positive strict-minus-base damping residual on the audited positive nodes.
+
+This is a source-candidate/factorization certificate only.  It does not derive `delta` or `beta0` from nadsoliton dynamics, does not export the `strict_damping_beta_eta_source` atom, does not close the P2502 bridge triple, and exports no role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2504/S1454 strict damping constant-coefficient RG uniqueness certificate
+
+`P2504/S1454` sharpens P2503 without promoting it to a source theorem.  Inside the explicit ansatz `B(ell)=beta0 exp(lambda ell)` with `gamma_F=D_f-1` fixed, the first strict denominator node fixes `beta0=1`, and a second positive node fixes `lambda=9/5-gamma_F=14/5-4 log(2)`.  A finite pair audit over all `55` positive-node pairs confirms that every pair recovers the same `lambda` and `beta0` to high precision.
+
+This is uniqueness only inside a chosen constant-coefficient marginal-flow ansatz.  It does not derive the ansatz, `delta`, or `beta0` from strict nadsoliton dynamics, does not export the `strict_damping_beta_eta_source` atom, and exports no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2505/S1455 strict damping finite-node RG-flow nullspace certificate
+
+`P2505/S1455` audits the limitation of P2504.  It constructs a nonconstant finite-node nullspace perturbation `B_eps(ell)=exp(delta ell + eps R(ell))`, where `R(ell)=ell * product_{d=2}^{11}(ell-log d)`.  Since `R(log d)=0` for every audited node `d=1..11`, the perturbed flow exactly preserves all finite strict denominator samples while changing the local flow rate between nodes.  This proves that P2504 uniqueness is only uniqueness inside the constant-coefficient ansatz, not uniqueness among all running-beta flows.
+
+This is a nonuniqueness/limitation certificate, not a source theorem.  It does not export the `strict_damping_beta_eta_source` atom, does not close the bridge triple, and exports no role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
+
+## P2506/S1456 strict damping RG minimum-roughness selector candidate certificate
+
+`P2506/S1456` conditionally addresses the P2505 finite-node nullspace by auditing a concrete selector candidate: minimize `J[y]=int_0^log(11) (y''(ell))^2 d ell` for the running exponent `y(ell)=log B(ell)` subject to the strict finite-node constraints.  The constant P2503 flow has zero roughness, and the zero-energy affine constraints force `y(ell)=delta ell`; the explicit P2505 nullspace perturbation has positive scaled roughness energy.  Thus the constant-coefficient flow is selected if this minimum-roughness action is admitted.
+
+This is a conditional selector-candidate certificate, not a derived strict damping source.  It does not derive the roughness action from nadsoliton dynamics, does not export `strict_damping_beta_eta_source`, and exports no bridge theorem, role-transfer theorem, QW-2191 discharge, physical-value generator, or ToE closure.
