@@ -994,3 +994,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2472/S1422 P2459 finite partition seam replay guard
 
 `P2472/S1422` strengthens the finite-grid bookkeeping behind `L_total` by checking the transition seams between P2466, P2469, and P2470 partition classes and replaying seam cells.  It does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2473/S1423 P2459 replay-chain fingerprint binding guard
+
+`P2473/S1423` adds a provenance guard to the finite-grid bookkeeping behind `L_total`: the P2469/P2470/P2471/P2472 replay-chain artifacts are hash-bound to their declared source artifacts and their theorem exports.  This improves audit reproducibility and tamper evidence, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2474/S1424 P2459 extremal-witness rerun guard
+
+`P2474/S1424` adds a fresh Decimal/Taylor rerun guard to the finite-grid bookkeeping behind `L_total`: the weakest and edge witnesses from P2469/P2470 plus all P2472 seam witnesses are recomputed and compared against the stored artifacts.  This strengthens finite reproducibility, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2475/S1425 P2459 critical-minimum halo replay guard
+
+`P2475/S1425` adds a local halo guard to the finite-grid bookkeeping behind `L_total`: the two-cell neighborhoods around the P2469/P2470/P2472 minimum-separation witnesses are rebuilt from the finite P2459 partition and replayed.  This strengthens local robustness around the weakest finite witnesses, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.
+
+## P2476/S1426 P2459 critical-halo order classification guard
+
+`P2476/S1426` adds an order-classification guard to the finite-grid bookkeeping behind `L_total`: P2475 critical halos are checked for strict local minima, one-sided boundary minima, and lower-neighbor exceptions.  This improves proof hygiene around weakest-witness language, but it does not add selector/source/gauge authority, physical-value generation, role-bearing finality, legacy-role transfer, or ToE closure.

@@ -1489,3 +1489,27 @@ This is a stronger bookkeeping theorem for the finite audit ledger: it checks th
 `P2472/S1422` audits the off-by-one seams of the P2471 finite partition witness.  It rebuilds the selected P2459 segment classifications, checks that class transitions are adjacent-index seams, and replays boundary-edge plus transition-edge cells with the Decimal/Taylor backend.  All seam cells remain zero-excluding with positive Decimal separation.
 
 This is a local seam/off-by-one audit for the finite partition ledger.  It is not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
+
+## P2473/S1423 strict pointwise interval-Decimal P2459 replay-chain fingerprint binding audit
+
+`P2473/S1423` is a tamper-evident provenance audit for the finite P2459 replay chain `P2469 -> P2470 -> P2471 -> P2472`.  It reloads each generated artifact, recomputes the declared theorem fingerprint, recomputes every declared source fingerprint from the current source files, checks all gatekeepers, and verifies that the finite chain counts still bind to the `99846`-cell P2459 universe.
+
+For a non-specialist: this does not calculate new physics; it checks that the files saying "we checked every box" are still tied to the exact input files they claim, and that the hash labels in those files still match the current contents.  It is not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
+
+## P2474/S1424 strict pointwise interval-Decimal P2459 extremal-witness rerun audit
+
+`P2474/S1424` performs a fresh Decimal/Taylor rerun of the critical finite witnesses from the P2459 replay chain: first/minimum/last rows for the full P2469 opposite-tail replay, first/minimum/last rows for the full P2470 remaining non-tail replay, and all P2472 seam rows.  The fresh rerun matches stored separations and zero-exclusion flags while the inherited finite ledger remains `45165 + 48320` plus the P2466 tail count inside the `99846`-cell P2459 universe.
+
+For a non-specialist: this redoes the most important saved checks—the weakest cells and the seam cells—rather than only checking file hashes.  It is still a finite witness rerun, not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
+
+## P2475/S1425 strict pointwise interval-Decimal P2459 critical-minimum halo replay audit
+
+`P2475/S1425` expands the P2474 extremal-witness rerun into a local halo audit.  For each scalar family it takes the minimum-separation witnesses inherited from P2469, P2470, and P2472, rebuilds the P2459 finite partition classification, and replays the two-neighbor halo around each critical witness with the Decimal/Taylor backend.  The fresh halo replay covers 14 unique cells after overlap and segment-boundary truncation; all replayed halo cells remain zero-excluding with positive Decimal separation.
+
+For a non-specialist: P2474 recalculated the most important single saved cells; P2475 also checks nearby cells around those weak spots, so the result is not hanging on a one-cell bookkeeping accident.  It remains a finite local-neighborhood replay, not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
+
+## P2476/S1426 strict pointwise interval-Decimal P2459 critical-halo order classification audit
+
+`P2476/S1426` classifies the local separation ordering inside the P2475 critical halos.  It does not assume every inherited minimum witness is a local minimum after cross-class halo expansion: it checks each target against its available neighboring cells, records boundary-truncated one-sided minima, and explicitly reports the one case where a lower neighbor exists in the cross-class halo.  The audit finds `5/6` critical targets are strict minima within their available halo and `1/6` has a lower neighboring cell, while all cells remain zero-excluding under P2475.
+
+For a non-specialist: this is an honesty check on the word "minimum".  Some minima are minima only inside their original packet/class, not after nearby cells from another class are included.  P2476 names that fact instead of hiding it.  It remains a finite ordering audit, not a directed-rounding interval theorem, symbolic root-exclusion theorem, continuum theorem, selector/source/gauge theorem, physical-value generator, role-bearing `L_total`, `QW-2191` discharge, legacy-role transfer, or ToE closure.
