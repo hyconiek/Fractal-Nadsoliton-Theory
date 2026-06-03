@@ -1174,3 +1174,31 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2517/S1467 dual-key axiom boundary guard
 
 `P2517/S1467` marks the strict damping source boundary: both P2516 keys must be strict theorems for strict source acceptance.  Any axiom-supplied key is non-strict by construction, and any missing key blocks the source.  Therefore no nonlinear compression-flow source theorem or role-bearing `L_total` term is licensed by axiom-augmented bookkeeping.
+
+## P2518/S1468 affine-slope nonidentifiability guard
+
+`P2518/S1468` blocks a false source inference from the biharmonic roughness action: the `m=2` operator signature annihilates every affine `y(ell)=a ell+b`, not just the strict `delta=4/5` affine flow.  A future role-bearing damping term must therefore source both the operator signature and the numeric slope/`beta, eta` data; the operator signature alone cannot license nonlinear compression-flow source closure.
+
+## P2519/S1469 endpoint-anchor acceptance guard
+
+`P2519/S1469` records the exact conditional data needed after P2518: the biharmonic affine kernel is pinned only if strict dynamics supply endpoint node anchors fixing `y(0)=0` and `y(log 11)=(4/5)log 11`.  The calculation recovers the numeric target under those anchors, but the anchors remain unsourced, so no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+## P2520/S1470 endpoint-anchor subkey guard
+
+`P2520/S1470` records that the P2519 endpoint anchors are themselves two independent source subkeys.  The left anchor supplies beta normalization but not the slope, while the right anchor alone permits an intercept/slope tradeoff; only both subkeys pin `beta=1, eta=9/5`.  Because neither subkey is sourced here, no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+## P2521/S1471 single-node anchor placement guard
+
+`P2521/S1471` shows that, after left normalization, the right endpoint `d=11` is only one sufficient nonzero node anchor among `d=2..11`; the affine algebra itself does not select the anchor placement.  A role-bearing damping source must still source the left normalization and a nonzero node value/placement, so no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
+
+## P2522/S1472 two-node anchor basis guard
+
+`P2522/S1472` shows that two distinct strict node values can conditionally replace the left-normalization-plus-one-node anchor basis and derive `beta=1, eta=9/5`.  Because the node-pair basis and its values remain unsourced, this does not license a nonlinear compression-flow source or role-bearing `L_total` term.
+
+## P2523/S1473 pairwise secant consistency guard
+
+`P2523/S1473` gives a basis-independent check that all strict node values are mutually affine with slope `4/5`, but it assumes the node data being checked.  Therefore the calculation still does not source the numeric damping data and does not license a nonlinear compression-flow source or role-bearing `L_total` term.
+
+## P2524/S1474 affine-consistency continuum guard
+
+`P2524/S1474` records that constant pairwise secants and zero triangle cocycles only prove affine node-data form, not the strict values `b=0` and `a=4/5`.  A role-bearing damping source must still supply the numeric intercept/slope data, so no nonlinear compression-flow source or role-bearing `L_total` term is licensed.
