@@ -1,4 +1,4 @@
 # P2148 S1098
 
-- Result kind: `OPEN_STRICT_CMP2_EXTERNAL_DATA_DELIVERY_BLOCKER_REPORT`
-- Blocked stages: `['p2132', 'p2133', 'p2134', 'p2135']`
+- Result kind: `PASS_STRICT_CMP2_EXTERNAL_DATA_DELIVERY_BLOCKER_REPORT`
+- Blocked stages: `[]`

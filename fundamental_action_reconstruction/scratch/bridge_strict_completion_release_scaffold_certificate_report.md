@@ -5,7 +5,7 @@ Status: `release-scaffold-files-present-and-consistent-with-finite-bridge-ledger
 ## Scaffold docs
 
 - `strict_kernel_transformation_diagrams`: exists=`True`, snippets=`10/10`, lines=`130`
-- `strict_kernel_lagrangian_eom_draft`: exists=`True`, snippets=`10/10`, lines=`140`
+- `strict_kernel_lagrangian_eom_draft`: exists=`True`, snippets=`10/10`, lines=`1028`
 - `strict_kernel_role_transfer_audit_draft`: exists=`True`, snippets=`10/10`, lines=`74`
 
 ## Cross-checks

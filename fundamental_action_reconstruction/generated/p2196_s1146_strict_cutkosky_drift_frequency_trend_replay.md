@@ -1,7 +1,7 @@
 # P2196 S1146: strict Cutkosky drift-frequency trend replay
 
 - Trend status: `DRIFT_FREE_TREND`
-- Window size: `2`
+- Window size: `3`
 - Drift frequency: `0.000000`
 - Drift count: `0`
 

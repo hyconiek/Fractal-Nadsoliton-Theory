@@ -7,7 +7,7 @@ Author/session update: 2026-05-30 user reactivation instruction: legacy kernel m
 
 - `diagrams_evidence_all_found`: `True`
 - `k1_kernel_split_note_present`: `True`
-- `s2_retirement_recorded_but_reinterpreted_by_current_author_instruction`: `True`
+- `s2_retirement_recorded_but_reinterpreted_by_current_author_instruction`: `False`
 - `f253_future_bridge_target_exists`: `True`
 - `chi11_reduced_bit_supported`: `True`
 - `chi11_meta_uniqueness_still_open`: `True`

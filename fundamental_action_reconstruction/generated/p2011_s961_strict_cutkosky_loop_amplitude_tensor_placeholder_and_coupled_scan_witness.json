@@ -6,7 +6,7 @@
   "timestamp_utc": "2026-05-18T00:00:00+00:00",
   "route": "strict_only",
   "depends_on": {
-    "p2010_present": true
+    "p2010_present": false
   },
   "channel_loop_tensor_placeholders": {
     "variances": {
@@ -251,20 +251,19 @@
     "l2_base_p2004": 1.39930383112735e-05
   },
   "gatekeeper_checks": {
-    "p2010_present": true,
+    "p2010_present": false,
     "loop_amplitude_tensor_placeholders_exported": true,
     "covariance_psd": true,
     "scan_nonempty": true
   },
-  "result_kind": "PASS_LOOP_TENSOR_PLACEHOLDER_COUPLED_SCAN_WITNESS",
+  "result_kind": "OPEN_OBSTRUCTION_WITH_TRACE",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
   "false_pass_guard": "Placeholder channel loop tensors are preparatory diagnostics only; not theorem-grade closure.",
   "next_honest_step": "Replace placeholders with exported backend loop-amplitude tensors per channel and rerun coupled covariance scan.",
   "lay_explanation": "Zrobiliśmy przejściowy krok: osobne tensory kanałów zbudowane z ich profili numerycznych, żeby przygotować pełny import backend tensorów amplitud.",
   "environment": {
-    "python": "3.14.4",
-    "numpy": "2.4.5",
+    "python": "3.12.3",
+    "numpy": "1.26.4",
     "scipy": "1.17.1"
-  },
-  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+  }
 }

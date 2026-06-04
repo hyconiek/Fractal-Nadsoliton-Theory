@@ -8,12 +8,12 @@
   "result_kind": "PASS_STRICT_CMP2_NEXT_ACTION_COMMITMENT_PACKET_WITH_TRACE",
   "next_action_commitment": {
     "source_interpretation_gate": "generated/p2144_s1094_strict_cmp2_real_ci_stability_interpretation_gate.json",
-    "ready": false,
-    "interpretation": "BLOCKED_PENDING_REAL_EXTENSION_ROWS",
+    "ready": true,
+    "interpretation": "READY_BUT_SPREAD_UNAVAILABLE",
     "action_commitment": [
-      "deliver_real_cmp2_backend_rows_extension_v1_json",
-      "rerun_p2142_executor",
-      "refresh_p2144_interpretation_gate"
+      "freeze_non_synthetic_ci_stability_interpretation",
+      "archive_cmp2_operational_chain_state",
+      "advance_to_next_formal_obstruction_family"
     ],
     "scope_limit": "action commitment packet only; not theorem-grade closure"
   },

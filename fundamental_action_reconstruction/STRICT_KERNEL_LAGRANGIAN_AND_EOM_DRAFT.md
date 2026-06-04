@@ -1232,3 +1232,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 `P2538/S1488` records the global rewrite-normalization normal form for strict damping source repair bookkeeping.  The rank-decreasing rewrite graph has the unique all-strict terminal state, so any supplied set of required repairs normalizes to the same row; this normalization certificate still does not supply the repairs as strict source theorems or license a nonlinear compression-flow Lagrangian term.
 
 `P2539/S1489` records the ToE-potential interface for strict damping: the repair certificates strengthen auditability but do not change the P2421 ToE gate vector.  A role-bearing Lagrangian step should therefore wait for an actual strict source theorem for at least one strict-damping source key, rather than treating normalized repair bookkeeping as a dynamical source.
+
+## P2540/S1490 m2 operator-signature source obstruction guard
+
+`P2540/S1490` attacks the `m2_operator_signature_source` key and finds a current-premise obstruction: the existing derivative-order and node-fixed variational premises admit `m=2` and `m=3` (indeed `m=1..10` in the audit) as source-free models.  So the `m=2` biharmonic signature remains a target, not a strict source theorem, until nadsoliton dynamics supply a new operator-order selection principle.
+
+## P2541/S1491 multiplicative-character source obstruction guard
+
+`P2541/S1491` shows that current affine-consistency premises do not source the multiplicative law: `y_d=b+a log d` is multiplicative exactly when the missing left-normalization `b=y_1=0` is supplied.  So `multiplicative_character_law_source` remains open; it cannot be promoted from consistency checks without a strict unital/monoid-character source.
+
+## P2542/S1492 prime-log proportionality source obstruction guard
+
+`P2542/S1492` shows that unital multiplicative characters on `d=1..11` do not source prime-log proportionality: arbitrary prime-generator values pass multiplicativity, while `v_p/log(p)=constant` is an additional unsourced collapse.  Thus `prime_log_proportionality_source` remains open, and the damping term still cannot become role-bearing in `L_total`.
+
+## P2543/S1493 slope-value source obstruction guard
+
+`P2543/S1493` shows that the prime-log slope line still does not source `delta=4/5`: slopes such as `delta=1/2` satisfy unital multiplicativity and prime-log proportionality.  A strict numeric slope or prime-value anchor remains an external source obligation, so the damping term is not yet role-bearing in `L_total`.
+
+## P2544/S1494 strict damping no-false-source Ltotal guard
+
+`P2544/S1494` blocks promotion of the current strict-damping beta/eta package into role-bearing `L_total`: P2540-P2543 show that all four P2530 source keys remain unsourced under current premises.  A damping/compression term may remain as a conditional target, but not as a derived dynamical source until a new strict nadsoliton theorem supplies the missing source principle.

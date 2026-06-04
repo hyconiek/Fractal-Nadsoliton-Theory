@@ -6,7 +6,7 @@
 - `4 ln 2` breaks symmetry by itself: `False`
 - Current strict twisted-vortex bridge exported: `False`
 - G1/G3 update: `OPEN_UNCHANGED`
-- Theorem fingerprint: `72804997c3125fe4d60896ecb42d7a0c31814fe3859c8148c2dec0379b221603`
+- Theorem fingerprint: `222bc41a88b3fb9581acbd2e39728519ba1eacf875f9370505df50c371b00471`
 
 ## Concrete answers
 1. Full EOM: not yet; only partial ADM/Bianchi-I and tensor-gap witnesses are exported.

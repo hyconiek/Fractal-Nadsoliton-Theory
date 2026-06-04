@@ -2,14 +2,14 @@
 
 Status: `strict-release-source-coverage-audited-by-repo-grep-provenance-no-false-pass`
 
-Scan file count: `7907`
+Scan file count: `8264`
 
 ## Source families
 
-- `legacy_kernel_history`: hits=`546`, required_files_present=`True`, mentioned=`True`
-- `strict_lagrangian_eom`: hits=`556`, required_files_present=`True`, mentioned=`True`
-- `finite_bridge_ledger`: hits=`185`, required_files_present=`True`, mentioned=`True`
-- `role_transfer_selector_boundaries`: hits=`3755`, required_files_present=`True`, mentioned=`True`
+- `legacy_kernel_history`: hits=`565`, required_files_present=`True`, mentioned=`True`
+- `strict_lagrangian_eom`: hits=`756`, required_files_present=`True`, mentioned=`True`
+- `finite_bridge_ledger`: hits=`201`, required_files_present=`True`, mentioned=`True`
+- `role_transfer_selector_boundaries`: hits=`4023`, required_files_present=`True`, mentioned=`True`
 
 ## Cross-checks
 

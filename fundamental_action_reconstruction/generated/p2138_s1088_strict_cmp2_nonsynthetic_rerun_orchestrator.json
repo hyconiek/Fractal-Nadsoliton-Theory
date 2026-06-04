@@ -5,10 +5,10 @@
   "produced_by": "p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator.py",
   "timestamp_utc": "2026-05-26T00:00:00+00:00",
   "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
-  "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_ORCHESTRATOR_BLOCKED",
+  "result_kind": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_ORCHESTRATOR_WITH_TRACE",
   "nonsynthetic_rerun_orchestrator": {
     "target_extension_file": "generated/cmp2_backend_rows_extension_v1.json",
-    "rows_detected": 0,
+    "rows_detected": 8,
     "pipeline_execution_log": [
       {
         "script": "p2126_s1076_strict_cmp2_backend_evidence_weighted_posterior_calibration_audit.py",
@@ -37,12 +37,12 @@
       }
     ],
     "post_run_result_kinds": {
-      "p2132": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
-      "p2133": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
-      "p2134": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
-      "p2135": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED"
+      "p2132": "PASS_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_WITH_TRACE",
+      "p2133": "PASS_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_WITH_TRACE",
+      "p2134": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_WITH_TRACE",
+      "p2135": "PASS_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_WITH_TRACE"
     },
-    "fully_unblocked": false,
+    "fully_unblocked": true,
     "scope_limit": "orchestration/readout only; not theorem-grade closure"
   },
   "recommended_next_honest_step": {
@@ -50,11 +50,11 @@
     "goal": "if fully unblocked, freeze non-synthetic CI inflation comparison report and move to next formal obstruction track"
   },
   "gatekeeper_checks": {
-    "extension_rows_present": false,
-    "p2132_pass": false,
-    "p2133_pass": false,
-    "p2134_pass": false,
-    "p2135_pass": false,
+    "extension_rows_present": true,
+    "p2132_pass": true,
+    "p2133_pass": true,
+    "p2134_pass": true,
+    "p2135_pass": true,
     "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
     "c3_theorem_proven": true,

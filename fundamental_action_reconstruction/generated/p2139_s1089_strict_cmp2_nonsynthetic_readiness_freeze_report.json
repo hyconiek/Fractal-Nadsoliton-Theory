@@ -5,22 +5,17 @@
   "produced_by": "p2139_s1089_strict_cmp2_nonsynthetic_readiness_freeze_report.py",
   "timestamp_utc": "2026-05-26T00:00:00+00:00",
   "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
-  "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_READINESS_FREEZE_REPORT_BLOCKED",
+  "result_kind": "PASS_STRICT_CMP2_NONSYNTHETIC_READINESS_FREEZE_REPORT_WITH_TRACE",
   "nonsynthetic_readiness_freeze_report": {
     "source_orchestrator": "generated/p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator.json",
     "post_run_result_kinds": {
-      "p2132": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
-      "p2133": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
-      "p2134": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
-      "p2135": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED"
+      "p2132": "PASS_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_WITH_TRACE",
+      "p2133": "PASS_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_WITH_TRACE",
+      "p2134": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_WITH_TRACE",
+      "p2135": "PASS_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_WITH_TRACE"
     },
-    "fully_unblocked": false,
-    "missing_or_blocked_stages": [
-      "P2132",
-      "P2133",
-      "P2134",
-      "P2135"
-    ],
+    "fully_unblocked": true,
+    "missing_or_blocked_stages": [],
     "scope_limit": "readiness freeze/readout only; not theorem-grade closure"
   },
   "recommended_next_honest_step": {
@@ -28,7 +23,7 @@
     "goal": "if blocked: deliver real extension rows and rerun P2138; if unblocked: lock non-synthetic CI inflation report and move to next formal obstruction family"
   },
   "gatekeeper_checks": {
-    "all_nonsynthetic_gates_passed": false,
+    "all_nonsynthetic_gates_passed": true,
     "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
     "c3_theorem_proven": true,
