@@ -1877,3 +1877,21 @@ Therefore the current slope-line premises do not entail the strict slope `delta=
 `P2544/S1494` synthesizes the four source-key attacks `P2540-P2543` against the P2530 strict-damping normal form.  The result is a no-false-source theorem: every current route to a required strict-damping source key is blocked by an explicit countermodel or nonentailment witness.  Affine consistency does not source multiplicativity without `y_1=0`; unital multiplicative prime characters do not source `v_p/log(p)=constant`; the prime-log slope line does not source `delta=4/5`; and the current derivative-order premises do not select the `m=2` operator signature.
 
 Therefore `strict_damping_beta_eta_source` remains false under the current source assignment.  The next professorially honest path is a new strict nadsoliton source theorem for one missing principle, followed only then by bridge-completion and role-transfer auditing.  No source-obligation discharge, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, physical-value generator, or ToE closure is exported.
+
+## P2545/S1495 strict damping unital-normalization current-premise obstruction certificate
+
+`P2545/S1495` executes the smallest P2544 completion-path target: the attempted source of `y_1=0` / unital monoid normalization.  The computation audits affine rows `y_d=b+a log d` on `d=1..11` and finds explicit current-premise countermodels with `b != 0`, including a row with the strict slope `a=4/5`.  The unit-product and full multiplicative defects are exactly `-y_1`, so the equations that set `y_1=0` are precisely the missing source law, not a consequence of merely having the identity node or affine consistency.
+
+Therefore the multiplicative-character key remains blocked at the sharper subkey `strict_unital_monoid_normalization_y1_zero`.  The next honest step is a genuine strict nadsoliton unit-node/identity-action theorem, or else a switch to the independent `m=2` operator-order source target.  No beta/eta source, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, or ToE closure is exported.
+
+## P2546/S1496 strict damping identity-action conditional propagation certificate
+
+`P2546/S1496` tests the next proof-shaped move after P2545: what exactly would a strict nadsoliton identity-action theorem buy?  The exact affine audit shows that the unit law `y_(1*d)=y_1+y_d` collapses to `b=log(beta)=0`, hence `y_1=0`, and rejects precisely the P2545 nonunital countermodels.  Therefore such a theorem would conditionally close the P2541 multiplicative-character key.
+
+The propagation is only one-key wide.  Even under a hypothetical strict identity-action source, the P2530 assignment still lacks prime-log proportionality, the strict slope/prime anchor for `delta=4/5`, and the `m=2` operator-signature source.  No identity-action source, source-obligation discharge, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, or ToE closure is exported.
+
+## P2547/S1497 strict damping post-identity residual tri-key certificate
+
+`P2547/S1497` grants the best-case P2546 hypothesis only as a conditional frontier reduction: the multiplicative/unital key is assumed strict.  The residual truth table over prime-log proportionality, `delta=4/5` slope/prime anchor, and `m=2` operator signature has exactly one accepting row.  Each single residual-key omission still rejects `strict_damping_beta_eta_source`.
+
+Therefore identity-action work, even if later sourced, is not a full damping-source closure.  The next proof/computation frontier is a genuinely new source theorem for one residual key, preferably the independent `m=2` operator-order selection or the numeric prime-log proportionality source.  No residual key source, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, or ToE closure is exported.

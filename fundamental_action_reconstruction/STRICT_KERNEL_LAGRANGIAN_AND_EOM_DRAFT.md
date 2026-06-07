@@ -1252,3 +1252,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2544/S1494 strict damping no-false-source Ltotal guard
 
 `P2544/S1494` blocks promotion of the current strict-damping beta/eta package into role-bearing `L_total`: P2540-P2543 show that all four P2530 source keys remain unsourced under current premises.  A damping/compression term may remain as a conditional target, but not as a derived dynamical source until a new strict nadsoliton theorem supplies the missing source principle.
+
+## P2545/S1495 unital-normalization Ltotal guard
+
+`P2545/S1495` blocks a common false promotion route for the damping term: `y_1=0` is not forced by current affine/node-domain premises.  It can only be used in `L_total` as a conditional subkey until a strict nadsoliton unit-node normalization source theorem is supplied.
+
+## P2546/S1496 identity-action conditional Ltotal guard
+
+`P2546/S1496` shows that a future strict identity-action theorem would close only the multiplicative/unital subkey of strict damping.  The damping term remains non-role-bearing in `L_total` until the remaining prime-log, slope-value, and `m=2` source keys are also strict theorems.
+
+## P2547/S1497 post-identity residual tri-key Ltotal guard
+
+`P2547/S1497` records that a hypothetical identity-action source leaves an irredundant residual tri-key blocker.  The strict damping term remains non-role-bearing in `L_total` until prime-log proportionality, slope anchoring, and `m=2` operator selection are all strict source theorems.
