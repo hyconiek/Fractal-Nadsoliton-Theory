@@ -1895,3 +1895,59 @@ The propagation is only one-key wide.  Even under a hypothetical strict identity
 `P2547/S1497` grants the best-case P2546 hypothesis only as a conditional frontier reduction: the multiplicative/unital key is assumed strict.  The residual truth table over prime-log proportionality, `delta=4/5` slope/prime anchor, and `m=2` operator signature has exactly one accepting row.  Each single residual-key omission still rejects `strict_damping_beta_eta_source`.
 
 Therefore identity-action work, even if later sourced, is not a full damping-source closure.  The next proof/computation frontier is a genuinely new source theorem for one residual key, preferably the independent `m=2` operator-order selection or the numeric prime-log proportionality source.  No residual key source, bridge completion, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, or ToE closure is exported.
+
+## P2548/S1498 m2 trace-arity conditional selection guard
+
+`P2548/S1498` attacks the post-identity `m2_operator_signature_source` frontier by isolating a sharper conditional source theorem.  In the derivative-only self-adjoint family `J_m[y]=int (D^m y)^2 d ell`, the endpoint trace arity is `2m`; an independently exported strict quadruple-trace theorem would solve `2m=4` and hence select `m=2` uniquely on the audited `m=1..10` range.  This is only a conditional implication: no strict quadruple-trace source is exported, and after identity plus conditional `m=2`, prime-log proportionality and the slope/prime anchor remain required before `beta_eta_numeric_source` or strict damping source closure can be claimed.
+
+## P2549/S1499 quadruple-trace current-premise obstruction guard
+
+`P2549/S1499` audits whether the P2548 quadruple-trace premise is already forced by current derivative-order premises.  It is not: the P2540 source-free order models still admit all audited orders `m=1..10`, with trace arities `2m = 2,4,6,...,20`; only `m=2` has trace arity four, while `m=3` is an explicit passing countermodel with trace arity six.  Thus the P2548 implication remains conditional, and no `strict_quadruple_trace_source` or `m2_operator_signature_source` is exported.
+
+## P2550/S1500 prime-log adjacent-ratio basis guard
+
+`P2550/S1500` attacks the residual `prime_log_proportionality_source` by isolating its exact finite source-obligation basis.  For normalized prime ratios `r_p=v_p/log(p)` on primes `2,3,5,7,11`, the four adjacent equations `r_2=r_3`, `r_3=r_5`, `r_5=r_7`, and `r_7=r_11` have rank/nullity `4/1` and nullspace the constant ratio line.  Every single omitted adjacent equality has an explicit nonproportional witness satisfying all other adjacent equalities, so the basis is irredundant.  This still exports no prime-log source: a strict nadsoliton mechanism must supply all four ratio equalities rather than merely list them.
+
+## P2551/S1501 post-prime-log slope-anchor obstruction guard
+
+`P2551/S1501` audits the post-prime-log residual slope key.  Even after the P2550 adjacent-ratio basis collapses the five prime ratios to a single line `v_p=delta log(p)`, the value of `delta` remains free: audited slopes such as `delta=1/2` satisfy the prime-log basis but are not the strict `delta=4/5` target.  Any one strict prime anchor `v_p=(4/5)log(p)` would fix the line, but P2551 exports no theorem that strict nadsoliton dynamics supplies such an anchor.
+
+## P2552/S1502 homogeneous slope-selector obstruction guard
+
+`P2552/S1502` audits homogeneous post-prime-log slope selectors.  On the line `v=delta log(p)`, any homogeneous linear constraint `c·v=0` either has `c·log(p)=0` and accepts the whole slope line, or has `c·log(p) != 0` and selects only `delta=0`.  Therefore homogeneous/scale-invariant constraints cannot select the nonzero strict value `delta=4/5`; the missing source must be nonhomogeneous, such as a strict prime-value anchor or equivalent fixed-scale selector.
+
+## P2553/S1503 nonhomogeneous anchor-constant equivalence guard
+
+`P2553/S1503` audits the nonhomogeneous alternative left open by P2552.  On the post-prime-log line `v=delta log(p)`, any fixed-scale anchor `c·v=k` with `c·log(p) != 0` selects `delta=k/(c·log(p))`; selecting the strict nonzero value is exactly the constant obligation `k=(4/5)c·log(p)`.  Thus a nonhomogeneous anchor is only progress if the strict constant is independently sourced, not merely inserted.
+
+## P2554/S1504 local-exhaustion bridge-reorientation guard
+
+`P2554/S1504` reorients the strict-damping work after the local obstruction chain.  A six-gate truth table over local source discharge, `legacy -> strict` bridge completion, role-transfer theorem, QW-2191 selector discharge, role-bearing `L_total`, and ToE closure has `64` rows and only the all-true row accepts.  Even hypothetically supplying the local strict-damping source alone leaves the bridge/role/selector/Ltotal gates closed, so the next honest frontier is the broader completion/source bridge audit rather than more local bookkeeping.
+
+## P2555/S1505 legacy-to-strict damping denominator nonrenormalization guard
+
+`P2555/S1505` begins the recommended `legacy -> strict` bridge audit at the damping denominator.  On `d=1..11`, the legacy denominator `1+beta_tors*d` has zero second finite differences, while the strict denominator `1+d^(9/5)` has positive second finite differences.  For audited legacy candidates `beta_tors=0.01` and `0.05`, neither raw denominator identity nor constant-amplitude absorption can map the linear legacy torsion damping into the nonlinear strict compression.  A valid bridge therefore needs a real nonlinear compression/source map, not a scalar `beta_tors -> (beta,eta)` renormalization.
+
+## P2556/S1506 damping homotopy source nonuniqueness guard
+
+`P2556/S1506` continues the damping bridge audit by separating endpoint compression from source dynamics.  The linear denominator homotopy `u_s=(1-s)L+sS` and the geometric homotopy `u_s=L^(1-s)S^s` have the same endpoints `L=1+beta_tors*d`, `S=1+d^(9/5)` and the same endpoint log-compression primitive `log(S/L)`, but their instantaneous source densities differ on every audited row.  Thus endpoint compression does not select a unique strict damping source; a real bridge must add a strict homotopy/source-density selector.
+
+## P2557/S1507 damping homotopy metric-dependence guard
+
+`P2557/S1507` audits whether a simple variational metric can select the damping-completion homotopy.  On the same legacy/strict endpoint data, denominator-velocity cost selects the linear denominator homotopy, while log-source cost selects the geometric homotopy, for every audited `d=1..11` and `beta_tors in {0.01,0.05}`.  Thus homotopy selection is metric-dependent: the bridge needs a strict source for the metric/source-density principle, not an after-the-fact convenient path action.
+
+## P2558/S1508 damping power-mean homotopy continuum guard
+
+`P2558/S1508` strengthens the damping-homotopy bridge obstruction from two examples to an audited power-mean family.  For `q in {-2,-1,0,1,2}` every audited path shares the same legacy/strict endpoints and the same endpoint log transport, but the midpoint log-source density changes with `q` on every audited `d=1..11` and `beta_tors in {0.01,0.05}`.  Thus endpoint compression data do not select the homotopy/source-density law; the legacy->strict damping bridge needs a strict source for the power-mean parameter or an equivalent source-density selector.
+
+## P2559/S1509 constant-log-source conditional selector guard
+
+`P2559/S1509` turns the P2558 power-mean continuum obstruction into a conditional selector audit.  In the audited family, the additional premise `d/ds log u_s = constant` selects exactly the geometric path `q=0`; every audited `q != 0` row has nonconstant sampled log-source density.  This is only a conditional selector: the constant-log-source law is not exported by current strict nadsoliton dynamics, so the legacy->strict damping bridge remains unclosed.
+
+## P2560/S1510 constant-log-source current-premise obstruction guard
+
+`P2560/S1510` audits whether the P2559 constant-log-source premise follows from the current endpoint/power-mean bridge premises.  It does not: the audited nonzero power-mean parameters `q in {-2,-1,1,2}` give `88` countermodels that preserve the legacy/strict endpoints and positive denominators while violating constant log-source density.  Thus the P2559 `q=0` selector remains conditional and cannot be promoted into a damping bridge source by current premises.
+
+## P2561/S1511 post-damping residual bridge two-key guard
+
+`P2561/S1511` combines the P2502 bridge-frontier triple with the P2560 damping obstruction.  With current premises there are `0` bridge-accepting rows because the damping source is still absent.  Even under a best-case future damping source, the residual bridge truth table has `4` rows and only the row with both `strict_dynamical_source_for_A_P_D` and `strict_phase_frequency_source` closes the bridge target.  Thus damping work alone cannot close the bridge; the next nonduplicative bridge attack should target one of those residual source atoms, especially phase/frequency/topological-bit passage under the QW-2191 guardrail.
