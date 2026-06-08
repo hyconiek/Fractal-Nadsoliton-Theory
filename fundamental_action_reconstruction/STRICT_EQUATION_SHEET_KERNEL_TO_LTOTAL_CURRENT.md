@@ -1979,3 +1979,95 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2568/S1518 phase/frequency semibounded Hessian realization guard
 
 `P2568/S1518` audits higher-support signed Hessian realization after the P2567 minimal-saddle obstruction.  The five linear constraints consisting of two stationarity equations plus a target Hessian have rank `5` on `12` weights, leaving a `7`-dimensional affine freedom.  The audit explicitly realizes negative-identity, positive-identity, and anisotropic negative-definite Hessians at the strict tuple, all using signed weights.  Therefore semibounded Hessian realization is not itself a phase/frequency source; the sign/measure/weight law remains the missing strict obligation.
+
+## P2569/S1519 APD value-bridge interpolation dynamic nonuniqueness guard
+
+`P2569/S1519` audits the residual `strict_dynamical_source_for_A_P_D` atom by separating P2416 finite APD value exactness from actual dynamics.  The `12` APD node values admit a degree-`11` interpolant, but adding `lambda*prod_{d=0}^{11}(x-d)` gives an infinite family that preserves every audited node value while changing off-node values and derivatives.  Thus APD value-level bridge bookkeeping is not a strict A/P/D dynamical source.
+
+## P2570/S1520 APD Sobolev roughness selector order-dependence guard
+
+`P2570/S1520` follows P2569 by testing a concrete APD regularity selector: minimize Sobolev roughness `J_k(lambda)=int_0^11 |d^k q_lambda/dx^k|^2 dx` on the same vanishing-polynomial interpolation family.  The audit finds that the selected `lambda` depends on the derivative order: lower orders choose nonzero family members while order `12` chooses the base interpolant.  Thus APD finite exactness plus an unsourced roughness slogan still does not export `strict_dynamical_source_for_A_P_D`.
+
+## P2571/S1521 APD Sobolev measure/boundary dependence guard
+
+`P2571/S1521` fixes the APD Sobolev derivative order at `k=2` and audits the next hidden choices: positive measure weights and endpoint slope-penalty boundary classes.  The minimizing `lambda` changes across `7` audited variants while every selected member preserves the finite APD nodes.  Thus even second-order roughness does not export `strict_dynamical_source_for_A_P_D` unless the measure and boundary class are strict-sourced.
+
+## P2572/S1522 APD boundary-penalty selector continuum guard
+
+`P2572/S1522` fixes `k=2` and uniform bulk measure, then audits endpoint slope penalties as a remaining APD boundary selector.  The stationarity law is explicitly `lambda(t)=-(B_bulk+t*B_endpoint)/(A_bulk+t*A_endpoint)`, and the left/right penalty grids already select multiple distinct `lambda` values while preserving every finite APD node.  Thus boundary penalty strength is a continuous unsourced selector and still does not export `strict_dynamical_source_for_A_P_D`.
+
+## P2573/S1523 APD boundary-penalty inverse-target tunability guard
+
+`P2573/S1523` inverts the P2572 endpoint-penalty stationarity law.  For targets between the uniform-bulk minimizer and an endpoint-penalty limit, `t(lambda_target)=-(lambda_target*A_bulk+B_bulk)/(lambda_target*A_endpoint+B_endpoint)` recovers the chosen APD `lambda` while preserving all finite APD nodes.  Thus endpoint penalties are post-hoc tunable selectors unless the boundary law is strict-sourced before choosing the APD dynamics.
+
+## P2574/S1524 APD two-endpoint boundary compatibility guard
+
+`P2574/S1524` audits whether simple two-endpoint APD slope boundary laws can replace the missing source.  On `q_lambda=q_interp+lambda*V`, each endpoint slope target demands its own `lambda`; for the audited target pairs, including zero/zero Neumann data, the left-required and right-required `lambda` values disagree.  Thus two-endpoint boundary slogans are compatibility constraints, not `strict_dynamical_source_for_A_P_D`.
+
+## P2575/S1525 APD augmented-boundary nullspace nonuniqueness guard
+
+`P2575/S1525` tests the repair move after P2574: add more node-vanishing modes `V`, `x*V`, `x^2*V` so two endpoint APD slope targets become solvable.  The boundary matrix has rank `2` and nullity `1`; all audited targets can be met while preserving finite APD nodes, but the null direction still changes off-node values.  Thus augmented boundary solvability is not `strict_dynamical_source_for_A_P_D` without a sourced admissible function space.
+
+## P2576/S1526 APD boundary-nullspace discrete Sobolev selector dependence guard
+
+`P2576/S1526` tests whether the P2575 boundary-preserving nullspace can be selected by a discrete Sobolev roughness rule.  On a fixed grid and for derivative orders `{0,1,2,3,4,12}`, the minimizing nullspace parameter `gamma` changes with the derivative order while preserving finite APD nodes and the audited endpoint slopes.  Thus even after augmented boundary solvability, the nullspace selector remains a separate strict source obligation.
+
+## P2577/S1527 APD boundary-nullspace grid/measure dependence guard
+
+`P2577/S1527` fixes the P2576 nullspace selector derivative order at `k=2` and audits the remaining grid/quadrature-measure choice.  Across `7` grid/weight variants for each audited boundary target, the minimizing nullspace `gamma` changes while preserving finite APD nodes and endpoint slopes.  Thus grid/measure choice is another unsourced selector and still not `strict_dynamical_source_for_A_P_D`.
+
+## P2578/S1528 APD augmented-boundary basis-metric dependence guard
+
+`P2578/S1528` audits a different APD nullspace selector: choose the augmented-boundary solution with minimum Euclidean coefficient norm in a vanishing-mode basis.  Changing the basis among monomial, centered, scaled, and shifted variants preserves finite APD nodes and endpoint slopes but changes the selected off-node APD values.  Thus coefficient-norm minimization is basis/metric dependent and still does not export `strict_dynamical_source_for_A_P_D`.
+
+## P2579/S1529 APD inner-product inverse metric tunability guard
+
+`P2579/S1529` sharpens the P2578 basis-metric obstruction by solving the inverse APD metric problem.  In the rank-2/nullity-1 augmented-boundary coefficient family, positive-definite metrics can be constructed so that different nullspace `gamma` values are the minimizers of `c^T G c`, while finite APD nodes and endpoint slopes remain fixed.  Thus even a coordinate-free-looking SPD inner-product minimizer is not `strict_dynamical_source_for_A_P_D` unless the strict action sources the inner product itself.
+
+## P2580/S1530 APD inner-product basis covariance requirement guard
+
+`P2580/S1530` separates coordinate covariance from APD sourcehood.  For the same P2578 bases and APD boundary targets, resetting the Euclidean norm in every basis reproduces basis-dependent selections, while transporting the metric tensor by the basis-change law restores the same selected APD polynomial across bases.  This proves a necessary covariance rule for any future APD inner product, but it still does not source the metric or `strict_dynamical_source_for_A_P_D`.
+
+## P2581/S1531 APD Gram-measure moment dependence guard
+
+`P2581/S1531` tests the next source candidate after P2580: choose an APD inner product as a positive L2/Gram metric on the augmented vanishing-mode basis.  Across five positive measures, all Gram metrics are positive definite and preserve the same finite APD nodes plus endpoint slopes, but the selected off-node APD dynamics changes with the measure.  Thus covariance-compatible Gram metrics still require a strict source for the measure/moment law before they can export `strict_dynamical_source_for_A_P_D`.
+
+## P2582/S1532 APD low-order moment-matched measure nonuniqueness guard
+
+`P2582/S1532` tests whether the P2581 measure dependence can be removed by fixing low-order moments of the positive APD measure.  A three-measure positive family on the same support has identical mass, first moment, and second raw moment, and each induced Gram metric preserves the finite APD nodes plus endpoint slopes; nevertheless the selected off-node APD dynamics still varies.  Thus a finite low-order moment law is not `strict_dynamical_source_for_A_P_D`.
+
+## P2583/S1533 APD finite moment-prefix measure ladder guard
+
+`P2583/S1533` extends P2582 from one low-order prefix to a finite-prefix ladder.  For moment prefixes through orders `0`, `1`, `2`, and `3`, the audit constructs positive measures that share the audited raw moments and keep APD node/boundary constraints fixed, yet still select different off-node APD dynamics.  Thus no finite audited moment prefix is a strict APD measure source.
+
+## P2584/S1534 APD full-moment finite-support conditional uniqueness guard
+
+`P2584/S1534` records the positive conditional lemma after the finite-prefix obstructions: on a fixed four-point support, moments through order `3` recover the weights by a nonsingular Vandermonde system.  The same audit shows why this still is not a strict APD source: different unsourced supports each have conditionally unique positive weights but select different off-node APD dynamics while preserving finite APD nodes and endpoint slopes.
+
+## P2585/S1535 APD support-geometry selector nonuniqueness guard
+
+`P2585/S1535` tests whether P2584's remaining support choice can be sourced by simple finite-support geometry.  Three audited supports share cardinality `4`, endpoints `0.25` and `10.75`, and centroid `5.375`; on each support, full moments conditionally recover positive weights.  The selected off-node APD dynamics still changes with the support, so support geometry is not `strict_dynamical_source_for_A_P_D`.
+
+## P2586/S1536 APD mirror-symmetric support selector nonuniqueness guard
+
+`P2586/S1536` strengthens the P2585 support-geometry audit by imposing pairwise mirror symmetry about center `5.5`.  Three audited supports satisfy the same reflection law and each has conditionally unique positive weights from fixed-support full moments, but the selected off-node APD dynamics still changes with the support.  Thus mirror symmetry is not a strict APD support source.
+
+## P2587/S1537 APD mirror second-moment shell support nonuniqueness guard
+
+`P2587/S1537` adds a stronger support-geometry constraint than P2586: six-point supports share endpoints, mirror symmetry about center `5.5`, cardinality `6`, and a common internal second-moment shell.  Fixed-support full moments still recover positive weights only after support is chosen, and the off-node APD dynamics remains support-dependent.  Therefore a mirror variance shell is not a strict APD support source.
+
+## P2588/S1538 APD mirror fourth-moment shell support nonuniqueness guard
+
+`P2588/S1538` strengthens P2587 by imposing eight-point mirror supports with shared endpoints, cardinality `8`, and common internal second/fourth moment shells.  Fixed-support full moments still recover weights only after the support is chosen, and the off-node APD dynamics remains support-dependent.  Therefore a mirror kurtosis shell is not a strict APD support source.
+
+## P2589/S1539 APD mirror sixth-moment shell support nonuniqueness guard
+
+`P2589/S1539` strengthens P2588 by imposing ten-point mirror supports with shared endpoints, cardinality `10`, and common internal second/fourth/sixth moment shells.  Fixed-support full moments still recover weights only after the support is chosen, and the off-node APD dynamics remains support-dependent.  Therefore a mirror higher-moment shell is not a strict APD support source.
+
+## P2590/S1540 APD finite even-moment shell interval nonuniqueness guard
+
+`P2590/S1540` upgrades P2589 from three witnesses to an interval-style product-parameter grid.  The Vieta certificate fixes the APD mirror support's second/fourth/sixth even-moment shells while leaving the product parameter free; fixed-support full moments still recover weights only after support is chosen, and off-node APD dynamics remains support-dependent.  Thus a finite even-moment shell prefix is not a strict APD support source.
+
+## P2591/S1541 APD product-parameter Sturm interval certificate guard
+
+`P2591/S1541` upgrades P2590's finite grid to a Sturm/discriminant interval certificate: the offset quartic has no discriminant root on `[300, 576]`, and the anchor count has four positive roots, so the same finite even-moment shell prefix supports a continuous mirror-support family.  This strengthens nonuniqueness; it still does not source the APD support law.
