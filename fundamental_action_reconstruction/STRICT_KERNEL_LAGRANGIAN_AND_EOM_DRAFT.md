@@ -1320,3 +1320,31 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2561/S1511 post-damping residual bridge two-key Ltotal guard
 
 `P2561/S1511` blocks promotion of strict damping progress into a full role-bearing `L_total` bridge.  Post-damping, the bridge still requires strict A/P/D dynamics and strict phase/frequency source; role-transfer and QW-2191 remain separate downstream gates.
+
+## P2562/S1512 physical ontology shortcut nonpromotion Ltotal guard
+
+`P2562/S1512` blocks promotion of DIAGRAMS-style physical ontology directly into a role-bearing `L_total`.  Hydrodynamic and resonance analogies remain source targets, not source theorems; role-transfer, QW-2191, and ToE closure remain closed gates.
+
+## P2563/S1513 phase/frequency rational-winding quotient obstruction Ltotal guard
+
+`P2563/S1513` blocks promotion of a pure topological winding quotient into role-bearing phase/frequency dynamics in `L_total`.  Phase/frequency remains a strict source obligation; the certificate exports no bridge theorem, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2564/S1514 phase/frequency finite sign-cell nonidentifiability Ltotal guard
+
+`P2564/S1514` blocks promotion of finite phase-sign data into role-bearing phase/frequency dynamics in `L_total`.  The exact tuple still requires a stronger strict selector/source principle inside the open sign cell; the certificate exports no bridge theorem, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2565/S1515 phase/frequency selector-objective grid Ltotal guard
+
+`P2565/S1515` blocks promotion of source-free selector objectives into role-bearing phase/frequency dynamics in `L_total`.  The phase/frequency source must come from strict nadsoliton dynamics or a real selector premise; QW-2191, role-transfer, and ToE closure remain open.
+
+## P2566/S1516 phase/frequency selector stationarity weight-cone Ltotal guard
+
+`P2566/S1516` blocks promotion of first-order phase/frequency stationarity into role-bearing `L_total`.  Signed stationarity can be manufactured post hoc and nonnegative stationarity is obstructed, so a strict source must provide the variational law, second-order/global selection, QW-2191 handling, and bridge role discipline.
+
+## P2567/S1517 phase/frequency minimal stationary Hessian saddle Ltotal guard
+
+`P2567/S1517` blocks promotion of minimal signed stationary witnesses into role-bearing phase/frequency `L_total` terms.  First-order stationarity plus a three-node signed support fails the second-order selector test; a strict source would need a higher-support semibounded variational law or a proof that no such law exists.
+
+## P2568/S1518 phase/frequency semibounded Hessian realization Ltotal guard
+
+`P2568/S1518` blocks promotion of higher-support signed semibounded Hessian fits into role-bearing phase/frequency `L_total` terms.  Both local max and local min Hessians can be manufactured post hoc with signed weights, so a strict source must provide the positivity/measure law, bridge role discipline, and QW-2191 handling.
