@@ -1320,3 +1320,123 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2561/S1511 post-damping residual bridge two-key Ltotal guard
 
 `P2561/S1511` blocks promotion of strict damping progress into a full role-bearing `L_total` bridge.  Post-damping, the bridge still requires strict A/P/D dynamics and strict phase/frequency source; role-transfer and QW-2191 remain separate downstream gates.
+
+## P2562/S1512 physical ontology shortcut nonpromotion Ltotal guard
+
+`P2562/S1512` blocks promotion of DIAGRAMS-style physical ontology directly into a role-bearing `L_total`.  Hydrodynamic and resonance analogies remain source targets, not source theorems; role-transfer, QW-2191, and ToE closure remain closed gates.
+
+## P2563/S1513 phase/frequency rational-winding quotient obstruction Ltotal guard
+
+`P2563/S1513` blocks promotion of a pure topological winding quotient into role-bearing phase/frequency dynamics in `L_total`.  Phase/frequency remains a strict source obligation; the certificate exports no bridge theorem, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2564/S1514 phase/frequency finite sign-cell nonidentifiability Ltotal guard
+
+`P2564/S1514` blocks promotion of finite phase-sign data into role-bearing phase/frequency dynamics in `L_total`.  The exact tuple still requires a stronger strict selector/source principle inside the open sign cell; the certificate exports no bridge theorem, role-transfer theorem, QW-2191 discharge, or ToE closure.
+
+## P2565/S1515 phase/frequency selector-objective grid Ltotal guard
+
+`P2565/S1515` blocks promotion of source-free selector objectives into role-bearing phase/frequency dynamics in `L_total`.  The phase/frequency source must come from strict nadsoliton dynamics or a real selector premise; QW-2191, role-transfer, and ToE closure remain open.
+
+## P2566/S1516 phase/frequency selector stationarity weight-cone Ltotal guard
+
+`P2566/S1516` blocks promotion of first-order phase/frequency stationarity into role-bearing `L_total`.  Signed stationarity can be manufactured post hoc and nonnegative stationarity is obstructed, so a strict source must provide the variational law, second-order/global selection, QW-2191 handling, and bridge role discipline.
+
+## P2567/S1517 phase/frequency minimal stationary Hessian saddle Ltotal guard
+
+`P2567/S1517` blocks promotion of minimal signed stationary witnesses into role-bearing phase/frequency `L_total` terms.  First-order stationarity plus a three-node signed support fails the second-order selector test; a strict source would need a higher-support semibounded variational law or a proof that no such law exists.
+
+## P2568/S1518 phase/frequency semibounded Hessian realization Ltotal guard
+
+`P2568/S1518` blocks promotion of higher-support signed semibounded Hessian fits into role-bearing phase/frequency `L_total` terms.  Both local max and local min Hessians can be manufactured post hoc with signed weights, so a strict source must provide the positivity/measure law, bridge role discipline, and QW-2191 handling.
+
+## P2569/S1519 APD value-bridge interpolation dynamic nonuniqueness Ltotal guard
+
+`P2569/S1519` blocks promotion of finite APD bridge values into role-bearing A/P/D dynamics in `L_total`.  A strict source must provide a dynamical equation, regularity principle, or minimal-action law that rejects the vanishing-polynomial family; otherwise APD remains value-level bridge evidence only.
+
+## P2570/S1520 APD Sobolev roughness selector order-dependence Ltotal guard
+
+`P2570/S1520` blocks promotion of APD minimum-roughness interpolation into role-bearing `L_total` dynamics.  A legitimate APD variational term must source the derivative order, measure, and boundary class; otherwise the Sobolev selector is metric-dependent bookkeeping rather than strict nadsoliton dynamics.
+
+## P2571/S1521 APD Sobolev measure/boundary dependence Ltotal guard
+
+`P2571/S1521` blocks importing a hydrodynamic `k=2` APD roughness term into role-bearing `L_total` without its measure and boundary data.  The same APD values support distinct weighted/boundary Sobolev minimizers, so a sourced APD action remains required.
+
+## P2572/S1522 APD boundary-penalty selector continuum Ltotal guard
+
+`P2572/S1522` blocks adding an endpoint-penalty APD Sobolev term to role-bearing `L_total` by hand.  Even after fixing `k=2` and the bulk measure, the boundary penalty parameter continuously changes the selected APD dynamics; strict boundary data remain required.
+
+## P2573/S1523 APD boundary-penalty inverse-target tunability Ltotal guard
+
+`P2573/S1523` blocks inverse-fitting endpoint penalties into role-bearing `L_total`.  A boundary term that can be solved after choosing a target APD member is not a strict APD action source; admissible boundary conditions and penalty strengths must be derived independently.
+
+## P2574/S1524 APD two-endpoint boundary compatibility Ltotal guard
+
+`P2574/S1524` blocks inserting two-endpoint Neumann-style APD boundary conditions into role-bearing `L_total` by analogy.  Such boundary data must be derived and compatibility-tested; the audited one-parameter bridge family does not automatically satisfy common two-endpoint slope targets.
+
+## P2575/S1525 APD augmented-boundary nullspace nonuniqueness Ltotal guard
+
+`P2575/S1525` blocks repairing APD boundary incompatibility inside role-bearing `L_total` by freely adding vanishing modes.  Extra modes can satisfy endpoint data but leave a boundary-preserving nullspace; the strict action must source the allowed APD function space and nullspace selector.
+
+## P2576/S1526 APD boundary-nullspace discrete Sobolev selector dependence Ltotal guard
+
+`P2576/S1526` blocks adding a boundary-nullspace Sobolev selector to role-bearing `L_total` without sourcing its derivative order and grid/measure.  The APD nullspace can be selected in multiple metric-dependent ways; strict action data remain required.
+
+## P2577/S1527 APD boundary-nullspace grid/measure dependence Ltotal guard
+
+`P2577/S1527` blocks promoting a fixed-order APD boundary-nullspace roughness term into role-bearing `L_total` without a sourced grid or measure.  The same APD nodes and boundary targets admit multiple grid-dependent gamma selectors; strict APD action data remain required.
+
+## P2578/S1528 APD augmented-boundary basis-metric dependence Ltotal guard
+
+`P2578/S1528` blocks adding a minimum-coefficient-norm APD selector to role-bearing `L_total` without sourcing the vanishing-mode basis and coordinate metric.  A strict APD action must provide the function-space inner product; otherwise the same constraints yield basis-dependent dynamics.
+
+## P2579/S1529 APD inner-product inverse metric tunability Ltotal guard
+
+`P2579/S1529` blocks adding an APD inner-product minimizer to role-bearing `L_total` by metric choice.  Since SPD metrics can be inverse-tuned to select different APD boundary-nullspace dynamics under the same value and boundary data, the APD kinetic/measure term must be derived from strict nadsoliton dynamics before it can carry role-bearing force.
+
+## P2580/S1530 APD inner-product basis covariance requirement Ltotal guard
+
+`P2580/S1530` blocks role-bearing `L_total` terms that choose a fresh coordinate Euclidean APD norm in each basis.  A legitimate APD kinetic/measure term must transform as a metric tensor under basis changes; covariance removes coordinate artifacts but does not by itself derive the inner product from strict nadsoliton dynamics.
+
+## P2581/S1531 APD Gram-measure moment dependence Ltotal guard
+
+`P2581/S1531` blocks inserting a role-bearing APD L2/Gram kinetic term into `L_total` by choosing a convenient positive measure.  The measure and its moments must be derived from strict nadsoliton dynamics; otherwise the same APD value/boundary constraints generate measure-dependent off-node dynamics.
+
+## P2582/S1532 APD low-order moment-matched measure nonuniqueness Ltotal guard
+
+`P2582/S1532` blocks adding a role-bearing APD Gram kinetic term to `L_total` by specifying only a finite prefix of measure moments.  The strict action must source the full measure density or a complete moment law; matching mass/mean/variance-like data still leaves measure-dependent APD dynamics.
+
+## P2583/S1533 APD finite moment-prefix measure ladder Ltotal guard
+
+`P2583/S1533` blocks a role-bearing APD Gram term in `L_total` from being justified by any finite audited prefix of measure moments.  The strict action must provide a full density, determinate infinite moment law, or equivalent kinetic source before the APD inner product can carry dynamics.
+
+## P2584/S1534 APD full-moment finite-support conditional uniqueness Ltotal guard
+
+`P2584/S1534` blocks a role-bearing APD Gram term in `L_total` from being justified by solving full finite-support moments after choosing the support.  The support or full measure density must itself be strict-sourced before the recovered weights can carry APD dynamics.
+
+## P2585/S1535 APD support-geometry selector nonuniqueness Ltotal guard
+
+`P2585/S1535` blocks a role-bearing APD Gram term in `L_total` from being justified by support cardinality, endpoints, and centroid.  These geometry constraints do not source the APD support/density; strict nadsoliton dynamics must provide the actual support law before recovered weights can carry dynamics.
+
+## P2586/S1536 APD mirror-symmetric support selector nonuniqueness Ltotal guard
+
+`P2586/S1536` blocks a role-bearing APD Gram term in `L_total` from being justified by finite-support reflection symmetry.  Symmetry of support is still a selector premise; strict nadsoliton dynamics must source the actual support/density law.
+
+## P2587/S1537 APD mirror second-moment shell support nonuniqueness Ltotal guard
+
+`P2587/S1537` blocks a role-bearing APD Gram term in `L_total` from being justified by a finite support variance shell.  Endpoints, reflection symmetry, cardinality, and second support moment are still selector data; strict nadsoliton dynamics must source the actual support/density law.
+
+## P2588/S1538 APD mirror fourth-moment shell support nonuniqueness Ltotal guard
+
+`P2588/S1538` blocks a role-bearing APD Gram term in `L_total` from being justified by finite support variance/kurtosis shells.  Moment-shell geometry is still selector data; strict nadsoliton dynamics must source the actual support/density law.
+
+## P2589/S1539 APD mirror sixth-moment shell support nonuniqueness Ltotal guard
+
+`P2589/S1539` blocks a role-bearing APD Gram term in `L_total` from being justified by finite support variance/kurtosis/higher-moment shells.  Moment-shell geometry remains selector data; strict nadsoliton dynamics must source the actual support/density law.
+
+## P2590/S1540 APD finite even-moment shell interval nonuniqueness Ltotal guard
+
+`P2590/S1540` blocks a role-bearing APD Gram term in `L_total` from being justified by a finite even-moment shell prefix or product-parameter interval.  Moment-shell interval geometry remains selector data; strict nadsoliton dynamics must source the actual support/density law.
+
+## P2591/S1541 APD product-parameter Sturm interval certificate Ltotal guard
+
+`P2591/S1541` blocks a role-bearing APD Gram term in `L_total` from being justified by a Sturm-certified finite moment-shell interval.  The interval proves selector freedom, not a strict support/density source; strict nadsoliton dynamics must supply the actual support law.
