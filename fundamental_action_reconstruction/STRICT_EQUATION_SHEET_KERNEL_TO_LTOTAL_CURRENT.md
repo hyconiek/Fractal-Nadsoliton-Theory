@@ -2071,3 +2071,39 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2591/S1541 APD product-parameter Sturm interval certificate guard
 
 `P2591/S1541` upgrades P2590's finite grid to a Sturm/discriminant interval certificate: the offset quartic has no discriminant root on `[300, 576]`, and the anchor count has four positive roots, so the same finite even-moment shell prefix supports a continuous mirror-support family.  This strengthens nonuniqueness; it still does not source the APD support law.
+
+## P2592/S1542 APD Newton-Girard next even-moment sensitivity guard
+
+`P2592/S1542` identifies the next missing coordinate in the P2591 APD product-parameter interval: Newton-Girard gives the internal eighth shell `p4 = 74658 - 4*e4`, hence the fixed second/fourth/sixth shell prefix leaves the next even shell linearly free.  Adding the eighth shell would select the product parameter only if that shell is strictly sourced; by itself it is not a strict APD support law.
+
+## P2593/S1543 APD current-state replay and exact next-moment provenance guard
+
+`P2593/S1543` verifies the current-state status of P2592: the recorded whole P2591 generated-artifact fingerprint is not byte-for-byte identical to the current artifact, but the theorem-relevant P2591 interval predicate replays and the Newton-Girard calculation exact-replays as `p4 = 74658 - 4*e4` and central eighth moment `42715646049/32768 - 8*e4`.  This classifies the provenance drift and removes decimal ambiguity, but it still does not source the APD support law.
+
+## P2594/S1544 APD eighth-moment conditional inverse selector guard
+
+`P2594/S1544` proves the conditional inverse of P2592/P2593: if an eighth shell is supplied, then `e4 = (74658 - p4)/4` (equivalently `e4 = (42715646049/32768 - M8)/8`) recovers the P2591 product parameter and reconstructs the mirror-support quartic roots on the audited grid.  This is conditional selector determinacy only; it still does not source the eighth shell or the APD support law.
+
+## P2595/S1545 APD eighth-moment continuum inverse Sturm transport guard
+
+`P2595/S1545` upgrades P2594 from grid reconstruction to a continuum inverse transport: the internal eighth-shell interval `[72354, 73458]` and the corresponding central eighth interval map affinely back onto the P2591 product interval `[300, 576]`, so the inherited Sturm certificate transports valid four-positive-root support reconstruction across the entire interval.  This remains conditional on an externally supplied eighth shell and does not source the APD support law.
+
+## P2596/S1546 nadsoliton hydrodynamic IR m=2 source theorem guard
+
+`P2596/S1546` exports the requested non-empty source theorem for the `m=2` operator signature.  For an incompressible nadsoliton information fluid on a fractal hydrodynamic medium with `D_f=9/5≈1.8`, conservation forbids `m=0`, incompressibility plus isotropy/parity/self-adjoint positive dissipation forbids `m=1` and odd scalar dissipative orders, and RG comparison at `k->0` makes every higher even local order `m>2` irrelevant relative to the Laplacian because `k^(m-2)->0`.  Thus the intrinsic fractal Laplacian is the unique leading IR transport selector.  This sources only `m2_operator_signature_source`; beta/eta numerics, bridge completion, role-transfer, QW-2191, and ToE remain separate.
+
+## P2597/S1547 nadsoliton hydrodynamic RG m=2 robustness theorem guard
+
+`P2597/S1547` reinforces P2596 by auditing the RG eigenvalue normal form over `D_f in [17/10,19/10]`.  Under incompressible hydrodynamic exclusions, the relative RG eigenvalue of an even local order `m` against the Laplacian is `y_m-y_2=2-m`, independent of `D_f`; hence every even `m>2` is irrelevant and `m=2` remains the unique leading IR transport selector throughout the audited fractal-dimension band.  This strengthens only `m2_operator_signature_source`; beta/eta numerics, bridge completion, role-transfer, QW-2191, and ToE remain separate.
+
+## P2598/S1548 nadsoliton hydrodynamic locality fractional-competitor exclusion theorem guard
+
+`P2598/S1548` strengthens the hydrodynamic `m=2` source by auditing fractional competitors.  Under the local finite-stress nadsoliton hydrodynamic closure, fractional `alpha<2` generators are excluded as nonlocal stable/jump kernels with divergent second hydrodynamic stress moment, while local `alpha>2` operators are IR-irrelevant relative to the Laplacian.  Thus `alpha=m=2` remains the unique local finite-stress IR transport source.  This still does not export beta/eta numerics, bridge completion, role-transfer, QW-2191 discharge, or ToE closure.
+
+## P2599/S1549 nadsoliton projected viscous-stress m=2 derivation theorem guard
+
+`P2599/S1549` gives the explicit local constitutive derivation behind P2596--P2598.  For the incompressible nadsoliton information fluid, the local isotropic finite-stress law `sigma_ij=mu(partial_i u_j+partial_j u_i)+lambda delta_ij partial_l u_l` has Fourier divergence which, after `k.u=0` and pressure/Leray projection, acts on transverse modes as `-mu |k|^2`.  Thus the sourced local transport operator is explicitly the Laplacian of order `m=2`.  This still does not export beta/eta numerics, bridge completion, role-transfer, QW-2191 discharge, or ToE closure.
+
+## P2600/S1550 strict damping post-m2 residual source matrix guard
+
+`P2600/S1550` integrates the hydrodynamic `m=2` source theorem chain P2596--P2599 into the P2530/P2547 strict-damping source normal form.  The `m2_operator_signature_source` factor is now discharged, but the residual truth table still has exactly one accepting row over the three non-m2 keys: multiplicative/unital normalization, prime-log proportionality, and the `delta=4/5` slope/prime anchor.  Therefore strict damping/beta-eta source closure is not exported until those three source theorems are supplied.
