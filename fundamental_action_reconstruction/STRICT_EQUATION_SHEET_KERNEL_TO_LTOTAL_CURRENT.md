@@ -1951,3 +1951,31 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2561/S1511 post-damping residual bridge two-key guard
 
 `P2561/S1511` combines the P2502 bridge-frontier triple with the P2560 damping obstruction.  With current premises there are `0` bridge-accepting rows because the damping source is still absent.  Even under a best-case future damping source, the residual bridge truth table has `4` rows and only the row with both `strict_dynamical_source_for_A_P_D` and `strict_phase_frequency_source` closes the bridge target.  Thus damping work alone cannot close the bridge; the next nonduplicative bridge attack should target one of those residual source atoms, especially phase/frequency/topological-bit passage under the QW-2191 guardrail.
+
+## P2562/S1512 physical ontology shortcut nonpromotion guard
+
+`P2562/S1512` audits the tempting physical-ontology shortcut suggested by the legacy `DIAGRAMS_KERNEL_TRANSFORMATION.md` phenomenology: fractal tunneling for `eta=9/5`, nonlinear resonance for `omega=743/4000, phi=13/80`, and hydrodynamic/Laplacian intuition for `m=2`.  The finite computation records a strict-minus-legacy damping-power gap of `4/5` and nonzero phase/cosine gaps on `d=1..11`; it also inherits P2515's result that the `m=2` operator signature is identified but not sourced.  Therefore the shortcut may be documented as interpretation, but it does not export `strict_damping_beta_eta_source`, `strict_phase_frequency_source`, or a bridge theorem.
+
+## P2563/S1513 phase/frequency rational-winding quotient obstruction guard
+
+`P2563/S1513` attacks the phase/frequency residual atom from P2561 by auditing a precise source class: pure rational winding/cycle quotients of the legacy `pi/4, pi/6` phase data.  The proof obstruction is exact: such quotients remain rational multiples of `pi`, while the strict targets `omega=743/4000` and `phi=13/80` are nonzero rationals.  A bounded search over `|numerator| <= 96`, `denominator <= 96` records best numerical approximants, but does not remove the exact obstruction.  Therefore phase/frequency still needs a non-winding strict source or an explicitly justified pi-cancelling renormalization map.
+
+## P2564/S1514 phase/frequency finite sign-cell nonidentifiability guard
+
+`P2564/S1514` audits whether the finite strict phase-sign/topological-bit pattern on `d=0..11` can itself source the exact strict phase/frequency tuple.  It cannot: the strict tuple has positive clearance from all audited cosine-zero boundaries, yielding an explicit open box around `omega=743/4000`, `phi=13/80` that preserves the same finite sign pattern.  A 25-point perturbation grid inside the box preserves all signs, so finite sign/GF(2) reconstruction is not a unique phase/frequency selector.
+
+## P2565/S1515 phase/frequency selector-objective grid guard
+
+`P2565/S1515` audits five non-circular, source-free selector-objective candidates inside the P2564 open phase-sign cell on a `21 x 21` grid.  The audited objectives include zero-clearance margin, signed-cosine aggregate, signed-cosine minimum margin, phase `L2`, and parameter `L2`.  Every audited objective has a non-strict grid winner, so the exact tuple `omega=743/4000`, `phi=13/80` is still not selected without a sourced objective principle.  This sharpens the ToE bottleneck: the route has computable potential, but source selection remains underived.
+
+## P2566/S1516 phase/frequency selector stationarity weight-cone guard
+
+`P2566/S1516` audits first-order selector stationarity for objectives of the form `F_w(omega,phi)=sum_d w_d sign_d cos(omega*d+phi)` at the strict tuple.  The two stationarity equations on `12` weights have rank `2` and nullity `10` for unconstrained signed weights, while the natural nonnegative weight cone has no nonzero stationarity solution because positive-sign nodes occupy `d=0..7` and negative-sign nodes occupy `d=8..11`.  Thus stationarity alone is either impossible under natural positivity or underidentified under signed weights; the missing phase/frequency source must derive the weight/sign law and a stronger variational selector.
+
+## P2567/S1517 phase/frequency minimal stationary Hessian saddle guard
+
+`P2567/S1517` adds a second-order audit behind P2566.  It enumerates all `C(12,3)=220` minimal three-node signed stationary supports for the phase/frequency stationarity equations and computes the Hessian of `F_w(omega,phi)=sum_d w_d sign_d cos(omega*d+phi)` at the strict tuple.  Every audited minimal stationary witness has negative determinant / indefinite Hessian, so minimal signed stationarity is a saddle mechanism, not a local selector source for `omega=743/4000`, `phi=13/80`.
+
+## P2568/S1518 phase/frequency semibounded Hessian realization guard
+
+`P2568/S1518` audits higher-support signed Hessian realization after the P2567 minimal-saddle obstruction.  The five linear constraints consisting of two stationarity equations plus a target Hessian have rank `5` on `12` weights, leaving a `7`-dimensional affine freedom.  The audit explicitly realizes negative-identity, positive-identity, and anisotropic negative-definite Hessians at the strict tuple, all using signed weights.  Therefore semibounded Hessian realization is not itself a phase/frequency source; the sign/measure/weight law remains the missing strict obligation.
