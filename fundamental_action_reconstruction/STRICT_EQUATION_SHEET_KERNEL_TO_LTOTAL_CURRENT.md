@@ -2155,3 +2155,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2612/S1562 P2607 GF(2) physical-origin obstruction
 
 `P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.
+
+## P2613/S1563 P2601 monoid action uniqueness proof
+
+`P2613/S1563` verifies the prompt as physically correct under the explicit monoid-action semantics: RG dilations form `(D,·,1)`, nadsoliton transport is an action with `T_1=Id`, and positive damping attenuation has logarithmic coordinate `y`.  Since `1·1=1`, additivity gives `y_1=y_1+y_1`; cancellativity in `(R,+)` forces `y_1=0`, equivalently `A(1)=1` for dissipation-free identity transport.  This lifts only the P2601 unital/multiplicative quarantine; P2602 prime spectral-gap/proportionality, P2607 bridge completion, and P2608 role-bearing `L_total` remain blocked.
+
+## P2614/S1564 P2602 continuum RG character prime-log proof
+
+`P2614/S1564` revalidates P2602 by replacing the weak prime-gap story with a continuum RG character theorem: for continuous scale-stationary damping on the positive dilation monoid, `f(t)=y(e^t)` satisfies Cauchy's equation and continuity forces `f(t)=gamma t`, so `y(lambda)=gamma log(lambda)` and `v_p/log(p)=gamma` for every prime sample.  Discrete arbitrary prime characters remain counterexamples only when no continuous RG dilation embedding is required.  Together with P2613 and the retained P2603 `D_f=9/5` scope, the non-bridge strict damping beta/eta source is revalidated; P2607 bridge completion and P2608 role-bearing `L_total` remain blocked.
+
+## P2615/S1565 P2605 linear-slice non-bridge obstruction
+
+`P2615/S1565` reclassifies P2605 as an exact boundary/negative-control slice rather than bridge completion: a node-preserving constant-beta denominator equality `1+beta_tors*d = 1+beta*d^eta` at two distinct positive nodes forces `eta=1` and `beta=beta_tors`.  Therefore the P2605 `eta=1` match cannot by itself supply nonlinear strict-side compression.  P2606 remains only a nonlinear residual component, while P2607 bridge completion and P2608 role-bearing `L_total` remain blocked.
+
+## P2616/S1566 P2608 role acceptance obstruction after source revalidation
+
+`P2616/S1566` reruns the P2611 role predicate after the P2613/P2614 source repair and the P2615 linear-slice obstruction.  The source gate is now repaired for non-bridge strict damping bookkeeping, but the bridge-valid conjunct remains false because P2612 blocks the GF(2) bridge and P2615 blocks use of the `eta=1` slice as nonlinear completion.  Therefore P2608 role-bearing `L_total` acceptance remains rejected.
+
+## P2617/S1567 P2606 exponent-semantics reclassification
+
+`P2617/S1567` audits the P2606 nonlinear-residual label and finds a strict notation mismatch: P2603 supplies the codimension/log-slope `delta=4/5`, while the strict denominator exponent audited by P2414 is `eta=1+delta=9/5`.  Therefore the old P2606 denominator computation with `eta=4/5` is retained only as a codimension-slope perturbation probe, not as an exported strict-side nonlinear residual addition.  P2607 bridge completion and P2608 role-bearing `L_total` remain blocked.

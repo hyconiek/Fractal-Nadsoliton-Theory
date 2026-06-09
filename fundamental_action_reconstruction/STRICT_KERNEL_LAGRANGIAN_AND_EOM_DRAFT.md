@@ -1524,3 +1524,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2612/S1562 GF(2)-origin obstruction Ltotal guard
 
 `P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.
+
+## P2613/S1563 monoid-action Ltotal guard
+
+`P2613/S1563` revalidates the P2601 unital normalization subkey (`y_1=0`) by a closed monoid-action proof, but it does not re-enable the damping/compression term as role-bearing in `L_total`.  P2602, the GF(2) bridge, and P2608 role transfer remain separate blocked obligations.
+
+## P2614/S1564 continuum-prime-log Ltotal guard
+
+`P2614/S1564` revalidates the prime-log proportionality subkey and the non-bridge strict damping beta/eta source under the retained `D_f=9/5` scope.  It still does not make the damping/compression term role-bearing in `L_total`: the GF(2) bridge and P2608 role transfer remain quarantined.
+
+## P2615/S1565 linear-slice nonbridge Ltotal guard
+
+`P2615/S1565` prevents the P2605 linear slice from being used as a role-bearing `L_total` bridge premise.  The non-bridge damping source bookkeeping from P2613/P2614 may stand under its scope, but legacy-to-strict bridge completion and P2608 role transfer remain quarantined.
+
+## P2616/S1566 post-source role-obstruction Ltotal guard
+
+`P2616/S1566` records the exact reason `L_total` role-bearing status is still unavailable: source revalidation is not enough.  The term stays non-role-bearing until a non-quarantined physical bridge and a role-transfer theorem are supplied.
+
+## P2617/S1567 exponent-semantics Ltotal guard
+
+`P2617/S1567` prevents the P2606 `eta=4/5` residual label from entering `L_total` as a strict nonlinear compression term.  Any future residual insertion must use explicit `delta=4/5`, `eta=1+delta=9/5` semantics and still pass bridge and role-transfer gates.
