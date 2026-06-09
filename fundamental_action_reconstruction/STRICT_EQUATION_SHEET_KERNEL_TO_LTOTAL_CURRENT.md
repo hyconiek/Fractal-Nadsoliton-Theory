@@ -2139,3 +2139,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2608/S1558 strict damping role-transfer to Ltotal theorem
 
 `P2608/S1558` exports the scoped role-transfer theorem for the strict damping/compression term: P2603 supplies the strict damping beta/eta source normal form, P2607 supplies kernel bridge completion, and P2608 licenses only that damping/compression term as role-bearing in `L_total`.  Legacy physical-role claims (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation), APD source claims, QW-2191 discharge, and ToE closure remain unexported.
+
+## P2609/S1559 legacy physical-role transfer verdict matrix
+
+`P2609/S1559` performs the mandatory post-bridge legacy-role audit after P2607/P2608.  It classifies the listed legacy formulas (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation) as not transferable to `K_strict_gate` on the current evidence: each lacks a claim-specific strict role map, numeric replay, transfer theorem, or selector discharge.  The only role-bearing transfer inherited is the scoped strict damping/compression term from P2608.
+
+## P2610/S1560 P2601-P2608 critical revalidation audit
+
+`P2610/S1560` accepts the external critique as an operational guard: P2601, P2602, P2605, P2607, and P2608 are quarantined as unqualified strict source/bridge/role exports until their missing formal ingredients are proved.  P2603 is retained only under its `D_f=9/5` codimension scope, P2604 is retained as a readiness matrix, and P2606 is retained only as a numerical nonlinear residual component.  `L_total` must not rely on the P2607/P2608 bridge/role export path until GF(2) physical-origin and role-semantics theorems exist.
+
+## P2611/S1561 Ltotal role-semantics acceptance predicate
+
+`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.

@@ -1508,3 +1508,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2608/S1558 scoped role-bearing Ltotal guard
 
 `P2608/S1558` allows `L_total` bookkeeping to mark the strict damping/compression beta/eta term as role-bearing.  This is not a blanket legacy-role transfer: electroweak, `alpha_EM`, gravity-hierarchy, orientation/torsion, APD, QW-2191, and ToE claims remain separately blocked.
+
+## P2609/S1559 legacy-role Ltotal non-transfer guard
+
+`P2609/S1559` keeps `L_total` role-bearing status scoped to the strict damping/compression beta/eta term.  Legacy electroweak, `alpha_EM`, gravity-hierarchy, and `beta_tors` orientation roles are rejected for strict transfer until separate claim-specific role maps and numeric replays are supplied.
+
+## P2610/S1560 Ltotal revalidation quarantine
+
+`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.
+
+## P2611/S1561 role-semantics Ltotal guard
+
+`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.
