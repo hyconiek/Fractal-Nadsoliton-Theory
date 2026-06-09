@@ -1568,3 +1568,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2623/S1573 Wilson-loop orientation-source Ltotal guard
 
 `P2623/S1573` keeps role-bearing `L_total` closed.  The Wilson-loop calculation identifies a possible future selector shape, `sigma=sign(Im W)`, but only under a real oriented-cycle/connection/nonzero-flux source theorem.  Unoriented holonomy data remain sign-blind, and the independent nonlinear damping completion atom remains open.
+
+## P2624/S1574 current blocker Ltotal guard
+
+`P2624/S1574` keeps role-bearing `L_total` closed.  It records that ToE-like symptoms of `K_strict_gate` are not enough to promote it to a full kernel: bridge-source repair, a separate role-transfer theorem, `QW-2191` discharge, and global kernel-finality theorem are still missing.  The recommended next admissible work item is a non-fit analytic/computational classification of the independent nonlinear damping completion-source atom.
+
+## P2625/S1575 nonlinear damping completion Ltotal guard
+
+`P2625/S1575` keeps role-bearing `L_total` closed.  It classifies the nonlinear damping completion as conditional on a typed fractal pushforward and an independent positive `Z_beta` source; because that coefficient-source theorem is not exported, there is still no full bridge repair, no role-transfer rerun, no `QW-2191` discharge, and no ToE closure.
+
+## P2626/S1576 micro Z_beta Ltotal guard
+
+`P2626/S1576` keeps role-bearing `L_total` closed.  Micro support for `Z_beta` remains useful evidence, but without a target-independent exact coefficient-source theorem or a separate tolerance bridge theorem it cannot repair P2625, P2620, role transfer, `QW-2191`, or ToE closure.
