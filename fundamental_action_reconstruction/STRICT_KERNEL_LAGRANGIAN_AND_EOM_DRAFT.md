@@ -1608,3 +1608,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2633/S1583 diagram-grounded retention Ltotal guard
 
 `P2633/S1583` keeps `L_total` role claims closed after reading the legacy diagram characteristics: the strict kernel's neural/fractal-compression architecture is a working successor, not a proof that the diagram's inverse hierarchy, node/gauge, `alpha_geo`, or `beta_tors` roles have transferred to strict dynamics.
+
+## P2634/S1584 stability-to-role Ltotal guard
+
+`P2634/S1584` treats strict stability as real positive evidence for a working kernel, but blocks promotion of stability into role-bearing `L_total` dynamics.  A role term still needs a typed bridge/source theorem for the relevant legacy characteristic; robustness and well-posedness alone are not a role-transfer theorem.
+
+## P2635/S1585 neural-universe empirical Ltotal guard
+
+`P2635/S1585` permits the neural-universe analogy only as a test-generating interpretation.  A role-bearing `L_total` term still requires a sourced variational functional and blind empirical interface; attention-language or self-learning language alone is not a dynamical source theorem.
+
+## P2636/S1586 full-kernel Ltotal decision guard
+
+`P2636/S1586` blocks the inference from stable/neural strict kernel to full role-bearing dynamics: until the blocker lattice is discharged by typed source theorems and blind empirical tests, the strict kernel remains a robust working kernel rather than a full `L_total`-ready ToE kernel.
