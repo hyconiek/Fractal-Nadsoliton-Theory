@@ -2175,3 +2175,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2617/S1567 P2606 exponent-semantics reclassification
 
 `P2617/S1567` audits the P2606 nonlinear-residual label and finds a strict notation mismatch: P2603 supplies the codimension/log-slope `delta=4/5`, while the strict denominator exponent audited by P2414 is `eta=1+delta=9/5`.  Therefore the old P2606 denominator computation with `eta=4/5` is retained only as a codimension-slope perturbation probe, not as an exported strict-side nonlinear residual addition.  P2607 bridge completion and P2608 role-bearing `L_total` remain blocked.
+
+## P2618/S1568 analytic completion-map obstruction
+
+`P2618/S1568` answers the requested legacy-to-strict completion-map ticket with a partial proof and an obstruction.  The fractal projection source supports the exponent relation `eta_strict=1+(D_f-1)=9/5`, but an exact scalar completion `c(1+beta_tors*d)=1+beta*d^(9/5)` is impossible for positive strict damping because the derivative would require constant `beta_tors` to equal `beta*(9/5)*d^(4/5)` for every `d`.  The phase/topological sign is likewise only classifiable as an odd orientation/cohomology datum; a purely invariant GF(2)-free construction cannot select its representative without an additional orientation, symmetry-breaking, boundary, or source premise.
+
+## P2619/S1569 selector-source obligation lattice
+
+`P2619/S1569` strengthens the P2618 phase-selector obstruction with an exact `C2` enumeration.  If orientation reversal acts trivially on legacy scalar input such as `beta_tors`, equivariance of a strict odd sign selector would force `f(x)=-f(x)`, so zero maps exist into `{+1,-1}`.  Equivariant maps appear only when the input already contains an orientation/sign torsor or an equivalent symmetry-breaking/spin-orientation source.  Thus `beta_tors` may remain damping input, but it is not reopened as a `chi11` sign source.
+
+## P2620/S1570 P2618/P2619 bridge two-obstruction cut
+
+`P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.

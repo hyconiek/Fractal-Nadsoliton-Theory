@@ -1544,3 +1544,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2617/S1567 exponent-semantics Ltotal guard
 
 `P2617/S1567` prevents the P2606 `eta=4/5` residual label from entering `L_total` as a strict nonlinear compression term.  Any future residual insertion must use explicit `delta=4/5`, `eta=1+delta=9/5` semantics and still pass bridge and role-transfer gates.
+
+## P2618/S1568 Ltotal bridge guard
+
+`P2618/S1568` does not open role-bearing `L_total`.  It preserves the strict exponent source `eta=9/5` as a partial damping-compression result, but blocks exact `beta_tors -> beta` completion, GF(2)-free strict selector export, legacy physical-role transfer, `QW-2191` discharge, and ToE closure pending a real selector/source theorem and a separate role-transfer audit.
+
+## P2619/S1569 selector-source Ltotal guard
+
+`P2619/S1569` keeps role-bearing `L_total` closed.  The exact `C2` selector-source lattice says that legacy scalar or axis-only data cannot supply the missing strict phase sign; a real orientation-odd source, symmetry-breaking boundary, or spin/Pin orientation premise is still required before bridge validity and role transfer may be rerun.
+
+## P2620/S1570 two-obstruction Ltotal guard
+
+`P2620/S1570` keeps role-bearing `L_total` closed after the P2618/P2619 refinements.  Neither the `eta=9/5` exponent source, `beta_tors` scalar renormalization, axis-only/Z2 selector data, nor GF(2) bookkeeping repairs the bridge-source cut; both nonlinear damping completion and orientation-odd selector sources are required before bridge validity and role transfer may be rerun.
