@@ -1520,3 +1520,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2611/S1561 role-semantics Ltotal guard
 
 `P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.
+
+## P2612/S1562 GF(2)-origin obstruction Ltotal guard
+
+`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.

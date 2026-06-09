@@ -2151,3 +2151,7 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2611/S1561 Ltotal role-semantics acceptance predicate
 
 `P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.
+
+## P2612/S1562 P2607 GF(2) physical-origin obstruction
+
+`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.
