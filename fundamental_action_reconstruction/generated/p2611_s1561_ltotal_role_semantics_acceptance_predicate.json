@@ -1,0 +1,521 @@
+{
+  "gatekeeper_checks": {
+    "current_assignment_rejected": true,
+    "no_accepted_role_bearing_ltotal": true,
+    "no_apd_source_exported": true,
+    "no_qw2191_discharge": true,
+    "no_reexported_bridge": true,
+    "no_reexported_role_transfer": true,
+    "no_reexported_source": true,
+    "no_toe_closure_claimed": true,
+    "p2610_quarantine_inherited": true,
+    "rg_non_duplication_audit_recorded": true,
+    "role_semantics_definition_exported": true,
+    "truth_table_has_one_accepting_row": true,
+    "truth_table_has_sixteen_rows": true
+  },
+  "ltotal_role_semantics_acceptance_predicate": {
+    "source_fingerprints_sha256": {
+      "P2608_QUARANTINED_ROLE_TRANSFER": "1f14021cd00543d4734c95b09824e9518c69b2dcb7f015a14e4920e612667d78",
+      "P2610_CRITICAL_REVALIDATION": "44dbb11e44c899e09910e1e72d1993197886ca5a24d8d5cf9bd11181216172a5"
+    },
+    "theorem_export": {
+      "acceptance_gates": [
+        "formal_role_semantics_defined",
+        "strict_damping_source_revalidated_after_p2610",
+        "bridge_completion_revalidated_after_p2610",
+        "role_transfer_revalidated_after_p2610"
+      ],
+      "acceptance_truth_table": {
+        "accepting_row": {
+          "accepted_role_bearing_ltotal_term": true,
+          "assignment": {
+            "bridge_completion_revalidated_after_p2610": true,
+            "formal_role_semantics_defined": true,
+            "role_transfer_revalidated_after_p2610": true,
+            "strict_damping_source_revalidated_after_p2610": true
+          },
+          "missing_gate_count": 0,
+          "missing_gates": []
+        },
+        "accepting_row_count": 1,
+        "current_assignment": {
+          "bridge_completion_revalidated_after_p2610": false,
+          "formal_role_semantics_defined": true,
+          "role_transfer_revalidated_after_p2610": false,
+          "strict_damping_source_revalidated_after_p2610": false
+        },
+        "current_assignment_accepts": false,
+        "truth_table_row_count": 16,
+        "truth_table_rows": [
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 4,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "strict_damping_source_revalidated_after_p2610",
+              "bridge_completion_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 3,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "strict_damping_source_revalidated_after_p2610",
+              "bridge_completion_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 3,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "strict_damping_source_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "strict_damping_source_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 3,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "bridge_completion_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "bridge_completion_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "formal_role_semantics_defined",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": false,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 1,
+            "missing_gates": [
+              "formal_role_semantics_defined"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 3,
+            "missing_gates": [
+              "strict_damping_source_revalidated_after_p2610",
+              "bridge_completion_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "strict_damping_source_revalidated_after_p2610",
+              "bridge_completion_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "strict_damping_source_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": false
+            },
+            "missing_gate_count": 1,
+            "missing_gates": [
+              "strict_damping_source_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 2,
+            "missing_gates": [
+              "bridge_completion_revalidated_after_p2610",
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": false,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 1,
+            "missing_gates": [
+              "bridge_completion_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": false,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": false,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 1,
+            "missing_gates": [
+              "role_transfer_revalidated_after_p2610"
+            ]
+          },
+          {
+            "accepted_role_bearing_ltotal_term": true,
+            "assignment": {
+              "bridge_completion_revalidated_after_p2610": true,
+              "formal_role_semantics_defined": true,
+              "role_transfer_revalidated_after_p2610": true,
+              "strict_damping_source_revalidated_after_p2610": true
+            },
+            "missing_gate_count": 0,
+            "missing_gates": []
+          }
+        ]
+      },
+      "apd_source_exported": false,
+      "audited_chain": [
+        "P2608/S1558",
+        "P2610/S1560"
+      ],
+      "bridge_completion_reexported": false,
+      "legacy_physical_role_transfer_exported": false,
+      "operational_result": "P2611 supplies the formal role-semantics predicate requested by P2610, but it does not re-accept the strict damping/compression term: P2607 bridge completion and P2608 role transfer remain quarantined, and P2601/P2602 source support remains unrevalidated.",
+      "p2608_claim_before_revalidation": {
+        "role_bearing_ltotal_exported_in_p2608": true,
+        "term_name": "strict_damping_compression_beta_eta_term"
+      },
+      "p2610_quarantine_inherited": {
+        "p2607_bridge_quarantined": true,
+        "p2608_role_transfer_quarantined": true,
+        "quarantined_packet_ids_after_revalidation": [
+          "P2601",
+          "P2602",
+          "P2605",
+          "P2607",
+          "P2608"
+        ]
+      },
+      "qw2191_discharged_by_this_packet": false,
+      "recommended_next_honest_step": "Prove the P2607 GF(2) physical-origin and invariance theorem before attempting to re-enable P2608 role-bearing L_total acceptance.",
+      "role_bearing_ltotal_accepted": false,
+      "role_semantics_axioms": [
+        {
+          "axiom_id": "R1_typed_term",
+          "statement": "A candidate role-bearing L_total term must have a typed term name, variable domain, and target layer."
+        },
+        {
+          "axiom_id": "R2_variational_action",
+          "statement": "The term must contribute through a variational action slot, not merely through narrative bookkeeping."
+        },
+        {
+          "axiom_id": "R3_source_predicate",
+          "statement": "Every coefficient/operator appearing in the term must have a non-quarantined strict source predicate."
+        },
+        {
+          "axiom_id": "R4_bridge_predicate",
+          "statement": "If the term is imported through the legacy-to-strict bridge, the bridge predicate must be non-quarantined and physically derived."
+        },
+        {
+          "axiom_id": "R5_explanatory_role_map",
+          "statement": "The term's physical role must be an explicit map from term variation to the claimed observable/structural effect."
+        },
+        {
+          "axiom_id": "R6_guardrail_noninterference",
+          "statement": "The role must not silently discharge QW-2191, ToE, APD sourcehood, or unrelated legacy physical roles."
+        }
+      ],
+      "role_semantics_definition_exported": true,
+      "role_semantics_statement": "A role-bearing L_total term is accepted only when it is a typed variational action term whose coefficients and operators are strictly sourced, whose legacy-to-strict bridge is non-quarantined when applicable, whose physical role is supplied by an explicit variation-to-effect map, and whose use does not silently discharge unrelated selector, APD, legacy-role, or ToE claims.",
+      "role_transfer_theorem_reexported": false,
+      "strict_damping_beta_eta_source_reexported": false,
+      "theorem_name": "P2611_T1_ltotal_role_semantics_acceptance_predicate",
+      "toe_closure_claimed": false
+    },
+    "theorem_fingerprint_sha256": "aad585908a9b9b33f6efe49cc75b085ab86ad5f6a16d9d86651c903caee0952b"
+  },
+  "packet_id": "P2611",
+  "rg_non_duplication_audit": {
+    "patterns": {
+      "guardrails": {
+        "count": 13302,
+        "samples": [
+          "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:301:1. ToE closure,",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:162:11. nie wolno milczaco utozsamiac pozniejszego `K_strict_gate` z historycznym",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:163:    `K_legacy_ont` ani traktowac go jako ontologicznego zamiennika warstwy",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:56:K_legacy_ont / (D_f, alpha_geo, beta_tors)",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:59:K_strict_gate",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:67:- jesli `K_strict_gate` pojawia sie w kontekscie `A1`, to tylko jako",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:48:   `K_strict_gate`.",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:53:- uzywac `K_strict_gate` tylko jako downstream operational control,",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:59:- milczaco podstawic `K_strict_gate` w miejsce ontologicznej warstwy",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:107:- brak pelnej unikalnosci reprezentacji przez obstruction `QW-2191`,",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:178:| pelna unikalnosc representation map | `blocked` | `QW-2191` |",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:63:6. `QW-2191`",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:112:- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel\u2011alone,",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:133:| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:33:6. `QW-2191`",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:97:`QW-2191` daje jawny obstruction theorem:",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:71:2. pozniejszego strict working kernela `K_strict_gate`.",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:75:- uzywac `K_strict_gate` tylko jako downstream operational gravity-side",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:79:- traktowac `K_strict_gate` jako automatycznego nosnika starej semantyki",
+          "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:115:4. **Zadanie na Przysz\u0142o\u015b\u0107:** Najwy\u017cszym priorytetem teoretycznym jest teraz wykazanie, w jaki spos\u00f3b asymetria Shannon'a ($\\alpha_{\\text{geo}} = 4 \\ln 2$) na pier\u015bcieniu nad12-sigma w pe\u0142ni znosi przeszkod\u0119 selektora `QW-2191`, umo\u017cliwiaj\u0105c jednoznaczne wy\u0142onienie generacji cz\u0105stek w \u015bcis\u0142ym rdzeniu.",
+          "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:97:### 4.1. Przeszkoda Selektora `QW-2191`",
+          "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:83:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:97:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:102:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:88:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:104:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:27:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:90:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:105:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:28:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:91:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:103:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:117:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:27:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:11:- `QW-2191` still obstructs kernel-alone uniqueness,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:18:- keep `QW-2191` undischarged,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:27:     `QW-2191`,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:69:- `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:71:- ToE closure,",
+          "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:74:4. actual global `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:75:5. actual ToE closure,",
+          "fundamental_action_reconstruction/AX17_STRICT_SIDE_POSITIVE_WINDOW_DELTA_D_MAXIMAL_STEP_CONVENTION_ACCEPTANCE_PACKET.md:70:4. `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX17_STRICT_SIDE_POSITIVE_WINDOW_DELTA_D_MAXIMAL_STEP_CONVENTION_ACCEPTANCE_PACKET.md:71:5. ToE closure,",
+          "fundamental_action_reconstruction/AX18_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_DATUM_INSTANCE_PACKET.md:54:- It does not claim `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX19_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_CLOSURE_PACKET.md:42:- It does not claim strict-core selector closure nor `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX19_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_CLOSURE_PACKET.md:44:- It does not claim ToE closure.",
+          "fundamental_action_reconstruction/AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md:84:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md:86:- full ToE closure.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:26:- avoid any silent reuse of `K_strict_gate` as an ontological source.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:83:- that `QW-2191` is discharged,",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:10:of `QW-2191`.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:41:   - one explicit sigma-int \u2192 theta **candidate** selector ingredient and its `QW-2191`-family compatibility witness.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:50:> `QW-2191` `O(2)` family, both exposed selector slots are fixed by explicit symmetry-breaking premise:",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:67:3. strict core remains unchanged and honest: `T159` stays open and `QW-2191` stays undischarged in strict core.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:75:3. strict-core selector closure or strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:77:5. ToE closure.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:17:3. while keeping strict-core claims unchanged (no strict-core theta export; `QW-2191` not discharged in strict core).",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:32:   - strict-side sigma-int \u2192 theta candidate selector ingredient and its `QW-2191`-family compatibility witness.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:59:- explicit no-false-pass boundaries (`T159` remains open; `QW-2191` remains open in strict core),",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:89:- strict-core `QW-2191` discharge remains absent.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:98:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:99:- ToE closure.",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:37:without changing strict core and without implying `T165` / `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:70:3. **Define the `pair1` objective on the `QW-2191` family:**",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:86:2. strict core remains unchanged and honest: `T165` stays open and `QW-2191` stays undischarged in strict core,",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:8:`QW-2191` exports a strict-core continuous `O(2)` basis-choice family on degenerate 2D mode pairs (e.g. `pair1=span{c1,s1}`).",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:96:4. strict-core selector closure or strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:97:5. ToE closure.",
+          "fundamental_action_reconstruction/AX24_STRICT_EXTENSION_LANE_QW2122_UNIFORM_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:102:3. a strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX24_STRICT_EXTENSION_LANE_QW2122_UNIFORM_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:103:4. ToE closure.",
+          "fundamental_action_reconstruction/AX25_STRICT_EXTENSION_LANE_QW2122_SHANNON_DIRECTED_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:125:3. a strict-core `QW-2191` discharge,"
+        ]
+      },
+      "intended_research_nonduplication": {
+        "count": 5,
+        "samples": [
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1518:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1522:`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:311:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:222:`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:84:        \"intended_research_nonduplication\": \"accepted role-bearing term|candidate bookkeeping target|role-bearing acceptance predicate|P2608.*role semantics|bridge revalidation.*role semantics\","
+        ]
+      },
+      "new_packet": {
+        "count": 26,
+        "samples": [
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2151:## P2611/S1561 Ltotal role-semantics acceptance predicate",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2153:`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1518:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1520:## P2611/S1561 role-semantics Ltotal guard",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1522:`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:311:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:126:        \"theorem_name\": \"P2611_T1_ltotal_role_semantics_acceptance_predicate\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:152:            \"P2611 supplies the formal role-semantics predicate requested by P2610, but it does not re-accept the strict damping/compression term: P2607 bridge completion and P2608 role transfer remain quarantined, and P2601/P2602 source support remains unrevalidated.\"",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:175:        \"packet_id\": \"P2611\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:176:        \"stage_id\": \"S1561\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:177:        \"status\": \"P2611_ROLE_SEMANTICS_DEFINED_BUT_LTOTAL_ACCEPTANCE_REMAINS_REJECTED_BY_P2610_QUARANTINES_NO_NEW_SOURCE_BRIDGE_ROLE_EXPORT\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:196:        \"# P2611/S1561 L_total role-semantics acceptance predicate\", \"\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:207:        \"P2611 exports no revalidated strict damping source, no bridge completion, no role-transfer theorem, no accepted role-bearing L_total term, no legacy physical-role transfer, no QW-2191 discharge, no APD source, and no ToE closure.\", \"\", \"## Fingerprint\", \"\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:215:## P2611/S1561 Ltotal role-semantics acceptance predicate",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:217:`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:220:## P2611/S1561 role-semantics Ltotal guard",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:222:`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:224:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2611/S1561 Ltotal role-semantics acceptance predicate\", eq_section)",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:225:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2611/S1561 role-semantics Ltotal guard\", lag_section)",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:83:        \"new_packet\": \"P2611|S1561|role-bearing semantics|role semantics.*L_total|Ltotal role semantics\",",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:14:class P2611LtotalRoleSemanticsAcceptancePredicateTest(unittest.TestCase):",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2611\")",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1561\")",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:55:        self.assertIn(\"P2611/S1561\", MD.read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:56:        self.assertIn(\"P2611/S1561\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:57:        self.assertIn(\"P2611/S1561\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+        ]
+      },
+      "p2610_frontier": {
+        "count": 41,
+        "samples": [
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2147:## P2610/S1560 P2601-P2608 critical revalidation audit",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2149:`P2610/S1560` accepts the external critique as an operational guard: P2601, P2602, P2605, P2607, and P2608 are quarantined as unqualified strict source/bridge/role exports until their missing formal ingredients are proved.  P2603 is retained only under its `D_f=9/5` codimension scope, P2604 is retained as a readiness matrix, and P2606 is retained only as a numerical nonlinear residual component.  `L_total` must not rely on the P2607/P2608 bridge/role export path until GF(2) physical-origin and role-semantics theorems exist.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2153:`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1516:## P2610/S1560 Ltotal revalidation quarantine",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1518:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:138:        \"operational_status\": \"QUARANTINE_ROLE_BEARING_LTOTAL_EXPORT_UNTIL_ROLE_SEMANTICS_AND_BRIDGE_REVALIDATION\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:171:        \"new_packet\": \"P2610|S1560|P2601.*P2608.*revalidation|source-strength revalidation|AI critique revalidation\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:172:        \"intended_research_nonduplication\": \"role-bearing.*quarantine|bridge completion.*quarantine|strict damping source export revalidation|P2607.*P2608.*critique\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:223:        \"theorem_name\": \"P2610_T1_p2601_p2608_source_strength_revalidation\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:237:            \"role_bearing_ltotal\": \"DO_NOT_USE_AS_ACCEPTED_UNTIL_ROLE_SEMANTICS_IS_DEFINED_AND_BRIDGE_COMPLETION_IS_REVALIDATED\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:263:        \"packet_id\": \"P2610\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:264:        \"stage_id\": \"S1560\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:265:        \"status\": \"P2610_CRITICAL_REVALIDATION_QUARANTINES_WEAK_P2601_P2602_P2605_P2607_P2608_EXPORTS_RETAINS_P2603_P2604_SCOPE_AND_P2606_RESIDUAL_ONLY\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:280:        \"# P2610/S1560 P2601-P2608 critical revalidation audit\", \"\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:290:        \"\", \"## Strong export policy after P2610\", \"\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:296:        \"P2610 exports no new strict damping source, no bridge completion, no role-bearing L_total, no legacy physical-role transfer, no QW-2191 discharge, no APD source, and no ToE closure.\", \"\", \"## Fingerprint\", \"\",",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:304:## P2610/S1560 P2601-P2608 critical revalidation audit",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:306:`P2610/S1560` accepts the external critique as an operational guard: P2601, P2602, P2605, P2607, and P2608 are quarantined as unqualified strict source/bridge/role exports until their missing formal ingredients are proved.  P2603 is retained only under its `D_f=9/5` codimension scope, P2604 is retained as a readiness matrix, and P2606 is retained only as a numerical nonlinear residual component.  `L_total` must not rely on the P2607/P2608 bridge/role export path until GF(2) physical-origin and role-semantics theorems exist.",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:309:## P2610/S1560 Ltotal revalidation quarantine",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:311:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:313:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2610/S1560 P2601-P2608 critical revalidation audit\", eq_section)",
+          "fundamental_action_reconstruction/p2610_s1560_p2601_p2608_critical_revalidation_audit.py:314:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2610/S1560 Ltotal revalidation quarantine\", lag_section)",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:112:    p2610_payload = load_json(SOURCE_FILES[\"P2610_CRITICAL_REVALIDATION\"])",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:127:        \"audited_chain\": [\"P2608/S1558\", \"P2610/S1560\"],",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:130:            \"A role-bearing L_total term is accepted only when it is a typed variational action term whose coefficients and operators are strictly sourced, whose legacy-to-strict bridge is non-quarantined when applicable, whose physical role is supplied by an explicit variation-to-effect map, and whose use does not silently discharge unrelated selector, APD, legacy-role, or ToE claims.\"",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:132:        \"role_semantics_axioms\": ROLE_SEMANTICS_AXIOMS,",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:152:            \"P2611 supplies the formal role-semantics predicate requested by P2610, but it does not re-accept the strict damping/compression term: P2607 bridge completion and P2608 role transfer remain quarantined, and P2601/P2602 source support remains unrevalidated.\"",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:177:        \"status\": \"P2611_ROLE_SEMANTICS_DEFINED_BUT_LTOTAL_ACCEPTANCE_REMAINS_REJECTED_BY_P2610_QUARANTINES_NO_NEW_SOURCE_BRIDGE_ROLE_EXPORT\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:183:                \"P2610_CRITICAL_REVALIDATION\": sha256_json(p2610_payload),",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:18:    \"P2610_CRITICAL_REVALIDATION\": GEN / \"p2610_s1560_p2601_p2608_critical_revalidation_audit.json\",",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:217:`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:29:ROLE_SEMANTICS_AXIOMS = [",
+          "fundamental_action_reconstruction/p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:85:        \"p2610_frontier\": \"P2610|S1560|GF2.*physical-origin|ROLE_SEMANTICS|role-bearing.*quarantine|bridge completion.*quarantine\",",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:14:class P2610P2601P2608CriticalRevalidationAuditTest(unittest.TestCase):",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:24:        self.assertEqual(self.payload[\"packet_id\"], \"P2610\")",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:25:        self.assertEqual(self.payload[\"stage_id\"], \"S1560\")",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:33:        self.assertIn(\"ROLE_SEMANTICS\", self.theorem[\"strong_export_policy_after_p2610\"][\"role_bearing_ltotal\"])",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:55:        self.assertIn(\"P2610/S1560\", MD.read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:56:        self.assertIn(\"P2610/S1560\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2610_s1560_p2601_p2608_critical_revalidation_audit.py:57:        self.assertIn(\"P2610/S1560\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2611_s1561_ltotal_role_semantics_acceptance_predicate.py:27:        self.assertIn(\"ROLE_SEMANTICS_DEFINED\", self.payload[\"status\"])"
+        ]
+      }
+    },
+    "tool": "rg"
+  },
+  "source_files": {
+    "P2608_QUARANTINED_ROLE_TRANSFER": "fundamental_action_reconstruction/generated/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.json",
+    "P2610_CRITICAL_REVALIDATION": "fundamental_action_reconstruction/generated/p2610_s1560_p2601_p2608_critical_revalidation_audit.json"
+  },
+  "stage_id": "S1561",
+  "status": "P2611_ROLE_SEMANTICS_DEFINED_BUT_LTOTAL_ACCEPTANCE_REMAINS_REJECTED_BY_P2610_QUARANTINES_NO_NEW_SOURCE_BRIDGE_ROLE_EXPORT"
+}

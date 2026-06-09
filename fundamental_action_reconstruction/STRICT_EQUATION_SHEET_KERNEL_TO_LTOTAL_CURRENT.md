@@ -2071,3 +2071,83 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2591/S1541 APD product-parameter Sturm interval certificate guard
 
 `P2591/S1541` upgrades P2590's finite grid to a Sturm/discriminant interval certificate: the offset quartic has no discriminant root on `[300, 576]`, and the anchor count has four positive roots, so the same finite even-moment shell prefix supports a continuous mirror-support family.  This strengthens nonuniqueness; it still does not source the APD support law.
+
+## P2592/S1542 APD Newton-Girard next even-moment sensitivity guard
+
+`P2592/S1542` identifies the next missing coordinate in the P2591 APD product-parameter interval: Newton-Girard gives the internal eighth shell `p4 = 74658 - 4*e4`, hence the fixed second/fourth/sixth shell prefix leaves the next even shell linearly free.  Adding the eighth shell would select the product parameter only if that shell is strictly sourced; by itself it is not a strict APD support law.
+
+## P2593/S1543 APD current-state replay and exact next-moment provenance guard
+
+`P2593/S1543` verifies the current-state status of P2592: the recorded whole P2591 generated-artifact fingerprint is not byte-for-byte identical to the current artifact, but the theorem-relevant P2591 interval predicate replays and the Newton-Girard calculation exact-replays as `p4 = 74658 - 4*e4` and central eighth moment `42715646049/32768 - 8*e4`.  This classifies the provenance drift and removes decimal ambiguity, but it still does not source the APD support law.
+
+## P2594/S1544 APD eighth-moment conditional inverse selector guard
+
+`P2594/S1544` proves the conditional inverse of P2592/P2593: if an eighth shell is supplied, then `e4 = (74658 - p4)/4` (equivalently `e4 = (42715646049/32768 - M8)/8`) recovers the P2591 product parameter and reconstructs the mirror-support quartic roots on the audited grid.  This is conditional selector determinacy only; it still does not source the eighth shell or the APD support law.
+
+## P2595/S1545 APD eighth-moment continuum inverse Sturm transport guard
+
+`P2595/S1545` upgrades P2594 from grid reconstruction to a continuum inverse transport: the internal eighth-shell interval `[72354, 73458]` and the corresponding central eighth interval map affinely back onto the P2591 product interval `[300, 576]`, so the inherited Sturm certificate transports valid four-positive-root support reconstruction across the entire interval.  This remains conditional on an externally supplied eighth shell and does not source the APD support law.
+
+## P2596/S1546 nadsoliton hydrodynamic IR m=2 source theorem guard
+
+`P2596/S1546` exports the requested non-empty source theorem for the `m=2` operator signature.  For an incompressible nadsoliton information fluid on a fractal hydrodynamic medium with `D_f=9/5≈1.8`, conservation forbids `m=0`, incompressibility plus isotropy/parity/self-adjoint positive dissipation forbids `m=1` and odd scalar dissipative orders, and RG comparison at `k->0` makes every higher even local order `m>2` irrelevant relative to the Laplacian because `k^(m-2)->0`.  Thus the intrinsic fractal Laplacian is the unique leading IR transport selector.  This sources only `m2_operator_signature_source`; beta/eta numerics, bridge completion, role-transfer, QW-2191, and ToE remain separate.
+
+## P2597/S1547 nadsoliton hydrodynamic RG m=2 robustness theorem guard
+
+`P2597/S1547` reinforces P2596 by auditing the RG eigenvalue normal form over `D_f in [17/10,19/10]`.  Under incompressible hydrodynamic exclusions, the relative RG eigenvalue of an even local order `m` against the Laplacian is `y_m-y_2=2-m`, independent of `D_f`; hence every even `m>2` is irrelevant and `m=2` remains the unique leading IR transport selector throughout the audited fractal-dimension band.  This strengthens only `m2_operator_signature_source`; beta/eta numerics, bridge completion, role-transfer, QW-2191, and ToE remain separate.
+
+## P2598/S1548 nadsoliton hydrodynamic locality fractional-competitor exclusion theorem guard
+
+`P2598/S1548` strengthens the hydrodynamic `m=2` source by auditing fractional competitors.  Under the local finite-stress nadsoliton hydrodynamic closure, fractional `alpha<2` generators are excluded as nonlocal stable/jump kernels with divergent second hydrodynamic stress moment, while local `alpha>2` operators are IR-irrelevant relative to the Laplacian.  Thus `alpha=m=2` remains the unique local finite-stress IR transport source.  This still does not export beta/eta numerics, bridge completion, role-transfer, QW-2191 discharge, or ToE closure.
+
+## P2599/S1549 nadsoliton projected viscous-stress m=2 derivation theorem guard
+
+`P2599/S1549` gives the explicit local constitutive derivation behind P2596--P2598.  For the incompressible nadsoliton information fluid, the local isotropic finite-stress law `sigma_ij=mu(partial_i u_j+partial_j u_i)+lambda delta_ij partial_l u_l` has Fourier divergence which, after `k.u=0` and pressure/Leray projection, acts on transverse modes as `-mu |k|^2`.  Thus the sourced local transport operator is explicitly the Laplacian of order `m=2`.  This still does not export beta/eta numerics, bridge completion, role-transfer, QW-2191 discharge, or ToE closure.
+
+## P2600/S1550 strict damping post-m2 residual source matrix guard
+
+`P2600/S1550` integrates the hydrodynamic `m=2` source theorem chain P2596--P2599 into the P2530/P2547 strict-damping source normal form.  The `m2_operator_signature_source` factor is now discharged, but the residual truth table still has exactly one accepting row over the three non-m2 keys: multiplicative/unital normalization, prime-log proportionality, and the `delta=4/5` slope/prime anchor.  Therefore strict damping/beta-eta source closure is not exported until those three source theorems are supplied.
+
+## P2601/S1551 nadsoliton identity-action unital multiplicative source theorem
+
+`P2601/S1551` exports the multiplicative/unital strict-damping subkey from hydrodynamic identity action: the nadsoliton RG scale flow has `T_1=Id`, zero RG time at dilation one, and hence `y_1=0`; within the inherited affine logarithmic family this is exactly the P2541 multiplicative-character condition.  After P2601 and P2600, the strict damping source frontier is reduced to the two non-m2 residual keys: prime-log proportionality and the `delta=4/5` slope/prime anchor.
+
+## P2602/S1552 nadsoliton RG fixed-rate prime-log source theorem
+
+`P2602/S1552` exports the `prime_log_proportionality_source` from IR scale-stationarity of the incompressible nadsoliton RG flow: a constant fixed-point damping rate `gamma_*` integrates over RG time `tau=log(d)`, giving `y_d=gamma_* log(d)` and hence `v_p/log(p)=gamma_*` for every audited prime.  This supplies proportionality only; the numeric `delta=4/5` slope/prime-anchor key remains the sole strict-damping source blocker.
+
+## P2603/S1553 nadsoliton fractal-codimension slope source theorem
+
+`P2603/S1553` exports the final strict-damping numeric subkey: with nadsoliton fractal dimension `D_f=9/5`, the active excess codimension over the line-like transport backbone is `delta=D_f-1=4/5`, so the P2602 fixed-rate prime-log law specializes to `v_p=(4/5)log(p)`.  This discharges the P2530/P2600 strict damping beta/eta source normal form, but it does not export a legacy-to-strict bridge, role-transfer theorem, QW-2191 discharge, role-bearing `L_total`, or ToE closure.
+
+## P2604/S1554 strict damping post-source bridge readiness matrix
+
+`P2604/S1554` audits the state after P2603: the strict damping beta/eta source normal form is discharged, but role-bearing `L_total` readiness still requires explicit legacy-to-strict completion-map evidence, strict-side residual additions, and a strict damping role-transfer theorem.  The matrix has exactly one accepting role-bearing row over those three bridge/role gates, so source discharge is not a silent substitute for bridge completion.
+
+## P2605/S1555 legacy-strict linear-slice completion map evidence
+
+`P2605/S1555` exports only a linear-slice completion-map evidence theorem: after normalizing `K_legacy_ont` by `alpha_geo`, the denominator matches `K_strict_gate` exactly on the slice `beta=beta_tors`, `eta=1`.  This supplies completion-map evidence for the legacy linear denominator slice, but it does not certify strict-side residual additions, a full bridge, legacy physical-role transfer, role-bearing `L_total`, QW-2191 discharge, or ToE closure.
+
+## P2606/S1556 strict-side nonlinear compression residual addition
+
+`P2606/S1556` supplies one strict-side residual component beyond the P2605 linear slice: with the P2603 codimension exponent `eta=4/5`, the strict denominator differs nontrivially from the legacy `eta=1` denominator and the residual is not absorbed by a scalar amplitude rescaling.  This still does not certify the full strict-side residual additions package, because phase/topological selector data and role-transfer remain separate gates.
+
+## P2607/S1557 strict phase/topological selector bridge completion
+
+`P2607/S1557` supplies the remaining strict-side phase/topological selector data by a full-rank GF(2) phase-sign system on 11 audited nodes plus cycle-closure parity checks.  Together with P2605 linear-slice evidence and P2606 nonlinear compression residual evidence, this exports kernel bridge completion, but it still does not export a strict damping role-transfer theorem, legacy physical-role transfer, role-bearing `L_total`, QW-2191 discharge, or ToE closure.
+
+## P2608/S1558 strict damping role-transfer to Ltotal theorem
+
+`P2608/S1558` exports the scoped role-transfer theorem for the strict damping/compression term: P2603 supplies the strict damping beta/eta source normal form, P2607 supplies kernel bridge completion, and P2608 licenses only that damping/compression term as role-bearing in `L_total`.  Legacy physical-role claims (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation), APD source claims, QW-2191 discharge, and ToE closure remain unexported.
+
+## P2609/S1559 legacy physical-role transfer verdict matrix
+
+`P2609/S1559` performs the mandatory post-bridge legacy-role audit after P2607/P2608.  It classifies the listed legacy formulas (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation) as not transferable to `K_strict_gate` on the current evidence: each lacks a claim-specific strict role map, numeric replay, transfer theorem, or selector discharge.  The only role-bearing transfer inherited is the scoped strict damping/compression term from P2608.
+
+## P2610/S1560 P2601-P2608 critical revalidation audit
+
+`P2610/S1560` accepts the external critique as an operational guard: P2601, P2602, P2605, P2607, and P2608 are quarantined as unqualified strict source/bridge/role exports until their missing formal ingredients are proved.  P2603 is retained only under its `D_f=9/5` codimension scope, P2604 is retained as a readiness matrix, and P2606 is retained only as a numerical nonlinear residual component.  `L_total` must not rely on the P2607/P2608 bridge/role export path until GF(2) physical-origin and role-semantics theorems exist.
+
+## P2611/S1561 Ltotal role-semantics acceptance predicate
+
+`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.
