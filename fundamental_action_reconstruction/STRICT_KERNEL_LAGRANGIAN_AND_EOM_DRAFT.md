@@ -1556,3 +1556,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2620/S1570 two-obstruction Ltotal guard
 
 `P2620/S1570` keeps role-bearing `L_total` closed after the P2618/P2619 refinements.  Neither the `eta=9/5` exponent source, `beta_tors` scalar renormalization, axis-only/Z2 selector data, nor GF(2) bookkeeping repairs the bridge-source cut; both nonlinear damping completion and orientation-odd selector sources are required before bridge validity and role transfer may be rerun.
+
+## P2621/S1571 chiral-Hopfion selector-source Ltotal guard
+
+`P2621/S1571` keeps role-bearing `L_total` closed.  QW-636/QW-1026 prior art can be formalized as a conditional chiral source theorem for the orientation atom, but the source must be typed and nonzero; the old scripts are heuristic prior art rather than unconditional strict-core closure.  P2620 still requires the independent nonlinear damping completion atom before bridge validity or role transfer may be rerun.
+
+## P2622/S1572 QW-636/QW-1026 nonpromotion Ltotal guard
+
+`P2622/S1572` keeps role-bearing `L_total` closed and sharpens the selector guard: the old QW-636 and QW-1026 scripts are retained as diagnostics for a future typed chiral/flux source, but are not themselves a strict source theorem because their signs remain gauge/convention dependent without additional physical orientation and `gamma5` premises.  The independent nonlinear damping completion atom also remains open.
+
+## P2623/S1573 Wilson-loop orientation-source Ltotal guard
+
+`P2623/S1573` keeps role-bearing `L_total` closed.  The Wilson-loop calculation identifies a possible future selector shape, `sigma=sign(Im W)`, but only under a real oriented-cycle/connection/nonzero-flux source theorem.  Unoriented holonomy data remain sign-blind, and the independent nonlinear damping completion atom remains open.

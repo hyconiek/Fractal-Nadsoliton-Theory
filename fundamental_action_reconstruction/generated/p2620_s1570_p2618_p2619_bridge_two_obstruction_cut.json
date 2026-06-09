@@ -21,7 +21,7 @@
       "P2604_BRIDGE_READINESS": "e06df9964169af1dcd8af3b49379332d398cbaead211402994ae3a58cae194a6",
       "P2616_ROLE_OBSTRUCTION": "f1f676f9679df2f0c84c732908dd9d7cef74a4bac6ebe9ec1d84d7b30456a3ad",
       "P2618_ANALYTIC_OBSTRUCTION": "24ae6f92b71ae0add7dec007a5e733976a882a3e5279045ad98b433628c4306a",
-      "P2619_SELECTOR_LATTICE": "08ef61995e12589b1694b8da4b48e5d063cd9c89f32a759fb9dd38c71fdb84b3"
+      "P2619_SELECTOR_LATTICE": "7892865cc674ce0569ea3faa9b005d79787964484ab4fd84de4c0213c0307cfd"
     },
     "theorem_export": {
       "accepted_shortcut_count": 1,
@@ -173,7 +173,7 @@
   "rg_non_duplication_audit": {
     "patterns": {
       "guardrails": {
-        "count": 13371,
+        "count": 13381,
         "samples": [
           "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
           "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
@@ -258,12 +258,14 @@
         ]
       },
       "new_packet": {
-        "count": 22,
+        "count": 33,
         "samples": [
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2187:## P2620/S1570 P2618/P2619 bridge two-obstruction cut",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2189:`P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2193:`P2621/S1571` audits the proposed use of the old QW-636 Hopfion parity phase and QW-1026 chiral anomaly as the missing P2620 orientation source.  The usable theorem is conditional: if a typed, nonzero chiral Hopfion/anomaly source is admitted, then the normalized parity-odd energy difference and `sign(Re Tr(gamma5 K^3))` define a `C2`-odd selector for the strict phase sign.  This conditionally supplies only `orientation_odd_selector_source`; it does not supply `nonlinear_damping_completion_source`, does not revalidate the full bridge, and does not reopen role-bearing `L_total`, role-transfer, QW-2191, or ToE closure.",
           "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1556:## P2620/S1570 two-obstruction Ltotal guard",
           "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1558:`P2620/S1570` keeps role-bearing `L_total` closed after the P2618/P2619 refinements.  Neither the `eta=9/5` exponent source, `beta_tors` scalar renormalization, axis-only/Z2 selector data, nor GF(2) bookkeeping repairs the bridge-source cut; both nonlinear damping completion and orientation-odd selector sources are required before bridge validity and role transfer may be rerun.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1562:`P2621/S1571` keeps role-bearing `L_total` closed.  QW-636/QW-1026 prior art can be formalized as a conditional chiral source theorem for the orientation atom, but the source must be typed and nonzero; the old scripts are heuristic prior art rather than unconditional strict-core closure.  P2620 still requires the independent nonlinear damping completion atom before bridge validity or role transfer may be rerun.",
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:152:        \"theorem_name\": \"P2620_T1_p2618_p2619_bridge_two_obstruction_cut\",",
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:198:        \"packet_id\": \"P2620\",",
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:199:        \"stage_id\": \"S1570\",",
@@ -276,6 +278,15 @@
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:248:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2620/S1570 P2618/P2619 bridge two-obstruction cut\", eq_section)",
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:249:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2620/S1570 two-obstruction Ltotal guard\", lag_section)",
           "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:63:        \"new_packet\": \"P2620|S1570|two-obstruction cut|bridge two obstruction|P2618 P2619 bridge cut\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:189:        \"interpretation\": \"QW-636/QW-1026 can supply only the orientation atom when promoted to a typed nonzero chiral source premise; P2620 still also requires nonlinear damping completion.\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:218:            \"Hopfion energy delta) is a C2-odd topological phase selector.  This repairs the P2619/P2620 \"",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:229:            \"They can be formalized into a conditional theorem exporting an orientation-odd source premise, but they do not unconditionally discharge QW-2191 or repair the full P2620 bridge.\"",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:22:    \"P2620_TWO_OBSTRUCTION_CUT\": GEN / \"p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.json\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:235:            \"full P2620 bridge-source cut repair without the damping atom\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:310:        f\"- P2620 conditional accepting rows: `{payload['p2620_conditional_update']['accepting_row_count']}` of 4.\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:330:`P2621/S1571` audits the proposed use of the old QW-636 Hopfion parity phase and QW-1026 chiral anomaly as the missing P2620 orientation source.  The usable theorem is conditional: if a typed, nonzero chiral Hopfion/anomaly source is admitted, then the normalized parity-odd energy difference and `sign(Re Tr(gamma5 K^3))` define a `C2`-odd selector for the strict phase sign.  This conditionally supplies only `orientation_odd_selector_source`; it does not supply `nonlinear_damping_completion_source`, does not revalidate the full bridge, and does not reopen role-bearing `L_total`, role-transfer, QW-2191, or ToE closure.",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:335:`P2621/S1571` keeps role-bearing `L_total` closed.  QW-636/QW-1026 prior art can be formalized as a conditional chiral source theorem for the orientation atom, but the source must be typed and nonzero; the old scripts are heuristic prior art rather than unconditional strict-core closure.  P2620 still requires the independent nonlinear damping completion atom before bridge validity or role transfer may be rerun.",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:77:        \"bridge_guards\": \"P2618|P2619|P2620|nonlinear_damping_completion_source|role-bearing L_total|role-transfer theorem|ToE closure\",",
           "fundamental_action_reconstruction/test_p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:14:class P2620BridgeTwoObstructionCutTest(unittest.TestCase):",
           "fundamental_action_reconstruction/test_p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:24:        self.assertEqual(self.payload[\"packet_id\"], \"P2620\")",
           "fundamental_action_reconstruction/test_p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:25:        self.assertEqual(self.payload[\"stage_id\"], \"S1570\")",
@@ -285,7 +296,7 @@
         ]
       },
       "nondup_bridge_matrices": {
-        "count": 513,
+        "count": 514,
         "samples": [
           "fundamental_action_reconstruction/A7_POSITIVITY_UNITARITY_PACKAGE_SPEC.md:34:   - proof-completion gate dla interacting microcausality z jawna granica all-orders machine-check.",
           "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:100:        +--> role-transfer theorem         [open]",
@@ -370,7 +381,7 @@
         ]
       },
       "p2618_p2619_precursors": {
-        "count": 404,
+        "count": 421,
         "samples": [
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1066:`P2412/S1362` reconciles three facts that must not be conflated: P2392 makes the declared-scope strict selector available without the retired `beta_tors -> chi11` route; P2366 gives a finite phase-origin candidate but not a strict-core source theorem; and P2411 keeps the bridge-level `chi11` source/QW-2191 obligation open.",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1271:`P2436/S1386` projects the P2435 separability result onto the post-common-gate frontier where role-transfer audit license and role-bearing `L_total` export are assumed only as bookkeeping premises.  The remaining four claim-specific successors form a 16-mask lattice.  From the empty successor mask, only `alpha_geo_strict_role_successor_theorem` unlocks a legacy role claim, namely the weak-mixing/Weinberg role; `beta_tors`, nonlinear hierarchy, and chi11 orientation successors unlock zero claims alone.",
@@ -382,6 +393,7 @@
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2185:`P2619/S1569` strengthens the P2618 phase-selector obstruction with an exact `C2` enumeration.  If orientation reversal acts trivially on legacy scalar input such as `beta_tors`, equivariance of a strict odd sign selector would force `f(x)=-f(x)`, so zero maps exist into `{+1,-1}`.  Equivariant maps appear only when the input already contains an orientation/sign torsor or an equivalent symmetry-breaking/spin-orientation source.  Thus `beta_tors` may remain damping input, but it is not reopened as a `chi11` sign source.",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2187:## P2620/S1570 P2618/P2619 bridge two-obstruction cut",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2189:`P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2193:`P2621/S1571` audits the proposed use of the old QW-636 Hopfion parity phase and QW-1026 chiral anomaly as the missing P2620 orientation source.  The usable theorem is conditional: if a typed, nonzero chiral Hopfion/anomaly source is admitted, then the normalized parity-odd energy difference and `sign(Re Tr(gamma5 K^3))` define a `C2`-odd selector for the strict phase sign.  This conditionally supplies only `orientation_odd_selector_source`; it does not supply `nonlinear_damping_completion_source`, does not revalidate the full bridge, and does not reopen role-bearing `L_total`, role-transfer, QW-2191, or ToE closure.",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:328:This is still premise-based.  The phase origin and handedness are not derived from strict-core data; `beta_tors -> chi11` is not proven; QW-2191 remains open.",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:353:This preserves the P2366 positive boundary: coprime phases can recover source only after a phase-origin reference is supplied.  It also preserves the hard limit: no strict-core phase-origin theorem, no `beta_tors -> chi11` theorem, no legacy role transfer, no QW-2191 discharge, and no ToE closure are claimed.",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:366:This is stronger than a bare Fourier phase-origin premise because the source/orientation are read from structured finite self-record data.  It still does not close QW-2191: strict nadsoliton dynamics has not yet derived the d5 support, the self-recorded arrow action, the endpoint-valued ledger, or the endpoint-source convention.  No `beta_tors -> chi11` theorem, no legacy role transfer, and no ToE closure are claimed.",
@@ -450,8 +462,7 @@
           "fundamental_action_reconstruction/p2371_s1321_aut_invariant_unit_bandpass_obstruction_theorem.py:241:                \"- No `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\",",
           "fundamental_action_reconstruction/p2372_s1322_bridge_kernel_direct_band_polarity_audit.py:151:            \"beta_tors -> chi11 theorem\",",
           "fundamental_action_reconstruction/p2372_s1322_bridge_kernel_direct_band_polarity_audit.py:230:                \"- No `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\",",
-          "fundamental_action_reconstruction/p2373_s1323_bridge_kernel_polarity_correction_cone_theorem.py:158:            \"beta_tors -> chi11 theorem\",",
-          "fundamental_action_reconstruction/p2373_s1323_bridge_kernel_polarity_correction_cone_theorem.py:236:                \"- No `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\","
+          "fundamental_action_reconstruction/p2373_s1323_bridge_kernel_polarity_correction_cone_theorem.py:158:            \"beta_tors -> chi11 theorem\","
         ]
       }
     },
