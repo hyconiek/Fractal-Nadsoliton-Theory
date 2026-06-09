@@ -1596,3 +1596,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2630/S1580 strict beta source vs bridge Z_beta Ltotal guard
 
 `P2630/S1580` keeps role-bearing `L_total` closed.  A strict-internal beta normalization, an independent legacy/UV normalization, and the normalization-invariant micro/strict match are typed separately; old strict-source or role-transfer packets cannot stand in for the missing bridge coefficient theorem.
+
+## P2631/S1581 neural beta criticality Ltotal guard
+
+`P2631/S1581` does not license a role-bearing `L_total` damping term from neural edge-of-chaos language.  Information-flux conservation needs an independent dimensionless constant and canonical UV/length normalization before the bare value `beta=1` can be read as a theorem rather than calibration.
+
+## P2632/S1582 neural legacy-strict retention Ltotal guard
+
+`P2632/S1582` keeps `L_total` role claims closed: the neural-attention reading makes the strict kernel intelligible as an enriched successor of the legacy kernel, but it does not by itself prove characteristic-by-characteristic role transfer or final ToE kernel status.
+
+## P2633/S1583 diagram-grounded retention Ltotal guard
+
+`P2633/S1583` keeps `L_total` role claims closed after reading the legacy diagram characteristics: the strict kernel's neural/fractal-compression architecture is a working successor, not a proof that the diagram's inverse hierarchy, node/gauge, `alpha_geo`, or `beta_tors` roles have transferred to strict dynamics.
