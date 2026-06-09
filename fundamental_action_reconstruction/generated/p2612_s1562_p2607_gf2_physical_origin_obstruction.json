@@ -1,0 +1,642 @@
+{
+  "gatekeeper_checks": {
+    "no_apd_source_exported": true,
+    "no_bridge_revalidation": true,
+    "no_p2607_quarantine_lift": true,
+    "no_p2608_ltotal_reenable": true,
+    "no_qw2191_discharge": true,
+    "no_toe_closure_claimed": true,
+    "obstruction_exported": true,
+    "p2607_quarantine_inherited": true,
+    "p2607_rank_recomputed": true,
+    "p2608_quarantine_inherited": true,
+    "physical_requirements_missing": true,
+    "rg_non_duplication_audit_recorded": true,
+    "role_semantics_does_not_accept_current_ltotal": true,
+    "unit_diagonal_explains_rank": true
+  },
+  "p2607_gf2_physical_origin_obstruction": {
+    "source_fingerprints_sha256": {
+      "P2607_PAYLOAD": "7970621a2f9c2f4d71945265c7fb8239148b36fa05854f659109f08339a78b44",
+      "P2607_SOURCE": "ccc5f528edc2f85b40b408a97945ec5b086e1ea80a497780e46d4a85bc556001",
+      "P2610_REVALIDATION": "025cda0c89715b873fed1c4654ff691bc4c525dfce72e6ef7673305847013f12",
+      "P2611_ROLE_SEMANTICS": "42b83d8a5677e560f657607ccecf336da1bce8d2a50602d89d645e7790d65085"
+    },
+    "theorem_export": {
+      "apd_source_exported": false,
+      "audited_chain": [
+        "P2607/S1557",
+        "P2610/S1560",
+        "P2611/S1561"
+      ],
+      "bridge_completion_revalidated": false,
+      "gf2_physical_origin_obstruction_exported": true,
+      "gf2_physical_origin_theorem_exported": false,
+      "legacy_physical_role_transfer_exported": false,
+      "obstruction_certificate": {
+        "lower_triangular_unit_matrix": true,
+        "matrix_size": [
+          11,
+          11
+        ],
+        "nullity_over_gf2_recomputed": 0,
+        "obstruction_statement": "The P2607 GF(2) matrix cannot be lifted out of quarantine from the current repository evidence. Its full rank follows from an algorithmic lower-triangular unit construction over node indices, while no derivation from chiral-current conservation, topological-charge quantization, or nadsoliton winding-number boundary data is present. Therefore the P2607 bridge-completion export remains obstructed.",
+        "p2610_quarantine_inherited": {
+          "p2607_quarantined": true,
+          "p2608_quarantined": true
+        },
+        "p2611_role_semantics_inherited": {
+          "current_ltotal_assignment_accepts": false,
+          "role_semantics_defined": true
+        },
+        "physical_origin_requirement_audit": {
+          "all_physical_requirements_present": false,
+          "missing_requirements": [
+            "chiral_current_conservation_equations",
+            "topological_charge_quantization_map",
+            "winding_number_to_phase_bit_boundary_operator",
+            "node_label_invariance_or_perturbation_invariance_test"
+          ],
+          "requirement_hits": {
+            "chiral_current_conservation_equations": false,
+            "node_label_invariance_or_perturbation_invariance_test": false,
+            "topological_charge_quantization_map": false,
+            "winding_number_to_phase_bit_boundary_operator": false
+          }
+        },
+        "rank_explained_by_unit_diagonal": true,
+        "rank_over_gf2_recomputed": 11,
+        "rhs_rank_independence_audit": {
+          "rank_independent_of_rhs_samples": true,
+          "sample_count": 16,
+          "samples": [
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                0,
+                1,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                1,
+                0,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                1,
+                0,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                1,
+                1,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                0,
+                1,
+                1,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                0,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                0,
+                0,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                1,
+                0,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                0,
+                1,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                0,
+                1,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                1,
+                0,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "nullity_over_gf2": 0,
+              "phase_bits_prefix": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "rank_over_gf2": 11,
+              "rhs_prefix": [
+                1,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "row_supports": [
+          [
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            8,
+            9
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "source_origin_audit": {
+          "all_algorithmic_index_markers_present": true,
+          "lower_triangular_construction_markers": {
+            "mod_three_extra_coupling_rule": true,
+            "nearest_neighbor_index_rule": true,
+            "unit_diagonal_assignment": true
+          },
+          "physical_keyword_hit_count": 1,
+          "physical_keyword_hits_in_p2607_source": {
+            "boundary operator": false,
+            "chiral": false,
+            "cohomology": false,
+            "current": true,
+            "homology": false,
+            "orientation class": false,
+            "topological charge": false,
+            "winding": false
+          }
+        },
+        "strict_alternative_proposal": {
+          "preferred_path": "P2601_monoid_action_uniqueness",
+          "required_steps": [
+            "Define the nadsoliton RG transport action T_d on the admissible state space with composition T_de = T_d o T_e.",
+            "Prove identity uniqueness: T_1 = Id is the unique neutral element of that action.",
+            "Define damping character y_d as the logarithm of the multiplicative attenuation character and prove y_de = y_d + y_e.",
+            "Use identity uniqueness to prove y_1 = 0 and show the result is independent of D_f."
+          ],
+          "why_preferred_over_p2602_now": "The repository already frames T_1 as zero RG time/no-op transport; a strict monoid proof needs fewer new physical assumptions than a prime spectral-gap theorem selecting primes over all other generator families."
+        }
+      },
+      "p2607_quarantine_lifted": false,
+      "p2608_role_bearing_ltotal_reenabled": false,
+      "qw2191_discharged_by_this_packet": false,
+      "recommended_next_honest_step": "Close the P2607 GF(2) bridge path until a physical-origin theorem is supplied; pursue the P2601 monoid action uniqueness proof as the strict alternative.",
+      "strict_damping_source_reexported": false,
+      "theorem_name": "P2612_T1_p2607_gf2_physical_origin_obstruction",
+      "toe_closure_claimed": false
+    },
+    "theorem_fingerprint_sha256": "f977545ed5e5f4195579a779869203b0818c8c9f681c921fd85b407448a5e481"
+  },
+  "packet_id": "P2612",
+  "rg_non_duplication_audit": {
+    "patterns": {
+      "guardrails": {
+        "count": 13130,
+        "samples": [
+          "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:301:1. ToE closure,",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+          "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:162:11. nie wolno milczaco utozsamiac pozniejszego `K_strict_gate` z historycznym",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:163:    `K_legacy_ont` ani traktowac go jako ontologicznego zamiennika warstwy",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:56:K_legacy_ont / (D_f, alpha_geo, beta_tors)",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:59:K_strict_gate",
+          "fundamental_action_reconstruction/A1_MINIMAL_ACTION_ANSATZ.md:67:- jesli `K_strict_gate` pojawia sie w kontekscie `A1`, to tylko jako",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:48:   `K_strict_gate`.",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:53:- uzywac `K_strict_gate` tylko jako downstream operational control,",
+          "fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md:59:- milczaco podstawic `K_strict_gate` w miejsce ontologicznej warstwy",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:107:- brak pelnej unikalnosci reprezentacji przez obstruction `QW-2191`,",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:178:| pelna unikalnosc representation map | `blocked` | `QW-2191` |",
+          "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:63:6. `QW-2191`",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:112:- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel\u2011alone,",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:133:| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:33:6. `QW-2191`",
+          "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:97:`QW-2191` daje jawny obstruction theorem:",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:71:2. pozniejszego strict working kernela `K_strict_gate`.",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:75:- uzywac `K_strict_gate` tylko jako downstream operational gravity-side",
+          "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md:79:- traktowac `K_strict_gate` jako automatycznego nosnika starej semantyki",
+          "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:115:4. **Zadanie na Przysz\u0142o\u015b\u0107:** Najwy\u017cszym priorytetem teoretycznym jest teraz wykazanie, w jaki spos\u00f3b asymetria Shannon'a ($\\alpha_{\\text{geo}} = 4 \\ln 2$) na pier\u015bcieniu nad12-sigma w pe\u0142ni znosi przeszkod\u0119 selektora `QW-2191`, umo\u017cliwiaj\u0105c jednoznaczne wy\u0142onienie generacji cz\u0105stek w \u015bcis\u0142ym rdzeniu.",
+          "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:97:### 4.1. Przeszkoda Selektora `QW-2191`",
+          "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:83:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md:97:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:102:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md:88:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:104:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:27:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX12_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_ACTION_COHERENCE_INSTANCE.md:90:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:105:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:28:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX13_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_TARGET_EOM_COHERENCE_INSTANCE.md:91:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:103:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:117:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX14_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI7_SOURCE_ACTION_COHERENCE_INSTANCE.md:27:- avoid any silent reuse of `K_strict_gate` as ontological source.",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:11:- `QW-2191` still obstructs kernel-alone uniqueness,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:18:- keep `QW-2191` undischarged,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:27:     `QW-2191`,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:69:- `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX15_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_PACKET.md:71:- ToE closure,",
+          "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:74:4. actual global `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX16_STRICT_SIDE_SELECTOR_INGREDIENT_ADMISSIBILITY_PRINCIPLE_THEORY_LEVEL_ACCEPTANCE_PACKET.md:75:5. actual ToE closure,",
+          "fundamental_action_reconstruction/AX17_STRICT_SIDE_POSITIVE_WINDOW_DELTA_D_MAXIMAL_STEP_CONVENTION_ACCEPTANCE_PACKET.md:70:4. `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX17_STRICT_SIDE_POSITIVE_WINDOW_DELTA_D_MAXIMAL_STEP_CONVENTION_ACCEPTANCE_PACKET.md:71:5. ToE closure,",
+          "fundamental_action_reconstruction/AX18_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_DATUM_INSTANCE_PACKET.md:54:- It does not claim `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX19_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_CLOSURE_PACKET.md:42:- It does not claim strict-core selector closure nor `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX19_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_CLOSURE_PACKET.md:44:- It does not claim ToE closure.",
+          "fundamental_action_reconstruction/AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md:84:- `QW-2191`,",
+          "fundamental_action_reconstruction/AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md:86:- full ToE closure.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:26:- avoid any silent reuse of `K_strict_gate` as an ontological source.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:59:- it does not discharge `QW-2191`.",
+          "fundamental_action_reconstruction/AX20_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_DIRECT_M2_PSI10_TARGET_COHERENCE_INSTANCE.md:83:- that `QW-2191` is discharged,",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:10:of `QW-2191`.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:41:   - one explicit sigma-int \u2192 theta **candidate** selector ingredient and its `QW-2191`-family compatibility witness.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:50:> `QW-2191` `O(2)` family, both exposed selector slots are fixed by explicit symmetry-breaking premise:",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:67:3. strict core remains unchanged and honest: `T159` stays open and `QW-2191` stays undischarged in strict core.",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:75:3. strict-core selector closure or strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX21_STRICT_EXTENSION_LANE_SIGMA_INT_TO_THETA_SLOT_CLOSURE_SELECTOR_PREMISE_PACKET.md:77:5. ToE closure.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:17:3. while keeping strict-core claims unchanged (no strict-core theta export; `QW-2191` not discharged in strict core).",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:32:   - strict-side sigma-int \u2192 theta candidate selector ingredient and its `QW-2191`-family compatibility witness.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:59:- explicit no-false-pass boundaries (`T159` remains open; `QW-2191` remains open in strict core),",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:89:- strict-core `QW-2191` discharge remains absent.",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:98:- strict-core discharge of `QW-2191`,",
+          "fundamental_action_reconstruction/AX22_STRICT_EXTENSION_LANE_PUBLICATION_READY_SUMMARY_PACKET.md:99:- ToE closure.",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:37:without changing strict core and without implying `T165` / `QW-2191` discharge.",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:70:3. **Define the `pair1` objective on the `QW-2191` family:**",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:86:2. strict core remains unchanged and honest: `T165` stays open and `QW-2191` stays undischarged in strict core,",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:8:`QW-2191` exports a strict-core continuous `O(2)` basis-choice family on degenerate 2D mode pairs (e.g. `pair1=span{c1,s1}`).",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:96:4. strict-core selector closure or strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md:97:5. ToE closure.",
+          "fundamental_action_reconstruction/AX24_STRICT_EXTENSION_LANE_QW2122_UNIFORM_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:102:3. a strict-core `QW-2191` discharge,",
+          "fundamental_action_reconstruction/AX24_STRICT_EXTENSION_LANE_QW2122_UNIFORM_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:103:4. ToE closure.",
+          "fundamental_action_reconstruction/AX25_STRICT_EXTENSION_LANE_QW2122_SHANNON_DIRECTED_VACUUM_AND_SELF_COUPLINGS_VALUE_PROVIDER_PACKET.md:125:3. a strict-core `QW-2191` discharge,"
+        ]
+      },
+      "intended_research_nonduplication": {
+        "count": 6,
+        "samples": [
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2157:`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1526:`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:223:            \"Close the P2607 GF(2) bridge path until a physical-origin theorem is supplied; pursue the P2601 monoid action uniqueness proof as the strict alternative.\"",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:292:`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:297:`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:76:        \"intended_research_nonduplication\": \"chiral current obstruction|winding number obstruction|topological charge obstruction|P2601.*monoid action uniqueness\","
+        ]
+      },
+      "new_packet": {
+        "count": 23,
+        "samples": [
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2155:## P2612/S1562 P2607 GF(2) physical-origin obstruction",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2157:`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1524:## P2612/S1562 GF(2)-origin obstruction Ltotal guard",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1526:`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:218:        \"theorem_name\": \"P2612_T1_p2607_gf2_physical_origin_obstruction\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:244:        \"packet_id\": \"P2612\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:245:        \"stage_id\": \"S1562\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:246:        \"status\": \"P2612_P2607_GF2_PHYSICAL_ORIGIN_OBSTRUCTION_CLOSES_BRIDGE_LIFT_PATH_PROPOSES_P2601_MONOID_UNIQUENESS_ALTERNATIVE\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:267:        \"# P2612/S1562 P2607 GF(2) physical-origin obstruction\", \"\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:282:        \"P2612 does not lift P2607 quarantine, does not revalidate bridge completion, does not re-enable P2608 role-bearing L_total, and does not export QW-2191 discharge, APD sourcehood, legacy physical-role transfer, or ToE closure.\", \"\", \"## Fingerprint\", \"\",",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:290:## P2612/S1562 P2607 GF(2) physical-origin obstruction",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:292:`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:295:## P2612/S1562 GF(2)-origin obstruction Ltotal guard",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:297:`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:299:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2612/S1562 P2607 GF(2) physical-origin obstruction\", eq_section)",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:300:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2612/S1562 GF(2)-origin obstruction Ltotal guard\", lag_section)",
+          "fundamental_action_reconstruction/p2612_s1562_p2607_gf2_physical_origin_obstruction.py:75:        \"new_packet\": \"P2612|S1562|GF\\\\(2\\\\) physical-origin obstruction|GF2 physical-origin obstruction|P2607.*physical-origin obstruction\",",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:14:class P2612P2607Gf2PhysicalOriginObstructionTest(unittest.TestCase):",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:25:        self.assertEqual(self.payload[\"packet_id\"], \"P2612\")",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:26:        self.assertEqual(self.payload[\"stage_id\"], \"S1562\")",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:59:        self.assertIn(\"P2612/S1562\", MD.read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:60:        self.assertIn(\"P2612/S1562\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+          "fundamental_action_reconstruction/test_p2612_s1562_p2607_gf2_physical_origin_obstruction.py:61:        self.assertIn(\"P2612/S1562\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))"
+        ]
+      },
+      "p2607_origin_terms": {
+        "count": 367,
+        "samples": [
+          "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:34:        |-- GF(2) phase/topology certificates",
+          "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:44:The historical point is asymmetric. `K_legacy_ont` is restored as an intermediate bridge kernel because earlier work indicates that the strict kernel is an enriched completion of the legacy kernel. But the legacy kernel is not allowed to silently substitute for the strict kernel: it did not encode the full strict nadsoliton characteristics, especially nonlinear compression and certified GF(2)/cohomological phase data.",
+          "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:81:| GF(2) phase pattern | unique four-edge solution `1->2`, `5->6`, `7->8`, `9->10` | legacy linear denominator is sign-positive and cannot supply phase flips |",
+          "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:40:2. GF(2) phase-sign reconstruction and rank-11 uniqueness,",
+          "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:89:`QW-2191` remains a real strict-core selector obstruction.  The GF(2), path",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1111:The result is positive only as a phase-coordinate transport witness: affine transport has zero numerical residual on the audited rows, but it is not a discrete `Z12` automorphism, no unit+offset reindexing reproduces the strict sign pattern, and the best scalar replacement has nonzero residual.  The phase-factor signs match the inherited Z2/GF(2) phase chain.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1265:`P2435/S1385` computes the implication/separability poset induced by the P2434 64-mask role lattice.  The four legacy role claims have GF(2) obligation-incidence rank 4, so the claim rows remain independent as audit targets.  The only nontrivial implication is `legacy_inverse_alpha_em -> legacy_weak_mixing_angle`, because the inverse-alpha claim requires the alpha successor plus beta_tors successor and therefore contains the weaker alpha-only Weinberg successor requirements.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1965:`P2564/S1514` audits whether the finite strict phase-sign/topological-bit pattern on `d=0..11` can itself source the exact strict phase/frequency tuple.  It cannot: the strict tuple has positive clearance from all audited cosine-zero boundaries, yielding an explicit open box around `omega=743/4000`, `phi=13/80` that preserves the same finite sign pattern.  A 25-point perturbation grid inside the box preserves all signs, so finite sign/GF(2) reconstruction is not a unique phase/frequency selector.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2133:`P2606/S1556` supplies one strict-side residual component beyond the P2605 linear slice: with the P2603 codimension exponent `eta=4/5`, the strict denominator differs nontrivially from the legacy `eta=1` denominator and the residual is not absorbed by a scalar amplitude rescaling.  This still does not certify the full strict-side residual additions package, because phase/topological selector data and role-transfer remain separate gates.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2135:## P2607/S1557 strict phase/topological selector bridge completion",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2137:`P2607/S1557` supplies the remaining strict-side phase/topological selector data by a full-rank GF(2) phase-sign system on 11 audited nodes plus cycle-closure parity checks.  Together with P2605 linear-slice evidence and P2606 nonlinear compression residual evidence, this exports kernel bridge completion, but it still does not export a strict damping role-transfer theorem, legacy physical-role transfer, role-bearing `L_total`, QW-2191 discharge, or ToE closure.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2141:`P2608/S1558` exports the scoped role-transfer theorem for the strict damping/compression term: P2603 supplies the strict damping beta/eta source normal form, P2607 supplies kernel bridge completion, and P2608 licenses only that damping/compression term as role-bearing in `L_total`.  Legacy physical-role claims (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation), APD source claims, QW-2191 discharge, and ToE closure remain unexported.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2145:`P2609/S1559` performs the mandatory post-bridge legacy-role audit after P2607/P2608.  It classifies the listed legacy formulas (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation) as not transferable to `K_strict_gate` on the current evidence: each lacks a claim-specific strict role map, numeric replay, transfer theorem, or selector discharge.  The only role-bearing transfer inherited is the scoped strict damping/compression term from P2608.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2149:`P2610/S1560` accepts the external critique as an operational guard: P2601, P2602, P2605, P2607, and P2608 are quarantined as unqualified strict source/bridge/role exports until their missing formal ingredients are proved.  P2603 is retained only under its `D_f=9/5` codimension scope, P2604 is retained as a readiness matrix, and P2606 is retained only as a numerical nonlinear residual component.  `L_total` must not rely on the P2607/P2608 bridge/role export path until GF(2) physical-origin and role-semantics theorems exist.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2153:`P2611/S1561` supplies the formal acceptance semantics missing from P2608: a role-bearing `L_total` term must be typed, variational, strictly sourced, bridge-valid when imported from legacy, equipped with an explicit variation-to-effect role map, and guardrail-safe.  The computed four-gate truth table has one accepting row, but the current P2610-inherited assignment rejects acceptance because P2601/P2602 source support, P2607 bridge completion, and P2608 role transfer remain quarantined.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2155:## P2612/S1562 P2607 GF(2) physical-origin obstruction",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2157:`P2612/S1562` attempts the requested physical-origin lift for the P2607 GF(2) phase/selector matrix and closes the path with an obstruction: the audited full rank follows from an index-built lower-triangular unit matrix, while no derivation from chiral currents, topological charge, winding-number boundary data, or node-label invariance is present.  P2607 bridge completion and P2608 role-bearing `L_total` therefore remain quarantined; the recommended alternative is a strict P2601 monoid action uniqueness proof.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:982:`P2403/S1353` incorporates the corrected historical reading: the legacy kernel was the first successful kernel and was extensively studied as a possible ToE generator of masses, gravity, and related physical roles.  The current strict kernel is now the primary kernel because the bridge/completion work records strict-side nadsoliton characteristics not present in the legacy kernel as a final object: A/P/D completion, GF(2)/cohomological phase data, nonlinear `d^eta` compression, and strict `chi11` selector bookkeeping.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:990:`P2404/S1354` turns the P2403 strict-primary rebase into a finite dependency-cut audit.  The audited atoms are the four strict additions (`A/P/D`, GF(2)/topological phase data, nonlinear compression, and `chi11` selector bookkeeping) plus the three role-successor atoms from the P2400 lattice.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1502:`P2606/S1556` keeps the damping/compression term non-role-bearing in `L_total`: the nonlinear compression residual component is now isolated, but phase/topological selector data and a strict damping role-transfer theorem remain required before any role-bearing promotion.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1504:## P2607/S1557 bridge completion Ltotal guard",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1506:`P2607/S1557` closes the kernel-completion bridge data but keeps `L_total` non-role-bearing: the remaining gate is the mandatory strict damping role-transfer theorem.  Legacy physical-role claims remain non-transferable until that separate audit is supplied.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1518:`P2610/S1560` supersedes the operational use of the P2607/P2608 positive flags for now: role-bearing `L_total` is quarantined pending a physical derivation of the GF(2) matrix and a formal definition of role-bearing semantics.  The strict damping/compression term may remain a candidate bookkeeping target, but not an accepted role-bearing term.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1522:`P2611/S1561` defines what role-bearing `L_total` acceptance means, but it does not accept the strict damping/compression term.  The term remains a candidate bookkeeping target until the P2607 GF(2) physical-origin/invariance theorem and subsequent P2608 role-transfer revalidation are supplied.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1524:## P2612/S1562 GF(2)-origin obstruction Ltotal guard",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1526:`P2612/S1562` keeps `L_total` role-bearing acceptance blocked: the P2607 GF(2) matrix has no audited physical origin from nadsoliton topology in the current evidence, so P2608 cannot be re-enabled.  The next admissible proof route is the P2601 monoid action uniqueness theorem, not another combinatorial bridge lift.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LEGACY_ROLE_TRANSFER_AUDIT_DRAFT.md:23:| Selector candidate | `beta_tors -> chi_11` | Needs a theorem reducing continuous legacy torsion to the GF(2) phase/topology selector source; current audits identify `chi_11` as a bottleneck but not as derived. | blocked |",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LEGACY_ROLE_TRANSFER_AUDIT_DRAFT.md:30:- GF(2) phase-sign solution with four forced flip edges;",
+          "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_TRACEABILITY_MATRIX.md:39:GF(2) rank = 4",
+          "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_TRACEABILITY_MATRIX.md:42:So every scaffold column is reached, every source row is used at least twice, and the four release target columns are linearly independent over GF(2). This is a traceability property only. It does not prove any missing source theorem.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:127:## 3.2 Boolean normal form (GF(2) ANF)",
+          "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:129:A second computational strengthening is the Boolean normal form of the target definitions.  Over GF(2), the algebraic normal form of the ToE target is a single degree-7 monomial containing all seven open atoms.  The component targets have the expected lower degrees: bridge is degree `3`, role-transfer is degree `4`, and selector/QW-2191 is degree `1`.",
+          "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:242:                f\"The rebased GF(2) matrix rank is `{cert['matrix_rank_mod2']}`.\",",
+          "fundamental_action_reconstruction/p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:337:                f\"- Role matrix GF(2) rank: `{theorem['matrix_rank_mod2']}`.\",",
+          "fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:314:                f\"- Matrix rank over GF(2): `{theorem['matrix_rank_mod2']}`.\",",
+          "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:295:                f\"- Signature rank over GF(2): `{theorem['signature_rank_mod2']}`.\",",
+          "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:187:`P2403/S1353` incorporates the corrected historical reading: the legacy kernel was the first successful kernel and was extensively studied as a possible ToE generator of masses, gravity, and related physical roles.  The current strict kernel is now the primary kernel because the bridge/completion work records strict-side nadsoliton characteristics not present in the legacy kernel as a final object: A/P/D completion, GF(2)/cohomological phase data, nonlinear `d^eta` compression, and strict `chi11` selector bookkeeping.",
+          "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:231:        \"s2_mentions_strict_completion_additions\": all(term in s2_text for term in [\"A/P/D\", \"GF(2)\", \"d^eta\"]),",
+          "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:50:        \"bridge_reading\": \"Strict carries certified GF(2)/cohomological phase/topological data absent from the legacy kernel as such.\",",
+          "fundamental_action_reconstruction/p2404_s1354_strict_addition_physics_lane_dependency_cut_certificate.py:225:`P2404/S1354` turns the P2403 strict-primary rebase into a finite dependency-cut audit.  The audited atoms are the four strict additions (`A/P/D`, GF(2)/topological phase data, nonlinear compression, and `chi11` selector bookkeeping) plus the three role-successor atoms from the P2400 lattice.",
+          "fundamental_action_reconstruction/p2415_s1365_phase_frequency_affine_transport_nonautomorphism_certificate.py:115:    raise ValueError(\"zero sign cannot be converted to a GF(2) bit\")",
+          "fundamental_action_reconstruction/p2415_s1365_phase_frequency_affine_transport_nonautomorphism_certificate.py:269:The result is positive only as a phase-coordinate transport witness: affine transport has zero numerical residual on the audited rows, but it is not a discrete `Z12` automorphism, no unit+offset reindexing reproduces the strict sign pattern, and the best scalar replacement has nonzero residual.  The phase-factor signs match the inherited Z2/GF(2) phase chain.",
+          "fundamental_action_reconstruction/p2415_s1365_phase_frequency_affine_transport_nonautomorphism_certificate.py:99:            \"Repo grep finds scratch phase-affine, Z2/GF(2), and selector-scope material, but no production P24xx \"",
+          "fundamental_action_reconstruction/p2417_s1367_apd_witness_to_source_obligation_nonpromotion_matrix_certificate.py:131:        \"topological_bit_transport_selector_theorem\": \"P2415 matches inherited GF(2) bits but exports no selector/topological source theorem.\",",
+          "fundamental_action_reconstruction/p2435_s1385_legacy_role_claim_implication_separability_certificate.py:195:`P2435/S1385` computes the implication/separability poset induced by the P2434 64-mask role lattice.  The four legacy role claims have GF(2) obligation-incidence rank 4, so the claim rows remain independent as audit targets.  The only nontrivial implication is `legacy_inverse_alpha_em -> legacy_weak_mixing_angle`, because the inverse-alpha claim requires the alpha successor plus beta_tors successor and therefore contains the weaker alpha-only Weinberg successor requirements.",
+          "fundamental_action_reconstruction/p2435_s1385_legacy_role_claim_implication_separability_certificate.py:307:                f\"- Incidence rank over GF(2): `{theorem['incidence_rank_gf2']}`.\",",
+          "fundamental_action_reconstruction/p2439_s1389_strict_coefficient_source_consistency_audit_certificate.py:431:                f\"- GF(2) source-feature rank: `{theorem['source_feature_incidence_rank_gf2']}`.\",",
+          "fundamental_action_reconstruction/p2564_s1514_phase_frequency_finite_sign_cell_nonidentifiability_certificate.py:184:            \"Do not treat GF(2) or finite phase-sign reconstruction as a source for the exact strict phase/frequency tuple. The next honest step is to add a stronger selector candidate with a computable objective inside the open sign cell, then test whether it has a unique minimizer at omega=743/4000 and phi=13/80 without discharging QW-2191 by assumption.\"",
+          "fundamental_action_reconstruction/p2564_s1514_phase_frequency_finite_sign_cell_nonidentifiability_certificate.py:243:        \"The strict finite sign pattern has a positive clearance from every audited cosine zero.  A small open box around `(omega, phi)=(743/4000,13/80)` therefore preserves all audited signs, so finite GF(2)/phase-sign data cannot by itself select the exact strict phase/frequency tuple.\", \"\",",
+          "fundamental_action_reconstruction/p2564_s1514_phase_frequency_finite_sign_cell_nonidentifiability_certificate.py:253:`P2564/S1514` audits whether the finite strict phase-sign/topological-bit pattern on `d=0..11` can itself source the exact strict phase/frequency tuple.  It cannot: the strict tuple has positive clearance from all audited cosine-zero boundaries, yielding an explicit open box around `omega=743/4000`, `phi=13/80` that preserves the same finite sign pattern.  A 25-point perturbation grid inside the box preserves all signs, so finite sign/GF(2) reconstruction is not a unique phase/frequency selector.",
+          "fundamental_action_reconstruction/p2605_s1555_legacy_strict_linear_slice_completion_map_evidence.py:180:            \"Do not transfer legacy physical roles. The next bridge step must certify strict-side residual additions: nonlinear compression/damping beyond eta=1 plus phase/topological selector data, before any role-transfer theorem.\"",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:120:        \"component_interpretation\": \"The eta=4/5 codimension law supplies a genuine nonlinear damping/compression denominator residual beyond the eta=1 legacy linear slice; it is not a full bridge because phase/topological selector data remain separate.\",",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:155:            \"Using the codimension exponent eta=4/5 sourced in P2603, the strict gate denominator differs from the eta=1 legacy linear slice by a nonzero nonlinear compression residual R_nonlinear(d). This supplies one strict-side residual component but not the phase/topological selector component or role transfer.\"",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:176:            \"Next certify the remaining strict-side phase/topological selector data, not APD/moment/Sturm and not legacy physical-role transfer. Role transfer remains inadmissible until that selector data is supplied.\"",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:232:        \"This exports only the nonlinear compression residual component. It does not export the full strict-side residual additions package, phase/topological selector data, role-transfer theorem, role-bearing `L_total`, QW-2191 discharge, or ToE closure.\", \"\",",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:243:`P2606/S1556` supplies one strict-side residual component beyond the P2605 linear slice: with the P2603 codimension exponent `eta=4/5`, the strict denominator differs nontrivially from the legacy `eta=1` denominator and the residual is not absorbed by a scalar amplitude rescaling.  This still does not certify the full strict-side residual additions package, because phase/topological selector data and role-transfer remain separate gates.",
+          "fundamental_action_reconstruction/p2606_s1556_strict_side_nonlinear_compression_residual_addition.py:248:`P2606/S1556` keeps the damping/compression term non-role-bearing in `L_total`: the nonlinear compression residual component is now isolated, but phase/topological selector data and a strict damping role-transfer theorem remain required before any role-bearing promotion.",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:141:        \"theorem_name\": \"P2607_T1_strict_phase_topological_selector_bridge_completion\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:144:            \"The remaining strict-side phase/topological selector data are certified by a full-rank GF(2) phase-sign system on 11 audited nodes, together with cycle-closure parity checks. This completes the strict-side residual additions package when combined with P2605 linear-slice evidence and P2606 nonlinear compression residual evidence.\"",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:186:        \"packet_id\": \"P2607\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:187:        \"stage_id\": \"S1557\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:188:        \"status\": \"P2607_PHASE_TOPOLOGICAL_SELECTOR_DATA_EXPORTS_BRIDGE_COMPLETION_ROLE_TRANSFER_STILL_BLOCKED_NO_QW2191_NO_TOE\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:210:        \"# P2607/S1557 strict phase/topological selector bridge completion\", \"\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:213:        f\"- GF(2) rank: `{audit['rank_over_gf2']}`.\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:214:        f\"- GF(2) nullity: `{audit['nullity_over_gf2']}`.\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:229:## P2607/S1557 strict phase/topological selector bridge completion",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:231:`P2607/S1557` supplies the remaining strict-side phase/topological selector data by a full-rank GF(2) phase-sign system on 11 audited nodes plus cycle-closure parity checks.  Together with P2605 linear-slice evidence and P2606 nonlinear compression residual evidence, this exports kernel bridge completion, but it still does not export a strict damping role-transfer theorem, legacy physical-role transfer, role-bearing `L_total`, QW-2191 discharge, or ToE closure.",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:234:## P2607/S1557 bridge completion Ltotal guard",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:236:`P2607/S1557` closes the kernel-completion bridge data but keeps `L_total` non-role-bearing: the remaining gate is the mandatory strict damping role-transfer theorem.  Legacy physical-role claims remain non-transferable until that separate audit is supplied.",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:238:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2607/S1557 strict phase/topological selector bridge completion\", eq_section)",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:239:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2607/S1557 bridge completion Ltotal guard\", lag_section)",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:53:        \"new_packet\": \"P2607|S1557|phase topological selector data|phase/topological selector source|GF2 phase rank selector bridge\",",
+          "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py:89:    # unit diagonal makes the phase-sign selector rank exactly 11 over GF(2).",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:100:            \"Given the strict damping beta/eta source normal form from P2603 and the kernel-completion bridge from P2607, the strict damping/compression term may be transferred as a role-bearing L_total term. The theorem is scoped only to the strict damping/compression role and does not transfer legacy physical roles.\"",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:118:            \"source_inputs\": [\"P2603 strict damping beta/eta source\", \"P2607 kernel bridge completion\", \"P2608 strict damping role-transfer theorem\"],",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:154:                \"P2607_BRIDGE_COMPLETION\": sha256_json(p2607_payload),",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:187:`P2608/S1558` exports the scoped role-transfer theorem for the strict damping/compression term: P2603 supplies the strict damping beta/eta source normal form, P2607 supplies kernel bridge completion, and P2608 licenses only that damping/compression term as role-bearing in `L_total`.  Legacy physical-role claims (`sin^2(theta_W)`, `alpha_EM`, gravity hierarchy, `beta_tors` orientation), APD source claims, QW-2191 discharge, and ToE closure remain unexported.",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:19:    \"P2607_BRIDGE_COMPLETION\": GEN / \"p2607_s1557_strict_phase_topological_selector_bridge_completion.json\",",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:57:        \"precursor_chain\": \"P2603|S1553|P2607|S1557|strict_damping_beta_eta_source_exported|legacy_to_strict_completion_bridge_exported\",",
+          "fundamental_action_reconstruction/p2608_s1558_strict_damping_role_transfer_to_ltotal_theorem.py:86:    p2607_payload = load_json(SOURCE_FILES[\"P2607_BRIDGE_COMPLETION\"])"
+        ]
+      }
+    },
+    "tool": "rg"
+  },
+  "source_files": {
+    "P2607_PAYLOAD": "fundamental_action_reconstruction/generated/p2607_s1557_strict_phase_topological_selector_bridge_completion.json",
+    "P2607_SOURCE": "fundamental_action_reconstruction/p2607_s1557_strict_phase_topological_selector_bridge_completion.py",
+    "P2610_REVALIDATION": "fundamental_action_reconstruction/generated/p2610_s1560_p2601_p2608_critical_revalidation_audit.json",
+    "P2611_ROLE_SEMANTICS": "fundamental_action_reconstruction/generated/p2611_s1561_ltotal_role_semantics_acceptance_predicate.json"
+  },
+  "stage_id": "S1562",
+  "status": "P2612_P2607_GF2_PHYSICAL_ORIGIN_OBSTRUCTION_CLOSES_BRIDGE_LIFT_PATH_PROPOSES_P2601_MONOID_UNIQUENESS_ALTERNATIVE"
+}
