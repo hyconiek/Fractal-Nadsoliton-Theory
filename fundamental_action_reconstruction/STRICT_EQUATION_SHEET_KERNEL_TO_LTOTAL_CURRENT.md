@@ -2239,3 +2239,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2633/S1583 diagram-grounded strict characteristic preservation audit guard
 
 `P2633/S1583` grounds the retention audit in `DIAGRAMS_KERNEL_TRANSFORMATION.md`: legacy `K_total` encodes four mechanisms, inverse hierarchy/Wilson-loop distant-octave persistence, hyperbolic-not-exponential damping, integer node/gauge interpretation, and four-parameter absorption.  The strict kernel retains the cosine phase channel and gives a nonlinear heavy-tailed fractal compression successor, but the finite audit rejects full preservation: the declared integer nodes `d=2,5,8,11` are not exact zeros of `cos(pi*d/4+pi/6)`, strict `|K(7)|/|K(1)|` on the amplitude-normalized grid is below one while legacy is above one, and `beta_tors/alpha_geo` roles remain untransferred.  Thus strict remains an enriched working successor rather than a final ToE kernel; no role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure is reopened.
+
+## P2634/S1584 strict stability evidence versus role completeness audit guard
+
+`P2634/S1584` counts the repo's existing strict-kernel stability evidence instead of ignoring it: spectral/micro/Stage-C intersection, independent rehearsal stability, eta derivational stability, robustness bootstrap, and conditional roughness/well-posedness lanes support the strict kernel as a robust working architecture.  The same audit keeps theorem types separated: stability evidence does not by itself close beta/Z_beta normalization, phase-frequency node/gauge exactness, inverse-hierarchy role transfer, `alpha_geo/beta_tors` transfer, APD dynamical sourcing, role-bearing `L_total`, `QW-2191`, or ToE closure.
+
+## P2635/S1585 ToE neural-universe empirical signature audit guard
+
+`P2635/S1585` gives the professorial ToE/neural-universe reading: the strongest ToE symptoms are single-kernel cross-sector unification pressure, multi-lane strict-kernel stability/reproducibility, and the neural architecture analogy `positional encoding + heavy-tailed attention`.  The self-learning reading is only conditionally visible as an energy-based/variational stationarity proxy (`δS=0`, RG/minimum-roughness), not as a closed physical theorem.  Modern-physics checks must be blind frozen-kernel tests in CMB/LSS, GW/PTA, RG/QFT, and phase-frequency node/gauge channels.  No ToE closure, self-learning-universe proof, role-transfer, role-bearing `L_total`, or `QW-2191` discharge is reopened.
+
+## P2636/S1586 current ToE blocker lattice and full-kernel decision guard
+
+`P2636/S1586` answers the full-kernel question directly: strict shows real ToE symptoms as a stable, one-kernel, neural-attention-like working architecture, but it is not yet a full ToE kernel.  The current blocker lattice keeps open bridge completion, beta/Z_beta source, phase-frequency node/gauge certificate, inverse-hierarchy role transfer, strict-core selector/QW-2191 source, role-bearing `L_total` dynamics, and blind frozen-kernel empirical confirmation.  Therefore ToE symptoms count as support, not finality.
