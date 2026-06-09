@@ -672,7 +672,7 @@
   "rg_non_duplication_audit": {
     "patterns": {
       "finite_group_action_precursors": {
-        "count": 1527,
+        "count": 1542,
         "samples": [
           "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:106:  ktora redukuje continuous `O(2)` do residual `Z2` i eksportuje jawna baze,",
           "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:108:  (bez per-site diagonal/local providerow), ktora tnie `O(2)->Z2` na wszystkich `pair_m (m=1..5)` na `n=12` i eksportuje jawna baze (`F454/N496`),",
@@ -747,12 +747,15 @@
         ]
       },
       "new_packet": {
-        "count": 22,
+        "count": 44,
         "samples": [
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2183:## P2619/S1569 selector-source obligation lattice",
           "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2185:`P2619/S1569` strengthens the P2618 phase-selector obstruction with an exact `C2` enumeration.  If orientation reversal acts trivially on legacy scalar input such as `beta_tors`, equivariance of a strict odd sign selector would force `f(x)=-f(x)`, so zero maps exist into `{+1,-1}`.  Equivariant maps appear only when the input already contains an orientation/sign torsor or an equivalent symmetry-breaking/spin-orientation source.  Thus `beta_tors` may remain damping input, but it is not reopened as a `chi11` sign source.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2187:## P2620/S1570 P2618/P2619 bridge two-obstruction cut",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2189:`P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.",
           "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1552:## P2619/S1569 selector-source Ltotal guard",
           "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1554:`P2619/S1569` keeps role-bearing `L_total` closed.  The exact `C2` selector-source lattice says that legacy scalar or axis-only data cannot supply the missing strict phase sign; a real orientation-odd source, symmetry-breaking boundary, or spin/Pin orientation premise is still required before bridge validity and role transfer may be rerun.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1558:`P2620/S1570` keeps role-bearing `L_total` closed after the P2618/P2619 refinements.  Neither the `eta=9/5` exponent source, `beta_tors` scalar renormalization, axis-only/Z2 selector data, nor GF(2) bookkeeping repairs the bridge-source cut; both nonlinear damping completion and orientation-odd selector sources are required before bridge validity and role transfer may be rerun.",
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:181:        \"theorem_name\": \"P2619_T1_p2618_selector_source_obligation_lattice\",",
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:232:        \"packet_id\": \"P2619\",",
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:233:        \"stage_id\": \"S1569\",",
@@ -765,6 +768,25 @@
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:287:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2619/S1569 selector-source obligation lattice\", eq_section)",
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:288:    append_once(DOC_FILES[\"lagrangian_eom_draft\"], \"## P2619/S1569 selector-source Ltotal guard\", lag_section)",
           "fundamental_action_reconstruction/p2619_s1569_p2618_selector_source_obligation_lattice.py:61:        \"new_packet\": \"P2619|S1569|selector source obligation lattice|orientation torsor equivariant enumeration|P2618 selector source\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:102:            \"reason\": \"P2618 derivative obstruction blocks scalar damping completion; P2619 treats beta_tors as orientation-invariant.\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:114:            \"reason\": \"Combinatorial bookkeeping may classify constraints but is not a physical orientation/source premise under P2612/P2619.\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:120:            \"reason\": \"Even a future damping completion source alone leaves the P2619 C2 selector obstruction.\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:147:    p2619 = theorem(payloads[\"P2619_SELECTOR_LATTICE\"], \"p2618_selector_source_obligation_lattice\")",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:153:        \"result_type\": \"exact_two_atom_bridge_source_cut_after_P2618_P2619\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:159:            \"statement\": \"After P2618/P2619, any non-role-bearing legacy-to-strict bridge-source repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source. Either one alone leaves a named obstruction alive.\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:162:                \"P2619 proves that orientation-invariant legacy scalar or axis-only data cannot provide a C2-equivariant strict odd phase-sign selector.\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:215:        \"# P2620/S1570 P2618/P2619 bridge two-obstruction cut\", \"\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:21:    \"P2619_SELECTOR_LATTICE\": GEN / \"p2619_s1569_p2618_selector_source_obligation_lattice.json\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:239:## P2620/S1570 P2618/P2619 bridge two-obstruction cut",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:241:`P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:246:`P2620/S1570` keeps role-bearing `L_total` closed after the P2618/P2619 refinements.  Neither the `eta=9/5` exponent source, `beta_tors` scalar renormalization, axis-only/Z2 selector data, nor GF(2) bookkeeping repairs the bridge-source cut; both nonlinear damping completion and orientation-odd selector sources are required before bridge validity and role transfer may be rerun.",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:248:    append_once(DOC_FILES[\"equation_sheet\"], \"## P2620/S1570 P2618/P2619 bridge two-obstruction cut\", eq_section)",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:63:        \"new_packet\": \"P2620|S1570|two-obstruction cut|bridge two obstruction|P2618 P2619 bridge cut\",",
+          "fundamental_action_reconstruction/p2620_s1570_p2618_p2619_bridge_two_obstruction_cut.py:65:        \"p2618_p2619_precursors\": \"P2618|P2619|nonlinear_damping_completion_source|orientation_odd_selector_source|beta_tors.*chi11\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:218:            \"Hopfion energy delta) is a C2-odd topological phase selector.  This repairs the P2619/P2620 \"",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:21:    \"P2619_SELECTOR_LATTICE\": GEN / \"p2619_s1569_p2618_selector_source_obligation_lattice.json\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:225:            \"The C2 enumeration verifies that a freely acting chiral two-point torsor admits equivariant sign maps, unlike the invariant scalar inputs blocked by P2619.\",",
+          "fundamental_action_reconstruction/p2621_s1571_qw636_qw1026_chiral_hopfion_selector_source_audit.py:77:        \"bridge_guards\": \"P2618|P2619|P2620|nonlinear_damping_completion_source|role-bearing L_total|role-transfer theorem|ToE closure\",",
           "fundamental_action_reconstruction/test_p2619_s1569_p2618_selector_source_obligation_lattice.py:14:class P2619SelectorSourceObligationLatticeTest(unittest.TestCase):",
           "fundamental_action_reconstruction/test_p2619_s1569_p2618_selector_source_obligation_lattice.py:24:        self.assertEqual(self.payload[\"packet_id\"], \"P2619\")",
           "fundamental_action_reconstruction/test_p2619_s1569_p2618_selector_source_obligation_lattice.py:25:        self.assertEqual(self.payload[\"stage_id\"], \"S1569\")",
@@ -774,7 +796,7 @@
         ]
       },
       "nondup_selector_precursors": {
-        "count": 7737,
+        "count": 7769,
         "samples": [
           "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
           "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
@@ -849,7 +871,7 @@
         ]
       },
       "role_ltotal_guards": {
-        "count": 6326,
+        "count": 6341,
         "samples": [
           "fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md:101:- full ToE closure.",
           "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:301:1. ToE closure,",

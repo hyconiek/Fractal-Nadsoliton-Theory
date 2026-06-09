@@ -2187,3 +2187,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2620/S1570 P2618/P2619 bridge two-obstruction cut
 
 `P2620/S1570` converts P2618 and P2619 into an exact two-atom bridge-source cut.  A non-role-bearing bridge repair must supply both an independent nonlinear damping completion source and an independent orientation-odd selector source; either one alone leaves the other named obstruction alive.  The computed truth table has four rows and exactly one accepting bridge-source-cut row, and the accepted row is still not a role-transfer theorem.
+
+## P2621/S1571 QW-636/QW-1026 chiral-Hopfion selector source audit
+
+`P2621/S1571` audits the proposed use of the old QW-636 Hopfion parity phase and QW-1026 chiral anomaly as the missing P2620 orientation source.  The usable theorem is conditional: if a typed, nonzero chiral Hopfion/anomaly source is admitted, then the normalized parity-odd energy difference and `sign(Re Tr(gamma5 K^3))` define a `C2`-odd selector for the strict phase sign.  This conditionally supplies only `orientation_odd_selector_source`; it does not supply `nonlinear_damping_completion_source`, does not revalidate the full bridge, and does not reopen role-bearing `L_total`, role-transfer, QW-2191, or ToE closure.
+
+## P2622/S1572 QW-636/QW-1026 physical-rigor nonpromotion audit
+
+`P2622/S1572` corrects the P2621 lane by auditing whether the QW-636/QW-1026 prior art itself supplies the missing strict orientation source.  It does not: QW-636's Hopfion phase asymmetry is parity-covariant and gauge/convention sensitive unless a directed momentum/loop orientation source is already supplied, while QW-1026's `Tr(gamma5 K^3)` sign flips with the unsourced alternating `gamma5` origin.  Thus P2621 remains a conditional schema only; QW-636/QW-1026 prior art alone does not export `orientation_odd_selector_source`, does not repair P2620, and does not reopen role-bearing `L_total`, QW-2191, or ToE closure.
+
+## P2623/S1573 Wilson-loop flux orientation-source boundary
+
+`P2623/S1573` performs the next content-first selector audit: Wilson/holonomy data are useful only after the missing typed sources are separated.  A closed-cycle Wilson product is gauge-invariant and an oriented nonzero flux has `sign(Im W)` that flips under cycle reversal, but the unoriented gauge-safe datum is the conjugacy pair `{W,W^{-1}}` and is sign-blind.  Therefore Wilson-loop/flux content alone does not export `orientation_odd_selector_source`; it would require a gauge-safe connection source, nonzero flux source, and independent cycle-orientation source, and it still would not supply nonlinear damping completion, role-bearing `L_total`, QW-2191 discharge, or ToE closure.
