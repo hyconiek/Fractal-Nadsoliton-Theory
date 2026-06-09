@@ -1476,3 +1476,35 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2600/S1550 strict damping post-m2 residual source matrix Ltotal guard
 
 `P2600/S1550` updates `L_total` bookkeeping after the hydrodynamic `m=2` source discharge: the operator-order slot may be treated as sourced, but the damping/compression term remains non-role-bearing until multiplicative/unital normalization, prime-log proportionality, and slope/prime-anchor sources are also exported, followed by bridge and role-transfer gates.
+
+## P2601/S1551 identity-action multiplicative-source Ltotal guard
+
+`P2601/S1551` allows `L_total` bookkeeping to mark the multiplicative/unital damping subkey as sourced, in addition to the P2599/P2600 `m=2` operator-order slot.  The damping/compression term remains non-role-bearing until prime-log proportionality, slope/prime-anchor sources, bridge completion, and role-transfer gates are also exported.
+
+## P2602/S1552 prime-log source Ltotal guard
+
+`P2602/S1552` allows `L_total` bookkeeping to mark the prime-log proportionality subkey as sourced after P2601 and P2600.  The damping/compression term remains non-role-bearing until the final `delta=4/5` slope/prime-anchor source is exported, followed by bridge completion and role-transfer gates.
+
+## P2603/S1553 strict damping source discharge Ltotal guard
+
+`P2603/S1553` allows bookkeeping to mark the strict damping beta/eta source normal form as discharged after P2600--P2603.  The damping/compression term still cannot become role-bearing in `L_total` until explicit bridge-completion and role-transfer theorems are supplied under the kernel-split guardrail.
+
+## P2604/S1554 post-source bridge readiness Ltotal guard
+
+`P2604/S1554` keeps the damping/compression term non-role-bearing in `L_total` despite P2603 source discharge.  The next admissible noncyclic move is a concrete `K_legacy_ont -> K_strict_gate` completion-map theorem with strict-side residual additions, followed only then by a role-transfer audit.
+
+## P2605/S1555 linear-slice bridge evidence Ltotal guard
+
+`P2605/S1555` reduces the P2604 bridge-readiness matrix by supplying linear-slice completion-map evidence only.  The damping/compression term remains non-role-bearing in `L_total` until nonlinear strict-side residual additions and a strict damping role-transfer theorem are supplied.
+
+## P2606/S1556 nonlinear residual Ltotal guard
+
+`P2606/S1556` keeps the damping/compression term non-role-bearing in `L_total`: the nonlinear compression residual component is now isolated, but phase/topological selector data and a strict damping role-transfer theorem remain required before any role-bearing promotion.
+
+## P2607/S1557 bridge completion Ltotal guard
+
+`P2607/S1557` closes the kernel-completion bridge data but keeps `L_total` non-role-bearing: the remaining gate is the mandatory strict damping role-transfer theorem.  Legacy physical-role claims remain non-transferable until that separate audit is supplied.
+
+## P2608/S1558 scoped role-bearing Ltotal guard
+
+`P2608/S1558` allows `L_total` bookkeeping to mark the strict damping/compression beta/eta term as role-bearing.  This is not a blanket legacy-role transfer: electroweak, `alpha_EM`, gravity-hierarchy, orientation/torsion, APD, QW-2191, and ToE claims remain separately blocked.
