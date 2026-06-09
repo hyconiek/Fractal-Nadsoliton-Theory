@@ -4,11 +4,11 @@ Status: `P2622_QW636_QW1026_PRIOR_ART_NONPROMOTION_NO_SELECTOR_SOURCE_NO_BRIDGE_
 
 ## Anti-duplication grep audit
 
-- `new_packet`: 22 hits; samples retained in JSON certificate.
-- `qw636_qw637_prior_art`: 257 hits; samples retained in JSON certificate.
-- `qw1026_prior_art`: 87 hits; samples retained in JSON certificate.
-- `selector_guard_prior_art`: 8137 hits; samples retained in JSON certificate.
-- `methodology_risk_terms`: 1009 hits; samples retained in JSON certificate.
+- `new_packet`: 24 hits; samples retained in JSON certificate.
+- `qw636_qw637_prior_art`: 260 hits; samples retained in JSON certificate.
+- `qw1026_prior_art`: 90 hits; samples retained in JSON certificate.
+- `selector_guard_prior_art`: 8170 hits; samples retained in JSON certificate.
+- `methodology_risk_terms`: 1013 hits; samples retained in JSON certificate.
 
 ## Theorem export
 
@@ -46,4 +46,4 @@ Not licensed:
 - QW-2191 discharge
 - ToE closure
 
-Certificate hash: `03e2f07b222c8be4aebd89c50351ee119e84e21e1cbc5f5a26d62662926d6ede`
+Certificate hash: `39c34b0f12e9fc61a12aef9bb86f2b865c41e66e3116c94fccb330976320c253`

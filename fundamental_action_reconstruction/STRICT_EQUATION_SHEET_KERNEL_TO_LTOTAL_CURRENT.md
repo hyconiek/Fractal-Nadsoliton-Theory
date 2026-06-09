@@ -2199,3 +2199,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2623/S1573 Wilson-loop flux orientation-source boundary
 
 `P2623/S1573` performs the next content-first selector audit: Wilson/holonomy data are useful only after the missing typed sources are separated.  A closed-cycle Wilson product is gauge-invariant and an oriented nonzero flux has `sign(Im W)` that flips under cycle reversal, but the unoriented gauge-safe datum is the conjugacy pair `{W,W^{-1}}` and is sign-blind.  Therefore Wilson-loop/flux content alone does not export `orientation_odd_selector_source`; it would require a gauge-safe connection source, nonzero flux source, and independent cycle-orientation source, and it still would not supply nonlinear damping completion, role-bearing `L_total`, QW-2191 discharge, or ToE closure.
+
+## P2624/S1574 current blocker and next-step recommendation guard
+
+`P2624/S1574` answers the current-status question without promoting symptoms into closure.  The strict gate kernel may exhibit ToE-like local symptoms (RG normalization, `eta=9/5` exponent semantics, and conditional topological/parity diagnostics), but it is not a full ToE kernel while `nonlinear_damping_completion_source`, unconditional `orientation_odd_selector_source`, role-transfer, `QW-2191` discharge, and global finality remain false.  The least-duplicative next proof target is therefore a content-first nonlinear damping completion-source classification, not another selector/chirality loop.
+
+## P2625/S1575 nonlinear damping completion-source classification guard
+
+`P2625/S1575` supplies a sharper damping-side proof boundary.  A fractal measure pushforward `q(d)=d^(9/5)` plus an independent positive coefficient source `Z_beta=beta/beta_tors=100` would exactly transform the legacy linear torsion denominator into `1+beta*d^(9/5)`, but the current repository does not yet export that coefficient source.  Scalar rescaling, `eta=9/5` alone, or a scale-dependent `beta_eff(d)` shortcut are rejected as completion proofs; P2620 therefore remains unrepaired without the independent `positive_beta_renormalization_source` and the separate orientation source.
+
+## P2626/S1576 micro Z_beta source nonpromotion guard
+
+`P2626/S1576` audits the best current micro-derived coefficient lane for the missing P2625 atom.  QW-2064 gives positive interval-level support for `Z_beta` and includes `100` inside its reported broad interval, but it does not export `positive_beta_renormalization_source`: the target is computed from the already selected strict kernel, the micro median is not exactly `100`, and the report carries a wide-CI warning.  The next admissible step is a noncircular `Z_beta` coefficient-source theorem or an explicit interval/tolerance bridge theorem, not bridge/role promotion.

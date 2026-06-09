@@ -5,11 +5,11 @@ Status: `P2623_WILSON_FLUX_ORIENTATION_SOURCE_BOUNDARY_NO_SELECTOR_SOURCE_NO_BRI
 ## Content-first anti-duplication grep audit
 
 Mode: `content-first semantic patterns, not ticket/name lookup`.
-- `closed_loop_flux_holonomy_content`: 1015 hits; samples retained in JSON certificate.
-- `gauge_link_transport_content`: 793 hits; samples retained in JSON certificate.
-- `orientation_reversal_content`: 137 hits; samples retained in JSON certificate.
-- `selector_source_content`: 555 hits; samples retained in JSON certificate.
-- `guardrail_content`: 12568 hits; samples retained in JSON certificate.
+- `closed_loop_flux_holonomy_content`: 1016 hits; samples retained in JSON certificate.
+- `gauge_link_transport_content`: 794 hits; samples retained in JSON certificate.
+- `orientation_reversal_content`: 138 hits; samples retained in JSON certificate.
+- `selector_source_content`: 556 hits; samples retained in JSON certificate.
+- `guardrail_content`: 12578 hits; samples retained in JSON certificate.
 
 ## Theorem export
 
@@ -47,4 +47,4 @@ Not licensed:
 - QW-2191 discharge
 - ToE closure
 
-Certificate hash: `ded5f83438c06618ca14dc093c59e6c2582816abf613196043b091ea12690f42`
+Certificate hash: `239d848fdd28936e43ce8ce3c009d5c6d75ebe6619b82d22fb1063ddaff02d95`

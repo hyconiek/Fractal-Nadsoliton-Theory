@@ -8,11 +8,11 @@ Scientifically usable only after narrowing: QW-636 and QW-1026 are heuristic/num
 
 ## Anti-duplication grep audit
 
-- `new_packet`: 24 hits; samples retained in JSON certificate.
-- `qw636_prior_art`: 67 hits; samples retained in JSON certificate.
-- `qw1026_prior_art`: 41 hits; samples retained in JSON certificate.
-- `selector_chirality_prior_art`: 7967 hits; samples retained in JSON certificate.
-- `bridge_guards`: 6280 hits; samples retained in JSON certificate.
+- `new_packet`: 52 hits; samples retained in JSON certificate.
+- `qw636_prior_art`: 95 hits; samples retained in JSON certificate.
+- `qw1026_prior_art`: 90 hits; samples retained in JSON certificate.
+- `selector_chirality_prior_art`: 8003 hits; samples retained in JSON certificate.
+- `bridge_guards`: 6326 hits; samples retained in JSON certificate.
 
 ## Theorem export
 
@@ -48,4 +48,4 @@ Not licensed:
 - QW-2191 discharge
 - ToE closure
 
-Certificate hash: `51750ca6e6faf463719a5eed63ad851544b710a6e007a36ee787164faf800063`
+Certificate hash: `d74a742d3865e33477e16f6b15d0855307a1a15e5c1a63c074b7aca3b3519185`
