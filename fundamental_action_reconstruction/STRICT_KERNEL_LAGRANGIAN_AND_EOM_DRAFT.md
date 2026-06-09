@@ -1440,3 +1440,71 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2591/S1541 APD product-parameter Sturm interval certificate Ltotal guard
 
 `P2591/S1541` blocks a role-bearing APD Gram term in `L_total` from being justified by a Sturm-certified finite moment-shell interval.  The interval proves selector freedom, not a strict support/density source; strict nadsoliton dynamics must supply the actual support law.
+
+## P2592/S1542 APD Newton-Girard next even-moment sensitivity Ltotal guard
+
+`P2592/S1542` blocks a role-bearing APD Gram term in `L_total` from being justified by appending an unsourced eighth-moment shell to the finite moment prefix.  The next shell is a selector coordinate for the P2591 continuum, not a strict nadsoliton-derived density/support source.
+
+## P2593/S1543 APD current-state replay and exact next-moment provenance Ltotal guard
+
+`P2593/S1543` blocks a role-bearing APD Gram term in `L_total` from being justified by provenance replay or exact rational rewriting of P2592.  Replay confirms the selector-coordinate obstruction; it does not derive a strict nadsoliton support/density source.
+
+## P2594/S1544 APD eighth-moment conditional inverse selector Ltotal guard
+
+`P2594/S1544` blocks a role-bearing APD Gram term in `L_total` from being justified by conditional inverse reconstruction from an unsourced eighth shell.  Reconstructing the product parameter after the shell is supplied is not a strict nadsoliton-derived support/density source.
+
+## P2595/S1545 APD eighth-moment continuum inverse Sturm transport Ltotal guard
+
+`P2595/S1545` blocks a role-bearing APD Gram term in `L_total` from being justified by continuum inverse Sturm transport.  Transporting an unsourced eighth-shell interval into a Sturm-valid product interval proves conditional reconstruction only, not a strict nadsoliton support/density source.
+
+## P2596/S1546 nadsoliton hydrodynamic IR m=2 source theorem Ltotal guard
+
+`P2596/S1546` permits the `m=2` operator-order slot in `L_total` to be treated as hydrodynamically sourced by the incompressible nadsoliton IR RG theorem.  It does not by itself make the damping/compression term fully role-bearing: numeric beta/eta sourcing, bridge completion, role-transfer, and selector/QW-2191 gates remain explicit obligations.
+
+## P2597/S1547 nadsoliton hydrodynamic RG m=2 robustness theorem Ltotal guard
+
+`P2597/S1547` permits the `m=2` operator-order slot in `L_total` to remain hydrodynamically sourced under small fractal-dimension variation around `D_f≈1.8`.  It does not by itself make the damping/compression term fully role-bearing; numeric beta/eta sourcing, bridge completion, role-transfer, and selector/QW-2191 gates remain explicit obligations.
+
+## P2598/S1548 nadsoliton hydrodynamic locality fractional-competitor exclusion theorem Ltotal guard
+
+`P2598/S1548` permits the `m=2` operator-order slot in `L_total` to remain hydrodynamically sourced even against fractional-order competitors, because the local finite-stress closure excludes nonlocal `alpha<2` transport.  It does not make the damping/compression term fully role-bearing without numeric beta/eta sourcing, bridge completion, role-transfer, and selector/QW-2191 gates.
+
+## P2599/S1549 nadsoliton projected viscous-stress m=2 derivation theorem Ltotal guard
+
+`P2599/S1549` permits the `m=2` operator-order slot in `L_total` to be treated as explicitly sourced by projected local viscous-stress hydrodynamics.  It does not make the damping/compression term fully role-bearing without numeric beta/eta sourcing, bridge completion, role-transfer, and selector/QW-2191 gates.
+
+## P2600/S1550 strict damping post-m2 residual source matrix Ltotal guard
+
+`P2600/S1550` updates `L_total` bookkeeping after the hydrodynamic `m=2` source discharge: the operator-order slot may be treated as sourced, but the damping/compression term remains non-role-bearing until multiplicative/unital normalization, prime-log proportionality, and slope/prime-anchor sources are also exported, followed by bridge and role-transfer gates.
+
+## P2601/S1551 identity-action multiplicative-source Ltotal guard
+
+`P2601/S1551` allows `L_total` bookkeeping to mark the multiplicative/unital damping subkey as sourced, in addition to the P2599/P2600 `m=2` operator-order slot.  The damping/compression term remains non-role-bearing until prime-log proportionality, slope/prime-anchor sources, bridge completion, and role-transfer gates are also exported.
+
+## P2602/S1552 prime-log source Ltotal guard
+
+`P2602/S1552` allows `L_total` bookkeeping to mark the prime-log proportionality subkey as sourced after P2601 and P2600.  The damping/compression term remains non-role-bearing until the final `delta=4/5` slope/prime-anchor source is exported, followed by bridge completion and role-transfer gates.
+
+## P2603/S1553 strict damping source discharge Ltotal guard
+
+`P2603/S1553` allows bookkeeping to mark the strict damping beta/eta source normal form as discharged after P2600--P2603.  The damping/compression term still cannot become role-bearing in `L_total` until explicit bridge-completion and role-transfer theorems are supplied under the kernel-split guardrail.
+
+## P2604/S1554 post-source bridge readiness Ltotal guard
+
+`P2604/S1554` keeps the damping/compression term non-role-bearing in `L_total` despite P2603 source discharge.  The next admissible noncyclic move is a concrete `K_legacy_ont -> K_strict_gate` completion-map theorem with strict-side residual additions, followed only then by a role-transfer audit.
+
+## P2605/S1555 linear-slice bridge evidence Ltotal guard
+
+`P2605/S1555` reduces the P2604 bridge-readiness matrix by supplying linear-slice completion-map evidence only.  The damping/compression term remains non-role-bearing in `L_total` until nonlinear strict-side residual additions and a strict damping role-transfer theorem are supplied.
+
+## P2606/S1556 nonlinear residual Ltotal guard
+
+`P2606/S1556` keeps the damping/compression term non-role-bearing in `L_total`: the nonlinear compression residual component is now isolated, but phase/topological selector data and a strict damping role-transfer theorem remain required before any role-bearing promotion.
+
+## P2607/S1557 bridge completion Ltotal guard
+
+`P2607/S1557` closes the kernel-completion bridge data but keeps `L_total` non-role-bearing: the remaining gate is the mandatory strict damping role-transfer theorem.  Legacy physical-role claims remain non-transferable until that separate audit is supplied.
+
+## P2608/S1558 scoped role-bearing Ltotal guard
+
+`P2608/S1558` allows `L_total` bookkeeping to mark the strict damping/compression beta/eta term as role-bearing.  This is not a blanket legacy-role transfer: electroweak, `alpha_EM`, gravity-hierarchy, orientation/torsion, APD, QW-2191, and ToE claims remain separately blocked.
