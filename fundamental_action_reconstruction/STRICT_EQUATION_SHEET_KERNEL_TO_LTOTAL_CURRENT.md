@@ -2211,3 +2211,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2626/S1576 micro Z_beta source nonpromotion guard
 
 `P2626/S1576` audits the best current micro-derived coefficient lane for the missing P2625 atom.  QW-2064 gives positive interval-level support for `Z_beta` and includes `100` inside its reported broad interval, but it does not export `positive_beta_renormalization_source`: the target is computed from the already selected strict kernel, the micro median is not exactly `100`, and the report carries a wide-CI warning.  The next admissible step is a noncircular `Z_beta` coefficient-source theorem or an explicit interval/tolerance bridge theorem, not bridge/role promotion.
+
+## P2627/S1577 interval Z_beta tolerance bridge boundary guard
+
+`P2627/S1577` supplies the explicit finite-window tolerance formula for an interval-valued `Z_beta` damping bridge: for `D_Z(d)=1+(Z_beta/100)d^(9/5)` on `0<d<=10`, the relative denominator error is maximized at `d=10`, so an `epsilon`-bridge requires `|Z_beta/100-1| <= epsilon*(1+10^(9/5))/10^(9/5)`.  QW-2064's micro median gives only loose interval support, and its broad q25-q75 interval plus target-dependence and wide-CI warning block promotion to `positive_beta_renormalization_source`.  Thus P2625/P2620 remain unrepaired; no role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure is reopened.
+
+## P2628/S1578 target-blind micro Z_beta filter narrowing guard
+
+`P2628/S1578` exhausts a fixed target-blind quality-filter class over the QW-2048 micro bins: `n>=N`, `phase_min_median>=P`, and `rmse_median<=R`, aggregated by the median of per-bin `Z_beta` medians.  No admitted filter with at least three support bins puts both the median and q25-q75 interval inside the strict 1% envelope around `Z_beta=100`; the best median-only row remains about 9.76% high.  Therefore quality-filter narrowing does not export `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked.
+
+## P2629/S1579 Z_beta normalization-gauge obstruction guard
+
+`P2629/S1579` separates absolute `Z_beta=100` from normalization-invariant micro content.  Under `beta_uv -> lambda beta_uv`, both `Z_beta_median` and `Z_beta_target` scale by `1/lambda`; only `Z_beta_median/Z_beta_target = beta_median/beta_strict` is invariant, and the current invariant ratio is about `1.1474`, not `1`.  Therefore neither UV normalization convention nor target-blind filtering exports `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked pending a genuine target-independent micro normalization identity for `beta` itself.
+
+## P2630/S1580 strict beta source vs bridge Z_beta separation guard
+
+`P2630/S1580` separates strict-internal beta/eta sourcehood from the legacy-to-strict bridge coefficient obligation.  Even if a P2603-style internal strict beta source is granted, the P2625 `positive_beta_renormalization_source` additionally requires an independent legacy/UV normalization source fixing `beta_uv=beta_tors=0.01` and a normalization-invariant match `beta_micro/beta_strict=1`.  The finite truth table has one accepting row and the current assignment remains rejecting, so P2603/P2608 cannot be silently recycled to reopen bridge completion, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.

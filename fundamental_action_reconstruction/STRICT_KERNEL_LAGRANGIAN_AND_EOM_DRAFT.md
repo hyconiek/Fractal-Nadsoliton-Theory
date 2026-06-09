@@ -1580,3 +1580,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2626/S1576 micro Z_beta Ltotal guard
 
 `P2626/S1576` keeps role-bearing `L_total` closed.  Micro support for `Z_beta` remains useful evidence, but without a target-independent exact coefficient-source theorem or a separate tolerance bridge theorem it cannot repair P2625, P2620, role transfer, `QW-2191`, or ToE closure.
+
+## P2627/S1577 interval Z_beta Ltotal guard
+
+`P2627/S1577` keeps role-bearing `L_total` closed.  It proves only a tolerance boundary for a possible approximate coefficient bridge, not an exact target-independent `Z_beta` source theorem.  The micro interval remains too broad for strict bridge repair, so the damping atom, full bridge, role-transfer audit, `QW-2191` discharge, and ToE closure all remain blocked.
+
+## P2628/S1578 target-blind micro Z_beta filter Ltotal guard
+
+`P2628/S1578` keeps role-bearing `L_total` closed.  Exhaustive target-blind quality-filter narrowing of the available micro `Z_beta` bins does not produce an exact positive coefficient source or a strict 1% interval bridge.  A genuine target-independent micro operator/normalization identity is still required before damping completion, role transfer, `QW-2191`, or ToE closure can be rerun.
+
+## P2629/S1579 Z_beta normalization-gauge Ltotal guard
+
+`P2629/S1579` keeps role-bearing `L_total` closed.  The exact damping coefficient cannot be obtained by treating the absolute number `Z_beta=100` as source data; the normalization-invariant micro mismatch remains nonzero, so a target-independent beta-normalization theorem is still required before damping completion, role transfer, `QW-2191`, or ToE closure can be rerun.
+
+## P2630/S1580 strict beta source vs bridge Z_beta Ltotal guard
+
+`P2630/S1580` keeps role-bearing `L_total` closed.  A strict-internal beta normalization, an independent legacy/UV normalization, and the normalization-invariant micro/strict match are typed separately; old strict-source or role-transfer packets cannot stand in for the missing bridge coefficient theorem.
