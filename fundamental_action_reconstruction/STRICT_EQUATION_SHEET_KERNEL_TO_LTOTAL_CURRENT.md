@@ -2251,3 +2251,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2636/S1586 current ToE blocker lattice and full-kernel decision guard
 
 `P2636/S1586` answers the full-kernel question directly: strict shows real ToE symptoms as a stable, one-kernel, neural-attention-like working architecture, but it is not yet a full ToE kernel.  The current blocker lattice keeps open bridge completion, beta/Z_beta source, phase-frequency node/gauge certificate, inverse-hierarchy role transfer, strict-core selector/QW-2191 source, role-bearing `L_total` dynamics, and blind frozen-kernel empirical confirmation.  Therefore ToE symptoms count as support, not finality.
+
+## P2637/S1587 phase-node metric-pushforward guard
+
+`P2637/S1587` exhausts simple phase/node repairs for the legacy integer node/gauge list versus the strict cosine zero lattice.  Identity, pure translation, and pure scale/reindexing do not certify the legacy nodes.  A constructive affine metric pushforward `r(d)=4/3*(d-1)` maps `2,5,8,11` to the strict zero lattice exactly, but this is a non-silent distance-coordinate theorem obligation, not a completed role-transfer certificate.  The strict kernel remains ToE-like and stable, but not a full kernel until this metric-pushforward source and the remaining beta, inverse-hierarchy, selector, `L_total`, and blind empirical blockers are discharged.
+
+## P2638/S1588 metric-pushforward source viability guard
+
+`P2638/S1588` audits the P2637 affine node repair as a physical metric candidate.  The map `r(d)=4/3*(d-1)` exactly sends the legacy node list `2,5,8,11` to strict phase zeros, but it fails as a global positive UV distance metric because it is negative for `0<d<1` and collapses `d=1` to strict distance zero.  On `d=1..12` it also does not restore the legacy inverse-hierarchy role: the pushed strict `|K(7)|/|K(1)|` remains below one.  Therefore the repair is a source-guarded mathematical candidate, not bridge completion, role-transfer, full-kernel finality, or ToE closure.
+
+## P2639/S1589 offset-stride metric-lift guard
+
+`P2639/S1589` widens the P2637/P2638 affine repair from the first zero-lattice block to offset/stride lifts.  The finite search finds UV-safe exact node lifts and even some lifts with `|K(7)|/|K(1)| > 1`, but only by choosing an unsourced zero-lattice offset/stride.  Therefore these lifts are sharper bridge candidates, not bridge completion: a topology/selector theorem must canonically choose the offset and stride before node/gauge role-transfer, beta normalization, inverse hierarchy, `QW-2191`, role-bearing `L_total`, or ToE closure can reopen.

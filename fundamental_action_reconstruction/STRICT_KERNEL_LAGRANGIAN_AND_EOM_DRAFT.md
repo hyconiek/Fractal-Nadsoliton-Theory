@@ -1620,3 +1620,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2636/S1586 full-kernel Ltotal decision guard
 
 `P2636/S1586` blocks the inference from stable/neural strict kernel to full role-bearing dynamics: until the blocker lattice is discharged by typed source theorems and blind empirical tests, the strict kernel remains a robust working kernel rather than a full `L_total`-ready ToE kernel.
+
+## P2637/S1587 phase-node Ltotal closure-path guard
+
+`P2637/S1587` supplies a constructive node/gauge repair candidate through a metric pushforward, but it does not re-enable role-bearing `L_total`: the pushforward must be derived from nadsoliton topology/selector dynamics before the legacy node/gauge role can transfer to strict dynamics.  Neural-universe language is therefore a test generator, not a closure theorem.
+
+## P2638/S1588 metric-pushforward Ltotal viability guard
+
+`P2638/S1588` prevents promoting the affine node repair into `L_total`: a role-bearing dynamics would first need a topology/selector-derived, domain-safe metric coordinate that keeps the strict damping real on the UV domain and preserves any transferred inverse-hierarchy role.  Neural self-learning language remains a test-generating analogy until that source and blind frozen-kernel empirical checks exist.
+
+## P2639/S1589 offset-stride lift Ltotal guard
+
+`P2639/S1589` does not re-enable `L_total`: offset/stride metric lifts are admissible mathematical candidates only until a strict topology/selector source chooses one and the full role-transfer matrix is rerun under that sourced lift.
