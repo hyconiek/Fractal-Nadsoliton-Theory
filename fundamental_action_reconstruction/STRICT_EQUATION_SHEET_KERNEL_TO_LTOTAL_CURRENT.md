@@ -2283,3 +2283,7 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2644/S1594 modified compressed inverse-hierarchy successor guard
 
 `P2644/S1594` supplies the modified successor theorem left open by P2643: relative to the legacy hyperbolic denominator, the strict `beta=1, eta=9/5` denominator has suppression factor `S(d)=(1+0.01d)/(1+d^(9/5))`, and `S` is strictly decreasing for `d>=1`.  Thus the unchanged distant-octave/inverse-hierarchy role is rejected, while a modified strict compression/locality-bias successor is admissible as descriptive semantics only.  This still does not export beta sourcehood, bridge completion, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
+
+## P2645/S1595 role-transfer matrix rerun guard
+
+`P2645/S1595` reruns the legacy-role transfer table after P2642-P2644.  The only current pass is the modified/compressed successor reading of the strict denominator as monotone compression/locality-bias.  The legacy integer node/gauge role and unchanged inverse-hierarchy transfer are rejected/demoted, while `alpha_geo` EW and `alpha_EM/beta_tors` roles remain blocked pending explicit completion-map, operator-source, and beta-source theorems.  Thus bridge completion, full role transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain closed.
