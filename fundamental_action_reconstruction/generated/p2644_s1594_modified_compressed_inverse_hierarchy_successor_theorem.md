@@ -6,10 +6,10 @@ Status: `P2644_MODIFIED_COMPRESSED_INVERSE_HIERARCHY_SUCCESSOR_THEOREM_NO_FULL_T
 
 This audit greps modified/compressed successor, inverse-hierarchy rejection, attention suppression, beta/source, and L_total/ToE guard content before adding the theorem.
 
-- `modified_compressed_successor_content`: 140 hits
-- `inverse_hierarchy_rejection_content`: 905 hits
+- `modified_compressed_successor_content`: 153 hits
+- `inverse_hierarchy_rejection_content`: 908 hits
 - `attention_suppression_content`: 456 hits
-- `source_and_ltotal_guard_content`: 14007 hits
+- `source_and_ltotal_guard_content`: 14018 hits
 
 ## Compression theorem
 
