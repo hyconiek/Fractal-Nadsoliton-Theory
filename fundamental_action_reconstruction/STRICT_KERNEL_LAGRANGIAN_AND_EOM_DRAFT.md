@@ -1640,3 +1640,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2641/S1591 Z12 successor/connection Ltotal guard
 
 `P2641/S1591` does not re-enable `L_total`: finite `Z_12/Aut(Z_12)` successor/connection analysis finds no strict or premise-tracked source that simultaneously exports the required zero-lattice origin and role-like stride for the P2639 lift.  A role-bearing term still needs a new origin-and-stride source theorem or a demotion of the legacy integer node/gauge role.
+
+## P2642/S1592 universal affine node-role Ltotal guard
+
+`P2642/S1592` does not re-enable role-bearing `L_total`: the universal affine family maps the legacy node list into strict zeros only as an unsourced coordinate repair.  No current strict or premise-tracked origin/stride source yields the required UV-safe inverse-hierarchy transfer, so a variational node/gauge term must wait for a new origin-source theorem or for formal demotion of that legacy role.
+
+## P2643/S1593 inverse-hierarchy beta-threshold Ltotal guard
+
+`P2643/S1593` does not re-enable role-bearing `L_total`: the unchanged inverse-hierarchy role is incompatible with strict `beta=1` on the audited threshold calculation.  Any variational term must therefore use a modified/compressed successor semantics, or wait for a new beta-source theorem below the threshold without retuning.
+
+## P2644/S1594 modified compressed inverse-hierarchy Ltotal guard
+
+`P2644/S1594` keeps `L_total` closed: the strict denominator can be read as a monotone compression/locality-bias successor, not as unchanged legacy inverse-hierarchy transfer.  A role-bearing variational term still requires a target-independent beta source and typed source semantics for the compression operator.
