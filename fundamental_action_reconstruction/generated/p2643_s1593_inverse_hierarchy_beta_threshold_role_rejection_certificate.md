@@ -6,11 +6,11 @@ Status: `P2643_INVERSE_HIERARCHY_BETA_THRESHOLD_ROLE_REJECTION_NO_FALSE_PASS`
 
 This audit greps inverse-hierarchy, beta-threshold/source, role-transfer/rejection, node-demotion reroute, and ToE guard content before adding the threshold certificate.
 
-- `inverse_hierarchy_role_content`: 915 hits
-- `beta_threshold_source_content`: 4533 hits
-- `role_rejection_transfer_content`: 5092 hits
-- `node_demotion_reroute_content`: 246 hits
-- `toe_guard_content`: 13970 hits
+- `inverse_hierarchy_role_content`: 919 hits
+- `beta_threshold_source_content`: 4558 hits
+- `role_rejection_transfer_content`: 5154 hits
+- `node_demotion_reroute_content`: 252 hits
+- `toe_guard_content`: 13986 hits
 
 ## Threshold theorem
 

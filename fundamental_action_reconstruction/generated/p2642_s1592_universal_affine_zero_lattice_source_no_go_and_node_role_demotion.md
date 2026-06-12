@@ -6,11 +6,11 @@ Status: `P2642_UNIVERSAL_AFFINE_ZERO_LATTICE_SOURCE_NO_GO_NODE_ROLE_DEMOTION_NO_
 
 This audit greps research contents before adding the proof: universal affine zero-lattice repairs, origin/stride source atoms, Z12/Aut and premise fixing, role demotion/transfer, and remaining ToE blockers.
 
-- `universal_affine_zero_lattice_content`: 376 hits
-- `source_atom_origin_stride_content`: 1761 hits
+- `universal_affine_zero_lattice_content`: 385 hits
+- `source_atom_origin_stride_content`: 1777 hits
 - `z12_aut_premise_content`: 2630 hits
-- `role_demotion_transfer_content`: 5040 hits
-- `remaining_professorial_path_content`: 13414 hits
+- `role_demotion_transfer_content`: 5123 hits
+- `remaining_professorial_path_content`: 13446 hits
 
 ## Universal affine theorem
 
