@@ -1660,3 +1660,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2646/S1596 frozen-kernel compression-signature Ltotal guard
 
 `P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.
+
+## P2647/S1597 frozen-kernel blind-holdout harness Ltotal guard
+
+`P2647/S1597` does not re-enable `L_total`: it supplies a blind-payload schema, discriminator evaluator, and fake-pass firewall for the modified compression successor, but a role-bearing variational term still requires actual blind data, frozen controls, a target-independent beta/source theorem, and the later role-transfer rerun.
+
+## P2648/S1598 frozen-kernel statistical margin Ltotal guard
+
+`P2648/S1598` does not re-enable `L_total`: it adds uncertainty-penalized pass/fail criteria for the frozen compression holdout, but role-bearing dynamics still require actual blind data, frozen controls, target-independent beta/source proof, selector/source discharge, and role-transfer rerun.
