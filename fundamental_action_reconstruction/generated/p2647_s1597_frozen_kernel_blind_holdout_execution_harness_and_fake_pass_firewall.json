@@ -1,0 +1,545 @@
+{
+  "blind_data_presence_audit": {
+    "generated_protocol_hits_count": 29,
+    "non_generated_candidate_hits": {
+      "count": 17,
+      "samples": [
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:100:            \"measured_tail_ratio|denominator/envelope tail ratio|tail-ratio/log-slope|log-tail slope|\"",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:101:            \"n_effective_bins|ratio_standard_error|slope_standard_error\"",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:144:    ratio_margin = row[\"midpoint_ratio_threshold\"] - measurement[\"measured_tail_ratio\"]",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:172:        \"measured_tail_ratio\": ratio,",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:174:        \"ratio_standard_error\": 0.0,",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:175:        \"slope_standard_error\": 0.0,",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:210:    no_retuning = candidate.get(\"no_retuning_attestation\") is True",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:249:        \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation|\"",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:250:        \"ratio_standard_error|slope_standard_error\"",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:253:        [\"rg\", \"-n\", \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation\", \"fundamental_action_reconstruction/generated\", \"-g\", \"*.json\", \"-g\", \"*.md\"],",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:38:    \"dataset_blind_id_hash\",",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:40:    \"phase_mask_policy_hash\",",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:43:    \"no_retuning_attestation\",",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:49:    \"measured_tail_ratio\",",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:51:    \"ratio_standard_error\",",
+        "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:52:    \"slope_standard_error\",",
+        "./fundamental_action_reconstruction/test_p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:30:        self.assertIn(\"measured_tail_ratio\", schema[\"measurement_keys\"])"
+      ]
+    },
+    "real_blind_holdout_payload_found": false,
+    "reason": "No external blinded measurement payload is supplied to this script; generated protocol text and synthetic fixtures are not data."
+  },
+  "closure_decision": {
+    "decision": "EXECUTION_HARNESS_READY_BUT_BLIND_HOLDOUT_NOT_EXECUTED__NO_EMPIRICAL_CONFIRMATION_NO_SOURCE_EXPORT",
+    "full_kernel_now": false,
+    "harness_firewall_passes": true,
+    "next_honest_step": "Run P2647 on a real blinded payload matching the locked schema, or build the target-independent beta-source theorem. Do not treat the synthetic strict fixture as data and do not reopen L_total until blind data, controls, beta source, and selector/source blockers are all discharged.",
+    "professorial_closure_path": [
+      "Obtain or export a real blinded denominator/envelope measurement payload with all P2647 schema keys and the exact P2646 payload hash.",
+      "Run the harness once on that payload with no beta/eta/phase retuning and with frozen controls recorded before unblinding.",
+      "If any control baseline fitted without holdout refit removes the frozen-kernel advantage, mark the empirical compression signature failed, not merely inconclusive.",
+      "If the holdout passes, rerun only the modified/compressed successor row of the role-transfer matrix; do not resurrect unchanged inverse-hierarchy.",
+      "Keep beta-source and QW-2191/source work independent: empirical success can prioritize those proofs but cannot replace them."
+    ],
+    "professorial_verdict": "P2647 is the honest post-preregistration move: it turns P2646 from a static threshold table into an executable blind-holdout harness, validates the required schema, and proves by synthetic controls that strict frozen predictions would pass while legacy and exact-midpoint fixtures fail. Because no real blinded measurement payload is loaded, this remains readiness/fake-pass-firewall evidence only, not empirical confirmation.",
+    "real_blind_holdout_executed": false,
+    "toe_closure_now": false
+  },
+  "empty_payload_validation_witness": {
+    "admissible_for_execution": false,
+    "all_preregistered_pairs_present": false,
+    "control_errors": [],
+    "controls_do_not_remove_frozen_kernel_advantage": false,
+    "controls_frozen_without_holdout_refit": false,
+    "measurement_errors": [],
+    "missing_top_level_keys": [
+      "control_baselines",
+      "dataset_blind_id_hash",
+      "measurements",
+      "no_retuning_attestation",
+      "p2646_payload_sha256",
+      "phase_mask_policy_hash",
+      "preprocessing_commit_hash"
+    ],
+    "no_retuning_attested": false,
+    "p2646_hash_matches": false,
+    "schema_ready": false
+  },
+  "fake_pass_firewall": {
+    "firewall_passes": true,
+    "free_per_pair_fit_warning": "A per-pair spline/power-law/exponential fitted on the holdout has at least one effective degree of freedom per audited pair and can mimic thresholds; therefore such a control is not admissible evidence and is explicitly blocked by the schema.",
+    "legacy_fixture_expected_fail": {
+      "all_pairs_pass": false,
+      "minimum_ratio_margin": -0.4427253596362949,
+      "minimum_slope_margin": -0.8238684697811394,
+      "model": "legacy_fixture",
+      "pair_results": [
+        {
+          "combined_pass": false,
+          "far": 7,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": -0.4427253596362949,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": -0.7146928020170573,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 12,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": -0.4396067442209563,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": -0.7420111172589389,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 8,
+          "near": 2,
+          "ratio_margin_to_locked_threshold": -0.4203739897244132,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": -0.796774805266773,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 9,
+          "near": 3,
+          "ratio_margin_to_locked_threshold": -0.3951715603775898,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": -0.8238684697811394,
+          "slope_pass": false
+        }
+      ]
+    },
+    "midpoint_fixture_expected_fail_by_strict_inequality": {
+      "all_pairs_pass": false,
+      "minimum_ratio_margin": 0.0,
+      "minimum_slope_margin": 0.0,
+      "model": "midpoint_fixture",
+      "pair_results": [
+        {
+          "combined_pass": false,
+          "far": 7,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": 0.0,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": 0.0,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 12,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": 0.0,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": 0.0,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 8,
+          "near": 2,
+          "ratio_margin_to_locked_threshold": 0.0,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": 0.0,
+          "slope_pass": false
+        },
+        {
+          "combined_pass": false,
+          "far": 9,
+          "near": 3,
+          "ratio_margin_to_locked_threshold": 0.0,
+          "ratio_pass": false,
+          "slope_margin_to_locked_threshold": 0.0,
+          "slope_pass": false
+        }
+      ]
+    },
+    "purpose": "unit-test the locked discriminator without promoting synthetic fixtures to empirical evidence",
+    "strict_fixture_expected_pass": {
+      "all_pairs_pass": true,
+      "minimum_ratio_margin": 0.3951715603775898,
+      "minimum_slope_margin": 0.7146928020170574,
+      "model": "strict_fixture",
+      "pair_results": [
+        {
+          "combined_pass": true,
+          "far": 7,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": 0.44272535963629484,
+          "ratio_pass": true,
+          "slope_margin_to_locked_threshold": 0.7146928020170574,
+          "slope_pass": true
+        },
+        {
+          "combined_pass": true,
+          "far": 12,
+          "near": 1,
+          "ratio_margin_to_locked_threshold": 0.4396067442209563,
+          "ratio_pass": true,
+          "slope_margin_to_locked_threshold": 0.7420111172589389,
+          "slope_pass": true
+        },
+        {
+          "combined_pass": true,
+          "far": 8,
+          "near": 2,
+          "ratio_margin_to_locked_threshold": 0.42037398972441326,
+          "ratio_pass": true,
+          "slope_margin_to_locked_threshold": 0.796774805266773,
+          "slope_pass": true
+        },
+        {
+          "combined_pass": true,
+          "far": 9,
+          "near": 3,
+          "ratio_margin_to_locked_threshold": 0.3951715603775898,
+          "ratio_pass": true,
+          "slope_margin_to_locked_threshold": 0.8238684697811395,
+          "slope_pass": true
+        }
+      ]
+    }
+  },
+  "latest_commit_audit": [
+    {
+      "files": [],
+      "sha": "ca9ffb71",
+      "subject": "Merge pull request #164 from hyconiek/codex/add-research-content-auditing-etjex4"
+    },
+    {
+      "files": [],
+      "sha": "713599c9",
+      "subject": "Merge branch 'main' into codex/add-research-content-auditing-etjex4"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.json",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.md",
+        "fundamental_action_reconstruction/generated/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.json",
+        "fundamental_action_reconstruction/generated/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.md",
+        "fundamental_action_reconstruction/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py",
+        "fundamental_action_reconstruction/test_p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/test_p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py"
+      ],
+      "sha": "81adce2d",
+      "subject": "Add P2646 frozen compression preregistration"
+    },
+    {
+      "files": [],
+      "sha": "c086ce5c",
+      "subject": "Merge pull request #163 from hyconiek/codex/add-research-content-auditing"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.json",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.md",
+        "fundamental_action_reconstruction/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/test_p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py"
+      ],
+      "sha": "fc27ccd3",
+      "subject": "Add P2645 role transfer matrix rerun"
+    },
+    {
+      "files": [],
+      "sha": "1e4e4a37",
+      "subject": "Merge pull request #162 from hyconiek/codex/add-p2641-z12-successor-connection-audit"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.py",
+        "fundamental_action_reconstruction/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py",
+        "fundamental_action_reconstruction/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.py",
+        "fundamental_action_reconstruction/test_p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.py",
+        "fundamental_action_reconstruction/test_p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py",
+        "fundamental_action_reconstruction/test_p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.py"
+      ],
+      "sha": "0868936c",
+      "subject": "Add P2644 compressed inverse hierarchy successor audit"
+    },
+    {
+      "files": [],
+      "sha": "22a3ce72",
+      "subject": "Merge pull request #161 from hyconiek/codex/audit-latest-research-commits-for-updates"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.json",
+        "fundamental_action_reconstruction/generated/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.md",
+        "fundamental_action_reconstruction/generated/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.json",
+        "fundamental_action_reconstruction/generated/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.md",
+        "fundamental_action_reconstruction/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.py",
+        "fundamental_action_reconstruction/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.py",
+        "fundamental_action_reconstruction/test_p2640_s1590_offset_stride_topology_selector_source_no_go_audit.py",
+        "fundamental_action_reconstruction/test_p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.py"
+      ],
+      "sha": "3dbb191f",
+      "subject": "Add P2641 Z12 successor connection no-go audit"
+    },
+    {
+      "files": [],
+      "sha": "3ca84b43",
+      "subject": "Merge pull request #160 from hyconiek/codex/add-current-toe-blocker-lattice-audit"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.json",
+        "fundamental_action_reconstruction/generated/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.md",
+        "fundamental_action_reconstruction/generated/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.json",
+        "fundamental_action_reconstruction/generated/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.md",
+        "fundamental_action_reconstruction/generated/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.json",
+        "fundamental_action_reconstruction/generated/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.md",
+        "fundamental_action_reconstruction/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.py",
+        "fundamental_action_reconstruction/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py",
+        "fundamental_action_reconstruction/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.py",
+        "fundamental_action_reconstruction/test_p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.py",
+        "fundamental_action_reconstruction/test_p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py",
+        "fundamental_action_reconstruction/test_p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.py"
+      ],
+      "sha": "c2c1374a",
+      "subject": "Add P2639 offset stride metric lift audit"
+    },
+    {
+      "files": [],
+      "sha": "57591106",
+      "subject": "Merge pull request #159 from hyconiek/codex/add-diagram-grounded-strict-kernel-audit"
+    }
+  ],
+  "negative_export_flags": {
+    "beta_source_exported": false,
+    "blind_holdout_data_loaded": false,
+    "control_baseline_defeated_by_data": false,
+    "empirical_confirmation_claimed": false,
+    "kernel_retuning_allowed": false,
+    "q_w_2191_discharged": false,
+    "role_bearing_ltotal_reenabled": false,
+    "role_transfer_revalidated": false,
+    "synthetic_fixture_promoted_to_evidence": false,
+    "toe_closure_claimed": false
+  },
+  "p2646_payload_sha256": "66bffb8631a6e76fec782b9b14a3813144a3ff7824f30f0600823dfc18efd55b",
+  "payload_sha256": "eb0286ae8f7f7151afee73d44fd081610b7c2274b42099bf129e960c32421a44",
+  "required_blind_payload_schema": {
+    "control_baseline_keys": [
+      "frozen_before_holdout",
+      "name",
+      "passes_same_thresholds",
+      "uses_holdout_refit"
+    ],
+    "measurement_keys": [
+      "far",
+      "measured_log_tail_slope",
+      "measured_tail_ratio",
+      "n_effective_bins",
+      "near",
+      "ratio_standard_error",
+      "slope_standard_error"
+    ],
+    "top_level_keys": [
+      "control_baselines",
+      "dataset_blind_id_hash",
+      "measurements",
+      "no_retuning_attestation",
+      "p2646_payload_sha256",
+      "phase_mask_policy_hash",
+      "preprocessing_commit_hash"
+    ]
+  },
+  "semantic_rg_antiduplication_audit": {
+    "mode": "content-first semantic audit for blind-holdout execution harness and fake-pass firewall, not packet-name search",
+    "patterns": {
+      "blind_holdout_execution_content": {
+        "count": 21,
+        "samples": [
+          "./QW-405 TO QW-409.py:452:        phase_mask = rho > rho_crit  # True = massive phase",
+          "./QW-405 TO QW-409.py:466:            phase_history.append(phase_mask.copy())",
+          "./QW_1906_EXTERNAL_DATA_COLLECTION_SPEC.py:139:        f\"- Keep thresholds fixed from QW-1850 (no retuning)\",",
+          "./RELEASE_4_8.md:71:This package is prepared for true external blind confirmatory execution with no retuning.",
+          "./external_confirmatory_v2/COLLECTION_SPEC_QW1906.md:7:- Keep thresholds fixed from QW-1850 (no retuning)",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1662:`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.",
+          "./fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:206:    phase_mask = mask_for_atoms(atoms, phase_req)",
+          "./fundamental_action_reconstruction/p2419_s1369_chi11_phase_selector_coupling_cut_certificate.py:230:        \"phase_minimal_mask\": phase_mask,",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:223:            \"Do not add more node/offset/stride or amplitude rescues. The next honest step is either an actual blind holdout execution of the P2646 tail-ratio/log-slope compression signature, \"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:325:        \"`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.\\n\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:114:        \"mode\": \"content-first semantic audit for blind-holdout execution harness and fake-pass firewall, not packet-name search\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:249:        \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation|\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:253:        [\"rg\", \"-n\", \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation\", \"fundamental_action_reconstruction/generated\", \"-g\", \"*.json\", \"-g\", \"*.md\"],",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:298:        \"# P2647/S1597 frozen-kernel blind-holdout execution harness and fake-pass firewall\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:304:        \"This packet greps for blind holdout execution, measured tail-ratio/log-slope schema, fake-pass/control-baseline language, and source nonclosure guardrails before adding the harness.\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:38:    \"dataset_blind_id_hash\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:39:    \"preprocessing_commit_hash\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:40:    \"phase_mask_policy_hash\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:96:            \"blind holdout execution|holdout execution|dataset_blind_id|blind_id|no-retuning|no retuning|\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:97:            \"preprocessing_commit|phase mask policy|phase_mask\"",
+          "./material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2004_TEX_VS_CURRENT_NADSOLITON_STATE_EN_PL.md:83:- no retuning of frozen package."
+        ]
+      },
+      "fake_pass_or_control_firewall_content": {
+        "count": 30,
+        "samples": [
+          "./fundamental_action_reconstruction/N786_CURRENT_STRICT_T244_PAIR12_SEED_SLOT_COORDINATE_ENTRY_POINT_SUBSUBSUBSUBSUBINTERFACE_ACTUAL_REALIZATION_ATTEMPT_EXACT_FAILURE_LOCALIZATION_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:45:   still without fake pass and still without premature naming of a lower",
+          "./fundamental_action_reconstruction/N790_CURRENT_STRICT_T248_PAIR12_ENTRY_POINT_EXACT_LOWER_ATTEMPT_LEVEL_FAILURE_BOUNDARY_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of a still-lower object-class.",
+          "./fundamental_action_reconstruction/N792_CURRENT_STRICT_T250_PAIR12_ENTRY_POINT_EXACT_LOWER_ATTEMPT_LEVEL_FAILURE_BOUNDARY_ACTUAL_REALIZATION_ATTEMPT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N794_CURRENT_STRICT_T252_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of a further-lower",
+          "./fundamental_action_reconstruction/N796_CURRENT_STRICT_T254_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N798_CURRENT_STRICT_T256_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of a yet-further-lower",
+          "./fundamental_action_reconstruction/N800_CURRENT_STRICT_T258_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_YET_FURTHER_LOWER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N802_CURRENT_STRICT_T260_PAIR12_ENTRY_POINT_EXACT_YET_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of a still-deeper",
+          "./fundamental_action_reconstruction/N804_CURRENT_STRICT_T262_PAIR12_ENTRY_POINT_EXACT_YET_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_STILL_DEEPER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N805_CURRENT_STRICT_T263_PAIR12_ENTRY_POINT_EXACT_STILL_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_NONEXPORT_AUDIT_THEOREM.md:44:5. still without fake pass and still without premature naming of an",
+          "./fundamental_action_reconstruction/N806_CURRENT_STRICT_T264_PAIR12_ENTRY_POINT_EXACT_STILL_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of an even-deeper",
+          "./fundamental_action_reconstruction/N808_CURRENT_STRICT_T266_PAIR12_ENTRY_POINT_EXACT_STILL_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_EVEN_DEEPER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N809_CURRENT_STRICT_T267_PAIR12_ENTRY_POINT_EXACT_EVEN_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_NONEXPORT_AUDIT_THEOREM.md:44:5. still without fake pass and still without premature naming of a",
+          "./fundamental_action_reconstruction/N810_CURRENT_STRICT_T268_PAIR12_ENTRY_POINT_EXACT_EVEN_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:46:   fake pass and still without premature naming of a post-even-deeper",
+          "./fundamental_action_reconstruction/N812_CURRENT_STRICT_T270_PAIR12_ENTRY_POINT_EXACT_EVEN_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_POST_EVEN_DEEPER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md:43:   route, still without fake pass.",
+          "./fundamental_action_reconstruction/N813_CURRENT_STRICT_T271_PAIR12_ENTRY_POINT_EXACT_POST_EVEN_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_NONEXPORT_AUDIT_THEOREM.md:44:5. still without fake pass and still without premature naming of a",
+          "./fundamental_action_reconstruction/N814_CURRENT_STRICT_T272_PAIR12_ENTRY_POINT_EXACT_POST_EVEN_DEEPER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:45:   fake pass and still without premature naming of a next object-class.",
+          "./fundamental_action_reconstruction/N815_CURRENT_STRICT_QW2191_PAIR12_ENTRY_POINT_SAME_LANE_EXHAUSTION_AND_NONCYCLIC_PIVOT_AUDIT_THEOREM.md:46:   still without fake pass.",
+          "./fundamental_action_reconstruction/N817_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_NAD12_SIGMA_SHANNON_WEIGHTED_PAIR_REALIZATION_SIDE_PROVIDER_SUPPORT_WITNESS_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md:33:   without fake pass.",
+          "./fundamental_action_reconstruction/p2635_s1585_toe_neural_universe_empirical_signature_audit.py:283:            \"pass_condition\": \"eta and phase constraints survive blind CMB/LSS holdouts better than matched exponential or arbitrary spline baselines.\",",
+          "./fundamental_action_reconstruction/p2635_s1585_toe_neural_universe_empirical_signature_audit.py:311:            \"pass_condition\": \"Frozen-kernel performance stays competitive across sectors with uncertainty budgets and adversarial controls.\",",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:179:            \"and the measured log-tail slope must lie above the preregistered midpoint threshold for the audited pairs, with no kernel retuning.\"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:183:            \"or if a matched exponential/spline/control baseline removes the frozen-kernel advantage.\"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:216:            \"Run the blind frozen-kernel compression-signature holdout exactly as locked here, including phase masks and control baselines.\",",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:81:            \"kernel retune|without retuning|adversarial controls\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:104:            \"fake pass|synthetic fixture|control baseline|matched exponential|matched spline|holdout refit|\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:105:            \"adversarial controls|kernel retuning\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:235:        \"purpose\": \"unit-test the locked discriminator without promoting synthetic fixtures to empirical evidence\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:264:        \"reason\": \"No external blinded measurement payload is supplied to this script; generated protocol text and synthetic fixtures are not data.\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:279:            \"If any control baseline fitted without holdout refit removes the frozen-kernel advantage, mark the empirical compression signature failed, not merely inconclusive.\","
+        ]
+      },
+      "source_nonclosure_content": {
+        "count": 13848,
+        "samples": [
+          "./AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+          "./AGENTS.md:31:- Artifact-sensitive upstream classes may be reopened when the task is explicitly to build or audit the `legacy -> strict` completion bridge, its missing strict-side characteristics, or its role-transfer theorem.",
+          "./AGENTS.md:35:- Highest theoretical priority is now the `legacy -> strict` completion bridge plus the subsequent role-transfer audit.",
+          "./AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "./AGENTS.md:49:_Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel; role-transfer audit required after bridge completion)._",
+          "./AGENT_GUARDRAIL_ACKNOWLEDGEMENT.md:9:- Selector and noncyclic (`QW-2191`, `QW-2381/2382/2383`) constraints.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2455:## 84) QW-2191: theorem-level obstruction of full mode-index uniqueness (`L3/L18/L19`) - `STRICT_OBSTRUCTION_PROVEN`",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2457:Krok `QW-2191` formalizuje granice domkniecia z `QW-2190`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2463:(co jest jawnie raportowane numerycznie w `QW-2191`).",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2491:Po udowodnieniu granicy axiom-free (`QW-2191`) wprowadzono jawny postulat selekcji:",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2531:- bez tego aksjomatu obowiazuje theorem-level obstruction z `QW-2191`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2628:Krok `QW-2195` formalizuje stan po `QW-2125` i `QW-2191..QW-2193`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2634:- `QW-2191`: theorem-level obstruction axiom-free (degeneracje i rodzina `O(2)`).",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2681:- `QW-2191`: axiom-free obstruction theorem,",
+          "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:377:Uzasadnienie: `QW-2191` przechodzi `MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE_PASS_STRICT` (`9/10`) i formalizuje granice domkniecia unikalnosci z samego kernela: obecne frozen `K_total` ma wielokrotne zdegenerowane podprzestrzenie wlasne (pary `lambda_i=lambda_{i+1}`), co indukuje ciagla rodzine rotacji `O(2)` zachowujacych inwariancje podprzestrzeni modowych oraz embedded Lie-closure (`SU(3)`, `SU(2)`) przy residualach maszynowych. To dowodzi, ze pelna fizyczna unikalnosc przypisania indeksow modow nie jest wyprowadzalna z aktualnych aksjomatow bez dodatkowego jawnego postulatu selekcji/symmetry-breaking.",
+          "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:404:- spiecie granic: `QW-2191` (obstruction axiom-free), `QW-2192` (axiom-augmented closure), `QW-2193` (robustness rodziny).",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:109:**Strict status:** repo nie eksportuje strict‑core „time‑arrow selektora” jako składnika rozładowującego `QW-2191`",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:143:degeneracjach (tam, gdzie standardowo wchodzi „measurement basis”) nadal zahacza o `QW-2191`.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:165:    Q[\"QW-2191: ciągła rodzina O(2)\\n(unikatowość otwarta)\"]",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:178:Aktualny najostrzejszy strict frontier dla `QW-2191` na `pair1` jest dziś taki:",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:52:  (`QW-2191`) i nie wolno jej „zagadać”.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:6:- Ten plik **nie** ogłasza: strict‑core selektora, rozładowania `QW-2191`, strict theta‑exportu ani domknięcia ToE.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:95:przy degeneracji (`QW-2191` pozostaje otwarte). Dlatego wszelkie „kolaps jest wyprowadzony” musi być dziś oznaczone",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10011:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10046:   - `P37_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10070:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10106:   - `P38_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10130:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10167:   - `P39_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10191:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10230:   - `P40_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10286:   - `P41_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10337:   - `P42_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10388:   - `P43_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10437:   - `P44_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10489:   - `P45_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10540:   - `P46_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5168:   - `QW-2121`, `QW-2126`, `QW-2127`, `QW-2189`, `QW-2190`, `QW-2191`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5191:   - uzyto tylko `strict-admissible internal references`: `QW-2126`, `QW-2127`, `QW-2184`, `QW-2189`, `QW-2190`, `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5199:   - pelna fizyczna unikalnosc representation map jest zablokowana przez `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5310:   - full ToE closure.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5326:   - rozpoczęto drugi cykl od najwęższego blockera `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5383:   - strict-admissible core: `QW-2191`, `QW-2206`, `A5`, `A6`, `A10`, `B1`, `B2`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5387:   - obstrukcja `O(2)` jest jawna (`QW-2191`),",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5472:   - strict-admissible support: `B4`, `B5`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5500:   - strict-admissible support: `QW-2190`, `QW-2191`, `A6`, `B6`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5503:   - nie przeczy obstruction theorem `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5556:   - wejscie: `B6`, `B7`, `B8`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5567:   - discharge `QW-2191`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5584:   - strict-admissible support: `QW-2191`, `QW-2192`, `QW-2193`, `B6`, `C1`, `A10`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5614:   - strict-admissible support: `QW-2190`, `QW-2191`, `C2`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5619:   - ale `QW-2191` blokuje podniesienie tego kandydata do pelnego physical orientation datum.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5640:   - strict-admissible support: `QW-2190`, `QW-2191`, `QW-2192`, `QW-2193`, `A3`, `A7`, `C2`, `C3`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5670:   - strict-admissible support: `A3`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C4`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5699:   - strict-admissible support: `A3`, `A4`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C5`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5730:   - strict-admissible support: `QW-2190`, `QW-2191`, `A3`, `C3`, `C6`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6525:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6554:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6583:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6610:   - brak claimu, ze `QW-2191` jest rozladowane,"
+        ]
+      },
+      "tail_ratio_measurement_schema_content": {
+        "count": 27,
+        "samples": [
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2293:`P2646/S1596` turns the P2644 compression/locality-bias successor and P2645 role-matrix route into a locked empirical discriminator rather than a new fit: phase/amplitude-invariant denominator tail ratios and log-tail slopes are preregistered for audited pairs such as `(1,7)` and `(1,12)`, with strict `beta=1, eta=9/5` predictions separated far below the legacy `beta_tors=0.01` hyperbolic tail.  This is only a blind-holdout interface; it exports no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2297:`P2647/S1597` converts the `P2646/S1596` frozen compression preregistration into an executable schema/harness and fake-pass firewall.  Synthetic strict fixtures pass the locked tail-ratio/log-slope inequalities while legacy and midpoint fixtures fail, but no real blinded measurement payload is loaded.  Therefore this exports harness readiness only: no empirical confirmation, no beta source, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1662:`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:176:        \"observable_family\": \"phase/amplitude-invariant denominator tail ratios R(a,b)=A(b)/A(a) and log-tail slopes sigma(a,b)=-log R/log(b/a)\",",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:178:            \"On blind holdout data, the measured denominator/envelope tail ratio must lie below the preregistered midpoint threshold \"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:179:            \"and the measured log-tail slope must lie above the preregistered midpoint threshold for the audited pairs, with no kernel retuning.\"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:212:            \"so the next empirical check is no longer a vague analogy: it is a locked tail-ratio/log-slope discriminator. But this is a preregistration certificate only; \"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:223:            \"Do not add more node/offset/stride or amplitude rescues. The next honest step is either an actual blind holdout execution of the P2646 tail-ratio/log-slope compression signature, \"",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:319:        \"`P2646/S1596` turns the P2644 compression/locality-bias successor and P2645 role-matrix route into a locked empirical discriminator rather than a new fit: phase/amplitude-invariant denominator tail ratios and log-tail slopes are preregistered for audited pairs such as `(1,7)` and `(1,12)`, with strict `beta=1, eta=9/5` predictions separated far below the legacy `beta_tors=0.01` hyperbolic tail.  This is only a blind-holdout interface; it exports no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.\\n\",",
+          "./fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py:325:        \"`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.\\n\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:100:            \"measured_tail_ratio|denominator/envelope tail ratio|tail-ratio/log-slope|log-tail slope|\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:101:            \"n_effective_bins|ratio_standard_error|slope_standard_error\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:144:    ratio_margin = row[\"midpoint_ratio_threshold\"] - measurement[\"measured_tail_ratio\"]",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:172:        \"measured_tail_ratio\": ratio,",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:174:        \"ratio_standard_error\": 0.0,",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:175:        \"slope_standard_error\": 0.0,",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:176:        \"n_effective_bins\": math.inf,",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:249:        \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation|\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:250:        \"ratio_standard_error|slope_standard_error\"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:253:        [\"rg\", \"-n\", \"dataset_blind_id_hash|measured_tail_ratio|phase_mask_policy_hash|no_retuning_attestation\", \"fundamental_action_reconstruction/generated\", \"-g\", \"*.json\", \"-g\", \"*.md\"],",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:304:        \"This packet greps for blind holdout execution, measured tail-ratio/log-slope schema, fake-pass/control-baseline language, and source nonclosure guardrails before adding the harness.\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:393:        \"Synthetic strict fixtures pass the locked tail-ratio/log-slope inequalities while legacy and midpoint fixtures fail, but no real blinded measurement payload is loaded.  \"",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:49:    \"measured_tail_ratio\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:51:    \"ratio_standard_error\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:52:    \"slope_standard_error\",",
+          "./fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:53:    \"n_effective_bins\",",
+          "./fundamental_action_reconstruction/test_p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py:30:        self.assertIn(\"measured_tail_ratio\", schema[\"measurement_keys\"])"
+        ]
+      }
+    },
+    "tool": "rg"
+  },
+  "source_hashes": {
+    "P2646_PREREGISTRATION": "a154b44e780f17efcfa4414d4b42958dcc491286b2978f34ec448355496f73b7",
+    "STRICT_EQUATION_SHEET": "52366ef622f9a655e89dfede1b2917b3021a381137d9271866ae57f947c66003",
+    "STRICT_LAGRANGIAN_DRAFT": "7d9e44d50761000bea95f13f3c6abf006886d0c04b929c8eed80e7efb670f329"
+  },
+  "status": "P2647_EXECUTION_HARNESS_READY_BUT_BLIND_HOLDOUT_NOT_EXECUTED_NO_FALSE_PASS"
+}
