@@ -1632,3 +1632,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2639/S1589 offset-stride lift Ltotal guard
 
 `P2639/S1589` does not re-enable `L_total`: offset/stride metric lifts are admissible mathematical candidates only until a strict topology/selector source chooses one and the full role-transfer matrix is rerun under that sourced lift.
+
+## P2640/S1590 offset-stride topology/selector source Ltotal guard
+
+`P2640/S1590` does not re-enable `L_total`: current topology/selector carriers do not canonically choose the offset/stride metric lift required to transfer the legacy node/gauge role into strict dynamics.  A role-bearing term would first need a quotient-safe successor/connection/transport theorem that exports that origin and stride without hidden selector input.
+
+## P2641/S1591 Z12 successor/connection Ltotal guard
+
+`P2641/S1591` does not re-enable `L_total`: finite `Z_12/Aut(Z_12)` successor/connection analysis finds no strict or premise-tracked source that simultaneously exports the required zero-lattice origin and role-like stride for the P2639 lift.  A role-bearing term still needs a new origin-and-stride source theorem or a demotion of the legacy integer node/gauge role.
