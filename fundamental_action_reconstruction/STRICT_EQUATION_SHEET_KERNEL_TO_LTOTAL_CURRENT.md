@@ -2271,3 +2271,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2641/S1591 Z12 quotient-safe successor/connection no-go guard
 
 `P2641/S1591` upgrades the P2640 source search into a finite `Z_12/Aut(Z_12)` calculation.  In strict Aut-invariant scope, only origins `0,6` and nonzero translation stride `6` survive; the UV-safe exact invariant lift does not preserve the inverse-hierarchy proxy.  The premise-based `T164/N523` fixing datum is genuine directed support, but it fixes a `+1` generator convention rather than the P2639 zero-lattice origin `k0` and role-like stride `3` or `6`.  Therefore no quotient-safe successor/connection currently promotes the offset/stride lift to bridge completion; strict full-kernel finality, role-transfer, beta source, inverse hierarchy, `QW-2191`, role-bearing `L_total`, and ToE closure remain closed.
+
+## P2642/S1592 universal affine zero-lattice no-go guard
+
+`P2642/S1592` algebraically exhausts exact affine repairs of legacy integer nodes into the strict zero lattice: every such repair is `r_{k0,s}(d)=(4s/3)d+(4/3+4k0-8s/3)`.  Strict `Aut(Z12)` sources and N523-style premise generator support, while keeping the origin canonical, do not produce a UV-safe inverse-hierarchy node repair.  Therefore the legacy integer node/gauge role remains demoted unless a new zero-lattice origin source atom is proved; bridge completion, role transfer, beta source, inverse hierarchy, `QW-2191`, and ToE closure remain closed.
+
+## P2643/S1593 inverse-hierarchy beta-threshold guard
+
+`P2643/S1593` proves a beta-threshold obstruction for unchanged inverse-hierarchy transfer after P2642 node-role demotion.  For the audited phase channel and `eta=9/5`, `|K(7)|/|K(1)|>1` holds only for `beta < beta_crit ≈ 0.0927`; strict `beta=1` and the current micro beta median lie above that threshold.  Therefore the legacy distant-octave / inverse-hierarchy role is rejected as an unchanged strict transfer unless a new target-independent beta-source theorem changes the strict damping semantics; bridge completion, role transfer, `L_total`, `QW-2191`, and ToE closure remain closed.
+
+## P2644/S1594 modified compressed inverse-hierarchy successor guard
+
+`P2644/S1594` supplies the modified successor theorem left open by P2643: relative to the legacy hyperbolic denominator, the strict `beta=1, eta=9/5` denominator has suppression factor `S(d)=(1+0.01d)/(1+d^(9/5))`, and `S` is strictly decreasing for `d>=1`.  Thus the unchanged distant-octave/inverse-hierarchy role is rejected, while a modified strict compression/locality-bias successor is admissible as descriptive semantics only.  This still does not export beta sourcehood, bridge completion, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.
