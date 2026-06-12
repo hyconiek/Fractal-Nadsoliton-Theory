@@ -1656,3 +1656,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2645/S1595 role-transfer matrix Ltotal guard
 
 `P2645/S1595` prevents promoting the post-P2644 compression semantics into a full variational source.  The matrix has only a descriptive modified-successor pass and still lacks target-independent beta sourcehood, alpha-role transfer, completion-map closure, and a `QW-2191` selector source; `L_total` remains non-role-bearing.
+
+## P2646/S1596 frozen-kernel compression-signature Ltotal guard
+
+`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.

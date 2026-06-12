@@ -2287,3 +2287,7 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2645/S1595 role-transfer matrix rerun guard
 
 `P2645/S1595` reruns the legacy-role transfer table after P2642-P2644.  The only current pass is the modified/compressed successor reading of the strict denominator as monotone compression/locality-bias.  The legacy integer node/gauge role and unchanged inverse-hierarchy transfer are rejected/demoted, while `alpha_geo` EW and `alpha_EM/beta_tors` roles remain blocked pending explicit completion-map, operator-source, and beta-source theorems.  Thus bridge completion, full role transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain closed.
+
+## P2646/S1596 frozen-kernel compression-signature preregistration guard
+
+`P2646/S1596` turns the P2644 compression/locality-bias successor and P2645 role-matrix route into a locked empirical discriminator rather than a new fit: phase/amplitude-invariant denominator tail ratios and log-tail slopes are preregistered for audited pairs such as `(1,7)` and `(1,12)`, with strict `beta=1, eta=9/5` predictions separated far below the legacy `beta_tors=0.01` hyperbolic tail.  This is only a blind-holdout interface; it exports no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.
