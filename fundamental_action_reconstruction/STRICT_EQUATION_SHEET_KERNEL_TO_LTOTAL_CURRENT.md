@@ -2483,3 +2483,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2694/S1644 fresh broad state-map selection after P2680 closure
 
 `P2694/S1644` rebuilds the frontier after P2693.  Generic bridge-source replay, the attacked `m2_psi4` target, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/tau replay, role transfer, `L_total`, and ToE closure remain closed.  The selected finite proof-grade next lane is the residual direct g-family zero-witness/no-go matrix for `g4`, `g6`, and `gY` `c1s1` shift defects named by F3, explicitly excluding `m2_psi4` replay and bridge/source imports.
+
+## P2695/S1645 residual direct g-family c1s1 zero-witness matrix
+
+`P2695/S1645` executes the P2694-selected `g4/g6/gY` direct `c1s1` matrix.  `g4` and `g6` are route-scoped zero witnesses via `R82/P629`; `gY` is an exported-instance zero witness via `R83/P630` under the explicit N474 vacuum-EoM Yukawa-elimination premise.  This closes only the selected g-family targets and does not close the full route, strict core, selector, bridge/source, `L_total`, or ToE.  The remaining finite direct-route blockers are the declared `pair1 c1c1` and `pair1 s1s1` zero equations plus the still-open `QW-2191` boundary.
+
+## P2696/S1646 pair1 c1c1/s1s1 zero-equation carrier no-go matrix
+
+`P2696/S1646` executes the remaining direct-route `pair1 c1c1/s1s1` zero-equation audit.  `P477/N520` show that the current strict-derived N477 value instance violates both rows; `P479/N522` add a finite no-solution scan over the fixed-magnitude reference family; `P631` already freezes direct-formal residual cancellation on the current strict branch.  Therefore the targeted `c1c1/s1s1` zero witnesses are bounded no-go on current artifacts, without `QW-2191` discharge, selector import, bridge-source replay, role transfer, `L_total`, or ToE closure.
+
+## P2697/S1647 post-direct-route no-new-live-frontier reconciliation
+
+`P2697/S1647` reruns the broad state-map after P2695/P2696.  The residual direct route is closed/bounded-no-go on current artifacts; P2680 non-selector bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, H37/T171/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated without a genuinely new typed object, theorem, source atom, blocker-cut, or provider class.  The output is a no-new-live-frontier certificate, not a closure promotion.
