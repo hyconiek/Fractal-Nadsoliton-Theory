@@ -2355,3 +2355,31 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2662/S1612 entropy boundary-phase unit-map conditional theorem guard
 
 `P2662/S1612` builds the requested intrinsic entropy/boundary-phase unit-map theorem as a conditional scaffold.  If an intrinsic pre-normalization entropy measure gives `H(a)=H0+D_f log(a)` and a boundary-phase law derives an integer bit target `N log(2)`, then the equation selects one positive physical scale and is covariant under base-coordinate rescaling.  The current repo does not yet export the required premises: intrinsic reference cell/entropy zero, boundary-phase bit target, bit-to-action or bit-to-length unit map, or selector-branch orientation.  Therefore this is a conditional theorem scaffold, not an unconditional UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure.
+
+## P2663/S1613 chain-level boundary-phase bit-target guard
+
+`P2663/S1613` audits the first missing P2662 premise at chain level.  A finite `Z2` boundary-phase model finds a real non-exact one-bit holonomy carrier, while exact coboundaries give zero and filled-triangle flatness only enforces consistency.  The carrier is not yet a source theorem because the repo still lacks an internal selector for the non-exact sector, preferred cycle functional, and entropy target `N_bits log(2)`.  Therefore no intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2664/S1614 boundary-phase sector-selector variational no-go guard
+
+`P2664/S1614` audits whether the P2663 non-exact one-bit holonomy carrier is selected by an internal boundary-phase variational rule.  The audited positive local flatness/edge action class does not select the non-exact square sector, and gauge-exact dynamics remains zero-holonomy; a theta-like holonomy source can select a sector only by declaring the missing source/sign.  Therefore this is a sharper no-go for local positive boundary-phase selectors, not an intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure.
+
+## P2665/S1615 selector-lane to boundary-phase sector bridge guard
+
+`P2665/S1615` content-greps the repo by research content, including selector material, before auditing whether existing selector/source-topology lanes transfer to the P2664 boundary-phase square-holonomy sector.  The finite acceptance matrix finds no accepted bridge: projective lanes are raw-sector neutral, source-topology witness lanes are not typed as this boundary-phase provenance, quotient/declared lanes forget or declare the needed sign, and theta-like holonomy selection remains an unsourced premise.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2666/S1616 pair12 selector-witness to boundary-phase sector descent guard
+
+`P2666/S1616` reuses existing selector-source artifacts (`w_break`, pair1/pair2 witness split, actual source-topology witness, and typed-descent target summaries) to audit a concrete pair12 -> boundary-phase sector descent.  The near-miss is real: pair2 is the positive witness branch and can be conventionally mapped to boundary sector `1`; however the reverse convention is equally mathematical, the actual source witness remains preLM/not pair12-typed, and the typed descent interface is future-route only.  Therefore no strict current pair12 -> boundary-phase holonomy-sector map, boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2667/S1617 pair12-boundary orientation reversal no-go guard
+
+`P2667/S1617` audits the exact orientation-map gap left by P2666.  Mapping `pair2_positive` to boundary sector `1` is mathematically possible, but sector-swap reversal preserves all currently exported intrinsic data because no cross-invariant or internally oriented boundary-cycle functor ties the positive pair12 branch to the boundary-sector label.  Therefore the orientation remains conventional, and no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2668/S1618 orientation-datum to boundary-cycle cross-invariant guard
+
+`P2668/S1618` audits whether existing orientation-datum exports can supply the P2667 cross-invariant.  They cannot: the current orientation material is pair1-frame, axis-only with residual `Z2`, sign-flip gauge-equivalence, or convention-layer oriented transport.  None is a boundary-cycle functor, none forbids sector swap, and none ties `pair2_positive` to boundary sector `1`.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2669/S1619 boundary-cycle Boolean cross-invariant ansatz guard
+
+`P2669/S1619` constructs the missing P2668 object at finite Boolean-ansatz level: over `GF(2)`, mathematical functions `f(pair2, sector1)=c+a*p+b*s+d*p*s` exist that are odd under sector swap and tie `pair2` to boundary sector `1`.  This is not yet a source theorem: the strict oddness constraint leaves only sector-label and additive pair/sector-label candidates, and their coding still lacks a bridge-completed physical origin.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.

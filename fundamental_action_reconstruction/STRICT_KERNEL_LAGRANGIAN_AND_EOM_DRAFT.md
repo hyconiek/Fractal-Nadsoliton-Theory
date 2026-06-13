@@ -1724,3 +1724,31 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2662/S1612 entropy boundary-phase unit-map Ltotal guard
 
 `P2662/S1612` does not re-open `L_total`: conditional entropy/cocycle scale selection becomes variationally source-bearing only after an internally derived entropy measure, boundary-phase bit target, and bit-to-action or bit-to-length unit map are proved.  Until those premises are exported, beta-source rerun, role-transfer rerun, selector/source discharge, and ToE closure remain blocked.
+
+## P2663/S1613 chain-level boundary-phase bit-target Ltotal guard
+
+`P2663/S1613` does not re-open `L_total`.  Non-exact boundary-phase holonomy may become a future entropy-bit source only if bridge-completed nadsoliton dynamics derives the sector selector and preferred cycle functional.  Until then, adding a boundary-phase entropy term to `L_total` would be a declared target, not an internally sourced variational coefficient.
+
+## P2664/S1614 boundary-phase sector-selector Ltotal guard
+
+`P2664/S1614` keeps `L_total` closed to a boundary-phase entropy source term.  The only audited way to force non-exact one-bit holonomy is a theta-like source/sign, and that coefficient is not internally derived.  A future Lagrangian term must first pass the P2664 acceptance test: gauge-invariant, non-declared, and uniquely selecting square holonomy one over zero from bridge-completed nadsoliton dynamics.
+
+## P2665/S1615 selector-lane to boundary-phase sector Ltotal guard
+
+`P2665/S1615` keeps `L_total` closed to selector-imported boundary-phase entropy terms.  Existing selector lanes may guide proof search, but none currently supplies a gauge/projector-safe, strict, non-declared descent to the raw P2664 square-holonomy sector.  A future term must pass the P2665 acceptance matrix before it can be used as a variational entropy-bit source.
+
+## P2666/S1616 pair12 selector-witness to boundary-phase sector Ltotal guard
+
+`P2666/S1616` does not license a selector-derived boundary-phase entropy term in `L_total`.  A Lagrangian coefficient may use the pair12 witness split only after a typed pair12 -> boundary-cycle functor fixes the orientation convention internally and exports a current, non-declared descent to boundary sector `1`.
+
+## P2667/S1617 pair12-boundary orientation reversal Ltotal guard
+
+`P2667/S1617` keeps `L_total` closed to pair12-derived boundary-phase entropy terms.  A future variational coefficient must first derive a cross-invariant that forbids the sector-swap convention and internally orients the boundary-cycle functor; naming `pair2_positive -> sector_1` is not sufficient.
+
+## P2668/S1618 orientation-datum cross-invariant Ltotal guard
+
+`P2668/S1618` keeps `L_total` closed to orientation-datum-derived boundary entropy terms.  Existing orientation exports may guide proof search, but a variational coefficient still requires a current strict boundary-cycle cross-invariant that changes under sector swap and ties `pair2_positive` to sector `1`.
+
+## P2669/S1619 Boolean cross-invariant Ltotal guard
+
+`P2669/S1619` keeps `L_total` closed to Boolean cross-invariant entropy terms.  A future variational coefficient must first derive the pair variable and boundary-sector variable from nadsoliton boundary dynamics rather than from labels or coding convention.
