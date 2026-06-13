@@ -2451,3 +2451,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2686/S1636 shared-background nonproxy component residual table
 
 `P2686/S1636` fills the P2685-requested `EA/EH/ELg` component residual table.  The existing unified runpack has `EA=PASS_ZERO`, but `EH` and `ELg` remain open/nonzero, and the Bianchi-I metric residual contributes symbolic nonzero component rows.  P1977/P1978 block current positive-energy and energy-neutral cancellation routes, so the current output is a bounded no-go boundary for reverse closure, not role-bearing `L_total` or ToE closure.
+
+## P2687/S1637 one-new strict anisotropic source-class audit
+
+`P2687/S1637` executes the P2686 continuation rule by auditing exactly one-new-source-class candidates for the Bianchi-I residual: a derived lapse/energy source against P1977 and a non-energy-neutral tensorial shear transport against P1978.  Both yield symbolic design equations, but neither is currently exported as a strict typed source/provider, so the Lagrangian/EOM reverse-closure lane remains frozen as bounded no-go rather than promoted to `L_total` or ToE closure.
+
+## P2688/S1638 post-P2687 live-frontier reconciliation audit
+
+`P2688/S1638` re-runs the state-map after P2687 and overrides the stale P46/P50 return recommendation: AX13/P51/P631 already close/freeze the attacked `m2_psi4` direct-route target externally/nonclosed, P2686/P2687 freeze the anisotropic Lagrangian/EOM lane, and P2684 blocks lower-boundary recursion.  The selected proof-grade target is one P2680 non-selector bridge atom: canonical length/UV unit source, narrowed to the P2662/P2663 entropy reference-cell and bit-to-length obligation matrix.  No UV unit, beta source, role transfer, bridge completion, selector closure, `L_total`, or ToE closure is exported.
+
+## P2689/S1639 entropy reference-cell and bit-to-length UV-unit obligation matrix
+
+`P2689/S1639` executes the P2688-selected canonical UV-unit source audit.  The conditional equation `H(a)=H0+D_f log(a)=N log(2)` selects one positive scale if its premises are supplied, but current artifacts still lack an intrinsic entropy reference cell, a selector-free unique boundary-phase bit target, a bit-to-length/action unit map, and a scale-orbit quotient discharge.  The P2663 one-bit carrier is real but not uniquely selected without a nonexact sector provider.  Thus no UV unit, beta/Z_beta source, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P2690/S1640 selector-free nonexact boundary-phase sector provider audit
+
+`P2690/S1640` executes the P2689 next premise audit.  The P2663 one-bit carrier is real: exact coboundaries have square bit zero while nonexact rows can carry bit one.  But no selector-free provider currently exports a preferred nonexact square-holonomy sector: local positive dynamics, declared theta, selector-lane transfer, source-topology typed descent, and `tau_src -> pair12 -> boundary-square` all fail the acceptance matrix.  Therefore the entropy/UV-unit route is frozen as bounded no-go on current artifacts; no boundary-phase bit target, UV unit, beta source, role transfer, `L_total`, or ToE closure is exported.

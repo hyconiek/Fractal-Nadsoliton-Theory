@@ -82,3 +82,23 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 
 - P2686 fills the `EA/EH/ELg` nonproxy component table and finds a nonzero bounded no-go boundary: `EA` is locally zero, but `EH`, `ELg`, and Bianchi-I metric residual rows remain open/nonzero.
 - A next move in this lane is admissible only if it introduces one new strict anisotropic source class evading P1977 or P1978; otherwise pivot away rather than replaying reduced/FRW reverse closure.
+
+## Current anisotropic source-class audit guardrail (P2687/S1637, 2026-06-13)
+
+- P2687 audits the two P2686-admissible strict anisotropic source-class continuations and finds no currently exported typed source/provider evading P1977 or P1978.
+- Freeze the strict Lagrangian/EOM reverse-closure lane as bounded no-go unless a genuinely new strict anisotropic source class is exported; the next proof-grade move should pivot through the state-map, preferably to the F3/P2681 P46/N49 direct-route zero-witness/no-go matrix.
+
+## Current post-P2687 live-frontier reconciliation guardrail (P2688/S1638, 2026-06-13)
+
+- P2688 corrects the stale return-to-P46/P50 recommendation after rereading AX13/P51/P631: do not reopen the attacked `m2_psi4` direct-route target as the immediate next move.
+- With Lagrangian/EOM, lower-boundary, selector replay, and generic bridge lanes repetition-gated, the next proof-grade move is one P2680 non-selector source atom: a canonical length/UV unit source audit through the P2662/P2663 entropy reference-cell and bit-to-length obligation matrix.
+
+## Current entropy UV-unit obligation guardrail (P2689/S1639, 2026-06-13)
+
+- P2689 shows the entropy equation can conditionally select a positive scale, but no unconditional canonical UV unit or beta/Z_beta source is exported because the intrinsic entropy reference, selector-free bit target, bit-to-length/action map, and scale-orbit quotient remain missing.
+- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.
+
+## Current boundary-phase sector provider guardrail (P2690/S1640, 2026-06-13)
+
+- P2690 confirms the P2663 one-bit carrier is real but finds no selector-free nonexact boundary-phase sector provider; freeze the entropy/UV-unit route as bounded no-go on current artifacts.
+- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.
