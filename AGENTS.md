@@ -67,3 +67,18 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Current highest practical proof-grade opportunity after P2681 is a finite, executable live-frontier obstruction/witness computation: first preference is the kernel-split-robust P46/N49 direct-route zero-witness/no-go matrix (especially the direct `m2 psi4` target action coefficient defect on common `psi4**2/2` support named by F3); second preference is a strict Lagrangian/EOM reverse-closure obstruction matrix.
 - A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.
 - Role-transfer auditing is still downstream and must not start until bridge/source closure is actually exported.
+
+## Current cycle-cut and reverse-closure steering guardrail (P2684/S1634, 2026-06-13)
+
+- After P2684, do not continue the T24x/T25x lower-boundary recursion as a primary strategy unless a real chart-label-retaining `pair12` typed seed/subinterface plus a nonconventional semantic invariant/provider is newly exported.
+- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.
+
+## Current strict Lagrangian/EOM reverse-closure guardrail (P2685/S1635, 2026-06-13)
+
+- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts.
+- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.
+
+## Current shared-background component residual guardrail (P2686/S1636, 2026-06-13)
+
+- P2686 fills the `EA/EH/ELg` nonproxy component table and finds a nonzero bounded no-go boundary: `EA` is locally zero, but `EH`, `ELg`, and Bianchi-I metric residual rows remain open/nonzero.
+- A next move in this lane is admissible only if it introduces one new strict anisotropic source class evading P1977 or P1978; otherwise pivot away rather than replaying reduced/FRW reverse closure.

@@ -2439,3 +2439,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2683/S1633 lower-boundary cycle guard
 
 `P2683/S1633` corrects stale direct-route targeting: AX13 already closes the `m2_psi4` target-EOM blocker on the canonical-ontology-supported external lane; P631 freezes the direct formal residual-cancellation route negative; H37/T171 is premise-based rather than missing; and P739/P740 still block strict-core pair12 upgrade.  The T24x/T25x lower-boundary target/nonexport/attempt pattern must not continue as the primary strategy without a new semantic invariant/provider at the chart-label-retaining pair12 typed seed-slot coordinate entry point.
+
+## P2684/S1634 pair12 cycle-cut semantic invariant/provider no-go
+
+`P2684/S1634` audits the P2683 cycle-cut target instead of adding another lower-boundary name.  It finds no current exported chart-label-retaining `pair12` typed seed/subinterface carrying a nonconventional semantic invariant/provider before F301 binding, `Q_basis` terminal collapse, and projector-only atlas collapse.  The lower-boundary recursion therefore remains nonprimary; the next proof-grade target is a strict Lagrangian/EOM reverse-closure obstruction matrix.
+
+## P2685/S1635 strict Lagrangian/EOM reverse-closure obstruction matrix
+
+`P2685/S1635` executes the finite reverse-closure audit after P2684.  Selector-independent reduced/forward Lagrangian/EOM exports are real, but they do not reverse into nonproxy full tensor-resolved closure: P2316 leaves theorem-grade full EOM open, P1974 supplies a nonzero Bianchi-I anisotropic residual, and P1795/P1809 keep the unified nonproxy gate locked.  No role-bearing `L_total`, selector/bridge import, `QW-2191` discharge, or ToE closure is exported.
+
+## P2686/S1636 shared-background nonproxy component residual table
+
+`P2686/S1636` fills the P2685-requested `EA/EH/ELg` component residual table.  The existing unified runpack has `EA=PASS_ZERO`, but `EH` and `ELg` remain open/nonzero, and the Bianchi-I metric residual contributes symbolic nonzero component rows.  P1977/P1978 block current positive-energy and energy-neutral cancellation routes, so the current output is a bounded no-go boundary for reverse closure, not role-bearing `L_total` or ToE closure.

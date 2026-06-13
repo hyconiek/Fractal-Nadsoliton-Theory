@@ -8,7 +8,7 @@ Status: `P2683_POST_AX13_DIRECT_ROUTE_AND_T173_LOWER_BOUNDARY_CYCLE_AUDIT_NO_FAL
 - `h37_t171_premise_based_directed_state`: `1116` hits
 - `strict_core_upgrade_nonexport`: `140` hits
 - `lower_boundary_recursion`: `1254` hits
-- `forbidden_closure_claims`: `7260` hits
+- `forbidden_closure_claims`: `7264` hits
 
 ## Current artifact state
 - AX13 target-EOM closed on external lane: `True`
