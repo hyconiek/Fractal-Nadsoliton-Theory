@@ -3,11 +3,11 @@
 Status: `P2686_SHARED_BACKGROUND_NONPROXY_COMPONENT_RESIDUAL_TABLE_NO_FALSE_PASS`
 
 ## Content-first grep
-- `shared_background_nonproxy_runpack`: `12300` hits
+- `shared_background_nonproxy_runpack`: `12303` hits
 - `component_residual_table`: `1350` hits
-- `bianchi_anisotropic_obstruction`: `467` hits
+- `bianchi_anisotropic_obstruction`: `475` hits
 - `gate_locks`: `1162` hits
-- `forbidden_closure_claims`: `11391` hits
+- `forbidden_closure_claims`: `11394` hits
 
 ## Component residual rows
 - `runpack_EA` on `bg_family_v1`: verdict=`PASS_ZERO`, zero=`True`, trace=`explicit_zero`

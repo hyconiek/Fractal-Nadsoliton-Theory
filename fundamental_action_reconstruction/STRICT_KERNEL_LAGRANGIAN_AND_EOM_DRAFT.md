@@ -1820,3 +1820,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2686/S1636 component residual no-go guard
 
 `P2686/S1636` keeps `L_total` nonpromoted: the shared-background nonproxy component table is not zero.  A future continuation must introduce one new strict anisotropic source class that evades the P1977 positive-energy no-go or the P1978 energy-neutral tensor-transport obstruction; otherwise this reverse-closure lane is bounded no-go.
+
+## P2687/S1637 source-class audit freeze guard
+
+`P2687/S1637` does not reopen reverse closure: no new strict anisotropic source class currently evades P1977 or P1978.  The honest continuation is a state-map pivot, first back to the F3/P2681 direct-route P46/N49 zero-witness/no-go matrix unless a new exported source class appears.
+
+## P2688/S1638 state-map pivot Ltotal guard
+
+`P2688/S1638` keeps `L_total` nonpromoted: after P2687, the honest next target is not another reverse-closure replay but a canonical UV-unit source obligation matrix outside role-bearing action semantics.  A future P2689 must first export an intrinsic entropy reference cell, selector-free bit target, bit-to-length/action unit map, and scale-orbit quotient before any beta source or role-transfer audit can start.
+
+## P2689/S1639 entropy UV-unit Ltotal guard
+
+`P2689/S1639` keeps `L_total` nonpromoted: entropy scale-selection remains a conditional source-target equation, not a role-bearing action term.  A future step must first export a selector-free nonexact boundary-phase sector provider and bit-to-length/action map before any beta source or variational role can be considered.
+
+## P2690/S1640 boundary-phase provider Ltotal guard
+
+`P2690/S1640` keeps `L_total` nonpromoted: a one-bit boundary carrier is not a variational source term unless a selector-free nonexact sector provider and physical bit-to-length/action map are exported.  Current artifacts do not supply that provider, so the entropy/UV-unit lane is bounded no-go.
