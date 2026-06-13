@@ -1768,3 +1768,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2673/S1623 tau_src pair12 boundary-square Ltotal guard
 
 `P2673/S1623` keeps `L_total` closed to the tau_src -> pair12 -> boundary-square route.  A variational term is inadmissible until O3 chart-sensitive pair12 typing, O4 boundary-square typed arrow, and O5 sector-swap sourced invariant are all exported.
+
+## P2674/S1624 O3 typed-seed Ltotal guard
+
+`P2674/S1624` keeps `L_total` closed to the tau_src -> pair12 -> boundary-square route at O3.  No source-topology-sign-derived variational term is admissible until the exact `Sigma_sel_src_target_v1 -> F301` chart-label-retaining typed seed arrow is exported without quotient, preLM, projector-only, or fiat-identification collapse.
+
+## P2675/S1625 S6 Sigma-to-F301 Ltotal guard
+
+`P2675/S1625` keeps `L_total` closed at the S6 subobligation.  A tau_src-derived pair12 variational source remains inadmissible until a pre-`Q_basis`, preLM, nonprojector, chart-label-retaining `Sigma_sel_src_target_v1 -> F301` typed arrow is exported without fiat identification.
+
+## P2676/S1626 Sigma-F301 naturality Ltotal guard
+
+`P2676/S1626` keeps `L_total` closed after the finite naturality-square audit.  Formal XOR/XNOR Sigma->F301 square candidates do not become variational source terms unless a strict internal orientation source selects one member of the reversal pair and exports an actual pre-collapse typed arrow.
