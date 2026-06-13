@@ -2399,3 +2399,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2673/S1623 tau_src pair12 boundary-square subinterface guard
 
 `P2673/S1623` audits the exact `tau_src/source-topology sign -> pair1/pair2 typed carrier -> boundary square cycle` subinterface.  The tau_src sign material and same-packet pair1/pair2 carrier material are real, but the finite obligation lattice remains three steps from closure: no current chart-sensitive pair12 typed subinterface, no pair12 -> boundary square-cycle typed arrow, and no sourced invariant changing under sector swap.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2674/S1624 O3 chart-sensitive pair12 typed seed guard
+
+`P2674/S1624` attacks O3 from `P2673` directly.  The audit finds real tau_src input material, a surviving `F301` pair1/pair2 carrier, and a local chart-sensitive atlas lane, but no actual chart-label-retaining typed seed export, no nonprojector/nonquotient descent law before `Q_basis`/preLM collapse, and no `Sigma_sel_src_target_v1 -> F301` typed arrow not imposed by fiat.  Therefore O3 does not pass, O4/O5 remain inadmissible, and no boundary-phase bit target, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2675/S1625 S6 Sigma-to-F301 typed-arrow guard
+
+`P2675/S1625` audits the exact S6 arrow `Sigma_sel_src_target_v1 -> surviving F301 pair1/pair2 carrier` before `Q_basis`/preLM and projector-only collapse.  The Sigma-side target, F301 carrier, and same-`tau_src` packet linkage are real, but no actual chart-label-retaining Sigma->F301 typed arrow, pre-collapse nonquotient descent, nonprojector local-atlas descent, or non-fiat binding proof is exported.  Therefore S6 fails, O3 remains blocked, O4/O5 remain inadmissible, and no boundary-phase bit target, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2676/S1626 Sigma-F301 naturality-square guard
+
+`P2676/S1626` exhausts all `16` Boolean maps `h(sigma_selector_bit, chart_label_bit) -> f301_pair_bit` as a finite pre-collapse naturality-square witness for S6.  Two formal chart-equivariant, source-sensitive, nonprojector candidates exist, but they are exactly the XOR/XNOR orientation-reversal pair, and no internal selector/source chooses between them.  Therefore the export gate remains zero: no pre-collapse naturality square, no nonconvention `Sigma_sel_src_target_v1 -> F301` typed arrow, no S6/O3 pass, no O4/O5 admission, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure is exported.
