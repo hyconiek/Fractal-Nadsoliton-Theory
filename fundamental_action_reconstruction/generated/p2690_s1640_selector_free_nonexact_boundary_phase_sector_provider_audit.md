@@ -3,11 +3,11 @@
 Status: `P2690_SELECTOR_FREE_NONEXACT_BOUNDARY_PHASE_SECTOR_PROVIDER_AUDIT_NO_FALSE_PASS`
 
 ## Content-first grep
-- `p2689_selected_p2690`: `41` hits
+- `p2689_selected_p2690`: `44` hits
 - `chain_level_one_bit_carrier`: `215` hits
-- `sector_provider_candidates`: `26834` hits
+- `sector_provider_candidates`: `26835` hits
 - `pair12_subinterface_blockers`: `8004` hits
-- `forbidden_imports`: `9366` hits
+- `forbidden_imports`: `9378` hits
 
 ## Carrier enumeration
 Rows: total=`32`, exact=`16`, nonexact=`16`, bit1=`16`.

@@ -1836,3 +1836,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2690/S1640 boundary-phase provider Ltotal guard
 
 `P2690/S1640` keeps `L_total` nonpromoted: a one-bit boundary carrier is not a variational source term unless a selector-free nonexact sector provider and physical bit-to-length/action map are exported.  Current artifacts do not supply that provider, so the entropy/UV-unit lane is bounded no-go.
+
+## P2691/S1641 alpha_geo amplitude Ltotal guard
+
+`P2691/S1641` keeps `L_total` nonpromoted.  A strict value source for `alpha_geo=4 ln(2)` plus exact scalar normalization does not by itself create a variational amplitude term or physical-role transfer theorem.  The APD/Lagrangian source remains open.
+
+## P2692/S1642 beta/Z_beta Ltotal guard
+
+`P2692/S1642` keeps `L_total` nonpromoted.  Positivity and gauge representability of `beta` do not create a variational damping coefficient source; the missing typed UV unit or independent operator/conservation identity remains unexported.
+
+## P2693/S1643 post-P2680 source-inventory Ltotal guard
+
+`P2693/S1643` keeps `L_total` nonpromoted because every currently named P2680 non-selector source atom remains unexported.  Variational promotion requires a new source theorem, not a replay of bridge-source near-misses.
+
+## P2694/S1644 fresh state-map Ltotal guard
+
+`P2694/S1644` keeps `L_total` nonpromoted: the next selected work is a direct-route zero-witness/no-go matrix, not a variational closure or role-transfer step.

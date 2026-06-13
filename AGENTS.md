@@ -102,3 +102,23 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 
 - P2690 confirms the P2663 one-bit carrier is real but finds no selector-free nonexact boundary-phase sector provider; freeze the entropy/UV-unit route as bounded no-go on current artifacts.
 - The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.
+
+## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)
+
+- P2691 confirms strict `alpha_geo=4 ln(2)` and exact scalar-shape normalization, but finds no role-safe amplitude absorption source, no physical-role safety theorem, and no APD/Lagrangian dynamical source.
+- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.
+
+## Current beta/Z_beta source guardrail (P2692/S1642, 2026-06-13)
+
+- P2692 confirms positive-beta orbit/gauge representability and target-dependent tail-ratio inversion, but finds no target-independent positive `beta/Z_beta` source theorem.
+- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.
+
+## Current post-P2680 non-selector source-inventory closure guardrail (P2693/S1643, 2026-06-13)
+
+- P2693 closes the currently named P2680 non-selector source atoms as bounded no-go on current artifacts: canonical UV unit, role-safe `alpha_geo` amplitude source, and target-independent positive `beta/Z_beta` source all remain unexported.
+- Do not continue generic legacy->strict bridge-source replay.  The next move must be a fresh broad state-map selection audit and may reopen a lane only with a genuinely new typed object, theorem, source atom, blocker-cut, or provider class; otherwise emit a no-new-live-frontier certificate.
+
+## Current fresh broad state-map selection guardrail (P2694/S1644, 2026-06-13)
+
+- P2694 selects the residual kernel-split-robust direct-route `g4/g6/gY` `c1s1` zero-witness/no-go matrix as the next finite proof-grade move after P2680 source-inventory closure.
+- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.
