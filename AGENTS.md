@@ -32,8 +32,8 @@ Before continuing work in `fundamental_action_reconstruction`, read:
 
 ## Strategic priority guardrail
 
-- Highest theoretical priority is now the `legacy -> strict` completion bridge plus the subsequent role-transfer audit.
-- Do not treat further local direct-route mass decomposition as the main theoretical bottleneck while the bridge-completion and selector/source questions remain open.
+- Current theoretical priority is **state-map-first**: choose the next FAR move from the live proof frontier after checking current audits, not from the older generic `legacy -> strict` bridge priority alone.
+- The `legacy -> strict` completion bridge remains a major open problem, but after P2679/P2680 it is admissible as a next move only when attacking one new typed bridge/source atom; do not demote finite direct-route or Lagrangian/EOM obstruction matrices merely because bridge completion remains open.
 
 ## Selector guardrail
 
@@ -58,3 +58,12 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Agent acknowledgment: instructions received on 2026-05-16 for automated sessions.
 
 - Agent acknowledgment: instructions received on 2026-05-17 for automated sessions.
+
+## Current state-map-first steering guardrail (P2681/S1631, 2026-06-13)
+
+- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.
+- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.
+- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.
+- Current highest practical proof-grade opportunity after P2681 is a finite, executable live-frontier obstruction/witness computation: first preference is the kernel-split-robust P46/N49 direct-route zero-witness/no-go matrix (especially the direct `m2 psi4` target action coefficient defect on common `psi4**2/2` support named by F3); second preference is a strict Lagrangian/EOM reverse-closure obstruction matrix.
+- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.
+- Role-transfer auditing is still downstream and must not start until bridge/source closure is actually exported.

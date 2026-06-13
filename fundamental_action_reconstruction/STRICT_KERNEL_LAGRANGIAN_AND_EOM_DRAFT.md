@@ -1796,3 +1796,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2680/S1630 bridge-source inventory Ltotal guard
 
 `P2680/S1630` keeps `L_total` closed while auditing non-selector bridge-source atoms.  Formal amplitude normalization and damping-shape maps do not become role-bearing variational terms until the missing role-safe amplitude source, positive `beta`/`Z_beta` source, and canonical length/UV unit source are exported and followed by a role-transfer theorem.
+
+## P2681/S1631 state-map-first Ltotal steering guard
+
+`P2681/S1631` does not promote `L_total` or role transfer.  It reorients future work toward finite live-frontier obstruction/witness matrices: first P46/N49 direct-route zero-witness/no-go, second strict Lagrangian/EOM reverse-closure obstruction if the direct symbolic carrier is unavailable.
+
+## P2682/S1632 target-EOM Ltotal guard
+
+`P2682/S1632` does not add a variational source term.  It shows that AX12 target-action closure cannot be imported into the target-EOM coefficient defect without an explicit action-to-EOM transport/assignment theorem typed on `psi4(x)`, so `L_total` remains unpromoted.
+
+## P2683/S1633 lower-boundary cycle Ltotal guard
+
+`P2683/S1633` adds no variational term and does not promote `L_total`.  It freezes lower-boundary recursion as nonprimary unless a new semantic invariant/provider is exported; otherwise the honest fallback is an independent strict Lagrangian/EOM reverse-closure obstruction matrix.
