@@ -2339,3 +2339,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2658/S1608 local homogeneous action quantization no-go guard
 
 `P2658/S1608` generalizes the P2657 scale-clock obstruction from `Tr(L)` to an audited class of local homogeneous action functionals `A_pq(a)=Tr_p(L_a)^q`.  Each functional scales as `A_pq(a)=A_pq(1)/a^(p*q)`, so the integer phase condition `tau*A_pq=2*pi*n` is satisfiable at every scale by `tau -> a^(p*q) tau`.  Fixed-clock uniqueness is therefore an imported clock/scale anchor.  This is a finite class no-go, not a full global theorem over possible nonhomogeneous/anomalous nadsoliton dynamics, and it exports no intrinsic UV unit, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2659/S1609 nonhomogeneous anomaly clock-source guard
+
+`P2659/S1609` audits the next nonhomogeneous/anomalous opening left by P2658 using `A(a)=Tr_p(L_a)+lambda_anomaly`.  Nonzero declared `lambda_anomaly` breaks pure homogeneous covariance, but integer phase quantization still fixes only `tau*A(a)`, and any absolute-action selection imports the anomaly coefficient/action quantum rather than deriving it from nadsoliton dynamics.  It exports no intrinsic UV unit, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2660/S1610 boundary/cocycle anomaly coefficient dimension guard
+
+`P2660/S1610` audits whether boundary/cocycle topology can source the P2659 anomaly coefficient.  The finite complex supplies scale-invariant integers such as `beta_1` and Euler characteristic, but those are dimensionless; they do not by themselves provide the dimensionful action/unit map needed to add an anomaly to `Tr_p(L_a)` or define an absolute action quantum.  Provisionally inserting the integer still leaves integer phase quantization satisfiable by clock choice.  This exports no intrinsic UV unit, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2661/S1611 Shannon entropy scale-anomaly UV-anchor guard
+
+`P2661/S1611` directly audits the Shannon-entropy-as-anomaly intuition.  Normalized finite Shannon entropy built from homogeneous nadsoliton distance weights is scale-invariant because global scale cancels in the probabilities.  A differential/fractal entropy model does exhibit an additive `D_f log(a)` shift, but selecting a representative requires an entropy zero/reference measure or a declared bit-level condition; `log(2)` is an internal dimensionless information quantum, not yet a length/action unit.  Thus entropy remains a serious theorem target, but this audit exports no intrinsic UV unit, no beta source, no `QW-2191` discharge, no bridge completion, no role transfer, no role-bearing `L_total`, and no ToE closure.
+
+## P2662/S1612 entropy boundary-phase unit-map conditional theorem guard
+
+`P2662/S1612` builds the requested intrinsic entropy/boundary-phase unit-map theorem as a conditional scaffold.  If an intrinsic pre-normalization entropy measure gives `H(a)=H0+D_f log(a)` and a boundary-phase law derives an integer bit target `N log(2)`, then the equation selects one positive physical scale and is covariant under base-coordinate rescaling.  The current repo does not yet export the required premises: intrinsic reference cell/entropy zero, boundary-phase bit target, bit-to-action or bit-to-length unit map, or selector-branch orientation.  Therefore this is a conditional theorem scaffold, not an unconditional UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure.

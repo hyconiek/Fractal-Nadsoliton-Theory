@@ -1708,3 +1708,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2658/S1608 local homogeneous action quantization Ltotal guard
 
 `P2658/S1608` does not re-open `L_total`: local homogeneous action quantizations leave a scale-clock orbit unbroken, and fixed clocks or absolute trace quanta remain external anchors.  A variational damping coefficient still requires a genuinely derived nonhomogeneous/anomalous clock-source term or an intrinsic nadsoliton clock/action theorem before beta-source rerun, role-transfer rerun, and selector/source discharge.
+
+## P2659/S1609 nonhomogeneous anomaly Ltotal guard
+
+`P2659/S1609` does not re-open `L_total`: a nonhomogeneous anomaly term can only become source-bearing after its coefficient is derived internally from a nadsoliton boundary/cocycle/phase law and shown not to be an imported scale/action anchor.  Until then, beta-source rerun, role-transfer rerun, and selector/source discharge remain blocked.
+
+## P2660/S1610 boundary/cocycle anomaly Ltotal guard
+
+`P2660/S1610` does not re-open `L_total`: boundary/cocycle integers can carry discrete topology, but a variational anomaly term still requires an internally derived dimensionful nadsoliton boundary-phase unit map.  Until that map exists, beta-source rerun, role-transfer rerun, and selector/source discharge remain blocked.
+
+## P2661/S1611 Shannon entropy Ltotal guard
+
+`P2661/S1611` does not re-open `L_total`: entropy can only become a variational scale/anomaly source after an intrinsic nadsoliton entropy-measure theorem derives the reference cell, entropy zero, and bit-to-action or bit-to-length unit map.  Until then, beta-source rerun, role-transfer rerun, selector/source discharge, and ToE closure remain blocked.
+
+## P2662/S1612 entropy boundary-phase unit-map Ltotal guard
+
+`P2662/S1612` does not re-open `L_total`: conditional entropy/cocycle scale selection becomes variationally source-bearing only after an internally derived entropy measure, boundary-phase bit target, and bit-to-action or bit-to-length unit map are proved.  Until those premises are exported, beta-source rerun, role-transfer rerun, selector/source discharge, and ToE closure remain blocked.
