@@ -1752,3 +1752,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2669/S1619 Boolean cross-invariant Ltotal guard
 
 `P2669/S1619` keeps `L_total` closed to Boolean cross-invariant entropy terms.  A future variational coefficient must first derive the pair variable and boundary-sector variable from nadsoliton boundary dynamics rather than from labels or coding convention.
+
+## P2670/S1620 higher-order Boolean lift Ltotal guard
+
+`P2670/S1620` keeps `L_total` closed to higher-order Boolean cross-invariant entropy terms.  Adding an auxiliary Boolean lift is not a variational source unless the auxiliary bit and the pair/sector coding are derived from strict nadsoliton boundary dynamics rather than imported labels.
+
+## P2671/S1621 boundary-observable physical-origin Ltotal guard
+
+`P2671/S1621` keeps `L_total` closed to observable-origin Boolean entropy terms.  A future term must first provide a typed descent from a bridge-completed boundary-dynamics observable to the pair/sector/auxiliary variables with convention-free coding and internal sector-swap rejection.
+
+## P2672/S1622 source-topology to square-holonomy Ltotal guard
+
+`P2672/S1622` keeps `L_total` closed to source-topology-sign-derived square-holonomy entropy terms.  A variational coefficient still requires a concrete typed arrow from `tau_src` sign data through a pair1/pair2 chart-sensitive carrier into the boundary square cycle, with sign preservation and internal sector-swap rejection.
+
+## P2673/S1623 tau_src pair12 boundary-square Ltotal guard
+
+`P2673/S1623` keeps `L_total` closed to the tau_src -> pair12 -> boundary-square route.  A variational term is inadmissible until O3 chart-sensitive pair12 typing, O4 boundary-square typed arrow, and O5 sector-swap sourced invariant are all exported.

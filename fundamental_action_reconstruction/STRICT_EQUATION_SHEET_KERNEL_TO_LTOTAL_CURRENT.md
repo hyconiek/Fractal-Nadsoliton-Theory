@@ -2383,3 +2383,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2669/S1619 boundary-cycle Boolean cross-invariant ansatz guard
 
 `P2669/S1619` constructs the missing P2668 object at finite Boolean-ansatz level: over `GF(2)`, mathematical functions `f(pair2, sector1)=c+a*p+b*s+d*p*s` exist that are odd under sector swap and tie `pair2` to boundary sector `1`.  This is not yet a source theorem: the strict oddness constraint leaves only sector-label and additive pair/sector-label candidates, and their coding still lacks a bridge-completed physical origin.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2670/S1620 higher-order Boolean lift guard
+
+`P2670/S1620` exhaustively audits all `256` Boolean functions `f(pair2, sector1, auxiliary_lift)`.  Higher-order/auxiliary mathematical candidates exist, but none supplies a convention-free physical origin for the pair variable, boundary-sector variable, or auxiliary lift from bridge-completed nadsoliton boundary dynamics.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2671/S1621 boundary-observable physical-origin guard
+
+`P2671/S1621` audits actual candidate observable lanes for the P2669/P2670 Boolean variables instead of adding another formal lift.  Existing pair, boundary-sector, auxiliary, and selector materials give near-miss subsets, but none has both bridge-completed boundary-dynamics provenance and convention-free coding.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2672/S1622 source-topology to square-holonomy typed-descent guard
+
+`P2672/S1622` audits the strongest P2671 near-miss: source-topology sign/plus-channel material mapped to boundary square-holonomy sector.  Content exists on both sides and finite sign-to-sector maps can place positive sign in sector `1`, but the current repo lacks a strict typed descent, sign-preservation proof, bridge-completed boundary-dynamics provenance, and internal sector-swap-reversal ban.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
+
+## P2673/S1623 tau_src pair12 boundary-square subinterface guard
+
+`P2673/S1623` audits the exact `tau_src/source-topology sign -> pair1/pair2 typed carrier -> boundary square cycle` subinterface.  The tau_src sign material and same-packet pair1/pair2 carrier material are real, but the finite obligation lattice remains three steps from closure: no current chart-sensitive pair12 typed subinterface, no pair12 -> boundary square-cycle typed arrow, and no sourced invariant changing under sector swap.  Therefore no boundary-phase bit target, intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure is exported.
