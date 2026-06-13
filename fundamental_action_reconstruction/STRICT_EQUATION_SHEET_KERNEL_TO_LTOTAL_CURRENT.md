@@ -2411,3 +2411,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2676/S1626 Sigma-F301 naturality-square guard
 
 `P2676/S1626` exhausts all `16` Boolean maps `h(sigma_selector_bit, chart_label_bit) -> f301_pair_bit` as a finite pre-collapse naturality-square witness for S6.  Two formal chart-equivariant, source-sensitive, nonprojector candidates exist, but they are exactly the XOR/XNOR orientation-reversal pair, and no internal selector/source chooses between them.  Therefore the export gate remains zero: no pre-collapse naturality square, no nonconvention `Sigma_sel_src_target_v1 -> F301` typed arrow, no S6/O3 pass, no O4/O5 admission, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure is exported.
+
+## P2677/S1627 S6/O3 typed-seed route no-go guard
+
+`P2677/S1627` audits the escape hatch left by `P2676`: an internal orientation source that would choose one member of the XOR/XNOR `Sigma_sel_src_target_v1 -> F301` reversal pair before `Q_basis`/preLM/projector collapse.  The checked lanes are visible but fail as strict exports: `beta_tors -> chi_11` is still a legacy-role/source conjecture, theta-like signs are external, `Q_basis` and projector lanes collapse typing, declaration lanes are fiat, symmetry breaking is only a placeholder, and observer readout is downstream.  Thus the current `tau_src -> pair12 -> boundary-square` S6/O3 typed-seed route is a bounded no-go; this is not a global no-go for future bridge/source classes.  O4/O5, `QW-2191` discharge, role-bearing `L_total`, bridge completion, role transfer, and ToE closure remain blocked.
+
+## P2678/S1628 strict internal orientation-source provider-class guard
+
+`P2678/S1628` switches away from the bounded no-go typed-seed branch and audits the different provider class required to break the XOR/XNOR reversal: a strict internal orientation-odd source.  The finite `C2` enumeration shows that legacy scalar `beta_tors`, quotient/projector axes, `Q_basis` terminal choices, and declaration/convention choices cannot provide an odd sign.  Only orientation-odd torsor, spin/Pin orientation, or boundary symmetry-breaking provider shapes could do so formally, and none is currently exported with a pre-collapse `Sigma_sel_src_target_v1 -> F301` binding.  Therefore S6/O3 is not reopened; O4/O5, `QW-2191` discharge, role-bearing `L_total`, bridge completion, role transfer, and ToE closure remain blocked.
+
+## P2679/S1629 reopen repetition gate and bridge-pivot guard
+
+`P2679/S1629` answers the repetition concern explicitly.  The `tau_src -> pair12` S6/O3 lane, the selector/orientation lane, and the `beta_tors -> chi_11` lane have already been audited through P2677/P2678 and earlier P2619/P2649-class guards; no new post-P2678 theorem/object reopens them.  Therefore repeating those lanes is inadmissible unless a genuinely new typed object appears.  The admissible next proof-grade direction is a `legacy -> strict` bridge-source audit that excludes selector replay and `beta_tors -> chi_11` replay, focusing instead on source inventories for amplitude/normalization and damping/compression atoms.  No O4/O5 admission, `QW-2191` discharge, role-bearing `L_total`, role transfer, or ToE closure is exported.
+
+## P2680/S1630 legacy-strict bridge-source inventory guard
+
+`P2680/S1630` follows the P2679 pivot without reopening selector, `tau_src -> pair12`, or `beta_tors -> chi_11`.  The non-selector bridge-source inventory finds real formal material: the legacy/strict kernel layers are visible, scalar `alpha_geo` shape normalization exists, and a fractal pushforward can supply the linear-to-power damping shape route.  The full bridge still fails because no role-safe amplitude source, no target-independent positive `beta`/`Z_beta` source, and no canonical length/UV unit source are exported.  Therefore bridge completion, role transfer, O4/O5, `QW-2191` discharge, role-bearing `L_total`, and ToE closure remain blocked.

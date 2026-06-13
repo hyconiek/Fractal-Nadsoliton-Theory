@@ -3,13 +3,13 @@
 Status: `P2676_PRECOLLAPSE_NATURALITY_SQUARE_AUDIT_NO_FALSE_PASS`
 
 ## Content-first repo grep
-- `naturality_square_content`: `47` hits
-- `sigma_to_f301_content`: `106` hits
-- `precollapse_content`: `2710` hits
+- `naturality_square_content`: `48` hits
+- `sigma_to_f301_content`: `110` hits
+- `precollapse_content`: `2720` hits
 - `chart_label_retaining_content`: `333` hits
-- `nonprojector_content`: `256` hits
-- `nonconvention_content`: `8668` hits
-- `selector_source_guard_content`: `15141` hits
+- `nonprojector_content`: `259` hits
+- `nonconvention_content`: `8701` hits
+- `selector_source_guard_content`: `15148` hits
 
 ## Finite Boolean naturality witness
 Total maps checked: `16`.

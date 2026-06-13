@@ -1780,3 +1780,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2676/S1626 Sigma-F301 naturality Ltotal guard
 
 `P2676/S1626` keeps `L_total` closed after the finite naturality-square audit.  Formal XOR/XNOR Sigma->F301 square candidates do not become variational source terms unless a strict internal orientation source selects one member of the reversal pair and exports an actual pre-collapse typed arrow.
+
+## P2677/S1627 S6/O3 typed-seed route no-go Ltotal guard
+
+`P2677/S1627` keeps `L_total` closed for the current tau_src/pair12 typed-seed branch.  Since no strict internal pre-collapse orientation source breaks the XOR/XNOR Sigma->F301 reversal, no boundary-square or sector-swap variational source term may be imported from this route.
+
+## P2678/S1628 strict orientation-source provider Ltotal guard
+
+`P2678/S1628` keeps `L_total` closed while moving to the correct different provider class.  A variational boundary-square or sector-swap source term requires an exported orientation-odd torsor/spin-boundary provider plus a pre-collapse typed `Sigma_sel_src_target_v1 -> F301` binding; formal provider shapes alone are not Lagrangian terms.
+
+## P2679/S1629 repetition gate Ltotal guard
+
+`P2679/S1629` prevents `L_total` promotion by repeated selector, `tau_src -> pair12`, or `beta_tors -> chi_11` audits.  A future variational term must come from a genuinely new bridge-source theorem/object, not from restating already-blocked lanes.
+
+## P2680/S1630 bridge-source inventory Ltotal guard
+
+`P2680/S1630` keeps `L_total` closed while auditing non-selector bridge-source atoms.  Formal amplitude normalization and damping-shape maps do not become role-bearing variational terms until the missing role-safe amplitude source, positive `beta`/`Z_beta` source, and canonical length/UV unit source are exported and followed by a role-transfer theorem.
