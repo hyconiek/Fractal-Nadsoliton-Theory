@@ -170,3 +170,15 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2702 explains for humans that a selector is a rule choosing one representative/direction on the Z12 circle.  A premise selector can choose `+1`, but current strict artifacts do not source that choice non-premise; Aut-invariant candidates still fail and P2701 finds no provider.
 - Treat the circle/convexity language as branch-cut intuition unless a strict convexity/selector theorem is newly exported.
 - The next admissible move must construct an actual new strict-sourced symmetry-breaking provider or introduce a different new typed object; otherwise preserve the P2697-P2702 no-new-live-frontier certificate.
+
+## Current older-release selector evidence reconciliation guardrail (P2703/S1653, 2026-06-13)
+
+- P2703 acknowledges that Release 8.1 contains a declared-scope `P1343` internal selector source / `P1348` global closure claim, but treats it as historical release-scope evidence requiring current provenance revalidation against P2699-P2702 criteria.
+- No direct `Release 9.3s` document is found in the audit; visible R9/P1293 material is a draft selector-source theorem checkpoint with closure disallowed, not a current closure export.
+- Do not remove `QW-2191`, non-premise strict selector-provider, pair12 strict-core, `L_total`, role-transfer, bridge, or ToE blocks from older release prose alone.  The next admissible move is a narrow P1343/P1348 provenance revalidation table, or preservation of the P2697-P2703 no-new-live-frontier certificate.
+
+## Current P1343/P1348 provenance revalidation guardrail (P2704/S1654, 2026-06-13)
+
+- P2704 revalidates the P1343/P1348 selector chain in declared Release-8 scope: the selector object/operator basis is present, P1343/P1345/P1346/P1348 generated statuses match, and P1344 finite CSV recomputation gives zero sign flips within declared tolerances.
+- This is a positive declared-scope provenance result, not a blanket erasure of P2699-P2702 bounded no-go/provider-inventory boundaries for Aut(Z12)/replay lanes.
+- Do not promote P2704 to pair12 strict-core upgrade, legacy role transfer, `L_total`, bridge closure, or ToE closure.  The next admissible move is a boundary-alignment theorem between the P1343/P1348 declared-scope selector and the P2699-P2702 criteria.

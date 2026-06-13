@@ -1884,3 +1884,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2702/S1652 selector explanation Ltotal guard
 
 `P2702/S1652` is explanatory and finite-model diagnostic.  It does not promote the premise selector into a variational source, `L_total`, role transfer, bridge closure, or ToE closure.
+
+## P2703/S1653 older release selector evidence Ltotal guard
+
+`P2703/S1653` does not promote Release 8.1 or R9 draft selector claims into a current variational source, role-bearing `L_total`, strict selector closure, pair12 strict-core upgrade, or ToE closure.
+
+## P2704/S1654 provenance revalidation Ltotal guard
+
+`P2704/S1654` revalidates P1343/P1348 as a declared-scope selector provenance chain and recomputes the P1344 finite stress table.  It is not a variational derivation and does not promote `L_total`, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
