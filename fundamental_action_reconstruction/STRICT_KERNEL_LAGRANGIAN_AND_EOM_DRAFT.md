@@ -1864,3 +1864,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2697/S1647 no-new-live-frontier Ltotal guard
 
 `P2697/S1647` explicitly does not promote `L_total`, variational closure, role transfer, strict-core selector closure, or ToE closure; it certifies that no current lane is live without a new strict typed provider/source/blocker-cut.
+
+## P2698/S1648 directed support nonpromotion guard
+
+`P2698/S1648` preserves the real directed/sign-sensitive exports but blocks their silent promotion into a strict variational selector, role-bearing `L_total`, or ToE closure.  A next move needs a genuinely new non-premise-based strict selector/orientation source object; otherwise P2697/P2698 remain the no-new-live-frontier state.
+
+## P2699/S1649 Aut-invariant selector-source Ltotal guard
+
+`P2699/S1649` is a finite group-theoretic no-go, not a variational source.  Aut-invariant fractal-information data on Z12 cannot supply the missing non-premise directed selector source, so `L_total`, strict selector closure, role transfer, and ToE closure remain unpromoted.
+
+## P2700/S1650 exhaustive selector-functional Ltotal guard
+
+`P2700/S1650` is an exhaustive finite selector-functional obstruction, not a variational source.  It keeps `L_total`, strict selector closure, role transfer, bridge closure, and ToE closure unpromoted.
+
+## P2701/S1651 provider inventory Ltotal guard
+
+`P2701/S1651` is an inventory/acceptance-matrix no-provider result, not a variational source.  It keeps `L_total`, strict selector closure, role transfer, bridge closure, and ToE closure unpromoted.
+
+## P2702/S1652 selector explanation Ltotal guard
+
+`P2702/S1652` is explanatory and finite-model diagnostic.  It does not promote the premise selector into a variational source, `L_total`, role transfer, bridge closure, or ToE closure.

@@ -140,3 +140,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2697 reconciles the broad state-map after P2695/P2696 and emits a no-new-live-frontier certificate on current artifacts: direct residual cancellation, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/H37/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated.
 - Do not continue any closed lane unless a genuinely new strict typed object, theorem, source atom, blocker-cut, or provider class is exported.
 - The next admissible research move must introduce such a new object; otherwise preserve the no-new-live-frontier certificate rather than manufacturing a closure.
+
+## Current symmetry-breaking/direction reconciliation guardrail (P2698/S1648, 2026-06-13)
+
+- P2698 confirms that earlier direction/orientation/sign-sensitive exports are real and must not be ignored, but they are premise-based/readiness/convention scoped: H36/H37/H38 and P739/P740 do not discharge `QW-2191`, do not export pair12 strict-core upgrade, and do not provide Aut(Z12)-invariant canonicity.
+- Preserve the ontology: the nadsoliton is primordial fractal information in a solitonic state, with no lower information layer.
+- Do not promote premise-based direction into strict selector closure, `L_total`, role transfer, or ToE closure.  A next admissible move must introduce a genuinely new non-premise-based strict selector/orientation source object; otherwise keep the P2697/P2698 no-new-live-frontier certificate.
+
+## Current Z12 fractal-information selector-source no-go guardrail (P2699/S1649, 2026-06-13)
+
+- P2699 tests the honest one-object follow-up to P2698: an internal nadsoliton-as-fractal-information selector source constrained by Aut(Z12)-invariance.  The finite calculation finds no unique directed generator and no Aut-invariant distinction of `+1` from `-1`; existing directed support remains premise-based.
+- Do not claim `QW-2191` discharge, strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, role transfer, bridge closure, or ToE closure from this candidate.
+- No proof-grade closure move is unlocked unless a genuinely new non-premise strict selector/orientation source or a new typed object outside the closed lanes is exported; otherwise preserve the P2697-P2699 no-new-live-frontier certificate.
+
+## Current exhaustive Aut-invariant selector-functional no-go guardrail (P2700/S1650, 2026-06-13)
+
+- P2700 exhausts the finite Aut(Z12)-invariant selector-functional continuation of P2699: all invariant Boolean predicates and orbit-constant score functionals fail to select a unique directed unit or distinguish `+1` from `-1`.
+- Do not replay Aut-invariant selector-functional searches as a primary strategy; no `QW-2191`, strict selector, pair12 strict-core, `L_total`, bridge, role-transfer, or ToE closure is exported.
+- A next admissible move requires a genuinely new strict-sourced symmetry-breaking object/provider outside this exhausted invariant-functional class, or a new typed object outside the closed lanes; otherwise preserve the P2697-P2700 no-new-live-frontier certificate.
+
+## Current strict-sourced symmetry-breaking provider inventory guardrail (P2701/S1651, 2026-06-13)
+
+- P2701 performs a generated-artifact inventory for the new strict-sourced symmetry-breaking provider required after P2700.  Existing selector/direction/source candidates remain blocked by premise/convention/nonexport/open-`QW-2191` boundaries; no accepted provider is exported.
+- Do not claim strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, bridge closure, role transfer, or ToE closure from inventory hits.
+- A next admissible move must actually construct a new strict-sourced symmetry-breaking object/provider or introduce a different new typed object outside closed lanes; otherwise preserve the P2697-P2701 no-new-live-frontier certificate.
+
+## Current selector circle explanation guardrail (P2702/S1652, 2026-06-13)
+
+- P2702 explains for humans that a selector is a rule choosing one representative/direction on the Z12 circle.  A premise selector can choose `+1`, but current strict artifacts do not source that choice non-premise; Aut-invariant candidates still fail and P2701 finds no provider.
+- Treat the circle/convexity language as branch-cut intuition unless a strict convexity/selector theorem is newly exported.
+- The next admissible move must construct an actual new strict-sourced symmetry-breaking provider or introduce a different new typed object; otherwise preserve the P2697-P2702 no-new-live-frontier certificate.

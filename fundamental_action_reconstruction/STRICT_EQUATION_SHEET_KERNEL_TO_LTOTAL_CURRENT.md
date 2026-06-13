@@ -2495,3 +2495,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2697/S1647 post-direct-route no-new-live-frontier reconciliation
 
 `P2697/S1647` reruns the broad state-map after P2695/P2696.  The residual direct route is closed/bounded-no-go on current artifacts; P2680 non-selector bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, H37/T171/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated without a genuinely new typed object, theorem, source atom, blocker-cut, or provider class.  The output is a no-new-live-frontier certificate, not a closure promotion.
+
+## P2698/S1648 symmetry-breaking direction reconciliation
+
+`P2698/S1648` greps and reads the existing direction/orientation artifacts.  H36/H37/H38 and P739/P740 are real support: a directed/sign-sensitive layer exists, but it is premise-based/convention-scoped and does not export `QW-2191` discharge, Aut(Z12)-invariant canonicity, pair12 strict-core upgrade, `L_total`, or ToE closure.  The nadsoliton ontology remains primordial fractal information in solitonic state; no lower information layer is introduced.
+
+## P2699/S1649 Z12 fractal-information selector-source no-go
+
+`P2699/S1649` executes the one-object P2698 follow-up as a finite Aut(Z12) calculation.  Treating the nadsoliton ontology as pure primordial fractal information does not by itself break Aut(Z12): the directed generator orbit is `{1,5,7,11}`, `+1` and `-1` are in the same orbit, and the only Aut-fixed Z12 elements/translation strides are `0` and `6`.  Thus no non-premise strict selector/orientation source, `QW-2191` discharge, pair12 strict-core upgrade, role-bearing `L_total`, or ToE closure is exported.
+
+## P2700/S1650 exhaustive Aut-invariant selector-functional no-go
+
+`P2700/S1650` strengthens P2699 by exhaustive finite enumeration: all `64` Aut(Z12)-invariant Boolean sector predicates and `15,625` orbit-constant score functionals over the audited finite score alphabet fail to select a unique directed unit or distinguish `+1` from `-1`.  The Aut-invariant selector-functional route is therefore bounded no-go; no new non-premise selector source, `QW-2191` discharge, pair12 strict-core upgrade, role-bearing `L_total`, or ToE closure is exported.
+
+## P2701/S1651 strict-sourced symmetry-breaking provider inventory
+
+`P2701/S1651` performs the post-P2700 provider inventory instead of replaying Aut-invariant selector-functionals.  It scans generated JSON artifacts for selector/direction/source candidates and applies a strict acceptance matrix requiring non-premise provenance plus explicit `QW-2191`/pair12 upgrade authority.  No accepted strict-sourced symmetry-breaking provider is found; no strict selector closure, role-bearing `L_total`, bridge closure, role transfer, or ToE closure is exported.
+
+## P2702/S1652 selector circle lay mechanism status
+
+`P2702/S1652` explains the selector mechanism with a finite Z12-circle model.  A premise selector can mark `+1` and thereby choose one direction in the toy circle, but the Aut-invariant internal candidate cannot distinguish `+1` from `-1`; P2701 also found no new strict-sourced provider.  Thus the selector story is an intuitive branch/direction mechanism, not a new `QW-2191`, strict selector, `L_total`, or ToE closure export.
