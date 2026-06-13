@@ -3,12 +3,12 @@
 Status: `P2680_LEGACY_STRICT_BRIDGE_SOURCE_INVENTORY_NO_SELECTOR_REPLAY_AUDIT_NO_FALSE_PASS`
 
 ## Content-first repo grep
-- `legacy_strict_kernel_content`: `2533` hits
+- `legacy_strict_kernel_content`: `2541` hits
 - `amplitude_normalization_content`: `8037` hits
-- `damping_compression_content`: `1012` hits
-- `positive_beta_source_content`: `460` hits
-- `canonical_unit_content`: `386` hits
-- `forbidden_replay_content`: `16391` hits
+- `damping_compression_content`: `1013` hits
+- `positive_beta_source_content`: `464` hits
+- `canonical_unit_content`: `390` hits
+- `forbidden_replay_content`: `16413` hits
 
 ## Source atom inventory
 - `legacy_kernel_source_layer_visible` (input discipline): formal=`True`, source_export=`True`, role_safe=`True` — K_legacy_ont and canonical D_f/alpha_geo/beta_tors layer remain visible as bridge input, not final strict identity.

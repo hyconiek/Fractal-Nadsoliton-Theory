@@ -2427,3 +2427,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2680/S1630 legacy-strict bridge-source inventory guard
 
 `P2680/S1630` follows the P2679 pivot without reopening selector, `tau_src -> pair12`, or `beta_tors -> chi_11`.  The non-selector bridge-source inventory finds real formal material: the legacy/strict kernel layers are visible, scalar `alpha_geo` shape normalization exists, and a fractal pushforward can supply the linear-to-power damping shape route.  The full bridge still fails because no role-safe amplitude source, no target-independent positive `beta`/`Z_beta` source, and no canonical length/UV unit source are exported.  Therefore bridge completion, role transfer, O4/O5, `QW-2191` discharge, role-bearing `L_total`, and ToE closure remain blocked.
+
+## P2681/S1631 state-map-first steering guard
+
+`P2681/S1631` supersedes stale priority-by-AGENTS behavior for current execution.  Generic `legacy -> strict` bridge looping is no longer the automatic next move after P2679/P2680; selector, `tau_src -> pair12`, and `beta_tors -> chi11` remain repetition-gated without a new typed object.  The current highest practical proof-grade lane is a finite P46/N49 zero-witness/no-go matrix, especially the direct `m2 psi4` target action coefficient defect on common `psi4**2/2` support, with strict no-closure guards.
+
+## P2682/S1632 P46/P50 target-EOM zero-witness guard
+
+`P2682/S1632` corrects the P2681 finite-frontier target after reading AX12/R39/P50: the P46 target-action `m2_psi4` blocker is already locally closed on the canonical-ontology-supported external lane by AX12, but that closure does not transport to target EOM or strict core.  The live finite blocker is the P50/R39 target-EOM coefficient defect zero witness on `psi4(x)`.  No zero witness, action-to-EOM transport theorem, strict-core promotion, `QW-2191` discharge, role transfer, or ToE closure is exported.
+
+## P2683/S1633 lower-boundary cycle guard
+
+`P2683/S1633` corrects stale direct-route targeting: AX13 already closes the `m2_psi4` target-EOM blocker on the canonical-ontology-supported external lane; P631 freezes the direct formal residual-cancellation route negative; H37/T171 is premise-based rather than missing; and P739/P740 still block strict-core pair12 upgrade.  The T24x/T25x lower-boundary target/nonexport/attempt pattern must not continue as the primary strategy without a new semantic invariant/provider at the chart-label-retaining pair12 typed seed-slot coordinate entry point.
