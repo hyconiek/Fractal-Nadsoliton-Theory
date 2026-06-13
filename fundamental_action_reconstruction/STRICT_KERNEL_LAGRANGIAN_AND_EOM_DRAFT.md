@@ -1808,3 +1808,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2683/S1633 lower-boundary cycle Ltotal guard
 
 `P2683/S1633` adds no variational term and does not promote `L_total`.  It freezes lower-boundary recursion as nonprimary unless a new semantic invariant/provider is exported; otherwise the honest fallback is an independent strict Lagrangian/EOM reverse-closure obstruction matrix.
+
+## P2684/S1634 reverse-closure pivot guard
+
+`P2684/S1634` adds no `L_total` term and exports no selector, role-transfer, or ToE closure.  It only promotes the strict Lagrangian/EOM reverse-closure obstruction matrix to the next honest finite computation after the pair12 semantic-invariant/provider cycle-cut audit fails on current artifacts.
+
+## P2685/S1635 reverse-closure obstruction guard
+
+`P2685/S1635` turns the P2684 pivot into an executable obstruction matrix.  The next honest Lagrangian/EOM move is a shared-background nonproxy component residual table for `EA`, `EH`, and `ELg`, beginning with the Bianchi-I anisotropic row; absent a zero table, the correct output is a no-go for reverse closure from the current reduced/FRW scaffold.
+
+## P2686/S1636 component residual no-go guard
+
+`P2686/S1636` keeps `L_total` nonpromoted: the shared-background nonproxy component table is not zero.  A future continuation must introduce one new strict anisotropic source class that evades the P1977 positive-energy no-go or the P1978 energy-neutral tensor-transport obstruction; otherwise this reverse-closure lane is bounded no-go.
