@@ -1852,3 +1852,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2694/S1644 fresh state-map Ltotal guard
 
 `P2694/S1644` keeps `L_total` nonpromoted: the next selected work is a direct-route zero-witness/no-go matrix, not a variational closure or role-transfer step.
+
+## P2695/S1645 direct g-family matrix Ltotal guard
+
+`P2695/S1645` is a direct-route support-equation audit, not a variational promotion.  It keeps `L_total`, full EOM closure, role transfer, and ToE closure unpromoted.
+
+## P2696/S1646 pair1 zero-equation Ltotal guard
+
+`P2696/S1646` is a direct-route finite residual-equation obstruction matrix.  It does not promote `L_total`, variational closure, role transfer, strict-core selector closure, or ToE closure.
+
+## P2697/S1647 no-new-live-frontier Ltotal guard
+
+`P2697/S1647` explicitly does not promote `L_total`, variational closure, role transfer, strict-core selector closure, or ToE closure; it certifies that no current lane is live without a new strict typed provider/source/blocker-cut.

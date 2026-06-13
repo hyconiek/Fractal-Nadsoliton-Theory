@@ -3,11 +3,11 @@
 Status: `P2694_FRESH_BROAD_STATE_MAP_SELECTION_AFTER_P2680_CLOSURE_NO_FALSE_PASS`
 
 ## Content-first grep
-- `p2693_selected_p2694`: `36` hits
-- `f3_residual_direct_g_family`: `3109` hits
-- `closed_bridge_source_round`: `91` hits
-- `closed_lagrangian_lower_selector`: `8774` hits
-- `forbidden_reopen`: `11168` hits
+- `p2693_selected_p2694`: `50` hits
+- `f3_residual_direct_g_family`: `3142` hits
+- `closed_bridge_source_round`: `92` hits
+- `closed_lagrangian_lower_selector`: `8782` hits
+- `forbidden_reopen`: `11184` hits
 
 ## Residual direct target matrix
 - `direct_g4_c1s1_shift_defect_zero_witness`: live_now=`True`, finite=`True` — Compute/export an explicit zero witness or no-go for the direct quartic-like g4 c1s1 shift defect on corrected canonical-ontology support.

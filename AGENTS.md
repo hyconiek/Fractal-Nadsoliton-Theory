@@ -122,3 +122,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 
 - P2694 selects the residual kernel-split-robust direct-route `g4/g6/gY` `c1s1` zero-witness/no-go matrix as the next finite proof-grade move after P2680 source-inventory closure.
 - Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.
+
+## Current residual direct g-family matrix guardrail (P2695/S1645, 2026-06-13)
+
+- P2695 closes the P2694-selected residual direct `g4/g6/gY` `c1s1` targets only in their explicit route/premise scopes (`R82/P629` for `g4/g6`, `R83/P630` for `gY`).
+- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open.
+- The next finite proof-grade direct-route move is a declared `pair1 c1c1/s1s1` zero-equation carrier/no-go matrix, without selector import or `m2_psi4` replay.
+
+## Current pair1 c1c1/s1s1 no-go guardrail (P2696/S1646, 2026-06-13)
+
+- P2696 audits the remaining direct-route `pair1 c1c1/s1s1` zero-equation carriers and finds bounded no-go on current artifacts: current N477 value instance violates both rows, the scanned fixed-magnitude reference family has no solution, and P631 freezes direct-formal residual cancellation on the current strict branch.
+- Do not continue this direct-route residual-cancellation lane without a genuinely new strict-derived provider class, non-N477 ingredient, or blocker-cut; do not import selector replay, `QW-2191` discharge, bridge-source replay, role transfer, `L_total`, or ToE closure.
+- The next honest move is a post-direct-route broad state-map/no-new-live-frontier reconciliation.
+
+## Current post-direct-route no-new-live-frontier guardrail (P2697/S1647, 2026-06-13)
+
+- P2697 reconciles the broad state-map after P2695/P2696 and emits a no-new-live-frontier certificate on current artifacts: direct residual cancellation, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/H37/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated.
+- Do not continue any closed lane unless a genuinely new strict typed object, theorem, source atom, blocker-cut, or provider class is exported.
+- The next admissible research move must introduce such a new object; otherwise preserve the no-new-live-frontier certificate rather than manufacturing a closure.
