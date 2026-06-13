@@ -2515,3 +2515,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2702/S1652 selector circle lay mechanism status
 
 `P2702/S1652` explains the selector mechanism with a finite Z12-circle model.  A premise selector can mark `+1` and thereby choose one direction in the toy circle, but the Aut-invariant internal candidate cannot distinguish `+1` from `-1`; P2701 also found no new strict-sourced provider.  Thus the selector story is an intuitive branch/direction mechanism, not a new `QW-2191`, strict selector, `L_total`, or ToE closure export.
+
+## P2703/S1653 release 8.1 and 9.3s selector audit
+
+`P2703/S1653` audits Release 8.1 and the alleged Release 9.3s selector evidence.  Release 8.1 does contain a declared-scope `P1343` internal selector source / `P1348` global closure claim, but no direct Release 9.3s document is found; visible R9 material (`P1293`) is a draft checkpoint with selector closure disabled.  These older materials are positive historical support but do not by themselves remove current P2699-P2702 `QW-2191`/non-premise-provider blocks or promote `L_total`/ToE.
+
+## P2704/S1654 P1343/P1348 selector provenance revalidation
+
+`P2704/S1654` performs the finite provenance revalidation requested by P2703.  The P1343 selector object, operator basis, P1343/P1345/P1346/P1348 generated statuses, and the P1344 adversarial CSV are checked directly; the CSV recomputation confirms 12,480 rows, 3,216 admissible rows, zero sign flips, and tolerance-compliant margins.  This revalidates the positive P1343/P1348 selector chain only in its declared Release-8 scope while preserving P2699-P2702 no-go/provider-inventory boundaries for replay lanes; no `L_total`, pair12 strict-core upgrade, role transfer, or ToE closure is exported.
