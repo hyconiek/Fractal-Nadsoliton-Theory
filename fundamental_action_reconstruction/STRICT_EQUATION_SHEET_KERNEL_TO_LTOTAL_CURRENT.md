@@ -2311,3 +2311,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2651/S1601 beta=1 gauge-fixed working-normalization guard
 
 `P2651/S1601` formalizes the honest fallback after P2649-P2650: `beta=1` is allowed as a declared gauge-fixed working normalization because `d'=a*d`, `beta'=beta/a^eta` preserves `beta*d^eta` and every positive beta has a `beta'=1` representative.  Tail ratios remain gauge-respecting only when distances are transformed with the unit map; setting `beta=1` while leaving raw distances unchanged is a new gauge choice, not an invariant operation.  This contract allows modified/compressed successor semantics and empirical holdout support only with explicit gauge/unit declarations, but exports no beta source, legacy role transfer, bridge completion, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.
+
+## P2652/S1602 beta=1 gauge unit-map validator guard
+
+`P2652/S1602` turns the `P2651/S1601` beta=1 working-gauge contract into a unit-map/covariance validator for `P2647/P2648` payloads.  A holdout payload must provide a precommitted raw-to-beta=1 distance map and cannot obtain that map from holdout tail-ratio fitting, strict-target fitting, or post-unblind per-pair retuning.  This exports validator readiness only: no real empirical confirmation, no typed unit-source theorem, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2653/S1603 typed nadsoliton metric/UV source obligation guard
+
+`P2653/S1603` specifies the proof obligations for promoting `beta=1` beyond a gauge-fixed working normalization: a typed nadsoliton state space, metric distance, nadsoliton-selected UV unit, target/holdout independence, scale-orbit quotient discharge, and a dimensionless operator/conservation identity with unique `beta=1`.  The audited current routes cover only bookkeeping and partial metric language; the scale-orbit witness shows every positive beta remains representable by distance rescaling.  Thus this exports no typed metric/UV source theorem, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2654/S1604 scale-invariant beta selector no-go guard
+
+`P2654/S1604` audits whether a scale-invariant functional of strict envelope/tail/log-slope data can select `beta=1`.  The invariant feature rank on the audited beta-distance orbit is one, so every orbit-invariant selector is constant across representatives; raw-coordinate anchors distinguish representatives only after importing an external unit/gauge premise.  Therefore this exports no scale-invariant beta selector, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
