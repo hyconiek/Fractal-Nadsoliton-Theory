@@ -1680,3 +1680,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2651/S1601 beta=1 gauge-fixed Ltotal guard
 
 `P2651/S1601` does not re-enable `L_total`: it permits `beta=1` only as a gauge-fixed working normalization with explicit unit-map bookkeeping, not as a sourced variational damping coefficient.
+
+## P2652/S1602 beta=1 gauge unit-map Ltotal guard
+
+`P2652/S1602` does not re-enable `L_total`: it blocks raw-distance beta=1 substitution and target-fitted unit maps before any frozen holdout is interpreted, but the variational damping term still needs a typed nadsoliton metric/UV source theorem, real blind data, role-transfer rerun, and selector/source discharge.
+
+## P2653/S1603 typed metric UV Ltotal guard
+
+`P2653/S1603` does not re-enable `L_total`: it turns the missing typed nadsoliton metric/UV source into an explicit obligation matrix and verifies the scale-orbit obstruction remains open.  A variational damping coefficient still requires a sourced UV unit plus an independent beta-selecting operator/conservation identity, real blinded support, role-transfer rerun, and selector/source discharge.
+
+## P2654/S1604 scale-invariant beta selector Ltotal guard
+
+`P2654/S1604` does not re-enable `L_total`: invariant denominator functionals cannot select a unique beta representative, and raw-coordinate anchors are gauge/unit premises until sourced by typed nadsoliton metric/UV dynamics.  A variational damping coefficient still requires a sourced UV unit plus an independent beta-selecting operator/conservation identity, role-transfer rerun, and selector/source discharge.
