@@ -1668,3 +1668,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2648/S1598 frozen-kernel statistical margin Ltotal guard
 
 `P2648/S1598` does not re-enable `L_total`: it adds uncertainty-penalized pass/fail criteria for the frozen compression holdout, but role-bearing dynamics still require actual blind data, frozen controls, target-independent beta/source proof, selector/source discharge, and role-transfer rerun.
+
+## P2649/S1599 beta-source route matrix Ltotal guard
+
+`P2649/S1599` does not re-enable `L_total`: beta=1 remains a robust working normalization/compression parameter until a canonical length/UV unit plus target-independent conservation/operator identity is proved; empirical holdout success cannot substitute for that source theorem.
+
+## P2650/S1600 canonical length/UV unit Ltotal guard
+
+`P2650/S1600` does not re-enable `L_total`: no audited canonical length/UV candidate supplies the typed nadsoliton unit needed to turn `beta=1` from gauge-fixed working normalization into a variational source parameter.
+
+## P2651/S1601 beta=1 gauge-fixed Ltotal guard
+
+`P2651/S1601` does not re-enable `L_total`: it permits `beta=1` only as a gauge-fixed working normalization with explicit unit-map bookkeeping, not as a sourced variational damping coefficient.

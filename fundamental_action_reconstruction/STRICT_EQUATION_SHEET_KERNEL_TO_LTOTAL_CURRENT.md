@@ -2299,3 +2299,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2648/S1598 frozen-kernel holdout statistical margin guard
 
 `P2648/S1598` upgrades the P2647 holdout harness with a familywise statistical margin rule: every preregistered tail-ratio and log-slope inequality must pass after a Bonferroni one-sided uncertainty penalty, using locked P2646 thresholds and no retuning.  The strict synthetic fixture has positive margin budget and the legacy fixture is on the wrong side of each audited inequality, but no blinded measurement payload is tested here.  Thus this exports only a statistical decision rule/power budget: no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.
+
+## P2649/S1599 beta-source route matrix guard
+
+`P2649/S1599` audits the post-P2648 beta-source routes algebraically.  Under `d'=a*d`, the denominator orbit sends `beta -> beta/a^eta`, so every positive beta can be represented with bare `beta=1` after choosing `a=beta^(1/eta)`; likewise any single tail-ratio target recovers a beta by `beta=(1-q)/(q*b^eta-a^eta)`.  These are normalization/calibration facts, not target-independent source theorems.  The route matrix leaves normalization, flux/criticality, micro `Z_beta`, and empirical holdout routes blocked as beta sources; no bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure is exported.
+
+## P2650/S1600 canonical length/UV unit source guard
+
+`P2650/S1600` audits the canonical length/UV unit atom required by P2649.  The audited candidates `d=1`, `beta_tors`, `alpha_geo`, `D_f=eta`, the inverse-hierarchy threshold, the micro beta median, and future empirical tail-ratio calibration all fail as target-independent unit sources because they lack typed nadsoliton metric/UV source atoms, role-transfer theorems, or normalization-gauge discharge.  A finite expression scan over audited constants can generate near-unit numerology but still exports no typed unit theorem.  Thus `beta=1` remains a robust working normalization/compression parameter, not a sourced strict beta; bridge completion, role transfer, `QW-2191`, role-bearing `L_total`, and ToE closure remain closed.
+
+## P2651/S1601 beta=1 gauge-fixed working-normalization guard
+
+`P2651/S1601` formalizes the honest fallback after P2649-P2650: `beta=1` is allowed as a declared gauge-fixed working normalization because `d'=a*d`, `beta'=beta/a^eta` preserves `beta*d^eta` and every positive beta has a `beta'=1` representative.  Tail ratios remain gauge-respecting only when distances are transformed with the unit map; setting `beta=1` while leaving raw distances unchanged is a new gauge choice, not an invariant operation.  This contract allows modified/compressed successor semantics and empirical holdout support only with explicit gauge/unit declarations, but exports no beta source, legacy role transfer, bridge completion, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.
