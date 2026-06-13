@@ -1660,3 +1660,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2646/S1596 frozen-kernel compression-signature Ltotal guard
 
 `P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.
+
+## P2647/S1597 frozen-kernel blind-holdout harness Ltotal guard
+
+`P2647/S1597` does not re-enable `L_total`: it supplies a blind-payload schema, discriminator evaluator, and fake-pass firewall for the modified compression successor, but a role-bearing variational term still requires actual blind data, frozen controls, a target-independent beta/source theorem, and the later role-transfer rerun.
+
+## P2648/S1598 frozen-kernel statistical margin Ltotal guard
+
+`P2648/S1598` does not re-enable `L_total`: it adds uncertainty-penalized pass/fail criteria for the frozen compression holdout, but role-bearing dynamics still require actual blind data, frozen controls, target-independent beta/source proof, selector/source discharge, and role-transfer rerun.
+
+## P2649/S1599 beta-source route matrix Ltotal guard
+
+`P2649/S1599` does not re-enable `L_total`: beta=1 remains a robust working normalization/compression parameter until a canonical length/UV unit plus target-independent conservation/operator identity is proved; empirical holdout success cannot substitute for that source theorem.
+
+## P2650/S1600 canonical length/UV unit Ltotal guard
+
+`P2650/S1600` does not re-enable `L_total`: no audited canonical length/UV candidate supplies the typed nadsoliton unit needed to turn `beta=1` from gauge-fixed working normalization into a variational source parameter.
+
+## P2651/S1601 beta=1 gauge-fixed Ltotal guard
+
+`P2651/S1601` does not re-enable `L_total`: it permits `beta=1` only as a gauge-fixed working normalization with explicit unit-map bookkeeping, not as a sourced variational damping coefficient.

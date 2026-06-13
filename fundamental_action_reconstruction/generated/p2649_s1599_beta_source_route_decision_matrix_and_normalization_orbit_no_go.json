@@ -1,0 +1,763 @@
+{
+  "beta_source_route_matrix": [
+    {
+      "atom_truth": {
+        "canonical_length_unit_exported": false,
+        "normalization_gauge_fixed": false,
+        "normalization_orbit_exists": true
+      },
+      "available_atoms": [
+        "normalization_orbit_exists"
+      ],
+      "claim": "set beta=1 by choosing length/UV units",
+      "missing_required_atoms": [
+        "canonical_length_unit_exported",
+        "normalization_gauge_fixed"
+      ],
+      "passes_as_target_independent_beta_source": false,
+      "required_atoms": [
+        "canonical_length_unit_exported",
+        "normalization_gauge_fixed"
+      ],
+      "route": "normalization_orbit_beta_one",
+      "verdict": "gauge representative only, not source"
+    },
+    {
+      "atom_truth": {
+        "canonical_length_unit_exported": false,
+        "monotone_flux_functional_exists": true,
+        "normalization_gauge_fixed": false,
+        "target_independent_conservation_constant_exported": false
+      },
+      "available_atoms": [
+        "monotone_flux_functional_exists"
+      ],
+      "claim": "derive beta=1 from information-flux conservation",
+      "missing_required_atoms": [
+        "canonical_length_unit_exported",
+        "normalization_gauge_fixed",
+        "target_independent_conservation_constant_exported"
+      ],
+      "passes_as_target_independent_beta_source": false,
+      "required_atoms": [
+        "canonical_length_unit_exported",
+        "normalization_gauge_fixed",
+        "target_independent_conservation_constant_exported"
+      ],
+      "route": "information_flux_conservation_beta_one",
+      "verdict": "calibrates to whichever beta supplies the constant"
+    },
+    {
+      "atom_truth": {
+        "canonical_length_unit_exported": false,
+        "neural_attention_prism_available": true,
+        "unique_beta_one_critical_extremum_exported": false
+      },
+      "available_atoms": [
+        "neural_attention_prism_available"
+      ],
+      "claim": "derive beta=1 as unique critical/entropy optimum",
+      "missing_required_atoms": [
+        "canonical_length_unit_exported",
+        "unique_beta_one_critical_extremum_exported"
+      ],
+      "passes_as_target_independent_beta_source": false,
+      "required_atoms": [
+        "canonical_length_unit_exported",
+        "unique_beta_one_critical_extremum_exported"
+      ],
+      "route": "edge_of_chaos_beta_one",
+      "verdict": "heuristic neural analogy only"
+    },
+    {
+      "atom_truth": {
+        "bridge_zbeta_source_accepted": false,
+        "micro_zbeta_measurements_exist": true,
+        "normalization_gauge_fixed": false,
+        "positive_zbeta_source_exported": false
+      },
+      "available_atoms": [
+        "micro_zbeta_measurements_exist"
+      ],
+      "claim": "derive strict beta=1 or Z_beta=100 from micro renormalization",
+      "missing_required_atoms": [
+        "bridge_zbeta_source_accepted",
+        "normalization_gauge_fixed",
+        "positive_zbeta_source_exported"
+      ],
+      "passes_as_target_independent_beta_source": false,
+      "required_atoms": [
+        "bridge_zbeta_source_accepted",
+        "normalization_gauge_fixed",
+        "positive_zbeta_source_exported"
+      ],
+      "route": "micro_zbeta_bridge_source",
+      "verdict": "micro/strict mismatch and normalization gauge remain"
+    },
+    {
+      "atom_truth": {
+        "empirical_holdout_can_replace_source_theorem": false,
+        "holdout_harness_ready": true,
+        "holdout_real_blind_data_executed": false,
+        "statistical_margin_rule_ready": true
+      },
+      "available_atoms": [
+        "holdout_harness_ready",
+        "statistical_margin_rule_ready"
+      ],
+      "claim": "use frozen-kernel empirical compression signature as beta source",
+      "missing_required_atoms": [
+        "empirical_holdout_can_replace_source_theorem",
+        "holdout_real_blind_data_executed"
+      ],
+      "passes_as_target_independent_beta_source": false,
+      "required_atoms": [
+        "empirical_holdout_can_replace_source_theorem",
+        "holdout_real_blind_data_executed"
+      ],
+      "route": "blind_empirical_compression_holdout",
+      "verdict": "empirical support route only, never source theorem by itself"
+    }
+  ],
+  "closure_decision": {
+    "beta_source_exported_now": false,
+    "decision": "NO_TARGET_INDEPENDENT_BETA_SOURCE_ROUTE_PASSES__NORMALIZATION_ORBIT_AND_EMPIRICAL_ROUTES_DO_NOT_EXPORT_SOURCE",
+    "full_kernel_now": false,
+    "next_honest_step": "Build a canonical-length/UV-unit theorem or dimensionless conservation identity independent of K_strict_gate; otherwise run the P2647/P2648 holdout only as empirical support while beta-source remains blocked.",
+    "passing_beta_source_routes": [],
+    "professorial_closure_path": [
+      "First fix a canonical length/UV unit from nadsoliton dynamics, not from the strict kernel target.",
+      "Then derive an independent dimensionless conservation constant or operator identity whose unique solution is beta=1 before comparing to K_strict_gate.",
+      "Only after that rerun micro Z_beta and role-transfer; do not treat a blind empirical pass as a beta-source substitute.",
+      "If no such atom appears, keep beta=1 as a robust working normalization plus empirical-compression hypothesis, not as full ToE sourcehood."
+    ],
+    "professorial_verdict": "P2649 separates three things that kept getting conflated: choosing beta=1 as a normalization representative, recovering beta=1 from a chosen tail-ratio target, and exporting a target-independent beta source theorem.  The first two are algebraically valid but circular as source claims; the empirical P2647/P2648 route is useful support but cannot replace the source theorem.",
+    "toe_closure_now": false
+  },
+  "latest_commit_audit": [
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.json",
+        "fundamental_action_reconstruction/generated/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.md",
+        "fundamental_action_reconstruction/generated/p2648_s1598_frozen_kernel_holdout_statistical_margin_power_certificate.json",
+        "fundamental_action_reconstruction/generated/p2648_s1598_frozen_kernel_holdout_statistical_margin_power_certificate.md",
+        "fundamental_action_reconstruction/p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py",
+        "fundamental_action_reconstruction/p2648_s1598_frozen_kernel_holdout_statistical_margin_power_certificate.py",
+        "fundamental_action_reconstruction/test_p2647_s1597_frozen_kernel_blind_holdout_execution_harness_and_fake_pass_firewall.py",
+        "fundamental_action_reconstruction/test_p2648_s1598_frozen_kernel_holdout_statistical_margin_power_certificate.py"
+      ],
+      "sha": "2d6accdd",
+      "subject": "Add P2647/P2648 frozen-kernel blind‑holdout harness and statistical‑margin certificate with tests"
+    },
+    {
+      "files": [],
+      "sha": "ca9ffb71",
+      "subject": "Merge pull request #164 from hyconiek/codex/add-research-content-auditing-etjex4"
+    },
+    {
+      "files": [],
+      "sha": "713599c9",
+      "subject": "Merge branch 'main' into codex/add-research-content-auditing-etjex4"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.json",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.md",
+        "fundamental_action_reconstruction/generated/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.json",
+        "fundamental_action_reconstruction/generated/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.md",
+        "fundamental_action_reconstruction/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py",
+        "fundamental_action_reconstruction/test_p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/test_p2646_s1596_frozen_kernel_compression_signature_preregistration_certificate.py"
+      ],
+      "sha": "81adce2d",
+      "subject": "Add P2646 frozen compression preregistration"
+    },
+    {
+      "files": [],
+      "sha": "c086ce5c",
+      "subject": "Merge pull request #163 from hyconiek/codex/add-research-content-auditing"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.json",
+        "fundamental_action_reconstruction/generated/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.md",
+        "fundamental_action_reconstruction/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py",
+        "fundamental_action_reconstruction/test_p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py"
+      ],
+      "sha": "fc27ccd3",
+      "subject": "Add P2645 role transfer matrix rerun"
+    },
+    {
+      "files": [],
+      "sha": "1e4e4a37",
+      "subject": "Merge pull request #162 from hyconiek/codex/add-p2641-z12-successor-connection-audit"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.json",
+        "fundamental_action_reconstruction/generated/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.md",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.json",
+        "fundamental_action_reconstruction/generated/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.md",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.json",
+        "fundamental_action_reconstruction/generated/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.md",
+        "fundamental_action_reconstruction/p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.py",
+        "fundamental_action_reconstruction/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py",
+        "fundamental_action_reconstruction/p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.py",
+        "fundamental_action_reconstruction/test_p2642_s1592_universal_affine_zero_lattice_source_no_go_and_node_role_demotion.py",
+        "fundamental_action_reconstruction/test_p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py",
+        "fundamental_action_reconstruction/test_p2644_s1594_modified_compressed_inverse_hierarchy_successor_theorem.py"
+      ],
+      "sha": "0868936c",
+      "subject": "Add P2644 compressed inverse hierarchy successor audit"
+    },
+    {
+      "files": [],
+      "sha": "22a3ce72",
+      "subject": "Merge pull request #161 from hyconiek/codex/audit-latest-research-commits-for-updates"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.json",
+        "fundamental_action_reconstruction/generated/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.md",
+        "fundamental_action_reconstruction/generated/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.json",
+        "fundamental_action_reconstruction/generated/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.md",
+        "fundamental_action_reconstruction/p2640_s1590_offset_stride_topology_selector_source_no_go_audit.py",
+        "fundamental_action_reconstruction/p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.py",
+        "fundamental_action_reconstruction/test_p2640_s1590_offset_stride_topology_selector_source_no_go_audit.py",
+        "fundamental_action_reconstruction/test_p2641_s1591_z12_quotient_safe_successor_connection_no_go_audit.py"
+      ],
+      "sha": "3dbb191f",
+      "subject": "Add P2641 Z12 successor connection no-go audit"
+    },
+    {
+      "files": [],
+      "sha": "3ca84b43",
+      "subject": "Merge pull request #160 from hyconiek/codex/add-current-toe-blocker-lattice-audit"
+    },
+    {
+      "files": [
+        "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md",
+        "fundamental_action_reconstruction/generated/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.json",
+        "fundamental_action_reconstruction/generated/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.md",
+        "fundamental_action_reconstruction/generated/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.json",
+        "fundamental_action_reconstruction/generated/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.md",
+        "fundamental_action_reconstruction/generated/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.json",
+        "fundamental_action_reconstruction/generated/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.md",
+        "fundamental_action_reconstruction/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.py",
+        "fundamental_action_reconstruction/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py",
+        "fundamental_action_reconstruction/p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.py",
+        "fundamental_action_reconstruction/test_p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.py",
+        "fundamental_action_reconstruction/test_p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py",
+        "fundamental_action_reconstruction/test_p2639_s1589_offset_stride_metric_lift_exhaustion_closure_path.py"
+      ],
+      "sha": "c2c1374a",
+      "subject": "Add P2639 offset stride metric lift audit"
+    }
+  ],
+  "negative_export_flags": {
+    "bridge_completion_exported": false,
+    "empirical_holdout_promoted_to_source": false,
+    "micro_strict_mismatch_removed": false,
+    "normalization_gauge_fixed": false,
+    "positive_zbeta_source_exported": false,
+    "q_w_2191_discharged": false,
+    "role_bearing_ltotal_reenabled": false,
+    "role_transfer_revalidated": false,
+    "target_independent_beta_identity_exported": false,
+    "toe_closure_claimed": false
+  },
+  "normalization_orbit_witness": {
+    "all_positive_betas_gauge_to_one": true,
+    "consequence": "The bare numeral beta=1 is an orbit representative, not a source theorem, until a canonical length/UV unit is independently fixed.",
+    "exports_beta_source": false,
+    "group_action": "For the envelope denominator 1+beta*d^eta, coordinate rescaling d'=a*d sends beta to beta'=beta/a^eta.",
+    "rows": [
+      {
+        "bare_beta_one_reached_by_rescaling": true,
+        "beta_prime_after_rescaling": 1.0000000000000004,
+        "denominator_invariant_check_beta_over_a_eta": 1.0000000000000004,
+        "length_rescaling_a_that_sets_beta_prime_to_1": 0.0774263682681127,
+        "original_beta": 0.01
+      },
+      {
+        "bare_beta_one_reached_by_rescaling": true,
+        "beta_prime_after_rescaling": 1.0,
+        "denominator_invariant_check_beta_over_a_eta": 1.0,
+        "length_rescaling_a_that_sets_beta_prime_to_1": 0.26678131435038355,
+        "original_beta": 0.0927
+      },
+      {
+        "bare_beta_one_reached_by_rescaling": true,
+        "beta_prime_after_rescaling": 1.0,
+        "denominator_invariant_check_beta_over_a_eta": 1.0,
+        "length_rescaling_a_that_sets_beta_prime_to_1": 1.0,
+        "original_beta": 1.0
+      },
+      {
+        "bare_beta_one_reached_by_rescaling": true,
+        "beta_prime_after_rescaling": 1.0,
+        "denominator_invariant_check_beta_over_a_eta": 1.0,
+        "length_rescaling_a_that_sets_beta_prime_to_1": 1.0793791657211516,
+        "original_beta": 1.1473958
+      },
+      {
+        "bare_beta_one_reached_by_rescaling": true,
+        "beta_prime_after_rescaling": 1.0000000000000002,
+        "denominator_invariant_check_beta_over_a_eta": 1.0000000000000002,
+        "length_rescaling_a_that_sets_beta_prime_to_1": 2.160119477784612,
+        "original_beta": 4.0
+      }
+    ],
+    "theorem": "For every beta>0 there exists a positive a=beta^(1/eta) that rewrites the same denominator orbit with beta'=1."
+  },
+  "payload_sha256": "126906b5572d72ceddcb9201dd2a3c7dd8ac462bd140744041f13bff868948c5",
+  "semantic_rg_antiduplication_audit": {
+    "mode": "content-first semantic audit for beta-source route decision matrix and normalization-orbit no-go, not packet-name search",
+    "patterns": {
+      "beta_source_identity_content": {
+        "count": 176,
+        "samples": [
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2209:`P2625/S1575` supplies a sharper damping-side proof boundary.  A fractal measure pushforward `q(d)=d^(9/5)` plus an independent positive coefficient source `Z_beta=beta/beta_tors=100` would exactly transform the legacy linear torsion denominator into `1+beta*d^(9/5)`, but the current repository does not yet export that coefficient source.  Scalar rescaling, `eta=9/5` alone, or a scale-dependent `beta_eff(d)` shortcut are rejected as completion proofs; P2620 therefore remains unrepaired without the independent `positive_beta_renormalization_source` and the separate orientation source.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2211:## P2626/S1576 micro Z_beta source nonpromotion guard",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2213:`P2626/S1576` audits the best current micro-derived coefficient lane for the missing P2625 atom.  QW-2064 gives positive interval-level support for `Z_beta` and includes `100` inside its reported broad interval, but it does not export `positive_beta_renormalization_source`: the target is computed from the already selected strict kernel, the micro median is not exactly `100`, and the report carries a wide-CI warning.  The next admissible step is a noncircular `Z_beta` coefficient-source theorem or an explicit interval/tolerance bridge theorem, not bridge/role promotion.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2217:`P2627/S1577` supplies the explicit finite-window tolerance formula for an interval-valued `Z_beta` damping bridge: for `D_Z(d)=1+(Z_beta/100)d^(9/5)` on `0<d<=10`, the relative denominator error is maximized at `d=10`, so an `epsilon`-bridge requires `|Z_beta/100-1| <= epsilon*(1+10^(9/5))/10^(9/5)`.  QW-2064's micro median gives only loose interval support, and its broad q25-q75 interval plus target-dependence and wide-CI warning block promotion to `positive_beta_renormalization_source`.  Thus P2625/P2620 remain unrepaired; no role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure is reopened.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2221:`P2628/S1578` exhausts a fixed target-blind quality-filter class over the QW-2048 micro bins: `n>=N`, `phase_min_median>=P`, and `rmse_median<=R`, aggregated by the median of per-bin `Z_beta` medians.  No admitted filter with at least three support bins puts both the median and q25-q75 interval inside the strict 1% envelope around `Z_beta=100`; the best median-only row remains about 9.76% high.  Therefore quality-filter narrowing does not export `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2225:`P2629/S1579` separates absolute `Z_beta=100` from normalization-invariant micro content.  Under `beta_uv -> lambda beta_uv`, both `Z_beta_median` and `Z_beta_target` scale by `1/lambda`; only `Z_beta_median/Z_beta_target = beta_median/beta_strict` is invariant, and the current invariant ratio is about `1.1474`, not `1`.  Therefore neither UV normalization convention nor target-blind filtering exports `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked pending a genuine target-independent micro normalization identity for `beta` itself.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2227:## P2630/S1580 strict beta source vs bridge Z_beta separation guard",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2229:`P2630/S1580` separates strict-internal beta/eta sourcehood from the legacy-to-strict bridge coefficient obligation.  Even if a P2603-style internal strict beta source is granted, the P2625 `positive_beta_renormalization_source` additionally requires an independent legacy/UV normalization source fixing `beta_uv=beta_tors=0.01` and a normalization-invariant match `beta_micro/beta_strict=1`.  The finite truth table has one accepting row and the current assignment remains rejecting, so P2603/P2608 cannot be silently recycled to reopen bridge completion, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2233:`P2631/S1581` audits the strict kernel through the neural-network prism: the cosine factor can be read as sinusoidal positional/resonance encoding and `1/(1+beta*d^eta)` as a heavy-tailed attention bias on the `D_f=eta=9/5` fractal measure.  The finite-window information-flux functional `F(beta)=int |K_beta(d)|^2 dmu_f(d)` is strictly decreasing for `beta>0`, so `F(beta)=C` selects `beta=1` only if the conservation constant is already calibrated to `F(1)`; for every `beta0>0`, `C=F(beta0)` selects `beta0`.  The audited entropy-throughput proxy does not uniquely peak at `beta=1`, and bare `beta=1` is not invariant under `d -> a*d`, `beta -> beta/a^eta`.  Therefore the neural criticality route does not export `positive_beta_renormalization_source`, does not close the P2629/P2630 obstruction, and does not reopen role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2253:`P2636/S1586` answers the full-kernel question directly: strict shows real ToE symptoms as a stable, one-kernel, neural-attention-like working architecture, but it is not yet a full ToE kernel.  The current blocker lattice keeps open bridge completion, beta/Z_beta source, phase-frequency node/gauge certificate, inverse-hierarchy role transfer, strict-core selector/QW-2191 source, role-bearing `L_total` dynamics, and blind frozen-kernel empirical confirmation.  Therefore ToE symptoms count as support, not finality.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2269:`P2640/S1590` checks the newest P2637-P2639 frontier against topology/selector artifacts (`Z_12`, `Phase_12/Aut_Z12`, parity, primordial-preorientation, projective selector closure, `QW-2191`, axiom-augmented generation mapping).  These artifacts provide real carrier and selector-adjacent support, but none exports a canonical zero-lattice offset `k0` and stride `m` for the P2639 role-like lifts.  Therefore the phase-node repair remains a source-guarded candidate rather than bridge completion, and strict kernel full-finality, role-transfer, beta source, inverse hierarchy, `QW-2191`, role-bearing `L_total`, and ToE closure remain closed.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2273:`P2641/S1591` upgrades the P2640 source search into a finite `Z_12/Aut(Z_12)` calculation.  In strict Aut-invariant scope, only origins `0,6` and nonzero translation stride `6` survive; the UV-safe exact invariant lift does not preserve the inverse-hierarchy proxy.  The premise-based `T164/N523` fixing datum is genuine directed support, but it fixes a `+1` generator convention rather than the P2639 zero-lattice origin `k0` and role-like stride `3` or `6`.  Therefore no quotient-safe successor/connection currently promotes the offset/stride lift to bridge completion; strict full-kernel finality, role-transfer, beta source, inverse hierarchy, `QW-2191`, role-bearing `L_total`, and ToE closure remain closed.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2277:`P2642/S1592` algebraically exhausts exact affine repairs of legacy integer nodes into the strict zero lattice: every such repair is `r_{k0,s}(d)=(4s/3)d+(4/3+4k0-8s/3)`.  Strict `Aut(Z12)` sources and N523-style premise generator support, while keeping the origin canonical, do not produce a UV-safe inverse-hierarchy node repair.  Therefore the legacy integer node/gauge role remains demoted unless a new zero-lattice origin source atom is proved; bridge completion, role transfer, beta source, inverse hierarchy, `QW-2191`, and ToE closure remain closed.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2281:`P2643/S1593` proves a beta-threshold obstruction for unchanged inverse-hierarchy transfer after P2642 node-role demotion.  For the audited phase channel and `eta=9/5`, `|K(7)|/|K(1)|>1` holds only for `beta < beta_crit ≈ 0.0927`; strict `beta=1` and the current micro beta median lie above that threshold.  Therefore the legacy distant-octave / inverse-hierarchy role is rejected as an unchanged strict transfer unless a new target-independent beta-source theorem changes the strict damping semantics; bridge completion, role transfer, `L_total`, `QW-2191`, and ToE closure remain closed.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2285:`P2644/S1594` supplies the modified successor theorem left open by P2643: relative to the legacy hyperbolic denominator, the strict `beta=1, eta=9/5` denominator has suppression factor `S(d)=(1+0.01d)/(1+d^(9/5))`, and `S` is strictly decreasing for `d>=1`.  Thus the unchanged distant-octave/inverse-hierarchy role is rejected, while a modified strict compression/locality-bias successor is admissible as descriptive semantics only.  This still does not export beta sourcehood, bridge completion, role-bearing `L_total`, `QW-2191` discharge, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2289:`P2645/S1595` reruns the legacy-role transfer table after P2642-P2644.  The only current pass is the modified/compressed successor reading of the strict denominator as monotone compression/locality-bias.  The legacy integer node/gauge role and unchanged inverse-hierarchy transfer are rejected/demoted, while `alpha_geo` EW and `alpha_EM/beta_tors` roles remain blocked pending explicit completion-map, operator-source, and beta-source theorems.  Thus bridge completion, full role transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain closed.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2293:`P2646/S1596` turns the P2644 compression/locality-bias successor and P2645 role-matrix route into a locked empirical discriminator rather than a new fit: phase/amplitude-invariant denominator tail ratios and log-tail slopes are preregistered for audited pairs such as `(1,7)` and `(1,12)`, with strict `beta=1, eta=9/5` predictions separated far below the legacy `beta_tors=0.01` hyperbolic tail.  This is only a blind-holdout interface; it exports no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2297:`P2647/S1597` converts the `P2646/S1596` frozen compression preregistration into an executable schema/harness and fake-pass firewall.  Synthetic strict fixtures pass the locked tail-ratio/log-slope inequalities while legacy and midpoint fixtures fail, but no real blinded measurement payload is loaded.  Therefore this exports harness readiness only: no empirical confirmation, no beta source, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2301:`P2648/S1598` upgrades the P2647 holdout harness with a familywise statistical margin rule: every preregistered tail-ratio and log-slope inequality must pass after a Bonferroni one-sided uncertainty penalty, using locked P2646 thresholds and no retuning.  The strict synthetic fixture has positive margin budget and the legacy fixture is on the wrong side of each audited inequality, but no blinded measurement payload is tested here.  Thus this exports only a statistical decision rule/power budget: no empirical confirmation, beta source, bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2303:## P2649/S1599 beta-source route matrix guard",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2305:`P2649/S1599` audits the post-P2648 beta-source routes algebraically.  Under `d'=a*d`, the denominator orbit sends `beta -> beta/a^eta`, so every positive beta can be represented with bare `beta=1` after choosing `a=beta^(1/eta)`; likewise any single tail-ratio target recovers a beta by `beta=(1-q)/(q*b^eta-a^eta)`.  These are normalization/calibration facts, not target-independent source theorems.  The route matrix leaves normalization, flux/criticality, micro `Z_beta`, and empirical holdout routes blocked as beta sources; no bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure is exported.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1594:`P2629/S1579` keeps role-bearing `L_total` closed.  The exact damping coefficient cannot be obtained by treating the absolute number `Z_beta=100` as source data; the normalization-invariant micro mismatch remains nonzero, so a target-independent beta-normalization theorem is still required before damping completion, role transfer, `QW-2191`, or ToE closure can be rerun.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1596:## P2630/S1580 strict beta source vs bridge Z_beta Ltotal guard",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1650:`P2643/S1593` does not re-enable role-bearing `L_total`: the unchanged inverse-hierarchy role is incompatible with strict `beta=1` on the audited threshold calculation.  Any variational term must therefore use a modified/compressed successor semantics, or wait for a new beta-source theorem below the threshold without retuning.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1654:`P2644/S1594` keeps `L_total` closed: the strict denominator can be read as a monotone compression/locality-bias successor, not as unchanged legacy inverse-hierarchy transfer.  A role-bearing variational term still requires a target-independent beta source and typed source semantics for the compression operator.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1658:`P2645/S1595` prevents promoting the post-P2644 compression semantics into a full variational source.  The matrix has only a descriptive modified-successor pass and still lacks target-independent beta sourcehood, alpha-role transfer, completion-map closure, and a `QW-2191` selector source; `L_total` remains non-role-bearing.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1662:`P2646/S1596` does not re-enable `L_total`: it preregisters a no-retuning empirical tail-ratio/log-slope test for the modified compression successor, but a role-bearing variational term still needs blind data plus a target-independent beta/source theorem and the later role-transfer matrix.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1666:`P2647/S1597` does not re-enable `L_total`: it supplies a blind-payload schema, discriminator evaluator, and fake-pass firewall for the modified compression successor, but a role-bearing variational term still requires actual blind data, frozen controls, a target-independent beta/source theorem, and the later role-transfer rerun.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1670:`P2648/S1598` does not re-enable `L_total`: it adds uncertainty-penalized pass/fail criteria for the frozen compression holdout, but role-bearing dynamics still require actual blind data, frozen controls, target-independent beta/source proof, selector/source discharge, and role-transfer rerun.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1672:## P2649/S1599 beta-source route matrix Ltotal guard",
+          "./fundamental_action_reconstruction/p2503_s1453_strict_damping_marginal_rg_flow_candidate_certificate.py:58:        \"new_packet\": \"P2503|S1453|strict damping marginal RG-flow|RG-flow candidate certificate|running beta source candidate|damping source candidate\",",
+          "./fundamental_action_reconstruction/p2624_s1574_current_blockers_and_next_step_recommendation.py:171:            \"1+beta*d^(9/5) from legacy linear torsion data plus an explicitly typed compressibility/source field, or prove that an independent beta source is unavoidable.\"",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:159:        [\"positive_beta_renormalization_source\"],",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:175:        [\"fractal_measure_projection_source\", \"positive_beta_renormalization_source\", \"scale_domain_typing\"],",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:191:    atoms = [\"fractal_measure_projection_source\", \"positive_beta_renormalization_source\", \"scale_domain_typing\"]",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:203:        \"positive_beta_renormalization_source\": False,",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:215:        \"minimal_new_required_atom\": \"positive_beta_renormalization_source\",",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:283:            \"target\": \"derive or obstruct positive_beta_renormalization_source / Z_beta from micro-supported strict dynamics\",",
+          "./fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:357:`P2625/S1575` supplies a sharper damping-side proof boundary.  A fractal measure pushforward `q(d)=d^(9/5)` plus an independent positive coefficient source `Z_beta=beta/beta_tors=100` would exactly transform the legacy linear torsion denominator into `1+beta*d^(9/5)`, but the current repository does not yet export that coefficient source.  Scalar rescaling, `eta=9/5` alone, or a scale-dependent `beta_eff(d)` shortcut are rejected as completion proofs; P2620 therefore remains unrepaired without the independent `positive_beta_renormalization_source` and the separate orientation source.",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:114:        \"accepts_positive_beta_renormalization_source\": accepting,",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:125:        \"positive_beta_renormalization_source_after_p2626\": source_accepts,",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:144:            \"The reported wide-CI warning blocks promotion to a strict positive_beta_renormalization_source.\",",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:176:        \"p2625_update\": p2625_update(table[\"accepts_positive_beta_renormalization_source\"]),",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:188:        \"# P2626/S1576 Micro Z_beta source nonpromotion audit\",",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:212:        f\"Accepts positive_beta_renormalization_source: `{table['accepts_positive_beta_renormalization_source']}`.\",",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:240:## P2626/S1576 micro Z_beta source nonpromotion guard",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:242:`P2626/S1576` audits the best current micro-derived coefficient lane for the missing P2625 atom.  QW-2064 gives positive interval-level support for `Z_beta` and includes `100` inside its reported broad interval, but it does not export `positive_beta_renormalization_source`: the target is computed from the already selected strict kernel, the micro median is not exactly `100`, and the report carries a wide-CI warning.  The next admissible step is a noncircular `Z_beta` coefficient-source theorem or an explicit interval/tolerance bridge theorem, not bridge/role promotion.",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:249:    append_once(ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\", \"P2626/S1576 micro Z_beta source nonpromotion guard\", equation_note)",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:261:        \"accepts_positive_beta_source\": payload[\"positive_beta_source_acceptance\"][\"accepts_positive_beta_renormalization_source\"],",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:31:    \"positive_beta_renormalization_source_exported\",",
+          "./fundamental_action_reconstruction/p2626_s1576_micro_zbeta_source_nonpromotion_audit.py:78:    return {\"tool\": \"rg\", \"mode\": \"content-first semantic audit for micro Z_beta source\", \"patterns\": {k: rg_count(v) for k, v in patterns.items()}}",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:182:        \"accepts_positive_beta_renormalization_source\": all(gates.values()),",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:188:            \"At most it supports a future approximate/interval bridge lane; it does not export the exact positive_beta_renormalization_source required by P2625.\"",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:195:        \"positive_beta_renormalization_source\": source_accepts,",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:274:    blockers = current_blockers(acceptance[\"accepts_positive_beta_renormalization_source\"])",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:313:        \"and its broad q25-q75 interval plus target-dependence and wide-CI warning block promotion to `positive_beta_renormalization_source`.  Thus P2625/P2620 remain unrepaired; no role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure is reopened.\\n\",",
+          "./fundamental_action_reconstruction/p2627_s1577_interval_zbeta_tolerance_bridge_boundary.py:32:    \"positive_beta_renormalization_source_exported\",",
+          "./fundamental_action_reconstruction/p2628_s1578_target_blind_micro_zbeta_filter_narrowing_audit.py:205:        \"accepts_positive_beta_renormalization_source\": source_accepts,",
+          "./fundamental_action_reconstruction/p2628_s1578_target_blind_micro_zbeta_filter_narrowing_audit.py:254:        \"The target-blind quality-filter class does not export `positive_beta_renormalization_source`.  It also does not repair P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.\",",
+          "./fundamental_action_reconstruction/p2628_s1578_target_blind_micro_zbeta_filter_narrowing_audit.py:28:    \"positive_beta_renormalization_source_exported\",",
+          "./fundamental_action_reconstruction/p2628_s1578_target_blind_micro_zbeta_filter_narrowing_audit.py:305:        \"Therefore quality-filter narrowing does not export `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked.\\n\",",
+          "./fundamental_action_reconstruction/p2628_s1578_target_blind_micro_zbeta_filter_narrowing_audit.py:86:            \"positive_beta_renormalization_source|nonlinear_damping_completion_source|\"",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:153:        \"accepts_positive_beta_renormalization_source\": all(gates.values()),",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:206:        \"P2629 therefore does not export `positive_beta_renormalization_source` and does not repair P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.\",",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:256:        \"`P2629/S1579` separates absolute `Z_beta=100` from normalization-invariant micro content.  Under `beta_uv -> lambda beta_uv`, both `Z_beta_median` and `Z_beta_target` scale by `1/lambda`; only `Z_beta_median/Z_beta_target = beta_median/beta_strict` is invariant, and the current invariant ratio is about `1.1474`, not `1`.  Therefore neither UV normalization convention nor target-blind filtering exports `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked pending a genuine target-independent micro normalization identity for `beta` itself.\\n\",",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:262:        \"`P2629/S1579` keeps role-bearing `L_total` closed.  The exact damping coefficient cannot be obtained by treating the absolute number `Z_beta=100` as source data; the normalization-invariant micro mismatch remains nonzero, so a target-independent beta-normalization theorem is still required before damping completion, role transfer, `QW-2191`, or ToE closure can be rerun.\\n\",",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:31:    \"positive_beta_renormalization_source_exported\",",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:100:        \"p2629_accepts_positive_zbeta_source\": bool(p2629.get(\"exact_source_gate\", {}).get(\"accepts_positive_beta_renormalization_source\", False)),",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:135:            \"A strict-internal beta source and a legacy-to-strict bridge coefficient source are different typed obligations.  \"",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:136:            \"Even granting an internal strict beta normalization, a bridge Z_beta source additionally requires an independent legacy/UV normalization \""
+        ]
+      },
+      "closure_guard_content": {
+        "count": 14383,
+        "samples": [
+          "./AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+          "./AGENTS.md:31:- Artifact-sensitive upstream classes may be reopened when the task is explicitly to build or audit the `legacy -> strict` completion bridge, its missing strict-side characteristics, or its role-transfer theorem.",
+          "./AGENTS.md:35:- Highest theoretical priority is now the `legacy -> strict` completion bridge plus the subsequent role-transfer audit.",
+          "./AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "./AGENTS.md:49:_Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel; role-transfer audit required after bridge completion)._",
+          "./AGENT_GUARDRAIL_ACKNOWLEDGEMENT.md:9:- Selector and noncyclic (`QW-2191`, `QW-2381/2382/2383`) constraints.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2455:## 84) QW-2191: theorem-level obstruction of full mode-index uniqueness (`L3/L18/L19`) - `STRICT_OBSTRUCTION_PROVEN`",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2457:Krok `QW-2191` formalizuje granice domkniecia z `QW-2190`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2463:(co jest jawnie raportowane numerycznie w `QW-2191`).",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2491:Po udowodnieniu granicy axiom-free (`QW-2191`) wprowadzono jawny postulat selekcji:",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2531:- bez tego aksjomatu obowiazuje theorem-level obstruction z `QW-2191`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2628:Krok `QW-2195` formalizuje stan po `QW-2125` i `QW-2191..QW-2193`.",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2634:- `QW-2191`: theorem-level obstruction axiom-free (degeneracje i rodzina `O(2)`).",
+          "./FORMALNE_WYPROWADZENIA_BRAKUJACYCH_POZYCJI_FIN_V5_DRAFT.md:2681:- `QW-2191`: axiom-free obstruction theorem,",
+          "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:377:Uzasadnienie: `QW-2191` przechodzi `MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE_PASS_STRICT` (`9/10`) i formalizuje granice domkniecia unikalnosci z samego kernela: obecne frozen `K_total` ma wielokrotne zdegenerowane podprzestrzenie wlasne (pary `lambda_i=lambda_{i+1}`), co indukuje ciagla rodzine rotacji `O(2)` zachowujacych inwariancje podprzestrzeni modowych oraz embedded Lie-closure (`SU(3)`, `SU(2)`) przy residualach maszynowych. To dowodzi, ze pelna fizyczna unikalnosc przypisania indeksow modow nie jest wyprowadzalna z aktualnych aksjomatow bez dodatkowego jawnego postulatu selekcji/symmetry-breaking.",
+          "./LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md:404:- spiecie granic: `QW-2191` (obstruction axiom-free), `QW-2192` (axiom-augmented closure), `QW-2193` (robustness rodziny).",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:109:**Strict status:** repo nie eksportuje strict‑core „time‑arrow selektora” jako składnika rozładowującego `QW-2191`",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:143:degeneracjach (tam, gdzie standardowo wchodzi „measurement basis”) nadal zahacza o `QW-2191`.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:165:    Q[\"QW-2191: ciągła rodzina O(2)\\n(unikatowość otwarta)\"]",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:178:Aktualny najostrzejszy strict frontier dla `QW-2191` na `pair1` jest dziś taki:",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:52:  (`QW-2191`) i nie wolno jej „zagadać”.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:6:- Ten plik **nie** ogłasza: strict‑core selektora, rozładowania `QW-2191`, strict theta‑exportu ani domknięcia ToE.",
+          "./NADSOLITON_ORIGIN_STORY_TOE_PUZZLES_PL.md:95:przy degeneracji (`QW-2191` pozostaje otwarte). Dlatego wszelkie „kolaps jest wyprowadzony” musi być dziś oznaczone",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10011:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10046:   - `P37_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10070:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10106:   - `P38_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10130:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10167:   - `P39_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10191:   - albo probowac rozladowac `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10230:   - `P40_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10286:   - `P41_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10337:   - `P42_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10388:   - `P43_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10437:   - `P44_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10489:   - `P45_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:10540:   - `P46_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5168:   - `QW-2121`, `QW-2126`, `QW-2127`, `QW-2189`, `QW-2190`, `QW-2191`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5191:   - uzyto tylko `strict-admissible internal references`: `QW-2126`, `QW-2127`, `QW-2184`, `QW-2189`, `QW-2190`, `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5199:   - pelna fizyczna unikalnosc representation map jest zablokowana przez `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5310:   - full ToE closure.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5326:   - rozpoczęto drugi cykl od najwęższego blockera `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5383:   - strict-admissible core: `QW-2191`, `QW-2206`, `A5`, `A6`, `A10`, `B1`, `B2`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5387:   - obstrukcja `O(2)` jest jawna (`QW-2191`),",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5472:   - strict-admissible support: `B4`, `B5`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5500:   - strict-admissible support: `QW-2190`, `QW-2191`, `A6`, `B6`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5503:   - nie przeczy obstruction theorem `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5556:   - wejscie: `B6`, `B7`, `B8`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5567:   - discharge `QW-2191`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5584:   - strict-admissible support: `QW-2191`, `QW-2192`, `QW-2193`, `B6`, `C1`, `A10`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5614:   - strict-admissible support: `QW-2190`, `QW-2191`, `C2`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5619:   - ale `QW-2191` blokuje podniesienie tego kandydata do pelnego physical orientation datum.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5640:   - strict-admissible support: `QW-2190`, `QW-2191`, `QW-2192`, `QW-2193`, `A3`, `A7`, `C2`, `C3`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5670:   - strict-admissible support: `A3`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C4`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5699:   - strict-admissible support: `A3`, `A4`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C5`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:5730:   - strict-admissible support: `QW-2190`, `QW-2191`, `A3`, `C3`, `C6`, `A10`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6525:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6554:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6583:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6610:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6639:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6666:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:6693:   - brak claimu, ze `QW-2191` jest rozladowane,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:7575:   - nie przeczy obstruction theorem `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:7582:     kompatybilnosc z `QW-2191` jako external-selector slot,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:7614:     compatibility z `QW-2190`, `QW-2191` i `A6`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:7727:     test przeciw `QW-2191`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:8566:   - `QW-2191` daje theorem-level obstruction: kernel alone nie daje pelnej fizycznej unikalnosci i wymaga extra symmetry breaking,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:9249:   - `P18_missing_objects := full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:9266:   - albo probowac rozladowac juz tylko `QW-2191` uniqueness/canonicalization boundary dla jawnej trasy transportu,"
+        ]
+      },
+      "empirical_not_source_content": {
+        "count": 178,
+        "samples": [
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:1500:   - frozen-kernel narrative w zakresie 700..1600 wymaga rygorystycznej",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:2897:   - niezgodnosc z frozen-kernel gamma (`~2.3499` vs `1.52`).",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:3571:   - aktualny wariant frozen-kernel hard-lock jest istotnie bardziej stabilny niz poprzednie (QW-1994/QW-1997).",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:8962:## 532. Shared frozen-kernel provenance packet and factorization-map probe (2026-03-07)",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:8971:   - `R7` tworzy shared frozen-kernel provenance packet:",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:8984:   - `R7_result := shared frozen-kernel provenance packet is now present`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:8988:   - `R7_boundary := shared frozen-kernel provenance is still not an operator-level factorization map`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:9341:527. `R14/P21/N24` explicit frozen-kernel specialization po `R13/P20/N23`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:9343:   - `R14` materializuje jawny `frozen-kernel specialization witness`",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:9354:   - `R14_result := explicit frozen-kernel specialization witness is now present`,",
+          "./QW_1854_KERNEL_FREEZE_RANGE_AUDIT_700_1600.py:3:QW-1854: Dedicated audit of QW-700..1600 for frozen-kernel narrative.",
+          "./QW_1857_KERNEL_FREEZE_CHRONOLOGY_STRESS_TEST_700_1600.py:3:QW-1857: Chronology stress test for frozen-kernel contradictions (QW-700..1600).",
+          "./QW_1857_KERNEL_FREEZE_CHRONOLOGY_STRESS_TEST_700_1600.py:6:at or after first frozen-kernel declaration timestamp.",
+          "./QW_1918_TRIAD_BLIND_EXTERNAL_VALIDATION.py:242:        \"## Primary Dataset (blind holdout)\",",
+          "./QW_1918_TRIAD_BLIND_EXTERNAL_VALIDATION.py:249:        \"## Stress Dataset (blind holdout)\",",
+          "./QW_1937_UNIFIED_FROZEN_KERNEL_MASS_FLAVOR_GW_NO_SECTOR_RETUNE.py:3:QW-1937: Unified frozen-kernel test for mass + flavor + GW without sector retuning.",
+          "./QW_1938_SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_GATE.py:8:and declares whether single-frozen-kernel closure is achieved.",
+          "./QW_1955_NOGO_AND_MINIMAL_OPERATOR_REPAIR.py:11:- keep deterministic frozen-kernel mapping (no label fitting),",
+          "./QW_1958_FORMAL_NOGO_AND_MINIMAL_LAGRANGIAN_TERM.py:9:   frozen-kernel invariants (no data-label fitting).",
+          "./QW_1960_MASS_FORMULA_DERIVATION_AUDIT.py:8:- check frozen-kernel compatibility of gamma.",
+          "./QW_1999_BOUNDED_COUPLING_FOLD2_GUARDED_SEARCH.py:7:Readout remains globally monotonic (power compression gamma_c) and frozen-kernel.",
+          "./QW_2016_V2_TRIAD_BLIND_EXTERNAL_VALIDATION.py:242:        \"## Primary Dataset (blind holdout)\",",
+          "./QW_2016_V2_TRIAD_BLIND_EXTERNAL_VALIDATION.py:249:        \"## Stress Dataset (blind holdout)\",",
+          "./QW_2023_UNIFIED_FROZEN_KERNEL_MASS_FLAVOR_GW_ETA_RETEST.py:3:QW-2023: Unified frozen-kernel test for mass + flavor + GW without sector retuning.",
+          "./QW_2031_V2_ETA_TRIAD_BLIND_EXTERNAL_VALIDATION.py:280:        \"## Primary Dataset (blind holdout)\",",
+          "./QW_2031_V2_ETA_TRIAD_BLIND_EXTERNAL_VALIDATION.py:287:        \"## Stress Dataset (blind holdout)\",",
+          "./QW_2082_MISSING14_STRICT_CLOSURE_ROADMAP.py:64:            \"alpha_s(MZ) derived from non-anchored boundary within registry tolerance in blind holdout.\",",
+          "./QW_2191_MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE.py:7:  assignment can be derived from frozen-kernel algebra alone,",
+          "./RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md:2106:- `R7` tworzy pierwszy jawny shared frozen-kernel provenance packet laczacy",
+          "./RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md:2115:- `R7_result := shared frozen-kernel provenance packet is now present`,",
+          "./RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md:2329:- `R14` tworzy jawny `frozen-kernel specialization witness`:",
+          "./RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md:2346:- `R14_result := explicit frozen-kernel specialization witness is present`,",
+          "./RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md:68:  materializuja shared frozen-kernel provenance witness, ale utrzymuja brak",
+          "./README.md:139:  `P21/N24` add an explicit frozen-kernel specialization witness for the shared",
+          "./README.md:1491:- this moves the theory forward by proving that shared frozen-kernel provenance is real but still weaker than operator identification, and by decomposing the last nominal factorization blocker into four explicit subobjects,",
+          "./README.md:78:  `R7` records a real shared frozen-kernel provenance witness between the old",
+          "./RELEASE_5_1.md:161:5. final empirical confirmation,",
+          "./TOE_FINAL_DOCUMENTATION.tex:635:Across late 4.x, the program migrated from broad exploratory forms to a frozen-kernel protocol:",
+          "./fundamental_action_reconstruction/N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md:10:- shared frozen-kernel provenance is present,",
+          "./fundamental_action_reconstruction/N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md:22:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md:30:> Even after establishing shared frozen-kernel provenance and exporting the full",
+          "./fundamental_action_reconstruction/N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md:45:- namely that the explicit current-pair chain and shared frozen-kernel",
+          "./fundamental_action_reconstruction/N15_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_HOST_CARRIER_PACKET_THEOREM.md:24:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/N16_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET_THEOREM.md:25:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/N17_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET_THEOREM.md:26:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/N24_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_KERNEL_SPECIALIZATION_PACKET_THEOREM.md:24:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N24_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_KERNEL_SPECIALIZATION_PACKET_THEOREM.md:32:> Even after adding the explicit frozen-kernel specialization packet, the",
+          "./fundamental_action_reconstruction/N25_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_DIAGONAL_FLOOR_EMBEDDING_PACKET_THEOREM.md:25:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N26_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_RESIDUAL_DIAGONAL_PULLBACK_PACKET_THEOREM.md:27:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N27_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_HOST_SIDE_RESIDUAL_ABSENCE_PACKET_THEOREM.md:29:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N28_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET_THEOREM.md:31:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N29_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_PAIR1_C1S1_BALANCE_REDUCTION_PACKET_THEOREM.md:33:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N30_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_DECLARED_THREE_STEP_CARRIER_SHIFT_PACKET_THEOREM.md:33:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/N31_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_EXPLICIT_PAIR1_C1S1_SHIFT_DEFECT_POLYNOMIAL_PACKET_THEOREM.md:35:  + explicit frozen-kernel specialization witness",
+          "./fundamental_action_reconstruction/P11_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_FACTORIZATION_MAP_PROBE.md:32:3. shared frozen-kernel provenance between the old QW family and the explicit",
+          "./fundamental_action_reconstruction/P12_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_RERUN_AFTER_HOST_CARRIER_PACKET.md:14:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/P13_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_RERUN_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET.md:14:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/P14_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_RERUN_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET.md:15:  + shared frozen-kernel provenance",
+          "./fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md:24:  `R2/R3/R4/R5/R6` descend from the same frozen-kernel source,",
+          "./fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md:30:   - frozen-kernel light/matter/observer channel benchmark",
+          "./fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md:56:   frozen-kernel family.",
+          "./fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md:72:- `R7_B1 := shared frozen-kernel provenance between the old QW family and the explicit H3 chain is now present, but this provenance is still not an operator-level factorization or selector-sector identification`",
+          "./fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md:83:- that shared frozen-kernel provenance already equals an operator-level map,",
+          "./fundamental_action_reconstruction/RAPORT_METODOLOGII_I_STATUSU_BADAN.md:40:* **Korekcja Wielokrotnych Porównań Holma**: Ponieważ testy są uruchamiane równolegle na trzech kanałach, p-wartości są korygowane metodą Holma-Bonferroniego, zapobiegając inflacji błędu pierwszego rodzaju (fałszywych odkryć).",
+          "./fundamental_action_reconstruction/README.md:3584:- `N14`: wykonane jako updated-route theorem po dodaniu shared frozen-kernel provenance packet; pokazuje, ze nawet po dodaniu realnego shared-provenance witness aktualna trasa `existing kernel feedback -> explicit H3 chain` nadal zatrzymuje sie na czterech operator-level factorization subobjects.",
+          "./fundamental_action_reconstruction/README.md:3601:- `R7`: wykonane jako shared frozen-kernel provenance packet for `K_obs`; stare `QW-1949..1956` i explicit chain packets `R2/R3/R4/R5/R6` maja juz jawny wspolny provenance witness, ale nadal bez operator-level factorization map.",
+          "./fundamental_action_reconstruction/README.md:3744:- brak claimu, ze `N14` jest global impossibility theorem; `N14` dotyczy tylko zaktualizowanej trasy factorization-route po dodaniu shared frozen-kernel provenance i pelnego current-pair bloku.",
+          "./fundamental_action_reconstruction/README.md:3761:- brak claimu, ze `R7` jest factorization discharge; `R7` daje tylko shared frozen-kernel provenance packet.",
+          "./fundamental_action_reconstruction/README.md:586:- zmaterializowano jawny `frozen-kernel specialization witness`:",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2249:`P2635/S1585` gives the professorial ToE/neural-universe reading: the strongest ToE symptoms are single-kernel cross-sector unification pressure, multi-lane strict-kernel stability/reproducibility, and the neural architecture analogy `positional encoding + heavy-tailed attention`.  The self-learning reading is only conditionally visible as an energy-based/variational stationarity proxy (`δS=0`, RG/minimum-roughness), not as a closed physical theorem.  Modern-physics checks must be blind frozen-kernel tests in CMB/LSS, GW/PTA, RG/QFT, and phase-frequency node/gauge channels.  No ToE closure, self-learning-universe proof, role-transfer, role-bearing `L_total`, or `QW-2191` discharge is reopened."
+        ]
+      },
+      "micro_zbeta_mismatch_content": {
+        "count": 255,
+        "samples": [
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4062:   - policzyc wymagane stale dopasowania `Z_omega, Z_beta, delta_phi, delta_eta`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4069:   - `Z_omega=0.2365`, `delta_phi=-0.3611`, `Z_beta=92.0`, `delta_eta=0.8`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4070:   - `ln(Z_beta)=4.52`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4074:   - nastepny krok stricte teoretyczny: mikrodynamika nadsolitona musi wyprowadzic `Z_beta` i `delta_eta` bez retune sektorowego.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4080:   - sprawdzic, czy wymagane z QW-2042 (`Z_beta~92`, `delta_eta~0.8`) sa juz wspierane przez strict-pass envelope z QW-1932, bez nowego tuningu.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4086:   - strict-pass CI95: `Z_beta=[38.18, 107.38]`, `delta_eta=[0.825, 1.775]`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4087:   - target: `Z_beta=92` (inside), `delta_eta=0.8` (poza CI95, na dolnej krawedzi zakresu),",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4088:   - nearest strict point: `eta=1.8`, `beta=1.1243` (`Z_beta=112.43`), joint distance `0.797`.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4090:   - sama istniejaca galaz mikro jest blisko, ale nie trafia jeszcze punktowo wymaganej pary `(Z_beta, delta_eta)` z kernela refrozen,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4093:## 337. Pointwise derivation `Z_beta(d), delta_eta(d)` z mikromodelu (QW-2044)",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4482:   - pozostal formalny brak: jawne domkniecie stalych renormalizacyjnych (`Z_beta`, `delta_eta`) jako komponent first-principles.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4484:## 359. Micro-derived renormalization constants gate (QW-2064)",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4490:   - formalnie sprawdzic, czy stale renormalizacyjne (`Z_beta`, `delta_eta`) sa wspierane przez mikro-derywacje QW-2048",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4496:   - target: `Z_beta=100.0`, `delta_eta=0.8`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4497:   - micro median: `Z_beta=114.740`, `delta_eta=1.125`,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4498:   - odchylenia: `|log(Z_beta/Z_target)|=0.1375` (w granicy factor-2),",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4502:   - szerokie CI dla `Z_beta` pozostaje (warning), ale twarde warunki gate sa spelnione bez nowego strojenia.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4505:   - pozostaje potrzeba dalszego zawezania niepewnosci (szczegolnie `Z_beta`) dla mocniejszej wersji twierdzenia.",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4664:   - zredukowac ostrzezenie o szerokim rozrzucie `Z_beta` z QW-2064,",
+          "./PLAN_NAPRAWA_TOE_ROBOCZY.md:4673:   - mediana po filtrze: `Z_beta=109.761` (target `100.0`), `delta_eta=0.956` (target `0.8`),",
+          "./QW_2042_EFT_MATCHING_NATURALNESS_AUDIT.py:131:        f\"- Z_beta = {z_beta:.6f}\",",
+          "./QW_2042_EFT_MATCHING_NATURALNESS_AUDIT.py:134:        f\"- ln(Z_beta) = {ln_z_beta:.6f}\",",
+          "./QW_2042_EFT_MATCHING_NATURALNESS_AUDIT.py:94:            \"Z_beta\": z_beta,",
+          "./QW_2042_EFT_MATCHING_NATURALNESS_AUDIT.py:97:            \"ln_Z_beta\": ln_z_beta,",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:117:            \"Z_beta_target\": target_z_beta,",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:122:            \"Z_beta_ci95\": z_ci95,",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:124:            \"Z_beta_range\": [float(np.min(z_arr)), float(np.max(z_arr))],",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:150:        f\"- Z_beta_target: {target_z_beta:.6f}\",",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:155:        f\"- Z_beta CI95: [{z_ci95[0]:.6f}, {z_ci95[1]:.6f}]\",",
+          "./QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py:161:        f\"- Z_beta: {nearest['z_beta']:.6f}\",",
+          "./QW_2044_POINTWISE_MICRO_ZBETA_DELTAETA_DERIVATION.py:14:    Z_beta(d) = beta(d) / 0.01",
+          "./QW_2044_POINTWISE_MICRO_ZBETA_DELTAETA_DERIVATION.py:335:        f\"- Z_beta_target: {beta_target/0.01:.6f}\",",
+          "./QW_2044_POINTWISE_MICRO_ZBETA_DELTAETA_DERIVATION.py:343:        f\"- Z_beta median: {global_est['z_beta_median']:.6f}\",",
+          "./QW_2044_POINTWISE_MICRO_ZBETA_DELTAETA_DERIVATION.py:3:QW-2044: Pointwise micro-derivation of Z_beta(d) and delta_eta(d).",
+          "./QW_2045_PHASE_CONDITIONED_POINTWISE_MICRO_DERIVATION.py:3:QW-2045: Phase-conditioned pointwise micro-derivation of Z_beta(d), delta_eta(d).",
+          "./QW_2047_SIGNED_PHASE_TORSION_OBSERVABLE_SCAN.py:10:Z_beta(d), delta_eta(d) identifiability without sector retune.",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:126:            \"z_beta_median\": z_beta_micro,",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:169:        f\"- z_beta_median: {z_beta_micro:.6f}\",",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:176:        f\"- abs_log(z_beta_micro/z_beta_target): {abs_log_ratio:.6f}\",",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:3:QW-2064: Micro-derived renormalization constants gate (no sector retune).",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:49:    z_beta_micro = float(ge[\"z_beta_median\"])",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:64:    abs_log_ratio = float(abs(math.log(max(z_beta_micro, 1e-12) / max(z_beta_target, 1e-12))))",
+          "./QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py:6:- Formalize whether (Z_beta, delta_eta) are supported by micro derivation",
+          "./QW_2065_STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_GATE.py:7:- QW-2064 foundational renormalization constants support from micro derivation.",
+          "./QW_2066_COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING.py:6:- Reduce dispersion warning for micro-derived renormalization constants",
+          "./RELEASE_4_9.md:23:- micro-derived renormalization constants gate passes,",
+          "./RELEASE_4_9.md:320:- **Derived in strict internal gate scope:** mass-chain targets, CKM/PMNS gate-level flavor targets, PMNS CP phase, neutrino absolute mass triad, GW discriminator metrics, and micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightened dispersion.",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:145:### 5.6 QW-2064 (micro-derived renormalization constants gate)",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:150:  - target: `Z_beta=100.0`, `delta_eta=0.8`",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:151:  - micro median: `Z_beta=114.740`, `delta_eta=1.125`",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:154:- foundational renormalization constants are supported by micro-derivation,",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:155:- but `Z_beta` dispersion was still broad (warning).",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:466:5. micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightening.",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:610:  - target: `Z_beta=100.0`, `delta_eta=0.8`",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:611:  - mediana mikro: `Z_beta=114.740`, `delta_eta=1.125`",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:615:- ale rozrzut `Z_beta` był jeszcze szeroki (warning).",
+          "./RELEASE_4_9_TEXTBOOK_EN_PL.md:926:5. wsparte mikro-derywacją stałe renormalizacyjne (`Z_beta`, `delta_eta`) po zawężeniu.",
+          "./RELEASE_6_TEXTBOOK_EN_PL.md:1103:#### 4.4.4 Strict-side renormalization constants",
+          "./RELEASE_6_TEXTBOOK_EN_PL.md:361:#### 4.4.4 Strict-side renormalization constants",
+          "./TOE_FINAL_DOCUMENTATION_RELEASE_7_1_STRICT_FULL.tex:2017:Micro-derived renormalization constants plus compatibility-filtered tightening &",
+          "./TOE_FINAL_DOCUMENTATION_RELEASE_7_1_STRICT_FULL.tex:2278:\\texttt{z\\_beta} & \\texttt{QW-2064} & Micro-derived renormalization constants gate. & 114.739579993842 & 14.739580 & \\dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\\\",
+          "./TOE_FINAL_DOCUMENTATION_RELEASE_7_1_STRICT_FULL.tex:2279:\\texttt{delta\\_eta} & \\texttt{QW-2064} & Micro-derived renormalization constants gate. & 1.125 & 40.625000 & \\dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\\\",
+          "./TOE_RELEASE_7_1_OBSERVABLE_REGISTRY_APPENDIX.tex:271:\\texttt{z\\_beta} & \\texttt{QW-2064} & Micro-derived renormalization constants gate. & \\dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\\\",
+          "./TOE_RELEASE_7_1_OBSERVABLE_REGISTRY_APPENDIX.tex:272:\\texttt{delta\\_eta} & \\texttt{QW-2064} & Micro-derived renormalization constants gate. & \\dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\\\",
+          "./TOE_RELEASE_7_1_OBSERVABLE_REGISTRY_APPENDIX.tex:59:Micro-derived renormalization constants plus compatibility-filtered tightening &",
+          "./fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md:81:3. a route later tied to micro-supported renormalization constants",
+          "./fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md:82:   `Z_beta`, `delta_eta`.",
+          "./fundamental_action_reconstruction/K2_STRICT_GATE_KERNEL_DERIVATION_CHAIN_NOTE.md:152:### 8. QW-2064: micro-derived renormalization constants",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2209:`P2625/S1575` supplies a sharper damping-side proof boundary.  A fractal measure pushforward `q(d)=d^(9/5)` plus an independent positive coefficient source `Z_beta=beta/beta_tors=100` would exactly transform the legacy linear torsion denominator into `1+beta*d^(9/5)`, but the current repository does not yet export that coefficient source.  Scalar rescaling, `eta=9/5` alone, or a scale-dependent `beta_eff(d)` shortcut are rejected as completion proofs; P2620 therefore remains unrepaired without the independent `positive_beta_renormalization_source` and the separate orientation source.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2211:## P2626/S1576 micro Z_beta source nonpromotion guard"
+        ]
+      },
+      "normalization_orbit_content": {
+        "count": 45,
+        "samples": [
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2225:`P2629/S1579` separates absolute `Z_beta=100` from normalization-invariant micro content.  Under `beta_uv -> lambda beta_uv`, both `Z_beta_median` and `Z_beta_target` scale by `1/lambda`; only `Z_beta_median/Z_beta_target = beta_median/beta_strict` is invariant, and the current invariant ratio is about `1.1474`, not `1`.  Therefore neither UV normalization convention nor target-blind filtering exports `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked pending a genuine target-independent micro normalization identity for `beta` itself.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2229:`P2630/S1580` separates strict-internal beta/eta sourcehood from the legacy-to-strict bridge coefficient obligation.  Even if a P2603-style internal strict beta source is granted, the P2625 `positive_beta_renormalization_source` additionally requires an independent legacy/UV normalization source fixing `beta_uv=beta_tors=0.01` and a normalization-invariant match `beta_micro/beta_strict=1`.  The finite truth table has one accepting row and the current assignment remains rejecting, so P2603/P2608 cannot be silently recycled to reopen bridge completion, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2233:`P2631/S1581` audits the strict kernel through the neural-network prism: the cosine factor can be read as sinusoidal positional/resonance encoding and `1/(1+beta*d^eta)` as a heavy-tailed attention bias on the `D_f=eta=9/5` fractal measure.  The finite-window information-flux functional `F(beta)=int |K_beta(d)|^2 dmu_f(d)` is strictly decreasing for `beta>0`, so `F(beta)=C` selects `beta=1` only if the conservation constant is already calibrated to `F(1)`; for every `beta0>0`, `C=F(beta0)` selects `beta0`.  The audited entropy-throughput proxy does not uniquely peak at `beta=1`, and bare `beta=1` is not invariant under `d -> a*d`, `beta -> beta/a^eta`.  Therefore the neural criticality route does not export `positive_beta_renormalization_source`, does not close the P2629/P2630 obstruction, and does not reopen role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.",
+          "./fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2305:`P2649/S1599` audits the post-P2648 beta-source routes algebraically.  Under `d'=a*d`, the denominator orbit sends `beta -> beta/a^eta`, so every positive beta can be represented with bare `beta=1` after choosing `a=beta^(1/eta)`; likewise any single tail-ratio target recovers a beta by `beta=(1-q)/(q*b^eta-a^eta)`.  These are normalization/calibration facts, not target-independent source theorems.  The route matrix leaves normalization, flux/criticality, micro `Z_beta`, and empirical holdout routes blocked as beta sources; no bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure is exported.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1598:`P2630/S1580` keeps role-bearing `L_total` closed.  A strict-internal beta normalization, an independent legacy/UV normalization, and the normalization-invariant micro/strict match are typed separately; old strict-source or role-transfer packets cannot stand in for the missing bridge coefficient theorem.",
+          "./fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1674:`P2649/S1599` does not re-enable `L_total`: beta=1 remains a robust working normalization/compression parameter until a canonical length/UV unit plus target-independent conservation/operator identity is proved; empirical holdout success cannot substitute for that source theorem.",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:256:        \"`P2629/S1579` separates absolute `Z_beta=100` from normalization-invariant micro content.  Under `beta_uv -> lambda beta_uv`, both `Z_beta_median` and `Z_beta_target` scale by `1/lambda`; only `Z_beta_median/Z_beta_target = beta_median/beta_strict` is invariant, and the current invariant ratio is about `1.1474`, not `1`.  Therefore neither UV normalization convention nor target-blind filtering exports `positive_beta_renormalization_source`; P2625/P2620, role-transfer, role-bearing `L_total`, `QW-2191`, and ToE closure remain blocked pending a genuine target-independent micro normalization identity for `beta` itself.\\n\",",
+          "./fundamental_action_reconstruction/p2629_s1579_zbeta_normalization_gauge_obstruction.py:73:            \"normalization law|UV normalization|beta_uv|normalization gauge|scale convention|\"",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:136:            \"Even granting an internal strict beta normalization, a bridge Z_beta source additionally requires an independent legacy/UV normalization \"",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:170:        \"Next honest step: stop trying to recycle P2603/P2608 as the missing bridge coefficient source.  Either prove a new typed legacy/UV normalization theorem \"",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:251:        \"`P2630/S1580` separates strict-internal beta/eta sourcehood from the legacy-to-strict bridge coefficient obligation.  Even if a P2603-style internal strict beta source is granted, the P2625 `positive_beta_renormalization_source` additionally requires an independent legacy/UV normalization source fixing `beta_uv=beta_tors=0.01` and a normalization-invariant match `beta_micro/beta_strict=1`.  The finite truth table has one accepting row and the current assignment remains rejecting, so P2603/P2608 cannot be silently recycled to reopen bridge completion, role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.\\n\",",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:257:        \"`P2630/S1580` keeps role-bearing `L_total` closed.  A strict-internal beta normalization, an independent legacy/UV normalization, and the normalization-invariant micro/strict match are typed separately; old strict-source or role-transfer packets cannot stand in for the missing bridge coefficient theorem.\\n\",",
+          "./fundamental_action_reconstruction/p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:71:            \"legacy beta_tors|beta_tors|UV normalization|beta_uv|Z_beta|beta/beta_tors|\"",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:217:        \"group_action\": \"d -> a*d requires beta -> beta/a^eta to preserve 1+beta*d^eta\",",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:221:            \"Information conservation can be formulated invariantly, but the bare statement beta=1 is still a convention unless a separate canonical length/UV normalization fixes L=1.  \"",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:240:        \"critical_beta_status\": \"No unique beta=1 critical point follows without an extra target-independent conservation constant, canonical length/UV unit, or phase-stability functional whose extremum is proven at beta=1 before comparison to K_strict_gate.\",",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:259:            \"the explicit entropy-throughput proxy does not peak at beta=1; and bare beta=1 is not invariant under length/UV rescaling.  \"",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:268:        \"dimensionless conservation constant and canonical length/UV unit from nadsoliton dynamics that makes F(beta)=F(1) noncircular, plus a \"",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:356:            \"beta\": \"length/temperature parameter whose bare numeric value is not invariant until a length/UV unit is fixed\",",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:375:        \"`P2631/S1581` audits the strict kernel through the neural-network prism: the cosine factor can be read as sinusoidal positional/resonance encoding and `1/(1+beta*d^eta)` as a heavy-tailed attention bias on the `D_f=eta=9/5` fractal measure.  The finite-window information-flux functional `F(beta)=int |K_beta(d)|^2 dmu_f(d)` is strictly decreasing for `beta>0`, so `F(beta)=C` selects `beta=1` only if the conservation constant is already calibrated to `F(1)`; for every `beta0>0`, `C=F(beta0)` selects `beta0`.  The audited entropy-throughput proxy does not uniquely peak at `beta=1`, and bare `beta=1` is not invariant under `d -> a*d`, `beta -> beta/a^eta`.  Therefore the neural criticality route does not export `positive_beta_renormalization_source`, does not close the P2629/P2630 obstruction, and does not reopen role-transfer, role-bearing `L_total`, `QW-2191`, or ToE closure.\\n\",",
+          "./fundamental_action_reconstruction/p2631_s1581_neural_information_flux_beta_criticality_audit.py:87:            \"UV normalization|beta_uv|normalization gauge|normalization-invariant|scale convention|\"",
+          "./fundamental_action_reconstruction/p2632_s1582_neural_legacy_strict_characteristic_retention_audit.py:197:            \"evidence\": \"strict damping uses beta=1 and eta=9/5; P2629/P2630 leave positive beta renormalization and legacy/UV normalization source negative\",",
+          "./fundamental_action_reconstruction/p2632_s1582_neural_legacy_strict_characteristic_retention_audit.py:234:            \"beta_tors=0.01 is not the strict beta=1 without the missing positive renormalization / UV normalization source\",",
+          "./fundamental_action_reconstruction/p2632_s1582_neural_legacy_strict_characteristic_retention_audit.py:274:        \"damping exponent pushforward, positive beta/UV normalization source, and neural/information stability functional.  \"",
+          "./fundamental_action_reconstruction/p2636_s1586_current_toe_blocker_lattice_full_kernel_decision_audit.py:88:            \"positive_beta_renormalization_source|beta normalization|Z_beta|UV normalization|\"",
+          "./fundamental_action_reconstruction/p2637_s1587_phase_node_quotient_exhaustion_toe_closure_path_audit.py:255:            \"closure_task\": \"positive beta / UV normalization source\",",
+          "./fundamental_action_reconstruction/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py:299:            \"Derive a dimensionless beta/UV normalization invariant instead of using beta=1 by convention.\",",
+          "./fundamental_action_reconstruction/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py:248:            \"criterion\": \"A beta-source theorem must be target-independent and cannot reuse Z_beta normalization gauge as source data.\",",
+          "./fundamental_action_reconstruction/p2643_s1593_inverse_hierarchy_beta_threshold_role_rejection_certificate.py:91:            \"beta source|normalization identity|Z_beta|UV normalization\"",
+          "./fundamental_action_reconstruction/p2645_s1595_role_transfer_matrix_and_closure_route_rerun.py:141:            r\"beta source|Z_beta|normalization gauge|alpha_geo|sin\\^2\\(theta_W\\)|alpha_EM|beta_tors\"",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:154:        \"consequence\": \"The bare numeral beta=1 is an orbit representative, not a source theorem, until a canonical length/UV unit is independently fixed.\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:213:            \"claim\": \"set beta=1 by choosing length/UV units\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:237:            \"verdict_if_missing\": \"micro/strict mismatch and normalization gauge remain\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:274:            \"First fix a canonical length/UV unit from nadsoliton dynamics, not from the strict kernel target.\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:280:            \"Build a canonical-length/UV-unit theorem or dimensionless conservation identity independent of K_strict_gate; otherwise run the P2647/P2648 holdout only as empirical support while beta-source remains blocked.\"",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:374:        \"`P2649/S1599` audits the post-P2648 beta-source routes algebraically.  Under `d'=a*d`, the denominator orbit sends `beta -> beta/a^eta`, so every positive beta can be represented with bare `beta=1` after choosing `a=beta^(1/eta)`; likewise any single tail-ratio target recovers a beta by `beta=(1-q)/(q*b^eta-a^eta)`.  These are normalization/calibration facts, not target-independent source theorems.  The route matrix leaves normalization, flux/criticality, micro `Z_beta`, and empirical holdout routes blocked as beta sources; no bridge completion, role transfer, `QW-2191` discharge, role-bearing `L_total`, or ToE closure is exported.\\n\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:380:        \"`P2649/S1599` does not re-enable `L_total`: beta=1 remains a robust working normalization/compression parameter until a canonical length/UV unit plus target-independent conservation/operator identity is proved; empirical holdout success cannot substitute for that source theorem.\\n\",",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:84:            \"normalization gauge|UV normalization|length/UV|scale convention|d -> a\\\\*d|\"",
+          "./fundamental_action_reconstruction/p2649_s1599_beta_source_route_decision_matrix_and_normalization_orbit_no_go.py:85:            \"beta -> beta/a\\\\^eta|bare beta|canonical length\"",
+          "./fundamental_action_reconstruction/scratch/bridge_strict_alpha_primitive_denominator_obstruction_probe.py:167:            \"why_this_is_not_enough\": \"It does not derive the primitive/no-hidden-binary-rescale convention from strict nadsoliton geometry, and it does not solve the balanced-ledger selector obligation.\",",
+          "./fundamental_action_reconstruction/scratch/bridge_strict_alpha_primitive_denominator_obstruction_probe.py:188:        \"- Honest read: denominator 3 is primitive inside the model, but the primitive/no-rescale convention is still not derived.\\n\"",
+          "./fundamental_action_reconstruction/scratch/bridge_strict_alpha_primitive_denominator_obstruction_probe.py:26:uses denominator 3 must derive a primitive/no-binary-rescale convention, or admit",
+          "./fundamental_action_reconstruction/scratch/bridge_strict_alpha_primitive_denominator_obstruction_report.json:143:    \"why_this_is_not_enough\": \"It does not derive the primitive/no-hidden-binary-rescale convention from strict nadsoliton geometry, and it does not solve the balanced-ledger selector obligation.\"",
+          "./fundamental_action_reconstruction/scratch/bridge_strict_alpha_primitive_denominator_obstruction_report.md:8:- Honest read: denominator 3 is primitive inside the model, but the primitive/no-rescale convention is still not derived.",
+          "./fundamental_action_reconstruction/test_p2630_s1580_strict_beta_source_vs_bridge_zbeta_separation.py:50:        self.assertIn(\"new typed legacy/UV normalization theorem\", self.payload[\"recommended_next_honest_step\"])"
+        ]
+      }
+    },
+    "tool": "rg"
+  },
+  "source_hashes": {
+    "P2629_ZBETA_GAUGE": "1ea7719c487c21c02b2783d60c5146480fd7ba59776179f34014be0d869f0eba",
+    "P2630_BETA_SOURCE_SEPARATION": "aaa297c5098b10606ef3f1d6754714c551e5f0823db0f5c3af701f81de7fb2bf",
+    "P2631_BETA_CRITICALITY": "82f113bd66ee2a5cf04123e06be3882e9cf57b25493c8e9b824ad16b18628749",
+    "P2645_ROLE_MATRIX": "ac22d52299e1726fe9dbaa6479d15e3b64ff90e1b1ac6cb8af4c95a148c17c96",
+    "P2647_HOLDOUT_HARNESS": "8d447ca8e548bc1c84e2e4c92b06e5e4df336b11730179529009e5cd0d266a92",
+    "P2648_MARGIN_RULE": "83a7d3391eb751d6738cfb7440f601db42aa81ce6e3673ac16436c783b35674c",
+    "STRICT_EQUATION_SHEET": "8605faf5f857caa27f0c43d36a71a81cd678733b897c79780886b22af8faca5d",
+    "STRICT_LAGRANGIAN_DRAFT": "61b400b9a1d5b03770311f8202f4de22597c6ae118c6b3cd755ce951318672ec"
+  },
+  "status": "P2649_BETA_SOURCE_ROUTE_MATRIX_NO_TARGET_INDEPENDENT_SOURCE_NO_FALSE_PASS",
+  "tail_ratio_inversion_witness": {
+    "all_strict_ratios_recover_beta_one": true,
+    "consequence": "A single observed or imposed tail ratio can recover beta=1, but only by encoding beta=1 in q; this is an empirical/calibration target, not target-independent sourcehood.",
+    "exports_beta_source": false,
+    "formula": "For R(a,b)=q=(1+beta*a^eta)/(1+beta*b^eta), beta=(1-q)/(q*b^eta-a^eta) when the denominator is positive.",
+    "rows": [
+      {
+        "beta_recovered_from_legacy_ratio": 0.010000000000000002,
+        "beta_recovered_from_strict_ratio": 1.0,
+        "far": 7,
+        "legacy_ratio_q_beta_0_01": 0.7582415521440133,
+        "lesson": "a chosen tail ratio fixes beta algebraically; it is a target datum unless independently sourced",
+        "near": 1,
+        "strict_ratio_q_beta_1": 0.05847451437227006
+      },
+      {
+        "beta_recovered_from_legacy_ratio": 0.01,
+        "beta_recovered_from_strict_ratio": 1.0000000000000002,
+        "far": 12,
+        "legacy_ratio_q_beta_0_01": 0.5383667167770461,
+        "lesson": "a chosen tail ratio fixes beta algebraically; it is a target datum unless independently sourced",
+        "near": 1,
+        "strict_ratio_q_beta_1": 0.02257222584380157
+      },
+      {
+        "beta_recovered_from_legacy_ratio": 0.01,
+        "beta_recovered_from_strict_ratio": 1.0000000000000002,
+        "far": 8,
+        "legacy_ratio_q_beta_0_01": 0.7275988445365729,
+        "lesson": "a chosen tail ratio fixes beta algebraically; it is a target datum unless independently sourced",
+        "near": 2,
+        "strict_ratio_q_beta_1": 0.10369646499561798
+      },
+      {
+        "beta_recovered_from_legacy_ratio": 0.010000000000000002,
+        "beta_recovered_from_strict_ratio": 0.9999999999999994,
+        "far": 9,
+        "legacy_ratio_q_beta_0_01": 0.7045174235173712,
+        "lesson": "a chosen tail ratio fixes beta algebraically; it is a target datum unless independently sourced",
+        "near": 3,
+        "strict_ratio_q_beta_1": 0.1546110076851872
+      }
+    ]
+  },
+  "upstream_atoms": {
+    "bridge_zbeta_source_accepted": false,
+    "canonical_length_unit_exported": false,
+    "empirical_holdout_can_replace_source_theorem": false,
+    "holdout_harness_ready": true,
+    "holdout_real_blind_data_executed": false,
+    "normalization_gauge_fixed": false,
+    "p2631_exports_beta_identity": false,
+    "positive_zbeta_source_exported": false,
+    "role_matrix_beta_source_passes": false,
+    "statistical_margin_rule_ready": true,
+    "target_independent_conservation_constant_exported": false,
+    "unique_beta_one_critical_extremum_exported": false
+  }
+}
