@@ -2323,3 +2323,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2654/S1604 scale-invariant beta selector no-go guard
 
 `P2654/S1604` audits whether a scale-invariant functional of strict envelope/tail/log-slope data can select `beta=1`.  The invariant feature rank on the audited beta-distance orbit is one, so every orbit-invariant selector is constant across representatives; raw-coordinate anchors distinguish representatives only after importing an external unit/gauge premise.  Therefore this exports no scale-invariant beta selector, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2655/S1605 typed metric scale-quotient pretheorem guard
+
+`P2655/S1605` constructs and checks a finite typed nadsoliton metric skeleton, verifies metric axioms across positive global scales, and confirms strict-denominator covariance under `d -> a d`, `beta -> beta/a^eta`.  These are useful quotient-level theorem scaffolds, but they do not select the UV unit: diameter/nearest-neighbor normalizations remain external conventions unless sourced by nadsoliton dynamics.  Therefore this exports no typed metric/UV source theorem, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2656/S1606 typed Laplacian action identity source guard
+
+`P2656/S1606` tests the next concrete proof object after P2655: a typed nadsoliton weighted-Laplacian/action operator.  The operator scales covariantly as `L -> L/a^2`, and normalized trace moments are rank-one on the scale orbit.  This is a useful dynamics scaffold, but an absolute trace, spectral gap, heat-time, or action quantum would still be an external anchor unless a nadsoliton quantization theorem derives it.  Therefore this exports no typed metric/UV source theorem, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2657/S1607 action quantization scale-anchor obstruction guard
+
+`P2657/S1607` audits the next theorem target after P2656: an integer action/phase condition `tau*Tr(L)=2*pi*n`.  The condition is satisfiable for every audited scale by rescaling the clock as `tau -> a^2 tau`, so it quantizes a scale-clock product rather than the UV length.  A unique representative appears only if a fixed clock, trace, spectral gap, heat-time, or action quantum is imported as an external anchor.  Therefore this exports no intrinsic action-quantization theorem, no typed metric/UV source theorem, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
+
+## P2658/S1608 local homogeneous action quantization no-go guard
+
+`P2658/S1608` generalizes the P2657 scale-clock obstruction from `Tr(L)` to an audited class of local homogeneous action functionals `A_pq(a)=Tr_p(L_a)^q`.  Each functional scales as `A_pq(a)=A_pq(1)/a^(p*q)`, so the integer phase condition `tau*A_pq=2*pi*n` is satisfiable at every scale by `tau -> a^(p*q) tau`.  Fixed-clock uniqueness is therefore an imported clock/scale anchor.  This is a finite class no-go, not a full global theorem over possible nonhomogeneous/anomalous nadsoliton dynamics, and it exports no intrinsic UV unit, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.
