@@ -2012,3 +2012,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2734/S1684 branch-square holonomy Ltotal guard
 
 `P2734/S1684` tests a topological-looking non-spectral branch-square source for the P2732 coupling, but the edge cocycle is exact and all plaquette holonomies are trivial.  Therefore it adds no strict variational/polarity source term and cannot promote `L_total`.
+
+## P2735/S1685 non-exact flux Ltotal guard
+
+`P2735/S1685` confirms that adding a non-exact branch-square `Z2` flux would be a real frustrated topological choice, but current artifacts do not source that flux or couple it to a unique P2721 polarity.  It therefore adds no strict variational/polarity source term and cannot promote `L_total`.
+
+## P2736/S1686 content-grep Ltotal guard
+
+`P2736/S1686` finds no new post-P2735 variational source term in current content-grep artifacts.  Existing theta-like/non-exact-sector and Wilson/flux candidates remain bounded no-go or source-boundary content, so there is no new source term to add to `L_total`.
+
+## P2737/S1687 lay ToE-potential Ltotal guard
+
+`P2737/S1687` explicitly blocks promotion from research potential to role-bearing `L_total`: the readiness matrix still lacks a strict signed selector/polarity source, bridge completion, and role-transfer theorem.  Therefore no new Lagrangian term or ToE closure is added.

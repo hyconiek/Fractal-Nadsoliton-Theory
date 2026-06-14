@@ -1,0 +1,167 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_nonexact_polarity_object": false,
+    "blocker": "A non-exact branch-square Z2 flux is available only as an added frustrated class; current artifacts do not source it or turn it into a lambda/P2721 selector.",
+    "facts": {
+      "base_vertex_lambda_or_orientation_selected": false,
+      "full_z2_edge_cochain_class_enumerated": true,
+      "nonexact_flux_class_exists": true,
+      "nonexact_flux_internally_sourced_by_prior_artifacts": false,
+      "p2721_polarity_coupling_selected": false,
+      "strict_lambda_fixing_law_exported": false
+    },
+    "missing_criteria": [
+      "nonexact_flux_internally_sourced_by_prior_artifacts",
+      "base_vertex_lambda_or_orientation_selected",
+      "p2721_polarity_coupling_selected",
+      "strict_lambda_fixing_law_exported"
+    ]
+  },
+  "audited_candidate_class": "all Z2 edge cochains on the P2732 lambda/orientation branch square, modulo vertex gauge, as a candidate non-exact internal polarity object",
+  "branch_square_nonexact_flux_audit": {
+    "base_vertex_selected_by_flux": false,
+    "cochain_count": 16,
+    "d4_vertex_orbit_size": 4,
+    "edge_count": 4,
+    "exact_holonomy_plus_count": 8,
+    "gauge_orbit_count": 2,
+    "gauge_orbits_by_holonomy": {
+      "-1": [
+        [
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "1": [
+        [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "lambda_sign_selected_by_flux": false,
+    "nonexact_flux_exists_as_abstract_class": true,
+    "nonexact_flux_is_d4_symmetric": true,
+    "nonexact_holonomy_minus_count": 8,
+    "obstruction": "The finite branch square has two Z2 gauge classes classified by plaquette holonomy.  The non-exact -1 class exists, but it is an unsourced frustrated flux choice; the D4 square symmetries still move all vertices together, so the class selects no lambda sign, orientation branch, or P2721 polarity.",
+    "orientation_branch_selected_by_flux": false,
+    "p2721_polarity_selected_by_flux": false,
+    "vertex_count": 4
+  },
+  "decision": {
+    "abstract_nonexact_flux_class_exists": true,
+    "base_vertex_lambda_selected": false,
+    "internal_nonexact_polarity_source_exported": false,
+    "negative_export_flags": {
+      "base_vertex_lambda_selected": false,
+      "bridge_closure_exported": false,
+      "internal_nonexact_polarity_source_exported": false,
+      "ltotal_promoted": false,
+      "p2721_polarity_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay an abstract non-exact branch-square flux as closure.  A next admissible proof-grade move must export an internal law that sources the non-exact flux and breaks the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.",
+    "p2721_polarity_selected": false,
+    "reason": "P2735 enumerates all 16 Z2 edge cochains on the branch square and finds the expected two gauge classes by holonomy.  The non-exact -1 flux class is real as an abstract add-on, but it is not sourced by prior strict artifacts and remains D4-symmetric over the four vertices, so it cannot fix lambda or P2721 polarity.",
+    "strict_mechanism_fixing_lambda_exported": false
+  },
+  "input_hashes": {
+    "P2734_BRANCH_SQUARE_HOLONOMY": "b2585656613e2416de5f6a45e22dc8066d8662c14e9af86ee7ee201a0bc4a6c5"
+  },
+  "input_statuses": {
+    "P2734_BRANCH_SQUARE_HOLONOMY": "P2734_BRANCH_SQUARE_COCYCLE_HOLONOMY_EXACT_NO_GO"
+  },
+  "status": "P2735_BRANCH_SQUARE_NONEXACT_FLUX_POLARITY_OBJECT_NO_GO"
+}
