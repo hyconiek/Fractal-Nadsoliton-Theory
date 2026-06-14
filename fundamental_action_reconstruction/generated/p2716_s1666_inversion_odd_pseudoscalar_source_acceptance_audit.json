@@ -1,0 +1,229 @@
+{
+  "acceptance_rows": [
+    {
+      "blocker": "The map would transfer a strict signed pseudoscalar value to the orientation torsor, but current artifacts export no nonzero inversion-odd source value.",
+      "equivariant_map": {
+        "+chi": "+omega",
+        "-chi": "-omega"
+      },
+      "fixes_orientation_torsor_now": false,
+      "representation_theoretically_admissible": true,
+      "strict_nonzero_source_sign_exported": false
+    },
+    {
+      "blocker": "The map would transfer a strict signed pseudoscalar value to the orientation torsor, but current artifacts export no nonzero inversion-odd source value.",
+      "equivariant_map": {
+        "+chi": "-omega",
+        "-chi": "+omega"
+      },
+      "fixes_orientation_torsor_now": false,
+      "representation_theoretically_admissible": true,
+      "strict_nonzero_source_sign_exported": false
+    }
+  ],
+  "artifact_pseudoscalar_source_scan": [
+    {
+      "artifact": "P2714_ORIENTATION_TORSOR",
+      "block_hits_sample": [
+        "premise"
+      ],
+      "exports_strict_nonzero_pseudoscalar_source": false,
+      "path": "fundamental_action_reconstruction/generated/p2714_s1664_z12_orientation_torsor_global_section_obstruction.json",
+      "pseudoscalar_export_hits": [],
+      "status": "P2714_ORIENTATION_TORSOR_GLOBAL_SECTION_OBSTRUCTION_NO_STRICT_LAMBDA_FIX"
+    },
+    {
+      "artifact": "P2715_SCALAR_SOURCE_NO_GO",
+      "block_hits_sample": [
+        "missing",
+        "no_go",
+        "orientation-blind"
+      ],
+      "exports_strict_nonzero_pseudoscalar_source": false,
+      "path": "fundamental_action_reconstruction/generated/p2715_s1665_aut_equivariant_scalar_source_to_orientation_torsor_no_go.json",
+      "pseudoscalar_export_hits": [],
+      "status": "P2715_AUT_TRIVIAL_SCALAR_SOURCE_TO_ORIENTATION_TORSOR_NO_GO"
+    },
+    {
+      "artifact": "P2711_SIGN_COUPLING",
+      "block_hits_sample": [
+        "blocked",
+        "insufficient",
+        "no non-premise",
+        "no-current-unlock",
+        "no-go",
+        "no_current_unlock",
+        "no_go",
+        "orientation-blind",
+        "premise"
+      ],
+      "exports_strict_nonzero_pseudoscalar_source": false,
+      "path": "fundamental_action_reconstruction/generated/p2711_s1661_inversion_odd_character_source_law_sign_coupling_audit.json",
+      "pseudoscalar_export_hits": [],
+      "status": "P2711_SOURCE_LAW_SIGN_COUPLING_DEGENERACY_NO_STRICT_SIGN_SOURCE"
+    },
+    {
+      "artifact": "P2709_RELEASE_BACKSCAN",
+      "block_hits_sample": [
+        "blocked",
+        "insufficient",
+        "missing",
+        "no-current-unlock",
+        "no-go",
+        "no_current_unlock",
+        "no_go",
+        "premise"
+      ],
+      "exports_strict_nonzero_pseudoscalar_source": false,
+      "path": "fundamental_action_reconstruction/generated/p2709_s1659_release_8_1_to_9_3_breakthrough_unlock_backscan.json",
+      "pseudoscalar_export_hits": [],
+      "status": "P2709_RELEASE_8_1_TO_9_3_BACKSCAN_NO_CURRENT_UNLOCK"
+    },
+    {
+      "artifact": "P2706_DAMPING_INTERFACE",
+      "block_hits_sample": [
+        "insufficient",
+        "no_go",
+        "orientation-blind",
+        "premise"
+      ],
+      "exports_strict_nonzero_pseudoscalar_source": false,
+      "path": "fundamental_action_reconstruction/generated/p2706_s1656_damping_to_selector_interface_obstruction_witness_table.json",
+      "pseudoscalar_export_hits": [],
+      "status": "P2706_DAMPING_TO_SELECTOR_INTERFACE_OBSTRUCTION_NO_UNLOCK"
+    }
+  ],
+  "decision": {
+    "inversion_odd_source_value_exported": false,
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "inversion_odd_source_value_exported": false,
+      "ltotal_promoted": false,
+      "nonzero_pseudoscalar_vev_exported": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "pseudoscalar_source_fixes_orientation_torsor": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_pseudoscalar_or_chiral_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "A next admissible move must either construct/export a concrete strict inversion-odd pseudoscalar or chiral source value, then test one of the two equivariant maps as a bounded witness, or pivot to a different new typed object outside the closed lanes.  Without a signed source value, preserve the P2697-P2716 no-new-live-frontier certificate.",
+    "nonzero_pseudoscalar_vev_exported": false,
+    "pseudoscalar_representation_can_couple_to_orientation_torsor": true,
+    "pseudoscalar_source_fixes_orientation_torsor": false,
+    "reason": "P2716 separates two issues.  Representation-theoretically, an inversion-odd pseudoscalar sign torsor can couple equivariantly to the +omega/-omega orientation torsor: two equivariant maps exist.  But current artifacts export no non-premise, nonzero signed pseudoscalar/chiral source value, so the maps have no strict input sign to transport and do not fix lambda or discharge QW-2191.",
+    "strict_pseudoscalar_or_chiral_source_exported": false
+  },
+  "equivariant_map_rows": [
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "lhs": "-omega",
+          "rhs": "+omega",
+          "source_sign": "-chi",
+          "unit": 7
+        },
+        {
+          "lhs": "-omega",
+          "rhs": "+omega",
+          "source_sign": "+chi",
+          "unit": 7
+        },
+        {
+          "lhs": "-omega",
+          "rhs": "+omega",
+          "source_sign": "-chi",
+          "unit": 11
+        },
+        {
+          "lhs": "-omega",
+          "rhs": "+omega",
+          "source_sign": "+chi",
+          "unit": 11
+        }
+      ],
+      "map": {
+        "+chi": "-omega",
+        "-chi": "-omega"
+      },
+      "orientation_fixing_if_source_sign_exported": false,
+      "still_requires_nonzero_source_sign": false
+    },
+    {
+      "aut_equivariant": true,
+      "failure_count": 0,
+      "failure_sample": [],
+      "map": {
+        "+chi": "+omega",
+        "-chi": "-omega"
+      },
+      "orientation_fixing_if_source_sign_exported": true,
+      "still_requires_nonzero_source_sign": true
+    },
+    {
+      "aut_equivariant": true,
+      "failure_count": 0,
+      "failure_sample": [],
+      "map": {
+        "+chi": "-omega",
+        "-chi": "+omega"
+      },
+      "orientation_fixing_if_source_sign_exported": true,
+      "still_requires_nonzero_source_sign": true
+    },
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "lhs": "+omega",
+          "rhs": "-omega",
+          "source_sign": "-chi",
+          "unit": 7
+        },
+        {
+          "lhs": "+omega",
+          "rhs": "-omega",
+          "source_sign": "+chi",
+          "unit": 7
+        },
+        {
+          "lhs": "+omega",
+          "rhs": "-omega",
+          "source_sign": "-chi",
+          "unit": 11
+        },
+        {
+          "lhs": "+omega",
+          "rhs": "-omega",
+          "source_sign": "+chi",
+          "unit": 11
+        }
+      ],
+      "map": {
+        "+chi": "+omega",
+        "-chi": "+omega"
+      },
+      "orientation_fixing_if_source_sign_exported": false,
+      "still_requires_nonzero_source_sign": false
+    }
+  ],
+  "finite_summary": {
+    "candidate_maps": 4,
+    "equivariant_maps": 2,
+    "source_domain": "inversion-odd pseudoscalar sign torsor {+chi,-chi}",
+    "strict_nonzero_pseudoscalar_source_exported": false,
+    "target_torsor": "P2708/P2714 orientation torsor {+omega,-omega}"
+  },
+  "input_hashes": {
+    "P2706_DAMPING_INTERFACE": "cc7781403e56a823c6a9955a98bd59f8ed72c47f0a85f0d88b8f69d7306dd638",
+    "P2709_RELEASE_BACKSCAN": "ca1509bfa31ac7ccea3bb02d12e3314af24f498b3cc38e496bbfb9973d1ff29d",
+    "P2711_SIGN_COUPLING": "39a61ddf1fa619b01d80bf9bf8b554494af72ea40df71870ac02e51a387c3602",
+    "P2714_ORIENTATION_TORSOR": "09f3b09aaccfefa7f06d4f714e0d6d3917fed20fd63ce21a43c7f211863ffd6c",
+    "P2715_SCALAR_SOURCE_NO_GO": "41494ca663a5d35628581bc2c4161197d2cb4313f07142d0e30486f3452bb439"
+  },
+  "status": "P2716_PSEUDOSCALAR_REPRESENTATION_ADMISSIBLE_BUT_NO_STRICT_SOURCE_VALUE"
+}

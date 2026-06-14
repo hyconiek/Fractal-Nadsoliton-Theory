@@ -1,0 +1,282 @@
+{
+  "decision": {
+    "aut_equivariant_scalar_to_torsor_map_exported": false,
+    "negative_export_flags": {
+      "aut_equivariant_scalar_to_torsor_map_exported": false,
+      "bridge_closure_exported": false,
+      "ltotal_promoted": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "scalar_source_breaks_orientation_torsor": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_pseudoscalar_or_chiral_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "new_source_class_tested": "Aut-trivial strict scalar sources as torsor breakers",
+    "next_honest_step": "Do not seek the missing sign in Aut-trivial scalar quantities.  The next admissible move must supply a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value coupled to the orientation torsor, or pivot to a different typed object outside the closed lanes.  Without that, preserve the P2697-P2715 no-new-live-frontier certificate.",
+    "reason": "P2715 tests whether ordinary strict scalar data can break the P2714 orientation torsor.  The finite equivariance calculation finds zero Aut-equivariant maps from a trivial scalar source domain to the orientation torsor, because orientation-reversing units 7 and 11 require an Aut-fixed torsor point and none exists.  Entropy/UV scale, alpha_geo amplitude, positive beta damping, and scalar Lagrangian data therefore remain orientation-blind unless a new strict pseudoscalar/chiral source is supplied.",
+    "scalar_source_breaks_orientation_torsor": false,
+    "strict_pseudoscalar_or_chiral_source_exported": false
+  },
+  "finite_equivariance_summary": {
+    "aut_group": "Aut(Z12)=U(12)={1,5,7,11}",
+    "one_point_candidate_maps": 2,
+    "one_point_equivariant_maps": 0,
+    "orientation_reversing_units": [
+      7,
+      11
+    ],
+    "torsor": [
+      "+omega",
+      "-omega"
+    ],
+    "two_point_trivial_branch_candidate_maps": 4,
+    "two_point_trivial_branch_equivariant_maps": 0
+  },
+  "input_hashes": {
+    "P2687_ANISOTROPIC_SOURCE": null,
+    "P2689_UV_UNIT": null,
+    "P2691_ALPHA_GEO": null,
+    "P2692_BETA_SOURCE": null,
+    "P2713_INTAKE_GATE": "3e11c598c9ec2c2460998cfd057ec8224c8d5e7ee3d09c32560647b8d41903ae",
+    "P2714_ORIENTATION_TORSOR": "09f3b09aaccfefa7f06d4f714e0d6d3917fed20fd63ce21a43c7f211863ffd6c"
+  },
+  "input_statuses": {
+    "P2687_ANISOTROPIC_SOURCE": null,
+    "P2689_UV_UNIT": null,
+    "P2691_ALPHA_GEO": null,
+    "P2692_BETA_SOURCE": null,
+    "P2713_INTAKE_GATE": "P2713_NEW_TYPED_OBJECT_INTAKE_GATE_NO_CANDIDATE_CERTIFICATE",
+    "P2714_ORIENTATION_TORSOR": "P2714_ORIENTATION_TORSOR_GLOBAL_SECTION_OBSTRUCTION_NO_STRICT_LAMBDA_FIX"
+  },
+  "one_point_map_rows": [
+    {
+      "aut_equivariant": false,
+      "failure_count": 2,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_value",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_value",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_value": "-omega"
+      }
+    },
+    {
+      "aut_equivariant": false,
+      "failure_count": 2,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_value",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_value",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_value": "+omega"
+      }
+    }
+  ],
+  "scalar_source_matrix": [
+    {
+      "aut_action": "trivial_scalar",
+      "blocker": "Aut-trivial scalar data can map equivariantly to the orientation torsor only through an Aut-fixed torsor point; P2714/P2715 find none.",
+      "breaks_orientation_torsor": false,
+      "domain_model": "Aut-trivial scalar domain",
+      "one_point_equivariant_map_exists": false,
+      "physical_reason": "A positive scale/reference-cell datum has no orientation parity by itself.",
+      "representative_artifact": "P2689_UV_UNIT",
+      "source_class": "entropy_or_uv_scale_scalar",
+      "two_point_trivial_branch_equivariant_map_exists": false
+    },
+    {
+      "aut_action": "trivial_scalar",
+      "blocker": "Aut-trivial scalar data can map equivariantly to the orientation torsor only through an Aut-fixed torsor point; P2714/P2715 find none.",
+      "breaks_orientation_torsor": false,
+      "domain_model": "Aut-trivial scalar domain",
+      "one_point_equivariant_map_exists": false,
+      "physical_reason": "A scalar amplitude normalization is invariant under inversion unless a separate pseudoscalar law is supplied.",
+      "representative_artifact": "P2691_ALPHA_GEO",
+      "source_class": "alpha_geo_amplitude_normalization_scalar",
+      "two_point_trivial_branch_equivariant_map_exists": false
+    },
+    {
+      "aut_action": "trivial_scalar",
+      "blocker": "Aut-trivial scalar data can map equivariantly to the orientation torsor only through an Aut-fixed torsor point; P2714/P2715 find none.",
+      "breaks_orientation_torsor": false,
+      "domain_model": "Aut-trivial scalar domain",
+      "one_point_equivariant_map_exists": false,
+      "physical_reason": "Positive damping/compression parameters are orientation-blind scalars.",
+      "representative_artifact": "P2692_BETA_SOURCE",
+      "source_class": "positive_beta_or_z_beta_damping_scalar",
+      "two_point_trivial_branch_equivariant_map_exists": false
+    },
+    {
+      "aut_action": "trivial_scalar",
+      "blocker": "Aut-trivial scalar data can map equivariantly to the orientation torsor only through an Aut-fixed torsor point; P2714/P2715 find none.",
+      "breaks_orientation_torsor": false,
+      "domain_model": "Aut-trivial scalar domain",
+      "one_point_equivariant_map_exists": false,
+      "physical_reason": "A scalar Lagrangian density does not pick a Z12 orientation unless augmented by a strict pseudoscalar/chiral source.",
+      "representative_artifact": "P2687_ANISOTROPIC_SOURCE",
+      "source_class": "scalar_lagrangian_density_or_metric_residual",
+      "two_point_trivial_branch_equivariant_map_exists": false
+    }
+  ],
+  "status": "P2715_AUT_TRIVIAL_SCALAR_SOURCE_TO_ORIENTATION_TORSOR_NO_GO",
+  "two_point_trivial_branch_map_rows": [
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 11
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_branch_a": "-omega",
+        "scalar_branch_b": "-omega"
+      }
+    },
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 11
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_branch_a": "-omega",
+        "scalar_branch_b": "+omega"
+      }
+    },
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 11
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "-omega",
+          "torsor_action_value": "+omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_branch_a": "+omega",
+        "scalar_branch_b": "-omega"
+      }
+    },
+    {
+      "aut_equivariant": false,
+      "failure_count": 4,
+      "failure_sample": [
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 7
+        },
+        {
+          "domain_point": "scalar_branch_a",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 11
+        },
+        {
+          "domain_point": "scalar_branch_b",
+          "map_value": "+omega",
+          "torsor_action_value": "-omega",
+          "unit": 11
+        }
+      ],
+      "mapping": {
+        "scalar_branch_a": "+omega",
+        "scalar_branch_b": "+omega"
+      }
+    }
+  ]
+}

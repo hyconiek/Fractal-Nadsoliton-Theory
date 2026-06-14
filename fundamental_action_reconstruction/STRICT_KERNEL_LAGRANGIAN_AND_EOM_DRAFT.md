@@ -1924,3 +1924,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2712/S1662 sign-lane state-map Ltotal guard
 
 `P2712/S1662` is a no-new-live-frontier certificate for the post-P2711 selector/sign lane, not a variational construction.  It does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2713/S1663 intake gate Ltotal guard
+
+`P2713/S1663` is an intake-gate/no-candidate certificate, not a variational source construction.  It preserves the no-new-live-frontier state unless a genuinely new strict typed object or strict mechanism fixing `lambda` is supplied, and it does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2714/S1664 orientation-torsor Ltotal guard
+
+`P2714/S1664` is a finite orientation-torsor/global-section obstruction, not a variational source construction.  Because no Aut-compatible global section is exported, it does not fix `lambda` and does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2715/S1665 scalar-source torsor no-go Ltotal guard
+
+`P2715/S1665` is an equivariance obstruction for scalar sources, not a variational source construction.  Scalar Lagrangian data are Aut-trivial for the orientation torsor unless a strict pseudoscalar/chiral term is newly exported, so this does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2716/S1666 pseudoscalar source Ltotal guard
+
+`P2716/S1666` identifies the admissible representation type for a future source: an inversion-odd pseudoscalar/chiral signed datum.  It does not itself export such a nonzero source value, so it is not a variational source construction and does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2717/S1667 pseudoscalar candidate matrix Ltotal guard
+
+`P2717/S1667` is a source-candidate obstruction matrix, not a variational source construction.  No concrete pseudoscalar/chiral candidate exports a nonzero signed value coupled to the orientation torsor, so this does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2718/S1668 chiral-bispectrum formula Ltotal guard
+
+`P2718/S1668` recomputes a concrete signed chiral-bispectrum marker, but it is not a variational source construction.  Without a non-premise phase-origin/source localizer and torsor-coupling theorem, the marker does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.

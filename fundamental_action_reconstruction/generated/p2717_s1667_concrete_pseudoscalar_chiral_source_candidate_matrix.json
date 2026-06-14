@@ -1,0 +1,117 @@
+{
+  "acceptance_criteria": [
+    "inversion_odd_representation",
+    "strict_artifact_exports_source_law",
+    "nonzero_signed_value_exported",
+    "sign_not_orientation_convention",
+    "coupling_to_p2708_p2714_orientation_torsor_exported"
+  ],
+  "accepted_candidate_count": 0,
+  "candidate_matrix": [
+    {
+      "accepted_as_strict_source": false,
+      "blocker": "A Levi-Civita density is sign-odd, but its sign is an orientation convention unless a strict law chooses the orientation.",
+      "candidate_id": "levi_civita_volume_orientation_density",
+      "coupling_to_p2708_p2714_orientation_torsor_exported": false,
+      "fixes_lambda_now": false,
+      "inversion_odd_representation": true,
+      "missing_criteria": [
+        "strict_artifact_exports_source_law",
+        "nonzero_signed_value_exported",
+        "sign_not_orientation_convention",
+        "coupling_to_p2708_p2714_orientation_torsor_exported"
+      ],
+      "nonzero_signed_value_exported": false,
+      "physics_type": "orientation pseudoscalar density",
+      "sign_not_orientation_convention": false,
+      "strict_artifact_exports_source_law": false
+    },
+    {
+      "accepted_as_strict_source": false,
+      "blocker": "A Pontryagin/anomaly-type density would be the right parity class, but no strict artifact exports such a nonzero signed density or its coupling to the Z12 torsor.",
+      "candidate_id": "pontryagin_or_chiral_anomaly_density",
+      "coupling_to_p2708_p2714_orientation_torsor_exported": false,
+      "fixes_lambda_now": false,
+      "inversion_odd_representation": true,
+      "missing_criteria": [
+        "strict_artifact_exports_source_law",
+        "nonzero_signed_value_exported",
+        "coupling_to_p2708_p2714_orientation_torsor_exported"
+      ],
+      "nonzero_signed_value_exported": false,
+      "physics_type": "topological/chiral pseudoscalar density",
+      "sign_not_orientation_convention": true,
+      "strict_artifact_exports_source_law": false
+    },
+    {
+      "accepted_as_strict_source": false,
+      "blocker": "A spectral asymmetry could source chirality, but no current strict artifact exports an eta/index sign coupled to the boundary-cocycle orientation torsor.",
+      "candidate_id": "eta_or_spectral_asymmetry_index",
+      "coupling_to_p2708_p2714_orientation_torsor_exported": false,
+      "fixes_lambda_now": false,
+      "inversion_odd_representation": true,
+      "missing_criteria": [
+        "strict_artifact_exports_source_law",
+        "nonzero_signed_value_exported",
+        "coupling_to_p2708_p2714_orientation_torsor_exported"
+      ],
+      "nonzero_signed_value_exported": false,
+      "physics_type": "spectral/chiral asymmetry invariant",
+      "sign_not_orientation_convention": true,
+      "strict_artifact_exports_source_law": false
+    },
+    {
+      "accepted_as_strict_source": false,
+      "blocker": "The oriented Z12 cycle is the existing P2708/P2714 torsor itself; it supplies the two signs but not a non-premise rule selecting one.",
+      "candidate_id": "oriented_z12_cycle_cup_product",
+      "coupling_to_p2708_p2714_orientation_torsor_exported": true,
+      "fixes_lambda_now": false,
+      "inversion_odd_representation": true,
+      "missing_criteria": [
+        "nonzero_signed_value_exported",
+        "sign_not_orientation_convention"
+      ],
+      "nonzero_signed_value_exported": false,
+      "physics_type": "discrete cohomological pseudoscalar candidate",
+      "sign_not_orientation_convention": false,
+      "strict_artifact_exports_source_law": true
+    }
+  ],
+  "decision": {
+    "concrete_pseudoscalar_source_accepted": false,
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "concrete_pseudoscalar_source_accepted": false,
+      "coupling_to_orientation_torsor_exported_as_closure": false,
+      "ltotal_promoted": false,
+      "nonzero_signed_value_exported": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "sign_not_orientation_convention": false,
+      "strict_artifact_exports_source_law": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not keep enumerating generic pseudoscalar names.  A next admissible move must provide one explicit formula/artifact computing a nonzero signed pseudoscalar/chiral value and its coupling to the orientation torsor, or pivot to a different genuinely new typed object outside the closed lanes.  Otherwise preserve the P2697-P2717 no-new-live-frontier certificate.",
+    "reason": "P2717 audits concrete pseudoscalar/chiral source classes after P2716.  Levi-Civita orientation density, Pontryagin/anomaly density, eta/spectral asymmetry, and the oriented Z12 cup-product candidate all have the right sign intuition or parity, but none satisfies all strict criteria: exported source law, nonzero signed value, nonconventional sign, and coupling to the P2708/P2714 orientation torsor.  Therefore no candidate fixes lambda or discharges QW-2191.",
+    "strict_mechanism_fixing_lambda_exported": false
+  },
+  "input_hashes": {
+    "P2687_ANISOTROPIC_SOURCE": null,
+    "P2708_BOUNDARY_COCYCLE": "4a821d54b451e6aa376a2e96ca9252e3b5cf90267a8fdbaa579131a1f7c57926",
+    "P2709_RELEASE_BACKSCAN": "ca1509bfa31ac7ccea3bb02d12e3314af24f498b3cc38e496bbfb9973d1ff29d",
+    "P2714_ORIENTATION_TORSOR": "09f3b09aaccfefa7f06d4f714e0d6d3917fed20fd63ce21a43c7f211863ffd6c",
+    "P2715_SCALAR_SOURCE_NO_GO": "41494ca663a5d35628581bc2c4161197d2cb4313f07142d0e30486f3452bb439",
+    "P2716_PSEUDOSCALAR_ACCEPTANCE": "35c1740e39e18d84e3038f45a72a158341db54bde40a213c481bf47bb30e515a"
+  },
+  "input_statuses": {
+    "P2687_ANISOTROPIC_SOURCE": null,
+    "P2708_BOUNDARY_COCYCLE": "P2708_Z12_BOUNDARY_1_COCYCLE_OBSTRUCTION_NO_STRICT_SELECTOR",
+    "P2709_RELEASE_BACKSCAN": "P2709_RELEASE_8_1_TO_9_3_BACKSCAN_NO_CURRENT_UNLOCK",
+    "P2714_ORIENTATION_TORSOR": "P2714_ORIENTATION_TORSOR_GLOBAL_SECTION_OBSTRUCTION_NO_STRICT_LAMBDA_FIX",
+    "P2715_SCALAR_SOURCE_NO_GO": "P2715_AUT_TRIVIAL_SCALAR_SOURCE_TO_ORIENTATION_TORSOR_NO_GO",
+    "P2716_PSEUDOSCALAR_ACCEPTANCE": "P2716_PSEUDOSCALAR_REPRESENTATION_ADMISSIBLE_BUT_NO_STRICT_SOURCE_VALUE"
+  },
+  "status": "P2717_CONCRETE_PSEUDOSCALAR_CHIRAL_SOURCE_MATRIX_NO_ACCEPTED_SOURCE"
+}
