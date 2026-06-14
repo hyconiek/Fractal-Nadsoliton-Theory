@@ -2579,3 +2579,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2718/S1668 chiral-bispectrum explicit signed formula torsor-coupling audit
 
 `P2718/S1668` tests one explicit signed formula after P2717: the P2366/P2367 chiral-bispectrum marker `Im(B_{1,5})` on the 12-node D5 support family.  The marker is nonzero on all 24 source/orientation rows and separates orientation by the values `+2` and `-2`.  This is real signed formula evidence, but it is still not a strict torsor-breaking source because a non-premise phase-origin/source localizer and an exported coupling theorem to the P2708/P2714 orientation torsor remain missing.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2719/S1669 chiral-bispectrum phase-origin theorem audit
+
+`P2719/S1669` audits the exact P2718 marker `Im(B_{1,5})` for the missing phase-origin/source-localizer and torsor-coupling theorem.  The finite signed formula evidence remains intact, but current artifacts do not export a non-premise phase-origin/source localizer and do not export a theorem coupling the sign to the P2708/P2714 orientation torsor.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2720/S1670 chiral-bispectrum translation-orbit phase-origin localizer no-go
+
+`P2720/S1670` attacks the P2719 phase-origin/source-localizer obligation for the exact P2718 marker `Im(B_{1,5})`.  The marker still separates orientation, but it is constant on each full 12-source Z12 translation orbit, so it cannot select a non-premise source/phase origin without importing an external source label or translation-gauge convention.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2721/S1671 chiral-bispectrum sign to orientation-torsor coupling audit
+
+`P2721/S1671` audits Aut(Z12)-equivariant couplings from the P2718 marker sign torsor `{-2,+2}` to the P2708/P2714 orientation torsor `{-omega,+omega}`.  Exactly two equivariant couplings exist, but they are opposite polarity choices.  Since P2720 exports no phase-origin/source localizer and current artifacts export no strict law selecting one polarity, the coupling remains conditional and does not fix `lambda`, discharge `QW-2191`, upgrade pair12 strict-core, close the bridge, start role transfer, promote `L_total`, or close ToE.
+
+## P2722/S1672 clock-phase polarity-selection source-law audit
+
+`P2722/S1672` tests the clock-hand analogy for the P2721 polarity problem.  A continuously changing phase/position does not by itself select a non-premise polarity: a fixed clock-face zero is convention, `theta(t)` is origin-relative, angular-velocity sign would require a new strict chiral/time-orientation source, and the P2721 coupling pair remains unselected.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2723/S1673 strict chiral time-orientation source-law matrix
+
+`P2723/S1673` audits candidate strict chiral/time-orientation source laws after P2722: external time-arrow premise, chiral-bispectrum temporal phase velocity, inversion-odd character `lambda` sign law, and boundary-cocycle orientation flow.  None exports all required data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.

@@ -266,3 +266,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2718 recomputes the explicit P2366/P2367 chiral-bispectrum marker `Im(B_{1,5})`: it is nonzero on all 24 source/orientation rows and separates orientation by `+2/-2`.
 - The marker is not yet a strict torsor-breaking source because it lacks a non-premise phase-origin/source localizer and an exported coupling theorem to the P2708/P2714 orientation torsor; therefore it does not fix `lambda` or discharge `QW-2191`.
 - Do not promote the chiral-bispectrum marker alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE; a next admissible move is only a narrow phase-origin/source-localizer theorem audit for this exact formula, or preservation of the P2697-P2718 no-new-live-frontier certificate.
+
+## Current chiral-bispectrum phase-origin/source-localizer theorem guardrail (P2719/S1669, 2026-06-14)
+
+- P2719 audits the exact P2718 marker `Im(B_{1,5})` for the missing non-premise phase-origin/source localizer and the missing coupling theorem to the P2708/P2714 orientation torsor.
+- The finite signed marker remains real, but current artifacts do not export the required localizer or torsor-coupling theorem; therefore the marker still does not fix `lambda` or discharge `QW-2191`.
+- Do not replay generic pseudoscalar enumeration or promote the chiral-bispectrum marker alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one explicit non-premise phase-origin/source-localizer theorem or one exported torsor-coupling theorem for this exact formula; otherwise preserve the P2697-P2719 no-new-live-frontier certificate.
+
+## Current chiral-bispectrum translation-orbit phase-origin localizer guardrail (P2720/S1670, 2026-06-14)
+
+- P2720 tests the P2719 localizer obligation for the exact P2718 marker `Im(B_{1,5})` under the Z12 translation orbit of the D5 source.
+- The marker still separates orientation, but it is constant on the full 12-source translation orbit for each orientation; therefore it cannot select a non-premise source/phase origin without importing an external source label or translation-gauge convention.
+- Do not repeat this translation-orbit localizer attempt or promote the chiral-bispectrum marker to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply a genuinely new origin-sensitive strict invariant/source law or an independent exported torsor-coupling theorem; otherwise preserve the P2697-P2720 no-new-live-frontier certificate.
+
+## Current chiral-bispectrum sign-torsor coupling guardrail (P2721/S1671, 2026-06-14)
+
+- P2721 audits Aut(Z12)-equivariant maps from the P2718 chiral-bispectrum sign torsor `{-2,+2}` to the P2708/P2714 orientation torsor `{-omega,+omega}`.
+- Exactly two equivariant couplings exist, but they are opposite polarity choices; current artifacts do not export a phase-origin/source localizer or a strict law selecting one polarity, so `lambda` remains unfixed and `QW-2191` remains open.
+- Do not promote the conditional coupling pair to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one strict polarity-selection/source law for this coupling or a genuinely new origin-sensitive strict invariant; otherwise preserve the P2697-P2721 no-new-live-frontier certificate.
+
+## Current clock-phase polarity-selection source-law guardrail (P2722/S1672, 2026-06-14)
+
+- P2722 tests the moving-clock/continuous-phase analogy for the P2721 coupling-polarity problem.
+- A changing hand position does not by itself select a non-premise polarity: fixed clock zero is convention, `theta(t)` is origin-relative, angular-velocity sign would require a new exported strict chiral/time-orientation source, and the P2721 two-polarity pair remains unselected.
+- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.
+
+## Current strict chiral/time-orientation source-law matrix guardrail (P2723/S1673, 2026-06-14)
+
+- P2723 audits the current concrete chiral/time-orientation source-law candidates demanded by P2722: external time-arrow premise, chiral-bispectrum temporal phase velocity, inversion-odd character `lambda` sign law, and boundary-cocycle orientation flow.
+- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.
+- Do not continue naming time-arrow/chiral candidates as closure evidence without an explicit exported source law and nonzero signed value.  A next admissible move must introduce one new strict dynamic/chiral source artifact with a computable signed value coupled to P2721, or preserve the P2697-P2723 no-new-live-frontier certificate.
