@@ -1,0 +1,235 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_time_arrow_source_term": false,
+    "blocker": "The source-term coupling is conditional rather than strict: tau selection depends on an unsourced lambda/polarity choice.",
+    "facts": {
+      "each_fixed_lambda_orientation_selects_tau": true,
+      "lambda_flip_reverses_selected_tau": true,
+      "nonpremise_lambda_sign_selected": false,
+      "orientation_flip_reverses_selected_tau": true,
+      "p2718_marker_coupling_is_computable": true,
+      "p2721_polarity_coupling_polarity_selected": false
+    },
+    "missing_criteria": [
+      "nonpremise_lambda_sign_selected",
+      "p2721_polarity_coupling_polarity_selected"
+    ]
+  },
+  "audited_candidate_class": "H=-lambda*sum_s tau_s*Im(B_{1,5})(orientation,s), lambda in {-1,+1}, orientation in {-1,+1}, all 2^12 tau fields",
+  "chiral_bispectrum_time_arrow_coupling_audit": {
+    "all_lambda_flip_pairs_reverse_tau": true,
+    "all_orientation_flip_pairs_reverse_tau": true,
+    "all_rows_have_unique_constant_tau_ground_state": true,
+    "balanced_tau_selection_across_lambda_orientation_pair": true,
+    "coupling_row_count": 4,
+    "coupling_rows": [
+      {
+        "ground_magnetizations": [
+          -12
+        ],
+        "ground_state_count": 1,
+        "lambda": -1,
+        "marker_values": [
+          2.0
+        ],
+        "min_energy": -24.0,
+        "orientation": -1,
+        "selected_constant_tau_sign": -1
+      },
+      {
+        "ground_magnetizations": [
+          12
+        ],
+        "ground_state_count": 1,
+        "lambda": -1,
+        "marker_values": [
+          -2.0
+        ],
+        "min_energy": -24.0,
+        "orientation": 1,
+        "selected_constant_tau_sign": 1
+      },
+      {
+        "ground_magnetizations": [
+          12
+        ],
+        "ground_state_count": 1,
+        "lambda": 1,
+        "marker_values": [
+          2.0
+        ],
+        "min_energy": -24.0,
+        "orientation": -1,
+        "selected_constant_tau_sign": 1
+      },
+      {
+        "ground_magnetizations": [
+          -12
+        ],
+        "ground_state_count": 1,
+        "lambda": 1,
+        "marker_values": [
+          -2.0
+        ],
+        "min_energy": -24.0,
+        "orientation": 1,
+        "selected_constant_tau_sign": -1
+      }
+    ],
+    "field_count_per_row": 4096,
+    "lambda_flip_pairs": [
+      {
+        "lambda_flipped_partner": {
+          "lambda": 1,
+          "orientation": -1,
+          "tau": 1
+        },
+        "row": {
+          "lambda": -1,
+          "orientation": -1,
+          "tau": -1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "lambda_flipped_partner": {
+          "lambda": 1,
+          "orientation": 1,
+          "tau": -1
+        },
+        "row": {
+          "lambda": -1,
+          "orientation": 1,
+          "tau": 1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "lambda_flipped_partner": {
+          "lambda": -1,
+          "orientation": -1,
+          "tau": -1
+        },
+        "row": {
+          "lambda": 1,
+          "orientation": -1,
+          "tau": 1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "lambda_flipped_partner": {
+          "lambda": -1,
+          "orientation": 1,
+          "tau": 1
+        },
+        "row": {
+          "lambda": 1,
+          "orientation": 1,
+          "tau": -1
+        },
+        "tau_sign_reversed": true
+      }
+    ],
+    "lambda_values": [
+      -1,
+      1
+    ],
+    "obstruction": "The chiral-bispectrum source term is strong enough to choose a tau ground state only after lambda and orientation/polarity are fixed.  The finite matrix is exactly paired: flipping lambda or the orientation torsor reverses the selected tau sign, and current artifacts do not export a non-premise law selecting one lambda/P2721 polarity.",
+    "orientation_flip_pairs": [
+      {
+        "orientation_flipped_partner": {
+          "lambda": -1,
+          "orientation": 1,
+          "tau": 1
+        },
+        "row": {
+          "lambda": -1,
+          "orientation": -1,
+          "tau": -1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "orientation_flipped_partner": {
+          "lambda": -1,
+          "orientation": -1,
+          "tau": -1
+        },
+        "row": {
+          "lambda": -1,
+          "orientation": 1,
+          "tau": 1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "orientation_flipped_partner": {
+          "lambda": 1,
+          "orientation": 1,
+          "tau": -1
+        },
+        "row": {
+          "lambda": 1,
+          "orientation": -1,
+          "tau": 1
+        },
+        "tau_sign_reversed": true
+      },
+      {
+        "orientation_flipped_partner": {
+          "lambda": 1,
+          "orientation": -1,
+          "tau": 1
+        },
+        "row": {
+          "lambda": 1,
+          "orientation": 1,
+          "tau": -1
+        },
+        "tau_sign_reversed": true
+      }
+    ],
+    "orientation_values": [
+      -1,
+      1
+    ],
+    "selected_tau_sign_histogram": {
+      "-1": 2,
+      "1": 2
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_promoted": false,
+      "nonpremise_lambda_sign_selected": false,
+      "nonpremise_orientation_branch_selected": false,
+      "p2721_polarity_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_time_arrow_source_term_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay direct Im(B_{1,5}) tau-coupling as closure.  A next admissible proof-grade move must export a strict law fixing the coupling sign lambda or the P2721 polarity from inside the theory; otherwise preserve the P2697-P2732 no-new-live-frontier certificate.",
+    "nonpremise_lambda_sign_selected": false,
+    "nonpremise_orientation_branch_selected": false,
+    "p2721_polarity_selected": false,
+    "reason": "P2732 tests the direct chiral-bispectrum source term requested after P2731.  The term selects a tau ground state for fixed lambda and orientation, but lambda and the P2721 polarity/orientation branch are exactly paired and unsourced, so no strict non-premise time-arrow source is exported.",
+    "strict_mechanism_fixing_lambda_exported": false,
+    "strict_time_arrow_source_term_exported": false
+  },
+  "input_hashes": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "5618b2f47bb57c15a532043abbc00c966dc6e72ecb92d1ad4bfbfae5aa7d7ad6",
+    "P2721_SIGN_TORSOR_COUPLING": "057302382845203a09aa54a58d5400ea73e579284ceb1fc5db15fa6f6fd0f68d",
+    "P2731_LOCAL_VARIATIONAL_NO_GO": "ac65d80061b615e6c1e50f9d5cd038ee34207b54df5cf29d0bde20b533c3e197"
+  },
+  "input_statuses": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "P2718_CHIRAL_BISPECTRUM_SIGNED_FORMULA_POSITIVE_BUT_NO_STRICT_TORSOR_SOURCE",
+    "P2721_SIGN_TORSOR_COUPLING": "P2721_CONDITIONAL_SIGN_TORSOR_COUPLINGS_EXIST_BUT_NO_CANONICAL_POLARITY",
+    "P2731_LOCAL_VARIATIONAL_NO_GO": "P2731_LOCAL_TIME_ARROW_VARIATIONAL_LAW_NO_GO"
+  },
+  "status": "P2732_CHIRAL_BISPECTRUM_TIME_ARROW_SOURCE_TERM_CONDITIONAL_NO_GO"
+}
