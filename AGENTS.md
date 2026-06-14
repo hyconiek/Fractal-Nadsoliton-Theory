@@ -398,3 +398,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2740 tests a new signed typed object outside the closed sign-torsor recombination/quotient class: cyclic-order chirality on ordered triples of distinct `Z12` source labels.
 - The sign is nonzero pointwise (`660` positive and `660` negative ordered triples), but all translation and affine unordered source-orbit signed sums are zero; the sign requires an ordered source-triple localizer.
 - Do not promote source-triple chirality alone to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must construct a strict source-localizer plus `P2721` polarity-coupling theorem for this exact object, or pivot to a different strict signed observable with nonzero orbit-safe signed value; otherwise preserve the P2697-P2740 no-new-live-frontier certificate.
+
+## Current source-triple localizer fixed-point no-go guardrail (P2741/S1691, 2026-06-14)
+
+- P2741 audits the exact missing premise left by P2740: a strict source-localizer choosing one ordered distinct `Z12` source triple for cyclic-order chirality.
+- The finite fixed-point/orbit computation finds `1320` ordered triples, `110` translation ordered orbits of size `12`, `34` affine ordered orbits, zero translation-fixed ordered triples, and zero affine singleton orbits; an ordered-triple choice remains a label/order premise on current data.
+- Do not promote source-triple chirality or an externally chosen ordered triple to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must supply an independent strict source-localizer theorem plus `P2721` coupling theorem, or pivot to a different strict signed observable with nonzero orbit-safe signed value; otherwise preserve the P2697-P2741 no-new-live-frontier certificate.
+
+## Current source-triple affine-weighted signed aggregate no-go guardrail (P2742/S1692, 2026-06-14)
+
+- P2742 tests the global escape hatch left after P2741: arbitrary affine-invariant weights on affine ordered source-triple orbits for the P2740 cyclic chirality.
+- The finite computation finds `34` affine ordered orbits and zero signed-sum coefficient on every orbit; the inversion unit `11` pairs each orbit into opposite chiralities, so the signed aggregate map from orbit weights has rank `0` and nullity `34`.
+- Do not continue the source-triple chirality lane by affine orbit weighting or representative choice as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must pivot to a genuinely different strict signed observable with a computable nonzero orbit-safe signed value plus `P2721` coupling theorem, or preserve the P2697-P2742 no-new-live-frontier certificate.
+
+## Current affine-frame transition character no-go guardrail (P2743/S1693, 2026-06-14)
+
+- P2743 pivots outside the source-triple chirality lane to a different signed observable candidate: inversion-odd characters of affine-frame transition units in `U(12)`.
+- The finite computation finds `48` affine frames and `2304` transitions; each unit appears `576` times, so both inversion-odd characters have `1152` positive and `1152` negative transitions and global signed sum `0`, with unit `11` pairing opposite signs.
+- Do not promote affine-frame transition characters to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict transition-unit source and `P2721` coupling theorem.  A next admissible move must supply such a source law, pivot outside finite `Z12` sign-character/frame observables, or preserve the P2697-P2743 no-new-live-frontier certificate.
+
+## Current Z12 cycle spectral-asymmetry no-go guardrail (P2744/S1694, 2026-06-14)
+
+- P2744 pivots outside finite `Z12` sign-character/frame observables to the Hermitian spectral asymmetry of the oriented `Z12` cycle derivative across all `12` exported integer character twists.
+- The finite computation finds `5` positive, `5` negative, and `2` zero eigenvalues in every twist sector, with pairing `k -> -2*twist-k mod 12`; eta sign-sum is `0` in all sectors.
+- Do not promote this spectral-asymmetry pivot to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict source creating nonzero spectral asymmetry and a `P2721` coupling theorem.  A next admissible move must supply such a source, pivot outside finite `Z12` sign-character/frame/cycle-spectrum observables, or preserve the P2697-P2744 no-new-live-frontier certificate.

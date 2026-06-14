@@ -2036,3 +2036,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2740/S1690 source-triple chirality Ltotal guard
 
 `P2740/S1690` supplies a bounded no-go for an ordered source-triple chirality candidate.  Because the orbit-safe signed sums cancel and no strict source-localizer/coupling theorem is exported, it adds no variational source term and does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2741/S1691 source-triple localizer Ltotal guard
+
+`P2741/S1691` adds no variational source term: the finite fixed-point audit finds no translation/affine-safe ordered-triple localizer for the `P2740` chirality.  Since the required source-localizer and `P2721` coupling theorem remain unexported, this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2742/S1692 affine-weighted source-triple Ltotal guard
+
+`P2742/S1692` adds no variational source term: arbitrary affine-invariant orbit weights on the `P2740` ordered-triple chirality have zero total signed aggregate because every affine ordered orbit has zero signed-sum coefficient.  Since no nonzero orbit-safe signed value and no `P2721` coupling theorem are exported, this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2743/S1693 affine-frame transition character Ltotal guard
+
+`P2743/S1693` adds no variational source term: affine-frame transition characters are globally balanced and lack a strict transition-unit source plus `P2721` coupling theorem.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2744/S1694 spectral-asymmetry Ltotal guard
+
+`P2744/S1694` adds no variational source term: the finite `Z12` cycle spectral-asymmetry audit has eta sign-sum `0` in every exported integer twist sector and lacks a strict twist/source theorem plus `P2721` coupling.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.

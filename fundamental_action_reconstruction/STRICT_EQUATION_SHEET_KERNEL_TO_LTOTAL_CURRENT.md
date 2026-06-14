@@ -2667,3 +2667,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2740/S1690 Z12 source-triple chirality orbit no-go
 
 `P2740/S1690` tests a genuinely new signed typed object after P2739: cyclic-order chirality on ordered triples of distinct `Z12` source labels.  The sign is nonzero pointwise (`660` positive and `660` negative ordered triples), but every translation or affine unordered source-orbit has signed sum `0`; the sign survives only after choosing an ordered source triple.  Current artifacts export no strict source-localizer for that choice and no `P2721` polarity-coupling theorem.  Therefore no `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2741/S1691 source-triple localizer fixed-point no-go
+
+`P2741/S1691` audits the exact missing premise left by `P2740/S1690`: a strict localizer selecting one ordered distinct `Z12` source triple.  The finite fixed-point/orbit computation finds `1320` ordered triples, `110` translation ordered orbits of size `12`, `34` affine ordered orbits, no translation-fixed ordered triple, and no affine singleton orbit.  Thus an ordered-triple choice remains a source-label/order premise unless a new source-localizer theorem is exported.  No `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2742/S1692 source-triple affine-weighted signed aggregate no-go
+
+`P2742/S1692` tests the global escape hatch left after `P2741/S1691`: instead of localizing one ordered triple, assign arbitrary affine-invariant weights to affine ordered source-triple orbits.  The finite computation finds `34` affine ordered orbits with signed-sum coefficient `0` on every orbit, witnessed by the inversion unit `11` pairing opposite cyclic chiralities.  The signed aggregate linear map has rank `0` and nullity `34`, so no affine orbit-weighted nonzero strict signed value, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2743/S1693 affine-frame transition character no-go
+
+`P2743/S1693` pivots outside the source-triple chirality lane to affine-frame transition characters.  There are `48` affine frames and `2304` transitions; each unit in `U(12)={1,5,7,11}` appears `576` times.  The two inversion-odd characters are real pointwise signs, but each has `1152` positive and `1152` negative transitions, global signed sum `0`, and unit `11` pairs opposite signs.  No strict transition-unit source, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2744/S1694 Z12 cycle spectral-asymmetry no-go
+
+`P2744/S1694` pivots outside finite `Z12` sign-character/frame observables to the Hermitian spectral asymmetry of the oriented `Z12` cycle derivative across all `12` exported integer character twists.  In every sector the spectrum pairs by `k -> -2*twist-k mod 12`, giving `5` positive, `5` negative, and `2` zero eigenvalues; the eta sign-sum is `0` in all sectors.  No nonzero spectral signed value, strict twist/source theorem, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
