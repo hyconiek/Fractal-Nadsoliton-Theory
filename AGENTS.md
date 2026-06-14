@@ -230,3 +230,39 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2712 reconciles P2708-P2711 and finds no new live frontier in the selector/sign lane on current artifacts: boundary cocycle, older-release backscan, inversion-odd character labels, and `lambda` sign-coupling source-law candidates remain blocked.
 - Do not continue selector/sign replay or promote `QW-2191`, pair12 strict-core, role transfer, `L_total`, bridge closure, or ToE from P2708-P2711.
 - A next admissible move requires either a genuinely new strict mechanism fixing `lambda` or a different new typed object outside the closed lanes; otherwise preserve the P2697-P2712 no-new-live-frontier certificate.
+
+## Current post-P2712 new-typed-object intake gate guardrail (P2713/S1663, 2026-06-14)
+
+- P2713 applies the post-P2712 admissibility gate rather than replaying closed lanes: no new strict mechanism fixing `lambda` and no different genuinely new typed object were supplied in the current artifacts.
+- Preserve the P2697-P2713 no-new-live-frontier certificate; selector/sign replay, damping-to-selector replay, older-release transfer, direct-route residual replay, bridge-source replay, Lagrangian/EOM reverse closure, lower-boundary recursion, role transfer, `L_total`, and ToE promotion remain blocked.
+- A next admissible move must supply exactly one genuinely new strict typed object/source/mechanism or a strict mechanism fixing `lambda`, then run only a bounded acceptance/witness test; otherwise do not manufacture closure.
+
+## Current Z12 orientation-torsor global-section guardrail (P2714/S1664, 2026-06-14)
+
+- P2714 tests one new typed candidate after the P2713 intake gate: the orientation torsor of the P2708 boundary-cocycle line under `Aut(Z12)`.
+- The finite action has orientation-reversing units `7` and `11`; neither `+omega` nor `-omega` is an Aut-compatible global section, so the torsor does not export a strict mechanism fixing `lambda` or discharge `QW-2191`.
+- Do not promote the orientation-torsor candidate to pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE; a next admissible move requires a new internal non-premise law breaking the torsor or a different genuinely new typed object outside closed lanes.
+
+## Current Aut-equivariant scalar-source torsor no-go guardrail (P2715/S1665, 2026-06-14)
+
+- P2715 tests whether Aut-trivial strict scalar data can break the P2714 orientation torsor and finds zero Aut-equivariant maps to the `+omega/-omega` torsor.
+- Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data remain orientation-blind unless a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value is exported.
+- Do not replay scalar-source attempts as `QW-2191` discharge, selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE; a next admissible move requires such a pseudoscalar/chiral source or a different genuinely new typed object outside closed lanes.
+
+## Current inversion-odd pseudoscalar source acceptance guardrail (P2716/S1666, 2026-06-14)
+
+- P2716 finds that an inversion-odd pseudoscalar/chiral sign torsor is representation-theoretically the right kind of source: exactly two `Aut(Z12)`-equivariant maps to the `+omega/-omega` orientation torsor exist.
+- Current artifacts do not export a non-premise, nonzero signed pseudoscalar/chiral source value, so the admissible maps have no strict input sign and do not fix `lambda` or discharge `QW-2191`.
+- Do not promote pseudoscalar representation admissibility alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE; a next admissible move must construct/export one concrete strict signed pseudoscalar/chiral source value or pivot to a different genuinely new typed object.
+
+## Current concrete pseudoscalar/chiral source matrix guardrail (P2717/S1667, 2026-06-14)
+
+- P2717 audits concrete pseudoscalar/chiral source classes: Levi-Civita orientation density, Pontryagin/anomaly density, eta/spectral asymmetry, and oriented Z12 cup-product.
+- None satisfies all strict criteria: exported source law, nonzero signed value, nonconventional sign, and coupling to the P2708/P2714 orientation torsor; therefore no strict `lambda` fixing or `QW-2191` discharge is exported.
+- Do not continue enumerating generic pseudoscalar names as closure evidence; a next admissible move must provide one explicit formula/artifact computing a nonzero signed pseudoscalar/chiral value and its torsor coupling, or pivot to a different genuinely new typed object.
+
+## Current chiral-bispectrum signed formula torsor-coupling guardrail (P2718/S1668, 2026-06-14)
+
+- P2718 recomputes the explicit P2366/P2367 chiral-bispectrum marker `Im(B_{1,5})`: it is nonzero on all 24 source/orientation rows and separates orientation by `+2/-2`.
+- The marker is not yet a strict torsor-breaking source because it lacks a non-premise phase-origin/source localizer and an exported coupling theorem to the P2708/P2714 orientation torsor; therefore it does not fix `lambda` or discharge `QW-2191`.
+- Do not promote the chiral-bispectrum marker alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE; a next admissible move is only a narrow phase-origin/source-localizer theorem audit for this exact formula, or preservation of the P2697-P2718 no-new-live-frontier certificate.

@@ -2555,3 +2555,27 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2712/S1662 post-P2711 sign-lane no-new-live-frontier certificate
 
 `P2712/S1662` reconciles the selector/sign state map after P2708-P2711.  The boundary-cocycle object, older-release backscan, Aut(Z12) inversion-odd character labels, and source-law `lambda` coupling candidates remain blocked on current artifacts, with no exported unlock flag.  The lane is therefore frozen against replay unless a genuinely new strict mechanism fixes `lambda` or a different new typed object is supplied.
+
+## P2713/S1663 post-P2712 new-typed-object intake gate certificate
+
+`P2713/S1663` applies the post-P2712 intake gate for any next research move.  With no new strict mechanism fixing `lambda` and no different genuinely new typed object supplied, it preserves the `P2697-P2712` no-new-live-frontier certificate.  Closed replay lanes remain frozen, and any future candidate may only unlock a bounded acceptance/witness test, not `QW-2191`, pair12 strict-core, bridge closure, role transfer, `L_total`, or ToE promotion.
+
+## P2714/S1664 Z12 orientation-torsor global-section obstruction
+
+`P2714/S1664` supplies one new typed candidate after the P2713 intake gate: the orientation torsor of the P2708 boundary-cocycle line.  The finite `Aut(Z12)` action sends `+omega` to `-omega` for orientation-reversing units `7` and `11`, so neither torsor point is an Aut-compatible global section.  This is a real obstruction object, but it exports no strict mechanism fixing `lambda` and does not discharge `QW-2191`, upgrade pair12 strict-core, close the bridge, start role transfer, promote `L_total`, or imply ToE.
+
+## P2715/S1665 Aut-equivariant scalar-source to orientation-torsor no-go
+
+`P2715/S1665` tests whether ordinary strict scalar data can break the P2714 orientation torsor.  The finite equivariance calculation finds zero `Aut(Z12)`-equivariant maps from Aut-trivial scalar domains to the `+omega/-omega` torsor because orientation-reversing units `7` and `11` require an Aut-fixed torsor point.  Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data therefore remain orientation-blind unless a new strict inversion-odd pseudoscalar/chiral source is supplied; no `QW-2191`, pair12 strict-core, bridge, role-transfer, `L_total`, or ToE closure is exported.
+
+## P2716/S1666 inversion-odd pseudoscalar source acceptance audit
+
+`P2716/S1666` separates representation-theoretic admissibility from source export.  An inversion-odd pseudoscalar sign torsor `{+chi,-chi}` admits exactly two `Aut(Z12)`-equivariant maps to the orientation torsor `{+omega,-omega}`, so this is the correct physical kind of source.  However, current artifacts export no non-premise, nonzero signed pseudoscalar/chiral source value to feed either map.  Therefore no strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2717/S1667 concrete pseudoscalar/chiral source candidate matrix
+
+`P2717/S1667` audits concrete pseudoscalar/chiral source classes after P2716.  Levi-Civita orientation density, Pontryagin/anomaly density, eta/spectral asymmetry, and an oriented Z12 cup-product candidate are tested against the strict source criteria: inversion-odd representation, exported source law, nonzero signed value, nonconventional sign, and coupling to the P2708/P2714 orientation torsor.  No candidate satisfies all criteria, so no strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2718/S1668 chiral-bispectrum explicit signed formula torsor-coupling audit
+
+`P2718/S1668` tests one explicit signed formula after P2717: the P2366/P2367 chiral-bispectrum marker `Im(B_{1,5})` on the 12-node D5 support family.  The marker is nonzero on all 24 source/orientation rows and separates orientation by the values `+2` and `-2`.  This is real signed formula evidence, but it is still not a strict torsor-breaking source because a non-premise phase-origin/source localizer and an exported coupling theorem to the P2708/P2714 orientation torsor remain missing.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
