@@ -1948,3 +1948,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2718/S1668 chiral-bispectrum formula Ltotal guard
 
 `P2718/S1668` recomputes a concrete signed chiral-bispectrum marker, but it is not a variational source construction.  Without a non-premise phase-origin/source localizer and torsor-coupling theorem, the marker does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2719/S1669 chiral-bispectrum phase-origin Ltotal guard
+
+`P2719/S1669` is a theorem-obligation audit, not a variational source construction.  Since the non-premise phase-origin/source localizer and P2708/P2714 torsor-coupling theorem remain absent, the chiral-bispectrum sign cannot promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2720/S1670 translation-orbit localizer Ltotal guard
+
+`P2720/S1670` is a finite orbit obstruction for a phase-origin localizer, not a variational source construction.  Since the chiral-bispectrum marker is translation-orbit constant and no origin-sensitive strict source law is exported, it cannot promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2721/S1671 sign-torsor coupling Ltotal guard
+
+`P2721/S1671` identifies a conditional representation-level coupling pair, not a variational source construction.  Without a phase-origin/source localizer or a strict polarity-selection law, the chiral-bispectrum sign cannot promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2722/S1672 clock-phase polarity Ltotal guard
+
+`P2722/S1672` is a source-law audit for moving phase/clock-position intuition, not a variational source construction.  Since no strict chiral/time-orientation source law with nonzero signed value is exported, clock motion cannot promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
+
+## P2723/S1673 chiral time-orientation source Ltotal guard
+
+`P2723/S1673` is a source-law candidate matrix, not a variational source construction.  Since no strict dynamic/chiral source artifact with a computable nonzero signed value is exported, no `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE promotion follows.

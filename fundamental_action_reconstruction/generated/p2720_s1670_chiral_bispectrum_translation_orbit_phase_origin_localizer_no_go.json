@@ -1,0 +1,105 @@
+{
+  "audited_formula": "Im(B_{1,5}) chiral-bispectrum marker from P2718, restricted to translation-orbit phase-origin localization",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_promoted": false,
+      "nonpremise_source_origin_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_chiral_bispectrum_source_exported": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "toe_closure_exported": false,
+      "torsor_coupling_theorem_exported": false,
+      "translation_orbit_phase_origin_localizer_exported": false
+    },
+    "next_honest_step": "Do not repeat the translation-orbit localizer attempt for Im(B_{1,5}).  A next admissible move must supply a genuinely new origin-sensitive strict invariant/source law that is not translation-gauge/source-label data, or an independent exported torsor-coupling theorem; otherwise preserve the P2697-P2720 no-new-live-frontier certificate.",
+    "nonpremise_source_origin_selected": false,
+    "reason": "P2720 attacks the P2719 localizer obligation directly.  The exact P2718 marker keeps its orientation sign, but for each orientation it is constant on the full 12-element translation orbit.  Thus it cannot select a non-premise source/phase origin without importing an external source label or translation-gauge convention.",
+    "strict_chiral_bispectrum_source_exported": false,
+    "strict_mechanism_fixing_lambda_exported": false,
+    "translation_orbit_phase_origin_localizer_exported": false
+  },
+  "input_hashes": {
+    "P2708_BOUNDARY_COCYCLE": "4a821d54b451e6aa376a2e96ca9252e3b5cf90267a8fdbaa579131a1f7c57926",
+    "P2714_ORIENTATION_TORSOR": "09f3b09aaccfefa7f06d4f714e0d6d3917fed20fd63ce21a43c7f211863ffd6c",
+    "P2718_CHIRAL_BISPECTRUM_FORMULA": "5618b2f47bb57c15a532043abbc00c966dc6e72ecb92d1ad4bfbfae5aa7d7ad6",
+    "P2719_PHASE_ORIGIN_AUDIT": "0b16c680e713dfc8c009321b26c23822a43179d22611b4715db941dcd152dce6"
+  },
+  "input_statuses": {
+    "P2708_BOUNDARY_COCYCLE": "P2708_Z12_BOUNDARY_1_COCYCLE_OBSTRUCTION_NO_STRICT_SELECTOR",
+    "P2714_ORIENTATION_TORSOR": "P2714_ORIENTATION_TORSOR_GLOBAL_SECTION_OBSTRUCTION_NO_STRICT_LAMBDA_FIX",
+    "P2718_CHIRAL_BISPECTRUM_FORMULA": "P2718_CHIRAL_BISPECTRUM_SIGNED_FORMULA_POSITIVE_BUT_NO_STRICT_TORSOR_SOURCE",
+    "P2719_PHASE_ORIGIN_AUDIT": "P2719_CHIRAL_BISPECTRUM_PHASE_ORIGIN_LOCALIZER_THEOREM_NO_UNLOCK"
+  },
+  "status": "P2720_TRANSLATION_ORBIT_PHASE_ORIGIN_LOCALIZER_NO_GO",
+  "translation_orbit_audit": {
+    "accepted_localizer_count": 0,
+    "accepted_localizer_orientations": [],
+    "facts": {
+      "each_orientation_has_full_z12_source_orbit": true,
+      "exact_p2718_marker_rows_reused": true,
+      "marker_constant_on_each_translation_orbit": true,
+      "orientation_sign_still_recoverable": true,
+      "source_origin_localizer_exported": false
+    },
+    "obstruction": "The P2718 bispectrum sign separates orientation but is constant across the full Z12 translation orbit for each orientation.  Any localizer using only this orbit-quotiented marker data cannot select one source/phase origin without importing an external source label or gauge convention.",
+    "orbit_rows": [
+      {
+        "can_select_one_origin_without_external_label": false,
+        "full_z12_translation_orbit": true,
+        "marker_constant_on_translation_orbit": true,
+        "marker_values": [
+          2.0
+        ],
+        "orientation": -1,
+        "orientation_recovered_from_marker_values": [
+          -1
+        ],
+        "source_orbit_size": 12,
+        "sources": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "can_select_one_origin_without_external_label": false,
+        "full_z12_translation_orbit": true,
+        "marker_constant_on_translation_orbit": true,
+        "marker_values": [
+          -2.0
+        ],
+        "orientation": 1,
+        "orientation_recovered_from_marker_values": [
+          1
+        ],
+        "source_orbit_size": 12,
+        "sources": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    ]
+  }
+}

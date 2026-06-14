@@ -1,0 +1,106 @@
+{
+  "audited_question": "Can a continuously changing clock-phase/position law select the P2721 coupling polarity non-premise?",
+  "clock_phase_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_rows": [
+      {
+        "accepted_as_strict_polarity_source": false,
+        "blocker": "It chooses an origin, but only as an external face-label convention; P2720 forbids importing that as a non-premise source.",
+        "informal_clock_reading": "declare one mark to be twelve o'clock and read all positions from it",
+        "missing_requirements": [
+          "strictly_internal",
+          "nonconventional"
+        ],
+        "name": "fixed_clock_face_zero",
+        "nonconventional": false,
+        "origin_sensitive": true,
+        "selects_polarity": true,
+        "strictly_internal": false
+      },
+      {
+        "accepted_as_strict_polarity_source": false,
+        "blocker": "A changing position is origin-relative: it is meaningful only relative to a zero mark or reference event; without that anchor, a global rotation gives an equivalent description.",
+        "informal_clock_reading": "let the hand keep moving and use its current position",
+        "missing_requirements": [
+          "strictly_internal",
+          "nonconventional",
+          "origin_sensitive",
+          "selects_polarity"
+        ],
+        "name": "moving_clock_hand_position_theta_t",
+        "nonconventional": false,
+        "origin_sensitive": false,
+        "selects_polarity": false,
+        "strictly_internal": false
+      },
+      {
+        "accepted_as_strict_polarity_source": false,
+        "blocker": "This would be the right kind of chiral/time-orientation datum, but current artifacts do not export it as a non-premise strict source coupled to P2721.",
+        "informal_clock_reading": "use clockwise versus counter-clockwise motion",
+        "missing_requirements": [
+          "strictly_internal",
+          "nonconventional",
+          "origin_sensitive"
+        ],
+        "name": "angular_velocity_sign_dtheta_dt",
+        "nonconventional": false,
+        "origin_sensitive": false,
+        "selects_polarity": true,
+        "strictly_internal": false
+      },
+      {
+        "accepted_as_strict_polarity_source": false,
+        "blocker": "P2721 exports a conditional pair of opposite polarities, not a law choosing one member of the pair.",
+        "informal_clock_reading": "map the two possible hand directions to the two possible orientation labels",
+        "missing_requirements": [
+          "origin_sensitive",
+          "selects_polarity"
+        ],
+        "name": "p2721_equivariant_coupling_pair",
+        "nonconventional": true,
+        "origin_sensitive": false,
+        "selects_polarity": false,
+        "strictly_internal": true
+      }
+    ],
+    "clock_motion_explanation": "A moving hand does not by itself solve the selector problem: if the whole clock face can be rotated, the absolute position of the hand is gauge/reference data.  Only a nonconventional origin event or a strict chiral/time-orientation source coupled to the P2721 polarity pair would select one polarity.",
+    "p2721_conditional_pair_reused": true,
+    "strict_polarity_selection_source_law_exported": false
+  },
+  "decision": {
+    "canonical_coupling_polarity_selected": false,
+    "clock_phase_motion_source_exported": false,
+    "continuous_phase_origin_exported": false,
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_coupling_polarity_selected": false,
+      "clock_phase_motion_source_exported": false,
+      "continuous_phase_origin_exported": false,
+      "ltotal_promoted": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_polarity_selection_source_law_exported": false,
+      "time_orientation_chiral_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not repeat clock-position or clock-face-origin arguments as closure.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside the closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+    "reason": "P2722 tests the natural moving-clock analogy as a polarity-selection source.  Continuous motion supplies change, but not an absolute non-premise phase origin or a strict polarity law: fixed clock zero is a convention, theta(t) is origin-relative, angular-velocity sign would need a new exported chiral/time-orientation source, and P2721 still leaves a two-polarity pair.  Therefore no strict lambda fixing or QW-2191 discharge is exported.",
+    "strict_mechanism_fixing_lambda_exported": false,
+    "strict_polarity_selection_source_law_exported": false
+  },
+  "input_hashes": {
+    "P2718_CHIRAL_BISPECTRUM_FORMULA": "5618b2f47bb57c15a532043abbc00c966dc6e72ecb92d1ad4bfbfae5aa7d7ad6",
+    "P2719_PHASE_ORIGIN_AUDIT": "0b16c680e713dfc8c009321b26c23822a43179d22611b4715db941dcd152dce6",
+    "P2720_TRANSLATION_ORBIT_LOCALIZER": "dc5635bc46e5dd3c2bda674ee06a39ad7a4812017f43ede9b4fc9b5e40f4cd9d",
+    "P2721_SIGN_TORSOR_COUPLING": "057302382845203a09aa54a58d5400ea73e579284ceb1fc5db15fa6f6fd0f68d"
+  },
+  "input_statuses": {
+    "P2718_CHIRAL_BISPECTRUM_FORMULA": "P2718_CHIRAL_BISPECTRUM_SIGNED_FORMULA_POSITIVE_BUT_NO_STRICT_TORSOR_SOURCE",
+    "P2719_PHASE_ORIGIN_AUDIT": "P2719_CHIRAL_BISPECTRUM_PHASE_ORIGIN_LOCALIZER_THEOREM_NO_UNLOCK",
+    "P2720_TRANSLATION_ORBIT_LOCALIZER": "P2720_TRANSLATION_ORBIT_PHASE_ORIGIN_LOCALIZER_NO_GO",
+    "P2721_SIGN_TORSOR_COUPLING": "P2721_CONDITIONAL_SIGN_TORSOR_COUPLINGS_EXIST_BUT_NO_CANONICAL_POLARITY"
+  },
+  "status": "P2722_CLOCK_PHASE_POLARITY_SOURCE_LAW_AUDIT_NO_UNLOCK"
+}
