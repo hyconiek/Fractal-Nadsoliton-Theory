@@ -1,0 +1,243 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_lambda_polarity_source": false,
+    "blocker": "The only branch-square cocycle exported by P2732 is exact with trivial holonomy; it supplies no basepoint-free sign choice.",
+    "facts": {
+      "base_vertex_lambda_polarity_selected": false,
+      "branch_square_built_from_p2732_tau_signs": true,
+      "edge_cocycle_exact": true,
+      "nontrivial_branch_holonomy_exists": false,
+      "strict_lambda_fixing_holonomy_law_exported": false
+    },
+    "missing_criteria": [
+      "nontrivial_branch_holonomy_exists",
+      "base_vertex_lambda_polarity_selected",
+      "strict_lambda_fixing_holonomy_law_exported"
+    ]
+  },
+  "audited_candidate_class": "non-spectral branch-square Z2 cocycle from P2732 selected tau signs on (lambda,orientation) vertices",
+  "branch_square_holonomy_audit": {
+    "all_cycle_holonomies_trivial": true,
+    "all_edges_are_tau_coboundary": true,
+    "cycle_count": 2,
+    "cycle_rows": [
+      {
+        "cycle": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "edge_labels": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "holonomy": 1
+      },
+      {
+        "cycle": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "edge_labels": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "holonomy": 1
+      }
+    ],
+    "directed_edge_count": 8,
+    "edge_rows": [
+      {
+        "dst": [
+          1,
+          -1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "lambda_flip",
+        "src": [
+          -1,
+          -1
+        ],
+        "tau_dst": 1,
+        "tau_src": -1
+      },
+      {
+        "dst": [
+          1,
+          1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "lambda_flip",
+        "src": [
+          -1,
+          1
+        ],
+        "tau_dst": -1,
+        "tau_src": 1
+      },
+      {
+        "dst": [
+          -1,
+          -1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "lambda_flip",
+        "src": [
+          1,
+          -1
+        ],
+        "tau_dst": -1,
+        "tau_src": 1
+      },
+      {
+        "dst": [
+          -1,
+          1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "lambda_flip",
+        "src": [
+          1,
+          1
+        ],
+        "tau_dst": 1,
+        "tau_src": -1
+      },
+      {
+        "dst": [
+          -1,
+          1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "orientation_flip",
+        "src": [
+          -1,
+          -1
+        ],
+        "tau_dst": 1,
+        "tau_src": -1
+      },
+      {
+        "dst": [
+          -1,
+          -1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "orientation_flip",
+        "src": [
+          -1,
+          1
+        ],
+        "tau_dst": -1,
+        "tau_src": 1
+      },
+      {
+        "dst": [
+          1,
+          1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "orientation_flip",
+        "src": [
+          1,
+          -1
+        ],
+        "tau_dst": -1,
+        "tau_src": 1
+      },
+      {
+        "dst": [
+          1,
+          -1
+        ],
+        "edge_label_tau_ratio": -1,
+        "edge_type": "orientation_flip",
+        "src": [
+          1,
+          1
+        ],
+        "tau_dst": 1,
+        "tau_src": -1
+      }
+    ],
+    "nontrivial_holonomy_count": 0,
+    "obstruction": "The branch-square edge labels are exactly the coboundary of the selected tau vertex signs.  Both fundamental square orientations have holonomy +1, so the non-spectral branch cocycle is flat/exact and cannot select a base lambda/P2721 polarity.",
+    "selected_tau_by_vertex": {
+      "lambda=-1,orientation=-1": -1,
+      "lambda=-1,orientation=1": 1,
+      "lambda=1,orientation=-1": 1,
+      "lambda=1,orientation=1": -1
+    },
+    "vertex_count": 4
+  },
+  "decision": {
+    "base_vertex_polarity_selected": false,
+    "lambda_orientation_cocycle_nonexact": false,
+    "negative_export_flags": {
+      "base_vertex_polarity_selected": false,
+      "bridge_closure_exported": false,
+      "lambda_orientation_cocycle_nonexact": false,
+      "ltotal_promoted": false,
+      "nontrivial_branch_holonomy_exported": false,
+      "p2721_polarity_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay the P2732 lambda/orientation branch square as a hidden holonomy source.  A next admissible proof-grade move must introduce a genuinely new non-exact internal polarity object, or preserve the P2697-P2734 no-new-live-frontier certificate.",
+    "nontrivial_branch_holonomy_exported": false,
+    "p2721_polarity_selected": false,
+    "reason": "P2734 tests a non-spectral branch-square cocycle built from the P2732 selected tau signs.  The edge labels are an exact coboundary and both square holonomies are +1, so there is no basepoint-free lambda/P2721 polarity source.",
+    "strict_mechanism_fixing_lambda_exported": false
+  },
+  "input_hashes": {
+    "P2732_CHIRAL_TAU_COUPLING": "478e9205baef09f6ab9c8df6a05b0313374575ff03f09228bde2d4713379b117",
+    "P2733_SPECTRAL_LAMBDA_NO_GO": "60669004c108357c229f6b6b302866f4b55bff1f588218560809bb10e72e8446"
+  },
+  "input_statuses": {
+    "P2732_CHIRAL_TAU_COUPLING": "P2732_CHIRAL_BISPECTRUM_TIME_ARROW_SOURCE_TERM_CONDITIONAL_NO_GO",
+    "P2733_SPECTRAL_LAMBDA_NO_GO": "P2733_CHIRAL_TAU_COUPLING_SPECTRAL_LAMBDA_OBSERVABILITY_NO_GO"
+  },
+  "status": "P2734_BRANCH_SQUARE_COCYCLE_HOLONOMY_EXACT_NO_GO"
+}

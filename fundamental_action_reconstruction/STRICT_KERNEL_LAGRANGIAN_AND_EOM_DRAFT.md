@@ -1992,3 +1992,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2729/S1679 time-arrow source Ltotal guard
 
 `P2729/S1679` finds that a time-arrow sign `tau` would be useful only conditionally, after a non-premise signed `tau` value is sourced.  Since current artifacts export no such time-orientation source value and no P2721 coupling theorem, time-arrow intuition cannot add a variational source term or promote `L_total`.
+
+## P2730/S1680 time-arrow source-field Ltotal guard
+
+`P2730/S1680` finds no unpaired strict signed `tau` source among finite Z12 time-arrow fields.  Because selecting `+tau` over `-tau` remains an unsourced premise and no P2721 coupling theorem is exported, this audit adds no variational source term and cannot promote `L_total`.
+
+## P2731/S1681 local time-arrow variational Ltotal guard
+
+`P2731/S1681` tests a genuine local variational source-law class for `tau`, but every admissible time-reversal-even nearest-neighbour Hamiltonian keeps the ground sector sign-paired.  Odd sign-selecting tables merely import the missing signed source coefficient, so this audit adds no strict variational source term and cannot promote `L_total`.
+
+## P2732/S1682 chiral-bispectrum tau-coupling Ltotal guard
+
+`P2732/S1682` supplies a concrete variational-looking coupling between `tau` and `Im(B_{1,5})`, but the selected ground-state sign is conditional on an unsourced coupling sign `lambda` and an unsourced P2721 polarity/orientation branch.  Therefore it cannot add a strict variational source term or promote `L_total`.
+
+## P2733/S1683 spectral lambda-observability Ltotal guard
+
+`P2733/S1683` shows that the variational spectrum of the direct chiral `tau` coupling is blind to `lambda` and orientation/polarity.  Because no intrinsic spectral law selects the missing sign, this audit adds no strict variational source term and cannot promote `L_total`.
+
+## P2734/S1684 branch-square holonomy Ltotal guard
+
+`P2734/S1684` tests a topological-looking non-spectral branch-square source for the P2732 coupling, but the edge cocycle is exact and all plaquette holonomies are trivial.  Therefore it adds no strict variational/polarity source term and cannot promote `L_total`.

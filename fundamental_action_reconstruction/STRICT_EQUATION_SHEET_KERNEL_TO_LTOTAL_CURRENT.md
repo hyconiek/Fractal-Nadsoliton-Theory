@@ -2623,3 +2623,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2729/S1679 time-arrow orientation-coupling law audit
 
 `P2729/S1679` checks the arrow of time by exhausting all 16 laws `f(orientation,tau)->next_orientation` for `tau in {-1,+1}` crossed with all Z12 source velocities on the P2718 marker.  Time-arrow-dependent equivariant laws can conditionally select polarity only after `tau` is fixed; with both `tau` signs present, polarity remains balanced.  No strict non-premise time-arrow source value, P2721 polarity coupling, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2730/S1680 time-arrow source-field equivariance no-go
+
+`P2730/S1680` exhausts all `2^12=4096` Z12-internal signed time-arrow fields `tau: Z12 -> {-1,+1}`.  Translation-gauge-safe fields are only the paired constants `+tau` and `-tau`; Aut-invariant source-dependent fields exist but remain paired by global sign and do not select a P2721 polarity.  No strict non-premise time-arrow source value, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2731/S1681 local time-arrow variational source-law no-go
+
+`P2731/S1681` exhausts the finite class of translation-invariant nearest-neighbour time-arrow Hamiltonians `H=sum_i e(tau_i,tau_{i+1})` with `e in {-1,0,+1}`.  All 81 local tables are checked against all `2^12=4096` fields; the 9 time-reversal-even laws have no unpaired `tau`-sign ground selector.  Sign-selecting tables require a time-reversal-odd bias in the law itself, so no strict non-premise time-arrow source value, P2721 coupling, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2732/S1682 chiral-bispectrum time-arrow source-term coupling matrix
+
+`P2732/S1682` tests the direct source term `H=-lambda*sum_s tau_s*Im(B_{1,5})(orientation,s)` for `lambda=+/-1`, both orientation branches, and all `2^12=4096` tau fields.  Each fixed `(lambda,orientation)` row has a unique constant `tau` ground state, but flipping `lambda` or the orientation branch reverses that selected sign; the P2721 polarity remains unsourced.  No strict non-premise time-arrow source term, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2733/S1683 chiral tau-coupling spectral lambda-observability no-go
+
+`P2733/S1683` computes the full `2^12=4096`-state tau-energy spectrum for each P2732 direct-coupling row `(lambda,orientation)`.  All four rows have identical full spectra and identical unlabeled extrema signatures, so intrinsic spectral data cannot fix `lambda` or select the P2721 polarity.  No strict mechanism fixing `lambda`, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2734/S1684 lambda-orientation branch-square cocycle holonomy no-go
+
+`P2734/S1684` builds the non-spectral branch square with vertices `(lambda,orientation)` from the P2732 selected `tau` signs.  Every lambda/orientation flip edge is the `tau` coboundary ratio, and both square orientations have trivial holonomy `+1`; the cocycle is exact and selects no base vertex, `lambda`, or P2721 polarity.  No strict mechanism fixing `lambda`, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.

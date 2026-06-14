@@ -332,3 +332,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2729 checks the arrow of time directly by exhausting all 16 laws `f(orientation,tau)->next_orientation` for `tau in {-1,+1}` crossed with all Z12 source velocities on the P2718 marker.
 - Time-arrow-dependent equivariant laws can select polarity only conditionally after fixing `tau`; with both `tau` signs included, polarity remains balanced, and current artifacts export no strict non-premise time-arrow source value.
 - Do not replay time-arrow intuition as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export one strict signed time-orientation source value and a P2721 polarity-coupling theorem, or preserve the P2697-P2729 no-new-live-frontier certificate.
+
+## Current time-arrow source-field equivariance no-go guardrail (P2730/S1680, 2026-06-14)
+
+- P2730 exhausts all `2^12=4096` Z12-internal signed time-arrow fields `tau: Z12 -> {-1,+1}` as the finite source class requested after P2729.
+- Translation-gauge-safe candidates reduce to the paired constants `+tau` and `-tau`; Aut-invariant source-dependent candidates also remain paired by global sign, so no non-premise strict time-arrow sign or P2721 polarity coupling is exported.
+- Do not replay bare time-arrow field searches as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict law fixing the time-orientation sign and coupling it to P2721, or preserve the P2697-P2730 no-new-live-frontier certificate.
+
+## Current local time-arrow variational source-law no-go guardrail (P2731/S1681, 2026-06-14)
+
+- P2731 exhausts all 81 translation-invariant nearest-neighbour local tau energy tables `e(tau_i,tau_{i+1}) in {-1,0,+1}` across all `2^12=4096` Z12 tau fields.
+- The 9 time-reversal-even laws have no unpaired tau-sign ground selector; sign-selecting tables exist only by inserting a time-reversal-odd bias into the law, which is the missing source premise.
+- Do not replay local nearest-neighbour tau variational laws as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a concrete strict time-reversal-odd source term with a nonpremise coefficient sign and a P2721 coupling theorem, or preserve the P2697-P2731 no-new-live-frontier certificate.
+
+## Current chiral-bispectrum time-arrow source-term coupling guardrail (P2732/S1682, 2026-06-14)
+
+- P2732 tests the direct coupling `H=-lambda*sum_s tau_s*Im(B_{1,5})(orientation,s)` across both `lambda` signs, both orientation branches, and all `2^12=4096` tau fields.
+- Each fixed row selects a unique constant `tau`, but flipping `lambda` or the orientation/P2721 polarity reverses the selected sign; current artifacts export no non-premise law choosing one coupling sign or polarity.
+- Do not replay direct chiral-bispectrum tau-coupling as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict law fixing `lambda` or P2721 polarity, or preserve the P2697-P2732 no-new-live-frontier certificate.
+
+## Current chiral tau-coupling spectral lambda-observability no-go guardrail (P2733/S1683, 2026-06-14)
+
+- P2733 computes the full tau-energy spectrum for every P2732 direct-coupling row and finds one identical spectrum across all `lambda` and orientation/P2721-polarity branches.
+- Intrinsic row-spectral and unlabeled-extrema data cannot fix `lambda` or select a P2721 polarity; they are blind to the sign needed by P2732.
+- Do not replay P2732 spectral/ground-sector data as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a new non-spectral strict polarity/lambda source, or preserve the P2697-P2733 no-new-live-frontier certificate.
+
+## Current lambda-orientation branch-square cocycle holonomy no-go guardrail (P2734/S1684, 2026-06-14)
+
+- P2734 tests the non-spectral branch-square cocycle from P2732 selected `tau` signs on `(lambda,orientation)` vertices.
+- The edge labels are an exact `tau` coboundary and both square holonomies are trivial `+1`, so no basepoint-free `lambda` or P2721 polarity source is exported.
+- Do not replay the P2732 branch square as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a genuinely new non-exact internal polarity object, or preserve the P2697-P2734 no-new-live-frontier certificate.
