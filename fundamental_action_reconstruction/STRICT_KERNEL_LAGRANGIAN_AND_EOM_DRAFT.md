@@ -2024,3 +2024,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2737/S1687 lay ToE-potential Ltotal guard
 
 `P2737/S1687` explicitly blocks promotion from research potential to role-bearing `L_total`: the readiness matrix still lacks a strict signed selector/polarity source, bridge completion, and role-transfer theorem.  Therefore no new Lagrangian term or ToE closure is added.
+
+## P2738/S1688 sign-torsor source-law Ltotal guard
+
+`P2738/S1688` is a finite no-go for constructing the missing source by recombining existing unfixed sign torsors.  It adds no variational source term and does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2739/S1689 quotient no-section Ltotal guard
+
+`P2739/S1689` is a no-section obstruction for the current sign-torsor quotient, not a variational source construction.  It adds no signed source term and does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2740/S1690 source-triple chirality Ltotal guard
+
+`P2740/S1690` supplies a bounded no-go for an ordered source-triple chirality candidate.  Because the orbit-safe signed sums cancel and no strict source-localizer/coupling theorem is exported, it adds no variational source term and does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.

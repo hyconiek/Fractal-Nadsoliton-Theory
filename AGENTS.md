@@ -380,3 +380,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2737 translates the lay ToE-potential question into a finite readiness matrix: corrected ontology and finite-audit discipline are supported, but strict selector/polarity source, `lambda/P2721` closure, legacy-to-strict bridge completion, role-transfer theorem, role-bearing `L_total`, and ToE closure are unmet.
 - The honest lay verdict is high research potential but low closure readiness: the program is promising because it is coherent and computationally disciplined, but it is not a completed Theory of Everything.
 - Do not promote ToE, selector closure, bridge closure, role transfer, or `L_total` from lay-potential language.  A next admissible move must supply one new strict signed source law fixing the selector/`lambda-P2721` polarity, then rerun bridge/role-transfer/`L_total` readiness; otherwise preserve the P2697-P2737 no-new-live-frontier/no-ToE-closure certificate.
+
+## Current sign-torsor Boolean source-law exhaustion guardrail (P2738/S1688, 2026-06-14)
+
+- P2738 exhausts all `2^16 = 65536` Boolean laws built from the already-known unfixed sign torsors `lambda`, orientation, `P2721` polarity, and branch-square flux, after content-first grep confirms these are existing bounded/replay lanes.
+- Odd/equivariant laws exist, but they remain paired on the simultaneous-flip quotient; absolute constant laws merely impose a premise and are not strict sourced sign laws.  No non-premise `lambda/P2721` polarity, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+- Do not replay recombinations of existing unfixed sign torsors as the missing strict signed source.  A next admissible move must introduce one genuinely new strict signed value with an exported source theorem and explicit coupling to exactly one `P2721` polarity, or a different typed object outside this sign-torsor replay class; otherwise preserve the P2697-P2738 no-new-live-frontier certificate.
+
+## Current sign-torsor quotient no-section guardrail (P2739/S1689, 2026-06-14)
+
+- P2739 strengthens P2738 with a finite section theorem on the 16-state sign torsor: simultaneous flip gives 8 free orbits; quotient descent requires `s(x)=s(Fx)`, while anti-equivariant sign-line response requires `s(x)=-s(Fx)`.
+- The combined rational linear system has rank `16` and nullity `0`, and the `{±1}` cross-check finds zero simultaneous sections.  Therefore the current sign-torsor quotient exports no nonzero section fixing `lambda/P2721`, no `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.
+- Do not continue the existing sign-torsor lane by searching for quotient sections or recombinations.  A next admissible move must supply a genuinely new strict/internal signed value with a source theorem and a `P2721` polarity-coupling theorem, or a different typed object outside this closed sign-torsor lane; otherwise preserve the P2697-P2739 no-new-live-frontier certificate.
+
+## Current Z12 source-triple chirality orbit no-go guardrail (P2740/S1690, 2026-06-14)
+
+- P2740 tests a new signed typed object outside the closed sign-torsor recombination/quotient class: cyclic-order chirality on ordered triples of distinct `Z12` source labels.
+- The sign is nonzero pointwise (`660` positive and `660` negative ordered triples), but all translation and affine unordered source-orbit signed sums are zero; the sign requires an ordered source-triple localizer.
+- Do not promote source-triple chirality alone to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must construct a strict source-localizer plus `P2721` polarity-coupling theorem for this exact object, or pivot to a different strict signed observable with nonzero orbit-safe signed value; otherwise preserve the P2697-P2740 no-new-live-frontier certificate.
