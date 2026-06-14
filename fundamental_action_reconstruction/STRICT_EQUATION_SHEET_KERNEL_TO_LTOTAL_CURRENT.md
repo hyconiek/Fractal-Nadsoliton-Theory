@@ -2539,3 +2539,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2708/S1658 Z12 boundary 1-cocycle selector-source obstruction
 
 `P2708/S1658` tests a genuinely new typed candidate after P2707: the oriented boundary 1-cocycle line of the Z12 cycle.  The finite chain computation gives `rank(d0)=11` and `dim H1=1`, so a premise sign can orient the circle.  However Aut(Z12) inversion sends the primitive circulation `omega` to `-omega`; the nonzero Aut-invariant orientation subspace is therefore empty.  This candidate does not discharge `QW-2191`, export a non-premise selector provider, upgrade pair12 strict-core, promote `L_total`, or imply ToE closure.
+
+## P2709/S1659 release 8.1-9.3 breakthrough unlock backscan
+
+`P2709/S1659` backscans the strongest Release 8.1-9.3 breakthrough artifacts against the current P2708 missing-sign boundary.  The scan records real scoped progress in NO_FALSE_PASS, selector-condition, D12 no-go, Track-A/Track-B, bridge moment transport, FRW residual, and damping robustness lanes, but finds no current export of a strict source for the boundary-cocycle sign, `QW-2191` discharge, variational source-strength closure, full tensor nonproxy Lagrangian/EOM closure, role transfer, `L_total`, or ToE closure.
+
+## P2710/S1660 finite Aut(Z12) anti-inversion orientation-character source test
+
+`P2710/S1660` computes the full character table of `Aut(Z12)=U(12)={1,5,7,11}`.  Exactly two characters are inversion-odd, so finite anti-inversion parity labels exist.  Current strict artifacts, however, do not export either character as a non-premise source law coupled to the P2708 boundary-cocycle sign.  Therefore P2710 preserves `QW-2191`, pair12 strict-core, role transfer, `L_total`, bridge closure, and ToE as blocked on current artifacts.
+
+## P2711/S1661 inversion-odd character source-law sign-coupling audit
+
+`P2711/S1661` enumerates the exact finite source-law candidates after P2710: two inversion-odd characters times two coupling signs.  Each character has a `lambda -> -lambda` degeneracy that exchanges `+omega` and `-omega`; current artifacts export no non-premise strict law fixing `lambda`.  Thus the inversion-odd character lane remains a premise-sign pair and does not discharge `QW-2191`, upgrade pair12 strict-core, start role transfer, promote `L_total`, close the bridge, or imply ToE closure.
+
+## P2712/S1662 post-P2711 sign-lane no-new-live-frontier certificate
+
+`P2712/S1662` reconciles the selector/sign state map after P2708-P2711.  The boundary-cocycle object, older-release backscan, Aut(Z12) inversion-odd character labels, and source-law `lambda` coupling candidates remain blocked on current artifacts, with no exported unlock flag.  The lane is therefore frozen against replay unless a genuinely new strict mechanism fixes `lambda` or a different new typed object is supplied.

@@ -1908,3 +1908,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2708/S1658 boundary cocycle Ltotal guard
 
 `P2708/S1658` is a finite Z12 cohomology/orientation obstruction.  It identifies a premise-orientable boundary 1-cocycle line but no strict source for its sign; it is not a variational source and does not promote `L_total`, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
+
+## P2709/S1659 release backscan Ltotal guard
+
+`P2709/S1659` checks whether older Release 8.1-9.3 breakthroughs already unlock the current `L_total`/EOM/selector boundary.  They do not: P2363/P2364/P2377/P2378 remain scoped bridge/damping progress with source-strength, selector, role-transfer, and global tensor closure obligations open.  This is not a variational closure or ToE promotion.
+
+## P2710/S1660 anti-inversion character Ltotal guard
+
+`P2710/S1660` is a finite Aut(Z12) character-table test, not a variational construction.  The existence of inversion-odd characters is only a mathematical parity label unless a strict source law selects and signs one of them.  No such source is exported here, so this is not an `L_total`, role-transfer, bridge, or ToE promotion.
+
+## P2711/S1661 source-law sign coupling Ltotal guard
+
+`P2711/S1661` is a finite sign-coupling degeneracy audit, not a variational source.  Because no strict law fixes the coupling sign `lambda`, it does not promote `L_total`, role transfer, bridge closure, selector closure, or ToE.
+
+## P2712/S1662 sign-lane state-map Ltotal guard
+
+`P2712/S1662` is a no-new-live-frontier certificate for the post-P2711 selector/sign lane, not a variational construction.  It does not promote `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE.
