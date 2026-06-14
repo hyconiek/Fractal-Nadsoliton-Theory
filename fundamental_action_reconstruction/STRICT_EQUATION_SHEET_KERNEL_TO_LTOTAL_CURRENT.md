@@ -2655,3 +2655,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2737/S1687 lay ToE-potential readiness matrix
 
 `P2737/S1687` converts the lay question about ToE potential into a finite readiness matrix.  The matrix marks corrected ontology and finite-audit discipline as supported, but keeps strict selector/polarity source, `lambda/P2721` closure, legacy-to-strict bridge completion, role-transfer theorem, role-bearing `L_total`, and ToE closure unmet.  The lay verdict is therefore: high research potential, low closure readiness.  No `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2738/S1688 sign-torsor Boolean source-law exhaustion
+
+`P2738/S1688` exhausts all `2^16 = 65536` Boolean laws on four already-known unfixed sign torsors: `lambda`, orientation, `P2721` polarity, and branch-square flux.  There are odd/equivariant sign-response laws, but on the eight simultaneous-flip quotient orbits every such law remains paired; the absolute constant laws are not odd/equivariant and therefore only impose a premise.  No new strict signed source value, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2739/S1689 sign-torsor quotient no-section certificate
+
+`P2739/S1689` strengthens P2738 by replacing Boolean-law enumeration with a finite section theorem.  On the 16 sign states of `lambda`, orientation, `P2721` polarity, and branch-square flux, simultaneous flip gives 8 free orbits.  Quotient descent requires `s(x)=s(Fx)`, while an anti-equivariant sign-line response requires `s(x)=-s(Fx)`.  The combined rational linear system has rank `16` and nullity `0`, and the `{±1}` cross-check finds zero simultaneous sections.  Thus the current sign-torsor quotient has no nonzero section fixing `lambda/P2721`; no strict signed source value, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2740/S1690 Z12 source-triple chirality orbit no-go
+
+`P2740/S1690` tests a genuinely new signed typed object after P2739: cyclic-order chirality on ordered triples of distinct `Z12` source labels.  The sign is nonzero pointwise (`660` positive and `660` negative ordered triples), but every translation or affine unordered source-orbit has signed sum `0`; the sign survives only after choosing an ordered source triple.  Current artifacts export no strict source-localizer for that choice and no `P2721` polarity-coupling theorem.  Therefore no `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.

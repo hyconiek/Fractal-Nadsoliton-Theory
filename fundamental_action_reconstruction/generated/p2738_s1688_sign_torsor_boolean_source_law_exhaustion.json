@@ -1,0 +1,270 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_signed_source_law": false,
+    "blocker": "Finite exhaustion finds equivariant sign-response laws, but every such law remains paired under simultaneous torsor reversal. No new strict signed value is supplied, so no absolute lambda/P2721 polarity is selected.",
+    "facts": {
+      "all_boolean_laws_exhausted": true,
+      "content_grep_confirms_existing_sign_torsor_boundaries": true,
+      "lambda_p2721_fixed": false,
+      "new_strict_signed_source_supplied": false,
+      "nonpremise_absolute_polarity_law_found": false,
+      "odd_equivariant_laws_exist": true
+    },
+    "missing_criteria": [
+      "nonpremise_absolute_polarity_law_found",
+      "new_strict_signed_source_supplied",
+      "lambda_p2721_fixed"
+    ]
+  },
+  "audited_candidate_class": "all Boolean source laws from the already-known unfixed sign torsors lambda, orientation, P2721 polarity, and branch-square flux, modulo simultaneous sign reversal",
+  "boolean_source_law_exhaustion": {
+    "absolute_minus_law_count": 1,
+    "absolute_plus_law_count": 1,
+    "accepted_nonpremise_law_count": 0,
+    "equivariant_odd_law_count": 256,
+    "global_flip_orbit_count": 8,
+    "input_state_count": 16,
+    "invariant_even_law_count": 256,
+    "orbit_rows": [
+      {
+        "flipped": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "representative": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          1,
+          1,
+          -1
+        ],
+        "representative": [
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          1,
+          -1,
+          1
+        ],
+        "representative": [
+          -1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "representative": [
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "representative": [
+          -1,
+          1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "representative": [
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "representative": [
+          -1,
+          1,
+          1,
+          -1
+        ]
+      },
+      {
+        "flipped": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "representative": [
+          -1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "sample_equivariant_masks": [
+      255,
+      383,
+      703,
+      831,
+      1247,
+      1375,
+      1695,
+      1823
+    ],
+    "theorem": "Across all 2^16 Boolean laws on the four existing sign torsors, the odd/equivariant laws come in flip-paired outputs on the 8 quotient orbits, while the only absolute constant laws are not odd/equivariant. Therefore existing unfixed sign torsors cannot manufacture a non-premise absolute lambda/P2721 polarity.",
+    "total_boolean_laws": 65536,
+    "variables": [
+      "lambda_sign",
+      "orientation_sign",
+      "P2721_polarity_sign",
+      "branch_square_flux_sign"
+    ]
+  },
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "content_pattern_count": 5,
+    "hit_counts": {
+      "branch_square_flux_no_source": 69,
+      "global_flip_or_sign_pairing": 106,
+      "p2721_polarity_pair": 308,
+      "time_or_chiral_sign_pair": 506,
+      "unfixed_lambda_sign": 61
+    },
+    "rows": [
+      {
+        "content_lane": "unfixed_lambda_sign",
+        "hit_count": 61,
+        "pattern": "lambda remains unfixed|lambda.*unfixed|strict law fixing `lambda`|fixing lambda",
+        "sample_hits": [
+          "AGENTS.md:225:- Every candidate remains paired by `lambda -> -lambda`, which exchanges `+omega` and `-omega`; current artifacts do not export a non-premise strict law fixing `lambda`.",
+          "AGENTS.md:285:- Exactly two equivariant couplings exist, but they are opposite polarity choices; current artifacts do not export a phase-origin/source localizer or a strict law selecting one polarity, so `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:297:- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:352:- Do not replay direct chiral-bispectrum tau-coupling as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict law fixing `lambda` or P2721 polarity, or preserve the P2697-P2732 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/p2712_s1662_post_p2711_sign_lane_state_map_no_new_live_frontier_certificate.py:162:            \"next_honest_step\": \"Do not continue the selector/sign lane by replay.  The next admissible move requires either a genuinely new strict mechanism fixing lambda, or a different new typed object outside the closed lanes.  If neither is supplied, preserve the P2697-P2712 no-new-live-frontier certificate.\",",
+          "fundamental_action_reconstruction/p2737_s1687_lay_toe_potential_readiness_matrix.py:35:    \"lambda_p2721_blocker\": r\"lambda/P2721|P2721 polarity|lambda remains unfixed|strict law fixing `lambda`|polarity remains unsourced\",",
+          "fundamental_action_reconstruction/generated/p2713_s1663_post_p2712_new_typed_object_intake_gate_certificate.md:17:- `NO_NEW_TYPED_OBJECT_SUPPLIED`: admitted=False. The current request supplies no new strict mechanism fixing lambda and no different new typed object outside the closed lanes.",
+          "fundamental_action_reconstruction/generated/p2713_s1663_post_p2712_new_typed_object_intake_gate_certificate.md:20:P2713 applies the post-P2712 intake gate rather than replaying closed lanes.  No new strict mechanism fixing lambda and no different new typed object were supplied, so the P2697-P2712 no-new-live-frontier certificate is preserved."
+        ]
+      },
+      {
+        "content_lane": "p2721_polarity_pair",
+        "hit_count": 308,
+        "pattern": "P2721 polarity|P2721.*polarity|coupling polarity|polarity pair",
+        "sample_hits": [
+          "AGENTS.md:290:- P2722 tests the moving-clock/continuous-phase analogy for the P2721 coupling-polarity problem.",
+          "AGENTS.md:291:- A changing hand position does not by itself select a non-premise polarity: fixed clock zero is convention, `theta(t)` is origin-relative, angular-velocity sign would require a new exported strict chiral/time-orientation source, and the P2721 two-polarity pair remains unselected.",
+          "AGENTS.md:292:- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+          "AGENTS.md:297:- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:303:- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.",
+          "AGENTS.md:309:- The computation checks 264 flow rows (2 orientations × 11 nonzero velocities × 12 sources) and every signed finite difference is zero; therefore this lift supplies no nonzero signed value and cannot select a P2721 coupling polarity.",
+          "AGENTS.md:310:- Do not reuse translation flow of `Im(B_{1,5})` as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a non-translation dynamic/chiral observable with a computable nonzero signed value and an explicit P2721 polarity-coupling theorem, or preserve the P2697-P2725 no-new-live-frontier certificate.",
+          "AGENTS.md:316:- Do not promote these conditional flip jumps to `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict orientation-flip/chiral-flow source law selecting one branch and one P2721 polarity, or preserve the P2697-P2726 no-new-live-frontier certificate."
+        ]
+      },
+      {
+        "content_lane": "branch_square_flux_no_source",
+        "hit_count": 69,
+        "pattern": "branch-square.*flux|non-exact flux|frustrated flux|plaquette holonomy",
+        "sample_hits": [
+          "AGENTS.md:366:## Current branch-square non-exact flux polarity-object no-go guardrail (P2735/S1685, 2026-06-14)",
+          "AGENTS.md:370:- Do not replay abstract branch-square non-exact flux as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export an internal law sourcing the non-exact flux and breaking the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.",
+          "AGENTS.md:374:- P2736 performs content-first `rg` searches for non-exact holonomy/sector selectors, theta-like source signs, Wilson/flux orientation sources, branch-square flux, and `lambda/P2721` polarity breaking before selecting a next move.",
+          "AGENTS.md:376:- Do not replay non-exact-sector variational/theta-source, Wilson/flux orientation, or branch-square flux-source searches without a genuinely new formula/artifact.  The next admissible move must supply one new strict signed source law with a coupling to exactly one `lambda/P2721` polarity, or a different typed object outside these closed content classes; otherwise preserve the P2697-P2736 no-new-live-frontier certificate.",
+          "AGENTS.md:386:- P2738 exhausts all `2^16 = 65536` Boolean laws built from the already-known unfixed sign torsors `lambda`, orientation, `P2721` polarity, and branch-square flux, after content-first grep confirms these are existing bounded/replay lanes.",
+          "fundamental_action_reconstruction/generated/p2736_s1686_post_p2735_content_grep_no_new_frontier_certificate.json:18:  \"audited_candidate_class\": \"content-first repository search for an internal law sourcing non-exact flux/holonomy and breaking lambda/P2721 polarity after P2735\",",
+          "fundamental_action_reconstruction/generated/p2736_s1686_post_p2735_content_grep_no_new_frontier_certificate.json:39:    \"obstruction\": \"Content-first grep finds that the obvious next flux/holonomy-source moves are already represented as bounded no-go/boundary content: P2664 for theta-like/non-exact sector selectors, P2623 for Wilson/flux orientation source boundaries, and P2735 for the branch-square flux itself.  No new internal law sourcing flux and breaking lambda/P2721 polarity is found in current artifacts.\",",
+          "fundamental_action_reconstruction/generated/p2736_s1686_post_p2735_content_grep_no_new_frontier_certificate.json:69:        \"content_pattern\": \"gauge-invariant.*select|positive local.*action|theta-like.*source|non-exact.*source/sign|flux source|plaquette holonomy\","
+        ]
+      },
+      {
+        "content_lane": "time_or_chiral_sign_pair",
+        "hit_count": 506,
+        "pattern": "tau.*sign|time-arrow.*source|chiral.*signed|signed source law",
+        "sample_hits": [
+          "AGENTS.md:249:- Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data remain orientation-blind unless a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value is exported.",
+          "AGENTS.md:264:## Current chiral-bispectrum signed formula torsor-coupling guardrail (P2718/S1668, 2026-06-14)",
+          "AGENTS.md:292:- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+          "AGENTS.md:298:- Do not continue naming time-arrow/chiral candidates as closure evidence without an explicit exported source law and nonzero signed value.  A next admissible move must introduce one new strict dynamic/chiral source artifact with a computable signed value coupled to P2721, or preserve the P2697-P2723 no-new-live-frontier certificate.",
+          "AGENTS.md:303:- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.",
+          "AGENTS.md:306:## Current chiral-bispectrum translation-flow signed-velocity no-go guardrail (P2725/S1675, 2026-06-14)",
+          "AGENTS.md:310:- Do not reuse translation flow of `Im(B_{1,5})` as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a non-translation dynamic/chiral observable with a computable nonzero signed value and an explicit P2721 polarity-coupling theorem, or preserve the P2697-P2725 no-new-live-frontier certificate.",
+          "AGENTS.md:333:- Time-arrow-dependent equivariant laws can select polarity only conditionally after fixing `tau`; with both `tau` signs included, polarity remains balanced, and current artifacts export no strict non-premise time-arrow source value."
+        ]
+      },
+      {
+        "content_lane": "global_flip_or_sign_pairing",
+        "hit_count": 106,
+        "pattern": "sign-paired|lambda -> -lambda|\\+omega.*-omega|opposite polarity|two polarity",
+        "sample_hits": [
+          "AGENTS.md:225:- Every candidate remains paired by `lambda -> -lambda`, which exchanges `+omega` and `-omega`; current artifacts do not export a non-premise strict law fixing `lambda`.",
+          "AGENTS.md:243:- The finite action has orientation-reversing units `7` and `11`; neither `+omega` nor `-omega` is an Aut-compatible global section, so the torsor does not export a strict mechanism fixing `lambda` or discharge `QW-2191`.",
+          "AGENTS.md:248:- P2715 tests whether Aut-trivial strict scalar data can break the P2714 orientation torsor and finds zero Aut-equivariant maps to the `+omega/-omega` torsor.",
+          "AGENTS.md:254:- P2716 finds that an inversion-odd pseudoscalar/chiral sign torsor is representation-theoretically the right kind of source: exactly two `Aut(Z12)`-equivariant maps to the `+omega/-omega` orientation torsor exist.",
+          "AGENTS.md:285:- Exactly two equivariant couplings exist, but they are opposite polarity choices; current artifacts do not export a phase-origin/source localizer or a strict law selecting one polarity, so `lambda` remains unfixed and `QW-2191` remains open.",
+          "fundamental_action_reconstruction/p2712_s1662_post_p2711_sign_lane_state_map_no_new_live_frontier_certificate.py:115:            \"why_required\": \"P2711 leaves each inversion-odd character paired by lambda -> -lambda.\",",
+          "fundamental_action_reconstruction/p2715_s1665_aut_equivariant_scalar_source_to_orientation_torsor_no_go.py:119:                        \"map_value\": \"+omega\" if mapping[point] == 1 else \"-omega\",",
+          "fundamental_action_reconstruction/p2715_s1665_aut_equivariant_scalar_source_to_orientation_torsor_no_go.py:120:                        \"torsor_action_value\": \"+omega\" if rhs == 1 else \"-omega\","
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "lambda_fixed": false,
+      "ltotal_promoted": false,
+      "p2721_polarity_selected": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_signed_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not try to build the missing strict signed source law only by recombining existing unfixed sign torsors.  P2738 exhausts that finite Boolean class and finds no non-premise absolute lambda/P2721 polarity.  The next proof-grade move must introduce one genuinely new strict signed value with an exported source theorem and an explicit coupling to exactly one P2721 polarity, or pivot to a different typed object outside the sign-torsor replay class; otherwise preserve the P2697-P2738 no-new-live-frontier certificate.",
+    "reason": "Finite exhaustion finds equivariant sign-response laws, but every such law remains paired under simultaneous torsor reversal. No new strict signed value is supplied, so no absolute lambda/P2721 polarity is selected."
+  },
+  "input_hashes": {
+    "P2737_TOE_READINESS": "7222342eb5ab6b13791edd66c498c560e51caa01513a2e05727c01a0c730b2f2"
+  },
+  "input_statuses": {
+    "P2737_TOE_READINESS": "P2737_LAY_TOE_POTENTIAL_READINESS_MATRIX_NO_CLOSURE"
+  },
+  "status": "P2738_SIGN_TORSOR_BOOLEAN_SOURCE_LAW_EXHAUSTION_NO_GO"
+}
