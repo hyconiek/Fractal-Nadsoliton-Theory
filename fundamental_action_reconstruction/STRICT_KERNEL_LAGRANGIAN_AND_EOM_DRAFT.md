@@ -1968,3 +1968,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2723/S1673 chiral time-orientation source Ltotal guard
 
 `P2723/S1673` is a source-law candidate matrix, not a variational source construction.  Since no strict dynamic/chiral source artifact with a computable nonzero signed value is exported, no `L_total`, selector closure, pair12 strict-core, role transfer, bridge closure, or ToE promotion follows.
+
+## P2724/S1674 no new Ltotal source
+
+`P2724/S1674` is an intake/recommendation certificate.  Because it supplies no variational source term or signed dynamic/chiral law, it does not promote `L_total` and does not reopen the frozen Lagrangian/EOM lane.
+
+## P2725/S1675 zero translation-flow velocity Ltotal guard
+
+`P2725/S1675` is a finite dynamic-observable no-go: the translation-flow signed velocity of `Im(B_{1,5})` is identically zero on the audited Z12 domain.  Since it supplies no nonzero signed source value and no P2721 coupling theorem, it cannot add a variational source term or promote `L_total`.
+
+## P2726/S1676 unsourced orientation-flip Ltotal guard
+
+`P2726/S1676` finds nonzero jumps only in orientation-flipping affine transitions of `Im(B_{1,5})`.  Because the flip branch is not sourced by a strict law and no P2721 polarity is selected, those jumps cannot be promoted to a variational source term or `L_total`.
+
+## P2727/S1677 no source-independent orientation law Ltotal guard
+
+`P2727/S1677` finds no inversion-equivariant source-independent orientation-transition law that selects one nonzero marker-jump polarity.  Since the polarity-selecting laws are premise selectors, they cannot be promoted to a variational source term or `L_total`.
+
+## P2728/S1678 Aut-orbit source weighting Ltotal guard
+
+`P2728/S1678` finds zero global signed value for every Aut(Z12)-orbit source weighting of `Im(B_{1,5})`.  Because the class supplies no unpaired signed source and no P2721 coupling theorem, it cannot add a variational source term or promote `L_total`.
+
+## P2729/S1679 time-arrow source Ltotal guard
+
+`P2729/S1679` finds that a time-arrow sign `tau` would be useful only conditionally, after a non-premise signed `tau` value is sourced.  Since current artifacts export no such time-orientation source value and no P2721 coupling theorem, time-arrow intuition cannot add a variational source term or promote `L_total`.

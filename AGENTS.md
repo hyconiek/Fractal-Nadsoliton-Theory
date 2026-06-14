@@ -296,3 +296,39 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2723 audits the current concrete chiral/time-orientation source-law candidates demanded by P2722: external time-arrow premise, chiral-bispectrum temporal phase velocity, inversion-odd character `lambda` sign law, and boundary-cocycle orientation flow.
 - No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.
 - Do not continue naming time-arrow/chiral candidates as closure evidence without an explicit exported source law and nonzero signed value.  A next admissible move must introduce one new strict dynamic/chiral source artifact with a computable signed value coupled to P2721, or preserve the P2697-P2723 no-new-live-frontier certificate.
+
+## Current post-P2723 commit-intake no-new-live-frontier guardrail (P2724/S1674, 2026-06-14)
+
+- P2724 ingests commit `88eb860b1658ac5b648253fa65dd83bd4abbe922`, which already contains the P2719-P2723 localizer/coupling/clock/chiral-time audits.
+- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.
+- Preserve the P2697-P2724 no-new-live-frontier certificate: do not reopen selector/sign replay, damping-to-selector replay, older-release transfer, direct-route residual replay, bridge-source replay, Lagrangian/EOM reverse closure, role transfer, `L_total`, or ToE.  A next admissible move must supply exactly one such strict dynamic/chiral source artifact and run only a bounded acceptance/witness test.
+
+## Current chiral-bispectrum translation-flow signed-velocity no-go guardrail (P2725/S1675, 2026-06-14)
+
+- P2725 performs the bounded computational follow-up requested after P2724: it tests the finite Z12 translation-flow velocity of the exact P2718 marker `Im(B_{1,5})` as a candidate strict dynamic/chiral source.
+- The computation checks 264 flow rows (2 orientations × 11 nonzero velocities × 12 sources) and every signed finite difference is zero; therefore this lift supplies no nonzero signed value and cannot select a P2721 coupling polarity.
+- Do not reuse translation flow of `Im(B_{1,5})` as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a non-translation dynamic/chiral observable with a computable nonzero signed value and an explicit P2721 polarity-coupling theorem, or preserve the P2697-P2725 no-new-live-frontier certificate.
+
+## Current affine orientation-flow transition matrix guardrail (P2726/S1676, 2026-06-14)
+
+- P2726 exhausts the finite affine transition matrix of the P2718 marker under Z12 source translation plus optional orientation-torsor flip: 576 rows total.
+- The orientation-preserving half reproduces the P2725 zero-flow no-go; the orientation-flipping half has nonzero `+/-4` marker jumps, but only by importing the unsourced torsor branch choice.
+- Do not promote these conditional flip jumps to `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict orientation-flip/chiral-flow source law selecting one branch and one P2721 polarity, or preserve the P2697-P2726 no-new-live-frontier certificate.
+
+## Current orientation-transition law equivariance no-go guardrail (P2727/S1677, 2026-06-14)
+
+- P2727 exhausts source-independent orientation-transition laws on `{-1,+1}` crossed with all Z12 source velocities.
+- The only inversion-equivariant laws are preserve and flip: preserve has zero marker jump, and flip has balanced `+4/-4` jumps; the laws selecting one nonzero polarity collapse to a chosen orientation and fail inversion equivariance.
+- Do not continue source-independent orientation-law variants as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a source-dependent but non-premise strict invariant with a computable signed value and an exported P2721 polarity-coupling theorem, or preserve the P2697-P2727 no-new-live-frontier certificate.
+
+## Current Aut(Z12) source-orbit weighted invariant no-go guardrail (P2728/S1678, 2026-06-14)
+
+- P2728 exhausts all `{-1,0,+1}` weights on the six Aut(Z12) source orbits for the P2718 marker `Im(B_{1,5})`, giving 729 source-dependent but non-representative candidate invariants.
+- Every weighted global signed total is zero, and every nonzero row-level weighting remains paired in `+/-` polarities; no P2721 polarity is selected.
+- Do not continue Aut-orbit source-weighting variants as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a new strict source-dependent invariant beyond orbit-scalar weighting with an exported torsor/polarity-coupling theorem, or preserve the P2697-P2728 no-new-live-frontier certificate.
+
+## Current time-arrow orientation-coupling audit guardrail (P2729/S1679, 2026-06-14)
+
+- P2729 checks the arrow of time directly by exhausting all 16 laws `f(orientation,tau)->next_orientation` for `tau in {-1,+1}` crossed with all Z12 source velocities on the P2718 marker.
+- Time-arrow-dependent equivariant laws can select polarity only conditionally after fixing `tau`; with both `tau` signs included, polarity remains balanced, and current artifacts export no strict non-premise time-arrow source value.
+- Do not replay time-arrow intuition as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export one strict signed time-orientation source value and a P2721 polarity-coupling theorem, or preserve the P2697-P2729 no-new-live-frontier certificate.

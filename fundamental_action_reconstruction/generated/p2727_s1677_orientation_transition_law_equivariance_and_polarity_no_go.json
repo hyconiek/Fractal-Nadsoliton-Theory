@@ -1,0 +1,155 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_orientation_law": false,
+    "blocker": "Finite enumeration finds no inversion-equivariant source-independent orientation-transition law that selects a single nonzero marker-jump polarity.  Polarity-selecting laws are exactly orientation-collapse premises.",
+    "facts": {
+      "all_source_independent_orientation_laws_enumerated": true,
+      "all_z12_velocities_checked": true,
+      "equivariant_laws_identified": true,
+      "equivariant_polarity_selecting_law_exported": false,
+      "nonpremise_orientation_branch_selected": false,
+      "p2721_coupling_polarity_selected": false
+    },
+    "missing_criteria": [
+      "equivariant_polarity_selecting_law_exported",
+      "nonpremise_orientation_branch_selected",
+      "p2721_coupling_polarity_selected"
+    ]
+  },
+  "audited_candidate_class": "all source-independent orientation-transition laws on {-1,+1}, crossed with all Z12 source velocities",
+  "decision": {
+    "equivariant_polarity_selecting_orientation_law_exported": false,
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "equivariant_polarity_selecting_orientation_law_exported": false,
+      "ltotal_promoted": false,
+      "nonpremise_orientation_branch_selected": false,
+      "p2721_coupling_polarity_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not continue source-independent orientation-law variants.  A next admissible proof-grade move must introduce a source-dependent but non-premise strict invariant that breaks inversion equivariance with a computable signed value and an exported P2721 polarity-coupling theorem; otherwise preserve the P2697-P2727 no-new-live-frontier certificate.",
+    "nonpremise_orientation_branch_selected": false,
+    "p2721_coupling_polarity_selected": false,
+    "reason": "P2727 exhausts the finite source-independent orientation-law class.  The only inversion-equivariant laws are preserve and flip: preserve has zero marker jump, while flip has balanced +4/-4 jumps and no single polarity.  The only single-polarity laws collapse to a chosen orientation, hence import the missing selector premise.",
+    "strict_mechanism_fixing_lambda_exported": false
+  },
+  "input_hashes": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "5618b2f47bb57c15a532043abbc00c966dc6e72ecb92d1ad4bfbfae5aa7d7ad6",
+    "P2721_SIGN_TORSOR_COUPLING": "057302382845203a09aa54a58d5400ea73e579284ceb1fc5db15fa6f6fd0f68d",
+    "P2726_AFFINE_ORIENTATION_FLOW": "b38532ebc41891b0621117cd07776ed3dee09e991187cb16ecca173ba17a3873"
+  },
+  "input_statuses": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "P2718_CHIRAL_BISPECTRUM_SIGNED_FORMULA_POSITIVE_BUT_NO_STRICT_TORSOR_SOURCE",
+    "P2721_SIGN_TORSOR_COUPLING": "P2721_CONDITIONAL_SIGN_TORSOR_COUPLINGS_EXIST_BUT_NO_CANONICAL_POLARITY",
+    "P2726_AFFINE_ORIENTATION_FLOW": "P2726_AFFINE_ORIENTATION_FLOW_NONZERO_BUT_UNSOURCED_NO_STRICT_DYNAMIC_CHIRAL_SOURCE"
+  },
+  "orientation_law_audit": {
+    "checked_transition_rows": 1152,
+    "equivariant_law_names": [
+      "preserve_orientation",
+      "flip_orientation"
+    ],
+    "equivariant_polarity_selecting_law_count": 0,
+    "law_count": 4,
+    "law_summaries": [
+      {
+        "balanced_nonzero_polarities": false,
+        "delta_histogram": {
+          "0.0": 288
+        },
+        "delta_values": [
+          0.0
+        ],
+        "inversion_equivariant": true,
+        "law": "preserve_orientation",
+        "mapping": {
+          "-1": -1,
+          "1": 1
+        },
+        "negative_delta_count": 0,
+        "nonzero_delta_count": 0,
+        "positive_delta_count": 0,
+        "row_count": 288,
+        "selects_single_nonzero_polarity": false
+      },
+      {
+        "balanced_nonzero_polarities": true,
+        "delta_histogram": {
+          "-4.0": 144,
+          "4.0": 144
+        },
+        "delta_values": [
+          -4.0,
+          4.0
+        ],
+        "inversion_equivariant": true,
+        "law": "flip_orientation",
+        "mapping": {
+          "-1": 1,
+          "1": -1
+        },
+        "negative_delta_count": 144,
+        "nonzero_delta_count": 288,
+        "positive_delta_count": 144,
+        "row_count": 288,
+        "selects_single_nonzero_polarity": false
+      },
+      {
+        "balanced_nonzero_polarities": false,
+        "delta_histogram": {
+          "-4.0": 144,
+          "0.0": 144
+        },
+        "delta_values": [
+          -4.0,
+          0.0
+        ],
+        "inversion_equivariant": false,
+        "law": "collapse_to_plus_orientation",
+        "mapping": {
+          "-1": 1,
+          "1": 1
+        },
+        "negative_delta_count": 144,
+        "nonzero_delta_count": 144,
+        "positive_delta_count": 0,
+        "row_count": 288,
+        "selects_single_nonzero_polarity": true
+      },
+      {
+        "balanced_nonzero_polarities": false,
+        "delta_histogram": {
+          "0.0": 144,
+          "4.0": 144
+        },
+        "delta_values": [
+          0.0,
+          4.0
+        ],
+        "inversion_equivariant": false,
+        "law": "collapse_to_minus_orientation",
+        "mapping": {
+          "-1": -1,
+          "1": -1
+        },
+        "negative_delta_count": 0,
+        "nonzero_delta_count": 144,
+        "positive_delta_count": 144,
+        "row_count": 288,
+        "selects_single_nonzero_polarity": true
+      }
+    ],
+    "obstruction": "The only inversion-equivariant source-independent laws are preserve and flip.  Preserve has zero jump; flip has balanced +4/-4 jumps.  The laws that select one nonzero polarity collapse to a chosen orientation and fail inversion equivariance, so they are premise selectors.",
+    "premise_polarity_selecting_law_names": [
+      "collapse_to_plus_orientation",
+      "collapse_to_minus_orientation"
+    ],
+    "rows_per_law": 288,
+    "velocity_count": 12
+  },
+  "status": "P2727_ORIENTATION_TRANSITION_LAW_EQUIVARIANCE_POLARITY_NO_GO"
+}
