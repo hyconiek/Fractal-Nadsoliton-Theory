@@ -1,0 +1,95 @@
+{
+  "automorphism_action_certificate": {
+    "aut_z12_invariant_nonzero_orientation_exists": false,
+    "invariant_subspace_dimension_under_inversion": 0,
+    "inversion_sends_omega_to_minus_omega": true,
+    "rotation_fixed": true,
+    "selector_reading": "The boundary 1-cocycle line gives a two-point orientation pair.  Aut(Z12) inversion exchanges the two signs, so choosing +omega over -omega is still an extra sign/branch premise unless a new strict source breaks inversion.",
+    "sign_pair": {
+      "minus_orientation_pairing": -12,
+      "plus_orientation_pairing": 12
+    }
+  },
+  "cohomology_certificate": {
+    "chain_model": "Z12 cycle graph with vertices v_i and oriented boundary edges e_i: i -> i+1",
+    "cohomology_reading": "There is a one-dimensional oriented circulation line, so a premise sign can orient the circle; the line itself still contains the pair ±omega.",
+    "edge_count": 12,
+    "h1_dimension": 1,
+    "primitive_boundary_pairing": 12,
+    "primitive_circulation_vector": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "rank_d0": 11,
+    "vertex_count": 12
+  },
+  "decision": {
+    "boundary_1_cocycle_exports_nonpremise_selector": false,
+    "current_unlock_reading": "The Z12 boundary 1-cocycle is a real new typed object with H1 dimension 1, but it exports only an orientation line ±omega.  Inversion in Aut(Z12) sends omega to -omega, so the Aut-invariant nonzero orientation subspace is zero-dimensional.  Therefore this object can support a premise orientation but cannot discharge QW-2191 or export a non-premise strict selector on current artifacts.",
+    "negative_export_flags": {
+      "canonical_orientation_selected": false,
+      "ltotal_promoted": false,
+      "non_premise_selector_provider_exported": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "A further admissible move must provide a strict source for the missing sign of the boundary 1-cocycle, or a different genuinely new typed object/provider outside the closed lanes.  Without that, preserve the P2697-P2708 no-new-live-frontier/no-strict-selector certificate."
+  },
+  "input_hashes": {
+    "P2699": "7eeeeeacfe4c23bf199fa445a93afa6ddcc09d72d1abaa304e1798c098bdd231",
+    "P2700": "df20ce757bac69aacaddedf31d1bb24ae29961d730b7955d00d86ed5bba8e5f4",
+    "P2706": "cc7781403e56a823c6a9955a98bd59f8ed72c47f0a85f0d88b8f69d7306dd638",
+    "P2707": "67c715897741f24c1194a3108ee5e11b34d3167ed476f9502f4b4b663e7f9920"
+  },
+  "premise_vs_strict_table": [
+    {
+      "blocker": "H1 supplies ±omega, not a canonical choice of +omega.",
+      "candidate_object": "oriented_boundary_1_cocycle_line_H1_Z12",
+      "computed_evidence": {
+        "h1_dimension": 1,
+        "primitive_boundary_pairing": 12
+      },
+      "positive_content": "nonzero H1 line exists and can carry a premise orientation sign",
+      "strict_provider_obligation_met": false
+    },
+    {
+      "blocker": "Full Aut(Z12) includes inversion, which kills every nonzero invariant orientation.",
+      "candidate_object": "Aut_Z12_invariant_orientation",
+      "computed_evidence": {
+        "invariant_dimension": 0,
+        "inversion_sends_omega_to_minus_omega": true,
+        "rotation_fixed": true
+      },
+      "positive_content": "rotation preserves the circulation vector",
+      "strict_provider_obligation_met": false
+    },
+    {
+      "blocker": "This is premise-based sign selection, not a non-premise strict-sourced provider.",
+      "candidate_object": "premise_signed_orientation",
+      "computed_evidence": {
+        "minus_orientation_pairing": -12,
+        "plus_orientation_pairing": 12
+      },
+      "positive_content": "if an external premise selects +omega, it orients +1 over -1",
+      "strict_provider_obligation_met": false
+    }
+  ],
+  "source_boundary": {
+    "p2699_bounded_no_go": true,
+    "p2700_bounded_no_go": true,
+    "p2706_damping_no_selector": true,
+    "p2707_no_new_live_frontier": true
+  },
+  "status": "P2708_Z12_BOUNDARY_1_COCYCLE_OBSTRUCTION_NO_STRICT_SELECTOR"
+}

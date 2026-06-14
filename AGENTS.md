@@ -182,3 +182,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2704 revalidates the P1343/P1348 selector chain in declared Release-8 scope: the selector object/operator basis is present, P1343/P1345/P1346/P1348 generated statuses match, and P1344 finite CSV recomputation gives zero sign flips within declared tolerances.
 - This is a positive declared-scope provenance result, not a blanket erasure of P2699-P2702 bounded no-go/provider-inventory boundaries for Aut(Z12)/replay lanes.
 - Do not promote P2704 to pair12 strict-core upgrade, legacy role transfer, `L_total`, bridge closure, or ToE closure.  The next admissible move is a boundary-alignment theorem between the P1343/P1348 declared-scope selector and the P2699-P2702 criteria.
+
+## Current Release-9.3s pointer boundary-alignment guardrail (P2705/S1655, 2026-06-13)
+
+- P2705 audits the supplied commit `8d48faf012f87721d01a692fd7e3888461d4e6d2` and identifies it as a P2377/P2378 damping-compression transport merge, not as a direct Release-9.3s selector-closure artifact.
+- The commit strengthens damping/bridge mathematics but preserves the relevant insufficiency boundary: the scalar coupling is not dynamically sourced and unit-normalized transport is insufficient.
+- Do not use this commit to remove `QW-2191`, non-premise selector-provider, pair12 strict-core, `L_total`, role-transfer, bridge-completion, or ToE blocks.  A next admissible move is a narrow damping-to-selector interface obstruction/witness table, not closure promotion.
+
+## Current damping-to-selector interface obstruction guardrail (P2706/S1656, 2026-06-13)
+
+- P2706 executes the P2705 damping-to-selector interface test and finds a finite orientation-blindness obstruction: all 792 five-node supports and 45 sampled P2377/P2378 parameter/mass settings give identical scores to `+u` and `-u`.
+- Do not use P2377/P2378 damping-compression transport to discharge `QW-2191`, export a non-premise selector provider, upgrade pair12 strict-core, promote `L_total`, transfer roles, close the bridge, or claim ToE closure.
+- A next admissible move requires a genuinely new strict-sourced symmetry-breaking provider or another new typed object outside closed lanes; otherwise preserve the P2697-P2706 no-new-live-frontier/no-unlock certificate.
+
+## Current post-P2706 no-new-live-frontier guardrail (P2707/S1657, 2026-06-14)
+
+- P2707 reconciles the broad state map after P2705/P2706 and finds no new live frontier on current artifacts: selector/`QW-2191`, damping-to-selector, older-release transfer, direct-route residuals, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, role transfer, `L_total`, and ToE lanes remain blocked.
+- Do not continue replay moves in those lanes or promote closure from P2377/P2378, P1343/P1348 declared-scope provenance, older release prose, or direct-route residuals.
+- The next admissible move must introduce a genuinely new strict typed object/provider/source/blocker-cut outside the closed lanes; otherwise preserve the P2697-P2707 no-new-live-frontier certificate.
+
+## Current Z12 boundary 1-cocycle selector-source obstruction guardrail (P2708/S1658, 2026-06-14)
+
+- P2708 tests a new typed candidate: the Z12 oriented boundary 1-cocycle line.  The finite computation gives `rank(d0)=11`, `dim H1=1`, and a real premise-orientable sign pair `±omega`.
+- Aut(Z12) inversion sends `omega` to `-omega`, leaving no nonzero Aut-invariant orientation; therefore the candidate does not export a non-premise strict selector or discharge `QW-2191`.
+- Do not promote this boundary-cocycle candidate to pair12 strict-core, `L_total`, role transfer, bridge closure, or ToE closure without a new strict source for the missing sign.
