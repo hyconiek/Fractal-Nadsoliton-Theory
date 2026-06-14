@@ -1892,3 +1892,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2704/S1654 provenance revalidation Ltotal guard
 
 `P2704/S1654` revalidates P1343/P1348 as a declared-scope selector provenance chain and recomputes the P1344 finite stress table.  It is not a variational derivation and does not promote `L_total`, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
+
+## P2705/S1655 release commit Ltotal guard
+
+`P2705/S1655` finds that commit `8d48faf012f87721d01a692fd7e3888461d4e6d2` contributes damping-compression transport evidence only.  Because P2377 leaves scalar coupling unsourced and P2378 proves unit-normalized transport insufficiency, the commit is not a variational source and does not promote `L_total`, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
+
+## P2706/S1656 damping interface Ltotal guard
+
+`P2706/S1656` proves a finite obstruction at the damping-to-selector interface: P2377/P2378 distance weights cannot distinguish `+u` from `-u` on the Z12 selector problem.  The obstruction is not a variational source and does not promote `L_total`, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
+
+## P2707/S1657 no-new-live-frontier Ltotal guard
+
+`P2707/S1657` is a state-map reconciliation after P2706, not a variational construction.  It preserves the no-new-live-frontier/no-unlock certificate and does not promote `L_total`, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.
+
+## P2708/S1658 boundary cocycle Ltotal guard
+
+`P2708/S1658` is a finite Z12 cohomology/orientation obstruction.  It identifies a premise-orientable boundary 1-cocycle line but no strict source for its sign; it is not a variational source and does not promote `L_total`, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, or ToE closure.

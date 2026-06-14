@@ -2523,3 +2523,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2704/S1654 P1343/P1348 selector provenance revalidation
 
 `P2704/S1654` performs the finite provenance revalidation requested by P2703.  The P1343 selector object, operator basis, P1343/P1345/P1346/P1348 generated statuses, and the P1344 adversarial CSV are checked directly; the CSV recomputation confirms 12,480 rows, 3,216 admissible rows, zero sign flips, and tolerance-compliant margins.  This revalidates the positive P1343/P1348 selector chain only in its declared Release-8 scope while preserving P2699-P2702 no-go/provider-inventory boundaries for replay lanes; no `L_total`, pair12 strict-core upgrade, role transfer, or ToE closure is exported.
+
+## P2705/S1655 release 9.3s commit boundary audit
+
+`P2705/S1655` audits the user-supplied commit `8d48faf012f87721d01a692fd7e3888461d4e6d2`.  The commit is a P2377/P2378 damping-compression transport merge, not a direct Release-9.3s selector-closure document.  Its numerical boundary is useful but non-unlocking: P2377 supplies an endpoint transport primitive with an unsourced scalar-coupling threshold, while P2378 confirms unit-normalized transport insufficiency on the rectangle.  No `QW-2191`, non-premise selector-provider, pair12 strict-core, `L_total`, role-transfer, bridge-completion, or ToE closure is exported.
+
+## P2706/S1656 damping-to-selector interface obstruction
+
+`P2706/S1656` executes the P2705-recommended damping-to-selector witness table.  Across all 792 five-node Z12 supports and 45 sampled P2377/P2378 eta/beta_tors/mass settings, the distance-weighted damping score gives identical values to `+u` and `-u`.  Thus the damping-compression transport primitive is orientation-blind at the selector interface and does not export `QW-2191` discharge, a non-premise selector provider, pair12 strict-core upgrade, `L_total`, role transfer, bridge closure, or ToE closure.
+
+## P2707/S1657 post-P2706 no-new-live-frontier reconciliation
+
+`P2707/S1657` reconciles the state map after the P2705/P2706 damping audits.  The finite lane matrix keeps selector/`QW-2191`, damping-to-selector, older-release transfer, direct-route residuals, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, role transfer, `L_total`, and ToE lanes blocked on current artifacts.  A generated-artifact scan finds no `p27xx` artifact exporting a live-frontier or forbidden closure flag.  The current state is therefore a P2697-P2707 no-new-live-frontier certificate unless a genuinely new strict typed object/provider/source/blocker-cut is introduced.
+
+## P2708/S1658 Z12 boundary 1-cocycle selector-source obstruction
+
+`P2708/S1658` tests a genuinely new typed candidate after P2707: the oriented boundary 1-cocycle line of the Z12 cycle.  The finite chain computation gives `rank(d0)=11` and `dim H1=1`, so a premise sign can orient the circle.  However Aut(Z12) inversion sends the primitive circulation `omega` to `-omega`; the nonzero Aut-invariant orientation subspace is therefore empty.  This candidate does not discharge `QW-2191`, export a non-premise selector provider, upgrade pair12 strict-core, promote `L_total`, or imply ToE closure.
