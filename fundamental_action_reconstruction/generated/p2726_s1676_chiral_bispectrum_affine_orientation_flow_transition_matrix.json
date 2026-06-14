@@ -1,0 +1,141 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_dynamic_chiral_source": false,
+    "blocker": "The matrix exposes a nonzero orientation-flip jump, but a flip is exactly the unsourced torsor branch choice.  Without a strict law selecting that branch and the P2721 polarity, it cannot fix lambda or discharge QW-2191.",
+    "criteria": [
+      "complete_affine_transition_matrix_enumerated",
+      "pure_translation_subcase_matches_p2725_zero",
+      "orientation_flip_has_nonzero_signed_jump",
+      "strict_orientation_flip_source_law_exported",
+      "nonpremise_orientation_flip_direction_selected",
+      "p2721_coupling_polarity_selected"
+    ],
+    "facts": {
+      "complete_affine_transition_matrix_enumerated": true,
+      "nonpremise_orientation_flip_direction_selected": false,
+      "orientation_flip_has_nonzero_signed_jump": true,
+      "p2721_coupling_polarity_selected": false,
+      "pure_translation_subcase_matches_p2725_zero": true,
+      "strict_orientation_flip_source_law_exported": false
+    },
+    "missing_criteria": [
+      "strict_orientation_flip_source_law_exported",
+      "nonpremise_orientation_flip_direction_selected",
+      "p2721_coupling_polarity_selected"
+    ]
+  },
+  "audited_dynamic_candidate": "complete affine source-translation plus optional orientation-flip transition matrix for P2718 Im(B_{1,5})",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_promoted": false,
+      "nonpremise_orientation_flip_direction_selected": false,
+      "p2721_coupling_polarity_selected": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_orientation_flip_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "The next admissible step is no longer to search translation-flow variants.  It must either export a strict orientation-flip/chiral-flow source law that selects one branch and one P2721 polarity, then rerun this matrix as an acceptance test, or preserve the P2697-P2726 no-new-live-frontier certificate.",
+    "nonpremise_orientation_flip_direction_selected": false,
+    "p2721_coupling_polarity_selected": false,
+    "reason": "P2726 enumerates all 576 affine transitions on the 24 P2718 marker states.  Orientation-preserving translation reproduces the P2725 zero-velocity no-go.  Orientation-flipping transitions give nonzero signed jumps (+/-4), but only by importing the very orientation torsor flip that lacks a non-premise source law and P2721 polarity selection.",
+    "strict_mechanism_fixing_lambda_exported": false,
+    "strict_orientation_flip_source_law_exported": false
+  },
+  "input_hashes": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "5618b2f47bb57c15a532043abbc00c966dc6e72ecb92d1ad4bfbfae5aa7d7ad6",
+    "P2721_SIGN_TORSOR_COUPLING": "057302382845203a09aa54a58d5400ea73e579284ceb1fc5db15fa6f6fd0f68d",
+    "P2725_TRANSLATION_FLOW_NO_GO": "f61af4fe22adf9cb4d93d2c93786dae0eb8c17afdfce871dd6f2b5daa6f3c469"
+  },
+  "input_statuses": {
+    "P2718_CHIRAL_BISPECTRUM_MARKER": "P2718_CHIRAL_BISPECTRUM_SIGNED_FORMULA_POSITIVE_BUT_NO_STRICT_TORSOR_SOURCE",
+    "P2721_SIGN_TORSOR_COUPLING": "P2721_CONDITIONAL_SIGN_TORSOR_COUPLINGS_EXIST_BUT_NO_CANONICAL_POLARITY",
+    "P2725_TRANSLATION_FLOW_NO_GO": "P2725_TRANSLATION_FLOW_SIGNED_VELOCITY_NO_GO_NO_STRICT_DYNAMIC_CHIRAL_SOURCE"
+  },
+  "status": "P2726_AFFINE_ORIENTATION_FLOW_NONZERO_BUT_UNSOURCED_NO_STRICT_DYNAMIC_CHIRAL_SOURCE",
+  "transition_matrix": {
+    "all_flipping_deltas_nonzero": true,
+    "all_preserving_deltas_zero": true,
+    "checked_transition_rows": 576,
+    "obstruction": "The only nonzero signed jumps in the complete affine transition matrix occur when the transition flips the orientation torsor.  Since current artifacts do not export a non-premise law selecting such a flip direction or its P2721 coupling polarity, the nonzero +/-4 jumps are conditional evidence, not a strict source.",
+    "orientation_flipping_delta_histogram": {
+      "-4.0": 144,
+      "4.0": 144
+    },
+    "orientation_flipping_delta_values": [
+      -4.0,
+      4.0
+    ],
+    "orientation_flipping_nonzero_count": 288,
+    "orientation_multiplier_values": [
+      1,
+      -1
+    ],
+    "orientation_preserving_delta_values": [
+      0.0
+    ],
+    "orientation_preserving_nonzero_count": 0,
+    "rule_counts": {
+      "orientation_flipping_affine_transition": 288,
+      "orientation_preserving_translation": 288
+    },
+    "sample_flipping_rows": [
+      {
+        "delta_marker_imag": -4.0,
+        "marker_imag": 2.0,
+        "next_marker_imag": -2.0,
+        "next_orientation": 1,
+        "next_source": 0,
+        "nonzero_signed_delta": true,
+        "orientation": -1,
+        "orientation_multiplier": -1,
+        "rule": "orientation_flipping_affine_transition",
+        "source": 0,
+        "velocity": 0
+      },
+      {
+        "delta_marker_imag": -4.0,
+        "marker_imag": 2.0,
+        "next_marker_imag": -2.0,
+        "next_orientation": 1,
+        "next_source": 1,
+        "nonzero_signed_delta": true,
+        "orientation": -1,
+        "orientation_multiplier": -1,
+        "rule": "orientation_flipping_affine_transition",
+        "source": 0,
+        "velocity": 1
+      },
+      {
+        "delta_marker_imag": -4.0,
+        "marker_imag": 2.0,
+        "next_marker_imag": -2.0,
+        "next_orientation": 1,
+        "next_source": 2,
+        "nonzero_signed_delta": true,
+        "orientation": -1,
+        "orientation_multiplier": -1,
+        "rule": "orientation_flipping_affine_transition",
+        "source": 0,
+        "velocity": 2
+      },
+      {
+        "delta_marker_imag": -4.0,
+        "marker_imag": 2.0,
+        "next_marker_imag": -2.0,
+        "next_orientation": 1,
+        "next_source": 3,
+        "nonzero_signed_delta": true,
+        "orientation": -1,
+        "orientation_multiplier": -1,
+        "rule": "orientation_flipping_affine_transition",
+        "source": 0,
+        "velocity": 3
+      }
+    ],
+    "velocity_count_including_zero": 12
+  }
+}

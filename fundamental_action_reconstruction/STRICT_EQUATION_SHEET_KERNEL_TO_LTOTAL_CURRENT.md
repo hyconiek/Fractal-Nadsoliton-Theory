@@ -2599,3 +2599,27 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2723/S1673 strict chiral time-orientation source-law matrix
 
 `P2723/S1673` audits candidate strict chiral/time-orientation source laws after P2722: external time-arrow premise, chiral-bispectrum temporal phase velocity, inversion-odd character `lambda` sign law, and boundary-cocycle orientation flow.  None exports all required data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection.  No strict `lambda` fixing, `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2724/S1674 post-P2723 commit intake
+
+`P2724/S1674` ingests commit `88eb860b1658ac5b648253fa65dd83bd4abbe922` and preserves the P2723 boundary: no new strict dynamic/chiral source artifact with computable signed value coupled to the P2721 polarity pair is supplied.  No `QW-2191` discharge, pair12 strict-core upgrade, bridge closure, role transfer, `L_total`, or ToE closure follows.
+
+## P2725/S1675 chiral-bispectrum translation-flow signed-velocity no-go
+
+`P2725/S1675` gives the computational follow-up to P2724 by testing the finite translation-flow velocity of the exact P2718 marker `Im(B_{1,5})`.  Across two orientations, all 11 nonzero Z12 velocities, and 12 sources, all 264 signed finite differences are zero.  This dynamic lift exports no nonzero signed chiral/time-orientation value, no P2721 polarity selection, no strict `lambda` fixing, no `QW-2191` discharge, no role transfer, no `L_total`, and no ToE closure.
+
+## P2726/S1676 chiral-bispectrum affine orientation-flow transition matrix
+
+`P2726/S1676` enumerates the complete affine transition matrix for the P2718 marker under source translation plus optional orientation-torsor flip.  The 288 orientation-preserving rows have zero signed finite difference, matching P2725; the 288 orientation-flipping rows have nonzero `+/-4` jumps, but only by importing an unsourced flip branch.  No strict orientation-flip source law, P2721 polarity selection, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2727/S1677 orientation-transition law equivariance and polarity no-go
+
+`P2727/S1677` exhausts source-independent orientation-transition laws on `{-1,+1}` crossed with all Z12 source velocities.  The inversion-equivariant laws are only preserve and flip: preserve gives zero marker jump, while flip gives balanced `+4/-4` jumps and no unique polarity.  The single-polarity laws collapse to a chosen orientation and fail inversion equivariance, so they are premise selectors.  No P2721 polarity selection, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2728/S1678 Aut(Z12) source-orbit weighted chiral invariant no-go
+
+`P2728/S1678` exhausts all `{-1,0,+1}` weights on the six Aut(Z12) source orbits for the P2718 marker `Im(B_{1,5})`.  All 729 source-dependent orbit weightings have zero global signed total, and nonzero row-level values remain paired in `+/-` polarities.  This class exports no strict source-dependent invariant, no P2721 polarity selection, no `lambda` fixing, no `QW-2191` discharge, no role transfer, no `L_total`, and no ToE closure.
+
+## P2729/S1679 time-arrow orientation-coupling law audit
+
+`P2729/S1679` checks the arrow of time by exhausting all 16 laws `f(orientation,tau)->next_orientation` for `tau in {-1,+1}` crossed with all Z12 source velocities on the P2718 marker.  Time-arrow-dependent equivariant laws can conditionally select polarity only after `tau` is fixed; with both `tau` signs present, polarity remains balanced.  No strict non-premise time-arrow source value, P2721 polarity coupling, `lambda` fixing, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
