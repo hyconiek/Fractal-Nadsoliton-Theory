@@ -1,0 +1,94 @@
+{
+  "admissibility_gate": [
+    {
+      "admissible_next_test_if_supplied": "Run a source-law acceptance test proving the mechanism fixes lambda without premise/convention import.",
+      "current_status": "missing",
+      "required_new_item": "strict_mechanism_fixing_lambda",
+      "why_required": "P2711 leaves each inversion-odd character paired by lambda -> -lambda."
+    },
+    {
+      "admissible_next_test_if_supplied": "Open a fresh bounded audit only for that object and keep closure flags false until proven.",
+      "current_status": "not supplied in current artifacts",
+      "required_new_item": "different_new_typed_object_outside_selector_sign_lane",
+      "why_required": "P2697/P2707 and P2708-P2711 close replay moves on current selector/sign artifacts."
+    }
+  ],
+  "decision": {
+    "negative_export_flags": {
+      "ltotal_promoted": false,
+      "new_live_frontier_found": false,
+      "non_premise_selector_provider_exported": false,
+      "orientation_character_source_exported": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "source_law_coupling_sign_exported": false,
+      "strict_mechanism_fixing_lambda_exported": false,
+      "strict_source_law_selects_plus_omega": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not continue the selector/sign lane by replay.  The next admissible move requires either a genuinely new strict mechanism fixing lambda, or a different new typed object outside the closed lanes.  If neither is supplied, preserve the P2697-P2712 no-new-live-frontier certificate.",
+    "no_new_live_frontier_certificate": true,
+    "reason": "P2712 checks the post-P2711 selector/sign state map.  Boundary cocycle, older-release backscan, Aut(Z12) inversion-odd character labels, and lambda sign-coupling source-law candidates are all blocked on current artifacts; no unlock flag is exported.",
+    "selector_sign_lane_replay_frozen": true
+  },
+  "global_unlock_scan": {
+    "unlock_flag_hit_count": 0,
+    "unlock_flag_hits": []
+  },
+  "input_hashes": {
+    "P2697_STATE_MAP": "36adb5e3600b7ee0db7ea9bfff21998ca5b2a751b2e1f34a052183e6a8c1fb26",
+    "P2707_POST_DAMPING_STATE_MAP": "67c715897741f24c1194a3108ee5e11b34d3167ed476f9502f4b4b663e7f9920",
+    "P2708_BOUNDARY_COCYCLE": "4a821d54b451e6aa376a2e96ca9252e3b5cf90267a8fdbaa579131a1f7c57926",
+    "P2709_RELEASE_BACKSCAN": "ca1509bfa31ac7ccea3bb02d12e3314af24f498b3cc38e496bbfb9973d1ff29d",
+    "P2710_CHARACTER_TEST": "73d9c1867a512b8a16e54e3fbb9e6ec11caa092785b4b01c9a79065b1845d5f2",
+    "P2711_SIGN_COUPLING": "39a61ddf1fa619b01d80bf9bf8b554494af72ea40df71870ac02e51a387c3602"
+  },
+  "lane_matrix": [
+    {
+      "artifact": "P2708_BOUNDARY_COCYCLE",
+      "blocked_now": true,
+      "checked_unlock_flags": [
+        "boundary_1_cocycle_exports_nonpremise_selector"
+      ],
+      "lane": "boundary_cocycle_object",
+      "reason": "P2708 exports a real H1 line but no strict sign source.",
+      "status": "P2708_Z12_BOUNDARY_1_COCYCLE_OBSTRUCTION_NO_STRICT_SELECTOR",
+      "unlock_exported": false
+    },
+    {
+      "artifact": "P2709_RELEASE_BACKSCAN",
+      "blocked_now": true,
+      "checked_unlock_flags": [
+        "current_unlock_found"
+      ],
+      "lane": "older_release_unlock_claims",
+      "reason": "P2709 finds older-release breakthroughs scoped/non-unlocking.",
+      "status": "P2709_RELEASE_8_1_TO_9_3_BACKSCAN_NO_CURRENT_UNLOCK",
+      "unlock_exported": false
+    },
+    {
+      "artifact": "P2710_CHARACTER_TEST",
+      "blocked_now": true,
+      "checked_unlock_flags": [
+        "strict_orientation_character_source_exported"
+      ],
+      "lane": "aut_z12_character_label",
+      "reason": "P2710 finds inversion-odd characters but no strict source law.",
+      "status": "P2710_AUT_Z12_ANTI_INVERSION_CHARACTER_EXISTS_BUT_NO_STRICT_SOURCE",
+      "unlock_exported": false
+    },
+    {
+      "artifact": "P2711_SIGN_COUPLING",
+      "blocked_now": true,
+      "checked_unlock_flags": [
+        "source_law_coupling_sign_exported",
+        "strict_source_law_selects_plus_omega"
+      ],
+      "lane": "source_law_lambda_coupling",
+      "reason": "P2711 finds lambda sign degeneracy and no non-premise lambda source.",
+      "status": "P2711_SOURCE_LAW_SIGN_COUPLING_DEGENERACY_NO_STRICT_SIGN_SOURCE",
+      "unlock_exported": false
+    }
+  ],
+  "status": "P2712_POST_P2711_SIGN_LANE_NO_NEW_LIVE_FRONTIER_CERTIFICATE"
+}

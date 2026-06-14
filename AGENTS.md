@@ -206,3 +206,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2708 tests a new typed candidate: the Z12 oriented boundary 1-cocycle line.  The finite computation gives `rank(d0)=11`, `dim H1=1`, and a real premise-orientable sign pair `±omega`.
 - Aut(Z12) inversion sends `omega` to `-omega`, leaving no nonzero Aut-invariant orientation; therefore the candidate does not export a non-premise strict selector or discharge `QW-2191`.
 - Do not promote this boundary-cocycle candidate to pair12 strict-core, `L_total`, role transfer, bridge closure, or ToE closure without a new strict source for the missing sign.
+
+## Current release 8.1-9.3 breakthrough backscan guardrail (P2709/S1659, 2026-06-14)
+
+- P2709 backscans the strongest Release 8.1-9.3 breakthroughs against the current P2708 missing-sign and P2697-P2708 no-unlock boundary.
+- The older breakthroughs remain real scoped progress, but none currently exports a strict source for the boundary-cocycle sign, discharges `QW-2191`, closes variational source strength, closes full tensor nonproxy Lagrangian/EOM, starts role transfer, or promotes `L_total`/ToE.
+- Do not replay older release/tag breakthrough prose as closure evidence; a next admissible move must introduce one new typed anti-inversion/orientation-character source candidate or preserve the P2697-P2709 no-current-unlock certificate.
+
+## Current Aut(Z12) anti-inversion character source guardrail (P2710/S1660, 2026-06-14)
+
+- P2710 computes the full finite character table of `Aut(Z12)=U(12)` and finds exactly two inversion-odd characters.
+- These characters are mathematical parity labels only; current artifacts do not export either one as a non-premise strict source coupled to the P2708 boundary-cocycle sign, so `QW-2191` remains open.
+- Do not promote inversion-odd character existence to selector closure, pair12 strict-core, role transfer, `L_total`, bridge closure, or ToE without a new strict source law selecting and signing the character.
+
+## Current inversion-odd character source-law sign-coupling guardrail (P2711/S1661, 2026-06-14)
+
+- P2711 enumerates the finite source-law candidate family after P2710: two inversion-odd Aut(Z12) characters times two coupling signs.
+- Every candidate remains paired by `lambda -> -lambda`, which exchanges `+omega` and `-omega`; current artifacts do not export a non-premise strict law fixing `lambda`.
+- Do not promote the inversion-odd character/sign-coupling lane to `QW-2191` discharge, pair12 strict-core, role transfer, `L_total`, bridge closure, or ToE without a new strict mechanism fixing the coupling sign.
+
+## Current post-P2711 selector/sign no-new-live-frontier guardrail (P2712/S1662, 2026-06-14)
+
+- P2712 reconciles P2708-P2711 and finds no new live frontier in the selector/sign lane on current artifacts: boundary cocycle, older-release backscan, inversion-odd character labels, and `lambda` sign-coupling source-law candidates remain blocked.
+- Do not continue selector/sign replay or promote `QW-2191`, pair12 strict-core, role transfer, `L_total`, bridge closure, or ToE from P2708-P2711.
+- A next admissible move requires either a genuinely new strict mechanism fixing `lambda` or a different new typed object outside the closed lanes; otherwise preserve the P2697-P2712 no-new-live-frontier certificate.
