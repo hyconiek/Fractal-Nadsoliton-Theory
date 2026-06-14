@@ -362,3 +362,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2734 tests the non-spectral branch-square cocycle from P2732 selected `tau` signs on `(lambda,orientation)` vertices.
 - The edge labels are an exact `tau` coboundary and both square holonomies are trivial `+1`, so no basepoint-free `lambda` or P2721 polarity source is exported.
 - Do not replay the P2732 branch square as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a genuinely new non-exact internal polarity object, or preserve the P2697-P2734 no-new-live-frontier certificate.
+
+## Current branch-square non-exact flux polarity-object no-go guardrail (P2735/S1685, 2026-06-14)
+
+- P2735 enumerates all `2^4=16` `Z2` edge cochains on the `(lambda,orientation)` branch square and finds exactly two vertex-gauge classes, with holonomy `+1` and `-1`.
+- The non-exact `-1` flux class exists only as an abstract/added frustrated class; current strict artifacts do not source it, and the D4 square symmetry still selects no base vertex, `lambda` sign, orientation branch, or P2721 polarity.
+- Do not replay abstract branch-square non-exact flux as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export an internal law sourcing the non-exact flux and breaking the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.
+
+## Current post-P2735 content-grep no-new-frontier guardrail (P2736/S1686, 2026-06-14)
+
+- P2736 performs content-first `rg` searches for non-exact holonomy/sector selectors, theta-like source signs, Wilson/flux orientation sources, branch-square flux, and `lambda/P2721` polarity breaking before selecting a next move.
+- The audit detects existing bounded content in P2664/P2623/P2735 and finds no new internal strict source law that both sources flux/non-exact holonomy and breaks the `lambda/P2721` polarity.
+- Do not replay non-exact-sector variational/theta-source, Wilson/flux orientation, or branch-square flux-source searches without a genuinely new formula/artifact.  The next admissible move must supply one new strict signed source law with a coupling to exactly one `lambda/P2721` polarity, or a different typed object outside these closed content classes; otherwise preserve the P2697-P2736 no-new-live-frontier certificate.
+
+## Current lay ToE-potential readiness guardrail (P2737/S1687, 2026-06-14)
+
+- P2737 translates the lay ToE-potential question into a finite readiness matrix: corrected ontology and finite-audit discipline are supported, but strict selector/polarity source, `lambda/P2721` closure, legacy-to-strict bridge completion, role-transfer theorem, role-bearing `L_total`, and ToE closure are unmet.
+- The honest lay verdict is high research potential but low closure readiness: the program is promising because it is coherent and computationally disciplined, but it is not a completed Theory of Everything.
+- Do not promote ToE, selector closure, bridge closure, role transfer, or `L_total` from lay-potential language.  A next admissible move must supply one new strict signed source law fixing the selector/`lambda-P2721` polarity, then rerun bridge/role-transfer/`L_total` readiness; otherwise preserve the P2697-P2737 no-new-live-frontier/no-ToE-closure certificate.

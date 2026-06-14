@@ -1,0 +1,193 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_new_live_frontier": false,
+    "blocker": "The content-grep gate detects existing no-go/boundary audits for the proposed flux/holonomy source content and finds no genuinely new source law or lambda/P2721 polarity breaker.",
+    "facts": {
+      "content_grep_was_run_before_move_selection": true,
+      "current_branch_square_flux_no_go_detected": true,
+      "new_internal_flux_source_law_found": false,
+      "new_lambda_p2721_polarity_breaker_found": false,
+      "prior_nonexact_sector_variational_no_go_detected": true,
+      "prior_wilson_flux_orientation_boundary_detected": true
+    },
+    "missing_criteria": [
+      "new_internal_flux_source_law_found",
+      "new_lambda_p2721_polarity_breaker_found"
+    ]
+  },
+  "audited_candidate_class": "content-first repository search for an internal law sourcing non-exact flux/holonomy and breaking lambda/P2721 polarity after P2735",
+  "content_grep_audit": {
+    "all_hit_classes": {
+      "current_branch_square_nonexact_flux_no_go": 30,
+      "current_conditional_lambda_p2721_coupling_no_go": 22,
+      "current_exact_branch_square_cocycle_no_go": 33,
+      "older_boundary_phase_nonexact_carrier_not_source": 95,
+      "older_boundary_phase_variational_selector_no_go": 259,
+      "older_wilson_flux_orientation_source_boundary": 54,
+      "other_content_hit_requires_manual_review": 1132
+    },
+    "blocking_prior_content_classes": {
+      "current_branch_square_nonexact_flux_no_go": 30,
+      "older_boundary_phase_variational_selector_no_go": 259,
+      "older_wilson_flux_orientation_source_boundary": 54
+    },
+    "found_current_branch_square_flux_no_go": true,
+    "found_prior_boundary_phase_theta_like_no_go": true,
+    "found_prior_wilson_flux_orientation_boundary": true,
+    "new_unblocked_internal_flux_source_law_found": false,
+    "new_unblocked_lambda_p2721_polarity_breaker_found": false,
+    "obstruction": "Content-first grep finds that the obvious next flux/holonomy-source moves are already represented as bounded no-go/boundary content: P2664 for theta-like/non-exact sector selectors, P2623 for Wilson/flux orientation source boundaries, and P2735 for the branch-square flux itself.  No new internal law sourcing flux and breaking lambda/P2721 polarity is found in current artifacts.",
+    "queries_are_content_patterns_not_label_only": true,
+    "query_count": 5,
+    "query_rows": [
+      {
+        "content_pattern": "non-exact sector|holonomy sector|square holonomy|theta.*holonomy|preferred cycle",
+        "hit_classes": {
+          "current_exact_branch_square_cocycle_no_go": 2,
+          "older_boundary_phase_nonexact_carrier_not_source": 95,
+          "older_boundary_phase_variational_selector_no_go": 168,
+          "other_content_hit_requires_manual_review": 231
+        },
+        "hit_count": 496,
+        "query_name": "nonexact_holonomy_sector_selector",
+        "sample_hits": [
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:78:        \"sector_selector_content\": \"sector selector|non-exact sector|holonomy sector|preferred cycle\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:119:    # It can enforce filled-triangle flatness and penalize edge excitations, but it contains no linear term in the nontrivial square holonomy.",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:127:    return -theta * holonomy(cochain, CYCLE_SQUARE)",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:171:        energies = [(theta_energy(c, theta), c, holonomy(c, CYCLE_SQUARE)) for c in flats]",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:182:        \"statement\": \"P2664 audits the next P2663 gap: can an internal variational boundary-phase rule select the non-exact one-bit square sector?  The finite witness separates three facts: the flat complex has two holonomy sectors, exact/gauge coboundaries remain in the zero sector, and positive local flatness/edge penalties do not select the non-exact one-bit sector.  A theta-like holonomy source can select it, but only by declaring the missing sector source.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:210:        {\"candidate\": \"positive_local_flatness_edge_action\", \"computational_result\": \"does not minimize uniquely in non-exact sector\", \"passes_as_sector_selector_now\": False, \"verdict\": \"blocked: local positive penalties prefer consistency/small support, not the one-bit holonomy sector\"},",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:211:        {\"candidate\": \"gauge_exact_boundary_phase_dynamics\", \"computational_result\": f\"exact sector counts {witness['exact_coboundary_sector_counts']}\", \"passes_as_sector_selector_now\": False, \"verdict\": \"blocked: exact coboundary dynamics stays in zero square holonomy\"},",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:212:        {\"candidate\": \"declared_theta_holonomy_source\", \"computational_result\": \"can select sector for chosen sign\", \"passes_as_sector_selector_now\": False, \"verdict\": \"false pass: theta/holonomy coupling is precisely the missing source unless derived from nadsoliton dynamics\"},",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:213:        {\"candidate\": \"bridge_completed_sector_selector_theorem_target\", \"computational_result\": \"not present in current audit inputs\", \"passes_as_sector_selector_now\": False, \"verdict\": \"open theorem target: derive the theta sign or non-exact sector from bridge-completed nadsoliton dynamics\"},",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:221:        \"professorial_verdict\": \"P2664 is the requested more proof-grade/computational continuation of P2663.  It shows that the non-exact one-bit holonomy carrier is not enough: the audited internal positive local boundary-phase action class does not select the non-exact sector, and gauge-exact dynamics remains zero-holonomy.  A theta-like holonomy source would select a sector for a chosen sign, but that sign/source is exactly the missing premise.  Therefore the current repo still has no boundary-phase bit-target source, no intrinsic UV unit, no beta source, no QW-2191 discharge, no L_total reopening, and no ToE closure.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:222:        \"next_honest_step\": \"Search specifically for a bridge-completed nadsoliton term that derives a theta/holonomy-source sign or an equivalent non-exact sector selector.  The acceptance test is now sharp: the term must be gauge-invariant, not a declared entropy level, and must uniquely prefer square holonomy one over zero before P2662 is rerun.  If no such term exists, promote P2664 to a no-go for local positive boundary-phase variational selectors and keep the entropy/cocycle UV anchor conditional.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:255:        f\"Square holonomy sector counts after flatness: `{w['square_holonomy_sector_counts_after_flatness']}`.\","
+        ]
+      },
+      {
+        "content_pattern": "gauge-invariant.*select|positive local.*action|theta-like.*source|non-exact.*source/sign|flux source|plaquette holonomy",
+        "hit_classes": {
+          "current_branch_square_nonexact_flux_no_go": 3,
+          "current_exact_branch_square_cocycle_no_go": 1,
+          "older_boundary_phase_variational_selector_no_go": 68,
+          "older_wilson_flux_orientation_source_boundary": 12,
+          "other_content_hit_requires_manual_review": 83
+        },
+        "hit_count": 167,
+        "query_name": "variational_flux_source_law",
+        "sample_hits": [
+          "AGENTS.md:374:- P2736 performs content-first `rg` searches for non-exact holonomy/sector selectors, theta-like source signs, Wilson/flux orientation sources, branch-square flux, and `lambda/P2721` polarity breaking before selecting a next move.",
+          "fundamental_action_reconstruction/p2677_s1627_s6_o3_typed_seed_route_no_go_audit.py:240:        \"`P2677/S1627` audits the escape hatch left by `P2676`: an internal orientation source that would choose one member of the XOR/XNOR `Sigma_sel_src_target_v1 -> F301` reversal pair before `Q_basis`/preLM/projector collapse.  The checked lanes are visible but fail as strict exports: `beta_tors -> chi_11` is still a legacy-role/source conjecture, theta-like signs are external, `Q_basis` and projector lanes collapse typing, declaration lanes are fiat, symmetry breaking is only a placeholder, and observer readout is downstream.  Thus the current `tau_src -> pair12 -> boundary-square` S6/O3 typed-seed route is a bounded no-go; this is not a global no-go for future bridge/source classes.  O4/O5, `QW-2191` discharge, role-bearing `L_total`, bridge completion, role transfer, and ToE closure remain blocked.\\n\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:182:        \"statement\": \"P2664 audits the next P2663 gap: can an internal variational boundary-phase rule select the non-exact one-bit square sector?  The finite witness separates three facts: the flat complex has two holonomy sectors, exact/gauge coboundaries remain in the zero sector, and positive local flatness/edge penalties do not select the non-exact one-bit sector.  A theta-like holonomy source can select it, but only by declaring the missing sector source.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:221:        \"professorial_verdict\": \"P2664 is the requested more proof-grade/computational continuation of P2663.  It shows that the non-exact one-bit holonomy carrier is not enough: the audited internal positive local boundary-phase action class does not select the non-exact sector, and gauge-exact dynamics remains zero-holonomy.  A theta-like holonomy source would select a sector for a chosen sign, but that sign/source is exactly the missing premise.  Therefore the current repo still has no boundary-phase bit-target source, no intrinsic UV unit, no beta source, no QW-2191 discharge, no L_total reopening, and no ToE closure.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:222:        \"next_honest_step\": \"Search specifically for a bridge-completed nadsoliton term that derives a theta/holonomy-source sign or an equivalent non-exact sector selector.  The acceptance test is now sharp: the term must be gauge-invariant, not a declared entropy level, and must uniquely prefer square holonomy one over zero before P2662 is rerun.  If no such term exists, promote P2664 to a no-go for local positive boundary-phase variational selectors and keep the entropy/cocycle UV anchor conditional.\",",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:312:    append_once(STRICT_EQUATION_SHEET, \"P2664/S1614 boundary-phase sector-selector variational no-go guard\", \"## P2664/S1614 boundary-phase sector-selector variational no-go guard\\n\\n`P2664/S1614` audits whether the P2663 non-exact one-bit holonomy carrier is selected by an internal boundary-phase variational rule.  The audited positive local flatness/edge action class does not select the non-exact square sector, and gauge-exact dynamics remains zero-holonomy; a theta-like holonomy source can select a sector only by declaring the missing source/sign.  Therefore this is a sharper no-go for local positive boundary-phase selectors, not an intrinsic UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure.\\n\")",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:313:    append_once(STRICT_LAGRANGIAN_DRAFT, \"P2664/S1614 boundary-phase sector-selector Ltotal guard\", \"## P2664/S1614 boundary-phase sector-selector Ltotal guard\\n\\n`P2664/S1614` keeps `L_total` closed to a boundary-phase entropy source term.  The only audited way to force non-exact one-bit holonomy is a theta-like source/sign, and that coefficient is not internally derived.  A future Lagrangian term must first pass the P2664 acceptance test: gauge-invariant, non-declared, and uniquely selecting square holonomy one over zero from bridge-completed nadsoliton dynamics.\\n\")",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:274:`P2623/S1573` performs the next content-first selector audit: Wilson/holonomy data are useful only after the missing typed sources are separated.  A closed-cycle Wilson product is gauge-invariant and an oriented nonzero flux has `sign(Im W)` that flips under cycle reversal, but the unoriented gauge-safe datum is the conjugacy pair `{W,W^{-1}}` and is sign-blind.  Therefore Wilson-loop/flux content alone does not export `orientation_odd_selector_source`; it would require a gauge-safe connection source, nonzero flux source, and independent cycle-orientation source, and it still would not supply nonlinear damping completion, role-bearing `L_total`, QW-2191 discharge, or ToE closure.",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:279:`P2623/S1573` keeps role-bearing `L_total` closed.  The Wilson-loop calculation identifies a possible future selector shape, `sigma=sign(Im W)`, but only under a real oriented-cycle/connection/nonzero-flux source theorem.  Unoriented holonomy data remain sign-blind, and the independent nonlinear damping completion atom remains open.",
+          "fundamental_action_reconstruction/p2622_s1572_qw636_qw1026_physical_rigor_nonpromotion_audit.py:263:            \"QW-636 can be retained as a diagnostic for a typed chiral/flux source once a gauge-invariant orientation source is supplied.\",",
+          "fundamental_action_reconstruction/p2622_s1572_qw636_qw1026_physical_rigor_nonpromotion_audit.py:366:`P2622/S1572` keeps role-bearing `L_total` closed and sharpens the selector guard: the old QW-636 and QW-1026 scripts are retained as diagnostics for a future typed chiral/flux source, but are not themselves a strict source theorem because their signs remain gauge/convention dependent without additional physical orientation and `gamma5` premises.  The independent nonlinear damping completion atom also remains open.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1566:`P2622/S1572` keeps role-bearing `L_total` closed and sharpens the selector guard: the old QW-636 and QW-1026 scripts are retained as diagnostics for a future typed chiral/flux source, but are not themselves a strict source theorem because their signs remain gauge/convention dependent without additional physical orientation and `gamma5` premises.  The independent nonlinear damping completion atom also remains open."
+        ]
+      },
+      {
+        "content_pattern": "Wilson|closed-cycle.*product|oriented nonzero flux|unoriented.*sign-blind|cycle-orientation source",
+        "hit_classes": {
+          "older_wilson_flux_orientation_source_boundary": 42,
+          "other_content_hit_requires_manual_review": 538
+        },
+        "hit_count": 580,
+        "query_name": "wilson_flux_orientation_source",
+        "sample_hits": [
+          "AGENTS.md:374:- P2736 performs content-first `rg` searches for non-exact holonomy/sector selectors, theta-like source signs, Wilson/flux orientation sources, branch-square flux, and `lambda/P2721` polarity breaking before selecting a next move.",
+          "AGENTS.md:376:- Do not replay non-exact-sector variational/theta-source, Wilson/flux orientation, or branch-square flux-source searches without a genuinely new formula/artifact.  The next admissible move must supply one new strict signed source law with a coupling to exactly one `lambda/P2721` polarity, or a different typed object outside these closed content classes; otherwise preserve the P2697-P2736 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py:103:            \"Wilson-loop|distant octave|effective support|information throughput\"",
+          "fundamental_action_reconstruction/p2638_s1588_metric_pushforward_source_viability_and_neural_closure_audit.py:300:            \"Recompute role-transfer under the sourced metric, especially inverse hierarchy and Wilson-loop distant-octave claims.\",",
+          "fundamental_action_reconstruction/p2636_s1586_current_toe_blocker_lattice_full_kernel_decision_audit.py:93:            \"distant octave|Wilson-loop|cos\\\\(omega|cos\\\\(ω\"",
+          "fundamental_action_reconstruction/p2636_s1586_current_toe_blocker_lattice_full_kernel_decision_audit.py:182:            \"why_it_blocks_full_kernel\": \"A ToE kernel must say whether distant-octave/Wilson-loop roles survive strict heavy-tailed compression or are rejected.\",",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:65:        \"closed_loop_flux_holonomy_content\": \"Wilson loop|holonomy|closed cycle|cycle product|plaquette|phase around|loop phase|flux through|Aharonov|Berry phase\",",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:160:        \"verdict\": \"Even an oriented Wilson-flux theorem would repair only the selector atom; the current packet exports no such source and does not repair nonlinear damping.\",",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:170:        \"theorem_name\": \"P2623 oriented Wilson-flux selector boundary theorem\",",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:172:            \"A gauge-invariant Wilson loop can supply an orientation-odd sign only after three typed inputs are present: a gauge-safe connection on a closed cycle, nonzero flux with Im W != 0, and an independently sourced orientation of that cycle.  The gauge-invariant but unoriented datum {W,W^{-1}} is sign-blind, so Wilson/holonomy content alone does not repair the P2620 orientation atom.\"",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:175:            \"Closed-cycle Wilson products are gauge-invariant by telescoping link gauge shifts.\",",
+          "fundamental_action_reconstruction/p2623_s1573_wilson_loop_flux_orientation_source_boundary.py:176:            \"Reversing the oriented cycle conjugates the Wilson loop and flips sign(Im W) when the flux is not 0 or pi.\","
+        ]
+      },
+      {
+        "content_pattern": "branch-square|lambda/P2721|lambda.*orientation|P2721 polarity|internal law.*flux",
+        "hit_classes": {
+          "current_branch_square_nonexact_flux_no_go": 23,
+          "current_conditional_lambda_p2721_coupling_no_go": 22,
+          "current_exact_branch_square_cocycle_no_go": 30,
+          "other_content_hit_requires_manual_review": 234
+        },
+        "hit_count": 309,
+        "query_name": "branch_square_lambda_p2721",
+        "sample_hits": [
+          "AGENTS.md:292:- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+          "AGENTS.md:296:- P2723 audits the current concrete chiral/time-orientation source-law candidates demanded by P2722: external time-arrow premise, chiral-bispectrum temporal phase velocity, inversion-odd character `lambda` sign law, and boundary-cocycle orientation flow.",
+          "AGENTS.md:297:- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:303:- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.",
+          "AGENTS.md:310:- Do not reuse translation flow of `Im(B_{1,5})` as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a non-translation dynamic/chiral observable with a computable nonzero signed value and an explicit P2721 polarity-coupling theorem, or preserve the P2697-P2725 no-new-live-frontier certificate.",
+          "AGENTS.md:316:- Do not promote these conditional flip jumps to `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a strict orientation-flip/chiral-flow source law selecting one branch and one P2721 polarity, or preserve the P2697-P2726 no-new-live-frontier certificate.",
+          "AGENTS.md:322:- Do not continue source-independent orientation-law variants as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must introduce a source-dependent but non-premise strict invariant with a computable signed value and an exported P2721 polarity-coupling theorem, or preserve the P2697-P2727 no-new-live-frontier certificate.",
+          "AGENTS.md:327:- Every weighted global signed total is zero, and every nonzero row-level weighting remains paired in `+/-` polarities; no P2721 polarity is selected.",
+          "AGENTS.md:334:- Do not replay time-arrow intuition as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export one strict signed time-orientation source value and a P2721 polarity-coupling theorem, or preserve the P2697-P2729 no-new-live-frontier certificate.",
+          "AGENTS.md:339:- Translation-gauge-safe candidates reduce to the paired constants `+tau` and `-tau`; Aut-invariant source-dependent candidates also remain paired by global sign, so no non-premise strict time-arrow sign or P2721 polarity coupling is exported.",
+          "AGENTS.md:350:- P2732 tests the direct coupling `H=-lambda*sum_s tau_s*Im(B_{1,5})(orientation,s)` across both `lambda` signs, both orientation branches, and all `2^12=4096` tau fields.",
+          "AGENTS.md:351:- Each fixed row selects a unique constant `tau`, but flipping `lambda` or the orientation/P2721 polarity reverses the selected sign; current artifacts export no non-premise law choosing one coupling sign or polarity."
+        ]
+      },
+      {
+        "content_pattern": "internal law sourcing|strict law.*source|export.*internal law|non-premise.*flux|derive.*theta.*sign",
+        "hit_classes": {
+          "current_branch_square_nonexact_flux_no_go": 4,
+          "older_boundary_phase_variational_selector_no_go": 23,
+          "other_content_hit_requires_manual_review": 46
+        },
+        "hit_count": 73,
+        "query_name": "new_strict_source_law_claim",
+        "sample_hits": [
+          "AGENTS.md:303:- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.",
+          "AGENTS.md:370:- Do not replay abstract branch-square non-exact flux as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export an internal law sourcing the non-exact flux and breaking the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:213:        {\"candidate\": \"bridge_completed_sector_selector_theorem_target\", \"computational_result\": \"not present in current audit inputs\", \"passes_as_sector_selector_now\": False, \"verdict\": \"open theorem target: derive the theta sign or non-exact sector from bridge-completed nadsoliton dynamics\"},",
+          "fundamental_action_reconstruction/p2664_s1614_boundary_phase_sector_selector_variational_no_go_audit.py:222:        \"next_honest_step\": \"Search specifically for a bridge-completed nadsoliton term that derives a theta/holonomy-source sign or an equivalent non-exact sector selector.  The acceptance test is now sharp: the term must be gauge-invariant, not a declared entropy level, and must uniquely prefer square holonomy one over zero before P2662 is rerun.  If no such term exists, promote P2664 to a no-go for local positive boundary-phase variational selectors and keep the entropy/cocycle UV anchor conditional.\",",
+          "fundamental_action_reconstruction/p2710_s1660_finite_aut_z12_anti_inversion_orientation_character_source_test.py:143:            \"blocker\": \"The character is a possible parity label, not an exported strict law choosing +omega over -omega. Current artifacts provide no non-premise source selecting this character and its sign.\",",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:1982:`P2726/S1676` finds nonzero jumps only in orientation-flipping affine transitions of `Im(B_{1,5})`.  Because the flip branch is not sourced by a strict law and no P2721 polarity is selected, those jumps cannot be promoted to a variational source term or `L_total`.",
+          "fundamental_action_reconstruction/p2625_s1575_nonlinear_damping_completion_source_classification.py:185:        \"Writing beta_eff(d)*d = beta*d^(9/5) is algebraically exact but just hides the strict law in beta_eff unless beta_eff has an independent field equation/source.\",",
+          "fundamental_action_reconstruction/p2724_s1674_post_p2723_commit_intake_next_honest_step_certificate.py:157:    append_once(AGENTS, \"Current post-P2723 commit-intake no-new-live-frontier guardrail (P2724/S1674, 2026-06-14)\", \"## Current post-P2723 commit-intake no-new-live-frontier guardrail (P2724/S1674, 2026-06-14)\\n\\n- P2724 ingests commit `88eb860b1658ac5b648253fa65dd83bd4abbe922`, which already contains the P2719-P2723 localizer/coupling/clock/chiral-time audits.\\n- The intake supplies no new strict dynamic/chiral source artifact with an exported internal law, computable nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity-selection theorem.\\n- Preserve the P2697-P2724 no-new-live-frontier certificate: do not reopen selector/sign replay, damping-to-selector replay, older-release transfer, direct-route residual replay, bridge-source replay, Lagrangian/EOM reverse closure, role transfer, `L_total`, or ToE.  A next admissible move must supply exactly one such strict dynamic/chiral source artifact and run only a bounded acceptance/witness test.\\n\")",
+          "fundamental_action_reconstruction/p2737_s1687_lay_toe_potential_readiness_matrix.py:35:    \"lambda_p2721_blocker\": r\"lambda/P2721|P2721 polarity|lambda remains unfixed|strict law fixing `lambda`|polarity remains unsourced\",",
+          "fundamental_action_reconstruction/p2735_s1685_branch_square_nonexact_flux_polarity_object_no_go.py:175:            \"next_honest_step\": \"Do not replay an abstract non-exact branch-square flux as closure.  A next admissible proof-grade move must export an internal law that sources the non-exact flux and breaks the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.\",",
+          "fundamental_action_reconstruction/p2735_s1685_branch_square_nonexact_flux_polarity_object_no_go.py:182:    append_once(AGENTS, \"Current branch-square non-exact flux polarity-object no-go guardrail (P2735/S1685, 2026-06-14)\", \"## Current branch-square non-exact flux polarity-object no-go guardrail (P2735/S1685, 2026-06-14)\\n\\n- P2735 enumerates all `2^4=16` `Z2` edge cochains on the `(lambda,orientation)` branch square and finds exactly two vertex-gauge classes, with holonomy `+1` and `-1`.\\n- The non-exact `-1` flux class exists only as an abstract/added frustrated class; current strict artifacts do not source it, and the D4 square symmetry still selects no base vertex, `lambda` sign, orientation branch, or P2721 polarity.\\n- Do not replay abstract branch-square non-exact flux as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export an internal law sourcing the non-exact flux and breaking the lambda/P2721 polarity, or pivot to a genuinely different typed object; otherwise preserve the P2697-P2735 no-new-live-frontier certificate.\\n\")",
+          "fundamental_action_reconstruction/generated/p2625_s1575_nonlinear_damping_completion_source_classification.json:204:      \"note\": \"Writing beta_eff(d)*d = beta*d^(9/5) is algebraically exact but just hides the strict law in beta_eff unless beta_eff has an independent field equation/source.\","
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_promoted": false,
+      "new_internal_flux_source_law_found": false,
+      "new_lambda_p2721_polarity_breaker_found": false,
+      "pair12_strict_core_upgrade_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "new_internal_flux_source_law_found": false,
+    "new_lambda_p2721_polarity_breaker_found": false,
+    "next_honest_step": "Do not repeat non-exact-sector variational/theta-source, Wilson/flux orientation, or branch-square flux-source searches without a new formula/artifact.  The next admissible proof-grade move must supply one genuinely new strict source law that computes a nonzero signed value and couples it to exactly one lambda/P2721 polarity, or a different typed object outside these closed content classes; otherwise preserve the P2697-P2736 no-new-live-frontier certificate.",
+    "no_new_live_frontier_certificate_preserved": true,
+    "reason": "P2736 obeys the content-grep gate and finds that repeating non-exact-sector variational/theta, Wilson/flux orientation, or branch-square flux moves would duplicate existing bounded no-go/boundary content rather than introduce a new strict source law."
+  },
+  "input_hashes": {
+    "P2735_NONEXACT_BRANCH_FLUX": "8296a3688a8cebe7c41667eada86c0cf92171d768a11a8a6a1cae6688737fda9"
+  },
+  "input_statuses": {
+    "P2735_NONEXACT_BRANCH_FLUX": "P2735_BRANCH_SQUARE_NONEXACT_FLUX_POLARITY_OBJECT_NO_GO"
+  },
+  "status": "P2736_CONTENT_GREP_NO_NEW_LIVE_FRONTIER_CERTIFICATE"
+}

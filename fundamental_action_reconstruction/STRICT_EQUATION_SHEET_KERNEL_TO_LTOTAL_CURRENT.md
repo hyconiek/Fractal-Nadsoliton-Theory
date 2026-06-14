@@ -2643,3 +2643,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2734/S1684 lambda-orientation branch-square cocycle holonomy no-go
 
 `P2734/S1684` builds the non-spectral branch square with vertices `(lambda,orientation)` from the P2732 selected `tau` signs.  Every lambda/orientation flip edge is the `tau` coboundary ratio, and both square orientations have trivial holonomy `+1`; the cocycle is exact and selects no base vertex, `lambda`, or P2721 polarity.  No strict mechanism fixing `lambda`, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2735/S1685 branch-square non-exact flux polarity-object no-go
+
+`P2735/S1685` enumerates all `2^4=16` `Z2` edge-label systems on the `(lambda,orientation)` branch square, modulo vertex-gauge flips.  There are exactly two gauge classes, classified by plaquette holonomy `+1` and `-1`; the non-exact `-1` class exists only as an unsourced frustrated flux choice.  Because the square symmetries still move all four vertices together, this class selects no base vertex, `lambda`, orientation branch, or P2721 polarity.  No strict mechanism fixing `lambda`, `QW-2191` discharge, role transfer, `L_total`, or ToE closure is exported.
+
+## P2736/S1686 content-grep no-new-frontier certificate
+
+`P2736/S1686` runs a content-first grep gate before choosing a post-P2735 move.  The searched content includes non-exact holonomy/sector selectors, theta-like source signs, Wilson/flux orientation sources, branch-square flux, and `lambda/P2721` polarity breaking.  The grep detects existing bounded content in P2664/P2623/P2735 and finds no new internal law sourcing flux while breaking `lambda/P2721`; therefore replaying those lanes would be duplication, not proof progress.  No `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2737/S1687 lay ToE-potential readiness matrix
+
+`P2737/S1687` converts the lay question about ToE potential into a finite readiness matrix.  The matrix marks corrected ontology and finite-audit discipline as supported, but keeps strict selector/polarity source, `lambda/P2721` closure, legacy-to-strict bridge completion, role-transfer theorem, role-bearing `L_total`, and ToE closure unmet.  The lay verdict is therefore: high research potential, low closure readiness.  No `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
