@@ -1,0 +1,228 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_g5_physical_coupling_provenance_theorem": false,
+    "blocker": "The moment-to-coupling numerics are present, but every target coupling lacks exported unit/reference, sign, and variational-normalization provenance; stale P1562 closure flags remain quarantined by later artifacts.",
+    "facts": {
+      "all_three_couplings_audited": true,
+      "g5_content_evidence_present": true,
+      "no_coupling_accepted_without_provenance": true,
+      "p1562_moment_numbers_present": true,
+      "sign_convention_theorem_exported": false,
+      "stale_p1562_flags_quarantined": true,
+      "unit_reference_source_exported": false,
+      "variational_normalization_exported": false
+    },
+    "missing_criteria": [
+      "unit_reference_source_exported",
+      "sign_convention_theorem_exported",
+      "variational_normalization_exported"
+    ]
+  },
+  "audited_gap": "P2760 G5 kernel-moments-to-physical-couplings provenance",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "hit_counts": {
+      "ltotal_boundary": 26337,
+      "p1562_moment_map": 500,
+      "p1563_missing_exports": 1240,
+      "p1866_open_obstruction": 1806,
+      "p2760_g5_obligation": 55
+    },
+    "row_count": 5,
+    "rows": [
+      {
+        "hit_count": 55,
+        "lane": "p2760_g5_obligation",
+        "pattern": "G5|kernel-moments-to-physical-couplings|physical-couplings provenance|units/sign/variational",
+        "sample_hits": [
+          "AGENTS.md:518:- P2760 audits the foundations against the explicit kernel/coupling/Lagrangian formulas and finds seven open gaps: ontology-to-kernel measure, amplitude normalization, phase/frequency/topological source, damping/compression bridge, kernel-moments-to-physical-couplings provenance, Lagrangian reverse closure, and stale closure-flag consistency.",
+          "AGENTS.md:520:- Do not promote kernel-derived effective couplings or `L_total` to foundation-level closure, role transfer, selector closure, bridge closure, or ToE closure until one named gap is closed by a machine-checkable theorem.  The next preferred target is G5: kernel-moments-to-physical-couplings provenance with units/sign/variational normalization.",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:4:P2760 selected G5 as the most honest next target.  This audit tests whether the",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:34:    \"p2760_g5_obligation\": r\"G5|kernel-moments-to-physical-couplings|physical-couplings provenance|units/sign/variational\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:214:        \"audited_gap\": \"P2760 G5 kernel-moments-to-physical-couplings provenance\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:226:    append_once(STRICT_EQUATION_SHEET, \"P2761/S1711 kernel-moment physical-coupling provenance obstruction\", \"## P2761/S1711 kernel-moment physical-coupling provenance obstruction\\n\\n`P2761/S1711` attacks the P2760 `G5` target directly.  It audits P1562 moments and derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` against the minimum provenance needed for physical Lagrangian couplings: canonical reference units, action-density normalization, field/curvature normalization, sign conventions, and variational insertion into nonproxy EOM residuals.  The numeric moment map is present, but all three coupling rows fail provenance acceptance; stale P1562 `qw2191_closed/toe_closed` flags remain quarantined by P1563/P1866/current guardrails.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.\\n\")",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:228:    append_once(AGENTS, \"Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)\", \"## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)\\n\\n- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.\\n- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.\\n- Do not promote these coefficients to role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one missing provenance atom, preferably a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map.\\n\")"
+        ]
+      },
+      {
+        "hit_count": 500,
+        "lane": "p1562_moment_map",
+        "pattern": "P1562|lambda_sm_eff|kappa_gr_eff|epsilon_mix_eff|derived_lagrangian_coefficients",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "fundamental_action_reconstruction/P1570_S520_STRICT_CLOSED_FORM_JACOBIAN_HESSIAN_AND_STABILITY_BOUND_PACKET_PL.md:16:`F(p) = (lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff, xi_phase_curv)`",
+          "fundamental_action_reconstruction/p1612_s562_machine_checkable_variational_proof_log_checkpoint.py:26:        {\"term\": f\"{coeff['kappa_gr_eff']}*R*sqrt(-g)\", \"variation_target\": \"g_mu_nu\", \"eom_sector\": \"GR_metric\", \"status\": \"matched\"},",
+          "fundamental_action_reconstruction/p1612_s562_machine_checkable_variational_proof_log_checkpoint.py:27:        {\"term\": f\"{coeff['epsilon_mix_eff']}*(H^dagger H)*R*sqrt(-g)\", \"variation_target\": \"H, g_mu_nu\", \"eom_sector\": \"MIX\", \"status\": \"matched\"},",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:5:P1562 strict-kernel moments already suffice to promote lambda_sm_eff,",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:6:kappa_gr_eff, and epsilon_mix_eff into physical Lagrangian couplings.  The"
+        ]
+      },
+      {
+        "hit_count": 1240,
+        "lane": "p1563_missing_exports",
+        "pattern": "P1563|missing_exports|missing_theorems|qw2191_closed|toe_closed",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "fundamental_action_reconstruction/p1433_pass_scope_retrofit_audit_checkpoint.py:27:        if \"strict_core_qw2191_closed\" not in data:",
+          "fundamental_action_reconstruction/p1433_pass_scope_retrofit_audit_checkpoint.py:28:            miss.append(\"strict_core_qw2191_closed\")",
+          "fundamental_action_reconstruction/p1433_pass_scope_retrofit_audit_checkpoint.py:39:        \"next_honest_step\": \"apply non-destructive retrofit by adding scope_of_pass=local_contract and strict_core_qw2191_closed=false to all listed files\",",
+          "fundamental_action_reconstruction/P1498_S448_QW2191_FINAL_GATE_WITNESS_PACKET_PL.md:22:- `qw2191_closed_local = true`,",
+          "fundamental_action_reconstruction/P1498_S448_QW2191_FINAL_GATE_WITNESS_PACKET_PL.md:23:- `qw2191_closed_global = false` (uczciwa granica twierdzenia).",
+          "fundamental_action_reconstruction/p1498_s448_qw2191_final_gate_witness_checkpoint.py:33:    qw2191_closed_local = all(checks.values())",
+          "fundamental_action_reconstruction/p1498_s448_qw2191_final_gate_witness_checkpoint.py:38:        \"qw2191_closed_local\": qw2191_closed_local,"
+        ]
+      },
+      {
+        "hit_count": 1806,
+        "lane": "p1866_open_obstruction",
+        "pattern": "P1866|OPEN_OBSTRUCTION_WITH_TRACE|reverse_requirement|strict_core_closure_blockers",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "fundamental_action_reconstruction/p2289_s1239_strict_task3_bianchi_i_theorem_attempt_precheck_contract_probe.py:67:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p2167_s1117_strict_qw2191_selector_premise_branch_and_theorem_obligations_packet.py:101:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p2061_s1011_strict_same_scheme_reallocation_stress_audit.py:120:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p2129_s1079_strict_cmp2_block_definition_sensitivity_sweep.py:180:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1850_s800_strict_gravity_background_b1_symbolic_coefficients_checkpoint.py:54:        \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1850_s800_strict_gravity_background_b1_symbolic_coefficients_checkpoint.py:70:            \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1850_s800_strict_gravity_background_b1_symbolic_coefficients_checkpoint.py:79:                    \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\","
+        ]
+      },
+      {
+        "hit_count": 26337,
+        "lane": "ltotal_boundary",
+        "pattern": "L_total|role-bearing L_total|ToE closure|selector closure|role transfer",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "p1562_stale_flags_revalidated": false,
+      "physical_coupling_provenance_theorem_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "sign_convention_theorem_exported": false,
+      "toe_closure_exported": false,
+      "unit_reference_source_exported": false,
+      "variational_normalization_exported": false
+    },
+    "next_honest_step": "Do not promote P1562 moment-derived numbers into physical couplings yet.  The next proof-grade move should target exactly one missing global provenance atom: construct a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map; only after that rerun the sign and variational-normalization rows.  Without that theorem, preserve the P2697-P2761 no-closure certificate.",
+    "reason": "The moment-to-coupling numerics are present, but every target coupling lacks exported unit/reference, sign, and variational-normalization provenance; stale P1562 closure flags remain quarantined by later artifacts."
+  },
+  "dimension_obligation_matrix": {
+    "accepted_physical_coupling_count": 0,
+    "derived_lagrangian_coefficients": {
+      "epsilon_mix_eff": 18.13817242656519,
+      "kappa_gr_eff": 11.91403866517398,
+      "lambda_sm_eff": 0.33220238535858243
+    },
+    "later_artifacts_block_closure": true,
+    "missing_global_provenance_atom_count": 5,
+    "missing_global_provenance_atoms": [
+      "canonical physical length/reference cell mapping for moment powers",
+      "action-density normalization and hbar/c unit convention",
+      "field normalization Z_phi/Z_A/Z_psi and curvature normalization",
+      "sign convention theorem for negative moments and positive couplings",
+      "variational insertion theorem tying coefficients to nonproxy EOM residuals"
+    ],
+    "moments": {
+      "M0": 1.2300294722058696,
+      "M1": 0.40861872472814803,
+      "M2": -14.5188745761074,
+      "M3": -285.6563371577367
+    },
+    "p1562_stale_closure_flag_detected": true,
+    "ratio_audit": {
+      "exact_simple_ratio_matches": {
+        "epsilon_mix_eff": [],
+        "kappa_gr_eff": [],
+        "lambda_sm_eff": [
+          {
+            "ratio": "M1_over_M0",
+            "transform": "identity",
+            "value": 0.33220238535858243
+          }
+        ]
+      },
+      "ratios": {
+        "M1_over_M0": 0.33220238535858243,
+        "M2_over_M0": -11.803680240336048,
+        "M3_over_M0": -232.23535989382088,
+        "abs_M2_over_M0": 11.803680240336048,
+        "abs_M3_over_M0": 232.23535989382088,
+        "sqrt_abs_M2_over_M0": 3.4356484453936855,
+        "sqrt_abs_M3_over_M0": 15.239270320255523
+      }
+    },
+    "row_count": 3,
+    "rows": [
+      {
+        "accepted_as_physical_coupling": false,
+        "blocker": "P1562 supplies a number, but current artifacts do not export the reference unit, sign convention, and variational normalization needed to interpret it as this physical coupling.",
+        "coupling": "lambda_sm_eff",
+        "expected_mass_dimension_4d": 0,
+        "p1562_numeric_value": 0.33220238535858243,
+        "sign_convention_exported": false,
+        "simple_ratio_matches": [
+          {
+            "ratio": "M1_over_M0",
+            "transform": "identity",
+            "value": 0.33220238535858243
+          }
+        ],
+        "unit_source_exported": false,
+        "variational_normalization_exported": false,
+        "variational_role": "quartic/scalar-sector dimensionless effective coupling"
+      },
+      {
+        "accepted_as_physical_coupling": false,
+        "blocker": "P1562 supplies a number, but current artifacts do not export the reference unit, sign convention, and variational normalization needed to interpret it as this physical coupling.",
+        "coupling": "kappa_gr_eff",
+        "expected_mass_dimension_4d": 2,
+        "p1562_numeric_value": 11.91403866517398,
+        "sign_convention_exported": false,
+        "simple_ratio_matches": [],
+        "unit_source_exported": false,
+        "variational_normalization_exported": false,
+        "variational_role": "Einstein-Hilbert R coefficient / inverse gravitational coupling scale"
+      },
+      {
+        "accepted_as_physical_coupling": false,
+        "blocker": "P1562 supplies a number, but current artifacts do not export the reference unit, sign convention, and variational normalization needed to interpret it as this physical coupling.",
+        "coupling": "epsilon_mix_eff",
+        "expected_mass_dimension_4d": 1,
+        "p1562_numeric_value": 18.13817242656519,
+        "sign_convention_exported": false,
+        "simple_ratio_matches": [],
+        "unit_source_exported": false,
+        "variational_normalization_exported": false,
+        "variational_role": "schematic psi*R or mixed-sector coefficient requiring field and curvature normalization"
+      }
+    ],
+    "stale_flags_quarantined": true
+  },
+  "input_hashes": {
+    "P1562": "bcc13655eb98ac57450c0eae74b8a153010494d945159c1b6b484ad56b98e1b9",
+    "P1563": "1cb777b00748bdf3b4a9421c0ad12dfeb6ce736f4e6b56802692a2c6bf3d3448",
+    "P1866": "69eb9bdb80a603735625a2ed943eba94a9cf2a05a54feab132565f5085764603",
+    "P2760": "c08aa84f06092e45fe9ee07b19ff22a9c39079d318db16d0c7ee5380c3f71d68"
+  },
+  "input_statuses": {
+    "P1562": "PASS_STRICT_KERNEL_COEFFICIENTS_DERIVED",
+    "P1563": "PASS_STRICT_KERNEL_TO_EOM_CHAIN_EXPORTED",
+    "P1866": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "P2760": "P2760_FOUNDATION_KERNEL_LAGRANGIAN_GAP_MATRIX_NO_CLOSURE"
+  },
+  "status": "P2761_KERNEL_MOMENT_COUPLING_PROVENANCE_OBSTRUCTION_NO_CLOSURE"
+}

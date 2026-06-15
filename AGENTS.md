@@ -500,3 +500,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2757 audits the exact missing premise after P2756: whether intrinsic signatures of the entropy pair-current feature vector can select a directed step/polarity.
 - Opposite step vectors are exact negatives on every finite row, every sign-blind/internal signature matches across opposite steps, and sign-sensitive rules choose only by importing the missing polarity premise.
 - Do not continue local entropy pair-current observables via sign-blind scoring or sign-sensitive tie-breaks as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must pivot outside local entropy pair-current observables to a genuinely new strict typed object/source, export an independent strict step/polarity source with explicit `P2721` coupling, or preserve the P2697-P2757 no-new-live-frontier certificate.
+
+## Current entropy triangle-circulation Aut-cancellation guardrail (P2758/S1708, 2026-06-15)
+
+- P2758 pivots beyond local entropy pair-current observables by auditing translation-summed oriented three-point Shannon entropy triangle circulations on the four-quanta `Z12` entropy alphabet.
+- The alternating triangle basis is nontrivial when a direction is supplied, but opposite directed steps are exact negatives and the selector-free `Aut(Z12)`-summed triangle-circulation basis has rank `0` with zero opposite-pair and Aut-sum failures.
+- Do not continue the entropy-selector lane by escalating to local oriented triangle/three-point entropy circulations as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must export an independent strict orientation/polarity law with explicit `P2721` coupling, pivot to a genuinely new typed object outside local entropy observables, or preserve the P2697-P2758 no-new-live-frontier certificate.
+
+## Current post-P2758 no-new-live-frontier reconciliation guardrail (P2759/S1709, 2026-06-15)
+
+- P2759 performs the broad post-P2758 state-map reconciliation instead of manufacturing another local entropy replay.
+- Direct residuals, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary/tau/pair replay, selector/`QW-2191` sign lane, chiral-bispectrum/tau/spectral lane, polynomial phase-sum lane, and entropy scalar/current/pair/triangle lane remain closed or repetition-gated on current artifacts.
+- Do not promote `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without one concrete new strict typed object/source, preferably an independent strict orientation/polarity law with explicit `P2721` coupling.  Otherwise preserve the P2697-P2759 no-new-live-frontier certificate.
+
+## Current foundation-kernel-Lagrangian gap matrix guardrail (P2760/S1710, 2026-06-15)
+
+- P2760 audits the foundations against the explicit kernel/coupling/Lagrangian formulas and finds seven open gaps: ontology-to-kernel measure, amplitude normalization, phase/frequency/topological source, damping/compression bridge, kernel-moments-to-physical-couplings provenance, Lagrangian reverse closure, and stale closure-flag consistency.
+- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.
+- Do not promote kernel-derived effective couplings or `L_total` to foundation-level closure, role transfer, selector closure, bridge closure, or ToE closure until one named gap is closed by a machine-checkable theorem.  The next preferred target is G5: kernel-moments-to-physical-couplings provenance with units/sign/variational normalization.
+
+## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)
+
+- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.
+- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.
+- Do not promote these coefficients to role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one missing provenance atom, preferably a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map.
