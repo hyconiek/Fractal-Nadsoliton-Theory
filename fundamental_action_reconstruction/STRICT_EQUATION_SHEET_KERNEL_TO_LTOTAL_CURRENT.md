@@ -2819,3 +2819,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2778/S1728 max-symmetry 16-node geometry source audit
 
 `P2778/S1728` supplies the concrete symmetry-source law left open by P2777: maximize automorphism-group size on a declared 16-node connected 4-regular class consisting of `torus_4x4` plus connected circulant Cayley graphs `C16({±a,±b})`.  The law fails as a source for the intended geometry: the maximum automorphism count is attained by non-torus circulant labels, not by `torus_4x4`, and no `K`/`L_total` variational coupling is exported.  No canonical nadsoliton geometry, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2779/S1729 16-node circulant full-spectrum quotient audit
+
+`P2779/S1729` performs an isomorphism quotient and full graph-Laplacian-spectrum audit on the P2778 declared 16-node class: `torus_4x4` plus connected 4-regular circulant Cayley candidates.  The 19 labeled candidates collapse to 6 isomorphism classes, and the full Laplacian spectrum is injective on those 6 classes with zero nonisomorphic cospectral collisions.  This is only a declared-class spectral uniqueness witness: no strict nadsoliton spectral source law, global graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2780/S1730 non-circulant 16-node full-spectrum stress audit
+
+`P2780/S1730` stress-tests the P2779 full-spectrum quotient by adding an explicit non-circulant 16-node 4-regular family: two `C8` layers with cross-layer perfect matching shifts `{s,s+4}` for `s=0,1,2,3`.  The expanded 23 labeled candidates collapse to 7 isomorphism classes, and the full Laplacian spectrum remains injective on those 7 classes with zero nonisomorphic cospectral collisions.  This strengthens the finite witness but still exports no strict nadsoliton spectral source law, global graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+
+## P2781/S1731 enumerated two-layer C8 full-spectrum collision audit
+
+`P2781/S1731` exhausts the local two-`C8`-layer stress model left by P2780 by enumerating all unordered cross-layer matching shift pairs `0<=a<b<8`.  Combining those 28 graphs with the P2779 base class gives 47 labeled candidates, 7 isomorphism classes, and 7 distinct full Laplacian spectra, with zero nonisomorphic cospectral collisions.  This is only an exhaustive local-family witness: no strict nadsoliton spectral source law, global graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2782/S1732 bipartite regular enumerator scale obstruction
+
+`P2782/S1732` audits the feasibility of moving from structured 16-node families to a naive canonical enumerator.  An exact dynamic-programming count for the fixed-bipartition bipartite subproblem—8x8 binary matrices with all row and column sums equal to 4—finds `116,963,796,250` labeled candidates before connectivity filtering and graph-isomorphism quotienting.  This blocks a naive in-repo full enumerator without a canonical-generation theorem/tool certificate.  No strict nadsoliton spectral source law, global graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2783/S1733 seven-class quotient integrity certificate
+
+`P2783/S1733` answers the local integrity question for the seven P2781 quotient classes.  It reruns the P2781 expanded class, extracts the seven representatives, and checks all 21 representative pairs by direct graph-isomorphism backtracking and full graph-Laplacian spectrum.  The result has zero direct isomorphism collisions and zero full-spectrum collisions, so the seven local classes are pairwise nonisomorphic and spectrally distinct.  This is only a local quotient-integrity certificate: no strict nadsoliton spectral source law, full canonical 16-node graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.

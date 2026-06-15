@@ -626,3 +626,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2778 tests the concrete symmetry-source law left open by P2777: maximize automorphism-group size on `torus_4x4` plus connected 16-node 4-regular circulant Cayley candidates.
 - The law fails to source the intended geometry: maximum automorphism count is attained by non-torus circulant labels, not by `torus_4x4`, and no `K`/`L_total` variational coupling is exported.
 - Do not promote maximal symmetry to canonical nadsoliton geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a different sourced symmetry functional with target/quotient rule, or pivot to a genuine strict metric/variational source.
+
+## Current 16-node circulant full-spectrum quotient audit guardrail (P2779/S1729, 2026-06-15)
+
+- P2779 quotients the P2778 declared 16-node class by graph isomorphism and audits the full graph-Laplacian spectrum.
+- The 19 labeled candidates collapse to 6 isomorphism classes, and no nonisomorphic cospectral collision appears on this declared quotient.
+- Do not promote this declared-class uniqueness witness to canonical nadsoliton geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must export a strict spectral action/source law before testing, or broaden the 16-node audit outside the circulant/Cayley class with a fresh quotient and collision test.
+
+## Current non-circulant 16-node full-spectrum stress audit guardrail (P2780/S1730, 2026-06-15)
+
+- P2780 adds one explicit non-circulant 16-node 4-regular stress family to the P2779 quotient: two `C8` layers with cross-layer perfect matching shifts `{s,s+4}`.
+- The expanded 23 labeled candidates collapse to 7 isomorphism classes, and no nonisomorphic full-Laplacian-spectrum collision appears on this enlarged declared quotient.
+- Do not promote this expanded finite witness to canonical nadsoliton geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must export a strict spectral action/source law before testing, or run a genuinely broader enumerated 16-node 4-regular collision search with canonical isomorphism quotienting.
+
+## Current enumerated two-layer C8 full-spectrum collision audit guardrail (P2781/S1731, 2026-06-15)
+
+- P2781 exhausts the local two-`C8`-layer stress model by enumerating all unordered cross-layer matching shift pairs `0<=a<b<8` and combining them with the P2779 base quotient.
+- The 47 labeled candidates collapse to 7 isomorphism classes, and no nonisomorphic full-Laplacian-spectrum collision appears on this exhaustive local-family quotient.
+- Do not promote this local-family witness to canonical nadsoliton geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must export a strict spectral action/source law before testing, or move to a canonical enumerator for connected 16-node 4-regular graphs with collision-seeking quotient audit.
+
+## Current bipartite regular enumerator scale obstruction guardrail (P2782/S1732, 2026-06-15)
+
+- P2782 tests the feasibility of the P2781-recommended canonical 16-node 4-regular enumeration by exactly counting the fixed-bipartition bipartite 8+8, degree-4 subproblem.
+- The dynamic-programming count gives `116,963,796,250` labeled 8x8 row/column-sum-4 matrices before connectivity filtering and graph-isomorphism quotienting, blocking a naive in-repo enumerator.
+- Do not promote enumerator scale evidence to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a canonical-generation theorem/tool certificate for the full graph class, or export a strict spectral action/source law before testing.
+
+## Current seven-class quotient integrity guardrail (P2783/S1733, 2026-06-15)
+
+- P2783 audits whether the seven P2781 quotient classes secretly collide by isomorphism or by full graph-Laplacian spectrum.
+- All 21 representative pairs are directly checked: there are zero direct isomorphism collisions and zero full-spectrum collisions, so the seven local classes are pairwise nonisomorphic and spectrally distinct.
+- Do not promote this local quotient-integrity certificate to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a canonical-generation theorem/tool certificate for the full graph class, or export a strict spectral action/source law before testing.
