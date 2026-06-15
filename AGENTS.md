@@ -422,3 +422,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2744 pivots outside finite `Z12` sign-character/frame observables to the Hermitian spectral asymmetry of the oriented `Z12` cycle derivative across all `12` exported integer character twists.
 - The finite computation finds `5` positive, `5` negative, and `2` zero eigenvalues in every twist sector, with pairing `k -> -2*twist-k mod 12`; eta sign-sum is `0` in all sectors.
 - Do not promote this spectral-asymmetry pivot to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict source creating nonzero spectral asymmetry and a `P2721` coupling theorem.  A next admissible move must supply such a source, pivot outside finite `Z12` sign-character/frame/cycle-spectrum observables, or preserve the P2697-P2744 no-new-live-frontier certificate.
+
+## Current Z12 quadratic Gauss-phase signed observable guardrail (P2745/S1695, 2026-06-14)
+
+- P2745 pivots outside finite `Z12` sign-character/frame/cycle-spectrum observables to the imaginary phase sign of quadratic Gauss sums `G(a,b)=sum_n exp(2*pi*i*(a*n^2+b*n)/12)` under affine source reparametrisation.
+- The finite computation finds `144` coefficient pairs with `20` positive, `20` negative, and `104` zero imaginary signs; affine quotienting gives `40` coefficient orbits and `8` nonzero signed-sum coefficients `[-2,-2,-1,-1,1,1,2,2]`.
+- Do not promote this Gauss-phase observable family to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict law selecting one nonzero coefficient orbit/polarity and an explicit `P2721` coupling theorem.  A next admissible move is exactly that missing-premise audit, or preservation of the P2697-P2745 no-new-live-frontier certificate/pivot to a different typed object.
+
+## Current Gauss-phase orbit selector/source-law no-go guardrail (P2746/S1696, 2026-06-14)
+
+- P2746 audits the exact missing premise left by P2745: a strict law selecting one nonzero quadratic-Gauss coefficient orbit and polarity.
+- The finite computation checks the `8` nonzero affine coefficient orbits and finds every polarity-blind internal signature class contains both signs, pairing coefficients as `[-2,-2,2,2]`, `[-1,1]`, and `[-1,1]`; no unique orbit/polarity selector is exported.
+- Do not promote Gauss-phase coefficient choice to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict sign law breaking one paired signature class and an explicit `P2721` coupling theorem.  Otherwise pivot away from Gauss-phase selectors or preserve the P2697-P2746 no-new-live-frontier certificate.
+
+## Current Z12 cubic phase orbit signed observable guardrail (P2747/S1697, 2026-06-14)
+
+- P2747 pivots away from the P2746 Gauss-selector gap to cubic `Z12` phase sums `C(a,b,c)=sum_n exp(2*pi*i*(a*n^3+b*n^2+c*n)/12)` under affine source reparametrisation.
+- The finite computation finds `1728` coefficient triples with `396` positive, `396` negative, and `936` zero imaginary signs; affine quotienting gives `180` coefficient orbits and `44` nonzero signed-sum coefficients, but the nonzero family remains polarity-balanced.
+- Do not promote cubic phase coefficient choice to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict law selecting one nonzero cubic coefficient orbit/polarity and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2747 no-new-live-frontier certificate.
+
+## Current absence-of-selector self-synchronization no-go guardrail (P2748/S1698, 2026-06-14)
+
+- P2748 audits the idea that the nadsoliton, as primordial pure Information, could contain information about the absence of a selector and thereby synchronize with a selector, without introducing any lower informational layer.
+- The finite Aut(Z12)-equivariance test finds `0` equivariant maps from a singleton absence state and `0` from a trivial absence bit to the orientation torsor; units `7` and `11` reverse the torsor, so absence/no-selector information alone is orientation-blind.
+- Do not promote absence-of-selector information to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must construct a concrete inversion-odd signed source with explicit `P2721` coupling, pivot to a different typed object, or preserve the P2697-P2748 no-new-live-frontier certificate.
+
+## Current minimal inversion-odd source coupling-polarity guardrail (P2749/S1699, 2026-06-14)
+
+- P2749 tests the exact object requested after P2748: a minimal inversion-odd signed source and its coupling to the orientation torsor.
+- The finite Aut(Z12)-equivariance count gives exactly `2` maps from the odd source sign to the orientation torsor; they are opposite coupling polarities, exchanged by `P2721` polarity.
+- Do not promote an abstract inversion-odd source representation to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a concrete strict source sign value and a theorem selecting one coupling polarity.  Otherwise pivot to a different typed object or preserve the P2697-P2749 no-new-live-frontier certificate.
