@@ -2088,3 +2088,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2753/S1703 polynomial phase negation Ltotal guard
 
 `P2753/S1703` adds no variational source term.  It proves the polynomial phase-sum imaginary-sign lane remains paired by coefficient negation unless a new strict negation-breaking law is exported with a `P2721` coupling theorem.  Therefore it does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2754/S1704 entropy scalar Ltotal guard
+
+`P2754/S1704` adds no variational entropy-current source term.  It confirms `4 ln 2` as a four-bit Shannon scalar but shows scalar entropy is orientation-blind for the `Z12` torsor.  Therefore it does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure; a new inversion-odd entropy current/flux term and `P2721` coupling theorem would be required.
+
+## P2755/S1705 entropy-current Ltotal guard
+
+`P2755/S1705` constructs a nonzero directed entropy-current toy term but does not add it as a variational source: without a strict law selecting a directed step/polarity and an explicit `P2721` coupling theorem, Aut-symmetric handling cancels the current.  Therefore it does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2756/S1706 entropy pair-current basis Ltotal guard
+
+`P2756/S1706` adds no variational source term.  It proves that the full local antisymmetric entropy pair-current basis cancels under selector-free `Aut(Z12)` handling, so varying the local entropy-pair function cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure without a strict step/polarity source and explicit `P2721` coupling theorem.
+
+## P2757/S1707 entropy pair-current polarity-selector Ltotal guard
+
+`P2757/S1707` adds no variational source term.  It shows that sign-blind entropy pair-current signatures cannot select a directed polarity, while sign-sensitive tie-breaks import the missing premise.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure without an independent strict step/polarity source and explicit `P2721` coupling theorem.
