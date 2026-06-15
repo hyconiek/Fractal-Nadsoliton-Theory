@@ -2136,3 +2136,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2765/S1715 nonproxy variational-insertion Ltotal guard
 
 `P2765/S1715` adds no variational source term.  It records that formal/proxy EOM exports cannot become a nonproxy variational-insertion theorem while 4D covariant scalar, metric, and mixed residual rows are missing and P2762-P2764 provenance prerequisites remain open.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2766/S1716 post-moment provenance-state Ltotal guard
+
+`P2766/S1716` adds no variational source term.  It records that P2761-P2765 collectively leave all named physical-coupling provenance atoms open, and a finite closure lattice does not license `lambda_sm_eff`, `kappa_gr_eff`, or `epsilon_mix_eff` as physical Lagrangian couplings.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2767/S1717 fresh state-map Ltotal guard
+
+`P2767/S1717` adds no variational source term.  Its broad intake finds no lane admissible without a new typed object/theorem, so it cannot promote `lambda_sm_eff`, `kappa_gr_eff`, `epsilon_mix_eff`, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2768/S1718 monomial-invariant Ltotal guard
+
+`P2768/S1718` adds no variational source term.  It proves that no nontrivial monomial ratio of `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` is invariant under the combined open length/field/curvature normalization action, so ratio-taking cannot promote those coefficients to physical Lagrangian couplings or role-bearing `L_total`.
+
+## P2769/S1719 orbit-transitivity Ltotal guard
+
+`P2769/S1719` adds no variational source term.  It shows the open positive normalization gauges act transitively on the positive triple of P1562 coefficients, so invariant-taking cannot promote `lambda_sm_eff`, `kappa_gr_eff`, or `epsilon_mix_eff` to physical Lagrangian couplings or role-bearing `L_total`.
