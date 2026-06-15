@@ -2104,3 +2104,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2757/S1707 entropy pair-current polarity-selector Ltotal guard
 
 `P2757/S1707` adds no variational source term.  It shows that sign-blind entropy pair-current signatures cannot select a directed polarity, while sign-sensitive tie-breaks import the missing premise.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure without an independent strict step/polarity source and explicit `P2721` coupling theorem.
+
+## P2758/S1708 entropy triangle-circulation Ltotal guard
+
+`P2758/S1708` adds no variational source term.  It shows that the entire local alternating entropy triangle-circulation basis is cancelled by selector-free `Aut(Z12)` handling, despite being nontrivial once a directed step is supplied.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure without an independent strict orientation/polarity law and explicit `P2721` coupling theorem.
+
+## P2759/S1709 no-new-live-frontier Ltotal guard
+
+`P2759/S1709` adds no variational source term.  It is a state-map reconciliation showing that no new strict typed object, independent orientation/polarity law, or `P2721` coupling theorem has been supplied after P2758.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2760/S1710 foundation-kernel-Lagrangian gap Ltotal guard
+
+`P2760/S1710` is a gap matrix, not a new variational source term.  It confirms that kernel-derived effective coupling and Lagrangian formulas remain blocked by missing ontology-to-kernel, amplitude/phase/damping bridge, physical-coupling provenance, selector/P2721, and reverse-closure theorems.  It also quarantines stale P1562 closure flags against later P1563/P1866/current guardrails.  Therefore it cannot promote role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+
+## P2761/S1711 kernel-moment coupling Ltotal guard
+
+`P2761/S1711` adds no variational source term.  It shows that P1562 moment-derived coefficients remain numeric candidates rather than accepted physical Lagrangian couplings because unit/reference, sign, and variational-normalization provenance is missing.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
