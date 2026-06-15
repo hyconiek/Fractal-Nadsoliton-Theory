@@ -1,0 +1,145 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_kernel_full_expression_theorem": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_pair_local_max_symmetry_geometry_discriminator": true,
+    "accepted_as_selector_source_theorem": false,
+    "blocker": "Aut(Z12) symmetry cannot select +1 over -1.  Maximal automorphism count distinguishes the P2774 pair, but no strict law says to maximize automorphism count, no global strict graph class is audited, and no K/L_total variational coupling is exported.",
+    "facts": {
+      "aut_z12_symmetry_selects_orientation": false,
+      "global_strict_graph_class_symmetry_uniqueness_audited": false,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "max_automorphism_count_selects_p2774_pair_geometry": true,
+      "p2776_small_class_spectral_boundary_present": true,
+      "strict_source_law_for_max_symmetry_exported": false,
+      "vertex_transitivity_selects_p2774_geometry": false
+    },
+    "missing_criteria": [
+      "aut_z12_symmetry_selects_orientation",
+      "vertex_transitivity_selects_p2774_geometry",
+      "strict_source_law_for_max_symmetry_exported",
+      "global_strict_graph_class_symmetry_uniqueness_audited",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "Can symmetry source either the selector orientation or canonical nadsoliton geometry?",
+  "decision": {
+    "negative_export_flags": {
+      "aut_z12_selector_source_exported": false,
+      "bridge_closure_exported": false,
+      "canonical_geometry_source_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "max_symmetry_geometry_theorem_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not claim selector or geometry closure from symmetry alone.  The next honest move is exactly one of: supply a strict source law that justifies a concrete symmetry functional such as maximal automorphism count and audit it over a declared 16-point/strict graph class, or supply a symmetry-breaking/chiral/pseudoscalar source that couples to the Aut(Z12) +1/-1 selector orbit.  Without one of those, preserve the P2697-P2777 no-selector/no-canonical-geometry/no-closure certificate.",
+    "reason": "Aut(Z12) symmetry cannot select +1 over -1.  Maximal automorphism count distinguishes the P2774 pair, but no strict law says to maximize automorphism count, no global strict graph class is audited, and no K/L_total variational coupling is exported."
+  },
+  "input_hashes": {
+    "P2776": "96f65ebe7a0a4a59ebbeb4f81a0f663cb2ab5771f2267456514ada65f328daa9"
+  },
+  "input_statuses": {
+    "P2776": "P2776_SMALL_GRAPH_FULL_SPECTRUM_UNIQUENESS_AUDIT_NO_CLOSURE"
+  },
+  "status": "P2777_SYMMETRY_SOURCE_SELECTOR_GEOMETRY_AUDIT_NO_CLOSURE",
+  "symmetry_source_witness": {
+    "geometry_symmetry_witness": {
+      "all_pair_geometries_vertex_transitive": true,
+      "audited_pair": [
+        "torus_4x4",
+        "circulant_pm1_pm2"
+      ],
+      "finite_positive_statement": "Automorphism-group size selects torus_4x4 over circulant_pm1_pm2 on this pair, while vertex-transitivity alone does not select because both graphs are vertex-transitive.",
+      "geometry_rows": [
+        {
+          "automorphism_count": 384,
+          "edge_count": 32,
+          "geometry": "torus_4x4",
+          "node_count": 16,
+          "orbit_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "vertex_transitive": true
+        },
+        {
+          "automorphism_count": 32,
+          "edge_count": 32,
+          "geometry": "circulant_pm1_pm2",
+          "node_count": 16,
+          "orbit_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "vertex_transitive": true
+        }
+      ],
+      "max_automorphism_count": 384,
+      "max_automorphism_count_geometries": [
+        "torus_4x4"
+      ],
+      "max_symmetry_selects_unique_geometry_on_pair": true,
+      "vertex_transitivity_selects_unique_geometry": false
+    },
+    "selector_symmetry_witness": {
+      "aut_invariant_singleton_selector_count": 0,
+      "aut_invariant_singleton_selectors": [],
+      "aut_units": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "directed_selector_candidates": {
+        "+1": 1,
+        "-1": 11
+      },
+      "finite_obstruction_statement": "Aut(Z12) symmetry places +1 and -1 in the same directed-unit orbit, so symmetry alone cannot provide a non-premise selector orientation.",
+      "group": "Aut(Z12)=U(12)",
+      "inversion_unit_present": true,
+      "minus_maps_to_plus_under_inversion": true,
+      "orbit_of_directed_candidates": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "plus_maps_to_minus_under_inversion": true,
+      "symmetry_selects_orientation": false
+    },
+    "symmetry_as_pair_local_geometry_discriminator_passes": true,
+    "symmetry_as_selector_source_passes": false
+  }
+}

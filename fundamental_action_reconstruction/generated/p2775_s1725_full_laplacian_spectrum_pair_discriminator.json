@@ -1,0 +1,141 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_full_spectrum_nadsoliton_geometry_theorem": false,
+    "accepted_as_kernel_full_expression_theorem": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_pair_local_degeneracy_breaking_witness": true,
+    "blocker": "The full Laplacian spectrum is a valid finite discriminator for the P2774 pair, but current artifacts do not export a strict source law making that spectrum canonical, a global uniqueness theorem over the allowed graph class, or a variational coupling to K/L_total.",
+    "facts": {
+      "full_spectrum_breaks_p2774_pair_degeneracy": true,
+      "full_spectrum_principle_supplied": true,
+      "global_graph_class_uniqueness_audited": false,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "p2774_entropy_laplacian_trace_degeneracy_present": true,
+      "sourced_nadsoliton_spectral_law_exported": false
+    },
+    "missing_criteria": [
+      "sourced_nadsoliton_spectral_law_exported",
+      "global_graph_class_uniqueness_audited",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "Does the full Laplacian spectrum break the P2774 entropy-plus-trace geometry degeneracy?",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_geometry_source_exported": false,
+      "full_spectrum_nadsoliton_geometry_theorem_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Use P2775 only as a pair-local positive discriminator, not as canonical geometry closure.  The next honest move is exactly one sourced spectral principle: either an explicit nadsoliton spectral action/variational law with a target spectrum and bounded uniqueness test over a declared finite graph class, or a cospectral-degeneracy audit showing whether full spectrum still fails on a broader class.  Without that, preserve the P2697-P2775 no-canonical-geometry/no-closure certificate.",
+    "reason": "The full Laplacian spectrum is a valid finite discriminator for the P2774 pair, but current artifacts do not export a strict source law making that spectrum canonical, a global uniqueness theorem over the allowed graph class, or a variational coupling to K/L_total."
+  },
+  "full_laplacian_spectrum_witness": {
+    "alpha_geo_4_ln_2": 2.772588722239781,
+    "candidate_extra_principle": "full graph-Laplacian spectrum on the P2774 pair",
+    "distinct_full_laplacian_spectrum_count": 2,
+    "entropy_matches_alpha_geo": true,
+    "entropy_object": "uniform distribution on 16 support points",
+    "finite_positive_statement": "The full Laplacian spectrum distinguishes the P2774 torus_4x4 and circulant_pm1_pm2 pair even though entropy and Laplacian trace do not.",
+    "full_spectrum_breaks_p2774_pair_degeneracy": true,
+    "geometry_row_count": 2,
+    "geometry_rows": [
+      {
+        "distance_histogram": {
+          "1": 32,
+          "2": 48,
+          "3": 32,
+          "4": 8
+        },
+        "edge_count": 32,
+        "geometry": "torus_4x4",
+        "laplacian_spectrum_multiplicities": {
+          "-0.0000000000": 1,
+          "2.0000000000": 4,
+          "4.0000000000": 6,
+          "6.0000000000": 4,
+          "8.0000000000": 1
+        },
+        "laplacian_spectrum_rounded": [
+          -0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          6.0,
+          6.0,
+          6.0,
+          6.0,
+          8.0
+        ],
+        "laplacian_trace": 64,
+        "node_count": 16,
+        "spectral_sum": 64.0,
+        "spectral_zero_multiplicity": 1
+      },
+      {
+        "distance_histogram": {
+          "1": 32,
+          "2": 32,
+          "3": 32,
+          "4": 24
+        },
+        "edge_count": 32,
+        "geometry": "circulant_pm1_pm2",
+        "laplacian_spectrum_multiplicities": {
+          "-0.0000000000": 1,
+          "0.7380273726": 2,
+          "2.5857864376": 2,
+          "4.0000000000": 1,
+          "4.4335455026": 2,
+          "4.6488466976": 2,
+          "5.4142135624": 2,
+          "6.0000000000": 2,
+          "6.1795804271": 2
+        },
+        "laplacian_spectrum_rounded": [
+          -0.0,
+          0.7380273726,
+          0.7380273726,
+          2.5857864376,
+          2.5857864376,
+          4.0,
+          4.4335455026,
+          4.4335455026,
+          4.6488466976,
+          4.6488466976,
+          5.4142135624,
+          5.4142135624,
+          6.0,
+          6.0,
+          6.1795804271,
+          6.1795804271
+        ],
+        "laplacian_trace": 64,
+        "node_count": 16,
+        "spectral_sum": 63.9999999998,
+        "spectral_zero_multiplicity": 1
+      }
+    ],
+    "same_laplacian_trace": true,
+    "shannon_entropy_nats": 2.772588722239781
+  },
+  "input_hashes": {
+    "P2774": "8a07b2ffe1e0d2e396ff49b1de0763c57ace85c4f5013d8fc9c9a46a44a315c2"
+  },
+  "input_statuses": {
+    "P2774": "P2774_ENTROPY_LAPLACIAN_TRACE_GEOMETRY_DEGENERACY_NO_CLOSURE"
+  },
+  "status": "P2775_FULL_LAPLACIAN_SPECTRUM_PAIR_DISCRIMINATOR_NO_CLOSURE"
+}
