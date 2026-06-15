@@ -2783,3 +2783,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2769/S1719 combined-normalization orbit-transitivity no-go
 
 `P2769/S1719` attacks the non-monomial invariant escape route left after P2768.  The log-linear action of positive reference length, scalar-field normalization, and curvature normalization on the three P1562 coefficients has an invertible coefficient/gauge matrix, so it is transitive on the positive coefficient octant.  Sampled positive target triples are reached by unique positive gauges with negligible reconstruction error.  Therefore every invariant function of `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` alone is constant on the open orbit.  This blocks non-monomial invariant rescue, but it is not a canonical normalization theorem and exports no physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2770/S1720 kernel characteristic expressivity audit
+
+`P2770/S1720` audits whether the explicit kernel formulas fully express the intended FIN characteristics: single primordial informational nadsoliton, solitonic state, self-learning neural-network-like dynamics, and geometric self-coupling.  The finite formula coverage matrix finds that `K_legacy_ont` and `K_strict_gate` encode oscillation plus damping/compression shape data, so they support only a bounded solitonic-shape reading at formula level.  They do not themselves encode an ontology-source theorem, a self-learning update law, a geometric self-coupling operator, or the completed `K_legacy_ont -> K_strict_gate` bridge.  No physical-role transfer, role-bearing `L_total`, selector closure, bridge closure, or ToE closure is exported.
+
+## P2771/S1721 finite geometric self-coupling operator witness
+
+`P2771/S1721` follows the P2770 recommendation by introducing one explicit typed candidate, the selector-free finite cyclic radial operator `C_geo_N[K](d)=sum_x K(r_N(x))*K(r_N(d-x))` on `Z/13Z`.  The bounded scalar-eigenclosure test asks whether `C_geo_N[K] = gamma K` on all radial shells.  Both `K_legacy_ont` and `K_strict_gate` fail with nonzero residuals, so this candidate does not export a geometric self-coupling theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+
+## P2772/S1722 self-learning kernel update-law stationarity witness
+
+`P2772/S1722` follows the other P2770/P2771 branch by introducing an explicit finite self-learning candidate update law `theta_{t+1}=theta_t-lr*grad L_geo(theta_t)`, where `L_geo` is the normalized P2771 `C_geo_N` scalar-eigenclosure residual on `Z/13Z`.  Finite-difference gradients at both current kernel tuples are nonzero, so neither tuple is a stationary learned fixed point of this candidate law.  The loss is also not yet ontologically sourced or coupled to a physical `L_total`; no self-learning kernel theorem, geometric self-coupling theorem, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2773/S1723 Shannon-entropy geometry-forcing obstruction
+
+`P2773/S1723` tests whether Shannon entropy alone can force nadsoliton geometry.  The uniform distribution on 16 points has `H=ln(16)=4 ln 2=alpha_geo`, but complete, cycle, path, and star graph geometries on the same support have inequivalent distance histograms and diameters at the same entropy.  Thus Shannon entropy can support the information-count normalization, but it does not by itself select the metric/adjacency/geometric self-coupling law.  No canonical geometry source, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2774/S1724 entropy-plus-Laplacian-trace geometry degeneracy
+
+`P2774/S1724` strengthens P2773 by adding a simple graph-Laplacian trace/regularity constraint to `H=ln(16)=4 ln 2=alpha_geo`.  Two connected 4-regular 16-node geometries, `torus_4x4` and `circulant_pm1_pm2`, have the same entropy, degree sequence, edge count, and Laplacian trace, but different graph-distance histograms.  Thus entropy plus this Laplacian trace/degree-energy datum still does not select a canonical nadsoliton metric/adjacency.  No kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.

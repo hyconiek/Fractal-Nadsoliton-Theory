@@ -1,0 +1,124 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_entropy_laplacian_geometry_forcing_theorem": false,
+    "accepted_as_kernel_full_expression_theorem": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "blocker": "Adding 4-regular Laplacian trace/degree-energy data to H=4 ln 2 still leaves at least two inequivalent metric geometries.  A stronger metric, transport, curvature, spectrum, or adjacency source is required.",
+    "facts": {
+      "entropy_matches_alpha_geo": true,
+      "entropy_plus_laplacian_trace_forces_unique_geometry": false,
+      "extra_laplacian_trace_principle_supplied": true,
+      "p2773_entropy_alone_no_closure_boundary_present": true,
+      "same_degree_sequence_and_laplacian_trace": true,
+      "stronger_metric_source_supplied": false
+    },
+    "missing_criteria": [
+      "entropy_plus_laplacian_trace_forces_unique_geometry",
+      "stronger_metric_source_supplied"
+    ]
+  },
+  "audited_question": "Does Shannon entropy plus a simple graph-Laplacian trace/regularity principle force nadsoliton geometry?",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_geometry_from_entropy_laplacian_exported": false,
+      "entropy_laplacian_trace_forces_geometry_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not claim geometry forcing from H=4 ln 2 plus Laplacian trace/regularity.  The next honest move must add a stronger sourced metric principle, such as a full Laplacian-spectrum selector, Ollivier/Forman curvature functional, transport-cost minimizer, or an explicit strict adjacency theorem, and rerun degeneracy-breaking against the torus_4x4 versus circulant_pm1_pm2 pair; otherwise preserve the P2697-P2774 no-geometry-forcing/no-closure certificate.",
+    "reason": "Adding 4-regular Laplacian trace/degree-energy data to H=4 ln 2 still leaves at least two inequivalent metric geometries.  A stronger metric, transport, curvature, spectrum, or adjacency source is required."
+  },
+  "entropy_laplacian_degeneracy_witness": {
+    "alpha_geo_4_ln_2": 2.772588722239781,
+    "candidate_extra_principle": "same 4-regular graph-Laplacian trace / degree-energy constraint",
+    "distinct_distance_histogram_count": 2,
+    "entropy_matches_alpha_geo": true,
+    "entropy_object": "uniform distribution on 16 support points",
+    "entropy_plus_laplacian_trace_forces_unique_geometry": false,
+    "finite_obstruction_statement": "H=4 ln 2 plus equal 4-regular Laplacian trace still permits inequivalent finite metric geometries.",
+    "geometry_row_count": 2,
+    "geometry_rows": [
+      {
+        "average_pair_distance": 2.1333333333333333,
+        "degree_sequence": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "diameter": 4,
+        "distance_histogram": {
+          "1": 32,
+          "2": 48,
+          "3": 32,
+          "4": 8
+        },
+        "edge_count": 32,
+        "geometry": "torus_4x4",
+        "is_4_regular": true,
+        "laplacian_trace": 64,
+        "node_count": 16
+      },
+      {
+        "average_pair_distance": 2.4,
+        "degree_sequence": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "diameter": 4,
+        "distance_histogram": {
+          "1": 32,
+          "2": 32,
+          "3": 32,
+          "4": 24
+        },
+        "edge_count": 32,
+        "geometry": "circulant_pm1_pm2",
+        "is_4_regular": true,
+        "laplacian_trace": 64,
+        "node_count": 16
+      }
+    ],
+    "same_degree_sequence": true,
+    "same_laplacian_trace": true,
+    "shannon_entropy_nats": 2.772588722239781
+  },
+  "input_hashes": {
+    "P2773": "fb37c4f97eec806123147df462b751bec7359934cac35723e44a64557cf98ec1"
+  },
+  "input_statuses": {
+    "P2773": "P2773_SHANNON_ENTROPY_GEOMETRY_FORCING_OBSTRUCTION_NO_CLOSURE"
+  },
+  "status": "P2774_ENTROPY_LAPLACIAN_TRACE_GEOMETRY_DEGENERACY_NO_CLOSURE"
+}
