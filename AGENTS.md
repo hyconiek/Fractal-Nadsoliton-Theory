@@ -476,3 +476,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2753 cuts the post-P2752 loop of merely increasing polynomial degree in `Z12` phase-sum imaginary-sign observables.
 - For any coefficient vector `q`, coefficient negation gives `S(-q)=conj(S(q))` and flips the imaginary sign; the finite audit checks degrees `1` through `5` with zero sign-flip failures and balanced positive/negative counts in every degree.
 - Do not continue polynomial phase-sum degree escalation as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict negation-breaking source law and an explicit `P2721` coupling theorem.  Otherwise pivot outside polynomial phase-sum imaginary-sign observables or preserve the P2697-P2753 no-new-live-frontier certificate.
+
+## Current Shannon entropy four-bit selector audit guardrail (P2754/S1704, 2026-06-15)
+
+- P2754 tests the intuition that `alpha_geo = 4 ln 2` is four Shannon bits and might generate the missing selector from the nadsoliton as pure information in geometric state.
+- The audit verifies the positive scalar fact (`4 ln 2` is the entropy of a uniform four-bit/16-state source), but scalar Shannon entropy is `Aut(Z12)`/inversion invariant: the finite `Z12` integer-weight entropy scan has zero inversion-entropy failures and zero equivariant maps from entropy values to the `+omega/-omega` orientation torsor.
+- Do not promote scalar entropy or `4 ln 2` alone to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must construct a strict inversion-odd entropy current/gradient/flux with computable nonzero sign plus explicit `P2721` coupling-polarity theorem, pivot to a different typed object, or preserve the P2697-P2754 no-new-live-frontier certificate.
+
+## Current entropy-gradient current Aut-cancellation guardrail (P2755/S1705, 2026-06-15)
+
+- P2755 follows the P2754 recommendation by testing a concrete inversion-odd Shannon entropy gradient/current/flux rather than replaying scalar entropy.
+- The directed entropy current is genuinely nonzero on the finite `Z12` four-quanta entropy-density scan, but its sign requires a chosen directed unit step; `Aut(Z12)` pairs steps `1/11` and `5/7`, giving zero opposite-pair failures and identically zero Aut-averaged current.
+- Do not promote a chosen entropy-current direction to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict law selecting the step/polarity and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2755 no-new-live-frontier certificate.
+
+## Current entropy pair-current basis Aut-cancellation guardrail (P2756/S1706, 2026-06-15)
+
+- P2756 removes the P2755 toy-current limitation by auditing the full finite basis of translation-summed nearest-neighbour antisymmetric Shannon entropy pair currents on the four-quanta `Z12` entropy alphabet.
+- The directed basis is nontrivial, but every opposite step vector cancels (`1/11`, `5/7`), and the selector-free `Aut(Z12)`-summed pair-current basis has rank `0` with zero opposite-pair and Aut-sum failures.
+- Do not continue this lane by changing the antisymmetric local entropy-pair function as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must export a strict step/polarity source with explicit `P2721` coupling, pivot outside local entropy pair-current observables, or preserve the P2697-P2756 no-new-live-frontier certificate.
+
+## Current entropy pair-current polarity-selector invariant no-go guardrail (P2757/S1707, 2026-06-15)
+
+- P2757 audits the exact missing premise after P2756: whether intrinsic signatures of the entropy pair-current feature vector can select a directed step/polarity.
+- Opposite step vectors are exact negatives on every finite row, every sign-blind/internal signature matches across opposite steps, and sign-sensitive rules choose only by importing the missing polarity premise.
+- Do not continue local entropy pair-current observables via sign-blind scoring or sign-sensitive tie-breaks as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must pivot outside local entropy pair-current observables to a genuinely new strict typed object/source, export an independent strict step/polarity source with explicit `P2721` coupling, or preserve the P2697-P2757 no-new-live-frontier certificate.
