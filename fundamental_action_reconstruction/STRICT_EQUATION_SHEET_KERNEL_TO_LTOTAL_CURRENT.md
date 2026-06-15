@@ -2751,3 +2751,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2761/S1711 kernel-moment physical-coupling provenance obstruction
 
 `P2761/S1711` attacks the P2760 `G5` target directly.  It audits P1562 moments and derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` against the minimum provenance needed for physical Lagrangian couplings: canonical reference units, action-density normalization, field/curvature normalization, sign conventions, and variational insertion into nonproxy EOM residuals.  The numeric moment map is present, but all three coupling rows fail provenance acceptance; stale P1562 `qw2191_closed/toe_closed` flags remain quarantined by P1563/P1866/current guardrails.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2762/S1712 reference-cell action-density normalization obstruction
+
+`P2762/S1712` attacks the P2761 preferred provenance atom: canonical physical length/reference-cell plus action-density normalization for the strict moment map.  It gives a finite scale-orbit witness over positive reference lengths: the dimensionless `lambda_sm_eff` row is unchanged, while dimensionful `kappa_gr_eff` and `epsilon_mix_eff` vary with the chosen length scale.  Together with the P2689 UV-unit block and P2761 unit-reference block, this shows that current artifacts do not export a unique reference cell, action-density unit, or physical moment normalization.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2763/S1713 moment-coupling sign-convention conditional obstruction
+
+`P2763/S1713` audits the sign-convention atom left after P2762.  The P1562 moment side has `M2<0` and `M3<0`, while the derived candidates `kappa_gr_eff` and `epsilon_mix_eff` are positive; a finite four-branch sign family preserves the same magnitudes but flips the two dimensionful coupling signs.  Current artifacts do not export a theorem selecting the positive branch, and P2762 still leaves canonical reference-cell/action-density normalization open.  No sign-convention theorem, physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2764/S1714 field-curvature normalization compatibility obstruction
+
+`P2764/S1714` audits the field/curvature normalization atom left after P2763.  A finite positive-normalization orbit over scalar and curvature factors changes all three candidate coefficient rows (`lambda_sm_eff`, `kappa_gr_eff`, `epsilon_mix_eff`), showing that current artifacts do not export a common normalization compatibility theorem for the formal Lagrangian terms.  P2762 reference-cell/action-density closure and P2763 sign-convention closure remain open.  No field/curvature normalization theorem, physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2765/S1715 nonproxy variational-insertion residual obstruction
+
+`P2765/S1715` audits the variational-insertion atom left after P2764.  P1563 exports formal/skeleton EOM strings and P1866 exports only proxy 1D EOM keys (`eom_phi_proxy_1d`, `eom_A_proxy_1d`) while explicitly listing missing 4D covariant Euler-Lagrange/Einstein witness tables.  The required nonproxy scalar, metric, and mixed residual rows for `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` are absent, and P2762-P2764 provenance prerequisites remain open.  No nonproxy variational-insertion theorem, physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.

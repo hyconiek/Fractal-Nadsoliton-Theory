@@ -1,0 +1,224 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonproxy_variational_insertion_theorem": false,
+    "blocker": "P1563/P1866 provide formal/proxy EOM support, but the required 4D nonproxy scalar, metric, and mixed residual rows are absent; P2762-P2764 provenance prerequisites also remain open.",
+    "facts": {
+      "content_evidence_present": true,
+      "field_curvature_normalization_still_open": true,
+      "formal_eom_exports_present": true,
+      "four_d_covariant_eom_residual_table_exported": false,
+      "no_variational_insertion_accepted_without_nonproxy_rows": true,
+      "nonproxy_variational_insertion_theorem_exported": false,
+      "p1866_has_4d_covariant_blocker": true,
+      "proxy_eom_exports_present": true,
+      "reference_cell_action_density_still_open": true,
+      "sign_convention_still_open": true
+    },
+    "missing_criteria": [
+      "four_d_covariant_eom_residual_table_exported",
+      "nonproxy_variational_insertion_theorem_exported"
+    ]
+  },
+  "audited_atom": "nonproxy EOM residual variational insertion, conditional on future provenance theorems",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "hit_counts": {
+      "closure_boundary": 22031,
+      "p1563_formal_eom": 446,
+      "p1866_proxy_block": 1886,
+      "p2764_next_atom": 85,
+      "provenance_prerequisites": 148
+    },
+    "row_count": 5,
+    "rows": [
+      {
+        "hit_count": 85,
+        "lane": "p2764_next_atom",
+        "pattern": "P2764|variational-insertion|nonproxy EOM residual|P2697-P2764",
+        "sample_hits": [
+          "AGENTS.md:540:## Current field-curvature normalization compatibility obstruction guardrail (P2764/S1714, 2026-06-15)",
+          "AGENTS.md:542:- P2764 audits field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem.",
+          "AGENTS.md:544:- Do not promote these conventions to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a nonproxy variational-insertion residual test explicitly conditional on future provenance theorems, or preservation of the P2697-P2764 no-closure certificate.",
+          "AGENTS.md:546:## Current nonproxy variational-insertion residual obstruction guardrail (P2765/S1715, 2026-06-15)",
+          "AGENTS.md:548:- P2765 audits the nonproxy variational-insertion residual atom left after P2764.",
+          "AGENTS.md:549:- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:122:        \"variational insertion theorem tying coefficients to nonproxy EOM residuals\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:226:    append_once(STRICT_EQUATION_SHEET, \"P2761/S1711 kernel-moment physical-coupling provenance obstruction\", \"## P2761/S1711 kernel-moment physical-coupling provenance obstruction\\n\\n`P2761/S1711` attacks the P2760 `G5` target directly.  It audits P1562 moments and derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` against the minimum provenance needed for physical Lagrangian couplings: canonical reference units, action-density normalization, field/curvature normalization, sign conventions, and variational insertion into nonproxy EOM residuals.  The numeric moment map is present, but all three coupling rows fail provenance acceptance; stale P1562 `qw2191_closed/toe_closed` flags remain quarantined by P1563/P1866/current guardrails.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.\\n\")"
+        ]
+      },
+      {
+        "hit_count": 446,
+        "lane": "p1563_formal_eom",
+        "pattern": "P1563|euler_lagrange_equations|lagrangian_density|E_full_variational_proof_log_machine_checkable",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "AGENTS.md:549:- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.",
+          "fundamental_action_reconstruction/p1613_s563_symbolic_euler_lagrange_identity_replay_checkpoint.py:24:            \"rhs\": s10.get(\"euler_lagrange_equations\", {}).get(\"psi_sector\", \"\"),",
+          "fundamental_action_reconstruction/p1613_s563_symbolic_euler_lagrange_identity_replay_checkpoint.py:29:            \"rhs\": s10.get(\"euler_lagrange_equations\", {}).get(\"gr_sector\", \"\"),",
+          "fundamental_action_reconstruction/p1636_s586_strict_bidirectional_kernel_coefficient_closure_audit_checkpoint.py:62:            \"full_lagrangian_density\": s32[\"full_lagrangian_density\"],",
+          "fundamental_action_reconstruction/p1636_s586_strict_bidirectional_kernel_coefficient_closure_audit_checkpoint.py:74:            \"missing_exports\": [\"E_selector_internal_source_full_domain\", \"E_full_variational_proof_log_machine_checkable\"],",
+          "fundamental_action_reconstruction/p1644_s594_strict_eom_to_lagrangian_helmholtz_witness_scaffold_checkpoint.py:65:        \"full_lagrangian_density_reference\": s43[\"full_lagrangian_density\"],",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:24:P1563 = GEN / \"p1563_s513_strict_kernel_to_euler_lagrange_eom_export_summary.json\""
+        ]
+      },
+      {
+        "hit_count": 1886,
+        "lane": "p1866_proxy_block",
+        "pattern": "P1866|OPEN_OBSTRUCTION_WITH_TRACE|proxy_1d|4D covariant|Einstein witness",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "AGENTS.md:549:- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.",
+          "fundamental_action_reconstruction/p1852_s802_strict_b1_brst_anomaly_and_cutkosky_seed_witness_checkpoint.py:51:        \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1852_s802_strict_b1_brst_anomaly_and_cutkosky_seed_witness_checkpoint.py:65:                \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1852_s802_strict_b1_brst_anomaly_and_cutkosky_seed_witness_checkpoint.py:70:                \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1852_s802_strict_b1_brst_anomaly_and_cutkosky_seed_witness_checkpoint.py:79:        \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1918_s868_strict_c1_gr_second_channel_background_zero_witness_probe.py:46:        \"status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p1815_s765_strict_state_vector_priority_sync_checkpoint.py:27:        \"metric_residual\": p1814.get(\"theorem_gates\", {}).get(\"TG1_BW\", \"OPEN_OBSTRUCTION_WITH_TRACE\"),"
+        ]
+      },
+      {
+        "hit_count": 148,
+        "lane": "provenance_prerequisites",
+        "pattern": "reference-cell/action-density|sign-convention|field/curvature normalization|physical-coupling provenance",
+        "sample_hits": [
+          "AGENTS.md:522:## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)",
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "AGENTS.md:532:- Do not promote arbitrary unit choices to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one remaining provenance atom, preferably a sign-convention theorem explicitly conditional on future canonical reference-cell/action-density closure, or preservation of the P2697-P2762 no-closure certificate.",
+          "AGENTS.md:534:## Current moment-coupling sign-convention conditional obstruction guardrail (P2763/S1713, 2026-06-15)",
+          "AGENTS.md:536:- P2763 audits the P2762-recommended sign-convention atom only as a conditional provenance test.",
+          "AGENTS.md:538:- Do not promote the signs or coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem, or preservation of the P2697-P2763 no-closure certificate.",
+          "AGENTS.md:542:- P2764 audits field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem.",
+          "AGENTS.md:544:- Do not promote these conventions to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a nonproxy variational-insertion residual test explicitly conditional on future provenance theorems, or preservation of the P2697-P2764 no-closure certificate."
+        ]
+      },
+      {
+        "hit_count": 22031,
+        "lane": "closure_boundary",
+        "pattern": "role-bearing L_total|ToE closure|role transfer|bridge closure|selector closure",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "field_curvature_normalization_theorem_exported": false,
+      "four_d_covariant_eom_residual_table_exported": false,
+      "metric_einstein_residual_closed": false,
+      "mixed_sector_residual_closed": false,
+      "nonproxy_variational_insertion_theorem_exported": false,
+      "physical_coupling_provenance_theorem_exported": false,
+      "reference_cell_action_density_closure_imported": false,
+      "role_bearing_ltotal_promoted": false,
+      "sign_convention_theorem_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not promote P1563/P1866 formal or proxy EOM exports to a nonproxy variational-insertion theorem.  The honest next move is a post-P2761-to-P2765 provenance-state reconciliation: either supply a genuinely new theorem fixing at least one of reference-cell/action-density, sign, field/curvature normalization, or 4D nonproxy residual rows, or preserve the P2697-P2765 no-closure certificate.",
+    "reason": "P1563/P1866 provide formal/proxy EOM support, but the required 4D nonproxy scalar, metric, and mixed residual rows are absent; P2762-P2764 provenance prerequisites also remain open."
+  },
+  "input_hashes": {
+    "P1562": "bcc13655eb98ac57450c0eae74b8a153010494d945159c1b6b484ad56b98e1b9",
+    "P1563": "1cb777b00748bdf3b4a9421c0ad12dfeb6ce736f4e6b56802692a2c6bf3d3448",
+    "P1866": "69eb9bdb80a603735625a2ed943eba94a9cf2a05a54feab132565f5085764603",
+    "P2762": "2973e0303ffd7b93d698b5000f7de371871581d9dd747e2a8f399592aeed3c80",
+    "P2763": "135e54dd5dc275828961c376f61d667551a2c1b8406b56a51017108d164c40a7",
+    "P2764": "e566ddbab0a4f3048d4e9bf02411998c846785b9d3b7f88f1235c2ba0ebf1e03"
+  },
+  "input_statuses": {
+    "P1562": "PASS_STRICT_KERNEL_COEFFICIENTS_DERIVED",
+    "P1563": "PASS_STRICT_KERNEL_TO_EOM_CHAIN_EXPORTED",
+    "P1866": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "P2762": "P2762_REFERENCE_CELL_ACTION_DENSITY_NORMALIZATION_OBSTRUCTION_NO_CLOSURE",
+    "P2763": "P2763_MOMENT_COUPLING_SIGN_CONVENTION_CONDITIONAL_OBSTRUCTION_NO_CLOSURE",
+    "P2764": "P2764_FIELD_CURVATURE_NORMALIZATION_COMPATIBILITY_OBSTRUCTION_NO_CLOSURE"
+  },
+  "nonproxy_variational_insertion_matrix": {
+    "accepted_variational_insertion_count": 0,
+    "has_4d_covariant_blocker": true,
+    "has_proxy_eom_exports": true,
+    "missing_nonproxy_residual_row_count": 4,
+    "missing_nonproxy_residual_rows": [
+      "metric_4d_einstein_residual",
+      "metric_backreaction_residual",
+      "mixed_scalar_metric_4d_residual",
+      "scalar_4d_euler_lagrange_residual"
+    ],
+    "p1563_formal_eom_keys": [
+      "gr_sector",
+      "psi_sector"
+    ],
+    "p1866_eom_export_keys": [
+      "eom_A_proxy_1d",
+      "eom_phi_proxy_1d"
+    ],
+    "p1866_strict_core_closure_blockers": [
+      "4D covariant Euler-Lagrange+Einstein witness tables still missing",
+      "full counterterm cancellation proof on operator basis still missing",
+      "exact Cutkosky discontinuity integrals still missing",
+      "background-independence lift theorem still missing"
+    ],
+    "p2762_reference_cell_action_density_still_open": true,
+    "p2763_sign_convention_still_open": true,
+    "p2764_field_curvature_normalization_still_open": true,
+    "row_count": 3,
+    "rows": [
+      {
+        "accepted_variational_insertion": false,
+        "blocker": "Only formal/proxy EOM support is present; the required 4D nonproxy residual row is not exported under the still-open provenance prerequisites.",
+        "candidate_term": "lambda_sm_eff * phi^4 / scalar potential sector",
+        "coupling": "lambda_sm_eff",
+        "nonproxy_residual_table_exported": false,
+        "p1563_formal_eom_keys": [
+          "gr_sector",
+          "psi_sector"
+        ],
+        "p1866_proxy_eom_hits": [
+          "eom_phi_proxy_1d"
+        ],
+        "required_nonproxy_residuals": [
+          "scalar_4d_euler_lagrange_residual"
+        ]
+      },
+      {
+        "accepted_variational_insertion": false,
+        "blocker": "Only formal/proxy EOM support is present; the required 4D nonproxy residual row is not exported under the still-open provenance prerequisites.",
+        "candidate_term": "kappa_gr_eff * R / Einstein-Hilbert metric sector",
+        "coupling": "kappa_gr_eff",
+        "nonproxy_residual_table_exported": false,
+        "p1563_formal_eom_keys": [
+          "gr_sector",
+          "psi_sector"
+        ],
+        "p1866_proxy_eom_hits": [],
+        "required_nonproxy_residuals": [
+          "metric_4d_einstein_residual"
+        ]
+      },
+      {
+        "accepted_variational_insertion": false,
+        "blocker": "Only formal/proxy EOM support is present; the required 4D nonproxy residual row is not exported under the still-open provenance prerequisites.",
+        "candidate_term": "epsilon_mix_eff * phi^2*R or psi*R mixed sector",
+        "coupling": "epsilon_mix_eff",
+        "nonproxy_residual_table_exported": false,
+        "p1563_formal_eom_keys": [
+          "gr_sector",
+          "psi_sector"
+        ],
+        "p1866_proxy_eom_hits": [],
+        "required_nonproxy_residuals": [
+          "mixed_scalar_metric_4d_residual",
+          "metric_backreaction_residual"
+        ]
+      }
+    ]
+  },
+  "status": "P2765_NONPROXY_VARIATIONAL_INSERTION_RESIDUAL_OBSTRUCTION_NO_CLOSURE"
+}

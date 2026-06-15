@@ -1,0 +1,263 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_reference_cell_action_density_theorem": false,
+    "blocker": "The audit finds a real scale-orbit/nonuniqueness witness: changing the positive reference length changes dimensionful kappa/epsilon while leaving the numeric moment map intact. P2689 and P2761 already block an unconditional unit/reference source, and no new canonical reference-cell/action-density theorem is exported.",
+    "facts": {
+      "action_density_normalization_theorem_exported": false,
+      "canonical_reference_cell_theorem_exported": false,
+      "content_evidence_present": true,
+      "finite_scale_orbit_exhibits_nonuniqueness": true,
+      "p1562_coefficients_present": true,
+      "p2689_blocks_unconditional_uv_unit": true,
+      "p2761_blocks_unit_reference_source": true
+    },
+    "missing_criteria": [
+      "canonical_reference_cell_theorem_exported",
+      "action_density_normalization_theorem_exported"
+    ]
+  },
+  "audited_atom": "canonical physical length/reference-cell and action-density normalization theorem for the strict moment map",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "hit_counts": {
+      "closure_boundary": 26466,
+      "normalization_boundary": 64,
+      "p1562_moment_coefficients": 2880,
+      "p2689_uv_unit_block": 636,
+      "p2761_preferred_atom": 66
+    },
+    "row_count": 5,
+    "rows": [
+      {
+        "hit_count": 66,
+        "lane": "p2761_preferred_atom",
+        "pattern": "P2761|canonical physical length/reference-cell|action-density normalization theorem|strict moment map",
+        "sample_hits": [
+          "AGENTS.md:522:## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "AGENTS.md:526:- Do not promote these coefficients to role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one missing provenance atom, preferably a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map.",
+          "AGENTS.md:530:- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2751:## P2761/S1711 kernel-moment physical-coupling provenance obstruction",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2753:`P2761/S1711` attacks the P2760 `G5` target directly.  It audits P1562 moments and derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` against the minimum provenance needed for physical Lagrangian couplings: canonical reference units, action-density normalization, field/curvature normalization, sign conventions, and variational insertion into nonproxy EOM residuals.  The numeric moment map is present, but all three coupling rows fail provenance acceptance; stale P1562 `qw2191_closed/toe_closed` flags remain quarantined by P1563/P1866/current guardrails.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2757:`P2762/S1712` attacks the P2761 preferred provenance atom: canonical physical length/reference-cell plus action-density normalization for the strict moment map.  It gives a finite scale-orbit witness over positive reference lengths: the dimensionless `lambda_sm_eff` row is unchanged, while dimensionful `kappa_gr_eff` and `epsilon_mix_eff` vary with the chosen length scale.  Together with the P2689 UV-unit block and P2761 unit-reference block, this shows that current artifacts do not export a unique reference cell, action-density unit, or physical moment normalization.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:2120:## P2761/S1711 kernel-moment coupling Ltotal guard"
+        ]
+      },
+      {
+        "hit_count": 636,
+        "lane": "p2689_uv_unit_block",
+        "pattern": "P2689|entropy reference-cell|bit-to-length|canonical length/UV unit|scale-orbit quotient",
+        "sample_hits": [
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:94:- With Lagrangian/EOM, lower-boundary, selector replay, and generic bridge lanes repetition-gated, the next proof-grade move is one P2680 non-selector source atom: a canonical length/UV unit source audit through the P2662/P2663 entropy reference-cell and bit-to-length obligation matrix.",
+          "AGENTS.md:96:## Current entropy UV-unit obligation guardrail (P2689/S1639, 2026-06-13)",
+          "AGENTS.md:98:- P2689 shows the entropy equation can conditionally select a positive scale, but no unconditional canonical UV unit or beta/Z_beta source is exported because the intrinsic entropy reference, selector-free bit target, bit-to-length/action map, and scale-orbit quotient remain missing.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2307:## P2650/S1600 canonical length/UV unit source guard",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2309:`P2650/S1600` audits the canonical length/UV unit atom required by P2649.  The audited candidates `d=1`, `beta_tors`, `alpha_geo`, `D_f=eta`, the inverse-hierarchy threshold, the micro beta median, and future empirical tail-ratio calibration all fail as target-independent unit sources because they lack typed nadsoliton metric/UV source atoms, role-transfer theorems, or normalization-gauge discharge.  A finite expression scan over audited constants can generate near-unit numerology but still exports no typed unit theorem.  Thus `beta=1` remains a robust working normalization/compression parameter, not a sourced strict beta; bridge completion, role transfer, `QW-2191`, role-bearing `L_total`, and ToE closure remain closed.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2321:`P2653/S1603` specifies the proof obligations for promoting `beta=1` beyond a gauge-fixed working normalization: a typed nadsoliton state space, metric distance, nadsoliton-selected UV unit, target/holdout independence, scale-orbit quotient discharge, and a dimensionless operator/conservation identity with unique `beta=1`.  The audited current routes cover only bookkeeping and partial metric language; the scale-orbit witness shows every positive beta remains representable by distance rescaling.  Thus this exports no typed metric/UV source theorem, no canonical unit, no beta source, no bridge completion, no role transfer, no `QW-2191` discharge, no role-bearing `L_total`, and no ToE closure.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2357:`P2662/S1612` builds the requested intrinsic entropy/boundary-phase unit-map theorem as a conditional scaffold.  If an intrinsic pre-normalization entropy measure gives `H(a)=H0+D_f log(a)` and a boundary-phase law derives an integer bit target `N log(2)`, then the equation selects one positive physical scale and is covariant under base-coordinate rescaling.  The current repo does not yet export the required premises: intrinsic reference cell/entropy zero, boundary-phase bit target, bit-to-action or bit-to-length unit map, or selector-branch orientation.  Therefore this is a conditional theorem scaffold, not an unconditional UV unit, beta source, `QW-2191` discharge, bridge completion, role transfer, role-bearing `L_total`, or ToE closure."
+        ]
+      },
+      {
+        "hit_count": 2880,
+        "lane": "p1562_moment_coefficients",
+        "pattern": "P1562|M0|M1|M2|M3|lambda_sm_eff|kappa_gr_eff|epsilon_mix_eff",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "AGENTS.md:531:- A finite positive-length scale-orbit witness shows that the numeric moment coefficients remain nonunique as physical dimensionful couplings: `lambda_sm_eff` is scale-invariant, but `kappa_gr_eff` and `epsilon_mix_eff` change with the reference length unless a canonical cell/action-density theorem is exported.",
+          "fundamental_action_reconstruction/r36_direct_m2_psi4_target_action_common_monomial_support_packet.py:115:        \"status\": \"PASS_PARTIAL_DIRECT_M2_PSI4_TARGET_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET_READY\",",
+          "fundamental_action_reconstruction/p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit.py:22:MODELS = [\"M1_nn\", \"M2_monotone\", \"M3_nn_tiebreak\", \"M4_monotone_penalized\"]",
+          "fundamental_action_reconstruction/p52_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi7_psi10_role_matching_packet.py:79:        \"status\": \"CANONICAL_ONTOLOGY_SUPPORTED_ATTACKED_SOURCE_AND_TARGET_SIDE_BLOCKERS_CLOSED_AND_DIRECT_M2_PSI7_PSI10_PAIRWISE_GAP_REDUCED_TO_DECLARED_ROLE_MATCHING_PACKET_ROUTE_STILL_NOT_CLOSED_AFTER_R40\",",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1301:`P2441/S1391` audits the actual P1562 strict moment coefficient route, not the P1664 algebraic replay ansatz.  A finite-difference Jacobian for `(lambda_sm_eff, kappa_gr_eff, epsilon_mix_eff)` with respect to `(omega, phi, beta, eta)` has rank `3`, and its `phi` column is nonzero.  Small phase sweeps around the current `QW-2049` phase change all three moment-derived effective coefficients."
+        ]
+      },
+      {
+        "hit_count": 64,
+        "lane": "normalization_boundary",
+        "pattern": "action-density normalization|field/curvature normalization|variational insertion|nonproxy EOM",
+        "sample_hits": [
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "AGENTS.md:526:- Do not promote these coefficients to role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one missing provenance atom, preferably a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map.",
+          "AGENTS.md:528:## Current reference-cell action-density normalization obstruction guardrail (P2762/S1712, 2026-06-15)",
+          "AGENTS.md:530:- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2753:`P2761/S1711` attacks the P2760 `G5` target directly.  It audits P1562 moments and derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` against the minimum provenance needed for physical Lagrangian couplings: canonical reference units, action-density normalization, field/curvature normalization, sign conventions, and variational insertion into nonproxy EOM residuals.  The numeric moment map is present, but all three coupling rows fail provenance acceptance; stale P1562 `qw2191_closed/toe_closed` flags remain quarantined by P1563/P1866/current guardrails.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2755:## P2762/S1712 reference-cell action-density normalization obstruction",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2757:`P2762/S1712` attacks the P2761 preferred provenance atom: canonical physical length/reference-cell plus action-density normalization for the strict moment map.  It gives a finite scale-orbit witness over positive reference lengths: the dimensionless `lambda_sm_eff` row is unchanged, while dimensionful `kappa_gr_eff` and `epsilon_mix_eff` vary with the chosen length scale.  Together with the P2689 UV-unit block and P2761 unit-reference block, this shows that current artifacts do not export a unique reference cell, action-density unit, or physical moment normalization.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/p1734_s684_strict_full_chain_theoretical_physics_readout_and_qg_gate_map_checkpoint.py:43:            \"dependency\": \"nonproxy EOM lock + Cutkosky/ghost-pole witness\","
+        ]
+      },
+      {
+        "hit_count": 26466,
+        "lane": "closure_boundary",
+        "pattern": "L_total|ToE closure|role transfer|bridge closure|selector closure",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "action_density_normalization_theorem_exported": false,
+      "canonical_reference_cell_theorem_exported": false,
+      "moment_map_physical_units_fixed": false,
+      "physical_coupling_provenance_theorem_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "toe_closure_exported": false,
+      "unique_physical_length_scale_exported": false
+    },
+    "next_honest_step": "Do not promote the strict moment-map coefficients to physical Lagrangian couplings through an arbitrary unit choice.  The next honest proof-grade move should target exactly one remaining provenance atom after P2762: a sign-convention theorem for the moment-to-coupling map, but only if it is explicitly conditional on a future canonical reference-cell/action-density theorem; otherwise preserve the P2697-P2762 no-closure certificate.",
+    "reason": "The audit finds a real scale-orbit/nonuniqueness witness: changing the positive reference length changes dimensionful kappa/epsilon while leaving the numeric moment map intact. P2689 and P2761 already block an unconditional unit/reference source, and no new canonical reference-cell/action-density theorem is exported."
+  },
+  "input_hashes": {
+    "P1562": "bcc13655eb98ac57450c0eae74b8a153010494d945159c1b6b484ad56b98e1b9",
+    "P2689": "92c3a7ebe7f855f24b72aa8dde19b7c5e3c9018145abd721cde9ce55806bc50a",
+    "P2760": "30a6a441fb21bb3890c50797e1266901452a4b47e5dc810558e124837281eac6",
+    "P2761": "f9c78c10248b5708e267cb78263430830fbcda9b1bc86deef26cd312c4248633"
+  },
+  "input_statuses": {
+    "P1562": "PASS_STRICT_KERNEL_COEFFICIENTS_DERIVED",
+    "P2689": "P2689_ENTROPY_REFERENCE_CELL_BIT_TO_LENGTH_UV_UNIT_OBLIGATION_MATRIX_NO_FALSE_PASS",
+    "P2760": "P2760_FOUNDATION_KERNEL_LAGRANGIAN_GAP_MATRIX_NO_CLOSURE",
+    "P2761": "P2761_KERNEL_MOMENT_COUPLING_PROVENANCE_OBSTRUCTION_NO_CLOSURE"
+  },
+  "normalization_obligation_matrix": {
+    "accepted_normalized_coupling_count": 0,
+    "continuous_scale_gauge_unfixed": true,
+    "derived_lagrangian_coefficients": {
+      "epsilon_mix_eff": 18.13817242656519,
+      "kappa_gr_eff": 11.91403866517398,
+      "lambda_sm_eff": 0.33220238535858243
+    },
+    "finite_scale_orbit_witness": {
+      "distinct_dimensionalizations": 5,
+      "epsilon_changes_with_ell": true,
+      "kappa_changes_with_ell": true,
+      "lambda_invariant_under_ell": true,
+      "rows": [
+        {
+          "dimensionalized_coefficients": {
+            "epsilon_mix_eff": 72.55268970626076,
+            "kappa_gr_eff": 190.62461864278367,
+            "lambda_sm_eff": 0.33220238535858243
+          },
+          "ell": 0.25
+        },
+        {
+          "dimensionalized_coefficients": {
+            "epsilon_mix_eff": 36.27634485313038,
+            "kappa_gr_eff": 47.65615466069592,
+            "lambda_sm_eff": 0.33220238535858243
+          },
+          "ell": 0.5
+        },
+        {
+          "dimensionalized_coefficients": {
+            "epsilon_mix_eff": 18.13817242656519,
+            "kappa_gr_eff": 11.91403866517398,
+            "lambda_sm_eff": 0.33220238535858243
+          },
+          "ell": 1.0
+        },
+        {
+          "dimensionalized_coefficients": {
+            "epsilon_mix_eff": 9.069086213282596,
+            "kappa_gr_eff": 2.978509666293495,
+            "lambda_sm_eff": 0.33220238535858243
+          },
+          "ell": 2.0
+        },
+        {
+          "dimensionalized_coefficients": {
+            "epsilon_mix_eff": 4.534543106641298,
+            "kappa_gr_eff": 0.7446274165733737,
+            "lambda_sm_eff": 0.33220238535858243
+          },
+          "ell": 4.0
+        }
+      ],
+      "tested_positive_reference_lengths": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    "missing_normalization_atom_count": 5,
+    "missing_normalization_atoms": [
+      "canonical selector-free physical length/reference cell",
+      "action-density unit convention for converting dimensionless sums into integral density",
+      "cell volume / measure normalization for strict kernel moments M0..M3",
+      "field and curvature normalization compatible with the same cell",
+      "variational insertion check after fixing the above normalizations"
+    ],
+    "moments": {
+      "M0": 1.2300294722058696,
+      "M1": 0.40861872472814803,
+      "M2": -14.5188745761074,
+      "M3": -285.6563371577367
+    },
+    "p2689_already_blocks_unconditional_uv_unit": true,
+    "p2761_already_blocks_unit_reference_source": true,
+    "row_count": 3,
+    "rows": [
+      {
+        "accepted_physical_normalization": false,
+        "action_density_unit_fixed": false,
+        "blocker": "A positive reference length/action-density normalization family remains; current artifacts do not export the canonical cell and normalization theorem needed to choose one member.",
+        "coupling": "lambda_sm_eff",
+        "expected_mass_dimension_4d": 0,
+        "field_or_curvature_norm_fixed": false,
+        "minimal_normalization_unknowns": [
+          "ell",
+          "A_action",
+          "Z_phi"
+        ],
+        "numeric_candidate": 0.33220238535858243,
+        "reference_cell_fixed": false
+      },
+      {
+        "accepted_physical_normalization": false,
+        "action_density_unit_fixed": false,
+        "blocker": "A positive reference length/action-density normalization family remains; current artifacts do not export the canonical cell and normalization theorem needed to choose one member.",
+        "coupling": "kappa_gr_eff",
+        "expected_mass_dimension_4d": 2,
+        "field_or_curvature_norm_fixed": false,
+        "minimal_normalization_unknowns": [
+          "ell",
+          "A_action",
+          "Z_g"
+        ],
+        "numeric_candidate": 11.91403866517398,
+        "reference_cell_fixed": false
+      },
+      {
+        "accepted_physical_normalization": false,
+        "action_density_unit_fixed": false,
+        "blocker": "A positive reference length/action-density normalization family remains; current artifacts do not export the canonical cell and normalization theorem needed to choose one member.",
+        "coupling": "epsilon_mix_eff",
+        "expected_mass_dimension_4d": 1,
+        "field_or_curvature_norm_fixed": false,
+        "minimal_normalization_unknowns": [
+          "ell",
+          "A_action",
+          "Z_psi",
+          "Z_R"
+        ],
+        "numeric_candidate": 18.13817242656519,
+        "reference_cell_fixed": false
+      }
+    ]
+  },
+  "status": "P2762_REFERENCE_CELL_ACTION_DENSITY_NORMALIZATION_OBSTRUCTION_NO_CLOSURE"
+}

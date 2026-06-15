@@ -524,3 +524,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.
 - The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.
 - Do not promote these coefficients to role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one missing provenance atom, preferably a canonical physical length/reference-cell and action-density normalization theorem for the strict moment map.
+
+## Current reference-cell action-density normalization obstruction guardrail (P2762/S1712, 2026-06-15)
+
+- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.
+- A finite positive-length scale-orbit witness shows that the numeric moment coefficients remain nonunique as physical dimensionful couplings: `lambda_sm_eff` is scale-invariant, but `kappa_gr_eff` and `epsilon_mix_eff` change with the reference length unless a canonical cell/action-density theorem is exported.
+- Do not promote arbitrary unit choices to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one remaining provenance atom, preferably a sign-convention theorem explicitly conditional on future canonical reference-cell/action-density closure, or preservation of the P2697-P2762 no-closure certificate.
+
+## Current moment-coupling sign-convention conditional obstruction guardrail (P2763/S1713, 2026-06-15)
+
+- P2763 audits the P2762-recommended sign-convention atom only as a conditional provenance test.
+- P1562 has negative moment-side rows `M2` and `M3` but positive `kappa_gr_eff` and `epsilon_mix_eff`; the finite four-branch sign family preserves the same magnitudes, and current artifacts do not export a theorem selecting the positive branch.
+- Do not promote the signs or coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem, or preservation of the P2697-P2763 no-closure certificate.
+
+## Current field-curvature normalization compatibility obstruction guardrail (P2764/S1714, 2026-06-15)
+
+- P2764 audits field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem.
+- A finite positive-normalization orbit shows that scalar and curvature rescalings change all three candidate coefficient rows (`lambda_sm_eff`, `kappa_gr_eff`, `epsilon_mix_eff`); no common normalization compatibility theorem is exported, and P2762/P2763 remain open.
+- Do not promote these conventions to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a nonproxy variational-insertion residual test explicitly conditional on future provenance theorems, or preservation of the P2697-P2764 no-closure certificate.
+
+## Current nonproxy variational-insertion residual obstruction guardrail (P2765/S1715, 2026-06-15)
+
+- P2765 audits the nonproxy variational-insertion residual atom left after P2764.
+- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.
+- Do not promote this to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a post-P2761-to-P2765 provenance-state reconciliation or a genuinely new theorem fixing one named provenance atom; otherwise preserve the P2697-P2765 no-closure certificate.
