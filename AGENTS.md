@@ -548,3 +548,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2765 audits the nonproxy variational-insertion residual atom left after P2764.
 - P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.
 - Do not promote this to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a post-P2761-to-P2765 provenance-state reconciliation or a genuinely new theorem fixing one named provenance atom; otherwise preserve the P2697-P2765 no-closure certificate.
+
+## Current post-moment provenance-state reconciliation guardrail (P2766/S1716, 2026-06-15)
+
+- P2766 reconciles the P2761-P2765 physical-coupling provenance sequence for `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff`.
+- The finite four-atom ledger keeps reference-cell/action-density, sign convention, field/curvature normalization, and 4D nonproxy variational residual insertion all open; the 16-profile closure lattice licenses physical-coupling provenance only in the all-atoms-closed profile, not in the current zero-closed-atom profile.
+- Do not promote moment-map coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  A next admissible move must introduce one genuinely new theorem/artifact closing exactly one named provenance atom, or pivot to a fresh broad state-map intake while preserving the P2697-P2766 no-closure certificate.
+
+## Current post-P2766 fresh broad state-map intake guardrail (P2767/S1717, 2026-06-15)
+
+- P2767 executes the fresh broad state-map intake requested after P2766 instead of replaying moment-coupling or `L_total` promotion.
+- The finite eight-lane matrix finds boundary evidence for moment-coupling provenance, foundation-kernel-Lagrangian gaps, selector/orientation/`QW-2191`, entropy/phase observables, direct residuals, Lagrangian/EOM reverse closure, bridge-source/role-transfer, and lower-boundary/tau/pair recursion; zero lanes are admissible without a genuinely new typed object/theorem.
+- Do not promote physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move must first supply one concrete new typed object/theorem and then run only its bounded acceptance test; otherwise preserve the P2697-P2767 no-new-live-frontier certificate.
+
+## Current combined-normalization monomial-invariant no-go guardrail (P2768/S1718, 2026-06-15)
+
+- P2768 supplies one bounded new object in the moment-provenance lane: the combined positive length, scalar-field, and curvature normalization action on monomials in `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff`.
+- The 3x3 exponent-weight matrix has full rank and the finite integer exponent scan finds zero nontrivial monomial invariants, so monomial ratio-taking cannot rescue physical-coupling provenance while P2762/P2764 normalizations remain open.
+- Do not promote this no-go to canonical normalization, physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual canonical normalization theorem/source or a genuinely non-monomial invariant with explicit invariance proof and bounded acceptance test; otherwise preserve the P2697-P2768 no-closure certificate.
+
+## Current combined-normalization orbit-transitivity no-go guardrail (P2769/S1719, 2026-06-15)
+
+- P2769 attacks the non-monomial invariant escape route after P2768: the positive length/field/curvature normalization action on the three P1562 coefficients is log-linearly invertible and transitive on the positive coefficient octant.
+- Every invariant function of `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` alone is therefore constant on the open orbit; invariant-taking cannot rescue physical-coupling provenance while P2762/P2764 normalizations remain open.
+- Do not promote this no-go to canonical normalization, physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an external canonical normalization source/theorem and then rerun bounded acceptance; otherwise preserve the P2697-P2769 no-closure certificate.

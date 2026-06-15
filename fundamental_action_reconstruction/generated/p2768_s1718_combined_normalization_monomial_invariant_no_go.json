@@ -1,0 +1,311 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_ltotal_promotion": false,
+    "accepted_as_monomial_ratio_rescue": false,
+    "accepted_as_physical_coupling_provenance_theorem": false,
+    "blocker": "The combined length/field/curvature normalization action has full-rank weight matrix on the three P1562 coefficients.  Therefore no nontrivial monomial ratio of lambda_sm_eff, kappa_gr_eff, and epsilon_mix_eff is invariant under the combined open normalizations; this blocks a ratio-invariant rescue but does not export a canonical normalization theorem.",
+    "facts": {
+      "bruteforce_box_finds_no_nontrivial_invariant": true,
+      "canonical_normalization_theorem_exported": false,
+      "content_evidence_present": true,
+      "p2762_reference_cell_still_open": true,
+      "p2764_field_curvature_still_open": true,
+      "p2766_physical_coupling_provenance_still_open": true,
+      "p2767_requires_new_object_before_lane_reopen": true,
+      "physical_coupling_provenance_theorem_exported": false,
+      "tempting_ratios_fail_combined_invariance": true,
+      "weight_matrix_full_rank": true
+    },
+    "missing_criteria": [
+      "canonical_normalization_theorem_exported",
+      "physical_coupling_provenance_theorem_exported"
+    ]
+  },
+  "audited_object": "combined length/field/curvature normalization action on P1562 coefficient monomials",
+  "combined_normalization_monomial_invariant_witness": {
+    "base_coefficients": {
+      "epsilon_mix_eff": 18.13817242656519,
+      "kappa_gr_eff": 11.91403866517398,
+      "lambda_sm_eff": 0.33220238535858243
+    },
+    "brute_force_integer_box": {
+      "max_exponent": 4,
+      "min_exponent": -4,
+      "nontrivial_invariant_count": 0,
+      "nontrivial_invariant_exponents": [],
+      "tested_nonzero_exponent_vectors": 728
+    },
+    "coefficient_order": [
+      "lambda_sm_eff",
+      "kappa_gr_eff",
+      "epsilon_mix_eff"
+    ],
+    "determinant": 4,
+    "full_rank_over_Q": true,
+    "gauge_order": [
+      "ell_reference_length",
+      "Z_phi_scalar_field",
+      "Z_R_curvature"
+    ],
+    "rational_inverse_certificate_det_scaled": [
+      [
+        "1/4",
+        "-1/4",
+        "1/2"
+      ],
+      [
+        "0",
+        "0",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "0",
+        "1/2"
+      ]
+    ],
+    "sampled_combined_gauges": [
+      {
+        "Z_R": 0.5,
+        "Z_phi": 0.5,
+        "ell": 0.5
+      },
+      {
+        "Z_R": 1.0,
+        "Z_phi": 1.0,
+        "ell": 1.0
+      },
+      {
+        "Z_R": 2.0,
+        "Z_phi": 2.0,
+        "ell": 2.0
+      },
+      {
+        "Z_R": 2.0,
+        "Z_phi": 0.5,
+        "ell": 4.0
+      }
+    ],
+    "tempting_ratio_rows": [
+      {
+        "candidate": "epsilon_squared_over_lambda_kappa",
+        "distinct_sample_values": 3,
+        "exponents_lambda_kappa_epsilon": [
+          -1,
+          -1,
+          2
+        ],
+        "gauge_weight": [
+          0,
+          0,
+          -1
+        ],
+        "invariant_under_combined_action": false,
+        "sample_values": [
+          166.24756620245404,
+          83.12378310122702,
+          41.56189155061351,
+          41.56189155061351
+        ]
+      },
+      {
+        "candidate": "epsilon_squared_over_lambda_kappa_squared",
+        "distinct_sample_values": 4,
+        "exponents_lambda_kappa_epsilon": [
+          -1,
+          -2,
+          2
+        ],
+        "gauge_weight": [
+          2,
+          0,
+          0
+        ],
+        "invariant_under_combined_action": false,
+        "sample_values": [
+          1.7442402496184355,
+          6.976960998473742,
+          27.907843993894968,
+          111.63137597557987
+        ]
+      },
+      {
+        "candidate": "kappa_over_epsilon_squared",
+        "distinct_sample_values": 4,
+        "exponents_lambda_kappa_epsilon": [
+          0,
+          1,
+          -2
+        ],
+        "gauge_weight": [
+          0,
+          4,
+          1
+        ],
+        "invariant_under_combined_action": false,
+        "sample_values": [
+          0.0011316756585794847,
+          0.03621362107454351,
+          1.1588358743853924,
+          0.004526702634317939
+        ]
+      },
+      {
+        "candidate": "p1562_R1_R2_R3_moment_ratios_not_coupling_normalization",
+        "distinct_sample_values": 1,
+        "exponents_lambda_kappa_epsilon": [
+          0,
+          0,
+          0
+        ],
+        "gauge_weight": [
+          0,
+          0,
+          0
+        ],
+        "invariant_under_combined_action": true,
+        "sample_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "weight_matrix": [
+      [
+        0,
+        -2,
+        -1
+      ],
+      [
+        -4,
+        0,
+        -2
+      ],
+      [
+        0,
+        -1,
+        -1
+      ]
+    ]
+  },
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "hit_counts": {
+      "closure_boundary": 22100,
+      "monomial_ratio_boundary": 31720,
+      "p2762_length_action": 194,
+      "p2764_field_curvature_action": 204,
+      "p2767_new_object_gate": 51
+    },
+    "row_count": 5,
+    "rows": [
+      {
+        "hit_count": 51,
+        "lane": "p2767_new_object_gate",
+        "pattern": "P2767|one concrete new typed object/theorem|fresh broad state-map intake",
+        "sample_hits": [
+          "AGENTS.md:556:- Do not promote moment-map coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  A next admissible move must introduce one genuinely new theorem/artifact closing exactly one named provenance atom, or pivot to a fresh broad state-map intake while preserving the P2697-P2766 no-closure certificate.",
+          "AGENTS.md:558:## Current post-P2766 fresh broad state-map intake guardrail (P2767/S1717, 2026-06-15)",
+          "AGENTS.md:560:- P2767 executes the fresh broad state-map intake requested after P2766 instead of replaying moment-coupling or `L_total` promotion.",
+          "AGENTS.md:562:- Do not promote physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move must first supply one concrete new typed object/theorem and then run only its bounded acceptance test; otherwise preserve the P2697-P2767 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2775:## P2767/S1717 post-P2766 fresh broad state-map intake",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2777:`P2767/S1717` executes the fresh broad state-map intake requested after P2766.  It audits eight lanes: moment-coupling provenance, foundation-kernel-Lagrangian gaps, selector/orientation/`QW-2191`, entropy and phase observables, direct-route residuals, Lagrangian/EOM reverse closure, bridge-source/role-transfer, and lower-boundary/tau/pair recursion.  Every lane has current boundary evidence and zero lanes are admissible without a genuinely new typed object or theorem.  This is a no-new-live-frontier certificate, not a proof target selection; no physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/p2767_s1717_post_p2766_fresh_state_map_intake.py:2:\"\"\"P2767/S1717: post-P2766 fresh broad state-map intake.",
+          "fundamental_action_reconstruction/p2767_s1717_post_p2766_fresh_state_map_intake.py:6:named atom or a fresh broad state-map intake.  This script executes that intake"
+        ]
+      },
+      {
+        "hit_count": 194,
+        "lane": "p2762_length_action",
+        "pattern": "P2762|positive-length scale-orbit|reference length|kappa_changes_with_ell|epsilon_changes_with_ell",
+        "sample_hits": [
+          "AGENTS.md:528:## Current reference-cell action-density normalization obstruction guardrail (P2762/S1712, 2026-06-15)",
+          "AGENTS.md:530:- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.",
+          "AGENTS.md:531:- A finite positive-length scale-orbit witness shows that the numeric moment coefficients remain nonunique as physical dimensionful couplings: `lambda_sm_eff` is scale-invariant, but `kappa_gr_eff` and `epsilon_mix_eff` change with the reference length unless a canonical cell/action-density theorem is exported.",
+          "AGENTS.md:532:- Do not promote arbitrary unit choices to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one remaining provenance atom, preferably a sign-convention theorem explicitly conditional on future canonical reference-cell/action-density closure, or preservation of the P2697-P2762 no-closure certificate.",
+          "AGENTS.md:536:- P2763 audits the P2762-recommended sign-convention atom only as a conditional provenance test.",
+          "AGENTS.md:543:- A finite positive-normalization orbit shows that scalar and curvature rescalings change all three candidate coefficient rows (`lambda_sm_eff`, `kappa_gr_eff`, `epsilon_mix_eff`); no common normalization compatibility theorem is exported, and P2762/P2763 remain open.",
+          "AGENTS.md:549:- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.",
+          "AGENTS.md:567:- The 3x3 exponent-weight matrix has full rank and the finite integer exponent scan finds zero nontrivial monomial invariants, so monomial ratio-taking cannot rescue physical-coupling provenance while P2762/P2764 normalizations remain open."
+        ]
+      },
+      {
+        "hit_count": 204,
+        "lane": "p2764_field_curvature_action",
+        "pattern": "P2764|positive-normalization orbit|Z_phi|Z_R|normalization_sensitive",
+        "sample_hits": [
+          "AGENTS.md:540:## Current field-curvature normalization compatibility obstruction guardrail (P2764/S1714, 2026-06-15)",
+          "AGENTS.md:542:- P2764 audits field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem.",
+          "AGENTS.md:543:- A finite positive-normalization orbit shows that scalar and curvature rescalings change all three candidate coefficient rows (`lambda_sm_eff`, `kappa_gr_eff`, `epsilon_mix_eff`); no common normalization compatibility theorem is exported, and P2762/P2763 remain open.",
+          "AGENTS.md:544:- Do not promote these conventions to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a nonproxy variational-insertion residual test explicitly conditional on future provenance theorems, or preservation of the P2697-P2764 no-closure certificate.",
+          "AGENTS.md:548:- P2765 audits the nonproxy variational-insertion residual atom left after P2764.",
+          "AGENTS.md:549:- P1563 formal/skeleton EOM strings and P1866 proxy 1D EOM exports do not supply the required 4D nonproxy scalar, metric, and mixed residual rows; P2762 reference-cell/action-density, P2763 sign, and P2764 field/curvature normalization prerequisites remain open.",
+          "AGENTS.md:567:- The 3x3 exponent-weight matrix has full rank and the finite integer exponent scan finds zero nontrivial monomial invariants, so monomial ratio-taking cannot rescue physical-coupling provenance while P2762/P2764 normalizations remain open.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2763:## P2764/S1714 field-curvature normalization compatibility obstruction"
+        ]
+      },
+      {
+        "hit_count": 31720,
+        "lane": "monomial_ratio_boundary",
+        "pattern": "monomial|ratio|dimensionless_ratios|normalization invariant|physical-coupling provenance",
+        "sample_hits": [
+          "AGENTS.md:46:- Respect `QW-2381/QW-2382/QW-2383`: repeated cyclic gate generation under the same blocker-cut is not an admitted primary strategy.",
+          "AGENTS.md:113:- P2692 confirms positive-beta orbit/gauge representability and target-dependent tail-ratio inversion, but finds no target-independent positive `beta/Z_beta` source theorem.",
+          "AGENTS.md:274:- Do not replay generic pseudoscalar enumeration or promote the chiral-bispectrum marker alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one explicit non-premise phase-origin/source-localizer theorem or one exported torsor-coupling theorem for this exact formula; otherwise preserve the P2697-P2719 no-new-live-frontier certificate.",
+          "AGENTS.md:393:- The combined rational linear system has rank `16` and nullity `0`, and the `{±1}` cross-check finds zero simultaneous sections.  Therefore the current sign-torsor quotient exports no nonzero section fixing `lambda/P2721`, no `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.",
+          "AGENTS.md:522:## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)",
+          "AGENTS.md:532:- Do not promote arbitrary unit choices to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one remaining provenance atom, preferably a sign-convention theorem explicitly conditional on future canonical reference-cell/action-density closure, or preservation of the P2697-P2762 no-closure certificate.",
+          "AGENTS.md:538:- Do not promote the signs or coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem, or preservation of the P2697-P2763 no-closure certificate.",
+          "AGENTS.md:544:- Do not promote these conventions to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is a nonproxy variational-insertion residual test explicitly conditional on future provenance theorems, or preservation of the P2697-P2764 no-closure certificate."
+        ]
+      },
+      {
+        "hit_count": 22100,
+        "lane": "closure_boundary",
+        "pattern": "role-bearing L_total|ToE closure|bridge closure|role transfer|selector closure",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_reference_cell_theorem_exported": false,
+      "field_curvature_normalization_theorem_exported": false,
+      "monomial_ratio_rescue_theorem_exported": false,
+      "physical_coupling_provenance_theorem_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not try to rescue physical-coupling provenance by taking a monomial ratio of lambda_sm_eff, kappa_gr_eff, and epsilon_mix_eff.  P2768 proves the combined open normalization action has no nontrivial monomial invariant.  The next honest step must either supply an actual canonical normalization theorem/source, or introduce a genuinely non-monomial invariant with an explicit invariance proof and then run the same bounded acceptance test; otherwise preserve the P2697-P2768 no-closure certificate.",
+    "reason": "The combined length/field/curvature normalization action has full-rank weight matrix on the three P1562 coefficients.  Therefore no nontrivial monomial ratio of lambda_sm_eff, kappa_gr_eff, and epsilon_mix_eff is invariant under the combined open normalizations; this blocks a ratio-invariant rescue but does not export a canonical normalization theorem."
+  },
+  "input_hashes": {
+    "P1562": "bcc13655eb98ac57450c0eae74b8a153010494d945159c1b6b484ad56b98e1b9",
+    "P2762": "2973e0303ffd7b93d698b5000f7de371871581d9dd747e2a8f399592aeed3c80",
+    "P2764": "e566ddbab0a4f3048d4e9bf02411998c846785b9d3b7f88f1235c2ba0ebf1e03",
+    "P2766": "53043a2b9e88afe71e6dad9d03e0fcfa5700b8b8042e22d254f3c6494b89e85a",
+    "P2767": "180bb32a616dbae4f31c4906d1d5039db825b9d2713debc2a359706442ec7f78"
+  },
+  "input_statuses": {
+    "P1562": "PASS_STRICT_KERNEL_COEFFICIENTS_DERIVED",
+    "P2762": "P2762_REFERENCE_CELL_ACTION_DENSITY_NORMALIZATION_OBSTRUCTION_NO_CLOSURE",
+    "P2764": "P2764_FIELD_CURVATURE_NORMALIZATION_COMPATIBILITY_OBSTRUCTION_NO_CLOSURE",
+    "P2766": "P2766_POST_MOMENT_PROVENANCE_STATE_RECONCILIATION_NO_CLOSURE",
+    "P2767": "P2767_POST_P2766_FRESH_STATE_MAP_INTAKE_NO_NEW_LIVE_FRONTIER"
+  },
+  "status": "P2768_COMBINED_NORMALIZATION_MONOMIAL_INVARIANT_NO_GO_NO_CLOSURE"
+}

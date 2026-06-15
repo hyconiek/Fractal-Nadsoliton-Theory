@@ -2767,3 +2767,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2765/S1715 nonproxy variational-insertion residual obstruction
 
 `P2765/S1715` audits the variational-insertion atom left after P2764.  P1563 exports formal/skeleton EOM strings and P1866 exports only proxy 1D EOM keys (`eom_phi_proxy_1d`, `eom_A_proxy_1d`) while explicitly listing missing 4D covariant Euler-Lagrange/Einstein witness tables.  The required nonproxy scalar, metric, and mixed residual rows for `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` are absent, and P2762-P2764 provenance prerequisites remain open.  No nonproxy variational-insertion theorem, physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2766/S1716 post-moment provenance-state reconciliation
+
+`P2766/S1716` reconciles the P2761-P2765 moment-map provenance sequence instead of adding an implicit `L_total` promotion.  The finite atom ledger has four named open atoms: reference-cell/action-density normalization, sign convention, field/curvature normalization, and 4D nonproxy variational residual insertion.  A 16-profile Boolean closure lattice confirms that physical-coupling provenance would be licensed only by the all-atoms-closed profile; the current profile closes zero atoms.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2767/S1717 post-P2766 fresh broad state-map intake
+
+`P2767/S1717` executes the fresh broad state-map intake requested after P2766.  It audits eight lanes: moment-coupling provenance, foundation-kernel-Lagrangian gaps, selector/orientation/`QW-2191`, entropy and phase observables, direct-route residuals, Lagrangian/EOM reverse closure, bridge-source/role-transfer, and lower-boundary/tau/pair recursion.  Every lane has current boundary evidence and zero lanes are admissible without a genuinely new typed object or theorem.  This is a no-new-live-frontier certificate, not a proof target selection; no physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2768/S1718 combined-normalization monomial-invariant no-go
+
+`P2768/S1718` supplies a bounded new object in the P2766 moment-provenance lane: the combined positive length, scalar-field, and curvature normalization action on monomials in `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff`.  The 3x3 exponent-weight matrix has nonzero determinant, and a finite integer exponent scan confirms zero nontrivial monomial invariants in the tested box.  Thus ratio-taking cannot rescue physical-coupling provenance under the open P2762/P2764 normalizations.  This is a monomial-invariant no-go theorem, not a canonical normalization theorem; no physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.
+
+## P2769/S1719 combined-normalization orbit-transitivity no-go
+
+`P2769/S1719` attacks the non-monomial invariant escape route left after P2768.  The log-linear action of positive reference length, scalar-field normalization, and curvature normalization on the three P1562 coefficients has an invertible coefficient/gauge matrix, so it is transitive on the positive coefficient octant.  Sampled positive target triples are reached by unique positive gauges with negligible reconstruction error.  Therefore every invariant function of `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` alone is constant on the open orbit.  This blocks non-monomial invariant rescue, but it is not a canonical normalization theorem and exports no physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
