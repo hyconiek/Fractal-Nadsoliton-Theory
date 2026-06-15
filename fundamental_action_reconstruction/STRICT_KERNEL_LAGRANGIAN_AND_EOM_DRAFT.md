@@ -2052,3 +2052,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2744/S1694 spectral-asymmetry Ltotal guard
 
 `P2744/S1694` adds no variational source term: the finite `Z12` cycle spectral-asymmetry audit has eta sign-sum `0` in every exported integer twist sector and lacks a strict twist/source theorem plus `P2721` coupling.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2745/S1695 Gauss-phase Ltotal guard
+
+`P2745/S1695` adds no variational source term.  Although the quadratic Gauss-phase audit finds nonzero affine-orbit signed coefficients, current artifacts do not export a strict law selecting one coefficient orbit/polarity or coupling it to `P2721`.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2746/S1696 Gauss selector Ltotal guard
+
+`P2746/S1696` adds no variational source term: the nonzero P2745 Gauss coefficients remain paired by polarity-blind orbit signatures and no strict sign law or `P2721` coupling theorem is exported.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2747/S1697 cubic phase Ltotal guard
+
+`P2747/S1697` adds no variational source term.  Although cubic `Z12` phase sums produce nonzero affine-orbit signed coefficients, the family is polarity-balanced and current artifacts do not export a strict coefficient-orbit/polarity selector law or `P2721` coupling theorem.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2748/S1698 absence selector Ltotal guard
+
+`P2748/S1698` adds no variational source term.  Information about selector absence, treated as an Aut-invariant datum inside the nadsoliton ontology, has no equivariant map to the orientation torsor; a synchronizing map requires an additional inversion-odd signed source and `P2721` coupling theorem.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2749/S1699 minimal odd source Ltotal guard
+
+`P2749/S1699` adds no variational source term.  A minimal inversion-odd source has the right equivariant representation type, but the two possible orientation-torsor couplings are opposite `P2721` polarities and no strict sign value/coupling-polarity theorem is exported.  Therefore this does not promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.

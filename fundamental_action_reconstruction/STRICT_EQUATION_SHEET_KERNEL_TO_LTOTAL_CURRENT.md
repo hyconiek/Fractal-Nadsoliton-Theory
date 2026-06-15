@@ -2683,3 +2683,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2744/S1694 Z12 cycle spectral-asymmetry no-go
 
 `P2744/S1694` pivots outside finite `Z12` sign-character/frame observables to the Hermitian spectral asymmetry of the oriented `Z12` cycle derivative across all `12` exported integer character twists.  In every sector the spectrum pairs by `k -> -2*twist-k mod 12`, giving `5` positive, `5` negative, and `2` zero eigenvalues; the eta sign-sum is `0` in all sectors.  No nonzero spectral signed value, strict twist/source theorem, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2745/S1695 Z12 quadratic Gauss-phase signed observable audit
+
+`P2745/S1695` pivots outside finite `Z12` sign-character/frame/cycle-spectrum observables to the imaginary phase sign of quadratic Gauss sums `G(a,b)=sum_n exp(2*pi*i*(a*n^2+b*n)/12)`.  The finite audit finds `144` coefficient pairs with `20` positive, `20` negative, and `104` zero imaginary signs; affine quotienting gives `40` coefficient orbits and `8` nonzero signed-sum coefficients `[-2,-2,-1,-1,1,1,2,2]`.  This is a real orbit-safe signed observable family, but no strict coefficient-orbit/sign source, `P2721` polarity-coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2746/S1696 Gauss-phase orbit selector/source-law no-go
+
+`P2746/S1696` audits the exact missing premise left by `P2745/S1695`: a strict law selecting one nonzero quadratic-Gauss coefficient orbit and polarity.  On the `8` nonzero affine coefficient orbits, every tested polarity-blind internal signature class contains both signs, pairing coefficients as `[-2,-2,2,2]`, `[-1,1]`, and `[-1,1]`.  Thus current Gauss-orbit data do not export a unique orbit/polarity selector, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure.
+
+## P2747/S1697 Z12 cubic phase orbit signed observable audit
+
+`P2747/S1697` pivots away from the P2746 Gauss-selector gap to cubic `Z12` phase sums `C(a,b,c)=sum_n exp(2*pi*i*(a*n^3+b*n^2+c*n)/12)` under affine source reparametrisation.  The finite audit finds `1728` coefficient triples with `396` positive, `396` negative, and `936` zero imaginary signs; affine quotienting gives `180` coefficient orbits and `44` nonzero signed-sum coefficients.  The nonzero coefficient family remains polarity-balanced, and no strict cubic coefficient-orbit source, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2748/S1698 absence-of-selector self-synchronization no-go
+
+`P2748/S1698` audits the idea that the nadsoliton, as primordial pure Information, could contain information about the absence of a selector and thereby synchronize with a selector.  Formalized as an Aut-invariant absence/no-selector datum, the finite map count gives `0` equivariant maps from a singleton absence state and `0` from a trivial absence bit to the orientation torsor, because units `7` and `11` reverse the torsor.  Equivariant maps exist only after adding a new inversion-odd signed source, which is the missing object rather than absence alone.  No `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2749/S1699 minimal inversion-odd source coupling-polarity audit
+
+`P2749/S1699` tests the exact object requested after `P2748/S1698`: a minimal inversion-odd signed source and its coupling to the orientation torsor.  The finite Aut(Z12)-equivariance count gives exactly `2` maps from the odd source sign to the orientation torsor; they are opposite coupling polarities, and composing with `P2721` polarity exchanges them.  Thus the representation type is admissible, but current artifacts still export no concrete strict source sign value, no theorem selecting one coupling polarity, no `lambda/P2721` fixing, no `QW-2191` discharge, no selector closure, role transfer, `L_total`, or ToE closure.

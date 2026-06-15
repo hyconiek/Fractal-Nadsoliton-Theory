@@ -1,0 +1,175 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_selector_source": false,
+    "blocker": "The minimal inversion-odd source has the right representation type, but equivariance leaves two opposite coupling polarities and current artifacts export neither a signed source value nor a P2721 polarity-selection theorem.",
+    "facts": {
+      "content_grep_detects_p2748_boundary": true,
+      "coupling_polarity_unique": false,
+      "minimal_odd_source_representation_admitted": true,
+      "p2721_polarity_coupling_exported": false,
+      "strict_source_sign_value_exported": false
+    },
+    "missing_criteria": [
+      "coupling_polarity_unique",
+      "strict_source_sign_value_exported",
+      "p2721_polarity_coupling_exported"
+    ]
+  },
+  "audited_candidate_class": "minimal inversion-odd signed source and P2721 coupling polarity after P2748",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "content_pattern_count": 4,
+    "hit_counts": {
+      "coupling_polarity_boundary": 130,
+      "odd_source_prior_boundary": 565,
+      "post_p2748_missing_source": 67,
+      "selector_closure_boundary": 43941
+    },
+    "rows": [
+      {
+        "content_lane": "post_p2748_missing_source",
+        "hit_count": 67,
+        "pattern": "P2748|inversion-odd signed source|absence-of-selector|self-synchronization",
+        "sample_hits": [
+          "AGENTS.md:444:## Current absence-of-selector self-synchronization no-go guardrail (P2748/S1698, 2026-06-14)",
+          "AGENTS.md:446:- P2748 audits the idea that the nadsoliton, as primordial pure Information, could contain information about the absence of a selector and thereby synchronize with a selector, without introducing any lower informational layer.",
+          "AGENTS.md:448:- Do not promote absence-of-selector information to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must construct a concrete inversion-odd signed source with explicit `P2721` coupling, pivot to a different typed object, or preserve the P2697-P2748 no-new-live-frontier certificate.",
+          "AGENTS.md:452:- P2749 tests the exact object requested after P2748: a minimal inversion-odd signed source and its coupling to the orientation torsor.",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:4:P2748 showed that absence/no-selector information cannot synchronize to the",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:5:orientation torsor unless a new inversion-odd signed source is added.  This file",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:22:P2748 = GEN / \"p2748_s1698_absence_of_selector_self_synchronization_no_go.json\"",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:32:    \"post_p2748_missing_source\": r\"P2748|inversion-odd signed source|absence-of-selector|self-synchronization\","
+        ]
+      },
+      {
+        "content_lane": "coupling_polarity_boundary",
+        "hit_count": 130,
+        "pattern": "P2721 coupling|coupling polarity|polarity theorem|polarity selection",
+        "sample_hits": [
+          "AGENTS.md:290:- P2722 tests the moving-clock/continuous-phase analogy for the P2721 coupling-polarity problem.",
+          "AGENTS.md:297:- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:309:- The computation checks 264 flow rows (2 orientations × 11 nonzero velocities × 12 sources) and every signed finite difference is zero; therefore this lift supplies no nonzero signed value and cannot select a P2721 coupling polarity.",
+          "AGENTS.md:346:- Do not replay local nearest-neighbour tau variational laws as `QW-2191` discharge, selector closure, pair12 strict-core upgrade, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must export a concrete strict time-reversal-odd source term with a nonpremise coefficient sign and a P2721 coupling theorem, or preserve the P2697-P2731 no-new-live-frontier certificate.",
+          "AGENTS.md:454:- Do not promote an abstract inversion-odd source representation to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a concrete strict source sign value and a theorem selecting one coupling polarity.  Otherwise pivot to a different typed object or preserve the P2697-P2749 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:7:does equivariance alone select the P2721 coupling polarity?",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:33:    \"coupling_polarity_boundary\": r\"P2721 coupling|coupling polarity|polarity theorem|polarity selection\",",
+          "fundamental_action_reconstruction/p2749_s1699_minimal_inversion_odd_source_coupling_polarity_audit.py:118:        \"finite_theorem\": \"A minimal inversion-odd signed source is the correct representation type requested by P2748: there are exactly 2 Aut(Z12)-equivariant maps from the odd source sign to the orientation torsor.  But those two maps are opposite coupling polarities, and composing with P2721 polarity exchanges them.  Therefore supplying an abstract odd sign is not enough: a further strict law must choose the source sign and the coupling polarity.\","
+        ]
+      },
+      {
+        "content_lane": "selector_closure_boundary",
+        "hit_count": 43941,
+        "pattern": "lambda/P2721|QW-2191|selector closure|L_total|ToE closure",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      },
+      {
+        "content_lane": "odd_source_prior_boundary",
+        "hit_count": 565,
+        "pattern": "inversion-odd|orientation torsor|Aut\\(Z12\\)|units `?7`? and `?11`?",
+        "sample_hits": [
+          "AGENTS.md:146:- P2698 confirms that earlier direction/orientation/sign-sensitive exports are real and must not be ignored, but they are premise-based/readiness/convention scoped: H36/H37/H38 and P739/P740 do not discharge `QW-2191`, do not export pair12 strict-core upgrade, and do not provide Aut(Z12)-invariant canonicity.",
+          "AGENTS.md:152:- P2699 tests the honest one-object follow-up to P2698: an internal nadsoliton-as-fractal-information selector source constrained by Aut(Z12)-invariance.  The finite calculation finds no unique directed generator and no Aut-invariant distinction of `+1` from `-1`; existing directed support remains premise-based.",
+          "AGENTS.md:158:- P2700 exhausts the finite Aut(Z12)-invariant selector-functional continuation of P2699: all invariant Boolean predicates and orbit-constant score functionals fail to select a unique directed unit or distinguish `+1` from `-1`.",
+          "AGENTS.md:183:- This is a positive declared-scope provenance result, not a blanket erasure of P2699-P2702 bounded no-go/provider-inventory boundaries for Aut(Z12)/replay lanes.",
+          "AGENTS.md:207:- Aut(Z12) inversion sends `omega` to `-omega`, leaving no nonzero Aut-invariant orientation; therefore the candidate does not export a non-premise strict selector or discharge `QW-2191`.",
+          "AGENTS.md:216:## Current Aut(Z12) anti-inversion character source guardrail (P2710/S1660, 2026-06-14)",
+          "AGENTS.md:218:- P2710 computes the full finite character table of `Aut(Z12)=U(12)` and finds exactly two inversion-odd characters.",
+          "AGENTS.md:220:- Do not promote inversion-odd character existence to selector closure, pair12 strict-core, role transfer, `L_total`, bridge closure, or ToE without a new strict source law selecting and signing the character."
+        ]
+      }
+    ]
+  },
+  "coupling_audit": {
+    "all_set_maps_count": 4,
+    "aut_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "equivariant_map_count": 2,
+    "equivariant_maps": [
+      {
+        "-1": -1,
+        "1": 1
+      },
+      {
+        "-1": 1,
+        "1": -1
+      }
+    ],
+    "finite_theorem": "A minimal inversion-odd signed source is the correct representation type requested by P2748: there are exactly 2 Aut(Z12)-equivariant maps from the odd source sign to the orientation torsor.  But those two maps are opposite coupling polarities, and composing with P2721 polarity exchanges them.  Therefore supplying an abstract odd sign is not enough: a further strict law must choose the source sign and the coupling polarity.",
+    "orientation_reversing_units": [
+      7,
+      11
+    ],
+    "p2721_polarity_rows": [
+      {
+        "base_map_index": 0,
+        "coupled_map": {
+          "-1": 1,
+          "1": -1
+        },
+        "p2721_polarity": -1
+      },
+      {
+        "base_map_index": 0,
+        "coupled_map": {
+          "-1": -1,
+          "1": 1
+        },
+        "p2721_polarity": 1
+      },
+      {
+        "base_map_index": 1,
+        "coupled_map": {
+          "-1": -1,
+          "1": 1
+        },
+        "p2721_polarity": -1
+      },
+      {
+        "base_map_index": 1,
+        "coupled_map": {
+          "-1": 1,
+          "1": -1
+        },
+        "p2721_polarity": 1
+      }
+    ],
+    "polarity_pairing_witness": "Multiplying the coupling by P2721 polarity -1 exchanges the two equivariant maps; equivariance alone therefore leaves a twofold coupling-polarity ambiguity.",
+    "typed_candidate": "minimal inversion-odd signed source with equivariant map to the orientation torsor and a P2721 polarity choice",
+    "unique_coupled_map_count_after_p2721_polarity": 2
+  },
+  "decision": {
+    "negative_export_flags": {
+      "coupling_polarity_selected_by_equivariance": false,
+      "lambda_fixed": false,
+      "ltotal_promoted": false,
+      "minimal_odd_source_promoted_to_selector": false,
+      "p2721_polarity_coupling_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not promote an abstract minimal inversion-odd source to selector closure.  P2749 shows the representation type is admissible but leaves exactly two opposite equivariant couplings, exchanged by P2721 polarity.  The next proof-grade move must provide a concrete strict source sign value and a theorem selecting one coupling polarity; otherwise pivot to a different typed object or preserve the P2697-P2749 no-new-live-frontier certificate.",
+    "reason": "The minimal inversion-odd source has the right representation type, but equivariance leaves two opposite coupling polarities and current artifacts export neither a signed source value nor a P2721 polarity-selection theorem."
+  },
+  "input_hashes": {
+    "P2748_ABSENCE_SELECTOR_NO_GO": "5c92468766609c7602b9ee462b88ef774b570a78ccd39c22bac0b17936f6e72d"
+  },
+  "input_statuses": {
+    "P2748_ABSENCE_SELECTOR_NO_GO": "P2748_ABSENCE_OF_SELECTOR_SELF_SYNCHRONIZATION_NO_GO"
+  },
+  "status": "P2749_MINIMAL_ODD_SOURCE_COUPLING_POLARITY_GAP"
+}
