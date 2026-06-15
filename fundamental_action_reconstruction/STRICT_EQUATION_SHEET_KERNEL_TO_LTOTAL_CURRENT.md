@@ -2703,3 +2703,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2749/S1699 minimal inversion-odd source coupling-polarity audit
 
 `P2749/S1699` tests the exact object requested after `P2748/S1698`: a minimal inversion-odd signed source and its coupling to the orientation torsor.  The finite Aut(Z12)-equivariance count gives exactly `2` maps from the odd source sign to the orientation torsor; they are opposite coupling polarities, and composing with `P2721` polarity exchanges them.  Thus the representation type is admissible, but current artifacts still export no concrete strict source sign value, no theorem selecting one coupling polarity, no `lambda/P2721` fixing, no `QW-2191` discharge, no selector closure, role transfer, `L_total`, or ToE closure.
+
+## P2750/S1700 concrete odd-source sign-value inventory no-go
+
+`P2750/S1700` audits the exact missing premise left by `P2749/S1699` across the current generated-artifact frontier: a concrete strict inversion-odd source sign value plus a theorem selecting one `P2721` coupling polarity.  The finite inventory loads current signed/chiral/Gauss/cubic/minimal-odd candidates and finds `0` accepted artifacts satisfying the full package.  Existing artifacts contain real signed observables or admissible odd representations, but no concrete strict sign value with a unique coupling-polarity theorem is exported.  Therefore no `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure follows.
+
+## P2751/S1701 Z12 quartic phase orbit signed observable audit
+
+`P2751/S1701` pivots beyond the P2750 current-artifact inventory to quartic `Z12` phase sums `Q(a,b,c,d)=sum_n exp(2*pi*i*(a*n^4+b*n^3+c*n^2+d*n)/12)` under affine source reparametrisation.  The finite audit computes all `12^4` coefficient quadruples and finds nonzero orbit-safe signed coefficients after affine quotienting, but the nonzero coefficient family remains polarity-paired.  No strict quartic coefficient-orbit source, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2752/S1702 quartic phase negation-pairing selector no-go
+
+`P2752/S1702` audits the exact missing premise left by `P2751/S1701`: whether the quartic coefficient-orbit family itself can select one orbit polarity.  Coefficient negation `q -> -q` sends each quartic phase sum to its complex conjugate and flips the imaginary sign.  The finite affine-orbit audit verifies zero sign-flip failures and zero pairing failures: every nonzero quartic orbit is paired with a distinct equal-size orbit of opposite signed-sum coefficient.  Thus no strict quartic orbit/polarity selector, `P2721` coupling theorem, `lambda/P2721` fixing, `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure is exported.
+
+## P2753/S1703 polynomial phase negation meta-obstruction
+
+`P2753/S1703` cuts the post-P2752 loop of simply raising polynomial degree.  For any coefficient vector `q`, the imaginary-sign polynomial phase sum satisfies `S(-q)=conj(S(q))`, so coefficient negation flips the imaginary sign.  The finite audit checks all coefficient vectors for degrees `1` through `5` over `Z12` with zero sign-flip failures and balanced positive/negative counts in every degree.  Thus the polynomial phase-sum imaginary-sign lane exports no strict negation-breaking source law, no `P2721` coupling theorem, no `lambda/P2721` fixing, no `QW-2191` discharge, selector closure, role transfer, `L_total`, or ToE closure.

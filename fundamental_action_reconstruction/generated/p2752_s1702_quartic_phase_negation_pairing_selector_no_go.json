@@ -1,0 +1,968 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_quartic_selector_source_law": false,
+    "blocker": "The quartic nonzero orbit coefficients are exactly paired by coefficient negation; current artifacts export no strict law breaking this pairing and no P2721 coupling theorem.",
+    "facts": {
+      "all_nonzero_orbits_paired_by_negation": true,
+      "content_grep_detects_p2751_missing_premise": true,
+      "p2721_coupling_theorem_exported": false,
+      "pointwise_negation_sign_flip_verified": true,
+      "quartic_internal_polarity_selector_exported": false,
+      "quartic_nonzero_orbits_exist": true
+    },
+    "missing_criteria": [
+      "quartic_internal_polarity_selector_exported",
+      "p2721_coupling_theorem_exported"
+    ]
+  },
+  "audited_candidate_class": "P2751 missing-premise audit: quartic coefficient-orbit/polarity selector law via negation pairing",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "content_pattern_count": 4,
+    "hit_counts": {
+      "closure_forbidden": 45271,
+      "negation_pairing_boundary": 4855,
+      "p2721_boundary": 635,
+      "post_p2751_missing_premise": 69
+    },
+    "rows": [
+      {
+        "content_lane": "post_p2751_missing_premise",
+        "hit_count": 69,
+        "pattern": "P2751|quartic coefficient orbit|quartic orbit/polarity|P2697-P2751",
+        "sample_hits": [
+          "AGENTS.md:462:## Current Z12 quartic phase orbit signed observable guardrail (P2751/S1701, 2026-06-15)",
+          "AGENTS.md:464:- P2751 pivots beyond the P2750 current-artifact inventory to quartic `Z12` phase sums `Q(a,b,c,d)=sum_n exp(2*pi*i*(a*n^4+b*n^3+c*n^2+d*n)/12)` under affine source reparametrisation.",
+          "AGENTS.md:465:- The finite audit computes all `12^4` coefficient quadruples and finds nonzero orbit-safe signed coefficients after affine quotienting, but the nonzero coefficient family remains polarity-paired and no strict quartic orbit/polarity source is exported.",
+          "AGENTS.md:466:- Do not promote quartic phase coefficient choice to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict law selecting one nonzero quartic coefficient orbit/polarity and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2751 no-new-live-frontier certificate.",
+          "AGENTS.md:470:- P2752 audits the exact missing premise left by P2751: whether the quartic coefficient-orbit family itself can select one orbit polarity.",
+          "AGENTS.md:472:- Do not promote a manually chosen positive quartic coefficient orbit to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict law breaking this negation pairing and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2752 no-new-live-frontier certificate.",
+          "fundamental_action_reconstruction/test_p2751_s1701_z12_quartic_phase_orbit_signed_observable_audit.py:14:class P2751QuarticPhaseOrbitSignedObservableAuditTest(unittest.TestCase):",
+          "fundamental_action_reconstruction/test_p2751_s1701_z12_quartic_phase_orbit_signed_observable_audit.py:24:        self.assertEqual(self.payload[\"status\"], \"P2751_QUARTIC_PHASE_POLARITY_SOURCE_GAP\")"
+        ]
+      },
+      {
+        "content_lane": "negation_pairing_boundary",
+        "hit_count": 4855,
+        "pattern": "polarity-paired|opposite|coefficient family|negation|conjugate",
+        "sample_hits": [
+          "AGENTS.md:285:- Exactly two equivariant couplings exist, but they are opposite polarity choices; current artifacts do not export a phase-origin/source localizer or a strict law selecting one polarity, so `lambda` remains unfixed and `QW-2191` remains open.",
+          "AGENTS.md:411:- The finite computation finds `34` affine ordered orbits and zero signed-sum coefficient on every orbit; the inversion unit `11` pairs each orbit into opposite chiralities, so the signed aggregate map from orbit weights has rank `0` and nullity `34`.",
+          "AGENTS.md:417:- The finite computation finds `48` affine frames and `2304` transitions; each unit appears `576` times, so both inversion-odd characters have `1152` positive and `1152` negative transitions and global signed sum `0`, with unit `11` pairing opposite signs.",
+          "AGENTS.md:453:- The finite Aut(Z12)-equivariance count gives exactly `2` maps from the odd source sign to the orientation torsor; they are opposite coupling polarities, exchanged by `P2721` polarity.",
+          "AGENTS.md:465:- The finite audit computes all `12^4` coefficient quadruples and finds nonzero orbit-safe signed coefficients after affine quotienting, but the nonzero coefficient family remains polarity-paired and no strict quartic orbit/polarity source is exported.",
+          "AGENTS.md:468:## Current quartic phase negation-pairing selector no-go guardrail (P2752/S1702, 2026-06-15)",
+          "AGENTS.md:471:- Coefficient negation `q -> -q` sends each quartic phase sum to its complex conjugate and flips the imaginary sign; the finite affine-orbit audit verifies every nonzero quartic orbit is paired with a distinct equal-size orbit of opposite signed-sum coefficient.",
+          "AGENTS.md:472:- Do not promote a manually chosen positive quartic coefficient orbit to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict law breaking this negation pairing and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2752 no-new-live-frontier certificate."
+        ]
+      },
+      {
+        "content_lane": "p2721_boundary",
+        "hit_count": 635,
+        "pattern": "P2721 coupling|P2721 polarity|lambda/P2721|coupling theorem",
+        "sample_hits": [
+          "AGENTS.md:267:- The marker is not yet a strict torsor-breaking source because it lacks a non-premise phase-origin/source localizer and an exported coupling theorem to the P2708/P2714 orientation torsor; therefore it does not fix `lambda` or discharge `QW-2191`.",
+          "AGENTS.md:272:- P2719 audits the exact P2718 marker `Im(B_{1,5})` for the missing non-premise phase-origin/source localizer and the missing coupling theorem to the P2708/P2714 orientation torsor.",
+          "AGENTS.md:273:- The finite signed marker remains real, but current artifacts do not export the required localizer or torsor-coupling theorem; therefore the marker still does not fix `lambda` or discharge `QW-2191`.",
+          "AGENTS.md:274:- Do not replay generic pseudoscalar enumeration or promote the chiral-bispectrum marker alone to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one explicit non-premise phase-origin/source-localizer theorem or one exported torsor-coupling theorem for this exact formula; otherwise preserve the P2697-P2719 no-new-live-frontier certificate.",
+          "AGENTS.md:280:- Do not repeat this translation-orbit localizer attempt or promote the chiral-bispectrum marker to selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply a genuinely new origin-sensitive strict invariant/source law or an independent exported torsor-coupling theorem; otherwise preserve the P2697-P2720 no-new-live-frontier certificate.",
+          "AGENTS.md:290:- P2722 tests the moving-clock/continuous-phase analogy for the P2721 coupling-polarity problem.",
+          "AGENTS.md:292:- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+          "AGENTS.md:297:- No candidate exports all required strict data: internal source law, nonzero signed value, nonconventional sign, coupling to the P2721 polarity pair, and exact polarity selection; therefore `lambda` remains unfixed and `QW-2191` remains open."
+        ]
+      },
+      {
+        "content_lane": "closure_forbidden",
+        "hit_count": 45271,
+        "pattern": "QW-2191|selector closure|role transfer|L_total|ToE closure",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "lambda_p2721_fixed": false,
+      "ltotal_promoted": false,
+      "negation_pairing_broken": false,
+      "p2721_coupling_theorem_exported": false,
+      "quartic_orbit_polarity_selector_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not continue P2751 by manually choosing a positive quartic coefficient orbit.  P2752 proves that coefficient negation pairs every nonzero quartic affine orbit with an equal-size opposite-coefficient orbit, so the quartic family itself has no internal polarity selector.  The next proof-grade move must either introduce a genuinely new strict law breaking this negation pairing with an explicit P2721 coupling theorem, or pivot to a different typed object; otherwise preserve the P2697-P2752 no-new-live-frontier certificate.",
+    "reason": "The quartic nonzero orbit coefficients are exactly paired by coefficient negation; current artifacts export no strict law breaking this pairing and no P2721 coupling theorem."
+  },
+  "input_hashes": {
+    "P2751_QUARTIC_PHASE_POLARITY_SOURCE_GAP": "9950ce5fa2e9af3004d8b1184411f390abf022397be9d9b4b01c69a4321629ed"
+  },
+  "input_statuses": {
+    "P2751_QUARTIC_PHASE_POLARITY_SOURCE_GAP": "P2751_QUARTIC_PHASE_POLARITY_SOURCE_GAP"
+  },
+  "negation_pairing_audit": {
+    "affine_orbit_count": 1680,
+    "all_nonzero_orbits_paired_by_negation": true,
+    "coefficient_quadruple_count": 20736,
+    "finite_theorem": "Coefficient negation sends every quartic phase sum to its complex conjugate, so the imaginary sign flips pointwise.  The finite affine-orbit audit verifies that this involution descends to the P2751 coefficient-orbit quotient and pairs every nonzero quartic orbit with a distinct orbit of equal size and opposite signed-sum coefficient.  Therefore the quartic coefficient-orbit family has no internal polarity selector unless a new strict law breaks this negation pairing and supplies a P2721 coupling theorem.",
+    "nonzero_orbit_count": 528,
+    "nonzero_unordered_negation_pair_count": 264,
+    "pair_rows_sample": [
+      {
+        "canonical_representative": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 2,
+        "orbit_id": 6,
+        "paired_canonical_representative": [
+          0,
+          0,
+          11,
+          0
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 38,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 1,
+        "orbit_id": 10,
+        "paired_canonical_representative": [
+          0,
+          0,
+          10,
+          2
+        ],
+        "paired_coefficient": -1,
+        "paired_orbit_id": 37,
+        "paired_size": 3,
+        "same_orbit": false,
+        "size": 3
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": -1,
+        "orbit_id": 15,
+        "paired_canonical_representative": [
+          0,
+          0,
+          8,
+          0
+        ],
+        "paired_coefficient": 1,
+        "paired_orbit_id": 28,
+        "paired_size": 3,
+        "same_orbit": false,
+        "size": 3
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          5,
+          0
+        ],
+        "coefficient": -2,
+        "orbit_id": 18,
+        "paired_canonical_representative": [
+          0,
+          0,
+          7,
+          0
+        ],
+        "paired_coefficient": 2,
+        "paired_orbit_id": 26,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          7,
+          0
+        ],
+        "coefficient": 2,
+        "orbit_id": 26,
+        "paired_canonical_representative": [
+          0,
+          0,
+          5,
+          0
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 18,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          8,
+          0
+        ],
+        "coefficient": 1,
+        "orbit_id": 28,
+        "paired_canonical_representative": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "paired_coefficient": -1,
+        "paired_orbit_id": 15,
+        "paired_size": 3,
+        "same_orbit": false,
+        "size": 3
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          10,
+          2
+        ],
+        "coefficient": -1,
+        "orbit_id": 37,
+        "paired_canonical_representative": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "paired_coefficient": 1,
+        "paired_orbit_id": 10,
+        "paired_size": 3,
+        "same_orbit": false,
+        "size": 3
+      },
+      {
+        "canonical_representative": [
+          0,
+          0,
+          11,
+          0
+        ],
+        "coefficient": -2,
+        "orbit_id": 38,
+        "paired_canonical_representative": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "paired_coefficient": 2,
+        "paired_orbit_id": 6,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": -8,
+        "orbit_id": 52,
+        "paired_canonical_representative": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "paired_coefficient": 8,
+        "paired_orbit_id": 57,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "coefficient": -8,
+        "orbit_id": 53,
+        "paired_canonical_representative": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "paired_coefficient": 8,
+        "paired_orbit_id": 58,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "coefficient": -8,
+        "orbit_id": 54,
+        "paired_canonical_representative": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "paired_coefficient": 8,
+        "paired_orbit_id": 59,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          1,
+          3
+        ],
+        "coefficient": -8,
+        "orbit_id": 55,
+        "paired_canonical_representative": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "paired_coefficient": 8,
+        "paired_orbit_id": 56,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 8,
+        "orbit_id": 56,
+        "paired_canonical_representative": [
+          0,
+          1,
+          1,
+          3
+        ],
+        "paired_coefficient": -8,
+        "paired_orbit_id": 55,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 8,
+        "orbit_id": 57,
+        "paired_canonical_representative": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "paired_coefficient": -8,
+        "paired_orbit_id": 52,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 8,
+        "orbit_id": 58,
+        "paired_canonical_representative": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "paired_coefficient": -8,
+        "paired_orbit_id": 53,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "coefficient": 8,
+        "orbit_id": 59,
+        "paired_canonical_representative": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "paired_coefficient": -8,
+        "paired_orbit_id": 54,
+        "paired_size": 48,
+        "same_orbit": false,
+        "size": 48
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 4,
+        "orbit_id": 69,
+        "paired_canonical_representative": [
+          0,
+          2,
+          5,
+          0
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 87,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 4,
+        "orbit_id": 71,
+        "paired_canonical_representative": [
+          0,
+          2,
+          5,
+          2
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 89,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 4,
+        "orbit_id": 72,
+        "paired_canonical_representative": [
+          0,
+          2,
+          4,
+          2
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 86,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          4,
+          2
+        ],
+        "coefficient": -4,
+        "orbit_id": 86,
+        "paired_canonical_representative": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 72,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          5,
+          0
+        ],
+        "coefficient": -4,
+        "orbit_id": 87,
+        "paired_canonical_representative": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 69,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          2,
+          5,
+          2
+        ],
+        "coefficient": -4,
+        "orbit_id": 89,
+        "paired_canonical_representative": [
+          0,
+          2,
+          1,
+          2
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 71,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": -4,
+        "orbit_id": 98,
+        "paired_canonical_representative": [
+          0,
+          3,
+          2,
+          3
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 105,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          1,
+          1
+        ],
+        "coefficient": -4,
+        "orbit_id": 99,
+        "paired_canonical_representative": [
+          0,
+          3,
+          2,
+          0
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 102,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "coefficient": -4,
+        "orbit_id": 100,
+        "paired_canonical_representative": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 103,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          1,
+          3
+        ],
+        "coefficient": -4,
+        "orbit_id": 101,
+        "paired_canonical_representative": [
+          0,
+          3,
+          2,
+          2
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 104,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 4,
+        "orbit_id": 102,
+        "paired_canonical_representative": [
+          0,
+          3,
+          1,
+          1
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 99,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 4,
+        "orbit_id": 103,
+        "paired_canonical_representative": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 100,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          2,
+          2
+        ],
+        "coefficient": 4,
+        "orbit_id": 104,
+        "paired_canonical_representative": [
+          0,
+          3,
+          1,
+          3
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 101,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          3,
+          2,
+          3
+        ],
+        "coefficient": 4,
+        "orbit_id": 105,
+        "paired_canonical_representative": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 98,
+        "paired_size": 24,
+        "same_orbit": false,
+        "size": 24
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 4,
+        "orbit_id": 115,
+        "paired_canonical_representative": [
+          0,
+          4,
+          11,
+          0
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 154,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          2,
+          2
+        ],
+        "coefficient": 2,
+        "orbit_id": 119,
+        "paired_canonical_representative": [
+          0,
+          4,
+          10,
+          2
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 153,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "coefficient": -2,
+        "orbit_id": 126,
+        "paired_canonical_representative": [
+          0,
+          4,
+          8,
+          0
+        ],
+        "paired_coefficient": 2,
+        "paired_orbit_id": 142,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          5,
+          0
+        ],
+        "coefficient": -4,
+        "orbit_id": 129,
+        "paired_canonical_representative": [
+          0,
+          4,
+          7,
+          0
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 140,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          7,
+          0
+        ],
+        "coefficient": 4,
+        "orbit_id": 140,
+        "paired_canonical_representative": [
+          0,
+          4,
+          5,
+          0
+        ],
+        "paired_coefficient": -4,
+        "paired_orbit_id": 129,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          8,
+          0
+        ],
+        "coefficient": 2,
+        "orbit_id": 142,
+        "paired_canonical_representative": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 126,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          10,
+          2
+        ],
+        "coefficient": -2,
+        "orbit_id": 153,
+        "paired_canonical_representative": [
+          0,
+          4,
+          2,
+          2
+        ],
+        "paired_coefficient": 2,
+        "paired_orbit_id": 119,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          4,
+          11,
+          0
+        ],
+        "coefficient": -4,
+        "orbit_id": 154,
+        "paired_canonical_representative": [
+          0,
+          4,
+          1,
+          0
+        ],
+        "paired_coefficient": 4,
+        "paired_orbit_id": 115,
+        "paired_size": 12,
+        "same_orbit": false,
+        "size": 12
+      },
+      {
+        "canonical_representative": [
+          0,
+          6,
+          1,
+          0
+        ],
+        "coefficient": 2,
+        "orbit_id": 162,
+        "paired_canonical_representative": [
+          0,
+          6,
+          5,
+          0
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 177,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      },
+      {
+        "canonical_representative": [
+          0,
+          6,
+          1,
+          2
+        ],
+        "coefficient": 2,
+        "orbit_id": 164,
+        "paired_canonical_representative": [
+          0,
+          6,
+          5,
+          2
+        ],
+        "paired_coefficient": -2,
+        "paired_orbit_id": 179,
+        "paired_size": 6,
+        "same_orbit": false,
+        "size": 6
+      }
+    ],
+    "pairing_failure_count": 0,
+    "pairing_failures_sample": [],
+    "sign_flip_failure_count": 0,
+    "sign_flip_failures_sample": [],
+    "typed_candidate": "selector/source-law audit for P2751 quartic affine coefficient-orbit polarity using coefficient negation q -> -q"
+  },
+  "status": "P2752_QUARTIC_PHASE_NEGATION_PAIRING_SELECTOR_NO_GO"
+}
