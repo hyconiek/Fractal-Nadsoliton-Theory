@@ -2172,3 +2172,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2774/S1724 entropy-Laplacian Ltotal guard
 
 `P2774/S1724` adds no variational source term.  It shows that `H=4 ln 2` plus equal 4-regular Laplacian trace remains geometrically degenerate, so this strengthened entropy principle cannot promote the kernels to role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2775/S1725 spectral discriminator Ltotal guard
+
+`P2775/S1725` adds no variational source term.  The full Laplacian spectrum separates the P2774 pair, but current artifacts do not supply a sourced spectral action or nonproxy coupling to `K`/`L_total`; therefore the result remains a bounded pair-local geometry discriminator, not role-bearing `L_total` promotion.
+
+## P2776/S1726 small spectral uniqueness Ltotal guard
+
+`P2776/S1726` adds no variational source term.  It confirms full-Laplacian-spectrum uniqueness only on the tiny connected graph class with 4 and 5 vertices, without a sourced spectral action or nonproxy coupling to `K`/`L_total`; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2777/S1727 symmetry-source Ltotal guard
+
+`P2777/S1727` adds no variational source term.  Symmetry does not fix the `Aut(Z12)` selector orientation; maximal automorphism count distinguishes only the P2774 pair and is not sourced as a variational principle coupled to `K`/`L_total`.  Therefore it cannot promote role-bearing `L_total`, selector closure, or canonical nadsoliton geometry.
+
+## P2778/S1728 max-symmetry Ltotal guard
+
+`P2778/S1728` adds no variational source term.  A concrete maximal-automorphism law on a declared 16-node class selects non-torus circulant labels rather than a sourced `K`/`L_total` geometry, so it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.

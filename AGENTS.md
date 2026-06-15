@@ -602,3 +602,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2774 strengthens P2773 by adding a graph-Laplacian trace/regularity constraint to `H=ln(16)=4 ln 2=alpha_geo`.
 - The connected 4-regular geometries `torus_4x4` and `circulant_pm1_pm2` share entropy, degree sequence, edge count, and Laplacian trace, but have different distance histograms; entropy plus this simple Laplacian datum still does not force a canonical geometry.
 - Do not promote entropy-plus-Laplacian-trace data to canonical nadsoliton geometry, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must add a stronger sourced metric principle and pass degeneracy-breaking against the P2774 pair.
+
+## Current full-Laplacian-spectrum pair discriminator guardrail (P2775/S1725, 2026-06-15)
+
+- P2775 tests the P2774-recommended full graph-Laplacian-spectrum principle on the exact P2774 pair.
+- The full spectrum distinguishes `torus_4x4` from `circulant_pm1_pm2`, so it is a bounded pair-local degeneracy-breaking witness, but no strict nadsoliton spectral source law, finite graph-class uniqueness theorem, or `K`/`L_total` variational coupling is exported.
+- Do not promote this pair-local spectral discriminator to canonical nadsoliton geometry, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must provide one sourced spectral action/variational law with bounded uniqueness, or run a broader cospectral-degeneracy audit.
+
+## Current small-graph full-spectrum uniqueness audit guardrail (P2776/S1726, 2026-06-15)
+
+- P2776 extends P2775 from the exact P2774 pair to an exhaustive finite quotient of all connected simple unlabeled graphs on 4 and 5 vertices.
+- The full Laplacian spectrum is injective on this tiny class, with zero cospectral nonisomorphic collisions, but this does not supply a strict nadsoliton spectral source law, 16-point/strict graph-class uniqueness, or `K`/`L_total` variational coupling.
+- Do not promote this small-class spectral uniqueness witness to canonical nadsoliton geometry, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must either extend the cospectral audit to a declared 16-point/regular/strict graph class or provide a sourced spectral action law before testing.
+
+## Current symmetry-source selector/geometry audit guardrail (P2777/S1727, 2026-06-15)
+
+- P2777 tests symmetry as a source for selector orientation and geometry.  `Aut(Z12)` inversion maps `+1` to `-1` and the full action spreads directed candidates across the unit orbit, leaving no invariant singleton selector.
+- On the P2774 pair, both geometries are vertex-transitive; automorphism-group size selects `torus_4x4` over `circulant_pm1_pm2` only as a pair-local maximal-symmetry discriminator.
+- Do not promote symmetry alone to `QW-2191` discharge, selector closure, canonical nadsoliton geometry, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a strict source law for a concrete symmetry functional over a declared graph class, or a genuine symmetry-breaking/chiral source coupled to the `Aut(Z12)` selector orbit.
+
+## Current max-symmetry 16-node geometry source audit guardrail (P2778/S1728, 2026-06-15)
+
+- P2778 tests the concrete symmetry-source law left open by P2777: maximize automorphism-group size on `torus_4x4` plus connected 16-node 4-regular circulant Cayley candidates.
+- The law fails to source the intended geometry: maximum automorphism count is attained by non-torus circulant labels, not by `torus_4x4`, and no `K`/`L_total` variational coupling is exported.
+- Do not promote maximal symmetry to canonical nadsoliton geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a different sourced symmetry functional with target/quotient rule, or pivot to a genuine strict metric/variational source.
