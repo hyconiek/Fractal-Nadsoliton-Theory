@@ -452,3 +452,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2749 tests the exact object requested after P2748: a minimal inversion-odd signed source and its coupling to the orientation torsor.
 - The finite Aut(Z12)-equivariance count gives exactly `2` maps from the odd source sign to the orientation torsor; they are opposite coupling polarities, exchanged by `P2721` polarity.
 - Do not promote an abstract inversion-odd source representation to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a concrete strict source sign value and a theorem selecting one coupling polarity.  Otherwise pivot to a different typed object or preserve the P2697-P2749 no-new-live-frontier certificate.
+
+## Current concrete odd-source sign-value inventory no-go guardrail (P2750/S1700, 2026-06-15)
+
+- P2750 audits the exact missing premise left by P2749 across the current generated-artifact frontier: a concrete strict inversion-odd source sign value plus a theorem selecting one `P2721` coupling polarity.
+- The finite inventory loads current signed/chiral/Gauss/cubic/minimal-odd candidates and finds `0` accepted artifacts satisfying the full package; existing artifacts contain real signed observables or admissible odd representations, but no concrete strict sign value with a unique coupling-polarity theorem is exported.
+- Do not promote the current signed-observable inventory to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.  A next admissible move must introduce a genuinely new strict sign-source mechanism with a computable nonzero value and explicit coupling-polarity theorem, pivot to a different typed object, or preserve the P2697-P2750 no-new-live-frontier certificate.
+
+## Current Z12 quartic phase orbit signed observable guardrail (P2751/S1701, 2026-06-15)
+
+- P2751 pivots beyond the P2750 current-artifact inventory to quartic `Z12` phase sums `Q(a,b,c,d)=sum_n exp(2*pi*i*(a*n^4+b*n^3+c*n^2+d*n)/12)` under affine source reparametrisation.
+- The finite audit computes all `12^4` coefficient quadruples and finds nonzero orbit-safe signed coefficients after affine quotienting, but the nonzero coefficient family remains polarity-paired and no strict quartic orbit/polarity source is exported.
+- Do not promote quartic phase coefficient choice to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a strict law selecting one nonzero quartic coefficient orbit/polarity and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2751 no-new-live-frontier certificate.
+
+## Current quartic phase negation-pairing selector no-go guardrail (P2752/S1702, 2026-06-15)
+
+- P2752 audits the exact missing premise left by P2751: whether the quartic coefficient-orbit family itself can select one orbit polarity.
+- Coefficient negation `q -> -q` sends each quartic phase sum to its complex conjugate and flips the imaginary sign; the finite affine-orbit audit verifies every nonzero quartic orbit is paired with a distinct equal-size orbit of opposite signed-sum coefficient.
+- Do not promote a manually chosen positive quartic coefficient orbit to `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict law breaking this negation pairing and an explicit `P2721` coupling theorem.  Otherwise pivot to a different typed object or preserve the P2697-P2752 no-new-live-frontier certificate.
+
+## Current polynomial phase negation meta-obstruction guardrail (P2753/S1703, 2026-06-15)
+
+- P2753 cuts the post-P2752 loop of merely increasing polynomial degree in `Z12` phase-sum imaginary-sign observables.
+- For any coefficient vector `q`, coefficient negation gives `S(-q)=conj(S(q))` and flips the imaginary sign; the finite audit checks degrees `1` through `5` with zero sign-flip failures and balanced positive/negative counts in every degree.
+- Do not continue polynomial phase-sum degree escalation as `lambda/P2721` fixing, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure without a genuinely new strict negation-breaking source law and an explicit `P2721` coupling theorem.  Otherwise pivot outside polynomial phase-sum imaginary-sign observables or preserve the P2697-P2753 no-new-live-frontier certificate.
