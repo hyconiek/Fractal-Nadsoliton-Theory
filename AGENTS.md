@@ -572,3 +572,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2769 attacks the non-monomial invariant escape route after P2768: the positive length/field/curvature normalization action on the three P1562 coefficients is log-linearly invertible and transitive on the positive coefficient octant.
 - Every invariant function of `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` alone is therefore constant on the open orbit; invariant-taking cannot rescue physical-coupling provenance while P2762/P2764 normalizations remain open.
 - Do not promote this no-go to canonical normalization, physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an external canonical normalization source/theorem and then rerun bounded acceptance; otherwise preserve the P2697-P2769 no-closure certificate.
+
+## Current kernel characteristic expressivity audit guardrail (P2770/S1720, 2026-06-15)
+
+- P2770 audits the user's core foundation question: whether `K_legacy_ont` or `K_strict_gate` fully express the nadsoliton as the single primordial informational, self-learning neural-network-like, geometrically self-coupled foundation.
+- The finite formula-coverage matrix finds only bounded solitonic-shape coverage from oscillation plus damping/compression; the formulas do not themselves encode an ontology-source theorem, self-learning update law, geometric self-coupling operator, or completed `K_legacy_ont -> K_strict_gate` bridge.
+- Do not promote kernel expressivity to physical-role transfer, role-bearing `L_total`, selector closure, bridge closure, or ToE closure.  A next admissible move must introduce exactly one explicit typed term/theorem, preferably a geometric self-coupling operator `C_geo[K]` with finite invariance/closure test or a self-learning kernel-parameter update law with bounded convergence/provenance witness, and then rerun the P2770 acceptance matrix.
+
+## Current finite geometric self-coupling operator witness guardrail (P2771/S1721, 2026-06-15)
+
+- P2771 introduces the explicit P2770-requested candidate object `C_geo_N[K](d)=sum_x K(r_N(x))*K(r_N(d-x))` on selector-free `Z/13Z` radial geometry and tests scalar eigenclosure `C_geo_N[K]=gamma K`.
+- Both `K_legacy_ont` and `K_strict_gate` fail the finite scalar-eigenclosure residual test; the candidate is also not uniquely/ontologically sourced and supplies no learning update law.
+- Do not promote this bounded candidate to geometric self-coupling closure, full kernel expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must either supply a strictly sourced alternative `C_geo` with justified geometry/normalization and rerun residuals, or pivot to an explicit self-learning kernel-parameter update law with bounded convergence/provenance witness.
+
+## Current self-learning kernel update-law stationarity witness guardrail (P2772/S1722, 2026-06-15)
+
+- P2772 introduces the explicit P2771-recommended update candidate `theta_{t+1}=theta_t-lr*grad L_geo(theta_t)`, using the normalized finite `C_geo_N` scalar-eigenclosure residual as `L_geo`.
+- Both `K_legacy_ont` and `K_strict_gate` have nonzero finite-difference gradients, so neither current tuple is a stationary learned fixed point of this candidate; the loss is not ontologically sourced or coupled to physical `L_total`.
+- Do not promote this bounded update law to self-learning kernel closure, geometric self-coupling closure, full kernel expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must supply an ontologically sourced learning functional or a sourced fixed-point theorem for the current tuple.
+
+## Current Shannon-entropy geometry-forcing obstruction guardrail (P2773/S1723, 2026-06-15)
+
+- P2773 tests whether Shannon entropy alone forces nadsoliton geometry: the uniform 16-point distribution has `H=ln(16)=4 ln 2=alpha_geo`.
+- Complete, cycle, path, and star geometries on the same 16-point support have the same Shannon entropy but inequivalent distance histograms/diameters, so entropy alone does not select metric/adjacency/geometric self-coupling.
+- Do not promote `H=4 ln 2` to canonical nadsoliton geometry, kernel full-expression, self-learning closure, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must add one extra geometric/source principle and pass a degeneracy-breaking test against this witness class.
+
+## Current entropy-plus-Laplacian-trace geometry degeneracy guardrail (P2774/S1724, 2026-06-15)
+
+- P2774 strengthens P2773 by adding a graph-Laplacian trace/regularity constraint to `H=ln(16)=4 ln 2=alpha_geo`.
+- The connected 4-regular geometries `torus_4x4` and `circulant_pm1_pm2` share entropy, degree sequence, edge count, and Laplacian trace, but have different distance histograms; entropy plus this simple Laplacian datum still does not force a canonical geometry.
+- Do not promote entropy-plus-Laplacian-trace data to canonical nadsoliton geometry, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must add a stronger sourced metric principle and pass degeneracy-breaking against the P2774 pair.

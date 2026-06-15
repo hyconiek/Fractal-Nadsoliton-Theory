@@ -1,0 +1,140 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_geometric_self_coupling_theorem": false,
+    "accepted_as_learned_stationary_fixed_point": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_self_learning_kernel_theorem": false,
+    "blocker": "The explicit gradient update law is computationally well-defined, but both current kernel tuples have nonzero gradients for the finite C_geo residual loss.  The loss is also not yet ontologically sourced or coupled to a physical L_total, so this is a bounded nonstationarity witness, not a self-learning kernel theorem.",
+    "facts": {
+      "all_current_kernel_tuples_stationary": false,
+      "candidate_exports_convergence_theorem": false,
+      "candidate_loss_ontologically_sourced": false,
+      "candidate_update_coupled_to_physical_Ltotal": false,
+      "explicit_update_law_supplied": true,
+      "p2771_c_geo_no_closure_boundary_present": true
+    },
+    "missing_criteria": [
+      "all_current_kernel_tuples_stationary",
+      "candidate_loss_ontologically_sourced",
+      "candidate_update_coupled_to_physical_Ltotal",
+      "candidate_exports_convergence_theorem"
+    ]
+  },
+  "audited_object": "finite gradient self-learning update law for the P2771 C_geo residual loss",
+  "decision": {
+    "negative_export_flags": {
+      "geometric_self_coupling_kernel_theorem_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "learned_stationary_kernel_fixed_point_exported": false,
+      "legacy_strict_bridge_closed": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "self_learning_kernel_update_theorem_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not promote the current kernels to self-learning nadsoliton closure from this finite gradient update law.  The next honest move must supply either an ontologically sourced learning functional whose stationary equations are derived from the nadsoliton geometry, or a theorem that the current kernel tuple is a stable fixed point of such a sourced update.  Without that source/fixed-point theorem, preserve the P2697-P2772 no-full-expression/no-closure certificate and avoid L_total, bridge, role-transfer, selector, or ToE promotion.",
+    "reason": "The explicit gradient update law is computationally well-defined, but both current kernel tuples have nonzero gradients for the finite C_geo residual loss.  The loss is also not yet ontologically sourced or coupled to a physical L_total, so this is a bounded nonstationarity witness, not a self-learning kernel theorem."
+  },
+  "input_hashes": {
+    "P2771": "d61b0adc74fb8f884186b66283a75b6069576094640574a5097ced5c8c1b0801"
+  },
+  "input_statuses": {
+    "P2771": "P2771_FINITE_GEOMETRIC_SELF_COUPLING_OPERATOR_WITNESS_BOUNDED_NO_GO_NO_CLOSURE"
+  },
+  "self_learning_update_witness": {
+    "all_current_tuples_stationary": false,
+    "candidate_update_law": "theta_{t+1}=theta_t - lr * grad_theta L_geo(theta_t)",
+    "failed_stationary_kernels": [
+      "K_legacy_ont",
+      "K_strict_gate"
+    ],
+    "finite_geometry": "Z/13Z radial shells inherited from P2771 C_geo_N",
+    "max_gradient_norm": 2.0011536106646397,
+    "min_gradient_norm": 0.08688564697635748,
+    "row_count": 2,
+    "rows": [
+      {
+        "finite_difference_gradient": {
+          "alpha_geo": 2.502676956105404e-13,
+          "beta_tors": -0.25181509395247326,
+          "omega": -1.985044471459335,
+          "phi": -0.028343928142743332
+        },
+        "gradient_norm": 2.0011536106646397,
+        "initial_loss": 0.11306041694127804,
+        "initial_parameters": {
+          "alpha_geo": 2.772588722239781,
+          "beta_tors": 0.01,
+          "omega": 0.7853981633974483,
+          "phi": 0.5235987755982988
+        },
+        "kernel": "K_legacy_ont",
+        "learning_rate": 0.001,
+        "loss_definition": "L_geo(theta)=0.5*||C_geo_N[K_theta]-gamma(theta)K_theta||^2/||C_geo_N[K_theta]||^2 on Z/13Z radial shells",
+        "nonzero_update_parameters": [
+          "omega",
+          "phi",
+          "beta_tors"
+        ],
+        "one_step_delta_loss": -0.0039537797298846294,
+        "one_step_loss": 0.10910663721139341,
+        "one_step_updated_parameters": {
+          "alpha_geo": 2.7725887222397807,
+          "beta_tors": 0.010251815093952473,
+          "omega": 0.7873832078689076,
+          "phi": 0.5236271195264416
+        },
+        "parameter_order": [
+          "alpha_geo",
+          "omega",
+          "phi",
+          "beta_tors"
+        ],
+        "passes_stationary_tolerance": false,
+        "stationary_tolerance": 1e-09
+      },
+      {
+        "finite_difference_gradient": {
+          "beta": -0.003833526246443952,
+          "eta": -0.023685719281548043,
+          "omega": -0.08222675295689597,
+          "phi": -0.014565971553567867
+        },
+        "gradient_norm": 0.08688564697635748,
+        "initial_loss": 0.04619185221643588,
+        "initial_parameters": {
+          "beta": 1.0,
+          "eta": 1.8,
+          "omega": 0.18575,
+          "phi": 0.1625
+        },
+        "kernel": "K_strict_gate",
+        "learning_rate": 0.001,
+        "loss_definition": "L_geo(theta)=0.5*||C_geo_N[K_theta]-gamma(theta)K_theta||^2/||C_geo_N[K_theta]||^2 on Z/13Z radial shells",
+        "nonzero_update_parameters": [
+          "omega",
+          "phi",
+          "beta",
+          "eta"
+        ],
+        "one_step_delta_loss": -7.5492679903754745e-06,
+        "one_step_loss": 0.046184302948445506,
+        "one_step_updated_parameters": {
+          "beta": 1.0000038335262464,
+          "eta": 1.8000236857192815,
+          "omega": 0.1858322267529569,
+          "phi": 0.16251456597155356
+        },
+        "parameter_order": [
+          "omega",
+          "phi",
+          "beta",
+          "eta"
+        ],
+        "passes_stationary_tolerance": false,
+        "stationary_tolerance": 1e-09
+      }
+    ]
+  },
+  "status": "P2772_SELF_LEARNING_KERNEL_UPDATE_LAW_STATIONARITY_WITNESS_BOUNDED_NO_GO_NO_CLOSURE"
+}

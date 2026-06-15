@@ -2152,3 +2152,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2769/S1719 orbit-transitivity Ltotal guard
 
 `P2769/S1719` adds no variational source term.  It shows the open positive normalization gauges act transitively on the positive triple of P1562 coefficients, so invariant-taking cannot promote `lambda_sm_eff`, `kappa_gr_eff`, or `epsilon_mix_eff` to physical Lagrangian couplings or role-bearing `L_total`.
+
+## P2770/S1720 kernel-expressivity Ltotal guard
+
+`P2770/S1720` adds no variational source term.  It is an expressivity/no-closure audit: the current scalar distance kernels are compatible with oscillatory damped solitonic shape, but do not supply self-learning neural dynamics, geometric self-coupling, or full ontology-to-Lagrangian closure.
+
+## P2771/S1721 C_geo Ltotal guard
+
+`P2771/S1721` adds no variational source term.  It tests one explicit finite geometric self-coupling candidate and finds nonzero scalar-eigenclosure residuals for both current kernels; therefore this candidate cannot promote the kernel formulas to role-bearing `L_total` or a full self-coupled nadsoliton dynamics.
+
+## P2772/S1722 update-law Ltotal guard
+
+`P2772/S1722` adds no variational source term.  It defines one finite gradient update candidate from the P2771 self-coupling residual and finds nonzero gradients for both kernel tuples; therefore the candidate cannot promote the kernels to role-bearing `L_total` or self-learning nadsoliton dynamics.
+
+## P2773/S1723 entropy-geometry Ltotal guard
+
+`P2773/S1723` adds no variational source term.  It shows that `H=4 ln 2` is compatible with multiple inequivalent finite geometries, so Shannon entropy alone cannot promote the kernels to role-bearing `L_total` or a canonical nadsoliton geometry.
+
+## P2774/S1724 entropy-Laplacian Ltotal guard
+
+`P2774/S1724` adds no variational source term.  It shows that `H=4 ln 2` plus equal 4-regular Laplacian trace remains geometrically degenerate, so this strengthened entropy principle cannot promote the kernels to role-bearing `L_total` or canonical nadsoliton geometry.

@@ -1,0 +1,146 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_geometric_self_coupling_theorem": false,
+    "accepted_as_kernel_full_expression_theorem": false,
+    "accepted_as_learning_update_law": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "blocker": "The explicit finite C_geo candidate is not a scalar eigenclosure for either current kernel, and it is not yet uniquely or ontologically sourced.  It therefore gives a bounded no-go for this candidate self-coupling law, not a full geometric self-coupling theorem.",
+    "facts": {
+      "all_kernel_samples_scalar_eigenclosed": false,
+      "candidate_is_unique_or_ontologically_sourced": false,
+      "candidate_supplies_learning_update_law": false,
+      "explicit_c_geo_candidate_supplied": true,
+      "p2770_no_full_expression_boundary_present": true,
+      "residuals_zero_to_tolerance": false
+    },
+    "missing_criteria": [
+      "all_kernel_samples_scalar_eigenclosed",
+      "residuals_zero_to_tolerance",
+      "candidate_is_unique_or_ontologically_sourced",
+      "candidate_supplies_learning_update_law"
+    ]
+  },
+  "audited_object": "selector-free finite cyclic radial geometric self-coupling operator C_geo_N[K]",
+  "decision": {
+    "negative_export_flags": {
+      "geometric_self_coupling_kernel_theorem_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_self_coupling_fixed_point_exported": false,
+      "legacy_strict_bridge_closed": false,
+      "physical_role_transfer_started": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not promote the current kernels to geometrically self-coupled nadsoliton closure from this C_geo candidate.  The next honest move is either to supply a strictly sourced geometric self-coupling operator with a different, justified geometry/normalization and rerun the scalar-eigenclosure residual table, or to pivot to the other P2770 branch: an explicit self-learning kernel-parameter update law with provenance and a bounded convergence/consistency witness.  Without one of those, preserve the P2697-P2771 no-full-expression/no-closure certificate.",
+    "reason": "The explicit finite C_geo candidate is not a scalar eigenclosure for either current kernel, and it is not yet uniquely or ontologically sourced.  It therefore gives a bounded no-go for this candidate self-coupling law, not a full geometric self-coupling theorem."
+  },
+  "geometric_self_coupling_witness": {
+    "all_kernels_pass_scalar_eigenclosure": false,
+    "failed_kernels": [
+      "K_legacy_ont",
+      "K_strict_gate"
+    ],
+    "max_relative_l2_residual": 0.4755216439685539,
+    "normalization_test": "C_geo_N[K] must equal gamma*K on all radial shells for one scalar gamma",
+    "operator": "C_geo_N[K](d)=sum_x K(r_N(x))*K(r_N(d-x)) on N=13 cyclic radial geometry",
+    "row_count": 2,
+    "rows": [
+      {
+        "c_geo_shell_values": {
+          "0": 39.00646979121265,
+          "1": 23.63312914954431,
+          "2": -7.713550569813372,
+          "3": -28.213617150686765,
+          "4": -21.106234352305858,
+          "5": 7.692824868403818,
+          "6": 34.06803353209962
+        },
+        "finite_geometry": "Z/13Z radial shells with r(x)=min(x,13-x)",
+        "kernel": "K_legacy_ont",
+        "least_squares_scalar": 12.611490326148314,
+        "max_abs_residual": 17.574412848649185,
+        "passes_scalar_eigenclosure_tolerance_1e_minus_9": false,
+        "relative_l2_residual": 0.4755216439685539,
+        "residual_by_shell": {
+          "0": 8.72461342523729,
+          "1": 14.672743120023004,
+          "2": 9.42687876789001,
+          "3": 4.577666419002448,
+          "4": 8.010935230362758,
+          "5": 16.311862858705254,
+          "6": 17.574412848649185
+        },
+        "shell_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "source_shell_values": {
+          "0": 2.4011322677058873,
+          "1": 0.7104938272793256,
+          "2": -1.3591121187449902,
+          "3": -2.6001117014458375,
+          "4": -2.3087810266402764,
+          "5": -0.6834273957639219,
+          "6": 1.307824868981029
+        }
+      },
+      {
+        "c_geo_shell_values": {
+          "0": 1.5119115059998474,
+          "1": 1.1547462929860672,
+          "2": 0.7099053859763051,
+          "3": 0.41808624564360614,
+          "4": 0.24686914552411932,
+          "5": 0.14823197576658198,
+          "6": 0.0992294519918263
+        },
+        "finite_geometry": "Z/13Z radial shells with r(x)=min(x,13-x)",
+        "kernel": "K_strict_gate",
+        "least_squares_scalar": 1.7906570054099948,
+        "max_abs_residual": 0.36602125479860614,
+        "passes_scalar_eigenclosure_tolerance_1e_minus_9": false,
+        "relative_l2_residual": 0.30394687764948625,
+        "residual_by_shell": {
+          "0": -0.25515521066796,
+          "1": 0.31316315582193344,
+          "2": 0.36602125479860614,
+          "3": 0.25436895699191153,
+          "4": 0.16265603505111165,
+          "5": 0.10502123160138448,
+          "6": 0.07940541539957166
+        },
+        "shell_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "source_shell_values": {
+          "0": 0.9868259031903286,
+          "1": 0.4699856726450201,
+          "2": 0.1920435516901028,
+          "3": 0.09142861427792495,
+          "4": 0.0470291687456504,
+          "5": 0.02413122336363006,
+          "6": 0.011070817321442113
+        }
+      }
+    ]
+  },
+  "input_hashes": {
+    "P2770": "a335e14bb6cf7d1b3741ded5bf7f18cb4ee092271f996212002b98160715a73f"
+  },
+  "input_statuses": {
+    "P2770": "P2770_KERNEL_CHARACTERISTIC_EXPRESSIVITY_AUDIT_NO_FULL_EXPRESSION_NO_CLOSURE"
+  },
+  "status": "P2771_FINITE_GEOMETRIC_SELF_COUPLING_OPERATOR_WITNESS_BOUNDED_NO_GO_NO_CLOSURE"
+}
