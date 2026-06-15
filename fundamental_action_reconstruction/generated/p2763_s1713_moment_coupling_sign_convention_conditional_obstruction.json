@@ -1,0 +1,224 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_conditional_theorem": false,
+    "accepted_as_sign_convention_theorem": false,
+    "blocker": "A finite four-branch sign family preserves the P1562 coupling magnitudes, while current artifacts do not export a rule selecting the positive kappa/epsilon branch. Because P2762 leaves reference-cell/action-density normalization open, even a future sign rule would have to be explicitly conditional rather than physical-coupling closure.",
+    "facts": {
+      "content_evidence_present": true,
+      "finite_opposite_sign_branch_family_present": true,
+      "later_nonproxy_eom_closure_still_open": true,
+      "negative_moment_to_positive_coupling_rectification_detected": true,
+      "p2762_reference_cell_action_density_still_open": true,
+      "sign_convention_theorem_exported": false,
+      "signed_moments_and_coefficients_present": true,
+      "unique_sign_branch_selected_by_current_artifacts": false
+    },
+    "missing_criteria": [
+      "unique_sign_branch_selected_by_current_artifacts",
+      "sign_convention_theorem_exported"
+    ]
+  },
+  "audited_atom": "moment-to-coupling sign-convention theorem, explicitly conditional on future reference-cell/action-density closure",
+  "content_evidence_scan": {
+    "all_patterns_have_hits": true,
+    "hit_counts": {
+      "closure_boundary": 26486,
+      "later_eom_block": 2054,
+      "p1562_signed_moments": 2647,
+      "p2761_sign_gap": 94,
+      "p2762_conditional_next": 75
+    },
+    "row_count": 5,
+    "rows": [
+      {
+        "hit_count": 75,
+        "lane": "p2762_conditional_next",
+        "pattern": "P2762|sign-convention theorem|canonical reference-cell/action-density|P2697-P2762",
+        "sample_hits": [
+          "AGENTS.md:528:## Current reference-cell action-density normalization obstruction guardrail (P2762/S1712, 2026-06-15)",
+          "AGENTS.md:530:- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.",
+          "AGENTS.md:532:- Do not promote arbitrary unit choices to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is one remaining provenance atom, preferably a sign-convention theorem explicitly conditional on future canonical reference-cell/action-density closure, or preservation of the P2697-P2762 no-closure certificate.",
+          "AGENTS.md:536:- P2763 audits the P2762-recommended sign-convention atom only as a conditional provenance test.",
+          "AGENTS.md:538:- Do not promote the signs or coefficients to physical-coupling provenance, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.  The next admissible move is field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem, or preservation of the P2697-P2763 no-closure certificate.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2755:## P2762/S1712 reference-cell action-density normalization obstruction",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2757:`P2762/S1712` attacks the P2761 preferred provenance atom: canonical physical length/reference-cell plus action-density normalization for the strict moment map.  It gives a finite scale-orbit witness over positive reference lengths: the dimensionless `lambda_sm_eff` row is unchanged, while dimensionful `kappa_gr_eff` and `epsilon_mix_eff` vary with the chosen length scale.  Together with the P2689 UV-unit block and P2761 unit-reference block, this shows that current artifacts do not export a unique reference cell, action-density unit, or physical moment normalization.  No physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:2761:`P2763/S1713` audits the sign-convention atom left after P2762.  The P1562 moment side has `M2<0` and `M3<0`, while the derived candidates `kappa_gr_eff` and `epsilon_mix_eff` are positive; a finite four-branch sign family preserves the same magnitudes but flips the two dimensionful coupling signs.  Current artifacts do not export a theorem selecting the positive branch, and P2762 still leaves canonical reference-cell/action-density normalization open.  No sign-convention theorem, physical-coupling provenance theorem, role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure is exported."
+        ]
+      },
+      {
+        "hit_count": 94,
+        "lane": "p2761_sign_gap",
+        "pattern": "P2761|sign convention theorem|unit/reference|variational-normalization",
+        "sample_hits": [
+          "AGENTS.md:522:## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "AGENTS.md:530:- P2762 attacks the P2761 preferred atom: canonical physical length/reference-cell and action-density normalization for the strict moment map.",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:2:\"\"\"P2761/S1711: kernel-moment -> physical-coupling provenance obstruction.",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:121:        \"sign convention theorem for negative moments and positive couplings\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:171:        \"blocker\": \"The moment-to-coupling numerics are present, but every target coupling lacks exported unit/reference, sign, and variational-normalization provenance; stale P1562 closure flags remain quarantined by later artifacts.\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:178:        \"# P2761/S1711 kernel-moment to physical-coupling provenance obstruction\","
+        ]
+      },
+      {
+        "hit_count": 2647,
+        "lane": "p1562_signed_moments",
+        "pattern": "P1562|M2|M3|kappa_gr_eff|epsilon_mix_eff|derived_lagrangian_coefficients",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "AGENTS.md:524:- P2761 attacks P2760 `G5` and audits P1562 moment-derived coefficients `lambda_sm_eff`, `kappa_gr_eff`, and `epsilon_mix_eff` as physical-coupling candidates.",
+          "AGENTS.md:525:- The numeric moment map is real, but no canonical reference unit/action-density normalization, sign convention theorem, field/curvature normalization, or nonproxy variational insertion theorem is exported; stale P1562 closure flags remain quarantined.",
+          "AGENTS.md:531:- A finite positive-length scale-orbit witness shows that the numeric moment coefficients remain nonunique as physical dimensionful couplings: `lambda_sm_eff` is scale-invariant, but `kappa_gr_eff` and `epsilon_mix_eff` change with the reference length unless a canonical cell/action-density theorem is exported.",
+          "AGENTS.md:537:- P1562 has negative moment-side rows `M2` and `M3` but positive `kappa_gr_eff` and `epsilon_mix_eff`; the finite four-branch sign family preserves the same magnitudes, and current artifacts do not export a theorem selecting the positive branch.",
+          "fundamental_action_reconstruction/r37_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.py:111:        \"status\": \"PASS_PARTIAL_DIRECT_M2_PSI4_TARGET_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET_READY\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:5:P1562 strict-kernel moments already suffice to promote lambda_sm_eff,",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:6:kappa_gr_eff, and epsilon_mix_eff into physical Lagrangian couplings.  The"
+        ]
+      },
+      {
+        "hit_count": 2054,
+        "lane": "later_eom_block",
+        "pattern": "P1563|P1866|nonproxy EOM|OPEN_OBSTRUCTION_WITH_TRACE|missing_theorems",
+        "sample_hits": [
+          "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+          "fundamental_action_reconstruction/p2145_s1095_strict_cmp2_next_action_commitment_packet.py:55:      \"global_status\":\"OPEN_OBSTRUCTION_WITH_TRACE\"",
+          "fundamental_action_reconstruction/p2057_s1007_strict_same_scheme_policy_regret_audit.py:104:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator.py:108:        \"global_status\": \"OPEN_OBSTRUCTION_WITH_TRACE\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:24:P1563 = GEN / \"p1563_s513_strict_kernel_to_euler_lagrange_eom_export_summary.json\"",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:25:P1866 = GEN / \"p1866_s816_strict_kernel_to_full_lagrangian_and_eom_symbolic_export.json\"",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:36:    \"p1563_missing_exports\": r\"P1563|missing_exports|missing_theorems|qw2191_closed|toe_closed\",",
+          "fundamental_action_reconstruction/p2761_s1711_kernel_moment_coupling_provenance_obstruction.py:37:    \"p1866_open_obstruction\": r\"P1866|OPEN_OBSTRUCTION_WITH_TRACE|reverse_requirement|strict_core_closure_blockers\","
+        ]
+      },
+      {
+        "hit_count": 26486,
+        "lane": "closure_boundary",
+        "pattern": "L_total|ToE closure|role transfer|bridge closure|selector closure",
+        "sample_hits": [
+          "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure."
+        ]
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "nonproxy_variational_insertion_theorem_exported": false,
+      "physical_coupling_provenance_theorem_exported": false,
+      "reference_cell_action_density_closure_imported": false,
+      "role_bearing_ltotal_promoted": false,
+      "sign_convention_theorem_exported": false,
+      "toe_closure_exported": false,
+      "unique_coupling_sign_branch_selected": false
+    },
+    "next_honest_step": "Do not promote the positive P1562 kappa/epsilon signs to physical coupling signs.  The next honest proof-grade move should target the remaining provenance atom that is not merely sign choice: field/curvature normalization compatibility with the still-open canonical reference-cell/action-density theorem.  If that object cannot be supplied, preserve the P2697-P2763 no-closure certificate.",
+    "reason": "A finite four-branch sign family preserves the P1562 coupling magnitudes, while current artifacts do not export a rule selecting the positive kappa/epsilon branch. Because P2762 leaves reference-cell/action-density normalization open, even a future sign rule would have to be explicitly conditional rather than physical-coupling closure."
+  },
+  "input_hashes": {
+    "P1562": "bcc13655eb98ac57450c0eae74b8a153010494d945159c1b6b484ad56b98e1b9",
+    "P1563": "1cb777b00748bdf3b4a9421c0ad12dfeb6ce736f4e6b56802692a2c6bf3d3448",
+    "P1866": "69eb9bdb80a603735625a2ed943eba94a9cf2a05a54feab132565f5085764603",
+    "P2761": "f9c78c10248b5708e267cb78263430830fbcda9b1bc86deef26cd312c4248633",
+    "P2762": "2973e0303ffd7b93d698b5000f7de371871581d9dd747e2a8f399592aeed3c80"
+  },
+  "input_statuses": {
+    "P1562": "PASS_STRICT_KERNEL_COEFFICIENTS_DERIVED",
+    "P1563": "PASS_STRICT_KERNEL_TO_EOM_CHAIN_EXPORTED",
+    "P1866": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "P2761": "P2761_KERNEL_MOMENT_COUPLING_PROVENANCE_OBSTRUCTION_NO_CLOSURE",
+    "P2762": "P2762_REFERENCE_CELL_ACTION_DENSITY_NORMALIZATION_OBSTRUCTION_NO_CLOSURE"
+  },
+  "sign_convention_matrix": {
+    "all_branches_preserve_magnitudes": true,
+    "branch_family": [
+      {
+        "branch": {
+          "epsilon_mix_eff_sign": -1,
+          "kappa_gr_eff_sign": -1
+        },
+        "epsilon_mix_eff": -18.13817242656519,
+        "kappa_gr_eff": -11.91403866517398,
+        "lambda_sm_eff": 0.33220238535858243,
+        "preserves_numeric_magnitudes": true
+      },
+      {
+        "branch": {
+          "epsilon_mix_eff_sign": 1,
+          "kappa_gr_eff_sign": -1
+        },
+        "epsilon_mix_eff": 18.13817242656519,
+        "kappa_gr_eff": -11.91403866517398,
+        "lambda_sm_eff": 0.33220238535858243,
+        "preserves_numeric_magnitudes": true
+      },
+      {
+        "branch": {
+          "epsilon_mix_eff_sign": -1,
+          "kappa_gr_eff_sign": 1
+        },
+        "epsilon_mix_eff": -18.13817242656519,
+        "kappa_gr_eff": 11.91403866517398,
+        "lambda_sm_eff": 0.33220238535858243,
+        "preserves_numeric_magnitudes": true
+      },
+      {
+        "branch": {
+          "epsilon_mix_eff_sign": 1,
+          "kappa_gr_eff_sign": 1
+        },
+        "epsilon_mix_eff": 18.13817242656519,
+        "kappa_gr_eff": 11.91403866517398,
+        "lambda_sm_eff": 0.33220238535858243,
+        "preserves_numeric_magnitudes": true
+      }
+    ],
+    "branch_family_count": 4,
+    "derived_lagrangian_coefficients": {
+      "epsilon_mix_eff": 18.13817242656519,
+      "kappa_gr_eff": 11.91403866517398,
+      "lambda_sm_eff": 0.33220238535858243
+    },
+    "moments": {
+      "M0": 1.2300294722058696,
+      "M1": 0.40861872472814803,
+      "M2": -14.5188745761074,
+      "M3": -285.6563371577367
+    },
+    "rectified_row_count": 2,
+    "row_count": 3,
+    "rows": [
+      {
+        "blocker": "The dimensionless row is sign-aligned, but P2762 still blocks physical normalization/provenance.",
+        "candidate_coupling_sign": 1,
+        "object": "lambda_sm_eff",
+        "sign_rectification_needed": false,
+        "source_moment_sign": 1,
+        "unique_sign_theorem_exported": false
+      },
+      {
+        "blocker": "P1562 maps a negative moment-side datum to a positive coupling candidate, but current artifacts do not export the sign convention theorem choosing this branch.",
+        "candidate_coupling_sign": 1,
+        "object": "kappa_gr_eff",
+        "sign_rectification_needed": true,
+        "source_moment_sign": -1,
+        "unique_sign_theorem_exported": false
+      },
+      {
+        "blocker": "P1562 maps a negative moment-side datum to a positive coupling candidate, but current artifacts do not export the sign convention theorem choosing this branch.",
+        "candidate_coupling_sign": 1,
+        "object": "epsilon_mix_eff",
+        "sign_rectification_needed": true,
+        "source_moment_sign": -1,
+        "unique_sign_theorem_exported": false
+      }
+    ],
+    "unique_branch_selected_by_current_artifacts": false
+  },
+  "status": "P2763_MOMENT_COUPLING_SIGN_CONVENTION_CONDITIONAL_OBSTRUCTION_NO_CLOSURE"
+}

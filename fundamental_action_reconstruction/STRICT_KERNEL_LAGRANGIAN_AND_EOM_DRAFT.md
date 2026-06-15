@@ -2120,3 +2120,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2761/S1711 kernel-moment coupling Ltotal guard
 
 `P2761/S1711` adds no variational source term.  It shows that P1562 moment-derived coefficients remain numeric candidates rather than accepted physical Lagrangian couplings because unit/reference, sign, and variational-normalization provenance is missing.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2762/S1712 reference-cell action-density Ltotal guard
+
+`P2762/S1712` adds no variational source term.  It records that the strict moment coefficients remain gauge-normalization candidates until a canonical reference cell and action-density theorem fixes the positive length/cell scale and compatible field/curvature normalizations.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2763/S1713 sign-convention Ltotal guard
+
+`P2763/S1713` adds no variational source term.  It records that positive `kappa_gr_eff` and `epsilon_mix_eff` are sign-branch candidates, not physical Lagrangian sign theorems, because no branch-selecting sign convention is exported and P2762 leaves reference-cell/action-density normalization open.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2764/S1714 field-curvature normalization Ltotal guard
+
+`P2764/S1714` adds no variational source term.  It records that scalar and curvature rescalings change the formal P1562 coefficient insertions unless a common field/curvature normalization theorem is exported together with the still-missing reference-cell/action-density and sign-convention provenance.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
+
+## P2765/S1715 nonproxy variational-insertion Ltotal guard
+
+`P2765/S1715` adds no variational source term.  It records that formal/proxy EOM exports cannot become a nonproxy variational-insertion theorem while 4D covariant scalar, metric, and mixed residual rows are missing and P2762-P2764 provenance prerequisites remain open.  Therefore it cannot promote role-bearing `L_total`, selector closure, bridge closure, role transfer, or ToE closure.
