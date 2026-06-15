@@ -1,0 +1,70 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_16node_4regular_enumerator": false,
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_enumerator_scale_obstruction": true,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_strict_spectral_source_law": false,
+    "blocker": "The exact fixed-bipartition count is too large for a naive in-repo canonical enumerator, and no canonical-generation theorem/tool certificate is supplied.  No spectral source law or K/L_total coupling is exported.",
+    "facts": {
+      "canonical_generation_algorithm_or_external_certificate_supplied": false,
+      "connectivity_and_isomorphism_quotient_completed": false,
+      "exact_dp_count_performed": true,
+      "fixed_bipartition_subproblem_exceeds_naive_in_repo_scale": true,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "p2781_local_family_witness_present": true,
+      "strict_nadsoliton_spectral_source_law_exported": false
+    },
+    "missing_criteria": [
+      "canonical_generation_algorithm_or_external_certificate_supplied",
+      "connectivity_and_isomorphism_quotient_completed",
+      "strict_nadsoliton_spectral_source_law_exported",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "Is a naive canonical enumerator for 16-node 4-regular graphs honest after P2781?",
+  "bipartite_regular_enumerator_scale_witness": {
+    "audited_subproblem": "fixed-bipartition labeled 8x8 0/1 matrices with all row/column sums equal to 4",
+    "column_permutation_count": 40320,
+    "connectivity_filter_not_yet_applied": true,
+    "count_row": {
+      "degree": 4,
+      "dp_cache_states": 75465,
+      "labeled_bipartite_regular_matrix_count": 116963796250,
+      "left_size": 8,
+      "matches_expected_regression_value": true,
+      "right_size": 8,
+      "row_mask_count": 70
+    },
+    "finite_obstruction_statement": "Even the fixed-bipartition 16-node 4-regular subproblem has 116,963,796,250 labeled candidates before connectivity and isomorphism quotienting.",
+    "graph_isomorphism_quotient_not_yet_applied": true,
+    "labeled_count_exceeds_one_billion": true,
+    "labeled_count_exceeds_one_hundred_billion": true,
+    "naive_enumerator_blocked_in_repo": true,
+    "row_column_relabeling_group_size": 1625702400,
+    "row_permutation_count": 40320
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_16node_4regular_enumerator_exported": false,
+      "canonical_geometry_source_exported": false,
+      "global_full_spectrum_geometry_theorem_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not start a naive full 16-node 4-regular enumeration inside the repo.  The next honest move is exactly one of: supply a canonical-generation theorem/tool certificate (for example a checked nauty/geng-style graph6 import with reproducible hashes) and then run the full-spectrum collision audit; or export a strict nadsoliton spectral action/source law that fixes the admissible class and target before testing.  Otherwise preserve the P2697-P2782 no-canonical-geometry/no-closure certificate.",
+    "reason": "The exact fixed-bipartition count is too large for a naive in-repo canonical enumerator, and no canonical-generation theorem/tool certificate is supplied.  No spectral source law or K/L_total coupling is exported."
+  },
+  "input_hashes": {
+    "P2781": "cfefa463dee7b1cd35656c91f92d3bbd58a24d431e1810f9d76005abe601537c"
+  },
+  "input_statuses": {
+    "P2781": "P2781_ENUMERATED_TWO_LAYER_C8_SPECTRUM_COLLISION_AUDIT_NO_CLOSURE"
+  },
+  "status": "P2782_BIPARTITE_REGULAR_ENUMERATOR_SCALE_OBSTRUCTION_NO_CLOSURE"
+}

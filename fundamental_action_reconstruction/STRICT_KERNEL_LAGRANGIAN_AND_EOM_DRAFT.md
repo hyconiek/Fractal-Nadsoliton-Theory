@@ -2188,3 +2188,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2778/S1728 max-symmetry Ltotal guard
 
 `P2778/S1728` adds no variational source term.  A concrete maximal-automorphism law on a declared 16-node class selects non-torus circulant labels rather than a sourced `K`/`L_total` geometry, so it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2779/S1729 spectral quotient Ltotal guard
+
+`P2779/S1729` adds no variational source term.  Full-spectrum uniqueness holds on the isomorphism quotient of the declared 16-node circulant class, but the class, target, and spectrum are not sourced by a nonproxy `K`/`L_total` variational principle; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2780/S1730 non-circulant spectral stress Ltotal guard
+
+`P2780/S1730` adds no variational source term.  Full-spectrum uniqueness survives one non-circulant 16-node 4-regular stress family, but the enlarged class, target, and spectrum are not sourced by a nonproxy `K`/`L_total` variational principle; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2781/S1731 enumerated two-layer spectral Ltotal guard
+
+`P2781/S1731` adds no variational source term.  Full-spectrum uniqueness survives exhaustive enumeration inside the two-`C8`-layer shift-pair model, but that model, its target, and its spectrum are not sourced by a nonproxy `K`/`L_total` variational principle; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2782/S1732 enumerator-scale Ltotal guard
+
+`P2782/S1732` adds no variational source term.  The exact fixed-bipartition enumerator count is a scale obstruction to naive exhaustive graph search, not a sourced `K`/`L_total` spectral action; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2783/S1733 seven-class quotient Ltotal guard
+
+`P2783/S1733` adds no variational source term.  The seven P2781 representatives are pairwise nonisomorphic and spectrally distinct, but this remains a local quotient-integrity certificate rather than a sourced nonproxy `K`/`L_total` spectral action; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
