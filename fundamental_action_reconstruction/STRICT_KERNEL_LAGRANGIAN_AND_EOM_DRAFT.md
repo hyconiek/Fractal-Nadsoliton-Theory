@@ -2224,3 +2224,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2787/S1737 small-pipeline Ltotal guard
 
 `P2787/S1737` adds no variational source term.  The exact generator/quotient/charpoly pipeline works on the complete 8-node 4-regular class, but this is a computational pipeline validation rather than a sourced nonproxy `K`/`L_total` spectral action or a full 16-node canonical generator.
+
+## P2788/S1738 complement-duality Ltotal guard
+
+`P2788/S1738` adds no variational source term.  Exact regular-complement characteristic-polynomial identities validate algebraic consistency of existing spectral data, but complement duality is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2789/S1739 orbit-stabilizer Ltotal guard
+
+`P2789/S1739` adds no variational source term.  Exact automorphism and orbit-stabilizer arithmetic validates finite quotient bookkeeping for existing graph witnesses, but it is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2790/S1740 eighth-witness Ltotal guard
+
+`P2790/S1740` adds no variational source term.  The eighth non-isomorphic 16-node graph proves the seven-local graph set is incomplete, but incompleteness evidence is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2791/S1741 eight-class lower-bound Ltotal guard
+
+`P2791/S1741` adds no variational source term.  Exact disjoint-orbit lower-bound arithmetic strengthens finite graph bookkeeping, but a labeled-orbit lower bound is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2792/S1742 C16 circulant-subclass Ltotal guard
+
+`P2792/S1742` adds no variational source term.  Complete enumeration of the named `C16` two-jump circulant subclass strengthens finite graph bookkeeping, but a named-subclass generator is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.

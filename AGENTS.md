@@ -680,3 +680,33 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2787 validates the self-contained generator/quotient/exact-charpoly pipeline on all connected 8-node 4-regular simple graphs: 19,355 labeled connected candidates, 6 isomorphism classes, and zero exact charpoly collisions across 15 quotient pairs.
 - This is a complete small-class certificate only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
 - Do not promote this small-pipeline witness to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current complement-duality exact spectral guardrail (P2788/S1738, 2026-06-16)
+
+- P2788 verifies exact regular-complement degree and adjacency/Laplacian/signless-Laplacian characteristic-polynomial complement identities for all 13 audited representatives: the complete P2787 8-node quotient plus the seven local P2786/P2785 16-node representatives.
+- This is a theorem-backed algebraic consistency certificate for existing witnesses only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote complement-duality consistency to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current orbit-stabilizer exact quotient guardrail (P2789/S1739, 2026-06-16)
+
+- P2789 verifies exact automorphism/orbit-stabilizer quotient arithmetic for the complete P2787 8-node quotient: all six stored labeled-member counts match `8! / |Aut(G)|` and sum to 19,355.  It also records exact stabilizer and `S_16` orbit sizes for the seven local P2786/P2785 16-node representatives.
+- This is a finite-group bookkeeping certificate for existing witnesses only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote orbit-stabilizer consistency to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current eighth 16-node witness no-exhaustion guardrail (P2790/S1740, 2026-06-16)
+
+- P2790 constructs one explicit connected 16-node 4-regular graph with 32 edges, automorphism group size 2, and exact spectral data; pairwise isomorphism checks show it is non-isomorphic to all seven local P2786/P2785 representatives.
+- This proves the seven-local representative set is not exhaustive, but it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote the eighth-witness no-exhaustion result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current eight-class orbit lower-bound guardrail (P2791/S1741, 2026-06-16)
+
+- P2791 verifies that the seven P2786/P2785 local representatives plus the P2790 eighth witness are pairwise non-isomorphic across all 28 pairs and computes an exact disjoint labeled-orbit lower bound of 13,463,256,807,000 under `S_16`.
+- This strengthens no-exhaustion bookkeeping, but it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote the eight-class lower bound to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current C16 two-jump circulant subclass guardrail (P2792/S1742, 2026-06-16)
+
+- P2792 fully enumerates the named `C16` two-jump circulant 4-regular subclass: 21 raw jump pairs, 18 connected cases, 5 isomorphism classes, and all 5 connected classes represented among the P2786 seven local representatives.
+- This is a complete named-subclass certificate only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote the circulant-subclass exhaustion result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
