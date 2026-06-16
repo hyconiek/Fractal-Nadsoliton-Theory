@@ -2272,3 +2272,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2799/S1749 local girth>=4 spectral-orbit Ltotal guard
 
 `P2799/S1749` adds no variational source term.  Exact spectral/orbit bookkeeping for six local girth>=4 witnesses does not import the external graph list, source a spectral action, or license any `K`/`L_total` promotion.
+
+## P2800/S1750 girth>=4 shortcode import Ltotal guard
+
+`P2800/S1750` adds no variational source term.  A repository-local absence/readiness manifest for the missing 16,828-class graph-list import cannot source a spectral action or license any `K`/`L_total` promotion.
+
+## P2801/S1751 girth>=4 shortcode network fetch Ltotal guard
+
+`P2801/S1751` adds no variational source term.  A network fetch attempt, even if it later imports a graph list, is not a spectral action/source law and cannot license any `K`/`L_total` promotion without the separate quotient/spectral and coupling theorems.
+
+## P2802/S1752 girth>=4 fetch obstruction Ltotal guard
+
+`P2802/S1752` adds no variational source term.  Classifying the failed fetch as an access-layer blocker is not a spectral action/source law and cannot license any `K`/`L_total` promotion without an actual graph-list import plus separate quotient/spectral and coupling theorems.

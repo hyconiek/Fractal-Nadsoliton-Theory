@@ -2903,3 +2903,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2799/S1749 local girth>=4 spectral-orbit table certificate
 
 `P2799/S1749` computes exact spectral/orbit/complement bookkeeping for precisely the six current P2798 girth>=4 witnesses.  Each row is a 16-node 4-regular graph with an 11-regular complement; automorphism counts match the complement automorphism counts; adjacency, Laplacian, signless-Laplacian, and complement characteristic polynomials are recorded exactly.  This strengthens the local filtered witness table, but it still does not import the external 16,828-class shortcode graph list, does not provide full graph-list provenance, and does not export a strict spectral source law or `K`/`L_total` coupling.
+
+## P2800/S1750 girth>=4 shortcode import absence manifest
+
+`P2800/S1750` audits whether the actual `16,828`-class girth>=4 shortcode/graph-list artifact is already present locally after the P2799 six-row table.  The finite repository scan finds no candidate file with `16,828` graph6-like rows, so the required subtarget import remains absent and the gap remains `16,822` beyond the six local rows.  This is an import-readiness/absence certificate only; it does not import the shortcode list, does not complete the girth>=4 quotient, and does not export a strict spectral source law or `K`/`L_total` coupling.
+
+## P2801/S1751 girth>=4 shortcode network fetch attempt certificate
+
+`P2801/S1751` executes the enabled-internet fetch attempt for the Meringer `16_4_4` girth>=4 shortcode/graph-list route and records HTTP/transport outcomes, byte/hash metadata where available, and row-count validation.  In the current run no fetched body validates as the required `16,828`-row graph list, so the subtarget import remains blocked.  This is a network-attempt/provenance certificate only; it does not complete the girth>=4 quotient, does not export a strict spectral source law, and does not license `K`/`L_total` coupling.
+
+## P2802/S1752 girth>=4 fetch obstruction taxonomy certificate
+
+`P2802/S1752` deterministically classifies the P2801 network probe matrix: all `24` attempted `16_4_4` URL routes are accounted for by HTTPS tunnel `403` or HTTP `403` outcomes before any graph-list body is obtained; the maximum graph6-like row count is `0`, and no `16,828`-row artifact is imported.  This is an access-layer/source-route obstruction certificate only; it does not import the graph list, complete the girth>=4 quotient, export a strict spectral source law, or license `K`/`L_total` coupling.

@@ -752,3 +752,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2799 computes exact spectral/orbit/complement bookkeeping for the six current P2798 girth>=4 witnesses, including exact characteristic polynomials, automorphism counts, orbit sizes, and 11-regular complement checks.
 - This is a local filtered witness-table certificate only; it is not the linked 16,828-class shortcode graph-list import, not full `graph6` provenance, and not a strict spectral source law.
 - Do not promote the local girth>=4 spectral/orbit table to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.
+
+## Current girth>=4 shortcode import absence guardrail (P2800/S1750, 2026-06-16)
+
+- P2800 scans the repository for a local `16,828`-row girth>=4 shortcode/graph-list artifact after P2799 and finds no such artifact; the current evidence remains a six-row local girth>=4 table.
+- This is an absence/readiness manifest only; it is not the linked 16,828-class shortcode graph-list import, not a completed girth>=4 quotient, and not a strict spectral source law.
+- Do not promote P2800 to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is adding/fetching the actual graph-list artifact with hash and row-count provenance, importing the full generator/toolchain, or exporting a strict spectral source law.
+
+## Current girth>=4 shortcode network fetch attempt guardrail (P2801/S1751, 2026-06-16)
+
+- P2801 executes the internet-enabled fetch attempt for the linked Meringer `16_4_4` girth>=4 shortcode/graph-list route and records URL-level HTTP/transport outcomes plus row-count validation.
+- The current run does not validate/import a `16,828`-row graph list, so the girth>=4 subtarget quotient remains unexecuted.
+- Do not promote P2801 to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move requires a working source route/manual upload/mirror with hash and row-count validation, the full generator/toolchain import, or a strict spectral source law.
+
+## Current girth>=4 fetch obstruction taxonomy guardrail (P2802/S1752, 2026-06-16)
+
+- P2802 classifies the P2801 network probe matrix as an access-layer/source-route blocker: all 24 attempted URL routes fail by HTTPS tunnel `403` or HTTP `403` before any graph-list body is obtained.
+- No `16,828`-row graph list is imported, no girth>=4 quotient is executed, and no strict spectral source law is exported.
+- Do not continue guessed-filename replay as the primary strategy.  A next admissible move requires a working source route/manual upload/mirror/source-side access fix, an installed full generator/toolchain, or a strict spectral source law.
