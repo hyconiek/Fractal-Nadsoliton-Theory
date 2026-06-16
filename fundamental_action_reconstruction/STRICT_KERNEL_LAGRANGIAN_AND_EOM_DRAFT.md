@@ -2308,3 +2308,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2808/S1758 canonical digest Ltotal guard
 
 `P2808/S1758` adds no variational term and no Euler-Lagrange source.  Canonical `pynauty` certificate uniqueness over the Meringer girth>=4 list strengthens graph provenance but cannot by itself promote `K`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+
+## P2809/S1759 source-law coupling Ltotal guard
+
+`P2809/S1759` adds no variational term to `L_total`.  It checks the now-canonical Meringer quotient against current source-law/coupling artifacts and finds no exported theorem that maps the quotient into a strict spectral action/source functional or a `K`/`L_total` term.  The next admissible Lagrangian move must supply one explicit source functional and typed coupling, not reuse graph provenance as dynamics.
+
+## P2810/S1760 spectral-only source Ltotal guard
+
+`P2810/S1760` adds no `L_total` term.  It rules out a whole candidate family: any variational/source term depending only on the adjacency/complement spectral-pair data is too coarse for the P2808 canonical quotient because P2805-certified non-isomorphic graphs remain collapsed.  A future Lagrangian candidate must add a strictly richer typed coupling ingredient, not reuse spectral-pair data alone.
+
+## P2811/S1761 local motif source Ltotal guard
+
+`P2811/S1761` adds no variational term to `L_total`.  The exact local motif/distance refinement improves the graph-source carrier candidate but still leaves collisions below the P2808 canonical quotient and exports no typed variational coupling.  Future Lagrangian work must first separate the remaining refined collisions or supply an explicit graph-to-`K`/`L_total` source theorem.
+
+## P2812/S1762 two-WL source Ltotal guard
+
+`P2812/S1762` adds no variational term to `L_total`.  The 2-WL refinement narrows the graph-source carrier obstruction but still leaves collision pairs and exports no typed graph-to-`K`/`L_total` coupling theorem.  Future Lagrangian work must either separate the remaining pairs with a stronger invariant or supply an explicit source theorem independently.

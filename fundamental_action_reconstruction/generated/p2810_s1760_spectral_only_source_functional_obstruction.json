@@ -1,0 +1,209 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_spectral_pair_only_source_functional_obstruction": true,
+    "accepted_as_strict_source_law_or_coupling": false,
+    "facts": {
+      "canonical_quotient_count_is_16828": true,
+      "quotient_defect_positive": true,
+      "spectral_collision_graphs_are_nonisomorphic_under_p2805": true,
+      "spectral_pair_quotient_is_smaller_than_canonical": true,
+      "strict_spectral_source_law_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "missing_for_promotion": [
+      "strict_spectral_source_law_exported",
+      "typed_coupling_to_K_or_Ltotal_exported"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "If continuing this lane, add exactly one strictly richer invariant/coupling ingredient beyond the adjacency/complement spectral-pair data, such as an explicit automorphism-weighted local motif functional or a typed graph-to-K/L_total variational term, and rerun the obstruction/acceptance matrix.  Do not replay spectral-pair-only functionals as source-law candidates.",
+    "reason": "P2810 proves a bounded finite obstruction for the first explicit post-P2809 candidate class: any source/action functional depending only on the P2804 adjacency/complement characteristic-polynomial pair collapses 16,828 P2808 canonical classes to 16,211 spectral-pair classes.  P2805 verifies the residual collision members are non-isomorphic, so the collapse is not duplicate bookkeeping.  Therefore spectral-pair-only data cannot be the missing strict source law or K/L_total coupling."
+  },
+  "input_hashes": {
+    "P2804": "c7b28e5d8fb141b4856326a0ed846b4e88b32b39fb8cc38df7dd5d037595ca71",
+    "P2805": "3c82be1a9d493d046867daa4f3389328160c520a2b997fd2a3d399e87e2bbf69",
+    "P2808": "e979efca0ee2e683395e6641c76f239f5fc9799537a01290b2638055ba6197f1",
+    "P2809": "be257eb221717022b318b23b79e207cea0a6d7bd56ab705edc1aad9481c5fb0b"
+  },
+  "input_statuses": {
+    "P2804": "P2804_GIRTH4_SPECTRAL_COMPLEMENT_QUOTIENT_AUDIT_NO_ISOMORPHISM_NO_SOURCE_LAW_NO_CLOSURE",
+    "P2805": "P2805_GIRTH4_SPECTRAL_COLLISION_ISOMORPHISM_REFINEMENT_NO_CANONICAL_LABELS_NO_SOURCE_LAW_NO_CLOSURE",
+    "P2808": "P2808_PYNAUTY_CANONICAL_DIGEST_MANIFEST_NO_SOURCE_LAW_NO_CLOSURE",
+    "P2809": "P2809_CANONICAL_QUOTIENT_SOURCE_LAW_COUPLING_AUDIT_BOUNDED_NO_SOURCE_LAW_NO_CLOSURE"
+  },
+  "spectral_only_obstruction_matrix": {
+    "candidate_class": "F(G)=Phi(chi_A_G, chi_A_complement_G), i.e. any spectral source/action functional factoring only through the P2804 adjacency/complement characteristic-polynomial pair",
+    "canonical_certificate_class_count_from_p2808": 16828,
+    "component_size_histogram_inside_collisions": {
+      "1": 1195
+    },
+    "formal_obstruction": {
+      "but_p2805_refinement": "finds no isomorphic duplicates inside those collision classes",
+      "if_source_functional_factors_through_spectral_pair": "then it is constant on each P2804 spectral-pair collision class",
+      "therefore": "spectral-pair-only functionals cannot injectively address the P2808 canonical quotient and cannot by themselves be the missing strict graph-source law/coupling"
+    },
+    "p2805_negative_isomorphism_rejections_inside_collisions": 660,
+    "p2805_positive_isomorphism_matches_inside_collisions": 0,
+    "p2809_no_export_input_status": "P2809_CANONICAL_QUOTIENT_SOURCE_LAW_COUPLING_AUDIT_BOUNDED_NO_SOURCE_LAW_NO_CLOSURE",
+    "quotient_defect_canonical_minus_spectral_pair": 617,
+    "sample_collision_witnesses": [
+      {
+        "adjacency_charpoly_sha256": "171e559b7da7819315ca7845cf514bf0cda786a6939e175ee1ad2d6a038140fa",
+        "complement_charpoly_sha256": "2b158773483dd82f9ac4c11d1443f740d7ea6af5d6a91c9c0170eb8c8b8e112e",
+        "component_sizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "components_0_based": [
+          [
+            6029
+          ],
+          [
+            7680
+          ],
+          [
+            11061
+          ],
+          [
+            11112
+          ]
+        ],
+        "input_size": 4,
+        "isomorphism_component_count": 4,
+        "negative_isomorphism_rejections": 6,
+        "pairwise_checks_against_component_representatives": 6,
+        "positive_isomorphism_matches": 0
+      },
+      {
+        "adjacency_charpoly_sha256": "39d3fddf3bacda37f39343cfd370724142297d36e768d77b326aadb9262688fa",
+        "complement_charpoly_sha256": "aa6edb7fdd0f880e0b4cb02d6a2bf6426c3fef7190980f5468669a3ecc6ba138",
+        "component_sizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "components_0_based": [
+          [
+            319
+          ],
+          [
+            509
+          ],
+          [
+            1824
+          ],
+          [
+            2771
+          ]
+        ],
+        "input_size": 4,
+        "isomorphism_component_count": 4,
+        "negative_isomorphism_rejections": 6,
+        "pairwise_checks_against_component_representatives": 6,
+        "positive_isomorphism_matches": 0
+      },
+      {
+        "adjacency_charpoly_sha256": "9770fa3af45cdf0a538c31eafcf7e0f278a020ea60ee6def2151772d7ffb7d76",
+        "complement_charpoly_sha256": "58c89d613c62f1113d3482bed7a5d40466383ce4f07ad775753e83102b7d0188",
+        "component_sizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "components_0_based": [
+          [
+            15527
+          ],
+          [
+            15529
+          ],
+          [
+            16701
+          ],
+          [
+            16765
+          ]
+        ],
+        "input_size": 4,
+        "isomorphism_component_count": 4,
+        "negative_isomorphism_rejections": 6,
+        "pairwise_checks_against_component_representatives": 6,
+        "positive_isomorphism_matches": 0
+      },
+      {
+        "adjacency_charpoly_sha256": "cfe937e6483d4dc8f8a843a0750da3da88371a4920a0feafe1d9fd861d7de472",
+        "complement_charpoly_sha256": "1264cf56289bd726843291f57d8e6463c486a96f4689610753d9f88bf49a4d2d",
+        "component_sizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "components_0_based": [
+          [
+            1803
+          ],
+          [
+            1913
+          ],
+          [
+            4681
+          ],
+          [
+            5058
+          ]
+        ],
+        "input_size": 4,
+        "isomorphism_component_count": 4,
+        "negative_isomorphism_rejections": 6,
+        "pairwise_checks_against_component_representatives": 6,
+        "positive_isomorphism_matches": 0
+      },
+      {
+        "adjacency_charpoly_sha256": "138d034504808c9d88fd7e751f996b7c7e1b902e0386cb3ddd5dfccc1ce13fc5",
+        "complement_charpoly_sha256": "94841dd4b2e6e3872bbf4ea1444c13007bc6e425978d904c39e853aa7aa65b4c",
+        "component_sizes": [
+          1,
+          1,
+          1
+        ],
+        "components_0_based": [
+          [
+            15461
+          ],
+          [
+            15496
+          ],
+          [
+            16600
+          ]
+        ],
+        "input_size": 3,
+        "isomorphism_component_count": 3,
+        "negative_isomorphism_rejections": 3,
+        "pairwise_checks_against_component_representatives": 3,
+        "positive_isomorphism_matches": 0
+      }
+    ],
+    "spectral_pair_class_count_from_p2804": 16211,
+    "spectral_pair_collision_class_count": 578,
+    "spectral_pair_collision_graph_count": 1195,
+    "spectral_pair_singleton_class_count": 15633,
+    "top20_indistinguishable_pair_count_sample": 72
+  },
+  "status": "P2810_SPECTRAL_PAIR_ONLY_SOURCE_FUNCTIONAL_OBSTRUCTION_NO_STRICT_SOURCE_LAW_NO_CLOSURE"
+}

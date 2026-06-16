@@ -806,3 +806,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2808 runs after `pynauty` is available and records a review-safe canonical-certificate digest for all `16,828` validated Meringer girth>=4 graphs: unique certificate hashes, row-level CSV hash, ordered hash-stream digest, and automorphism-size histogram.
 - Treat P2808 as canonical graph-list provenance only.  It does not export a strict spectral source law, a coupling theorem from the graph quotient to `K`/`L_total`, role transfer, bridge closure, selector closure, or ToE closure.
 - The next admissible move is a narrow source-law/coupling admissibility audit for the canonical graph quotient; if no exported strict coupling exists, preserve a bounded no-source-law certificate.
+
+## Current canonical quotient no-source-law guardrail (P2809/S1759, 2026-06-16)
+
+- P2809 audits the P2808 canonical `16,828`-class Meringer girth>=4 quotient for an already exported strict spectral source/action law or explicit coupling theorem to `K`/`L_total`.
+- The finite repository candidate scan finds no accepted source-law/coupling export; P2809 is therefore a bounded no-source-law certificate, not canonical geometry closure.
+- Do not promote P2808/P2809 graph provenance to selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE.  A next admissible move must construct exactly one explicit candidate strict spectral source functional plus typed coupling and falsifiable acceptance matrix, or preserve the no-source-law boundary.
+
+## Current spectral-pair-only source obstruction guardrail (P2810/S1760, 2026-06-16)
+
+- P2810 proves a finite obstruction for any source/action functional factoring only through the P2804 adjacency/complement characteristic-polynomial pair: `16,828` P2808 canonical classes collapse to `16,211` spectral-pair classes, and P2805 verifies the collapsed collision members are non-isomorphic.
+- Do not replay spectral-pair-only functionals as strict source-law or `K`/`L_total` coupling candidates.  This obstruction is not selector closure, bridge closure, role transfer, role-bearing `L_total`, or ToE closure.
+- A next admissible move in this lane must add exactly one strictly richer typed ingredient beyond spectral-pair data, such as an automorphism-weighted local motif functional or an explicit graph-to-`K`/`L_total` variational coupling, and test it with a falsifiable obstruction/acceptance matrix.
+
+## Current local motif-refined source candidate guardrail (P2811/S1761, 2026-06-16)
+
+- P2811 adds exact local motif/distance profiles to the P2810 spectral-pair data, improving the quotient from `16,211` to `16,691` classes and reducing the defect from `617` to `137`.
+- The refinement still leaves `132` collision classes covering `269` graphs, so it does not export a complete canonical source carrier, strict spectral source law, `K`/`L_total` coupling, selector closure, bridge closure, role transfer, or ToE closure.
+- A next admissible move should target the remaining refined collisions with exactly one additional typed invariant, preferably automorphism/orbit-aware or canonical-label-derived, and keep all closure claims blocked until separation plus typed variational coupling are actually exported.
+
+## Current two-WL refined collision guardrail (P2812/S1762, 2026-06-16)
+
+- P2812 applies stable 2-WL ordered-pair color histograms to the `269` P2811 residual-collision graphs, improving the quotient from `16,691` to `16,749` classes and reducing the remaining defect from `137` to `79`.
+- The refinement still leaves `79` collision classes covering `158` graphs, so it does not export a complete canonical source carrier, strict spectral source law, `K`/`L_total` coupling, selector closure, bridge closure, role transfer, or ToE closure.
+- A next admissible move should target those remaining pairs with exactly one stronger invariant, such as 3-WL/k-WL, exact automorphism-orbit partition, or canonical-label-derived orbit signature, while preserving all closure blocks until typed variational coupling is exported.
