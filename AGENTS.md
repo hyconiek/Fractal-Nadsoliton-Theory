@@ -830,3 +830,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2812 applies stable 2-WL ordered-pair color histograms to the `269` P2811 residual-collision graphs, improving the quotient from `16,691` to `16,749` classes and reducing the remaining defect from `137` to `79`.
 - The refinement still leaves `79` collision classes covering `158` graphs, so it does not export a complete canonical source carrier, strict spectral source law, `K`/`L_total` coupling, selector closure, bridge closure, role transfer, or ToE closure.
 - A next admissible move should target those remaining pairs with exactly one stronger invariant, such as 3-WL/k-WL, exact automorphism-orbit partition, or canonical-label-derived orbit signature, while preserving all closure blocks until typed variational coupling is exported.
+
+## Current three-WL carrier-separation guardrail (P2813/S1763, 2026-06-16)
+
+- P2813 applies stable 3-WL ordered-triple color histograms to the `158` P2812 residual-collision graphs; the quotient remains `16,749`, with `79` collision classes covering `158` graphs.
+- This is a bounded obstruction for histogram-level 3-WL data: it does not export a complete canonical source carrier, strict spectral source law, typed coupling to `K`/`L_total`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+- The next admissible move should add exactly one different typed ingredient targeted at the surviving pairs, preferably exact automorphism/orbit partition or canonical-label-derived orbit signature, while preserving all closure blocks until separation plus typed variational coupling are exported.
+
+## Current exact automorphism-orbit residual guardrail (P2814/S1764, 2026-06-16)
+
+- P2814 applies exact automorphism-group/order and vertex-orbit partition signatures to the `158` P2813 residual-collision graphs; the search is untruncated and improves the quotient from `16,749` to `16,771`, but `57` collision classes covering `114` graphs remain.
+- Automorphism/orbit data therefore do not export a complete canonical source carrier, strict spectral source law, typed coupling to `K`/`L_total`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+- The next admissible move should add exactly one non-automorphism typed ingredient targeted at the surviving `57` pairs, such as a small-subgraph extension/deletion response profile, while preserving all closure blocks until separation plus typed variational coupling are exported.
+
+## Current edge-toggle response residual guardrail (P2815/S1765, 2026-06-16)
+
+- P2815 applies a single-edge deletion/addition response profile to the P2814 residual-collision graphs, using P2811 spectral+local-motif digests on toggled graphs; it reaches the `16,828` canonical target with zero residual collision classes.
+- This is complete finite carrier-separation evidence only: it does not export a strict spectral source law, typed coupling to `K`/`L_total`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+- The next admissible move is a separate source-law/coupling acceptance audit with one explicit graph-source functional plus one typed graph-to-`K` or graph-to-`L_total` map; do not continue carrier-refinement replay without a new source-law question.

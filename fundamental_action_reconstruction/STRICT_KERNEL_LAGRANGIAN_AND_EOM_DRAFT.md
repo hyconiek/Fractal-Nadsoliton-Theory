@@ -2324,3 +2324,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2812/S1762 two-WL source Ltotal guard
 
 `P2812/S1762` adds no variational term to `L_total`.  The 2-WL refinement narrows the graph-source carrier obstruction but still leaves collision pairs and exports no typed graph-to-`K`/`L_total` coupling theorem.  Future Lagrangian work must either separate the remaining pairs with a stronger invariant or supply an explicit source theorem independently.
+
+## P2813/S1763 three-WL source Ltotal guard
+
+`P2813/S1763` adds no variational term to `L_total`.  The 3-WL refinement supplies a finite obstruction: histogram-level 3-WL data do not improve the P2812 residual pairs.  It does not define an action functional, source equation, Euler-Lagrange contribution, or typed graph-to-`K`/`L_total` coupling.  A different separating typed ingredient plus separate source-law acceptance audit is required before any Lagrangian promotion.
+
+## P2814/S1764 automorphism-orbit Ltotal guard
+
+`P2814/S1764` adds no variational term to `L_total`.  The exact automorphism/orbit audit improves the P2813 carrier obstruction but still leaves `57` collision pairs covering `114` graphs.  It does not define an action functional, source equation, Euler-Lagrange contribution, or typed graph-to-`K`/`L_total` coupling.
+
+## P2815/S1765 edge-toggle response Ltotal guard
+
+`P2815/S1765` adds no variational term to `L_total`.  The edge-toggle response profile separates the finite carrier, but it remains a graph-carrier diagnostic, not an action functional, source equation, Euler-Lagrange contribution, or typed graph-to-`K`/`L_total` coupling.

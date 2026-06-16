@@ -2955,3 +2955,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2812/S1762 two-WL refined collision audit
 
 `P2812/S1762` adds exactly one stronger typed invariant to the P2811 residual collisions: stable 2-dimensional Weisfeiler-Lehman ordered-pair color histograms.  It is applied only to the `269` P2811 collision graphs, improves the quotient from `16,691` to `16,749` classes, and reduces the remaining defect from `137` to `79`; however `79` two-WL collision classes covering `158` graphs remain.  This is refinement evidence, not a complete canonical source carrier, strict spectral source law, or `K`/`L_total` coupling.
+
+## P2813/S1763 three-WL refined collision audit
+
+`P2813/S1763` adds exactly one stronger typed invariant to the P2812 residual collisions: stable 3-dimensional Weisfeiler-Lehman ordered-triple color histograms.  It is applied only to the `158` P2812 collision graphs and does not separate the remaining finite carrier: the quotient stays at `16,749`, with `79` collision classes covering `158` graphs.  This is a bounded obstruction for histogram-level 3-WL data, not a strict spectral source law or a `K`/`L_total` coupling theorem.
+
+## P2814/S1764 exact automorphism-orbit residual audit
+
+`P2814/S1764` adds exactly one different typed ingredient after P2813: exact automorphism-group/order and vertex-orbit partition signatures on the `158` residual-collision graphs.  The search is untruncated, but the quotient improves from `16,749` to `16,771`, reducing the defect from `79` to `57`; however `57` collision classes covering `114` graphs remain.  This is a bounded partial-refinement result for automorphism/orbit data, not a strict spectral source law or a `K`/`L_total` coupling theorem.
+
+## P2815/S1765 edge-toggle response residual audit
+
+`P2815/S1765` adds exactly one non-automorphism typed ingredient after P2814: the single-edge deletion/addition response profile, using P2811 spectral+local-motif digests on toggled graphs and applying it only to the P2814 residual-collision set.  It separates the finite carrier by reaching the `16,828` canonical target with zero residual collision classes.  This is complete carrier separation evidence only; it is not a strict spectral source law or a `K`/`L_total` coupling theorem.
