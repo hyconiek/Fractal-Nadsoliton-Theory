@@ -2284,3 +2284,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2802/S1752 girth>=4 fetch obstruction Ltotal guard
 
 `P2802/S1752` adds no variational source term.  Classifying the failed fetch as an access-layer blocker is not a spectral action/source law and cannot license any `K`/`L_total` promotion without an actual graph-list import plus separate quotient/spectral and coupling theorems.
+
+## P2803/S1753 Meringer SCD import/decode Ltotal guard
+
+`P2803/S1753` adds no variational source term.  A validated 16,828-entry graph-list import is necessary computational provenance for the girth>=4 lane, but it is not yet a spectral action/source law and cannot license `K`/`L_total` promotion without a separate exact quotient/spectral audit and coupling theorem.
+
+## P2804/S1754 spectral/complement quotient Ltotal guard
+
+`P2804/S1754` adds no variational source term.  Exact characteristic-polynomial quotient data over the validated girth>=4 graph import is spectral evidence, but without a strict source law and coupling theorem it cannot promote `K`/`L_total`, role transfer, bridge closure, or ToE closure.
+
+## P2805/S1755 spectral-collision isomorphism Ltotal guard
+
+`P2805/S1755` adds no variational source term.  Duplicate-free isomorphism refinement of residual spectral collisions strengthens graph-list provenance, but without canonical labels, a strict source law, and a coupling theorem it cannot promote `K`/`L_total`, role transfer, bridge closure, or ToE closure.

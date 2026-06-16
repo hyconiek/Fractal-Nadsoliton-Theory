@@ -770,3 +770,21 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2802 classifies the P2801 network probe matrix as an access-layer/source-route blocker: all 24 attempted URL routes fail by HTTPS tunnel `403` or HTTP `403` before any graph-list body is obtained.
 - No `16,828`-row graph list is imported, no girth>=4 quotient is executed, and no strict spectral source law is exported.
 - Do not continue guessed-filename replay as the primary strategy.  A next admissible move requires a working source route/manual upload/mirror/source-side access fix, an installed full generator/toolchain, or a strict spectral source law.
+
+## Current Meringer SCD import/decode validation guardrail (P2803/S1753, 2026-06-16)
+
+- P2803 validates the supplied local `16_4_4.scd` artifact: byte size `150489`, SHA256 `160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88`, exactly `16,828` decoded unique adjacency records, and all decoded records are simple symmetric 4-regular graphs with no triangles.
+- This resolves the P2800-P2802 local import/access blocker only at the graph-list import/decode layer.  It does not complete quotient/charpoly/complement/orbit auditing and does not export a strict spectral source law.
+- Do not promote P2803 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is the exact quotient/charpoly/complement/orbit audit over the validated 16,828 decoded graphs.
+
+## Current girth>=4 spectral/complement quotient guardrail (P2804/S1754, 2026-06-16)
+
+- P2804 computes exact integer adjacency and complement characteristic-polynomial quotient data over all `16,828` decoded Meringer girth>=4 graphs validated by P2803, including collision classes and adjacency/complement pair classes.
+- This is not a canonical isomorphism quotient and not a strict spectral source law; spectral collisions and missing source/coupling theorems remain blockers.
+- Do not promote P2804 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is canonical-label/isomorphism refinement of the residual spectral collision classes, or a separate strict source-law/coupling theorem.
+
+## Current girth>=4 spectral-collision isomorphism refinement guardrail (P2805/S1755, 2026-06-16)
+
+- P2805 refines all `578` non-singleton P2804 adjacency/complement spectral pair classes (`1,195` graphs) by exact backtracking graph-isomorphism checks and finds `0` duplicate/isomorphic matches inside those collisions, yielding `16,828` duplicate-free graph-isomorphism records under this bounded refinement.
+- This is still not a canonical-label dataset and not a strict spectral source law; missing canonical labels, source/coupling theorem, and `K`/`L_total` bridge remain blockers.
+- Do not promote P2805 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is a reproducible canonical-label dataset/cross-check, or a separate strict source-law/coupling audit after such labels exist.

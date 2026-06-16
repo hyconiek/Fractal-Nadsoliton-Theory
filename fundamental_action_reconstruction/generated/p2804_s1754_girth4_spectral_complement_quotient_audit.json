@@ -1,0 +1,1142 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_isomorphism_quotient": false,
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_exact_spectral_complement_quotient_audit": true,
+    "accepted_as_full_16node_canonical_generator_certificate": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_strict_spectral_source_law": false,
+    "blocker": "P2804 computes exact spectral/complement quotient data over the validated 16,828 graph import, but spectral collisions remain and no canonical isomorphism quotient, strict source law, or K/L_total coupling theorem is exported.",
+    "facts": {
+      "adjacency_charpoly_rows_processed": true,
+      "canonical_isomorphism_quotient_completed": false,
+      "complement_charpoly_rows_processed": true,
+      "complement_degree_is_11_for_all_vertices": true,
+      "decoded_graph_count_is_16828": true,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "p2803_validated_import_decode_input": true,
+      "pair_quotient_rows_processed": true,
+      "strict_spectral_source_law_exported": false
+    },
+    "missing_criteria": [
+      "canonical_isomorphism_quotient_completed",
+      "strict_spectral_source_law_exported",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "What exact adjacency/complement characteristic-polynomial quotient and collision matrix is induced by the validated 16,828-entry Meringer girth>=4 graph import?",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_16node_generator_certified": false,
+      "canonical_geometry_source_exported": false,
+      "canonical_isomorphism_quotient_completed": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Treat P2804 as an exact spectral/complement quotient witness, not canonical geometry.  The next proof-grade move is a canonical isomorphism quotient or collision-refinement audit for the residual spectral collision classes: run a graph-isomorphism/canonical-label toolchain on each non-singleton adjacency-complement pair class, record canonical labels, automorphism/group-size data if available, and produce a collision-resolved quotient table.  Do not promote the spectral quotient itself to a strict spectral source law, K/L_total coupling, role transfer, bridge closure, selector closure, or ToE closure.",
+    "reason": "P2804 computes exact spectral/complement quotient data over the validated 16,828 graph import, but spectral collisions remain and no canonical isomorphism quotient, strict source law, or K/L_total coupling theorem is exported."
+  },
+  "girth4_spectral_complement_quotient_audit": {
+    "adjacency_complement_pair_quotient": {
+      "class_count": 16211,
+      "collision_class_count": 578,
+      "max_class_size": 4,
+      "singleton_class_count": 15633,
+      "top_collision_classes": [
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            366,
+            -46,
+            -2008,
+            564,
+            5677,
+            -2418,
+            -7991,
+            4292,
+            4836,
+            -2912,
+            -832,
+            512,
+            0
+          ],
+          "adjacency_charpoly_sha256": "171e559b7da7819315ca7845cf514bf0cda786a6939e175ee1ad2d6a038140fa",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            122,
+            4534,
+            7222,
+            -11258,
+            -35537,
+            -2602,
+            57575,
+            30912,
+            -34435,
+            -25256,
+            5195,
+            4086,
+            -55
+          ],
+          "complement_charpoly_sha256": "2b158773483dd82f9ac4c11d1443f740d7ea6af5d6a91c9c0170eb8c8b8e112e",
+          "example_indices_0_based": [
+            6029,
+            7680,
+            11061,
+            11112
+          ],
+          "size": 4
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            350,
+            0,
+            -1760,
+            0,
+            4417,
+            0,
+            -5280,
+            0,
+            2304,
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "39d3fddf3bacda37f39343cfd370724142297d36e768d77b326aadb9262688fa",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            106,
+            4552,
+            8436,
+            -5880,
+            -29895,
+            -15224,
+            27756,
+            25688,
+            -8924,
+            -12752,
+            688,
+            2112,
+            0
+          ],
+          "complement_charpoly_sha256": "aa6edb7fdd0f880e0b4cb02d6a2bf6426c3fef7190980f5468669a3ecc6ba138",
+          "example_indices_0_based": [
+            319,
+            509,
+            1824,
+            2771
+          ],
+          "size": 4
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            382,
+            -96,
+            -2276,
+            1344,
+            6985,
+            -6752,
+            -9284,
+            13696,
+            1152,
+            -8192,
+            3072,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "9770fa3af45cdf0a538c31eafcf7e0f278a020ea60ee6def2151772d7ffb7d76",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            138,
+            4520,
+            5968,
+            -16896,
+            -39859,
+            20360,
+            103488,
+            19120,
+            -120080,
+            -60480,
+            50432,
+            33792,
+            0
+          ],
+          "complement_charpoly_sha256": "58c89d613c62f1113d3482bed7a5d40466383ce4f07ad775753e83102b7d0188",
+          "example_indices_0_based": [
+            15527,
+            15529,
+            16701,
+            16765
+          ],
+          "size": 4
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            362,
+            -42,
+            -1912,
+            476,
+            5021,
+            -1746,
+            -6303,
+            2436,
+            3188,
+            -992,
+            -448,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "cfe937e6483d4dc8f8a843a0750da3da88371a4920a0feafe1d9fd861d7de472",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            118,
+            4546,
+            7522,
+            -10478,
+            -37049,
+            -10738,
+            51799,
+            44328,
+            -15455,
+            -25292,
+            -1649,
+            3810,
+            561
+          ],
+          "complement_charpoly_sha256": "1264cf56289bd726843291f57d8e6463c486a96f4689610753d9f88bf49a4d2d",
+          "example_indices_0_based": [
+            1803,
+            1913,
+            4681,
+            5058
+          ],
+          "size": 4
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            380,
+            -90,
+            -2240,
+            1236,
+            6828,
+            -6096,
+            -9435,
+            12500,
+            2632,
+            -8872,
+            3028,
+            352,
+            -192
+          ],
+          "adjacency_charpoly_sha256": "138d034504808c9d88fd7e751f996b7c7e1b902e0386cb3ddd5dfccc1ce13fc5",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            136,
+            4522,
+            6126,
+            -16206,
+            -39532,
+            16452,
+            95849,
+            21758,
+            -100333,
+            -47338,
+            38917,
+            17460,
+            -4268
+          ],
+          "complement_charpoly_sha256": "94841dd4b2e6e3872bbf4ea1444c13007bc6e425978d904c39e853aa7aa65b4c",
+          "example_indices_0_based": [
+            15461,
+            15496,
+            16600
+          ],
+          "size": 3
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            348,
+            0,
+            -1704,
+            0,
+            3964,
+            0,
+            -4128,
+            0,
+            1536,
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "144aa2744f95cc7b987edd51096c110946e2df28789ab08135b76108cdc215aa",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            104,
+            4560,
+            8584,
+            -5664,
+            -31218,
+            -18944,
+            28104,
+            35840,
+            1096,
+            -13264,
+            -4056,
+            448,
+            33
+          ],
+          "complement_charpoly_sha256": "5f1725f533caa791d7244e1b8bd2e327777169035757cdde7ed941e3545c6d2b",
+          "example_indices_0_based": [
+            860,
+            1006,
+            2837
+          ],
+          "size": 3
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            378,
+            -88,
+            -2188,
+            1188,
+            6381,
+            -5544,
+            -7892,
+            9756,
+            1464,
+            -4064,
+            128,
+            512,
+            0
+          ],
+          "adjacency_charpoly_sha256": "17da048ae659ea2154f1ab10dccf6540ef291335b722047e41507902c80e0497",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            134,
+            4528,
+            6280,
+            -15836,
+            -40575,
+            12208,
+            96856,
+            37972,
+            -93240,
+            -73288,
+            20968,
+            32912,
+            7744
+          ],
+          "complement_charpoly_sha256": "d2a4aaa302725311a81c74f8a972a4a84b40a6433bb7158baf8f2fbffff4b719",
+          "example_indices_0_based": [
+            14611,
+            14815,
+            14997
+          ],
+          "size": 3
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            346,
+            0,
+            -1664,
+            0,
+            3829,
+            0,
+            -4016,
+            0,
+            1536,
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "1a95ba16e84af0c8eabc8d385265fc0bd0de2ef18c0f8a6ccf5188b3e5d2b8f4",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            102,
+            4568,
+            8716,
+            -5352,
+            -31663,
+            -22008,
+            22812,
+            32184,
+            1328,
+            -11424,
+            -3128,
+            528,
+            0
+          ],
+          "complement_charpoly_sha256": "4819c915f2231cd66c24c9542c42e9c24c4e7f4673a3dfc7d237380b5dfe0b9d",
+          "example_indices_0_based": [
+            240,
+            326,
+            462
+          ],
+          "size": 3
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            368,
+            -64,
+            -1984,
+            736,
+            5232,
+            -2688,
+            -6528,
+            3968,
+            3072,
+            -2048,
+            0,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "2373a1bb4dd0543dde99c0e617baeb467881ec83638def887e9fe076f979b981",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            124,
+            4544,
+            7064,
+            -12864,
+            -40938,
+            -8192,
+            67032,
+            59616,
+            -12964,
+            -26048,
+            744,
+            3840,
+            -495
+          ],
+          "complement_charpoly_sha256": "65806d0f4915db2a688394f35837a69b1556903d9883db116b2649e904196faa",
+          "example_indices_0_based": [
+            2307,
+            10328,
+            12659
+          ],
+          "size": 3
+        },
+        {
+          "adjacency_charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            368,
+            -76,
+            -1960,
+            984,
+            4780,
+            -3976,
+            -3936,
+            4992,
+            -208,
+            -1312,
+            384,
+            0,
+            0
+          ],
+          "adjacency_charpoly_sha256": "237c8b4acd5d12e13d6cccb871fdb31d6aacdc7ac15598b0b5c432ca83dfb91d",
+          "complement_charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            124,
+            4556,
+            7028,
+            -13748,
+            -43314,
+            -4864,
+            87672,
+            77280,
+            -42300,
+            -86220,
+            -30996,
+            4212,
+            2673
+          ],
+          "complement_charpoly_sha256": "93cf698c7dcd002745bb858ec093a123f6931fbce2d5c866f8a9fcf0c82bf17f",
+          "example_indices_0_based": [
+            8811,
+            8832,
+            9464
+          ],
+          "size": 3
+        }
+      ]
+    },
+    "adjacency_spectral_quotient": {
+      "class_count": 16211,
+      "collision_class_count": 578,
+      "max_class_size": 4,
+      "singleton_class_count": 15633,
+      "top_collision_classes": [
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            366,
+            -46,
+            -2008,
+            564,
+            5677,
+            -2418,
+            -7991,
+            4292,
+            4836,
+            -2912,
+            -832,
+            512,
+            0
+          ],
+          "charpoly_sha256": "171e559b7da7819315ca7845cf514bf0cda786a6939e175ee1ad2d6a038140fa",
+          "example_indices_0_based": [
+            6029,
+            7680,
+            11061,
+            11112
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            350,
+            0,
+            -1760,
+            0,
+            4417,
+            0,
+            -5280,
+            0,
+            2304,
+            0,
+            0,
+            0,
+            0
+          ],
+          "charpoly_sha256": "39d3fddf3bacda37f39343cfd370724142297d36e768d77b326aadb9262688fa",
+          "example_indices_0_based": [
+            319,
+            509,
+            1824,
+            2771
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            382,
+            -96,
+            -2276,
+            1344,
+            6985,
+            -6752,
+            -9284,
+            13696,
+            1152,
+            -8192,
+            3072,
+            0,
+            0
+          ],
+          "charpoly_sha256": "9770fa3af45cdf0a538c31eafcf7e0f278a020ea60ee6def2151772d7ffb7d76",
+          "example_indices_0_based": [
+            15527,
+            15529,
+            16701,
+            16765
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            362,
+            -42,
+            -1912,
+            476,
+            5021,
+            -1746,
+            -6303,
+            2436,
+            3188,
+            -992,
+            -448,
+            0,
+            0
+          ],
+          "charpoly_sha256": "cfe937e6483d4dc8f8a843a0750da3da88371a4920a0feafe1d9fd861d7de472",
+          "example_indices_0_based": [
+            1803,
+            1913,
+            4681,
+            5058
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            380,
+            -90,
+            -2240,
+            1236,
+            6828,
+            -6096,
+            -9435,
+            12500,
+            2632,
+            -8872,
+            3028,
+            352,
+            -192
+          ],
+          "charpoly_sha256": "138d034504808c9d88fd7e751f996b7c7e1b902e0386cb3ddd5dfccc1ce13fc5",
+          "example_indices_0_based": [
+            15461,
+            15496,
+            16600
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            348,
+            0,
+            -1704,
+            0,
+            3964,
+            0,
+            -4128,
+            0,
+            1536,
+            0,
+            0,
+            0,
+            0
+          ],
+          "charpoly_sha256": "144aa2744f95cc7b987edd51096c110946e2df28789ab08135b76108cdc215aa",
+          "example_indices_0_based": [
+            860,
+            1006,
+            2837
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            378,
+            -88,
+            -2188,
+            1188,
+            6381,
+            -5544,
+            -7892,
+            9756,
+            1464,
+            -4064,
+            128,
+            512,
+            0
+          ],
+          "charpoly_sha256": "17da048ae659ea2154f1ab10dccf6540ef291335b722047e41507902c80e0497",
+          "example_indices_0_based": [
+            14611,
+            14815,
+            14997
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            346,
+            0,
+            -1664,
+            0,
+            3829,
+            0,
+            -4016,
+            0,
+            1536,
+            0,
+            0,
+            0,
+            0
+          ],
+          "charpoly_sha256": "1a95ba16e84af0c8eabc8d385265fc0bd0de2ef18c0f8a6ccf5188b3e5d2b8f4",
+          "example_indices_0_based": [
+            240,
+            326,
+            462
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            368,
+            -64,
+            -1984,
+            736,
+            5232,
+            -2688,
+            -6528,
+            3968,
+            3072,
+            -2048,
+            0,
+            0,
+            0
+          ],
+          "charpoly_sha256": "2373a1bb4dd0543dde99c0e617baeb467881ec83638def887e9fe076f979b981",
+          "example_indices_0_based": [
+            2307,
+            10328,
+            12659
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -32,
+            0,
+            368,
+            -76,
+            -1960,
+            984,
+            4780,
+            -3976,
+            -3936,
+            4992,
+            -208,
+            -1312,
+            384,
+            0,
+            0
+          ],
+          "charpoly_sha256": "237c8b4acd5d12e13d6cccb871fdb31d6aacdc7ac15598b0b5c432ca83dfb91d",
+          "example_indices_0_based": [
+            8811,
+            8832,
+            9464
+          ],
+          "size": 3
+        }
+      ]
+    },
+    "complement_degree_histogram": {
+      "11": 269248
+    },
+    "complement_spectral_quotient": {
+      "class_count": 16211,
+      "collision_class_count": 578,
+      "max_class_size": 4,
+      "singleton_class_count": 15633,
+      "top_collision_classes": [
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            118,
+            4546,
+            7522,
+            -10478,
+            -37049,
+            -10738,
+            51799,
+            44328,
+            -15455,
+            -25292,
+            -1649,
+            3810,
+            561
+          ],
+          "charpoly_sha256": "1264cf56289bd726843291f57d8e6463c486a96f4689610753d9f88bf49a4d2d",
+          "example_indices_0_based": [
+            1803,
+            1913,
+            4681,
+            5058
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            122,
+            4534,
+            7222,
+            -11258,
+            -35537,
+            -2602,
+            57575,
+            30912,
+            -34435,
+            -25256,
+            5195,
+            4086,
+            -55
+          ],
+          "charpoly_sha256": "2b158773483dd82f9ac4c11d1443f740d7ea6af5d6a91c9c0170eb8c8b8e112e",
+          "example_indices_0_based": [
+            6029,
+            7680,
+            11061,
+            11112
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            138,
+            4520,
+            5968,
+            -16896,
+            -39859,
+            20360,
+            103488,
+            19120,
+            -120080,
+            -60480,
+            50432,
+            33792,
+            0
+          ],
+          "charpoly_sha256": "58c89d613c62f1113d3482bed7a5d40466383ce4f07ad775753e83102b7d0188",
+          "example_indices_0_based": [
+            15527,
+            15529,
+            16701,
+            16765
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            106,
+            4552,
+            8436,
+            -5880,
+            -29895,
+            -15224,
+            27756,
+            25688,
+            -8924,
+            -12752,
+            688,
+            2112,
+            0
+          ],
+          "charpoly_sha256": "aa6edb7fdd0f880e0b4cb02d6a2bf6426c3fef7190980f5468669a3ecc6ba138",
+          "example_indices_0_based": [
+            319,
+            509,
+            1824,
+            2771
+          ],
+          "size": 4
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            132,
+            4528,
+            6440,
+            -14992,
+            -39538,
+            8864,
+            85688,
+            32256,
+            -72876,
+            -41040,
+            24696,
+            10800,
+            -4455
+          ],
+          "charpoly_sha256": "01673ba339f8479348cf3551ef6720d4606c21e93eaa4fda215f06795204903a",
+          "example_indices_0_based": [
+            16680,
+            16727,
+            16728
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            122,
+            4536,
+            7216,
+            -11408,
+            -35919,
+            -1896,
+            61232,
+            33536,
+            -39320,
+            -32160,
+            5104,
+            7168,
+            1012
+          ],
+          "charpoly_sha256": "1b9c9cf027304fef772a1c0ab144ad995a45bc85a93b6ab20c9f9d0ef483322b",
+          "example_indices_0_based": [
+            8627,
+            8632,
+            9786
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            136,
+            4518,
+            6134,
+            -15898,
+            -38468,
+            16052,
+            89049,
+            15866,
+            -87373,
+            -29910,
+            31749,
+            5252,
+            -3564
+          ],
+          "charpoly_sha256": "2c0ba599c2d06e4860f13a18b8fe6f03d07803781d07221c95292580f84f8619",
+          "example_indices_0_based": [
+            15493,
+            15498,
+            16611
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            134,
+            4524,
+            6284,
+            -15524,
+            -39191,
+            13148,
+            90508,
+            25396,
+            -89112,
+            -46088,
+            33064,
+            17040,
+            -3520
+          ],
+          "charpoly_sha256": "34a65543d5ec230c5b1ed7aa26e2aee44e4308d39fbe1ad446bef4a188f018ed",
+          "example_indices_0_based": [
+            14787,
+            15512,
+            16319
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            102,
+            4568,
+            8716,
+            -5352,
+            -31663,
+            -22008,
+            22812,
+            32184,
+            1328,
+            -11424,
+            -3128,
+            528,
+            0
+          ],
+          "charpoly_sha256": "4819c915f2231cd66c24c9542c42e9c24c4e7f4673a3dfc7d237380b5dfe0b9d",
+          "example_indices_0_based": [
+            240,
+            326,
+            462
+          ],
+          "size": 3
+        },
+        {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -88,
+            -416,
+            118,
+            4540,
+            7544,
+            -10060,
+            -36087,
+            -12492,
+            43152,
+            36932,
+            -9412,
+            -15456,
+            -968,
+            1432,
+            220
+          ],
+          "charpoly_sha256": "4af7ff50b731578c2e948bb863f6c611c86a42688fdbe648dfa2e7e4c1387bac",
+          "example_indices_0_based": [
+            8404,
+            8637,
+            10012
+          ],
+          "size": 3
+        }
+      ]
+    },
+    "decoded_graph_count": 16828,
+    "expected_graph_count": 16828,
+    "finite_certificate_statement": "All 16,828 decoded graphs were processed through exact integer adjacency and complement characteristic polynomials.  The resulting spectral quotient is finite and reproducible, but it is not an isomorphism quotient and does not by itself export a strict spectral source law.",
+    "p2803_accepts_import_decode": true,
+    "p2803_parse_decoded_entry_count": 16828,
+    "p2803_status": "P2803_MERINGER_SCD_IMPORT_DECODE_VALIDATION_CERTIFICATE_IMPORT_VALIDATED_NO_QUOTIENT_NO_CLOSURE",
+    "source_artifact": "16_4_4.scd",
+    "source_artifact_sha256": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88"
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2803": "4ea98c2e0d4dbeee656855ef053b4c286c50efdb6a76d547092fd49dfc2ca05d"
+  },
+  "input_statuses": {
+    "P2803": "P2803_MERINGER_SCD_IMPORT_DECODE_VALIDATION_CERTIFICATE_IMPORT_VALIDATED_NO_QUOTIENT_NO_CLOSURE"
+  },
+  "status": "P2804_GIRTH4_SPECTRAL_COMPLEMENT_QUOTIENT_AUDIT_NO_ISOMORPHISM_NO_SOURCE_LAW_NO_CLOSURE"
+}
