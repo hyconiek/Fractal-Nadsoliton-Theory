@@ -2296,3 +2296,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2805/S1755 spectral-collision isomorphism Ltotal guard
 
 `P2805/S1755` adds no variational source term.  Duplicate-free isomorphism refinement of residual spectral collisions strengthens graph-list provenance, but without canonical labels, a strict source law, and a coupling theorem it cannot promote `K`/`L_total`, role transfer, bridge closure, or ToE closure.
+
+## P2806/S1756 record-label dataset Ltotal guard
+
+`P2806/S1756` adds no variational source term.  A complete unique decoded-record label/hash dataset is provenance for the 16-node girth>=4 graph import, but it supplies neither isomorphism-canonical geometry nor a spectral source/coupling theorem for `K` or `L_total`.
+
+## P2807/S1757 pynauty canonical-label Ltotal guard
+
+`P2807/S1757` adds no variational source term.  A `pynauty` canonical-label/certificate audit, even when the toolchain is available, is graph-isomorphism provenance only; it is not a spectral action/source law and cannot promote `K`, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+
+## P2808/S1758 canonical digest Ltotal guard
+
+`P2808/S1758` adds no variational term and no Euler-Lagrange source.  Canonical `pynauty` certificate uniqueness over the Meringer girth>=4 list strengthens graph provenance but cannot by itself promote `K`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.

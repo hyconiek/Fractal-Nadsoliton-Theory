@@ -1,0 +1,136 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_review_safe_canonical_digest_manifest": true,
+    "accepted_as_strict_spectral_source_law": false,
+    "facts": {
+      "canonical_certificate_hashes_unique": true,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "manifest_covers_16828_graphs": true,
+      "p2807_compact_audit_accepted": true,
+      "row_level_digest_csv_generated_but_ignored": true,
+      "strict_spectral_source_law_exported": false
+    },
+    "missing_criteria": [
+      "strict_spectral_source_law_exported",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "canonical_digest_manifest": {
+    "automorphism_group_size_histogram": {
+      "1.0": 12124,
+      "12.0": 7,
+      "128.0": 6,
+      "144.0": 1,
+      "16.0": 94,
+      "192.0": 1,
+      "2.0": 3370,
+      "2304.0": 1,
+      "24.0": 6,
+      "256.0": 3,
+      "288.0": 1,
+      "3.0": 1,
+      "32.0": 39,
+      "384.0": 1,
+      "4.0": 863,
+      "4096.0": 1,
+      "48.0": 2,
+      "512.0": 1,
+      "5184.0": 1,
+      "6.0": 1,
+      "64.0": 22,
+      "8.0": 279,
+      "96.0": 3
+    },
+    "canonical_certificate_hash_class_count": 16828,
+    "canonical_certificate_max_class_size": 1,
+    "decoded_graph_count": 16828,
+    "duplicate_certificate_class_count": 0,
+    "ordered_certificate_hash_stream_sha256": "10a7f189514e5ddf9f9f84376b1c52d45c99a0ecc7429a362acc4ee4f0d6b42a",
+    "probe": {
+      "available": true,
+      "available_symbols": [
+        "Graph",
+        "certificate",
+        "canon_label",
+        "autgrp"
+      ],
+      "missing_symbols": [],
+      "version": "2.8.8.1"
+    },
+    "row_level_csv_path": "fundamental_action_reconstruction/generated/p2808_s1758_pynauty_canonical_digest_rows.csv",
+    "row_level_csv_sha256": "8ca58c526ec5b31227d518c650c332cbf75329ed86b736f14189a968d6a77b98",
+    "rows_written": true,
+    "sample_rows": [
+      {
+        "automorphism_group_size": "5184.0",
+        "graph_index_1_based": 1,
+        "pynauty_certificate_sha256": "c67abe42eba89daa26817b80d78e782388d63fddf5ab8413f9da9ad8a1f1b0d4"
+      },
+      {
+        "automorphism_group_size": "288.0",
+        "graph_index_1_based": 2,
+        "pynauty_certificate_sha256": "671f837eb12228dcf9c3091bb409a06da9556a9cd2e0fca33cf4c09b94d2a5c5"
+      },
+      {
+        "automorphism_group_size": "2304.0",
+        "graph_index_1_based": 3,
+        "pynauty_certificate_sha256": "56dd51fbef3f6d90cbaf4d8c66ddad2d5cfcc3c1c1855aa2e2c91be25f0b0c0b"
+      },
+      {
+        "automorphism_group_size": "96.0",
+        "graph_index_1_based": 4,
+        "pynauty_certificate_sha256": "acf1305d7208c413c585aa19e843990ce5d48bbe817f321d0fbd7d305f8643cb"
+      },
+      {
+        "automorphism_group_size": "96.0",
+        "graph_index_1_based": 5,
+        "pynauty_certificate_sha256": "1de49898360ffc8615effddf24e35c8cdb7054b74843aa9509c0f88a0637b97d"
+      },
+      {
+        "automorphism_group_size": "24.0",
+        "graph_index_1_based": 6,
+        "pynauty_certificate_sha256": "889e37e79298dec99fe62a3f6e95112d6f5ce1212d5b659252ed6a9dff96a142"
+      },
+      {
+        "automorphism_group_size": "192.0",
+        "graph_index_1_based": 7,
+        "pynauty_certificate_sha256": "9528b522a58652f8c79f5089e69ff5459e429bd8387d861f9f9f5f13fbf92dbe"
+      },
+      {
+        "automorphism_group_size": "144.0",
+        "graph_index_1_based": 8,
+        "pynauty_certificate_sha256": "901bca37b1aa3e37c8682ae4e0a86fcd38509ff72c3591e4705cda0c810cec79"
+      },
+      {
+        "automorphism_group_size": "128.0",
+        "graph_index_1_based": 9,
+        "pynauty_certificate_sha256": "de0babd77d1fd04186376d1373bf8365b6bce16dddb9fbbc52583e2ea2cb0bcb"
+      },
+      {
+        "automorphism_group_size": "64.0",
+        "graph_index_1_based": 10,
+        "pynauty_certificate_sha256": "f85d7a7d0c2a7295380f1b51e4bc0a0791998230e78e6487ce8b4994ac898369"
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Run a narrow source-law/coupling admissibility audit: test whether the now-canonical 16,828-class girth>=4 graph quotient is actually connected to any exported strict spectral action/source functional.  If no such coupling theorem exists, emit a bounded no-source-law certificate rather than promoting canonical graph provenance to K/L_total or ToE.",
+    "reason": "P2808 exports a compact digest over local pynauty canonical certificates and an ignored row-level CSV hash.  It proves duplicate-free canonical-certificate provenance for the validated 16,828 graph list, but it is not a strict spectral source law, not a variational coupling theorem, and not K/L_total or ToE closure."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2807": "e36b401830e6c55d238f24040af21b28c879a863cb0315f2ff4c2e48b329c71c"
+  },
+  "p2807_status": "P2807_PYNAUTY_COMPACT_CANONICAL_CERTIFICATE_AUDIT_NO_ROW_CSV_NO_SOURCE_LAW_NO_CLOSURE",
+  "status": "P2808_PYNAUTY_CANONICAL_DIGEST_MANIFEST_NO_SOURCE_LAW_NO_CLOSURE"
+}
