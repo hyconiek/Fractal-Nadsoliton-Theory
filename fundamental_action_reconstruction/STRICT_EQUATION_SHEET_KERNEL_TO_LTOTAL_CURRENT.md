@@ -2939,3 +2939,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2808/S1758 pynauty canonical digest manifest
 
 `P2808/S1758` uses the now-available `pynauty` stack to generate a review-safe canonical-certificate digest manifest for all `16,828` validated Meringer graphs.  The row-level CSV is reproducible and ignored; the committed manifest records its hash, the ordered certificate-hash stream hash, uniqueness counts, and automorphism-size histogram.  This is graph-isomorphism provenance only, not a strict spectral source law or `K`/`L_total` coupling theorem.
+
+## P2809/S1759 canonical quotient source-law coupling audit
+
+`P2809/S1759` audits whether the P2808 canonical `16,828`-class Meringer girth>=4 quotient is already tied to an exported strict spectral source/action law or a `K`/`L_total` coupling theorem.  A finite repository scan finds candidate language only as boundary/mention material, while the promotion criteria remain false.  Thus P2809 is a bounded no-source-law certificate: canonical graph provenance is preserved, but no kernel geometry closure, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2810/S1760 spectral-only source functional obstruction
+
+`P2810/S1760` tests the first explicit post-P2809 candidate class: source/action functionals that factor only through the P2804 adjacency/complement characteristic-polynomial pair.  The finite obstruction is exact on current artifacts: P2808 has `16,828` canonical classes, while the spectral-pair quotient has only `16,211` classes; P2805 shows the residual collision members are non-isomorphic, not duplicate records.  Thus spectral-pair-only functionals cannot provide the missing strict spectral source law or `K`/`L_total` coupling.
+
+## P2811/S1761 local motif-refined source candidate audit
+
+`P2811/S1761` adds one richer source-neutral invariant package beyond P2810: exact nonedge common-neighbor, 4-cycle participation, and distance-profile data combined with the P2804 spectral pair.  This improves the quotient from `16,211` to `16,691` classes and reduces the defect from `617` to `137`, but `132` collision classes covering `269` graphs remain.  Thus local motif refinement is evidence, not a complete canonical source carrier, strict spectral source law, or `K`/`L_total` coupling.
+
+## P2812/S1762 two-WL refined collision audit
+
+`P2812/S1762` adds exactly one stronger typed invariant to the P2811 residual collisions: stable 2-dimensional Weisfeiler-Lehman ordered-pair color histograms.  It is applied only to the `269` P2811 collision graphs, improves the quotient from `16,691` to `16,749` classes, and reduces the remaining defect from `137` to `79`; however `79` two-WL collision classes covering `158` graphs remain.  This is refinement evidence, not a complete canonical source carrier, strict spectral source law, or `K`/`L_total` coupling.
