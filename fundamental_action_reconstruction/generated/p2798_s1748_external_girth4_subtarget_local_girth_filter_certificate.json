@@ -1,0 +1,159 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_external_girth4_subtarget_local_girth_filter_certificate": true,
+    "accepted_as_full_16node_canonical_generator_certificate": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_strict_spectral_source_law": false,
+    "blocker": "P2798 computes exact local girths and sizes a reachable external girth>=4 subtarget gap, but it does not import the shortcode graph list and therefore remains a target/gap certificate rather than generator provenance or a strict source law.",
+    "facts": {
+      "all_eight_current_representatives_girth_filtered": true,
+      "external_girth4_count_recorded": true,
+      "full_girth4_shortcode_graph_list_imported": false,
+      "girth4_gap_is_positive": true,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "p2786_graph6_gate_present": true,
+      "p2790_eighth_witness_present": true,
+      "p2791_lower_bound_present": true,
+      "p2797_full_gap_present": true,
+      "six_current_representatives_in_girth4_subtarget": true,
+      "strict_nadsoliton_spectral_source_law_exported": false
+    },
+    "missing_criteria": [
+      "full_girth4_shortcode_graph_list_imported",
+      "strict_nadsoliton_spectral_source_law_exported",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "How much of the externally linked girth>=4 16-node 4-regular subtarget is covered by exact local girth filtering of the current P2791 representatives?",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_16node_generator_certified": false,
+      "canonical_geometry_source_exported": false,
+      "global_full_spectrum_geometry_theorem_exported": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Use P2798 only as a local exact-girth filter plus external girth>=4 target-gap certificate.  The next proof-grade move is to import the actual linked shortcode/graph-list artifact for the 16,828 girth>=4 graphs with hash/provenance and run exact quotient/charpoly/complement/orbit auditing, or else import the full 8,037,418-class toolchain/list, or export a strict spectral source law fixing the admissible class and K/L_total coupling.  Otherwise preserve the P2697-P2798 no-canonical-geometry/no-closure certificate.",
+    "reason": "P2798 computes exact local girths and sizes a reachable external girth>=4 subtarget gap, but it does not import the shortcode graph list and therefore remains a target/gap certificate rather than generator provenance or a strict source law."
+  },
+  "external_girth4_subtarget_witness": {
+    "external_connected_16node_4regular_girth4_class_count": 16828,
+    "external_girth4_gap_after_current_witnesses": 16822,
+    "external_source": {
+      "column": "degree=4",
+      "detail_context": "The count is a link to a detail page offering a shortcode file for the chosen graphs; P2798 records only the target count and does not import the shortcode file.",
+      "linked_detail_url": "https://www.mathe2.uni-bayreuth.de/markus/REGGRAPHS/16_4_4.html",
+      "name": "Markus Meringer Regular Graphs page",
+      "reported_count": 16828,
+      "retrieved_utc_date": "2026-06-16",
+      "row": "vertices=16",
+      "table": "Connected regular graphs with girth at least 4",
+      "url": "https://www.mathe2.uni-bayreuth.de/markus/reggraphs.html"
+    },
+    "finite_certificate_statement": "Exact local girth filtering leaves 6 current representatives in the girth>=4 subtarget, compared with the external target count 16,828; 16,822 girth>=4 classes remain outside current local witnesses.",
+    "local_girth4_coverage_fraction_decimal": "0.000356548609",
+    "local_girth4_coverage_fraction_exact": "3/8414",
+    "local_girth_at_least_4_count": 6,
+    "local_girth_at_least_4_labels": [
+      "circulant_pm1_pm3",
+      "circulant_pm1_pm4",
+      "circulant_pm1_pm6",
+      "circulant_pm1_pm7",
+      "torus_4x4",
+      "two_c8_layers_cross_pm0_pm4"
+    ],
+    "local_representative_count": 8,
+    "local_representative_girth_rows": [
+      {
+        "edge_count": 32,
+        "girth": 3,
+        "girth_at_least_4": false,
+        "graph6_sha256": "2de32e261034e5c9debd2daff629890535d015ec232ed54e4ca0c53e02b3b386",
+        "label": "circulant_pm1_pm2",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "5a0cab9fcf530a4c8de6a738123769f95504d35e78a90938eb4ea6fcfdcf537c",
+        "label": "circulant_pm1_pm3",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "3d203f848a9ae09b50d90ff817ad1a1da688d2d99a23b3cdf6eee6c5e1338ed6",
+        "label": "circulant_pm1_pm4",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "3f219ff1ed2b34c7a92fb023ffcca489c92780e216bbe85a2b1f28c0bdc06f06",
+        "label": "circulant_pm1_pm6",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "aee7f306b062681d284f55751c7bdc4b0a743ee7b9820545470d0ad35bce733f",
+        "label": "circulant_pm1_pm7",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "4688c76941aae9773261c274546976c346187499fc48c59c6150a35cc09230f9",
+        "label": "torus_4x4",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 4,
+        "girth_at_least_4": true,
+        "graph6_sha256": "4e86170265d6d468ecf62f41fbfbbf9d6b60d001661e92701c8dbbd725ab33b9",
+        "label": "two_c8_layers_cross_pm0_pm4",
+        "source": "P2786_local_graph6"
+      },
+      {
+        "edge_count": 32,
+        "girth": 3,
+        "girth_at_least_4": false,
+        "graph6_sha256": "9c201db1527892bc351c33e5cfb24892fe499c259c2cbbeab00cc9198d9cf5c9",
+        "label": "p2790_eighth_witness",
+        "source": "P2790_explicit_witness_graph6"
+      }
+    ],
+    "local_triangle_containing_count": 2,
+    "local_triangle_containing_labels": [
+      "circulant_pm1_pm2",
+      "p2790_eighth_witness"
+    ],
+    "p2791_representative_count": 8,
+    "p2797_full_count_gap_status": "P2797_EXTERNAL_FULL_COUNT_GAP_CERTIFICATE_NO_CLOSURE"
+  },
+  "input_hashes": {
+    "P2786": "e8911d85d88a804962d3bbf981cfa66b37375f4a4432ed20e1b600232d3d3bd8",
+    "P2790": "0da17dba60e5dd828d7500efca7364b09fb81825041ffad30f65cd7bb0aa227f",
+    "P2791": "7b769e10d8f8ff5f1aecbca9740ddd9395b48022fde860f03014b19aaaa39323",
+    "P2797": "c59fb540ee5848bb8fa3f8f5977d9ba89c10d98e4976fe9644837c40032fe351"
+  },
+  "input_statuses": {
+    "P2786": "P2786_GRAPH6_PROVENANCE_TOOLCHAIN_GATE_NO_CLOSURE",
+    "P2790": "P2790_EIGHTH_16NODE_WITNESS_NO_EXHAUSTION_CERTIFICATE_NO_CLOSURE",
+    "P2791": "P2791_EIGHT_CLASS_ORBIT_LOWER_BOUND_CERTIFICATE_NO_CLOSURE",
+    "P2797": "P2797_EXTERNAL_FULL_COUNT_GAP_CERTIFICATE_NO_CLOSURE"
+  },
+  "status": "P2798_EXTERNAL_GIRTH4_SUBTARGET_LOCAL_GIRTH_FILTER_CERTIFICATE_NO_CLOSURE"
+}

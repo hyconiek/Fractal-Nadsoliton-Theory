@@ -710,3 +710,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2792 fully enumerates the named `C16` two-jump circulant 4-regular subclass: 21 raw jump pairs, 18 connected cases, 5 isomorphism classes, and all 5 connected classes represented among the P2786 seven local representatives.
 - This is a complete named-subclass certificate only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
 - Do not promote the circulant-subclass exhaustion result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current Z2^4 four-generator Cayley subclass guardrail (P2793/S1743, 2026-06-16)
+
+- P2793 fully enumerates the named `Z_2^4` four-generator Cayley 4-regular subclass: 1365 raw generator sets, 840 connected rank-4 cases, 1 connected isomorphism class, and that class is already represented in the current P2786/P2791 witness sets.
+- This is a complete named-subclass certificate only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote the `Z_2^4` Cayley-subclass exhaustion result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current Z2^4 GL(4,2) transitivity guardrail (P2794/S1744, 2026-06-16)
+
+- P2794 proves the P2793 `Z_2^4` Cayley-basis subclass collapse by finite group action: `|GL(4,2)|=20,160`, 840 unordered bases, 24 maps from each basis to the standard basis, and automorphism factorization `16 * 24 = 384`.
+- This is a proof-certificate for one named subclass only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote the GL(4,2) transitivity/factorization result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current post-subclass saturation guardrail (P2795/S1745, 2026-06-16)
+
+- P2795 reconciles P2792/P2793/P2794 against P2791 and finds zero new isomorphism classes and zero new orbit lower-bound contribution beyond the P2791 eight-class set; the named-subclass union covers six already-counted P2791 labels and leaves two P2791 labels uncovered.
+- Do not continue named-subclass replay as a primary route unless a genuinely new generator family is known to add classes beyond P2791, or a certified full connected 16-node 4-regular generator/toolchain is supplied.
+- Do not promote the saturation/no-new-class result to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.
+
+## Current full-generator artifact absence guardrail (P2796/S1746, 2026-06-16)
+
+- P2796 audits current generated JSON/provenance artifacts and local generator commands after P2795; it finds graph6/provenance rows but zero true full connected 16-node 4-regular generator certificates and no available audited external generator command.
+- Do not continue named-subclass replay or promote local graph bookkeeping to canonical geometry; the missing object is still an actual certified full generator artifact/toolchain or a strict spectral source law.
+- Do not promote the absence/provenance gate to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.
+
+## Current external full-count gap guardrail (P2797/S1747, 2026-06-16)
+
+- P2797 records the external GENREG-lineage target count `8,037,418` connected 4-regular simple graphs on 16 vertices and computes that current P2791/P2795 evidence covers only 8 classes, leaving a target-count gap of `8,037,410`.
+- This is a target-count/gap certificate only; it is not the full graph-list artifact/toolchain, not full `graph6` provenance, and not a strict spectral source law.
+- Do not promote the external count to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is importing the actual graph-list/toolchain provenance or exporting a strict spectral source law.
+
+## Current external girth>=4 subtarget guardrail (P2798/S1748, 2026-06-16)
+
+- P2798 records the external linked girth>=4 target count `16,828` and computes exact girth for all eight current P2791 representatives: six satisfy girth>=4 and two contain triangles, leaving a girth>=4 subtarget gap of `16,822`.
+- This is a local girth-filter/target-gap certificate only; it is not the linked shortcode graph-list import, not full `graph6` provenance, and not a strict spectral source law.
+- Do not promote the girth>=4 target count or local filter to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is importing the actual shortcode/list provenance or exporting a strict spectral source law.
+
+## Current local girth>=4 spectral-orbit guardrail (P2799/S1749, 2026-06-16)
+
+- P2799 computes exact spectral/orbit/complement bookkeeping for the six current P2798 girth>=4 witnesses, including exact characteristic polynomials, automorphism counts, orbit sizes, and 11-regular complement checks.
+- This is a local filtered witness-table certificate only; it is not the linked 16,828-class shortcode graph-list import, not full `graph6` provenance, and not a strict spectral source law.
+- Do not promote the local girth>=4 spectral/orbit table to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.

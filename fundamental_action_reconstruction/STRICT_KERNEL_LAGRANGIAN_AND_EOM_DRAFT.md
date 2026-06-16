@@ -2244,3 +2244,31 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2792/S1742 C16 circulant-subclass Ltotal guard
 
 `P2792/S1742` adds no variational source term.  Complete enumeration of the named `C16` two-jump circulant subclass strengthens finite graph bookkeeping, but a named-subclass generator is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2793/S1743 Z2^4 Cayley-subclass Ltotal guard
+
+`P2793/S1743` adds no variational source term.  Complete enumeration of the named `Z_2^4` four-generator Cayley subclass strengthens finite graph bookkeeping and proves that this group-generated lane collapses to a known class, but a named-subclass result is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2794/S1744 GL(4,2) transitivity Ltotal guard
+
+`P2794/S1744` adds no variational source term.  The GL(4,2) transitivity/factorization certificate explains why the P2793 group-generated subclass collapses to `torus_4x4`, but a subgroup action theorem is not a sourced nonproxy `K`/`L_total` spectral action, not a canonical geometry theorem, and not a full 16-node generator.
+
+## P2795/S1745 post-subclass saturation Ltotal guard
+
+`P2795/S1745` adds no variational source term.  It shows that current named-subclass certificates add zero new classes beyond P2791 and therefore should not be replayed as a route to `K`/`L_total`; a saturation/no-new-class certificate is not a sourced nonproxy spectral action, not canonical geometry, and not a full 16-node generator.
+
+## P2796/S1746 full-generator absence Ltotal guard
+
+`P2796/S1746` adds no variational source term.  It records that the required full connected 16-node 4-regular generator artifact/toolchain is absent on current repository artifacts, so no `K`/`L_total` source or canonical geometry theorem can be promoted from the local graph bookkeeping.
+
+## P2797/S1747 external full-count gap Ltotal guard
+
+`P2797/S1747` adds no variational source term.  The external count only sizes the gap between current local witnesses and the reported full connected 16-node 4-regular class count; it does not import the graph list, source a spectral action, or license any `K`/`L_total` promotion.
+
+## P2798/S1748 girth>=4 subtarget Ltotal guard
+
+`P2798/S1748` adds no variational source term.  Exact local girth filtering and an external girth>=4 target count do not import the graph list, source a spectral action, or license any `K`/`L_total` promotion.
+
+## P2799/S1749 local girth>=4 spectral-orbit Ltotal guard
+
+`P2799/S1749` adds no variational source term.  Exact spectral/orbit bookkeeping for six local girth>=4 witnesses does not import the external graph list, source a spectral action, or license any `K`/`L_total` promotion.
