@@ -2931,3 +2931,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2806/S1756 girth>=4 reproducible record-label dataset audit
 
 `P2806/S1756` exports a deterministic graph6-style decoded-record label/hash CSV for all `16,828` validated Meringer graphs and finds `16,828` unique record labels and hashes in the supplied vertex order.  This strengthens graph-list provenance but is not an isomorphism-canonical label dataset, not an independent canonical-label cross-check, not a strict spectral source law, and does not license `K`/`L_total` coupling.
+
+## P2807/S1757 pynauty canonical-label toolchain gate
+
+`P2807/S1757` checks whether a real `pynauty`/nauty canonical-label stack is importable for the validated `16,828`-graph Meringer dataset while preserving a compact-diff policy.  In the current environment this is a toolchain gate rather than a source-law theorem: if `pynauty` is unavailable, canonical labels remain blocked; if it is available, the resulting compact certificate audit still does not license `K`/`L_total` coupling without a separate spectral source/coupling theorem.
+
+## P2808/S1758 pynauty canonical digest manifest
+
+`P2808/S1758` uses the now-available `pynauty` stack to generate a review-safe canonical-certificate digest manifest for all `16,828` validated Meringer graphs.  The row-level CSV is reproducible and ignored; the committed manifest records its hash, the ordered certificate-hash stream hash, uniqueness counts, and automorphism-size histogram.  This is graph-isomorphism provenance only, not a strict spectral source law or `K`/`L_total` coupling theorem.

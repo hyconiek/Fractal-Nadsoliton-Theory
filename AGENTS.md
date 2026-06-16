@@ -794,3 +794,15 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2806 exports `fundamental_action_reconstruction/generated/p2806_s1756_girth4_record_label_dataset.csv`: a deterministic graph6-style decoded-record label/hash table for all `16,828` validated Meringer graphs, with `16,828` unique labels and SHA256 hashes in the supplied vertex order.
 - This is a reproducible record-label provenance dataset only.  It is not an isomorphism-canonical label dataset, not an independent canonical-labeling cross-check, and not a strict spectral source law.
 - Do not promote P2806 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is an independent isomorphism-canonical labeling cross-check plus optional automorphism/group-size audit.
+
+## Current pynauty canonical-label toolchain guardrail (P2807/S1757, 2026-06-16)
+
+- P2807 is the review-size-safe canonical-label toolchain gate after P2806: it checks for an importable `pynauty`/nauty stack and, only if present, computes compact canonical certificate/hash and automorphism-size statistics without committing another `16,828`-row CSV.
+- If `pynauty` is unavailable, do not infer canonical labels from P2806 record labels.  If `pynauty` is available, treat the output as graph-isomorphism provenance only, not a strict spectral source law.
+- Do not promote P2807 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is to supply the missing canonical-label toolchain artifact or, after a successful compact audit, a small canonical digest/automorphism manifest.
+
+## Current pynauty canonical digest guardrail (P2808/S1758, 2026-06-16)
+
+- P2808 runs after `pynauty` is available and records a review-safe canonical-certificate digest for all `16,828` validated Meringer girth>=4 graphs: unique certificate hashes, row-level CSV hash, ordered hash-stream digest, and automorphism-size histogram.
+- Treat P2808 as canonical graph-list provenance only.  It does not export a strict spectral source law, a coupling theorem from the graph quotient to `K`/`L_total`, role transfer, bridge closure, selector closure, or ToE closure.
+- The next admissible move is a narrow source-law/coupling admissibility audit for the canonical graph quotient; if no exported strict coupling exists, preserve a bounded no-source-law certificate.
