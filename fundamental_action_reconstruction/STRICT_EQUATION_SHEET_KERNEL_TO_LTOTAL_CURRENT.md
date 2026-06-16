@@ -2839,3 +2839,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2783/S1733 seven-class quotient integrity certificate
 
 `P2783/S1733` answers the local integrity question for the seven P2781 quotient classes.  It reruns the P2781 expanded class, extracts the seven representatives, and checks all 21 representative pairs by direct graph-isomorphism backtracking and full graph-Laplacian spectrum.  The result has zero direct isomorphism collisions and zero full-spectrum collisions, so the seven local classes are pairwise nonisomorphic and spectrally distinct.  This is only a local quotient-integrity certificate: no strict nadsoliton spectral source law, full canonical 16-node graph-class theorem, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2784/S1734 seven-class multispectral robustness audit
+
+`P2784/S1734` stress-tests the P2783 seven-class quotient with independent spectral probes.  On the same seven local representatives, all 21 pairs are separated not only by the full graph-Laplacian spectrum but also by the adjacency spectrum and signless-Laplacian spectrum.  This is a stronger local robustness witness, but it does not expand the graph class and does not source the class, target, or variational coupling from `K`/`L_total`; therefore no strict nadsoliton spectral source law, canonical geometry, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2785/S1735 exact characteristic-polynomial certificate
+
+`P2785/S1735` removes the floating-eigenvalue ambiguity in P2784 by computing exact integer characteristic polynomials for adjacency, Laplacian, and signless-Laplacian matrices on the same seven local representatives.  All 21 pairs are separated by all three exact characteristic polynomial families, and exact Kirchhoff cofactor determinants are recorded.  This is still only a local exact-algebra certificate: it does not expand the graph class, certify a canonical full 16-node 4-regular generator, source the target spectrum from `K`/`L_total`, or export canonical geometry, bridge closure, role transfer, selector closure, role-bearing `L_total`, or ToE closure.
+
+## P2786/S1736 graph6 provenance and toolchain gate
+
+`P2786/S1736` builds a local reproducibility layer for the P2785 seven-class exact certificate: each representative is encoded to graph6, decoded back to the same edge set, and assigned graph6/exact-payload SHA-256 hashes.  The current environment does not expose a certified full-class canonical generator (`geng`/`labelg`) or common Python graph-generation package, so this remains local graph6 provenance rather than a full 16-node 4-regular generator certificate.  No strict spectral source law, canonical geometry, kernel full-expression theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure is exported.
+
+## P2787/S1737 small canonical generator pipeline audit
+
+`P2787/S1737` validates the exact generator/quotient/characteristic-polynomial pipeline on the complete smaller class of connected 8-node 4-regular simple graphs.  Degree-constrained backtracking gives 19,355 connected labeled candidates, direct isomorphism quotienting gives 6 classes, and exact adjacency/Laplacian/signless-Laplacian characteristic polynomials have zero collisions across all 15 quotient pairs.  This is only a small-class pipeline certificate: it is not the blocked full connected 16-node 4-regular generator, not a strict spectral source law, and not a `K`/`L_total` variational coupling.

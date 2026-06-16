@@ -656,3 +656,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2783 audits whether the seven P2781 quotient classes secretly collide by isomorphism or by full graph-Laplacian spectrum.
 - All 21 representative pairs are directly checked: there are zero direct isomorphism collisions and zero full-spectrum collisions, so the seven local classes are pairwise nonisomorphic and spectrally distinct.
 - Do not promote this local quotient-integrity certificate to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a canonical-generation theorem/tool certificate for the full graph class, or export a strict spectral action/source law before testing.
+
+## Current seven-class multispectral robustness guardrail (P2784/S1734, 2026-06-15)
+
+- P2784 stress-tests the P2783 seven-class quotient with adjacency, Laplacian, and signless-Laplacian spectra.
+- All 21 representative pairs are separated by all three spectra, giving a stronger local robustness witness than a single-invariant check.
+- Do not promote this local multispectral witness to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a canonical-generation theorem/tool certificate for the full graph class, or export a strict spectral action/source law before testing.
+
+## Current exact characteristic-polynomial certificate guardrail (P2785/S1735, 2026-06-16)
+
+- P2785 removes P2784's numerical-eigenvalue dependence by computing exact integer adjacency, Laplacian, and signless-Laplacian characteristic polynomials on the same seven local representatives.
+- All 21 representative pairs are separated by all three exact characteristic polynomial families; exact Kirchhoff spanning-tree counts are also recorded.
+- Do not promote this local exact-algebra witness to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply a canonical-generation theorem/tool certificate for the full graph class, or export a strict spectral action/source law before testing.
+
+## Current graph6 provenance and toolchain gate guardrail (P2786/S1736, 2026-06-16)
+
+- P2786 encodes the seven P2785 local representatives to graph6, verifies exact graph6 decode round-trips, and records graph6/exact-payload hashes.
+- The current environment does not provide a certified full-class canonical generator/toolchain such as `geng` plus `labelg`; local graph6 provenance is not a full graph-class certificate.
+- Do not promote this provenance gate to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full-class generator artifact/toolchain or export a strict spectral action/source law before testing.
+
+## Current small canonical generator pipeline guardrail (P2787/S1737, 2026-06-16)
+
+- P2787 validates the self-contained generator/quotient/exact-charpoly pipeline on all connected 8-node 4-regular simple graphs: 19,355 labeled connected candidates, 6 isomorphism classes, and zero exact charpoly collisions across 15 quotient pairs.
+- This is a complete small-class certificate only; it is not the required full connected 16-node 4-regular generator/toolchain and does not source geometry from `K`/`L_total`.
+- Do not promote this small-pipeline witness to canonical geometry, strict spectral source law, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  A next admissible move must supply an actual certified full 16-node generator artifact/toolchain or export a strict spectral action/source law before testing.

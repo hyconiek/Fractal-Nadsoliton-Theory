@@ -2208,3 +2208,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2783/S1733 seven-class quotient Ltotal guard
 
 `P2783/S1733` adds no variational source term.  The seven P2781 representatives are pairwise nonisomorphic and spectrally distinct, but this remains a local quotient-integrity certificate rather than a sourced nonproxy `K`/`L_total` spectral action; therefore it cannot promote role-bearing `L_total` or canonical nadsoliton geometry.
+
+## P2784/S1734 multispectral robustness Ltotal guard
+
+`P2784/S1734` adds no variational source term.  Adjacency, Laplacian, and signless-Laplacian spectra all separate the seven P2783 representatives, but the computation remains a local invariant robustness audit rather than a sourced nonproxy `K`/`L_total` spectral action.
+
+## P2785/S1735 exact-polynomial Ltotal guard
+
+`P2785/S1735` adds no variational source term.  Exact characteristic polynomials strengthen the seven-class spectral witness, but the computation remains a local algebraic audit rather than a sourced nonproxy `K`/`L_total` spectral action.
+
+## P2786/S1736 graph6 provenance Ltotal guard
+
+`P2786/S1736` adds no variational source term.  graph6/hash provenance improves reproducibility of the local seven-class exact certificate, but it is not a sourced nonproxy `K`/`L_total` spectral action and not a full canonical graph-class generator.
+
+## P2787/S1737 small-pipeline Ltotal guard
+
+`P2787/S1737` adds no variational source term.  The exact generator/quotient/charpoly pipeline works on the complete 8-node 4-regular class, but this is a computational pipeline validation rather than a sourced nonproxy `K`/`L_total` spectral action or a full 16-node canonical generator.
