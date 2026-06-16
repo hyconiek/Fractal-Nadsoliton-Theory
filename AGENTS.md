@@ -788,3 +788,9 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2805 refines all `578` non-singleton P2804 adjacency/complement spectral pair classes (`1,195` graphs) by exact backtracking graph-isomorphism checks and finds `0` duplicate/isomorphic matches inside those collisions, yielding `16,828` duplicate-free graph-isomorphism records under this bounded refinement.
 - This is still not a canonical-label dataset and not a strict spectral source law; missing canonical labels, source/coupling theorem, and `K`/`L_total` bridge remain blockers.
 - Do not promote P2805 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is a reproducible canonical-label dataset/cross-check, or a separate strict source-law/coupling audit after such labels exist.
+
+## Current girth>=4 record-label dataset guardrail (P2806/S1756, 2026-06-16)
+
+- P2806 exports `fundamental_action_reconstruction/generated/p2806_s1756_girth4_record_label_dataset.csv`: a deterministic graph6-style decoded-record label/hash table for all `16,828` validated Meringer graphs, with `16,828` unique labels and SHA256 hashes in the supplied vertex order.
+- This is a reproducible record-label provenance dataset only.  It is not an isomorphism-canonical label dataset, not an independent canonical-labeling cross-check, and not a strict spectral source law.
+- Do not promote P2806 to canonical geometry, selector closure, kernel full-expression, role-bearing `L_total`, bridge closure, role transfer, or ToE closure.  The next admissible move is an independent isomorphism-canonical labeling cross-check plus optional automorphism/group-size audit.

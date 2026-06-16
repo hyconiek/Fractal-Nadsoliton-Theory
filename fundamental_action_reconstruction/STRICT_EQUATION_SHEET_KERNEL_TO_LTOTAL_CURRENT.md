@@ -2927,3 +2927,7 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2805/S1755 girth>=4 spectral-collision isomorphism refinement
 
 `P2805/S1755` refines every non-singleton P2804 adjacency/complement spectral pair class by exact backtracking graph-isomorphism checks.  The audit covers `578` spectral collision classes and `1,195` collision-class graphs, finds `0` positive isomorphism matches inside those collisions, and refines the validated Meringer import to `16,828` duplicate-free graph-isomorphism records under this bounded check.  This is not a canonical-label dataset, not a strict spectral source law, and does not license `K`/`L_total` coupling.
+
+## P2806/S1756 girth>=4 reproducible record-label dataset audit
+
+`P2806/S1756` exports a deterministic graph6-style decoded-record label/hash CSV for all `16,828` validated Meringer graphs and finds `16,828` unique record labels and hashes in the supplied vertex order.  This strengthens graph-list provenance but is not an isomorphism-canonical label dataset, not an independent canonical-label cross-check, not a strict spectral source law, and does not license `K`/`L_total` coupling.
