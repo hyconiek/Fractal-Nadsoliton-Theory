@@ -2915,3 +2915,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2802/S1752 girth>=4 fetch obstruction taxonomy certificate
 
 `P2802/S1752` deterministically classifies the P2801 network probe matrix: all `24` attempted `16_4_4` URL routes are accounted for by HTTPS tunnel `403` or HTTP `403` outcomes before any graph-list body is obtained; the maximum graph6-like row count is `0`, and no `16,828`-row artifact is imported.  This is an access-layer/source-route obstruction certificate only; it does not import the graph list, complete the girth>=4 quotient, export a strict spectral source law, or license `K`/`L_total` coupling.
+
+## P2803/S1753 Meringer SCD import/decode validation certificate
+
+`P2803/S1753` validates the supplied root-level `16_4_4.scd` Meringer artifact after the P2800-P2802 absence/fetch-obstruction chain: the file has byte size `150489`, SHA256 `160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88`, decodes via the prefix/tail SCD parser to exactly `16,828` unique adjacency records, and all decoded records are simple symmetric 4-regular graphs with no triangles.  This is an import/decode validation certificate only; it does not complete the quotient/charpoly/complement/orbit audit, export a strict spectral source law, or license `K`/`L_total` coupling.
+
+## P2804/S1754 girth>=4 spectral/complement quotient audit
+
+`P2804/S1754` computes exact integer adjacency and complement characteristic-polynomial quotients over all `16,828` decoded Meringer `16_4_4.scd` graphs validated by P2803.  The audit records finite spectral class counts, collision counts, maximum collision sizes, adjacency/complement pair classes, and confirms complement degree `11` on every vertex.  This is a spectral/complement quotient witness only; it is not a canonical isomorphism quotient, not a strict spectral source law, and does not license `K`/`L_total` coupling.
+
+## P2805/S1755 girth>=4 spectral-collision isomorphism refinement
+
+`P2805/S1755` refines every non-singleton P2804 adjacency/complement spectral pair class by exact backtracking graph-isomorphism checks.  The audit covers `578` spectral collision classes and `1,195` collision-class graphs, finds `0` positive isomorphism matches inside those collisions, and refines the validated Meringer import to `16,828` duplicate-free graph-isomorphism records under this bounded check.  This is not a canonical-label dataset, not a strict spectral source law, and does not license `K`/`L_total` coupling.

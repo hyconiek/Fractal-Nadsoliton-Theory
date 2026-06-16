@@ -1,0 +1,215 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_canonical_nadsoliton_geometry_source": false,
+    "accepted_as_completed_girth4_quotient_audit": false,
+    "accepted_as_full_16node_canonical_generator_certificate": false,
+    "accepted_as_ltotal_or_toe_promotion": false,
+    "accepted_as_meringer_scd_import_decode_validation": true,
+    "accepted_as_strict_spectral_source_law": false,
+    "blocker": "P2803 validates the exact imported Meringer SCD artifact and decode invariants, but quotient/charpoly/complement/orbit auditing and any strict source-law or K/L_total coupling theorem remain unexecuted.",
+    "facts": {
+      "all_decoded_graphs_are_4_regular": true,
+      "all_decoded_graphs_are_connected": true,
+      "all_decoded_graphs_are_simple_symmetric": true,
+      "all_decoded_graphs_have_no_triangles": true,
+      "byte_size_matches_expected": true,
+      "decoded_count_is_16828": true,
+      "decoder_file_present": true,
+      "kernel_or_ltotal_variational_coupling_exported": false,
+      "no_malformed_or_truncated_scd_entries": true,
+      "p2802_obstruction_prior_present": true,
+      "parse_consumed_all_bytes": true,
+      "quotient_charpoly_complement_orbit_audit_completed": false,
+      "scd_file_present": true,
+      "sha256_matches_expected": true,
+      "strict_spectral_source_law_exported": false,
+      "unique_decoded_adjacency_records": true
+    },
+    "missing_criteria": [
+      "quotient_charpoly_complement_orbit_audit_completed",
+      "strict_spectral_source_law_exported",
+      "kernel_or_ltotal_variational_coupling_exported"
+    ]
+  },
+  "audited_question": "Does the supplied local Meringer 16_4_4.scd artifact validate as the exact 16,828-entry connected 4-regular girth>=4 subtarget import under a deterministic decoder?",
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "canonical_16node_generator_certified": false,
+      "canonical_geometry_source_exported": false,
+      "girth4_16828_class_quotient_completed": false,
+      "kernel_fully_expresses_nadsoliton_characteristics": false,
+      "kernel_geometry_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_spectral_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Treat P2803 as validated graph-list import/decode readiness only.  The next proof-grade move is an exact quotient/charpoly/complement/orbit audit over the 16,828 decoded graphs: compute canonical graph signatures or isomorphism/orbit representatives, adjacency and complement characteristic-polynomial classes, collision tables, and a bounded witness matrix.  Do not promote P2803 directly to canonical geometry, a strict spectral source law, K/L_total coupling, role transfer, bridge closure, selector closure, or ToE closure.",
+    "reason": "P2803 validates the exact imported Meringer SCD artifact and decode invariants, but quotient/charpoly/complement/orbit auditing and any strict source-law or K/L_total coupling theorem remain unexecuted."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2802": "e825d5528aa82505269b60082141afe2cd4622c8a6841de01a4664196830ec1b",
+    "decode_meringer.py": "6561e6d7ebf6a082c49adde9533ff98fbbb9d07c6a6cd85de64faaebc9b5166f"
+  },
+  "input_statuses": {
+    "P2802": "P2802_GIRTH4_FETCH_OBSTRUCTION_TAXONOMY_CERTIFICATE_NO_IMPORT_NO_CLOSURE"
+  },
+  "meringer_scd_import_decode_validation": {
+    "byte_size": 150489,
+    "decoder_artifact": "decode_meringer.py",
+    "decoder_present": true,
+    "expected_byte_size": 150489,
+    "expected_graph_count": 16828,
+    "expected_sha256": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "file_present": true,
+    "finite_certificate_statement": "The supplied Meringer 16_4_4.scd artifact is present, matches the expected SHA256/byte-size metadata, decodes to exactly 16,828 simple connected-candidate adjacency records under the SCD prefix-tail parser, and every decoded graph is 4-regular with no triangles.  This validates import/decode/readiness only, not quotient or spectral-source closure.",
+    "graph_metrics": {
+      "bad_4_regular_graph_count": 0,
+      "connected_graph_count": 16828,
+      "degree_histogram": {
+        "4": 269248
+      },
+      "disconnected_graph_count": 0,
+      "duplicate_neighbor_violation_count": 0,
+      "edge_count_histogram": {
+        "32": 16828
+      },
+      "first_graph_adjacency_1_based": {
+        "1": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "10": [
+          8,
+          14,
+          15,
+          16
+        ],
+        "11": [
+          9,
+          14,
+          15,
+          16
+        ],
+        "12": [
+          9,
+          14,
+          15,
+          16
+        ],
+        "13": [
+          9,
+          14,
+          15,
+          16
+        ],
+        "14": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "15": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "16": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "2": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "3": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "4": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "5": [
+          1,
+          6,
+          7,
+          9
+        ],
+        "6": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "7": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "8": [
+          2,
+          3,
+          4,
+          10
+        ],
+        "9": [
+          5,
+          11,
+          12,
+          13
+        ]
+      },
+      "girth_at_least_4_no_triangle_graph_count": 16828,
+      "last_graph_adjacency_sha256": "f921fc1b02cad65c6d8a8676d2d9523cf49275e191dc4adb8467c7de5b4f7d48",
+      "simple_loop_violation_count": 0,
+      "strict_4_regular_graph_count": 16828,
+      "symmetric_adjacency_violation_count": 0,
+      "triangle_graph_count": 0,
+      "unique_decoded_adjacency_hash_count": 16828
+    },
+    "p2802_status": "P2802_GIRTH4_FETCH_OBSTRUCTION_TAXONOMY_CERTIFICATE_NO_IMPORT_NO_CLOSURE",
+    "parse_stats": {
+      "code_length_mismatch_count": 0,
+      "decoded_entry_count": 16828,
+      "encoded_edge_code_length_bytes": 32,
+      "final_byte_position": 150489,
+      "malformed_prefix_count": 0,
+      "max_prefix_len": 30,
+      "min_prefix_len": 0,
+      "parse_consumed_all_bytes": true,
+      "prefix_len_histogram_head": {
+        "0": 1,
+        "10": 4,
+        "11": 5,
+        "12": 2,
+        "13": 21,
+        "14": 21,
+        "15": 9,
+        "16": 50,
+        "8": 1,
+        "9": 1
+      },
+      "truncated_tail_count": 0
+    },
+    "sha256": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "sha256_matches_expected": true,
+    "source_artifact": "16_4_4.scd"
+  },
+  "status": "P2803_MERINGER_SCD_IMPORT_DECODE_VALIDATION_CERTIFICATE_IMPORT_VALIDATED_NO_QUOTIENT_NO_CLOSURE"
+}
