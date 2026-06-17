@@ -2388,3 +2388,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2828/S1778 ranks 81-160 blocker-cuts Ltotal guard
 
 `P2828/S1778` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `81-160` (`1,002` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2829/S1779 ranks 161-272 blocker-cuts Ltotal guard
+
+`P2829/S1779` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `161-272` (`331` additional graphs; all `272` P2818 collision classes cumulatively), but without full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2830/S1780 full-carrier digest Ltotal guard
+
+`P2830/S1780` adds no variational term to `L_total`.  It separates the full `16,828`-graph carrier under the P2815-style digest, but without an exported graph-source functional, target units/normalization, and variational derivative into `K` or `L_total`, the result remains finite carrier evidence rather than an Euler-Lagrange/source-law term.
+
+## P2831/S1781 digest source-law coupling Ltotal guard
+
+`P2831/S1781` adds no variational term to `L_total`.  It proves that current P2830 carrier-derived digest labels/ranks/prefixes/projections do not satisfy the source-law obligations: no non-label formula with target-independent units, no Euler-Lagrange derivative, and no typed graph-to-`K`/`L_total` coupling theorem is exported.
+
+## P2832/S1782 common-neighbor cycle Ltotal guard
+
+`P2832/S1782` adds no variational term to `L_total`.  The tested low-order common-neighbor/cycle formula is non-label and dimensionless on the fixed carrier, but it leaves `16,756` collision graphs and has no Euler-Lagrange derivative or typed graph-to-`K`/`L_total` coupling theorem.
