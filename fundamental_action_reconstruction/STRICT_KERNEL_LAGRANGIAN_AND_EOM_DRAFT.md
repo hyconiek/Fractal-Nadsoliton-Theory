@@ -2376,3 +2376,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2825/S1775 ranks 11-20 blocker-cuts Ltotal guard
 
 `P2825/S1775` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `11-20` (`3,490` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2826/S1776 ranks 21-40 blocker-cuts Ltotal guard
+
+`P2826/S1776` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `21-40` (`3,384` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2827/S1777 ranks 41-80 blocker-cuts Ltotal guard
+
+`P2827/S1777` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `41-80` (`2,287` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2828/S1778 ranks 81-160 blocker-cuts Ltotal guard
+
+`P2828/S1778` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `81-160` (`1,002` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
