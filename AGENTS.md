@@ -848,3 +848,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2815 applies a single-edge deletion/addition response profile to the P2814 residual-collision graphs, using P2811 spectral+local-motif digests on toggled graphs; it reaches the `16,828` canonical target with zero residual collision classes.
 - This is complete finite carrier-separation evidence only: it does not export a strict spectral source law, typed coupling to `K`/`L_total`, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
 - The next admissible move is a separate source-law/coupling acceptance audit with one explicit graph-source functional plus one typed graph-to-`K` or graph-to-`L_total` map; do not continue carrier-refinement replay without a new source-law question.
+
+## Current edge-toggle source-law coupling audit guardrail (P2816/S1766, 2026-06-16)
+
+- P2816 tests exactly one explicit post-P2815 source-law/coupling candidate: `Q_P2815_rank(G)` with a minimal graph-to-`K`/`L_total` coefficient insertion.
+- The candidate uses the complete P2815 carrier, but it is only an ordinal graph label and exports no dimensionful normalization, strict graph-source law, variational meaning, or typed coupling theorem; it is rejected as a source-law/coupling promotion.
+- Do not replay ordinal ranks or carrier-refinement as dynamics.  A next admissible move must provide one non-ordinal formula using explicit typed graph-to-`K` or graph-to-`L_total` normalization/coupling data, while preserving bridge, role-transfer, selector, `L_total`, and ToE blocks until such an audit succeeds.
+
+## Current structural observable source-law obstruction guardrail (P2817/S1767, 2026-06-16)
+
+- P2817 tests exactly one non-ordinal normalized structural observable candidate: `Q_struct(G)=(edge density, degree histogram, distance histogram, exact 4-cycle count)` over all `16,828` graphs.
+- The candidate is deterministic and dimensionless but leaves carrier collisions and exports no strict graph-source law, variational meaning, or typed `K`/`L_total` coupling theorem; it is rejected as source-law/coupling promotion.
+- Do not replay ordinal ranks or low-order structural observables as dynamics.  A next admissible move must provide one richer non-ordinal formula with explicit local edge-toggle variational response energy or equivalent typed graph-to-`K`/`L_total` normalization/coupling data, while preserving bridge, role-transfer, selector, `L_total`, and ToE blocks until such an audit succeeds.
+
+## Current local edge-toggle response energy guardrail (P2818/S1768, 2026-06-16)
+
+- P2818 tests exactly one richer local edge-toggle response energy using endpoint degrees, common-neighbour counts, and post-toggle degree histograms over all one-edge deletion/addition responses on all `16,828` graphs.
+- The candidate improves over low-order structural observables but still leaves carrier collisions and exports no strict graph-source law, variational meaning, or typed `K`/`L_total` coupling theorem; it is rejected as source-law/coupling promotion.
+- Do not replay degree-level local response energy as dynamics.  A next admissible move must either use the full P2815 spectral/local-motif response digest in one explicit energy formula or supply an analytic graph-to-`K`/`L_total` coupling theorem with units and variational derivative, while preserving bridge, role-transfer, selector, `L_total`, and ToE blocks until such an audit succeeds.
+
+## Current P2815-digest blocker-cut sample response guardrail (P2819/S1769, 2026-06-17)
+
+- P2819 applies the full P2815-style spectral/local-motif edge-toggle response digest to a deterministic 24-graph prefix sample of exactly one bounded blocker cut: the largest P2818 local-response collision class.
+- This is finite blocker-cut sample evidence only; it is not a full `16,828`-graph source-law/coupling audit and exports no strict graph-source law, variational meaning, typed `K`/`L_total` coupling theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
+- A next admissible move may extend the same digest response audit first to the full largest blocker cut and then to all P2818 collision classes with caching and a compact manifest, or supply an analytic graph-to-`K`/`L_total` coupling theorem with units and variational derivative; do not promote closure before that.
