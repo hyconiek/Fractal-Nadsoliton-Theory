@@ -872,3 +872,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2819 applies the full P2815-style spectral/local-motif edge-toggle response digest to a deterministic 24-graph prefix sample of exactly one bounded blocker cut: the largest P2818 local-response collision class.
 - This is finite blocker-cut sample evidence only; it is not a full `16,828`-graph source-law/coupling audit and exports no strict graph-source law, variational meaning, typed `K`/`L_total` coupling theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure.
 - A next admissible move may extend the same digest response audit first to the full largest blocker cut and then to all P2818 collision classes with caching and a compact manifest, or supply an analytic graph-to-`K`/`L_total` coupling theorem with units and variational derivative; do not promote closure before that.
+
+## Current P2815-digest blocker-cut shard response guardrail (P2820/S1770, 2026-06-17)
+
+- P2820 extends the P2819 positive sample to four deterministic 24-graph shards (`96` graphs) of the largest P2818 local-response collision class using the full P2815-style spectral/local-motif edge-toggle response digest.
+- The digest separates all `96` audited shard graphs, giving stronger finite response-witness evidence, but this is still not the complete `788`-graph blocker cut, all P2818 collision classes, or a full `16,828`-graph source-law/coupling audit.
+- Do not promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure from P2820; the next admissible computational move is the same cached digest audit over the rest of the `788`-graph blocker cut and then all remaining P2818 collision classes, or an independent typed graph-to-`K`/`L_total` coupling theorem with units and variational derivative.
+
+## Current P2815-digest full largest-blocker-cut guardrail (P2821/S1771, 2026-06-17)
+
+- P2821 extends P2819/P2820 to the complete largest P2818 local-response collision class: all `788` graphs are audited with the full P2815-style spectral/local-motif edge-toggle response digest.
+- The digest separates that full blocker cut with zero residual collisions, giving stronger finite response-witness evidence, but this is still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit.
+- Do not promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure from P2821; the next admissible computational move is the same cached digest audit over every remaining P2818 collision class, with compact residual counts and manifest, or an independent typed graph-to-`K`/`L_total` coupling theorem with units and variational derivative.
+
+## Current P2815-digest top-two blocker-cuts guardrail (P2822/S1772, 2026-06-17)
+
+- P2822 extends P2821 to the top two P2818 local-response collision classes: `788` and `776` graphs (`1,564` total) audited with the full P2815-style spectral/local-motif edge-toggle response digest.
+- The digest separates both audited cuts and the combined top-two audited set with zero residual collisions, but this is still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit.
+- Do not promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure from P2822; the next admissible computational move is descending-size cached digest batches over every remaining P2818 collision class, stopping on any residual collision, or a separate typed graph-to-`K`/`L_total` coupling theorem with units and variational derivative.
+
+## Current P2815-digest next-three blocker-cuts guardrail (P2823/S1773, 2026-06-17)
+
+- P2823 extends P2822 to descending-size P2818 local-response collision-class ranks `3-5`: `728`, `691`, and `680` graphs (`2,099` additional graphs) audited with the full P2815-style spectral/local-motif edge-toggle response digest.
+- The digest separates each audited cut and the combined rank-3-to-5 audited set with zero residual collisions; cumulative P2822+P2823 coverage is five collision classes / `3,663` graphs, still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit.
+- Do not promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure from P2823; continue descending-size cached digest batches with stop-on-first-residual discipline, or provide a separate typed graph-to-`K`/`L_total` coupling theorem with units and variational derivative.

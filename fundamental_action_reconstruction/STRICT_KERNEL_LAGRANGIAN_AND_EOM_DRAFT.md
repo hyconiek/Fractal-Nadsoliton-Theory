@@ -2352,3 +2352,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2819/S1769 P2815 digest blocker-cut sample Ltotal guard
 
 `P2819/S1769` adds no variational term to `L_total`.  The P2815-style spectral/local-motif edge-toggle response digest is tested only on a deterministic 24-graph sample of one P2818 blocker cut; without a full-carrier audit and typed graph-to-`K`/`L_total` coupling theorem, it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2820/S1770 P2815 digest blocker-cut shard Ltotal guard
+
+`P2820/S1770` adds no variational term to `L_total`.  The P2815-style digest separates `96` audited graphs from four deterministic shards of one `788`-graph blocker cut, but without complete blocker-cut/all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2821/S1771 full largest-blocker-cut Ltotal guard
+
+`P2821/S1771` adds no variational term to `L_total`.  The P2815-style digest separates the complete largest `788`-graph P2818 blocker cut, but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2822/S1772 top-two blocker-cuts Ltotal guard
+
+`P2822/S1772` adds no variational term to `L_total`.  The P2815-style digest separates the top two P2818 blocker cuts (`1,564` graphs total), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
+
+## P2823/S1773 next-three blocker-cuts Ltotal guard
+
+`P2823/S1773` adds no variational term to `L_total`.  The P2815-style digest separates blocker-cut ranks `3-5` (`2,099` additional graphs), but without all-collision-class/full-carrier coverage and a typed graph-to-`K`/`L_total` coupling theorem it remains finite graph evidence rather than an Euler-Lagrange/source-law term.
