@@ -1,0 +1,124 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_bounded_no_closure_audit": true,
+    "accepted_as_full_carrier_source_law_coupling": false,
+    "accepted_as_full_largest_blocker_cut_response_witness": true,
+    "facts": {
+      "all_16828_graphs_audited": false,
+      "all_p2818_collision_classes_audited": false,
+      "blocker_cut_is_fully_separated": true,
+      "entire_largest_blocker_cut_audited": true,
+      "exactly_one_blocker_cut_tested": true,
+      "p2818_local_response_rejected": true,
+      "p2819_sample_witness_positive": true,
+      "p2820_shard_witness_positive": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "strict_graph_source_law_exported": false,
+      "typed_graph_to_K_or_Ltotal_coupling_exported": false,
+      "uses_full_p2815_spectral_local_motif_response_digest": true
+    },
+    "missing_for_promotion": [
+      "all_16828_graphs_audited",
+      "all_p2818_collision_classes_audited",
+      "strict_graph_source_law_exported",
+      "typed_graph_to_K_or_Ltotal_coupling_exported"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "all_p2818_collision_classes_audited": false,
+      "bridge_closure_exported": false,
+      "full_16828_carrier_audited": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Extend the cached P2815-digest response audit from the largest blocker cut to every remaining P2818 collision class, with compact per-class residual counts and a manifest.  Only after all P2818 collision classes/full carrier are audited should any source-law/coupling theorem with units and variational derivative be attempted; until then, keep no-coupling/no-closure boundaries.",
+    "reason": "P2821 completes the P2819/P2820 largest-blocker-cut escalation: the same full P2815-style digest is audited on all 788 graphs in the largest P2818 blocker cut and separates the cut with zero residual collisions.  This is a stronger finite blocker-cut witness, but it still audits only one P2818 collision class rather than all P2818 collision classes or the full 16,828-graph carrier, and it exports no strict graph-source law or typed K/L_total coupling theorem.  Therefore no L_total, bridge, role-transfer, selector, or ToE closure follows."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2818": "525632e11f0655dc696532eb34ff88e383ee8f6e65b1e95be4b4ed3942438f04",
+    "P2819": "85a5bca69fad09157604c3d955a0db84428e84b8a7bfd9486ce7b13e496ed53b",
+    "P2820": "bd5a97d594c126b1b8d40f3065b7bab0d5e98ae0f4737981c9efccb4e44ec1ee"
+  },
+  "input_statuses": {
+    "P2818": "P2818_LOCAL_EDGE_VARIATIONAL_RESPONSE_ENERGY_OBSTRUCTED_NO_COUPLING_NO_CLOSURE",
+    "P2819": "P2819_P2815_DIGEST_BLOCKER_CUT_SAMPLE_WITNESS_NO_FULL_COUPLING_NO_CLOSURE",
+    "P2820": "P2820_P2815_DIGEST_BLOCKER_CUT_SHARD_WITNESS_NO_FULL_COUPLING_NO_CLOSURE"
+  },
+  "p2815_digest_full_largest_blocker_cut_audit": {
+    "blocker_cut": "complete largest P2818 E_local_toggle collision class",
+    "blocker_defect_after_toggle_digest": 0,
+    "candidate_response": "full P2815-style spectral/local-motif edge-toggle response digest on the complete largest P2818 blocker cut",
+    "class_size_histogram": {
+      "1": 788
+    },
+    "computed_graph_count": 788,
+    "computed_new_row_count": 692,
+    "decoded_graph_count": 16828,
+    "manifest_path": "generated/p2821_s1771_full_largest_blocker_cut_compact_manifest.json",
+    "manifest_sha256": "fa4836df74e665843e6560432f14f88c22ce0acf6eac10ac181cc80874345205",
+    "p2818_blocker_class_size": 788,
+    "p2818_blocker_key_sha256": "8d2524e88a8ec6339cf24add2ded48ea8d217c7092fcb9be7f160184eba1423c",
+    "reused_p2820_cached_row_count": 96,
+    "sample_rows": [
+      {
+        "graph_index_0_based": 5513,
+        "p2815_digest_response_sha256": "ba1631c166f937c2a941bd42b17c72d8675988623a97b149939f9c310f0d45b1"
+      },
+      {
+        "graph_index_0_based": 5741,
+        "p2815_digest_response_sha256": "10b7713ed5d2ceb64e8d48106f8fdf08d2deb4eded1738d404e2c732dbde5a99"
+      },
+      {
+        "graph_index_0_based": 5761,
+        "p2815_digest_response_sha256": "0a6dab1cb5b8bd9789cd5fd044fb1032e6970c6595bf2e82137f0fc246312576"
+      },
+      {
+        "graph_index_0_based": 5780,
+        "p2815_digest_response_sha256": "4cb75d23208cbc058629002eab4797d1a69c02a6f1b56dea3b6f8c90f00e91ad"
+      },
+      {
+        "graph_index_0_based": 5792,
+        "p2815_digest_response_sha256": "7acd60bfb9cc7da2b2f4976cc6511500cfa4d05e5beb6f79ebdfa9cd7d0f13db"
+      },
+      {
+        "graph_index_0_based": 5809,
+        "p2815_digest_response_sha256": "2dbcc39633976f4e023a6f46f306d3f1347be64f05b5d0fc8287366043f37081"
+      },
+      {
+        "graph_index_0_based": 5888,
+        "p2815_digest_response_sha256": "243f90426c2dd5a52283efdd251ae36c4f73897c8a4593b89160f5bd0dda4970"
+      },
+      {
+        "graph_index_0_based": 5899,
+        "p2815_digest_response_sha256": "9583a580754c216a459422cf054d0a4e9343dc235db25a93b650861478a67125"
+      },
+      {
+        "graph_index_0_based": 5921,
+        "p2815_digest_response_sha256": "aac780cf3d4dfd6ec9cdf6aa765d8eee5132ca8758770af8f63a428f04c4d31c"
+      },
+      {
+        "graph_index_0_based": 5943,
+        "p2815_digest_response_sha256": "55e2dcbdaa2722192bb0c6d5b355aac6143fa9ca7e2937bc5f32de199c33085e"
+      },
+      {
+        "graph_index_0_based": 5949,
+        "p2815_digest_response_sha256": "7c923bf989f927573799bd923a183119e107735b86695442c91557c8e9296de4"
+      },
+      {
+        "graph_index_0_based": 5964,
+        "p2815_digest_response_sha256": "d1bbdd3defba8c180e53f44d140659f2fe6f9677d43190c4d23bf6a7c705b2e9"
+      }
+    ],
+    "toggle_digest_collision_class_count": 0,
+    "toggle_digest_collision_graph_count": 0,
+    "toggle_digest_max_class_size": 1,
+    "toggle_digest_refined_class_count": 788
+  },
+  "status": "P2821_P2815_DIGEST_FULL_LARGEST_BLOCKER_CUT_WITNESS_NO_FULL_COUPLING_NO_CLOSURE"
+}
