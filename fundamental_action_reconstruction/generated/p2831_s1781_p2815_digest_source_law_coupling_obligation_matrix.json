@@ -1,0 +1,173 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_bounded_obligation_no_go": true,
+    "accepted_as_source_law_coupling_theorem": false,
+    "facts": {
+      "graph_index_coverage_exact": true,
+      "obligation_matrix_executed": true,
+      "p2818_local_response_rejected": true,
+      "p2830_full_carrier_separation_witness": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "some_candidate_accepted": false,
+      "strict_graph_source_law_exported": false,
+      "typed_graph_to_K_or_Ltotal_coupling_exported": false,
+      "units_and_variational_derivative_exported": false
+    },
+    "missing_for_promotion": [
+      "some_candidate_accepted",
+      "strict_graph_source_law_exported",
+      "typed_graph_to_K_or_Ltotal_coupling_exported",
+      "units_and_variational_derivative_exported"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false,
+      "units_and_variational_derivative_exported": false
+    },
+    "next_honest_step": "Do not replay digest labels, hashes, or ordinal ranks as dynamics.  The next admissible move requires one genuinely new non-label graph-source formula with target-independent units/normalization and an explicit variational derivative into K or L_total; if no such formula is supplied, pivot to a different new typed object or preserve the P2830-P2831 no-coupling boundary.",
+    "reason": "P2831 audits the exact theorem gap left by P2830: whether full finite P2815 digest separation by itself supplies a strict graph-source law/coupling.  Four carrier-derived candidates are tested.  Full digest labels, lexicographic ranks, and digest prefixes are injective but remain labels without non-label graph formulas, target-independent units, variational derivatives, or typed graph-to-K/L_total coupling theorems; the compact modulo projection is not even separating.  Therefore the source-law/coupling promotion is rejected without importing selector, bridge, or role-transfer premises."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2818": "525632e11f0655dc696532eb34ff88e383ee8f6e65b1e95be4b4ed3942438f04",
+    "P2830": "2ab89a450a7730ea6dfffc59c40a3feae938fc6f2d037f7a3b7ef883b4606d71",
+    "P2830_MANIFEST": "95f185bbd812b97f5c13c1f97204d984a605500f11ddbdacda56a5a5b7d2f1c4"
+  },
+  "input_statuses": {
+    "P2818": "P2818_LOCAL_EDGE_VARIATIONAL_RESPONSE_ENERGY_OBSTRUCTED_NO_COUPLING_NO_CLOSURE",
+    "P2830": "P2830_P2815_DIGEST_FULL_16828_CARRIER_SEPARATION_WITNESS_NO_SOURCE_LAW_NO_CLOSURE"
+  },
+  "p2815_digest_source_law_coupling_obligation_matrix": {
+    "accepted_candidate_count": 0,
+    "audited_question": "Can P2830 full-carrier digest separation alone be promoted to a strict graph-source law/coupling theorem?",
+    "candidate_obligation_rows": [
+      {
+        "accepted_as_source_law_coupling": false,
+        "candidate": "Q_digest_sha256_label",
+        "collision_class_count": 0,
+        "collision_graph_count": 0,
+        "description": "Use the P2830 P2815 digest SHA-256 label itself as a scalar/source label.",
+        "facts": {
+          "deterministic_on_p2830_manifest": true,
+          "non_label_graph_formula_exported": false,
+          "selector_bridge_or_role_transfer_imported": false,
+          "separates_full_carrier": true,
+          "target_independent_units_or_normalization_exported": false,
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported": false,
+          "variational_derivative_exported": false
+        },
+        "max_class_size": 1,
+        "missing_for_promotion": [
+          "non_label_graph_formula_exported",
+          "target_independent_units_or_normalization_exported",
+          "variational_derivative_exported",
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported"
+        ],
+        "sample_residual_collisions": {},
+        "unique_value_count": 16828,
+        "value_count": 16828
+      },
+      {
+        "accepted_as_source_law_coupling": false,
+        "candidate": "Q_digest_lex_rank",
+        "collision_class_count": 0,
+        "collision_graph_count": 0,
+        "description": "Use the lexicographic rank of the P2830 digest labels as a normalized ordinal coefficient.",
+        "facts": {
+          "deterministic_on_p2830_manifest": true,
+          "non_label_graph_formula_exported": false,
+          "selector_bridge_or_role_transfer_imported": false,
+          "separates_full_carrier": true,
+          "target_independent_units_or_normalization_exported": false,
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported": false,
+          "variational_derivative_exported": false
+        },
+        "max_class_size": 1,
+        "missing_for_promotion": [
+          "non_label_graph_formula_exported",
+          "target_independent_units_or_normalization_exported",
+          "variational_derivative_exported",
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported"
+        ],
+        "sample_residual_collisions": {},
+        "unique_value_count": 16828,
+        "value_count": 16828
+      },
+      {
+        "accepted_as_source_law_coupling": false,
+        "candidate": "Q_digest_prefix_16",
+        "collision_class_count": 0,
+        "collision_graph_count": 0,
+        "description": "Use the first 16 hex characters of the digest label as a shortened source label.",
+        "facts": {
+          "deterministic_on_p2830_manifest": true,
+          "non_label_graph_formula_exported": false,
+          "selector_bridge_or_role_transfer_imported": false,
+          "separates_full_carrier": true,
+          "target_independent_units_or_normalization_exported": false,
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported": false,
+          "variational_derivative_exported": false
+        },
+        "max_class_size": 1,
+        "missing_for_promotion": [
+          "non_label_graph_formula_exported",
+          "target_independent_units_or_normalization_exported",
+          "variational_derivative_exported",
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported"
+        ],
+        "sample_residual_collisions": {},
+        "unique_value_count": 16828,
+        "value_count": 16828
+      },
+      {
+        "accepted_as_source_law_coupling": false,
+        "candidate": "Q_digest_int_mod_4096",
+        "collision_class_count": 3729,
+        "collision_graph_count": 16543,
+        "description": "Use a finite integer projection of the digest label modulo 4096 as a compact coefficient.",
+        "facts": {
+          "deterministic_on_p2830_manifest": true,
+          "non_label_graph_formula_exported": false,
+          "selector_bridge_or_role_transfer_imported": false,
+          "separates_full_carrier": false,
+          "target_independent_units_or_normalization_exported": false,
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported": false,
+          "variational_derivative_exported": false
+        },
+        "max_class_size": 13,
+        "missing_for_promotion": [
+          "separates_full_carrier",
+          "non_label_graph_formula_exported",
+          "target_independent_units_or_normalization_exported",
+          "variational_derivative_exported",
+          "typed_graph_to_K_or_Ltotal_coupling_theorem_exported"
+        ],
+        "sample_residual_collisions": {
+          "2476": 6,
+          "2890": 9,
+          "329": 6,
+          "3367": 9,
+          "535": 4
+        },
+        "unique_value_count": 4014,
+        "value_count": 16828
+      }
+    ],
+    "decoded_graph_count": 16828,
+    "graph_index_coverage_is_exact": true,
+    "graph_index_max": 16827,
+    "graph_index_min": 0,
+    "p2830_full_carrier_digest_classes": 16828,
+    "p2830_full_carrier_digest_collisions": 0,
+    "p2830_full_carrier_rows": 16828,
+    "rejected_candidate_count": 4
+  },
+  "status": "P2831_P2815_DIGEST_SOURCE_LAW_COUPLING_OBLIGATION_NO_GO_NO_CLOSURE"
+}
