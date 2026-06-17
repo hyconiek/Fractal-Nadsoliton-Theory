@@ -2336,3 +2336,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2815/S1765 edge-toggle response Ltotal guard
 
 `P2815/S1765` adds no variational term to `L_total`.  The edge-toggle response profile separates the finite carrier, but it remains a graph-carrier diagnostic, not an action functional, source equation, Euler-Lagrange contribution, or typed graph-to-`K`/`L_total` coupling.
+
+## P2816/S1766 edge-toggle source-law coupling Ltotal guard
+
+`P2816/S1766` adds no variational term to `L_total`.  The tested `Q_P2815_rank` source-functional candidate is a finite ordinal graph diagnostic with no exported dimensionful normalization, Euler-Lagrange role, or typed graph-to-`K`/`L_total` coupling theorem.
+
+## P2817/S1767 structural observable Ltotal guard
+
+`P2817/S1767` adds no variational term to `L_total`.  The tested `Q_struct` observable is a dimensionless graph diagnostic; its finite collisions and missing typed graph-to-`K`/`L_total` coupling theorem block any Euler-Lagrange/source-law promotion.
+
+## P2818/S1768 local edge-toggle response Ltotal guard
+
+`P2818/S1768` adds no variational term to `L_total`.  The tested local edge-toggle response energy is a dimensionless finite graph diagnostic; residual carrier collisions and the missing typed graph-to-`K`/`L_total` coupling theorem block Euler-Lagrange/source-law promotion.
+
+## P2819/S1769 P2815 digest blocker-cut sample Ltotal guard
+
+`P2819/S1769` adds no variational term to `L_total`.  The P2815-style spectral/local-motif edge-toggle response digest is tested only on a deterministic 24-graph sample of one P2818 blocker cut; without a full-carrier audit and typed graph-to-`K`/`L_total` coupling theorem, it remains finite graph evidence rather than an Euler-Lagrange/source-law term.

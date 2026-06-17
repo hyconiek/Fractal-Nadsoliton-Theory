@@ -1,0 +1,57 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_bounded_candidate_rejection": true,
+    "accepted_as_source_law_coupling": false,
+    "facts": {
+      "dimensionful_normalization_exported": false,
+      "exactly_one_candidate_functional_tested": true,
+      "functional_is_deterministic_and_reproducible": true,
+      "functional_separates_full_carrier": true,
+      "p2815_complete_carrier_available": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "strict_graph_source_law_exported": false,
+      "typed_graph_to_K_or_Ltotal_coupling_exported": false
+    },
+    "missing_for_promotion": [
+      "dimensionful_normalization_exported",
+      "strict_graph_source_law_exported",
+      "typed_graph_to_K_or_Ltotal_coupling_exported"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "dimensionful_normalization_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay carrier refinement or promote ordinal carrier ranks.  The next honest move is exactly one non-ordinal source-law candidate: an explicit typed graph observable with dimension/normalization data and a real graph-to-K or graph-to-L_total formula; audit it against separability, variational meaning, and no selector/bridge/role-transfer import.  If no such formula is supplied, preserve the no-coupling boundary.",
+    "reason": "P2816 tests exactly one explicit post-P2815 source-law/coupling candidate: Q_P2815_rank and a minimal graph-to-K/L_total coefficient insertion.  The finite carrier input is complete and deterministic, but the rank is still an ordinal graph label: no dimensionful normalization, strict graph-source law, variational meaning, or typed K/L_total coupling theorem is exported.  Thus P2816 is a bounded coupling/source-law rejection, not dynamics or closure."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2815": "5dfa9d723181bfde0b52cb55a385b03d37fa378b7deba82dc83bd8ac22e822f2"
+  },
+  "input_statuses": {
+    "P2815": "P2815_EDGE_TOGGLE_RESPONSE_SEPARATES_CARRIER_NO_SOURCE_LAW_NO_CLOSURE"
+  },
+  "q_rank_source_candidate_audit": {
+    "candidate_functional": "Q_P2815_rank(G)=canonical ordinal/rank on the complete P2815 edge-toggle separating carrier",
+    "computational_basis": "Uses the committed P2815 finite carrier-separation certificate rather than adding another graph invariant.",
+    "decoded_graph_count": 16828,
+    "input_p2815_collision_class_count": 0,
+    "input_p2815_refined_class_count": 16828,
+    "q_rank_class_count": 16828,
+    "q_rank_collision_class_count": 0,
+    "q_rank_collision_graph_count": 0,
+    "rank_domain_max": 16827,
+    "rank_domain_min": 0,
+    "remaining_defect_canonical_minus_q_rank": 0,
+    "typed_map_candidate": "G -> Q_P2815_rank(G) -> dimensionless coefficient c*Q in K or L_total"
+  },
+  "status": "P2816_EDGE_TOGGLE_SOURCE_FUNCTIONAL_REJECTED_NO_COUPLING_NO_CLOSURE"
+}

@@ -2967,3 +2967,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2815/S1765 edge-toggle response residual audit
 
 `P2815/S1765` adds exactly one non-automorphism typed ingredient after P2814: the single-edge deletion/addition response profile, using P2811 spectral+local-motif digests on toggled graphs and applying it only to the P2814 residual-collision set.  It separates the finite carrier by reaching the `16,828` canonical target with zero residual collision classes.  This is complete carrier separation evidence only; it is not a strict spectral source law or a `K`/`L_total` coupling theorem.
+
+## P2816/S1766 edge-toggle source-law coupling acceptance audit
+
+`P2816/S1766` tests exactly one explicit post-P2815 candidate source functional, `Q_P2815_rank(G)`, plus the minimal typed-map candidate `G -> Q_P2815_rank(G) -> c*Q_P2815_rank(G)` for `K` or `L_total`.  The P2815 carrier input is complete and deterministic, but the induced rank is an ordinal graph label and no dimensionful normalization, strict graph-source law, variational meaning, or typed `K`/`L_total` coupling theorem is exported.  Therefore P2816 rejects this candidate and adds no closure.
+
+## P2817/S1767 structural observable source-law obstruction audit
+
+`P2817/S1767` tests exactly one non-ordinal normalized structural observable candidate after P2816: `Q_struct(G)=(edge density, degree histogram, distance histogram, exact 4-cycle count)` on all `16,828` Meringer graphs.  The observable is deterministic and dimensionless, but it collapses the complete P2815 carrier into far fewer classes and exports no strict graph-source law or typed `K`/`L_total` coupling theorem.  Thus it is a bounded obstruction, not a source-law/coupling promotion.
+
+## P2818/S1768 local edge-toggle variational response energy audit
+
+`P2818/S1768` tests one richer local edge-toggle response energy after P2817: all one-edge deletion/addition responses are summarized by endpoint degrees, common-neighbour counts, and post-toggle degree histograms, with normalized edge density.  The finite audit covers all `16,828` graphs and improves over low-order structural observables, but residual collisions remain and no strict graph-source law or typed `K`/`L_total` coupling theorem is exported.  Thus it is a bounded local-response obstruction, not a source-law/coupling promotion.
+
+## P2819/S1769 P2815 digest blocker-cut sample response audit
+
+`P2819/S1769` applies the full P2815-style spectral/local-motif edge-toggle response digest to a deterministic 24-graph prefix sample of exactly one bounded blocker cut: the largest P2818 local-response collision class.  This tests the stronger recommended ingredient on a finite obstruction slice, but it is not a full `16,828`-graph source-law/coupling audit and exports no strict graph-source law or typed `K`/`L_total` coupling theorem.  No `L_total`, bridge, role-transfer, selector, or ToE closure follows.
