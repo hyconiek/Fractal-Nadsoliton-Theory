@@ -2999,3 +2999,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2823/S1773 P2815 digest next-three blocker-cuts audit
 
 `P2823/S1773` extends P2822 by auditing descending-size P2818 blocker-cut ranks `3-5` (`728`, `691`, and `680` graphs; `2,099` additional graphs) using the full P2815-style spectral/local-motif edge-toggle response digest.  The finite audit separates every audited cut and the combined rank-3-to-5 audited set with zero residual collisions; cumulative P2822+P2823 coverage is five collision classes / `3,663` graphs.  This is still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit, and it exports no strict graph-source law or typed `K`/`L_total` coupling theorem.  No `L_total`, bridge, role-transfer, selector, or ToE closure follows.
+
+## P2824/S1774 P2815 digest ranks 6-10 blocker-cuts audit
+
+`P2824/S1774` extends P2823 by auditing descending-size P2818 blocker-cut ranks `6-10` (`541`, `531`, `514`, `508`, and `505` graphs; `2,599` additional graphs) using the full P2815-style spectral/local-motif edge-toggle response digest.  The finite audit separates every audited cut and the combined rank-6-to-10 audited set with zero residual collisions; cumulative P2823+P2824 coverage is ten collision classes / `6,262` graphs.  This is still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit, and it exports no strict graph-source law or typed `K`/`L_total` coupling theorem.  No `L_total`, bridge, role-transfer, selector, or ToE closure follows.
+
+## P2825/S1775 P2815 digest ranks 11-20 blocker-cuts audit
+
+`P2825/S1775` extends P2824 by auditing descending-size P2818 blocker-cut ranks `11-20` (`495`, `431`, `399`, `351`, `328`, `314`, `307`, `295`, `290`, and `280` graphs; `3,490` additional graphs) using the full P2815-style spectral/local-motif edge-toggle response digest.  The finite audit separates every audited cut and the combined rank-11-to-20 audited set with zero residual collisions; cumulative P2824+P2825 coverage is twenty collision classes / `9,752` graphs.  This is still not all P2818 collision classes or a full `16,828`-graph source-law/coupling audit, and it exports no strict graph-source law or typed `K`/`L_total` coupling theorem.  No `L_total`, bridge, role-transfer, selector, or ToE closure follows.
