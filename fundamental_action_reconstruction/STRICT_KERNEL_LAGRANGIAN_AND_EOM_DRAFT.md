@@ -2608,3 +2608,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2883/S1833 dimensional/unit source inventory `L_total` guard
 
 `P2883/S1833` adds no strict action term.  Existing positive `9/5` eta/damping/unit-premise hits do not export a primitive source/stiffness ratio `9:5` law, localized boundary/source density, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2884/S1834 finite invariant-ratio source-law `L_total` guard
+
+`P2884/S1834` adds no strict action term.  Finite invariant-count representability of primitive ratio `9:5` does not export a unit-bearing action density, a selected source/stiffness law, localized boundary/source density, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2885/S1835 invariant-quadratic action `L_total` guard
+
+`P2885/S1835` supplies only a finite family of action-shaped ratio carriers.  It does not export a unit-bearing localized action density, selected source/stiffness law, variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2886/S1836 external unit-measure/action-density `L_total` guard
+
+`P2886/S1836` adds no strict action term.  The generated-artifact inventory finds no external unit measure, localized unit-bearing action density, variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source satisfying the post-`P2885` obligation.
+
+## P2887/S1837 C12 unit-measure/localized-density `L_total` guard
+
+`P2887/S1837` adds no strict action term.  `C12`-neutral supports/densities are global rather than localized, and their uniform integrals do not produce `9/5`; the packet exports no localized unit-bearing action density, variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.

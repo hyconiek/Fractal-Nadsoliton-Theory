@@ -4,9 +4,9 @@ Status: `P2883_DIMENSIONAL_UNIT_SOURCE_INVENTORY_NO_GO_AUDIT_NO_CLOSURE`
 
 ## Generated-artifact inventory
 - candidate class: `current generated-artifact inventory for exported strict dimensional/unit source laws fixing 9:5 or unit-bearing 9/5`
-- generated JSON file count: `4931`
-- relevant record count: `42`
-- positive relevant record count: `14`
+- generated JSON file count: `4933`
+- relevant record count: `44`
+- positive relevant record count: `16`
 - positive source/stiffness 9:5 record count: `0`
 
 ## Boundary

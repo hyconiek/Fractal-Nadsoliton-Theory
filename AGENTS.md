@@ -1298,3 +1298,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Positive `9/5`-related eta/damping/unit-premise hits exist, but no current generated artifact exports a primitive source/stiffness ratio `9:5` law satisfying the P2882 obligation.
 - Do not promote endpoint pins, denominator-5 coefficient boxes, local quadratic minimization, scalar Euler source-ratio transmission, or generated-artifact inventory to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must introduce one genuinely new strict dimensional/unit source object or analytic theorem fixing primitive ratio `9:5` from independent data; otherwise preserve no-new-live-frontier.
+
+## Current finite invariant-ratio 9:5 source-law no-go guardrail (P2884/S1834, 2026-06-18)
+
+- P2884 tests bounded source-neutral `Z12/C12/D12` count-invariant expression algebra as a candidate source for the primitive source/stiffness ratio `9:5`.
+- The ratio `9:5` is representable, but only as one of many expression-pair choices; current artifacts export no invariant selector, unit dimension, action density, or source/stiffness law selecting it.
+- Do not promote invariant-count expression algebra, endpoint pins, denominator-5 coefficient boxes, local quadratic minimization, scalar Euler ratio transmission, or generated-artifact inventory to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must provide an explicit unit/dimensional action functional analytically selecting the `9:5` source/stiffness pair, pivot to a genuinely different typed object outside this family, or preserve no-new-live-frontier.
+
+## Current invariant-quadratic action 9/5 selection no-go guardrail (P2885/S1835, 2026-06-18)
+
+- P2885 builds quadratic actions `E(x)=1/2*A*x^2-J*x` with `A,J` drawn from the bounded source-neutral invariant expression vocabulary of P2884.
+- Every action selecting `x=9/5` already imports primitive ratio `J:A=9:5`, and many distinct expression pairs do so; no unit measure, action density, variational chain rule, or strict selector chooses one.
+- Do not promote invariant-count quadratic actions, invariant-ratio algebra, scalar Euler transmission, endpoint pins, denominator-5 coefficient boxes, or generated-artifact inventory to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce an external-to-this-family strict unit measure/localized action density or a genuinely different typed object; absent that, preserve no-new-live-frontier.
+
+## Current external unit-measure/action-density inventory no-go guardrail (P2886/S1836, 2026-06-18)
+
+- P2886 scans current generated artifacts for an external-to-P2884/P2885 strict unit measure, localized unit-bearing action density, variational chain rule, or `9:5` source/stiffness theorem.
+- Relevant terms and negative guard flags exist, but no positive export/accept/select/coupling boolean supplies the missing object.
+- Do not promote invariant-count actions, ratio algebra, scalar Euler transmission, endpoint/coefficient boxes, or artifact inventories to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must provide one new explicit formula/artifact for a strict unit measure or localized action density with a computed nonzero `9:5` coupling, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current C12 unit-measure/localized-density 9/5 no-go guardrail (P2887/S1837, 2026-06-18)
+
+- P2887 exhaustively enumerates all binary supports and ternary `{-1,0,1}` densities on `Z12` as a concrete post-P2886 unit-measure/localized-action-density candidate.
+- `C12` neutrality leaves only empty/full supports and constant ternary densities; singleton localization imports an endpoint, and uniform unit-measure integrals are `-1`, `0`, and `1`, not `9/5`.
+- Do not promote `C12`-neutral unit measures, singleton endpoint imports, invariant-count actions, ratio algebra, or scalar Euler transmission to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must provide one new non-`C12`-neutral strict origin/source law with computed unit-bearing `9/5` coupling, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
