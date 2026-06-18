@@ -1,0 +1,188 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_bridge_reconciliation_obstruction_audit": true,
+    "exports_full_kernel_bridge": false,
+    "facts": {
+      "full_bridge_has_missing_atoms": true,
+      "no_semantic_bridge_target_satisfied": true,
+      "p2849_rechecked": true,
+      "p2850_rechecked": true,
+      "p2851_rechecked": true,
+      "role_transfer_still_downstream": true,
+      "syntax_basis_only_target_satisfied": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "amplitude_normalization_bridge_atom_exported": false,
+      "damping_compression_bridge_atom_exported": false,
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay damping, amplitude, EML syntax, density normalizers, role transfer, L_total, EOM, Hamiltonian, or ToE promotion.  The next admissible proof-grade move must introduce exactly one new typed bridge-source atom.  The cleanest non-replay candidate is a phase/frequency bridge-source audit for omega/phi/topological data; alternatively introduce a genuinely new strict eta/beta source law.  Without such a new source premise, preserve the no-new-live-frontier certificate.",
+    "reason": "P2852 reconciles P2849-P2851.  Only the syntax-level common expression basis is satisfied; semantic bridge targets remain unsatisfied.  Damping/compression still lacks eta and target-independent beta sources, amplitude still lacks a constant residual-zero passage and alpha source law, and full bridge/role transfer remain downstream of multiple missing typed atoms."
+  },
+  "input_hashes": {
+    "P2849": "191e7259694c8d0925fd3f442e9b33540ebafdbb47f08ca022764ac7d15a47ac",
+    "P2850": "fdb6db2f71b287cbe5feb7172e782cdfa86cb7fb37bfbe7eae353096604d39d8",
+    "P2851": "cc5797f381ce8bbdeb9adbc5b267c68d53de83e3af07c6517e1287bd8dcb0b0e"
+  },
+  "kernel_bridge_obligation_reconciliation": {
+    "atoms": {
+      "alpha_geo_strict_source_law_exported": false,
+      "amplitude_normalization_atom_exported": false,
+      "completion_map_semantics_exported": false,
+      "damping_compression_atom_exported": false,
+      "eml_syntax_basis_available": true,
+      "eta_source_law_exported": false,
+      "legacy_kernel_defined": true,
+      "phase_frequency_bridge_atom_exported": false,
+      "role_transfer_theorem_exported": false,
+      "selector_topological_source_exported": false,
+      "strict_kernel_defined": true,
+      "target_independent_beta_source_exported": false
+    },
+    "candidate_next_atom_scores": {
+      "alpha_geo_strict_source_law": {
+        "adds": [
+          "alpha_geo_strict_source_law_exported"
+        ],
+        "admissible_without_new_source_premise": false,
+        "directly_unlocks_targets": [],
+        "missing_obligation_reduction": 2,
+        "reason": "P2851 blocked constant rescaling, but a new role-safe strict alpha source would be admissible.",
+        "replay_risk": "medium"
+      },
+      "eml_syntax_replay": {
+        "adds": [
+          "eml_syntax_basis_available"
+        ],
+        "admissible_without_new_source_premise": false,
+        "directly_unlocks_targets": [],
+        "missing_obligation_reduction": 0,
+        "reason": "P2850 already records syntax availability; replay does not add typed source semantics.",
+        "replay_risk": "high"
+      },
+      "eta_beta_strict_source_law": {
+        "adds": [
+          "eta_source_law_exported",
+          "target_independent_beta_source_exported"
+        ],
+        "admissible_without_new_source_premise": false,
+        "directly_unlocks_targets": [],
+        "missing_obligation_reduction": 4,
+        "reason": "P2849 blocked legacy-linear sourcing, but a genuinely new strict source law would be admissible.",
+        "replay_risk": "medium"
+      },
+      "phase_frequency_bridge_atom": {
+        "adds": [
+          "phase_frequency_bridge_atom_exported"
+        ],
+        "admissible_without_new_source_premise": false,
+        "directly_unlocks_targets": [],
+        "missing_obligation_reduction": 2,
+        "reason": "Not yet audited as its own bridge atom; required by amplitude passage and full completion.",
+        "replay_risk": "low"
+      }
+    },
+    "input_statuses_rechecked": {
+      "P2849": "P2849_DAMPING_COMPRESSION_KERNEL_BRIDGE_ATOM_AUDIT_NO_CLOSURE",
+      "P2850": "P2850_EML_SINGLE_OPERATOR_KERNEL_BRIDGE_IMPACT_AUDIT_NO_CLOSURE",
+      "P2851": "P2851_AMPLITUDE_NORMALIZATION_KERNEL_BRIDGE_ATOM_AUDIT_NO_CLOSURE"
+    },
+    "minimal_unlock_sets_size_leq_3": {
+      "amplitude_normalization_bridge_atom": [],
+      "damping_compression_bridge_atom": [
+        [
+          "damping_compression_atom_exported",
+          "eta_source_law_exported",
+          "target_independent_beta_source_exported"
+        ]
+      ],
+      "full_kernel_completion_bridge": [],
+      "role_transfer": [],
+      "syntax_level_common_expression_basis": []
+    },
+    "target_requirements": {
+      "amplitude_normalization_bridge_atom": [
+        "alpha_geo_strict_source_law_exported",
+        "amplitude_normalization_atom_exported",
+        "damping_compression_atom_exported",
+        "phase_frequency_bridge_atom_exported"
+      ],
+      "damping_compression_bridge_atom": [
+        "damping_compression_atom_exported",
+        "eta_source_law_exported",
+        "target_independent_beta_source_exported"
+      ],
+      "full_kernel_completion_bridge": [
+        "alpha_geo_strict_source_law_exported",
+        "amplitude_normalization_atom_exported",
+        "completion_map_semantics_exported",
+        "damping_compression_atom_exported",
+        "eta_source_law_exported",
+        "phase_frequency_bridge_atom_exported",
+        "selector_topological_source_exported",
+        "target_independent_beta_source_exported"
+      ],
+      "role_transfer": [
+        "full_kernel_completion_bridge",
+        "role_transfer_theorem_exported"
+      ],
+      "syntax_level_common_expression_basis": [
+        "eml_syntax_basis_available",
+        "legacy_kernel_defined",
+        "strict_kernel_defined"
+      ]
+    },
+    "target_statuses": {
+      "amplitude_normalization_bridge_atom": {
+        "missing": [
+          "alpha_geo_strict_source_law_exported",
+          "amplitude_normalization_atom_exported",
+          "damping_compression_atom_exported",
+          "phase_frequency_bridge_atom_exported"
+        ],
+        "satisfied": false
+      },
+      "damping_compression_bridge_atom": {
+        "missing": [
+          "damping_compression_atom_exported",
+          "eta_source_law_exported",
+          "target_independent_beta_source_exported"
+        ],
+        "satisfied": false
+      },
+      "full_kernel_completion_bridge": {
+        "missing": [
+          "alpha_geo_strict_source_law_exported",
+          "amplitude_normalization_atom_exported",
+          "completion_map_semantics_exported",
+          "damping_compression_atom_exported",
+          "eta_source_law_exported",
+          "phase_frequency_bridge_atom_exported",
+          "selector_topological_source_exported",
+          "target_independent_beta_source_exported"
+        ],
+        "satisfied": false
+      },
+      "role_transfer": {
+        "missing": [
+          "full_kernel_completion_bridge",
+          "role_transfer_theorem_exported"
+        ],
+        "satisfied": false
+      },
+      "syntax_level_common_expression_basis": {
+        "missing": [],
+        "satisfied": true
+      }
+    }
+  },
+  "status": "P2852_KERNEL_BRIDGE_OBLIGATION_RECONCILIATION_MATRIX_NO_CLOSURE"
+}
