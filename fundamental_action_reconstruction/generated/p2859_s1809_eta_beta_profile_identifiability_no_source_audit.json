@@ -1,0 +1,202 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_eta_beta_identifiability_no_source_audit": true,
+    "exports_eta_beta_source_law": false,
+    "exports_strict_damping_compression_bridge": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "eta_requires_prime5": true,
+      "jacobian_is_nonzero": true,
+      "p2858_rechecked": true,
+      "two_point_inverse_recovers_beta": true,
+      "two_point_inverse_recovers_eta": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "eta_beta_source_law_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "target_independent_beta_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay profile fitting or local identifiability as eta/beta sourcehood.  The next proof-grade move must supply a pre-profile strict source law for the compression profile or a unit-bearing coupling/localization theorem; otherwise preserve no-new-live-frontier.",
+    "reason": "P2859 shows that beta=1 and eta=9/5 are identifiable from an already supplied strict compression profile: a two-point inverse recovers them and the beta/eta Jacobian is nonzero.  This is not a source law; it presupposes the strict profile and does not export a target-independent beta source, eta source, unit/coupling law, L_total term, EOM, Hamiltonian, bridge, or ToE closure."
+  },
+  "eta_beta_profile_identifiability_no_source_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_matrix": [
+      {
+        "candidate": "two_point_profile_inverse",
+        "exports_pre_profile_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "identifies beta/eta from an already supplied strict compression profile; inverse fit is not a source law."
+      },
+      {
+        "candidate": "jacobian_local_identifiability",
+        "exports_pre_profile_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "nonzero Jacobian proves local identifiability, not origin/source of the profile."
+      },
+      {
+        "candidate": "pure_z12_eta_denominator_source",
+        "exports_pre_profile_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "eta=9/5 again imports prime 5; denominator representation is not a source theorem."
+      },
+      {
+        "candidate": "beta_one_normalization",
+        "exports_pre_profile_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "beta=1 is a normalization in the supplied strict profile unless a target-independent unit/coupling law exports it."
+      }
+    ],
+    "compression_profile": [
+      {
+        "compression_value": 2.0,
+        "d": 1,
+        "log_d": 0.0,
+        "log_tail": 0.0,
+        "tail_value": 1.0
+      },
+      {
+        "compression_value": 4.4822022531844965,
+        "d": 2,
+        "log_d": 0.6931471805599453,
+        "log_tail": 1.2476649250079015,
+        "tail_value": 3.4822022531844965
+      },
+      {
+        "compression_value": 8.224674055842076,
+        "d": 3,
+        "log_d": 1.0986122886681098,
+        "log_tail": 1.9775021196025975,
+        "tail_value": 7.224674055842076
+      },
+      {
+        "compression_value": 13.125732532083186,
+        "d": 4,
+        "log_d": 1.3862943611198906,
+        "log_tail": 2.495329850015803,
+        "tail_value": 12.125732532083186
+      },
+      {
+        "compression_value": 19.11949159194239,
+        "d": 5,
+        "log_d": 1.6094379124341003,
+        "log_tail": 2.8969882423813806,
+        "tail_value": 18.11949159194239
+      },
+      {
+        "compression_value": 26.157776275776854,
+        "d": 6,
+        "log_d": 1.791759469228055,
+        "log_tail": 3.225167044610499,
+        "tail_value": 25.157776275776854
+      },
+      {
+        "compression_value": 34.20293475662357,
+        "d": 7,
+        "log_d": 1.9459101490553132,
+        "log_tail": 3.502638268299564,
+        "tail_value": 33.20293475662357
+      },
+      {
+        "compression_value": 43.22425314473262,
+        "d": 8,
+        "log_d": 2.0794415416798357,
+        "log_tail": 3.7429947750237047,
+        "tail_value": 42.22425314473262
+      },
+      {
+        "compression_value": 53.1959152131576,
+        "d": 9,
+        "log_d": 2.1972245773362196,
+        "log_tail": 3.955004239205195,
+        "tail_value": 52.1959152131576
+      },
+      {
+        "compression_value": 64.09573444801933,
+        "d": 10,
+        "log_d": 2.302585092994046,
+        "log_tail": 4.144653167389282,
+        "tail_value": 63.09573444801933
+      },
+      {
+        "compression_value": 75.90431440274533,
+        "d": 11,
+        "log_d": 2.3978952727983707,
+        "log_tail": 4.316211491037067,
+        "tail_value": 74.90431440274533
+      }
+    ],
+    "input_status_rechecked": "P2858_PHASE_BIT_CELL_CONTINUUM_NO_SOURCE_AUDIT_NO_CLOSURE",
+    "jacobian_certificate": {
+      "closed_form_determinant": 10.200600477418876,
+      "d_pair": [
+        2,
+        3
+      ],
+      "determinant": 10.200600477418877,
+      "jacobian_rows_beta_eta": [
+        [
+          3.4822022531844965,
+          2.4136786739343226
+        ],
+        [
+          7.224674055842076,
+          7.9371156993697785
+        ]
+      ],
+      "local_identifiability": true,
+      "nonzero_determinant": true
+    },
+    "proof_certificate": {
+      "inverse_step": "The positive strict compression profile C(d)=1+beta*d^eta determines beta and eta from d=2,3 when the profile is already supplied.",
+      "jacobian_step": "The beta/eta Jacobian on d=2,3 has determinant beta*2^eta*3^eta*log(3/2), hence is nonzero at beta=1, eta=9/5.",
+      "source_boundary_step": "Identifiability of parameters from a supplied profile is weaker than a pre-profile source law for beta, eta, units, coupling, or dynamics."
+    },
+    "strict_beta": {
+      "denominator": 1,
+      "denominator_prime_factors": {},
+      "fraction": "1/1",
+      "numerator": 1,
+      "z12_compatible_denominator": true
+    },
+    "strict_eta": {
+      "denominator_prime_factors": {
+        "5": 1
+      },
+      "eta": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "pure_z12_denominator_source": false,
+      "requires_prime5": true
+    },
+    "two_point_inverse": {
+      "beta_abs_error": 2.220446049250313e-16,
+      "beta_hat": 1.0000000000000002,
+      "d_pair": [
+        2,
+        3
+      ],
+      "eta_abs_error": 4.440892098500626e-16,
+      "eta_hat": 1.7999999999999996
+    }
+  },
+  "input_hashes": {
+    "P2858": "d57ac7eea618b55f66b859f74ffc5d3407b366f619f016e11b6b016d4afda161"
+  },
+  "status": "P2859_ETA_BETA_PROFILE_IDENTIFIABILITY_NO_SOURCE_AUDIT_NO_CLOSURE"
+}

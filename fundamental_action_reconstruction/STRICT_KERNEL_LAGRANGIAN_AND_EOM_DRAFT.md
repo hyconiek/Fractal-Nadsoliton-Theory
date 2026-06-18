@@ -2492,3 +2492,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2854/S1804 no-new-live-frontier `L_total` guard
 
 `P2854/S1804` adds no action term.  The professorial state map preserves the boundary that finite witnesses and bridge bookkeeping are not a unit-bearing source density, coupling theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2855/S1805 rational phase lattice `L_total` guard
+
+`P2855/S1805` adds no action term.  Exact denominator obstruction and rational-lattice approximation do not provide a unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2856/S1806 prime-5 extension `L_total` guard
+
+`P2856/S1806` adds no action term.  Prime-5 rational representability and phase-bit ambiguity witnesses do not provide a unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2857/S1807 observer readout `L_total` guard
+
+`P2857/S1807` adds no action term.  Observer readout, frame choice, and measurement language do not provide a pre-observer unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2858/S1808 phase-bit open cell `L_total` guard
+
+`P2858/S1808` adds no action term.  A positive-radius phase-bit cell and rational perturbation witnesses do not provide a pre-observer unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2859/S1809 eta/beta identifiability `L_total` guard
+
+`P2859/S1809` adds no action term.  Recovering `beta=1` and `eta=9/5` from an already supplied compression profile does not provide a pre-profile unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2860/S1810 multiplicative scale-law `L_total` guard
+
+`P2860/S1810` adds no action term.  Multiplicative tail scale covariance constrains a supplied tail shape but does not provide an eta-selecting unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.

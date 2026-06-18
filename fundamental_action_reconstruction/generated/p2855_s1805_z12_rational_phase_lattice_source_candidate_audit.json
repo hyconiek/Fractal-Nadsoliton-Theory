@@ -1,0 +1,216 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_z12_rational_phase_lattice_obstruction_audit": true,
+    "exports_strict_phase_frequency_source_law": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "exact_strict_bits_match_p2853": true,
+      "no_exact_z12_lattice_match_for_omega": true,
+      "no_exact_z12_lattice_match_for_phi": true,
+      "p2853_rechecked": true,
+      "p2854_rechecked": true,
+      "strict_omega_denominator_has_prime5": true,
+      "strict_phi_denominator_has_prime5": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "prime5_phase_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "strict_phase_frequency_source_law_exported": false,
+      "toe_closure_exported": false,
+      "z12_phase_lattice_source_exported": false
+    },
+    "next_honest_step": "Do not replay pure Z12 rational-lattice sourcing for omega/phi.  A next proof-grade move must either supply a genuine source for the prime-5 phase unit, or pivot to a genuinely new eta/beta source law.  Without one of those new typed premises, preserve the P2854 no-new-live-frontier certificate.",
+    "reason": "P2855 tests one concrete candidate source class: a pure Z12-compatible rational phase lattice.  The strict tuple is exact rational data, but its reduced denominators contain prime 5, outside the Z12 denominator prime support {2,3}.  Enumerated Z12-compatible approximations are nonexact.  Importing a prime-5 unit would represent the tuple, but would be a new unsourced premise rather than a strict source theorem."
+  },
+  "input_hashes": {
+    "P2853": "8f0da96060647e6e59e0ffebb7443138b44e8ab729482736ccc722fb1ff29d77",
+    "P2854": "1710dfe14443091e595e6832eb7246e05786833f5284e6789b3a03e3124eefc6"
+  },
+  "status": "P2855_Z12_RATIONAL_PHASE_LATTICE_SOURCE_CANDIDATE_AUDIT_NO_CLOSURE",
+  "z12_rational_phase_lattice_source_candidate_audit": {
+    "accepted_candidate_count": 0,
+    "allowed_z12_primes": [
+      2,
+      3
+    ],
+    "best_common_z12_pair": {
+      "common_denominator_before_reduction": 1944,
+      "exact_pair_match_found": false,
+      "omega": {
+        "denominator": 1944,
+        "denominator_prime_factors": {
+          "2": 3,
+          "3": 5
+        },
+        "fraction": "361/1944",
+        "numerator": 361,
+        "z12_compatible_denominator": true
+      },
+      "omega_absolute_error_float": 5.041152263374486e-05,
+      "omega_absolute_error_fraction": "49/972000",
+      "phi": {
+        "denominator": 486,
+        "denominator_prime_factors": {
+          "2": 1,
+          "3": 5
+        },
+        "fraction": "79/486",
+        "numerator": 79,
+        "z12_compatible_denominator": true
+      },
+      "phi_absolute_error_float": 5.1440329218106995e-05,
+      "phi_absolute_error_fraction": "1/19440",
+      "search_limit": 4000
+    },
+    "candidate_matrix": [
+      {
+        "candidate": "pure_z12_denominator_lattice_exact_source",
+        "exports_strict_source_law": false,
+        "finite_witness_passes": false,
+        "verdict": "blocked: reduced strict denominators contain prime 5, outside the prime support of Z12."
+      },
+      {
+        "candidate": "bounded_z12_lattice_best_approximation",
+        "exports_strict_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "approximation exists but exact omega/phi sourcing fails; approximation is not a source law."
+      },
+      {
+        "candidate": "common_z12_lattice_pair_approximation",
+        "exports_strict_source_law": false,
+        "finite_witness_passes": true,
+        "phase_bits_match_p2853": true,
+        "verdict": "common-denominator approximation is nonexact; phase-bit agreement, if present, is only a coarse witness."
+      },
+      {
+        "candidate": "import_prime5_phase_unit_extension",
+        "exports_strict_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "allowing prime 5 represents the strict tuple exactly, but the prime-5 unit is imported rather than sourced from Z12."
+      }
+    ],
+    "exact_strict_phase_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "input_statuses_rechecked": {
+      "P2853": "P2853_PHASE_FREQUENCY_BRIDGE_SOURCE_AUDIT_NO_CLOSURE",
+      "P2854": "P2854_POST_P2853_PROFESSORIAL_STATE_MAP_NO_NEW_LIVE_FRONTIER"
+    },
+    "omega_best_z12_approximation": {
+      "absolute_error_float": 1.388888888888889e-05,
+      "absolute_error_fraction": "1/72000",
+      "best_denominator_before_reduction": 576,
+      "best_value": {
+        "denominator": 576,
+        "denominator_prime_factors": {
+          "2": 6,
+          "3": 2
+        },
+        "fraction": "107/576",
+        "numerator": 107,
+        "z12_compatible_denominator": true
+      },
+      "candidate_denominator_count": 55,
+      "exact_match_found": false,
+      "search_limit": 4000,
+      "target": {
+        "denominator": 4000,
+        "denominator_prime_factors": {
+          "2": 5,
+          "5": 3
+        },
+        "fraction": "743/4000",
+        "numerator": 743,
+        "z12_compatible_denominator": false
+      }
+    },
+    "p2853_phase_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "phi_best_z12_approximation": {
+      "absolute_error_float": 5.1440329218106995e-05,
+      "absolute_error_fraction": "1/19440",
+      "best_denominator_before_reduction": 486,
+      "best_value": {
+        "denominator": 486,
+        "denominator_prime_factors": {
+          "2": 1,
+          "3": 5
+        },
+        "fraction": "79/486",
+        "numerator": 79,
+        "z12_compatible_denominator": true
+      },
+      "candidate_denominator_count": 55,
+      "exact_match_found": false,
+      "search_limit": 4000,
+      "target": {
+        "denominator": 80,
+        "denominator_prime_factors": {
+          "2": 4,
+          "5": 1
+        },
+        "fraction": "13/80",
+        "numerator": 13,
+        "z12_compatible_denominator": false
+      }
+    },
+    "proof_certificate": {
+      "denominator_prime_support_step": "Any reduced rational sourced by a pure Z12 lattice has denominator prime support inside {2,3}.",
+      "enumeration_step": "All Z12-compatible denominators q <= 4000 were enumerated; no exact omega/phi match is found.",
+      "extension_step": "A prime-5 extension can represent the tuple, but that is a new source premise, not a theorem exported by Z12 itself.",
+      "strict_tuple_step": "omega=743/4000 and phi=13/80 both have reduced denominators containing prime 5."
+    },
+    "search_limit": 4000,
+    "source_candidate": "Z12-compatible rational phase lattice with denominator prime support subset {2,3}",
+    "strict_omega": {
+      "denominator": 4000,
+      "denominator_prime_factors": {
+        "2": 5,
+        "5": 3
+      },
+      "fraction": "743/4000",
+      "numerator": 743,
+      "z12_compatible_denominator": false
+    },
+    "strict_phi": {
+      "denominator": 80,
+      "denominator_prime_factors": {
+        "2": 4,
+        "5": 1
+      },
+      "fraction": "13/80",
+      "numerator": 13,
+      "z12_compatible_denominator": false
+    }
+  }
+}

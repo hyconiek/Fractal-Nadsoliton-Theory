@@ -1,0 +1,387 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_prime5_extension_ambiguity_audit": true,
+    "exports_prime5_phase_unit_source_law": false,
+    "exports_strict_phase_frequency_source_law": false,
+    "facts": {
+      "local_ambiguity_witness_exists": true,
+      "p2855_rechecked": true,
+      "prime5_extension_represents_omega": true,
+      "prime5_extension_represents_phi": true,
+      "pure_z12_still_rejected": true,
+      "strict_bits_reproduced": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "prime5_phase_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "strict_phase_frequency_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not replay pure Z12 lattices, prime-5 representability, or phase-bit equivalence as a source.  The next proof-grade move requires a genuinely new source-selection law for the prime-5 phase unit and the exact omega/phi numerators, or a genuinely new eta/beta source law.  Without that new typed premise, preserve the no-new-live-frontier certificate.",
+    "reason": "P2856 grants the missing prime-5 denominator support and confirms exact representation, but finite local enumeration finds multiple non-strict extended-lattice pairs with the same Z12 phase-bit profile.  The prime-5 extension therefore supplies coordinate capacity, not a non-premise source law selecting omega=743/4000 and phi=13/80."
+  },
+  "input_hashes": {
+    "P2855": "af3da778c6eefc3fcc902623a53e883a5cc5b82eff163d5147d12e668b8f0579"
+  },
+  "prime5_phase_unit_extension_ambiguity_audit": {
+    "accepted_candidate_count": 0,
+    "candidate": "prime-5-extended rational phase lattice with denominator prime support subset {2,3,5}",
+    "extended_denominator_count": 135,
+    "input_status_rechecked": "P2855_Z12_RATIONAL_PHASE_LATTICE_SOURCE_CANDIDATE_AUDIT_NO_CLOSURE",
+    "local_window": "1/200",
+    "omega_exact_supporting_denominators_first12": [
+      4000
+    ],
+    "phi_exact_supporting_denominators_first12": [
+      80,
+      160,
+      240,
+      320,
+      400,
+      480,
+      640,
+      720,
+      800,
+      960,
+      1200,
+      1280
+    ],
+    "proof_certificate": {
+      "ambiguity_step": "The same Z12 phase-bit profile is realized by non-strict nearby extended-lattice pairs in the bounded local enumeration.",
+      "representation_step": "Adding prime 5 to the rational lattice prime support makes exact omega/phi representation possible.",
+      "source_step": "Representability plus phase-bit preservation is weaker than a source law selecting 743/4000 and 13/80."
+    },
+    "same_phase_bit_local_witnesses": [
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 80,
+          "denominator_prime_factors": {
+            "2": 4,
+            "5": 1
+          },
+          "fraction": "13/80",
+          "numerator": 13,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "0/1",
+        "total_l1_error_fraction": "7/4000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 2025,
+          "denominator_prime_factors": {
+            "3": 4,
+            "5": 2
+          },
+          "fraction": "329/2025",
+          "numerator": 329,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "1/32400",
+        "total_l1_error_fraction": "577/324000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 486,
+          "denominator_prime_factors": {
+            "2": 1,
+            "3": 5
+          },
+          "fraction": "79/486",
+          "numerator": 79,
+          "z12_compatible_denominator": true
+        },
+        "phi_abs_error_fraction": "1/19440",
+        "total_l1_error_fraction": "1751/972000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 3125,
+          "denominator_prime_factors": {
+            "5": 5
+          },
+          "fraction": "508/3125",
+          "numerator": 508,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "3/50000",
+        "total_l1_error_fraction": "181/100000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 3072,
+          "denominator_prime_factors": {
+            "2": 10,
+            "3": 1
+          },
+          "fraction": "499/3072",
+          "numerator": 499,
+          "z12_compatible_denominator": true
+        },
+        "phi_abs_error_fraction": "1/15360",
+        "total_l1_error_fraction": "697/384000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 2592,
+          "denominator_prime_factors": {
+            "2": 5,
+            "3": 4
+          },
+          "fraction": "421/2592",
+          "numerator": 421,
+          "z12_compatible_denominator": true
+        },
+        "phi_abs_error_fraction": "1/12960",
+        "total_l1_error_fraction": "37/20250"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 3645,
+          "denominator_prime_factors": {
+            "3": 6,
+            "5": 1
+          },
+          "fraction": "592/3645",
+          "numerator": 592,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "1/11664",
+        "total_l1_error_fraction": "5353/2916000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 2700,
+          "denominator_prime_factors": {
+            "2": 2,
+            "3": 3,
+            "5": 2
+          },
+          "fraction": "439/2700",
+          "numerator": 439,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "1/10800",
+        "total_l1_error_fraction": "199/108000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 2048,
+          "denominator_prime_factors": {
+            "2": 11
+          },
+          "fraction": "333/2048",
+          "numerator": 333,
+          "z12_compatible_denominator": true
+        },
+        "phi_abs_error_fraction": "1/10240",
+        "total_l1_error_fraction": "473/256000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 1250,
+          "denominator_prime_factors": {
+            "2": 1,
+            "5": 4
+          },
+          "fraction": "203/1250",
+          "numerator": 203,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "1/10000",
+        "total_l1_error_fraction": "37/20000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 1728,
+          "denominator_prime_factors": {
+            "2": 6,
+            "3": 3
+          },
+          "fraction": "281/1728",
+          "numerator": 281,
+          "z12_compatible_denominator": true
+        },
+        "phi_abs_error_fraction": "1/8640",
+        "total_l1_error_fraction": "403/216000"
+      },
+      {
+        "omega": {
+          "denominator": 16,
+          "denominator_prime_factors": {
+            "2": 4
+          },
+          "fraction": "3/16",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "omega_abs_error_fraction": "7/4000",
+        "phi": {
+          "denominator": 3375,
+          "denominator_prime_factors": {
+            "3": 3,
+            "5": 3
+          },
+          "fraction": "548/3375",
+          "numerator": 548,
+          "z12_compatible_denominator": false
+        },
+        "phi_abs_error_fraction": "7/54000",
+        "total_l1_error_fraction": "203/108000"
+      }
+    ],
+    "search_limit": 4000,
+    "strict_omega": {
+      "denominator": 4000,
+      "denominator_prime_factors": {
+        "2": 5,
+        "5": 3
+      },
+      "fraction": "743/4000",
+      "numerator": 743,
+      "z12_compatible_denominator": false
+    },
+    "strict_phi": {
+      "denominator": 80,
+      "denominator_prime_factors": {
+        "2": 4,
+        "5": 1
+      },
+      "fraction": "13/80",
+      "numerator": 13,
+      "z12_compatible_denominator": false
+    },
+    "target_phase_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "status": "P2856_PRIME5_PHASE_UNIT_EXTENSION_AMBIGUITY_AUDIT_NO_CLOSURE"
+}
