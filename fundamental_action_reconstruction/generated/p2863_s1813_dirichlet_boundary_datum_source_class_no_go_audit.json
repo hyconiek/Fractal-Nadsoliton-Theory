@@ -1,0 +1,289 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_dirichlet_boundary_datum_source_class_no_go_audit": true,
+    "exports_boundary_source_law": false,
+    "exports_eta_source_law": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "bounded_integer_moment_has_no_exact_match": true,
+      "p2862_rechecked": true,
+      "prime5_extension_exact_but_imported": true,
+      "pure_z12_coefficient_has_no_exact_match": true,
+      "z12_smooth_denominator_obstruction_holds": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "prime5_source_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "target_independent_beta_unit_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay Dirichlet endpoint data, pure Z12 coefficient scans, integer log moments, or prime-5 representability as boundary sourcehood.  A next proof-grade move must introduce a genuinely sourced prime-5/9 numerator boundary law, a nonlocal unit-bearing coupling/localization theorem that computes the endpoint datum, or a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2863 audits source classes for the P2862 right boundary datum.  Pure Z12-smooth coefficients and bounded integer local log moments cannot produce the required 9/5 coefficient on log(11); prime-5 extension can represent it exactly but only by importing the missing denominator source.  No boundary source law or eta source is exported."
+  },
+  "dirichlet_boundary_datum_source_class_no_go_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_matrix": [
+      {
+        "candidate": "pure_z12_smooth_boundary_coefficient",
+        "exports_boundary_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "no exact pure-Z12 coefficient produces 9/5 on log(11)."
+      },
+      {
+        "candidate": "prime5_extended_boundary_coefficient",
+        "exports_boundary_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "exact representation is possible only by importing the prime-5 coefficient already under audit."
+      },
+      {
+        "candidate": "bounded_integer_local_log_moment",
+        "exports_boundary_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "bounded integer moments cannot yield the fractional prime-11 exponent 9/5."
+      },
+      {
+        "candidate": "z12_smooth_denominator_obstruction",
+        "exports_boundary_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "Any exact local log-moment source for the prime-11 endpoint exponent must produce coefficient 9/5 on log(11); pure Z12-smooth rational denominators cannot produce the denominator prime 5."
+      }
+    ],
+    "coefficient_scan_rows": [
+      {
+        "allowed_denominator_prime_support": [
+          2,
+          3
+        ],
+        "best_abs_error": 0.003125,
+        "best_value": {
+          "denominator": 64,
+          "denominator_prime_factors": {
+            "2": 6
+          },
+          "fraction": "115/64",
+          "numerator": 115,
+          "z12_compatible_denominator": true
+        },
+        "candidate": "pure_z12_smooth_coefficient_on_log11",
+        "exact_match_count": 0,
+        "exports_boundary_source_law": false,
+        "scanned_value_count": 2497,
+        "target_denominator_prime_support": [
+          5
+        ]
+      },
+      {
+        "candidate": "prime5_extended_coefficient_on_log11",
+        "exact_match_count": 1,
+        "exact_value": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "9/5",
+          "numerator": 9,
+          "z12_compatible_denominator": false
+        },
+        "exports_boundary_source_law": false,
+        "imports_prime5": true
+      }
+    ],
+    "denominator_obstruction": {
+      "allowed_denominator_support": [
+        2,
+        3
+      ],
+      "can_represent_target_exponent_without_prime5": false,
+      "candidate": "z12_smooth_rational_local_moment_denominator_obstruction",
+      "exports_boundary_source_law": false,
+      "target_exponent_denominator_support": [
+        5
+      ],
+      "target_prime11_exponent": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "verdict": "Any exact local log-moment source for the prime-11 endpoint exponent must produce coefficient 9/5 on log(11); pure Z12-smooth rational denominators cannot produce the denominator prime 5."
+    },
+    "input_status_rechecked": "P2862_LOG_SCALE_DIRICHLET_BOUNDARY_ETA_RECOVERY_NO_SOURCE_AUDIT_NO_CLOSURE",
+    "integer_moment_scan": {
+      "best_diff": {
+        "11": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "1/5",
+          "numerator": 1,
+          "z12_compatible_denominator": false
+        },
+        "2": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "3": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "5": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "7": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        }
+      },
+      "best_l1_prime_exponent_error": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "1/5",
+        "numerator": 1,
+        "z12_compatible_denominator": false
+      },
+      "best_vector": {
+        "11": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "2/1",
+          "numerator": 2,
+          "z12_compatible_denominator": true
+        },
+        "2": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "3": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "5": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "7": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        }
+      },
+      "candidate": "bounded_integer_local_log_moment_over_d_2_to_11",
+      "certificate": "Integer moment weights yield integer prime exponents; target prime-11 exponent 9/5 is non-integer, so no integer-weight exact match exists in any bounded range.",
+      "exact_match_count": 0,
+      "exports_boundary_source_law": false,
+      "weight_range": [
+        -3,
+        3
+      ]
+    },
+    "prime_basis": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "proof_certificate": {
+      "extension_step": "Allowing prime 5 represents the target but imports the missing source rather than deriving it.",
+      "integer_step": "Integer local log moments over d=2..11 produce integer prime-exponent vectors, so they cannot equal exponent 9/5.",
+      "target_step": "The P2862 right boundary is exactly (9/5)*log(11), i.e. prime exponent 9/5 on prime 11.",
+      "z12_step": "Pure Z12 denominator support allows only primes {2,3}; it cannot create denominator prime 5 in the coefficient 9/5."
+    },
+    "right_endpoint_d": 11,
+    "target_boundary_datum": "log(11^(9/5)) = (9/5)*log(11)",
+    "target_eta": {
+      "denominator": 5,
+      "denominator_prime_factors": {
+        "5": 1
+      },
+      "fraction": "9/5",
+      "numerator": 9,
+      "z12_compatible_denominator": false
+    },
+    "target_prime_exponent_vector": {
+      "11": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "2": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "3": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "5": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "7": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      }
+    }
+  },
+  "input_hashes": {
+    "P2862": "c94a45829fa312d34db253f51532f0c496a281c10e613b019c1adc274dc92bff"
+  },
+  "status": "P2863_DIRICHLET_BOUNDARY_DATUM_SOURCE_CLASS_NO_GO_AUDIT_NO_CLOSURE"
+}

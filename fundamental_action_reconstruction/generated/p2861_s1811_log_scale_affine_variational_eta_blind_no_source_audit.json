@@ -1,0 +1,416 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_log_scale_affine_variational_eta_blind_no_source_audit": true,
+    "exports_eta_source_law": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_target_independent_beta_unit_source": false,
+    "exports_unit_bearing_variational_source_theorem": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "non_strict_beta_samples_also_satisfy": true,
+      "non_strict_eta_samples_also_satisfy": true,
+      "p2860_rechecked": true,
+      "strict_tail_satisfies_log_scale_affine_variational_equation": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "target_independent_beta_unit_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_variational_source_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay log-scale affine/harmonic variational language as eta sourcehood.  A next proof-grade move must introduce a genuinely eta-selecting source term, boundary condition, unit-bearing coupling/localization theorem, or a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2861 tests the natural log-scale variational upgrade after P2860.  The strict tail has zero scale-affine action, but so do many non-strict eta values and many positive beta normalizations.  Therefore the variational equation is eta- and unit-blind, not a source law for eta=9/5 or beta=1."
+  },
+  "input_hashes": {
+    "P2860": "7bf386771aa5a948f20087e99fb4c4e91e1cffac5b9dbbba58e640be80c1b888"
+  },
+  "log_scale_affine_variational_eta_blind_no_source_audit": {
+    "accepted_candidate_count": 0,
+    "beta_action_samples": [
+      {
+        "beta": {
+          "denominator": 2,
+          "denominator_prime_factors": {
+            "2": 1
+          },
+          "fraction": "1/2",
+          "numerator": 1,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_beta": false,
+        "passes_variational_equation": true,
+        "scale_affine_action": 1.1487786932280984e-29
+      },
+      {
+        "beta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "1/1",
+          "numerator": 1,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_beta": true,
+        "passes_variational_equation": true,
+        "scale_affine_action": 1.2671078290112502e-29
+      },
+      {
+        "beta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "2/1",
+          "numerator": 2,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_beta": false,
+        "passes_variational_equation": true,
+        "scale_affine_action": 1.4199496293978212e-29
+      },
+      {
+        "beta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "3/1",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_beta": false,
+        "passes_variational_equation": true,
+        "scale_affine_action": 3.392101892450351e-29
+      }
+    ],
+    "candidate_matrix": [
+      {
+        "candidate": "log_scale_affine_variational_equation",
+        "exports_beta_unit_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "the strict tail is stationary/zero-action because log(T)=log(beta)+eta*log(d) is scale-affine."
+      },
+      {
+        "candidate": "eta_selection_by_scale_affine_action",
+        "exports_beta_unit_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "non-strict eta samples have the same zero action, so eta=9/5 is not selected."
+      },
+      {
+        "candidate": "beta_unit_selection_by_log_scale_affine_action",
+        "exports_beta_unit_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "positive beta only shifts log(T) by a constant, so the action does not fix beta=1 as a unit-bearing source."
+      }
+    ],
+    "candidate_variational_principle": "minimize sum of squared affine-interpolation residuals of y=log(T(d)) in x=log(d)",
+    "eta_action_samples": [
+      {
+        "eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "1/1",
+          "numerator": 1,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": false,
+        "scale_affine_action": 4.190823558986625e-31
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "6/5",
+          "numerator": 6,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 9.910065121838961e-30
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "7/5",
+          "numerator": 7,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 5.2385294487332815e-30
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "8/5",
+          "numerator": 8,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 1.4199496293978212e-29
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "9/5",
+          "numerator": 9,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": true,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 1.2671078290112502e-29
+      },
+      {
+        "eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "2/1",
+          "numerator": 2,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": false,
+        "scale_affine_action": 1.67632942359465e-30
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "11/5",
+          "numerator": 11,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 3.135722098253522e-29
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "12/5",
+          "numerator": 12,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 3.9640260487355843e-29
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "13/5",
+          "numerator": 13,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 2.3715130963206667e-29
+      },
+      {
+        "eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "14/5",
+          "numerator": 14,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": true,
+        "scale_affine_action": 2.0954117794933126e-29
+      },
+      {
+        "eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "3/1",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "passes_variational_equation": true,
+        "requires_prime5": false,
+        "scale_affine_action": 4.220405842932413e-29
+      }
+    ],
+    "input_status_rechecked": "P2860_COMPRESSION_TAIL_MULTIPLICATIVE_SCALE_LAW_NO_ETA_SOURCE_AUDIT_NO_CLOSURE",
+    "non_strict_beta_pass_count": 3,
+    "non_strict_eta_pass_count": 10,
+    "proof_certificate": {
+      "affine_step": "For T(d)=beta*d^eta, y=log(T(d))=log(beta)+eta*log(d) is affine in x=log(d).",
+      "no_source_step": "The zero-action condition holds for all sampled eta and all sampled positive beta; it is a structural consistency equation, not an eta- or unit-selecting source law.",
+      "variational_step": "Every affine-interpolation residual across triples a<b<c vanishes, so the squared residual action is zero."
+    },
+    "strict_beta": {
+      "denominator": 1,
+      "denominator_prime_factors": {},
+      "fraction": "1/1",
+      "numerator": 1,
+      "z12_compatible_denominator": true
+    },
+    "strict_eta": {
+      "denominator": 5,
+      "denominator_prime_factors": {
+        "5": 1
+      },
+      "fraction": "9/5",
+      "numerator": 9,
+      "z12_compatible_denominator": false
+    },
+    "strict_residual_rows_first16": [
+      {
+        "a": 1,
+        "abs_residual": 2.220446049250313e-16,
+        "b": 2,
+        "c": 3,
+        "residual": -2.220446049250313e-16
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 4,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 5,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 6,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 2.220446049250313e-16,
+        "b": 2,
+        "c": 7,
+        "residual": -2.220446049250313e-16
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 8,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 2.220446049250313e-16,
+        "b": 2,
+        "c": 9,
+        "residual": -2.220446049250313e-16
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 10,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 2,
+        "c": 11,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 2.220446049250313e-16,
+        "b": 3,
+        "c": 4,
+        "residual": 2.220446049250313e-16
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 5,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 6,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 7,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 8,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 9,
+        "residual": 0.0
+      },
+      {
+        "a": 1,
+        "abs_residual": 0.0,
+        "b": 3,
+        "c": 10,
+        "residual": 0.0
+      }
+    ],
+    "strict_scale_affine_action": 1.2671078290112502e-29,
+    "triple_count": 165
+  },
+  "status": "P2861_LOG_SCALE_AFFINE_VARIATIONAL_ETA_BLIND_NO_SOURCE_AUDIT_NO_CLOSURE"
+}
