@@ -1,0 +1,428 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_prime_implicant_obligation_matrix": true,
+    "exports_any_closure": false,
+    "facts": {
+      "all_promoted_targets_currently_open": true,
+      "all_targets_accounted": true,
+      "each_target_has_minimal_unlock_set": true,
+      "hamiltonian_requires_ltotal_eom_atoms": true,
+      "no_closure_exported": true
+    }
+  },
+  "atoms": [
+    "finite_witness_available",
+    "kernel_split_preserved",
+    "bridge_amplitude_map",
+    "bridge_phase_frequency_map",
+    "bridge_damping_compression_map",
+    "bridge_selector_source",
+    "role_transfer_theorem",
+    "typed_source_domain",
+    "typed_target_codomain",
+    "target_independent_units",
+    "localization_pullback",
+    "locality_covariance",
+    "coupling_coefficient_rule",
+    "variational_chain_rule",
+    "nonproxy_ltotal_term",
+    "eom_boundary_rules",
+    "nonproxy_eom_residual_zero",
+    "legendre_regular_or_constraint_split",
+    "hamiltonian_boundedness",
+    "hamiltonian_recovers_eom",
+    "selector_qw2191_discharged"
+  ],
+  "candidate_next_move_scores": [
+    {
+      "admissible_as_next_single_move": true,
+      "candidate_move": "unit_bearing_typed_source_coupling_map",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "coupling_coefficient_rule",
+        "locality_covariance",
+        "localization_pullback",
+        "target_independent_units",
+        "typed_target_codomain"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 4,
+        "hamiltonian_closure": 7,
+        "legacy_role_transfer": 5,
+        "strict_kernel_completion_bridge": 4,
+        "toe_style_promotion": 13,
+        "typed_ltotal_source_coupling": 2
+      },
+      "new_atoms_not_currently_exported": [
+        "coupling_coefficient_rule",
+        "locality_covariance",
+        "localization_pullback",
+        "target_independent_units",
+        "typed_target_codomain"
+      ]
+    },
+    {
+      "admissible_as_next_single_move": false,
+      "candidate_move": "variational_chain_rule_theorem",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "eom_boundary_rules",
+        "variational_chain_rule"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 6,
+        "hamiltonian_closure": 5,
+        "legacy_role_transfer": 5,
+        "strict_kernel_completion_bridge": 4,
+        "toe_style_promotion": 16,
+        "typed_ltotal_source_coupling": 6
+      },
+      "new_atoms_not_currently_exported": [
+        "eom_boundary_rules",
+        "variational_chain_rule"
+      ]
+    },
+    {
+      "admissible_as_next_single_move": true,
+      "candidate_move": "selector_source_provider",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "bridge_selector_source",
+        "selector_qw2191_discharged"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 8,
+        "hamiltonian_closure": 7,
+        "legacy_role_transfer": 4,
+        "strict_kernel_completion_bridge": 3,
+        "toe_style_promotion": 16,
+        "typed_ltotal_source_coupling": 7
+      },
+      "new_atoms_not_currently_exported": [
+        "bridge_selector_source",
+        "selector_qw2191_discharged"
+      ]
+    },
+    {
+      "admissible_as_next_single_move": true,
+      "candidate_move": "single_kernel_bridge_atom_amplitude",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "bridge_amplitude_map"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 8,
+        "hamiltonian_closure": 7,
+        "legacy_role_transfer": 4,
+        "strict_kernel_completion_bridge": 3,
+        "toe_style_promotion": 17,
+        "typed_ltotal_source_coupling": 7
+      },
+      "new_atoms_not_currently_exported": [
+        "bridge_amplitude_map"
+      ]
+    },
+    {
+      "admissible_as_next_single_move": true,
+      "candidate_move": "single_kernel_bridge_atom_damping",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "bridge_damping_compression_map"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 8,
+        "hamiltonian_closure": 7,
+        "legacy_role_transfer": 4,
+        "strict_kernel_completion_bridge": 3,
+        "toe_style_promotion": 17,
+        "typed_ltotal_source_coupling": 7
+      },
+      "new_atoms_not_currently_exported": [
+        "bridge_damping_compression_map"
+      ]
+    },
+    {
+      "admissible_as_next_single_move": false,
+      "candidate_move": "hamiltonian_legendre_only",
+      "directly_closes_targets": [],
+      "exports_atoms": [
+        "legendre_regular_or_constraint_split"
+      ],
+      "missing_counts_after_move": {
+        "eom_closure": 8,
+        "hamiltonian_closure": 6,
+        "legacy_role_transfer": 5,
+        "strict_kernel_completion_bridge": 4,
+        "toe_style_promotion": 17,
+        "typed_ltotal_source_coupling": 7
+      },
+      "new_atoms_not_currently_exported": [
+        "legendre_regular_or_constraint_split"
+      ]
+    }
+  ],
+  "current_evidence_atoms": [
+    "finite_witness_available",
+    "kernel_split_preserved",
+    "typed_source_domain"
+  ],
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Attack one minimal high-leverage atom bundle rather than replaying SWOT or graph separation: first choice is a unit-bearing typed source/coupling map exporting target codomain, units, localization/pullback, locality/covariance, and coupling coefficient; second choice is exactly one kernel bridge atom, preferably damping/compression or amplitude, with an explicit source premise.  A Hamiltonian-only Legendre move is not admissible before nonproxy L_total/EOM closure.",
+    "reason": "P2844 exhaustively computes the Boolean closure-obligation matrix.  The only currently true atoms are finite witness availability, kernel-split preservation, and a finite source-domain placeholder.  Every promoted target has nonempty missing prime-implicant atoms, so no bridge, role transfer, L_total, EOM, Hamiltonian, selector, or ToE closure is exported."
+  },
+  "input_hashes": {
+    "P2843": "51d541899d1030957dd204d7b92a85974882bd27a5c7217d3d4f4c96a1730152"
+  },
+  "input_statuses_rechecked": {
+    "P2843": "P2843_PROFESSORIAL_SWOT_CLOSURE_PATH_AUDIT_NO_NEW_CLOSURE"
+  },
+  "status": "P2844_CLOSURE_GATE_PRIME_IMPLICANT_OBLIGATION_MATRIX_NO_CLOSURE",
+  "target_prime_implicant_matrix": {
+    "eom_closure": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [],
+      "minimal_unlock_sets": [
+        [
+          "coupling_coefficient_rule",
+          "eom_boundary_rules",
+          "localization_pullback",
+          "nonproxy_eom_residual_zero",
+          "nonproxy_ltotal_term",
+          "target_independent_units",
+          "typed_target_codomain",
+          "variational_chain_rule"
+        ]
+      ],
+      "missing_atoms": [
+        "coupling_coefficient_rule",
+        "eom_boundary_rules",
+        "localization_pullback",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "target_independent_units",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ],
+      "missing_count": 8,
+      "required_atoms": [
+        "coupling_coefficient_rule",
+        "eom_boundary_rules",
+        "localization_pullback",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "target_independent_units",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ]
+    },
+    "hamiltonian_closure": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [],
+      "minimal_unlock_sets": [
+        [
+          "eom_boundary_rules",
+          "hamiltonian_boundedness",
+          "hamiltonian_recovers_eom",
+          "legendre_regular_or_constraint_split",
+          "nonproxy_eom_residual_zero",
+          "nonproxy_ltotal_term",
+          "variational_chain_rule"
+        ]
+      ],
+      "missing_atoms": [
+        "eom_boundary_rules",
+        "hamiltonian_boundedness",
+        "hamiltonian_recovers_eom",
+        "legendre_regular_or_constraint_split",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "variational_chain_rule"
+      ],
+      "missing_count": 7,
+      "required_atoms": [
+        "eom_boundary_rules",
+        "hamiltonian_boundedness",
+        "hamiltonian_recovers_eom",
+        "legendre_regular_or_constraint_split",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "variational_chain_rule"
+      ]
+    },
+    "legacy_role_transfer": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [],
+      "minimal_unlock_sets": [
+        [
+          "bridge_amplitude_map",
+          "bridge_damping_compression_map",
+          "bridge_phase_frequency_map",
+          "bridge_selector_source",
+          "role_transfer_theorem"
+        ]
+      ],
+      "missing_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source",
+        "role_transfer_theorem"
+      ],
+      "missing_count": 5,
+      "required_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source",
+        "role_transfer_theorem"
+      ]
+    },
+    "strict_kernel_completion_bridge": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [
+        "kernel_split_preserved"
+      ],
+      "minimal_unlock_sets": [
+        [
+          "bridge_amplitude_map",
+          "bridge_damping_compression_map",
+          "bridge_phase_frequency_map",
+          "bridge_selector_source"
+        ]
+      ],
+      "missing_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source"
+      ],
+      "missing_count": 4,
+      "required_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source",
+        "kernel_split_preserved"
+      ]
+    },
+    "toe_style_promotion": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [
+        "kernel_split_preserved",
+        "typed_source_domain"
+      ],
+      "minimal_unlock_sets": [
+        [
+          "bridge_amplitude_map",
+          "bridge_damping_compression_map",
+          "bridge_phase_frequency_map",
+          "bridge_selector_source",
+          "coupling_coefficient_rule",
+          "eom_boundary_rules",
+          "hamiltonian_boundedness",
+          "hamiltonian_recovers_eom",
+          "legendre_regular_or_constraint_split",
+          "locality_covariance",
+          "localization_pullback",
+          "nonproxy_eom_residual_zero",
+          "nonproxy_ltotal_term",
+          "role_transfer_theorem",
+          "selector_qw2191_discharged",
+          "target_independent_units",
+          "typed_target_codomain",
+          "variational_chain_rule"
+        ]
+      ],
+      "missing_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source",
+        "coupling_coefficient_rule",
+        "eom_boundary_rules",
+        "hamiltonian_boundedness",
+        "hamiltonian_recovers_eom",
+        "legendre_regular_or_constraint_split",
+        "locality_covariance",
+        "localization_pullback",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "role_transfer_theorem",
+        "selector_qw2191_discharged",
+        "target_independent_units",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ],
+      "missing_count": 18,
+      "required_atoms": [
+        "bridge_amplitude_map",
+        "bridge_damping_compression_map",
+        "bridge_phase_frequency_map",
+        "bridge_selector_source",
+        "coupling_coefficient_rule",
+        "eom_boundary_rules",
+        "hamiltonian_boundedness",
+        "hamiltonian_recovers_eom",
+        "kernel_split_preserved",
+        "legendre_regular_or_constraint_split",
+        "locality_covariance",
+        "localization_pullback",
+        "nonproxy_eom_residual_zero",
+        "nonproxy_ltotal_term",
+        "role_transfer_theorem",
+        "selector_qw2191_discharged",
+        "target_independent_units",
+        "typed_source_domain",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ]
+    },
+    "typed_ltotal_source_coupling": {
+      "currently_closed": false,
+      "currently_satisfied_atoms": [
+        "typed_source_domain"
+      ],
+      "minimal_unlock_sets": [
+        [
+          "coupling_coefficient_rule",
+          "locality_covariance",
+          "localization_pullback",
+          "nonproxy_ltotal_term",
+          "target_independent_units",
+          "typed_target_codomain",
+          "variational_chain_rule"
+        ]
+      ],
+      "missing_atoms": [
+        "coupling_coefficient_rule",
+        "locality_covariance",
+        "localization_pullback",
+        "nonproxy_ltotal_term",
+        "target_independent_units",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ],
+      "missing_count": 7,
+      "required_atoms": [
+        "coupling_coefficient_rule",
+        "locality_covariance",
+        "localization_pullback",
+        "nonproxy_ltotal_term",
+        "target_independent_units",
+        "typed_source_domain",
+        "typed_target_codomain",
+        "variational_chain_rule"
+      ]
+    }
+  }
+}

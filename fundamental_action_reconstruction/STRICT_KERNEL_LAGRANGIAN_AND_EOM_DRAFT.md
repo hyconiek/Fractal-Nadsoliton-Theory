@@ -2444,3 +2444,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2842/S1792 exchangeable edge measure Ltotal guard
 
 `P2842/S1792` adds no term to `L_total`.  The exchangeable edge-pair measure is label-safe but carrier-constant on 16-node 4-regular graphs and lacks field support, coupling, and variational chain-rule data.
+
+## P2843/S1793 SWOT Hamiltonian closure guard
+
+`P2843/S1793` adds no variational term, EOM, or Hamiltonian.  It ranks the closure obligations and states that Hamiltonian promotion is downstream of a nonproxy unit-bearing `L_total`, Euler-Lagrange derivation, Legendre transform, constraint/gauge analysis, boundedness check, and EOM recovery.
+
+## P2844/S1794 prime-implicant Ltotal/Hamiltonian guard
+
+`P2844/S1794` adds no action term.  Its Boolean prime-implicant matrix shows that typed `L_total` source/coupling still requires target codomain, units, localization/pullback, locality/covariance, coupling coefficient, variational chain rule, and nonproxy action term; Hamiltonian closure further requires nonproxy EOM residual zero, Legendre/constraint split, boundedness, and EOM recovery.
+
+## P2845/S1795 dimensional ansatz Ltotal guard
+
+`P2845/S1795` adds no action term.  Formal unit balance for candidate graph-weighted densities is insufficient: current artifacts still lack target-independent units, graph-to-field localization/pullback, a coupling coefficient source, variational chain rule, and nonproxy `L_total` insertion.
+
+## P2846/S1796 vertex localization Ltotal guard
+
+`P2846/S1796` adds no action term or pullback.  Nonconstant label-safe vertex profiles exist on the finite graph carrier, but anonymous vertex measures are not field support and do not provide target-independent volume units, coupling coefficients, or variational chain rules for `L_total`.
