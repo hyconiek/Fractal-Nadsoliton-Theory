@@ -1,0 +1,344 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_observer_effect_no_source_audit": true,
+    "exports_observer_strict_source_law": false,
+    "exports_strict_phase_frequency_source_law": false,
+    "facts": {
+      "all_sampled_witnesses_share_observer_bit_orbit": true,
+      "observer_modes_export_no_pre_observer_source": true,
+      "observer_order_preserved": true,
+      "p2856_rechecked": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "observer_source_law_exported": false,
+      "prime5_phase_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "strict_phase_frequency_source_law_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not use observer readout, frame choice, or measurement language as a phase/frequency source.  The next proof-grade move needs a pre-observer strict source-selection law for the prime-5 phase unit plus exact omega/phi numerators, or a genuinely new eta/beta source law; otherwise preserve no-new-live-frontier.",
+    "reason": "P2857 checks the observer effect as readout, frame anchoring, and full-parameter measurement.  Bit-profile observers cannot distinguish the strict tuple from P2856 same-bit ambiguity witnesses; frame anchoring is a convention without a pre-observer selector; and full-parameter measurement reports rather than sources omega/phi.  No observer-side strict source law follows."
+  },
+  "input_hashes": {
+    "P2856": "351591f962527007bafaf06c9699b470d8faaaf37505f73acffb4268bd467dd8"
+  },
+  "observer_readout_phase_source_effect_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_matrix": [
+      {
+        "candidate": "observer_bit_profile_readout",
+        "exports_pre_observer_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "blocked: any observer seeing only the Z12 phase-bit profile cannot distinguish the strict tuple from P2856 same-bit ambiguity witnesses."
+      },
+      {
+        "candidate": "observer_origin_or_frame_anchor",
+        "exports_pre_observer_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "blocked: choosing an origin/frame is an observer-side convention unless a strict pre-observer source selects it."
+      },
+      {
+        "candidate": "observer_full_parameter_meter",
+        "exports_pre_observer_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "blocked: measuring omega/phi after emergence can report parameters but does not source them in the nadsoliton -> light -> matter -> observer order."
+      }
+    ],
+    "input_status_rechecked": "P2856_PRIME5_PHASE_UNIT_EXTENSION_AMBIGUITY_AUDIT_NO_CLOSURE",
+    "observer_frame_group": {
+      "shifts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "units": [
+        1,
+        5,
+        7,
+        11
+      ]
+    },
+    "observer_frame_orbit": {
+      "distinct_profile_count": 48,
+      "first_distinct_profiles": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "frame_count": 48,
+      "stabilizer_count": 1,
+      "stabilizers": [
+        {
+          "shift": 0,
+          "unit": 1
+        }
+      ]
+    },
+    "observer_modes": [
+      "bit_profile_only",
+      "anchored_origin_readout",
+      "full_parameter_meter"
+    ],
+    "ontology_order": "nadsoliton -> light -> matter -> emergent observer",
+    "proof_certificate": {
+      "indistinguishability_step": "P2856 same-bit ambiguity witnesses have the same observer-frame orbit as the strict tuple under bit-profile readout.",
+      "ontology_step": "An emergent observer can record or conventionally anchor data after nadsoliton/light/matter, but cannot retroactively source omega/phi without a separate pre-observer law.",
+      "readout_step": "Observer frames only transform the already-present Z12 bit profile by Aut(Z12) units and shifts."
+    },
+    "sampled_ambiguity_witness_count": 8,
+    "target_phase_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "witness_observer_indistinguishability": [
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "13/80",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "329/2025",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "79/486",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "508/3125",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "499/3072",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "421/2592",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "592/3645",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      },
+      {
+        "distinguishable_by_bit_observer": false,
+        "omega": "3/16",
+        "phi": "439/2700",
+        "same_base_bits": true,
+        "same_observer_orbit": true
+      }
+    ]
+  },
+  "status": "P2857_OBSERVER_READOUT_PHASE_SOURCE_EFFECT_AUDIT_NO_CLOSURE"
+}

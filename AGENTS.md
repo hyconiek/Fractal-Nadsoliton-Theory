@@ -1094,3 +1094,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Strong finite witnesses remain real, especially exact affine phase/frequency transport, but no new strict source premise is exported for `omega/phi`, `eta/beta`, `alpha_geo`, selector/topological data, unit-bearing `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
 - Do not replay density normalizers, EML syntax, damping similarity, amplitude rescaling, phase-sign bookkeeping, affine transport, selector/topological language, role transfer, `L_total`, EOM, Hamiltonian, or ToE promotion as closure evidence.
 - The next admissible proof-grade move requires a genuinely new typed source theorem, preferably strict phase/frequency source for `omega=743/4000`, `phi=13/80` or a genuinely new `eta/beta` source law; otherwise preserve no-new-live-frontier.
+
+## Current Z12 rational phase-lattice source candidate guardrail (P2855/S1805, 2026-06-18)
+
+- P2855 tests a pure `Z12`-compatible rational phase-lattice source candidate for strict `omega=743/4000` and `phi=13/80`.
+- The reduced strict denominators require prime `5`, outside the pure `Z12` denominator prime support `{2,3}`; finite `Z12`-compatible approximations are nonexact, and importing a prime-5 phase unit is a new unsourced premise rather than closure.
+- Do not promote pure `Z12` rational-lattice approximation, phase-bit agreement, or an imported prime-5 unit to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must source the prime-5 phase unit, supply a different strict phase/frequency source law, provide a genuinely new `eta/beta` source law, or preserve no-new-live-frontier.
+
+## Current prime-5 phase-unit extension ambiguity guardrail (P2856/S1806, 2026-06-18)
+
+- P2856 grants a prime-5-extended rational phase lattice after P2855 and confirms that exact `omega=743/4000`, `phi=13/80` representation is possible.
+- The same `Z12` phase-bit profile is realized by multiple nearby prime-5-extended rational pairs; the extension is representational capacity, not a source-selection law for the exact strict tuple.
+- Do not promote prime-5 representability, local phase-bit equivalence, or imported denominator support to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a genuinely new source-selection law for the prime-5 phase unit and exact `omega/phi` numerators, provide a genuinely new `eta/beta` source law, or preserve no-new-live-frontier.
+
+## Current observer-readout phase-source effect guardrail (P2857/S1807, 2026-06-18)
+
+- P2857 checks observer readout after P2856 in the required ontology order `nadsoliton -> light -> matter -> emergent observer`.
+- Observer bit-profile readout cannot distinguish the strict tuple from P2856 same-bit ambiguity witnesses; observer frame/origin anchoring is conventional without a pre-observer selector, and full-parameter measurement reports rather than sources `omega/phi`.
+- Do not promote observer readout, measurement, frame choice, or observer-induced bookkeeping to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a pre-observer source-selection law for the prime-5 phase unit and exact `omega/phi` numerators, provide a genuinely new `eta/beta` source law, or preserve no-new-live-frontier.
+
+## Current phase-bit open-cell continuum guardrail (P2858/S1808, 2026-06-18)
+
+- P2858 proves a positive-radius open phase-bit cell around strict `omega=743/4000`, `phi=13/80`; explicit rational perturbations preserve the same `Z12` phase-bit profile.
+- Phase-bit/topological readout is therefore a robust finite witness but not an exact source-selection law for the strict tuple.
+- Do not promote phase bits, observer readout, affine transport, sign-cell stability, rational probes, or prime-5 representability to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a genuinely new pre-observer source-selection law for exact `omega/phi`, provide a genuinely new `eta/beta` source law, or preserve no-new-live-frontier.
+
+## Current eta/beta profile-identifiability no-source guardrail (P2859/S1809, 2026-06-18)
+
+- P2859 shows that the supplied strict compression profile locally identifies `beta=1` and `eta=9/5`; a two-point inverse recovers them and the beta/eta Jacobian is nonzero.
+- This is inverse identifiability, not a pre-profile source law; `eta=9/5` still imports prime `5`, and `beta=1` remains a supplied normalization absent a target-independent unit/coupling theorem.
+- Do not promote profile fitting, local identifiability, beta normalization, or eta denominator representability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a pre-profile strict compression source law or a unit-bearing coupling/localization theorem; otherwise preserve no-new-live-frontier.
+
+## Current compression-tail multiplicative scale-law guardrail (P2860/S1810, 2026-06-18)
+
+- P2860 verifies that the strict compression tail satisfies multiplicative scale covariance and that nonzero multiplicativity constrains `beta=1`.
+- The same scale law is eta-blind: non-strict rational eta samples satisfy it, so `eta=9/5` is not selected or sourced.
+- Do not promote multiplicative scale covariance, beta normalization, profile identifiability, or eta denominator representability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply an eta-selecting strict principle, such as a unit-bearing variational/coupling/localization theorem with an exponent-fixing equation; otherwise preserve no-new-live-frontier.
