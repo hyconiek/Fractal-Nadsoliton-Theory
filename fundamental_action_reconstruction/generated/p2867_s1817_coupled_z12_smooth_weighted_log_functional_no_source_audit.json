@@ -1,0 +1,201 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_coupled_z12_smooth_weighted_log_functional_no_source_audit": true,
+    "exports_boundary_source_law": false,
+    "exports_eta_source_law": false,
+    "exports_prime5_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "bounded_scan_has_no_exact_w11": true,
+      "forced_w11_not_z12_smooth": true,
+      "imported_witness_exact_but_not_sourced": true,
+      "p2866_rechecked": true,
+      "prime11_coordinate_forces_w11_9_over_5": true
+    }
+  },
+  "coupled_z12_smooth_weighted_log_functional_no_source_audit": {
+    "accepted_candidate_count": 0,
+    "bounded_w11_scan": {
+      "best_prime11_coordinate_error": {
+        "denominator": 45,
+        "denominator_prime_factors": {
+          "3": 2,
+          "5": 1
+        },
+        "fraction": "-1/45",
+        "numerator": -1,
+        "z12_compatible_denominator": false
+      },
+      "best_w11": {
+        "denominator": 9,
+        "denominator_prime_factors": {
+          "3": 2
+        },
+        "fraction": "16/9",
+        "numerator": 16,
+        "z12_compatible_denominator": true
+      },
+      "candidate_count": 217,
+      "denominators_scanned": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        12
+      ],
+      "exact_w11_absent": true,
+      "exact_w11_hits": [],
+      "numerator_abs_max": 24
+    },
+    "candidate_class": "F(w)=sum_{d=1}^{11} w_d log(d), with every w_d in Q whose denominator support is contained in {2,3}",
+    "coordinate_forcing_certificate": {
+      "forced_w_11": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "forced_w_11_denominator_primes": [
+        5
+      ],
+      "forced_w_11_is_z12_smooth": false,
+      "obstruction": "Since only d=11 contributes to the prime-11 coordinate, any exact weighted log functional must set w_11=9/5, which imports denominator prime 5 outside the Z12-smooth denominator support {2,3}.",
+      "prime11_contributors": [
+        11
+      ]
+    },
+    "imported_exact_witness": {
+      "exact_representation": true,
+      "exports_sourcehood": false,
+      "prime_vector": {
+        "11": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "9/5",
+          "numerator": 9,
+          "z12_compatible_denominator": false
+        },
+        "2": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "3": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "5": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        },
+        "7": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "0/1",
+          "numerator": 0,
+          "z12_compatible_denominator": true
+        }
+      },
+      "reason": "The exact witness is precisely imported w_11=9/5; it verifies representability but violates the Z12-smooth source class.",
+      "weights": {
+        "11": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "9/5",
+          "numerator": 9,
+          "z12_compatible_denominator": false
+        }
+      }
+    },
+    "input_status_rechecked": "P2866_PRODUCT_THEOREM_CANDIDATE_PAIR_NO_SOURCE_AUDIT_NO_CLOSURE",
+    "proof_certificate": {
+      "coupled_setup": "Localization and coefficient choice are solved jointly as weights w_d, not as a post-hoc product pair.",
+      "denominator_step": "The forced value w_11=9/5 has denominator prime 5, outside the Z12-smooth denominator support {2,3}.",
+      "finite_scan_step": "A bounded scan over Z12-smooth denominators confirms no exact w_11 hit in the sampled ring fragment.",
+      "prime11_coordinate_step": "For d=1..10, the prime-11 exponent is zero; for d=11, it is one. Therefore exact equality forces w_11=9/5."
+    },
+    "target_boundary_datum": "log(11^(9/5)) = (9/5)*log(11)",
+    "target_prime_exponent_vector": {
+      "11": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "2": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "3": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "5": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "7": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      }
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "prime5_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay Z12-smooth weighted log functionals or imported w_11=9/5 as boundary sourcehood.  A next proof-grade move must introduce a new strict mechanism that sources denominator prime 5 and the d=11 endpoint together, or pivot to a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2867 tests a genuinely coupled weighted-log functional rather than pairwise recombination.  Exact equality forces w_11=9/5 by the prime-11 coordinate, but that forced weight imports denominator prime 5 and is outside the pure Z12-smooth coefficient/source class.  The imported exact witness remains representability, not sourcehood."
+  },
+  "input_hashes": {
+    "P2866": "44c08343df2830b10efd903e396bafb5adde77b4f0d05e5ef022604da9135d4a"
+  },
+  "status": "P2867_COUPLED_Z12_SMOOTH_WEIGHTED_LOG_FUNCTIONAL_NO_SOURCE_AUDIT_NO_CLOSURE"
+}

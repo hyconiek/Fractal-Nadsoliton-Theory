@@ -3167,3 +3167,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2865/S1815 singleton localizer/coefficient product-obligation no-go audit
 
 `P2865/S1815` enumerates all singleton residue/distance localizers `d=1..11` after the `P2864` Aut-invariant localization no-go.  Exact prime-exponent matching of `c*log(d)` to `(9/5)log(11)` has a unique support: `d=11` with coefficient `c=9/5`.  Thus the singleton escape hatch requires two new strict inputs at once, a non-premise `d=11` localizer and a prime-5 coefficient law.  Providing either side alone does not source the boundary datum, eta, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2866/S1816 product-theorem candidate-pair no-source audit
+
+`P2866/S1816` tests the finite recombination escape hatch left by `P2865`: three currently available localization witnesses paired with three currently available coefficient witnesses.  The only exact representation of `(9/5)log(11)` is imported singleton `d=11` times imported coefficient `9/5`; all sourced/current classes fail exactness, and the exact pair lacks strict sourcehood plus a unit-bearing coupling link.  Therefore no boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2867/S1817 coupled Z12-smooth weighted log-functional no-source audit
+
+`P2867/S1817` tests a genuinely coupled weighted-log functional `F(w)=sum_{d=1}^{11} w_d log(d)` with all coefficients in the pure `Z12`-smooth rational ring whose denominator support is `{2,3}`.  Exact equality to `(9/5)log(11)` forces `w_11=9/5` because only `d=11` carries prime 11.  That forced weight imports denominator prime 5 and is outside the allowed source class; the imported exact witness is representability, not sourcehood.  No boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2868/S1818 prime-5-extended Aut-invariant weighted-log no-go audit
+
+`P2868/S1818` grants denominator prime `5` in the weighted-log coefficient ring but keeps Aut(`Z12`)-invariant localization.  The exact orbit-weight system remains inconsistent: the unit orbit `{1,5,7,11}` assigns one shared coefficient to `log(5)`, `log(7)`, and `log(11)`, while the target requires only `(9/5)log(11)`.  Thus prime-5 coefficient capacity alone is not a strict `d=11` localizer/source and does not export a boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
