@@ -1080,3 +1080,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Damping/compression lacks `eta` and target-independent `beta` sources; amplitude lacks constant residual-zero passage and role-safe `alpha_geo` source law; full bridge and role transfer remain downstream.
 - Do not replay damping, amplitude, EML syntax, density normalizers, role transfer, `L_total`, EOM, Hamiltonian, or ToE promotion as closure evidence.
 - The next admissible proof-grade move must introduce exactly one new typed bridge-source atom, preferably a phase/frequency bridge-source audit for `omega/phi`/topological data or a genuinely new strict `eta/beta` source law; otherwise preserve no-new-live-frontier.
+
+## Current phase/frequency bridge-source audit guardrail (P2853/S1803, 2026-06-18)
+
+- P2853 tests the phase/frequency bridge-source atom for `omega/phi` and topological data after P2852.
+- Continuous affine phase-coordinate transport is exact on the audited `Z12` domain and the phase-bit profile is a real finite witness, but the map is not a `Z12` automorphism, scalar phase replacement fails, same-coordinate identity fails, and no non-premise strict source law for `omega/phi` is exported.
+- Do not promote phase-sign bookkeeping, affine phase transport, or topological witness language to full kernel bridge, strict selector/topological source, `QW-2191` discharge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a genuine strict phase/frequency source law for `omega/phi`/topological data, a genuinely new `eta/beta` source law, or else preserve no-new-live-frontier.
+
+## Current post-P2853 professorial state-map guardrail (P2854/S1804, 2026-06-18)
+
+- P2854 reconciles the post-P2853 state map and emits a no-new-live-frontier certificate on current artifacts.
+- Strong finite witnesses remain real, especially exact affine phase/frequency transport, but no new strict source premise is exported for `omega/phi`, `eta/beta`, `alpha_geo`, selector/topological data, unit-bearing `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+- Do not replay density normalizers, EML syntax, damping similarity, amplitude rescaling, phase-sign bookkeeping, affine transport, selector/topological language, role transfer, `L_total`, EOM, Hamiltonian, or ToE promotion as closure evidence.
+- The next admissible proof-grade move requires a genuinely new typed source theorem, preferably strict phase/frequency source for `omega=743/4000`, `phi=13/80` or a genuinely new `eta/beta` source law; otherwise preserve no-new-live-frontier.

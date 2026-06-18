@@ -2484,3 +2484,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2852/S1802 bridge reconciliation `L_total` guard
 
 `P2852/S1802` adds no action term.  Its bridge-obligation matrix confirms that current bridge atoms do not provide a unit-bearing source density, nonproxy `L_total` insertion, EOM, Hamiltonian, or role-bearing term.
+
+## P2853/S1803 phase-frequency `L_total` guard
+
+`P2853/S1803` contributes no action term.  Finite affine phase transport and phase-bit bookkeeping do not provide a unit-bearing source density, coupling coefficient, localization/pullback map, variational chain rule, nonproxy `L_total` insertion, EOM, or Hamiltonian source.
+
+## P2854/S1804 no-new-live-frontier `L_total` guard
+
+`P2854/S1804` adds no action term.  The professorial state map preserves the boundary that finite witnesses and bridge bookkeeping are not a unit-bearing source density, coupling theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
