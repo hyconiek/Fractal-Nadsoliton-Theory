@@ -1,0 +1,188 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_finite_dimensionless_normalization_audit": true,
+    "accepted_as_target_independent_units_source": false,
+    "accepted_as_units_normalization_no_go": true,
+    "facts": {
+      "canonical_scale_orbit_quotient_exported": false,
+      "coupling_coefficient_with_units_exported": false,
+      "finite_dimensionless_normalizations_available": true,
+      "p2835_combined_separator_rechecked": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "target_independent_physical_units_exported": false
+    }
+  },
+  "combined_graph_functional_units_normalization_obligation_audit": {
+    "combined_separator_rechecked": {
+      "combined_class_count": 16828,
+      "combined_collision_class_count": 0,
+      "combined_separator_rows_sha256": "8d962c8c2ebb56cac554e7b338cc36b61e272a9c7a24a92833a3d229bb8619cd",
+      "full_carrier_graph_count": 16828,
+      "p2834_patch_graph_count": 138
+    },
+    "finite_combinatorial_normalization_candidates": [
+      {
+        "candidate": "per_vertex",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless graph-size averaging",
+        "normalization_factor": {
+          "decimal": "0.0625",
+          "denominator": 16,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      },
+      {
+        "candidate": "per_edge",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless first-variation edge averaging",
+        "normalization_factor": {
+          "decimal": "0.03125",
+          "denominator": 32,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      },
+      {
+        "candidate": "per_unordered_pair",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless pair averaging",
+        "normalization_factor": {
+          "decimal": "0.00833333333333",
+          "denominator": 120,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      },
+      {
+        "candidate": "per_two_edge_toggle_pair",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless second-variation interaction averaging",
+        "normalization_factor": {
+          "decimal": "0.000140056022409",
+          "denominator": 7140,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      },
+      {
+        "candidate": "per_full_carrier_graph",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless empirical carrier averaging",
+        "normalization_factor": {
+          "decimal": "5.94247682434e-05",
+          "denominator": 16828,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      },
+      {
+        "candidate": "per_patched_residual_graph",
+        "exports_physical_units": false,
+        "exports_target_independent_source_strength": false,
+        "meaning": "dimensionless residual-patch averaging",
+        "normalization_factor": {
+          "decimal": "0.00724637681159",
+          "denominator": 138,
+          "numerator": 1
+        },
+        "status": "finite_dimensionless_available"
+      }
+    ],
+    "input_statuses_rechecked": {
+      "P2835": "P2835_COMBINED_FINITE_SEPARATOR_THEOREM_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE",
+      "P2835_manifest": "P2835_COMBINED_FINITE_SEPARATOR_MANIFEST"
+    },
+    "missing_blocking_obligations": [
+      "target_independent_physical_units",
+      "canonical_scale_orbit_quotient",
+      "coupling_coefficient_with_units"
+    ],
+    "scale_orbit_witness": {
+      "canonical_representative_exported_by_current_artifacts": false,
+      "defect": "All positive rescalings of the combined finite separator preserve finite injectivity; current artifacts provide no target-independent physical unit or coefficient fixing one representative of this scale orbit.",
+      "finite_witness_order_invariant_under_positive_rescaling": true,
+      "free_positive_scale_parameters_tested": [
+        {
+          "decimal": "0.5",
+          "denominator": 2,
+          "numerator": 1
+        },
+        {
+          "decimal": "1",
+          "denominator": 1,
+          "numerator": 1
+        },
+        {
+          "decimal": "2",
+          "denominator": 1,
+          "numerator": 2
+        },
+        {
+          "decimal": "16",
+          "denominator": 1,
+          "numerator": 16
+        }
+      ],
+      "separation_invariant_under_positive_rescaling": true
+    },
+    "theorem_obligation_rows": [
+      {
+        "blocks_source_law_promotion": false,
+        "evidence": "n=16, degree=4, edge count=32, unordered pair count=120, and two-edge-toggle pair count=7140 give exact finite averaging constants.",
+        "obligation": "finite_dimensionless_combinatorial_normalization",
+        "status": "satisfied"
+      },
+      {
+        "blocks_source_law_promotion": true,
+        "evidence": "No artifact maps the graph functional to a physical dimension of K, an action density, or a source coefficient independent of the downstream target.",
+        "obligation": "target_independent_physical_units",
+        "status": "missing"
+      },
+      {
+        "blocks_source_law_promotion": true,
+        "evidence": "Positive rescaling leaves finite separation invariant; no current theorem fixes the scale representative.",
+        "obligation": "canonical_scale_orbit_quotient",
+        "status": "missing"
+      },
+      {
+        "blocks_source_law_promotion": true,
+        "evidence": "No coefficient law couples the normalized graph functional to K or L_total with units.",
+        "obligation": "coupling_coefficient_with_units",
+        "status": "missing"
+      },
+      {
+        "blocks_source_law_promotion": false,
+        "evidence": "The audit uses no selector closure, bridge closure, or legacy role-transfer premise.",
+        "obligation": "selector_bridge_role_transfer_independence",
+        "status": "satisfied_by_exclusion"
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "proved_variational_derivative_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "target_independent_units_source_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay finite graph separation or dimensionless averaging.  The next admissible proof-grade move should attack exactly one remaining theorem obligation: either a typed domain/codomain map from the combined graph functional into K/L_total, or a formal variational derivative theorem.  If neither can be supplied, preserve the P2831-P2836 finite-witness/no-units/no-coupling boundary and pivot away from graph-source promotion.",
+    "reason": "P2836 attacks exactly one P2835 missing theorem obligation: units/normalization.  It finds exact finite dimensionless combinatorial normalizations from the fixed 16-node 4-regular carrier, but these do not export target-independent physical units, a canonical positive scale-orbit quotient, or a coupling coefficient with units.  Since positive rescaling preserves finite separation, the combined graph functional still lacks a strict source-law normalization into K or L_total."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2835": "14f2ed51a35a5546a82f6e8058f3cdb9a4c93d0a97badd16c6851c3664ff0b9d",
+    "P2835_manifest": "ce2d17a8d49986baac7f6ad27d35ad210c0ce6cf3bcad58e1292bb35be6e8d50"
+  },
+  "status": "P2836_UNITS_NORMALIZATION_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE"
+}

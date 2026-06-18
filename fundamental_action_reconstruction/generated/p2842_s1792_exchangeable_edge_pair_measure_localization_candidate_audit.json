@@ -1,0 +1,101 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_bounded_candidate_no_go": true,
+    "accepted_as_finite_label_safe_measure_candidate": true,
+    "accepted_as_strict_localization_or_coupling_object": false,
+    "facts": {
+      "candidate_is_label_gauge_invariant": true,
+      "candidate_nonconstant_on_full_carrier": false,
+      "candidate_separates_or_refines_combined_functional": false,
+      "coupling_or_variational_chain_rule_exported": false,
+      "field_or_spacetime_support_exported": false,
+      "finite_probability_measure_exported": true,
+      "new_single_candidate_object_tested": true,
+      "selector_bridge_or_role_transfer_imported": false
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "coupling_or_variational_chain_rule_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "strict_localization_object_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay exchangeable edge-count measures or other carrier-constant summaries.  A next admissible move needs a genuinely nonconstant, label-safe strict localization object with field support and a coupling/chain-rule theorem; otherwise preserve the P2841-P2842 no-new-live-frontier/no-localization boundary.",
+    "reason": "P2842 introduces exactly one new candidate after P2841: the S_16-exchangeable edge-pair probability measure on the fixed 16-node 4-regular carrier.  It is label-gauge invariant and finite, with edge density 32/120=4/15.  However every decoded graph has the same edge count 32, so the measure is constant on the full 16,828-graph carrier; it does not refine the combined witness and exports no field/spacetime support or coupling/variational chain rule.  It is accepted only as a finite label-safe measure candidate, not as a strict localization/coupling object."
+  },
+  "exchangeable_edge_pair_measure_localization_candidate_audit": {
+    "candidate_measure": {
+      "candidate_object": "mu_edge^exch(G)",
+      "definition": "The S_16-exchangeable probability measure on unordered vertex pairs with mass split by edge/non-edge occupancy on the fixed 16-node 4-regular carrier.",
+      "edge_count_per_graph": 32,
+      "edge_density": {
+        "decimal": "0.266666666667",
+        "denominator": 15,
+        "numerator": 4
+      },
+      "finite_probability_measure_exported": true,
+      "label_gauge_invariant_by_construction": true,
+      "nonedge_density": {
+        "decimal": "0.733333333333",
+        "denominator": 15,
+        "numerator": 11
+      },
+      "regular_degree": 4,
+      "unordered_pair_count": 120,
+      "vertex_count": 16
+    },
+    "candidate_premise_matrix": {
+      "accepted_as_strict_localization_or_coupling_object": false,
+      "missing_premises": [
+        "nonconstant_on_full_carrier",
+        "separates_or_refines_combined_functional",
+        "field_or_spacetime_support_exported",
+        "coupling_or_variational_chain_rule_exported"
+      ],
+      "premises": {
+        "coupling_or_variational_chain_rule_exported": false,
+        "field_or_spacetime_support_exported": false,
+        "label_gauge_invariant": true,
+        "new_typed_object_declared": true,
+        "nonconstant_on_full_carrier": false,
+        "separates_or_refines_combined_functional": false,
+        "target_independent_units_or_measure_exported": true
+      }
+    },
+    "finite_carrier_check": {
+      "constant_edge_count": 32,
+      "decoded_graph_count": 16828,
+      "distinct_edge_counts": [
+        32
+      ],
+      "edge_count_histogram": {
+        "32": 16828
+      },
+      "expected_graph_count": 16828,
+      "measure_constant_on_full_carrier": true
+    },
+    "input_statuses_rechecked": {
+      "P2841": "P2841_POST_P2840_BROAD_STATE_MAP_INTAKE_GATE_NO_NEW_LIVE_FRONTIER_NO_CLOSURE"
+    },
+    "required_localization_object_premises": [
+      "new_typed_object_declared",
+      "label_gauge_invariant",
+      "nonconstant_on_full_carrier",
+      "separates_or_refines_combined_functional",
+      "field_or_spacetime_support_exported",
+      "target_independent_units_or_measure_exported",
+      "coupling_or_variational_chain_rule_exported"
+    ]
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2841": "95c390ea040bcfa520506e63e01a7432f5e5c56b7b98260cbe73493ab446677b"
+  },
+  "status": "P2842_EXCHANGEABLE_EDGE_PAIR_MEASURE_LOCALIZATION_CANDIDATE_NO_GO_NO_COUPLING_NO_CLOSURE"
+}

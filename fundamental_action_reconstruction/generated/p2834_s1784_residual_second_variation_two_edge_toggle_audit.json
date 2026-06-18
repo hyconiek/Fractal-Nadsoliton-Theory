@@ -1,0 +1,69 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_no_coupling_boundary": true,
+    "accepted_as_residual_second_variation_witness": true,
+    "accepted_as_source_law_coupling": false,
+    "facts": {
+      "full_carrier_replay_performed": false,
+      "full_carrier_source_law_coupling_exported": false,
+      "non_label_second_variation_formula_exported_for_candidate": true,
+      "p2833_residual_boundary_reused": true,
+      "p2833_residual_counts_match": true,
+      "proved_variational_derivative_into_K_or_Ltotal_exported": false,
+      "residual_only_audit": true,
+      "second_variation_separates_p2833_residuals": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "typed_graph_to_K_or_Ltotal_coupling_theorem_exported": false
+    },
+    "missing_for_source_law_promotion": [
+      "full_carrier_source_law_coupling_exported",
+      "proved_variational_derivative_into_K_or_Ltotal_exported",
+      "typed_graph_to_K_or_Ltotal_coupling_theorem_exported"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "proved_variational_derivative_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not add more carrier-separation refinements merely to decorate the now-separated residuals.  The next proof-grade step should be a theorem-obligation audit for the combined P2830/P2833/P2834 finite separating data: formulate one typed graph-source functional with units/normalization, domain/codomain, and an explicit variational derivative into K or L_total, then stop on the first missing premise.  If no such typed functional is available, preserve the P2831-P2834 finite-witness/no-coupling boundary.",
+    "reason": "P2834 executes exactly the residual-only refinement requested by P2833.  On the 67 P2833 residual classes covering 138 graphs, the non-label second-variation/two-edge-toggle interaction profile separates all residual graphs: refined_residual_class_count=138, residual collisions=0, defect=0.  This is accepted as a finite residual witness, not as source-law/coupling closure: it is not a full theorem exporting graph units, a variational derivative into K/L_total, or a typed graph-to-K/L_total coupling law."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2832": "ea15bd32ec9c2485226de65298a6319917f0170a2d2d93991eb546a9776097ac",
+    "P2833": "06c91035b9232ed973638091dda66cdabc3f2b1869d8c9f4f5889b752cd0ac11"
+  },
+  "input_statuses": {
+    "P2832": "P2832_COMMON_NEIGHBOR_CYCLE_SOURCE_FORMULA_NO_GO_NO_COUPLING_NO_CLOSURE",
+    "P2833": "P2833_EDGE_TOGGLE_RESPONSE_POLYNOMIAL_RESIDUAL_NO_GO_NO_COUPLING_NO_CLOSURE"
+  },
+  "residual_second_variation_two_edge_toggle_audit": {
+    "candidate_formula": "Q_second(G)=multiset over unordered pairs of edge toggles (a,b) of (shared_vertices(a,b), sorted single-edge response signatures, Δ² triangles, Δ² 4-cycles), restricted to the P2833 residual classes",
+    "decoded_full_carrier_graph_count": 16828,
+    "full_carrier_replay_performed": false,
+    "input_p2833_status": "P2833_EDGE_TOGGLE_RESPONSE_POLYNOMIAL_RESIDUAL_NO_GO_NO_COUPLING_NO_CLOSURE",
+    "manifest_path": "fundamental_action_reconstruction/generated/p2834_s1784_residual_second_variation_digest_manifest.json",
+    "manifest_sha256": "a634e1d085cd70c80551b9052357d55ef6c8a5db71db3d27ee2af00feba17c47",
+    "non_label_second_variation_formula_exported_for_candidate": true,
+    "p2833_residual_class_count_recomputed": 67,
+    "p2833_residual_graph_count_recomputed": 138,
+    "refined_class_size_histogram": {
+      "1": 138
+    },
+    "refined_residual_class_count": 138,
+    "refined_residual_collision_class_count": 0,
+    "refined_residual_collision_graph_count": 0,
+    "refined_residual_defect_after_formula": 0,
+    "refined_residual_max_class_size": 1,
+    "residual_only_audit": true,
+    "two_edge_toggle_pair_count_per_graph": 7140
+  },
+  "status": "P2834_RESIDUAL_SECOND_VARIATION_TWO_EDGE_TOGGLE_WITNESS_NO_COUPLING_NO_CLOSURE"
+}

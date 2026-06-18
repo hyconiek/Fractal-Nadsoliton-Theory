@@ -1,0 +1,174 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_evaluation_pullback_localization_map": false,
+    "accepted_as_localization_no_go": true,
+    "accepted_as_localization_obstruction_audit": true,
+    "facts": {
+      "accepted_localization_map_exported": false,
+      "at_least_one_localization_candidate_tested": true,
+      "canonical_vertex_coordinate_source_exported": false,
+      "p2835_combined_separator_rechecked": true,
+      "selector_bridge_or_role_transfer_imported": false
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "evaluation_pullback_localization_map_exported": false,
+      "formal_variational_derivative_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_K_or_Ltotal_map_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay graph-bit localization names without a new strict coordinate/localization source.  The next honest move is a post-graph-source state-map reconciliation/no-new-live-frontier certificate for this lane, unless a genuinely new strict localization object or coupling theorem is supplied.",
+    "reason": "P2839 attacks exactly one remaining P2838 premise: an evaluation/pullback/localization map from graph bits to field variables.  The finite label-gauge inventory has 16 vertices, 120 edge bits, and 16! possible labelings; current artifacts do not export a canonical vertex-coordinate source.  Four localization candidates are audited, and none satisfies all premises.  Label-index and graphon maps depend on arbitrary ordering, orbit bins lack field support, and spectral embeddings lack strict sign/degeneracy handling, units, and pullback/coupling rules."
+  },
+  "graph_bit_localization_map_obstruction_audit": {
+    "candidate_localization_maps": [
+      {
+        "accepted_as_localization_map": false,
+        "candidate": "label_index_to_fixed_points",
+        "missing_premises": [
+          "label_gauge_invariant_vertex_or_edge_coordinates",
+          "locality_covariance_rule",
+          "target_independent_units_or_measure",
+          "compatibility_with_variational_chain_rule"
+        ],
+        "obstruction": "Uses arbitrary decoded labels as coordinates; no strict label-gauge selector or coordinate source is exported.",
+        "premises": {
+          "compatibility_with_variational_chain_rule": false,
+          "graph_bit_domain": true,
+          "label_gauge_invariant_vertex_or_edge_coordinates": false,
+          "locality_covariance_rule": false,
+          "pullback_formula_Aij_to_field_data": true,
+          "target_field_or_spacetime_support": true,
+          "target_independent_units_or_measure": false
+        },
+        "proposed_map": "vertex label i -> fixed point x_i; edge bit A_ij -> support between x_i,x_j",
+        "satisfied_premise_count": 3
+      },
+      {
+        "accepted_as_localization_map": false,
+        "candidate": "edge_orbit_to_local_source_bins",
+        "missing_premises": [
+          "target_field_or_spacetime_support",
+          "pullback_formula_Aij_to_field_data",
+          "locality_covariance_rule",
+          "target_independent_units_or_measure",
+          "compatibility_with_variational_chain_rule"
+        ],
+        "obstruction": "Can be label-safe as finite bins, but no spacetime/field support or pullback formula is exported.",
+        "premises": {
+          "compatibility_with_variational_chain_rule": false,
+          "graph_bit_domain": true,
+          "label_gauge_invariant_vertex_or_edge_coordinates": true,
+          "locality_covariance_rule": false,
+          "pullback_formula_Aij_to_field_data": false,
+          "target_field_or_spacetime_support": false,
+          "target_independent_units_or_measure": false
+        },
+        "proposed_map": "edge orbits/features -> unlabeled source bins",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_localization_map": false,
+        "candidate": "graphon_step_function",
+        "missing_premises": [
+          "label_gauge_invariant_vertex_or_edge_coordinates",
+          "locality_covariance_rule",
+          "target_independent_units_or_measure",
+          "compatibility_with_variational_chain_rule"
+        ],
+        "obstruction": "Graphon coordinates depend on vertex ordering unless quotient data or a canonical ordering source is exported; also lacks units/coupling.",
+        "premises": {
+          "compatibility_with_variational_chain_rule": false,
+          "graph_bit_domain": true,
+          "label_gauge_invariant_vertex_or_edge_coordinates": false,
+          "locality_covariance_rule": false,
+          "pullback_formula_Aij_to_field_data": true,
+          "target_field_or_spacetime_support": true,
+          "target_independent_units_or_measure": false
+        },
+        "proposed_map": "adjacency matrix -> step function W_G(u,v) on [0,1]^2",
+        "satisfied_premise_count": 3
+      },
+      {
+        "accepted_as_localization_map": false,
+        "candidate": "spectral_embedding_localization",
+        "missing_premises": [
+          "label_gauge_invariant_vertex_or_edge_coordinates",
+          "pullback_formula_Aij_to_field_data",
+          "locality_covariance_rule",
+          "target_independent_units_or_measure",
+          "compatibility_with_variational_chain_rule"
+        ],
+        "obstruction": "Eigenvector sign/degeneracy/order choices are not a strict localization theorem and no field pullback is exported.",
+        "premises": {
+          "compatibility_with_variational_chain_rule": false,
+          "graph_bit_domain": true,
+          "label_gauge_invariant_vertex_or_edge_coordinates": false,
+          "locality_covariance_rule": false,
+          "pullback_formula_Aij_to_field_data": false,
+          "target_field_or_spacetime_support": true,
+          "target_independent_units_or_measure": false
+        },
+        "proposed_map": "graph spectrum/eigenvectors -> coordinates/support",
+        "satisfied_premise_count": 2
+      }
+    ],
+    "combined_separator_rechecked": {
+      "combined_class_count": 16828,
+      "combined_collision_class_count": 0
+    },
+    "finite_label_gauge_inventory": {
+      "canonical_vertex_coordinate_source_exported": false,
+      "decoded_graphs_are_finite_unlabeled_isomorphism_class_representatives": true,
+      "edge_bit_count": 120,
+      "label_permutation_count_exact": 20922789888000,
+      "label_permutation_count_scientific": "2.092279e+13",
+      "vertex_count": 16
+    },
+    "input_statuses_rechecked": {
+      "P2835": "P2835_COMBINED_FINITE_SEPARATOR_THEOREM_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE",
+      "P2838": "P2838_VARIATIONAL_DERIVATIVE_OBSTRUCTION_NO_GO_NO_COUPLING_NO_CLOSURE"
+    },
+    "localization_obstruction_summary": {
+      "accepted_localization_map_count": 0,
+      "accepted_localization_maps": [],
+      "blocker_histogram": {
+        "compatibility_with_variational_chain_rule": 4,
+        "graph_bit_domain": 0,
+        "label_gauge_invariant_vertex_or_edge_coordinates": 3,
+        "locality_covariance_rule": 4,
+        "pullback_formula_Aij_to_field_data": 2,
+        "target_field_or_spacetime_support": 1,
+        "target_independent_units_or_measure": 4
+      },
+      "candidate_count": 4,
+      "common_hard_blockers": [
+        "locality_covariance_rule",
+        "target_independent_units_or_measure",
+        "compatibility_with_variational_chain_rule"
+      ]
+    },
+    "required_localization_premises": [
+      "graph_bit_domain",
+      "label_gauge_invariant_vertex_or_edge_coordinates",
+      "target_field_or_spacetime_support",
+      "pullback_formula_Aij_to_field_data",
+      "locality_covariance_rule",
+      "target_independent_units_or_measure",
+      "compatibility_with_variational_chain_rule"
+    ]
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2835": "14f2ed51a35a5546a82f6e8058f3cdb9a4c93d0a97badd16c6851c3664ff0b9d",
+    "P2838": "065ff0f90c2d02418e2ff1d9501a4a4a863c637319f610f276b32b7f4d46ca60"
+  },
+  "status": "P2839_LOCALIZATION_PULLBACK_OBSTRUCTION_NO_GO_NO_COUPLING_NO_CLOSURE"
+}
