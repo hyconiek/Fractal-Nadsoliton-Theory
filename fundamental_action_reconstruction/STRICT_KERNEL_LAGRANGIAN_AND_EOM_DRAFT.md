@@ -2536,3 +2536,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2865/S1815 singleton product-obligation `L_total` guard
 
 `P2865/S1815` adds no strict action term.  The exact singleton product obligation identifies missing premises rather than supplying a unit-bearing boundary/source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2866/S1816 product-pair no-source `L_total` guard
+
+`P2866/S1816` adds no strict action term.  Pairwise multiplication of existing localization and coefficient witnesses does not provide a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2867/S1817 coupled weighted-log no-source `L_total` guard
+
+`P2867/S1817` adds no strict action term.  The coupled weighted-log obstruction identifies a forced imported coefficient, but it does not supply a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2868/S1818 prime-5 Aut-invariant weighted-log `L_total` guard
+
+`P2868/S1818` adds no strict action term.  Allowing denominator prime `5` inside an Aut-invariant weighted-log functional does not provide a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.

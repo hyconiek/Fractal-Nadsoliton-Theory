@@ -1172,3 +1172,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This is a product obligation, not closure: current artifacts do not export both a strict non-premise `d=11` localizer and a strict prime-5 coefficient law.
 - Do not promote singleton localization, coefficient representability, selector import, prime-5 representability, Dirichlet data, Aut-invariant localization, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must export both sides of the product obligation in one strict theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current product-theorem candidate-pair no-source guardrail (P2866/S1816, 2026-06-18)
+
+- P2866 scans the finite recombination class after P2865: current localization witnesses paired with current coefficient witnesses.
+- The only exact endpoint representation is imported singleton `d=11` times imported coefficient `9/5`; sourced/current pairs fail exactness and the exact pair lacks strict sourcehood plus a unit-bearing coupling link.
+- Do not promote pairwise recombination, imported singleton localization, imported prime-5 coefficient, Aut-invariant localization, Z12-smooth coefficients, integer log moments, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce one genuinely new coupled theorem sourcing `d=11`, `9/5`, and the unit-bearing link together, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current coupled Z12-smooth weighted-log no-source guardrail (P2867/S1817, 2026-06-18)
+
+- P2867 tests a coupled weighted-log functional rather than pairwise recombination: `F(w)=sum w_d log(d)` with pure `Z12`-smooth rational weights.
+- Exact endpoint equality forces `w_11=9/5` by the prime-11 coordinate; this imports denominator prime 5 and is outside the `{2,3}` denominator source class.
+- Do not promote coupled Z12-smooth weighted-log functionals, imported `w_11=9/5`, singleton endpoint representation, Dirichlet data, log-scale harmonicity, or pairwise recombination to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a new strict mechanism sourcing denominator prime 5 and the `d=11` endpoint together, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current prime-5-extended Aut-invariant weighted-log no-go guardrail (P2868/S1818, 2026-06-18)
+
+- P2868 grants denominator prime `5` in the weighted-log coefficient ring but retains Aut(`Z12`)-invariant localization.
+- The exact orbit-weight system is still inconsistent because the unit orbit `{1,5,7,11}` ties `log(11)` to `log(5)` and `log(7)`, while the target requires only `(9/5)log(11)`.
+- Do not promote prime-5 denominator extension, Aut-invariant orbit weighting, coupled weighted-log functionals, singleton endpoint representation, Dirichlet data, log-scale harmonicity, or pairwise recombination to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a genuine non-premise strict localizer/selector breaking the unit orbit together with a unit-bearing coefficient law, or use a different new typed object; otherwise preserve no-new-live-frontier.
