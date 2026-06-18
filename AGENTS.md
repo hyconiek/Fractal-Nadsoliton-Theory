@@ -1010,3 +1010,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2842 tests exactly one new candidate after P2841: the `S_16`-exchangeable edge-pair probability measure on the fixed `16`-node `4`-regular carrier.
 - The measure is label-gauge invariant and finite, but all decoded graphs have edge count `32`, so it is constant on the full `16,828`-graph carrier; it does not refine the combined graph witness and exports no field support or coupling/variational chain rule.
 - Do not promote P2842 to a strict localization object, graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move requires a genuinely nonconstant, label-safe strict localization object with field support and a coupling/chain-rule theorem, or preservation of the no-live-frontier boundary.
+
+## Current professorial SWOT closure-path guardrail (P2843/S1793, 2026-06-18)
+
+- P2843 is a synthesis/audit of foundations, kernel formulas, and Lagrangian/EOM/Hamiltonian obligations; it exports no new closure theorem.
+- Preserve the kernel split: `K_legacy_ont` remains an intermediate bridge kernel and `K_strict_gate` remains the completed/enriched strict working kernel only where an explicit completion-map certificate licenses it.
+- Do not promote finite graph witnesses, SWOT language, or Hamiltonian path language to strict graph-source law, role-bearing `L_total`, EOM closure, Hamiltonian closure, bridge closure, role transfer, selector closure, or ToE closure.
+- The next proof-grade move must supply exactly one unit-bearing typed source/coupling map into `L_total` with localization and a variational chain rule, or one concrete kernel bridge atom with an exported source premise; otherwise preserve the no-new-live-frontier certificate.
+
+## Current closure-gate prime-implicant guardrail (P2844/S1794, 2026-06-18)
+
+- P2844 formalizes P2843 as a finite Boolean closure-obligation/prime-implicant matrix rather than a new closure theorem.
+- Current evidence satisfies only finite-witness availability, kernel-split preservation, and a finite source-domain placeholder; bridge, role transfer, typed `L_total` coupling, EOM, Hamiltonian, selector, and ToE targets all remain open.
+- Do not promote Hamiltonian-only Legendre analysis before a nonproxy unit-bearing `L_total` term and EOM residual closure exist.
+- The next proof-grade move should attack exactly one high-leverage missing bundle: preferably unit-bearing typed source/coupling into `L_total`, or one concrete kernel bridge atom with an exported source premise; otherwise preserve no-new-live-frontier.
+
+## Current unit-bearing source/coupling dimensional obstruction guardrail (P2845/S1795, 2026-06-18)
+
+- P2845 attacks the P2844 high-leverage typed `L_total` source/coupling bundle with exact dimension bookkeeping.
+- Formal dimension balance is available for candidate graph-weighted densities, but no candidate exports target-independent units, localization/pullback, strict coupling coefficient rule, variational chain rule, or nonproxy `L_total` term.
+- Do not promote dimensional ansätze or Hamiltonian placeholders to unit-bearing typed source/coupling, EOM, Hamiltonian, bridge, role-transfer, or ToE closure.
+- A next admissible move must isolate one missing source premise: either a strict localization/pullback object `x_G`/`rho_G(x)` or a target-independent coupling coefficient/unit source for one named density; otherwise pivot to one concrete kernel bridge atom with an exported source premise or preserve no-new-live-frontier.
+
+## Current label-safe vertex localization/pullback guardrail (P2846/S1796, 2026-06-18)
+
+- P2846 isolates the P2845 localization/pullback premise and tests label-safe finite vertex-density candidates across the full `16,828` graph carrier.
+- Nonconstant anonymous vertex profiles exist, but no candidate exports canonical vertex-to-field support, spacetime pullback, target-independent volume/unit form, locality/covariance, coupling coefficient rule, or variational chain rule.
+- Do not promote anonymous vertex profiles to strict localization/pullback, unit-bearing `L_total` source/coupling, EOM, Hamiltonian, or ToE closure.
+- A next admissible move must introduce a genuine vertex-to-field support theorem `x_G`/`rho_G(x)`, a target-independent volume form tied to one named density, a coupling coefficient/unit source, or one concrete kernel bridge atom with source premise.

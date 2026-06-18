@@ -1,0 +1,273 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_unit_bearing_coupling_obstruction_audit": true,
+    "exports_unit_bearing_typed_source_coupling": false,
+    "facts": {
+      "all_candidates_dimension_checked": true,
+      "coupling_rule_still_blocked": true,
+      "hamiltonian_not_promoted": true,
+      "localization_pullback_still_blocked": true,
+      "no_candidate_accepted_as_source_coupling": true,
+      "no_candidate_exports_target_independent_units": true,
+      "p2844_rechecked": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "coupling_coefficient_rule_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "localization_pullback_exported": false,
+      "nonproxy_ltotal_term_exported": false,
+      "role_transfer_started": false,
+      "target_independent_units_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_typed_source_coupling_exported": false
+    },
+    "next_honest_step": "Do not replay dimensional ansätze or Hamiltonian placeholders.  The next admissible proof-grade move should isolate exactly one missing source premise from P2845: either a strict localization/pullback object x_G or rho_G(x), or a target-independent coupling coefficient/unit source for one named density.  If neither is supplied, pivot to one concrete kernel bridge atom with an exported source premise; otherwise preserve no-new-live-frontier.",
+    "reason": "P2845 attacks the P2844 high-leverage unit-bearing typed source/coupling bundle.  All five candidate terms can be formally dimension-balanced by assigning a coupling mass dimension, but none exports target-independent units, localization/pullback, a strict coupling coefficient rule, a variational chain rule, or a nonproxy L_total term.  Formal dimensional bookkeeping is therefore not a source law."
+  },
+  "input_hashes": {
+    "P2844": "4a156a1c3f64741c41ddd7640d5c156205be21a70d598510736c6b944c823f6c"
+  },
+  "status": "P2845_UNIT_BEARING_TYPED_SOURCE_COUPLING_DIMENSIONAL_OBSTRUCTION_NO_CLOSURE",
+  "unit_bearing_typed_source_coupling_audit": {
+    "accepted_candidate_count": 0,
+    "accepted_candidates": [],
+    "blocker_histogram": {
+      "coupling_coefficient_rule": 5,
+      "dimension_balanced_units": 0,
+      "locality_covariance": 3,
+      "localization_pullback": 5,
+      "nonproxy_ltotal_term": 5,
+      "target_independent_units": 5,
+      "typed_source_domain": 0,
+      "typed_target_codomain": 1,
+      "variational_chain_rule": 5
+    },
+    "candidate_rows": [
+      {
+        "accepted_as_unit_bearing_typed_source_coupling": false,
+        "candidate": "dimensionless_graph_times_dimension4_scalar_density",
+        "graph_factor_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "missing_premises": [
+          "target_independent_units",
+          "localization_pullback",
+          "coupling_coefficient_rule",
+          "variational_chain_rule",
+          "nonproxy_ltotal_term"
+        ],
+        "notes": "Formal dimensions allow lambda_0 dimension 0, but no strict source selects O_4(x), lambda_0, or graph-to-field pullback.",
+        "operator_dimension": {
+          "denominator": 1,
+          "display": "4",
+          "numerator": 4
+        },
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "dimension_balanced_units": true,
+          "locality_covariance": true,
+          "localization_pullback": false,
+          "nonproxy_ltotal_term": false,
+          "target_independent_units": false,
+          "typed_source_domain": true,
+          "typed_target_codomain": true,
+          "variational_chain_rule": false
+        },
+        "required_coupling_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "schematic_term": "Delta L = lambda_0 * F_G * O_4(x)"
+      },
+      {
+        "accepted_as_unit_bearing_typed_source_coupling": false,
+        "candidate": "graph_mass_term_scalar_square",
+        "graph_factor_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "missing_premises": [
+          "target_independent_units",
+          "localization_pullback",
+          "coupling_coefficient_rule",
+          "variational_chain_rule",
+          "nonproxy_ltotal_term"
+        ],
+        "notes": "Formal dimensions require lambda_2 with mass dimension 2; no target-independent mass/unit source is exported.",
+        "operator_dimension": {
+          "denominator": 1,
+          "display": "2",
+          "numerator": 2
+        },
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "dimension_balanced_units": true,
+          "locality_covariance": true,
+          "localization_pullback": false,
+          "nonproxy_ltotal_term": false,
+          "target_independent_units": false,
+          "typed_source_domain": true,
+          "typed_target_codomain": true,
+          "variational_chain_rule": false
+        },
+        "required_coupling_dimension": {
+          "denominator": 1,
+          "display": "2",
+          "numerator": 2
+        },
+        "schematic_term": "Delta L = lambda_2 * F_G * phi(x)^2"
+      },
+      {
+        "accepted_as_unit_bearing_typed_source_coupling": false,
+        "candidate": "strict_kernel_modulated_density",
+        "graph_factor_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "missing_premises": [
+          "target_independent_units",
+          "localization_pullback",
+          "locality_covariance",
+          "coupling_coefficient_rule",
+          "variational_chain_rule",
+          "nonproxy_ltotal_term"
+        ],
+        "notes": "K_strict_gate is dimensionless as written, but no strict d(x,y)/graph pullback or source coefficient is exported.",
+        "operator_dimension": {
+          "denominator": 1,
+          "display": "4",
+          "numerator": 4
+        },
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "dimension_balanced_units": true,
+          "locality_covariance": false,
+          "localization_pullback": false,
+          "nonproxy_ltotal_term": false,
+          "target_independent_units": false,
+          "typed_source_domain": true,
+          "typed_target_codomain": true,
+          "variational_chain_rule": false
+        },
+        "required_coupling_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "schematic_term": "Delta L = lambda_K * F_G * K_strict_gate(d) * O_4(x)"
+      },
+      {
+        "accepted_as_unit_bearing_typed_source_coupling": false,
+        "candidate": "localized_delta_source",
+        "graph_factor_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "missing_premises": [
+          "target_independent_units",
+          "localization_pullback",
+          "locality_covariance",
+          "coupling_coefficient_rule",
+          "variational_chain_rule",
+          "nonproxy_ltotal_term"
+        ],
+        "notes": "A delta density can be dimension-balanced, but x_G is exactly the missing strict localization object.",
+        "operator_dimension": {
+          "denominator": 1,
+          "display": "4",
+          "numerator": 4
+        },
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "dimension_balanced_units": true,
+          "locality_covariance": false,
+          "localization_pullback": false,
+          "nonproxy_ltotal_term": false,
+          "target_independent_units": false,
+          "typed_source_domain": true,
+          "typed_target_codomain": true,
+          "variational_chain_rule": false
+        },
+        "required_coupling_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "schematic_term": "Delta L = lambda_delta * F_G * delta^4(x-x_G)"
+      },
+      {
+        "accepted_as_unit_bearing_typed_source_coupling": false,
+        "candidate": "hamiltonian_potential_placeholder",
+        "graph_factor_dimension": {
+          "denominator": 1,
+          "display": "0",
+          "numerator": 0
+        },
+        "missing_premises": [
+          "typed_target_codomain",
+          "target_independent_units",
+          "localization_pullback",
+          "locality_covariance",
+          "coupling_coefficient_rule",
+          "variational_chain_rule",
+          "nonproxy_ltotal_term"
+        ],
+        "notes": "Hamiltonian placeholder is premature: no phase-space variables, Legendre map, constraints, or L_total source term exist.",
+        "operator_dimension": {
+          "denominator": 1,
+          "display": "2",
+          "numerator": 2
+        },
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "dimension_balanced_units": true,
+          "locality_covariance": false,
+          "localization_pullback": false,
+          "nonproxy_ltotal_term": false,
+          "target_independent_units": false,
+          "typed_source_domain": true,
+          "typed_target_codomain": false,
+          "variational_chain_rule": false
+        },
+        "required_coupling_dimension": {
+          "denominator": 1,
+          "display": "2",
+          "numerator": 2
+        },
+        "schematic_term": "Delta H = c_H * F_G * q^2"
+      }
+    ],
+    "dimension_conventions": {
+      "action_dimension": 0,
+      "finite_graph_functional_dimension": 0,
+      "lagrangian_density_mass_dimension": 4,
+      "spacetime_dimension": 4
+    },
+    "formal_dimension_balance_count": 5,
+    "input_statuses_rechecked": {
+      "P2844": "P2844_CLOSURE_GATE_PRIME_IMPLICANT_OBLIGATION_MATRIX_NO_CLOSURE"
+    },
+    "required_premises": [
+      "typed_source_domain",
+      "typed_target_codomain",
+      "dimension_balanced_units",
+      "target_independent_units",
+      "localization_pullback",
+      "locality_covariance",
+      "coupling_coefficient_rule",
+      "variational_chain_rule",
+      "nonproxy_ltotal_term"
+    ],
+    "target_independent_units_count": 0
+  }
+}
