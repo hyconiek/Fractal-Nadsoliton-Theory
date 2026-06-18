@@ -3211,3 +3211,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2876/S1826 local circulant source-operator endpoint-11 no-go audit
 
 `P2876/S1826` enumerates all `3^5=243` ternary radius-2 local circulant stencils on `Z12`, including the `3^3=27` reflection-symmetric subfamily, and applies them to intrinsic Fourier inputs `k=0..6`.  Because circulant local operators diagonalize on Fourier modes, every checked output is either zero or full-support; no stencil computes singleton endpoint `11` without importing a localized delta/phase seed.  No strict local endpoint-11 source operator, unit-bearing `9/5` coupling theorem, boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2877/S1827 pinned non-circulant defect origin-import no-go audit
+
+`P2877/S1827` enumerates all `12*3^3=324` ternary radius-1 pinned non-circulant defect densities on `Z12`.  Singleton endpoint `11` is representable exactly when an imported pin-neighborhood already names `11`; the same six singleton-neighborhood witnesses occur for every output endpoint.  This is imported origin/offset representability, not an independently exported strict origin/support law.  No unit-bearing `9/5` coefficient theorem, boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2878/S1828 D12-equivariant pinned-defect origin-law no-go audit
+
+`P2878/S1828` quotients the `P2877` pinned radius-1 defect density family by the full `D12` action and applies the stabilizer fixed-point criterion for equivariant endpoint selectors.  Across the finite orbit table, no orbit forces endpoint `11` and no orbit has a unique fixed endpoint selector.  Endpoint `11` therefore remains an imported orbit-representative/pin/orientation/label choice, not an independently exported strict origin/support law.  No unit-bearing `9/5` coefficient theorem, boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2879/S1829 C12 chiral pinned-defect translation-origin no-go audit
+
+`P2879/S1829` reruns the pinned-defect origin-law test after a hypothetical chiral/reflection-breaking source reduces `D12` to orientation-preserving `C12`.  The finite stabilizer fixed-point table still has no orbit forcing endpoint `11` and no orbit with a unique endpoint selector: singleton/asymmetric records retain a translated 12-way origin choice, while rotation-invariant records fix no endpoint.  Chiral orientation alone therefore does not export a strict translation-origin source, unit-bearing `9/5` coefficient theorem, boundary source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.

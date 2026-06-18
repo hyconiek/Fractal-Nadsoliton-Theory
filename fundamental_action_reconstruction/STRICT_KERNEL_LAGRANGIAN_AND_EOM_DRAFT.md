@@ -2580,3 +2580,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2876/S1826 local circulant source operator `L_total` guard
 
 `P2876/S1826` adds no strict action term.  Local circulant stencils and their reflection-symmetric subfamily do not export a localized unit-bearing boundary/source density at `11`, non-premise support/origin law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2877/S1827 pinned non-circulant defect `L_total` guard
+
+`P2877/S1827` adds no strict action term.  Pinned non-circulant defect densities can localize endpoint `11` only by importing a pin/origin plus offset relation that already names `11`; they do not export a localized unit-bearing boundary/source density, non-premise origin/support law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2878/S1828 D12-equivariant pinned-defect origin-law `L_total` guard
+
+`P2878/S1828` adds no strict action term.  D12-equivariant selectors on pinned-defect density orbits do not export a localized unit-bearing boundary/source density at `11`, non-premise origin/support law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2879/S1829 C12 chiral pinned-defect translation-origin `L_total` guard
+
+`P2879/S1829` adds no strict action term.  Reducing `D12` to chiral `C12` symmetry does not export a localized unit-bearing boundary/source density at `11`, translation-origin source law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
