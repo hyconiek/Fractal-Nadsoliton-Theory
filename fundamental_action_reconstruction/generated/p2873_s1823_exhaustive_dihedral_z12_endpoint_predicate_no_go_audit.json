@@ -1,0 +1,154 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_dihedral_endpoint_source": false,
+    "exports_boundary_source_law": false,
+    "exports_orientation_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "adjacent_pair_reflection0_invariant_but_not_singleton": true,
+      "all_4096_boolean_endpoint_predicates_enumerated": true,
+      "full_dihedral_invariant_predicates_are_only_empty_and_all": true,
+      "p2872_rechecked": true,
+      "singleton_11_not_full_dihedral_invariant": true,
+      "singleton_11_not_reflection0_invariant": true,
+      "translation_orbit_of_11_is_all_z12": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "orientation_source_law_exported": false,
+      "prime5_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay full-dihedral endpoint predicates, reflection-only adjacent pairs, cyclic predecessor, or endpoint-label imports as sourcehood.  A next proof-grade move must provide a new strict non-premise chiral/orientation source law selecting singleton 11 and a unit-bearing 9/5 coupling theorem, or pivot to a genuinely different typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2873 exhausts all Boolean endpoint predicates on Z12.  Full D12 invariance leaves only empty/all predicates; reflection-only invariance keeps the unordered pair {1,11} but cannot choose predecessor 11.  Singleton 11 therefore remains an orientation/endpoint-label import, not a strict source law."
+  },
+  "exhaustive_dihedral_z12_endpoint_predicate_no_go_audit": {
+    "adjacent_pair_reflection0_orbit": [
+      [
+        1,
+        11
+      ]
+    ],
+    "candidate_class": "all Boolean endpoint predicates on Z12 filtered by full D12 symmetry, with a reflection-only comparison boundary",
+    "full_dihedral_invariant_count": 2,
+    "full_dihedral_invariant_predicates": [
+      [],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "input_status_rechecked": "P2872_CYCLIC_PREDECESSOR_ENDPOINT_ORIENTATION_NO_SOURCE_AUDIT_NO_CLOSURE",
+    "modulus": 12,
+    "predicate_count": 4096,
+    "proof_certificate": {
+      "dihedral_step": "Translation transitivity makes any full D12-invariant endpoint predicate either empty or all of Z12; reflection adds no singleton-localizing escape hatch.",
+      "enumeration_step": "All 2^12 Boolean endpoint predicates on Z12 are enumerated exactly.",
+      "reflection_boundary_step": "If translation is withheld, reflection around 0 admits the adjacent pair {1,11}, but not singleton 11; predecessor selection still imports orientation.",
+      "sourcehood_step": "Current artifacts export no strict non-premise law selecting singleton 11 and no unit-bearing 9/5 coupling/localization theorem."
+    },
+    "reflection0_atoms": [
+      [
+        0
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6
+      ]
+    ],
+    "reflection0_invariant_count": 128,
+    "singleton_11_full_dihedral_orbit": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ]
+    ],
+    "singleton_11_reflection0_orbit": [
+      [
+        1
+      ],
+      [
+        11
+      ]
+    ]
+  },
+  "input_hashes": {
+    "P2872": "6239b112731112a515e34593bb83fd7753ce1c30717121cabae4a7b9a9cc7858"
+  },
+  "status": "P2873_EXHAUSTIVE_DIHEDRAL_Z12_ENDPOINT_PREDICATE_NO_GO_AUDIT_NO_CLOSURE"
+}

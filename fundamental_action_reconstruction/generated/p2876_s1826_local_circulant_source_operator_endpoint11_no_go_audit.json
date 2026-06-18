@@ -1,0 +1,598 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_local_endpoint_11_source_operator": false,
+    "exports_boundary_source_law": false,
+    "exports_chiral_endpoint_11_source_law": false,
+    "exports_orientation_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "all_ternary_radius2_circulant_stencils_enumerated": true,
+      "input_modes_k0_through_k6_checked": true,
+      "no_full_family_singleton_11_hits": true,
+      "no_reflection_symmetric_singleton_11_hits": true,
+      "outputs_are_only_zero_or_global_for_fourier_inputs": true,
+      "p2875_rechecked": true,
+      "reflection_symmetric_subfamily_enumerated": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "chiral_endpoint_11_source_law_exported": false,
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "orientation_source_law_exported": false,
+      "role_transfer_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay local circulant stencils, reflection-symmetric local stencils, Fourier-diagonal operator action, D12 irrep waves, or full-DFT delta reconstruction as sourcehood.  A next proof-grade move must provide a non-circulant strict local defect/source with independently exported origin/support at endpoint 11 and a unit-bearing 9/5 coefficient theorem, or pivot to a genuinely different typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2876 enumerates all ternary radius-2 local circulant source operators and their reflection-symmetric subfamily on Fourier inputs k=0..6.  Every output is zero or full-support; no stencil computes singleton endpoint 11 without an imported localized seed.  Therefore no strict local endpoint-11 source operator or unit-bearing 9/5 coupling theorem is exported."
+  },
+  "input_hashes": {
+    "P2875": "4594dacff890efb833591c1dcc852c7d5018852673e3b9b7d3498919092b7475"
+  },
+  "local_circulant_source_operator_endpoint11_no_go_audit": {
+    "candidate_class": "ternary radius-2 local circulant source operators on Z12 applied to intrinsic Fourier inputs k=0..6",
+    "coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "full_family_summary": {
+      "input_mode_count": 7,
+      "killed_by_mode": {
+        "0": 51,
+        "1": 3,
+        "2": 17,
+        "3": 21,
+        "4": 17,
+        "5": 3,
+        "6": 51
+      },
+      "nonzero_global_output_count": 1538,
+      "operator_input_pair_count": 1701,
+      "partial_non_singleton_output_count": 0,
+      "singleton_11_hit_count": 0,
+      "singleton_11_hits": [],
+      "stencil_count": 243,
+      "zero_output_count": 163
+    },
+    "input_modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "input_status_rechecked": "P2875_D12_TWO_DIMENSIONAL_IRREP_ENDPOINT_LOCALIZATION_NO_GO_AUDIT_NO_CLOSURE",
+    "modulus": 12,
+    "offsets": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "proof_certificate": {
+      "fourier_diagonalization_step": "Circular local operators are diagonal on Fourier inputs, so each output is a scalar multiple of the same global mode.",
+      "operator_enumeration_step": "All 3^5 ternary radius-2 circulant stencils are enumerated, with the 3^3 reflection-symmetric subfamily separated.",
+      "sourcehood_step": "A local circulant operator can produce delta_11 only from an imported delta/phase-localized seed, not from intrinsic global inputs; no unit-bearing 9/5 coefficient theorem is exported.",
+      "support_step": "Every checked output is either zero or full-support on Z12; no output has singleton endpoint-11 support."
+    },
+    "reflection_symmetric_summary": {
+      "input_mode_count": 7,
+      "killed_by_mode": {
+        "0": 3,
+        "1": 3,
+        "2": 7,
+        "3": 3,
+        "4": 7,
+        "5": 3,
+        "6": 3
+      },
+      "nonzero_global_output_count": 160,
+      "operator_input_pair_count": 189,
+      "partial_non_singleton_output_count": 0,
+      "singleton_11_hit_count": 0,
+      "singleton_11_hits": [],
+      "stencil_count": 27,
+      "zero_output_count": 29
+    },
+    "sample_records": [
+      {
+        "mode_multipliers": {
+          "0": [
+            -1.0,
+            0.0
+          ],
+          "1": [
+            -0.0,
+            0.0
+          ],
+          "2": [
+            2.0,
+            0.0
+          ],
+          "3": [
+            3.0,
+            0.0
+          ],
+          "4": [
+            2.0,
+            0.0
+          ],
+          "5": [
+            -0.0,
+            0.0
+          ],
+          "6": [
+            -1.0,
+            0.0
+          ]
+        },
+        "mode_supports": {
+          "0": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "1": [],
+          "2": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "3": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "4": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "5": [],
+          "6": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "reflection_symmetric": true,
+        "stencil": [
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "stencil_offsets": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "mode_multipliers": {
+          "0": [
+            0.0,
+            0.0
+          ],
+          "1": [
+            -0.732050807569,
+            0.0
+          ],
+          "2": [
+            -2.0,
+            0.0
+          ],
+          "3": [
+            -2.0,
+            0.0
+          ],
+          "4": [
+            -0.0,
+            0.0
+          ],
+          "5": [
+            2.732050807569,
+            0.0
+          ],
+          "6": [
+            4.0,
+            0.0
+          ]
+        },
+        "mode_supports": {
+          "0": [],
+          "1": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "2": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "3": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "4": [],
+          "5": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "6": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "reflection_symmetric": true,
+        "stencil": [
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "stencil_offsets": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "mode_multipliers": {
+          "0": [
+            1.0,
+            0.0
+          ],
+          "1": [
+            0.732050807569,
+            0.0
+          ],
+          "2": [
+            0.0,
+            0.0
+          ],
+          "3": [
+            -1.0,
+            0.0
+          ],
+          "4": [
+            -2.0,
+            0.0
+          ],
+          "5": [
+            -2.732050807569,
+            0.0
+          ],
+          "6": [
+            -3.0,
+            0.0
+          ]
+        },
+        "mode_supports": {
+          "0": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "1": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "2": [],
+          "3": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "4": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "5": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "6": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        "reflection_symmetric": true,
+        "stencil": [
+          0,
+          1,
+          -1,
+          1,
+          0
+        ],
+        "stencil_offsets": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "mode_multipliers": {
+          "0": [
+            0.0,
+            0.0
+          ],
+          "1": [
+            0.0,
+            -1.732050807569
+          ],
+          "2": [
+            0.0,
+            -1.732050807569
+          ],
+          "3": [
+            0.0,
+            -0.0
+          ],
+          "4": [
+            0.0,
+            1.732050807569
+          ],
+          "5": [
+            0.0,
+            1.732050807569
+          ],
+          "6": [
+            0.0,
+            0.0
+          ]
+        },
+        "mode_supports": {
+          "0": [],
+          "1": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "2": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "3": [],
+          "4": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "5": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "6": []
+        },
+        "reflection_symmetric": false,
+        "stencil": [
+          1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "stencil_offsets": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "status": "P2876_LOCAL_CIRCULANT_SOURCE_OPERATOR_ENDPOINT11_NO_GO_AUDIT_NO_CLOSURE"
+}

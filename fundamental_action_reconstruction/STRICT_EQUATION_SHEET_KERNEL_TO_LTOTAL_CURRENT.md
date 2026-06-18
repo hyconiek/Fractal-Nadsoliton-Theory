@@ -3195,3 +3195,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2872/S1822 cyclic-predecessor endpoint orientation no-source audit
 
 `P2872/S1822` tests a different typed escape hatch after P2871: the ambient `Z12` cyclic-order predecessor convention `d=-1 mod 12`, hence `d=11`.  This convention exactly represents `(9/5)log(11)`, but it is orientation-sensitive because reflection swaps successor `d=1` and predecessor `d=11`.  Reflection-invariant adjacent predicates cannot select singleton `11`, and current artifacts export no strict orientation/boundary-arrow source law or unit-bearing `9/5` coupling theorem.  No boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2873/S1823 exhaustive dihedral Z12 endpoint-predicate no-go audit
+
+`P2873/S1823` exhausts all `2^12=4096` Boolean endpoint predicates on `Z12` after P2872.  Full `D12` invariance leaves only empty/all predicates, so it cannot select singleton `11` or any endpoint localizer.  If translation is withheld, reflection-only invariance admits the unordered adjacent pair `{1,11}`, but still cannot select predecessor `11` over successor `1`; singleton `11` remains an orientation/endpoint-label import.  No boundary source law, orientation law, eta source, strict damping bridge, unit-bearing `9/5` coupling theorem, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2874/S1824 dihedral-character chiral endpoint-source no-go audit
+
+`P2874/S1824` enumerates all four real one-dimensional `D12` chiral/character laws `chi(r)=±1`, `chi(s)=±1` and solves the endpoint-field equivariance equations `v(g.x)=chi(g)v(x)`.  Reflection-odd characters have only the zero endpoint field because every endpoint has a reflection stabilizer.  Reflection-even characters give global constant or alternating fields, not singleton `11` localizers; the alternating field is only a global parity pattern, does not distinguish `11` from `1`, and still lacks non-premise polarity and a unit-bearing `9/5` coupling theorem.  No boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2875/S1825 D12 two-dimensional irrep endpoint-localization no-go audit
+
+`P2875/S1825` enumerates the five real two-dimensional `D12` endpoint irrep/Fourier modes `k=1..5`.  Each mode has a reflection-fixed equivariant field, but every such field is a global cosine/sine wave with nonzero norm at all twelve endpoints, not a singleton `11` source.  The full DFT basis can reconstruct `delta_11` exactly only after importing target phase `11` and the Fourier coefficients; this is representability, not a strict local source operator or a unit-bearing `9/5` coupling theorem.  No boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2876/S1826 local circulant source-operator endpoint-11 no-go audit
+
+`P2876/S1826` enumerates all `3^5=243` ternary radius-2 local circulant stencils on `Z12`, including the `3^3=27` reflection-symmetric subfamily, and applies them to intrinsic Fourier inputs `k=0..6`.  Because circulant local operators diagonalize on Fourier modes, every checked output is either zero or full-support; no stencil computes singleton endpoint `11` without importing a localized delta/phase seed.  No strict local endpoint-11 source operator, unit-bearing `9/5` coupling theorem, boundary/orientation source law, selector/localizer source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.

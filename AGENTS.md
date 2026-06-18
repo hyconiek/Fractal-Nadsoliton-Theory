@@ -1221,3 +1221,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The predecessor `d=11` exactly represents `(9/5)log(11)`, but reflection swaps predecessor `d=11` with successor `d=1`; selecting predecessor imports an orientation/boundary-arrow convention.
 - Do not promote cyclic predecessor, `d=-1`, clockwise/counterclockwise endpoint conventions, reflection-sensitive adjacency, Boolean projector predicates, Aut-character idempotents, prime-5 scaled coefficients, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must export a strict non-premise orientation/boundary-arrow law fixing predecessor over successor and a unit-bearing `9/5` coefficient/coupling theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current exhaustive dihedral endpoint-predicate no-go guardrail (P2873/S1823, 2026-06-18)
+
+- P2873 exhausts all `2^12=4096` Boolean endpoint predicates on `Z12` after P2872 and filters them by full `D12` symmetry, with a reflection-only comparison boundary.
+- Full `D12` invariance leaves only empty/all predicates; reflection-only invariance can retain unordered adjacent pairs such as `{1,11}` but cannot choose predecessor `11` over successor `1`.
+- Do not promote full-dihedral endpoint predicates, reflection-only adjacent pairs, cyclic predecessor conventions, endpoint-label imports, Boolean projector predicates, Aut-character idempotents, prime-5 scaled coefficients, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a new strict non-premise chiral/orientation source law selecting singleton `11` and a unit-bearing `9/5` coupling theorem, or use a genuinely different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current dihedral-character chiral endpoint-source no-go guardrail (P2874/S1824, 2026-06-18)
+
+- P2874 enumerates all real one-dimensional `D12` chiral/character laws after P2873 and solves endpoint-field equivariance.
+- Reflection-odd characters vanish on endpoint fields because each endpoint has a reflection stabilizer; reflection-even characters are global constant or alternating fields, not singleton `11` localizers.
+- Do not promote `D12` one-dimensional character fields, reflection-odd sign characters, alternating parity fields, full-dihedral endpoint predicates, reflection-only adjacent pairs, cyclic predecessor conventions, endpoint-label imports, Aut-character idempotents, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a higher-structure strict source with a nonzero localized signed value at `11` plus a unit-bearing `9/5` coupling theorem, or use a genuinely different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current D12 two-dimensional irrep endpoint-localization no-go guardrail (P2875/S1825, 2026-06-18)
+
+- P2875 enumerates the five real two-dimensional `D12` endpoint irrep/Fourier modes after P2874 and checks their equivariant endpoint support.
+- Each mode is a global wave with nonzero norm at every endpoint; full-DFT `delta_11` reconstruction imports target phase `11` and Fourier coefficients.
+- Do not promote two-dimensional `D12` irrep waves, full-DFT delta reconstruction, imported phase-11 coefficients, one-dimensional `D12` characters, dihedral endpoint predicates, endpoint-label imports, Aut-character idempotents, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export an actual strict local source operator/density with computed support at endpoint `11` and a unit-bearing `9/5` coefficient theorem, or use a genuinely different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current local circulant source-operator endpoint-11 no-go guardrail (P2876/S1826, 2026-06-18)
+
+- P2876 enumerates all ternary radius-2 local circulant stencils on `Z12`, plus the reflection-symmetric subfamily, after P2875.
+- On intrinsic Fourier inputs `k=0..6`, every output is zero or full-support; singleton endpoint `11` appears only if a localized delta/phase seed is imported.
+- Do not promote local circulant stencils, reflection-symmetric local stencils, Fourier-diagonal operator action, two-dimensional `D12` irrep waves, full-DFT delta reconstruction, imported phase-11 coefficients, or earlier endpoint-label imports to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a non-circulant strict local defect/source with independently exported origin/support at endpoint `11` and a unit-bearing `9/5` coefficient theorem, or use a genuinely different typed object; otherwise preserve no-new-live-frontier.
