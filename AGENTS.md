@@ -1270,3 +1270,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - No `C12` orbit forces endpoint `11`, and no orbit has a unique endpoint selector; chiral orientation removes reflection ambiguity but not the translated 12-way origin choice.
 - Do not promote `C12`/chiral pinned-defect selectors, orientation-only symmetry breaking, imported translation origins, `D12`-equivariant selectors, pinned defects, circulant/Fourier constructions, `D12` irreps/characters, endpoint predicates, endpoint-label imports, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must export a strict translation-origin source with computed unit-bearing `9/5` coupling, or pivot outside the endpoint-localizer/source family; otherwise preserve no-new-live-frontier.
+
+## Current origin-pinned 9/5 coefficient-import no-go guardrail (P2880/S1830, 2026-06-18)
+
+- P2880 grants the post-P2879 missing endpoint-`11` translation-origin pin as a premise and audits whether denominator-5 radius-1 local coefficient stencils force the unit-bearing `9/5` coupling.
+- The finite table shows `9/5` is representable but not forced: it occurs in many chosen stencils, many stencils omit it, and all endpoint counts translate uniformly.
+- Do not promote imported origin pins, denominator-5 coefficient boxes, prime-5 scaled coefficients, endpoint-localizer families, `C12`/`D12` pinned-defect selectors, circulant/Fourier constructions, `D12` irreps/characters, or endpoint predicates to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export an independent variational/unit law deriving the `9/5` coupling from strict data, or pivot outside the endpoint/coefficient-import family; otherwise preserve no-new-live-frontier.
+
+## Current finite variational/unit-law 9/5 derivation no-go guardrail (P2881/S1831, 2026-06-18)
+
+- P2881 tests the post-P2880 requirement for an independent variational/unit law deriving `9/5` from strict data, using exact finite minimization over denominator-5 radius-1 stencils and source-neutral local unit constraints/objectives.
+- No audited candidate has a unique minimizer with center coefficient `9/5`; local quadratic minimization does not derive the missing unit-bearing coupling without inserting `9/5` as premise data.
+- Do not promote denominator-5 coefficient boxes, imported center=`9/5` constraints, endpoint pins, `C12`/`D12` pinned-defect selectors, circulant/Fourier/irrep constructions, or generic local quadratic minimization to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a new strict dimensional/unit source outside the local endpoint-coefficient family, or an exported variational functional whose Euler/minimizer equation analytically forces `9/5` without premise insertion; otherwise preserve no-new-live-frontier.
+
+## Current Euler source-ratio 9/5 forcing no-go guardrail (P2882/S1832, 2026-06-18)
+
+- P2882 tests the post-P2881 analytic Euler route `A*x=J` for a scalar quadratic action and scans positive integer stiffness/source pairs exactly.
+- `x=9/5` occurs only when the primitive source/stiffness ratio is already `J:A=9:5`; the target records are scaled representatives, not a canonical strict source.
+- Do not promote scalar Euler laws, local quadratic minimization, denominator-5 coefficient boxes, endpoint pins, or imported `9:5` source/stiffness ratios to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a strict dimensional/unit law fixing primitive ratio `9:5` from independent data, or pivot outside the endpoint/coefficient/source-ratio family; otherwise preserve no-new-live-frontier.
+
+## Current dimensional/unit source inventory no-go guardrail (P2883/S1833, 2026-06-18)
+
+- P2883 inventories current generated artifacts after P2882 for a positive strict dimensional/unit source fixing primitive ratio `9:5` or a unit-bearing `9/5` coupling theorem.
+- Positive `9/5`-related eta/damping/unit-premise hits exist, but no current generated artifact exports a primitive source/stiffness ratio `9:5` law satisfying the P2882 obligation.
+- Do not promote endpoint pins, denominator-5 coefficient boxes, local quadratic minimization, scalar Euler source-ratio transmission, or generated-artifact inventory to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce one genuinely new strict dimensional/unit source object or analytic theorem fixing primitive ratio `9:5` from independent data; otherwise preserve no-new-live-frontier.

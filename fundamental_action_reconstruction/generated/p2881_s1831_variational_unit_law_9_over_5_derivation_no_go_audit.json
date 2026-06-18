@@ -1,0 +1,378 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_independent_variational_unit_law_for_9_over_5": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_translation_origin_source_law": false,
+    "exports_unit_bearing_9_over_5_coupling_theorem": false,
+    "exports_unit_bearing_action_density": false,
+    "facts": {
+      "candidate_count_checked": true,
+      "center_9_over_5_only_appears_in_nonunique_minima_when_seen": true,
+      "denominator_5_grid_checked": true,
+      "no_candidate_derives_unique_center_9_over_5": true,
+      "p2880_rechecked": true,
+      "some_unique_minimizers_exist_but_not_9_over_5": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "independent_variational_unit_law_exported": false,
+      "ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "translation_origin_source_law_exported": false,
+      "unit_bearing_9_over_5_coupling_theorem_exported": false,
+      "unit_bearing_action_density_exported": false
+    },
+    "next_honest_step": "Do not replay denominator-5 coefficient boxes, imported center=9/5 constraints, endpoint pins, C12/D12 pinned-defect selectors, circulant/Fourier/irrep constructions, or generic local quadratic minimization as sourcehood.  A next proof-grade move must either introduce a new strict dimensional/unit source outside the local endpoint-coefficient family or provide an exported variational functional whose Euler/minimizer equation analytically forces 9/5 without inserting that value as a premise; otherwise preserve no-new-live-frontier.",
+    "reason": "P2881 audits a finite family of source-neutral local variational/unit laws after P2880.  Exact enumeration over the denominator-5 radius-1 grid finds no candidate whose unique minimizer has center coefficient 9/5.  Therefore the required unit-bearing 9/5 coupling is still not derived from strict data."
+  },
+  "input_hashes": {
+    "P2880": "1e575cb190f4f2216a600d8efaf15979070f993a9dfeb68c22ef41194178453b"
+  },
+  "status": "P2881_VARIATIONAL_UNIT_LAW_9_OVER_5_DERIVATION_NO_GO_AUDIT_NO_CLOSURE",
+  "variational_unit_law_9_over_5_derivation_no_go_audit": {
+    "candidate_class": "source-neutral finite local variational/unit laws on denominator-5 radius-1 stencils, without explicit center=9/5 constraint",
+    "candidate_count": 75,
+    "center_9_over_5_nonunique_minimum_candidate_count": 17,
+    "constraint_count": 15,
+    "derives_center_9_over_5_candidate_count": 0,
+    "input_status_rechecked": "P2880_ORIGIN_PINNED_9_OVER_5_COEFFICIENT_IMPORT_NO_GO_AUDIT_NO_CLOSURE",
+    "objective_count": 5,
+    "proof_certificate": {
+      "finite_result": "No candidate has a unique minimizer with center coefficient 9/5; candidates that have unique minimizers select smaller unit-scale coefficients instead.",
+      "finite_test": "For each source-neutral unit constraint and local quadratic objective, enumerate all denominator-5 radius-1 stencils and compute exact rational minimizers.",
+      "sourcehood_step": "A variational/unit law must derive 9/5 as a unique output without putting 9/5 into the constraint.  The audited finite family does not do so."
+    },
+    "sample_candidate_records": [
+      {
+        "center_values_at_minimum": [
+          "-2/5",
+          "-1/5"
+        ],
+        "constraint": "sum=-1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 3,
+        "minimum_value": "9/25",
+        "objective": "quadratic_norm",
+        "sample_minimizers": [
+          [
+            "-2/5",
+            "-2/5",
+            "-1/5"
+          ],
+          [
+            "-2/5",
+            "-1/5",
+            "-2/5"
+          ],
+          [
+            "-1/5",
+            "-2/5",
+            "-2/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      },
+      {
+        "center_values_at_minimum": [
+          "-2/5"
+        ],
+        "constraint": "sum=-1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 2,
+        "minimum_value": "1/25",
+        "objective": "smoothness",
+        "sample_minimizers": [
+          [
+            "-2/5",
+            "-2/5",
+            "-1/5"
+          ],
+          [
+            "-1/5",
+            "-2/5",
+            "-2/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      },
+      {
+        "center_values_at_minimum": [
+          "-1"
+        ],
+        "constraint": "sum=-1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "boundary_penalty",
+        "sample_minimizers": [
+          [
+            "0",
+            "-1",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "-1"
+      },
+      {
+        "center_values_at_minimum": [
+          "-1"
+        ],
+        "constraint": "sum=-1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "moment_penalty",
+        "sample_minimizers": [
+          [
+            "0",
+            "-1",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "-1"
+      },
+      {
+        "center_values_at_minimum": [
+          "-2/5"
+        ],
+        "constraint": "sum=-1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 16,
+        "minimum_value": "1/25",
+        "objective": "curvature_penalty",
+        "sample_minimizers": [
+          [
+            "-9/5",
+            "-2/5",
+            "6/5"
+          ],
+          [
+            "-8/5",
+            "-2/5",
+            "1"
+          ],
+          [
+            "-7/5",
+            "-2/5",
+            "4/5"
+          ],
+          [
+            "-6/5",
+            "-2/5",
+            "3/5"
+          ],
+          [
+            "-1",
+            "-2/5",
+            "2/5"
+          ],
+          [
+            "-4/5",
+            "-2/5",
+            "1/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      },
+      {
+        "center_values_at_minimum": [
+          "0"
+        ],
+        "constraint": "sum=0",
+        "derives_center_9_over_5": false,
+        "feasible_count": 271,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "quadratic_norm",
+        "sample_minimizers": [
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "0"
+      },
+      {
+        "center_values_at_minimum": [
+          "0"
+        ],
+        "constraint": "sum=0",
+        "derives_center_9_over_5": false,
+        "feasible_count": 271,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "smoothness",
+        "sample_minimizers": [
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "0"
+      },
+      {
+        "center_values_at_minimum": [
+          "0"
+        ],
+        "constraint": "sum=0",
+        "derives_center_9_over_5": false,
+        "feasible_count": 271,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "boundary_penalty",
+        "sample_minimizers": [
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "0"
+      },
+      {
+        "center_values_at_minimum": [
+          "0"
+        ],
+        "constraint": "sum=0",
+        "derives_center_9_over_5": false,
+        "feasible_count": 271,
+        "minimizer_count": 1,
+        "minimum_value": "0",
+        "objective": "moment_penalty",
+        "sample_minimizers": [
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unique_minimizer": true,
+        "unique_minimizer_center": "0"
+      },
+      {
+        "center_values_at_minimum": [
+          "0"
+        ],
+        "constraint": "sum=0",
+        "derives_center_9_over_5": false,
+        "feasible_count": 271,
+        "minimizer_count": 19,
+        "minimum_value": "0",
+        "objective": "curvature_penalty",
+        "sample_minimizers": [
+          [
+            "-9/5",
+            "0",
+            "9/5"
+          ],
+          [
+            "-8/5",
+            "0",
+            "8/5"
+          ],
+          [
+            "-7/5",
+            "0",
+            "7/5"
+          ],
+          [
+            "-6/5",
+            "0",
+            "6/5"
+          ],
+          [
+            "-1",
+            "0",
+            "1"
+          ],
+          [
+            "-4/5",
+            "0",
+            "4/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      },
+      {
+        "center_values_at_minimum": [
+          "1/5",
+          "2/5"
+        ],
+        "constraint": "sum=1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 3,
+        "minimum_value": "9/25",
+        "objective": "quadratic_norm",
+        "sample_minimizers": [
+          [
+            "1/5",
+            "2/5",
+            "2/5"
+          ],
+          [
+            "2/5",
+            "1/5",
+            "2/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "1/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      },
+      {
+        "center_values_at_minimum": [
+          "2/5"
+        ],
+        "constraint": "sum=1",
+        "derives_center_9_over_5": false,
+        "feasible_count": 246,
+        "minimizer_count": 2,
+        "minimum_value": "1/25",
+        "objective": "smoothness",
+        "sample_minimizers": [
+          [
+            "1/5",
+            "2/5",
+            "2/5"
+          ],
+          [
+            "2/5",
+            "2/5",
+            "1/5"
+          ]
+        ],
+        "unique_minimizer": false,
+        "unique_minimizer_center": null
+      }
+    ],
+    "stencil_count": 6859,
+    "unique_minimizer_candidate_count": 32
+  }
+}
