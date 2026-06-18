@@ -3147,3 +3147,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2860/S1810 compression-tail multiplicative scale-law no-eta-source audit
 
 `P2860/S1810` tests a structural pre-profile candidate for damping/compression: multiplicative tail scale covariance `T(ab)=T(a)T(b)` for `T(d)=C(d)-1`.  The strict tail passes exactly on all audited positive `Z12` product pairs with `ab<=11`, and nonzero multiplicativity algebraically constrains `beta=1`.  But the law is eta-blind: sampled non-strict rational exponents satisfy the same scale law, so `eta=9/5` is not selected.  No eta source, target-independent beta/unit source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2861/S1811 log-scale affine variational eta-blind no-source audit
+
+`P2861/S1811` tests the natural variational upgrade after `P2860`: require `y=log(T(d))` to be affine/harmonic in the scale coordinate `x=log(d)`, equivalently minimize squared affine-interpolation residuals across positive `Z12` distance triples.  The strict tail has zero action, but so do sampled non-strict `eta` values and sampled positive `beta` normalizations.  Thus log-scale variational consistency is eta- and unit-blind; it does not source `eta=9/5`, target-independent `beta=1`, a strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2862/S1812 log-scale Dirichlet boundary eta-recovery no-source audit
+
+`P2862/S1812` adds Dirichlet endpoint data to the log-scale affine variational equation after `P2861`.  The strict endpoints recover `eta=9/5` and `beta=1`, but this is conditional inverse recovery: the right endpoint value `log(11^(9/5))` already contains the strict exponent, and alternative endpoint values recover alternative exponents.  Endpoint fitting does not source the boundary datum, an eta law, a target-independent beta unit, a strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2863/S1813 Dirichlet boundary-datum source-class no-go audit
+
+`P2863/S1813` audits source classes for the `P2862` right Dirichlet datum `log(11^(9/5))=(9/5)log(11)`.  Pure `Z12`-smooth rational coefficients with denominator support `{2,3}` and bounded integer local log-moments over `d=2..11` cannot produce the required denominator-prime-5 coefficient on `log(11)`.  Prime-5 extension represents the datum exactly only by importing the missing source.  No boundary source law, eta source, target-independent beta unit, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2864/S1814 Aut(Z12)-invariant nonlocal boundary localization no-go audit
+
+`P2864/S1814` tests the nonlocal localization route left after `P2863`: Aut(`Z12`)-invariant log-localization weights over nonzero residue/distance orbits.  The unit orbit `{1,5,7,11}` ties coefficients of `log(5)`, `log(7)`, and `log(11)`, while the target boundary datum requires only `(9/5)log(11)`.  The exact prime-exponent linear system is inconsistent.  A singleton `d=11` localizer represents the target only by importing a selector/localizer and the prime-5 coefficient.  No boundary source law, eta source, selector closure, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2865/S1815 singleton localizer/coefficient product-obligation no-go audit
+
+`P2865/S1815` enumerates all singleton residue/distance localizers `d=1..11` after the `P2864` Aut-invariant localization no-go.  Exact prime-exponent matching of `c*log(d)` to `(9/5)log(11)` has a unique support: `d=11` with coefficient `c=9/5`.  Thus the singleton escape hatch requires two new strict inputs at once, a non-premise `d=11` localizer and a prime-5 coefficient law.  Providing either side alone does not source the boundary datum, eta, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.

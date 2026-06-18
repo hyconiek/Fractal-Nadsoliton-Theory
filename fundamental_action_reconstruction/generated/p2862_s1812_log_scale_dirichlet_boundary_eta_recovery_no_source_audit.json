@@ -1,0 +1,278 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_log_scale_dirichlet_boundary_eta_recovery_no_source_audit": true,
+    "exports_boundary_source_law": false,
+    "exports_eta_source_law": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "alternative_endpoint_data_select_other_eta_values": true,
+      "dirichlet_solution_reconstructs_supplied_profile": true,
+      "p2861_rechecked": true,
+      "strict_dirichlet_data_recovers_beta": true,
+      "strict_dirichlet_data_recovers_eta": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "target_independent_beta_unit_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay endpoint fitting, strict tail boundary values, or Dirichlet recovery as eta sourcehood.  The next proof-grade move must source the boundary datum itself via a unit-bearing coupling/localization theorem, introduce a genuine exponent-fixing source term, or pivot to a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2862 shows that Dirichlet boundary data can recover eta only conditionally.  The strict right endpoint log(11^(9/5)) already imports eta=9/5, and alternative endpoint data recover alternative eta values.  Thus boundary recovery is inverse fitting, not an eta source law or unit-bearing coupling/localization theorem."
+  },
+  "input_hashes": {
+    "P2861": "fdcd1ab7af9042c83e8fefa21beb88b228aa3a24f9fa961488cc29d456c935f6"
+  },
+  "log_scale_dirichlet_boundary_eta_recovery_no_source_audit": {
+    "accepted_candidate_count": 0,
+    "alternative_endpoint_rows": [
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "1/1",
+          "numerator": 1,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 1.0,
+        "requires_prime5": false,
+        "right_endpoint_log_tail": 2.3978952727983707,
+        "right_endpoint_tail_value": 11.000000000000002
+      },
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "6/5",
+          "numerator": 6,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 1.2,
+        "requires_prime5": true,
+        "right_endpoint_log_tail": 2.8774743273580445,
+        "right_endpoint_tail_value": 17.769336928223957
+      },
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "7/5",
+          "numerator": 7,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 1.4,
+        "requires_prime5": true,
+        "right_endpoint_log_tail": 3.357053381917719,
+        "right_endpoint_tail_value": 28.704484988067605
+      },
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "2/1",
+          "numerator": 2,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 2.0,
+        "requires_prime5": false,
+        "right_endpoint_log_tail": 4.795790545596741,
+        "right_endpoint_tail_value": 121.00000000000003
+      },
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 5,
+          "denominator_prime_factors": {
+            "5": 1
+          },
+          "fraction": "12/5",
+          "numerator": 12,
+          "z12_compatible_denominator": false
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 2.4,
+        "requires_prime5": true,
+        "right_endpoint_log_tail": 5.754948654716089,
+        "right_endpoint_tail_value": 315.7493348687436
+      },
+      {
+        "abs_eta_error": 0.0,
+        "imposed_endpoint_eta": {
+          "denominator": 1,
+          "denominator_prime_factors": {},
+          "fraction": "3/1",
+          "numerator": 3,
+          "z12_compatible_denominator": true
+        },
+        "is_strict_eta": false,
+        "recovered_eta": 3.0,
+        "requires_prime5": false,
+        "right_endpoint_log_tail": 7.193685818395112,
+        "right_endpoint_tail_value": 1331.0000000000005
+      }
+    ],
+    "candidate_matrix": [
+      {
+        "candidate": "strict_endpoint_dirichlet_eta_recovery",
+        "exports_boundary_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "strict endpoint data recovers eta=9/5, but the right endpoint value already contains the strict exponent."
+      },
+      {
+        "candidate": "alternative_endpoint_counterfamily",
+        "exports_boundary_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "changing only the endpoint tail value selects different eta values with the same log-affine equation."
+      },
+      {
+        "candidate": "unit_boundary_beta_recovery",
+        "exports_boundary_source_law": false,
+        "exports_eta_source_law": false,
+        "finite_witness_passes": true,
+        "verdict": "beta=1 is recovered from the imposed T(1)=1 boundary, not sourced as a target-independent unit law."
+      }
+    ],
+    "candidate_premise": "log-scale affine variational equation plus Dirichlet boundary data at d=1 and d=11",
+    "dirichlet_solution_rows": [
+      {
+        "abs_reconstruction_residual": 0.0,
+        "d": 1,
+        "log_tail": 0.0,
+        "recovered_beta_d_power_eta": 1.0,
+        "tail_value": 1.0
+      },
+      {
+        "abs_reconstruction_residual": 4.440892098500626e-16,
+        "d": 2,
+        "log_tail": 1.2476649250079015,
+        "recovered_beta_d_power_eta": 3.482202253184496,
+        "tail_value": 3.4822022531844965
+      },
+      {
+        "abs_reconstruction_residual": 1.7763568394002505e-15,
+        "d": 3,
+        "log_tail": 1.9775021196025975,
+        "recovered_beta_d_power_eta": 7.224674055842074,
+        "tail_value": 7.224674055842076
+      },
+      {
+        "abs_reconstruction_residual": 1.7763568394002505e-15,
+        "d": 4,
+        "log_tail": 2.495329850015803,
+        "recovered_beta_d_power_eta": 12.125732532083182,
+        "tail_value": 12.125732532083184
+      },
+      {
+        "abs_reconstruction_residual": 0.0,
+        "d": 5,
+        "log_tail": 2.89698824238138,
+        "recovered_beta_d_power_eta": 18.11949159194238,
+        "tail_value": 18.11949159194238
+      },
+      {
+        "abs_reconstruction_residual": 3.552713678800501e-15,
+        "d": 6,
+        "log_tail": 3.2251670446104987,
+        "recovered_beta_d_power_eta": 25.157776275776843,
+        "tail_value": 25.157776275776847
+      },
+      {
+        "abs_reconstruction_residual": 0.0,
+        "d": 7,
+        "log_tail": 3.5026382682995636,
+        "recovered_beta_d_power_eta": 33.202934756623556,
+        "tail_value": 33.202934756623556
+      },
+      {
+        "abs_reconstruction_residual": 2.1316282072803006e-14,
+        "d": 8,
+        "log_tail": 3.742994775023704,
+        "recovered_beta_d_power_eta": 42.2242531447326,
+        "tail_value": 42.22425314473258
+      },
+      {
+        "abs_reconstruction_residual": 2.1316282072803006e-14,
+        "d": 9,
+        "log_tail": 3.955004239205195,
+        "recovered_beta_d_power_eta": 52.195915213157576,
+        "tail_value": 52.1959152131576
+      },
+      {
+        "abs_reconstruction_residual": 7.105427357601002e-15,
+        "d": 10,
+        "log_tail": 4.144653167389282,
+        "recovered_beta_d_power_eta": 63.0957344480193,
+        "tail_value": 63.09573444801931
+      },
+      {
+        "abs_reconstruction_residual": 2.842170943040401e-14,
+        "d": 11,
+        "log_tail": 4.316211491037067,
+        "recovered_beta_d_power_eta": 74.90431440274529,
+        "tail_value": 74.90431440274531
+      }
+    ],
+    "input_status_rechecked": "P2861_LOG_SCALE_AFFINE_VARIATIONAL_ETA_BLIND_NO_SOURCE_AUDIT_NO_CLOSURE",
+    "left_boundary": {
+      "d": 1,
+      "log_tail": 0.0,
+      "tail_value": 1.0
+    },
+    "max_reconstruction_residual": 2.842170943040401e-14,
+    "non_strict_boundary_eta_count": 6,
+    "proof_certificate": {
+      "circularity_step": "Choosing the right endpoint as log(11^(9/5)) imports eta=9/5 in the boundary datum.",
+      "counterfamily_step": "Alternative endpoint values log(11^eta') recover eta' just as exactly, so the boundary condition must itself be sourced before it can select eta.",
+      "recovery_step": "For log-affine y=A+eta*x, two Dirichlet endpoint values determine A and eta uniquely."
+    },
+    "recovered_beta_from_left_boundary": 1.0,
+    "recovered_eta_from_strict_boundaries": 1.7999999999999998,
+    "right_boundary": {
+      "d": 11,
+      "log_tail": 4.316211491037067,
+      "tail_value": 74.90431440274531
+    },
+    "strict_beta": {
+      "denominator": 1,
+      "denominator_prime_factors": {},
+      "fraction": "1/1",
+      "numerator": 1,
+      "z12_compatible_denominator": true
+    },
+    "strict_eta": {
+      "denominator": 5,
+      "denominator_prime_factors": {
+        "5": 1
+      },
+      "fraction": "9/5",
+      "numerator": 9,
+      "z12_compatible_denominator": false
+    }
+  },
+  "status": "P2862_LOG_SCALE_DIRICHLET_BOUNDARY_ETA_RECOVERY_NO_SOURCE_AUDIT_NO_CLOSURE"
+}

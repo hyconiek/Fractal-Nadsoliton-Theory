@@ -1136,3 +1136,39 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The same scale law is eta-blind: non-strict rational eta samples satisfy it, so `eta=9/5` is not selected or sourced.
 - Do not promote multiplicative scale covariance, beta normalization, profile identifiability, or eta denominator representability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must supply an eta-selecting strict principle, such as a unit-bearing variational/coupling/localization theorem with an exponent-fixing equation; otherwise preserve no-new-live-frontier.
+
+## Current log-scale affine variational eta-blind guardrail (P2861/S1811, 2026-06-18)
+
+- P2861 tests a log-scale affine/harmonic variational candidate for the compression tail after P2860.
+- The strict tail has zero scale-affine action, but non-strict eta samples and positive beta rescalings also have zero action; the condition is eta- and unit-blind.
+- Do not promote log-scale harmonicity, affine residual minimization, beta rescaling invariance, multiplicative scale covariance, or profile identifiability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must add a genuinely eta-selecting source term, boundary condition, unit-bearing coupling/localization theorem, or a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current log-scale Dirichlet boundary eta-recovery guardrail (P2862/S1812, 2026-06-18)
+
+- P2862 tests Dirichlet endpoint data as the next eta-selecting candidate after P2861.
+- The strict endpoints recover `eta=9/5` and `beta=1`, but the right endpoint already imports `log(11^(9/5))`; alternative endpoint data recover alternative eta values.
+- Do not promote endpoint fitting, strict tail boundary values, Dirichlet recovery, log-scale harmonicity, or multiplicative scale covariance to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must source the boundary datum itself through a unit-bearing coupling/localization theorem, introduce a genuine exponent-fixing source term, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current Dirichlet boundary-datum source-class no-go guardrail (P2863/S1813, 2026-06-18)
+
+- P2863 audits source classes for the P2862 right boundary datum `log(11^(9/5))`.
+- Pure `Z12`-smooth coefficients and bounded integer local log-moments cannot produce the required `9/5` coefficient on `log(11)`; prime-5 extension is exact representation but imported premise.
+- Do not promote Dirichlet endpoint data, pure Z12 coefficient scans, integer log moments, prime-5 representability, log-scale harmonicity, or multiplicative covariance to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must source the prime-5/9 numerator boundary law, provide a nonlocal unit-bearing coupling/localization theorem computing the endpoint datum, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current Aut(Z12)-invariant boundary localization no-go guardrail (P2864/S1814, 2026-06-18)
+
+- P2864 tests Aut(`Z12`)-invariant nonlocal log-localization for the P2862/P2863 right boundary datum.
+- The unit orbit `{1,5,7,11}` prevents isolating `log(11)` without also sourcing unwanted `log(5)` and `log(7)` components; the exact prime-exponent linear system is inconsistent.
+- Singleton `d=11` localization represents the target only by importing a selector/localizer and the prime-5 coefficient `9/5`.
+- Do not promote Aut-invariant nonlocal localization, singleton endpoint localization, selector import, prime-5 representability, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must provide a genuine strict selector/localizer source plus the `9/5` coefficient law, a different unit-bearing coupling theorem outside this exhausted orbit-invariant class, or a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current singleton localizer/coefficient product-obligation guardrail (P2865/S1815, 2026-06-18)
+
+- P2865 enumerates all singleton localizers after P2864 and finds a unique exact support: `d=11` with coefficient `9/5`.
+- This is a product obligation, not closure: current artifacts do not export both a strict non-premise `d=11` localizer and a strict prime-5 coefficient law.
+- Do not promote singleton localization, coefficient representability, selector import, prime-5 representability, Dirichlet data, Aut-invariant localization, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export both sides of the product obligation in one strict theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.

@@ -2516,3 +2516,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2860/S1810 multiplicative scale-law `L_total` guard
 
 `P2860/S1810` adds no action term.  Multiplicative tail scale covariance constrains a supplied tail shape but does not provide an eta-selecting unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2861/S1811 log-scale variational `L_total` guard
+
+`P2861/S1811` adds no action term to the strict theory.  A zero auxiliary log-scale affine residual action is a fitted consistency condition on the supplied tail, not a unit-bearing source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2862/S1812 Dirichlet boundary recovery `L_total` guard
+
+`P2862/S1812` adds no strict action term.  Dirichlet endpoint recovery fixes the log-affine fit only after importing endpoint tail values; it is not a unit-bearing boundary/source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2863/S1813 boundary-datum source-class `L_total` guard
+
+`P2863/S1813` adds no strict action term.  Scans over `Z12`-smooth boundary coefficients and integer local log-moments fail to source the endpoint datum; prime-5 representation is imported capacity, not a unit-bearing boundary/source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2864/S1814 Aut-invariant localization `L_total` guard
+
+`P2864/S1814` adds no strict action term.  Aut-invariant nonlocal log-localization cannot source the endpoint datum, and singleton localization imports a selector plus prime-5 coefficient; neither provides a unit-bearing boundary/source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2865/S1815 singleton product-obligation `L_total` guard
+
+`P2865/S1815` adds no strict action term.  The exact singleton product obligation identifies missing premises rather than supplying a unit-bearing boundary/source density, coupling coefficient, localization/pullback, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
