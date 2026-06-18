@@ -1,0 +1,168 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_typed_K_or_Ltotal_map": false,
+    "accepted_as_typed_domain_codomain_audit": true,
+    "accepted_as_typed_domain_codomain_no_go": true,
+    "facts": {
+      "accepted_typed_K_or_Ltotal_map_exported": false,
+      "at_least_one_candidate_typed_map_tested": true,
+      "p2835_combined_separator_rechecked": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "target_independent_units_available_from_p2836": false
+    }
+  },
+  "combined_graph_functional_typed_domain_codomain_audit": {
+    "candidate_typed_maps": [
+      {
+        "accepted_as_typed_K_or_Ltotal_map": false,
+        "candidate": "graph_to_kernel_scalar_control",
+        "missing_premises": [
+          "evaluation_or_pullback_map",
+          "target_independent_units_or_scale",
+          "locality_or_covariance_rule",
+          "variational_variable_identification",
+          "coupling_coefficient_rule"
+        ],
+        "obstruction": "No exported map turns a finite graph invariant into a function of distance d or into a K(d) parameter with units.",
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "evaluation_or_pullback_map": false,
+          "locality_or_covariance_rule": false,
+          "source_domain_object": true,
+          "target_codomain_object": true,
+          "target_independent_units_or_scale": false,
+          "variational_variable_identification": false
+        },
+        "proposed_type": "F_combined: Graph_16,4 -> parameter/control for K(d)",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_typed_K_or_Ltotal_map": false,
+        "candidate": "graph_to_lagrangian_density_term",
+        "missing_premises": [
+          "evaluation_or_pullback_map",
+          "target_independent_units_or_scale",
+          "locality_or_covariance_rule",
+          "variational_variable_identification",
+          "coupling_coefficient_rule"
+        ],
+        "obstruction": "No exported pullback embeds the finite graph carrier into spacetime/local field variables x, fields, or metric data.",
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "evaluation_or_pullback_map": false,
+          "locality_or_covariance_rule": false,
+          "source_domain_object": true,
+          "target_codomain_object": true,
+          "target_independent_units_or_scale": false,
+          "variational_variable_identification": false
+        },
+        "proposed_type": "F_combined: Graph_16,4 -> local density contribution L_graph(x)",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_typed_K_or_Ltotal_map": false,
+        "candidate": "graph_to_source_density",
+        "missing_premises": [
+          "evaluation_or_pullback_map",
+          "target_independent_units_or_scale",
+          "locality_or_covariance_rule",
+          "variational_variable_identification",
+          "coupling_coefficient_rule"
+        ],
+        "obstruction": "The carrier has no exported localization map assigning graph rows to x-dependent source support.",
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "evaluation_or_pullback_map": false,
+          "locality_or_covariance_rule": false,
+          "source_domain_object": true,
+          "target_codomain_object": true,
+          "target_independent_units_or_scale": false,
+          "variational_variable_identification": false
+        },
+        "proposed_type": "F_combined: Graph_16,4 -> J(x) or source density",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_typed_K_or_Ltotal_map": false,
+        "candidate": "graph_to_dimensionless_coefficient",
+        "missing_premises": [
+          "target_independent_units_or_scale",
+          "locality_or_covariance_rule",
+          "variational_variable_identification",
+          "coupling_coefficient_rule"
+        ],
+        "obstruction": "A dimensionless coefficient label is typable as finite data, but P2836 leaves its scale free and no coupling law attaches it to K or L_total.",
+        "premises": {
+          "coupling_coefficient_rule": false,
+          "evaluation_or_pullback_map": true,
+          "locality_or_covariance_rule": false,
+          "source_domain_object": true,
+          "target_codomain_object": true,
+          "target_independent_units_or_scale": false,
+          "variational_variable_identification": false
+        },
+        "proposed_type": "F_combined: Graph_16,4 -> dimensionless coefficient label",
+        "satisfied_premise_count": 3
+      }
+    ],
+    "combined_separator_rechecked": {
+      "combined_class_count": 16828,
+      "combined_collision_class_count": 0,
+      "p2834_patch_graph_count": 138
+    },
+    "input_statuses_rechecked": {
+      "P2835": "P2835_COMBINED_FINITE_SEPARATOR_THEOREM_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE",
+      "P2836": "P2836_UNITS_NORMALIZATION_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE"
+    },
+    "required_typed_premises": [
+      "source_domain_object",
+      "target_codomain_object",
+      "evaluation_or_pullback_map",
+      "target_independent_units_or_scale",
+      "locality_or_covariance_rule",
+      "variational_variable_identification",
+      "coupling_coefficient_rule"
+    ],
+    "typed_obstruction_summary": {
+      "accepted_typed_map_count": 0,
+      "accepted_typed_maps": [],
+      "blocker_histogram": {
+        "coupling_coefficient_rule": 4,
+        "evaluation_or_pullback_map": 3,
+        "locality_or_covariance_rule": 4,
+        "source_domain_object": 0,
+        "target_codomain_object": 0,
+        "target_independent_units_or_scale": 4,
+        "variational_variable_identification": 4
+      },
+      "candidate_count": 4,
+      "common_hard_blockers": [
+        "target_independent_units_or_scale",
+        "locality_or_covariance_rule",
+        "variational_variable_identification",
+        "coupling_coefficient_rule"
+      ]
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "proved_variational_derivative_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_K_or_Ltotal_map_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay graph separation, units averaging, or generic typed-map names.  The next admissible proof-grade move should attack exactly one remaining premise: a formal variational derivative theorem for the finite graph functional, or an explicit evaluation/pullback/localization map into field variables.  If neither is exported, preserve the P2831-P2837 finite-witness/no-units/no-typed-coupling boundary and pivot away from graph-source promotion.",
+    "reason": "P2837 attacks exactly one remaining theorem obligation: typed domain/codomain into K or L_total.  Four candidate typed maps are audited.  None satisfies all required premises.  The strongest finite option is only a dimensionless coefficient label; P2836 leaves its scale free, and no current artifact exports an evaluation/pullback, locality/covariance rule, variational variable identification, or unit-bearing coupling law into K or L_total."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2835": "14f2ed51a35a5546a82f6e8058f3cdb9a4c93d0a97badd16c6851c3664ff0b9d",
+    "P2836": "314854e6796e29f141235ad7fb77de35995c60d24ae4c63b9e1575636e8bdd0a"
+  },
+  "status": "P2837_TYPED_DOMAIN_CODOMAIN_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE"
+}

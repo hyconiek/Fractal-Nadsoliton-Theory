@@ -3035,3 +3035,43 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2832/S1782 common-neighbor cycle source formula audit
 
 `P2832/S1782` tests one genuinely non-label graph-source formula after P2831: `Q_cyc(G)=(triangles, 4-cycles, common-neighbor histogram)`, with dimensionless normalization available on the fixed 16-node 4-regular carrier.  The finite computation yields only `344` classes, with `272` residual collision classes covering `16,756` graphs and max class size `788`; it therefore does not separate the P2830 carrier and still exports no variational derivative or typed graph-to-`K`/`L_total` coupling theorem.  No strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2833/S1783 edge-toggle response polynomial audit
+
+`P2833/S1783` tests a higher-order non-label finite variational-response candidate: `Q_toggle(G)=multiset_{i<j}(1_{ij in E}, |N(i)∩N(j)|, #{length-3 paths i-a-b-j})`, the exact triangle/4-cycle edge-toggle response polynomial on the fixed `16`-node carrier.  It yields `16,757` classes on `16,828` graphs, leaving `67` residual collision classes covering `138` graphs with max class size `3`.  Because it still does not separate the full carrier and exports no proved variational derivative into `K`/`L_total` or typed graph-to-`K`/`L_total` coupling theorem, no strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2834/S1784 residual second-variation two-edge-toggle audit
+
+`P2834/S1784` executes the residual-only refinement requested by P2833: on the `67` P2833 residual edge-toggle classes covering `138` graphs, it computes `Q_second(G)=multiset` of two-edge-toggle interaction rows `(shared_vertices, sorted single-edge response signatures, Δ² triangles, Δ² 4-cycles)`.  The residual set refines to `138` singleton classes with zero residual collisions and zero defect.  This is a finite residual witness only: no graph units/normalization theorem, variational derivative into `K`/`L_total`, typed graph-to-`K`/`L_total` coupling theorem, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2835/S1785 combined finite separator theorem obligation audit
+
+`P2835/S1785` composes the P2833 edge-toggle first-variation witness with the P2834 residual second-variation patch.  The combined finite key separates the full `16,828`-graph carrier into `16,828` classes with zero collisions, using exactly `138` P2834 residual patches.  This closes the current finite-separator question but not the theorem-level source-law question: target-independent units/normalization, typed domain/codomain into `K`/`L_total`, a proved variational derivative into `K`/`L_total`, and a coupling source law with units/coefficient remain missing.  No strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2836/S1786 combined graph functional units normalization audit
+
+`P2836/S1786` attacks exactly one P2835 missing theorem obligation: target-independent units/normalization.  Exact finite dimensionless combinatorial normalizations exist on the fixed `16`-node `4`-regular carrier (`n=16`, `|E|=32`, unordered pairs `120`, two-edge-toggle pairs `7140`, carrier count `16,828`, residual patch count `138`), but they do not export physical units, a canonical positive scale-orbit quotient, or a coupling coefficient with units.  Positive rescaling preserves finite separation, so no strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2837/S1787 combined graph functional typed domain codomain audit
+
+`P2837/S1787` attacks exactly one P2835/P2836 missing theorem obligation: a typed domain/codomain map into `K` or `L_total`.  Four candidate maps are audited (`graph -> K(d)` control, `graph -> L_graph(x)` density, `graph -> J(x)` source density, and `graph -> dimensionless coefficient`).  None satisfies all premises: the finite graph domain is available, but current artifacts do not export the needed evaluation/pullback/localization map, target-independent units, locality/covariance rule, variational variable identification, or unit-bearing coupling coefficient.  No strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2838/S1788 combined graph functional variational derivative obstruction audit
+
+`P2838/S1788` attacks exactly one remaining theorem premise: a formal variational derivative for the combined graph functional.  Finite graph differences exist on `120` adjacency-bit variables (`120` first-difference slots and `7140` second-difference slots per graph), but candidate routes to `δF/δφ(x)`, `δF/δg_{μν}(x)`, `δF/δK(d)`, or an adjacency-bit gradient do not export an Euler-Lagrange/functional derivative into `K` or `L_total`.  Missing premises remain localization/pullback from graph bits to fields, action-density embedding, boundary/integration-by-parts rules, units/coupling, and graph-bit-to-`K`/`L_total` chain rules.  No strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2839/S1789 graph-bit localization map obstruction audit
+
+`P2839/S1789` attacks exactly one remaining P2838 premise: an evaluation/pullback/localization map from graph bits to field variables.  The finite label-gauge inventory has `16` vertices, `120` edge bits, and `16!` possible labelings; no canonical vertex-coordinate source is exported.  Four localization candidates are audited (`label index -> fixed points`, edge-orbit bins, graphon step function, and spectral embedding), and none satisfies all premises.  Label-index and graphon maps depend on arbitrary ordering, orbit bins lack field support, and spectral embeddings lack strict sign/degeneracy handling, units, and pullback/coupling rules.  No strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2840/S1790 post graph-source state-map reconciliation certificate
+
+`P2840/S1790` reconciles the post-P2835 graph-source state map.  The combined finite separator remains a positive finite witness, but units/normalization, typed domain/codomain, formal variational derivative, graph-bit localization/pullback, and unit-bearing coupling source-law rows remain bounded no-go or not exported.  Adjacent selector, bridge/role-transfer, `L_total`/ToE, direct-route, and Lagrangian/EOM replay lanes receive no new strict object.  This emits a no-new-live-frontier certificate for the current graph-source lane; no strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2841/S1791 post-P2840 broad state-map intake gate
+
+`P2841/S1791` applies the post-P2840 intake gate across the broad state map.  The graph-source lane is closed by P2840, and selector/`QW-2191`, bridge/role-transfer, direct-route residual, Lagrangian/EOM reverse closure, lower-boundary recursion, P2680 source atoms, and `L_total`/ToE promotion lanes receive no new strict typed object, source theorem, blocker-cut, provider class, or coupling/localization theorem.  This emits a broad no-new-live-frontier certificate on current artifacts; no strict graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.
+
+## P2842/S1792 exchangeable edge-pair measure localization candidate audit
+
+`P2842/S1792` introduces exactly one candidate after P2841: the `S_16`-exchangeable edge-pair probability measure on the fixed `16`-node `4`-regular carrier.  It is label-gauge invariant and finite, with edge density `32/120 = 4/15`, but every decoded graph has the same edge count `32`; therefore the measure is constant on the full `16,828`-graph carrier, does not refine the combined witness, and exports no field/spacetime support or coupling/variational chain rule.  No strict localization object, graph-source law, role-bearing `L_total`, bridge closure, role transfer, selector closure, or ToE closure follows.

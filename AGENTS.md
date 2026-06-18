@@ -950,3 +950,63 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P2832 tests one non-label candidate graph-source formula after P2831: exact triangle count, 4-cycle count, and common-neighbor histogram, dimensionlessly normalized on the fixed `16`-node `4`-regular carrier.
 - The formula yields only `344` classes, with `272` residual collision classes covering `16,756` graphs and max class size `788`; it does not separate the P2830 carrier and exports no variational derivative or typed graph-to-`K`/`L_total` coupling theorem.
 - Do not promote low-order common-neighbor/cycle profiles to `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible source-law move must add one higher-order non-label formula with a proved variational derivative into `K` or `L_total`, or pivot away from graph-source coupling.
+
+## Current edge-toggle response polynomial guardrail (P2833/S1783, 2026-06-17)
+
+- P2833 tests one higher-order non-label candidate after P2832: the exact edge-toggle response polynomial `multiset_{i<j}(1_{ij in E}, |N(i)∩N(j)|, #{length-3 paths i-a-b-j})` on the full `16,828`-graph carrier.
+- The polynomial is a real finite variational-response witness and refines the carrier to `16,757` classes, but it leaves `67` residual collision classes covering `138` graphs; it also exports no proved variational derivative into `K`/`L_total` and no typed graph-to-`K`/`L_total` coupling theorem.
+- Do not promote P2833 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move in this lane must be a residual-only non-label second-variation/two-edge-toggle refinement audit with stop-on-first-residual and no selector/bridge/role-transfer import.
+
+## Current residual second-variation two-edge-toggle guardrail (P2834/S1784, 2026-06-17)
+
+- P2834 performs the residual-only audit requested by P2833: it computes a non-label two-edge-toggle second-variation profile on the `67` P2833 residual classes / `138` graphs.
+- The profile separates those residuals into `138` singleton classes with zero residual collisions and zero defect; this is accepted only as a finite residual witness.
+- Do not promote P2834 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  The next admissible move is a theorem-obligation audit for one typed graph-source functional with units/normalization and an explicit variational derivative into `K` or `L_total`, not more separation replay.
+
+## Current combined finite separator theorem-obligation guardrail (P2835/S1785, 2026-06-17)
+
+- P2835 composes the P2833 edge-toggle first-variation witness with the P2834 residual second-variation patch, separating the full `16,828`-graph carrier into `16,828` combined classes with zero collisions and exactly `138` patched residual graphs.
+- This is accepted only as a combined finite separator.  It does not export target-independent units/normalization, typed domain/codomain into `K`/`L_total`, a proved variational derivative, or a coupling source law with units/coefficient.
+- Do not promote P2835 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  The next admissible move must attack exactly one missing theorem obligation, preferably units/normalization, or preserve the finite-separator/no-coupling boundary.
+
+## Current units-normalization obligation guardrail (P2836/S1786, 2026-06-17)
+
+- P2836 attacks one P2835 missing theorem obligation: target-independent units/normalization for the combined P2833/P2834 graph functional.
+- Finite dimensionless carrier normalizations are available, but current artifacts do not export physical units, a canonical positive scale-orbit quotient, or a unit-bearing coupling coefficient into `K`/`L_total`; positive rescaling leaves finite separation invariant.
+- Do not promote P2836 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must attack exactly one remaining theorem obligation, such as typed domain/codomain or a formal variational derivative theorem, or preserve the no-coupling boundary.
+
+## Current typed domain-codomain obligation guardrail (P2837/S1787, 2026-06-17)
+
+- P2837 attacks one remaining P2835/P2836 theorem obligation: a typed domain/codomain map from the combined P2833/P2834 graph functional into `K` or `L_total`.
+- Four candidate maps are audited and all fail at least one required premise; current artifacts do not export the needed evaluation/pullback/localization, target-independent units, locality/covariance, variational-variable identification, or unit-bearing coupling rule.
+- Do not promote P2837 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must attack exactly one remaining premise, such as a formal variational derivative theorem or explicit localization map, or preserve the no-typed-coupling boundary.
+
+## Current variational-derivative obstruction guardrail (P2838/S1788, 2026-06-17)
+
+- P2838 attacks one remaining premise after P2837: a formal variational derivative theorem for the combined graph functional.
+- Finite graph differences on `120` adjacency bits exist, but no candidate route exports an Euler-Lagrange/functional derivative into `K` or `L_total`; localization/pullback, action-density embedding, boundary rules, units/coupling, and chain rules remain missing.
+- Do not promote P2838 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must attack the explicit evaluation/pullback/localization map from graph bits to field variables, or preserve the no-variational-coupling boundary.
+
+## Current graph-bit localization map obstruction guardrail (P2839/S1789, 2026-06-17)
+
+- P2839 attacks one remaining P2838 premise: an evaluation/pullback/localization map from graph bits to field variables.
+- Four localization candidates are audited and all fail: current artifacts do not export a canonical vertex-coordinate source, field support, pullback formula, locality/covariance rule, units/measure, or variational chain-rule compatibility.
+- Do not promote P2839 to a strict graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  Unless a new strict localization object or coupling theorem is supplied, the next move should be a post-graph-source state-map/no-new-live-frontier reconciliation for this lane.
+
+## Current post graph-source state-map guardrail (P2840/S1790, 2026-06-17)
+
+- P2840 reconciles P2835-P2839: finite graph-source separation is closed as a positive finite witness, while units/normalization, typed domain/codomain, formal variational derivative, localization/pullback, and unit-bearing coupling source-law rows remain bounded no-go/not exported.
+- Adjacent selector, bridge/role-transfer, `L_total`/ToE, direct-route, and Lagrangian/EOM replay lanes receive no new strict object from the graph-source audits.
+- Do not continue graph-source replay or promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move must introduce a genuinely new strict localization object, coupling theorem, graph-to-field source law, or a new typed object outside the closed graph-source lane; otherwise preserve the no-new-live-frontier certificate.
+
+## Current post-P2840 broad state-map intake guardrail (P2841/S1791, 2026-06-17)
+
+- P2841 applies the broad intake gate after P2840: graph-source, selector/`QW-2191`, bridge/role-transfer, direct-route residual, Lagrangian/EOM reverse closure, lower-boundary recursion, P2680 source atoms, and `L_total`/ToE promotion lanes receive no new strict typed object/source theorem/blocker-cut/provider class/coupling theorem.
+- Do not replay graph-source or other closed lanes as a primary strategy, and do not promote `L_total`, bridge closure, role transfer, selector closure, or ToE closure from P2833-P2841.
+- A next admissible move must introduce exactly one genuinely new strict typed object, source theorem, blocker-cut, provider class, or coupling/localization theorem outside the closed lanes; otherwise preserve the broad no-new-live-frontier certificate.
+
+## Current exchangeable edge-pair measure guardrail (P2842/S1792, 2026-06-18)
+
+- P2842 tests exactly one new candidate after P2841: the `S_16`-exchangeable edge-pair probability measure on the fixed `16`-node `4`-regular carrier.
+- The measure is label-gauge invariant and finite, but all decoded graphs have edge count `32`, so it is constant on the full `16,828`-graph carrier; it does not refine the combined graph witness and exports no field support or coupling/variational chain rule.
+- Do not promote P2842 to a strict localization object, graph-source law, `L_total`, bridge closure, role transfer, selector closure, or ToE closure.  A next admissible move requires a genuinely nonconstant, label-safe strict localization object with field support and a coupling/chain-rule theorem, or preservation of the no-live-frontier boundary.

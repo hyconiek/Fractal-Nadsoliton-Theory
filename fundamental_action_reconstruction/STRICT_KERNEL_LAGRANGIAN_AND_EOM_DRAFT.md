@@ -2404,3 +2404,43 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2832/S1782 common-neighbor cycle Ltotal guard
 
 `P2832/S1782` adds no variational term to `L_total`.  The tested low-order common-neighbor/cycle formula is non-label and dimensionless on the fixed carrier, but it leaves `16,756` collision graphs and has no Euler-Lagrange derivative or typed graph-to-`K`/`L_total` coupling theorem.
+
+## P2833/S1783 edge-toggle response Ltotal guard
+
+`P2833/S1783` adds no term to `L_total`.  The edge-toggle response polynomial is a sharper non-label finite variational-response witness than P2832, but it leaves `138` residual collision graphs in `67` classes and lacks an Euler-Lagrange derivative/coupling theorem into `K` or `L_total`.
+
+## P2834/S1784 residual second-variation Ltotal guard
+
+`P2834/S1784` adds no term to `L_total`.  The two-edge-toggle second-variation profile separates the `138` P2833 residual graphs, but remains a finite graph witness without a source-law theorem, units, Euler-Lagrange derivative, or typed coupling into `K`/`L_total`.
+
+## P2835/S1785 combined separator Ltotal guard
+
+`P2835/S1785` adds no term to `L_total`.  The P2833/P2834 combined finite graph witness is injective on the full decoded carrier, but it remains outside `L_total` until units/normalization, typed coupling, and a proved Euler-Lagrange/variational derivative into `K` or `L_total` are exported.
+
+## P2836/S1786 units normalization Ltotal guard
+
+`P2836/S1786` adds no term to `L_total`.  Dimensionless graph averaging constants are available, but no target-independent physical units, canonical scale representative, or unit-bearing coupling coefficient maps the combined P2833/P2834 graph functional into `K` or `L_total`.
+
+## P2837/S1787 typed domain codomain Ltotal guard
+
+`P2837/S1787` adds no term to `L_total`.  Candidate maps from the combined graph functional into `K`, a local density, a source density, or a coefficient remain blocked by missing pullback/localization, units, locality/covariance, variational-variable, and coupling premises.
+
+## P2838/S1788 variational derivative Ltotal guard
+
+`P2838/S1788` adds no term and no Euler-Lagrange equation to `L_total`.  It confirms finite graph difference operators for the combined witness, but no localization/pullback, action-density embedding, boundary rule, units/coupling, or chain rule turns them into a formal variational derivative into `K` or `L_total`.
+
+## P2839/S1789 localization map Ltotal guard
+
+`P2839/S1789` adds no term and no localization map to `L_total`.  Candidate graph-bit-to-field localization routes remain blocked by label gauge, missing field support, missing pullback formula, missing locality/covariance, missing units/measure, and missing variational chain-rule compatibility.
+
+## P2840/S1790 post graph-source state-map Ltotal guard
+
+`P2840/S1790` adds no term to `L_total`.  It reconciles P2835-P2839 and finds no new live graph-source frontier: finite separation is positive, but units, typed coupling, variational derivative, localization, and unit-bearing source law remain blocked.
+
+## P2841/S1791 broad state-map intake Ltotal guard
+
+`P2841/S1791` adds no term to `L_total`.  It confirms that after P2840 no broad state-map lane receives a new strict typed object, coupling theorem, localization theorem, variational source, or provider class sufficient to reopen `L_total`/ToE promotion.
+
+## P2842/S1792 exchangeable edge measure Ltotal guard
+
+`P2842/S1792` adds no term to `L_total`.  The exchangeable edge-pair measure is label-safe but carrier-constant on 16-node 4-regular graphs and lacks field support, coupling, and variational chain-rule data.

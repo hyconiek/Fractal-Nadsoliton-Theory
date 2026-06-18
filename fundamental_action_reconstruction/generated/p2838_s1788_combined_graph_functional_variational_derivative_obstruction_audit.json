@@ -1,0 +1,178 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_finite_difference_inventory": true,
+    "accepted_as_formal_variational_derivative": false,
+    "accepted_as_variational_derivative_no_go": true,
+    "facts": {
+      "accepted_formal_variational_derivative_exported": false,
+      "finite_graph_difference_operators_available": true,
+      "p2835_combined_separator_rechecked": true,
+      "selector_bridge_or_role_transfer_imported": false,
+      "typed_domain_codomain_available_from_p2837": false
+    }
+  },
+  "combined_graph_functional_variational_derivative_obstruction_audit": {
+    "candidate_variational_derivative_routes": [
+      {
+        "accepted_as_formal_variational_derivative": false,
+        "candidate": "adjacency_bit_discrete_gradient",
+        "missing_premises": [
+          "continuous_or_formal_field_variable",
+          "localization_or_pullback_Aij_to_fields",
+          "action_integral_or_density_embedding",
+          "boundary_condition_and_integration_by_parts_rule",
+          "target_independent_units_or_coupling_coefficient",
+          "chain_rule_from_graph_bits_to_K_or_Ltotal"
+        ],
+        "obstruction": "This is a valid finite-difference object, but not an Euler-Lagrange derivative into K or L_total.",
+        "premises": {
+          "action_integral_or_density_embedding": false,
+          "boundary_condition_and_integration_by_parts_rule": false,
+          "chain_rule_from_graph_bits_to_K_or_Ltotal": false,
+          "continuous_or_formal_field_variable": false,
+          "finite_difference_operator_on_graph_bits": true,
+          "localization_or_pullback_Aij_to_fields": false,
+          "target_independent_units_or_coupling_coefficient": false
+        },
+        "proposed_derivative": "ΔF/ΔA_ij on the finite graph hypercube",
+        "satisfied_premise_count": 1
+      },
+      {
+        "accepted_as_formal_variational_derivative": false,
+        "candidate": "field_variation_delta_F_delta_phi",
+        "missing_premises": [
+          "localization_or_pullback_Aij_to_fields",
+          "action_integral_or_density_embedding",
+          "boundary_condition_and_integration_by_parts_rule",
+          "target_independent_units_or_coupling_coefficient",
+          "chain_rule_from_graph_bits_to_K_or_Ltotal"
+        ],
+        "obstruction": "No exported A_ij -> φ(x) pullback or local density turns graph differences into field variations.",
+        "premises": {
+          "action_integral_or_density_embedding": false,
+          "boundary_condition_and_integration_by_parts_rule": false,
+          "chain_rule_from_graph_bits_to_K_or_Ltotal": false,
+          "continuous_or_formal_field_variable": true,
+          "finite_difference_operator_on_graph_bits": true,
+          "localization_or_pullback_Aij_to_fields": false,
+          "target_independent_units_or_coupling_coefficient": false
+        },
+        "proposed_derivative": "δF/δφ(x)",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_formal_variational_derivative": false,
+        "candidate": "metric_variation_delta_F_delta_g",
+        "missing_premises": [
+          "localization_or_pullback_Aij_to_fields",
+          "action_integral_or_density_embedding",
+          "boundary_condition_and_integration_by_parts_rule",
+          "target_independent_units_or_coupling_coefficient",
+          "chain_rule_from_graph_bits_to_K_or_Ltotal"
+        ],
+        "obstruction": "No graph-to-metric embedding or stress-energy variation theorem is exported for the combined witness.",
+        "premises": {
+          "action_integral_or_density_embedding": false,
+          "boundary_condition_and_integration_by_parts_rule": false,
+          "chain_rule_from_graph_bits_to_K_or_Ltotal": false,
+          "continuous_or_formal_field_variable": true,
+          "finite_difference_operator_on_graph_bits": true,
+          "localization_or_pullback_Aij_to_fields": false,
+          "target_independent_units_or_coupling_coefficient": false
+        },
+        "proposed_derivative": "δF/δg_{μν}(x)",
+        "satisfied_premise_count": 2
+      },
+      {
+        "accepted_as_formal_variational_derivative": false,
+        "candidate": "kernel_parameter_variation_delta_F_delta_K",
+        "missing_premises": [
+          "localization_or_pullback_Aij_to_fields",
+          "action_integral_or_density_embedding",
+          "boundary_condition_and_integration_by_parts_rule",
+          "target_independent_units_or_coupling_coefficient",
+          "chain_rule_from_graph_bits_to_K_or_Ltotal"
+        ],
+        "obstruction": "P2837 found no typed map from graph rows into K(d), so a graph-bit-to-kernel chain rule is unavailable.",
+        "premises": {
+          "action_integral_or_density_embedding": false,
+          "boundary_condition_and_integration_by_parts_rule": false,
+          "chain_rule_from_graph_bits_to_K_or_Ltotal": false,
+          "continuous_or_formal_field_variable": true,
+          "finite_difference_operator_on_graph_bits": true,
+          "localization_or_pullback_Aij_to_fields": false,
+          "target_independent_units_or_coupling_coefficient": false
+        },
+        "proposed_derivative": "δF/δK(d) or ∂F/∂kernel-parameter",
+        "satisfied_premise_count": 2
+      }
+    ],
+    "combined_separator_rechecked": {
+      "combined_class_count": 16828,
+      "combined_collision_class_count": 0
+    },
+    "finite_difference_inventory": {
+      "adjacency_bit_variable_count": 120,
+      "finite_difference_layer": "discrete adjacency-bit hypercube",
+      "first_difference_slots_per_graph": 120,
+      "p2833_first_variation_witness_available": true,
+      "p2834_second_variation_witness_available_on_residuals": true,
+      "second_difference_slots_per_graph": 7140
+    },
+    "input_statuses_rechecked": {
+      "P2835": "P2835_COMBINED_FINITE_SEPARATOR_THEOREM_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE",
+      "P2837": "P2837_TYPED_DOMAIN_CODOMAIN_OBLIGATION_NO_GO_NO_COUPLING_NO_CLOSURE"
+    },
+    "required_variational_premises": [
+      "finite_difference_operator_on_graph_bits",
+      "continuous_or_formal_field_variable",
+      "localization_or_pullback_Aij_to_fields",
+      "action_integral_or_density_embedding",
+      "boundary_condition_and_integration_by_parts_rule",
+      "target_independent_units_or_coupling_coefficient",
+      "chain_rule_from_graph_bits_to_K_or_Ltotal"
+    ],
+    "variational_obstruction_summary": {
+      "accepted_formal_variational_derivative_count": 0,
+      "accepted_routes": [],
+      "blocker_histogram": {
+        "action_integral_or_density_embedding": 4,
+        "boundary_condition_and_integration_by_parts_rule": 4,
+        "chain_rule_from_graph_bits_to_K_or_Ltotal": 4,
+        "continuous_or_formal_field_variable": 1,
+        "finite_difference_operator_on_graph_bits": 0,
+        "localization_or_pullback_Aij_to_fields": 4,
+        "target_independent_units_or_coupling_coefficient": 4
+      },
+      "candidate_route_count": 4,
+      "common_hard_blockers": [
+        "localization_or_pullback_Aij_to_fields",
+        "action_integral_or_density_embedding",
+        "boundary_condition_and_integration_by_parts_rule",
+        "target_independent_units_or_coupling_coefficient",
+        "chain_rule_from_graph_bits_to_K_or_Ltotal"
+      ]
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "formal_variational_derivative_exported": false,
+      "role_bearing_ltotal_promoted": false,
+      "role_transfer_started": false,
+      "selector_closure_exported": false,
+      "strict_graph_source_law_exported": false,
+      "toe_closure_exported": false,
+      "typed_K_or_Ltotal_map_exported": false,
+      "typed_coupling_to_K_or_Ltotal_exported": false
+    },
+    "next_honest_step": "Do not replay finite differences as variational calculus.  The next admissible proof-grade move should attack the remaining explicit evaluation/pullback/localization map from graph bits to field variables.  If no such localization map is exported, preserve the P2831-P2838 finite-difference/no-variational-derivative/no-coupling boundary and pivot away from graph-source promotion.",
+    "reason": "P2838 attacks exactly one remaining premise: a formal variational derivative theorem.  Finite graph difference operators exist on 120 adjacency-bit variables, with 120 first-difference and 7140 second-difference slots per graph, but all four derivative routes fail to become Euler-Lagrange/functional derivatives into K or L_total.  Missing chain maps include localization/pullback from A_ij to fields, an action-density embedding, boundary/integration-by-parts rules, units/coupling, and graph-bit-to-K/L_total chain rules."
+  },
+  "input_hashes": {
+    "16_4_4.scd": "160bf01bc0767652bb05c0466a9358628fd5e5053672695309a04e307fe25a88",
+    "P2835": "14f2ed51a35a5546a82f6e8058f3cdb9a4c93d0a97badd16c6851c3664ff0b9d",
+    "P2837": "08924032b98407f1c022cc33be2d1f2dc79e94cf3055af08599504867ed2ef78"
+  },
+  "status": "P2838_VARIATIONAL_DERIVATIVE_OBSTRUCTION_NO_GO_NO_COUPLING_NO_CLOSURE"
+}
