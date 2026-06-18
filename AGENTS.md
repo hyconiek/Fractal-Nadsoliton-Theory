@@ -1193,3 +1193,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The exact orbit-weight system is still inconsistent because the unit orbit `{1,5,7,11}` ties `log(11)` to `log(5)` and `log(7)`, while the target requires only `(9/5)log(11)`.
 - Do not promote prime-5 denominator extension, Aut-invariant orbit weighting, coupled weighted-log functionals, singleton endpoint representation, Dirichlet data, log-scale harmonicity, or pairwise recombination to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must introduce a genuine non-premise strict localizer/selector breaking the unit orbit together with a unit-bearing coefficient law, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current Aut-character idempotent endpoint-localizer no-source guardrail (P2869/S1819, 2026-06-18)
+
+- P2869 tests full Aut(`Z12`)-character Fourier idempotents on the unit orbit `{1,5,7,11}` after the P2868 Aut-invariant obstruction.
+- The exact endpoint projector `delta_11` exists and scales to `(9/5)log(11)`, but it imports a chosen endpoint/polarity projector and `9/20` character coefficients rather than exporting a strict non-premise source law.
+- Do not promote Aut-character idempotent projectors, endpoint/polarity imports, prime-5 scaled coefficients, singleton endpoint representation, Dirichlet data, log-scale harmonicity, Aut-invariant orbit weighting, or pairwise recombination to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a strict non-premise law selecting the character projector/polarity and coupling it with a unit-bearing coefficient theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current intrinsic character-projector selector no-go guardrail (P2870/S1820, 2026-06-18)
+
+- P2870 audits label-free intrinsic selection over the Aut(`Z12`)-character point idempotents after P2869.
+- The V4/GL(2,2) relabeling symmetry and the audited finite intrinsic features tie the nonidentity projectors `5`, `7`, and `11`; exact target matching selects `11` only by reimporting the named boundary target.
+- Do not promote intrinsic character-projector scoring, target-vector matching, Aut-character idempotent projectors, endpoint/polarity imports, prime-5 scaled coefficients, singleton endpoint representation, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a genuinely new strict law breaking the nonidentity V4 relabeling symmetry and a unit-bearing coefficient/coupling theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current exhaustive GL(2,2)-invariant projector-predicate no-go guardrail (P2871/S1821, 2026-06-18)
+
+- P2871 exhausts all `2^4=16` Boolean selector predicates on the Aut(`Z12`)-character point projectors after P2870.
+- GL(2,2)-invariant predicates are only empty, identity-only, nonidentity-all, and all; singleton `{11}` is non-invariant and imports an endpoint label.
+- Do not promote Boolean projector predicates, target singleton predicates, intrinsic character-projector scoring, Aut-character idempotents, endpoint/polarity imports, prime-5 scaled coefficients, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must provide a new strict symmetry-breaking law whose provenance fixes the nonidentity singleton and supplies the unit-bearing coefficient/coupling theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.
+
+## Current cyclic-predecessor endpoint orientation no-source guardrail (P2872/S1822, 2026-06-18)
+
+- P2872 tests the ambient `Z12` cyclic-order predecessor convention `d=-1 mod 12` as a distinct endpoint-localizer candidate after P2871.
+- The predecessor `d=11` exactly represents `(9/5)log(11)`, but reflection swaps predecessor `d=11` with successor `d=1`; selecting predecessor imports an orientation/boundary-arrow convention.
+- Do not promote cyclic predecessor, `d=-1`, clockwise/counterclockwise endpoint conventions, reflection-sensitive adjacency, Boolean projector predicates, Aut-character idempotents, prime-5 scaled coefficients, Dirichlet data, or log-scale harmonicity to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a strict non-premise orientation/boundary-arrow law fixing predecessor over successor and a unit-bearing `9/5` coefficient/coupling theorem, or use a different new typed object; otherwise preserve no-new-live-frontier.

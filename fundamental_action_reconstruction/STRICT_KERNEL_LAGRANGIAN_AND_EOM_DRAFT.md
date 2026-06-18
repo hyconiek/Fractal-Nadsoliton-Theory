@@ -2548,3 +2548,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2868/S1818 prime-5 Aut-invariant weighted-log `L_total` guard
 
 `P2868/S1818` adds no strict action term.  Allowing denominator prime `5` inside an Aut-invariant weighted-log functional does not provide a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2869/S1819 Aut-character idempotent `L_total` guard
+
+`P2869/S1819` adds no strict action term.  The exact Aut-character endpoint projector is a representational idempotent, not an exported unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2870/S1820 intrinsic character-projector selector `L_total` guard
+
+`P2870/S1820` adds no strict action term.  Intrinsic character-projector scoring does not export a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2871/S1821 exhaustive projector-predicate `L_total` guard
+
+`P2871/S1821` adds no strict action term.  Exhaustive Boolean projector predicates do not export a unit-bearing boundary/source density, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2872/S1822 cyclic predecessor `L_total` guard
+
+`P2872/S1822` adds no strict action term.  The cyclic predecessor convention does not export a unit-bearing boundary/source density, orientation law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
