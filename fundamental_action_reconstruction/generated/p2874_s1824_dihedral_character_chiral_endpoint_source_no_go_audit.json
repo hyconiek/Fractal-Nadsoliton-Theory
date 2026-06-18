@@ -1,0 +1,172 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_chiral_endpoint_source": false,
+    "exports_boundary_source_law": false,
+    "exports_chiral_endpoint_11_source_law": false,
+    "exports_orientation_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "all_four_real_d12_characters_enumerated": true,
+      "alternating_character_is_global_parity_not_endpoint_11_localization": true,
+      "no_character_field_has_singleton_11_support": true,
+      "p2873_rechecked": true,
+      "reflection_even_characters_are_global_not_singleton": true,
+      "reflection_odd_characters_have_zero_endpoint_field": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "chiral_endpoint_11_source_law_exported": false,
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "orientation_source_law_exported": false,
+      "role_transfer_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay D12 one-dimensional character/chiral fields, reflection-odd sign characters, or alternating parity fields as endpoint-11 sourcehood.  A next proof-grade move must provide a higher-structure strict source with a nonzero localized signed value at 11 and a unit-bearing 9/5 coupling theorem, or pivot to a genuinely different typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2874 enumerates all real one-dimensional D12 chiral/character source laws.  Reflection-odd characters vanish on endpoint fields, while reflection-even characters are global constant/alternating fields.  The alternating field is only a global parity pattern; it does not distinguish 11 from 1 and supplies no singleton localization, non-premise polarity, or unit-bearing 9/5 coupling."
+  },
+  "dihedral_character_chiral_endpoint_source_no_go_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_class": "all real one-dimensional D12 chiral/character laws with endpoint-field equivariance v(g.x)=chi(g)v(x)",
+    "character_count": 4,
+    "character_records": [
+      {
+        "basis_fields": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "character": {
+          "chi_r": 1,
+          "chi_s": 1
+        },
+        "endpoint_field_dimension": 1,
+        "exports_endpoint_11_source": false,
+        "field_kind": "constant",
+        "obstruction": "reflection-even character field is global across all endpoints, not a singleton 11 localizer",
+        "reflection_odd": false,
+        "separates_11_from_1_by_value": false,
+        "singleton_11_support": false,
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "basis_fields": [],
+        "character": {
+          "chi_r": 1,
+          "chi_s": -1
+        },
+        "endpoint_field_dimension": 0,
+        "exports_endpoint_11_source": false,
+        "field_kind": "zero_only_reflection_stabilizer_obstruction",
+        "obstruction": "reflection-odd characters vanish on endpoint fields because endpoint stabilizers contain reflections",
+        "reflection_odd": true,
+        "separates_11_from_1_by_value": false,
+        "singleton_11_support": false,
+        "support": []
+      },
+      {
+        "basis_fields": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "character": {
+          "chi_r": -1,
+          "chi_s": 1
+        },
+        "endpoint_field_dimension": 1,
+        "exports_endpoint_11_source": false,
+        "field_kind": "alternating_rotation_parity",
+        "obstruction": "reflection-even character field is global across all endpoints, not a singleton 11 localizer",
+        "reflection_odd": false,
+        "separates_11_from_1_by_value": false,
+        "singleton_11_support": false,
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "basis_fields": [],
+        "character": {
+          "chi_r": -1,
+          "chi_s": -1
+        },
+        "endpoint_field_dimension": 0,
+        "exports_endpoint_11_source": false,
+        "field_kind": "zero_only_reflection_stabilizer_obstruction",
+        "obstruction": "reflection-odd characters vanish on endpoint fields because endpoint stabilizers contain reflections",
+        "reflection_odd": true,
+        "separates_11_from_1_by_value": false,
+        "singleton_11_support": false,
+        "support": []
+      }
+    ],
+    "input_status_rechecked": "P2873_EXHAUSTIVE_DIHEDRAL_Z12_ENDPOINT_PREDICATE_NO_GO_AUDIT_NO_CLOSURE",
+    "modulus": 12,
+    "proof_certificate": {
+      "character_enumeration_step": "The real one-dimensional characters of D12 are exactly chi(r)=±1 and chi(s)=±1.",
+      "global_field_step": "The chi(s)=+1 fields are constant or alternating across all twelve endpoints, not singleton 11 localizers.",
+      "sourcehood_step": "The alternating field is only a global parity pattern; it does not distinguish 11 from the other odd endpoint 1 and supplies no non-premise endpoint-11 source, polarity choice, or unit-bearing 9/5 coupling theorem.",
+      "stabilizer_step": "Every endpoint has a reflection stabilizer; therefore chi(s)=-1 forces v(endpoint)=0 for all endpoints."
+    }
+  },
+  "input_hashes": {
+    "P2873": "86adf678d05b4c2f007a0d7b785735fc58ddf75839e1fe35361a6c56c22155fc"
+  },
+  "status": "P2874_DIHEDRAL_CHARACTER_CHIRAL_ENDPOINT_SOURCE_NO_GO_AUDIT_NO_CLOSURE"
+}

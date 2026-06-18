@@ -2564,3 +2564,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2872/S1822 cyclic predecessor `L_total` guard
 
 `P2872/S1822` adds no strict action term.  The cyclic predecessor convention does not export a unit-bearing boundary/source density, orientation law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2873/S1823 dihedral endpoint predicate `L_total` guard
+
+`P2873/S1823` adds no strict action term.  Exhaustive dihedral or reflection-only endpoint predicates do not export a unit-bearing boundary/source density, chiral orientation law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2874/S1824 dihedral character `L_total` guard
+
+`P2874/S1824` adds no strict action term.  One-dimensional `D12` chiral/character endpoint fields do not export a localized unit-bearing boundary/source density at `11`, non-premise polarity law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2875/S1825 two-dimensional D12 irrep `L_total` guard
+
+`P2875/S1825` adds no strict action term.  Two-dimensional `D12` irrep endpoint waves and full-DFT `delta_11` representability do not export a localized unit-bearing boundary/source density at `11`, non-premise phase law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2876/S1826 local circulant source operator `L_total` guard
+
+`P2876/S1826` adds no strict action term.  Local circulant stencils and their reflection-symmetric subfamily do not export a localized unit-bearing boundary/source density at `11`, non-premise support/origin law, coupling coefficient, localization/pullback theorem, variational chain rule, nonproxy `L_total`, EOM, or Hamiltonian source.
