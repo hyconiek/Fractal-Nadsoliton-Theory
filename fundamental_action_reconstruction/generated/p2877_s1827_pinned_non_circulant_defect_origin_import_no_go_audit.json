@@ -1,0 +1,243 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_strict_non_circulant_local_endpoint_11_defect_source": false,
+    "exports_boundary_source_law": false,
+    "exports_independent_origin_support_law": false,
+    "exports_orientation_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_9_over_5_coupling_theorem": false,
+    "facts": {
+      "all_radius1_pinned_ternary_defects_enumerated": true,
+      "all_singletons_are_imported_pin_neighborhood_translates": true,
+      "no_independent_origin_law_exported": true,
+      "p2876_rechecked": true,
+      "singleton_11_representable_with_imported_pin_neighborhood": true,
+      "singleton_witnesses_are_uniform_across_pins": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "independent_origin_support_law_exported": false,
+      "ltotal_exported": false,
+      "orientation_source_law_exported": false,
+      "role_transfer_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_9_over_5_coupling_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay pinned non-circulant defects, imported origin pins, center-only delta defects, circulant stencils, Fourier reconstruction, D12 irreps/characters, or endpoint predicates as sourcehood.  A next proof-grade move must provide an independently exported strict origin/support law selecting endpoint 11 plus a unit-bearing 9/5 coefficient theorem, or pivot to a genuinely different typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2877 enumerates all 324 ternary radius-1 pinned non-circulant defect densities.  Singleton endpoint 11 is representable only when an imported pin-neighborhood already names 11; the same six singleton-neighborhood witnesses occur for every output endpoint.  Thus endpoint 11 is not sourced by a strict law, and no unit-bearing 9/5 coupling theorem is exported."
+  },
+  "input_hashes": {
+    "P2876": "d170a6aa9a607e8151bad0c31ca9d42c0f4c9178be87248932c2cab37180a397"
+  },
+  "pinned_non_circulant_defect_origin_import_no_go_audit": {
+    "candidate_class": "ternary radius-1 pinned non-circulant defect densities on Z12",
+    "coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "input_status_rechecked": "P2876_LOCAL_CIRCULANT_SOURCE_OPERATOR_ENDPOINT11_NO_GO_AUDIT_NO_CLOSURE",
+    "modulus": 12,
+    "offsets": [
+      -1,
+      0,
+      1
+    ],
+    "proof_certificate": {
+      "enumeration_step": "All 12*3^3 pinned radius-1 ternary defect densities are enumerated.",
+      "localization_step": "Singleton support at endpoint 11 occurs exactly when an imported pin-neighborhood (pins 0, 10, or 11 with one nonzero offset coefficient) already names endpoint 11.",
+      "orbit_step": "The same six singleton-neighborhood witnesses occur for every output endpoint; translating the imported pin-neighborhood translates singleton support.",
+      "sourcehood_step": "The family represents endpoint 11 only after importing a non-circulant pin/origin plus offset relation that already names 11.  No strict non-premise origin/support law or unit-bearing 9/5 coefficient theorem is exported."
+    },
+    "summary": {
+      "all_singletons_have_one_nonzero_offset_coefficient": true,
+      "candidate_count": 324,
+      "pin_count": 12,
+      "singleton_11_record_count": 6,
+      "singleton_11_records": [
+        {
+          "pin": 0,
+          "stencil": [
+            -1,
+            0,
+            0
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "pin": 0,
+          "stencil": [
+            1,
+            0,
+            0
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "pin": 10,
+          "stencil": [
+            0,
+            0,
+            -1
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "pin": 10,
+          "stencil": [
+            0,
+            0,
+            1
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "pin": 11,
+          "stencil": [
+            0,
+            -1,
+            0
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "pin": 11,
+          "stencil": [
+            0,
+            1,
+            0
+          ],
+          "support": [
+            11
+          ],
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "singleton_count_by_pin": {
+        "0": 6,
+        "1": 6,
+        "10": 6,
+        "11": 6,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 6,
+        "7": 6,
+        "8": 6,
+        "9": 6
+      },
+      "singleton_record_count": 72,
+      "stencil_count_per_pin": 27,
+      "support_size_histogram": {
+        "0": 12,
+        "1": 72,
+        "2": 144,
+        "3": 96
+      }
+    },
+    "target_endpoint": 11
+  },
+  "status": "P2877_PINNED_NON_CIRCULANT_DEFECT_ORIGIN_IMPORT_NO_GO_AUDIT_NO_CLOSURE"
+}

@@ -1249,3 +1249,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - On intrinsic Fourier inputs `k=0..6`, every output is zero or full-support; singleton endpoint `11` appears only if a localized delta/phase seed is imported.
 - Do not promote local circulant stencils, reflection-symmetric local stencils, Fourier-diagonal operator action, two-dimensional `D12` irrep waves, full-DFT delta reconstruction, imported phase-11 coefficients, or earlier endpoint-label imports to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must export a non-circulant strict local defect/source with independently exported origin/support at endpoint `11` and a unit-bearing `9/5` coefficient theorem, or use a genuinely different typed object; otherwise preserve no-new-live-frontier.
+
+## Current pinned non-circulant defect origin-import no-go guardrail (P2877/S1827, 2026-06-18)
+
+- P2877 enumerates all ternary radius-1 pinned non-circulant defect densities on `Z12` after P2876.
+- Singleton endpoint `11` appears only when an imported pin-neighborhood already names `11`; identical singleton-neighborhood witnesses exist for every output endpoint.
+- Do not promote pinned non-circulant defects, imported origin pins, center-only delta defects, circulant stencils, Fourier reconstruction, `D12` irreps/characters, endpoint predicates, endpoint-label imports, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export an independent strict origin/support law selecting endpoint `11` plus a unit-bearing `9/5` coefficient theorem, or use a genuinely different typed object; otherwise preserve no-new-live-frontier.
+
+## Current D12-equivariant pinned-defect origin-law no-go guardrail (P2878/S1828, 2026-06-18)
+
+- P2878 quotients the P2877 pinned radius-1 defect density family by the full `D12` action and applies the stabilizer fixed-point criterion for endpoint selectors.
+- No orbit forces endpoint `11`, and no orbit has a unique fixed endpoint selector; endpoint `11` remains an imported representative/pin/orientation/label choice.
+- Do not promote `D12`-equivariant pinned-defect selectors, imported orbit representatives, origin pins, center-only delta defects, circulant/Fourier constructions, `D12` irreps/characters, endpoint predicates, endpoint-label imports, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a genuinely new non-`D12`-symmetric strict origin/support source with computed coupling to the `9/5` coefficient, or pivot outside the endpoint-localizer/source family; otherwise preserve no-new-live-frontier.
+
+## Current C12 chiral pinned-defect translation-origin no-go guardrail (P2879/S1829, 2026-06-18)
+
+- P2879 tests the orientation-only/chiral relaxation of P2878 by reducing the symmetry from full `D12` to rotations `C12` on the pinned-defect density family.
+- No `C12` orbit forces endpoint `11`, and no orbit has a unique endpoint selector; chiral orientation removes reflection ambiguity but not the translated 12-way origin choice.
+- Do not promote `C12`/chiral pinned-defect selectors, orientation-only symmetry breaking, imported translation origins, `D12`-equivariant selectors, pinned defects, circulant/Fourier constructions, `D12` irreps/characters, endpoint predicates, endpoint-label imports, or prime-5 scaled coefficients to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must export a strict translation-origin source with computed unit-bearing `9/5` coupling, or pivot outside the endpoint-localizer/source family; otherwise preserve no-new-live-frontier.
