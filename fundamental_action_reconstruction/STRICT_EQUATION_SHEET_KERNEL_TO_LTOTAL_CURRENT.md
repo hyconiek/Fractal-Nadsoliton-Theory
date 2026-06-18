@@ -3091,3 +3091,27 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2846/S1796 label-safe vertex localization/pullback candidate audit
 
 `P2846/S1796` isolates the P2845 localization/pullback premise and tests label-safe finite vertex-density candidates on the full `16,828` graph carrier: uniform, triangle-count, four-cycle-count, triangle/square joint, and local motif-WL vertex measures.  Several candidates are nonconstant and label-safe, but all remain anonymous vertex measures with no canonical vertex-to-field support, spacetime pullback formula, target-independent volume/unit form, locality/covariance theorem, coupling coefficient rule, or variational chain rule.  No strict localization/pullback object, `L_total`, EOM, Hamiltonian, or ToE closure follows.
+
+## P2847/S1797 target-independent volume-form/unit-source audit
+
+`P2847/S1797` attacks the P2846-admissible volume/unit premise for named label-safe densities on the full `16,828` graph carrier.  Finite probability normalizations exist, and several normalized density profiles are nonconstant, but nonconstant raw density totals are carrier-dependent while the uniform total is only a dimensionless counting measure.  No candidate exports a target-independent unit-bearing volume form, canonical vertex-to-field support, spacetime pullback, coupling coefficient rule, variational chain rule, nonproxy `L_total`, EOM, Hamiltonian, or ToE closure.
+
+## P2848/S1798 coupling coefficient/unit-source law audit
+
+`P2848/S1798` attacks the remaining P2845/P2847 local premise: a target-independent coupling coefficient/unit source for one named density.  Exact rational carrier statistics distinguish dimensionless constants, graph-dependent inverse raw-mass normalizers, and empirical carrier mean/variance coefficients.  None exports a unit-dimension source law, volume/pullback compatibility, variational chain rule, nonproxy `L_total` insertion, EOM, Hamiltonian, bridge, role-transfer, or ToE closure.  The next honest proof-grade move should pivot to exactly one concrete kernel bridge atom with an exported source premise, or preserve no-new-live-frontier.
+
+## P2849/S1799 damping/compression kernel bridge-atom audit
+
+`P2849/S1799` pivots after the bounded finite-density route to one concrete kernel bridge atom: legacy linear torsion damping `1 + beta_tors*d` versus strict nonlinear compression `1 + beta*d^eta`.  The two-point exact-match theorem shows that sourcing strict compression from the legacy linear law alone forces `eta=1` and `beta=beta_tors`; the strict `eta=9/5` fails this exact bridge condition, and the effective beta needed to match legacy damping varies with distance.  No target-independent beta source, eta source law, damping/compression bridge atom, full kernel bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure follows.
+
+## P2850/S1800 EML single-operator kernel bridge impact audit
+
+`P2850/S1800` checks the supplied arXiv `2603.21852v2` EML single-operator result against the current kernel-bridge boundary.  The result is relevant as syntax/operator-basis compression: `EML(x,y)=exp(x)-log(y)` with terminal `1` can represent elementary scientific-calculator functions, and both `K_legacy_ont` and `K_strict_gate` are elementary formulas.  However, this does not export a typed source law for `beta/eta`, amplitude, phase/topological selector data, completion-map semantics, unit-bearing `L_total`, role transfer, EOM, Hamiltonian, or ToE closure; P2849's damping/compression obstruction remains unchanged.
+
+## P2851/S1801 amplitude-normalization kernel bridge-atom audit
+
+`P2851/S1801` tests the amplitude/normalization bridge atom from legacy `alpha_geo=4 ln 2` to the unit-amplitude `K_strict_gate`.  Pointwise legacy/strict amplitude ratios are not constant, audited two-point ratio checks reject an amplitude-only bridge, and the best constant-amplitude least-squares fit leaves a nonzero residual.  Therefore `alpha_geo` cannot be silently absorbed into `K_strict_gate` without missing phase/frequency and damping/compression bridge atoms plus a role-safe strict source law.  No amplitude bridge, full kernel bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure follows.
+
+## P2852/S1802 kernel bridge obligation reconciliation matrix
+
+`P2852/S1802` reconciles P2849-P2851 in a finite Boolean bridge-obligation matrix.  Only the syntax-level common expression basis is satisfied; semantic bridge targets remain open.  Damping/compression lacks `eta` and target-independent `beta` sources, amplitude lacks constant residual-zero passage and role-safe `alpha_geo` source law, and full bridge/role transfer remain downstream of multiple missing typed atoms.  No damping bridge, amplitude bridge, full kernel bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure follows.

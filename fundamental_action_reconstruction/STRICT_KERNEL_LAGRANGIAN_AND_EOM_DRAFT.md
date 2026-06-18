@@ -2460,3 +2460,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2846/S1796 vertex localization Ltotal guard
 
 `P2846/S1796` adds no action term or pullback.  Nonconstant label-safe vertex profiles exist on the finite graph carrier, but anonymous vertex measures are not field support and do not provide target-independent volume units, coupling coefficients, or variational chain rules for `L_total`.
+
+## P2847/S1797 volume/unit `L_total` guard
+
+`P2847/S1797` adds no action term.  Finite probability normalization of anonymous vertex densities is not a unit-bearing spacetime volume form and does not provide field support, pullback, coupling coefficients, or variational chain rules for `L_total`.
+
+## P2848/S1798 coefficient/unit `L_total` guard
+
+`P2848/S1798` adds no action term.  Dimensionless constants, graph-dependent raw-mass normalizers, and empirical carrier aggregate coefficients do not provide a unit-bearing source law, volume/pullback compatibility, variational chain rule, or nonproxy insertion rule for `L_total`.
+
+## P2849/S1799 damping bridge `L_total` guard
+
+`P2849/S1799` adds no action term.  The damping/compression denominator comparison is a kernel-bridge obstruction audit only; without a target-independent beta source and eta source law, it does not provide a unit-bearing source density, nonproxy `L_total` insertion, EOM, Hamiltonian, or role-bearing term.
+
+## P2850/S1800 EML syntax `L_total` guard
+
+`P2850/S1800` adds no action term.  EML single-operator representability is a syntax/circuit-basis observation for elementary expressions, not a unit-bearing source density, coupling coefficient, variational chain rule, nonproxy `L_total` insertion, EOM, or Hamiltonian source.
+
+## P2851/S1801 amplitude bridge `L_total` guard
+
+`P2851/S1801` adds no action term.  Constant amplitude rescaling of `K_strict_gate` does not provide a role-safe `alpha_geo` source law, unit-bearing source density, nonproxy `L_total` insertion, EOM, Hamiltonian, or role-bearing term.
+
+## P2852/S1802 bridge reconciliation `L_total` guard
+
+`P2852/S1802` adds no action term.  Its bridge-obligation matrix confirms that current bridge atoms do not provide a unit-bearing source density, nonproxy `L_total` insertion, EOM, Hamiltonian, or role-bearing term.

@@ -1038,3 +1038,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Nonconstant anonymous vertex profiles exist, but no candidate exports canonical vertex-to-field support, spacetime pullback, target-independent volume/unit form, locality/covariance, coupling coefficient rule, or variational chain rule.
 - Do not promote anonymous vertex profiles to strict localization/pullback, unit-bearing `L_total` source/coupling, EOM, Hamiltonian, or ToE closure.
 - A next admissible move must introduce a genuine vertex-to-field support theorem `x_G`/`rho_G(x)`, a target-independent volume form tied to one named density, a coupling coefficient/unit source, or one concrete kernel bridge atom with source premise.
+
+## Current target-independent volume/unit source guardrail (P2847/S1797, 2026-06-18)
+
+- P2847 tests the P2846-admissible target-independent volume/unit premise for named label-safe densities on the full `16,828` graph carrier.
+- Finite probability normalization exists and nonconstant normalized density profiles exist, but nonconstant raw total volumes are carrier-dependent and the uniform count is dimensionless; no unit source, field support, spacetime pullback, coupling coefficient rule, or variational chain rule is exported.
+- Do not promote finite probability normalization to unit-bearing volume form, strict localization/pullback, unit-bearing `L_total` source/coupling, EOM, Hamiltonian, bridge, role-transfer, or ToE closure.
+- The next admissible move should isolate one target-independent coupling coefficient/unit source for a single named density with explicit source law and units, or else one concrete kernel bridge atom with exported source premise; otherwise preserve no-new-live-frontier.
+
+## Current coupling coefficient/unit source-law guardrail (P2848/S1798, 2026-06-18)
+
+- P2848 tests the remaining local P2845/P2847 premise: a target-independent coupling coefficient/unit source for one named finite density.
+- Dimensionless constants are target-independent but not unit-bearing source laws; inverse raw-mass normalizers are graph-dependent on nonconstant densities; carrier mean/variance coefficients are empirical aggregate normalizations, not strict source laws.
+- Do not promote density normalizers to unit-bearing `L_total`, EOM, Hamiltonian, bridge, role-transfer, selector, or ToE closure.
+- The next admissible proof-grade move should pivot to exactly one concrete kernel bridge atom with an exported source premise, preferably damping/compression `beta/eta` or amplitude passage; otherwise preserve no-new-live-frontier.
+
+## Current damping/compression kernel bridge-atom guardrail (P2849/S1799, 2026-06-18)
+
+- P2849 tests exactly one concrete kernel bridge atom: legacy linear torsion damping `1 + beta_tors*d` versus strict nonlinear compression `1 + beta*d^eta`.
+- Exact two-point matching of the legacy linear source forces `eta=1` and `beta=beta_tors`; strict `eta=9/5` is not sourced by that law, and the effective beta required at strict eta varies with distance.
+- Do not promote damping/compression similarity to full kernel bridge, role transfer, selector closure, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible move requires one new strict source law for `eta` and target-independent positive `beta`, or a different single bridge atom such as amplitude normalization passage; otherwise preserve no-new-live-frontier.
+
+## Current EML single-operator external impact guardrail (P2850/S1800, 2026-06-18)
+
+- P2850 audits arXiv `2603.21852v2`: EML single-operator universality is relevant as an elementary-expression syntax/circuit compression lens.
+- It does not export typed source laws for strict `beta/eta`, amplitude passage, phase/topological selector data, completion-map semantics, unit-bearing `L_total`, role transfer, EOM, Hamiltonian, or ToE closure.
+- Do not promote EML representability of elementary formulas to kernel bridge closure or role transfer.
+- The next admissible proof-grade move remains one typed bridge-source atom: a strict source law for `eta` and target-independent `beta`, or an amplitude-normalization passage theorem; otherwise preserve no-new-live-frontier.
+
+## Current amplitude-normalization kernel bridge-atom guardrail (P2851/S1801, 2026-06-18)
+
+- P2851 tests exactly one bridge atom: legacy `alpha_geo=4 ln 2` amplitude passage into the unit-amplitude strict gate kernel.
+- Pointwise legacy/strict amplitude ratios are not constant; two-point ratio checks reject an amplitude-only bridge, and the best constant-amplitude fit has nonzero residual.
+- Do not promote `alpha_geo` rescaling to amplitude bridge, full kernel bridge, role transfer, selector closure, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible move is a combined bridge-obligation reconciliation matrix over damping/compression, amplitude, and EML syntax to identify whether any single remaining typed source atom is still live; otherwise preserve no-new-live-frontier.
+
+## Current kernel bridge obligation reconciliation guardrail (P2852/S1802, 2026-06-18)
+
+- P2852 reconciles P2849-P2851: only syntax-level common expression basis is satisfied; semantic bridge targets remain unsatisfied.
+- Damping/compression lacks `eta` and target-independent `beta` sources; amplitude lacks constant residual-zero passage and role-safe `alpha_geo` source law; full bridge and role transfer remain downstream.
+- Do not replay damping, amplitude, EML syntax, density normalizers, role transfer, `L_total`, EOM, Hamiltonian, or ToE promotion as closure evidence.
+- The next admissible proof-grade move must introduce exactly one new typed bridge-source atom, preferably a phase/frequency bridge-source audit for `omega/phi`/topological data or a genuinely new strict `eta/beta` source law; otherwise preserve no-new-live-frontier.
