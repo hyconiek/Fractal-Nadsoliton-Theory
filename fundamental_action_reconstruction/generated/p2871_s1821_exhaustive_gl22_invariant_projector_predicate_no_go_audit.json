@@ -1,0 +1,137 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_gl22_invariant_projector_selector": false,
+    "exports_boundary_source_law": false,
+    "exports_eta_source_law": false,
+    "exports_prime5_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "all_16_boolean_predicates_enumerated": true,
+      "no_invariant_predicate_selects_singleton_11": true,
+      "only_4_gl22_invariant_predicates": true,
+      "p2870_rechecked": true,
+      "target_singleton_orbit_has_three_nonidentity_singletons": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "prime5_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay Boolean projector predicates or target singleton predicates as sourcehood.  A next proof-grade move must provide a new strict symmetry-breaking law whose own provenance fixes the nonidentity singleton and supplies the unit-bearing coefficient/coupling theorem, or pivot to a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2871 exhausts all Boolean selector predicates on the four character point projectors.  GL(2,2)-invariant predicates cannot select singleton 11; the singleton target predicate is a non-invariant endpoint-label import."
+  },
+  "exhaustive_gl22_invariant_projector_predicate_no_go_audit": {
+    "accepted_candidate_count": 0,
+    "candidate_class": "all Boolean selector predicates on the four Aut(Z12)-character point projectors, filtered by V4/GL(2,2) invariance",
+    "input_status_rechecked": "P2870_INTRINSIC_CHARACTER_PROJECTOR_SELECTOR_NO_GO_AUDIT_NO_CLOSURE",
+    "invariant_predicates": [
+      {
+        "cardinality": 0,
+        "is_gl22_invariant": true,
+        "orbit": [
+          []
+        ],
+        "orbit_size": 1,
+        "selected": [],
+        "selects_target_singleton_11": false
+      },
+      {
+        "cardinality": 1,
+        "is_gl22_invariant": true,
+        "orbit": [
+          [
+            1
+          ]
+        ],
+        "orbit_size": 1,
+        "selected": [
+          1
+        ],
+        "selects_target_singleton_11": false
+      },
+      {
+        "cardinality": 3,
+        "is_gl22_invariant": true,
+        "orbit": [
+          [
+            11,
+            5,
+            7
+          ]
+        ],
+        "orbit_size": 1,
+        "selected": [
+          5,
+          7,
+          11
+        ],
+        "selects_target_singleton_11": false
+      },
+      {
+        "cardinality": 4,
+        "is_gl22_invariant": true,
+        "orbit": [
+          [
+            1,
+            11,
+            5,
+            7
+          ]
+        ],
+        "orbit_size": 1,
+        "selected": [
+          1,
+          5,
+          7,
+          11
+        ],
+        "selects_target_singleton_11": false
+      }
+    ],
+    "predicate_count": 16,
+    "proof_certificate": {
+      "exhaustion_step": "There are 2^4=16 Boolean predicates on the four point projectors, all enumerated explicitly.",
+      "invariance_step": "GL(2,2) fixes identity and permutes the three nonidentity projectors, so invariant predicates are unions of {1} and {5,7,11}.",
+      "sourcehood_step": "The singleton {11} is not invariant; selecting it requires importing an endpoint label or symmetry-breaking law not present in current artifacts."
+    },
+    "target_singleton_record": {
+      "cardinality": 1,
+      "is_gl22_invariant": false,
+      "orbit": [
+        [
+          5
+        ],
+        [
+          7
+        ],
+        [
+          11
+        ]
+      ],
+      "orbit_size": 3,
+      "selected": [
+        11
+      ],
+      "selects_target_singleton_11": true
+    }
+  },
+  "input_hashes": {
+    "P2870": "abe0e90d100572b5ef15a9cdb031a73931da97c5de5b5a64c3920cfe2e8349e7"
+  },
+  "status": "P2871_EXHAUSTIVE_GL22_INVARIANT_PROJECTOR_PREDICATE_NO_GO_AUDIT_NO_CLOSURE"
+}

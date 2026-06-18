@@ -1,0 +1,193 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_cyclic_predecessor_source": false,
+    "exports_boundary_source_law": false,
+    "exports_eta_source_law": false,
+    "exports_orientation_source_law": false,
+    "exports_prime5_source_law": false,
+    "exports_selector_or_localizer_source": false,
+    "exports_strict_damping_compression_bridge": false,
+    "exports_unit_bearing_coupling_localization_theorem": false,
+    "facts": {
+      "accepted_count_zero": true,
+      "p2871_rechecked": true,
+      "predecessor_11_exactly_represents_target_with_9_over_5": true,
+      "reflection_invariant_predicates_do_not_select_singleton_11": true,
+      "reflection_swaps_successor_1_and_predecessor_11": true,
+      "successor_endpoint_is_target_blind": true
+    }
+  },
+  "cyclic_predecessor_endpoint_orientation_no_source_audit": {
+    "accepted_candidate_count": 0,
+    "adjacent_predicate_records": [
+      {
+        "reflected_selected": [],
+        "reflection_invariant": true,
+        "selected": [],
+        "selects_predecessor_11": false
+      },
+      {
+        "reflected_selected": [
+          11
+        ],
+        "reflection_invariant": false,
+        "selected": [
+          1
+        ],
+        "selects_predecessor_11": false
+      },
+      {
+        "reflected_selected": [
+          1
+        ],
+        "reflection_invariant": false,
+        "selected": [
+          11
+        ],
+        "selects_predecessor_11": true
+      },
+      {
+        "reflected_selected": [
+          1,
+          11
+        ],
+        "reflection_invariant": true,
+        "selected": [
+          1,
+          11
+        ],
+        "selects_predecessor_11": false
+      }
+    ],
+    "candidate_class": "ambient Z12 cyclic-order predecessor localizer d=-1 mod 12, with reflection-symmetry acceptance test",
+    "exact_predecessor_target_representation": true,
+    "input_status_rechecked": "P2871_EXHAUSTIVE_GL22_INVARIANT_PROJECTOR_PREDICATE_NO_GO_AUDIT_NO_CLOSURE",
+    "predecessor_endpoint": 11,
+    "predecessor_prime_vector_scaled_by_9_over_5": {
+      "11": {
+        "denominator": 5,
+        "denominator_prime_factors": {
+          "5": 1
+        },
+        "fraction": "9/5",
+        "numerator": 9,
+        "z12_compatible_denominator": false
+      },
+      "2": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "3": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "5": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "7": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      }
+    },
+    "proof_certificate": {
+      "reflection_step": "The circle reflection d -> -d swaps +1 and -1, so predecessor selection is orientation-sensitive.",
+      "representability_step": "The convention d=-1 mod 12 gives d=11, and (9/5)log(11) matches the target prime vector exactly.",
+      "sourcehood_step": "Current artifacts do not export a strict non-premise orientation/boundary-arrow law plus unit-bearing coefficient/coupling theorem; reflection-invariant adjacent predicates cannot select singleton 11."
+    },
+    "reflection_invariant_adjacent_predicates": [
+      {
+        "reflected_selected": [],
+        "reflection_invariant": true,
+        "selected": [],
+        "selects_predecessor_11": false
+      },
+      {
+        "reflected_selected": [
+          1,
+          11
+        ],
+        "reflection_invariant": true,
+        "selected": [
+          1,
+          11
+        ],
+        "selects_predecessor_11": false
+      }
+    ],
+    "successor_endpoint": 1,
+    "successor_prime_vector_scaled_by_9_over_5": {
+      "11": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "2": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "3": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "5": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      },
+      "7": {
+        "denominator": 1,
+        "denominator_prime_factors": {},
+        "fraction": "0/1",
+        "numerator": 0,
+        "z12_compatible_denominator": true
+      }
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "boundary_source_law_exported": false,
+      "eom_closure_exported": false,
+      "eta_source_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "ltotal_exported": false,
+      "orientation_source_law_exported": false,
+      "prime5_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "selector_or_localizer_source_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_coupling_localization_theorem_exported": false
+    },
+    "next_honest_step": "Do not replay cyclic predecessor, d=-1, or clockwise/counterclockwise endpoint conventions as sourcehood.  A next proof-grade move must export a strict non-premise orientation/boundary-arrow law that fixes predecessor over successor and supplies the unit-bearing 9/5 coefficient/coupling theorem, or pivot to a different new typed object; otherwise preserve no-new-live-frontier.",
+    "reason": "P2872 shows that the cyclic predecessor convention d=-1 mod 12 exactly represents the endpoint target, but it is orientation-sensitive: reflection swaps d=1 and d=11, and current artifacts do not export a strict orientation/boundary-arrow source law or unit-bearing coupling theorem."
+  },
+  "input_hashes": {
+    "P2871": "56d9189aa6e138a8618f7ad660557a51cc02c07576bf4411e0f7c3eb6d56c974"
+  },
+  "status": "P2872_CYCLIC_PREDECESSOR_ENDPOINT_ORIENTATION_NO_SOURCE_AUDIT_NO_CLOSURE"
+}

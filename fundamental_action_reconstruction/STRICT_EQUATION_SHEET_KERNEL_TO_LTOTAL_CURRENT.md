@@ -3179,3 +3179,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2868/S1818 prime-5-extended Aut-invariant weighted-log no-go audit
 
 `P2868/S1818` grants denominator prime `5` in the weighted-log coefficient ring but keeps Aut(`Z12`)-invariant localization.  The exact orbit-weight system remains inconsistent: the unit orbit `{1,5,7,11}` assigns one shared coefficient to `log(5)`, `log(7)`, and `log(11)`, while the target requires only `(9/5)log(11)`.  Thus prime-5 coefficient capacity alone is not a strict `d=11` localizer/source and does not export a boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2869/S1819 Aut-character idempotent endpoint-localizer no-source audit
+
+`P2869/S1819` tests the stronger finite class left after P2868: full Aut(`Z12`)-character Fourier idempotents on the unit orbit `{1,5,7,11}`.  The idempotent `delta_11` exists and, after scaling by `9/5`, exactly represents `(9/5)log(11)`.  This is only representability: it imports a chosen endpoint/polarity projector and scaled `9/20` character coefficients, and it exports no non-premise strict selector/localizer source or unit-bearing coupling/localization theorem.  Therefore no boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2870/S1820 intrinsic character-projector selector no-go audit
+
+`P2870/S1820` audits whether the P2869 Aut-character idempotent layer can select `d=11` internally.  The finite V4/GL(2,2) relabeling computation ties the nonidentity projectors `5`, `7`, and `11`; coefficient moments, sign counts, support size, norms, and denominator support do not distinguish `11`.  Exact target-prime matching singles out `11` only by reusing the named boundary target `(9/5)log(11)`, so it is not an independent source law.  No boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2871/S1821 exhaustive GL(2,2)-invariant projector-predicate no-go audit
+
+`P2871/S1821` exhausts all `2^4=16` Boolean selector predicates on the four Aut(`Z12`)-character point projectors and filters them by V4/GL(2,2) invariance.  The only invariant predicates are empty, identity-only, nonidentity-all, and all; none selects singleton `11`.  The target predicate `{11}` has orbit `{ {5}, {7}, {11} }`, so it imports an endpoint label rather than exporting a strict selector/source law.  No boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2872/S1822 cyclic-predecessor endpoint orientation no-source audit
+
+`P2872/S1822` tests a different typed escape hatch after P2871: the ambient `Z12` cyclic-order predecessor convention `d=-1 mod 12`, hence `d=11`.  This convention exactly represents `(9/5)log(11)`, but it is orientation-sensitive because reflection swaps successor `d=1` and predecessor `d=11`.  Reflection-invariant adjacent predicates cannot select singleton `11`, and current artifacts export no strict orientation/boundary-arrow source law or unit-bearing `9/5` coupling theorem.  No boundary source law, eta source, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
