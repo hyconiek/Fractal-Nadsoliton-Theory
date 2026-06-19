@@ -1494,3 +1494,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Treat this as finite localization readiness only: no strict continuum/site-measure pullback theorem, no `Gamma_9_5` source, and no variational chain rule are exported.
 - Do not promote the finite matrix, `Gamma_9_5`, symbolic `q_9_5`, `rho_9/5`, or `U_9_5` to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a strict pullback/provenance theorem and variational chain rule.
 - A next admissible move in this lane must prove exactly one missing theorem: pullback provenance or variational chain rule; otherwise preserve no-new-live-frontier or pivot to another genuinely new typed object.
+
+## Current Gamma variational chain-rule skeleton guardrail (P2912/S1862, 2026-06-19)
+
+- P2912 constructs the finite symbolic Jacobian induced by the P2911 endpoint-average pullback: `276` nonzero derivative entries, `1452` zero entries, and `0` translation-covariance failures.
+- Treat this as variational chain-rule readiness only: no strict field-variable provenance, no continuum/nonproxy variational theorem, and no strict `Gamma_9_5` source are exported.
+- Do not promote this Jacobian skeleton, `Gamma_9_5`, symbolic `q_9_5`, `rho_9/5`, or `U_9_5` to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without strict provenance/source and continuum variational theorems.
+- A next admissible move in this lane must prove exactly one missing provenance theorem for `Gamma_9_5` or for the field-variable/continuum variational upgrade; otherwise preserve no-new-live-frontier or pivot to another genuinely new typed object.
+
+## Current Gamma source-provenance obstruction guardrail (P2913/S1863, 2026-06-19)
+
+- P2913 constructs the missing `Strict_Gamma_9_5_Action_Unit_Source_Theorem` as an acceptance schema and audits six candidate source objects plus generated JSON provenance.
+- The audit finds `0` accepted candidates and `0` positive strict `Gamma_9_5` source/provenance hits; dimension/readiness evidence remains insufficient.
+- Do not promote `Gamma_9_5`, symbolic `U_9_5`, P2911 pullback readiness, or P2912 Jacobian readiness to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without an explicit strict nonzero action-unit source theorem and coupling theorem.
+- A next admissible move in this lane must provide that strict source theorem or pivot to strict field-variable/continuum-measure provenance for the finite Jacobian; otherwise preserve no-new-live-frontier for the Gamma lane.
+
+## Current Gamma continuum-measure normalization obstruction guardrail (P2914/S1864, 2026-06-19)
+
+- P2914 solves the exact finite measure-normalization equations for the P2911/P2912 `Lambda/Gamma` lane: translation invariance forces one site weight `m`, with site total `12*m` and directed-edge total `144*m`.
+- Site normalization and directed-edge normalization are incompatible (`m=1/12` vs `m=1/144`) unless a new strict renormalization, quotient, or measure-source theorem is supplied.
+- Do not promote P2911 pullback readiness, P2912 Jacobian readiness, P2913 Gamma source candidates, or the finite measure model to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without that theorem.
+- A next admissible move must provide exactly one strict measure bridge/quotient theorem or field-variable provenance theorem; otherwise preserve no-new-live-frontier for the Gamma/Lambda variational-integral lane.
+
+## Current Gamma edge-quotient measure bridge candidate guardrail (P2915/S1865, 2026-06-19)
+
+- P2915 constructs three quotient-measure bridge candidates for the P2914 normalization mismatch: source-site, target-site, and displacement quotients, each with `12` fibers of size `12`.
+- Each candidate arithmetically repairs the site/edge total mismatch, but none is uniquely strict-selected or proven to be the continuum/nonproxy integration measure.
+- Do not promote the quotient candidates, P2911 pullback readiness, P2912 Jacobian readiness, P2913 Gamma source candidates, or P2914 measure obstruction to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a strict quotient/source theorem and field-variable coupling.
+- A next admissible move must prove exactly one quotient selector/provenance theorem or pivot to a strict nonzero `Gamma_9_5` action-unit source theorem; otherwise preserve no-new-live-frontier for the Gamma/Lambda lane.
+
+## Current translation-orbit quotient renormalization guardrail (P2916/S1866, 2026-06-19)
+
+- P2916 proves a finite quotient theorem selecting the displacement quotient `q(i,j)=j-i mod 12` under diagonal `Z12` translations; this explains the `12` vs `144` mismatch as `12` translated copies of each relative jump.
+- Treat this as finite quotient/renormalization progress only: no strict nonzero `Gamma_9_5` source theorem and no continuum field-variable provenance theorem are exported.
+- Do not promote the displacement quotient, P2911 pullback readiness, P2912 Jacobian readiness, P2913 Gamma source candidates, or P2914/P2915 measure evidence to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without those remaining theorems.
+- A next admissible move must prove exactly one of the remaining theorems: strict `Gamma_9_5` action-unit source coupled to the quotient integral, or continuum field-variable provenance for the displacement quotient.
+
+## Current displacement-quotient field-variable theorem guardrail (P2917/S1867, 2026-06-19)
+
+- P2917 constructs finite quotient field variables `Q_d = (1/12) * sum_i q_edge[i,i+d]` for the P2916 displacement quotient and proves the finite chain rule `dI_Q/dq_edge = Gamma_9_5/144`.
+- Treat this as finite field-variable readiness only: no strict nonzero `Gamma_9_5` action-unit source theorem and no continuum/nonproxy `L_total` closure are exported.
+- Do not promote the quotient field variables, P2911 pullback, P2912 Jacobian, P2916 quotient theorem, or symbolic `Gamma_9_5` to EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without the strict `Gamma_9_5` source theorem.
+- A next admissible move should supply that source theorem or audit current artifacts for an existing action-unit source export; otherwise preserve no-new-live-frontier for the Gamma/Lambda lane.
