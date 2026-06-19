@@ -1,0 +1,190 @@
+{
+  "beta_eta_scale_coupling_certificate": {
+    "all_sample_beta_scales_leave_eta_package_unchanged": true,
+    "delta": {
+      "as_float": 0.8,
+      "as_string": "4/5",
+      "denominator": 5,
+      "numerator": 4
+    },
+    "eta": {
+      "as_float": 1.8,
+      "as_string": "9/5",
+      "denominator": 5,
+      "numerator": 9
+    },
+    "eta_equals_one_plus_delta": true,
+    "formal_multiplicative_carrier_defect_count": 0,
+    "p2948_beta_eta_coupling_premise_discharged": false,
+    "sample_positive_beta_scale_count": 4,
+    "strict_positive_beta_scale_source_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "candidate_object": "ExactPackage_BetaEta_ScaleCoupling_TheoremInterface",
+    "exact_package_rows": [
+      {
+        "claim": "P2948 exact package supplies delta=4/5 and eta=9/5",
+        "component": "exact_ratio_pair_imported_from_P2948",
+        "satisfied_finitely": true,
+        "value": {
+          "delta": {
+            "as_float": 0.8,
+            "as_string": "4/5",
+            "denominator": 5,
+            "numerator": 4
+          },
+          "eta": {
+            "as_float": 1.8,
+            "as_string": "9/5",
+            "denominator": 5,
+            "numerator": 9
+          }
+        }
+      },
+      {
+        "claim": "the exact package obeys the formal eta coupling eta=1+delta",
+        "component": "eta_equals_one_plus_delta",
+        "satisfied_finitely": true,
+        "value": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        }
+      },
+      {
+        "claim": "P2928 formal exponent carrier has zero audited multiplicative defects",
+        "component": "formal_multiplicative_coupling_carrier",
+        "satisfied_finitely": true,
+        "value": {
+          "audited_product_rows": 29,
+          "defect_count": 0
+        }
+      }
+    ],
+    "positive_beta_scale_orbit_rows": [
+      {
+        "beta_scale": {
+          "as_float": 0.5,
+          "as_string": "1/2",
+          "denominator": 2,
+          "numerator": 1
+        },
+        "eta": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        },
+        "formal_kernel_tail": "1 + (1/2) * d^(9/5)",
+        "same_eta_ratio_package": true,
+        "strict_source_selects_this_beta": false
+      },
+      {
+        "beta_scale": {
+          "as_float": 1.0,
+          "as_string": "1/1",
+          "denominator": 1,
+          "numerator": 1
+        },
+        "eta": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        },
+        "formal_kernel_tail": "1 + (1/1) * d^(9/5)",
+        "same_eta_ratio_package": true,
+        "strict_source_selects_this_beta": false
+      },
+      {
+        "beta_scale": {
+          "as_float": 2.0,
+          "as_string": "2/1",
+          "denominator": 1,
+          "numerator": 2
+        },
+        "eta": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        },
+        "formal_kernel_tail": "1 + (2/1) * d^(9/5)",
+        "same_eta_ratio_package": true,
+        "strict_source_selects_this_beta": false
+      },
+      {
+        "beta_scale": {
+          "as_float": 5.0,
+          "as_string": "5/1",
+          "denominator": 1,
+          "numerator": 5
+        },
+        "eta": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        },
+        "formal_kernel_tail": "1 + (5/1) * d^(9/5)",
+        "same_eta_ratio_package": true,
+        "strict_source_selects_this_beta": false
+      }
+    ],
+    "theorem_obligation_rows": [
+      {
+        "evidence": "P2948 gives eta=1+delta exactly for delta=4/5 and eta=9/5",
+        "obligation": "exact_eta_ratio_coupled_to_delta",
+        "satisfied": true
+      },
+      {
+        "evidence": "P2928 has zero audited multiplicative exponent defects",
+        "obligation": "formal_multiplicative_carrier_available",
+        "satisfied": true
+      },
+      {
+        "evidence": "the exact P2948 ratio package fixes eta but contains no strict source law selecting beta from the positive scale orbit",
+        "obligation": "strict_positive_beta_scale_source_exported",
+        "satisfied": false
+      },
+      {
+        "evidence": "no unit-bearing nonproxy damping theorem or variational coupling is exported from the exact finite package",
+        "obligation": "nonproxy_damping_term_coupled_to_L_total",
+        "satisfied": false
+      },
+      {
+        "evidence": "eta compatibility plus formal carrier readiness is insufficient without beta scale selection and strict source provenance",
+        "obligation": "p2948_beta_eta_coupling_premise_discharged",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_law_exported": false,
+      "strict_positive_beta_scale_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not add another ratio scan, count alias, or beta-scale sample.  A next proof-grade move must export exactly one new source theorem: either a strict positive beta-scale/unit-normalization law coupled to the P2948 package, or strict nadsoliton provenance for the P2938 torsion-character aggregate.  If neither can be supplied, pivot outside the P2938/P2945 ratio-package lane and preserve the P2929-P2950 no-strict-export boundary.",
+    "p2949_boundary_respected": true,
+    "positive_witnesses": {
+      "beta_scale_orbit_obstruction_constructed": true,
+      "exact_eta_delta_coupling_verified": true,
+      "formal_multiplicative_carrier_reused_without_new_scan": true
+    },
+    "reason": "P2950 attacks the P2948 beta/eta coupling premise for the exact finite package.  The eta side is compatible: delta=4/5, eta=9/5, eta=1+delta, and the P2928 formal multiplicative carrier has zero audited defects.  However, the exact ratio package does not select a strict positive beta scale or export a unit-bearing nonproxy damping coupling, so beta/eta coupling remains a readiness interface rather than a strict theorem."
+  },
+  "input_hashes": {
+    "P2928": "a262d8c336281914242ef581bb40e94ec0d1c4a0d27e35c2bb9ed5e5a087ab88",
+    "P2948": "ff13639a50dd39d927be8fcc385036b26a1d5d3c180669fc18e61f7c749da2b3",
+    "P2949": "2ebc5fc16b752aec19aacb5e890c845159f3f75e68a579c7cb874d2aacb5b9bb"
+  },
+  "status": "P2950_EXACT_PACKAGE_BETA_ETA_SCALE_COUPLING_OBSTRUCTION_NO_STRICT_EXPORT"
+}

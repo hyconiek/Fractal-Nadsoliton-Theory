@@ -2872,3 +2872,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2949/S1899 delta numerator semantics `L_total` guard
 
 `P2949/S1899` shows that the P2948 delta numerator semantics premise is not discharged: identity and carrier-zero roles coincide extensionally on the current finite artifact, so count-only delta numerator choices are alias-equivalent.  Without an intensional strict source theorem and beta/eta coupling, this cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2950/S1900 beta/eta scale-coupling `L_total` guard
+
+`P2950/S1900` confirms that the exact P2948 ratio package is compatible with the formal beta/eta interface but still lacks a strict positive beta-scale/unit-normalization theorem and a nonproxy variational damping coupling.  Therefore it cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping term.
+
+## P2951/S1901 ratio-package normal-form `L_total` guard
+
+`P2951/S1901` proves by finite truth-table normal form that the exact ratio package cannot enter `L_total` through any proper subset of the four missing theorem atoms: P2938 provenance, delta semantics, beta-scale/unit source, and nonproxy variational damping coupling.  Until all four are exported, no EOM, Hamiltonian, bridge closure, role transfer, or ToE promotion follows.
+
+## P2952/S1902 torsion-character weight-source `L_total` guard
+
+`P2952/S1902` shows that the finite P2938 aggregate still contains an unsourced equal-weight premise between kernel-excess and character-negativity ingredients.  Even though `a=b=1` is the unique audited way to recover `[1,2,2,2,2]` in the two-weight family, uniqueness relative to a target is not a strict source theorem.  This cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE without an independent equal-weight/source theorem.
+
+## P2953/S1903 symbolic weight-family `L_total` guard
+
+`P2953/S1903` proves the unbounded positive rational weight-family obstruction exactly: `V(a,b)=[a,2a,2b,2b,2b]` stays product-additive and positive for all positive weights, while the desired P2938 vector merely imposes the target equations `a=b=1`.  Since no independent equal-weight/source theorem is exported, this cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.

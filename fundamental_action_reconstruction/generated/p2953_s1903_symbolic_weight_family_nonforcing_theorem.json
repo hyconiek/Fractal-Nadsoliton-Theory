@@ -1,0 +1,268 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_object": "Symbolic_TorsionCharacter_WeightFamily_Nonforcing_Theorem",
+    "ingredient_vectors": {
+      "character_negativity_vector_C_order_2_3_5_7_11": [
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "kernel_excess_vector_K_order_2_3_5_7_11": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "p2938_target_vector_order_2_3_5_7_11": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "positive_rational_witness_rows": [
+      {
+        "a": {
+          "as_float": 0.5,
+          "as_string": "1/2",
+          "denominator": 2,
+          "numerator": 1
+        },
+        "b": {
+          "as_float": 1.0,
+          "as_string": "1/1",
+          "denominator": 1,
+          "numerator": 1
+        },
+        "matches_p2938_target": false,
+        "positive_coordinates": true,
+        "product_additive_by_symbolic_theorem": true,
+        "vector_order_2_3_5_7_11": [
+          {
+            "as_float": 0.5,
+            "as_string": "1/2",
+            "denominator": 2,
+            "numerator": 1
+          },
+          {
+            "as_float": 1.0,
+            "as_string": "1/1",
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "as_float": 2.0,
+            "as_string": "2/1",
+            "denominator": 1,
+            "numerator": 2
+          },
+          {
+            "as_float": 2.0,
+            "as_string": "2/1",
+            "denominator": 1,
+            "numerator": 2
+          },
+          {
+            "as_float": 2.0,
+            "as_string": "2/1",
+            "denominator": 1,
+            "numerator": 2
+          }
+        ]
+      },
+      {
+        "a": {
+          "as_float": 1.0,
+          "as_string": "1/1",
+          "denominator": 1,
+          "numerator": 1
+        },
+        "b": {
+          "as_float": 1.5,
+          "as_string": "3/2",
+          "denominator": 2,
+          "numerator": 3
+        },
+        "matches_p2938_target": false,
+        "positive_coordinates": true,
+        "product_additive_by_symbolic_theorem": true,
+        "vector_order_2_3_5_7_11": [
+          {
+            "as_float": 1.0,
+            "as_string": "1/1",
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "as_float": 2.0,
+            "as_string": "2/1",
+            "denominator": 1,
+            "numerator": 2
+          },
+          {
+            "as_float": 3.0,
+            "as_string": "3/1",
+            "denominator": 1,
+            "numerator": 3
+          },
+          {
+            "as_float": 3.0,
+            "as_string": "3/1",
+            "denominator": 1,
+            "numerator": 3
+          },
+          {
+            "as_float": 3.0,
+            "as_string": "3/1",
+            "denominator": 1,
+            "numerator": 3
+          }
+        ]
+      },
+      {
+        "a": {
+          "as_float": 2.0,
+          "as_string": "2/1",
+          "denominator": 1,
+          "numerator": 2
+        },
+        "b": {
+          "as_float": 0.3333333333333333,
+          "as_string": "1/3",
+          "denominator": 3,
+          "numerator": 1
+        },
+        "matches_p2938_target": false,
+        "positive_coordinates": true,
+        "product_additive_by_symbolic_theorem": true,
+        "vector_order_2_3_5_7_11": [
+          {
+            "as_float": 2.0,
+            "as_string": "2/1",
+            "denominator": 1,
+            "numerator": 2
+          },
+          {
+            "as_float": 4.0,
+            "as_string": "4/1",
+            "denominator": 1,
+            "numerator": 4
+          },
+          {
+            "as_float": 0.6666666666666666,
+            "as_string": "2/3",
+            "denominator": 3,
+            "numerator": 2
+          },
+          {
+            "as_float": 0.6666666666666666,
+            "as_string": "2/3",
+            "denominator": 3,
+            "numerator": 2
+          },
+          {
+            "as_float": 0.6666666666666666,
+            "as_string": "2/3",
+            "denominator": 3,
+            "numerator": 2
+          }
+        ]
+      }
+    ],
+    "symbolic_theorem_rows": [
+      {
+        "statement": "For positive rational a,b, V(a,b)=a*K+b*C=[a,2a,2b,2b,2b].",
+        "theorem_row": "symbolic_weight_family_closed_form",
+        "verified": true
+      },
+      {
+        "statement": "If a>0 and b>0, every coordinate of [a,2a,2b,2b,2b] is positive.",
+        "theorem_row": "positive_cone_for_all_positive_weights",
+        "verified": true
+      },
+      {
+        "statement": "Prime-exponent extension makes V(a,b) additive on audited products for all a,b because it is linear in prime exponents.",
+        "theorem_row": "product_additivity_for_all_weights",
+        "verified": true
+      },
+      {
+        "statement": "V(a,b)=[1,2,2,2,2] iff a=1 and b=1, using the p=2 and p=5 coordinates.",
+        "theorem_row": "target_equivalence",
+        "verified": true
+      },
+      {
+        "statement": "A strict theorem selects a=1 and b=1 independently of target-fitting.",
+        "theorem_row": "strict_equal_weight_source_export",
+        "verified": false
+      }
+    ],
+    "theorem_obligation_rows": [
+      {
+        "evidence": "V(a,b)=[a,2a,2b,2b,2b] for all positive rational a,b",
+        "obligation": "unbounded_positive_weight_family_symbolically_closed",
+        "satisfied": true
+      },
+      {
+        "evidence": "target coordinates force a=1 from p=2 and b=1 from p=5",
+        "obligation": "p2938_target_equivalent_to_equal_weights",
+        "satisfied": true
+      },
+      {
+        "evidence": "target equivalence does not supply a nadsoliton source law selecting equal weights",
+        "obligation": "strict_equal_weight_source_theorem_exported",
+        "satisfied": false
+      },
+      {
+        "evidence": "the provenance atom still needs a strict source for K+C rather than target-fit equal weights",
+        "obligation": "p2951_torsion_character_provenance_atom_discharged",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_law_exported": false,
+      "strict_equal_weight_source_theorem_exported": false,
+      "strict_ratio_package_source_theorem_exported": false,
+      "strict_torsion_character_source_theorem_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not continue weight-family variants, bounded scans, or target-equivalence restatements.  A next proof-grade move must either supply an independent strict equal-weight/source theorem for K+C, attack a different P2951 atom with new source data, or pivot outside the ratio-package lane while preserving the P2929-P2953 no-strict-source boundary.",
+    "p2952_target_pairs": [
+      [
+        1,
+        1
+      ]
+    ],
+    "positive_witnesses": {
+      "bounded_scan_caveat_removed": true,
+      "symbolic_unbounded_family_constructed": true,
+      "target_equal_weight_equivalence_proved": true
+    },
+    "reason": "P2953 removes the bounded-weight caveat from P2952 by proving the exact symbolic family V(a,b)=[a,2a,2b,2b,2b] for all positive rational weights.  The target P2938 vector is equivalent to a=b=1, but this is still only a target-equation equivalence; no strict nadsoliton theorem selects the equal-weight aggregation K+C as a source law."
+  },
+  "input_hashes": {
+    "P2938": "15bd6e160a8433f551929cf841d7d47dfa7548cf982e244e25ac4c370069fe3a",
+    "P2952": "6fb551bce9d5804a2e84fb3fdec37cd32416c7bbb996b6a86ff11cb12c373732"
+  },
+  "status": "P2953_SYMBOLIC_WEIGHT_FAMILY_NONFORCING_THEOREM_NO_STRICT_SOURCE",
+  "symbolic_weight_certificate": {
+    "closed_form": "V(a,b)=[a,2a,2b,2b,2b]",
+    "p2951_torsion_character_provenance_atom_discharged": false,
+    "p2952_bounded_scan_caveat_removed": true,
+    "sample_non_target_positive_witness_count": 3,
+    "strict_equal_weight_source_theorem_exported": false,
+    "target_vector_equivalent_to_a_equals_1_b_equals_1": true,
+    "unbounded_positive_rational_family_constructed": true
+  }
+}

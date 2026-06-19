@@ -1764,3 +1764,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The P2944 algebraic identity role and carrier-zero role have the same finite extension `{1}`, so identity-deficit, zero-deficit, intersection-deficit, and union-deficit count functionals all return `delta=4/5`.
 - This extensional coincidence does not export a strict intensional/source theorem preferring identity-deficit semantics, and it does not export strict delta/eta, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - Do not continue count-alias variants as primary strategy.  A next admissible move must export an intensional identity-deficit source theorem, attack another P2948 premise such as torsion-character provenance or beta/eta coupling, or pivot outside this ratio-package lane while preserving the P2929-P2949 boundary.
+
+## Current exact package beta/eta scale-coupling guardrail (P2950/S1900, 2026-06-19)
+
+- P2950 attacks the P2948 beta/eta coupling premise for the exact finite package rather than adding another ratio scan or count alias.
+- The finite compatibility side is positive: `delta=4/5`, `eta=9/5`, `eta=1+delta`, and the P2928 formal multiplicative carrier has zero audited exponent defects.
+- The strict theorem side remains blocked: the exact package does not select a positive beta scale/unit normalization and does not export a unit-bearing nonproxy damping coupling.
+- Do not continue ratio scans, count aliases, or beta-scale samples as primary strategy.  A next admissible move must export a strict positive beta-scale source theorem, prove strict nadsoliton provenance for the P2938 torsion-character aggregate, or pivot outside this ratio-package lane while preserving the P2929-P2950 boundary.
+
+## Current ratio-package strict-source normal-form guardrail (P2951/S1901, 2026-06-19)
+
+- P2951 constructs the exact P2948-P2950 strict-source normal form rather than replaying beta-scale/unit, ratio, or count-alias scans.
+- The four required atoms are strict P2938 torsion-character provenance, strict identity-deficit delta semantics, strict positive beta-scale/unit source, and nonproxy variational damping coupling.
+- The finite `2^4=16` mask lattice has exactly one accepting row, where all four atoms are present; the current artifact row has all four atoms missing.
+- Do not continue normal-form lattices, ratio scans, count aliases, or beta-scale samples as primary strategy.  A next admissible move must export one concrete missing atom from this lattice or pivot outside the ratio-package lane while preserving the P2929-P2951 boundary.
+
+## Current torsion-character aggregate weight-source guardrail (P2952/S1902, 2026-06-19)
+
+- P2952 attacks one concrete P2951 atom: strict provenance for the P2938 torsion-character aggregate.
+- The decomposition `V_p(a,b)=a*(gcd(p,12)-1)+b*C_p` shows the exact target vector `[1,2,2,2,2]` forces `a=b=1` inside the audited positive two-weight family, but current artifacts do not source the equal-weight aggregation theorem.
+- This does not export strict torsion-character provenance, strict ratio-package source, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not continue bounded weight scans or alternative linear aggregate weights as primary strategy.  A next admissible move must export a strict equal-weight/source theorem, attack a different P2951 atom with a concrete theorem object, or pivot outside this ratio-package lane while preserving the P2929-P2952 boundary.
+
+## Current symbolic weight-family nonforcing guardrail (P2953/S1903, 2026-06-19)
+
+- P2953 removes the bounded-scan caveat from P2952: the P2938 ingredient family is exactly `V(a,b)=[a,2a,2b,2b,2b]` for all positive rational weights.
+- The target vector `[1,2,2,2,2]` is equivalent to `a=b=1`, but this is target-equation equivalence rather than a strict nadsoliton source law selecting equal weights.
+- No strict torsion-character provenance, ratio-package source, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
+- Do not continue weight-family variants, bounded scans, or target-equivalence restatements as primary strategy.  A next admissible move must export an independent strict equal-weight/source theorem, attack a different P2951 atom with new source data, or pivot outside this ratio-package lane while preserving the P2929-P2953 boundary.
