@@ -3503,3 +3503,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2949/S1899 delta numerator semantics separation audit
 
 `P2949/S1899` targets exactly one P2948 skeleton premise: strict semantics for the P2945 delta numerator.  The audit compares the P2944 algebraic identity role and carrier-zero role node-by-node and finds the same extension `{1}`.  Therefore identity-deficit, zero-deficit, intersection-deficit, and union-deficit count functionals all return `delta=4/5`; current artifacts do not export a strict intensional/source theorem selecting identity-deficit semantics.  No strict delta/eta source law, beta/eta coupling theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2950/S1900 exact package beta/eta scale-coupling obstruction
+
+`P2950/S1900` attacks the P2948 beta/eta coupling premise for the exact ratio package.  It verifies the positive finite side (`delta=4/5`, `eta=9/5`, `eta=1+delta`) and reuses the P2928 formal multiplicative carrier with zero audited exponent defects.  The obstruction is the remaining positive beta-scale orbit: the exact package fixes eta but exports no strict source law selecting beta or a unit-bearing nonproxy damping coupling.  No strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2951/S1901 ratio-package strict-source normal-form lattice
+
+`P2951/S1901` constructs the exact strict-source normal form for the P2948-P2950 ratio-package lane rather than replaying beta-scale or ratio scans.  The finite lattice has four required atoms: strict P2938 torsion-character provenance, strict identity-deficit delta semantics, strict positive beta-scale/unit source, and nonproxy variational damping coupling.  Enumerating all `2^4=16` masks gives exactly one accepting row, with all four atoms present; the current artifact row has all four atoms missing.  Therefore no proper subset exports a strict ratio-package source theorem, strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2952/S1902 torsion-character aggregate weight-source obstruction
+
+`P2952/S1902` attacks the P2951 torsion-character provenance atom by decomposing the P2938 aggregate into multiplication-kernel excess `K_p=gcd(p,12)-1` and unit-character negativity `C_p`.  The parametric family `V_p(a,b)=a*K_p+b*C_p` remains product-additive by prime-exponent extension; the exact target `[1,2,2,2,2]` forces the equal-weight pair `a=b=1` inside the audited positive family.  But current artifacts do not export a strict nadsoliton theorem selecting that equal-weight aggregation, so no strict provenance, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2953/S1903 symbolic weight-family nonforcing theorem
+
+`P2953/S1903` removes the bounded-weight caveat from P2952.  For the P2938 ingredients `K=[1,2,0,0,0]` and `C=[0,0,2,2,2]`, the exact positive rational family is `V(a,b)=a*K+b*C=[a,2a,2b,2b,2b]`; it is product-additive by prime-exponent extension for all positive `a,b`.  The target vector `[1,2,2,2,2]` is equivalent to `a=b=1`, but that equivalence is target-fitting, not an exported strict equal-weight/source theorem.  Therefore no strict torsion-character provenance, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
