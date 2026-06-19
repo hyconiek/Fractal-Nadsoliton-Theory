@@ -1,0 +1,235 @@
+{
+  "constructed_theoretical_objects": {
+    "acceptance_rows": [
+      {
+        "criterion": "Aut_orbit_quotient_computed",
+        "evidence": "U(12) orbits on nodes 1..11 are explicitly enumerated",
+        "satisfied": true
+      },
+      {
+        "criterion": "carrier_orbit_constant",
+        "evidence": "4 orbits have nonconstant carrier values",
+        "satisfied": false
+      },
+      {
+        "criterion": "selector_burden_quantified",
+        "evidence": "all nonconstant orbits are listed with their value splits",
+        "satisfied": true
+      },
+      {
+        "criterion": "strict_selector_or_symmetry_breaking_source_exported",
+        "evidence": "no current artifact exports a strict source selecting representatives inside the nonconstant orbits",
+        "satisfied": false
+      },
+      {
+        "criterion": "strict_nadsoliton_provenance_theorem_for_P2938_carrier",
+        "evidence": "a provenance theorem would have to include the missing selector/symmetry-breaking source",
+        "satisfied": false
+      }
+    ],
+    "aut_orbit_rows": [
+      {
+        "carrier_values": {
+          "1": 0,
+          "5": 2,
+          "7": 2,
+          "11": 2
+        },
+        "distinct_values": [
+          0,
+          2
+        ],
+        "orbit": [
+          1,
+          5,
+          7,
+          11
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 1,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "2": 1,
+          "10": 3
+        },
+        "distinct_values": [
+          1,
+          3
+        ],
+        "orbit": [
+          2,
+          10
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 2,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "3": 2,
+          "9": 4
+        },
+        "distinct_values": [
+          2,
+          4
+        ],
+        "orbit": [
+          3,
+          9
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 3,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "4": 2,
+          "8": 3
+        },
+        "distinct_values": [
+          2,
+          3
+        ],
+        "orbit": [
+          4,
+          8
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 4,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "6": 3
+        },
+        "distinct_values": [
+          3
+        ],
+        "orbit": [
+          6
+        ],
+        "orbit_constant": true,
+        "orbit_representative": 6,
+        "selector_burden": false
+      }
+    ],
+    "carrier_under_test": "P2938_UnitCharacter_Enriched_Z12_PrimeCoordinate_Carrier",
+    "prime_coordinate_vector_order_2_3_5_7_11": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "selector_burden_rows": [
+      {
+        "carrier_values": {
+          "1": 0,
+          "5": 2,
+          "7": 2,
+          "11": 2
+        },
+        "distinct_values": [
+          0,
+          2
+        ],
+        "orbit": [
+          1,
+          5,
+          7,
+          11
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 1,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "2": 1,
+          "10": 3
+        },
+        "distinct_values": [
+          1,
+          3
+        ],
+        "orbit": [
+          2,
+          10
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 2,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "3": 2,
+          "9": 4
+        },
+        "distinct_values": [
+          2,
+          4
+        ],
+        "orbit": [
+          3,
+          9
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 3,
+        "selector_burden": true
+      },
+      {
+        "carrier_values": {
+          "4": 2,
+          "8": 3
+        },
+        "distinct_values": [
+          2,
+          3
+        ],
+        "orbit": [
+          4,
+          8
+        ],
+        "orbit_constant": false,
+        "orbit_representative": 4,
+        "selector_burden": true
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_aut_breaking_prime_coordinate_source_law_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_exported": false,
+      "strict_prime_log_value_source_exported": false,
+      "strict_selector_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "A next admissible move must either export a strict selector/symmetry-breaking provenance theorem for the listed nonconstant orbits, or pivot to a genuinely new typed object outside the prime-coordinate carrier/provenance lane.  Otherwise preserve the P2929-P2940 no-new-live-frontier boundary.",
+    "positive_witnesses": {
+      "Aut_orbit_quotient_computed": true,
+      "P2938_carrier_requires_symmetry_breaking_for_provenance": true,
+      "selector_burden_quantified": true
+    },
+    "reason": "P2940 computes the U(12) orbit quotient for the exact P2938 carrier and finds nonconstant carrier values on multiple orbits.  Therefore any strict provenance theorem for this carrier must include a genuine selector/symmetry-breaking source.  No such source is exported here, so P2938 remains a finite carrier only."
+  },
+  "input_hashes": {
+    "P2939": "ebb9691d1f4e1ad4448e683a88880df2de96e152d9cd8eaf84280cc680f70c46"
+  },
+  "orbit_certificate": {
+    "all_orbits_constant": false,
+    "orbit_constant_count": 1,
+    "orbit_count": 5,
+    "selector_burden_orbit_count": 4,
+    "strict_provenance_theorem_exported": false,
+    "strict_selector_source_exported": false
+  },
+  "status": "P2940_P2938_CARRIER_AUT_ORBIT_SELECTOR_BURDEN_NO_STRICT_PROVENANCE"
+}

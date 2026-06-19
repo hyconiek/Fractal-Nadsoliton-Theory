@@ -2816,3 +2816,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2935/S1885 source-formula intake `L_total` guard
 
 `P2935/S1885` defines the gate that an Aut-breaking prime-coordinate source formula must pass before any `L_p` vector can become role-bearing in nonproxy `L_total`.  Current candidates are only algebraic/conventional/readiness forms and fail strict provenance plus coupling obligations, so no EOM, Hamiltonian, bridge, role-transfer, or ToE promotion is licensed.
+
+## P2936/S1886 obstruction matrix `L_total` guard
+
+`P2936/S1886` proves that every current route into an Aut-breaking prime-coordinate source remains blocked by the P2935 obligations.  Since no route supplies strict provenance plus delta/eta and beta/eta coupling, no prime-coordinate vector can become role-bearing in nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2937/S1887 multiplication-kernel candidate `L_total` guard
+
+`P2937/S1887` constructs a concrete finite Z12 multiplication-kernel coordinate candidate, but the vector `[1,2,0,0,0]` is partial and unsourced on the strict damping side.  Because it does not supply nonzero unit-prime coordinates or delta/eta and beta/eta coupling, it cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2938/S1888 unit-character candidate `L_total` guard
+
+`P2938/S1888` constructs a unit-sensitive finite carrier with vector `[1,2,2,2,2]`, but it remains unsourced on the strict nadsoliton and damping-coupling sides.  Until a provenance theorem and delta/eta plus beta/eta coupling are exported, this carrier cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2939/S1889 P2938 carrier provenance `L_total` guard
+
+`P2939/S1889` confirms that the P2938 carrier is algebraically ready and Aut-breaking, but not provenance/coupling complete.  Without a strict nadsoliton provenance theorem plus delta/eta and beta/eta coupling, the carrier cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2940/S1890 Aut-orbit selector burden `L_total` guard
+
+`P2940/S1890` shows that the P2938 carrier requires selector/symmetry-breaking provenance on nonconstant `U(12)` orbits.  Since no strict selector/provenance theorem or damping coupling is exported, the carrier cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.

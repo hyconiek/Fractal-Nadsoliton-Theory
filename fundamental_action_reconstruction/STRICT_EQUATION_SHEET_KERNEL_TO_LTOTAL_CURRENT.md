@@ -3447,3 +3447,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2935/S1885 strict Aut-breaking source-formula intake gate
 
 `P2935/S1885` converts the P2934 recommendation into a finite intake gate for a future `Strict_AutBreaking_PrimeCoordinate_Source_Law`.  The five obligations are: algebraic nonzero additive Aut-breaking vector, strict nadsoliton formula provenance, nonconventional symmetry-breaking source, delta/eta source law, and beta/eta coupling theorem.  The `2^5=32` status table has exactly one accepting row, while current formula classes satisfy at most algebraic readiness; `0` current candidates are accepted.  No strict `L_p` source, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure is exported.
+
+## P2936/S1886 source-formula obstruction hitting-set matrix
+
+`P2936/S1886` reuses the P2935 five-obligation gate as an exact finite obstruction matrix for the currently named formula routes.  Five routes are audited: bounded formal vectors, lexicographic/minimal-norm coordinate choice, external log/calibration import, selector/orientation/chiral readiness replay, and the future theorem name alone.  All five miss at least one required obligation and `0` routes are accepted; the minimal global blockers are theorem-level obligations such as strict provenance, delta/eta source, or beta/eta coupling, not another coordinate scan.  No strict `L_p` source, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure is exported.
+
+## P2937/S1887 Z12 multiplication-kernel prime-coordinate source candidate
+
+`P2937/S1887` tests one explicit theorem-object candidate after P2936: `K_p = |ker(x -> p*x mod 12)| - 1 = gcd(p,12)-1` for `p in {2,3,5,7,11}`.  This finite Z12 multiplication object gives the coordinate vector `[1,2,0,0,0]` in prime order `2,3,5,7,11` and has `0` product-additivity defects on all `29` audited products.  It is rejected as a strict `L_p` source because unit primes `5,7,11` receive zero and no strict nadsoliton provenance, delta/eta source, or beta/eta coupling theorem is exported.
+
+## P2938/S1888 unit-character-enriched prime-coordinate source candidate
+
+`P2938/S1888` repairs the P2937 unit-prime zero defect at the finite-carrier level by adding the full `U(12)` character table.  The candidate `V_p=(gcd(p,12)-1)+#{nontrivial chi:U(12)->±1 with chi(p)=-1}` gives `[1,2,2,2,2]` for primes `2,3,5,7,11` and has `0` product-additivity defects on all `29` audited products.  This is still conditional carrier readiness only: no strict nadsoliton provenance theorem, delta/eta source law, or beta/eta coupling theorem is exported, so no strict `L_p` source, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure follows.
+
+## P2939/S1889 P2938 carrier Aut-breaking provenance boundary
+
+`P2939/S1889` verifies the algebraic side of the exact P2938 carrier `[1,2,2,2,2]`: all five prime coordinates are nonzero, all `29` audited products have zero additivity defect, and the `U(12)` action-defect matrix gives concrete Aut-breaking witnesses such as a nonidentity unit changing a node value.  This still does not export a strict source: strict nadsoliton provenance, delta/eta source, and beta/eta coupling remain absent, so no strict `L_p`, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure follows.
+
+## P2940/S1890 P2938 carrier Aut-orbit selector burden
+
+`P2940/S1890` computes the `U(12)` orbit quotient for the exact P2938 carrier `[1,2,2,2,2]`.  The carrier is not orbit-constant on several orbits, so any strict provenance theorem for this carrier must include a genuine selector/symmetry-breaking source for the listed nonconstant orbits.  No such source is exported; therefore P2938 remains a finite carrier only and no strict `L_p`, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure follows.
