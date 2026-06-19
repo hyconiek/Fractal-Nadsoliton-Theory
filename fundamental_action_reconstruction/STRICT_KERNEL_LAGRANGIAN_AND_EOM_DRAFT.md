@@ -2792,3 +2792,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2929/S1879 post-damping state-map `L_total` guard
 
 `P2929/S1879` records that after P2928 there is no current role-bearing source packet or fresh strict typed object that can enter nonproxy `L_total`.  The next admissible move must supply a genuinely new object and pass the fresh typed-object intake gate; otherwise all `L_total`, EOM, Hamiltonian, bridge, role-transfer, and ToE promotions remain blocked.
+
+## P2930/S1880 Z12 residue prime-value candidate `L_total` guard
+
+`P2930/S1880` provides a real finite candidate for the missing `L_p` source obligation, but rejects it as role-bearing input: Z12 residue distances are finite labels with zero formal carrier defects, not an intrinsic strict source theorem with scale and damping coupling.  Therefore this candidate cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2931/S1881 residue-affine value-source `L_total` guard
+
+`P2931/S1881` blocks the residue-affine continuation of P2930: multiplicativity/additivity forces the affine residue-distance scale to `a=0`, while strict damping needs nonzero prime-log values plus delta/eta and coupling sources.  Therefore this family cannot enter role-bearing nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2932/S1882 Aut-invariant additive value-source `L_total` guard
+
+`P2932/S1882` shows that the broader Aut(Z12)-invariant additive node-law source space is zero-only on the audited domain.  Since strict damping needs nonzero `L_p` values plus delta/eta and coupling sources, this Aut-invariant value-source route cannot enter role-bearing nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2933/S1883 Aut-breaking prime-coordinate `L_total` guard
+
+`P2933/S1883` identifies the exact remaining shape of a possible nonzero `L_p` source: it must choose a vector in the five-dimensional prime-coordinate space and justify that Aut-breaking choice from strict nadsoliton data.  Until such a strict source law and damping coupling are exported, the prime-coordinate space cannot enter role-bearing nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2934/S1884 Aut-breaking source-law verifier `L_total` guard
+
+`P2934/S1884` verifies that many formal Aut-breaking prime-coordinate vectors exist, but none is role-bearing without strict nadsoliton provenance and damping coupling.  Therefore no coordinate vector from the verifier can enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE until a `Strict_AutBreaking_PrimeCoordinate_Source_Law` is actually exported.
+
+## P2935/S1885 source-formula intake `L_total` guard
+
+`P2935/S1885` defines the gate that an Aut-breaking prime-coordinate source formula must pass before any `L_p` vector can become role-bearing in nonproxy `L_total`.  Current candidates are only algebraic/conventional/readiness forms and fail strict provenance plus coupling obligations, so no EOM, Hamiltonian, bridge, role-transfer, or ToE promotion is licensed.
