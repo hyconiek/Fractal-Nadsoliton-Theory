@@ -3,8 +3,8 @@
 Status: `P2891_STRICT_PHASE_ORIGIN_SOURCE_ARTIFACT_INVENTORY_NO_GO_AUDIT_NO_CLOSURE`
 
 ## Phase/origin source artifact inventory
-- generated JSON files scanned, excluding self: `4938`
-- relevant record count: `385`
+- generated JSON files scanned, excluding self: `4939`
+- relevant record count: `386`
 - coupled positive export record count: `0`
 
 ## Boundary

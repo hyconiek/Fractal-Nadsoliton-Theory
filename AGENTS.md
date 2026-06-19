@@ -1354,3 +1354,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Relevant phase/source/coupling language exists, but no artifact exports coupled positive source and `9/5` variational-density booleans satisfying the obligation.
 - Do not promote Fourier-power signatures, Fourier-character phase pins, P2888/P2890 carrier/orbit representatives, bounded coefficients, `C12`-neutral unit measures, or inventory hits to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must introduce one new explicit strict phase/origin source formula with computed nonconventional sign/phase and coupling theorem to the `9/5` variational density, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current post-P2891 phase/origin state-map no-new-live-frontier guardrail (P2892/S1842, 2026-06-19)
+
+- P2892 reconciles the post-P2888/P2891 `9/5` phase/origin sourcehood lane across non-`C12` carriers, translation orbits, Fourier power/phase, and generated-artifact inventory.
+- All four recent lanes remain blocked on current artifacts, and no unquarantined positive generated-JSON unlock is found for strict phase/origin sourcehood, `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+- Do not promote non-`C12` support choices, translation representatives, Fourier phase/power, bounded density coefficients, `C12`-neutral unit measures, ratio algebra, scalar Euler transmission, or bare inventory hits to sourcehood or closure.
+- A next admissible proof-grade move must supply one genuinely new explicit strict source formula/artifact with computed nonconventional sign/phase and a coupling theorem to the `9/5` variational density, pivot to a genuinely different typed object outside the support/origin/density/orbit/Fourier/inventory family, or preserve this no-new-live-frontier certificate.
+
+## Current free-orbit section obstruction guardrail (P2893/S1843, 2026-06-19)
+
+- P2893 upgrades the P2889/P2892 orbit obstruction to a finite section theorem for source-neutral quotient-to-embedded representative selection on the `9/5` carrier orbits.
+- The recomputed `600` carriers form `50` free `Z12` orbits with point stabilizer size `1`; the invariant quotient-to-embedded section count is `0`.
+- Do not promote equivariant orbit endomorphisms, canonical/lexicographic representatives, quotient-section conventions, support/origin/density choices, Fourier phase/power, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a genuine translation-breaking strict source with nonconventional phase/sign and a coupling theorem to the `9/5` variational density, pivot to a genuinely different typed object outside quotient-section/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current translation-breaking source alphabet capacity guardrail (P2894/S1844, 2026-06-19)
+
+- P2894 audits finite `Z12`-set source alphabets after P2893 and proves that all total sizes `1..11` have `0` equivariant maps to a free `12`-origin `9/5` carrier orbit.
+- Scalar, binary sign, and `3/4/6`-period phase sources are too small; a free `12`-torsor is necessary but still not sufficient without a nonimported basepoint/polarity law and coupling theorem.
+- Do not promote low-capacity alphabets, scalar/sign/low-period phase sources, free-torsor possibility alone, canonical representatives, quotient-section conventions, Fourier phase/power, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must construct an explicit strict free-`12`-torsor source with nonimported basepoint/polarity and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside quotient-section/source-alphabet/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current free-12-torsor basepoint/polarity guardrail (P2895/S1845, 2026-06-19)
+
+- P2895 grants the minimum free-`12` torsor required by P2894 and audits the missing basepoint/polarity law.
+- The granted torsor has exactly `12` equivariant maps to a free `12`-origin `9/5` carrier orbit but `0` invariant basepoints; offset choice remains the missing imported phase/origin.
+- Do not promote an unpointed free-`12` torsor, offset choice, polarity pairing, canonical zero, chosen isomorphism, low-capacity alphabet, quotient-section convention, Fourier phase/power, or inventory hit to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply an explicit nonimported basepoint/polarity law on the free-`12` torsor with coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
