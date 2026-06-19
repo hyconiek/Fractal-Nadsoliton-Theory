@@ -1,0 +1,116 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonproxy_ltotal_source": false,
+    "accepted_interface_candidate_count": 0,
+    "gamma_lane_provenance_candidate_count": 0,
+    "interface_candidate_count": 3,
+    "iq_coupled_candidate_count": 0,
+    "nonzero_candidate_count": 2,
+    "p2601_identity_action_source_exported": true,
+    "p2601_to_sigma_gamma_interface_exported": true,
+    "p2921_rechecked_verifier_exported": true,
+    "strict_sigma_gamma_source_accepted": false
+  },
+  "constructed_theoretical_objects": {
+    "interface_candidate_evaluations": [
+      {
+        "accepted_by_p2921_verifier": false,
+        "interface_failure": "P2601 sources the identity no-op y_1=0 in the damping lane; sigma_Gamma requires a nonzero Action value coupled to I_Q",
+        "missing_obligations": [
+          "computed_nonzero_value",
+          "strict_nadsoliton_provenance_for_gamma_lane",
+          "action_dimension_exported_for_sigma_gamma",
+          "scale_orbit_broken_nonconventionally",
+          "explicit_IQ_coupling"
+        ],
+        "name": "p2601_identity_noop_value_y1",
+        "obligation_results": {
+          "action_dimension_exported_for_sigma_gamma": false,
+          "computed_nonzero_value": false,
+          "explicit_IQ_coupling": false,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance_for_gamma_lane": false
+        },
+        "source_expression": "y_1 = integral_0^0 gamma(tau) d tau = 0"
+      },
+      {
+        "accepted_by_p2921_verifier": false,
+        "interface_failure": "boolean source status is not an Action-valued Gamma coefficient and has no P2917 quotient coupling",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance_for_gamma_lane",
+          "action_dimension_exported_for_sigma_gamma",
+          "scale_orbit_broken_nonconventionally",
+          "explicit_IQ_coupling"
+        ],
+        "name": "p2601_unital_multiplicative_boolean_source",
+        "obligation_results": {
+          "action_dimension_exported_for_sigma_gamma": false,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": false,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance_for_gamma_lane": false
+        },
+        "source_expression": "hydrodynamic_identity_action_source_exported and multiplicative_character_law_source_exported"
+      },
+      {
+        "accepted_by_p2921_verifier": false,
+        "interface_failure": "the accepting row is conditional on damping residual keys, not a Gamma/Lambda Action source",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance_for_gamma_lane",
+          "action_dimension_exported_for_sigma_gamma",
+          "scale_orbit_broken_nonconventionally",
+          "explicit_IQ_coupling"
+        ],
+        "name": "p2601_post_unital_post_m2_residual_accepting_row",
+        "obligation_results": {
+          "action_dimension_exported_for_sigma_gamma": false,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": false,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance_for_gamma_lane": false
+        },
+        "source_expression": "residual truth-table accepting row requires prime-log and slope/anchor keys"
+      }
+    ],
+    "interface_schema": {
+      "acceptance_rule": "a P2601-derived candidate must pass all P2921 verifier obligations without changing lane semantics",
+      "forbidden_shortcut": "do not convert P2601 damping-lane y_1=0 or boolean source status into Gamma/Lambda nonzero Action source by name reuse",
+      "interface_name": "P2601_Identity_Action_to_sigma_Gamma_Source_Interface",
+      "source_side": "P2601 hydrodynamic identity action / unital multiplicative damping source",
+      "target_side": "P2921 sigma_Gamma Action source verifier for I_Q"
+    },
+    "p2601_source_facts": {
+      "damping_amplitude_at_identity": "y_1 = integral_0^0 gamma(tau) d tau = 0",
+      "hydrodynamic_identity_action_source_exported": true,
+      "multiplicative_character_law_source_exported": true,
+      "remaining_keys_after_m2_and_unital": [
+        "prime_log_proportionality_source",
+        "slope_value_or_prime_anchor_source"
+      ],
+      "unital_left_normalization_source_exported": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_sigma_gamma_source_accepted": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not reuse P2601 source prose as a Gamma/Lambda source.  The next admissible move must either provide a new nonzero sigma_Gamma formula with explicit I_Q coupling, or pivot to a different new typed object outside both the Gamma/Lambda and P2601 damping-source interface lanes.",
+    "positive_witnesses": {
+      "interface_schema_constructed": true,
+      "p2601_existing_source_artifact_tested": true,
+      "p2921_verifier_obligations_applied": true
+    },
+    "reason": "P2922 tests the strongest visible existing action/source artifact, P2601, against the P2921 sigma_Gamma verifier.  P2601 remains a real damping-lane identity-action/unital source, but its concrete value is the identity no-op y_1=0 and its boolean/residual source facts do not provide a nonzero Gamma/Lambda Action coefficient or explicit coupling to I_Q.  Therefore no P2601-derived sigma_Gamma source is accepted."
+  },
+  "input_hashes": {
+    "P2601": "1637065f6629f0cff12dae17c62c45ce095a7dd8d745f2dad98a7394b46cfcbd",
+    "P2921": "b4c9991a8b767abdfc4b3cc0f983b336c50124a89dc927daba46d92b19cacc62"
+  },
+  "status": "P2922_P2601_IDENTITY_ACTION_TO_SIGMA_GAMMA_INTERFACE_AUDIT_NO_ACCEPTED_SOURCE"
+}

@@ -1536,3 +1536,48 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Treat this as finite field-variable readiness only: no strict nonzero `Gamma_9_5` action-unit source theorem and no continuum/nonproxy `L_total` closure are exported.
 - Do not promote the quotient field variables, P2911 pullback, P2912 Jacobian, P2916 quotient theorem, or symbolic `Gamma_9_5` to EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without the strict `Gamma_9_5` source theorem.
 - A next admissible move should supply that source theorem or audit current artifacts for an existing action-unit source export; otherwise preserve no-new-live-frontier for the Gamma/Lambda lane.
+
+## Current Gamma action-unit source-law obstruction guardrail (P2918/S1868, 2026-06-19)
+
+- P2918 constructs the missing `Strict_Gamma_9_5_Action_Unit_Source_Law_Coupling_Theorem` schema and proves a finite homogeneity obstruction: P2916/P2917 fix quotient weights `1/12` and `1/144`, but all finite rows remain proportional to a free `Gamma_9_5`.
+- Candidate source laws `Gamma_9_5 = 0`, `1`, `12`, `144`, imported Action token, and the named missing strict theorem do not export a strict nonzero nadsoliton-derived action-unit value coupled to `I_Q`.
+- Do not promote P2911-P2918 Gamma/Lambda readiness to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a genuinely new strict `Gamma_9_5` source object and coupling theorem.
+- The next admissible move is either one new strict action-unit source object for `Gamma_9_5`, or a Gamma/Lambda no-new-live-frontier certificate if no such object is supplied.
+
+## Current Gamma scale-orbit source-object intake guardrail (P2919/S1869, 2026-06-19)
+
+- P2919 constructs the required `Strict_Gamma_9_5_Action_Unit_Scale_Fixing_Source_Object` schema: `sigma_Gamma: strict_nadsoliton_data -> Action_nonzero` coupled to `I_Q`.
+- The finite scale-orbit matrix shows that quotient weights, derivative ratios, orbit size, and edge count are invariant under `Gamma_9_5 -> c*Gamma_9_5`; they fix relative weights but not the Gamma scale.
+- No strict scale-breaking `sigma_Gamma` source object is exported; an imported Action label would break scale only by convention and is rejected as strict provenance.
+- Do not promote P2911-P2919 Gamma/Lambda readiness to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a genuinely new strict `sigma_Gamma` source object and coupling theorem.
+- If no such source object is supplied, the next honest move is a Gamma/Lambda no-new-live-frontier certificate.
+
+## Current Gamma/Lambda no-new-live-frontier certificate guardrail (P2920/S1870, 2026-06-19)
+
+- P2920 reconciles P2911-P2919 and exports a bounded no-new-live-frontier certificate for the Gamma/Lambda lane on current artifacts.
+- Pullback, Jacobian, measure quotient, displacement field-variable, homogeneity, and scale-orbit rows are finite readiness/obstruction results only; `0` rows unlock nonproxy `L_total`.
+- The only admissible unlock is exactly one new `Strict_sigma_Gamma_Action_Source_Map` with computed nonzero Action value and explicit coupling `I_Q = sigma_Gamma * (1/12) * sum_d Q_d`.
+- Do not replay Gamma/Lambda quotient, Jacobian, source-name, scale-orbit, bridge, role-transfer, `L_total`, EOM, Hamiltonian, or ToE promotion without that new typed source object.
+- If no such source object is supplied, pivot to a different genuinely new typed object outside this lane rather than manufacturing closure.
+
+## Current sigma_Gamma unlock verifier guardrail (P2921/S1871, 2026-06-19)
+
+- P2921 exports an executable `Strict_sigma_Gamma_Action_Source_Map_Unlock_Verifier` for the P2920 minimal unlock packet.
+- A candidate `sigma_Gamma` source must pass five obligations: computed nonzero value, strict nadsoliton provenance, Action dimension, nonconventional scale-orbit breaking, and explicit `I_Q` coupling.
+- The current six-candidate family has `0` accepted sources; quotient/count/imported/zero/placeholder candidates do not unlock nonproxy `L_total`.
+- Do not promote Gamma/Lambda readiness to `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE unless a concrete `sigma_Gamma` formula passes the verifier.
+- If no such formula is supplied, pivot outside the Gamma/Lambda lane rather than replaying quotient/Jacobian/source-name analyses.
+
+## Current P2601-to-sigma_Gamma interface guardrail (P2922/S1872, 2026-06-19)
+
+- P2922 tests P2601 hydrodynamic identity-action/unital multiplicative source facts against the P2921 `sigma_Gamma` verifier.
+- P2601 remains a real damping-lane source, but its identity value is `y_1=0`; boolean source status and residual accepting rows are not nonzero Gamma/Lambda Action coefficients and have no explicit `I_Q` coupling.
+- Do not reuse P2601 source prose as a strict `sigma_Gamma` source, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure.
+- A next admissible move must provide a new nonzero `sigma_Gamma` formula with `I_Q` coupling, or pivot to a genuinely different typed object outside the Gamma/Lambda and P2601-interface lanes.
+
+## Current prime-log proportionality source matrix guardrail (P2923/S1873, 2026-06-19)
+
+- P2923 pivots outside Gamma/Lambda and P2601-to-sigma_Gamma replay to the P2601 strict-damping residual frontier: prime-log proportionality.
+- The finite prime-exponent matrix over `{2,3,5,7,11}` has rank `5` and zero product-additivity failures on audited products `d*e<=11`; this is formal log-character readiness only.
+- No strict source for prime log atom values `L_p`, no `delta=4/5` slope/prime anchor, no strict damping `beta/eta`, no nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
+- A next admissible move may attack exactly one remaining damping atom: strict source for `L_p` values or strict slope/prime anchor source; do not replay Gamma/Lambda, P2601 identity action, or factorization readiness as closure evidence.

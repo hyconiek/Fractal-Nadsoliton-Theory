@@ -1,0 +1,175 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonproxy_ltotal_source": false,
+    "accepted_candidate_count": 0,
+    "action_dimension_pass_count": 2,
+    "candidate_count": 6,
+    "computed_nonzero_value_pass_count": 4,
+    "explicit_IQ_coupling_pass_count": 6,
+    "obligation_count": 5,
+    "p2920_rechecked_certificate": true,
+    "scale_orbit_breaking_pass_count": 0,
+    "strict_nadsoliton_provenance_pass_count": 0,
+    "strict_sigma_gamma_source_accepted": false,
+    "strict_sigma_gamma_unlock_verifier_exported": true
+  },
+  "constructed_theoretical_objects": {
+    "candidate_evaluations": [
+      {
+        "accepted": false,
+        "failure": "dimensionless quotient weight is not strict Action provenance and fixes scale only by convention",
+        "formula": "sigma_Gamma = 1/12",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance",
+          "action_dimension_exported",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_from_quotient_weight",
+        "obligation_results": {
+          "action_dimension_exported": false,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      },
+      {
+        "accepted": false,
+        "failure": "edge-normalization weight is dimensionless quotient arithmetic, not an Action source",
+        "formula": "sigma_Gamma = 1/144",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance",
+          "action_dimension_exported",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_from_edge_weight",
+        "obligation_results": {
+          "action_dimension_exported": false,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      },
+      {
+        "accepted": false,
+        "failure": "orbit size is a counting invariant already consumed by quotienting",
+        "formula": "sigma_Gamma = 12",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance",
+          "action_dimension_exported",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_from_orbit_size",
+        "obligation_results": {
+          "action_dimension_exported": false,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      },
+      {
+        "accepted": false,
+        "failure": "external unit has dimension but lacks strict nadsoliton provenance and nonconventional scale breaking",
+        "formula": "sigma_Gamma = ActionUnit_external",
+        "missing_obligations": [
+          "strict_nadsoliton_provenance",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_imported_action_unit",
+        "obligation_results": {
+          "action_dimension_exported": true,
+          "computed_nonzero_value": true,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      },
+      {
+        "accepted": false,
+        "failure": "zero value cannot source a nonzero action coefficient",
+        "formula": "sigma_Gamma = 0",
+        "missing_obligations": [
+          "computed_nonzero_value",
+          "strict_nadsoliton_provenance",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_zero",
+        "obligation_results": {
+          "action_dimension_exported": true,
+          "computed_nonzero_value": false,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      },
+      {
+        "accepted": false,
+        "failure": "placeholder names the required theorem but supplies no computed value or provenance",
+        "formula": "sigma_Gamma(strict_nadsoliton_data) = gamma_*",
+        "missing_obligations": [
+          "computed_nonzero_value",
+          "strict_nadsoliton_provenance",
+          "action_dimension_exported",
+          "scale_orbit_broken_nonconventionally"
+        ],
+        "name": "sigma_Gamma_strict_source_placeholder",
+        "obligation_results": {
+          "action_dimension_exported": false,
+          "computed_nonzero_value": false,
+          "explicit_IQ_coupling": true,
+          "scale_orbit_broken_nonconventionally": false,
+          "strict_nadsoliton_provenance": false
+        }
+      }
+    ],
+    "minimal_success_shape": {
+      "required_coupling": "I_Q = sigma_Gamma * (1/12) * sum_d Q_d",
+      "required_formula": "sigma_Gamma(strict_nadsoliton_data) = gamma_* in Action_nonzero",
+      "required_status": "all five obligations true"
+    },
+    "obligation_failure_counts": {
+      "action_dimension_exported": 4,
+      "computed_nonzero_value": 2,
+      "explicit_IQ_coupling": 0,
+      "scale_orbit_broken_nonconventionally": 6,
+      "strict_nadsoliton_provenance": 6
+    },
+    "verifier_schema": {
+      "acceptance_obligations": [
+        "computed_nonzero_value",
+        "strict_nadsoliton_provenance",
+        "action_dimension_exported",
+        "scale_orbit_broken_nonconventionally",
+        "explicit_IQ_coupling"
+      ],
+      "accepted_unlock_consequence": "only after acceptance may a later step attempt nonproxy L_total coupling; this verifier itself does not export L_total",
+      "input_type": "candidate sigma_Gamma source map plus coupling to I_Q",
+      "output_type": "accepted unlock witness or rejected candidate with missing obligations",
+      "verifier_name": "Strict_sigma_Gamma_Action_Source_Map_Unlock_Verifier"
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_sigma_gamma_source_accepted": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "A future move should supply exactly one concrete sigma_Gamma formula and run this verifier.  If it passes all five obligations, only then audit nonproxy L_total coupling; if it fails or no formula is supplied, pivot outside the Gamma/Lambda lane.",
+    "positive_witnesses": {
+      "candidate_family_evaluated": true,
+      "missing_obligations_reported": true,
+      "unlock_verifier_constructed": true
+    },
+    "reason": "P2921 turns the P2920 minimal unlock packet into an executable verifier.  Six candidate sigma_Gamma maps are evaluated against five obligations.  Existing quotient/count/imported/zero/placeholder candidates fail strict provenance, Action sourcehood, nonconventional scale breaking, or nonzero value obligations; accepted candidates remain zero.  The verifier is exported, not a source theorem or L_total closure."
+  },
+  "input_hashes": {
+    "P2920": "6c827d945d77dbb0e9b32b050bad4313d2f426593496879ac448147fc5b22ccb"
+  },
+  "status": "P2921_SIGMA_GAMMA_UNLOCK_VERIFIER_EXECUTED_NO_ACCEPTED_SOURCE"
+}

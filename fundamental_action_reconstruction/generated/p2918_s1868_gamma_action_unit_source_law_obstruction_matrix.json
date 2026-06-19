@@ -1,0 +1,146 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonproxy_ltotal_source_theorem": false,
+    "accepted_candidate_count": 0,
+    "candidate_source_law_count": 6,
+    "edge_relative_weight_fixed": "1/144",
+    "finite_system_rank_for_gamma_value": 0,
+    "gamma_9_5_remains_free_scalar": true,
+    "nonproxy_ltotal_coupling_source_exported": false,
+    "obstruction_row_count": 4,
+    "p2917_rechecked_finite_field_variable_theorem": true,
+    "quotient_relative_weight_fixed": "1/12",
+    "strict_gamma_9_5_action_unit_source_law_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "candidate_source_laws": [
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = 0",
+        "coupled_to_p2917_quotient_integral": true,
+        "failure": "zero assignment destroys the local action contribution and is not a nonzero source theorem",
+        "has_nonzero_action_unit": false,
+        "source_type": "degenerate zero assignment",
+        "strict_nadsoliton_source": false
+      },
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = 1",
+        "coupled_to_p2917_quotient_integral": true,
+        "failure": "finite quotient arithmetic can set a dimensionless unit convention but cannot source an Action-dimension token",
+        "has_nonzero_action_unit": false,
+        "source_type": "dimensionless normalization convention",
+        "strict_nadsoliton_source": false
+      },
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = 12",
+        "coupled_to_p2917_quotient_integral": true,
+        "failure": "orbit size is a counting factor already used in renormalization, not a strict action-unit source",
+        "has_nonzero_action_unit": false,
+        "source_type": "quotient-orbit-size normalization",
+        "strict_nadsoliton_source": false
+      },
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = 144",
+        "coupled_to_p2917_quotient_integral": true,
+        "failure": "edge count is a combinatorial cardinality and would double-count the quotient theorem",
+        "has_nonzero_action_unit": false,
+        "source_type": "directed-edge-count normalization",
+        "strict_nadsoliton_source": false
+      },
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = imported Action token",
+        "coupled_to_p2917_quotient_integral": true,
+        "failure": "dimension can be imported, but current artifacts do not derive the value from strict nadsoliton data",
+        "has_nonzero_action_unit": true,
+        "source_type": "external dimensional token",
+        "strict_nadsoliton_source": false
+      },
+      {
+        "accepted": false,
+        "candidate": "Gamma_9_5 = strict nadsoliton action-unit source law",
+        "coupled_to_p2917_quotient_integral": false,
+        "failure": "this names the missing theorem; it is not exported by the finite quotient/field-variable chain",
+        "has_nonzero_action_unit": false,
+        "source_type": "required missing theorem",
+        "strict_nadsoliton_source": false
+      }
+    ],
+    "finite_obstruction_matrix": [
+      {
+        "finite_equation": "I_Q = Gamma_9_5 * (1/12) * sum_d Q_d",
+        "finite_weight_fixed": "1/12",
+        "gamma_9_5_status": "free coefficient",
+        "gamma_9_5_value_fixed_by_row": false,
+        "reason": "the row is linear and homogeneous in Gamma_9_5; quotient arithmetic fixes only relative weights",
+        "row": "quotient_integral_weight"
+      },
+      {
+        "finite_equation": "I_E = Gamma_9_5 * (1/144) * sum_edges q_edge",
+        "finite_weight_fixed": "1/144",
+        "gamma_9_5_status": "free coefficient",
+        "gamma_9_5_value_fixed_by_row": false,
+        "reason": "the row is linear and homogeneous in Gamma_9_5; quotient arithmetic fixes only relative weights",
+        "row": "edge_integral_weight"
+      },
+      {
+        "finite_equation": "dI_Q/dQ_d = Gamma_9_5/12",
+        "finite_weight_fixed": "1/12",
+        "gamma_9_5_status": "free coefficient",
+        "gamma_9_5_value_fixed_by_row": false,
+        "reason": "the row is linear and homogeneous in Gamma_9_5; quotient arithmetic fixes only relative weights",
+        "row": "quotient_derivative"
+      },
+      {
+        "finite_equation": "dI_Q/dq_edge = Gamma_9_5/144",
+        "finite_weight_fixed": "1/144",
+        "gamma_9_5_status": "free coefficient",
+        "gamma_9_5_value_fixed_by_row": false,
+        "reason": "the row is linear and homogeneous in Gamma_9_5; quotient arithmetic fixes only relative weights",
+        "row": "edge_derivative"
+      }
+    ],
+    "homogeneity_certificate": {
+      "all_finite_rows_linear_in_gamma": true,
+      "finite_rows_fix_gamma_value": false,
+      "finite_rows_fix_relative_weights": [
+        "1/12",
+        "1/144"
+      ],
+      "interpretation": "P2916/P2917 normalize the quotient measure and variables, but every exported equation remains proportional to Gamma_9_5."
+    },
+    "missing_theorem_name": "Strict_Gamma_9_5_Action_Unit_Source_Law_Coupling_Theorem",
+    "theorem_schema": [
+      "derive a nonzero Gamma_9_5 value from strict nadsoliton data",
+      "prove the value has Action dimension rather than being a dimensionless quotient count",
+      "couple Gamma_9_5 to the P2917 quotient integral I_Q = Gamma_9_5/12 * sum_d Q_d",
+      "prove the coupled source is nonproxy L_total-ready without importing selector, role transfer, bridge closure, or ToE closure"
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "nonzero_action_unit_value_exported": false,
+      "role_transfer_exported": false,
+      "strict_gamma_9_5_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "The next admissible move should pivot away from quotient/Jacobian arithmetic and supply one genuinely new strict action-unit source object for Gamma_9_5, with an explicit nonzero value and coupling theorem to I_Q.  If no such object is supplied, emit a Gamma/Lambda no-new-live-frontier certificate rather than promoting P2911-P2918 readiness to L_total, EOM, Hamiltonian, bridge closure, role transfer, or ToE.",
+    "positive_witnesses": {
+      "candidate_source_laws_audited": true,
+      "finite_homogeneity_obstruction_matrix_constructed": true,
+      "missing_source_law_schema_constructed": true
+    },
+    "reason": "P2918 constructs the exact Gamma_9_5 source-law coupling theorem that would be needed after P2917 and proves a finite homogeneity obstruction: P2916/P2917 fix the quotient weights 1/12 and 1/144, but every finite integral and derivative row is still proportional to an unconstrained Gamma_9_5.  Six candidate source laws are audited; none exports a strict nonzero nadsoliton-derived action-unit value coupled to the quotient integral."
+  },
+  "input_hashes": {
+    "P2917": "bc05d67bba3b466981abb0b95a09dea5491cbc8bbe45c16cf60f115a261b854d"
+  },
+  "status": "P2918_GAMMA_ACTION_UNIT_SOURCE_LAW_OBSTRUCTION_MATRIX_NO_EXPORT"
+}
