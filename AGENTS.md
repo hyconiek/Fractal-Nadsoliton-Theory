@@ -1736,3 +1736,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This is arithmetic candidate progress only; no strict nadsoliton theorem forces these ratios and no beta/eta coupling theorem is exported.
 - Do not promote P2945 to strict delta/eta source law, strict damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must prove strict provenance for these exact ratio formulas and couple them to beta/eta damping, or pivot outside this ratio-candidate lane; otherwise preserve the P2929-P2945 boundary.
+
+## Current delta/eta ratio strict-forcing obstruction guardrail (P2946/S1896, 2026-06-19)
+
+- P2946 tests whether the P2945 exact formulas are forced by the finite identity-positive-cone premises alone.
+- The bounded positive-coordinate model class leaves eta nonunique: `eta=9/5` occurs only on a proper subset of admissible vectors, and the exact P2938 vector is admissible but not uniquely forced by these premises.
+- The `delta=4/5` formula also remains theorem-unselected because denominator-equivalent aliases coincide under `identity_count=zero_count=1`; no beta/eta coupling theorem is exported.
+- Do not continue ratio-alias or bounded positive-vector scans as primary strategy, and do not promote P2946 to strict delta/eta source law, strict damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.  A next admissible move must supply an independent strict theorem selecting the exact P2938 vector and P2945 ratio formulas plus beta/eta coupling, or pivot outside this ratio-forcing lane; otherwise preserve the P2929-P2946 boundary.
+
+## Current unbounded ratio non-forcing theorem guardrail (P2947/S1897, 2026-06-19)
+
+- P2947 removes the bounded-scan caveat from P2946 by constructing the exact parametric family `v(S)=(S-4,1,1,1,1)` for every integer `S>=5`, giving positive-cone admissible `eta=S/5`.
+- Therefore the finite identity-positive-cone premises alone do not force `eta=9/5`, the exact P2938 vector `[1,2,2,2,2]`, or sum `9`; the P2945 delta formula also remains semantically unselected because identity/zero aliases coincide at `4/5`.
+- Do not continue ratio-forcing by more bounded scans or alias variants, and do not promote P2947 to strict delta/eta source law, strict damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a genuinely new strict source theorem selecting the exact P2938 vector/sum `9` and delta numerator semantics plus beta/eta coupling, or pivot outside the P2938/P2945 ratio lane; otherwise preserve the P2929-P2947 no-strict-export certificate.
+
+## Current torsion-character ratio package skeleton guardrail (P2948/S1898, 2026-06-19)
+
+- P2948 constructs the finite theorem spine that P2947 showed was missing from positive-cone premises alone: with the P2938 torsion-character aggregate as an explicit extra source premise, the exact vector `[1,2,2,2,2]`, sum `9`, `delta=4/5`, `eta=9/5`, and `eta=1+delta` are recovered.
+- This is finite package readiness only.  It does not export strict nadsoliton provenance for the torsion-character aggregate, strict delta numerator semantics, beta/eta damping coupling, strict damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not treat P2948 as closing the ratio lane or overriding the P2947 nonforcing theorem; the P2938 aggregate remains an explicit extra premise until strict provenance is proved.
+- A next admissible move must attack exactly one remaining skeleton premise: strict provenance for the P2938 torsion-character aggregate, identity-deficit delta numerator semantics, or beta/eta coupling for this exact package; otherwise pivot outside this lane and preserve the P2929-P2948 finite-only boundary.
+
+## Current delta numerator semantics separation guardrail (P2949/S1899, 2026-06-19)
+
+- P2949 attacks exactly one P2948 skeleton premise: strict semantic selection of the P2945 delta numerator.
+- The P2944 algebraic identity role and carrier-zero role have the same finite extension `{1}`, so identity-deficit, zero-deficit, intersection-deficit, and union-deficit count functionals all return `delta=4/5`.
+- This extensional coincidence does not export a strict intensional/source theorem preferring identity-deficit semantics, and it does not export strict delta/eta, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not continue count-alias variants as primary strategy.  A next admissible move must export an intensional identity-deficit source theorem, attack another P2948 premise such as torsion-character provenance or beta/eta coupling, or pivot outside this ratio-package lane while preserving the P2929-P2949 boundary.
