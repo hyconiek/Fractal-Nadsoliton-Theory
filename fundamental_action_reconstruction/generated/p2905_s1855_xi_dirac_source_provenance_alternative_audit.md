@@ -7,8 +7,8 @@ Status: `P2905_XI_DIRAC_SOURCE_PROVENANCE_ALTERNATIVE_AUDIT_NO_STRICT_PROVENANCE
 - translated/sign-flipped alternatives to `Xi_{0,+}`: `23`
 
 ## Provenance scan
-- generated JSON files scanned: `4952`
-- provenance/mention hits: `6`
+- generated JSON files scanned: `4953`
+- provenance/mention hits: `13`
 - positive provenance hits: `0`
 - strict provenance exported: `False`
 

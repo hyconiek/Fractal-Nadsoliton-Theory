@@ -1452,3 +1452,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The current corpus has candidate/boundary mentions but `0` positive provenance hits; `Xi_{0,+}` remains a translation-breaking postulate/candidate, not a strict nadsoliton-sourced law.
 - Do not promote `Xi_{0,+}`, its candidate coupling, inventory mentions, symbolic `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a new provenance theorem.
 - A next admissible proof-grade move must introduce a strict asymmetry/chiral/defect-generation theorem selecting `Xi_{0,+}` over the `23` alternatives, pivot outside the Xi/defect-placement lane, or preserve no-new-live-frontier.
+
+## Current Xi strict asymmetry theorem acceptance obstruction guardrail (P2906/S1856, 2026-06-19)
+
+- P2906 constructs the exact acceptance schema for a strict asymmetry/chiral theorem selecting `Xi_{0,+}` over the `23` alternatives.
+- The finite target gate finds `0` translation fixed points; sign/chiral sourcehood alone leaves `12` translated basepoints, while origin sourcehood alone leaves `2` polarities.
+- Do not promote sign-only, origin-only, translation-neutral, candidate, inventory, symbolic `rho_9/5`, or `U_9_5` data to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure.
+- A next admissible proof-grade move must provide a joint origin-and-sign strict provenance theorem computing `b=0` and `sigma=+` with coupling to `A(0,+)`, pivot outside the Xi/defect-placement lane, or preserve no-new-live-frontier.
+
+## Current joint origin-sign source theorem candidate guardrail (P2907/S1857, 2026-06-19)
+
+- P2907 constructs an explicit imported joint theorem-postulate `J_{0,+}` with origin `0` and sign `+`, collapsing the `24` Xi alternatives to `Xi_{0,+}` and selecting `D=(0,5)`.
+- This passes the finite P2906 joint-origin/sign gate only as readiness: `J_{0,+}` is not strict nadsoliton provenance and `U_9_5` remains symbolic/non-unit-bearing.
+- Do not promote `J_{0,+}`, its selected coordinate/sign, `Xi_{0,+}`, symbolic `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure.
+- A next admissible proof-grade move must prove/audit strict provenance for `J_{0,+}` itself, pivot outside the Xi/defect-placement lane, or preserve no-new-live-frontier; only after provenance may `U_9_5 -> L_total` coupling be attacked.
+
+## Current joint source provenance alternative audit guardrail (P2908/S1858, 2026-06-19)
+
+- P2908 constructs the full `24`-member translated/sign-flipped `J_{b,sigma}` alternative family and scans generated artifacts for a positive strict provenance export selecting `J_{0,+}`.
+- The scan finds candidate/postulate/boundary mentions and negative flags but `0` positive provenance hits; `J_{0,+}` remains imported readiness, not a strict nadsoliton-derived joint theorem.
+- Do not promote `J_{0,+}`, `Xi_{0,+}`, symbolic `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure from provenance mentions or postulated variants.
+- A next admissible proof-grade move must provide a genuinely new strict construction computing `J_{0,+}`, pivot outside Xi/J/defect-placement, or preserve no-new-live-frontier; unit-bearing `U_9_5 -> L_total` remains downstream.
+
+## Current post-joint-source no-new-live-frontier guardrail (P2909/S1859, 2026-06-19)
+
+- P2909 reconciles the state map after P2908 across `8` lanes and finds `0` newly exported strict typed objects, source theorems, blocker-cuts, provider classes, or coupling theorems.
+- Xi/J provenance, symbolic `U_9_5` coupling, translation-neutral selector replay, defect templates, Lagrangian/EOM reverse closure, selector/`QW-2191` replay, and bridge/role-transfer/ToE promotion remain repetition-gated on current artifacts.
+- Do not continue Xi/J/defect-placement replay, sign-only/origin-only variants, symbolic `U_9_5 -> L_total` promotion, role transfer, bridge closure, or ToE promotion without a genuinely new strict construction.
+- A next admissible move must supply either a strict construction computing `J_{0,+}` or exactly one different new typed object with a bounded acceptance/witness test; otherwise preserve the no-new-live-frontier certificate.
+
+## Current unit-bearing coupling-token dimensional gate guardrail (P2910/S1860, 2026-06-19)
+
+- P2910 introduces a new typed object outside Xi/J/defect-placement: the coupling-token candidate `Gamma_9_5`.
+- Finite dimension algebra computes the required action-density unit vector and passes dimensional consistency, but this is readiness only.
+- Do not promote `Gamma_9_5`, dimension matching, symbolic `q_9_5`, `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without strict source/provenance, localization/pullback, and variational chain-rule theorems.
+- A next admissible move in this lane must prove exactly one of those missing theorems; otherwise preserve no-new-live-frontier or pivot to a different genuinely new typed object.
+
+## Current Gamma localization/pullback skeleton guardrail (P2911/S1861, 2026-06-19)
+
+- P2911 constructs the endpoint-average `Lambda_edge_to_site` matrix from `144` directed `Z12` edge carriers to `12` site-density slots; it is nonnegative, column-normalized, endpoint-supported, and translation-equivariant.
+- Treat this as finite localization readiness only: no strict continuum/site-measure pullback theorem, no `Gamma_9_5` source, and no variational chain rule are exported.
+- Do not promote the finite matrix, `Gamma_9_5`, symbolic `q_9_5`, `rho_9/5`, or `U_9_5` to nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a strict pullback/provenance theorem and variational chain rule.
+- A next admissible move in this lane must prove exactly one missing theorem: pullback provenance or variational chain rule; otherwise preserve no-new-live-frontier or pivot to another genuinely new typed object.
