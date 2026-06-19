@@ -2676,3 +2676,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2900/S1850 defect-placement source-law inventory `L_total` guard
 
 `P2900/S1850` is a current-artifact inventory certificate, not a strict action construction.  It adds no strict defect-placement source law, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2901/S1851 conditional defect-placement schema `L_total` guard
+
+`P2901/S1851` gives a formal `9/5` support-density schema only after imported `(basepoint, polarity)` data are supplied.  Because no nonimported source theorem selects that pair and no unit-bearing variational coupling theorem is proved, the schema is not a nonproxy `L_total`, EOM, or Hamiltonian construction.
+
+## P2902/S1852 pointed defect template `L_total` guard
+
+`P2902/S1852` computes a local symbolic derivative for each axiom-pointed `9/5` density template, but the unit `U_9_5` and pointed signed axiom remain added premises.  Therefore the result is a variational template only and does not export nonproxy `L_total`, EOM, Hamiltonian closure, role transfer, or ToE closure.
+
+## P2903/S1853 fixed-point obstruction `L_total` guard
+
+`P2903/S1853` adds no new action density.  It proves that translation-neutral internal invariant data cannot select the pointed signed axiom needed by the P2902 template, because the pointed signed target has no translation fixed points.  Therefore no unit-bearing nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure is exported.
+
+## P2904/S1854 Dirac source candidate `L_total` guard
+
+`P2904/S1854` supplies a translation-breaking signed Dirac source candidate and computes its symbolic `rho_9/5` support, but it is still a provenance-unproved source postulate and keeps `U_9_5` symbolic.  Therefore it does not export unit-bearing nonproxy `L_total`, EOM, Hamiltonian closure, role transfer, or ToE closure.
+
+## P2905/S1855 Xi provenance `L_total` guard
+
+`P2905/S1855` adds no action density.  It audits provenance for the P2904 `Xi_{0,+}` source candidate and finds no current positive strict provenance export over the `23` translated/sign-flipped alternatives.  Therefore no unit-bearing nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
