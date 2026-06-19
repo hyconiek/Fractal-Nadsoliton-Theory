@@ -2624,3 +2624,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2887/S1837 C12 unit-measure/localized-density `L_total` guard
 
 `P2887/S1837` adds no strict action term.  `C12`-neutral supports/densities are global rather than localized, and their uniform integrals do not produce `9/5`; the packet exports no localized unit-bearing action density, variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2888/S1838 non-C12 origin-law/unit-coupling `L_total` guard
+
+`P2888/S1838` adds no strict action term.  Non-`C12` distance-profile origins and bounded densities can carry `9/5`, but the audited carriers are not selected by a strict source law and do not provide a unit-bearing localized action density or variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2889/S1839 translation-orbit source-law `L_total` guard
+
+`P2889/S1839` adds no strict action term.  The `P2888` carriers survive only as free translation orbits; choosing one embedded representative requires an extra translation-breaking source and does not provide a unit-bearing localized action density or variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2890/S1840 Fourier phase-source law `L_total` guard
+
+`P2890/S1840` adds no strict action term.  Fourier-power/autocorrelation data is too invariant, while phaseful character data requires an external phase pin; neither supplies a unit-bearing localized action density or variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2891/S1841 strict phase/origin source artifact inventory `L_total` guard
+
+`P2891/S1841` adds no strict action term.  Current generated artifacts do not export a coupled strict phase/origin source plus `9/5` variational-density theorem, so no unit-bearing localized action density or variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source is licensed.
