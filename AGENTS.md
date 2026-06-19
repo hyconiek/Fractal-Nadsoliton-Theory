@@ -1382,3 +1382,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The granted torsor has exactly `12` equivariant maps to a free `12`-origin `9/5` carrier orbit but `0` invariant basepoints; offset choice remains the missing imported phase/origin.
 - Do not promote an unpointed free-`12` torsor, offset choice, polarity pairing, canonical zero, chosen isomorphism, low-capacity alphabet, quotient-section convention, Fourier phase/power, or inventory hit to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must supply an explicit nonimported basepoint/polarity law on the free-`12` torsor with coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current invariant scalar basepoint-law exhaustion guardrail (P2896/S1846, 2026-06-19)
+
+- P2896 exhausts source-neutral translation-invariant scalar/score laws on the P2895 free `Z12` torsor for trivial alphabet sizes `1,2,3,4,6,12`.
+- Every invariant scalar law is constant; marked levels are empty or all `12` torsor points, and argmin/argmax sets have size `12`, so no unique basepoint/polarity law is exported.
+- Do not promote invariant scalar scores, entropy-like constants, marked levels, argmin/argmax conventions, canonical zero choices, unpointed free-torsor clocks, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a genuinely non-invariant strict translation-breaking law with computed basepoint/polarity and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current circulant relation basepoint obstruction guardrail (P2897/S1847, 2026-06-19)
+
+- P2897 exhausts all `4096` translation-invariant binary/circulant relations on the P2895/P2896 free `Z12` torsor as a non-scalar internal basepoint-localizer candidate.
+- Every relation is preserved by all `12` translations, every vertex remains in one orbit of size `12`, and neither degree profiles nor translation-local relation-row profiles isolate a unique basepoint.
+- Do not promote circulant relations, distance/adjacency profiles, invariant relation geometry, graph row profiles, degree profiles, scalar scores, canonical zero choices, unpointed free-torsor clocks, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply an explicit non-circulant strict translation-breaking source law with computed basepoint/polarity and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current single-defect relation import-boundary guardrail (P2898/S1848, 2026-06-19)
+
+- P2898 audits the nearest non-circulant repair after P2897: one labelled directed-edge defect on an arbitrary circulant relation over the P2895-P2897 free `Z12` torsor.
+- There are `589824` single-defect candidates, but for each circulant background and edge difference the `12` placements form a free translation orbit; quotient-level data supplies `0` source-neutral defect placements.
+- Do not promote one-edge defects, labelled defect locations, non-circulant perturbations, edge differences, circulant backgrounds, relation profiles, scalar scores, canonical zero choices, unpointed free-torsor clocks, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, selector closure, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply an explicit strict law that sources the defect placement itself with computed basepoint/polarity and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current post-defect potential/readiness guardrail (P2899/S1849, 2026-06-19)
+
+- P2899 separates conditional potential from closure after P2895-P2898: free-`12` capacity and one-edge defect translation-breaking are real positive symptoms only after offset/placement/source premises.
+- The active blockers remain: `0` invariant basepoints, `0` scalar unique selectors, `0` circulant unique vertices, `0` source-neutral defect placements, no coupling theorem to the `9/5` variational density, and no `L_total`/EOM/Hamiltonian/ToE export.
+- Treat the theory's ToE potential here as conditional structural potential, not closure evidence.  Do not promote capacity, equivariant maps, one-edge defects, labelled placements, relation profiles, scalar scores, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must construct a strict law sourcing defect placement/basepoint/polarity with computed nonconventional sign/phase and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current defect-placement source-law inventory guardrail (P2900/S1850, 2026-06-19)
+
+- P2900 scans the current generated JSON corpus for the exact P2899 missing object: a strict defect-placement/basepoint/polarity source law coupled to the `9/5` variational density.
+- The scan finds no unquarantined artifact with both positive source and coupling exports, and no source+coupling+closure export; inventory language does not supply the missing law.
+- Do not promote torsor capacity, scalar scores, circulant relations, one-edge defects, generated-inventory keyword hits, conditional potential language, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce a new explicit formula/artifact for a strict defect-placement source law with computed nonconventional sign/phase and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
