@@ -1666,3 +1666,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The `2^5=32` obligation table has exactly one accepting row: algebraic vector, strict provenance, nonconventional symmetry breaking, delta/eta source, and beta/eta coupling all present.
 - Current formula classes satisfy at most algebraic readiness; coordinate scans, lexicographic choices, external logs, residue labels, and selector/readiness replay remain rejected.
 - Do not continue coordinate scans as primary strategy; supply an actual strict source formula and pass the P2935 gate, or preserve the no-new-live-frontier certificate.
+
+## Current source-formula obstruction hitting-set guardrail (P2936/S1886, 2026-06-19)
+
+- P2936 turns the P2935 intake gate into a finite obstruction/hitting-set matrix for currently named formula routes.
+- Bounded formal vectors, lexicographic/minimal-norm choices, external logs/calibration, selector/orientation/chiral readiness replay, and the theorem name alone all fail the P2935 gate; `0` routes are accepted.
+- Do not replay coordinate scans, convention-based vector choices, external logs, or readiness artifacts as a strict `L_p` source.
+- A next admissible move must export one explicit theorem object: strict nadsoliton provenance for a chosen prime-coordinate vector or a delta/eta-to-beta/eta coupling theorem, then rerun the P2935/P2936 gate; otherwise preserve the no-new-live-frontier certificate.
+
+## Current Z12 multiplication-kernel prime-coordinate guardrail (P2937/S1887, 2026-06-19)
+
+- P2937 constructs a genuine finite candidate from Z12 multiplication kernels: `K_p = |ker(x -> p*x mod 12)| - 1 = gcd(p,12)-1`.
+- The candidate is product-additive on all `29` audited products and yields `[1,2,0,0,0]` for primes `2,3,5,7,11`, so it detects only nonunit primes and leaves unit primes `5,7,11` at zero.
+- Do not promote this partial multiplication-kernel candidate to a strict `L_p` source, beta/eta damping source, nonproxy `L_total`, EOM/Hamiltonian, bridge closure, role transfer, or ToE.
+- A next admissible move needs a genuinely new unit-sensitive strict source object with provenance and delta/beta coupling, or preservation of the P2929-P2937 no-new-live-frontier boundary.
+
+## Current unit-character-enriched prime-coordinate guardrail (P2938/S1888, 2026-06-19)
+
+- P2938 adds the full `U(12)` character table as a genuinely unit-sensitive finite carrier after P2937.
+- The combined candidate `V_p=(gcd(p,12)-1)+#{nontrivial chi with chi(p)=-1}` yields `[1,2,2,2,2]` and has `0` product-additivity defects on the `29` audited products.
+- This repairs the P2937 unit-prime zero rows only at finite-carrier level; it does not export strict nadsoliton provenance, delta/eta source, beta/eta coupling, strict `L_p`, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must prove strict provenance and damping coupling for this exact carrier, or preserve the P2929-P2938 no-new-live-frontier boundary.
+
+## Current P2938 carrier provenance-boundary guardrail (P2939/S1889, 2026-06-19)
+
+- P2939 verifies the P2938 carrier `[1,2,2,2,2]` satisfies the finite algebraic side: all prime coordinates are nonzero, product additivity has zero defects on `29` products, and Aut(Z12)-breaking witnesses exist.
+- P2939 does not export strict nadsoliton provenance, delta/eta source, beta/eta coupling, strict `L_p`, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not add more finite carrier refinements as primary strategy in this lane; the next admissible move is a provenance/coupling theorem for the exact P2938 carrier or a genuinely new typed object outside the prime-coordinate carrier lane.
+- Without such a theorem/object, preserve the P2929-P2939 no-new-live-frontier boundary.
+
+## Current P2938 Aut-orbit selector-burden guardrail (P2940/S1890, 2026-06-19)
+
+- P2940 computes the `U(12)` orbit quotient of the exact P2938 carrier `[1,2,2,2,2]` on nodes `1..11`.
+- The carrier is not orbit-constant on multiple orbits; strict provenance would therefore require a genuine selector/symmetry-breaking source for those listed nonconstant orbits.
+- P2940 does not export selector closure, strict provenance, delta/eta source, beta/eta coupling, strict `L_p`, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must export that selector/provenance theorem or pivot to a genuinely new typed object outside the prime-coordinate carrier/provenance lane; otherwise preserve the P2929-P2940 no-new-live-frontier boundary.

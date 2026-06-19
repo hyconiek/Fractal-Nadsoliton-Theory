@@ -1,0 +1,456 @@
+{
+  "candidate_certificate": {
+    "accepted_strict_prime_log_source": false,
+    "nonzero_prime_coordinate_count": 2,
+    "prime_coordinate_vector_order_2_3_5_7_11": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "product_additivity_defect_count": 0,
+    "product_pair_count_de_le_11": 29,
+    "zero_prime_coordinates": [
+      5,
+      7,
+      11
+    ]
+  },
+  "constructed_theoretical_objects": {
+    "acceptance_rows": [
+      {
+        "criterion": "finite_Z12_multiplication_object_constructed",
+        "evidence": "kernel and image of x -> p*x mod 12 computed exactly for all audited primes",
+        "satisfied": true
+      },
+      {
+        "criterion": "product_additive_carrier_on_nodes_1_to_11",
+        "evidence": "node values are extended linearly through prime exponent vectors",
+        "satisfied": true
+      },
+      {
+        "criterion": "all_five_prime_coordinates_nonzero",
+        "evidence": "only 2 of 5 prime coordinates are nonzero; unit primes 5,7,11 have zero kernel excess",
+        "satisfied": false
+      },
+      {
+        "criterion": "strict_nadsoliton_formula_provenance",
+        "evidence": "Z12 multiplication endomorphism data are finite arithmetic data, not an exported strict nadsoliton source theorem",
+        "satisfied": false
+      },
+      {
+        "criterion": "delta_eta_source_law",
+        "evidence": "candidate does not source delta=4/5 or eta=9/5",
+        "satisfied": false
+      },
+      {
+        "criterion": "beta_eta_coupling_theorem",
+        "evidence": "candidate does not couple its partial coordinates to the strict damping tail",
+        "satisfied": false
+      }
+    ],
+    "candidate_name": "Z12_Multiplication_Kernel_Excess_PrimeCoordinate_Source_Candidate",
+    "definition": "K_p = |ker(x -> p*x mod 12)| - 1 = gcd(p,12)-1 for p in {2,3,5,7,11}",
+    "node_value_rows": [
+      {
+        "kernel_excess_value": 0,
+        "node": 1,
+        "prime_exponent_vector": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 1,
+        "node": 2,
+        "prime_exponent_vector": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 2,
+        "node": 3,
+        "prime_exponent_vector": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 2,
+        "node": 4,
+        "prime_exponent_vector": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 0,
+        "node": 5,
+        "prime_exponent_vector": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 3,
+        "node": 6,
+        "prime_exponent_vector": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 0,
+        "node": 7,
+        "prime_exponent_vector": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 3,
+        "node": 8,
+        "prime_exponent_vector": [
+          3,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 4,
+        "node": 9,
+        "prime_exponent_vector": [
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 1,
+        "node": 10,
+        "prime_exponent_vector": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "kernel_excess_value": 0,
+        "node": 11,
+        "prime_exponent_vector": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "prime_kernel_rows": [
+      {
+        "gcd_p_12": 2,
+        "image_size": 6,
+        "kernel_excess_coordinate": 1,
+        "kernel_size": 2,
+        "kernel_times_image_equals_12": true,
+        "prime": 2,
+        "unit_mod_12": false
+      },
+      {
+        "gcd_p_12": 3,
+        "image_size": 4,
+        "kernel_excess_coordinate": 2,
+        "kernel_size": 3,
+        "kernel_times_image_equals_12": true,
+        "prime": 3,
+        "unit_mod_12": false
+      },
+      {
+        "gcd_p_12": 1,
+        "image_size": 12,
+        "kernel_excess_coordinate": 0,
+        "kernel_size": 1,
+        "kernel_times_image_equals_12": true,
+        "prime": 5,
+        "unit_mod_12": true
+      },
+      {
+        "gcd_p_12": 1,
+        "image_size": 12,
+        "kernel_excess_coordinate": 0,
+        "kernel_size": 1,
+        "kernel_times_image_equals_12": true,
+        "prime": 7,
+        "unit_mod_12": true
+      },
+      {
+        "gcd_p_12": 1,
+        "image_size": 12,
+        "kernel_excess_coordinate": 0,
+        "kernel_size": 1,
+        "kernel_times_image_equals_12": true,
+        "prime": 11,
+        "unit_mod_12": true
+      }
+    ],
+    "product_additivity_rows": [
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 1,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 2,
+        "e": 2,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 3,
+        "e": 3,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 4,
+        "e": 4,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 5,
+        "e": 5,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 6,
+        "e": 6,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 7,
+        "e": 7,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 8,
+        "e": 8,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 9,
+        "e": 9,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 10,
+        "e": 10,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 1,
+        "de": 11,
+        "e": 11,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 2,
+        "de": 2,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 2,
+        "de": 4,
+        "e": 2,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 2,
+        "de": 6,
+        "e": 3,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 2,
+        "de": 8,
+        "e": 4,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 2,
+        "de": 10,
+        "e": 5,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 3,
+        "de": 3,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 3,
+        "de": 6,
+        "e": 2,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 3,
+        "de": 9,
+        "e": 3,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 4,
+        "de": 4,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 4,
+        "de": 8,
+        "e": 2,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 5,
+        "de": 5,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 5,
+        "de": 10,
+        "e": 2,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 6,
+        "de": 6,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 7,
+        "de": 7,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 8,
+        "de": 8,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 9,
+        "de": 9,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 10,
+        "de": 10,
+        "e": 1,
+        "passes_additivity": true
+      },
+      {
+        "additive_defect": 0,
+        "d": 11,
+        "de": 11,
+        "e": 1,
+        "passes_additivity": true
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_aut_breaking_prime_coordinate_source_law_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_exported": false,
+      "strict_prime_log_value_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not continue multiplication-kernel variants unless a new strict theorem couples unit-prime information to nonzero 5/7/11 coordinates and to delta/beta damping.  The next admissible move is a genuinely new unit-sensitive strict source object, or preservation of the P2929-P2937 no-new-live-frontier boundary.",
+    "positive_witnesses": {
+      "intrinsic_kernel_excess_coordinates_computed": true,
+      "new_finite_Z12_multiplication_object_constructed": true,
+      "product_additivity_verified": true
+    },
+    "reason": "P2937 constructs an explicit finite Z12 multiplication-kernel candidate instead of replaying coordinate scans.  The candidate is product-additive and intrinsic to multiplication on Z/12Z, but it only sources nonzero coordinates for 2 and 3; unit primes 5, 7, and 11 receive zero.  It also lacks strict nadsoliton provenance and delta/eta plus beta/eta coupling, so it is rejected as a strict L_p source."
+  },
+  "input_hashes": {
+    "P2936": "6fecb35cfa4e603fa66ee16ab7133982afcc14fb23df461ae25c2878c3ba5b77"
+  },
+  "status": "P2937_Z12_MULTIPLICATION_KERNEL_PRIME_COORDINATE_SOURCE_CANDIDATE_REJECTED_PARTIAL"
+}
