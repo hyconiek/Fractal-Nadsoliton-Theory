@@ -1,0 +1,172 @@
+{
+  "constructed_theoretical_objects": {
+    "algebraic_theorem_premise_rows": [
+      {
+        "evidence": "f(1)=0",
+        "premise": "identity_grounded_zero",
+        "satisfied": true
+      },
+      {
+        "evidence": "prime vector [1, 2, 2, 2, 2] for primes [2, 3, 5, 7, 11]",
+        "premise": "all_prime_coordinates_positive",
+        "satisfied": true
+      },
+      {
+        "evidence": "every node 2..11 has positive P2938 carrier value",
+        "premise": "all_nonidentity_nodes_positive",
+        "satisfied": true
+      },
+      {
+        "evidence": "29 product rows, 0 defects",
+        "premise": "product_additivity_zero_defects",
+        "satisfied": true
+      },
+      {
+        "evidence": "identity zero plus positive nonidentity cone orients increasing carrier value away from identity, matching the P2942 a>0 branch",
+        "premise": "positive_orientation_sign_conditionally_fixed",
+        "satisfied": true
+      }
+    ],
+    "candidate_object": "Identity_Grounded_Positive_Cone_Orientation_Theorem_For_P2938_Carrier",
+    "node_value_rows": [
+      {
+        "carrier_value": 0,
+        "is_identity": true,
+        "node": 1,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 1,
+        "is_identity": false,
+        "node": 2,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 2,
+        "is_identity": false,
+        "node": 3,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 2,
+        "is_identity": false,
+        "node": 4,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 2,
+        "is_identity": false,
+        "node": 5,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 3,
+        "is_identity": false,
+        "node": 6,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 2,
+        "is_identity": false,
+        "node": 7,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 3,
+        "is_identity": false,
+        "node": 8,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 4,
+        "is_identity": false,
+        "node": 9,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 3,
+        "is_identity": false,
+        "node": 10,
+        "satisfies_positive_cone": true
+      },
+      {
+        "carrier_value": 2,
+        "is_identity": false,
+        "node": 11,
+        "satisfies_positive_cone": true
+      }
+    ],
+    "prime_vector_order_2_3_5_7_11": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "strict_acceptance_rows": [
+      {
+        "criterion": "finite_positive_cone_theorem_candidate_verified",
+        "evidence": "identity zero, positive primes, positive nonidentity nodes, and product additivity all hold",
+        "satisfied": true
+      },
+      {
+        "criterion": "strict_nadsoliton_identity_grounding_theorem_exported",
+        "evidence": "current artifacts do not export a strict theorem identifying this positive cone as nadsoliton-sourced rather than algebraic carrier structure",
+        "satisfied": false
+      },
+      {
+        "criterion": "nonconventional_positive_orientation_source_exported",
+        "evidence": "the positive orientation is conditionally fixed inside the carrier algebra, but its strict source status remains unproved",
+        "satisfied": false
+      },
+      {
+        "criterion": "delta_eta_source_law_exported",
+        "evidence": "no delta/eta source law is derived from the positive cone",
+        "satisfied": false
+      },
+      {
+        "criterion": "beta_eta_coupling_theorem_exported",
+        "evidence": "no beta/eta coupling theorem is derived from the positive cone",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_aut_breaking_prime_coordinate_source_law_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_exported": false,
+      "strict_identity_grounding_theorem_exported": false,
+      "strict_positive_orientation_source_theorem_exported": false,
+      "strict_prime_log_value_source_exported": false,
+      "strict_selector_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "A next admissible move must prove strict nadsoliton identity-grounding for this positive cone and then derive delta/eta plus beta/eta coupling from it.  If that cannot be exported, pivot to a genuinely new typed object outside the P2938 positive-cone/polarity lane or preserve the P2929-P2943 no-new-live-frontier boundary.",
+    "positive_witnesses": {
+      "P2942_a_greater_than_zero_branch_conditionally_sourced_inside_carrier_algebra": true,
+      "algebraic_positive_orientation_sign_fixed": true
+    },
+    "reason": "P2943 proves the finite carrier-algebra side of the P2942 positive orientation sign: f(1)=0, all prime coordinates are positive, all nonidentity nodes are positive, and product additivity has zero defects.  This conditionally orients value growth away from the identity and selects the a>0 branch.  It still does not export a strict nadsoliton identity-grounding theorem or delta/eta plus beta/eta coupling."
+  },
+  "input_hashes": {
+    "P2942": "3c6f35a71a7991f1662e17dd8b1e0c271ec3584d53ff51e01aa317d61f9542e3"
+  },
+  "positive_cone_certificate": {
+    "accepted_strict_source": false,
+    "finite_positive_cone_theorem_candidate_verified": true,
+    "identity_value": 0,
+    "node_count": 11,
+    "positive_nonidentity_node_count": 10,
+    "positive_prime_coordinate_count": 5,
+    "product_additivity_defect_count": 0,
+    "strict_identity_grounding_theorem_exported": false,
+    "strict_provenance_theorem_exported": false
+  },
+  "status": "P2943_IDENTITY_GROUNDED_POSITIVE_CONE_ORIENTATION_THEOREM_CANDIDATE_NO_STRICT_SOURCE"
+}

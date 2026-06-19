@@ -2836,3 +2836,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2940/S1890 Aut-orbit selector burden `L_total` guard
 
 `P2940/S1890` shows that the P2938 carrier requires selector/symmetry-breaking provenance on nonconstant `U(12)` orbits.  Since no strict selector/provenance theorem or damping coupling is exported, the carrier cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2941/S1891 extremal-selector `L_total` guard
+
+`P2941/S1891` gives a conditional min-extremal selector skeleton for the P2938 carrier, but no strict polarity/source theorem and no damping coupling are exported.  The skeleton cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2942/S1892 value-order orientation `L_total` guard
+
+`P2942/S1892` identifies `a>0` in an affine value-order orientation `q(v)=a*v+b` as the exact missing polarity source for the conditional P2941 min-selector skeleton.  Since no strict positive-orientation source theorem or damping coupling is exported, the gate cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2943/S1893 positive-cone `L_total` guard
+
+`P2943/S1893` verifies a finite identity-grounded positive cone for the P2938 carrier and thereby conditionally fixes the P2942 `a>0` orientation within carrier algebra.  Because no strict nadsoliton identity-grounding theorem or damping coupling is exported, the positive cone cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2944/S1894 partial-monoid identity `L_total` guard
+
+`P2944/S1894` verifies the finite partial-monoid identity witness for the P2938 positive cone, but no strict nadsoliton identity-grounding theorem or damping coupling is exported.  The witness cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2945/S1895 delta/eta ratio candidate `L_total` guard
+
+`P2945/S1895` gives exact finite candidate formulas for `delta=4/5` and `eta=9/5` from the P2938/P2944 identity-positive-cone inventory.  Since no strict theorem forces those ratios and no beta/eta coupling theorem is exported, the candidate cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.

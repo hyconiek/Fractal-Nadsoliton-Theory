@@ -1701,3 +1701,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The carrier is not orbit-constant on multiple orbits; strict provenance would therefore require a genuine selector/symmetry-breaking source for those listed nonconstant orbits.
 - P2940 does not export selector closure, strict provenance, delta/eta source, beta/eta coupling, strict `L_p`, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must export that selector/provenance theorem or pivot to a genuinely new typed object outside the prime-coordinate carrier/provenance lane; otherwise preserve the P2929-P2940 no-new-live-frontier boundary.
+
+## Current P2938 extremal-selector polarity guardrail (P2941/S1891, 2026-06-19)
+
+- P2941 constructs an extremal orbit-selector skeleton from the exact P2938 carrier values on the P2940 `U(12)` orbits.
+- The min-value polarity is finite and unique on all audited orbits, but choosing min rather than max is not strictly sourced; max has a unit-orbit tie and the selected sections have `U(12)`-motion defects.
+- Do not promote this skeleton to selector closure, strict provenance, strict `L_p`, delta/eta source, beta/eta coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must export a strict polarity/source theorem plus damping coupling for this exact skeleton, or pivot to a genuinely new typed object outside the P2938 extremal-selector lane; otherwise preserve the P2929-P2941 no-new-live-frontier boundary.
+
+## Current extremal-selector value-order orientation guardrail (P2942/S1892, 2026-06-19)
+
+- P2942 scans affine value-order orientations `q(v)=a*v+b` for the P2941 extremal-selector skeleton.
+- Positive slopes conditionally recover the unique min-selector skeleton; negative slopes reverse to the max selector and inherit the unit-orbit tie; zero slopes collapse distinctions.
+- The exact missing strict source atom is a nonconventional theorem sourcing the positive orientation sign `a>0`, plus delta/eta and beta/eta coupling.
+- Do not promote P2942 to selector closure, strict provenance, strict `L_p`, damping source, nonproxy `L_total`, bridge closure, role transfer, or ToE; next move must export that source theorem/coupling or pivot outside the P2938 polarity/orientation lane.
+
+## Current identity-grounded positive-cone orientation guardrail (P2943/S1893, 2026-06-19)
+
+- P2943 verifies the finite carrier-algebra positive cone for the exact P2938 carrier: `f(1)=0`, all prime coordinates are positive, all nonidentity audited nodes have positive values, and product additivity has zero defects.
+- This conditionally fixes the P2942 positive orientation branch `a>0` inside the carrier algebra, but it is not yet a strict nadsoliton identity-grounding theorem.
+- Do not promote P2943 to strict provenance, strict `L_p`, delta/eta source, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- The next admissible move must export strict nadsoliton identity-grounding for this positive cone plus damping coupling, or pivot outside the P2938 positive-cone/polarity lane; otherwise preserve the P2929-P2943 no-new-live-frontier boundary.
+
+## Current partial-monoid identity-grounding guardrail (P2944/S1894, 2026-06-19)
+
+- P2944 verifies the finite partial-monoid identity witness for the exact P2938 positive cone: node `1` is the unique two-sided total identity on retained products `d*e<=11` and the unique zero carrier node.
+- This is an algebraic identity-grounding witness only; it is not a strict nadsoliton identity-grounding theorem and does not export delta/eta or beta/eta coupling.
+- Do not promote P2944 to strict provenance, strict `L_p`, damping source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must lift this witness to a strict nadsoliton identity-grounding theorem plus damping coupling, or pivot outside the P2938 identity/positive-cone lane; otherwise preserve the P2929-P2944 no-new-live-frontier boundary.
+
+## Current identity-positive-cone delta/eta ratio-candidate guardrail (P2945/S1895, 2026-06-19)
+
+- P2945 constructs exact finite candidate formulas from the P2938/P2944 inventory: `delta=(prime_count-identity_count)/prime_count=4/5` and `eta=prime_vector_sum/prime_count=9/5`, with `eta=1+delta`.
+- This is arithmetic candidate progress only; no strict nadsoliton theorem forces these ratios and no beta/eta coupling theorem is exported.
+- Do not promote P2945 to strict delta/eta source law, strict damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must prove strict provenance for these exact ratio formulas and couple them to beta/eta damping, or pivot outside this ratio-candidate lane; otherwise preserve the P2929-P2945 boundary.
