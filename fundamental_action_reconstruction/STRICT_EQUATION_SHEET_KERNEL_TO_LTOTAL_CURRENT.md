@@ -3467,3 +3467,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2940/S1890 P2938 carrier Aut-orbit selector burden
 
 `P2940/S1890` computes the `U(12)` orbit quotient for the exact P2938 carrier `[1,2,2,2,2]`.  The carrier is not orbit-constant on several orbits, so any strict provenance theorem for this carrier must include a genuine selector/symmetry-breaking source for the listed nonconstant orbits.  No such source is exported; therefore P2938 remains a finite carrier only and no strict `L_p`, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure follows.
+
+## P2941/S1891 P2938 extremal-selector polarity obstruction
+
+`P2941/S1891` constructs the next theorem-object candidate for P2938 provenance: an extremal orbit-selector skeleton using carrier values on the P2940 `U(12)` orbits.  The min-value polarity is unique on all audited orbits, but min-versus-max remains an unsourced polarity convention, max has a unit-orbit tie, and the unique selected sections have `U(12)`-motion defects.  Therefore the skeleton does not export strict provenance, delta/eta source, beta/eta coupling, strict `L_p`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure.
+
+## P2942/S1892 extremal-selector value-order orientation source gate
+
+`P2942/S1892` turns the P2941 min/max polarity gap into a finite value-order orientation gate by scanning affine orientations `q(v)=a*v+b`.  Positive slopes conditionally recover the unique P2941 min-selector skeleton on all audited orbits; negative slopes reverse to the max polarity and inherit the unit-orbit tie; zero slopes collapse the value distinctions.  Thus the exact missing strict source atom is a theorem sourcing the positive orientation sign `a>0`, followed by delta/eta and beta/eta coupling.  No strict provenance, strict `L_p`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure is exported.
+
+## P2943/S1893 identity-grounded positive-cone orientation theorem audit
+
+`P2943/S1893` constructs an identity-grounded positive-cone theorem candidate for the exact P2938 carrier.  The finite carrier algebra verifies `f(1)=0`, all five prime coordinates are positive, all nonidentity audited nodes have positive value, and product additivity has zero defects; this conditionally sources the P2942 positive-orientation branch `a>0` inside the carrier algebra.  The strict side is still not exported: no nadsoliton identity-grounding theorem, delta/eta source law, beta/eta coupling theorem, strict `L_p`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure follows.
+
+## P2944/S1894 partial-monoid identity-grounding theorem audit
+
+`P2944/S1894` audits the finite partial multiplication monoid on nodes `1..11` with retained products `d*e<=11`.  Node `1` is the unique two-sided total identity and the unique zero of the P2938 positive cone, so the finite algebraic identity-grounding witness demanded after P2943 is constructed.  This is not yet a strict nadsoliton identity-grounding theorem and exports no delta/eta source law, beta/eta coupling theorem, strict `L_p`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure.
+
+## P2945/S1895 identity-positive-cone delta/eta source candidate
+
+`P2945/S1895` constructs exact finite ratio candidates for the missing damping anchor from the P2938/P2944 identity-positive-cone inventory: `delta=(prime_count-identity_count)/prime_count=4/5` and `eta=prime_vector_sum/prime_count=9/5`, with `eta=1+delta`.  This is concrete arithmetic progress toward a delta/eta source law, but no strict nadsoliton theorem forces these ratios and no beta/eta coupling theorem is exported.  Therefore no strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
