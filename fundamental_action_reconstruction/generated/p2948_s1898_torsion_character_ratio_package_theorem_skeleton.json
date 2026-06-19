@@ -1,0 +1,156 @@
+{
+  "constructed_theoretical_objects": {
+    "acceptance_rows": [
+      {
+        "criterion": "finite_spine_selects_exact_vector_delta_eta",
+        "evidence": "P2938 vector plus P2945 formulas give [1,2,2,2,2], delta=4/5, eta=9/5, eta=1+delta",
+        "satisfied": true
+      },
+      {
+        "criterion": "p2947_nonforcing_boundary_respected",
+        "evidence": "P2948 uses the P2938 finite formula as an explicit extra premise and does not claim positive-cone forcing",
+        "satisfied": true
+      },
+      {
+        "criterion": "strict_torsion_character_source_theorem_exported",
+        "evidence": "prove the P2938 torsion-character aggregate is sourced by nadsoliton structure, not chosen as a finite carrier",
+        "satisfied": false
+      },
+      {
+        "criterion": "strict_delta_numerator_semantics_exported",
+        "evidence": "prove identity-deficit is the strict numerator, not one alias among identity/zero equivalents",
+        "satisfied": false
+      },
+      {
+        "criterion": "strict_beta_eta_coupling_theorem_exported",
+        "evidence": "couple the ratio pair to the nonlinear damping/compression term without importing a fit or legacy beta_tors",
+        "satisfied": false
+      }
+    ],
+    "candidate_object": "TorsionCharacter_Ratio_Damping_Source_Package_Skeleton",
+    "finite_spine_rows": [
+      {
+        "claim": "Z12 torsion excess plus U(12) nontrivial-character negativity selects the exact prime vector",
+        "satisfied_finitely": true,
+        "step": "P2938_torsion_character_vector_selection",
+        "value": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "claim": "the selected vector has the sum required by the P2945 eta formula",
+        "satisfied_finitely": true,
+        "step": "vector_sum_9",
+        "value": 9
+      },
+      {
+        "claim": "using identity_count as the numerator semantics gives delta=(prime_count-identity_count)/prime_count",
+        "satisfied_finitely": true,
+        "step": "identity_deficit_delta",
+        "value": {
+          "as_float": 0.8,
+          "as_string": "4/5",
+          "denominator": 5,
+          "numerator": 4
+        }
+      },
+      {
+        "claim": "using the selected vector sum gives eta=prime_vector_sum/prime_count",
+        "satisfied_finitely": true,
+        "step": "selected_vector_eta",
+        "value": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        }
+      },
+      {
+        "claim": "the ratio pair obeys eta=1+delta exactly",
+        "satisfied_finitely": true,
+        "step": "eta_equals_one_plus_delta",
+        "value": {
+          "as_float": 1.8,
+          "as_string": "9/5",
+          "denominator": 5,
+          "numerator": 9
+        }
+      },
+      {
+        "claim": "the selected vector remains product-additive on audited products",
+        "satisfied_finitely": true,
+        "step": "product_additivity_inherited",
+        "value": 0
+      }
+    ],
+    "strict_theorem_skeleton_rows": [
+      {
+        "component": "finite_vector_formula",
+        "current_status": "finite_formula_available_but_strict_provenance_absent",
+        "needed_for_strict_theorem": "prove the P2938 torsion-character aggregate is sourced by nadsoliton structure, not chosen as a finite carrier",
+        "strictly_exported": false
+      },
+      {
+        "component": "delta_numerator_semantics",
+        "current_status": "finite_identity_deficit_formula_available_but_semantic_selection_absent",
+        "needed_for_strict_theorem": "prove identity-deficit is the strict numerator, not one alias among identity/zero equivalents",
+        "strictly_exported": false
+      },
+      {
+        "component": "eta_sum_semantics",
+        "current_status": "finite_sum_9_available_once_P2938_formula_is_assumed",
+        "needed_for_strict_theorem": "prove the selected torsion-character vector sum 9 is the strict eta source",
+        "strictly_exported": false
+      },
+      {
+        "component": "beta_eta_damping_coupling",
+        "current_status": "not_exported",
+        "needed_for_strict_theorem": "couple the ratio pair to the nonlinear damping/compression term without importing a fit or legacy beta_tors",
+        "strictly_exported": false
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_law_exported": false,
+      "strict_p2938_vector_source_theorem_exported": false,
+      "strict_torsion_character_source_theorem_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "The next proof-grade move must attack exactly one remaining skeleton premise: either prove strict nadsoliton provenance for the P2938 torsion-character aggregate, prove the identity-deficit delta numerator semantics, or prove beta/eta coupling for this exact package.  If none can be exported, pivot outside the P2938/P2945 ratio-package lane and preserve the P2929-P2948 finite-only boundary.",
+    "positive_witnesses": {
+      "exact_ratio_pair_recovered_from_explicit_p2938_formula": true,
+      "finite_theorem_spine_constructed": true,
+      "p2947_positive_cone_nonforcing_boundary_respected": true
+    },
+    "reason": "P2948 constructs the finite theorem spine that was missing after P2947: if the P2938 torsion-character aggregate is accepted as an explicit extra source premise, it selects [1,2,2,2,2], sum 9, delta=4/5, eta=9/5, and eta=1+delta.  This is a useful theorem skeleton but not a strict export, because the nadsoliton source theorem for the torsion-character aggregate, the delta numerator semantics theorem, and beta/eta damping coupling remain absent."
+  },
+  "input_hashes": {
+    "P2938": "15bd6e160a8433f551929cf841d7d47dfa7548cf982e244e25ac4c370069fe3a",
+    "P2945": "b5e91170c88d33f3028aa02b8888912b0c0c476b837fd42e3030ea10f5703c77",
+    "P2947": "aceacdbcc152fb2ad188b116524d80b441d3abd3169d1c1a0a5ad79a64d7af7f"
+  },
+  "package_certificate": {
+    "accepted_strict_damping_source_package": false,
+    "delta_4_5_constructed_finitely": true,
+    "eta_9_5_constructed_finitely": true,
+    "eta_equals_one_plus_delta": true,
+    "exact_p2938_vector_selected_finitely": true,
+    "finite_spine_passes": true,
+    "strict_beta_eta_coupling_theorem_exported": false,
+    "strict_delta_numerator_semantics_exported": false,
+    "strict_torsion_character_source_theorem_exported": false,
+    "sum9_selected_finitely": true
+  },
+  "status": "P2948_TORSION_CHARACTER_RATIO_PACKAGE_THEOREM_SKELETON_FINITE_ONLY"
+}

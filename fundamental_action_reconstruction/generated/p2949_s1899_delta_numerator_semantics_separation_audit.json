@@ -1,0 +1,215 @@
+{
+  "constructed_theoretical_objects": {
+    "acceptance_rows": [
+      {
+        "criterion": "role_extension_audit_constructed",
+        "evidence": "identity and zero predicates are compared node-by-node on P2944 rows",
+        "satisfied": true
+      },
+      {
+        "criterion": "p2948_delta_gap_targeted",
+        "evidence": "P2948 explicitly leaves strict delta numerator semantics unexported",
+        "satisfied": true
+      },
+      {
+        "criterion": "identity_deficit_semantics_strictly_selected",
+        "evidence": "current artifacts verify algebraic identity=carrier-zero extensionally but do not export a strict source law preferring identity-deficit semantics",
+        "satisfied": false
+      },
+      {
+        "criterion": "p2948_delta_numerator_premise_discharged",
+        "evidence": "P2948's finite package still needs a strict theorem choosing the delta numerator semantics",
+        "satisfied": false
+      }
+    ],
+    "candidate_object": "IdentityDeficit_DeltaNumerator_Semantics_Separation_Audit",
+    "numerator_functional_rows": [
+      {
+        "delta": {
+          "as_float": 0.8,
+          "as_string": "4/5",
+          "denominator": 5,
+          "numerator": 4
+        },
+        "functional": "identity_deficit",
+        "matches_delta_4_5": true,
+        "semantic_basis": "uses algebraic two-sided-total-identity role",
+        "strict_semantics_selected": false
+      },
+      {
+        "delta": {
+          "as_float": 0.8,
+          "as_string": "4/5",
+          "denominator": 5,
+          "numerator": 4
+        },
+        "functional": "zero_deficit",
+        "matches_delta_4_5": true,
+        "semantic_basis": "uses carrier-zero role",
+        "strict_semantics_selected": false
+      },
+      {
+        "delta": {
+          "as_float": 0.8,
+          "as_string": "4/5",
+          "denominator": 5,
+          "numerator": 4
+        },
+        "functional": "intersection_deficit",
+        "matches_delta_4_5": true,
+        "semantic_basis": "uses identity∩zero extension",
+        "strict_semantics_selected": false
+      },
+      {
+        "delta": {
+          "as_float": 0.8,
+          "as_string": "4/5",
+          "denominator": 5,
+          "numerator": 4
+        },
+        "functional": "union_deficit",
+        "matches_delta_4_5": true,
+        "semantic_basis": "uses identity∪zero extension",
+        "strict_semantics_selected": false
+      }
+    ],
+    "role_extension_rows": [
+      {
+        "carrier_value": 0,
+        "identity_role": true,
+        "node": 1,
+        "roles_agree_on_node": true,
+        "zero_role": true
+      },
+      {
+        "carrier_value": 1,
+        "identity_role": false,
+        "node": 2,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 2,
+        "identity_role": false,
+        "node": 3,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 2,
+        "identity_role": false,
+        "node": 4,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 2,
+        "identity_role": false,
+        "node": 5,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 3,
+        "identity_role": false,
+        "node": 6,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 2,
+        "identity_role": false,
+        "node": 7,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 3,
+        "identity_role": false,
+        "node": 8,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 4,
+        "identity_role": false,
+        "node": 9,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 3,
+        "identity_role": false,
+        "node": 10,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      },
+      {
+        "carrier_value": 2,
+        "identity_role": false,
+        "node": 11,
+        "roles_agree_on_node": true,
+        "zero_role": false
+      }
+    ],
+    "separation_theorem_rows": [
+      {
+        "evidence": "identity extension=[1]; zero extension=[1]",
+        "satisfied": false,
+        "theorem_obligation": "identity_and_zero_extensions_separated"
+      },
+      {
+        "evidence": "delta outputs=['4/5']",
+        "satisfied": false,
+        "theorem_obligation": "count_functionals_distinguish_identity_from_zero"
+      },
+      {
+        "evidence": "current artifacts verify algebraic identity=carrier-zero extensionally but do not export a strict source law preferring identity-deficit semantics",
+        "satisfied": false,
+        "theorem_obligation": "strict_intensional_identity_deficit_semantics_exported"
+      },
+      {
+        "evidence": "P2948's finite package still needs a strict theorem choosing the delta numerator semantics",
+        "satisfied": false,
+        "theorem_obligation": "p2948_delta_numerator_premise_discharged"
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_law_exported": false,
+      "strict_delta_numerator_semantics_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Do not add more count aliases for delta.  A next proof-grade move must either export a genuine intensional/source theorem making identity-deficit the strict numerator, attack a different P2948 skeleton premise such as torsion-character provenance or beta/eta coupling, or pivot outside the ratio-package lane while preserving the P2929-P2949 no-strict-export boundary.",
+    "positive_witnesses": {
+      "finite_identity_zero_coincidence_verified": true,
+      "p2948_delta_semantics_gap_targeted": true,
+      "role_extension_audit_constructed": true
+    },
+    "reason": "P2949 targets exactly one P2948 skeleton premise: strict delta numerator semantics.  The current finite artifacts identify the algebraic identity node and the carrier-zero node extensionally as the same singleton {1}.  Consequently count-only numerator functionals using identity, zero, intersection, or union all return 4/5, and no strict intensional theorem selecting identity-deficit semantics is exported."
+  },
+  "delta_numerator_semantics_certificate": {
+    "all_numerator_functionals_match_delta_4_5": true,
+    "identity_extension": [
+      1
+    ],
+    "identity_zero_extensions_equal": true,
+    "p2948_delta_numerator_premise_discharged": false,
+    "strict_intensional_identity_deficit_semantics_exported": false,
+    "zero_extension": [
+      1
+    ]
+  },
+  "input_hashes": {
+    "P2944": "4877a74d11867b71729ba1723bd1561686d3e5af04382abde13b23aced8cca25",
+    "P2948": "ff13639a50dd39d927be8fcc385036b26a1d5d3c180669fc18e61f7c749da2b3"
+  },
+  "status": "P2949_DELTA_NUMERATOR_SEMANTICS_SEPARATION_AUDIT_NO_STRICT_EXPORT"
+}
