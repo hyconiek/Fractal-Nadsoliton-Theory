@@ -1,0 +1,181 @@
+{
+  "acceptance_matrix": {
+    "accepted_anchor_source_count": 0,
+    "anchor_obstruction_row_count": 4,
+    "audited_slope_family_count": 5,
+    "candidate_anchor_source_count": 6,
+    "candidate_anchor_sources_computing_target_value": 4,
+    "p2923_formal_log_character_readiness_inherited": true,
+    "slope_family_rows_passing_shape": 5,
+    "strict_damping_beta_eta_source_exported": false,
+    "strict_delta_row_passes_shape": true,
+    "strict_delta_selected_by_finite_shape": false,
+    "strict_slope_prime_anchor_source_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "anchor_obstruction_rows": [
+      {
+        "equation": "y_1=0 and y_de=y_d+y_e",
+        "free_parameter_left": "delta",
+        "row": "unital_multiplicative_character",
+        "selects_delta_4_5": false,
+        "witness": "all audited delta candidates satisfy the shape up to floating tolerance"
+      },
+      {
+        "equation": "y_d/log(d)=delta for d=2..11 once log atoms are admitted",
+        "free_parameter_left": "delta",
+        "row": "prime_log_proportionality_shape",
+        "selects_delta_4_5": false,
+        "witness": "delta=1/2, 4/5, 1, and 3/2 all remain proportional families"
+      },
+      {
+        "equation": "eta=1+delta",
+        "free_parameter_left": "eta or delta scale",
+        "row": "eta_translation",
+        "selects_delta_4_5": false,
+        "witness": "the relation maps any delta to an eta and does not source delta=4/5"
+      },
+      {
+        "equation": "nodes 1..11 with prime basis {2,3,5,7,11}",
+        "free_parameter_left": "global slope multiplier",
+        "row": "finite_node_support",
+        "selects_delta_4_5": false,
+        "witness": "support cardinality/factorization fixes basis shape, not the slope value"
+      }
+    ],
+    "candidate_anchor_sources": [
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "literal_delta_4_5_token",
+        "computes_delta_4_5": true,
+        "couples_to_prime_log_character": true,
+        "failure": "naming the target value is an imported numeric token, not a source theorem",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": false
+      },
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "eta_9_5_minus_one_relation",
+        "computes_delta_4_5": true,
+        "couples_to_prime_log_character": true,
+        "failure": "eta=9/5 is equivalent to delta=4/5 and cannot source itself",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": false
+      },
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "two_node_ratio_fit",
+        "computes_delta_4_5": true,
+        "couples_to_prime_log_character": true,
+        "failure": "a fitted two-node anchor can encode the value but remains a boundary condition unless strict provenance is added",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": false
+      },
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "P2923_factorization_readiness",
+        "computes_delta_4_5": false,
+        "couples_to_prime_log_character": true,
+        "failure": "factorization readiness supplies the carrier, not the slope multiplier",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": true
+      },
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "external_log_scale_calibration",
+        "computes_delta_4_5": true,
+        "couples_to_prime_log_character": true,
+        "failure": "external calibration is empirical/imported rather than a strict nadsoliton source law",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": false
+      },
+      {
+        "accepted_as_slope_prime_anchor_source": false,
+        "candidate": "Strict_Damping_Slope_Prime_Anchor_Source_Theorem",
+        "computes_delta_4_5": false,
+        "couples_to_prime_log_character": true,
+        "failure": "this is the missing theorem schema, not an exported theorem instance",
+        "nonconventional_anchor": false,
+        "strict_nadsoliton_provenance": false
+      }
+    ],
+    "layman_closure_potential_note": "The theory has many working gears: finite carriers, multiplicative shape, and obstruction tests.  The missing piece here is not arithmetic but a principled reason why nature should choose the 4/5 damping slope rather than another allowed slope.",
+    "missing_theorem_name": "Strict_Damping_Slope_Prime_Anchor_Source_Theorem",
+    "slope_family_rows": [
+      {
+        "delta": "0",
+        "eta_if_eta_equals_1_plus_delta": "1",
+        "is_strict_numeric_target": false,
+        "max_abs_multiplicative_defect": 0.0,
+        "passes_prime_log_character_shape": true,
+        "ratio_value": 0.0,
+        "ratio_y_d_over_log_d_constant": true,
+        "unital_y1": 0.0
+      },
+      {
+        "delta": "1/2",
+        "eta_if_eta_equals_1_plus_delta": "3/2",
+        "is_strict_numeric_target": false,
+        "max_abs_multiplicative_defect": 1.6653345369377348e-16,
+        "passes_prime_log_character_shape": true,
+        "ratio_value": 0.5,
+        "ratio_y_d_over_log_d_constant": true,
+        "unital_y1": 0.0
+      },
+      {
+        "delta": "4/5",
+        "eta_if_eta_equals_1_plus_delta": "9/5",
+        "is_strict_numeric_target": true,
+        "max_abs_multiplicative_defect": 3.3306690738754696e-16,
+        "passes_prime_log_character_shape": true,
+        "ratio_value": 0.8,
+        "ratio_y_d_over_log_d_constant": true,
+        "unital_y1": 0.0
+      },
+      {
+        "delta": "1",
+        "eta_if_eta_equals_1_plus_delta": "2",
+        "is_strict_numeric_target": false,
+        "max_abs_multiplicative_defect": 3.3306690738754696e-16,
+        "passes_prime_log_character_shape": true,
+        "ratio_value": 1.0,
+        "ratio_y_d_over_log_d_constant": true,
+        "unital_y1": 0.0
+      },
+      {
+        "delta": "3/2",
+        "eta_if_eta_equals_1_plus_delta": "5/2",
+        "is_strict_numeric_target": false,
+        "max_abs_multiplicative_defect": 8.881784197001252e-16,
+        "passes_prime_log_character_shape": true,
+        "ratio_value": 1.5,
+        "ratio_y_d_over_log_d_constant": true,
+        "unital_y1": 0.0
+      }
+    ],
+    "target_statement": "strict_nadsoliton_data -> delta=4/5, eta=9/5, coupled to y_d=delta*sum_p v_p(d)*L_p"
+  },
+  "decision": {
+    "layman_toe_potential": "For a layperson: this is promising as a disciplined research program because it keeps finding precise gears and precise missing bolts.  But it is not yet a Theory of Everything closure.  A ToE-level claim would need the missing source laws to be derived internally rather than chosen, fitted, or imported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_beta_eta_source_exported": false,
+      "strict_slope_prime_anchor_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Either construct an explicit strict source law deriving delta=4/5/eta=9/5 from nadsoliton data and coupling it to the P2923 prime-log character, or stop the damping lane with a post-P2923/P2924 no-new-live-frontier certificate.  Do not promote fitted/named slope tokens, factorization readiness, bridge prose, role transfer, L_total, or ToE closure.",
+    "positive_witnesses": {
+      "anchor_acceptance_schema_exported": true,
+      "homogeneous_family_obstruction_computed": true,
+      "strict_delta_4_5_is_compatible_with_prime_log_character_shape": true
+    },
+    "reason": "P2924 audits the slope/prime anchor atom left by P2923.  The strict numeric target delta=4/5 is compatible with the finite unital multiplicative prime-log character, but the same finite equations also admit other slope values.  Thus the finite shape is homogeneous in delta and cannot select eta=9/5 without a new strict nadsoliton source theorem."
+  },
+  "input_hashes": {
+    "P2923": "6dc10ae4c0d656ac090a11ea0e4845c8ab00810a91053a19231618432b623046"
+  },
+  "status": "P2924_SLOPE_PRIME_ANCHOR_SOURCE_OBSTRUCTION_MATRIX_NO_ACCEPTED_ANCHOR"
+}
