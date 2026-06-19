@@ -1,0 +1,149 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonproxy_ltotal_source": false,
+    "accepted_source_object_count": 0,
+    "finite_observable_count": 5,
+    "finite_observables_fix_gamma_scale": false,
+    "finite_observables_fix_relative_weights": true,
+    "p2918_rechecked_gamma_free_scalar": true,
+    "scale_breaking_candidate_count": 1,
+    "source_object_candidate_count": 6,
+    "strict_scale_breaking_candidate_count": 0,
+    "strict_sigma_gamma_source_object_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "finite_scale_orbit_rows": [
+      {
+        "fixes_gamma_scale": false,
+        "fixes_relative_weight": true,
+        "formula": "w_Q = 1/12",
+        "observable": "quotient_weight",
+        "under_gamma_rescaling": "unchanged"
+      },
+      {
+        "fixes_gamma_scale": false,
+        "fixes_relative_weight": true,
+        "formula": "w_E = 1/144",
+        "observable": "edge_weight",
+        "under_gamma_rescaling": "unchanged"
+      },
+      {
+        "fixes_gamma_scale": false,
+        "fixes_relative_weight": true,
+        "formula": "(dI/dq_edge)/(dI/dQ_d) = 1/12",
+        "observable": "derivative_ratio",
+        "under_gamma_rescaling": "unchanged because Gamma cancels"
+      },
+      {
+        "fixes_gamma_scale": false,
+        "fixes_relative_weight": true,
+        "formula": "|orbit(d)| = 12",
+        "observable": "orbit_size",
+        "under_gamma_rescaling": "unchanged"
+      },
+      {
+        "fixes_gamma_scale": false,
+        "fixes_relative_weight": true,
+        "formula": "|Z12 x Z12| = 144",
+        "observable": "edge_count",
+        "under_gamma_rescaling": "unchanged"
+      }
+    ],
+    "required_source_object_schema": {
+      "acceptance_obligations": [
+        "sigma_Gamma is defined from strict nadsoliton data, not from a quotient count or unit convention",
+        "sigma_Gamma has a nonzero Action-dimension value",
+        "sigma_Gamma breaks the Gamma -> c*Gamma scale orbit by selecting exactly one scale",
+        "C_Gamma is proven to be the coefficient of the P2917 quotient integral",
+        "the proof does not import selector replay, bridge closure, role transfer, L_total closure, or ToE promotion"
+      ],
+      "coupling_map": "C_Gamma(sigma_Gamma, Q) = sigma_Gamma * (1/12) * sum_d Q_d",
+      "object_name": "Strict_Gamma_9_5_Action_Unit_Scale_Fixing_Source_Object",
+      "source_map": "sigma_Gamma: strict_nadsoliton_data -> Action_nonzero"
+    },
+    "scale_orbit_action": "Gamma_9_5 -> c * Gamma_9_5 for c in positive scale orbit",
+    "scale_orbit_certificate": {
+      "accepted_source_objects": 0,
+      "all_finite_observables_gamma_scale_invariant": true,
+      "finite_observable_count": 5,
+      "relative_weights_fixed": [
+        "1/12",
+        "1/144"
+      ],
+      "strict_scale_breaking_candidates": 0
+    },
+    "source_object_candidates": [
+      {
+        "accepted": false,
+        "breaks_scale_orbit": false,
+        "candidate": "quotient measure weights {1/12, 1/144}",
+        "failure": "weights determine relative measure normalization only; they are dimensionless and Gamma-independent",
+        "nonzero_action_value": false,
+        "strict_source_map": false
+      },
+      {
+        "accepted": false,
+        "breaks_scale_orbit": false,
+        "candidate": "derivative ratio 1/12",
+        "failure": "Gamma cancels from the ratio, so the ratio cannot source Gamma",
+        "nonzero_action_value": false,
+        "strict_source_map": false
+      },
+      {
+        "accepted": false,
+        "breaks_scale_orbit": false,
+        "candidate": "orbit cardinality 12",
+        "failure": "cardinality is already the quotient fiber size and has no Action dimension",
+        "nonzero_action_value": false,
+        "strict_source_map": false
+      },
+      {
+        "accepted": false,
+        "breaks_scale_orbit": false,
+        "candidate": "directed-edge cardinality 144",
+        "failure": "cardinality counts carriers and cannot be a strict unit-bearing source",
+        "nonzero_action_value": false,
+        "strict_source_map": false
+      },
+      {
+        "accepted": false,
+        "breaks_scale_orbit": true,
+        "candidate": "external Action unit label",
+        "failure": "an imported dimensional label can fix scale by convention but is not strict nadsoliton provenance",
+        "nonzero_action_value": true,
+        "strict_source_map": false
+      },
+      {
+        "accepted": false,
+        "breaks_scale_orbit": false,
+        "candidate": "new strict sigma_Gamma source map",
+        "failure": "this is the required new object, not an exported current artifact",
+        "nonzero_action_value": false,
+        "strict_source_map": false
+      }
+    ]
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_gamma_9_5_source_exported": false,
+      "strict_scale_fixing_source_object_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Unless a genuinely new strict sigma_Gamma source map with a computed nonzero Action value is supplied, the next honest move is a Gamma/Lambda no-new-live-frontier certificate.  If such a source map is supplied, test exactly its value, scale-orbit breaking, and coupling to I_Q before any nonproxy L_total/EOM/Hamiltonian/ToE promotion.",
+    "positive_witnesses": {
+      "required_source_object_schema_constructed": true,
+      "scale_orbit_invariance_matrix_constructed": true,
+      "source_object_intake_candidates_audited": true
+    },
+    "reason": "P2919 constructs the exact source object that would be needed to repair P2918: a strict sigma_Gamma map from nadsoliton data to a nonzero Action value coupled to the P2917 quotient integral.  The finite scale-orbit matrix shows that quotient weights, derivative ratios, orbit size, and edge count are invariant under Gamma_9_5 -> c*Gamma_9_5 and therefore fix only relative weights.  The only scale-breaking candidate is an imported Action label, which is not strict source provenance; no accepted strict source object is exported."
+  },
+  "input_hashes": {
+    "P2918": "997dfe3ef1e449e924eaae8f0707a0d60a0fc9e57d8f7cb3d00be1e7567c7a9d"
+  },
+  "status": "P2919_GAMMA_SCALE_ORBIT_SOURCE_OBJECT_INTAKE_GATE_NO_EXPORT"
+}
