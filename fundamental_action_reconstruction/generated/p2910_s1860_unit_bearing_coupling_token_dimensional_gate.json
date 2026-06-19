@@ -1,0 +1,117 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_unit_bearing_ltotal_coupling": false,
+    "compatible_with_j_provenance": false,
+    "dimension_algebra_passed": true,
+    "localization_pullback_exported": false,
+    "new_typed_object_constructed": true,
+    "outside_xi_j_defect_placement_lane": true,
+    "p2909_rechecked_no_live_frontier": true,
+    "required_gamma_dimension": {
+      "Action": 1,
+      "Length": 0,
+      "Time": 0
+    },
+    "strict_gamma_source_exported": false,
+    "variational_chain_rule_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "acceptance_obligation_rows": [
+      {
+        "exported_strictly": false,
+        "obligation": "dimension algebra",
+        "passed": true
+      },
+      {
+        "exported_strictly": false,
+        "obligation": "strict source/provenance for Gamma_9_5",
+        "passed": false
+      },
+      {
+        "exported_strictly": false,
+        "obligation": "localization/pullback map to continuum or strict site measure",
+        "passed": false
+      },
+      {
+        "exported_strictly": false,
+        "obligation": "variational chain rule into nonproxy L_total",
+        "passed": false
+      },
+      {
+        "exported_strictly": false,
+        "obligation": "compatibility with J provenance",
+        "passed": false
+      }
+    ],
+    "coupling_token_candidate": {
+      "dimension_vector_basis": [
+        "Action",
+        "Length",
+        "Time"
+      ],
+      "formal_density_slot": "Gamma_9_5 * delta_edge * q_9_5",
+      "name": "Gamma_9_5",
+      "reconstructed_density_dimension": {
+        "Action": 1,
+        "Length": -1,
+        "Time": 0
+      },
+      "required_dimension": {
+        "Action": 1,
+        "Length": 0,
+        "Time": 0
+      },
+      "typed_object_class": "unit-bearing coupling token candidate, not a strict source theorem"
+    },
+    "dimension_basis": [
+      "Action",
+      "Length",
+      "Time"
+    ],
+    "dimension_vectors": {
+      "localized_edge_delta": {
+        "Action": 0,
+        "Length": -1,
+        "Time": 0
+      },
+      "q_9_5_slot": {
+        "Action": 0,
+        "Length": 0,
+        "Time": 0
+      },
+      "required_gamma_9_5": {
+        "Action": 1,
+        "Length": 0,
+        "Time": 0
+      },
+      "target_action_density": {
+        "Action": 1,
+        "Length": -1,
+        "Time": 0
+      }
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "localization_pullback_exported": false,
+      "role_transfer_exported": false,
+      "strict_gamma_9_5_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_nonproxy_ltotal_exported": false,
+      "variational_chain_rule_exported": false
+    },
+    "next_honest_step": "The next proof-grade move, if staying in this new typed-object lane, must provide exactly one strict source/provenance theorem for Gamma_9_5 or a localization/pullback map with a variational chain rule.  Do not promote dimension matching alone to L_total/EOM/Hamiltonian/ToE closure.  If no such theorem is supplied, preserve no-new-live-frontier or pivot to another genuinely new typed object.",
+    "positive_witnesses": {
+      "dimension_consistency_witnessed": true,
+      "required_unit_dimension_computed": true,
+      "typed_coupling_token_constructed": true
+    },
+    "reason": "P2910 pivots outside the Xi/J/defect-placement replay by constructing a new typed coupling-token candidate Gamma_9_5.  Finite dimension algebra computes the required unit vector and verifies that Gamma_9_5 * delta_edge * q_9_5 can match an action-density dimension.  This is only dimensional readiness: no strict source for Gamma_9_5, no localization/pullback, no variational chain rule, no J provenance compatibility, and no nonproxy L_total export are present."
+  },
+  "input_hashes": {
+    "P2909": "81952b04ad2371bf29e849ee053d7f583514159314e57a9af0154ed2f9672890"
+  },
+  "status": "P2910_UNIT_BEARING_COUPLING_TOKEN_DIMENSIONAL_GATE_READINESS_NO_EXPORT"
+}

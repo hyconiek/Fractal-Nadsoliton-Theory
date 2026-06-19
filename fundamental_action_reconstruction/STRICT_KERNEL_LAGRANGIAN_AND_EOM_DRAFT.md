@@ -2696,3 +2696,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2905/S1855 Xi provenance `L_total` guard
 
 `P2905/S1855` adds no action density.  It audits provenance for the P2904 `Xi_{0,+}` source candidate and finds no current positive strict provenance export over the `23` translated/sign-flipped alternatives.  Therefore no unit-bearing nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2906/S1856 Xi theorem `L_total` guard
+
+`P2906/S1856` adds no action density.  It proves at the finite target level that sign-only provenance still leaves `12` possible basepoints and origin-only provenance still leaves `2` polarities; only a joint origin-and-sign strict theorem could source `Xi_{0,+}`.  Since no such theorem or unit-bearing coupling is exported, no nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2907/S1857 joint source candidate `L_total` guard
+
+`P2907/S1857` computes the local symbolic derivative of the imported `J_{0,+}` density template: one `q_9_5(0,5)` derivative is `U_9_5` and the other `143` directed-edge derivatives are zero.  Because the joint source is still a postulate and `U_9_5` is not unit-bearing, this does not export a nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2908/S1858 joint source provenance `L_total` guard
+
+`P2908/S1858` adds no new density.  It audits the P2907 `J_{0,+}` theorem-postulate against all `24` translated/sign-flipped joint-source alternatives and finds no positive strict provenance export.  Therefore the symbolic `U_9_5` derivative table cannot yet be promoted to a unit-bearing nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2909/S1859 no-new-live-frontier `L_total` guard
+
+`P2909/S1859` audits the post-P2908 state map and finds no new strict object licensing `U_9_5`, `rho_9/5`, `J_{0,+}`, or any adjacent readiness evidence as a unit-bearing nonproxy `L_total` term.  Therefore EOM, Hamiltonian, bridge, role-transfer, and ToE promotion remain blocked unless a new strict construction or a different typed object is supplied.
+
+## P2910/S1860 coupling-token dimensional `L_total` guard
+
+`P2910/S1860` identifies the dimension a candidate `Gamma_9_5` would need for a local `9/5` density slot to have action-density units.  Dimension matching is necessary but not sufficient: without strict source/provenance, localization/pullback, and a variational chain rule, the token cannot be inserted into nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2911/S1861 pullback skeleton `L_total` guard
+
+`P2911/S1861` supplies a finite endpoint-average edge-to-site localization matrix, but it is not yet a strict pullback theorem into field variables or a variational chain rule.  Therefore it cannot insert `Gamma_9_5`, `q_9_5`, or `rho_9/5` into nonproxy `L_total`, EOM, Hamiltonian, role transfer, or ToE closure by itself.
