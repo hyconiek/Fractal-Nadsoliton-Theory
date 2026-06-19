@@ -1326,3 +1326,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - `C12` neutrality leaves only empty/full supports and constant ternary densities; singleton localization imports an endpoint, and uniform unit-measure integrals are `-1`, `0`, and `1`, not `9/5`.
 - Do not promote `C12`-neutral unit measures, singleton endpoint imports, invariant-count actions, ratio algebra, or scalar Euler transmission to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must provide one new non-`C12`-neutral strict origin/source law with computed unit-bearing `9/5` coupling, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current non-C12 origin-law/unit-coupling 9/5 no-go guardrail (P2888/S1838, 2026-06-18)
+
+- P2888 tests the post-P2887 non-`C12` route by enumerating all nonempty binary supports, intrinsic distance-profile origin selectors, and bounded integer density assignments on selected supports.
+- The `9/5` unit coupling is representable, but nonunique and still depends on an unsourced non-`C12` support/origin/density triple plus coefficient assignment; representation is not strict sourcehood.
+- Do not promote non-`C12` support choice, distance-profile origin selection, bounded density coefficients, `C12`-neutral unit measures, ratio algebra, or scalar Euler transmission to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply one explicit strict source law selecting a unique support-origin-density triple with nonimported `9/5` coupling and variational chain rule, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current translation-orbit source-law 9/5 no-go guardrail (P2889/S1839, 2026-06-19)
+
+- P2889 reproduces the P2888 `9/5` support-origin-density carriers and quotients them by the `Z12` translation action.
+- The `600` embedded carriers form `50` free translation orbits of size `12`; a translation-neutral law can select an orbit but not a unique embedded representative without importing an absolute origin or a new strict translation-breaking source.
+- Do not promote P2888 carrier enumeration, translation orbit representatives, distance-profile origin selection, bounded density coefficients, or `C12`-neutral unit measures to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply one new strict translation-breaking source/phase law coupled to the `9/5` carrier and variational density, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current Fourier phase-source law 9/5 no-go guardrail (P2890/S1840, 2026-06-19)
+
+- P2890 tests Fourier-power/autocorrelation invariants and phaseful `Z12` character data on the P2888/P2889 `9/5` carrier orbits.
+- Phase-blind power data compresses `50` carrier orbits to `29` signatures and cannot select embedded representatives; phaseful characters need an external phase/origin pin before they can select a representative.
+- Do not promote Fourier-power signatures, Fourier-character phase pins, P2888/P2889 carrier representatives, bounded coefficients, or `C12`-neutral unit measures to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply one explicit strict phase/origin source artifact with nonconventional sign/phase and coupling theorem to the `9/5` variational density, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
+
+## Current strict phase/origin source artifact inventory guardrail (P2891/S1841, 2026-06-19)
+
+- P2891 scans current generated artifacts for the exact post-P2890 missing object: a strict phase/origin source with nonconventional sign/phase and a coupling theorem to the `9/5` variational density.
+- Relevant phase/source/coupling language exists, but no artifact exports coupled positive source and `9/5` variational-density booleans satisfying the obligation.
+- Do not promote Fourier-power signatures, Fourier-character phase pins, P2888/P2890 carrier/orbit representatives, bounded coefficients, `C12`-neutral unit measures, or inventory hits to strict damping/compression bridge, selector closure, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must introduce one new explicit strict phase/origin source formula with computed nonconventional sign/phase and coupling theorem to the `9/5` variational density, pivot to a genuinely different typed object, or preserve no-new-live-frontier.
