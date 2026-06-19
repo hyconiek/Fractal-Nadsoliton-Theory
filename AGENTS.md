@@ -1581,3 +1581,46 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite prime-exponent matrix over `{2,3,5,7,11}` has rank `5` and zero product-additivity failures on audited products `d*e<=11`; this is formal log-character readiness only.
 - No strict source for prime log atom values `L_p`, no `delta=4/5` slope/prime anchor, no strict damping `beta/eta`, no nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
 - A next admissible move may attack exactly one remaining damping atom: strict source for `L_p` values or strict slope/prime anchor source; do not replay Gamma/Lambda, P2601 identity action, or factorization readiness as closure evidence.
+
+## Current slope/prime anchor obstruction guardrail (P2924/S1874, 2026-06-19)
+
+- P2924 attacks exactly one post-P2923 residual atom: the strict slope/prime anchor for `delta=4/5` / `eta=9/5`.
+- The finite unital multiplicative prime-log character shape admits the target slope but also admits other slope values; it is homogeneous in the free `delta` parameter and does not source the target value.
+- Rejected anchors include named `4/5`, named `eta=9/5`, two-node fitting, P2923 factorization readiness, external calibration, and the missing theorem name itself.
+- Do not promote P2923/P2924 damping readiness to strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+- A next admissible move must either provide an explicit strict source law deriving `delta=4/5`/`eta=9/5` and coupling it to the prime-log character, or emit a post-P2923/P2924 no-new-live-frontier certificate.
+
+## Current damping delta-source linear-system frontier guardrail (P2925/S1875, 2026-06-19)
+
+- P2925 converts the P2924 slope/prime-anchor obstruction into a finite linear-algebra certificate on variables `(y_2,...,y_11, delta)`.
+- Existing character-shape rows have rank `10` and nullity `1`, leaving the global slope line free; adding `delta=4/5` would be an independent anchor row, but current artifacts do not source that row.
+- No strict prime-log value source, no strict `delta=4/5` source law, no strict damping `beta/eta`, no nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+- A next admissible move must introduce one genuinely new source object: a strict prime-log value source law, a strict `delta=4/5` source law, or a combined `Strict_Damping_Beta_Eta_Source_Packet`; otherwise preserve the no-new-live-frontier certificate.
+
+## Current prime-log value source solution-space guardrail (P2926/S1876, 2026-06-19)
+
+- P2926 attacks the post-P2925 strict prime-log value source atom with an exact rational additive-character system on products `d*e<=11`.
+- The system has rank `6` in `11` variables and nullity `5`, exactly the free prime coordinates `{Y_2,Y_3,Y_5,Y_7,Y_11}`; multiplicativity/factorization readiness does not source the values `L_p`.
+- No strict prime-log value source, no strict `delta=4/5` source law, no strict damping `beta/eta`, no nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+- A next admissible move must introduce an explicit strict value-source law for the five `L_p` values or a combined `Strict_Damping_Beta_Eta_Source_Packet`; otherwise preserve the P2925/P2926 no-new-live-frontier certificate.
+
+## Current strict damping beta/eta source-packet verifier guardrail (P2927/S1877, 2026-06-19)
+
+- P2927 packages the P2925 missing `delta=4/5` source law and P2926 missing `L_p` value source into a finite four-obligation verifier for `Strict_Damping_Beta_Eta_Source_Packet`.
+- The 16-row status table has exactly one accepting row: strict prime-log values, strict delta/eta source, strict beta/eta coupling theorem, and nonpromotion audit all present.
+- Current artifacts satisfy only the nonpromotion audit; no strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+- A next admissible move must supply a concrete formula/artifact for one absent obligation, not replay P2925/P2926 readiness as closure.
+
+## Current beta/eta coupling theorem obstruction guardrail (P2928/S1878, 2026-06-19)
+
+- P2928 attacks the P2927 coupling-theorem obligation by constructing the formal carrier `exp(delta*sum_p v_p(d)*L_p)`.
+- The formal carrier has zero product-coupling defects on all audited products `d*e<=11`, but this is conditional readiness only because strict `L_p` values and strict `delta=4/5`/`eta=9/5` remain unsourced.
+- Do not promote the formal carrier to strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+- A next admissible move must provide a concrete strict source artifact for one missing input or pivot to a fresh state-map object outside this closed damping replay.
+
+## Current post-damping state-map no-new-live-frontier guardrail (P2929/S1879, 2026-06-19)
+
+- P2929 performs the broad state-map pivot after P2928 instead of replaying the closed damping readiness lane.
+- Nine current lanes are reconciled, and `0` lanes unlock a new live frontier on current artifacts; the fresh typed-object intake gate accepts `0` current candidates.
+- Do not promote damping readiness, Gamma/Lambda readiness, selector replay, bridge replay, Lagrangian/EOM replay, direct-route replay, role transfer, `L_total`, or ToE closure without a genuinely new strict typed object/source/theorem/provider/blocker-cut.
+- The next admissible move must supply one such new object and run the intake gate; otherwise preserve the P2929 no-new-live-frontier certificate.
