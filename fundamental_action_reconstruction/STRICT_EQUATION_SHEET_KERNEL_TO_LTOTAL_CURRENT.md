@@ -3271,3 +3271,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2891/S1841 strict phase/origin source artifact inventory no-go audit
 
 `P2891/S1841` performs the exact post-`P2890` intake gate across generated artifacts for a strict phase/origin source with nonconventional sign/phase and a coupling theorem to the `9/5` variational density.  Relevant phase/source/coupling language exists, but no artifact has coupled positive exports for both the strict source and the `9/5` variational-density theorem.  No strict translation-breaking phase source, nonimported `9/5` variational chain rule, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2892/S1842 post phase/origin inventory state-map no-new-live-frontier certificate
+
+`P2892/S1842` reconciles the post-`P2888`/`P2891` `9/5` phase/origin sourcehood frontier.  Non-`C12` carriers, translation orbits, Fourier power/phase, and generated-artifact inventory remain blocked on current artifacts, and the broad generated-JSON scan finds no unquarantined positive unlock for strict phase/origin sourcehood, nonimported `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2893/S1843 free-orbit section obstruction theorem
+
+`P2893/S1843` upgrades the P2889/P2892 orbit obstruction to a finite section theorem.  The recomputed `600` `9/5` carriers form `50` free `Z12` translation orbits; every point stabilizer has size `1`, so a quotient-level source-neutral section to an embedded representative has `0` invariant choices.  Equivariant orbit endomorphisms exist only after importing a basepoint/representative and therefore do not export a strict phase/origin source, nonimported `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2894/S1844 translation-breaking source alphabet capacity no-go
+
+`P2894/S1844` audits the finite source-alphabet capacity needed after `P2893`.  All `Z12`-set source alphabets of total size `1..11` have `0` equivariant maps to a free `12`-origin `9/5` carrier orbit; scalar, binary sign, and `3/4/6`-period phase sources are too small.  A free `12`-torsor is necessary, but it still does not export strict sourcehood without a nonimported basepoint/polarity law and coupling theorem to the `9/5` variational density.  No localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure follows.
+
+## P2895/S1845 free-12-torsor basepoint/polarity law no-go
+
+`P2895/S1845` grants the minimum free-`12` torsor required by `P2894` and audits the missing basepoint/polarity law.  There are exactly `12` equivariant maps from the source torsor to a free `12`-origin `9/5` carrier orbit, but the free torsor has `0` invariant basepoints; choosing an offset is therefore the missing imported phase/origin choice.  The unpointed torsor possibility does not export strict sourcehood, nonimported `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.

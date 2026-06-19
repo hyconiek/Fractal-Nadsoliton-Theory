@@ -2640,3 +2640,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2891/S1841 strict phase/origin source artifact inventory `L_total` guard
 
 `P2891/S1841` adds no strict action term.  Current generated artifacts do not export a coupled strict phase/origin source plus `9/5` variational-density theorem, so no unit-bearing localized action density or variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source is licensed.
+
+## P2892/S1842 post phase/origin inventory state-map `L_total` guard
+
+`P2892/S1842` is a no-new-live-frontier certificate, not a new action construction.  It does not add a strict action term, localized unit-bearing density, variational chain rule into nonproxy `L_total`, EOM, Hamiltonian, role transfer, bridge closure, or ToE closure.
+
+## P2893/S1843 free-orbit section obstruction `L_total` guard
+
+`P2893/S1843` is an invariant-section no-go theorem for source-neutral representative choice, not a strict action term.  It supplies no localized unit-bearing density and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2894/S1844 translation-breaking source alphabet capacity `L_total` guard
+
+`P2894/S1844` is a finite source-capacity obstruction, not a strict action construction.  It provides no free-`12`-torsor source law, no basepoint/polarity law, no localized unit-bearing action density, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2895/S1845 free-12-torsor basepoint/polarity `L_total` guard
+
+`P2895/S1845` is a torsor basepoint/polarity obstruction, not a strict action construction.  It supplies no nonimported basepoint law, no unique coupling theorem, no localized unit-bearing density, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
