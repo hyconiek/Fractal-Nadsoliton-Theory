@@ -1417,3 +1417,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The scan finds no unquarantined artifact with both positive source and coupling exports, and no source+coupling+closure export; inventory language does not supply the missing law.
 - Do not promote torsor capacity, scalar scores, circulant relations, one-edge defects, generated-inventory keyword hits, conditional potential language, support/orbit/Fourier data, or inventory hits to strict phase/origin sourcehood, strict damping/compression bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
 - A next admissible proof-grade move must introduce a new explicit formula/artifact for a strict defect-placement source law with computed nonconventional sign/phase and coupling to the `9/5` variational density, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current explicit defect-placement source-law candidate guardrail (P2901/S1851, 2026-06-19)
+
+- P2901 constructs a conditional signed-phase defect-placement schema `I_{b,sigma}(n)=sigma*sin(2*pi*(n-b)/12)`, `D_{b,sigma}=(b,b+sigma*5)`, and formal `rho_{9/5}` support.
+- The finite gate has `24` parameterized candidates, two translation orbits of size `12`, and `0` unimported internally selected `(basepoint, polarity)` choices.
+- Do not promote the conditional formula schema, imported `(b,sigma)` parameters, formal support density, chosen carrier edge, or translation-orbit representatives to strict phase/origin sourcehood, strict damping/compression bridge, role transfer, `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must supply a nonimported strict law selecting one `(b,sigma)` pair and then a unit-bearing `rho_9/5 -> L_total` variational coupling theorem, pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions, or preserve no-new-live-frontier.
+
+## Current pointed signed defect variational template guardrail (P2902/S1852, 2026-06-19)
+
+- P2902 constructs an axiom-augmented pointed signed source family `A(b,sigma)`, induced `9/5` defect edge, localized symbolic density template, and finite derivative table.
+- The template is computationally coherent after the pointed axiom: `24` pointed templates have nonzero local support derivative, but the pointer/sign axiom is still imported and no internal strict selector/source theorem is exported.
+- Do not promote axiom-pointed templates, symbolic unit assignment `U_9_5`, local derivative tables, chosen `(b,sigma)`, or density-support notation to strict phase/origin sourcehood, strict damping/compression bridge, role transfer, nonproxy `L_total`, EOM, Hamiltonian, or ToE closure.
+- A next admissible proof-grade move must derive one pointed signed axiom internally from strict nadsoliton data and then lift `U_9_5` to a unit-bearing nonproxy `L_total` coupling theorem, pivot outside the torsor/basepoint/defect-template family, or preserve no-new-live-frontier.
+
+## Current internal pointed-axiom fixed-point obstruction guardrail (P2903/S1853, 2026-06-19)
+
+- P2903 constructs the finite acceptance theorem for deriving `A(b,sigma)` from translation-neutral internal data: equivariant maps from a translation-trivial source to `Z12 x {-,+}` are fixed points of the target action.
+- The target has `24` points, two translation orbits of size `12`, `0` fixed points, and `0` equivariant maps from a translation-trivial internal source.
+- Do not replay translation-neutral internal sources, invariant scalar scores, circulant relations, defect templates, pointed axiom conventions, or symbolic unit assignments as strict phase/origin sourcehood, nonproxy `L_total`, EOM, Hamiltonian, role transfer, bridge closure, or ToE closure.
+- A next admissible proof-grade move must supply a genuinely translation-breaking strict source object with a nonzero computed value and a coupling theorem to one `A(b0,sigma0)`, pivot outside the defect-placement/basepoint family, or preserve no-new-live-frontier.
+
+## Current translation-breaking Dirac source candidate guardrail (P2904/S1854, 2026-06-19)
+
+- P2904 constructs a minimal translation-breaking signed Dirac source candidate `Xi_{0,+}` with one nonzero value, trivial translation stabilizer, orbit size `12`, and unique coupling to `A(0,+)` and `D=(0,5)`.
+- Treat this as a source candidate/postulate only: current artifacts do not prove strict nadsoliton provenance for choosing `Xi_{0,+}` over translated/sign-flipped alternatives and do not lift `U_9_5` to a unit-bearing nonproxy `L_total` coupling.
+- Do not promote `Xi_{0,+}`, its chosen coordinate `0`, its positive sign, symbolic `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a provenance theorem and unit-bearing coupling theorem.
+- A next admissible proof-grade move must audit/prove strict provenance for `Xi_{0,+}` or prove no current artifact sources it over its `23` translated/sign-flipped alternatives; otherwise pivot outside this source-candidate lane or preserve no-new-live-frontier.
+
+## Current Xi Dirac source provenance alternative guardrail (P2905/S1855, 2026-06-19)
+
+- P2905 constructs the full `24`-member translated/sign-flipped `Xi` alternative family and scans generated artifacts for a positive strict provenance export selecting `Xi_{0,+}`.
+- The current corpus has candidate/boundary mentions but `0` positive provenance hits; `Xi_{0,+}` remains a translation-breaking postulate/candidate, not a strict nadsoliton-sourced law.
+- Do not promote `Xi_{0,+}`, its candidate coupling, inventory mentions, symbolic `rho_9/5`, or `U_9_5` to strict sourcehood, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure without a new provenance theorem.
+- A next admissible proof-grade move must introduce a strict asymmetry/chiral/defect-generation theorem selecting `Xi_{0,+}` over the `23` alternatives, pivot outside the Xi/defect-placement lane, or preserve no-new-live-frontier.

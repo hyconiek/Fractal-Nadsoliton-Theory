@@ -3,8 +3,8 @@
 Status: `P2900_DEFECT_PLACEMENT_SOURCE_LAW_INVENTORY_NO_GO_NO_CLOSURE`
 
 ## Generated JSON scan
-- generated JSON files scanned: `4947`
-- source/coupling/closure term occurrences: `779`
+- generated JSON files scanned: `4948`
+- source/coupling/closure term occurrences: `787`
 - positive source hits: `0`
 - positive coupling hits: `0`
 - positive closure hits: `3`

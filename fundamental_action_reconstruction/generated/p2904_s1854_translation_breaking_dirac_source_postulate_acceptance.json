@@ -1,0 +1,84 @@
+{
+  "acceptance_matrix": {
+    "coupling_to_one_pointed_axiom_constructed": true,
+    "defect_edge": [
+      0,
+      5
+    ],
+    "nonzero_computed_value": 1,
+    "p2903_rechecked": true,
+    "passes_p2903_fixed_point_obstruction": true,
+    "selected_basepoint": 0,
+    "selected_polarity": 1,
+    "strict_nadsoliton_provenance_exported": false,
+    "translation_breaking_source_constructed": true,
+    "translation_orbit_size": 12,
+    "translation_stabilizer_size": 1,
+    "unique_signed_support_count": 1,
+    "unit_bearing_nonproxy_ltotal_coupling_exported": false
+  },
+  "constructed_theoretical_objects": {
+    "coupling_to_pointed_axiom": {
+      "coupling_defined": true,
+      "coupling_theorem": "A singleton signed Dirac source Xi with support b and sign sigma maps uniquely to A(b,sigma) and then to D=(b,b+sigma*5).",
+      "defect_edge": [
+        0,
+        5
+      ],
+      "density_template": "1*U_9_5*delta_edge(0,5)*q_9_5(0,5)",
+      "selected_axiom": {
+        "basepoint": 0,
+        "name": "A(0,+)",
+        "polarity": 1
+      }
+    },
+    "nonzero_value": 1,
+    "source_object": "Xi_{0,+}: signed Dirac source on Z12",
+    "source_values": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stabilizer_under_translation": [
+      0
+    ],
+    "support": [
+      0
+    ],
+    "translation_orbit_size": 12
+  },
+  "decision": {
+    "negative_export_flags": {
+      "eom_closure_exported": false,
+      "hamiltonian_closure_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "strict_defect_placement_source_law_exported": false,
+      "strict_nadsoliton_source_provenance_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_strict_density_exported": false
+    },
+    "next_honest_step": "The next proof-grade move should audit provenance of the new Xi_{0,+} source candidate: either derive its support and sign from a strict nadsoliton asymmetry/chiral/defect-generation theorem, or prove that no current artifact sources Xi rather than its 23 translated/sign-flipped alternatives.  Do not spend the next step on more translation-neutral selectors or more pointed templates.",
+    "positive_witnesses": {
+      "defect_edge_and_density_template_computed": true,
+      "genuinely_translation_breaking_candidate_constructed": true,
+      "nonzero_signed_value_computed": true,
+      "unique_A_b_sigma_coupling_constructed": true
+    },
+    "reason": "P2904 constructs the minimal translation-breaking object demanded by P2903: Xi_{0,+} has one nonzero signed value, trivial translation stabilizer, orbit size 12, and a unique coupling to A(0,+), D=(0,5), and the symbolic rho_9/5 template.  This passes the fixed-point obstruction as a candidate/source postulate.  It still does not prove strict nadsoliton provenance for why Xi_{0,+} rather than a translate or sign flip is exported, and it does not lift U_9_5 to a unit-bearing nonproxy L_total coupling.  Therefore closure remains blocked."
+  },
+  "input_hashes": {
+    "P2903": "c4c0149ab8649a13466f77d43b8fcc6daa53cbcbd2c6cb76449c9a90c5341f00"
+  },
+  "status": "P2904_TRANSLATION_BREAKING_DIRAC_SOURCE_POSTULATE_ACCEPTED_AS_CANDIDATE_NO_STRICT_PROVENANCE"
+}
