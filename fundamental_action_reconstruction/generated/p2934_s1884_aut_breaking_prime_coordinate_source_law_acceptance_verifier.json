@@ -1,0 +1,201 @@
+{
+  "acceptance_certificate": {
+    "accepted_strict_source_law_count": 0,
+    "all_current_candidates_rejected": true,
+    "bounded_aut_breaking_nonzero_count": 242,
+    "bounded_nonzero_vector_count": 242,
+    "bounded_product_additive_nonzero_count": 242,
+    "bounded_total_vector_count": 243,
+    "obligation_count": 5,
+    "satisfied_obligation_count": 3
+  },
+  "constructed_theoretical_objects": {
+    "bounded_vector_scan": {
+      "accepted_strict_source_law_count": 0,
+      "aut_breaking_nonzero_count": 242,
+      "coefficient_set": [
+        -1,
+        0,
+        1
+      ],
+      "nonzero_vector_count": 242,
+      "product_additive_nonzero_count": 242,
+      "sample_nonzero_vectors": [
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": -1,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": -1
+          }
+        },
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": 0,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": -1
+          }
+        },
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": 1,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": -1
+          }
+        },
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": -1,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": 0
+          }
+        },
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": 0,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": 0
+          }
+        },
+        {
+          "accepted": false,
+          "aut_breaking": true,
+          "nonzero": true,
+          "product_additive": true,
+          "vector": {
+            "L_11": 1,
+            "L_2": -1,
+            "L_3": -1,
+            "L_5": -1,
+            "L_7": 0
+          }
+        }
+      ],
+      "total_vector_count": 243
+    },
+    "candidate_rows": [
+      {
+        "accepted": false,
+        "candidate": "bounded_cube_formal_vector",
+        "failure": "formal vector choice is not a strict source law",
+        "passes_algebraic_shape": true,
+        "strict_provenance": false
+      },
+      {
+        "accepted": false,
+        "candidate": "choose_smallest_lexicographic_nonzero_vector",
+        "failure": "lexicographic choice is a convention, not nadsoliton provenance",
+        "passes_algebraic_shape": true,
+        "strict_provenance": false
+      },
+      {
+        "accepted": false,
+        "candidate": "reuse_selector_or_orientation_readiness",
+        "failure": "would replay closed selector/readiness lanes without a new strict value law",
+        "passes_algebraic_shape": null,
+        "strict_provenance": false
+      },
+      {
+        "accepted": false,
+        "candidate": "future_Strict_AutBreaking_PrimeCoordinate_Source_Law",
+        "failure": "required future object has not been supplied",
+        "passes_algebraic_shape": null,
+        "strict_provenance": null
+      }
+    ],
+    "obligation_table": [
+      {
+        "current_status": "many_formal_witnesses_in_bounded_scan",
+        "obligation": "nonzero_prime_coordinate_vector",
+        "satisfied_by_current_artifacts": true
+      },
+      {
+        "current_status": "automatic_for_prime_coordinate_vectors_on_audited_factorization",
+        "obligation": "finite_product_additivity",
+        "satisfied_by_current_artifacts": true
+      },
+      {
+        "current_status": "all_nonzero_bounded_vectors_break_Aut_invariance_by_P2932/P2933",
+        "obligation": "Aut_Z12_breaking",
+        "satisfied_by_current_artifacts": true
+      },
+      {
+        "current_status": "missing",
+        "obligation": "strict_nadsoliton_provenance_for_the_chosen_vector",
+        "satisfied_by_current_artifacts": false
+      },
+      {
+        "current_status": "missing",
+        "obligation": "delta_eta_and_beta_eta_coupling_theorem",
+        "satisfied_by_current_artifacts": false
+      }
+    ],
+    "verifier": {
+      "name": "Strict_AutBreaking_PrimeCoordinate_Source_Law_Acceptance_Verifier",
+      "required_rank_context": {
+        "aut_augmented_rank_nullity": [
+          11,
+          0
+        ],
+        "product_rank_nullity": [
+          6,
+          5
+        ]
+      },
+      "target_future_object": "Strict_AutBreaking_PrimeCoordinate_Source_Law"
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "eom_hamiltonian_exported": false,
+      "nonproxy_ltotal_exported": false,
+      "role_transfer_exported": false,
+      "strict_beta_eta_coupling_theorem_exported": false,
+      "strict_damping_beta_eta_source_packet_exported": false,
+      "strict_delta_eta_source_exported": false,
+      "strict_prime_log_value_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Supply one concrete Strict_AutBreaking_PrimeCoordinate_Source_Law: a formula deriving a specific nonzero prime-coordinate vector from strict nadsoliton data, together with provenance and damping-coupling proofs.  If no such formula is supplied, preserve the P2929-P2934 no-new-live-frontier boundary rather than choosing a coordinate by convention.",
+    "positive_witnesses": {
+      "acceptance_verifier_constructed": true,
+      "formal_aut_breaking_vectors_exist": true,
+      "missing_obligations_isolated": true
+    },
+    "reason": "P2934 builds the acceptance verifier for the object demanded by P2933.  The bounded cube {-1,0,1}^5 contains 242 nonzero formal prime-coordinate vectors; all are product-additive and Aut-breaking, but none has strict nadsoliton provenance or delta/beta coupling.  Formal vector abundance is therefore not a strict source law."
+  },
+  "input_hashes": {
+    "P2933": "1a30a79629c4f96a87e45e67bad0cd6097a8d72e7a162ac2410e3cd822d856e5"
+  },
+  "status": "P2934_AUT_BREAKING_SOURCE_LAW_ACCEPTANCE_VERIFIER_NO_ACCEPTED_SOURCE"
+}

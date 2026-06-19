@@ -1624,3 +1624,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Nine current lanes are reconciled, and `0` lanes unlock a new live frontier on current artifacts; the fresh typed-object intake gate accepts `0` current candidates.
 - Do not promote damping readiness, Gamma/Lambda readiness, selector replay, bridge replay, Lagrangian/EOM replay, direct-route replay, role transfer, `L_total`, or ToE closure without a genuinely new strict typed object/source/theorem/provider/blocker-cut.
 - The next admissible move must supply one such new object and run the intake gate; otherwise preserve the P2929 no-new-live-frontier certificate.
+
+## Current Z12 residue prime-value source candidate guardrail (P2930/S1880, 2026-06-19)
+
+- P2930 supplies one genuinely new bounded candidate for the P2927/P2929 missing strict `L_p` value-source obligation: `Z12_Residue_Prime_Value_Source_Candidate`.
+- The candidate computes nonzero finite residue-distance labels and has zero formal additive product defects on the audited products, so it is a real carrier witness.
+- It is not accepted as a strict source theorem: the value scale is conventional, no strict nadsoliton source theorem is exported, and no `delta/eta` source or beta/eta coupling theorem is supplied.
+- Do not promote P2930 to strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE; a next move must add an intrinsic strict source theorem/coupling for these labels or pivot to a different new typed object.
+
+## Current residue-affine prime-value source no-go guardrail (P2931/S1881, 2026-06-19)
+
+- P2931 generalizes the P2930 residue-distance candidate to the affine family `F_a(d)=a*dist_Z12(d,0)` and tests additive compatibility on all audited products `d*e<=11`.
+- The symbolic witness `2*3=6` has defect `a`, so multiplicativity/additivity forces `a=0`; the only additive member is the zero source and cannot supply nonzero `L_p` values.
+- Do not continue residue-distance variants as primary strict `L_p` source candidates without a genuinely non-affine strict nadsoliton source theorem and a new finite acceptance test.
+- No strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE closure is exported from P2931.
+
+## Current Aut(Z12)-invariant additive value-source no-go guardrail (P2932/S1882, 2026-06-19)
+
+- P2932 broadens the P2931 residue-affine no-go to the exact linear source space of Aut(Z12)-invariant additive node laws on `{1,...,11}`.
+- The exact rational system has `74` equations, rank `11`, and nullity `0`; only the zero function satisfies product additivity plus Aut(Z12) invariance.
+- This route cannot supply nonzero strict `L_p` values and exports no strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+- A next move in the `L_p` lane requires a strictly sourced symmetry-breaking/non-Aut-invariant value law with explicit premise scope and finite coupling test, or a pivot to a different genuinely new typed object.
+
+## Current Aut-breaking prime-coordinate source-space guardrail (P2933/S1883, 2026-06-19)
+
+- P2933 decomposes the exact additive prime-log value-source space: product additivity leaves five prime-coordinate degrees of freedom, while Aut(Z12)-invariance kills all five.
+- Any nonzero `L_p` source must therefore be an explicit strict Aut-breaking value law, not arbitrary coordinates, external logs, residue labels, or readiness replay.
+- Do not promote the five-dimensional coordinate space to strict damping `beta/eta`, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE without a sourced symmetry-breaking law and coupling theorem.
+- The next admissible move is a concrete `Strict_AutBreaking_PrimeCoordinate_Source_Law` with finite additivity, provenance, delta/eta, and beta/eta coupling tests, or a pivot to a different genuinely new typed object.
+
+## Current Aut-breaking source-law acceptance verifier guardrail (P2934/S1884, 2026-06-19)
+
+- P2934 constructs the finite acceptance verifier for the `Strict_AutBreaking_PrimeCoordinate_Source_Law` demanded by P2933.
+- The bounded cube `{-1,0,1}^5` contains `242` nonzero formal vectors; all are product-additive and Aut-breaking, but none has strict nadsoliton provenance or damping coupling on current artifacts.
+- Do not choose a prime-coordinate vector by convention, lexicographic order, external logs, residue labels, or selector/readiness replay.
+- A next admissible move must supply an actual formula deriving one nonzero vector from strict nadsoliton data plus delta/eta and beta/eta coupling proofs, or preserve the no-new-live-frontier boundary.
+
+## Current strict Aut-breaking source-formula intake guardrail (P2935/S1885, 2026-06-19)
+
+- P2935 constructs the finite intake gate for a future `Strict_AutBreaking_PrimeCoordinate_Source_Law`.
+- The `2^5=32` obligation table has exactly one accepting row: algebraic vector, strict provenance, nonconventional symmetry breaking, delta/eta source, and beta/eta coupling all present.
+- Current formula classes satisfy at most algebraic readiness; coordinate scans, lexicographic choices, external logs, residue labels, and selector/readiness replay remain rejected.
+- Do not continue coordinate scans as primary strategy; supply an actual strict source formula and pass the P2935 gate, or preserve the no-new-live-frontier certificate.
