@@ -2656,3 +2656,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2895/S1845 free-12-torsor basepoint/polarity `L_total` guard
 
 `P2895/S1845` is a torsor basepoint/polarity obstruction, not a strict action construction.  It supplies no nonimported basepoint law, no unique coupling theorem, no localized unit-bearing density, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2896/S1846 invariant scalar basepoint-law `L_total` guard
+
+`P2896/S1846` is a finite scalar-selection obstruction, not a strict action construction.  It adds no translation-breaking source law, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2897/S1847 circulant relation basepoint `L_total` guard
+
+`P2897/S1847` is a finite relation-geometry obstruction, not a strict action construction.  It adds no non-circulant translation-breaking source, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2898/S1848 single-defect relation `L_total` guard
+
+`P2898/S1848` is a finite import-boundary audit for minimal non-circulant relation defects, not a strict action construction.  It adds no law sourcing the defect placement, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2899/S1849 post-defect potential/readiness `L_total` guard
+
+`P2899/S1849` is a readiness/state-map matrix.  It identifies conditional structural potential but adds no strict defect-placement source law, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.
+
+## P2900/S1850 defect-placement source-law inventory `L_total` guard
+
+`P2900/S1850` is a current-artifact inventory certificate, not a strict action construction.  It adds no strict defect-placement source law, no localized unit-bearing density, no coupling theorem to the `9/5` carrier, and no variational chain rule into nonproxy `L_total`, EOM, or Hamiltonian source.

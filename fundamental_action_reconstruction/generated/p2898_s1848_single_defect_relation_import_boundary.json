@@ -1,0 +1,227 @@
+{
+  "acceptance_matrix": {
+    "accepted_as_nonimported_basepoint_law": false,
+    "exports_nonimported_9_over_5_variational_density": false,
+    "exports_translation_breaking_relation_source": false,
+    "exports_unique_coupling_to_9_over_5_carrier": false,
+    "facts": {
+      "all_defect_orbits_free": true,
+      "all_pointers_are_imported_labelled_edges": true,
+      "no_source_neutral_defect_placement": true,
+      "non_circulant_one_edge_defect_tested": true,
+      "p2897_rechecked": true
+    }
+  },
+  "decision": {
+    "negative_export_flags": {
+      "coupling_to_9_over_5_variational_density_exported": false,
+      "eom_closure_exported": false,
+      "full_kernel_bridge_exported": false,
+      "hamiltonian_closure_exported": false,
+      "localized_action_density_exported": false,
+      "ltotal_exported": false,
+      "nonimported_9_over_5_variational_chain_rule_exported": false,
+      "nonimported_basepoint_or_polarity_law_exported": false,
+      "nonimported_single_defect_source_exported": false,
+      "role_transfer_exported": false,
+      "strict_damping_compression_bridge_exported": false,
+      "strict_free_12_torsor_source_law_exported": false,
+      "strict_phase_origin_source_artifact_exported": false,
+      "toe_closure_exported": false,
+      "translation_breaking_relation_source_exported": false,
+      "unique_coupling_to_9_over_5_carrier_exported": false
+    },
+    "next_honest_step": "Do not promote one-edge defects, labelled defect locations, non-circulant perturbations, edge differences, circulant backgrounds, relation profiles, scalar scores, or unpointed free-torsor clocks to strict phase/origin sourcehood.  A next proof-grade move must either supply an explicit strict law that sources the defect placement itself and couples it to the 9/5 variational density, or pivot to a genuinely different typed object outside torsor/basepoint/scalar-score/relation/defect/support/orbit/Fourier/inventory constructions; otherwise preserve no-new-live-frontier.",
+    "reason": "P2898 audits the nearest non-circulant repair after P2897: one labelled directed-edge defect on an arbitrary circulant relation.  There are 4096 circulant backgrounds and 144 edge placements, hence 589824 single-defect candidates, but for each background and edge difference the 12 placements form a free translation orbit.  The defect can point only because its labelled placement is imported; quotient-level data supplies 0 source-neutral defect placements.  Therefore one-edge non-circulant relation defects do not export a nonimported basepoint/polarity law or source the 9/5 carrier origin."
+  },
+  "input_hashes": {
+    "P2897": "bbaa83b4b609566bf5c7b003e2195df9f91e3963159f55f35542072a85128c10"
+  },
+  "single_defect_relation_import_boundary": {
+    "candidate_class": "one-edge non-circulant defects of arbitrary circulant relations on the free Z12 torsor, tested as minimal translation-breaking relation-source candidates",
+    "input_status_rechecked": "P2897_CIRCULANT_RELATION_BASEPOINT_OBSTRUCTION_NO_CLOSURE",
+    "single_defect_audit": {
+      "all_defect_orbits_free": true,
+      "candidate_defects_with_imported_pointer_count": 589824,
+      "circulant_background_count": 4096,
+      "defect_orbit_size_histogram": {
+        "12": 49152
+      },
+      "directed_edge_count": 144,
+      "edge_difference_count": 12,
+      "proof_certificate": {
+        "free_orbit_fact": "For fixed D and edge difference j-i, the 12 translated edge placements form a free Z12 orbit.",
+        "import_boundary": "The non-circulant relation can point only because the labelled edge placement was imported; the quotient data D plus edge difference does not choose one of the 12 placements.",
+        "single_defect_fact": "A one-edge defect is specified by a circulant background D plus a labelled directed edge (i,j) to toggle."
+      },
+      "sample_defect_orbits": [
+        {
+          "canonical_toggled_edge": [
+            0,
+            0
+          ],
+          "circulant_background_mask": 0,
+          "edge_difference": 0,
+          "imported_pointer_payload": {
+            "edge_difference": 0,
+            "source_vertex": 0,
+            "target_vertex": 0
+          },
+          "sample_translated_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "translated_edge_orbit_size": 12
+        },
+        {
+          "canonical_toggled_edge": [
+            0,
+            1
+          ],
+          "circulant_background_mask": 0,
+          "edge_difference": 1,
+          "imported_pointer_payload": {
+            "edge_difference": 1,
+            "source_vertex": 0,
+            "target_vertex": 1
+          },
+          "sample_translated_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "translated_edge_orbit_size": 12
+        },
+        {
+          "canonical_toggled_edge": [
+            0,
+            3
+          ],
+          "circulant_background_mask": 5,
+          "edge_difference": 3,
+          "imported_pointer_payload": {
+            "edge_difference": 3,
+            "source_vertex": 0,
+            "target_vertex": 3
+          },
+          "sample_translated_edges": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "translated_edge_orbit_size": 12
+        },
+        {
+          "canonical_toggled_edge": [
+            0,
+            5
+          ],
+          "circulant_background_mask": 2730,
+          "edge_difference": 5,
+          "imported_pointer_payload": {
+            "edge_difference": 5,
+            "source_vertex": 0,
+            "target_vertex": 5
+          },
+          "sample_translated_edges": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              8
+            ]
+          ],
+          "translated_edge_orbit_size": 12
+        },
+        {
+          "canonical_toggled_edge": [
+            0,
+            11
+          ],
+          "circulant_background_mask": 4095,
+          "edge_difference": 11,
+          "imported_pointer_payload": {
+            "edge_difference": 11,
+            "source_vertex": 0,
+            "target_vertex": 11
+          },
+          "sample_translated_edges": [
+            [
+              0,
+              11
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "translated_edge_orbit_size": 12
+        }
+      ],
+      "single_defect_candidate_count": 589824,
+      "source_neutral_defect_placement_count": 0,
+      "torsor_size": 12,
+      "translated_placements_per_background_and_difference": 12,
+      "translation_quotient_orbit_count": 49152
+    }
+  },
+  "status": "P2898_SINGLE_DEFECT_RELATION_IMPORT_BOUNDARY_NO_CLOSURE"
+}

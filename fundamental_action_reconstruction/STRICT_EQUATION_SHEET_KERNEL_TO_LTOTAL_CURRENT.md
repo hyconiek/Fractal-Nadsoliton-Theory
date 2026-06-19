@@ -3287,3 +3287,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2895/S1845 free-12-torsor basepoint/polarity law no-go
 
 `P2895/S1845` grants the minimum free-`12` torsor required by `P2894` and audits the missing basepoint/polarity law.  There are exactly `12` equivariant maps from the source torsor to a free `12`-origin `9/5` carrier orbit, but the free torsor has `0` invariant basepoints; choosing an offset is therefore the missing imported phase/origin choice.  The unpointed torsor possibility does not export strict sourcehood, nonimported `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2896/S1846 invariant scalar basepoint-law exhaustion
+
+`P2896/S1846` exhausts source-neutral translation-invariant scalar/score laws on the `P2895` free `Z12` torsor for trivial alphabet sizes `1,2,3,4,6,12`.  Every invariant scalar law is constant; marked levels are empty or all `12` torsor points, and argmin/argmax sets have size `12`, not `1`.  Thus invariant scalar scoring does not export a nonimported basepoint/polarity law, `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2897/S1847 circulant relation basepoint obstruction
+
+`P2897/S1847` exhausts all `4096` translation-invariant binary/circulant relations on the `P2895/P2896` free `Z12` torsor.  Every such relation is preserved by all translations, the vertex orbit size remains `12`, and neither degree profiles nor translation-local relation-row profiles isolate a unique vertex.  Thus invariant relation geometry does not export a nonimported basepoint/polarity law, `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2898/S1848 single-defect relation import-boundary audit
+
+`P2898/S1848` audits the nearest non-circulant repair after `P2897`: one labelled directed-edge defect on an arbitrary circulant relation.  There are `4096` circulant backgrounds and `144` edge placements, hence `589824` single-defect candidates; for each background and edge difference, the `12` placements form a free translation orbit, so quotient-level data supplies `0` source-neutral defect placements.  One-edge defects point only by importing the labelled placement and do not export a nonimported basepoint/polarity law, `9/5` variational density, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
+
+## P2899/S1849 post-defect potential/readiness matrix
+
+`P2899/S1849` separates conditional ToE potential from closure after `P2895-P2898`.  It records `4` positive symptoms (free-`12` capacity, offset-conditioned equivariant maps, placement-conditioned one-edge translation breaking, and a sharply specified missing object) but also `6` still-active blockers: `0` invariant basepoints, `0` scalar unique selectors, `0` circulant unique vertices, `0` source-neutral defect placements, no coupling theorem to the `9/5` variational density, and no `L_total`/EOM/Hamiltonian/ToE export.  This is weak conditional potential evidence, not action-density or ToE closure.
+
+## P2900/S1850 defect-placement source-law inventory no-go
+
+`P2900/S1850` scans the current generated JSON corpus for the exact `P2899` missing object: a strict defect-placement/basepoint/polarity source law coupled to the `9/5` variational density.  The scan finds no unquarantined artifact with both positive source and coupling exports, and no artifact with source+coupling+closure exports.  The current corpus therefore does not supply the missing law, localized action density, strict damping bridge, `L_total`, EOM, Hamiltonian, role transfer, or ToE closure.
