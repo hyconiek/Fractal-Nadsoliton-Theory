@@ -2856,3 +2856,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2945/S1895 delta/eta ratio candidate `L_total` guard
 
 `P2945/S1895` gives exact finite candidate formulas for `delta=4/5` and `eta=9/5` from the P2938/P2944 identity-positive-cone inventory.  Since no strict theorem forces those ratios and no beta/eta coupling theorem is exported, the candidate cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2946/S1896 ratio-forcing obstruction `L_total` guard
+
+`P2946/S1896` shows that the P2945 ratio formulas are not forced by the finite identity-positive-cone premises alone.  Since eta, the exact P2938 vector, and the delta formula selection still lack an independent strict source theorem and beta/eta coupling, this obstruction cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2947/S1897 unbounded ratio non-forcing `L_total` guard
+
+`P2947/S1897` proves at the symbolic finite-family level that positive-cone premises do not force `eta=9/5` or the exact P2938 vector: `eta=S/5` remains available for every `S>=5`.  Because the ratio source theorem and beta/eta coupling are still absent, this result cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2948/S1898 torsion-character ratio package `L_total` guard
+
+`P2948/S1898` gives a finite theorem skeleton connecting the P2938 vector to `delta=4/5` and `eta=9/5`, but the strict source theorem and beta/eta coupling theorem are still absent.  The skeleton cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2949/S1899 delta numerator semantics `L_total` guard
+
+`P2949/S1899` shows that the P2948 delta numerator semantics premise is not discharged: identity and carrier-zero roles coincide extensionally on the current finite artifact, so count-only delta numerator choices are alias-equivalent.  Without an intensional strict source theorem and beta/eta coupling, this cannot enter nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.

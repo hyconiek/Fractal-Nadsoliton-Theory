@@ -3487,3 +3487,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2945/S1895 identity-positive-cone delta/eta source candidate
 
 `P2945/S1895` constructs exact finite ratio candidates for the missing damping anchor from the P2938/P2944 identity-positive-cone inventory: `delta=(prime_count-identity_count)/prime_count=4/5` and `eta=prime_vector_sum/prime_count=9/5`, with `eta=1+delta`.  This is concrete arithmetic progress toward a delta/eta source law, but no strict nadsoliton theorem forces these ratios and no beta/eta coupling theorem is exported.  Therefore no strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2946/S1896 delta/eta ratio strict-forcing obstruction
+
+`P2946/S1896` tests whether the P2945 formulas are forced by the finite identity-positive-cone premises.  In the bounded positive prime-coordinate model class, `eta=9/5` holds only on a proper subset of admissible vectors, the exact P2938 vector is admissible but not uniquely forced, and the `delta=4/5` formula has denominator-equivalent aliases because `identity_count=zero_count=1`.  Thus P2946 exports a ratio-forcing obstruction, not a strict delta/eta source law, beta/eta coupling theorem, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2947/S1897 unbounded ratio non-forcing theorem audit
+
+`P2947/S1897` replaces the bounded P2946 scan with an exact parametric obstruction: for every integer `S>=5`, the positive vector `(S-4,1,1,1,1)` has `eta=S/5`, so the identity-positive-cone premises alone admit infinitely many eta values.  Therefore `eta=9/5`, the exact P2938 vector `[1,2,2,2,2]`, and the P2945 ratio formulas still require an independent strict source theorem and beta/eta coupling.  P2947 also records the delta alias kernel caused by `identity_count=zero_count=1`.  No strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+
+## P2948/S1898 torsion-character ratio package theorem skeleton
+
+`P2948/S1898` constructs the finite theorem spine requested after P2947: taking the explicit P2938 torsion-character aggregate as an extra source premise selects the exact vector `[1,2,2,2,2]`, sum `9`, `delta=4/5`, `eta=9/5`, and `eta=1+delta`.  This respects the P2947 result because the positive cone alone is not claimed to force the ratios.  The package remains finite-only: no strict nadsoliton source theorem for the torsion-character aggregate, no strict delta numerator semantics theorem, and no beta/eta damping-coupling theorem are exported.  Therefore no strict damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2949/S1899 delta numerator semantics separation audit
+
+`P2949/S1899` targets exactly one P2948 skeleton premise: strict semantics for the P2945 delta numerator.  The audit compares the P2944 algebraic identity role and carrier-zero role node-by-node and finds the same extension `{1}`.  Therefore identity-deficit, zero-deficit, intersection-deficit, and union-deficit count functionals all return `delta=4/5`; current artifacts do not export a strict intensional/source theorem selecting identity-deficit semantics.  No strict delta/eta source law, beta/eta coupling theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
