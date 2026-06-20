@@ -1834,3 +1834,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Formal predicates either make target-coded/nonunique `sum=9` cuts or select `(a,b)=(1,1)` through unsourced primitive equal-summand assumptions; current artifacts do not export these as strict nadsoliton localizer laws.
 - Do not promote P2959 to strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must introduce a genuinely new strict nadsoliton localizer law not equivalent to target-coded `sum=9` cuts or primitive equal-weight convention, construct a unit-bearing nonproxy coupling outside this localizer lane, or pivot outside the ratio-package lane while preserving the P2929-P2959 boundary.
+
+## Current developmental ontology localizer-law intake guardrail (P2960/S1910, 2026-06-20)
+
+- P2960 incorporates the fact that the final theory is still under construction: a new mechanism may be admitted as a developmental theorem candidate even if older artifacts did not already export it.
+- It rejects `sum=9` and primitive equal-summand replay as strict closure evidence, but admits two precise candidates for future proof work: a fractal self-balance/minimal-positive-source law and a minimax source-amplitude quotient, each selecting `(a,b)=(1,1)` on the tested lattice.
+- These candidates are not strict exports until a nonconventional nadsoliton source derivation, canonical scale quotient, and unit-bearing nonproxy action-density coupling are proved.
+- Do not promote P2960 to strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.  The next admissible move should prove exactly one P2960 candidate's source derivation or construct its canonical scale quotient/unit-bearing nonproxy coupling; otherwise pivot outside the ratio-package lane while preserving the P2929-P2960 boundary.
+
+## Current exchange-balanced scale quotient source-candidate guardrail (P2961/S1911, 2026-06-20)
+
+- P2961 takes one P2960 developmental candidate and makes it more proof-grade: quotient positive integer provenance weights `(a,b)` by `gcd(a,b)`, then impose the K/C exchange involution on primitive quotient classes.
+- The unbounded lemma is that an exchange-fixed primitive class must be `(1,1)`, so the quotient-selected vector is `K+C=[1,2,2,2,2]` with sum `9` without importing a target_sum cut.
+- This is a developmental source-candidate theorem, not strict closure: current artifacts still do not prove that the nadsoliton exports the K/C exchange symmetry or a unit-bearing nonproxy action-density coupling.
+- Do not promote P2961 to strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.  The next admissible move must prove the strict nadsoliton K/C exchange-symmetry source theorem, construct the unit-bearing nonproxy coupling receiving the P2961 quotient-selected vector, or pivot outside the ratio-package lane while preserving the P2929-P2961 boundary.
+
+## Current K/C exchange-symmetry source obstruction guardrail (P2962/S1912, 2026-06-20)
+
+- P2962 audits the missing strict source behind P2961 and finds that the coefficient-level exchange quotient is not yet an artifact-level K/C symmetry.
+- The obstruction is finite and concrete: K has support size `2` and nonzero multiset `[1,2]`, C has support size `3` and nonzero multiset `[2,2,2]`, the provenance labels differ, and no coordinate permutation maps K to C.
+- Do not promote P2961/P2962 to strict K/C exchange source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a new typed mediator/functor making K and C comparable without erasing their support/provenance mismatch, construct a unit-bearing nonproxy coupling that does not require artifact-level K/C exchange symmetry, or pivot outside the ratio-package lane while preserving the P2929-P2962 boundary.
+
+## Current typed mediator/functor no-go guardrail (P2963/S1913, 2026-06-20)
+
+- P2963 audits the typed mediator/functor route opened by P2962.  Eight finite mediator candidates are tested.
+- The only audited equalizer is `max_nonzero`; it makes K and C equal only by erasing support shape and provenance labels.  Mediators preserving the P2962 mismatch keep K and C unequal.
+- Do not promote scalar mediator collapse to strict K/C exchange source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must construct an actual unit-bearing nonproxy coupling receiving the P2938 aggregate without K/C artifact exchange, introduce a new typed structural object richer than the current K/C split, or pivot outside the ratio-package lane while preserving the P2929-P2963 boundary.

@@ -2912,3 +2912,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2959/S1909 U(12) localizer `L_total` guard
 
 `P2959/S1909` shows that bounded formal localizer predicates either import the target-coded but nonunique `sum=9` condition or pick the P2938 target through an unsourced primitive equal-summand convention.  Without a strict nadsoliton functor/localizer and beta/unit coupling, the aggregate still cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping coefficient.
+
+## P2960/S1910 developmental localizer-law `L_total` guard
+
+`P2960/S1910` allows new localizer mechanisms to be worked on while the final theory is still under construction, but classifies them as developmental work items until a nonconventional source derivation, canonical scale quotient, and unit-bearing nonproxy coupling are exported.  Therefore no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE from P2960 alone.
+
+## P2961/S1911 exchange-balanced quotient `L_total` guard
+
+`P2961/S1911` constructs a canonical primitive scale quotient and exchange-fixed source candidate for the P2938 vector, but no strict nadsoliton exchange-symmetry source theorem or unit-bearing nonproxy action-density coupling is exported.  Therefore the selected vector still cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping term.
+
+## P2962/S1912 K/C exchange-symmetry `L_total` guard
+
+`P2962/S1912` shows that P2961's coefficient-level exchange quotient is not yet an artifact-level K/C symmetry of the actual P2938 ingredients.  Because support shape, nonzero coordinate multiset, and typed provenance labels differ, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE from this exchange route without a new typed mediator/functor or an independent unit-bearing nonproxy coupling.
+
+## P2963/S1913 typed mediator `L_total` guard
+
+`P2963/S1913` finds no typed mediator that both compares K and C and preserves the support/provenance mismatch identified by P2962.  Scalar equalization such as `max_nonzero` is too coarse for a typed source functor, so no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE through this mediator route.
