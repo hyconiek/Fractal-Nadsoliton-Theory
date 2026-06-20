@@ -2888,3 +2888,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2953/S1903 symbolic weight-family `L_total` guard
 
 `P2953/S1903` proves the unbounded positive rational weight-family obstruction exactly: `V(a,b)=[a,2a,2b,2b,2b]` stays product-additive and positive for all positive weights, while the desired P2938 vector merely imposes the target equations `a=b=1`.  Since no independent equal-weight/source theorem is exported, this cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2954/S1904 identity-deficit `L_total` guard
+
+`P2954/S1904` separates identity-deficit from carrier-zero at the typed-signature level, but it does not export the strict source law that would make the identity-action signature the damping numerator.  Therefore this interface cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced delta/eta term.
+
+## P2955/S1905 P2601-to-delta-numerator `L_total` guard
+
+`P2955/S1905` prevents silent reuse of P2601 identity-action source prose as the P2954/P2951 delta numerator source.  Without an explicit P2601-to-P2954 numerator functor and carrier-zero alias exclusion, the interface cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced delta/eta term.
+
+## P2956/S1906 nonproxy variational coupling `L_total` guard
+
+`P2956/S1906` shows that the P2948 exact ratio package still lacks a nonproxy variational coupling: reproducing `eta=9/5` through a scalar Euler equation requires importing the `9:5` source/stiffness ratio, and no independent field variable or unit-bearing action density is exported.  Thus the package cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping term.
