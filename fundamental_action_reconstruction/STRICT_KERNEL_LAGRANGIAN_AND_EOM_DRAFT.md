@@ -3000,3 +3000,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2981/S1931 CRT provenance `L_total` guard
 
 `P2981/S1931` adds no CRT projector term to `L_total`.  Finite idempotent uniqueness and factor cardinality distinction are provenance-readiness only; without a strict source map, nonpremise factor semantics, named coupling, unit-bearing density, and nonproxy variational chain, EOM, Hamiltonian, bridge closure, role transfer, and ToE remain unexported.
+
+## P2982/S1932 CRT factor-semantics `L_total` guard
+
+`P2982/S1932` adds no CRT factor-semantics term to `L_total`.  Residue signatures and cardinality-distinguished mod-3/mod-4 labels are algebraic semantics only; without nonpremise physical semantics, strict source map, named coupling, unit-bearing density, and nonproxy variational chain, EOM, Hamiltonian, bridge closure, role transfer, and ToE remain unexported.
+
+## P2983/S1933 CRT source-atom coupling `L_total` guard
+
+`P2983/S1933` does not add a CRT source-atom coupling term to `L_total`.  The named source-atom audit finds no strict provenance, nonpremise factor semantics, positive scale/measure source, bridge law, unit-bearing action density, or nonproxy variational chain, so EOM, Hamiltonian, role transfer, bridge closure, and ToE remain unexported.

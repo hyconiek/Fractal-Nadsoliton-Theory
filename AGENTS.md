@@ -1988,3 +1988,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite positives remain real: `[0,1,4,9]` are the idempotents, `(4,9)` is the unique nontrivial orthogonal completion pair of `1`, and mod-3/mod-4 factors are cardinality-distinguished; the acceptance matrix has `64` profiles with only the full profile accepting.
 - The current route is bounded no-go: no strict nadsoliton source map, nonpremise factor semantics, or named source-atom coupling is exported.
 - Do not promote CRT projector uniqueness, factor cardinality labels, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible move may attack one remaining CRT route (nonpremise factor semantics, named source-atom coupling, or action/variational installation) or preserve the P2929-P2981 no-strict-export boundary.
+
+## Current CRT idempotent nonpremise factor-semantics obstruction guardrail (P2982/S1932, 2026-06-20)
+
+- P2982 attacks exactly one P2981 remaining CRT route: nonpremise factor semantics for the `Z/12Z` CRT idempotent projector split.
+- Finite positives remain real: projectors `4` and `9` implement exact mod-3/mod-4 CRT projections, satisfy `4*9=0` and `4+9=1 mod 12`, and the acceptance matrix has `64` profiles with only the full profile accepting.
+- The current route is bounded no-go: residue signatures and cardinality labels are algebraic semantics only; no nonpremise strict physical semantics, strict source map, or named source-atom coupling is exported.
+- Do not promote CRT projector uniqueness, cardinality labels, residue signatures, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible move may attack one remaining CRT route (named source-atom coupling or action/variational installation) or preserve the P2929-P2982 no-strict-export boundary.
+
+## Current CRT named source-atom coupling obstruction guardrail (P2983/S1933, 2026-06-20)
+
+- P2983 attacks exactly one P2982 remaining CRT route: named source-atom coupling for the `Z/12Z` CRT idempotent projector split.
+- Finite positives remain real: projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`; the four named atoms are explicitly audited; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go: no strict provenance, nonpremise factor semantics, orientation-sensitive coupling, target-independent positive `beta/Z_beta` or measure, bridge-completion law, or unit-bearing action/variational installation is exported.
+- Do not promote CRT source-atom rows, projector ratios, residue signatures, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The only remaining CRT-lane route is action/variational installation with a genuinely unit-bearing named density and nonproxy chain; otherwise introduce a genuinely new strict typed object/theorem/provider or preserve the P2929-P2983 no-strict-export certificate.

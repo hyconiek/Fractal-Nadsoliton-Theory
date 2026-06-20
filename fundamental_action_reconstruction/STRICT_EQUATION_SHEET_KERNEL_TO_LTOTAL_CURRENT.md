@@ -3631,3 +3631,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2981/S1931 CRT idempotent strict-nadsoliton provenance obstruction
 
 `P2981/S1931` attacks exactly one P2980 missing theorem: strict nadsoliton provenance for the CRT idempotent projector split.  The finite side is positive: `[0,1,4,9]` are the idempotents, `(4,9)` is the unique nontrivial orthogonal completion pair of `1`, and the mod-3/mod-4 factors are cardinality-distinguished.  The source side remains blocked: no current artifact exports a strict nadsoliton source map, nonpremise factor semantics, named source-atom coupling, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+
+## P2982/S1932 CRT idempotent nonpremise factor-semantics obstruction
+
+`P2982/S1932` attacks exactly one P2981 remaining CRT route: nonpremise factor semantics for the CRT idempotent projector split.  The finite side is positive: projectors `4` and `9` implement exact mod-3/mod-4 CRT projections, satisfy `4*9=0` and `4+9=1 mod 12`, and give algebraic factor labels.  The source/semantics side remains blocked: no current artifact exports nonpremise strict physical semantics, strict nadsoliton source map, named source-atom coupling, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+
+## P2983/S1933 CRT named source-atom coupling obstruction
+
+`P2983/S1933` attacks exactly one P2982 remaining CRT route: named source-atom coupling for the CRT idempotent projector split.  The finite matrix audits selector/orientation sign, positive `beta/Z_beta` damping, legacy-to-strict bridge-source, and action-density/variational atoms.  The result is bounded no-go: projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`, but their orientation-score gaps are `0`, their ratios are only algebraic samples, no amplitude/phase/damping completion law is supplied, and no unit-bearing named action density or nonproxy variational chain is installed.  No named source-atom coupling, damping source, selector/orientation source, bridge closure, action-density export, nonproxy `L_total`, role transfer, or ToE follows.
