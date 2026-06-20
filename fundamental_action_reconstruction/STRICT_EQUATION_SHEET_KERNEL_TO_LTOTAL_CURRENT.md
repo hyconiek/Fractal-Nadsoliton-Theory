@@ -3543,3 +3543,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2959/S1909 P2938 U(12) aggregate localizer acceptance no-go
 
 `P2959/S1909` attacks the missing P2958 nadsoliton-to-U(12) functor/localizer directly.  It enumerates the bounded localizer lattice `V(a,b)=a*K+b*C` for `0<=a,b<=3` and classifies predicates that select the target pair `(1,1)`.  Formal selection is possible through primitive equal-summand predicates, while `sum=9` is target-coded and nonunique in the bounded lattice; none of these predicates is strict unless a nadsoliton localizer exports it.  Current artifacts still export no such functor/localizer, no strict equal-weight theorem, and no beta/unit coupling.  Thus no strict P2938 provenance, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2960/S1910 developmental ontology localizer-law intake
+
+`P2960/S1910` incorporates the theory-under-construction caveat by separating developmental theorem candidates from strict exports.  It rejects `sum=9` and primitive equal-summand replay as closure evidence, but admits two new research objects: a developmental fractal self-balance/minimal-positive-source law and a developmental minimax source-amplitude quotient.  Both select `(a,b)=(1,1)` on the tested lattice as theorem candidates, not as present strict closure.  Missing obligations remain: nonconventional nadsoliton source derivation, canonical scale quotient, and unit-bearing nonproxy action-density coupling.
+
+## P2961/S1911 exchange-balanced scale quotient source candidate
+
+`P2961/S1911` takes one P2960 developmental candidate and constructs its canonical scale quotient.  Positive integer provenance weights `(a,b)` are quotiented by `gcd(a,b)`, then the exchange involution `(a,b)->(b,a)` is evaluated on primitive quotient classes.  The unbounded lemma is immediate: an exchange-fixed primitive class has `a=b` and `gcd(a,b)=1`, hence `(a,b)=(1,1)`.  The unique fixed class produces `K+C=[1,2,2,2,2]` and sum `9` without a target_sum cut.  This exports a developmental source-candidate theorem, not strict provenance: the strict nadsoliton source for the K/C exchange symmetry and the unit-bearing nonproxy coupling remain missing.
+
+## P2962/S1912 K/C exchange-symmetry source obstruction
+
+`P2962/S1912` audits the missing strict source premise behind P2961.  The P2961 exchange is clean on coefficient quotient classes, but the actual P2938 ingredients are not currently interchangeable typed artifacts: `K=[1,2,0,0,0]` has support size `2` and nonzero multiset `[1,2]`, while `C=[0,0,2,2,2]` has support size `3` and nonzero multiset `[2,2,2]`; their labels are also kernel-excess versus character-negativity.  No coordinate permutation maps K to C.  Therefore no strict nadsoliton K/C exchange-symmetry source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2963/S1913 typed mediator/functor no-go
+
+`P2963/S1913` audits the P2962-admissible typed mediator/functor escape route.  Eight candidate mediators are tested.  The only audited mediator that makes K and C equal is `max_nonzero`, but it erases support shape and provenance labels; mediators that preserve the P2962 mismatch keep K and C unequal.  Therefore no strict typed mediator/functor, strict K/C exchange source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
