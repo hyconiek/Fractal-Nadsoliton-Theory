@@ -1925,3 +1925,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite orbit/localizer audit finds invariant candidates, but current rows are tautological, slot/component anchors, or bookkeeping-label sections; no strict nadsoliton source theorem or unit-bearing coupling is exported.
 - Do not promote incidence identity, unique-slot anchors, K/C component labels, aggregate-coordinate order, ratio arithmetic, unit conventions, k-selection predicates, or formal Euler placeholders to strict sourcehood, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must add exactly one remaining theorem to the incidence object: a unit-bearing coupling into a named action density or a nonproxy variational chain rule; otherwise preserve the P2929-P2972 boundary.
+
+## Current incidence unit-bearing action-density coupling obstruction guardrail (P2973/S1923, 2026-06-20)
+
+- P2973 audits the unit-bearing coupling theorem missing from P2971/P2972 for the typed support/provenance incidence complex.
+- The finite receiver matrix finds formal incidence receivers, but current rows are formal slot sums, P2964 scalar-reception imports, primitive-mean `9/5` imports, K/C bookkeeping labels, or Euler placeholders; none exports a nonconventional unit/measure source, strict source-localizer theorem, coupling theorem to a named density, or nonproxy variational readiness.
+- Do not promote formal slot-sum densities, P2964 scalar reception, primitive-mean `9/5`, K/C bookkeeping labels, formal Euler placeholders, incidence identity/localizer anchors, unit conventions, or k-selection predicates to strict sourcehood, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move may attack exactly the remaining incidence theorem: a nonproxy variational chain rule for the incidence complex; otherwise preserve the P2929-P2973 no-strict-export boundary.
+
+## Current incidence nonproxy variational chain-rule obstruction guardrail (P2974/S1924, 2026-06-20)
+
+- P2974 audits the last incidence-object theorem route left by P2971-P2973: a nonproxy variational chain rule for the typed support/provenance incidence complex.
+- The finite formal quadratic derivative table is exact (`5 x 5`, diagonal, rank `5`), but current rows lack strict field-variable provenance, unit/measure-coupled density, strict source-localizer, boundary integration theorem, and continuum/nonproxy lift.
+- Do not promote formal derivative tables, P2912 Gamma Jacobian imports, formal Euler equations, K/C bookkeeping variations, formal slot-sum densities, P2964 scalar reception, primitive-mean `9/5`, incidence localizer anchors, unit conventions, or k-selection predicates to nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- The P2971 incidence theorem triad is now bounded no-go on current artifacts; a next admissible move must introduce a genuinely new strict typed object/theorem outside this incidence lane, or preserve the P2929-P2974 no-strict-export boundary.
+
+## Current post-incidence fresh typed-object intake guardrail (P2975/S1925, 2026-06-20)
+
+- P2975 constructs the post-P2974 fresh typed-object intake gate across content-defined follow-up routes: incidence replay, ratio-package replay, Gamma/Jacobian import, selector/`QW-2191` replay, generic bridge replay, and unsupplied fresh-object placeholders.
+- The finite gate has `7` candidates, `6` state-map lanes, `64` acceptance profiles, `0` accepted current candidates, and `0` unlocked lanes.
+- Do not promote incidence replay, ratio-package scalar/unit/k arithmetic, Gamma/Jacobian readiness, selector replay, generic bridge replay, or placeholders to strict sourcehood, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must supply exactly one concrete new strict typed object/theorem/provider outside these closed lanes, with a formula or artifact and a finite witness test; otherwise preserve the P2929-P2975 no-new-live-frontier boundary.
+
+## Current Z12 nilradical-filtration source-candidate guardrail (P2976/S1926, 2026-06-20)
+
+- P2976 supplies one concrete new finite typed object after P2975: the nilradical filtration of `Z/12Z`, computed by exhaustive power-orbit witnesses.
+- The nilradical is `{0,6}`, the nonzero nilpotent is `[6]`, `6^2=0`, and all `4` units fix `6`; this is developmental algebraic structure, not a strict source theorem.
+- Do not promote the nilradical filtration, the unit-fixed element `6`, or nilpotent power-orbit witnesses to selector closure, damping source, bridge completion, role transfer, nonproxy `L_total`, or ToE.
+- A next admissible move must attack exactly one missing theorem for this object: strict nadsoliton provenance, coupling to one named missing source atom, or action/variational installation; otherwise preserve the P2929-P2976 developmental/no-strict-export boundary.

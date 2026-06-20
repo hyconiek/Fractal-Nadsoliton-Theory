@@ -3595,3 +3595,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2972/S1922 incidence source-localizer obstruction
 
 `P2972/S1922` attacks one missing theorem left by P2971: a strict source-localizer for the typed support/provenance incidence complex.  The finite audit computes `6` component/weight automorphisms, `3` slot orbits, and `8` invariant subsets, then tests whole-object identity, unique weight-one slot, K component pair, C equal-summand orbit, aggregate-coordinate order, and a completed schema.  Current candidates are tautological, slot/component anchors, or bookkeeping sections; no strict source theorem or unit-bearing coupling is exported.  Thus no strict source-localizer, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2973/S1923 incidence unit-bearing action-density coupling obstruction
+
+`P2973/S1923` attacks one remaining theorem route for the P2971 typed support/provenance incidence complex: a unit-bearing coupling into a named action density.  The finite receiver matrix tests formal slot-sum density, P2964 aggregate-reception import, primitive-mean `9/5` density import, bookkeeping K/C-labelled density, formal Euler receiver placeholder, and a completed strict schema.  Available rows can formally receive the incidence vector `[1,2,2,2,2]`, but none exports a nonconventional unit/measure source, strict source-localizer theorem, coupling theorem to a named density, or nonproxy variational readiness.  Thus no unit-bearing incidence coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2974/S1924 incidence nonproxy variational chain-rule obstruction
+
+`P2974/S1924` attacks the last P2971 incidence-object theorem route: a nonproxy variational chain rule.  The formal quadratic incidence density `1/2 * sum_i w_i Phi_i^2` has an exact `5 x 5` diagonal Hessian with `5` nonzero entries, `0` off-diagonal entries, and rank `5` over `Q`.  This is only a formal slot derivative table: current artifacts do not export strict field-variable provenance, unit/measure-coupled density, strict source-localizer, boundary integration theorem, or continuum/nonproxy lift.  Thus no nonproxy variational chain rule, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2975/S1925 post-incidence fresh typed-object intake gate
+
+`P2975/S1925` constructs the post-incidence fresh typed-object intake gate after P2974.  Seven content-defined candidate routes are tested: incidence derivative replay, incidence source/coupling replay, ratio-package scalar/unit/k replay, Gamma/P2912 Jacobian import replay, selector/`QW-2191` replay, generic legacy-to-strict bridge replay, and an unsupplied fresh-object placeholder.  The finite gate has `64` acceptance profiles and only the all-atoms profile accepts; current accepted candidates are `0`, and unlocked lanes are `0`.  Thus no fresh strict typed object, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2976/S1926 Z12 nilradical-filtration source candidate
+
+`P2976/S1926` supplies one concrete typed object after the P2975 intake gate: the nilradical filtration of `Z/12Z`.  Exhaustive power-orbit enumeration over all `12` elements gives nilradical `{0,6}`, nonzero nilpotent `[6]`, and `6^2=0`; all `4` units fix the nonzero nilpotent.  This is finite algebraic structure outside the incidence lane, but it is developmental only: no strict nadsoliton provenance, named coupling, orientation/selector source, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.

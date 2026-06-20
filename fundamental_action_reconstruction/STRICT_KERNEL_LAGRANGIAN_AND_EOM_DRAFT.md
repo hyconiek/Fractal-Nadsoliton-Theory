@@ -2964,3 +2964,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2972/S1922 incidence-localizer `L_total` guard
 
 `P2972/S1922` adds no sourced term to `L_total`: invariant source-localizer candidates for the P2971 incidence complex either return the object tautologically, select a slot/component anchor, or use bookkeeping labels.  Since no strict source theorem or unit-bearing action-density coupling is installed, no EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2973/S1923 incidence action-density coupling `L_total` guard
+
+`P2973/S1923` adds no sourced `L_total` term.  Formal slot-sum, P2964 scalar-reception import, primitive-mean `9/5` import, K/C bookkeeping density, and Euler-placeholder rows either lack a nonconventional unit/measure source or lack theorem-level coupling from the incidence complex into a named nonproxy density.  Therefore no EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+
+## P2974/S1924 incidence variational-chain `L_total` guard
+
+`P2974/S1924` derives a finite formal Jacobian/Hessian for incidence slots but adds no sourced nonproxy variational term.  Formal derivative tables, P2912 Gamma-Jacobian imports, Euler equations, and K/C bookkeeping variations remain insufficient without strict field variables, unit/measure-coupled density, source-localizer, boundary integration, and continuum/nonproxy lift theorems.  Therefore no EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+
+## P2975/S1925 post-incidence intake `L_total` guard
+
+`P2975/S1925` adds no variational or sourced term to `L_total`.  It is an intake/no-new-live-frontier gate showing that incidence replay, ratio-package replay, Gamma/Jacobian import, selector replay, generic bridge replay, and unsupplied placeholders do not provide a new strict typed object/theorem/provider.  Therefore no EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+
+## P2976/S1926 nilradical-filtration `L_total` guard
+
+`P2976/S1926` adds no sourced term to `L_total`.  The Z12 nilradical filtration and the unit-fixed nilpotent `6` are finite algebraic witnesses only; without strict nadsoliton provenance, a named coupling theorem, orientation/source theorem, and action-density or variational installation, they cannot enter EOM, Hamiltonian, bridge closure, role transfer, or ToE.
