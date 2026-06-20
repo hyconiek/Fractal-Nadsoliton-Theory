@@ -2900,3 +2900,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2956/S1906 nonproxy variational coupling `L_total` guard
 
 `P2956/S1906` shows that the P2948 exact ratio package still lacks a nonproxy variational coupling: reproducing `eta=9/5` through a scalar Euler equation requires importing the `9:5` source/stiffness ratio, and no independent field variable or unit-bearing action density is exported.  Thus the package cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping term.
+
+## P2957/S1907 positive beta-scale/unit `L_total` guard
+
+`P2957/S1907` shows that positive beta-scale covariance for the exact `eta=9/5` package remains a normalization orbit unless a canonical unit/scale quotient and unit-bearing nonproxy coupling are exported.  Because those source objects remain absent, the beta-scale/unit atom cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping coefficient.
+
+## P2958/S1908 P2938 provenance `L_total` guard
+
+`P2958/S1908` verifies the finite `K+C` provenance interface for the P2938 aggregate, but it does not export the strict nadsoliton functor/localizer, nonconventional equal-summand law, or beta/unit coupling required for a sourced damping coefficient.  Therefore the aggregate still cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a strict source.
+
+## P2959/S1909 U(12) localizer `L_total` guard
+
+`P2959/S1909` shows that bounded formal localizer predicates either import the target-coded but nonunique `sum=9` condition or pick the P2938 target through an unsourced primitive equal-summand convention.  Without a strict nadsoliton functor/localizer and beta/unit coupling, the aggregate still cannot enter `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE as a sourced damping coefficient.
