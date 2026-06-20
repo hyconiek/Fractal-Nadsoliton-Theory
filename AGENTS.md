@@ -1897,3 +1897,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Exponent-blind `9/5` drops units, `U=1` is convention, and `k=0` replays P2967; none exports a strict coefficient source law.
 - Do not promote exponent-blind coefficients, unit conventions, dimensionless `k=0` sections, N/sigma selector replay, beta normalization, primitive-ray quotient arithmetic, or scalar Euler insertion to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must introduce a strict unit `U` source, a nonconventional nonproxy installation law fixing `U` or `k`, or a genuinely new typed structural object outside the ratio-package lane; otherwise preserve the P2929-P2968 boundary.
+
+## Current strict unit U source candidate obstruction guardrail (P2969/S1919, 2026-06-20)
+
+- P2969 audits the strict unit `U` source route left open by P2968 through symbolic `U`, `U=1`, beta length normalization, entropy/reference-cell units, `Gamma_9_5` action-unit import, and the missing completed schema.
+- Formal unit carriers exist, but no current candidate combines strict source provenance, nonconventional unit value, all-exponent coverage, and a coupling theorem into the P2964 action-density schema.
+- Do not promote symbolic `U`, unit conventions, beta normalization, entropy/reference-cell imports, `Gamma_9_5`, exponent-blind `9/5`, `k=0` sections, or N/sigma selectors to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must construct a nonconventional nonproxy installation law internally fixing `k`, or introduce a genuinely new typed structural object outside the ratio-package lane; otherwise preserve the P2929-P2969 boundary.
+
+## Current nonconventional nonproxy k-installation obstruction guardrail (P2970/S1920, 2026-06-20)
+
+- P2970 audits the last ratio-package route left by P2969: a nonconventional nonproxy installation law internally fixing `k` in `c_k=(9/5)U^k`.
+- Minimal-|k|, `k=0`, positive/negative ordering, and integer-subfamily predicates either replay blocked lanes or select by convention; the Euler-placeholder row is nonconventional in form but k-blind and uncoupled from P2964.
+- Do not promote k-selection ordering predicates, symbolic `U`, `U=1`, beta normalization, entropy/reference-cell units, `Gamma_9_5`, exponent-blind `9/5`, k=0 replay, or scalar Euler placeholders to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a genuinely new typed structural object outside the current ratio-package lane, or preserve the P2929-P2970 no-strict-export boundary.
+
+## Current typed support-provenance incidence complex guardrail (P2971/S1921, 2026-06-20)
+
+- P2971 constructs a new typed support/provenance incidence complex outside scalar ratio-package arithmetic: it preserves K/C support mismatch, provenance labels, and aggregate-coordinate reception.
+- The finite audit is developmental only: provenance labels reduce component/weight automorphisms, but no strict nadsoliton source-localizer, unit-bearing coupling, or nonproxy variational chain rule is exported.
+- Do not promote the incidence complex to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE by replaying K/C exchange, scalar mediator collapse, unit conventions, k-selection predicates, or formal Euler placeholders.
+- A next admissible move must add exactly one missing theorem to this incidence object: a strict source-localizer, a unit-bearing coupling into a named action density, or a nonproxy variational chain rule; otherwise preserve the P2929-P2971 boundary.
+
+## Current incidence source-localizer obstruction guardrail (P2972/S1922, 2026-06-20)
+
+- P2972 audits the strict source-localizer theorem missing from P2971 for the typed support/provenance incidence complex.
+- The finite orbit/localizer audit finds invariant candidates, but current rows are tautological, slot/component anchors, or bookkeeping-label sections; no strict nadsoliton source theorem or unit-bearing coupling is exported.
+- Do not promote incidence identity, unique-slot anchors, K/C component labels, aggregate-coordinate order, ratio arithmetic, unit conventions, k-selection predicates, or formal Euler placeholders to strict sourcehood, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must add exactly one remaining theorem to the incidence object: a unit-bearing coupling into a named action density or a nonproxy variational chain rule; otherwise preserve the P2929-P2972 boundary.

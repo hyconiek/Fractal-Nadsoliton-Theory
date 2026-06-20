@@ -2948,3 +2948,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2968/S1918 coefficient-source `L_total` guard
 
 `P2968/S1918` shows that installing the P2965 coefficient as `c_k=(9/5)U^k` cannot be done by an exponent-blind rule, a `U=1` convention, or a `k=0` selector replay.  Since no strict source fixes `U` or `k`, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2969/S1919 strict unit-U `L_total` guard
+
+`P2969/S1919` shows that symbolic `U`, `U=1`, beta length normalization, entropy/reference-cell units, and `Gamma_9_5` action-unit import do not source a strict unit for `c_k=(9/5)U^k` in the P2964 nonproxy action-density schema.  Since no strict unit `U` source or coupling theorem is installed, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2970/S1920 k-installation `L_total` guard
+
+`P2970/S1920` shows that finite k-selection rules for `c_k=(9/5)U^k` either choose `k` by convention/replay or remain k-blind without a P2964 coupling theorem.  Since no nonconventional nonproxy installation law fixes `k`, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2971/S1921 incidence-complex `L_total` guard
+
+`P2971/S1921` adds a typed support/provenance incidence object rather than a scalar coefficient or unit convention.  Because no strict source-localizer, unit-bearing action-density coupling, or nonproxy variational chain rule is attached to the incidence complex, no sourced term enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2972/S1922 incidence-localizer `L_total` guard
+
+`P2972/S1922` adds no sourced term to `L_total`: invariant source-localizer candidates for the P2971 incidence complex either return the object tautologically, select a slot/component anchor, or use bookkeeping labels.  Since no strict source theorem or unit-bearing action-density coupling is installed, no EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.

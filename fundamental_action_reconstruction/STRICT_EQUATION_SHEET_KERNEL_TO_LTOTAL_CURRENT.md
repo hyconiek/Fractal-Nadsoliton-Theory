@@ -3579,3 +3579,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2968/S1918 coefficient source-law exponent-blind obstruction
 
 `P2968/S1918` attacks the P2967-admissible coefficient-source route independent of `(N,sigma)` selector replay.  Across the P2966 dimensional grid there are 24 distinct exponents `k` in `c_k=(9/5)U^k`.  Exponent-blind `9/5` drops units, `U=1` is a unit convention, and `k=0` replays the dimension/field selector obstruction.  Therefore no strict coefficient source law, strict unit `U` source, unit-bearing nonproxy coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2969/S1919 strict unit U source candidate obstruction
+
+`P2969/S1919` attacks the strict unit `U` source route left open by P2968.  It audits symbolic `U`, `U=1`, beta length normalization, entropy/reference-cell unit import, `Gamma_9_5` action-unit import, and the missing completed schema.  Formal carriers can carry exponents, and one import is nonconventional, but no available row combines strict source provenance, nonconventional unit value, all-exponent coverage, and a coupling theorem to the P2964 action-density schema.  Therefore no strict unit `U` source, coefficient source law, unit-bearing nonproxy coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2970/S1920 nonconventional nonproxy k-installation law obstruction
+
+`P2970/S1920` attacks the P2969-admissible route: a nonconventional nonproxy installation law internally fixing `k` in `c_k=(9/5)U^k`.  The finite audit reuses the 24 P2968 exponents and tests minimal-|k|, dimensionless `k=0`, smallest positive, closest negative, integer-subfamily, and Euler-placeholder installation candidates.  Unique selections are conventional or replay `k=0`; the nonconventional Euler placeholder remains k-blind and uncoupled from P2964.  Therefore no strict k-installation law, unit `U` source, coefficient source law, unit-bearing nonproxy coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2971/S1921 typed support-provenance incidence complex
+
+`P2971/S1921` executes the P2970 pivot by constructing one typed structural object outside scalar ratio-package arithmetic: a support/provenance incidence complex for the P2938/P2961 aggregate.  It preserves component provenance, K support size `2`, C support size `3`, aggregate vector `[1,2,2,2,2]`, and shows provenance labels reduce the component/weight automorphism count from `6` to `1`.  This is developmental structural progress, not strict closure: no strict source-localizer, unit-bearing coupling, nonproxy variational chain rule, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2972/S1922 incidence source-localizer obstruction
+
+`P2972/S1922` attacks one missing theorem left by P2971: a strict source-localizer for the typed support/provenance incidence complex.  The finite audit computes `6` component/weight automorphisms, `3` slot orbits, and `8` invariant subsets, then tests whole-object identity, unique weight-one slot, K component pair, C equal-summand orbit, aggregate-coordinate order, and a completed schema.  Current candidates are tautological, slot/component anchors, or bookkeeping sections; no strict source theorem or unit-bearing coupling is exported.  Thus no strict source-localizer, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
