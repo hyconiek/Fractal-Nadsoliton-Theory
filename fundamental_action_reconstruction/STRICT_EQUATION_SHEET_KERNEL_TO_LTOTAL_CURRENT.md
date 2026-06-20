@@ -3559,3 +3559,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2963/S1913 typed mediator/functor no-go
 
 `P2963/S1913` audits the P2962-admissible typed mediator/functor escape route.  Eight candidate mediators are tested.  The only audited mediator that makes K and C equal is `max_nonzero`, but it erases support shape and provenance labels; mediators that preserve the P2962 mismatch keep K and C unequal.  Therefore no strict typed mediator/functor, strict K/C exchange source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2964/S1914 unit-bearing nonproxy coupling reception no-go
+
+`P2964/S1914` attacks the post-P2963 admissible route of constructing a unit-bearing nonproxy action-density coupling receiving the P2938/P2961 aggregate without artifact-level K/C exchange.  Several formal templates receive `V=[1,2,2,2,2]`, and some have formal quadratic Euler variations, but current artifacts still do not export a canonical scale/unit quotient plus strict coefficient/source law.  The only fully satisfying row is an unavailable completed schema, so no strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2965/S1915 primitive-mean scale/unit quotient candidate
+
+`P2965/S1915` attacks exactly one P2964 missing object: a canonical scale/unit quotient with coefficient source law.  It constructs a positive rational ray quotient for the P2938/P2961 aggregate: every positive rational rescaling of `[1,2,2,2,2]` reduces by lcm/gcd to the same primitive representative, whose mean is `9/5` without a target_sum cut.  This is proof-grade developmental progress, but it remains dimensionless arithmetic until a strict physical unit law, coefficient source law, and nonproxy coupling installation are exported; no strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2966/S1916 physical unit law dimensional obstruction
+
+`P2966/S1916` attacks exactly one P2965 missing object: a strict physical unit law for the primitive-mean quotient.  For a candidate action density `c[V] Phi^2 dVol_N`, the dimensional equation gives `c[V]=(9/5)U^(2sigma-N)`.  The finite grid shows many compatible `(N,sigma,k)` completions, including dimensionless and integer-exponent subfamilies, but current artifacts do not select `N`, `sigma`, a length unit `U`, or a coefficient source law.  Therefore no strict unit-bearing nonproxy coupling, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2967/S1917 dimension-field selector-source obstruction
+
+`P2967/S1917` attacks exactly one P2966 missing object: a strict selector/source for the dimension-field pair `(N,sigma)` in `c[V]=(9/5)U^(2sigma-N)`.  Dimensionless, minimal-exponent, and integer-power predicates remain nonunique on the current dimensional grid; unique selections arise only from lexicographic convention or imported four-dimensional scalar assumptions.  Therefore no strict physical unit law, strict unit `U` source, coefficient source law, unit-bearing nonproxy coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2968/S1918 coefficient source-law exponent-blind obstruction
+
+`P2968/S1918` attacks the P2967-admissible coefficient-source route independent of `(N,sigma)` selector replay.  Across the P2966 dimensional grid there are 24 distinct exponents `k` in `c_k=(9/5)U^k`.  Exponent-blind `9/5` drops units, `U=1` is a unit convention, and `k=0` replays the dimension/field selector obstruction.  Therefore no strict coefficient source law, strict unit `U` source, unit-bearing nonproxy coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
