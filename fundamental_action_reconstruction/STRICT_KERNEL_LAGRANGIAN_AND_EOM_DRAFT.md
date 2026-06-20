@@ -3068,3 +3068,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2998/S1948 zero-divisor graph localizer `L_total` guard
 
 `P2998/S1948` adds no zero-divisor graph localizer term to `L_total`.  Degree, neighborhood, and orbit signatures are finite incidence labels only; they do not supply strict field provenance, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2999/S1949 zero-divisor graph source-coupling `L_total` guard
+
+`P2999/S1949` adds no zero-divisor graph source-coupling term to `L_total`.  The `60` finite graph/atom receivers are algebraic incidence bookkeeping only; they do not supply strict field provenance, unit-bearing coefficient, named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3000/S1950 zero-divisor graph action/variational installation `L_total` guard
+
+`P3000/S1950` explicitly tests formal zero-divisor graph action receivers but adds no sourced graph term to `L_total`.  The nonzero toy Dirichlet, vertex-mass, Laplacian/Hessian, and Euler-row coefficients are formal finite graph algebra only; no unit-bearing graph measure, strict field provenance, boundary/integration theorem, named graph density theorem, nonproxy lift, EOM, Hamiltonian, role transfer, bridge closure, or ToE is exported.
+
+## P3001/S1951 square-map functional graph `L_total` guard
+
+`P3001/S1951` adds no square-map functional graph term to `L_total`.  The idempotent-attractor and basin/fiber certificates are finite ring-dynamics labels only; they do not supply strict field provenance, unit-bearing coefficient, named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3002/S1952 square-map strict provenance `L_total` guard
+
+`P3002/S1952` adds no square-map provenance term to `L_total`.  Multiplicative compatibility, unit-square invariance, and translation noninvariance are finite ring-algebra receivers only; they do not supply strict field provenance, named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
