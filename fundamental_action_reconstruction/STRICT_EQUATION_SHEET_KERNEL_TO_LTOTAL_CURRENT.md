@@ -3519,3 +3519,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2953/S1903 symbolic weight-family nonforcing theorem
 
 `P2953/S1903` removes the bounded-weight caveat from P2952.  For the P2938 ingredients `K=[1,2,0,0,0]` and `C=[0,0,2,2,2]`, the exact positive rational family is `V(a,b)=a*K+b*C=[a,2a,2b,2b,2b]`; it is product-additive by prime-exponent extension for all positive `a,b`.  The target vector `[1,2,2,2,2]` is equivalent to `a=b=1`, but that equivalence is target-fitting, not an exported strict equal-weight/source theorem.  Therefore no strict torsion-character provenance, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2954/S1904 identity-deficit intensional role interface
+
+`P2954/S1904` attacks the P2951 identity-deficit atom without replaying delta count aliases.  It constructs a typed role-signature interface: the identity role is certified by the partial-monoid two-sided action law, while the carrier-zero role is certified by the scalar level-set `V=0`.  The extensions still coincide at `{1}`, but the signatures are intensionally separated.  The remaining obstruction is the missing strict source law that maps the damping numerator to the identity-action signature rather than to the coincident zero level-set.  Hence no strict delta/eta source law, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2955/S1905 P2601 identity-action to delta-numerator source-map obstruction
+
+`P2955/S1905` tests the strongest nearby exported identity-action source, P2601, against the P2954 source-map obligation for the ratio-package delta numerator.  The positive side is real: P2601 exports hydrodynamic identity-action/unital multiplicative source facts, and P2954 exports the target finite identity-action signature.  The obstruction is the absent explicit functor/coupling from P2601 `y_1=0`/unitality data to the P2954 finite numerator signature with carrier-zero alias exclusion.  Therefore no strict identity-deficit source law, delta/eta source law, ratio-package source theorem, damping packet, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P2956/S1906 ratio-package nonproxy variational coupling obstruction
+
+`P2956/S1906` attacks the P2951 nonproxy variational damping-coupling atom directly for the exact P2948 ratio package.  The finite package side is available (`delta=4/5`, `eta=9/5`, `eta=1+delta`), and the scalar Euler interface `A*x=J` can reproduce `eta=9/5`; however it does so only when the source/stiffness ratio `J:A` already imports `9:5`.  Current artifacts do not export an independent nonproxy field variable, a unit-bearing action density, or an Euler/minimizer equation forcing eta without target-ratio insertion.  Therefore no nonproxy variational damping coupling, strict ratio-package source theorem, nonproxy `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE follows.

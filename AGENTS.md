@@ -1792,3 +1792,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The target vector `[1,2,2,2,2]` is equivalent to `a=b=1`, but this is target-equation equivalence rather than a strict nadsoliton source law selecting equal weights.
 - No strict torsion-character provenance, ratio-package source, beta/eta coupling, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
 - Do not continue weight-family variants, bounded scans, or target-equivalence restatements as primary strategy.  A next admissible move must export an independent strict equal-weight/source theorem, attack a different P2951 atom with new source data, or pivot outside this ratio-package lane while preserving the P2929-P2953 boundary.
+
+## Current identity-deficit intensional role interface guardrail (P2954/S1904, 2026-06-19)
+
+- P2954 attacks the P2951 identity-deficit atom by preserving typed signatures instead of replaying count aliases: identity is a partial-monoid action role, while carrier-zero is a scalar level-set role.
+- The two roles remain extensionally coincident at `{1}`, but they are intensionally separated by their defining data types.
+- No strict source law maps the damping numerator to the identity-action signature, so no strict delta/eta source, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
+- Do not continue delta count aliases or role-signature restatements as primary strategy.  A next admissible move must export the strict numerator-source map, attack another P2951 atom with new source data, or pivot outside the ratio-package lane while preserving the P2929-P2954 boundary.
+
+## Current P2601-to-delta-numerator source-map obstruction guardrail (P2955/S1905, 2026-06-20)
+
+- P2955 tests P2601's real hydrodynamic identity-action/unital multiplicative source against the P2954 source-map obligation for the ratio-package delta numerator.
+- P2601 and the P2954 target signature are both real, but no explicit functor/coupling maps P2601 `y_1=0`/unitality data to the P2954 finite numerator signature while excluding the carrier-zero singleton alias.
+- Do not reuse P2601 source prose as strict identity-deficit source law, delta/eta source law, ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not continue P2601 replay, delta count aliases, or role-signature restatements as primary strategy.  A next admissible move must construct the explicit P2601-to-P2954 numerator functor, attack another P2951 atom with new source data, or pivot outside the ratio-package lane while preserving the P2929-P2955 boundary.
+
+## Current ratio-package nonproxy variational coupling obstruction guardrail (P2956/S1906, 2026-06-20)
+
+- P2956 attacks the P2951 nonproxy variational damping-coupling atom for the exact P2948 package rather than replaying ratio scans, P2601 source prose, or role-signature/count-alias routes.
+- The finite package is available, but the scalar Euler interface forces `eta=9/5` only by importing the `9:5` source/stiffness ratio; no independent nonproxy field variable, unit-bearing action density, or target-free Euler/minimizer theorem is exported.
+- Do not promote P2956 to strict ratio-package source, beta/eta coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- Do not continue scalar Euler `9:5` insertion, local quadratic minimization, ratio scans, or P2601 replay as primary strategy.  A next admissible move must export a real nonproxy field/action-density coupling, attack the remaining beta-scale/unit atom with new source data, or pivot outside the ratio-package lane while preserving the P2929-P2956 boundary.
