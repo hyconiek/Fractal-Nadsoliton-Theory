@@ -1813,3 +1813,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite package is available, but the scalar Euler interface forces `eta=9/5` only by importing the `9:5` source/stiffness ratio; no independent nonproxy field variable, unit-bearing action density, or target-free Euler/minimizer theorem is exported.
 - Do not promote P2956 to strict ratio-package source, beta/eta coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - Do not continue scalar Euler `9:5` insertion, local quadratic minimization, ratio scans, or P2601 replay as primary strategy.  A next admissible move must export a real nonproxy field/action-density coupling, attack the remaining beta-scale/unit atom with new source data, or pivot outside the ratio-package lane while preserving the P2929-P2956 boundary.
+
+## Current positive beta-scale/unit source obstruction guardrail (P2957/S1907, 2026-06-20)
+
+- P2957 attacks the P2951 positive beta-scale/unit atom for the exact P2948/P2950 package rather than replaying beta-scale samples, scale-covariance normalization, canonical UV-unit audits, scalar Euler insertion, P2601 prose, count aliases, or role-signature routes.
+- The finite positive side is only covariance: for `eta=9/5`, every positive beta representative can be normalized by a matching length scale, so the orbit remains free unless a target-independent beta source, canonical length/UV unit, scale-orbit quotient, and unit-bearing nonproxy coupling are exported.
+- Do not promote P2957 to strict ratio-package source, beta/eta coupling, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must construct a genuinely new unit-bearing nonproxy field/action-density coupling with canonical scale quotient, construct a new strict provenance theorem for the P2938 torsion-character aggregate, or pivot outside the ratio-package lane while preserving the P2929-P2957 boundary.
+
+## Current P2938 strict provenance theorem-interface guardrail (P2958/S1908, 2026-06-20)
+
+- P2958 attacks strict provenance for the P2938 torsion-character aggregate rather than replaying finite K+C decompositions, symbolic weight-family variants, beta-scale normalization, P2601 prose, scalar Euler insertion, count aliases, or role-signature routes.
+- The finite arithmetic is positive: `K+C=[1,2,2,2,2]`, sum `9`, and package-level `eta=9/5` are verified with the P2938 product-additive carrier.
+- This is meaningful proof progress but not closure: no strict nadsoliton functor/localizer selects the U(12) aggregate as a source law, no nonconventional equal-summand provenance theorem is exported, and P2957 still blocks beta/unit coupling.
+- Do not promote P2958 to strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.  A next admissible move must export the actual strict nadsoliton functor/localizer, construct a genuinely unit-bearing nonproxy coupling that can receive the aggregate, or pivot outside the ratio-package lane while preserving the P2929-P2958 boundary.
+
+## Current P2938 U(12) aggregate localizer no-go guardrail (P2959/S1909, 2026-06-20)
+
+- P2959 attacks the missing P2958 nadsoliton-to-U(12) functor/localizer by enumerating bounded localizer predicates over `V(a,b)=a*K+b*C`, rather than replaying K+C decompositions, symbolic weight-family variants, beta-scale normalization, P2601 prose, scalar Euler insertion, count aliases, or role-signature routes.
+- Formal predicates either make target-coded/nonunique `sum=9` cuts or select `(a,b)=(1,1)` through unsourced primitive equal-summand assumptions; current artifacts do not export these as strict nadsoliton localizer laws.
+- Do not promote P2959 to strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a genuinely new strict nadsoliton localizer law not equivalent to target-coded `sum=9` cuts or primitive equal-weight convention, construct a unit-bearing nonproxy coupling outside this localizer lane, or pivot outside the ratio-package lane while preserving the P2929-P2959 boundary.
