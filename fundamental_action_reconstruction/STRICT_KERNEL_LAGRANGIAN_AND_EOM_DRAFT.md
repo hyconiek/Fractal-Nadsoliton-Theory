@@ -3048,3 +3048,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2993/S1943 Fourier-character provenance `L_total` guard
 
 `P2993/S1943` adds no Fourier-character provenance term to `L_total`.  Exact homomorphism and orthogonality checks are spectral consistency data only; they do not supply strict field provenance, self-learning update functional, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2994/S1944 Fourier-character source-coupling `L_total` guard
+
+`P2994/S1944` adds no Fourier-character source-coupling term to `L_total`.  The `48` finite row/atom receivers are algebraic bookkeeping only; they do not supply strict field provenance, unit-bearing coefficient, named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2995/S1945 Fourier-character action/variational installation `L_total` guard
+
+`P2995/S1945` explicitly tests formal Fourier-character action receivers but adds no sourced Fourier term to `L_total`.  The nonzero toy Euler/Hessian coefficients, Parseval-style density, and orthogonality cross-term constraint are formal finite spectral algebra only; no unit-bearing measure, strict field provenance, boundary/integration theorem, named Fourier density theorem, nonproxy lift, EOM, Hamiltonian, role transfer, bridge closure, or ToE is exported.
+
+## P2996/S1946 zero-divisor graph `L_total` guard
+
+`P2996/S1946` adds no zero-divisor graph term to `L_total`.  Zero-product edges, degree sequence, connectedness, and graph automorphisms are finite incidence data only; they do not supply strict field provenance, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2997/S1947 zero-divisor graph provenance `L_total` guard
+
+`P2997/S1947` adds no zero-divisor graph provenance term to `L_total`.  Exact zero-product incidence, nonedge products, unit-action symmetry, and translation noninvariance are finite provenance tests only; they do not supply strict field provenance, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2998/S1948 zero-divisor graph localizer `L_total` guard
+
+`P2998/S1948` adds no zero-divisor graph localizer term to `L_total`.  Degree, neighborhood, and orbit signatures are finite incidence labels only; they do not supply strict field provenance, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.

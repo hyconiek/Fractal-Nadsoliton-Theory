@@ -2074,3 +2074,39 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The current route is bounded no-go: P2992 exported no nonpremise frequency/source localizer, no strict nadsoliton source map exports a Fourier row from the primordial information state, and the rows remain imported spectral labels.
 - Do not promote exact character homomorphism, orthogonality, or provenance labels to self-learning update law, source coupling, selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.
 - A next admissible Fourier-character move may attack exactly one remaining route (source-coupling theorem or unit-bearing action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2993 no-strict-export certificate.
+
+## Current Fourier-character source-coupling theorem obstruction guardrail (P2994/S1944, 2026-06-20)
+
+- P2994 attacks exactly one remaining Fourier-character route after P2993: source-coupling theorem for named strict source atoms.
+- Finite positives are exact but receiver-only: `12` Fourier rows times four named source atoms gives `48` row/atom tests with conductor/kernel/image, orthogonality, and homomorphism receivers.
+- The route is bounded no-go because P2992 exported no nonpremise frequency/source localizer, P2993 exported no strict character provenance, and no atom-specific coupling theorem, unit-bearing coefficient, or nonproxy export is present.
+- Do not promote Fourier row/atom receivers to selector closure, target-independent positive `beta/Z_beta`, bridge closure, unit-bearing action density, role transfer, nonproxy `L_total`, or ToE.
+- The only remaining Fourier-character route is unit-bearing action installation with a genuinely unit-bearing measure, named Fourier density theorem, boundary/integration map, and nonproxy continuum lift; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P2994 no-strict-export certificate.
+
+## Current Fourier-character action/variational installation obstruction guardrail (P2995/S1945, 2026-06-20)
+
+- P2995 attacks the final Fourier-character route left by P2994: action/variational installation with unit-bearing measure and nonproxy lift obligations.
+- Formal receiver positives are limited: one quadratic receiver per Fourier-character row, a Parseval-style density, and an orthogonality cross-term constraint receiver give exact finite toy Euler/Hessian and constraint data; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go: no unit-bearing measure, strict field provenance, boundary/integration theorem, named Fourier density theorem, or nonproxy continuum lift is exported.
+- Do not promote Fourier formal receivers, orthogonality constraints, source-coupling rows, frequency-localizer/provenance rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The Fourier-character lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P2995 no-strict-export certificate.
+
+## Current Z12 zero-divisor graph source-candidate obstruction guardrail (P2996/S1946, 2026-06-20)
+
+- P2996 introduces one new finite typed object outside closed Fourier/annihilator/nilradical/CRT/zero-derivation replay: the zero-divisor graph of `Z/12Z`.
+- Exact finite positives are real: seven nonzero zero-divisor vertices, eight zero-product edges, degree sequence `[1, 1, 2, 2, 3, 3, 4]`, one connected component, zero triangles, and automorphism group order `8`.
+- The current route is bounded no-go as a strict source candidate: no strict nadsoliton provenance, nonpremise vertex/edge localizer, named source-atom coupling, unit-bearing action installation, or nonproxy export is present.
+- Do not replay Fourier, annihilator, nilradical, CRT, zero-derivation, selector, bridge, or `L_total` lanes through zero-divisor graph incidence.  A next admissible zero-divisor-graph move may attack exactly one missing theorem for this object, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2996 no-strict-export certificate.
+
+## Current zero-divisor graph strict provenance obstruction guardrail (P2997/S1947, 2026-06-20)
+
+- P2997 attacks exactly one P2996 missing theorem route: strict provenance for the `Z/12Z` zero-divisor graph.
+- Finite positives are exact but incidence-only: all `8` edges are zero products, all `13` nonedges are nonzero products, all four `U(12)` unit actions preserve the graph, and only translation `0` preserves the vertex set.
+- The route is bounded no-go because these facts remain imported `Z/12Z` multiplication/incidence data; no strict nadsoliton source map or nonpremise internal graph provenance is exported.
+- Do not promote zero-product incidence, nonedge products, unit-action symmetry, or translation noninvariance to vertex/edge localizer, source-atom coupling, unit-bearing action installation, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible zero-divisor-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2997 no-strict-export certificate.
+
+## Current zero-divisor graph nonpremise vertex/edge localizer obstruction guardrail (P2998/S1948, 2026-06-20)
+
+- P2998 attacks exactly one P2997 remaining route: nonpremise vertex/edge localizer for the `Z/12Z` zero-divisor graph.
+- Finite positives are graph-bookkeeping only: degree, neighbor-degree, closed-neighborhood, and automorphism-orbit signatures classify four vertex orbits and computed edge orbits, with vertex `6` a singleton graph orbit.
+- The route is bounded no-go because P2997 exported no strict graph provenance and these signatures are incidence labels, not nonpremise physical sectors.
+- Do not promote degree/neighborhood/orbit signatures to source-atom coupling, unit-bearing action installation, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible zero-divisor-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2998 no-strict-export certificate.
