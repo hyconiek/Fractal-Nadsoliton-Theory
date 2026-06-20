@@ -3611,3 +3611,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2976/S1926 Z12 nilradical-filtration source candidate
 
 `P2976/S1926` supplies one concrete typed object after the P2975 intake gate: the nilradical filtration of `Z/12Z`.  Exhaustive power-orbit enumeration over all `12` elements gives nilradical `{0,6}`, nonzero nilpotent `[6]`, and `6^2=0`; all `4` units fix the nonzero nilpotent.  This is finite algebraic structure outside the incidence lane, but it is developmental only: no strict nadsoliton provenance, named coupling, orientation/selector source, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2977/S1927 nilradical strict-nadsoliton provenance obstruction
+
+`P2977/S1927` attacks exactly one P2976 missing theorem route: strict nadsoliton provenance for the `Z/12Z` nilradical filtration.  The finite matrix confirms the positive algebraic side (`{0,6}` is ring-canonical and fixed by all `4` units) but also the obstruction: without a strict source for the ring zero/multiplication, translation gives `6` antipodal cosets and no nonpremise theorem maps the nadsoliton ontology to the nilradical object.  No named source-atom coupling, damping source, selector/orientation source, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2978/S1928 nilradical named source-atom coupling obstruction
+
+`P2978/S1928` attacks exactly one P2977 remaining route: coupling the `Z/12Z` nilradical anchor `6` to named missing source atoms.  The finite matrix audits selector/orientation sign, positive `beta/Z_beta` damping, legacy-to-strict bridge-source, and action-density/variational atoms.  The result is bounded no-go: `6` is unit-fixed and `6^2=0`, but its scalar score is orientation-blind (`+omega` and `-omega` gap `0`), formal `6/12` is not a target-independent positive scale/measure source, no amplitude/phase/damping completion law is supplied, and no unit-bearing named action density or nonproxy variational chain is installed.  No named source-atom coupling, damping source, selector/orientation source, bridge closure, action-density export, nonproxy `L_total`, role transfer, or ToE follows.
+
+## P2979/S1929 nilradical action/variational installation obstruction
+
+`P2979/S1929` attacks the final nilradical-lane route left by P2978: action/variational installation of the unit-fixed nilpotent anchor `6`.  The finite matrix builds formal receivers `L_nil = mu_nil*6*psi^2/2`, `L_nil2 = mu_nil*(6^2 mod 12)*psi^2/2`, and a symbolic `L_total` slot.  The strongest toy receiver has nonzero formal Euler/Hessian coefficient `6`, while the nilpotent-square receiver vanishes because `6^2=0`; however, no row exports a unit-bearing measure, strict field provenance, boundary/integration theorem, nonproxy continuum lift, or named density theorem.  No nilradical action installation, nonproxy variational chain, damping source, bridge closure, nonproxy `L_total`, role transfer, or ToE follows.
+
+## P2980/S1930 Z12 CRT idempotent-decomposition source candidate
+
+`P2980/S1930` follows the P2979 nilradical no-go by supplying one genuinely new finite typed object outside that lane: the `Z/12Z` CRT idempotent decomposition.  Exhaustive enumeration gives idempotents `[0,1,4,9]`; the nontrivial projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`, corresponding algebraically to the mod-3 and mod-4 CRT factors.  This is finite carrier progress only: no strict nadsoliton provenance, nonpremise factor semantics, named source-atom coupling, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2981/S1931 CRT idempotent strict-nadsoliton provenance obstruction
+
+`P2981/S1931` attacks exactly one P2980 missing theorem: strict nadsoliton provenance for the CRT idempotent projector split.  The finite side is positive: `[0,1,4,9]` are the idempotents, `(4,9)` is the unique nontrivial orthogonal completion pair of `1`, and the mod-3/mod-4 factors are cardinality-distinguished.  The source side remains blocked: no current artifact exports a strict nadsoliton source map, nonpremise factor semantics, named source-atom coupling, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE.

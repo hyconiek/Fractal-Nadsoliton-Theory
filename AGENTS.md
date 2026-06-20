@@ -1953,3 +1953,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The nilradical is `{0,6}`, the nonzero nilpotent is `[6]`, `6^2=0`, and all `4` units fix `6`; this is developmental algebraic structure, not a strict source theorem.
 - Do not promote the nilradical filtration, the unit-fixed element `6`, or nilpotent power-orbit witnesses to selector closure, damping source, bridge completion, role transfer, nonproxy `L_total`, or ToE.
 - A next admissible move must attack exactly one missing theorem for this object: strict nadsoliton provenance, coupling to one named missing source atom, or action/variational installation; otherwise preserve the P2929-P2976 developmental/no-strict-export boundary.
+
+## Current nilradical strict-nadsoliton provenance obstruction guardrail (P2977/S1927, 2026-06-20)
+
+- P2977 attacks exactly one P2976 missing theorem: strict nadsoliton provenance for the `Z/12Z` nilradical filtration.
+- Finite positives remain real: `{0,6}` is ring-canonical, `6^2=0`, all `4` units fix the nilradical set, and the acceptance matrix has `64` profiles with only the full profile accepting.
+- The current route is bounded no-go: no strict source exports the ring zero/multiplication from the nadsoliton, translation leaves `6` antipodal cosets without a nonpremise localizer, and no named source-atom coupling is supplied.
+- Do not promote nilradical canonicity, unit-fixity of `6`, translated-coset scans, or formal source placeholders to selector closure, damping source, bridge completion, role transfer, nonproxy `L_total`, or ToE.  A next admissible move may attack one remaining nilradical route (named source-atom coupling or action/variational installation) or pivot to a genuinely new typed object while preserving the P2929-P2977 no-strict-export boundary.
+
+## Current nilradical named source-atom coupling obstruction guardrail (P2978/S1928, 2026-06-20)
+
+- P2978 attacks exactly one remaining nilradical route: named source-atom coupling for the unit-fixed nilpotent `6`.
+- The finite matrix audits `4` named atoms: selector/orientation sign, positive `beta/Z_beta` damping, legacy-to-strict bridge-source, and action-density/variational source; the acceptance matrix has `128` profiles with only the full profile accepting.
+- The current route is bounded no-go: the nilpotent scalar is orientation-blind, formal `6/12` is not a target-independent scale/measure source, no bridge-completion law is supplied, and no unit-bearing named action density or nonproxy variational chain is installed.
+- Do not promote nilradical source-atom rows, unit-fixity, ratio samples, orientation-blind scalar scores, generic bridge maps, or formal action slots to selector closure, damping source, bridge completion, role transfer, nonproxy `L_total`, or ToE.  The only remaining nilradical-lane route is action/variational installation with a genuinely unit-bearing named density and nonproxy chain; otherwise pivot to a new strict typed object while preserving the P2929-P2978 no-strict-export boundary.
+
+## Current nilradical action/variational installation obstruction guardrail (P2979/S1929, 2026-06-20)
+
+- P2979 attacks the final nilradical-lane route: action/variational installation of the unit-fixed nilpotent anchor `6`.
+- Formal receiver positives are limited: `L_nil = mu_nil*6*psi^2/2` has toy Euler/Hessian coefficient `6`, while the nilpotent-square receiver vanishes because `6^2=0`; the acceptance matrix has `128` profiles with only the full profile accepting.
+- The current route is bounded no-go: no unit-bearing measure, strict field provenance, boundary/integration theorem, nonproxy continuum lift, or named density theorem is exported.
+- Do not promote nilradical formal receivers, toy Euler coefficients, nilpotent-square zero rows, symbolic `L_total` slots, provenance/coupling replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The nilradical lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P2979 no-strict-export certificate.
+
+## Current Z12 CRT idempotent-decomposition source-candidate guardrail (P2980/S1930, 2026-06-20)
+
+- P2980 supplies one genuinely new finite typed object outside the closed nilradical lane: the `Z/12Z` CRT idempotent decomposition.
+- Exhaustive enumeration gives idempotents `[0,1,4,9]`; the nontrivial projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`, with a `128`-profile acceptance matrix and only the full profile accepting.
+- This is developmental algebraic structure, not a strict source theorem: no strict nadsoliton provenance, nonpremise factor semantics, named source-atom coupling, action-density installation, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
+- Do not promote CRT projectors, mod-3/mod-4 factor labels, or orthogonal decompositions to selector closure, damping source, bridge completion, role transfer, nonproxy `L_total`, or ToE.  A next admissible move may attack exactly one missing theorem for this object, or preserve the P2929-P2980 developmental/no-strict-export boundary.
+
+## Current CRT idempotent strict-nadsoliton provenance obstruction guardrail (P2981/S1931, 2026-06-20)
+
+- P2981 attacks exactly one P2980 missing theorem: strict nadsoliton provenance for the `Z/12Z` CRT idempotent projector split.
+- Finite positives remain real: `[0,1,4,9]` are the idempotents, `(4,9)` is the unique nontrivial orthogonal completion pair of `1`, and mod-3/mod-4 factors are cardinality-distinguished; the acceptance matrix has `64` profiles with only the full profile accepting.
+- The current route is bounded no-go: no strict nadsoliton source map, nonpremise factor semantics, or named source-atom coupling is exported.
+- Do not promote CRT projector uniqueness, factor cardinality labels, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible move may attack one remaining CRT route (nonpremise factor semantics, named source-atom coupling, or action/variational installation) or preserve the P2929-P2981 no-strict-export boundary.

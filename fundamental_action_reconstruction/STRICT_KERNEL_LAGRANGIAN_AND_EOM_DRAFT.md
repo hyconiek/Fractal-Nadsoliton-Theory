@@ -2980,3 +2980,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2976/S1926 nilradical-filtration `L_total` guard
 
 `P2976/S1926` adds no sourced term to `L_total`.  The Z12 nilradical filtration and the unit-fixed nilpotent `6` are finite algebraic witnesses only; without strict nadsoliton provenance, a named coupling theorem, orientation/source theorem, and action-density or variational installation, they cannot enter EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2977/S1927 nilradical provenance `L_total` guard
+
+`P2977/S1927` does not add a nilradical term to `L_total`.  Ring canonicity and unit-fixity of `{0,6}`/`6` remain finite provenance-readiness only; no strict nadsoliton source map, nonpremise zero-section source, named coupling, action-density theorem, EOM, Hamiltonian, bridge closure, role transfer, or ToE is exported.
+
+## P2978/S1928 nilradical source-atom coupling `L_total` guard
+
+`P2978/S1928` does not add a nilradical coupling term to `L_total`.  The named source-atom audit finds no strict provenance, positive scale/measure source, bridge law, unit-bearing action density, or nonproxy variational chain, so EOM, Hamiltonian, role transfer, bridge closure, and ToE remain unexported.
+
+## P2979/S1929 nilradical action/variational installation `L_total` guard
+
+`P2979/S1929` explicitly tests formal nilradical action receivers but adds no sourced term to `L_total`.  The nonzero toy Euler coefficient `6` is formal only, the nilpotent-square receiver is zero, and no unit-bearing measure, strict field provenance, boundary/integration theorem, nonproxy lift, EOM, Hamiltonian, role transfer, bridge closure, or ToE is exported.
+
+## P2980/S1930 CRT idempotent-decomposition `L_total` guard
+
+`P2980/S1930` adds no sourced term to `L_total`.  The CRT idempotents `4` and `9` are finite orthogonal projectors only; without strict provenance, nonpremise factor semantics, named coupling, unit-bearing density, and a nonproxy variational chain, they cannot enter EOM, Hamiltonian, bridge closure, role transfer, or ToE.
+
+## P2981/S1931 CRT provenance `L_total` guard
+
+`P2981/S1931` adds no CRT projector term to `L_total`.  Finite idempotent uniqueness and factor cardinality distinction are provenance-readiness only; without a strict source map, nonpremise factor semantics, named coupling, unit-bearing density, and nonproxy variational chain, EOM, Hamiltonian, bridge closure, role transfer, and ToE remain unexported.
