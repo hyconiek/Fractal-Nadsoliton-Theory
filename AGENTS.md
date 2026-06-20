@@ -2037,3 +2037,40 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite positives are algebraic only: ideal size, annihilator size, generator gcd class, and double-annihilator closure distinguish all six rows.
 - The current route is bounded no-go: these signatures are cardinality/gcd bookkeeping labels, not nonpremise physical sectors or strict nadsoliton row selectors.
 - Do not promote annihilator row signatures to strict provenance, source-localizer, named source-atom coupling, action installation, selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible annihilator-lattice move may attack exactly one remaining route (named source-atom coupling or action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2988 no-strict-export certificate.
+
+## Current annihilator-lattice named source-atom coupling obstruction guardrail (P2989/S1939, 2026-06-20)
+
+- P2989 attacks exactly one remaining annihilator-lattice route after P2988: named source-atom coupling for the six ideal-annihilator rows.
+- The finite matrix has 24 row/atom tests across selector/orientation sign, target-independent positive `beta/Z_beta`, legacy-to-strict bridge-source, and unit-bearing action-density source atoms; exact algebraic receivers are available.
+- The route is bounded no-go because strict provenance, nonpremise source-localizer, atom-specific source theorem, unit-bearing measure/sign, and nonproxy export are absent.
+- Do not promote annihilator named-atom rows to selector closure, damping source, bridge closure, action installation, role transfer, nonproxy `L_total`, or ToE.  The only remaining annihilator-lattice route is action installation with a genuinely unit-bearing measure, named density theorem, boundary/integration map, and nonproxy continuum lift; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P2989 no-strict-export certificate.
+
+## Current annihilator-lattice action/variational installation obstruction guardrail (P2990/S1940, 2026-06-20)
+
+- P2990 attacks the final annihilator-lattice route left by P2989: action/variational installation with unit-bearing measure and nonproxy lift obligations.
+- Formal receiver positives are limited: one quadratic receiver per ideal-annihilator row, a split-sum density, and a zero-product constraint receiver give exact finite toy Euler/Hessian and constraint data; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go: no unit-bearing measure, strict field provenance, boundary/integration theorem, named density theorem, or nonproxy continuum lift is exported.
+- Do not promote annihilator formal receivers, zero-product constraints, named-atom rows, provenance/localizer rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The annihilator-lattice lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P2990 no-strict-export certificate.
+
+## Current Z12 additive Fourier-character source-candidate obstruction guardrail (P2991/S1941, 2026-06-20)
+
+- P2991 introduces one new finite typed object outside nilradical/CRT/zero-derivation/annihilator replay: the additive Fourier character table of `Z/12Z`.
+- Exact finite positives are real: all `12` characters are enumerated, all `144` orthogonality sums pass, and conductor/kernel classes are computed.
+- The current route is bounded no-go as a strict source candidate: no nonpremise frequency selector, strict nadsoliton character provenance, source-coupling theorem, unit-bearing measure/action density, or nonproxy export is present.
+- Do not replay annihilator, nilradical, CRT, zero-derivation, selector, bridge, or `L_total` lanes through Fourier labels.  A next admissible Fourier-character move may attack exactly one missing theorem for this new object, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2991 no-strict-export certificate.
+
+## Current Fourier-character nonpremise frequency source-localizer obstruction guardrail (P2992/S1942, 2026-06-20)
+
+- P2992 attacks exactly one P2991 missing theorem route: a nonpremise frequency/source localizer for the `Z/12Z` additive Fourier-character table.
+- Finite positives are spectral bookkeeping only: conductor, kernel-size, image-size, primitive-character, and inversion-pair signatures are computed and some rows are algebraically unique.
+- The current route is bounded no-go: no nonpremise physical frequency sector, strict nadsoliton character source map, or frequency source-localizer theorem is exported.
+- Preserve the ontology: the nadsoliton is the single primordial fractal information in a solitonic state, not a projection of a lower information layer; self-learning/neural language requires a sourced update or stationarity theorem.  Do not promote Fourier labels to selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.
+- A next admissible Fourier-character move may attack exactly one remaining route (strict character provenance, source-coupling theorem, or unit-bearing action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2992 no-strict-export certificate.
+
+## Current Fourier-character strict provenance obstruction guardrail (P2993/S1943, 2026-06-20)
+
+- P2993 attacks exactly one remaining Fourier-character route after P2992: strict character provenance.
+- Finite positives are exact but spectral only: every row is an additive character under all `144` `x,y` homomorphism checks, and the P2991 orthogonality certificate is retained.
+- The current route is bounded no-go: P2992 exported no nonpremise frequency/source localizer, no strict nadsoliton source map exports a Fourier row from the primordial information state, and the rows remain imported spectral labels.
+- Do not promote exact character homomorphism, orthogonality, or provenance labels to self-learning update law, source coupling, selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.
+- A next admissible Fourier-character move may attack exactly one remaining route (source-coupling theorem or unit-bearing action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2993 no-strict-export certificate.

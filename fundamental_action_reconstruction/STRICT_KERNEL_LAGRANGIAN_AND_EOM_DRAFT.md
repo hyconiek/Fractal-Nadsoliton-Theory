@@ -3028,3 +3028,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2988/S1938 annihilator localizer `L_total` guard
 
 `P2988/S1938` distinguishes annihilator-lattice rows algebraically but exports no nonpremise source-localizer and adds no annihilator-localizer term to `L_total`.  The row signatures supply no strict field provenance, named unit-bearing density, measure theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2989/S1939 annihilator named source-atom coupling `L_total` guard
+
+`P2989/S1939` does not add an annihilator named-atom coupling term to `L_total`.  The row/atom receiver matrix lacks strict field provenance, nonpremise source localization, a named unit-bearing density, measure/sign theorem, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, and ToE.
+
+## P2990/S1940 annihilator action/variational installation `L_total` guard
+
+`P2990/S1940` explicitly tests formal annihilator-lattice action receivers but adds no sourced annihilator term to `L_total`.  The nonzero toy Euler/Hessian coefficients and zero-product constraint are formal finite algebra only; no unit-bearing measure, strict field provenance, boundary/integration theorem, named density theorem, nonproxy lift, EOM, Hamiltonian, role transfer, bridge closure, or ToE is exported.
+
+## P2991/S1941 Fourier-character source-candidate `L_total` guard
+
+`P2991/S1941` enumerates exact additive Fourier-character rows and orthogonality sums but adds no Fourier-character term to `L_total`.  Character orthogonality is finite spectral bookkeeping only; no nonpremise frequency selector, strict field provenance, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE is exported.
+
+## P2992/S1942 Fourier-character localizer `L_total` guard
+
+`P2992/S1942` adds no Fourier-frequency localizer term to `L_total`.  The conductor/kernel/image/primitive/inversion signatures are algebraic spectral labels only; they do not supply strict field provenance, a self-learning update functional, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2993/S1943 Fourier-character provenance `L_total` guard
+
+`P2993/S1943` adds no Fourier-character provenance term to `L_total`.  Exact homomorphism and orthogonality checks are spectral consistency data only; they do not supply strict field provenance, self-learning update functional, named unit-bearing density, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
