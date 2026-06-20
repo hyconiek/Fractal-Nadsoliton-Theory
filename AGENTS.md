@@ -2110,3 +2110,32 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite positives are graph-bookkeeping only: degree, neighbor-degree, closed-neighborhood, and automorphism-orbit signatures classify four vertex orbits and computed edge orbits, with vertex `6` a singleton graph orbit.
 - The route is bounded no-go because P2997 exported no strict graph provenance and these signatures are incidence labels, not nonpremise physical sectors.
 - Do not promote degree/neighborhood/orbit signatures to source-atom coupling, unit-bearing action installation, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible zero-divisor-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2998 no-strict-export certificate.
+
+## Current zero-divisor graph named source-atom coupling obstruction guardrail (P2999/S1949, 2026-06-20)
+
+- P2999 attacks exactly one remaining zero-divisor-graph route after P2998: named source-atom coupling for vertex/edge graph receivers.
+- Finite positives are exact but receiver-only: seven vertex receivers plus eight edge receivers crossed with four named source atoms gives `60` graph/atom tests with zero-product, degree, and automorphism-orbit data.
+- The route is bounded no-go because P2997 exported no strict graph provenance, P2998 exported no accepted nonpremise vertex/edge localizer, and no atom-specific coupling theorem, unit-bearing coefficient, or nonproxy export is present.
+- Do not promote graph/atom receivers to selector closure, target-independent positive `beta/Z_beta`, bridge closure, unit-bearing action density, role transfer, nonproxy `L_total`, or ToE.
+- The only remaining zero-divisor-graph route is unit-bearing action installation with a genuinely unit-bearing graph measure, named graph density theorem, boundary/integration map, and nonproxy continuum lift; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P2999 no-strict-export certificate.
+
+## Current zero-divisor graph action/variational installation obstruction guardrail (P3000/S1950, 2026-06-20)
+
+- P3000 attacks the final zero-divisor-graph route left by P2999: action/variational installation with unit-bearing graph measure and nonproxy lift obligations.
+- Formal receiver positives are limited: a Dirichlet edge-density receiver, vertex-mass receiver, graph Laplacian/Hessian receiver, and one Euler row per vertex give exact finite toy variational data; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go: no unit-bearing graph measure, strict field provenance, boundary/integration theorem, named graph density theorem, or nonproxy continuum lift is exported.
+- Do not promote graph action receivers, Laplacian ranks, source-coupling rows, provenance/localizer rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The zero-divisor-graph lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P3000 no-strict-export certificate.
+
+## Current Z12 square-map functional graph source-candidate obstruction guardrail (P3001/S1951, 2026-06-20)
+
+- P3001 introduces one new finite typed object after the P3000 zero-divisor-graph no-go: the functional graph of the squaring map `x -> x^2 mod 12` on all residues of `Z/12Z`.
+- Exact finite positives are real but ring-dynamical only: `12` directed edges collapse onto fixed idempotent attractors `[0, 1, 4, 9]`, basin sizes are `{0:2, 1:4, 4:4, 9:2}`, and every node reaches its attractor in at most one step; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go as a strict source candidate: no strict nadsoliton provenance, nonpremise basin/attractor localizer, named source-atom coupling, unit-bearing action installation, or nonproxy export is present.
+- Do not replay zero-divisor graph, CRT idempotent, nilradical, annihilator, Fourier, selector, bridge, role-transfer, or `L_total` lanes through square-map labels.  A next admissible square-map-functional-graph move may attack exactly one missing theorem for this object, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3001 no-strict-export certificate.
+
+## Current square-map strict provenance obstruction guardrail (P3002/S1952, 2026-06-20)
+
+- P3002 attacks exactly one P3001 missing theorem route: strict provenance for the `Z/12Z` square-map functional graph.
+- Finite positives are exact but algebraic only: `(xy)^2 = x^2 y^2 mod 12` holds on all `144` ordered pairs, all `48` unit-action rows are square-invariant, and only translation `0` preserves the directed functional graph.
+- The route is bounded no-go because no strict nadsoliton source map or nonpremise internal square law is exported.
+- Do not promote multiplicative compatibility, unit-square invariance, translation noninvariance, CRT idempotent replay, zero-divisor graph replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible square-map-functional-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3002 no-strict-export certificate.
