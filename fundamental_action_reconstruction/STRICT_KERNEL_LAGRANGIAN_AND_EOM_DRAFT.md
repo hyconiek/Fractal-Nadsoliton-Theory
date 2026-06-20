@@ -3008,3 +3008,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2983/S1933 CRT source-atom coupling `L_total` guard
 
 `P2983/S1933` does not add a CRT source-atom coupling term to `L_total`.  The named source-atom audit finds no strict provenance, nonpremise factor semantics, positive scale/measure source, bridge law, unit-bearing action density, or nonproxy variational chain, so EOM, Hamiltonian, role transfer, bridge closure, and ToE remain unexported.
+
+## P2984/S1934 CRT action/variational installation `L_total` guard
+
+`P2984/S1934` explicitly tests formal CRT action receivers but adds no sourced CRT term to `L_total`.  The nonzero toy Euler coefficients `4` and `9` are formal only, the orthogonal cross receiver is zero, and no unit-bearing measure, strict field provenance, boundary/integration theorem, named density theorem, nonproxy lift, EOM, Hamiltonian, role transfer, bridge closure, or ToE is exported.
+
+## P2985/S1935 zero-derivation `L_total` guard
+
+`P2985/S1935` computes the internal Leibniz derivation algebra of `Z/12Z` and finds only the zero derivation.  A zero derivation installs no strict flow term, no named unit-bearing action density, no field provenance, no nonproxy variational chain, no EOM/Hamiltonian term, no bridge closure, no role transfer, and no ToE.
+
+## P2986/S1936 annihilator-lattice `L_total` guard
+
+`P2986/S1936` computes the exact annihilator lattice of ideals in `Z/12Z`, but it adds no annihilator-lattice term to `L_total`.  Ideal sizes and annihilator labels are algebraic cardinalities only; no strict field provenance, named unit-bearing density, measure theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE is exported.
+
+## P2987/S1937 annihilator provenance `L_total` guard
+
+`P2987/S1937` does not add an annihilator-provenance term to `L_total`.  It preserves the finite annihilator lattice but finds no strict nadsoliton source map, field provenance, unit-bearing measure/density, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P2988/S1938 annihilator localizer `L_total` guard
+
+`P2988/S1938` distinguishes annihilator-lattice rows algebraically but exports no nonpremise source-localizer and adds no annihilator-localizer term to `L_total`.  The row signatures supply no strict field provenance, named unit-bearing density, measure theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.

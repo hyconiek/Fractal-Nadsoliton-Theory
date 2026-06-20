@@ -3639,3 +3639,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P2983/S1933 CRT named source-atom coupling obstruction
 
 `P2983/S1933` attacks exactly one P2982 remaining CRT route: named source-atom coupling for the CRT idempotent projector split.  The finite matrix audits selector/orientation sign, positive `beta/Z_beta` damping, legacy-to-strict bridge-source, and action-density/variational atoms.  The result is bounded no-go: projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`, but their orientation-score gaps are `0`, their ratios are only algebraic samples, no amplitude/phase/damping completion law is supplied, and no unit-bearing named action density or nonproxy variational chain is installed.  No named source-atom coupling, damping source, selector/orientation source, bridge closure, action-density export, nonproxy `L_total`, role transfer, or ToE follows.
+
+## P2984/S1934 CRT action/variational installation obstruction
+
+`P2984/S1934` attacks the final CRT-lane route left by P2983: action/variational installation of the `Z/12Z` CRT idempotent projector split.  The finite matrix builds formal receivers `L_4 = mu_4*4*psi_4^2/2`, `L_9 = mu_9*9*psi_9^2/2`, their split sum, and the orthogonal cross receiver `L_49 = mu_49*(4*9 mod 12)*psi_4*psi_9`.  The strongest toy receivers have nonzero formal Euler/Hessian coefficients `4` and `9`, while the cross receiver vanishes because `4*9=0`; however, no row exports a unit-bearing measure, strict field provenance, boundary/integration theorem, named density theorem, or nonproxy continuum lift.  No CRT action installation, nonproxy variational chain, damping source, selector/orientation source, bridge closure, nonproxy `L_total`, role transfer, or ToE follows.
+
+## P2985/S1935 Z12 Leibniz derivation source-candidate obstruction
+
+`P2985/S1935` introduces one new finite typed object outside the closed nilradical and CRT lanes: the internal Leibniz derivation algebra of `Z/12Z`.  The exhaustive finite scan represents additive endomorphisms as `D_a(x)=a*x mod 12` and tests each of the `12` candidates on all `144` products for `D(xy)=xD(y)+yD(x)`.  Only `D_0` survives; every nonzero candidate already fails at the unit-product constraint `D(1)=2D(1)`.  This proves a real zero-derivation theorem, but it exports no nonzero strict flow, selector/orientation source, positive damping/measure source, bridge-completion map, unit-bearing density, nonproxy `L_total`, role transfer, or ToE.
+
+## P2986/S1936 Z12 annihilator-lattice source-candidate obstruction
+
+`P2986/S1936` introduces one new finite typed object outside nilradical/CRT/zero-derivation replay: the annihilator lattice of ideals in `Z/12Z`.  The computation deduplicates all `12` principal generators into `6` ideals, computes every annihilator by exhaustive multiplication, verifies that ideal-annihilator products vanish, verifies `Ann(Ann(I))=I`, and verifies the order-reversing inclusion table.  This is exact algebraic progress, but no strict nadsoliton provenance, nonpremise source-localizer, named source-atom coupling, positive unit/measure source, unit-bearing action installation, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.
+
+## P2987/S1937 annihilator-lattice strict provenance obstruction
+
+`P2987/S1937` attacks exactly one P2986 missing theorem route: strict nadsoliton provenance for the `Z/12Z` annihilator lattice.  The finite side remains exact: the six ideal rows retain product-zero annihilators, `Ann(Ann(I))=I`, and order reversal.  The provenance side is blocked: the construction imports ring addition/multiplication on `Z/12Z`, proper ideals are not translation-stable source sectors, and no strict nadsoliton source map or nonpremise row localizer exports the ideal lattice.  No annihilator-lattice strict provenance, source-localizer, named source-atom coupling, unit-bearing action density, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P2988/S1938 annihilator-lattice nonpremise source-localizer obstruction
+
+`P2988/S1938` attacks exactly one remaining annihilator-lattice route after P2987: a nonpremise source-localizer for the six ideal-annihilator rows.  The finite side is positive in a limited algebraic sense: ideal size, annihilator size, generator gcd class, and double-annihilator closure distinguish all six rows.  The source-localizer side remains blocked because these signatures are cardinality/gcd bookkeeping labels, not nonpremise physical sectors or strict nadsoliton row selectors.  No source-localizer, named source-atom coupling, unit-bearing action density, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.

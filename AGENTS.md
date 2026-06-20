@@ -2002,3 +2002,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite positives remain real: projectors `4` and `9` satisfy `4*9=0` and `4+9=1 mod 12`; the four named atoms are explicitly audited; the acceptance matrix has `256` profiles with only the full profile accepting.
 - The current route is bounded no-go: no strict provenance, nonpremise factor semantics, orientation-sensitive coupling, target-independent positive `beta/Z_beta` or measure, bridge-completion law, or unit-bearing action/variational installation is exported.
 - Do not promote CRT source-atom rows, projector ratios, residue signatures, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The only remaining CRT-lane route is action/variational installation with a genuinely unit-bearing named density and nonproxy chain; otherwise introduce a genuinely new strict typed object/theorem/provider or preserve the P2929-P2983 no-strict-export certificate.
+
+## Current CRT action/variational installation obstruction guardrail (P2984/S1934, 2026-06-20)
+
+- P2984 attacks the final CRT-lane route: action/variational installation of the `Z/12Z` CRT idempotent projector split.
+- Formal receiver positives are limited: `L_4 = mu_4*4*psi_4^2/2` and `L_9 = mu_9*9*psi_9^2/2` have toy Euler/Hessian coefficients `4` and `9`, while the orthogonal cross receiver vanishes because `4*9=0`; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go: no unit-bearing measure, strict field provenance, boundary/integration theorem, named density theorem, or nonproxy continuum lift is exported.
+- Do not promote CRT formal receivers, toy Euler coefficients, orthogonal cross-zero rows, symbolic `L_total` slots, provenance/semantics/coupling replay, nilradical replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The CRT idempotent lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P2984 no-strict-export certificate.
+
+## Current Z12 Leibniz derivation source-candidate obstruction guardrail (P2985/S1935, 2026-06-20)
+
+- P2985 introduces a new finite typed object outside the closed nilradical and CRT lanes: the internal Leibniz derivation algebra of `Z/12Z`.
+- Exhaustive computation scans all `12` additive endomorphisms `D_a(x)=a*x mod 12` against all `144` products and finds only `D_0`; every nonzero candidate fails the Leibniz rule, already at `D(1)=2D(1)`.
+- The current route is bounded no-go as a source candidate: no nonzero strict flow, selector/orientation source, target-independent positive `beta/Z_beta` or measure, bridge-completion map, unit-bearing density, or nonproxy variational chain is exported.
+- Do not replay nilradical, CRT, ratio-package, incidence, selector, or bridge lanes through the zero derivation.  The Z12 Leibniz derivation object is now bounded no-go; a next move must introduce a genuinely new strict typed object/theorem/provider outside nilradical/CRT/zero-derivation lanes or preserve the P2929-P2985 no-strict-export certificate.
+
+## Current Z12 annihilator-lattice source-candidate obstruction guardrail (P2986/S1936, 2026-06-20)
+
+- P2986 introduces one new finite typed object outside nilradical/CRT/zero-derivation replay: the annihilator lattice of ideals in `Z/12Z`.
+- Exact finite positives are real: `12` principal generators deduplicate to `6` ideals; all ideal-annihilator products vanish; `Ann(Ann(I))=I`; and all order-reversing inclusion checks pass.
+- The current route is developmental/bounded no-go as a strict source candidate: no strict nadsoliton provenance, nonpremise source-localizer, named source-atom coupling, target-independent positive `beta/Z_beta` or unit measure, or unit-bearing action installation is exported.
+- Do not replay nilradical, CRT, zero-derivation, ratio-package, incidence, selector, or bridge lanes through annihilator labels.  A next admissible move may attack exactly one missing theorem for this object (strict provenance, nonpremise source-localizer, named source-atom coupling, or action installation); otherwise introduce a genuinely new strict typed object/provider or preserve the P2929-P2986 no-strict-export certificate.
+
+## Current annihilator-lattice strict provenance obstruction guardrail (P2987/S1937, 2026-06-20)
+
+- P2987 attacks exactly one P2986 missing theorem route: strict nadsoliton provenance for the `Z/12Z` annihilator lattice.
+- Finite positives remain real: all six ideal rows retain product-zero annihilators, `Ann(Ann(I))=I`, and order reversal.
+- The current route is bounded no-go: the construction still imports `Z/12Z` ring operations, proper ideals are not translation-stable source sectors, and no strict nadsoliton source map or nonpremise row localizer is exported.
+- Do not promote annihilator strict-provenance rows to source-localizer, named source-atom coupling, action installation, selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible annihilator-lattice move may attack exactly one remaining route (nonpremise source-localizer, named source-atom coupling, or action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2987 no-strict-export certificate.
+
+## Current annihilator-lattice nonpremise source-localizer obstruction guardrail (P2988/S1938, 2026-06-20)
+
+- P2988 attacks exactly one remaining annihilator-lattice route after P2987: a nonpremise source-localizer for the six ideal-annihilator rows.
+- Finite positives are algebraic only: ideal size, annihilator size, generator gcd class, and double-annihilator closure distinguish all six rows.
+- The current route is bounded no-go: these signatures are cardinality/gcd bookkeeping labels, not nonpremise physical sectors or strict nadsoliton row selectors.
+- Do not promote annihilator row signatures to strict provenance, source-localizer, named source-atom coupling, action installation, selector closure, bridge closure, role transfer, nonproxy `L_total`, or ToE.  A next admissible annihilator-lattice move may attack exactly one remaining route (named source-atom coupling or action installation), or else introduce a genuinely new strict typed object/provider while preserving the P2929-P2988 no-strict-export certificate.
