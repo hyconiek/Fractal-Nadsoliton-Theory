@@ -2928,3 +2928,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2963/S1913 typed mediator `L_total` guard
 
 `P2963/S1913` finds no typed mediator that both compares K and C and preserves the support/provenance mismatch identified by P2962.  Scalar equalization such as `max_nonzero` is too coarse for a typed source functor, so no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE through this mediator route.
+
+## P2964/S1914 aggregate-reception coupling `L_total` guard
+
+`P2964/S1914` constructs and audits aggregate-reception coupling templates.  Reception of the P2938/P2961 vector without K/C exchange is representable, but representation is not a sourced unit-bearing nonproxy `L_total` term: the canonical scale quotient and strict coefficient/source law are still missing.  Therefore no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE from P2964.
+
+## P2965/S1915 primitive-mean quotient `L_total` guard
+
+`P2965/S1915` supplies a clean primitive-ray quotient candidate and computes the coefficient `9/5` from the primitive aggregate mean.  Because no strict physical unit law or coefficient/source map installs that coefficient into the P2964 action-density schema, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE from P2965.
+
+## P2966/S1916 physical-unit dimensional `L_total` guard
+
+`P2966/S1916` shows that the P2965 coefficient `9/5` can be formally dressed as `(9/5)U^(2sigma-N)` for many choices of dimension and field scaling.  Because the current theory does not source `N`, `sigma`, `U`, or the coefficient/source map, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE from this dimensional lift.
+
+## P2967/S1917 dimension-field selector `L_total` guard
+
+`P2967/S1917` finds no nonimported strict source selecting `(N,sigma)` for the P2966 dimensional lift.  Because formal selector predicates are nonunique and unique choices are conventional/imported, the coefficient `9/5` is not installed as a sourced unit-bearing `L_total` term; no EOM, Hamiltonian, bridge, role-transfer, or ToE closure follows.
+
+## P2968/S1918 coefficient-source `L_total` guard
+
+`P2968/S1918` shows that installing the P2965 coefficient as `c_k=(9/5)U^k` cannot be done by an exponent-blind rule, a `U=1` convention, or a `k=0` selector replay.  Since no strict source fixes `U` or `k`, no sourced damping coefficient enters `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.

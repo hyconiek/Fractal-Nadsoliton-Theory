@@ -1862,3 +1862,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The only audited equalizer is `max_nonzero`; it makes K and C equal only by erasing support shape and provenance labels.  Mediators preserving the P2962 mismatch keep K and C unequal.
 - Do not promote scalar mediator collapse to strict K/C exchange source, strict P2938 provenance, ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
 - A next admissible move must construct an actual unit-bearing nonproxy coupling receiving the P2938 aggregate without K/C artifact exchange, introduce a new typed structural object richer than the current K/C split, or pivot outside the ratio-package lane while preserving the P2929-P2963 boundary.
+
+## Current unit-bearing nonproxy coupling reception no-go guardrail (P2964/S1914, 2026-06-20)
+
+- P2964 constructs the post-P2963 aggregate-reception interface: the P2938/P2961 vector can be received by formal action-density templates without assuming artifact-level K/C exchange.
+- The route remains blocked because current artifacts still lack a canonical scale/unit quotient and a strict coefficient/source law; the only row satisfying all coupling obligations is an unavailable completed schema.
+- Do not promote formal quadratic densities, beta-scale normalization, scalar Euler insertion, K/C exchange, or typed scalar mediators to strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must construct exactly one missing strict object: a canonical scale/unit quotient with coefficient source law for the aggregate-reception coupling, or a genuinely new typed structural object richer than the current K/C split; otherwise pivot outside the ratio-package lane while preserving the P2929-P2964 boundary.
+
+## Current primitive-mean scale/unit quotient candidate guardrail (P2965/S1915, 2026-06-20)
+
+- P2965 constructs the P2964-requested quotient object as a developmental theorem candidate: positive rational rescalings of the P2938/P2961 aggregate ray reduce to primitive representative `[1,2,2,2,2]`, whose mean is `9/5`, without a target_sum cut.
+- This does not export strict closure: the quotient is still dimensionless arithmetic until a strict physical unit law, strict coefficient source law, and nonproxy coupling installation are proved.
+- Do not promote primitive-ray quotient arithmetic, target_sum sections, beta normalization, scalar Euler insertion, K/C exchange, or typed scalar mediators to strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must prove exactly one missing strict object: a physical unit law for the P2965 quotient, a coefficient source law installing it into the P2964 coupling schema, or a genuinely new typed structural object outside the current ratio-package lane; otherwise preserve the P2929-P2965 boundary.
+
+## Current physical unit law dimensional obstruction guardrail (P2966/S1916, 2026-06-20)
+
+- P2966 attacks the P2965 missing physical-unit law by deriving the dimensional equation for `c[V] Phi^2 dVol_N`: the primitive mean can be dressed as `c[V]=(9/5)U^(2sigma-N)`.
+- The finite grid contains many compatible `(N,sigma,k)` completions, so dimensional compatibility is not a strict source; current artifacts do not select `N`, `sigma`, `U`, or a coefficient source law.
+- Do not promote dimensional exponent grids, dimensionless subfamilies, beta normalization, primitive-ray quotient arithmetic, scalar Euler insertion, K/C exchange, or typed scalar mediators to strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce exactly one strict selector/source for `N` and `sigma`, a strict unit `U` source, or a coefficient source law installing `9/5` into the P2964 nonproxy coupling; otherwise preserve the P2929-P2966 boundary.
+
+## Current dimension-field selector-source obstruction guardrail (P2967/S1917, 2026-06-20)
+
+- P2967 audits the P2966 missing selector/source for `(N,sigma)` in `c[V]=(9/5)U^(2sigma-N)`.
+- Dimensionless, minimal-exponent, and integer-power predicates are nonunique; lexicographic and four-dimensional scalar selections are convention/import, not strict nadsoliton source.
+- Do not promote these selector predicates, imported 4D scalar choices, beta normalization, primitive-ray quotient arithmetic, scalar Euler insertion, K/C exchange, or typed scalar mediators to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a strict unit `U` source, a coefficient source law independent of `(N,sigma)` selector replay, or a genuinely new typed structural object outside the ratio-package lane; otherwise preserve the P2929-P2967 boundary.
+
+## Current coefficient source-law exponent-blind obstruction guardrail (P2968/S1918, 2026-06-20)
+
+- P2968 audits a coefficient source law independent of `(N,sigma)` selector replay for `c_k=(9/5)U^k`; the current exponent set has 24 distinct `k` values.
+- Exponent-blind `9/5` drops units, `U=1` is convention, and `k=0` replays P2967; none exports a strict coefficient source law.
+- Do not promote exponent-blind coefficients, unit conventions, dimensionless `k=0` sections, N/sigma selector replay, beta normalization, primitive-ray quotient arithmetic, or scalar Euler insertion to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.
+- A next admissible move must introduce a strict unit `U` source, a nonconventional nonproxy installation law fixing `U` or `k`, or a genuinely new typed structural object outside the ratio-package lane; otherwise preserve the P2929-P2968 boundary.
