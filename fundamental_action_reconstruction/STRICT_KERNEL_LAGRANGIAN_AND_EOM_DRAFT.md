@@ -3116,3 +3116,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3010/S1960 cube-map action-installation `L_total` guard
 
 `P3010/S1960` adds no cube-map action term to `L_total`.  Directed-edge Dirichlet, fixed-attractor pinning, Hessian/Laplacian, and Euler receivers are finite formal variational data only; they do not supply a unit-bearing cube-map measure, strict field provenance, named density theorem, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian source, bridge closure, role transfer, or ToE.
+
+## P3011/S1961 strict-kernel/selector role-separation `L_total` guard
+
+`P3011/S1961` is an explanatory obligation matrix, not a new variational term.  It separates the strict kernel profile from the selector role: kernel values encode gate/correlation/compression over `d`, while a selector must source a directed phase/orientation representative.  The finite `Aut(Z12)` pair witness has no invariant directed choice, so no selector source, unit-bearing density, EOM/Hamiltonian term, bridge closure, role transfer, or ToE closure may be installed in `L_total` from this role separation alone.
+
+## P3012/S1962 phase-gradient selector `L_total` guard
+
+`P3012/S1962` adds no `L_total` term.  The strict-kernel label-gradient arrow is a finite selector-source candidate only; because it fails `Aut(Z12)` equivariance and lacks a strict chart/metric source theorem, it cannot install a selector source, directed torsor coupling, unit-bearing density, EOM/Hamiltonian term, bridge closure, role transfer, or ToE closure.
+
+## P3013/S1963 observer-physics readout `L_total` guard
+
+`P3013/S1963` adds no `L_total` term.  It is a readout-obligation matrix translating the strict kernel/selector distinction into our-physics rows: spacetime, time, matter, energy, and observer readout.  Because selector source, unit-bearing action, EOM/Hamiltonian, and observable-generator atoms remain missing, no physical sector, stress-energy/Hamiltonian, observer-readout functor, bridge/role transfer, or ToE closure may be installed.
