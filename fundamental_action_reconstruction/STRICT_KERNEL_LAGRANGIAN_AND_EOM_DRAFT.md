@@ -3084,3 +3084,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3002/S1952 square-map strict provenance `L_total` guard
 
 `P3002/S1952` adds no square-map provenance term to `L_total`.  Multiplicative compatibility, unit-square invariance, and translation noninvariance are finite ring-algebra receivers only; they do not supply strict field provenance, named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3003/S1953 square-map basin/localizer `L_total` guard
+
+`P3003/S1953` adds no square-map basin or attractor term to `L_total`.  Basin sizes, fibers, unit-orbit signatures, singleton signatures, and translation-stability witnesses do not supply strict field provenance, a named density theorem, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3004/S1954 square-map named source-atom coupling `L_total` guard
+
+`P3004/S1954` adds no square-map named-atom coupling term to `L_total`.  The receiver/atom matrix lacks strict field provenance, an accepted nonpremise source localization theorem, atom-specific unit-bearing density, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, and ToE.
+
+## P3005/S1955 square-map action-installation `L_total` guard
+
+`P3005/S1955` adds no square-map action term to `L_total`.  Directed-edge Dirichlet, attractor-pinning, Hessian/Laplacian, and Euler receivers are finite formal variational data only; they do not supply a unit-bearing square-map measure, strict field provenance, named density theorem, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian source, bridge closure, role transfer, or ToE.
+
+## P3006/S1956 cube-map functional graph `L_total` guard
+
+`P3006/S1956` adds no cube-map term to `L_total`.  The finite cubing graph, fixed residues, moved residues, basins, fibers, and acceptance matrix do not supply strict field provenance, a named density theorem, unit-bearing measure, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.

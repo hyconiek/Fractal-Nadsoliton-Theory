@@ -3715,3 +3715,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3002/S1952 square-map strict provenance obstruction
 
 `P3002/S1952` attacks exactly one P3001 missing theorem route: strict provenance for the `Z/12Z` square-map functional graph.  The finite provenance receivers are exact: `(xy)^2 = x^2 y^2 mod 12` holds on all `144` ordered pairs, all `48` unit-action rows are square-invariant because every unit has square `1`, and only translation `0` preserves the directed functional graph.  These are algebraic provenance receivers only: no strict nadsoliton source map or nonpremise internal square law is exported.  No basin/attractor localizer, source-atom coupling, unit-bearing action installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P3003/S1953 square-map basin/attractor localizer obstruction
+
+`P3003/S1953` attacks exactly one remaining P3002 route: a nonpremise basin/attractor localizer for the `Z/12Z` square-map functional graph.  The finite localizer receivers are exact: four basin/attractor rows, twelve residue rows, computed fiber/unit-orbit signatures, and translations `0,3,6,9` preserve the basin partition.  These are algebraic graph-dynamics signatures only; P3002 exported no strict provenance and no nonpremise physical sector/localizer theorem is present.  No named source-atom coupling, unit-bearing action installation, nonproxy `L_total`, bridge closure, role transfer, or ToE follows.
+
+## P3004/S1954 square-map named source-atom coupling obstruction
+
+`P3004/S1954` attacks exactly one remaining P3003 route: named source-atom coupling for square-map basin/attractor and residue receivers.  The finite receiver/atom matrix is exact: four basin receivers plus twelve residue receivers crossed with four named atoms gives `64` coupling tests with basin, fiber, unit-orbit, and localizer-signature data.  The theorem side remains blocked: P3002 provides no strict square-map provenance, P3003 provides no accepted nonpremise localizer, and no atom-specific coupling theorem, unit-bearing coefficient, or nonproxy export is present.  No selector closure, target-independent positive `beta/Z_beta`, bridge closure, unit-bearing action density, nonproxy `L_total`, role transfer, or ToE follows.
+
+## P3005/S1955 square-map action/variational installation obstruction
+
+`P3005/S1955` attacks the final square-map-functional-graph route left by P3004: action/variational installation with unit-bearing square-map measure and nonproxy lift obligations.  Formal receiver positives are limited: a directed-edge Dirichlet receiver, attractor-pinning receiver, Hessian/Laplacian receiver, and one Euler row per residue give exact finite toy variational data; the directed incidence rank is `8`, the Hessian rank/nullity is `8/4`, and the four fixed attractors remain formal boundary components.  The current route is bounded no-go: no unit-bearing square-map measure, strict field provenance, boundary/integration theorem, named square-map density theorem, or nonproxy continuum lift is exported.  No sourced `L_total`, EOM/Hamiltonian, bridge closure, role transfer, or ToE follows.
+
+## P3006/S1956 Z12 cube-map functional graph source-candidate obstruction
+
+`P3006/S1956` introduces one new finite typed object after the P3005 square-map no-go: the functional graph of the cubing map `x -> x^3 mod 12` on all residues of `Z/12Z`.  The finite dynamics is exact: `12` directed edges have image `[0, 1, 3, 4, 5, 7, 8, 9, 11]`, nine fixed residues, moved points `[2, 6, 10]`, basin sizes `{0:2, 1:1, 3:1, 4:2, 5:1, 7:1, 8:2, 9:1, 11:1}`, and every residue reaches a fixed point in at most one step.  This is real finite power-map dynamics, but no strict nadsoliton provenance, nonpremise basin/fixed-sector localizer, named source-atom coupling, unit-bearing action installation, nonproxy `L_total`, bridge closure, role transfer, or ToE is exported.

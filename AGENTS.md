@@ -2139,3 +2139,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite positives are exact but algebraic only: `(xy)^2 = x^2 y^2 mod 12` holds on all `144` ordered pairs, all `48` unit-action rows are square-invariant, and only translation `0` preserves the directed functional graph.
 - The route is bounded no-go because no strict nadsoliton source map or nonpremise internal square law is exported.
 - Do not promote multiplicative compatibility, unit-square invariance, translation noninvariance, CRT idempotent replay, zero-divisor graph replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible square-map-functional-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3002 no-strict-export certificate.
+
+## Current square-map basin/attractor localizer obstruction guardrail (P3003/S1953, 2026-06-21)
+
+- P3003 attacks exactly one remaining P3002 route: a nonpremise basin/attractor localizer for the `Z/12Z` square-map functional graph.
+- Finite positives are exact but graph-dynamical only: four basin/attractor rows, twelve residue rows, computed fiber/unit-orbit signatures, singleton signatures, and translations `0,3,6,9` preserving the basin partition.
+- The route is bounded no-go because P3002 exported no strict provenance and no nonpremise physical sector/localizer theorem is present.
+- Do not promote basin/attractor signatures, singleton signatures, fibers, unit orbits, translation witnesses, CRT idempotent replay, zero-divisor graph replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible square-map-functional-graph move may attack exactly one remaining route, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3003 no-strict-export certificate.
+
+## Current square-map named source-atom coupling obstruction guardrail (P3004/S1954, 2026-06-21)
+
+- P3004 attacks exactly one remaining P3003 square-map route: named source-atom coupling for basin/attractor and residue receivers.
+- Finite positives are exact but receiver-only: four basin receivers plus twelve residue receivers crossed with four named atoms gives `64` coupling tests with basin, fiber, unit-orbit, and localizer-signature data.
+- The route is bounded no-go because P3002 exported no strict square-map provenance, P3003 exported no accepted nonpremise localizer, and no atom-specific coupling theorem, unit-bearing coefficient, or nonproxy export is present.
+- Do not promote square-map receiver/atom rows to selector closure, target-independent positive `beta/Z_beta`, bridge closure, unit-bearing action density, role transfer, nonproxy `L_total`, or ToE.  The only remaining square-map-functional-graph route is unit-bearing action installation with a genuinely unit-bearing square-map measure, named square-map density theorem, boundary/integration map, and nonproxy continuum lift; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P3004 no-strict-export certificate.
+
+## Current square-map action/variational installation obstruction guardrail (P3005/S1955, 2026-06-22)
+
+- P3005 attacks the final square-map-functional-graph route left by P3004: unit-bearing action/variational installation with square-map measure and nonproxy lift obligations.
+- Formal receiver positives are finite only: directed-edge Dirichlet, attractor-pinning, Hessian/Laplacian, and one Euler row per residue give exact toy variational data; incidence rank is `8`, Hessian rank/nullity is `8/4`, and the four fixed attractors are formal boundary components.
+- The current route is bounded no-go: no unit-bearing square-map measure, strict field provenance, boundary/integration theorem, named square-map density theorem, or nonproxy continuum lift is exported.
+- Do not promote square-map action receivers, Hessian ranks, source-coupling rows, provenance/localizer rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The square-map-functional-graph lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P3005 no-strict-export certificate.
+
+## Current Z12 cube-map functional graph source-candidate obstruction guardrail (P3006/S1956, 2026-06-22)
+
+- P3006 introduces one new finite typed object after the P3005 square-map no-go: the functional graph of the cubing map `x -> x^3 mod 12` on all residues of `Z/12Z`.
+- Exact finite positives are real but ring-dynamical only: `12` directed edges have image `[0, 1, 3, 4, 5, 7, 8, 9, 11]`, nine fixed residues, moved points `[2, 6, 10]`, and every residue reaches a fixed point in at most one step; the acceptance matrix has `256` profiles with only the full profile accepting.
+- The current route is bounded no-go as a strict source candidate: no strict nadsoliton provenance, nonpremise basin/fixed-sector localizer, named source-atom coupling, unit-bearing action installation, or nonproxy export is present.
+- Do not replay square-map, zero-divisor graph, CRT idempotent, nilradical, annihilator, Fourier, selector, bridge, role-transfer, or `L_total` lanes through cube-map labels.  A next admissible cube-map-functional-graph move may attack exactly one missing theorem for this object, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3006 no-strict-export certificate.
