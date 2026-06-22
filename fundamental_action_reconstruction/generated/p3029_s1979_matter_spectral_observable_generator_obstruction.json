@@ -1,0 +1,111 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_matter_sector_export": false,
+    "accepted_as_observer_independent_observable_generator": true,
+    "base_signature": [
+      0.342673153024,
+      0.351367042225,
+      0.351367042225,
+      0.379274573252,
+      0.379274573252,
+      0.432858119875,
+      0.432858119875,
+      0.527505588655,
+      0.527505588655,
+      0.704554336713,
+      0.704554336713,
+      0.80930405893
+    ],
+    "classical_row": "matter_fields",
+    "codomain": "sorted DFT magnitude signature in R^12",
+    "domain": "K_strict_gate samples on Z12 labels 1..12",
+    "object": "MatterSpectralObservableGenerator_DFTMagnitudeInvariantObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only observer-independent observable generator for matter_fields is tested",
+        "obligation": "attacks_single_P3028_foundation_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "domain: sampled strict-kernel vector on Z12; codomain: sorted DFT magnitude signature in R^12",
+        "obligation": "explicit_domain_codomain",
+        "satisfied": true
+      },
+      {
+        "detail": "computed directly from K_strict_gate values, no observer input",
+        "obligation": "observer_independent_formula",
+        "satisfied": true
+      },
+      {
+        "detail": "sorted magnitude spectrum is preserved under U(12) relabeling",
+        "obligation": "U12_unit_invariant_signature",
+        "satisfied": true
+      },
+      {
+        "detail": "spectral magnitudes do not assign modes to physical fields or particles",
+        "obligation": "field_representation_localizer",
+        "satisfied": false
+      },
+      {
+        "detail": "no mass/coupling scale or unit theorem maps the signature to matter parameters",
+        "obligation": "mass_coupling_provenance",
+        "satisfied": false
+      },
+      {
+        "detail": "sorted magnitudes forget directed/sector labels and do not select a physical branch",
+        "obligation": "selector_or_sector_source",
+        "satisfied": false
+      }
+    ],
+    "unit_equivariance_rows": [
+      {
+        "signature_l1_delta": 0.0,
+        "sorted_spectral_signature_preserved": true,
+        "unit": 1
+      },
+      {
+        "signature_l1_delta": 0.0,
+        "sorted_spectral_signature_preserved": true,
+        "unit": 5
+      },
+      {
+        "signature_l1_delta": 0.0,
+        "sorted_spectral_signature_preserved": true,
+        "unit": 7
+      },
+      {
+        "signature_l1_delta": 0.0,
+        "sorted_spectral_signature_preserved": true,
+        "unit": 11
+      }
+    ]
+  },
+  "decision": {
+    "breakthrough": "A real observer-independent observable generator for the P3028 matter_fields row was constructed: the sorted DFT magnitude signature of K_strict_gate on Z12.  It has explicit types and is invariant under U(12) relabeling, but it is not a matter-sector export because it lacks a field representation/localizer, mass/coupling provenance, and selector/sector source.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "energy_hamiltonian_exported": false,
+      "field_representation_exported": false,
+      "ltotal_exported": false,
+      "mass_coupling_provenance_exported": false,
+      "matter_sector_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not promote spectral magnitude signatures to matter physics.  The next proof-grade move may attack exactly one missing matter atom for this generator: a field-representation/localizer theorem or a mass/coupling provenance theorem; otherwise return to the P3028 lattice and choose another single foundation atom."
+  },
+  "finite_certificate": {
+    "matter_sector_export_accepted": false,
+    "observer_independent_generator_accepted": true,
+    "signature_length": 12,
+    "unit_invariant_rows": 4,
+    "unit_rows": 4
+  },
+  "input_hashes": {
+    "P3028": "d236c74229b3fc70604c4d989caae12a38c7503e96254905f5e2220faa61ac58"
+  },
+  "status": "P3029_MATTER_SPECTRAL_OBSERVABLE_GENERATOR_OBSTRUCTION_NO_CLASSICAL_EXPORT"
+}

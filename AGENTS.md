@@ -2286,3 +2286,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite positive is exact on the sampled chain (`11/11` strict descent edges), but the object remains blocked: `12->1` is a cyclic reset/ascent, the directed chain is not nontrivially `U(12)`-equivariant, and no strict chart/selector source or physical tick/action/Hamiltonian unit theorem is exported.
 - Do not promote kernel-dissipation label chains to time arrow, strict time-order with physical unit, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
 - A next move may attack exactly one missing theorem for this object (strict chart/selector source or independent physical tick theorem), or pivot to a different genuinely new typed object while preserving the P3017-P3023 no-closure boundary.
+
+## Current dissipation chart-selector source guardrail (P3024/S1974, 2026-06-22)
+
+- P3024 attacks exactly one P3023 missing theorem: a strict chart/selector source for the integer order of the kernel-dissipation chain.
+- The finite `U(12)` orbit has four distinct directed-chain representatives and trivial stabilizer; endpoint, steepest-edge, and full-chain anchors are chart-indexed and do not provide a non-premise strict chart source.
+- Do not promote these chart anchors to strict time-order with physical unit, time arrow, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- The remaining non-replay atom for this object is an independent physical tick/action/Hamiltonian unit theorem; otherwise pivot to a genuinely new typed object outside the P3017-P3024 unit/time-order lane.
+
+## Current dissipation physical tick/Hamiltonian unit guardrail (P3025/S1975, 2026-06-22)
+
+- P3025 attacks the remaining non-replay P3023/P3024 theorem atom: an independent physical tick/action/Hamiltonian unit theorem for the kernel-dissipation chain.
+- Four tick couplings are positive internal calibrations, but the label tick is dimensionless, drop-derived ticks scale under `K -> cK`, the formal action scales as `c^2`, and `H=S/tau` has no strict energy/frequency coupling theorem.
+- Do not promote these internal tick/action/Hamiltonian ratios to physical time arrow, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should emit a P3023-P3025 time-order no-new-live-frontier reconciliation, or pivot to a genuinely new strict typed object with an external physical unit source.
+
+## Current dissipation time-order no-new-live-frontier guardrail (P3026/S1976, 2026-06-22)
+
+- P3026 reconciles P3023-P3025 as a finite no-new-live-frontier certificate for the kernel-dissipation time-order lane.
+- The lane has three constructed atoms (directed-order scaffold, strict chart/selector source test, physical tick/action/Hamiltonian unit test), but zero atoms close as strict sources; only the all-atoms-closed profile in the `8`-profile lattice would license strict time-order with physical unit.
+- Do not replay chart anchors, internal tick/action/Hamiltonian ratios, or internal unit normalizations as physical time arrow, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- A next admissible move must supply a genuinely new strict typed object or an external physical unit/source theorem outside the P3017-P3026 replay classes; otherwise preserve the no-new-live-frontier certificate.
+
+## Current dissipation external unit/source acceptance guardrail (P3027/S1977, 2026-06-22)
+
+- P3027 constructs the acceptance gate required to reopen the P3026 dissipation time-order lane with an external physical unit/source theorem.
+- A candidate must pass six obligations: new non-replay typed object, strict nadsoliton provenance, nonpremise chart/orientation source, absolute physical tick or action unit, scale-orbit breaking, and explicit Hamiltonian coupling.
+- Current candidates have zero accepted rows: P3023/P3024/P3025 are replays/internal, and an imported unit symbol is not strict provenance or Hamiltonian coupling.
+- Do not promote external unit placeholders or internal candidates to physical time arrow, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure; use the gate only when a concrete new formula/source is supplied.
+
+## Current information-to-classical transition foundation guardrail (P3028/S1978, 2026-06-22)
+
+- P3028 constructs a five-atom foundation lattice for promoting primordial nadsoliton information to classical physics readout.
+- Required atoms are strict selector/branch source, external physical unit source, unit-bearing action/EOM/Hamiltonian, observer-independent observable generator, and classical coarse-graining limit.
+- Current artifacts have zero accepted classical readout rows; only the all-five-atoms-closed profile in the `32`-profile lattice would license classical-transition export.
+- Do not promote this lattice to observed spacetime, time arrow, matter sector, energy/Hamiltonian, observer readout, `L_total`, bridge/role-transfer, or ToE closure; the next move must attack exactly one foundation atom with a new strict source object.
+
+## Current matter spectral observable generator guardrail (P3029/S1979, 2026-06-22)
+
+- P3029 attacks one P3028 foundation atom: an observer-independent observable generator for the `matter_fields` row.
+- The sorted DFT magnitude signature of sampled `K_strict_gate` has explicit domain/codomain and is invariant under all `4/4` `U(12)` relabeling rows.
+- Do not promote spectral magnitude signatures to matter sector, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure without a field-representation/localizer plus mass/coupling provenance theorem.
+- The next honest move may attack exactly one missing matter atom for this generator, preferably field-representation/localizer or mass/coupling provenance.
