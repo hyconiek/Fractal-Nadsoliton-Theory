@@ -1,0 +1,126 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_lambda_action_unit_source": false,
+    "gradient_energy": 0.112450847991441,
+    "lambda_star": 17.785548403798806,
+    "normalization_rule": "lambda_* = 2 / sum_d (T_K(d+1)-T_K(d))^2 so that S_formal[T_K]=1",
+    "normalized_action": 1.0,
+    "object": "LambdaActionUnitNormalization_CandidateObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "lambda_*=17.7855484038",
+        "obligation": "positive_lambda_candidate",
+        "satisfied": true
+      },
+      {
+        "detail": "S_formal[T_K]=1",
+        "obligation": "normalizes_formal_action_to_one",
+        "satisfied": true
+      },
+      {
+        "detail": "lambda_* changes under q -> c q by c^-2",
+        "obligation": "observable_scale_invariant_lambda",
+        "satisfied": false
+      },
+      {
+        "detail": "setting S=1 is a convention unless a strict action quantum is exported",
+        "obligation": "strict_action_quantum_source",
+        "satisfied": false
+      },
+      {
+        "detail": "T_K remains dimensionless kernel-difference without a physical readout unit",
+        "obligation": "strict_observable_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no strict clock unit maps action normalization to Hamiltonian/energy",
+        "obligation": "clock_and_hamiltonian_unit_source",
+        "satisfied": false
+      }
+    ],
+    "scale_rows": [
+      {
+        "expected_c_inverse_square": 4.0,
+        "gradient_energy": 0.028112711998,
+        "lambda_ratio_to_unscaled": 4.0,
+        "lambda_star_for_action_1": 71.142193615195,
+        "observable_scale_c": 0.5,
+        "same_lambda_as_unscaled": false
+      },
+      {
+        "expected_c_inverse_square": 1.0,
+        "gradient_energy": 0.112450847991,
+        "lambda_ratio_to_unscaled": 1.0,
+        "lambda_star_for_action_1": 17.785548403799,
+        "observable_scale_c": 1.0,
+        "same_lambda_as_unscaled": true
+      },
+      {
+        "expected_c_inverse_square": 0.25,
+        "gradient_energy": 0.449803391966,
+        "lambda_ratio_to_unscaled": 0.25,
+        "lambda_star_for_action_1": 4.44638710095,
+        "observable_scale_c": 2.0,
+        "same_lambda_as_unscaled": false
+      },
+      {
+        "expected_c_inverse_square": 0.111111111111,
+        "gradient_energy": 1.012057631923,
+        "lambda_ratio_to_unscaled": 0.111111111111,
+        "lambda_star_for_action_1": 1.976172044867,
+        "observable_scale_c": 3.0,
+        "same_lambda_as_unscaled": false
+      }
+    ],
+    "target_action_rows": [
+      {
+        "lambda_for_target": 8.892774201899,
+        "ratio_to_lambda_star": 0.5,
+        "requires_external_action_quantum": true,
+        "target_action_quantum": 0.5
+      },
+      {
+        "lambda_for_target": 17.785548403799,
+        "ratio_to_lambda_star": 1.0,
+        "requires_external_action_quantum": false,
+        "target_action_quantum": 1.0
+      },
+      {
+        "lambda_for_target": 35.571096807598,
+        "ratio_to_lambda_star": 2.0,
+        "requires_external_action_quantum": true,
+        "target_action_quantum": 2.0
+      }
+    ],
+    "typed_observable": "T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)"
+  },
+  "decision": {
+    "breakthrough": "A concrete positive lambda normalization exists for the typed observable: choose lambda_* so the formal quadratic action of T_K equals one.  The obstruction is that this is target/action-quantum setting, not a strict unit source: lambda_* changes under observable rescaling and no independent action, observable, clock, or Hamiltonian unit theorem is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_lambda_action_unit_source_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not treat action-to-one normalization as a strict physical unit theorem.  The next proof-grade move should attack exactly one independent unit atom: a strict action quantum/reference-cell source, a strict observable-unit readout source, or a strict clock-unit theorem; otherwise preserve the P3017-P3018 no-closure boundary."
+  },
+  "finite_certificate": {
+    "accepted_as_strict_lambda_action_unit_source": false,
+    "gradient_energy_positive": true,
+    "lambda_star_positive": true,
+    "normalized_action": 1.0,
+    "scale_invariant_lambda_rows": 1,
+    "scale_row_count": 4,
+    "target_action_row_count": 3
+  },
+  "input_hashes": {
+    "P3017": "27e275ecad720d2cc4c69b9fa27074d7f5de10354dc3169ca812a7f7d5c94519"
+  },
+  "status": "P3018_LAMBDA_ACTION_UNIT_NORMALIZATION_CANDIDATE_OBSTRUCTION_NO_CLOSURE"
+}

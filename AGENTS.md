@@ -2216,3 +2216,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - In this perspective `K_strict_gate` is the pre-physical strict working law of nadsoliton correlations/compression; the selector would be a physical-sector/branch/orientation source choosing one directed readout sector from symmetric/projective carrier data.
 - The five-row readout matrix has zero accepted observed-physics exports because selector source, unit-bearing action, EOM/Hamiltonian, and observable-generator atoms remain missing.
 - Do not promote P3013 to observed spacetime, time arrow, matter sector, energy/Hamiltonian, observer-readout, `L_total`, bridge/role transfer, or ToE closure.  The next proof-grade move should attack exactly one readout atom, preferably an observer-independent observable generator for one row with explicit input/output types and a finite acceptance test.
+
+## Current finite-difference time observable guardrail (P3014/S1964, 2026-06-22)
+
+- P3014 attacks one P3013 atom: an observer-independent observable generator for the time row.
+- The constructed candidate `T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)` has explicit input/output types and uses only strict-kernel values, but its finite acceptance matrix is bounded no-go: U(12) unit compatibility fails and no unit-bearing EOM/Hamiltonian or selector-free directed arrow is exported.
+- Do not replay finite-difference kernel-clock observables as time-arrow, observed-physics, `L_total`, bridge/role-transfer, or ToE closure evidence.
+- The next honest move should target exactly one different atom: either a unit-action-compatible observable functor for one readout row, or a genuine unit-bearing action/EOM source for an already typed observable.
+
+## Current orbit-quotient time observable functor guardrail (P3015/S1965, 2026-06-22)
+
+- P3015 constructs a genuine U(12)-unit-compatible observer-independent scalar observable functor for the time row by orbit-averaging strict-kernel values.
+- The finite obstruction is that the U(12) quotient has no well-defined clock successor: same-orbit labels can advance to different successor orbits, so directed time/evolution structure is lost.
+- Do not promote orbit-average quotient observables to time-arrow, EOM/Hamiltonian, `L_total`, observed-physics, bridge/role-transfer, selector closure, or ToE closure.
+- The next honest move should target exactly one missing successor/evolution atom, such as a strict unit-compatible directed successor/semigroup on the quotient, or pivot to one unit-bearing action/EOM source for a typed observable.
+
+## Current quotient clock-successor semigroup guardrail (P3016/S1966, 2026-06-22)
+
+- P3016 exhausts all `6^6` total maps on the P3015 U(12)-orbit quotient to test whether a strict unit-compatible directed successor/semigroup can represent `d -> d+1`.
+- The finite result is bounded no-go: four source orbits impose conflicting target orbits and the best total maps satisfy only `6/12` label-successor constraints.
+- Do not replay quotient successor maps or orbit-average time readouts as time-arrow, EOM/Hamiltonian, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should pivot to exactly one unit-bearing action/EOM source for one already typed observable, or introduce a genuinely new strict time-order object outside the U(12)-orbit quotient.
+
+## Current formal time-observable action/EOM guardrail (P3017/S1967, 2026-06-22)
+
+- P3017 constructs a formal quadratic action/EOM candidate for the typed P3014 time observable `T_K(d)`.
+- The finite formal EOM object is real: the cyclic Laplacian has rank/nullity `11/1`; however `T_K` has nonzero residuals and no strict source fixes `lambda`, action unit, clock unit, observable-unit normalization, or Hamiltonian normalization.
+- Do not promote formal quadratic time-observable actions to unit-bearing EOM/Hamiltonian, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should attack exactly one unit source atom, preferably strict `lambda`/action-unit normalization for a typed observable, or introduce a genuinely new strict time-order object with its own unit theorem.
+
+## Current lambda/action-unit normalization guardrail (P3018/S1968, 2026-06-22)
+
+- P3018 constructs a positive `lambda_*` normalization for the typed time observable `T_K` by setting its formal quadratic action to one.
+- The finite obstruction is normalization-gauge dependence: `lambda_*` rescales as `c^-2` under `T_K -> c T_K`, and no independent strict action quantum/reference-cell, observable-unit, clock-unit, or Hamiltonian normalization theorem is exported.
+- Do not promote action-to-one normalization to strict lambda/action-unit source, unit-bearing EOM/Hamiltonian, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should attack exactly one independent unit atom: strict action quantum/reference-cell, strict observable-unit readout, or strict clock-unit theorem.

@@ -1,0 +1,163 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_unit_bearing_action_eom_source": false,
+    "formal_action": "S_formal[q]=(lambda/2)*sum_d (q_{d+1}-q_d)^2 on cyclic Z/12 labels",
+    "laplacian_nullity": 1,
+    "laplacian_rank": 11,
+    "nonzero_residual_count": 12,
+    "object": "TimeObservableQuadraticActionEOM_UnitSourceObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "uses the P3014 scalar T_K(d)",
+        "obligation": "typed_observable_input",
+        "satisfied": true
+      },
+      {
+        "detail": "cycle Laplacian rank/nullity = 11/1",
+        "obligation": "formal_variational_eom",
+        "satisfied": true
+      },
+      {
+        "detail": "nonzero residual rows = 12/12",
+        "obligation": "observable_solves_formal_eom",
+        "satisfied": false
+      },
+      {
+        "detail": "lambda/action/clock/observable units are not strict-sourced",
+        "obligation": "unit_bearing_action_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no clock unit or canonical momentum normalization is exported",
+        "obligation": "hamiltonian_export",
+        "satisfied": false
+      }
+    ],
+    "residual_rows": [
+      {
+        "T_K(d)": -0.277942120955,
+        "d": 1,
+        "laplacian_residual": -0.455257441664,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.100614937412,
+        "d": 2,
+        "laplacian_residual": 0.121111691663,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.044399445532,
+        "d": 3,
+        "laplacian_residual": 0.03471399173,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.022897945382,
+        "d": 4,
+        "laplacian_residual": 0.01166396081,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.013060406042,
+        "d": 5,
+        "laplacian_residual": 0.004695115111,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.007917981814,
+        "d": 6,
+        "laplacian_residual": 0.002173156328,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.004948713913,
+        "d": 7,
+        "laplacian_residual": 0.001120100469,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.003099546482,
+        "d": 8,
+        "laplacian_residual": 0.000629192088,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.001879571138,
+        "d": 9,
+        "laplacian_residual": 0.00037972311,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.001039318905,
+        "d": 10,
+        "laplacian_residual": 0.000243828771,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -0.000442895443,
+        "d": 11,
+        "laplacian_residual": 0.000165390853,
+        "zero_within_1e-12": false
+      },
+      {
+        "T_K(d)": -1.1862834e-05,
+        "d": 12,
+        "laplacian_residual": 0.27836129073,
+        "zero_within_1e-12": false
+      }
+    ],
+    "typed_observable": "q_d=T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)",
+    "unit_obligation_rows": [
+      {
+        "detail": "requires strict source for [lambda]=[action]/[T_K]^2",
+        "satisfied": false,
+        "unit_obligation": "lambda_action_per_observable_square"
+      },
+      {
+        "detail": "requires strict clock unit to convert action to energy/Hamiltonian",
+        "satisfied": false,
+        "unit_obligation": "clock_unit_for_Hamiltonian"
+      },
+      {
+        "detail": "T_K is dimensionless kernel-difference unless a readout unit is exported",
+        "satisfied": false,
+        "unit_obligation": "observable_unit_normalization"
+      },
+      {
+        "detail": "cyclic formal boundary is a computation choice, not a strict physical time boundary theorem",
+        "satisfied": false,
+        "unit_obligation": "physical_boundary_conditions"
+      }
+    ]
+  },
+  "decision": {
+    "breakthrough": "A formal quadratic action/EOM object for the typed time observable was constructed: the cyclic Laplacian has rank 11 and nullity 1.  The bounded obstruction is that T_K does not solve the formal EOM and the action is not unit-bearing because lambda, clock, observable, and Hamiltonian normalizations remain unsourced.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "time_arrow_exported": false,
+      "time_observable_generator_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not promote formal quadratic actions to physical EOM/Hamiltonian closure.  The next proof-grade move should attack exactly one unit source atom, preferably a strict source for lambda/action-unit normalization for the typed observable, or introduce a new strict time-order object with its own unit theorem; keep selector, bridge, role-transfer, L_total, observed-physics, and ToE closure blocked."
+  },
+  "finite_certificate": {
+    "accepted_as_unit_bearing_action_eom_source": false,
+    "laplacian_nullity": 1,
+    "laplacian_rank": 11,
+    "nonzero_residual_count": 12,
+    "residual_row_count": 12,
+    "satisfied_unit_obligation_count": 0,
+    "unit_obligation_count": 4
+  },
+  "input_hashes": {
+    "P3016": "7846e23597098fdf0e29bf5d1dbb4019901ead95793aa0da1f097ce46fb72dbf"
+  },
+  "status": "P3017_TIME_OBSERVABLE_ACTION_EOM_SOURCE_OBSTRUCTION_NO_CLOSURE"
+}
