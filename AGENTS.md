@@ -2167,3 +2167,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Exact finite positives are real but ring-dynamical only: `12` directed edges have image `[0, 1, 3, 4, 5, 7, 8, 9, 11]`, nine fixed residues, moved points `[2, 6, 10]`, and every residue reaches a fixed point in at most one step; the acceptance matrix has `256` profiles with only the full profile accepting.
 - The current route is bounded no-go as a strict source candidate: no strict nadsoliton provenance, nonpremise basin/fixed-sector localizer, named source-atom coupling, unit-bearing action installation, or nonproxy export is present.
 - Do not replay square-map, zero-divisor graph, CRT idempotent, nilradical, annihilator, Fourier, selector, bridge, role-transfer, or `L_total` lanes through cube-map labels.  A next admissible cube-map-functional-graph move may attack exactly one missing theorem for this object, or else introduce a genuinely new strict typed object/provider while preserving the P2929-P3006 no-strict-export certificate.
+
+## Current cube-map strict provenance obstruction guardrail (P3007/S1957, 2026-06-22)
+
+- P3007 attacks exactly one P3006 missing theorem: strict provenance for the cube-map `x -> x^3 mod 12`.
+- Exact finite positives are algebraic only: `x^3-x` is zero mod `3` for every residue, all unit residues `[1, 5, 7, 11]` are fixed, and the nonidentity residues `[2, 6, 10]` are exactly the mod-4 even-sector defect carriers.
+- The current route is bounded no-go for strict provenance: no nadsoliton source law, APD/phase/topological-bit source, damping/compression source, nonpremise sector localizer, unit-bearing density, or nonproxy export is present.
+- Do not promote cube-map CRT defects, fixed-unit rows, mod-3 identity rows, mod-4 defect carriers, square-map replay, zero-divisor graph replay, CRT-idempotent replay, nilradical/annihilator/Fourier replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible cube-map-functional-graph move may attack exactly one remaining missing theorem: nonpremise basin/fixed-sector localizer, named source-atom coupling, or unit-bearing action installation; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P3007 no-strict-export certificate.
+
+## Current cube-map basin/fixed-sector localizer obstruction guardrail (P3008/S1958, 2026-06-22)
+
+- P3008 attacks exactly one P3007 remaining theorem: a nonpremise basin/fixed-sector localizer for the cube-map `x -> x^3 mod 12`.
+- Exact finite positives are localizer receivers only: nine fixed-attractor basin rows, twelve residue rows, fiber/localizer signatures, unit-orbit signatures, and symmetry-stability rows are computed.
+- The current route is bounded no-go: even translations `[0, 2, 4, 6, 8, 10]` and all unit actions `[1, 5, 7, 11]` preserve the basin partition, and no strict provenance or nonpremise physical-sector theorem is exported.
+- Do not promote cube-map basin/fixed-sector signatures, fibers, unit orbits, even-translation witnesses, strict provenance replay, square-map replay, zero-divisor/CRT-idempotent/nilradical/annihilator/Fourier replay, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  A next admissible cube-map-functional-graph move may attack exactly one remaining theorem: named source-atom coupling or unit-bearing action installation; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P3008 no-strict-export certificate.
+
+## Current cube-map named source-atom coupling obstruction guardrail (P3009/S1959, 2026-06-22)
+
+- P3009 attacks exactly one P3008 remaining cube-map route: named source-atom coupling for basin/fixed-sector and residue receivers.
+- Finite positives are exact but receiver-only: nine basin/fixed-sector receivers plus twelve residue receivers crossed with four named atoms gives `84` coupling tests with basin, fiber, unit-orbit, and localizer-signature data.
+- The route is bounded no-go because P3007 exported no strict cube-map provenance, P3008 exported no accepted nonpremise localizer, and no atom-specific coupling theorem, unit-bearing coefficient, or nonproxy export is present.
+- Do not promote cube-map receiver/atom rows to selector closure, target-independent positive `beta/Z_beta`, bridge closure, unit-bearing action density, role transfer, nonproxy `L_total`, or ToE.  The only remaining cube-map-functional-graph route is unit-bearing action installation with a genuinely unit-bearing cube-map measure, named cube-map density theorem, boundary/integration map, and nonproxy continuum lift; otherwise introduce a genuinely new strict typed object/provider while preserving the P2929-P3009 no-strict-export certificate.
+
+## Current cube-map action/variational installation obstruction guardrail (P3010/S1960, 2026-06-22)
+
+- P3010 attacks the final cube-map-functional-graph route left by P3009: unit-bearing action/variational installation with cube-map measure and nonproxy lift obligations.
+- Formal receiver positives are finite only: directed-edge Dirichlet receivers on nonloop edges `(2,8)`, `(6,0)`, `(10,4)`, fixed-attractor pinning, Hessian/Laplacian, and one Euler row per residue give exact toy variational data; incidence rank is `3`, Hessian rank/nullity is `3/9`, and the nine fixed attractors are formal boundary components.
+- The current route is bounded no-go: no unit-bearing cube-map measure, strict field provenance, boundary/integration theorem, named cube-map density theorem, or nonproxy continuum lift is exported.
+- Do not promote cube-map action receivers, Hessian ranks, source-coupling rows, provenance/localizer rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The cube-map-functional-graph lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P3010 no-strict-export certificate.
