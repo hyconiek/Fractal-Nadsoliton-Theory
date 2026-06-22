@@ -1,0 +1,135 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_action_quantum_reference_cell_source": false,
+    "base_action_lambda_one": 0.056225423995721,
+    "object": "ActionQuantumReferenceCellSource_RescalingPartitionObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "uses P3017 quadratic action S=(1/2)sum(ΔT_K)^2 with lambda=1",
+        "obligation": "typed_formal_action_input",
+        "satisfied": true
+      },
+      {
+        "detail": "edge, gradient-support, rank, and DFT-mode cells are positive",
+        "obligation": "positive_finite_reference_cell_candidates",
+        "satisfied": true
+      },
+      {
+        "detail": "the combinatorial partitions are stable",
+        "obligation": "cell_counts_stable_under_observable_rescaling",
+        "satisfied": true
+      },
+      {
+        "detail": "all action-per-cell candidates rescale as c^2",
+        "obligation": "action_quantum_invariant_under_observable_rescaling",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem selects one cell partition as a physical reference cell",
+        "obligation": "strict_reference_cell_source_theorem",
+        "satisfied": false
+      },
+      {
+        "detail": "no independent action quantum or Hamiltonian normalization is exported",
+        "obligation": "physical_action_unit_and_hamiltonian_coupling",
+        "satisfied": false
+      }
+    ],
+    "reference_cell_rows": [
+      {
+        "action_per_cell_lambda_1": 0.004685451999643,
+        "cell_count": 12,
+        "exports_physical_action_quantum": false,
+        "independent_of_T_K_amplitude": false,
+        "positive": true,
+        "reference_cell_candidate": "all_cyclic_edge_cells"
+      },
+      {
+        "action_per_cell_lambda_1": 0.004685451999643,
+        "cell_count": 12,
+        "exports_physical_action_quantum": false,
+        "independent_of_T_K_amplitude": false,
+        "positive": true,
+        "reference_cell_candidate": "nonzero_gradient_support_cells"
+      },
+      {
+        "action_per_cell_lambda_1": 0.005111402181429,
+        "cell_count": 11,
+        "exports_physical_action_quantum": false,
+        "independent_of_T_K_amplitude": false,
+        "positive": true,
+        "reference_cell_candidate": "cyclic_laplacian_rank_cells"
+      },
+      {
+        "action_per_cell_lambda_1": 0.005111402181429,
+        "cell_count": 11,
+        "exports_physical_action_quantum": false,
+        "independent_of_T_K_amplitude": false,
+        "positive": true,
+        "reference_cell_candidate": "nonzero_dft_mode_cells"
+      }
+    ],
+    "scale_orbit_rows": [
+      {
+        "action_ratio_to_base": 0.25,
+        "cell_counts_same_as_base": true,
+        "expected_c_square": 0.25,
+        "observable_scale_c": 0.5,
+        "quanta_rescale_by_c_square": true
+      },
+      {
+        "action_ratio_to_base": 1.0,
+        "cell_counts_same_as_base": true,
+        "expected_c_square": 1.0,
+        "observable_scale_c": 1.0,
+        "quanta_rescale_by_c_square": true
+      },
+      {
+        "action_ratio_to_base": 4.0,
+        "cell_counts_same_as_base": true,
+        "expected_c_square": 4.0,
+        "observable_scale_c": 2.0,
+        "quanta_rescale_by_c_square": true
+      },
+      {
+        "action_ratio_to_base": 9.0,
+        "cell_counts_same_as_base": true,
+        "expected_c_square": 9.0,
+        "observable_scale_c": 3.0,
+        "quanta_rescale_by_c_square": true
+      }
+    ],
+    "typed_action": "S_formal[T_K]=(lambda/2) sum_d (T_K(d+1)-T_K(d))^2, audited at lambda=1"
+  },
+  "decision": {
+    "breakthrough": "Four finite reference-cell partitions of the typed T_K action were constructed and give positive action-per-cell candidates.  The obstruction is that all candidates partition the same dimensionless formal action: under T_K -> c T_K the cell counts remain stable but every action quantum rescales by c^2, so no independent strict action unit or physical reference cell is sourced.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_action_quantum_reference_cell_source_exported": false,
+      "strict_clock_unit_theorem_exported": false,
+      "strict_lambda_action_unit_source_exported": false,
+      "strict_observable_unit_source_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay internal partitions of the T_K formal action as action quanta.  The next proof-grade move should either construct a genuinely new strict time-order object carrying a directed successor plus a physical unit theorem, or perform a post-P3017-P3021 unit-atom reconciliation/no-new-live-frontier certificate before selecting a different typed object."
+  },
+  "finite_certificate": {
+    "accepted_as_strict_action_quantum_reference_cell_source": false,
+    "positive_reference_cell_candidates": 4,
+    "quanta_rescale_rows": 4,
+    "reference_cell_candidate_count": 4,
+    "scale_row_count": 4,
+    "stable_cell_count_rows": 4
+  },
+  "input_hashes": {
+    "P3020": "b75321d6c68b8f54ad36570db5f28f1eb8f097b2db3d4e34e58a1bc17afcc2fb"
+  },
+  "status": "P3021_ACTION_QUANTUM_REFERENCE_CELL_SOURCE_OBSTRUCTION_NO_CLOSURE"
+}

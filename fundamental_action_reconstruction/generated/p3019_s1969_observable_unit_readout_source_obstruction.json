@@ -1,0 +1,149 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_observable_unit_source": false,
+    "candidate_units": [
+      {
+        "candidate_unit": "rms_unit",
+        "exports_physical_observable_unit": false,
+        "normalized_linf": 3.206852694112,
+        "normalized_rms": 1.0,
+        "positive": true,
+        "unit_value": 0.08667130905803
+      },
+      {
+        "candidate_unit": "l1_mean_abs_unit",
+        "exports_physical_observable_unit": false,
+        "normalized_linf": 6.973909784241,
+        "normalized_rms": 2.174689781369,
+        "positive": true,
+        "unit_value": 0.03985456215436
+      },
+      {
+        "candidate_unit": "linf_unit",
+        "exports_physical_observable_unit": false,
+        "normalized_linf": 1.0,
+        "normalized_rms": 0.311832221616,
+        "positive": true,
+        "unit_value": 0.277942120954917
+      },
+      {
+        "candidate_unit": "total_variation_unit",
+        "exports_physical_observable_unit": false,
+        "normalized_linf": 0.500021341386,
+        "normalized_rms": 0.15592276574,
+        "positive": true,
+        "unit_value": 0.555860516242182
+      }
+    ],
+    "object": "ObservableUnitReadoutSource_RescalingOrbitObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "uses P3014/P3017/P3018 T_K(d) vector",
+        "obligation": "typed_time_observable_input",
+        "satisfied": true
+      },
+      {
+        "detail": "RMS, L1, L∞, and total-variation units are positive",
+        "obligation": "positive_finite_candidate_units",
+        "satisfied": true
+      },
+      {
+        "detail": "candidate units are computed from the strict-kernel observable vector only",
+        "obligation": "observer_independent_formula",
+        "satisfied": true
+      },
+      {
+        "detail": "all candidates rescale with T_K -> c T_K",
+        "obligation": "observable_rescaling_invariant_absolute_unit",
+        "satisfied": false
+      },
+      {
+        "detail": "no independent detector/readout calibration theorem exports an absolute unit",
+        "obligation": "strict_physical_readout_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no clock/Hamiltonian theorem maps this observable unit to energy or time units",
+        "obligation": "clock_hamiltonian_coupling",
+        "satisfied": false
+      }
+    ],
+    "scale_orbit_rows": [
+      {
+        "absolute_unit_fixed": false,
+        "all_units_rescale_by_c": true,
+        "observable_scale_c": 0.5,
+        "unit_ratios_to_base": {
+          "l1_mean_abs_unit": 0.5,
+          "linf_unit": 0.5,
+          "rms_unit": 0.5,
+          "total_variation_unit": 0.5
+        }
+      },
+      {
+        "absolute_unit_fixed": true,
+        "all_units_rescale_by_c": true,
+        "observable_scale_c": 1.0,
+        "unit_ratios_to_base": {
+          "l1_mean_abs_unit": 1.0,
+          "linf_unit": 1.0,
+          "rms_unit": 1.0,
+          "total_variation_unit": 1.0
+        }
+      },
+      {
+        "absolute_unit_fixed": false,
+        "all_units_rescale_by_c": true,
+        "observable_scale_c": 2.0,
+        "unit_ratios_to_base": {
+          "l1_mean_abs_unit": 2.0,
+          "linf_unit": 2.0,
+          "rms_unit": 2.0,
+          "total_variation_unit": 2.0
+        }
+      },
+      {
+        "absolute_unit_fixed": false,
+        "all_units_rescale_by_c": true,
+        "observable_scale_c": 3.0,
+        "unit_ratios_to_base": {
+          "l1_mean_abs_unit": 3.0,
+          "linf_unit": 3.0,
+          "rms_unit": 3.0,
+          "total_variation_unit": 3.0
+        }
+      }
+    ],
+    "typed_observable": "T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)"
+  },
+  "decision": {
+    "breakthrough": "Four observer-independent observable-unit candidates for T_K were constructed and are positive.  The obstruction is that every candidate is homogeneous in the observable: rescaling T_K rescales the unit, leaving only an internal calibration convention rather than an absolute physical readout unit.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "clock_unit_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_lambda_action_unit_source_exported": false,
+      "strict_observable_unit_source_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay internal observable-unit normalizations.  The next proof-grade move should attack exactly one remaining independent unit atom: a strict clock-unit theorem for the typed time observable, or a strict action quantum/reference-cell source coupled to the already typed action; otherwise introduce a genuinely new strict time-order object with its own unit theorem."
+  },
+  "finite_certificate": {
+    "absolute_unit_fixed_rows": 1,
+    "accepted_as_strict_observable_unit_source": false,
+    "all_units_rescale_rows": 4,
+    "candidate_unit_count": 4,
+    "positive_candidate_units": 4,
+    "scale_row_count": 4
+  },
+  "input_hashes": {
+    "P3018": "ef11fc993d805f3c15b66047b305996e730230dd75da440e3367b017be361180"
+  },
+  "status": "P3019_OBSERVABLE_UNIT_READOUT_SOURCE_OBSTRUCTION_NO_CLOSURE"
+}
