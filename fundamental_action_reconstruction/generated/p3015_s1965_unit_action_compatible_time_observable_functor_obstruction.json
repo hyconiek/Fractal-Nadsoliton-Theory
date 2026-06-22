@@ -1,0 +1,609 @@
+{
+  "constructed_theoretical_objects": {
+    "functor": {
+      "accepted_as_time_observable_generator": false,
+      "bad_successor_orbit_count": 4,
+      "candidate": "StrictKernelOrbitQuotient_TimeObservableFunctor",
+      "formula": "O_K([d]) = |[d]|^{-1} * sum_{x in U(12).d} K_strict_gate(x)",
+      "orbit_values": {
+        "{1,5,7,11}": {
+          "max_K": 0.469985672645,
+          "mean_K": 0.122363854146,
+          "members": [
+            1,
+            5,
+            7,
+            11
+          ],
+          "min_K": -0.007814314931
+        },
+        "{12}": {
+          "max_K": -0.008257210373,
+          "mean_K": -0.008257210373,
+          "members": [
+            12
+          ],
+          "min_K": -0.008257210373
+        },
+        "{2,10}": {
+          "max_K": 0.19204355169,
+          "mean_K": 0.092634277832,
+          "members": [
+            2,
+            10
+          ],
+          "min_K": -0.006774996025
+        },
+        "{3,9}": {
+          "max_K": 0.091428614278,
+          "mean_K": 0.043266594695,
+          "members": [
+            3,
+            9
+          ],
+          "min_K": -0.004895424887
+        },
+        "{4,8}": {
+          "max_K": 0.047029168746,
+          "mean_K": 0.02261664517,
+          "members": [
+            4,
+            8
+          ],
+          "min_K": -0.001795878405
+        },
+        "{6}": {
+          "max_K": 0.011070817321,
+          "mean_K": 0.011070817321,
+          "members": [
+            6
+          ],
+          "min_K": 0.011070817321
+        }
+      },
+      "orbits": [
+        "{6}",
+        "{12}",
+        "{2,10}",
+        "{3,9}",
+        "{4,8}",
+        "{1,5,7,11}"
+      ],
+      "parameters": {
+        "beta": 1.0,
+        "cycle": 12,
+        "eta": 1.8,
+        "omega": 0.18575,
+        "phi": 0.1625,
+        "units": [
+          1,
+          5,
+          7,
+          11
+        ]
+      },
+      "proof_obligations": [
+        {
+          "detail": "input U(12)-orbit [d]; output real scalar mean_{x in [d]} K_strict_gate(x)",
+          "obligation": "explicit_input_output_types",
+          "satisfied": true
+        },
+        {
+          "detail": "orbit mean uses strict-kernel values and finite group action only",
+          "obligation": "observer_independent_formula",
+          "satisfied": true
+        },
+        {
+          "detail": "0 of 48 orbit-invariance checks fail",
+          "obligation": "unit_action_compatible",
+          "satisfied": true
+        },
+        {
+          "detail": "4 of 6 quotient orbits have nonunique successor orbit",
+          "obligation": "well_defined_clock_successor",
+          "satisfied": false
+        },
+        {
+          "detail": "orbit quotient is invariant but orientation-blind; it does not select a directed time branch",
+          "obligation": "directed_time_arrow_without_selector_import",
+          "satisfied": false
+        },
+        {
+          "detail": "no unit-bearing variational action/EOM/Hamiltonian source is supplied by orbit averaging",
+          "obligation": "eom_hamiltonian_installation",
+          "satisfied": false
+        }
+      ],
+      "successor_rows": [
+        {
+          "member_successors": {
+            "6": 7
+          },
+          "orbit": "{6}",
+          "successor_orbits": [
+            "{1,5,7,11}"
+          ],
+          "successor_well_defined_on_quotient": true
+        },
+        {
+          "member_successors": {
+            "12": 1
+          },
+          "orbit": "{12}",
+          "successor_orbits": [
+            "{1,5,7,11}"
+          ],
+          "successor_well_defined_on_quotient": true
+        },
+        {
+          "member_successors": {
+            "10": 11,
+            "2": 3
+          },
+          "orbit": "{2,10}",
+          "successor_orbits": [
+            "{3,9}",
+            "{1,5,7,11}"
+          ],
+          "successor_well_defined_on_quotient": false
+        },
+        {
+          "member_successors": {
+            "3": 4,
+            "9": 10
+          },
+          "orbit": "{3,9}",
+          "successor_orbits": [
+            "{2,10}",
+            "{4,8}"
+          ],
+          "successor_well_defined_on_quotient": false
+        },
+        {
+          "member_successors": {
+            "4": 5,
+            "8": 9
+          },
+          "orbit": "{4,8}",
+          "successor_orbits": [
+            "{3,9}",
+            "{1,5,7,11}"
+          ],
+          "successor_well_defined_on_quotient": false
+        },
+        {
+          "member_successors": {
+            "1": 2,
+            "11": 12,
+            "5": 6,
+            "7": 8
+          },
+          "orbit": "{1,5,7,11}",
+          "successor_orbits": [
+            "{6}",
+            "{12}",
+            "{2,10}",
+            "{4,8}"
+          ],
+          "successor_well_defined_on_quotient": false
+        }
+      ],
+      "unit_compatibility_failure_count": 0,
+      "unit_compatibility_rows": [
+        {
+          "d": 1,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 1,
+          "unit": 1
+        },
+        {
+          "d": 2,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 2,
+          "unit": 1
+        },
+        {
+          "d": 3,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 3,
+          "unit": 1
+        },
+        {
+          "d": 4,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 4,
+          "unit": 1
+        },
+        {
+          "d": 5,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 5,
+          "unit": 1
+        },
+        {
+          "d": 6,
+          "orbit_d": "{6}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{6}",
+          "u_dot_d": 6,
+          "unit": 1
+        },
+        {
+          "d": 7,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 7,
+          "unit": 1
+        },
+        {
+          "d": 8,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 8,
+          "unit": 1
+        },
+        {
+          "d": 9,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 9,
+          "unit": 1
+        },
+        {
+          "d": 10,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 10,
+          "unit": 1
+        },
+        {
+          "d": 11,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 11,
+          "unit": 1
+        },
+        {
+          "d": 12,
+          "orbit_d": "{12}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{12}",
+          "u_dot_d": 12,
+          "unit": 1
+        },
+        {
+          "d": 1,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 5,
+          "unit": 5
+        },
+        {
+          "d": 2,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 10,
+          "unit": 5
+        },
+        {
+          "d": 3,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 3,
+          "unit": 5
+        },
+        {
+          "d": 4,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 8,
+          "unit": 5
+        },
+        {
+          "d": 5,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 1,
+          "unit": 5
+        },
+        {
+          "d": 6,
+          "orbit_d": "{6}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{6}",
+          "u_dot_d": 6,
+          "unit": 5
+        },
+        {
+          "d": 7,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 11,
+          "unit": 5
+        },
+        {
+          "d": 8,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 4,
+          "unit": 5
+        },
+        {
+          "d": 9,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 9,
+          "unit": 5
+        },
+        {
+          "d": 10,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 2,
+          "unit": 5
+        },
+        {
+          "d": 11,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 7,
+          "unit": 5
+        },
+        {
+          "d": 12,
+          "orbit_d": "{12}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{12}",
+          "u_dot_d": 12,
+          "unit": 5
+        },
+        {
+          "d": 1,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 7,
+          "unit": 7
+        },
+        {
+          "d": 2,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 2,
+          "unit": 7
+        },
+        {
+          "d": 3,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 9,
+          "unit": 7
+        },
+        {
+          "d": 4,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 4,
+          "unit": 7
+        },
+        {
+          "d": 5,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 11,
+          "unit": 7
+        },
+        {
+          "d": 6,
+          "orbit_d": "{6}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{6}",
+          "u_dot_d": 6,
+          "unit": 7
+        },
+        {
+          "d": 7,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 1,
+          "unit": 7
+        },
+        {
+          "d": 8,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 8,
+          "unit": 7
+        },
+        {
+          "d": 9,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 3,
+          "unit": 7
+        },
+        {
+          "d": 10,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 10,
+          "unit": 7
+        },
+        {
+          "d": 11,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 5,
+          "unit": 7
+        },
+        {
+          "d": 12,
+          "orbit_d": "{12}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{12}",
+          "u_dot_d": 12,
+          "unit": 7
+        },
+        {
+          "d": 1,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 11,
+          "unit": 11
+        },
+        {
+          "d": 2,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 10,
+          "unit": 11
+        },
+        {
+          "d": 3,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 9,
+          "unit": 11
+        },
+        {
+          "d": 4,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 8,
+          "unit": 11
+        },
+        {
+          "d": 5,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 7,
+          "unit": 11
+        },
+        {
+          "d": 6,
+          "orbit_d": "{6}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{6}",
+          "u_dot_d": 6,
+          "unit": 11
+        },
+        {
+          "d": 7,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 5,
+          "unit": 11
+        },
+        {
+          "d": 8,
+          "orbit_d": "{4,8}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{4,8}",
+          "u_dot_d": 4,
+          "unit": 11
+        },
+        {
+          "d": 9,
+          "orbit_d": "{3,9}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{3,9}",
+          "u_dot_d": 3,
+          "unit": 11
+        },
+        {
+          "d": 10,
+          "orbit_d": "{2,10}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{2,10}",
+          "u_dot_d": 2,
+          "unit": 11
+        },
+        {
+          "d": 11,
+          "orbit_d": "{1,5,7,11}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{1,5,7,11}",
+          "u_dot_d": 1,
+          "unit": 11
+        },
+        {
+          "d": 12,
+          "orbit_d": "{12}",
+          "orbit_functor_invariant": true,
+          "orbit_u_dot_d": "{12}",
+          "u_dot_d": 12,
+          "unit": 11
+        }
+      ]
+    },
+    "object": "UnitActionCompatibleTimeObservableFunctor_QuotientSuccessorObstructionMatrix",
+    "targeted_atom": "unit_action_compatible_observable_functor_for_time_row"
+  },
+  "decision": {
+    "breakthrough": "A genuine U(12)-unit-compatible, observer-independent strict-kernel observable functor was constructed by orbit-averaging.  The bounded obstruction is that the orbit quotient destroys the clock successor: same-orbit labels can advance to different successor orbits, so the functor is not a directed time observable generator and cannot install EOM/Hamiltonian or ToE closure.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "strict_selector_source_exported": false,
+      "time_arrow_exported": false,
+      "time_observable_generator_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay orbit-average quotient observables as time-arrow closure.  The next proof-grade move should attack exactly one missing successor/evolution atom: construct a strict unit-compatible directed successor/semigroup on the quotient, or pivot to a unit-bearing action/EOM source for one typed observable; keep selector, bridge, role-transfer, L_total, observed-physics, and ToE closure blocked until that single atom passes finite acceptance."
+  },
+  "finite_certificate": {
+    "accepted_as_time_observable_generator": false,
+    "bad_successor_orbit_count": 4,
+    "orbit_count": 6,
+    "successor_row_count": 6,
+    "unit_compatibility_failure_count": 0,
+    "unit_compatibility_rows": 48
+  },
+  "input_hashes": {
+    "P3014": "77a615d996ee8ef44d20c5e2fe00f074371d71154b1b909f0a0da8c47f9d5eb6"
+  },
+  "status": "P3015_UNIT_ACTION_COMPATIBLE_TIME_OBSERVABLE_FUNCTOR_OBSTRUCTION_NO_CLOSURE"
+}

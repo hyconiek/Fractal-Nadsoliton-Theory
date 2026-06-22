@@ -3128,3 +3128,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3013/S1963 observer-physics readout `L_total` guard
 
 `P3013/S1963` adds no `L_total` term.  It is a readout-obligation matrix translating the strict kernel/selector distinction into our-physics rows: spacetime, time, matter, energy, and observer readout.  Because selector source, unit-bearing action, EOM/Hamiltonian, and observable-generator atoms remain missing, no physical sector, stress-energy/Hamiltonian, observer-readout functor, bridge/role transfer, or ToE closure may be installed.
+
+## P3014/S1964 finite-difference time observable `L_total` guard
+
+`P3014/S1964` does not add an `L_total` term.  The candidate `T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)` is a typed time-readout observable formula only; it fails U(12) unit compatibility and carries no unit-bearing variational action, EOM, Hamiltonian, stress-energy, selector source, bridge closure, or role-transfer theorem.
+
+## P3015/S1965 orbit-quotient time observable `L_total` guard
+
+`P3015/S1965` adds no `L_total` term.  The orbit-average functor is unit-action-compatible as a scalar quotient readout, but it lacks a well-defined clock successor on the quotient and supplies no unit-bearing action, variational density, EOM, Hamiltonian, selector source, bridge closure, or role-transfer theorem.
+
+## P3016/S1966 quotient successor exhaustion `L_total` guard
+
+`P3016/S1966` adds no `L_total` term.  Exhausting all total maps on the U(12)-orbit quotient proves that the label successor `d -> d+1` cannot descend to a strict directed successor/semigroup on that quotient; the best maps satisfy only `6/12` constraints and provide no unit-bearing action, variational density, EOM, Hamiltonian, selector source, bridge closure, or role-transfer theorem.
+
+## P3017/S1967 formal time-observable action `L_total` guard
+
+`P3017/S1967` adds no physical `L_total` term.  Although the formal quadratic action for `T_K` has a valid cyclic Laplacian EOM with rank/nullity `11/1`, the observable does not solve that EOM and the construction lacks strict `lambda`, action-unit, clock-unit, observable-unit, Hamiltonian, selector-source, bridge, and role-transfer theorems.
+
+## P3018/S1968 lambda/action-unit normalization `L_total` guard
+
+`P3018/S1968` adds no physical `L_total` term.  The positive `lambda_*` that sets the formal action of `T_K` to one is a normalization convention unless a strict action quantum/reference-cell and observable/clock/Hamiltonian unit theorem is supplied; it changes under observable rescaling and cannot by itself install a unit-bearing action or EOM.
