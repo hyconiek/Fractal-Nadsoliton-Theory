@@ -1,0 +1,192 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_chart_selector_source": false,
+    "anchor_rows": [
+      {
+        "candidate_anchor": "max_K_endpoint",
+        "chart_source_status": "moves under U(12) relabeling; anchor is not a physical chart theorem",
+        "selected_label_in_original_chart": 1
+      },
+      {
+        "candidate_anchor": "min_K_endpoint",
+        "chart_source_status": "moves under U(12) relabeling; endpoint does not select a U(12)-invariant integer chart",
+        "selected_label_in_original_chart": 12
+      },
+      {
+        "candidate_anchor": "steepest_descent_edge",
+        "chart_source_status": "edge label is inherited from the same chart whose source is under test",
+        "selected_edge_in_original_chart": [
+          1,
+          2
+        ]
+      },
+      {
+        "candidate_anchor": "full_descent_chain",
+        "chart_source_status": "finite chain exists but its orbit has no invariant representative",
+        "selected_chain_in_original_chart": "1->2->...->12"
+      }
+    ],
+    "chain_under_test": "1->2->...->12",
+    "object": "DissipationChainChartSelectorSource_AutOrbitObstructionMatrix",
+    "orbit_rows": [
+      {
+        "contains_all_canonical_successor_edges": true,
+        "first_four_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "fixed_original_chart": true,
+        "unit": 1
+      },
+      {
+        "contains_all_canonical_successor_edges": false,
+        "first_four_edges": [
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "fixed_original_chart": false,
+        "unit": 5
+      },
+      {
+        "contains_all_canonical_successor_edges": false,
+        "first_four_edges": [
+          [
+            7,
+            2
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "fixed_original_chart": false,
+        "unit": 7
+      },
+      {
+        "contains_all_canonical_successor_edges": false,
+        "first_four_edges": [
+          [
+            11,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "fixed_original_chart": false,
+        "unit": 11
+      }
+    ],
+    "orbit_size": 4,
+    "proof_obligations": [
+      {
+        "detail": "only the strict chart/selector source for the P3023 integer order is tested",
+        "obligation": "attacks_single_P3023_missing_theorem",
+        "satisfied": true
+      },
+      {
+        "detail": "computed images under units 1,5,7,11",
+        "obligation": "finite_U12_orbit_constructed",
+        "satisfied": true
+      },
+      {
+        "detail": "only the identity fixes the full directed chart",
+        "obligation": "nontrivial_stabilizer_for_chart",
+        "satisfied": false
+      },
+      {
+        "detail": "four distinct orbit representatives prevent invariant chart selection",
+        "obligation": "U12_invariant_representative_exists",
+        "satisfied": false
+      },
+      {
+        "detail": "anchors are computed after choosing the chart and relabel with it",
+        "obligation": "endpoint_or_steepest_anchor_sources_chart",
+        "satisfied": false
+      },
+      {
+        "detail": "no strict source law chooses one orbit representative without a premise",
+        "obligation": "strict_nonpremise_chart_selector_exported",
+        "satisfied": false
+      }
+    ],
+    "stabilizer_units": [
+      1
+    ],
+    "tested_theorem_atom": "strict chart/selector source for the P3023 integer order"
+  },
+  "decision": {
+    "breakthrough": "The P3023 integer order was tested as a strict chart/selector-source theorem.  Its U(12) orbit has four distinct directed-chain representatives and only the identity fixes the original chart.  Endpoint, steepest-edge, and full-chain anchors are finite but chart-indexed, so they cannot provide a non-premise strict source for the integer order.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "physical_unit_theorem_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_chart_selector_source_exported": false,
+      "strict_time_order_object_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay chart anchors for the P3023 chain.  The remaining non-replay theorem atom for this object is an independent physical tick/action/Hamiltonian unit theorem; otherwise pivot to a genuinely new typed object outside the P3017-P3024 unit/time-order lane."
+  },
+  "finite_certificate": {
+    "accepted_as_strict_chart_selector_source": false,
+    "fixed_chart_rows": 1,
+    "orbit_size": 4,
+    "stabilizer_size": 1,
+    "u12_unit_count": 4
+  },
+  "input_hashes": {
+    "P3023": "4f69b67967b4eb377a0e967186d38496aa2611ca373395b37e7e56a8bb3c9d41"
+  },
+  "status": "P3024_DISSIPATION_CHART_SELECTOR_SOURCE_OBSTRUCTION_NO_CLOSURE"
+}

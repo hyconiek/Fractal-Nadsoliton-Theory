@@ -1,0 +1,123 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_physical_tick_hamiltonian_unit_theorem": false,
+    "object": "DissipationChainPhysicalTickHamiltonianUnit_RescalingCouplingObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only the independent physical tick/action/Hamiltonian unit theorem is tested",
+        "obligation": "attacks_single_P3024_remaining_theorem",
+        "satisfied": true
+      },
+      {
+        "detail": "label, mean-drop, RMS-drop, and inverse-slope ticks are positive",
+        "obligation": "positive_tick_candidates_constructed",
+        "satisfied": true
+      },
+      {
+        "detail": "drop-based ticks scale as c or c^-1, while label tick is only dimensionless",
+        "obligation": "observable_rescaling_independent_tick",
+        "satisfied": false
+      },
+      {
+        "detail": "formal chain action rescales as c^2 and no strict action quantum is supplied",
+        "obligation": "independent_action_quantum_source",
+        "satisfied": false
+      },
+      {
+        "detail": "S/tau is an internal ratio; no energy/frequency/unit theorem maps it to a physical Hamiltonian",
+        "obligation": "physical_Hamiltonian_unit_coupling",
+        "satisfied": false
+      },
+      {
+        "detail": "no candidate supplies an absolute physical tick independent of chart and amplitude conventions",
+        "obligation": "strict_physical_tick_theorem_exported",
+        "satisfied": false
+      }
+    ],
+    "rescaling_test": "K -> 3.0 K",
+    "tested_theorem_atom": "independent physical tick/action/Hamiltonian unit theorem for the P3023/P3024 dissipation chain",
+    "tick_rows": [
+      {
+        "candidate_tick": "label_tick",
+        "formal_action_rescaling": "c^2",
+        "formal_action_value": 0.045071494812632,
+        "formal_hamiltonian_rescaling": "c^2",
+        "formal_hamiltonian_value": 0.045071494812632,
+        "hamiltonian_unit_theorem": false,
+        "independent_action_quantum_source": false,
+        "independent_physical_tick_source": false,
+        "positive": true,
+        "tick_rescaling": "c^0",
+        "tick_value": 1.0
+      },
+      {
+        "candidate_tick": "mean_positive_drop_tick",
+        "formal_action_rescaling": "c^2",
+        "formal_action_value": 0.045071494812632,
+        "formal_hamiltonian_rescaling": "c^1",
+        "formal_hamiltonian_value": 1.036683368521294,
+        "hamiltonian_unit_theorem": false,
+        "independent_action_quantum_source": false,
+        "independent_physical_tick_source": false,
+        "positive": true,
+        "tick_rescaling": "c^1",
+        "tick_value": 0.043476625728954
+      },
+      {
+        "candidate_tick": "rms_drop_tick",
+        "formal_action_rescaling": "c^2",
+        "formal_action_value": 0.045071494812632,
+        "formal_hamiltonian_rescaling": "c^1",
+        "formal_hamiltonian_value": 0.497888764152672,
+        "hamiltonian_unit_theorem": false,
+        "independent_action_quantum_source": false,
+        "independent_physical_tick_source": false,
+        "positive": true,
+        "tick_rescaling": "c^1",
+        "tick_value": 0.09052522984594
+      },
+      {
+        "candidate_tick": "inverse_mean_slope_tick",
+        "formal_action_rescaling": "c^2",
+        "formal_action_value": 0.045071494812632,
+        "formal_hamiltonian_rescaling": "ratio=27",
+        "formal_hamiltonian_value": 0.001959556511013,
+        "hamiltonian_unit_theorem": false,
+        "independent_action_quantum_source": false,
+        "independent_physical_tick_source": false,
+        "positive": true,
+        "tick_rescaling": "c^-1",
+        "tick_value": 23.000865021915125
+      }
+    ]
+  },
+  "decision": {
+    "breakthrough": "Four explicit tick/action/Hamiltonian couplings were constructed for the P3023 dissipation chain.  They are positive internal calibrations, but the label tick is dimensionless, the drop-derived ticks depend on K-amplitude rescaling, the formal action rescales as c^2, and S/tau remains an internal ratio without an exported physical energy/frequency theorem.",
+    "negative_export_flags": {
+      "action_quantum_source_exported": false,
+      "bridge_closure_exported": false,
+      "hamiltonian_unit_theorem_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "physical_tick_theorem_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_time_order_object_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay internal tick/action/Hamiltonian ratios for the P3023 chain.  With chart-source and physical-unit atoms both bounded no-go, the next proof-grade move should emit a P3023-P3025 time-order no-new-live-frontier reconciliation, or pivot to a genuinely new strict typed object with an external physical unit source."
+  },
+  "finite_certificate": {
+    "accepted_as_physical_tick_hamiltonian_unit_theorem": false,
+    "hamiltonian_unit_rows": 0,
+    "positive_tick_candidates": 4,
+    "rescaling_independent_tick_rows": 1,
+    "tick_candidate_count": 4
+  },
+  "input_hashes": {
+    "P3024": "f238f80674aa0fe4131a808851366f35758b68ce42b808cc9162646b4be31b87"
+  },
+  "status": "P3025_DISSIPATION_PHYSICAL_TICK_HAMILTONIAN_UNIT_OBSTRUCTION_NO_CLOSURE"
+}

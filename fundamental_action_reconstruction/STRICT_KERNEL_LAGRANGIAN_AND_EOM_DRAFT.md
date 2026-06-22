@@ -3168,3 +3168,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3023/S1973 kernel-dissipation time-order `L_total` guard
 
 `P3023/S1973` adds no physical `L_total` term.  Its monotone `K_strict_gate` descent chain is a finite directed-order scaffold only; the chain is chart-dependent, not nontrivially `U(12)`-equivariant, has a cyclic reset, and lacks a physical tick/action/Hamiltonian unit theorem.
+
+## P3024/S1974 chart-selector `L_total` guard
+
+`P3024/S1974` adds no physical `L_total` term.  It proves a bounded chart-source obstruction for the P3023 dissipation chain: the directed-chain orbit under `U(12)` has no invariant representative, and all endpoint/steepest/full-chain anchors inherit the same unsourced label chart.
+
+## P3025/S1975 physical tick/Hamiltonian `L_total` guard
+
+`P3025/S1975` adds no physical `L_total` term.  The label, mean-drop, RMS-drop, and inverse-slope ticks for the P3023 chain are internal calibrations only; the formal Hamiltonian ratio `S/tau` has no strict physical unit, action quantum, or energy/frequency coupling theorem.
+
+## P3026/S1976 dissipation time-order no-new-live-frontier `L_total` guard
+
+`P3026/S1976` adds no physical `L_total` term.  It is a no-new-live-frontier certificate for the P3023-P3025 dissipation time-order lane: directed-order, chart/selector-source, and physical-unit atoms all remain unclosed as strict sources, and no external physical unit/source theorem is supplied.
+
+## P3027/S1977 external unit/source acceptance `L_total` guard
+
+`P3027/S1977` adds no physical `L_total` term.  It exports an acceptance gate for future external unit/source candidates, but the current candidate family has zero accepted rows; imported unit symbols are not strict nadsoliton-sourced Hamiltonian couplings.
+
+## P3028/S1978 information-to-classical transition `L_total` guard
+
+`P3028/S1978` adds no physical `L_total` term.  It is a foundation-obligation lattice for the nadsoliton-information to classical-readout transition; zero rows close because selector, external unit source, unit-bearing action/EOM/Hamiltonian, observable generator, and coarse-graining atoms are not all supplied.
+
+## P3029/S1979 matter spectral observable `L_total` guard
+
+`P3029/S1979` adds no physical `L_total` term.  The sorted DFT magnitude signature is a real observer-independent strict-kernel observable generator for the matter row, but without field-representation, mass/coupling, selector/sector, and unit-bearing action the signature remains pre-physical readout data.

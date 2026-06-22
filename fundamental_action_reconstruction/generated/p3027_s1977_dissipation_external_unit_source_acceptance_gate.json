@@ -1,0 +1,128 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_rows": [
+      {
+        "absolute_physical_tick_or_action_unit": false,
+        "accepted": false,
+        "blocker": "already reconciled; directed scaffold is chart-dependent and unitless",
+        "candidate": "P3023_monotone_dissipation_chain",
+        "explicit_hamiltonian_coupling": false,
+        "failed_obligations": [
+          "new_non_replay_typed_object",
+          "nonpremise_chart_or_orientation_source",
+          "absolute_physical_tick_or_action_unit",
+          "scale_orbit_breaking",
+          "explicit_hamiltonian_coupling"
+        ],
+        "new_non_replay_typed_object": false,
+        "nonpremise_chart_or_orientation_source": false,
+        "passed_obligations": [
+          "strict_nadsoliton_provenance"
+        ],
+        "scale_orbit_breaking": false,
+        "strict_nadsoliton_provenance": true
+      },
+      {
+        "absolute_physical_tick_or_action_unit": false,
+        "accepted": false,
+        "blocker": "four chart representatives and trivial stabilizer; anchors inherit labels",
+        "candidate": "P3024_chart_orbit_anchors",
+        "explicit_hamiltonian_coupling": false,
+        "failed_obligations": [
+          "new_non_replay_typed_object",
+          "nonpremise_chart_or_orientation_source",
+          "absolute_physical_tick_or_action_unit",
+          "scale_orbit_breaking",
+          "explicit_hamiltonian_coupling"
+        ],
+        "new_non_replay_typed_object": false,
+        "nonpremise_chart_or_orientation_source": false,
+        "passed_obligations": [
+          "strict_nadsoliton_provenance"
+        ],
+        "scale_orbit_breaking": false,
+        "strict_nadsoliton_provenance": true
+      },
+      {
+        "absolute_physical_tick_or_action_unit": false,
+        "accepted": false,
+        "blocker": "positive internal calibrations but no external physical unit or energy theorem",
+        "candidate": "P3025_internal_tick_H_equals_S_over_tau_ratios",
+        "explicit_hamiltonian_coupling": false,
+        "failed_obligations": [
+          "new_non_replay_typed_object",
+          "nonpremise_chart_or_orientation_source",
+          "absolute_physical_tick_or_action_unit",
+          "scale_orbit_breaking",
+          "explicit_hamiltonian_coupling"
+        ],
+        "new_non_replay_typed_object": false,
+        "nonpremise_chart_or_orientation_source": false,
+        "passed_obligations": [
+          "strict_nadsoliton_provenance"
+        ],
+        "scale_orbit_breaking": false,
+        "strict_nadsoliton_provenance": true
+      },
+      {
+        "absolute_physical_tick_or_action_unit": true,
+        "accepted": false,
+        "blocker": "an imported symbol can set units by fiat but lacks strict provenance and coupling theorem",
+        "candidate": "formal_imported_unit_symbol_U_ext",
+        "explicit_hamiltonian_coupling": false,
+        "failed_obligations": [
+          "strict_nadsoliton_provenance",
+          "nonpremise_chart_or_orientation_source",
+          "explicit_hamiltonian_coupling"
+        ],
+        "new_non_replay_typed_object": true,
+        "nonpremise_chart_or_orientation_source": false,
+        "passed_obligations": [
+          "new_non_replay_typed_object",
+          "absolute_physical_tick_or_action_unit",
+          "scale_orbit_breaking"
+        ],
+        "scale_orbit_breaking": true,
+        "strict_nadsoliton_provenance": false
+      }
+    ],
+    "object": "DissipationExternalUnitSource_AcceptanceGate",
+    "obligations": [
+      "new_non_replay_typed_object",
+      "strict_nadsoliton_provenance",
+      "nonpremise_chart_or_orientation_source",
+      "absolute_physical_tick_or_action_unit",
+      "scale_orbit_breaking",
+      "explicit_hamiltonian_coupling"
+    ]
+  },
+  "decision": {
+    "breakthrough": "A concrete acceptance gate for reopening the P3026 time-order lane was constructed.  Current internal candidates fail as replays, and the only formal external unit symbol breaks scale by fiat but fails strict nadsoliton provenance, orientation/chart source, and Hamiltonian coupling.  Therefore no accepted external physical unit/source theorem is supplied.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "external_unit_source_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "physical_tick_theorem_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_time_order_object_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Use the P3027 acceptance gate only when a concrete new formula/source is supplied.  Without that, preserve the P3026/P3027 no-accepted-source boundary and pivot to a different typed object outside the dissipation time-order and internal-unit lanes."
+  },
+  "finite_certificate": {
+    "accepted_candidate_count": 0,
+    "best_pass_count": 3,
+    "candidate_count": 4,
+    "imported_symbol_accepted": false,
+    "obligation_count": 6
+  },
+  "input_hashes": {
+    "P3026": "454c28ad7c7f06a911c230fe58f46a5c13363dab00e2c232f21423788471a5eb"
+  },
+  "status": "P3027_DISSIPATION_EXTERNAL_UNIT_SOURCE_ACCEPTANCE_GATE_NO_ACCEPTED_SOURCE"
+}
