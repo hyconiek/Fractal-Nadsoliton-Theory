@@ -3100,3 +3100,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3006/S1956 cube-map functional graph `L_total` guard
 
 `P3006/S1956` adds no cube-map term to `L_total`.  The finite cubing graph, fixed residues, moved residues, basins, fibers, and acceptance matrix do not supply strict field provenance, a named density theorem, unit-bearing measure, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3007/S1957 cube-map provenance `L_total` guard
+
+`P3007/S1957` adds no cube-map provenance term to `L_total`.  The CRT defect rows, fixed-unit rows, mod-3 identity witness, and mod-4 even-sector defect witness are finite algebraic provenance receivers only; they do not supply a strict field source, named density theorem, unit-bearing measure, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3008/S1958 cube-map localizer `L_total` guard
+
+`P3008/S1958` adds no cube-map basin/fixed-sector term to `L_total`.  Basin rows, fixed-sector rows, fiber signatures, unit-orbit signatures, and even-translation/unit-stability witnesses are finite localizer receivers only; they do not supply strict field provenance, a nonpremise physical-sector theorem, named density theorem, unit-bearing measure, variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3009/S1959 cube-map named-atom coupling `L_total` guard
+
+`P3009/S1959` adds no cube-map named-atom coupling term to `L_total`.  The 84 receiver/atom rows are finite bookkeeping only; they do not supply strict provenance, an accepted nonpremise localizer, atom-specific unit-bearing density, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian term, bridge closure, role transfer, or ToE.
+
+## P3010/S1960 cube-map action-installation `L_total` guard
+
+`P3010/S1960` adds no cube-map action term to `L_total`.  Directed-edge Dirichlet, fixed-attractor pinning, Hessian/Laplacian, and Euler receivers are finite formal variational data only; they do not supply a unit-bearing cube-map measure, strict field provenance, named density theorem, boundary/integration theorem, nonproxy variational chain, EOM/Hamiltonian source, bridge closure, role transfer, or ToE.
