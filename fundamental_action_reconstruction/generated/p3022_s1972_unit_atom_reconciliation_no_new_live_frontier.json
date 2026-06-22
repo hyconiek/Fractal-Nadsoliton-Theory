@@ -1,0 +1,89 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_unit_bearing_eom_hamiltonian": false,
+    "closure_lattice": {
+      "accepting_profile_count": 1,
+      "current_closed_atom_count": 0,
+      "current_profile_accepts": false,
+      "profile_count": 32
+    },
+    "live_frontier_candidates": [
+      {
+        "candidate": "new_strict_time_order_object_with_directed_successor_and_physical_unit_theorem",
+        "currently_supplied": false,
+        "reason": "no new object beyond the P3017-P3021 internal T_K normalizations is present in this reconciliation"
+      }
+    ],
+    "new_live_frontier_count": 0,
+    "object": "TimeObservableUnitAtomReconciliation_NoNewLiveFrontierCertificate",
+    "typed_observable": "T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)",
+    "unit_atom_rows": [
+      {
+        "atom": "formal_time_observable_action_eom",
+        "blocker": "T_K has nonzero residuals and no strict lambda/action/clock/observable/Hamiltonian units",
+        "constructed_object": "cyclic Laplacian formal EOM for T_K",
+        "finite_positive": "rank/nullity 11/1 formal EOM scaffold",
+        "source_closed": false
+      },
+      {
+        "atom": "lambda_action_unit_normalization",
+        "blocker": "lambda_* rescales as c^-2 under T_K -> c T_K and imports target action quantum",
+        "constructed_object": "lambda_* action-to-one normalization",
+        "finite_positive": "positive lambda_* normalizes formal action to one",
+        "source_closed": false
+      },
+      {
+        "atom": "observable_unit_readout",
+        "blocker": "all units rescale with T_K -> c T_K and no detector/readout unit theorem is exported",
+        "constructed_object": "RMS/L1/L∞/total-variation observable units",
+        "finite_positive": "four positive observer-independent internal units",
+        "source_closed": false
+      },
+      {
+        "atom": "clock_unit_theorem",
+        "blocker": "+1 tick is not U(12)-invariant; cycle/DFT periods have no physical frequency/Hamiltonian coupling",
+        "constructed_object": "label tick, Z12 cycle period, and dominant DFT period",
+        "finite_positive": "three dimensionless clock scaffolds",
+        "source_closed": false
+      },
+      {
+        "atom": "action_quantum_reference_cell_source",
+        "blocker": "action-per-cell candidates rescale as c^2 and no independent physical reference cell/action unit is exported",
+        "constructed_object": "edge/support/rank/DFT-mode reference-cell partitions",
+        "finite_positive": "four positive action-per-cell candidates",
+        "source_closed": false
+      }
+    ]
+  },
+  "decision": {
+    "breakthrough": "The P3017-P3021 unit sequence is now reconciled as a finite five-atom ledger.  Each atom has a real constructed object, but none closes as a strict source; the 32-profile closure lattice accepts only the all-atoms-closed profile, while the current profile closes zero atoms and supplies zero new strict time-order candidates.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Preserve the P3017-P3022 no-new-live-frontier certificate for the T_K unit lane.  The next proof-grade move must introduce a genuinely new strict typed object outside these internal unit normalizations, preferably a strict time-order object with both directed successor and physical unit theorem, before any EOM/Hamiltonian/ToE promotion is reconsidered."
+  },
+  "finite_certificate": {
+    "accepting_profile_count": 1,
+    "closed_source_atom_count": 0,
+    "closure_profile_count": 32,
+    "current_profile_accepts": false,
+    "new_live_frontier_count": 0,
+    "unit_atom_count": 5
+  },
+  "input_hashes": {
+    "P3017": "27e275ecad720d2cc4c69b9fa27074d7f5de10354dc3169ca812a7f7d5c94519",
+    "P3018": "ef11fc993d805f3c15b66047b305996e730230dd75da440e3367b017be361180",
+    "P3019": "a9c18ab02bb8baf8f032131870d41d1d5d316fe7af7aebbb8c1a497f3f204e3d",
+    "P3020": "b75321d6c68b8f54ad36570db5f28f1eb8f097b2db3d4e34e58a1bc17afcc2fb",
+    "P3021": "ff0eba9f68a1f10da64d7ee0519113c0c2fa0a58134594972fd5d3b58d83b3e3"
+  },
+  "status": "P3022_UNIT_ATOM_RECONCILIATION_NO_NEW_LIVE_FRONTIER_NO_CLOSURE"
+}

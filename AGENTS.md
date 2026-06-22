@@ -2251,3 +2251,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite obstruction is normalization-gauge dependence: `lambda_*` rescales as `c^-2` under `T_K -> c T_K`, and no independent strict action quantum/reference-cell, observable-unit, clock-unit, or Hamiltonian normalization theorem is exported.
 - Do not promote action-to-one normalization to strict lambda/action-unit source, unit-bearing EOM/Hamiltonian, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
 - The next honest move should attack exactly one independent unit atom: strict action quantum/reference-cell, strict observable-unit readout, or strict clock-unit theorem.
+
+## Current observable-unit readout source guardrail (P3019/S1969, 2026-06-22)
+
+- P3019 attacks one P3018 independent unit atom: strict observable-unit readout for the typed time observable `T_K`.
+- Four finite observer-independent candidate units are positive (RMS, mean absolute value, `L∞`, total variation), but all rescale with `T_K -> c T_K`; they are internal calibration choices, not an absolute strict physical readout unit.
+- Do not promote internal observable-unit normalizations to strict observable-unit source, unit-bearing EOM/Hamiltonian, time arrow, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should attack exactly one remaining independent unit atom: a strict clock-unit theorem, a strict action quantum/reference-cell source coupled to the typed action, or a genuinely new strict time-order object with its own unit theorem.
+
+## Current clock-unit theorem candidate guardrail (P3020/S1970, 2026-06-22)
+
+- P3020 attacks one P3019 remaining unit atom: a strict clock-unit theorem for the typed time observable `T_K`.
+- Three finite candidates are constructed (label tick `Δd=1`, full `Z12` cycle period `12`, and dominant DFT period), but they remain dimensionless scaffolds: the `+1` tick is not `U(12)`-invariant, the invariant cycle period does not choose a local directed tick, and the DFT period has no physical frequency/action/Hamiltonian coupling.
+- Do not promote label-tick, cycle-period, or DFT-period candidates to strict clock-unit theorem, time arrow, unit-bearing EOM/Hamiltonian, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should attack the remaining independent action quantum/reference-cell source coupled to the typed action, or introduce a genuinely new strict time-order object carrying both a directed successor and its own physical unit theorem.
+
+## Current action-quantum/reference-cell source guardrail (P3021/S1971, 2026-06-22)
+
+- P3021 attacks the remaining P3020 unit atom: a strict action quantum/reference-cell source coupled to the typed formal action for `T_K`.
+- Four finite reference-cell partitions are positive (all cyclic edges, nonzero-gradient support, cyclic Laplacian rank, nonzero DFT modes), but they partition a dimensionless formal action: under `T_K -> c T_K` every action-per-cell candidate rescales by `c^2`.
+- Do not promote internal action partitions to strict action quantum/reference-cell source, unit-bearing EOM/Hamiltonian, time arrow, `L_total`, observed-physics, selector, bridge/role-transfer, or ToE closure.
+- The next honest move should either construct a genuinely new strict time-order object carrying a directed successor plus a physical unit theorem, or perform a post-P3017-P3021 unit-atom reconciliation/no-new-live-frontier certificate before selecting a different typed object.
+
+## Current T_K unit-atom reconciliation guardrail (P3022/S1972, 2026-06-22)
+
+- P3022 reconciles the P3017-P3021 typed `T_K` unit lane as a five-atom no-new-live-frontier certificate.
+- Formal action/EOM, `lambda_*`, observable units, clock candidates, and action-quantum/reference-cell partitions all have finite scaffolds, but zero atoms close as strict unit sources; only the all-atoms-closed profile in the `32`-profile lattice would license unit-bearing EOM/Hamiltonian.
+- Do not replay internal `T_K` unit normalizations as unit-bearing EOM/Hamiltonian, time arrow, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- The next honest move must introduce a genuinely new strict typed object outside these internal unit normalizations, preferably a strict time-order object carrying both a directed successor and physical unit theorem, before any EOM/Hamiltonian/ToE promotion is reconsidered.
+
+## Current kernel-dissipation time-order candidate guardrail (P3023/S1973, 2026-06-22)
+
+- P3023 introduces a new typed time-order candidate outside internal `T_K` unit normalizations: the monotone `K_strict_gate` dissipation chain on labels `1..12`.
+- The finite positive is exact on the sampled chain (`11/11` strict descent edges), but the object remains blocked: `12->1` is a cyclic reset/ascent, the directed chain is not nontrivially `U(12)`-equivariant, and no strict chart/selector source or physical tick/action/Hamiltonian unit theorem is exported.
+- Do not promote kernel-dissipation label chains to time arrow, strict time-order with physical unit, unit-bearing EOM/Hamiltonian, observed-physics, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- A next move may attack exactly one missing theorem for this object (strict chart/selector source or independent physical tick theorem), or pivot to a different genuinely new typed object while preserving the P3017-P3023 no-closure boundary.

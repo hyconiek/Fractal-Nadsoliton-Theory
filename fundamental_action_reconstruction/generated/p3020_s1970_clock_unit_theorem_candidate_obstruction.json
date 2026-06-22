@@ -1,0 +1,139 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_clock_unit_theorem": false,
+    "clock_candidate_rows": [
+      {
+        "candidate_clock": "label_tick_delta_d_equals_1",
+        "exports_physical_clock_unit": false,
+        "finite_value": 1,
+        "positive": true,
+        "unit_action_images": [
+          {
+            "image_of_plus_one_tick": 1,
+            "preserves_plus_one_tick": true,
+            "unit": 1
+          },
+          {
+            "image_of_plus_one_tick": 5,
+            "preserves_plus_one_tick": false,
+            "unit": 5
+          },
+          {
+            "image_of_plus_one_tick": 7,
+            "preserves_plus_one_tick": false,
+            "unit": 7
+          },
+          {
+            "image_of_plus_one_tick": 11,
+            "preserves_plus_one_tick": false,
+            "unit": 11
+          }
+        ],
+        "unit_invariant_directed_tick": false
+      },
+      {
+        "candidate_clock": "full_z12_cycle_period",
+        "exports_physical_clock_unit": false,
+        "finite_value": 12,
+        "has_local_directed_tick": false,
+        "positive": true,
+        "unit_invariant_period": true
+      },
+      {
+        "candidate_clock": "dominant_dft_period_of_T_K",
+        "dominant_magnitude": 0.38547091353297,
+        "dominant_modes": [
+          1,
+          11
+        ],
+        "dominant_periods_in_label_steps": [
+          12
+        ],
+        "exports_physical_clock_unit": false,
+        "has_physical_frequency_unit": false,
+        "mode_orbits_under_units": {
+          "1": [
+            1,
+            5,
+            7,
+            11
+          ],
+          "11": [
+            1,
+            5,
+            7,
+            11
+          ]
+        },
+        "positive": true
+      }
+    ],
+    "object": "ClockUnitTheoremCandidate_UnitActionSpectralObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "uses the P3014/P3017/P3019 T_K(d) vector",
+        "obligation": "typed_time_observable_input",
+        "satisfied": true
+      },
+      {
+        "detail": "label tick, cycle period, and DFT period exist",
+        "obligation": "positive_finite_clock_candidates",
+        "satisfied": true
+      },
+      {
+        "detail": "U(12) sends +1 tick to 1,5,7,11; orientation is not preserved",
+        "obligation": "unit_invariant_directed_tick",
+        "satisfied": false
+      },
+      {
+        "detail": "the period 12 is invariant but does not choose a local directed tick",
+        "obligation": "local_successor_from_cycle_period",
+        "satisfied": false
+      },
+      {
+        "detail": "DFT period is in label steps only; no strict physical tick/frequency theorem is exported",
+        "obligation": "physical_frequency_or_clock_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no action quantum or Hamiltonian normalization converts the clock candidate into physical time",
+        "obligation": "action_hamiltonian_coupling",
+        "satisfied": false
+      }
+    ],
+    "typed_observable": "T_K(d)=K_strict_gate(d+1)-K_strict_gate(d)"
+  },
+  "decision": {
+    "breakthrough": "Three finite clock-unit candidates were constructed for the typed T_K observable: label tick, full Z12 period, and dominant DFT period.  The obstruction is that these are dimensionless scaffolds: the directed tick is not U(12)-invariant, the invariant cycle period does not choose a local tick, and the spectral period has no strict physical frequency/action/Hamiltonian coupling.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_clock_unit_theorem_exported": false,
+      "strict_lambda_action_unit_source_exported": false,
+      "strict_observable_unit_source_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay label-tick, cycle-period, or DFT-period clock-unit candidates.  The next proof-grade move should attack the remaining independent action quantum/reference-cell source coupled to the typed action, or introduce a genuinely new strict time-order object carrying both a directed successor and its own physical unit theorem."
+  },
+  "finite_certificate": {
+    "accepted_as_strict_clock_unit_theorem": false,
+    "clock_candidate_count": 3,
+    "dominant_dft_modes": [
+      1,
+      11
+    ],
+    "plus_one_tick_preserving_unit_count": 1,
+    "positive_clock_candidates": 3,
+    "unit_count": 4
+  },
+  "input_hashes": {
+    "P3019": "a9c18ab02bb8baf8f032131870d41d1d5d316fe7af7aebbb8c1a497f3f204e3d"
+  },
+  "status": "P3020_CLOCK_UNIT_THEOREM_CANDIDATE_OBSTRUCTION_NO_CLOSURE"
+}

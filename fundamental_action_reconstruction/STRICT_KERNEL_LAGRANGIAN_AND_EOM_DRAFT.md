@@ -3148,3 +3148,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3018/S1968 lambda/action-unit normalization `L_total` guard
 
 `P3018/S1968` adds no physical `L_total` term.  The positive `lambda_*` that sets the formal action of `T_K` to one is a normalization convention unless a strict action quantum/reference-cell and observable/clock/Hamiltonian unit theorem is supplied; it changes under observable rescaling and cannot by itself install a unit-bearing action or EOM.
+
+## P3019/S1969 observable-unit readout `L_total` guard
+
+`P3019/S1969` adds no physical `L_total` term.  Its RMS, mean-absolute, `L∞`, and total-variation units normalize the typed observable `T_K` only internally; because each unit rescales with `T_K -> c T_K`, no strict observable-unit theorem, clock/Hamiltonian coupling, action quantum, or unit-bearing EOM is installed.
+
+## P3020/S1970 clock-unit theorem `L_total` guard
+
+`P3020/S1970` adds no physical `L_total` term.  The label tick, full-cycle period, and dominant DFT period are dimensionless clock scaffolds only; without a unit-invariant directed tick plus strict physical frequency/action/Hamiltonian coupling, they cannot install a unit-bearing EOM or Hamiltonian.
+
+## P3021/S1971 action-quantum/reference-cell `L_total` guard
+
+`P3021/S1971` adds no physical `L_total` term.  Its edge, gradient-support, rank, and DFT-mode reference cells partition the already dimensionless formal `T_K` action; since their action-per-cell candidates rescale as `c^2` under observable rescaling and lack an independent physical action unit/Hamiltonian coupling, they cannot install unit-bearing EOM or Hamiltonian terms.
+
+## P3022/S1972 unit-atom reconciliation `L_total` guard
+
+`P3022/S1972` adds no physical `L_total` term.  It is a no-new-live-frontier certificate for the typed `T_K` unit lane: P3017-P3021 supply finite scaffolds and internal normalizations, but no strict unit source, Hamiltonian normalization, directed time-order theorem, selector source, bridge, or role-transfer theorem.
+
+## P3023/S1973 kernel-dissipation time-order `L_total` guard
+
+`P3023/S1973` adds no physical `L_total` term.  Its monotone `K_strict_gate` descent chain is a finite directed-order scaffold only; the chain is chart-dependent, not nontrivially `U(12)`-equivariant, has a cyclic reset, and lacks a physical tick/action/Hamiltonian unit theorem.

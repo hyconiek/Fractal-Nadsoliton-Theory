@@ -1,0 +1,315 @@
+{
+  "constructed_theoretical_objects": {
+    "accepted_as_strict_time_order_with_physical_unit": false,
+    "descent_rows": [
+      {
+        "K_source": 0.46998567264502,
+        "K_target": 0.192043551690103,
+        "cyclic_reset": false,
+        "delta_K": -0.277942120954917,
+        "edge": [
+          1,
+          2
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.192043551690103,
+        "K_target": 0.091428614277925,
+        "cyclic_reset": false,
+        "delta_K": -0.100614937412178,
+        "edge": [
+          2,
+          3
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.091428614277925,
+        "K_target": 0.04702916874565,
+        "cyclic_reset": false,
+        "delta_K": -0.044399445532275,
+        "edge": [
+          3,
+          4
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.04702916874565,
+        "K_target": 0.02413122336363,
+        "cyclic_reset": false,
+        "delta_K": -0.02289794538202,
+        "edge": [
+          4,
+          5
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.02413122336363,
+        "K_target": 0.011070817321442,
+        "cyclic_reset": false,
+        "delta_K": -0.013060406042188,
+        "edge": [
+          5,
+          6
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.011070817321442,
+        "K_target": 0.003152835507865,
+        "cyclic_reset": false,
+        "delta_K": -0.007917981813577,
+        "edge": [
+          6,
+          7
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": 0.003152835507865,
+        "K_target": -0.001795878405438,
+        "cyclic_reset": false,
+        "delta_K": -0.004948713913303,
+        "edge": [
+          7,
+          8
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": -0.001795878405438,
+        "K_target": -0.004895424887006,
+        "cyclic_reset": false,
+        "delta_K": -0.003099546481568,
+        "edge": [
+          8,
+          9
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": -0.004895424887006,
+        "K_target": -0.006774996025211,
+        "cyclic_reset": false,
+        "delta_K": -0.001879571138205,
+        "edge": [
+          9,
+          10
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": -0.006774996025211,
+        "K_target": -0.007814314930516,
+        "cyclic_reset": false,
+        "delta_K": -0.001039318905305,
+        "edge": [
+          10,
+          11
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": -0.007814314930516,
+        "K_target": -0.008257210373477,
+        "cyclic_reset": false,
+        "delta_K": -0.000442895442961,
+        "edge": [
+          11,
+          12
+        ],
+        "strict_descent": true
+      },
+      {
+        "K_source": -0.008257210373477,
+        "K_target": 0.46998567264502,
+        "cyclic_reset": true,
+        "delta_K": 0.478242883018497,
+        "edge": [
+          12,
+          1
+        ],
+        "strict_descent": false
+      }
+    ],
+    "directed_successor_candidate": "d -> d+1 on labels 1..12, stopping before cyclic reset",
+    "kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "object": "KernelDissipationTimeOrderCandidate_EquivarianceUnitObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "directed chain from monotone K_strict_gate dissipation, not a T_K unit normalization",
+        "obligation": "new_typed_time_order_object",
+        "satisfied": true
+      },
+      {
+        "detail": "K(d+1)<K(d) for d=1..11",
+        "obligation": "strict_descent_chain",
+        "satisfied": true
+      },
+      {
+        "detail": "the edge 12->1 is an ascent/reset",
+        "obligation": "no_cyclic_reset_obstruction",
+        "satisfied": false
+      },
+      {
+        "detail": "unit relabeling does not preserve the integer-label chain",
+        "obligation": "U12_equivariant_directed_successor",
+        "satisfied": false
+      },
+      {
+        "detail": "no strict theorem selects the integer label chart/order as physical time",
+        "obligation": "strict_chart_or_selector_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no physical tick/action/Hamiltonian unit is attached to d->d+1",
+        "obligation": "physical_unit_theorem",
+        "satisfied": false
+      }
+    ],
+    "sampled_kernel_values": {
+      "1": 0.46998567264502,
+      "10": -0.006774996025211,
+      "11": -0.007814314930516,
+      "12": -0.008257210373477,
+      "2": 0.192043551690103,
+      "3": 0.091428614277925,
+      "4": 0.04702916874565,
+      "5": 0.02413122336363,
+      "6": 0.011070817321442,
+      "7": 0.003152835507865,
+      "8": -0.001795878405438,
+      "9": -0.004895424887006
+    },
+    "unit_equivariance_rows": [
+      {
+        "chain_equivariant": true,
+        "preserved_chain_edges": 11,
+        "sample_images": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "total_chain_edges": 11,
+        "unit": 1
+      },
+      {
+        "chain_equivariant": false,
+        "preserved_chain_edges": 0,
+        "sample_images": [
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "total_chain_edges": 11,
+        "unit": 5
+      },
+      {
+        "chain_equivariant": false,
+        "preserved_chain_edges": 0,
+        "sample_images": [
+          [
+            7,
+            2
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "total_chain_edges": 11,
+        "unit": 7
+      },
+      {
+        "chain_equivariant": false,
+        "preserved_chain_edges": 0,
+        "sample_images": [
+          [
+            11,
+            10
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "total_chain_edges": 11,
+        "unit": 11
+      }
+    ]
+  },
+  "decision": {
+    "breakthrough": "A new typed time-order candidate was constructed from K_strict_gate dissipation: K(d) strictly decreases along the finite chain 1->2->...->12.  The obstruction is that this chain is chart-dependent, has a cyclic reset at 12->1, is not U(12)-equivariant, and has no strict physical unit theorem for the directed step.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "physical_unit_theorem_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "strict_time_order_object_exported": false,
+      "time_arrow_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not promote kernel-dissipation label chains to physical time.  A next proof-grade move may attack exactly one missing theorem for this object: a strict chart/selector source for the integer order or an independent physical tick theorem; otherwise pivot to a different genuinely new typed object while preserving the P3017-P3023 no-closure boundary."
+  },
+  "finite_certificate": {
+    "accepted_as_strict_time_order_with_physical_unit": false,
+    "chain_edge_count": 11,
+    "cyclic_reset_strict_descent": false,
+    "strict_descent_chain_edges": 11,
+    "unit_equivariant_rows": 1,
+    "unit_row_count": 4
+  },
+  "input_hashes": {
+    "P3022": "07a21f15ee1edd5fb8aab1bd9eabf9901ca0cf47a3c6822adf8d03bbd605dc73"
+  },
+  "status": "P3023_KERNEL_DISSIPATION_TIME_ORDER_CANDIDATE_OBSTRUCTION_NO_CLOSURE"
+}
