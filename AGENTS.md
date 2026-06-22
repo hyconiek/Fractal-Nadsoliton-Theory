@@ -2195,3 +2195,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Formal receiver positives are finite only: directed-edge Dirichlet receivers on nonloop edges `(2,8)`, `(6,0)`, `(10,4)`, fixed-attractor pinning, Hessian/Laplacian, and one Euler row per residue give exact toy variational data; incidence rank is `3`, Hessian rank/nullity is `3/9`, and the nine fixed attractors are formal boundary components.
 - The current route is bounded no-go: no unit-bearing cube-map measure, strict field provenance, boundary/integration theorem, named cube-map density theorem, or nonproxy continuum lift is exported.
 - Do not promote cube-map action receivers, Hessian ranks, source-coupling rows, provenance/localizer rows, symbolic `L_total` slots, selector replay, bridge maps, role transfer, nonproxy `L_total`, or ToE.  The cube-map-functional-graph lane is now bounded no-go on current artifacts; a next move must introduce a genuinely new strict typed object/theorem/provider outside this lane or preserve the P2929-P3010 no-strict-export certificate.
+
+## Current ToE strict-kernel/selector role-separation guardrail (P3011/S1961, 2026-06-22)
+
+- P3011 answers the conceptual ToE question by separating roles: `K_strict_gate` describes the strict working gate/correlation/compression profile of the nadsoliton over separation `d`; the selector is a separate symmetry-breaking rule/source choosing a directed phase/orientation representative from quotient/torsor ambiguity.
+- The finite `Aut(Z12)` witness on `{+1,-1}` has orientation-reversing unit `11` and zero Aut-invariant directed choices; projective carrier availability is not directed selector closure.
+- Do not promote this role-separation matrix to `QW-2191` discharge, strict selector closure, kernel-to-coefficient provenance, unit-bearing `L_total`, EOM/Hamiltonian, bridge closure, role transfer, observable generation, or ToE closure.
+- The next honest proof-grade move should attack exactly one missing ToE-closure atom, preferably strict kernel-to-coefficient provenance with units/sign/variational normalization or a genuinely new directed selector source, without replaying cube-map, selector, bridge, role-transfer, or `L_total` lanes.
+
+## Current strict-kernel phase-gradient selector-source obstruction guardrail (P3012/S1962, 2026-06-22)
+
+- P3012 introduces one new directed selector-source candidate after P3011: a strict-kernel phase/label-gradient arrow from sampled `K_strict_gate` values on `Z/12Z` unit labels.
+- The finite label score can prefer `+1` over `-1`, but this is not an `Aut(Z12)`-equivariant selector: unit relabeling changes scores, the pair `{+1,-1}` is not closed under all unit actions, and no strict chart/metric source theorem makes the label order canonical.
+- Do not promote strict-kernel phase-gradient arrows to nonpremise selector source, `QW-2191` discharge, directed torsor coupling, kernel-to-coefficient provenance, unit-bearing `L_total`, bridge closure, role transfer, observable generation, or ToE closure.
+- Do not replay kernel label-gradient selector attempts.  A next proof-grade move must supply a genuine strict chart/metric source theorem for a directed selector and rerun equivariance, or introduce a different new typed object outside cube-map, exhausted moment-provenance, selector replay, bridge, role-transfer, and `L_total` lanes.
+
+## Current observer-physics readout strict-kernel/selector guardrail (P3013/S1963, 2026-06-22)
+
+- P3013 translates the strict-kernel/selector distinction into our-physics rows: spacetime geometry, time, matter, energy, and observer readout.
+- In this perspective `K_strict_gate` is the pre-physical strict working law of nadsoliton correlations/compression; the selector would be a physical-sector/branch/orientation source choosing one directed readout sector from symmetric/projective carrier data.
+- The five-row readout matrix has zero accepted observed-physics exports because selector source, unit-bearing action, EOM/Hamiltonian, and observable-generator atoms remain missing.
+- Do not promote P3013 to observed spacetime, time arrow, matter sector, energy/Hamiltonian, observer-readout, `L_total`, bridge/role transfer, or ToE closure.  The next proof-grade move should attack exactly one readout atom, preferably an observer-independent observable generator for one row with explicit input/output types and a finite acceptance test.
