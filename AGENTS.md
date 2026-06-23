@@ -2510,3 +2510,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite sheaf records `13` positive clues across five stalks, but its minimal full gluing bundle requires all six typed rows: strict source law, nonzero signed value, nonpremise origin/localizer, unique polarity coupling, localization/pullback to field support, and unit-bearing variational chain rule.
 - Current artifacts satisfy only the signed-value clue; do not promote clue convergence, receiver geometry, graph motif/digest evidence, chiral signed formulae, or action/EOM target slots to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move must construct exactly one candidate gluing object satisfying the six-row bundle, or pivot to a new typed object while preserving the P3048-P3055 bounded no-export certificate.
+
+## Current selector gluing-object normal-form guardrail (P3056/S2006, 2026-06-23)
+
+- P3056 constructs the exact six-row normal form for the unknown selector gluing object required after P3055 and tests current clue-carriers by finite pushout.
+- All `63` nonempty carrier bundles are enumerated; none covers the absent `strict_source_law` and `unique_polarity_coupling` rows, none is a single all-row object, and no compatibility squares from source to selector/readout/action installation are exported.
+- Do not promote clue bundling, receiver/chiral signs, graph motifs, incidence readiness, or formal action slots to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must introduce one genuinely new source-law/polarity carrier and prove the compatibility squares, or pivot outside the selector clue lane while preserving the P3048-P3056 bounded no-export certificate.
+
+## Current source-polarity carrier extension SAT guardrail (P3057/S2007, 2026-06-23)
+
+- P3057 converts the post-P3056 recommendation into a finite theorem template for one carrier `G_selector`: six internal rows plus six compatibility squares.
+- The Boolean extension search shows the minimal accepted single-carrier extension has all `12` atoms: two primitive source/polarity rows, four row-import certificates, and six compatibility-square theorems; every one-atom continuation remains blocked.
+- Do not promote an isolated sign source, localizer, graph clue, receiver/chiral diagnostic, or variational slot to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must either supply an explicit `G_selector` formula/artifact realizing the 12-atom template, or attack one named atom while preserving the P3048-P3057 bounded no-export boundary.
