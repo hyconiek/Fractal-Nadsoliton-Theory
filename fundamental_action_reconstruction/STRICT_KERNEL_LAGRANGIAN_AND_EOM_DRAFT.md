@@ -3268,3 +3268,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3048/S1998 memory phase-area `L_total` guard
 
 `P3048/S1998` adds no physical `L_total` term.  The oriented `(K,M)` phase-area pseudoscalar is finite, nonzero, and inversion-odd, but it lacks strict phase-curve provenance, nonconventional orientation/coupling polarity, and unit-bearing variational/action/EOM installation.
+
+## P3049/S1999 memory phase-curve provenance `L_total` guard
+
+`P3049/S1999` adds no physical `L_total` term.  The `(K,M)` phase curve and P3048 area sign remain finite receiver diagnostics with sampled/derived provenance and orientation-polarity dependence; they are not unit-bearing variational/action/EOM inputs.
+
+## P3050/S2000 area-sign polarity `L_total` guard
+
+`P3050/S2000` adds no physical `L_total` term.  The `A_s` sign can be conditionally coupled to P3046 polarity in two opposite equivariant ways, and the neutral lag-6 row has no sign; no unique nonconventional orientation law or unit-bearing variational/action/EOM input is exported.
+
+## P3051/S2001 phase-curve winding-index `L_total` guard
+
+`P3051/S2001` adds no physical `L_total` term.  The winding `+1` of the sampled `(K,M)` receiver curve is a finite topological diagnostic, but no strict orientation source, P3046 polarity coupling, or unit-bearing variational/action/EOM input is exported.
+
+## P3052/S2002 winding stability-margin `L_total` guard
+
+`P3052/S2002` adds no physical `L_total` term.  Positive clearance and perturbation-stable winding strengthen the receiver diagnostic, but do not supply a strict orientation source, P3046 polarity coupling, or unit-bearing variational/action/EOM input.
