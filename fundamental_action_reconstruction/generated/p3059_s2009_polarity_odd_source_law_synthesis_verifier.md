@@ -4,7 +4,7 @@ Status: `P3059_POLARITY_ODD_SOURCE_LAW_SYNTHESIS_SIGN_PAIR_OBSTRUCTION_NO_EXPORT
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `3416`
+- content grep hits: `3472`
 - odd basis size: `3`
 - coefficient values per basis: `5`
 - total nonzero coefficient vectors: `124`
