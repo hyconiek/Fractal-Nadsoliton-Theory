@@ -1,0 +1,112 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_rows": [
+      {
+        "accepted_as_mass_coupling_provenance": false,
+        "candidate": "raw_sorted_magnitude_as_mass_proxy",
+        "dimensionless_or_unitless": false,
+        "failure": "raw magnitudes scale with arbitrary K amplitude and have no physical mass unit theorem",
+        "rescaling_exponent": 1.0
+      },
+      {
+        "accepted_as_mass_coupling_provenance": false,
+        "candidate": "normalized_spectral_shape_as_coupling_proxy",
+        "dimensionless_or_unitless": true,
+        "failure": "normalization removes amplitude but leaves a dimensionless shape without mass/coupling units or target map",
+        "rescaling_exponent": 0.0
+      },
+      {
+        "accepted_as_mass_coupling_provenance": false,
+        "candidate": "spectral_moment_mass_proxy",
+        "dimensionless_or_unitless": false,
+        "failure": "RMS magnitude scales with amplitude; bin moments are index statistics, not physical mass provenance",
+        "rescaling_exponent": 1.000000000001
+      },
+      {
+        "accepted_as_mass_coupling_provenance": false,
+        "candidate": "adjacent_magnitude_ratio_coupling_proxy",
+        "dimensionless_or_unitless": true,
+        "failure": "ratios are scale-invariant but dimensionless and inherit P3030's no field/sector localizer",
+        "rescaling_exponent": -1e-12
+      }
+    ],
+    "finite_certificate": {
+      "accepted_candidates": 0,
+      "candidate_rows": 4,
+      "dimensionless_unitless_rows": 2,
+      "mass_coupling_provenance_exported": false,
+      "proof_obligations": 6,
+      "raw_scale_covariant_rows": 2,
+      "satisfied_proof_obligations": 2
+    },
+    "object": "MatterSpectralMassCouplingProvenance_RescalingNormalizationObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only mass/coupling provenance for the P3029 spectral generator is tested",
+        "obligation": "attacks_single_P3029_missing_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "input is the DFT magnitude signature of sampled K_strict_gate",
+        "obligation": "uses_existing_P3029_generator",
+        "satisfied": true
+      },
+      {
+        "detail": "P3030 exports no field/sector localizer for this magnitude observable",
+        "obligation": "field_representation_localizer_available",
+        "satisfied": false
+      },
+      {
+        "detail": "raw candidates scale under K -> cK and normalized candidates are unitless",
+        "obligation": "absolute_mass_or_coupling_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem maps signature components to named matter masses/couplings",
+        "obligation": "target_independent_mass_coupling_map",
+        "satisfied": false
+      },
+      {
+        "detail": "no unit-bearing action/EOM/Hamiltonian insertion is exported",
+        "obligation": "unit_bearing_action_eom_insertion",
+        "satisfied": false
+      }
+    ],
+    "rescaling_test": {
+      "K_scale_factor": 3.0,
+      "normalized_signature_preserved": true,
+      "raw_signature_l1_scale_ratio": 3.0
+    },
+    "tested_missing_atom": "mass/coupling provenance theorem for P3029 matter spectral observable"
+  },
+  "decision": {
+    "bounded_no_go": "The P3029/P3030 spectral magnitude observable does not currently export mass/coupling provenance.  Raw spectral mass proxies scale with arbitrary kernel amplitude, normalized shape/ratio proxies are dimensionless, P3030 supplies no field/sector localizer, and no target-independent unit-bearing mass/coupling map or action/EOM insertion theorem is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "energy_hamiltonian_exported": false,
+      "field_representation_localizer_exported": false,
+      "ltotal_exported": false,
+      "mass_coupling_provenance_exported": false,
+      "matter_sector_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay spectral mass/coupling proxies for the P3029 magnitude generator.  The honest next move is a P3029-P3031 matter spectral lane reconciliation/no-new-live-frontier certificate, or a pivot to a different P3028 foundation atom with a genuinely new strict typed object."
+  },
+  "finite_certificate": {
+    "accepted_candidates": 0,
+    "candidate_rows": 4,
+    "dimensionless_unitless_rows": 2,
+    "mass_coupling_provenance_exported": false,
+    "proof_obligations": 6,
+    "raw_scale_covariant_rows": 2,
+    "satisfied_proof_obligations": 2
+  },
+  "input_hashes": {
+    "P3030": "6f790224791420c2cc884132949de55c57b7a83f256975da3507445d41a417e5"
+  },
+  "status": "P3031_MATTER_SPECTRAL_MASS_COUPLING_PROVENANCE_OBSTRUCTION_NO_MATTER_EXPORT"
+}

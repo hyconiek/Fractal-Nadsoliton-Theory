@@ -1,0 +1,112 @@
+{
+  "constructed_theoretical_objects": {
+    "finite_certificate": {
+      "action_rescaling_exponent": 2.0,
+      "proof_obligations": 8,
+      "receiver_rows": 3,
+      "residual_rescaling_exponent": 1.0,
+      "satisfied_proof_obligations": 4,
+      "unit_bearing_action_eom_hamiltonian_exported": false,
+      "unit_bearing_receiver_rows": 0
+    },
+    "formal_action": "S[x]=1/2 sum_i (x_{i+1}-x_i)^2 + m^2/2 sum_i x_i^2 on cyclic Z12, m^2=1",
+    "object": "Z12FiniteDifferenceActionEOMHamiltonian_UnitObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only unit-bearing action/EOM/Hamiltonian is tested",
+        "obligation": "attacks_single_P3028_foundation_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "cyclic Dirichlet+mass action on sampled K_strict_gate is constructed",
+        "obligation": "explicit_formal_action_receiver",
+        "satisfied": true
+      },
+      {
+        "detail": "Euler residual vector is computed on Z12",
+        "obligation": "finite_eom_residual_computable",
+        "satisfied": true
+      },
+      {
+        "detail": "formal action is invariant under cyclic relabeling",
+        "obligation": "cyclic_shift_covariant_receiver",
+        "satisfied": true
+      },
+      {
+        "detail": "no action quantum/reference-cell/source theorem labels the action value",
+        "obligation": "physical_action_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "K samples are not exported as a physical field with boundary/integration map",
+        "obligation": "field_provenance_and_boundary_map",
+        "satisfied": false
+      },
+      {
+        "detail": "action/N is a label-tick proxy, not a physical Hamiltonian/frequency theorem",
+        "obligation": "physical_clock_or_hamiltonian_unit",
+        "satisfied": false
+      },
+      {
+        "detail": "finite Z12 residual is not lifted to tensor-resolved continuum EOM",
+        "obligation": "nonproxy_continuum_eom_lift",
+        "satisfied": false
+      }
+    ],
+    "receiver_rows": [
+      {
+        "failure": "formal action scales as K^2 and has no physical action quantum/unit source",
+        "receiver": "cyclic_dirichlet_plus_mass_action",
+        "rescaling_exponent": 2.0,
+        "shift_covariant": true,
+        "unit_bearing_exported": false,
+        "value": 0.294057296264
+      },
+      {
+        "failure": "finite residual is computable but is not a nonproxy field EOM with units or boundary/continuum lift",
+        "l2_norm": 1.32027841983,
+        "receiver": "cyclic_euler_lagrange_residual",
+        "rescaling_exponent": 1.0,
+        "unit_bearing_exported": false
+      },
+      {
+        "failure": "division by the dimensionless label count N is not a physical clock/frequency theorem",
+        "receiver": "hamiltonian_proxy_action_per_label_tick",
+        "rescaling_exponent": 2.0,
+        "unit_bearing_exported": false,
+        "value": 0.024504774689
+      }
+    ],
+    "tested_foundation_atom": "unit_bearing_action_eom_hamiltonian"
+  },
+  "decision": {
+    "bounded_no_go": "A formal cyclic Dirichlet+mass action, Euler residual, and Hamiltonian proxy are computable for sampled K_strict_gate on Z12.  The action scales as K^2, the residual scales as K, and the Hamiltonian proxy is action per dimensionless label tick.  Without a physical action unit, field provenance/boundary map, clock unit, or nonproxy continuum EOM lift, this receiver does not export unit-bearing action/EOM/Hamiltonian or L_total.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "classical_transition_exported": false,
+      "hamiltonian_exported": false,
+      "ltotal_exported": false,
+      "matter_sector_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "selector_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay finite Z12 quadratic actions, action/N Hamiltonian proxies, or internal action normalizations as unit-bearing physics.  A next move must supply an actual action quantum/reference-cell theorem, field provenance plus boundary/integration map, or pivot to another single P3028 atom such as strict selector/branch source."
+  },
+  "finite_certificate": {
+    "action_rescaling_exponent": 2.0,
+    "proof_obligations": 8,
+    "receiver_rows": 3,
+    "residual_rescaling_exponent": 1.0,
+    "satisfied_proof_obligations": 4,
+    "unit_bearing_action_eom_hamiltonian_exported": false,
+    "unit_bearing_receiver_rows": 0
+  },
+  "input_hashes": {
+    "P3028": "d236c74229b3fc70604c4d989caae12a38c7503e96254905f5e2220faa61ac58",
+    "P3033": "e7d88e567b7e5bb1c1007d1b655260ebb9c203bcc94de8ed01707a518932861c"
+  },
+  "status": "P3034_Z12_FINITE_DIFFERENCE_ACTION_EOM_UNIT_OBSTRUCTION_NO_LTOTAL_EXPORT"
+}
