@@ -2524,3 +2524,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The Boolean extension search shows the minimal accepted single-carrier extension has all `12` atoms: two primitive source/polarity rows, four row-import certificates, and six compatibility-square theorems; every one-atom continuation remains blocked.
 - Do not promote an isolated sign source, localizer, graph clue, receiver/chiral diagnostic, or variational slot to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move must either supply an explicit `G_selector` formula/artifact realizing the 12-atom template, or attack one named atom while preserving the P3048-P3057 bounded no-export boundary.
+
+## Current unique-polarity coupling constraint guardrail (P3058/S2008, 2026-06-23)
+
+- P3058 attacks one named P3057 atom, `new_unique_polarity_coupling`, by constructing a two-torsor coupling normal form for `G_selector`.
+- The finite check enumerates all `31` nonempty intersections of five current compatibility constraints; every constraint is polarity-even, `0` intersections select a unique polarity, and both `plus_polarity` and `minus_polarity` remain accepted under all current constraints.
+- Do not promote polarity-even compatibility, chiral/readout sign agreement, field-pullback typing, or unit-positive variational slots to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move in this lane must construct an explicit strict polarity-odd source-law boundary condition coupled to `G_selector`; otherwise attack a different named P3057 atom while preserving the P3048-P3058 bounded no-export boundary.
+
+## Current polarity-odd source-law synthesis guardrail (P3059/S2009, 2026-06-23)
+
+- P3059 constructs the P3058-requested strict polarity-odd source-law boundary-condition synthesis module on `G_selector` from three current inversion-odd clues: boundary-cocycle orientation, chiral-bispectrum sign, and receiver-winding sign.
+- The bounded coefficient search over `[-2,2]^3` enumerates all `124` nonzero coefficient vectors; `106` are nonzero signed odd candidates, split into `53` positive and `53` negative polarities across `53` sign-pair orbits, with `0` accepted unique boundary conditions.
+- Do not promote another inversion-odd clue, signed receiver/chiral observable, coefficient convention, or sign-paired source law to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move in this lane must construct a strict non-premise global coefficient-sign normalization/source rule for this synthesis module, or prove impossibility in a larger named coefficient/source class; otherwise attack a different P3057 atom while preserving the P3048-P3059 bounded no-export boundary.
