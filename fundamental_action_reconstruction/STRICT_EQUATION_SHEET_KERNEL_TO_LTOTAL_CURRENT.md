@@ -3859,3 +3859,27 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3038/S1988 viscous-retarded-chiral selector candidate obstruction
 
 `P3038/S1988` executes the P3037 recommendation by constructing one integrated candidate operator: a memory/viscosity trace, c-retardation anisotropy split, inversion-odd chiral projection, and unit/readout coupling slot.  The finite score is genuinely branch-separating (`+` and `-` branches get nonzero opposite scores), so this is stronger than a hint sheaf alone.  The obstruction is also explicit: the chiral sign/localizer, retardation path anisotropy, physical unit/readout coupling, and nonproxy variational/readout theorem are still inserted candidate slots rather than exported strict sources.  No `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3039/S1989 chiral projector sign/localizer obstruction
+
+`P3039/S1989` attacks exactly one missing P3038 premise: a nonpremise phase-origin/sign-localizer theorem for `chi_i = sin(2*pi*i/12)`.  The finite torsor is real and inversion-odd: the `U(12)` inversion unit sends the base projector to its negative.  But translations move the phase origin, inversion exchanges polarity, and `K_strict_gate`/memory/absolute-`K` weighted receivers choose only chart-relative representatives.  Thus P3039 does not export a nonpremise chiral sign/localizer, does not promote P3038 to selector closure, and does not discharge `QW-2191`, observed physics, `L_total`, bridge/role transfer, or ToE closure.
+
+## P3040/S1990 retarded path-anisotropy source obstruction
+
+`P3040/S1990` attacks exactly one remaining P3038 premise: a sourced retarded path-anisotropy theorem for `Delta_i = cos(omega*(1+rho*M_i))-cos(omega*(1-rho*M_i))`.  The finite split is nonzero and the path-sign torsor is explicit (`sigma -> -sigma` sends `Delta` to `-Delta`), but the tested rows either insert `rho/sign`, tune a rho grid to the P3038 readout, or use chart-order gradient/curvature receivers.  No strict source exports positive `rho`, parallel/perpendicular retarded path sectors, or a chart-independent path localizer.  Thus P3040 does not promote P3038 to selector closure and does not discharge `QW-2191`, observed physics, `L_total`, bridge/role transfer, or ToE closure.
+
+## P3041/S1991 integrated-density unit/readout coupling obstruction
+
+`P3041/S1991` attacks the remaining direct P3038 premise: a physical unit/readout coupling theorem for `S_b = sum_i b * U_readout * Delta_i * chi_i`.  The integrated density has a nonzero finite readout and the unit-scale orbit is exact: multiplying `U` rescales the score.  But `U=1`, norm-to-one/score-to-one couplings, and imported P3036 unit candidates are internal gauges or blocked representatives.  No external physical unit, absolute scale quotient, readout-coupling theorem, nonproxy action/EOM installation, selector closure, `QW-2191` discharge, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3042/S1992 integrated selector-candidate reconciliation certificate
+
+`P3042/S1992` reconciles P3038-P3041 by constructing the five-atom selector-candidate source lattice: branch-separating integrated operator, nonpremise chiral sign/localizer, sourced retarded path anisotropy, physical unit/readout coupling, and nonproxy variational/readout installation.  The branch-separating operator atom is closed as a computational positive, but the four required source/installation atoms remain open.  The finite Boolean lattice has `32` profiles and only the all-five-atoms-closed counterfactual profile accepts selector export; the current profile does not.  No `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3043/S1993 post-selector-candidate new-source intake gate
+
+`P3043/S1993` follows the P3042 recommendation by building a broad state-map/new-source intake gate instead of replaying P3038 receiver classes.  It declares the exhausted receiver complement (sine/chiral phase receivers, rho/path tuning, unit normalization/imports, nonproxy placeholders, and hint coverage without source rows) and a seven-predicate acceptance matrix for any future source law.  Current hints and branch-separating receivers remain real, but no concrete new strict source law is supplied outside the exhausted classes, so no new live selector frontier, `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3044/S1994 memory-lag commutator source-candidate audit
+
+`P3044/S1994` supplies one concrete formula outside the exhausted P3038 receiver classes required by P3043: `C_s(i)=K_i*M_{i+s}-M_i*K_{i+s}` using sampled `K_strict_gate` and the memory trace.  The finite audit finds nonzero signed lag sums and exact `K<->M` exchange antisymmetry, so the object is a real computational hint.  It is not yet a strict source law: provenance, chart-independent lag/localizer, selector/readout coupling, unit-bearing action/EOM, `L_total`, `QW-2191` discharge, bridge/role transfer, and ToE closure remain unexported.

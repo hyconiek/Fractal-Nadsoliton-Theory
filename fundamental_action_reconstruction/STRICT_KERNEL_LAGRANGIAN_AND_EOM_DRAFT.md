@@ -3228,3 +3228,27 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3038/S1988 integrated selector candidate `L_total` guard
 
 `P3038/S1988` adds no physical `L_total` term.  Although the integrated density gives a finite branch-separating score, its chiral sign, path anisotropy, unit/readout coupling, and variational/readout insertion remain unsourced candidate slots.
+
+## P3039/S1989 chiral projector localizer `L_total` guard
+
+`P3039/S1989` adds no physical `L_total` term.  It verifies a finite inversion-odd chiral projector torsor, but fails to source its phase origin or polarity nonpremise; consequently the P3038 integrated density remains a candidate receiver rather than a unit-bearing variational term.
+
+## P3040/S1990 retarded path anisotropy `L_total` guard
+
+`P3040/S1990` adds no physical `L_total` term.  It verifies a nonzero finite retarded split and path-sign torsor, but no strict path geometry sources `rho`, parallel/perpendicular sectors, or chart-independent path localization; the P3038 density remains a candidate receiver.
+
+## P3041/S1991 integrated density unit/readout `L_total` guard
+
+`P3041/S1991` adds no physical `L_total` term.  It verifies exact unit-scale action on the P3038 readout score, but all tested couplings are dimensionless placeholders, internal normalizations, target gauges, or P3036-blocked unit imports rather than unit-bearing variational/action/EOM insertions.
+
+## P3042/S1992 integrated selector candidate reconciliation `L_total` guard
+
+`P3042/S1992` adds no physical `L_total` term.  Its lattice records that P3038's finite branch-separating score remains real, but chiral source, path source, unit/readout source, and nonproxy variational/readout installation are all still open.
+
+## P3043/S1993 new-source intake `L_total` guard
+
+`P3043/S1993` adds no physical `L_total` term.  It constructs an intake gate for future strict source laws, but current rows are either replay-gated receiver classes or an unsupplied new-source slot with no unit-bearing variational/action/EOM installation.
+
+## P3044/S1994 memory-lag commutator `L_total` guard
+
+`P3044/S1994` adds no physical `L_total` term.  The memory-lag commutator is finite and signed, but it lacks strict source provenance, chart-independent localization, explicit selector/readout coupling, and unit-bearing variational/action/EOM installation.

@@ -1,0 +1,366 @@
+{
+  "constructed_theoretical_objects": {
+    "finite_certificate": {
+      "accepted_nonpremise_localizer_rows": 0,
+      "finite_nonzero_rows": 4,
+      "inversion_odd_rows": 1,
+      "nonpremise_chiral_sign_localizer_exported": false,
+      "phase_polarity_projector_count": 12,
+      "proof_obligations": 8,
+      "receiver_rows": 4,
+      "satisfied_proof_obligations": 4,
+      "translation_phase_orbit_size": 12
+    },
+    "object": "ChiralProjectorSignLocalizer_ObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only the chi_i phase-origin/sign-localizer premise is audited",
+        "obligation": "exact_p3038_missing_premise_targeted",
+        "satisfied": true
+      },
+      {
+        "detail": "12 distinct phase/polarity projectors are enumerated",
+        "obligation": "finite_chiral_projector_torsor_constructed",
+        "satisfied": true
+      },
+      {
+        "detail": "unit 11 sends the base projector to its negative",
+        "obligation": "inversion_odd_sign_verified",
+        "satisfied": true
+      },
+      {
+        "detail": "K, memory/viscosity, and absolute-K weighted phase receivers are scanned",
+        "obligation": "current_hint_receivers_tested",
+        "satisfied": true
+      },
+      {
+        "detail": "translations generate the full phase orbit; any selected phase is chart-relative",
+        "obligation": "nonpremise_phase_origin_localizer",
+        "satisfied": false
+      },
+      {
+        "detail": "Aut inversion exchanges the two polarities and no strict sign law fixes one",
+        "obligation": "nonpremise_polarity_sign_source",
+        "satisfied": false
+      },
+      {
+        "detail": "candidate receivers are not invariant localizer theorems on the phase/polarity torsor",
+        "obligation": "aut_z12_compatible_selector_source",
+        "satisfied": false
+      },
+      {
+        "detail": "without sourced phase and polarity, P3038 remains a branch-separating candidate, not a strict selector",
+        "obligation": "coupling_back_to_p3038_as_source",
+        "satisfied": false
+      }
+    ],
+    "receiver_rows": [
+      {
+        "accepted_as_nonpremise_localizer": false,
+        "failure": "the formula defines a full phase/polarity torsor; no row fixes b or sigma",
+        "finite_nonzero": true,
+        "formula": "chi_{b,sigma}(i)=sigma*sin(2*pi*(i-b)/12)",
+        "inversion_odd": true,
+        "receiver": "bare_chiral_projector_torsor"
+      },
+      {
+        "accepted_as_nonpremise_localizer": false,
+        "failure": "phase scoring can choose representatives in the current chart, but translations move the phase labels and polarity remains externally chosen",
+        "max_abs_score": 0.698785659827009,
+        "phase_rows": [
+          {
+            "abs_score": 0.271472606278347,
+            "minus_score": -0.271472606278347,
+            "phase": 0,
+            "plus_score": 0.271472606278347
+          },
+          {
+            "abs_score": 0.089974524182148,
+            "minus_score": 0.089974524182148,
+            "phase": 1,
+            "plus_score": -0.089974524182148
+          },
+          {
+            "abs_score": 0.427313053548662,
+            "minus_score": 0.427313053548662,
+            "phase": 2,
+            "plus_score": -0.427313053548662
+          },
+          {
+            "abs_score": 0.650153395301535,
+            "minus_score": 0.650153395301535,
+            "phase": 3,
+            "plus_score": -0.650153395301535
+          },
+          {
+            "abs_score": 0.698785659827009,
+            "minus_score": 0.698785659827009,
+            "phase": 4,
+            "plus_score": -0.698785659827009
+          },
+          {
+            "abs_score": 0.560178871119387,
+            "minus_score": 0.560178871119387,
+            "phase": 5,
+            "plus_score": -0.560178871119387
+          },
+          {
+            "abs_score": 0.271472606278347,
+            "minus_score": 0.271472606278347,
+            "phase": 6,
+            "plus_score": -0.271472606278347
+          },
+          {
+            "abs_score": 0.089974524182147,
+            "minus_score": -0.089974524182147,
+            "phase": 7,
+            "plus_score": 0.089974524182147
+          },
+          {
+            "abs_score": 0.427313053548662,
+            "minus_score": -0.427313053548662,
+            "phase": 8,
+            "plus_score": 0.427313053548662
+          },
+          {
+            "abs_score": 0.650153395301535,
+            "minus_score": -0.650153395301535,
+            "phase": 9,
+            "plus_score": 0.650153395301535
+          },
+          {
+            "abs_score": 0.698785659827009,
+            "minus_score": -0.698785659827009,
+            "phase": 10,
+            "plus_score": 0.698785659827009
+          },
+          {
+            "abs_score": 0.560178871119387,
+            "minus_score": -0.560178871119387,
+            "phase": 11,
+            "plus_score": 0.560178871119387
+          }
+        ],
+        "receiver": "K_strict_gate_weighted_phase_receiver",
+        "unique_chart_winner": false,
+        "winner_phases": [
+          4,
+          10
+        ]
+      },
+      {
+        "accepted_as_nonpremise_localizer": false,
+        "failure": "phase scoring can choose representatives in the current chart, but translations move the phase labels and polarity remains externally chosen",
+        "max_abs_score": 0.454771470542132,
+        "phase_rows": [
+          {
+            "abs_score": 0.390616868049807,
+            "minus_score": -0.390616868049807,
+            "phase": 0,
+            "plus_score": 0.390616868049807
+          },
+          {
+            "abs_score": 0.221796791213562,
+            "minus_score": -0.221796791213562,
+            "phase": 1,
+            "plus_score": 0.221796791213562
+          },
+          {
+            "abs_score": 0.006453556712171,
+            "minus_score": 0.006453556712171,
+            "phase": 2,
+            "plus_score": -0.006453556712171
+          },
+          {
+            "abs_score": 0.232974679328569,
+            "minus_score": 0.232974679328569,
+            "phase": 3,
+            "plus_score": -0.232974679328569
+          },
+          {
+            "abs_score": 0.397070424761978,
+            "minus_score": 0.397070424761978,
+            "phase": 4,
+            "plus_score": -0.397070424761978
+          },
+          {
+            "abs_score": 0.454771470542132,
+            "minus_score": 0.454771470542132,
+            "phase": 5,
+            "plus_score": -0.454771470542132
+          },
+          {
+            "abs_score": 0.390616868049807,
+            "minus_score": 0.390616868049807,
+            "phase": 6,
+            "plus_score": -0.390616868049807
+          },
+          {
+            "abs_score": 0.221796791213562,
+            "minus_score": 0.221796791213562,
+            "phase": 7,
+            "plus_score": -0.221796791213562
+          },
+          {
+            "abs_score": 0.006453556712171,
+            "minus_score": -0.006453556712171,
+            "phase": 8,
+            "plus_score": 0.006453556712171
+          },
+          {
+            "abs_score": 0.232974679328569,
+            "minus_score": -0.232974679328569,
+            "phase": 9,
+            "plus_score": 0.232974679328569
+          },
+          {
+            "abs_score": 0.397070424761978,
+            "minus_score": -0.397070424761978,
+            "phase": 10,
+            "plus_score": 0.397070424761978
+          },
+          {
+            "abs_score": 0.454771470542132,
+            "minus_score": -0.454771470542132,
+            "phase": 11,
+            "plus_score": 0.454771470542132
+          }
+        ],
+        "receiver": "memory_viscosity_weighted_phase_receiver",
+        "unique_chart_winner": false,
+        "winner_phases": [
+          5,
+          11
+        ]
+      },
+      {
+        "accepted_as_nonpremise_localizer": false,
+        "failure": "phase scoring can choose representatives in the current chart, but translations move the phase labels and polarity remains externally chosen",
+        "max_abs_score": 0.688196992735468,
+        "phase_rows": [
+          {
+            "abs_score": 0.225855610334082,
+            "minus_score": -0.225855610334082,
+            "phase": 0,
+            "plus_score": 0.225855610334082
+          },
+          {
+            "abs_score": 0.136535124162575,
+            "minus_score": 0.136535124162575,
+            "phase": 1,
+            "plus_score": -0.136535124162575
+          },
+          {
+            "abs_score": 0.462341382401386,
+            "minus_score": 0.462341382401386,
+            "phase": 2,
+            "plus_score": -0.462341382401386
+          },
+          {
+            "abs_score": 0.664263640598257,
+            "minus_score": 0.664263640598257,
+            "phase": 3,
+            "plus_score": -0.664263640598257
+          },
+          {
+            "abs_score": 0.688196992735468,
+            "minus_score": 0.688196992735468,
+            "phase": 4,
+            "plus_score": -0.688196992735468
+          },
+          {
+            "abs_score": 0.527728516435683,
+            "minus_score": 0.527728516435683,
+            "phase": 5,
+            "plus_score": -0.527728516435683
+          },
+          {
+            "abs_score": 0.225855610334082,
+            "minus_score": 0.225855610334082,
+            "phase": 6,
+            "plus_score": -0.225855610334082
+          },
+          {
+            "abs_score": 0.136535124162574,
+            "minus_score": -0.136535124162574,
+            "phase": 7,
+            "plus_score": 0.136535124162574
+          },
+          {
+            "abs_score": 0.462341382401386,
+            "minus_score": -0.462341382401386,
+            "phase": 8,
+            "plus_score": 0.462341382401386
+          },
+          {
+            "abs_score": 0.664263640598257,
+            "minus_score": -0.664263640598257,
+            "phase": 9,
+            "plus_score": 0.664263640598257
+          },
+          {
+            "abs_score": 0.688196992735468,
+            "minus_score": -0.688196992735468,
+            "phase": 10,
+            "plus_score": 0.688196992735468
+          },
+          {
+            "abs_score": 0.527728516435683,
+            "minus_score": -0.527728516435683,
+            "phase": 11,
+            "plus_score": 0.527728516435683
+          }
+        ],
+        "receiver": "absolute_kernel_weighted_phase_receiver",
+        "unique_chart_winner": false,
+        "winner_phases": [
+          4,
+          10
+        ]
+      }
+    ],
+    "target_formula": "chi_i = sin(2*pi*i/12) from P3038",
+    "torsor": {
+      "aut_units": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "inversion_unit_11_flips_polarity": true,
+      "phase_polarity_projector_count": 12,
+      "translation_phase_orbit_size": 12
+    }
+  },
+  "decision": {
+    "bounded_no_go": "The P3038 chiral projector has a real finite inversion-odd torsor, and unit 11 flips its sign.  However translations move the phase origin, inversion exchanges polarity, and K/memory/absolute-K weighted receivers choose only chart-relative representatives.  Therefore no nonpremise chiral sign/localizer theorem is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_exported": false,
+      "nonpremise_chiral_sign_localizer_exported": false,
+      "observed_physics_exported": false,
+      "p3038_promoted_to_selector_source": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay sine/chiral phase receivers as a selector source.  The next proof-grade move should attack one different P3038 missing source premise: either a sourced retardation path-anisotropy theorem for the c-retarded split, or a physical unit/readout coupling theorem for the integrated density.  Continue only with a genuinely new strict source law; otherwise preserve P3038-P3039 as a branch-separating-but-unsourced certificate."
+  },
+  "finite_certificate": {
+    "accepted_nonpremise_localizer_rows": 0,
+    "finite_nonzero_rows": 4,
+    "inversion_odd_rows": 1,
+    "nonpremise_chiral_sign_localizer_exported": false,
+    "phase_polarity_projector_count": 12,
+    "proof_obligations": 8,
+    "receiver_rows": 4,
+    "satisfied_proof_obligations": 4,
+    "translation_phase_orbit_size": 12
+  },
+  "input_hashes": {
+    "P3038": "ddc9dcacbafc23169bda22404e118bdd4577bf7f7a386767e79f84aa68949e66"
+  },
+  "status": "P3039_CHIRAL_PROJECTOR_SIGN_LOCALIZER_OBSTRUCTION_NO_SOURCE_EXPORT"
+}
