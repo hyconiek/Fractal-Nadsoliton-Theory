@@ -2496,3 +2496,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite C2 sign cube over area sign, winding sign, and robust-winding sign exhausts all 256 Boolean selector laws: invariant laws cannot distinguish the inversion pair, while odd/equivariant laws remain paired by unselected output polarity.
 - Do not recombine P3048-P3052 receiver signs, robust winding, positive clearance, or Boolean odd laws into `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move requires a genuinely new non-receiver strict signed source/coupling law selecting one odd polarity, or a pivot outside the phase-geometry selector lane while preserving the P3048-P3053 bounded no-export certificate.
+
+## Current non-receiver signed-source coupling intake guardrail (P3054/S2004, 2026-06-23)
+
+- P3054 constructs the post-P3053 intake matrix for the only admissible phase-geometry continuation: a genuinely non-receiver strict signed source/coupling law selecting one odd polarity.
+- The finite pushout separates source sign `sigma`, the eight P3053 receiver odd-law polarity pairs, and P3046/readout output polarity; all `32` pushout rows remain unselected by current artifacts.
+- Do not promote named sign torsors, finite signed observables, receiver diagnostics, or abstract odd-source representations to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure without an exported source law, nonzero signed value, and unique coupling-polarity theorem.
+- A next move must provide one explicit non-receiver formula/artifact satisfying that full package, or pivot outside the phase-geometry selector lane while preserving the P3048-P3054 bounded no-export certificate.
+
+## Current mechanism-agnostic selector clue sheaf guardrail (P3055/S2005, 2026-06-23)
+
+- P3055 treats the selector as potentially non-human-schema by building a content-first clue sheaf rather than forcing receiver, sign-torsor, chiral, graph, or Lagrangian clues into closure.
+- The finite sheaf records `13` positive clues across five stalks, but its minimal full gluing bundle requires all six typed rows: strict source law, nonzero signed value, nonpremise origin/localizer, unique polarity coupling, localization/pullback to field support, and unit-bearing variational chain rule.
+- Current artifacts satisfy only the signed-value clue; do not promote clue convergence, receiver geometry, graph motif/digest evidence, chiral signed formulae, or action/EOM target slots to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must construct exactly one candidate gluing object satisfying the six-row bundle, or pivot to a new typed object while preserving the P3048-P3055 bounded no-export certificate.

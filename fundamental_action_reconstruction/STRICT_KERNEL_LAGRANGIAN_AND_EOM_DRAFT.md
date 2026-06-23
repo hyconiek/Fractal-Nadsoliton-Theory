@@ -3288,3 +3288,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3053/S2003 receiver diagnostic sign-torsor `L_total` guard
 
 `P3053/S2003` adds no physical `L_total` term.  Exhausting Boolean laws over area/winding/robust-winding receiver signs shows that invariant laws are orientation-blind and odd laws require an unselected output polarity, so no unit-bearing variational/action/EOM source is installed.
+
+## P3054/S2004 non-receiver signed-source coupling `L_total` guard
+
+`P3054/S2004` adds no physical `L_total` term.  Its finite coupling pushout is an acceptance/no-export matrix: no non-receiver source row installs a unit-bearing signed variational/action/EOM coupling or selects a unique receiver/P3046 polarity.
+
+## P3055/S2005 mechanism-agnostic selector clue sheaf `L_total` guard
+
+`P3055/S2005` adds no physical `L_total` term.  The clue sheaf identifies real finite positives, including graph/motif and receiver/chiral clues, but no single gluing object supplies localization/pullback, unit-bearing coupling, and a variational chain rule.
