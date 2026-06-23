@@ -3296,3 +3296,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3055/S2005 mechanism-agnostic selector clue sheaf `L_total` guard
 
 `P3055/S2005` adds no physical `L_total` term.  The clue sheaf identifies real finite positives, including graph/motif and receiver/chiral clues, but no single gluing object supplies localization/pullback, unit-bearing coupling, and a variational chain rule.
+
+## P3056/S2006 selector gluing-object normal-form `L_total` guard
+
+`P3056/S2006` adds no physical `L_total` term.  It is a normal-form acceptance verifier: current carriers do not provide a single signed source with field pullback, unit-bearing coupling, and a nonproxy variational chain rule.
+
+## P3057/S2007 source-polarity carrier extension `L_total` guard
+
+`P3057/S2007` adds no physical `L_total` term.  It computes the 12-atom theorem template that a future `G_selector` would need, but no actual unit-bearing signed source/action/EOM carrier or variational chain rule is exported.

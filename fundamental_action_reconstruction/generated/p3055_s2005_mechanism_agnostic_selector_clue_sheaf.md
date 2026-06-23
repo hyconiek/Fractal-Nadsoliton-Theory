@@ -4,7 +4,7 @@ Status: `P3055_MECHANISM_AGNOSTIC_SELECTOR_CLUE_SHEAF_BOUNDARY_NO_EXPORT`
 
 ## Finite certificate
 - content grep lanes: `5`
-- content grep hits: `21334`
+- content grep hits: `21523`
 - clue stalks: `5`
 - positive clues: `13`
 - obligation atoms: `6`
