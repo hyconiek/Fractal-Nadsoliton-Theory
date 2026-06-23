@@ -1,0 +1,210 @@
+{
+  "constructed_theoretical_objects": {
+    "coarse_graining_operator": "aligned block average C_b: R^12 -> R^(12/b) for b in {1,2,3,4,6,12}",
+    "coarse_rows": [
+      {
+        "block_size": 1,
+        "coarse_cells": 12,
+        "mean": 0.067442004911,
+        "variation": 0.478242883018
+      },
+      {
+        "block_size": 2,
+        "coarse_cells": 6,
+        "mean": 0.067442004911,
+        "variation": 0.33905037482
+      },
+      {
+        "block_size": 3,
+        "coarse_cells": 4,
+        "mean": 0.067442004911,
+        "variation": 0.258768119981
+      },
+      {
+        "block_size": 4,
+        "coarse_cells": 3,
+        "mean": 0.067442004911,
+        "variation": 0.207057238394
+      },
+      {
+        "block_size": 6,
+        "coarse_cells": 2,
+        "mean": 0.067442004911,
+        "variation": 0.143679006193
+      },
+      {
+        "block_size": 12,
+        "coarse_cells": 1,
+        "mean": 0.067442004911,
+        "variation": 0.0
+      }
+    ],
+    "composition_rows": [
+      {
+        "composition_matches_direct": true,
+        "first_block": 2,
+        "l1_delta": 0.0,
+        "product_block": 4,
+        "second_block": 2
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 2,
+        "l1_delta": 0.0,
+        "product_block": 6,
+        "second_block": 3
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 2,
+        "l1_delta": 0.0,
+        "product_block": 12,
+        "second_block": 6
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 3,
+        "l1_delta": 0.0,
+        "product_block": 6,
+        "second_block": 2
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 3,
+        "l1_delta": 0.0,
+        "product_block": 12,
+        "second_block": 4
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 4,
+        "l1_delta": 0.0,
+        "product_block": 12,
+        "second_block": 3
+      },
+      {
+        "composition_matches_direct": true,
+        "first_block": 6,
+        "l1_delta": 0.0,
+        "product_block": 12,
+        "second_block": 2
+      }
+    ],
+    "finite_certificate": {
+      "block_scales": 6,
+      "classical_coarse_graining_limit_exported": false,
+      "composition_rows": 7,
+      "composition_rows_passed": 7,
+      "proof_obligations": 7,
+      "satisfied_proof_obligations": 3,
+      "translation_sensitive_nontrivial_scales": 4
+    },
+    "object": "Z12BlockCoarseGraining_ClassicalLimitObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only classical coarse-graining limit is tested",
+        "obligation": "attacks_single_P3028_foundation_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "aligned block averaging on Z12 divisors is constructed",
+        "obligation": "explicit_coarse_graining_operator",
+        "satisfied": true
+      },
+      {
+        "detail": "aligned block averages compose exactly where product blocks divide 12",
+        "obligation": "finite_rg_composition_law",
+        "satisfied": true
+      },
+      {
+        "detail": "nontrivial block averages depend on the chosen origin/chart",
+        "obligation": "chart_translation_independent_limit",
+        "satisfied": false
+      },
+      {
+        "detail": "Z12 supplies only six divisor block scales, not a continuum/refinement limit",
+        "obligation": "infinite_refinement_or_continuum_parameter",
+        "satisfied": false
+      },
+      {
+        "detail": "no external physical length/unit theorem labels the block scale",
+        "obligation": "physical_length_unit_for_scale",
+        "satisfied": false
+      },
+      {
+        "detail": "coarse cells remain pre-physical internal averages, not classical observables",
+        "obligation": "observer_independent_classical_readout",
+        "satisfied": false
+      }
+    ],
+    "tested_foundation_atom": "classical_coarse_graining_limit",
+    "translation_sensitivity_rows": [
+      {
+        "block_size": 1,
+        "coarse_cells": 12,
+        "max_translation_l1_delta": 1.724148074315,
+        "translation_invariant": false
+      },
+      {
+        "block_size": 2,
+        "coarse_cells": 6,
+        "max_translation_l1_delta": 0.862074037158,
+        "translation_invariant": false
+      },
+      {
+        "block_size": 3,
+        "coarse_cells": 4,
+        "max_translation_l1_delta": 0.574716024772,
+        "translation_invariant": false
+      },
+      {
+        "block_size": 4,
+        "coarse_cells": 3,
+        "max_translation_l1_delta": 0.414114476787,
+        "translation_invariant": false
+      },
+      {
+        "block_size": 6,
+        "coarse_cells": 2,
+        "max_translation_l1_delta": 0.287358012386,
+        "translation_invariant": false
+      },
+      {
+        "block_size": 12,
+        "coarse_cells": 1,
+        "max_translation_l1_delta": 0.0,
+        "translation_invariant": true
+      }
+    ]
+  },
+  "decision": {
+    "bounded_no_go": "A concrete Z12 block-averaging coarse-graining operator exists and has exact finite composition rows, but it does not export a classical coarse-graining limit: nontrivial block averages are chart/translation sensitive, the scale tower is finite, no physical length/unit labels the scale, and the readout remains an internal average rather than an observer-independent classical observable.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "classical_coarse_graining_limit_exported": false,
+      "classical_transition_exported": false,
+      "ltotal_exported": false,
+      "matter_sector_exported": false,
+      "observed_spacetime_exported": false,
+      "observer_readout_exported": false,
+      "role_transfer_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_source_exported": false
+    },
+    "next_honest_step": "Do not replay aligned Z12 block averages as a classical limit.  The next proof-grade move must supply a genuinely new chart-independent refinement/continuum object with a physical length unit, or pivot to another single P3028 foundation atom such as strict selector/branch source or unit-bearing action/EOM/Hamiltonian."
+  },
+  "finite_certificate": {
+    "block_scales": 6,
+    "classical_coarse_graining_limit_exported": false,
+    "composition_rows": 7,
+    "composition_rows_passed": 7,
+    "proof_obligations": 7,
+    "satisfied_proof_obligations": 3,
+    "translation_sensitive_nontrivial_scales": 4
+  },
+  "input_hashes": {
+    "P3028": "d236c74229b3fc70604c4d989caae12a38c7503e96254905f5e2220faa61ac58",
+    "P3032": "4581b88c5a1dbde00c041978de367c5353f1f58fb7f77c200a36f5ccc802644d"
+  },
+  "status": "P3033_Z12_BLOCK_COARSE_GRAINING_CLASSICAL_LIMIT_OBSTRUCTION_NO_CLASSICAL_EXPORT"
+}

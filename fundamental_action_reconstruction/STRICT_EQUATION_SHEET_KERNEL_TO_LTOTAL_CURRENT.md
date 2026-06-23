@@ -3823,3 +3823,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3029/S1979 matter spectral observable generator obstruction
 
 `P3029/S1979` attacks exactly one P3028 foundation atom: an observer-independent observable generator for the `matter_fields` row.  It constructs an explicit typed generator from sampled `K_strict_gate` on `Z12` to the sorted DFT magnitude signature in `R^12`.  The finite positive is real: the formula is observer-independent and all `4/4` `U(12)` relabeling rows preserve the sorted spectral signature.  The bounded obstruction is that spectral magnitudes alone do not export a field representation/localizer, mass/coupling provenance, or selector/sector source.  No matter-sector export, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3030/S1980 matter spectral field-localizer obstruction
+
+`P3030/S1980` attacks exactly one P3029 missing matter atom: the field-representation/localizer theorem for the spectral magnitude observable.  It tests translation/reflection phase-retrieval degeneracy for sampled `K_strict_gate` on `Z12` and three candidate localizers: zero-phase inverse DFT, autocorrelation peak, and largest spectral bin.  All `24/24` dihedral orbit rows preserve the sorted magnitude signature, and `0/3` candidate localizers export a strict matter-field representation.  Therefore no matter-sector export, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3031/S1981 matter spectral mass/coupling provenance obstruction
+
+`P3031/S1981` attacks exactly one remaining P3029/P3030 matter atom: mass/coupling provenance for the spectral magnitude observable.  It tests raw sorted magnitudes, normalized spectral shape, spectral moments, and adjacent magnitude ratios under `K -> 3K`.  Raw mass proxies scale with arbitrary kernel amplitude, normalized shape/ratio proxies are dimensionless, P3030 still exports no field/sector localizer, and `0/4` candidate rows export a target-independent unit-bearing mass/coupling theorem.  Therefore no matter-sector export, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3032/S1982 matter spectral lane reconciliation
+
+`P3032/S1982` reconciles the P3029-P3031 matter spectral lane instead of replaying magnitude localizers or mass/coupling proxies.  The finite atom ledger has four atoms: observer-independent observable generator, field-representation/localizer, mass/coupling provenance, and selector/sector/unit-action insertion.  Only the first atom is closed; the `16`-profile closure lattice licenses matter-sector export only in the all-four-atoms-closed profile, while the current profile has `1/4` closed atoms and `0` newly supplied live-frontier inputs.  No matter sector, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3033/S1983 Z12 block coarse-graining classical-limit obstruction
+
+`P3033/S1983` pivots from the closed P3029-P3032 matter spectral lane to exactly one P3028 foundation atom: classical coarse-graining limit.  It constructs aligned block-averaging operators on sampled `K_strict_gate` over `Z12` for block sizes `{1,2,3,4,6,12}`.  The finite positive is real: aligned composition rows pass where product blocks divide `12`.  The bounded obstruction is that nontrivial block averages are chart/translation sensitive, the scale tower is finite rather than a continuum/refinement limit, no physical length/unit theorem labels scale, and no observer-independent classical readout is exported.  No classical transition, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3034/S1984 Z12 finite-difference action/EOM unit obstruction
+
+`P3034/S1984` attacks exactly one P3028 foundation atom: unit-bearing action/EOM/Hamiltonian.  It constructs a formal cyclic Dirichlet+mass action on sampled `K_strict_gate` over `Z12`, computes the Euler residual, and forms an action-per-label Hamiltonian proxy.  These receivers are finite and computable, but `0/3` receiver rows are unit-bearing: the action scales as `K^2`, the residual scales as `K`, the Hamiltonian proxy divides by a dimensionless label count, and no physical action unit, field provenance/boundary map, clock unit, or nonproxy continuum EOM lift is exported.  No `L_total`, observed physics, bridge/role transfer, or ToE closure follows.

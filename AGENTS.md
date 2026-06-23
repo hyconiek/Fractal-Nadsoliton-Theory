@@ -2328,3 +2328,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The sorted DFT magnitude signature of sampled `K_strict_gate` has explicit domain/codomain and is invariant under all `4/4` `U(12)` relabeling rows.
 - Do not promote spectral magnitude signatures to matter sector, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure without a field-representation/localizer plus mass/coupling provenance theorem.
 - The next honest move may attack exactly one missing matter atom for this generator, preferably field-representation/localizer or mass/coupling provenance.
+
+## Current matter spectral field-localizer guardrail (P3030/S1980, 2026-06-22)
+
+- P3030 attacks exactly one P3029 missing matter atom: field-representation/localizer for the sorted DFT magnitude observable.
+- The finite phase-retrieval/orbit test finds all `24/24` translation/reflection rows preserve the sorted magnitude signature and `0/3` tested localizer anchors export a strict field representation.
+- Do not promote zero-phase inverse DFT, autocorrelation peaks, largest spectral bins, or magnitude-orbit anchors to matter sector, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- The next honest move may attack the remaining mass/coupling provenance atom for the P3029 generator, or pivot to a different P3028 foundation atom with a genuinely new strict typed object.
+
+## Current matter spectral mass/coupling provenance guardrail (P3031/S1981, 2026-06-22)
+
+- P3031 attacks exactly one remaining P3029/P3030 matter atom: mass/coupling provenance for the spectral magnitude observable.
+- The finite `K -> 3K` rescaling/normalization test finds `0/4` accepted mass/coupling provenance candidates: raw spectral proxies scale with arbitrary amplitude, normalized ratios are dimensionless, and P3030 still blocks field/sector localization.
+- Do not promote raw magnitudes, normalized spectral shapes, spectral moments, or adjacent magnitude ratios to matter sector, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- The next honest move is a P3029-P3031 matter spectral lane reconciliation/no-new-live-frontier certificate, or a pivot to a different P3028 foundation atom with a genuinely new strict typed object.
+
+## Current matter spectral lane reconciliation guardrail (P3032/S1982, 2026-06-23)
+
+- P3032 reconciles P3029-P3031 instead of replaying spectral magnitude localizers or mass/coupling proxies.
+- The finite ledger has four atoms and only the observer-independent observable-generator atom is closed; the `16`-profile lattice licenses matter-sector export only in the all-four-atoms-closed profile.
+- Do not promote the P3029 spectral magnitude generator, P3030 localizer anchors, or P3031 mass/coupling proxies to matter sector, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- A next move must supply a genuinely new nonpremise field/sector localizer theorem, a target-independent unit-bearing mass/coupling theorem, or a different P3028 strict typed object; otherwise preserve this no-new-live-frontier certificate.
+
+## Current Z12 block coarse-graining classical-limit guardrail (P3033/S1983, 2026-06-23)
+
+- P3033 attacks exactly one P3028 foundation atom outside the closed P3029-P3032 matter spectral lane: classical coarse-graining limit.
+- Aligned Z12 block averages are computable and compose on divisor scales, but nontrivial coarse rows are chart/translation sensitive, finite-scale only, and lack a physical length/unit theorem.
+- Do not promote block averages, finite divisor-scale RG scaffolds, or internal coarse cells to classical transition, observed physics, unit-bearing action/EOM, `L_total`, selector, bridge/role-transfer, or ToE closure.
+- A next move must supply a genuinely new chart-independent refinement/continuum object with physical units, or pivot to another single P3028 foundation atom.
+
+## Current Z12 finite-difference action/EOM unit guardrail (P3034/S1984, 2026-06-23)
+
+- P3034 attacks exactly one P3028 foundation atom: unit-bearing action/EOM/Hamiltonian.
+- A cyclic Dirichlet+mass action, Euler residual, and action-per-label Hamiltonian proxy are computable for sampled `K_strict_gate`, but none is unit-bearing.
+- Do not promote finite Z12 quadratic actions, Euler residuals, action-per-label proxies, or internal action normalizations to physical `L_total`, EOM, Hamiltonian, observed physics, selector, bridge/role-transfer, or ToE closure.
+- A next move must supply an actual action quantum/reference-cell theorem, field provenance plus boundary/integration map, or pivot to another single P3028 atom such as strict selector/branch source.

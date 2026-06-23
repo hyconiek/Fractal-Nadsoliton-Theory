@@ -3192,3 +3192,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3029/S1979 matter spectral observable `L_total` guard
 
 `P3029/S1979` adds no physical `L_total` term.  The sorted DFT magnitude signature is a real observer-independent strict-kernel observable generator for the matter row, but without field-representation, mass/coupling, selector/sector, and unit-bearing action the signature remains pre-physical readout data.
+
+## P3030/S1980 matter spectral field-localizer `L_total` guard
+
+`P3030/S1980` adds no physical `L_total` term.  Magnitude-only spectral data remain phase-retrieval/dihedral-orbit ambiguous; the zero-phase inverse, autocorrelation-lag, and largest-bin anchors are localizer conventions rather than unit-bearing matter-field/EOM sources.
+
+## P3031/S1981 matter spectral mass/coupling `L_total` guard
+
+`P3031/S1981` adds no physical `L_total` term.  The spectral mass/coupling proxy family either scales with arbitrary kernel amplitude or becomes dimensionless after normalization, while the P3030 field/sector localizer remains absent.  No unit-bearing action/EOM/Hamiltonian insertion is exported.
+
+## P3032/S1982 matter spectral lane `L_total` guard
+
+`P3032/S1982` adds no physical `L_total` term.  The matter spectral lane currently closes only the observer-independent observable-generator atom; field/localizer, mass/coupling provenance, selector/sector source, and unit-bearing action/EOM insertion remain unexported.
+
+## P3033/S1983 coarse-graining classical-limit `L_total` guard
+
+`P3033/S1983` adds no physical `L_total` term.  The Z12 block-averaging operator is a finite internal coarse-graining scaffold, not a chart-independent continuum limit with a physical length unit or unit-bearing action/EOM insertion.
+
+## P3034/S1984 finite-difference action/EOM `L_total` guard
+
+`P3034/S1984` adds no physical `L_total` term.  The cyclic Dirichlet+mass action and Euler residual are formal finite receivers for sampled strict-kernel data, but they lack action quantum/reference-cell provenance, field/boundary integration, physical clock/Hamiltonian units, and nonproxy continuum EOM lift.
