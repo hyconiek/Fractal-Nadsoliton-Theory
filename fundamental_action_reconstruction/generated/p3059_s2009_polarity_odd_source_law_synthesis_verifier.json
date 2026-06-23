@@ -3105,22 +3105,22 @@
     "content_first_repo_grep": [
       {
         "content_lane": "polarity_odd_source_law_boundary_condition",
-        "hit_count": 58,
+        "hit_count": 71,
         "pattern": "polarity-odd source-law|polarity_odd_source_law|strict_polarity_odd_source_law_boundary_condition|polarity-odd.*boundary",
         "sample_hits": [
           "AGENTS.md:2533:- A next move in this lane must construct an explicit strict polarity-odd source-law boundary condition coupled to `G_selector`; otherwise attack a different named P3057 atom while preserving the P3048-P3058 bounded no-export boundary.",
           "AGENTS.md:2535:## Current polarity-odd source-law synthesis guardrail (P3059/S2009, 2026-06-23)",
           "AGENTS.md:2537:- P3059 constructs the P3058-requested strict polarity-odd source-law boundary-condition synthesis module on `G_selector` from three current inversion-odd clues: boundary-cocycle orientation, chiral-bispectrum sign, and receiver-winding sign.",
-          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:3941:`P3058/S2008` attacks exactly one atom from the `P3057` template: `new_unique_polarity_coupling`.  It constructs the missing object as a two-torsor coupling normal form between the chiral/readout sign torsor and the orientation selector torsor, then enumerates all `31` nonempty intersections of five current compatibility constraints.  All current constraints are polarity-even; `0` intersections select a unique polarity, and the full current constraint set still accepts both `plus_polarity` and `minus_polarity`.  The next required object is a strict polarity-odd source-law boundary condition on `G_selector`.  No actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.",
-          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:3943:## P3059/S2009 polarity-odd source-law synthesis verifier",
-          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:3945:`P3059/S2009` responds to the P3058 recommendation by constructing a finite synthesis module for a strict polarity-odd source-law boundary condition on `G_selector`.  It combines three current inversion-odd clues — boundary-cocycle orientation, chiral-bispectrum sign, and receiver-winding sign — over integer coefficients in `[-2,2]^3` and enumerates all `124` nonzero coefficient vectors.  `106` vectors give nonzero signed odd candidates, split into `53` positive and `53` negative polarities across `53` sign-pair orbits; `0` candidates export a non-premise global coefficient-sign rule.  No unique boundary condition, actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.",
-          "fundamental_action_reconstruction/test_p3058_s2008_unique_polarity_coupling_constraint_verifier.py:37:        self.assertEqual(obj[\"missing_source_atom\"][\"name\"], \"strict_polarity_odd_source_law_boundary_condition\")",
-          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:2:\"\"\"P3059/S2009: polarity-odd source-law synthesis verifier."
+          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:2:\"\"\"P3059/S2009: polarity-odd source-law synthesis verifier.",
+          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:22:OUT = GEN / \"p3059_s2009_polarity_odd_source_law_synthesis_verifier.json\"",
+          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:23:MD = GEN / \"p3059_s2009_polarity_odd_source_law_synthesis_verifier.md\"",
+          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:29:    \"polarity_odd_source_law_boundary_condition\": r\"polarity-odd source-law|polarity_odd_source_law|strict_polarity_odd_source_law_boundary_condition|polarity-odd.*boundary\",",
+          "fundamental_action_reconstruction/p3059_s2009_polarity_odd_source_law_synthesis_verifier.py:118:        \"target_atom\": \"strict_polarity_odd_source_law_boundary_condition\","
         ]
       },
       {
         "content_lane": "signed_clue_module",
-        "hit_count": 1509,
+        "hit_count": 1517,
         "pattern": "receiver.*winding|chiral.*bispectrum|boundary.*cocycle|inversion-odd.*sign",
         "sample_hits": [
           "AGENTS.md:204:## Current Z12 boundary 1-cocycle selector-source obstruction guardrail (P2708/S1658, 2026-06-14)",
@@ -3135,7 +3135,7 @@
       },
       {
         "content_lane": "coefficient_sign_pair_obstruction",
-        "hit_count": 1849,
+        "hit_count": 1884,
         "pattern": "sign-pair|global.*sign|lambda.*unfixed|opposite polarity|unique.*polarity",
         "sample_hits": [
           "AGENTS.md:285:- Exactly two equivariant couplings exist, but they are opposite polarity choices; current artifacts do not export a phase-origin/source localizer or a strict law selecting one polarity, so `lambda` remains unfixed and `QW-2191` remains open.",
@@ -3225,7 +3225,7 @@
   "finite_certificate": {
     "accepted_unique_boundary_conditions": 0,
     "coefficient_values_per_basis": 5,
-    "content_grep_hits": 3416,
+    "content_grep_hits": 3472,
     "content_grep_lanes": 3,
     "negative_polarity_candidates": 53,
     "nonzero_signed_candidates": 106,

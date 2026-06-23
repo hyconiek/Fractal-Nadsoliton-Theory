@@ -3312,3 +3312,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3059/S2009 polarity-odd source-law synthesis `L_total` guard
 
 `P3059/S2009` adds no physical `L_total` term.  Its finite synthesis module produces paired polarity-odd signed candidates but no strict non-premise global coefficient-sign source rule, no unit-bearing action/EOM carrier, and no nonproxy variational chain rule.
+
+## P3060/S2010 coefficient-sign normalization impossibility `L_total` guard
+
+`P3060/S2010` adds no physical `L_total` term.  It is a finite obstruction inside a sign-even normalizer class; it exports no unit-bearing signed source/action/EOM carrier and no nonproxy variational chain rule.
+
+## P3061/S2011 sign-odd source-value normalizer `L_total` guard
+
+`P3061/S2011` adds no physical `L_total` term.  It is a formal acceptance matrix for a missing signed source value and exports no unit-bearing action/EOM carrier or nonproxy variational chain rule.
+
+## P3062/S2012 sigma-selector source-law audit `L_total` guard
+
+`P3062/S2012` adds no physical `L_total` term.  It is a source-law acceptance audit; no audited candidate supplies a unit-bearing signed source/action/EOM carrier or nonproxy variational chain rule coupled to `G_selector`.

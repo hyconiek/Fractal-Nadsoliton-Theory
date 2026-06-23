@@ -3943,3 +3943,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3059/S2009 polarity-odd source-law synthesis verifier
 
 `P3059/S2009` responds to the P3058 recommendation by constructing a finite synthesis module for a strict polarity-odd source-law boundary condition on `G_selector`.  It combines three current inversion-odd clues — boundary-cocycle orientation, chiral-bispectrum sign, and receiver-winding sign — over integer coefficients in `[-2,2]^3` and enumerates all `124` nonzero coefficient vectors.  `106` vectors give nonzero signed odd candidates, split into `53` positive and `53` negative polarities across `53` sign-pair orbits; `0` candidates export a non-premise global coefficient-sign rule.  No unique boundary condition, actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3060/S2010 coefficient-sign normalization impossibility verifier
+
+`P3060/S2010` responds to the P3059 recommendation by proving impossibility in one larger named class: `SignEvenMagnitudeSupportNormalizerClass`.  It enumerates all `3124` nonzero integer linear score rules over five sign-even magnitude/support invariants (`l1_norm`, `l2_norm`, `support_size`, `max_abs`, `abs_sum_mod2`) with weights in `[-2,2]^5`.  Because every feature is invariant under `c -> -c`, `0` normalizers separate any P3059 sign pair and `0` export a strict non-premise global coefficient-sign normalization/source rule.  No actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3061/S2011 sign-odd source-value normalizer acceptance matrix
+
+`P3061/S2011` constructs the missing sign-odd normalizer shape after `P3060`: a `SignOddSourceValueCoefficientSignNormalizer` using a putative `sigma_selector` value.  The finite acceptance matrix has `6` source-value cases.  `2` rows would formally select `plus_polarity` or `minus_polarity` if an exported strict non-premise nonzero `sigma_selector` existed, but `0` rows are currently accepted because no such source law/value artifact is exported; premise/convention sigma rows are rejected.  No actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3062/S2012 sigma-selector source-law candidate audit
+
+`P3062/S2012` audits the exact missing object named by `P3061`: a strict source law computing a nonzero non-premise `sigma_selector` value coupled to `G_selector`.  The acceptance boundary has `5` criteria and checks `7` named current candidate classes: boundary-cocycle orientation sign, chiral-bispectrum sign, receiver-winding sign, Levi-Civita orientation density, Pontryagin/anomaly density, eta/spectral asymmetry, and coefficient-sign convention.  `4` candidates carry a nonzero signed value, but `0` are coupled to `G_selector` and `0` satisfy all criteria.  No concrete `sigma_selector` source law, actual `G_selector`, `QW-2191` discharge, selector closure, `L_total`, bridge/role transfer, or ToE closure is exported.

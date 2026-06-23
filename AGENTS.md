@@ -2538,3 +2538,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The bounded coefficient search over `[-2,2]^3` enumerates all `124` nonzero coefficient vectors; `106` are nonzero signed odd candidates, split into `53` positive and `53` negative polarities across `53` sign-pair orbits, with `0` accepted unique boundary conditions.
 - Do not promote another inversion-odd clue, signed receiver/chiral observable, coefficient convention, or sign-paired source law to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move in this lane must construct a strict non-premise global coefficient-sign normalization/source rule for this synthesis module, or prove impossibility in a larger named coefficient/source class; otherwise attack a different P3057 atom while preserving the P3048-P3059 bounded no-export boundary.
+
+## Current coefficient-sign normalization impossibility guardrail (P3060/S2010, 2026-06-23)
+
+- P3060 proves a bounded impossibility result only inside `SignEvenMagnitudeSupportNormalizerClass`, the larger named coefficient/source class built from current sign-even magnitude/support invariants.
+- The finite enumeration checks all `3124` nonzero integer linear normalizer scores over five invariants with weights in `[-2,2]^5`; `0` scores separate any `c/-c` sign pair and `0` export a non-premise global coefficient-sign source rule.
+- Do not promote sign-even magnitude/support scoring, coefficient conventions, or this bounded impossibility result to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must introduce a genuinely sign-odd strict-sourced coefficient-sign normalizer with an exported non-premise signed value, or pivot to a different named P3057 atom while preserving the P3048-P3060 bounded no-export boundary.
+
+## Current sign-odd source-value normalizer guardrail (P3061/S2011, 2026-06-23)
+
+- P3061 constructs the formal sign-odd normalizer shape requested after P3060: a `sigma_selector` source-value rule coupled to coefficient-sign normalization for `G_selector`.
+- The finite acceptance matrix checks `6` source-value cases; `2` rows would work only if an exported strict non-premise nonzero `sigma_selector` existed, while `0` rows are currently accepted and premise/convention sigma rows are rejected.
+- Do not promote formal sigma rows, premise/convention signs, or source-value placeholders to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must exhibit one concrete strict source law computing a nonzero non-premise `sigma_selector` value coupled to `G_selector`, or pivot to a different P3057 atom while preserving the P3048-P3061 bounded no-export boundary.
+
+## Current sigma-selector source-law candidate audit guardrail (P3062/S2012, 2026-06-23)
+
+- P3062 audits the concrete missing object after P3061: a strict source law computing a nonzero non-premise `sigma_selector` value coupled to `G_selector`.
+- The audit checks `7` named candidate classes against `5` criteria; `4` candidates carry nonzero signed values, but `0` are coupled to `G_selector` and `0` are accepted as concrete sigma-selector source laws.
+- Do not recycle boundary-cocycle, chiral-bispectrum, receiver-winding, Levi-Civita, Pontryagin/anomaly, eta-asymmetry, or coefficient-convention rows as `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must derive an explicit coupling theorem from one concrete signed source law/value into `G_selector`, or pivot to another P3057 atom while preserving the P3048-P3062 bounded no-export boundary.
