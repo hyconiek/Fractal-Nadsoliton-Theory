@@ -3212,3 +3212,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3034/S1984 finite-difference action/EOM `L_total` guard
 
 `P3034/S1984` adds no physical `L_total` term.  The cyclic Dirichlet+mass action and Euler residual are formal finite receivers for sampled strict-kernel data, but they lack action quantum/reference-cell provenance, field/boundary integration, physical clock/Hamiltonian units, and nonproxy continuum EOM lift.
+
+## P3035/S1985 branch-selector source `L_total` guard
+
+`P3035/S1985` adds no physical `L_total` term.  The directional/action/flux receivers are branch-blind, and the peak-label anchor is chart-conventional, so no strict variational branch source or readout-sector coupling is installed.
+
+## P3036/S1986 external unit-source `L_total` guard
+
+`P3036/S1986` adds no physical `L_total` term.  Label-step, norm-to-one, action-to-one, and entropy reference-cell candidates fix internal representatives or conditional gauges, not an external physical unit coupled to a variational/action/EOM theorem.
+
+## P3037/S1987 selector-hint sheaf `L_total` guard
+
+`P3037/S1987` adds no physical `L_total` term.  The hint sheaf covers viscosity/memory, retardation anisotropy, inversion-odd/chiral sign needs, localizer/coupling needs, and unit/readout needs, but it installs no actual non-premise selector operator or variational source term.
+
+## P3038/S1988 integrated selector candidate `L_total` guard
+
+`P3038/S1988` adds no physical `L_total` term.  Although the integrated density gives a finite branch-separating score, its chiral sign, path anisotropy, unit/readout coupling, and variational/readout insertion remain unsourced candidate slots.

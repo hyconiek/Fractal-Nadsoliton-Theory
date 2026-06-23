@@ -1,0 +1,136 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_rows": [
+      {
+        "accepted_as_strict_branch_source": false,
+        "candidate": "nearest_neighbor_dirichlet_direction_selector",
+        "failure": "forward and backward cyclic Dirichlet energies are exactly equal",
+        "minus_score": 0.159429622392,
+        "orientation_separating": false,
+        "plus_score": 0.159429622392
+      },
+      {
+        "accepted_as_strict_branch_source": false,
+        "candidate": "formal_action_receiver_direction_selector",
+        "failure": "P3034 formal action is reflection/orientation blind and already lacks unit-bearing provenance",
+        "minus_score": 0.294057296264,
+        "orientation_separating": false,
+        "plus_score": 0.294057296264
+      },
+      {
+        "accepted_as_strict_branch_source": false,
+        "candidate": "nearest_neighbor_signed_flux_selector",
+        "failure": "scalar cyclic flux telescopes to zero/equal opposite-direction scores",
+        "minus_score": 0.0,
+        "orientation_separating": false,
+        "plus_score": -0.0
+      },
+      {
+        "accepted_as_strict_branch_source": false,
+        "anchor_label": 1,
+        "candidate": "largest_kernel_peak_label_anchor",
+        "failure": "peak label is a chart anchor, not an Aut(Z12)-compatible directed branch source",
+        "orientation_separating": false,
+        "unit_relabel_anchor_labels": {
+          "1": 1,
+          "11": 11,
+          "5": 5,
+          "7": 7
+        }
+      }
+    ],
+    "finite_certificate": {
+      "accepted_branch_source_rows": 0,
+      "candidate_rows": 4,
+      "inversion_units_exchange_branches": 2,
+      "orientation_separating_rows": 0,
+      "proof_obligations": 7,
+      "satisfied_proof_obligations": 3,
+      "strict_selector_branch_source_exported": false
+    },
+    "object": "Z12DirectionalBranchSelectorSource_ObstructionMatrix",
+    "orientation_torsor": {
+      "aut_units": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "branches": [
+        "+direction",
+        "-direction"
+      ],
+      "inversion_units": [
+        7,
+        11
+      ]
+    },
+    "proof_obligations": [
+      {
+        "detail": "only strict selector/branch source is tested",
+        "obligation": "attacks_single_P3028_foundation_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "the two branches are +direction and -direction on cyclic Z12",
+        "obligation": "explicit_orientation_torsor",
+        "satisfied": true
+      },
+      {
+        "detail": "Dirichlet, action, flux, and peak-anchor receivers are computed",
+        "obligation": "finite_candidate_receivers_computable",
+        "satisfied": true
+      },
+      {
+        "detail": "no tested receiver separates +direction from -direction without convention",
+        "obligation": "orientation_score_separation",
+        "satisfied": false
+      },
+      {
+        "detail": "inversion units exchange directions and no strict source breaks the torsor",
+        "obligation": "aut_z12_compatible_nonpremise_source",
+        "satisfied": false
+      },
+      {
+        "detail": "label anchors move under U(12) relabeling and are not physical sectors",
+        "obligation": "chart_independent_branch_localizer",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem couples the branch sign to spacetime/time/matter/energy/observer rows",
+        "obligation": "coupling_to_classical_readout_rows",
+        "satisfied": false
+      }
+    ],
+    "tested_foundation_atom": "strict_selector_or_branch_source"
+  },
+  "decision": {
+    "bounded_no_go": "A finite +direction/-direction orientation torsor for sampled K_strict_gate on Z12 is explicit, and four selector candidates are computable.  Dirichlet/action/flux receivers are orientation-blind, while the largest-peak anchor is chart-label dependent under U(12) relabeling.  Thus no non-premise Aut-compatible strict selector/branch source is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "classical_transition_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "strict_selector_branch_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay orientation-blind quadratic/action/flux receivers or chart-label peak anchors as strict selector sources.  A next move must supply a genuinely new non-premise inversion-odd/chiral branch source with a fixed sign and an explicit coupling to one P3028 readout row, or pivot to the remaining external physical unit-source atom."
+  },
+  "finite_certificate": {
+    "accepted_branch_source_rows": 0,
+    "candidate_rows": 4,
+    "inversion_units_exchange_branches": 2,
+    "orientation_separating_rows": 0,
+    "proof_obligations": 7,
+    "satisfied_proof_obligations": 3,
+    "strict_selector_branch_source_exported": false
+  },
+  "input_hashes": {
+    "P3028": "d236c74229b3fc70604c4d989caae12a38c7503e96254905f5e2220faa61ac58",
+    "P3034": "d09aac6cd1722ceecf621ce91472765a0665c9ae824d5dbe707de951c0159a8b"
+  },
+  "status": "P3035_Z12_DIRECTIONAL_BRANCH_SELECTOR_SOURCE_OBSTRUCTION_NO_SELECTOR_EXPORT"
+}

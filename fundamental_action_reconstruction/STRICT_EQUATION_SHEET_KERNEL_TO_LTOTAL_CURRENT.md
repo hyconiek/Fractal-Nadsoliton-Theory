@@ -3843,3 +3843,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3034/S1984 Z12 finite-difference action/EOM unit obstruction
 
 `P3034/S1984` attacks exactly one P3028 foundation atom: unit-bearing action/EOM/Hamiltonian.  It constructs a formal cyclic Dirichlet+mass action on sampled `K_strict_gate` over `Z12`, computes the Euler residual, and forms an action-per-label Hamiltonian proxy.  These receivers are finite and computable, but `0/3` receiver rows are unit-bearing: the action scales as `K^2`, the residual scales as `K`, the Hamiltonian proxy divides by a dimensionless label count, and no physical action unit, field provenance/boundary map, clock unit, or nonproxy continuum EOM lift is exported.  No `L_total`, observed physics, bridge/role transfer, or ToE closure follows.
+
+## P3035/S1985 Z12 directional branch-selector source obstruction
+
+`P3035/S1985` attacks exactly one P3028 foundation atom: strict selector/branch source.  It constructs the finite `+direction/-direction` orientation torsor on cyclic `Z12` for sampled `K_strict_gate` and tests four computable selector candidates: nearest-neighbor Dirichlet direction, P3034 formal action under reflection, nearest-neighbor signed flux, and largest-kernel-peak label anchor.  The first three are orientation-blind, and the last is a chart-label anchor rather than an `Aut(Z12)`-compatible source.  Hence `0/4` candidates export a strict branch source; no `QW-2191` discharge, classical transition, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3036/S1986 external physical unit-source scale-orbit obstruction
+
+`P3036/S1986` attacks exactly one P3028 foundation atom: external physical unit source.  It constructs a two-axis scale torsor for sampled `K_strict_gate` on `Z12`: amplitude scaling `K -> cK` and label-length scaling `ell -> a ell`.  Four finite candidates are computable (`d=1`, `||K||_2=1`, Dirichlet action-to-one, and an entropy one-bit reference-cell scale), but all remain dimensionless representatives or conditional gauges.  No scale-orbit-invariant physical length/action/clock unit, unit-bearing action/EOM/Hamiltonian coupling, classical transition, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3037/S1987 selector-mechanism hint sheaf acceptance matrix
+
+`P3037/S1987` assumes the real selector mechanism may not match a familiar human schema and treats existing research as typed hints.  It constructs an `UnknownSelectorMechanism_HintSheafAcceptanceMatrix` from V1 informational-viscosity hints, H42 retardation/anisotropy hints, P3035 inversion/chiral branch-source needs, and P3036 unit/readout-coupling needs.  The finite sheaf has four hint rows, six required features, and fifteen glue profiles; some profiles cover all features, but zero rows export a non-premise complete selector mechanism and zero profiles are accepted.  Therefore no `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3038/S1988 viscous-retarded-chiral selector candidate obstruction
+
+`P3038/S1988` executes the P3037 recommendation by constructing one integrated candidate operator: a memory/viscosity trace, c-retardation anisotropy split, inversion-odd chiral projection, and unit/readout coupling slot.  The finite score is genuinely branch-separating (`+` and `-` branches get nonzero opposite scores), so this is stronger than a hint sheaf alone.  The obstruction is also explicit: the chiral sign/localizer, retardation path anisotropy, physical unit/readout coupling, and nonproxy variational/readout theorem are still inserted candidate slots rather than exported strict sources.  No `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role transfer, or ToE closure follows.

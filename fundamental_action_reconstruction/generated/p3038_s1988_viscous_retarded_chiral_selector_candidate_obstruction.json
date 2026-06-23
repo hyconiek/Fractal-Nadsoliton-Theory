@@ -1,0 +1,138 @@
+{
+  "constructed_theoretical_objects": {
+    "branch_scores": {
+      "minus": 0.007800396949201,
+      "plus": -0.007800396949201,
+      "separation": -0.015600793898403
+    },
+    "candidate_features": {
+      "coupling_polarity_needed": true,
+      "damping_memory_feedback_hint": true,
+      "inversion_odd_or_chiral_sign_hint": true,
+      "nonpremise_source_localizer_needed": true,
+      "readout_unit_coupling_needed": true,
+      "retardation_anisotropy_anchor_hint": true
+    },
+    "finite_certificate": {
+      "accepted_operator_source_rows": 0,
+      "branch_score_nonzero": true,
+      "branch_separation_abs": 0.015600793898403,
+      "finite_nonzero_operator_rows": 4,
+      "operator_rows": 4,
+      "p3037_features_present": 6,
+      "proof_obligations": 8,
+      "satisfied_proof_obligations": 4,
+      "strict_selector_mechanism_exported": false
+    },
+    "object": "ViscousRetardedChiralReadoutSelector_CandidateObstructionMatrix",
+    "operator_formula": "S_b = sum_i b * U * [cos(omega*(1+rho*M_i))-cos(omega*(1-rho*M_i))] * sin(2*pi*i/12)",
+    "operator_rows": [
+      {
+        "accepted_as_source": false,
+        "failure": "memory smoothing is a candidate dynamics, not a strict exported viscosity law",
+        "finite_nonzero": true,
+        "formula": "M_i = lambda*K_i + (1-lambda)*M_{i-1}",
+        "row": "memory_viscosity_trace"
+      },
+      {
+        "accepted_as_source": false,
+        "failure": "anisotropic path split is inserted as a candidate slot, not sourced path geometry",
+        "finite_nonzero": true,
+        "formula": "Delta_i = cos(omega*(1+rho*M_i)) - cos(omega*(1-rho*M_i))",
+        "row": "c_retardation_anisotropy_split"
+      },
+      {
+        "accepted_as_source": false,
+        "failure": "the sine orientation is an inversion-odd probe but no nonpremise sign/localizer theorem selects its polarity",
+        "finite_nonzero": true,
+        "formula": "chi_i = sin(2*pi*i/12)",
+        "row": "inversion_odd_chiral_projection"
+      },
+      {
+        "accepted_as_source": false,
+        "failure": "unit/readout coupling is a dimensionless placeholder after P3036, not a physical unit theorem",
+        "finite_nonzero": true,
+        "formula": "U_readout = 1 placeholder",
+        "row": "unit_readout_coupling_slot"
+      }
+    ],
+    "parameters": {
+      "memory_lambda": 0.35,
+      "retard_omega": 0.18575,
+      "retard_rho": 0.25,
+      "unit_coupling_slot": 1.0
+    },
+    "proof_obligations": [
+      {
+        "detail": "memory, retardation anisotropy, chiral projection, and unit/readout slot are multiplied into one density",
+        "obligation": "integrated_candidate_operator_constructed",
+        "satisfied": true
+      },
+      {
+        "detail": "candidate covers the six P3037 hint features",
+        "obligation": "all_p3037_hint_features_present",
+        "satisfied": true
+      },
+      {
+        "detail": "both branch scores are nonzero and opposite",
+        "obligation": "finite_branch_score_nonzero",
+        "satisfied": true
+      },
+      {
+        "detail": "plus and minus branch scores differ",
+        "obligation": "branch_separation_computable",
+        "satisfied": true
+      },
+      {
+        "detail": "chi_i is an inserted inversion-odd probe; no strict source/localizer fixes its sign",
+        "obligation": "nonpremise_chiral_sign_localizer",
+        "satisfied": false
+      },
+      {
+        "detail": "rho and parallel/perpendicular path split are candidate slots, not exported geometry",
+        "obligation": "sourced_retardation_path_anisotropy",
+        "satisfied": false
+      },
+      {
+        "detail": "unit coupling remains dimensionless after P3036",
+        "obligation": "physical_unit_readout_coupling",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem installs the density into L_total or a classical readout row",
+        "obligation": "nonproxy_variational_or_readout_theorem",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "bounded_no_go": "The integrated candidate operator is real and finite: it combines memory/viscosity, c-retardation anisotropy, an inversion-odd chiral projection, and a unit/readout coupling slot, yielding nonzero opposite branch scores.  This is progress beyond hint collection, but the sign/localizer, path anisotropy, physical unit coupling, and nonproxy variational/readout theorem remain unsourced.  Therefore no strict selector mechanism is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "strict_selector_branch_source_exported": false,
+      "strict_selector_mechanism_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not promote the branch-separating score alone to selector closure. The next proof-grade move should attack exactly one missing source premise of this integrated operator: either a nonpremise chiral sign/localizer theorem, a sourced retardation path-anisotropy theorem, or a physical unit/readout coupling theorem."
+  },
+  "finite_certificate": {
+    "accepted_operator_source_rows": 0,
+    "branch_score_nonzero": true,
+    "branch_separation_abs": 0.015600793898403,
+    "finite_nonzero_operator_rows": 4,
+    "operator_rows": 4,
+    "p3037_features_present": 6,
+    "proof_obligations": 8,
+    "satisfied_proof_obligations": 4,
+    "strict_selector_mechanism_exported": false
+  },
+  "input_hashes": {
+    "P3037": "085723ef27ff3ebc0a7b1d2b37561716e8477ced4695e2d6fa0f0877e3d7518c"
+  },
+  "status": "P3038_VISCOUS_RETARDED_CHIRAL_SELECTOR_CANDIDATE_OBSTRUCTION_NO_SELECTOR_EXPORT"
+}
