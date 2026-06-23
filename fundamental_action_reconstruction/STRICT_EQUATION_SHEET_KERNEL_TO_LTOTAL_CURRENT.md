@@ -3915,3 +3915,7 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3052/S2002 phase-curve winding stability-margin certificate
 
 `P3052/S2002` strengthens the P3051 winding hint with a finite stability-margin certificate.  The centroid has positive distance to every closed phase-curve edge, the minimum centroid-edge clearance is positive, all deterministic Fourier-mode perturbations up to the audited clearance fractions preserve winding, and Aut signed-winding rows verify the preserving/reversing boundary.  This is robust receiver-level evidence only: no strict winding-source theorem, nonconventional orientation theorem, P3046 polarity selection, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3053/S2003 receiver diagnostic sign-torsor source-theorem obstruction
+
+`P3053/S2003` audits whether the P3048-P3052 signed receiver diagnostics can themselves supply the strict source theorem demanded after P3052.  The constructed C2 sign cube uses area sign, winding sign, and robust-winding sign as inversion-odd coordinates, then exhausts all `256` Boolean selector laws.  Invariant laws cannot distinguish the orientation pair, while odd/equivariant laws remain paired by global output polarity; current artifacts select neither member.  No strict receiver-diagnostic source theorem, P3046 polarity selection, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.

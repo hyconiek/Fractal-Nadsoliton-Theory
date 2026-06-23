@@ -1,0 +1,281 @@
+{
+  "constructed_theoretical_objects": {
+    "boolean_law_summary": {
+      "artifact_selected_odd_polarity_laws": 0,
+      "invariant_laws": 16,
+      "invariant_laws_distinguishing_base_pair": 0,
+      "odd_equivariant_laws": 16,
+      "odd_polarity_pairs": 8,
+      "total_laws": 256
+    },
+    "diagnostic_rows": [
+      {
+        "diagnostic": "area_sign_A_s",
+        "finite_positive": true,
+        "inversion_action": "A_s -> -A_s",
+        "reason_not_source": "finite receiver sign with unresolved K/M provenance and coupling polarity",
+        "source": "P3048/P3049/P3050 oriented memory phase-area sign",
+        "strict_source_channel_exported": false
+      },
+      {
+        "diagnostic": "winding_sign_W",
+        "finite_positive": true,
+        "inversion_action": "W -> -W",
+        "reason_not_source": "sampled/derived phase-curve orientation diagnostic",
+        "source": "P3051 global phase-curve winding index",
+        "strict_source_channel_exported": false
+      },
+      {
+        "diagnostic": "robust_winding_sign_R",
+        "finite_positive": true,
+        "inversion_action": "R -> -R",
+        "reason_not_source": "robustness of a receiver diagnostic, not a source theorem",
+        "source": "P3052 stability-margin certificate",
+        "strict_source_channel_exported": false
+      }
+    ],
+    "domain_states": [
+      {
+        "area_sign_A_s": -1,
+        "robust_winding_sign_R": -1,
+        "winding_sign_W": -1
+      },
+      {
+        "area_sign_A_s": -1,
+        "robust_winding_sign_R": 1,
+        "winding_sign_W": -1
+      },
+      {
+        "area_sign_A_s": -1,
+        "robust_winding_sign_R": -1,
+        "winding_sign_W": 1
+      },
+      {
+        "area_sign_A_s": -1,
+        "robust_winding_sign_R": 1,
+        "winding_sign_W": 1
+      },
+      {
+        "area_sign_A_s": 1,
+        "robust_winding_sign_R": -1,
+        "winding_sign_W": -1
+      },
+      {
+        "area_sign_A_s": 1,
+        "robust_winding_sign_R": 1,
+        "winding_sign_W": -1
+      },
+      {
+        "area_sign_A_s": 1,
+        "robust_winding_sign_R": -1,
+        "winding_sign_W": 1
+      },
+      {
+        "area_sign_A_s": 1,
+        "robust_winding_sign_R": 1,
+        "winding_sign_W": 1
+      }
+    ],
+    "finite_certificate": {
+      "artifact_selected_odd_polarity_laws": 0,
+      "boolean_laws_enumerated": 256,
+      "diagnostic_signs": 3,
+      "domain_states": 8,
+      "invariant_laws": 16,
+      "invariant_laws_distinguishing_base_pair": 0,
+      "odd_equivariant_laws": 16,
+      "odd_polarity_pairs": 8,
+      "proof_obligations": 6,
+      "satisfied_proof_obligations": 4,
+      "satisfied_source_acceptance_criteria": 4,
+      "source_acceptance_criteria": 8,
+      "strict_receiver_diagnostic_source_theorem_exported": false
+    },
+    "object": "ReceiverDiagnosticSignTorsor_SourceTheoremObstruction",
+    "odd_polarity_pair_rows": [
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 240,
+        "mask_plus": 15,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 232,
+        "mask_plus": 23,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 212,
+        "mask_plus": 43,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 204,
+        "mask_plus": 51,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 178,
+        "mask_plus": 77,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 170,
+        "mask_plus": 85,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 150,
+        "mask_plus": 105,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      },
+      {
+        "base_values": [
+          -1,
+          1
+        ],
+        "mask_minus": 142,
+        "mask_plus": 113,
+        "pair_interpretation": "opposite output polarities; current artifacts select neither member"
+      }
+    ],
+    "proof_obligations": [
+      {
+        "detail": "P3053 is a source-theorem obstruction for receiver diagnostic signs, not a replay of area/winding values",
+        "obligation": "content_first_prior_lane_check",
+        "satisfied": true
+      },
+      {
+        "detail": "three receiver signs are assembled into a C2 sign cube",
+        "obligation": "construct_sign_torsor_source_theorem_object",
+        "satisfied": true
+      },
+      {
+        "detail": "256 Boolean laws were classified",
+        "obligation": "exhaust_boolean_selector_laws",
+        "satisfied": true
+      },
+      {
+        "detail": "all invariant laws give equal values on the inversion pair",
+        "obligation": "prove_invariant_laws_cannot_select_orientation",
+        "satisfied": true
+      },
+      {
+        "detail": "odd laws remain paired by global output sign",
+        "obligation": "export_unique_nonpremise_polarity",
+        "satisfied": false
+      },
+      {
+        "detail": "no QW-2191 discharge, selector closure, L_total, bridge, role transfer, or ToE export follows",
+        "obligation": "selector_ltotal_bridge_toe_installation",
+        "satisfied": false
+      }
+    ],
+    "source_acceptance_rows": [
+      {
+        "criterion": "receiver_diagnostic_inputs_are_nonzero",
+        "detail": "P3048-P3052 supply finite signed receiver diagnostics",
+        "satisfied": true
+      },
+      {
+        "criterion": "inversion_action_explicit",
+        "detail": "all diagnostic signs transform by simultaneous negation",
+        "satisfied": true
+      },
+      {
+        "criterion": "boolean_law_exhaustion_complete",
+        "detail": "all Boolean maps from the three-sign cube to a selector sign were enumerated",
+        "satisfied": true
+      },
+      {
+        "criterion": "invariant_laws_fail_to_select",
+        "detail": "invariant laws identify the inversion pair",
+        "satisfied": true
+      },
+      {
+        "criterion": "odd_laws_have_unique_artifact_selected_polarity",
+        "detail": "odd laws distinguish orientation only in opposite polarity pairs",
+        "satisfied": false
+      },
+      {
+        "criterion": "strict_nonreceiver_source_theorem",
+        "detail": "no new source law outside receiver diagnostics is exported",
+        "satisfied": false
+      },
+      {
+        "criterion": "selector_readout_or_p3046_coupling",
+        "detail": "no theorem picks one P3046/readout polarity",
+        "satisfied": false
+      },
+      {
+        "criterion": "unit_bearing_action_eom_installation",
+        "detail": "no unit-bearing variational/action/EOM row is installed",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "bounded_no_go": "P3053 shows that the P3048-P3052 signed receiver diagnostics have the correct inversion-odd type but cannot become a strict source theorem by recombination.  Invariant Boolean laws cannot distinguish the orientation pair, while odd/equivariant laws occur in opposite output-polarity pairs with no artifact-selected member.  Thus the robust phase-geometry signs remain receiver diagnostics, not a non-premise selector source.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "p3046_coupling_polarity_selected": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "selector_readout_coupling_exported": false,
+      "strict_receiver_diagnostic_source_theorem_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unique_nonpremise_orientation_polarity_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not recombine P3048-P3052 receiver signs as source closure.  The next proof-grade move must introduce a genuinely new non-receiver strict signed source/coupling law that selects one odd polarity, or pivot outside the phase-geometry selector lane and preserve the P3048-P3053 bounded no-export certificate."
+  },
+  "finite_certificate": {
+    "artifact_selected_odd_polarity_laws": 0,
+    "boolean_laws_enumerated": 256,
+    "diagnostic_signs": 3,
+    "domain_states": 8,
+    "invariant_laws": 16,
+    "invariant_laws_distinguishing_base_pair": 0,
+    "odd_equivariant_laws": 16,
+    "odd_polarity_pairs": 8,
+    "proof_obligations": 6,
+    "satisfied_proof_obligations": 4,
+    "satisfied_source_acceptance_criteria": 4,
+    "source_acceptance_criteria": 8,
+    "strict_receiver_diagnostic_source_theorem_exported": false
+  },
+  "input_hashes": {
+    "P3052": "8b1297090083f5fbc6325d14b9e85943d785a5368aee8051a1372ff6e50f7d24"
+  },
+  "status": "P3053_RECEIVER_DIAGNOSTIC_SIGN_TORSOR_SOURCE_THEOREM_OBSTRUCTION_BOUNDED_NO_EXPORT"
+}

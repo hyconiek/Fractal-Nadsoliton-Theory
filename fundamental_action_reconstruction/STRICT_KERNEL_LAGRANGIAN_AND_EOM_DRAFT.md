@@ -3284,3 +3284,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3052/S2002 winding stability-margin `L_total` guard
 
 `P3052/S2002` adds no physical `L_total` term.  Positive clearance and perturbation-stable winding strengthen the receiver diagnostic, but do not supply a strict orientation source, P3046 polarity coupling, or unit-bearing variational/action/EOM input.
+
+## P3053/S2003 receiver diagnostic sign-torsor `L_total` guard
+
+`P3053/S2003` adds no physical `L_total` term.  Exhausting Boolean laws over area/winding/robust-winding receiver signs shows that invariant laws are orientation-blind and odd laws require an unselected output polarity, so no unit-bearing variational/action/EOM source is installed.

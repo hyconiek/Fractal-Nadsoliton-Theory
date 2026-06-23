@@ -2489,3 +2489,10 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The audited winding is robust under the finite perturbation table and has explicit Aut signed-winding behavior, but this remains receiver-level geometry without strict orientation-source provenance or selector/readout coupling.
 - Do not promote robust winding, positive clearance, perturbation stability, or Aut signed-winding rows to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move requires a strict source theorem explaining why this robust winding orientation is the nadsoliton selector sign, or an independent typed object outside sampled K/M geometry.
+
+## Current receiver diagnostic sign-torsor source-theorem guardrail (P3053/S2003, 2026-06-23)
+
+- P3053 tests whether the P3048-P3052 signed receiver diagnostics can themselves provide the strict source theorem demanded after robust winding.
+- The finite C2 sign cube over area sign, winding sign, and robust-winding sign exhausts all 256 Boolean selector laws: invariant laws cannot distinguish the inversion pair, while odd/equivariant laws remain paired by unselected output polarity.
+- Do not recombine P3048-P3052 receiver signs, robust winding, positive clearance, or Boolean odd laws into `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires a genuinely new non-receiver strict signed source/coupling law selecting one odd polarity, or a pivot outside the phase-geometry selector lane while preserving the P3048-P3053 bounded no-export certificate.
