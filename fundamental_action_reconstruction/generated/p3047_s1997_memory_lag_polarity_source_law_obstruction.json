@@ -1,0 +1,159 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_law_rows": [
+      {
+        "accepted": false,
+        "aut_compatible": false,
+        "candidate_law": "choose_positive_memory_lag_sign",
+        "computable": true,
+        "nonpremise": false,
+        "reason": "chooses a target sign by convention; inversion sends it to the opposite sign"
+      },
+      {
+        "accepted": false,
+        "aut_compatible": false,
+        "candidate_law": "choose_lag2_winner_coupling_polarity",
+        "computable": true,
+        "nonpremise": false,
+        "reason": "imports the P3045 receiver winner as polarity source rather than deriving a strict sign"
+      },
+      {
+        "accepted": false,
+        "aut_compatible": true,
+        "candidate_law": "abstract_inversion_odd_strict_source_value",
+        "computable": false,
+        "nonpremise": false,
+        "reason": "records the missing object type but no concrete strict signed value is present"
+      }
+    ],
+    "finite_certificate": {
+      "accepted_polarity_source_law_rows": 0,
+      "candidate_law_rows": 3,
+      "odd_source_equivariant_maps": 2,
+      "proof_obligations": 6,
+      "satisfied_proof_obligations": 3,
+      "source_domain_rows": 5,
+      "strict_polarity_source_law_exported": false,
+      "trivial_source_equivariant_maps": 0,
+      "trivial_source_rows": 4
+    },
+    "object": "MemoryLagPolarity_SourceLawObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "P3047 attacks only the source law needed to select one P3046 coupling polarity",
+        "obligation": "p3046_coupling_polarity_gap_used",
+        "satisfied": true
+      },
+      {
+        "detail": "Aut-trivial source domains have zero equivariant maps to the sign torsor",
+        "obligation": "trivial_source_no_section_theorem",
+        "satisfied": true
+      },
+      {
+        "detail": "an inversion-odd source domain would have two equivariant maps",
+        "obligation": "odd_source_representation_identified",
+        "satisfied": true
+      },
+      {
+        "detail": "no concrete nonzero strict odd source value for memory-lag polarity is exported",
+        "obligation": "nonzero_strict_odd_source_value",
+        "satisfied": false
+      },
+      {
+        "detail": "no current row selects exactly one polarity nonconventionally",
+        "obligation": "unique_polarity_selection_law",
+        "satisfied": false
+      },
+      {
+        "detail": "no selected polarity is installed as QW-2191 discharge or physical readout",
+        "obligation": "selector_readout_installation",
+        "satisfied": false
+      }
+    ],
+    "sign_torsor": [
+      -1,
+      1
+    ],
+    "source_domain_rows": [
+      {
+        "accepted_polarity_source_law": false,
+        "domain_size": 1,
+        "equivariant_maps_to_memory_lag_sign_torsor": 0,
+        "failure": "Aut-trivial source datum cannot map equivariantly to an inversion-odd sign torsor",
+        "has_correct_representation_type": false,
+        "nonzero_strict_source_value_exported": false,
+        "source_domain": "trivial_singleton_source"
+      },
+      {
+        "accepted_polarity_source_law": false,
+        "domain_size": 2,
+        "equivariant_maps_to_memory_lag_sign_torsor": 0,
+        "failure": "two labels with trivial Aut action are still sign-blind; equivariance would require fixed target signs",
+        "has_correct_representation_type": false,
+        "nonzero_strict_source_value_exported": false,
+        "source_domain": "trivial_binary_even_source"
+      },
+      {
+        "accepted_polarity_source_law": false,
+        "domain_size": 1,
+        "equivariant_maps_to_memory_lag_sign_torsor": 0,
+        "failure": "commutator magnitude/norm data are even receiver signatures, not signed source values",
+        "has_correct_representation_type": false,
+        "nonzero_strict_source_value_exported": false,
+        "source_domain": "p3044_even_receiver_magnitude_source"
+      },
+      {
+        "accepted_polarity_source_law": false,
+        "domain_size": 1,
+        "equivariant_maps_to_memory_lag_sign_torsor": 0,
+        "failure": "lag-2 winner is a chart receiver label and is Aut-trivial after forgetting the inserted polarity",
+        "has_correct_representation_type": false,
+        "nonzero_strict_source_value_exported": false,
+        "source_domain": "p3045_lag2_receiver_winner_source"
+      },
+      {
+        "accepted_polarity_source_law": false,
+        "domain_size": 2,
+        "equivariant_maps_to_memory_lag_sign_torsor": 2,
+        "failure": "correct representation type exists abstractly, but no nonzero strict odd source value is exported",
+        "has_correct_representation_type": true,
+        "nonzero_strict_source_value_exported": false,
+        "source_domain": "inversion_odd_sign_domain"
+      }
+    ],
+    "tested_premise": "strict polarity-selection/source law for the memory-lag sign"
+  },
+  "decision": {
+    "bounded_no_go": "P3047 proves the finite source-domain obstruction for memory-lag polarity.  Aut-trivial source data have zero equivariant maps to the inversion-odd memory-lag sign torsor.  An inversion-odd source domain has the right representation type and two equivariant maps, but current artifacts export no nonzero strict odd source value, so no unique polarity-selection law is available.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "coupling_polarity_selected": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "selector_readout_coupling_exported": false,
+      "strict_memory_lag_source_law_exported": false,
+      "strict_polarity_source_law_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay positive sign, lag-2 winner, or even commutator magnitudes as a polarity source.  A next admissible move must supply one concrete nonzero strict inversion-odd source value coupled to the memory-lag sign, or pivot to a different genuinely new typed object; otherwise preserve the P3044-P3047 bounded no-export certificate."
+  },
+  "finite_certificate": {
+    "accepted_polarity_source_law_rows": 0,
+    "candidate_law_rows": 3,
+    "odd_source_equivariant_maps": 2,
+    "proof_obligations": 6,
+    "satisfied_proof_obligations": 3,
+    "source_domain_rows": 5,
+    "strict_polarity_source_law_exported": false,
+    "trivial_source_equivariant_maps": 0,
+    "trivial_source_rows": 4
+  },
+  "input_hashes": {
+    "P3046": "0c517ef67b16d9fce781abc0d5d84e0e6b19bd75c5354433ddfd7997bb747bed"
+  },
+  "status": "P3047_MEMORY_LAG_POLARITY_SOURCE_LAW_OBSTRUCTION_BOUNDED_NO_EXPORT"
+}

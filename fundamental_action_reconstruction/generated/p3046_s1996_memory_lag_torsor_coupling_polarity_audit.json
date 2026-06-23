@@ -1,0 +1,145 @@
+{
+  "constructed_theoretical_objects": {
+    "aut_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "coupling_rows": [
+      {
+        "accepted_selector_readout_coupling": false,
+        "aut_equivariant": true,
+        "failure": "equivariant coupling exists only as one of two opposite polarity choices; no strict source law selects this row",
+        "maps_negative_sign_to": "-omega",
+        "maps_positive_sign_to": "+omega",
+        "polarity": "+",
+        "polarity_selected_by_current_artifacts": false
+      },
+      {
+        "accepted_selector_readout_coupling": false,
+        "aut_equivariant": true,
+        "failure": "equivariant coupling exists only as one of two opposite polarity choices; no strict source law selects this row",
+        "maps_negative_sign_to": "+omega",
+        "maps_positive_sign_to": "-omega",
+        "polarity": "-",
+        "polarity_selected_by_current_artifacts": false
+      }
+    ],
+    "finite_certificate": {
+      "accepted_selector_readout_coupling_rows": 0,
+      "accepted_source_readout_rows": 0,
+      "aut_equivariant_coupling_rows": 2,
+      "candidate_coupling_rows": 2,
+      "orientation_torsor_size": 2,
+      "polarity_selected_rows": 0,
+      "proof_obligations": 6,
+      "satisfied_proof_obligations": 3,
+      "selector_readout_coupling_exported": false,
+      "sign_torsor_size": 2,
+      "source_readout_rows": 3
+    },
+    "object": "MemoryLagTorsor_CouplingPolarityAudit",
+    "orientation_torsor": [
+      "-omega",
+      "+omega"
+    ],
+    "proof_obligations": [
+      {
+        "detail": "P3046 attacks only the selector/readout coupling premise left by P3045",
+        "obligation": "p3045_signed_lag_torsor_used",
+        "satisfied": true
+      },
+      {
+        "detail": "two Aut-equivariant maps from sign torsor to orientation torsor are explicit",
+        "obligation": "finite_equivariant_coupling_pair_enumerated",
+        "satisfied": true
+      },
+      {
+        "detail": "the two maps are opposite polarity choices",
+        "obligation": "coupling_polarity_pair_exposed",
+        "satisfied": true
+      },
+      {
+        "detail": "current artifacts do not select one of the two equivariant polarity maps",
+        "obligation": "strict_polarity_selection_law",
+        "satisfied": false
+      },
+      {
+        "detail": "no row installs the coupling as QW-2191 discharge or physical readout",
+        "obligation": "nonpremise_selector_readout_installation",
+        "satisfied": false
+      },
+      {
+        "detail": "P3044/P3045 commutator and lag polarity still lack strict nadsoliton provenance",
+        "obligation": "strict_memory_lag_source_law",
+        "satisfied": false
+      }
+    ],
+    "sign_torsor": [
+      -1,
+      1
+    ],
+    "source_readout_rows": [
+      {
+        "accepted_as_coupling_theorem": false,
+        "candidate": "p3045_signed_lag_torsor_to_orientation_torsor",
+        "finite_positive": true,
+        "nonpremise_selector_readout_installation": false,
+        "reason": "representation-level coupling exists, but coupling polarity and readout installation remain unsourced",
+        "strict_polarity_selection_law": false
+      },
+      {
+        "accepted_as_coupling_theorem": false,
+        "candidate": "lag2_receiver_winner_to_selector_row",
+        "finite_positive": true,
+        "nonpremise_selector_readout_installation": false,
+        "reason": "lag-2 is a receiver winner from P3045, not a theorem selecting a torsor polarity",
+        "strict_polarity_selection_law": false
+      },
+      {
+        "accepted_as_coupling_theorem": false,
+        "candidate": "abstract_signed_source_counterfactual",
+        "finite_positive": false,
+        "nonpremise_selector_readout_installation": false,
+        "reason": "records the missing object type; no concrete strict signed source artifact is supplied",
+        "strict_polarity_selection_law": false
+      }
+    ],
+    "tested_premise": "explicit coupling theorem from signed memory-lag torsor to selector/readout torsor"
+  },
+  "decision": {
+    "bounded_no_go": "P3046 finds real representation-level progress: the signed memory-lag torsor has exactly two Aut-equivariant maps to the orientation/selector torsor.  But the maps are opposite coupling-polarity choices, and current artifacts export no strict law selecting one polarity or installing it as a nonpremise selector/readout row.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "coupling_polarity_selected": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "selector_readout_coupling_exported": false,
+      "strict_memory_lag_source_law_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not promote the two conditional coupling maps to selector closure.  A next proof-grade move must supply a strict polarity-selection/source law for the memory-lag sign, or pivot to a different new typed object; otherwise preserve the P3044-P3046 bounded no-export certificate."
+  },
+  "finite_certificate": {
+    "accepted_selector_readout_coupling_rows": 0,
+    "accepted_source_readout_rows": 0,
+    "aut_equivariant_coupling_rows": 2,
+    "candidate_coupling_rows": 2,
+    "orientation_torsor_size": 2,
+    "polarity_selected_rows": 0,
+    "proof_obligations": 6,
+    "satisfied_proof_obligations": 3,
+    "selector_readout_coupling_exported": false,
+    "sign_torsor_size": 2,
+    "source_readout_rows": 3
+  },
+  "input_hashes": {
+    "P3045": "c477c01719ddbfc92f81b5af9c4ba1abbb0afbb5f0eb6f364320bb1a1d8315df"
+  },
+  "status": "P3046_MEMORY_LAG_TORSOR_COUPLING_POLARITY_AUDIT_BOUNDED_NO_EXPORT"
+}

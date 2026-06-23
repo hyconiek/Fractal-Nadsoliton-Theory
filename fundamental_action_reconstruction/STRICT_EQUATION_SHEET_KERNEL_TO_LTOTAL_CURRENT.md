@@ -3883,3 +3883,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3044/S1994 memory-lag commutator source-candidate audit
 
 `P3044/S1994` supplies one concrete formula outside the exhausted P3038 receiver classes required by P3043: `C_s(i)=K_i*M_{i+s}-M_i*K_{i+s}` using sampled `K_strict_gate` and the memory trace.  The finite audit finds nonzero signed lag sums and exact `K<->M` exchange antisymmetry, so the object is a real computational hint.  It is not yet a strict source law: provenance, chart-independent lag/localizer, selector/readout coupling, unit-bearing action/EOM, `L_total`, `QW-2191` discharge, bridge/role transfer, and ToE closure remain unexported.
+
+## P3045/S1995 memory-lag localizer equivariance obstruction
+
+`P3045/S1995` attacks exactly one P3044 missing premise: a chart-independent lag/localizer theorem for the memory-lag commutator `C_s(i)=K_i*M_{i+s}-M_i*K_{i+s}`.  It constructs the oriented lag torsor, verifies cyclic-origin invariance of integrated scores, and shows the obstruction: Aut inversion sends each signed lag row to the opposite lag/sign.  Therefore lag-score winners, including the finite lag-2 receiver winner, are chart-polarity choices rather than strict localizer exports.  No strict source law, selector/readout coupling, `QW-2191` discharge, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3046/S1996 memory-lag torsor coupling-polarity audit
+
+`P3046/S1996` attacks exactly one P3045 remaining premise: an explicit coupling theorem from the signed memory-lag torsor to a selector/readout torsor.  The finite audit finds real representation-level progress: exactly two Aut-equivariant maps exist from the lag-sign torsor to the orientation torsor.  They are opposite polarity choices, and current artifacts export no strict polarity-selection law, no nonpremise selector/readout installation, and no strict memory-lag source law.  Therefore the conditional coupling pair does not discharge `QW-2191`, export selector closure, install observed physics, add unit-bearing action/EOM or `L_total`, close the bridge, transfer roles, or close ToE.
+
+## P3047/S1997 memory-lag polarity source-law obstruction
+
+`P3047/S1997` attacks exactly one P3046 remaining premise: a strict polarity-selection/source law for the memory-lag sign.  The finite source-domain theorem shows that Aut-trivial source data have zero equivariant maps to the inversion-odd memory-lag sign torsor.  An abstract inversion-odd source domain has the right representation type and two equivariant maps, but no concrete nonzero strict odd source value is exported.  Therefore no unique polarity-selection law, selected P3046 coupling polarity, selector/readout installation, `QW-2191` discharge, observed physics, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure follows.
+
+## P3048/S1998 memory phase-space area odd-source candidate
+
+`P3048/S1998` responds to the P3047 missing-object requirement by constructing a concrete inversion-odd candidate value: the three-point oriented triangle area of the `(K_i,M_i)` memory phase curve.  The finite audit finds nonzero area rows and exact sign flip under lag inversion, so this is a real computational hint beyond an abstract odd-source slot.  It still does not export a strict source law: the `(K,M)` phase-curve provenance, nonconventional orientation, P3046 coupling polarity, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, and ToE closure remain unexported.

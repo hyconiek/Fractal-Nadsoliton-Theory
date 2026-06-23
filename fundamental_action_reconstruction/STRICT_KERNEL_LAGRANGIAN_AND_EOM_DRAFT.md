@@ -3252,3 +3252,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3044/S1994 memory-lag commutator `L_total` guard
 
 `P3044/S1994` adds no physical `L_total` term.  The memory-lag commutator is finite and signed, but it lacks strict source provenance, chart-independent localization, explicit selector/readout coupling, and unit-bearing variational/action/EOM installation.
+
+## P3045/S1995 memory-lag localizer `L_total` guard
+
+`P3045/S1995` adds no physical `L_total` term.  Translation-invariant integrated lag scores are finite diagnostics, but Aut inversion flips the oriented lag sign and no strict lag-polarity source, selector/readout coupling, or unit-bearing variational/action/EOM installation is exported.
+
+## P3046/S1996 memory-lag torsor coupling `L_total` guard
+
+`P3046/S1996` adds no physical `L_total` term.  The signed lag torsor has two Aut-equivariant orientation-torsor couplings, but neither polarity is strictly selected and no selector/readout row or unit-bearing variational/action/EOM installation is exported.
+
+## P3047/S1997 memory-lag polarity source `L_total` guard
+
+`P3047/S1997` adds no physical `L_total` term.  It identifies the required inversion-odd source representation for memory-lag polarity, but current artifacts export no nonzero strict odd source value, no unique polarity law, and no unit-bearing variational/action/EOM installation.
+
+## P3048/S1998 memory phase-area `L_total` guard
+
+`P3048/S1998` adds no physical `L_total` term.  The oriented `(K,M)` phase-area pseudoscalar is finite, nonzero, and inversion-odd, but it lacks strict phase-curve provenance, nonconventional orientation/coupling polarity, and unit-bearing variational/action/EOM installation.

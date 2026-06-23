@@ -1,0 +1,181 @@
+{
+  "constructed_theoretical_objects": {
+    "area_rows": [
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 1,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": true,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": -0.032205877804339,
+        "lag": 1,
+        "oriented_area": 0.032205877804339
+      },
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 1,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": true,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": -0.05160153049994,
+        "lag": 2,
+        "oriented_area": 0.05160153049994
+      },
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 1,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": true,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": -0.055396421036941,
+        "lag": 3,
+        "oriented_area": 0.055396421036941
+      },
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 1,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": true,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": -0.055315933916278,
+        "lag": 4,
+        "oriented_area": 0.055315933916278
+      },
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 1,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": true,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": -0.053244078797344,
+        "lag": 5,
+        "oriented_area": 0.053244078797344
+      },
+      {
+        "accepted_strict_odd_source_value": false,
+        "candidate_sign": 0,
+        "failure": "oriented phase-area value is nonzero and odd, but phase-curve orientation and K/M provenance are not strict source laws",
+        "finite_nonzero": false,
+        "inversion_odd_verified": true,
+        "inverted_lag_area": 0.0,
+        "lag": 6,
+        "oriented_area": 0.0
+      }
+    ],
+    "finite_certificate": {
+      "accepted_strict_odd_source_value_rows": 0,
+      "area_rows": 6,
+      "finite_nonzero_area_rows": 5,
+      "inversion_odd_rows": 6,
+      "proof_obligations": 6,
+      "satisfied_proof_obligations": 3,
+      "satisfied_source_acceptance_criteria": 3,
+      "source_acceptance_criteria": 7,
+      "strict_inversion_odd_source_value_exported": false
+    },
+    "formula": "A_s=1/2*sum_i det[[K_i,M_i,1],[K_{i+s},M_{i+s},1],[K_{i+2s},M_{i+2s},1]]",
+    "object": "MemoryPhaseSpaceArea_OddSourceCandidateMatrix",
+    "proof_obligations": [
+      {
+        "detail": "P3048 supplies a concrete candidate for the missing inversion-odd source value",
+        "obligation": "p3047_missing_odd_value_targeted",
+        "satisfied": true
+      },
+      {
+        "detail": "A_s uses three phase-curve points and oriented triangle area",
+        "obligation": "three_point_area_not_pair_commutator_replay",
+        "satisfied": true
+      },
+      {
+        "detail": "nonzero rows flip sign under lag inversion",
+        "obligation": "finite_nonzero_odd_value",
+        "satisfied": true
+      },
+      {
+        "detail": "no theorem exports this area as a primordial nadsoliton source law",
+        "obligation": "strict_nadsoliton_source_law",
+        "satisfied": false
+      },
+      {
+        "detail": "phase-curve orientation and P3046 coupling polarity remain unselected",
+        "obligation": "nonconventional_orientation_and_coupling",
+        "satisfied": false
+      },
+      {
+        "detail": "no selector/readout, unit-bearing action, EOM, or L_total installation follows",
+        "obligation": "selector_readout_or_ltotal_installation",
+        "satisfied": false
+      }
+    ],
+    "source_acceptance_rows": [
+      {
+        "criterion": "concrete_formula_supplied",
+        "detail": "A_s is an explicit three-point oriented area functional, not just an abstract odd slot",
+        "satisfied": true
+      },
+      {
+        "criterion": "finite_nonzero_signed_value",
+        "detail": "at least one lag has a nonzero oriented area",
+        "satisfied": true
+      },
+      {
+        "criterion": "inversion_odd_representation",
+        "detail": "s -> -s sends A_s to -A_s on every finite row",
+        "satisfied": true
+      },
+      {
+        "criterion": "strict_nadsoliton_source_provenance",
+        "detail": "the area is built from sampled K and P3038 memory trace, not exported by a strict source theorem",
+        "satisfied": false
+      },
+      {
+        "criterion": "nonconventional_phase_curve_orientation",
+        "detail": "the sign uses the chosen cyclic orientation of the (K,M) phase curve",
+        "satisfied": false
+      },
+      {
+        "criterion": "unique_coupling_polarity_to_p3046",
+        "detail": "no theorem selects one P3046 coupling polarity from A_s without importing orientation convention",
+        "satisfied": false
+      },
+      {
+        "criterion": "unit_bearing_selector_readout_installation",
+        "detail": "no QW-2191 discharge, physical readout, or action/EOM insertion is exported",
+        "satisfied": false
+      }
+    ]
+  },
+  "decision": {
+    "bounded_no_go": "P3048 supplies a concrete nonzero inversion-odd candidate value: the oriented triangle area of the (K,M) memory phase curve.  This is real computational progress beyond an abstract odd slot, but it remains a candidate receiver/source value rather than a strict source law because phase-curve orientation, K/M provenance, coupling polarity, and unit-bearing selector/readout installation are not exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "coupling_polarity_selected": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "selector_readout_coupling_exported": false,
+      "strict_inversion_odd_source_value_exported": false,
+      "strict_nadsoliton_source_law_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not promote the oriented phase-area sign alone.  A next proof-grade move may attack exactly one missing premise for this candidate: strict provenance of the (K,M) phase curve as nadsoliton source data, or a nonconventional orientation/coupling-polarity theorem tying A_s to the P3046 torsor."
+  },
+  "finite_certificate": {
+    "accepted_strict_odd_source_value_rows": 0,
+    "area_rows": 6,
+    "finite_nonzero_area_rows": 5,
+    "inversion_odd_rows": 6,
+    "proof_obligations": 6,
+    "satisfied_proof_obligations": 3,
+    "satisfied_source_acceptance_criteria": 3,
+    "source_acceptance_criteria": 7,
+    "strict_inversion_odd_source_value_exported": false
+  },
+  "input_hashes": {
+    "P3047": "84af53e5ee35fb377d828c7c65ae3f7113c11107e0ccf3add6dca2d9ac7075f2"
+  },
+  "status": "P3048_MEMORY_PHASE_AREA_ODD_SOURCE_CANDIDATE_BOUNDED_NO_EXPORT"
+}
