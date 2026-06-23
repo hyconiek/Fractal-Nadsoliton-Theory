@@ -2461,3 +2461,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite area rows are nonzero and flip sign under lag inversion, but phase-curve provenance, nonconventional orientation, unique P3046 coupling polarity, and selector/readout installation remain unexported.
 - Do not promote oriented phase-area signs, cyclic phase-curve orientation, or area-score winners to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move may attack exactly one missing premise for this candidate: strict `(K,M)` phase-curve provenance or nonconventional orientation/coupling-polarity theorem; otherwise preserve bounded no-export.
+
+## Current memory phase-curve provenance obstruction guardrail (P3049/S1999, 2026-06-23)
+
+- P3049 attacks exactly one P3048 missing premise: strict provenance of the `(K_i,M_i)` phase curve as nadsoliton source data.
+- The finite Aut signed-area law is coherent, but K, M, chart order, cyclic orientation, and `A_s` remain sampled/derived/chart-polarity dependent source channels with zero strict source-provenance rows.
+- Do not promote `(K,M)` phase-curve provenance, P3048 area signs, or Aut signed-area equivariance to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move in this lane may attack only the remaining nonconventional orientation/coupling-polarity theorem tying `A_s` to exactly one P3046 polarity; otherwise pivot to a genuinely new typed object.
+
+## Current area-sign to P3046 coupling-polarity guardrail (P3050/S2000, 2026-06-23)
+
+- P3050 attacks exactly one P3049 remaining premise: a nonconventional orientation/coupling-polarity theorem tying `A_s` to exactly one P3046 polarity.
+- Each nonzero P3048 area-sign row admits two Aut-equivariant sign-to-polarity maps, and the neutral lag-6 row has no sign; no strict theorem selects one polarity convention.
+- Do not promote `A_s` sign-to-polarity maps, positive-area conventions, or lag-area winners to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- This lane is bounded unless a genuinely new strict orientation-law/source object selects one of the two maps; otherwise pivot to a different typed object or preserve the P3048-P3050 no-export certificate.
+
+## Current phase-curve winding-index selector candidate guardrail (P3051/S2001, 2026-06-23)
+
+- P3051 introduces a different typed object after the P3050 area-sign lane: the global winding/turning index of the closed `(K_i,M_i)` phase curve around its centroid.
+- The finite curve has winding `+1`, translations preserve it, and Aut inversion units reverse it, but this remains sampled/derived receiver geometry without strict orientation-source provenance or selector/readout coupling.
+- Do not promote winding `+1`, phase-curve turning direction, or Aut signed-winding rows to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires a strict source theorem for the phase-curve orientation/winding sign or an independent typed object outside sampled K/M receiver geometry; otherwise preserve the P3048-P3051 bounded no-export certificate.
+
+## Current phase-curve winding stability-margin guardrail (P3052/S2002, 2026-06-23)
+
+- P3052 strengthens P3051 by adding a centroid-edge clearance matrix and deterministic perturbation witness table for the `(K_i,M_i)` winding `+1` diagnostic.
+- The audited winding is robust under the finite perturbation table and has explicit Aut signed-winding behavior, but this remains receiver-level geometry without strict orientation-source provenance or selector/readout coupling.
+- Do not promote robust winding, positive clearance, perturbation stability, or Aut signed-winding rows to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires a strict source theorem explaining why this robust winding orientation is the nadsoliton selector sign, or an independent typed object outside sampled K/M geometry.

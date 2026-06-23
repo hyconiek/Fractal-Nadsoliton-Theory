@@ -3899,3 +3899,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3048/S1998 memory phase-space area odd-source candidate
 
 `P3048/S1998` responds to the P3047 missing-object requirement by constructing a concrete inversion-odd candidate value: the three-point oriented triangle area of the `(K_i,M_i)` memory phase curve.  The finite audit finds nonzero area rows and exact sign flip under lag inversion, so this is a real computational hint beyond an abstract odd-source slot.  It still does not export a strict source law: the `(K,M)` phase-curve provenance, nonconventional orientation, P3046 coupling polarity, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, and ToE closure remain unexported.
+
+## P3049/S1999 memory phase-curve provenance obstruction
+
+`P3049/S1999` attacks exactly one P3048 missing premise: strict provenance for the `(K_i,M_i)` phase curve.  It separates the K sample vector, P3038 memory trace, ordered Z12 phase curve, cyclic orientation, and P3048 area pseudoscalar into source-channel rows, then checks Aut relabeling of the signed area.  The finite signed-area law is coherent, but all source channels remain sampled/derived/chart-ordered/orientation-polarity dependent.  No strict `(K,M)` phase-curve source, P3046 coupling-polarity theorem, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3050/S2000 area-sign to P3046 coupling-polarity audit
+
+`P3050/S2000` attacks the remaining P3049 premise: a nonconventional orientation/coupling-polarity theorem tying the P3048 signed area `A_s` to exactly one P3046 polarity.  The finite audit constructs the area-sign torsor and enumerates sign-to-polarity maps.  Every nonzero area row has two Aut-equivariant maps to the P3046 polarity torsor, while the neutral lag-6 row has no sign.  Thus the representation type is real, but no unique polarity-selection theorem, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3051/S2001 phase-curve winding-index selector candidate
+
+`P3051/S2001` pivots beyond the P3050 area-sign coupling replay by constructing the global winding/turning index of the closed `(K_i,M_i)` phase curve around its centroid.  The base curve has integer winding `+1`; all `48` Aut/translation rows match the expected preserving/reversing signed winding, with units `7` and `11` reversing the sign.  This is a real topological orientation hint, but it remains sampled/derived receiver geometry: no strict phase-curve source theorem, nonconventional winding-orientation law, P3046 coupling, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
+
+## P3052/S2002 phase-curve winding stability-margin certificate
+
+`P3052/S2002` strengthens the P3051 winding hint with a finite stability-margin certificate.  The centroid has positive distance to every closed phase-curve edge, the minimum centroid-edge clearance is positive, all deterministic Fourier-mode perturbations up to the audited clearance fractions preserve winding, and Aut signed-winding rows verify the preserving/reversing boundary.  This is robust receiver-level evidence only: no strict winding-source theorem, nonconventional orientation theorem, P3046 polarity selection, selector/readout installation, unit-bearing action/EOM, `L_total`, bridge/role transfer, or ToE closure is exported.
