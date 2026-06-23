@@ -2433,3 +2433,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite computation gives nonzero signed lag sums and exact exchange antisymmetry, but no strict nadsoliton source law, chart-independent lag/localizer theorem, or selector/readout coupling is exported.
 - Do not promote memory-lag commutator signs, lag choices, exchange antisymmetry, or memory-trace bilinears to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move may attack exactly one missing premise for this new object: strict source law, chart-independent lag/localizer, or explicit selector/readout coupling theorem.
+
+## Current memory-lag localizer equivariance guardrail (P3045/S1995, 2026-06-23)
+
+- P3045 attacks exactly one P3044 missing premise: chart-independent lag/localizer for the memory-lag commutator.
+- The finite oriented-lag torsor has cyclic-origin-invariant integrated scores, but Aut inversion maps each signed lag score to the opposite lag/sign; lag-score winners remain chart-polarity receiver choices.
+- Do not promote translation-invariant lag scores, lag-2 winners, oriented lag polarity, or memory-lag localizer receivers to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack exactly one remaining P3044 premise: strict nadsoliton source law for the commutator/lag polarity, or explicit selector/readout coupling theorem.
+
+## Current memory-lag torsor coupling-polarity guardrail (P3046/S1996, 2026-06-23)
+
+- P3046 attacks exactly one P3045 remaining premise: explicit coupling from the signed memory-lag torsor to a selector/readout torsor.
+- Exactly two Aut-equivariant coupling maps exist, but they are opposite polarity choices; no strict source law selects one polarity or installs it as a nonpremise selector/readout row.
+- Do not promote the conditional coupling pair, lag-sign torsor, lag-2 receiver winner, or memory-lag commutator sign to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires a strict polarity-selection/source law for the memory-lag sign, or a different genuinely new typed object; otherwise preserve the P3044-P3046 bounded no-export certificate.
+
+## Current memory-lag polarity source-law guardrail (P3047/S1997, 2026-06-23)
+
+- P3047 attacks exactly one P3046 remaining premise: strict polarity-selection/source law for the memory-lag sign.
+- Aut-trivial source data have zero equivariant maps to the inversion-odd memory-lag sign torsor; an inversion-odd domain has the right representation type but no concrete nonzero strict odd source value is exported.
+- Do not promote positive sign conventions, lag-2 receiver winners, even commutator magnitudes, abstract odd source slots, or conditional P3046 coupling maps to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires one concrete nonzero strict inversion-odd source value coupled to memory-lag polarity, or a different genuinely new typed object; otherwise preserve the P3044-P3047 bounded no-export certificate.
+
+## Current memory phase-area odd-source candidate guardrail (P3048/S1998, 2026-06-23)
+
+- P3048 constructs one concrete inversion-odd candidate value after P3047: the three-point oriented triangle area of the `(K_i,M_i)` memory phase curve.
+- The finite area rows are nonzero and flip sign under lag inversion, but phase-curve provenance, nonconventional orientation, unique P3046 coupling polarity, and selector/readout installation remain unexported.
+- Do not promote oriented phase-area signs, cyclic phase-curve orientation, or area-score winners to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack exactly one missing premise for this candidate: strict `(K,M)` phase-curve provenance or nonconventional orientation/coupling-polarity theorem; otherwise preserve bounded no-export.
