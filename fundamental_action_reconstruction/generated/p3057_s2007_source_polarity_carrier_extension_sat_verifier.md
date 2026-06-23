@@ -4,7 +4,7 @@ Status: `P3057_SOURCE_POLARITY_CARRIER_EXTENSION_SAT_VERIFIER_TEMPLATE_NO_EXPORT
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `163`
+- content grep hits: `165`
 - core rows: `6`
 - compatibility squares: `6`
 - extension atoms: `12`

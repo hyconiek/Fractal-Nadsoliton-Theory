@@ -3304,3 +3304,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3057/S2007 source-polarity carrier extension `L_total` guard
 
 `P3057/S2007` adds no physical `L_total` term.  It computes the 12-atom theorem template that a future `G_selector` would need, but no actual unit-bearing signed source/action/EOM carrier or variational chain rule is exported.
+
+## P3058/S2008 unique-polarity coupling `L_total` guard
+
+`P3058/S2008` adds no physical `L_total` term.  It tests the `new_unique_polarity_coupling` atom as a finite two-polarity constraint problem and finds that current constraints remain polarity-even; no unit-bearing signed source/action/EOM carrier or nonproxy variational chain rule is exported.
+
+## P3059/S2009 polarity-odd source-law synthesis `L_total` guard
+
+`P3059/S2009` adds no physical `L_total` term.  Its finite synthesis module produces paired polarity-odd signed candidates but no strict non-premise global coefficient-sign source rule, no unit-bearing action/EOM carrier, and no nonproxy variational chain rule.
