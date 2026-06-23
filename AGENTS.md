@@ -2363,3 +2363,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - A cyclic Dirichlet+mass action, Euler residual, and action-per-label Hamiltonian proxy are computable for sampled `K_strict_gate`, but none is unit-bearing.
 - Do not promote finite Z12 quadratic actions, Euler residuals, action-per-label proxies, or internal action normalizations to physical `L_total`, EOM, Hamiltonian, observed physics, selector, bridge/role-transfer, or ToE closure.
 - A next move must supply an actual action quantum/reference-cell theorem, field provenance plus boundary/integration map, or pivot to another single P3028 atom such as strict selector/branch source.
+
+## Current Z12 directional branch-selector source guardrail (P3035/S1985, 2026-06-23)
+
+- P3035 attacks exactly one P3028 foundation atom: strict selector/branch source.
+- The finite `+direction/-direction` orientation torsor is explicit, but Dirichlet/action/flux receivers are orientation-blind and peak-label anchors are chart-dependent under `U(12)` relabeling.
+- Do not promote orientation-blind quadratic/action/flux receivers, largest-peak label anchors, or internal branch conventions to strict selector closure, `QW-2191` discharge, classical transition, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must supply a genuinely new non-premise inversion-odd/chiral branch source with fixed sign and explicit readout coupling, or pivot to the remaining external physical unit-source atom.
+
+## Current external physical unit-source scale-orbit guardrail (P3036/S1986, 2026-06-23)
+
+- P3036 attacks exactly one P3028 foundation atom: external physical unit source.
+- The two-axis scale torsor `K -> cK` and `ell -> a ell` is explicit; `d=1`, `||K||_2=1`, action-to-one, and entropy one-bit reference-cell candidates are computable but remain internal representatives or conditional gauges.
+- Do not promote label steps, norm-to-one gauges, action-to-one gauges, entropy reference-cell choices, or internal scale representatives to physical length/action/clock units, unit-bearing action/EOM, classical transition, observed physics, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move should reconcile the P3028/P3029-P3036 foundation atoms in a no-new-live-frontier certificate unless a genuinely new unit theorem or readout-coupling source is supplied.
+
+## Current selector-mechanism hint sheaf guardrail (P3037/S1987, 2026-06-23)
+
+- P3037 assumes the true selector mechanism may not fit an existing human schema and organizes current research as typed hints rather than closure claims.
+- The finite hint sheaf covers viscosity/damping/memory, c-retardation anisotropy, inversion-odd/chiral branch-source needs, source-localizer/coupling-polarity needs, and external unit/readout coupling needs, but zero rows export a complete non-premise selector mechanism.
+- Do not promote hint coverage, viscosity/retardation motifs, inversion-odd representation type, branch-source needs, or unit/readout coupling needs to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may construct one integrated candidate operator combining memory/viscosity, retardation anisotropy, an inversion-odd signed value, and explicit unit/readout coupling, then rerun this acceptance test on that single candidate.
+
+## Current integrated viscous-retarded-chiral selector candidate guardrail (P3038/S1988, 2026-06-23)
+
+- P3038 constructs one integrated candidate operator combining memory/viscosity, c-retardation anisotropy, an inversion-odd chiral projection, and a unit/readout coupling slot.
+- The finite computation gives nonzero opposite branch scores, but all source-critical components remain candidate slots: nonpremise chiral sign/localizer, sourced path anisotropy, physical unit/readout coupling, and nonproxy variational/readout insertion are not exported.
+- Do not promote the branch-separating score alone to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack exactly one missing source premise of this integrated operator: chiral sign/localizer theorem, retardation path-anisotropy theorem, or physical unit/readout coupling theorem.

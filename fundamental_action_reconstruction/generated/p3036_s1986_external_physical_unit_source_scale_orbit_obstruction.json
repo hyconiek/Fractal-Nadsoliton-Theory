@@ -1,0 +1,134 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_rows": [
+      {
+        "accepted_as_external_physical_unit_source": false,
+        "after_label_length_rescale": 5.0,
+        "base_value": 1.0,
+        "candidate": "label_step_d_equals_one_length_unit",
+        "dimensionless_representative_available": true,
+        "failure": "choosing d=1 fixes a chart label step, not an external physical length unit",
+        "scale_orbit_invariant": false
+      },
+      {
+        "accepted_as_external_physical_unit_source": false,
+        "after_amplitude_rescale": 1.556694616711,
+        "base_value": 0.51889820557,
+        "candidate": "kernel_l2_norm_set_to_one_amplitude_unit",
+        "dimensionless_representative_available": true,
+        "failure": "normalizing ||K||_2 to one is an amplitude gauge choice; it rescales with K -> cK",
+        "rescaling_exponent": 1.0,
+        "scale_orbit_invariant": false
+      },
+      {
+        "accepted_as_external_physical_unit_source": false,
+        "after_amplitude_rescale": 1.434866601524,
+        "after_label_length_rescale": 0.031885924478,
+        "amplitude_rescaling_exponent": 2.0,
+        "base_value": 0.159429622392,
+        "candidate": "dirichlet_action_set_to_one_action_unit",
+        "dimensionless_representative_available": true,
+        "failure": "action-to-one imports both amplitude and label-length gauges; no external action quantum is sourced",
+        "length_rescaling_exponent": -1.0,
+        "scale_orbit_invariant": false
+      },
+      {
+        "accepted_as_external_physical_unit_source": false,
+        "after_reference_cell_shift_h0_plus_log2": 1.0,
+        "base_value": 1.469734492276,
+        "candidate": "entropy_one_bit_scale_reference_cell",
+        "dimensionless_representative_available": true,
+        "failure": "one-bit entropy scale is conditional on an unsourced reference cell and bit-to-length/action map",
+        "scale_orbit_invariant": false
+      }
+    ],
+    "finite_certificate": {
+      "accepted_external_unit_source_rows": 0,
+      "candidate_rows": 4,
+      "dimensionless_representative_rows": 4,
+      "external_physical_unit_source_exported": false,
+      "proof_obligations": 8,
+      "satisfied_proof_obligations": 3,
+      "scale_orbit_invariant_rows": 0
+    },
+    "object": "ExternalPhysicalUnitSource_ScaleOrbitObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only external physical unit source is tested",
+        "obligation": "attacks_single_P3028_foundation_atom",
+        "satisfied": true
+      },
+      {
+        "detail": "amplitude K->cK and label-length ell->a ell axes are represented",
+        "obligation": "explicit_scale_torsor",
+        "satisfied": true
+      },
+      {
+        "detail": "label, L2, action, and entropy-reference candidates are computed",
+        "obligation": "finite_candidate_unit_receivers_computable",
+        "satisfied": true
+      },
+      {
+        "detail": "no candidate carries physical dimension beyond a normalized representative",
+        "obligation": "dimensionful_external_unit_export",
+        "satisfied": false
+      },
+      {
+        "detail": "L2/action candidates move under K->cK",
+        "obligation": "amplitude_scale_orbit_quotient",
+        "satisfied": false
+      },
+      {
+        "detail": "d=1/action candidates move under ell->a ell",
+        "obligation": "label_length_scale_orbit_quotient",
+        "satisfied": false
+      },
+      {
+        "detail": "entropy candidate remains conditional on reference-cell and bit-to-unit premises",
+        "obligation": "reference_cell_and_bit_to_unit_map",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem couples a unit source to action/EOM/Hamiltonian or classical readout rows",
+        "obligation": "coupling_to_unit_bearing_action_or_readout",
+        "satisfied": false
+      }
+    ],
+    "scale_torsor": {
+      "amplitude_axis": "K -> cK",
+      "label_length_axis": "ell -> a ell",
+      "tested_a": 5.0,
+      "tested_c": 3.0
+    },
+    "tested_foundation_atom": "external_physical_unit_source"
+  },
+  "decision": {
+    "bounded_no_go": "A two-axis scale torsor for external unit sourcing is explicit: amplitude K->cK and label-length ell->a ell. Four finite unit candidates are computable, but each only fixes a dimensionless representative or conditional reference cell. None exports a physical length/action/clock unit or couples that unit to action/EOM/Hamiltonian/readout rows.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "classical_transition_exported": false,
+      "external_physical_unit_source_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "role_transfer_exported": false,
+      "strict_selector_branch_source_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay d=1 labels, norm-to-one gauges, action-to-one gauges, or conditional entropy reference cells as external physical unit sources. A next move should reconcile the P3028/P3029-P3036 foundation atoms in a no-new-live-frontier certificate, unless a genuinely new unit theorem or readout-coupling source is supplied."
+  },
+  "finite_certificate": {
+    "accepted_external_unit_source_rows": 0,
+    "candidate_rows": 4,
+    "dimensionless_representative_rows": 4,
+    "external_physical_unit_source_exported": false,
+    "proof_obligations": 8,
+    "satisfied_proof_obligations": 3,
+    "scale_orbit_invariant_rows": 0
+  },
+  "input_hashes": {
+    "P3028": "d236c74229b3fc70604c4d989caae12a38c7503e96254905f5e2220faa61ac58",
+    "P3035": "cad2e59ea72d66e8f2bc83ebca07ffdf44b0716cfa29a100ca7517dabe01f67c"
+  },
+  "status": "P3036_EXTERNAL_PHYSICAL_UNIT_SOURCE_SCALE_ORBIT_OBSTRUCTION_NO_UNIT_EXPORT"
+}
