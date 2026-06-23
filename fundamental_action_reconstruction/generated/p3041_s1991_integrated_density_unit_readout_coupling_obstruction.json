@@ -1,0 +1,178 @@
+{
+  "constructed_theoretical_objects": {
+    "branch_scores_at_U1": {
+      "minus": 0.007800396949201,
+      "plus": -0.007800396949201
+    },
+    "density_norms": {
+      "l1": 0.009848408824771,
+      "l2": 0.004285430893274,
+      "linf": 0.002586689329575,
+      "sum": -0.007800396949201
+    },
+    "finite_certificate": {
+      "accepted_physical_unit_readout_coupling_rows": 0,
+      "finite_nonzero_rows": 4,
+      "physical_unit_readout_coupling_exported": false,
+      "proof_obligations": 8,
+      "receiver_rows": 4,
+      "satisfied_proof_obligations": 4,
+      "unit_grid_rows": 5,
+      "unit_scaling_exact_rows": 5
+    },
+    "object": "IntegratedDensityUnitReadoutCoupling_ObstructionMatrix",
+    "proof_obligations": [
+      {
+        "detail": "only the physical unit/readout coupling premise is audited",
+        "obligation": "exact_p3038_unit_readout_premise_targeted",
+        "satisfied": true
+      },
+      {
+        "detail": "P3038 branch score remains nonzero",
+        "obligation": "finite_integrated_density_readout_nonzero",
+        "satisfied": true
+      },
+      {
+        "detail": "finite U grid shows exact score scaling",
+        "obligation": "unit_scale_orbit_constructed",
+        "satisfied": true
+      },
+      {
+        "detail": "P3036 external unit-source obstruction is an explicit input",
+        "obligation": "p3036_unit_boundary_consulted",
+        "satisfied": true
+      },
+      {
+        "detail": "no length/action/clock unit is exported beyond P3036-blocked representatives",
+        "obligation": "external_physical_unit_source",
+        "satisfied": false
+      },
+      {
+        "detail": "U rescales the score; normalization fixes representatives only",
+        "obligation": "scale_orbit_quotient_or_absolute_calibration",
+        "satisfied": false
+      },
+      {
+        "detail": "no theorem maps the integrated density to a named observer-independent physical readout row",
+        "obligation": "readout_coupling_theorem",
+        "satisfied": false
+      },
+      {
+        "detail": "no unit-bearing density/action/EOM/Hamiltonian insertion is exported",
+        "obligation": "nonproxy_variational_or_action_installation",
+        "satisfied": false
+      }
+    ],
+    "receiver_rows": [
+      {
+        "accepted_as_physical_unit_readout_coupling": false,
+        "failure": "U=1 is a dimensionless placeholder already blocked by P3036, not an external physical unit",
+        "finite_nonzero": true,
+        "formula": "S_b = sum_i b * U_readout * Delta_i * chi_i with U_readout=1",
+        "receiver": "placeholder_U_readout_equals_one"
+      },
+      {
+        "accepted_as_physical_unit_readout_coupling": false,
+        "failure": "scores rescale exactly with U; the orbit is represented but not physically quotiented or externally fixed",
+        "finite_nonzero": true,
+        "receiver": "unit_scale_orbit_on_branch_score",
+        "unit_scaled_scores": [
+          {
+            "finite_nonzero": true,
+            "score": -0.0019500992373,
+            "score_over_unit": -0.007800396949201,
+            "unit_scale": 0.25
+          },
+          {
+            "finite_nonzero": true,
+            "score": -0.003900198474601,
+            "score_over_unit": -0.007800396949201,
+            "unit_scale": 0.5
+          },
+          {
+            "finite_nonzero": true,
+            "score": -0.007800396949201,
+            "score_over_unit": -0.007800396949201,
+            "unit_scale": 1.0
+          },
+          {
+            "finite_nonzero": true,
+            "score": -0.015600793898403,
+            "score_over_unit": -0.007800396949201,
+            "unit_scale": 2.0
+          },
+          {
+            "finite_nonzero": true,
+            "score": -0.031201587796805,
+            "score_over_unit": -0.007800396949201,
+            "unit_scale": 4.0
+          }
+        ]
+      },
+      {
+        "accepted_as_physical_unit_readout_coupling": false,
+        "candidate_units": {
+          "l1_to_one": 101.5392453535017,
+          "l2_to_one": 233.3487634976055,
+          "score_to_one": 128.198604059808
+        },
+        "failure": "norm-to-one and score-to-one couplings are internal normalizations/target gauges, not source theorems",
+        "finite_nonzero": true,
+        "receiver": "density_norm_to_one_couplings"
+      },
+      {
+        "accepted_as_physical_unit_readout_coupling": false,
+        "candidate_imports": [
+          "label_step",
+          "kernel_l2_norm",
+          "dirichlet_action_to_one",
+          "entropy_one_bit_reference_cell"
+        ],
+        "failure": "P3036 classifies these as internal representatives or conditional gauges; importing them cannot source P3038 coupling",
+        "finite_nonzero": true,
+        "receiver": "p3036_external_unit_import_receiver"
+      }
+    ],
+    "target_formula": "S_b = sum_i b * U_readout * Delta_i * chi_i from P3038",
+    "unit_grid": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ]
+  },
+  "decision": {
+    "bounded_no_go": "The integrated density has a nonzero finite readout and a fully explicit unit-scale orbit: multiplying U rescales the score exactly.  However U=1, norm-to-one, score-to-one, and imported P3036 unit candidates are all internal gauges or blocked representatives.  No external physical unit, absolute scale quotient, readout-coupling theorem, or nonproxy variational/action installation is exported.",
+    "negative_export_flags": {
+      "bridge_closure_exported": false,
+      "ltotal_exported": false,
+      "observed_physics_exported": false,
+      "p3038_promoted_to_selector_source": false,
+      "physical_unit_readout_coupling_exported": false,
+      "qw2191_discharged": false,
+      "role_transfer_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_bearing_action_eom_hamiltonian_exported": false
+    },
+    "next_honest_step": "Do not replay U=1, norm-to-one, score-to-one, or P3036-blocked unit imports as physical readout coupling.  Since P3039-P3041 have now attacked the direct P3038 source premises, the next honest move is a P3038-P3041 integrated selector-candidate reconciliation/no-selector-export certificate unless a genuinely new strict source law is supplied outside these exhausted receiver classes."
+  },
+  "finite_certificate": {
+    "accepted_physical_unit_readout_coupling_rows": 0,
+    "finite_nonzero_rows": 4,
+    "physical_unit_readout_coupling_exported": false,
+    "proof_obligations": 8,
+    "receiver_rows": 4,
+    "satisfied_proof_obligations": 4,
+    "unit_grid_rows": 5,
+    "unit_scaling_exact_rows": 5
+  },
+  "input_hashes": {
+    "P3036": "3b4917a319baa4469729b59c097dc6675af4a3fac147cd9af12c08a4cc862f7d",
+    "P3038": "ddc9dcacbafc23169bda22404e118bdd4577bf7f7a386767e79f84aa68949e66",
+    "P3039": "9371881003485c521b75a690515e9018bb12117e5cb80facb59a0610740d026f",
+    "P3040": "3f0b7ede99abc8f2eb304ad1846dea7fe0f1c2ad8f6f2ef5d815cdae44189baf"
+  },
+  "status": "P3041_INTEGRATED_DENSITY_UNIT_READOUT_COUPLING_OBSTRUCTION_NO_SOURCE_EXPORT"
+}

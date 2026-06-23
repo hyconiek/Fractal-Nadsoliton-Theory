@@ -2391,3 +2391,45 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite computation gives nonzero opposite branch scores, but all source-critical components remain candidate slots: nonpremise chiral sign/localizer, sourced path anisotropy, physical unit/readout coupling, and nonproxy variational/readout insertion are not exported.
 - Do not promote the branch-separating score alone to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move may attack exactly one missing source premise of this integrated operator: chiral sign/localizer theorem, retardation path-anisotropy theorem, or physical unit/readout coupling theorem.
+
+## Current chiral projector sign-localizer guardrail (P3039/S1989, 2026-06-23)
+
+- P3039 attacks exactly one P3038 missing source premise: a nonpremise phase-origin/sign-localizer theorem for `chi_i = sin(2*pi*i/12)`.
+- The finite chiral projector torsor is real and inversion-odd, but translations move phase origins, Aut inversion exchanges polarity, and `K`/memory/absolute-`K` weighted phase receivers are chart-relative rather than strict source laws.
+- Do not promote sine/chiral projectors, phase-score winners, memory-weighted phase receivers, or inversion-oddness alone to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack a different P3038 missing premise: sourced retardation path-anisotropy theorem or physical unit/readout coupling theorem, but only with a genuinely new strict source law.
+
+## Current retarded path-anisotropy source guardrail (P3040/S1990, 2026-06-23)
+
+- P3040 attacks exactly one P3038 missing source premise: a sourced retarded path-anisotropy theorem for the `Delta_i` split.
+- The split is finite and nonzero, and the path-sign torsor flips `Delta`, but `rho`/sign insertion, rho-grid readout tuning, cyclic gradients, and memory curvature are receiver-side diagnostics rather than strict path geometry.
+- Do not promote rho-grid tuning, inserted parallel/perpendicular labels, cyclic-gradient path receivers, memory-curvature receivers, or finite retarded splitting alone to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack the remaining direct P3038 premise: physical unit/readout coupling theorem for the integrated density, but only with a genuinely new strict source law.
+
+## Current integrated-density unit/readout coupling guardrail (P3041/S1991, 2026-06-23)
+
+- P3041 attacks the remaining direct P3038 source premise: a physical unit/readout coupling theorem for the integrated density.
+- The finite unit-scale orbit is exact, but `U=1`, norm-to-one/score-to-one couplings, and P3036 unit imports are internal gauges or blocked representatives rather than external physical unit/readout source laws.
+- Do not promote unit-scale orbits, placeholder `U_readout`, norm/score normalizations, or P3036-blocked unit imports to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move should reconcile P3038-P3041 as an integrated selector-candidate no-export certificate unless a genuinely new strict source law outside these receiver classes is supplied.
+
+## Current integrated selector-candidate reconciliation guardrail (P3042/S1992, 2026-06-23)
+
+- P3042 reconciles P3038-P3041 in a five-atom source lattice: branch-separating integrated operator, chiral sign/localizer, retarded path anisotropy, physical unit/readout coupling, and nonproxy variational/readout installation.
+- Only the computational branch-separation atom is closed; the four required source/installation atoms remain open, and only the all-five-atoms-closed counterfactual profile would export a strict selector mechanism.
+- Do not replay P3038 receiver classes, sine/chiral phase receivers, rho/path tuning, unit normalization/imports, or nonproxy placeholders as `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move requires a genuinely new strict source law outside these exhausted receiver classes, or a broad state-map/new-object intake rather than more replay.
+
+## Current post-selector-candidate new-source intake guardrail (P3043/S1993, 2026-06-23)
+
+- P3043 performs the broad state-map/new-object intake requested after P3042 instead of replaying the integrated selector candidate.
+- Exhausted receiver classes are explicit: sine/chiral phase receivers, rho/path tuning, unit normalization/imports, nonproxy placeholders, and hint coverage without a source row; current rows export zero accepted new strict source laws.
+- Do not promote the P3043 intake gate, unsupplied source slots, or any exhausted receiver class to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next admissible move must supply one concrete formula/artifact satisfying the new-source predicates, or pivot to a different broad state-map lane with a genuinely new typed object.
+
+## Current memory-lag commutator source-candidate guardrail (P3044/S1994, 2026-06-23)
+
+- P3044 supplies one concrete formula outside the exhausted P3038 receiver classes: the memory-lag commutator `C_s(i)=K_i*M_{i+s}-M_i*K_{i+s}`.
+- The finite computation gives nonzero signed lag sums and exact exchange antisymmetry, but no strict nadsoliton source law, chart-independent lag/localizer theorem, or selector/readout coupling is exported.
+- Do not promote memory-lag commutator signs, lag choices, exchange antisymmetry, or memory-trace bilinears to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move may attack exactly one missing premise for this new object: strict source law, chart-independent lag/localizer, or explicit selector/readout coupling theorem.
