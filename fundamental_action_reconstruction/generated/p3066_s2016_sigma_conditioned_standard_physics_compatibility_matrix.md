@@ -4,7 +4,7 @@ Status: `P3066_SIGMA_CONDITIONED_STANDARD_PHYSICS_COMPATIBILITY_MATRIX_NO_CLOSUR
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `4459`
+- content grep hits: `4559`
 - sigma branches: `2`
 - observable rows: `6`
 - branch matrix rows: `12`

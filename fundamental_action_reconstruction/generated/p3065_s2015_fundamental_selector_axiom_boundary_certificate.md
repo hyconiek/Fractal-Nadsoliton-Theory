@@ -4,7 +4,7 @@ Status: `P3065_FUNDAMENTAL_SELECTOR_AXIOM_BOUNDARY_CERTIFICATE_AXIOM_AUGMENTED_O
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `2143`
+- content grep hits: `2165`
 - sigma choices: `2`
 - boundary rows: `3`
 - axiom-augmented admitted rows: `2`
