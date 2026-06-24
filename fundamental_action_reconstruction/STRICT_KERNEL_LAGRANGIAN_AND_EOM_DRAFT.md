@@ -3392,3 +3392,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3079/S2029 causal-order audit remains non-spacetime
 
 `P3079/S2029` shows that current Z12 dispersion data can support graph-distance and adjacency-reachability bookkeeping, but not a sourced Lorentzian metric, unit-normalized time coordinate, finite physical light cone, or spacetime wave EOM.  Diffusion remains smoothing-only, and any Minkowski light-cone interpretation is imported rather than derived.
+
+## P3080/S2030 observable-interface remains formal
+
+`P3080/S2030` makes the internal-to-standard-physics interface obligations explicit.  The Dirichlet/Laplacian branch remains a real internal variational/smoothing structure, but it still lacks a non-imported dimension map, controlled continuum functor with units, Lorentzian signature, gauge representation, unit-bearing conserved current, and empirical readout.  Therefore it adds no physical `L_total` term and no spacetime/gauge EOM.
+
+## P3081/S2031 Dirichlet units remain unsourced
+
+`P3081/S2031` strengthens the Dirichlet/Laplacian audit by computing an exact finite energy spectrum for binary Z12 profiles.  The result gives internal positive dimensionless reference values, but it still does not source an action unit, energy unit, time unit, physical Hamiltonian normalization, or physical `L_total` term.
