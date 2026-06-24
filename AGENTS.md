@@ -2573,3 +2573,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Acceptance requires exactly one absolute non-premise source-sign atom and exactly one absolute non-premise coupling-polarity atom; the exhaustive `16`-row table has `4` accepting rows, all with `2` atoms, but the current artifact row has `0` exported atoms and is not accepted.
 - Do not promote partial source/coupling rows, formal SAT accepting rows, or polarity conventions to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move must construct exactly one primitive atom from the P3064 template, then rerun the two-atom acceptance check; otherwise pivot to another P3057 atom while preserving the P3048-P3064 bounded no-export boundary.
+
+## Current fundamental selector axiom boundary guardrail (P3065/S2015, 2026-06-24)
+
+- P3065 accepts `sigma_selector` only as an explicit fundamental boundary axiom: `T_sigma = strict_nadsoliton_information_theory + A_selector(sigma)`, with `sigma in {+1,-1}`; this means theory = universe with a given orientation choice.
+- The finite boundary table has `2` admitted axiom-augmented branches and `0` strict selector-export rows.  `sigma_selector` is therefore a recorded boundary parameter, not a non-premise derivation or strict source theorem.
+- This axiom boundary may unblock orientation-conditioned study of the informational nadsoliton, but every dependent result must remain marked axiom-augmented/conditioned-on-`sigma` unless a later strict theorem supplies the missing P3064 source/coupling atoms.
+- Do not promote the axiom boundary to observed physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.  The next proof-grade move should build a finite `sigma`-conditioned state-transition/observable-invariant matrix separating sigma-dependent from sigma-invariant downstream objects.
+
+## Current sigma-conditioned standard-physics compatibility guardrail (P3066/S2016, 2026-06-24)
+
+- P3066 proceeds under the P3065 `T_sigma` boundary instead of replaying strict selector derivation: selector search no longer blocks conditioned informational-nadsoliton analysis.
+- The constructed matrix has `2` sigma branches, `6` observable rows, `12` branch rows, and `36` standard-physics obligation rows; it separates sigma-invariant scalar rows from sigma-odd rows and unknown transition-interface rows.
+- Current artifacts export `0` Lorentz/gauge/unitarity/renormalization/EOM/empirical compatibility closures.  Do not promote this matrix to observed physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next proof-grade move should pick exactly one matrix row, preferably `light_emergence_interface`, construct a sigma-conditioned nadsoliton-to-light transition law, and test Lorentz covariance; otherwise pivot to a sigma-invariant scalar conservation/scale-control theorem.

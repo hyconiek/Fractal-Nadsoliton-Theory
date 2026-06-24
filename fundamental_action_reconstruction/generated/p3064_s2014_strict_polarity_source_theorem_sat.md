@@ -4,7 +4,7 @@ Status: `P3064_STRICT_POLARITY_SOURCE_THEOREM_SAT_NO_CURRENT_EXPORT`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `990`
+- content grep hits: `991`
 - primitive atoms: `4`
 - SAT rows: `16`
 - consistent rows: `9`

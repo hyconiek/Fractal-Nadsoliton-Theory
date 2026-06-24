@@ -3332,3 +3332,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3064/S2014 strict polarity-source theorem SAT `L_total` guard
 
 `P3064/S2014` adds no physical `L_total` term.  It is a finite theorem-template SAT certificate over source/coupling sign atoms; no row exports a unit-bearing signed action/EOM carrier or nonproxy variational chain rule.
+
+## P3065/S2015 selector axiom is not an `L_total` source
+
+`P3065/S2015` adds no variational term.  It records an axiom-augmented orientation boundary condition for branch-conditioned study; no unit-bearing action density, EOM term, Hamiltonian term, or nonproxy coupling is exported.
+
+## P3066/S2016 standard-physics matrix is not an `L_total` closure
+
+`P3066/S2016` is a sigma-conditioned acceptance/obstruction matrix for compatibility obligations.  It does not add a unit-bearing action, gauge sector, propagator, counterterm flow, EOM, Hamiltonian, or empirical constant map; every standard-physics row remains a future theorem obligation.
