@@ -4007,3 +4007,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3075/S2025 variational-source obstruction table
 
 `P3075/S2025` constructs `Z12LocalQuadraticGradientSourceInterface` for the `P3073` accepted internal scale-flow rows after the `P3074` Lyapunov certificate.  It tests `192` accepted target-flow rows against `5` candidate quadratic generators for `960` exact negative-gradient rows.  The local Dirichlet generator exactly sources all `96` cycle-Laplacian rows as an internal dimensionless local gradient flow; the mean-centering rows match only the global variance generator and therefore remain nonlocal on `Z12`.  This is not a unit-bearing action, Hamiltonian, spacetime variational EOM, observed-light/gauge sector, empirical physics, `L_total`, selector closure, bridge/role-transfer, or ToE closure.
+
+## P3076/S2026 Dirichlet spectral-dispersion audit
+
+`P3076/S2026` diagonalizes the `P3075` local Dirichlet/Laplacian source on `Z12` by Fourier-mode eigenvalues `lambda_j = 2 - 2 cos(2*pi*j/12)`.  The finite table has `12` spectral modes and `36` fractional-step amplification rows.  The constant mode is neutral and all nonconstant rows contract for steps `1/12`, `1/6`, and `1/4`, yielding an internal diffusive smoothing branch.  The formal small-`k` `lambda ~ k^2` proxy is not a lightlike branch: no second-order wave equation, unit-bearing time coordinate, Lorentzian metric, observed-light/gauge sector, empirical physics, `L_total`, selector closure, bridge/role-transfer, or ToE closure is exported.
+
+## P3077/S2027 second-order lift obstruction table
+
+`P3077/S2027` constructs `Z12DirichletSecondOrderLiftObstructionTable` after the `P3076` diffusive spectral audit.  It tests `4` phase-space/second-order lift candidates, `6` premise gates, `24` gate rows, and `48` modal lift rows.  The formal Hamiltonian Dirichlet lift gives `11` imported-formal nonconstant rows with `omega_j^2=lambda_j`, but `0` rows pass the internal-source predicate because momentum space, symplectic form, kinetic normalization, unit-bearing time, and Lorentzian embedding are not exported by current artifacts.  This does not export observed light, gauge photons, spacetime EOM, unit-bearing action/Hamiltonian, empirical physics, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
