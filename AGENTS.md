@@ -2650,3 +2650,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The matrix reuses `192` accepted P3073 flow rows, tests `5` candidate quadratic generators, and has `960` exact negative-gradient rows.  The local Dirichlet generator exactly sources all `96` cycle-Laplacian rows; mean-centering has `96` exact matches only through the global variance generator and remains nonlocal on `Z12`.
 - Do not promote P3075 to a unit-bearing action, Hamiltonian, full variational EOM, canonical unit provider, strict spacetime embedding, observed light, gauge photon sector, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is one bounded continuum-limit/spectral-dispersion audit of the internal Dirichlet/Laplacian source, without claiming observed light or gauge photons absent a separate unit/coordinate/source theorem.
+
+## Current Dirichlet spectral-dispersion guardrail (P3076/S2026, 2026-06-24)
+
+- P3076 follows the P3075 recommendation and constructs a bounded spectral-dispersion audit for the internal local Dirichlet/Laplacian source on `Z12`.
+- The audit diagonalizes `12` Fourier modes and checks `36` fractional-step amplification rows.  The constant mode is neutral; all nonconstant modes contract for steps `1/12`, `1/6`, and `1/4`, so the exported branch is internal diffusive smoothing.
+- Do not promote the formal small-`k` `lambda ~ k^2` proxy to observed light, gauge photons, spacetime EOM, units, Hamiltonian dynamics, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one bounded second-order lift obstruction table for the same source, explicitly auditing whether phase-space/symplectic/Hamiltonian/time-coordinate premises are internally sourced or merely imported.
+
+## Current second-order lift obstruction guardrail (P3077/S2027, 2026-06-24)
+
+- P3077 follows the P3076 recommendation and constructs a bounded phase-space/second-order lift obstruction table for the same internal Dirichlet/Laplacian source.
+- The formal Hamiltonian Dirichlet lift has `11` nonconstant modal rows satisfying the imported-formal relation `omega_j^2=lambda_j`, but `0` rows satisfy the internal-source predicate because `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian spacetime embedding remain unsourced.
+- Do not promote P3077 to observed light, gauge photons, spacetime EOM, unit-bearing action/Hamiltonian, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one bounded intrinsic momentum/symplectic-source audit over current nadsoliton/Z12 artifacts, or otherwise a pivot to a different non-selector typed object.

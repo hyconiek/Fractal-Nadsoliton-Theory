@@ -3376,3 +3376,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3075/S2025 local Dirichlet source is internal only
 
 `P3075/S2025` exports a scoped internal local quadratic Dirichlet gradient source for the accepted Laplacian flow, while mean-centering remains exact only through a global nonlocal variance generator.  The finite source object is dimensionless and does not export a unit-bearing action, Hamiltonian, variational spacetime EOM, coordinate theorem, gauge field, observed spacetime dynamics, or empirical physics map.
+
+## P3076/S2026 first-order spectrum is not wave EOM
+
+`P3076/S2026` gives an exact finite spectral audit of the internal Dirichlet gradient source.  Its accepted dynamics is first-order dissipative smoothing: Fourier modes have generator eigenvalues `-lambda_j` and no oscillatory phase rows.  A wave/Hamiltonian reading would require new phase-space, symplectic, second-order/time-coordinate, and unit-source premises that are not exported here.
+
+## P3077/S2027 formal Hamiltonian lift remains unsourced
+
+`P3077/S2027` shows that `H = 1/2*pi^2 + E_D(rho)` is a coherent formal lift of the internal Dirichlet source, with modal relation `omega_j^2=lambda_j` for nonconstant modes.  However, the lift imports `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian embedding; current artifacts do not source them.  Therefore no variational spacetime EOM, unit-bearing Hamiltonian/action, observed light, or gauge sector is exported.

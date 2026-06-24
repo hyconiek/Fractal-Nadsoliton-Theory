@@ -4,7 +4,7 @@ Status: `P3074_INTERNAL_LYAPUNOV_MONOTONICITY_CERTIFICATE_NO_VARIATIONAL_PHYSICS
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `36386`
+- content grep hits: `36473`
 - P3073 accepted scale-flow rows reused: `192`
 - step sizes: `3`
 - functionals tested: `3`
