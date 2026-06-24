@@ -2678,3 +2678,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit has `144` cycle-distance rows, `21` diffusion support rows, `12` spectral velocity proxy rows, and `25` causal candidate gate rows; no candidate exports all internal metric-signature/time/EOM gates.
 - Do not promote cycle distance, adjacency reachability, diffusion tails, dimensionless velocity proxies, or imported Minkowski templates to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is a bounded typed observable-interface obligation table for comparing the smoothing/dispersion branch with standard theoretical physics, without claiming any obligation is discharged unless a new strict source theorem provides it.
+
+## Current typed observable-interface guardrail (P3080/S2030, 2026-06-24)
+
+- P3080 follows the P3079 recommendation and constructs a bounded typed observable-interface obligation table for comparing the Z12 smoothing/dispersion branch with standard theoretical physics.
+- The finite audit has `4` typed interface objects, `6` standard-physics obligations, and `24` obligation cells: `0` strictly sourced, `10` formal/imported, and `14` absent; no object discharges the full interface predicate.
+- Do not promote Dirichlet energy, Laplacian smoothing, spectral dispersion proxies, or imported standard-physics templates to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one missing interface atom: a bounded dimension/action-unit source audit for the internal Dirichlet energy scalar, unless a different genuinely new typed object is introduced.
+
+## Current Dirichlet dimension/action-unit source guardrail (P3081/S2031, 2026-06-24)
+
+- P3081 follows the P3080 recommendation and audits one missing interface atom: a non-imported dimension/action-unit source for the internal Dirichlet energy scalar `E_D(rho)`.
+- The finite audit computes all `4096` binary Z12 profiles, `7` energy-spectrum rows, and `36` candidate unit-source gate rows; positive internal dimensionless witnesses exist, but `0` candidates export a non-imported action/energy/time unit.
+- Do not promote Dirichlet energy gaps, Z12 counts, `alpha_geo`, entropy-bit references, spectral gaps, or imported `hbar/c/a` templates to physical Hamiltonian, spacetime EOM, observed light, gauge photons, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one different interface atom: a bounded continuum-limit functor obstruction/witness audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new unit-source theorem is introduced.

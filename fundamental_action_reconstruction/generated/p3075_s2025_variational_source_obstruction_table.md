@@ -4,7 +4,7 @@ Status: `P3075_LOCAL_DIRICHLET_VARIATIONAL_SOURCE_PARTIAL_EXPORT_MEAN_CENTERING_
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `33763`
+- content grep hits: `33816`
 - P3074 accepted internal Lyapunov rows: `1008`
 - accepted P3073 flow rows reused: `192`
 - candidate generators: `5`
