@@ -3999,3 +3999,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3073/S2023 bounded scale-flow operator obstruction
 
 `P3073/S2023` constructs `SigmaEvenBoundedScaleFlowOperatorTemplate` over the three `P3071` accepted sigma-even scalar profiles.  It audits `3` profiles across `2` sigma branches, `24` `D12` transforms, and `5` exact flow operators, for `720` rows.  The cycle-Laplacian and mean-centering operators produce `192` intrinsic, premise-free, nonzero, bounded, total-preserving internal scale-flow rows, but `0` rows preserve the full `P3071` scalar-summary packet after one exact step.  Thus no full conserved-summary dynamics, Noether theorem, unit-bearing action, EOM, observed-light/gauge sector, `L_total`, bridge/role-transfer, selector closure, or ToE closure is exported.
+
+## P3074/S2024 Lyapunov/entropy monotonicity certificate
+
+`P3074/S2024` constructs `SigmaEvenScaleFlowLyapunovEntropyMonotonicityCertificate` for the `192` accepted internal `P3073` scale-flow rows.  It tests `3` exact step sizes and `3` functionals for `1728` rows.  The intrinsic variance and quadratic Dirichlet energies give `1008` accepted monotone nonincreasing internal Lyapunov rows; the shell-weighted energy is retained only as a chart-weighted control.  This exports internal dimensionless stability evidence, not a variational source theorem, Hamiltonian, unit-bearing action, EOM, observed spacetime/light/gauge sector, empirical physics, `L_total`, selector closure, bridge/role-transfer, or ToE closure.
+
+## P3075/S2025 variational-source obstruction table
+
+`P3075/S2025` constructs `Z12LocalQuadraticGradientSourceInterface` for the `P3073` accepted internal scale-flow rows after the `P3074` Lyapunov certificate.  It tests `192` accepted target-flow rows against `5` candidate quadratic generators for `960` exact negative-gradient rows.  The local Dirichlet generator exactly sources all `96` cycle-Laplacian rows as an internal dimensionless local gradient flow; the mean-centering rows match only the global variance generator and therefore remain nonlocal on `Z12`.  This is not a unit-bearing action, Hamiltonian, spacetime variational EOM, observed-light/gauge sector, empirical physics, `L_total`, selector closure, bridge/role-transfer, or ToE closure.

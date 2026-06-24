@@ -3368,3 +3368,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3073/S2023 scale-flow operators are not variational dynamics
 
 `P3073/S2023` exports internal total-preserving bounded scale-flow operators for the nonconstant `P3071` scalar profiles, but the accepted nonzero flows do not preserve the full scalar-summary packet and are not derived from an action, Hamiltonian, variational EOM, unit-bearing coordinate map, gauge field, observed spacetime dynamics, or empirical physics map.
+
+## P3074/S2024 Lyapunov monotonicity is not an action
+
+`P3074/S2024` gives exact internal monotonicity for variance and quadratic Dirichlet controls along accepted `P3073` flows.  These functionals are Lyapunov/entropy-like certificates only; no local action, Hamiltonian, variational EOM, unit-bearing coordinate map, gauge field, observed spacetime dynamics, or empirical physics map is exported.
+
+## P3075/S2025 local Dirichlet source is internal only
+
+`P3075/S2025` exports a scoped internal local quadratic Dirichlet gradient source for the accepted Laplacian flow, while mean-centering remains exact only through a global nonlocal variance generator.  The finite source object is dimensionless and does not export a unit-bearing action, Hamiltonian, variational spacetime EOM, coordinate theorem, gauge field, observed spacetime dynamics, or empirical physics map.
