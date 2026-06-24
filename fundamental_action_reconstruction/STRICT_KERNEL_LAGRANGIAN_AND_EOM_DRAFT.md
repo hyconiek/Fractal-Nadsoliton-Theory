@@ -3352,3 +3352,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3069/S2019 coordinate rank is not a coordinate/action source
 
 `P3069/S2019` separates raw finite rank from physical coordinate sourcing.  Chart-dependent `T_sigma x Z12` feature spans do not add a unit-bearing coordinate map, Lorentzian metric, light-sector action density, EOM, Hamiltonian, or empirical constant map.
+
+## P3070/S2020 unit declarations are not action units
+
+`P3070/S2020` blocks the move from dimensionless nadsoliton scalars or declared `c=1` conventions to a unit-bearing coordinate/action source.  The audit exports no length/time unit law, no light-sector action density, no EOM/Hamiltonian, and no empirical constant map.
+
+## P3071/S2021 conserved scalar profiles are not dynamics
+
+`P3071/S2021` gives scoped dimensionless conservation/scale-control for three sigma-even Z12 scalar profiles under sigma flip and D12 reindexing.  These invariants are not a Noether current, action density, EOM, Hamiltonian, unit-bearing coordinate, gauge field, or empirical constant map.

@@ -4,7 +4,7 @@ Status: `P3069_COORDINATE_PAIR_SOURCE_RANK_OBSTRUCTION_NO_EXPORT`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `4192`
+- content grep hits: `4332`
 - domain rows: `24`
 - candidate features: `6`
 - feature subset rows: `63`

@@ -3983,3 +3983,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3069/S2019 coordinate-pair source rank obstruction
 
 `P3069/S2019` attacks one P3068 atom: a strict coordinate-pair source theorem for `t_sigma` and `x_sigma`.  It constructs a `CoordinatePairSourceCandidateSpace` over `24` `T_sigma x Z12` rows and audits all `63` nonempty subsets of six current features by exact rational rank.  Some chart-dependent subsets have raw rank at least two, but `0` subsets are accepted as coordinate-pair sources because current artifacts provide `0` unit-bearing candidate features and `0` nonconventional coordinate-source features.  Thus no strict spacetime embedding, observed-light closure, `L_total`, or ToE closure is exported.
+
+## P3070/S2020 canonical length/time unit-provider obstruction
+
+`P3070/S2020` attacks one P3069 atom: a canonical length/time unit provider that would convert a nonconventional nadsoliton scalar into a unit-bearing coordinate.  It constructs a `CanonicalLengthTimeUnitProviderTemplate` and audits `30` scalar/unit-map rows.  Current artifacts include positive dimensionless candidates and conventional declarations, but `0` nonconventional scalar candidates, `0` nonconventional unit laws, and `0` accepted unit-provider rows.  Therefore no unit-bearing coordinate, strict spacetime embedding, observed-light closure, `L_total`, or ToE closure is exported.
+
+## P3071/S2021 sigma-invariant scalar conservation/scale-control
+
+`P3071/S2021` follows the P3070 pivot and constructs a finite `SigmaEvenNadsolitonScalarConservationTemplate` on `T_sigma x Z12`.  It audits `5` scalar profiles across `2` sigma branches and `24` `D12` reindexing transforms, for `240` exact rows.  Three dimensionless profiles are accepted as scoped conservation/scale-control rows: constant cardinality density, even distance-quadratic density, and even distance shell-indicator density.  The result exports internal bounded scalar invariants only; it exports no unit provider, coordinate theorem, spacetime embedding, observed-light closure, `L_total`, bridge/role-transfer, or ToE closure.

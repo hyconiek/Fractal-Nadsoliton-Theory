@@ -2608,3 +2608,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite `T_sigma x Z12` rank audit has `24` domain rows and `63` feature-subset rows; raw chart-dependent rank-two spans exist, but `0` rows are accepted because current features include `0` unit-bearing and `0` nonconventional coordinate-source channels.
 - Do not promote chart-rank spans to spacetime, observed light, Lorentz closure, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is one unit-source atom: construct a canonical length/time unit provider for a nonconventional nadsoliton scalar, then rerun P3069; otherwise pivot to the P3066 sigma-invariant scalar conservation/scale-control theorem.
+
+## Current canonical length/time unit-provider obstruction guardrail (P3070/S2020, 2026-06-24)
+
+- P3070 attacks exactly one P3069 atom: a canonical length/time unit provider for converting a nonconventional nadsoliton scalar into a unit-bearing coordinate.
+- The finite scalar/unit-map audit has `6` scalar candidates, `5` unit-map candidates, and `30` provider rows; positive dimensionless candidates exist, but there are `0` nonconventional scalar candidates, `0` nonconventional unit laws, and `0` accepted canonical length/time unit-provider rows.
+- Do not promote dimensionless scalars or conventional unit declarations to unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is to pivot to the P3066 sigma-invariant scalar conservation/scale-control row: construct one finite conservation or bounded-scale-control theorem for a sigma-even nadsoliton scalar, without observed-light or closure promotion.
+
+## Current sigma-invariant scalar conservation/scale-control guardrail (P3071/S2021, 2026-06-24)
+
+- P3071 follows the P3070 pivot rather than replaying selector/unit/spacetime claims: it constructs a finite sigma-invariant scalar conservation/scale-control theorem on `T_sigma x Z12`.
+- The exact matrix has `5` candidate profiles, `2` sigma branches, `24` `D12` transforms, and `240` rows; `3` dimensionless profiles are accepted as scoped internal invariants, while sigma-odd and chart-label profiles are rejected.
+- Do not promote these dimensionless conserved summaries to canonical units, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one transition-interface theorem from conserved profiles toward dynamics: a discrete continuity/Noether-current matrix on `Z12` or a bounded renormalization/scale-flow obstruction table, with no closure promotion without a new unit/action/EOM provider.
