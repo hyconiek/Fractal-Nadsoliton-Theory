@@ -2664,3 +2664,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The formal Hamiltonian Dirichlet lift has `11` nonconstant modal rows satisfying the imported-formal relation `omega_j^2=lambda_j`, but `0` rows satisfy the internal-source predicate because `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian spacetime embedding remain unsourced.
 - Do not promote P3077 to observed light, gauge photons, spacetime EOM, unit-bearing action/Hamiltonian, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is one bounded intrinsic momentum/symplectic-source audit over current nadsoliton/Z12 artifacts, or otherwise a pivot to a different non-selector typed object.
+
+## Current intrinsic momentum/symplectic-source audit guardrail (P3078/S2028, 2026-06-24)
+
+- P3078 follows the P3077 recommendation and audits current nadsoliton/Z12 artifacts for an intrinsic `pi` variable or nondegenerate symplectic/two-form source coupled to the Dirichlet source.
+- The finite matrix has `5` candidate source classes, `25` gate rows, and `12` Z12 skew-current modal rows; no candidate exports all required internal phase-space, Hamiltonian-coupling, and time-unit gates.
+- Do not promote Z12 skew currents, Fourier quadrature bookkeeping, or the imported cotangent ansatz to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- Freeze Dirichlet-to-wave promotion on current artifacts.  A next honest non-selector move may test one different typed object, such as a bounded light-cone/causal-order compatibility audit for internal Z12 dispersion data, without importing spacetime EOM.
+
+## Current light-cone/causal-order compatibility guardrail (P3079/S2029, 2026-06-24)
+
+- P3079 follows the P3078 recommendation and tests whether internal Z12 dispersion data already supply a metric signature, finite propagation cone, or unit-normalized causal order.
+- The finite audit has `144` cycle-distance rows, `21` diffusion support rows, `12` spectral velocity proxy rows, and `25` causal candidate gate rows; no candidate exports all internal metric-signature/time/EOM gates.
+- Do not promote cycle distance, adjacency reachability, diffusion tails, dimensionless velocity proxies, or imported Minkowski templates to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is a bounded typed observable-interface obligation table for comparing the smoothing/dispersion branch with standard theoretical physics, without claiming any obligation is discharged unless a new strict source theorem provides it.

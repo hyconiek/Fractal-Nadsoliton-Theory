@@ -1,0 +1,1543 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_internal_causal_order_source": false,
+        "candidate": "cycle_graph_distance_metric",
+        "failed_gates": 4,
+        "passed_gates": 1
+      },
+      {
+        "accepted_internal_causal_order_source": false,
+        "candidate": "heat_kernel_diffusion_support",
+        "failed_gates": 4,
+        "passed_gates": 1
+      },
+      {
+        "accepted_internal_causal_order_source": false,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "failed_gates": 3,
+        "passed_gates": 2
+      },
+      {
+        "accepted_internal_causal_order_source": false,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "failed_gates": 4,
+        "passed_gates": 1
+      },
+      {
+        "accepted_internal_causal_order_source": false,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "failed_gates": 1,
+        "passed_gates": 4
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "cycle_graph_distance_metric",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_z12_object"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "cycle_graph_distance_metric",
+        "detail": "positive graph distance is spatial/combinatorial only; no Lorentzian sign, clock, or EOM",
+        "gate_passed": false,
+        "required_gate": "metric_signature_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "cycle_graph_distance_metric",
+        "detail": "positive graph distance is spatial/combinatorial only; no Lorentzian sign, clock, or EOM",
+        "gate_passed": false,
+        "required_gate": "finite_propagation_cone_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "cycle_graph_distance_metric",
+        "detail": "positive graph distance is spatial/combinatorial only; no Lorentzian sign, clock, or EOM",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_time_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "cycle_graph_distance_metric",
+        "detail": "positive graph distance is spatial/combinatorial only; no Lorentzian sign, clock, or EOM",
+        "gate_passed": false,
+        "required_gate": "wave_eom_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "heat_kernel_diffusion_support",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_z12_object"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "heat_kernel_diffusion_support",
+        "detail": "diffusion has immediate nonzero tails on the connected finite cycle, not a finite light cone",
+        "gate_passed": false,
+        "required_gate": "metric_signature_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "heat_kernel_diffusion_support",
+        "detail": "diffusion has immediate nonzero tails on the connected finite cycle, not a finite light cone",
+        "gate_passed": false,
+        "required_gate": "finite_propagation_cone_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "heat_kernel_diffusion_support",
+        "detail": "diffusion has immediate nonzero tails on the connected finite cycle, not a finite light cone",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_time_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "heat_kernel_diffusion_support",
+        "detail": "diffusion has immediate nonzero tails on the connected finite cycle, not a finite light cone",
+        "gate_passed": false,
+        "required_gate": "wave_eom_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_z12_object"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "detail": "finite graph reachability is a combinatorial propagation bound, not a unit-normalized causal order or Lorentzian EOM",
+        "gate_passed": false,
+        "required_gate": "metric_signature_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_propagation_cone_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "detail": "finite graph reachability is a combinatorial propagation bound, not a unit-normalized causal order or Lorentzian EOM",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_time_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "adjacency_iterate_combinatorial_cone",
+        "detail": "finite graph reachability is a combinatorial propagation bound, not a unit-normalized causal order or Lorentzian EOM",
+        "gate_passed": false,
+        "required_gate": "wave_eom_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_z12_object"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "detail": "spectral slope is a dimensionless dispersion diagnostic without sourced time, units, or Lorentz signature",
+        "gate_passed": false,
+        "required_gate": "metric_signature_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "detail": "spectral slope is a dimensionless dispersion diagnostic without sourced time, units, or Lorentz signature",
+        "gate_passed": false,
+        "required_gate": "finite_propagation_cone_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "detail": "spectral slope is a dimensionless dispersion diagnostic without sourced time, units, or Lorentz signature",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_time_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "dirichlet_spectral_velocity_proxy",
+        "detail": "spectral slope is a dimensionless dispersion diagnostic without sourced time, units, or Lorentz signature",
+        "gate_passed": false,
+        "required_gate": "wave_eom_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "detail": "works only by importing spacetime geometry and wave EOM rather than deriving them from current nadsoliton/Z12 artifacts",
+        "gate_passed": false,
+        "required_gate": "internal_z12_object"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "metric_signature_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_propagation_cone_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unit_normalized_time_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_minkowski_light_cone_ansatz",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "wave_eom_exported"
+      }
+    ],
+    "causal_order_audit_object": {
+      "acceptance_predicate": "internal Z12 object plus exported metric signature, finite propagation cone, unit-normalized time, and wave EOM",
+      "candidate_sources": [
+        "cycle_graph_distance_metric",
+        "heat_kernel_diffusion_support",
+        "adjacency_iterate_combinatorial_cone",
+        "dirichlet_spectral_velocity_proxy",
+        "imported_minkowski_light_cone_ansatz"
+      ],
+      "object": "Z12LightConeCausalOrderCompatibilityAudit",
+      "required_gates": [
+        "internal_z12_object",
+        "metric_signature_exported",
+        "finite_propagation_cone_exported",
+        "unit_normalized_time_exported",
+        "wave_eom_exported"
+      ],
+      "source_reused": "P3078 frozen Dirichlet-to-wave promotion boundary"
+    },
+    "content_first_repo_grep": [
+      {
+        "content_lane": "causal_language",
+        "hit_count": 51,
+        "pattern": "light-cone|causal order|causal cone|finite propagation|metric signature",
+        "sample_hits": [
+          "AGENTS.md:2673:- Freeze Dirichlet-to-wave promotion on current artifacts.  A next honest non-selector move may test one different typed object, such as a bounded light-cone/causal-order compatibility audit for internal Z12 dispersion data, without importing spacetime EOM.",
+          "AGENTS.md:2675:## Current light-cone/causal-order compatibility guardrail (P3079/S2029, 2026-06-24)",
+          "AGENTS.md:2677:- P3079 follows the P3078 recommendation and tests whether internal Z12 dispersion data already supply a metric signature, finite propagation cone, or unit-normalized causal order.",
+          "fundamental_action_reconstruction/p2033_s983_strict_curved_b1_metric_ansatz_nonavailability_theorem.py:189:            \"flat local Abelianized B1 tangent-patch metric signature\",",
+          "fundamental_action_reconstruction/p3079_s2029_light_cone_causal_order_compatibility_audit.py:2:\"\"\"P3079/S2029: light-cone/causal-order compatibility audit.",
+          "fundamental_action_reconstruction/p3079_s2029_light_cone_causal_order_compatibility_audit.py:8:signature, finite propagation cone, or unit-normalized causal order.  The audit",
+          "fundamental_action_reconstruction/p3079_s2029_light_cone_causal_order_compatibility_audit.py:32:    \"causal_language\": r\"light-cone|causal order|causal cone|finite propagation|metric signature\",",
+          "fundamental_action_reconstruction/p3079_s2029_light_cone_causal_order_compatibility_audit.py:67:        \"blocker\": \"finite graph reachability is a combinatorial propagation bound, not a unit-normalized causal order or Lorentzian EOM\","
+        ]
+      },
+      {
+        "content_lane": "z12_dispersion",
+        "hit_count": 5327,
+        "pattern": "Z12|Dirichlet|Laplacian|lambda_j|dispersion",
+        "sample_hits": [
+          "AGENTS.md:146:- P2698 confirms that earlier direction/orientation/sign-sensitive exports are real and must not be ignored, but they are premise-based/readiness/convention scoped: H36/H37/H38 and P739/P740 do not discharge `QW-2191`, do not export pair12 strict-core upgrade, and do not provide Aut(Z12)-invariant canonicity.",
+          "AGENTS.md:150:## Current Z12 fractal-information selector-source no-go guardrail (P2699/S1649, 2026-06-13)",
+          "AGENTS.md:152:- P2699 tests the honest one-object follow-up to P2698: an internal nadsoliton-as-fractal-information selector source constrained by Aut(Z12)-invariance.  The finite calculation finds no unique directed generator and no Aut-invariant distinction of `+1` from `-1`; existing directed support remains premise-based.",
+          "AGENTS.md:158:- P2700 exhausts the finite Aut(Z12)-invariant selector-functional continuation of P2699: all invariant Boolean predicates and orbit-constant score functionals fail to select a unique directed unit or distinguish `+1` from `-1`.",
+          "AGENTS.md:170:- P2702 explains for humans that a selector is a rule choosing one representative/direction on the Z12 circle.  A premise selector can choose `+1`, but current strict artifacts do not source that choice non-premise; Aut-invariant candidates still fail and P2701 finds no provider.",
+          "AGENTS.md:183:- This is a positive declared-scope provenance result, not a blanket erasure of P2699-P2702 bounded no-go/provider-inventory boundaries for Aut(Z12)/replay lanes.",
+          "AGENTS.md:204:## Current Z12 boundary 1-cocycle selector-source obstruction guardrail (P2708/S1658, 2026-06-14)",
+          "AGENTS.md:206:- P2708 tests a new typed candidate: the Z12 oriented boundary 1-cocycle line.  The finite computation gives `rank(d0)=11`, `dim H1=1`, and a real premise-orientable sign pair `±omega`."
+        ]
+      },
+      {
+        "content_lane": "time_units",
+        "hit_count": 277,
+        "pattern": "unit-bearing time|unit-normalized|Lorentzian|spacetime EOM",
+        "sample_hits": [
+          "AGENTS.md:189:- The commit strengthens damping/bridge mathematics but preserves the relevant insufficiency boundary: the scalar coupling is not dynamically sourced and unit-normalized transport is insufficient.",
+          "AGENTS.md:2596:- The next honest move is one missing blocker only: strict nadsoliton-to-spacetime embedding with unit-normalized `1+1` metric/speed-of-light scale for this proxy; otherwise pivot to a sigma-invariant scalar conservation/scale-control row.",
+          "AGENTS.md:2600:- P3068 attacks the exact P3067 blocker rather than enlarging the light proxy: strict `E_sigma: N_sigma -> (M^{1,1}, g_c)` spacetime embedding with a unit-normalized `1+1` metric/speed-of-light scale.",
+          "AGENTS.md:2658:- Do not promote the formal small-`k` `lambda ~ k^2` proxy to observed light, gauge photons, spacetime EOM, units, Hamiltonian dynamics, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2664:- The formal Hamiltonian Dirichlet lift has `11` nonconstant modal rows satisfying the imported-formal relation `omega_j^2=lambda_j`, but `0` rows satisfy the internal-source predicate because `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian spacetime embedding remain unsourced.",
+          "AGENTS.md:2665:- Do not promote P3077 to observed light, gauge photons, spacetime EOM, unit-bearing action/Hamiltonian, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2672:- Do not promote Z12 skew currents, Fourier quadrature bookkeeping, or the imported cotangent ansatz to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2673:- Freeze Dirichlet-to-wave promotion on current artifacts.  A next honest non-selector move may test one different typed object, such as a bounded light-cone/causal-order compatibility audit for internal Z12 dispersion data, without importing spacetime EOM."
+        ]
+      },
+      {
+        "content_lane": "no_physics_promotion",
+        "hit_count": 31412,
+        "pattern": "observed light|gauge photons|empirical physics|L_total|ToE|selector closure",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "cycle_distance_rows": [
+      {
+        "cycle_distance": 0,
+        "source_node": 0,
+        "target_node": 0,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 0,
+        "target_node": 1,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 0,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 0,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 0,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 0,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 0,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 0,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 0,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 0,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 0,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 0,
+        "target_node": 11,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 1,
+        "target_node": 0,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 1,
+        "target_node": 1,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 1,
+        "target_node": 2,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 1,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 1,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 1,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 1,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 1,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 1,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 1,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 1,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 1,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 2,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 2,
+        "target_node": 1,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 2,
+        "target_node": 2,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 2,
+        "target_node": 3,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 2,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 2,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 2,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 2,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 2,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 2,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 2,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 2,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 3,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 3,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 3,
+        "target_node": 2,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 3,
+        "target_node": 3,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 3,
+        "target_node": 4,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 3,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 3,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 3,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 3,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 3,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 3,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 3,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 4,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 4,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 4,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 4,
+        "target_node": 3,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 4,
+        "target_node": 4,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 4,
+        "target_node": 5,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 4,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 4,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 4,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 4,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 4,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 4,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 5,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 5,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 5,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 5,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 5,
+        "target_node": 4,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 5,
+        "target_node": 5,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 5,
+        "target_node": 6,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 5,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 5,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 5,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 5,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 5,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 6,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 6,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 6,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 6,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 6,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 6,
+        "target_node": 5,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 6,
+        "target_node": 6,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 6,
+        "target_node": 7,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 6,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 6,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 6,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 6,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 7,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 7,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 7,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 7,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 7,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 7,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 7,
+        "target_node": 6,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 7,
+        "target_node": 7,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 7,
+        "target_node": 8,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 7,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 7,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 7,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 8,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 8,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 8,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 8,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 8,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 8,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 8,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 8,
+        "target_node": 7,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 8,
+        "target_node": 8,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 8,
+        "target_node": 9,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 8,
+        "target_node": 10,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 8,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 9,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 9,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 9,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 9,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 9,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 9,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 9,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 9,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 9,
+        "target_node": 8,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 9,
+        "target_node": 9,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 9,
+        "target_node": 10,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 9,
+        "target_node": 11,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 10,
+        "target_node": 0,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 10,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 10,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 10,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 10,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 10,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 10,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 10,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 10,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 10,
+        "target_node": 9,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 10,
+        "target_node": 10,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 10,
+        "target_node": 11,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 11,
+        "target_node": 0,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 11,
+        "target_node": 1,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 11,
+        "target_node": 2,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 11,
+        "target_node": 3,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 11,
+        "target_node": 4,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 6,
+        "source_node": 11,
+        "target_node": 5,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 5,
+        "source_node": 11,
+        "target_node": 6,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 4,
+        "source_node": 11,
+        "target_node": 7,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 3,
+        "source_node": 11,
+        "target_node": 8,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 2,
+        "source_node": 11,
+        "target_node": 9,
+        "within_one_step_cone": false
+      },
+      {
+        "cycle_distance": 1,
+        "source_node": 11,
+        "target_node": 10,
+        "within_one_step_cone": true
+      },
+      {
+        "cycle_distance": 0,
+        "source_node": 11,
+        "target_node": 11,
+        "within_one_step_cone": true
+      }
+    ],
+    "diffusion_support_rows": [
+      {
+        "distance_shell": 0,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 0.8523702835409677,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 1,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 0.07078535844466809,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 2,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 0.0029459822049502002,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 3,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 8.178552586436974e-05,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 4,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 1.7032738931777036e-06,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 5,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 2.8386019883224802e-08,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 6,
+        "fractional_step": "0.0833333333333",
+        "heat_kernel_value": 7.882399362853695e-10,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 0,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 0.736573605209842,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 1,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 0.12108821906487029,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 2,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 0.010044290820623789,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 3,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 0.0005567292176204136,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 4,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 2.316491760013158e-05,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 5,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 7.719593609414401e-07,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 6,
+        "fractional_step": "0.166666666667",
+        "heat_kernel_value": 4.2830005810475434e-08,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 0,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 0.6450352704491502,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 1,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 0.1564208031848753,
+        "nonzero_tail": true,
+        "outside_unit_cone": false,
+        "violates_finite_unit_cone_if_read_as_light": false
+      },
+      {
+        "distance_shell": 2,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 0.01935205770982359,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 3,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 0.0016043415139812935,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 4,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 9.995985001337582e-05,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 5,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 4.995008282453765e-06,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      },
+      {
+        "distance_shell": 6,
+        "fractional_step": "0.25",
+        "heat_kernel_value": 4.150168967144892e-07,
+        "nonzero_tail": true,
+        "outside_unit_cone": true,
+        "violates_finite_unit_cone_if_read_as_light": true
+      }
+    ],
+    "distance_shell_rows": [
+      {
+        "distance_shell": 0,
+        "ordered_pair_count": 12
+      },
+      {
+        "distance_shell": 1,
+        "ordered_pair_count": 24
+      },
+      {
+        "distance_shell": 2,
+        "ordered_pair_count": 24
+      },
+      {
+        "distance_shell": 3,
+        "ordered_pair_count": 24
+      },
+      {
+        "distance_shell": 4,
+        "ordered_pair_count": 24
+      },
+      {
+        "distance_shell": 5,
+        "ordered_pair_count": 24
+      },
+      {
+        "distance_shell": 6,
+        "ordered_pair_count": 12
+      }
+    ],
+    "spectral_velocity_proxy_rows": [
+      {
+        "dimensionless_group_velocity_proxy": null,
+        "formal_omega_sqrt_lambda": 0.0,
+        "k_label": "2*pi*0/12",
+        "lambda_value": 0.0,
+        "mode_j": 0,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 0.9659258262890684,
+        "formal_omega_sqrt_lambda": 0.5176380902050414,
+        "k_label": "2*pi*1/12",
+        "lambda_value": 0.2679491924311226,
+        "mode_j": 1,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 0.8660254037844387,
+        "formal_omega_sqrt_lambda": 0.9999999999999999,
+        "k_label": "2*pi*2/12",
+        "lambda_value": 0.9999999999999998,
+        "mode_j": 2,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 0.7071067811865476,
+        "formal_omega_sqrt_lambda": 1.414213562373095,
+        "k_label": "2*pi*3/12",
+        "lambda_value": 1.9999999999999998,
+        "mode_j": 3,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 0.5000000000000001,
+        "formal_omega_sqrt_lambda": 1.7320508075688772,
+        "k_label": "2*pi*4/12",
+        "lambda_value": 2.9999999999999996,
+        "mode_j": 4,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 0.25881904510252074,
+        "formal_omega_sqrt_lambda": 1.9318516525781366,
+        "k_label": "2*pi*5/12",
+        "lambda_value": 3.7320508075688776,
+        "mode_j": 5,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": 6.123233995736766e-17,
+        "formal_omega_sqrt_lambda": 2.0,
+        "k_label": "2*pi*6/12",
+        "lambda_value": 4.0,
+        "mode_j": 6,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": -0.25881904510252063,
+        "formal_omega_sqrt_lambda": 1.9318516525781366,
+        "k_label": "2*pi*7/12",
+        "lambda_value": 3.7320508075688776,
+        "mode_j": 7,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": -0.4999999999999997,
+        "formal_omega_sqrt_lambda": 1.7320508075688776,
+        "k_label": "2*pi*8/12",
+        "lambda_value": 3.000000000000001,
+        "mode_j": 8,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": -0.7071067811865475,
+        "formal_omega_sqrt_lambda": 1.4142135623730951,
+        "k_label": "2*pi*9/12",
+        "lambda_value": 2.0000000000000004,
+        "mode_j": 9,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": -0.8660254037844387,
+        "formal_omega_sqrt_lambda": 0.9999999999999999,
+        "k_label": "2*pi*10/12",
+        "lambda_value": 0.9999999999999998,
+        "mode_j": 10,
+        "unit_light_speed_certified": false
+      },
+      {
+        "dimensionless_group_velocity_proxy": -0.9659258262890682,
+        "formal_omega_sqrt_lambda": 0.517638090205042,
+        "k_label": "2*pi*11/12",
+        "lambda_value": 0.26794919243112325,
+        "mode_j": 11,
+        "unit_light_speed_certified": false
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3079 constructs a finite light-cone/causal-order compatibility audit for internal Z12 dispersion data.  The cycle graph gives a real internal spatial distance and adjacency iterates give a combinatorial cone, but diffusion has nonzero outside-unit-cone support and no candidate exports metric signature, unit-normalized time, and wave EOM together.  The imported Minkowski template passes only by external spacetime import.  Therefore no observed-light or spacetime-causal source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "bridge_role_transfer_exported": false,
+      "empirical_physics_exported": false,
+      "gauge_photon_sector_exported": false,
+      "internal_light_cone_exported": false,
+      "internal_metric_signature_exported": false,
+      "ltotal_exported": false,
+      "observed_light_exported": false,
+      "spacetime_wave_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_normalized_time_exported": false
+    },
+    "next_honest_step": "Pivot to a bounded internal-to-standard-physics interface inventory rather than another wave-promotion replay: construct a typed observable-interface obligation table for what would be needed to compare the smoothing/dispersion branch with standard theoretical physics (dimension map, continuum limit, Lorentz signature, gauge representation, conserved current, empirical observable), marking each obligation as sourced, formal/imported, or absent.  Do not claim observed light, photons, spacetime EOM, selector closure, L_total, bridge/role-transfer, or ToE unless one obligation is actually discharged by a new strict source theorem.",
+    "positive_scoped_flags": {
+      "causal_candidate_gate_matrix_executed": true,
+      "cycle_distance_matrix_constructed": true,
+      "diffusion_tail_obstruction_computed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_internal_causal_order_sources": 0,
+    "candidate_gate_rows": 25,
+    "causal_candidates": 5,
+    "content_grep_hits": 37067,
+    "content_grep_lanes": 4,
+    "cycle_distance_rows": 144,
+    "diffusion_outside_unit_cone_violations_if_read_as_light": 15,
+    "diffusion_support_rows": 21,
+    "distance_shell_counts": {
+      "0": 12,
+      "1": 24,
+      "2": 24,
+      "3": 24,
+      "4": 24,
+      "5": 24,
+      "6": 12
+    },
+    "distance_shell_rows": 7,
+    "p3078_accepted_intrinsic_momentum_symplectic_sources": 0,
+    "proof_obligations": 6,
+    "required_gates": 5,
+    "satisfied_proof_obligations": 5,
+    "spectral_velocity_proxy_rows": 12,
+    "unit_light_speed_certified_rows": 0
+  },
+  "input_hashes": {
+    "P3078": "94c2cfc18cc457b44aea4536b76b052873ab20d3e12fc46e36db5f1f53f17b79"
+  },
+  "proof_obligations": [
+    {
+      "detail": "searched causal, Z12-dispersion, time-unit, and no-promotion lanes",
+      "obligation": "content_first_grep_for_causal_order_sources",
+      "satisfied": true
+    },
+    {
+      "detail": "12 x 12 ordered-pair graph-distance matrix",
+      "obligation": "construct_cycle_distance_matrix",
+      "satisfied": true
+    },
+    {
+      "detail": "3 fractional steps x 7 distance shells show nonzero outside-unit-cone tails",
+      "obligation": "test_diffusion_against_finite_unit_cone",
+      "satisfied": true
+    },
+    {
+      "detail": "12 modal velocity rows remain dimensionless and not unit-normalized",
+      "obligation": "test_dimensionless_spectral_velocity_proxy",
+      "satisfied": true
+    },
+    {
+      "detail": "5 candidates x 5 required gates = 25 exact gate rows",
+      "obligation": "execute_causal_candidate_gate_matrix",
+      "satisfied": true
+    },
+    {
+      "detail": "no candidate supplies internal metric signature, finite cone, unit time, and wave EOM together",
+      "obligation": "export_accepted_internal_causal_order_source",
+      "satisfied": false
+    }
+  ],
+  "status": "P3079_LIGHT_CONE_CAUSAL_ORDER_COMPATIBILITY_BOUNDED_NO_GO"
+}
