@@ -4,7 +4,7 @@ Status: `P3077_FORMAL_HAMILTONIAN_LIFT_EXISTS_INTERNAL_SECOND_ORDER_SOURCE_OBSTR
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `33149`
+- content grep hits: `33351`
 - P3076 Z12 modes: `12`
 - P3076 accepted lightlike branch rows: `0`
 - candidate lifts: `4`

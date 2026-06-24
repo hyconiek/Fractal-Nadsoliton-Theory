@@ -3384,3 +3384,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3077/S2027 formal Hamiltonian lift remains unsourced
 
 `P3077/S2027` shows that `H = 1/2*pi^2 + E_D(rho)` is a coherent formal lift of the internal Dirichlet source, with modal relation `omega_j^2=lambda_j` for nonconstant modes.  However, the lift imports `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian embedding; current artifacts do not source them.  Therefore no variational spacetime EOM, unit-bearing Hamiltonian/action, observed light, or gauge sector is exported.
+
+## P3078/S2028 no intrinsic phase-space source
+
+`P3078/S2028` freezes the P3077 promotion attempt on current artifacts: the repository has Z12 skew-current and quadrature bookkeeping, but no strict internal source for `pi`, nondegenerate symplectic two-form, Hamiltonian coupling to the Dirichlet energy, or unit-bearing time.  Therefore `H = 1/2*pi^2 + E_D(rho)` remains an imported formal lift rather than a sourced Lagrangian/Hamiltonian EOM.
+
+## P3079/S2029 causal-order audit remains non-spacetime
+
+`P3079/S2029` shows that current Z12 dispersion data can support graph-distance and adjacency-reachability bookkeeping, but not a sourced Lorentzian metric, unit-normalized time coordinate, finite physical light cone, or spacetime wave EOM.  Diffusion remains smoothing-only, and any Minkowski light-cone interpretation is imported rather than derived.
