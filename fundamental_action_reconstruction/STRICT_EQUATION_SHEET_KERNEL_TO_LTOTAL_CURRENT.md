@@ -3971,3 +3971,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3066/S2016 sigma-conditioned standard-physics compatibility matrix
 
 `P3066/S2016` stops replaying selector derivation and works under the explicit `T_sigma` axiom boundary from `P3065`.  It constructs a `SigmaConditionedStandardPhysicsCompatibilityMatrix` with `2` sigma branches, `6` informational-nadsoliton observable rows, `12` branch rows, and `36` standard-physics obligation rows covering Lorentz covariance, gauge invariance, unitarity/positive probability, renormalization/scale control, variational EOM/dynamics, and empirical constant mapping.  The current matrix identifies `2` sigma-invariant scalar rows, `2` sigma-odd rows needing explicit orientation/pseudoscalar coupling, and `2` unknown transition-interface rows needing exported transition laws; it exports `0` standard-physics closure rows and no observed-physics, `L_total`, bridge/role-transfer, or ToE closure.
+
+## P3067/S2017 sigma-conditioned light Lorentz proxy matrix
+
+`P3067/S2017` executes the `P3066` recommendation on the single `light_emergence_interface` row under the explicit `T_sigma` axiom boundary.  It constructs `SigmaConditionedNadsolitonLightTransitionProxy`, the conditional law `L_sigma: sigma -> k_sigma=(1,sigma)` in a `1+1` null-ray proxy space, and audits exact rational boost rows.  The finite table has `2` sigma branches, `4` sampled boosts, `8` Lorentz proxy rows, and `8` proxy null-covariance passes.  It exports `0` strict Lorentz/observed-light closure rows because no strict spacetime embedding, unit-bearing metric/speed-of-light scale, photon/gauge field, variational EOM, Hamiltonian, or empirical map is exported.
+
+## P3068/S2018 strict spacetime embedding unit-metric obstruction
+
+`P3068/S2018` attacks the exact blocker left by `P3067`: a strict nadsoliton-to-spacetime embedding with unit-normalized `1+1` metric/speed-of-light scale.  It constructs `StrictNadsolitonSpacetimeEmbeddingTemplate`, formally `E_sigma: N_sigma -> (M^{1,1}, g_c)`, with seven required atoms: branch state, time coordinate map, space coordinate map, unit metric, Lorentz target action, pullback of `k_sigma`, and light-sector dynamics/EOM.  The exhaustive `2^7 = 128` row SAT table has exactly `1` accepting all-atom row; current artifacts have only `2` present atoms and `5` missing atoms, so `0` current provider rows export strict spacetime/light closure.
+
+## P3069/S2019 coordinate-pair source rank obstruction
+
+`P3069/S2019` attacks one P3068 atom: a strict coordinate-pair source theorem for `t_sigma` and `x_sigma`.  It constructs a `CoordinatePairSourceCandidateSpace` over `24` `T_sigma x Z12` rows and audits all `63` nonempty subsets of six current features by exact rational rank.  Some chart-dependent subsets have raw rank at least two, but `0` subsets are accepted as coordinate-pair sources because current artifacts provide `0` unit-bearing candidate features and `0` nonconventional coordinate-source features.  Thus no strict spacetime embedding, observed-light closure, `L_total`, or ToE closure is exported.

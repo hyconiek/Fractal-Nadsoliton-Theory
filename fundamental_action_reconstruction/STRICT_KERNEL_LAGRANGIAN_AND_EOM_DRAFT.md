@@ -3340,3 +3340,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3066/S2016 standard-physics matrix is not an `L_total` closure
 
 `P3066/S2016` is a sigma-conditioned acceptance/obstruction matrix for compatibility obligations.  It does not add a unit-bearing action, gauge sector, propagator, counterterm flow, EOM, Hamiltonian, or empirical constant map; every standard-physics row remains a future theorem obligation.
+
+## P3067/S2017 light proxy is not a light-sector action
+
+`P3067/S2017` only checks a finite null-ray covariance proxy for `L_sigma: sigma -> (1,sigma)`.  It does not add a Maxwell/Yang-Mills field, polarization bundle, unit-bearing Lorentzian action, propagator, EOM, Hamiltonian, or empirical speed-of-light/constant map.
+
+## P3068/S2018 embedding obstruction is not a light action
+
+`P3068/S2018` is a seven-atom embedding/unit-metric obstruction matrix for `E_sigma: N_sigma -> (M^{1,1}, g_c)`.  It does not add a coordinate-pair theorem, unit-bearing Lorentzian metric, Maxwell/Yang-Mills field, light-sector action density, EOM, Hamiltonian, or empirical constant map.
+
+## P3069/S2019 coordinate rank is not a coordinate/action source
+
+`P3069/S2019` separates raw finite rank from physical coordinate sourcing.  Chart-dependent `T_sigma x Z12` feature spans do not add a unit-bearing coordinate map, Lorentzian metric, light-sector action density, EOM, Hamiltonian, or empirical constant map.

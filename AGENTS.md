@@ -2587,3 +2587,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The constructed matrix has `2` sigma branches, `6` observable rows, `12` branch rows, and `36` standard-physics obligation rows; it separates sigma-invariant scalar rows from sigma-odd rows and unknown transition-interface rows.
 - Current artifacts export `0` Lorentz/gauge/unitarity/renormalization/EOM/empirical compatibility closures.  Do not promote this matrix to observed physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next proof-grade move should pick exactly one matrix row, preferably `light_emergence_interface`, construct a sigma-conditioned nadsoliton-to-light transition law, and test Lorentz covariance; otherwise pivot to a sigma-invariant scalar conservation/scale-control theorem.
+
+## Current sigma-conditioned light Lorentz proxy guardrail (P3067/S2017, 2026-06-24)
+
+- P3067 executes exactly one P3066 row, `light_emergence_interface`, under the P3065 `T_sigma` axiom boundary rather than replaying strict selector search.
+- The constructed proxy law is `L_sigma: sigma -> k_sigma=(1,sigma)` in a finite `1+1` null-ray audit; all `8` sampled rational boost rows preserve the null proxy.
+- This is only axiom-augmented proxy covariance: it exports `0` strict Lorentz/observed-light closures and does not provide a spacetime embedding, unit-bearing metric, photon/gauge sector, variational EOM, empirical map, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one missing blocker only: strict nadsoliton-to-spacetime embedding with unit-normalized `1+1` metric/speed-of-light scale for this proxy; otherwise pivot to a sigma-invariant scalar conservation/scale-control row.
+
+## Current strict spacetime embedding unit-metric obstruction guardrail (P3068/S2018, 2026-06-24)
+
+- P3068 attacks the exact P3067 blocker rather than enlarging the light proxy: strict `E_sigma: N_sigma -> (M^{1,1}, g_c)` spacetime embedding with a unit-normalized `1+1` metric/speed-of-light scale.
+- The seven-atom SAT table has `128` rows and exactly `1` accepting all-atom row; current artifacts provide only the sigma branch label and formal boost algebra, leaving coordinate maps, unit metric, null-covector pullback, and dynamics missing.
+- Do not promote P3068 to observed light, Lorentz closure, photon/gauge sector, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one atom only: a strict coordinate-pair source theorem for `t_sigma` and `x_sigma` from nadsoliton data with units tracked; if unavailable, pivot to a P3066 sigma-invariant scalar conservation/scale-control theorem.
+
+## Current coordinate-pair source rank obstruction guardrail (P3069/S2019, 2026-06-24)
+
+- P3069 attacks exactly one P3068 atom: a strict coordinate-pair source theorem for `t_sigma` and `x_sigma` from nadsoliton data with units tracked.
+- The finite `T_sigma x Z12` rank audit has `24` domain rows and `63` feature-subset rows; raw chart-dependent rank-two spans exist, but `0` rows are accepted because current features include `0` unit-bearing and `0` nonconventional coordinate-source channels.
+- Do not promote chart-rank spans to spacetime, observed light, Lorentz closure, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one unit-source atom: construct a canonical length/time unit provider for a nonconventional nadsoliton scalar, then rerun P3069; otherwise pivot to the P3066 sigma-invariant scalar conservation/scale-control theorem.
