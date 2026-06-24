@@ -2636,3 +2636,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The matrix has `3` profiles, `2` sigma branches, `24` `D12` transforms, `5` exact flow operators, and `720` rows.  Cycle-Laplacian and mean-centering flows give `192` intrinsic, premise-free, nonzero, bounded, total-preserving internal scale-flow rows, but `0` rows preserve the full `P3071` scalar-summary packet after one exact step.
 - Do not promote P3073 to full conserved-summary dynamics, a nontrivial Noether current, dynamical update law, canonical unit provider, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is one Lyapunov/entropy monotonicity certificate for the accepted total-preserving flows, unless a new strict variational action/EOM/unit provider is introduced.
+
+## Current Lyapunov/entropy monotonicity guardrail (P3074/S2024, 2026-06-24)
+
+- P3074 follows the P3073 recommendation and constructs one exact Lyapunov/entropy monotonicity certificate for the accepted internal scale-flow rows, without selector replay.
+- The matrix reuses `192` accepted P3073 flow rows, tests `3` step sizes and `3` functionals, and has `1728` rows.  Intrinsic variance and quadratic Dirichlet energies give `1008` accepted monotone internal Lyapunov rows; shell energy remains a chart-weighted control and is not accepted as intrinsic.
+- Do not promote P3074 to a variational source theorem, Hamiltonian, canonical unit provider, unit-bearing action, variational EOM, strict spacetime embedding, observed light, gauge photon sector, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one bounded variational-source obstruction table for whether local quadratic action/gradient-flow generators reproduce the accepted Laplacian or mean-centering flows without chart/unit/selector premises.
+
+## Current variational-source obstruction guardrail (P3075/S2025, 2026-06-24)
+
+- P3075 follows the P3074 recommendation and constructs one bounded variational-source obstruction table for accepted P3073 scale flows, without selector replay or observed-physics promotion.
+- The matrix reuses `192` accepted P3073 flow rows, tests `5` candidate quadratic generators, and has `960` exact negative-gradient rows.  The local Dirichlet generator exactly sources all `96` cycle-Laplacian rows; mean-centering has `96` exact matches only through the global variance generator and remains nonlocal on `Z12`.
+- Do not promote P3075 to a unit-bearing action, Hamiltonian, full variational EOM, canonical unit provider, strict spacetime embedding, observed light, gauge photon sector, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one bounded continuum-limit/spectral-dispersion audit of the internal Dirichlet/Laplacian source, without claiming observed light or gauge photons absent a separate unit/coordinate/source theorem.
