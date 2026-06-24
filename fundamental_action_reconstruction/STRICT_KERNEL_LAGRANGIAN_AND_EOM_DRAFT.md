@@ -3360,3 +3360,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3071/S2021 conserved scalar profiles are not dynamics
 
 `P3071/S2021` gives scoped dimensionless conservation/scale-control for three sigma-even Z12 scalar profiles under sigma flip and D12 reindexing.  These invariants are not a Noether current, action density, EOM, Hamiltonian, unit-bearing coordinate, gauge field, or empirical constant map.
+
+## P3072/S2022 continuity interface is not an EOM
+
+`P3072/S2022` adds an exact finite continuity-current interface for the `P3071` dimensionless scalar profiles.  The interface proves that static zero current is premise-free, while nonzero divergence-free cycle currents still require an orientation/sign premise.  This is not a Noether theorem, action density, Hamiltonian, variational EOM, gauge field, observed spacetime dynamics, or empirical physics map.
+
+## P3073/S2023 scale-flow operators are not variational dynamics
+
+`P3073/S2023` exports internal total-preserving bounded scale-flow operators for the nonconstant `P3071` scalar profiles, but the accepted nonzero flows do not preserve the full scalar-summary packet and are not derived from an action, Hamiltonian, variational EOM, unit-bearing coordinate map, gauge field, observed spacetime dynamics, or empirical physics map.

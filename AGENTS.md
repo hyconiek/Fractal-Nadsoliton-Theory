@@ -2622,3 +2622,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The exact matrix has `5` candidate profiles, `2` sigma branches, `24` `D12` transforms, and `240` rows; `3` dimensionless profiles are accepted as scoped internal invariants, while sigma-odd and chart-label profiles are rejected.
 - Do not promote these dimensionless conserved summaries to canonical units, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is one transition-interface theorem from conserved profiles toward dynamics: a discrete continuity/Noether-current matrix on `Z12` or a bounded renormalization/scale-flow obstruction table, with no closure promotion without a new unit/action/EOM provider.
+
+## Current discrete continuity/Noether-current interface guardrail (P3072/S2022, 2026-06-24)
+
+- P3072 follows the P3071 recommendation and constructs one transition-interface theorem: an exact `Z12` incidence/divergence operator and finite continuity-current matrix for the accepted sigma-even scalar profiles.
+- The matrix has `3` profiles, `2` sigma branches, `24` `D12` transforms, `5` current templates, and `720` exact rows.  Static zero current is premise-free; nonzero cycle currents are divergence-free but orientation/sign-premise based; gradient/shell current templates have nonzero divergence.
+- Do not promote P3072 to a nontrivial Noether current, dynamical update law, canonical unit provider, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one bounded renormalization/scale-flow obstruction table for the P3071 scalar summaries, unless a new strict action/EOM/unit provider is introduced.
+
+## Current bounded scale-flow operator guardrail (P3073/S2023, 2026-06-24)
+
+- P3073 follows the P3072 recommendation and constructs one bounded scale-flow operator matrix for the `P3071` accepted sigma-even scalar summaries.
+- The matrix has `3` profiles, `2` sigma branches, `24` `D12` transforms, `5` exact flow operators, and `720` rows.  Cycle-Laplacian and mean-centering flows give `192` intrinsic, premise-free, nonzero, bounded, total-preserving internal scale-flow rows, but `0` rows preserve the full `P3071` scalar-summary packet after one exact step.
+- Do not promote P3073 to full conserved-summary dynamics, a nontrivial Noether current, dynamical update law, canonical unit provider, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is one Lyapunov/entropy monotonicity certificate for the accepted total-preserving flows, unless a new strict variational action/EOM/unit provider is introduced.
