@@ -4,7 +4,7 @@ Status: `P3071_SIGMA_INVARIANT_SCALAR_CONSERVATION_SCALE_CONTROL_SCOPED_EXPORT`
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `29785`
+- content grep hits: `29870`
 - sigma branches: `2`
 - Z12 rows: `12`
 - D12 transforms: `24`
