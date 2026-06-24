@@ -4,7 +4,7 @@ Status: `P3062_SIGMA_SELECTOR_SOURCE_LAW_CANDIDATE_AUDIT_NO_EXPORT`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `1528`
+- content grep hits: `1563`
 - acceptance criteria: `5`
 - candidate classes audited: `7`
 - candidates with nonzero signed value: `4`

@@ -2559,3 +2559,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The audit checks `7` named candidate classes against `5` criteria; `4` candidates carry nonzero signed values, but `0` are coupled to `G_selector` and `0` are accepted as concrete sigma-selector source laws.
 - Do not recycle boundary-cocycle, chiral-bispectrum, receiver-winding, Levi-Civita, Pontryagin/anomaly, eta-asymmetry, or coefficient-convention rows as `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
 - A next move must derive an explicit coupling theorem from one concrete signed source law/value into `G_selector`, or pivot to another P3057 atom while preserving the P3048-P3062 bounded no-export boundary.
+
+## Current signed-source to `G_selector` coupling theorem guardrail (P3063/S2013, 2026-06-23)
+
+- P3063 constructs the post-P3062 explicit coupling theorem matrix from currently signed source rows into `G_selector`.
+- The matrix has `4 x 2 = 8` rows: four signed source rows and two possible coupling polarities.  All `8` rows have a formal coupling map, but `0` have a strict source law, non-premise localizer, unique theory-selected polarity, or installed `G_selector` source row.
+- The lay analogy that the strict kernel is like laws and the selector is like a simulation/neural-network start is allowed only as weak intuition; it must not add a lower information layer under the nadsoliton or be promoted to observed physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must construct a strict polarity-source theorem selecting one coupling polarity and installing it as a `G_selector` row, or pivot to a different P3057 atom while preserving the P3048-P3063 bounded no-export boundary.
+
+## Current strict polarity-source theorem SAT guardrail (P3064/S2014, 2026-06-23)
+
+- P3064 reduces the post-P3063 selector-coupling gap to a finite C2/SAT theorem template with four primitive atoms: `strict_source_plus`, `strict_source_minus`, `strict_coupling_identity`, and `strict_coupling_flip`.
+- Acceptance requires exactly one absolute non-premise source-sign atom and exactly one absolute non-premise coupling-polarity atom; the exhaustive `16`-row table has `4` accepting rows, all with `2` atoms, but the current artifact row has `0` exported atoms and is not accepted.
+- Do not promote partial source/coupling rows, formal SAT accepting rows, or polarity conventions to `QW-2191` discharge, selector closure, observed physics, `L_total`, bridge/role-transfer, or ToE closure.
+- A next move must construct exactly one primitive atom from the P3064 template, then rerun the two-atom acceptance check; otherwise pivot to another P3057 atom while preserving the P3048-P3064 bounded no-export boundary.

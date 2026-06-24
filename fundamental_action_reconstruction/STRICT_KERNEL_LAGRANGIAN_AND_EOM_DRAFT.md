@@ -3324,3 +3324,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3062/S2012 sigma-selector source-law audit `L_total` guard
 
 `P3062/S2012` adds no physical `L_total` term.  It is a source-law acceptance audit; no audited candidate supplies a unit-bearing signed source/action/EOM carrier or nonproxy variational chain rule coupled to `G_selector`.
+
+## P3063/S2013 signed-source to `G_selector` coupling theorem `L_total` guard
+
+`P3063/S2013` adds no physical `L_total` term.  It is a finite coupling-theorem obstruction matrix; no row exports a unit-bearing signed action/EOM carrier or nonproxy variational chain rule.
+
+## P3064/S2014 strict polarity-source theorem SAT `L_total` guard
+
+`P3064/S2014` adds no physical `L_total` term.  It is a finite theorem-template SAT certificate over source/coupling sign atoms; no row exports a unit-bearing signed action/EOM carrier or nonproxy variational chain rule.
