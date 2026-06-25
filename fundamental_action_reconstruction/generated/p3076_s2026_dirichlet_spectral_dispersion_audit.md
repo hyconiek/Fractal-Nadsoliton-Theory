@@ -4,7 +4,7 @@ Status: `P3076_INTERNAL_DIRICHLET_DIFFUSIVE_SPECTRAL_BRANCH_WAVE_LIGHTLIKE_OBSTR
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `32633`
+- content grep hits: `32690`
 - P3075 local Dirichlet accepted rows: `96`
 - Z12 modes: `12`
 - nonconstant modes: `11`

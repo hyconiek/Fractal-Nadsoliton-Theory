@@ -4047,3 +4047,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3085/S2035 conserved-current/Noether obstruction audit
 
 `P3085/S2035` attacks exactly one post-P3084 interface atom: a non-imported unit-bearing conserved-current/charge-density source for the Z12 Dirichlet/Laplacian branch.  It computes `12` formal Fourier link-current rows, verifies a `12 x 12 = 144` finite continuity matrix with zero formal divergence, scans all `4096` real binary profiles as no-phase controls, and builds a `5 x 6 = 30` candidate current-source gate matrix.  The link currents are algebraic/formal witnesses only; no strict phase-symmetry source, variational Noether theorem, unit-bearing current, conserved charge density, observed photons/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3086/S2036 empirical-readout/observable-calibration obstruction audit
+
+`P3086/S2036` attacks exactly one post-P3085 interface atom: a non-imported unit-calibrated empirical observable/readout source for the Z12 Dirichlet/Laplacian branch.  It computes `12` finite Laplacian spectrum rows, `7` distinct normalized spectral-gap rows, `5` scale-orbit controls, a `5 x 6 = 30` candidate gate matrix, and `30` calibration target rows.  The internal witnesses remain dimensionless; no measurement-unit source, calibration map, apparatus readout protocol, empirical observable, observed photons/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3087/S2037 thermodynamic/statistical-ensemble obstruction audit
+
+`P3087/S2037` attacks exactly one post-P3086 interface atom: a non-imported thermodynamic/statistical-ensemble source for the Z12 Dirichlet/Laplacian branch.  It enumerates `7` microcanonical degeneracy rows, computes `7` formal partition-function rows over a dimensionless beta grid, verifies `21` energy-scale/beta compensation rows, and builds a `5 x 6 = 30` candidate gate matrix.  The finite ensemble algebra remains dimensionless; no canonical temperature source, Boltzmann/unit source, entropy/energy units, equilibrium observable, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.

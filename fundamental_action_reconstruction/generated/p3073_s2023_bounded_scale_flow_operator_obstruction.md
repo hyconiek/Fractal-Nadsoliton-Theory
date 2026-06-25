@@ -4,7 +4,7 @@ Status: `P3073_BOUNDED_SCALE_FLOW_OPERATOR_PARTIAL_EXPORT_FULL_SUMMARY_DYNAMICS_
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `32553`
+- content grep hits: `32642`
 - P3072 accepted nontrivial Noether-current rows: `0`
 - profiles tested: `3`
 - sigma branches: `2`
