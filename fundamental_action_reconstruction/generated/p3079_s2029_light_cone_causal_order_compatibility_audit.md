@@ -4,7 +4,7 @@ Status: `P3079_LIGHT_CONE_CAUSAL_ORDER_COMPATIBILITY_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `37737`
+- content grep hits: `37865`
 - P3078 accepted intrinsic momentum/symplectic sources: `0`
 - cycle distance rows: `144`
 - distance shell rows: `7`

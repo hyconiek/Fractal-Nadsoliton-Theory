@@ -4,7 +4,7 @@ Status: `P3078_INTRINSIC_MOMENTUM_SYMPLECTIC_SOURCE_NOT_EXPORTED_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `4`
-- content grep hits: `36266`
+- content grep hits: `36341`
 - P3077 accepted internal second-order wave rows: `0`
 - candidate sources: `5`
 - required gates: `5`

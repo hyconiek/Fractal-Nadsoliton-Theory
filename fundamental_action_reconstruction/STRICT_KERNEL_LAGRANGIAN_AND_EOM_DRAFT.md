@@ -3424,3 +3424,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3087/S2037 thermodynamic ensemble remains unsourced
 
 `P3087/S2037` confirms that a finite Z12 Laplacian spectrum can support formal degeneracy and partition-function algebra, but not yet a physical thermodynamic sector.  A Lagrangian/EOM or empirical-physics reading still needs a strict source for temperature, Boltzmann/energy units, entropy units, and equilibrium observables; imported statistical mechanics or blackbody radiation templates do not supply those strict sources.
+
+## P3088/S2038 Hamiltonian/time evolution remains unsourced
+
+`P3088/S2038` confirms that a finite Z12 Laplacian can be read as a real symmetric/self-adjoint spectral multiplier and can support formal unit-modulus phase factors.  A Lagrangian/EOM, quantum, or empirical-physics reading still needs strict sources for time, action/energy units, Hamiltonian dynamics, and observable readout; imported quantum mechanics or spacetime field-equation templates do not supply those strict sources.
+
+## P3089/S2039 Born-rule/probability readout remains unsourced
+
+`P3089/S2039` confirms that finite Z12 profiles can be assigned normalized nonnegative Fourier-power weights and that formal P3088 phases conserve those weights.  A Lagrangian/EOM, quantum-measurement, or empirical-physics reading still needs strict sources for the Born-rule postulate, measurement basis, apparatus protocol, and empirical frequency semantics; imported quantum measurement or detector-counting templates do not supply those strict sources.

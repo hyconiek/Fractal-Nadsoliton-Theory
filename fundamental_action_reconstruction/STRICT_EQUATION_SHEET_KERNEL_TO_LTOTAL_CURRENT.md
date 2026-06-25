@@ -4055,3 +4055,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3087/S2037 thermodynamic/statistical-ensemble obstruction audit
 
 `P3087/S2037` attacks exactly one post-P3086 interface atom: a non-imported thermodynamic/statistical-ensemble source for the Z12 Dirichlet/Laplacian branch.  It enumerates `7` microcanonical degeneracy rows, computes `7` formal partition-function rows over a dimensionless beta grid, verifies `21` energy-scale/beta compensation rows, and builds a `5 x 6 = 30` candidate gate matrix.  The finite ensemble algebra remains dimensionless; no canonical temperature source, Boltzmann/unit source, entropy/energy units, equilibrium observable, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3088/S2038 spectral-to-Hamiltonian/time-evolution obstruction audit
+
+`P3088/S2038` attacks exactly one post-P3087 interface atom: a non-imported spectral-to-Hamiltonian/time-evolution source for the Z12 Dirichlet/Laplacian branch.  It enumerates `12` spectral Hamiltonian rows, computes `6` formal unitary phase rows over a dimensionless time grid, verifies `18` time-energy scale compensation rows, and builds a `5 x 6 = 30` candidate gate matrix.  The finite self-adjoint and formal-unitary algebra remains dimensionless; no sourced time parameter, action/energy unit, observable dynamics, physical Hamiltonian, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3089/S2039 spectral-observable/Born-rule readout obstruction audit
+
+`P3089/S2039` attacks exactly one post-P3088 interface atom: a non-imported spectral-observable/Born-rule probability-readout source for the Z12 Dirichlet/Laplacian branch.  It enumerates all `4095` nonzero binary Z12 profiles as normalized Fourier-power probability-like witnesses, checks `12` translation-orbit controls, verifies `6` formal time-probability conservation rows, and builds a `5 x 6 = 30` candidate gate matrix.  The finite probability-like algebra remains dimensionless; no Born-rule map, measurement-basis source, apparatus protocol, empirical probability readout, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.

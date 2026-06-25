@@ -1,0 +1,709 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_nonimported_hamiltonian_time_evolution_source": false,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "failed_gates": 4,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_hamiltonian_time_evolution_source": false,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "failed_gates": 3,
+        "passed_gates": 3
+      },
+      {
+        "accepted_nonimported_hamiltonian_time_evolution_source": false,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "failed_gates": 4,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_hamiltonian_time_evolution_source": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "failed_gates": 1,
+        "passed_gates": 5
+      },
+      {
+        "accepted_nonimported_hamiltonian_time_evolution_source": false,
+        "candidate": "imported_spacetime_field_eom_template",
+        "failed_gates": 2,
+        "passed_gates": 4
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "self_adjoint_operator_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "self-adjoint finite linear algebra is present, but time, units, and physical dynamics are not sourced",
+        "gate_passed": false,
+        "required_gate": "sourced_time_parameter_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "self-adjoint finite linear algebra is present, but time, units, and physical dynamics are not sourced",
+        "gate_passed": false,
+        "required_gate": "unitary_evolution_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "self-adjoint finite linear algebra is present, but time, units, and physical dynamics are not sourced",
+        "gate_passed": false,
+        "required_gate": "energy_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_laplacian_spectral_multiplier",
+        "detail": "self-adjoint finite linear algebra is present, but time, units, and physical dynamics are not sourced",
+        "gate_passed": false,
+        "required_gate": "observable_dynamics_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "self_adjoint_operator_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "unitarity is only a formal imported Schrödinger-style template with dimensionless t",
+        "gate_passed": false,
+        "required_gate": "sourced_time_parameter_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unitary_evolution_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "unitarity is only a formal imported Schrödinger-style template with dimensionless t",
+        "gate_passed": false,
+        "required_gate": "energy_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "detail": "unitarity is only a formal imported Schrödinger-style template with dimensionless t",
+        "gate_passed": false,
+        "required_gate": "observable_dynamics_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "self_adjoint_operator_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "thermal beta algebra does not source Hamiltonian time evolution or energy units",
+        "gate_passed": false,
+        "required_gate": "sourced_time_parameter_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "thermal beta algebra does not source Hamiltonian time evolution or energy units",
+        "gate_passed": false,
+        "required_gate": "unitary_evolution_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "thermal beta algebra does not source Hamiltonian time evolution or energy units",
+        "gate_passed": false,
+        "required_gate": "energy_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3087_dimensionless_partition_generator",
+        "detail": "thermal beta algebra does not source Hamiltonian time evolution or energy units",
+        "gate_passed": false,
+        "required_gate": "observable_dynamics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passes only by importing quantum mechanics and hbar/time/energy units",
+        "gate_passed": false,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "self_adjoint_operator_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "sourced_time_parameter_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unitary_evolution_law_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "energy_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_quantum_mechanics_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "observable_dynamics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passes only as imported spacetime/EOM physics, not as a strict Z12 source",
+        "gate_passed": false,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "self_adjoint_operator_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "sourced_time_parameter_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passes only as imported spacetime/EOM physics, not as a strict Z12 source",
+        "gate_passed": false,
+        "required_gate": "unitary_evolution_law_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "energy_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_spacetime_field_eom_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "observable_dynamics_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "hamiltonian_atom",
+        "hit_count": 1608,
+        "pattern": "Hamiltonian|time-evolution|unitary|self-adjoint|observable dynamics",
+        "sample_hits": [
+          "AGENTS.md:1016:- P2843 is a synthesis/audit of foundations, kernel formulas, and Lagrangian/EOM/Hamiltonian obligations; it exports no new closure theorem.",
+          "AGENTS.md:1018:- Do not promote finite graph witnesses, SWOT language, or Hamiltonian path language to strict graph-source law, role-bearing `L_total`, EOM closure, Hamiltonian closure, bridge closure, role transfer, selector closure, or ToE closure.",
+          "AGENTS.md:1024:- Current evidence satisfies only finite-witness availability, kernel-split preservation, and a finite source-domain placeholder; bridge, role transfer, typed `L_total` coupling, EOM, Hamiltonian, selector, and ToE targets all remain open.",
+          "AGENTS.md:1025:- Do not promote Hamiltonian-only Legendre analysis before a nonproxy unit-bearing `L_total` term and EOM residual closure exist.",
+          "AGENTS.md:1032:- Do not promote dimensional ansätze or Hamiltonian placeholders to unit-bearing typed source/coupling, EOM, Hamiltonian, bridge, role-transfer, or ToE closure.",
+          "AGENTS.md:1039:- Do not promote anonymous vertex profiles to strict localization/pullback, unit-bearing `L_total` source/coupling, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:1046:- Do not promote finite probability normalization to unit-bearing volume form, strict localization/pullback, unit-bearing `L_total` source/coupling, EOM, Hamiltonian, bridge, role-transfer, or ToE closure.",
+          "AGENTS.md:1053:- Do not promote density normalizers to unit-bearing `L_total`, EOM, Hamiltonian, bridge, role-transfer, selector, or ToE closure."
+        ]
+      },
+      {
+        "content_lane": "predecessor_thermo_atom",
+        "hit_count": 317,
+        "pattern": "thermodynamic|statistical-ensemble|partition function|temperature|Boltzmann",
+        "sample_hits": [
+          "AGENTS.md:2729:- The next honest move is exactly one thermodynamic/statistical-ensemble obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new empirical-calibration source theorem is introduced.",
+          "AGENTS.md:2731:## Current thermodynamic/statistical-ensemble obstruction guardrail (P3087/S2037, 2026-06-25)",
+          "AGENTS.md:2733:- P3087 follows the P3086 recommendation and audits one standard-physics interface atom: a non-imported thermodynamic/statistical-ensemble source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2734:- The finite audit computes `7` microcanonical degeneracy rows, `7` formal partition-function rows, `21` energy-scale/beta orbit rows, and `30` candidate gate rows; `0` candidates export an internal non-imported thermodynamic/equilibrium observable source.",
+          "AGENTS.md:2735:- Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2736:- The next honest move is exactly one spectral-to-Hamiltonian/time-evolution obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic source theorem is introduced.",
+          "fundamental_action_reconstruction/p2633_s1583_diagram_grounded_strict_kernel_characteristic_preservation_audit.py:244:            \"preservation_verdict\": \"not_preserved_as_legacy_temperature_parameter\",",
+          "fundamental_action_reconstruction/P414_CURRENT_STRICT_SIGMA_INT_TO_THETA_AX20_TOPOLOGICAL_DENSITY_PROJECTOR_SLOT_FREE_ADMISSIBILITY_AUDIT_PROBE.md:13:2. compute `(theta_1, theta_2)` by a slot-free “information-thermodynamic + representation” method,"
+        ]
+      },
+      {
+        "content_lane": "blocked_promotions",
+        "hit_count": 31662,
+        "pattern": "observed photons|observed light|observed radiation|spacetime EOM|L_total|ToE|selector closure|bridge/role-transfer",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "formal_unitary_phase_rows": [
+      {
+        "dimensionless_time_parameter": 0.0,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      },
+      {
+        "dimensionless_time_parameter": 0.125,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      },
+      {
+        "dimensionless_time_parameter": 0.25,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      },
+      {
+        "dimensionless_time_parameter": 0.5,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      },
+      {
+        "dimensionless_time_parameter": 1.0,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      },
+      {
+        "dimensionless_time_parameter": 2.0,
+        "formal_unitary_identity_holds": true,
+        "hbar_or_action_unit_attached": false,
+        "max_unitarity_modulus_error": 0.0,
+        "modal_phase_count": 12,
+        "observable_dynamics_exported": false,
+        "time_unit_attached": false
+      }
+    ],
+    "hamiltonian_time_evolution_audit_object": {
+      "acceptance_predicate": "internal spectrum plus self-adjoint operator, sourced time parameter, unitary evolution law, energy/action unit source, and observable dynamics export",
+      "candidate_hamiltonian_sources": [
+        "z12_laplacian_spectral_multiplier",
+        "formal_schrodinger_lift_exp_minus_i_lambda_t",
+        "p3087_dimensionless_partition_generator",
+        "imported_quantum_mechanics_template",
+        "imported_spacetime_field_eom_template"
+      ],
+      "object": "Z12DirichletSpectralHamiltonianTimeEvolutionObstructionAudit",
+      "required_gates": [
+        "internal_spectrum_exported",
+        "self_adjoint_operator_exported",
+        "sourced_time_parameter_exported",
+        "unitary_evolution_law_exported",
+        "energy_unit_source_exported",
+        "observable_dynamics_exported"
+      ],
+      "source_reused": "P3087 recommendation: bounded spectral-to-Hamiltonian/time-evolution obstruction audit"
+    },
+    "spectral_hamiltonian_rows": [
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 0.0,
+        "lambda_m": 0.0,
+        "mode": 0,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 0.267949192431,
+        "lambda_m": 0.267949192431,
+        "mode": 1,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 1.0,
+        "lambda_m": 1.0,
+        "mode": 2,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 2.0,
+        "lambda_m": 2.0,
+        "mode": 3,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 3.0,
+        "lambda_m": 3.0,
+        "mode": 4,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 3.732050807569,
+        "lambda_m": 3.732050807569,
+        "mode": 5,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 4.0,
+        "lambda_m": 4.0,
+        "mode": 6,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 3.732050807569,
+        "lambda_m": 3.732050807569,
+        "mode": 7,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 3.0,
+        "lambda_m": 3.0,
+        "mode": 8,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 2.0,
+        "lambda_m": 2.0,
+        "mode": 9,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 1.0,
+        "lambda_m": 1.0,
+        "mode": 10,
+        "physical_hamiltonian_exported": false
+      },
+      {
+        "energy_unit_attached": false,
+        "finite_self_adjoint_real_symmetric_witness": true,
+        "formal_hamiltonian_eigenvalue": 0.267949192431,
+        "lambda_m": 0.267949192431,
+        "mode": 11,
+        "physical_hamiltonian_exported": false
+      }
+    ],
+    "time_energy_scale_orbit_rows": [
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.0,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.125,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.25,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.5,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 1.0,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 2.0,
+        "energy_scale": 0.5,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 0.0,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 0.125,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 0.25,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 0.5,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 1.0,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": true,
+        "dimensionless_time_parameter": 2.0,
+        "energy_scale": 1.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.0,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.125,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.25,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 0.5,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 1.0,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_time_or_energy_scale_selected": false,
+        "dimensionless_time_parameter": 2.0,
+        "energy_scale": 2.0,
+        "max_phase_error": 0.0,
+        "scaled_energy_phase_matches_rescaled_time_phase": true,
+        "selection_is_conventional_without_unit_source": true
+      }
+    ],
+    "z12_laplacian_spectrum": [
+      0.0,
+      0.267949192431,
+      1.0,
+      2.0,
+      3.0,
+      3.732050807569,
+      4.0,
+      3.732050807569,
+      3.0,
+      2.0,
+      1.0,
+      0.267949192431
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3088 constructs the requested spectral-to-Hamiltonian/time-evolution obstruction audit.  The finite Z12 Laplacian supplies a real symmetric/self-adjoint spectral multiplier and formal exp(-i lambda t) phase rows are exactly unit-modulus on a dimensionless grid.  However, the time parameter, hbar/action normalization, energy units, and observable-dynamics readout remain unsourced; energy scaling can be absorbed by rescaling dimensionless time.  Imported quantum-mechanics and spacetime-EOM templates pass only as imported templates.  Therefore no non-imported physical Hamiltonian/time-evolution observable source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "bridge_role_transfer_exported": false,
+      "empirical_observable_exported": false,
+      "energy_unit_source_exported": false,
+      "hbar_or_action_unit_source_exported": false,
+      "ltotal_exported": false,
+      "measurement_unit_source_exported": false,
+      "observable_dynamics_exported": false,
+      "observed_light_exported": false,
+      "observed_photons_exported": false,
+      "observed_radiation_exported": false,
+      "physical_hamiltonian_exported": false,
+      "sourced_time_parameter_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "thermodynamic_source_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Pivot to exactly one adjacent standard-physics interface atom outside selector replay: construct a bounded spectral-observable/Born-rule probability-readout obstruction audit for the Z12 Dirichlet/Laplacian branch, testing whether internal eigenmodes and formal unitary phases supply a Hilbert-state normalization, positive probability measure, Born-rule map, measurement basis/source, and empirical probability readout without importing quantum measurement theory, apparatus units, observed radiation/light, spacetime EOM, L_total, bridge/role-transfer, or ToE.",
+    "positive_scoped_flags": {
+      "finite_self_adjoint_spectral_multiplier_computed": true,
+      "formal_unitary_phase_grid_computed": true,
+      "time_energy_scale_orbit_verified": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_nonimported_hamiltonian_time_evolution_sources": 0,
+    "candidate_gate_rows": 30,
+    "canonical_time_or_energy_sources_exported": 0,
+    "content_grep_hits": 33587,
+    "content_grep_lanes": 3,
+    "formal_unitary_phase_rows": 6,
+    "hamiltonian_candidates": 5,
+    "p3087_accepted_nonimported_thermodynamic_ensemble_sources": 0,
+    "phase_rows_with_action_units": 0,
+    "phase_rows_with_time_units": 0,
+    "proof_obligations": 5,
+    "required_gates": 6,
+    "satisfied_proof_obligations": 4,
+    "spectral_hamiltonian_rows": 12,
+    "spectral_rows_with_energy_units": 0,
+    "spectrum_rows": 12,
+    "time_energy_scale_identity_failures": 0,
+    "time_energy_scale_orbit_rows": 18,
+    "unitarity_modulus_failures": 0
+  },
+  "input_hashes": {
+    "P3087": "2a81f292f10d7f0e083b4c5ebf2fe77e52dee7686887460416212951ef0e9fe1"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3087 selected spectral-to-Hamiltonian/time-evolution audit as the next interface atom",
+      "obligation": "read_p3087_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "the finite Z12 Laplacian is represented as a real symmetric/self-adjoint spectral multiplier",
+      "obligation": "construct_self_adjoint_spectral_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "formal exp(-i lambda t) phases have unit modulus on the dimensionless time grid",
+      "obligation": "compute_formal_unitary_phase_grid",
+      "satisfied": true
+    },
+    {
+      "detail": "energy scaling can be absorbed into dimensionless time scaling, so no canonical time/energy unit is selected",
+      "obligation": "test_time_energy_scale_orbit",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates pass as internal non-imported Hamiltonian/time-evolution observable sources",
+      "obligation": "export_nonimported_observable_dynamics",
+      "satisfied": false
+    }
+  ],
+  "status": "P3088_SPECTRAL_HAMILTONIAN_TIME_EVOLUTION_OBSTRUCTION_BOUNDED_NO_GO"
+}
