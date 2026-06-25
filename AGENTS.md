@@ -2762,3 +2762,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `3` log-det spectral-action rows, `36` source-coupled quadratic-generator rows, `4` coupling-scale orbit rows, `12` finite formal-variation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported physical action/generating-functional source.
 - Do not promote finite log-dets, source-coupled `1/2 JGJ` generators, formal variations, dimensionless coupling-scale orbits, imported Gaussian path-integral templates, or imported EFT templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Green/response closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one renormalization/scale-flow effective-coupling obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new action/generating-functional source theorem is introduced.
+
+## Current renormalization/scale-flow effective-coupling obstruction guardrail (P3092/S2042, 2026-06-25)
+
+- P3092 follows the P3091 recommendation and audits one standard-physics interface atom: a non-imported renormalization/scale-flow effective-coupling source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `7` log-det scale-dependence rows, `6` Green-kernel beta-like finite-difference rows, `28` coupling-rescaling orbit rows, and `35` candidate gate rows; `0` candidates export an internal non-imported physical RG/source-flow law.
+- Do not promote finite log-det scale derivatives, Green-kernel beta-like slopes, dimensionless source-coupling rescaling orbits, imported continuum QFT RG templates, or imported empirical running-coupling templates to sourced beta function, physical renormalization scale, unit-normalized running coupling, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one Ward-identity/symmetry-current effective-charge obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new RG/source-flow theorem is introduced.
+
+## Current Ward-identity/symmetry-current effective-charge obstruction guardrail (P3093/S2043, 2026-06-25)
+
+- P3093 follows the P3092 recommendation and audits one standard-physics interface atom: a non-imported Ward-identity/symmetry-current effective-charge source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `24` exact translation/reflection commutator rows, `12` source-variation balance rows, `12` spectral charge-label rows, `12` formal discrete-current rows, and `40` candidate gate rows; `0` candidates export an internal non-imported Ward/current/effective-charge law.
+- Do not promote graph automorphism commutators, finite source-variation balances, Fourier-mode charge labels, formal edge-current rows, imported continuum gauge Ward templates, or imported empirical electric-charge templates to physical conserved current, gauge-charge normalization, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one stress-energy/metric-response obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Ward/current/effective-charge theorem is introduced.
+
+## Current stress-energy/metric-response obstruction guardrail (P3094/S2044, 2026-06-25)
+
+- P3094 follows the P3093 recommendation and audits one standard-physics interface atom: a non-imported stress-energy/metric-response source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `144` edge-weight metric-variation rows, `12` graph-energy quadratic rows, `7` spectral pressure-like log-det derivative rows, `12` formal stress-divergence rows, and `40` candidate gate rows; `0` candidates export an internal non-imported stress-energy/metric-response law.
+- Do not promote edge-weight metric variations, graph-energy quadratics, spectral pressure-like derivatives, formal stress-divergence rows, imported continuum stress-tensor templates, or imported empirical gravity-response templates to physical stress-energy tensor, metric coupling, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one dispersion/propagating-mode observable obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new stress-energy/metric-response theorem is introduced.
+
+## Current dispersion/propagating-mode observable obstruction guardrail (P3095/S2045, 2026-06-25)
+
+- P3095 follows the P3094 recommendation and audits one standard-physics interface atom: a non-imported dispersion/propagating-mode observable source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` dispersion/group-velocity rows, `12` formal mode-packet evolution rows, `48` Green-pole catalog rows, `12` energy-flux proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported propagating observable/radiation law.
+- Do not promote finite dispersion curves, group-velocity proxies, formal mode-packet phases, Green-pole catalogs, modal energy-flux proxies, imported continuum wave templates, or imported observed-radiation templates to physical propagating field mode, detector-independent observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one scattering/S-matrix asymptotic-state obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new propagation/observable theorem is introduced.
+
+## Current scattering/S-matrix asymptotic-state obstruction guardrail (P3096/S2046, 2026-06-25)
+
+- P3096 follows the P3095 recommendation and audits one standard-physics interface atom: a non-imported scattering/S-matrix asymptotic-state source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` finite channel rows, `144` Born-like transition-amplitude rows, `3` S-matrix unitarity-proxy rows, `12` cross-section proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported scattering/S-matrix law.
+- Do not promote finite Fourier channel labels, Born-like transition amplitudes, formal S-proxy unitarity-defect rows, cross-section proxies, imported continuum scattering templates, or imported detector templates to in/out asymptotic states, physical unitary S-matrix, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one thermodynamic-radiation/blackbody-spectrum obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new scattering/S-matrix theorem is introduced.
