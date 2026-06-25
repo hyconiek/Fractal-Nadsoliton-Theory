@@ -4,7 +4,7 @@ Status: `P3084_GAUGE_REPRESENTATION_OBSTRUCTION_WITNESS_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `41537`
+- content grep hits: `41645`
 - P3083 accepted non-imported Lorentz-signature sources: `0`
 - Z12 character rows: `12`
 - nontrivial character rows: `11`

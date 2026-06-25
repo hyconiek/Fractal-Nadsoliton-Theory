@@ -2734,3 +2734,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `7` microcanonical degeneracy rows, `7` formal partition-function rows, `21` energy-scale/beta orbit rows, and `30` candidate gate rows; `0` candidates export an internal non-imported thermodynamic/equilibrium observable source.
 - Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one spectral-to-Hamiltonian/time-evolution obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic source theorem is introduced.
+
+## Current spectral-to-Hamiltonian/time-evolution obstruction guardrail (P3088/S2038, 2026-06-25)
+
+- P3088 follows the P3087 recommendation and audits one standard-physics interface atom: a non-imported spectral-to-Hamiltonian/time-evolution source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` spectral Hamiltonian rows, `6` formal unitary phase rows, `18` time-energy scale orbit rows, and `30` candidate gate rows; `0` candidates export an internal non-imported Hamiltonian/time-evolution observable source.
+- Do not promote finite self-adjoint spectral multipliers, formal `exp(-i lambda t)` phases, dimensionless time parameters, time-energy-normalized phase orbits, imported quantum-mechanics templates, or imported spacetime/EOM templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one spectral-observable/Born-rule probability-readout obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Hamiltonian/time source theorem is introduced.
+
+## Current spectral-observable/Born-rule readout obstruction guardrail (P3089/S2039, 2026-06-25)
+
+- P3089 follows the P3088 recommendation and audits one standard-physics interface atom: a non-imported spectral-observable/Born-rule probability-readout source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `4095` nonzero binary-profile probability census rows, `12` translation-orbit controls, `6` formal time-probability conservation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported Born-rule/probability-readout source.
+- Do not promote normalized Fourier-power weights, Laplacian eigenbasis weights, formal probability conservation, imported quantum-measurement templates, or imported detector-frequency templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one spectral-correlation/Green-function response obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Born-rule/readout source theorem is introduced.
