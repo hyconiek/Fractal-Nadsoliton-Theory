@@ -4103,3 +4103,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3099/S2049 irreversibility/entropy-production thermalization obstruction audit
 
 `P3099/S2049` attacks exactly one post-P3098 interface atom: a non-imported irreversibility/entropy-production thermalization source for the Z12 Dirichlet/Laplacian branch.  It constructs `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and a `5 x 8 = 40` candidate gate matrix.  The finite thermalization-like algebra remains formal; no physical time arrow, bath/preparation mechanism, dissipative semigroup source, empirical thermalization readout, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3100/S2050 open-system bath/preparation source obstruction audit
+
+`P3100/S2050` attacks exactly one post-P3099 interface atom: a non-imported open-system bath/preparation source for the Z12 Dirichlet/Laplacian branch.  It constructs `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and a `5 x 8 = 40` candidate gate matrix.  The finite open-system-like algebra remains formal; no physical time arrow, bath/preparation mechanism, dissipative semigroup source, empirical thermalization readout, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3101/S2051 detector/readout calibration obstruction audit
+
+`P3101/S2051` attacks exactly one post-P3100 interface atom: a non-imported detector/readout calibration source for the Z12 Dirichlet/Laplacian branch.  It constructs `48` detector response rows, `60` calibration orbit rows, `48` threshold classifier rows, `144` noise stability rows, and a `5 x 8 = 40` candidate gate matrix.  The finite readout-like algebra remains formal; no physical detector map, canonical unit calibration, physical threshold/noise source, observed-light interface, empirical readout source, `L_total`, bridge/role-transfer, or ToE closure is exported.
