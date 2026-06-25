@@ -2720,3 +2720,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `12` formal Fourier link-current rows, `144` finite continuity rows, `4096` real-profile control rows, and `30` candidate current-source gate rows; `0` candidates export an internal non-imported conserved-current source.
 - Do not promote formal complexified Z12 phase lifts, divergence-free Fourier link currents, real-profile zero-current controls, imported continuum Noether templates, or imported electromagnetic four-current templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one empirical-readout/observable-calibration obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new conserved-current source theorem is introduced.
+
+## Current empirical-readout/observable-calibration obstruction guardrail (P3086/S2036, 2026-06-25)
+
+- P3086 follows the P3085 recommendation and audits one standard-physics interface atom: a non-imported unit-calibrated empirical observable/readout source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` spectrum rows, `7` distinct spectral-gap rows, `5` scale-orbit controls, `30` candidate gate rows, and `30` calibration-attempt rows; `0` candidates export an internal non-imported empirical observable source.
+- Do not promote dimensionless Z12 scalar/spectral witnesses, P3085 formal current proxies, scale-normalized ratios, imported metrology templates, or imported observed-photon/frequency templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one thermodynamic/statistical-ensemble obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new empirical-calibration source theorem is introduced.
+
+## Current thermodynamic/statistical-ensemble obstruction guardrail (P3087/S2037, 2026-06-25)
+
+- P3087 follows the P3086 recommendation and audits one standard-physics interface atom: a non-imported thermodynamic/statistical-ensemble source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `7` microcanonical degeneracy rows, `7` formal partition-function rows, `21` energy-scale/beta orbit rows, and `30` candidate gate rows; `0` candidates export an internal non-imported thermodynamic/equilibrium observable source.
+- Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one spectral-to-Hamiltonian/time-evolution obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic source theorem is introduced.

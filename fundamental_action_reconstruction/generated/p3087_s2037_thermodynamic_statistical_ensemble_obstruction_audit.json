@@ -1,0 +1,713 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_nonimported_thermodynamic_ensemble_source": false,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "failed_gates": 4,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_thermodynamic_ensemble_source": false,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "failed_gates": 5,
+        "passed_gates": 1
+      },
+      {
+        "accepted_nonimported_thermodynamic_ensemble_source": false,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "failed_gates": 4,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_thermodynamic_ensemble_source": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "failed_gates": 1,
+        "passed_gates": 5
+      },
+      {
+        "accepted_nonimported_thermodynamic_ensemble_source": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "failed_gates": 1,
+        "passed_gates": 5
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "formal beta is dimensionless and not sourced as physical inverse temperature",
+        "gate_passed": false,
+        "required_gate": "canonical_temperature_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "formal beta is dimensionless and not sourced as physical inverse temperature",
+        "gate_passed": false,
+        "required_gate": "boltzmann_constant_or_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_function_computed"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "formal beta is dimensionless and not sourced as physical inverse temperature",
+        "gate_passed": false,
+        "required_gate": "entropy_energy_units_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_z12_laplacian_boltzmann_weights",
+        "detail": "formal beta is dimensionless and not sourced as physical inverse temperature",
+        "gate_passed": false,
+        "required_gate": "equilibrium_observable_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "degeneracy counting gives dimensionless combinatorics, not thermodynamic units",
+        "gate_passed": false,
+        "required_gate": "canonical_temperature_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "degeneracy counting gives dimensionless combinatorics, not thermodynamic units",
+        "gate_passed": false,
+        "required_gate": "boltzmann_constant_or_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "degeneracy counting gives dimensionless combinatorics, not thermodynamic units",
+        "gate_passed": false,
+        "required_gate": "partition_function_computed"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "degeneracy counting gives dimensionless combinatorics, not thermodynamic units",
+        "gate_passed": false,
+        "required_gate": "entropy_energy_units_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "z12_microcanonical_degeneracy_counts",
+        "detail": "degeneracy counting gives dimensionless combinatorics, not thermodynamic units",
+        "gate_passed": false,
+        "required_gate": "equilibrium_observable_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "energy rescalings change beta-energy products unless an external unit convention is chosen",
+        "gate_passed": false,
+        "required_gate": "canonical_temperature_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "energy rescalings change beta-energy products unless an external unit convention is chosen",
+        "gate_passed": false,
+        "required_gate": "boltzmann_constant_or_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_function_computed"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "energy rescalings change beta-energy products unless an external unit convention is chosen",
+        "gate_passed": false,
+        "required_gate": "entropy_energy_units_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "p3086_scale_orbit_normalized_energy_family",
+        "detail": "energy rescalings change beta-energy products unless an external unit convention is chosen",
+        "gate_passed": false,
+        "required_gate": "equilibrium_observable_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passes only by importing thermodynamic units and ensemble machinery",
+        "gate_passed": false,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "canonical_temperature_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "boltzmann_constant_or_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_function_computed"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "entropy_energy_units_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_boltzmann_gibbs_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "equilibrium_observable_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passes only by importing observed radiation/temperature physics",
+        "gate_passed": false,
+        "required_gate": "internal_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "canonical_temperature_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "boltzmann_constant_or_unit_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_function_computed"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "entropy_energy_units_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_radiation_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "equilibrium_observable_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "thermodynamic_atom",
+        "hit_count": 298,
+        "pattern": "thermodynamic|statistical-ensemble|partition function|temperature|Boltzmann|entropy/energy",
+        "sample_hits": [
+          "AGENTS.md:2729:- The next honest move is exactly one thermodynamic/statistical-ensemble obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new empirical-calibration source theorem is introduced.",
+          "AGENTS.md:2731:## Current thermodynamic/statistical-ensemble obstruction guardrail (P3087/S2037, 2026-06-25)",
+          "AGENTS.md:2733:- P3087 follows the P3086 recommendation and audits one standard-physics interface atom: a non-imported thermodynamic/statistical-ensemble source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2734:- The finite audit computes `7` microcanonical degeneracy rows, `7` formal partition-function rows, `21` energy-scale/beta orbit rows, and `30` candidate gate rows; `0` candidates export an internal non-imported thermodynamic/equilibrium observable source.",
+          "AGENTS.md:2735:- Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2736:- The next honest move is exactly one spectral-to-Hamiltonian/time-evolution obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic source theorem is introduced.",
+          "fundamental_action_reconstruction/TICKET_P2631_BETA_NORMALIZATION_IDENTITY.md:12:- **β** = length scale / temperatura sieci informacyjnej (jak w Gaussian Processes lub maszynach Boltzmanna). Pytanie \"dlaczego β=1?\" to pytanie o **punkt krytyczny** sieci.",
+          "fundamental_action_reconstruction/p2635_s1585_toe_neural_universe_empirical_signature_audit.py:97:            \"Energy-Based Model|Boltzmann|attention|positional encoding|gradient descent|learning\""
+        ]
+      },
+      {
+        "content_lane": "predecessor_observable_atom",
+        "hit_count": 2676,
+        "pattern": "empirical observable|observable-calibration|measurement units|unit-calibrated|readout",
+        "sample_hits": [
+          "AGENTS.md:1112:## Current observer-readout phase-source effect guardrail (P2857/S1807, 2026-06-18)",
+          "AGENTS.md:1114:- P2857 checks observer readout after P2856 in the required ontology order `nadsoliton -> light -> matter -> emergent observer`.",
+          "AGENTS.md:1115:- Observer bit-profile readout cannot distinguish the strict tuple from P2856 same-bit ambiguity witnesses; observer frame/origin anchoring is conventional without a pre-observer selector, and full-parameter measurement reports rather than sources `omega/phi`.",
+          "AGENTS.md:1116:- Do not promote observer readout, measurement, frame choice, or observer-induced bookkeeping to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:1122:- Phase-bit/topological readout is therefore a robust finite witness but not an exact source-selection law for the strict tuple.",
+          "AGENTS.md:1123:- Do not promote phase bits, observer readout, affine transport, sign-cell stability, rational probes, or prime-5 representability to strict phase/frequency source law, selector closure, full bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:2213:## Current observer-physics readout strict-kernel/selector guardrail (P3013/S1963, 2026-06-22)",
+          "AGENTS.md:2215:- P3013 translates the strict-kernel/selector distinction into our-physics rows: spacetime geometry, time, matter, energy, and observer readout."
+        ]
+      },
+      {
+        "content_lane": "blocked_promotions",
+        "hit_count": 31613,
+        "pattern": "observed photons|observed light|observed radiation|spacetime EOM|L_total|ToE|selector closure|bridge/role-transfer",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "energy_scale_beta_orbit_rows": [
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 12.0,
+        "dimensionless_beta": 0.0,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 12.0,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 10.631370288364,
+        "dimensionless_beta": 0.125,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 10.631370288364,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 9.492205945677,
+        "dimensionless_beta": 0.25,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 9.492205945677,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 7.74042324539,
+        "dimensionless_beta": 0.5,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 7.74042324539,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 5.589115291128,
+        "dimensionless_beta": 1.0,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 5.589115291128,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 3.702099877966,
+        "dimensionless_beta": 2.0,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 3.702099877966,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 2.484028150996,
+        "dimensionless_beta": 4.0,
+        "energy_scale": 0.5,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 2.484028150996,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 12.0,
+        "dimensionless_beta": 0.0,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 12.0,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 9.492205945677,
+        "dimensionless_beta": 0.125,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 9.492205945677,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 7.74042324539,
+        "dimensionless_beta": 0.25,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 7.74042324539,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 5.589115291128,
+        "dimensionless_beta": 0.5,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 5.589115291128,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 3.702099877966,
+        "dimensionless_beta": 1.0,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 3.702099877966,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 2.484028150996,
+        "dimensionless_beta": 2.0,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 2.484028150996,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": true,
+        "compensated_original_partition_function": 1.722100788237,
+        "dimensionless_beta": 4.0,
+        "energy_scale": 1.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 1.722100788237,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 12.0,
+        "dimensionless_beta": 0.0,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 12.0,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 7.74042324539,
+        "dimensionless_beta": 0.125,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 7.74042324539,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 5.589115291128,
+        "dimensionless_beta": 0.25,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 5.589115291128,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 3.702099877966,
+        "dimensionless_beta": 0.5,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 3.702099877966,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 2.484028150996,
+        "dimensionless_beta": 1.0,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 2.484028150996,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 1.722100788237,
+        "dimensionless_beta": 2.0,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 1.722100788237,
+        "selection_is_conventional_without_unit_source": true
+      },
+      {
+        "canonical_energy_scale_selected": false,
+        "compensated_original_partition_function": 1.235136759326,
+        "dimensionless_beta": 4.0,
+        "energy_scale": 2.0,
+        "scale_beta_compensation_identity_holds": true,
+        "scaled_partition_function": 1.235136759326,
+        "selection_is_conventional_without_unit_source": true
+      }
+    ],
+    "formal_partition_function_rows": [
+      {
+        "dimensionless_beta": 0.0,
+        "energy_unit_attached": false,
+        "energy_variance": 2.0,
+        "entropy_like_logZ_plus_betaE": 2.484906649788,
+        "mean_dimensionless_energy": 2.0,
+        "partition_function_Z": 12.0,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 0.125,
+        "energy_unit_attached": false,
+        "energy_variance": 1.953926730921,
+        "entropy_like_logZ_plus_betaE": 2.469462659622,
+        "mean_dimensionless_energy": 1.751932996164,
+        "partition_function_Z": 9.492205945677,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 0.25,
+        "energy_unit_attached": false,
+        "energy_variance": 1.824778850947,
+        "entropy_like_logZ_plus_betaE": 2.425206562683,
+        "mean_dimensionless_energy": 1.515000774838,
+        "partition_function_Z": 7.74042324539,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 0.5,
+        "energy_unit_attached": false,
+        "energy_variance": 1.417384130202,
+        "entropy_like_logZ_plus_betaE": 2.27443104239,
+        "mean_dimensionless_energy": 1.107220068188,
+        "partition_function_Z": 5.589115291128,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 1.0,
+        "energy_unit_attached": false,
+        "energy_variance": 0.656892995015,
+        "entropy_like_logZ_plus_betaE": 1.913350856046,
+        "mean_dimensionless_energy": 0.604450662797,
+        "partition_function_Z": 3.702099877966,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 2.0,
+        "energy_unit_attached": false,
+        "energy_variance": 0.153828941564,
+        "entropy_like_logZ_plus_betaE": 1.455772283909,
+        "mean_dimensionless_energy": 0.272945393487,
+        "partition_function_Z": 2.484028150996,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "dimensionless_beta": 4.0,
+        "energy_unit_attached": false,
+        "energy_variance": 0.034906198373,
+        "entropy_like_logZ_plus_betaE": 1.05803427726,
+        "mean_dimensionless_energy": 0.128622335803,
+        "partition_function_Z": 1.722100788237,
+        "physical_equilibrium_observable": false,
+        "temperature_unit_attached": false
+      }
+    ],
+    "microcanonical_degeneracy_rows": [
+      {
+        "degeneracy": 1,
+        "dimensionless_count": true,
+        "energy_label": 0.0,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_count": true,
+        "energy_label": 0.267949192431,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_count": true,
+        "energy_label": 1.0,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_count": true,
+        "energy_label": 2.0,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_count": true,
+        "energy_label": 3.0,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_count": true,
+        "energy_label": 3.732050807569,
+        "entropy_unit_attached": false
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_count": true,
+        "energy_label": 4.0,
+        "entropy_unit_attached": false
+      }
+    ],
+    "thermodynamic_ensemble_audit_object": {
+      "acceptance_predicate": "internal spectrum plus canonical temperature source, Boltzmann/unit source, partition function, entropy/energy units, and equilibrium observable export",
+      "candidate_ensemble_sources": [
+        "finite_z12_laplacian_boltzmann_weights",
+        "z12_microcanonical_degeneracy_counts",
+        "p3086_scale_orbit_normalized_energy_family",
+        "imported_boltzmann_gibbs_template",
+        "imported_blackbody_radiation_template"
+      ],
+      "object": "Z12DirichletThermodynamicStatisticalEnsembleObstructionAudit",
+      "required_gates": [
+        "internal_spectrum_exported",
+        "canonical_temperature_source_exported",
+        "boltzmann_constant_or_unit_source_exported",
+        "partition_function_computed",
+        "entropy_energy_units_exported",
+        "equilibrium_observable_exported"
+      ],
+      "source_reused": "P3086 recommendation: bounded thermodynamic/statistical-ensemble obstruction audit"
+    },
+    "z12_laplacian_spectrum": [
+      0.0,
+      0.267949192431,
+      1.0,
+      2.0,
+      3.0,
+      3.732050807569,
+      4.0,
+      3.732050807569,
+      3.0,
+      2.0,
+      1.0,
+      0.267949192431
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3087 constructs the requested thermodynamic/statistical-ensemble obstruction audit.  The finite Z12 Laplacian spectrum supports a formal microcanonical degeneracy table and a dimensionless canonical partition grid, but beta remains a formal parameter.  Energy-scale/beta orbit rows show that rescaling the energy labels can be exactly compensated by rescaling beta, so no canonical temperature or energy unit is selected internally.  Boltzmann-Gibbs and blackbody rows pass only as imported templates.  Therefore no non-imported thermodynamic/equilibrium observable source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "boltzmann_constant_or_unit_source_exported": false,
+      "bridge_role_transfer_exported": false,
+      "canonical_temperature_source_exported": false,
+      "empirical_observable_exported": false,
+      "entropy_energy_units_exported": false,
+      "equilibrium_observable_exported": false,
+      "ltotal_exported": false,
+      "measurement_unit_source_exported": false,
+      "observed_light_exported": false,
+      "observed_photons_exported": false,
+      "observed_radiation_exported": false,
+      "physical_hamiltonian_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Pivot to exactly one adjacent standard-physics interface atom outside selector replay: construct a bounded spectral-to-Hamiltonian/time-evolution obstruction audit for the Z12 Dirichlet/Laplacian branch, testing whether the internal finite spectrum supplies a self-adjoint Hamiltonian with a sourced time parameter, unitary evolution, energy units, and observable dynamics without importing quantum mechanics, measurement units, spacetime EOM, observed radiation/light, L_total, bridge/role-transfer, or ToE.",
+    "positive_scoped_flags": {
+      "energy_scale_beta_orbit_verified": true,
+      "finite_degeneracy_table_computed": true,
+      "formal_partition_grid_computed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_nonimported_thermodynamic_ensemble_sources": 0,
+    "candidate_gate_rows": 30,
+    "canonical_temperature_sources_exported": 0,
+    "content_grep_hits": 34587,
+    "content_grep_lanes": 3,
+    "energy_scale_beta_orbit_rows": 21,
+    "ensemble_candidates": 5,
+    "formal_partition_function_rows": 7,
+    "microcanonical_degeneracy_rows": 7,
+    "p3086_accepted_nonimported_empirical_observable_sources": 0,
+    "partition_rows_with_energy_units": 0,
+    "partition_rows_with_temperature_units": 0,
+    "proof_obligations": 5,
+    "required_gates": 6,
+    "satisfied_proof_obligations": 4,
+    "scale_beta_identity_failures": 0,
+    "spectrum_rows": 12
+  },
+  "input_hashes": {
+    "P3086": "87c4beb81916e78bf1ab6ca4af8fdcdc08dd5bbff614f9e528cb64a1bc55a37f"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3086 selected thermodynamic/statistical-ensemble audit as the next interface atom",
+      "obligation": "read_p3086_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "distinct Z12 Laplacian energy labels and degeneracies are enumerated",
+      "obligation": "construct_finite_degeneracy_table",
+      "satisfied": true
+    },
+    {
+      "detail": "dimensionless partition/mean-energy/variance/entropy-like rows are computed on seven beta values",
+      "obligation": "compute_formal_partition_grid",
+      "satisfied": true
+    },
+    {
+      "detail": "energy-scale changes can be compensated by beta rescaling, so no canonical physical temperature is selected",
+      "obligation": "test_energy_scale_beta_orbit",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates pass as internal non-imported thermodynamic/equilibrium observable sources",
+      "obligation": "export_nonimported_thermodynamic_observable",
+      "satisfied": false
+    }
+  ],
+  "status": "P3087_THERMODYNAMIC_STATISTICAL_ENSEMBLE_OBSTRUCTION_BOUNDED_NO_GO"
+}

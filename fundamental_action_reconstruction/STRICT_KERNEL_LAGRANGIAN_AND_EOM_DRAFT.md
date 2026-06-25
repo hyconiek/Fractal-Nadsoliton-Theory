@@ -3416,3 +3416,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3085/S2035 conserved current remains unsourced
 
 `P3085/S2035` confirms that formal Z12 link-current continuity in an auxiliary complex/Fourier lift is not yet a physical Noether current.  A Lagrangian/EOM reading still needs a strict source for phase space, variational symmetry, Noether theorem, physical current units, and conserved charge density; imported continuum Noether or electromagnetic current templates do not supply those strict sources.
+
+## P3086/S2036 empirical readout remains uncalibrated
+
+`P3086/S2036` confirms that finite Z12 Dirichlet/Laplacian spectral and scalar witnesses do not by themselves form a calibrated physical observable.  A Lagrangian/EOM or empirical-physics reading still needs a strict source for measurement units, a calibration map, and an apparatus/readout protocol; imported metrology, observed photon, or continuum physics templates do not supply those strict sources.
+
+## P3087/S2037 thermodynamic ensemble remains unsourced
+
+`P3087/S2037` confirms that a finite Z12 Laplacian spectrum can support formal degeneracy and partition-function algebra, but not yet a physical thermodynamic sector.  A Lagrangian/EOM or empirical-physics reading still needs a strict source for temperature, Boltzmann/energy units, entropy units, and equilibrium observables; imported statistical mechanics or blackbody radiation templates do not supply those strict sources.

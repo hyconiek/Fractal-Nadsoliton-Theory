@@ -4,7 +4,7 @@ Status: `P3082_Z12_CONTINUUM_LIMIT_FUNCTOR_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `37411`
+- content grep hits: `37517`
 - P3081 accepted non-imported dimension/action-unit sources: `0`
 - refinement sizes: `4`
 - mode rows per refinement: `5`

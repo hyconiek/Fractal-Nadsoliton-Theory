@@ -4,7 +4,7 @@ Status: `P3085_CONSERVED_CURRENT_NOETHER_OBSTRUCTION_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `43334`
+- content grep hits: `43396`
 - P3084 accepted non-imported gauge-representation sources: `0`
 - Fourier link-current rows: `12`
 - formal divergence-free Fourier rows: `12`
