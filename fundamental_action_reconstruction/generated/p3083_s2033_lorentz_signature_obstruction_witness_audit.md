@@ -4,7 +4,7 @@ Status: `P3083_LORENTZ_SIGNATURE_OBSTRUCTION_WITNESS_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `32824`
+- content grep hits: `32919`
 - P3082 accepted non-imported continuum-limit functors: `0`
 - quadratic-form signature rows: `5`
 - internal signature rows: `3`

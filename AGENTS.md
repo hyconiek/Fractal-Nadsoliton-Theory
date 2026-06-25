@@ -2706,3 +2706,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `5` quadratic-form signature rows, all `4096` binary Dirichlet profile sign rows, and `30` candidate Lorentz-source gate rows; internal Z12 forms are semidefinite and `0` candidates export an internal non-imported Lorentzian signature source.
 - Do not promote Euclidean Dirichlet forms, cycle-distance proxies, sign-flipped semidefinite forms, formal wave lifts, Wick templates, or imported Minkowski metrics to observed light, gauge photons, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one remaining standard-physics interface atom: a bounded gauge-representation obstruction/witness audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Lorentz-signature source theorem is introduced.
+
+## Current gauge-representation obstruction/witness guardrail (P3084/S2034, 2026-06-25)
+
+- P3084 follows the P3083 recommendation and audits one remaining standard-physics interface atom: a non-imported gauge-representation source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` Z12 character rows, `144` orthogonality rows, `12` flat holonomy rows, `12` phase-twisted Laplacian rows, and `30` candidate gauge-source gate rows; `0` candidates export an internal non-imported gauge-representation source.
+- Do not promote finite character labels, flat cycle holonomies, phase-twisted Laplacians, imported `U(1)` minimal coupling, or imported Standard Model photon templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one conserved-current/Noether-obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new gauge-source theorem is introduced.
+
+## Current conserved-current/Noether obstruction guardrail (P3085/S2035, 2026-06-25)
+
+- P3085 follows the P3084 recommendation and audits one remaining standard-physics interface atom: a non-imported unit-bearing conserved-current/charge-density source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` formal Fourier link-current rows, `144` finite continuity rows, `4096` real-profile control rows, and `30` candidate current-source gate rows; `0` candidates export an internal non-imported conserved-current source.
+- Do not promote formal complexified Z12 phase lifts, divergence-free Fourier link currents, real-profile zero-current controls, imported continuum Noether templates, or imported electromagnetic four-current templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one empirical-readout/observable-calibration obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new conserved-current source theorem is introduced.

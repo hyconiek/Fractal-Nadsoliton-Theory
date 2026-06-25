@@ -3408,3 +3408,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3083/S2033 Lorentz signature remains unsourced
 
 `P3083/S2033` confirms that the internal Dirichlet/Laplacian quadratic data remain elliptic/Euclidean or sign-flipped semidefinite.  A physical wave/Lagrangian reading still needs a sourced nondegenerate time axis, Lorentzian metric, unit time normalization, and hyperbolic operator theorem; imported `-d_t^2 + Delta` templates do not supply those strict sources.
+
+## P3084/S2034 gauge representation remains unsourced
+
+`P3084/S2034` confirms that Z12 character/Fourier data and flat holonomy twists do not by themselves become a physical gauge sector.  A Lagrangian/EOM reading still needs a strict source for a gauge bundle, connection dynamics, nonzero curvature, conserved charge, and unit-bearing current; imported `U(1)` minimal-coupling or Standard Model photon templates do not supply those strict sources.
+
+## P3085/S2035 conserved current remains unsourced
+
+`P3085/S2035` confirms that formal Z12 link-current continuity in an auxiliary complex/Fourier lift is not yet a physical Noether current.  A Lagrangian/EOM reading still needs a strict source for phase space, variational symmetry, Noether theorem, physical current units, and conserved charge density; imported continuum Noether or electromagnetic current templates do not supply those strict sources.

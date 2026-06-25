@@ -4039,3 +4039,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3083/S2033 Lorentz-signature obstruction/witness audit
 
 `P3083/S2033` attacks exactly one post-P3082 interface atom: a non-imported Lorentz-signature source for the Dirichlet/Laplacian continuum proxy.  It computes `5` quadratic-form signature rows, scans all `4096` binary Dirichlet profiles for sign/time-axis behavior, and constructs a `5 x 6 = 30` candidate Lorentz-source gate matrix.  The sourced Z12 Laplacian/Dirichlet forms are Euclidean semidefinite, while indefinite/hyperbolic signatures appear only in imported templates such as `-d_t^2 + Delta` or `eta=(-,+,+,+)`.  No time-axis source, Lorentzian metric, hyperbolic spacetime EOM, observed light, gauge photons, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3084/S2034 gauge-representation obstruction/witness audit
+
+`P3084/S2034` attacks exactly one post-P3083 standard-physics interface atom: a non-imported gauge-representation source for the Z12 Dirichlet/Laplacian branch.  It enumerates `12` Z12 characters, verifies the `12 x 12 = 144` character orthogonality matrix, computes `12` flat holonomy rows and `12` phase-twisted Laplacian rows, and builds a `5 x 6 = 30` candidate gauge-source gate matrix.  The finite characters and flat twists remain representation labels/background parameters; no strict nontrivial gauge bundle, nonzero curvature, conserved charge representation, unit-bearing current, observed photons, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3085/S2035 conserved-current/Noether obstruction audit
+
+`P3085/S2035` attacks exactly one post-P3084 interface atom: a non-imported unit-bearing conserved-current/charge-density source for the Z12 Dirichlet/Laplacian branch.  It computes `12` formal Fourier link-current rows, verifies a `12 x 12 = 144` finite continuity matrix with zero formal divergence, scans all `4096` real binary profiles as no-phase controls, and builds a `5 x 6 = 30` candidate current-source gate matrix.  The link currents are algebraic/formal witnesses only; no strict phase-symmetry source, variational Noether theorem, unit-bearing current, conserved charge density, observed photons/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
