@@ -2832,3 +2832,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `48` detector response rows, `60` calibration orbit rows, `48` threshold classifier rows, `144` noise stability rows, and `40` candidate gate rows; `0` candidates export an internal non-imported detector/readout law.
 - Do not promote finite response maps, scale-calibration orbits, formal threshold classifiers, noise-mixing witnesses, imported apparatus templates, or imported observed-light templates to empirical detector maps, canonical units, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one Born-rule/probability-measure empirical-readout obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new detector/readout source theorem is introduced.
+
+## Current Born-rule/probability-measure empirical-readout obstruction guardrail (P3102/S2052, 2026-06-25)
+
+- P3102 follows the P3101 recommendation and audits one standard-physics interface atom: a non-imported Born-rule/probability-measure empirical-readout source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `48` probability measure rows, `16` event additivity rows, `72` basis orbit rows, `16` frequency proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported Born/probability/readout law.
+- Do not promote normalized Fourier-power weights, finite additivity, basis-orbit Born-like weights, expected-frequency proxies, imported quantum measurement templates, or imported observed-frequency templates to a Born-rule source, canonical measurement basis, empirical detector map, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one Hilbert-space/state-vector completion obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Born/probability/readout source theorem is introduced.
+
+## Current Hilbert-space/state-vector completion obstruction guardrail (P3103/S2053, 2026-06-25)
+
+- P3103 follows the P3102 recommendation and audits one standard-physics interface atom: a non-imported Hilbert-space/state-vector completion source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `16` inner-product rows, `12` observable-expectation rows, `4` unitary-orbit rows, `48` preparation/readout rows, and `40` candidate gate rows; `0` candidates export an internal non-imported Hilbert/state-vector law.
+- Do not promote C^12 vector-space proxies, positive inner-product witnesses, formal observable expectations, unitary-like phase orbits, preparation-label rows, imported quantum axioms, or imported apparatus templates to physical Hilbert space, Born/probability source, empirical detector map, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one spectral-triple/geometry-interface obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Hilbert/state-vector source theorem is introduced.

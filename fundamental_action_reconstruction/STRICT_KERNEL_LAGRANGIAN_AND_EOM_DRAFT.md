@@ -3480,3 +3480,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3101/S2051 detector/readout calibration remains unsourced
 
 `P3101/S2051` confirms that the Z12 Laplacian supports formal detector-response weights, scale-calibration orbits, threshold click classifiers, and noise-mixing witnesses.  A Lagrangian/EOM, measurement, observed-light, or empirical-readout reading still needs strict sources for detector maps, canonical units, physical thresholds/noise, observed-light coupling, and frequency/readout calibration; imported apparatus and measurement templates do not supply those strict sources.
+
+## P3102/S2052 Born-rule/probability readout remains unsourced
+
+`P3102/S2052` confirms that the Z12 Laplacian supports normalized Fourier-power probability measures, finite event-additivity witnesses, basis-orbit Born-like weights, and expected-frequency proxies.  A Lagrangian/EOM, quantum-measurement, observed-light, or empirical-readout reading still needs strict sources for the Born rule, canonical measurement basis, physical event semantics, detector calibration, and frequency/readout trials; imported quantum axioms and apparatus templates do not supply those strict sources.
+
+## P3103/S2053 Hilbert/state-vector completion remains unsourced
+
+`P3103/S2053` confirms that the Z12 branch supports a finite complex vector-space proxy, positive inner-product witnesses, formal self-adjoint observable expectations, norm-preserving phase orbits, and preparation-label rows.  A Lagrangian/EOM, quantum-state, observed-light, or empirical-readout reading still needs strict sources for physical inner-product units, observable algebra, state preparation, readout coupling, and the P3102 probability source; imported quantum axioms and apparatus templates do not supply those strict sources.
