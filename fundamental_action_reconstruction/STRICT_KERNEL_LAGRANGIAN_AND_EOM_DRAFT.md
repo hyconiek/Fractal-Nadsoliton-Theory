@@ -3472,3 +3472,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3099/S2049 irreversibility thermalization source remains unsourced
 
 `P3099/S2049` confirms that the Z12 Laplacian supports formal entropy monotonicity, edge-current entropy-production proxies, stochastic stationarity, and modal relaxation witnesses.  A Lagrangian/EOM, nonequilibrium, dissipative, or empirical-thermalization reading still needs strict sources for physical time arrows, bath/preparation mechanisms, dissipative semigroup semantics, physical clocks, and readout calibration; imported nonequilibrium thermodynamics and apparatus templates do not supply those strict sources.
+
+## P3100/S2050 open-system bath/preparation source remains unsourced
+
+`P3100/S2050` confirms that the Z12 Laplacian supports formal entropy monotonicity, edge-current entropy-production proxies, stochastic stationarity, and modal relaxation witnesses.  A Lagrangian/EOM, nonequilibrium, dissipative, or empirical-thermalization reading still needs strict sources for physical time arrows, bath/preparation mechanisms, dissipative semigroup semantics, physical clocks, and readout calibration; imported nonequilibrium thermodynamics and apparatus templates do not supply those strict sources.
+
+## P3101/S2051 detector/readout calibration remains unsourced
+
+`P3101/S2051` confirms that the Z12 Laplacian supports formal detector-response weights, scale-calibration orbits, threshold click classifiers, and noise-mixing witnesses.  A Lagrangian/EOM, measurement, observed-light, or empirical-readout reading still needs strict sources for detector maps, canonical units, physical thresholds/noise, observed-light coupling, and frequency/readout calibration; imported apparatus and measurement templates do not supply those strict sources.

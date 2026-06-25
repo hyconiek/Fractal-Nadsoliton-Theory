@@ -2818,3 +2818,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and `40` candidate gate rows; `0` candidates export an internal non-imported irreversibility/thermalization law.
 - Do not promote formal relative-entropy monotonicity, finite entropy-production proxies, stochastic semigroup/stationarity rows, modal relaxation witnesses, imported nonequilibrium thermodynamics templates, or imported apparatus/bath templates to physical time arrow, physical bath, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one open-system bath/preparation source obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new irreversibility/thermalization theorem is introduced.
+
+## Current open-system bath/preparation source obstruction guardrail (P3100/S2050, 2026-06-25)
+
+- P3100 follows the P3099 recommendation and audits one standard-physics interface atom: a non-imported open-system bath/preparation source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and `40` candidate gate rows; `0` candidates export an internal non-imported open-system bath/preparation law.
+- Do not promote formal relative-entropy monotonicity, finite entropy-production proxies, stochastic semigroup/stationarity rows, modal relaxation witnesses, imported nonequilibrium thermodynamics templates, or imported apparatus/bath templates to physical time arrow, physical bath, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one detector/readout calibration obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new open-system bath/preparation theorem is introduced.
+
+## Current detector/readout calibration obstruction guardrail (P3101/S2051, 2026-06-25)
+
+- P3101 follows the P3100 recommendation and audits one standard-physics interface atom: a non-imported detector/readout calibration source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `48` detector response rows, `60` calibration orbit rows, `48` threshold classifier rows, `144` noise stability rows, and `40` candidate gate rows; `0` candidates export an internal non-imported detector/readout law.
+- Do not promote finite response maps, scale-calibration orbits, formal threshold classifiers, noise-mixing witnesses, imported apparatus templates, or imported observed-light templates to empirical detector maps, canonical units, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one Born-rule/probability-measure empirical-readout obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new detector/readout source theorem is introduced.
