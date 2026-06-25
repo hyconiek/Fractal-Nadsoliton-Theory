@@ -2846,3 +2846,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `16` inner-product rows, `12` observable-expectation rows, `4` unitary-orbit rows, `48` preparation/readout rows, and `40` candidate gate rows; `0` candidates export an internal non-imported Hilbert/state-vector law.
 - Do not promote C^12 vector-space proxies, positive inner-product witnesses, formal observable expectations, unitary-like phase orbits, preparation-label rows, imported quantum axioms, or imported apparatus templates to physical Hilbert space, Born/probability source, empirical detector map, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one spectral-triple/geometry-interface obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Hilbert/state-vector source theorem is introduced.
+
+## Current spectral-triple/geometry-interface obstruction guardrail (P3104/S2054, 2026-06-25)
+
+- P3104 follows the P3103 recommendation and audits one standard-physics interface atom: a spectral-triple/geometry-interface source for the Z12 Dirichlet/Laplacian branch, including the `alpha_geo=4 ln 2` entropy/unit clue.
+- The finite audit computes `12` algebra-representation rows, `12` Dirac-spectrum rows, `66` distance/alpha_geo-scaled rows, `4` commutator-bound rows, and `54` candidate gate rows; `0` candidates export an internal non-imported physical geometry/source law.
+- Do not promote finite diagonal algebra, sqrt-Laplacian Dirac proxies, bounded finite commutators, graph distances, alpha_geo-scaled distances, imported NCG templates, Planck-unit templates, or empirical apparatus templates to physical geometry, action/length units, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one alpha_geo entropy-to-action/length unit-map obstruction audit, unless a genuinely new spectral-geometry source theorem is introduced.
+
+## Current alpha_geo entropy-to-unit map obstruction guardrail (P3105/S2055, 2026-06-25)
+
+- P3105 follows the P3104 recommendation and audits the one available unit clue: `alpha_geo=4 ln 2=ln(16)` as a possible entropy-to-action/length map for the nadsoliton understood as self-coupled information, not as pre-assumed standard physics.
+- The finite audit computes `4` entropy-identity rows, `4` self-coupled informational-action rows, `4` scale-orbit rows, `6` target-unit rows, and `48` candidate gate rows; `0` candidates export an internal non-imported bit-to-unit conversion law.
+- Do not promote alpha_geo entropy identities, per-bit weights, Dirichlet informational-action proxies, exp(alpha_geo)=16 scale choices, Planck-unit templates, rod/clock/light templates, or apparatus calibration templates to physical action, length, time, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one Nadsoliton self-coupled informational action-density normalization theorem/audit that either exports an internal scale quotient with dimension assignment and calibration interface or proves no such quotient exists on current artifacts.
