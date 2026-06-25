@@ -3488,3 +3488,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3103/S2053 Hilbert/state-vector completion remains unsourced
 
 `P3103/S2053` confirms that the Z12 branch supports a finite complex vector-space proxy, positive inner-product witnesses, formal self-adjoint observable expectations, norm-preserving phase orbits, and preparation-label rows.  A Lagrangian/EOM, quantum-state, observed-light, or empirical-readout reading still needs strict sources for physical inner-product units, observable algebra, state preparation, readout coupling, and the P3102 probability source; imported quantum axioms and apparatus templates do not supply those strict sources.
+
+## P3104/S2054 spectral geometry and alpha_geo unit map remain unsourced
+
+`P3104/S2054` confirms that the Z12 branch supports a finite algebra representation, a sqrt-Laplacian Dirac-like proxy, bounded commutators, graph-distance witnesses, and alpha_geo-scaled metric rows.  A Lagrangian/EOM, physical geometry, observed-light, or empirical-readout reading still needs an internally sourced bit-to-length/action conversion law for `alpha_geo=4 ln 2` plus a physical geometry/readout interface; imported NCG axioms, Planck units, rods/clocks, and apparatus templates do not supply those strict sources.
+
+## P3105/S2055 alpha_geo unit conversion remains unsourced
+
+`P3105/S2055` confirms that `alpha_geo=4 ln 2=ln(16)` can weight a finite self-coupled informational Dirichlet action proxy for the nadsoliton branch.  This is not yet a physical action, length, time, Hamiltonian, detector calibration, spacetime EOM, or `L_total`: the missing object is an internal scale-quotient/dimension-assignment/calibration theorem, not an imported Planck-unit, rod/clock/light, apparatus, or measurement-postulate template.

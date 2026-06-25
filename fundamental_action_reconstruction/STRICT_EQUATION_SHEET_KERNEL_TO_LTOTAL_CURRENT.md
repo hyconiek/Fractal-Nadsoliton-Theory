@@ -4119,3 +4119,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3103/S2053 Hilbert-space/state-vector completion obstruction audit
 
 `P3103/S2053` attacks exactly one post-P3102 interface atom: a non-imported Hilbert-space/state-vector completion source for the Z12 Dirichlet/Laplacian branch.  It constructs `16` inner-product rows, `12` observable-expectation rows, `4` unitary-orbit rows, `48` preparation/readout rows, and a `5 x 8 = 40` candidate gate matrix.  The finite Hilbert-like algebra remains formal; no physical inner-product units, physical observable algebra, sourced preparation map, readout coupling, Born/probability source, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3104/S2054 spectral-triple/geometry-interface obstruction audit
+
+`P3104/S2054` attacks the P3103-recommended spectral-triple/geometry-interface atom while explicitly testing the only available unit clue, `alpha_geo=4 ln 2`.  It constructs `12` algebra-representation rows, `12` sqrt-Laplacian Dirac-spectrum rows, `66` graph-distance/alpha_geo-scaled distance rows, `4` commutator-bound rows, and a `6 x 9 = 54` candidate gate matrix.  The finite spectral geometry remains formal: no physical Dirac unit, physical length/action unit, alpha_geo bit-to-unit conversion law, empirical geometry/readout interface, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3105/S2055 alpha_geo entropy-to-unit map obstruction audit
+
+`P3105/S2055` attacks the P3104-recommended `alpha_geo` unit-map atom while treating the nadsoliton as self-coupled primordial information rather than assumed standard physics.  It verifies `alpha_geo=4 ln 2=ln(16)`, constructs `4` entropy-identity rows, `4` alpha_geo-weighted Dirichlet informational-action rows, `4` scale-orbit rows, `6` target-unit rows, and a `6 x 8 = 48` candidate gate matrix.  The result remains bounded no-go: no dimension assignment, canonical scale quotient, calibration interface, non-imported bit-to-unit conversion law, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
