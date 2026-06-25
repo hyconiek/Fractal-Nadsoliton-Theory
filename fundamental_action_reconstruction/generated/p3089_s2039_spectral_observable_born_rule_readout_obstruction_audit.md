@@ -4,7 +4,7 @@ Status: `P3089_SPECTRAL_OBSERVABLE_BORN_RULE_READOUT_OBSTRUCTION_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `33404`
+- content grep hits: `33438`
 - P3088 accepted non-imported Hamiltonian/time-evolution sources: `0`
 - nonzero binary profile probability census rows: `4095`
 - normalized probability failures: `0`

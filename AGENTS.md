@@ -2748,3 +2748,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `4095` nonzero binary-profile probability census rows, `12` translation-orbit controls, `6` formal time-probability conservation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported Born-rule/probability-readout source.
 - Do not promote normalized Fourier-power weights, Laplacian eigenbasis weights, formal probability conservation, imported quantum-measurement templates, or imported detector-frequency templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one spectral-correlation/Green-function response obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Born-rule/readout source theorem is introduced.
+
+## Current spectral-correlation/Green-function response obstruction guardrail (P3090/S2040, 2026-06-25)
+
+- P3090 follows the P3089 recommendation and audits one standard-physics interface atom: a non-imported spectral-correlation/Green-function response source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `12` spectrum rows, `12` pseudoinverse Green rows, `48` mass-regularized resolvent rows, `36` formal i-epsilon regulator rows, `12` P3089-weighted modal correlation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported physical Green/response source.
+- Do not promote finite Green kernels, formal resolvents, i-epsilon regulators, P3089-weighted modal correlations, imported retarded Green templates, or imported scattering/spectral-density templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Born-rule/readout closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one spectral-action/effective-action generating-functional obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Green/response source theorem is introduced.
+
+## Current spectral-action/effective-action obstruction guardrail (P3091/S2041, 2026-06-25)
+
+- P3091 follows the P3090 recommendation and audits one standard-physics interface atom: a non-imported spectral-action/effective-action generating-functional source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `3` log-det spectral-action rows, `36` source-coupled quadratic-generator rows, `4` coupling-scale orbit rows, `12` finite formal-variation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported physical action/generating-functional source.
+- Do not promote finite log-dets, source-coupled `1/2 JGJ` generators, formal variations, dimensionless coupling-scale orbits, imported Gaussian path-integral templates, or imported EFT templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Green/response closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one renormalization/scale-flow effective-coupling obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new action/generating-functional source theorem is introduced.

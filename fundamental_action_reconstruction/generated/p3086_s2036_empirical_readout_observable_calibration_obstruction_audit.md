@@ -4,7 +4,7 @@ Status: `P3086_EMPIRICAL_READOUT_OBSERVABLE_CALIBRATION_OBSTRUCTION_BOUNDED_NO_G
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `38739`
+- content grep hits: `38875`
 - P3085 accepted non-imported conserved-current sources: `0`
 - spectrum rows: `12`
 - spectrum rows with unit calibration: `0`
