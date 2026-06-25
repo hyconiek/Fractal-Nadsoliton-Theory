@@ -4,7 +4,7 @@ Status: `P3081_DIRICHLET_DIMENSION_ACTION_UNIT_SOURCE_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `39062`
+- content grep hits: `39229`
 - P3080 accepted standard-physics interface objects: `0`
 - binary profile rows: `4096`
 - constant profile rows: `2`

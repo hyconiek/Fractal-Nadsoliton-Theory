@@ -2692,3 +2692,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes all `4096` binary Z12 profiles, `7` energy-spectrum rows, and `36` candidate unit-source gate rows; positive internal dimensionless witnesses exist, but `0` candidates export a non-imported action/energy/time unit.
 - Do not promote Dirichlet energy gaps, Z12 counts, `alpha_geo`, entropy-bit references, spectral gaps, or imported `hbar/c/a` templates to physical Hamiltonian, spacetime EOM, observed light, gauge photons, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one different interface atom: a bounded continuum-limit functor obstruction/witness audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new unit-source theorem is introduced.
+
+## Current Z12 continuum-limit functor guardrail (P3082/S2032, 2026-06-24)
+
+- P3082 follows the P3081 recommendation and audits one missing interface atom: a non-imported continuum-limit functor for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `20` formal refinement spectral rows and `30` candidate functor gate rows.  Formal Fourier convergence is visible only after importing the refinement family, circle length, and `a_n=2*pi/n`; `0` candidates export an internal non-imported continuum-limit functor.
+- Do not promote Z12 covers, imported Fourier scaling, entropy-cell templates, or standard-physics manifold templates to dimension map, Lorentz signature, gauge representation, unit-bearing current, empirical observable, observed light, gauge photons, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one adjacent interface atom: a bounded Lorentz-signature obstruction/witness audit for the Dirichlet/Laplacian continuum proxy, unless a genuinely new continuum-functor source theorem is introduced.
+
+## Current Lorentz-signature obstruction/witness guardrail (P3083/S2033, 2026-06-25)
+
+- P3083 follows the P3082 recommendation and audits one adjacent interface atom: a non-imported Lorentz-signature/time-axis source for the Z12 Dirichlet/Laplacian continuum proxy.
+- The finite audit computes `5` quadratic-form signature rows, all `4096` binary Dirichlet profile sign rows, and `30` candidate Lorentz-source gate rows; internal Z12 forms are semidefinite and `0` candidates export an internal non-imported Lorentzian signature source.
+- Do not promote Euclidean Dirichlet forms, cycle-distance proxies, sign-flipped semidefinite forms, formal wave lifts, Wick templates, or imported Minkowski metrics to observed light, gauge photons, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one remaining standard-physics interface atom: a bounded gauge-representation obstruction/witness audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Lorentz-signature source theorem is introduced.

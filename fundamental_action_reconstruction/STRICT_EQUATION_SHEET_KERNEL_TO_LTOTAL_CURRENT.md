@@ -4031,3 +4031,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3081/S2031 Dirichlet dimension/action-unit source audit
 
 `P3081/S2031` attacks exactly one P3080 interface atom: a non-imported dimension/action-unit source for `E_D(rho)`.  It computes all `2^12 = 4096` binary Z12 profiles, their exact Dirichlet-energy spectrum, and a `6 x 6 = 36` candidate unit-source gate matrix.  The binary spectrum supplies real positive internal dimensionless witnesses (`min E_D=1`, `max E_D=6`), but no current internal candidate exports action/energy/time dimensions with independent calibration; the `hbar/c/a` template succeeds only by import.  No physical Hamiltonian, spacetime EOM, observed light, gauge photons, empirical physics, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3082/S2032 Z12 continuum-limit functor obstruction audit
+
+`P3082/S2032` attacks exactly one post-P3081 interface atom: a non-imported continuum-limit functor for the Z12 Dirichlet/Laplacian branch.  It evaluates `4` formal refinements (`C_12,C_24,C_48,C_96`) across modes `1..5`, constructs a `5 x 6 = 30` candidate functor gate matrix, and confirms that Fourier convergence appears only after importing `a_n=2*pi/n` and a continuum circle target.  No internal artifact exports the lattice-spacing/refinement source, error-controlled Z12-to-continuum passage, dimension map, Lorentz signature, gauge representation, observed light, gauge photons, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure.
+
+## P3083/S2033 Lorentz-signature obstruction/witness audit
+
+`P3083/S2033` attacks exactly one post-P3082 interface atom: a non-imported Lorentz-signature source for the Dirichlet/Laplacian continuum proxy.  It computes `5` quadratic-form signature rows, scans all `4096` binary Dirichlet profiles for sign/time-axis behavior, and constructs a `5 x 6 = 30` candidate Lorentz-source gate matrix.  The sourced Z12 Laplacian/Dirichlet forms are Euclidean semidefinite, while indefinite/hyperbolic signatures appear only in imported templates such as `-d_t^2 + Delta` or `eta=(-,+,+,+)`.  No time-axis source, Lorentzian metric, hyperbolic spacetime EOM, observed light, gauge photons, `L_total`, bridge/role-transfer, or ToE closure is exported.
