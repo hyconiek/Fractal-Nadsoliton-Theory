@@ -4091,3 +4091,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3096/S2046 scattering/S-matrix asymptotic-state obstruction audit
 
 `P3096/S2046` attacks exactly one post-P3095 interface atom: a non-imported scattering/S-matrix asymptotic-state source for the Z12 Dirichlet/Laplacian branch.  It constructs `12` finite channel rows, `144` Born-like transition-amplitude rows, `3` S-matrix unitarity-proxy rows, `12` cross-section proxy rows, and a `5 x 8 = 40` candidate gate matrix.  The finite scattering-like algebra remains formal; no in/out asymptotic states, physical unitary S-matrix, unit-normalized scattering amplitudes, empirical detector semantics, spacetime asymptotics, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3097/S2047 thermodynamic-radiation/blackbody-spectrum obstruction audit
+
+`P3097/S2047` attacks exactly one post-P3096 interface atom: a non-imported thermodynamic-radiation/blackbody-spectrum source for the Z12 Dirichlet/Laplacian branch.  It constructs `7` finite spectral mode-count rows, `4` formal partition-weight rows, `28` radiation-spectrum proxy rows, `3` temperature/energy scale-orbit rows, and a `5 x 7 = 35` candidate gate matrix.  The finite thermodynamic/radiation-like algebra remains formal; no physical temperature or energy unit, Planck/blackbody radiation law, photon/light semantics, empirical intensity readout, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3098/S2048 KMS/detailed-balance thermal-state obstruction audit
+
+`P3098/S2048` attacks exactly one post-P3097 interface atom: a non-imported KMS/detailed-balance thermal-state source for the Z12 Dirichlet/Laplacian branch.  It constructs `48` Gibbs-weight rows, `528` detailed-balance transition rows, `16` KMS-periodicity proxy rows, `40` fluctuation-dissipation proxy rows, and a `5 x 8 = 40` candidate gate matrix.  The finite thermal-state-like algebra remains formal; no physical temperature clock, bath/preparation source, operator-algebra KMS state, physical fluctuation-dissipation relation, empirical thermal readout, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3099/S2049 irreversibility/entropy-production thermalization obstruction audit
+
+`P3099/S2049` attacks exactly one post-P3098 interface atom: a non-imported irreversibility/entropy-production thermalization source for the Z12 Dirichlet/Laplacian branch.  It constructs `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and a `5 x 8 = 40` candidate gate matrix.  The finite thermalization-like algebra remains formal; no physical time arrow, bath/preparation mechanism, dissipative semigroup source, empirical thermalization readout, `L_total`, bridge/role-transfer, or ToE closure is exported.

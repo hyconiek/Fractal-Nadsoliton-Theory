@@ -1,0 +1,917 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_nonimported_thermodynamic_radiation_source": false,
+        "candidate": "finite_spectral_mode_count",
+        "failed_gates": 6,
+        "passed_gates": 1
+      },
+      {
+        "accepted_nonimported_thermodynamic_radiation_source": false,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "failed_gates": 5,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_thermodynamic_radiation_source": false,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "failed_gates": 4,
+        "passed_gates": 3
+      },
+      {
+        "accepted_nonimported_thermodynamic_radiation_source": false,
+        "candidate": "imported_blackbody_planck_template",
+        "failed_gates": 3,
+        "passed_gates": 4
+      },
+      {
+        "accepted_nonimported_thermodynamic_radiation_source": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "failed_gates": 1,
+        "passed_gates": 6
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_mode_count_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "partition_weight_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "radiation_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "temperature_energy_unit_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "photon_light_semantics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "empirical_intensity_readout_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_spectral_mode_count",
+        "detail": "mode counts are finite spectral labels with no temperature, units, or light semantics",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_radiation_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_mode_count_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_weight_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "beta is formal and not a sourced physical temperature or energy unit",
+        "gate_passed": false,
+        "required_gate": "radiation_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "beta is formal and not a sourced physical temperature or energy unit",
+        "gate_passed": false,
+        "required_gate": "temperature_energy_unit_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "beta is formal and not a sourced physical temperature or energy unit",
+        "gate_passed": false,
+        "required_gate": "photon_light_semantics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "beta is formal and not a sourced physical temperature or energy unit",
+        "gate_passed": false,
+        "required_gate": "empirical_intensity_readout_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_boltzmann_weighted_modes",
+        "detail": "beta is formal and not a sourced physical temperature or energy unit",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_radiation_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_mode_count_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_weight_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "radiation_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "spectrum proxy is dimensionless and lacks photon/light semantics and calibrated intensity readout",
+        "gate_passed": false,
+        "required_gate": "temperature_energy_unit_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "spectrum proxy is dimensionless and lacks photon/light semantics and calibrated intensity readout",
+        "gate_passed": false,
+        "required_gate": "photon_light_semantics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "spectrum proxy is dimensionless and lacks photon/light semantics and calibrated intensity readout",
+        "gate_passed": false,
+        "required_gate": "empirical_intensity_readout_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "modal_flux_weighted_spectrum_proxy",
+        "detail": "spectrum proxy is dimensionless and lacks photon/light semantics and calibrated intensity readout",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_radiation_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_mode_count_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_weight_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "radiation_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "temperature_energy_unit_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "blackbody semantics are imported and do not provide internal observed-light/readout source",
+        "gate_passed": false,
+        "required_gate": "photon_light_semantics_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "blackbody semantics are imported and do not provide internal observed-light/readout source",
+        "gate_passed": false,
+        "required_gate": "empirical_intensity_readout_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_blackbody_planck_template",
+        "detail": "blackbody semantics are imported and do not provide internal observed-light/readout source",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_radiation_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_mode_count_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "partition_weight_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "radiation_spectrum_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "temperature_energy_unit_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "photon_light_semantics_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "empirical_intensity_readout_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_observed_light_intensity_template",
+        "detail": "passes only by importing observed light, apparatus units, and empirical readout",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_radiation_source_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "thermodynamic_radiation_atom",
+        "hit_count": 120,
+        "pattern": "thermodynamic-radiation|blackbody|radiation spectrum|Planck|intensity readout",
+        "sample_hits": [
+          "AGENTS.md:2735:- Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2799:- The next honest move is exactly one thermodynamic-radiation/blackbody-spectrum obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new scattering/S-matrix theorem is introduced.",
+          "AGENTS.md:2801:## Current thermodynamic-radiation/blackbody-spectrum obstruction guardrail (P3097/S2047, 2026-06-25)",
+          "AGENTS.md:2803:- P3097 follows the P3096 recommendation and audits one standard-physics interface atom: a non-imported thermodynamic-radiation/blackbody-spectrum source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2804:- The finite audit computes `7` finite spectral mode-count rows, `4` formal partition-weight rows, `28` radiation-spectrum proxy rows, `3` temperature/energy scale-orbit rows, and `35` candidate gate rows; `0` candidates export an internal non-imported thermodynamic-radiation law.",
+          "AGENTS.md:2805:- Do not promote finite mode counts, dimensionless partition weights, formal modal intensity-spectrum proxies, temperature/energy scale-orbit rows, imported Planck/blackbody templates, or imported observed-light/apparatus templates to physical temperature, radiation spectrum, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2806:- The next honest move is exactly one KMS/detailed-balance thermal-state obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic-radiation theorem is introduced.",
+          "fundamental_action_reconstruction/test_p3097_s2047_thermodynamic_radiation_blackbody_spectrum_obstruction_audit.py:6:SCRIPT = ROOT / \"p3097_s2047_thermodynamic_radiation_blackbody_spectrum_obstruction_audit.py\""
+        ]
+      },
+      {
+        "content_lane": "predecessor_scattering_atom",
+        "hit_count": 329,
+        "pattern": "scattering|S-matrix|cross-section|detector semantics",
+        "sample_hits": [
+          "AGENTS.md:2756:- Do not promote finite Green kernels, formal resolvents, i-epsilon regulators, P3089-weighted modal correlations, imported retarded Green templates, or imported scattering/spectral-density templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Born-rule/readout closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2792:- The next honest move is exactly one scattering/S-matrix asymptotic-state obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new propagation/observable theorem is introduced.",
+          "AGENTS.md:2794:## Current scattering/S-matrix asymptotic-state obstruction guardrail (P3096/S2046, 2026-06-25)",
+          "AGENTS.md:2796:- P3096 follows the P3095 recommendation and audits one standard-physics interface atom: a non-imported scattering/S-matrix asymptotic-state source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2797:- The finite audit computes `12` finite channel rows, `144` Born-like transition-amplitude rows, `3` S-matrix unitarity-proxy rows, `12` cross-section proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported scattering/S-matrix law.",
+          "AGENTS.md:2798:- Do not promote finite Fourier channel labels, Born-like transition amplitudes, formal S-proxy unitarity-defect rows, cross-section proxies, imported continuum scattering templates, or imported detector templates to in/out asymptotic states, physical unitary S-matrix, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2799:- The next honest move is exactly one thermodynamic-radiation/blackbody-spectrum obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new scattering/S-matrix theorem is introduced.",
+          "fundamental_action_reconstruction/test_p3097_s2047_thermodynamic_radiation_blackbody_spectrum_obstruction_audit.py:22:        self.assertEqual(cert[\"p3096_accepted_nonimported_scattering_smatrix_sources\"], 0)"
+        ]
+      },
+      {
+        "content_lane": "blocked_promotions",
+        "hit_count": 31825,
+        "pattern": "continuum statistical field theory|apparatus units|observed light|observed photons|L_total|ToE|selector closure|bridge/role-transfer",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "finite_mode_count_rows": [
+      {
+        "channels": [
+          0
+        ],
+        "degeneracy": 1,
+        "energy_label": 0.0,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          1,
+          11
+        ],
+        "degeneracy": 2,
+        "energy_label": 0.267949192431,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          2,
+          10
+        ],
+        "degeneracy": 2,
+        "energy_label": 1.0,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          3,
+          9
+        ],
+        "degeneracy": 2,
+        "energy_label": 2.0,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          4,
+          8
+        ],
+        "degeneracy": 2,
+        "energy_label": 3.0,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          5,
+          7
+        ],
+        "degeneracy": 2,
+        "energy_label": 3.732050807569,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      },
+      {
+        "channels": [
+          6
+        ],
+        "degeneracy": 1,
+        "energy_label": 4.0,
+        "finite_mode_count_witness": true,
+        "photon_semantics_attached": false,
+        "temperature_unit_attached": false
+      }
+    ],
+    "formal_partition_weight_rows": [
+      {
+        "boltzmann_unit_attached": false,
+        "dimensionless_partition_witness": true,
+        "formal_beta": 0.25,
+        "mean_energy_label": 1.515000774838,
+        "partition_Z": 7.74042324539,
+        "physical_temperature_attached": false
+      },
+      {
+        "boltzmann_unit_attached": false,
+        "dimensionless_partition_witness": true,
+        "formal_beta": 0.5,
+        "mean_energy_label": 1.107220068188,
+        "partition_Z": 5.589115291128,
+        "physical_temperature_attached": false
+      },
+      {
+        "boltzmann_unit_attached": false,
+        "dimensionless_partition_witness": true,
+        "formal_beta": 1.0,
+        "mean_energy_label": 0.604450662797,
+        "partition_Z": 3.702099877966,
+        "physical_temperature_attached": false
+      },
+      {
+        "boltzmann_unit_attached": false,
+        "dimensionless_partition_witness": true,
+        "formal_beta": 2.0,
+        "mean_energy_label": 0.272945393487,
+        "partition_Z": 2.484028150996,
+        "physical_temperature_attached": false
+      }
+    ],
+    "radiation_spectrum_proxy_rows": [
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.0,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.129191901825,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.064747875908,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.267949192431,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.241642362572,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.348539732903,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 1.0,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.201229508615,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.626870795546,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 2.0,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.156717698887,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 2.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.634200102402,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.0,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.122051866614,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.379324214111,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.732050807569,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.101639616841,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 4.0,
+        "formal_beta": 0.25,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.047527044647,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.0,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.178919193452,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.083860018144,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.267949192431,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.312969848438,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.37592422566,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 1.0,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.21703995288,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.526565543216,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 2.0,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.131641385804,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 2.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.414884382176,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.0,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.079844536577,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.206647396935,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.732050807569,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.055371003127,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 4.0,
+        "formal_beta": 0.5,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.024214079722,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.0,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.270116969548,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.110730041106,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.267949192431,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.413250139332,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.344229439601,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 1.0,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.198740959616,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.292450852646,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 2.0,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.073112713162,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 2.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.13975916612,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.0,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.02689666406,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.048274784083,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.732050807569,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.01293518941,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 4.0,
+        "formal_beta": 1.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.004947364872,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.0,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.402571927214,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.126237452972,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 0.267949192431,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.471124588311,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.1887318278,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 1.0,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.108964371585,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.058986896365,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 2.0,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.014746724091,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 2.0
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.010370232014,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.0,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.001995752082,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.732050807569
+      },
+      {
+        "degeneracy": 2,
+        "dimensionless_intensity_proxy": 0.001722673155,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 3.732050807569,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.000461588881,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 1.0
+      },
+      {
+        "degeneracy": 1,
+        "dimensionless_intensity_proxy": 0.0,
+        "empirical_intensity_readout_attached": false,
+        "energy_label": 4.0,
+        "formal_beta": 2.0,
+        "frequency_unit_attached": false,
+        "normalized_weight": 0.000135047837,
+        "observed_light_semantics_attached": false,
+        "radiation_spectrum_proxy_witness": true,
+        "velocity_flux_proxy": 0.0
+      }
+    ],
+    "temperature_energy_scale_orbit_rows": [
+      {
+        "canonical_temperature_or_energy_unit_selected": false,
+        "compensating_beta": 2.0,
+        "energy_scale": 0.5,
+        "partition_Z": 3.702099877966,
+        "same_as_base_partition": true,
+        "scale_orbit_witness": true
+      },
+      {
+        "canonical_temperature_or_energy_unit_selected": false,
+        "compensating_beta": 1.0,
+        "energy_scale": 1.0,
+        "partition_Z": 3.702099877966,
+        "same_as_base_partition": true,
+        "scale_orbit_witness": true
+      },
+      {
+        "canonical_temperature_or_energy_unit_selected": false,
+        "compensating_beta": 0.5,
+        "energy_scale": 2.0,
+        "partition_Z": 3.702099877966,
+        "same_as_base_partition": true,
+        "scale_orbit_witness": true
+      }
+    ],
+    "thermodynamic_radiation_audit_object": {
+      "acceptance_predicate": "finite mode counts plus partition weights, radiation spectrum, physical temperature/energy units, photon/light semantics, empirical intensity readout, and non-imported physical radiation source",
+      "candidate_radiation_sources": [
+        "finite_spectral_mode_count",
+        "formal_boltzmann_weighted_modes",
+        "modal_flux_weighted_spectrum_proxy",
+        "imported_blackbody_planck_template",
+        "imported_observed_light_intensity_template"
+      ],
+      "object": "Z12DirichletThermodynamicRadiationBlackbodySpectrumObstructionAudit",
+      "required_gates": [
+        "finite_mode_count_exported",
+        "partition_weight_exported",
+        "radiation_spectrum_exported",
+        "temperature_energy_unit_exported",
+        "photon_light_semantics_exported",
+        "empirical_intensity_readout_exported",
+        "nonimported_physical_radiation_source_exported"
+      ],
+      "source_reused": "P3096 recommendation: bounded thermodynamic-radiation/blackbody-spectrum obstruction audit"
+    }
+  },
+  "decision": {
+    "bounded_result": "P3097 constructs the requested thermodynamic-radiation/blackbody-spectrum obstruction audit.  The Z12 Laplacian supports finite spectral mode counts, dimensionless partition weights, formal modal intensity-spectrum proxies, and explicit temperature/energy scale-orbit witnesses.  These are real thermodynamic/radiation-like witnesses, but no internal artifact exports a physical temperature or energy unit, a Planck/blackbody radiation law, photon/light semantics, empirical intensity readout, or a non-imported physical radiation source.  Imported continuum statistical-field and observed-light templates pass only as imported templates.  Therefore no non-imported thermodynamic-radiation/blackbody-spectrum source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "blackbody_radiation_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "dispersion_propagation_closure_exported": false,
+      "empirical_intensity_readout_exported": false,
+      "empirical_observable_exported": false,
+      "in_out_asymptotic_states_exported": false,
+      "ltotal_exported": false,
+      "nonimported_physical_radiation_source_exported": false,
+      "observed_light_exported": false,
+      "observed_photons_exported": false,
+      "observed_radiation_exported": false,
+      "photon_light_semantics_exported": false,
+      "physical_hamiltonian_exported": false,
+      "physical_temperature_energy_unit_exported": false,
+      "physical_unitary_smatrix_exported": false,
+      "scattering_smatrix_closure_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Pivot to exactly one adjacent standard-physics interface atom outside selector replay: construct a bounded KMS/detailed-balance thermal-state obstruction audit for the Z12 Dirichlet/Laplacian branch, testing whether finite partition weights, transition kernels, modal flux proxies, and scattering/response witnesses supply a non-imported equilibrium-state law, physical temperature clock, fluctuation-dissipation relation, and empirical thermal readout without importing continuum statistical mechanics, apparatus units, observed light, L_total, bridge/role-transfer, or ToE.",
+    "positive_scoped_flags": {
+      "finite_mode_count_rows_computed": true,
+      "formal_partition_weight_rows_computed": true,
+      "radiation_spectrum_proxy_rows_computed": true,
+      "temperature_energy_scale_orbit_rows_computed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_nonimported_thermodynamic_radiation_sources": 0,
+    "candidate_gate_rows": 35,
+    "content_grep_hits": 32274,
+    "content_grep_lanes": 3,
+    "finite_mode_count_rows": 7,
+    "formal_partition_weight_rows": 4,
+    "mode_count_rows_with_photon_semantics": 0,
+    "mode_count_rows_with_temperature_unit": 0,
+    "p3096_accepted_nonimported_scattering_smatrix_sources": 0,
+    "partition_rows_with_boltzmann_unit": 0,
+    "partition_rows_with_physical_temperature": 0,
+    "proof_obligations": 6,
+    "radiation_candidates": 5,
+    "radiation_spectrum_proxy_rows": 28,
+    "required_gates": 7,
+    "satisfied_proof_obligations": 5,
+    "scale_orbit_rows_with_canonical_temperature_or_energy_unit": 0,
+    "spectrum_rows_with_empirical_intensity_readout": 0,
+    "spectrum_rows_with_frequency_unit": 0,
+    "spectrum_rows_with_observed_light_semantics": 0,
+    "temperature_energy_scale_orbit_rows": 3
+  },
+  "input_hashes": {
+    "P3096": "b0cfb97936900dbfc5595b3d17fe0d5545ea103819aa7798ba77f05f2482009c"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3096 selected thermodynamic-radiation/blackbody-spectrum audit as the next interface atom",
+      "obligation": "read_p3096_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "finite spectral degeneracy rows are explicit",
+      "obligation": "construct_finite_mode_count_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "dimensionless partition weights are computed",
+      "obligation": "construct_partition_weight_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "formal modal intensity proxies are computed",
+      "obligation": "construct_radiation_spectrum_proxy_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "energy scale can be compensated by beta rescaling",
+      "obligation": "show_temperature_energy_scale_orbit",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates pass as internal non-imported thermodynamic-radiation sources",
+      "obligation": "export_nonimported_physical_radiation_source",
+      "satisfied": false
+    }
+  ],
+  "status": "P3097_THERMODYNAMIC_RADIATION_BLACKBODY_SPECTRUM_OBSTRUCTION_BOUNDED_NO_GO"
+}

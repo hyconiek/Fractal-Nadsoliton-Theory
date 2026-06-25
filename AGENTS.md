@@ -2797,3 +2797,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `12` finite channel rows, `144` Born-like transition-amplitude rows, `3` S-matrix unitarity-proxy rows, `12` cross-section proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported scattering/S-matrix law.
 - Do not promote finite Fourier channel labels, Born-like transition amplitudes, formal S-proxy unitarity-defect rows, cross-section proxies, imported continuum scattering templates, or imported detector templates to in/out asymptotic states, physical unitary S-matrix, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one thermodynamic-radiation/blackbody-spectrum obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new scattering/S-matrix theorem is introduced.
+
+## Current thermodynamic-radiation/blackbody-spectrum obstruction guardrail (P3097/S2047, 2026-06-25)
+
+- P3097 follows the P3096 recommendation and audits one standard-physics interface atom: a non-imported thermodynamic-radiation/blackbody-spectrum source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `7` finite spectral mode-count rows, `4` formal partition-weight rows, `28` radiation-spectrum proxy rows, `3` temperature/energy scale-orbit rows, and `35` candidate gate rows; `0` candidates export an internal non-imported thermodynamic-radiation law.
+- Do not promote finite mode counts, dimensionless partition weights, formal modal intensity-spectrum proxies, temperature/energy scale-orbit rows, imported Planck/blackbody templates, or imported observed-light/apparatus templates to physical temperature, radiation spectrum, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one KMS/detailed-balance thermal-state obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new thermodynamic-radiation theorem is introduced.
+
+## Current KMS/detailed-balance thermal-state obstruction guardrail (P3098/S2048, 2026-06-25)
+
+- P3098 follows the P3097 recommendation and audits one standard-physics interface atom: a non-imported KMS/detailed-balance thermal-state source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `48` Gibbs-weight rows, `528` exact detailed-balance transition rows, `16` KMS-periodicity proxy rows, `40` fluctuation-dissipation proxy rows, and `40` candidate gate rows; `0` candidates export an internal non-imported KMS/thermal-state law.
+- Do not promote formal Gibbs weights, exact finite detailed-balance kernels, KMS-shift proxies, Boltzmann response-ratio rows, imported FDT/KMS templates, or imported apparatus/bath templates to physical thermal state, physical temperature clock, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one irreversibility/entropy-production thermalization obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new KMS/thermal-state theorem is introduced.
+
+## Current irreversibility/entropy-production thermalization obstruction guardrail (P3099/S2049, 2026-06-25)
+
+- P3099 follows the P3098 recommendation and audits one standard-physics interface atom: a non-imported irreversibility/entropy-production thermalization source for the Z12 Dirichlet/Laplacian branch.
+- The finite audit computes `96` relative-entropy monotonicity rows, `528` entropy-production proxy rows, `4` stochastic semigroup proxy rows, `24` modal flux relaxation rows, and `40` candidate gate rows; `0` candidates export an internal non-imported irreversibility/thermalization law.
+- Do not promote formal relative-entropy monotonicity, finite entropy-production proxies, stochastic semigroup/stationarity rows, modal relaxation witnesses, imported nonequilibrium thermodynamics templates, or imported apparatus/bath templates to physical time arrow, physical bath, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one open-system bath/preparation source obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new irreversibility/thermalization theorem is introduced.

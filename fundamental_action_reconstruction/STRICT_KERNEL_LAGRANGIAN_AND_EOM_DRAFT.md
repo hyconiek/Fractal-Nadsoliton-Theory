@@ -3460,3 +3460,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3096/S2046 scattering/S-matrix source remains unsourced
 
 `P3096/S2046` confirms that the Z12 Laplacian supports finite Fourier channel labels, Born-like transition amplitudes, formal S-proxy unitarity-defect rows, and cross-section proxies.  A Lagrangian/EOM, scattering operator, or detector-readout reading still needs strict sources for asymptotic in/out states, unit-normalized amplitudes, spacetime asymptotics, empirical detector semantics, and observed scattering interpretation; imported continuum scattering templates do not supply those strict sources.
+
+## P3097/S2047 thermodynamic-radiation source remains unsourced
+
+`P3097/S2047` confirms that the Z12 Laplacian supports finite mode-count tables, dimensionless partition weights, formal intensity-spectrum proxies, and temperature/energy scale-orbit witnesses.  A Lagrangian/EOM, blackbody-radiation, photon/light, or detector-readout reading still needs strict sources for physical temperature and energy units, Planck/blackbody law semantics, observed-light interpretation, and empirical intensity calibration; imported continuum statistical-field and apparatus templates do not supply those strict sources.
+
+## P3098/S2048 KMS thermal-state source remains unsourced
+
+`P3098/S2048` confirms that the Z12 Laplacian supports formal Gibbs weights, exact finite detailed-balance kernels, KMS-shift proxies, and Boltzmann response-ratio rows.  A Lagrangian/EOM, thermal-state, fluctuation-dissipation, or empirical-readout reading still needs strict sources for physical temperature clocks, bath/preparation semantics, operator-algebra statehood, physical response functions, and thermal readout calibration; imported continuum statistical-mechanics and apparatus templates do not supply those strict sources.
+
+## P3099/S2049 irreversibility thermalization source remains unsourced
+
+`P3099/S2049` confirms that the Z12 Laplacian supports formal entropy monotonicity, edge-current entropy-production proxies, stochastic stationarity, and modal relaxation witnesses.  A Lagrangian/EOM, nonequilibrium, dissipative, or empirical-thermalization reading still needs strict sources for physical time arrows, bath/preparation mechanisms, dissipative semigroup semantics, physical clocks, and readout calibration; imported nonequilibrium thermodynamics and apparatus templates do not supply those strict sources.
