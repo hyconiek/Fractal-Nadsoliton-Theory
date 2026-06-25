@@ -3400,3 +3400,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3081/S2031 Dirichlet units remain unsourced
 
 `P3081/S2031` strengthens the Dirichlet/Laplacian audit by computing an exact finite energy spectrum for binary Z12 profiles.  The result gives internal positive dimensionless reference values, but it still does not source an action unit, energy unit, time unit, physical Hamiltonian normalization, or physical `L_total` term.
+
+## P3082/S2032 continuum proxy remains imported
+
+`P3082/S2032` preserves the Dirichlet/Laplacian branch as a real internal finite operator and computes a formal imported continuum proxy.  The proxy does not yet become a physical Lagrangian/EOM term because the refinement spacing, continuum target, Lorentzian signature, and unit-bearing action normalization remain unsourced.
+
+## P3083/S2033 Lorentz signature remains unsourced
+
+`P3083/S2033` confirms that the internal Dirichlet/Laplacian quadratic data remain elliptic/Euclidean or sign-flipped semidefinite.  A physical wave/Lagrangian reading still needs a sourced nondegenerate time axis, Lorentzian metric, unit time normalization, and hyperbolic operator theorem; imported `-d_t^2 + Delta` templates do not supply those strict sources.
