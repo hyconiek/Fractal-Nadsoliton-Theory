@@ -4111,3 +4111,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3101/S2051 detector/readout calibration obstruction audit
 
 `P3101/S2051` attacks exactly one post-P3100 interface atom: a non-imported detector/readout calibration source for the Z12 Dirichlet/Laplacian branch.  It constructs `48` detector response rows, `60` calibration orbit rows, `48` threshold classifier rows, `144` noise stability rows, and a `5 x 8 = 40` candidate gate matrix.  The finite readout-like algebra remains formal; no physical detector map, canonical unit calibration, physical threshold/noise source, observed-light interface, empirical readout source, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3102/S2052 Born-rule/probability-measure empirical-readout obstruction audit
+
+`P3102/S2052` attacks exactly one post-P3101 interface atom: a non-imported Born-rule/probability-measure empirical-readout source for the Z12 Dirichlet/Laplacian branch.  It constructs `48` probability measure rows, `16` event additivity rows, `72` basis orbit rows, `16` frequency proxy rows, and a `5 x 8 = 40` candidate gate matrix.  The finite probability-like algebra remains formal; no Born-rule map, canonical measurement-basis source, physical event semantics, detector calibration link, empirical frequency interface, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3103/S2053 Hilbert-space/state-vector completion obstruction audit
+
+`P3103/S2053` attacks exactly one post-P3102 interface atom: a non-imported Hilbert-space/state-vector completion source for the Z12 Dirichlet/Laplacian branch.  It constructs `16` inner-product rows, `12` observable-expectation rows, `4` unitary-orbit rows, `48` preparation/readout rows, and a `5 x 8 = 40` candidate gate matrix.  The finite Hilbert-like algebra remains formal; no physical inner-product units, physical observable algebra, sourced preparation map, readout coupling, Born/probability source, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
