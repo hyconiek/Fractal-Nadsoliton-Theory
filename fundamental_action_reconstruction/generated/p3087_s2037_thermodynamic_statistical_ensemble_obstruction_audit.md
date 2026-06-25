@@ -4,7 +4,7 @@ Status: `P3087_THERMODYNAMIC_STATISTICAL_ENSEMBLE_OBSTRUCTION_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `38873`
+- content grep hits: `39010`
 - P3086 accepted non-imported empirical observable sources: `0`
 - spectrum rows: `12`
 - microcanonical degeneracy rows: `7`

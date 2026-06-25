@@ -4063,3 +4063,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3089/S2039 spectral-observable/Born-rule readout obstruction audit
 
 `P3089/S2039` attacks exactly one post-P3088 interface atom: a non-imported spectral-observable/Born-rule probability-readout source for the Z12 Dirichlet/Laplacian branch.  It enumerates all `4095` nonzero binary Z12 profiles as normalized Fourier-power probability-like witnesses, checks `12` translation-orbit controls, verifies `6` formal time-probability conservation rows, and builds a `5 x 6 = 30` candidate gate matrix.  The finite probability-like algebra remains dimensionless; no Born-rule map, measurement-basis source, apparatus protocol, empirical probability readout, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3090/S2040 spectral-correlation/Green-function response obstruction audit
+
+`P3090/S2040` attacks exactly one post-P3089 interface atom: a non-imported spectral-correlation/Green-function response source for the Z12 Dirichlet/Laplacian branch.  It constructs `12` finite Laplacian spectrum rows, `12` pseudoinverse Green kernel rows, `48` mass-regularized resolvent rows, `36` formal i-epsilon regulator rows, `12` P3089-weighted modal correlation rows, and a `5 x 6 = 30` candidate gate matrix.  The finite response-like algebra remains static/dimensionless; no causal/retarded prescription, unit-calibrated spectral density, empirical scattering/readout, observed radiation/light, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3091/S2041 spectral-action/effective-action generating-functional obstruction audit
+
+`P3091/S2041` attacks exactly one post-P3090 interface atom: a non-imported spectral-action/effective-action generating-functional source for the Z12 Dirichlet/Laplacian branch.  It constructs `3` positive mass-regularized log-det spectral-action rows, `36` source-coupled quadratic-generator rows, `4` coupling-scale orbit rows, `12` finite formal-variation rows, and a `5 x 6 = 30` candidate gate matrix.  The finite action-like algebra remains formal/dimensionless; no physical variation rule, unit-normalized coupling, empirical response generator, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.

@@ -4,7 +4,7 @@ Status: `P3088_SPECTRAL_HAMILTONIAN_TIME_EVOLUTION_OBSTRUCTION_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `33587`
+- content grep hits: `33609`
 - P3087 accepted non-imported thermodynamic ensemble sources: `0`
 - spectrum rows: `12`
 - spectral Hamiltonian rows: `12`

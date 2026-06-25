@@ -3432,3 +3432,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3089/S2039 Born-rule/probability readout remains unsourced
 
 `P3089/S2039` confirms that finite Z12 profiles can be assigned normalized nonnegative Fourier-power weights and that formal P3088 phases conserve those weights.  A Lagrangian/EOM, quantum-measurement, or empirical-physics reading still needs strict sources for the Born-rule postulate, measurement basis, apparatus protocol, and empirical frequency semantics; imported quantum measurement or detector-counting templates do not supply those strict sources.
+
+## P3090/S2040 Green-function/response source remains unsourced
+
+`P3090/S2040` confirms that the Z12 Laplacian supports formal finite Green/resolvent/correlation witnesses.  A Lagrangian/EOM, response-theory, or empirical-scattering reading still needs strict sources for causal/retarded structure, action/energy units, spectral-density calibration, and empirical readout semantics; imported QFT Green-function or scattering templates do not supply those strict sources.
+
+## P3091/S2041 effective-action source remains unsourced
+
+`P3091/S2041` confirms that the Z12 Laplacian supports finite log-det, source-coupled quadratic-generator, coupling-scale, and formal-variation witnesses.  A Lagrangian/EOM, effective-action, or empirical-response reading still needs strict sources for the physical variation principle, action/coupling units, empirical response-generator semantics, and spacetime/EOM interpretation; imported path-integral or EFT templates do not supply those strict sources.
