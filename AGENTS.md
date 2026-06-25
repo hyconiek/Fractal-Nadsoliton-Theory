@@ -2860,3 +2860,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `4` entropy-identity rows, `4` self-coupled informational-action rows, `4` scale-orbit rows, `6` target-unit rows, and `48` candidate gate rows; `0` candidates export an internal non-imported bit-to-unit conversion law.
 - Do not promote alpha_geo entropy identities, per-bit weights, Dirichlet informational-action proxies, exp(alpha_geo)=16 scale choices, Planck-unit templates, rod/clock/light templates, or apparatus calibration templates to physical action, length, time, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one Nadsoliton self-coupled informational action-density normalization theorem/audit that either exports an internal scale quotient with dimension assignment and calibration interface or proves no such quotient exists on current artifacts.
+
+## Current Nadsoliton action-density normalization guardrail (P3106/S2056, 2026-06-25)
+
+- P3106 follows the P3105 recommendation and audits the self-coupled informational action-density normalization theorem/source for `alpha_geo=4 ln 2=ln(16)` as a four-bit Shannon cell of the nadsoliton, not as imported standard physics.
+- The finite audit computes `4` Shannon-cell rows, `16` alpha_geo-weighted action-density rows, `4` positive scale-quotient rows, and `42` candidate gate rows; `0` candidates export an internal dimension-assignment plus calibration theorem.
+- Do not promote the four-bit Shannon cell, per-node/per-edge/per-bit/per-ln16 action-density proxies, or formal positive scale quotients to physical action, length, time, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one bounded Shannon-to-dimension functor/source-law audit for the alpha_geo four-bit cell, unless a genuinely new internal dimension/calibration theorem is introduced.
+
+## Current Shannon-to-dimension functor/source-law guardrail (P3107/S2057, 2026-06-25)
+
+- P3107 follows the P3106 recommendation and audits a typed functor/source law from the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell to dimension labels and calibration data for the self-coupled nadsoliton.
+- The finite audit computes `5` information-category rows, `15` Shannon-additivity rows, `35` dimension-functor rows, `21` scale-invariance rows, and `56` candidate gate rows; `0` candidates export an internal non-imported Shannon-to-dimension source law.
+- Do not promote the exact four-bit Shannon cell, additive entropy calculus, formal dimension labels, imported hbar/Planck templates, or imported rod/clock/light/apparatus calibrations to physical action, length, time, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one bounded internal calibration-morphism candidate for the alpha_geo four-bit cell, unless a genuinely new internal unit-source law is introduced.

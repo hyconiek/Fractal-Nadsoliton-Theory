@@ -3496,3 +3496,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3105/S2055 alpha_geo unit conversion remains unsourced
 
 `P3105/S2055` confirms that `alpha_geo=4 ln 2=ln(16)` can weight a finite self-coupled informational Dirichlet action proxy for the nadsoliton branch.  This is not yet a physical action, length, time, Hamiltonian, detector calibration, spacetime EOM, or `L_total`: the missing object is an internal scale-quotient/dimension-assignment/calibration theorem, not an imported Planck-unit, rod/clock/light, apparatus, or measurement-postulate template.
+
+## P3106/S2056 action-density normalization remains unitless
+
+`P3106/S2056` normalizes the alpha_geo-weighted Dirichlet information action into finite per-node, per-edge, per-bit, and per-ln16-cell densities for the self-coupled nadsoliton.  The construction stays internal and information-theoretic, but it remains unitless: the positive scale quotient has no exported nonconventional representative, dimension assignment, or calibration interface, so it is not a physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE.
+
+## P3107/S2057 Shannon-to-dimension source law remains unsourced
+
+`P3107/S2057` verifies that the `alpha_geo=ln(16)` four-bit Shannon cell has exact finite additivity and can be placed in a typed information-category audit.  The only coherent import-free functor remains dimensionless; nonzero action/length/time/calibration labels need an internal calibration morphism/source law that is not currently exported.  Therefore this is not yet a physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE.

@@ -4127,3 +4127,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3105/S2055 alpha_geo entropy-to-unit map obstruction audit
 
 `P3105/S2055` attacks the P3104-recommended `alpha_geo` unit-map atom while treating the nadsoliton as self-coupled primordial information rather than assumed standard physics.  It verifies `alpha_geo=4 ln 2=ln(16)`, constructs `4` entropy-identity rows, `4` alpha_geo-weighted Dirichlet informational-action rows, `4` scale-orbit rows, `6` target-unit rows, and a `6 x 8 = 48` candidate gate matrix.  The result remains bounded no-go: no dimension assignment, canonical scale quotient, calibration interface, non-imported bit-to-unit conversion law, observed-light interface, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3106/S2056 Nadsoliton action-density normalization audit
+
+`P3106/S2056` executes the P3105-recommended self-coupled informational action-density normalization audit for `alpha_geo=4 ln 2=ln(16)`.  It constructs `4` Shannon cell rows, `16` alpha_geo-weighted action-density rows, `4` positive scale-quotient rows, and a `6 x 7 = 42` candidate gate matrix.  The result remains bounded no-go: the four-bit Shannon entropy cell and internal density proxies are real, but no nonconventional scale representative, dimension assignment, calibration interface, physical action/length/time unit, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3107/S2057 Shannon-to-dimension functor/source-law audit
+
+`P3107/S2057` executes the P3106-recommended typed Shannon-to-dimension functor/source-law audit for the `alpha_geo=4 ln 2=ln(16)` four-bit cell.  It constructs `5` information-category rows, `15` finite Shannon-additivity rows, `35` dimension-functor rows, `21` scale-invariance rows, and a `7 x 8 = 56` candidate gate matrix.  The result remains bounded no-go: the four-bit Shannon object is exact and additive, but every nonzero dimension/calibration functor lacks a non-imported internal source law or imports standard-physics calibration; no physical action/length/time unit, `L_total`, bridge/role-transfer, or ToE closure is exported.
