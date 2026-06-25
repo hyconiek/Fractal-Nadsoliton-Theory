@@ -1,0 +1,2184 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_nonimported_stress_energy_metric_response_source": false,
+        "candidate": "edge_weight_metric_variation_energy",
+        "failed_gates": 5,
+        "passed_gates": 3
+      },
+      {
+        "accepted_nonimported_stress_energy_metric_response_source": false,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "failed_gates": 5,
+        "passed_gates": 3
+      },
+      {
+        "accepted_nonimported_stress_energy_metric_response_source": false,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "failed_gates": 5,
+        "passed_gates": 3
+      },
+      {
+        "accepted_nonimported_stress_energy_metric_response_source": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "failed_gates": 2,
+        "passed_gates": 6
+      },
+      {
+        "accepted_nonimported_stress_energy_metric_response_source": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "failed_gates": 1,
+        "passed_gates": 7
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_metric_variation_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "graph_energy_quadratic_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "stress_tensor_candidate_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "edge-weight variation is a graph-energy derivative, not a physical metric coupling or stress tensor",
+        "gate_passed": false,
+        "required_gate": "metric_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "edge-weight variation is a graph-energy derivative, not a physical metric coupling or stress tensor",
+        "gate_passed": false,
+        "required_gate": "conservation_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "edge-weight variation is a graph-energy derivative, not a physical metric coupling or stress tensor",
+        "gate_passed": false,
+        "required_gate": "empirical_gravitational_response_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "edge-weight variation is a graph-energy derivative, not a physical metric coupling or stress tensor",
+        "gate_passed": false,
+        "required_gate": "spacetime_geometry_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "edge_weight_metric_variation_energy",
+        "detail": "edge-weight variation is a graph-energy derivative, not a physical metric coupling or stress tensor",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_stress_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_metric_variation_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "graph_energy_quadratic_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "stress_tensor_candidate_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "spectral pressure-like derivative is formal and unitless",
+        "gate_passed": false,
+        "required_gate": "metric_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "spectral pressure-like derivative is formal and unitless",
+        "gate_passed": false,
+        "required_gate": "conservation_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "spectral pressure-like derivative is formal and unitless",
+        "gate_passed": false,
+        "required_gate": "empirical_gravitational_response_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "spectral pressure-like derivative is formal and unitless",
+        "gate_passed": false,
+        "required_gate": "spacetime_geometry_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "spectral_logdet_pressure_derivative",
+        "detail": "spectral pressure-like derivative is formal and unitless",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_stress_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_metric_variation_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "graph_energy_quadratic_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "stress_tensor_candidate_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "divergence rows are not a sourced covariant conservation law",
+        "gate_passed": false,
+        "required_gate": "metric_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "divergence rows are not a sourced covariant conservation law",
+        "gate_passed": false,
+        "required_gate": "conservation_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "divergence rows are not a sourced covariant conservation law",
+        "gate_passed": false,
+        "required_gate": "empirical_gravitational_response_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "divergence rows are not a sourced covariant conservation law",
+        "gate_passed": false,
+        "required_gate": "spacetime_geometry_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "formal_edge_stress_divergence_balance",
+        "detail": "divergence rows are not a sourced covariant conservation law",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_stress_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_metric_variation_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "graph_energy_quadratic_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "stress_tensor_candidate_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "metric_coupling_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "conservation_law_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "stress/metric semantics are imported and lack internal empirical response",
+        "gate_passed": false,
+        "required_gate": "empirical_gravitational_response_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "spacetime_geometry_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_continuum_stress_tensor_template",
+        "detail": "stress/metric semantics are imported and lack internal empirical response",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_stress_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "finite_metric_variation_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "graph_energy_quadratic_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "stress_tensor_candidate_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "metric_coupling_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "conservation_law_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "empirical_gravitational_response_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "spacetime_geometry_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_empirical_gravity_response_template",
+        "detail": "passes only by importing spacetime geometry and empirical field-response semantics",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_stress_source_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "stress_metric_response_atom",
+        "hit_count": 120,
+        "pattern": "stress-energy|stress tensor|metric-response|metric coupling|gravitational/field-response",
+        "sample_hits": [
+          "AGENTS.md:2778:- The next honest move is exactly one stress-energy/metric-response obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Ward/current/effective-charge theorem is introduced.",
+          "AGENTS.md:2780:## Current stress-energy/metric-response obstruction guardrail (P3094/S2044, 2026-06-25)",
+          "AGENTS.md:2782:- P3094 follows the P3093 recommendation and audits one standard-physics interface atom: a non-imported stress-energy/metric-response source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2783:- The finite audit computes `144` edge-weight metric-variation rows, `12` graph-energy quadratic rows, `7` spectral pressure-like log-det derivative rows, `12` formal stress-divergence rows, and `40` candidate gate rows; `0` candidates export an internal non-imported stress-energy/metric-response law.",
+          "AGENTS.md:2784:- Do not promote edge-weight metric variations, graph-energy quadratics, spectral pressure-like derivatives, formal stress-divergence rows, imported continuum stress-tensor templates, or imported empirical gravity-response templates to physical stress-energy tensor, metric coupling, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2785:- The next honest move is exactly one dispersion/propagating-mode observable obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new stress-energy/metric-response theorem is introduced.",
+          "fundamental_action_reconstruction/p1955_s905_strict_minimal_hAA_vertex_export.py:114:    # Gauge stress tensor should be symmetric and traceless in 4D Maxwell theory.",
+          "fundamental_action_reconstruction/test_p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py:98:            \"full nonproxy tensor-resolved metric variation with nonminimal stress-energy terms\","
+        ]
+      },
+      {
+        "content_lane": "predecessor_ward_current_atom",
+        "hit_count": 267,
+        "pattern": "Ward|symmetry-current|conserved current|effective charge|gauge-charge",
+        "sample_hits": [
+          "AGENTS.md:2771:- The next honest move is exactly one Ward-identity/symmetry-current effective-charge obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new RG/source-flow theorem is introduced.",
+          "AGENTS.md:2773:## Current Ward-identity/symmetry-current effective-charge obstruction guardrail (P3093/S2043, 2026-06-25)",
+          "AGENTS.md:2775:- P3093 follows the P3092 recommendation and audits one standard-physics interface atom: a non-imported Ward-identity/symmetry-current effective-charge source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2776:- The finite audit computes `24` exact translation/reflection commutator rows, `12` source-variation balance rows, `12` spectral charge-label rows, `12` formal discrete-current rows, and `40` candidate gate rows; `0` candidates export an internal non-imported Ward/current/effective-charge law.",
+          "AGENTS.md:2777:- Do not promote graph automorphism commutators, finite source-variation balances, Fourier-mode charge labels, formal edge-current rows, imported continuum gauge Ward templates, or imported empirical electric-charge templates to physical conserved current, gauge-charge normalization, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2778:- The next honest move is exactly one stress-energy/metric-response obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Ward/current/effective-charge theorem is introduced.",
+          "fundamental_action_reconstruction/P1768_S718_STRICT_BW_COMPONENTWISE_EXECUTION_INPUT_PACK_PACKET_PL.md:9:dla `G_BW` (Bianchi/Ward gate), spięty z wcześniejszymi checkpointami:",
+          "fundamental_action_reconstruction/p1957_s907_strict_bv_brst_ghost_sector_nonavailability_theorem.py:228:            [\"A same-freeze Bianchi/Ward PASS_ZERO witness before TG2 promotion\"],"
+        ]
+      },
+      {
+        "content_lane": "blocked_promotions",
+        "hit_count": 31765,
+        "pattern": "spacetime geometry|continuum EOM|observed photons|observed light|L_total|ToE|selector closure|bridge/role-transfer",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "formal_stress_divergence_rows": [
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": -0.5,
+        "incoming_edge_stress": 0.5,
+        "outgoing_edge_stress": 0.0,
+        "site": 0
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.0,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.0,
+        "site": 1
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.0,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.0,
+        "site": 2
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.5,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.5,
+        "site": 3
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": -0.5,
+        "incoming_edge_stress": 0.5,
+        "outgoing_edge_stress": 0.0,
+        "site": 4
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.5,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.5,
+        "site": 5
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": -0.5,
+        "incoming_edge_stress": 0.5,
+        "outgoing_edge_stress": 0.0,
+        "site": 6
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.0,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.0,
+        "site": 7
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.0,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.0,
+        "site": 8
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.5,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.5,
+        "site": 9
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": -0.5,
+        "incoming_edge_stress": 0.5,
+        "outgoing_edge_stress": 0.0,
+        "site": 10
+      },
+      {
+        "covariant_conservation_law_attached": false,
+        "empirical_field_response_attached": false,
+        "formal_divergence_row_computed": true,
+        "formal_stress_divergence": 0.5,
+        "incoming_edge_stress": 0.0,
+        "outgoing_edge_stress": 0.5,
+        "site": 11
+      }
+    ],
+    "graph_energy_quadratic_rows": [
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 1,
+        "spacetime_metric_attached": false,
+        "support_size": 1
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 3,
+        "spacetime_metric_attached": false,
+        "support_size": 2
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 2.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 5,
+        "spacetime_metric_attached": false,
+        "support_size": 2
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 15,
+        "spacetime_metric_attached": false,
+        "support_size": 4
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 31,
+        "spacetime_metric_attached": false,
+        "support_size": 5
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 63,
+        "spacetime_metric_attached": false,
+        "support_size": 6
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 127,
+        "spacetime_metric_attached": false,
+        "support_size": 7
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 255,
+        "spacetime_metric_attached": false,
+        "support_size": 8
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 511,
+        "spacetime_metric_attached": false,
+        "support_size": 9
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 1023,
+        "spacetime_metric_attached": false,
+        "support_size": 10
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 1.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 2047,
+        "spacetime_metric_attached": false,
+        "support_size": 11
+      },
+      {
+        "action_measure_attached": false,
+        "graph_quadratic_energy": 0.0,
+        "laplacian_quadratic_form_witness": true,
+        "source_mask": 4095,
+        "spacetime_metric_attached": false,
+        "support_size": 12
+      }
+    ],
+    "metric_variation_rows": [
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 0,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 1,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 3
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 0,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 1,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 2,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 5
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 3,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 15
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 4,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 31
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 5,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 63
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 6,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 127
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 7,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 255
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 8,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 511
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 9,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 1023
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 10,
+        "edge_gradient": -1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.5,
+        "edge": 11,
+        "edge_gradient": 1,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.5,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 2047
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 0,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 1,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 2,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 3,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 4,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 5,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 6,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 7,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 8,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 9,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 10,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      },
+      {
+        "d_energy_d_edge_weight": 0.0,
+        "edge": 11,
+        "edge_gradient": 0,
+        "finite_metric_variation_witness": true,
+        "graph_energy_density": 0.0,
+        "metric_coupling_attached": false,
+        "physical_stress_tensor_attached": false,
+        "source_mask": 4095
+      }
+    ],
+    "spectral_pressure_like_rows": [
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.820733063401,
+        "dimensionless_mass_squared": 0.125,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 9.848796760816
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.756183250301,
+        "dimensionless_mass_squared": 0.25,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 9.074199003611
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.666503866504,
+        "dimensionless_mass_squared": 0.5,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 7.998046398046
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.552777777778,
+        "dimensionless_mass_squared": 1.0,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 6.633333333333
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.42264957265,
+        "dimensionless_mass_squared": 2.0,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 5.071794871795
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.292893217893,
+        "dimensionless_mass_squared": 4.0,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 3.514718614719
+      },
+      {
+        "d_logdet_d_uniform_edge_weight_per_edge": 0.18350341907,
+        "dimensionless_mass_squared": 8.0,
+        "metric_response_law_attached": false,
+        "physical_pressure_unit_attached": false,
+        "spectral_pressure_like_witness": true,
+        "total_uniform_edge_pressure_like_derivative": 2.202041028845
+      }
+    ],
+    "stress_energy_metric_response_audit_object": {
+      "acceptance_predicate": "finite metric variation plus graph energy quadratic, stress tensor candidate, metric coupling, conservation law, empirical gravitational/field response, spacetime geometry, and non-imported physical stress source",
+      "candidate_stress_sources": [
+        "edge_weight_metric_variation_energy",
+        "spectral_logdet_pressure_derivative",
+        "formal_edge_stress_divergence_balance",
+        "imported_continuum_stress_tensor_template",
+        "imported_empirical_gravity_response_template"
+      ],
+      "object": "Z12DirichletStressEnergyMetricResponseObstructionAudit",
+      "required_gates": [
+        "finite_metric_variation_exported",
+        "graph_energy_quadratic_exported",
+        "stress_tensor_candidate_exported",
+        "metric_coupling_exported",
+        "conservation_law_exported",
+        "empirical_gravitational_response_exported",
+        "spacetime_geometry_exported",
+        "nonimported_physical_stress_source_exported"
+      ],
+      "source_reused": "P3093 recommendation: bounded stress-energy/metric-response obstruction audit"
+    }
+  },
+  "decision": {
+    "bounded_result": "P3094 constructs the requested stress-energy/metric-response obstruction audit.  The Z12 Laplacian supports finite edge-weight metric-variation derivatives, graph-energy quadratic forms, mass-regularized spectral pressure-like log-det derivatives, and formal stress-divergence rows.  These are real stress/metric-like witnesses, but no internal artifact exports a physical stress-energy tensor, metric coupling, covariant conservation law, empirical gravitational/field-response semantics, spacetime geometry, observed radiation/light, or a non-imported physical stress source.  Imported continuum stress-tensor and empirical gravity-response templates pass only as imported templates.  Therefore no non-imported stress-energy/metric-response source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "born_rule_readout_exported": false,
+      "bridge_role_transfer_exported": false,
+      "covariant_conservation_law_exported": false,
+      "effective_action_closure_exported": false,
+      "empirical_gravitational_response_exported": false,
+      "empirical_observable_exported": false,
+      "green_response_closure_exported": false,
+      "ltotal_exported": false,
+      "metric_coupling_exported": false,
+      "nonimported_physical_stress_source_exported": false,
+      "observed_light_exported": false,
+      "observed_photons_exported": false,
+      "observed_radiation_exported": false,
+      "physical_action_functional_exported": false,
+      "physical_hamiltonian_exported": false,
+      "physical_stress_energy_tensor_exported": false,
+      "rg_scale_flow_closure_exported": false,
+      "spacetime_eom_exported": false,
+      "spacetime_geometry_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "ward_current_charge_closure_exported": false
+    },
+    "next_honest_step": "Pivot to exactly one adjacent standard-physics interface atom outside selector replay: construct a bounded dispersion/propagating-mode observable obstruction audit for the Z12 Dirichlet/Laplacian branch, testing whether finite spectral group-velocity proxies, mode packet evolution, Green-response poles, and stress/energy witnesses supply a non-imported propagating field mode, dispersion relation, detector-independent observable, and observed-light/radiation interface without importing continuum waves, spacetime metric, apparatus units, L_total, bridge/role-transfer, or ToE.",
+    "positive_scoped_flags": {
+      "finite_metric_variation_rows_computed": true,
+      "formal_stress_divergence_rows_computed": true,
+      "graph_energy_quadratic_rows_computed": true,
+      "spectral_pressure_like_rows_computed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_nonimported_stress_energy_metric_response_sources": 0,
+    "candidate_gate_rows": 40,
+    "content_grep_hits": 32152,
+    "content_grep_lanes": 3,
+    "formal_stress_divergence_rows": 12,
+    "formal_stress_rows_with_covariant_conservation_law": 0,
+    "formal_stress_rows_with_empirical_field_response": 0,
+    "graph_energy_quadratic_rows": 12,
+    "graph_energy_rows_with_action_measure": 0,
+    "graph_energy_rows_with_spacetime_metric": 0,
+    "metric_variation_rows": 144,
+    "metric_variation_rows_with_metric_coupling": 0,
+    "metric_variation_rows_with_physical_stress_tensor": 0,
+    "p3093_accepted_nonimported_ward_current_effective_charge_sources": 0,
+    "proof_obligations": 5,
+    "required_gates": 8,
+    "satisfied_proof_obligations": 4,
+    "spectral_pressure_like_rows": 7,
+    "spectral_pressure_rows_with_metric_response_law": 0,
+    "spectral_pressure_rows_with_physical_pressure_unit": 0,
+    "stress_candidates": 5
+  },
+  "input_hashes": {
+    "P3093": "7b00359aa94505b44a024601a84ab57ede4ee159d98989b4be8861edf384b253"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3093 selected stress-energy/metric-response audit as the next interface atom",
+      "obligation": "read_p3093_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "edge-weight metric-variation derivatives of graph energy are explicit",
+      "obligation": "construct_metric_variation_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "quadratic graph energies and mass-regularized pressure-like log-det derivatives are computed",
+      "obligation": "construct_graph_energy_and_spectral_pressure_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "formal edge-stress divergence rows are explicit",
+      "obligation": "construct_formal_stress_divergence_rows",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates pass as internal non-imported stress-energy/metric-response sources",
+      "obligation": "export_nonimported_physical_stress_metric_response_source",
+      "satisfied": false
+    }
+  ],
+  "status": "P3094_STRESS_ENERGY_METRIC_RESPONSE_OBSTRUCTION_BOUNDED_NO_GO"
+}

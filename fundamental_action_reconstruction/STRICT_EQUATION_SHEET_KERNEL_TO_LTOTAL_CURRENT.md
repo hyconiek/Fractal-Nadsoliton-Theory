@@ -4071,3 +4071,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3091/S2041 spectral-action/effective-action generating-functional obstruction audit
 
 `P3091/S2041` attacks exactly one post-P3090 interface atom: a non-imported spectral-action/effective-action generating-functional source for the Z12 Dirichlet/Laplacian branch.  It constructs `3` positive mass-regularized log-det spectral-action rows, `36` source-coupled quadratic-generator rows, `4` coupling-scale orbit rows, `12` finite formal-variation rows, and a `5 x 6 = 30` candidate gate matrix.  The finite action-like algebra remains formal/dimensionless; no physical variation rule, unit-normalized coupling, empirical response generator, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3092/S2042 renormalization/scale-flow effective-coupling obstruction audit
+
+`P3092/S2042` attacks exactly one post-P3091 interface atom: a non-imported renormalization/scale-flow effective-coupling source for the Z12 Dirichlet/Laplacian branch.  It constructs `7` log-det scale-dependence rows, `6` Green-kernel beta-like finite-difference rows, `28` coupling-rescaling orbit rows, and a `5 x 7 = 35` candidate gate matrix.  The finite flow-like algebra remains formal/dimensionless; no sourced beta function, physical renormalization scale, unit-normalized running coupling, empirical matching condition, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3093/S2043 Ward-identity/symmetry-current effective-charge obstruction audit
+
+`P3093/S2043` attacks exactly one post-P3092 interface atom: a non-imported Ward-identity/symmetry-current effective-charge source for the Z12 Dirichlet/Laplacian branch.  It constructs `24` exact translation/reflection commutator rows, `12` source-variation balance rows, `12` spectral charge-label rows, `12` formal discrete-current rows, and a `5 x 8 = 40` candidate gate matrix.  The finite symmetry/current-like algebra remains formal; no physical conserved current, Ward identity, gauge-charge normalization, empirical charge/readout interface, spacetime EOM, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3094/S2044 stress-energy/metric-response obstruction audit
+
+`P3094/S2044` attacks exactly one post-P3093 interface atom: a non-imported stress-energy/metric-response source for the Z12 Dirichlet/Laplacian branch.  It constructs `144` edge-weight metric-variation rows, `12` graph-energy quadratic rows, `7` spectral pressure-like log-det derivative rows, `12` formal stress-divergence rows, and a `5 x 8 = 40` candidate gate matrix.  The finite stress/metric-like algebra remains formal; no physical stress-energy tensor, metric coupling, covariant conservation law, empirical gravitational/field-response interface, spacetime geometry, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3095/S2045 dispersion/propagating-mode observable obstruction audit
+
+`P3095/S2045` attacks exactly one post-P3094 interface atom: a non-imported dispersion/propagating-mode observable source for the Z12 Dirichlet/Laplacian branch.  It constructs `12` dispersion/group-velocity rows, `12` formal mode-packet evolution rows, `48` Green-pole catalog rows, `12` energy-flux proxy rows, and a `5 x 8 = 40` candidate gate matrix.  The finite propagation-like algebra remains formal/dimensionless; no physical propagating field mode, spacetime speed/light cone, detector-independent observable, observed-light/radiation interface, apparatus units, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3096/S2046 scattering/S-matrix asymptotic-state obstruction audit
+
+`P3096/S2046` attacks exactly one post-P3095 interface atom: a non-imported scattering/S-matrix asymptotic-state source for the Z12 Dirichlet/Laplacian branch.  It constructs `12` finite channel rows, `144` Born-like transition-amplitude rows, `3` S-matrix unitarity-proxy rows, `12` cross-section proxy rows, and a `5 x 8 = 40` candidate gate matrix.  The finite scattering-like algebra remains formal; no in/out asymptotic states, physical unitary S-matrix, unit-normalized scattering amplitudes, empirical detector semantics, spacetime asymptotics, `L_total`, bridge/role-transfer, or ToE closure is exported.

@@ -1,0 +1,821 @@
+{
+  "constructed_theoretical_objects": {
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_nonimported_renormalization_scale_flow_source": false,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "failed_gates": 5,
+        "passed_gates": 2
+      },
+      {
+        "accepted_nonimported_renormalization_scale_flow_source": false,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "failed_gates": 6,
+        "passed_gates": 1
+      },
+      {
+        "accepted_nonimported_renormalization_scale_flow_source": false,
+        "candidate": "source_coupling_rescaling_profile",
+        "failed_gates": 6,
+        "passed_gates": 1
+      },
+      {
+        "accepted_nonimported_renormalization_scale_flow_source": false,
+        "candidate": "imported_continuum_qft_rg_template",
+        "failed_gates": 3,
+        "passed_gates": 4
+      },
+      {
+        "accepted_nonimported_renormalization_scale_flow_source": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "failed_gates": 1,
+        "passed_gates": 6
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "blocking_if_failed": false,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "logdet_scale_dependence_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "mass_parameter_flow_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "finite mass derivatives do not source a physical RG scale, beta function, units, or matching condition",
+        "gate_passed": false,
+        "required_gate": "sourced_beta_function_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "finite mass derivatives do not source a physical RG scale, beta function, units, or matching condition",
+        "gate_passed": false,
+        "required_gate": "physical_renormalization_scale_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "finite mass derivatives do not source a physical RG scale, beta function, units, or matching condition",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_running_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "finite mass derivatives do not source a physical RG scale, beta function, units, or matching condition",
+        "gate_passed": false,
+        "required_gate": "empirical_matching_condition_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "finite_logdet_mass_scale_derivative",
+        "detail": "finite mass derivatives do not source a physical RG scale, beta function, units, or matching condition",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_rg_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "logdet_scale_dependence_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "mass_parameter_flow_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "sourced_beta_function_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "physical_renormalization_scale_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_running_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "empirical_matching_condition_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "green_ratio_effective_coupling_orbit",
+        "detail": "ratio flow is formal and target-dependent; it lacks a sourced RG law and physical normalization",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_rg_source_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "logdet_scale_dependence_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "mass_parameter_flow_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "sourced_beta_function_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "physical_renormalization_scale_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_running_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "empirical_matching_condition_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "source_coupling_rescaling_profile",
+        "detail": "coupling rescaling is a chosen orbit rather than an internally sourced running law",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_rg_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "logdet_scale_dependence_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "mass_parameter_flow_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "sourced_beta_function_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "physical_renormalization_scale_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "RG semantics are imported and still lack internal units/matching",
+        "gate_passed": false,
+        "required_gate": "unit_normalized_running_coupling_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "RG semantics are imported and still lack internal units/matching",
+        "gate_passed": false,
+        "required_gate": "empirical_matching_condition_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_continuum_qft_rg_template",
+        "detail": "RG semantics are imported and still lack internal units/matching",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_rg_source_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "logdet_scale_dependence_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "mass_parameter_flow_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "sourced_beta_function_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "physical_renormalization_scale_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unit_normalized_running_coupling_exported"
+      },
+      {
+        "blocking_if_failed": false,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "empirical_matching_condition_exported"
+      },
+      {
+        "blocking_if_failed": true,
+        "candidate": "imported_empirical_running_coupling_template",
+        "detail": "passes only by importing physical scale units and empirical matching semantics",
+        "gate_passed": false,
+        "required_gate": "nonimported_physical_rg_source_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "renormalization_scale_flow_atom",
+        "hit_count": 2958,
+        "pattern": "renormalization|scale-flow|running coupling|beta function|effective-coupling",
+        "sample_hits": [
+          "AGENTS.md:1515:- Site normalization and directed-edge normalization are incompatible (`m=1/12` vs `m=1/144`) unless a new strict renormalization, quotient, or measure-source theorem is supplied.",
+          "AGENTS.md:1526:## Current translation-orbit quotient renormalization guardrail (P2916/S1866, 2026-06-19)",
+          "AGENTS.md:1529:- Treat this as finite quotient/renormalization progress only: no strict nonzero `Gamma_9_5` source theorem and no continuum field-variable provenance theorem are exported.",
+          "AGENTS.md:2588:- Current artifacts export `0` Lorentz/gauge/unitarity/renormalization/EOM/empirical compatibility closures.  Do not promote this matrix to observed physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2624:- The next honest move is one transition-interface theorem from conserved profiles toward dynamics: a discrete continuity/Noether-current matrix on `Z12` or a bounded renormalization/scale-flow obstruction table, with no closure promotion without a new unit/action/EOM provider.",
+          "AGENTS.md:2631:- The next honest move is one bounded renormalization/scale-flow obstruction table for the P3071 scalar summaries, unless a new strict action/EOM/unit provider is introduced.",
+          "AGENTS.md:2633:## Current bounded scale-flow operator guardrail (P3073/S2023, 2026-06-24)",
+          "AGENTS.md:2635:- P3073 follows the P3072 recommendation and constructs one bounded scale-flow operator matrix for the `P3071` accepted sigma-even scalar summaries."
+        ]
+      },
+      {
+        "content_lane": "predecessor_action_atom",
+        "hit_count": 86,
+        "pattern": "spectral-action|effective-action|generating-functional|log-det|1/2 JGJ",
+        "sample_hits": [
+          "AGENTS.md:2757:- The next honest move is exactly one spectral-action/effective-action generating-functional obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new Green/response source theorem is introduced.",
+          "AGENTS.md:2759:## Current spectral-action/effective-action obstruction guardrail (P3091/S2041, 2026-06-25)",
+          "AGENTS.md:2761:- P3091 follows the P3090 recommendation and audits one standard-physics interface atom: a non-imported spectral-action/effective-action generating-functional source for the Z12 Dirichlet/Laplacian branch.",
+          "AGENTS.md:2762:- The finite audit computes `3` log-det spectral-action rows, `36` source-coupled quadratic-generator rows, `4` coupling-scale orbit rows, `12` finite formal-variation rows, and `30` candidate gate rows; `0` candidates export an internal non-imported physical action/generating-functional source.",
+          "AGENTS.md:2763:- Do not promote finite log-dets, source-coupled `1/2 JGJ` generators, formal variations, dimensionless coupling-scale orbits, imported Gaussian path-integral templates, or imported EFT templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Green/response closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2764:- The next honest move is exactly one renormalization/scale-flow effective-coupling obstruction audit for the Z12 Dirichlet/Laplacian branch, unless a genuinely new action/generating-functional source theorem is introduced.",
+          "AGENTS.md:2769:- The finite audit computes `7` log-det scale-dependence rows, `6` Green-kernel beta-like finite-difference rows, `28` coupling-rescaling orbit rows, and `35` candidate gate rows; `0` candidates export an internal non-imported physical RG/source-flow law.",
+          "AGENTS.md:2770:- Do not promote finite log-det scale derivatives, Green-kernel beta-like slopes, dimensionless source-coupling rescaling orbits, imported continuum QFT RG templates, or imported empirical running-coupling templates to sourced beta function, physical renormalization scale, unit-normalized running coupling, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure."
+        ]
+      },
+      {
+        "content_lane": "blocked_promotions",
+        "hit_count": 31727,
+        "pattern": "continuum QFT RG|observed photons|observed light|spacetime EOM|L_total|ToE|selector closure|bridge/role-transfer",
+        "sample_hits": [
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+          "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+          "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+          "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open."
+        ]
+      }
+    ],
+    "coupling_rescaling_orbit_rows": [
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.125,
+        "formal_rescaled_coupling": 0.235702260396,
+        "formal_response_weight": 0.009490740741,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.125,
+        "formal_rescaled_coupling": 0.471404520791,
+        "formal_response_weight": 0.037962962963,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.125,
+        "formal_rescaled_coupling": 0.942809041582,
+        "formal_response_weight": 0.151851851852,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.125,
+        "formal_rescaled_coupling": 1.885618083164,
+        "formal_response_weight": 0.607407407407,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.25,
+        "formal_rescaled_coupling": 0.22360679775,
+        "formal_response_weight": 0.008541666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.25,
+        "formal_rescaled_coupling": 0.4472135955,
+        "formal_response_weight": 0.034166666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.25,
+        "formal_rescaled_coupling": 0.894427191,
+        "formal_response_weight": 0.136666666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.25,
+        "formal_rescaled_coupling": 1.788854382,
+        "formal_response_weight": 0.546666666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.5,
+        "formal_rescaled_coupling": 0.204124145232,
+        "formal_response_weight": 0.007118055556,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.5,
+        "formal_rescaled_coupling": 0.408248290464,
+        "formal_response_weight": 0.028472222222,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.5,
+        "formal_rescaled_coupling": 0.816496580928,
+        "formal_response_weight": 0.113888888889,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 0.5,
+        "formal_rescaled_coupling": 1.632993161855,
+        "formal_response_weight": 0.455555555556,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 1.0,
+        "formal_rescaled_coupling": 0.176776695297,
+        "formal_response_weight": 0.005338541667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 1.0,
+        "formal_rescaled_coupling": 0.353553390593,
+        "formal_response_weight": 0.021354166667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 1.0,
+        "formal_rescaled_coupling": 0.707106781187,
+        "formal_response_weight": 0.085416666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 1.0,
+        "formal_rescaled_coupling": 1.414213562373,
+        "formal_response_weight": 0.341666666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 2.0,
+        "formal_rescaled_coupling": 0.144337567297,
+        "formal_response_weight": 0.003559027778,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 2.0,
+        "formal_rescaled_coupling": 0.288675134595,
+        "formal_response_weight": 0.014236111111,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 2.0,
+        "formal_rescaled_coupling": 0.57735026919,
+        "formal_response_weight": 0.056944444444,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 2.0,
+        "formal_rescaled_coupling": 1.154700538379,
+        "formal_response_weight": 0.227777777778,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 4.0,
+        "formal_rescaled_coupling": 0.111803398875,
+        "formal_response_weight": 0.002135416667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 4.0,
+        "formal_rescaled_coupling": 0.22360679775,
+        "formal_response_weight": 0.008541666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 4.0,
+        "formal_rescaled_coupling": 0.4472135955,
+        "formal_response_weight": 0.034166666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 4.0,
+        "formal_rescaled_coupling": 0.894427191,
+        "formal_response_weight": 0.136666666667,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.25,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 8.0,
+        "formal_rescaled_coupling": 0.083333333333,
+        "formal_response_weight": 0.001186342593,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 0.5,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 8.0,
+        "formal_rescaled_coupling": 0.166666666667,
+        "formal_response_weight": 0.00474537037,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 1.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 8.0,
+        "formal_rescaled_coupling": 0.333333333333,
+        "formal_response_weight": 0.018981481481,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      },
+      {
+        "bare_dimensionless_coupling": 2.0,
+        "coupling_rescaling_witness": true,
+        "dimensionless_mass_squared": 8.0,
+        "formal_rescaled_coupling": 0.666666666667,
+        "formal_response_weight": 0.075925925926,
+        "physical_normalization_fixed": false,
+        "unit_normalized_running_coupling_attached": false
+      }
+    ],
+    "green_effective_coupling_beta_like_rows": [
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.615444453078,
+        "from_mass_squared": 0.125,
+        "green_effective_coupling_hi": 0.597175373646,
+        "green_effective_coupling_lo": 1.023768961089,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 0.25
+      },
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.380056425668,
+        "from_mass_squared": 0.25,
+        "green_effective_coupling_hi": 0.33374033374,
+        "green_effective_coupling_lo": 0.597175373646,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 0.5
+      },
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.235025121613,
+        "from_mass_squared": 0.5,
+        "green_effective_coupling_hi": 0.170833333333,
+        "green_effective_coupling_lo": 0.33374033374,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 1.0
+      },
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.134867324869,
+        "from_mass_squared": 1.0,
+        "green_effective_coupling_hi": 0.07735042735,
+        "green_effective_coupling_lo": 0.170833333333,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 2.0
+      },
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.06783601245,
+        "from_mass_squared": 2.0,
+        "green_effective_coupling_hi": 0.03033008658,
+        "green_effective_coupling_lo": 0.07735042735,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 4.0
+      },
+      {
+        "beta_like_witness_computed": true,
+        "empirical_matching_condition_attached": false,
+        "finite_difference_beta_like_slope": -0.028882355812,
+        "from_mass_squared": 4.0,
+        "green_effective_coupling_hi": 0.010310363081,
+        "green_effective_coupling_lo": 0.03033008658,
+        "reference_distance": 1,
+        "sourced_beta_function_attached": false,
+        "to_mass_squared": 8.0
+      }
+    ],
+    "logdet_scale_dependence_rows": [
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 2.151203239184,
+        "dimensionless_log_mass": -2.07944154168,
+        "dimensionless_mass_squared": 0.125,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 4.191258510836,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 2.925800996389,
+        "dimensionless_log_mass": -1.38629436112,
+        "dimensionless_mass_squared": 0.25,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 5.933919828014,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 4.001953601954,
+        "dimensionless_log_mass": -0.69314718056,
+        "dimensionless_mass_squared": 0.5,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 8.317277825855,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 5.366666666667,
+        "dimensionless_log_mass": 0.0,
+        "dimensionless_mass_squared": 1.0,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 11.549064511586,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 6.928205128205,
+        "dimensionless_log_mass": 0.69314718056,
+        "dimensionless_mass_squared": 2.0,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 15.803494489155,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 8.485281385281,
+        "dimensionless_log_mass": 1.38629436112,
+        "dimensionless_mass_squared": 4.0,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 21.152966087168,
+        "physical_rg_scale_attached": false
+      },
+      {
+        "action_unit_attached": false,
+        "d_logdet_d_log_m2_trace_witness": 9.797958971155,
+        "dimensionless_log_mass": 2.07944154168,
+        "dimensionless_mass_squared": 8.0,
+        "finite_scale_dependence_witness": true,
+        "logdet_L_plus_m2I": 27.509180034732,
+        "physical_rg_scale_attached": false
+      }
+    ],
+    "renormalization_scale_flow_audit_object": {
+      "acceptance_predicate": "finite scale dependence plus mass flow, sourced beta function, physical renormalization scale, unit-normalized running coupling, empirical matching condition, and non-imported physical RG source",
+      "candidate_rg_sources": [
+        "finite_logdet_mass_scale_derivative",
+        "green_ratio_effective_coupling_orbit",
+        "source_coupling_rescaling_profile",
+        "imported_continuum_qft_rg_template",
+        "imported_empirical_running_coupling_template"
+      ],
+      "object": "Z12DirichletRenormalizationScaleFlowEffectiveCouplingObstructionAudit",
+      "required_gates": [
+        "logdet_scale_dependence_exported",
+        "mass_parameter_flow_exported",
+        "sourced_beta_function_exported",
+        "physical_renormalization_scale_exported",
+        "unit_normalized_running_coupling_exported",
+        "empirical_matching_condition_exported",
+        "nonimported_physical_rg_source_exported"
+      ],
+      "source_reused": "P3091 recommendation: bounded renormalization/scale-flow effective-coupling obstruction audit"
+    }
+  },
+  "decision": {
+    "bounded_result": "P3092 constructs the requested renormalization/scale-flow effective-coupling obstruction audit.  The Z12 Laplacian supports finite log-det scale-dependence rows, trace derivative witnesses, Green-kernel beta-like finite differences, and dimensionless source-coupling rescaling orbits.  These are real flow-like witnesses, but no internal artifact exports a sourced beta function, physical renormalization scale, action/coupling units, empirical matching condition, spacetime EOM, observed radiation/light, or a non-imported physical RG source.  Imported continuum QFT RG and empirical running-coupling templates pass only as imported templates.  Therefore no non-imported renormalization/scale-flow effective-coupling source is exported.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "born_rule_readout_exported": false,
+      "bridge_role_transfer_exported": false,
+      "effective_action_closure_exported": false,
+      "empirical_matching_condition_exported": false,
+      "empirical_observable_exported": false,
+      "green_response_closure_exported": false,
+      "ltotal_exported": false,
+      "nonimported_physical_rg_source_exported": false,
+      "observed_light_exported": false,
+      "observed_photons_exported": false,
+      "observed_radiation_exported": false,
+      "physical_action_functional_exported": false,
+      "physical_hamiltonian_exported": false,
+      "physical_renormalization_scale_exported": false,
+      "sourced_beta_function_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false,
+      "unit_normalized_running_coupling_exported": false
+    },
+    "next_honest_step": "Pivot to exactly one adjacent standard-physics interface atom outside selector replay: construct a bounded Ward-identity/symmetry-current effective-charge obstruction audit for the Z12 Dirichlet/Laplacian branch, testing whether finite graph symmetries, Laplacian commutators, source variations, and spectral charges supply a non-imported conserved current, Ward identity, gauge-charge normalization, and empirical charge/readout interface without importing continuum gauge theory, spacetime EOM, observed photons/light, apparatus units, L_total, bridge/role-transfer, or ToE.",
+    "positive_scoped_flags": {
+      "dimensionless_coupling_rescaling_orbit_computed": true,
+      "finite_logdet_scale_dependence_computed": true,
+      "green_beta_like_finite_differences_computed": true,
+      "trace_derivative_witness_computed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_nonimported_renormalization_scale_flow_sources": 0,
+    "candidate_gate_rows": 35,
+    "content_grep_hits": 34771,
+    "content_grep_lanes": 3,
+    "coupling_rescaling_orbit_rows": 28,
+    "coupling_rows_with_physical_normalization": 0,
+    "coupling_rows_with_unit_normalized_running_coupling": 0,
+    "green_beta_like_rows": 6,
+    "green_beta_like_rows_with_empirical_matching": 0,
+    "green_beta_like_rows_with_sourced_beta_function": 0,
+    "logdet_rows_with_action_unit": 0,
+    "logdet_rows_with_physical_rg_scale": 0,
+    "logdet_scale_dependence_rows": 7,
+    "p3091_accepted_nonimported_spectral_action_effective_action_sources": 0,
+    "proof_obligations": 5,
+    "required_gates": 7,
+    "rg_candidates": 5,
+    "satisfied_proof_obligations": 4
+  },
+  "input_hashes": {
+    "P3091": "748caffb9322bfb7ce7c3ec7fbd7c1cf8df167e852b75cf074d31cb21586e257"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3091 selected renormalization/scale-flow effective-coupling audit as the next interface atom",
+      "obligation": "read_p3091_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "finite log-det scale rows and trace derivative witnesses are explicit",
+      "obligation": "construct_logdet_scale_dependence",
+      "satisfied": true
+    },
+    {
+      "detail": "finite-difference beta-like slopes over Green effective couplings are computed",
+      "obligation": "construct_beta_like_mass_flow",
+      "satisfied": true
+    },
+    {
+      "detail": "dimensionless source-coupling rescaling rows are explicit",
+      "obligation": "construct_coupling_rescaling_orbit",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates pass as internal non-imported renormalization/scale-flow effective-coupling sources",
+      "obligation": "export_nonimported_physical_rg_source",
+      "satisfied": false
+    }
+  ],
+  "status": "P3092_RENORMALIZATION_SCALE_FLOW_EFFECTIVE_COUPLING_OBSTRUCTION_BOUNDED_NO_GO"
+}

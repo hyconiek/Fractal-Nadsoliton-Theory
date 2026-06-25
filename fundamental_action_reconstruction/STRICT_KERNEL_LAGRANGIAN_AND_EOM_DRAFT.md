@@ -3440,3 +3440,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3091/S2041 effective-action source remains unsourced
 
 `P3091/S2041` confirms that the Z12 Laplacian supports finite log-det, source-coupled quadratic-generator, coupling-scale, and formal-variation witnesses.  A Lagrangian/EOM, effective-action, or empirical-response reading still needs strict sources for the physical variation principle, action/coupling units, empirical response-generator semantics, and spacetime/EOM interpretation; imported path-integral or EFT templates do not supply those strict sources.
+
+## P3092/S2042 RG scale-flow source remains unsourced
+
+`P3092/S2042` confirms that the Z12 Laplacian supports finite log-det scale dependence, trace derivative witnesses, Green-kernel beta-like slopes, and source-coupling rescaling orbits.  A Lagrangian/EOM, effective coupling, or empirical running-coupling reading still needs strict sources for a physical RG scale, sourced beta function, unit-normalized coupling, empirical matching, and spacetime/EOM interpretation; imported continuum RG templates do not supply those strict sources.
+
+## P3093/S2043 Ward/current/effective-charge source remains unsourced
+
+`P3093/S2043` confirms that the Z12 Laplacian supports exact graph-symmetry commutators, source-variation balances, Fourier-mode charge labels, and formal edge-current rows.  A Lagrangian/EOM, gauge-charge, or empirical current reading still needs strict sources for a physical current law, Ward identity, charge normalization, empirical readout, and spacetime/EOM interpretation; imported continuum gauge templates do not supply those strict sources.
+
+## P3094/S2044 stress-energy/metric-response source remains unsourced
+
+`P3094/S2044` confirms that the Z12 Laplacian supports finite edge-weight metric variations, graph-energy quadratics, spectral pressure-like log-det derivatives, and formal stress-divergence rows.  A Lagrangian/EOM, stress tensor, or metric-response reading still needs strict sources for physical metric coupling, covariant conservation, spacetime geometry, empirical gravitational/field-response semantics, and observed-field interpretation; imported continuum stress/gravity templates do not supply those strict sources.
+
+## P3095/S2045 dispersion/propagating observable source remains unsourced
+
+`P3095/S2045` confirms that the Z12 Laplacian supports a finite dispersion curve, group-velocity proxies, formal mode-packet phases, Green-pole catalogs, and modal energy-flux proxies.  A Lagrangian/EOM, propagating field, or observed-radiation reading still needs strict sources for physical time and distance units, spacetime speed/light-cone semantics, detector-independent observables, empirical radiation/readout, and observed-light interpretation; imported continuum wave templates do not supply those strict sources.
+
+## P3096/S2046 scattering/S-matrix source remains unsourced
+
+`P3096/S2046` confirms that the Z12 Laplacian supports finite Fourier channel labels, Born-like transition amplitudes, formal S-proxy unitarity-defect rows, and cross-section proxies.  A Lagrangian/EOM, scattering operator, or detector-readout reading still needs strict sources for asymptotic in/out states, unit-normalized amplitudes, spacetime asymptotics, empirical detector semantics, and observed scattering interpretation; imported continuum scattering templates do not supply those strict sources.
