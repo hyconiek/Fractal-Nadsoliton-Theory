@@ -4,7 +4,7 @@ Status: `P3080_TYPED_OBSERVABLE_INTERFACE_OBLIGATION_BOUNDED_NO_GO`
 
 ## Finite certificate
 - content grep lanes: `3`
-- content grep hits: `37628`
+- content grep hits: `37798`
 - P3079 accepted internal causal-order sources: `0`
 - interface objects: `4`
 - standard-physics obligations: `6`
