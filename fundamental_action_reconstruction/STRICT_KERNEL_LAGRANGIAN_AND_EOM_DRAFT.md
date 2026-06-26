@@ -3540,3 +3540,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3116/S2066 K_dim functor remains unsourced
 
 `P3116/S2066` tests whether a nadsoliton-only `K_dim` can source the positive scale torsor and thereby induce `Sigma_dim`, `C_phi(A_phi)=U_action`, and `U_action=F(U_length,U_time)`.  Current artifacts provide no import-free strict dimension-source functor, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3117/S2067 Omega_dim source remains incomplete
+
+`P3117/S2067` tests whether a strict nadsoliton-only dimension character `Omega_dim` can induce `K_dim`, `Sigma_dim`, `C_phi(A_phi)=U_action`, and `U_action=F(U_length,U_time)`.  Current artifacts provide no import-free strict source satisfying the full dimensional chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3118/S2068 R_dim relation remains incomplete
+
+`P3118/S2068` tests whether a strict nadsoliton-only action-length-time relation `R_dim` can preserve `C_phi(A_phi)=U_action` and prove `U_action=F(U_length,U_time)`.  Current artifacts provide no import-free strict relation satisfying the full dimensional chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
