@@ -3564,3 +3564,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3122/S2072 Iota_irrev irreversible-defect remains incomplete
 
 `P3122/S2072` tests whether a strict nadsoliton-only irreversible-defect source `Iota_irrev` can provide the nonzero signed temporal-arrow value needed to unlock `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`.  Current artifacts provide no import-free strict irreversible-defect source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3123/S2073 Delta_asym asymmetric-transition remains incomplete
+
+`P3123/S2073` tests whether a strict nadsoliton-only asymmetric-transition source `Delta_asym` can provide the nonzero gauge-invariant forward/reverse asymmetry value needed to unlock `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict asymmetric-transition source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3124/S2074 Phi_Info phase-information quotient remains incomplete
+
+`P3124/S2074` tests whether a strict nadsoliton-only phase-information gauge quotient `Phi_Info` can fix phase-origin gauge and provide the nonzero gauge-invariant asymmetry needed to unlock `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict quotient satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3125/S2075 Lambda_origin phase-origin localizer remains incomplete
+
+`P3125/S2075` tests whether a strict nadsoliton-only phase-origin/source-localizer `Lambda_origin` can select a nonzero phase-information quotient representative and unlock `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict localizer satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
