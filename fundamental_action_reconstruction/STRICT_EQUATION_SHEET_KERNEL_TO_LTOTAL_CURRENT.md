@@ -4143,3 +4143,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3109/S2059 alpha_geo scale-orbit quotient/source-law audit
 
 `P3109/S2059` executes the P3108-recommended scale-orbit quotient/source-law audit for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.  It constructs `4` entropy-cell rows, `9` positive scale-orbit rows, `5` section candidates, `15` calibration-coupling rows, and a `5 x 8 = 40` gate matrix.  The bounded result is that alpha_geo fixes internal entropy/cardinality/ratio quotient data, but no non-imported candidate selects a unique positive section with dimension assignment and calibration coupling.  No physical unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3110/S2060 alpha_geo dimension comparison standard audit
+
+`P3110/S2060` executes the P3109-recommended audit for an internal dimension-carrying comparison standard for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.  It constructs `6` candidate standards, `18` action/length/time scale-orbit section rows, and a `6 x 8 = 48` gate matrix.  The bounded result is that internal information candidates remain dimensionless or section-unsourced; the imported Planck row is rejected.  No physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3111/S2061 symplectic/action phase source-law audit
+
+`P3111/S2061` executes the P3110-recommended source-law audit for `symplectic_phase_area_candidate`.  It constructs `8` phase-periodicity rows, `12` action/length/time scale-orbit rows, `3` candidate source laws, and a `3 x 8 = 24` gate matrix.  The positive scoped result is that `A_phi = 2*pi/alpha_geo` is a unique minimal positive internal phase-area section for `alpha_geo*A in 2*pi*Z`.  The bounded obstruction is that this section is still dimensionless internal phase accounting and exports no physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
