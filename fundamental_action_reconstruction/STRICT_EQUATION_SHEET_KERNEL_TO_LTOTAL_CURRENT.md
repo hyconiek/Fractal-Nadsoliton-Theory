@@ -4135,3 +4135,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3107/S2057 Shannon-to-dimension functor/source-law audit
 
 `P3107/S2057` executes the P3106-recommended typed Shannon-to-dimension functor/source-law audit for the `alpha_geo=4 ln 2=ln(16)` four-bit cell.  It constructs `5` information-category rows, `15` finite Shannon-additivity rows, `35` dimension-functor rows, `21` scale-invariance rows, and a `7 x 8 = 56` candidate gate matrix.  The result remains bounded no-go: the four-bit Shannon object is exact and additive, but every nonzero dimension/calibration functor lacks a non-imported internal source law or imports standard-physics calibration; no physical action/length/time unit, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3108/S2058 internal calibration-morphism candidate audit
+
+`P3108/S2058` executes the P3107-recommended bounded internal calibration-morphism candidate audit for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.  It constructs `4` calibration objects, `6` morphism candidates, `24` scale-orbit rows, `6` source-law rows, and a `6 x 9 = 54` gate matrix.  The result remains bounded no-go: internal formulas can target action/length/time/calibration labels, but no nonzero import-free candidate exports a scale-orbit quotient, nonconventional representative, internal source law, and calibration interface.  No physical unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3109/S2059 alpha_geo scale-orbit quotient/source-law audit
+
+`P3109/S2059` executes the P3108-recommended scale-orbit quotient/source-law audit for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.  It constructs `4` entropy-cell rows, `9` positive scale-orbit rows, `5` section candidates, `15` calibration-coupling rows, and a `5 x 8 = 40` gate matrix.  The bounded result is that alpha_geo fixes internal entropy/cardinality/ratio quotient data, but no non-imported candidate selects a unique positive section with dimension assignment and calibration coupling.  No physical unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.

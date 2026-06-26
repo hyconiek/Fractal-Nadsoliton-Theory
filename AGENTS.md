@@ -2874,3 +2874,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `5` information-category rows, `15` Shannon-additivity rows, `35` dimension-functor rows, `21` scale-invariance rows, and `56` candidate gate rows; `0` candidates export an internal non-imported Shannon-to-dimension source law.
 - Do not promote the exact four-bit Shannon cell, additive entropy calculus, formal dimension labels, imported hbar/Planck templates, or imported rod/clock/light/apparatus calibrations to physical action, length, time, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one bounded internal calibration-morphism candidate for the alpha_geo four-bit cell, unless a genuinely new internal unit-source law is introduced.
+
+## Current internal calibration-morphism candidate guardrail (P3108/S2058, 2026-06-26)
+
+- P3108 follows the P3107 recommendation and constructs bounded internal calibration-morphism candidates from the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell of the self-coupled nadsoliton.
+- The finite audit computes `4` calibration objects, `6` morphism candidates, `24` scale-orbit rows, `6` source-law rows, and `54` candidate gate rows; `0` candidates export a nonzero internal import-free calibration morphism.
+- Do not promote alpha_geo Shannon-cell morphisms, internal action-density formulas, formal length/time ticks, or imported hbar/Planck calibration to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one scale-orbit quotient/source-law candidate for the alpha_geo four-bit cell, unless a genuinely new internal unit-source law is introduced.
+
+## Current alpha_geo scale-orbit quotient/source-law guardrail (P3109/S2059, 2026-06-26)
+
+- P3109 follows the P3108 recommendation and audits scale-orbit quotient/source-law candidates for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.
+- The finite audit computes `4` entropy-cell rows, `9` positive scale-orbit rows, `5` section candidates, `15` calibration-coupling rows, and `40` candidate gate rows; `0` candidates export a non-imported positive quotient section with dimension assignment and calibration coupling.
+- Do not promote `exp(alpha_geo)=16`, per-bit `ln2`, `alpha_geo/4`, total `alpha_geo`, or imported `hbar/Planck` sections to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one internal dimension-carrying comparison standard for the alpha_geo quotient section, unless a genuinely new internal unit-source law is introduced.
