@@ -1,0 +1,2848 @@
+{
+  "constructed_theoretical_objects": {
+    "audit_object": {
+      "forbidden_imports": [
+        "hbar/Planck",
+        "rods",
+        "clocks",
+        "observed light",
+        "apparatus",
+        "selector replay",
+        "L_total",
+        "bridge/role-transfer",
+        "ToE"
+      ],
+      "object": "RDimActionLengthTimeRelationAudit",
+      "required_relation": "R_dim internal action-length-time composition law preserving C_phi(A_phi)=U_action and proving U_action=F(U_length,U_time)"
+    },
+    "candidate_R_dim_relations": [
+      {
+        "C_phi_A_phi_preserved": true,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": false,
+        "U_time_source_exported": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := A_phi * tick_length * tick_time^{-1}",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": false,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": true,
+        "U_time_source_exported": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := entropy_cell * internal_clock_period",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := period_length * period_velocity",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := <ell cup tau,[N]>",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": true,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": false,
+        "U_time_source_exported": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := integral p dq with p,q internal phase axes",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": false,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := beta_tail * U_length/U_time",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": false,
+        "U_time_source_exported": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "explicit_relation_formula": true,
+        "formula": "choose section of (U_action,U_length,U_time)/R_+",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": false,
+        "scale_covariant_not_gauge_fixed": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": true,
+        "U_action_from_length_time_proved": true,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := integral L dt from strict EOM",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": false,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": false,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": false,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": true,
+        "U_action_from_length_time_proved": true,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := hbar and U_length/U_time := c",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": false,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_nadsoliton_data_only": false,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": true,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action := detector calibration with rods and clocks",
+        "not_apparatus_calibration": false,
+        "not_imported_dynamics": false,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_nadsoliton_data_only": false,
+        "uses_p3117_r_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_preserved": false,
+        "U_action_from_length_time_proved": false,
+        "U_length_source_exported": true,
+        "U_time_source_exported": true,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "explicit_relation_formula": true,
+        "formula": "U_action relation after selector/orientation premise",
+        "not_apparatus_calibration": true,
+        "not_imported_dynamics": true,
+        "not_unit_convention": true,
+        "scale_covariant_not_gauge_fixed": true,
+        "selector_bridge_ltotal_toe_free": false,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_data_only": true,
+        "uses_p3117_r_dim_obligation": true
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "apparatus_rod_clock_relation",
+        "failed_gates": 5,
+        "passed_gates": 8
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "cohomology_cup_product_relation",
+        "failed_gates": 2,
+        "passed_gates": 11
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "damping_transport_relation",
+        "failed_gates": 3,
+        "passed_gates": 10
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "entropy_cell_clock_relation",
+        "failed_gates": 3,
+        "passed_gates": 10
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "lagrangian_eom_relation",
+        "failed_gates": 3,
+        "passed_gates": 10
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "phase_tick_product_relation",
+        "failed_gates": 4,
+        "passed_gates": 9
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "planck_hbar_relation",
+        "failed_gates": 3,
+        "passed_gates": 10
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "quotient_orbit_section_relation",
+        "failed_gates": 6,
+        "passed_gates": 7
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "selector_oriented_relation",
+        "failed_gates": 3,
+        "passed_gates": 10
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "symplectic_phase_area_relation",
+        "failed_gates": 4,
+        "passed_gates": 9
+      },
+      {
+        "accepted_R_dim_relation": false,
+        "candidate": "z12_period_velocity_relation",
+        "failed_gates": 2,
+        "passed_gates": 11
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "has phase-area action carrier but no independent U_length/U_time source",
+        "gate_passed": false,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "has phase-area action carrier but no independent U_length/U_time source",
+        "gate_passed": false,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "has phase-area action carrier but no independent U_length/U_time source",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "has phase-area action carrier but no independent U_length/U_time source",
+        "gate_passed": false,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "phase_tick_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "gate_passed": false,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "entropy_cell_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "z12_period_velocity_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "cup product supplies a formal pairing but no dimensional source law",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "cup product supplies a formal pairing but no dimensional source law",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "cohomology_cup_product_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "symplectic notation restates A_phi without sourcing length and time axes",
+        "gate_passed": false,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "symplectic notation restates A_phi without sourcing length and time axes",
+        "gate_passed": false,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "symplectic notation restates A_phi without sourcing length and time axes",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "symplectic notation restates A_phi without sourcing length and time axes",
+        "gate_passed": false,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "symplectic_phase_area_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "tail transport is target-dependent and not a source relation",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "tail transport is target-dependent and not a source relation",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "tail transport is target-dependent and not a source relation",
+        "gate_passed": false,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "damping_transport_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "quotient section names the obligation but is gauge fixing",
+        "gate_passed": false,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "quotient_orbit_section_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "imports unresolved Lagrangian/EOM and L_total lane",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "imports unresolved Lagrangian/EOM and L_total lane",
+        "gate_passed": false,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "imports unresolved Lagrangian/EOM and L_total lane",
+        "gate_passed": false,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "lagrangian_eom_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "complete relation comes from imported Planck/light constants",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "complete relation comes from imported Planck/light constants",
+        "gate_passed": false,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "planck_hbar_relation",
+        "detail": "complete relation comes from imported Planck/light constants",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "apparatus relation is downstream observer calibration",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "apparatus relation is downstream observer calibration",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "apparatus relation is downstream observer calibration",
+        "gate_passed": false,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "apparatus relation is downstream observer calibration",
+        "gate_passed": false,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "apparatus_rod_clock_relation",
+        "detail": "apparatus relation is downstream observer calibration",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3117_r_dim_obligation"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_relation_formula"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_data_only"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_length_source_exported"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "U_time_source_exported"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "selector premise is forbidden and does not source dimensional relation",
+        "gate_passed": false,
+        "required_gate": "U_action_from_length_time_proved"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "selector premise is forbidden and does not source dimensional relation",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_preserved"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_covariant_not_gauge_fixed"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_unit_convention"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_imported_dynamics"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "not_apparatus_calibration"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "selector premise is forbidden and does not source dimensional relation",
+        "gate_passed": false,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "selector_oriented_relation",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "r_dim_relation",
+        "hit_count": 217,
+        "pattern": "R_dim|action-length-time|action_from_length_time|U_action=F\\(U_length,U_time\\)",
+        "sample_hits": [
+          "AGENTS.md:2946:- The next honest move requires exactly one new strict relation object `R_dim`, an internal action-length-time composition law completing the phase-area `Omega_dim` gap; otherwise preserve the P3105-P3117 physical-unit no-go/no-new-live-frontier certificate.",
+          "AGENTS.md:2948:## Current R_dim action-length-time relation guardrail (P3118/S2068, 2026-06-26)",
+          "AGENTS.md:2950:- P3118 tests the P3117-requested strict relation object `R_dim`, an internal action-length-time composition law on nadsoliton data.",
+          "AGENTS.md:2951:- The finite audit constructs `11` candidate relations, `88` relation-law rows, `55` scale-covariance rows, `55` phase-area coupling rows, and `143` gate rows; `0` candidates export an import-free strict `R_dim` relation.",
+          "fundamental_action_reconstruction/p3114_s2064_dimensional_triad_source_law_audit.py:33:RELATION_TESTS = (\"action_from_length_time\", \"C_phi_A_phi_to_U_action\", \"scale_section\", \"import_freedom\")",
+          "fundamental_action_reconstruction/p3114_s2064_dimensional_triad_source_law_audit.py:226:                cand[\"action_length_time_relation_exported\"] if test == \"action_from_length_time\" else",
+          "fundamental_action_reconstruction/test_p3117_s2067_omega_dim_dimension_character_source_audit.py:50:        self.assertIn(\"strict relation object R_dim\", decision[\"next_honest_step\"])",
+          "fundamental_action_reconstruction/test_p3117_s2067_omega_dim_dimension_character_source_audit.py:51:        self.assertIn(\"action-length-time composition law\", decision[\"next_honest_step\"])"
+        ]
+      },
+      {
+        "content_lane": "omega_phase_area",
+        "hit_count": 957,
+        "pattern": "Omega_dim|phase-area|C_phi\\(A_phi\\)|A_phi",
+        "sample_hits": [
+          "AGENTS.md:2458:## Current memory phase-area odd-source candidate guardrail (P3048/S1998, 2026-06-23)",
+          "AGENTS.md:2462:- Do not promote oriented phase-area signs, cyclic phase-curve orientation, or area-score winners to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2896:- Do not promote self-information norm, Fisher curvature, Z12 density, formal ticks, symplectic phase-area shape, or imported Planck calibration to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
+          "AGENTS.md:2903:- Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+          "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+          "AGENTS.md:2910:- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure."
+        ]
+      },
+      {
+        "content_lane": "dimension_chain",
+        "hit_count": 1243,
+        "pattern": "K_dim|Sigma_dim|D_phi|U_length|U_time|U_action",
+        "sample_hits": [
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2913:## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.",
+          "AGENTS.md:2916:- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.",
+          "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+          "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+          "AGENTS.md:2925:- The next honest move is exactly one nadsoliton-only scale-section theorem `Sigma_dim` for the internal dimension orbit; otherwise preserve the P3105-P3114 physical-unit no-go.",
+          "AGENTS.md:2927:## Current Sigma_dim scale-section theorem guardrail (P3115/S2065, 2026-06-26)"
+        ]
+      },
+      {
+        "content_lane": "blocked_imports_closure",
+        "hit_count": 104629,
+        "pattern": "hbar|Planck|rod|clock|observed light|apparatus|selector|QW-2191|L_total|bridge/role-transfer|ToE",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts."
+        ]
+      }
+    ],
+    "phase_area_coupling_rows": [
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_coupling_chain": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "coupling_test": "preserve_C_phi_A_phi",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "coupling_test": "derive_U_action",
+        "test_passed": false
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "coupling_test": "derive_U_length",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "coupling_test": "derive_U_time",
+        "test_passed": true
+      },
+      {
+        "A_phi": null,
+        "accepted_coupling_chain": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "coupling_test": "avoid_forbidden_import",
+        "test_passed": false
+      }
+    ],
+    "relation_law_rows": [
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "not_convention",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "not_convention",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": true,
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "not_convention",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "domain_exported",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "not_convention",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "domain_exported",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "domain_exported",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "domain_exported",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "binary_composition",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "nonzero_action",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "scale_covariance",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "phase_area_coupling",
+        "test_passed": false
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "dimension_axis_separation",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "not_convention",
+        "test_passed": true
+      },
+      {
+        "accepted_relation_law": false,
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "relation_test": "not_imported_dynamics",
+        "test_passed": true
+      }
+    ],
+    "scale_covariance_rows": [
+      {
+        "action_scale_product": "1/1",
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "has phase-area action carrier but no independent U_length/U_time source",
+        "candidate": "phase_tick_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "entropy cell and clock are internal labels but time axis remains unsourced",
+        "candidate": "entropy_cell_clock_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "period/velocity relation is dimensionless combinatorics and misses phase-area coupling",
+        "candidate": "z12_period_velocity_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "cup product supplies a formal pairing but no dimensional source law",
+        "candidate": "cohomology_cup_product_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "symplectic notation restates A_phi without sourcing length and time axes",
+        "candidate": "symplectic_phase_area_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "tail transport is target-dependent and not a source relation",
+        "candidate": "damping_transport_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "quotient section names the obligation but is gauge fixing",
+        "candidate": "quotient_orbit_section_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": false,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "imports unresolved Lagrangian/EOM and L_total lane",
+        "candidate": "lagrangian_eom_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "complete relation comes from imported Planck/light constants",
+        "candidate": "planck_hbar_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "apparatus relation is downstream observer calibration",
+        "candidate": "apparatus_rod_clock_relation",
+        "covariance_accepted": true,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/3",
+        "lambda_time": "3/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/2",
+        "lambda_time": "2/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "1/1",
+        "lambda_time": "1/1"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "2/1",
+        "lambda_time": "1/2"
+      },
+      {
+        "action_scale_product": "1/1",
+        "blocker": "selector premise is forbidden and does not source dimensional relation",
+        "candidate": "selector_oriented_relation",
+        "covariance_accepted": false,
+        "covariance_claimed": true,
+        "lambda_length": "3/1",
+        "lambda_time": "1/3"
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3118 constructs the requested R_dim action-length-time relation family and finds bounded no-go.  Internal phase/tick, entropy/cell, Z12 period, cohomology cup-product, symplectic phase-area, damping-transport, and quotient-section candidates each miss at least one required condition: independently sourced U_length/U_time, proof of U_action=F(U_length,U_time), C_phi(A_phi) preservation, scale covariance without gauge fixing, or non-imported dynamics.  Lagrangian, Planck, apparatus, and selector candidates import closed or forbidden lanes.  No nadsoliton-only R_dim exports physical action/length/time units.",
+    "negative_export_flags": {
+      "D_phi_source_law_exported": false,
+      "K_dim_functor_exported": false,
+      "Omega_dim_source_exported": false,
+      "QW_2191_discharged": false,
+      "R_dim_relation_exported": false,
+      "Sigma_dim_theorem_exported": false,
+      "U_action_source_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one new strict axis-source object Xi_LT: an internal, nonconventional source for the distinct length/time axes U_length and U_time on nadsoliton data.  Then test whether Xi_LT turns the phase-area carrier into a real R_dim law proving U_action=F(U_length,U_time).  Without such a new axis-source object, preserve the P3105-P3118 physical-unit no-go/no-new-live-frontier certificate.",
+    "positive_scoped_flags": {
+      "candidate_R_dim_relations_constructed": true,
+      "closed_lane_and_external_import_rows_rejected": true,
+      "p3117_R_dim_obligation_reused": true,
+      "phase_area_coupling_matrix_built": true,
+      "relation_law_matrix_built": true,
+      "scale_covariance_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_R_dim_relations": 0,
+    "candidate_R_dim_relations": 11,
+    "candidate_gate_rows": 143,
+    "content_grep_hits": 107046,
+    "content_grep_lanes": 4,
+    "p3117_accepted_Omega_dim_sources": 0,
+    "phase_area_coupling_rows": 55,
+    "proof_obligations": 7,
+    "relation_law_rows": 88,
+    "satisfied_proof_obligations": 6,
+    "scale_covariance_rows": 55
+  },
+  "input_hashes": {
+    "P3117": "d181702df249a24c521646675d9a9bf421a5a23f594fce651d7756003c357f2a"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3117 requested exactly one R_dim relation object",
+      "obligation": "read_p3117_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "eleven action-length-time relation candidates were constructed",
+      "obligation": "construct_R_dim_candidates",
+      "satisfied": true
+    },
+    {
+      "detail": "eight relation-law rows were built per candidate",
+      "obligation": "test_relation_laws",
+      "satisfied": true
+    },
+    {
+      "detail": "five scale-pair covariance rows were built per candidate",
+      "obligation": "test_scale_covariance",
+      "satisfied": true
+    },
+    {
+      "detail": "five coupling-chain rows were built per candidate",
+      "obligation": "test_phase_area_coupling_chain",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export an import-free strict R_dim relation satisfying all gates",
+      "obligation": "export_strict_R_dim",
+      "satisfied": false
+    }
+  ],
+  "status": "P3118_R_DIM_ACTION_LENGTH_TIME_RELATION_BOUNDED_NO_GO"
+}

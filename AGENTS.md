@@ -2937,3 +2937,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.
 - Do not promote constant gauges, phase-area sections, entropy counts, cohomology periods, damping/tail ratios, Lagrangian/EOM normalization, Planck units, apparatus calibration, or selector-choice functors to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move requires exactly one new strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data; otherwise preserve the P3105-P3116 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current Omega_dim dimension-character source guardrail (P3117/S2067, 2026-06-26)
+
+- P3117 tests the P3116-requested strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data.
+- The finite audit constructs `10` candidate characters, `60` scale-valuation rows, `50` dimension-axis rows, `40` coupling-chain rows, and `120` gate rows; `0` candidates export an import-free strict `Omega_dim` source.
+- Do not promote phase-area characters, entropy valuations, Z12/cohomology periods, cohomology-volume gauges, damping/tail valuations, tick-ratio gauges, Lagrangian density normalization, Planck units, apparatus calibration, or selector-oriented characters to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict relation object `R_dim`, an internal action-length-time composition law completing the phase-area `Omega_dim` gap; otherwise preserve the P3105-P3117 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current R_dim action-length-time relation guardrail (P3118/S2068, 2026-06-26)
+
+- P3118 tests the P3117-requested strict relation object `R_dim`, an internal action-length-time composition law on nadsoliton data.
+- The finite audit constructs `11` candidate relations, `88` relation-law rows, `55` scale-covariance rows, `55` phase-area coupling rows, and `143` gate rows; `0` candidates export an import-free strict `R_dim` relation.
+- Do not promote phase/tick products, entropy cell clocks, Z12 period velocity, cohomology cup products, symplectic phase-area notation, damping transport, quotient-section choices, Lagrangian/EOM normalization, Planck/light relations, apparatus calibration, or selector-oriented relations to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes; otherwise preserve the P3105-P3118 physical-unit no-go/no-new-live-frontier certificate.
