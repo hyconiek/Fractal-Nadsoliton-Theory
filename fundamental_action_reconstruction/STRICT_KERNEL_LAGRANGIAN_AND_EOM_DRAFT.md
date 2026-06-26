@@ -3504,3 +3504,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3107/S2057 Shannon-to-dimension source law remains unsourced
 
 `P3107/S2057` verifies that the `alpha_geo=ln(16)` four-bit Shannon cell has exact finite additivity and can be placed in a typed information-category audit.  The only coherent import-free functor remains dimensionless; nonzero action/length/time/calibration labels need an internal calibration morphism/source law that is not currently exported.  Therefore this is not yet a physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE.
+
+## P3108/S2058 calibration morphism remains nonphysical
+
+`P3108/S2058` builds internal alpha_geo Shannon-cell morphisms toward action, length/time, and calibration targets.  The formulas are legitimate internal information bookkeeping, but all nonzero import-free targets remain scale-orbit dependent and lack a nonconventional source-law quotient.  Therefore they are not yet physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE data.
+
+## P3109/S2059 alpha_geo quotient section remains unsourced
+
+`P3109/S2059` shows that the alpha_geo four-bit Shannon cell fixes internal quotient-class data (`ln2`, `alpha_geo`, `16`) but not a dimensional section of the positive scale orbit.  Without a nadsoliton-only dimension-carrying comparison standard and calibration coupling, these data remain information-theoretic rather than physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE data.
