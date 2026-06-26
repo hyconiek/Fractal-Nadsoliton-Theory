@@ -3528,3 +3528,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3113/S2063 U_action carrier remains unsourced
 
 `P3113/S2063` tests whether a nadsoliton-only `U_action` can lift `C_phi(A_phi)` into a dimensionful action carrier.  Current artifacts provide no import-free action carrier with a scale-orbit section, `C_phi` coupling theorem, and length/time induction, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3114/S2064 dimensional triad remains unsourced
+
+`P3114/S2064` tests whether a nadsoliton-only `D_phi=(U_action,U_length,U_time)` can source action, length, and time together.  Current artifacts provide no import-free scale-section theorem, action-from-length/time relation, and `C_phi(A_phi)=U_action` coupling, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3115/S2065 Sigma_dim section remains unsourced
+
+`P3115/S2065` tests whether a nadsoliton-only `Sigma_dim` can select a nonzero representative for the internal `D_phi` dimension orbit and prove both `C_phi(A_phi)=U_action` and an action-from-length/time relation.  Current artifacts provide no import-free strict source law for that section, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3116/S2066 K_dim functor remains unsourced
+
+`P3116/S2066` tests whether a nadsoliton-only `K_dim` can source the positive scale torsor and thereby induce `Sigma_dim`, `C_phi(A_phi)=U_action`, and `U_action=F(U_length,U_time)`.  Current artifacts provide no import-free strict dimension-source functor, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.

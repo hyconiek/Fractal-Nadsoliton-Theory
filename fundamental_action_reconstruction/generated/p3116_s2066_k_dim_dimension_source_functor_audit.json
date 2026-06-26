@@ -1,0 +1,1990 @@
+{
+  "constructed_theoretical_objects": {
+    "audit_object": {
+      "forbidden_imports": [
+        "hbar/Planck",
+        "rods",
+        "clocks",
+        "observed light",
+        "apparatus",
+        "selector replay",
+        "L_total",
+        "bridge/role-transfer",
+        "ToE"
+      ],
+      "object": "KDimDimensionSourceFunctorAudit",
+      "required_functor": "K_dim from strict nadsoliton data to the positive scale torsor sourcing Sigma_dim, C_phi(A_phi)=U_action, and U_action=F(U_length,U_time)"
+    },
+    "candidate_K_dim_functors": [
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=1 in R_+ for every strict object X",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": true,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": true,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=A_phi=2*pi/alpha_geo from the strict phase-area section",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": true,
+        "nonconventional_dimension_source_law_exported": true,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=exp(S_bits(X)) or alpha_geo cell count",
+        "functor_laws_verified": false,
+        "natural_sigma_dim_section_exported": false,
+        "nonconventional_dimension_source_law_exported": true,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=primitive Z12/cohomology period norm in R_+",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": false,
+        "nonconventional_dimension_source_law_exported": true,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=positive damping/tail ratio beta or Z_beta",
+        "functor_laws_verified": false,
+        "natural_sigma_dim_section_exported": false,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": true,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=normalization extracted from Lagrangian/EOM density",
+        "functor_laws_verified": false,
+        "natural_sigma_dim_section_exported": false,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": false,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": false,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": true,
+        "action_from_length_time_relation_sourced": true,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=(hbar,c,G) derived Planck scale torsor point",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": true,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_nadsoliton_domain_exported": false,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": true,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=scale torsor point assigned by rods/clocks/detectors",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": true,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_nadsoliton_domain_exported": false,
+        "uses_p3115_k_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_sourced": false,
+        "action_from_length_time_relation_sourced": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "explicit_functor_formula": true,
+        "formula": "K_dim(X)=scale selected after QW-2191 selector/orientation premise",
+        "functor_laws_verified": true,
+        "natural_sigma_dim_section_exported": true,
+        "nonconventional_dimension_source_law_exported": false,
+        "positive_scale_torsor_codomain_exported": true,
+        "selector_bridge_ltotal_toe_free": false,
+        "standard_physics_import_free": true,
+        "strict_nadsoliton_domain_exported": true,
+        "uses_p3115_k_dim_obligation": true
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "alpha_geo_phase_area_functor",
+        "failed_gates": 1,
+        "passed_gates": 10
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "apparatus_measurement_functor",
+        "failed_gates": 4,
+        "passed_gates": 7
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "constant_unit_torsor_functor",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "damping_beta_tail_functor",
+        "failed_gates": 5,
+        "passed_gates": 6
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "entropy_counting_functor",
+        "failed_gates": 4,
+        "passed_gates": 7
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "lagrangian_density_normalization_functor",
+        "failed_gates": 6,
+        "passed_gates": 5
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "planck_unit_functor",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "selector_choice_functor",
+        "failed_gates": 4,
+        "passed_gates": 7
+      },
+      {
+        "accepted_K_dim_functor": false,
+        "candidate": "z12_period_torsor_functor",
+        "failed_gates": 3,
+        "passed_gates": 8
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "constant_unit_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "gate_passed": false,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "gate_passed": false,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "entropy_counting_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "gate_passed": false,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "z12_period_torsor_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "gate_passed": false,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "gate_passed": false,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "damping_beta_tail_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "lagrangian_density_normalization_functor",
+        "detail": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "gate_passed": false,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "complete dimension source comes only from imported Planck constants",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "complete dimension source comes only from imported Planck constants",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "complete dimension source comes only from imported Planck constants",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "planck_unit_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "gate_passed": false,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "apparatus_measurement_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3115_k_dim_obligation"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functor_formula"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_nadsoliton_domain_exported"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_scale_torsor_codomain_exported"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "functor_laws_verified"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "natural_sigma_dim_section_exported"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "gate_passed": false,
+        "required_gate": "nonconventional_dimension_source_law_exported"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_sourced"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_sourced"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "selector_choice_functor",
+        "detail": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "gate_passed": false,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "k_dim_functor",
+        "hit_count": 152,
+        "pattern": "K_dim|dimension-source functor|positive scale torsor|scale torsor",
+        "sample_hits": [
+          "AGENTS.md:2377:- The two-axis scale torsor `K -> cK` and `ell -> a ell` is explicit; `d=1`, `||K||_2=1`, action-to-one, and entropy one-bit reference-cell candidates are computable but remain internal representatives or conditional gauges.",
+          "AGENTS.md:2932:- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.",
+          "AGENTS.md:2934:## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)",
+          "AGENTS.md:2936:- P3116 tests the P3115-requested nadsoliton-only dimension-source functor `K_dim` from strict nadsoliton data to the positive scale torsor.",
+          "AGENTS.md:2937:- The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.",
+          "fundamental_action_reconstruction/p3037_s1987_selector_mechanism_hint_sheaf_acceptance_matrix.py:70:            \"readout_unit_coupling_needed\": r\"physical length/action/clock unit|unit-bearing action|readout|unit theorem|scale torsor\",",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:3853:`P3036/S1986` attacks exactly one P3028 foundation atom: external physical unit source.  It constructs a two-axis scale torsor for sampled `K_strict_gate` on `Z12`: amplitude scaling `K -> cK` and label-length scaling `ell -> a ell`.  Four finite candidates are computable (`d=1`, `||K||_2=1`, Dirichlet action-to-one, and an entropy one-bit reference-cell scale), but all remain dimensionless representatives or conditional gauges.  No scale-orbit-invariant physical length/action/clock unit, unit-bearing action/EOM/Hamiltonian coupling, classical transition, `L_total`, bridge/role transfer, or ToE closure follows.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:4171:## P3116/S2066 K_dim dimension-source functor audit"
+        ]
+      },
+      {
+        "content_lane": "sigma_dim_section",
+        "hit_count": 162,
+        "pattern": "Sigma_dim|natural section|scale-section theorem|scale section",
+        "sample_hits": [
+          "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+          "AGENTS.md:2925:- The next honest move is exactly one nadsoliton-only scale-section theorem `Sigma_dim` for the internal dimension orbit; otherwise preserve the P3105-P3114 physical-unit no-go.",
+          "AGENTS.md:2927:## Current Sigma_dim scale-section theorem guardrail (P3115/S2065, 2026-06-26)",
+          "AGENTS.md:2929:- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.",
+          "AGENTS.md:2930:- The finite audit constructs `8` candidate section theorems, `40` scale-orbit witnesses, `48` section-obligation rows, `8` coupling-residual rows, and `88` gate rows; `0` candidates export an import-free strict `Sigma_dim` theorem.",
+          "AGENTS.md:2932:- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:4167:## P3115/S2065 Sigma_dim scale-section theorem audit",
+          "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:4169:`P3115/S2065` executes the P3114-recommended audit for a nadsoliton-only scale-section theorem `Sigma_dim` over the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.  It constructs `8` candidate section theorems, `40` scale-orbit witness rows, `48` section-obligation rows, `8` coupling-residual rows, and an `8 x 11 = 88` gate matrix.  The bounded result is that identity/norm/phase/entropy/cohomology candidates miss at least one required strict source, coupling, relation, or quotient condition, while complete Planck/light/apparatus/selector candidates import forbidden structure.  No physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported."
+        ]
+      },
+      {
+        "content_lane": "d_phi_coupling",
+        "hit_count": 663,
+        "pattern": "D_phi|U_action|U_length|U_time|C_phi\\(A_phi\\)|action-from-length",
+        "sample_hits": [
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2913:## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.",
+          "AGENTS.md:2916:- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.",
+          "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+          "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+          "AGENTS.md:2929:- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.",
+          "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_component_quotient_coordinate_isomorphism_certificate_probe.py:155:            \"U_times_T\": u_times_t,"
+        ]
+      },
+      {
+        "content_lane": "blocked_imports_closure",
+        "hit_count": 103936,
+        "pattern": "hbar|Planck|rod|clock|observed light|apparatus|selector|QW-2191|L_total|bridge/role-transfer|ToE",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts."
+        ]
+      }
+    ],
+    "functor_law_rows": [
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": true,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "claimed": true,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": true,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "claimed": true,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": true,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": false,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": false,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": false,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "claimed": false,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": true,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": true,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "claimed": false,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": true,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": false,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": false,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": false,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": true,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "claimed": false,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": false,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": false,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": false,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": false,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "claimed": false,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": false,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "claimed": true,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": false,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "claimed": true,
+        "functor_test": "natural_sigma_section"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "object_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "morphism_map"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "identity_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "composition_law"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "positive_torsor_action"
+      },
+      {
+        "accepted": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "claimed": true,
+        "functor_test": "natural_sigma_section"
+      }
+    ],
+    "source_coupling_residual_rows": [
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": true
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "residual_test": "source_law_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted_zero": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "residual_test": "C_phi_coupling_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "residual_test": "action_length_time_defect",
+        "residual_zero": false
+      },
+      {
+        "A_phi": null,
+        "accepted_zero": false,
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "residual_test": "forbidden_import_defect",
+        "residual_zero": false
+      }
+    ],
+    "torsor_action_rows": [
+      {
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "constant unit functor is formal gauge fixing and does not source a physical dimension scale",
+        "candidate": "constant_unit_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "phase-area functor sources the action-like phase representative but not length/time relation",
+        "candidate": "alpha_geo_phase_area_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "entropy count is internal information accounting but lacks functorial morphism laws and dimensional coupling",
+        "candidate": "entropy_counting_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "period norm is dimensionless and gives no natural Sigma_dim section or action-length/time relation",
+        "candidate": "z12_period_torsor_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": true,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "positive damping representability is target-dependent and was not exported as a dimension source law",
+        "candidate": "damping_beta_tail_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "would import unresolved Lagrangian/EOM closure and is blocked by current no-go guardrails",
+        "candidate": "lagrangian_density_normalization_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "complete dimension source comes only from imported Planck constants",
+        "candidate": "planck_unit_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "measurement apparatus is downstream observer calibration, not strict nadsoliton data",
+        "candidate": "apparatus_measurement_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      },
+      {
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/7",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/7 * K_dim(X)"
+      },
+      {
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/3",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1/3 * K_dim(X)"
+      },
+      {
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "positive_action_closed": true,
+        "scale_factor": "1/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 1 * K_dim(X)"
+      },
+      {
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "positive_action_closed": true,
+        "scale_factor": "3/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 3 * K_dim(X)"
+      },
+      {
+        "blocker": "selector premise is forbidden and does not source the dimension functor non-premise",
+        "candidate": "selector_choice_functor",
+        "positive_action_closed": true,
+        "scale_factor": "7/1",
+        "source_law_invariant": false,
+        "torsor_action": "K_dim(X) -> 7 * K_dim(X)"
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3116 constructs the requested K_dim dimension-source functor family and finds bounded no-go.  Constant, phase-area, entropy, period, and damping functors are internal candidates but miss at least one of functoriality, natural Sigma_dim, nonconventional dimension source, C_phi coupling, or action-length/time relation.  Lagrangian/EOM, Planck, apparatus, and selector candidates import closed or forbidden lanes.  No nadsoliton-only K_dim functor exports the missing strict source law for physical action/length/time units.",
+    "negative_export_flags": {
+      "D_phi_source_law_exported": false,
+      "K_dim_functor_exported": false,
+      "QW_2191_discharged": false,
+      "Sigma_dim_theorem_exported": false,
+      "U_action_source_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one new strict typed source object Omega_dim: an internal dimension character/valuation on nadsoliton data that is neither a gauge convention nor external calibration, and then test whether it induces K_dim, Sigma_dim, C_phi(A_phi)=U_action, and U_action=F(U_length,U_time).  Without such a new object, preserve the P3105-P3116 physical-unit no-go/no-new-live-frontier certificate.",
+    "positive_scoped_flags": {
+      "candidate_K_dim_functors_constructed": true,
+      "closed_lane_and_external_import_rows_rejected": true,
+      "functor_law_matrix_built": true,
+      "p3115_K_dim_obligation_reused": true,
+      "positive_torsor_action_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_K_dim_functors": 0,
+    "candidate_K_dim_functors": 9,
+    "candidate_gate_rows": 99,
+    "content_grep_hits": 104913,
+    "content_grep_lanes": 4,
+    "functor_law_rows": 54,
+    "p3115_accepted_Sigma_dim_theorems": 0,
+    "proof_obligations": 7,
+    "satisfied_proof_obligations": 6,
+    "source_coupling_residual_rows": 36,
+    "torsor_action_rows": 45
+  },
+  "input_hashes": {
+    "P3115": "4c7febdfdf1d927d73c6845d344111edaf0d32375451f6847de45f1bca5c9e8e"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3115 requested exactly one K_dim dimension-source functor",
+      "obligation": "read_p3115_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "nine functor candidates were constructed",
+      "obligation": "construct_K_dim_candidates",
+      "satisfied": true
+    },
+    {
+      "detail": "six functor/naturality tests were built per candidate",
+      "obligation": "test_functor_laws",
+      "satisfied": true
+    },
+    {
+      "detail": "positive torsor action was tested across five scales",
+      "obligation": "test_positive_torsor_actions",
+      "satisfied": true
+    },
+    {
+      "detail": "source/coupling/relation/import residuals were built",
+      "obligation": "test_source_coupling_residuals",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export an import-free strict dimension-source functor satisfying all gates",
+      "obligation": "export_nadsoliton_only_K_dim",
+      "satisfied": false
+    }
+  ],
+  "status": "P3116_K_DIM_DIMENSION_SOURCE_FUNCTOR_BOUNDED_NO_GO"
+}

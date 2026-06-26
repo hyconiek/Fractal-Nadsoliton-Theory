@@ -2916,3 +2916,24 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.
 - Do not promote phase, entropy, cohomological integer periods, declared unit symbols, imported `hbar/Planck`, or apparatus calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.
+
+## Current dimensional triad source-law guardrail (P3114/S2064, 2026-06-26)
+
+- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.
+- The finite audit constructs `7` candidates, `35` scale-orbit rows, `21` carrier-axis rows, `28` relation/coupling rows, and `77` gate rows; `0` candidates export an import-free triad source law.
+- Do not promote phase/entropy/cohomology/graph labels, declared dimension symbols, quotient placeholders, imported `hbar/Planck`, observed-light clocks, rods, or apparatus to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one nadsoliton-only scale-section theorem `Sigma_dim` for the internal dimension orbit; otherwise preserve the P3105-P3114 physical-unit no-go.
+
+## Current Sigma_dim scale-section theorem guardrail (P3115/S2065, 2026-06-26)
+
+- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.
+- The finite audit constructs `8` candidate section theorems, `40` scale-orbit witnesses, `48` section-obligation rows, `8` coupling-residual rows, and `88` gate rows; `0` candidates export an import-free strict `Sigma_dim` theorem.
+- Do not promote identity/norm gauges, phase-area representatives, entropy/tick ratios, cohomological periods, Planck/light calibration, apparatus calibration, or selector-premise sections to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.
+
+## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)
+
+- P3116 tests the P3115-requested nadsoliton-only dimension-source functor `K_dim` from strict nadsoliton data to the positive scale torsor.
+- The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.
+- Do not promote constant gauges, phase-area sections, entropy counts, cohomology periods, damping/tail ratios, Lagrangian/EOM normalization, Planck units, apparatus calibration, or selector-choice functors to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data; otherwise preserve the P3105-P3116 physical-unit no-go/no-new-live-frontier certificate.
