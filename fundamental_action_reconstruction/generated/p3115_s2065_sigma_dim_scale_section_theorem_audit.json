@@ -1,0 +1,1819 @@
+{
+  "constructed_theoretical_objects": {
+    "audit_object": {
+      "forbidden_imports": [
+        "hbar/Planck",
+        "rods",
+        "clocks",
+        "observed light",
+        "apparatus",
+        "selector replay",
+        "L_total",
+        "bridge/role-transfer",
+        "ToE"
+      ],
+      "object": "SigmaDimScaleSectionTheoremAudit",
+      "required_theorem": "Sigma_dim selects a nonzero D_phi representative, proves C_phi(A_phi)=U_action, and proves action-from-length/time relation"
+    },
+    "candidate_Sigma_dim_theorems": [
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := (S,L,T)",
+        "nonconventional_source_law_exported": false,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": false,
+        "unique_section_exported": false,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := representative with S^2+L^2+T^2=1",
+        "nonconventional_source_law_exported": false,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": false,
+        "unique_section_exported": true,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": true,
+        "action_from_length_time_relation_proved": false,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := representative with S=C_phi(A_phi) and A_phi=2*pi/alpha_geo",
+        "nonconventional_source_law_exported": true,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": true,
+        "unique_section_exported": true,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": true,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := representative with L=bit_cell and T=entropy_tick",
+        "nonconventional_source_law_exported": true,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": true,
+        "unique_section_exported": false,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": false,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := primitive integral period/cell/time-volume representative",
+        "nonconventional_source_law_exported": true,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": true,
+        "unique_section_exported": false,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": true,
+        "action_from_length_time_relation_proved": true,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := (hbar, Planck length, Planck time)",
+        "nonconventional_source_law_exported": false,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_source_law_exported": false,
+        "unique_section_exported": true,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": true,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := calibrated lab action/rod/clock representative",
+        "nonconventional_source_law_exported": false,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "strict_source_law_exported": false,
+        "unique_section_exported": true,
+        "uses_p3114_sigma_dim_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_proved": false,
+        "action_from_length_time_relation_proved": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "explicit_sigma_dim_formula": true,
+        "formula": "Sigma_dim([S,L,T]) := representative chosen after selector/orientation premise",
+        "nonconventional_source_law_exported": false,
+        "nonzero_representative_selected": true,
+        "scale_orbit_quotient_well_defined": true,
+        "selector_bridge_ltotal_toe_free": false,
+        "standard_physics_import_free": true,
+        "strict_source_law_exported": false,
+        "unique_section_exported": true,
+        "uses_p3114_sigma_dim_obligation": true
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "alpha_geo_phase_area_section",
+        "failed_gates": 1,
+        "passed_gates": 10
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "apparatus_calibration_section",
+        "failed_gates": 4,
+        "passed_gates": 7
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "cohomology_period_volume_section",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "entropy_cell_tick_ratio_section",
+        "failed_gates": 2,
+        "passed_gates": 9
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "identity_dimension_orbit_section",
+        "failed_gates": 6,
+        "passed_gates": 5
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "planck_light_cone_section",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "selector_oriented_dimension_section",
+        "failed_gates": 5,
+        "passed_gates": 6
+      },
+      {
+        "accepted_Sigma_dim_theorem": false,
+        "candidate": "unit_norm_triad_section",
+        "failed_gates": 4,
+        "passed_gates": 7
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "identity_dimension_orbit_section",
+        "detail": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "gate_passed": false,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "unit_norm_triad_section",
+        "detail": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_area_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "gate_passed": false,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "entropy_cell_tick_ratio_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "gate_passed": false,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "cohomology_period_volume_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "section is complete only by importing standard Planck/light calibration",
+        "gate_passed": false,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "section is complete only by importing standard Planck/light calibration",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "planck_light_cone_section",
+        "detail": "section is complete only by importing standard Planck/light calibration",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "gate_passed": false,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "apparatus_calibration_section",
+        "detail": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3114_sigma_dim_obligation"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_sigma_dim_formula"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_representative_selected"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_quotient_well_defined"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "unique_section_exported"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "gate_passed": false,
+        "required_gate": "strict_source_law_exported"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_proved"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "gate_passed": false,
+        "required_gate": "action_from_length_time_relation_proved"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "gate_passed": false,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "selector_oriented_dimension_section",
+        "detail": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "sigma_dim_section",
+        "hit_count": 492,
+        "pattern": "Sigma_dim|scale-section theorem|scale section|scale-orbit|internal dimension orbit",
+        "sample_hits": [
+          "AGENTS.md:98:- P2689 shows the entropy equation can conditionally select a positive scale, but no unconditional canonical UV unit or beta/Z_beta source is exported because the intrinsic entropy reference, selector-free bit target, bit-to-length/action map, and scale-orbit quotient remain missing.",
+          "AGENTS.md:531:- A finite positive-length scale-orbit witness shows that the numeric moment coefficients remain nonunique as physical dimensionful couplings: `lambda_sm_eff` is scale-invariant, but `kappa_gr_eff` and `epsilon_mix_eff` change with the reference length unless a canonical cell/action-density theorem is exported.",
+          "AGENTS.md:975:- Finite dimensionless carrier normalizations are available, but current artifacts do not export physical units, a canonical positive scale-orbit quotient, or a unit-bearing coupling coefficient into `K`/`L_total`; positive rescaling leaves finite separation invariant.",
+          "AGENTS.md:1547:## Current Gamma scale-orbit source-object intake guardrail (P2919/S1869, 2026-06-19)",
+          "AGENTS.md:1550:- The finite scale-orbit matrix shows that quotient weights, derivative ratios, orbit size, and edge count are invariant under `Gamma_9_5 -> c*Gamma_9_5`; they fix relative weights but not the Gamma scale.",
+          "AGENTS.md:1558:- Pullback, Jacobian, measure quotient, displacement field-variable, homogeneity, and scale-orbit rows are finite readiness/obstruction results only; `0` rows unlock nonproxy `L_total`.",
+          "AGENTS.md:1560:- Do not replay Gamma/Lambda quotient, Jacobian, source-name, scale-orbit, bridge, role-transfer, `L_total`, EOM, Hamiltonian, or ToE promotion without that new typed source object.",
+          "AGENTS.md:1566:- A candidate `sigma_Gamma` source must pass five obligations: computed nonzero value, strict nadsoliton provenance, Action dimension, nonconventional scale-orbit breaking, and explicit `I_Q` coupling."
+        ]
+      },
+      {
+        "content_lane": "d_phi_triad",
+        "hit_count": 843,
+        "pattern": "D_phi|U_action|U_length|U_time|action-from-length|length/time",
+        "sample_hits": [
+          "AGENTS.md:2610:- The next honest move is one unit-source atom: construct a canonical length/time unit provider for a nonconventional nadsoliton scalar, then rerun P3069; otherwise pivot to the P3066 sigma-invariant scalar conservation/scale-control theorem.",
+          "AGENTS.md:2612:## Current canonical length/time unit-provider obstruction guardrail (P3070/S2020, 2026-06-24)",
+          "AGENTS.md:2614:- P3070 attacks exactly one P3069 atom: a canonical length/time unit provider for converting a nonconventional nadsoliton scalar into a unit-bearing coordinate.",
+          "AGENTS.md:2615:- The finite scalar/unit-map audit has `6` scalar candidates, `5` unit-map candidates, and `30` provider rows; positive dimensionless candidates exist, but there are `0` nonconventional scalar candidates, `0` nonconventional unit laws, and `0` accepted canonical length/time unit-provider rows.",
+          "AGENTS.md:2882:- Do not promote alpha_geo Shannon-cell morphisms, internal action-density formulas, formal length/time ticks, or imported hbar/Planck calibration to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2895:- The finite audit computes `6` candidate standards, `18` action/length/time scale-orbit section rows, and `48` candidate gate rows; `0` candidates export a non-imported dimension comparison standard with unique positive section and calibration coupling.",
+          "AGENTS.md:2902:- This is real internal progress, but it remains dimensionless phase accounting: `0` candidates export a physical action/length/time unit or calibration coupling without importing `hbar/Planck`, rods, clocks, observed light, or apparatus.",
+          "AGENTS.md:2909:- The finite audit constructs `5` candidate functionals, `25` scale-covariance rows, `15` action/length/time induction rows, and `45` gate rows; `0` candidates export an import-free dimensionful action/length/time calibration."
+        ]
+      },
+      {
+        "content_lane": "c_phi_coupling",
+        "hit_count": 590,
+        "pattern": "C_phi\\(A_phi\\)|C_phi|A_phi|2\\*pi/alpha_geo",
+        "sample_hits": [
+          "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
+          "AGENTS.md:2903:- Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+          "AGENTS.md:2906:## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)",
+          "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+          "AGENTS.md:2910:- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`."
+        ]
+      },
+      {
+        "content_lane": "blocked_imports_closure",
+        "hit_count": 103739,
+        "pattern": "hbar|Planck|rod|clock|observed light|apparatus|selector|QW-2191|L_total|bridge/role-transfer|ToE",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts."
+        ]
+      }
+    ],
+    "coupling_residual_rows": [
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 1,
+          "strict_source_defect": 1
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 1,
+          "strict_source_defect": 1
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 0,
+          "U_action-F(U_length,U_time)": 1,
+          "strict_source_defect": 0
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 0,
+          "strict_source_defect": 0
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 1,
+          "strict_source_defect": 0
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 0,
+          "U_action-F(U_length,U_time)": 0,
+          "strict_source_defect": 1
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 0,
+          "strict_source_defect": 1
+        }
+      },
+      {
+        "all_residuals_zero_import_free": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "residual_vector": {
+          "C_phi(A_phi)-U_action": 1,
+          "U_action-F(U_length,U_time)": 1,
+          "strict_source_defect": 1
+        }
+      }
+    ],
+    "scale_orbit_witness_rows": [
+      {
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": true,
+        "section_claimed": true
+      },
+      {
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": true,
+        "section_claimed": true
+      },
+      {
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": true,
+        "section_claimed": true
+      },
+      {
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": true,
+        "section_claimed": true
+      },
+      {
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": true,
+        "section_claimed": true
+      },
+      {
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": false
+      },
+      {
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "orbit_point": {
+          "U_action": "1/5*S",
+          "U_length": "1/5*L",
+          "U_time": "1/5*T"
+        },
+        "scale_factor": "1/5",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "orbit_point": {
+          "U_action": "1/2*S",
+          "U_length": "1/2*L",
+          "U_time": "1/2*T"
+        },
+        "scale_factor": "1/2",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "orbit_point": {
+          "U_action": "1*S",
+          "U_length": "1*L",
+          "U_time": "1*T"
+        },
+        "scale_factor": "1/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "orbit_point": {
+          "U_action": "2*S",
+          "U_length": "2*L",
+          "U_time": "2*T"
+        },
+        "scale_factor": "2/1",
+        "section_accepted": false,
+        "section_claimed": true
+      },
+      {
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "orbit_point": {
+          "U_action": "5*S",
+          "U_length": "5*L",
+          "U_time": "5*T"
+        },
+        "scale_factor": "5/1",
+        "section_accepted": false,
+        "section_claimed": true
+      }
+    ],
+    "section_obligation_rows": [
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": false,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": false,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": false,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "identity keeps every scale representative and therefore does not quotient the scale orbit",
+        "candidate": "identity_dimension_orbit_section",
+        "claimed": false,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": true,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": false,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "unit norm fixes a mathematical gauge but has no strict law sourcing this norm as a physical dimension carrier",
+        "candidate": "unit_norm_triad_section",
+        "claimed": false,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": true,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": true,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": true,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": true,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "phase-area coupling selects an action-like representative but still lacks length/time carriers and their action relation",
+        "candidate": "alpha_geo_phase_area_section",
+        "claimed": false,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": false,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": true,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "cell/tick ratio remains combinatorial and does not prove C_phi(A_phi)=U_action",
+        "candidate": "entropy_cell_tick_ratio_section",
+        "claimed": true,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": false,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": true,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": true,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "primitive periods can fix integer normalization but not dimensional action/length/time relation",
+        "candidate": "cohomology_period_volume_section",
+        "claimed": false,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": true,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": false,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": true,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "section is complete only by importing standard Planck/light calibration",
+        "candidate": "planck_light_cone_section",
+        "claimed": true,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": true,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": false,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "apparatus calibration is observer-side and not a nadsoliton-only strict source law",
+        "candidate": "apparatus_calibration_section",
+        "claimed": true,
+        "obligation": "action_length_time_relation"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": true,
+        "obligation": "nonzero_representative"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": true,
+        "obligation": "orbit_invariance"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": true,
+        "obligation": "uniqueness_mod_scale"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": false,
+        "obligation": "strict_source_law"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": false,
+        "obligation": "C_phi_coupling"
+      },
+      {
+        "A_phi": null,
+        "accepted": false,
+        "blocker": "selector premise violates the P3114 prohibition and does not source dimensions",
+        "candidate": "selector_oriented_dimension_section",
+        "claimed": false,
+        "obligation": "action_length_time_relation"
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3115 constructs the requested Sigma_dim scale-section theorem family and finds bounded no-go.  Identity, norm, phase-area, entropy/tick, and cohomological sections are mathematically meaningful but either fail to quotient the scale orbit, lack strict source-law status, omit C_phi(A_phi)=U_action, or omit the action-from-length/time relation.  The complete Planck/light and apparatus sections import external calibration, and the selector-oriented section violates the selector ban.  No nadsoliton-only Sigma_dim theorem exports a nonzero import-free representative satisfying all section, coupling, and relation obligations.",
+    "negative_export_flags": {
+      "D_phi_source_law_exported": false,
+      "QW_2191_discharged": false,
+      "Sigma_dim_theorem_exported": false,
+      "U_action_source_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one nadsoliton-only dimension-source functor K_dim from strict nadsoliton data to the positive scale torsor, together with a natural section Sigma_dim and a proof that K_dim supplies the missing nonconventional source law for C_phi(A_phi)=U_action and U_action=F(U_length,U_time).  It must not import hbar/Planck, rods, clocks, observed light, apparatus, selector replay, L_total, bridge/role-transfer, or ToE; otherwise preserve the P3105-P3115 physical-unit no-go.",
+    "positive_scoped_flags": {
+      "candidate_Sigma_dim_theorems_constructed": true,
+      "external_calibration_and_selector_rows_rejected": true,
+      "p3114_sigma_dim_obligation_reused": true,
+      "scale_orbit_witness_matrix_built": true,
+      "section_obligation_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_Sigma_dim_theorems": 0,
+    "candidate_Sigma_dim_theorems": 8,
+    "candidate_gate_rows": 88,
+    "content_grep_hits": 105664,
+    "content_grep_lanes": 4,
+    "coupling_residual_rows": 8,
+    "p3114_accepted_D_phi_source_laws": 0,
+    "proof_obligations": 7,
+    "satisfied_proof_obligations": 6,
+    "scale_orbit_witness_rows": 40,
+    "section_obligation_rows": 48
+  },
+  "input_hashes": {
+    "P3114": "6a79d1a17048545671a42b840bc7079e741b20c3887d5709f3a1dcfc3a251eda"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3114 requested exactly one Sigma_dim scale-section theorem",
+      "obligation": "read_p3114_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "eight section-theorem candidates were constructed",
+      "obligation": "construct_sigma_dim_candidates",
+      "satisfied": true
+    },
+    {
+      "detail": "scale orbit witnesses were tested across five factors",
+      "obligation": "test_scale_orbit_witnesses",
+      "satisfied": true
+    },
+    {
+      "detail": "six section obligations were tested per candidate",
+      "obligation": "test_section_obligations",
+      "satisfied": true
+    },
+    {
+      "detail": "C_phi/action-length-time/source residual vectors were built",
+      "obligation": "test_coupling_residuals",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export an import-free strict section theorem satisfying all gates",
+      "obligation": "export_nadsoliton_only_Sigma_dim",
+      "satisfied": false
+    }
+  ],
+  "status": "P3115_SIGMA_DIM_SCALE_SECTION_THEOREM_BOUNDED_NO_GO"
+}

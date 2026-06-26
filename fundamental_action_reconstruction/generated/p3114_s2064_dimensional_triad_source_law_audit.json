@@ -1,0 +1,1633 @@
+{
+  "constructed_theoretical_objects": {
+    "audit_object": {
+      "forbidden_imports": [
+        "hbar/Planck",
+        "rods",
+        "clocks",
+        "observed light",
+        "apparatus",
+        "selector replay",
+        "L_total",
+        "bridge/role-transfer",
+        "ToE"
+      ],
+      "object": "DimensionalTriadSourceLawAudit",
+      "required_source_law": "D_phi=(U_action,U_length,U_time) with scale section, action-length/time relation, and C_phi(A_phi)=U_action coupling"
+    },
+    "candidate_D_phi_source_laws": [
+      {
+        "C_phi_A_phi_coupling_exported": true,
+        "action_length_time_relation_exported": false,
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "dimension_vector": {
+          "U_action": 0,
+          "U_length": 0,
+          "U_time": 0
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := (A_phi, alpha_geo bit_cell, entropy_tick)",
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_carrier_exported": false,
+        "nonzero_length_carrier_exported": false,
+        "nonzero_time_carrier_exported": false,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": false,
+        "action_length_time_relation_exported": false,
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "dimension_vector": {
+          "U_action": 0,
+          "U_length": 0,
+          "U_time": 0
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := (integer period action, Z12 cell length, cycle count time)",
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_carrier_exported": false,
+        "nonzero_length_carrier_exported": false,
+        "nonzero_time_carrier_exported": false,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": true,
+        "action_length_time_relation_exported": false,
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "dimension_vector": {
+          "U_action": 1,
+          "U_length": 1,
+          "U_time": 1
+        },
+        "explicit_triad_formula": true,
+        "formula": "declare dim(D_phi)=([S],[L],[T]) and set C_phi(A_phi)=U_action",
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_carrier_exported": true,
+        "nonzero_length_carrier_exported": true,
+        "nonzero_time_carrier_exported": true,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": false,
+        "action_length_time_relation_exported": true,
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "dimension_vector": {
+          "U_action": 0,
+          "U_length": 0,
+          "U_time": 0
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := (phase area action, graph wavelength, graph update period) with v=L/T",
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_carrier_exported": false,
+        "nonzero_length_carrier_exported": false,
+        "nonzero_time_carrier_exported": false,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": true,
+        "action_length_time_relation_exported": true,
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "dimension_vector": {
+          "U_action": 1,
+          "U_length": 1,
+          "U_time": 1
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := (hbar, Planck length, Planck time or c-derived light clock)",
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_carrier_exported": true,
+        "nonzero_length_carrier_exported": true,
+        "nonzero_time_carrier_exported": true,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": false,
+        "action_length_time_relation_exported": true,
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "dimension_vector": {
+          "U_action": 1,
+          "U_length": 1,
+          "U_time": 1
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := (calorimeter action readout, rod length, clock time)",
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_carrier_exported": true,
+        "nonzero_length_carrier_exported": true,
+        "nonzero_time_carrier_exported": true,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "uses_p3113_D_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_exported": false,
+        "action_length_time_relation_exported": true,
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "dimension_vector": {
+          "U_action": 1,
+          "U_length": 1,
+          "U_time": 1
+        },
+        "explicit_triad_formula": true,
+        "formula": "D_phi := choose one orbit representative [S,L,T] in R_+^3 / scale",
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_carrier_exported": true,
+        "nonzero_length_carrier_exported": true,
+        "nonzero_time_carrier_exported": true,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3113_D_phi_obligation": true
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "apparatus_rod_clock_action_triad",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "cohomology_period_cell_clock_triad",
+        "failed_gates": 5,
+        "passed_gates": 6
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "declared_dimension_symbol_triad",
+        "failed_gates": 3,
+        "passed_gates": 8
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "imported_planck_light_triad",
+        "failed_gates": 2,
+        "passed_gates": 9
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "internal_dispersion_velocity_triad",
+        "failed_gates": 5,
+        "passed_gates": 6
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "pure_phase_entropy_tick_triad",
+        "failed_gates": 5,
+        "passed_gates": 6
+      },
+      {
+        "accepted_D_phi_source_law": false,
+        "candidate": "triad_quotient_section_placeholder",
+        "failed_gates": 3,
+        "passed_gates": 8
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "gate_passed": false,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "gate_passed": false,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "gate_passed": false,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "topological periods and finite cells normalize labels but not physical dimensions",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "topological periods and finite cells normalize labels but not physical dimensions",
+        "gate_passed": false,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "topological periods and finite cells normalize labels but not physical dimensions",
+        "gate_passed": false,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "topological periods and finite cells normalize labels but not physical dimensions",
+        "gate_passed": false,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "topological periods and finite cells normalize labels but not physical dimensions",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "gate_passed": false,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "detail": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "gate_passed": false,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "gate_passed": false,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "detail": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "detail": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3113_D_phi_obligation"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_triad_formula"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_carrier_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_length_carrier_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_time_carrier_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "action_length_time_relation_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_exported"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "detail": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      }
+    ],
+    "carrier_axis_rows": [
+      {
+        "axis": "U_action",
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_length",
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_time",
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_action",
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_length",
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_time",
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_action",
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_length",
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_time",
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_action",
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_length",
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_time",
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": false,
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "U_action",
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_length",
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_time",
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_action",
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_length",
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_time",
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_action",
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_length",
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "U_time",
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "carrier_accepted": false,
+        "carrier_claimed": true,
+        "dimension_exponent": 1
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "d_phi_triad",
+        "hit_count": 533,
+        "pattern": "D_phi|U_action|U_length|U_time|dimensional triad|action/length/time",
+        "sample_hits": [
+          "AGENTS.md:2895:- The finite audit computes `6` candidate standards, `18` action/length/time scale-orbit section rows, and `48` candidate gate rows; `0` candidates export a non-imported dimension comparison standard with unique positive section and calibration coupling.",
+          "AGENTS.md:2902:- This is real internal progress, but it remains dimensionless phase accounting: `0` candidates export a physical action/length/time unit or calibration coupling without importing `hbar/Planck`, rods, clocks, observed light, or apparatus.",
+          "AGENTS.md:2909:- The finite audit constructs `5` candidate functionals, `25` scale-covariance rows, `15` action/length/time induction rows, and `45` gate rows; `0` candidates export an import-free dimensionful action/length/time calibration.",
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2913:## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.",
+          "AGENTS.md:2916:- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.",
+          "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go."
+        ]
+      },
+      {
+        "content_lane": "scale_section",
+        "hit_count": 18488,
+        "pattern": "scale-orbit|scale orbit|section|quotient|dimensionful|calibration",
+        "sample_hits": [
+          "AGENTS.md:98:- P2689 shows the entropy equation can conditionally select a positive scale, but no unconditional canonical UV unit or beta/Z_beta source is exported because the intrinsic entropy reference, selector-free bit target, bit-to-length/action map, and scale-orbit quotient remain missing.",
+          "AGENTS.md:240:## Current Z12 orientation-torsor global-section guardrail (P2714/S1664, 2026-06-14)",
+          "AGENTS.md:243:- The finite action has orientation-reversing units `7` and `11`; neither `+omega` nor `-omega` is an Aut-compatible global section, so the torsor does not export a strict mechanism fixing `lambda` or discharge `QW-2191`.",
+          "AGENTS.md:387:- Odd/equivariant laws exist, but they remain paired on the simultaneous-flip quotient; absolute constant laws merely impose a premise and are not strict sourced sign laws.  No non-premise `lambda/P2721` polarity, `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure is exported.",
+          "AGENTS.md:390:## Current sign-torsor quotient no-section guardrail (P2739/S1689, 2026-06-14)",
+          "AGENTS.md:392:- P2739 strengthens P2738 with a finite section theorem on the 16-state sign torsor: simultaneous flip gives 8 free orbits; quotient descent requires `s(x)=s(Fx)`, while anti-equivariant sign-line response requires `s(x)=-s(Fx)`.",
+          "AGENTS.md:393:- The combined rational linear system has rank `16` and nullity `0`, and the `{±1}` cross-check finds zero simultaneous sections.  Therefore the current sign-torsor quotient exports no nonzero section fixing `lambda/P2721`, no `QW-2191` discharge, selector closure, bridge closure, role transfer, `L_total`, or ToE closure.",
+          "AGENTS.md:394:- Do not continue the existing sign-torsor lane by searching for quotient sections or recombinations.  A next admissible move must supply a genuinely new strict/internal signed value with a source theorem and a `P2721` polarity-coupling theorem, or a different typed object outside this closed sign-torsor lane; otherwise preserve the P2697-P2739 no-new-live-frontier certificate."
+        ]
+      },
+      {
+        "content_lane": "c_phi_coupling",
+        "hit_count": 454,
+        "pattern": "C_phi\\(A_phi\\)|C_phi|A_phi|2\\*pi/alpha_geo",
+        "sample_hits": [
+          "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
+          "AGENTS.md:2903:- Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+          "AGENTS.md:2906:## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)",
+          "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+          "AGENTS.md:2910:- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`."
+        ]
+      },
+      {
+        "content_lane": "blocked_imports_closure",
+        "hit_count": 103553,
+        "pattern": "hbar|Planck|rod|clock|observed light|apparatus|selector|QW-2191|L_total|bridge/role-transfer|ToE",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts."
+        ]
+      }
+    ],
+    "relation_coupling_rows": [
+      {
+        "A_phi": null,
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "phase, entropy cell, and tick are internal counters but remain dimensionless",
+        "candidate": "pure_phase_entropy_tick_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "topological periods and finite cells normalize labels but not physical dimensions",
+        "candidate": "cohomology_period_cell_clock_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "declared symbols name dimensions but do not source a scale section or dynamics",
+        "candidate": "declared_dimension_symbol_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "graph wavelength/update period are combinatorial labels unless a dimensionful carrier is sourced",
+        "candidate": "internal_dispersion_velocity_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "the complete triad is obtained only by importing standard physics constants/light clocks",
+        "candidate": "imported_planck_light_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "apparatus rods and clocks are downstream observer calibrations, not nadsoliton-only source laws",
+        "candidate": "apparatus_rod_clock_action_triad",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "import_freedom"
+      },
+      {
+        "A_phi": null,
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "action_from_length_time"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "C_phi_A_phi_to_U_action"
+      },
+      {
+        "A_phi": null,
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "relation_accepted": false,
+        "relation_claimed": false,
+        "relation_test": "scale_section"
+      },
+      {
+        "A_phi": null,
+        "blocker": "a placeholder quotient states the needed theorem but supplies no internal section or coupling law",
+        "candidate": "triad_quotient_section_placeholder",
+        "relation_accepted": false,
+        "relation_claimed": true,
+        "relation_test": "import_freedom"
+      }
+    ],
+    "scale_orbit_section_rows": [
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "pure_phase_entropy_tick_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "cohomology_period_cell_clock_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "declared_dimension_symbol_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "internal_dispersion_velocity_triad",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "imported_planck_light_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "apparatus_rod_clock_action_triad",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/3",
+        "scaled_triad": {
+          "U_action": "1/3*U_action",
+          "U_length": "1/3*U_length",
+          "U_time": "1/3*U_time"
+        }
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_triad": {
+          "U_action": "1/2*U_action",
+          "U_length": "1/2*U_length",
+          "U_time": "1/2*U_time"
+        }
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_triad": {
+          "U_action": "1*U_action",
+          "U_length": "1*U_length",
+          "U_time": "1*U_time"
+        }
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_triad": {
+          "U_action": "2*U_action",
+          "U_length": "2*U_length",
+          "U_time": "2*U_time"
+        }
+      },
+      {
+        "candidate": "triad_quotient_section_placeholder",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "3/1",
+        "scaled_triad": {
+          "U_action": "3*U_action",
+          "U_length": "3*U_length",
+          "U_time": "3*U_time"
+        }
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3114 constructs the requested D_phi dimensional triad source-law family and finds bounded no-go.  Internal phase, entropy, cohomology, graph wavelength, and update-period candidates remain dimensionless/combinatorial; declared dimension symbols and quotient placeholders state the obligation without sourcing a section; and the complete dimensional triads import hbar/Planck, observed-light clocks, rods, or apparatus.  No nadsoliton-only candidate exports U_action, U_length, and U_time with an import-free scale section, action-length/time relation, and C_phi(A_phi)=U_action coupling.",
+    "negative_export_flags": {
+      "D_phi_source_law_exported": false,
+      "QW_2191_discharged": false,
+      "U_action_source_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one nadsoliton-only scale-section theorem for the internal dimension orbit: an explicit strict quotient/section object Sigma_dim selecting a nonzero representative for (U_action,U_length,U_time) and proving C_phi(A_phi)=U_action plus an action-from-length/time relation.  It must not introduce hbar/Planck, rods, clocks, observed light, apparatus, selector replay, L_total, bridge/role-transfer, or ToE; otherwise preserve the P3105-P3114 physical-unit no-go.",
+    "positive_scoped_flags": {
+      "candidate_D_phi_source_laws_constructed": true,
+      "carrier_axis_matrix_built": true,
+      "imported_planck_light_apparatus_rows_rejected": true,
+      "p3113_D_phi_obligation_reused": true,
+      "scale_orbit_section_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_D_phi_source_laws": 0,
+    "candidate_D_phi_source_laws": 7,
+    "candidate_gate_rows": 77,
+    "carrier_axis_rows": 21,
+    "content_grep_hits": 123028,
+    "content_grep_lanes": 4,
+    "p3113_accepted_U_action_source_laws": 0,
+    "proof_obligations": 7,
+    "relation_coupling_rows": 28,
+    "satisfied_proof_obligations": 6,
+    "scale_orbit_section_rows": 35
+  },
+  "input_hashes": {
+    "P3113": "e1d66ac3674add6a937a5e84ad5f9a62b0a46fef2d1ce103cd0533dae0a6b57d"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3113 requested exactly one D_phi dimensional triad source law",
+      "obligation": "read_p3113_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "seven triad source-law candidates were constructed",
+      "obligation": "construct_D_phi_candidates",
+      "satisfied": true
+    },
+    {
+      "detail": "triad scale section was tested across five factors",
+      "obligation": "test_scale_orbit_sections",
+      "satisfied": true
+    },
+    {
+      "detail": "U_action/U_length/U_time carriers were tested",
+      "obligation": "test_three_carrier_axes",
+      "satisfied": true
+    },
+    {
+      "detail": "action-from-length/time and C_phi coupling rows were built",
+      "obligation": "test_relation_couplings",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export an import-free triad with source section, relation, and C_phi coupling",
+      "obligation": "export_nadsoliton_only_D_phi",
+      "satisfied": false
+    }
+  ],
+  "status": "P3114_DIMENSIONAL_TRIAD_SOURCE_LAW_BOUNDED_NO_GO"
+}
