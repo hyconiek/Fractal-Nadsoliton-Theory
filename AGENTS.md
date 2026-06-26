@@ -2902,3 +2902,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This is real internal progress, but it remains dimensionless phase accounting: `0` candidates export a physical action/length/time unit or calibration coupling without importing `hbar/Planck`, rods, clocks, observed light, or apparatus.
 - Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.
+
+## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)
+
+- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.
+- The finite audit constructs `5` candidate functionals, `25` scale-covariance rows, `15` action/length/time induction rows, and `45` gate rows; `0` candidates export an import-free dimensionful action/length/time calibration.
+- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.
+
+## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)
+
+- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.
+- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.
+- Do not promote phase, entropy, cohomological integer periods, declared unit symbols, imported `hbar/Planck`, or apparatus calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.

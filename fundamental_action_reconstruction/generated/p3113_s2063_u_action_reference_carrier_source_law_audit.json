@@ -1,0 +1,1059 @@
+{
+  "constructed_theoretical_objects": {
+    "C_phi_coupling_rows": [
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "candidate": "pure_phase_reference_carrier",
+        "coupling_accepted": false,
+        "coupling_claimed": true,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "four-bit entropy is internal information accounting and carries no action dimension",
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "coupling_accepted": false,
+        "coupling_claimed": false,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "candidate": "formal_declared_U_action_symbol",
+        "coupling_accepted": false,
+        "coupling_claimed": true,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "candidate": "cohomological_integer_period_carrier",
+        "coupling_accepted": false,
+        "coupling_claimed": false,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "candidate": "imported_planck_action_carrier",
+        "coupling_accepted": false,
+        "coupling_claimed": true,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      },
+      {
+        "A_phi": 2.266180070914,
+        "blocker": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "candidate": "detector_apparatus_reference_carrier",
+        "coupling_accepted": false,
+        "coupling_claimed": false,
+        "required_coupling": "C_phi(A_phi)=U_action"
+      }
+    ],
+    "audit_object": {
+      "forbidden_imports": [
+        "hbar/Planck",
+        "rods",
+        "clocks",
+        "observed light",
+        "apparatus",
+        "selector replay",
+        "L_total",
+        "bridge/role-transfer",
+        "ToE"
+      ],
+      "input_section": "A_phi=2*pi/alpha_geo",
+      "object": "UActionReferenceCarrierSourceLawAudit",
+      "required_source_law": "U_action with nonzero action dimension, scale-orbit section, and C_phi(A_phi)=U_action coupling"
+    },
+    "candidate_U_action_source_laws": [
+      {
+        "C_phi_A_phi_coupling_theorem_exported": true,
+        "blocker": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "candidate": "pure_phase_reference_carrier",
+        "dimension_vector": {
+          "action": 0,
+          "length": 0,
+          "time": 0
+        },
+        "explicit_U_action_formula": true,
+        "formula": "U_action := [A_phi] with C_phi(A_phi)=1",
+        "length_time_calibration_derived": false,
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_dimension_exported": false,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3112_C_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_theorem_exported": false,
+        "blocker": "four-bit entropy is internal information accounting and carries no action dimension",
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "dimension_vector": {
+          "action": 0,
+          "length": 0,
+          "time": 0
+        },
+        "explicit_U_action_formula": true,
+        "formula": "U_action := alpha_geo * bit_cell",
+        "length_time_calibration_derived": false,
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_dimension_exported": false,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3112_C_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_theorem_exported": true,
+        "blocker": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "candidate": "formal_declared_U_action_symbol",
+        "dimension_vector": {
+          "action": 1,
+          "length": 0,
+          "time": 0
+        },
+        "explicit_U_action_formula": true,
+        "formula": "declare dim(U_action)=action and set C_phi(A_phi)=U_action",
+        "length_time_calibration_derived": false,
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_dimension_exported": true,
+        "scale_orbit_section_exported": false,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3112_C_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_theorem_exported": false,
+        "blocker": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "candidate": "cohomological_integer_period_carrier",
+        "dimension_vector": {
+          "action": 0,
+          "length": 0,
+          "time": 0
+        },
+        "explicit_U_action_formula": true,
+        "formula": "U_action := generator of H^1/Z period paired with A_phi",
+        "length_time_calibration_derived": false,
+        "nonconventional_source_law_exported": true,
+        "nonzero_action_dimension_exported": false,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3112_C_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_theorem_exported": true,
+        "blocker": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "candidate": "imported_planck_action_carrier",
+        "dimension_vector": {
+          "action": 1,
+          "length": 2,
+          "time": -1
+        },
+        "explicit_U_action_formula": true,
+        "formula": "U_action := hbar or Planck action quantum",
+        "length_time_calibration_derived": false,
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_dimension_exported": true,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "uses_p3112_C_phi_obligation": true
+      },
+      {
+        "C_phi_A_phi_coupling_theorem_exported": false,
+        "blocker": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "candidate": "detector_apparatus_reference_carrier",
+        "dimension_vector": {
+          "action": 1,
+          "length": 2,
+          "time": -1
+        },
+        "explicit_U_action_formula": true,
+        "formula": "U_action := calibrated apparatus action readout",
+        "length_time_calibration_derived": true,
+        "nonconventional_source_law_exported": false,
+        "nonzero_action_dimension_exported": true,
+        "scale_orbit_section_exported": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "uses_p3112_C_phi_obligation": true
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "failed_gates": 4,
+        "passed_gates": 5
+      },
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "cohomological_integer_period_carrier",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "detector_apparatus_reference_carrier",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "formal_declared_U_action_symbol",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "imported_planck_action_carrier",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_U_action_source_law": false,
+        "candidate": "pure_phase_reference_carrier",
+        "failed_gates": 2,
+        "passed_gates": 7
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "gate_passed": false,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "four-bit entropy is internal information accounting and carries no action dimension",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "four-bit entropy is internal information accounting and carries no action dimension",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "four-bit entropy is internal information accounting and carries no action dimension",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "four-bit entropy is internal information accounting and carries no action dimension",
+        "gate_passed": false,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "gate_passed": false,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "gate_passed": false,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "detail": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "gate_passed": false,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "gate_passed": false,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "gate_passed": false,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "detail": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3112_C_phi_obligation"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_U_action_formula"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonzero_action_dimension_exported"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "scale_orbit_section_exported"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "gate_passed": false,
+        "required_gate": "C_phi_A_phi_coupling_theorem_exported"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "length_time_calibration_derived"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "detail": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "u_action_reference_carrier",
+        "hit_count": 332,
+        "pattern": "U_action|reference-carrier|reference carrier|dimensionful reference|action unit",
+        "sample_hits": [
+          "AGENTS.md:2244:- The finite formal EOM object is real: the cyclic Laplacian has rank/nullity `11/1`; however `T_K` has nonzero residuals and no strict source fixes `lambda`, action unit, clock unit, observable-unit normalization, or Hamiltonian normalization.",
+          "AGENTS.md:2314:- A candidate must pass six obligations: new non-replay typed object, strict nadsoliton provenance, nonpremise chart/orientation source, absolute physical tick or action unit, scale-orbit breaking, and explicit Hamiltonian coupling.",
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2913:## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.",
+          "AGENTS.md:2916:- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.",
+          "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+          "fundamental_action_reconstruction/p2663_s1613_chain_level_boundary_phase_bit_target_audit.py:79:        \"unit_map_content\": \"unit map|bit-to-action|bit-to-length|action unit|length unit\","
+        ]
+      },
+      {
+        "content_lane": "c_phi_coupling",
+        "hit_count": 363,
+        "pattern": "C_phi\\(A_phi\\)|C_phi|A_phi|2\\*pi/alpha_geo|calibration functional",
+        "sample_hits": [
+          "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
+          "AGENTS.md:2903:- Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+          "AGENTS.md:2906:## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)",
+          "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+          "AGENTS.md:2910:- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+          "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+          "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`."
+        ]
+      },
+      {
+        "content_lane": "scale_orbit_dimension",
+        "hit_count": 6166,
+        "pattern": "scale-orbit|scale orbit|dimensionful|nonzero action dimension|length/time|meter|clock",
+        "sample_hits": [
+          "AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+          "AGENTS.md:98:- P2689 shows the entropy equation can conditionally select a positive scale, but no unconditional canonical UV unit or beta/Z_beta source is exported because the intrinsic entropy reference, selector-free bit target, bit-to-length/action map, and scale-orbit quotient remain missing.",
+          "AGENTS.md:194:- P2706 executes the P2705 damping-to-selector interface test and finds a finite orientation-blindness obstruction: all 792 five-node supports and 45 sampled P2377/P2378 parameter/mass settings give identical scores to `+u` and `-u`.",
+          "AGENTS.md:288:## Current clock-phase polarity-selection source-law guardrail (P2722/S1672, 2026-06-14)",
+          "AGENTS.md:290:- P2722 tests the moving-clock/continuous-phase analogy for the P2721 coupling-polarity problem.",
+          "AGENTS.md:291:- A changing hand position does not by itself select a non-premise polarity: fixed clock zero is convention, `theta(t)` is origin-relative, angular-velocity sign would require a new exported strict chiral/time-orientation source, and the P2721 two-polarity pair remains unselected.",
+          "AGENTS.md:292:- Do not replay clock-position or clock-face-origin arguments as selector closure, pair12 strict-core, role transfer, bridge closure, `L_total`, or ToE.  A next admissible move must supply one actual strict chiral/time-orientation source law with a nonzero signed value coupled to the P2721 polarity pair, or pivot to a genuinely new typed object outside closed lanes; otherwise preserve the P2697-P2722 no-new-live-frontier certificate.",
+          "AGENTS.md:302:- P2724 ingests commit `88eb860b1658ac5b648253fa65dd83bd4abbe922`, which already contains the P2719-P2723 localizer/coupling/clock/chiral-time audits."
+        ]
+      },
+      {
+        "content_lane": "blocked_imports_closure",
+        "hit_count": 103404,
+        "pattern": "hbar|Planck|rod|clock|observed light|apparatus|selector|QW-2191|L_total|bridge/role-transfer|ToE",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts."
+        ]
+      }
+    ],
+    "dimensional_balance_rows": [
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "candidate": "pure_phase_reference_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "candidate": "pure_phase_reference_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "the carrier is a normalized phase number, not a dimensionful action carrier",
+        "candidate": "pure_phase_reference_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "four-bit entropy is internal information accounting and carries no action dimension",
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "four-bit entropy is internal information accounting and carries no action dimension",
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "four-bit entropy is internal information accounting and carries no action dimension",
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "dimension symbol is present but still needs an internal source theorem",
+        "candidate": "formal_declared_U_action_symbol",
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "candidate": "formal_declared_U_action_symbol",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "declaring a dimension symbol does not source the dimension or fix the scale orbit",
+        "candidate": "formal_declared_U_action_symbol",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "candidate": "cohomological_integer_period_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "candidate": "cohomological_integer_period_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "integer periods can fix a topological normalization but remain dimensionless and do not couple to C_phi as action",
+        "candidate": "cohomological_integer_period_carrier",
+        "dimension_exponent": 0
+      },
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "candidate": "imported_planck_action_carrier",
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "candidate": "imported_planck_action_carrier",
+        "dimension_exponent": 2
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "the action dimension comes from imported standard-physics hbar/Planck calibration",
+        "candidate": "imported_planck_action_carrier",
+        "dimension_exponent": -1
+      },
+      {
+        "axis": "action",
+        "axis_sourced_internally": false,
+        "blocker": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "candidate": "detector_apparatus_reference_carrier",
+        "dimension_exponent": 1
+      },
+      {
+        "axis": "length",
+        "axis_sourced_internally": false,
+        "blocker": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "candidate": "detector_apparatus_reference_carrier",
+        "dimension_exponent": 2
+      },
+      {
+        "axis": "time",
+        "axis_sourced_internally": false,
+        "blocker": "apparatus calibration is downstream observer physics, not a nadsoliton-only source law",
+        "candidate": "detector_apparatus_reference_carrier",
+        "dimension_exponent": -1
+      }
+    ],
+    "scale_orbit_section_rows": [
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "pure_phase_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "alpha_geo_entropy_cell_carrier",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "formal_declared_U_action_symbol",
+        "candidate_claims_section": false,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "cohomological_integer_period_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "imported_planck_action_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/4",
+        "scaled_C_phi_A_phi": "1/4 * U_action_candidate"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "1/2",
+        "scaled_C_phi_A_phi": "1/2 * U_action_candidate"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": true,
+        "scale_factor": "1/1",
+        "scaled_C_phi_A_phi": "1 * U_action_candidate"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "2/1",
+        "scaled_C_phi_A_phi": "2 * U_action_candidate"
+      },
+      {
+        "candidate": "detector_apparatus_reference_carrier",
+        "candidate_claims_section": true,
+        "import_free_section_valid": false,
+        "minimal_section_factor": false,
+        "scale_factor": "4/1",
+        "scaled_C_phi_A_phi": "4 * U_action_candidate"
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3113 constructs the requested U_action reference-carrier source-law family and finds bounded no-go.  Phase, entropy, and cohomological carriers are internally meaningful but dimensionless; a declared U_action symbol has no source theorem or scale section; and the only dimensionful rows import hbar/Planck or apparatus calibration.  No nadsoliton-only candidate exports U_action together with import-free scale section, C_phi(A_phi) coupling, and length/time calibration.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "U_action_source_law_exported": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "dimensionful_action_unit_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one nadsoliton-only dimensional triad source law D_phi=(U_action,U_length,U_time): an explicit strict object that sources a nonzero action dimension and simultaneously exports internal length/time carriers plus a relation deriving U_action from them.  It must include a scale-orbit quotient/section proof and C_phi(A_phi)=U_action coupling, without hbar/Planck, rods, clocks, observed light, apparatus, selector replay, L_total, bridge/role-transfer, or ToE; otherwise preserve the P3105-P3113 physical-unit no-go.",
+    "positive_scoped_flags": {
+      "candidate_U_action_source_laws_constructed": true,
+      "dimension_balance_matrix_built": true,
+      "imported_planck_and_apparatus_rows_rejected": true,
+      "p3112_C_phi_obligation_reused": true,
+      "scale_orbit_section_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "C_phi_coupling_rows": 6,
+    "accepted_U_action_source_laws": 0,
+    "candidate_U_action_source_laws": 6,
+    "candidate_gate_rows": 54,
+    "content_grep_hits": 110265,
+    "content_grep_lanes": 4,
+    "dimensional_balance_rows": 18,
+    "p3112_accepted_internal_dimensionful_calibration_functionals": 0,
+    "proof_obligations": 7,
+    "satisfied_proof_obligations": 6,
+    "scale_orbit_section_rows": 30
+  },
+  "input_hashes": {
+    "P3112": "217ed07ac09ab5d922f26fbcb4e1d1e6ea5bea6d27c9652aa3d190ef3fe37429"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3112 requested exactly one U_action reference-carrier source law",
+      "obligation": "read_p3112_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "six U_action source-law candidates were constructed",
+      "obligation": "construct_U_action_candidates",
+      "satisfied": true
+    },
+    {
+      "detail": "scale section was tested across five factors",
+      "obligation": "test_scale_orbit_sections",
+      "satisfied": true
+    },
+    {
+      "detail": "action/length/time exponents were tested",
+      "obligation": "test_dimension_balance",
+      "satisfied": true
+    },
+    {
+      "detail": "C_phi(A_phi)=U_action coupling rows were built",
+      "obligation": "test_C_phi_coupling",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export import-free U_action with scale section, C_phi coupling, and length/time calibration",
+      "obligation": "export_nadsoliton_only_U_action",
+      "satisfied": false
+    }
+  ],
+  "status": "P3113_U_ACTION_REFERENCE_CARRIER_SOURCE_LAW_BOUNDED_NO_GO"
+}

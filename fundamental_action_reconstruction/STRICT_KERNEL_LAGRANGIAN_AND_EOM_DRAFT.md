@@ -3520,3 +3520,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3111/S2061 phase-area section remains nonphysical
 
 `P3111/S2061` strengthens the P3110 symplectic shape by deriving the internal phase-area section `A_phi=2*pi/alpha_geo`, but it remains dimensionless until an internal calibration functional maps it to a dimensionful action comparison.  Therefore it is not yet a physical Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3112/S2062 C_phi calibration remains unsourced
+
+`P3112/S2062` tests whether the internal phase-area section `A_phi=2*pi/alpha_geo` can be lifted by a nadsoliton-only `C_phi` into a dimensionful action comparison.  Current artifacts provide no import-free dimensionful reference carrier and no length/time induction theorem, so `C_phi` is not yet a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3113/S2063 U_action carrier remains unsourced
+
+`P3113/S2063` tests whether a nadsoliton-only `U_action` can lift `C_phi(A_phi)` into a dimensionful action carrier.  Current artifacts provide no import-free action carrier with a scale-orbit section, `C_phi` coupling theorem, and length/time induction, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
