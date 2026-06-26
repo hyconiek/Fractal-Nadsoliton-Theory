@@ -4151,3 +4151,11 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3111/S2061 symplectic/action phase source-law audit
 
 `P3111/S2061` executes the P3110-recommended source-law audit for `symplectic_phase_area_candidate`.  It constructs `8` phase-periodicity rows, `12` action/length/time scale-orbit rows, `3` candidate source laws, and a `3 x 8 = 24` gate matrix.  The positive scoped result is that `A_phi = 2*pi/alpha_geo` is a unique minimal positive internal phase-area section for `alpha_geo*A in 2*pi*Z`.  The bounded obstruction is that this section is still dimensionless internal phase accounting and exports no physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+
+## P3112/S2062 internal calibration functional C_phi audit
+
+`P3112/S2062` executes the P3111-recommended audit for an internal calibration functional `C_phi` mapping `A_phi=2*pi/alpha_geo` to dimensionful action comparison.  It constructs `5` candidate `C_phi` functionals, `25` scale-covariance witness rows, `15` action/length/time induction rows, and a `5 x 9 = 45` gate matrix.  The bounded result is that internal normalizations remain dimensionless, formal action-unit symbols are unsourced, entropy tick/cell labels do not induce length/time calibration, and the only dimensionful action row imports `hbar/Planck`.  No physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.
+
+## P3113/S2063 U_action reference-carrier source-law audit
+
+`P3113/S2063` executes the P3112-recommended audit for a nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.  It constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and a `6 x 9 = 54` gate matrix.  The bounded result is that internal phase/entropy/cohomology carriers remain dimensionless, formal `U_action` declarations are unsourced, and dimensionful rows import `hbar/Planck` or apparatus calibration.  No physical action/length/time unit, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure is exported.

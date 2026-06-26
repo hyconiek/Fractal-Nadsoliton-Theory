@@ -1,0 +1,831 @@
+{
+  "constructed_theoretical_objects": {
+    "action_length_time_induction_rows": [
+      {
+        "action_calibration_available": false,
+        "blocker": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "candidate": "dimensionless_identity_C_phi",
+        "target": "action",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "dimensionless_identity_C_phi",
+        "target": "length",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "dimensionless_identity_C_phi",
+        "target": "time",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "repackages the P3111 winding number; it does not create an action dimension or length/time calibration",
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "target": "action",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "target": "length",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "target": "time",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": true,
+        "blocker": "a declared unit symbol is not a sourced unit; scale covariance is merely renamed, not broken",
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "target": "action",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": true,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "target": "length",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": true,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "target": "time",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "candidate": "entropy_tick_length_time_C_phi",
+        "target": "action",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "entropy_tick_length_time_C_phi",
+        "target": "length",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "entropy_tick_length_time_C_phi",
+        "target": "time",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "dimensionful action is obtained only by importing hbar/Planck calibration from standard physics",
+        "candidate": "imported_hbar_planck_C_phi",
+        "target": "action",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "imported_hbar_planck_C_phi",
+        "target": "length",
+        "target_calibration_induced": false
+      },
+      {
+        "action_calibration_available": false,
+        "blocker": "no independent internal meter/clock/light-cone relation is exported",
+        "candidate": "imported_hbar_planck_C_phi",
+        "target": "time",
+        "target_calibration_induced": false
+      }
+    ],
+    "audit_object": {
+      "input_section": "A_phi=2*pi/alpha_geo",
+      "object": "InternalCalibrationFunctionalCPhiAudit",
+      "ontology": "nadsoliton-only internal information; no lower information layer and no imported hbar/Planck apparatus standard",
+      "required_map": "C_phi: dimensionless phase-area section -> dimensionful action comparison, with internal scale-covariance breaking and length/time induction"
+    },
+    "candidate_C_phi_functionals": [
+      {
+        "blocker": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "candidate": "dimensionless_identity_C_phi",
+        "codomain_dimensionful_action_comparison": false,
+        "explicit_functional_formula": true,
+        "formula": "C_phi(A)=A/A_phi",
+        "internal_scale_covariance_broken": false,
+        "length_time_induction_supplied": false,
+        "nonconventional_source_law_exported": false,
+        "positive_representative_preserved": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3111_A_phi": true,
+        "value_at_A_phi": 1.0
+      },
+      {
+        "blocker": "repackages the P3111 winding number; it does not create an action dimension or length/time calibration",
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "codomain_dimensionful_action_comparison": false,
+        "explicit_functional_formula": true,
+        "formula": "C_phi(A)=alpha_geo*A/(2*pi)",
+        "internal_scale_covariance_broken": false,
+        "length_time_induction_supplied": false,
+        "nonconventional_source_law_exported": true,
+        "positive_representative_preserved": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3111_A_phi": true,
+        "value_at_A_phi": 1.0
+      },
+      {
+        "blocker": "a declared unit symbol is not a sourced unit; scale covariance is merely renamed, not broken",
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "codomain_dimensionful_action_comparison": true,
+        "explicit_functional_formula": true,
+        "formula": "C_phi(A)=A/A_phi * U_action with U_action declared internally",
+        "internal_scale_covariance_broken": false,
+        "length_time_induction_supplied": false,
+        "nonconventional_source_law_exported": false,
+        "positive_representative_preserved": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3111_A_phi": true,
+        "value_at_A_phi": "1 * U_action"
+      },
+      {
+        "blocker": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "candidate": "entropy_tick_length_time_C_phi",
+        "codomain_dimensionful_action_comparison": false,
+        "explicit_functional_formula": true,
+        "formula": "C_phi(A)=(A/A_phi)*(one four-bit tick)*(one internal cell length)",
+        "internal_scale_covariance_broken": false,
+        "length_time_induction_supplied": false,
+        "nonconventional_source_law_exported": false,
+        "positive_representative_preserved": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": true,
+        "uses_p3111_A_phi": true,
+        "value_at_A_phi": "1 tick*cell"
+      },
+      {
+        "blocker": "dimensionful action is obtained only by importing hbar/Planck calibration from standard physics",
+        "candidate": "imported_hbar_planck_C_phi",
+        "codomain_dimensionful_action_comparison": true,
+        "explicit_functional_formula": true,
+        "formula": "C_phi(A)=hbar*A/A_phi",
+        "internal_scale_covariance_broken": true,
+        "length_time_induction_supplied": false,
+        "nonconventional_source_law_exported": false,
+        "positive_representative_preserved": true,
+        "selector_bridge_ltotal_toe_free": true,
+        "standard_physics_import_free": false,
+        "uses_p3111_A_phi": true,
+        "value_at_A_phi": "hbar"
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_internal_dimensionful_calibration_functional": false,
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_internal_dimensionful_calibration_functional": false,
+        "candidate": "dimensionless_identity_C_phi",
+        "failed_gates": 4,
+        "passed_gates": 5
+      },
+      {
+        "accepted_internal_dimensionful_calibration_functional": false,
+        "candidate": "entropy_tick_length_time_C_phi",
+        "failed_gates": 4,
+        "passed_gates": 5
+      },
+      {
+        "accepted_internal_dimensionful_calibration_functional": false,
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "failed_gates": 3,
+        "passed_gates": 6
+      },
+      {
+        "accepted_internal_dimensionful_calibration_functional": false,
+        "candidate": "imported_hbar_planck_C_phi",
+        "failed_gates": 3,
+        "passed_gates": 6
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3111_A_phi"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functional_formula"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "gate_passed": false,
+        "required_gate": "codomain_dimensionful_action_comparison"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "gate_passed": false,
+        "required_gate": "internal_scale_covariance_broken"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_representative_preserved"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "gate_passed": false,
+        "required_gate": "length_time_induction_supplied"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "detail": "normalizes the phase-area orbit but has dimensionless codomain and remains scale-covariant",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3111_A_phi"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functional_formula"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "repackages the P3111 winding number; it does not create an action dimension or length/time calibration",
+        "gate_passed": false,
+        "required_gate": "codomain_dimensionful_action_comparison"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "repackages the P3111 winding number; it does not create an action dimension or length/time calibration",
+        "gate_passed": false,
+        "required_gate": "internal_scale_covariance_broken"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_representative_preserved"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "repackages the P3111 winding number; it does not create an action dimension or length/time calibration",
+        "gate_passed": false,
+        "required_gate": "length_time_induction_supplied"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3111_A_phi"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functional_formula"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "codomain_dimensionful_action_comparison"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "a declared unit symbol is not a sourced unit; scale covariance is merely renamed, not broken",
+        "gate_passed": false,
+        "required_gate": "internal_scale_covariance_broken"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_representative_preserved"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "a declared unit symbol is not a sourced unit; scale covariance is merely renamed, not broken",
+        "gate_passed": false,
+        "required_gate": "length_time_induction_supplied"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "detail": "a declared unit symbol is not a sourced unit; scale covariance is merely renamed, not broken",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3111_A_phi"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functional_formula"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "gate_passed": false,
+        "required_gate": "codomain_dimensionful_action_comparison"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "gate_passed": false,
+        "required_gate": "internal_scale_covariance_broken"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_representative_preserved"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "gate_passed": false,
+        "required_gate": "length_time_induction_supplied"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "detail": "internal tick/cell labels are still dimensionless unless an independent length/time unit source is exported",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "uses_p3111_A_phi"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "explicit_functional_formula"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "codomain_dimensionful_action_comparison"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "internal_scale_covariance_broken"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "positive_representative_preserved"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "dimensionful action is obtained only by importing hbar/Planck calibration from standard physics",
+        "gate_passed": false,
+        "required_gate": "length_time_induction_supplied"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "dimensionful action is obtained only by importing hbar/Planck calibration from standard physics",
+        "gate_passed": false,
+        "required_gate": "standard_physics_import_free"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "passed",
+        "gate_passed": true,
+        "required_gate": "selector_bridge_ltotal_toe_free"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "detail": "dimensionful action is obtained only by importing hbar/Planck calibration from standard physics",
+        "gate_passed": false,
+        "required_gate": "nonconventional_source_law_exported"
+      }
+    ],
+    "content_first_repo_grep": [
+      {
+        "content_lane": "internal_calibration_functional",
+        "hit_count": 253,
+        "pattern": "C_phi|calibration functional|action comparison|dimensionful action|scale covariance",
+        "sample_hits": [
+          "AGENTS.md:1135:- P2860 verifies that the strict compression tail satisfies multiplicative scale covariance and that nonzero multiplicativity constrains `beta=1`.",
+          "AGENTS.md:1137:- Do not promote multiplicative scale covariance, beta normalization, profile identifiability, or eta denominator representability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:1144:- Do not promote log-scale harmonicity, affine residual minimization, beta rescaling invariance, multiplicative scale covariance, or profile identifiability to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:1151:- Do not promote endpoint fitting, strict tail boundary values, Dirichlet recovery, log-scale harmonicity, or multiplicative scale covariance to strict damping/compression bridge, role transfer, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+          "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+          "AGENTS.md:2906:## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)",
+          "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+          "AGENTS.md:2909:- The finite audit constructs `5` candidate functionals, `25` scale-covariance rows, `15` action/length/time induction rows, and `45` gate rows; `0` candidates export an import-free dimensionful action/length/time calibration."
+        ]
+      },
+      {
+        "content_lane": "phase_area_alpha_geo",
+        "hit_count": 8138,
+        "pattern": "A_phi|2\\*pi/alpha_geo|alpha_geo|4 ln\\(2\\)|ln\\(16\\)|four-bit|Shannon",
+        "sample_hits": [
+          "AGENTS.md:13:- `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` is restored as an **intermediate bridge kernel** on the path toward identifying the strict kernel.",
+          "AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+          "AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+          "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+          "AGENTS.md:106:## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)",
+          "AGENTS.md:108:- P2691 confirms strict `alpha_geo=4 ln(2)` and exact scalar-shape normalization, but finds no role-safe amplitude absorption source, no physical-role safety theorem, and no APD/Lagrangian dynamical source.",
+          "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+          "AGENTS.md:118:- P2693 closes the currently named P2680 non-selector source atoms as bounded no-go on current artifacts: canonical UV unit, role-safe `alpha_geo` amplitude source, and target-independent positive `beta/Z_beta` source all remain unexported."
+        ]
+      },
+      {
+        "content_lane": "length_time_induction_gap",
+        "hit_count": 18026,
+        "pattern": "length/time|length and time|induce.*calibration|rod|clock|light|apparatus|detector",
+        "sample_hits": [
+          "AGENTS.md:25:  `nadsoliton -> light -> matter -> emergent observer`.",
+          "AGENTS.md:64:- Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.",
+          "AGENTS.md:84:- A next move in this lane is admissible only if it introduces one new strict anisotropic source class evading P1977 or P1978; otherwise pivot away rather than replaying reduced/FRW reverse closure.",
+          "AGENTS.md:142:- The next admissible research move must introduce such a new object; otherwise preserve the no-new-live-frontier certificate rather than manufacturing a closure.",
+          "AGENTS.md:148:- Do not promote premise-based direction into strict selector closure, `L_total`, role transfer, or ToE closure.  A next admissible move must introduce a genuinely new non-premise-based strict selector/orientation source object; otherwise keep the P2697/P2698 no-new-live-frontier certificate.",
+          "AGENTS.md:166:- A next admissible move must actually construct a new strict-sourced symmetry-breaking object/provider or introduce a different new typed object outside closed lanes; otherwise preserve the P2697-P2701 no-new-live-frontier certificate.",
+          "AGENTS.md:172:- The next admissible move must construct an actual new strict-sourced symmetry-breaking provider or introduce a different new typed object; otherwise preserve the P2697-P2702 no-new-live-frontier certificate.",
+          "AGENTS.md:202:- The next admissible move must introduce a genuinely new strict typed object/provider/source/blocker-cut outside the closed lanes; otherwise preserve the P2697-P2707 no-new-live-frontier certificate."
+        ]
+      },
+      {
+        "content_lane": "blocked_closure_imports",
+        "hit_count": 92094,
+        "pattern": "hbar|Planck|selector|QW-2191|L_total|bridge/role-transfer|ToE|spacetime EOM",
+        "sample_hits": [
+          "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+          "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+          "AGENTS.md:65:- Before selecting a new FAR move, run or consult a broad state-map audit across bridge, selector, tau/pair, damping, Lagrangian/EOM/QG, direct-route defect, and coupling-law lanes.  The next move must be chosen from the current live frontier, not from stale priority text alone.",
+          "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+          "AGENTS.md:68:- A `legacy -> strict` move is admissible now only if it targets exactly one missing P2680 non-selector source atom, such as target-independent positive `beta/Z_beta` or canonical length/UV unit, and explicitly avoids generic bridge repetition.",
+          "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+          "AGENTS.md:78:- P2685 confirms that selector-independent reduced Lagrangian/EOM progress is real but not reversible to full tensor-resolved nonproxy closure on current artifacts.",
+          "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table."
+        ]
+      }
+    ],
+    "scale_covariance_witness_rows": [
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 0.755393356971,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.333333333333,
+        "scale_factor": "1/3"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 1.133090035457,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.5,
+        "scale_factor": "1/2"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "fixed_minimal_section_only_at_factor_one": true,
+        "input_area": 2.266180070914,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 1.0,
+        "scale_factor": "1/1"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 4.532360141827,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 2.0,
+        "scale_factor": "2/1"
+      },
+      {
+        "candidate": "dimensionless_identity_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 6.798540212741,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 3.0,
+        "scale_factor": "3/1"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 0.755393356971,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.333333333333,
+        "scale_factor": "1/3"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 1.133090035457,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.5,
+        "scale_factor": "1/2"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "fixed_minimal_section_only_at_factor_one": true,
+        "input_area": 2.266180070914,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 1.0,
+        "scale_factor": "1/1"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 4.532360141827,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 2.0,
+        "scale_factor": "2/1"
+      },
+      {
+        "candidate": "alpha_geo_phase_normalized_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 6.798540212741,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 3.0,
+        "scale_factor": "3/1"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 0.755393356971,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.333333333333,
+        "scale_factor": "1/3"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 1.133090035457,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.5,
+        "scale_factor": "1/2"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "fixed_minimal_section_only_at_factor_one": true,
+        "input_area": 2.266180070914,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 1.0,
+        "scale_factor": "1/1"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 4.532360141827,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 2.0,
+        "scale_factor": "2/1"
+      },
+      {
+        "candidate": "formal_action_unit_symbol_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 6.798540212741,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 3.0,
+        "scale_factor": "3/1"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 0.755393356971,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.333333333333,
+        "scale_factor": "1/3"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 1.133090035457,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.5,
+        "scale_factor": "1/2"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "fixed_minimal_section_only_at_factor_one": true,
+        "input_area": 2.266180070914,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 1.0,
+        "scale_factor": "1/1"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 4.532360141827,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 2.0,
+        "scale_factor": "2/1"
+      },
+      {
+        "candidate": "entropy_tick_length_time_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 6.798540212741,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 3.0,
+        "scale_factor": "3/1"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 0.755393356971,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.333333333333,
+        "scale_factor": "1/3"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 1.133090035457,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 0.5,
+        "scale_factor": "1/2"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "fixed_minimal_section_only_at_factor_one": true,
+        "input_area": 2.266180070914,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 1.0,
+        "scale_factor": "1/1"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 4.532360141827,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 2.0,
+        "scale_factor": "2/1"
+      },
+      {
+        "candidate": "imported_hbar_planck_C_phi",
+        "fixed_minimal_section_only_at_factor_one": false,
+        "input_area": 6.798540212741,
+        "internally_breaks_scale_orbit": false,
+        "p3111_phase_value_over_2pi": 3.0,
+        "scale_factor": "3/1"
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "P3112 constructs the requested C_phi object family and verifies the obstruction: internal normalizations of A_phi remain dimensionless, formal unit symbols only rename the scale orbit, entropy tick/cell labels do not induce physical length/time, and the only dimensionful action row imports hbar/Planck.  No nadsoliton-only C_phi breaks scale covariance and calibrates action/length/time on current artifacts.",
+    "negative_export_flags": {
+      "QW_2191_discharged": false,
+      "bridge_role_transfer_exported": false,
+      "detector_calibration_exported": false,
+      "dimensionful_action_unit_exported": false,
+      "ltotal_exported": false,
+      "physical_length_time_unit_exported": false,
+      "spacetime_eom_exported": false,
+      "strict_selector_closure_exported": false,
+      "toe_closure_exported": false
+    },
+    "next_honest_step": "Construct exactly one nadsoliton-only dimensionful reference-carrier source law U_action: an explicit internal object with a nonzero action dimension, a scale-orbit quotient/section proof, and a coupling theorem C_phi(A_phi)=U_action that also derives length/time calibration.  It must avoid hbar/Planck, rods, clocks, observed light, apparatus, selector replay, L_total, bridge/role-transfer, and ToE promotion; otherwise preserve the P3105-P3112 physical-unit no-go.",
+    "positive_scoped_flags": {
+      "candidate_C_phi_functionals_constructed": true,
+      "imported_hbar_planck_row_rejected": true,
+      "p3111_A_phi_reused": true,
+      "scale_covariance_obstruction_witnessed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_internal_dimensionful_calibration_functionals": 0,
+    "action_length_time_induction_rows": 15,
+    "candidate_C_phi_functionals": 5,
+    "candidate_gate_rows": 45,
+    "content_grep_hits": 118511,
+    "content_grep_lanes": 4,
+    "p3111_minimal_internal_phase_area_section_exported": true,
+    "proof_obligations": 6,
+    "satisfied_proof_obligations": 5,
+    "scale_covariance_witness_rows": 25
+  },
+  "input_hashes": {
+    "P3111": "ff5bd906fd25efa5ae6418a1f67f5a8af0fe679d807b317ad8a5d2da8667c854"
+  },
+  "proof_obligations": [
+    {
+      "detail": "P3111 requested exactly one internal calibration functional C_phi",
+      "obligation": "read_p3111_next_atom",
+      "satisfied": true
+    },
+    {
+      "detail": "repo was grepped by research content patterns",
+      "obligation": "content_first_repo_grep",
+      "satisfied": true
+    },
+    {
+      "detail": "five C_phi candidates were constructed",
+      "obligation": "construct_candidate_C_phi_functionals",
+      "satisfied": true
+    },
+    {
+      "detail": "each candidate was tested across five scale factors",
+      "obligation": "test_internal_scale_covariance_breaking",
+      "satisfied": true
+    },
+    {
+      "detail": "each candidate was tested for action/length/time induction",
+      "obligation": "test_action_length_time_induction",
+      "satisfied": true
+    },
+    {
+      "detail": "0 candidates export dimensionful action plus length/time calibration without imported standards",
+      "obligation": "export_import_free_dimensionful_calibration",
+      "satisfied": false
+    }
+  ],
+  "status": "P3112_INTERNAL_C_PHI_CALIBRATION_FUNCTIONAL_BOUNDED_NO_GO"
+}
