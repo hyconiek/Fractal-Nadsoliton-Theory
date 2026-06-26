@@ -3512,3 +3512,11 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3109/S2059 alpha_geo quotient section remains unsourced
 
 `P3109/S2059` shows that the alpha_geo four-bit Shannon cell fixes internal quotient-class data (`ln2`, `alpha_geo`, `16`) but not a dimensional section of the positive scale orbit.  Without a nadsoliton-only dimension-carrying comparison standard and calibration coupling, these data remain information-theoretic rather than physical Lagrangian density, Hamiltonian, spacetime EOM, `L_total`, or ToE data.
+
+## P3110/S2060 dimension standard remains unsourced
+
+`P3110/S2060` identifies `symplectic_phase_area_candidate` as the strongest formal shape for an action-like comparison standard, but it remains without a nadsoliton-only positive-section source law and without calibration coupling.  The alpha_geo Shannon cell is therefore still internal information accounting, not a physical Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3111/S2061 phase-area section remains nonphysical
+
+`P3111/S2061` strengthens the P3110 symplectic shape by deriving the internal phase-area section `A_phi=2*pi/alpha_geo`, but it remains dimensionless until an internal calibration functional maps it to a dimensionful action comparison.  Therefore it is not yet a physical Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.

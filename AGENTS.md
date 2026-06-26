@@ -2888,3 +2888,17 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit computes `4` entropy-cell rows, `9` positive scale-orbit rows, `5` section candidates, `15` calibration-coupling rows, and `40` candidate gate rows; `0` candidates export a non-imported positive quotient section with dimension assignment and calibration coupling.
 - Do not promote `exp(alpha_geo)=16`, per-bit `ln2`, `alpha_geo/4`, total `alpha_geo`, or imported `hbar/Planck` sections to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move is exactly one internal dimension-carrying comparison standard for the alpha_geo quotient section, unless a genuinely new internal unit-source law is introduced.
+
+## Current alpha_geo dimension-comparison-standard guardrail (P3110/S2060, 2026-06-26)
+
+- P3110 constructs the P3109-requested internal dimension-carrying comparison-standard audit for the `alpha_geo=4 ln 2=ln(16)` four-bit Shannon cell.
+- The finite audit computes `6` candidate standards, `18` action/length/time scale-orbit section rows, and `48` candidate gate rows; `0` candidates export a non-imported dimension comparison standard with unique positive section and calibration coupling.
+- Do not promote self-information norm, Fisher curvature, Z12 density, formal ticks, symplectic phase-area shape, or imported Planck calibration to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one nadsoliton-only symplectic/action phase source-law for `symplectic_phase_area_candidate`; otherwise preserve the P3105-P3110 unit-source no-go.
+
+## Current symplectic/action phase source-law guardrail (P3111/S2061, 2026-06-26)
+
+- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.
+- This is real internal progress, but it remains dimensionless phase accounting: `0` candidates export a physical action/length/time unit or calibration coupling without importing `hbar/Planck`, rods, clocks, observed light, or apparatus.
+- Do not promote `A_phi`, winding families, or imported Bohr-Sommerfeld/Planck calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.
