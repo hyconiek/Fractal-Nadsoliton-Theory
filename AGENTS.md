@@ -2951,3 +2951,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit constructs `11` candidate relations, `88` relation-law rows, `55` scale-covariance rows, `55` phase-area coupling rows, and `143` gate rows; `0` candidates export an import-free strict `R_dim` relation.
 - Do not promote phase/tick products, entropy cell clocks, Z12 period velocity, cohomology cup products, symplectic phase-area notation, damping transport, quotient-section choices, Lagrangian/EOM normalization, Planck/light relations, apparatus calibration, or selector-oriented relations to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
 - The next honest move requires exactly one new strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes; otherwise preserve the P3105-P3118 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current Xi_LT axis-source object guardrail (P3119/S2069, 2026-06-26)
+
+- P3119 tests the P3118-requested strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes on nadsoliton data.
+- The finite audit constructs `12` candidate axis sources, `96` axis-source rows, `60` axis-scale covariance rows, `72` `R_dim` coupling rows, and `168` gate rows; `0` candidates export an import-free strict `Xi_LT` source.
+- Do not promote phase-gradient splits, entropy growth/lag pairs, Z12 cochain/cocycle axes, cohomology filtrations, damping-tail/memory pairs, spectral axis pairs, symplectic conjugate notation, information-flow cuts, Lagrangian/EOM axes, Planck/light axes, apparatus rod/clock axes, or selector-oriented axes to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict ordered-flow source object `Tau_LT`, an intrinsic temporal-order/length-extension bifunctor on nadsoliton information flow; otherwise preserve the P3105-P3119 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current Tau_LT ordered-flow source guardrail (P3120/S2070, 2026-06-26)
+
+- P3120 tests the P3119-requested strict ordered-flow source object `Tau_LT`, an intrinsic temporal-order/length-extension bifunctor on nadsoliton information flow.
+- The finite audit constructs `13` candidate ordered-flow bifunctors, `117` flow-law rows, `65` flow-scale covariance rows, `91` `Xi_LT/R_dim` coupling rows, and `195` gate rows; `0` candidates export an import-free strict `Tau_LT` source.
+- Do not promote entropy monotone flows, phase winding flows, Z12 rewrite flows, cohomology filtrations, damping/memory flows, information-cut flows, spectral mode flows, categorical endoflows, least-action flows, lightcone flows, Planck lattice flows, apparatus histories, or selector-oriented flows to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict recurrence-cut source object `Kappa_cycle`, an intrinsic acyclicity/irreversibility law for nadsoliton information flow; otherwise preserve the P3105-P3120 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current Kappa_cycle recurrence-cut source guardrail (P3121/S2071, 2026-06-26)
+
+- P3121 tests the P3120-requested strict recurrence-cut source object `Kappa_cycle`, an intrinsic acyclicity/irreversibility law for nadsoliton information flow.
+- The finite audit constructs `14` candidate recurrence-cut sources, `140` cycle-law rows, `84` finite graph witness rows, `112` `Tau_LT/Xi_LT/R_dim` coupling rows, and `224` gate rows; `0` candidates export an import-free strict `Kappa_cycle` source.
+- Do not promote entropy-increase cuts, phase-winding cuts, Z12 lift cuts, cohomology potential cuts, damping-tail contraction cuts, memory-lag orders, rank-loss cuts, Noether/current cuts, spectral semigroup cuts, categorical noninverse cuts, thermodynamic environment cuts, lightcone cuts, apparatus record cuts, or selector-oriented cuts to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict irreversible-defect source object `Iota_irrev`, a nonzero signed defect functional for the missing temporal arrow; otherwise preserve the P3105-P3121 physical-unit no-go/no-new-live-frontier certificate.
+
+## Current Iota_irrev irreversible-defect source guardrail (P3122/S2072, 2026-06-26)
+
+- P3122 tests the P3121-requested strict irreversible-defect source object `Iota_irrev`, a nadsoliton-internal nonzero signed defect functional for the missing temporal arrow and irreversibility value.
+- The finite audit constructs `15` candidate irreversible-defect sources, `165` defect-law rows, `120` signed witness rows, `135` `Kappa/Tau/Xi/R` coupling rows, and `255` gate rows; `0` candidates export an import-free strict `Iota_irrev` source.
+- Do not promote entropy increments, phase-area hysteresis, Z12 commutators, cohomology residues, damping-tail areas, memory-lag skews, rank-drop indices, spectral-flow eta defects, categorical indices, compression residuals, Noether/anomaly defects, thermodynamic entropy production, lightcone time orientation, apparatus record defects, or selector-signed defects to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.
+- The next honest move requires exactly one new strict asymmetric-transition source object `Delta_asym`, a nonzero gauge-invariant forward/reverse asymmetry witness; otherwise preserve the P3105-P3122 physical-unit no-go/no-new-live-frontier certificate.

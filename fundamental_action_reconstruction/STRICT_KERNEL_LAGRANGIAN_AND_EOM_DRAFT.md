@@ -3548,3 +3548,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3118/S2068 R_dim relation remains incomplete
 
 `P3118/S2068` tests whether a strict nadsoliton-only action-length-time relation `R_dim` can preserve `C_phi(A_phi)=U_action` and prove `U_action=F(U_length,U_time)`.  Current artifacts provide no import-free strict relation satisfying the full dimensional chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3119/S2069 Xi_LT axis-source remains incomplete
+
+`P3119/S2069` tests whether a strict nadsoliton-only axis-source object `Xi_LT` can distinguish `U_length` and `U_time` strongly enough to unlock `R_dim`.  Current artifacts provide no import-free strict axis source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3120/S2070 Tau_LT ordered-flow remains incomplete
+
+`P3120/S2070` tests whether a strict nadsoliton-only ordered-flow source `Tau_LT` can source time as order and length as extension strongly enough to unlock `Xi_LT` and `R_dim`.  Current artifacts provide no import-free strict ordered-flow source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3121/S2071 Kappa_cycle recurrence-cut remains incomplete
+
+`P3121/S2071` tests whether a strict nadsoliton-only recurrence-cut source `Kappa_cycle` can turn ordered-flow preorder into real temporal order strongly enough to unlock `Tau_LT`, `Xi_LT`, and `R_dim`.  Current artifacts provide no import-free strict recurrence-cut source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3122/S2072 Iota_irrev irreversible-defect remains incomplete
+
+`P3122/S2072` tests whether a strict nadsoliton-only irreversible-defect source `Iota_irrev` can provide the nonzero signed temporal-arrow value needed to unlock `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`.  Current artifacts provide no import-free strict irreversible-defect source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
