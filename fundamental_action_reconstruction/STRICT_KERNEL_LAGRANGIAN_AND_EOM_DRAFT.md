@@ -3576,3 +3576,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3125/S2075 Lambda_origin phase-origin localizer remains incomplete
 
 `P3125/S2075` tests whether a strict nadsoliton-only phase-origin/source-localizer `Lambda_origin` can select a nonzero phase-information quotient representative and unlock `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict localizer satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3126/S2076 Pi_point pointed-support source remains incomplete
+
+`P3126/S2076` tests whether a strict nadsoliton-only pointed-support source `Pi_point` can choose a unique nonzero phase-information representative and unlock `Lambda_origin`, `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict pointed-support source satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3127/S2077 Omega_tie orbit-tie-breaking invariant remains incomplete
+
+`P3127/S2077` tests whether a strict nadsoliton-only orbit-tie-breaking invariant `Omega_tie` can break `Pi_point` support ties and unlock `Pi_point`, `Lambda_origin`, `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict tie-breaking invariant satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3128/S2078 Sigma_point pointed-orbit source law remains incomplete
+
+`P3128/S2078` tests whether a strict nadsoliton-only pointed-orbit source law `Sigma_point` can export a nonzero signed representative and unlock `Omega_tie`, `Pi_point`, `Lambda_origin`, `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict pointed-orbit source law satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
