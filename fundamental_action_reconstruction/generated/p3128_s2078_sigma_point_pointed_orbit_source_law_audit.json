@@ -6411,22 +6411,22 @@
     "content_first_repo_grep": [
       {
         "content_lane": "sigma_point",
-        "hit_count": 127,
+        "hit_count": 183,
         "pattern": "Sigma_point|pointed-orbit source|signed orbit representative|pointed-orbit",
         "sample_hits": [
           "AGENTS.md:3016:- The next honest move requires exactly one strict pointed-orbit source law `Sigma_point`, a nadsoliton-internal law supplying a nonzero signed orbit representative directly rather than a post-hoc tie breaker; otherwise preserve the P3105-P3127 physical-unit no-go/no-new-live-frontier certificate.",
           "AGENTS.md:3018:## Current Sigma_point pointed-orbit source-law guardrail (P3128/S2078, 2026-06-27)",
           "AGENTS.md:3020:- P3128 tests the P3127-requested strict pointed-orbit source law `Sigma_point`, intended to supply a nonzero signed orbit representative directly rather than a post-hoc `Omega_tie` tie breaker.",
           "AGENTS.md:3021:- The finite audit constructs `21` source-law candidates, computes `12` finite signed `Z12` orbit-obstruction rows, builds `441` source-law rows, `336` signed-orbit witness rows, `273` `Omega/Pi/Lambda/Phi/Delta/Iota/Kappa/Tau/Xi/R` coupling rows, and `567` gate rows; `0` candidates export an import-free strict `Sigma_point` source.",
-          "fundamental_action_reconstruction/test_p3127_s2077_omega_tie_orbit_tie_breaking_invariant_audit.py:58:        self.assertIn(\"strict pointed-orbit source law Sigma_point\", decision[\"next_honest_step\"])",
-          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:3588:## P3128/S2078 Sigma_point pointed-orbit source law remains incomplete",
-          "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:3590:`P3128/S2078` tests whether a strict nadsoliton-only pointed-orbit source law `Sigma_point` can export a nonzero signed representative and unlock `Omega_tie`, `Pi_point`, `Lambda_origin`, `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict pointed-orbit source law satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.",
-          "fundamental_action_reconstruction/test_p3128_s2078_sigma_point_pointed_orbit_source_law_audit.py:31:        self.assertEqual(cert[\"candidate_Sigma_point_sources\"], 21)"
+          "AGENTS.md:3027:- P3129 tests the P3128-requested strict sign-and-origin generator object `Gamma_SO`, intended to export both a nonzero sign and a source-origin representative before any `Sigma_point/Omega_tie/Pi_point` retest.",
+          "fundamental_action_reconstruction/generated/p3128_s2078_sigma_point_pointed_orbit_source_law_audit.json:2203:      \"required_source\": \"Sigma_point strict pointed-orbit source law supplying a nonzero signed orbit representative directly\"",
+          "fundamental_action_reconstruction/generated/p3128_s2078_sigma_point_pointed_orbit_source_law_audit.json:2205:    \"candidate_Sigma_point_sources\": [",
+          "fundamental_action_reconstruction/generated/p3128_s2078_sigma_point_pointed_orbit_source_law_audit.json:2223:        \"formula\": \"Sigma_point := sign(dphi*dI) at source support\","
         ]
       },
       {
         "content_lane": "omega_tie",
-        "hit_count": 232,
+        "hit_count": 277,
         "pattern": "Omega_tie|orbit-tie-breaking|tie-breaking invariant|post-hoc tie breaker",
         "sample_hits": [
           "AGENTS.md:3009:- The next honest move requires exactly one strict orbit-tie-breaking invariant object `Omega_tie`, a nadsoliton-internal translation/inversion-safe invariant breaking pointed-support orbit ties without becoming a selector premise; otherwise preserve the P3105-P3126 physical-unit no-go/no-new-live-frontier certificate.",
@@ -6436,12 +6436,12 @@
           "AGENTS.md:3016:- The next honest move requires exactly one strict pointed-orbit source law `Sigma_point`, a nadsoliton-internal law supplying a nonzero signed orbit representative directly rather than a post-hoc tie breaker; otherwise preserve the P3105-P3127 physical-unit no-go/no-new-live-frontier certificate.",
           "AGENTS.md:3020:- P3128 tests the P3127-requested strict pointed-orbit source law `Sigma_point`, intended to supply a nonzero signed orbit representative directly rather than a post-hoc `Omega_tie` tie breaker.",
           "AGENTS.md:3022:- Internal phase-information signed source laws remain promising but scoped; do not promote signed phase-information sources, `A_phi` cells, translation-covariant densities, Aut sections, inversion-odd pseudosources, cohomology/coboundary defects, Laplacian/damping/memory/rank/spectral/bispectrum/CRT/entropy/category source laws, least-action sources, observed-light events, Planck cells, selector-signed representatives, or repackaged `Omega_tie` choices to physical units, detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
-          "fundamental_action_reconstruction/test_p3127_s2077_omega_tie_orbit_tie_breaking_invariant_audit.py:31:        self.assertEqual(cert[\"candidate_Omega_tie_sources\"], 20)"
+          "AGENTS.md:3027:- P3129 tests the P3128-requested strict sign-and-origin generator object `Gamma_SO`, intended to export both a nonzero sign and a source-origin representative before any `Sigma_point/Omega_tie/Pi_point` retest."
         ]
       },
       {
         "content_lane": "chain",
-        "hit_count": 7388,
+        "hit_count": 7550,
         "pattern": "Pi_point|Lambda_origin|Phi_Info|Delta_asym|Iota_irrev|Kappa_cycle|Tau_LT|Xi_LT|R_dim|A_phi|C_phi\\(A_phi\\)",
         "sample_hits": [
           "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
@@ -6456,7 +6456,7 @@
       },
       {
         "content_lane": "blocked_imports_closure",
-        "hit_count": 108328,
+        "hit_count": 108733,
         "pattern": "hbar|Planck|rod|clock|observed light|apparatus|thermodynamic environment|selector|QW-2191|L_total|bridge/role-transfer|ToE",
         "sample_hits": [
           "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
@@ -13484,7 +13484,7 @@
     "accepted_Sigma_point_sources": 0,
     "candidate_Sigma_point_sources": 21,
     "candidate_gate_rows": 567,
-    "content_grep_hits": 116075,
+    "content_grep_hits": 116743,
     "content_grep_lanes": 4,
     "finite_orbit_selector_free_signed_representatives": 0,
     "finite_signed_orbit_obstruction_rows": 12,
@@ -13496,7 +13496,7 @@
     "source_law_rows": 441
   },
   "input_hashes": {
-    "P3127": "6f681973c2c33e29f6879588767627c5a8cc2cd1e37cc738fd78ec8d1b5ecc31"
+    "P3127": "a35a4e910c49ac50ccef20669e3f6222a9c36d45380da1ae549d796ec37f554a"
   },
   "proof_obligations": [
     {
