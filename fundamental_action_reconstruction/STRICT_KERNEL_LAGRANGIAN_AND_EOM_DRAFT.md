@@ -3588,3 +3588,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3128/S2078 Sigma_point pointed-orbit source law remains incomplete
 
 `P3128/S2078` tests whether a strict nadsoliton-only pointed-orbit source law `Sigma_point` can export a nonzero signed representative and unlock `Omega_tie`, `Pi_point`, `Lambda_origin`, `Phi_Info`, `Delta_asym`, `Iota_irrev`, `Kappa_cycle`, `Tau_LT`, `Xi_LT`, and `R_dim`. Current artifacts provide no import-free strict pointed-orbit source law satisfying the full chain, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3129/S2079 Gamma_SO generator remains incomplete
+
+`P3129/S2079` tests whether a strict nadsoliton-only `Gamma_SO` can supply a joint sign-and-origin generator before retesting `Sigma_point`, `Omega_tie`, or `Pi_point`. Current artifacts provide no import-free strict generator satisfying the full symmetry and coupling gate, so the result is not a Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3130/S2080 Theta_TO quotient is not an action origin
+
+`P3130/S2080` constructs a finite translation quotient of `Z12` supports but does not export a unit-bearing coordinate origin, Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3131/S2081 Epsilon_OT twist is not an action origin
+
+`P3131/S2081` constructs origin-torsion/twist labels and proves the finite section obstruction, but it does not export a unit-bearing coordinate origin, Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
