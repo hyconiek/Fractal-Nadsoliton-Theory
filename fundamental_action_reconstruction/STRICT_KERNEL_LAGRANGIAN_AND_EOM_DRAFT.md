@@ -3604,3 +3604,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3132/S2082 interlocked helices are not an action origin
 
 `P3132/S2082` tests a paired-helical relative-lock object.  Locking a relative registry can remove the relative phase degree of freedom, but it leaves the common `Z12` phase orbit free and does not source a unit-bearing absolute coordinate, signed selector source, Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3133/S2083 legacy torsion is not yet a variational D_HL source
+
+`P3133/S2083` identifies a legacy phase/torsion under-visibility gap, but it does not export a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.
+
+## P3134/S2084 explicit D_HL residual is not yet an action source
+
+`P3134/S2084` constructs a beta_tors-scaled sine residual with the right local odd shape, but the residual remains conditional on an imported origin `r` and polarity `lambda`. It therefore does not export a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.
+
+## P3135/S2085 D_HL joint source matrix is not a variational source
+
+`P3135/S2085` proves the finite joint `(r,lambda)` selector-source obstruction for the constructed `D_HL` family.  Because no import-free source selects both support origin and polarity, the residual cannot yet become a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.
+
+## P3136/S2086 Fourier-phase extractor is not yet a variational source
+
+`P3136/S2086` gives a conditional positive reconstruction theorem for `D_HL` profiles through Fourier phase, but the reconstruction depends on an imported Fourier frame, mode/character, and polarity convention.  Therefore it does not export a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.
+
+## P3137/S2087 F_DHL frame source is not a variational source
+
+`P3137/S2087` proves that the current Fourier-frame/source candidate space does not export an import-free primitive character and phase-zero source.  Therefore the Fourier-phase `D_HL` reconstruction cannot yet become a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.

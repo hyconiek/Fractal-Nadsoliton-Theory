@@ -1,0 +1,116 @@
+{
+  "acceptance_gates": [
+    "strict nadsoliton provenance for D_HL rather than legacy-role transfer",
+    "nontranslation defect not erased by common phase translation",
+    "nonzero inversion-odd signed value",
+    "coupling to one support representative after quotienting",
+    "torsor polarity law rather than a chosen convention",
+    "no selector/apparatus/observed-light/Planck/Lagrangian-normalization/bridge-role-transfer import"
+  ],
+  "audit_question": "Does the legacy beta_tors plus sinusoid kernel already export the P3132-required strict helical-lock defect D_HL?",
+  "comparison_rows": [
+    {
+      "D_HL_nontranslation_defect": false,
+      "fresh_gap": "amplitude can scale a kernel but cannot by itself choose a helical support origin or chirality polarity",
+      "legacy_atom": "alpha_geo amplitude",
+      "legacy_location": "multiplicative numerator normalization",
+      "nonzero_inversion_odd_value": false,
+      "strict_successor": "implicit/absorbed operational normalization in K_strict_gate",
+      "support_representative_coupling": false
+    },
+    {
+      "D_HL_nontranslation_defect": true,
+      "fresh_gap": "the sinusoid preserves a phase/winding trace, but cos is even and translation-orbit blind unless a separate phase-origin localizer is exported",
+      "legacy_atom": "cos(omega*d+phi) sinusoid",
+      "legacy_location": "oscillatory phase/resonance carrier",
+      "nonzero_inversion_odd_value": false,
+      "strict_successor": "omega,phi refrozen by the QW2038-QW2050 spectral/intersection chain",
+      "support_representative_coupling": false
+    },
+    {
+      "D_HL_nontranslation_defect": false,
+      "fresh_gap": "beta_tors is a scalar damping/torsion marker; current artifacts do not make it an inversion-odd, support-local helical-lock defect",
+      "legacy_atom": "beta_tors linear denominator",
+      "legacy_location": "1/(1+beta_tors*d) torsion/topological path-summation damping",
+      "nonzero_inversion_odd_value": false,
+      "strict_successor": "1/(1+beta*d**eta) nonlinear damping/compression with beta=1, eta=1.8 in the working strict gate",
+      "support_representative_coupling": false
+    },
+    {
+      "D_HL_nontranslation_defect": true,
+      "fresh_gap": "the combined formula can motivate D_HL, but it still lacks an exported odd sign value and an absolute support representative after the diagonal Z12 quotient",
+      "legacy_atom": "combined alpha_geo*cos/(1+beta_tors*d)",
+      "legacy_location": "effective ontological bridge kernel",
+      "nonzero_inversion_odd_value": false,
+      "strict_successor": "completed/enriched strict gate only under explicit completion-map evidence",
+      "support_representative_coupling": false
+    }
+  ],
+  "decision": {
+    "bounded_result": "The user's suspicion is partly right: something important became under-visible in the move from the legacy formula to the strict operational gate. The legacy numerator keeps an explicit sinusoidal phase/resonance carrier and beta_tors keeps an explicit torsion-damping label, whereas the strict refreeze records omega, phi, beta, eta as operational gate parameters. However, this is not yet the missing P3132 D_HL source. The legacy formula provides motivation and a gap diagnosis, but current artifacts do not export beta_tors or the cosine phase as a nonzero inversion-odd, support-local helical-lock defect coupled to an absolute support representative.",
+    "negative_export_flags": {
+      "D_HL_source_exported": false,
+      "Gamma_SO_exported": false,
+      "L_total_exported": false,
+      "QW_2191_discharged": false,
+      "ToE_closure_exported": false,
+      "Zeta_OS_exported": false,
+      "bridge_completion_exported": false,
+      "legacy_role_transfer_exported": false
+    },
+    "next_honest_step": "Build exactly one explicit candidate formula for D_HL from the legacy phase/torsion split, for example an oriented phase-gradient/torsion residual that is odd under inversion and is evaluated on a support-local representative. Then audit only its provenance, diagonal-translation behavior, sign polarity, and support coupling before any Zeta_OS/Gamma_SO retest. Do not start physical role transfer or claim bridge completion from beta_tors alone.",
+    "positive_scoped_flags": {
+      "D_HL_acceptance_obligations_sharpened": true,
+      "legacy_beta_tors_torsion_trace_identified": true,
+      "legacy_phase_trace_identified": true,
+      "strict_operational_absorption_gap_identified": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_D_HL_sources": 0,
+    "beta_tors_retains_scalar_torsion_damping_trace": true,
+    "legacy_atoms_tested": 4,
+    "legacy_role_transfer_started": false,
+    "sinusoid_retains_phase_trace": true,
+    "strict_bridge_completion_exported": false
+  },
+  "gate_matrix": [
+    {
+      "accepted_D_HL_source": false,
+      "legacy_atom": "alpha_geo amplitude",
+      "passed_gates": 0,
+      "required_core_gates": 3
+    },
+    {
+      "accepted_D_HL_source": false,
+      "legacy_atom": "cos(omega*d+phi) sinusoid",
+      "passed_gates": 1,
+      "required_core_gates": 3
+    },
+    {
+      "accepted_D_HL_source": false,
+      "legacy_atom": "beta_tors linear denominator",
+      "passed_gates": 0,
+      "required_core_gates": 3
+    },
+    {
+      "accepted_D_HL_source": false,
+      "legacy_atom": "combined alpha_geo*cos/(1+beta_tors*d)",
+      "passed_gates": 1,
+      "required_core_gates": 3
+    }
+  ],
+  "input_hashes": {
+    "F2": "b17e90112b1d121e386ca5c6018c5fd9b9e54c38d2e02027002ce5c7ac85d406",
+    "K1": "3e7c1223b803df3cbe94d75e2696d3519f8505e38cef4bd724be3dadfca84ca8",
+    "K2": "594eb02e820928328d81e0ba7c2540ca13286a3b1e27cd33d71f7ae1fce74129",
+    "P3132": "53e9b96333480014cd3666ae36f69447997aa917081e0d980d7018ed35989912",
+    "QW1729": "4a3cbc1819f7598a0e6a31ff8d8ba213257be1325379178e33500222f63855ca",
+    "QW2041": "1dd7ec4103aa1e2704705359d7578b19bf01e92d0f9ef3e79070df402246bfca",
+    "S2": "acdd07e5b59fc87b7c6457cf43dcafef2939165526265ac37d0c0a6cffaa2c65"
+  },
+  "legacy_kernel": "K_legacy_ont(d)=alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)",
+  "source_availability_note": "The external DIAGRAMS_KERNEL_TRANSFORMATION.md path was not available in this container; the audit therefore uses repo-restored legacy-kernel packets and QW1729/QW2041 provenance records.",
+  "status": "P3133_LEGACY_BETA_TORS_HELICAL_LOCK_DEFECT_GAP_CERTIFICATE",
+  "strict_kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)"
+}
