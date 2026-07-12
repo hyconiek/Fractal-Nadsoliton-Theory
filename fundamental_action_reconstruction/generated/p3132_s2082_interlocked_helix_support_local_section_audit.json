@@ -1,0 +1,84 @@
+{
+  "status": "P3132_INTERLOCKED_HELIX_ZETA_OS_RELATIVE_LOCK_NO_ABSOLUTE_SECTION",
+  "audit_scope": {
+    "new_typed_object": "Zeta_OS^HL: an interlocked-helical support-local-section candidate",
+    "motivation": "A screw/nut or two-helix interlock can fix a relative registry and oppose relative rotation. The audit tests whether that new relational datum can source an absolute Z12 origin and an orientation polarity without importing an anchor.",
+    "finite_abstraction": "Two helix phases a,b in Z12, pitch labels p_A,p_B in U(12), a relative registry delta=b-a, and a lock predicate L(p_A,p_B,delta).",
+    "nonclaim": "This is not a claim that a DNA double helix is literally a cosmic screw/nut mechanism, nor that a mechanical analogy is a strict nadsoliton source law."
+  },
+  "inputs": {
+    "P3131": "Epsilon_OT requires a support-local section law coupling a nontranslation twist to a support representative.",
+    "P3129": "Gamma_SO requires both a nonzero sign and a source-origin representative.",
+    "P2718": "The chiral bispectrum gives a nonzero orientation marker but lacks a non-premise origin and torsor coupling."
+  },
+  "formal_model": {
+    "phase_group": "G = Z12",
+    "pitch_label_group": "U(12) = {1,5,7,11}",
+    "raw_pair": "H = (p_A,a,epsilon_A; p_B,b,epsilon_B)",
+    "relative_registry": "delta(H) = b-a mod 12",
+    "interlock_predicate": "L(p_A,p_B,delta) = true means that the two helices have a permitted, locked relative registry.",
+    "independent_phase_action": "(r,s) . (a,b) = (a+r,b+s)",
+    "residual_diagonal_action": "t . (a,b) = (a+t,b+t)",
+    "lock_effect": "A fixed relative registry removes independent relative rotation, but preserves the full diagonal global-phase action because delta(a+t,b+t)=delta(a,b).",
+    "inversion": "I(a,b,epsilon_A,epsilon_B) = (-a,-b,-epsilon_A,-epsilon_B); it maps a chiral lock to its opposite-polarity partner unless a signed source law selects one.",
+    "candidate_section": "Zeta_OS^HL([H]) = an absolute support representative x in Z12 derived from the locked pair, not from a chart label or external anchor."
+  },
+  "analytic_finite_certificate": {
+    "independent_phase_states_per_fixed_pitch_pair": 144,
+    "relative_registry_values": 12,
+    "states_remaining_after_one_fixed_relative_lock": 12,
+    "residual_diagonal_orbit_size": 12,
+    "ordered_pitch_label_pairs": 16,
+    "relative_registry_pitch_cells": 192,
+    "relative_rotation_locked": true,
+    "joint_global_phase_locked": false,
+    "source_free_absolute_origin_candidates_per_locked_registry": 0,
+    "strict_sign_polarity_selected": false,
+    "proof": [
+      "Fix p_A, p_B and a permitted delta_0. The lock locus is {(a,a+delta_0): a in Z12}; it has 12 elements.",
+      "The diagonal action t maps (a,a+delta_0) to (a+t,a+t+delta_0), stays in the same lock locus, and is free for generic locked pairs.",
+      "Therefore the lock removes relative rotation but leaves exactly one twelve-element common-rotation/global-phase orbit.",
+      "If a quotient-level source-free section s chose an absolute origin, quotient invariance gives s([a,b])=s([a+t,b+t]), while origin covariance would require s([a+t,b+t])=s([a,b])+t. For t=1 these statements contradict each other in Z12.",
+      "A raw-coordinate rule such as x=a is equivariant but is not a source: it merely imports the phase label already present in H.",
+      "An inversion-odd chirality label can distinguish the two relative-handedness branches only conditionally; without an exported signed source law its polarity remains paired."
+    ]
+  },
+  "acceptance_gates": [
+    "explicit interlock formula L(p_A,p_B,delta)",
+    "strict nadsoliton provenance rather than a mechanical analogy",
+    "relative registry fixed without chart-label convention",
+    "absolute origin sourced after quotienting the diagonal Z12 action",
+    "nonzero inversion-odd signed value",
+    "unique polarity coupling to the P2708/P2714 orientation torsor",
+    "translation/Aut/inversion covariance proof",
+    "no selector, apparatus, observed-light, Planck-unit, Lagrangian-normalization, bridge, role-transfer, L_total, or ToE import"
+  ],
+  "decision": {
+    "bounded_result": "The interlocked-helical relation is a genuinely new typed candidate and captures the useful part of the screw/nut intuition: it can constrain relative phase and eliminate independent relative rotation. It does not, by itself, fix common global rotation, an absolute Z12 origin, or a chiral polarity. Consequently Zeta_OS^HL is a relative-lock witness, not an import-free support-local section or Gamma_SO source.",
+    "positive_scoped_flags": {
+      "relative_registry_object_constructed": true,
+      "relative_rotation_lock_proved": true,
+      "residual_diagonal_Z12_symmetry_exhibited": true,
+      "support_local_section_obligation_sharpened": true,
+      "chiral_pairing_boundary_made_explicit": true
+    },
+    "negative_export_flags": {
+      "absolute_origin_source_exported": false,
+      "strict_Zeta_OS_exported": false,
+      "Gamma_SO_generator_exported": false,
+      "QW_2191_discharged": false,
+      "strict_selector_closure_exported": false,
+      "physical_unit_or_action_exported": false,
+      "spacetime_EOM_exported": false,
+      "bridge_role_transfer_exported": false,
+      "L_total_exported": false,
+      "ToE_closure_exported": false
+    },
+    "next_honest_step": "Do not turn a relative lock into a fictitious absolute anchor. Reopen this route only if one explicit strict formula/artifact exports a nontranslation, support-local helical-lock defect D_HL with both a nonzero inversion-odd value and a coupling to one support representative. Its provenance, stabilizer behavior, and torsor polarity must be audited before any Zeta_OS/Gamma_SO retest. Otherwise preserve the P3131-P3132 no-absolute-section boundary."
+  },
+  "replay_boundaries": [
+    "Do not use a chosen screw axis, a labelled DNA base, a boundary clamp, a lexicographic phase, or an apparatus mark as an internal source.",
+    "Do not identify a physical DNA molecule or an ordinary screw/nut with the nadsoliton without an explicit source theorem.",
+    "Do not promote relative locking to QW-2191 discharge, selector closure, unit/action normalization, L_total, bridge completion, role transfer, or ToE closure."
+  ]
+}

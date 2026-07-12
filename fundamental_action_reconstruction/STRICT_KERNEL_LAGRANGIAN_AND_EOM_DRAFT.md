@@ -3600,3 +3600,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3131/S2081 Epsilon_OT twist is not an action origin
 
 `P3131/S2081` constructs origin-torsion/twist labels and proves the finite section obstruction, but it does not export a unit-bearing coordinate origin, Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
+
+## P3132/S2082 interlocked helices are not an action origin
+
+`P3132/S2082` tests a paired-helical relative-lock object.  Locking a relative registry can remove the relative phase degree of freedom, but it leaves the common `Z12` phase orbit free and does not source a unit-bearing absolute coordinate, signed selector source, Lagrangian density, Hamiltonian normalization, spacetime EOM, `L_total`, or ToE datum.
