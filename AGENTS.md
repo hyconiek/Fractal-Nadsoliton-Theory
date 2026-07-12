@@ -3049,3 +3049,38 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite `Z12` theorem is bounded but decisive for this candidate: a fixed locked registry leaves a free twelve-element diagonal common-rotation/global-phase orbit.  It therefore supplies no source-free absolute origin, and inversion still pairs chiral polarities without a signed source law.
 - Do not use a chosen screw axis, DNA base label, boundary clamp, lexicographic phase, external apparatus, or mechanical analogy as an internal source.  Do not promote relative locking to `QW-2191` discharge, strict selector closure, physical units/action, spacetime EOM, `L_total`, bridge completion, role transfer, or ToE closure.
 - This lane may reopen only on one explicit strict formula/artifact for a nontranslation support-local helical-lock defect `D_HL` carrying both a nonzero inversion-odd value and a coupling to one support representative; otherwise preserve the P3131-P3132 no-absolute-section boundary rather than generating another generic helix label.
+
+## Current legacy beta_tors helical-lock defect guardrail (P3133/S2083, 2026-07-12)
+
+- P3133 tests whether the restored legacy kernel ingredients, especially `cos(omega*d+phi)` and `beta_tors`, already export the P3132-required strict helical-lock defect `D_HL`.
+- The audit confirms a real legacy-to-strict under-visibility gap: the legacy sinusoid carries explicit phase/resonance structure and `beta_tors` carries explicit torsion-damping semantics, while the strict operational gate absorbs them into `omega/phi/beta/eta`; nevertheless `0/4` tested legacy atoms export an accepted `D_HL` source because none provides both a nonzero inversion-odd value and a support-representative coupling after the diagonal `Z12` quotient.
+- Do not promote `beta_tors`, the cosine phase, or the combined legacy kernel to `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure.
+- The next admissible move is exactly one explicit candidate formula for `D_HL` built from the legacy phase/torsion split, audited for provenance, diagonal-translation behavior, sign polarity, and support coupling before any retest.
+
+## Current explicit legacy phase/torsion D_HL candidate guardrail (P3134/S2084, 2026-07-12)
+
+- P3134 constructs the P3133-requested formula `D_HL(r,k,lambda;x)=lambda*beta_tors*sin(2*pi*k*(x-r)/12)` from the legacy phase/torsion split.
+- The finite computation enumerates `120` candidate defects; all are nonzero and odd around a chosen support representative, confirming that the legacy phase/torsion split can generate the local `D_HL` shape.
+- The same computation proves the remaining obstruction: `0` candidates are import-free strict sources because translation covariance requires carrying the origin `r`, diagonal `Z12` quotient invariance fails for nonzero rows at `t=1`, and the polarity `lambda` remains paired.
+- Do not add another generic helical residual or promote this conditional formula to `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure. The next admissible move is exactly one joint `(r,lambda)` selector-source matrix over this constructed candidate family, testing translation quotient, inversion polarity, `Aut(Z12)` behavior, and import freedom.
+
+## Current D_HL joint origin/polarity selector-source matrix guardrail (P3135/S2085, 2026-07-12)
+
+- P3135 executes the P3134 recommendation by constructing the joint `(r,lambda)` source matrix for the explicit `D_HL` family and grepping/backscanning existing origin, selector, and polarity results before testing.
+- The finite pair space `Z12 x {±1}` has one `24`-element orbit under translations, `Aut(Z12)` units, and lambda pairing; invariant data alone cannot select a unique origin/polarity pair.
+- The matrix tests `10` repo-supported candidate source classes; `0` satisfy origin selection, polarity selection, and import freedom simultaneously.
+- Do not replay separate origin-only or polarity-only lanes as `D_HL` closure, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure. The next admissible object is exactly one formula-level joint source law `J_DHL(support, field) -> (r,lambda)`; otherwise preserve the P3134-P3135 bounded no-go certificate.
+
+## Current Fourier-phase J_DHL candidate guardrail (P3136/S2086, 2026-07-12)
+
+- P3136 constructs a formula-level `J_DHL` candidate using the Fourier coefficient phase of the P3134 sine residual.
+- The finite audit verifies a strong conditional result: all `120` profiles have nonzero generating-mode coefficients, and the `48` primitive mode rows `k=1,5` still retain the half-period ambiguity `(r,lambda) ~ (r+6,-lambda)`; `72` nonunit rows have larger origin/sign aliasing.
+- The same audit proves the strict-source boundary: translation rotates coefficient phase in all rows, and the extraction imports a labelled Fourier frame, selected mode/character, and polarity convention.
+- Do not replay Fourier receiver extraction as `D_HL`, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure. The next admissible object is exactly one strict Fourier-frame/source law `F_DHL` selecting primitive character and phase-zero reference, audited against P2992/P2994, P3039, and P2869.
+
+## Current Fourier-frame source law F_DHL guardrail (P3137/S2087, 2026-07-12)
+
+- P3137 constructs the `F_DHL` candidate space left by P3136: primitive Fourier characters, primitive character pairs, and phase-zero cells.
+- The finite audit finds real receiver structure but no source: primitive characters and primitive pairs each remain single `Aut(Z12)` orbits, phase-zero remains a translated `12`-cell choice, and `0/9` repo-backed candidates pass character/frame selection, phase-zero selection, primitive restriction, and import freedom simultaneously.
+- Do not replay Fourier receivers, character projectors, phase gauges, lexicographic labels, or prior `chi_i` localizer lanes as `D_HL`, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure.
+- The next admissible move is either one genuinely new non-Fourier joint source object for `(r,lambda)` or a no-new-live-frontier reconciliation for the `D_HL` lane after P3133-P3137.
