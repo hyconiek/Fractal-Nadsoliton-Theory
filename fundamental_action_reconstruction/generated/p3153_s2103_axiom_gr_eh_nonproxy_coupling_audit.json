@@ -1,0 +1,168 @@
+{
+  "constructed_object": {
+    "classification": "finite_metric_residual_and_source_interface_obstruction",
+    "name": "G_EH^ax FRW/EH nonproxy coupling audit",
+    "scope": "flat FRW Einstein-tensor residuals plus repo-backed source/interface rows after P3152"
+  },
+  "decision": {
+    "bounded_result": "P3153 constructs the requested GR/EH bridge object and finds a concrete source gap rather than closure: nonflat metric receivers need a source, and current artifacts do not export the full EH coupling package.",
+    "negative_export_flags": {
+      "ToE_closure_exported": false,
+      "bridge_or_role_transfer_exported": false,
+      "einstein_hilbert_coupling_exported": false,
+      "newton_constant_source_exported": false,
+      "selector_closure_exported": false,
+      "stress_energy_source_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Construct P3154 as exactly one stress-energy source candidate for the axiom branch: derive a symbolic T_mu_nu from the P3149 Higgs/matter local Lagrangian in the same convention and test conservation plus coupling dimensions.  If no noncircular state/VEV/unit source is exported, preserve the P3153 EH source-gap boundary.",
+    "why_not_strict": "Minkowski is a zero vacuum baseline but not observed GR dynamics.  Nonflat FRW rows have nonzero Einstein residuals; cancelling them would require a sourced T_mu_nu/Lambda plus units and a metric variation theorem not exported by P3149/P3146/P3094/P2686/P3145."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "accepted_full_eh_coupling_rows": 0,
+      "frw_metric_candidates": 5,
+      "nonflat_rows_needing_source": 4,
+      "source_interface_rows": 5,
+      "vacuum_zero_rows": 1
+    },
+    "name": "P3153_T1_axiom_branch_eh_coupling_source_gap",
+    "statement": "The flat-FRW Einstein tensor gives an exact nonproxy residual witness: only the static Minkowski baseline has zero vacuum EH residual among the audited candidates; every nonflat candidate needs a stress-energy/cosmological source.  Current axiom-branch and strict artifacts provide local matter/gauge receivers, conditional units, and nonproxy residual scaffolds, but zero rows provide the full metric bundle, stress-energy tensor, Newton/action unit, nonproxy variation, and noncircular strict source package required for EH coupling closure."
+  },
+  "frw_einstein_residual_rows": [
+    {
+      "G_00": "0",
+      "G_ii_covariant_each": "0",
+      "Ricci_scalar": "0",
+      "candidate_metric": "Minkowski_static",
+      "nonzero_components": {
+        "G_00": false,
+        "G_ii_covariant_each": false,
+        "Ricci_scalar": false
+      },
+      "note": "zero-curvature vacuum baseline only",
+      "scale_factor_a_t": "1",
+      "source_needed_for_nonflat_solution": false,
+      "vacuum_EH_residual_zero": true
+    },
+    {
+      "G_00": "3/(4*t**2)",
+      "G_ii_covariant_each": "1/(4*t)",
+      "Ricci_scalar": "0",
+      "candidate_metric": "radiation_like_power_p_1_2",
+      "nonzero_components": {
+        "G_00": true,
+        "G_ii_covariant_each": true,
+        "Ricci_scalar": false
+      },
+      "note": "common cosmology receiver shape; needs stress-energy source",
+      "scale_factor_a_t": "sqrt(t)",
+      "source_needed_for_nonflat_solution": true,
+      "vacuum_EH_residual_zero": false
+    },
+    {
+      "G_00": "4/(3*t**2)",
+      "G_ii_covariant_each": "0",
+      "Ricci_scalar": "4/(3*t**2)",
+      "candidate_metric": "matter_like_power_p_2_3",
+      "nonzero_components": {
+        "G_00": true,
+        "G_ii_covariant_each": false,
+        "Ricci_scalar": true
+      },
+      "note": "common cosmology receiver shape; needs stress-energy source",
+      "scale_factor_a_t": "t**(2/3)",
+      "source_needed_for_nonflat_solution": true,
+      "vacuum_EH_residual_zero": false
+    },
+    {
+      "G_00": "3/t**2",
+      "G_ii_covariant_each": "-1",
+      "Ricci_scalar": "6/t**2",
+      "candidate_metric": "linear_coasting_power_p_1",
+      "nonzero_components": {
+        "G_00": true,
+        "G_ii_covariant_each": true,
+        "Ricci_scalar": true
+      },
+      "note": "curved receiver with nonzero spatial residual",
+      "scale_factor_a_t": "t",
+      "source_needed_for_nonflat_solution": true,
+      "vacuum_EH_residual_zero": false
+    },
+    {
+      "G_00": "3*H**2",
+      "G_ii_covariant_each": "-3*H**2*exp(2*H*t)",
+      "Ricci_scalar": "12*H**2",
+      "candidate_metric": "deSitter_exp_Ht",
+      "nonzero_components": {
+        "G_00": true,
+        "G_ii_covariant_each": true,
+        "Ricci_scalar": true
+      },
+      "note": "cosmological-constant-like receiver; needs Lambda/source unit",
+      "scale_factor_a_t": "exp(H*t)",
+      "source_needed_for_nonflat_solution": true,
+      "vacuum_EH_residual_zero": false
+    }
+  ],
+  "input_hashes": {
+    "P2686": "49ce24c1d1560a6cf329358149ef504ec9b176079a728f1e8ce2ed5bfc781fac",
+    "P3094": "4b31c9d5984585552777da5a554aefa03ffb284ed539161698212a86fc67692e",
+    "P3145": "c6c6d5466dfd8a2075e99a03a123d190e6c6b43c68efdf918e77e3d05d9d4b7c",
+    "P3146": "72e2f0cf9868d92003481802d4f82d95b32644242b25fcd3599b5d23e1bad465",
+    "P3149": "fa84e9516c9d39dc4c66f2e00adf799e0dc670ad255178dafcbe4ddc67453d75",
+    "P3151": "0b717ff364a62f14f46e3575bbe518fd7343d66a4710bd5d4329d525817e4d46",
+    "P3152": "21cd0f3928b4452f2ebb70ce320ed666590fd97da8b7cbaea73b3c30aede0f81"
+  },
+  "source_interface_rows": [
+    {
+      "candidate": "P3149 local BRST matter/Higgs interface",
+      "metric_bundle_exported": false,
+      "newton_or_action_unit_exported": false,
+      "noncircular_strict_source": false,
+      "nonproxy_variation_exported": false,
+      "stress_energy_tensor_exported": false,
+      "verdict": "local gauge invariance receiver; no metric variation, expectation state, or G_N/hbar unit"
+    },
+    {
+      "candidate": "P3146 Lambda_unit^ax length/time/action postulates",
+      "metric_bundle_exported": false,
+      "newton_or_action_unit_exported": true,
+      "noncircular_strict_source": false,
+      "nonproxy_variation_exported": false,
+      "stress_energy_tensor_exported": false,
+      "verdict": "conditional units only; no strict metric source or EH coupling theorem"
+    },
+    {
+      "candidate": "P3094 stress-energy metric-response obstruction lane",
+      "metric_bundle_exported": false,
+      "newton_or_action_unit_exported": false,
+      "noncircular_strict_source": true,
+      "nonproxy_variation_exported": false,
+      "stress_energy_tensor_exported": false,
+      "verdict": "repo-backed obstruction: metric response remains missing rather than exported"
+    },
+    {
+      "candidate": "P2686 shared-background EA/EH/ELg residual table",
+      "metric_bundle_exported": true,
+      "newton_or_action_unit_exported": false,
+      "noncircular_strict_source": true,
+      "nonproxy_variation_exported": true,
+      "stress_energy_tensor_exported": false,
+      "verdict": "nonproxy residual evidence exists, but EH/ELg and Bianchi-I rows remain open/nonzero"
+    },
+    {
+      "candidate": "P3145 reverse SM/GR layout",
+      "metric_bundle_exported": false,
+      "newton_or_action_unit_exported": false,
+      "noncircular_strict_source": false,
+      "nonproxy_variation_exported": false,
+      "stress_energy_tensor_exported": false,
+      "verdict": "receiver layout only; not a source/coupling theorem"
+    }
+  ],
+  "status": "P3153_AXIOM_GR_EH_NONPROXY_COUPLING_AUDIT_RESIDUAL_SOURCE_GAP"
+}

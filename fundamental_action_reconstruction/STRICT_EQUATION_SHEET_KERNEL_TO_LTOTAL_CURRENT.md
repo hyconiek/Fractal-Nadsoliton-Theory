@@ -4307,3 +4307,35 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3150/S2100 R_SM hypercharge-ray source-selection audit
 
 `P3150/S2100` constructs `Y_SM^ray`, a conditional hypercharge source-selection witness for `R_SM^ax`.  The Yukawa/anomaly equation system has `5` rows, `6` unknowns, rank `5`, and nullity `1`; after normalizing `Y(H)=1/2`, it reproduces the P3148 hypercharges exactly and the redundant `SU3^2 U1` plus `U1^3` anomaly checks vanish.  This selects only a conditional hypercharge ray: it does not source the SM field content, absolute charge unit, unit-bearing `L_total`, global BV/BRST, GR/EH coupling, or ToE closure.
+
+## P3151/S2101 R_SM representation-content source-selection audit
+
+`P3151/S2101` constructs `R_shape^scan`, a finite representation-content source-selection scanner for the P3148/P3150 SM axiom branch.  Over a small `SU(3)` singlet/fundamental/antifundamental and `SU(2)` singlet/doublet alphabet, the SM representation shape is present, but local Yukawa singlet gates plus shape-only anomaly/parity gates leave multiple passing shapes and dimension patterns.  Thus current compatibility checks do not source-select the five chiral multiplets plus Higgs, and no strict SM generation, unit-bearing `L_total`, GR/EH closure, bridge/role transfer, selector closure, or ToE closure is exported.
+
+## P3152/S2102 Y_SM charge-unit normalization obstruction
+
+`P3152/S2102` constructs `U_Y^tors`, the nonzero-scale torsor for the P3150 hypercharge ray.  The sampled rational orbit has zero Yukawa/anomaly residuals at every scale while `Y(H)`, hypercharge gcd, and electric-charge values vary.  Thus current algebraic compatibility fixes only a projective ray and does not export a strict charge unit, strict SM generation, unit-bearing `L_total`, global BV/BRST, GR/EH closure, selector closure, bridge/role transfer, or ToE closure.
+
+## P3153/S2103 axiom-branch GR/EH nonproxy coupling audit
+
+`P3153/S2103` constructs `G_EH^ax`, a finite nonproxy GR/EH coupling audit after the P3150-P3152 SM source-selection stack.  Exact flat-FRW Einstein residuals show only the static Minkowski baseline has zero vacuum residual; all audited nonflat receivers need stress-energy or cosmological source data.  Current repo rows provide local gauge receivers, conditional units, and residual scaffolds, but `0` rows export the full metric bundle, `T_mu_nu`, Newton/action unit, nonproxy variation, and noncircular strict source package.  No EH coupling closure, unit-bearing `L_total`, strict GR/SM generation, bridge/role transfer, selector closure, or ToE closure is exported.
+
+## P3154/S2104 axiom Higgs stress-energy source candidate
+
+`P3154/S2104` constructs `T_H^ax`, a symbolic homogeneous Higgs stress-energy candidate from the P3149 local matter/Higgs Lagrangian form on a flat FRW receiver.  The audit derives `rho=hdot^2/2+V(h)`, `p=hdot^2/2-V(h)`, and verifies that covariant conservation reduces exactly to `hdot` times the Higgs/KG equation.  This is a real candidate object, but no noncircular Higgs state/VEV, dimensionful potential/Newton unit, or full metric-variation bundle is exported; no EH coupling closure, unit-bearing `L_total`, strict SM/GR generation, bridge/role transfer, selector closure, or ToE closure follows.
+
+## P3155/S2105 Higgs VEV/state-source audit
+
+`P3155/S2105` constructs `V_H^source`, the VEV/state-source gate requested after P3154.  The quartic Higgs potential has nonzero stationary points only at `h=±sqrt(mu2/lambda)`, so a strict source must provide the coupling ratio, dimensionful unit, and noncircular state/sign choice.  Current scalar candidates (`alpha_geo`/entropy, P3071 invariants, P3073 flows, P3143/P3146 weights/units, and P3154 self-consistency) provide `0` accepted strict VEV-source rows.  The axiom-branch SM/EH route remains coherent but conditional; no strict VEV, stress-energy source, EH coupling, unit-bearing `L_total`, strict SM/GR generation, bridge/role transfer, selector closure, or ToE closure is exported.
+
+## P3156/S2106 alpha_geo to Higgs-coupling formula audit
+
+`P3156/S2106` audits exactly one new formula schema, `Phi_alpha^H`, mapping the strict dimensionless scalar `alpha_geo` to Higgs couplings.  Raw alpha formulas can set dimensionless ratios but cannot source `mu2`, which has mass dimension two; dimensionally valid variants require importing a mass scale `M2`.  Thus no strict Higgs coupling source, VEV source, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE closure is exported.
+
+## P3157/S2107 Omega_dim mass-unit torsor audit
+
+`P3157/S2107` constructs `Omega_M`, a formal positive mass-unit torsor that supplies the missing mass dimension for the P3156 `alpha_geo` Higgs-coupling schema.  The schema `mu2=alpha_geo*Omega_M^2`, `lambda=alpha_geo` is dimensionally valid, but the orbit `Omega_M -> c Omega_M` leaves dimensionless compatibility intact while changing `mu2` and `v`.  No current strict source law selects `c` or couples `Omega_M` to the P3116/P3118/P3119 unit chain, so no strict mass unit, K_dim functor, Higgs coupling/VEV, EH coupling, `L_total`, SM/GR generation, selector closure, bridge/role transfer, or ToE closure is exported.
+
+## P3158/S2108 post-P3157 unit-source dependency reconciliation
+
+`P3158/S2108` builds `U_mass_unit_source_dependency_DAG`, reconciling the formal `Omega_M` torsor from P3157 with the existing P3116-P3124 unit/source chain.  The finite DAG has no current accepting closure path to a strict mass/action unit; the missing leaf cut remains nonempty.  No strict mass unit, K_dim/Omega_dim source, Higgs coupling, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE closure is exported.

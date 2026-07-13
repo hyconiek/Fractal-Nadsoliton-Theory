@@ -1,0 +1,186 @@
+{
+  "candidate_source_rows": [
+    {
+      "candidate": "finite small-representation Yukawa/anomaly shape scanner",
+      "noncircular": true,
+      "selects_sm_shape": false,
+      "strict_source_law": false,
+      "verdict": "constructive obstruction: SM shape is allowed but not unique"
+    },
+    {
+      "candidate": "P3150 hypercharge ray",
+      "noncircular": true,
+      "selects_sm_shape": false,
+      "strict_source_law": false,
+      "verdict": "depends on representation slots; cannot source the slots it assumes"
+    },
+    {
+      "candidate": "P3148 R_SM^ax registry",
+      "noncircular": false,
+      "selects_sm_shape": true,
+      "strict_source_law": false,
+      "verdict": "installed target registry, circular as a source"
+    },
+    {
+      "candidate": "P1960/P1961 local Lie/BRST interface",
+      "noncircular": true,
+      "selects_sm_shape": false,
+      "strict_source_law": false,
+      "verdict": "tests compatibility after fields are supplied, not field content selection"
+    }
+  ],
+  "constructed_object": {
+    "classification": "bounded_multi_witness_obstruction",
+    "name": "R_shape^scan finite representation-content source-selection scanner",
+    "scope": "small SU3 singlet/fundamental/antifundamental and SU2 singlet/doublet receiver alphabet for six P3148 slots"
+  },
+  "decision": {
+    "bounded_result": "P3151 constructs the requested representation-content object and proves a finite non-uniqueness obstruction: compatibility is not selection.",
+    "negative_export_flags": {
+      "ToE_closure_exported": false,
+      "bridge_or_role_transfer_exported": false,
+      "global_BV_BRST_exported": false,
+      "selector_closure_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "strict_representation_content_source_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Pivot to one missing physical bridge not already closed by P3150/P3151: audit charge-unit normalization for the hypercharge ray, or audit GR/EH nonproxy coupling for the axiom branch.  The most proof-grade next step is P3152: construct a finite charge-unit normalization obstruction/witness for Y_SM^ray, testing whether any current strict object fixes the scale Y(H)=1/2 without importing the SM electric-charge convention.",
+    "why_not_strict": "The only row that selects the exact SM shape is the installed R_SM^ax registry itself, which is circular.  The noncircular local scanner admits many alternatives and no current strict object supplies an external minimization, chirality, generation, or source law that picks the SM row."
+  },
+  "finite_scan": {
+    "alphabet_slots_per_field": 6,
+    "coarse_anomaly_pass_count": 36,
+    "distinct_dimension_pattern_count": 20,
+    "sample_passing_shapes": [
+      {
+        "d": "(1,1)",
+        "e": "(1,1)",
+        "h": "(1,1)",
+        "l": "(1,1)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(1,1)",
+        "e": "(1,2)",
+        "h": "(1,1)",
+        "l": "(1,2)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(1,1)",
+        "e": "(bar3,1)",
+        "h": "(1,1)",
+        "l": "(3,1)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(1,1)",
+        "e": "(bar3,2)",
+        "h": "(1,1)",
+        "l": "(3,2)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(1,1)",
+        "e": "(3,1)",
+        "h": "(1,1)",
+        "l": "(bar3,1)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(1,1)",
+        "e": "(3,2)",
+        "h": "(1,1)",
+        "l": "(bar3,2)",
+        "q": "(1,1)",
+        "u": "(1,1)"
+      },
+      {
+        "d": "(3,1)",
+        "e": "(3,1)",
+        "h": "(bar3,1)",
+        "l": "(1,1)",
+        "q": "(1,1)",
+        "u": "(3,1)"
+      },
+      {
+        "d": "(3,1)",
+        "e": "(1,1)",
+        "h": "(bar3,1)",
+        "l": "(3,1)",
+        "q": "(1,1)",
+        "u": "(3,1)"
+      },
+      {
+        "d": "(3,1)",
+        "e": "(bar3,1)",
+        "h": "(bar3,1)",
+        "l": "(bar3,1)",
+        "q": "(1,1)",
+        "u": "(3,1)"
+      },
+      {
+        "d": "(bar3,1)",
+        "e": "(bar3,1)",
+        "h": "(3,1)",
+        "l": "(1,1)",
+        "q": "(1,1)",
+        "u": "(bar3,1)"
+      },
+      {
+        "d": "(bar3,1)",
+        "e": "(3,1)",
+        "h": "(3,1)",
+        "l": "(3,1)",
+        "q": "(1,1)",
+        "u": "(bar3,1)"
+      },
+      {
+        "d": "(bar3,1)",
+        "e": "(1,1)",
+        "h": "(3,1)",
+        "l": "(bar3,1)",
+        "q": "(1,1)",
+        "u": "(bar3,1)"
+      }
+    ],
+    "sm_shape": {
+      "d": "(bar3,1)",
+      "e": "(1,1)",
+      "h": "(1,2)",
+      "l": "(1,2)",
+      "q": "(3,2)",
+      "u": "(bar3,1)"
+    },
+    "sm_shape_present": true,
+    "total_shapes_scanned": 46656,
+    "unique_shape_selected": false,
+    "yukawa_shape_pass_count": 216
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "candidate_source_rows": 4,
+      "coarse_anomaly_pass_count": 36,
+      "distinct_dimension_pattern_count": 20,
+      "strict_accepted_source_rows": 0,
+      "total_shapes_scanned": 46656,
+      "yukawa_shape_pass_count": 216
+    },
+    "name": "P3151_T1_representation_shape_nonselection_obstruction",
+    "statement": "On the scanned small receiver alphabet, the local Yukawa singlet conditions and shape-only anomaly/parity gates do not uniquely select the P3148 one-family representation content.  The SM shape is present, but the pass set contains multiple shapes and multiple dimension patterns.  Therefore current algebraic compatibility checks are receivers, not a strict nadsoliton source law for the five chiral multiplets plus Higgs."
+  },
+  "input_hashes": {
+    "P1962": "7a15c0e13cc81183bbb31873c8cbd62a896d20d5ebf6adec499b2b55886d9794",
+    "P3148": "0d0e5116b9295bae30bcad72f0ec3d62479d6ade80938c5879b27b23a2dbddc8",
+    "P3149": "fa84e9516c9d39dc4c66f2e00adf799e0dc670ad255178dafcbe4ddc67453d75",
+    "P3150": "f8d24054982663baebba70a68bf14e1b28251c1db49a39e0462a878298798835"
+  },
+  "status": "P3151_RSM_REPRESENTATION_CONTENT_SOURCE_SELECTION_MULTI_WITNESS_NO_STRICT_SOURCE"
+}
