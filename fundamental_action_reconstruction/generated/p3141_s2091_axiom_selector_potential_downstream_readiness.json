@@ -1,0 +1,274 @@
+{
+  "constructed_object": {
+    "axiom_pair": {
+      "lambda0": 1,
+      "r0": 0
+    },
+    "classification": "non_strict_axiom_branch_potential",
+    "formula": "V_ax(r,lambda)=mu*(w_origin*d_Z12(r,r0)^2 + w_lambda*(1-lambda*lambda0)/2)",
+    "name": "V_ax^sel finite axiom selector potential"
+  },
+  "decision": {
+    "bounded_result": "P3141 constructs the missing finite symmetry-breaking potential for the P3140 axiom branch.  It is computationally decisive inside the non-strict branch: all audited positive weights uniquely select (0,+1).  It does not promote to strict physics because the weights, scale, field lift, unit normalization, and bridge/role-transfer/L_total/ToE links are absent.",
+    "negative_export_flags": {
+      "L_total_exported": false,
+      "ToE_closure_exported": false,
+      "bridge_completion_exported": false,
+      "field_variational_EOM_exported": false,
+      "legacy_role_transfer_exported": false,
+      "strict_QW_2191_discharged": false,
+      "strict_selector_closure_exported": false,
+      "strict_weight_source_exported": false,
+      "unit_bearing_selector_action_exported": false
+    },
+    "next_honest_step": "For the axiom branch, the next proof-grade move is exactly one downstream theorem: either a unit-bearing scale/source theorem for mu and the weights, or a field-variational lift of V_ax with a real EOM derivative.  For strict-core work, the next move remains deriving one of A_origin, A_lambda, A_coupling, or the potential weights from a new strict source rather than assuming them.",
+    "positive_scoped_flags": {
+      "conditional_symmetry_breaking_engine_available_non_strictly": true,
+      "non_strict_selector_potential_constructed": true,
+      "unique_minimizer_theorem_exported_in_axiom_branch": true
+    }
+  },
+  "downstream_gate_rows": [
+    {
+      "detail": "all positive audited weights uniquely select the axiom pair",
+      "gate": "finite_unique_minimizer",
+      "passed": true
+    },
+    {
+      "detail": "the minimizer agrees with P3140 A_origin + A_lambda",
+      "gate": "non_strict_axiom_consistency",
+      "passed": true
+    },
+    {
+      "detail": "w_origin, w_lambda, and mu are assumed branch parameters, not strict sourced constants",
+      "gate": "strict_weight_source",
+      "passed": false
+    },
+    {
+      "detail": "mu is dimensionless here; no action unit or physical normalization is exported",
+      "gate": "unit_bearing_scale",
+      "passed": false
+    },
+    {
+      "detail": "finite pair penalties are not a field-space functional derivative or EOM",
+      "gate": "field_variational_lift",
+      "passed": false
+    },
+    {
+      "detail": "selector potential alone does not complete legacy->strict bridge, role transfer, L_total, or ToE",
+      "gate": "bridge_role_transfer_ToE",
+      "passed": false
+    }
+  ],
+  "finite_theorem": {
+    "finite_counts": {
+      "pair_space_size": 24,
+      "strict_weight_source_rows": 0,
+      "unique_minimizer_rows": 9,
+      "unit_bearing_scale_rows": 0,
+      "weight_pairs_tested": 9
+    },
+    "name": "P3141_T1_axiom_selector_potential_unique_minimizer",
+    "statement": "For every audited positive integer weight pair (w_origin,w_lambda) in {1,2,3}^2, the finite axiom potential V_ax(r,lambda)=mu*(w_origin*d_Z12(r,r0)^2 + w_lambda*(1-lambda*lambda0)/2) has a unique minimizer at the P3140 axiom-selected pair (r0,lambda0)=(0,+1).  This constructs a usable non-strict symmetry-breaking potential, but the weights and scale are assumed and do not supply strict source provenance or unit-bearing variational closure."
+  },
+  "input_hashes": {
+    "P3139": "6492f00b7f4a7dc30e4d5566227e97fa8a14c893ef3c50da6b1685f59a1f9301",
+    "P3140": "5eb96d4ec8ffb066979ecf194755860856cbe2dc6673d07bcdd69ab7d8609ad2"
+  },
+  "potential_rows": [
+    {
+      "first_gap": 1,
+      "max_value": 37,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 1,
+      "w_origin": 1
+    },
+    {
+      "first_gap": 1,
+      "max_value": 38,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 2,
+      "w_origin": 1
+    },
+    {
+      "first_gap": 1,
+      "max_value": 39,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 3,
+      "w_origin": 1
+    },
+    {
+      "first_gap": 1,
+      "max_value": 73,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 1,
+      "w_origin": 2
+    },
+    {
+      "first_gap": 2,
+      "max_value": 74,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 2,
+      "w_origin": 2
+    },
+    {
+      "first_gap": 2,
+      "max_value": 75,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 3,
+      "w_origin": 2
+    },
+    {
+      "first_gap": 1,
+      "max_value": 109,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 1,
+      "w_origin": 3
+    },
+    {
+      "first_gap": 2,
+      "max_value": 110,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 2,
+      "w_origin": 3
+    },
+    {
+      "first_gap": 3,
+      "max_value": 111,
+      "min_value": 0,
+      "minimizers": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mu": 1,
+      "selected_pair": [
+        0,
+        1
+      ],
+      "strict_weight_source_exported": false,
+      "unique_minimizer": true,
+      "unit_bearing_scale_exported": false,
+      "w_lambda": 3,
+      "w_origin": 3
+    }
+  ],
+  "repo_context": {
+    "P3139_status": "P3139_DHL_LANE_NO_NEW_LIVE_FRONTIER_RECONCILIATION",
+    "P3140_status": "P3140_AXIOM_AUGMENTED_SELECTOR_PREMISE_CALCULUS_NON_STRICT"
+  },
+  "status": "P3141_AXIOM_SELECTOR_POTENTIAL_DOWNSTREAM_READINESS_BOUNDED_NON_STRICT"
+}

@@ -1,0 +1,214 @@
+{
+  "axiom_package_rows": [
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 0,
+      "axioms": [],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": false,
+      "selects_unique_lambda": false,
+      "selects_unique_origin": false,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 24
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 1,
+      "axioms": [
+        "A_origin"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": false,
+      "selects_unique_lambda": false,
+      "selects_unique_origin": true,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 2
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 1,
+      "axioms": [
+        "A_lambda"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": false,
+      "selects_unique_lambda": true,
+      "selects_unique_origin": false,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 12
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 1,
+      "axioms": [
+        "A_coupling"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": true,
+      "selects_unique_lambda": false,
+      "selects_unique_origin": false,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 24
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 2,
+      "axioms": [
+        "A_origin",
+        "A_lambda"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": false,
+      "selects_unique_lambda": true,
+      "selects_unique_origin": true,
+      "selects_unique_pair": true,
+      "strict_source_exported": false,
+      "surviving_pairs": 1
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 2,
+      "axioms": [
+        "A_origin",
+        "A_coupling"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": true,
+      "selects_unique_lambda": false,
+      "selects_unique_origin": true,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 2
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 2,
+      "axioms": [
+        "A_lambda",
+        "A_coupling"
+      ],
+      "classification": "incomplete_axiom_package",
+      "conditional_non_strict_J_DHL_exported": false,
+      "has_DHL_coupling_axiom": true,
+      "selects_unique_lambda": true,
+      "selects_unique_origin": false,
+      "selects_unique_pair": false,
+      "strict_source_exported": false,
+      "surviving_pairs": 12
+    },
+    {
+      "QW_2191_discharged_strictly": false,
+      "axiom_count": 3,
+      "axioms": [
+        "A_origin",
+        "A_lambda",
+        "A_coupling"
+      ],
+      "classification": "non_strict_axiom_augmented_selector",
+      "conditional_non_strict_J_DHL_exported": true,
+      "has_DHL_coupling_axiom": true,
+      "selects_unique_lambda": true,
+      "selects_unique_origin": true,
+      "selects_unique_pair": true,
+      "strict_source_exported": false,
+      "surviving_pairs": 1
+    }
+  ],
+  "constructed_object": {
+    "axioms": {
+      "A_coupling": "postulate that the selected pair (r0,lambda0) couples to the P3134 D_HL formula as the selector channel",
+      "A_lambda": "postulate one polarity lambda0 in {+1,-1}",
+      "A_origin": "postulate one absolute support representative r0 in Z12"
+    },
+    "name": "S_sel^ax(D_HL) axiom-augmented selector premise calculus",
+    "selected_pair_under_full_axiom_package": {
+      "lambda0": 1,
+      "note": "0,+1 are conventionally named representatives inside the axiom package; strict provenance is not claimed",
+      "r0": 0
+    }
+  },
+  "decision": {
+    "bounded_result": "Assuming axioms can honestly break the selector symmetry, but only as a labelled non-strict extension.  The minimal D_HL package is A_origin + A_lambda + A_coupling: it selects one stipulated pair and couples it to D_HL.  It does not prove strict provenance, does not erase QW-2191 from the strict core, and does not by itself supply variational/unit/L_total or ToE closure.",
+    "negative_export_flags": {
+      "D_HL_strict_source_exported": false,
+      "Gamma_SO_exported_strictly": false,
+      "L_total_exported": false,
+      "QW_2191_discharged_strictly": false,
+      "ToE_closure_exported": false,
+      "Zeta_OS_exported_strictly": false,
+      "bridge_completion_exported": false,
+      "legacy_role_transfer_exported": false,
+      "strict_selector_source_exported": false
+    },
+    "next_honest_step": "If the project accepts an axiom route, formalize a separate non-strict axiom-augmented branch with A_origin, A_lambda, and A_coupling as explicit assumptions, then audit downstream consequences without calling them strict.  If the project stays strict-core, do not use the axiom package as evidence; pivot to one genuinely new strict source object that can derive one of these axioms rather than assume it.",
+    "positive_scoped_flags": {
+      "conditional_non_strict_J_DHL_exported_under_full_axioms": true,
+      "minimal_axiom_package_identified": true,
+      "non_strict_axiom_calculus_exported": true
+    }
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "axiom_packages_tested": 8,
+      "minimal_non_strict_closing_packages": 1,
+      "no_axiom_orbit_size_under_translation_aut_lambda_flip": 24,
+      "pair_space_size": 24
+    },
+    "name": "P3140_T1_axiom_augmented_DHL_selector_calculus",
+    "statement": "On the finite pair space Z12 x {±1}, no current strict artifact selects a unique joint pair.  Adding A_origin and A_lambda reduces the pair space to one stipulated pair, and adding A_coupling turns that pair into a conditional D_HL selector channel.  This is a valid non-strict axiom-augmented closure, but it is not a strict-source theorem and does not discharge QW-2191 in the strict core."
+  },
+  "input_hashes": {
+    "D1": "9bfec119a51f32eb7446d21cb5e3dbf89086f699c99f407b92245df9d7a08d4d",
+    "P1521": "ed8b0f2f719b86e44e81e4c6ff2115dc8d62adee0d803c366745fd1ee7ebf912",
+    "P2164": "925a251faebcd06f7dacb293e5c6674dee6b474b0831ca2316c872d56c8efbcb",
+    "P3139": "6492f00b7f4a7dc30e4d5566227e97fa8a14c893ef3c50da6b1685f59a1f9301"
+  },
+  "obligation_rows": [
+    {
+      "axiom_needed": "A_origin",
+      "non_strict_if_assumed": true,
+      "obligation": "absolute_origin",
+      "strict_current": false
+    },
+    {
+      "axiom_needed": "A_lambda",
+      "non_strict_if_assumed": true,
+      "obligation": "unpaired_lambda",
+      "strict_current": false
+    },
+    {
+      "axiom_needed": "A_coupling",
+      "non_strict_if_assumed": true,
+      "obligation": "DHL_selector_coupling",
+      "strict_current": false
+    },
+    {
+      "axiom_needed": null,
+      "non_strict_if_assumed": false,
+      "obligation": "strict_source_provenance",
+      "strict_current": false
+    },
+    {
+      "axiom_needed": "downstream theorem even after selector axioms",
+      "non_strict_if_assumed": false,
+      "obligation": "variational_unit_Ltotal_bridge",
+      "strict_current": false
+    }
+  ],
+  "repo_context": {
+    "D1_project_conclusion": "selector_axiom_not_currently_required_for_sigma_int_theta_supply_in_declared_scope_but_global_physical_uniqueness_and_strict_core_selector_closure_remain_open_under_QW2191_discipline",
+    "P2164_selected_lane": "QW-2191_selector_obstruction",
+    "P3139_status": "P3139_DHL_LANE_NO_NEW_LIVE_FRONTIER_RECONCILIATION"
+  },
+  "status": "P3140_AXIOM_AUGMENTED_SELECTOR_PREMISE_CALCULUS_NON_STRICT"
+}

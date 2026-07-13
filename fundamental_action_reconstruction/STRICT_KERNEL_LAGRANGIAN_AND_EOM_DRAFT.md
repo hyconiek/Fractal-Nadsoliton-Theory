@@ -3624,3 +3624,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3137/S2087 F_DHL frame source is not a variational source
 
 `P3137/S2087` proves that the current Fourier-frame/source candidate space does not export an import-free primitive character and phase-zero source.  Therefore the Fourier-phase `D_HL` reconstruction cannot yet become a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, or role-transfer theorem.
+
+## P3138/S2088 E_DHL extremum receiver is not a variational source
+
+`P3138/S2088` shows that local extremum/zero-crossing data for the constructed `D_HL` profile are receiver data, not an import-free source law for an absolute support origin and polarity.  They cannot yet define a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, role-transfer theorem, or ToE closure.
+
+## P3139/S2089 D_HL lane remains non-variational
+
+`P3139/S2089` closes the current `D_HL` receiver family as no-new-live-frontier for variational purposes.  Without a strict source law for absolute support origin and unpaired polarity, no `D_HL` receiver can define a Lagrangian density, Hamiltonian normalization, spacetime EOM, physical unit, `L_total`, bridge-completion theorem, role-transfer theorem, or ToE closure.
+
+## P3140/S2090 axiom branch is non-strict and non-variational by itself
+
+`P3140/S2090` permits a labelled non-strict branch in which selector axioms choose and couple a `D_HL` pair.  The branch cannot be used as strict variational provenance: unit-bearing action, Hamiltonian normalization, spacetime EOM, `L_total`, bridge-completion theorem, role-transfer theorem, and ToE closure remain downstream and unexported.
+
+## P3141/S2091 V_ax remains non-strict and lacks unit-bearing EOM lift
+
+`P3141/S2091` gives a finite axiom-branch potential with a unique minimizer, but its weights and scale are assumed and dimensionless, and no field-space variational lift or EOM derivative is exported.  It therefore cannot be promoted to unit-bearing action, Hamiltonian normalization, spacetime EOM, `L_total`, bridge-completion theorem, role-transfer theorem, or ToE closure.

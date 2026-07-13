@@ -4255,3 +4255,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3137/S2087 Fourier-frame source law F_DHL audit
 
 `P3137/S2087` constructs the `F_DHL` Fourier-frame/source candidate space required after P3136: primitive characters `U(12)={1,5,7,11}`, primitive pairs `{1,11}/{5,7}`, and `12` phase-zero cells.  The finite audit computes active character pairs for all `120` P3134/P3136 profiles: `48` have primitive active pairs and `72` have nonprimitive active pairs.  The primitive characters form one `Aut(Z12)` orbit and the primitive pairs also form one orbit, while phase-zero remains a translated `12`-cell choice.  Nine repo-backed source candidates are tested against character/frame selection, phase-zero selection, primitive restriction, and import freedom; `0` pass all gates.  No `F_DHL`, import-free `J_DHL`, `D_HL` source, `Zeta_OS`, `Gamma_SO`, selector closure, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3138/S2088 non-Fourier D_HL extremum joint-source audit
+
+`P3138/S2088` constructs exactly one non-Fourier joint source candidate for the P3134 `D_HL` family: `E_DHL`, based on local zero-crossings, forward-difference extrema, and second-difference curvature extrema.  The finite audit covers `120` profiles.  The receiver structure is real, but all rows remain translation-covariant rather than absolute after the diagonal `Z12` quotient, inversion pairs positive/negative polarity classes, and higher-mode rows introduce equal-extremum ties.  Therefore no import-free `(r,lambda)` source, `D_HL` source, `Zeta_OS`, `Gamma_SO`, selector closure, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3139/S2089 D_HL lane no-new-live-frontier reconciliation
+
+`P3139/S2089` reconciles P3133-P3138 by constructing a compact source-obligation matrix and receiver-to-source obstruction theorem for the `D_HL` lane.  The lane has real local mathematics (`D_HL`) and real receivers (Fourier phase/frame and non-Fourier extrema), but no current artifact satisfies the combined obligations of absolute support origin after the `Z12` quotient, unpaired `lambda` polarity, import-free strict source law, and variational/unit coupling.  Therefore the current `D_HL` selector/symmetry-breaking lane is no-new-live-frontier unless a genuinely new strict typed object outside these receiver families is supplied.
+
+## P3140/S2090 axiom-augmented selector premise calculus
+
+`P3140/S2090` answers the axiom route explicitly.  On `Z12 x {±1}`, the non-strict axiom package `A_origin + A_lambda + A_coupling` selects one stipulated `(r0,lambda0)` pair and couples it to the P3134 `D_HL` channel.  This is a valid axiom-augmented selector branch, but it is explicitly non-strict: no strict selector source, strict `QW-2191` discharge, `D_HL` source, `Zeta_OS`, `Gamma_SO`, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3141/S2091 axiom selector potential downstream-readiness audit
+
+`P3141/S2091` constructs the finite non-strict selector potential `V_ax(r,lambda)=mu*(w_origin*d_Z12(r,r0)^2 + w_lambda*(1-lambda*lambda0)/2)` for the P3140 axiom branch.  Across `9` positive integer weight pairs, the potential has a unique minimizer at the axiom-selected `(0,+1)` pair.  This supplies a conditional symmetry-breaking engine inside the non-strict branch only: no strict weight source, unit-bearing selector action, field variational EOM, strict `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure is exported.

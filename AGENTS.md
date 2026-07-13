@@ -3084,3 +3084,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The finite audit finds real receiver structure but no source: primitive characters and primitive pairs each remain single `Aut(Z12)` orbits, phase-zero remains a translated `12`-cell choice, and `0/9` repo-backed candidates pass character/frame selection, phase-zero selection, primitive restriction, and import freedom simultaneously.
 - Do not replay Fourier receivers, character projectors, phase gauges, lexicographic labels, or prior `chi_i` localizer lanes as `D_HL`, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure.
 - The next admissible move is either one genuinely new non-Fourier joint source object for `(r,lambda)` or a no-new-live-frontier reconciliation for the `D_HL` lane after P3133-P3137.
+
+## Current non-Fourier D_HL extremum joint-source guardrail (P3138/S2088, 2026-07-13)
+
+- P3138 constructs the allowed non-Fourier `E_DHL` candidate from local zero-crossings, forward-difference extrema, and curvature extrema of the P3134 `D_HL` profiles.
+- The finite audit tests `120` profiles and finds real receiver structure, but no import-free source: extrema/zero data translate with the diagonal `Z12` orbit, inversion pairs polarity classes, and higher modes carry equal-extremum ties requiring imported support-order conventions.
+- Do not promote local extremum/zero-crossing receivers to `J_DHL`, `D_HL`, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, strict selector closure, bridge completion, role transfer, `L_total`, or ToE closure.
+- After P3133-P3138, the next honest move is a no-new-live-frontier reconciliation for the `D_HL` selector/symmetry-breaking lane unless a genuinely new strict source law supplies absolute support origin and polarity without imported labels.
+
+## Current D_HL lane no-new-live-frontier reconciliation guardrail (P3139/S2089, 2026-07-13)
+
+- P3139 reconciles P3133-P3138 by constructing a source-obligation matrix and receiver-to-source obstruction theorem for the `D_HL` selector/symmetry-breaking lane.
+- The lane has real constructed objects and receivers, but no current artifact supplies all missing strict obligations: absolute support origin after the `Z12` quotient, unpaired `lambda` polarity, import-free strict source law, and variational/unit coupling.
+- Do not continue Fourier-frame, local-extremum, orbit-representative, support-order, or receiver-extraction variants as `J_DHL`, `D_HL`, `Zeta_OS`, `Gamma_SO`, `QW-2191` discharge, strict selector closure, bridge completion, role transfer, `L_total`, or ToE closure.
+- The next proof-grade move must pivot to one genuinely new strict typed object outside the `D_HL` receiver family, or preserve this no-new-live-frontier certificate.
+
+## Current axiom-augmented selector premise calculus guardrail (P3140/S2090, 2026-07-13)
+
+- P3140 constructs the explicit non-strict axiom route for the `D_HL` selector lane: `A_origin` chooses an absolute support representative, `A_lambda` chooses polarity, and `A_coupling` couples the chosen pair to `D_HL`.
+- The full package conditionally selects one `(r0,lambda0)` pair on `Z12 x {±1}`, but this is an axiom-augmented branch, not strict-source closure.
+- Do not promote the axiom package to strict `QW-2191` discharge, strict selector closure, `D_HL`/`Zeta_OS`/`Gamma_SO` sourcehood, bridge completion, role transfer, `L_total`, or ToE closure.
+- Next honest move: either maintain a separate non-strict axiom branch and audit downstream consequences under explicit assumptions, or, for strict-core work, construct a genuinely new source theorem deriving one of `A_origin`, `A_lambda`, or `A_coupling` rather than assuming it.
+
+## Current axiom selector potential downstream-readiness guardrail (P3141/S2091, 2026-07-13)
+
+- P3141 constructs a finite non-strict selector potential `V_ax` for the P3140 axiom branch and proves that all `9` audited positive weight pairs uniquely minimize at the stipulated `(r0,lambda0)=(0,+1)` pair.
+- This is a conditional symmetry-breaking engine only inside the axiom branch; the weights, scale, unit normalization, and field-variational lift are not strict sourced.
+- Do not promote `V_ax` to strict `QW-2191` discharge, strict selector closure, unit-bearing action/EOM, bridge completion, role transfer, `L_total`, or ToE closure.
+- Next honest move: in the axiom branch, prove exactly one downstream theorem for unit-bearing scale/weights or field-variational lift; in strict-core work, derive one of the selector axioms or potential weights from a new strict source.
