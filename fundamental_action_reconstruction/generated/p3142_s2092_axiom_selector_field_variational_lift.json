@@ -1,0 +1,806 @@
+{
+  "constructed_object": {
+    "classification": "non_strict_axiom_branch_local_variational_lift",
+    "depends_on_assumptions": [
+      "A_origin",
+      "A_lambda",
+      "A_coupling",
+      "positive assumed weights",
+      "chosen local chart at r0"
+    ],
+    "name": "V_lift^ax local-chart axiom selector functional"
+  },
+  "decision": {
+    "bounded_result": "P3142 constructs the requested axiomatic downstream field-variational object and verifies its derivative/Hessian computationally.  It gives a real conditional symmetry-breaking engine in the non-strict branch, but the engine still imports the selector axioms, weights, local chart, scale, and unit measure.",
+    "negative_export_flags": {
+      "L_total_exported": false,
+      "ToE_closure_exported": false,
+      "bridge_completion_exported": false,
+      "global_Z12_origin_derived": false,
+      "legacy_role_transfer_exported": false,
+      "spacetime_EOM_exported": false,
+      "strict_QW_2191_discharged": false,
+      "strict_selector_closure_exported": false,
+      "unit_bearing_action_exported": false
+    },
+    "next_honest_step": "Do one narrow source audit for the weights/scale of V_lift: construct exactly one candidate strict source for mu, w_theta, w_s, or kappa and test whether it is import-free, unit-bearing, and compatible with the global Z12 quotient.  If no such source is supplied, preserve the P3140-P3142 non-strict axiom-branch boundary.",
+    "theoretical_perspective": "A selector is symmetry-breaking data: it chooses one representative/orientation from an otherwise symmetric orbit.  In this axiom branch it can start a conditional engine by making one channel locally stable, but strict ToE probability does not become high until the selector is sourced non-premise and then coupled to units, variational dynamics, bridge completion, and role transfer."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "parameter_triples_tested": 27,
+      "positive_hessian_rows": 27,
+      "stationary_rows": 27,
+      "strict_weight_source_rows": 0,
+      "unit_bearing_measure_rows": 0
+    },
+    "name": "P3142_T1_axiom_selector_local_variational_lift",
+    "statement": "The local-chart functional V_lift(theta,s)=mu*(w_theta*theta^2 + w_s*(s-1)^2/2 + kappa*(s^2-1)^2) has zero gradient and positive Hessian at the P3140/P3141 axiom-selected branch (theta,s)=(0,+1) for every audited positive integer triple in {1,2,3}^3.  This is a non-strict field-variational lift of the axiom selector potential, not a strict source theorem or unit-bearing action."
+  },
+  "gate_rows": [
+    {
+      "detail": "explicit dV/dtheta and dV/ds are computed",
+      "gate": "local_variational_derivative",
+      "passed": true
+    },
+    {
+      "detail": "all audited positive parameter triples are stationary at the axiom-selected branch",
+      "gate": "selected_point_stationary",
+      "passed": true
+    },
+    {
+      "detail": "the selected point is a strict local minimum in the local chart",
+      "gate": "local_positive_hessian",
+      "passed": true
+    },
+    {
+      "detail": "mu, w_theta, w_s, and kappa are assumed axiom-branch parameters",
+      "gate": "strict_source_weights",
+      "passed": false
+    },
+    {
+      "detail": "the construction uses a chosen local chart at r0 and does not derive the global Z12 origin",
+      "gate": "global_Z12_field_chart",
+      "passed": false
+    },
+    {
+      "detail": "no action measure, physical units, spacetime coupling, bridge role-transfer, or ToE closure is exported",
+      "gate": "unit_bearing_L_total_ToE",
+      "passed": false
+    }
+  ],
+  "input_hashes": {
+    "P3140": "5eb96d4ec8ffb066979ecf194755860856cbe2dc6673d07bcdd69ab7d8609ad2",
+    "P3141": "174079a3a2387dfde045b28275fdd2b4c8d9dc47545bf32857cec3f333a61504"
+  },
+  "parameter_rows": [
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        2,
+        9
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        2,
+        17
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        2,
+        25
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        2,
+        10
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        2,
+        18
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          26
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        2,
+        26
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        2,
+        11
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        2,
+        19
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        2,
+        27
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 1
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        4,
+        9
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        4,
+        17
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        4,
+        25
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        4,
+        10
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        4,
+        18
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          26
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        4,
+        26
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        4,
+        11
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        4,
+        19
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        4,
+        27
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 2
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        6,
+        9
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        6,
+        17
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        6,
+        25
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 1,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        6,
+        10
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        6,
+        18
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          26
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        6,
+        26
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 2,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "kappa": 1,
+      "positive_eigenvalues": [
+        6,
+        11
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "kappa": 2,
+      "positive_eigenvalues": [
+        6,
+        19
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 3
+    },
+    {
+      "global_Z12_chart_exported": false,
+      "gradient_at_selected": [
+        "0",
+        "0"
+      ],
+      "hessian_at_selected": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "kappa": 3,
+      "positive_eigenvalues": [
+        6,
+        27
+      ],
+      "strict_weight_source_exported": false,
+      "unit_bearing_measure_exported": false,
+      "w_s": 3,
+      "w_theta": 3
+    }
+  ],
+  "repo_context": {
+    "P3140_status": "P3140_AXIOM_AUGMENTED_SELECTOR_PREMISE_CALCULUS_NON_STRICT",
+    "P3141_status": "P3141_AXIOM_SELECTOR_POTENTIAL_DOWNSTREAM_READINESS_BOUNDED_NON_STRICT"
+  },
+  "status": "P3142_AXIOM_SELECTOR_FIELD_VARIATIONAL_LIFT_BOUNDED_NON_STRICT",
+  "symbolic_variation": {
+    "formula": "mu*(kappa*(s**2 - 1)**2 + theta**2*w_theta + w_s*(s - 1)**2/2)",
+    "gradient": [
+      "2*mu*theta*w_theta",
+      "mu*(4*kappa*s*(s**2 - 1) + w_s*(2*s - 2)/2)"
+    ],
+    "gradient_at_selected": [
+      "0",
+      "0"
+    ],
+    "hessian_at_selected": "Matrix([[2*mu*w_theta, 0], [0, mu*(8*kappa + w_s)]])",
+    "hessian_eigenvalues_at_selected": {
+      "2*mu*w_theta": "1",
+      "mu*(8*kappa + w_s)": "1"
+    },
+    "positive_definite_for_positive_parameters": true,
+    "variables": [
+      "theta",
+      "s"
+    ]
+  }
+}

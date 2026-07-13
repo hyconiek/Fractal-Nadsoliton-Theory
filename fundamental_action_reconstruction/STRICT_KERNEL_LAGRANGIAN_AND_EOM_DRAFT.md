@@ -3640,3 +3640,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3141/S2091 V_ax remains non-strict and lacks unit-bearing EOM lift
 
 `P3141/S2091` gives a finite axiom-branch potential with a unique minimizer, but its weights and scale are assumed and dimensionless, and no field-space variational lift or EOM derivative is exported.  It therefore cannot be promoted to unit-bearing action, Hamiltonian normalization, spacetime EOM, `L_total`, bridge-completion theorem, role-transfer theorem, or ToE closure.
+
+## P3142/S2092 V_lift local EOM remains axiom-branch only
+
+`P3142/S2092` supplies an explicit local derivative and positive Hessian for the axiom selector potential, so the non-strict branch now has a toy field-variational lift.  The lift still imports `A_origin`, `A_lambda`, assumed weights/scale, and a local chart; it does not provide a strict global selector source, physical unit measure, spacetime stress/EOM coupling, `L_total`, bridge-completion theorem, role-transfer theorem, or ToE closure.
+
+## P3143/S2093 V_lift weights remain unsourced
+
+`P3143/S2093` checks whether existing positive scalar lanes can source `V_lift` weights/scale.  The finite obstruction matrix accepts no row as a strict unit-bearing source, so the local variational lift remains a non-strict axiom-branch toy functional rather than a physical action/EOM term.  A next move must introduce a genuinely new unit-measure object `Upsilon_sel` or preserve the no-strict-source boundary.
+
+## P3144/S2094 Upsilon_sel measure remains selector-blind
+
+`P3144/S2094` supplies the finite unit-measure obstruction requested after P3143: the only source-free invariant unit measure on the selector pair space is uniform over the full `24`-point orbit, while any localized selector measure imports the axiom branch.  Thus no physical action measure or selector-localized EOM term is installed.
+
+## P3145/S2095 reverse SM/GR layout remains receiver-only
+
+`P3145/S2095` maps metric geometry, GR stress-energy, gauge scaffold, couplings, masses, chirality, RG damping, quantum readout, light/matter order, and physical units onto strict-kernel receiver slots.  None of the rows currently supplies a unit-bearing nonproxy Lagrangian/EOM term or full SM/GR reduction theorem.
