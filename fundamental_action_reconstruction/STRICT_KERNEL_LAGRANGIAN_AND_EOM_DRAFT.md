@@ -3676,3 +3676,35 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3150/S2100 hypercharge ray is conditional
 
 `P3150/S2100` proves that the installed one-family field/Yukawa/anomaly pattern fixes the hypercharge ratios up to scale.  It does not derive that field pattern from the strict kernel, fix the absolute charge normalization from a physical unit theorem, or install the result in a unit-bearing Lagrangian/EOM.
+
+## P3151/S2101 representation content remains installed
+
+`P3151/S2101` shows that `R_SM^ax` remains an installed representation registry: the finite local algebraic receiver tests admit the SM shape but do not uniquely select it.  A physical Lagrangian/EOM package would still need a noncircular source of field content, charge normalization, unit measure, and global BV/BRST plus GR/EH coupling.
+
+## P3152/S2102 charge unit remains unsourced
+
+`P3152/S2102` proves that the local matter/Higgs algebra remains invariant under nonzero hypercharge rescaling.  Fixing `Y(H)=1/2` still imports the SM electric-charge convention; a unit-bearing Lagrangian/EOM would require a noncircular strict U(1) charge valuation or a different physical-unit source theorem.
+
+## P3153/S2103 EH coupling source gap
+
+`P3153/S2103` verifies that nonflat FRW metric receivers carry nonzero Einstein tensor residuals unless a stress-energy/cosmological source is supplied.  The axiom branch currently lacks the noncircular state/VEV/unit/metric-variation theorem needed to turn local SM receivers into a unit-bearing Einstein-Hilbert coupling.
+
+## P3154/S2104 Higgs Tmunu remains conditional
+
+`P3154/S2104` turns the local P3149 Higgs receiver into a symbolic stress-energy tensor candidate.  The tensor is conserved only on a sourced Higgs/KG state, and current artifacts do not export the required nonzero condensate/state, potential scale, Newton coupling, or full metric variation theorem.
+
+## P3155/S2105 VEV source remains missing
+
+`P3155/S2105` proves that the symbolic Higgs stress-energy candidate from P3154 still needs an imported VEV/coupling scale.  Dimensionless strict scalar invariants and conditional axiom weights do not by themselves determine `mu2`, `lambda`, `v^2=mu2/lambda`, Newton coupling, or a full metric variation theorem.
+
+## P3156/S2106 alpha_geo Higgs formula remains unit-blocked
+
+`P3156/S2106` shows that `alpha_geo` can only provide dimensionless Higgs-coupling ratios unless a mass-squared unit is imported.  The axiom-branch Higgs/SM/EH lane therefore remains blocked by the independent strict mass/action-unit source problem.
+
+## P3157/S2107 Omega_M is formal not sourced
+
+`P3157/S2107` shows that a formal mass unit would repair the dimensional defect in P3156, but without a strict source law for the positive torsor representative it is only a gauge/postulate.  The Higgs/SM/EH lane remains blocked by the same unit-source problem isolated by P3116.
+
+## P3158/S2108 unit-source dependency remains open
+
+`P3158/S2108` confirms that the formal mass-unit carrier from P3157 cannot be promoted without a new source leaf in the P3116-P3124 unit chain.  The Higgs/SM/EH branch should remain conditional until such a source law is supplied.

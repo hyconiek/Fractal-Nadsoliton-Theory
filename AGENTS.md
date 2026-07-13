@@ -3178,3 +3178,65 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This is real algebraic progress but not strict source closure: it assumes the SM-like field/Yukawa/anomaly pattern, leaves absolute charge normalization conventional, and does not source representation content from the nadsoliton.
 - Do not promote `Y_SM^ray` to strict SM generation, unit-bearing `L_total`, global BV/BRST, GR/EH closure, bridge/role transfer, or ToE.
 - Next honest move: audit whether any strict object selects the representation content itself — the five chiral multiplets plus Higgs dimensions — without importing SM family data; otherwise preserve this as conditional phenomenology and pivot to charge-unit normalization or GR/EH nonproxy coupling.
+
+## Current R_SM representation-content source-selection guardrail (P3151/S2101, 2026-07-13)
+
+- P3151 constructs `R_shape^scan`, a finite source-selection scanner for the P3148/P3150 representation content.
+- The scanned small `SU(3)xSU(2)` receiver alphabet contains the SM one-family shape, but Yukawa singlet gates plus shape-only anomaly/parity gates admit multiple shapes and multiple dimension patterns.
+- This proves compatibility is not source-selection: current strict artifacts do not noncircularly select the five chiral multiplets plus Higgs.
+- Do not promote `R_shape^scan`, `R_SM^ax`, or `Y_SM^ray` to strict SM generation, unit-bearing `L_total`, global BV/BRST, GR/EH closure, selector closure, bridge/role transfer, or ToE.
+- Next honest move: pivot to charge-unit normalization for `Y_SM^ray` or GR/EH nonproxy coupling; the most finite proof-grade option is a P3152 charge-unit normalization obstruction/witness for fixing `Y(H)=1/2` without importing the SM electric-charge convention.
+
+## Current Y_SM charge-unit normalization guardrail (P3152/S2102, 2026-07-13)
+
+- P3152 constructs `U_Y^tors`, the charge-unit normalization torsor for the P3150 hypercharge ray.
+- All sampled nonzero rational rescalings preserve the Yukawa/anomaly residual equations, while `Y(H)`, the hypercharge gcd, and electric-charge values vary.
+- This closes the current axiom-branch SM source-selection stack as conditional: representation content, hypercharge ray, and charge unit are not strict-sourced by current artifacts.
+- Do not promote `U_Y^tors`, `Y_SM^ray`, `R_shape^scan`, or `R_SM^ax` to strict SM generation, unit-bearing `L_total`, global BV/BRST, GR/EH closure, selector closure, bridge/role transfer, or ToE.
+- Next honest move: pivot to a GR/EH nonproxy coupling audit for the axiom branch, unless a genuinely new strict U(1) charge-valuation object is introduced.
+
+## Current axiom GR/EH nonproxy coupling guardrail (P3153/S2103, 2026-07-13)
+
+- P3153 constructs `G_EH^ax`, a finite FRW/EH nonproxy coupling audit for the axiom branch after P3152.
+- Exact flat-FRW residual rows show only the static Minkowski baseline is vacuum-zero; audited nonflat metric receivers require a stress-energy or cosmological source.
+- Current artifacts do not export a full EH coupling package: metric bundle, `T_mu_nu`, Newton/action unit, nonproxy variation, and noncircular strict source are not jointly present in any row.
+- Do not promote `G_EH^ax`, local SM receivers, conditional units, or residual scaffolds to GR closure, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: P3154 should construct exactly one symbolic stress-energy candidate from the P3149 matter/Higgs local Lagrangian and test conservation plus coupling dimensions; otherwise preserve the EH source-gap boundary.
+
+## Current axiom Higgs stress-energy candidate guardrail (P3154/S2104, 2026-07-13)
+
+- P3154 constructs `T_H^ax`, a symbolic homogeneous Higgs stress-energy candidate from the P3149 local Higgs/matter Lagrangian interface.
+- The exact conservation identity holds only as `nabla_mu T^{mu0}=hdot*(KG_h)`, so conservation requires a Higgs/KG state equation rather than following from the local receiver alone.
+- Current artifacts do not export a noncircular Higgs state/VEV, dimensionful potential/Newton unit, or full metric-variation bundle.
+- Do not promote `T_H^ax` to EH coupling closure, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: P3155 should audit exactly one VEV/state-source candidate from current strict scalar invariants; otherwise freeze the axiom-branch EH stress-energy route as conditional.
+
+## Current Higgs VEV/state-source audit guardrail (P3155/S2105, 2026-07-13)
+
+- P3155 constructs `V_H^source`, the VEV/state-source gate for the P3154 Higgs stress-energy candidate.
+- The exact quartic stationary structure requires `v^2=mu2/lambda`; current strict scalar artifacts do not export `mu2`, `lambda`, the dimensionful VEV unit, or a noncircular Higgs state equation.
+- The axiom-branch SM/EH stack behaves coherently as conditional model-building but remains below strict physical generation in known-physics terms.
+- Do not promote P3155, P3154, or the P3150-P3153 scaffolds to strict VEV, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: freeze this SM/EH source route unless a new strict scalar-to-Higgs-coupling formula is introduced; otherwise pivot to independent strict unit/action-source or selector-source intake.
+
+## Current alpha_geo to Higgs-coupling formula audit guardrail (P3156/S2106, 2026-07-13)
+
+- P3156 audits exactly one new formula schema `Phi_alpha^H` from `alpha_geo` to Higgs couplings.
+- Raw `alpha_geo` formulas are dimensionally invalid for `mu2`; dimensionally valid variants import an external mass-squared scale `M2`.
+- Do not continue the axiom-branch Higgs/SM/EH lane without a genuinely new strict mass-unit source.
+- Do not promote P3156 to strict Higgs couplings, VEV, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: pivot to the independent `Omega_dim/K_dim` unit-source obligation from P3116, or to selector-source intake only if a new non-premise source object is supplied.
+
+## Current Omega_dim mass-unit torsor audit guardrail (P3157/S2107, 2026-07-13)
+
+- P3157 constructs `Omega_M`, a formal positive mass-unit torsor for the P3156 alpha-to-Higgs schema.
+- `mu2=alpha_geo*Omega_M^2` and `lambda=alpha_geo` are dimensionally valid, but `Omega_M -> c Omega_M` leaves compatibility intact and no strict source law selects `c`.
+- Do not promote `Omega_M` to a strict mass unit, K_dim functor, Higgs coupling/VEV source, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: construct exactly one strict source law for the positive mass/action unit torsor via the P3116 `Omega_dim/K_dim` obligation, or preserve the no-strict-unit boundary.
+
+## Current post-P3157 unit-source dependency guardrail (P3158/S2108, 2026-07-13)
+
+- P3158 constructs `U_mass_unit_source_dependency_DAG`, a finite dependency reconciliation for turning P3157 `Omega_M` into a strict mass/action unit.
+- Current artifacts provide no accepting closure path through P3116-P3124; the missing leaf cut remains nonempty.
+- Do not promote the formal mass-unit torsor, Higgs/SM/EH scaffold, or unit-chain bookkeeping to strict units, `L_total`, SM/GR generation, selector closure, bridge/role transfer, or ToE.
+- Next honest move: supply exactly one new leaf source object such as `Lambda_origin_source_localizer` or a genuine positive torsor source law for `Omega_M`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.

@@ -1,0 +1,86 @@
+{
+  "constructed_object": {
+    "classification": "single_formula_schema_dimension_and_source_audit",
+    "name": "Phi_alpha^H alpha_geo-to-Higgs-coupling formula schema",
+    "scope": "tests whether S=alpha_geo can source both mu2 and lambda with units"
+  },
+  "decision": {
+    "bounded_result": "P3156 satisfies the P3155 continuation rule by auditing exactly one new formula schema.  It fails as a strict source because alpha_geo is dimensionless and the only dimensionally valid variants import M2.",
+    "negative_export_flags": {
+      "ToE_closure_exported": false,
+      "bridge_or_role_transfer_exported": false,
+      "einstein_hilbert_coupling_exported": false,
+      "selector_closure_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "strict_higgs_couplings_exported": false,
+      "strict_higgs_vev_exported": false,
+      "strict_mass_unit_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Do not continue the axiom-branch Higgs/SM/EH lane without a genuinely new strict mass-unit source.  The next proof-grade move should pivot to the independent Omega_dim/K_dim unit-source obligation from P3116, or to a selector-source intake if a new non-premise source object is supplied."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "accepted_strict_formula_rows": 0,
+      "dimensionally_valid_rows": 2,
+      "formula_schema_count": 1,
+      "formula_variant_rows": 3,
+      "rows_importing_mass_scale": 2
+    },
+    "name": "P3156_T1_alpha_geo_higgs_coupling_unit_obstruction",
+    "statement": "The single audited schema Phi_alpha^H can make dimensionless Higgs-coupling ratios from S=alpha_geo, but the Higgs mass parameter mu2 has mass dimension two.  Raw alpha_geo formulas are dimensionally invalid for mu2; dimensionally valid variants require an imported mass^2 scale M2.  Current artifacts therefore do not export a strict scalar-to-Higgs-coupling source for both mu2 and lambda with units."
+  },
+  "formula_rows": [
+    {
+      "accepted_strict_formula": false,
+      "comment": "uses alpha_geo directly for both couplings",
+      "dimensionally_valid_higgs_couplings": false,
+      "imports_mass_scale": false,
+      "lambda_dimension": 0,
+      "lambda_formula": "S",
+      "mu2_dimension": 0,
+      "mu2_formula": "S",
+      "row": "raw_dimensionless_alpha",
+      "strict_mass_unit_source_exported": false,
+      "v2_dimension": 0,
+      "v2_formula": "1"
+    },
+    {
+      "accepted_strict_formula": false,
+      "comment": "dimensionally valid only after importing an external mass^2 unit M2",
+      "dimensionally_valid_higgs_couplings": true,
+      "imports_mass_scale": true,
+      "lambda_dimension": 0,
+      "lambda_formula": "S",
+      "mu2_dimension": 2,
+      "mu2_formula": "M2*S",
+      "row": "alpha_ratio_with_imported_mass_scale",
+      "strict_mass_unit_source_exported": false,
+      "v2_dimension": 2,
+      "v2_formula": "M2"
+    },
+    {
+      "accepted_strict_formula": false,
+      "comment": "changes dimensionless ratio but still imports M2",
+      "dimensionally_valid_higgs_couplings": true,
+      "imports_mass_scale": true,
+      "lambda_dimension": 0,
+      "lambda_formula": "S**2",
+      "mu2_dimension": 2,
+      "mu2_formula": "M2*S",
+      "row": "alpha_squared_lambda_with_imported_mass_scale",
+      "strict_mass_unit_source_exported": false,
+      "v2_dimension": 2,
+      "v2_formula": "M2/S"
+    }
+  ],
+  "input_hashes": {
+    "ALPHA": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+    "P3109": "b0263cdd5774399af7a9d8cfb4ab7a35eb38d2e1dbdf36d0d9976852e309ad72",
+    "P3116": "e543abcefa799b11e571a2de8c18b88302162809f52a4ea3bbc029a685f06f4c",
+    "P3154": "c000d57df0bdb7abb40084da924502f76d50b4d8f400196c7b94440d4a804113",
+    "P3155": "86fb69726c2bf61d8842bf9c672a447026b5e0dd6a9f33a5a63b8340583269be"
+  },
+  "status": "P3156_ALPHA_GEO_TO_HIGGS_COUPLING_FORMULA_AUDIT_NO_STRICT_UNIT_SOURCE"
+}

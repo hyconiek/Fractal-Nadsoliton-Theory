@@ -1,0 +1,117 @@
+{
+  "constructed_object": {
+    "classification": "formal_dimension_carrier_with_unfixed_positive_scale",
+    "name": "Omega_M positive mass-unit torsor",
+    "scope": "supplies the missing mass dimension for P3156 but tests canonical source selection under Omega_M -> c Omega_M"
+  },
+  "decision": {
+    "bounded_result": "P3157 constructs the missing mass-unit torsor explicitly and shows why it does not close the Higgs/SM/EH lane: formal dimension can be supplied, but canonical scale selection is still absent.",
+    "negative_export_flags": {
+      "K_dim_functor_exported": false,
+      "ToE_closure_exported": false,
+      "bridge_or_role_transfer_exported": false,
+      "einstein_hilbert_coupling_exported": false,
+      "selector_closure_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "strict_higgs_couplings_exported": false,
+      "strict_higgs_vev_exported": false,
+      "strict_mass_unit_source_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "The next honest proof-grade move is not another Higgs formula.  Construct exactly one strict source law for the positive mass/action unit torsor, preferably by returning to the P3116 Omega_dim/K_dim obligation with a new nonconventional source object; otherwise preserve the no-strict-unit boundary."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "canonical_rows_by_gauge_label": 1,
+      "dimensionally_valid_rows": 4,
+      "gate_rows": 5,
+      "gates_satisfied": 2,
+      "strict_source_selected_rows": 0,
+      "torsor_scale_rows": 4
+    },
+    "name": "P3157_T1_mass_unit_torsor_source_obstruction",
+    "statement": "Adding a formal mass-unit torsor Omega_M makes the alpha_geo Higgs-coupling schema dimensionally valid: mu2=alpha_geo*Omega_M^2 and lambda=alpha_geo.  However, the positive rescaling Omega_M -> c Omega_M changes mu2 and v while preserving all dimensionless compatibility.  Current artifacts do not export a strict source law selecting c or coupling Omega_M to the action/length/time unit chain, so Omega_M is a useful missing-object schema but not a strict unit source."
+  },
+  "gate_rows": [
+    {
+      "detail": "Omega_M supplies a formal mass-dimension carrier",
+      "gate": "mass_dimension_carrier_constructed",
+      "satisfied": true
+    },
+    {
+      "detail": "mu2=alpha_geo*Omega_M^2 and lambda=alpha_geo are dimensionally valid",
+      "gate": "alpha_geo_coupling_dimensionally_valid",
+      "satisfied": true
+    },
+    {
+      "detail": "Omega_M -> c Omega_M leaves dimensionless compatibility intact",
+      "gate": "positive_torsor_representative_unique",
+      "satisfied": false
+    },
+    {
+      "detail": "no current artifact selects c or M_* nonconventionally",
+      "gate": "strict_nadsoliton_source_law_for_mass_scale",
+      "satisfied": false
+    },
+    {
+      "detail": "P3116/P3118/P3119 leave K_dim/R_dim/Xi_LT unit chain unexported",
+      "gate": "action_length_time_coupling",
+      "satisfied": false
+    }
+  ],
+  "input_hashes": {
+    "P3116": "e543abcefa799b11e571a2de8c18b88302162809f52a4ea3bbc029a685f06f4c",
+    "P3118": "a5e2a74993c3a4787dcfc8b0c5e6966a64758da61ab462233edf30e15ac6b760",
+    "P3119": "04f0955988536d452171859c2eb6bbad3002329b43d44a68dff3792c50188e0f",
+    "P3155": "86fb69726c2bf61d8842bf9c672a447026b5e0dd6a9f33a5a63b8340583269be",
+    "P3156": "af5335fe29a9b0b42ad23f0b0e62b19fc3466896395f45490509f78fc107f963"
+  },
+  "status": "P3157_OMEGA_DIM_MASS_UNIT_TORSOR_FORMAL_CARRIER_NO_STRICT_SOURCE",
+  "torsor_rows": [
+    {
+      "Omega_M_representative": "1/2*M_*",
+      "canonical_representative_selected": false,
+      "dimensionally_valid": true,
+      "lambda_formula": "alpha_geo",
+      "mu2_formula": "alpha_geo*(1/2*M_*)^2",
+      "same_dimensionless_ratio": true,
+      "scale_c": "1/2",
+      "strict_source_law_for_c": false,
+      "v2_formula": "(1/2*M_*)^2"
+    },
+    {
+      "Omega_M_representative": "1*M_*",
+      "canonical_representative_selected": true,
+      "dimensionally_valid": true,
+      "lambda_formula": "alpha_geo",
+      "mu2_formula": "alpha_geo*(1*M_*)^2",
+      "same_dimensionless_ratio": true,
+      "scale_c": "1",
+      "strict_source_law_for_c": false,
+      "v2_formula": "(1*M_*)^2"
+    },
+    {
+      "Omega_M_representative": "2*M_*",
+      "canonical_representative_selected": false,
+      "dimensionally_valid": true,
+      "lambda_formula": "alpha_geo",
+      "mu2_formula": "alpha_geo*(2*M_*)^2",
+      "same_dimensionless_ratio": true,
+      "scale_c": "2",
+      "strict_source_law_for_c": false,
+      "v2_formula": "(2*M_*)^2"
+    },
+    {
+      "Omega_M_representative": "3*M_*",
+      "canonical_representative_selected": false,
+      "dimensionally_valid": true,
+      "lambda_formula": "alpha_geo",
+      "mu2_formula": "alpha_geo*(3*M_*)^2",
+      "same_dimensionless_ratio": true,
+      "scale_c": "3",
+      "strict_source_law_for_c": false,
+      "v2_formula": "(3*M_*)^2"
+    }
+  ]
+}
