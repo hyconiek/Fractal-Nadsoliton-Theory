@@ -1,0 +1,297 @@
+{
+  "candidate_measure_rows": [
+    {
+      "accepted_as_upsilon_sel_unit_measure": false,
+      "candidate_id": "U1_uniform_full_orbit",
+      "full_symmetry_invariant": true,
+      "imports_selector_axiom": false,
+      "invariance_failure_count": 0,
+      "localized_on_selected_branch": false,
+      "sample_failures": [],
+      "unit_normalized": true
+    },
+    {
+      "accepted_as_upsilon_sel_unit_measure": false,
+      "candidate_id": "U2_delta_selected_branch",
+      "full_symmetry_invariant": false,
+      "imports_selector_axiom": true,
+      "invariance_failure_count": 6,
+      "localized_on_selected_branch": true,
+      "sample_failures": [
+        {
+          "generator": "T_plus_1",
+          "image": [
+            1,
+            1
+          ],
+          "image_mass": "0",
+          "mass": "1",
+          "point": [
+            0,
+            1
+          ]
+        },
+        {
+          "generator": "T_plus_1",
+          "image": [
+            0,
+            1
+          ],
+          "image_mass": "1",
+          "mass": "0",
+          "point": [
+            11,
+            1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            0,
+            1
+          ],
+          "image_mass": "1",
+          "mass": "0",
+          "point": [
+            0,
+            -1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            0,
+            -1
+          ],
+          "image_mass": "0",
+          "mass": "1",
+          "point": [
+            0,
+            1
+          ]
+        },
+        {
+          "generator": "lambda_pairing",
+          "image": [
+            0,
+            1
+          ],
+          "image_mass": "1",
+          "mass": "0",
+          "point": [
+            0,
+            -1
+          ]
+        },
+        {
+          "generator": "lambda_pairing",
+          "image": [
+            0,
+            -1
+          ],
+          "image_mass": "0",
+          "mass": "1",
+          "point": [
+            0,
+            1
+          ]
+        }
+      ],
+      "unit_normalized": true
+    },
+    {
+      "accepted_as_upsilon_sel_unit_measure": false,
+      "candidate_id": "U3_positive_polarity_orbit",
+      "full_symmetry_invariant": false,
+      "imports_selector_axiom": true,
+      "invariance_failure_count": 48,
+      "localized_on_selected_branch": false,
+      "sample_failures": [
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            0,
+            1
+          ],
+          "image_mass": "1/12",
+          "mass": "0",
+          "point": [
+            0,
+            -1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            0,
+            -1
+          ],
+          "image_mass": "0",
+          "mass": "1/12",
+          "point": [
+            0,
+            1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            11,
+            1
+          ],
+          "image_mass": "1/12",
+          "mass": "0",
+          "point": [
+            1,
+            -1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            11,
+            -1
+          ],
+          "image_mass": "0",
+          "mass": "1/12",
+          "point": [
+            1,
+            1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            10,
+            1
+          ],
+          "image_mass": "1/12",
+          "mass": "0",
+          "point": [
+            2,
+            -1
+          ]
+        },
+        {
+          "generator": "Aut_inversion_with_polarity",
+          "image": [
+            10,
+            -1
+          ],
+          "image_mass": "0",
+          "mass": "1/12",
+          "point": [
+            2,
+            1
+          ]
+        }
+      ],
+      "unit_normalized": true
+    }
+  ],
+  "constructed_object": {
+    "classification": "unit_measure_candidate_and_symmetry_obstruction",
+    "name": "Upsilon_sel^unit source-free invariant unit measure candidate",
+    "selected_branch": [
+      0,
+      1
+    ],
+    "space": "Z12 x {±1}"
+  },
+  "decision": {
+    "axiomatic_route_recommendation": "The axiom route is worth keeping only as a separate conditional model-building branch for downstream consequences.  It is not worth presenting as the main strict-core route until a non-premise symmetry-breaking source or a non-uniform unit measure theorem is exported.",
+    "bounded_result": "P3144 constructs the requested Upsilon_sel unit-measure object.  A source-free unit measure exists, but it is the uniform full-orbit measure and is selector-blind.  Measures that localize the selected branch import A_origin/A_lambda and fail the required symmetry invariance.  Thus no strict unit-bearing selector action is installed.",
+    "negative_export_flags": {
+      "L_total_exported": false,
+      "ToE_closure_exported": false,
+      "bridge_completion_exported": false,
+      "legacy_role_transfer_exported": false,
+      "nonpremise_upsilon_sel_unit_measure_exported": false,
+      "selector_localization_without_axioms_exported": false,
+      "strict_QW_2191_discharged": false,
+      "strict_selector_closure_exported": false,
+      "unit_bearing_selector_action_exported": false
+    },
+    "next_honest_step": "Pivot away from the axiom branch for strict-core work unless a new nonuniform invariant measure/source is supplied.  The next proof-grade strict move should be a new non-premise symmetry-breaking source candidate outside invariant unit measures; the axiom branch may continue only as explicitly labelled conditional phenomenology, not as ToE evidence."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "accepted_unit_selector_measures": 0,
+      "candidate_measures_tested": 3,
+      "generator_count": 3,
+      "largest_orbit_size": 24,
+      "orbit_count": 1,
+      "point_count": 24
+    },
+    "name": "P3144_T1_upsilon_sel_invariant_unit_measure_no_local_selector",
+    "statement": "On X=Z12 x {±1}, the source-free action generated by diagonal translation, inversion-with-polarity, and lambda pairing has one 24-point orbit.  Therefore any invariant unit measure is constant on all selector branches; the unique full-orbit probability measure assigns mass 1/24 to the axiom-selected branch and cannot localize it.  Delta/localized measures localize only by importing selector axioms and fail symmetry invariance."
+  },
+  "input_hashes": {
+    "P2887": "64d8f8256f2adc89fb5bec516e01a8725dbead1860e56b77fe9d719f75d1082e",
+    "P3139": "6492f00b7f4a7dc30e4d5566227e97fa8a14c893ef3c50da6b1685f59a1f9301",
+    "P3142": "aae3ea8397d6a1c71cd72370bbb057d91ae6c9e4337ef0f1d5b451b356c91b34",
+    "P3143": "3a7c83a78396aecfc4183b109fd6b86c3a6499c7b7a518d3bf6153d7012fceaf"
+  },
+  "orbit_rows": [
+    {
+      "orbit_index": 0,
+      "points_sample": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "size": 24
+    }
+  ],
+  "repo_context": {
+    "P2887": "P2887_C12_UNIT_MEASURE_LOCALIZED_DENSITY_9_OVER_5_NO_GO_AUDIT_NO_CLOSURE",
+    "P3139": "P3139_DHL_LANE_NO_NEW_LIVE_FRONTIER_RECONCILIATION",
+    "P3142": "P3142_AXIOM_SELECTOR_FIELD_VARIATIONAL_LIFT_BOUNDED_NON_STRICT",
+    "P3143": "P3143_VLIFT_WEIGHT_SCALE_SOURCE_AUDIT_BOUNDED_NO_GO"
+  },
+  "status": "P3144_UPSILON_SEL_UNIT_MEASURE_OBSTRUCTION_BOUNDED_NO_GO",
+  "symmetry_generators": [
+    "T_plus_1",
+    "Aut_inversion_with_polarity",
+    "lambda_pairing"
+  ],
+  "uniform_measure_sample": {
+    "0,-1": "1/24",
+    "0,1": "1/24",
+    "1,-1": "1/24",
+    "1,1": "1/24",
+    "2,-1": "1/24",
+    "2,1": "1/24",
+    "3,-1": "1/24",
+    "3,1": "1/24"
+  }
+}

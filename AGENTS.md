@@ -3112,3 +3112,31 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This is a conditional symmetry-breaking engine only inside the axiom branch; the weights, scale, unit normalization, and field-variational lift are not strict sourced.
 - Do not promote `V_ax` to strict `QW-2191` discharge, strict selector closure, unit-bearing action/EOM, bridge completion, role transfer, `L_total`, or ToE closure.
 - Next honest move: in the axiom branch, prove exactly one downstream theorem for unit-bearing scale/weights or field-variational lift; in strict-core work, derive one of the selector axioms or potential weights from a new strict source.
+
+## Current axiom selector field-variational lift guardrail (P3142/S2092, 2026-07-13)
+
+- P3142 constructs a non-strict local-chart field-variational lift `V_lift` of the P3141 axiom selector potential and verifies zero gradient plus positive Hessian at `(theta,s)=(0,+1)` across `27` positive parameter triples.
+- This gives a conditional symmetry-breaking engine only inside the explicit axiom branch; it still imports selector axioms, a local chart, weights, scale, and no unit-bearing measure.
+- Do not promote `V_lift` to strict `QW-2191` discharge, strict selector closure, global `Z12` origin, unit-bearing action/EOM, bridge completion, role transfer, `L_total`, or ToE closure.
+- Next honest move: audit exactly one candidate strict source for the `V_lift` weights/scale (`mu`, `w_theta`, `w_s`, or `kappa`) against import freedom, unit-bearing normalization, and global `Z12` quotient compatibility; otherwise preserve the P3140-P3142 non-strict axiom-branch boundary.
+
+## Current V_lift weight/scale source audit guardrail (P3143/S2093, 2026-07-13)
+
+- P3143 audits `5` repo-backed candidate scalar/receiver lanes against the `V_lift` parameters `mu`, `w_theta`, `w_s`, and `kappa`, producing `20` candidate-target rows.
+- Positive magnitudes exist (`16/20` rows), but `0/20` rows export a strict unit-bearing source satisfying source law, global `Z12` compatibility, noncircularity, and no closed-lane replay.
+- Do not recycle entropy, `alpha_geo`, beta/Z_beta, `V_lift` Hessian self-normalization, or `D_HL` receiver obstruction as strict weight/scale source, selector closure, bridge completion, role transfer, `L_total`, or ToE closure.
+- Next honest move: introduce exactly one new typed unit-measure object `Upsilon_sel` coupling the selector local chart to an action measure without importing `A_origin/A_lambda`, or preserve the P3140-P3143 non-strict axiom-branch/no-strict-source boundary.
+
+## Current Upsilon_sel unit-measure obstruction guardrail (P3144/S2094, 2026-07-13)
+
+- P3144 constructs the requested `Upsilon_sel^unit` candidate on `Z12 x {±1}` and proves the source-free invariant measure is uniform on one `24`-point orbit.
+- The uniform measure is unit-normalized but selector-blind; localized delta/polarity measures import `A_origin/A_lambda` and fail full symmetry invariance.
+- Do not promote invariant unit measure, localized axiom measures, or the P3140-P3144 axiom branch to strict `QW-2191` discharge, selector closure, unit-bearing action/EOM, bridge completion, role transfer, `L_total`, or ToE closure.
+- Recommendation: keep the axiom route only as explicitly labelled conditional phenomenology; for strict-core work, pivot to a genuinely new non-premise symmetry-breaking source outside invariant unit measures.
+
+## Current strict-kernel reverse SM/GR layout guardrail (P3145/S2095, 2026-07-13)
+
+- P3145 constructs `Xi_SMGR^strict`, a reverse-layout matrix for how SM/GR properties would have to sit inside the strict nadsoliton/kernel picture.
+- The audit finds `10/10` plausible strict carrier/receiver slots but `0/10` rows with the full source-law, unit/calibration, nonproxy dynamics, and selector-safety package.
+- Do not promote reverse layout, legacy analogies, or receiver scaffolds to SM/GR reduction, strict selector closure, unit-bearing `L_total`, bridge completion, role transfer, or ToE closure.
+- Axiomatic continuation is useful only as explicitly conditional model-building; strict-core progress should target one non-premise bridge theorem for physical units/action measure, selector/orientation source, or nonproxy metric/gauge EOM coupling.
