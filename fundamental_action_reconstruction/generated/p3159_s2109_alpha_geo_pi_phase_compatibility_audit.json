@@ -1,0 +1,377 @@
+{
+  "compatibility_matrix": [
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": true,
+      "candidate": "dimensionless_phase_area_section",
+      "claim": "alpha_geo*A_phi=2*pi",
+      "pi_phase_compatible": true,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": true,
+      "unit_source_exported": true,
+      "verdict": "This is exactly the P3111-style compatibility: alpha_geo can normalize a dimensionless 2*pi phase-area section."
+    },
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": true,
+      "candidate": "Z12_slot_alignment",
+      "claim": "n*alpha_geo mod 2*pi lands on a canonical Z12 phase slot",
+      "pi_phase_compatible": false,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": true,
+      "unit_source_exported": true,
+      "verdict": "Finite n<=12 scan has no exact slot-locking theorem; numeric nearest slots are approximation data only."
+    },
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": true,
+      "candidate": "physical_action_calibration",
+      "claim": "C_phi(A_phi)=U_action",
+      "pi_phase_compatible": true,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": true,
+      "unit_source_exported": false,
+      "verdict": "P3112/P3113 require a dimensionful reference carrier; pi-phase compatibility alone is dimensionless."
+    },
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": true,
+      "candidate": "phase_origin_source_localizer",
+      "claim": "alpha_geo/pi selects Lambda_origin",
+      "pi_phase_compatible": false,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": false,
+      "unit_source_exported": true,
+      "verdict": "alpha_geo and pi are even scalar constants; no nonconventional phase-origin/localizer sign is selected."
+    },
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": true,
+      "candidate": "mass_unit_positive_torsor_source",
+      "claim": "alpha_geo and 2*pi fix Omega_M scale",
+      "pi_phase_compatible": true,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": true,
+      "unit_source_exported": false,
+      "verdict": "The formal ratio fixes a dimensionless number, not the positive mass/action scale torsor."
+    },
+    {
+      "accepted_strict_closure": false,
+      "alpha_geo_used_strictly": false,
+      "candidate": "legacy_role_transfer",
+      "claim": "alpha_geo/pi phase compatibility transfers legacy EW/EM roles",
+      "pi_phase_compatible": false,
+      "role_transfer_allowed": false,
+      "selector_or_origin_exported": false,
+      "unit_source_exported": false,
+      "verdict": "Forbidden without explicit bridge completion and role-transfer theorem."
+    }
+  ],
+  "constructed_object": {
+    "classification": "dimensionless phase-area compatibility section, not a physical unit/source theorem",
+    "formula": "A_phi := 2*pi/alpha_geo = pi/(2 ln 2), so alpha_geo*A_phi=2*pi",
+    "name": "Phi_alpha_pi"
+  },
+  "content_grep": {
+    "alpha_geo_pi_phase": {
+      "count": 11251,
+      "samples": [
+        "AGENTS.md:13:- `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` is restored as an **intermediate bridge kernel** on the path toward identifying the strict kernel.",
+        "AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+        "AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:106:## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)",
+        "AGENTS.md:108:- P2691 confirms strict `alpha_geo=4 ln(2)` and exact scalar-shape normalization, but finds no role-safe amplitude absorption source, no physical-role safety theorem, and no APD/Lagrangian dynamical source.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:118:- P2693 closes the currently named P2680 non-selector source atoms as bounded no-go on current artifacts: canonical UV unit, role-safe `alpha_geo` amplitude source, and target-independent positive `beta/Z_beta` source all remain unexported.",
+        "AGENTS.md:249:- Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data remain orientation-blind unless a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value is exported.",
+        "AGENTS.md:428:- P2745 pivots outside finite `Z12` sign-character/frame/cycle-spectrum observables to the imaginary phase sign of quadratic Gauss sums `G(a,b)=sum_n exp(2*pi*i*(a*n^2+b*n)/12)` under affine source reparametrisation.",
+        "AGENTS.md:440:- P2747 pivots away from the P2746 Gauss-selector gap to cubic `Z12` phase sums `C(a,b,c)=sum_n exp(2*pi*i*(a*n^3+b*n^2+c*n)/12)` under affine source reparametrisation.",
+        "AGENTS.md:464:- P2751 pivots beyond the P2750 current-artifact inventory to quartic `Z12` phase sums `Q(a,b,c,d)=sum_n exp(2*pi*i*(a*n^4+b*n^3+c*n^2+d*n)/12)` under affine source reparametrisation.",
+        "AGENTS.md:482:- P2754 tests the intuition that `alpha_geo = 4 ln 2` is four Shannon bits and might generate the missing selector from the nadsoliton as pure information in geometric state.",
+        "AGENTS.md:596:- P2773 tests whether Shannon entropy alone forces nadsoliton geometry: the uniform 16-point distribution has `H=ln(16)=4 ln 2=alpha_geo`.",
+        "AGENTS.md:602:- P2774 strengthens P2773 by adding a graph-Laplacian trace/regularity constraint to `H=ln(16)=4 ln 2=alpha_geo`.",
+        "AGENTS.md:1072:- P2851 tests exactly one bridge atom: legacy `alpha_geo=4 ln 2` amplitude passage into the unit-amplitude strict gate kernel.",
+        "AGENTS.md:1074:- Do not promote `alpha_geo` rescaling to amplitude bridge, full kernel bridge, role transfer, selector closure, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+        "AGENTS.md:1080:- Damping/compression lacks `eta` and target-independent `beta` sources; amplitude lacks constant residual-zero passage and role-safe `alpha_geo` source law; full bridge and role transfer remain downstream."
+      ]
+    },
+    "forbidden_promotion": {
+      "count": 56459,
+      "samples": [
+        "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+        "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+        "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+        "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+        "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+        "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+        "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+        "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+        "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open.",
+        "AGENTS.md:135:- Do not continue this direct-route residual-cancellation lane without a genuinely new strict-derived provider class, non-N477 ingredient, or blocker-cut; do not import selector replay, `QW-2191` discharge, bridge-source replay, role transfer, `L_total`, or ToE closure.",
+        "AGENTS.md:140:- P2697 reconciles the broad state-map after P2695/P2696 and emits a no-new-live-frontier certificate on current artifacts: direct residual cancellation, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/H37/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated.",
+        "AGENTS.md:146:- P2698 confirms that earlier direction/orientation/sign-sensitive exports are real and must not be ignored, but they are premise-based/readiness/convention scoped: H36/H37/H38 and P739/P740 do not discharge `QW-2191`, do not export pair12 strict-core upgrade, and do not provide Aut(Z12)-invariant canonicity.",
+        "AGENTS.md:148:- Do not promote premise-based direction into strict selector closure, `L_total`, role transfer, or ToE closure.  A next admissible move must introduce a genuinely new non-premise-based strict selector/orientation source object; otherwise keep the P2697/P2698 no-new-live-frontier certificate.",
+        "AGENTS.md:153:- Do not claim `QW-2191` discharge, strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, role transfer, bridge closure, or ToE closure from this candidate.",
+        "AGENTS.md:159:- Do not replay Aut-invariant selector-functional searches as a primary strategy; no `QW-2191`, strict selector, pair12 strict-core, `L_total`, bridge, role-transfer, or ToE closure is exported."
+      ]
+    },
+    "unit_chain": {
+      "count": 2322,
+      "samples": [
+        "AGENTS.md:2899:## Current symplectic/action phase source-law guardrail (P3111/S2061, 2026-06-26)",
+        "AGENTS.md:2901:- P3111 tests the P3110-selected `symplectic_phase_area_candidate` and derives the unique minimal positive internal phase-area section `A_phi=2*pi/alpha_geo` from `alpha_geo*A in 2*pi*Z`.",
+        "AGENTS.md:2904:- The next honest move is exactly one internal calibration functional `C_phi` mapping `A_phi` to a dimensionful action comparison while proving internal scale-covariance breaking; otherwise preserve the P3105-P3111 physical-unit no-go.",
+        "AGENTS.md:2906:## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)",
+        "AGENTS.md:2908:- P3112 tests the P3111-requested internal calibration functional `C_phi` for `A_phi=2*pi/alpha_geo`.",
+        "AGENTS.md:2911:- The next honest move is exactly one nadsoliton-only dimensionful reference-carrier source law `U_action` coupled by `C_phi(A_phi)=U_action`; otherwise preserve the P3105-P3112 physical-unit no-go.",
+        "AGENTS.md:2913:## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)",
+        "AGENTS.md:2915:- P3113 tests the P3112-requested nadsoliton-only dimensionful reference carrier `U_action` coupled by `C_phi(A_phi)=U_action`.",
+        "AGENTS.md:2916:- The finite audit constructs `6` candidate source laws, `30` scale-orbit section rows, `18` dimensional-balance rows, `6` coupling rows, and `54` gate rows; `0` candidates export an import-free `U_action` with length/time calibration.",
+        "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+        "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+        "AGENTS.md:2929:- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.",
+        "AGENTS.md:2932:- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.",
+        "AGENTS.md:2934:## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)",
+        "AGENTS.md:2936:- P3116 tests the P3115-requested nadsoliton-only dimension-source functor `K_dim` from strict nadsoliton data to the positive scale torsor.",
+        "AGENTS.md:2937:- The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.",
+        "AGENTS.md:2939:- The next honest move requires exactly one new strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data; otherwise preserve the P3105-P3116 physical-unit no-go/no-new-live-frontier certificate.",
+        "AGENTS.md:2941:## Current Omega_dim dimension-character source guardrail (P3117/S2067, 2026-06-26)"
+      ]
+    }
+  },
+  "continued_fraction_rows_alpha_over_2pi": [
+    {
+      "error_abs": 0.003173244139141218,
+      "max_denominator": 12,
+      "p": 4,
+      "p_over_q": 0.4444444444444444,
+      "phase_error_2pi_units": 0.019938080951145836,
+      "q": 9
+    },
+    {
+      "error_abs": 0.003173244139141218,
+      "max_denominator": 24,
+      "p": 4,
+      "p_over_q": 0.4444444444444444,
+      "phase_error_2pi_units": 0.019938080951145836,
+      "q": 9
+    },
+    {
+      "error_abs": 9.472971706792066e-05,
+      "max_denominator": 48,
+      "p": 15,
+      "p_over_q": 0.4411764705882353,
+      "phase_error_2pi_units": 0.0005952043664344384,
+      "q": 34
+    },
+    {
+      "error_abs": 9.472971706792066e-05,
+      "max_denominator": 96,
+      "p": 15,
+      "p_over_q": 0.4411764705882353,
+      "phase_error_2pi_units": 0.0005952043664344384,
+      "q": 34
+    },
+    {
+      "error_abs": 6.958181760180482e-05,
+      "max_denominator": 192,
+      "p": 79,
+      "p_over_q": 0.441340782122905,
+      "phase_error_2pi_units": 0.00043719545400250993,
+      "q": 179
+    },
+    {
+      "error_abs": 1.3590354619452683e-06,
+      "max_denominator": 384,
+      "p": 139,
+      "p_over_q": 0.44126984126984126,
+      "phase_error_2pi_units": 8.53907164643053e-06,
+      "q": 315
+    },
+    {
+      "error_abs": 1.3590354619452683e-06,
+      "max_denominator": 768,
+      "p": 139,
+      "p_over_q": 0.44126984126984126,
+      "phase_error_2pi_units": 8.53907164643053e-06,
+      "q": 315
+    },
+    {
+      "error_abs": 1.2303635385513267e-06,
+      "max_denominator": 1536,
+      "p": 541,
+      "p_over_q": 0.44127243066884175,
+      "phase_error_2pi_units": 7.730602107915181e-06,
+      "q": 1226
+    }
+  ],
+  "decision": {
+    "bounded_result": "alpha_geo is compatible with pi-phase normalization only as the dimensionless A_phi=2*pi/alpha_geo section.  This is useful bookkeeping for phase-area audits, but it does not construct Lambda_origin, Omega_M/K_dim, a selector, unit-bearing action, bridge completion, or role transfer.",
+    "negative_export_flags": {
+      "K_dim_functor_exported": false,
+      "Lambda_origin_exported": false,
+      "Omega_M_scale_fixed": false,
+      "QW_2191_discharged": false,
+      "ToE_closure_exported": false,
+      "bridge_completion_exported": false,
+      "phase_origin_selected": false,
+      "physical_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Recommended next step: construct exactly one new source object rather than replaying alpha_geo/pi numerology.  The least-replay option is a strict positive torsor source law for Omega_M/K_dim; the alternative is a nonconventional Lambda_origin_source_localizer coupled to the already-compatible A_phi section.  In either case, acceptance must require a nonzero source value and an explicit coupling theorem, not just alpha_geo=4 ln 2 or A_phi=2*pi/alpha_geo.",
+    "positive_scoped_flags": {
+      "A_phi_dimensionless_section_constructed": true,
+      "alpha_geo_pi_phase_compatibility_verified": true,
+      "next_step_narrowed_to_one_source_object": true,
+      "repo_grep_performed": true
+    }
+  },
+  "finite_theorem": {
+    "accepted_strict_closures": 0,
+    "compatibility_rows": 6,
+    "continued_fraction_rows": 8,
+    "name": "P3159_T1_alpha_geo_pi_phase_scoped_compatibility",
+    "phase_rows": 12,
+    "statement": "The strict scalar alpha_geo=4 ln 2 is exactly compatible with a dimensionless phase-area section A_phi=2*pi/alpha_geo.  This verifies the pi-phase bookkeeping route and agrees with the P3111 style phase-area section.  However, finite Z12 slot scans and rational approximants do not provide a canonical phase-origin, selector, physical action/mass unit, or legacy role-transfer theorem.  The result is positive as internal phase normalization and negative as closure/source promotion."
+  },
+  "input_hashes": {
+    "P3111": null,
+    "P3112": null,
+    "P3158": "a95f1a300a7364254a53f6e2bee8f1aa9f440006ef9898e67eec1e0d47d175fc",
+    "alpha_geo": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328"
+  },
+  "numeric_certificate": {
+    "A_phi": 2.266180070913597,
+    "alpha_geo": 2.772588722239781,
+    "alpha_geo_over_2pi": 0.4412712003053032,
+    "alpha_geo_times_A_phi_minus_2pi": 8.881784197001252e-16,
+    "min_Z12_slot_error_n_le_12": {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.024847884312027002,
+      "exact_2pi_multiple_by_A_phi": 10,
+      "n": 10,
+      "n_alpha_geo_mod_2pi": 2.5931459936794674,
+      "nearest_Z12_phase_slot": 5,
+      "signed_error_to_nearest_Z12_slot": -0.024847884312027002
+    },
+    "p3111_status": null,
+    "two_pi": 6.283185307179586
+  },
+  "phase_rows_n_1_to_12": [
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.15459484424828673,
+      "exact_2pi_multiple_by_A_phi": 1,
+      "n": 1,
+      "n_alpha_geo_mod_2pi": 2.772588722239781,
+      "nearest_Z12_phase_slot": 5,
+      "signed_error_to_nearest_Z12_slot": 0.15459484424828673
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.2144090871017248,
+      "exact_2pi_multiple_by_A_phi": 2,
+      "n": 2,
+      "n_alpha_geo_mod_2pi": 5.545177444479562,
+      "nearest_Z12_phase_slot": 11,
+      "signed_error_to_nearest_Z12_slot": -0.2144090871017248
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.059814242853438504,
+      "exact_2pi_multiple_by_A_phi": 3,
+      "n": 3,
+      "n_alpha_geo_mod_2pi": 2.0345808595397568,
+      "nearest_Z12_phase_slot": 4,
+      "signed_error_to_nearest_Z12_slot": -0.059814242853438504
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.09478060139484867,
+      "exact_2pi_multiple_by_A_phi": 4,
+      "n": 4,
+      "n_alpha_geo_mod_2pi": 4.807169581779538,
+      "nearest_Z12_phase_slot": 9,
+      "signed_error_to_nearest_Z12_slot": 0.09478060139484867
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.2493754456431363,
+      "exact_2pi_multiple_by_A_phi": 5,
+      "n": 5,
+      "n_alpha_geo_mod_2pi": 1.2965729968397337,
+      "nearest_Z12_phase_slot": 2,
+      "signed_error_to_nearest_Z12_slot": 0.2493754456431363
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.11962848570687701,
+      "exact_2pi_multiple_by_A_phi": 6,
+      "n": 6,
+      "n_alpha_geo_mod_2pi": 4.0691617190795135,
+      "nearest_Z12_phase_slot": 8,
+      "signed_error_to_nearest_Z12_slot": -0.11962848570687701
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.03496635854141017,
+      "exact_2pi_multiple_by_A_phi": 7,
+      "n": 7,
+      "n_alpha_geo_mod_2pi": 0.5585651341397089,
+      "nearest_Z12_phase_slot": 1,
+      "signed_error_to_nearest_Z12_slot": 0.03496635854141017
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.18956120278969735,
+      "exact_2pi_multiple_by_A_phi": 8,
+      "n": 8,
+      "n_alpha_geo_mod_2pi": 3.3311538563794905,
+      "nearest_Z12_phase_slot": 6,
+      "signed_error_to_nearest_Z12_slot": 0.18956120278969735
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.17944272856031418,
+      "exact_2pi_multiple_by_A_phi": 9,
+      "n": 9,
+      "n_alpha_geo_mod_2pi": 6.103742578619272,
+      "nearest_Z12_phase_slot": 0,
+      "signed_error_to_nearest_Z12_slot": -0.17944272856031418
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.024847884312027002,
+      "exact_2pi_multiple_by_A_phi": 10,
+      "n": 10,
+      "n_alpha_geo_mod_2pi": 2.5931459936794674,
+      "nearest_Z12_phase_slot": 5,
+      "signed_error_to_nearest_Z12_slot": -0.024847884312027002
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.12974695993626018,
+      "exact_2pi_multiple_by_A_phi": 11,
+      "n": 11,
+      "n_alpha_geo_mod_2pi": 5.365734715919249,
+      "nearest_Z12_phase_slot": 10,
+      "signed_error_to_nearest_Z12_slot": 0.12974695993626018
+    },
+    {
+      "A_phi_section_value": 2.266180070913597,
+      "absolute_error": 0.23925697141375446,
+      "exact_2pi_multiple_by_A_phi": 12,
+      "n": 12,
+      "n_alpha_geo_mod_2pi": 1.8551381309794408,
+      "nearest_Z12_phase_slot": 4,
+      "signed_error_to_nearest_Z12_slot": -0.23925697141375446
+    }
+  ],
+  "status": "P3159_ALPHA_GEO_PI_PHASE_COMPATIBILITY_SCOPED_SECTION_NO_UNIT_SOURCE"
+}

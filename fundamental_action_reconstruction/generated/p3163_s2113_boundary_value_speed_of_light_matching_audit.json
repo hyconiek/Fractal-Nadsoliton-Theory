@@ -1,0 +1,2930 @@
+{
+  "constructed_theoretical_objects": {
+    "boundary_value_candidates": [
+      {
+        "candidate": "unit_receiver",
+        "formula": "normalized causal receiver speed",
+        "nonzero": true,
+        "source_context": "chosen receiver normalization",
+        "v_hat": 1.0
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "formula": "alpha_geo/(2*pi)",
+        "nonzero": true,
+        "source_context": "P3160 irrational dimensionless winding ratio",
+        "v_hat": 0.4412712003053032
+      },
+      {
+        "candidate": "A_phi",
+        "formula": "2*pi/alpha_geo",
+        "nonzero": true,
+        "source_context": "P3159/P3111 phase-area section",
+        "v_hat": 2.266180070913597
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "formula": "K_strict_gate(0)=cos(phi)",
+        "nonzero": true,
+        "source_context": "strict kernel zero-distance boundary",
+        "v_hat": 0.9868259031903286
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "formula": "K_strict_gate(1)",
+        "nonzero": true,
+        "source_context": "strict kernel first positive sample",
+        "v_hat": 0.4699856726450201
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "formula": "lim_{d->infty} K_strict_gate(d)",
+        "nonzero": false,
+        "source_context": "tail boundary is zero and cannot fit nonzero c",
+        "v_hat": 0.0
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "formula": "2-2*cos(2*pi/12)",
+        "nonzero": true,
+        "source_context": "dimensionless first Laplacian gap",
+        "v_hat": 0.2679491924311226
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "formula": "max cyclic Laplacian eigenvalue",
+        "nonzero": true,
+        "source_context": "dimensionless spectral boundary",
+        "v_hat": 4.0
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "formula": "formal lattice speed from P3077 second-order lift",
+        "nonzero": true,
+        "source_context": "formal imported wave-compatible normalization, not internal physical c",
+        "v_hat": 1.0
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "formula": "exp(alpha_geo)=16",
+        "nonzero": true,
+        "source_context": "dimensionless cardinality",
+        "v_hat": 15.999999999999998
+      }
+    ],
+    "candidate_aggregate_certificate": [
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "A_phi",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "alpha_over_2pi",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "dirichlet_formal_wave_speed",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "entropy_cell_count",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "strict_kernel_d0",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "strict_kernel_d1",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "strict_kernel_tail_limit",
+        "failed_gates": 6,
+        "passed_gates": 2
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "unit_receiver",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "z12_laplacian_gap",
+        "failed_gates": 4,
+        "passed_gates": 4
+      },
+      {
+        "accepted_physical_c_source": false,
+        "candidate": "z12_laplacian_max",
+        "failed_gates": 4,
+        "passed_gates": 4
+      }
+    ],
+    "candidate_gate_rows": [
+      {
+        "candidate": "unit_receiver",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "unit_receiver",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "alpha_over_2pi",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "A_phi",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d0",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_d1",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "nonzero_receiver_value",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "zero boundary value cannot fit nonzero c",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "strict_kernel_tail_limit",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_gap",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "z12_laplacian_max",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "dirichlet_formal_wave_speed",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "passed",
+        "gate": "boundary_value_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "passed",
+        "gate": "nonzero_receiver_value",
+        "passed": true
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "passed",
+        "gate": "numerically_matches_c_after_scale_choice",
+        "passed": true
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_length_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "independent_U_time_source_exported",
+        "passed": false
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "Lorentz_spacetime_embedding_exported",
+        "passed": false
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "gate": "observed_light_import_free",
+        "passed": false
+      },
+      {
+        "candidate": "entropy_cell_count",
+        "detail": "passed",
+        "gate": "selector_bridge_ltotal_toe_free",
+        "passed": true
+      }
+    ],
+    "object": "BoundaryValuePhysicalConstantReceiverAudit",
+    "scale_degeneracy_rows": [
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924580.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 5995849160.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245800.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 59958491.6,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 599584916.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1199169832.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 5995849160.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245.8,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 599584916.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924580.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924.58,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245.8,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 59958491.6,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "unit_receiver",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 679383693.7298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 3396918468.6490073,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 6793836937.298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 13587673874.59603,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 67938369372.980156,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 135876738.74596033,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 679383693.7298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 1358767387.459603,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2717534774.919206,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 13587673874.596031,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 67938369.37298016,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 339691846.86490077,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 679383693.7298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1358767387.459603,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6793836937.298016,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 33969184.68649008,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 169845923.43245038,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 339691846.86490077,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 679383693.7298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3396918468.649008,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6793836.937298017,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 33969184.686490074,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 67938369.37298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 135876738.7459603,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 679383693.7298015,
+        "candidate": "alpha_over_2pi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 132289777.7841372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 661448888.9206859,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 1322897777.8413718,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2645795555.6827435,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 13228977778.41372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 26457955.55682744,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 132289777.78413719,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 264579555.56827438,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 529159111.13654876,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2645795555.682744,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 13228977.77841372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 66144888.892068595,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 132289777.78413719,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 264579555.56827438,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1322897777.841372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6614488.88920686,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 33072444.446034297,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 66144888.892068595,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 132289777.78413719,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 661448888.920686,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1322897.777841372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 6614488.889206859,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 13228977.778413719,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 26457955.556827437,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 132289777.7841372,
+        "candidate": "A_phi",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 303794678.5048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 1518973392.524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 3037946785.048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6075893570.097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 30379467850.488636,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 60758935.70097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 303794678.5048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 607589357.0097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1215178714.0195456,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6075893570.097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 30379467.85048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 151897339.2524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 303794678.5048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 607589357.0097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3037946785.048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 15189733.92524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 75948669.6262216,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 151897339.2524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 303794678.5048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1518973392.524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3037946.785048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 15189733.92524432,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 30379467.85048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 60758935.70097728,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 303794678.5048864,
+        "candidate": "strict_kernel_d0",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 637875738.4513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 3189378692.2567854,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 6378757384.513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 12757514769.027142,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 63787573845.135704,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 127575147.69027144,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 637875738.4513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 1275751476.9027143,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2551502953.8054285,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 12757514769.027142,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 63787573.84513572,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 318937869.22567856,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 637875738.4513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1275751476.9027143,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6378757384.513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 31893786.92256786,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 159468934.61283928,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 318937869.22567856,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 637875738.4513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3189378692.2567854,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 6378757.384513572,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 31893786.922567856,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 63787573.84513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 127575147.69027142,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 637875738.4513571,
+        "candidate": "strict_kernel_d1",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1118840684.9819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 5594203424.909797,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 11188406849.819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 22376813699.639187,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 111884068498.19592,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 223768136.9963919,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 1118840684.9819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 2237681369.9639187,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 4475362739.927837,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 22376813699.639187,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 111884068.49819595,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 559420342.4909797,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 1118840684.9819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2237681369.9639187,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 11188406849.819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 55942034.24909797,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 279710171.24548984,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 559420342.4909797,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1118840684.9819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 5594203424.909797,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.00000006,
+        "residual_to_c": 5.960464477539063e-08,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 11188406.849819595,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 55942034.249097966,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 111884068.49819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 223768136.99639186,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1118840684.9819593,
+        "candidate": "z12_laplacian_gap",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 374740572.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 749481145.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 7494811450.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 7494811.45,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 37474057.25,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 749481145.0,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3747405.725,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 37474057.25,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 374740572.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 749481.145,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 3747405.725,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 7494811.45,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "z12_laplacian_max",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924580.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 5995849160.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245800.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 59958491.6,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 599584916.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1199169832.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 5995849160.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245.8,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 599584916.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924580.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.5,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 149896229.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1498962290.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 2997924.58,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 14989622.9,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 29979245.8,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 59958491.6,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 299792458.0,
+        "candidate": "dirichlet_formal_wave_speed",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625000004,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 93685143.12500001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 187370286.25000003,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 374740572.50000006,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1873702862.5000002,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.1,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3747405.725000001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625000004,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 37474057.25000001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 74948114.50000001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 374740572.50000006,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 0.5,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 1873702.8625000005,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 9368514.312500002,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625000004,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 37474057.25000001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 187370286.25000003,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 1.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 936851.4312500003,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 4684257.156250001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 9368514.312500002,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625000004,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 93685143.12500001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 2.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 187370.28625000006,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.1
+      },
+      {
+        "adjusted_U_length_over_U_time": 936851.4312500001,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 0.5
+      },
+      {
+        "adjusted_U_length_over_U_time": 1873702.8625000003,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 1.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 3747405.7250000006,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 2.0
+      },
+      {
+        "adjusted_U_length_over_U_time": 18737028.625000004,
+        "candidate": "entropy_cell_count",
+        "degenerate_fit_family": true,
+        "length_rescale_a": 10.0,
+        "physical_speed_after_adjustment": 299792458.0,
+        "residual_to_c": 0.0,
+        "time_rescale_b": 10.0
+      }
+    ],
+    "speed_of_light_fit_rows": [
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "unit_receiver",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 299792458.0,
+        "source_closure": false,
+        "v_hat": 1.0
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "alpha_over_2pi",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 679383693.7298015,
+        "source_closure": false,
+        "v_hat": 0.4412712003053032
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "A_phi",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 132289777.78413719,
+        "source_closure": false,
+        "v_hat": 2.266180070913597
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "strict_kernel_d0",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 303794678.5048864,
+        "source_closure": false,
+        "v_hat": 0.9868259031903286
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "strict_kernel_d1",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 637875738.4513571,
+        "source_closure": false,
+        "v_hat": 0.4699856726450201
+      },
+      {
+        "blocker": "zero boundary value cannot fit nonzero c",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": false,
+        "candidate": "strict_kernel_tail_limit",
+        "fit_residual_after_scale_choice": null,
+        "required_U_length_over_U_time": null,
+        "source_closure": false,
+        "v_hat": 0.0
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "z12_laplacian_gap",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 1118840684.9819593,
+        "source_closure": false,
+        "v_hat": 0.2679491924311226
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "z12_laplacian_max",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 74948114.5,
+        "source_closure": false,
+        "v_hat": 4.0
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "dirichlet_formal_wave_speed",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 299792458.0,
+        "source_closure": false,
+        "v_hat": 1.0
+      },
+      {
+        "blocker": "fit chooses U_length/U_time; no independent strict U_length and U_time sources",
+        "c_SI_m_per_s": 299792458.0,
+        "can_numerically_fit_c": true,
+        "candidate": "entropy_cell_count",
+        "fit_residual_after_scale_choice": 0.0,
+        "required_U_length_over_U_time": 18737028.625000004,
+        "source_closure": false,
+        "v_hat": 15.999999999999998
+      }
+    ],
+    "target_physical_constant": "speed_of_light_c_SI_exact_299792458_m_per_s",
+    "theorem_steps": [
+      {
+        "claim": "Let v_hat be any nonzero dimensionless boundary velocity receiver from the strict model.",
+        "status": "receiver_definition",
+        "step": "C1"
+      },
+      {
+        "claim": "A physical velocity has dimension U_length/U_time, so v_phys = v_hat*(U_length/U_time).",
+        "status": "dimension_lift",
+        "step": "C2"
+      },
+      {
+        "claim": "For any target c>0, choosing U_length/U_time=c/v_hat gives v_phys=c.",
+        "status": "fit_degeneracy",
+        "step": "C3"
+      },
+      {
+        "claim": "Therefore numerical agreement with c is not a source theorem unless U_length and U_time are independently strict-sourced and a Lorentz/light embedding is exported.",
+        "status": "no_closure",
+        "step": "C4"
+      }
+    ]
+  },
+  "content_grep": {
+    "boundary_light_lane": {
+      "count": 1076,
+      "samples": [
+        "AGENTS.md:2384:- The finite hint sheaf covers viscosity/damping/memory, c-retardation anisotropy, inversion-odd/chiral branch-source needs, source-localizer/coupling-polarity needs, and external unit/readout coupling needs, but zero rows export a complete non-premise selector mechanism.",
+        "AGENTS.md:2390:- P3038 constructs one integrated candidate operator combining memory/viscosity, c-retardation anisotropy, an inversion-odd chiral projection, and a unit/readout coupling slot.",
+        "AGENTS.md:2588:- Current artifacts export `0` Lorentz/gauge/unitarity/renormalization/EOM/empirical compatibility closures.  Do not promote this matrix to observed physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2589:- The next proof-grade move should pick exactly one matrix row, preferably `light_emergence_interface`, construct a sigma-conditioned nadsoliton-to-light transition law, and test Lorentz covariance; otherwise pivot to a sigma-invariant scalar conservation/scale-control theorem.",
+        "AGENTS.md:2591:## Current sigma-conditioned light Lorentz proxy guardrail (P3067/S2017, 2026-06-24)",
+        "AGENTS.md:2595:- This is only axiom-augmented proxy covariance: it exports `0` strict Lorentz/observed-light closures and does not provide a spacetime embedding, unit-bearing metric, photon/gauge sector, variational EOM, empirical map, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2596:- The next honest move is one missing blocker only: strict nadsoliton-to-spacetime embedding with unit-normalized `1+1` metric/speed-of-light scale for this proxy; otherwise pivot to a sigma-invariant scalar conservation/scale-control row.",
+        "AGENTS.md:2598:## Current strict spacetime embedding unit-metric obstruction guardrail (P3068/S2018, 2026-06-24)",
+        "AGENTS.md:2600:- P3068 attacks the exact P3067 blocker rather than enlarging the light proxy: strict `E_sigma: N_sigma -> (M^{1,1}, g_c)` spacetime embedding with a unit-normalized `1+1` metric/speed-of-light scale.",
+        "AGENTS.md:2602:- Do not promote P3068 to observed light, Lorentz closure, photon/gauge sector, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2609:- Do not promote chart-rank spans to spacetime, observed light, Lorentz closure, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2616:- Do not promote dimensionless scalars or conventional unit declarations to unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2623:- Do not promote these dimensionless conserved summaries to canonical units, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2630:- Do not promote P3072 to a nontrivial Noether current, dynamical update law, canonical unit provider, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2637:- Do not promote P3073 to full conserved-summary dynamics, a nontrivial Noether current, dynamical update law, canonical unit provider, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2644:- Do not promote P3074 to a variational source theorem, Hamiltonian, canonical unit provider, unit-bearing action, variational EOM, strict spacetime embedding, observed light, gauge photon sector, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2651:- Do not promote P3075 to a unit-bearing action, Hamiltonian, full variational EOM, canonical unit provider, strict spacetime embedding, observed light, gauge photon sector, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2652:- The next honest move is one bounded continuum-limit/spectral-dispersion audit of the internal Dirichlet/Laplacian source, without claiming observed light or gauge photons absent a separate unit/coordinate/source theorem.",
+        "AGENTS.md:2658:- Do not promote the formal small-`k` `lambda ~ k^2` proxy to observed light, gauge photons, spacetime EOM, units, Hamiltonian dynamics, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2664:- The formal Hamiltonian Dirichlet lift has `11` nonconstant modal rows satisfying the imported-formal relation `omega_j^2=lambda_j`, but `0` rows satisfy the internal-source predicate because `pi`, the symplectic form, kinetic normalization, unit-bearing time, and Lorentzian spacetime embedding remain unsourced."
+      ]
+    },
+    "boundary_values": {
+      "count": 26171,
+      "samples": [
+        "AGENTS.md:13:- `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` is restored as an **intermediate bridge kernel** on the path toward identifying the strict kernel.",
+        "AGENTS.md:14:- `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)` is the later completed/enriched strict working kernel: current bridge work may treat it as a strict completion of the legacy kernel only through explicit completion-map evidence.",
+        "AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+        "AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+        "AGENTS.md:29:- In `A1/A4/A8`, treat `K_strict_gate` as the completed/enriched strict continuation of the legacy intermediate kernel only where the explicit bridge-completion certificate licenses it; otherwise keep the layers separated.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:106:## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)",
+        "AGENTS.md:108:- P2691 confirms strict `alpha_geo=4 ln(2)` and exact scalar-shape normalization, but finds no role-safe amplitude absorption source, no physical-role safety theorem, and no APD/Lagrangian dynamical source.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:118:- P2693 closes the currently named P2680 non-selector source atoms as bounded no-go on current artifacts: canonical UV unit, role-safe `alpha_geo` amplitude source, and target-independent positive `beta/Z_beta` source all remain unexported.",
+        "AGENTS.md:249:- Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data remain orientation-blind unless a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value is exported.",
+        "AGENTS.md:482:- P2754 tests the intuition that `alpha_geo = 4 ln 2` is four Shannon bits and might generate the missing selector from the nadsoliton as pure information in geometric state.",
+        "AGENTS.md:494:- P2756 removes the P2755 toy-current limitation by auditing the full finite basis of translation-summed nearest-neighbour antisymmetric Shannon entropy pair currents on the four-quanta `Z12` entropy alphabet.",
+        "AGENTS.md:519:- The finite comparison confirms that `K_legacy_ont` and `K_strict_gate` remain formula-distinct on `d=0..12`; P1562 stale `qw2191_closed/toe_closed` flags are quarantined by P1563/P1866/current guardrails.",
+        "AGENTS.md:578:- P2770 audits the user's core foundation question: whether `K_legacy_ont` or `K_strict_gate` fully express the nadsoliton as the single primordial informational, self-learning neural-network-like, geometrically self-coupled foundation.",
+        "AGENTS.md:579:- The finite formula-coverage matrix finds only bounded solitonic-shape coverage from oscillation plus damping/compression; the formulas do not themselves encode an ontology-source theorem, self-learning update law, geometric self-coupling operator, or completed `K_legacy_ont -> K_strict_gate` bridge.",
+        "AGENTS.md:585:- Both `K_legacy_ont` and `K_strict_gate` fail the finite scalar-eigenclosure residual test; the candidate is also not uniquely/ontologically sourced and supplies no learning update law.",
+        "AGENTS.md:591:- Both `K_legacy_ont` and `K_strict_gate` have nonzero finite-difference gradients, so neither current tuple is a stationary learned fixed point of this candidate; the loss is not ontologically sourced or coupled to physical `L_total`.",
+        "AGENTS.md:596:- P2773 tests whether Shannon entropy alone forces nadsoliton geometry: the uniform 16-point distribution has `H=ln(16)=4 ln 2=alpha_geo`.",
+        "AGENTS.md:600:## Current entropy-plus-Laplacian-trace geometry degeneracy guardrail (P2774/S1724, 2026-06-15)"
+      ]
+    },
+    "closed_imports": {
+      "count": 37180,
+      "samples": [
+        "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+        "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+        "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+        "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+        "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+        "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+        "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open.",
+        "AGENTS.md:135:- Do not continue this direct-route residual-cancellation lane without a genuinely new strict-derived provider class, non-N477 ingredient, or blocker-cut; do not import selector replay, `QW-2191` discharge, bridge-source replay, role transfer, `L_total`, or ToE closure.",
+        "AGENTS.md:140:- P2697 reconciles the broad state-map after P2695/P2696 and emits a no-new-live-frontier certificate on current artifacts: direct residual cancellation, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/H37/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated.",
+        "AGENTS.md:148:- Do not promote premise-based direction into strict selector closure, `L_total`, role transfer, or ToE closure.  A next admissible move must introduce a genuinely new non-premise-based strict selector/orientation source object; otherwise keep the P2697/P2698 no-new-live-frontier certificate.",
+        "AGENTS.md:153:- Do not claim `QW-2191` discharge, strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, role transfer, bridge closure, or ToE closure from this candidate.",
+        "AGENTS.md:159:- Do not replay Aut-invariant selector-functional searches as a primary strategy; no `QW-2191`, strict selector, pair12 strict-core, `L_total`, bridge, role-transfer, or ToE closure is exported.",
+        "AGENTS.md:165:- Do not claim strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, bridge closure, role transfer, or ToE closure from inventory hits.",
+        "AGENTS.md:178:- Do not remove `QW-2191`, non-premise strict selector-provider, pair12 strict-core, `L_total`, role-transfer, bridge, or ToE blocks from older release prose alone.  The next admissible move is a narrow P1343/P1348 provenance revalidation table, or preservation of the P2697-P2703 no-new-live-frontier certificate.",
+        "AGENTS.md:184:- Do not promote P2704 to pair12 strict-core upgrade, legacy role transfer, `L_total`, bridge closure, or ToE closure.  The next admissible move is a boundary-alignment theorem between the P1343/P1348 declared-scope selector and the P2699-P2702 criteria.",
+        "AGENTS.md:190:- Do not use this commit to remove `QW-2191`, non-premise selector-provider, pair12 strict-core, `L_total`, role-transfer, bridge-completion, or ToE blocks.  A next admissible move is a narrow damping-to-selector interface obstruction/witness table, not closure promotion.",
+        "AGENTS.md:195:- Do not use P2377/P2378 damping-compression transport to discharge `QW-2191`, export a non-premise selector provider, upgrade pair12 strict-core, promote `L_total`, transfer roles, close the bridge, or claim ToE closure."
+      ]
+    },
+    "dimension_chain": {
+      "count": 3509,
+      "samples": [
+        "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+        "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+        "AGENTS.md:2929:- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.",
+        "AGENTS.md:2932:- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.",
+        "AGENTS.md:2934:## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)",
+        "AGENTS.md:2936:- P3116 tests the P3115-requested nadsoliton-only dimension-source functor `K_dim` from strict nadsoliton data to the positive scale torsor.",
+        "AGENTS.md:2937:- The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.",
+        "AGENTS.md:2939:- The next honest move requires exactly one new strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data; otherwise preserve the P3105-P3116 physical-unit no-go/no-new-live-frontier certificate.",
+        "AGENTS.md:2941:## Current Omega_dim dimension-character source guardrail (P3117/S2067, 2026-06-26)",
+        "AGENTS.md:2943:- P3117 tests the P3116-requested strict typed source object `Omega_dim`, an internal dimension character/valuation on nadsoliton data.",
+        "AGENTS.md:2944:- The finite audit constructs `10` candidate characters, `60` scale-valuation rows, `50` dimension-axis rows, `40` coupling-chain rows, and `120` gate rows; `0` candidates export an import-free strict `Omega_dim` source.",
+        "AGENTS.md:2946:- The next honest move requires exactly one new strict relation object `R_dim`, an internal action-length-time composition law completing the phase-area `Omega_dim` gap; otherwise preserve the P3105-P3117 physical-unit no-go/no-new-live-frontier certificate.",
+        "AGENTS.md:2948:## Current R_dim action-length-time relation guardrail (P3118/S2068, 2026-06-26)",
+        "AGENTS.md:2950:- P3118 tests the P3117-requested strict relation object `R_dim`, an internal action-length-time composition law on nadsoliton data.",
+        "AGENTS.md:2951:- The finite audit constructs `11` candidate relations, `88` relation-law rows, `55` scale-covariance rows, `55` phase-area coupling rows, and `143` gate rows; `0` candidates export an import-free strict `R_dim` relation.",
+        "AGENTS.md:2953:- The next honest move requires exactly one new strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes; otherwise preserve the P3105-P3118 physical-unit no-go/no-new-live-frontier certificate.",
+        "AGENTS.md:2955:## Current Xi_LT axis-source object guardrail (P3119/S2069, 2026-06-26)",
+        "AGENTS.md:2957:- P3119 tests the P3118-requested strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes on nadsoliton data.",
+        "AGENTS.md:2958:- The finite audit constructs `12` candidate axis sources, `96` axis-source rows, `60` axis-scale covariance rows, `72` `R_dim` coupling rows, and `168` gate rows; `0` candidates export an import-free strict `Xi_LT` source.",
+        "AGENTS.md:2960:- The next honest move requires exactly one new strict ordered-flow source object `Tau_LT`, an intrinsic temporal-order/length-extension bifunctor on nadsoliton information flow; otherwise preserve the P3105-P3119 physical-unit no-go/no-new-live-frontier certificate."
+      ]
+    }
+  },
+  "decision": {
+    "bounded_result": "P3163 constructs the requested boundary-value-to-c matching audit.  Nine nonzero boundary receivers can numerically fit c after choosing a unit ratio, and the zero tail cannot; all successful fits are scale choices rather than strict source laws.",
+    "negative_export_flags": {
+      "K_dim_functor_exported": false,
+      "Lorentz_metric_exported": false,
+      "Omega_scale_source_exported": false,
+      "QW_2191_discharged": false,
+      "S_plus_source_exported": false,
+      "ToE_closure_exported": false,
+      "U_length_source_exported": false,
+      "U_time_source_exported": false,
+      "bridge_completion_exported": false,
+      "observed_light_exported": false,
+      "physical_speed_of_light_source_exported": false,
+      "physical_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "selector_closure_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "If this boundary-value route is pursued, the next proof-grade object must be a two-axis unit theorem U_LT: independently source U_length and U_time (or a Lorentzian metric/light-cone embedding) before comparing to c.  Otherwise preserve P3162's S_+ unit-source frontier or pivot to Lambda_origin_source_localizer for phase-origin work.",
+    "positive_scoped_flags": {
+      "boundary_value_receiver_constructed": true,
+      "repo_grep_performed": true,
+      "scale_degeneracy_theorem_proved": true,
+      "speed_of_light_fit_matrix_built": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_physical_c_sources": 0,
+    "boundary_value_candidates": 10,
+    "c_SI_m_per_s": 299792458.0,
+    "candidate_gate_rows": 80,
+    "numerically_fit_nonzero_candidates": 9,
+    "scale_degeneracy_rows": 225,
+    "speed_of_light_fit_rows": 10
+  },
+  "finite_theorem": {
+    "name": "P3163_T1_boundary_c_fit_is_scale_underdetermined",
+    "statement": "Boundary/limiting model values can be used as receiver diagnostics for physical constants, but any nonzero dimensionless v_hat can match c by choosing U_length/U_time=c/v_hat.  Since current artifacts do not export independent U_length, U_time, Lorentz/spacetime embedding, or observed-light source, no boundary-value fit to c is a strict dimension source."
+  },
+  "input_hashes": {
+    "P3077": "9bdfe92680ecd3fa25a59f8adcf2dfe8b1faddbffa8f9f167b5ab27e4e26658c",
+    "P3119": "04f0955988536d452171859c2eb6bbad3002329b43d44a68dff3792c50188e0f",
+    "P3120": "d28b41785d3e429abcb23920670a3a05ad7570b2835cb9db14475beed47c225a",
+    "P3158": "a95f1a300a7364254a53f6e2bee8f1aa9f440006ef9898e67eec1e0d47d175fc",
+    "P3162": "72d1b8d65b46ff484bccc1cec7949d269979c5e54fb0d5012a0debde37d5e797"
+  },
+  "input_statuses": {
+    "P3077": "P3077_FORMAL_HAMILTONIAN_LIFT_EXISTS_INTERNAL_SECOND_ORDER_SOURCE_OBSTRUCTED",
+    "P3119": "P3119_XI_LT_AXIS_SOURCE_OBJECT_BOUNDED_NO_GO",
+    "P3120": "P3120_TAU_LT_ORDERED_FLOW_SOURCE_BOUNDED_NO_GO",
+    "P3158": "P3158_POST_P3157_UNIT_SOURCE_DEPENDENCY_RECONCILIATION_NO_STRICT_UNIT",
+    "P3162": "P3162_S_PLUS_SCALE_CHARGED_SOURCE_DATUM_INTAKE_BOUNDED_NO_GO"
+  },
+  "status": "P3163_BOUNDARY_VALUE_SPEED_OF_LIGHT_MATCHING_UNDERDETERMINATION_AUDIT"
+}

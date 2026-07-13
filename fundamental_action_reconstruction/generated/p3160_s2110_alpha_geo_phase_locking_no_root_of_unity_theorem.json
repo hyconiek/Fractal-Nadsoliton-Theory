@@ -1,0 +1,1605 @@
+{
+  "constructed_theoretical_objects": {
+    "exact_theorem_steps": [
+      {
+        "claim": "Assume alpha_geo/(2*pi)=p/q with integers p,q and p!=0.",
+        "status": "assumption_for_contradiction",
+        "step": 1
+      },
+      {
+        "claim": "Since alpha_geo=4 ln 2=ln(16), exponentiation gives 16=e^(2*pi*p/q).",
+        "status": "algebraic_rewrite",
+        "step": 2
+      },
+      {
+        "claim": "For nonzero rational r=2p/q, e^(pi*r) is transcendental by the Gelfond-Schneider consequence e^(pi*algebraic_nonzero).",
+        "status": "transcendence_input",
+        "step": 3
+      },
+      {
+        "claim": "Thus e^(2*pi*p/q) is transcendental, contradicting 16 being algebraic.",
+        "status": "contradiction",
+        "step": 4
+      },
+      {
+        "claim": "Therefore alpha_geo/(2*pi) is irrational and exp(i*alpha_geo) is not a root of unity.",
+        "status": "proved",
+        "step": 5
+      }
+    ],
+    "name": "R_alpha_phase_locking_no_root_of_unity_audit",
+    "objects": [
+      {
+        "accepted_as": "dimensionless normalization",
+        "blocker": "does not select a unit, origin, or physical scale",
+        "closure_exported": false,
+        "constructed": true,
+        "formula": "A_phi=2*pi/alpha_geo",
+        "object": "A_phi_phase_area_section"
+      },
+      {
+        "accepted_as": "irrational phase-winding ratio",
+        "blocker": "irrationality prevents exact finite Z_N slot source",
+        "closure_exported": false,
+        "constructed": true,
+        "formula": "alpha_geo/(2*pi)",
+        "object": "R_alpha_phase_ratio"
+      },
+      {
+        "accepted_as": "exact no-go object",
+        "blocker": "excluded for every finite N by the transcendence contradiction",
+        "closure_exported": false,
+        "constructed": true,
+        "formula": "exp(i*alpha_geo)^N=1",
+        "object": "U_alpha_root_of_unity_lock"
+      },
+      {
+        "accepted_as": "rejected source candidate",
+        "blocker": "irrational winding is dense/quasiperiodic, not a canonical origin/localizer",
+        "closure_exported": false,
+        "constructed": true,
+        "formula": "choose phase origin from alpha_geo/pi",
+        "object": "Lambda_origin_from_alpha_pi"
+      },
+      {
+        "accepted_as": "rejected unit candidate",
+        "blocker": "dimensionless irrationality does not break the positive scale torsor",
+        "closure_exported": false,
+        "constructed": true,
+        "formula": "fix positive mass/action scale from alpha_geo and pi",
+        "object": "Omega_M_from_alpha_pi"
+      }
+    ]
+  },
+  "content_grep": {
+    "alpha_pi_section": {
+      "count": 10137,
+      "samples": [
+        "AGENTS.md:13:- `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` is restored as an **intermediate bridge kernel** on the path toward identifying the strict kernel.",
+        "AGENTS.md:16:- Do **not** silently substitute `K_strict_gate` for `K_legacy_ont` or for the canonical parameter layer `D_f / alpha_geo / beta_tors`; bridge work must state the completion map and residual strict-side additions.",
+        "AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:106:## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)",
+        "AGENTS.md:108:- P2691 confirms strict `alpha_geo=4 ln(2)` and exact scalar-shape normalization, but finds no role-safe amplitude absorption source, no physical-role safety theorem, and no APD/Lagrangian dynamical source.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:118:- P2693 closes the currently named P2680 non-selector source atoms as bounded no-go on current artifacts: canonical UV unit, role-safe `alpha_geo` amplitude source, and target-independent positive `beta/Z_beta` source all remain unexported.",
+        "AGENTS.md:249:- Entropy/UV scale, `alpha_geo` amplitude, positive `beta` damping, and scalar Lagrangian data remain orientation-blind unless a genuinely strict inversion-odd pseudoscalar/chiral source with a nonzero signed value is exported.",
+        "AGENTS.md:482:- P2754 tests the intuition that `alpha_geo = 4 ln 2` is four Shannon bits and might generate the missing selector from the nadsoliton as pure information in geometric state.",
+        "AGENTS.md:596:- P2773 tests whether Shannon entropy alone forces nadsoliton geometry: the uniform 16-point distribution has `H=ln(16)=4 ln 2=alpha_geo`.",
+        "AGENTS.md:602:- P2774 strengthens P2773 by adding a graph-Laplacian trace/regularity constraint to `H=ln(16)=4 ln 2=alpha_geo`.",
+        "AGENTS.md:1072:- P2851 tests exactly one bridge atom: legacy `alpha_geo=4 ln 2` amplitude passage into the unit-amplitude strict gate kernel.",
+        "AGENTS.md:1074:- Do not promote `alpha_geo` rescaling to amplitude bridge, full kernel bridge, role transfer, selector closure, unit-bearing `L_total`, EOM, Hamiltonian, or ToE closure.",
+        "AGENTS.md:1080:- Damping/compression lacks `eta` and target-independent `beta` sources; amplitude lacks constant residual-zero passage and role-safe `alpha_geo` source law; full bridge and role transfer remain downstream.",
+        "AGENTS.md:1094:- Strong finite witnesses remain real, especially exact affine phase/frequency transport, but no new strict source premise is exported for `omega/phi`, `eta/beta`, `alpha_geo`, selector/topological data, unit-bearing `L_total`, EOM, Hamiltonian, bridge closure, role transfer, or ToE.",
+        "AGENTS.md:2458:## Current memory phase-area odd-source candidate guardrail (P3048/S1998, 2026-06-23)",
+        "AGENTS.md:2462:- Do not promote oriented phase-area signs, cyclic phase-curve orientation, or area-score winners to `QW-2191` discharge, selector closure, observed physics, unit-bearing action/EOM, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2693:- Do not promote Dirichlet energy gaps, Z12 counts, `alpha_geo`, entropy-bit references, spectral gaps, or imported `hbar/c/a` templates to physical Hamiltonian, spacetime EOM, observed light, gauge photons, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2852:- P3104 follows the P3103 recommendation and audits one standard-physics interface atom: a spectral-triple/geometry-interface source for the Z12 Dirichlet/Laplacian branch, including the `alpha_geo=4 ln 2` entropy/unit clue."
+      ]
+    },
+    "closed_lanes": {
+      "count": 58424,
+      "samples": [
+        "AGENTS.md:17:- When the legacy -> strict bridge is fully specified, immediately audit legacy role transfer separately: determine which legacy physical-role claims survive, which are modified by strict completion/compression, and which are rejected.",
+        "AGENTS.md:36:- The `legacy -> strict` completion bridge remains a major open problem, but after P2679/P2680 it is admissible as a next move only when attacking one new typed bridge/source atom; do not demote finite direct-route or Lagrangian/EOM obstruction matrices merely because bridge completion remains open.",
+        "AGENTS.md:40:- `QW-2191` is a real strict-core uniqueness obstruction.",
+        "AGENTS.md:41:- Do not imply strict-core selector closure without an explicit symmetry-breaking / selector premise or a newly exported internal selector source.",
+        "AGENTS.md:49:_Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel; role-transfer audit required after bridge completion)._",
+        "AGENTS.md:66:- Closed/repetition-gated lanes remain closed without new evidence: selector/orientation/QW-2191 replay, `tau_src -> pair12 -> boundary-square`, and `beta_tors -> chi11` are not admissible merely because they are mentioned in older bridge notes.",
+        "AGENTS.md:74:- The current next proof-grade move is an independent strict Lagrangian/EOM reverse-closure obstruction matrix; it must not import selector closure, role transfer, generic bridge closure, `tau_src -> pair12`, or `beta_tors -> chi11` by replay.",
+        "AGENTS.md:79:- The next proof-grade move is a shared-background `EA/EH/ELg` nonproxy component residual table, starting from the Bianchi-I anisotropic obstruction; do not promote `L_total`, ToE closure, selector closure, role transfer, or generic bridge closure without that table.",
+        "AGENTS.md:99:- The next admissible move is exactly one missing premise: a selector-free nonexact boundary-phase sector provider for the P2663 one-bit carrier; do not import selector replay, QW-2191 discharge, role transfer, bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:104:- The next move should return to the broad state-map; the most concrete remaining P2680 non-selector target is an amplitude role-safe source audit for `alpha_geo` scalar-shape normalization, without legacy role transfer, selector replay, `beta_tors -> chi11`, or generic bridge completion.",
+        "AGENTS.md:109:- Freeze the `alpha_geo` amplitude atom as bounded no-go on current artifacts; the next non-replay move should audit a target-independent positive `beta/Z_beta` source, without canonical UV-unit replay, `beta_tors -> chi11`, selector replay, role transfer, generic bridge completion, `L_total`, or ToE closure.",
+        "AGENTS.md:114:- Freeze the current P2680 damping/compression beta-source atom as bounded no-go; the next move should be a post-P2680 non-selector source-inventory closure/state-map reconciliation, not generic bridge replay, role transfer, selector replay, canonical UV-unit replay, `L_total`, or ToE closure.",
+        "AGENTS.md:124:- Do not reopen the attacked `m2_psi4` target, generic bridge-source replay, selector/tau replay, role transfer, `L_total`, or ToE closure while executing that matrix.",
+        "AGENTS.md:129:- Do not promote this to full direct-route closure, strict-core closure, selector closure, bridge-source closure, role transfer, `L_total`, or ToE closure; `pair1 c1c1`, `pair1 s1s1`, and `QW-2191` remain open.",
+        "AGENTS.md:135:- Do not continue this direct-route residual-cancellation lane without a genuinely new strict-derived provider class, non-N477 ingredient, or blocker-cut; do not import selector replay, `QW-2191` discharge, bridge-source replay, role transfer, `L_total`, or ToE closure.",
+        "AGENTS.md:140:- P2697 reconciles the broad state-map after P2695/P2696 and emits a no-new-live-frontier certificate on current artifacts: direct residual cancellation, P2680 bridge-source atoms, Lagrangian/EOM reverse closure, lower-boundary recursion, selector/H37/QW-2191 replay, role transfer, `L_total`, and ToE closure are all repetition-gated.",
+        "AGENTS.md:146:- P2698 confirms that earlier direction/orientation/sign-sensitive exports are real and must not be ignored, but they are premise-based/readiness/convention scoped: H36/H37/H38 and P739/P740 do not discharge `QW-2191`, do not export pair12 strict-core upgrade, and do not provide Aut(Z12)-invariant canonicity.",
+        "AGENTS.md:148:- Do not promote premise-based direction into strict selector closure, `L_total`, role transfer, or ToE closure.  A next admissible move must introduce a genuinely new non-premise-based strict selector/orientation source object; otherwise keep the P2697/P2698 no-new-live-frontier certificate.",
+        "AGENTS.md:153:- Do not claim `QW-2191` discharge, strict selector closure, pair12 strict-core upgrade, role-bearing `L_total`, role transfer, bridge closure, or ToE closure from this candidate.",
+        "AGENTS.md:159:- Do not replay Aut-invariant selector-functional searches as a primary strategy; no `QW-2191`, strict selector, pair12 strict-core, `L_total`, bridge, role-transfer, or ToE closure is exported."
+      ]
+    },
+    "phase_locking": {
+      "count": 144,
+      "samples": [
+        "AGENTS.md:3251:## Current alpha_geo phase-locking no-root-of-unity guardrail (P3160/S2110, 2026-07-13)",
+        "AGENTS.md:3253:- P3160 strengthens P3159 by proving that `alpha_geo/(2*pi)` is irrational: otherwise `16=e^(2*pi*p/q)` would contradict the Gelfond-Schneider consequence that `e^(pi*r)` is transcendental for nonzero rational `r`.",
+        "AGENTS.md:3254:- Therefore `exp(i*alpha_geo)` is not a root of unity and `alpha_geo` cannot be an exact finite `Z_N` phase slot or phase-origin selector; the P3159 `A_phi=2*pi/alpha_geo` section remains only a dimensionless phase-area normalization.",
+        "AGENTS.md:3255:- Do not continue alpha_geo/pi phase-locking or `Z_N` slot searches as closure evidence; they do not export `Lambda_origin`, `Omega_M/K_dim`, physical units, selector closure, bridge completion, role transfer, `L_total`, or ToE.",
+        "fundamental_action_reconstruction/P415_CURRENT_STRICT_SIGMA_INT_TO_THETA_AX20_TYPED_Z12_PHASE_DENSITY_BERRY_SLOTLESS_ADMISSIBILITY_AUDIT_PROBE.md:37:| **(B)** Canonical phase embedding (no offset/scale slot) | **NO (as a slot-free theorem)** | Even after exporting a `Z_12` action, a map `Z_12 → U(1)` (or angles) is unique only up to discrete automorphisms (generator choice) and orientation; treating one embedding as “canonical” is a *choice* unless: (i) the generator is strictly fixed by an exported strict datum, or (ii) the construction is explicitly gauge-quotiented and the output is invariant. Neither discipline is exported for AX20 today. |",
+        "fundamental_action_reconstruction/P415_CURRENT_STRICT_SIGMA_INT_TO_THETA_AX20_TYPED_Z12_PHASE_DENSITY_BERRY_SLOTLESS_ADMISSIBILITY_AUDIT_PROBE.md:40:| **(E)** Typed Berry/holonomy construction with gauge discipline | **NO (strict-core)** | Berry/holonomy requires additional typed primitives: a complex/Hilbert carrier (or discrete bundle), a connection/parallel-transport rule, a gauge convention or gauge quotient statement, and a proof that the resulting holonomy is invariant under allowed gauge transformations. Without these explicit exports, “Berry phase” introduces hidden choices (connection/gauge/path), i.e. new selector slots (already flagged in `P414`). |",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:71:        slot_phase = nearest_slot * TWO_PI / 12.0",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:72:        signed_error = ((phase - slot_phase + math.pi) % TWO_PI) - math.pi",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:76:            \"nearest_Z12_phase_slot\": nearest_slot,",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:97:        (\"Z12_slot_alignment\", \"n*alpha_geo mod 2*pi lands on a canonical Z12 phase slot\", True, False, True, True, False, False, \"Finite n<=12 scan has no exact slot-locking theorem; numeric nearest slots are approximation data only.\"),",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:128:            \"alpha_geo_over_2pi\": ALPHA_GEO / TWO_PI,",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:137:            \"statement\": \"The strict scalar alpha_geo=4 ln 2 is exactly compatible with a dimensionless phase-area section A_phi=2*pi/alpha_geo.  This verifies the pi-phase bookkeeping route and agrees with the P3111 style phase-area section.  However, finite Z12 slot scans and rational approximants do not provide a canonical phase-origin, selector, physical action/mass unit, or legacy role-transfer theorem.  The result is positive as internal phase normalization and negative as closure/source promotion.\",",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:155:    lines = [\"# P3159/S2109 alpha_geo/pi phase compatibility audit\", \"\", f\"Status: `{payload['status']}`\", \"\", \"## Constructed object\", f\"- `{payload['constructed_object']['name']}`\", f\"- Formula: `{payload['constructed_object']['formula']}`\", f\"- Classification: {payload['constructed_object']['classification']}\", \"\", \"## Numeric certificate\", f\"- `alpha_geo = {cert['alpha_geo']:.15f}`\", f\"- `2*pi = {cert['two_pi']:.15f}`\", f\"- `A_phi = 2*pi/alpha_geo = {cert['A_phi']:.15f}`\", f\"- `alpha_geo*A_phi - 2*pi = {cert['alpha_geo_times_A_phi_minus_2pi']:.3e}`\", f\"- Best n<=12 Z12 slot row: `n={cert['min_Z12_slot_error_n_le_12']['n']}`, error `{cert['min_Z12_slot_error_n_le_12']['absolute_error']:.6f}`\", \"\", \"## Finite theorem\", f\"`{th['name']}`: {th['statement']}\", \"\", \"## Decision\", payload[\"decision\"][\"bounded_result\"], \"\", \"## Recommendation\", payload[\"decision\"][\"next_honest_step\"]]",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:164:    append_once(STRICT_EQUATION_SHEET, \"P3159/S2109 alpha_geo/pi phase compatibility audit\", \"## P3159/S2109 alpha_geo/pi phase compatibility audit\\n\\n`P3159/S2109` constructs `Phi_alpha_pi`, a scoped compatibility object for `alpha_geo=4 ln 2` and the `2*pi` phase quantum.  The exact dimensionless section `A_phi=2*pi/alpha_geo=pi/(2 ln 2)` satisfies `alpha_geo*A_phi=2*pi`, confirming the pi-phase bookkeeping route already suggested by the P3111 phase-area section.  Finite `n<=12` phase-slot scans and rational approximants do not export a phase-origin source, selector, physical action/mass unit, bridge completion, role transfer, or `L_total`/ToE closure.\\n\")",
+        "fundamental_action_reconstruction/p3159_s2109_alpha_geo_pi_phase_compatibility_audit.py:166:    append_once(AGENTS, \"Current alpha_geo/pi phase compatibility guardrail (P3159/S2109, 2026-07-13)\", \"## Current alpha_geo/pi phase compatibility guardrail (P3159/S2109, 2026-07-13)\\n\\n- P3159 constructs `Phi_alpha_pi`, a scoped compatibility object between strict `alpha_geo=4 ln 2` and the `2*pi` phase quantum.\\n- The audit verifies the exact dimensionless phase-area section `A_phi=2*pi/alpha_geo=pi/(2 ln 2)`, so alpha_geo is compatible with pi-phase bookkeeping at the internal normalization level.\\n- Finite `Z12` slot scans and rational approximants do not export a canonical phase origin, `Lambda_origin`, positive mass/action unit, `K_dim`, selector closure, bridge completion, role transfer, `L_total`, or ToE.\\n- Next honest move: introduce exactly one new source object, preferably a strict positive torsor source law for `Omega_M/K_dim` or a nonconventional `Lambda_origin_source_localizer` explicitly coupled to `A_phi`; do not replay alpha_geo/pi numerology as closure.\\n\")",
+        "fundamental_action_reconstruction/test_p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.py:9:SCRIPT = ROOT / \"p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.py\"",
+        "fundamental_action_reconstruction/test_p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.py:10:OUT = ROOT / \"generated\" / \"p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.json\"",
+        "fundamental_action_reconstruction/test_p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.py:11:MD = ROOT / \"generated\" / \"p3160_s2110_alpha_geo_phase_locking_no_root_of_unity_theorem.md\"",
+        "fundamental_action_reconstruction/N451_CURRENT_FIRST_STRICT_AX20_TYPED_Z12_PHASE_EMBEDDING_CANONICITY_SLOTLESS_TARGET_THEOREM.md:16:Phi_Z12_phase_embedding_canonical_or_quotient_safe_slotless_target_v1.",
+        "fundamental_action_reconstruction/P414_CURRENT_STRICT_SIGMA_INT_TO_THETA_AX20_TOPOLOGICAL_DENSITY_PROJECTOR_SLOT_FREE_ADMISSIBILITY_AUDIT_PROBE.md:41:| Step 1: replace corridor-step `delta_d` by “pure Z12 phase discretization; distance vanishes” | **NO (as stated)** | Current strict exports do not equate the nad12 scaffold with an exported `Z_12` group action, nor with a canonical embedding into a phase circle with step `2π/12`. Removing the `d`-axis coupling is a **new construction class** and requires an explicit strict typed map from strict inputs to a discrete phase object. Without such a typed map, the proposal contains an implicit embedding/offset/scaling choice (a hidden slot). |"
+      ]
+    }
+  },
+  "continued_fraction_ladder": [
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 12,
+      "p": 4,
+      "p_over_q": 0.4444444444444444,
+      "phase_error_abs": 0.019938080951145836,
+      "q": 9,
+      "ratio_error_abs": 0.003173244139141218
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 24,
+      "p": 4,
+      "p_over_q": 0.4444444444444444,
+      "phase_error_abs": 0.019938080951145836,
+      "q": 9,
+      "ratio_error_abs": 0.003173244139141218
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 48,
+      "p": 15,
+      "p_over_q": 0.4411764705882353,
+      "phase_error_abs": 0.0005952043664344384,
+      "q": 34,
+      "ratio_error_abs": 9.472971706792066e-05
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 96,
+      "p": 15,
+      "p_over_q": 0.4411764705882353,
+      "phase_error_abs": 0.0005952043664344384,
+      "q": 34,
+      "ratio_error_abs": 9.472971706792066e-05
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 144,
+      "p": 15,
+      "p_over_q": 0.4411764705882353,
+      "phase_error_abs": 0.0005952043664344384,
+      "q": 34,
+      "ratio_error_abs": 9.472971706792066e-05
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 288,
+      "p": 124,
+      "p_over_q": 0.4412811387900356,
+      "phase_error_abs": 6.244534124629454e-05,
+      "q": 281,
+      "ratio_error_abs": 9.938484732407993e-06
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 576,
+      "p": 139,
+      "p_over_q": 0.44126984126984126,
+      "phase_error_abs": 8.53907164643053e-06,
+      "q": 315,
+      "ratio_error_abs": 1.3590354619452683e-06
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 1152,
+      "p": 139,
+      "p_over_q": 0.44126984126984126,
+      "phase_error_abs": 8.53907164643053e-06,
+      "q": 315,
+      "ratio_error_abs": 1.3590354619452683e-06
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 2304,
+      "p": 958,
+      "p_over_q": 0.44127130354675265,
+      "phase_error_abs": 6.486851582451779e-07,
+      "q": 2171,
+      "ratio_error_abs": 1.0324144944506841e-07
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 4608,
+      "p": 1097,
+      "p_over_q": 0.4412711182622687,
+      "phase_error_abs": 5.154915887837628e-07,
+      "q": 2486,
+      "ratio_error_abs": 8.204303447723049e-08
+    },
+    {
+      "exact_equality_excluded_by_theorem": true,
+      "max_denominator": 9216,
+      "p": 2055,
+      "p_over_q": 0.4412712046381791,
+      "phase_error_abs": 2.7224262138744593e-08,
+      "q": 4657,
+      "ratio_error_abs": 4.332875891410737e-09
+    }
+  ],
+  "decision": {
+    "bounded_result": "The stronger alpha_geo/pi check is now a real theorem, not just a float scan: alpha_geo is compatible with phase normalization through A_phi, but alpha_geo itself is provably not an exact rational phase slot/root of unity.  Therefore alpha_geo/pi cannot be used as a canonical Z_N phase-origin selector or unit-source law.",
+    "negative_export_flags": {
+      "K_dim_functor_exported": false,
+      "Lambda_origin_exported": false,
+      "Omega_M_scale_fixed": false,
+      "QW_2191_discharged": false,
+      "ToE_closure_exported": false,
+      "bridge_completion_exported": false,
+      "finite_phase_slot_exported": false,
+      "physical_unit_source_exported": false,
+      "role_transfer_exported": false,
+      "root_of_unity_lock_exported": false,
+      "selector_closure_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Do not continue alpha_geo/pi phase-locking searches.  The next proof-grade move should construct exactly one new source object outside this exhausted route: either (1) a strict positive torsor source law Omega_scale selecting the scale of Omega_M/K_dim with a nonzero source value and scale-covariance-breaking proof, or (2) a nonconventional Lambda_origin_source_localizer whose origin is not obtained from alpha_geo/pi phase locking and comes with an explicit coupling theorem to Phi_Info/A_phi.",
+    "positive_scoped_flags": {
+      "P3159_A_phi_section_preserved": true,
+      "exact_irrationality_theorem_exported": true,
+      "no_finite_ZN_phase_locking_proved": true,
+      "repo_grep_performed": true
+    }
+  },
+  "denominator_scan_rows_N_1_to_144": [
+    {
+      "absolute_phase_residual": 2.772588722239781,
+      "cycle_residual": 0.4412712003053032,
+      "denominator_N": 1,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.0,
+      "nearest_integer_k": 0,
+      "phase_residual_mod_2pi": 2.772588722239781
+    },
+    {
+      "absolute_phase_residual": 0.7380078627000238,
+      "cycle_residual": -0.1174575993893936,
+      "denominator_N": 2,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.5,
+      "nearest_integer_k": 1,
+      "phase_residual_mod_2pi": -0.7380078627000238
+    },
+    {
+      "absolute_phase_residual": 2.0345808595397576,
+      "cycle_residual": 0.3238136009159096,
+      "denominator_N": 3,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.3333333333333333,
+      "nearest_integer_k": 1,
+      "phase_residual_mod_2pi": 2.0345808595397576
+    },
+    {
+      "absolute_phase_residual": 1.4760157254000477,
+      "cycle_residual": -0.2349151987787872,
+      "denominator_N": 4,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.5,
+      "nearest_integer_k": 2,
+      "phase_residual_mod_2pi": -1.4760157254000477
+    },
+    {
+      "absolute_phase_residual": 1.296572996839735,
+      "cycle_residual": 0.20635600152651623,
+      "denominator_N": 5,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4,
+      "nearest_integer_k": 2,
+      "phase_residual_mod_2pi": 1.296572996839735
+    },
+    {
+      "absolute_phase_residual": 2.2140235881000714,
+      "cycle_residual": -0.3523727981681808,
+      "denominator_N": 6,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.5,
+      "nearest_integer_k": 3,
+      "phase_residual_mod_2pi": -2.2140235881000714
+    },
+    {
+      "absolute_phase_residual": 0.5585651341397084,
+      "cycle_residual": 0.08889840213712219,
+      "denominator_N": 7,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42857142857142855,
+      "nearest_integer_k": 3,
+      "phase_residual_mod_2pi": 0.5585651341397084
+    },
+    {
+      "absolute_phase_residual": 2.9520314508000953,
+      "cycle_residual": -0.4698303975575744,
+      "denominator_N": 8,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.5,
+      "nearest_integer_k": 4,
+      "phase_residual_mod_2pi": -2.9520314508000953
+    },
+    {
+      "absolute_phase_residual": 0.17944272856031251,
+      "cycle_residual": -0.028559197252270963,
+      "denominator_N": 9,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 4,
+      "phase_residual_mod_2pi": -0.17944272856031251
+    },
+    {
+      "absolute_phase_residual": 2.59314599367947,
+      "cycle_residual": 0.41271200305303246,
+      "denominator_N": 10,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4,
+      "nearest_integer_k": 4,
+      "phase_residual_mod_2pi": 2.59314599367947
+    },
+    {
+      "absolute_phase_residual": 0.9174505912603391,
+      "cycle_residual": -0.146016796641665,
+      "denominator_N": 11,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45454545454545453,
+      "nearest_integer_k": 5,
+      "phase_residual_mod_2pi": -0.9174505912603391
+    },
+    {
+      "absolute_phase_residual": 1.8551381309794435,
+      "cycle_residual": 0.2952544036636384,
+      "denominator_N": 12,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4166666666666667,
+      "nearest_integer_k": 5,
+      "phase_residual_mod_2pi": 1.8551381309794435
+    },
+    {
+      "absolute_phase_residual": 1.65545845396036,
+      "cycle_residual": -0.26347439603105816,
+      "denominator_N": 13,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.46153846153846156,
+      "nearest_integer_k": 6,
+      "phase_residual_mod_2pi": -1.65545845396036
+    },
+    {
+      "absolute_phase_residual": 1.1171302682794169,
+      "cycle_residual": 0.17779680427424438,
+      "denominator_N": 14,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42857142857142855,
+      "nearest_integer_k": 6,
+      "phase_residual_mod_2pi": 1.1171302682794169
+    },
+    {
+      "absolute_phase_residual": 2.3934663166603865,
+      "cycle_residual": -0.3809319954204522,
+      "denominator_N": 15,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4666666666666667,
+      "nearest_integer_k": 7,
+      "phase_residual_mod_2pi": -2.3934663166603865
+    },
+    {
+      "absolute_phase_residual": 0.37912240557939597,
+      "cycle_residual": 0.06033920488485123,
+      "denominator_N": 16,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 7,
+      "phase_residual_mod_2pi": 0.37912240557939597
+    },
+    {
+      "absolute_phase_residual": 3.1314741793604077,
+      "cycle_residual": -0.49838959480984535,
+      "denominator_N": 17,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.47058823529411764,
+      "nearest_integer_k": 8,
+      "phase_residual_mod_2pi": -3.1314741793604077
+    },
+    {
+      "absolute_phase_residual": 0.35888545712062503,
+      "cycle_residual": -0.057118394504541925,
+      "denominator_N": 18,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 8,
+      "phase_residual_mod_2pi": -0.35888545712062503
+    },
+    {
+      "absolute_phase_residual": 2.4137032651191577,
+      "cycle_residual": 0.3841528058007615,
+      "denominator_N": 19,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42105263157894735,
+      "nearest_integer_k": 8,
+      "phase_residual_mod_2pi": 2.4137032651191577
+    },
+    {
+      "absolute_phase_residual": 1.096893319820646,
+      "cycle_residual": -0.17457599389393508,
+      "denominator_N": 20,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45,
+      "nearest_integer_k": 9,
+      "phase_residual_mod_2pi": -1.096893319820646
+    },
+    {
+      "absolute_phase_residual": 1.6756954024191255,
+      "cycle_residual": 0.26669520641136657,
+      "denominator_N": 21,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42857142857142855,
+      "nearest_integer_k": 9,
+      "phase_residual_mod_2pi": 1.6756954024191255
+    },
+    {
+      "absolute_phase_residual": 1.8349011825206782,
+      "cycle_residual": -0.29203359328333,
+      "denominator_N": 22,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45454545454545453,
+      "nearest_integer_k": 10,
+      "phase_residual_mod_2pi": -1.8349011825206782
+    },
+    {
+      "absolute_phase_residual": 0.9376875397191045,
+      "cycle_residual": 0.14923760702197342,
+      "denominator_N": 23,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43478260869565216,
+      "nearest_integer_k": 10,
+      "phase_residual_mod_2pi": 0.9376875397191045
+    },
+    {
+      "absolute_phase_residual": 2.5729090452206993,
+      "cycle_residual": -0.40949119267272316,
+      "denominator_N": 24,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4583333333333333,
+      "nearest_integer_k": 11,
+      "phase_residual_mod_2pi": -2.5729090452206993
+    },
+    {
+      "absolute_phase_residual": 0.19967967701908343,
+      "cycle_residual": 0.031780007632580265,
+      "denominator_N": 25,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44,
+      "nearest_integer_k": 11,
+      "phase_residual_mod_2pi": 0.19967967701908343
+    },
+    {
+      "absolute_phase_residual": 2.972268399258866,
+      "cycle_residual": 0.4730512079378837,
+      "denominator_N": 26,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4230769230769231,
+      "nearest_integer_k": 11,
+      "phase_residual_mod_2pi": 2.972268399258866
+    },
+    {
+      "absolute_phase_residual": 0.5383281856809375,
+      "cycle_residual": -0.08567759175681289,
+      "denominator_N": 27,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 12,
+      "phase_residual_mod_2pi": -0.5383281856809375
+    },
+    {
+      "absolute_phase_residual": 2.2342605365588337,
+      "cycle_residual": 0.35559360854848876,
+      "denominator_N": 28,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42857142857142855,
+      "nearest_integer_k": 12,
+      "phase_residual_mod_2pi": 2.2342605365588337
+    },
+    {
+      "absolute_phase_residual": 1.2763360483809698,
+      "cycle_residual": -0.20313519114620782,
+      "denominator_N": 29,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4482758620689655,
+      "nearest_integer_k": 13,
+      "phase_residual_mod_2pi": -1.2763360483809698
+    },
+    {
+      "absolute_phase_residual": 1.4962526738588129,
+      "cycle_residual": 0.2381360091590956,
+      "denominator_N": 30,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43333333333333335,
+      "nearest_integer_k": 13,
+      "phase_residual_mod_2pi": 1.4962526738588129
+    },
+    {
+      "absolute_phase_residual": 2.014343911080991,
+      "cycle_residual": -0.32059279053560097,
+      "denominator_N": 31,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45161290322580644,
+      "nearest_integer_k": 14,
+      "phase_residual_mod_2pi": -2.014343911080991
+    },
+    {
+      "absolute_phase_residual": 0.7582448111587919,
+      "cycle_residual": 0.12067840976970245,
+      "denominator_N": 32,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 14,
+      "phase_residual_mod_2pi": 0.7582448111587919
+    },
+    {
+      "absolute_phase_residual": 2.7523517737810117,
+      "cycle_residual": -0.4380503899249941,
+      "denominator_N": 33,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45454545454545453,
+      "nearest_integer_k": 15,
+      "phase_residual_mod_2pi": -2.7523517737810117
+    },
+    {
+      "absolute_phase_residual": 0.020236948458770904,
+      "cycle_residual": 0.0032208103803093024,
+      "denominator_N": 34,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4411764705882353,
+      "nearest_integer_k": 15,
+      "phase_residual_mod_2pi": 0.020236948458770904
+    },
+    {
+      "absolute_phase_residual": 2.7928256706985537,
+      "cycle_residual": 0.4444920106856127,
+      "denominator_N": 35,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.42857142857142855,
+      "nearest_integer_k": 15,
+      "phase_residual_mod_2pi": 2.7928256706985537
+    },
+    {
+      "absolute_phase_residual": 0.7177709142412501,
+      "cycle_residual": -0.11423678900908385,
+      "denominator_N": 36,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 16,
+      "phase_residual_mod_2pi": -0.7177709142412501
+    },
+    {
+      "absolute_phase_residual": 2.0548178079985213,
+      "cycle_residual": 0.3270344112962178,
+      "denominator_N": 37,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43243243243243246,
+      "nearest_integer_k": 16,
+      "phase_residual_mod_2pi": 2.0548178079985213
+    },
+    {
+      "absolute_phase_residual": 1.4557787769412711,
+      "cycle_residual": -0.231694388398477,
+      "denominator_N": 38,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4473684210526316,
+      "nearest_integer_k": 17,
+      "phase_residual_mod_2pi": -1.4557787769412711
+    },
+    {
+      "absolute_phase_residual": 1.3168099452985003,
+      "cycle_residual": 0.20957681190682464,
+      "denominator_N": 39,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4358974358974359,
+      "nearest_integer_k": 17,
+      "phase_residual_mod_2pi": 1.3168099452985003
+    },
+    {
+      "absolute_phase_residual": 2.193786639641292,
+      "cycle_residual": -0.34915198778787015,
+      "denominator_N": 40,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45,
+      "nearest_integer_k": 18,
+      "phase_residual_mod_2pi": -2.193786639641292
+    },
+    {
+      "absolute_phase_residual": 0.5788020825984794,
+      "cycle_residual": 0.09211921251743149,
+      "denominator_N": 41,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43902439024390244,
+      "nearest_integer_k": 18,
+      "phase_residual_mod_2pi": 0.5788020825984794
+    },
+    {
+      "absolute_phase_residual": 2.931794502341335,
+      "cycle_residual": -0.46660958717726686,
+      "denominator_N": 42,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4523809523809524,
+      "nearest_integer_k": 19,
+      "phase_residual_mod_2pi": -2.931794502341335
+    },
+    {
+      "absolute_phase_residual": 0.15920578010154163,
+      "cycle_residual": -0.02533838687196166,
+      "denominator_N": 43,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4418604651162791,
+      "nearest_integer_k": 19,
+      "phase_residual_mod_2pi": -0.15920578010154163
+    },
+    {
+      "absolute_phase_residual": 2.6133829421382297,
+      "cycle_residual": 0.41593281343334,
+      "denominator_N": 44,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4318181818181818,
+      "nearest_integer_k": 19,
+      "phase_residual_mod_2pi": 2.6133829421382297
+    },
+    {
+      "absolute_phase_residual": 0.8972136428015626,
+      "cycle_residual": -0.1427959862613548,
+      "denominator_N": 45,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 20,
+      "phase_residual_mod_2pi": -0.8972136428015626
+    },
+    {
+      "absolute_phase_residual": 1.875375079438209,
+      "cycle_residual": 0.29847521404394683,
+      "denominator_N": 46,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43478260869565216,
+      "nearest_integer_k": 20,
+      "phase_residual_mod_2pi": 1.875375079438209
+    },
+    {
+      "absolute_phase_residual": 1.6352215055015835,
+      "cycle_residual": -0.26025358565074797,
+      "denominator_N": 47,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44680851063829785,
+      "nearest_integer_k": 21,
+      "phase_residual_mod_2pi": -1.6352215055015835
+    },
+    {
+      "absolute_phase_residual": 1.1373672167381879,
+      "cycle_residual": 0.18101761465455368,
+      "denominator_N": 48,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 21,
+      "phase_residual_mod_2pi": 1.1373672167381879
+    },
+    {
+      "absolute_phase_residual": 2.3732293682016268,
+      "cycle_residual": -0.37771118504014467,
+      "denominator_N": 49,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4489795918367347,
+      "nearest_integer_k": 22,
+      "phase_residual_mod_2pi": -2.3732293682016268
+    },
+    {
+      "absolute_phase_residual": 0.39935935403816686,
+      "cycle_residual": 0.06356001526516053,
+      "denominator_N": 50,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44,
+      "nearest_integer_k": 22,
+      "phase_residual_mod_2pi": 0.39935935403816686
+    },
+    {
+      "absolute_phase_residual": 3.111237230901648,
+      "cycle_residual": -0.4951687844295378,
+      "denominator_N": 51,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.45098039215686275,
+      "nearest_integer_k": 23,
+      "phase_residual_mod_2pi": -3.111237230901648
+    },
+    {
+      "absolute_phase_residual": 0.33864850866185414,
+      "cycle_residual": -0.05389758412423262,
+      "denominator_N": 52,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4423076923076923,
+      "nearest_integer_k": 23,
+      "phase_residual_mod_2pi": -0.33864850866185414
+    },
+    {
+      "absolute_phase_residual": 2.4339402135779173,
+      "cycle_residual": 0.387373616181069,
+      "denominator_N": 53,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4339622641509434,
+      "nearest_integer_k": 23,
+      "phase_residual_mod_2pi": 2.4339402135779173
+    },
+    {
+      "absolute_phase_residual": 1.076656371361875,
+      "cycle_residual": -0.17135518351362578,
+      "denominator_N": 54,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 24,
+      "phase_residual_mod_2pi": -1.076656371361875
+    },
+    {
+      "absolute_phase_residual": 1.6959323508778963,
+      "cycle_residual": 0.2699160167916759,
+      "denominator_N": 55,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43636363636363634,
+      "nearest_integer_k": 24,
+      "phase_residual_mod_2pi": 1.6959323508778963
+    },
+    {
+      "absolute_phase_residual": 1.8146642340619183,
+      "cycle_residual": -0.2888127829030225,
+      "denominator_N": 56,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44642857142857145,
+      "nearest_integer_k": 25,
+      "phase_residual_mod_2pi": -1.8146642340619183
+    },
+    {
+      "absolute_phase_residual": 0.9579244881778753,
+      "cycle_residual": 0.15245841740228272,
+      "denominator_N": 57,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43859649122807015,
+      "nearest_integer_k": 25,
+      "phase_residual_mod_2pi": 0.9579244881778753
+    },
+    {
+      "absolute_phase_residual": 2.5526720967619396,
+      "cycle_residual": -0.40627038229241563,
+      "denominator_N": 58,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4482758620689655,
+      "nearest_integer_k": 26,
+      "phase_residual_mod_2pi": -2.5526720967619396
+    },
+    {
+      "absolute_phase_residual": 0.21991662547785434,
+      "cycle_residual": 0.03500081801288957,
+      "denominator_N": 59,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4406779661016949,
+      "nearest_integer_k": 26,
+      "phase_residual_mod_2pi": 0.21991662547785434
+    },
+    {
+      "absolute_phase_residual": 2.9925053477176258,
+      "cycle_residual": 0.4762720183181912,
+      "denominator_N": 60,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43333333333333335,
+      "nearest_integer_k": 26,
+      "phase_residual_mod_2pi": 2.9925053477176258
+    },
+    {
+      "absolute_phase_residual": 0.5180912372221667,
+      "cycle_residual": -0.08245678137650359,
+      "denominator_N": 61,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4426229508196721,
+      "nearest_integer_k": 27,
+      "phase_residual_mod_2pi": -0.5180912372221667
+    },
+    {
+      "absolute_phase_residual": 2.254497485017605,
+      "cycle_residual": 0.35881441892879806,
+      "denominator_N": 62,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43548387096774194,
+      "nearest_integer_k": 27,
+      "phase_residual_mod_2pi": 2.254497485017605
+    },
+    {
+      "absolute_phase_residual": 1.2560990999221877,
+      "cycle_residual": -0.19991438076589674,
+      "denominator_N": 63,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 28,
+      "phase_residual_mod_2pi": -1.2560990999221877
+    },
+    {
+      "absolute_phase_residual": 1.5164896223175839,
+      "cycle_residual": 0.2413568195394049,
+      "denominator_N": 64,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 28,
+      "phase_residual_mod_2pi": 1.5164896223175839
+    },
+    {
+      "absolute_phase_residual": 1.994106962622231,
+      "cycle_residual": -0.31737198015529344,
+      "denominator_N": 65,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4461538461538462,
+      "nearest_integer_k": 29,
+      "phase_residual_mod_2pi": -1.994106962622231
+    },
+    {
+      "absolute_phase_residual": 0.7784817596175628,
+      "cycle_residual": 0.12389922015001176,
+      "denominator_N": 66,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4393939393939394,
+      "nearest_integer_k": 29,
+      "phase_residual_mod_2pi": 0.7784817596175628
+    },
+    {
+      "absolute_phase_residual": 2.732114825322252,
+      "cycle_residual": -0.4348295795446866,
+      "denominator_N": 67,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44776119402985076,
+      "nearest_integer_k": 30,
+      "phase_residual_mod_2pi": -2.732114825322252
+    },
+    {
+      "absolute_phase_residual": 0.04047389691754181,
+      "cycle_residual": 0.006441620760618605,
+      "denominator_N": 68,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4411764705882353,
+      "nearest_integer_k": 30,
+      "phase_residual_mod_2pi": 0.04047389691754181
+    },
+    {
+      "absolute_phase_residual": 2.8130626191573134,
+      "cycle_residual": 0.44771282106592025,
+      "denominator_N": 69,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43478260869565216,
+      "nearest_integer_k": 30,
+      "phase_residual_mod_2pi": 2.8130626191573134
+    },
+    {
+      "absolute_phase_residual": 0.6975339657824792,
+      "cycle_residual": -0.11101597862877455,
+      "denominator_N": 70,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44285714285714284,
+      "nearest_integer_k": 31,
+      "phase_residual_mod_2pi": -0.6975339657824792
+    },
+    {
+      "absolute_phase_residual": 2.075054756457292,
+      "cycle_residual": 0.3302552216765271,
+      "denominator_N": 71,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43661971830985913,
+      "nearest_integer_k": 31,
+      "phase_residual_mod_2pi": 2.075054756457292
+    },
+    {
+      "absolute_phase_residual": 1.4355418284825001,
+      "cycle_residual": -0.2284735780181677,
+      "denominator_N": 72,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 32,
+      "phase_residual_mod_2pi": -1.4355418284825001
+    },
+    {
+      "absolute_phase_residual": 1.3370468937572713,
+      "cycle_residual": 0.21279762228713395,
+      "denominator_N": 73,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4383561643835616,
+      "nearest_integer_k": 32,
+      "phase_residual_mod_2pi": 1.3370468937572713
+    },
+    {
+      "absolute_phase_residual": 2.1735496911825436,
+      "cycle_residual": -0.3459311774075644,
+      "denominator_N": 74,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44594594594594594,
+      "nearest_integer_k": 33,
+      "phase_residual_mod_2pi": -2.1735496911825436
+    },
+    {
+      "absolute_phase_residual": 0.599039031057228,
+      "cycle_residual": 0.09534002289773724,
+      "denominator_N": 75,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44,
+      "nearest_integer_k": 33,
+      "phase_residual_mod_2pi": 0.599039031057228
+    },
+    {
+      "absolute_phase_residual": 2.9115575538825422,
+      "cycle_residual": -0.463388776796954,
+      "denominator_N": 76,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4473684210526316,
+      "nearest_integer_k": 34,
+      "phase_residual_mod_2pi": -2.9115575538825422
+    },
+    {
+      "absolute_phase_residual": 0.1389688316427707,
+      "cycle_residual": -0.022117576491652358,
+      "denominator_N": 77,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44155844155844154,
+      "nearest_integer_k": 34,
+      "phase_residual_mod_2pi": -0.1389688316427707
+    },
+    {
+      "absolute_phase_residual": 2.6336198905970005,
+      "cycle_residual": 0.4191536238136493,
+      "denominator_N": 78,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4358974358974359,
+      "nearest_integer_k": 34,
+      "phase_residual_mod_2pi": 2.6336198905970005
+    },
+    {
+      "absolute_phase_residual": 0.876976694342814,
+      "cycle_residual": -0.13957517588104906,
+      "denominator_N": 79,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4430379746835443,
+      "nearest_integer_k": 35,
+      "phase_residual_mod_2pi": -0.876976694342814
+    },
+    {
+      "absolute_phase_residual": 1.8956120278970021,
+      "cycle_residual": 0.3016960244242597,
+      "denominator_N": 80,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 35,
+      "phase_residual_mod_2pi": 1.8956120278970021
+    },
+    {
+      "absolute_phase_residual": 1.6149845570428127,
+      "cycle_residual": -0.25703277527043866,
+      "denominator_N": 81,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 36,
+      "phase_residual_mod_2pi": -1.6149845570428127
+    },
+    {
+      "absolute_phase_residual": 1.1576041651969589,
+      "cycle_residual": 0.18423842503486298,
+      "denominator_N": 82,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43902439024390244,
+      "nearest_integer_k": 36,
+      "phase_residual_mod_2pi": 1.1576041651969589
+    },
+    {
+      "absolute_phase_residual": 2.352992419742856,
+      "cycle_residual": -0.37449037465983537,
+      "denominator_N": 83,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4457831325301205,
+      "nearest_integer_k": 37,
+      "phase_residual_mod_2pi": -2.352992419742856
+    },
+    {
+      "absolute_phase_residual": 0.41959630249691543,
+      "cycle_residual": 0.06678082564546628,
+      "denominator_N": 84,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44047619047619047,
+      "nearest_integer_k": 37,
+      "phase_residual_mod_2pi": 0.41959630249691543
+    },
+    {
+      "absolute_phase_residual": 3.0910002824428546,
+      "cycle_residual": -0.49194797404922497,
+      "denominator_N": 85,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4470588235294118,
+      "nearest_integer_k": 38,
+      "phase_residual_mod_2pi": -3.0910002824428546
+    },
+    {
+      "absolute_phase_residual": 0.31841156020308325,
+      "cycle_residual": -0.05067677374392332,
+      "denominator_N": 86,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4418604651162791,
+      "nearest_integer_k": 38,
+      "phase_residual_mod_2pi": -0.31841156020308325
+    },
+    {
+      "absolute_phase_residual": 2.454177162036688,
+      "cycle_residual": 0.3905944265613783,
+      "denominator_N": 87,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4367816091954023,
+      "nearest_integer_k": 38,
+      "phase_residual_mod_2pi": 2.454177162036688
+    },
+    {
+      "absolute_phase_residual": 1.0564194229031265,
+      "cycle_residual": -0.16813437313332003,
+      "denominator_N": 88,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4431818181818182,
+      "nearest_integer_k": 39,
+      "phase_residual_mod_2pi": -1.0564194229031265
+    },
+    {
+      "absolute_phase_residual": 1.7161692993366449,
+      "cycle_residual": 0.2731368271719816,
+      "denominator_N": 89,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43820224719101125,
+      "nearest_integer_k": 39,
+      "phase_residual_mod_2pi": 1.7161692993366449
+    },
+    {
+      "absolute_phase_residual": 1.7944272856031251,
+      "cycle_residual": -0.2855919725227096,
+      "denominator_N": 90,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 40,
+      "phase_residual_mod_2pi": -1.7944272856031251
+    },
+    {
+      "absolute_phase_residual": 0.9781614366366462,
+      "cycle_residual": 0.15567922778259202,
+      "denominator_N": 91,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43956043956043955,
+      "nearest_integer_k": 40,
+      "phase_residual_mod_2pi": 0.9781614366366462
+    },
+    {
+      "absolute_phase_residual": 2.5324351483031684,
+      "cycle_residual": -0.40304957191210633,
+      "denominator_N": 92,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44565217391304346,
+      "nearest_integer_k": 41,
+      "phase_residual_mod_2pi": -2.5324351483031684
+    },
+    {
+      "absolute_phase_residual": 0.24015357393660292,
+      "cycle_residual": 0.03822162839319532,
+      "denominator_N": 93,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44086021505376344,
+      "nearest_integer_k": 41,
+      "phase_residual_mod_2pi": 0.24015357393660292
+    },
+    {
+      "absolute_phase_residual": 3.012742296176419,
+      "cycle_residual": 0.47949282869850407,
+      "denominator_N": 94,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43617021276595747,
+      "nearest_integer_k": 41,
+      "phase_residual_mod_2pi": 3.012742296176419
+    },
+    {
+      "absolute_phase_residual": 0.49785428876339577,
+      "cycle_residual": -0.07923597099619428,
+      "denominator_N": 95,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4421052631578947,
+      "nearest_integer_k": 42,
+      "phase_residual_mod_2pi": -0.49785428876339577
+    },
+    {
+      "absolute_phase_residual": 2.2747344334763757,
+      "cycle_residual": 0.36203522930910736,
+      "denominator_N": 96,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 42,
+      "phase_residual_mod_2pi": 2.2747344334763757
+    },
+    {
+      "absolute_phase_residual": 1.2358621514634391,
+      "cycle_residual": -0.196693570385591,
+      "denominator_N": 97,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44329896907216493,
+      "nearest_integer_k": 43,
+      "phase_residual_mod_2pi": -1.2358621514634391
+    },
+    {
+      "absolute_phase_residual": 1.5367265707763325,
+      "cycle_residual": 0.24457762991971066,
+      "denominator_N": 98,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4387755102040816,
+      "nearest_integer_k": 43,
+      "phase_residual_mod_2pi": 1.5367265707763325
+    },
+    {
+      "absolute_phase_residual": 1.9738700141634378,
+      "cycle_residual": -0.3141511697749806,
+      "denominator_N": 99,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 44,
+      "phase_residual_mod_2pi": -1.9738700141634378
+    },
+    {
+      "absolute_phase_residual": 0.7987187080763337,
+      "cycle_residual": 0.12712003053032106,
+      "denominator_N": 100,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44,
+      "nearest_integer_k": 44,
+      "phase_residual_mod_2pi": 0.7987187080763337
+    },
+    {
+      "absolute_phase_residual": 2.7118778768634813,
+      "cycle_residual": -0.4316087691643773,
+      "denominator_N": 101,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44554455445544555,
+      "nearest_integer_k": 45,
+      "phase_residual_mod_2pi": -2.7118778768634813
+    },
+    {
+      "absolute_phase_residual": 0.060710845376290394,
+      "cycle_residual": 0.009662431140924355,
+      "denominator_N": 102,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4411764705882353,
+      "nearest_integer_k": 45,
+      "phase_residual_mod_2pi": 0.060710845376290394
+    },
+    {
+      "absolute_phase_residual": 2.8332995676161064,
+      "cycle_residual": 0.4509336314462331,
+      "denominator_N": 103,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4368932038834951,
+      "nearest_integer_k": 45,
+      "phase_residual_mod_2pi": 2.8332995676161064
+    },
+    {
+      "absolute_phase_residual": 0.6772970173237083,
+      "cycle_residual": -0.10779516824846525,
+      "denominator_N": 104,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4423076923076923,
+      "nearest_integer_k": 46,
+      "phase_residual_mod_2pi": -0.6772970173237083
+    },
+    {
+      "absolute_phase_residual": 2.0952917049160633,
+      "cycle_residual": 0.3334760320568364,
+      "denominator_N": 105,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4380952380952381,
+      "nearest_integer_k": 46,
+      "phase_residual_mod_2pi": 2.0952917049160633
+    },
+    {
+      "absolute_phase_residual": 1.4153048800237515,
+      "cycle_residual": -0.22525276763786195,
+      "denominator_N": 106,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44339622641509435,
+      "nearest_integer_k": 47,
+      "phase_residual_mod_2pi": -1.4153048800237515
+    },
+    {
+      "absolute_phase_residual": 1.3572838422160198,
+      "cycle_residual": 0.2160184326674397,
+      "denominator_N": 107,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4392523364485981,
+      "nearest_integer_k": 47,
+      "phase_residual_mod_2pi": 1.3572838422160198
+    },
+    {
+      "absolute_phase_residual": 2.15331274272375,
+      "cycle_residual": -0.34271036702725155,
+      "denominator_N": 108,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 48,
+      "phase_residual_mod_2pi": -2.15331274272375
+    },
+    {
+      "absolute_phase_residual": 0.6192759795160212,
+      "cycle_residual": 0.0985608332780501,
+      "denominator_N": 109,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44036697247706424,
+      "nearest_integer_k": 48,
+      "phase_residual_mod_2pi": 0.6192759795160212
+    },
+    {
+      "absolute_phase_residual": 2.8913206054237937,
+      "cycle_residual": -0.46016796641664826,
+      "denominator_N": 110,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44545454545454544,
+      "nearest_integer_k": 49,
+      "phase_residual_mod_2pi": -2.8913206054237937
+    },
+    {
+      "absolute_phase_residual": 0.11873188318402213,
+      "cycle_residual": -0.018896766111346608,
+      "denominator_N": 111,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44144144144144143,
+      "nearest_integer_k": 49,
+      "phase_residual_mod_2pi": -0.11873188318402213
+    },
+    {
+      "absolute_phase_residual": 2.6538568390557495,
+      "cycle_residual": 0.42237443419395504,
+      "denominator_N": 112,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 49,
+      "phase_residual_mod_2pi": 2.6538568390557495
+    },
+    {
+      "absolute_phase_residual": 0.8567397458840208,
+      "cycle_residual": -0.1363543655007362,
+      "denominator_N": 113,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4424778761061947,
+      "nearest_integer_k": 50,
+      "phase_residual_mod_2pi": -0.8567397458840208
+    },
+    {
+      "absolute_phase_residual": 1.9158489763557507,
+      "cycle_residual": 0.30491683480456544,
+      "denominator_N": 114,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43859649122807015,
+      "nearest_integer_k": 50,
+      "phase_residual_mod_2pi": 1.9158489763557507
+    },
+    {
+      "absolute_phase_residual": 1.5947476085840642,
+      "cycle_residual": -0.2538119648901329,
+      "denominator_N": 115,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4434782608695652,
+      "nearest_integer_k": 51,
+      "phase_residual_mod_2pi": -1.5947476085840642
+    },
+    {
+      "absolute_phase_residual": 1.1778411136557074,
+      "cycle_residual": 0.18745923541516873,
+      "denominator_N": 116,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4396551724137931,
+      "nearest_integer_k": 51,
+      "phase_residual_mod_2pi": 1.1778411136557074
+    },
+    {
+      "absolute_phase_residual": 2.3327554712840626,
+      "cycle_residual": -0.3712695642795225,
+      "denominator_N": 117,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 52,
+      "phase_residual_mod_2pi": -2.3327554712840626
+    },
+    {
+      "absolute_phase_residual": 0.4398332509557087,
+      "cycle_residual": 0.07000163602577913,
+      "denominator_N": 118,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4406779661016949,
+      "nearest_integer_k": 52,
+      "phase_residual_mod_2pi": 0.4398332509557087
+    },
+    {
+      "absolute_phase_residual": 3.070763333984106,
+      "cycle_residual": -0.4887271636689192,
+      "denominator_N": 119,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44537815126050423,
+      "nearest_integer_k": 53,
+      "phase_residual_mod_2pi": -3.070763333984106
+    },
+    {
+      "absolute_phase_residual": 0.29817461174433463,
+      "cycle_residual": -0.04745596336361757,
+      "denominator_N": 120,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44166666666666665,
+      "nearest_integer_k": 53,
+      "phase_residual_mod_2pi": -0.29817461174433463
+    },
+    {
+      "absolute_phase_residual": 2.4744141104954367,
+      "cycle_residual": 0.3938152369416841,
+      "denominator_N": 121,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4380165289256198,
+      "nearest_integer_k": 53,
+      "phase_residual_mod_2pi": 2.4744141104954367
+    },
+    {
+      "absolute_phase_residual": 1.0361824744443333,
+      "cycle_residual": -0.16491356275300717,
+      "denominator_N": 122,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4426229508196721,
+      "nearest_integer_k": 54,
+      "phase_residual_mod_2pi": -1.0361824744443333
+    },
+    {
+      "absolute_phase_residual": 1.736406247795438,
+      "cycle_residual": 0.2763576375522945,
+      "denominator_N": 123,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43902439024390244,
+      "nearest_integer_k": 54,
+      "phase_residual_mod_2pi": 1.736406247795438
+    },
+    {
+      "absolute_phase_residual": 1.7741903371443766,
+      "cycle_residual": -0.2823711621424039,
+      "denominator_N": 124,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4435483870967742,
+      "nearest_integer_k": 55,
+      "phase_residual_mod_2pi": -1.7741903371443766
+    },
+    {
+      "absolute_phase_residual": 0.9983983850953948,
+      "cycle_residual": 0.15890003816289777,
+      "denominator_N": 125,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44,
+      "nearest_integer_k": 55,
+      "phase_residual_mod_2pi": 0.9983983850953948
+    },
+    {
+      "absolute_phase_residual": 2.5121981998443754,
+      "cycle_residual": -0.3998287615317935,
+      "denominator_N": 126,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 56,
+      "phase_residual_mod_2pi": -2.5121981998443754
+    },
+    {
+      "absolute_phase_residual": 0.2603905223953961,
+      "cycle_residual": 0.04144243877350817,
+      "denominator_N": 127,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4409448818897638,
+      "nearest_integer_k": 56,
+      "phase_residual_mod_2pi": 0.2603905223953961
+    },
+    {
+      "absolute_phase_residual": 3.0329792446351678,
+      "cycle_residual": 0.4827136390788098,
+      "denominator_N": 128,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4375,
+      "nearest_integer_k": 56,
+      "phase_residual_mod_2pi": 3.0329792446351678
+    },
+    {
+      "absolute_phase_residual": 0.4776173403046472,
+      "cycle_residual": -0.07601516061588853,
+      "denominator_N": 129,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4418604651162791,
+      "nearest_integer_k": 57,
+      "phase_residual_mod_2pi": -0.4776173403046472
+    },
+    {
+      "absolute_phase_residual": 2.2949713819351243,
+      "cycle_residual": 0.3652560396894131,
+      "denominator_N": 130,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43846153846153846,
+      "nearest_integer_k": 57,
+      "phase_residual_mod_2pi": 2.2949713819351243
+    },
+    {
+      "absolute_phase_residual": 1.215625203004646,
+      "cycle_residual": -0.19347276000527813,
+      "denominator_N": 131,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44274809160305345,
+      "nearest_integer_k": 58,
+      "phase_residual_mod_2pi": -1.215625203004646
+    },
+    {
+      "absolute_phase_residual": 1.5569635192351257,
+      "cycle_residual": 0.24779844030002351,
+      "denominator_N": 132,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4393939393939394,
+      "nearest_integer_k": 58,
+      "phase_residual_mod_2pi": 1.5569635192351257
+    },
+    {
+      "absolute_phase_residual": 1.9536330657046892,
+      "cycle_residual": -0.31093035939467484,
+      "denominator_N": 133,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44360902255639095,
+      "nearest_integer_k": 59,
+      "phase_residual_mod_2pi": -1.9536330657046892
+    },
+    {
+      "absolute_phase_residual": 0.8189556565350823,
+      "cycle_residual": 0.1303408409106268,
+      "denominator_N": 134,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44029850746268656,
+      "nearest_integer_k": 59,
+      "phase_residual_mod_2pi": 0.8189556565350823
+    },
+    {
+      "absolute_phase_residual": 2.691640928404688,
+      "cycle_residual": -0.42838795878406444,
+      "denominator_N": 135,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 60,
+      "phase_residual_mod_2pi": -2.691640928404688
+    },
+    {
+      "absolute_phase_residual": 0.08094779383508362,
+      "cycle_residual": 0.01288324152123721,
+      "denominator_N": 136,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4411764705882353,
+      "nearest_integer_k": 60,
+      "phase_residual_mod_2pi": 0.08094779383508362
+    },
+    {
+      "absolute_phase_residual": 2.853536516074855,
+      "cycle_residual": 0.45415444182653886,
+      "denominator_N": 137,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43795620437956206,
+      "nearest_integer_k": 60,
+      "phase_residual_mod_2pi": 2.853536516074855
+    },
+    {
+      "absolute_phase_residual": 0.6570600688649597,
+      "cycle_residual": -0.1045743578681595,
+      "denominator_N": 138,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4420289855072464,
+      "nearest_integer_k": 61,
+      "phase_residual_mod_2pi": -0.6570600688649597
+    },
+    {
+      "absolute_phase_residual": 2.115528653374812,
+      "cycle_residual": 0.33669684243714215,
+      "denominator_N": 139,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.43884892086330934,
+      "nearest_integer_k": 61,
+      "phase_residual_mod_2pi": 2.115528653374812
+    },
+    {
+      "absolute_phase_residual": 1.3950679315649583,
+      "cycle_residual": -0.2220319572575491,
+      "denominator_N": 140,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44285714285714284,
+      "nearest_integer_k": 62,
+      "phase_residual_mod_2pi": -1.3950679315649583
+    },
+    {
+      "absolute_phase_residual": 1.377520790674813,
+      "cycle_residual": 0.21923924304775255,
+      "denominator_N": 141,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4397163120567376,
+      "nearest_integer_k": 62,
+      "phase_residual_mod_2pi": 1.377520790674813
+    },
+    {
+      "absolute_phase_residual": 2.1330757942650016,
+      "cycle_residual": -0.3394895566469458,
+      "denominator_N": 142,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.44366197183098594,
+      "nearest_integer_k": 63,
+      "phase_residual_mod_2pi": -2.1330757942650016
+    },
+    {
+      "absolute_phase_residual": 0.6395129279747698,
+      "cycle_residual": 0.10178164365835585,
+      "denominator_N": 143,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4405594405594406,
+      "nearest_integer_k": 63,
+      "phase_residual_mod_2pi": 0.6395129279747698
+    },
+    {
+      "absolute_phase_residual": 2.8710836569650002,
+      "cycle_residual": -0.4569471560363354,
+      "denominator_N": 144,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4444444444444444,
+      "nearest_integer_k": 64,
+      "phase_residual_mod_2pi": -2.8710836569650002
+    }
+  ],
+  "finite_theorem": {
+    "accepted_closure_exports": 0,
+    "constructed_objects": 5,
+    "continued_fraction_rows": 11,
+    "denominator_rows": 144,
+    "exact_locking_rows_excluded": 144,
+    "name": "P3160_T1_alpha_geo_no_finite_phase_locking",
+    "statement": "Because alpha_geo=ln(16), alpha_geo/(2*pi) cannot be rational: if alpha_geo/(2*pi)=p/q with p nonzero, then 16=e^(2*pi*p/q), but e^(pi*r) is transcendental for every nonzero rational r by the Gelfond-Schneider consequence, contradiction.  Hence exp(i*alpha_geo) is not a root of unity and alpha_geo does not define an exact finite Z_N phase slot for any N.  P3159's A_phi section remains valid as dimensionless normalization, but alpha_geo/pi does not source Lambda_origin, Omega_M/K_dim, a selector, bridge completion, role transfer, L_total, or ToE."
+  },
+  "input_hashes": {
+    "P3111": null,
+    "P3159": "d629d0d7d7e90c9df735a7c60d2830014f6e48536b6a0ae44859dc870fd05a8d",
+    "alpha_geo": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328"
+  },
+  "numeric_context": {
+    "A_phi": 2.266180070913597,
+    "alpha_geo": 2.772588722239781,
+    "alpha_geo_over_2pi": 0.4412712003053032,
+    "best_denominator_scan_row_up_to_144": {
+      "absolute_phase_residual": 0.020236948458770904,
+      "cycle_residual": 0.0032208103803093024,
+      "denominator_N": 34,
+      "exact_locking_excluded_by_theorem": true,
+      "k_over_N": 0.4411764705882353,
+      "nearest_integer_k": 15,
+      "phase_residual_mod_2pi": 0.020236948458770904
+    },
+    "p3159_status": "P3159_ALPHA_GEO_PI_PHASE_COMPATIBILITY_SCOPED_SECTION_NO_UNIT_SOURCE",
+    "two_pi": 6.283185307179586
+  },
+  "status": "P3160_ALPHA_GEO_PHASE_LOCKING_NO_ROOT_OF_UNITY_THEOREM"
+}

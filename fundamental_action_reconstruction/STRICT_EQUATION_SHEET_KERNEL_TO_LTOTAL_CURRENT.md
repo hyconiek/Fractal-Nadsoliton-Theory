@@ -4339,3 +4339,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3158/S2108 post-P3157 unit-source dependency reconciliation
 
 `P3158/S2108` builds `U_mass_unit_source_dependency_DAG`, reconciling the formal `Omega_M` torsor from P3157 with the existing P3116-P3124 unit/source chain.  The finite DAG has no current accepting closure path to a strict mass/action unit; the missing leaf cut remains nonempty.  No strict mass unit, K_dim/Omega_dim source, Higgs coupling, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE closure is exported.
+
+## P3159/S2109 alpha_geo/pi phase compatibility audit
+
+`P3159/S2109` constructs `Phi_alpha_pi`, a scoped compatibility object for `alpha_geo=4 ln 2` and the `2*pi` phase quantum.  The exact dimensionless section `A_phi=2*pi/alpha_geo=pi/(2 ln 2)` satisfies `alpha_geo*A_phi=2*pi`, confirming the pi-phase bookkeeping route already suggested by the P3111 phase-area section.  Finite `n<=12` phase-slot scans and rational approximants do not export a phase-origin source, selector, physical action/mass unit, bridge completion, role transfer, or `L_total`/ToE closure.
+
+## P3160/S2110 alpha_geo phase-locking no-root-of-unity theorem
+
+`P3160/S2110` strengthens the P3159 alpha/pi audit by proving that `alpha_geo/(2*pi)` is irrational.  If `alpha_geo/(2*pi)=p/q`, then `16=e^(2*pi*p/q)`, contradicting the Gelfond-Schneider consequence that `e^(pi*r)` is transcendental for nonzero rational `r`.  Thus `exp(i*alpha_geo)` is not a root of unity and `alpha_geo` does not define an exact finite `Z_N` phase slot.  The P3159 section `A_phi=2*pi/alpha_geo` remains valid as dimensionless normalization, but no phase-origin source, `Omega_M/K_dim` scale, selector, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3161/S2111 Omega_scale positive torsor source-law audit
+
+`P3161/S2111` constructs the missing `Omega_scale` source-law audit for selecting a representative of the positive `Omega_M/K_dim` torsor after P3160 closed alpha/pi phase locking.  The exact equivariant-section obstruction says that invariant strict data cannot map equivariantly into a free positive torsor: `f(x)=f(c.x)=c f(x)` for all `c>0` is impossible.  It audits `12` candidate source classes over `7` scale factors, builds `84` obstruction rows and `132` gate rows, and finds `0` accepted `Omega_scale` sources.  No strict physical unit, Higgs VEV, EH coupling, selector closure, bridge/role-transfer, `L_total`, or ToE closure is exported.
+
+## P3162/S2112 S_plus scale-charged source datum intake audit
+
+`P3162/S2112` constructs the missing `S_+` object named by P3161: a nonzero strict datum in the weight-one representation `V_chi` of `R_{>0}`, with `chi(c)=c`, intended to couple to `Omega_M/K_dim`.  The audit inventories `12` candidate classes over `5` scale factors, builds `60` representation rows and `108` gate rows, and finds `0` accepted `S_+` sources.  Weight-zero alpha/pi, entropy, and spectral data remain blocked by P3161; formal `Omega_M`, `Gamma_9_5`, `U_readout`, and Higgs symbols have the right weight shape but no strict source value; Planck/apparatus/selector representatives are forbidden imports.
+
+## P3163/S2113 boundary-value speed-of-light matching audit
+
+`P3163/S2113` constructs a boundary-value receiver audit for fitting model limiting values to the physical speed of light `c=299792458 m/s`.  It tests `10` boundary receivers, including `alpha_geo/(2*pi)`, `A_phi`, strict-kernel boundary samples, Z12 Laplacian values, a formal wave-speed receiver, and `exp(alpha_geo)`.  The theorem is that any nonzero dimensionless `v_hat` fits `c` after choosing `U_length/U_time=c/v_hat`; hence the `9` successful numerical fits are scale choices, not unit-source theorems.  No independent `U_length`, `U_time`, Lorentz metric/light-cone embedding, observed-light source, `S_+`, `Omega_scale`, `L_total`, or ToE closure is exported.

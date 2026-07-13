@@ -3708,3 +3708,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3158/S2108 unit-source dependency remains open
 
 `P3158/S2108` confirms that the formal mass-unit carrier from P3157 cannot be promoted without a new source leaf in the P3116-P3124 unit chain.  The Higgs/SM/EH branch should remain conditional until such a source law is supplied.
+
+## P3159/S2109 alpha_geo/pi phase section is not a unit source
+
+`P3159/S2109` verifies that `alpha_geo` is compatible with `2*pi` as a dimensionless phase-area normalization, but it remains below a Lagrangian/action-unit source.  No `Omega_M`, `K_dim`, `Lambda_origin`, EH/SM coupling, selector, bridge/role-transfer, or ToE closure is exported.
+
+## P3160/S2110 alpha_geo irrational phase ratio is not a Lagrangian source
+
+`P3160/S2110` proves the exact no-root-of-unity boundary for `alpha_geo` as a phase: it cannot be an exact finite `Z_N` phase lock.  This is a rigorous phase arithmetic result, but it supplies no dimensionful action unit, stress-energy source, selector, bridge/role-transfer, or `L_total`/ToE datum.
+
+## P3161/S2111 Omega_scale torsor source remains unsourced
+
+`P3161/S2111` proves that current dimensionless strict data cannot equivariantly select the positive mass/action unit torsor.  A Lagrangian/action-unit source would require a genuinely scale-charged strict datum `S_+` or an equivalent nonconventional scale-covariance-breaking theorem, not another alpha/pi, entropy, spectral, damping, logdet, readout, Planck, apparatus, or selector representative.
+
+## P3162/S2112 S_plus weight-one source remains unexported
+
+`P3162/S2112` states the missing unit-source datum precisely as `S_+ in V_chi`, `chi(c)=c`.  Current artifacts do not export a nonzero strict `S_+` value or coupling theorem to `Omega_M/K_dim`, so no action/mass unit, Higgs VEV, EH coupling, `L_total`, or ToE datum is promoted.
+
+## P3163/S2113 boundary c-fit remains receiver-only
+
+`P3163/S2113` shows that boundary-value matching to `c` is useful as a diagnostic receiver but underdetermined as a dimension source: the fit always chooses `U_length/U_time` unless those units are independently sourced.  It does not promote a Lorentzian metric, observed-light sector, action unit, `L_total`, or ToE datum.
