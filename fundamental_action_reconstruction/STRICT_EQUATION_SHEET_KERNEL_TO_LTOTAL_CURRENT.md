@@ -4287,3 +4287,23 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3145/S2095 strict-kernel reverse SM/GR layout matrix
 
 `P3145/S2095` constructs `Xi_SMGR^strict`, a reverse-layout obligation matrix asking where known SM/GR properties would have to live if they are to fit inside the strict nadsoliton/kernel picture.  All `10/10` audited properties have plausible strict carrier/receiver slots, but `0/10` close the full source-law, unit/calibration, nonproxy dynamics, and selector-safety package.  This is a structured receiver architecture for reverse analysis, not SM/GR reduction, legacy role transfer, `L_total`, or ToE closure.
+
+## P3146/S2096 axiom unit/action-measure bridge
+
+`P3146/S2096` constructs `Lambda_unit^ax=(A_cell,A_clock,A_action)`, a conditional dimensionful bridge from dimensionless strict finite receivers to an action-measure expression `S_ax[R]=hbar_* sum mu_unit R`.  The exact finite dimension audit over all `8` axiom subsets shows that only the full triple spans length, time, action, and the minimal density dimension `H L^-1 T^-1`; no strict unit source, `L_total`, SM/GR reduction, selector closure, or ToE closure is exported.
+
+## P3147/S2097 axiom Lie/SM/GR fit readiness matrix
+
+`P3147/S2097` constructs `Theta_fit^ax`, a four-row conditional-readiness matrix for axiom-branch potential, local Lie algebra quality, SM fit, and GR fit.  The matrix finds `4/4` receiver/formal carriers, `4/4` algebraic or local witnesses, and `4/4` conditional P3146 unit/action-axiom compatibility, but `0/4` rows with full field registry/metric bundle, non-imported source law, global EOM/BV-BRST closure, and empirical or role-transfer-safe calibration.
+
+## P3148/S2098 SM representation-registry completion audit
+
+`P3148/S2098` constructs `R_SM^ax`, a one-family `SU(3)xSU(2)xU(1)` representation registry plus Higgs in left-handed Weyl convention.  The finite audit passes all algebraic checks: `6/6` representation rows satisfy factor commutators, `4/4` anomaly sums vanish, and `3/3` Yukawa hypercharge sums vanish.  This is an axiom-branch SM registry completion only; no strict nadsoliton source, unit-bearing `L_total`, global BV/BRST theorem, GR closure, selector closure, or ToE closure is exported.
+
+## P3149/S2099 BRST/L_total interface invariance audit
+
+`P3149/S2099` constructs `I_BRST^ax(R_SM^ax)`, a local matter/Higgs BRST/Lagrangian interface certificate for the P3148 representation registry.  The finite audit passes `6/6` kinetic bilinear rows and `3/3` Yukawa rows, so all `9/9` audited local interface blocks are gauge/BRST-compatible in the installed convention.  This remains conditional and local: no unit-bearing `L_total`, global BV/BRST charge/cohomology, strict registry source, GR/EH coupling, selector closure, or ToE closure is exported.
+
+## P3150/S2100 R_SM hypercharge-ray source-selection audit
+
+`P3150/S2100` constructs `Y_SM^ray`, a conditional hypercharge source-selection witness for `R_SM^ax`.  The Yukawa/anomaly equation system has `5` rows, `6` unknowns, rank `5`, and nullity `1`; after normalizing `Y(H)=1/2`, it reproduces the P3148 hypercharges exactly and the redundant `SU3^2 U1` plus `U1^3` anomaly checks vanish.  This selects only a conditional hypercharge ray: it does not source the SM field content, absolute charge unit, unit-bearing `L_total`, global BV/BRST, GR/EH coupling, or ToE closure.

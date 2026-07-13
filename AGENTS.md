@@ -3140,3 +3140,41 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The audit finds `10/10` plausible strict carrier/receiver slots but `0/10` rows with the full source-law, unit/calibration, nonproxy dynamics, and selector-safety package.
 - Do not promote reverse layout, legacy analogies, or receiver scaffolds to SM/GR reduction, strict selector closure, unit-bearing `L_total`, bridge completion, role transfer, or ToE closure.
 - Axiomatic continuation is useful only as explicitly conditional model-building; strict-core progress should target one non-premise bridge theorem for physical units/action measure, selector/orientation source, or nonproxy metric/gauge EOM coupling.
+
+## Current axiom unit/action-measure bridge guardrail (P3146/S2096, 2026-07-13)
+
+- P3146 constructs `Lambda_unit^ax=(A_cell,A_clock,A_action)`, a conditional bridge assigning length, time, and action scales to dimensionless strict finite receivers.
+- The exact audit over all `8` subsets proves that only the full triple spans length, time, action, and minimal `H L^-1 T^-1` density; no proper subset gives a unit-bearing action measure.
+- This is axiomatic and non-strict: `ell_*`, `tau_*`, and `hbar_*` are imported postulates, no nonproxy EOM/gauge coupling is derived, and selector/orientation remains unresolved.
+- Do not promote `Lambda_unit^ax` to strict unit source, `L_total`, SM/GR reduction, bridge completion, role transfer, or ToE closure.  Next honest move: audit exactly one postulate, preferably `A_action`, for a non-premise strict source of `hbar_*`.
+
+## Current axiom Lie/SM/GR fit readiness guardrail (P3147/S2097, 2026-07-13)
+
+- P3147 constructs `Theta_fit^ax`, a four-row readiness matrix for axiom-branch potential, local Lie algebra quality, SM fit, and GR fit.
+- The result is positive only in the conditional/algebraic sense: `4/4` rows have receiver/formal carriers and local witnesses, and `4/4` can use the P3146 unit/action axioms conditionally.
+- The strict physical package remains absent: `0/4` rows have full field registry/metric bundle, non-imported source law, global EOM/BV-BRST closure, or empirical/role-transfer-safe calibration.
+- Treat the model's `SU(3)xSU(2)xU(1)` Lie algebra as good locally/algebraically but not yet a full physical SM gauge theory.  Treat SM/GR fit as promising conditional scaffolding, not strict generation.
+- Next honest move: P3148 should complete/audit one explicit representation registry for the P1962 seed multiplets plus Higgs, with commutator, hypercharge/Yukawa, and anomaly checks; do not claim ToE, GR closure, selector closure, or unit-source closure.
+
+## Current SM representation-registry completion guardrail (P3148/S2098, 2026-07-13)
+
+- P3148 constructs `R_SM^ax`, an explicit one-family `SU(3)xSU(2)xU(1)` representation registry plus Higgs in left-handed Weyl convention.
+- The finite algebraic audit passes: `6/6` representation rows satisfy factor commutator checks, `4/4` gauge/gravity anomaly sums vanish, and `3/3` Yukawa hypercharge sums vanish.
+- This strengthens the axiom-branch SM fit and confirms the local Lie-algebra machinery is good as algebra, but the registry is an installed SM ansatz, not a strict nadsoliton source theorem.
+- Do not promote `R_SM^ax` to strict SM generation, unit-bearing `L_total`, global BV/BRST closure, GR closure, selector closure, bridge/role transfer, or ToE.
+- Next honest move: P3149 should feed `R_SM^ax` into the P1961 local BRST/Lagrangian interface and test matter/Higgs kinetic plus Yukawa invariance in one convention, still without unit-source, GR/EH, selector, or ToE promotion.
+
+## Current BRST/L_total interface invariance guardrail (P3149/S2099, 2026-07-13)
+
+- P3149 constructs `I_BRST^ax(R_SM^ax)`, a local matter/Higgs BRST/Lagrangian interface certificate for the P3148 representation registry.
+- The finite algebraic audit passes `6/6` kinetic bilinear rows and `3/3` Yukawa rows; all `9/9` audited local interface blocks are gauge/BRST-compatible in the installed convention.
+- This strengthens the axiom-branch SM fit but remains local and conditional: no unit-bearing `L_total`, global BV/BRST charge/cohomology, strict registry source, GR/EH coupling, selector closure, or ToE closure is exported.
+- Do not promote P3149 to strict SM generation or full Lagrangian/EOM closure.  Next honest move: audit whether any current strict object can source-select `R_SM^ax` itself without importing SM ansatz data; otherwise preserve it as conditional phenomenology and pivot to unit-source or GR/EH nonproxy work.
+
+## Current R_SM hypercharge-ray source-selection guardrail (P3150/S2100, 2026-07-13)
+
+- P3150 constructs `Y_SM^ray`, a conditional source-selection witness for the hypercharge ratios in `R_SM^ax`.
+- The exact Yukawa/anomaly system has `5` equations, `6` unknowns, rank `5`, and nullity `1`; with `Y(H)=1/2` it reproduces the P3148 hypercharges, and redundant `SU3^2 U1` plus `U1^3` anomaly checks vanish.
+- This is real algebraic progress but not strict source closure: it assumes the SM-like field/Yukawa/anomaly pattern, leaves absolute charge normalization conventional, and does not source representation content from the nadsoliton.
+- Do not promote `Y_SM^ray` to strict SM generation, unit-bearing `L_total`, global BV/BRST, GR/EH closure, bridge/role transfer, or ToE.
+- Next honest move: audit whether any strict object selects the representation content itself — the five chiral multiplets plus Higgs dimensions — without importing SM family data; otherwise preserve this as conditional phenomenology and pivot to charge-unit normalization or GR/EH nonproxy coupling.
