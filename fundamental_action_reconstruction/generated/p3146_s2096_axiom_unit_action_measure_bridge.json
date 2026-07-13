@@ -1,0 +1,246 @@
+{
+  "audit_rows": [
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": false,
+        "lagrangian_density_1d": false,
+        "length_measure": false,
+        "time_measure": false
+      },
+      "rank_HTL": 0,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_cell"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": false,
+        "lagrangian_density_1d": false,
+        "length_measure": true,
+        "time_measure": false
+      },
+      "rank_HTL": 1,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_clock"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": false,
+        "lagrangian_density_1d": false,
+        "length_measure": false,
+        "time_measure": true
+      },
+      "rank_HTL": 1,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_action"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": true,
+        "lagrangian_density_1d": false,
+        "length_measure": false,
+        "time_measure": false
+      },
+      "rank_HTL": 1,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_cell",
+        "A_clock"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": false,
+        "lagrangian_density_1d": false,
+        "length_measure": true,
+        "time_measure": true
+      },
+      "rank_HTL": 2,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_cell",
+        "A_action"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": true,
+        "lagrangian_density_1d": false,
+        "length_measure": true,
+        "time_measure": false
+      },
+      "rank_HTL": 2,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": false,
+      "axiom_set": [
+        "A_clock",
+        "A_action"
+      ],
+      "blocked_as_strict_by": [
+        "dimension rank is insufficient for a unit-bearing action density"
+      ],
+      "covered_targets": {
+        "action_weight": true,
+        "lagrangian_density_1d": false,
+        "length_measure": false,
+        "time_measure": true
+      },
+      "rank_HTL": 2,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": false
+    },
+    {
+      "all_unit_targets_covered": true,
+      "axiom_set": [
+        "A_cell",
+        "A_clock",
+        "A_action"
+      ],
+      "blocked_as_strict_by": [
+        "cell length, clock scale, and action quantum are postulates, not strict-source exports",
+        "no nonproxy EH/ELg/gauge EOM coupling is derived from the finite receiver",
+        "does not resolve selector/orientation source obligations"
+      ],
+      "covered_targets": {
+        "action_weight": true,
+        "lagrangian_density_1d": true,
+        "length_measure": true,
+        "time_measure": true
+      },
+      "rank_HTL": 3,
+      "strict_source_exported": false,
+      "unit_bearing_action_measure_available_conditionally": true
+    }
+  ],
+  "axioms": {
+    "A_action": {
+      "dimension_vector": [
+        1,
+        0,
+        0
+      ],
+      "imports_selector_axioms": false,
+      "meaning": "postulate an action quantum hbar_* converting dimensionless finite sums to action",
+      "strict_sourced": false
+    },
+    "A_cell": {
+      "dimension_vector": [
+        0,
+        1,
+        0
+      ],
+      "imports_selector_axioms": false,
+      "meaning": "postulate a physical cell length ell_* converting Z12 receiver steps to length",
+      "strict_sourced": false
+    },
+    "A_clock": {
+      "dimension_vector": [
+        0,
+        0,
+        1
+      ],
+      "imports_selector_axioms": false,
+      "meaning": "postulate a clock scale tau_* converting gate/evolution labels to time",
+      "strict_sourced": false
+    }
+  },
+  "constructed_object": {
+    "classification": "axiom_augmented_dimensionful_measure_bridge_for_strict_finite_receivers",
+    "formula": "S_ax[R]=hbar_* sum_{x in Z12 x {±1}} mu_unit(x) R(x), with dℓ=ell_*, dt=tau_*, and density dimension hbar_*/(ell_* tau_*)",
+    "name": "Lambda_unit^ax = (A_cell, A_clock, A_action) conditional unit/action-measure bridge",
+    "selector_safety": "does not import A_origin/A_lambda; consequently it remains selector-blind and cannot localize a branch"
+  },
+  "decision": {
+    "bounded_result": "The missing physical unit/action-measure object can be built as a clean conditional axiom bridge.  Computation shows the bridge needs exactly the full triple A_cell + A_clock + A_action to span the minimal unit targets; no proper subset suffices.",
+    "negative_export_flags": {
+      "SM_GR_reduction_exported": false,
+      "ToE_closure_exported": false,
+      "nonproxy_EH_ELg_EOM_exported": false,
+      "strict_selector_closure_exported": false,
+      "strict_unit_source_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Pick exactly one of the three postulates, preferably A_action because it is the least duplicated by prior length/entropy lanes, and audit whether any current or newly proposed strict object can source a nonzero action quantum hbar_* without legacy role transfer, selector replay, or Upsilon invariant-measure replay.",
+    "why_not_strict": "All three scales are imported postulates.  The construction does not source ell_*, tau_*, or hbar_* from nadsoliton data, does not derive nonproxy metric/gauge EOM, and does not solve selector/orientation."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "axiom_subsets_audited": 8,
+      "conditional_unit_action_measure_subsets": 1,
+      "dimension_basis_size": 3,
+      "fully_covering_subsets": 1,
+      "minimal_fully_covering_subsets": 1,
+      "strict_source_subsets": 0
+    },
+    "name": "P3146_T1_minimal_axiom_unit_action_measure_bridge",
+    "statement": "In the dimension basis (H,L,T), a unit-bearing 1D selector/action-measure bridge from dimensionless strict finite receivers requires independent length, time, and action scale inputs.  The finite audit over all 8 subsets of {A_cell,A_clock,A_action} shows that only the full triple spans length, time, action, and the minimal Lagrangian-density dimension H L^-1 T^-1.  Thus the axiomatic bridge is internally coherent but non-strict: it installs units only by three explicit postulates and exports no non-premise source law."
+  },
+  "input_hashes": {
+    "P3094": "4b31c9d5984585552777da5a554aefa03ffb284ed539161698212a86fc67692e",
+    "P3104": "6c82253358d529f2039b25e65bf5c13cc8eb17984cee71d620bfac060756a45f",
+    "P3143": "3a7c83a78396aecfc4183b109fd6b86c3a6499c7b7a518d3bf6153d7012fceaf",
+    "P3144": "2fca18d2e5461a9942c96dc400991404ff2b446e1ec31f7bced9ce6dfea21702",
+    "P3145": "c6c6d5466dfd8a2075e99a03a123d190e6c6b43c68efdf918e77e3d05d9d4b7c"
+  },
+  "status": "P3146_AXIOM_UNIT_ACTION_MEASURE_BRIDGE_CONDITIONAL_NON_STRICT",
+  "targets": {
+    "action_weight": [
+      1,
+      0,
+      0
+    ],
+    "lagrangian_density_1d": [
+      1,
+      -1,
+      -1
+    ],
+    "length_measure": [
+      0,
+      1,
+      0
+    ],
+    "time_measure": [
+      0,
+      0,
+      1
+    ]
+  }
+}

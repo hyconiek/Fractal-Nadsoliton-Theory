@@ -1,0 +1,215 @@
+{
+  "anomaly_sums": {
+    "SU2_SU2_U1": {
+      "value": "0",
+      "vanishes": true
+    },
+    "SU3_SU3_U1": {
+      "value": "0",
+      "vanishes": true
+    },
+    "U1_cubed": {
+      "value": "0",
+      "vanishes": true
+    },
+    "gravity_gravity_U1": {
+      "value": "0",
+      "vanishes": true
+    }
+  },
+  "constructed_object": {
+    "classification": "axiom_branch_sm_representation_registry_completion",
+    "convention": "left-handed Weyl fields Q_L,u_c,d_c,L_L,e_c plus H; hypercharges normalized as Q=T3+Y",
+    "name": "R_SM^ax one-family representation registry plus Higgs",
+    "scope": "algebraic SM-representation completion, not strict nadsoliton derivation"
+  },
+  "decision": {
+    "accepted_as_algebraic_registry_completion": true,
+    "bounded_result": "The Lie-algebra-to-SM gap is partially reduced: a theorem-grade algebraic registry can be constructed and machine-checked.  This strengthens the claim that the local Lie algebra is good and that SM can fit under explicit axioms.",
+    "negative_export_flags": {
+      "ToE_closure_exported": false,
+      "global_BV_BRST_exported": false,
+      "selector_closure_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "strict_registry_source_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Construct P3149 as a bounded full-bundle BRST/L_total interface audit: feed R_SM^ax into the P1961 local BRST rules and test whether matter/Higgs kinetic and Yukawa terms are invariant in the same convention, while explicitly keeping unit-source, GR/EH, selector, and ToE claims closed unless a new source theorem is added.",
+    "why_not_strict": "The representation list, hypercharges, chirality convention, Higgs doublet, and Yukawa targets are installed as an SM ansatz.  No strict nadsoliton source selects this registry, no unit-bearing L_total/EOM coupling is exported, no global BV/BRST physical-state theorem is proved, and GR remains untouched."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "anomaly_rows": 4,
+      "anomaly_rows_vanishing": 4,
+      "fermion_rows": 5,
+      "higgs_rows": 1,
+      "registry_rows": 6,
+      "representation_rows_passing": 6,
+      "strict_nadsoliton_source_rows": 0,
+      "total_representation_failure_slots": 0,
+      "unit_bearing_ltotal_rows": 0,
+      "yukawa_rows": 3,
+      "yukawa_rows_u1_invariant": 3
+    },
+    "name": "P3148_T1_sm_registry_algebraic_completion_certificate",
+    "statement": "The constructed one-family R_SM^ax registry passes the finite algebraic SM checks requested after P3147: all 6 representation rows satisfy SU(3), SU(2), cross-factor, and U(1) commutator checks; all 4 audited one-family gauge/gravity anomaly sums vanish; and all 3 audited Yukawa hypercharge sums vanish.  This is an algebraic/axiom-branch completion of the representation registry gap, not a strict source theorem for why this registry is selected by the nadsoliton or how it is installed in a unit-bearing L_total."
+  },
+  "input_hashes": {
+    "P1960": "7501b83200e44c108968e3ce75b8c7ee7276aaa2485a97d86c1456e5ad9f51ee",
+    "P1961": "655f507c0b4881d0e8bfa42c3b5bfdafc5ae4f3c0b8f48a781546f72dd725e35",
+    "P1962": "7a15c0e13cc81183bbb31873c8cbd62a896d20d5ebf6adec499b2b55886d9794",
+    "P3147": "1010bcf24f20820ec4d085d5d816add1603e48441b367825501399f620298188"
+  },
+  "registry_rows": [
+    {
+      "Y": "1/6",
+      "color_dim": 3,
+      "field": "Q_L",
+      "kind": "fermion",
+      "su2": "2",
+      "su3": "3",
+      "weak_dim": 2
+    },
+    {
+      "Y": "-2/3",
+      "color_dim": 3,
+      "field": "u_c",
+      "kind": "fermion",
+      "su2": "1",
+      "su3": "bar3",
+      "weak_dim": 1
+    },
+    {
+      "Y": "1/3",
+      "color_dim": 3,
+      "field": "d_c",
+      "kind": "fermion",
+      "su2": "1",
+      "su3": "bar3",
+      "weak_dim": 1
+    },
+    {
+      "Y": "-1/2",
+      "color_dim": 1,
+      "field": "L_L",
+      "kind": "fermion",
+      "su2": "2",
+      "su3": "1",
+      "weak_dim": 2
+    },
+    {
+      "Y": "1",
+      "color_dim": 1,
+      "field": "e_c",
+      "kind": "fermion",
+      "su2": "1",
+      "su3": "1",
+      "weak_dim": 1
+    },
+    {
+      "Y": "1/2",
+      "color_dim": 1,
+      "field": "H",
+      "kind": "higgs",
+      "su2": "2",
+      "su3": "1",
+      "weak_dim": 2
+    }
+  ],
+  "representation_commutator_rows": [
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "Q_L",
+      "hypercharge": "1/6",
+      "hypercharge_commutator_failures": 0,
+      "kind": "fermion",
+      "matrix_dimension": 6,
+      "su2": "2",
+      "su2_commutator_failures": 0,
+      "su3": "3",
+      "su3_commutator_failures": 0
+    },
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "u_c",
+      "hypercharge": "-2/3",
+      "hypercharge_commutator_failures": 0,
+      "kind": "fermion",
+      "matrix_dimension": 3,
+      "su2": "1",
+      "su2_commutator_failures": 0,
+      "su3": "bar3",
+      "su3_commutator_failures": 0
+    },
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "d_c",
+      "hypercharge": "1/3",
+      "hypercharge_commutator_failures": 0,
+      "kind": "fermion",
+      "matrix_dimension": 3,
+      "su2": "1",
+      "su2_commutator_failures": 0,
+      "su3": "bar3",
+      "su3_commutator_failures": 0
+    },
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "L_L",
+      "hypercharge": "-1/2",
+      "hypercharge_commutator_failures": 0,
+      "kind": "fermion",
+      "matrix_dimension": 2,
+      "su2": "2",
+      "su2_commutator_failures": 0,
+      "su3": "1",
+      "su3_commutator_failures": 0
+    },
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "e_c",
+      "hypercharge": "1",
+      "hypercharge_commutator_failures": 0,
+      "kind": "fermion",
+      "matrix_dimension": 1,
+      "su2": "1",
+      "su2_commutator_failures": 0,
+      "su3": "1",
+      "su3_commutator_failures": 0
+    },
+    {
+      "all_representation_checks_pass": true,
+      "cross_factor_commutator_failures": 0,
+      "field": "H",
+      "hypercharge": "1/2",
+      "hypercharge_commutator_failures": 0,
+      "kind": "higgs",
+      "matrix_dimension": 2,
+      "su2": "2",
+      "su2_commutator_failures": 0,
+      "su3": "1",
+      "su3_commutator_failures": 0
+    }
+  ],
+  "status": "P3148_SM_REPRESENTATION_REGISTRY_COMPLETION_ALGEBRAIC_PASS_CONDITIONAL_NO_STRICT_SOURCE",
+  "yukawa_hypercharge_checks": {
+    "down_yukawa_Q_Hdagger_dc": {
+      "hypercharge_sum": "0",
+      "u1_invariant": true
+    },
+    "lepton_yukawa_L_Hdagger_ec": {
+      "hypercharge_sum": "0",
+      "u1_invariant": true
+    },
+    "up_yukawa_Q_H_uc": {
+      "hypercharge_sum": "0",
+      "u1_invariant": true
+    }
+  }
+}

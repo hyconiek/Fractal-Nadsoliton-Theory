@@ -3656,3 +3656,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3145/S2095 reverse SM/GR layout remains receiver-only
 
 `P3145/S2095` maps metric geometry, GR stress-energy, gauge scaffold, couplings, masses, chirality, RG damping, quantum readout, light/matter order, and physical units onto strict-kernel receiver slots.  None of the rows currently supplies a unit-bearing nonproxy Lagrangian/EOM term or full SM/GR reduction theorem.
+
+## P3146/S2096 Lambda_unit^ax remains axiomatic
+
+`P3146/S2096` supplies a clean conditional unit/action-measure scaffold for axiom-branch model building, but it imports `ell_*`, `tau_*`, and `hbar_*` as postulates.  It therefore does not derive a unit-bearing physical Lagrangian, nonproxy Einstein/gauge EOM, or strict source of action units from the nadsoliton.
+
+## P3147/S2097 SM/GR fit remains conditional
+
+`P3147/S2097` confirms that the local `SU(3)xSU(2)xU(1)` Lie algebra/BRST data are good as algebra, and that SM/GR can be placed in an axiom-branch receiver architecture.  It also confirms that no strict unit-bearing `L_total`, full SM representation registry, nonproxy GR EOM, global BV/BRST theorem, or empirical calibration is exported.
+
+## P3148/S2098 R_SM^ax is algebraic not unit-bearing
+
+`P3148/S2098` gives a concrete algebraic representation registry suitable for subsequent BRST/Lagrangian interface tests.  It does not derive the registry from the strict kernel, does not install it in a unit-bearing action measure, and does not prove full `L_total` gauge invariance or nonproxy SM/GR EOM.
+
+## P3149/S2099 local BRST interface is not global L_total
+
+`P3149/S2099` verifies local algebraic gauge invariance for matter/Higgs kinetic and Yukawa blocks built from `R_SM^ax`.  It does not supply the physical measure, action normalization, global BRST charge, cohomology projection, full nonproxy EOM, or GR/EH coupling required for a unit-bearing `L_total`.
+
+## P3150/S2100 hypercharge ray is conditional
+
+`P3150/S2100` proves that the installed one-family field/Yukawa/anomaly pattern fixes the hypercharge ratios up to scale.  It does not derive that field pattern from the strict kernel, fix the absolute charge normalization from a physical unit theorem, or install the result in a unit-bearing Lagrangian/EOM.

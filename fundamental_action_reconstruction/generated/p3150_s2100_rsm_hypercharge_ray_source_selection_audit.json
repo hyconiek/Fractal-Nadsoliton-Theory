@@ -1,0 +1,176 @@
+{
+  "candidate_source_rows": [
+    {
+      "candidate": "Y_SM^ray consistency constraints",
+      "noncircular_current_artifact": false,
+      "selects_absolute_normalization": false,
+      "selects_hypercharge_ray": true,
+      "selects_representation_content": false,
+      "strict_nadsoliton_source_law": false,
+      "verdict": "conditional ray witness only: uses SM-like field/Yukawa/anomaly obligations"
+    },
+    {
+      "candidate": "P3146 unit/action axioms",
+      "noncircular_current_artifact": true,
+      "selects_absolute_normalization": false,
+      "selects_hypercharge_ray": false,
+      "selects_representation_content": false,
+      "strict_nadsoliton_source_law": false,
+      "verdict": "dimension scales do not select gauge charges"
+    },
+    {
+      "candidate": "P1960/P1961 local Lie/BRST algebra",
+      "noncircular_current_artifact": true,
+      "selects_absolute_normalization": false,
+      "selects_hypercharge_ray": false,
+      "selects_representation_content": false,
+      "strict_nadsoliton_source_law": false,
+      "verdict": "local algebra supplies consistency rules, not a unique matter registry"
+    },
+    {
+      "candidate": "P3148 installed R_SM^ax registry",
+      "noncircular_current_artifact": false,
+      "selects_absolute_normalization": true,
+      "selects_hypercharge_ray": true,
+      "selects_representation_content": true,
+      "strict_nadsoliton_source_law": false,
+      "verdict": "self-referential as a source: it is the installed target registry"
+    }
+  ],
+  "constructed_object": {
+    "classification": "conditional_source_selection_witness_for_hypercharge_ratios_only",
+    "name": "Y_SM^ray hypercharge consistency ray",
+    "scope": "derives the P3148 hypercharge ratios from Yukawa plus anomaly equations, not the absolute normalization or representation content"
+  },
+  "decision": {
+    "bounded_result": "P3150 improves the P3148/P3149 axiom branch: the hypercharge ratios are not arbitrary once the one-family field pattern, Yukawa terms, and anomaly constraints are assumed; they are the unique ray of the finite system.",
+    "negative_export_flags": {
+      "ToE_closure_exported": false,
+      "absolute_charge_normalization_exported": false,
+      "global_BV_BRST_exported": false,
+      "representation_content_source_exported": false,
+      "strict_GR_generation_exported": false,
+      "strict_SM_generation_exported": false,
+      "strict_registry_source_exported": false,
+      "unit_bearing_L_total_exported": false
+    },
+    "next_honest_step": "Construct P3151 as a finite source-selection audit for the representation content itself: test whether any strict object selects the five chiral multiplet pattern plus Higgs dimensions (3,2), (bar3,1), (bar3,1), (1,2), (1,1), (1,2) without importing SM family data.  If no source exists, preserve R_SM^ax/Y_SM^ray as conditional phenomenology and pivot to unit-charge normalization or GR/EH nonproxy coupling.",
+    "why_not_strict": "The witness is conditional on an installed SM-like field pattern and Yukawa/anomaly obligations.  No current strict object selects that field pattern, the Higgs normalization, the charge unit, or the registry from nadsoliton data."
+  },
+  "finite_theorem": {
+    "finite_counts": {
+      "candidate_source_rows": 4,
+      "linear_equation_rows": 5,
+      "matrix_rank": 5,
+      "nullity": 1,
+      "ray_witnesses_matching_P3148": 1,
+      "redundant_anomaly_checks_vanishing": 1,
+      "strict_accepted_source_rows": 0,
+      "unknowns": 6
+    },
+    "name": "P3150_T1_hypercharge_ray_derivation_and_source_obstruction",
+    "statement": "The one-family Yukawa-invariance plus anomaly equations form a 5 x 6 linear system of rank 5, so they select a one-dimensional hypercharge ray.  Normalizing the Higgs charge to 1/2 gives exactly the P3148 assignments q=1/6, u=-2/3, d=1/3, l=-1/2, e=1, h=1/2; the SU3^2 U1 and U1^3 anomaly checks vanish on the same ray.  This is a genuine conditional source-selection witness for hypercharge ratios, but it is not a strict nadsoliton source: it assumes the SM-like field content/Yukawa obligations, leaves absolute normalization free until a unit/charge convention is imposed, and does not select the representation content itself."
+  },
+  "hypercharge_ray_derivation": {
+    "cubic_U1_anomaly_on_ray": "0",
+    "equation_rows": [
+      {
+        "coefficients_q_u_d_l_e_h": [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "equation": "up_yukawa",
+        "formula": "Y(Q)+Y(H)+Y(u_c)=0"
+      },
+      {
+        "coefficients_q_u_d_l_e_h": [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1"
+        ],
+        "equation": "down_yukawa",
+        "formula": "Y(Q)-Y(H)+Y(d_c)=0"
+      },
+      {
+        "coefficients_q_u_d_l_e_h": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "-1"
+        ],
+        "equation": "lepton_yukawa",
+        "formula": "Y(L)-Y(H)+Y(e_c)=0"
+      },
+      {
+        "coefficients_q_u_d_l_e_h": [
+          "3",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "equation": "SU2_SU2_U1",
+        "formula": "3Y(Q)+Y(L)=0"
+      },
+      {
+        "coefficients_q_u_d_l_e_h": [
+          "6",
+          "3",
+          "3",
+          "2",
+          "1",
+          "0"
+        ],
+        "equation": "gravity_gravity_U1",
+        "formula": "sum dim(R)Y(R)=0"
+      }
+    ],
+    "general_solution_with_q_scale": {
+      "d": "2*s",
+      "e": "6*s",
+      "h": "3*s",
+      "l": "-3*s",
+      "q": "s",
+      "u": "-4*s"
+    },
+    "matches_P3148_standard_hypercharges": true,
+    "matrix_rank": 5,
+    "normalized_h_equals_one_half": {
+      "d": "1/3",
+      "e": "1",
+      "h": "1/2",
+      "l": "-1/2",
+      "q": "1/6",
+      "u": "-2/3"
+    },
+    "nullity": 1,
+    "ray_generator_q_u_d_l_e_h": [
+      "1/3",
+      "-4/3",
+      "2/3",
+      "-1",
+      "2",
+      "1"
+    ],
+    "redundant_SU3_SU3_U1_on_ray": "0",
+    "redundant_checks_vanish": true,
+    "unknown_count": 6
+  },
+  "input_hashes": {
+    "P1962": "7a15c0e13cc81183bbb31873c8cbd62a896d20d5ebf6adec499b2b55886d9794",
+    "P3147": "1010bcf24f20820ec4d085d5d816add1603e48441b367825501399f620298188",
+    "P3148": "0d0e5116b9295bae30bcad72f0ec3d62479d6ade80938c5879b27b23a2dbddc8",
+    "P3149": "fa84e9516c9d39dc4c66f2e00adf799e0dc670ad255178dafcbe4ddc67453d75"
+  },
+  "status": "P3150_RSM_HYPERCHARGE_RAY_SOURCE_SELECTION_CONDITIONAL_RAY_NO_STRICT_SOURCE"
+}
