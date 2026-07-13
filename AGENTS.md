@@ -3240,3 +3240,41 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Current artifacts provide no accepting closure path through P3116-P3124; the missing leaf cut remains nonempty.
 - Do not promote the formal mass-unit torsor, Higgs/SM/EH scaffold, or unit-chain bookkeeping to strict units, `L_total`, SM/GR generation, selector closure, bridge/role transfer, or ToE.
 - Next honest move: supply exactly one new leaf source object such as `Lambda_origin_source_localizer` or a genuine positive torsor source law for `Omega_M`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.
+
+## Current alpha_geo/pi phase compatibility guardrail (P3159/S2109, 2026-07-13)
+
+- P3159 constructs `Phi_alpha_pi`, a scoped compatibility object between strict `alpha_geo=4 ln 2` and the `2*pi` phase quantum.
+- The audit verifies the exact dimensionless phase-area section `A_phi=2*pi/alpha_geo=pi/(2 ln 2)`, so alpha_geo is compatible with pi-phase bookkeeping at the internal normalization level.
+- Finite `Z12` slot scans and rational approximants do not export a canonical phase origin, `Lambda_origin`, positive mass/action unit, `K_dim`, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Next honest move: introduce exactly one new source object, preferably a strict positive torsor source law for `Omega_M/K_dim` or a nonconventional `Lambda_origin_source_localizer` explicitly coupled to `A_phi`; do not replay alpha_geo/pi numerology as closure.
+
+## Current alpha_geo phase-locking no-root-of-unity guardrail (P3160/S2110, 2026-07-13)
+
+- P3160 strengthens P3159 by proving that `alpha_geo/(2*pi)` is irrational: otherwise `16=e^(2*pi*p/q)` would contradict the Gelfond-Schneider consequence that `e^(pi*r)` is transcendental for nonzero rational `r`.
+- Therefore `exp(i*alpha_geo)` is not a root of unity and `alpha_geo` cannot be an exact finite `Z_N` phase slot or phase-origin selector; the P3159 `A_phi=2*pi/alpha_geo` section remains only a dimensionless phase-area normalization.
+- Do not continue alpha_geo/pi phase-locking or `Z_N` slot searches as closure evidence; they do not export `Lambda_origin`, `Omega_M/K_dim`, physical units, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Next honest move: introduce exactly one genuinely new source object outside alpha_geo/pi locking, preferably a strict positive torsor source law `Omega_scale` for `Omega_M/K_dim` or a nonconventional `Lambda_origin_source_localizer` with explicit `Phi_Info/A_phi` coupling.
+
+## Current Omega_scale positive torsor source-law guardrail (P3161/S2111, 2026-07-13)
+
+- P3161 constructs the `Omega_scale` positive torsor source-law audit requested after P3160, targeting a strict representative of `Omega_M/K_dim` without alpha_geo/pi replay.
+- The exact equivariant-section obstruction shows that invariant strict data cannot select a free positive torsor representative: `f(x)=f(c.x)=c f(x)` for all `c>0` is impossible.
+- The audit tests `12` candidate source classes over `7` scale factors, with `84` obstruction rows and `132` gate rows; `0` candidates export an import-free strict `Omega_scale` source.
+- Do not promote alpha/pi sections, entropy/cardinality, Z12 spectra, damping ratios, formal Higgs scales, cohomology periods, logdet actions, readout placeholders, Planck/apparatus imports, selector choices, or hypothetical unexported `S_+` to physical units, Higgs VEV, EH coupling, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Next honest move: either construct a real scale-charged strict source datum `S_+` with nonzero value and `Omega_M/K_dim` coupling, or pivot to `Lambda_origin_source_localizer`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.
+
+## Current S_plus scale-charged source datum guardrail (P3162/S2112, 2026-07-13)
+
+- P3162 constructs the missing `S_+` object required by P3161: a nonzero strict datum in the weight-one `R_{>0}` representation `V_chi`, `chi(c)=c`, coupled to `Omega_M/K_dim`.
+- The intake audit tests `12` candidate source classes over `5` scale factors, with `60` representation rows and `108` gate rows; `0` candidates export an accepted strict `S_+` source.
+- Weight-zero alpha/pi, entropy/cardinality, and Z12 spectra remain dimensionless; formal `Omega_M`, `Gamma_9_5`, `U_readout`, and Higgs symbols lack strict source values; Planck/apparatus/selector representatives are forbidden.
+- Do not promote any current candidate to physical units, Higgs VEV, EH coupling, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Next honest move: either actually export a nonzero strict `S_+` value with an `Omega_M/K_dim` coupling theorem, or pivot to `Lambda_origin_source_localizer`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.
+
+## Current boundary-value speed-of-light matching guardrail (P3163/S2113, 2026-07-13)
+
+- P3163 constructs a boundary-value receiver audit for comparing model limiting values with the physical speed of light `c=299792458 m/s`.
+- The audit tests `10` boundary receivers; `9` nonzero receivers can numerically match `c` after choosing `U_length/U_time=c/v_hat`, while the zero tail cannot.
+- This proves scale underdetermination, not physical closure: current artifacts do not independently export `U_length`, `U_time`, a Lorentzian metric/light-cone embedding, observed-light source, `S_+`, or `Omega_scale`.
+- Do not promote boundary-value fits to physical dimensions, observed light, spacetime EOM, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Next honest move: construct a two-axis unit theorem `U_LT` sourcing `U_length` and `U_time` or a Lorentzian metric/light-cone embedding before fitting `c`; otherwise preserve the P3162 `S_+` frontier or pivot to `Lambda_origin_source_localizer`.
