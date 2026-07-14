@@ -1,0 +1,393 @@
+{
+  "constructed_theoretical_objects": {
+    "FractalLayerIndexCalculator": [
+      {
+        "N_force_squared_layers": 0.0,
+        "N_length_decade_layers": 0.0,
+        "length_m": 1.61625502392855e-35,
+        "length_ratio_to_lP": 1.0,
+        "scale": "Planck length"
+      },
+      {
+        "N_force_squared_layers": 20.0,
+        "N_length_decade_layers": 10.0,
+        "length_m": 1.61625502392855e-15,
+        "length_ratio_to_lP": 1e+20,
+        "scale": "proton proxy length"
+      },
+      {
+        "N_force_squared_layers": 20.0,
+        "N_length_decade_layers": 10.0,
+        "length_m": 1e-15,
+        "length_ratio_to_lP": 1e+20,
+        "scale": "legacy proton stated 1e-15m"
+      },
+      {
+        "N_force_squared_layers": 61.0,
+        "N_length_decade_layers": 30.5,
+        "length_m": 1.61625502392855e+26,
+        "length_ratio_to_lP": 1e+61,
+        "scale": "cosmic horizon proxy"
+      },
+      {
+        "N_force_squared_layers": 61.0,
+        "N_length_decade_layers": 30.5,
+        "length_m": 1e+26,
+        "length_ratio_to_lP": 1e+61,
+        "scale": "legacy Hubble stated 1e26m"
+      }
+    ],
+    "PlanckUnitImportDAG": [
+      {
+        "formula": "sqrt(hbar*G/c^3)",
+        "requires": [
+          "hbar",
+          "G",
+          "c"
+        ],
+        "strict_internal_source_exported": false,
+        "unit": "U_length=l_P",
+        "value_SI": 1.61625502392855e-35
+      },
+      {
+        "formula": "sqrt(hbar*G/c^5)=l_P/c",
+        "requires": [
+          "hbar",
+          "G",
+          "c"
+        ],
+        "strict_internal_source_exported": false,
+        "unit": "U_time=t_P",
+        "value_SI": 5.391246446661944e-44
+      },
+      {
+        "formula": "sqrt(hbar*c/G)",
+        "requires": [
+          "hbar",
+          "G",
+          "c"
+        ],
+        "strict_internal_source_exported": false,
+        "unit": "U_mass=m_P",
+        "value_SI": 2.176434342051127e-08
+      },
+      {
+        "formula": "length multiplier 1/beta_tors=100",
+        "requires": [
+          "beta_tors=0.01 legacy parameter"
+        ],
+        "strict_internal_source_exported": false,
+        "unit": "layer_step",
+        "value_SI": 100.0
+      }
+    ],
+    "U_LT_legacy_receiver": "formal receiver that tries U_length=l_P and U_time=t_P from legacy Planck/fractal-layer bookkeeping",
+    "gate_rows": [
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "object_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "computable_finite_rows",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "dimensionless_ratio_bookkeeping",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "imports_no_external_c_hbar_G",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "exports_U_length",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "exports_U_time",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "exports_Lorentz_light_cone",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_Planck_anchor",
+        "gate": "kernel_split_role_safe",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "object_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "computable_finite_rows",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "dimensionless_ratio_bookkeeping",
+        "passed": true
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "imports_no_external_c_hbar_G",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "exports_U_length",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "exports_U_time",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "exports_Lorentz_light_cone",
+        "passed": false
+      },
+      {
+        "candidate": "legacy_beta_tors_layer_ladder",
+        "gate": "kernel_split_role_safe",
+        "passed": true
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "object_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "computable_finite_rows",
+        "passed": true
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "dimensionless_ratio_bookkeeping",
+        "passed": true
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "imports_no_external_c_hbar_G",
+        "passed": false
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "exports_U_length",
+        "passed": false
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "exports_U_time",
+        "passed": false
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "exports_Lorentz_light_cone",
+        "passed": false
+      },
+      {
+        "candidate": "strict_G_Planck_bridge_QW2198",
+        "gate": "kernel_split_role_safe",
+        "passed": true
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "object_constructed",
+        "passed": true
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "computable_finite_rows",
+        "passed": true
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "dimensionless_ratio_bookkeeping",
+        "passed": true
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "imports_no_external_c_hbar_G",
+        "passed": false
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "exports_U_length",
+        "passed": false
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "exports_U_time",
+        "passed": false
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "exports_Lorentz_light_cone",
+        "passed": false
+      },
+      {
+        "candidate": "boundary_c_receiver_P3163",
+        "gate": "kernel_split_role_safe",
+        "passed": true
+      }
+    ]
+  },
+  "decision": {
+    "bounded_result": "Legacy solved bezwymiarowosc operationally by external Planck anchoring plus dimensionless beta_tors layer ratios, not by an internal strict unit source.",
+    "negative_export_flags": {
+      "K_dim_functor_exported": false,
+      "L_total_exported": false,
+      "Lorentz_metric_exported": false,
+      "Omega_scale_source_exported": false,
+      "S_plus_source_exported": false,
+      "ToE_closure_exported": false,
+      "U_LT_theorem_exported": false,
+      "U_length_source_exported": false,
+      "U_time_source_exported": false,
+      "bridge_completion_exported": false,
+      "observed_light_exported": false,
+      "role_transfer_exported": false
+    },
+    "next_honest_step": "Do not reuse Planck/layer bookkeeping as closure.  The next honest proof-grade move is one narrow Lambda_origin_source_localizer audit, or a genuinely new nonzero scale-charged S_+ value coupled to Omega_M/K_dim; otherwise preserve the no-strict-unit certificate.",
+    "positive_scoped_flags": {
+      "fractal_layer_calculator_constructed": true,
+      "legacy_planck_receiver_audited": true,
+      "repo_grep_performed": true
+    }
+  },
+  "finite_certificate": {
+    "accepted_import_free_U_LT_sources": 0,
+    "beta_tors": 0.01,
+    "computed_lP_m": 1.61625502392855e-35,
+    "computed_mP_kg": 2.176434342051127e-08,
+    "computed_tP_s": 5.391246446661944e-44,
+    "fractal_layer_rows": 5,
+    "gate_rows": 32,
+    "one_layer_length_multiplier": 100.0,
+    "planck_import_rows": 4
+  },
+  "finite_theorem": {
+    "name": "P3164_T1_legacy_planck_layers_are_external_anchor_receivers_not_strict_unit_sources",
+    "statement": "The legacy Planck/fractal-layer mechanism resolves dimensionlessness by choosing Planck units and using beta_tors=0.01 as a logarithmic layer ladder.  The construction is computable and reproduces the intended 20/30-ish layer bookkeeping, but l_P and t_P require c,hbar,G and beta_tors remains a legacy parameter; hence it does not export an import-free U_length/U_time source or strict K_dim functor."
+  },
+  "input_hashes": {
+    "GAPS": "d8de02769cca3a6495a510c18cc68023b3721a22c72c826f317010d526558d64",
+    "K1": "3e7c1223b803df3cbe94d75e2696d3519f8505e38cef4bd724be3dadfca84ca8",
+    "LEGACY_TEX": "ec6808580c881ae3ec8dd2fbf8120e8cc372f41194d033225b556d22daad4ac4",
+    "P3158": "a95f1a300a7364254a53f6e2bee8f1aa9f440006ef9898e67eec1e0d47d175fc",
+    "P3162": "72d1b8d65b46ff484bccc1cec7949d269979c5e54fb0d5012a0debde37d5e797",
+    "P3163": "a8bdbc2224a801ee1f0f51f7da327f5c0c31105ba30794b134ef0561fdf41d4d",
+    "S2": "acdd07e5b59fc87b7c6457cf43dcafef2939165526265ac37d0c0a6cffaa2c65"
+  },
+  "input_statuses": {
+    "P3158": "P3158_POST_P3157_UNIT_SOURCE_DEPENDENCY_RECONCILIATION_NO_STRICT_UNIT",
+    "P3162": "P3162_S_PLUS_SCALE_CHARGED_SOURCE_DATUM_INTAKE_BOUNDED_NO_GO",
+    "P3163": "P3163_BOUNDARY_VALUE_SPEED_OF_LIGHT_MATCHING_UNDERDETERMINATION_AUDIT"
+  },
+  "repo_grep": {
+    "current_unit_frontier": {
+      "count": 1679,
+      "samples": [
+        "AGENTS.md:2918:- The next honest move is exactly one nadsoliton-only dimensional triad source law `D_phi=(U_action,U_length,U_time)`; otherwise preserve the P3105-P3113 physical-unit no-go.",
+        "AGENTS.md:2922:- P3114 tests the P3113-requested nadsoliton-only dimensional triad `D_phi=(U_action,U_length,U_time)` with a scale section, action-length/time relation, and `C_phi(A_phi)=U_action` coupling.",
+        "AGENTS.md:2929:- P3115 tests the P3114-requested nadsoliton-only scale-section theorem `Sigma_dim` for the internal `D_phi=(U_action,U_length,U_time)` dimension orbit.",
+        "AGENTS.md:2932:- The next honest move is exactly one nadsoliton-only dimension-source functor `K_dim` to the positive scale torsor that supplies the missing strict source law for `Sigma_dim`; otherwise preserve the P3105-P3115 physical-unit no-go.",
+        "AGENTS.md:2934:## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)",
+        "AGENTS.md:2936:- P3116 tests the P3115-requested nadsoliton-only dimension-source functor `K_dim` from strict nadsoliton data to the positive scale torsor.",
+        "AGENTS.md:2937:- The finite audit constructs `9` candidate functors, `54` functor-law rows, `45` torsor-action rows, `36` source/coupling residual rows, and `99` gate rows; `0` candidates export an import-free strict `K_dim` functor.",
+        "AGENTS.md:2953:- The next honest move requires exactly one new strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes; otherwise preserve the P3105-P3118 physical-unit no-go/no-new-live-frontier certificate.",
+        "AGENTS.md:2957:- P3119 tests the P3118-requested strict axis-source object `Xi_LT`, an internal source for distinct `U_length` and `U_time` axes on nadsoliton data.",
+        "AGENTS.md:3228:- Next honest move: pivot to the independent `Omega_dim/K_dim` unit-source obligation from P3116, or to selector-source intake only if a new non-premise source object is supplied.",
+        "AGENTS.md:3232:- P3157 constructs `Omega_M`, a formal positive mass-unit torsor for the P3156 alpha-to-Higgs schema.",
+        "AGENTS.md:3233:- `mu2=alpha_geo*Omega_M^2` and `lambda=alpha_geo` are dimensionally valid, but `Omega_M -> c Omega_M` leaves compatibility intact and no strict source law selects `c`.",
+        "AGENTS.md:3234:- Do not promote `Omega_M` to a strict mass unit, K_dim functor, Higgs coupling/VEV source, EH coupling, unit-bearing `L_total`, strict SM/GR generation, selector closure, bridge/role transfer, or ToE.",
+        "AGENTS.md:3235:- Next honest move: construct exactly one strict source law for the positive mass/action unit torsor via the P3116 `Omega_dim/K_dim` obligation, or preserve the no-strict-unit boundary.",
+        "AGENTS.md:3239:- P3158 constructs `U_mass_unit_source_dependency_DAG`, a finite dependency reconciliation for turning P3157 `Omega_M` into a strict mass/action unit.",
+        "AGENTS.md:3242:- Next honest move: supply exactly one new leaf source object such as `Lambda_origin_source_localizer` or a genuine positive torsor source law for `Omega_M`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.",
+        "AGENTS.md:3248:- Finite `Z12` slot scans and rational approximants do not export a canonical phase origin, `Lambda_origin`, positive mass/action unit, `K_dim`, selector closure, bridge completion, role transfer, `L_total`, or ToE.",
+        "AGENTS.md:3249:- Next honest move: introduce exactly one new source object, preferably a strict positive torsor source law for `Omega_M/K_dim` or a nonconventional `Lambda_origin_source_localizer` explicitly coupled to `A_phi`; do not replay alpha_geo/pi numerology as closure.",
+        "AGENTS.md:3255:- Do not continue alpha_geo/pi phase-locking or `Z_N` slot searches as closure evidence; they do not export `Lambda_origin`, `Omega_M/K_dim`, physical units, selector closure, bridge completion, role transfer, `L_total`, or ToE.",
+        "AGENTS.md:3256:- Next honest move: introduce exactly one genuinely new source object outside alpha_geo/pi locking, preferably a strict positive torsor source law `Omega_scale` for `Omega_M/K_dim` or a nonconventional `Lambda_origin_source_localizer` with explicit `Phi_Info/A_phi` coupling.",
+        "AGENTS.md:3258:## Current Omega_scale positive torsor source-law guardrail (P3161/S2111, 2026-07-13)",
+        "AGENTS.md:3260:- P3161 constructs the `Omega_scale` positive torsor source-law audit requested after P3160, targeting a strict representative of `Omega_M/K_dim` without alpha_geo/pi replay.",
+        "AGENTS.md:3262:- The audit tests `12` candidate source classes over `7` scale factors, with `84` obstruction rows and `132` gate rows; `0` candidates export an import-free strict `Omega_scale` source.",
+        "AGENTS.md:3263:- Do not promote alpha/pi sections, entropy/cardinality, Z12 spectra, damping ratios, formal Higgs scales, cohomology periods, logdet actions, readout placeholders, Planck/apparatus imports, selector choices, or hypothetical unexported `S_+` to physical units, Higgs VEV, EH coupling, selector closure, bridge completion, role transfer, `L_total`, or ToE.",
+        "AGENTS.md:3264:- Next honest move: either construct a real scale-charged strict source datum `S_+` with nonzero value and `Omega_M/K_dim` coupling, or pivot to `Lambda_origin_source_localizer`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate."
+      ]
+    },
+    "dimensionless_external_anchor": {
+      "count": 3255,
+      "samples": [
+        "AGENTS.md:861:- The candidate is deterministic and dimensionless but leaves carrier collisions and exports no strict graph-source law, variational meaning, or typed `K`/`L_total` coupling theorem; it is rejected as source-law/coupling promotion.",
+        "AGENTS.md:950:- P2832 tests one non-label candidate graph-source formula after P2831: exact triangle count, 4-cycle count, and common-neighbor histogram, dimensionlessly normalized on the fixed `16`-node `4`-regular carrier.",
+        "AGENTS.md:975:- Finite dimensionless carrier normalizations are available, but current artifacts do not export physical units, a canonical positive scale-orbit quotient, or a unit-bearing coupling coefficient into `K`/`L_total`; positive rescaling leaves finite separation invariant.",
+        "AGENTS.md:1045:- Finite probability normalization exists and nonconstant normalized density profiles exist, but nonconstant raw total volumes are carrier-dependent and the uniform count is dimensionless; no unit source, field support, spacetime pullback, coupling coefficient rule, or variational chain rule is exported.",
+        "AGENTS.md:1876:- This does not export strict closure: the quotient is still dimensionless arithmetic until a strict physical unit law, strict coefficient source law, and nonproxy coupling installation are proved.",
+        "AGENTS.md:1884:- Do not promote dimensional exponent grids, dimensionless subfamilies, beta normalization, primitive-ray quotient arithmetic, scalar Euler insertion, K/C exchange, or typed scalar mediators to strict ratio-package source, damping packet, nonproxy `L_total`, bridge closure, role transfer, or ToE.",
+        "AGENTS.md:1898:- Do not promote exponent-blind coefficients, unit conventions, dimensionless `k=0` sections, N/sigma selector replay, beta normalization, primitive-ray quotient arithmetic, or scalar Euler insertion to strict ratio-package source, nonproxy `L_total`, bridge closure, role transfer, or ToE.",
+        "AGENTS.md:2265:- Three finite candidates are constructed (label tick `Δd=1`, full `Z12` cycle period `12`, and dominant DFT period), but they remain dimensionless scaffolds: the `+1` tick is not `U(12)`-invariant, the invariant cycle period does not choose a local directed tick, and the DFT period has no physical frequency/action/Hamiltonian coupling.",
+        "AGENTS.md:2272:- Four finite reference-cell partitions are positive (all cyclic edges, nonzero-gradient support, cyclic Laplacian rank, nonzero DFT modes), but they partition a dimensionless formal action: under `T_K -> c T_K` every action-per-cell candidate rescales by `c^2`.",
+        "AGENTS.md:2300:- Four tick couplings are positive internal calibrations, but the label tick is dimensionless, drop-derived ticks scale under `K -> cK`, the formal action scales as `c^2`, and `H=S/tau` has no strict energy/frequency coupling theorem.",
+        "AGENTS.md:2342:- The finite `K -> 3K` rescaling/normalization test finds `0/4` accepted mass/coupling provenance candidates: raw spectral proxies scale with arbitrary amplitude, normalized ratios are dimensionless, and P3030 still blocks field/sector localization.",
+        "AGENTS.md:2615:- The finite scalar/unit-map audit has `6` scalar candidates, `5` unit-map candidates, and `30` provider rows; positive dimensionless candidates exist, but there are `0` nonconventional scalar candidates, `0` nonconventional unit laws, and `0` accepted canonical length/time unit-provider rows.",
+        "AGENTS.md:2616:- Do not promote dimensionless scalars or conventional unit declarations to unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2622:- The exact matrix has `5` candidate profiles, `2` sigma branches, `24` `D12` transforms, and `240` rows; `3` dimensionless profiles are accepted as scoped internal invariants, while sigma-odd and chart-label profiles are rejected.",
+        "AGENTS.md:2623:- Do not promote these dimensionless conserved summaries to canonical units, unit-bearing coordinates, strict spacetime embedding, observed light, gauge photons, unit-bearing action, variational EOM, empirical physics, `QW-2191` discharge, strict selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2679:- Do not promote cycle distance, adjacency reachability, diffusion tails, dimensionless velocity proxies, or imported Minkowski templates to observed light, gauge photons, spacetime EOM, empirical physics, `QW-2191` discharge, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2692:- The finite audit computes all `4096` binary Z12 profiles, `7` energy-spectrum rows, and `36` candidate unit-source gate rows; positive internal dimensionless witnesses exist, but `0` candidates export a non-imported action/energy/time unit.",
+        "AGENTS.md:2728:- Do not promote dimensionless Z12 scalar/spectral witnesses, P3085 formal current proxies, scale-normalized ratios, imported metrology templates, or imported observed-photon/frequency templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2735:- Do not promote finite degeneracy counts, dimensionless partition functions, formal beta parameters, energy-scale-normalized ensembles, imported Boltzmann-Gibbs templates, or imported blackbody/observed-radiation templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2742:- Do not promote finite self-adjoint spectral multipliers, formal `exp(-i lambda t)` phases, dimensionless time parameters, time-energy-normalized phase orbits, imported quantum-mechanics templates, or imported spacetime/EOM templates to observed photons/light, spacetime EOM, physical Hamiltonian, empirical observable, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2763:- Do not promote finite log-dets, source-coupled `1/2 JGJ` generators, formal variations, dimensionless coupling-scale orbits, imported Gaussian path-integral templates, or imported EFT templates to empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, Green/response closure, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2770:- Do not promote finite log-det scale derivatives, Green-kernel beta-like slopes, dimensionless source-coupling rescaling orbits, imported continuum QFT RG templates, or imported empirical running-coupling templates to sourced beta function, physical renormalization scale, unit-normalized running coupling, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2805:- Do not promote finite mode counts, dimensionless partition weights, formal modal intensity-spectrum proxies, temperature/energy scale-orbit rows, imported Planck/blackbody templates, or imported observed-light/apparatus templates to physical temperature, radiation spectrum, empirical observable, observed photons/light, spacetime EOM, physical Hamiltonian, selector closure, `L_total`, bridge/role-transfer, or ToE closure.",
+        "AGENTS.md:2902:- This is real internal progress, but it remains dimensionless phase accounting: `0` candidates export a physical action/length/time unit or calibration coupling without importing `hbar/Planck`, rods, clocks, observed light, or apparatus.",
+        "AGENTS.md:2910:- Do not promote dimensionless `A_phi` normalizations, formal unit symbols, entropy tick/cell labels, or imported `hbar/Planck` calibration to detector calibration, spacetime EOM, selector closure, `L_total`, bridge/role-transfer, or ToE closure."
+      ]
+    },
+    "legacy_planck_layers": {
+      "count": 282,
+      "samples": [
+        "AGENTS.md:18:- Do **not** silently transfer legacy physical-role claims (`sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, `beta^N` gravity hierarchy) onto `K_strict_gate` without an explicit bridge **and** role-transfer theorem.",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:636:The hierarchy from Planck scale to cosmic scale is spanned by $\\sim 30$ fractal layers with $\\beta^N$ damping.",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:766:The Universe has 30 fractal layers spanning from Planck scale to cosmic horizon.",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:774:    \\item \\QW{911}: \\textbf{Planck Hierarchy} --- 30 layers with $\\beta = 0.01$ gives $\\beta^{-30} = 10^{60}$ orders of magnitude",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:782:This explains the 60 orders of magnitude between Planck scale ($10^{-35}$ m) and cosmic horizon ($10^{26}$ m) using exactly 30 fractal layers with $\\beta = 0.01$ damping per layer.",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:1278:\\frac{G_{observed}}{G_{Planck}} = \\betators^N",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:1619:\\subsection{QW-557: Universal $\\beta^N$ Scaling (1.5\\% Mean Error)}",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:2177:G_{eff}(N) = G_0 \\cdot \\betators^N",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:2250:The Universe has approximately 30 fractal layers spanning from Planck scale to cosmic horizon.",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:2272:\\begin{verification}[QW-911: Planck Hierarchy]",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:2767:\\frac{G_{observed}}{G_{Planck}} = \\betators^N = (0.01)^{20} = 10^{-40}",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:2774:G_{eff}(N) = G_0 \\cdot \\betators^N",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:3021:G_{eff}(N) = G_0 \\cdot \\betators^N = 1 \\times (0.01)^{20} = 10^{-40}",
+        "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex:3026:    \\item The observed separation between the Planck scale and macroscopic human scales corresponds to approximately $N \\approx 20$ effective fractal layers.",
+        "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:84:- `beta^N` gravity hierarchy,",
+        "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:672:The role-transfer truth table leaves the legacy Weinberg, alpha-EM, and beta-power gravity roles unlicensed at the current assignment.  Any future `L_total` term using `alpha_geo`, `beta_tors`, or `beta^N` as physical legacy roles must pass that role-transfer audit first.",
+        "fundamental_action_reconstruction/N101_CURRENT_LEGACY_GRAVITY_HIERARCHY_RETAINED_SUBBRANCH_OBSTRUCTION_THEOREM.md:28:>    `exact gravity hierarchy from beta^N scaling`,",
+        "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:60:        \"legacy_formula\": \"beta^N gravity hierarchy / beta_tors-power hierarchy\",",
+        "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:206:The role-transfer audit license and role-bearing `L_total` export are necessary but not sufficient: each legacy role still needs its claim-specific strict successor theorem.  Therefore even post-P2433 convergence cannot silently transfer `sin^2(theta_W)=alpha_geo/12`, `alpha_EM^-1`, `beta^N`, or `beta_tors -> chi_11`; the certificate is a conditional audit map, not a role theorem.",
+        "fundamental_action_reconstruction/p2434_s1384_conditional_legacy_role_transfer_claim_lattice_certificate.py:270:            \"No Weinberg, alpha_EM, beta^N, beta_tors -> chi_11, role-transfer, L_total, or ToE theorem is exported.\",",
+        "fundamental_action_reconstruction/p2854_s1804_post_p2853_professorial_state_map_no_new_live_frontier.py:196:            \"next_artifact_shape\": \"role-transfer table for sin^2(theta_W), alpha_EM, beta^N hierarchy, and beta_tors/chi_11 candidates\",",
+        "fundamental_action_reconstruction/p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:51:        \"legacy_formula\": \"beta^N gravity hierarchy\",",
+        "fundamental_action_reconstruction/F22_LEGACY_GRAVITY_HIERARCHY_ROLE_EQUIVALENCE_REFINEMENT_PACKET.md:48:   legacy gravity-hierarchy claim from `beta^N` scaling.",
+        "fundamental_action_reconstruction/P94_LEGACY_GRAVITY_HIERARCHY_RETAINED_SUBBRANCH_PROBE.md:30:   gravity-hierarchy claim from `beta^N` scaling,",
+        "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_role_transfer_pre_audit_certificate_probe.py:81:        self.assertIn(\"alpha_EM^-1 and beta^N hierarchy claims are blocked\", proof[\"beta_step\"])"
+      ]
+    }
+  },
+  "status": "P3164_LEGACY_PLANCK_FRACTAL_UNIT_SOURCE_AUDIT_BOUNDED_NO_GO"
+}

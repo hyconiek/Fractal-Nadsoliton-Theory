@@ -3278,3 +3278,35 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - This proves scale underdetermination, not physical closure: current artifacts do not independently export `U_length`, `U_time`, a Lorentzian metric/light-cone embedding, observed-light source, `S_+`, or `Omega_scale`.
 - Do not promote boundary-value fits to physical dimensions, observed light, spacetime EOM, selector closure, bridge completion, role transfer, `L_total`, or ToE.
 - Next honest move: construct a two-axis unit theorem `U_LT` sourcing `U_length` and `U_time` or a Lorentzian metric/light-cone embedding before fitting `c`; otherwise preserve the P3162 `S_+` frontier or pivot to `Lambda_origin_source_localizer`.
+
+## Current legacy Planck/fractal unit-source audit guardrail (P3164/S2114, 2026-07-13)
+
+- P3164 audits the legacy solution to dimensionlessness: external Planck anchoring (`l_P,t_P,m_P` from `c,hbar,G`) plus `beta_tors=0.01` fractal-layer ratios.
+- The audit constructs `U_LT_legacy_receiver`, `PlanckUnitImportDAG`, and `FractalLayerIndexCalculator`; the finite matrix has `4` Planck/layer import rows, `5` layer rows, and `32` gate rows.
+- This is useful operational bookkeeping, not strict closure: current artifacts still do not export import-free `U_length`, `U_time`, `K_dim`, `Omega_scale`, `S_+`, Lorentz metric/light-cone embedding, bridge completion, role transfer, `L_total`, or ToE.
+- Do not transfer legacy Planck/fractal role claims onto the strict kernel without a bridge and role-transfer theorem.
+- Next honest move: either supply a genuinely new nonzero scale-charged `S_+` value coupled to `Omega_M/K_dim`, or run one narrow `Lambda_origin_source_localizer` audit; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.
+
+## Current Lambda_origin source-localizer audit guardrail (P3165/S2115, 2026-07-13)
+
+- P3165 constructs a finite `Lambda_origin_source_localizer` audit coupled to the `A_phi=2*pi/alpha_geo` phase-area section where applicable.
+- The audit tests `8` current receiver classes over the `Z12` origin torsor, with `64` gate rows and `12` translation fixed-point rows; `0` candidates export a nonpremise `Lambda_origin` localizer.
+- The key obstruction is equivariance: translation-trivial strict data cannot select a `Z12` origin because nonzero translations have no fixed slots.  Unique slots from endpoint labels or legacy Planck/fractal residues are imported representatives, not strict sources.
+- Do not replay `A_phi/alpha_pi`, chiral-bispectrum translation orbits, Fourier power, endpoint labels, or legacy Planck-layer residues as selector, unit, bridge, role-transfer, `L_total`, or ToE closure.
+- Next honest move: introduce one genuinely new translation-breaking strict origin datum with an explicit coupling theorem to `Phi_Info/A_phi`, or pivot to a nonzero scale-charged `S_+` source for `Omega_M/K_dim`; otherwise preserve the no-strict-unit/no-new-live-frontier certificate.
+
+## Current binary origin-datum exhaustive intake guardrail (P3166/S2116, 2026-07-13)
+
+- P3166 exhausts the finite binary `Z12` origin-datum class left as a natural post-P3165 candidate: all `4095` nonempty supports/profiles, including singleton defects and `A_phi` cell-support variants.
+- The audit finds `351` translation classes, `12` singleton profiles, many nonzero circular-resultant receivers, and `0` accepted import-free origin data.
+- Quotients select only translation orbits, nonzero resultants rotate covariantly with translations, stabilizers leave multiple compatible slots, and lexicographic/canonical representatives import an external order.
+- Do not replay binary supports, necklaces/bracelets, singleton defects, resultant phases, or canonical representatives as `Lambda_origin`, `Phi_Info`, selector, unit, bridge, role-transfer, `L_total`, or ToE closure.
+- Next honest move: supply a genuinely non-binary, non-quotient strict source law with explicit coupling to `Phi_Info/A_phi`, pivot to a nonzero scale-charged `S_+` source for `Omega_M/K_dim`, or preserve a no-new-live-frontier certificate.
+
+## Current S_plus monomial source exhaustion guardrail (P3167/S2117, 2026-07-14)
+
+- P3167 exhausts the finite monomial candidate family for `S_+`: `15624` nontrivial integer-exponent monomials over `6` positive dimensionless receivers (`alpha_geo`, `A_phi`, `exp(alpha_geo)`, `beta_tors`, strict `beta`, and the `Z12` Laplacian gap).
+- Positive nonzero receivers are abundant, but every monomial has `R_{>0}` weight `0`; `0` monomials have weight `1` and `0` export an accepted `S_+` source.
+- Formal weight-one carriers such as `Omega_M`, `U_readout`, and `sqrt(mu2)` have the correct representation shape but no nonzero strict source value, so using them as sources is circular/imported.
+- Do not replay dimensionless scalar monomials, normalized ratios, Planck/apparatus imports, selector choices, or formal `Omega_M` self-source variants as unit, Higgs, EH, bridge, role-transfer, `L_total`, or ToE closure.
+- Next honest move: supply a genuinely scale-charged strict source value not built from weight-zero invariants, or issue a post-P3161-P3167 no-strict-unit/no-new-live-frontier certificate.
