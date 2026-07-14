@@ -4359,3 +4359,19 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3163/S2113 boundary-value speed-of-light matching audit
 
 `P3163/S2113` constructs a boundary-value receiver audit for fitting model limiting values to the physical speed of light `c=299792458 m/s`.  It tests `10` boundary receivers, including `alpha_geo/(2*pi)`, `A_phi`, strict-kernel boundary samples, Z12 Laplacian values, a formal wave-speed receiver, and `exp(alpha_geo)`.  The theorem is that any nonzero dimensionless `v_hat` fits `c` after choosing `U_length/U_time=c/v_hat`; hence the `9` successful numerical fits are scale choices, not unit-source theorems.  No independent `U_length`, `U_time`, Lorentz metric/light-cone embedding, observed-light source, `S_+`, `Omega_scale`, `L_total`, or ToE closure is exported.
+
+## P3164/S2114 legacy Planck/fractal unit-source audit
+
+`P3164/S2114` audits how the legacy kernel lane handled dimensionlessness: it used Planck anchoring (`l_P,t_P,m_P` from `c,hbar,G`) plus the dimensionless `beta_tors=0.01` fractal-layer ladder.  The finite audit constructs `U_LT_legacy_receiver`, a `PlanckUnitImportDAG`, and a `FractalLayerIndexCalculator`; it records `4` Planck/layer import rows, `5` layer rows, and `32` gate rows.  The result is bounded no-go for strict units: legacy Planck/layer bookkeeping is an external-anchor receiver and ratio calculator, not an import-free `U_length/U_time`, `K_dim`, `Omega_scale`, Lorentz/light-cone, bridge-completion, role-transfer, `L_total`, or ToE source theorem.
+
+## P3165/S2115 Lambda_origin source-localizer audit
+
+`P3165/S2115` constructs the narrow `Lambda_origin_source_localizer` candidate requested after P3164.  It tests `8` current receiver classes against the `Z12` origin torsor, including `A_phi`, alpha/pi phase residues, chiral-bispectrum orbit data, Fourier power, endpoint labels, and legacy Planck/fractal-layer residues.  The finite theorem is the translation-fixed-point obstruction: a translation-trivial source cannot equivariantly select a `Z12` origin because nonzero translations have no fixed slots.  The matrix has `64` gate rows, `12` fixed-point rows, and `0` accepted nonpremise localizers.  No `Lambda_origin`, unit source, selector closure, bridge completion, role transfer, `L_total`, or ToE is exported.
+
+## P3166/S2116 binary origin-datum exhaustive intake
+
+`P3166/S2116` tests the most finite post-P3165 translation-breaking origin datum class: all `4095` nonempty binary `Z12` profiles as candidate supports/defects/cell markers for `Lambda_origin` coupled to `Phi_Info/A_phi`.  The audit finds `351` translation classes, `12` singleton defects, and many nonzero circular-resultant receivers, but `0` import-free strict origin data.  Quotients select only orbits, resultants rotate covariantly, stabilizers leave multiple slots, and canonical representatives import an external order.  No `Lambda_origin`, `Phi_Info` source, unit source, selector closure, bridge completion, role transfer, `L_total`, or ToE is exported.
+
+## P3167/S2117 S_plus monomial source exhaustion
+
+`P3167/S2117` pivots from the closed `Lambda_origin` binary-origin class back to the independent `S_+ / Omega_M / K_dim` unit-source frontier.  It exhausts `15624` nontrivial integer-exponent monomials over `6` positive dimensionless receivers (`alpha_geo`, `A_phi`, `exp(alpha_geo)`, `beta_tors`, strict `beta`, and the `Z12` Laplacian gap).  All monomials are positive receivers but have `R_{>0}` weight `0`; `0` have weight `1`.  Formal weight-one carriers (`Omega_M`, `U_readout`, `sqrt(mu2)`) remain circular/placeholders without nonzero strict source values.  No `S_+`, `Omega_scale`, `K_dim`, unit source, Higgs VEV, EH coupling, selector closure, bridge completion, role transfer, `L_total`, or ToE is exported.

@@ -3728,3 +3728,19 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3163/S2113 boundary c-fit remains receiver-only
 
 `P3163/S2113` shows that boundary-value matching to `c` is useful as a diagnostic receiver but underdetermined as a dimension source: the fit always chooses `U_length/U_time` unless those units are independently sourced.  It does not promote a Lorentzian metric, observed-light sector, action unit, `L_total`, or ToE datum.
+
+## P3164/S2114 legacy Planck units remain external receiver
+
+`P3164/S2114` checks the requested legacy Planck/fractal-layer route before any speed-of-light or unit promotion.  It confirms computable layer bookkeeping, but `l_P` and `t_P` import `c,hbar,G`; no strict Lagrangian/EOM unit source or Lorentzian light-cone embedding is exported.
+
+## P3165/S2115 Lambda_origin remains unsourced
+
+`P3165/S2115` supplies a finite source-localizer obstruction before any unit-bearing Lagrangian promotion: current `A_phi`/phase, chiral, Fourier, endpoint, and legacy Planck-layer receivers do not export a nonpremise origin localizer.  Therefore no strict coordinate origin, unit source, Lorentz embedding, or nonproxy action density is added.
+
+## P3166/S2116 binary origin profiles do not add action source
+
+`P3166/S2116` exhausts binary `Z12` support/profile candidates for an origin datum and finds only receiver/quotient data, not a strict source law.  Therefore no coordinate origin, measure, unit-bearing coupling, nonproxy action density, or EOM term is added.
+
+## P3167/S2117 S_plus monomials do not add unit-bearing action
+
+`P3167/S2117` proves that finite monomials of current dimensionless scalar receivers remain weight-zero under the positive scale torsor.  Since no nonzero weight-one strict source value is exported, no mass/action unit, unit-bearing measure, nonproxy action density, Higgs VEV, EH coupling, or EOM term is added.
