@@ -4375,3 +4375,15 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3167/S2117 S_plus monomial source exhaustion
 
 `P3167/S2117` pivots from the closed `Lambda_origin` binary-origin class back to the independent `S_+ / Omega_M / K_dim` unit-source frontier.  It exhausts `15624` nontrivial integer-exponent monomials over `6` positive dimensionless receivers (`alpha_geo`, `A_phi`, `exp(alpha_geo)`, `beta_tors`, strict `beta`, and the `Z12` Laplacian gap).  All monomials are positive receivers but have `R_{>0}` weight `0`; `0` have weight `1`.  Formal weight-one carriers (`Omega_M`, `U_readout`, `sqrt(mu2)`) remain circular/placeholders without nonzero strict source values.  No `S_+`, `Omega_scale`, `K_dim`, unit source, Higgs VEV, EH coupling, selector closure, bridge completion, role transfer, `L_total`, or ToE is exported.
+
+## P3168/S2118 Post-P3167 no-strict-unit state-map certificate
+
+`P3168/S2118` implements the post-`P3167` state-map recommendation.  It checks `8` replay-gated scale/origin classes against `8` strict-source obligations (`64` rows) and accepts `0` strict unit or origin sources.  No `S_+`, `Lambda_origin`, unit-bearing action/mass map, selector discharge, bridge completion, role transfer, `L_total`, or ToE closure is exported.  The only honest downstream architecture is explicit CA+SA conditioning unless a genuinely new hard object is supplied.
+
+## P3169/S2119 ternary origin-datum exhaustive audit
+
+`P3169/S2119` constructs the non-binary hard-object branch left by `P3168`: all nonzero ternary signed `Z12 -> {-1,0,+1}` profiles as candidate `Lambda_origin` data.  The exhaustive scan finds `531440` profiles, `44367` translation classes, `12768` affine classes, many translation-breaking/phase-resultant/unique-extremum receivers, but `0` accepted strict `Lambda_origin` sources because no strict nadsoliton provenance law or `Phi_Info/A_phi` coupling theorem selects an absolute representative without convention.  No selector discharge, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3170/S2120 S_plus source-obligation hitting-set theorem
+
+`P3170/S2120` converts the remaining `S_+` branch into a finite blocker hypergraph using the `P3162` candidate gate matrix.  Across `12` candidate routes, the singleton atom `{strict_nadsoliton_source_exported}` is a minimal universal hitting set: every route fails it.  The least-repair admissible route is `new_strict_scale_charged_datum_schema`, which still needs exactly `nonzero_value_exported` and `strict_nadsoliton_source_exported`.  No `S_+`, `Omega_M`, `K_dim`, unit-bearing action, selector closure, bridge completion, role transfer, `L_total`, or ToE closure is exported.
