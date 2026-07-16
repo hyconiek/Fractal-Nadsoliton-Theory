@@ -7,6 +7,7 @@ Before continuing work in `fundamental_action_reconstruction`, read:
 3. `fundamental_action_reconstruction/F2_STRICT_GATE_KERNEL_PROVENANCE_AND_FAR_INPUT_CLASSIFICATION_PACKET.md`
 4. `fundamental_action_reconstruction/F3_CURRENT_FAR_FRONTIER_KERNEL_ARTIFACT_SENSITIVITY_CLASSIFICATION_PACKET.md`
 5. `fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md`
+6. `SUMMARY_GROK.md`
 
 ## Kernel split / bridge-completion guardrail
 
