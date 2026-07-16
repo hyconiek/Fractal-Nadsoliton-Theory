@@ -3311,3 +3311,27 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Formal weight-one carriers such as `Omega_M`, `U_readout`, and `sqrt(mu2)` have the correct representation shape but no nonzero strict source value, so using them as sources is circular/imported.
 - Do not replay dimensionless scalar monomials, normalized ratios, Planck/apparatus imports, selector choices, or formal `Omega_M` self-source variants as unit, Higgs, EH, bridge, role-transfer, `L_total`, or ToE closure.
 - Next honest move: supply a genuinely scale-charged strict source value not built from weight-zero invariants, or issue a post-P3161-P3167 no-strict-unit/no-new-live-frontier certificate.
+
+## Current post-P3167 no-strict-unit state-map guardrail (P3168/S2118, 2026-07-16)
+
+- P3168 implements the post-P3167 state-map certificate recommended by `SUMMARY_GROK.md`: it checks `8` replay-gated scale/origin classes against `8` strict-source obligations (`64` rows) and accepts `0` strict unit or origin sources.
+- The frozen replay classes include positive-scale torsor invariants, formal `S_+`/`Omega_M` self-sources, c-boundary fits, legacy/Planck/fractal unit imports, `Lambda_origin` localizers, binary `Z12` origin profiles, dimensionless monomials, and unit-measure/selector fusion.
+- No nonzero scale-charged `S_+`, translation-breaking `Lambda_origin`, unit-bearing action/mass map, `QW-2191` discharge, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+- A CA+SA/two-package architecture is admissible only when explicitly marked non-strict/conditioned: `W0` strict informational nadsoliton; `CA` conversion units (`hbar_*`, `ell_*`, `tau_*` or equivalent); `SA` sector/origin/polarity axioms; `W3` effective physics conditioned on CA+SA.
+- The next proof-grade hard move must supply exactly one genuinely new object: either a nonzero scale-charged strict `S_+` value with `Omega_M/K_dim` coupling, or a translation-breaking strict `Lambda_origin` datum with `Phi_Info/A_phi` coupling.  Otherwise preserve the no-new-live-frontier certificate rather than replaying closed lanes.
+
+## Current ternary origin-datum exhaustive audit guardrail (P3169/S2119, 2026-07-16)
+
+- P3169 tests the non-binary hard-origin branch left by P3168: all `531440` nonzero ternary signed profiles `Z12 -> {-1,0,+1}` as candidate `Lambda_origin` data.
+- The scan finds `44367` translation classes and `12768` affine classes, with many translation-breaking, nonzero phase-resultant, and unique-extremum receivers, but `0` accepted strict `Lambda_origin` sources.
+- Translation/affine quotienting selects only orbits, and representative choices import conventions unless a strict nadsoliton provenance law plus `Phi_Info/A_phi` coupling theorem is exported.
+- Do not escalate binary profiles into ternary/k-ary profile inventories as origin, selector, unit, bridge, role-transfer, `L_total`, or ToE closure.
+- The next hard move should pivot to the other P3168 branch: one nonzero scale-charged strict `S_+` value with `Omega_M/K_dim` coupling.  Without such a formula, preserve the P3168-P3169 no-new-live-frontier certificate or draft CA+SA only as explicit non-strict conditioning.
+
+## Current S_plus source-obligation hitting-set guardrail (P3170/S2120, 2026-07-16)
+
+- P3170 builds the finite `S_+` source-obligation hypergraph from the P3162 gate matrix: `12` candidate routes and their failed strict-source obligations.
+- The singleton atom `{strict_nadsoliton_source_exported}` is a minimal universal blocker: every current `S_+` route fails it.
+- The least-repair admissible route is the typed `new_strict_scale_charged_datum_schema`, which still lacks exactly `nonzero_value_exported` and `strict_nadsoliton_source_exported`.
+- Do not continue dimensionless receiver scans, Planck/apparatus imports, selector replay, bridge role-transfer, formal `Omega_M` self-sourcing, or profile-origin detours as `S_+`, unit, `L_total`, or ToE closure.
+- The next proof-grade move must provide one formula-level source law `Source_S_plus(nadsoliton) -> s in V_chi`, prove `s > 0`, and prove coupling to `Omega_M/K_dim`; otherwise preserve the P3168-P3170 no-new-live-frontier certificate or write CA+SA only as explicit non-strict conditioning.

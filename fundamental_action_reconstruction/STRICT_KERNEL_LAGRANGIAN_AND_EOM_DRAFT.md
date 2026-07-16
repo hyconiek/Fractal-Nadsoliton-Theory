@@ -3744,3 +3744,15 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3167/S2117 S_plus monomials do not add unit-bearing action
 
 `P3167/S2117` proves that finite monomials of current dimensionless scalar receivers remain weight-zero under the positive scale torsor.  Since no nonzero weight-one strict source value is exported, no mass/action unit, unit-bearing measure, nonproxy action density, Higgs VEV, EH coupling, or EOM term is added.
+
+## P3168/S2118 CA+SA remains conditional after no-strict-unit certificate
+
+`P3168/S2118` separates the strict informational package `W0` from optional conversion and sector axioms.  `CA` may introduce unit-bearing action/length/time symbols such as `hbar_*`, `ell_*`, and `tau_*`; `SA` may introduce an origin/polarity branch such as `(r0, lambda0)` plus coupling.  Any effective physics built this way is conditioned/axiom-augmented and does not become strict `L_total` or ToE closure.
+
+## P3169/S2119 ternary origin receivers do not add Lagrangian source
+
+`P3169/S2119` proves that the new ternary signed origin-profile family is receiver-rich but source-empty on current artifacts.  Since no strict `Lambda_origin` law or `Phi_Info/A_phi` coupling theorem is exported, no origin-localized action density, unit-bearing measure, EOM term, selector closure, or `L_total` term is added.
+
+## P3170/S2120 S_plus blocker theorem leaves action units conditional
+
+`P3170/S2120` shows that the remaining unit branch is blocked by a precise missing atom: a nonzero strict nadsoliton source value in the weight-one `S_+` representation coupled to `Omega_M/K_dim`.  Until that source law is supplied, all action units, mass units, nonproxy action density, EOM terms, and `L_total` uses remain conditional or imported, not strict exports.
