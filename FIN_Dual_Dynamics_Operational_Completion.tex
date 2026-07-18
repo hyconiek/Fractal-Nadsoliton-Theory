@@ -59,6 +59,7 @@
 \newcommand{\notestablished}{\status{finred}{NOT ESTABLISHED}}
 
 \begin{document}
+\hypersetup{pageanchor=false}
 
 \begin{titlepage}
 \centering
@@ -87,6 +88,7 @@
 \end{minipage}
 \vfill
 \end{titlepage}
+\hypersetup{pageanchor=true}
 
 \begin{abstract}
 Let $W$ be the zero-diagonal cyclic-distance matrix obtained by sampling the strict FIN profile on $\Z_{12}$, let $s=1.660307278766099$ be its common row sum to fifteen decimal places, and set $A=sI-W$. All six off-diagonal distance weights used at this size are positive. We prove that $A$ is the connected weighted graph Laplacian and that
@@ -594,9 +596,9 @@ Run
 python3 fin_dual_dynamics_release.py
 \end{verbatim}
 with Python 3, NumPy and Matplotlib. This regenerates
-\texttt{FIN\_Dual\_Dynamics\_reference\_results.json},
-\texttt{FIN\_One\_Spectrum\_Two\_Dynamics.png}, and
-\texttt{FIN\_Double\_Slit\_Operational\_Simulation.png}.
+\path{FIN_Dual_Dynamics_reference_results.json},
+\path{FIN_One_Spectrum_Two_Dynamics.png}, and
+\path{FIN_Double_Slit_Operational_Simulation.png}.
 The JSON records all displayed kernel weights, spectral values, numerical residuals and double-slit diagnostics. Floating-point residuals near $10^{-15}$ are not physical effects.
 
 \begin{thebibliography}{99}
