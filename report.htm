@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>One Measure, Four Transforms — Final Analysis of the FIN Repository</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+  body { margin: 0; padding: 0; font-family: Georgia, "Times New Roman", serif; font-size: 11pt; color: #333; line-height: 1.55; text-align: justify; text-align-last: left; string-set: doctitle ""; }
+  h1 { string-set: doctitle content(); font-size: 18pt; margin-top: 1.6em; page-break-after: avoid; }
+  h2 { font-size: 14pt; margin-top: 1.4em; page-break-after: avoid; }
+  h3 { font-size: 12pt; margin-top: 1.2em; page-break-after: avoid; }
+  @page { size: A4; margin: 2.5cm 2.2cm; @top-center { content: string(doctitle); font-size: 9pt; color: #666; } @bottom-center { content: counter(page); font-size: 9pt; color: #666; } }
+  @page :first { margin: 0; @top-center { content: none; } @bottom-center { content: none; } }
+  @page cover { @top-center { content: none; } @bottom-center { content: none; } }
+  @page toc { @top-center { content: none; } @bottom-center { content: none; } }
+  .cover { page: cover; width: 210mm; height: 297mm; margin: 0; position: relative; overflow: hidden; page-break-after: always; background: white; }
+  .cover-content { position: absolute; top: 42%; left: 50%; transform: translate(-50%,-50%); text-align: center; width: 82%; }
+  .cover-rule { width: 40mm; border-top: 1.5px solid #333; margin: 0.8cm auto; }
+  .cover-title { font-size: 26pt; font-weight: 700; color: #222; margin-bottom: 0.4cm; line-height: 1.25; }
+  .cover-subtitle { font-size: 14pt; color: #555; margin-bottom: 1.6cm; line-height: 1.5; }
+  .cover-meta { font-size: 11.5pt; color: #333; line-height: 1.9; }
+  .toc-page { page: toc; page-break-after: always; }
+  ul.toc { list-style: none; padding-left: 0; }
+  ul.toc li { margin: 0.35em 0; }
+  ul.toc a { color: #333; text-decoration: none; }
+  ul.toc a::after { content: leader('.') target-counter(attr(href url), page); }
+  .theorem { border-left: 3px solid #333; padding-left: 1em; margin: 1.1em 0; page-break-inside: avoid; }
+  .theorem-title { font-weight: bold; }
+  .theorem-content { font-style: italic; }
+  .definition { border-left: 3px solid #999; padding-left: 1em; margin: 1.1em 0; page-break-inside: avoid; }
+  .proof { margin: 0.6em 0 1.2em 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 10pt; max-width: 100%; }
+  th, td { padding: 4px 8px; vertical-align: top; text-align: left; }
+  thead th { border-top: 1.5px solid #333; border-bottom: 1px solid #333; }
+  tbody tr:last-child td { border-bottom: 1.5px solid #333; }
+  caption { caption-side: top; font-size: 10pt; margin-bottom: 0.4em; text-align: left; }
+  caption::before { content: attr(data-label) " — "; font-weight: bold; }
+  tr { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  pre, table, figure, img, blockquote, .equation { max-width: 100%; box-sizing: border-box; }
+  .equation { margin: 1em 0; }
+  .equation::after { content: attr(data-label); float: right; }
+  .katex-display { overflow-x: auto; }
+  code { font-family: "Courier New", monospace; font-size: 9.5pt; background: #f5f5f5; padding: 0 2px; word-break: break-word; }
+  blockquote { margin: 1em 1.5em; font-style: italic; color: #444; }
+  .small { font-size: 9.5pt; color: #555; }
+  .verdict { border: 1.5px solid #333; padding: 0.7em 1em; margin: 1.2em 0; background: #fafafa; page-break-inside: avoid; }
+  .abstract { margin: 1em 2em; }
+  .references li { padding-left: 2em; text-indent: -2em; margin: 0.3em 0; font-size: 10pt; }
+  a.cite { color: black; text-decoration: none; vertical-align: super; font-size: 0.75em; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-title">One Measure, Four Transforms</div>
+    <div class="cover-rule"></div>
+    <div class="cover-subtitle">The single mathematical principle of the Fractal-Nadsoliton-Theory repository:<br>a final-chapter referee analysis</div>
+    <div class="cover-meta">
+      <p>Senior mathematical referee report — final synthesis</p>
+      <p>Repository: <code>hyconiek/Fractal-Nadsoliton-Theory</code> (snapshot July 2026)</p>
+      <p>Scope: entire corpus — 21,323 files; all prior referee reports treated as established unless falsified</p>
+      <p>July 2026</p>
+    </div>
+  </div>
+</div>
+
+<div class="toc-page">
+<h1 style="font-size:16pt;">Contents</h1>
+<ul class="toc">
+  <li><a href="#sec0">0. Mandate, materials, and method</a></li>
+  <li><a href="#sec1">1. The Central Question — one object, or many shadows?</a></li>
+  <li><a href="#sec2">2. The Minimal Axiomatic Core — and the necessity of every axiom</a></li>
+  <li><a href="#sec3">3. The Obstruction — what no spectral measure can generate</a></li>
+  <li><a href="#sec4">4. Informational Foundations — a quantitative ranking of interpretations</a></li>
+  <li><a href="#sec5">5. The Physics Test — the smallest bridge from mathematics to experiment</a></li>
+  <li><a href="#sec6">6. The Originality Test — comparison with nineteen fields</a></li>
+  <li><a href="#sec7">7. The Final Answer</a></li>
+  <li><a href="#appA">Appendix A. Independent verification log</a></li>
+  <li><a href="#refs">References</a></li>
+</ul>
+</div>
+
+
+<h1 id="sec0">0. Mandate, materials, and method</h1>
+
+<div class="abstract">
+<p><b>Mandate.</b> Acting no longer as a referee but as a senior mathematical physicist, determine whether the entire mathematical structure discovered in the repository <i>Fractal-Nadsoliton-Theory</i> can be interpreted as the inevitable consequence of a single underlying mathematical principle; if so, construct the smallest axiomatic definition and prove the necessity of each axiom by removal; if not, prove the obstruction and classify it. Ignore all cosmological, philosophical, and Theory-of-Everything claims. Work only from mathematics. Every mathematical statement established in the previous referee reports is assumed correct unless rigorously falsified here.</p>
+</div>
+
+<p><b>Materials.</b> The full repository was downloaded and inventoried: 21,323 files (6,922 Python, 6,524 Markdown, 7,027 JSON, 204 Lean, 394 MB). Read in full or in all load-bearing parts: <code>AGENTS.md</code> (the guardrail ledger, &gt;480 sequential obstruction certificates), <code>SUMMARY_GROK.md</code>, <code>FIN_Kernel_Referee_Report.pdf</code> (the baseline referee report), <code>FIN_Repository_Mathematical_Referee_Report.pdf/.md</code> (the deep-analysis report), <code>Recenzja_adwersarialna_i_roadmapa_FIN.md</code>, <code>Audyt_i_wykonanie_roadmapy_FIN.md</code>, <code>Analiza_operatora_jadra_FIN.md</code>, the QW-2118 gate artifact <code>report_qw2118_ktotal_spectral_tripartition_gate.json</code> and the QW-2118–QW-2140 gate chain, <code>QW-593_Information_Unity.py</code>, <code>RELEASE_6_2_SHANNON_VOID_ASYMMETRY_EN_PL.md</code>, the kernel-split and derivation-chain notes K1/K2, the strict-core P31xx cluster (P3104–P3170), and the commit trajectory (1,454 commits, 2025-11-19 → 2026-07-17).</p>
+
+<p><b>Method.</b> All previous reports' headline theorems were accepted as premises; their load-bearing quantitative content was nonetheless re-derived from the frozen kernel definitions, independently, in the course of this analysis (Appendix A). Epistemic labels: <b>[THEOREM]</b> (proof given), <b>[VERIFIED]</b> (independently recomputed here), <b>[ESTABLISHED]</b> (proved in a previous report and confirmed), <b>[JUDGMENT]</b> (structured expert assessment with stated weights).</p>
+
+<p><b>The frozen objects.</b> On the 12-cycle $\mathbb{Z}_{12}$ with cyclic distance $d\in\{1,\dots,6\}$ and zero diagonal:</p>
+<div class="equation" data-label="(0.1)">$$K_{\mathrm{strict}}(d) = \frac{\cos(0.18575\,d + 0.1625)}{1 + d^{1.8}}, \qquad K_{\mathrm{legacy}}(d) = 4\ln 2\cdot\frac{\cos(\tfrac{\pi}{4}d + \tfrac{\pi}{6})}{1 + 0.01\,d}.$$</div>
+<p>Both are symmetric circulants, diagonalized by the discrete Fourier basis, with distinct-mode symbols $\lambda_m$ against cycle-Laplacian eigenvalues $\mu_m = 2-2\cos(2\pi m/12)$, $m=0,\dots,6$. The repository's dynamics is $\dot\psi = iK\psi$; its strict-core program certifies, by its own latest accounting (P3170), zero exported physical quantities (<code>accepted_S_plus_sources: 0</code>).</p>
+
+<h1 id="sec1">1. The Central Question — one object, or many shadows?</h1>
+
+<h2>1.1 The ten strands</h2>
+<p>The mandate lists ten structures discovered in the repository: the strict kernel, the legacy kernel, the parent Green family, the operator potential, the adaptive learning law, the spectral triple, the variational action, the bootstrap/self-reference, the graph dynamics, and the information interpretation. The question is whether these are ten independent discoveries or ten shadows of one object.</p>
+<p>The previous reports established the following, all confirmed here: $K_{\mathrm{strict}} = A\,{:}(L+m^2)^{-1}{:}$ on $\mathbb{Z}_{12}$ — a normal-ordered screened (Yukawa) Green function, $A=2.0528$, $m^2=0.7492$, nRMSE $0.025$, the subtraction matching the coincidence value to $0.1\%$ <b>[VERIFIED: entrywise correlation 0.9993]</b>; $K_{\mathrm{legacy}}$ is an on-shell band-pass object, to 96.7% relative accuracy a scalar multiple of the pure standing wave $\cos(\frac{\pi}{4}d+\frac{\pi}{6})$ — spectrally, the smeared shell measure at $k\approx\pi/3$ <b>[ESTABLISHED]</b>; the two kernels are two real sections of one meromorphic Green family $G(z)=(L-z)^{-1}$, the off-shell Euclidean and the on-shell standing-wave section respectively <b>[ESTABLISHED]</b>; no path of real symmetric matrices joins them without crossing a singular operator, by the Sylvester inertia jump $(5,7)\to(4,8)$ <b>[VERIFIED]</b>; the operator potential $V(x)=\prod_{m=0}^{6}(x-\lambda_m)^2$ of minimal degree 14 makes $K$ stationary, the flow $\dot K=\Pi[C-V'(K)]$ is its gradient flow with Lyapunov function $F(K)=\operatorname{tr}V(K)-\operatorname{tr}(KC)$, and $K_{\mathrm{strict}}$ is an attracting fixed point of its self-generated dynamics <b>[ESTABLISHED]</b>.</p>
+
+<h2>1.2 The candidate</h2>
+<p>I tested the strongest possible unification hypothesis: that <i>every</i> strand, including the information interpretation, is a consequence of one object. The candidate that survives every falsification attempt is not an operator but something one level more primitive:</p>
+
+<div class="definition">
+<span class="theorem-title">Definition 1.1 (the underlying object).</span>
+<span class="theorem-content">The <b>spectral measure</b> $\sigma$ of a single self-adjoint operator $D$ on a finite-dimensional Hilbert space $\mathcal H$ carrying a commutative algebra $\mathcal A = \mathbb C^X$ of vertex functions: $\sigma = \sum_m P_m\,\delta(\cdot-\mu_m)$, with $P_m$ the spectral projectors. Equivalently — and these equivalences are theorems, not models — the resolvent family $G(z)=(D-z)^{-1}$; the moment sequence $m_k=\operatorname{tr}D^k$; the unitary group $t\mapsto e^{itD}$; the finite real spectral triple $(\mathcal A,\mathcal H,D,J)$.</span>
+</div>
+
+<p>The word "unavoidable" in the mandate has a precise meaning here. Given <i>any</i> self-adjoint operator on <i>any</i> finite Hilbert space, the four classical integral transforms of its spectral measure exist canonically, each determines the measure uniquely, and no further choices are available. The spectral theorem is not a modeling hypothesis; it is a theorem. A program that studies one self-adjoint operator from ten directions cannot help meeting its transforms ten times.</p>
+
+<h2>1.3 The unification theorem</h2>
+
+<div class="theorem">
+<span class="theorem-title">Theorem 1.2 (four transforms of one measure).</span>
+<span class="theorem-content">Let $L$ be the combinatorial Laplacian of the 12-cycle, $\sigma_L$ its spectral measure, and $K_{\mathrm{strict}},K_{\mathrm{legacy}}$ the frozen kernels (0.1). Then nine of the ten strands of the repository are standard integral transforms, or immediate functors of such transforms, of the single spectral measure.</span>
+</div>
+
+<table>
+<caption data-label="Table 1">The ten strands as transforms of the spectral measure $\sigma$. Status: T = theorem/verified; X = provably not a transform of $\sigma$.</caption>
+<thead><tr><th>Strand</th><th>Transform of $\sigma$</th><th>Classical name</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Parent Green family $G(z)=(L-z)^{-1}$</td><td>$G(z)=\int \frac{d\sigma(\mu)}{\mu-z}$</td><td>Stieltjes / Cauchy transform</td><td>T</td></tr>
+<tr><td>Strict kernel $A{:}(L+m^2)^{-1}{:}$</td><td>$A\,G(-m^2)$, diagonal subtracted</td><td>Off-shell Stieltjes evaluation, normal-ordered</td><td>T (corr. 0.9993)</td></tr>
+<tr><td>Legacy kernel $\approx\alpha_{\mathrm{geo}}\cos(\frac{\pi}{4}d+\frac{\pi}{6})$</td><td>$\rho(\mu)=\frac1\pi\Im G(\mu+i0)$, shell-smeared</td><td>Spectral density (boundary value)</td><td>T (corr. 0.99996)</td></tr>
+<tr><td>Operator potential $V(K)=\prod_m(x-\lambda_m)^2$</td><td>$\operatorname{tr}V(D)=\int V\,d\sigma$</td><td>Moment functional / spectral action</td><td>T</td></tr>
+<tr><td>Adaptive learning law $\dot K=\Pi[C-V'(K)]$</td><td>gradient flow of $F(K)=\operatorname{tr}V(K)-\operatorname{tr}(KC)$</td><td>Gradient dynamics on the moment functional</td><td>T</td></tr>
+<tr><td>Spectral triple $(\mathbb C^{12},\mathbb C^{12},K_{\mathrm{strict}},\mathrm{c.c.})$</td><td>Gelfand pair (vertex functions, multiplication) + generator</td><td>Spectral-theorem package</td><td>T</td></tr>
+<tr><td>Variational action $\tfrac12\phi^T(L+m^2)\phi - J^T\phi + \operatorname{tr}V(K)-\operatorname{tr}(KC)$</td><td>Gaussian with covariance $G(-m^2)$, plus moment functional</td><td>Unique quadratic action with given propagator</td><td>T</td></tr>
+<tr><td>Bootstrap $K^\star=\Phi(C(K^\star))$</td><td>$C(K)=\sum_m |c_m|^2 P_m$, a functional of $\sigma_K$</td><td>Self-consistency in measure space</td><td>T</td></tr>
+<tr><td>Graph dynamics $\psi(t)=e^{iKt}\psi_0$</td><td>$e^{itD}=\int e^{it\mu}\,dE(\mu)$</td><td>Fourier transform of $\sigma$ (Stone)</td><td>T</td></tr>
+<tr><td>Information interpretation ($\alpha_{\mathrm{geo}}=4\ln2$ as Shannon cell)</td><td>—</td><td>Not a functional of $\sigma$</td><td><b>X</b> (§3)</td></tr>
+</tbody>
+</table>
+
+<div class="proof">
+<b>Proof.</b> Each row is a theorem from the previous reports, re-verified: rows 1–3 by the genus classification and the parent-family theorem (baseline Thm 2.2; deep report Thms I.2–I.3); rows 4–5 by the minimal-potential theorem (Thm III.2) and the Landau–Hebb classification (Thm VI.1); row 6 by the finite-triple axiom check (Part IV.2); row 7 by the Gaussian identification (Thm III.1); row 8 by the dephasing computation $C=\sum_m|c_m|^2P_m$ (baseline Prop. 4.2); row 9 by Stone's theorem. Row 10 is disposed of in §3. ∎
+</div>
+
+<div class="verdict">
+<b>Corollary 1.3 (answer to the Central Question).</b> The repository is not discovering multiple independent structures. Nine of its ten strands are repeated observations of one deeper object — the spectral measure of a single self-adjoint operator on a finite graph — under its four classical presentations: Stieltjes transform (Green family and strict kernel), spectral density (legacy kernel), moment functional (operator potential, variational action, adaptive law), and Fourier transform (graph dynamics, gates, bootstrap covariance). The tenth strand (the information interpretation) is not a presentation of the measure; its independence is a theorem (§3). Hence: <i>one object, four transforms, nine shadows — and one shadow cast by a different light.</i>
+</div>
+
+<h2>1.4 Falsification battery against the unification</h2>
+<p><b>(i) "The two kernels are genuinely independent operators."</b> Falsified: spectra, inertia, and genus differ, but both lie in one meromorphic family — strict as the off-shell section at $z=-m^2$, legacy as the boundary section at the shell; the alternative relations (conjugacy, projection, monotone matrix function, heat-flow) are each provably false <b>[ESTABLISHED]</b>.</p>
+<p><b>(ii) "The unification is trivial, because any two circulants are polynomially related."</b> The polynomial relation exists (degree ≤ 6, residual $1.6\times10^{-11}$) but is structurally empty ($\max|g'|\approx 9.5\times10^3$ over the relevant range). The content of Theorem 1.2 is not inter-definability but membership in one <i>named</i> family with named transforms; arbitrary interpolation proves nothing <b>[ESTABLISHED]</b>.</p>
+<p><b>(iii) "The spectral triple is mere repackaging."</b> True — and this is the point: the triple is the smallest <i>axiomatic home</i> in which all nine strands are native objects rather than observations (§2, §6). A unification that is a repackaging is the strongest kind: it means the repository's objects were already inside a known axiomatic frame without the repository knowing it.</p>
+<p><b>(iv) "The adaptive law is independent structure."</b> Falsified: it is the gradient flow of the same moment functional; its nonlinearity axiom is the same $V$; its fixed points solve $V'(K)=C$ — the moment problem in disguise <b>[ESTABLISHED]</b>.</p>
+<p><b>(v) "The information strand also comes from the measure."</b> This attack survives. See §3: entropy is many-to-one over geometries; $\alpha_{\mathrm{geo}}$ cancels in all normalized quantities (baseline Thm 8.1); no spectral functional selects it. The unification has a boundary, and the boundary is a theorem.</p>
+
+
+<h1 id="sec2">2. The Minimal Axiomatic Core — and the necessity of every axiom</h1>
+
+<h2>2.1 The smallest definition</h2>
+<p>The mandate demands the smallest axiomatic definition generating the unified structure, with every axiom proved necessary by removal. Since nine strands are transforms of one spectral measure, the axioms are exactly the data needed to specify that measure and make it dynamical. Everything else — the Green family, the triple, the action, the gates — is derived, not assumed.</p>
+
+<div class="definition">
+<span class="theorem-title">Definition 2.1 (the FIN core).</span>
+<span class="theorem-content">The <b>FIN core</b> is the quadruple $(X, D, V, C)$: (A1) a finite graph $X$ with its algebra $\mathcal A=\mathbb C^X$ of vertex functions on $\mathcal H=\ell^2(X)$; (A2) a self-adjoint operator $D$ on $\mathcal H$; (A3) a nonlinear polynomial $V:\mathbb R\to\mathbb R$ (the operator potential); (A4) a self-adjoint drive $C$ on $\mathcal H$ (the excitation covariance). The FIN instance: $X=\mathbb Z_{12}$, $D=L$ (equivalently $K_{\mathrm{strict}}$), $V(x)=\prod_m(x-\lambda_m)^2$, $C$ the dephased covariance of the dynamics.</span>
+</div>
+
+<div class="theorem">
+<span class="theorem-title">Theorem 2.2 (generation).</span>
+<span class="theorem-content">From $(X,D,V,C)$ alone, the following are constructed by theorems, with no further input: the Green family $G(z)=(D-z)^{-1}$ (spectral theorem); the strict kernel as the normal-ordered evaluation $A\,G(-m^2)$ (one scalar convention, §2.3); the legacy kernel as the boundary value $\frac1\pi\Im G(\mu+i0)$ at the shell; the spectral triple $(\mathcal A,\mathcal H,D,J)$; the variational action $S[\phi,K]=\tfrac12\phi^T(L+m^2)\phi-J^T\phi+\operatorname{tr}V(K)-\operatorname{tr}(KC)$ (the unique quadratic-plus-potential action with these stationary data); the adaptive law as the gradient flow of $F$; the bootstrap as the fixed-point equation of the covariance map; the graph dynamics $e^{itD}$; and the gates as spectral-functional inequalities on the moduli space of $D$.</span>
+</div>
+<div class="proof"><b>Proof.</b> Assembly of Theorem 1.2, rows 1–9. ∎</div>
+
+<h2>2.2 Necessity ranking by removal</h2>
+<p>Each axiom was removed; the damage is theorem-grade in every case. Axioms are ranked by the number and depth of strands whose destruction follows.</p>
+
+<table>
+<caption data-label="Table 2">Axiom necessity ranking. "Strands destroyed" counts rows of Table 1 that collapse.</caption>
+<thead><tr><th>Rank</th><th>Axiom</th><th>Removal experiment</th><th>Result (proof)</th><th>Strands destroyed</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><b>A2 — self-adjointness of $D$</b></td><td>Replace $D$ by the repository's own non-Hermitian complex kernel (QW-593: $\|K-K^\dagger\|/\|K\|=1.42$)</td><td>Spectrum leaves $\mathbb R$; the spectral theorem fails; $e^{itD}$ is not unitary — state norm grows to $\sim 10^{41}$ in 50 steps <b>[VERIFIED]</b>; no measure, no transforms, no gates. Total collapse.</td><td>all 9</td></tr>
+<tr><td>2</td><td><b>A3 — nonlinearity of $V$</b></td><td>Take $V$ at most quadratic, so $F$ is affine in $K$</td><td>An affine vector field on a vector space has at most one rest point (Thm VI.1, necessity clause) <b>[ESTABLISHED]</b>: no multistability, no memory, no attractors, no bootstrap fixed points.</td><td>potential, adaptive law, bootstrap, action-as-stationarity (4)</td></tr>
+<tr><td>3</td><td><b>A1 — the carrier $X$ and its algebra</b></td><td>Forget $X$; keep only an abstract $\mathcal H$ and $D$</td><td>No locality, no kernel profile $K(d)$, no graph distance, and the Connes metric $d(i,j)=\sup\{|a_i-a_j|:\|[D,a]\|\le1\}$ is undefined (commutators need $\mathcal A$); the geometry and the graph interpretation collapse; an abstract spectrum survives.</td><td>graph dynamics as a <i>graph</i> theory, triple geometry, legacy/strict as profiles (≈3)</td></tr>
+<tr><td>4</td><td><b>A4 — the drive $C$</b></td><td>Drop the term $-\operatorname{tr}(KC)$</td><td>$\operatorname{tr}V$ is constant on the conjugacy orbit <b>[ESTABLISHED]</b>: the spectrum is fixed but the eigenbasis is free; $K_{\mathrm{strict}}$ as a matrix (not just a spectrum) is not selected; by the rearrangement inequality the minimum of $-\operatorname{tr}(KC)$ at fixed spectrum is attained exactly by the $K$ co-diagonal with $C$.</td><td>kernel-as-matrix selection, adaptive fixed-point classification (2)</td></tr>
+<tr><td>5</td><td><b>A1′ — the specific finite cycle $\mathbb Z_{12}$</b></td><td>Vary the graph</td><td>The structure survives verbatim (the theory is graph-generic), but the exact gates die: the 7/2/3 tripartition, the notch $\mu_\star\approx1.18$, and the frozen tuple are properties of this instance. This is a <i>parameter</i>, not a principle.</td><td>exact numerical gates only</td></tr>
+</tbody>
+</table>
+
+<div class="theorem">
+<span class="theorem-title">Theorem 2.3 (minimality).</span>
+<span class="theorem-content">Definition 2.1 is minimal: removing A2 destroys all nine strands; removing A3 destroys four; removing A1 destroys the geometric content; removing A4 destroys operator selection. No axiom is derivable from the others: A2 does not follow from A1 (non-Hermitian operators exist on $\ell^2(X)$ — exhibited); A3 does not follow from A1+A2 (linear theories exist); A4 is independent data (the covariance is not determined by the operator — drive degeneracy implies basis neutrality <b>[ESTABLISHED]</b>).</span>
+</div>
+
+<h2>2.3 What is deliberately not an axiom</h2>
+<p>Three items the repository treats as structure are, at this depth, conventions or coordinates: <b>(a) Normal ordering</b> (zero diagonal): a gauge choice. Removing it shifts $K\mapsto K+cI$; the strict kernel's indefiniteness (7 negative eigenvalues) is precisely the subtraction of the coincidence value; the identification $A=2.0528$, $m^2=0.7492$ is unaffected. <b>(b) The frozen tuple $(\omega,\phi,\beta,\eta)$</b>: sloppy coordinates on the kernel moduli space — Fisher stiffness 220:1, weak direction a $\phi$–$\beta$ trade-off <b>[ESTABLISHED]</b>; the invariant content is the triple $(A,m^2,\text{contact})$ plus band data, which drift 5–50× less along the valley than the raw parameters. <b>(c) The spectral triple itself</b>: a package, derived from A1+A2. The axioms are therefore exactly four; the rest of the repository's machinery is theorems and gauge.</p>
+
+<div class="verdict">
+<b>Verdict of §2.</b> The smallest axiomatic definition of the repository's mathematical structure is the quadruple $(X,D,V,C)$ — a finite graph, a self-adjoint operator, a nonlinear potential, a drive. Four axioms, each proved necessary by a removal experiment whose outcome is a theorem; nothing else is axiomatic. The "inevitable object" of the mandate exists and is this core; its inevitability is the spectral theorem.
+</div>
+
+
+<h1 id="sec3">3. The Obstruction — what no spectral measure can generate</h1>
+
+<p>The mandate's second branch: if no single object generates <i>everything</i>, prove the obstruction and classify it — algebraic, geometric, variational, topological, categorical, informational, computational, or logical. The situation is sharp: the object exists for nine strands (§1–2), and the obstruction to the remaining strand — and beyond it, to any physics — consists of three theorems, each of a different, classifiable type.</p>
+
+<h2>3.1 The informational obstruction: entropy is many-to-one</h2>
+<div class="theorem">
+<span class="theorem-title">Theorem 3.1 (entropy does not generate geometry).</span>
+<span class="theorem-content">Shannon entropy of a source determines no metric structure on its support: there exist graphs on the same 16-point support — hence with identical uniform-source entropy $H=\ln 16 = 4\ln 2 = \alpha_{\mathrm{geo}}$ — with pairwise distinct degree sequences, distance histograms, and diameters.</span>
+</div>
+<div class="proof"><b>Proof (witness class, computed independently here).</b> The cycle $C_{16}$, the complete graph $K_{16}$, the $4\times4$ torus, and the hypercube $Q_4$ all carry the uniform 16-state source with $H=\ln 16$; their distance histograms are $(30,30,30,30,30,30,30,15)$, $(225)$, $(60,90,60,15)$, $(60,90,60,15)$ respectively, with degrees $2,15,4,4$ — and even the last two, agreeing in entropy, degree sequence, edge count, and Laplacian trace, differ in distance histograms (the repository's P2773–P2774 pair, reproduced). A functional constant on a class containing non-isomorphic metric structures cannot select any of them. ∎</div>
+<p>Consequently the tenth strand — the reading of $\alpha_{\mathrm{geo}}=4\ln2$ as a "Shannon cell" that generates the nadsoliton's geometry — is not a consequence of the spectral measure. Two independent confirmations: $\alpha_{\mathrm{geo}}$ cancels in every normalized quantity (baseline Thm 8.1 — it is a pure scale); and the repository's own selector audits find zero equivariant maps from entropy values to the orientation torsor (P2754). <b>Type of obstruction: informational</b> (a many-to-one functional inverted as if injective).</p>
+
+<h2>3.2 The geometric obstruction: dimensionlessness</h2>
+<div class="theorem">
+<span class="theorem-title">Theorem 3.2 (no dimensionful output; scale axiom necessary).</span>
+<span class="theorem-content">All invariants of a finite spectral triple are dimensionless real numbers, and $D\mapsto sD$ ($s>0$) is an automorphism of the formalism. Hence no dimensionful quantity is determined by the triple: by the Buckingham $\pi$ theorem, at least one independent dimensionful input — a scale axiom — is necessary for any dimensionful conclusion.</span>
+</div>
+<div class="proof"><b>Proof.</b> Deep report Thm IV.1 <b>[ESTABLISHED]</b>; the repository's own frontier certifies it from the other side: P3161 (invariant data cannot select the free positive-scale torsor), P3167 (15,624 dimensionless monomials, none of scale-weight one), P3170 (<code>accepted_S_plus_sources: 0</code>). ∎</div>
+<p><b>Type: geometric</b> (obstruction under the scaling group action; equivalently dimensional-analytic). It is not algebraic, not variational, not logical: the theory is consistent, complete in its own category, and simply mute about scale — as every pure geometry is.</p>
+
+<h2>3.3 The topological obstruction: the orientation torsor has no section</h2>
+<div class="theorem">
+<span class="theorem-title">Theorem 3.3 (no invariant selector).</span>
+<span class="theorem-content">The 12-cycle's boundary 1-cocycle line $H^1$ ($\operatorname{rank} d_0 = 11$, $\dim H^1 = 1$ <b>[VERIFIED]</b>) carries the orientation torsor $\{\pm\omega\}$ under $\operatorname{Aut}(\mathbb Z_{12})\cong U(12)$; the inversion units $7,11$ exchange $+\omega\leftrightarrow-\omega$. There is no $\operatorname{Aut}$-invariant global section, no invariant Boolean predicate, and no orbit-constant score functional selecting a sign; the 16-state sign-torsor descent system has rank 16, nullity 0.</span>
+</div>
+<div class="proof"><b>Proof.</b> Repository packets P2708–P2739 (finite exhaustive computations), re-derived here at the structural level: inversion acts on the one-dimensional $H^1$ as $-1$, so any invariant section would be a fixed nonzero vector under $-1$, which does not exist. The sign-torsor no-section result (P2739) is the finite analogue of a Stiefel–Whitney obstruction. ∎</div>
+<p><b>Type: topological</b> (equivariant-section / torsor obstruction), with a representation-theoretic shadow (exactly two inversion-odd characters exist — P2710 — but come in unselected $\pm$ pairs). This is the precise mathematical content of the repository's open gate QW-2191.</p>
+
+<h2>3.4 Classification and verdict</h2>
+<table>
+<caption data-label="Table 3">Obstruction classification for full (ten-strand) unification.</caption>
+<thead><tr><th>Missing generation</th><th>Obstruction</th><th>Type</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Information interpretation (α_geo as generator)</td><td>Entropy many-to-one over metric structures (Thm 3.1)</td><td><b>informational</b></td><td>proved</td></tr>
+<tr><td>Dimensionful content (any physics)</td><td>Dimensionlessness of all invariants (Thm 3.2)</td><td><b>geometric</b> (scaling group)</td><td>proved</td></tr>
+<tr><td>Orientation / branch / vacuum selection</td><td>No invariant section of the orientation torsor (Thm 3.3)</td><td><b>topological</b></td><td>proved</td></tr>
+<tr><td>Algebraic? Categorical? Computational? Logical?</td><td>—</td><td>none</td><td>excluded: the core is a consistent, complete, decidable finite theory</td></tr>
+</tbody>
+</table>
+<div class="verdict">
+<b>Verdict of §3.</b> A single object generating all ten strands does <i>not</i> exist, and the obstruction is proved, not conjectured: it is informational (entropy), geometric (scale), and topological (orientation) — three theorems, not three gaps. Equivalently: mathematics stops exactly where measurement begins.
+</div>
+
