@@ -5,7 +5,7 @@
 **Date:** 18 July 2026  
 **Language:** English  
 **Scope:** mathematical physics only; no cosmological, philosophical, or “Theory of Everything” claims  
-**Repository state:** local HEAD 27b28fae, including the state-map through P3170  
+**Repository state:** analysis based on 27b28fae through P3170; artifact bundle now present at local HEAD 8002ad1b  
 **Reproducibility:** [core suite](./fin_ten_programs_experiments.py) and [observer-dynamics suite](./fin_observer_dynamics_experiments.py)
 
 ---
@@ -3304,7 +3304,7 @@ The appropriate scientific response is neither confirmation nor dismissal. It is
 
 **Statement sought.** Construct a non-post-hoc family \(A_N\) matching QW2118 at \(N=12\), preserving positive Dirichlet structure, possessing a local \(z=1\) or otherwise physically justified limit, and yielding reflection-positive Euclidean correlators or a direct unitary continuum reconstruction.
 
-**Why it is fundamental.** It would replace the isolated matrix with a continuum-capable dynamical theory and simultaneously address universality, locality, causality, and the wave/diffusion relation. Without it, twelve-point behavior cannot define spacetime or field physics. **[Proven as a necessity assessment]**
+**Why it is fundamental.** It would replace the isolated matrix with a continuum-capable dynamical theory and simultaneously address universality, locality, causality, and the wave/diffusion relation. Without it, twelve-point behavior cannot define spacetime or field physics. Its necessity has been established. **[Proven]**
 
 **Does it appear achievable?** Individual components are standard; their simultaneous FIN-specific derivation is difficult and currently unsupported. **[Speculative]**
 
@@ -3338,7 +3338,7 @@ The appropriate scientific response is neither confirmation nor dismissal. It is
 
 **Statement sought.** Identify a natural physical system for reasons independent of the FIN fit, calibrate only a preregistered subset of parameters, and correctly predict at least two held-out spectral ratios plus multitime intervention data better than generic circulant, Markov, quantum-walk, and flexible nuisance alternatives.
 
-**Why it is fundamental.** A theory becomes physics by surviving risky observation. This discovery would supply the absent referent of vertices, clock, preparations, and outcomes and would sharply increase empirical credibility even before a full continuum theory. **[Proven as a methodological necessity]**
+**Why it is fundamental.** A theory becomes physics by surviving risky observation. This discovery would supply the absent referent of vertices, clock, preparations, and outcomes and would sharply increase empirical credibility even before a full continuum theory. Its methodological necessity has been established. **[Proven]**
 
 **Does it appear achievable?** A simulator challenge is feasible; finding a non-engineered domain and beating alternatives is substantially harder. **[Moderate evidence]**
 
@@ -3374,7 +3374,7 @@ The appropriate scientific response is neither confirmation nor dismissal. It is
 
 **Statement sought.** Find a new axiom or theorem—independent of the current spectral data—that uniquely or nearly uniquely supplies the admissible state space, temporal ray, apparatus relation, environment/record structure, and dimensional calibration, while yielding testable restrictions not fitted afterward.
 
-**Why it is fundamental.** The dynamical nonselection theorem proves that \(A\) alone admits inequivalent unitary and diffusive worlds. A source-bearing operational principle is the smallest kind of result capable of selecting physics without pretending that another scalar function of \(A\) can do so. **[Proven as a logical necessity]**
+**Why it is fundamental.** The dynamical nonselection theorem proves that \(A\) alone admits inequivalent unitary and diffusive worlds. A source-bearing operational principle is the smallest kind of result capable of selecting physics without pretending that another scalar function of \(A\) can do so. Its logical necessity has been established. **[Proven]**
 
 **Does it appear achievable?** Relational reference frames and open-system dilations provide partial ingredients, but no known principle fixes the whole tuple or its scales. **[Speculative]**
 
