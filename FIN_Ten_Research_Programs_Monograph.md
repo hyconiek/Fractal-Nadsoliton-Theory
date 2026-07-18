@@ -5,7 +5,7 @@
 **Date:** 18 July 2026  
 **Language:** English  
 **Scope:** mathematical physics only; no cosmological, philosophical, or “Theory of Everything” claims  
-**Repository state:** analysis based on 27b28fae through P3170; artifact bundle now present at local HEAD 8002ad1b  
+**Repository state:** analysis based on 27b28fae through P3170; artifact bundle now present at local HEAD 8002ad1b
 **Reproducibility:** [core suite](./fin_ten_programs_experiments.py) and [observer-dynamics suite](./fin_observer_dynamics_experiments.py)
 
 ---
