@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "title": "FIN Legacy-Strict Bridge Next Proof Audit",
+    "date_utc": "2026-07-19T19:00:58.050296+00:00",
+    "git_head_at_generation": "b7d112f091aff320d26b722810dcfc1ccdbea8fd",
+    "python": "3.14.4",
+    "numpy": "2.5.1"
+  },
+  "prior_artifact_anchors": {
+    "P2760": "seven open gaps: ontology-to-kernel measure, amplitude normalization, phase/frequency/topological source, damping/compression bridge, moments-to-couplings provenance, Lagrangian reverse closure, stale flags",
+    "P2691": "alpha_geo=4 ln 2 and scalar-shape normalization real; no role-safe amplitude absorption source",
+    "P2692": "positive beta orbit/gauge representability real; no target-independent positive beta/Z_beta source theorem",
+    "P3167_P3168": "no strict unit source S+ on current monomial/state map artifacts",
+    "scratch_bridge_assembly": "existing finite assembly quotient maps legacy to strict on audited nodes but explicitly does not export source, selector, role-transfer, or ToE closure"
+  },
+  "sign_obstruction": {
+    "d": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "strict_signs": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "kstar_signs": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "product_signs": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "kstar_vs_strict_mismatch_distances": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ],
+    "product_vs_strict_mismatch_distances": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ],
+    "positive_scalar_envelope_no_go": "For every A>0 and every positive radial envelope E(d)>0, sign(A*E(d)*cos(pi*d/4+pi/6)) = sign(cos(pi*d/4+pi/6)); therefore positive amplitude/envelope completion cannot map the K* sign row to the strict sign row."
+  },
+  "damping_witness_beta0_05": {
+    "beta_legacy": 0.05,
+    "formula": "D_beta(d)=(1+beta_legacy*d)/(1+d^1.8)",
+    "values_d1_12": [
+      0.525,
+      0.24541507452468853,
+      0.13982317015750215,
+      0.09142346890482828,
+      0.06537830747166902,
+      0.049698414203651245,
+      0.03947029720128229,
+      0.03238922359889534,
+      0.0272577319929511,
+      0.0234024933627444,
+      0.02042044661355823,
+      0.018057780675041258
+    ],
+    "positive_all_d1_12": true,
+    "monotone_decreasing_d1_12": true,
+    "d1": 0.525,
+    "d12": 0.018057780675041258,
+    "tail_exponent": "~ beta_legacy*d / d^1.8 = beta_legacy*d^-0.8 for beta_legacy>0",
+    "meaning": "exact envelope witness only after amplitude and phase/frequency maps are supplied; not a source theorem for eta=1.8"
+  },
+  "assembly_quotient_beta0_05_A_2_9": {
+    "A": 2.9,
+    "beta_legacy": 0.05,
+    "amplitude_factor": 0.3448275862068966,
+    "phase_factor_values_d1_12": [
+      3.631770393549314,
+      -1.7215560801898648,
+      -0.7784972006620755,
+      -0.7127877397869758,
+      -1.7826227665025696,
+      0.5791759253685558,
+      0.11164027737839033,
+      -0.08963420989106242,
+      -1.0061725060394833,
+      0.8684966922366023,
+      0.6140639386428728,
+      0.8448086006000125
+    ],
+    "damping_factor_values_d1_12": [
+      0.525,
+      0.24541507452468853,
+      0.13982317015750215,
+      0.09142346890482828,
+      0.06537830747166902,
+      0.049698414203651245,
+      0.03947029720128229,
+      0.03238922359889534,
+      0.0272577319929511,
+      0.0234024933627444,
+      0.02042044661355823,
+      0.018057780675041258
+    ],
+    "q_values_d1_12": [
+      0.6574756746942725,
+      -0.1456882116269746,
+      -0.03753515398459051,
+      -0.022470871642812904,
+      -0.04018788252910423,
+      0.009925560357154996,
+      0.0015194741130202273,
+      -0.001001097402162737,
+      -0.009457234658034554,
+      0.007008616577804329,
+      0.0043239516815062355,
+      0.0052604718696632954
+    ],
+    "max_abs_identity_error_d1_12": 5.551115123125783e-17,
+    "phase_factor_sign_changes": 4,
+    "phase_factor_min": -1.7826227665025696,
+    "phase_factor_max": 3.631770393549314,
+    "status": "finite algebraic assembly witness; not a strict source/selector/role-transfer theorem"
+  },
+  "amplitude_audit": {
+    "A_interpretation": "A is a scalar coupling/measure-density normalization multiplying the whole legacy profile; it is not a shape parameter.",
+    "A_drops_from_normalized_shape": true,
+    "A_needed_for": [
+      "absolute unnormalized coupling strength",
+      "legacy role formulas that use alpha_geo explicitly",
+      "kernel moments before quotient/row normalization",
+      "any future action-density normalization theorem"
+    ],
+    "A_not_needed_for": [
+      "sign pattern",
+      "normalized profile shape",
+      "correlation/cosine similarity",
+      "row-stochastic Markov operator after full row normalization"
+    ],
+    "A_equals_1_verdict": "If one works only in quotient-normalized shape space, A=1 is a valid gauge. If one claims alpha_geo roles or absolute physical couplings, A cannot be deleted; it becomes an open source/normalization obligation.",
+    "fits_beta_0_05": {
+      "A_1": {
+        "scalar": -0.020875764356317616,
+        "relative_l2": 0.9972419603269408,
+        "cosine": -0.07421908489923938,
+        "nonnegative_constrained": false
+      },
+      "A_1_positive": {
+        "scalar": 0.0,
+        "relative_l2": 1.0,
+        "cosine": -0.07421908489923938,
+        "nonnegative_constrained": true
+      },
+      "A_2_9": {
+        "scalar": -0.007198539433212974,
+        "relative_l2": 0.9972419603269406,
+        "cosine": -0.07421908489923941,
+        "nonnegative_constrained": false
+      },
+      "A_2_9_positive": {
+        "scalar": 0.0,
+        "relative_l2": 1.0,
+        "cosine": -0.07421908489923941,
+        "nonnegative_constrained": true
+      },
+      "A_4ln2": {
+        "scalar": -0.007529340427906502,
+        "relative_l2": 0.9972419603269408,
+        "cosine": -0.07421908489923937,
+        "nonnegative_constrained": false
+      },
+      "A_4ln2_positive": {
+        "scalar": 0.0,
+        "relative_l2": 1.0,
+        "cosine": -0.07421908489923937,
+        "nonnegative_constrained": true
+      }
+    },
+    "alpha_geo_identity": {
+      "value": 2.772588722239781,
+      "exp_value": 15.999999999999998,
+      "bits": 4.0,
+      "status": "Shannon 16-state/four-bit identity; not physical unit or selector source"
+    }
+  },
+  "grid_fit_kstar_to_strict": {
+    "grid_size": 500,
+    "best": {
+      "beta": 0.07419246861924686,
+      "scalar": -0.02330147716655533,
+      "relative_l2": 0.9972012300732804,
+      "cosine": -0.07476434136897428,
+      "nonnegative_constrained": false
+    },
+    "fixed_beta_fits": {
+      "0.01": {
+        "scalar": -0.015811488085608828,
+        "relative_l2": 0.9975652217369658,
+        "cosine": -0.06973971881846051,
+        "nonnegative_constrained": false,
+        "beta": 0.01,
+        "positive_fit": {
+          "scalar": 0.0,
+          "relative_l2": 1.0,
+          "cosine": -0.06973971881846051,
+          "nonnegative_constrained": true
+        }
+      },
+      "0.05": {
+        "scalar": -0.020875764356317616,
+        "relative_l2": 0.9972419603269408,
+        "cosine": -0.07421908489923938,
+        "nonnegative_constrained": false,
+        "beta": 0.05,
+        "positive_fit": {
+          "scalar": 0.0,
+          "relative_l2": 1.0,
+          "cosine": -0.07421908489923938,
+          "nonnegative_constrained": true
+        }
+      },
+      "0.1": {
+        "scalar": -0.02545328067080707,
+        "relative_l2": 0.9972374844643123,
+        "cosine": -0.07427920017939303,
+        "nonnegative_constrained": false,
+        "beta": 0.1,
+        "positive_fit": {
+          "scalar": 0.0,
+          "relative_l2": 1.0,
+          "cosine": -0.07427920017939303,
+          "nonnegative_constrained": true
+        }
+      },
+      "1.0": {
+        "scalar": -0.0005223660925117758,
+        "relative_l2": 0.9999999101654716,
+        "cosine": -0.0004238738591382534,
+        "nonnegative_constrained": false,
+        "beta": 1.0,
+        "positive_fit": {
+          "scalar": 0.0,
+          "relative_l2": 1.0,
+          "cosine": -0.0004238738591382534,
+          "nonnegative_constrained": true
+        }
+      }
+    }
+  },
+  "rejected_vs_kstar": {
+    "product_best_scalar_to_strict": {
+      "scalar": 52.69978520566329,
+      "relative_l2": 0.4916615983971016,
+      "cosine": 0.8707863530520024,
+      "nonnegative_constrained": false
+    },
+    "product_positive_scalar_to_strict": {
+      "scalar": 52.69978520566329,
+      "relative_l2": 0.4916615983971016,
+      "cosine": 0.8707863530520024,
+      "nonnegative_constrained": true
+    },
+    "kstar_beta0_05_best_scalar_to_strict": {
+      "scalar": -0.020875764356317616,
+      "relative_l2": 0.9972419603269408,
+      "cosine": -0.07421908489923938,
+      "nonnegative_constrained": false
+    },
+    "kstar_beta0_05_positive_scalar_to_strict": {
+      "scalar": 0.0,
+      "relative_l2": 1.0,
+      "cosine": -0.07421908489923938,
+      "nonnegative_constrained": true
+    },
+    "product_norm": 0.008574028798608843,
+    "kstar_beta0_05_norm": 1.8448258619874636,
+    "strict_norm": 0.5188982055703775,
+    "product_abs_lt_1e_minus_3_for_d_ge_2": true,
+    "bridge_easier_verdict": "K* is easier than K_rej for bridge work because it preserves a non-dead long-range hyperbolic profile and separates damping from phase; it is not close to strict without a nontrivial phase/frequency map."
+  },
+  "theoretical_object_matrix": [
+    {
+      "object": "O_A scalar amplitude/measure normalization",
+      "constructed_here": "quotient factor A^{-1}; proof that A drops from normalized shape",
+      "status": "witness/gauge decomposition only",
+      "missing_for_closure": "source theorem fixing A as alpha_geo or proving amplitude absorption is role-safe"
+    },
+    {
+      "object": "O_D damping/compression map",
+      "constructed_here": "D_beta(d)=(1+beta_l*d)/(1+d^1.8), positive and decreasing on d=1..12",
+      "status": "finite/exact envelope witness after phase separation",
+      "missing_for_closure": "dynamical source of eta=1.8 and target-independent beta/Z_beta theorem"
+    },
+    {
+      "object": "O_P phase/frequency transport",
+      "constructed_here": "P(d)=cos(theta_s)/cos(theta_l) finite quotient on d=1..12",
+      "status": "algebraic quotient with sign changes, not source law",
+      "missing_for_closure": "phase/frequency/topological source localizer and selector-safe transport theorem"
+    },
+    {
+      "object": "O_S selector/orientation source",
+      "constructed_here": "positive scalar/envelope sign no-go matrix",
+      "status": "obstruction: QW-2191 remains open",
+      "missing_for_closure": "non-premise orientation/polarity source plus coupling-polarity theorem"
+    },
+    {
+      "object": "O_U unit/action-density bridge",
+      "constructed_here": "none; imported no-go status from guardrails/P2760-P2764/P3167-P3168",
+      "status": "no-go on current artifacts",
+      "missing_for_closure": "canonical reference-cell/action-density theorem with physical units"
+    }
+  ],
+  "next_honest_step": {
+    "recommendation": "Do not run another generic bridge replay. Attack exactly O_P: construct or refute a phase/frequency transport source localizer for P(d)=cos(theta_s)/cos(theta_l), while conditioning O_A and O_D as quotient witnesses only.",
+    "why": "The new K* already repairs the historical envelope, so the remaining hard obstruction is not scalar A and not positive damping alone; it is the sign-changing phase/frequency/source layer plus the still-open unit/selector obligations.",
+    "success_criterion": "A machine-checkable theorem or finite exhaustive certificate that P(d) comes from a strict exported source object and is selector-safe; otherwise emit a bounded no-go for this exact P object."
+  }
+}
