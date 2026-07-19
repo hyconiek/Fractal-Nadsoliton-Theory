@@ -1,0 +1,593 @@
+{
+  "metadata": {
+    "title": "FIN Programs 41-50 on reconstructed K_legacy^*",
+    "date": "2026-07-19",
+    "seed": 20260719,
+    "numpy": "1.26.4",
+    "guardrails": "AGENTS.md / SUMMARY_GROK leaf-cuts preserved"
+  },
+  "methodology_review": {
+    "program_42a_methodology": "accepted_with_corrections",
+    "rejected_candidate": "exp(-2.9d)*(1+0.2d)/(1+d)*cos(...)",
+    "rejection_reasons": [
+      "K_res/K_tors role swap vs DIAGRAMS \u00a72/\u00a74",
+      "double damping exp \u00d7 hyperbolic (contradicts \u00a78 transform)",
+      "path asymptotics wrong: (1+0.2d)/(1+d)\u2192const, not ~1/d",
+      "destroys inverse hierarchy (exp kills d\u22653)"
+    ],
+    "accepted_class": "K*(d)=A cos(\u03c0d/4+\u03c0/6)/(1+\u03b2 d)",
+    "historical_freeze": {
+      "A": 2.9,
+      "beta": 0.05
+    },
+    "Z12_freeze": {
+      "A": 1.0,
+      "beta": 1.0
+    },
+    "cheap_AI_dual_dynamics_note": "The cheap-AI analysis correctly notes that any real self-adjoint A supports U_t and P_t, but incorrectly treats the double-damped product as historically faithful and as solving stability without checking signed weights / Markov cone. Dual dynamics works after |W| repair; it does not validate the rejected product algebra.",
+    "uniqueness": false,
+    "algebraic_correctness": true,
+    "used_strict_in_reconstruction": false
+  },
+  "program_41_loewner_bridge": {
+    "star_hist_signed": {
+      "C12_cyclic": {
+        "min_eig_bridge": -3.552713815786789e-15,
+        "max_eig_bridge": 21.439157590910572,
+        "is_psd": true,
+        "frobenius_bridge": 45.54373710025999,
+        "legacy_row_d1_6": [
+          0.714833553140296,
+          -1.3181818181818175,
+          -2.4358129532506942,
+          -2.092894725812394,
+          -0.6004601846378479,
+          1.1153846153846154
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      },
+      "I12_interval": {
+        "min_eig_bridge": -3.3562912647883,
+        "max_eig_bridge": 18.551872370227173,
+        "is_psd": false,
+        "frobenius_bridge": 30.032800426200474,
+        "legacy_row_d1_6": [
+          0.714833553140296,
+          -1.3181818181818175,
+          -2.4358129532506942,
+          -2.092894725812394,
+          -0.6004601846378479,
+          1.1153846153846154
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      }
+    },
+    "star_hist_abs": {
+      "C12_cyclic": {
+        "min_eig_bridge": -19.714725668335955,
+        "max_eig_bridge": 7.354471313555742e-31,
+        "is_psd": false,
+        "frobenius_bridge": 50.64897717837939,
+        "legacy_row_d1_6": [
+          0.714833553140296,
+          1.3181818181818175,
+          2.4358129532506942,
+          2.092894725812394,
+          0.6004601846378479,
+          1.1153846153846154
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      },
+      "I12_interval": {
+        "min_eig_bridge": -19.322406863515937,
+        "max_eig_bridge": 2.0707377803850345e-29,
+        "is_psd": false,
+        "frobenius_bridge": 52.03117265917314,
+        "legacy_row_d1_6": [
+          0.714833553140296,
+          1.3181818181818175,
+          2.4358129532506942,
+          2.092894725812394,
+          0.6004601846378479,
+          1.1153846153846154
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      }
+    },
+    "star_Z12_abs": {
+      "C12_cyclic": {
+        "min_eig_bridge": -0.7536436255072791,
+        "max_eig_bridge": 0.6860720945838433,
+        "is_psd": false,
+        "frobenius_bridge": 1.9629083476512073,
+        "legacy_row_d1_6": [
+          0.12940952255126048,
+          0.1666666666666666,
+          0.24148145657226705,
+          0.17320508075688776,
+          0.043136507517086774,
+          0.07142857142857144
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      },
+      "I12_interval": {
+        "min_eig_bridge": -0.875749714279252,
+        "max_eig_bridge": 0.5939351522970021,
+        "is_psd": false,
+        "frobenius_bridge": 1.9640877822124054,
+        "legacy_row_d1_6": [
+          0.12940952255126048,
+          0.1666666666666666,
+          0.24148145657226705,
+          0.17320508075688776,
+          0.043136507517086774,
+          0.07142857142857144
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      }
+    },
+    "class_abs": {
+      "C12_cyclic": {
+        "min_eig_bridge": -21.220997950554796,
+        "max_eig_bridge": 9.705777848090236e-16,
+        "is_psd": false,
+        "frobenius_bridge": 55.029152626950825,
+        "legacy_row_d1_6": [
+          0.7104938272793256,
+          1.3591121187449902,
+          2.6001117014458375,
+          2.3087810266402764,
+          0.6834273957639219,
+          1.307824868981029
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      },
+      "I12_interval": {
+        "min_eig_bridge": -21.740797647241507,
+        "max_eig_bridge": 1.8028160369619423e-15,
+        "is_psd": false,
+        "frobenius_bridge": 58.64363609784466,
+        "legacy_row_d1_6": [
+          0.7104938272793256,
+          1.3591121187449902,
+          2.6001117014458375,
+          2.3087810266402764,
+          0.6834273957639219,
+          1.307824868981029
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      }
+    },
+    "rejected_abs": {
+      "C12_cyclic": {
+        "min_eig_bridge": 9.696155553809427e-16,
+        "max_eig_bridge": 2.3077458743842074,
+        "is_psd": true,
+        "frobenius_bridge": 6.212789573591675,
+        "legacy_row_d1_6": [
+          0.00854463436407912,
+          0.0007064294405876899,
+          6.436381485050579e-05,
+          2.857703339846677e-06,
+          4.3511593475169686e-08,
+          4.360845094949761e-09
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      },
+      "I12_interval": {
+        "min_eig_bridge": -2.7334385844766094e-16,
+        "max_eig_bridge": 2.26900057878965,
+        "is_psd": true,
+        "frobenius_bridge": 5.488425760338681,
+        "legacy_row_d1_6": [
+          0.00854463436407912,
+          0.0007064294405876899,
+          6.436381485050579e-05,
+          2.857703339846677e-06,
+          4.3511593475169686e-08,
+          4.360845094949761e-09
+        ],
+        "strict_row_d1_6": [
+          0.4699856726450201,
+          0.1920435516901028,
+          0.09142861427792495,
+          0.0470291687456504,
+          0.02413122336363006,
+          0.011070817321442113
+        ]
+      }
+    },
+    "theorem_scope": "A_s - A_\u2113 \u227d 0 is support- and normalization-dependent; not a universal passive-dissipation bridge."
+  },
+  "program_42_phase_map": {
+    "legacy_phase_at_d1_6": [
+      1.308996938995747,
+      2.0943951023931953,
+      2.8797932657906435,
+      3.665191429188092,
+      4.4505895925855405,
+      5.235987755982989
+    ],
+    "strict_phase_at_d1_6": [
+      0.34825,
+      0.534,
+      0.71975,
+      0.9055,
+      1.09125,
+      1.2770000000000001
+    ],
+    "affine_a": 0.23650424543455653,
+    "affine_b": 0.03866666666666622,
+    "affine_phase_residual_l2": 8.1773032027145e-16,
+    "sign_matches_after_affine": 6,
+    "envelope_relative_residual_after_affine_phase": 0.4502768325393575,
+    "verdict": "A 2-parameter affine phase map is not exact; residual phase and envelope still needed. No sparse equivariant map from K* alone exports the strict (\u03c9,\u03c6) pair without target insertion.",
+    "exports_strict_phase_source": false
+  },
+  "program_43_hazard_heldout": {
+    "fitted_c": 0.461356783919598,
+    "fitted_eta": 1.9000000000000001,
+    "train_relative_l2_d1_4": 0.13956336349983897,
+    "holdout_relative_l2_d5_6": 0.9988656436697538,
+    "larger_N_relative_l2": {
+      "16": {
+        "relative_l2": 0.1486228866546564,
+        "max_abs_err": 0.0436414630951172
+      },
+      "24": {
+        "relative_l2": 0.15103613795138107,
+        "max_abs_err": 0.0436414630951172
+      },
+      "48": {
+        "relative_l2": 0.15499228083748354,
+        "max_abs_err": 0.0436414630951172
+      }
+    },
+    "retention_r_d1_6": [
+      0.6574756746942724,
+      0.1456882116269746,
+      0.0375351539845905,
+      0.022470871642812897,
+      0.04018788252910422,
+      0.009925560357154996
+    ],
+    "verdict": "Hazard reparameterization can fit C12 envelopes but does not export a stable multi-size law; larger-N relative errors remain large.",
+    "exports_microscopic_loss_law": false
+  },
+  "program_44_cp_divisibility": {
+    "markov_chapman_kolmogorov_residual": 1.7826341206873999e-16,
+    "markov_relative_info_monotone": true,
+    "markov_backflow_steps": 0,
+    "unitary_born_backflow_steps": 91,
+    "info_markov_t0": 2.484906649787974,
+    "info_markov_t5": 0.0,
+    "info_unitary_t5": 0.2658723905366589,
+    "verdict": "Abs-repaired K* Markov semigroup is CP-divisible with monotone relative information; unitary Born populations show non-monotone information (oscillatory). No unique physical temporal category."
+  },
+  "program_45_environment_recovery": {
+    "time": 1.0,
+    "system_relative_info_initial": 2.4849066497880004,
+    "system_relative_info_final": 0.1349102863751641,
+    "apparent_system_info_loss": 2.3499963634128362,
+    "joint_mutual_information_pure_dilation": 4.6999927268256725,
+    "environment_holds_at_least_lost_info": true,
+    "classical_record_recovery_fidelity": 1.0,
+    "verdict": "Apparent Markov information loss on K* is compatible with transfer to an environment record; recovery is perfect for the classical dilation. This does not source a physical bath from the kernel alone."
+  },
+  "program_46_sign_reference": {
+    "A_inversion_even_residual": 0.0,
+    "polarity_rows": [
+      {
+        "polarity": 1.0,
+        "detector0": 0.04913808571449228,
+        "visibility": 0.6746435049539304
+      },
+      {
+        "polarity": -1.0,
+        "detector0": -3.469446951953614e-18,
+        "visibility": 1.0
+      }
+    ],
+    "detector_difference_plus_minus": 0.04913808571449228,
+    "exports_nonpremise_selector": false,
+    "verdict": "An external apparatus polarity \u03bb=\u00b11 makes the double-slit detector sign-sensitive, but A from K* remains inversion-even. No non-premise strict selector is exported (QW-2191 remains open)."
+  },
+  "program_47_influence_functional": {
+    "ohmic_proxy_gamma0": 0.3407557172736271,
+    "ohmic_proxy_gamma1": 0.7240925803408916,
+    "log_retention_relative_residual": 0.17708641220032095,
+    "exports_bath_from_kernel_alone": false,
+    "verdict": "A 2-parameter Ohmic proxy can partially match log-retention but is post-hoc and does not derive a unique bath spectral density from K*."
+  },
+  "program_48_feedback_ledger": {
+    "feedback_eigenvalues": [
+      {
+        "real": -0.8,
+        "imag": 1.7
+      },
+      {
+        "real": -0.8,
+        "imag": -1.7
+      }
+    ],
+    "real_parts": [
+      -0.8,
+      -0.8
+    ],
+    "imag_parts": [
+      1.7,
+      -1.7
+    ],
+    "normalized_integrability_defect": 0.9048187022009939,
+    "circulatory_work_proxy": 1.8469994248098283,
+    "Kstar_row_sum_s": 1.5792270395569084,
+    "stable": true,
+    "verdict": "Stable non-gradient feedback is possible as an added dynamical law; it is not variationally forced by K* and does not yield unit-bearing L_total."
+  },
+  "program_49_causal_challenge": {
+    "spectral_gap": 1.507764779714358,
+    "rows": [
+      {
+        "t": 0.2,
+        "tv_markov_vs_static_no_intervention": 0.05821909954960686,
+        "tv_markov_vs_static_with_intervention": 0.03480734697023048
+      },
+      {
+        "t": 0.5,
+        "tv_markov_vs_static_no_intervention": 0.08530923929308253,
+        "tv_markov_vs_static_with_intervention": 0.06656012813748699
+      },
+      {
+        "t": 1.0,
+        "tv_markov_vs_static_no_intervention": 0.07051269256956443,
+        "tv_markov_vs_static_with_intervention": 0.08530923929308278
+      },
+      {
+        "t": 2.0,
+        "tv_markov_vs_static_no_intervention": 0.024669344796606867,
+        "tv_markov_vs_static_with_intervention": 0.07051269256956458
+      }
+    ],
+    "mean_intervention_margin": 0.004619757690376036,
+    "verdict": "Interventions can enlarge the TV gap between the K* Markov process and a static spectral-gap mimic; final-time fits alone are weaker. Causal negative coupling is not identified from K* without interventions."
+  },
+  "program_50_multisize_challenge": {
+    "preregistered_models": [
+      "star_hist_abs",
+      "star_Z12_abs",
+      "class_abs",
+      "rejected_abs",
+      "strict"
+    ],
+    "scores": {
+      "12": {
+        "star_hist_abs": {
+          "relative_l2_raw": 6.859496379192592,
+          "cosine": 0.4748474439257332
+        },
+        "star_Z12_abs": {
+          "relative_l2_raw": 0.7729412866496564,
+          "cosine": 0.6398919451760199
+        },
+        "class_abs": {
+          "relative_l2_raw": 7.481577017337127,
+          "cosine": 0.4544418758175811
+        },
+        "rejected_abs": {
+          "relative_l2_raw": 0.9844980417511888,
+          "cosine": 0.9361098518365119
+        },
+        "strict": {
+          "relative_l2_raw": 0.007901845759919668,
+          "cosine": 0.9999731417219208
+        },
+        "winner_by_cosine": "strict"
+      },
+      "16": {
+        "star_hist_abs": {
+          "relative_l2_raw": 8.637261289337676,
+          "cosine": 0.390613156841798
+        },
+        "star_Z12_abs": {
+          "relative_l2_raw": 0.8228313977520714,
+          "cosine": 0.5969883226210291
+        },
+        "class_abs": {
+          "relative_l2_raw": 9.85616307386244,
+          "cosine": 0.35818641706753
+        },
+        "rejected_abs": {
+          "relative_l2_raw": 0.9845649984661501,
+          "cosine": 0.9348301016093953
+        },
+        "strict": {
+          "relative_l2_raw": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "winner_by_cosine": "strict"
+      },
+      "24": {
+        "star_hist_abs": {
+          "relative_l2_raw": 10.018373243461426,
+          "cosine": 0.3400359436633336
+        },
+        "star_Z12_abs": {
+          "relative_l2_raw": 0.8531099443424677,
+          "cosine": 0.5735409909562477
+        },
+        "class_abs": {
+          "relative_l2_raw": 11.974001862376062,
+          "cosine": 0.2977660295835837
+        },
+        "rejected_abs": {
+          "relative_l2_raw": 0.9845649984661501,
+          "cosine": 0.9348301016093953
+        },
+        "strict": {
+          "relative_l2_raw": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "winner_by_cosine": "strict"
+      }
+    },
+    "winner_consistency": [
+      "strict",
+      "strict",
+      "strict"
+    ],
+    "strict_always_wins_if_present": true,
+    "verdict": "With strict included as a competing model it wins the multi-size cosine challenge; among legacy* variants, star_hist_abs is closest on C12-scale free scores but no legacy* form transfers to a unique strict continuum law. No ToE/selector/unit closure."
+  },
+  "dual_dynamics_and_leafcuts": {
+    "star_hist_abs": {
+      "row_sum_s": 15.439751085430716,
+      "spectral_gap": 14.17911084531706,
+      "min_eval": 0.0,
+      "unitary_escape_over_dt": 0.0027089148424419562,
+      "markov_escape_over_dt": 15.426485101904808,
+      "short_time_unitary_order_proxy": 1.641801161812846,
+      "short_time_markov_order_proxy": 0.7029332539790166,
+      "inversion_even_residual": 0.0,
+      "weights_d1_6": [
+        0.714833553140296,
+        1.3181818181818175,
+        2.4358129532506942,
+        2.092894725812394,
+        0.6004601846378479,
+        1.1153846153846154
+      ]
+    },
+    "star_Z12_abs": {
+      "row_sum_s": 1.5792270395569084,
+      "spectral_gap": 1.507764779714358,
+      "min_eval": 0.0,
+      "unitary_escape_over_dt": 2.7449933437395657e-05,
+      "markov_escape_over_dt": 1.5790886249300584,
+      "short_time_unitary_order_proxy": 2.140364676080402,
+      "short_time_markov_order_proxy": 0.9503983737300395,
+      "inversion_even_residual": 0.0,
+      "weights_d1_6": [
+        0.12940952255126048,
+        0.1666666666666666,
+        0.24148145657226705,
+        0.17320508075688776,
+        0.043136507517086774,
+        0.07142857142857144
+      ]
+    },
+    "rejected_abs": {
+      "row_sum_s": 0.01863666202974637,
+      "spectral_gap": 0.003133429166950215,
+      "min_eval": 0.0,
+      "unitary_escape_over_dt": 1.4694911953938572e-08,
+      "markov_escape_over_dt": 0.01863663730894416,
+      "short_time_unitary_order_proxy": 2.958208252925797,
+      "short_time_markov_order_proxy": 1.4324081116478034,
+      "inversion_even_residual": 0.0,
+      "weights_d1_6": [
+        0.00854463436407912,
+        0.0007064294405876899,
+        6.436381485050579e-05,
+        2.857703339846677e-06,
+        4.3511593475169686e-08,
+        4.360845094949761e-09
+      ]
+    },
+    "strict": {
+      "row_sum_s": 1.6603072787660986,
+      "spectral_gap": 0.7541211542070791,
+      "min_eval": 0.0,
+      "unitary_escape_over_dt": 5.379635403812699e-05,
+      "markov_escape_over_dt": 1.6601425609896747,
+      "short_time_unitary_order_proxy": 2.0673117892375776,
+      "short_time_markov_order_proxy": 0.9449636540754177,
+      "inversion_even_residual": 0.0,
+      "weights_d1_6": [
+        0.4699856726450201,
+        0.1920435516901028,
+        0.09142861427792495,
+        0.0470291687456504,
+        0.02413122336363006,
+        0.011070817321442113
+      ]
+    },
+    "leaf_cuts": {
+      "dimensionlessness": {
+        "status": "still open",
+        "reason": "K* is a dimensionless profile; A and \u03b2 are scale gauges. No weight-one S_+ / unit-bearing action is exported (P3167/P3168)."
+      },
+      "selector_QW2191": {
+        "status": "still open",
+        "reason": "Radial K* and its Laplacian are inversion-even; Aut(Z12) still pairs \u00b1 orientation. External polarity works only as apparatus axiom."
+      },
+      "symmetry_breaking": {
+        "status": "still open as strict source",
+        "reason": "Phase cos(\u03c0d/4+\u03c0/6) is real oscillation, not a non-premise origin/polarity law. Exact zeros at d=4/3+4n remain label data."
+      },
+      "honest_hope_vs_reality": "K* improves algebraic fidelity of the historical mechanism and gives a usable dual-dynamics generator after positivity repair, but it does not dissolve the three leaf-cuts (units, selector, symmetry breaking)."
+    }
+  }
+}
