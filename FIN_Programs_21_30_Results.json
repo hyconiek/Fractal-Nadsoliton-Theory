@@ -1,0 +1,628 @@
+{
+  "figure_files": [
+    "FIN_Programs_21_30_Figures/program21_confusion.png",
+    "FIN_Programs_21_30_Figures/program22_positive_refinement.png",
+    "FIN_Programs_21_30_Figures/program23_dirac_dispersion.png",
+    "FIN_Programs_21_30_Figures/program28_adaptive_jacobian.png",
+    "FIN_Programs_21_30_Figures/inverse_action_residual.png"
+  ],
+  "inverse_action_audit": {
+    "G_minimum_eigenvalue": 0.21057099632479026,
+    "absolute_residual_by_cyclic_distance": [
+      0.0,
+      0.002668108343957809,
+      0.009801696033751167,
+      0.0038751845056810286,
+      0.008190730209164825,
+      0.004918090719651068,
+      0.0029074932433406486
+    ],
+    "best_mass_squared": 0.7489921093291205,
+    "best_resolvent_amplitude": 2.0419929063947797,
+    "displayed_direct_sum_action_mixed_phi_K_hessian_norm": 0.0,
+    "distinct_strict_eigenvalues": 7,
+    "logical_verdict": "the Gaussian action generates G and only approximately its declared normal-ordered image K; the displayed phi-plus-K action is decoupled unless a constraint or self-consistency law is added",
+    "normal_ordered_K_negative_eigenvalues": 7,
+    "normal_ordered_K_trace": 0.0,
+    "normal_ordered_relative_Frobenius_residual": 0.028187239484825488,
+    "quadratic_driven_action_degree": 2,
+    "quadratic_driven_stationarity_residual_with_C_equals_Kstrict": 0.0,
+    "seven_well_curvature_max": 1526.1030842423315,
+    "seven_well_curvature_min": 2.7792650922771576e-05,
+    "seven_well_polynomial_degree": 14,
+    "strict_K_negative_eigenvalues": 7,
+    "two_PI_stationarity_gradient_norm": 1.108114241931978e-15
+  },
+  "metadata": {
+    "date": "2026-07-19",
+    "declared_exact_row_sum": 1.660307278766099,
+    "generator_minimum_eigenvalue": 5.828670879282072e-16,
+    "numpy_version": "1.26.4",
+    "random_seed": 20260719,
+    "rounded_profile_row_sum_difference": 2.339008986496083e-10,
+    "row_sum": 1.660307279,
+    "times": "dimensionless",
+    "title": "FIN Programs 21-30: executed finite studies"
+  },
+  "program_21": {
+    "centered_signature_rank_tol_1e-10": 3,
+    "centered_signature_singular_values": [
+      0.04870516546250461,
+      0.032792945767419916,
+      0.0031530993347100565,
+      9.11628262130233e-17
+    ],
+    "classification_accuracy": 1.0,
+    "confusion_matrix_rows_true_columns_predicted": [
+      [
+        80,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        80,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        80,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        80
+      ]
+    ],
+    "minimum_pairwise_JS_nats": 0.004176773264129962,
+    "models": [
+      "coherent",
+      "markov",
+      "dephasing",
+      "memory_bath"
+    ],
+    "optimized_times": [
+      1.1687500000000002,
+      2.125,
+      3.5062499999999996
+    ],
+    "pairwise_JS_nats": {
+      "coherent__dephasing": 0.03221928723827066,
+      "coherent__markov": 0.06944819938153496,
+      "coherent__memory_bath": 0.015230021830677141,
+      "dephasing__memory_bath": 0.004176773264129962,
+      "markov__dephasing": 0.07556997625859242,
+      "markov__memory_bath": 0.07259306223628839
+    },
+    "pairwise_total_variation": {
+      "coherent__dephasing": 0.19825119265308178,
+      "coherent__markov": 0.2843063264101592,
+      "coherent__memory_bath": 0.1308918214493589,
+      "dephasing__memory_bath": 0.06977649257126474,
+      "markov__dephasing": 0.302251020046236,
+      "markov__memory_bath": 0.2919392524711024
+    },
+    "probability_blocks": 8,
+    "shots_per_block": 400,
+    "signature_dimension": 1944,
+    "trials_per_model": 80
+  },
+  "program_22": {
+    "all_checked_weights_positive": true,
+    "exact_anchor_max_error": 3.6363006009065835e-10,
+    "fixed_circumference_limit_first_four_modes": [
+      0.7593665383254791,
+      1.5849842744393872,
+      1.9845889670579304,
+      2.2384329904255065
+    ],
+    "fixed_circumference_nonlocal_continuation": {
+      "12": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 0.04974088387572003,
+        "minimum_offdiagonal_weight": 0.011070817321442113
+      },
+      "16": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 0.008584257109449676,
+        "minimum_offdiagonal_weight": 0.008303112991081585
+      },
+      "192": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 1.6866624282911177e-05,
+        "minimum_offdiagonal_weight": 0.000691926082590132
+      },
+      "24": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 0.00114114017873706,
+        "minimum_offdiagonal_weight": 0.005535408660721056
+      },
+      "48": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 0.00027512176108600625,
+        "minimum_offdiagonal_weight": 0.002767704330360528
+      },
+      "96": {
+        "maximum_relative_error_modes_1_to_6_vs_N1536": 6.83127870989602e-05,
+        "minimum_offdiagonal_weight": 0.001383852165180264
+      }
+    },
+    "predicted_N_squared_gap_limit": 174.01899157756148,
+    "raw_strict_first_negative_distance": 8,
+    "relative_error_last_scaled_gap": 0.00027013971585396256,
+    "second_moment": 4.407952550721134,
+    "size_checks": {
+      "12": {
+        "N_squared_gap": 108.59344620581946,
+        "minimum_generator_eigenvalue": -6.938893903907228e-17,
+        "minimum_offdiagonal_weight": 0.011070817321442113
+      },
+      "16": {
+        "N_squared_gap": 133.04822605091042,
+        "minimum_generator_eigenvalue": 7.91033905045424e-16,
+        "minimum_offdiagonal_weight": 0.0023301311973688166
+      },
+      "192": {
+        "N_squared_gap": 173.6852262941763,
+        "minimum_generator_eigenvalue": 9.009720043749752e-17,
+        "minimum_offdiagonal_weight": 3.874455999324624e-33
+      },
+      "24": {
+        "N_squared_gap": 154.56101968352365,
+        "minimum_generator_eigenvalue": -4.718447854656915e-16,
+        "minimum_offdiagonal_weight": 0.0001032242543703863
+      },
+      "384": {
+        "N_squared_gap": 173.93543593555307,
+        "minimum_generator_eigenvalue": -4.20726347170598e-16,
+        "minimum_offdiagonal_weight": 1.2642816996727547e-65
+      },
+      "48": {
+        "N_squared_gap": 168.8209837942969,
+        "minimum_generator_eigenvalue": -1.6312160498223316e-16,
+        "minimum_offdiagonal_weight": 8.973996468417242e-09
+      },
+      "512": {
+        "N_squared_gap": 173.97198213662352,
+        "minimum_generator_eigenvalue": -4.4112120646454294e-16,
+        "minimum_offdiagonal_weight": 2.7814158848431995e-87
+      },
+      "96": {
+        "N_squared_gap": 172.69119856658853,
+        "minimum_generator_eigenvalue": 7.563394355258847e-16,
+        "minimum_offdiagonal_weight": 6.78256827087174e-17
+      }
+    },
+    "status": "existence witness, not a canonical FIN refinement",
+    "strict_anchor_values_d1_to_d6": [
+      0.4699856726450201,
+      0.1920435516901028,
+      0.09142861427792495,
+      0.0470291687456504,
+      0.02413122336363006,
+      0.011070817321442113
+    ],
+    "tail_ratio": 0.45877563497786666,
+    "two_exponential_active_terms": [
+      {
+        "coefficient": 0.06840163812526556,
+        "decay_rate": 0.6591979476228402
+      },
+      {
+        "coefficient": 0.5888317581756095,
+        "decay_rate": 0.6655581230677283
+      },
+      {
+        "coefficient": 0.09203744246102918,
+        "decay_rate": 1.9697540858565792
+      },
+      {
+        "coefficient": 0.8703378353704887,
+        "decay_rate": 1.9887589714368659
+      }
+    ],
+    "two_exponential_relative_anchor_residual": 0.0028053974853598893
+  },
+  "program_23": {
+    "D_squared_block_L_residuals": {
+      "12": 0.0,
+      "192": 0.0,
+      "24": 0.0,
+      "384": 0.0,
+      "48": 0.0,
+      "96": 0.0
+    },
+    "fitted_dynamic_exponent": 0.9990821634096361,
+    "max_relative_dispersion_error_k_le_pi_over_3": 0.04507034144862798,
+    "orientation_statement": "edge orientation changes D by unitary equivalence; D^2 is unchanged",
+    "physical_status": "exact z=1 mathematical refinement; not selected by the strict kernel and not a Lorentz theorem",
+    "positive_Dirac_gaps": {
+      "12": 0.5176380902050415,
+      "192": 0.03272346325297356,
+      "24": 0.26105238444010315,
+      "384": 0.016362279207874256,
+      "48": 0.13080625846028612,
+      "96": 0.06543816564355227
+    },
+    "probability_outside_radius_ceil_2t_plus_2": {
+      "1.0": 6.339388623659645e-12,
+      "2.0": 1.0139417947165164e-12,
+      "4.0": 1.8126309977627536e-15,
+      "8.0": 1.250038123928768e-21
+    },
+    "strict_D_squared_residual": 7.012747045910616e-16,
+    "strict_square_root_effective_exponent_modes_1_2": 0.5321798675330434,
+    "strict_square_root_effective_exponent_modes_1_3": 0.4350325661295769,
+    "strict_weighted_incidence_edges": 66
+  },
+  "program_24": {
+    "bad_control_violates_positivity": true,
+    "bad_cosine_control_eigenvalues": [
+      -0.36899399837447405,
+      0.3486504952774341
+    ],
+    "factorization_rank_bound": 12,
+    "finite_temporal_lattice_tests": {
+      "T=12,alpha=0.0": {
+        "hessian_minimum_eigenvalue": 0.29999999999999505,
+        "minimum_reflection_eigenvalue": -7.032369979529866e-17,
+        "negative_count_below_minus_1e-10": 0
+      },
+      "T=12,alpha=0.01": {
+        "hessian_minimum_eigenvalue": 0.30000000000000204,
+        "minimum_reflection_eigenvalue": -3.7676423038139055e-07,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=12,alpha=0.1": {
+        "hessian_minimum_eigenvalue": 0.3000000000000016,
+        "minimum_reflection_eigenvalue": -0.00022342577234637367,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=12,alpha=1.0": {
+        "hessian_minimum_eigenvalue": 0.2999999999999991,
+        "minimum_reflection_eigenvalue": -0.013722362806390538,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=16,alpha=0.0": {
+        "hessian_minimum_eigenvalue": 0.30000000000000526,
+        "minimum_reflection_eigenvalue": -6.49074165872301e-17,
+        "negative_count_below_minus_1e-10": 0
+      },
+      "T=16,alpha=0.01": {
+        "hessian_minimum_eigenvalue": 0.300000000000003,
+        "minimum_reflection_eigenvalue": -3.7027305864755327e-07,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=16,alpha=0.1": {
+        "hessian_minimum_eigenvalue": 0.3000000000000009,
+        "minimum_reflection_eigenvalue": -0.00022317283188166983,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=16,alpha=1.0": {
+        "hessian_minimum_eigenvalue": 0.3000000000000005,
+        "minimum_reflection_eigenvalue": -0.01829614696183955,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=24,alpha=0.0": {
+        "hessian_minimum_eigenvalue": 0.30000000000000043,
+        "minimum_reflection_eigenvalue": -5.419388477066309e-17,
+        "negative_count_below_minus_1e-10": 0
+      },
+      "T=24,alpha=0.01": {
+        "hessian_minimum_eigenvalue": 0.2999999999999965,
+        "minimum_reflection_eigenvalue": -3.309318868379662e-07,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=24,alpha=0.1": {
+        "hessian_minimum_eigenvalue": 0.30000000000000543,
+        "minimum_reflection_eigenvalue": -0.00019544833251114877,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=24,alpha=1.0": {
+        "hessian_minimum_eigenvalue": 0.30000000000000265,
+        "minimum_reflection_eigenvalue": -0.015256653912319696,
+        "negative_count_below_minus_1e-10": 24
+      },
+      "T=8,alpha=0.0": {
+        "hessian_minimum_eigenvalue": 0.29999999999999843,
+        "minimum_reflection_eigenvalue": -6.269090751351735e-17,
+        "negative_count_below_minus_1e-10": 0
+      },
+      "T=8,alpha=0.01": {
+        "hessian_minimum_eigenvalue": 0.29999999999999716,
+        "minimum_reflection_eigenvalue": -2.5066851935491097e-07,
+        "negative_count_below_minus_1e-10": 12
+      },
+      "T=8,alpha=0.1": {
+        "hessian_minimum_eigenvalue": 0.2999999999999998,
+        "minimum_reflection_eigenvalue": -0.00012257658271928342,
+        "negative_count_below_minus_1e-10": 12
+      },
+      "T=8,alpha=1.0": {
+        "hessian_minimum_eigenvalue": 0.30000000000000787,
+        "minimum_reflection_eigenvalue": -0.0031648736970985155,
+        "negative_count_below_minus_1e-10": 12
+      }
+    },
+    "mass_squared": 0.35,
+    "minimum_reflection_eigenvalue": -4.727082515238659e-16,
+    "negative_eigenvalues_below_minus_1e-11": 0,
+    "positive_rank_tol_1e-11": 12,
+    "positive_time_samples": [
+      0.15,
+      0.35,
+      0.7,
+      1.1,
+      1.8
+    ],
+    "reflection_matrix_dimension": 60,
+    "scope": "free massive Gaussian correlator only"
+  },
+  "program_25": {
+    "calibrated_SPAM_range": [
+      0.0,
+      0.06
+    ],
+    "calibrated_clock_range": [
+      0.95,
+      1.05
+    ],
+    "classification_accuracy": 1.0,
+    "confusion_matrix_rows_true_columns_predicted": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        120
+      ]
+    ],
+    "greedy_maximin_JS_after_each_time": [
+      0.07819755561980557,
+      0.07790519770748366,
+      0.0771601065611005
+    ],
+    "interpretation": "conditional identifiability inside declared nuisance bounds",
+    "selected_times": [
+      0.6153846153846154,
+      0.7371794871794872,
+      0.4935897435897436
+    ],
+    "shots_per_time": 600,
+    "single_snapshot_broad_nuisance_minimum_JS": 0.026070373965544118,
+    "trials_per_model": 120
+  },
+  "program_26": {
+    "Hankel_rank_tol_1e-10": 3,
+    "Hankel_singular_values_noise_2e-3": [
+      3.4655971156606156,
+      2.4877313435717126,
+      1.3890801061099523,
+      0.010505723891494165,
+      0.00992766315652923,
+      0.008379103208674946,
+      0.006243598896960178,
+      0.005086177664986606,
+      0.003992787634233203
+    ],
+    "Hankel_singular_values_noiseless": [
+      3.4579624491768093,
+      2.477002621729968,
+      1.3859315366171576,
+      7.567742631817221e-16,
+      4.901524271790217e-16,
+      3.188269402752363e-16,
+      2.3360668833789134e-16,
+      1.905480509066867e-16,
+      5.4009064123680376e-17
+    ],
+    "finite_window_alternative_measures_min_weight": 0.020000000000000004,
+    "finite_window_training_max_difference": 8.326672684688674e-17,
+    "fixed_time_dephasing_Choi_eigenvalues": [
+      1.3475680960451766,
+      0.6524319039548234,
+      0.0,
+      0.0
+    ],
+    "fixed_time_minimal_Stinespring_dimension": 2,
+    "future_max_difference": 0.2304556690192158,
+    "population_equivalent_quantum_semigroups": {
+      "analytic_trace_distance": 0.7424261502520203,
+      "edge_jump_Choi_rank": 144,
+      "population_record_max_residual": 3.608224830031759e-16,
+      "random_shift_Choi_rank": 12,
+      "time": 1.0,
+      "uniform_coherent_input_trace_distance": 0.7424261502520211
+    },
+    "true_finite_mode_count": 3,
+    "verdict": "finite noiseless model order is recoverable; a unique bath is not"
+  },
+  "program_27": {
+    "absolute_site_zero_variation": 0.19239240319915568,
+    "entropy_covariance_residual": 4.440892098500626e-16,
+    "group_elements_checked": 24,
+    "observable_registry": [
+      {
+        "observable": "kernel spectrum",
+        "relational_rewrite_available": true,
+        "typing": "invariant"
+      },
+      {
+        "observable": "spectral gap",
+        "relational_rewrite_available": true,
+        "typing": "invariant"
+      },
+      {
+        "observable": "probability entropy",
+        "relational_rewrite_available": true,
+        "typing": "invariant"
+      },
+      {
+        "observable": "return probability",
+        "relational_rewrite_available": true,
+        "typing": "relational origin"
+      },
+      {
+        "observable": "transition distance",
+        "relational_rewrite_available": true,
+        "typing": "relational origin"
+      },
+      {
+        "observable": "apparatus displacement distribution",
+        "relational_rewrite_available": true,
+        "typing": "relative frame"
+      },
+      {
+        "observable": "signed current",
+        "relational_rewrite_available": true,
+        "typing": "requires odd apparatus polarity"
+      },
+      {
+        "observable": "chiral sign",
+        "relational_rewrite_available": true,
+        "typing": "requires odd apparatus polarity"
+      },
+      {
+        "observable": "absolute site-zero probability",
+        "relational_rewrite_available": false,
+        "typing": "absolute label"
+      },
+      {
+        "observable": "dimensionful clock reading",
+        "relational_rewrite_available": false,
+        "typing": "requires calibration"
+      },
+      {
+        "observable": "absolute orientation selector",
+        "relational_rewrite_available": false,
+        "typing": "forbidden without odd resource"
+      },
+      {
+        "observable": "record identity",
+        "relational_rewrite_available": false,
+        "typing": "requires apparatus memory"
+      }
+    ],
+    "relationally_rewritable_count": 8,
+    "requires_additional_resource_count": 4,
+    "return_probability_joint_frame_residual": 0.0,
+    "signed_current_invariant_residual": 0.8704714764186232,
+    "signed_current_odd_covariance_residual": 5.551115123125783e-17,
+    "spectrum_covariance_residual": 0.0
+  },
+  "program_28": {
+    "centered_linear_flow_mu_at_real_part_crossing": 6.209833978404789,
+    "covariance_Jacobian_norm": 2.6998499539693213,
+    "even_dimension": 36,
+    "even_to_odd_block_norm": 1.4733619847485348e-09,
+    "integrability_antisymmetry_relative_norm": 1.662809887833457,
+    "odd_dimension": 30,
+    "odd_leading_eigenvalue_imag": 0.4135254525765699,
+    "odd_leading_eigenvalue_real": 0.16103490100984708,
+    "odd_symmetric_part_max_eigenvalue": 0.37372351711707524,
+    "odd_symmetric_part_min_eigenvalue": -0.6034457950601013,
+    "odd_to_even_block_norm": 3.8160966248737803e-10,
+    "tangent_dimension": 66,
+    "verdict": "the declared finite-time covariance one-form is nonintegrable; the first centered odd instability is not a certified pitchfork"
+  },
+  "program_29": {
+    "all_assertions_passed": true,
+    "certificate_SHA256": "964822117316b107419908cfc2373bedb53119678714f1c0848ce0d6a1b54e29",
+    "certificate_count": 5,
+    "checks": {
+      "finite_bath_derivative_at_zero_imag": -0.0,
+      "finite_bath_derivative_at_zero_real": 0.0,
+      "normal_ordered_kernel_negative_eigenvalues": 7,
+      "normal_ordered_kernel_trace": 0.0,
+      "positive_scale_sections_checked_at_c2": 0,
+      "target_exponential_derivative_at_zero": -1.0,
+      "trivial_to_sign_equivariant_maps": 0,
+      "unitary_stochastic_FIN_witness": {
+        "distance_to_identity_permutation": 5.200033036348521,
+        "imaginary_norm": 2.754005938425309,
+        "minimum_real_entry": -0.12668098246316822,
+        "unitarity": 5.7535298500376155e-15
+      }
+    },
+    "formalization_scope": "exact finite/executable certificates; independent proof-assistant port remains future work"
+  },
+  "program_30": {
+    "ALT_specificity": 0.8,
+    "ALT_specificity_by_perturbation_scale": {
+      "0.05": 0.6666666666666666,
+      "0.1": 0.6666666666666666,
+      "0.2": 0.6666666666666666,
+      "0.4": 1.0,
+      "0.7": 1.0
+    },
+    "FIN_sensitivity": 0.8,
+    "classification_accuracy": 0.8,
+    "commitment_salt_revealed": "FIN-Programs-21-30-held-out-2026-07-19",
+    "confusion_matrix_rows_true_columns_predicted": [
+      [
+        12,
+        3
+      ],
+      [
+        3,
+        12
+      ]
+    ],
+    "generic_library_size": 100,
+    "median_delta_NLL_on_ALT_truth": -72.72446157897502,
+    "median_delta_NLL_on_FIN_truth": 20.4087664638937,
+    "preregistration": {
+      "decision": "smaller held-out negative log likelihood",
+      "held_out_modes": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "held_out_times": [
+        [
+          "D",
+          0.9
+        ],
+        [
+          "D",
+          1.7
+        ],
+        [
+          "U",
+          1.1
+        ],
+        [
+          "U",
+          2.2
+        ]
+      ],
+      "models": [
+        "FIN",
+        "positive_circulant_alternative_library"
+      ],
+      "nuisance": "overall positive rate alpha and uniform SPAM epsilon, fitted on training data only",
+      "seed": 20260749,
+      "shots_per_distribution": 4000,
+      "spectral_sigma": 0.012,
+      "training_modes": [
+        1,
+        2
+      ],
+      "training_times": [
+        [
+          "D",
+          0.35
+        ],
+        [
+          "U",
+          0.55
+        ]
+      ],
+      "trials": 30
+    },
+    "preregistration_SHA256": "57aef567aa8b5dcc6a829fde7f3991cba3750348792b93eb53d579ee0eab8f35",
+    "scope": "synthetic pipeline validation only; no hardware or fundamental-physics inference"
+  }
+}
