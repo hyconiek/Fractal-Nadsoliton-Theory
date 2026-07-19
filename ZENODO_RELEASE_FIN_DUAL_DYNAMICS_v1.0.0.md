@@ -144,12 +144,12 @@ A naive cyclic extension first includes that distance at (N=16), where the resul
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `FIN_Dual_Dynamics_Operational_Completion.pdf` | Archival English research note | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
-| `FIN_Dual_Dynamics_Operational_Completion.tex` | LaTeX source | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
-| `fin_dual_dynamics_release.py` | Deterministic numerical audit and figure generator | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
-| `FIN_Dual_Dynamics_reference_results.json` | Machine-readable expected results | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
-| `FIN_One_Spectrum_Two_Dynamics.png` | Unitary/Markov comparison figure | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
-| `FIN_Double_Slit_Operational_Simulation.png` | Four-panel double-slit simulation | `TO_BE_FILLED_AFTER_FINAL_BUILD` |
+| `FIN_Dual_Dynamics_Operational_Completion.pdf` | Archival English research note | `bcbd41ad1677aa52d8da6ab08ce0076458e249a7d1cd043a74673eaacc7d220b` |
+| `FIN_Dual_Dynamics_Operational_Completion.tex` | LaTeX source | `39d84d273b56e9d370aecac4b83ff82bb87e0682e59c86e89e23424b6af6ebde` |
+| `fin_dual_dynamics_release.py` | Deterministic numerical audit and figure generator | `671dca9f2ac0b40f17bad3cda8e253e934db825503f76e1efa787b47c262ad47` |
+| `FIN_Dual_Dynamics_reference_results.json` | Machine-readable expected results | `3917ad393abe286d1f39caeac6596d218b56b369cffdfe405a3aa6f79156e5ab` |
+| `FIN_One_Spectrum_Two_Dynamics.png` | Unitary/Markov comparison figure | `5e37f1ff1e49cce4855247c03f4bd298ade73e3da1ecd4136ad77875c43d2f42` |
+| `FIN_Double_Slit_Operational_Simulation.png` | Four-panel double-slit simulation | `a6a1f59b9c6d5b4df17df6580679b18f9706421ca5a0aedeb916da84ac27488d` |
 | `FIN_Dual_Dynamics_MANIFEST.sha256` | Checksums for the archival files | Generated after the final build |
 
 The Markdown release description is intentionally omitted from its own checksum table to avoid a self-referential digest.
@@ -190,7 +190,7 @@ Suggested Mathematics Subject Classification codes:
 ## Related identifiers
 
 - Repository: <https://github.com/hyconiek/Fractal-Nadsoliton-Theory> — relation: `isDerivedFrom` or `references`
-- Repository state inspected for this release: <https://github.com/hyconiek/Fractal-Nadsoliton-Theory/commit/c92ab545e8e281832016fe0d91384f6c03912d46> — relation: `isDerivedFrom`
+- Repository state inspected for this release: <https://github.com/hyconiek/Fractal-Nadsoliton-Theory/commit/3b2ad72dfa676f4ef6da4c4b2b54990ca1e46c3e> — relation: `isDerivedFrom`
 - Related FIN project concept DOI: <https://doi.org/10.5281/zenodo.17645737> — relation: `isPartOf` or `references`
 - DOI of this note: add only after Zenodo assigns it
 
