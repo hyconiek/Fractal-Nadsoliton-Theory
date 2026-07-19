@@ -2,11 +2,17 @@
 
 ## Twenty executed research programs, the wave–diffusion observer problem, and ten next recommendations
 
-**Date:** 18 July 2026  
+**Release:** 10.1  
+**Version:** 1.0.0  
+**Author:** Krzysztof Żuchowski  
+**Affiliation:** Independent Researcher — Fractal Information Theory Project  
+**ORCID:** [0009-0002-0909-3613](https://orcid.org/0009-0002-0909-3613)  
+**Date:** 19 July 2026  
 **Language:** English  
 **Scope:** mathematical physics only; no cosmological, philosophical, or “Theory of Everything” claims  
 **Repository state:** analysis based on 27b28fae through P3170; artifact bundle now present at local HEAD 8002ad1b
 **Reproducibility:** [core suite](./fin_ten_programs_experiments.py) and [observer-dynamics suite](./fin_observer_dynamics_experiments.py)
+**License:** CC BY 4.0  
 
 ---
 
@@ -3408,4 +3414,3 @@ The appropriate scientific response is neither confirmation nor dismissal. It is
 ## Final answer in one sentence
 
 The same FIN operator genuinely generates wave/unitary and diffusive mathematical shadows, but the object that could turn either shadow into physics is not another spectral formula: it is a calibrated operational-relational continuum theory whose temporal law and held-out observables survive experiment. **[Strong evidence]**
-

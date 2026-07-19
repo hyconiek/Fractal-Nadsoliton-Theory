@@ -1,0 +1,4809 @@
+\documentclass[11pt,a4paper,openany]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage[margin=24mm,headheight=23pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{url}
+\usepackage{hyperref}
+
+\definecolor{finblue}{HTML}{1F5A99}
+\definecolor{fingreen}{HTML}{19733A}
+\definecolor{finorange}{HTML}{D55E00}
+\definecolor{finred}{HTML}{A61B1B}
+\definecolor{finviolet}{HTML}{6A3D9A}
+\definecolor{fingray}{HTML}{4D4D4D}
+
+\hypersetup{
+  unicode=true,
+  colorlinks=true,
+  linkcolor=finblue,
+  citecolor=fingreen,
+  urlcolor=finblue,
+  pdftitle={Can FIN Become Predictive Physics?},
+  pdfauthor={Krzysztof Żuchowski},
+  pdfsubject={Comprehensive mathematical synthesis of FIN: twenty executed research programs, the wave-diffusion observer problem, and ten next recommendations — Release 10.1},
+  pdfkeywords={FIN, spectral graph theory, operator theory, unitary dynamics, Markov semigroup, operational physics, process tensors, mathematical physics}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyhead[R]{\small FIN Release 10.1}
+\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep,leftmargin=2em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\emergencystretch=2em
+
+\newcommand{\one}{\bm 1}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\statusProven}{\textcolor{fingreen}{[Proven]}}
+\newcommand{\statusStrong}{\textcolor{finblue}{[Strong evidence]}}
+\newcommand{\statusModerate}{\textcolor{finviolet}{[Moderate evidence]}}
+\newcommand{\statusWeak}{\textcolor{fingray}{[Weak evidence]}}
+\newcommand{\statusSpeculative}{\textcolor{finorange}{[Speculative]}}
+\newcommand{\statusRefuted}{\textcolor{finred}{[Refuted]}}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{15mm}
+{\Large\bfseries FIN Theory Synthesis — Release 10.1\par}
+\vspace{12mm}
+{\Huge\bfseries Can FIN Become Predictive Physics?\par}
+\vspace{6mm}
+{\Large Twenty Executed Research Programs, the Wave--Diffusion Observer Problem, and Ten Next Recommendations\par}
+\vspace{18mm}
+{\Large Krzysztof Żuchowski\par}
+\vspace{2mm}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+\vspace{2mm}
+{\normalsize ORCID: \href{https://orcid.org/0009-0002-0909-3613}{0009-0002-0909-3613}\par}
+\vspace{10mm}
+{\large 19 July 2026\par}
+{\normalsize Publication --- Preprint; record version 1.0.0\par}
+\vfill
+\begin{minipage}{0.88\textwidth}
+\small
+\textbf{Scope.} Mathematical physics only. Cosmological, metaphysical and Theory-of-Everything interpretations are excluded. The purpose is falsification, reconstruction and identification of the smallest operational and mathematical structures required for predictive physics.
+
+\medskip
+\textbf{Repository.} \url{https://github.com/hyconiek/Fractal-Nadsoliton-Theory}
+
+\textbf{Reproducibility.} The release includes deterministic core and observer-dynamics suites.
+
+\textbf{License.} Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+\textbf{Zenodo DOI.} To be assigned to Release 10.1.
+\end{minipage}
+\vfill
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\pagenumbering{roman}
+\chapter*{Publication statement}
+\addcontentsline{toc}{chapter}{Publication statement}
+This release is a single self-contained synthesis of the present FIN mathematical theory. It reconstructs the minimal spectral core, the strict--legacy relation, variational and informational structures, adaptive dynamics, observer/apparatus requirements, unitary and diffusive temporal semantics, continuum obstructions and the bridge still required for predictive physics. It reports twenty executed mathematical research programs, a cross-field falsification search, ten recommended next programs, a dependency roadmap, and a final scientific judgment. Confidence labels distinguish proof, numerical evidence, conjecture and refutation throughout.
+
+The exact source is \path{FIN_Ten_Research_Programs_Monograph.md}. Numerical claims are reproducible with \path{fin_ten_programs_experiments.py} and \path{fin_observer_dynamics_experiments.py}. The scripts use explicit finite kernel data and NumPy; they do not import generated FIN verdicts.
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Confidence convention}
+
+Every substantive conclusion carries exactly one required label:
+
+\begin{itemize}
+\item 
+\textbf{\statusProven{}} — established by a proof, a standard theorem under stated hypotheses, or an exact finite computation.
+
+\item 
+\textbf{\statusStrong{}} — supported by independent arguments and stable computations, but not a theorem covering all extensions.
+
+\item 
+\textbf{\statusModerate{}} — credible with important unresolved hypotheses.
+
+\item 
+\textbf{\statusWeak{}} — suggestive but fragile.
+
+\item 
+\textbf{\statusSpeculative{}} — a research possibility without adequate supporting evidence.
+
+\item 
+\textbf{\statusRefuted{}} — contradicted by proof or explicit counterexample in the stated scope.
+
+\end{itemize}
+
+Probabilities below are planning estimates, not mathematical confidence levels.
+
+\par\medskip\hrule\medskip
+
+\chapter{Executive summary}
+
+\textbf{\statusProven{}} The strict and legacy kernels are exactly related on the fixed twelve-cycle: each is a degree-at-most-six polynomial in the cycle Laplacian and, because their seven radial spectral values are separately distinct, each is a polynomial in the other.
+
+\textbf{\statusProven{}} This finite bridge is not a continuum bridge. Its raw interpolation matrix has condition number about \(8.0\times10^6\), and applying the same polynomial to natural \(C_N\) extensions gives relative errors \(9.17\times10^2\), \(1.32\times10^4\), and \(6.22\times10^5\) at \(N=16,24,48\). It is seven-point interpolation, not a robust completion law.
+
+\textbf{\statusRefuted{}} Different inertia does not forbid a real finite functional relation between the kernels. A real polynomial may cross zero; the exact bridge is a counterexample. A positivity-preserving or Stieltjes bridge may still be obstructed, but that stronger requirement must be stated.
+
+\textbf{\statusProven{}} The reflection-even operator algebra cannot produce an absolute orientation. Yet a system–apparatus pair has a complete relative invariant
+
+\[
+(\Delta,c)=
+\bigl(\lambda_a(r_s-r_a)\bmod12,\lambda_s\lambda_a\bigr).
+\]
+
+Exhaustive enumeration of all \(576\) frame pairs gives exactly \(24\) diagonal dihedral orbits, each of size \(24\). Relational physics can therefore avoid an absolute selector without claiming that the core generates one.
+
+\textbf{\statusProven{}} Dimensionless invariant data cannot naturally generate a nonzero dimensionful quantity. The full action–length–time span requires three independent calibration scales; \(15\,624\) monomials in six weight-zero receivers contain no weight-one source.
+
+\textbf{\statusProven{}} A single \(C_{12}\) operator does not determine its continuum. Three scaling families agreeing at \(N=12\) have first gaps tending to zero, a nonzero constant, and infinity. The cycle Laplacian has quadratic low-momentum dispersion; its square root has linear dispersion.
+
+\textbf{\statusProven{}} The same \(L\) supports distinguishable unitary and diffusive dynamics. At optimized dimensionless time \(6.77\), their position distributions have Jensen–Shannon divergence \(0.363\) nats and \(D_{\rm KL}=1.392\) nats; ideally eight observations give expected log Bayes factor at least ten.
+
+\textbf{\statusProven{}} More strongly, the actual strict QW2118 matrix has positive off-diagonal weights and constant row sum \(s=1.660307278766099\). The Perron shift \(A=sI-K_s\) is simultaneously a positive Dirichlet generator for the unitary group \(e^{-itA}\) and the reversible Markov semigroup \(e^{-tA}\).
+
+\textbf{\statusProven{}} These are inequivalent temporal laws, not contradictory descriptions. Coherent escape is quadratic at short time, diffusion is linear, and the Born population matrices violate Chapman–Kolmogorov while the Markov matrices obey it. The operator does not select the physical temporal ray, state cone, instrument, environment, or clock.
+
+\textbf{\statusProven{}} An exact infinite-dimensional unitary dilation reproduces FIN diffusion for the restricted observer, but no finite closed bath can reproduce nonconstant exponential relaxation for all time. Frequent projective observation freezes the coherent walk instead of automatically creating the FIN heat flow.
+
+\textbf{\statusProven{}} Shannon information does not determine energy or temperature. A two-level SWAP process verifies the finite Landauer equality to \(8.3\times10^{-17}\), but only after a Hamiltonian, Gibbs state, temperature, and process are supplied.
+
+\textbf{\statusRefuted{}} The naive tuple
+
+\[
+(\mathbb C^{12},\mathbb C^{12},D=K_s,J=\text{complex conjugation})
+\]
+
+is not a standard real/\allowbreak{}even spectral triple: the maximum point-projection first-order residual is \(1.0373\), and a compatible even grading is obstructed.
+
+\textbf{\statusRefuted{}} \(K_s\) is not directly a stable Euclidean Gaussian action: it has seven negative modes. A shift greater than \(0.68187476238\) is necessary and is ill-conditioned near threshold.
+
+\textbf{\statusStrong{}} The realistic route to physics is a conjunction of a refinement/\allowbreak{}causal limit, a calibrated operational realization, scale-free held-out predictions, and formal proof certificates. Another dimensionless scalar cannot supply these structures.
+
+\par\medskip\hrule\medskip
+
+\chapter{Part I — Independent structural analysis}
+
+\section{1. Method}
+
+The program ranking was not inherited from prior suggested future work. The procedure was:
+
+\begin{enumerate}
+\item 
+reconstruct the frozen mathematical data;
+
+\item 
+reduce repository blockers to logically distinct open-problem classes;
+
+\item 
+score candidate programs by expected scientific value;
+
+\item 
+select ten without a diversity quota;
+
+\item 
+execute proofs, counterexamples, computations, and literature comparisons;
+
+\item 
+retain negative results at equal status with positive ones;
+
+\item 
+require any physical proposal to name preparation, dynamics, measurement, calibration, and falsification.
+
+\end{enumerate}
+
+The independent calculations used
+
+\[
+K_s(d)=\frac{\cos(0.18575d+0.16250)}{1+d^{1.8}},
+\qquad
+K_l(d)=4\ln2\,
+\frac{\cos(\pi d/4+\pi/6)}{1+0.01d},
+\]
+
+with zero diagonal and cyclic distance on \(C_{12}\).
+
+\textbf{\statusProven{}} The deterministic NumPy suite completed without importing generated FIN verdicts.
+
+\section{2. Structural open-problem register}
+
+“Complete” means complete at the level of dependency classes; historical microtasks are instances of these classes.
+
+\begin{center}
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.055\textwidth}p{0.309\textwidth}p{0.129\textwidth}p{0.131\textwidth}p{0.236\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Open problem} & \textbf{Importance} & \textbf{Physical relevance} & \textbf{Status} \\
+\midrule
+\endhead
+O1 & canonical and stable strict–legacy bridge & 8 & 5 & finite polynomial proved; stability open \\
+O2 & parameter-running provenance beyond interpolation & 8 & 7 & open \\
+O3 & legacy physical-role transfer & 5 & 8 & blocked on a physical bridge \\
+O4 & uniqueness of the selected filters inside \(C^*(L)\) & 9 & 8 & open \\
+O5 & out-of-sample parameter identifiability & 7 & 8 & open \\
+O6 & absolute origin/\allowbreak{}orientation selector & 8 & 7 & no-go proved \\
+O7 & relational selector for all observables & 9 & 10 & theorem proved; audit open \\
+O8 & odd-sector adaptive bifurcation & 9 & 8 & open \\
+O9 & internal dimensionful source & 9 & 10 & invariant-input no-go \\
+O10 & minimal calibration package & 6 & 10 & rank-three package proved \\
+O11 & physical clock and time flow & 9 & 10 & open \\
+O12 & noncircular adaptive potential \(V\) & 9 & 7 & open \\
+O13 & self-referential fixed points and stability & 9 & 6 & open \\
+O14 & FIN-native refinement \(K_N\) & 10 & 10 & open \\
+O15 & norm/\allowbreak{}strong-resolvent continuum limit & 10 & 10 & open \\
+O16 & causal order or propagation cone & 10 & 10 & exact finite cone absent \\
+O17 & Lorentzian limiting principal symbol & 10 & 10 & open \\
+O18 & physical state preparation & 8 & 10 & absent \\
+O19 & instruments and apparatus outcomes & 8 & 10 & absent \\
+O20 & classical/\allowbreak{}quantum operational probability law & 9 & 10 & absent \\
+O21 & bath, KMS state, temperature, allowed operations & 8 & 9 & conditional only \\
+O22 & bounded variational action selecting \(K_s\) & 9 & 8 & shift/\allowbreak{}potential required \\
+O23 & Osterwalder–Schrader positivity & 10 & 10 & undefined before temporal refinement \\
+O24 & metric family and stress–energy variation & 9 & 10 & absent \\
+O25 & repaired real/\allowbreak{}even spectral triple & 9 & 8 & naive version refuted \\
+O26 & nonabelian gauge group and representation & 9 & 10 & absent \\
+O27 & fermions, chirality, KO dimension & 10 & 10 & absent \\
+O28 & held-out dimensionless predictions & 7 & 10 & candidate fingerprint computed \\
+O29 & physical twelve-mode implementation & 6 & 10 & open \\
+O30 & robustness to noise and graph changes & 8 & 9 & open \\
+O31 & machine-certified no-go/\allowbreak{}source proofs & 8 & 5 & feasible \\
+O32 & justified ensemble or universality limit & 7 & 5 & absent \\
+O33 & selected subsystem/\allowbreak{}tensor factorization & 6 & 5 & choice underdetermined \\
+O34 & theorem-level originality & 7 & 4 & core largely standard \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\textbf{\statusStrong{}} O7, O14–O20, O23, O28, and O29 have the largest capacity to change FIN’s epistemic status.
+
+\section{3. Candidate ranking and selected programs}
+
+Expected scientific value combines depth, originality, robustness, physical relevance, testability, feasibility, and redundancy. It is a decision score, not a theorem.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.086\textwidth}p{0.420\textwidth}p{0.121\textwidth}p{0.233\textwidth}@{}}
+\toprule
+\textbf{Rank} & \textbf{Direction} & \textbf{Score /\allowbreak{}100} & \textbf{Decision} \\
+\midrule
+\endhead
+1 & calibrated prediction and Bayesian discrimination & 82 & Program 9 \\
+2 & refinement, continuum, causality, Lorentz & 79 & Program 4 \\
+3 & relational selector/\allowbreak{}reference frames & 77 & Program 2 \\
+4 & exact bridge plus generalization falsification & 74 & Program 1 \\
+5 & adaptive bootstrap and dynamical identifiability & 70 & Program 5 \\
+6 & variational stability and OS gate & 67 & Program 8 \\
+7 & units, RG, modular time & 65 & Program 3 \\
+8 & information thermodynamics/\allowbreak{}open systems & 62 & Program 6 \\
+9 & repaired noncommutative geometry & 58 & Program 7 \\
+10 & machine-assisted invariant/\allowbreak{}source proofs & 56 & Program 10 \\
+11 & tensor-network compression & 43 & auxiliary only \\
+12 & information geometry/\allowbreak{}optimal transport & 41 & not selected \\
+13 & topological phases/\allowbreak{}\(K\)-theory & 36 & not selected \\
+14 & causal-set reinterpretation & 33 & not selected \\
+15 & random-matrix robustness & 31 & not selected \\
+16 & sheaves/\allowbreak{}derived geometry/\allowbreak{}HoTT & 28 & language, not generator \\
+17 & reverse-engineered SM/\allowbreak{}GR receivers & 18 & too circular \\
+18 & free probability of the present pair & 0 & refuted \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\textbf{\statusProven{}} The present commuting non-scalar kernel pair cannot be freely independent in a faithful trace: freeness gives \(\tau(abab)=0\), while commutation and freeness give \(\tau(abab)=\tau(a^2)\tau(b^2)>0\).
+
+\par\medskip\hrule\medskip
+
+\chapter{Part II — Ten executed research programs}
+
+\chapter{Program 1 — Exact spectral bridge and its generalization test}
+
+\section{1. Motivation}
+
+The first question is whether the strict and legacy kernels are genuinely different mathematical objects or merely different coordinates on the same finite spectral datum. A robust answer would clarify what can be transported between them and what cannot.
+
+\textbf{Research hypothesis.} On the fixed cycle they are related by functional calculus, but no size-independent completion law follows from that fact. \textbf{\statusStrong{}}
+
+The expected breakthrough was either a canonical bridge or a precise theorem exposing why the apparent bridge is only interpolation. Estimated success probability was \(0.85\), impact \(8/10\), difficulty \(6/10\), and research time one to three months for a formal stability paper. The program is logically prior to role transfer, but not to the operational projects.
+
+\section{2. Background}
+
+Let \(L_N\) be the combinatorial Laplacian of \(C_N\). Every real radial circulant is diagonal in the Fourier basis and belongs to \(C^*(L_N)\). On \(C_{12}\), radial symmetry leaves seven distinct Laplacian eigenvalues,
+
+\[
+\ell_k=4\sin^2(\pi k/12),\qquad k=0,\ldots,6.
+\]
+
+The spectral theorem therefore already implies that any such kernel is \(p(L_{12})\) for a real polynomial \(p\) of degree at most six. \textbf{\statusProven{}} This is standard finite functional calculus, not a FIN-specific new theorem.
+
+\section{3. Mathematical formulation}
+
+Write
+
+\[
+K_s=p_s(L_{12}),\qquad K_l=p_l(L_{12}).
+\]
+
+The stronger bridge problem asks for functions \(q,r\) such that
+
+\[
+K_s=q(K_l),\qquad K_l=r(K_s).
+\]
+
+Such functions exist exactly when each target eigenvalue is constant on every degeneracy class of the source. A canonical physical bridge would additionally need stability, a declared admissible function class, compatibility with refinement, and preservation of any role-bearing structure.
+
+\section{4. Research methodology}
+
+The calculation proceeded in four stages:
+
+\begin{enumerate}
+\item 
+build both \(12\times12\) circulants from their declared radial profiles;
+
+\item 
+diagonalize them in the common Fourier basis;
+
+\item 
+solve the seven-point Vandermonde systems for \(p_s,p_l,q,r\);
+
+\item 
+freeze the polynomial \(q\), extend the two profile formulas naturally to \(C_N\), and test \(q(K_{l,N})\approx K_{s,N}\) at unseen sizes.
+
+\end{enumerate}
+
+Residuals were evaluated spectrally and in Frobenius norm. Conditioning and minimum eigenvalue separation were recorded to expose interpolation fragility.
+
+\section{5. Detailed derivations}
+
+The interpolation lemma is elementary but decisive.
+
+\textbf{Theorem 1.} If a self-adjoint matrix \(A\) has \(m\) distinct eigenvalues and a commuting self-adjoint matrix \(B\) is scalar on every eigenspace of \(A\), then \(B=q(A)\) for a real polynomial of degree at most \(m-1\). \textbf{\statusProven{}}
+
+\textbf{Proof.} Write \(A=\sum_{j=1}^m a_jP_j\) and \(B=\sum_{j=1}^m b_jP_j\). Lagrange interpolation gives a real polynomial \(q\) with \(q(a_j)=b_j\), hence \(q(A)=\sum_jq(a_j)P_j=B\). \(\square\)
+
+Both kernels have seven distinct radial eigenvalues. Therefore
+
+\[
+K_s=q(K_l),\qquad K_l=r(K_s)
+\]
+
+for polynomials of degree at most six. The computed residuals were
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{identity} & \textbf{relative residual} \\
+\midrule
+\endhead
+\(K_s-p_s(L)\) & \(2.53\times10^{-14}\) \\
+\(K_l-p_l(L)\) & \(1.28\times10^{-13}\) \\
+\(K_s-q(K_l)\) & \(7.80\times10^{-14}\) \\
+\(K_l-r(K_s)\) & \(2.91\times10^{-13}\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+These are floating-point representations of exact finite interpolation identities. \textbf{\statusProven{}}
+
+The minimum separations of the seven source nodes are \(0.04358\) for the strict spectrum and \(0.43466\) for the legacy spectrum; the raw Laplacian Vandermonde condition number is \(8.04\times10^6\). Thus coefficient values depend strongly on basis and perturbation even though the evaluated finite identity is exact. \textbf{\statusStrong{}}
+
+\section{6. Proof attempts}
+
+An attempted obstruction based on different inertia fails. A real polynomial is not sign preserving, so \(A\) and \(q(A)\) may have arbitrary sign patterns on a finite spectrum. The exact \(q\) above is a counterexample to the unrestricted inertia claim. \textbf{\statusRefuted{}}
+
+A stronger theorem remains possible: a positive, completely monotone, operator-monotone, Stieltjes, local, or parameter-sparse bridge may be incompatible with the two spectral orderings. That problem must name its function class before inertia or monotonicity can be used. \textbf{\statusModerate{}}
+
+No proof was found that the interpolation polynomial is selected by the kernel formulas, by an action, or by a functor across graph sizes. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+The fixed-size theorem is maximally nonunique outside seven nodes: for any polynomial \(h\),
+
+\[
+q_h(x)=q(x)+h(x)\prod_{j=1}^{7}(x-\lambda_j(K_l))
+\]
+
+defines the same \(K_s\) on \(C_{12}\). \textbf{\statusProven{}} Thus the matrix identity alone selects neither extrapolation nor physical semantics.
+
+Role transfer also fails logically: if two matrices are related by a polynomial, labels such as energy, coupling, or force do not transfer unless the preparation, action, observables, and units are intertwined. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+The degree-six bridge fitted at \(N=12\) was evaluated on natural profile extensions. Relative Frobenius errors were
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{unseen size} & \textbf{\(\|q(K_{l,N})-K_{s,N}\|_F/\|K_{s,N}\|_F\)} \\
+\midrule
+\endhead
+16 & \(9.17\times10^2\) \\
+24 & \(1.32\times10^4\) \\
+48 & \(6.22\times10^5\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The extrapolation is not merely inaccurate; it diverges rapidly for this natural continuation. \textbf{\statusProven{}} This does not prove that every possible refinement bridge fails, but it falsifies the claim that finite functional equivalence supplies one automatically.
+
+\section{9. Literature comparison}
+
+Finite circulant functional calculus is a routine consequence of the spectral theorem. Graph spectral filters are likewise functions of graph Laplacians; the modern signal-processing formulation is exemplified by \href{https://arxiv.org/abs/0912.3848}{Hammond, Vandergheynst and Gribonval}. The FIN-specific content is the exact two-way interpolation and its failed out-of-size generalization, not a new spectral theorem.
+
+\section{10. Final conclusions}
+
+The strict and legacy kernels are two coordinates on one commutative seven-point spectral algebra at \(N=12\). \textbf{\statusProven{}}
+
+They are not thereby one refinement law, one physical operator, or one role-bearing object. \textbf{\statusProven{}}
+
+The most useful continuation is to search for a low-complexity bridge stable under a separately justified \(K_N\) family, not to repeat fixed-size interpolation. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Exact finite polynomial equivalence: \textbf{\statusProven{}}
+
+\item 
+Inertia-only obstruction to real functional equivalence: \textbf{\statusRefuted{}}
+
+\item 
+Existing polynomial as a canonical completion map: \textbf{\statusRefuted{}}
+
+\item 
+Existence of some sparse, positive, refinement-stable bridge: \textbf{\statusSpeculative{}}
+
+\item 
+Estimated probability of such a bridge: \(0.20\)
+
+\item 
+Scientific impact if found: \(8/10\)
+
+\item 
+Difficulty: \(8/10\)
+
+\item 
+Time: 6–18 months after a refinement family exists
+
+\item 
+Dependencies: Program 4 and a precise admissible bridge category
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 2 — Relational selector and reference-frame completion}
+
+\section{1. Motivation}
+
+The current core is reflection symmetric, so an absolute clockwise/\allowbreak{}counterclockwise choice is obstructed. Physics, however, normally measures a system relative to an apparatus. The program asks whether the selector obligation should be replaced by a relational theorem instead of solved by an impossible absolute construction.
+
+\textbf{Research hypothesis.} The unoriented kernel cannot select a frame, but a system–apparatus pair admits complete invariant relative coordinates. \textbf{\statusStrong{}}
+
+Estimated probability of mathematical success was \(0.95\), probability of resolving the physical selector problem \(0.75\), impact \(10/10\), difficulty \(5/10\), and time one to three months for a complete downstream audit.
+
+\section{2. Background}
+
+Let reflection act by \((R\psi)(x)=\psi(-x)\). Radial \(L,K_s,K_l\) satisfy \(RKR=K\). Functional calculus, spectral measures, traces, entropy, and any natural automorphism-preserving construction remain even.
+
+The oriented-frame torsor is
+
+\[
+F=\mathbb Z_{12}\times\{\pm1\}.
+\]
+
+The dihedral group acts freely and transitively by
+
+\[
+(a,\varepsilon)\cdot(r,\lambda)
+=(a+\varepsilon r,\varepsilon\lambda).
+\]
+
+\section{3. Mathematical formulation}
+
+An absolute selector is an equivariant map from the current invariant input to \(F\) or to the orientation torsor \(\{+,-\}\). A relational selector is instead an invariant of a pair \((f_s,f_a)\in F\times F\) under the simultaneous diagonal action.
+
+For \(f_s=(r_s,\lambda_s)\) and \(f_a=(r_a,\lambda_a)\), define
+
+\[
+\Delta=\lambda_a(r_s-r_a)\pmod {12},
+\qquad c=\lambda_s\lambda_a.
+\]
+
+\section{4. Research methodology}
+
+The work combined:
+
+\begin{enumerate}
+\item 
+a naturality/\allowbreak{}no-fixed-point proof;
+
+\item 
+representation decomposition into reflection-even and reflection-odd operators;
+
+\item 
+an analytic orbit-classification theorem for \(F\times F\);
+
+\item 
+exhaustive enumeration of all \(576\) pairs and all \(24\) dihedral transformations;
+
+\item 
+a minimal Gibbs interaction and an odd-current operational probe.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 2.} No automorphism-natural absolute orientation can be constructed from the current even FIN core. \textbf{\statusProven{}}
+
+\textbf{Proof.} If input \(D\) is fixed by reflection and \(S\) is equivariant, then \(S(D)=S(RD)=R S(D)\). Neither orientation is reflection fixed, a contradiction. \(\square\)
+
+Equivalently, if
+
+\[
+J=\frac{T-T^*}{2i},\qquad RJR=-J,
+\]
+
+then
+
+\[
+C^*(I,L,K_s,K_l)\cap\{A:RAR=-A\}=\{0\}.
+\]
+
+\textbf{Theorem 3.} The pair \((\Delta,c)\) is a complete invariant of the diagonal \(D_{12}\)-action on \(F\times F\); equivalently,
+
+\[
+(F\times F)/D_{12}\cong D_{12}.
+\]
+
+\textbf{\statusProven{}}
+
+\textbf{Proof.} In torsor notation the invariant is \(f_a^{-1}f_s\). It is unchanged by simultaneous left multiplication. Conversely, equality \(f_a^{-1}f_s=f_a'^{-1}f_s'\) gives the unique group element \(g=f_a'f_a^{-1}\) carrying both members of the first pair to the second. The coordinate expression is exactly \((\Delta,c)\). \(\square\)
+
+Every diagonal-invariant observable therefore factors through these 24 relative values. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+Index theory, eta invariants, cohomology, categorical fixed points, and spectral flow were tested as potential hidden selectors. They cannot help while their inputs and paths remain reflection even: natural constructions inherit the automorphism. \textbf{\statusProven{}}
+
+The cycle has \(H^1(C_{12};\mathbb R)\cong\mathbb R\), but reflection acts by \(-1\), so the dihedral-invariant part is zero. Orientability supplies two sections, not a preferred one. \textbf{\statusProven{}}
+
+An internal absolute selector could exist only after adding a nonzero odd state, source, boundary condition, current, chiral density, or thermodynamic sector. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+Choosing vertex zero, the first stored eigenvector, or a lexicographic sign returns a unique frame but changes under relabelling. Such routines are conventions, not natural selectors. \textbf{\statusRefuted{}}
+
+A symmetric pitchfork produces a pair of branches \(\pm m\), not a canonical branch. At every finite size and zero external field the invariant equilibrium mean remains zero. \textbf{\statusProven{}}
+
+The relational solution is insufficient if a downstream claim explicitly depends on an apparatus-independent absolute sign. In that case the missing odd resource remains a genuine extra axiom. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+Enumeration produced 24 relative invariants, each fibre containing 24 of the 576 frame pairs, and passed invariance under all 24 group elements. \textbf{\statusProven{}}
+
+For orientation signs \(s,a\in\{\pm1\}\), the invariant interaction
+
+\[
+H_{\rm int}=-gsa
+\]
+
+at \(\beta g=2\) gives
+
+\[
+\langle s\rangle=\langle a\rangle=0,
+\quad \langle sa\rangle=\tanh2=0.96402758,
+\quad P(s=a)=0.98201379.
+\]
+
+Reliable relative alignment coexists with no absolute orientation. \textbf{\statusProven{}}
+
+For a calibrated odd probe \(H(h)=K_s-hJ\),
+
+\[
+E_k(h)-E_{12-k}(h)=-2h\sin(2\pi k/12),
+\]
+
+and the computed Gibbs current was \(-0.105343,0,+0.105343\) at \(h=-0.2,0,+0.2\) for the declared numerical setting. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+This is the finite torsor form of operational quantum reference frames, where invariant relations replace inaccessible absolute quantities. See \href{https://arxiv.org/abs/0711.0043}{Gour and Spekkens}, \href{https://arxiv.org/abs/1703.10434}{Loveridge, Miyadera and Busch}, and \href{https://arxiv.org/abs/2303.14002}{Carette, Głowacki and Loveridge}. The group-quotient theorem is standard; the FIN-specific result is its exact application as a replacement test for the selector.
+
+\section{10. Final conclusions}
+
+An absolute selector is impossible from the present even core. \textbf{\statusProven{}}
+
+A complete relational frame exists once an apparatus is included. \textbf{\statusProven{}}
+
+The scientifically decisive audit is whether every proposed observable can be expressed through \((\Delta,c)\). If yes, the absolute selector is gauge; if not, a physical odd resource must be supplied and measured. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Absolute natural-selector no-go: \textbf{\statusProven{}}
+
+\item 
+Complete relational-frame theorem: \textbf{\statusProven{}}
+
+\item 
+Replacement of every FIN absolute selector claim: \textbf{\statusModerate{}}
+
+\item 
+Internal absolute direction from present scalar data: \textbf{\statusRefuted{}}
+
+\item 
+Estimated probability that relational reformulation closes the physical selector problem: \(0.75\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(6/10\)
+
+\item 
+Time: 1–3 months for observable-by-observable rewriting
+
+\item 
+Dependencies: Program 9's apparatus model and Program 5's dynamics
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 3 — Dimensional covariance, RG, and modular time}
+
+\section{1. Motivation}
+
+FIN is dimensionless. The program tests whether heat asymptotics, zeta regularization, renormalization, or modular flow can create action, length, time, mass, and energy without inserting units by hand.
+
+\textbf{Research hypothesis.} These constructions can organize relative scales but cannot select a nonzero dimensionful standard from invariant input. \textbf{\statusStrong{}}
+
+The expected negative theorem has high foundational value: it prevents hidden unit insertion. Estimated success probability \(0.95\), impact \(9/10\), difficulty \(7/10\), time two to six months, with Program 4 providing any future refinement needed to reopen the question.
+
+\section{2. Background}
+
+A physical quantity transforms under the positive unit-rescaling group
+
+\[
+G=(\mathbb R_{>0})^r.
+\]
+
+Dimensionless spectra, ratios, entropies, graph labels, and phases lie in the trivial representation. A nonzero length, time, or action lies in a nontrivial one-dimensional representation.
+
+Heat kernels and zeta functions extract asymptotic information only from a family with a scale regime. Renormalization requires a coarse-graining map and reference condition. Tomita–Takesaki flow requires a von Neumann algebra and faithful state.
+
+\section{3. Mathematical formulation}
+
+Let \(X\) be the total dimensionless FIN input and \(V_\chi\) the one-dimensional representation with character \(\chi\ne1\). The source question is whether a natural equivariant map
+
+\[
+F:X\longrightarrow V_\chi\setminus\{0\}
+\]
+
+exists.
+
+For a calibrated completion, use independent dimensions action–length–time and ask for the minimum number of charged scales spanning
+
+\[
+[\hbar_*]=(1,0,0),\quad
+[\ell_*]=(0,1,0),\quad
+[\tau_*]=(0,0,1).
+\]
+
+\section{4. Research methodology}
+
+The program used:
+
+\begin{enumerate}
+\item 
+a representation-theoretic equivariance proof;
+
+\item 
+exact rank tests for one, two, and three calibration sources;
+
+\item 
+exhaustive integer-weight enumeration of \(15\,624\) receiver monomials;
+
+\item 
+heat-dimension and zeta-determinant calculations on the shifted strict spectrum;
+
+\item 
+two exact Gaussian coarse-graining maps;
+
+\item 
+an algebraic audit of modular time on \(\mathbb C^{12}\) and \(M_{12}(\mathbb C)\).
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 4 — dimensional-source obstruction.} If \(G\) acts trivially on \(X\) and through nontrivial \(\chi\) on \(V_\chi\), every equivariant map \(F:X\to V_\chi\) is zero. \textbf{\statusProven{}}
+
+\textbf{Proof.} For every \(g\),
+
+\[
+F(x)=F(gx)=gF(x)=\chi(g)F(x).
+\]
+
+Choose \(g\) with \(\chi(g)\ne1\). Then \(F(x)=0\). \(\square\)
+
+Thus Shannon numbers, eigenvalue ratios, phases, determinants, and dimensionless couplings cannot naturally output a nonzero SI-valued quantity. \textbf{\statusProven{}}
+
+Three independent calibrations define
+
+\[
+E_*=\frac{\hbar_*}{\tau_*},\qquad
+p_*=\frac{\hbar_*}{\ell_*},\qquad
+c_*=\frac{\ell_*}{\tau_*},\qquad
+m_*=\frac{\hbar_*\tau_*}{\ell_*^2}.
+\]
+
+Their weight matrix has rank three. Removing any one leaves at least one of action, length, time, energy, or mass underdetermined. \textbf{\statusProven{}}
+
+This is a minimal generic calibration package, not a proof that nature supplies those values from FIN.
+
+\section{6. Proof attempts}
+
+For \(A=K_s-\lambda_{\min}I\ge0\),
+
+\[
+Z(t)=\operatorname{Tr}e^{-tA},\qquad
+d_s(t)=\frac{2t\,\operatorname{Tr}(Ae^{-tA})}{Z(t)}.
+\]
+
+Every finite matrix satisfies \(d_s(t)\to0\) as \(t\downarrow0\), and with a zero mode also as \(t\to\infty\). Its finite zeta function is entire and has no Weyl pole. \textbf{\statusProven{}} A transient heat dimension is therefore not an emergent physical dimension.
+
+Dimensional transmutation has the form
+
+\[
+\Lambda_{\rm RG}=\mu
+\exp\!\left[-\int^g\frac{dg'}{\beta(g')}\right].
+\]
+
+It converts a coupling specified at reference scale \(\mu\) into another scale; it does not eliminate \(\mu\). \textbf{\statusProven{}}
+
+On the commutative algebra \(\mathbb C^{12}\), every faithful state is tracial and modular flow is trivial. On \(M_{12}\), a supplied state \(\rho_\beta\propto e^{-\beta K}\) gives
+
+\[
+\sigma_t^\rho(A)=e^{-it\beta K}Ae^{it\beta K},
+\]
+
+but arbitrary \(\beta\) rescales the clock. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+Three graph families can agree at \(N=12\) while using \(A_N\), \(N^2A_N\), or \(N^4A_N\); the first nonzero gaps then tend to zero, a constant, or infinity. \textbf{\statusProven{}} The finite spectrum cannot choose a scaling orbit representative.
+
+A code that returns “one unit” does not solve the problem: under a change from metres to centimetres the physical numerical value must transform, while an invariant algorithm receives unchanged input. \textbf{\statusRefuted{}}
+
+An RG blocking rule is not encoded by \(K\). Decimation and pair averaging are equally definable and yield different effective operators. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+The exhaustive weight search found zero weight-one monomials among \(15\,624\) products of six weight-zero receivers. Rank for one, two, and three independent calibration scales was \(1,2,3\). \textbf{\statusProven{}}
+
+The shifted strict spectrum has a maximum transient heat dimension about \(1.09178\) near \(t=20.69\), but zero ultraviolet and infrared limits. \textbf{\statusProven{}}
+
+For \(A=K_s+0.8I\), exact Gaussian decimation and normalized pair averaging produced effective precision matrices separated by Frobenius distance \(2.47996\). Scheme independence is absent at this finite stage. \textbf{\statusProven{}}
+
+\section{9. Literature comparison}
+
+Zeta regularization defines determinants after an operator scale is given; see \href{https://doi.org/10.1007/BF01626516}{Hawking}. The \href{https://arxiv.org/abs/hep-th/9606001}{spectral action} explicitly contains its cutoff. Wilsonian RG explicitly begins with a coarse-graining and scale convention; see \href{https://doi.org/10.1016/0370-1573(74)90023-4}{Wilson and Kogut}. The thermal-time proposal of \href{https://arxiv.org/abs/gr-qc/9406019}{Connes and Rovelli} presupposes an algebra and state. These frameworks offer conditional physicalization tools, not an exception to the equivariance theorem.
+
+\section{10. Final conclusions}
+
+No internal nonzero physical unit can be generated from the current dimensionless invariant core. \textbf{\statusProven{}}
+
+A calibrated theory can be built after supplying three independent action–length–time scales or an equivalent rank-three package. \textbf{\statusProven{}}
+
+Heat, zeta, RG, and modular constructions may become useful only after a refinement, state, blocking prescription, and calibration are supplied. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Equivariant dimensional-source no-go: \textbf{\statusProven{}}
+
+\item 
+Generic rank-three calibration package: \textbf{\statusProven{}}
+
+\item 
+Absolute modular clock from the current core: \textbf{\statusRefuted{}}
+
+\item 
+FIN-native dimensional transmutation after a new refinement: \textbf{\statusSpeculative{}}
+
+\item 
+Probability that current data alone determine a unit: \(0\)
+
+\item 
+Probability that a calibrated extension is mathematically coherent: \(0.95\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(7/10\)
+
+\item 
+Time: 2–6 months for a complete unit-covariant formalization
+
+\item 
+Dependencies: Programs 4, 6, and 9
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 4 — Refinement, continuum, causality, and Lorentz structure}
+
+\section{1. Motivation}
+
+A physical theory needs a controlled large-system or continuum limit. The isolated twelve-point operator could be a discretization of many inequivalent objects, so the program asks whether FIN itself selects a refinement, propagation law, causal order, or Lorentzian principal symbol.
+
+\textbf{Research hypothesis.} A continuum can be constructed after adding a refinement package, but no unique limit follows from the \(C_{12}\) snapshot. \textbf{\statusStrong{}}
+
+The target theorem would have the highest physical impact, \(10/10\), difficulty \(10/10\), a 6–24 month horizon, and an estimated \(0.25\) probability for a natural refinement and \(0.10\) for a causal Lorentzian limit.
+
+\section{2. Background}
+
+Discrete Laplacians can converge to continuum Laplace operators when meshes, embeddings, measures, and normalizations are specified. Strong-resolvent or Mosco convergence then transports spectra and semigroups. None of these data is contained in one finite matrix.
+
+Lorentzian physics additionally needs a hyperbolic local principal symbol, a time orientation, and a causal interpretation. The inertia of a global matrix is not a spacetime metric signature.
+
+\section{3. Mathematical formulation}
+
+A sufficient target object is a sequence
+
+\[
+(\mathcal A_N,H_N,D_N,\iota_N,a_N,\tau_N,\Gamma_N)
+\]
+
+with refinement maps \(\iota_N\), spatial and temporal scales \(a_N,\tau_N\), measures, an orientation datum \(\Gamma_N\), controlled locality, and a declared convergence topology.
+
+A FIN-native theorem would need to derive parameter running for at least \(\omega_N,\beta_N,\eta_N\), the diagonal/\allowbreak{}normalization convention, and the measure.
+
+\section{4. Research methodology}
+
+The program used:
+
+\begin{enumerate}
+\item 
+a nonuniqueness construction for finite prefixes;
+
+\item 
+the cycle Laplacian as a positive convergence control;
+
+\item 
+mutually incompatible extensions agreeing exactly at \(N=12\);
+
+\item 
+low-momentum regression for \(L_N\) and \(\sqrt{L_N}\);
+
+\item 
+short-time propagation tests for the strict long-range matrix;
+
+\item 
+algebraic separation of matrix inertia from Lorentz signature.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 5 — single-snapshot obstruction.} A fixed finite operator is compatible with infinitely many refinement sequences having mutually inequivalent limits or no limit. \textbf{\statusProven{}}
+
+\textbf{Proof.} Keep \(D_{12}\) fixed. For \(N>12\), choose cycle Laplacians converging to \(S^1\), grid Laplacians converging to higher-dimensional tori, direct sums converging to disconnected spaces, or an unbounded oscillating sequence. Their common finite member imposes no asymptotic relation. \(\square\)
+
+For the cycle Laplacian,
+
+\[
+\lambda_k(L_N)=4\sin^2(\pi k/N),
+\]
+
+and \(N^2L_N\) converges spectrally at fixed \(k\) to the unit-circumference circle Laplacian with eigenvalues \((2\pi k)^2\). \textbf{\statusProven{}}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.093\textwidth}p{0.283\textwidth}p{0.242\textwidth}p{0.242\textwidth}@{}}
+\toprule
+\textbf{\(N\)} & \textbf{relative error, \(k=1\)} & \textbf{\(k=2\)} & \textbf{\(k=3\)} \\
+\midrule
+\endhead
+12 & \(-2.264\%\) & \(-8.811\%\) & \(-18.943\%\) \\
+24 & \(-0.570\%\) & \(-2.264\%\) & \(-5.036\%\) \\
+48 & \(-0.143\%\) & \(-0.570\%\) & \(-1.279\%\) \\
+96 & \(-0.0357\%\) & \(-0.143\%\) & \(-0.321\%\) \\
+192 & \(-0.00892\%\) & \(-0.0357\%\) & \(-0.0803\%\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+This proves that a continuum is possible after the missing data are supplied, not that FIN selects them.
+
+\section{6. Proof attempts}
+
+Two equally simple strict-profile continuations agree at \(N=12\): fixed lattice parameters, and running parameters preserving physical wavelength and damping length,
+
+\[
+\omega_N=\omega_{12}\frac{12}{N},\qquad
+\beta_N=\beta_{12}\left(\frac{12}{N}\right)^\eta.
+\]
+
+At fixed physical separation \(x=1/4\), the first tends toward zero with oscillations while the second stays at \(0.0914286\). \textbf{\statusProven{}} No canonicality argument selected one.
+
+Low-momentum fits gave power \(1.999999\) for \(L_N\) and \(0.9999996\) for \(\sqrt{L_N}\). The former suggests diffusive/\allowbreak{}Schrödinger \(z=2\); the latter wave-like \(z=1\). The spatial operator alone does not select temporal order or dynamic exponent. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+For strict \(K_{ij}\ne0\) at every cyclic separation on \(C_{12}\),
+
+\[
+e^{-itK}_{ij}=-itK_{ij}+O(t^2).
+\]
+
+Every vertex therefore acquires nonzero amplitude at arbitrarily small time; there is no exact finite causal cone. \textbf{\statusProven{}}
+
+Orienting all cycle edges produces a directed closed loop, not an acyclic causal order. \textbf{\statusProven{}}
+
+The seven-negative/\allowbreak{}five-positive inertia of \(K_s\) lives in Fourier-mode space. A Lorentz metric is a local field whose principal symbol has one timelike direction at every point. Equating them is a category error. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+The first gap of \(L_N\), \(N^2L_N\), and \(N^4L_N\) illustrates three incompatible scalings. At \(N=192\) the respective gaps are
+
+\[
+0.00107083,\qquad 0.274131,\qquad 70.1776.
+\]
+
+All three constructions contain exactly the same unscaled \(L_{12}\) at the reference size when normalization is declared only afterward. \textbf{\statusProven{}}
+
+The farthest strict coupling is small but nonzero:
+
+\[
+K_s(6)/K_s(1)\approx0.0236.
+\]
+
+This may permit approximate long-range propagation bounds in a justified family, but it cannot yield exact microcausality on the present graph. \textbf{\statusModerate{}}
+
+\section{9. Literature comparison}
+
+Discrete-to-continuum Laplacian convergence requires explicit triangulations and normalization; see \href{https://doi.org/10.2307/2373615}{Dodziuk} and modern graph-like convergence work by \href{https://arxiv.org/abs/1704.00064}{Post and Simmer}. Approximate cones for local quantum systems descend from \href{https://doi.org/10.1007/BF01645779}{Lieb and Robinson}. Causal order determines at most conformal Lorentz geometry under strong manifold hypotheses; see \href{https://doi.org/10.1063/1.523436}{Malament}. FIN currently supplies none of those hypotheses uniquely.
+
+\section{10. Final conclusions}
+
+A positive continuum construction exists as a conditional mathematical route. \textbf{\statusProven{}}
+
+The present finite object neither selects the refinement nor supplies exact causality, Lorentz signature, time orientation, or physical scale. \textbf{\statusProven{}}
+
+The next admissible high-value theorem is a refinement functor with running parameters and convergence guarantees, not another interpretation of the \(N=12\) inertia. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Single-snapshot continuum obstruction: \textbf{\statusProven{}}
+
+\item 
+Conditional convergence of normalized cycle Laplacians: \textbf{\statusProven{}}
+
+\item 
+Exact causal cone on current strict matrix: \textbf{\statusRefuted{}}
+
+\item 
+FIN-native natural refinement: \textbf{\statusSpeculative{}}
+
+\item 
+Lorentzian scaling limit: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of a useful refinement theorem: \(0.25\)
+
+\item 
+Probability of a causal Lorentzian limit: \(0.10\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(10/10\)
+
+\item 
+Time: 6–24 months
+
+\item 
+Dependencies: Programs 3, 7, 8, 11–14, and explicit \(N\)-dependent data
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 5 — Adaptive bootstrap and dynamical identifiability}
+
+\section{1. Motivation}
+
+FIN includes adaptive or self-referential language. The program asks whether the proposed learning law is genuinely variational, whether its fixed points select the strict kernel, and whether observed dynamics identify a unique update law rather than merely fit one.
+
+\textbf{Research hypothesis.} A clean Lyapunov theorem exists for an externally fixed covariance, but feedback covariance introduces an omitted derivative and destroys automatic gradient structure. \textbf{\statusStrong{}}
+
+Expected impact was \(8/10\), difficulty \(8/10\), time 3–12 months, with estimated success \(0.65\) for a conditional theorem and \(0.25\) for a noncircular FIN-specific potential.
+
+\section{2. Background}
+
+For self-adjoint \(K\), a common matrix learning law is
+
+\[
+\dot K=-\Pi\bigl(V'(K)-C\bigr),
+\]
+
+where \(\Pi\) projects onto an admissible tangent space, \(V\) is a scalar spectral potential, and \(C\) is a target covariance. If \(C\) depends on \(K\), the system is a feedback law rather than the gradient of the fixed-target objective unless an integrability condition holds.
+
+\section{3. Mathematical formulation}
+
+For fixed \(C\), define
+
+\[
+\mathcal F_C(K)=\operatorname{Tr}V(K)-\operatorname{Tr}(KC).
+\]
+
+For feedback \(C=C(K)\), define the one-form
+
+\[
+\alpha_K(H)=\operatorname{Tr}\!\bigl(C(K)H\bigr).
+\]
+
+The central questions are whether \(\alpha\) is exact, whether a Lyapunov function is determined before seeing the target kernel, and whether odd-sector instability can break reflection symmetry.
+
+\section{4. Research methodology}
+
+The program:
+
+\begin{enumerate}
+\item 
+differentiated both fixed-target and feedback objectives;
+
+\item 
+derived the integrability condition for the covariance one-form;
+
+\item 
+constructed a polynomial interpolation counterexample to potential uniqueness;
+
+\item 
+decomposed the Jacobian into even and odd reflection sectors;
+
+\item 
+compared unitary and dissipative trajectories generated from the same spatial operator;
+
+\item 
+tested the standard pitchfork normal form as a conditional selector mechanism.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+For fixed \(C\),
+
+\[
+\nabla\mathcal F_C(K)=V'(K)-C,
+\]
+
+and projected gradient flow gives
+
+\[
+\frac{d\mathcal F_C}{dt}
+=-\|\Pi\nabla\mathcal F_C\|_F^2\le0.
+\]
+
+This is a valid Lyapunov theorem under a fixed covariance and orthogonal tangent projection. \textbf{\statusProven{}}
+
+If instead
+
+\[
+\widetilde{\mathcal F}(K)
+=\operatorname{Tr}V(K)-\operatorname{Tr}(K\,C(K)),
+\]
+
+then for a variation \(H\),
+
+\[
+D\widetilde{\mathcal F}_K[H]
+=\operatorname{Tr}\!\left[(V'(K)-C(K))H\right]
+-\operatorname{Tr}\!\left[K\,DC(K)[H]\right].
+\]
+
+Hence
+
+\[
+\nabla\widetilde{\mathcal F}
+=V'(K)-C(K)-DC(K)^*[K].
+\]
+
+The frequently written feedback law omits the final term and is not the gradient of this naive objective unless it vanishes. \textbf{\statusProven{}}
+
+More generally, a potential for \(C(K)\) exists locally only if its Jacobian is symmetric in the Frobenius pairing,
+
+\[
+\langle DC(K)[H_1],H_2\rangle
+=\langle H_1,DC(K)[H_2]\rangle.
+\]
+
+\textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+Suppose a desired fixed point \(K_*\) and commuting \(C_*\) are already known. On the finite spectrum of \(K_*\), polynomial interpolation can always choose \(V'\) so that
+
+\[
+V'(K_*)=C_*.
+\]
+
+Therefore existence of a fitted potential is not evidence that the potential predicts \(K_*\). \textbf{\statusProven{}} Predictivity requires \(V\) to be specified independently and validated on held-out operators or sizes.
+
+A reflection-equivariant law can undergo an odd-sector pitchfork only if its Jacobian has an odd eigenvalue crossing zero transversely and a stabilizing nonlinear coefficient. Center-manifold theory then yields
+
+\[
+\dot m=a(\mu-\mu_c)m-bm^3+O(m^5).
+\]
+
+The generic conditional theorem is valid, but the required FIN Jacobian crossing has not been derived. \textbf{\statusSpeculative{}}
+
+\section{7. Counterexamples}
+
+If the initial condition is exactly reflection even and the vector field is equivariant, uniqueness of ordinary differential equations keeps the trajectory in the even fixed subspace. It cannot generate orientation spontaneously at finite deterministic size. \textbf{\statusProven{}}
+
+At finite equilibrium and zero field, symmetry pairs \(+m\) and \(-m\), so \(\langle m\rangle=0\). Noise selects random realized branches, not a canonical mathematical sign. \textbf{\statusProven{}}
+
+A potential reverse-engineered after observing \(K_s\) is circular and has no out-of-sample content. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+For the normal form \(\dot m=m-m^3+h\), exact symmetric initialization remains at \(m=0\) when \(h=0\); initial values \(\pm10^{-9}\) converge to \(\pm1\), and fields \(\pm10^{-4}\) select corresponding branches. \textbf{\statusStrong{}}
+
+The same graph operator also permits unitary and diffusive flows. In the executed comparison, the optimized position distributions were strongly distinguishable, yet both were compatible with the same frozen spectrum. This confirms that the update/\allowbreak{}evolution law is independent data, a question developed fully in Programs 11–20. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+Matrix learning flows resemble Oja-type adaptive dynamics; the original principal-component rule is \href{https://doi.org/10.1007/BF00275687}{Oja 1982}. Equivariant bifurcation theory rigorously classifies branch orbits, but does not choose one without a state or perturbation. The FIN-specific unresolved point is provenance of \(V\), \(C(K)\), and the odd tangent source.
+
+\section{10. Final conclusions}
+
+The fixed-covariance law has a valid variational interpretation. \textbf{\statusProven{}}
+
+The feedback law is not automatically the gradient of the advertised objective; an adjoint derivative or an independently exact covariance one-form is required. \textbf{\statusProven{}}
+
+Neither a fitted potential nor a symmetric pitchfork uniquely selects the strict kernel or orientation. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Fixed-target Lyapunov theorem: \textbf{\statusProven{}}
+
+\item 
+Automatic feedback-gradient interpretation: \textbf{\statusRefuted{}}
+
+\item 
+Post-hoc potential as evidence of prediction: \textbf{\statusRefuted{}}
+
+\item 
+FIN-specific odd bifurcation: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of an independently sourced FIN potential: \(0.25\)
+
+\item 
+Probability of a useful conditional adaptive model: \(0.65\)
+
+\item 
+Impact: \(8/10\)
+
+\item 
+Difficulty: \(8/10\)
+
+\item 
+Time: 3–12 months
+
+\item 
+Dependencies: Programs 2, 8, 9, and a fully typed covariance law
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 6 — Information thermodynamics and the open-system bridge}
+
+\section{1. Motivation}
+
+The repository uses information language, but Shannon entropy is dimensionless while thermodynamic entropy, heat, and work require a physical model. This program asks for the smallest rigorous information-to-physics bridge and tests whether it can avoid arbitrary constants.
+
+\textbf{Research hypothesis.} Relative entropy becomes thermodynamic only after adding a Hamiltonian, temperature, bath, and allowed process; no unique energetic bridge follows from a probability distribution alone. \textbf{\statusStrong{}}
+
+Estimated success probability for a conditional bridge was \(0.90\), for a FIN-specific prediction \(0.10\), impact \(7/10\), difficulty \(6/10\), and time 2–6 months.
+
+\section{2. Background}
+
+Shannon entropy
+
+\[
+H(p)=-\sum_i p_i\log p_i
+\]
+
+measures uncertainty in nats. Thermodynamic entropy is \(S_{\rm th}=k_BH\) only for a declared physical ensemble and convention. A Gibbs model adds energies \(E_i\) and inverse temperature \(\beta\),
+
+\[
+p_i=Z^{-1}e^{-\beta E_i}.
+\]
+
+Landauer's principle concerns a process coupling a memory to a thermal reservoir, not an algebraic property of \(H(p)\).
+
+\section{3. Mathematical formulation}
+
+A minimum thermodynamic completion is
+
+\[
+(\mathcal H,H,\rho,\mathcal R,H_R,\beta,U,\mathcal O),
+\]
+
+consisting of system Hilbert space and Hamiltonian, state, reservoir, reservoir Hamiltonian and temperature, an allowed global process, and observables.
+
+The identification question is whether \(p\) or \(K\) uniquely determines any member of this tuple.
+
+\section{4. Research methodology}
+
+The program used:
+
+\begin{enumerate}
+\item 
+inverse Gibbs construction to test uniqueness;
+
+\item 
+scale-orbit invariance under \(H\mapsto cH,\beta\mapsto\beta/c\);
+
+\item 
+an exact two-level erasure-by-SWAP calculation;
+
+\item 
+relative-entropy decomposition of heat;
+
+\item 
+comparison with Jaynes inference, KMS equilibrium, quantum resource theories, and modular entropy;
+
+\item 
+open-system counterexamples.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 6 — Gibbs nonidentifiability.} Every strictly positive finite probability vector is a Gibbs distribution for infinitely many energy scales. \textbf{\statusProven{}}
+
+\textbf{Proof.} For any \(\theta>0\) and constant \(C\), set
+
+\[
+E_i=-\theta\log p_i+C,\qquad \beta=\theta^{-1}.
+\]
+
+Then \(e^{-\beta E_i}=e^{-\beta C}p_i\), and normalization recovers \(p_i\). Varying \(\theta\) changes all energy gaps. \(\square\)
+
+Thus neither temperature nor energy is determined by Shannon data.
+
+For an initially uncorrelated system and Gibbs reservoir, global unitary evolution gives the exact finite Landauer identity
+
+\[
+\beta Q
+=\Delta S
++I(S':R')
++D(\rho_R'\|\rho_R),
+\]
+
+where \(\Delta S=S(\rho_S)-S(\rho_S')\) is the system entropy reduction and \(Q\) is heat deposited in the reservoir. \textbf{\statusProven{}} The inequality \(\beta Q\ge\Delta S\) follows from nonnegativity of mutual and relative entropy.
+
+\section{6. Proof attempts}
+
+Jaynes' maximum-entropy principle derives a Gibbs family after the measured constraints and their physical observables are specified. It does not determine which operator is energy or the numerical energy unit. \textbf{\statusProven{}}
+
+KMS equilibrium similarly requires a \(C^*\)-dynamical system \((\mathcal A,\alpha_t)\); entropy alone supplies neither \(\alpha_t\) nor calibrated time. \textbf{\statusProven{}}
+
+Modular Hamiltonians \(-\log\rho\) are dimensionless. Calling them energy requires a temperature or time normalization. \textbf{\statusProven{}}
+
+Thermodynamic resource theory can make state conversion operationally precise, but its free states and allowed operations are additional axioms. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+Under
+
+\[
+H\mapsto cH,\qquad \beta\mapsto\beta/c,
+\]
+
+the Gibbs state is unchanged. Every equilibrium probability and Shannon entropy is therefore compatible with a continuous orbit of energy/\allowbreak{}temperature calibrations. \textbf{\statusProven{}}
+
+A pure closed state evolves unitarily with constant von Neumann entropy while the Shannon entropy of one chosen measurement basis can vary. Measurement uncertainty is not automatically thermodynamic entropy production. \textbf{\statusProven{}}
+
+The statement “one bit has energy \(k_BT\ln2\)” is incomplete: the bound concerns erasure at a specified temperature and ideal limit, not possession of a bit in isolation. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+A two-level system/\allowbreak{}reservoir SWAP at \(\beta=1.3\) yielded
+
+\[
+\Delta S=0.1737242,\qquad
+Q=0.2858350,\qquad
+D(\rho_R'\|\rho_R)=0.1978613,
+\]
+
+with zero final mutual information. The residual in
+
+\[
+\beta Q-\Delta S-D
+\]
+
+was \(8.33\times10^{-17}\). \textbf{\statusProven{}}
+
+The Gibbs scale-orbit test gave zero numerical difference after simultaneous \(H\) and \(\beta\) rescaling. \textbf{\statusProven{}}
+
+These calculations validate the conditional thermodynamic identity while demonstrating that its physical scale came from supplied \(\beta\) and energy gaps.
+
+\section{9. Literature comparison}
+
+The information measure is due to \href{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}{Shannon}; the maximum-entropy statistical construction to \href{https://doi.org/10.1103/PhysRev.106.620}{Jaynes}. A rigorous finite-size Landauer equality and corrections are given by \href{https://arxiv.org/abs/1306.4352}{Reeb and Wolf}. Quantum thermodynamic resource theories, such as \href{https://arxiv.org/abs/1305.5278}{Brandão et al.}, begin from an explicit Hamiltonian and bath. FIN currently offers an information representation, not an equivalent thermodynamic model.
+
+\section{10. Final conclusions}
+
+Shannon information can participate in physics only through an operational thermodynamic tuple. \textbf{\statusProven{}}
+
+No arbitrary constant is needed inside the dimensionless relative-entropy identity, but converting it to joules requires a supplied energy/\allowbreak{}temperature calibration. \textbf{\statusProven{}}
+
+The best bridge is conditional and falsifiable; it is not an internal emergence of temperature or energy. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Gibbs nonidentifiability theorem: \textbf{\statusProven{}}
+
+\item 
+Finite Landauer identity under stated assumptions: \textbf{\statusProven{}}
+
+\item 
+Shannon entropy as physical entropy without a model: \textbf{\statusRefuted{}}
+
+\item 
+Coherent calibrated FIN thermodynamics: \textbf{\statusModerate{}}
+
+\item 
+Unique FIN temperature or energy scale: \textbf{\statusRefuted{}}
+
+\item 
+Probability of a useful conditional thermodynamic model: \(0.65\)
+
+\item 
+Probability of a new FIN-specific thermodynamic prediction: \(0.10\)
+
+\item 
+Impact: \(7/10\)
+
+\item 
+Difficulty: \(6/10\)
+
+\item 
+Time: 2–6 months
+
+\item 
+Dependencies: Programs 3, 11–17, and an explicit bath
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 7 — Repaired noncommutative geometry, gauge fields, and fermions}
+
+\section{1. Motivation}
+
+The repository invokes a spectral triple, while genuine noncommutative geometry can produce metric, gauge, and fermionic structures only when its axioms and representations are satisfied. This program tests the minimal tuple and designs the smallest honest repair.
+
+\textbf{Research hypothesis.} The naive vertex triple fails standard real/\allowbreak{}even conditions; a doubled graph triple is feasible but does not uniquely generate nonabelian gauge or fermion content. \textbf{\statusStrong{}}
+
+Estimated success \(0.70\) for a repaired graph triple, below \(0.05\) for unique physical gauge content, impact \(8/10\), difficulty \(8/10\), time 4–12 months.
+
+\section{2. Background}
+
+A finite spectral triple \((\mathcal A,H,D)\) needs a represented algebra, Hilbert space, and self-adjoint Dirac operator. A real/\allowbreak{}even triple additionally needs a real structure \(J\), grading \(\gamma\), KO signs, first-order condition, and usually orientability and duality constraints.
+
+The tuple
+
+\[
+(\mathbb C^{12},\mathbb C^{12},K_s)
+\]
+
+is a finite spectral triple in the weak sense: commutators are bounded and the resolvent is compact. \textbf{\statusProven{}} Those properties are automatic in finite dimension and do not establish the stronger geometry.
+
+\section{3. Mathematical formulation}
+
+Let \(\mathcal A=\mathbb C^{12}\) act diagonally on \(H=\mathbb C^{12}\), \(D=K_s\), and let \(J\) be componentwise conjugation. Test
+
+\[
+[[D,a],Jb^*J^{-1}]=0
+\]
+
+and seek \(\gamma^2=1\) with \([\gamma,a]=0\) and \(\{D,\gamma\}=0\).
+
+Then compare with the doubled incidence candidate
+
+\[
+H_{\rm graph}=\ell^2(V)\oplus\ell^2(E),\qquad
+D_{\rm graph}=
+\begin{pmatrix}0&d^*\\ d&0\end{pmatrix},
+\qquad
+\gamma=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+
+\section{4. Research methodology}
+
+The program used:
+
+\begin{enumerate}
+\item 
+symbolic component formulas for the first-order condition;
+
+\item 
+exhaustive point-projection residuals;
+
+\item 
+a graph-coloring contradiction for the grading;
+
+\item 
+unitary-group analysis of \(\mathbb C^{12}\);
+
+\item 
+a constructive doubled vertex/\allowbreak{}edge proposal;
+
+\item 
+a provenance test separating valid added axioms from consequences of \(K_s\).
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+For diagonal \(a,b\),
+
+\[
+[[D,a],Jb^*J^{-1}]_{ij}
+=D_{ij}(a_j-a_i)(b_j-b_i)
+\]
+
+up to the immaterial conjugation convention. Choosing point projections exposes a nonzero entry whenever \(D_{ij}\ne0\). \textbf{\statusProven{}}
+
+The executed maximum Frobenius residual over point projections was \(1.037269\), so the naive real first-order condition fails. \textbf{\statusRefuted{}}
+
+For an even grading, multiplicity-one diagonal representation forces
+
+\[
+\gamma=\operatorname{diag}(\gamma_i),\qquad \gamma_i=\pm1.
+\]
+
+Then
+
+\[
+\{D,\gamma\}_{ij}=D_{ij}(\gamma_i+\gamma_j).
+\]
+
+Every off-diagonal strict entry is nonzero, so every pair would need opposite signs. Three vertices already give a contradiction. No compatible even grading exists on this representation. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+The doubled incidence construction has a valid formal grading and a Laplace-type square. It creates room for a nontrivial real structure and differential calculus. \textbf{\statusStrong{}} However, first-order, orientability, distance, and role of the long-range kernel must be checked on the completed representation.
+
+A precise research target is whether a stable filter \(f\) exists with
+
+\[
+K_s=f(D_{\rm graph}^2)
+\]
+
+under a refinement compatible with Program 4. Even if it exists, \(f\) and the graph calculus need an independent selection principle. \textbf{\statusModerate{}}
+
+\section{7. Counterexamples}
+
+The unitary group of the current algebra is
+
+\[
+U(\mathbb C^{12})=U(1)^{12},
+\]
+
+which is abelian. It cannot contain derived \(SU(2)\) or \(SU(3)\) factors. \textbf{\statusProven{}}
+
+Nonabelian gauge fields require matrix-algebra summands and a bimodule. Chiral fermions require left/\allowbreak{}right representations, KO dimension, grading, and internal Dirac/\allowbreak{}Yukawa data. The twelve eigenvalues do not determine those choices. \textbf{\statusProven{}}
+
+Calling \(K_s\) a Dirac operator does not repair failed axioms. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+The first-order residual scan and grading contradiction were exact finite tests. A diagonal choice of \(D\) makes the first-order residual zero, but then all commutators with \(\mathcal A\) vanish and the induced metric is trivial or infinite between distinct points. \textbf{\statusProven{}}
+
+This establishes a useful repair constraint: removing off-diagonal structure solves one axiom only by destroying the geometry.
+
+\section{9. Literature comparison}
+
+Finite graph spectral triples are legitimate but depend on the selected calculus; see \href{https://arxiv.org/abs/hep-th/9708010}{Requardt}. Finite real triples can generate Yang–Mills/\allowbreak{}Higgs sectors after algebra and bimodule data are supplied; see \href{https://arxiv.org/abs/hep-th/9701081}{Krajewski}. The \href{https://arxiv.org/abs/hep-th/9606001}{spectral action} is a conditional construction, not a proof that the current FIN tuple satisfies real/\allowbreak{}even axioms.
+
+\section{10. Final conclusions}
+
+The weak finite spectral triple is mathematically valid but physically underpowered. \textbf{\statusProven{}}
+
+The naive real/\allowbreak{}even FIN triple is falsified. \textbf{\statusRefuted{}}
+
+A repaired doubled graph geometry is a tractable extension, but any nonabelian gauge group or fermion sector will be additional structured data unless a uniqueness theorem is found. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Weak finite spectral-triple status: \textbf{\statusProven{}}
+
+\item 
+Naive first-order and even-grading claims: \textbf{\statusRefuted{}}
+
+\item 
+Feasibility of a repaired graph triple: \textbf{\statusModerate{}}
+
+\item 
+Unique Standard-Model-like content from \(K_s\): \textbf{\statusSpeculative{}}
+
+\item 
+Probability of a rigorous repaired triple: \(0.70\)
+
+\item 
+Probability of uniquely forced nonabelian gauge/\allowbreak{}fermion content: \(0.05\)
+
+\item 
+Impact: \(8/10\)
+
+\item 
+Difficulty: \(8/10\)
+
+\item 
+Time: 4–12 months
+
+\item 
+Dependencies: Programs 4, 8, and a new algebra/\allowbreak{}bimodule
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 8 — Variational stability and the Osterwalder–Schrader gate}
+
+\section{1. Motivation}
+
+A genuine field theory requires a bounded action, a probability measure or quantum phase, equations of motion, and eventually a route from Euclidean correlators to unitary observables. This program tests whether the strict matrix can already serve as a quadratic action and what additional structure is minimally necessary.
+
+\textbf{Research hypothesis.} The unshifted strict quadratic form is unstable; a positive completion is easy but nonunique, and reflection positivity is undefined until a temporal theory is supplied. \textbf{\statusStrong{}}
+
+Estimated success \(0.80\) for a stable finite model, \(0.15\) for an OS-positive continuum theory, impact \(9/10\), difficulty \(9/10\), time 6–18 months.
+
+\section{2. Background}
+
+For a real field \(\phi\in\mathbb R^{12}\), the Gaussian Euclidean action
+
+\[
+S_2[\phi]=\frac12\phi^TA\phi
+\]
+
+defines a normalizable measure only when \(A>0\) after zero-mode treatment. A field theory additionally needs interactions, a temporal lattice or manifold, reflection, locality/\allowbreak{}control, and a continuum limit.
+
+The Osterwalder–Schrader reconstruction theorem converts Euclidean correlation functions to a Hilbert-space quantum theory only after regularity, Euclidean covariance, symmetry, clustering, and reflection positivity.
+
+\section{3. Mathematical formulation}
+
+Test the family
+
+\[
+A_\mu=K_s+\mu I,
+\qquad
+S_{\mu,\lambda}[\phi]
+=\frac12\phi^TA_\mu\phi
++\lambda\sum_i\phi_i^4.
+\]
+
+A graph-Laplacian alternative is
+
+\[
+A_{\rm M}=sI-K_s,
+\qquad s=\sum_j(K_s)_{ij}.
+\]
+
+For stress–energy, one would need a metric-dependent family \(S[\phi;g]\) and define a response by functional differentiation with respect to \(g\).
+
+\section{4. Research methodology}
+
+The program:
+
+\begin{enumerate}
+\item 
+computed the full inertia and stability threshold;
+
+\item 
+measured conditioning near the positive boundary;
+
+\item 
+compared scalar shifts with the Perron/\allowbreak{}Laplacian completion;
+
+\item 
+derived the dependence of observables on a metric family rather than one matrix value;
+
+\item 
+formulated an OS-positive product-theory target;
+
+\item 
+searched for counterexamples to uniqueness and direct physical interpretation.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+The strict matrix has
+
+\[
+\lambda_{\min}=-0.68187476238
+\]
+
+and seven negative eigenvalues. Therefore \(S_2=\phi^TK_s\phi/2\) is unbounded below along seven independent directions and its Gaussian integral diverges. \textbf{\statusProven{}}
+
+The shifted action is positive definite exactly when
+
+\[
+\mu>0.68187476238.
+\]
+
+\textbf{\statusProven{}} A quartic interaction with \(\lambda>0\) can bound the total finite-dimensional integral even when the quadratic term is indefinite, but the chosen interaction and phase structure are additional data.
+
+The Perron completion \(A_{\rm M}=sI-K_s\) is positive semidefinite because \(K_s\) is symmetric and entrywise positive off diagonal with row sum \(s\). It has the Dirichlet form
+
+\[
+\phi^TA_{\rm M}\phi
+=\frac12\sum_{ij}K_{ij}(\phi_i-\phi_j)^2.
+\]
+
+\textbf{\statusProven{}} This is a mathematically distinguished graph-Laplacian completion on \(C_{12}\), but its role as physical action is not selected by the original interpretation.
+
+\section{6. Proof attempts}
+
+A conditional Euclidean target is
+
+\[
+S_E[\phi]
+=\frac12\langle\phi,(-\Delta_\tau+A_{\rm M}+m^2)\phi\rangle
++\lambda\sum_{(\tau,i)}\phi_{\tau i}^4
+\]
+
+on a reflected temporal lattice. For the free part with \(A_{\rm M}+m^2>0\), standard transfer-matrix methods make reflection positivity plausible; the exact lattice measure and interactions still require proof. \textbf{\statusModerate{}}
+
+No theorem derives the temporal lattice, reflection plane, field representation, \(\lambda\), or continuum scaling from \(K_s\). \textbf{\statusProven{}}
+
+A spectral action does not solve selection because both its cutoff and test function are explicit inputs.
+
+\section{7. Counterexamples}
+
+A single value \(K(g_0)\) cannot determine stress–energy. The families
+
+\[
+K_1(g)=K_s,\qquad K_2(g)=K_s+(g-g_0)B
+\]
+
+agree at \(g_0\) but have arbitrary different derivatives \(0\) and \(B\). \textbf{\statusProven{}} Metric response requires a declared family, not only a matrix.
+
+Adding any \(\mu\) above threshold gives a stable Gaussian, so stability does not uniquely choose a mass or action. \textbf{\statusProven{}}
+
+Matrix inertia is not a Wick-rotated spacetime signature, and shifting negative modes is not a derivation of Lorentzian time. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+There are seven negative and five positive strict modes. Setting
+
+\[
+\mu=|\lambda_{\min}|+\varepsilon
+\]
+
+gave condition numbers
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{\(\varepsilon\)} & \textbf{\(\kappa(A_\mu)\)} \\
+\midrule
+\endhead
+0.001 & 2343.18 \\
+0.01 & 235.22 \\
+0.1 & 24.42 \\
+1 & 3.34 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The near-threshold theory is extremely sensitive to perturbations. \textbf{\statusStrong{}} A physically credible fit cannot place the shift near threshold without uncertainty propagation.
+
+\section{9. Literature comparison}
+
+The OS axioms and reconstruction are due to \href{https://doi.org/10.1007/BF01645738}{Osterwalder and Schrader}. Their theorem requires a hierarchy of Euclidean correlators with temporal reflection, not one spatial kernel. The spectral action of \href{https://arxiv.org/abs/hep-th/9606001}{Chamseddine and Connes} supplies a powerful conditional variational framework but explicitly introduces its cutoff and algebraic geometry.
+
+\section{10. Final conclusions}
+
+The unshifted strict kernel is not a stable Gaussian action. \textbf{\statusRefuted{}}
+
+Stable finite actions are easy to construct after a shift or quartic term, but they are nonunique. \textbf{\statusProven{}}
+
+Reflection positivity, stress–energy, and field-theoretic observables cannot yet be evaluated because the required temporal, metric, state, and refinement structures are absent. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Instability and shift threshold: \textbf{\statusProven{}}
+
+\item 
+Perron graph-Laplacian completion: \textbf{\statusProven{}}
+
+\item 
+Unique variational action selected by the kernel: \textbf{\statusRefuted{}}
+
+\item 
+Conditional OS-positive product theory: \textbf{\statusModerate{}}
+
+\item 
+FIN-native OS-positive continuum: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of a stable finite model: \(0.80\)
+
+\item 
+Probability of a genuine OS-positive continuum: \(0.15\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(9/10\)
+
+\item 
+Time: 6–18 months
+
+\item 
+Dependencies: Programs 3, 4, 7, and 11–20
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 9 — Calibrated predictive fingerprint and Bayesian experiment}
+
+\section{1. Motivation}
+
+The decisive transition from mathematics to physics is a risky, held-out prediction linked to a preparation and measurement protocol. This program seeks a dimensionless signature that survives unit calibration and an experiment that can distinguish competing dynamics generated from the same operator.
+
+\textbf{Research hypothesis.} A twelve-mode simulator can test FIN-specific spectral and dynamical fingerprints, but reproducing an engineered operator does not establish that FIN describes an external physical domain. \textbf{\statusStrong{}}
+
+Estimated success \(0.70\) for an executable simulator test, \(0.05\) for relevance to fundamental physics without a domain map, impact \(10/10\), difficulty \(7/10\), time 3–12 months.
+
+\section{2. Background}
+
+An operational theory specifies preparations, transformations, and measurement probabilities. A bare matrix has no empirical likelihood until mapped to this structure.
+
+To avoid arbitrary energy offsets and scales, spectral tests should use affine-invariant ratios. To avoid post-selection, calibration modes must be fixed first and the remaining modes treated as held out.
+
+\section{3. Mathematical formulation}
+
+Let sorted nondegenerate radial eigenvalues be \(\lambda_0,\ldots,\lambda_6\). Define an affine-normalized fingerprint
+
+\[
+x_j=\frac{\lambda_j-\lambda_{\min}}
+{\lambda_{\max}-\lambda_{\min}}.
+\]
+
+For dynamics, compare simple hypotheses
+
+\[
+\mathsf H_U:\ q_x(t)=|\langle x|e^{-itA}|0\rangle|^2,
+\qquad
+\mathsf H_D:\ p_x(t)=\langle x|e^{-tA}|0\rangle,
+\]
+
+when \(A\) is a positive Markov/\allowbreak{}Laplacian generator. A likelihood-ratio experiment is meaningful after preparation, clock, and site measurement are calibrated.
+
+\section{4. Research methodology}
+
+The program:
+
+\begin{enumerate}
+\item 
+computed affine-invariant strict and legacy spectral fingerprints;
+
+\item 
+fitted scale and offset using declared calibration information;
+
+\item 
+evaluated held-out normalized errors;
+
+\item 
+generated unitary and diffusive position distributions;
+
+\item 
+optimized a discrimination time under information criteria;
+
+\item 
+designed positive, negative, and apparatus-reflection controls;
+
+\item 
+separated simulator validation from claims about nature.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+If measured energies obey
+
+\[
+E_j=a\lambda_j+b,
+\qquad a>0,
+\]
+
+then all \(x_j\) are unchanged. \textbf{\statusProven{}} They are legitimate unit-free observables once the mode-to-mode correspondence is specified.
+
+The best affine legacy-to-strict spectral fit had scale \(0.109565\) and offset \(0.542413\). Its held-out normalized RMSE was \(0.273796\), with maximum error \(0.354079\). \textbf{\statusStrong{}} Thus a mere two-parameter calibration does not make the two kernel spectra empirically interchangeable.
+
+For independent observations generated under \(\mathsf H_U\), the expected log Bayes factor against \(\mathsf H_D\) is
+
+\[
+\mathbb E_U[\log B_{UD}]
+=nD_{\rm KL}(q\|p).
+\]
+
+This converts an operator comparison into a sample-size forecast under simple, fully specified hypotheses. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+The operational map can be stated as
+
+\[
+\mathcal M:
+\{\text{laboratory preparations, controls, outcomes}\}
+\longrightarrow
+\{\rho,\Phi_t,M_y\}.
+\]
+
+No spectral theorem constructs \(\mathcal M\). \textbf{\statusProven{}} It must be supplied and falsified independently.
+
+A candidate FIN-specific test requires at least two held-out spectral ratios or a full time trace not used for parameter fitting. One fitted frequency or one visual profile is never sufficient because scale and offset can absorb it. \textbf{\statusProven{}}
+
+Full process tomography near \(t=0\) would identify the calibrated generator; population-only one-time data generally do not. This motivates the multitime programs below.
+
+\section{7. Counterexamples}
+
+Any programmable simulator can be engineered to implement a chosen matrix. Agreement then validates the engineering model, not the claim that the same matrix governs an unrelated natural system. \textbf{\statusProven{}}
+
+The directional odd-current response is generic to even circulants once an odd control is added. Observing it alone does not uniquely validate FIN. \textbf{\statusProven{}}
+
+Clock error, mode permutation, disorder, dephasing, and flexible nuisance parameters can imitate or erase a nominal fingerprint. A valid test must preregister their ranges and retain held-out observables. \textbf{\statusStrong{}}
+
+\section{8. Numerical investigations}
+
+The normalized adjacent-gap fingerprints were
+
+\[
+g_s=(0.01860,0.04228,0.10168,0.16410,0.35135,0.32197),
+\]
+
+\[
+g_l=(0.37268,0.02033,0.08844,0.02948,0.10795,0.38110).
+\]
+
+Their incompatible order structure supplies a scale-free discriminator. \textbf{\statusStrong{}}
+
+In the executed unitary/\allowbreak{}diffusive comparison, an optimized dimensionless time \(t=6.77\) gave
+
+\[
+D_{\rm JS}=0.36293,\qquad
+D_{\rm KL}(q\|p)=1.39199.
+\]
+
+Under ideal independent sampling, eight observations give expected log Bayes factor exceeding ten. The unitary and diffusive position entropies were \(1.04034\) and \(2.45800\), and return probabilities \(0.60433\) and \(0.11069\). \textbf{\statusStrong{}}
+
+These figures are design diagnostics, not laboratory evidence; Programs 11–20 refine the protocol and nuisance analysis.
+
+\section{9. Literature comparison}
+
+Operational probabilistic theories make preparation and measurement primitives explicit; the purification-based quantum framework of \href{https://arxiv.org/abs/0908.1583}{Chiribella, D'Ariano and Perinotti} illustrates how extra operational axioms select quantum structure. Bayesian Hamiltonian learning and experiment design are developed by \href{https://arxiv.org/abs/1806.02427}{Hincks et al.}. Operational state-discrimination limits are reviewed in \href{https://arxiv.org/abs/1906.09737}{Guff et al.}. FIN has not yet supplied an empirical domain to which these methods can be applied, but they define the correct gate.
+
+\section{10. Final conclusions}
+
+A calibrated twelve-mode spectral/\allowbreak{}dynamical experiment is feasible in principle. \textbf{\statusModerate{}}
+
+The strict and legacy fingerprints remain distinguishable after affine calibration. \textbf{\statusStrong{}}
+
+Only preregistered held-out predictions in an independently motivated physical system can change FIN from a mathematical model into physics. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Affine-invariant fingerprint construction: \textbf{\statusProven{}}
+
+\item 
+Reported numerical separation: \textbf{\statusStrong{}}
+
+\item 
+Feasible engineered twelve-mode test: \textbf{\statusModerate{}}
+
+\item 
+Emulator agreement as evidence for fundamental physics by itself: \textbf{\statusRefuted{}}
+
+\item 
+Probability of executable simulator experiment: \(0.70\)
+
+\item 
+Probability current FIN already identifies a natural empirical domain: \(0.05\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(7/10\)
+
+\item 
+Time: 3–12 months
+
+\item 
+Dependencies: Programs 2, 3, 4, and 11–20
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 10 — Machine-assisted invariant discovery and proof certificates}
+
+\section{1. Motivation}
+
+The repository contains thousands of generated artifacts and repeated searches for selectors, sources, and closure. This program asks where exhaustive computation and formal proof can genuinely close classes of possibilities instead of creating more candidate prose.
+
+\textbf{Research hypothesis.} Symmetry and dimensional no-go results are well suited to machine certification; unrestricted automated search cannot manufacture a physically meaningful source from invariant inputs. \textbf{\statusStrong{}}
+
+Estimated success \(0.90\) for formal no-go certificates, \(0.05\) for discovery of a new strict physical source from current data, impact \(7/10\), difficulty \(6/10\), time 2–6 months.
+
+\section{2. Background}
+
+Finite group actions, representation weights, polynomial identities, spectral residuals, and SAT-size combinatorics can be exhaustively checked. A proof assistant can then certify the general theorem separately from floating-point evidence.
+
+The central danger is search-space leakage: a system can appear to find a selector by using array order, file names, target values, or conventions that are not invariant mathematical inputs.
+
+\section{3. Mathematical formulation}
+
+Let \(G\) act on an input representation \(V\) and target \(W\). Candidate source maps lie in
+
+\[
+\operatorname{Hom}_G(V,W).
+\]
+
+If \(V\) is trivial and \(W\) is reflection odd or dimension weight one, this Hom-space is zero.
+
+For combinatorial profiles \(x\in\{0,1\}^{12}\), the task is to enumerate orbits under translations and dihedral symmetry and distinguish selection of an orbit from selection of a representative.
+
+\section{4. Research methodology}
+
+The program used:
+
+\begin{enumerate}
+\item 
+exact representation decompositions;
+
+\item 
+exhaustive enumeration of invariant Boolean predicates and score functions;
+
+\item 
+dimensional-weight monomial search;
+
+\item 
+orbit canonicalization for all nonzero binary profiles;
+
+\item 
+numerical residual scripts with fixed seeds and tolerances;
+
+\item 
+a formal-certificate architecture separating theorem, finite witness, provenance, and physical interpretation.
+
+\end{enumerate}
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 7 — invariant-to-odd exclusion.} If the input representation is \(G\)-trivial and target \(W\) has no fixed vector, then
+
+\[
+\operatorname{Hom}_G(V,W)=0.
+\]
+
+\textbf{\statusProven{}} This simultaneously covers the absolute orientation torsor at the set level and odd linear sources at the representation level.
+
+For dimensional characters, products add weights. The subring generated by weight-zero quantities has weight zero, so it contains no nonzero weight-one element. \textbf{\statusProven{}}
+
+An invariant algorithm on a transitive orbit can return an orbit label but cannot select a representative equivariantly. \textbf{\statusProven{}}
+
+These are short theorems suitable for proof-assistant formalization.
+
+\section{6. Proof attempts}
+
+A valid automated discovery pipeline should require each candidate to export:
+
+\begin{enumerate}
+\item 
+a typed formula;
+
+\item 
+its transformation law;
+
+\item 
+provenance from admitted inputs;
+
+\item 
+exact or interval-certified nonzero value;
+
+\item 
+a theorem coupling it to the target;
+
+\item 
+a held-out falsification test.
+
+\end{enumerate}
+
+Without all six, a numerical pattern is not a new source. \textbf{\statusStrong{}}
+
+SMT/\allowbreak{}SAT can exhaust finite selector predicates; invariant theory can classify polynomial covariants; interval arithmetic can certify spectral signs; Lean or Isabelle can encode the no-fixed-point and weight proofs. No fundamental obstacle was found for these bounded tasks. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+A neural network trained on labelled “clockwise” arrays learns the labelling convention unless data augmentation and equivariance remove it. High validation accuracy on the same convention is not selector discovery. \textbf{\statusRefuted{}}
+
+Symbolic regression can reconstruct the degree-six finite kernel bridge, but Program 1 shows that exact fit may extrapolate catastrophically. Formula simplicity on seven points is not a physical law. \textbf{\statusProven{}}
+
+Automated theorem generation cannot prove a false existential statement if its checker is sound; it should be used to certify no-go boundaries, not to promote uncited interpretations. \textbf{\statusStrong{}}
+
+\section{8. Numerical investigations}
+
+All \(2^{12}-1=4095\) nonzero binary profiles were enumerated. They form 351 translation orbits and 223 dihedral orbits. \textbf{\statusProven{}} Dihedral quotienting removes orientation distinctions but never selects an absolute representative.
+
+The even-to-odd equivariant linear-map dimension was zero. The search of \(15\,624\) weight-zero monomials produced zero weight-one candidates. \textbf{\statusProven{}}
+
+The accompanying reproducibility suite also certifies polynomial residuals, selector symmetry, stability thresholds, continuum scaling, and fingerprint mismatches.
+
+\section{9. Literature comparison}
+
+Computer algebra, invariant theory, SAT, and interactive theorem proving are established methods; their value here is disciplined scope. Free-probability or random-matrix searches are not currently justified: the strict and legacy matrices commute, and there is no ensemble or large-\(N\) law. Modern universality results such as \href{https://arxiv.org/abs/1202.0068}{Tao and Vu} presuppose precisely those absent hypotheses.
+
+\section{10. Final conclusions}
+
+Machine assistance can close finite symmetry and source classes with auditable certificates. \textbf{\statusStrong{}}
+
+It cannot convert a chart convention, target leakage, or dimensionless receiver into a physical source. \textbf{\statusProven{}}
+
+The immediate deliverable should be a small formal library of no-go and provenance theorems, linked to deterministic witnesses, rather than another unbounded scan. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Finite orbit and weight calculations: \textbf{\statusProven{}}
+
+\item 
+Formal certification feasibility: \textbf{\statusStrong{}}
+
+\item 
+Automated discovery of an absolute selector from current even data: \textbf{\statusRefuted{}}
+
+\item 
+Discovery of a genuinely new typed source after new input: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of formalizing the main no-go results: \(0.90\)
+
+\item 
+Probability current artifacts hide an admissible new physical source: \(0.05\)
+
+\item 
+Impact: \(7/10\)
+
+\item 
+Difficulty: \(6/10\)
+
+\item 
+Time: 2–6 months
+
+\item 
+Dependencies: all programs supply theorem statements and witnesses
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Part III — Maximum-creativity cross-field search}
+
+The following directions were tested as generators rather than merely analogies.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.365\textwidth}p{0.390\textwidth}p{0.105\textwidth}@{}}
+\toprule
+\textbf{Field} & \textbf{Result of admission test} & \textbf{Status} \\
+\midrule
+\endhead
+spectral geometry & exactly describes the finite functional core; needs a refinement for dimension/\allowbreak{}continuum & \textbf{\statusProven{}} \\
+operator algebras & current algebra is finite and commutative; richer dynamics requires added algebra/\allowbreak{}state & \textbf{\statusProven{}} \\
+modular theory & trivial on \(\mathbb C^{12}\); state-dependent and uncalibrated on \(M_{12}\) & \textbf{\statusProven{}} \\
+index theory/\allowbreak{}spectral flow & no selector without an odd path, grading, or chiral source & \textbf{\statusProven{}} \\
+equivariant topology & proves the no-section obstruction; relational torsor quotient is constructive & \textbf{\statusProven{}} \\
+\(K\)-theory/\allowbreak{}topological phases & a single finite filter lacks a gapped parameter family and occupied-state prescription & \textbf{\statusStrong{}} \\
+category/\allowbreak{}sheaf/\allowbreak{}homotopy/\allowbreak{}derived methods & useful language for naturality and torsors; functoriality preserves the blocking automorphism & \textbf{\statusProven{}} \\
+information geometry & Fisher metrics quantify parameter distinguishability but need a likelihood family & \textbf{\statusProven{}} \\
+optimal transport & can describe dissipative gradient flows after a cost/\allowbreak{}metric is chosen; it does not select that choice & \textbf{\statusStrong{}} \\
+renormalization & potentially decisive only with a refinement, blocking map, and reference scale & \textbf{\statusProven{}} \\
+causal sets & require an acyclic order; an oriented cycle is not causal & \textbf{\statusProven{}} \\
+tensor networks & strict operator has low Schmidt rank under several factorizations, but factorization is not selected & \textbf{\statusStrong{}} \\
+random matrices & no ensemble or large-\(N\) law currently exists & \textbf{\statusProven{}} \\
+free probability & impossible for the present commuting non-scalar pair in a faithful trace & \textbf{\statusRefuted{}} \\
+neural operators & can approximate update maps, but training data and loss replace the missing physical law & \textbf{\statusProven{}} \\
+complexity theory & can rank inference cost after an input/\allowbreak{}output task exists; it cannot create units or observables & \textbf{\statusStrong{}} \\
+Bayesian physics & gives the strongest immediate route to model discrimination and honest nuisance treatment & \textbf{\statusStrong{}} \\
+machine-discovered mathematics & valuable for invariant classification and certificates, dangerous under target leakage & \textbf{\statusStrong{}} \\
+holomorphic semigroups & unexpectedly unifies wave/\allowbreak{}unitary and diffusion as different complex-time restrictions & \textbf{\statusProven{}} \\
+operational reference frames & replaces an impossible absolute selector with complete relative observables & \textbf{\statusProven{}} \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The tensor test deserves a quantitative note. Operator-Schmidt ranks of the strict matrix were \(2,3,4,3,3\) for sequential \(2\times6\), \(3\times4\), \(4\times3\), \(6\times2\), and CRT \(3\times4\) factorizations. \textbf{\statusStrong{}} This is useful compression but not evidence for a unique physical subsystem structure.
+
+The most creative positive outcome is not a new exotic ontology. It is the conjunction of two standard but previously separated ideas:
+
+\[
+\text{one positive spectral generator}
+\quad+\quad
+\text{an operational temporal/reference choice}.
+\]
+
+It yields both the relative-frame theorem and the wave–diffusion ambiguity analyzed next. \textbf{\statusStrong{}}
+
+\par\medskip\hrule\medskip
+
+\chapter{Part IV — Ten additional executed programs: one operator, two temporal worlds}
+
+\section{Observer paradox: precise statement}
+
+Let \(W=K_s\), let its constant row sum be
+
+\[
+s=1.660307278766099,
+\]
+
+and define the positive graph Laplacian
+
+\[
+A=sI-W.
+\]
+
+Because every off-diagonal QW2118 weight is positive,
+
+\[
+\langle f,Af\rangle
+=\frac12\sum_{x,y}W_{xy}|f_x-f_y|^2\ge0.
+\]
+
+Thus the same \(A\) defines
+
+\[
+U_t=e^{-itA}
+\quad\text{and}\quad
+P_t=e^{-tA}.
+\]
+
+The first is a reversible unitary group on amplitudes; the second is an irreducible, uniform-reversible Markov semigroup on probabilities. \textbf{\statusProven{}}
+
+The “observer paradox” is therefore not consciousness-dependent. It is the operational underdetermination of dynamics by a spatial spectral generator when the temporal ray, state cone, preparation, instrument, environment, record, and clock are unspecified. \textbf{\statusProven{}}
+
+\chapter{Program 11 — Dual semigroup theorem for the strict FIN operator}
+
+\section{1. Motivation}
+
+The user's central observation is exact for the QW2118 sign pattern: one positive operator supports both coherent and diffusive evolution. The first program determines whether this is merely formal or yields two fully valid dynamical laws.
+
+\textbf{Research hypothesis.} Both laws are mathematically canonical once a temporal category is chosen, but neither category is selected by the operator. \textbf{\statusStrong{}}
+
+Estimated success \(0.99\), impact \(10/10\), difficulty \(4/10\), time two to four weeks. It is the foundation for Programs 12–20.
+
+\section{2. Background}
+
+A self-adjoint \(A\) generates a unitary group \(e^{-itA}\). A graph Laplacian with nonpositive off-diagonal entries and zero row sums also generates a stochastic contraction semigroup \(e^{-tA}\).
+
+The strict matrix \(W\) has positive weights at every nonzero cyclic distance and constant row sum \(s\). Its Perron shift therefore has both structures.
+
+\section{3. Mathematical formulation}
+
+Set
+
+\[
+Q=W-sI,\qquad A=-Q=sI-W.
+\]
+
+Test:
+
+\[
+Q_{ij}\ge0\ (i\ne j),\qquad Q\mathbf1=0,
+\qquad Q=Q^T,
+\]
+
+and compare the state laws
+
+\[
+\psi(t)=U_t\psi_0,\qquad p(t)=P_tp_0.
+\]
+
+\section{4. Research methodology}
+
+All six radial weights, the row sum, and the Fourier eigenvalues were recomputed. Positivity was proved through the Dirichlet form. Markov conservation and reversibility were checked algebraically. Unitary and Markov returns and entropies were then evaluated from one localized preparation.
+
+\section{5. Detailed derivations}
+
+Since \(Q\) has nonnegative off-diagonal entries and zero row sums, \(e^{tQ}=e^{-tA}\) is entrywise nonnegative and stochastic. Symmetry makes it doubly stochastic and reversible with respect to the uniform distribution. Irreducibility follows from positive connectivity. \textbf{\statusProven{}}
+
+The Markov rates are
+
+\[
+0,\ 0.754121154^{(2)},\ 1.577049514^{(2)},\
+1.961406862^{(2)},\ 2.199568849^{(2)},\
+2.298606272^{(2)},\ 2.342182041.
+\]
+
+Self-adjointness gives \(U_t^*U_t=I\). Because \(A=sI-W\), evolution generated by \(A\) and \(W\) differs only by a global phase and sign convention at the level of unitary transition probabilities. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+\textbf{Theorem 8 — trivial intersection.} A real matrix that is both nonnegative stochastic and unitary is a permutation matrix. Any continuous one-parameter family of such matrices starting at \(I\) is identically \(I\). \textbf{\statusProven{}}
+
+\textbf{Proof.} Nonnegative orthogonal columns have disjoint support. Twelve nonzero columns on twelve coordinates therefore each have one entry, whose norm forces it to be one. Permutations are discrete, so a continuous path from \(I\) is constant. \(\square\)
+
+Hence a nontrivial law cannot simultaneously treat the same entries as quantum amplitudes and classical transition probabilities. The state cone and probability rule are indispensable.
+
+\section{7. Counterexamples}
+
+The uniform state is fixed by both dynamics. An observer restricted to uniform preparation and population measurements sees identical constant data. \textbf{\statusProven{}} Identifiability is therefore preparation-relative.
+
+The Markov interpretation is not automatically stable under naive fixed-formula refinement. The profile gives \(K(8)=-0.00179588\); at \(N=16\) this becomes an off-diagonal weight and violates the generator positivity condition. \textbf{\statusProven{}}
+
+Thus exact Markov duality is established for QW2118 on \(C_{12}\), not for every proposed FIN extension.
+
+\section{8. Numerical investigations}
+
+From a localized vertex:
+
+\begin{center}
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.104\textwidth}p{0.183\textwidth}p{0.210\textwidth}p{0.180\textwidth}p{0.183\textwidth}@{}}
+\toprule
+\textbf{\(t\)} & \textbf{unitary return} & \textbf{unitary position entropy} & \textbf{Markov return} & \textbf{Markov entropy} \\
+\midrule
+\endhead
+0.1 & 0.994634 & 0.040332 & 0.849359 & 0.716153 \\
+1 & 0.584353 & 1.293108 & 0.262829 & 2.225996 \\
+5 & 0.142549 & 2.259728 & 0.087250 & 2.484376 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The Markov entropy tends to \(\log12=2.48490665\). The unitary position entropy is nonmonotone; on \(5\le t\le200\) it ranged approximately from \(0.8565\) to \(2.4802\). \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+Continuous-time quantum walks generated by graph operators were formulated by \href{https://arxiv.org/abs/quant-ph/9706062}{Farhi and Gutmann}. Reversible continuous-time Markov chains use the same Laplacian class with real rather than imaginary time. The FIN-specific theorem is that the actual strict QW2118 weights satisfy both admission conditions after the Perron shift.
+
+\section{10. Final conclusions}
+
+The same strict spectral generator produces two legitimate but inequivalent temporal worlds. \textbf{\statusProven{}}
+
+The spectrum fixes their mode shapes and rates/\allowbreak{}frequencies but does not select the state ontology, real versus imaginary temporal ray, or observation rule. \textbf{\statusProven{}}
+
+The observer paradox is a precise model-underdetermination theorem. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Exact QW2118 unitary/\allowbreak{}Markov duality: \textbf{\statusProven{}}
+
+\item 
+Physical equivalence of the two dynamics: \textbf{\statusRefuted{}}
+
+\item 
+Stable Markov interpretation under naive refinement: \textbf{\statusRefuted{}}
+
+\item 
+Probability the finite theorem survives independent recomputation: \(0.999\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(4/10\)
+
+\item 
+Time: 2–4 weeks for formal publication
+
+\item 
+Dependencies: none beyond the declared weights
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 12 — Holomorphic time, Wick continuation, and its obstruction}
+
+\section{1. Motivation}
+
+If wave and diffusion are restrictions of one complex-time family, perhaps analyticity selects or reconstructs the physical branch. This program tests that tempting resolution.
+
+\textbf{Research hypothesis.} Analytic continuation is exact in finite dimension but physically nonselective and exponentially unstable; Euclidean reconstruction needs reflection positivity and additional axioms. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(9/10\), difficulty \(7/10\), time 2–6 months.
+
+\section{2. Background}
+
+For bounded \(A\ge0\),
+
+\[
+F(z)=e^{-zA}
+\]
+
+is entire. The positive real axis gives a contraction semigroup and the imaginary axis a unitary group. In field theory, continuation from Euclidean to Lorentzian correlators is justified only for specially constrained data.
+
+\section{3. Mathematical formulation}
+
+Study
+
+\[
+P_\tau=F(\tau),\qquad
+U_t=F(it),
+\]
+
+the inverse problem \(P_\tau\mapsto A\mapsto U_t\), its conditioning, and the additional conditions required to interpret \(P_\tau\) as Euclidean quantum data.
+
+\section{4. Research methodology}
+
+The program derived the entire functional calculus, diagonalized the inverse continuation, computed noise amplification from the largest QW2118 rate, and compared a spatial heat kernel with the Osterwalder–Schrader hypotheses.
+
+\section{5. Detailed derivations}
+
+For finite \(A\),
+
+\[
+F(z)=\sum_{n=0}^\infty\frac{(-zA)^n}{n!}
+\]
+
+converges everywhere, so
+
+\[
+P_\tau=U_{-i\tau}
+\]
+
+as a matrix identity. \textbf{\statusProven{}}
+
+If \(A=\sum_ma_mP_m\), backward heat continuation multiplies errors in the \(m\)-th mode by \(e^{\tau a_m}\). Its worst condition number is
+
+\[
+\kappa(\tau)=e^{\tau a_{\max}},
+\qquad a_{\max}=2.342182041.
+\]
+
+\textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+The OS route would require temporally indexed correlation functions, Euclidean covariance, symmetry, regularity, clustering, and reflection positivity. A single spatial \(e^{-\tau A}\) does not prove any such hierarchy. \textbf{\statusProven{}}
+
+Even exact knowledge of \(F\) does not choose which ray \(z=e^{i\theta}t\) is physical. Contractivity selects \(|\theta|<\pi/2\); norm preservation selects the imaginary axis; those are extra dynamical axioms. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+Born probabilities
+
+\[
+|\langle i|U_t|j\rangle|^2
+\]
+
+are quadratic in amplitudes and are not obtained by analytic continuation of Markov probabilities \(\langle i|P_t|j\rangle\). \textbf{\statusProven{}} Common analytic ancestry is not observational equivalence.
+
+Backward diffusion is well defined for exact finite data but unstable under arbitrarily small noise. Therefore “Wick rotate the observed diffusion” is not a robust empirical reconstruction procedure. \textbf{\statusRefuted{}}
+
+A positive heat kernel alone need not satisfy reflection positivity for a proposed time reflection and observable algebra. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+Noise amplification was
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{\(\tau\)} & \textbf{\(\kappa(\tau)\)} \\
+\midrule
+\endhead
+1 & \(1.04\times10^1\) \\
+2 & \(1.08\times10^2\) \\
+5 & \(1.22\times10^5\) \\
+10 & \(1.49\times10^{10}\) \\
+20 & \(2.21\times10^{20}\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The finite analytic continuation is numerically unusable at moderate long times without strong regularization. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+Euclidean reconstruction under reflection positivity is the content of \href{https://doi.org/10.1007/BF01645738}{Osterwalder and Schrader}. Holomorphic semigroups and unitary boundary values are standard operator theory. The new FIN insight is their exact application to the QW2118 dual generator and the quantified inverse instability.
+
+\section{10. Final conclusions}
+
+Wave/\allowbreak{}unitary and diffusion are exact complex-time shadows of one positive generator. \textbf{\statusProven{}}
+
+Analyticity does not choose the physical temporal axis, probability rule, or clock calibration. \textbf{\statusProven{}}
+
+A genuine Wick bridge remains conditional on an OS-positive temporal field theory. \textbf{\statusModerate{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Entire common family \(e^{-zA}\): \textbf{\statusProven{}}
+
+\item 
+Physical equivalence from analytic continuation alone: \textbf{\statusRefuted{}}
+
+\item 
+Exponential inverse ill-conditioning: \textbf{\statusProven{}}
+
+\item 
+Future OS-positive FIN reconstruction: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of an OS-positive completion: \(0.15\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(9/10\)
+
+\item 
+Time: 6–18 months for a full OS test
+
+\item 
+Dependencies: Programs 4 and 8
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 13 — Short-time laws and calibrated model discrimination}
+
+\section{1. Motivation}
+
+If the operator does not select a temporal world, an observer should discriminate the worlds experimentally. This program derives the earliest measurable difference and tests whether unknown clock calibration can hide it.
+
+\textbf{Research hypothesis.} Localized short-time data distinguish coherent and Markov evolution through quadratic versus linear escape, but a single uncalibrated time can be misleading. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(9/10\), difficulty \(5/10\), time 1–3 months.
+
+\section{2. Background}
+
+For localized initial vertex \(j\), define
+
+\[
+q_i(t)=|U_t(i,j)|^2,\qquad
+p_i(t)=P_t(i,j).
+\]
+
+The total-variation distance determines the minimum simple-hypothesis error with equal priors:
+
+\[
+P_{\rm err}=\frac{1-\operatorname{TV}(p,q)}2.
+\]
+
+\section{3. Mathematical formulation}
+
+The experiment must estimate:
+
+\begin{enumerate}
+\item 
+escape scaling near zero;
+
+\item 
+the full position distribution at multiple times;
+
+\item 
+a common clock or separate nuisance scales;
+
+\item 
+likelihood under both dynamics.
+
+\end{enumerate}
+
+The key nuisance is that \(p(ct)\) with fitted \(c\) can imitate one unitary snapshot more closely than \(p(t)\).
+
+\section{4. Research methodology}
+
+Taylor expansions were derived entry by entry. The variance coefficient was computed from the QW2118 weights. Total variation was scanned over time, then reoptimized after allowing a free diffusive time scale. Single- and two-time designs were compared.
+
+\section{5. Detailed derivations}
+
+For \(i\ne j\),
+
+\[
+P_t(i,j)=W_{ij}t+O(t^2),
+\]
+
+while
+
+\[
+|U_t(i,j)|^2=W_{ij}^2t^2+O(t^3).
+\]
+
+Survival obeys
+
+\[
+p_j(t)=1-st+O(t^2),
+\]
+
+\[
+q_j(t)
+=1-\sigma_W^2t^2+O(t^4),
+\qquad
+\sigma_W^2=\sum_{i\ne j}W_{ij}^2=0.537963580.
+\]
+
+\textbf{\statusProven{}}
+
+A clock reparametrization \(\tau=ct^2\) could match edge \(ij\) only if \(c=W_{ij}\). Because FIN has six distinct radial weights, no single \(c\) matches all channels. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+With full calibrated semigroup data near zero,
+
+\[
+A=-\left.\frac{dP_t}{dt}\right|_0,\qquad
+A=i\left.\frac{dU_t}{dt}\right|_0.
+\]
+
+The generator is unique in either category. \textbf{\statusProven{}}
+
+At one sampled unitary time, Hamiltonian eigenvalues are aliased modulo \(2\pi/t\). Multiple incommensurate times plus a spectral bound can remove this branch ambiguity. \textbf{\statusProven{}}
+
+Population-only unitary data remain invariant under diagonal vertex-phase gauge and global energy shifts, so phase-sensitive interferometry is needed for full identification. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+Uniform preparation makes both population distributions stationary and completely indistinguishable. \textbf{\statusProven{}}
+
+With a freely fitted diffusion clock, one short-time snapshot becomes nearly degenerate: at unitary \(t=0.10\), total variation fell from \(0.145276\) under a common clock to \(0.001595\). \textbf{\statusStrong{}}
+
+A visually similar spreading profile therefore does not establish dynamical equivalence. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+For common calibrated time:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.186\textwidth}p{0.363\textwidth}p{0.311\textwidth}@{}}
+\toprule
+\textbf{\(t\)} & \textbf{total variation} & \textbf{Bayes error} \\
+\midrule
+\endhead
+0.10 & 0.145276 & 0.427362 \\
+0.50 & 0.403905 & 0.298048 \\
+0.595 & 0.411241 & 0.294380 \\
+2.00 & 0.262472 & 0.368764 \\
+8.305 & 0.400265 & 0.299868 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The maximum on \(0.005\le t\le10\) occurred near \(0.595\). With a free diffusive clock, optimized TV values at unitary times \(0.10,0.25,0.50,1.00\) became \(0.00160,0.00875,0.03264,0.10888\). \textbf{\statusStrong{}}
+
+Using both \(t\) and \(2t\) breaks the leading degeneracy because coherent escape scales by four and diffusive escape by two. \textbf{\statusProven{}}
+
+\section{9. Literature comparison}
+
+The quadratic survival law underlies the quantum Zeno effect formalized by \href{https://doi.org/10.1063/1.523304}{Misra and Sudarshan}. Classical Markov escape is linear at short time. The FIN-specific contribution is the exact coefficient from QW2118 and the all-edge no-reparametrization test.
+
+\section{10. Final conclusions}
+
+Calibrated multitime localized measurements can distinguish the two temporal worlds. \textbf{\statusProven{}}
+
+One uncalibrated snapshot can make them nearly observationally equivalent. \textbf{\statusStrong{}}
+
+The observer needs a clock, preparation, and outcome model; the operator alone supplies none of them. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Linear versus quadratic escape theorem: \textbf{\statusProven{}}
+
+\item 
+All-edge clock-reparametrization obstruction: \textbf{\statusProven{}}
+
+\item 
+Reported discrimination scan: \textbf{\statusStrong{}}
+
+\item 
+Single-snapshot identification without calibration: \textbf{\statusRefuted{}}
+
+\item 
+Probability of a successful simulator discrimination: \(0.90\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(5/10\)
+
+\item 
+Time: 1–3 months
+
+\item 
+Dependencies: Program 9's operational map
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 14 — Multitime records, instruments, and the Chapman–Kolmogorov test}
+
+\section{1. Motivation}
+
+An observer is not only a reader of terminal distributions. Intermediate measurements create records and may alter later evolution. This program asks whether multitime data resolve the ambiguity and whether a history distribution exists independently of the instrument.
+
+\textbf{Research hypothesis.} Markov populations obey Chapman–Kolmogorov, whereas Born population matrices from uninterrupted unitary evolution do not; the difference is an operational interference witness. \textbf{\statusStrong{}}
+
+Estimated success \(0.98\), impact \(10/10\), difficulty \(5/10\), time 1–3 months.
+
+\section{2. Background}
+
+Let
+
+\[
+M_t(i,j)=|U_t(i,j)|^2.
+\]
+
+Although \(U_{t+s}=U_tU_s\), generally \(M_{t+s}\ne M_tM_s\) because amplitudes interfere. The product \(M_t^2\) corresponds to a projective position measurement at the intermediate time with the outcome forgotten.
+
+By contrast \(P_{t+s}=P_tP_s\) exactly.
+
+\section{3. Mathematical formulation}
+
+Compare:
+
+\[
+\mathcal C_U(t)=M_{2t}-M_t^2,\qquad
+\mathcal C_D(t)=P_{2t}-P_t^2.
+\]
+
+For retained two-step records, compare joint laws
+
+\[
+q(x_1,x_2)=M_t(x_1,0)M_t(x_2,x_1),
+\]
+
+\[
+p(x_1,x_2)=P_t(x_1,0)P_t(x_2,x_1).
+\]
+
+\section{4. Research methodology}
+
+The semigroup identities were proved algebraically. Frobenius and total-variation residuals were computed over several times. Joint record discrimination was compared with terminal-only coarse-graining, and Chernoff exponents were evaluated.
+
+\section{5. Detailed derivations}
+
+For diffusion,
+
+\[
+\mathcal C_D(t)=0
+\]
+
+identically. \textbf{\statusProven{}}
+
+For unitary populations,
+
+\[
+M_{2t}(i,j)
+=\left|\sum_kU_t(i,k)U_t(k,j)\right|^2,
+\]
+
+which includes cross terms absent from
+
+\[
+(M_t^2)(i,j)
+=\sum_k|U_t(i,k)|^2|U_t(k,j)|^2.
+\]
+
+Thus \(\mathcal C_U\) measures interference between intermediate alternatives. \textbf{\statusProven{}}
+
+For translation-covariant two-step experiments, the two increments are independent under each measured protocol, so the Chernoff information of the full record is twice the single-increment value. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+There is no instrument-independent classical joint distribution for sequential quantum outcomes. A joint probability arises only after specifying the intermediate instrument and its state update. \textbf{\statusProven{}}
+
+Data processing gives
+
+\[
+\operatorname{TV}(p_{\rm terminal},q_{\rm terminal})
+\le
+\operatorname{TV}(p_{\rm record},q_{\rm record}),
+\]
+
+because forgetting \(x_1\) is a stochastic channel. \textbf{\statusProven{}}
+
+This theorem explains why an observer who preserves records can discriminate models that appear nearly identical at the endpoint.
+
+\section{7. Counterexamples}
+
+Interpreting \(M_t\) as a classical transition semigroup is false except in special trivial/\allowbreak{}permutation cases. \textbf{\statusRefuted{}}
+
+The failure of Chapman–Kolmogorov does not mean unitarity lacks composition; amplitudes compose perfectly. It falsifies only an autonomous classical population process without an instrument. \textbf{\statusProven{}}
+
+If the apparatus dephases after every step, the effective law is \(M_t^n\), not uninterrupted \(M_{nt}\). The observer's intervention is part of the dynamics.
+
+\section{8. Numerical investigations}
+
+Frobenius residuals were
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.138\textwidth}p{0.373\textwidth}p{0.349\textwidth}@{}}
+\toprule
+\textbf{\(t\)} & \textbf{\(\|\mathcal C_D(t)\|_F\)} & \textbf{\(\|\mathcal C_U(t)\|_F\)} \\
+\midrule
+\endhead
+0.05 & \(2.8\times10^{-15}\) & 0.01077 \\
+0.10 & \(2.6\times10^{-15}\) & 0.04259 \\
+0.50 & \(1.6\times10^{-15}\) & 0.72319 \\
+1 & \(1.1\times10^{-15}\) & 0.70674 \\
+2 & \(5.8\times10^{-16}\) & 0.64683 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+For two recorded increments, maximum TV on the scanned range was \(0.551749\) near \(t=0.425\). At \(t=5\), record TV was \(0.315212\) while terminal-only TV was \(0.046216\). \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+Quantum instruments originate in the operational formalism of \href{https://doi.org/10.1007/BF01647093}{Davies and Lewis}. Modern process tensors make multitime intervention dependence explicit; see \href{https://doi.org/10.1103/PhysRevLett.120.040405}{Pollock et al.}. The noninvasive-measurement issue is central to \href{https://doi.org/10.1103/PhysRevLett.54.857}{Leggett–Garg}. The FIN calculation supplies an unusually direct finite witness.
+
+\section{10. Final conclusions}
+
+The Chapman–Kolmogorov residual is a high-signal observer/\allowbreak{}intervention test. \textbf{\statusProven{}}
+
+Full records are strictly more informative than terminal marginals in the computed regimes. \textbf{\statusStrong{}}
+
+Multitime FIN predictions are undefined until instruments are included in the theory. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Markov semigroup identity: \textbf{\statusProven{}}
+
+\item 
+Unitary-population interference residual: \textbf{\statusProven{}}
+
+\item 
+Reported record advantage: \textbf{\statusStrong{}}
+
+\item 
+Instrument-independent quantum histories: \textbf{\statusRefuted{}}
+
+\item 
+Probability of a successful two-time simulator test: \(0.95\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(5/10\)
+
+\item 
+Time: 1–3 months
+
+\item 
+Dependencies: Programs 9 and 13
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 15 — Unitary dilation: diffusion as an observer-restricted quantum world}
+
+\section{1. Motivation}
+
+Could the two temporal worlds be compatible rather than rivals—unitary for a global observer and diffusive for an observer who ignores an environment? This program constructs the compatibility exactly and identifies its cost.
+
+\textbf{Research hypothesis.} Every FIN diffusion admits an exact infinite-dimensional unitary dilation, but no finite bath can reproduce irreversible relaxation for all times. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(9/10\), difficulty \(7/10\), time 2–6 months.
+
+\section{2. Background}
+
+A contraction semigroup can be represented as a compression of unitary dynamics on a larger Hilbert space. Open quantum dynamics can also reproduce classical Markov populations through Lindblad jump operators.
+
+A dilation explains compatibility, not uniqueness: many environments and couplings can produce the same reduced channel.
+
+\section{3. Mathematical formulation}
+
+Let
+
+\[
+A=\sum_m a_mP_m,\qquad a_m\ge0.
+\]
+
+For \(a>0\), use the Cauchy probability measure
+
+\[
+d\mu_a(\omega)
+=\frac{a}{\pi(a^2+\omega^2)}\,d\omega,
+\]
+
+whose characteristic function is \(e^{-a|t|}\). Seek an isometry \(J:H\to\mathcal K\) and self-adjoint bath Hamiltonian \(H_B\) with
+
+\[
+J^*e^{-itH_B}J=e^{-tA},\qquad t\ge0.
+\]
+
+\section{4. Research methodology}
+
+The program built the dilation mode by mode, proved the characteristic-function identity, derived a finite-environment no-go theorem from almost periodicity, and independently built a GKSL population embedding from strict edge weights.
+
+\section{5. Detailed derivations}
+
+Take
+
+\[
+\mathcal K=
+\bigoplus_m P_mH\otimes L^2(\mathbb R,\mu_{a_m}),
+\]
+
+let \(H_B\) multiply by \(\omega\), and embed a system eigenvector as the constant bath function. Then
+
+\[
+J^*e^{-itH_B}J
+=\sum_me^{-a_m|t|}P_m.
+\]
+
+For \(t\ge0\), this equals \(e^{-tA}\). \textbf{\statusProven{}}
+
+A second construction uses jump operators
+
+\[
+L_{ij}=\sqrt{W_{ij}}\,|i\rangle\langle j|,\qquad i\ne j.
+\]
+
+The Lindblad equation induces on diagonal populations
+
+\[
+\dot p_i=\sum_{j\ne i}W_{ij}p_j-sp_i=(Qp)_i.
+\]
+
+Thus FIN diffusion is exactly the population sector of a valid Markovian open quantum system. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+\textbf{Theorem 9 — finite-bath obstruction.} A nonconstant exponentially relaxing semigroup cannot be the exact compression of a finite-dimensional unitary group for all \(t\ge0\). \textbf{\statusProven{}}
+
+\textbf{Proof.} Finite-dimensional unitary matrix elements are finite sums \(\sum_kc_ke^{-i\omega_kt}\) and hence almost periodic. An almost-periodic function with a limit at infinity is constant. But \(e^{-at}\to0\) for \(a>0\) and is nonconstant. \(\square\)
+
+An exact irreversible realization therefore needs an infinite bath, continual reset, a singular limit, or time-dependent control.
+
+\section{7. Counterexamples}
+
+The dilation is not a proof that the universe uses the constructed bath. The same reduced semigroup has nonunique Hamiltonian dilations, jump decompositions, environmental records, and unravelings. \textbf{\statusProven{}}
+
+A finite environment may approximate decay for a finite window but must recur. Treating a short simulation without recurrence as an exact irreversible model is false. \textbf{\statusRefuted{}}
+
+Diffusion as a compression is not the same map as \(e^{-itA}\) on the original twelve-dimensional system. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+The QW2118 rates are nonnegative, so all Cauchy measures in the explicit dilation are well defined. Direct matrix exponentiation verified the stochastic row sums, positivity, and the GKSL diagonal population equation to machine precision. \textbf{\statusStrong{}}
+
+The largest rate \(2.34218\) sets the shortest decay time, while an exact bath requires a continuous frequency support. Truncating that support produces visible long-time approximation error and recurrence. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+The construction is a concrete specialization of unitary dilation theory; see \href{https://doi.org/10.1090/S0002-9939-1955-0068740-7}{Schäffer}. Markovian quantum generators were classified independently by \href{https://doi.org/10.1063/1.522979}{Gorini, Kossakowski and Sudarshan} and \href{https://doi.org/10.1007/BF01608499}{Lindblad}. FIN contributes a particular shared spectral generator, not a new dilation theorem.
+
+\section{10. Final conclusions}
+
+Global unitarity and observer-level diffusion are exactly compatible after adding an environment and restriction map. \textbf{\statusProven{}}
+
+Exact irreversible relaxation cannot come from a finite closed bath for all time. \textbf{\statusProven{}}
+
+The operator does not select the environment, monitored algebra, or record; those remain physical axioms. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Exact infinite-dimensional dilation: \textbf{\statusProven{}}
+
+\item 
+Exact GKSL population embedding: \textbf{\statusProven{}}
+
+\item 
+Exact finite-bath realization for all time: \textbf{\statusRefuted{}}
+
+\item 
+Natural FIN-selected bath: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of useful finite-window laboratory dilation: \(0.80\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(7/10\)
+
+\item 
+Time: 2–6 months
+
+\item 
+Dependencies: Programs 6 and 14
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 16 — Measurement, decoherence, and the quantum-Zeno falsification}
+
+\section{1. Motivation}
+
+A common observer narrative says that measurement or decoherence turns the wave into diffusion. This program tests that statement on the exact FIN operator rather than accepting it qualitatively.
+
+\textbf{Research hypothesis.} Projective monitoring generally does not yield the FIN heat semigroup; in the frequent-measurement limit it freezes the walk. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(8/10\), difficulty \(5/10\), time 1–3 months.
+
+\section{2. Background}
+
+After a unitary step \(\delta\), unread projective position measurement maps populations by
+
+\[
+M_\delta(i,j)=|U_\delta(i,j)|^2.
+\]
+
+After \(n\) such steps over total time \(T\), populations are \(M_{T/n}^np_0\). The quantum Zeno effect follows from quadratic short-time survival.
+
+\section{3. Mathematical formulation}
+
+Compare three protocols:
+
+\begin{enumerate}
+\item 
+uninterrupted unitary survival \(q_0(T)\);
+
+\item 
+\(n\) repeated projective tests, \[
+   S_n^Q(T)=q_0(T/n)^n;
+   \]
+
+\item 
+a classical no-jump event under rate \(s\), \[
+   S^D(T)=e^{-sT}.
+   \]
+
+\end{enumerate}
+
+Also compare \(M_{T/n}^n\delta_0\) with \(e^{-TA}\delta_0\).
+
+\section{4. Research methodology}
+
+Short-time expansions were proved, Zeno limits were derived, repeated-measurement matrices were exponentiated, and survival and entropy were scanned for \(T=2,5\) over increasing \(n\).
+
+\section{5. Detailed derivations}
+
+Because
+
+\[
+q_0(\delta)=1-\sigma_W^2\delta^2+O(\delta^4),
+\]
+
+\[
+S_n^Q(T)
+=\exp\!\left[-\frac{\sigma_W^2T^2}{n}+O(n^{-3})\right]
+\longrightarrow1.
+\]
+
+\textbf{\statusProven{}}
+
+Moreover,
+
+\[
+M_\delta=I+O(\delta^2),
+\]
+
+so
+
+\[
+M_{T/n}^n\longrightarrow I,
+\]
+
+not \(e^{-TA}\). \textbf{\statusProven{}}
+
+The passive classical probability of no jump tends to \(e^{-sT}<1\). Measurement creates a different quantum process rather than merely updating knowledge.
+
+\section{6. Proof attempts}
+
+Could a finite dephasing rate yield diffusion? A GKSL model with specified dephasing and hopping may have a diffusive effective limit, but its rates depend on coupling strengths and scaling. It is not determined by \(W\) alone. \textbf{\statusModerate{}}
+
+No universal map “decohere \(e^{-itA}\)” was found that returns exactly \(e^{-tA}\) with the same time parameter and no environmental constants. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+At \(T=5\), increasing measurements from \(n=1\) to \(n=2\) decreases survival before the asymptotic increase. Therefore the claim that every additional finite measurement monotonically enhances survival is false; the theorem concerns the large-\(n\) limit. \textbf{\statusRefuted{}}
+
+Unread measurement is not noninvasive. It removes interference and changes subsequent probabilities. \textbf{\statusProven{}}
+
+“Decoherence automatically produces FIN diffusion” is falsified by the projective model. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+\begin{center}
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.097\textwidth}p{0.097\textwidth}p{0.198\textwidth}p{0.274\textwidth}p{0.194\textwidth}@{}}
+\toprule
+\textbf{\(T\)} & \textbf{\(n\)} & \textbf{measured quantum survival} & \textbf{uninterrupted survival} & \textbf{classical no-jump} \\
+\midrule
+\endhead
+2 & 10 & 0.806328 & 0.199719 & 0.040450 \\
+2 & 200 & 0.989298 & 0.199719 & 0.036326 \\
+2 & 1000 & 0.997850 & 0.199719 & 0.036170 \\
+5 & 10 & 0.259926 & 0.142549 & 0.000526 \\
+5 & 1000 & 0.986641 & 0.142549 & 0.000250 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The analytic classical limits are \(e^{-2s}=0.0361306\) and \(e^{-5s}=0.0002481\). \textbf{\statusStrong{}}
+
+At \(T=2,n=1000\), repeatedly dephased population retained \(0.997851\) at the origin and had TV distance \(0.862727\) from FIN diffusion. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+The quantum-Zeno theorem is due to \href{https://doi.org/10.1063/1.523304}{Misra and Sudarshan}. Different environmental generators yield different quantum-walk decoherence limits; an example is \href{https://doi.org/10.1007/s11128-022-03647-x}{Bressanini, Benedetti and Paris}. The executed FIN counterexample makes the dependence concrete.
+
+\section{10. Final conclusions}
+
+Frequent projective observation freezes the FIN quantum walk instead of producing its heat flow. \textbf{\statusProven{}}
+
+A diffusive reduced law requires a particular open-system mechanism and scaling, not “observation” in the abstract. \textbf{\statusProven{}}
+
+The observer must be represented by instruments and couplings, never by an undefined interpretive label. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Zeno limit for QW2118: \textbf{\statusProven{}}
+
+\item 
+Projective-decoherence-to-heat claim: \textbf{\statusRefuted{}}
+
+\item 
+Alternative finite-rate environmental diffusion: \textbf{\statusModerate{}}
+
+\item 
+Probability of laboratory Zeno verification on a simulator: \(0.80\)
+
+\item 
+Impact: \(8/10\)
+
+\item 
+Difficulty: \(5/10\)
+
+\item 
+Time: 1–3 months
+
+\item 
+Dependencies: Programs 14 and 15
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 17 — Entropy, records, and the arrow of time}
+
+\section{1. Motivation}
+
+Diffusion appears irreversible and unitary evolution reversible. This program asks whether entropy or records let the operator itself select a time arrow and what exactly an observer contributes.
+
+\textbf{Research hypothesis.} The arrow comes from the contractive temporal branch, a nonequilibrium preparation, and coarse-grained records—not from the real spectral operator alone. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(9/10\), difficulty \(6/10\), time 2–4 months.
+
+\section{2. Background}
+
+Three entropies must be separated:
+
+\begin{enumerate}
+\item 
+von Neumann entropy of a quantum state;
+
+\item 
+Shannon entropy of outcomes in a chosen basis;
+
+\item 
+thermodynamic or stochastic entropy production of a process.
+
+\end{enumerate}
+
+They coincide only under additional hypotheses.
+
+\section{3. Mathematical formulation}
+
+For unitary \(\rho_t=U_t\rho_0U_t^*\),
+
+\[
+S_{\rm vN}(\rho_t)=S_{\rm vN}(\rho_0).
+\]
+
+For position outcomes \(q(t)\), study \(H(q(t))\). For reversible Markov \(p(t)=P_tp_0\), study \(H(p(t))\), relative entropy to \(\pi=1/12\), and pathwise entropy production.
+
+\section{4. Research methodology}
+
+Entropy identities were proved from unitary invariance and doubly stochastic majorization. Time traces were scanned at fine resolution. Forward and reversed path probabilities were compared at equilibrium. Records were classified as system, apparatus, or environment variables.
+
+\section{5. Detailed derivations}
+
+Unitary conjugation preserves the eigenvalues of \(\rho\), hence its von Neumann entropy. \textbf{\statusProven{}}
+
+For \(t_2>t_1\),
+
+\[
+p(t_2)=P_{t_2-t_1}p(t_1).
+\]
+
+Because \(P_t\) is doubly stochastic, \(p(t_2)\) is majorized by \(p(t_1)\), so Shannon entropy is nondecreasing. \textbf{\statusProven{}}
+
+At uniform equilibrium, symmetry gives detailed balance
+
+\[
+\pi_iP_t(j,i)=\pi_jP_t(i,j).
+\]
+
+Every path and its time reverse then have equal probability, so stationary entropy production is zero. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+A monotone arrow can be obtained by choosing the \(e^{-tA}\) branch and a nonequilibrium localized initial condition. This is a coherent conditional construction. \textbf{\statusProven{}}
+
+No proof can extract the sign of time from the real self-adjoint \(A\): both \(U_t\) and \(U_{-t}\) are allowed, while the contraction choice itself is extra. \textbf{\statusProven{}}
+
+A low-entropy boundary condition or environmental record can make an arrow physically meaningful, but neither follows from the equilibrium operator. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+Quantum position entropy can rise and fall while the global state stays pure. Treating it as irreversible thermodynamic entropy is false. \textbf{\statusRefuted{}}
+
+Equilibrium reversible diffusion has stationary path law and zero entropy production despite its contractive generator. Therefore diffusion alone does not imply a nonzero thermodynamic arrow. \textbf{\statusProven{}}
+
+An observer's memory can increase entropy through coupling, but an unspecified observer cannot be used as a mathematical source of irreversibility. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+On \(0\le t\le20\) with step \(0.005\):
+
+\begin{itemize}
+\item 
+1,889 steps decreased unitary position entropy;
+
+\item 
+zero steps decreased Markov position entropy beyond numerical tolerance;
+
+\item 
+the first unitary decrease occurred near \(t=3.185\);
+
+\item 
+\(H_U(3.18)=2.338515\), later falling to \(H_U(16.54)=1.670900\);
+
+\item 
+\(H_D(20)=\log12\) within \(8\times10^{-14}\).
+
+\end{itemize}
+
+\textbf{\statusStrong{}}
+
+These results sharply separate measurement entropy from state entropy and semigroup mixing.
+
+\section{9. Literature comparison}
+
+Network entropy production is formalized by \href{https://doi.org/10.1103/RevModPhys.48.571}{Schnakenberg}; quantum dynamical entropy production requires an open-system generator and state. FIN contributes a symmetric finite test case, not a new thermodynamic arrow.
+
+\section{10. Final conclusions}
+
+The strict spectral generator is time-reversal compatible. \textbf{\statusProven{}}
+
+Monotone mixing arises only after selecting the Markov branch and a nonequilibrium preparation. \textbf{\statusProven{}}
+
+Physical irreversibility additionally needs an operational record, bath, boundary condition, or coarse-graining. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Unitary von Neumann entropy constancy: \textbf{\statusProven{}}
+
+\item 
+Markov Shannon monotonicity here: \textbf{\statusProven{}}
+
+\item 
+Intrinsic arrow from \(A\) alone: \textbf{\statusRefuted{}}
+
+\item 
+FIN-specific thermodynamic arrow after an open-system completion: \textbf{\statusModerate{}}
+
+\item 
+Probability of a rigorous record-level entropy model: \(0.70\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(6/10\)
+
+\item 
+Time: 2–4 months
+
+\item 
+Dependencies: Programs 6, 15, and 16
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 18 — The relational observer and apparatus-calibration theorem}
+
+\section{1. Motivation}
+
+The observer paradox can be confused with subjective consciousness. This program removes that ambiguity by representing the observer as a calibrated apparatus with a frame, instrument, and record.
+
+\textbf{Research hypothesis.} Both temporal worlds are covariant under simultaneous relabelling, and only system–apparatus relations are observable; apparatus miscalibration quantitatively destroys directional information. \textbf{\statusStrong{}}
+
+Estimated success \(0.95\), impact \(9/10\), difficulty \(5/10\), time 1–3 months.
+
+\section{2. Background}
+
+Program 2 classified relative frames. Here the theorem is extended to dynamical outcome distributions and a noisy orientation calibration.
+
+An apparatus frame is \(f_a=(r_a,\lambda_a)\); the system frame is \(f_s=(r_s,\lambda_s)\).
+
+\section{3. Mathematical formulation}
+
+For a translation/\allowbreak{}reflection-covariant base distribution, define the apparatus outcome
+
+\[
+p_{\rm obs}(\delta|f_s,f_a)
+=p_{\rm base}(r_a+\lambda_a\delta-r_s).
+\]
+
+The simultaneous dihedral action changes both frames but should not change relative outcome probabilities.
+
+For an odd probe, let the apparatus report its orientation correctly with probability \(r\).
+
+\section{4. Research methodology}
+
+All \(576\) system–apparatus frame pairs and 24 dihedral transformations were enumerated for both \(U_t\) and \(P_t\). A binary noisy calibration channel was then applied to a directional probe \(H(h)=W-hJ\).
+
+\section{5. Detailed derivations}
+
+The complete invariant remains
+
+\[
+(\Delta,c)
+=\bigl(\lambda_a(r_s-r_a),\lambda_s\lambda_a\bigr).
+\]
+
+Because both \(U_t\) and \(P_t\) are functions of the radial \(A\), they commute with every dihedral relabelling. Therefore every apparatus distribution factors through relative coordinates. \textbf{\statusProven{}}
+
+If the ideal directional accuracy is \(a\), calibration reliability \(r\) gives
+
+\[
+a_{\rm eff}=ra+(1-r)(1-a).
+\]
+
+At \(r=1/2\), \(a_{\rm eff}=1/2\) for every \(a\): the sign information vanishes exactly. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+A relational apparatus can identify whether a displacement is clockwise relative to itself and whether the system and apparatus orientations agree. It cannot define an absolute orientation invariant under simultaneous reflection. \textbf{\statusProven{}}
+
+Likewise, an apparatus clock can compare durations but must be calibrated against a physical standard; it does not make a dimensionful second emerge from \(A\). \textbf{\statusProven{}}
+
+No role for consciousness is needed. All observer effects are represented by preparation maps, instruments, frames, and records. \textbf{\statusProven{}}
+
+\section{7. Counterexamples}
+
+A randomly oriented apparatus with \(r=1/2\) erases all odd information even if the underlying probe is perfect. \textbf{\statusProven{}}
+
+Fixing array index zero as the apparatus origin creates repeatable data in one implementation but is not invariant under relabelling. It is a laboratory convention, not an internal FIN selector. \textbf{\statusProven{}}
+
+An apparatus-relative result cannot discharge a claim that explicitly demands an apparatus-independent absolute direction. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+Across \(13\,824\) transformed cases, maximum covariance residuals were
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{dynamics} & \textbf{maximum residual} \\
+\midrule
+\endhead
+unitary & \(2.08\times10^{-16}\) \\
+diffusive & \(1.80\times10^{-16}\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+For \(t=2,h=0.1\),
+
+\[
+P(+1)=0.255947607,\qquad P(-1)=0.159296564.
+\]
+
+Conditioned ideal directional accuracy was \(a=0.616379\). Calibration reliabilities \(r=0.50,0.60,0.80,0.95,1.00\) yielded mutual information \(0,0.00156,0.01412,0.03189,0.03944\) bits. \textbf{\statusStrong{}}
+
+The \(hJ\) term is an external diagnostic, not a strict internal selector source. \textbf{\statusProven{}}
+
+\section{9. Literature comparison}
+
+The result belongs to resource theories of reference frames; see \href{https://arxiv.org/abs/0711.0043}{Gour and Spekkens} and relational observables in \href{https://arxiv.org/abs/1703.10434}{Loveridge, Miyadera and Busch}. The FIN-specific addition is exact covariance for both temporal branches and the calibration-information curve.
+
+\section{10. Final conclusions}
+
+The observer is mathematically an operational reference system, not a consciousness postulate. \textbf{\statusProven{}}
+
+Relative observables are complete and covariant for both FIN dynamics. \textbf{\statusProven{}}
+
+Calibration determines accessible directional information but cannot create an absolute selector or physical clock scale. \textbf{\statusProven{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Dynamical relational covariance: \textbf{\statusProven{}}
+
+\item 
+Calibration information loss: \textbf{\statusProven{}}
+
+\item 
+Absolute selector from apparatus relation: \textbf{\statusRefuted{}}
+
+\item 
+Physical implementation of the odd probe: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of a complete relational reformulation: \(0.75\)
+
+\item 
+Impact: \(9/10\)
+
+\item 
+Difficulty: \(5/10\)
+
+\item 
+Time: 1–3 months
+
+\item 
+Dependencies: Programs 2, 9, and 14
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 19 — Dynamic exponent, continuum scaling, and causal diagnosis}
+
+\section{1. Motivation}
+
+“Wave dynamics” can mean Schrödinger propagation or a second-order hyperbolic wave equation. They have different continuum scaling and causal behavior even when built from the same spatial operator. This program prevents that ambiguity from being mistaken for Lorentz emergence.
+
+\textbf{Research hypothesis.} The operator supports several dynamic exponents; \(z=1\) requires a square root/\allowbreak{}Dirac or second-order law and is not selected by unitarity. \textbf{\statusStrong{}}
+
+Estimated success \(0.90\) for classification, \(0.10\) for a FIN-native causal limit, impact \(10/10\), difficulty \(9/10\), time 6–18 months.
+
+\section{2. Background}
+
+If a continuum spatial symbol satisfies \(A(k)\sim c|k|^2\), then different temporal equations yield different spectral multipliers and scaling between time and length.
+
+A dynamic exponent \(z\) means characteristic time grows as length to the power \(z\).
+
+\section{3. Mathematical formulation}
+
+Compare four laws:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.301\textwidth}p{0.320\textwidth}p{0.240\textwidth}@{}}
+\toprule
+\textbf{law} & \textbf{multiplier} & \textbf{expected \(z\)} \\
+\midrule
+\endhead
+heat & \(e^{-tA}\) & 2 \\
+Schrödinger & \(e^{-itA}\) & 2 \\
+wave & \(\cos(t\sqrt A)\), \(\sin(t\sqrt A)/\sqrt A\) & 1 \\
+Poisson & \(e^{-t\sqrt A}\) & 1 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The first and fourth are dissipative; the second and wave propagator are reversible in their appropriate state spaces.
+
+\section{4. Research methodology}
+
+Low-mode power laws were regressed, cycle relaxation/\allowbreak{}wave times were computed for \(N=12,\ldots,192\), QW2118 effective exponents were compared across mode pairs, and propagation support was analyzed from power-series coefficients.
+
+\section{5. Detailed derivations}
+
+For \(g_N=4\sin^2(\pi/N)\),
+
+\[
+\tau_{\rm diff}=g_N^{-1}\sim\frac{N^2}{4\pi^2},
+\qquad
+\tau_{\rm wave}=g_N^{-1/2}\sim\frac{N}{2\pi}.
+\]
+
+\textbf{\statusProven{}}
+
+Doubling spatial resolution multiplies diffusive/\allowbreak{}Schrödinger time by approximately four and wave time by two. The fitted low-momentum powers \(2.0000\) for \(L\) and \(1.0000\) for \(\sqrt L\) confirm the distinction. \textbf{\statusStrong{}}
+
+Unitarity constrains norm preservation, not dispersion. \(e^{-itL}\) is unitary with \(z=2\). \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+A local \(z=1\) continuum target may be built from a doubled Dirac/\allowbreak{}incidence operator or a second-order equation
+
+\[
+\partial_t^2\phi+A_N\phi=0.
+\]
+
+It still requires a refinement, clock/\allowbreak{}length relation, local limit, orientation, and convergence of commutators or Green functions. \textbf{\statusModerate{}}
+
+QW2118 mode-rate estimates gave \(z_{\rm eff}\approx1.064\) from modes \(1,2\) and \(0.870\) from \(1,3\). Their disagreement prevents a stable exponent claim from twelve nonlocal modes. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+For irreducible Markov \(P_t\), every entry is positive for every \(t>0\): diffusion has instantaneous support. \textbf{\statusProven{}}
+
+Finite graph unitary and wave matrices are analytic; a distant entry appears at a finite order in \(t\), yielding suppression rather than an exact cone. \textbf{\statusProven{}}
+
+Therefore neither “unitary” nor “wave-like plot” establishes Lorentz causality. \textbf{\statusRefuted{}}
+
+The Poisson semigroup has \(z=1\) scaling yet is dissipative and generally nonlocal, showing that \(z=1\) alone is insufficient. \textbf{\statusProven{}}
+
+\section{8. Numerical investigations}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.208\textwidth}p{0.344\textwidth}p{0.308\textwidth}@{}}
+\toprule
+\textbf{\(N\)} & \textbf{\(\tau_{\rm diff}\)} & \textbf{\(\tau_{\rm wave}\)} \\
+\midrule
+\endhead
+12 & 3.7321 & 1.9319 \\
+24 & 14.6739 & 3.8306 \\
+48 & 58.4444 & 7.6449 \\
+96 & 233.5274 & 15.2816 \\
+192 & 933.8594 & 30.5591 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The asymptotic ratios are the clearest computational discriminator of temporal universality class. \textbf{\statusStrong{}}
+
+\section{9. Literature comparison}
+
+Dynamic universality classes are systematically classified in \href{https://doi.org/10.1103/RevModPhys.49.435}{Hohenberg and Halperin}. Quantum walks on graphs are not automatically relativistic; see \href{https://arxiv.org/abs/quant-ph/9706062}{Farhi and Gutmann}. FIN needs an independently justified local \(z=1\) refinement before Lorentz questions become mathematically well posed.
+
+\section{10. Final conclusions}
+
+One spatial operator supports \(z=1\) and \(z=2\), reversible and dissipative temporal laws. \textbf{\statusProven{}}
+
+The current finite spectrum does not choose among them or determine a causal cone. \textbf{\statusProven{}}
+
+A causal continuum remains a high-risk, high-impact new construction. \textbf{\statusSpeculative{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Dynamic-law classification: \textbf{\statusProven{}}
+
+\item 
+Low-mode cycle scaling: \textbf{\statusProven{}}
+
+\item 
+Unitarity as sufficient for Lorentz symmetry: \textbf{\statusRefuted{}}
+
+\item 
+FIN-native \(z=1\) causal refinement: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of a useful \(z=1\) construction: \(0.35\)
+
+\item 
+Probability of a Lorentzian causal limit: \(0.10\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(9/10\)
+
+\item 
+Time: 6–18 months
+
+\item 
+Dependencies: Programs 4, 7, and 12
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Program 20 — Minimal operational completion and nonselection theorem}
+
+\section{1. Motivation}
+
+The final observer program asks for the smallest object that turns the common generator into empirical predictions and proves which components cannot be removed.
+
+\textbf{Research hypothesis.} The minimal physical object is not a richer spectral operator but an operational process tuple; removing any of its typed components restores concrete nonidentifiability. \textbf{\statusStrong{}}
+
+Estimated success \(0.90\), impact \(10/10\), difficulty \(7/10\), time 3–6 months for formalization.
+
+\section{2. Background}
+
+A physical probability is conditional on preparation, dynamics, instrument, apparatus reference, clock, and record rule. Spectral data constrain one member—the generator—but do not define the conditional experiment.
+
+\section{3. Mathematical formulation}
+
+Define the operational completion
+
+\[
+\mathfrak P=
+\bigl(
+A,\mathcal S,\rho_0,\gamma,
+\{\Phi_\tau\},
+\{\mathcal I_{a|x}\},
+F_{\rm app},
+\mathcal R
+\bigr),
+\]
+
+where:
+
+\begin{itemize}
+\item 
+\(A\) is the spectral generator;
+
+\item 
+\(\mathcal S\) is the state space and probability rule;
+
+\item 
+\(\rho_0\) is a preparation;
+
+\item 
+\(\gamma\) calibrates dimensionless to physical time;
+
+\item 
+\(\Phi_\tau\) is the dynamical channel;
+
+\item 
+\(\mathcal I_{a|x}\) are instruments;
+
+\item 
+\(F_{\rm app}\) is the apparatus frame;
+
+\item 
+\(\mathcal R\) turns outcomes into persistent records.
+
+\end{itemize}
+
+\section{4. Research methodology}
+
+Each component was removed in turn. Programs 11–19 supply explicit witness pairs that become observationally indistinguishable or undefined after removal. The two temporal models were then treated as models of a common axiom set to prove logical nonselection.
+
+\section{5. Detailed derivations}
+
+\textbf{Theorem 10 — dynamical nonselection.} Let \(A\ne0\) be finite, positive, with zero mode and graph-Laplacian signs. The axioms concerning \(A\) alone admit at least
+
+\[
+\mathcal M_U:\ \psi(t)=e^{-itA}\psi_0
+\]
+
+and
+
+\[
+\mathcal M_D:\ p(t)=e^{-tA}p_0.
+\]
+
+Both satisfy the same spectral premises, but their nontrivial propagators cannot be simultaneously unitary and stochastic. Therefore neither temporal law is a logical consequence of those premises. \textbf{\statusProven{}}
+
+This is a model-theoretic obstruction: another theorem about the same unaugmented \(A\) cannot choose the physics.
+
+In physical units one must write at least
+
+\[
+i\hbar\frac{d\psi}{d\tau}=E_0A\psi
+\]
+
+or
+
+\[
+\frac{dp}{d\tau}=-\kappa Ap.
+\]
+
+Only the products \(E_0\tau/\hbar\) or \(\kappa\tau\) are visible to the dimensionless operator. \textbf{\statusProven{}}
+
+\section{6. Proof attempts}
+
+Necessity witnesses are:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{removed component} & \textbf{witness} \\
+\midrule
+\endhead
+state space/\allowbreak{}dynamics & unitary–stochastic intersection theorem \\
+clock calibration & \((\gamma,\tau)\mapsto(\gamma/c,c\tau)\) invariance \\
+preparation & uniform state hides all population differences \\
+instrument & \(M_{2t}\ne M_t^2\) and Zeno effect \\
+apparatus frame & random orientation erases odd information \\
+record/\allowbreak{}environment & distinct decoherence laws share terminal marginals \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+Each obstruction is independent of cosmological or philosophical interpretation. \textbf{\statusProven{}}
+
+Additional operational axioms can select a category: transition-probability-preserving reversible pure-state dynamics leads toward unitary/\allowbreak{}antiunitary structure; positive simplex-preserving continuous semigroups lead to Markov generators. The choice precedes the theorem. \textbf{\statusStrong{}}
+
+\section{7. Counterexamples}
+
+Removing \(\rho_0\) permits the uniform state, which makes both worlds stationary. Removing instruments makes sequential quantum probabilities undefined. Removing the clock allows rate re-fitting. Removing the apparatus frame destroys orientation data. \textbf{\statusProven{}}
+
+Adding only “information” does not repair any component because both models admit information measures. \textbf{\statusRefuted{}}
+
+Adding only an observer label without a mathematical instrument changes no prediction. \textbf{\statusRefuted{}}
+
+\section{8. Numerical investigations}
+
+The necessity witnesses were executed on QW2118:
+
+\begin{itemize}
+\item 
+common-generator residuals at machine precision;
+
+\item 
+short-time \(O(t)\) versus \(O(t^2)\);
+
+\item 
+Chapman–Kolmogorov unitary residual up to \(0.723\);
+
+\item 
+exact Markov residual below \(3\times10^{-15}\);
+
+\item 
+relational covariance below \(2.1\times10^{-16}\);
+
+\item 
+random calibration yielding zero odd mutual information.
+
+\end{itemize}
+
+\textbf{\statusStrong{}}
+
+Together they form a finite acceptance suite for any claimed operational completion.
+
+\section{9. Literature comparison}
+
+General probabilistic theories explicitly separate states, transformations, and effects. Quantum reconstruction results, such as \href{https://arxiv.org/abs/0908.1583}{Chiribella, D'Ariano and Perinotti}, demonstrate that quantum theory follows only after strong operational axioms. Process tensors add multitime instruments. The FIN result is a concrete independence proof showing why the spectral theorem alone cannot replace those axioms.
+
+\section{10. Final conclusions}
+
+The minimal bridge to physics is the operational tuple \(\mathfrak P\), not a single missing scalar or another function of \(A\). \textbf{\statusProven{}}
+
+The same operator's wave and diffusion shadows make every omitted component experimentally consequential. \textbf{\statusProven{}}
+
+A future FIN theory must choose or derive a temporal category and then survive preregistered multitime tests. \textbf{\statusStrong{}}
+
+\section{11. Confidence assessment}
+
+\begin{itemize}
+\item 
+Dynamical nonselection theorem: \textbf{\statusProven{}}
+
+\item 
+Necessity of operational typing: \textbf{\statusProven{}}
+
+\item 
+Recovery of the full tuple from spectral data alone: \textbf{\statusRefuted{}}
+
+\item 
+Existence of a FIN-native principle that supplies the full tuple: \textbf{\statusSpeculative{}}
+
+\item 
+Probability of formalizing the necessity theorem: \(0.95\)
+
+\item 
+Probability current data already determine the physical tuple: \(0.02\)
+
+\item 
+Impact: \(10/10\)
+
+\item 
+Difficulty: \(7/10\)
+
+\item 
+Time: 3–6 months
+
+\item 
+Dependencies: synthesis of Programs 2–19
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Part V — Ten recommended next studies (Programs 21–30)}
+
+These are deliberately \textbf{not} reported as completed research. They are the next highest-value programs after the twenty executions above. Their probabilities are planning estimates.
+
+\begin{center}
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.055\textwidth}p{0.351\textwidth}p{0.157\textwidth}p{0.078\textwidth}p{0.131\textwidth}p{0.087\textwidth}@{}}
+\toprule
+\textbf{Rank} & \textbf{Program} & \textbf{Success probability} & \textbf{Impact} & \textbf{Difficulty} & \textbf{Time} \\
+\midrule
+\endhead
+21 & intervention-aware process-tensor tomography & 0.85 & 10/\allowbreak{}10 & 6/\allowbreak{}10 & 2–6 months \\
+22 & positivity-preserving \(K_N\) refinement & 0.30 & 10/\allowbreak{}10 & 9/\allowbreak{}10 & 6–15 months \\
+23 & \(z=1\) Dirac/\allowbreak{}hyperbolic refinement & 0.35 & 10/\allowbreak{}10 & 9/\allowbreak{}10 & 6–18 months \\
+24 & explicit OS-reflection-positivity program & 0.20 & 10/\allowbreak{}10 & 10/\allowbreak{}10 & 9–24 months \\
+25 & SPAM- and clock-robust Bayesian identification & 0.80 & 9/\allowbreak{}10 & 7/\allowbreak{}10 & 3–8 months \\
+26 & minimal-environment/\allowbreak{}dilation identifiability & 0.65 & 8/\allowbreak{}10 & 8/\allowbreak{}10 & 4–10 months \\
+27 & full relational-observable rewrite audit & 0.75 & 9/\allowbreak{}10 & 6/\allowbreak{}10 & 2–5 months \\
+28 & adaptive odd-sector and integrability audit & 0.35 & 9/\allowbreak{}10 & 9/\allowbreak{}10 & 6–15 months \\
+29 & machine-checked operational no-go library & 0.90 & 7/\allowbreak{}10 & 6/\allowbreak{}10 & 2–6 months \\
+30 & blinded twelve-mode held-out challenge & 0.70 & 10/\allowbreak{}10 & 8/\allowbreak{}10 & 6–18 months \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\section{Program 21 — Intervention-aware process-tensor tomography}
+
+\textbf{Why now.} Program 14 produced the sharpest finite discriminator, \(M_{2t}\ne M_t^2\). The next step is to reconstruct all two- and three-time intervention probabilities rather than only position projections. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} A modest informationally complete instrument set will separate coherent, Markov, dephasing, and non-Markovian bath models even with realistic noise. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: process tensors, quantum combs, identifiability, Chernoff design.
+
+\item 
+Computation: optimize times and instruments under finite shots; bootstrap confidence regions.
+
+\item 
+Physical experiment: twelve coupled optical, microwave, trapped-ion, or programmable quantum-walk modes; compare runs with and without intermediate intervention.
+
+\item 
+Falsification: all candidate models remain likelihood-equivalent after informationally complete data and calibrated nuisance bounds.
+
+\item 
+Dependencies: Programs 9, 13–16.
+
+\item 
+Estimated existence/\allowbreak{}success probability: \(0.85\).
+
+\end{itemize}
+
+\section{Program 22 — Positivity-preserving FIN refinement}
+
+\textbf{Why now.} The exact \(C_{12}\) Markov generator loses off-diagonal positivity in the naive \(N=16\) extension. A stochastic continuum is impossible without repairing that failure. \textbf{\statusProven{}}
+
+\textbf{Hypothesis.} There may exist a running parameter family \(W_N\ge0\) that matches \(N=12\), retains a nontrivial strict profile, and converges after normalization to a positivity-preserving operator. \textbf{\statusSpeculative{}}
+
+\begin{itemize}
+\item 
+Mathematics: completely monotone graph filters, Bernstein functions, Dirichlet forms, Mosco convergence.
+
+\item 
+Computation: constrained continuation search with held-out sizes and interval-certified signs.
+
+\item 
+Physical experiment: compare relaxation modes on several emulator sizes.
+
+\item 
+Falsification: no feasible family satisfies positivity, \(N=12\) fit, parameter simplicity, and stable low-mode limit.
+
+\item 
+Dependencies: Programs 1, 4, 11, 19.
+
+\item 
+Estimated probability: \(0.30\).
+
+\end{itemize}
+
+\section{\texorpdfstring{Program 23 — A \(z=1\) doubled Dirac or hyperbolic refinement}{Program 23 — A z=1 doubled Dirac or hyperbolic refinement}}
+
+\textbf{Why now.} Neither heat nor Schrödinger evolution of a Laplacian establishes Lorentz behavior. A first-order or second-order hyperbolic structure is the shortest credible route. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} A vertex-edge doubled operator can square to a graph Laplacian while admitting a controlled \(z=1\) limit. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: discrete exterior calculus, graph Dirac operators, strong-resolvent convergence, Lieb–Robinson bounds.
+
+\item 
+Computation: packet velocity, dispersion linearity, commutator tails, robustness under refinement.
+
+\item 
+Physical experiment: measure arrival-time scaling \(N\) versus \(N^2\).
+
+\item 
+Falsification: persistent nonlinear dispersion, nonlocal tails, or absence of a consistent time orientation.
+
+\item 
+Dependencies: Programs 4, 7, 19, 22.
+
+\item 
+Estimated probability: \(0.35\).
+
+\end{itemize}
+
+\section{Program 24 — Osterwalder–Schrader positivity for explicit FIN correlators}
+
+\textbf{Why now.} Analytic continuation is physically empty without reflection positivity. This is the hardest rigorous quantum-field gate. \textbf{\statusProven{}}
+
+\textbf{Hypothesis.} A temporally extended free theory based on \(A_{\rm M}+m^2\) may be reflection positive; interacting or FIN-selected uniqueness is much less likely. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: transfer matrices, reflection-positive kernels, Schwinger functions, constructive field theory.
+
+\item 
+Computation: exact finite-lattice reflection matrices and smallest-eigenvalue certificates.
+
+\item 
+Physical experiment: none until a reconstructed Hamiltonian yields held-out correlators; later compare Euclidean and real-time simulator data.
+
+\item 
+Falsification: a negative reflection form for any declared admissible test function.
+
+\item 
+Dependencies: Programs 8, 12, 19, 23.
+
+\item 
+Estimated probability: \(0.20\).
+
+\end{itemize}
+
+\section{Program 25 — SPAM- and clock-robust Bayesian identification}
+
+\textbf{Why now.} One uncalibrated snapshot nearly erased wave/\allowbreak{}diffusion separation. Preparation-and-measurement errors and clock drift must be treated as parameters, not ignored. \textbf{\statusProven{}}
+
+\textbf{Hypothesis.} Three or more optimized times plus calibration controls identify the temporal category despite bounded SPAM error. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: Bayesian experimental design, structural identifiability, nuisance marginalization.
+
+\item 
+Computation: posterior predictive checks, model misspecification, sequential design.
+
+\item 
+Physical experiment: randomized order, blind labels, calibration pulses, common-clock and independent-clock controls.
+
+\item 
+Falsification: broad nuisance priors absorb every proposed held-out distinction.
+
+\item 
+Dependencies: Programs 9, 13, 14, 18.
+
+\item 
+Estimated probability: \(0.80\).
+
+\end{itemize}
+
+\section{Program 26 — Minimal environment and dilation identifiability}
+
+\textbf{Why now.} Program 15 proves existence but extreme nonuniqueness of baths. Physical content requires determining which environmental features are inferable from system records. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} Finite-window multitime data can bound bath dimension, memory time, or spectral density, though never identify a unique infinite dilation. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: minimal Stinespring dimension, realization theory, pseudomodes, non-Markovianity.
+
+\item 
+Computation: fit Cauchy, finite-mode, and reset-bath models under recurrence tests.
+
+\item 
+Physical experiment: monitor selected environmental outputs and look for information backflow.
+
+\item 
+Falsification: observational equivalence of all bath classes across accessible controls.
+
+\item 
+Dependencies: Programs 14–17, 21.
+
+\item 
+Estimated probability: \(0.65\).
+
+\end{itemize}
+
+\section{Program 27 — Full relational-observable rewrite audit}
+
+\textbf{Why now.} The relative-frame theorem may remove the absolute selector from physics, but only if every claimed observable and coupling can be rewritten relationally. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} Most operational predictions factor through system–apparatus invariants; any exception will precisely identify the needed odd physical resource. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: groupoids, invariant theory, resource theories of asymmetry.
+
+\item 
+Computation: type every origin/\allowbreak{}sign-sensitive artifact and mechanically test covariance.
+
+\item 
+Physical experiment: apparatus reflection and random-orientation controls.
+
+\item 
+Falsification: a necessary observable remains absolute and no measurable odd resource supplies it.
+
+\item 
+Dependencies: Programs 2, 18, 20.
+
+\item 
+Estimated probability: \(0.75\).
+
+\end{itemize}
+
+\section{Program 28 — Adaptive integrability and odd-sector bifurcation}
+
+\textbf{Why now.} Feedback gradient claims and spontaneous selector claims remain unproved. The actual adaptive Jacobian must replace generic pitchfork prose. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} Either the covariance one-form fails integrability or an explicit odd eigenvalue crossing can be isolated in a justified \(K_N\) family. \textbf{\statusSpeculative{}}
+
+\begin{itemize}
+\item 
+Mathematics: Fréchet derivatives, Helmholtz integrability conditions, equivariant center manifolds, stochastic limits.
+
+\item 
+Computation: automatic differentiation, Jacobian representation blocks, interval-certified bifurcation coefficients.
+
+\item 
+Physical experiment: perturbation/\allowbreak{}reversal hysteresis if a real adaptive platform is specified.
+
+\item 
+Falsification: no odd tangent source or no transverse eigenvalue crossing.
+
+\item 
+Dependencies: Programs 2, 5, 22.
+
+\item 
+Estimated probability of a positive FIN-specific bifurcation: \(0.35\).
+
+\end{itemize}
+
+\section{Program 29 — Machine-checked operational no-go library}
+
+\textbf{Why now.} The strongest results are short necessity theorems that should not depend on prose interpretation. \textbf{\statusStrong{}}
+
+\textbf{Hypothesis.} The selector, scale, finite-bath, unitary–stochastic intersection, and dynamical-nonselection proofs can all be formally certified. \textbf{\statusStrong{}}
+
+\begin{itemize}
+\item 
+Mathematics: finite group actions, linear algebra, representation weights, semigroup axioms.
+
+\item 
+Computation: Lean/\allowbreak{}Isabelle proofs linked to rational or interval-certified QW2118 witnesses.
+
+\item 
+Physical experiment: none; the deliverable is auditability.
+
+\item 
+Falsification: a hidden premise is found or a checker rejects the proof.
+
+\item 
+Dependencies: Programs 1–20.
+
+\item 
+Estimated probability: \(0.90\).
+
+\end{itemize}
+
+\section{Program 30 — Blinded twelve-mode held-out challenge}
+
+\textbf{Why now.} FIN needs a prediction test, not another reconstruction from known target values. \textbf{\statusProven{}}
+
+\textbf{Hypothesis.} A preregistered subset of strict spectral ratios and multitime responses can predict blinded emulator observations beyond affine calibration and nuisance fitting. \textbf{\statusModerate{}}
+
+\begin{itemize}
+\item 
+Mathematics: scale-free invariants, likelihood ratios, multiple-testing control.
+
+\item 
+Computation: generate blinded synthetic and hardware datasets; lock fitting modes before revealing tests.
+
+\item 
+Physical experiment: independently fabricated twelve-mode weighted ring, with both coherent and controlled dissipative regimes.
+
+\item 
+Falsification: held-out errors match or exceed generic circulant alternatives.
+
+\item 
+Dependencies: Programs 9, 13, 14, 21, 25.
+
+\item 
+Estimated probability of a technically decisive emulator result: \(0.70\).
+
+\item 
+Estimated probability that the result alone establishes fundamental physics: \(0.02\).
+
+\end{itemize}
+
+\par\medskip\hrule\medskip
+
+\chapter{Part VI — Independent comparison, dependency graph, and roadmap}
+
+\section{1. Objective comparison of the twenty executed programs}
+
+Scores are \(0\)–\(10\) judgments. They rank research value, not truth status.
+
+\begin{center}
+\begingroup\fontsize{6.5}{7.8}\selectfont
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.075\textwidth}p{0.170\textwidth}p{0.049\textwidth}p{0.108\textwidth}p{0.098\textwidth}p{0.100\textwidth}p{0.108\textwidth}p{0.151\textwidth}@{}}
+\toprule
+\textbf{Overall rank} & \textbf{Program} & \textbf{Depth} & \textbf{Originality} & \textbf{Robustness} & \textbf{Physical relevance} & \textbf{Testability} & \textbf{Transformative potential} \\
+\midrule
+\endhead
+1 & P20 operational completion/\allowbreak{}nonselection & 9 & 8 & 10 & 10 & 8 & 10 \\
+2 & P14 multitime instrument test & 8 & 8 & 10 & 10 & 10 & 9 \\
+3 & P9 calibrated predictive challenge & 7 & 7 & 8 & 10 & 10 & 10 \\
+4 & P4 refinement and continuum & 10 & 6 & 9 & 10 & 5 & 10 \\
+5 & P11 exact dual dynamics & 8 & 7 & 10 & 9 & 9 & 9 \\
+6 & P2 relational selector & 8 & 8 & 10 & 9 & 8 & 9 \\
+7 & P13 short-time discrimination & 7 & 7 & 10 & 9 & 10 & 8 \\
+8 & P19 dynamic exponent/\allowbreak{}causality & 9 & 6 & 9 & 10 & 7 & 9 \\
+9 & P15 unitary dilation & 8 & 6 & 10 & 9 & 8 & 8 \\
+10 & P18 relational apparatus & 7 & 7 & 10 & 9 & 8 & 8 \\
+11 & P3 units/\allowbreak{}RG/\allowbreak{}modular time & 9 & 6 & 10 & 10 & 4 & 9 \\
+12 & P17 entropy and time arrow & 7 & 6 & 10 & 9 & 8 & 8 \\
+13 & P8 action and OS gate & 9 & 6 & 9 & 10 & 4 & 9 \\
+14 & P16 decoherence/\allowbreak{}Zeno & 7 & 6 & 10 & 8 & 9 & 7 \\
+15 & P12 holomorphic time/\allowbreak{}Wick & 8 & 6 & 10 & 9 & 5 & 8 \\
+16 & P6 information thermodynamics & 8 & 5 & 10 & 9 & 5 & 7 \\
+17 & P7 repaired NCG & 9 & 6 & 9 & 8 & 3 & 7 \\
+18 & P5 adaptive bootstrap & 8 & 7 & 8 & 7 & 4 & 7 \\
+19 & P1 spectral bridge & 7 & 8 & 10 & 5 & 3 & 6 \\
+20 & P10 machine certificates & 6 & 5 & 9 & 5 & 2 & 6 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\textbf{\statusStrong{}} Programs 20, 14, 9, and 4 form the shortest path from mathematical underdetermination to an empirically risky theory. Program 11 supplies the new organizing theorem; Program 2 supplies the best selector reformulation.
+
+\section{2. Dependency graph}
+
+\begin{Verbatim}[fontsize=\small]
+Finite strict spectral core
+   +-- P1 finite bridge
+   +-- P2 relational selector -- P18 relational apparatus --+
+   +-- P3 units and clock ----------------+                 |
+   +-- P4 refinement -- P7 geometry -- P8 OS/action        |
+   |          +-------------- P19 dynamic exponent          |
+   +-- P11 dual generator                                  |
+          +-- P12 holomorphic time                          |
+          +-- P13 short-time test --------------------------+
+          +-- P14 multitime instruments --------------------+
+          +-- P15 dilation/bath -- P17 records              |
+          +-- P16 decoherence/Zeno                          |
+                                                           v
+                                  P20 operational completion
+                                            |
+                  +-------------------------+--------------------+
+                  v                         v                    v
+         P21/P25 tomography       P22/P23/P24 refinement       P30 blind test
+\end{Verbatim}
+
+The graph has three bottleneck cuts:
+
+\begin{enumerate}
+\item 
+\textbf{operational cut:} no preparation–instrument–record map, no empirical probability;
+
+\item 
+\textbf{refinement cut:} no \(K_N\), no continuum, universality, causal limit, or asymptotic dimension;
+
+\item 
+\textbf{calibration cut:} no dimensionful clock/\allowbreak{}length/\allowbreak{}action source, no numerical physical prediction.
+
+\end{enumerate}
+
+All three must be crossed for fundamental physics. \textbf{\statusProven{}}
+
+\section{3. Critical bottlenecks}
+
+\subsection{B1. Independently motivated empirical domain}
+
+A programmable emulator is easy to fit; a natural system selected independently of the kernel is not. Without it, FIN remains mathematics. \textbf{\statusProven{}}
+
+\subsection{B2. Refinement and locality}
+
+The \(N=12\) Markov property already fails under the naive \(N=16\) profile extension. A valid continuum needs new running laws and positivity/\allowbreak{}locality control. \textbf{\statusProven{}}
+
+\subsection{B3. Temporal category and clock}
+
+The common generator supports unitary, heat, wave, and Poisson laws. Choosing one and calibrating its time is separate structure. \textbf{\statusProven{}}
+
+\subsection{B4. State, instrument, and record}
+
+Uniform preparation hides model differences; intermediate observation changes coherent evolution; records control inferential power. These are not optional semantics. \textbf{\statusProven{}}
+
+\subsection{B5. Reflection positivity or an alternative quantum reconstruction}
+
+Complex-time analyticity alone does not produce a physical Hilbert space from Euclidean data. \textbf{\statusProven{}}
+
+\section{4. High-risk/\allowbreak{}high-reward directions}
+
+\begin{itemize}
+\item 
+A positivity-preserving, local, \(z=1\), OS-positive refinement would transform the framework, but its joint probability is at most about \(0.10\). \textbf{\statusSpeculative{}}
+
+\item 
+A successful blinded physical-domain test has the largest immediate empirical value and about \(0.20\) probability once a nontrivial domain is identified. \textbf{\statusModerate{}}
+
+\item 
+A FIN-native principle deriving the operational tuple has enormous value but no current positive mechanism; probability about \(0.15\). \textbf{\statusSpeculative{}}
+
+\item 
+A repaired graph spectral triple is mathematically feasible but unlikely to force Standard-Model gauge content. \textbf{\statusModerate{}}
+
+\end{itemize}
+
+\section{5. Dead ends and bounded no-go lanes}
+
+\begin{itemize}
+\item 
+extracting an absolute selector from reflection-even scalars: \textbf{\statusRefuted{}}
+
+\item 
+extracting a nonzero physical unit from dimensionless invariants: \textbf{\statusRefuted{}}
+
+\item 
+identifying matrix inertia with Lorentz signature: \textbf{\statusRefuted{}}
+
+\item 
+treating the fixed-size polynomial bridge as a continuum/\allowbreak{}role bridge: \textbf{\statusRefuted{}}
+
+\item 
+treating Shannon entropy as heat without Hamiltonian and bath: \textbf{\statusRefuted{}}
+
+\item 
+using the naive \(D=K_s,J=\) conjugation tuple as a real/\allowbreak{}even triple: \textbf{\statusRefuted{}}
+
+\item 
+using \(K_s\) unshifted as a Gaussian Euclidean action: \textbf{\statusRefuted{}}
+
+\item 
+using free probability for the commuting strict/\allowbreak{}legacy pair: \textbf{\statusRefuted{}}
+
+\item 
+assuming projective decoherence produces \(e^{-tA}\): \textbf{\statusRefuted{}}
+
+\item 
+claiming one terminal spreading profile identifies the dynamics: \textbf{\statusRefuted{}}
+
+\item 
+continuing scalar or selector scans without a new odd/\allowbreak{}charged source: \textbf{\statusRefuted{}}
+
+\end{itemize}
+
+\section{6. Unexpected discoveries}
+
+\begin{enumerate}
+\item 
+The strict and legacy matrices are exact two-way polynomial functions on \(C_{12}\), invalidating an inertia-only finite obstruction. \textbf{\statusProven{}}
+
+\item 
+The strict QW2118 profile itself yields a positive reversible Markov generator after its Perron shift, while the same shift generates an equivalent unitary walk up to phase. \textbf{\statusProven{}}
+
+\item 
+Both dynamics are restrictions of \(e^{-zA}\), but their physical equivalence is false and inverse continuation is exponentially unstable. \textbf{\statusProven{}}
+
+\item 
+A complete relative selector exists for system–apparatus pairs even though an absolute selector does not. \textbf{\statusProven{}}
+
+\item 
+FIN diffusion has an exact infinite unitary dilation but no exact finite-bath dilation for all time. \textbf{\statusProven{}}
+
+\item 
+Frequent unread position measurement freezes the unitary walk instead of producing FIN diffusion. \textbf{\statusProven{}}
+
+\item 
+Multitime records can retain large discriminating information when the terminal marginal is almost useless. \textbf{\statusStrong{}}
+
+\end{enumerate}
+
+\section{7. New theorem inventory}
+
+The monograph establishes or specializes the following:
+
+\begin{itemize}
+\item 
+finite two-way kernel interpolation theorem;
+
+\item 
+finite bridge nonuniqueness and generalization counterexample;
+
+\item 
+natural absolute-selector obstruction;
+
+\item 
+complete relative-frame invariant theorem;
+
+\item 
+dimensionful-source equivariance theorem;
+
+\item 
+single-snapshot continuum obstruction;
+
+\item 
+feedback-gradient correction theorem;
+
+\item 
+Gibbs energy-scale nonidentifiability theorem;
+
+\item 
+naive spectral-triple first-order and grading obstructions;
+
+\item 
+strict action stability threshold;
+
+\item 
+invariant-to-odd and weight-zero source exclusions;
+
+\item 
+exact QW2118 dual unitary/\allowbreak{}Markov theorem;
+
+\item 
+stochastic–unitary trivial-intersection theorem;
+
+\item 
+holomorphic temporal-family and inverse-conditioning result;
+
+\item 
+all-edge short-time clock-reparametrization obstruction;
+
+\item 
+multitime Chapman–Kolmogorov interference witness;
+
+\item 
+exact infinite dilation and finite-bath no-go;
+
+\item 
+projective-decoherence/\allowbreak{}Zeno limit theorem;
+
+\item 
+entropy/\allowbreak{}arrow separation;
+
+\item 
+dynamical nonselection theorem and operational necessity witnesses.
+
+\end{itemize}
+
+Each theorem is \textbf{\statusProven{}} in its stated finite or conditional scope. None proves that FIN is a physical theory.
+
+\section{8. New conjectures}
+
+\subsection{Conjecture C1 — relational completeness}
+
+Every empirically admissible FIN observable can be written as a diagonal system–apparatus invariant; any nonrelational residue corresponds to a measurable odd resource. \textbf{\statusSpeculative{}} Estimated probability \(0.75\).
+
+\subsection{Conjecture C2 — positive refinement}
+
+A nontrivial parameter-running \(W_N\) exists that matches QW2118, preserves nonnegative Dirichlet weights, and has a stable continuum low-mode limit. \textbf{\statusSpeculative{}} Estimated probability \(0.30\).
+
+\subsection{Conjecture C3 — no natural temporal ray}
+
+No automorphism-natural rule on an unadorned positive self-adjoint operator selects the imaginary rather than positive real time ray while remaining compatible with both unitary and Markov functional calculi. \textbf{\statusStrong{}} A categorical formulation is still required.
+
+\subsection{Conjecture C4 — hyperbolic reconstruction}
+
+A doubled graph-Dirac refinement can produce \(z=1\) dispersion, but satisfying locality, orientation, OS positivity, and FIN-specific parameter selection simultaneously is rare. \textbf{\statusSpeculative{}} Estimated probability \(0.15\).
+
+\subsection{Conjecture C5 — adaptive odd bifurcation obstruction}
+
+The current feedback law lacks either an exact covariance one-form or a strict odd eigenvalue crossing, so it cannot internally select a branch without new data. \textbf{\statusModerate{}}
+
+\section{9. Phased roadmap}
+
+\subsection{Phase 0 — formal freeze, 0–3 months}
+
+\begin{itemize}
+\item 
+reproduce every finite number with two independent implementations;
+
+\item 
+formalize the selector, unit, dual-dynamics, and nonselection theorems;
+
+\item 
+preregister admissible inputs and nuisance parameters.
+
+\end{itemize}
+
+Success criterion: machine-checkable statements and no provenance leakage.
+
+\subsection{Phase 1 — operational observer tests, 2–6 months}
+
+\begin{itemize}
+\item 
+execute two- and three-time intervention tomography;
+
+\item 
+fit coherent, Markov, and open-system alternatives;
+
+\item 
+include SPAM and clock uncertainty;
+
+\item 
+retain complete records.
+
+\end{itemize}
+
+Success criterion: Bayes factors and predictive residuals on held-out runs.
+
+\subsection{Phase 2 — relational and dimensional completion, 3–9 months}
+
+\begin{itemize}
+\item 
+rewrite every observable relative to an apparatus;
+
+\item 
+declare the rank-three calibration package;
+
+\item 
+determine whether any absolute odd claim remains.
+
+\end{itemize}
+
+Success criterion: every predicted number has units, preparation, measurement, and symmetry behavior.
+
+\subsection{Phase 3 — refinement competition, 6–18 months}
+
+\begin{itemize}
+\item 
+construct several \(K_N\) families, including positivity-preserving and \(z=1\) candidates;
+
+\item 
+compare them at unseen \(N\);
+
+\item 
+reject any without stable low-mode and locality behavior.
+
+\end{itemize}
+
+Success criterion: a convergent family selected by a non-post-hoc criterion.
+
+\subsection{Phase 4 — field reconstruction, 9–24 months}
+
+\begin{itemize}
+\item 
+test reflection positivity and transfer matrices;
+
+\item 
+audit repaired spectral triples and gauge groups;
+
+\item 
+derive correlators and effective actions.
+
+\end{itemize}
+
+Success criterion: a rigorous reconstructed dynamical theory with held-out observables.
+
+\subsection{Phase 5 — blinded physical challenge, 12–36 months}
+
+\begin{itemize}
+\item 
+select an independent physical platform;
+
+\item 
+lock calibration modes and predictions;
+
+\item 
+reveal held-out spectral and multitime data;
+
+\item 
+compare against generic circulant, Markov, and quantum-walk alternatives.
+
+\end{itemize}
+
+Success criterion: repeatable out-of-sample superiority, not mere implementability.
+
+\par\medskip\hrule\medskip
+
+\chapter{Part VII — Final scientific judgment}
+
+\section{1. Deepest interpretation that survives falsification}
+
+The smallest robust object is the positive Dirichlet generator
+
+\[
+A=sI-K_s.
+\]
+
+Its spectral measure generates a holomorphic family \(e^{-zA}\). The unitary, heat, wave, Poisson, Green, and spectral-filter constructions are different functional or temporal images of this generator. \textbf{\statusProven{}}
+
+This does \textbf{not} mean they are the same physics. Their state spaces, composition laws, probability rules, interventions, entropy behavior, and continuum scaling differ. \textbf{\statusProven{}}
+
+The deepest surviving interpretation is therefore:
+
+\begin{quote}\itshape
+FIN is presently a finite spectral kinematics with multiple admissible temporal semantics. Its missing physical principle is an operational-relational completion that chooses a state cone and temporal category, calibrates time and scale, specifies preparation/\allowbreak{}instruments/\allowbreak{}records, and embeds the finite generator into a convergent family.
+
+\end{quote}
+
+\textbf{\statusStrong{}}
+
+The observer paradox disappears in this formulation. A phase-sensitive observer with coherent control sees unitary interference; a population observer coupled to or ignoring an environment may see diffusion. Neither observer creates the operator. Their accessible algebra and intervention channel determine which predictions are operationally available. \textbf{\statusProven{}}
+
+\section{2. Current verdict}
+
+\begin{itemize}
+\item 
+Mathematical coherence of the finite spectral core: \textbf{\statusStrong{}}
+
+\item 
+Exact strict finite unitary/\allowbreak{}Markov duality after Perron shift: \textbf{\statusProven{}}
+
+\item 
+Automatic emergence of physics from the spectral theorem: \textbf{\statusRefuted{}}
+
+\item 
+Current status as a predictive fundamental physical theory: \textbf{\statusRefuted{}}
+
+\item 
+Possibility of a calibrated, testable extension: \textbf{\statusModerate{}}
+
+\item 
+Claim that consciousness is needed to resolve the two dynamics: \textbf{\statusRefuted{}}
+
+\item 
+Claim that preparation, clock, instrument, environment, and records are needed for empirical probabilities: \textbf{\statusProven{}}
+
+\end{itemize}
+
+The appropriate scientific response is neither confirmation nor dismissal. It is to stop extending receiver formulas and attack the operational, refinement, and calibration cuts with blinded tests.
+
+\par\medskip\hrule\medskip
+
+\chapter{What are the three discoveries that would most dramatically increase the probability that FIN becomes a genuine theory of physics?}
+
+\section{Discovery 1 — A FIN-native causal and reflection-positive refinement theorem}
+
+\textbf{Statement sought.} Construct a non-post-hoc family \(A_N\) matching QW2118 at \(N=12\), preserving positive Dirichlet structure, possessing a local \(z=1\) or otherwise physically justified limit, and yielding reflection-positive Euclidean correlators or a direct unitary continuum reconstruction.
+
+\textbf{Why it is fundamental.} It would replace the isolated matrix with a continuum-capable dynamical theory and simultaneously address universality, locality, causality, and the wave/\allowbreak{}diffusion relation. Without it, twelve-point behavior cannot define spacetime or field physics. Its necessity has been established. \textbf{\statusProven{}}
+
+\textbf{Does it appear achievable?} Individual components are standard; their simultaneous FIN-specific derivation is difficult and currently unsupported. \textbf{\statusSpeculative{}}
+
+\textbf{Suggested mathematical techniques.}
+
+\begin{itemize}
+\item 
+Dirichlet-form and Mosco convergence;
+
+\item 
+discrete exterior calculus and graph Dirac operators;
+
+\item 
+strong-resolvent convergence;
+
+\item 
+Lieb–Robinson estimates and hyperbolic principal symbols;
+
+\item 
+transfer matrices and Osterwalder–Schrader positivity;
+
+\item 
+equivariant orientation and refinement functors.
+
+\end{itemize}
+
+\textbf{Suggested computational experiments.}
+
+\begin{itemize}
+\item 
+constrained \(K_N\) parameter-running search with interval-certified positivity;
+
+\item 
+multi-size dispersion and dynamic-exponent fits;
+
+\item 
+commutator-tail and arrival-time scaling;
+
+\item 
+reflection-form eigenvalue tests;
+
+\item 
+out-of-size bridge validation.
+
+\end{itemize}
+
+\textbf{Suggested physical experiments.}
+
+\begin{itemize}
+\item 
+implement several weighted-ring sizes;
+
+\item 
+compare \(N\) versus \(N^2\) propagation times;
+
+\item 
+test real-time and Euclidean correlators under the same preregistered parameters;
+
+\item 
+search for recurrence, locality violations, and bath dependence.
+
+\end{itemize}
+
+\textbf{Estimated probability that the full discovery exists:} \(0.10\).
+
+\section{Discovery 2 — A blinded, independently motivated physical-domain match}
+
+\textbf{Statement sought.} Identify a natural physical system for reasons independent of the FIN fit, calibrate only a preregistered subset of parameters, and correctly predict at least two held-out spectral ratios plus multitime intervention data better than generic circulant, Markov, quantum-walk, and flexible nuisance alternatives.
+
+\textbf{Why it is fundamental.} A theory becomes physics by surviving risky observation. This discovery would supply the absent referent of vertices, clock, preparations, and outcomes and would sharply increase empirical credibility even before a full continuum theory. Its methodological necessity has been established. \textbf{\statusProven{}}
+
+\textbf{Does it appear achievable?} A simulator challenge is feasible; finding a non-engineered domain and beating alternatives is substantially harder. \textbf{\statusModerate{}}
+
+\textbf{Suggested mathematical techniques.}
+
+\begin{itemize}
+\item 
+operational model mapping;
+
+\item 
+structural identifiability;
+
+\item 
+affine-invariant spectral statistics;
+
+\item 
+process-tensor likelihoods;
+
+\item 
+Bayesian model comparison and posterior predictive checking;
+
+\item 
+multiple-testing and preregistration discipline.
+
+\end{itemize}
+
+\textbf{Suggested computational experiments.}
+
+\begin{itemize}
+\item 
+blind synthetic-data challenges with clock and SPAM uncertainty;
+
+\item 
+sequential Chernoff-optimal design;
+
+\item 
+robustness to disorder, mode relabelling, dephasing, and missing data;
+
+\item 
+strict held-out comparison of bridge and refinement families.
+
+\end{itemize}
+
+\textbf{Suggested physical experiments.}
+
+\begin{itemize}
+\item 
+twelve-mode coherent/\allowbreak{}dissipative platform with switchable intermediate measurements;
+
+\item 
+short-time escape-law test;
+
+\item 
+Chapman–Kolmogorov versus interference test;
+
+\item 
+apparatus-reflection controls;
+
+\item 
+blinded held-out mode spectroscopy.
+
+\end{itemize}
+
+\textbf{Estimated probability that a technically decisive simulator discovery exists:} \(0.70\).
+
+\textbf{Estimated probability that an independently motivated fundamental-domain match exists:} \(0.20\).
+
+\section{Discovery 3 — A source-bearing operational selection principle}
+
+\textbf{Statement sought.} Find a new axiom or theorem—independent of the current spectral data—that uniquely or nearly uniquely supplies the admissible state space, temporal ray, apparatus relation, environment/\allowbreak{}record structure, and dimensional calibration, while yielding testable restrictions not fitted afterward.
+
+\textbf{Why it is fundamental.} The dynamical nonselection theorem proves that \(A\) alone admits inequivalent unitary and diffusive worlds. A source-bearing operational principle is the smallest kind of result capable of selecting physics without pretending that another scalar function of \(A\) can do so. Its logical necessity has been established. \textbf{\statusProven{}}
+
+\textbf{Does it appear achievable?} Relational reference frames and open-system dilations provide partial ingredients, but no known principle fixes the whole tuple or its scales. \textbf{\statusSpeculative{}}
+
+\textbf{Suggested mathematical techniques.}
+
+\begin{itemize}
+\item 
+convex operational reconstructions and purification axioms;
+
+\item 
+categorical process theories and groupoids of reference frames;
+
+\item 
+\(C^*\)- and von Neumann algebraic state selection;
+
+\item 
+modular/\allowbreak{}local covariance with explicit clock calibration;
+
+\item 
+resource theories of asymmetry and thermodynamics;
+
+\item 
+independence proofs and categorical naturality.
+
+\end{itemize}
+
+\textbf{Suggested computational experiments.}
+
+\begin{itemize}
+\item 
+automated model search over minimal axiom subsets;
+
+\item 
+countermodel generation for every proposed selection principle;
+
+\item 
+formal verification of necessity and independence;
+
+\item 
+prediction comparison on unseen graphs and instrument sets.
+
+\end{itemize}
+
+\textbf{Suggested physical experiments.}
+
+\begin{itemize}
+\item 
+compare coherent, diffusive, and open-system predictions under identical spatial couplings;
+
+\item 
+reverse the apparatus frame and environmental monitoring;
+
+\item 
+measure full multitime records and entropy flow;
+
+\item 
+test whether the proposed principle forbids any actually realizable channel.
+
+\end{itemize}
+
+\textbf{Estimated probability that such a noncircular FIN-specific principle exists:} \(0.15\).
+
+\par\medskip\hrule\medskip
+
+\section{Final answer in one sentence}
+
+The same FIN operator genuinely generates wave/\allowbreak{}unitary and diffusive mathematical shadows, but the object that could turn either shadow into physics is not another spectral formula: it is a calibrated operational-relational continuum theory whose temporal law and held-out observables survive experiment. \textbf{\statusStrong{}}
+
+
+\clearpage
+\chapter*{Release reproducibility}
+\addcontentsline{toc}{chapter}{Release reproducibility}
+The numerical suites accompanying this monograph can be executed with:
+\begin{Verbatim}[fontsize=\small]
+python3 fin_ten_programs_experiments.py
+python3 fin_observer_dynamics_experiments.py
+\end{Verbatim}
+All times in the finite observer calculations are dimensionless unless a calibration is explicitly supplied. Floating-point residuals must be interpreted with the tolerances declared by the scripts, not as physical effects.
+
+\medskip
+\noindent\textbf{Suggested citation before DOI assignment:}
+
+Żuchowski, K. (2026). \emph{Can FIN Become Predictive Physics? Twenty Executed Research Programs, the Wave--Diffusion Observer Problem, and Ten Next Recommendations} (Release 10.1; Version 1.0.0) [Preprint]. Zenodo. DOI to be assigned.
+
+\end{document}
