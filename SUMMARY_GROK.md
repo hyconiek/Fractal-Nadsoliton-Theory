@@ -283,3 +283,21 @@ Skan: 144 exact locking rows wykluczonych *przez twierdzenie*.
 ---
 
 *Koniec SUMMARY_GROK.md*
+
+### P3171/S2121 — Legacy* phase 4ln2–π dual-dynamics analysis
+- Status: `P3171_LEGACY_STAR_PHASE_4LN2_PI_DUAL_DYNAMICS_ANALYSIS.md`
+- Rigorous theorem-scope certificate (not closure) for reconstructed legacy kernel `K*(d)=A*cos(pi*d/4+pi/6)/(1+beta*d)` vs `alpha_geo=4 ln 2`, `A_phi=2*pi/alpha_geo`, `K_strict_gate`.
+- Hard results: exact `alpha_geo*A_phi=2*pi`; cosine phase period 8, algebraic in `Q(sqrt(2),sqrt(3))`; exact bit-fractions `Delta_theta/A_phi=(ln 2)/2`, `phi_0/A_phi=(ln 2)/3`; critical PSD boundary `beta_* ~= 1.07515` (independent of `A`); `d_I=-log|K|` fails triangle inequality (216/1320 triples) → not a metric; circulant self-convolution no fixed point generating `d^eta` tail.
+- Theorem T1 (conditional): unitary `U=exp(-itA)` and diffusive `T=exp(-tA)` are Borel functions of one self-adjoint generator `A=sI-W`; resolves observer paradox operationally, but no Born rule, detectors, or `QW-2191` discharge.
+- Theorem T6 (selector): inversion-odd component `C` with nonzero signed value + coupling theorem required; natural candidates (`chi_i`, `Im(B_{1,5})`, boundary cocycle, memory-lag commutator, phase-area `A_s`, `D_HL`) remain chart-relative/paired.
+- Bridge status: least-squares `A*K* -> K_strict` residual >= 0.605 for all audited `beta` (confirms P2851 no amplitude-only bridge); new phase does not source strict `omega/phi` and is not a `Z12` Fourier character (period 8 vs 12).
+- Do not promote new phase, bit-fraction compatibility, PSD boundary, dual semigroups, circulant spectra, or CA+SA scaffolding to strict source `omega/phi`, strict `beta/eta`, selector closure, bridge completion, role transfer, `L_total`, or ToE.
+- Admissible next: (A) hard strict-core — nonzero scale-charged `S_+` in `V_chi` coupled to `Omega_M/K_dim` OR translation-breaking `Lambda_origin` coupled to `Phi_Info/A_phi`; (B) conditioned operational track — explicit `W0 + CA + SA` package; (C) bridge attack on exactly one atom (`eta=9/5` or target-independent `beta`) with completion map; (D) replace `d_I` with spectral/Fisher/signed-log distance; (E) SM/GR only as axiom-branch scaffold.
+
+### P3172/S2122 — Legacy* as operator/model generator (standalone potential)
+- Status: `P3172_LEGACY_STAR_OPERATOR_MODEL_GENERATOR_POTENTIAL_AUDIT`
+- Operator matrix: TAK=4, WARUNKOWO=11, NIE=3
+- Dual U/T dynamics: common spectral generator; no observer paradox as math fact
+- Unification score: 2/10; operator theory: 8/10
+- No Strict bridge / no L_total / no ToE promotion
+- Artifacts: `generated/p3172_s2122_legacy_star_operator_model_generator_potential_audit.{json,md}`, `P3172_S2122_LEGACY_STAR_OPERATOR_MODEL_GENERATOR_POTENTIAL_AUDIT.md`
