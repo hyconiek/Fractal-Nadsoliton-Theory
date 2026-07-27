@@ -1,0 +1,2195 @@
+{
+  "metadata": {
+    "title": "FIN Programs 165-177: Axiom Falsification, Operational Identifiability, and Measurement Instruments",
+    "release": "10.16",
+    "version": "1.0.0",
+    "date": "2026-07-27",
+    "creator": "Żuchowski, Krzysztof",
+    "orcid": "0009-0002-0909-3613",
+    "seed": 20260727,
+    "previous_results_sha256": "716179d19cd47acccaef07efe0e5bf909614a46f16b89a498c98ec65280bf171",
+    "previous_axioms_sha256": "be6bfcd185aec87dbb37957f7376c983d6246e39768bdf430be36f607dcc5cdd",
+    "firecrawl_used": false,
+    "external_data_used": false
+  },
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "omega_strict": 0.18575,
+    "phi_strict": 0.1625,
+    "eta_strict": 1.8,
+    "omega_legacy": 0.7853981633974483,
+    "phi_legacy": 0.5235987755982988,
+    "beta_tors": 0.01
+  },
+  "programs": {
+    "165": {
+      "arb_python_available": false,
+      "arb_toolchain_note": "python-flint/libarb is not installed locally. The analytic cancellation theorem was executed, but a full Arb ball-FFT certificate was not claimed.",
+      "identity": "|cos x|=2/pi+(4/pi) sum_(m>=1) (-1)^m cos(2mx)/(1-4m^2)",
+      "Dirichlet_tail_theorem": "For decreasing a_d=d^(-eta), |sum_(d>D) a_d exp(i lambda d)| <= (D+1)^(-eta)/|sin(lambda/2)| away from resonance.",
+      "distance_start": 16384,
+      "q_window": [
+        0.001,
+        0.02
+      ],
+      "absolute_two_sided_numerator_tail_bound": 0.002125367586172177,
+      "rows": [
+        {
+          "Fourier_modes": 10,
+          "two_sided_correction_tail_bound": 6.471204442201881e-05,
+          "resonant_mode_intervals": 0,
+          "unresolved_coefficient_mass": 0.03031522725559911,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 30,
+          "two_sided_correction_tail_bound": 2.247607117068447e-05,
+          "resonant_mode_intervals": 0,
+          "unresolved_coefficient_mass": 0.010436389710943957,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 100,
+          "two_sided_correction_tail_bound": 7.029543784458045e-06,
+          "resonant_mode_intervals": 0,
+          "unresolved_coefficient_mass": 0.0031672625490924444,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 300,
+          "two_sided_correction_tail_bound": 2.585963303439073e-06,
+          "resonant_mode_intervals": 2,
+          "unresolved_coefficient_mass": 0.001059267508099137,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 1000,
+          "two_sided_correction_tail_bound": 1.017838867414269e-06,
+          "resonant_mode_intervals": 6,
+          "unresolved_coefficient_mass": 0.0003181508107784015,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 3000,
+          "two_sided_correction_tail_bound": 5.696729698445011e-07,
+          "resonant_mode_intervals": 19,
+          "unresolved_coefficient_mass": 0.00010608561445885376,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        },
+        {
+          "Fourier_modes": 10000,
+          "two_sided_correction_tail_bound": 4.129713895224133e-07,
+          "resonant_mode_intervals": 63,
+          "unresolved_coefficient_mass": 3.182939714852164e-05,
+          "denominator_replacement_bound": 8.483299610034831e-12
+        }
+      ],
+      "best_cancellation_bound": 4.129713895224133e-07,
+      "improvement_factor": 5146.525013827444,
+      "full_sub_3_percent_ball_certificate": false,
+      "remaining_object": "A formally rounded evaluation of the average polylogarithmic component and finite FFT cells in one ball-arithmetic engine.",
+      "status": "Proven analytic tail theorem; formal full certificate open",
+      "confidence": "Proven formula; strong numerical bound evaluation",
+      "claim_boundary": "The cancellation result removes the oscillatory-tail bottleneck but is not presented as an Arb-certified full-window remainder."
+    },
+    "166": {
+      "one_copy_A_ME": 0.6931471805599453,
+      "tensor_rules": {
+        "information_cell": "alpha_n=n alpha_geo",
+        "real_character_count": "h_n=4^n",
+        "temperature_intensivity": "beta_n=beta_1"
+      },
+      "copy_rows": [
+        {
+          "n": 1,
+          "alpha_n": 2.772588722239781,
+          "hom_count": 4,
+          "A_ME_cardinality_beta": 0.6931471805599453,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 2,
+          "alpha_n": 5.545177444479562,
+          "hom_count": 16,
+          "A_ME_cardinality_beta": 0.34657359027997264,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 3,
+          "alpha_n": 8.317766166719343,
+          "hom_count": 64,
+          "A_ME_cardinality_beta": 0.12996509635498973,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 4,
+          "alpha_n": 11.090354888959125,
+          "hom_count": 256,
+          "A_ME_cardinality_beta": 0.04332169878499658,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 5,
+          "alpha_n": 13.862943611198906,
+          "hom_count": 1024,
+          "A_ME_cardinality_beta": 0.013538030870311432,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 6,
+          "alpha_n": 16.635532333438686,
+          "hom_count": 4096,
+          "A_ME_cardinality_beta": 0.004061409261093429,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 7,
+          "alpha_n": 19.408121055678468,
+          "hom_count": 16384,
+          "A_ME_cardinality_beta": 0.0011845777011522502,
+          "alpha_over_log_h": 2.0
+        },
+        {
+          "n": 8,
+          "alpha_n": 22.18070977791825,
+          "hom_count": 65536,
+          "A_ME_cardinality_beta": 0.0003384507717577858,
+          "alpha_over_log_h": 2.0
+        }
+      ],
+      "tensor_intensive": false,
+      "failure_at_two_copies": -0.34657359027997264,
+      "classification_theorem": "Under alpha_n=n alpha and h_n=h^n, alpha_n/h_n is not intensive. Every copy-invariant rule may depend on alpha/log(h), leaving an arbitrary function or normalization; composition alone does not select ln(2).",
+      "coarse_graining_test": "Merging or splitting character sectors changes cardinality while leaving the carrier energy convention independently adjustable; the quotient by raw cardinality is not coarse-graining natural.",
+      "A_ME_strict_derivation_from_tested_principles": false,
+      "A_ME_as_one_copy_axiom_survives": true,
+      "status": "Refuted as tensor-intensive derivation; retained as one-copy axiom",
+      "confidence": "Proven",
+      "claim_boundary": "The result falsifies the cardinality formula under declared composition laws, not every possible future source theorem for beta."
+    },
+    "167": {
+      "lean_source": "FIN_Programs_165_177_AFIS_Independence.lean",
+      "lean_source_sha256": "f80d68cc547d85632c8ab6852fcc738d523ff00a68fb73d4403a181d3dc84316",
+      "lean_core_only": true,
+      "lean_compile_attempt": "The elan launcher was installed, but no Lean toolchain was locally configured. Two temporary Lean 4.32.1 toolchain downloads were attempted; both failed with the same upstream HTTP/2 PROTOCOL_ERROR. The source was therefore authored and independently mirrored by the exact Python enumeration, but it was not machine-compiled.",
+      "lean_machine_compiled": false,
+      "lean_compile_failure_class": "toolchain download HTTP/2 PROTOCOL_ERROR",
+      "python_exact_boolean_models": 64,
+      "all_subsets": [
+        {
+          "mask": 0,
+          "flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 1,
+          "flags": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 2,
+          "flags": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 3,
+          "flags": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 4,
+          "flags": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 5,
+          "flags": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 6,
+          "flags": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 7,
+          "flags": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 8,
+          "flags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 9,
+          "flags": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 10,
+          "flags": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 11,
+          "flags": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 12,
+          "flags": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 13,
+          "flags": [
+            true,
+            false,
+            true,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 14,
+          "flags": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 15,
+          "flags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": true,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 16,
+          "flags": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 17,
+          "flags": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 18,
+          "flags": [
+            false,
+            true,
+            false,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 19,
+          "flags": [
+            true,
+            true,
+            false,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 20,
+          "flags": [
+            false,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 21,
+          "flags": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 22,
+          "flags": [
+            false,
+            true,
+            true,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 23,
+          "flags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 24,
+          "flags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 25,
+          "flags": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 26,
+          "flags": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 27,
+          "flags": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 28,
+          "flags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 29,
+          "flags": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 30,
+          "flags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 31,
+          "flags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": true,
+            "calibrated_signed": true,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 32,
+          "flags": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 33,
+          "flags": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 34,
+          "flags": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 35,
+          "flags": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 36,
+          "flags": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 37,
+          "flags": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 38,
+          "flags": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 39,
+          "flags": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 40,
+          "flags": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 41,
+          "flags": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 42,
+          "flags": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 43,
+          "flags": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 44,
+          "flags": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 45,
+          "flags": [
+            true,
+            false,
+            true,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 46,
+          "flags": [
+            false,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 47,
+          "flags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": true,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 48,
+          "flags": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 49,
+          "flags": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 50,
+          "flags": [
+            false,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 51,
+          "flags": [
+            true,
+            true,
+            false,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 52,
+          "flags": [
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 53,
+          "flags": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 54,
+          "flags": [
+            false,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 55,
+          "flags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 56,
+          "flags": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 57,
+          "flags": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 58,
+          "flags": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 59,
+          "flags": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": true,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 60,
+          "flags": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 61,
+          "flags": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 62,
+          "flags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": false,
+            "target_state": false,
+            "generic_outcome": false,
+            "signed_outcome": false,
+            "calibrated_signed": false,
+            "typed_completion": false,
+            "role_audit_eligible": false
+          }
+        },
+        {
+          "mask": 63,
+          "flags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "capabilities": {
+            "dual": true,
+            "target_state": true,
+            "generic_outcome": true,
+            "signed_outcome": true,
+            "calibrated_signed": true,
+            "typed_completion": true,
+            "role_audit_eligible": true
+          }
+        }
+      ],
+      "independence_witnesses": {
+        "A0": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "A1": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "A2": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            true,
+            true,
+            false,
+            true,
+            true,
+            true
+          ]
+        },
+        "A3": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true
+          ]
+        },
+        "A4": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        "A5": {
+          "differs_only_in_Aj": true,
+          "witness_flags": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      },
+      "all_six_independent_in_flag_model": true,
+      "formal_scope": "Finite logical capability dependencies only. Analytic existence of Dirichlet forms and physical adequacy are not reduced to Booleans.",
+      "status": "Lean certificate authored; exact 64-model audit passed",
+      "confidence": "Proven for the finite logical layer"
+    },
+    "168": {
+      "theta": "743/(4000*pi)",
+      "computed_digits_nonformal_extension": [
+        0,
+        16,
+        1,
+        10,
+        2,
+        67,
+        2,
+        2,
+        5,
+        1,
+        2,
+        928,
+        1,
+        1,
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "a": 0,
+          "p": 0,
+          "q": 1,
+          "distance": 0.05912606135863912,
+          "q_distance": 0.05912606135863912
+        },
+        {
+          "a": 16,
+          "p": 1,
+          "q": 16,
+          "distance": 0.053983018261774124,
+          "q_distance": 0.863728292188386
+        },
+        {
+          "a": 1,
+          "p": 1,
+          "q": 17,
+          "distance": 0.005143043096864993,
+          "q_distance": 0.08743173264670488
+        },
+        {
+          "a": 10,
+          "p": 11,
+          "q": 186,
+          "distance": 0.0025525872931241936,
+          "q_distance": 0.47478123652110005
+        },
+        {
+          "a": 2,
+          "p": 23,
+          "q": 389,
+          "distance": 3.7868510616605636e-05,
+          "q_distance": 0.014730850629859593
+        },
+        {
+          "a": 67,
+          "p": 1552,
+          "q": 26249,
+          "distance": 1.5397081811616054e-05,
+          "q_distance": 0.40415800047310985
+        },
+        {
+          "a": 2,
+          "p": 3127,
+          "q": 52887,
+          "distance": 7.074346993373527e-06,
+          "q_distance": 0.37414098943854573
+        },
+        {
+          "a": 2,
+          "p": 7806,
+          "q": 132023,
+          "distance": 1.2483878248690008e-06,
+          "q_distance": 0.1648159058026801
+        },
+        {
+          "a": 5,
+          "p": 42157,
+          "q": 713002,
+          "distance": 8.324078690285231e-07,
+          "q_distance": 0.5935084754330751
+        },
+        {
+          "a": 1,
+          "p": 49963,
+          "q": 845025,
+          "distance": 4.159799558404777e-07,
+          "q_distance": 0.3515134621840997
+        },
+        {
+          "a": 2,
+          "p": 142083,
+          "q": 2403052,
+          "distance": 4.4795734756767376e-10,
+          "q_distance": 0.0010764647999871935
+        },
+        {
+          "a": 928,
+          "p": 131902987,
+          "q": 2230877281,
+          "distance": 2.755372976764605e-10,
+          "q_distance": 0.6146898974545498
+        },
+        {
+          "a": 1,
+          "p": 132045070,
+          "q": 2233280333,
+          "distance": 1.7242004989121326e-10,
+          "q_distance": 0.38506230643692535
+        },
+        {
+          "a": 1,
+          "p": 263948057,
+          "q": 4464157614,
+          "distance": 1.0311724778524723e-10,
+          "q_distance": 0.46033164683523603
+        },
+        {
+          "a": 1,
+          "p": 395993127,
+          "q": 6697437947,
+          "distance": 6.930280210596603e-11,
+          "q_distance": 0.4641512166579284
+        },
+        {
+          "a": 1,
+          "p": 659941184,
+          "q": 11161595561,
+          "distance": 3.3814445679281195e-11,
+          "q_distance": 0.37742316679154064
+        }
+      ],
+      "algorithmic_modulus": "delta(Q)=min_(1<=q<=Q)||q theta||. If q_n<=Q<q_(n+1), continued-fraction best-approximation theory computes the minimum from the convergent/semiconvergent data up to that breakpoint.",
+      "positivity_theorem": "For each finite Q, delta(Q)>0 because theta is irrational and the minimum is over a finite set.",
+      "computability_theorem": "Because pi is computable and theta is irrational, interval refinement decides every finite comparison and yields an algorithmic all-Q modulus when the continued fraction is generated.",
+      "polynomial_uniform_rate_obtained": false,
+      "practical_obstruction": "The algorithmic stair modulus depends on all future partial quotients. It is an effective procedure, not a fixed kappa,nu power law suitable for a global Abelian remainder.",
+      "status": "Proven algorithmic modulus; useful polynomial rate open",
+      "confidence": "Proven theorem; finite extension numerical",
+      "claim_boundary": "The extra continued-fraction digits are illustrative and are not used as an all-scale Diophantine proof."
+    },
+    "169": {
+      "multiplicative_family": "For positive-real dimension valuations with regularity, v(xy)=v(x)v(y) gives v(d)=d^a; normalization leaves a free a.",
+      "sector_counting": {
+        "a": 0,
+        "eta": 1.8,
+        "tensor_multiplicative": true,
+        "direct_sum_additive": false
+      },
+      "Hilbert_dimension": {
+        "a": 1,
+        "eta": 1.8888888888888888,
+        "tensor_multiplicative": true,
+        "direct_sum_additive": true
+      },
+      "additivity_uniqueness_theorem": "If v:N->R_+ satisfies v(m+n)=v(m)+v(n) and v(1)=1, then induction gives v(n)=n. Tensor multiplicativity follows, and the normalized centre state is the Hilbert trace.",
+      "uniform_state_selected_by_monoidality_alone": false,
+      "uniform_state_selected_by_sum_and_tensor": false,
+      "state_selected_by_sum_and_tensor": "Hilbert trace, eta=17/9",
+      "status": "Proven classification/no-go in declared valuation classes",
+      "confidence": "Proven",
+      "claim_boundary": "A different enriched categorical law could select another state, but it would be new structure beyond invariance and standard valuation."
+    },
+    "170": {
+      "base_eta": 1.7999999999999998,
+      "analytic_derivatives": {
+        "d_eta_d_beta_expected": -0.16,
+        "d_eta_d_beta_numeric": -0.15999999980476076,
+        "d_eta_d_common_gap_expected": -0.11090354888959125,
+        "d_eta_d_common_gap_numeric": -0.11090354878895425,
+        "d_eta_d_log_degeneracy": [
+          -0.15999999991578306,
+          0.039999999867923464,
+          0.039999999867923464,
+          0.039999999867923464,
+          0.039999999867923464
+        ],
+        "expected_log_degeneracy_gradient": [
+          -0.16,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ]
+      },
+      "perturbation_rows": [
+        {
+          "relative_log_perturbation_sd": 0.01,
+          "eta_mean": 1.800037714824583,
+          "eta_sd": 0.0021727123324904304,
+          "eta_5_95_percentiles": [
+            1.7964769428460392,
+            1.8035469828704964
+          ],
+          "fraction_within_0.01_of_9_over_5": 1.0
+        },
+        {
+          "relative_log_perturbation_sd": 0.05,
+          "eta_mean": 1.7996652529848631,
+          "eta_sd": 0.010975788289267343,
+          "eta_5_95_percentiles": [
+            1.7812457714195757,
+            1.8173029540070629
+          ],
+          "fraction_within_0.01_of_9_over_5": 0.6398
+        },
+        {
+          "relative_log_perturbation_sd": 0.1,
+          "eta_mean": 1.7989940207228579,
+          "eta_sd": 0.021972286080750806,
+          "eta_5_95_percentiles": [
+            1.761509382361464,
+            1.8334499570645097
+          ],
+          "fraction_within_0.01_of_9_over_5": 0.3543
+        },
+        {
+          "relative_log_perturbation_sd": 0.2,
+          "eta_mean": 1.7961554549647503,
+          "eta_sd": 0.044600915216940006,
+          "eta_5_95_percentiles": [
+            1.7160803696849807,
+            1.861447202805483
+          ],
+          "fraction_within_0.01_of_9_over_5": 0.1827
+        }
+      ],
+      "local_structural_stability": true,
+      "exact_value_robust_without_axiom": false,
+      "interpretation": "The Gibbs readout varies smoothly and is not singularly fine-tuned, but exact 9/5 is lost under generic gap, degeneracy, or beta changes.",
+      "status": "Proven differential stability; Monte Carlo robustness quantified",
+      "confidence": "Proven locally; strong numerical global evidence"
+    },
+    "171": {
+      "reflection": "R=sigma_z, (x,y,z)->(-x,-y,z)",
+      "trace_asymmetry": "M(rho)=0.5||rho-RrhoR||_1=sqrt(x^2+y^2)",
+      "second_monotone": "A_rel(rho)=S(G(rho))-S(rho), where G(rho)=(rho+RrhoR)/2.",
+      "counterexample_states": [
+        {
+          "name": "rho_a",
+          "x": 0.6,
+          "z": 0.0,
+          "M_trace_asymmetry": 0.6,
+          "A_relative_entropy": 0.19274475702175742,
+          "bloch_length": 0.6
+        },
+        {
+          "name": "rho_b",
+          "x": 0.6,
+          "z": 0.8,
+          "M_trace_asymmetry": 0.6,
+          "A_relative_entropy": 0.3250829733914482,
+          "bloch_length": 1.0
+        }
+      ],
+      "M_equal": true,
+      "relative_entropy_different": true,
+      "incompleteness_theorem": "If M were a complete convertibility monotone on all states, equal M would permit conversion in both directions. Monotonicity of A_rel would then force equal A_rel, contradicted by the two states.",
+      "M_complete_on_full_density_space": false,
+      "finite_complete_monotone_family_found": false,
+      "status": "Proven full-state incompleteness counterexample",
+      "confidence": "Proven",
+      "claim_boundary": "Program 155 remains valid on its orbit line. The new theorem shows that additional monotones are necessary off that line."
+    },
+    "172": {
+      "theorem": "With probability at least 1-delta, simultaneous DKW quantile brackets at both independent times give T in [log(L2/U1),log(U2/L1)]/log(t2/t1).",
+      "n": 4000,
+      "delta": 0.05,
+      "epsilon": 0.02340413060410993,
+      "iid_simulation": {
+        "replicates": 420,
+        "coverage": 1.0,
+        "mean_interval_width": 0.5150281518756347
+      },
+      "pixelized_simulation": {
+        "pixel_width": 0.08,
+        "coverage": 1.0,
+        "mean_interval_width": 0.5807866979753452
+      },
+      "correlation_challenge": {
+        "independent_blocks": 40,
+        "records_repeated_per_block": 100,
+        "replicates": 240,
+        "coverage_using_invalid_iid_formula": 0.3625
+      },
+      "nonasymptotic_iid_theorem": true,
+      "correlated_nonasymptotic_theorem": false,
+      "status": "Proven iid/pixel theorem; memory counterexample quantified",
+      "confidence": "Proven for iid; strong evidence for challenge",
+      "claim_boundary": "The DKW interval concerns the observed convolved distribution. It does not perform UV-unstable detector deconvolution."
+    },
+    "173": {
+      "model": "log Q_target=a_T+(T+g)log t; log Q_control=a_C+(T_C+g)log t, with known T_C.",
+      "minimal_design_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          2.0794415416798357,
+          2.0794415416798357
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          2.0794415416798357
+        ]
+      ],
+      "joint_rank": 4,
+      "target_only_rank": 2,
+      "minimal_records_in_noiseless_design": 4,
+      "D_optimal_search": {
+        "total_records": 60,
+        "positive_integer_designs": 32509,
+        "best": {
+          "counts": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "determinant": 946568.1761272558,
+          "information_rank": 4
+        },
+        "row_order": [
+          "target_t1",
+          "target_t8",
+          "control_t1",
+          "control_t8"
+        ]
+      },
+      "simulation": {
+        "replicates": 2000,
+        "records_per_cell": 15,
+        "true_target_exponent": 1.25,
+        "true_gain_slope": 0.7,
+        "naive_mean": 1.9498511537746586,
+        "controlled_mean": 1.249493744931216,
+        "controlled_sd": 0.029708827977308134
+      },
+      "identifiability_theorem": "Two distinct times for target and a known-exponent control give rank four and identify T and shared gain g. Without the control, the target exponent and gain occupy the same design column.",
+      "status": "Proven minimal rank theorem; optimal finite allocation executed",
+      "confidence": "Proven and strongly numerically validated",
+      "claim_boundary": "The theorem requires the apparatus gain to be shared between target and control and the control exponent to be independently known."
+    },
+    "174": {
+      "protocol": "FIN_Programs_165_177_Composite_Preregistration.json",
+      "protocol_core_sha256": "53910269b3e2e3d6581f18f34c279f8338b0e8bdb06b8971324e29ee430ca602",
+      "models": [
+        "local_gaussian",
+        "stable_0.8",
+        "stable_1.0",
+        "stable_1.2",
+        "truncated_0.8",
+        "gain_confounded_local"
+      ],
+      "feature_scale": [
+        0.27578062047073826,
+        0.26225733593636075,
+        0.3148650679173901,
+        2.9201014481172125,
+        3.131698371204842,
+        0.15829772866897437
+      ],
+      "centroids": {
+        "local_gaussian": [
+          0.4984060020744806,
+          0.5026213865097778,
+          0.4957846155647034,
+          2.437012862243561,
+          2.439955748233273,
+          0.0
+        ],
+        "stable_0.8": [
+          1.2474587055252806,
+          0.5031757309235719,
+          1.2442829746017086,
+          10.488431929851583,
+          10.490115651420881,
+          6.944444444444445e-06
+        ],
+        "stable_1.0": [
+          1.0057163174842887,
+          0.4970464885642513,
+          1.0086698289200378,
+          6.325122324350808,
+          6.290065025886479,
+          0.0
+        ],
+        "stable_1.2": [
+          0.8331410939698043,
+          0.5002778569092126,
+          0.8328632370605923,
+          4.461933544271061,
+          4.467935385844022,
+          0.0
+        ],
+        "truncated_0.8": [
+          1.2549323691297212,
+          0.49807816405550764,
+          1.2568542050742133,
+          7.651312028869974,
+          1.3443686534180643,
+          0.4243749999999997
+        ],
+        "gain_confounded_local": [
+          1.2050178792433124,
+          1.1992128247734675,
+          0.5058050544698441,
+          2.4499047187739014,
+          2.437947662577558,
+          3.4722222222222224e-06
+        ]
+      },
+      "abstention_thresholds": {
+        "local_gaussian": 0.3973226148139024,
+        "stable_0.8": 0.9188552508804256,
+        "stable_1.0": 0.5767861973732491,
+        "stable_1.2": 0.503910191476232,
+        "truncated_0.8": 0.6957178473719925,
+        "gain_confounded_local": 0.43249570038497565
+      },
+      "confusion_counts": [
+        [
+          253,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          252,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          257,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          259,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          250
+        ]
+      ],
+      "abstention_counts": [
+        7,
+        8,
+        3,
+        4,
+        1,
+        10
+      ],
+      "overall_correct_including_abstention_as_error": 0.9788461538461538,
+      "accuracy_conditional_on_decision": 1.0,
+      "abstention_rate": 0.021153846153846155,
+      "external_data_admitted": false,
+      "status": "Frozen composite protocol executed on held-out synthetic records",
+      "confidence": "Strong synthetic evidence",
+      "claim_boundary": "The classifier tests six declared generators. It is not proof of model completeness and does not identify FIN ontology."
+    },
+    "175": {
+      "category": "one-dimensional unitary representations of Z",
+      "intertwiner_theorem": "A nonzero intertwiner between one-dimensional Z representations exists iff their generator eigenvalues are equal.",
+      "legacy_factors_through": "Z8",
+      "strict_order": "infinite",
+      "nonzero_equivariant_intertwiner": false,
+      "unique_pointwise_multiplicative_completion": {
+        "formula": "C(d)=exp(i[(omega_S-omega_L)d+(phi_S-phi_L)])",
+        "delta_omega": -0.5996481633974483,
+        "delta_phi": -0.36109877559829884,
+        "finite_residual": 2.3535575273987513e-15
+      },
+      "integer_legacy_twists": [
+        {
+          "legacy_power_r": 0,
+          "extra_frequency": 0.18575000000000008
+        },
+        {
+          "legacy_power_r": 1,
+          "extra_frequency": -0.5996481633974482
+        },
+        {
+          "legacy_power_r": 2,
+          "extra_frequency": -1.3850463267948965
+        },
+        {
+          "legacy_power_r": 3,
+          "extra_frequency": -2.1704444901923448
+        },
+        {
+          "legacy_power_r": 4,
+          "extra_frequency": -2.955842653589793
+        },
+        {
+          "legacy_power_r": 5,
+          "extra_frequency": 2.5419444901923445
+        },
+        {
+          "legacy_power_r": 6,
+          "extra_frequency": 1.7565463267948962
+        },
+        {
+          "legacy_power_r": 7,
+          "extra_frequency": 0.9711481633974479
+        }
+      ],
+      "minimum_new_data": "One infinite-order character (frequency difference) and one U(1) phase offset, plus provenance selecting both.",
+      "strict_source_for_new_data": false,
+      "status": "Proven categorical obstruction and exact target-coded cocycle",
+      "confidence": "Proven",
+      "claim_boundary": "The cocycle is a typed completion slot, not a derivation: its parameters are the strict-minus-legacy target differences."
+    },
+    "176": {
+      "candidate": "B_C(L)(d)=cos[(omega_L+delta_omega)d+phi_L+delta_phi]/[1+beta_S d^(2-w2)] after explicit amplitude projectivization.",
+      "target_parameter_instance_residual_d_0_256": 4.234511359321122e-17,
+      "target_reproduction_exact_numerically": true,
+      "edge_rows": [
+        {
+          "edge": "amplitude/normalization",
+          "status": "PASS_WITH_ERASURE",
+          "reason": "alpha_geo is removed by projectivization; absolute-amplitude roles are explicitly not transferred."
+        },
+        {
+          "edge": "damping/compression provenance",
+          "status": "FAIL",
+          "reason": "w2=1/5 uses the non-tensor-natural A_ME branch and beta=1 has no target-independent strict source."
+        },
+        {
+          "edge": "phase/frequency provenance",
+          "status": "NOT_REACHED_BY_STOP_RULE",
+          "reason": "The exact cocycle is target-coded (Program 175)."
+        },
+        {
+          "edge": "selector/topology",
+          "status": "NOT_REACHED_BY_STOP_RULE",
+          "reason": "No nonpremise sign/polarity source is included."
+        },
+        {
+          "edge": "physical units",
+          "status": "NOT_REACHED_BY_STOP_RULE",
+          "reason": "No scale-charged conversion object is included."
+        },
+        {
+          "edge": "spectral/role equivalence",
+          "status": "NOT_REACHED_BY_STOP_RULE",
+          "reason": "Pointwise target reproduction cannot license role transfer."
+        }
+      ],
+      "first_failed_edge": "damping/compression provenance",
+      "stop_rule_applied": true,
+      "bridge_completed": false,
+      "role_transfer_started": false,
+      "status": "Receiver-complete formula; source-incomplete bridge rejected",
+      "confidence": "Proven finite identity and provenance failure",
+      "claim_boundary": "Reproducing the strict target after inserting its missing parameters is an interpolation identity, not an explanation."
+    },
+    "177": {
+      "Hilbert_space": "two path/slit states",
+      "A0_generator": [
+        [
+          1.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "U_t_unitarity_residual": 1.962615573354719e-16,
+      "P_t_stochastic_residual": 0.0,
+      "POVM": {
+        "bins": 128,
+        "formula": "E_j=(1/N)[[1,exp(-i theta_j)],[exp(i theta_j),1]], theta_j=2pi j/N",
+        "sum_to_identity_residual": 9.025698193487474e-17,
+        "minimum_effect_eigenvalue": -3.469446951953614e-18
+      },
+      "environment": "D_gamma(rho)=((1+gamma)/2)rho+((1-gamma)/2)sigma_z rho sigma_z",
+      "detector": {
+        "response": "normalized circular Gaussian stochastic matrix",
+        "column_sum_residual": 5.301242283512285e-15
+      },
+      "visibility": {
+        "coherent": 1.0,
+        "partial_dephasing": 0.3500000000000001,
+        "which_path": 0.0,
+        "detector_blurred": 0.8407264610177556,
+        "classical_P_t_path": 0.0
+      },
+      "record": {
+        "counts": 20000,
+        "total_variation_record_vs_model": 0.031701211715293914
+      },
+      "observer_paradox_result": "U_t evolves amplitudes, P_t evolves classical path probabilities, and the POVM instrument creates outcome probabilities. P_t is not identified with collapse.",
+      "AFIS_axioms_used": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "A5_kernel_bridge_used": false,
+      "physical_units": "imported calibration convention, not derived",
+      "external_validation": false,
+      "status": "Proven finite CP-instrument construction; conditional physics model",
+      "confidence": "Proven mathematics; no external physical evidence",
+      "claim_boundary": "The model demonstrates AFIS type completeness and interference bookkeeping. It is not a strict FIN prediction or experimental validation."
+    }
+  },
+  "global_verdict": {
+    "A_ME_tensor_derived": false,
+    "A_ME_one_copy_conditional_model": true,
+    "strict_selector_closed": false,
+    "QW_2191_discharged": false,
+    "internal_units_derived": false,
+    "legacy_strict_bridge_completed": false,
+    "role_transfer_started": false,
+    "L_total_derived": false,
+    "external_physical_validation": false,
+    "ToE_claimed": false,
+    "deepest_result": "A_ME fails tensor intensivity under the natural additive/multiplicative composition law. The most durable progress is therefore operational: a shared-gain control restores exponent identifiability, DKW gives finite-sample iid intervals, and a typed CP instrument cleanly separates wave evolution, diffusion, environment, detector, and record."
+  }
+}

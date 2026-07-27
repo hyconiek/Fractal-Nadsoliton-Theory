@@ -1,0 +1,31 @@
+{
+  "core": {
+    "protocol_id": "FIN-P174-COMPOSITE-ADVERSARIAL-001",
+    "frozen_date": "2026-07-27",
+    "models": [
+      "local_gaussian",
+      "stable_0.8",
+      "stable_1.0",
+      "stable_1.2",
+      "truncated_0.8",
+      "gain_confounded_local"
+    ],
+    "features": [
+      "target_IQR_slope",
+      "control_IQR_slope",
+      "control_adjusted_target_slope",
+      "target_tail_to_IQR_t1",
+      "target_tail_to_IQR_t2",
+      "absolute_truncation_boundary_atom"
+    ],
+    "classifier": "standardized nearest training centroid",
+    "abstention": "distance above classwise 99th training percentile",
+    "training_replicates": 180,
+    "test_replicates": 260,
+    "records_per_time_and_channel": 1600,
+    "seed": 20260727,
+    "external_data_admitted": false,
+    "claim_boundary": "Synthetic model discrimination does not validate FIN in nature."
+  },
+  "canonical_core_sha256": "53910269b3e2e3d6581f18f34c279f8338b0e8bdb06b8971324e29ee430ca602"
+}

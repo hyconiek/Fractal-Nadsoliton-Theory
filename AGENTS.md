@@ -3747,3 +3747,106 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   irrationality measure and monoidal groupoid valuation classification.
   Finite continued-fraction extensions and unnormalized symmetry slogans are
   not source theorems.
+
+## Programs 165–177 axiom-falsification and measurement guardrail (Release 10.16, 2026-07-27)
+
+- Program 165 proves the cancellation-aware Fourier/Dirichlet tail formula and
+  obtains a floating correction-tail bound `4.129713895e-7` at `D=16384`,
+  improving the prior absolute numerator-tail bound by a factor
+  `5146.525`.  This is not an Arb-certified full-window `<3%` certificate:
+  finite FFT cells, the average polylogarithmic component, and the correction
+  tail still have to be enclosed in one directed-rounding engine.
+- Program 166 falsifies the raw-cardinality `A_ME` rule as tensor-intensive
+  under the declared independent-copy laws
+  `alpha_n=n*alpha_geo`, `h_n=4^n`.  At two copies it gives
+  `beta_2=ln(2)/2`, not `ln(2)`.  Hence
+  `beta_F=alpha_geo/4=ln(2)` remains only a consistent one-copy axiom; do not
+  call it a strict derivation, thermal law, damping source, or unit source.
+- Program 167 exactly audits all 64 AFIS Boolean axiom subsets and supplies a
+  core-only Lean source for the finite logical layer.  This proves declared
+  capability dependence, not analytic Dirichlet-form theorems or ontological
+  uniqueness of the six-axiom packaging.
+- Program 168 proves only the finite algorithmic modulus
+  `delta_theta(Q)=min_{1<=q<=Q} ||q theta|| > 0`.  Continued-fraction
+  extension, including large finite denominators, does not export uniform
+  `kappa,nu` or an all-scale Diophantine rate.
+- Program 169 shows tensor multiplicativity leaves the valuation family
+  `v(d)=d^a`.  Standard direct-sum additivity plus `v(1)=1` selects
+  `v(d)=d` and `eta=17/9`, not uniform-sector `eta=9/5`.  Do not use
+  categorical naturality alone as the missing state selector.
+- Program 170 proves local smoothness of the conditional state:
+  `d eta/d beta=-4/25` and
+  `d eta/d Delta=-4*ln(2)/25` at the declared point.  Smooth robustness of a
+  nearby value is not a derivation or structural protection of exact `9/5`.
+- Program 171 gives a full-qubit counterexample to global completeness of the
+  transverse reflection monotone: two states have `M=0.6` but unequal
+  relative-entropic asymmetry.  Preserve Program 155 only on its declared
+  orbit line; full signed-resource conversion needs additional monotones or a
+  complete channel criterion.
+- Program 172 proves a two-time iid DKW/IQR interval and a deterministic
+  bounded-pixel enlargement.  The block-memory challenge reduces coverage of
+  the invalid nominal-`n` iid formula to `0.3625`; do not apply iid confidence
+  to dependent records without a dependence theorem.
+- Program 173 constructs a real missing operational object: a known-exponent
+  control sharing the detector gain.  At two times it restores joint rank and
+  separates target exponent from gain.  The balanced positive allocation
+  `(15,15,15,15)` is D-optimal in the declared four-cell linear model.
+  Shared-gain and known-control assumptions must remain explicit.
+- Program 174 freezes and executes a six-class synthetic composite protocol.
+  Its conditional decided accuracy is `1.0` with abstention `0.01538`; this
+  is closed-set synthetic evidence, not completeness, FIN ontology
+  identification, or external physical validation.
+- Program 175 proves that the period-eight legacy phase and infinite-order
+  strict phase have no nonzero character intertwiner.  The exact correction
+  cocycle imports `Delta omega` and `Delta phi` as target-minus-source data;
+  it is a typed completion slot, not a source theorem.
+- Program 176 exactly reproduces the strict curve with a receiver-complete
+  nonlinear formula, but the provenance audit stops at the first failed
+  damping/compression edge.  Amplitude passes only with role erasure.
+  Phase, selector, unit, spectral-equivalence, and role edges are not reached.
+  No bridge closure or legacy role transfer follows from the tiny residual.
+- Program 177 constructs a finite double-slit operational model with distinct
+  preparation, unitary amplitude dynamics, classical heat dynamics,
+  dephasing environment, phase POVM, detector channel, and persistent record.
+  The mathematics is CP/normalized in its declared finite model.  `P_t` is a
+  classical comparison, not measurement collapse, and the construction is
+  not a strict FIN prediction or external validation.
+- Programs 165–177 export no `QW-2191` discharge, strict selector, canonical
+  physical unit, target-independent positive `beta/Z_beta`, completed
+  legacy-to-strict bridge, role transfer, role-bearing `L_total`, SM/GR
+  generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-165–177 research steering guardrail (2026-07-27)
+
+- First priority is Program 178: classify tensor-intensive,
+  coarse-graining-compatible state laws.  Any replacement for `A_ME` must
+  declare tensor, direct-sum/coarse-graining, normalization, and dimensional
+  behavior and must not be selected by target matching.
+- Program 179 may audit a target-independent positive strict compression
+  source, but it must be independent of the refuted tensor interpretation of
+  `A_ME` and must stop at the first failed provenance edge.
+- Program 180 may close the fractional symbol estimate only by putting the
+  FFT, average term, denominator replacement, resonant fallbacks, and
+  cancellation tail into one ball-arithmetic certificate.
+- Program 181 should formalize actual finite Dirichlet-form mathematics in a
+  proof assistant.  Do not encode analytic positivity or semigroup facts as
+  Boolean capability flags.
+- Programs 182/183 should respectively seek complete full-state reflection
+  convertibility and dependence-robust quantile inference.  Orbit-line
+  monotones and iid intervals cannot be silently promoted.
+- Program 184 should construct nonlinear or multiple calibration controls
+  before increasing observation times.  Program 185 should test open-set
+  alternatives and calibrated abstention rather than reuse closed-set
+  accuracy.
+- Programs 186/187 may introduce process tensors and explicit environments.
+  Treat environment factorization, memory, dilation, and detector response as
+  new typed objects unless a uniqueness/source theorem is actually proved.
+- Program 188 may test cohomological provenance of the exact phase cocycle;
+  target-coded `Delta omega/Delta phi` is not evidence of source closure.
+- Program 189 may prove the intrinsic scale-orbit obstruction and identify the
+  minimal symmetry-breaking datum.  An arbitrary normalization is not a
+  physical unit.
+- Program 190 may execute external validation only after the frozen
+  provenance/unit/control/resolution/license intake gate passes.  With no
+  admissible dataset, publish an intake-failure record rather than simulated
+  validation.
