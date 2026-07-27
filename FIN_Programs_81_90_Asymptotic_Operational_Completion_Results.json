@@ -1,0 +1,1339 @@
+{
+  "release": "10.9",
+  "title": "Programs 81--90: Asymptotic and Operational Completion Tests",
+  "date": "2026-07-27",
+  "author": "Krzysztof Żuchowski",
+  "orcid": "0009-0002-0909-3613",
+  "ontology_guardrail": "The nadsoliton remains primordial fractal information in a solitonic state; no lower information layer is introduced.",
+  "program81": {
+    "sizes": [
+      192,
+      768,
+      3072,
+      12288,
+      49152
+    ],
+    "cases": {
+      "strict_lattice_distance": {
+        "rows": [
+          {
+            "retained_n": 192,
+            "frobenius_operator_defect": 0.07565417427442735,
+            "sup_symbol_defect": 0.15076005223556208,
+            "mode1_relative_defect": 0.7378593150059924,
+            "green_frobenius_defect": 0.27352363689686443
+          },
+          {
+            "retained_n": 768,
+            "frobenius_operator_defect": 0.07469495000996759,
+            "sup_symbol_defect": 0.15323839111166823,
+            "mode1_relative_defect": 0.8345037736445121,
+            "green_frobenius_defect": 0.26133731048083786
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_operator_defect": 0.07440673004199694,
+            "sup_symbol_defect": 0.15425625958986644,
+            "mode1_relative_defect": 0.8732213784560318,
+            "green_frobenius_defect": 0.2576058548364348
+          },
+          {
+            "retained_n": 12288,
+            "frobenius_operator_defect": 0.07431431969101776,
+            "sup_symbol_defect": 0.15431741168784063,
+            "mode1_relative_defect": 0.8868082812845026,
+            "green_frobenius_defect": 0.256407588708701
+          },
+          {
+            "retained_n": 49152,
+            "frobenius_operator_defect": 0.07428401828845514,
+            "sup_symbol_defect": 0.15430320491559116,
+            "mode1_relative_defect": 0.8913760666323802,
+            "green_frobenius_defect": 0.25601565805584686
+          }
+        ],
+        "frobenius_loglog_slope": -0.0030053066770736494,
+        "sup_symbol_loglog_slope": 0.0038575360941757093,
+        "mode1_loglog_slope": 0.031654029077546136
+      },
+      "strict_coordinate_rescaled": {
+        "rows": [
+          {
+            "retained_n": 192,
+            "frobenius_operator_defect": 0.009940904351253086,
+            "sup_symbol_defect": 0.13249473048628266,
+            "mode1_relative_defect": 0.022196958792195052,
+            "green_frobenius_defect": 0.13696834750087775
+          },
+          {
+            "retained_n": 768,
+            "frobenius_operator_defect": 0.004951215253260102,
+            "sup_symbol_defect": 0.13251229006976345,
+            "mode1_relative_defect": 0.02286674025491498,
+            "green_frobenius_defect": 0.07119589959559644
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_operator_defect": 0.002473215717454305,
+            "sup_symbol_defect": 0.13251651584280433,
+            "mode1_relative_defect": 0.023033536909850952,
+            "green_frobenius_defect": 0.03596463082631593
+          },
+          {
+            "retained_n": 12288,
+            "frobenius_operator_defect": 0.0012363092654330793,
+            "sup_symbol_defect": 0.13251756208079407,
+            "mode1_relative_defect": 0.023075195863315457,
+            "green_frobenius_defect": 0.018029098831547873
+          },
+          {
+            "retained_n": 49152,
+            "frobenius_operator_defect": 0.0006181173208961284,
+            "sup_symbol_defect": 0.1325178230032438,
+            "mode1_relative_defect": 0.023085608093619883,
+            "green_frobenius_defect": 0.009020427684108968
+          }
+        ],
+        "frobenius_loglog_slope": -0.5008296000678586,
+        "sup_symbol_loglog_slope": 2.801238142218984e-05,
+        "mode1_loglog_slope": 0.006317779589419123
+      }
+    },
+    "alias_harmonic_mean_formula": "lambda_coarse(k)=2 lambda(k) lambda(k+N) / (lambda(k)+lambda(k+N))",
+    "alias_formula_relative_residual": 2.4626675009641305e-16,
+    "dilution_theorem": "If two dense circulant precision rows have the same O(1) diagonal and uniformly O(1/N) off-diagonal differences, their relative Frobenius defect is O(N^-1/2). This does not imply uniform convergence of their Fourier symbols.",
+    "status": "Exact alias theorem plus asymptotic numerical obstruction"
+  },
+  "program82": {
+    "families": {
+      "constant": [
+        {
+          "step": 0,
+          "modes": 4096,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896257,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 1,
+          "modes": 2048,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 2,
+          "modes": 1024,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 3,
+          "modes": 512,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 4,
+          "modes": 256,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 5,
+          "modes": 128,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 6,
+          "modes": 64,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 7,
+          "modes": 32,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        },
+        {
+          "step": 8,
+          "modes": 16,
+          "distance_to_constant": 0.0,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 1.0,
+          "maximum_eigenvalue": 1.0
+        }
+      ],
+      "massless_nearest_neighbour": [
+        {
+          "step": 0,
+          "modes": 4096,
+          "distance_to_constant": 0.7071067811865476,
+          "distance_to_massless_nearest_neighbour": 0.0,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 2.0
+        },
+        {
+          "step": 1,
+          "modes": 2048,
+          "distance_to_constant": 0.7071067811865474,
+          "distance_to_massless_nearest_neighbour": 3.439041069883168e-16,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 1.9999999999999996
+        },
+        {
+          "step": 2,
+          "modes": 1024,
+          "distance_to_constant": 0.7071067811865476,
+          "distance_to_massless_nearest_neighbour": 6.539425250106875e-16,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 2.0
+        },
+        {
+          "step": 3,
+          "modes": 512,
+          "distance_to_constant": 0.7071067811865471,
+          "distance_to_massless_nearest_neighbour": 1.558152567792646e-15,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 2.0000000000000018
+        },
+        {
+          "step": 4,
+          "modes": 256,
+          "distance_to_constant": 0.7071067811865471,
+          "distance_to_massless_nearest_neighbour": 4.8875608170797055e-15,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 2.0000000000000036
+        },
+        {
+          "step": 5,
+          "modes": 128,
+          "distance_to_constant": 0.7071067811865469,
+          "distance_to_massless_nearest_neighbour": 1.851423889100561e-14,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 1.9999999999999813
+        },
+        {
+          "step": 6,
+          "modes": 64,
+          "distance_to_constant": 0.7071067811865693,
+          "distance_to_massless_nearest_neighbour": 7.271883261652684e-14,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 1.999999999999981
+        },
+        {
+          "step": 7,
+          "modes": 32,
+          "distance_to_constant": 0.7071067811866043,
+          "distance_to_massless_nearest_neighbour": 2.705383224074366e-13,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 1.9999999999999691
+        },
+        {
+          "step": 8,
+          "modes": 16,
+          "distance_to_constant": 0.7071067811864036,
+          "distance_to_massless_nearest_neighbour": 9.811253728221827e-13,
+          "minimum_eigenvalue": 0.0,
+          "maximum_eigenvalue": 2.00000000000114
+        }
+      ],
+      "massive_nearest_neighbour_r_0_1": [
+        {
+          "step": 0,
+          "modes": 4096,
+          "distance_to_constant": 0.6734350297014737,
+          "distance_to_massless_nearest_neighbour": 0.027492869961410774,
+          "minimum_eigenvalue": 0.04761904761904766,
+          "maximum_eigenvalue": 1.952380952380952
+        },
+        {
+          "step": 1,
+          "modes": 2048,
+          "distance_to_constant": 0.5868106067938152,
+          "distance_to_massless_nearest_neighbour": 0.09822141509035137,
+          "minimum_eigenvalue": 0.17012448132780095,
+          "maximum_eigenvalue": 1.8298755186721993
+        },
+        {
+          "step": 2,
+          "modes": 1024,
+          "distance_to_constant": 0.37136985960796576,
+          "distance_to_massless_nearest_neighbour": 0.27412804856011214,
+          "minimum_eigenvalue": 0.47480370788582243,
+          "maximum_eigenvalue": 1.5251962921141775
+        },
+        {
+          "step": 3,
+          "modes": 512,
+          "distance_to_constant": 0.11312237356091279,
+          "distance_to_massless_nearest_neighbour": 0.4849862379507115,
+          "minimum_eigenvalue": 0.8400208051023214,
+          "maximum_eigenvalue": 1.159979194897679
+        },
+        {
+          "step": 4,
+          "modes": 256,
+          "distance_to_constant": 0.00916590621349244,
+          "distance_to_massless_nearest_neighbour": 0.5698663381052049,
+          "minimum_eigenvalue": 0.9870374511214393,
+          "maximum_eigenvalue": 1.0129625488785614
+        },
+        {
+          "step": 5,
+          "modes": 128,
+          "distance_to_constant": 5.941174506299963e-05,
+          "distance_to_massless_nearest_neighbour": 0.5773017597029149,
+          "minimum_eigenvalue": 0.9999159791043679,
+          "maximum_eigenvalue": 1.000084020895632
+        },
+        {
+          "step": 6,
+          "modes": 64,
+          "distance_to_constant": 2.4959140397996255e-09,
+          "distance_to_massless_nearest_neighbour": 0.5773502671517204,
+          "minimum_eigenvalue": 0.9999999964702445,
+          "maximum_eigenvalue": 1.0000000035297552
+        },
+        {
+          "step": 7,
+          "modes": 32,
+          "distance_to_constant": 1.2098374922832814e-16,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 0.9999999999999998,
+          "maximum_eigenvalue": 1.0000000000000002
+        },
+        {
+          "step": 8,
+          "modes": 16,
+          "distance_to_constant": 1.1775693440128312e-16,
+          "distance_to_massless_nearest_neighbour": 0.5773502691896258,
+          "minimum_eigenvalue": 0.9999999999999999,
+          "maximum_eigenvalue": 1.0000000000000002
+        }
+      ],
+      "strict_positive_precision": [
+        {
+          "step": 0,
+          "modes": 4096,
+          "distance_to_constant": 0.2991018902485078,
+          "distance_to_massless_nearest_neighbour": 0.3711316762637867,
+          "minimum_eigenvalue": 0.19999999999999965,
+          "maximum_eigenvalue": 1.2758392699974868
+        },
+        {
+          "step": 1,
+          "modes": 2048,
+          "distance_to_constant": 0.23167857928018795,
+          "distance_to_massless_nearest_neighbour": 0.4047280028679728,
+          "minimum_eigenvalue": 0.37888908316885805,
+          "maximum_eigenvalue": 1.2360348075614305
+        },
+        {
+          "step": 2,
+          "modes": 1024,
+          "distance_to_constant": 0.13110866345971792,
+          "distance_to_massless_nearest_neighbour": 0.47816382848331973,
+          "minimum_eigenvalue": 0.6118310976751975,
+          "maximum_eigenvalue": 1.1571704634656859
+        },
+        {
+          "step": 3,
+          "modes": 512,
+          "distance_to_constant": 0.05410894123081945,
+          "distance_to_massless_nearest_neighbour": 0.5434468403611851,
+          "minimum_eigenvalue": 0.8140044057136522,
+          "maximum_eigenvalue": 1.042525824510582
+        },
+        {
+          "step": 4,
+          "modes": 256,
+          "distance_to_constant": 0.0339619938596307,
+          "distance_to_massless_nearest_neighbour": 0.5518508966265862,
+          "minimum_eigenvalue": 0.9080795248333551,
+          "maximum_eigenvalue": 1.0339749249315675
+        },
+        {
+          "step": 5,
+          "modes": 128,
+          "distance_to_constant": 0.012593394879683716,
+          "distance_to_massless_nearest_neighbour": 0.5677100620594849,
+          "minimum_eigenvalue": 0.9679468354375357,
+          "maximum_eigenvalue": 1.0130778634433808
+        },
+        {
+          "step": 6,
+          "modes": 64,
+          "distance_to_constant": 0.0040288325145885606,
+          "distance_to_massless_nearest_neighbour": 0.5742236584570206,
+          "minimum_eigenvalue": 0.9901408723596944,
+          "maximum_eigenvalue": 1.0043951555046293
+        },
+        {
+          "step": 7,
+          "modes": 32,
+          "distance_to_constant": 0.0011159252705112163,
+          "distance_to_massless_nearest_neighbour": 0.5765075072409406,
+          "minimum_eigenvalue": 0.9972320708823236,
+          "maximum_eigenvalue": 1.0011316360550353
+        },
+        {
+          "step": 8,
+          "modes": 16,
+          "distance_to_constant": 0.0003785921264945394,
+          "distance_to_massless_nearest_neighbour": 0.5770552303181723,
+          "minimum_eigenvalue": 0.9991791510185316,
+          "maximum_eigenvalue": 1.0004138479645497
+        }
+      ],
+      "legacy_absolute_precision": [
+        {
+          "step": 0,
+          "modes": 4096,
+          "distance_to_constant": 0.019598741351046632,
+          "distance_to_massless_nearest_neighbour": 0.5769743031022438,
+          "minimum_eigenvalue": 0.19999999999999965,
+          "maximum_eigenvalue": 1.0487071840148083
+        },
+        {
+          "step": 1,
+          "modes": 2048,
+          "distance_to_constant": 0.018870643147319944,
+          "distance_to_massless_nearest_neighbour": 0.5762262599340935,
+          "minimum_eigenvalue": 0.33095916055134367,
+          "maximum_eigenvalue": 1.00197515119697
+        },
+        {
+          "step": 2,
+          "modes": 1024,
+          "distance_to_constant": 0.019235263569730553,
+          "distance_to_massless_nearest_neighbour": 0.5751331599652114,
+          "minimum_eigenvalue": 0.48236730887032764,
+          "maximum_eigenvalue": 1.002134860257813
+        },
+        {
+          "step": 3,
+          "modes": 512,
+          "distance_to_constant": 0.017276275758603656,
+          "distance_to_massless_nearest_neighbour": 0.5748910571730752,
+          "minimum_eigenvalue": 0.6514124773562113,
+          "maximum_eigenvalue": 1.002336649690164
+        },
+        {
+          "step": 4,
+          "modes": 256,
+          "distance_to_constant": 0.014304758625922022,
+          "distance_to_massless_nearest_neighbour": 0.5747639071925669,
+          "minimum_eigenvalue": 0.7897824476021567,
+          "maximum_eigenvalue": 1.0024451856940362
+        },
+        {
+          "step": 5,
+          "modes": 128,
+          "distance_to_constant": 0.01103009590540605,
+          "distance_to_massless_nearest_neighbour": 0.5748035810003435,
+          "minimum_eigenvalue": 0.883599058001941,
+          "maximum_eigenvalue": 1.0024283319906595
+        },
+        {
+          "step": 6,
+          "modes": 64,
+          "distance_to_constant": 0.008057725794016252,
+          "distance_to_massless_nearest_neighbour": 0.5750141723671808,
+          "minimum_eigenvalue": 0.9393333552102924,
+          "maximum_eigenvalue": 1.0022684349296194
+        },
+        {
+          "step": 7,
+          "modes": 32,
+          "distance_to_constant": 0.005643466612265535,
+          "distance_to_massless_nearest_neighbour": 0.5753425955010886,
+          "minimum_eigenvalue": 0.9698157605666056,
+          "maximum_eigenvalue": 1.001983780978459
+        },
+        {
+          "step": 8,
+          "modes": 16,
+          "distance_to_constant": 0.0038045688308950116,
+          "distance_to_massless_nearest_neighbour": 0.5757036612105159,
+          "minimum_eigenvalue": 0.9856551916911958,
+          "maximum_eigenvalue": 1.0016449596628454
+        }
+      ]
+    },
+    "affine_cosine_theorem": {
+      "family": "lambda(q)=m+2c(1-cos q), m>=0, c>0",
+      "ratio_map": "r'=r(r+4), r=m/c",
+      "admissible_finite_fixed_ratio": 0.0,
+      "massless_fixed_symbol_after_mean_normalization": true,
+      "constant_ultralocal_boundary": "r=infinity",
+      "stability": "r=0 is unstable to positive mass; every r>0 flows toward the constant-symbol boundary under repeated normalized blocking"
+    },
+    "status": "Proven in the affine-cosine cone; numerical wider-family audit"
+  },
+  "program83": {
+    "sizes": [
+      96,
+      192,
+      384,
+      768,
+      1536,
+      3072,
+      6144
+    ],
+    "profiles": {
+      "constant": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.013753249702451568,
+            "sup_symbol_defect": 0.13337769506670666
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.009673524071784748,
+            "sup_symbol_defect": 0.13335600055637736
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.006822134838613797,
+            "sup_symbol_defect": 0.13334478751325177
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.004817607716009237,
+            "sup_symbol_defect": 0.13333909043882652
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.003404314796246503,
+            "sup_symbol_defect": 0.1333362193742064
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.002406419871837148,
+            "sup_symbol_defect": 0.13333477822383547
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.001701315136419705,
+            "sup_symbol_defect": 0.13333405624585506
+          }
+        ],
+        "frobenius_loglog_slope": -0.5022255680384884,
+        "final_sup_symbol_defect": 0.13333405624585506,
+        "sup_symbol_loglog_slope": -7.029383699883537e-05
+      },
+      "exponential": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.020471401712638206,
+            "sup_symbol_defect": 0.13268457383675997
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.014444742711950448,
+            "sup_symbol_defect": 0.1330063203797525
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.010203196500138742,
+            "sup_symbol_defect": 0.1331691623840198
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.007210952588103618,
+            "sup_symbol_defect": 0.13325108097855323
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.005097573522013022,
+            "sup_symbol_defect": 0.13329216534124821
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.003604055486010426,
+            "sup_symbol_defect": 0.1333127388718208
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.0025482848051599748,
+            "sup_symbol_defect": 0.13332303348473717
+          }
+        ],
+        "frobenius_loglog_slope": -0.5008884194380967,
+        "final_sup_symbol_defect": 0.13332303348473717,
+        "sup_symbol_loglog_slope": 0.0010267079924340596
+      },
+      "gaussian": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.02501170901759615,
+            "sup_symbol_defect": 0.13908411402809084
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.017567764230713587,
+            "sup_symbol_defect": 0.1404367069922459
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.012380934173690707,
+            "sup_symbol_defect": 0.1411040653986328
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.008740099177489734,
+            "sup_symbol_defect": 0.14143555305811717
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.006175055051079259,
+            "sup_symbol_defect": 0.1416007542533771
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.004364612541566453,
+            "sup_symbol_defect": 0.14168321984133345
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.003085607346728624,
+            "sup_symbol_defect": 0.14172441896354607
+          }
+        ],
+        "frobenius_loglog_slope": -0.5028049364930393,
+        "final_sup_symbol_defect": 0.14172441896354607,
+        "sup_symbol_loglog_slope": 0.003998542140148215
+      },
+      "rational_power": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.016287103870041408,
+            "sup_symbol_defect": 0.13276731103010922
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.011464017329281425,
+            "sup_symbol_defect": 0.1328804244988273
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.008087834779215826,
+            "sup_symbol_defect": 0.13293572741248297
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.0057124722809773236,
+            "sup_symbol_defect": 0.1329630684872352
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.004037038845710649,
+            "sup_symbol_defect": 0.13297666179073583
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.0028538092532129464,
+            "sup_symbol_defect": 0.1329834391770563
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.00201766227934594,
+            "sup_symbol_defect": 0.1329868230589945
+          }
+        ],
+        "frobenius_loglog_slope": -0.5019171512622651,
+        "final_sup_symbol_defect": 0.1329868230589945,
+        "sup_symbol_loglog_slope": 0.0003510770565681172
+      },
+      "strict_coordinate_profile": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.014131830406622014,
+            "sup_symbol_defect": 0.13246966645741928
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.009940904351253086,
+            "sup_symbol_defect": 0.13249473048628266
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.0070111185283958525,
+            "sup_symbol_defect": 0.13250655385414353
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.004951215253260102,
+            "sup_symbol_defect": 0.13251229006976345
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.003498781971529894,
+            "sup_symbol_defect": 0.1325151145128678
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.002473215717454305,
+            "sup_symbol_defect": 0.13251651584280433
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.0017485460638662056,
+            "sup_symbol_defect": 0.1325172137878699
+          }
+        ],
+        "frobenius_loglog_slope": -0.5021761359732723,
+        "final_sup_symbol_defect": 0.1325172137878699,
+        "sup_symbol_loglog_slope": 7.574260886270501e-05
+      },
+      "legacy_coordinate_profile": {
+        "rows": [
+          {
+            "retained_n": 96,
+            "frobenius_defect": 0.014329996417591445,
+            "sup_symbol_defect": 0.13283090880325477
+          },
+          {
+            "retained_n": 192,
+            "frobenius_defect": 0.010082356979684497,
+            "sup_symbol_defect": 0.13287928857598347
+          },
+          {
+            "retained_n": 384,
+            "frobenius_defect": 0.007111621579495401,
+            "sup_symbol_defect": 0.13290276440507207
+          },
+          {
+            "retained_n": 768,
+            "frobenius_defect": 0.005022453681583722,
+            "sup_symbol_defect": 0.13291432565978697
+          },
+          {
+            "retained_n": 1536,
+            "frobenius_defect": 0.0035492163254017576,
+            "sup_symbol_defect": 0.13292006234947573
+          },
+          {
+            "retained_n": 3072,
+            "frobenius_defect": 0.0025088998831484938,
+            "sup_symbol_defect": 0.13292291973803136
+          },
+          {
+            "retained_n": 6144,
+            "frobenius_defect": 0.0017737862597265656,
+            "sup_symbol_defect": 0.13292434569673736
+          }
+        ],
+        "frobenius_loglog_slope": -0.5020890292871072,
+        "final_sup_symbol_defect": 0.13292434569673736,
+        "sup_symbol_loglog_slope": 0.00014923044396346013
+      }
+    },
+    "constant_profile_exact_limit": {
+      "native_normalized_zero_mode": 0.2,
+      "schur_normalized_zero_mode": 0.3333333333333333,
+      "absolute_sup_symbol_gap": 0.1333333333333333,
+      "formula": "|2m/(2m+1)-m/(m+1)|"
+    },
+    "theorem_scope": "Bounded positive coordinate profiles with normalized dense weights have O(1/N) row entries. Under a fixed positive mass and uniformly bounded eliminated inverse, Schur rows retain that scale, so any same-diagonal row comparison has O(N^-1/2) relative Frobenius defect.",
+    "interpretation": "An N^-1/2 Frobenius slope is therefore generic and cannot by itself identify a FIN-specific continuum fixed point.",
+    "status": "Analytic dilution theorem and six-profile numerical test"
+  },
+  "program84": {
+    "cycle_size": 64,
+    "source_target_distance": 32,
+    "rows": [
+      {
+        "radius": 1,
+        "time": 0.1,
+        "hop_order": 32,
+        "truncated_generator_norm": 1.0072523807231022,
+        "truncation_operator_norm": 0.699112242708315,
+        "series_tail_bound": 4.7891003203812224e-68,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.0699112242708315,
+        "combined_wave_probability_bound": 0.0048875792790465,
+        "combined_diffusion_entry_bound": 0.0699112242708315
+      },
+      {
+        "radius": 1,
+        "time": 0.5,
+        "hop_order": 32,
+        "truncated_generator_norm": 1.0072523807231022,
+        "truncation_operator_norm": 0.699112242708315,
+        "series_tail_bound": 1.1150493101173124e-45,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.3495561213541575,
+        "combined_wave_probability_bound": 0.12218948197616247,
+        "combined_diffusion_entry_bound": 0.3495561213541575
+      },
+      {
+        "radius": 1,
+        "time": 1.0,
+        "hop_order": 32,
+        "truncated_generator_norm": 1.0072523807231022,
+        "truncation_operator_norm": 0.699112242708315,
+        "series_tail_bound": 4.7891003203812185e-36,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 0.699112242708315,
+        "combined_wave_probability_bound": 0.4887579279046499,
+        "combined_diffusion_entry_bound": 0.699112242708315
+      },
+      {
+        "radius": 2,
+        "time": 0.1,
+        "hop_order": 16,
+        "truncated_generator_norm": 1.0690604193881292,
+        "truncation_operator_norm": 0.43292391822643844,
+        "series_tail_bound": 1.3912860046304357e-29,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.04329239182264385,
+        "combined_wave_probability_bound": 0.00187423118972532,
+        "combined_diffusion_entry_bound": 0.04329239182264385
+      },
+      {
+        "radius": 2,
+        "time": 0.5,
+        "hop_order": 16,
+        "truncated_generator_norm": 1.0690604193881292,
+        "truncation_operator_norm": 0.43292391822643844,
+        "series_tail_bound": 2.189685281059438e-18,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.21646195911321922,
+        "combined_wave_probability_bound": 0.04685577974313299,
+        "combined_diffusion_entry_bound": 0.21646195911321922
+      },
+      {
+        "radius": 2,
+        "time": 1.0,
+        "hop_order": 16,
+        "truncated_generator_norm": 1.0690604193881292,
+        "truncation_operator_norm": 0.43292391822643844,
+        "series_tail_bound": 1.4842834546229583e-13,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 0.4329239182265869,
+        "combined_wave_probability_bound": 0.18742311897266048,
+        "combined_diffusion_entry_bound": 0.4329239182265869
+      },
+      {
+        "radius": 4,
+        "time": 0.1,
+        "hop_order": 8,
+        "truncated_generator_norm": 1.2165006487894539,
+        "truncation_operator_norm": 0.17904972890048895,
+        "series_tail_bound": 1.2058141437367672e-12,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.01790497289125471,
+        "combined_wave_probability_bound": 0.00032058805423656604,
+        "combined_diffusion_entry_bound": 0.01790497289125471
+      },
+      {
+        "radius": 4,
+        "time": 0.5,
+        "hop_order": 8,
+        "truncated_generator_norm": 1.2165006487894539,
+        "truncation_operator_norm": 0.17904972890048895,
+        "series_tail_bound": 4.98088050457697e-07,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.08952536253829493,
+        "combined_wave_probability_bound": 0.008014790537613142,
+        "combined_diffusion_entry_bound": 0.08952536253829493
+      },
+      {
+        "radius": 4,
+        "time": 1.0,
+        "hop_order": 8,
+        "truncated_generator_norm": 1.2165006487894539,
+        "truncation_operator_norm": 0.17904972890048895,
+        "series_tail_bound": 0.00013722881924118282,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 0.17918695771973014,
+        "combined_wave_probability_bound": 0.03210796581685236,
+        "combined_diffusion_entry_bound": 0.17918695771973014
+      },
+      {
+        "radius": 8,
+        "time": 0.1,
+        "hop_order": 4,
+        "truncated_generator_norm": 1.261672099474976,
+        "truncation_operator_norm": 0.15559025675357382,
+        "series_tail_bound": 1.0829947271438431e-05,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.015569855622628822,
+        "combined_wave_probability_bound": 0.00024242040410950636,
+        "combined_diffusion_entry_bound": 0.015569855622628822
+      },
+      {
+        "radius": 8,
+        "time": 0.5,
+        "hop_order": 4,
+        "truncated_generator_norm": 1.261672099474976,
+        "truncation_operator_norm": 0.15559025675357382,
+        "series_tail_bound": 0.007527266576564404,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.08532239495335131,
+        "combined_wave_probability_bound": 0.007279911080575669,
+        "combined_diffusion_entry_bound": 0.08532239495335131
+      },
+      {
+        "radius": 8,
+        "time": 1.0,
+        "hop_order": 4,
+        "truncated_generator_norm": 1.261672099474976,
+        "truncation_operator_norm": 0.15559025675357382,
+        "series_tail_bound": 0.139015856382193,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 0.2946061131357668,
+        "combined_wave_probability_bound": 0.08679276189696422,
+        "combined_diffusion_entry_bound": 0.2946061131357668
+      },
+      {
+        "radius": 16,
+        "time": 0.1,
+        "hop_order": 2,
+        "truncated_generator_norm": 1.3265818174720334,
+        "truncation_operator_norm": 0.05522979145943835,
+        "series_tail_bound": 0.009201441407485718,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.014724420553429554,
+        "combined_wave_probability_bound": 0.0002168085606342587,
+        "combined_diffusion_entry_bound": 0.014724420553429554
+      },
+      {
+        "radius": 16,
+        "time": 0.5,
+        "hop_order": 2,
+        "truncated_generator_norm": 1.3265818174720334,
+        "truncation_operator_norm": 0.05522979145943835,
+        "series_tail_bound": 0.2778791391422459,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.305494034871965,
+        "combined_wave_probability_bound": 0.09332660534235339,
+        "combined_diffusion_entry_bound": 0.305494034871965
+      },
+      {
+        "radius": 16,
+        "time": 1.0,
+        "hop_order": 2,
+        "truncated_generator_norm": 1.3265818174720334,
+        "truncation_operator_norm": 0.05522979145943835,
+        "series_tail_bound": 1.4415593373076627,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 1.0,
+        "combined_wave_probability_bound": 1.0,
+        "combined_diffusion_entry_bound": 1.0
+      }
+    ],
+    "best_bound_by_time": [
+      {
+        "radius": 16,
+        "time": 0.1,
+        "hop_order": 2,
+        "truncated_generator_norm": 1.3265818174720334,
+        "truncation_operator_norm": 0.05522979145943835,
+        "series_tail_bound": 0.009201441407485718,
+        "full_wave_amplitude_actual": 0.00010282969783090966,
+        "full_wave_probability_actual": 1.0573946755996187e-08,
+        "full_diffusion_entry_actual": 0.00010250978359315409,
+        "combined_amplitude_bound": 0.014724420553429554,
+        "combined_wave_probability_bound": 0.0002168085606342587,
+        "combined_diffusion_entry_bound": 0.014724420553429554
+      },
+      {
+        "radius": 8,
+        "time": 0.5,
+        "hop_order": 4,
+        "truncated_generator_norm": 1.261672099474976,
+        "truncation_operator_norm": 0.15559025675357382,
+        "series_tail_bound": 0.007527266576564404,
+        "full_wave_amplitude_actual": 0.0005156986293997571,
+        "full_wave_probability_actual": 2.6594507636478803e-07,
+        "full_diffusion_entry_actual": 0.0005055159478341702,
+        "combined_amplitude_bound": 0.08532239495335131,
+        "combined_wave_probability_bound": 0.007279911080575669,
+        "combined_diffusion_entry_bound": 0.08532239495335131
+      },
+      {
+        "radius": 4,
+        "time": 1.0,
+        "hop_order": 8,
+        "truncated_generator_norm": 1.2165006487894539,
+        "truncation_operator_norm": 0.17904972890048895,
+        "series_tail_bound": 0.00013722881924118282,
+        "full_wave_amplitude_actual": 0.0010396947961587922,
+        "full_wave_probability_actual": 1.0809652691596725e-06,
+        "full_diffusion_entry_actual": 0.0009915807937921183,
+        "combined_amplitude_bound": 0.17918695771973014,
+        "combined_wave_probability_bound": 0.03210796581685236,
+        "combined_diffusion_entry_bound": 0.17918695771973014
+      }
+    ],
+    "theorem": "For a radius-R truncation L_R and hop order m, the far matrix element of exp(z L_R) is bounded by sum_(k>=m) (|z| ||L_R||)^k/k!. Duhamel adds at most |t| ||L-L_R|| for either unitary self-adjoint or positive contractive semigroups.",
+    "status": "Rigorous finite-volume bound; no Lorentz interpretation"
+  },
+  "program85": {
+    "realizations": {
+      "strict": {
+        "quotient_dimension": 11,
+        "minimum_quotient_eigenvalue": 0.4542057749499982,
+        "stationarity_residual": 2.8226205897961414e-15,
+        "maximum_gauge_action_difference": 9.325873406851315e-15,
+        "minimum_action": -3.8441078218494438,
+        "log_partition_pseudodeterminant": 13.847825202565165,
+        "log_partition_basis": 13.847825202565165,
+        "partition_formula_residual": 0.0,
+        "gaussian_differential_entropy": 15.503717380715722,
+        "energy_derivative_analytic": -3.333909337274094,
+        "energy_derivative_finite_difference": -3.3339093373774276,
+        "energy_derivative_residual": 1.0333334188317167e-10
+      },
+      "legacy_absolute": {
+        "quotient_dimension": 11,
+        "minimum_quotient_eigenvalue": 0.9130434109149013,
+        "stationarity_residual": 2.809575193256579e-15,
+        "maximum_gauge_action_difference": 1.7763568394002505e-15,
+        "minimum_action": -3.7534226693296033,
+        "log_partition_pseudodeterminant": 13.4391194211207,
+        "log_partition_basis": 13.439119421120699,
+        "partition_formula_residual": 1.7763568394002505e-15,
+        "gaussian_differential_entropy": 15.185696751791095,
+        "energy_derivative_analytic": -3.3862417627581896,
+        "energy_derivative_finite_difference": -3.386241762770581,
+        "energy_derivative_residual": 1.2391421222446297e-11
+      }
+    },
+    "theorems": [
+      "For J perpendicular to 1, S[f]=1/2<f,Lf>-<J,f> is gauge invariant under f->f+c1.",
+      "The stationary class is f*=L^+J+c1 and is unique on 1^perp.",
+      "The quotient Gaussian partition uses pdet(L), not an infrared mass.",
+      "For df/dt=-Lf, d(1/2<f,Lf>)/dt=-||Lf||^2<=0."
+    ],
+    "status": "Proven quotient variational structure; finite verification"
+  },
+  "program86": {
+    "parameters": [
+      "log_length",
+      "log_time",
+      "log_action",
+      "clock_drift",
+      "distance_bias"
+    ],
+    "measurement_jacobians": {
+      "length_primary": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "length_crosscheck": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "clock_primary": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clock_crosscheck": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "energy_standard": [
+        0.0,
+        -1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "length_time_link": [
+        1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "records": 60,
+    "allocations_evaluated": 118755,
+    "maximin_d_optimal_even_allocation": {
+      "length_primary": 12,
+      "length_crosscheck": 6,
+      "clock_primary": 12,
+      "clock_crosscheck": 8,
+      "energy_standard": 12,
+      "length_time_link": 10
+    },
+    "scenario_log_determinants": {
+      "nominal": 58.43842800510434,
+      "length_degraded": 56.96372345426779,
+      "clock_degraded": 56.34900330793087,
+      "energy_degraded": 57.262854675300105,
+      "link_degraded": 57.69366096340658
+    },
+    "worst_scenario": "clock_degraded",
+    "worst_case_logdet": 56.34900330793087,
+    "worst_case_one_sigma_bounds": [
+      0.004407885273335002,
+      0.004157723118077952,
+      0.007114773001293378,
+      0.004902719809105946,
+      0.005269040322128587
+    ],
+    "worst_case_condition_number": 36.19565781530342,
+    "ranks_after_group_omissions": {
+      "omit_both_length_classes": 4,
+      "omit_both_clock_classes": 4,
+      "omit_energy_class": 4,
+      "omit_link_only": 5
+    },
+    "status": "Conditional robust-design computation with explicit nuisances"
+  },
+  "program87": {
+    "state_family": "rho(q)=(1+q)/2 rho_(+1)+(1-q)/2 rho_(-1), q in [-1,1]",
+    "strict_lambda_for_k_plus_1": -0.4699856726450202,
+    "unbiased_gradient_flow": "dq/dt=q(1-q^2)",
+    "unbiased_trajectories": [
+      {
+        "q_initial": -0.2,
+        "q_final": -0.9999999999910776,
+        "chiral_current_final": 0.4699856726408268
+      },
+      {
+        "q_initial": -0.001,
+        "q_final": -0.9999999999950653,
+        "chiral_current_final": 0.46998567264270097
+      },
+      {
+        "q_initial": 0.0,
+        "q_final": 0.0,
+        "chiral_current_final": -0.0
+      },
+      {
+        "q_initial": 0.001,
+        "q_final": 0.9999999999950653,
+        "chiral_current_final": -0.46998567264270097
+      },
+      {
+        "q_initial": 0.2,
+        "q_final": 0.9999999999910776,
+        "chiral_current_final": -0.4699856726408268
+      }
+    ],
+    "symmetric_noise_positive_branch_fraction": 0.4952,
+    "explicit_bias": {
+      "h": 1.2,
+      "sample_size": 1000,
+      "positive_final_fraction": 1.0,
+      "mean_final_q": 0.9999999999717488
+    },
+    "theorem": "Reflection-equivariant gradient flow has paired stable minima q=+1 and q=-1; it cannot select one globally. A sufficiently large explicit bias h>1 makes +1 the unique stable interior-reachable branch while preserving the physical interval.",
+    "status": "Proven symmetry statement and numerical stability test",
+    "guardrail": "The Landau state law and h are not strict FIN exports. Spontaneous branching does not discharge QW-2191."
+  },
+  "program88": {
+    "protocol": "Equiprobable two-state system, binary-symmetric measurement, outcome-conditioned energy raising with Delta=log((1-eps)/eps)",
+    "rows": [
+      {
+        "measurement_error": 0.01,
+        "feedback_gap_delta": 4.59511985013459,
+        "mutual_information": 0.637145646205098,
+        "free_energy_difference": 0.6830968447064438,
+        "mean_feedback_work": 0.0459511985013459,
+        "generalized_second_law_rhs_deltaF_minus_I": 0.04595119850134588,
+        "second_law_residual": 2.0816681711721685e-17,
+        "generalized_jarzynski_average": 1.0,
+        "generalized_jarzynski_residual": 0.0,
+        "memory_entropy": 0.6931471805599453,
+        "conditional_memory_entropy": 0.056001534354847345,
+        "memory_reset_saving_equals_I_residual": 0.0
+      },
+      {
+        "measurement_error": 0.05,
+        "feedback_gap_delta": 2.9444389791664403,
+        "mutual_information": 0.4946319372140727,
+        "free_energy_difference": 0.6418538861723948,
+        "mean_feedback_work": 0.14722194895832202,
+        "generalized_second_law_rhs_deltaF_minus_I": 0.14722194895832208,
+        "second_law_residual": -5.551115123125783e-17,
+        "generalized_jarzynski_average": 1.0,
+        "generalized_jarzynski_residual": 0.0,
+        "memory_entropy": 0.6931471805599453,
+        "conditional_memory_entropy": 0.1985152433458726,
+        "memory_reset_saving_equals_I_residual": 0.0
+      },
+      {
+        "measurement_error": 0.1,
+        "feedback_gap_delta": 2.1972245773362196,
+        "mutual_information": 0.3680642071684971,
+        "free_energy_difference": 0.587786664902119,
+        "mean_feedback_work": 0.21972245773362198,
+        "generalized_second_law_rhs_deltaF_minus_I": 0.21972245773362187,
+        "second_law_residual": 1.1102230246251565e-16,
+        "generalized_jarzynski_average": 0.9999999999999999,
+        "generalized_jarzynski_residual": 1.1102230246251565e-16,
+        "memory_entropy": 0.6931471805599453,
+        "conditional_memory_entropy": 0.3250829733914482,
+        "memory_reset_saving_equals_I_residual": 0.0
+      },
+      {
+        "measurement_error": 0.2,
+        "feedback_gap_delta": 1.3862943611198906,
+        "mutual_information": 0.19274475702175742,
+        "free_energy_difference": 0.4700036292457355,
+        "mean_feedback_work": 0.2772588722239781,
+        "generalized_second_law_rhs_deltaF_minus_I": 0.2772588722239781,
+        "second_law_residual": 0.0,
+        "generalized_jarzynski_average": 0.9999999999999999,
+        "generalized_jarzynski_residual": 1.1102230246251565e-16,
+        "memory_entropy": 0.6931471805599453,
+        "conditional_memory_entropy": 0.5004024235381879,
+        "memory_reset_saving_equals_I_residual": 0.0
+      },
+      {
+        "measurement_error": 0.4,
+        "feedback_gap_delta": 0.4054651081081642,
+        "mutual_information": 0.020135513550688766,
+        "free_energy_difference": 0.18232155679395456,
+        "mean_feedback_work": 0.1621860432432657,
+        "generalized_second_law_rhs_deltaF_minus_I": 0.1621860432432658,
+        "second_law_residual": -1.1102230246251565e-16,
+        "generalized_jarzynski_average": 1.0,
+        "generalized_jarzynski_residual": 0.0,
+        "memory_entropy": 0.6931471805599453,
+        "conditional_memory_entropy": 0.6730116670092565,
+        "memory_reset_saving_equals_I_residual": 0.0
+      }
+    ],
+    "status": "Exact conditional feedback identity",
+    "scope": "The measurement channel, Hamiltonian feedback, bath beta=1, apparatus memory, and erasure convention are imported. Including memory reset prevents mutual information from becoming free energy."
+  },
+  "program89": {
+    "two_slot_map": "T[M]=E_(t2) o M o E_(t1)(rho0), with M equal to identity, nonselective site dephasing, or a recorded site instrument",
+    "rows": [
+      {
+        "half_time": 0.1,
+        "wave_dephasing_intervention_tv": 0.003882525341308687,
+        "diffusion_dephasing_intervention_tv": 0.0,
+        "joint_intermediate_final_js_divergence": 0.058888437879147756,
+        "wave_joint_normalization_residual": 0.0,
+        "diffusion_joint_normalization_residual": 2.220446049250313e-16
+      },
+      {
+        "half_time": 0.25,
+        "wave_dephasing_intervention_tv": 0.023600927237872146,
+        "diffusion_dephasing_intervention_tv": 0.0,
+        "joint_intermediate_final_js_divergence": 0.12062248007632259,
+        "wave_joint_normalization_residual": 0.0,
+        "diffusion_joint_normalization_residual": 0.0
+      },
+      {
+        "half_time": 0.5,
+        "wave_dephasing_intervention_tv": 0.08539205953403538,
+        "diffusion_dephasing_intervention_tv": 0.0,
+        "joint_intermediate_final_js_divergence": 0.17859676202223007,
+        "wave_joint_normalization_residual": 0.0,
+        "diffusion_joint_normalization_residual": 0.0
+      }
+    ],
+    "status": "Finite operational process-tensor witness",
+    "interpretation": "Nonselective dephasing changes the wave branch but is the identity on the classical diffusion branch. The recorded two-time joint law provides a stronger operational object than a one-time spectrum."
+  },
+  "program90": {
+    "intake_template": "FIN_Programs_81_90_External_Data_Intake_Template.json",
+    "template_sha256": "7c533e7433fc2cfb34b3ce6f25068e9cd2ceaa3b73333d97ca67a31a6ddd7b98",
+    "intake_directory_exists": false,
+    "candidate_manifest_count": 0,
+    "admitted_external_datasets": [],
+    "rejected_candidate_manifests": [],
+    "synthetic_runner_dry_run": {
+      "warning": "Method validation only; not physical evidence",
+      "times": [
+        0.2,
+        0.5,
+        1.0
+      ],
+      "preparations": [
+        0,
+        3,
+        6
+      ],
+      "shots_per_record": 100,
+      "trials_per_truth": 300,
+      "results": {
+        "strict": {
+          "correct_selection_rate": 1.0,
+          "mean_log_likelihood_margin": 70.09746183446701,
+          "minimum_log_likelihood_margin": 37.77058649465067
+        },
+        "nearest_neighbour_null": {
+          "correct_selection_rate": 1.0,
+          "mean_log_likelihood_margin": 78.01628090049364,
+          "minimum_log_likelihood_margin": 47.56445965808962
+        }
+      }
+    },
+    "status": "No external dataset admitted; protocol runner passes a synthetic strict-versus-null directionality check"
+  },
+  "global_guardrail": "No result closes QW-2191, derives a dimensional standard, proves Lorentz invariance, validates a legacy-to-strict completion map, transfers legacy physical roles, or supplies external physical evidence."
+}

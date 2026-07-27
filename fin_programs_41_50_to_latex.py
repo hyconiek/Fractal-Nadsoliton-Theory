@@ -39,7 +39,7 @@ PREAMBLE = r"""\documentclass[11pt,a4paper,openany]{report}
   urlcolor=finblue,
   pdftitle={FIN Reconstructed Legacy Kernel: Programs 41--50},
   pdfauthor={Krzysztof \.Zuchowski},
-  pdfsubject={Program 42a methodology audit and Programs 41--50 on K^*_legacy},
+  pdfsubject={Program 42a methodology audit and Programs 41--50 on the legacy-star family},
   pdfkeywords={FIN, legacy kernel, dual dynamics, selector, units, Programs 41-50}
 }
 
@@ -134,11 +134,11 @@ Machine-readable results: \path{FIN_Programs_41_50_Legacy_Star_Results.json}, ge
 FIGURES = {
     "FINFIGUREP44": (
         "FIN_Programs_41_50_Figures/program44_information_flow.png",
-        "Relative information under Markov heat flow versus unitary Born populations for the abs-repaired historical \(K^*\) generator.",
+        r"Relative information under Markov heat flow versus unitary Born populations for the abs-repaired historical \(K^*\) generator.",
     ),
     "FINFIGUREP50": (
         "FIN_Programs_41_50_Figures/program50_profiles.png",
-        "Preregistered kernel profiles on \(d=1..12\): historical \(K^*\), \(\mathbb Z_{12}\) \(K^*\), classical frozen legacy, rejected product (scaled), and strict.",
+        r"Preregistered kernel profiles on \(d=1..12\): historical \(K^*\), \(\mathbb Z_{12}\) \(K^*\), classical frozen legacy, rejected product (scaled), and strict.",
     ),
 }
 
@@ -179,6 +179,15 @@ def main() -> None:
         ("[Refuted]", r"\statusRefuted{}"),
     ]:
         body = body.replace(plain, macro)
+    for filename in [
+        "program_42a_legacy_kernel_reconstruction.py",
+        "program_42a_legacy_kernel_reconstruction_report.json",
+        "fin_programs_41_50_legacy_star.py",
+        "FIN_Programs_41_50_Legacy_Star_Results.json",
+        "FIN_Programs_41_50_Figures/",
+        "FIN_Programs_41_50_Legacy_Star_Monograph.md",
+    ]:
+        body = body.replace(converter.escape_normal(filename), f"\\path{{{filename}}}")
     # Escape leftover figure tokens if any
     TARGET.write_text(PREAMBLE + "\n" + body + "\n" + POSTAMBLE, encoding="utf-8")
     print("Wrote", TARGET)

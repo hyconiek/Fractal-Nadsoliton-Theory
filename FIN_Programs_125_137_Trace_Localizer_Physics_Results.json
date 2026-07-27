@@ -1,0 +1,1092 @@
+{
+  "title": "FIN Programs 125-137: Trace, Localizer, Fractional Physics and Operational Completion",
+  "release": "10.13",
+  "execution_date": "2026-07-27",
+  "seed": 20260727,
+  "frozen_parameters": {
+    "alpha_geo": 2.772588722239781,
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta_tors": 0.01,
+    "eta": 1.8
+  },
+  "provenance": {
+    "previous_results": "FIN_Programs_113_124_Constructive_Completion_Results.json",
+    "previous_results_sha256": "0d377eaa0aebbe09ad1d839e0c296bd68d6a95817b89daa083eb3db6dfa99e86",
+    "script": "fin_programs_125_137_trace_localizer_physics.py"
+  },
+  "program125_invariant_trace_classification": {
+    "prime_sectors": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "fibre_dimensions": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "maximal_abstract_unit_group_automorphism_orbits": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        5,
+        7,
+        11
+      ]
+    ],
+    "symmetry_scope": "The S3 permutation is Aut(U(12)) acting on the three nonidentity abstract unit elements. C12 generator changes commute with each m_p and fix the prime labels; carrier naturality alone permits the full probability simplex.",
+    "traces_invariant_under_enlarged_S3_symmetry": "(x,y,z/3,z/3,z/3), x,y,z>=0, x+y+z=1",
+    "induced_exponent_formula": "eta=2-w_2",
+    "uniform_sector_trace": {
+      "weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "eta": 1.7999999999999998
+    },
+    "normalized_hilbert_trace": {
+      "weights": [
+        0.1111111111111111,
+        0.2222222222222222,
+        0.2222222222222222,
+        0.2222222222222222,
+        0.2222222222222222
+      ],
+      "eta": 1.8888888888888888,
+      "exact_eta": "17/9"
+    },
+    "eta_range_on_invariant_trace_simplex": [
+      1.0,
+      2.0
+    ],
+    "eta_9_over_5_requires": "w_2=1/5; even enlarged Aut(U(12)) invariance does not force this",
+    "canonical_trace_selected": false,
+    "status": "Proven finite classification under enlarged symmetry and robust no-go theorem",
+    "scope": "The fibre object is retained, but a state/trace on its sector algebra is an additional datum. The no-go is stronger because it survives a symmetry larger than carrier naturality."
+  },
+  "program126_natural_fibre_localizer": {
+    "definition": "For a finite cyclic group C_n and prime p<n, let m_p(x)=px. Set F_p(C_n)=H0_tilde(ker m_p) direct-sum X_p^-, where X_p^- is the sum of nontrivial real-character lines negative at p (and is zero when p is not a unit).",
+    "naturality_equation": "psi o m_p = m_p o psi for every cyclic-group isomorphism psi",
+    "C12_rows": [
+      {
+        "p": 2,
+        "reduced_H0_dimension": 1,
+        "negative_character_dimension": 0,
+        "total_dimension": 1,
+        "all_C12_generator_changes_natural": true
+      },
+      {
+        "p": 3,
+        "reduced_H0_dimension": 2,
+        "negative_character_dimension": 0,
+        "total_dimension": 2,
+        "all_C12_generator_changes_natural": true
+      },
+      {
+        "p": 5,
+        "reduced_H0_dimension": 0,
+        "negative_character_dimension": 2,
+        "total_dimension": 2,
+        "all_C12_generator_changes_natural": true
+      },
+      {
+        "p": 7,
+        "reduced_H0_dimension": 0,
+        "negative_character_dimension": 2,
+        "total_dimension": 2,
+        "all_C12_generator_changes_natural": true
+      },
+      {
+        "p": 11,
+        "reduced_H0_dimension": 0,
+        "negative_character_dimension": 2,
+        "total_dimension": 2,
+        "all_C12_generator_changes_natural": true
+      }
+    ],
+    "dimensions": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "presentation_independent": true,
+    "strict_carrier_localizer_constructed": true,
+    "ontology_to_carrier_source_constructed": false,
+    "trace_or_state_selected": false,
+    "damping_coupling_constructed": false,
+    "status": "Proven functorial localizer at the finite C12 carrier level",
+    "scope": "This closes the presentation-dependence defect of the fibre formula, not the source, trace, or coupling obligations."
+  },
+  "program127_continuous_fractional_enclosure": {
+    "q_window": [
+      0.001,
+      0.02
+    ],
+    "fft_length": 2097152,
+    "retained_distance": 1048575,
+    "cell_half_width": 1.4980281131695715e-06,
+    "finite_derivative_bound": 95.24336836423731,
+    "tail_normalization_upper": 3.814700176010541e-05,
+    "abelian_constant_interval": [
+      1.1474451933887597,
+      1.1474674386611041
+    ],
+    "number_of_certified_cells": 6342,
+    "worst_cell_center": 0.0010006827795972738,
+    "maximum_relative_remainder_upper": 0.02264604834355974,
+    "representative_rows": [
+      {
+        "q_cell_center": 0.0010006827795972738,
+        "symbol_interval": [
+          0.004484581799767205,
+          0.004668463134892795
+        ],
+        "prediction_interval": [
+          0.0045650820657397355,
+          0.004576118222190412
+        ],
+        "relative_remainder_upper": 0.02264604834355974
+      },
+      {
+        "q_cell_center": 0.0016118782497704588,
+        "symbol_interval": [
+          0.00660487911135631,
+          0.0067888015522283175
+        ],
+        "prediction_interval": [
+          0.006687667821849174,
+          0.006697749554829037
+        ],
+        "relative_remainder_upper": 0.015122421309373472
+      },
+      {
+        "q_cell_center": 0.002226069776169983,
+        "symbol_interval": [
+          0.00857448285171776,
+          0.00875844347687244
+        ],
+        "prediction_interval": [
+          0.008660223194708355,
+          0.008669720893660042
+        ],
+        "relative_remainder_upper": 0.01134154166189394
+      },
+      {
+        "q_cell_center": 0.0028372652463431684,
+        "symbol_interval": [
+          0.010427008346284773,
+          0.010611004885951441
+        ],
+        "prediction_interval": [
+          0.010516431884305955,
+          0.010525523688137825
+        ],
+        "relative_remainder_upper": 0.009359661787097342
+      },
+      {
+        "q_cell_center": 0.0034514567727426926,
+        "symbol_interval": [
+          0.012208298080101194,
+          0.012392329153247526
+        ],
+        "prediction_interval": [
+          0.012302208193233681,
+          0.012310993026918545
+        ],
+        "relative_remainder_upper": 0.008341727315806569
+      },
+      {
+        "q_cell_center": 0.0040626522429158774,
+        "symbol_interval": [
+          0.013917713453635398,
+          0.014101777666848683
+        ],
+        "prediction_interval": [
+          0.014016885835249161,
+          0.014025429727372437
+        ],
+        "relative_remainder_upper": 0.007680069404705425
+      },
+      {
+        "q_cell_center": 0.004676843769315402,
+        "symbol_interval": [
+          0.01558328457774635,
+          0.015767381081027588
+        ],
+        "prediction_interval": [
+          0.015688554725507505,
+          0.015696901351626064
+        ],
+        "relative_remainder_upper": 0.007238165758616077
+      },
+      {
+        "q_cell_center": 0.005288039239488587,
+        "symbol_interval": [
+          0.01719674292455332,
+          0.017380870707603337
+        ],
+        "prediction_interval": [
+          0.01730889122729273,
+          0.017317074111425086
+        ],
+        "relative_remainder_upper": 0.006948701963016742
+      },
+      {
+        "q_cell_center": 0.005902230765888111,
+        "symbol_interval": [
+          0.01877990157591995,
+          0.01896406005132509
+        ],
+        "prediction_interval": [
+          0.018899778164912933,
+          0.018907821315235315
+        ],
+        "relative_remainder_upper": 0.006765440458879992
+      },
+      {
+        "q_cell_center": 0.0065134262360612965,
+        "symbol_interval": [
+          0.02032191700140293,
+          0.02050610537152836
+        ],
+        "prediction_interval": [
+          0.020450297684964206,
+          0.020458221089846657
+        ],
+        "relative_remainder_upper": 0.0066625581884718265
+      },
+      {
+        "q_cell_center": 0.007127617762460821,
+        "symbol_interval": [
+          0.02184158533323021,
+          0.022025803164837644
+        ],
+        "prediction_interval": [
+          0.021979329674823186,
+          0.021987148285118545
+        ],
+        "relative_remainder_upper": 0.0066203652243003504
+      },
+      {
+        "q_cell_center": 0.007741809288860345,
+        "symbol_interval": [
+          0.023334267218119355,
+          0.02351851398802837
+        ],
+        "prediction_interval": [
+          0.023482195059573698,
+          0.023489921599814823
+        ],
+        "relative_remainder_upper": 0.006626432575947617
+      },
+      {
+        "q_cell_center": 0.008353004759033531,
+        "symbol_interval": [
+          0.02479533458834015,
+          0.024979609683646972
+        ],
+        "prediction_interval": [
+          0.024954209649107374,
+          0.02496185505920318
+        ],
+        "relative_remainder_upper": 0.006670997426596891
+      },
+      {
+        "q_cell_center": 0.008967196285433054,
+        "symbol_interval": [
+          0.02624118306729828,
+          0.026425486192957544
+        ],
+        "prediction_interval": [
+          0.02641187576815208,
+          0.026419448529369716
+        ],
+        "relative_remainder_upper": 0.00674750882378429
+      },
+      {
+        "q_cell_center": 0.00957839175560624,
+        "symbol_interval": [
+          0.027659456917288123,
+          0.027843787538716455
+        ],
+        "prediction_interval": [
+          0.027842721645058733,
+          0.027850229645004488
+        ],
+        "relative_remainder_upper": 0.006849951693327747
+      },
+      {
+        "q_cell_center": 0.010192583282005764,
+        "symbol_interval": [
+          0.029065575746534636,
+          0.02924993362808527
+        ],
+        "prediction_interval": [
+          0.029262289245585944,
+          0.029269738686647864
+        ],
+        "relative_remainder_upper": 0.006975222508780434
+      },
+      {
+        "q_cell_center": 0.01080377875217895,
+        "symbol_interval": [
+          0.03044712841055969,
+          0.03063151307597368
+        ],
+        "prediction_interval": [
+          0.030658035198570785,
+          0.03066543200650525
+        ],
+        "relative_remainder_upper": 0.007118882130838715
+      },
+      {
+        "q_cell_center": 0.011417970278578474,
+        "symbol_interval": [
+          0.03181881185777763,
+          0.03200322311572261
+        ],
+        "prediction_interval": [
+          0.03204479453742773,
+          0.03205214341971505
+        ],
+        "relative_remainder_upper": 0.007279749091410307
+      },
+      {
+        "q_cell_center": 0.01202916574875166,
+        "symbol_interval": [
+          0.03316825413150907,
+          0.0333526915508002
+        ],
+        "prediction_interval": [
+          0.033410047137964284,
+          0.03341735268921269
+        ],
+        "relative_remainder_upper": 0.007454167899542592
+      },
+      {
+        "q_cell_center": 0.012643357275151182,
+        "symbol_interval": [
+          0.03450958869251723,
+          0.034694052115972034
+        ],
+        "prediction_interval": [
+          0.0347680802629279,
+          0.034775346162072174
+        ],
+        "relative_remainder_upper": 0.007642122908464131
+      },
+      {
+        "q_cell_center": 0.013254552745324368,
+        "symbol_interval": [
+          0.035830531961277653,
+          0.03601502099357455
+        ],
+        "prediction_interval": [
+          0.03610644612076676,
+          0.036113676020240786
+        ],
+        "relative_remainder_upper": 0.00784035551530221
+      },
+      {
+        "q_cell_center": 0.013868744271723892,
+        "symbol_interval": [
+          0.03714476056518444,
+          0.03732927507614767
+        ],
+        "prediction_interval": [
+          0.03743899076442076,
+          0.0374461876082458
+        ],
+        "relative_remainder_upper": 0.008049605642497624
+      },
+      {
+        "q_cell_center": 0.014482935798123417,
+        "symbol_interval": [
+          0.03844642464943781,
+          0.038630964395481734
+        ],
+        "prediction_interval": [
+          0.03875977942765817,
+          0.03876694603734622
+        ],
+        "relative_remainder_upper": 0.008267903992221517
+      },
+      {
+        "q_cell_center": 0.015094131268296602,
+        "symbol_interval": [
+          0.0397298592833104,
+          0.03991442391102461
+        ],
+        "prediction_interval": [
+          0.0400630460189312,
+          0.04007018507920314
+        ],
+        "relative_remainder_upper": 0.00849324242501113
+      },
+      {
+        "q_cell_center": 0.015708322794696125,
+        "symbol_interval": [
+          0.041008191044169015,
+          0.041192780454625204
+        ],
+        "prediction_interval": [
+          0.041362108536186465,
+          0.04136922223080318
+        ],
+        "relative_remainder_upper": 0.008727047963820393
+      },
+      {
+        "q_cell_center": 0.016319518264869312,
+        "symbol_interval": [
+          0.042269463648918995,
+          0.04245407751139499
+        ],
+        "prediction_interval": [
+          0.04264478458396119,
+          0.04265187514315407
+        ],
+        "relative_remainder_upper": 0.008965877653715664
+      },
+      {
+        "q_cell_center": 0.016933709791268837,
+        "symbol_interval": [
+          0.04352644027560635,
+          0.04371107850681695
+        ],
+        "prediction_interval": [
+          0.04392410328876528,
+          0.04393117253774922
+        ],
+        "relative_remainder_upper": 0.009212871834802249
+      },
+      {
+        "q_cell_center": 0.01754490526144202,
+        "symbol_interval": [
+          0.044767303266360095,
+          0.04495196555391372
+        ],
+        "prediction_interval": [
+          0.045187998620989815,
+          0.04519504843621243
+        ],
+        "relative_remainder_upper": 0.009464425521217143
+      },
+      {
+        "q_cell_center": 0.018159096787841545,
+        "symbol_interval": [
+          0.0460046051052491,
+          0.04618929138010646
+        ],
+        "prediction_interval": [
+          0.04644924754537476,
+          0.04645627947259176
+        ],
+        "relative_remainder_upper": 0.009722568670380521
+      },
+      {
+        "q_cell_center": 0.018770292258014732,
+        "symbol_interval": [
+          0.04722663142918231,
+          0.047411341395200306
+        ],
+        "prediction_interval": [
+          0.047695900142543726,
+          0.047702915777753215
+        ],
+        "relative_remainder_upper": 0.00998438650563625
+      },
+      {
+        "q_cell_center": 0.019384483784414253,
+        "symbol_interval": [
+          0.048445696411865476,
+          0.04863043001163321
+        ],
+        "prediction_interval": [
+          0.04894051018023563,
+          0.04894751084765404
+        ],
+        "relative_remainder_upper": 0.01025209305025594
+      },
+      {
+        "q_cell_center": 0.019998675310813778,
+        "symbol_interval": [
+          0.04965609907856769,
+          0.049840856144150715
+        ],
+        "prediction_interval": [
+          0.050177256087106506,
+          0.05018424309327522
+        ],
+        "relative_remainder_upper": 0.010524100437778653
+      }
+    ],
+    "continuous_window_enclosed": true,
+    "formal_interval_arithmetic": false,
+    "status": "Strong numerical evidence with analytic truncation and cell bounds",
+    "scope": "Every frequency cell in the stated compact window is covered. Floating-point FFT rounding is guarded conservatively but not machine-verified interval arithmetic; this is not a full q->0 rate theorem."
+  },
+  "program128_quantitative_stable_window": {
+    "scaling": "q_n=k*n^(-5/4)",
+    "rows": [
+      {
+        "n": 25,
+        "k": 0.5,
+        "q": 0.00894427190999916,
+        "finite_characteristic_interval": [
+          0.5126898277092318,
+          0.515121569641732
+        ],
+        "stable_target_interval": [
+          0.5173441391456916,
+          0.5173507490631828
+        ],
+        "interval_separation": 0.002222569503959604,
+        "endpoint_hausdorff_bound": 0.004654311436459779
+      },
+      {
+        "n": 25,
+        "k": 1.0,
+        "q": 0.01788854381999832,
+        "finite_characteristic_interval": [
+          0.31097345863284276,
+          0.312481360618773
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.004958327091693804,
+        "endpoint_hausdorff_bound": 0.006466229077624064
+      },
+      {
+        "n": 40,
+        "k": 0.5,
+        "q": 0.004970442054794066,
+        "finite_characteristic_interval": [
+          0.513020201138967,
+          0.5168759488494867
+        ],
+        "stable_target_interval": [
+          0.5173441391456916,
+          0.5173507490631828
+        ],
+        "interval_separation": 0.0004681902962048179,
+        "endpoint_hausdorff_bound": 0.0043239380067245925
+      },
+      {
+        "n": 40,
+        "k": 1.0,
+        "q": 0.009940884109588132,
+        "finite_characteristic_interval": [
+          0.31229502269460085,
+          0.3146746261390539
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.00276506157141293,
+        "endpoint_hausdorff_bound": 0.005144665015865968
+      },
+      {
+        "n": 40,
+        "k": 2.0,
+        "q": 0.019881768219176265,
+        "finite_characteristic_interval": [
+          0.1306326617974369,
+          0.13165230515726314
+        ],
+        "stable_target_interval": [
+          0.13562563805021433,
+          0.1356308911049778
+        ],
+        "interval_separation": 0.003973332892951181,
+        "endpoint_hausdorff_bound": 0.00499297625277742
+      },
+      {
+        "n": 64,
+        "k": 0.5,
+        "q": 0.0027621358640099515,
+        "finite_characteristic_interval": [
+          0.5125518493741578,
+          0.518686621286915
+        ],
+        "stable_target_interval": [
+          0.5173441391456916,
+          0.5173507490631828
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.0047922897715337864
+      },
+      {
+        "n": 64,
+        "k": 1.0,
+        "q": 0.005524271728019903,
+        "finite_characteristic_interval": [
+          0.31280239503954166,
+          0.31657856447793165
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.000861123232535177,
+        "endpoint_hausdorff_bound": 0.004637292670925164
+      },
+      {
+        "n": 64,
+        "k": 2.0,
+        "q": 0.011048543456039806,
+        "finite_characteristic_interval": [
+          0.13167300553997552,
+          0.133286586401496
+        ],
+        "stable_target_interval": [
+          0.13562563805021433,
+          0.1356308911049778
+        ],
+        "interval_separation": 0.0023390516487183377,
+        "endpoint_hausdorff_bound": 0.003952632510238807
+      },
+      {
+        "n": 100,
+        "k": 0.5,
+        "q": 0.0015811388300841897,
+        "finite_characteristic_interval": [
+          0.5111115264773577,
+          0.5206624855936329
+        ],
+        "stable_target_interval": [
+          0.5173441391456916,
+          0.5173507490631828
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.006232612668333859
+      },
+      {
+        "n": 100,
+        "k": 1.0,
+        "q": 0.0031622776601683794,
+        "finite_characteristic_interval": [
+          0.31268561031155007,
+          0.31856074522865147
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.004754077398916756
+      },
+      {
+        "n": 100,
+        "k": 2.0,
+        "q": 0.006324555320336759,
+        "finite_characteristic_interval": [
+          0.1321709096473021,
+          0.13467823946889465
+        ],
+        "stable_target_interval": [
+          0.13562563805021433,
+          0.1356308911049778
+        ],
+        "interval_separation": 0.000947398581319675,
+        "endpoint_hausdorff_bound": 0.0034547284029122216
+      },
+      {
+        "n": 160,
+        "k": 1.0,
+        "q": 0.001757316641219841,
+        "finite_characteristic_interval": [
+          0.31107893152793226,
+          0.32043792815800054
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.006360756182534566
+      },
+      {
+        "n": 160,
+        "k": 2.0,
+        "q": 0.003514633282439682,
+        "finite_characteristic_interval": [
+          0.13211171113692935,
+          0.13611028555646745
+        ],
+        "stable_target_interval": [
+          0.13562563805021433,
+          0.1356308911049778
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.003513926913284976
+      },
+      {
+        "n": 250,
+        "k": 1.0,
+        "q": 0.0010059467437463483,
+        "finite_characteristic_interval": [
+          0.3087135362138396,
+          0.3233051409658744
+        ],
+        "stable_target_interval": [
+          0.3174396877104668,
+          0.3174467493213163
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.0087261514966272
+      },
+      {
+        "n": 250,
+        "k": 2.0,
+        "q": 0.0020118934874926967,
+        "finite_characteristic_interval": [
+          0.13122534458232046,
+          0.1374518594993518
+        ],
+        "stable_target_interval": [
+          0.13562563805021433,
+          0.1356308911049778
+        ],
+        "interval_separation": 0.0,
+        "endpoint_hausdorff_bound": 0.004400293467893862
+      }
+    ],
+    "maximum_interval_separation": 0.004958327091693804,
+    "maximum_endpoint_hausdorff_bound": 0.0087261514966272,
+    "all_rows_overlap_stable_target": false,
+    "status": "Quantitative finite-window theorem conditional on Program 127 enclosure",
+    "scope": "The certificate covers only n,k combinations whose rescaled frequency lies in [0.001,0.02]; it does not prove a global asymptotic rate."
+  },
+  "program129_fractional_wave_uv_obstruction": {
+    "wave_multiplier": "exp(-i*t*C*|q|^(4/5))",
+    "formal_scaling": "K_t(x)=t^(-5/4) K_1(x*t^(-5/4))",
+    "phase_second_derivative": "t*C*alpha*(alpha-1)*|q|^(alpha-2)",
+    "dyadic_stationary_phase_bound": "O(t^(-1/2)*Lambda^((2-alpha)/2)) = O(t^(-1/2)*Lambda^(3/5))",
+    "ultraviolet_shell_sum_converges": false,
+    "cutoff_free_L1_to_Linf_claim_established": false,
+    "constructed_object": "For each UV cutoff Lambda, U_t^Lambda is the spectral multiplier 1_{|q|<=Lambda} exp(-it C|q|^(4/5)), unitary on its cutoff subspace.",
+    "physical_interpretation": "A point detector is not defined by the fractional wave group alone; a bandwidth or detector-resolution object is necessary.",
+    "status": "Proven ultraviolet obstruction for this dispersive proof route",
+    "scope": "This does not prove that every possible dispersive estimate fails; it proves that the unregularized continuum kernel is not supplied by the present data and that the standard dyadic bound is nonsummable."
+  },
+  "program130_dimensional_calibration_object": {
+    "conditional_map": {
+      "physical_position": "x_phys=ell*x",
+      "physical_time": "t_phys=tau*t",
+      "physical_Hamiltonian": "H_phys=(hbar/tau)*A",
+      "fractional_diffusion_coefficient": "D_(4/5)=ell^(4/5)/tau",
+      "fractional_Hamiltonian_coefficient": "hbar*ell^(4/5)/tau"
+    },
+    "log_dimension_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        1.0
+      ]
+    ],
+    "rank": 3,
+    "determinant": 1.0,
+    "independent_external_calibrations_needed": 3,
+    "example_relative_input_uncertainties": {
+      "ell": 0.01,
+      "tau": 0.02,
+      "hbar": 0.03
+    },
+    "propagated_relative_uncertainties": {
+      "energy_hbar_over_tau": 0.03605551275463989,
+      "fractional_diffusion_ell_alpha_over_tau": 0.021540659228538015,
+      "fractional_hamiltonian_hbar_ell_alpha_over_tau": 0.036932370625238777
+    },
+    "internal_unit_source_found": false,
+    "status": "Proven dimensional-analysis theorem and constructed calibration layer",
+    "scope": "The map converts a dimensionless operational model into calibrated predictions only after ell, tau, and hbar are supplied externally."
+  },
+  "program131_apparatus_process_tomography": {
+    "generative_channel": {
+      "error_prevalence_when_refreshed": 0.1,
+      "error_persistence": 0.8,
+      "true_memory_order": 1
+    },
+    "estimator": "Jeffreys-smoothed conditional-frequency process tensor",
+    "rows": [
+      {
+        "calibration_records": 200,
+        "order_0_heldout_logloss": 0.315182056339011,
+        "order_1_heldout_logloss": 0.1252553746841649,
+        "order_2_heldout_logloss": 0.12929357883944467
+      },
+      {
+        "calibration_records": 1000,
+        "order_0_heldout_logloss": 0.31259893286233,
+        "order_1_heldout_logloss": 0.12573110851378383,
+        "order_2_heldout_logloss": 0.12680891896186083
+      },
+      {
+        "calibration_records": 5000,
+        "order_0_heldout_logloss": 0.3158723860306093,
+        "order_1_heldout_logloss": 0.12663755949764602,
+        "order_2_heldout_logloss": 0.12666736601463022
+      },
+      {
+        "calibration_records": 10000,
+        "order_0_heldout_logloss": 0.3112442872440159,
+        "order_1_heldout_logloss": 0.11957982428254145,
+        "order_2_heldout_logloss": 0.11968309257589065
+      }
+    ],
+    "all_binary_contexts_observed_at_largest_sample": true,
+    "best_large_sample_order": 1,
+    "external_experiment_used": false,
+    "status": "Constructed and numerically validated finite-memory apparatus estimator",
+    "scope": "This is a synthetic identifiability test.  It supplies a method for learning an instrument channel, not empirical evidence for FIN."
+  },
+  "program132_crossover_rg_flow": {
+    "operator": "A=kappa*(-Delta)+nu*(-Delta)^(2/5)",
+    "ratio": "g=nu/kappa",
+    "scale_law": "g(b)=b^(6/5) g",
+    "projective_coordinate": "x=g/(1+g)",
+    "beta_function": "dx/dlog(b)=(6/5)*x*(1-x)",
+    "fixed_points": {
+      "x=0": "local/UV; unstable toward increasing b",
+      "x=1": "fractional/IR; stable toward increasing b"
+    },
+    "crossover_momentum": "q_*=(nu/kappa)^(5/6)",
+    "status": "Proven exact two-coupling projective RG theorem",
+    "scope": "This is kinematic scaling of a constructed crossover operator, not a dynamically derived renormalization law for FIN parameters."
+  },
+  "program133_phase_frequency_source_test": {
+    "intrinsic_integer_inventory": {
+      "carrier_order": 12,
+      "prime_sector_count": 5,
+      "sum_fibre_dimensions": 9,
+      "sum_squared_fibre_dimensions": 17,
+      "product_fibre_dimensions": 16,
+      "real_character_count": 4,
+      "p3_fibre_dimension": 2
+    },
+    "exact_phi_encoding": {
+      "formula": "(17-4)/(5*16)",
+      "value": "13/80",
+      "matches_frozen_phi": true
+    },
+    "exact_omega_encoding": {
+      "formula": "(17*(4*12-4)-5)/(5^3*(2*16))",
+      "value": "743/4000",
+      "matches_frozen_omega": true
+    },
+    "finite_template_nonuniqueness_audit": {
+      "base_values": [
+        2,
+        4,
+        5,
+        9,
+        12,
+        16,
+        17
+      ],
+      "phi_template": "(A-B)/(C*D)",
+      "phi_hit_count": 2,
+      "phi_first_hits": [
+        [
+          17,
+          4,
+          5,
+          16
+        ],
+        [
+          17,
+          4,
+          16,
+          5
+        ]
+      ],
+      "omega_template": "(A*(B*C-B)-D)/(D^3*E*P)",
+      "omega_hit_count": 4,
+      "omega_first_hits": [
+        [
+          4,
+          17,
+          12,
+          5,
+          2,
+          16
+        ],
+        [
+          4,
+          17,
+          12,
+          5,
+          16,
+          2
+        ],
+        [
+          17,
+          4,
+          12,
+          5,
+          2,
+          16
+        ],
+        [
+          17,
+          4,
+          12,
+          5,
+          16,
+          2
+        ]
+      ]
+    },
+    "one_integer_perturbation": {
+      "phi": "3/20",
+      "omega": "699/4000"
+    },
+    "natural_transformation_or_variational_selection_found": false,
+    "source_claim_accepted": false,
+    "status": "Exact identities found but rejected as target-driven arithmetic encodings",
+    "scope": "Equality to the frozen rationals is not a derivation.  No theorem selects these expressions from the many available integer operations."
+  },
+  "program134_amplitude_projectivization": {
+    "map": "Pi_0(K)=K/K(0), for K(0) nonzero",
+    "properties": {
+      "amplitude_invariant": true,
+      "idempotent": true,
+      "alpha_geo_removed_from_legacy_shape": true
+    },
+    "distance_window": [
+      0,
+      64
+    ],
+    "projective_shape_relative_L2_mismatch": 3.7071402758212777,
+    "best_scalar_legacy_to_strict": 0.03269462569073623,
+    "best_scalar_only_relative_residual": 0.9338637515884346,
+    "strict_completion_achieved_by_projectivization": false,
+    "role_transfer_obstruction": "Any quantity depending on absolute legacy amplitude is erased by Pi_0 and therefore cannot be transported through this quotient alone.",
+    "status": "Proven projective-amplitude theorem plus finite shape falsification",
+    "scope": "Projectivization explains how alpha_geo may become gauge-like for shape, but it neither supplies damping completion nor preserves amplitude roles."
+  },
+  "program135_conditional_damping_bridge": {
+    "family": "D_w(d)=(1+beta_tors*d)/(1+d^(2-w_2))",
+    "conditional_trace": "w_2=1/5",
+    "conditional_exponent": "eta=9/5",
+    "exact_reconstruction_max_abs_residual": 0.0,
+    "dyadic_retention": 0.5743491774985174,
+    "information_expression": "2^(-4/5)=exp(-alpha_geo/5)",
+    "information_expression_residual": 1.1102230246251565e-16,
+    "tail_multiplicativity_selects_beta": 1,
+    "trace_selected_internally": false,
+    "phase_frequency_source_selected": false,
+    "full_bridge_completed": false,
+    "status": "Exact conditional bridge factor; source obligations remain open",
+    "scope": "Given the uniform sector state and the multiplicative-tail axiom, the strict damping exponent and beta=1 follow.  Program 125 proves that the state itself is not forced by present symmetry."
+  },
+  "program136_signed_operational_state_source": {
+    "operator": "fractional circulant A on C12 with eigenvalue |q|^(4/5)",
+    "signed_receiver": "Lambda(rho,A)=2 Im sum_i rho_(i,i+1) A_(i+1,i)",
+    "fourier_branch_currents": {
+      "0": 0.0,
+      "1": 0.49800401003098577,
+      "-1": -0.49800401003098577,
+      "2": 0.8625682477467083,
+      "-2": -0.8625682477467083
+    },
+    "paired_sign_test": {
+      "k1_plus_kminus1": 0.0,
+      "k2_plus_kminus2": 0.0
+    },
+    "thermal_state_current": 0.0,
+    "reflection_invariant_states_give_zero": true,
+    "nonzero_signed_state_requires_branch_preparation": true,
+    "strict_nonpremise_branch_preparation_found": false,
+    "QW_2191_discharged": false,
+    "status": "Constructed signed operational receiver; strict source no-go remains",
+    "scope": "The formula can read chirality after a state has been prepared. It does not choose k over -k and therefore does not break the selector torsor."
+  },
+  "program137_external_data_audit": {
+    "files_scanned": 5,
+    "rows": [
+      {
+        "file": "FIN_Programs_101_112_Process_Tensor_Preregistration.json",
+        "sha256": "3d2be86b463211a237b831f96b2f0105ec3437449d9bdc4e3cf1928e5867d513",
+        "external_data_admitted_true": false
+      },
+      {
+        "file": "FIN_Programs_113_124_External_Data_Intake.json",
+        "sha256": "9ccec3cd3d9f34914568f9105d5516137993504d14459b989bdd960488cb146b",
+        "external_data_admitted_true": false
+      },
+      {
+        "file": "FIN_Programs_71_80_External_Data_Preregistration.json",
+        "sha256": "8db4c1d24efa5d1f814fc119bbb1efcf96ac6ea0576bcb65bfaa6cee7b3ec07d",
+        "external_data_admitted_true": false
+      },
+      {
+        "file": "FIN_Programs_81_90_External_Data_Intake_Template.json",
+        "sha256": "edfa908e3ea363b0cce78612e86b4a8d7006c34be9ce0727b7c1ce8d50ef2b2e",
+        "external_data_admitted_true": false
+      },
+      {
+        "file": "FIN_Programs_91_100_External_Data_Intake_Template.json",
+        "sha256": "cb40dbbbd5770d0552a766739cafd8ac431e63f2bdfd1ad73fa2e64ad9f8be73",
+        "external_data_admitted_true": false
+      }
+    ],
+    "files_admitting_external_data": [],
+    "external_data_admitted_in_current_research_chain": false,
+    "current_round_uses_only_synthetic_or_repository_internal_data": true,
+    "status": "Reproducible local data-intake audit",
+    "scope": "The audit detects explicit Boolean admission markers in named local data/intake/preregistration JSON artifacts; it is not a forensic scan of every byte in the repository."
+  },
+  "global_verdict": {
+    "new_objects_constructed": [
+      "presentation-independent homological-character fibre localizer",
+      "continuous finite-frequency fractional enclosure",
+      "cutoff fractional-wave operational family",
+      "rank-three physical calibration map",
+      "finite-memory apparatus process-tomography estimator",
+      "exact projective crossover RG flow",
+      "amplitude projectivization quotient",
+      "trace-parameterized damping completion family",
+      "signed state-dependent current receiver"
+    ],
+    "strongest_positive_result": "The fibre formula is now a natural C12 carrier construction, and the fractional operational limit has a quantitative finite window.",
+    "strongest_negative_result": "Naturality does not select the uniform sector trace: invariant traces form a simplex and the normalized Hilbert trace yields eta=17/9.",
+    "closures_not_claimed": [
+      "canonical trace or eta=9/5 source",
+      "phase/frequency source",
+      "QW-2191 selector closure",
+      "internal physical units",
+      "full legacy-to-strict completion",
+      "legacy physical-role transfer",
+      "L_total or Theory-of-Everything closure",
+      "experimental validation"
+    ]
+  }
+}

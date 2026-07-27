@@ -1,0 +1,284 @@
+{
+  "release": "10.6",
+  "programs": "51-60",
+  "seed": "deterministic/no stochastic fitting",
+  "scope": "finite dimensionless Green/operator/information calculations; conditioned physics bridge only",
+  "source_files_audited": [
+    "Funkcja Greena w kontekście FIN qwen.md",
+    "geometria przestrzeni stanow.md"
+  ],
+  "programs_data": {
+    "program_51_resolvent_domain": {
+      "strict_row_sum": 1.6603072787660986,
+      "reported_s": 1.660307278766099,
+      "reported_s_minus_strict_row_sum": 4.440892098500626e-16,
+      "legacy_row_sum": -11.174051961650372,
+      "fixed_s_strict_min_eigenvalue": 1.184382453223165e-15,
+      "fixed_s_legacy_min_eigenvalue": -8.542700570007279,
+      "strict_laplacian_min_eigenvalue": 1.1926223897340549e-17,
+      "legacy_signed_laplacian_min_eigenvalue": -21.377059810423745,
+      "strict_spd_regularizer": 0.25,
+      "legacy_spd_regularizer": 21.627059810423745,
+      "static_green_inverse_residual_strict": 1.1054253496936697e-15,
+      "static_green_inverse_residual_legacy": 7.23204223702179e-15,
+      "theorem": "The resolvent (zI-A)^-1 exists exactly for z outside the spectrum. Positive definiteness is sufficient for G(0) only when zero is excluded; a graph Laplacian itself has a zero mode.",
+      "correction_to_source_text": "The beta Gram threshold does not imply positivity of an unrelated fixed-s generator, and the reported strict row sum must not be silently reused for canonical legacy."
+    },
+    "program_52_green_geometry": {
+      "audits": {
+        "strict_green_R_squared": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 4.440892098500626e-16,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 0.8631979018000151,
+          "triangle_violations": 0,
+          "maximum_triangle_excess": 0.0,
+          "is_metric": true
+        },
+        "strict_green_sqrt_R": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 2.220446049250313e-16,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 0.9290844427714927,
+          "triangle_violations": 0,
+          "maximum_triangle_excess": 0.0,
+          "is_metric": true
+        },
+        "arbitrary_SPD_R_counterexample": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 0.0,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 1.0099999999999998,
+          "triangle_violations": 2,
+          "maximum_triangle_excess": 1.98,
+          "is_metric": false
+        },
+        "strict_effective_resistance": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 2.220446049250313e-16,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 0.975084639637883,
+          "triangle_violations": 0,
+          "maximum_triangle_excess": 0.0,
+          "is_metric": true
+        },
+        "legacy_positive_part_effective_resistance": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 2.220446049250313e-16,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 0.5293061775025341,
+          "triangle_violations": 0,
+          "maximum_triangle_excess": 0.0,
+          "is_metric": true
+        },
+        "legacy_absolute_effective_resistance": {
+          "diagonal_max_abs": 0.0,
+          "symmetry_max_abs": 1.3877787807814457e-17,
+          "minimum_entry": 0.0,
+          "minimum_offdiagonal": 0.1061817042530088,
+          "triangle_violations": 0,
+          "maximum_triangle_excess": 0.0,
+          "is_metric": true
+        }
+      },
+      "counterexample_R_matrix": [
+        [
+          0.0,
+          1.02,
+          4.01
+        ],
+        [
+          1.02,
+          0.0,
+          1.0099999999999998
+        ],
+        [
+          4.01,
+          1.0099999999999998,
+          0.0
+        ]
+      ],
+      "corrected_theorem": "For arbitrary positive-definite A, sqrt(Gii+Gjj-2Re Gij) is a metric. The unsquared expression is not generally a metric. Effective resistance itself is a metric only with the additional connected graph-Laplacian structure."
+    },
+    "program_53_resolvent_dual_calculus": {
+      "contour_points": 1024,
+      "unitary_relative_error": 1.6488389953912725e-10,
+      "diffusive_relative_error": 2.740475100195091e-10,
+      "static_green_relative_error": 3.6491617137576056e-10,
+      "unitarity_residual": 9.657984296893234e-16,
+      "verdict": "The same resolvent reconstructs both semigroups by holomorphic functional calculus. Their operational outcome difference is not merely a difference of contours: it also depends on state, preparation, instrument, and record map."
+    },
+    "program_54_finite_resolvent_bridge": {
+      "C12_distinct_legacy_eigenvalues": 7,
+      "C12_degeneracy_obstruction_max_strict_spread": 1.1102230246251565e-16,
+      "C12_polynomial_degree": 6,
+      "C12_relative_functional_residual": 9.250215046376818e-14,
+      "C16_transfer_relative_residual_using_C12_map": 916.7951860621389,
+      "C12_polynomial_coefficients_in_power_basis": [
+        -0.47679869967054067,
+        0.25925904492438445,
+        0.05277956020059918,
+        0.040792035220201875,
+        0.016986417499059075,
+        -0.0005370024370153194,
+        -0.0001556639391661646
+      ],
+      "verdict": "A support-specific functional calculus map exists on C12 because the two radial circulants share Fourier eigenspaces and legacy degeneracies do not split strict eigenvalues. Transfer to C16 tests whether this is more than finite interpolation; failure is not a continuum bridge theorem."
+    },
+    "program_55_fractal_schur_compression": {
+      "compression_rule": "exact Schur complement after retaining even sites",
+      "scale_ratios_tested": [
+        2,
+        4
+      ],
+      "dimensionless_regularizer_24": 33.57618215499998,
+      "dimensionless_regularizer_48": 52.39046709259199,
+      "retained_green_identity_residual_24_to_12": 1.4445079311671027e-14,
+      "raw_legacy_to_strict_amplitude_fit": {
+        "amplitude": -0.016570165264722467,
+        "relative_error": 0.9914827411818301
+      },
+      "one_step_to_strict_amplitude_fit": {
+        "amplitude": -0.02050803520471519,
+        "relative_error": 0.9511700430224065
+      },
+      "two_step_to_strict_amplitude_fit": {
+        "amplitude": -0.016444144813548327,
+        "relative_error": 0.9467262476979241
+      },
+      "one_step_strict_phase_tail_fit": {
+        "c": 0.0002974056811567755,
+        "beta": 1869.4503209702673,
+        "eta": 8.948099432015269,
+        "relative_error": 1.0000000031767526
+      },
+      "two_step_strict_phase_tail_fit": {
+        "c": 6.108540089530467e-05,
+        "beta": 12634.914623912882,
+        "eta": 0.3688325378815724,
+        "relative_error": 1.0000000001259959
+      },
+      "verdict": "Schur compression is an exact information-preserving marginalization for retained Green responses. Whether it approaches strict is an empirical finite test; a fitted exponent is not a source theorem. The binary ratio supplies relative scale only, never an absolute length."
+    },
+    "program_56_spectral_dimension": {
+      "results": {
+        "strict_C12_raw": {
+          "cycle_size": 12,
+          "minimum_eigenvalue": 1.1926223897340549e-17,
+          "spectral_gap": 0.7541211542070796,
+          "reliability_cut": "nonzero-mode heat trace > 1e-8",
+          "time_at_dimension_closest_to_one": 0.29074972545060473,
+          "plateau_width_decades_within_1_plusminus_0p15": 0.12875536480686695
+        },
+        "strict_C48_positive_part": {
+          "cycle_size": 48,
+          "minimum_eigenvalue": 2.463307335887066e-16,
+          "spectral_gap": 0.0665750711150152,
+          "reliability_cut": "nonzero-mode heat trace > 1e-8",
+          "time_at_dimension_closest_to_one": 0.3273568697377697,
+          "plateau_width_decades_within_1_plusminus_0p15": 0.13733905579399153
+        },
+        "strict_C48_absolute": {
+          "cycle_size": 48,
+          "minimum_eigenvalue": 4.686463890568593e-17,
+          "spectral_gap": 0.2793421659566822,
+          "reliability_cut": "nonzero-mode heat trace > 1e-8",
+          "time_at_dimension_closest_to_one": 0.29074972545060473,
+          "plateau_width_decades_within_1_plusminus_0p15": 0.13733905579399153
+        },
+        "legacy_C48_positive_part": {
+          "cycle_size": 48,
+          "minimum_eigenvalue": 5.004761931487814e-14,
+          "spectral_gap": 12.587287614601841,
+          "reliability_cut": "nonzero-mode heat trace > 1e-8",
+          "time_at_dimension_closest_to_one": 0.013855777518571371,
+          "plateau_width_decades_within_1_plusminus_0p15": 0.12875536480686708
+        },
+        "legacy_C48_absolute": {
+          "cycle_size": 48,
+          "minimum_eigenvalue": -9.954159194703679e-14,
+          "spectral_gap": 63.125479737798585,
+          "reliability_cut": "nonzero-mode heat trace > 1e-8",
+          "time_at_dimension_closest_to_one": 0.006538086224568355,
+          "plateau_width_decades_within_1_plusminus_0p15": 0.12017167381974232
+        }
+      },
+      "verdict": "Finite heat traces define a scale-dependent spectral-dimension diagnostic, but no robust plateau by itself exports spacetime dimension. Beyond the positive C12 strict support, both strict and legacy extrapolations depend on a declared positivity repair."
+    },
+    "program_57_information_action_compression": {
+      "legacy_regularizer": 33.57618215499998,
+      "strict_regularizer": 0.24999999999999964,
+      "KL_legacy_to_strict_full": 23.636240870573282,
+      "KL_legacy_to_strict_retained_even_states": 11.601574273869442,
+      "data_processing_margin": 12.03466659670384,
+      "legacy_marginal_precision_identity_residual": 2.5607288647843597e-13,
+      "strict_marginal_precision_identity_residual": 8.946352811619629e-16,
+      "verdict": "Green-Schur compression is a Gaussian information marginal. It reduces model distinguishability as required by data processing. The resulting log-determinant/KL actions are dimensionless and coordinate/regularizer conditioned, not physical action or entropy."
+    },
+    "program_58_chiral_green_compression": {
+      "legacy_regularizer": 33.726182154999975,
+      "full_odd_carrier_residual": 0.0,
+      "full_branch_covariance_residual": 1.4210854715202004e-14,
+      "compressed_branch_covariance_residual": 1.141767817888375e-14,
+      "compressed_linear_response_odd_residual": 3.6255313245971704e-16,
+      "compressed_chiral_response_fro_norm": 1.9350168828664451,
+      "plus_minus_isospectral_residual_after_compression": 0.0,
+      "verdict": "Exact Green-Schur compression transports the inversion-odd receiver and mirror-paired branches. It does not generate the directed chart or choose the sign of lambda; QW-2191 remains open."
+    },
+    "program_59_operational_records": {
+      "dimensionless_time": 1.0,
+      "wave_probability_sum": 0.9999999999999999,
+      "diffusion_probability_sum": 0.9999999999999998,
+      "heat_minimum_entry": 0.025668428704485102,
+      "coherent_vs_incoherent_L1": 0.1826689752743566,
+      "wave_vs_diffusion_JSD_fine": 0.04286925875451401,
+      "wave_vs_diffusion_JSD_after_pair_coarse_graining": 0.0352857886398658,
+      "data_processing_margin": 0.0075834701146482095,
+      "verdict": "Preparation plus dynamical calculus plus instrument coarse-graining produces distinct records without invoking observer consciousness. The kernel does not itself choose the preparation, clock, Born instrument, environment, apparatus, or physical calibration."
+    },
+    "program_60_physical_scale_obstruction": {
+      "dimensionless_strict_gap": 0.7541211542070796,
+      "conversion_examples": [
+        {
+          "name": "gauge_A",
+          "ell_star": 1.0,
+          "tau_star": 1.0,
+          "hbar_star": 1.0,
+          "derived_speed_unit": 1.0,
+          "derived_energy_gap": 0.7541211542070796,
+          "physical_length_of_one_binary_compression_cell": 2.0
+        },
+        {
+          "name": "gauge_B",
+          "ell_star": 1e-06,
+          "tau_star": 100.0,
+          "hbar_star": 0.001,
+          "derived_speed_unit": 1e-08,
+          "derived_energy_gap": 7.5412115420707955e-06,
+          "physical_length_of_one_binary_compression_cell": 2e-06
+        },
+        {
+          "name": "gauge_C",
+          "ell_star": 1000000000.0,
+          "tau_star": 0.0001,
+          "hbar_star": 100000.0,
+          "derived_speed_unit": 10000000000000.0,
+          "derived_energy_gap": 754121154.2070795,
+          "physical_length_of_one_binary_compression_cell": 2000000000.0
+        }
+      ],
+      "minimal_independent_conversion_rank": 3,
+      "fractal_compression_exports": "relative scale ratio 2^k and dimensionless flow",
+      "fractal_compression_does_not_export": "ell_star, tau_star, hbar_star, SI calibration",
+      "minimal_conditioned_bridge": {
+        "W0": "informational nadsoliton, canonical kernels, Green/Schur relations",
+        "CA": "ell_star, tau_star, hbar_star or an equivalent calibrated unit basis",
+        "OA": "state, preparation, clock, dynamics, instrument, environment, apparatus, record",
+        "SA_when_orientation_is_measured": "origin/polarity representative and signed coupling law",
+        "W3": "experimentally testable predictions conditioned on CA+OA(+SA)"
+      },
+      "theorem": "Dimensionless kernel, Green, entropy, and fractal scale-ratio data are invariant under arbitrary changes of the conversion triple. Consequently they cannot determine dimensional experimental values without at least one calibrated scale source and an operational map."
+    }
+  },
+  "global_verdict": "Green resolvents and exact Schur complements unify finite response, geometry, marginalization, dual dynamics, and chiral receiver transport. Fractal compression generates relative scale flow but neither strict eta=1.8, an absolute unit, nor a selector. The shortest honest physics bridge is W0 + conversion axioms + operational map, with a sector axiom only for orientation-sensitive records."
+}

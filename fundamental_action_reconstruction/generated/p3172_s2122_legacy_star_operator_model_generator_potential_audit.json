@@ -1,0 +1,848 @@
+{
+  "packet": "P3172",
+  "slot": "S2122",
+  "status": "P3172_LEGACY_STAR_OPERATOR_MODEL_GENERATOR_POTENTIAL_AUDIT",
+  "date": "2026-07-20",
+  "scope": {
+    "kernel": "K*(d)=A*cos(pi*d/4+pi/6)/(1+beta*d)",
+    "A_gt_0": true,
+    "beta_gt_0": true,
+    "no_strict_bridge": true,
+    "no_parameter_fitting_to_strict": true,
+    "no_role_transfer": true,
+    "treat_as_research_program": true,
+    "working_facts": [
+      "same_kernel_generates_U=exp(-itL)_and_T=exp(-tL)",
+      "no_observer_paradox_operational_choice",
+      "Legacy_star_is_autonomous_mathematical_object"
+    ]
+  },
+  "constructed_theoretical_objects": {
+    "LegacyStarKernel": {
+      "omega": "pi/4",
+      "phi": "pi/6",
+      "damping": "1+beta*d"
+    },
+    "operator_class_matrix": [
+      {
+        "class": "Hermitian",
+        "verdict": "WARUNKOWO",
+        "reason": "Undirected radial circulant W[K*] is real-symmetric for all tested beta (herm_ok=True). Directed residual is non-Hermitian (dir_herm=False).",
+        "missing_axiom_or_structure": "choice of undirected geometry / hermitization map",
+        "fundamental_block": false
+      },
+      {
+        "class": "Gram",
+        "verdict": "WARUNKOWO",
+        "reason": "W is a Gram/covariance operator iff PSD. Finite scan: psd_any=True, psd_all=False. Requires beta >= beta_* on Z12 undirected.",
+        "missing_axiom_or_structure": "PSD condition / beta lower bound",
+        "fundamental_block": false
+      },
+      {
+        "class": "graph_Laplacian",
+        "verdict": "TAK",
+        "reason": "L=Deg-W+ with W+=max(K*,0) off-diagonal is always PSD on finite samples (lap_psd=True), L1=0.",
+        "missing_axiom_or_structure": "",
+        "fundamental_block": null
+      },
+      {
+        "class": "Markov_generator",
+        "verdict": "WARUNKOWO",
+        "reason": "Q=W+-Deg has off-diag>=0 and row-sum 0 when W+ used (markov_ok=True). Raw signed K* does not give a Markov Q without positive-part projection.",
+        "missing_axiom_or_structure": "positive-part projection or signed-kernel Markov theory",
+        "fundamental_block": false
+      },
+      {
+        "class": "Schrodinger",
+        "verdict": "WARUNKOWO",
+        "reason": "H=Aop=sI-W or H=L yields U(t)=exp(-itH) unitary when H=H* (unitarity residual 2.84e-15). Does not export Born rule, measurement, or Hilbert-space ontology by itself.",
+        "missing_axiom_or_structure": "Hilbert space identification + observable algebra + units of t",
+        "fundamental_block": false
+      },
+      {
+        "class": "Dirac",
+        "verdict": "NIE",
+        "reason": "No Clifford bundle, spinor structure, or first-order square-root of Laplacian exported by scalar radial K*.",
+        "missing_axiom_or_structure": "Clifford algebra / spin structure / chirality source",
+        "fundamental_block": true
+      },
+      {
+        "class": "Maxwell",
+        "verdict": "NIE",
+        "reason": "No 2-form F, dF=0, d*F=J, gauge connection, or U(1) connection form from radial scalar kernel alone.",
+        "missing_axiom_or_structure": "principal U(1) bundle + connection + metric/volume form",
+        "fundamental_block": true
+      },
+      {
+        "class": "Yang_Mills",
+        "verdict": "NIE",
+        "reason": "No nonabelian principal bundle, curvature F=dA+A∧A, or YM action from radial K*.",
+        "missing_axiom_or_structure": "G-bundle + connection + structure group + coupling",
+        "fundamental_block": true
+      },
+      {
+        "class": "Lindblad",
+        "verdict": "WARUNKOWO",
+        "reason": "Given H from K* one can write Lindblad form, but Kraus/Lindblad channels V_k are not unique or sourced by radial K*.",
+        "missing_axiom_or_structure": "environment/channel operators V_k + complete positivity structure",
+        "fundamental_block": false
+      },
+      {
+        "class": "Fokker_Planck",
+        "verdict": "WARUNKOWO",
+        "reason": "Finite Markov chain from Q is discrete FP analogue; continuum FP needs continuum limit functor + drift/diffusion coefficients.",
+        "missing_axiom_or_structure": "continuum embedding + scale units + drift field",
+        "fundamental_block": false
+      },
+      {
+        "class": "Perron_Frobenius",
+        "verdict": "WARUNKOWO",
+        "reason": "Positive-part transfer / adjacency-like W+ is nonnegative; PF eigenvector exists for irreducible W+. Signed K* is not a PF operator.",
+        "missing_axiom_or_structure": "nonnegativity / irreducibility",
+        "fundamental_block": false
+      },
+      {
+        "class": "Koopman",
+        "verdict": "WARUNKOWO",
+        "reason": "U(t)=exp(-itL) is a Koopman-type unitary evolution on l2(V) when L self-adjoint; underlying classical flow on phase space is not reconstructed from K* alone.",
+        "missing_axiom_or_structure": "underlying measure-preserving dynamical system",
+        "fundamental_block": false
+      },
+      {
+        "class": "transport",
+        "verdict": "WARUNKOWO",
+        "reason": "Directed residual gives a transport-like circulant; undirected does not encode oriented flow.",
+        "missing_axiom_or_structure": "orientation/source of directed edges",
+        "fundamental_block": false
+      },
+      {
+        "class": "diffusion",
+        "verdict": "TAK",
+        "reason": "T(t)=exp(-t L) with L=graph Laplacian of W+ is a diffusion semigroup on Z12 (rho_T=1.000000, spectral calculus residual 2.51e-15).",
+        "missing_axiom_or_structure": "",
+        "fundamental_block": null
+      },
+      {
+        "class": "wave",
+        "verdict": "WARUNKOWO",
+        "reason": "Second-order wave equation d2u/dt2 = -L u requires phase-space lift (u, du/dt); not exported by first-order semigroup alone without importing time-structure.",
+        "missing_axiom_or_structure": "phase-space / symplectic / second-order time structure",
+        "fundamental_block": false
+      },
+      {
+        "class": "integral",
+        "verdict": "TAK",
+        "reason": "W[K*] is by definition a finite integral / matrix operator with kernel K*(d(i,j)).",
+        "missing_axiom_or_structure": "",
+        "fundamental_block": null
+      },
+      {
+        "class": "pseudodifferential",
+        "verdict": "WARUNKOWO",
+        "reason": "On Z12, circulant W is a Fourier multiplier (exact ΨDO of order 0 on the circle). On R^n continuum, symbol class requires continuum limit not exported here.",
+        "missing_axiom_or_structure": "continuum manifold + symbol calculus",
+        "fundamental_block": false
+      },
+      {
+        "class": "spectral",
+        "verdict": "TAK",
+        "reason": "Finite spectral theorem applies: Hermitian W/L diagonalized by discrete Fourier modes on cycle; functional calculus yields U(t), T(t).",
+        "missing_axiom_or_structure": "",
+        "fundamental_block": null
+      }
+    ],
+    "dual_dynamics_structure": {
+      "common_generator": true,
+      "common_algebra": "C*(L) commutative spectral algebra on finite space (or von Neumann algebra generated by L)",
+      "universal_generator": "L (or any affine sI-W with same spectral projections)",
+      "deeper_structure": "Borel functional calculus: all dynamics are maps lambda |-> f(lambda) on spectrum of L. U and T are two points in the same function space. Operational model selects f.",
+      "classification_of_dynamics": "All strongly continuous groups/semigroups of the form f(L) for Borel f on spec(L). Unitary groups: f(lambda)=exp(-i t g(lambda)) with g real on spectrum. Contraction semigroups: Re f <= 0 appropriately. Markov: requires positivity-preserving f and probability conservation.",
+      "finite_witness": {
+        "beta": 1.0,
+        "t": 0.25,
+        "s_shift": 0.0,
+        "lambda_min_L": 1.1484846573188874e-16,
+        "lambda_max_L": 0.6258200560016777,
+        "unitarity_residual_fro": 2.83508429718295e-15,
+        "T_spectral_radius": 1.0000000000000002,
+        "T_min_entry": 5.291517028351779e-06,
+        "U_spectral_calculus_residual": 2.9821051872313167e-15,
+        "T_spectral_calculus_residual": 2.513526332471012e-15,
+        "common_generator": true,
+        "shared_spectral_measure": true
+      },
+      "observer_paradox": "No mathematical paradox: same spectral measure, two Borel functions. Choice is operational, not ontological consciousness. This is a modeling postulate, not a theorem about observers."
+    },
+    "functor_analysis": {
+      "pipeline": [
+        "LegacyStarKernel",
+        "Operator",
+        "SemigroupOrGroup",
+        "PhysicalModel"
+      ],
+      "is_functor_strictly": "WARUNKOWO",
+      "functor_statement": "After fixing a support category C_supp (e.g. finite metric spaces or cycles) and a realization functor R: kernels -> operators (W, L, or Q), and a functional calculus F_f: Op -> dynamics, the composition F_f o R is a functor on that fixed category. Without fixed support/realization, Legacy* alone is a generator of candidates, not a unique functor.",
+      "operator_category_definable": true,
+      "operator_category_objects": [
+        "W_signed_circulant",
+        "W_PSD_Gram",
+        "L_graph_Laplacian",
+        "Q_Markov",
+        "H_Schrodinger",
+        "T_diffusion_semigroup",
+        "U_unitary_group"
+      ],
+      "universality_class": "radial_circulant_Fourier_multipliers_with_8_periodic_modulation_and_linear_damping",
+      "images_classifiable": "partially — within finite cycle supports and fixed realization maps; not all of B(H)",
+      "not_a_physical_ToE_functor": true
+    },
+    "inverse_recovery": {
+      "max_abs_recovery_error": 0.0,
+      "injective_on_radial_A": true,
+      "injective_on_radial_beta": true,
+      "surjective_onto_all_hermitian": false,
+      "partially_invertible_on_radial_circulant_class": true,
+      "recovered_profile_d0_to_6": [
+        0.8660254037844387,
+        0.12940952255126048,
+        -0.1666666666666666,
+        -0.24148145657226705,
+        -0.17320508075688776,
+        -0.043136507517086774,
+        0.07142857142857144
+      ],
+      "exact_profile_d0_to_6": [
+        0.8660254037844387,
+        0.12940952255126048,
+        -0.1666666666666666,
+        -0.24148145657226705,
+        -0.17320508075688776,
+        -0.043136507517086774,
+        0.07142857142857144
+      ]
+    },
+    "spectrum_table_undirected_Z12": [
+      {
+        "beta": 0.01,
+        "W_lambda_min": -3.16416193414271,
+        "W_lambda_max": 4.5459826101785685,
+        "W_n_negative": 5,
+        "W_psd": false,
+        "L_lambda2": 0.25625648029952514,
+        "L_lambda_max": 1.8997584306616977
+      },
+      {
+        "beta": 0.1,
+        "W_lambda_min": -2.2525387886969,
+        "W_lambda_max": 3.7625653882692047,
+        "W_n_negative": 1,
+        "W_psd": false,
+        "L_lambda2": 0.2352900410022913,
+        "L_lambda_max": 1.5031143875355173
+      },
+      {
+        "beta": 0.5,
+        "W_lambda_min": -0.6618700635011878,
+        "W_lambda_max": 2.4010389308781344,
+        "W_n_negative": 1,
+        "W_psd": false,
+        "L_lambda2": 0.17254603006834726,
+        "L_lambda_max": 0.8939505508593796
+      },
+      {
+        "beta": 1.0,
+        "W_lambda_min": -0.052706402710285094,
+        "W_lambda_max": 1.8465616508152733,
+        "W_n_negative": 1,
+        "W_psd": false,
+        "L_lambda2": 0.12940952255126037,
+        "L_lambda_max": 0.6258200560016777
+      },
+      {
+        "beta": 1.07515,
+        "W_lambda_min": -5.139697283341388e-07,
+        "W_lambda_max": 1.7965520205868093,
+        "W_n_negative": 1,
+        "W_psd": false,
+        "L_lambda2": 0.12472305380455434,
+        "L_lambda_max": 0.5996847480660986
+      },
+      {
+        "beta": 2.0,
+        "W_lambda_min": 0.36154606687282914,
+        "W_lambda_max": 1.4394348055560227,
+        "W_n_negative": 0,
+        "W_psd": true,
+        "L_lambda2": 0.08627301503417362,
+        "L_lambda_max": 0.39889835235276677
+      },
+      {
+        "beta": 5.0,
+        "W_lambda_min": 0.6543898646816422,
+        "W_lambda_max": 1.1227709435845965,
+        "W_n_negative": 0,
+        "W_psd": true,
+        "L_lambda2": 0.04313650751708682,
+        "L_lambda_max": 0.1932457022309739
+      }
+    ],
+    "phase_table": [
+      {
+        "d": 0,
+        "theta_over_pi": 0.16666666666666666,
+        "cos": 0.8660254037844387,
+        "period8_repeat": false
+      },
+      {
+        "d": 1,
+        "theta_over_pi": 0.41666666666666663,
+        "cos": 0.25881904510252096,
+        "period8_repeat": false
+      },
+      {
+        "d": 2,
+        "theta_over_pi": 0.6666666666666666,
+        "cos": -0.4999999999999998,
+        "period8_repeat": false
+      },
+      {
+        "d": 3,
+        "theta_over_pi": 0.9166666666666666,
+        "cos": -0.9659258262890682,
+        "period8_repeat": false
+      },
+      {
+        "d": 4,
+        "theta_over_pi": 1.1666666666666665,
+        "cos": -0.8660254037844388,
+        "period8_repeat": false
+      },
+      {
+        "d": 5,
+        "theta_over_pi": 1.4166666666666667,
+        "cos": -0.25881904510252063,
+        "period8_repeat": false
+      },
+      {
+        "d": 6,
+        "theta_over_pi": 1.6666666666666667,
+        "cos": 0.5000000000000001,
+        "period8_repeat": false
+      },
+      {
+        "d": 7,
+        "theta_over_pi": 1.9166666666666667,
+        "cos": 0.9659258262890683,
+        "period8_repeat": false
+      },
+      {
+        "d": 8,
+        "theta_over_pi": 2.166666666666667,
+        "cos": 0.8660254037844386,
+        "period8_repeat": true
+      },
+      {
+        "d": 9,
+        "theta_over_pi": 2.416666666666667,
+        "cos": 0.25881904510252074,
+        "period8_repeat": true
+      },
+      {
+        "d": 10,
+        "theta_over_pi": 2.6666666666666665,
+        "cos": -0.4999999999999992,
+        "period8_repeat": true
+      },
+      {
+        "d": 11,
+        "theta_over_pi": 2.916666666666666,
+        "cos": -0.9659258262890678,
+        "period8_repeat": true
+      },
+      {
+        "d": 12,
+        "theta_over_pi": 3.1666666666666665,
+        "cos": -0.8660254037844392,
+        "period8_repeat": true
+      },
+      {
+        "d": 13,
+        "theta_over_pi": 3.416666666666667,
+        "cos": -0.2588190451025209,
+        "period8_repeat": true
+      },
+      {
+        "d": 14,
+        "theta_over_pi": 3.6666666666666665,
+        "cos": 0.4999999999999991,
+        "period8_repeat": true
+      },
+      {
+        "d": 15,
+        "theta_over_pi": 3.916666666666666,
+        "cos": 0.9659258262890678,
+        "period8_repeat": true
+      }
+    ],
+    "triangle_violations_dI": {
+      "beta_0.01": {
+        "n_triples": 1320,
+        "n_violations": 216,
+        "max_excess": 1.1531275094735332,
+        "triangle_inequality_holds": false,
+        "diagonal_zero": false,
+        "nonnegative": true,
+        "symmetric": true,
+        "separates_points": true,
+        "is_metric": false,
+        "metric_correction": "The raw dI=-log|K| is not a metric because dI(x,x) is nonzero for K*(0)=A*cos(pi/6). Triangle-inequality success alone is insufficient."
+      },
+      "beta_1.0": {
+        "n_triples": 1320,
+        "n_violations": 0,
+        "max_excess": 0.0,
+        "triangle_inequality_holds": true,
+        "diagonal_zero": false,
+        "nonnegative": true,
+        "symmetric": true,
+        "separates_points": true,
+        "is_metric": false,
+        "metric_correction": "The raw dI=-log|K| is not a metric because dI(x,x) is nonzero for K*(0)=A*cos(pi/6). Triangle-inequality success alone is insufficient."
+      },
+      "beta_2.0": {
+        "n_triples": 1320,
+        "n_violations": 0,
+        "max_excess": 0.0,
+        "triangle_inequality_holds": true,
+        "diagonal_zero": false,
+        "nonnegative": true,
+        "symmetric": true,
+        "separates_points": true,
+        "is_metric": false,
+        "metric_correction": "The raw dI=-log|K| is not a metric because dI(x,x) is nonzero for K*(0)=A*cos(pi/6). Triangle-inequality success alone is insufficient."
+      }
+    },
+    "beta_psd_threshold": {
+      "beta_star_approx": 1.075150776229914,
+      "root_residual": 6.657989558835331e-16,
+      "bracket": [
+        1.0696202531645569,
+        1.0886075949367089
+      ],
+      "scan_rows": [
+        {
+          "beta": 0.5,
+          "lambda_min": -0.6618700635011878,
+          "psd": false
+        },
+        {
+          "beta": 0.6518987341772152,
+          "lambda_min": -0.4081179262726553,
+          "psd": false
+        },
+        {
+          "beta": 0.8037974683544304,
+          "lambda_min": -0.22496597179646693,
+          "psd": false
+        },
+        {
+          "beta": 0.9556962025316456,
+          "lambda_min": -0.08680421879968092,
+          "psd": false
+        },
+        {
+          "beta": 1.1075949367088609,
+          "lambda_min": 0.020975579970124114,
+          "psd": true
+        },
+        {
+          "beta": 1.259493670886076,
+          "lambda_min": 0.10730439060839655,
+          "psd": true
+        },
+        {
+          "beta": 1.4113924050632911,
+          "lambda_min": 0.17794322738568147,
+          "psd": true
+        },
+        {
+          "beta": 1.5632911392405064,
+          "lambda_min": 0.23677102316557397,
+          "psd": true
+        },
+        {
+          "beta": 1.7151898734177216,
+          "lambda_min": 0.2864927539260724,
+          "psd": true
+        },
+        {
+          "beta": 1.8670886075949367,
+          "lambda_min": 0.32905080376253515,
+          "psd": true
+        }
+      ]
+    },
+    "physics_readiness": [
+      {
+        "theory": "classical_mechanics",
+        "from_legacy_star_alone": "radial potential-like profile / signed kernel; no phase space",
+        "from_operator_duality": "formal Hamiltonian H=L only after importing (q,p) structure",
+        "minimal_new_axioms": [
+          "phase space",
+          "symplectic form",
+          "time unit"
+        ],
+        "export_level": "scaffold"
+      },
+      {
+        "theory": "quantum_mechanics",
+        "from_legacy_star_alone": "self-adjoint H on l2(Z12) when hermitized; unitary group",
+        "from_operator_duality": "U(t)=exp(-itH) is QM-like evolution of pure states",
+        "minimal_new_axioms": [
+          "Born rule",
+          "observable algebra",
+          "measurement/readout",
+          "hbar unit"
+        ],
+        "export_level": "partial_formal"
+      },
+      {
+        "theory": "Markov_processes",
+        "from_legacy_star_alone": "Q from W+ is continuous-time Markov generator on finite state space",
+        "from_operator_duality": "T(t)=exp(tQ) is the Markov semigroup",
+        "minimal_new_axioms": [
+          "interpretation of states as probabilities",
+          "embedding into continuous space optional"
+        ],
+        "export_level": "strong_finite"
+      },
+      {
+        "theory": "thermodynamics",
+        "from_legacy_star_alone": "none unit-bearing; Dirichlet energy is dimensionless Lyapunov candidate",
+        "from_operator_duality": "diffusion semigroup gives entropy-increase candidates on finite graphs",
+        "minimal_new_axioms": [
+          "temperature/energy unit",
+          "bath/preparation",
+          "equilibrium measure source"
+        ],
+        "export_level": "formal_only"
+      },
+      {
+        "theory": "information_theory",
+        "from_legacy_star_alone": "kernel amplitudes as correlations; dI=-log|K| is not a metric",
+        "from_operator_duality": "Markov channel mutual information computable on finite states",
+        "minimal_new_axioms": [
+          "canonical probability source",
+          "coding theorem link optional"
+        ],
+        "export_level": "partial"
+      },
+      {
+        "theory": "field_theory",
+        "from_legacy_star_alone": "none as continuum QFT",
+        "from_operator_duality": "formal free-field Laplacian on graph only",
+        "minimal_new_axioms": [
+          "spacetime continuum",
+          "fields",
+          "action density",
+          "renormalization"
+        ],
+        "export_level": "absent"
+      },
+      {
+        "theory": "electrodynamics",
+        "from_legacy_star_alone": "none",
+        "from_operator_duality": "none without U(1) connection",
+        "minimal_new_axioms": [
+          "U(1) bundle",
+          "metric",
+          "charge current"
+        ],
+        "export_level": "absent"
+      },
+      {
+        "theory": "Standard_Model",
+        "from_legacy_star_alone": "none",
+        "from_operator_duality": "none",
+        "minimal_new_axioms": [
+          "gauge group",
+          "representations",
+          "Yukawa",
+          "Higgs sector",
+          "units"
+        ],
+        "export_level": "absent"
+      },
+      {
+        "theory": "general_relativity",
+        "from_legacy_star_alone": "none",
+        "from_operator_duality": "graph metric candidates not Lorentzian",
+        "minimal_new_axioms": [
+          "Lorentzian 4-metric",
+          "Einstein-Hilbert action",
+          "stress-energy"
+        ],
+        "export_level": "absent"
+      },
+      {
+        "theory": "quantum_gravity",
+        "from_legacy_star_alone": "none",
+        "from_operator_duality": "none",
+        "minimal_new_axioms": [
+          "all of QFT + GR + Planck-scale completion"
+        ],
+        "export_level": "absent"
+      }
+    ],
+    "no_go_ledger": [
+      {
+        "claim": "unique_Dirac_operator_from_K_star",
+        "status": "NO_GO",
+        "formal_reason": "scalar radial kernel has no Clifford generators or spinor module",
+        "missing_axiom": "Clifford/spin structure",
+        "missing_structure": "spinor bundle",
+        "fundamental_or_technical": "fundamental"
+      },
+      {
+        "claim": "unique_Maxwell_or_YM_from_K_star",
+        "status": "NO_GO",
+        "formal_reason": "no principal connection or curvature form",
+        "missing_axiom": "gauge principle + structure group",
+        "missing_structure": "principal G-bundle",
+        "fundamental_or_technical": "fundamental"
+      },
+      {
+        "claim": "dI_is_metric_for_all_beta",
+        "status": "NO_GO",
+        "formal_reason": "raw dI=-log|K*| has dI(x,x)=-log|A cos(pi/6)|, generally nonzero; triangle inequality also fails on Z12 for small beta (e.g. 0.01: 216/1320 violations).",
+        "missing_axiom": "a declared diagonal normalization and a separate proof of nonnegativity, point separation, and triangle inequality",
+        "missing_structure": "beta-regime geometry split / spectral distance alternative",
+        "fundamental_or_technical": "fundamental_for_small_beta_regime"
+      },
+      {
+        "claim": "unique_Lindblad_channels",
+        "status": "NO_GO",
+        "formal_reason": "radial K* does not select Kraus operators",
+        "missing_axiom": "environment/coupling operators",
+        "missing_structure": "system-bath factorization",
+        "fundamental_or_technical": "fundamental"
+      },
+      {
+        "claim": "continuum_field_theory",
+        "status": "NO_GO_without_import",
+        "formal_reason": "finite Z12 graph does not determine continuum limit functor",
+        "missing_axiom": "continuum embedding + scale",
+        "missing_structure": "manifold + measure",
+        "fundamental_or_technical": "technical_if_embedding_supplied; fundamental_as_export"
+      },
+      {
+        "claim": "physical_units_from_K_star",
+        "status": "NO_GO",
+        "formal_reason": "K* is dimensionless amplitude profile; free (A,beta) scale orbit",
+        "missing_axiom": "unit-bearing source Omega_scale / S_+",
+        "missing_structure": "dimension triad (action,length,time)",
+        "fundamental_or_technical": "fundamental_on_current_artifacts"
+      },
+      {
+        "claim": "selector_orientation_from_undirected_K_star",
+        "status": "NO_GO",
+        "formal_reason": "undirected radial kernel is inversion-even; Aut(Z12) contains orientation-reversing units",
+        "missing_axiom": "inversion-odd source with polarity law",
+        "missing_structure": "orientation torsor section",
+        "fundamental_or_technical": "fundamental_for_undirected_radial_class"
+      },
+      {
+        "claim": "SM_or_GR_or_ToE_from_Legacy_star_alone",
+        "status": "NO_GO",
+        "formal_reason": "operator/model generator exports finite spectral/Markov/Schrödinger scaffolds only",
+        "missing_axiom": "large stack of field/geometry/unit/selector axioms",
+        "missing_structure": "full physical theory package",
+        "fundamental_or_technical": "fundamental"
+      },
+      {
+        "claim": "unique_inverse_from_arbitrary_operator",
+        "status": "NO_GO",
+        "formal_reason": "map K* -> Op is many-to-one outside radial circulant class; not surjective onto B(H)",
+        "missing_axiom": "restriction to radial circulant undirected class",
+        "missing_structure": "canonical geometry of support",
+        "fundamental_or_technical": "fundamental_for_global_inverse; technical_within_class"
+      },
+      {
+        "claim": "observer_paradox_resolution_as_theorem",
+        "status": "AXIOM_LEVEL",
+        "formal_reason": "common generator implies both semigroups exist; operational choice is modeling postulate, not derived consciousness theorem",
+        "missing_axiom": "operational model map instrument -> Borel function on spectrum",
+        "missing_structure": "instrument algebra / POVM",
+        "fundamental_or_technical": "foundational_modeling_choice"
+      }
+    ],
+    "research_program_branches": [
+      {
+        "branch": "new_operator_class",
+        "exists": true,
+        "name": "LegacyStarRadialCirculantFamily",
+        "note": "signed damped 8-periodic radial multipliers on cycles"
+      },
+      {
+        "branch": "new_graph_class",
+        "exists": true,
+        "name": "PhaseModulatedWeightedCycles",
+        "note": "undirected/directed variants with beta-PSD transition"
+      },
+      {
+        "branch": "new_kernel_class",
+        "exists": true,
+        "name": "LegacyStarKernel",
+        "note": "A cos(pi d/4+pi/6)/(1+beta d)"
+      },
+      {
+        "branch": "new_semigroup_class",
+        "exists": "conditional",
+        "name": "DualBorelSemigroupsOfLegacyStar",
+        "note": "all f(L) for Borel f; U and T special cases"
+      },
+      {
+        "branch": "new_geometry_class",
+        "exists": "conditional",
+        "name": "SignedKernelGeometry",
+        "note": "not dI-metric; spectral/information geometries candidates"
+      },
+      {
+        "branch": "new_inverse_problems",
+        "exists": true,
+        "name": "RadialKernelFromOperatorInverse",
+        "note": "partial invertibility on radial circulants"
+      },
+      {
+        "branch": "new_spectral_theory",
+        "exists": "conditional",
+        "name": "IndefiniteToPSDTransitionSpectra",
+        "note": "beta_* critical spectrum for Gram regime"
+      }
+    ],
+    "potential_scores": [
+      {
+        "domain": "operator_theory",
+        "score": 8,
+        "rationale": "rich finite spectral/circulant family with dual functional calculus"
+      },
+      {
+        "domain": "functional_analysis",
+        "score": 7,
+        "rationale": "semigroup/group generators, PSD threshold, Gram indefinite regime"
+      },
+      {
+        "domain": "spectral_geometry",
+        "score": 6,
+        "rationale": "graph spectral geometry real; continuum spectral geometry not exported"
+      },
+      {
+        "domain": "graph_theory",
+        "score": 7,
+        "rationale": "weighted cycle family, Laplacian, PF, cut metrics partial"
+      },
+      {
+        "domain": "mathematical_physics",
+        "score": 6,
+        "rationale": "clean dual dynamics generator; limited continuum physics"
+      },
+      {
+        "domain": "QM_foundations",
+        "score": 5,
+        "rationale": "unitary group yes; Born/measurement/no-go remains"
+      },
+      {
+        "domain": "information_theory",
+        "score": 5,
+        "rationale": "kernel as correlation; dI not metric; Markov channel info partial"
+      },
+      {
+        "domain": "unification_program",
+        "score": 2,
+        "rationale": "as standalone object: scaffold only; SM/GR/QG absent without large axiom stack"
+      }
+    ]
+  },
+  "finite_certificate": {
+    "n_operator_classes": 18,
+    "n_TAK": 4,
+    "n_NIE": 3,
+    "n_WARUNKOWO": 11,
+    "beta_star_approx": 1.075150776229914,
+    "dual_unitarity_residual": 2.83508429718295e-15,
+    "dual_T_spectral_radius": 1.0000000000000002,
+    "inverse_max_abs_error": 0.0,
+    "partial_invertibility_radial": true,
+    "dI_is_metric_beta_0_01": false,
+    "dI_violations_beta_0_01": 216,
+    "dI_is_metric_beta1": false,
+    "dI_violations_beta1": 0,
+    "dI_triangle_holds_beta1": true,
+    "n_no_go": 10,
+    "mean_potential_score": 5.75,
+    "unification_score": 2,
+    "operator_theory_score": 8
+  },
+  "tiered_claims": {
+    "proved_theorems_scoped": [
+      "Undirected W[K*] on Z12 is real symmetric for all A>0, beta>0.",
+      "Functional calculus: U(t)=exp(-itL) and T(t)=exp(-tL) share spectral measure of self-adjoint L.",
+      "L=Deg-W+ is PSD with L1=0 for W+=max(K*,0) off-diagonal.",
+      "Raw dI=-log|K*| is not a metric because its diagonal is generally nonzero; its triangle inequality additionally fails at small beta (e.g. 0.01: 216 violations).",
+      "Radial profile recoverable from undirected circulant first row (partial inverse on class).",
+      "Phase cos(pi d/4+pi/6) has period 8 in d."
+    ],
+    "results_from_analysis": [
+      "Operator-class matrix: majority WARUNKOWO; Dirac/Maxwell/YM are NIE.",
+      "Legacy* is a strong finite generator of spectral/Markov/diffusion models.",
+      "Not a unique physical ToE functor without large axiom stack.",
+      "Dual dynamics are two Borel functions of one generator — no observer paradox mathematically."
+    ],
+    "hypotheses": [
+      "Universality class of 8-periodic damped radial multipliers may have continuum PsiDO limit on S1.",
+      "Indefinite Gram regime (beta<beta*) may model signed information kernels useful outside PSD covariance."
+    ],
+    "intuitions": [
+      "Operational instrument selects f in f(L), analogous to filter choice in spectral processing.",
+      "Linear damping 1/(1+beta d) is hyperbolic-range scaffold, cosine is interference scaffold."
+    ],
+    "speculations": [
+      "Any deeper unification using Legacy* would require new source axioms not contained in K*."
+    ]
+  },
+  "decision": {
+    "accepted_as_fundamental_physics": false,
+    "accepted_as_mathematical_generator": true,
+    "strict_bridge_performed": false,
+    "role_transfer_performed": false,
+    "selector_closed": false,
+    "L_total_promoted": false,
+    "ToE_promoted": false,
+    "negative_export_flags": {
+      "Dirac_from_K_star": false,
+      "Maxwell_from_K_star": false,
+      "YM_from_K_star": false,
+      "SM_from_K_star": false,
+      "GR_from_K_star": false,
+      "unit_bearing_action": false,
+      "selector_closure": false,
+      "ToE": false
+    },
+    "next_honest_step": "Either (i) develop the finite LegacyStarRadialCirculantFamily as pure operator/graph theory (PSD threshold, indefinite Gram, dual Borel calculus, inverse radial recovery), or (ii) if physics is desired, supply exactly one missing axiom package: units, continuum embedding, or gauge/spin structure — without claiming it is derived from K* alone."
+  },
+  "provenance": {
+    "script": "fundamental_action_reconstruction/p3172_s2122_legacy_star_operator_model_generator_potential_audit.py",
+    "related": [
+      "P3171",
+      "P3075",
+      "P3082",
+      "P3145",
+      "P3168"
+    ],
+    "agents_sha": "eecc38f6213b4d30c2f507d44c794e1473b4fa496303ac1373ed0565b8589e51",
+    "summary_sha": "6e87c0e889086ea4f32d365a488031f34f9964e9724b2f0366642a90110409d2",
+    "packet_path": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fundamental_action_reconstruction/P3172_S2122_LEGACY_STAR_OPERATOR_MODEL_GENERATOR_POTENTIAL_AUDIT.md",
+    "json_path": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fundamental_action_reconstruction/generated/p3172_s2122_legacy_star_operator_model_generator_potential_audit.json",
+    "md_path": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fundamental_action_reconstruction/generated/p3172_s2122_legacy_star_operator_model_generator_potential_audit.md"
+  }
+}

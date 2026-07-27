@@ -4387,3 +4387,8 @@ Therefore identity-action work, even if later sourced, is not a full damping-sou
 ## P3170/S2120 S_plus source-obligation hitting-set theorem
 
 `P3170/S2120` converts the remaining `S_+` branch into a finite blocker hypergraph using the `P3162` candidate gate matrix.  Across `12` candidate routes, the singleton atom `{strict_nadsoliton_source_exported}` is a minimal universal hitting set: every route fails it.  The least-repair admissible route is `new_strict_scale_charged_datum_schema`, which still needs exactly `nonzero_value_exported` and `strict_nadsoliton_source_exported`.  No `S_+`, `Omega_M`, `K_dim`, unit-bearing action, selector closure, bridge completion, role transfer, `L_total`, or ToE closure is exported.
+
+## P3172/S2122 Legacy* operator/model generator potential
+- Standalone audit of `K*(d)=A cos(pi d/4+pi/6)/(1+beta d)` as operator generator.
+- No Strict bridge, no role transfer, no L_total/ToE promotion.
+- Dual dynamics U/T share spectral measure; Dirac/Maxwell/YM not exported from radial K*.

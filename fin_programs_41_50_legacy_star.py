@@ -242,11 +242,14 @@ def program42() -> dict:
         "sign_matches_after_affine": sign_match,
         "envelope_relative_residual_after_affine_phase": rel,
         "verdict": (
-            "A 2-parameter affine phase map is not exact; residual phase and "
-            "envelope still needed. No sparse equivariant map from K* alone "
-            "exports the strict (ω,φ) pair without target insertion."
+            "The affine phase residual is numerically zero by construction: "
+            "both phases are affine functions of d and the strict target was "
+            "inserted into the fit. This is a coordinate conversion, not a "
+            "source theorem or predictive phase reconstruction."
         ),
         "exports_strict_phase_source": False,
+        "target_inserted": True,
+        "predictive_content": False,
     }
 
 
@@ -269,12 +272,14 @@ def program43() -> dict:
     # model log(strict) = log(star) - c d^eta
     # residual of free (c, eta) on d=1..4, hold out d=5,6 and N>12 shapes
 
+    train = np.arange(4)
+
     def loss(params):
         c, eta = params
         if c <= 0 or eta <= 0:
             return 1e9
-        pred = star * np.exp(-c * d**eta)
-        return float(np.sum((pred - strict) ** 2))
+        pred = star[train] * np.exp(-c * d[train]**eta)
+        return float(np.sum((pred - strict[train]) ** 2))
 
     best = None
     for eta in np.linspace(0.5, 3.0, 26):
@@ -318,6 +323,7 @@ def program43() -> dict:
             "export a stable multi-size law; larger-N relative errors remain large."
         ),
         "exports_microscopic_loss_law": False,
+        "fit_used_training_points_only": True,
     }
 
 
@@ -440,7 +446,7 @@ def program45() -> dict:
 # ---------------------------------------------------------------------------
 
 def program46() -> dict:
-    # Coupled system-apparatus: H = A_S ⊗ I + I ⊗ A_A + g B_S ⊗ C_A
+    # Actual mirror-odd Hamiltonian coupling H(lambda)=A+lambda*C.
     W = positivity_repair(cyclic_W(lambda d: k_star(d, A_Z12, BETA_Z12)), "abs")
     A, _ = regular_shift_laplacian(W)
     # odd operator on cycle: directed circulation
@@ -448,26 +454,28 @@ def program46() -> dict:
     for i in range(N):
         B[i, (i + 1) % N] = 1.0
         B[i, (i - 1) % N] = -1.0
-    B = 0.5 * (B - B.T)  # already skew; make Hermitian iB
-    B_h = 1j * B  # Hermitian
-    # apparatus qubit Pauli Z as polarity reference
-    # reduce: scan interference at detector under apparatus polarity ±
-    evals, evecs = np.linalg.eigh(A)
+    B = 0.5 * (B - B.T)
+    B_h = 1j * B
     t = 1.5
-    U = evecs @ np.diag(np.exp(-1j * t * evals)) @ evecs.T
-    # two slits
     a, b = (-2) % N, 2
-    ua, ub = U[:, a], U[:, b]
-    # polarity λ = ±1 multiplies relative phase of apparatus record
     rows = []
-    for lam in (+1.0, -1.0):
-        cross = np.real(lam * ua * np.conj(ub))
+    coupling_magnitude = 0.1
+    for polarity in (+1.0, -1.0):
+        lam = polarity * coupling_magnitude
+        H = A + lam * B_h
+        evals, evecs = np.linalg.eigh(H)
+        U = evecs @ np.diag(np.exp(-1j * t * evals)) @ evecs.conj().T
+        ua, ub = U[:, a], U[:, b]
+        cross = np.real(ua * np.conj(ub))
         incoh = 0.5 * (np.abs(ua) ** 2 + np.abs(ub) ** 2)
         coh = incoh + cross
         rows.append(
             {
-                "polarity": lam,
+                "polarity": polarity,
+                "lambda": lam,
                 "detector0": float(coh[0]),
+                "detector1": float(coh[1]),
+                "mirror_handedness_p1_minus_p11": float(coh[1] - coh[-1]),
                 "visibility": float(
                     (coh.max() - coh.min()) / max(coh.max() + coh.min(), 1e-15)
                 ),
@@ -480,15 +488,30 @@ def program46() -> dict:
     # radial A is inversion-even
     A_inv = inv @ A @ inv.T
     even_res = float(np.linalg.norm(A_inv - A))
+    odd_res = float(np.linalg.norm(inv @ B_h @ inv.T + B_h))
+    hp = A + coupling_magnitude * B_h
+    hm = A - coupling_magnitude * B_h
+    mirror_covariance_residual = float(np.linalg.norm(inv @ hp @ inv.T - hm))
+    isospectral_residual = float(
+        np.linalg.norm(np.linalg.eigvalsh(hp) - np.linalg.eigvalsh(hm))
+    )
     return {
         "A_inversion_even_residual": even_res,
+        "C_inversion_odd_residual": odd_res,
+        "mirror_covariance_residual": mirror_covariance_residual,
+        "plus_minus_isospectral_residual": isospectral_residual,
+        "coupling_magnitude": coupling_magnitude,
         "polarity_rows": rows,
         "detector_difference_plus_minus": abs(rows[0]["detector0"] - rows[1]["detector0"]),
+        "orientation_sensitive_detector_difference": abs(
+            rows[0]["detector1"] - rows[1]["detector1"]
+        ),
         "exports_nonpremise_selector": False,
         "verdict": (
-            "An external apparatus polarity λ=±1 makes the double-slit detector "
-            "sign-sensitive, but A from K* remains inversion-even. No non-premise "
-            "strict selector is exported (QW-2191 remains open)."
+            "A real mirror-odd Hermitian coupling makes a fixed lambda branch "
+            "reflection-asymmetric. Reflection exchanges +lambda and -lambda, "
+            "which remain isospectral; the kernel supplies no sign-selection law. "
+            "QW-2191 therefore remains open."
         ),
     }
 
@@ -533,30 +556,24 @@ def program48() -> dict:
     # integrability defect: antisymmetric part of force Jacobian
     J_sym = 0.5 * (M + M.T)
     J_skew = 0.5 * (M - M.T)
-    defect = float(np.linalg.norm(J_skew) / max(np.linalg.norm(M), 1e-30))
+    defect_half = float(np.linalg.norm(J_skew) / max(np.linalg.norm(M), 1e-30))
+    defect_full = float(np.linalg.norm(M - M.T) / max(np.linalg.norm(M), 1e-30))
     # couple feedback to K* scale: treat s(t) row-sum under feedback amplitude
     W = positivity_repair(cyclic_W(lambda d: k_star(d, A_Z12, BETA_Z12)), "abs")
     A, s = regular_shift_laplacian(W)
-    # closed-loop work proxy over one period of spiral
-    t = np.linspace(0, 20, 2001)
-    z0 = np.array([1.0, 0.0])
-    zs = []
-    z = z0.copy()
-    dt = t[1] - t[0]
-    work = 0.0
-    for _ in t[1:]:
-        force = M @ z
-        # gradient part vs circulatory
-        work += float(force @ (J_skew @ z)) * dt
-        z = z + dt * force
-        zs.append(z.copy())
-    zs = np.array(zs)
+    # Genuine closed-loop line integral on the unit circle.
+    t = np.linspace(0.0, 2.0 * np.pi, 20001)
+    z = np.column_stack([np.cos(t), np.sin(t)])
+    dz_dt = np.column_stack([-np.sin(t), np.cos(t)])
+    force = z @ M.T
+    work = float(np.trapz(np.sum(force * dz_dt, axis=1), t))
     return {
         "feedback_eigenvalues": [complex(e).real + 1j * complex(e).imag for e in eigs],
         "real_parts": [float(e.real) for e in eigs],
         "imag_parts": [float(e.imag) for e in eigs],
-        "normalized_integrability_defect": defect,
-        "circulatory_work_proxy": work,
+        "normalized_integrability_defect_half_skew": defect_half,
+        "normalized_integrability_defect_full": defect_full,
+        "closed_unit_circle_work": work,
         "Kstar_row_sum_s": s,
         "stable": bool(all(e.real < 0 for e in eigs)),
         "verdict": (
@@ -642,8 +659,14 @@ def program50() -> dict:
         "strict": lambda d: np.maximum(k_strict(d), 0.0),
     }
     sizes = [12, 16, 24]
-    # synthetic target = strict + small noise on C12 only; held-out sizes pure strict
-    report = {"preregistered_models": list(models.keys()), "scores": {}}
+    # Synthetic target = strict. This is a self-recovery sanity check, not
+    # independent validation or evidence that nature selected strict.
+    report = {
+        "preregistered_models": list(models.keys()),
+        "scores": {},
+        "synthetic_target_generator": "strict",
+        "independent_validation": False,
+    }
     for n in sizes:
         dmax = n // 2
         d = np.arange(1, dmax + 1, dtype=float)
@@ -669,10 +692,10 @@ def program50() -> dict:
     report["winner_consistency"] = winners
     report["strict_always_wins_if_present"] = all(w == "strict" for w in winners)
     report["verdict"] = (
-        "With strict included as a competing model it wins the multi-size "
-        "cosine challenge; among legacy* variants, star_hist_abs is closest "
-        "on C12-scale free scores but no legacy* form transfers to a unique "
-        "strict continuum law. No ToE/selector/unit closure."
+        "Because the synthetic target is generated by strict, strict winning "
+        "is an implementation sanity check and has no independent evidential "
+        "weight. Pairwise separability among declared profiles does not derive "
+        "a legacy-to-strict bridge or select a physical kernel."
     )
     # figure
     d = np.arange(1, 13, dtype=float)

@@ -1,0 +1,50 @@
+{
+  "title": "FIN operator external-data falsification protocol",
+  "version": "1.0.0-frozen",
+  "created": "2026-07-27",
+  "scope": "A future external-data test of dimensionless operator-shape predictions after independently calibrated conversion maps.",
+  "candidate_models": {
+    "strict": "K(d)=cos(omega*d+phi)/(1+beta*d^eta), parameters frozen from repository provenance before unblinding",
+    "legacy_intermediate": "K(d)=alpha_geo*cos(omega*d+phi)/(1+beta_tors*d), retained only as an intermediate comparator",
+    "nulls": [
+      "nearest-neighbour Laplacian",
+      "screened exponential radial kernel",
+      "power-law radial kernel",
+      "matched-spectrum phase-randomized operator"
+    ]
+  },
+  "operational_requirements": [
+    "record preparation map",
+    "record instrument/POVM or coarse-graining map",
+    "record clock and length calibration with uncertainty",
+    "record environment and boundary conditions",
+    "record raw counts before normalization"
+  ],
+  "primary_metrics": [
+    "held-out predictive log likelihood",
+    "calibration-marginalized KL divergence",
+    "posterior predictive residual",
+    "complexity-penalized model score"
+  ],
+  "split": {
+    "training_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "hidden_test_fraction": 0.2,
+    "stratification": "by preparation, instrument, and time window"
+  },
+  "decision_rules": {
+    "support": "strict model beats every frozen null on hidden-test mean log likelihood with a preregistered uncertainty interval excluding 0",
+    "falsification": "a frozen null dominates strict, or strict residuals fail the preregistered calibration check",
+    "inconclusive": "all other outcomes"
+  },
+  "forbidden_after_unblinding": [
+    "changing kernel parameters",
+    "changing distance or coordinate semantics",
+    "adding observables",
+    "changing binning or instrument maps",
+    "dropping failed preparations",
+    "using synthetic FIN-generated data as external evidence"
+  ],
+  "current_data_state": "No external dataset selected or inspected",
+  "canonical_core_sha256": "1a10b804a3e8265969fa66626f5152acc00830440841f2ddee6a8a59c018db4e"
+}

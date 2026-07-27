@@ -51,7 +51,7 @@ This monograph does three things.
 - **[Proven]** After path-sum algebra, the historically intended effective class is the hyperbolic-phase form \(K^*\) above. Parameters \(A,\beta\) are not uniquely fixed by the diagram alone.
 - **[Strong evidence]** After absolute-value positivity repair on \(\mathbb Z_{12}\), \(K^*\) supports dual dynamics: unitary \(U_t=e^{-itA}\) and Markov \(P_t=e^{-tA}\) with \(A=sI-W\).
 - **[Proven]** Dual dynamics does **not** export units, a non-premise selector, or orientation breaking. The three leaf-cuts remain open.
-- **[Proven]** Programs 41–50 show: Loewner bridge is support/normalization dependent; affine phase maps leave envelope residual; hazard laws do not hold out; Markov relative information is monotone while unitary Born information is not; environment dilation can hold lost information; external polarity is apparatus-level only; multi-size cosine challenge selects the strict profile when it is among competitors.
+- **[Proven / corrected]** Programs 41–50 show: Loewner bridge is support/normalization dependent; the affine phase fit is an exact but target-inserted coordinate conversion; the hazard law fails its held-out points; Markov relative information is monotone while unitary Born information is not; environment dilation can hold the discarded record; and a mirror-odd coupling breaks reflection only in a branch whose sign is externally supplied. The multi-size strict-target test is an implementation sanity check, not independent evidence.
 
 Honest conclusion:
 
@@ -209,19 +209,19 @@ Programs follow the roadmap left by Release 10.3, now evaluated on \(K^*\) rathe
 
 **Question.** Can a sparse equivariant phase map send legacy phase to strict phase?
 
-Least-squares affine map \(\theta_s\approx a\theta_\ell+b\) on \(d=1..6\) gives
+The target-inserted affine map \(\theta_s=a\theta_\ell+b\) on \(d=1..6\) gives
 
 \[
 a\approx 0.23650,\qquad b\approx 0.03867,
 \]
 
-phase residual \(\sim 10^{-15}\) on those six points after free affine fit, but envelope residual after best amplitude fit remains \(\approx 0.450\). **[Strong evidence]**
+phase residual \(\sim 10^{-15}\), but this is an identity: both phases are affine in \(d\), with \(a=\omega_s/\omega_\ell\) and \(b=\phi_s-a\phi_\ell\). The envelope residual after best amplitude fit remains \(\approx 0.450\).
 
-**[Proven]** No sparse map from \(K^*\) alone exports the strict \((\omega,\phi)\) source without target insertion. Phase agreement of a fitted affine map is not a derivation of strict frequencies.
+**[Proven correction]** The calculation has zero predictive content because \((\omega_s,\phi_s)\) are inserted into the response variable. It establishes a coordinate conversion only; it neither searches all sparse equivariant maps nor proves their nonexistence. No strict phase source is exported.
 
 ## Program 43 — held-out hazard law
 
-Fit \(\mathrm{strict}\approx |K^*_{\mathrm{hist}}|\,e^{-c d^\eta}\) on \(d=1..4\):
+Fit \(\mathrm{strict}\approx |K^*_{\mathrm{hist}}|\,e^{-c d^\eta}\) using only \(d=1..4\). The original implementation accidentally evaluated its objective on all six points; the corrected objective removes that data leakage:
 
 \[
 c\approx 0.461,\qquad \eta\approx 1.90.
@@ -259,9 +259,13 @@ At dimensionless \(t=1\) for \(K^*_{\mathrm{Z12}}\) abs:
 
 ## Program 46 — calibrated sign-reference emulator
 
-\(A\) from \(K^*\) is exactly inversion-even (residual \(0\)). External polarity \(\lambda=\pm 1\) changes double-slit detector response (difference \(\approx 0.049\) at site \(0\) for the scanned protocol). **[Proven]**
+\(A\) from \(K^*\) is exactly inversion-even. The corrected test uses the actual Hermitian mirror-odd coupling
+\[
+H_\lambda=A+\lambda C,\qquad RCR=-C.
+\]
+It verifies \(RH_\lambda R=H_{-\lambda}\) and identical spectra for the two signs. At \(|\lambda|=0.1\), a reflection-fixed detector at site \(0\) is sign-blind to \(2.1\times10^{-17}\), while the orientation-sensitive site-\(1\) record differs by \(0.08409\). **[Proven for the declared finite model]**
 
-**[Proven]** External polarity is an apparatus/sector axiom, not a non-premise strict selector. `QW-2191` remains open.
+**[Proven]** A fixed nonzero \(\lambda\) explicitly breaks reflection, but reflection exchanges the isospectral \(+\lambda\) and \(-\lambda\) branches. The odd carrier \(C\) has the right representation type for the missing orientation object; the sign/source law for \(\lambda\) is still absent. `QW-2191` remains open.
 
 ## Program 47 — influence-functional proxy
 
@@ -269,17 +273,17 @@ Two-parameter Ohmic proxy for log-retention has residual \(\approx 0.45\) class 
 
 ## Program 48 — feedback thermodynamic ledger
 
-Declared feedback matrix eigenvalues \(-0.8\pm 1.7i\), integrability defect \(\approx 0.905\), nonzero circulatory work proxy \(\approx 1.847\). **[Proven for the declared model]**
+Declared feedback matrix eigenvalues \(-0.8\pm 1.7i\). The half-skew normalized defect is \(0.90482\), the full antisymmetry defect is \(1.80964\), and the genuine closed unit-circle work is \(3.4\pi\approx10.6814\). The earlier \(1.847\) quantity was an open-spiral proxy rather than a closed-loop integral. **[Proven for the declared model]**
 
 Stable non-gradient feedback can be added; it is not forced by \(K^*\) and does not yield unit-bearing \(L_{\mathrm{total}}\).
 
 ## Program 49 — process-tensor causal challenge
 
-Interventions change TV gaps between the \(K^*\) Markov process and a static spectral-gap mimic. Mean intervention margin on the scanned grid is small (\(\approx 0.0046\)) and model-dependent. **[Moderate evidence]** Final-time fits alone are weak identifiers of causal structure.
+Interventions change TV gaps between the \(K^*\) Markov semigroup and a one-rate depolarizing semigroup. Mean intervention margin on the scanned grid is small (\(\approx 0.0046\)) and model-dependent. **[Moderate evidence]** This is a two-generator discrimination test, not a full process-tensor or non-Markovian causal-identification experiment.
 
 ## Program 50 — preregistered multi-size challenge
 
-Preregistered competitors: \(K^*_{\mathrm{hist}}\), \(K^*_{\mathrm{Z12}}\), classical legacy, rejected product, strict. On \(N=12,16,24\), cosine winners are always **strict** when strict is included.
+Declared competitors: \(K^*_{\mathrm{hist}}\), \(K^*_{\mathrm{Z12}}\), classical legacy, rejected product, strict. The synthetic target is generated from strict itself. On \(N=12,16,24\), strict therefore wins the cosine score.
 
 On \(N=12\) cosines vs noisy strict target:
 
@@ -293,7 +297,7 @@ On \(N=12\) cosines vs noisy strict target:
 
 ![Program 50 profiles](FIN_Programs_41_50_Figures/program50_profiles.png)
 
-**[Strong evidence]** No legacy* form wins a multi-size challenge against strict. High cosine of the rejected product is an artifact of near-local tiny positive mass, not historical correctness.
+**[Proven correction]** This is a self-recovery and software sanity check only. It has no independent evidential weight for selecting strict and is not a preregistered external challenge. High cosine of the rejected product remains an artifact of its near-local normalized shape.
 
 ---
 

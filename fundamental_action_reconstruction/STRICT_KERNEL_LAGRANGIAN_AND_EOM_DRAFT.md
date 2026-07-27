@@ -3756,3 +3756,7 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P3170/S2120 S_plus blocker theorem leaves action units conditional
 
 `P3170/S2120` shows that the remaining unit branch is blocked by a precise missing atom: a nonzero strict nadsoliton source value in the weight-one `S_+` representation coupled to `Omega_M/K_dim`.  Until that source law is supplied, all action units, mass units, nonproxy action density, EOM terms, and `L_total` uses remain conditional or imported, not strict exports.
+
+## P3172/S2122
+- Legacy* treated as autonomous model-generator, not Strict completion.
+- Finite certificate: TAK/WARUNKOWO/NIE operator matrix; partial inverse on radial circulants; dI non-metric.

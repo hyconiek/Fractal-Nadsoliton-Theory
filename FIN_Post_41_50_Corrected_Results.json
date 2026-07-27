@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "date": "2026-07-27",
+    "scope": "corrected finite dimensionless audit after Programs 41-50",
+    "no_firecrawl": true
+  },
+  "kernel_policy": {
+    "Kstar_family_contains_canonical_legacy_max_error": 0.0,
+    "canonical_legacy_parameters": {
+      "A": 2.772588722239781,
+      "beta": 0.01,
+      "omega": "pi/4",
+      "phi": "pi/6"
+    },
+    "historical_freeze_relative_l2_to_canonical": 0.1789200589696253,
+    "Z12_freeze_relative_l2_to_canonical": 0.9409392387323102,
+    "decision": {
+      "primary_strict_work": "K_strict_gate",
+      "only_canonical_non_strict_bridge_kernel": "K_legacy_ont with A=4 ln 2 and beta_tors=0.01",
+      "Kstar_status": "parameter family containing K_legacy_ont, not a third canonical kernel",
+      "A2.9_beta0.05_status": "historical stress-test freeze only",
+      "A1_beta1_status": "finite operator benchmark only; not canonical",
+      "K_rejected_status": "retired",
+      "mirror_C_status": "conditional sector/operator candidate, not a kernel replacement",
+      "Markov_policy": "Use strict for primary diffusion. For legacy sensitivity report both W+=max(W,0) and |W| because positivity repair is not unique."
+    }
+  },
+  "psd_threshold_support_scan": [
+    {
+      "n": 8,
+      "threshold": 0.8065168859454483,
+      "root_residual": -1.0606753029799242e-16
+    },
+    {
+      "n": 10,
+      "threshold": 1.1150471009605272,
+      "root_residual": 2.491070958315694e-17
+    },
+    {
+      "n": 12,
+      "threshold": 1.075150776229914,
+      "root_residual": 6.657989558835331e-16
+    },
+    {
+      "n": 14,
+      "threshold": 0.7954683359352521,
+      "root_residual": 3.890760847333892e-16
+    },
+    {
+      "n": 16,
+      "threshold": 0.6147215336253107,
+      "root_residual": 3.6949125033447504e-16
+    },
+    {
+      "n": 20,
+      "threshold": 0.8581658922845206,
+      "root_residual": -3.0541492728956393e-16
+    },
+    {
+      "n": 24,
+      "threshold": 0.7294532782675374,
+      "root_residual": 2.498001805406602e-16
+    },
+    {
+      "n": 32,
+      "threshold": 0.6762220370601681,
+      "root_residual": 6.273334053621668e-17
+    }
+  ],
+  "metric_audits": [
+    {
+      "beta": 0.01,
+      "normalized_by_K0": false,
+      "diagonal_zero": false,
+      "nonnegative": true,
+      "separates_points": true,
+      "triangle_violations": 216,
+      "max_triangle_excess": 1.1531275094735334,
+      "is_metric": false
+    },
+    {
+      "beta": 0.01,
+      "normalized_by_K0": true,
+      "diagonal_zero": true,
+      "nonnegative": false,
+      "separates_points": false,
+      "triangle_violations": 216,
+      "max_triangle_excess": 1.2969685456994238,
+      "is_metric": false
+    },
+    {
+      "beta": 1.0,
+      "normalized_by_K0": false,
+      "diagonal_zero": false,
+      "nonnegative": true,
+      "separates_points": true,
+      "triangle_violations": 0,
+      "max_triangle_excess": 0.0,
+      "is_metric": false
+    },
+    {
+      "beta": 1.0,
+      "normalized_by_K0": true,
+      "diagonal_zero": true,
+      "nonnegative": true,
+      "separates_points": true,
+      "triangle_violations": 96,
+      "max_triangle_excess": 0.11298509259888112,
+      "is_metric": false
+    },
+    {
+      "beta": 2.0,
+      "normalized_by_K0": false,
+      "diagonal_zero": false,
+      "nonnegative": true,
+      "separates_points": true,
+      "triangle_violations": 0,
+      "max_triangle_excess": 0.0,
+      "is_metric": false
+    },
+    {
+      "beta": 2.0,
+      "normalized_by_K0": true,
+      "diagonal_zero": true,
+      "nonnegative": true,
+      "separates_points": true,
+      "triangle_violations": 0,
+      "max_triangle_excess": 0.0,
+      "is_metric": true
+    }
+  ],
+  "phase_map_correction": {
+    "a_exact_definition": "omega_strict/omega_legacy",
+    "a": 0.23650424543455648,
+    "b_exact_definition": "phi_strict-a*phi_legacy",
+    "b": 0.03866666666666668,
+    "residual_d1_48": 3.4844027277880974e-15,
+    "target_inserted": true,
+    "predictive_content": false
+  },
+  "hazard_fit_correction": {
+    "training_distances": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "held_out_distances": [
+      5,
+      6
+    ],
+    "c": 0.47447755555117077,
+    "eta": 1.8917831348070775,
+    "train_relative_l2": 0.13781278311920972,
+    "holdout_relative_l2": 0.9990208473496175,
+    "optimizer_success": true
+  },
+  "mirror_quantum_audit": {
+    "radial_legacy_inversion_residual": 0.0,
+    "directed_odd_carrier_fro_norm_before_normalization": 17.505544376716735,
+    "odd_carrier_inversion_residual": 0.0,
+    "fixed_branch_reflection_commutator": 0.8,
+    "R_Hplus_R_minus_Hminus_residual": 0.0,
+    "plus_minus_isospectral_residual": 0.0,
+    "same_site_probability_difference": 0.047257678683460064,
+    "mirror_related_probability_residual": 2.220446049250313e-16,
+    "two_copy_sign_gauge_residual": 0.0,
+    "two_copy_mirror_commutator": 0.0,
+    "conclusion": "A passive mirror copy and a symmetric two-copy coupling preserve a Z2 symmetry. An inversion-odd Hermitian carrier C breaks reflection for fixed nonzero lambda, but reflection exchanges the isospectral +/- branches. K_legacy supplies neither the directed chart nor lambda's sign."
+  },
+  "mirror_markov_audit": {
+    "lambda": 0.4,
+    "uniform_stationary_residual": 6.030054506389723e-16,
+    "mirror_covariance_residual": 9.39959687352353e-15,
+    "nearest_edge_stationary_current": 0.04863949867058781,
+    "entropy_production_rate": 5.035446325328184,
+    "current_is_odd_under_lambda": true,
+    "entropy_production_is_even_under_lambda": true,
+    "imports_orientation_and_lambda_sign": true
+  },
+  "methodology_corrections": {
+    "program42": "target-inserted affine identity, not reconstruction",
+    "program43": "training objective restricted to d=1..4",
+    "program45": "chosen dilation witness, not a kernel-derived environment",
+    "program46": "actual mirror-odd Hamiltonian coupling now used",
+    "program48": "closed-loop work replaces open-spiral proxy",
+    "program49": "two-semigroup discrimination, not full process tensor",
+    "program50": "strict-generated synthetic self-recovery, not validation",
+    "P3172": "full metric axioms and bisection PSD threshold"
+  },
+  "figures": [
+    "FIN_Post_41_50_Correction_Figures/kernel_policy_profiles.png",
+    "FIN_Post_41_50_Correction_Figures/psd_threshold_support_scan.png",
+    "FIN_Post_41_50_Correction_Figures/mirror_bias_current_entropy.png"
+  ]
+}

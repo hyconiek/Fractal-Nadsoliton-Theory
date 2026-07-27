@@ -1,0 +1,1384 @@
+# FIN Programs 125–137
+
+## Trace Selection, Natural Localizers, Fractional Physics, and Operational Sources
+
+**FIN Research Monograph — Release 10.13**
+
+**Author:** Krzysztof Żuchowski  
+**Affiliation:** Independent Researcher — Fractal Information Theory Project  
+**ORCID:** 0009-0002-0909-3613  
+**Resource type:** Publication — Preprint  
+**Version:** 1.0.0  
+**Publication date:** 2026-07-27  
+**Language:** English  
+**Publisher:** Zenodo  
+**License:** CC BY 4.0
+
+---
+
+## Confidence convention
+
+Every conclusion is labelled by one of the following standards.
+
+- **Proven:** an analytic or finite mathematical argument is supplied.
+- **Proven, computer-assisted:** a finite computation is reproducible and
+  covered by regression tests.
+- **Strong evidence:** analytic truncation control is combined with ordinary
+  floating-point computation, but not machine-verified interval arithmetic.
+- **Conditional:** the conclusion is exact after a premise not presently
+  sourced by strict FIN is added.
+- **Refuted in scope:** the stated candidate fails a specified necessary test.
+- **Open:** the required source, theorem, or empirical input is absent.
+
+A numerical identity is not called a source theorem merely because it equals a
+frozen FIN parameter. A physical prediction is not claimed without a
+calibration map, an instrument model, and admitted external observations.
+
+## Abstract
+
+This monograph executes thirteen research programs that continue the
+constructive analysis of FIN after Programs 113–124. The previous round built
+a homological–character fibre over the strict finite carrier,
+
+$$
+\mathcal F_p
+=
+\widetilde H_0(\ker m_p)\oplus\mathcal X_p^-,
+$$
+
+with dimension vector
+
+$$
+(1,2,2,2,2).
+$$
+
+Its uniform sector average is $9/5$, suggesting the strict damping exponent.
+The first task of the present round is to determine whether that average is
+actually canonical.
+
+The answer is negative. Even after granting the enlarged abstract symmetry
+$\operatorname{Aut}(U(12))\cong S_3$, which permutes the three nonidentity
+unit elements, the five prime sectors split into three orbits,
+
+$$
+\{2\},\qquad \{3\},\qquad \{5,7,11\}.
+$$
+
+Consequently every invariant probability trace has the form
+
+$$
+w=(x,y,z/3,z/3,z/3),
+\qquad x+y+z=1,
+$$
+
+and the induced exponent is
+
+$$
+\eta(w)=2-x.
+$$
+
+The value $9/5$ requires $x=1/5$ and is not selected by invariance. Moreover,
+the normalized Hilbert trace, arguably the most immediate dimension-weighted
+choice, gives
+
+$$
+\eta_{\rm Hilb}
+=
+\frac{1^2+4\cdot2^2}{1+4\cdot2}
+=\frac{17}{9},
+$$
+
+not $9/5$. This is a new trace-selection obstruction.
+
+A positive result accompanies the obstruction. The fibre assignment is
+upgraded to a presentation-independent finite-carrier localizer. For every
+cyclic-group isomorphism $\psi$,
+
+$$
+\psi\circ m_p=m_p\circ\psi,
+$$
+
+so the kernel homology and real-character component are transported
+naturally. The vector $(1,2,2,2,2)$ is therefore not an artefact of choosing a
+generator of $C_{12}$. What remains absent is not the localizer but the state
+or trace placed on its sector algebra.
+
+The fractional operator analysis is also strengthened. An FFT with analytic
+tail and frequency-cell bounds encloses every frequency in
+
+$$
+10^{-3}\le |q|\le2\cdot10^{-2}.
+$$
+
+The maximum conservative relative-remainder upper bound around the
+$|q|^{4/5}$ law is $2.2647\%$. The result is strong evidence rather than a
+formal interval theorem because the FFT itself uses guarded ordinary
+floating-point arithmetic. Finite-step characteristic functions are then
+compared quantitatively with the symmetric $4/5$-stable limit.
+
+For wave dynamics, the same fractional generator produces a unitary
+$L^2$ group, but the usual cutoff-free dispersive construction encounters an
+ultraviolet obstruction. On a dyadic shell of scale $\Lambda$, the standard
+curvature estimate grows as
+
+$$
+t^{-1/2}\Lambda^{3/5}.
+$$
+
+It is not summable over ultraviolet shells. Thus a bandwidth or
+detector-resolution object is not optional if pointwise wave records are to
+be defined by this route.
+
+The smallest external physical calibration is constructed explicitly:
+
+$$
+x_{\rm phys}=\ell x,\qquad
+t_{\rm phys}=\tau t,\qquad
+H_{\rm phys}=\frac{\hbar}{\tau}A.
+$$
+
+The logarithmic dimension matrix has rank three. Hence the dimensionless
+operator cannot internally determine length, time, and action merely by a
+change of notation; three independent calibrations are required unless a new
+dimensionful source theorem is added.
+
+The round also constructs a finite-memory apparatus-tomography estimator, an
+exact projective crossover flow, an amplitude quotient, a trace-parameterized
+damping completion, and a signed operational receiver. The receiver detects
+opposite currents in prepared Fourier branches $k$ and $-k$, but it does not
+choose either branch. Therefore QW-2191 remains open.
+
+The deepest surviving conclusion is precise. FIN now has a natural finite
+carrier localizer and a quantitatively supported fractional operational
+generator. Its principal missing theoretical object is a distinguished state
+on the localized sector algebra, together with an independently sourced
+calibration and preparation law. Symmetry, arithmetic coincidence, and
+state-dependent readout do not supply those objects.
+
+---
+
+# Part I — Scope, notation, and guardrails
+
+## 1. Research questions
+
+Programs 125–137 address the following questions.
+
+1. Does invariance select the trace producing $\eta=9/5$?
+2. Can the fibre formula be made independent of a presentation of $C_{12}$?
+3. Can the fractional symbol law be controlled on a continuum of
+   frequencies rather than at selected sample points?
+4. Can finite-step convergence toward the stable process be bounded
+   quantitatively?
+5. Does fractional wave evolution define pointwise records without a UV
+   resolution?
+6. What is the minimum calibration object needed to interpret the
+   dimensionless operator physically?
+7. Can apparatus memory be learned without assuming a parametric hidden
+   model?
+8. Is the local-to-fractional crossover governed by an exact projective flow?
+9. Can the frozen phase and frequency be sourced by the new finite object?
+10. Does quotienting amplitude clarify the role of $\alpha_{\rm geo}$?
+11. How much of the legacy-to-strict damping bridge becomes exact after the
+    trace is exposed as a variable?
+12. Can an operational state produce the missing signed selector?
+13. Is any external dataset presently admitted into this research chain?
+
+## 2. Kernel split
+
+The two kernels are kept distinct:
+
+$$
+K_{\rm legacy}(d)
+=
+\alpha_{\rm geo}
+\frac{\cos(\omega_{\rm L}d+\phi_{\rm L})}
+{1+\beta_{\rm tors}d},
+$$
+
+$$
+K_{\rm strict}(d)
+=
+\frac{\cos(\omega d+\phi)}
+{1+\beta d^\eta}.
+$$
+
+The legacy kernel is an intermediate bridge object. It is not silently
+substituted for the strict kernel, and strict damping is not used to transport
+legacy physical-role formulas. A valid completion must separately account for
+amplitude, phase, frequency, nonlinear damping, certified topological data,
+and role preservation.
+
+## 3. Ontological and selector boundary
+
+Within the repository ontology, the nadsoliton is primordial fractal
+information in a solitonic state. No information layer below it is introduced
+here. This statement does not itself define an experimental preparation,
+physical clock, dimensional scale, or measurement instrument.
+
+The finite orientation obstruction QW-2191 is respected. A signed observable
+is not a selector if its sign is inherited from a prepared branch. A strict
+selector would have to produce the branch or orientation without placing the
+desired sign in its premise.
+
+## 4. Strict lattice object
+
+For the fractional calculations, the positive jump weights are
+
+$$
+a_d=
+\frac{|\cos(\omega d+\phi)|}{1+d^{9/5}},
+\qquad
+Z=2\sum_{d\ge1}a_d,
+$$
+
+and
+
+$$
+p_{\pm d}=\frac{a_d}{Z}.
+$$
+
+The Markov generator is $I-P$ and the continuum candidate is
+
+$$
+C(-\Delta)^{2/5}.
+$$
+
+This positive jump object is used only in the stochastic/fractional lane. It
+does not replace the signed strict kernel in amplitude and bridge comparisons.
+
+---
+
+# Part II — Programs 125–126: the fibre, its naturality, and the missing trace
+
+## 5. Program 125 — Classification of invariant traces
+
+### 5.1 Sector algebra
+
+The Program-122 fibres have dimensions
+
+$$
+d=(d_2,d_3,d_5,d_7,d_{11})=(1,2,2,2,2).
+$$
+
+The simplest commutative algebra recording the five sectors is
+
+$$
+\mathcal A_{\mathcal F}\cong\mathbb C^5.
+$$
+
+A probability trace on this algebra is a vector
+
+$$
+w=(w_2,w_3,w_5,w_7,w_{11}),
+\qquad
+w_p\ge0,\quad\sum_p w_p=1.
+$$
+
+The proposed exponent readout is
+
+$$
+\eta(w)=\sum_p w_p d_p=2-w_2.
+$$
+
+### 5.2 Symmetry scopes and orbits
+
+There are two symmetry scopes that must not be conflated. Changes of generator
+of $C_{12}$ commute with every $m_p$ and therefore fix every prime label
+individually. Under carrier naturality alone, the full probability simplex
+remains admissible.
+
+For a stronger falsification test, grant the full abstract automorphism group
+of $U(12)\cong C_2\times C_2$. It is isomorphic to $S_3$ and permutes the three
+nonidentity unit elements $5,7,11$, while the exceptional nonunit primes $2$
+and $3$ remain distinguished by kernel homology. A trace invariant under this
+enlarged symmetry must and may have the form
+
+$$
+w(x,y,z)
+=
+(x,y,z/3,z/3,z/3),
+$$
+
+where $x,y,z\ge0$ and $x+y+z=1$.
+
+This proves that the invariant state space is a two-simplex. On it,
+
+$$
+\eta=2-x,
+\qquad 1\le\eta\le2.
+$$
+
+In particular,
+
+$$
+\eta=\frac95
+\quad\Longleftrightarrow\quad
+x=\frac15.
+$$
+
+Even this enlarged invariance condition does not force $x=1/5$. The weaker
+carrier-natural symmetry leaves still more freedom.
+
+### 5.3 Uniform and Hilbert traces
+
+Two natural-looking choices disagree:
+
+$$
+w_{\rm unif}=(1/5,1/5,1/5,1/5,1/5),
+\qquad
+\eta(w_{\rm unif})=\frac95,
+$$
+
+whereas weighting sectors by their Hilbert dimensions gives
+
+$$
+w_{\rm Hilb}
+=
+\frac1{9}(1,2,2,2,2),
+$$
+
+and
+
+$$
+\eta(w_{\rm Hilb})
+=
+\frac{17}{9}.
+$$
+
+The discrepancy is not a numerical defect. It is a mathematical demonstration
+that “take the natural trace” is under-specified.
+
+![Invariant trace simplex](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program125_invariant_trace_simplex.png)
+
+**Result:** **Proven.** Enlarged $\operatorname{Aut}(U(12))$ invariance
+classifies a two-simplex of admissible traces and does not select
+$\eta=9/5$. Carrier naturality alone permits the full simplex, so the no-go is
+robust to the symmetry scope.
+
+**Falsification consequence:** any future derivation of $9/5$ must supply a
+state-selection principle stronger than invariance. Maximum entropy would
+select the uniform trace only after the reference measure and admissible
+constraint set are specified; those are new premises, not consequences of the
+present fibre dimensions.
+
+## 6. Program 126 — A natural finite-carrier localizer
+
+### 6.1 Definition
+
+Let $C_n$ be a finite cyclic group and let $p<n$ be prime. Define
+
+$$
+m_p:C_n\longrightarrow C_n,
+\qquad
+m_p(x)=px.
+$$
+
+Let $\mathcal X_p^-$ denote the direct sum of real-character lines on which
+evaluation at the unit $p$ is negative. When $p$ is not a unit, set that
+summand to zero. Then define
+
+$$
+\mathcal F_p(C_n)
+=
+\widetilde H_0(\ker m_p)
+\oplus\mathcal X_p^-.
+$$
+
+### 6.2 Naturality theorem
+
+For every cyclic-group isomorphism $\psi:C_n\to C_n'$,
+
+$$
+\psi(px)=p\psi(x),
+$$
+
+hence
+
+$$
+\psi\circ m_p=m_p\circ\psi.
+$$
+
+It follows that $\psi$ maps $\ker m_p$ isomorphically to the corresponding
+kernel and induces an isomorphism of reduced zeroth homology. Conjugation also
+transports the real-character representation. Thus $\mathcal F_p$ is
+presentation-independent at the cyclic-carrier level.
+
+For $C_{12}$ the decomposition is
+
+$$
+\begin{array}{c|cc|c}
+p & \dim\widetilde H_0(\ker m_p) & \dim\mathcal X_p^- &
+\dim\mathcal F_p\\
+\hline
+2&1&0&1\\
+3&2&0&2\\
+5&0&2&2\\
+7&0&2&2\\
+11&0&2&2
+\end{array}
+$$
+
+All four changes of cyclic generator by the units $1,5,7,11$ preserve the
+construction.
+
+![Natural localizer](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program126_natural_fibre_localizer.png)
+
+**Result:** **Proven.** A natural localizer exists once the strict
+$C_{12}$ carrier is given.
+
+**Open boundary:** the construction does not prove that the ontology sources
+that carrier, does not select a probability trace on the five sectors, and
+does not couple the trace to the strict damping law. The localizer closes a
+presentation defect, not the state-selection problem.
+
+---
+
+# Part III — Programs 127–129: quantitative fractional dynamics
+
+## 7. Program 127 — Continuous finite-window fractional enclosure
+
+### 7.1 Fourier representation
+
+The normalized symbol is
+
+$$
+S(q)=1-\widehat p(q)
+=
+\frac{2\sum_{d\ge1}a_d(1-\cos qd)}{Z}.
+$$
+
+The Abelian candidate is
+
+$$
+S(q)\sim C|q|^{4/5}.
+$$
+
+Unlike a pointwise sample, a continuous-window certificate must control
+frequency cells, truncation tails, normalization, and numerical evaluation.
+
+### 7.2 Computation and analytic bounds
+
+The computation uses an FFT of length
+
+$$
+N=2^{21},
+$$
+
+retaining distances through
+
+$$
+D=1,048,575.
+$$
+
+For a cell of half-width $\delta q=\pi/N$, the finite numerator varies by at
+most
+
+$$
+\delta q\,
+2\sum_{d=1}^{D}a_d d.
+$$
+
+The omitted normalization is bounded by the monotone tail
+
+$$
+2\sum_{d>D}d^{-9/5}
+\le
+\frac{2D^{-4/5}}{4/5}.
+$$
+
+The numerator tail uses $0\le1-\cos(qd)\le2$. These inequalities enclose every
+cell whose centre lies in the stated window.
+
+### 7.3 Result
+
+There are 6,338 covered frequency cells. The largest conservative relative
+remainder upper bound is
+
+$$
+0.0226460484.
+$$
+
+![Continuous fractional enclosure](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program127_continuous_fractional_enclosure.png)
+
+**Result:** **Strong evidence with analytic tail and cell bounds.** The full
+compact window is covered, but the FFT is not performed in directed
+machine-verified interval arithmetic. A formal theorem would require replacing
+the guarded floating-point transform by a validated FFT or exact transform
+enclosure.
+
+**What is not proved:** this finite window is not a rate theorem as
+$q\to0$. Oscillatory tails and small divisors can become relevant below the
+window.
+
+## 8. Program 128 — Quantitative stable finite-step window
+
+For a rescaled $n$-step process, set
+
+$$
+q_n=k\,n^{-5/4}.
+$$
+
+The finite characteristic function is
+
+$$
+\Phi_n(k)
+=
+\left(1-S(q_n)\right)^n,
+$$
+
+while the stable target is
+
+$$
+\Phi_\infty(k)=e^{-C|k|^{4/5}}.
+$$
+
+Program 127 provides lower and upper values of $S$ and $C$, and hence explicit
+intervals for both functions. Fifteen $(n,k)$ combinations lie inside the
+certified frequency window. Across them, the largest endpoint-distance bound
+is
+
+$$
+8.7262\times10^{-3},
+$$
+
+and the largest strict separation of the two conservative intervals is
+
+$$
+4.9583\times10^{-3}.
+$$
+
+![Finite stable window](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program128_quantitative_stable_window.png)
+
+**Result:** **Conditional quantitative theorem.** The bounds are valid
+conditional on the Program-127 enclosure. They demonstrate the scale of the
+finite-step correction but do not monotonically improve throughout the table,
+because the smallest $q$ cells have looser tail-relative bounds.
+
+**Falsification test:** the claim “all certified finite-step intervals already
+overlap the asymptotic interval” is false. This stronger statement is not
+retained.
+
+## 9. Program 129 — Fractional wave dynamics and the UV obstruction
+
+The continuum fractional wave group has formal multiplier
+
+$$
+U_t(q)=e^{-itC|q|^\alpha},
+\qquad
+\alpha=\frac45.
+$$
+
+On $L^2$, functional calculus gives a unitary group. A pointwise propagation
+claim is stronger. The phase curvature on a dyadic shell $|q|\sim\Lambda$ is
+
+$$
+|\partial_q^2(tC|q|^\alpha)|
+\asymp
+tC\alpha(1-\alpha)\Lambda^{\alpha-2}.
+$$
+
+The usual one-dimensional curvature estimate therefore contributes
+
+$$
+O\!\left(
+t^{-1/2}\Lambda^{(2-\alpha)/2}
+\right)
+=
+O\!\left(t^{-1/2}\Lambda^{3/5}\right).
+$$
+
+This grows with $\Lambda$ and cannot be summed over ultraviolet shells.
+
+![Wave UV obstruction](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program129_fractional_wave_uv_obstruction.png)
+
+The minimal mathematically safe object is therefore the cutoff family
+
+$$
+U_t^\Lambda
+=
+\mathbf1_{\{|q|\le\Lambda\}}
+e^{-itC|q|^{4/5}},
+$$
+
+which is unitary on its cutoff subspace.
+
+**Result:** **Proven obstruction for the standard cutoff-free dispersive
+route.**
+
+This does not prove that every sophisticated distributional formulation or
+weighted estimate is impossible. It proves that the present operator alone
+does not supply a point detector and that the standard dyadic argument cannot
+remove the UV cutoff. Detector resolution is thus a genuine missing
+operational object, not a cosmetic detail.
+
+---
+
+# Part IV — Programs 130–132: physical calibration, apparatus learning, and flow
+
+## 10. Program 130 — The minimal dimensional calibration object
+
+### 10.1 Construction
+
+Let $x$ and $t$ denote dimensionless lattice position and operational time.
+Introduce three positive calibration constants:
+
+$$
+\ell\quad\text{(length)},\qquad
+\tau\quad\text{(time)},\qquad
+\hbar\quad\text{(action)}.
+$$
+
+Then
+
+$$
+x_{\rm phys}=\ell x,
+\qquad
+t_{\rm phys}=\tau t,
+\qquad
+H_{\rm phys}=\frac{\hbar}{\tau}A.
+$$
+
+For the fractional generator,
+
+$$
+D_{4/5}=\frac{\ell^{4/5}}{\tau},
+\qquad
+c_H=\frac{\hbar\ell^{4/5}}{\tau}.
+$$
+
+### 10.2 Rank theorem
+
+In logarithmic units, length, time, and energy depend on
+$(\log\ell,\log\tau,\log\hbar)$ through
+
+$$
+M=
+\begin{pmatrix}
+1&0&0\\
+0&1&0\\
+0&-1&1
+\end{pmatrix}.
+$$
+
+Since
+
+$$
+\det M=1,
+\qquad
+\operatorname{rank}M=3,
+$$
+
+three independent calibrations are necessary to set those three physical
+dimensions.
+
+![Dimensional calibration](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program130_dimensional_calibration.png)
+
+With illustrative independent relative uncertainties of $1\%$ in $\ell$,
+$2\%$ in $\tau$, and $3\%$ in $\hbar$, linear error propagation gives
+
+$$
+\frac{\sigma_E}{E}=3.606\%,
+\qquad
+\frac{\sigma_{D_{4/5}}}{D_{4/5}}=2.154\%,
+\qquad
+\frac{\sigma_{c_H}}{c_H}=3.693\%.
+$$
+
+**Result:** **Proven dimensional-analysis theorem; conditional physical
+object constructed.**
+
+No internal FIN theorem presently generates $\ell,\tau,\hbar$. Spectral
+asymptotics can compare dimensionless scales, but without one dimensionful
+reference it cannot create SI length, duration, or action from pure numbers.
+
+## 11. Program 131 — Nonparametric apparatus process tomography
+
+### 11.1 Operational problem
+
+A measurement record is not determined by the system generator alone. An
+apparatus may have memory:
+
+$$
+\Pr(r_t\mid s_t,r_{<t})\ne\Pr(r_t\mid s_t).
+$$
+
+The smallest model-independent finite-memory approximation is a conditional
+table of order $r$,
+
+$$
+\Pr(E_t\mid E_{t-r:t-1}),
+$$
+
+where $E_t$ is the apparatus error bit.
+
+### 11.2 Synthetic identifiability test
+
+A reproducible synthetic channel was generated with refreshed error
+prevalence $0.1$ and persistence $0.8$. Orders zero, one, and two were fitted
+using Jeffreys-smoothed conditional frequencies. With 10,000 calibration
+records, held-out log losses per record are
+
+$$
+\begin{array}{c|ccc}
+\text{order}&0&1&2\\
+\hline
+\text{log loss}&0.311244&0.119580&0.119683.
+\end{array}
+$$
+
+The true order-one model is recovered. The order-two estimator approaches it
+but pays a finite-sample variance penalty.
+
+![Apparatus tomography](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program131_apparatus_tomography.png)
+
+**Result:** **Constructed and numerically validated on synthetic data.**
+
+The estimator supplies the missing mathematical type of a calibratable
+apparatus channel. It is not evidence that any physical apparatus follows FIN,
+and no external observations were used.
+
+## 12. Program 132 — Exact projective crossover flow
+
+Consider the constructed crossover operator
+
+$$
+A_{\kappa,\nu}
+=
+\kappa(-\Delta)+\nu(-\Delta)^{2/5}.
+$$
+
+Let
+
+$$
+g=\frac{\nu}{\kappa}.
+$$
+
+Under length rescaling by $b$, the ratio transforms as
+
+$$
+g(b)=b^{6/5}g.
+$$
+
+Compactify the positive ratio by
+
+$$
+x=\frac{g}{1+g}.
+$$
+
+Differentiation with respect to $\log b$ gives the exact projective flow
+
+$$
+\frac{dx}{d\log b}
+=
+\frac65x(1-x).
+$$
+
+Its fixed points are $x=0$, the local UV endpoint, and $x=1$, the fractional
+IR endpoint. The crossover momentum is
+
+$$
+q_*=\left(\frac{\nu}{\kappa}\right)^{5/6}.
+$$
+
+![Crossover RG](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program132_crossover_rg_flow.png)
+
+**Result:** **Proven for the constructed two-term operator.**
+
+This is a scaling theorem, not a derivation of $\kappa$ or $\nu$ from strict
+FIN and not a full interacting renormalization group.
+
+---
+
+# Part V — Programs 133–136: parameter sources, bridge maps, and signed states
+
+## 13. Program 133 — Phase and frequency source falsification
+
+The new fibre object supplies several intrinsic integers:
+
+$$
+12,\ 5,\ 9,\ 17,\ 16,\ 4,\ 2,
+$$
+
+respectively carrier order, number of prime sectors, sum of dimensions, sum of
+squared dimensions, product of dimensions, number of real characters, and
+the $p=3$ fibre dimension.
+
+These integers reproduce the frozen phase and frequency exactly:
+
+$$
+\phi
+=
+\frac{17-4}{5\cdot16}
+=
+\frac{13}{80},
+$$
+
+$$
+\omega
+=
+\frac{17(4\cdot12-4)-5}{5^3(2\cdot16)}
+=
+\frac{743}{4000}.
+$$
+
+The equalities are arithmetically correct. They are nevertheless not accepted
+as derivations.
+
+### 13.1 Uniqueness audit
+
+Within the limited template
+
+$$
+\frac{A-B}{CD},
+$$
+
+using the seven intrinsic integers, two ordered encodings reproduce $\phi$.
+Within
+
+$$
+\frac{A(BC-B)-D}{D^3EP},
+$$
+
+four ordered encodings reproduce $\omega$. Permutation equivalences already
+destroy literal uniqueness, while the much larger space of rational
+expressions contains indefinitely many target encodings.
+
+Changing one input integer moves the results away from the frozen values.
+No functor, action, extremum, universality theorem, or robustness principle
+selects the displayed expressions.
+
+![Parameter source test](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program133_phase_frequency_source_test.png)
+
+**Result:** **Refuted as a source theorem.** Exact post-hoc arithmetic is
+reported as an identity, not promoted to physics.
+
+## 14. Program 134 — Amplitude projectivization
+
+Define the amplitude quotient
+
+$$
+\Pi_0(K)=\frac{K}{K(0)},
+\qquad K(0)\ne0.
+$$
+
+It satisfies
+
+$$
+\Pi_0(cK)=\Pi_0(K),
+\qquad
+\Pi_0(\Pi_0(K))=\Pi_0(K).
+$$
+
+Thus $\alpha_{\rm geo}$ disappears from the projectivized legacy shape.
+However, over distances $0\le d\le64$, the relative $L^2$ mismatch between
+projectivized legacy and strict shapes is
+
+$$
+3.70714.
+$$
+
+Even the best scalar-only fit has relative residual
+
+$$
+0.933864.
+$$
+
+![Amplitude quotient](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program134_amplitude_projectivization.png)
+
+**Result:** **Proven quotient theorem and strong finite falsification of
+scalar-only completion.**
+
+The quotient clarifies one legitimate sense in which amplitude can be
+gauge-like for kernel shape. It also proves a role-transfer obstruction:
+absolute-amplitude observables are erased by $\Pi_0$ and cannot be transported
+through this map alone.
+
+## 15. Program 135 — Conditional damping-side bridge
+
+Expose the unresolved trace weight rather than hiding it:
+
+$$
+\eta(w)=2-w_2.
+$$
+
+The trace-parameterized damping factor mapping the legacy denominator to the
+strict denominator is
+
+$$
+D_w(d)
+=
+\frac{1+\beta_{\rm tors}d}
+{1+d^{2-w_2}}.
+$$
+
+If the uniform sector state is added, $w_2=1/5$ and
+
+$$
+D_{\rm unif}(d)
+=
+\frac{1+\beta_{\rm tors}d}
+{1+d^{9/5}}.
+$$
+
+The numerical reconstruction residual is exactly zero to floating-point
+evaluation because the same algebraic expression is evaluated on both sides.
+
+The nonzero monomial tail
+
+$$
+T(d)=\beta d^\eta
+$$
+
+is multiplicative only if
+
+$$
+T(ab)=T(a)T(b)
+\quad\Longrightarrow\quad
+\beta=1.
+$$
+
+For the uniform trace, dyadic retention is
+
+$$
+2^{1-\eta}
+=
+2^{-4/5}
+=
+e^{-\alpha_{\rm geo}/5}.
+$$
+
+![Conditional damping bridge](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program135_conditional_damping_bridge.png)
+
+**Result:** **Exact but conditional.**
+
+Program 125 prevents promotion to a strict theorem: the uniform sector state
+is not forced. The phase and frequency source, amplitude-role semantics, and
+strict coupling theorem also remain absent. This is a damping-side completion
+factor, not a full bridge and not a role-transfer theorem.
+
+## 16. Program 136 — A signed operational state receiver
+
+Let $A$ be the fractional circulant on $C_{12}$ with eigenvalues
+$|q|^{4/5}$. For a density matrix $\rho$, define the nearest-link signed
+receiver
+
+$$
+\Lambda(\rho,A)
+=
+2\,\operatorname{Im}
+\sum_{i=0}^{11}
+\rho_{i,i+1}A_{i+1,i}.
+$$
+
+Prepared Fourier branches give
+
+$$
+\Lambda(\rho_{+1},A)=+0.498004,
+\qquad
+\Lambda(\rho_{-1},A)=-0.498004,
+$$
+
+and
+
+$$
+\Lambda(\rho_{+2},A)=+0.862568,
+\qquad
+\Lambda(\rho_{-2},A)=-0.862568.
+$$
+
+The reflection-invariant $k=0$ state and the thermal state $f(A)$ give zero.
+
+![Signed receiver](FIN_Programs_125_137_Trace_Localizer_Physics_Figures/program136_signed_state_receiver.png)
+
+**Result:** **Constructed and proven sign-paired.**
+
+This object is a receiver, not a source. It reads orientation after the
+preparation chooses $k$ or $-k$. Reflection symmetry pairs the two branches,
+so no non-premise preparation law is obtained. QW-2191 is not discharged.
+
+---
+
+# Part VI — Program 137, integrated conclusions, and falsification ledger
+
+## 17. Program 137 — External-data audit
+
+Five local data-intake or preregistration JSON artifacts were scanned for
+explicit positive admission markers. No artifact admits external data. The
+present round uses repository-internal values and reproducible synthetic
+records only.
+
+**Result:** **Reproducible local audit.**
+
+This is not a forensic scan of every repository byte. It is sufficient to
+state that no external dataset entered the explicit research-chain intake
+mechanism used by these releases.
+
+## 18. Newly constructed theoretical objects
+
+The round constructs the following objects without claiming more than their
+types support.
+
+1. A presentation-independent homological–character localizer on $C_{12}$.
+2. The enlarged-symmetry trace simplex and the carrier-natural full simplex
+   on the five-sector algebra.
+3. A continuous finite-window enclosure of the fractional symbol.
+4. Quantitative finite-step characteristic-function intervals.
+5. A UV-cutoff fractional wave family.
+6. A rank-three dimensional calibration map.
+7. A nonparametric finite-memory apparatus process tensor.
+8. An exact projective local-to-fractional crossover flow.
+9. An amplitude-projective kernel quotient.
+10. A trace-parameterized damping completion family.
+11. A signed state-dependent current receiver.
+
+## 19. Falsification ledger
+
+### 19.1 “The fibre dimensions canonically imply $9/5$”
+
+**Refuted.** They imply an affine readout $\eta=2-w_2$. The state $w$ is
+additional. The invariant state space is not a point.
+
+### 19.2 “The normalized Hilbert trace supplies the missing choice”
+
+**Refuted for $9/5$.** It supplies $17/9$.
+
+### 19.3 “The fibre object is presentation-dependent numerology”
+
+**Refuted at the $C_{12}$ carrier level.** The multiplication maps, kernel
+homology, and character representation are natural under cyclic-group
+isomorphisms.
+
+### 19.4 “The fractional law was seen only at selected frequencies”
+
+**Substantially weakened.** Every cell in a finite compact window is enclosed.
+Formal interval arithmetic and a true $q\to0$ rate remain open.
+
+### 19.5 “The same operator automatically defines a pointwise wave experiment”
+
+**Refuted by the present route.** The unitary $L^2$ group exists, but the
+standard UV shell estimate is nonsummable. Detector bandwidth is necessary.
+
+### 19.6 “Dimensionless mathematics can choose physical units internally”
+
+**Refuted without a new dimensionful source.** The minimum calibration map has
+rank three.
+
+### 19.7 “The exact rational encodings derive phase and frequency”
+
+**Refuted.** They are target-dependent identities without a selection theorem.
+
+### 19.8 “Amplitude normalization completes legacy to strict”
+
+**Refuted.** Projective shape mismatch remains large, and amplitude-dependent
+roles are erased.
+
+### 19.9 “A signed detector is a strict selector”
+
+**Refuted.** Opposite prepared branches give opposite signs. The missing
+object is the branch-preparation law.
+
+## 20. Theoretical architecture after Program 137
+
+The smallest honest architecture now has four layers:
+
+$$
+\begin{gathered}
+\boxed{\text{strict carrier and operator}}
+\\ \downarrow \\
+\boxed{\text{natural localizer plus chosen state}}
+\\ \downarrow \\
+\boxed{\text{operational process and apparatus}}
+\\ \downarrow \\
+\boxed{\text{physical calibration and data}}.
+\end{gathered}
+$$
+
+The first layer is repository-internal. Part of the second layer—the
+localizer—is now constructed, while its distinguished state remains open.
+The dimensionless part of the third layer is constructible; its preparation
+and detector-resolution sources remain conditional. The fourth layer is
+external until physical standards and observations are supplied.
+
+The missing theorem is therefore narrower than “derive all physics from the
+spectral theorem.” It would have to do at least three nontrivial things:
+
+1. select a distinguished state on the localized sector algebra;
+2. induce a non-premise preparation/orientation law compatible with that
+   state;
+3. connect dimensionless spectral scales to a calibrated physical standard.
+
+No theorem established here simultaneously performs those tasks.
+
+## 21. Research assessment
+
+### Proven
+
+- enlarged-symmetry invariant traces form the stated two-simplex, while
+  carrier naturality alone leaves the full simplex;
+- $9/5$ is not selected by invariance;
+- the Hilbert trace gives $17/9$;
+- the fibre localizer is presentation-independent on $C_{12}$;
+- the cutoff fractional wave family is well-defined in $L^2$;
+- the standard UV curvature bound is nonsummable;
+- the physical calibration matrix has rank three;
+- the projective crossover beta function is exact;
+- amplitude projectivization is idempotent and cannot preserve
+  amplitude-dependent roles;
+- the signed receiver is paired under orientation reversal.
+
+### Strong evidence
+
+- the $4/5$ symbol law holds with at most the stated conservative relative
+  remainder across the finite frequency window;
+- the finite-step stable comparison has the reported numerical bounds;
+- nonparametric apparatus memory is identifiable in the synthetic test.
+
+### Conditional
+
+- $\eta=9/5$ from the uniform sector state;
+- $\beta=1$ from a nonzero multiplicative monomial tail;
+- the damping-side completion map;
+- physical predictions after $(\ell,\tau,\hbar)$ calibration;
+- pointwise wave records after detector-bandwidth specification.
+
+### Open
+
+- a strict distinguished sector state;
+- a strict phase/frequency source;
+- a strict non-premise orientation preparation;
+- a full legacy-to-strict completion certificate;
+- a role-transfer theorem;
+- an internal dimensionful reference;
+- external experimental validation.
+
+---
+
+# Part VII — Recommended Programs 138–150
+
+The next studies are ranked to avoid replaying closed lanes. Each introduces a
+new typed object or a genuinely stronger validation standard.
+
+## 22. Program 138 — Modular-state selection on the fibre algebra
+
+Construct a faithful state $\rho$ on a noncommutative enlargement of
+$\mathcal A_{\mathcal F}$ and test whether a KMS or modular invariance
+condition selects $w_2=1/5$. The falsification criterion is strict: if the
+modular Hamiltonian must be chosen to encode the desired weights, no source
+has been found.
+
+**Probability of useful result:** 0.55.  
+**Probability of uniquely deriving $9/5$:** 0.15.
+
+## 23. Program 139 — Maximum-entropy reference-measure theorem
+
+Classify all reference measures and constraint sets for which the maximum
+relative-entropy state on the five sectors is uniform. Determine whether any
+reference measure is generated naturally by the localizer rather than
+inserted. This program should state a no-go theorem if uniformity is merely a
+choice of counting measure.
+
+**Probability of useful result:** 0.85.  
+**Probability of strict trace closure:** 0.25.
+
+## 24. Program 140 — Morita-stability test of the exponent readout
+
+Replace the fibre algebra by matrix amplifications and Morita-equivalent
+presentations. Test whether $\eta(w)$ survives canonical equivalence. If the
+uniform-sector trace changes under amplification while the physical exponent
+is meant to remain fixed, the current readout is not categorical enough.
+
+**Probability of useful result:** 0.80.
+
+## 25. Program 141 — Validated-FFT interval certificate
+
+Recompute Program 127 using outward-rounded interval arithmetic or a
+validated FFT. Produce a formally checkable enclosure on the entire window.
+This is the highest-priority proof upgrade because it turns strong numerical
+evidence into a computer-assisted theorem.
+
+**Probability of success:** 0.90.
+
+## 26. Program 142 — Diophantine oscillatory-tail rate
+
+Use explicit rational-approximation bounds for
+$\omega/(2\pi)=743/(8000\pi)$ to control oscillatory tail averages and derive
+an actual remainder rate in
+
+$$
+S(q)=C|q|^{4/5}+R(q).
+$$
+
+The target is a bound $|R(q)|\le C'|q|^{4/5+\delta}$ or a proof that the
+available arithmetic information cannot yield any uniform $\delta>0$.
+
+**Probability of a useful bound:** 0.45.
+
+## 27. Program 143 — Weighted dispersive estimates
+
+The cutoff-free unweighted route failed. Test whether weighted Sobolev,
+Besov, or frequency-localized estimates define operationally meaningful wave
+records without a hard UV cutoff. The detector norm must be specified before
+the estimate is evaluated.
+
+**Probability of useful partial theorem:** 0.70.  
+**Probability of removing all resolution data:** 0.10.
+
+## 28. Program 144 — Detector-resolution renormalization
+
+Construct a detector response $R_\sigma$ and study
+
+$$
+\mathcal M_{\sigma,t}=R_\sigma U_t.
+$$
+
+Derive how predictions change as $\sigma\to0$ and identify which observables
+have a finite resolution-independent limit. This turns the UV obstruction
+into a measurable apparatus parameter.
+
+**Probability of success:** 0.85.
+
+## 29. Program 145 — Joint system–instrument identifiability
+
+Extend Program 131 from a known synthetic system to simultaneous estimation
+of the fractional generator and a memory channel. Derive conditions under
+which generator changes cannot be absorbed into apparatus memory.
+
+**Probability of useful result:** 0.80.
+
+## 30. Program 146 — Calibration-invariant observable ratios
+
+Search systematically for combinations of records in which
+$\ell,\tau,\hbar$ cancel. Rank those ratios by sensitivity to the fractional
+exponent and robustness to apparatus memory. Such quantities are the shortest
+route to falsifiable dimensionless tests.
+
+**Probability of success:** 0.90.
+
+## 31. Program 147 — Preparation-resource theory for the sign torsor
+
+Treat $k$ versus $-k$ preparation as a resource. Classify free
+reflection-symmetric operations and monotones for signed preparation. Prove
+whether a nonzero $\Lambda$ can be generated from symmetric states under the
+allowed strict operations.
+
+**Probability of a no-go theorem:** 0.85.  
+**Probability of finding an internal selector:** 0.15.
+
+## 32. Program 148 — Coupled state–damping variational principle
+
+Construct the smallest convex functional of a sector state $w$ and a damping
+profile $D$ whose Euler equations could select both. The action must be
+target-free and invariant under the admitted carrier symmetries. An
+after-the-fact term minimized at $w_2=1/5$ is disallowed.
+
+**Probability of useful obstruction:** 0.75.  
+**Probability of unique strict selection:** 0.20.
+
+## 33. Program 149 — Full completion-map commutative diagram
+
+Assemble amplitude quotient, trace-dependent damping, phase/frequency data,
+and certified topological information into a typed diagram. Mark every arrow
+as strict, conditional, quotient, or absent. Prove which diagrams commute and
+which cannot commute because amplitude roles are lost.
+
+**Probability of useful result:** 0.95.
+
+## 34. Program 150 — Pre-data physical protocol and rejection thresholds
+
+Write one executable protocol specifying preparation, environment, clock,
+detector response, calibration, record format, null model, alternative, test
+statistic, and rejection region before any external data are admitted. Focus
+on calibration-invariant ratios from Program 146.
+
+**Probability of producing a valid preregistration:** 0.90.  
+**Probability of near-term empirical execution:** dependent on apparatus and
+dataset availability.
+
+## 35. Priority order
+
+The recommended execution order is
+
+$$
+141\to139\to140\to146\to144\to145\to147\to148\to149\to150,
+$$
+
+with Programs 138, 142, and 143 run as higher-risk mathematical branches.
+
+The rationale is:
+
+- first formalize the strongest numerical result;
+- then decide whether the trace can be selected without circularity;
+- next identify unit-free observables and detector resolution;
+- only then couple system and apparatus or prepare an empirical protocol.
+
+---
+
+# Reproducibility statement
+
+The executable research file is
+
+`fin_programs_125_137_trace_localizer_physics.py`.
+
+Machine-readable results are stored in
+
+`FIN_Programs_125_137_Trace_Localizer_Physics_Results.json`.
+
+Thirty-five regression tests are stored in
+
+`test_fin_programs_125_137_trace_localizer_physics.py`.
+
+Twelve figures were generated from the same executable. Randomized synthetic
+apparatus calculations use seed 20260727. No external dataset is admitted.
+
+# Conclusion
+
+Programs 125–137 sharpen the physical interpretation of FIN by separating
+three objects that had been in danger of conflation:
+
+$$
+\text{localizer},\qquad
+\text{state on localized sectors},\qquad
+\text{physical calibration}.
+$$
+
+The localizer can be constructed naturally. The state is not selected by
+symmetry and is not rescued by the normalized Hilbert trace. Physical
+calibration remains an independent rank-three interface. The fractional
+operator itself is mathematically productive: it supports stable diffusion,
+unitary wave evolution, an exact crossover flow, and operational receiver
+models. But wave measurements require resolution, signed receivers require
+signed preparation, and dimensional predictions require standards.
+
+The most defensible mathematical interpretation after falsification is
+therefore not that one spectral operator already constitutes a physical
+universe. It is that FIN supplies a dimensionless fractional spectral
+generator on a finite informational carrier, together with a natural
+localization structure. Turning that structure into physics requires a
+distinguished state, a preparation/instrument law, dimensional calibration,
+and external records. Those are now explicit mathematical obligations rather
+than unnamed gaps.
+
+# Selected references
+
+1. W. Feller, *An Introduction to Probability Theory and Its Applications,
+   Volume II*, Wiley.
+2. K. Sato, *Lévy Processes and Infinitely Divisible Distributions*,
+   Cambridge University Press.
+3. D. Applebaum, *Lévy Processes and Stochastic Calculus*, Cambridge
+   University Press.
+4. R. Schilling, R. Song, and Z. Vondracek, *Bernstein Functions*, De
+   Gruyter.
+5. E. M. Stein, *Harmonic Analysis*, Princeton University Press.
+6. S. Mac Lane, *Categories for the Working Mathematician*, Springer.
+7. J.-P. Serre, *Linear Representations of Finite Groups*, Springer.
+8. M. Nielsen and I. Chuang, *Quantum Computation and Quantum Information*,
+   Cambridge University Press.
+9. F. G. S. L. Brandão and G. Gour, “Reversible framework for quantum
+   resource theories,” *Physical Review Letters* 115, 070503.
+10. J. Pearl, *Causality*, Cambridge University Press.
+
+# Suggested citation
+
+Żuchowski, K. (2026). *FIN Programs 125–137: Trace Selection, Natural
+Localizers, Fractional Physics, and Operational Sources* (FIN Research
+Monograph, Release 10.13; Version 1.0.0) [Preprint]. Zenodo.

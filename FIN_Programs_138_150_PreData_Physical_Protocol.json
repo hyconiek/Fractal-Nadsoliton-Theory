@@ -1,0 +1,61 @@
+{
+  "core": {
+    "protocol_id": "FIN-P150-FRACTIONAL-IQR-001",
+    "version": "1.0.0",
+    "frozen_date": "2026-07-27",
+    "scientific_question": "Does a calibrated one-dimensional spreading record have local diffusive exponent alpha=2 or FIN fractional exponent alpha=4/5?",
+    "preparation": "One localized packet prepared by a documented apparatus; identical preparation procedure at both observation times.",
+    "times": [
+      1.0,
+      4.0
+    ],
+    "records_per_time_minimum": 4000,
+    "detector": {
+      "response_family": "Gaussian position response",
+      "maximum_relative_resolution_sigma_over_reference_IQR": 0.1,
+      "memory_calibration": "independent known-input sequence before test records"
+    },
+    "calibration": {
+      "required": [
+        "time ordering and time ratio",
+        "detector response"
+      ],
+      "cancelled_by_statistic": [
+        "multiplicative length scale"
+      ]
+    },
+    "primary_statistic": "T=log(IQR(t=4)/IQR(t=1))/log(4)",
+    "null": "H0: alpha=2, predicted T=1/2",
+    "alternative": "H1: alpha=4/5, predicted T=5/4",
+    "rejection_rule": "Reject H0 in favor of H1 when T>0.875",
+    "exclusions": [
+      "failed preparation audit",
+      "time-ratio uncertainty above preregistered tolerance",
+      "detector resolution above 0.1 reference IQR",
+      "missing raw records",
+      "post-hoc changes to binning or quantile definition"
+    ],
+    "raw_record_format": [
+      "record_id",
+      "preparation_batch",
+      "time",
+      "position_readout",
+      "detector_calibration_id",
+      "timestamp"
+    ],
+    "external_data_admitted": false,
+    "claim_boundary": "A rejection concerns the declared local-vs-fractional operational models only; it does not prove the FIN ontology, bridge, or ToE."
+  },
+  "canonical_core_sha256": "0c292bf5d8efce3055a27daa16e60d60b53e2e2cb9852c37827418ec1ec453f5",
+  "synthetic_power_audit": {
+    "replicates": 450,
+    "records_per_time": 4000,
+    "threshold": 0.875,
+    "null_mean": 0.4990469408800606,
+    "null_sd": 0.018354018437976634,
+    "alternative_mean": 1.2456231161934093,
+    "alternative_sd": 0.030950899422176086,
+    "synthetic_false_positive_rate": 0.0,
+    "synthetic_power": 1.0
+  }
+}

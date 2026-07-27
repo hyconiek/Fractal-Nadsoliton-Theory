@@ -1,0 +1,423 @@
+{
+  "release": "10.7",
+  "programs": "61-70",
+  "seed": 20260727,
+  "scope": "finite dimensionless FIN core plus explicitly conditioned physics interfaces",
+  "programs_data": {
+    "program_61_continuum_functor": {
+      "fixed_normalization": "mean diagonal equals one",
+      "positive_realization": "absolute-value repair, row-normalized weights",
+      "sizes": [
+        6,
+        12,
+        24,
+        48
+      ],
+      "families": {
+        "strict_absolute": {
+          "rows": [
+            {
+              "n": 6,
+              "operator_projective_defect": 0.08779288943093484,
+              "green_projective_defect": 0.4601859071344127
+            },
+            {
+              "n": 12,
+              "operator_projective_defect": 0.06784121137033579,
+              "green_projective_defect": 0.40072913830873746
+            },
+            {
+              "n": 24,
+              "operator_projective_defect": 0.08571943526678183,
+              "green_projective_defect": 0.3624065804042088
+            },
+            {
+              "n": 48,
+              "operator_projective_defect": 0.07760171444168451,
+              "green_projective_defect": 0.31031735023342666
+            }
+          ],
+          "operator_defect_monotone_decreasing": false,
+          "green_defect_monotone_decreasing": true,
+          "operator_loglog_slope": -0.019658629841989163,
+          "green_loglog_slope": -0.18504355873534478
+        },
+        "legacy_absolute": {
+          "rows": [
+            {
+              "n": 6,
+              "operator_projective_defect": 0.17665356393825457,
+              "green_projective_defect": 0.402332643853795
+            },
+            {
+              "n": 12,
+              "operator_projective_defect": 0.12159804731637226,
+              "green_projective_defect": 0.3567141914161377
+            },
+            {
+              "n": 24,
+              "operator_projective_defect": 0.07964904724785707,
+              "green_projective_defect": 0.3008044876815463
+            },
+            {
+              "n": 48,
+              "operator_projective_defect": 0.05569887342430379,
+              "green_projective_defect": 0.2419237415819925
+            }
+          ],
+          "operator_defect_monotone_decreasing": true,
+          "green_defect_monotone_decreasing": true,
+          "operator_loglog_slope": -0.5605999460059765,
+          "green_loglog_slope": -0.24474518432862521
+        }
+      },
+      "verdict": "Exact Schur compression exists at every finite level, but a continuum/projective functor additionally requires the compressed operator to agree with the native lower-resolution operator. The measured naturality defects test, rather than assume, that claim."
+    },
+    "program_62_regularizer_independence": {
+      "strict": [
+        {
+          "delta": 0.1,
+          "resistance_relative_error": 0.07659846939480727,
+          "green_fro_norm": 10.23800712504276,
+          "delta_times_green_fro_norm": 1.023800712504276
+        },
+        {
+          "delta": 0.01,
+          "resistance_relative_error": 0.00836544994520199,
+          "green_fro_norm": 100.02849427885326,
+          "delta_times_green_fro_norm": 1.0002849427885325
+        },
+        {
+          "delta": 0.001,
+          "resistance_relative_error": 0.000844430417151865,
+          "green_fro_norm": 1000.0029016514832,
+          "delta_times_green_fro_norm": 1.000002901651483
+        },
+        {
+          "delta": 0.0001,
+          "resistance_relative_error": 8.452283060152025e-05,
+          "green_fro_norm": 10000.00029068711,
+          "delta_times_green_fro_norm": 1.000000029068711
+        },
+        {
+          "delta": 1e-05,
+          "resistance_relative_error": 8.453081871966355e-06,
+          "green_fro_norm": 100000.00002822494,
+          "delta_times_green_fro_norm": 1.0000000002822496
+        },
+        {
+          "delta": 1e-06,
+          "resistance_relative_error": 8.453125639782196e-07,
+          "green_fro_norm": 1000000.0000952426,
+          "delta_times_green_fro_norm": 1.0000000000952425
+        },
+        {
+          "delta": 1e-07,
+          "resistance_relative_error": 8.459986572689802e-08,
+          "green_fro_norm": 9999999.990327211,
+          "delta_times_green_fro_norm": 0.9999999990327211
+        }
+      ],
+      "legacy_absolute": [
+        {
+          "delta": 0.1,
+          "resistance_relative_error": 0.005706312616341301,
+          "green_fro_norm": 10.001750565729884,
+          "delta_times_green_fro_norm": 1.0001750565729883
+        },
+        {
+          "delta": 0.01,
+          "resistance_relative_error": 0.0005736281911966829,
+          "green_fro_norm": 100.0001769107354,
+          "delta_times_green_fro_norm": 1.0000017691073542
+        },
+        {
+          "delta": 0.001,
+          "resistance_relative_error": 5.739296424486789e-05,
+          "green_fro_norm": 1000.000017708388,
+          "delta_times_green_fro_norm": 1.000000017708388
+        },
+        {
+          "delta": 0.0001,
+          "resistance_relative_error": 5.739598039821346e-06,
+          "green_fro_norm": 10000.000001888347,
+          "delta_times_green_fro_norm": 1.0000000001888347
+        },
+        {
+          "delta": 1e-05,
+          "resistance_relative_error": 5.739593365907674e-07,
+          "green_fro_norm": 100000.00001310455,
+          "delta_times_green_fro_norm": 1.0000000001310456
+        },
+        {
+          "delta": 1e-06,
+          "resistance_relative_error": 5.7373068882543416e-08,
+          "green_fro_norm": 999999.9998537776,
+          "delta_times_green_fro_norm": 0.9999999998537775
+        },
+        {
+          "delta": 1e-07,
+          "resistance_relative_error": 6.402777806678958e-09,
+          "green_fro_norm": 9999999.886388829,
+          "delta_times_green_fro_norm": 0.9999999886388828
+        }
+      ],
+      "theorem": "For a connected graph Laplacian, the divergent delta^-1 zero-mode term in (L+delta I)^-1 cancels from pairwise resistance. The shifted resistance converges to the Moore-Penrose resistance, while the full Green norm diverges.",
+      "scope": "This limit is available for declared positive graph realizations. It does not make the raw signed legacy Laplacian a Markov generator."
+    },
+    "program_63_compression_semigroup": {
+      "direct_48_to_12_vs_sequential_48_to_24_to_12_relative_residual": 1.2915721062791716e-16,
+      "semigroup_theorem": "Nested Schur elimination is transitive: if E is contained in F, Schur_E(Schur_F(A))=Schur_E(A), provided eliminated blocks are invertible.",
+      "legacy_projective_defects": [
+        {
+          "n": 6,
+          "operator_projective_defect": 0.17665356393825457,
+          "green_projective_defect": 0.402332643853795
+        },
+        {
+          "n": 12,
+          "operator_projective_defect": 0.12159804731637226,
+          "green_projective_defect": 0.3567141914161377
+        },
+        {
+          "n": 24,
+          "operator_projective_defect": 0.07964904724785707,
+          "green_projective_defect": 0.3008044876815463
+        },
+        {
+          "n": 48,
+          "operator_projective_defect": 0.05569887342430379,
+          "green_projective_defect": 0.2419237415819925
+        }
+      ],
+      "fixed_point_status": "Exact composition does not imply a fixed point. A fixed point also requires equality with the independently defined native lower-scale operator under one normalization."
+    },
+    "program_64_krein_signed_alternative": {
+      "inertia": {
+        "negative": 11,
+        "positive": 1,
+        "zero": 0
+      },
+      "minimum_eigenvalue": -21.327059810423748,
+      "maximum_eigenvalue": 0.05000000000000071,
+      "J_involution_residual": 7.742632963403649e-15,
+      "Krein_selfadjoint_residual": 2.441834525168821e-14,
+      "JA_minimum_eigenvalue": 0.04999999999999005,
+      "unitarity_residual": 8.677681490507315e-16,
+      "raw_diffusion_operator_norm": 8.437668117543838,
+      "absolute_generator_diffusion_norm": 0.9950124791926822,
+      "raw_diffusion_minimum_entry": -1.061086710900532,
+      "nonreal_resolvent_inverse_residual": 2.1942447249498674e-15,
+      "indefinite_green_distance_negative_entries": 132,
+      "verdict": "The signed Hermitian generator already gives unitary dynamics and off-spectrum resolvents. A Krein fundamental symmetry converts it to |A| for a positive diffusion, but that changes the generator. Krein structure does not export a Markov process or physical metric from the raw signed legacy operator."
+    },
+    "program_65_operational_tomography": {
+      "dimensionless_time": 1.0,
+      "channel_difference_rank": 11,
+      "unitary_circulant_residual": 6.771282396954332e-16,
+      "diffusive_circulant_residual": 3.1801791805594023e-16,
+      "one_localized_preparation_full_detector_TV": 0.359654048943292,
+      "optimal_binary_detector_sites": [
+        0,
+        1,
+        11
+      ],
+      "one_preparation_optimal_binary_difference": 0.3596540489432919,
+      "one_preparation_pair_coarse_TV": 0.34058898418284544,
+      "minimum_exact_discrimination_under_known_model_class": "one localized preparation plus one nontrivial binary instrument at t>0",
+      "tomography_scope": "One preparation reconstructs a translation-covariant circulant transition kernel. Without the circulant prior, full channel tomography requires a spanning preparation set."
+    },
+    "program_66_causal_order": {
+      "cycle_distance": 6,
+      "strict_all_distance_first_nonzero_power": 1,
+      "strict_wave_leading_probability_exponent": 2,
+      "strict_diffusion_leading_exponent": 1,
+      "nearest_neighbor_first_nonzero_power": 6,
+      "nearest_neighbor_wave_leading_probability_exponent": 12,
+      "nearest_neighbor_diffusion_leading_exponent": 6,
+      "strict_leading_matrix_coefficient": -0.011070817321442113,
+      "nearest_neighbor_leading_matrix_coefficient": 0.021554487869694175,
+      "verdict": "The full strict C12 kernel couples the opposite site at first order, so it has no exact finite-speed cone relative to cycle distance. The local control is suppressed to graph-distance order but matrix exponentials still have nonzero tails for every t>0. A Lorentzian causal order is an additional structure."
+    },
+    "program_67_calibration_identifiability": {
+      "rank_length_only": 1,
+      "rank_length_plus_time": 2,
+      "rank_length_plus_energy": 2,
+      "rank_time_plus_energy": 2,
+      "rank_length_time_energy": 3,
+      "true_conversion_triple": [
+        2.499999999999999e-06,
+        4.0000000000000036e-09,
+        1.6999999999999932e-34
+      ],
+      "recovered_conversion_triple": [
+        2.499999999999999e-06,
+        4.0000000000000036e-09,
+        1.6999999999999932e-34
+      ],
+      "maximum_relative_recovery_error": 0.0,
+      "minimal_experiment_classes": [
+        "one calibrated length record",
+        "one calibrated clock record",
+        "one calibrated energy/action record"
+      ],
+      "verdict": "For independent length, time, and action units the log-Jacobian has rank three only when all three experiment classes are present. More dimensionless FIN observations cannot replace a missing calibration direction."
+    },
+    "program_68_chiral_source_law": {
+      "candidate_formula": "sum_i[D_i,i+1 D_i+1,i+2 D_i+2,i - D_i,i-1 D_i-1,i-2 D_i-2,i]",
+      "results": {
+        "strict": {
+          "radial_candidate": 0.0,
+          "directed_plus": 0.4332370455274156,
+          "directed_minus": -0.43323704552741565,
+          "sign_pair_residual": 5.551115123125783e-17,
+          "reflection_odd_residual": 5.551115123125783e-17,
+          "translation_invariance_residual": 0.0
+        },
+        "legacy": {
+          "radial_candidate": 0.0,
+          "directed_plus": -4.635075700554438,
+          "directed_minus": 4.635075700554438,
+          "sign_pair_residual": 0.0,
+          "reflection_odd_residual": 0.0,
+          "translation_invariance_residual": 0.0
+        }
+      },
+      "general_no_go": "If F(RWR)=-F(W) and the radial kernel obeys RWR=W, then F(W)=-F(W), hence F(W)=0.",
+      "verdict": "The explicit loop is translation invariant and reflection odd, but vanishes on both radial kernels. It becomes nonzero only after an oriented antisymmetric datum is inserted; its sign then follows the inserted orientation. This is a receiver, not a strict source law."
+    },
+    "program_69_landauer_protocol": {
+      "conditioning_data": [
+        "two-state memory",
+        "thermal bath",
+        "temperature T",
+        "quasistatic level-raising protocol",
+        "work and heat sign convention"
+      ],
+      "rows": [
+        {
+          "beta_gap": 0.5,
+          "reset_error": 0.3775406687981454,
+          "final_Shannon_entropy_nats": 0.6628473185791794,
+          "beta_reversible_work": 0.2190701963798386,
+          "beta_heat_to_bath": 0.03029986198076584,
+          "beta_internal_energy_change": 0.1887703343990727,
+          "first_law_residual": 5.551115123125783e-17,
+          "Clausius_equality_residual": 0.0
+        },
+        {
+          "beta_gap": 1.0,
+          "reset_error": 0.2689414213699951,
+          "final_Shannon_entropy_nats": 0.5822031088882179,
+          "beta_reversible_work": 0.3798854930417224,
+          "beta_heat_to_bath": 0.11094407167172737,
+          "beta_internal_energy_change": 0.2689414213699951,
+          "first_law_residual": -5.551115123125783e-17,
+          "Clausius_equality_residual": 0.0
+        },
+        {
+          "beta_gap": 2.0,
+          "reset_error": 0.11920292202211755,
+          "final_Shannon_entropy_nats": 0.36533385508720767,
+          "beta_reversible_work": 0.5662191695169728,
+          "beta_heat_to_bath": 0.3278133254727376,
+          "beta_internal_energy_change": 0.2384058440442351,
+          "first_law_residual": 1.1102230246251565e-16,
+          "Clausius_equality_residual": 0.0
+        },
+        {
+          "beta_gap": 5.0,
+          "reset_error": 0.0066928509242848554,
+          "final_Shannon_entropy_nats": 0.04017960311054234,
+          "beta_reversible_work": 0.6864318320708273,
+          "beta_heat_to_bath": 0.6529675774494029,
+          "beta_internal_energy_change": 0.03346425462142428,
+          "first_law_residual": 4.85722573273506e-17,
+          "Clausius_equality_residual": 0.0
+        },
+        {
+          "beta_gap": 10.0,
+          "reset_error": 4.5397868702434395e-05,
+          "final_Shannon_entropy_nats": 0.0004993775862411646,
+          "beta_reversible_work": 0.6931017816607284,
+          "beta_heat_to_bath": 0.6926478029737041,
+          "beta_internal_energy_change": 0.00045397868702434395,
+          "first_law_residual": 3.903127820947816e-18,
+          "Clausius_equality_residual": 0.0
+        },
+        {
+          "beta_gap": 20.0,
+          "reset_error": 2.0611536181902037e-09,
+          "final_Shannon_entropy_nats": 4.3284225947073694e-08,
+          "beta_reversible_work": 0.6931471784987917,
+          "beta_heat_to_bath": 0.6931471372757193,
+          "beta_internal_energy_change": 4.122307236380407e-08,
+          "first_law_residual": 3.6260990781033966e-17,
+          "Clausius_equality_residual": 0.0
+        }
+      ],
+      "limit_beta_gap_to_infinity": {
+        "reset_error": 0.0,
+        "beta_work": 0.6931471805599453,
+        "beta_heat_to_bath": 0.6931471805599453
+      },
+      "verdict": "Shannon information becomes thermodynamic only after k_B, T, a bath, a Hamiltonian protocol, and work/heat instruments are supplied. The Landauer limit is derived inside that conditioned protocol; it is not generated by the dimensionless FIN kernel alone."
+    },
+    "program_70_blinded_challenge": {
+      "preregistered_seed": 20260727,
+      "hidden_generator_sha256": "94b3bef894ce659a1c42e2783f7a478846c0114ea45d754e33f3fe7712f641bf",
+      "hidden_generator_in_candidate_set": false,
+      "preparations": [
+        0,
+        3,
+        5
+      ],
+      "training_times": [
+        0.35,
+        0.7,
+        1.05
+      ],
+      "heldout_times": [
+        1.4,
+        1.75
+      ],
+      "shots_per_record": 20000,
+      "candidate_ranking": [
+        {
+          "model": "strict",
+          "fitted_time_scale": 0.9852847953164041,
+          "training_mean_empirical_KL": 0.007013806284056536,
+          "heldout_mean_empirical_KL": 0.013373314809853794
+        },
+        {
+          "model": "nearest_neighbor_null",
+          "fitted_time_scale": 1.186326733243209,
+          "training_mean_empirical_KL": 0.10593463341209125,
+          "heldout_mean_empirical_KL": 0.3634746514631601
+        },
+        {
+          "model": "legacy_absolute",
+          "fitted_time_scale": 0.35000000919232527,
+          "training_mean_empirical_KL": 0.420430774914099,
+          "heldout_mean_empirical_KL": 0.931204576528231
+        },
+        {
+          "model": "legacy_green_schur",
+          "fitted_time_scale": 0.6182201622156392,
+          "training_mean_empirical_KL": 0.8111660762643201,
+          "heldout_mean_empirical_KL": 1.562416881684818
+        },
+        {
+          "model": "legacy_signed",
+          "fitted_time_scale": 0.8470809239116864,
+          "training_mean_empirical_KL": 1.1025693946584925,
+          "heldout_mean_empirical_KL": 2.421993213220483
+        }
+      ],
+      "winner": "strict",
+      "post_score_reveal": "The hidden generator was a non-circulant 8% site-modulated strict weight matrix. No exact hidden model was offered to the scorer.",
+      "scope": "This is a methodology and identifiability test on synthetic data, not evidence that nature selected the winning FIN kernel."
+    }
+  },
+  "global_verdict": "Schur elimination is an exact compression semigroup and shifted resistance has a regularizer-independent limit, but the audited native kernel families do not automatically form a continuum projective functor. Signed/Krein structure does not create Markov physics; causal order, calibration, bath thermodynamics, and chiral sign provenance remain additional typed interfaces. Operational tomography and blinded held-out scoring are feasible once those interfaces are declared."
+}

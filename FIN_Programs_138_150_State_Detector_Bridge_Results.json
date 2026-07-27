@@ -1,0 +1,527 @@
+{
+  "title": "FIN Programs 138-150: State Selection, Validated Fractional Dynamics, Detector Physics and Bridge Architecture",
+  "release": "10.14",
+  "execution_date": "2026-07-27",
+  "seed": 20260727,
+  "frozen_parameters": {
+    "alpha_geo": 2.772588722239781,
+    "strict_omega": 0.18575,
+    "strict_phi": 0.1625,
+    "strict_eta": 1.8,
+    "legacy_omega": "pi/4",
+    "legacy_phi": "pi/6",
+    "beta_tors": 0.01
+  },
+  "provenance": {
+    "previous_results": "FIN_Programs_125_137_Trace_Localizer_Physics_Results.json",
+    "previous_results_sha256": "432b994c40059cc50d0bbe62d4599a577a7fa2c391b012511b8572537685759c",
+    "script": "fin_programs_138_150_state_detector_bridge.py"
+  },
+  "program138_modular_kms_state_selection": {
+    "commutative_algebra": "A_F=C^5",
+    "continuous_automorphism_theorem": "Aut(C^5)=S5 is discrete, hence every continuous one-parameter automorphism group R->Aut(C^5) is trivial.",
+    "commutative_KMS_consequence": "For trivial dynamics every probability state is KMS at every beta; KMS does not select a sector state.",
+    "noncommutative_enlargement": "B=M1(C) direct-sum four copies of M2(C)",
+    "modular_consequence": "Every faithful density rho defines its own modular flow sigma_t^rho(a)=rho^(it) a rho^(-it) and is KMS for that flow.",
+    "hilbert_gibbs_family": {
+      "w2": "1/(1+8 exp(-theta))",
+      "eta": "2-w2",
+      "theta_at_eta_9_over_5": 0.6931471805599453,
+      "theta_identity": "theta=ln(2)=alpha_geo/4",
+      "eta_at_theta_zero": 1.8888888888888888
+    },
+    "strict_modular_gap_source_found": false,
+    "uniform_trace_selected": false,
+    "status": "Proven modular/KMS nonselection theorem",
+    "scope": "A chosen modular Hamiltonian can realize 9/5, but fixing its gap to ln(2) is an additional state-selection premise."
+  },
+  "program139_maximum_entropy_reference": {
+    "relative_entropy_theorem": "Without additional constraints, maximizing -D(w||r) uniquely gives w=r.",
+    "reference_choices": {
+      "sector_counting": {
+        "reference_power": 0.0,
+        "weights": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "eta": 1.7999999999999998
+      },
+      "Hilbert_microstate": {
+        "reference_power": 1.0,
+        "weights": [
+          0.1111111111111111,
+          0.2222222222222222,
+          0.2222222222222222,
+          0.2222222222222222,
+          0.2222222222222222
+        ],
+        "eta": 1.8888888888888888
+      },
+      "Hilbert_Schmidt_microstate": {
+        "reference_power": 2.0,
+        "weights": [
+          0.058823529411764705,
+          0.23529411764705882,
+          0.23529411764705882,
+          0.23529411764705882,
+          0.23529411764705882
+        ],
+        "eta": 1.9411764705882355
+      }
+    },
+    "unconstrained_Shannon_uniformity": "The uniform sector state follows only after sector-counting measure is chosen as the reference.",
+    "dimension_constraint_test": "Imposing sum_p w_p d_p=9/5 is equivalent to imposing w2=1/5; the target exponent is then already present in the constraint.",
+    "full_S5_symmetry_test": "Full sector permutation symmetry would select the uniform state, but it exchanges nonisomorphic fibre blocks of dimensions 1 and 2 and is not an admitted carrier symmetry.",
+    "reference_free_uniform_state_found": false,
+    "status": "Proven reference-measure dependence and circularity theorem",
+    "scope": "Maximum entropy is a valid conditional selector once its sample space/reference measure is declared; FIN does not yet source that choice."
+  },
+  "program140_morita_stability": {
+    "algebras": "Direct sums of M_(n_p d_p)(C) are strongly Morita equivalent to C^5 and to the original fibre-block algebra.",
+    "cases": {
+      "original_blocks": {
+        "amplification": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "normalized_Hilbert_central_weights": [
+          0.1111111111111111,
+          0.2222222222222222,
+          0.2222222222222222,
+          0.2222222222222222,
+          0.2222222222222222
+        ],
+        "eta": 1.8888888888888888
+      },
+      "uniform_sector_amplification": {
+        "amplification": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "normalized_Hilbert_central_weights": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "eta": 1.7999999999999998
+      },
+      "p2_dominant": {
+        "amplification": [
+          20,
+          1,
+          1,
+          1,
+          1
+        ],
+        "normalized_Hilbert_central_weights": [
+          0.7142857142857143,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142
+        ],
+        "eta": 1.2857142857142856
+      },
+      "unit_sectors_dominant": {
+        "amplification": [
+          1,
+          1,
+          10,
+          10,
+          10
+        ],
+        "normalized_Hilbert_central_weights": [
+          0.015873015873015872,
+          0.031746031746031744,
+          0.31746031746031744,
+          0.31746031746031744,
+          0.31746031746031744
+        ],
+        "eta": 1.984126984126984
+      }
+    },
+    "sample_eta_range": [
+      1.4705882352941178,
+      1.9927007299270072
+    ],
+    "uniform_sector_eta_recovered_by_amplification": 1.7999999999999998,
+    "normalized_Hilbert_trace_Morita_invariant": false,
+    "Morita_equivalence_selects_center_state": false,
+    "status": "Proven Morita-instability/no-selection theorem",
+    "scope": "Morita equivalence preserves the center up to isomorphism but does not provide a distinguished probability state on that center."
+  },
+  "program141_validated_interval_fft": {
+    "interval_engine": "mpmath.iv, 42 decimal digits, radix-two interval FFT",
+    "fft_length": 16384,
+    "retained_distance": 8191,
+    "covered_window": [
+      0.001,
+      0.02
+    ],
+    "target_window_fully_covered": true,
+    "number_of_frequency_cells": 50,
+    "tail_normalization_upper": 0.0018504206567017505,
+    "abelian_constant_interval": [
+      1.1470611724267572,
+      1.1481405094729478
+    ],
+    "maximum_relative_remainder_upper": 1.0813452433960271,
+    "worst_cell": {
+      "k": 3,
+      "q_interval": [
+        0.001,
+        0.001342233189399936
+      ],
+      "symbol_interval": [
+        0.0013843664324701033,
+        0.009504531276439578
+      ],
+      "prediction_interval": [
+        0.0045665327780659345,
+        0.005784388033795262
+      ],
+      "relative_remainder_upper": 1.0813452433960271,
+      "fractional_prediction_compatible": true
+    },
+    "all_symbol_lower_bounds_positive": true,
+    "all_cells_compatible_with_fractional_prediction": true,
+    "formal_interval_arithmetic": true,
+    "tight_2_3_percent_claim_formally_recovered": false,
+    "status": "Proven computer-assisted continuous-window enclosure",
+    "scope": "The interval certificate is formal but coarser than Program 127 because N=2^14 is used. It validates the fractional scale without automatically validating the earlier 2.2647% tight bound."
+  },
+  "program142_diophantine_discrepancy": {
+    "rotation": "theta=omega/pi=743/(4000*pi)",
+    "certified_continued_fraction_terms": [
+      0,
+      16,
+      1,
+      10,
+      2,
+      67,
+      2,
+      2,
+      5,
+      1,
+      2,
+      928
+    ],
+    "convergents": [
+      {
+        "a": 0,
+        "p": 0,
+        "q": 1
+      },
+      {
+        "a": 16,
+        "p": 1,
+        "q": 16
+      },
+      {
+        "a": 1,
+        "p": 1,
+        "q": 17
+      },
+      {
+        "a": 10,
+        "p": 11,
+        "q": 186
+      },
+      {
+        "a": 2,
+        "p": 23,
+        "q": 389
+      },
+      {
+        "a": 67,
+        "p": 1552,
+        "q": 26249
+      },
+      {
+        "a": 2,
+        "p": 3127,
+        "q": 52887
+      },
+      {
+        "a": 2,
+        "p": 7806,
+        "q": 132023
+      },
+      {
+        "a": 5,
+        "p": 42157,
+        "q": 713002
+      },
+      {
+        "a": 1,
+        "p": 49963,
+        "q": 845025
+      },
+      {
+        "a": 2,
+        "p": 142083,
+        "q": 2403052
+      },
+      {
+        "a": 928,
+        "p": 131902987,
+        "q": 2230877281
+      }
+    ],
+    "notable_partial_quotients": [
+      67,
+      928
+    ],
+    "finite_range": [
+      1,
+      1000000
+    ],
+    "variation_of_abs_cos_pi_x": 2,
+    "modulus": "|sum_(d=1)^N f(x+d theta)-N int f| <= 2 * OstrowskiDigitSum_theta(N)",
+    "maximum_bound_per_N_for_N_ge_1000": 0.04873803307223673,
+    "bound_at_N_1e6": 124.0,
+    "observed_discrepancy_at_N_1e6": 0.31382784456945956,
+    "maximum_observed_to_bound_ratio": 0.15224123978633752,
+    "all_observed_rows_below_theorem_bound": true,
+    "all_scale_power_remainder_proved": false,
+    "obstruction": "A finite continued-fraction prefix controls N<=10^6 but cannot bound all future partial quotients; the term 928 already produces a severe finite-scale constant.",
+    "status": "Proven finite discrepancy theorem; global power-rate remains open",
+    "scope": "This supplies the missing explicit finite modulus but not an all-scale Diophantine type theorem for 743/(4000*pi)."
+  },
+  "program143_weighted_wave_estimates": {
+    "unitary_group": "U_t=exp(-it C(-Delta)^(2/5))",
+    "Sobolev_invariance": "||U_t f||_(H^s)=||f||_(H^s) for every real s",
+    "point_evaluation_theorem": "For s>1/2, |U_t f(x)|<=C_s ||f||_(H^s), C_s^2=(2pi)^(-1) integral_R (1+q^2)^(-s)dq.",
+    "threshold": 0.5,
+    "L1_to_Linf_decay_recovered": false,
+    "wave_smoothing": false,
+    "constructed_record_space": "H^s(R), s>1/2, with bounded point evaluation",
+    "physical_detector_source_found": false,
+    "status": "Proven weighted point-record theorem without dispersive decay",
+    "scope": "Regular preparation can replace a hard UV cutoff mathematically, but selecting preparation regularity is still operational input."
+  },
+  "program144_detector_resolution": {
+    "detector": "R_sigma has Fourier multiplier exp(-sigma^2 q^2/2)",
+    "measurement_operator": "M_(sigma,t)=R_sigma U_t",
+    "smooth_preparation": "f_hat(q)=exp(-q^2/2)",
+    "smooth_sigma_to_zero_limit_at_x0_t1": [
+      0.25002850105276136,
+      -0.24825481670257848
+    ],
+    "observed_small_sigma_error_slope": 1.9992427925957557,
+    "general_rate": "For 1/2<s<5/2, ||(R_sigma-I)U_t f||_infinity <=C_s sigma^(s-1/2)||f||_(H^s).",
+    "delta_peak": "1/(sqrt(2pi)*sigma) at t=0",
+    "delta_resolution_independent_limit": false,
+    "smooth_resolution_independent_limit": true,
+    "status": "Proven conditional detector-limit theorem plus numerical check",
+    "scope": "Resolution can be removed for sufficiently regular preparations; it cannot be removed for ideal point preparation."
+  },
+  "program145_joint_identifiability": {
+    "parameter_vector": [
+      "fractional alpha",
+      "flip prevalence epsilon",
+      "memory rho"
+    ],
+    "observable_vector": [
+      "mean spin at t=1",
+      "mean spin at t=2",
+      "adjacent-time spin product"
+    ],
+    "truth": [
+      0.8,
+      0.1,
+      0.75
+    ],
+    "truth_observables": [
+      0.2943035529371539,
+      0.14026178944385426,
+      0.05869435016707946
+    ],
+    "jacobian": [
+      [
+        0.0,
+        -0.7357588823475592,
+        0.0
+      ],
+      [
+        -0.16927344495543117,
+        -0.35065447361037894,
+        0.0
+      ],
+      [
+        -0.07083465063117966,
+        -0.05159942871937884,
+        0.02321974292701645
+      ]
+    ],
+    "jacobian_singular_values": [
+      0.8204715720373388,
+      0.1659753752237349,
+      0.021236089967400812
+    ],
+    "joint_rank": 3,
+    "one_time_rank": 1,
+    "exact_inverse": "alpha=log_2(1+log(mu1/mu2)); e=mu1/exp(-1); epsilon=(1-e)/2; rho=(lag/(s1 s2)-e^2)/(1-e^2).",
+    "synthetic_noise_sd": 0.0002,
+    "synthetic_RMSE": {
+      "alpha": 0.0012840181611743586,
+      "epsilon": 0.0002772036590656087,
+      "rho": 0.009423427956723159
+    },
+    "status": "Proven local/global inversion in the declared model; synthetic validation",
+    "scope": "The theorem separates generator exponent and apparatus memory in this three-parameter spin model, not in every possible instrument family."
+  },
+  "program146_calibration_invariant_observables": {
+    "primary_observable": "R_IQR=log[IQR(t2)/IQR(t1)]/log(t2/t1)=1/alpha",
+    "calibrations_cancelled": [
+      "length ell",
+      "clock scale tau in time ratios"
+    ],
+    "target_value_for_alpha_4_over_5": 1.25,
+    "simulation": {
+      "replicates": 350,
+      "records_per_time": 4000,
+      "time_pair": [
+        1.0,
+        4.0
+      ],
+      "random_log_length_sd": 0.8,
+      "mean_without_detector_noise": 1.2506474872147935,
+      "sd_without_detector_noise": 0.031474921111458595,
+      "mean_with_relative_detector_noise": 1.2479909912764005,
+      "sd_with_relative_detector_noise": 0.03162737191330841
+    },
+    "additional_ratios": [
+      "spectral gap ratio DeltaE_k/DeltaE_j=lambda_k/lambda_j cancels hbar/tau",
+      "quantile ratios at one time cancel ell and tau",
+      "normalized characteristic-function ratios cancel overall intensity"
+    ],
+    "all_physical_calibration_removed": false,
+    "status": "Constructed calibration-invariant observable; synthetic robustness evidence",
+    "scope": "Time ratios and detector response still require calibrated ordering and a declared instrument; the statistic removes multiplicative scales."
+  },
+  "program147_preparation_resource_theory": {
+    "free_states": "rho=R rho R",
+    "free_operations": "reflection-covariant CPTP maps Phi(R rho R)=R Phi(rho) R",
+    "resource_monotone": "M(rho)=0.5 ||rho-R rho R||_1",
+    "monotonicity_theorem": "Trace-norm contractivity gives M(Phi(rho))<=M(rho) for every free Phi.",
+    "signed_witness_bound": "|Tr(rho C)|<=M(rho)||C||_infinity when RCR=-C",
+    "finite_checks": {
+      "RCR_plus_C_norm": 3.352800008858181e-15,
+      "M_rho_plus": 1.0000000000000004,
+      "M_rho_minus": 1.0000000000000004,
+      "M_symmetric_mixture": 5.034625153043846e-16,
+      "Lambda_plus": 0.4980040100309858,
+      "Lambda_minus": -0.4980040100309858,
+      "all_mixing_rows_respect_witness_bound": true
+    },
+    "strict_free_operations_generate_signed_state": false,
+    "QW_2191_discharged": false,
+    "status": "Proven preparation-resource no-go theorem",
+    "scope": "A signed branch is a resource. It cannot arise from a reflection-symmetric state under reflection-covariant operations."
+  },
+  "program148_coupled_state_damping_action": {
+    "functional": "F_(a,kappa)(w,eta)=D_KL(w||r_a)+(kappa/2)*(eta-sum_p w_p d_p)^2, r_a,p proportional d_p^a",
+    "domain": "probability simplex interior times real eta; kappa>0",
+    "strict_convexity": true,
+    "unique_stationary_solution": "w=r_a and eta=sum_p r_a,p d_p",
+    "sector_counting_solution": {
+      "a": 0,
+      "eta": 1.8
+    },
+    "Hilbert_microstate_solution": {
+      "a": 1,
+      "eta": 1.8888888888888888
+    },
+    "multiplicative_positive_tail_addition": "T(ab)=T(a)T(b), T(d)=beta d^eta, forces beta=1 separately.",
+    "target_free_uniform_selection": false,
+    "missing_object": "A theorem selecting the reference exponent a; convexity alone selects w only after a is supplied.",
+    "status": "Constructed well-posed coupled variational family; strict source remains open",
+    "scope": "The action is target-free as a family, but choosing a=0 to obtain 9/5 would be an additional premise."
+  },
+  "program149_completion_map_diagram": {
+    "nodes": [
+      "K_legacy_ont canonical",
+      "projective amplitude shape",
+      "conditionally damped legacy shape",
+      "K_strict_gate projective target",
+      "legacy physical roles"
+    ],
+    "edges": {
+      "amplitude_quotient": "proven quotient; erases absolute roles",
+      "damping_completion": "conditional on state w2=1/5 and beta multiplicativity",
+      "phase_frequency_transport": "absent",
+      "topological_selector_transport": "absent",
+      "physical_role_transport": "absent and downstream"
+    },
+    "actual_canonical_legacy_to_projective_strict_relative_residual": 0.47086477091779894,
+    "shared_phase_frequency_control_residual": 5.670561940028562e-17,
+    "commutes_when_oscillatory_numerator_is_shared": true,
+    "commutes_for_actual_canonical_legacy_parameters": false,
+    "full_bridge_complete": false,
+    "role_transfer_started": false,
+    "status": "Constructed typed diagram and finite noncommutation witness",
+    "scope": "Programs 134/135 close only amplitude-quotient and conditional damping arrows. Canonical legacy phase/frequency remain different."
+  },
+  "program150_predata_protocol": {
+    "protocol_file": "FIN_Programs_138_150_PreData_Physical_Protocol.json",
+    "canonical_core_sha256": "0c292bf5d8efce3055a27daa16e60d60b53e2e2cb9852c37827418ec1ec453f5",
+    "synthetic_power_audit": {
+      "replicates": 450,
+      "records_per_time": 4000,
+      "threshold": 0.875,
+      "null_mean": 0.4990469408800606,
+      "null_sd": 0.018354018437976634,
+      "alternative_mean": 1.2456231161934093,
+      "alternative_sd": 0.030950899422176086,
+      "synthetic_false_positive_rate": 0.0,
+      "synthetic_power": 1.0
+    },
+    "external_data_admitted": false,
+    "protocol_frozen_before_external_data": true,
+    "status": "Constructed immutable pre-data protocol with synthetic power audit",
+    "scope": "The protocol can test an operational spreading exponent after real calibration and intake. It does not test the full FIN ontology."
+  },
+  "global_verdict": {
+    "new_objects_constructed": [
+      "modular/KMS state-selection no-go theorem",
+      "reference-measure entropy classification",
+      "Morita amplification trace test",
+      "validated interval FFT certificate",
+      "finite Diophantine discrepancy modulus",
+      "Sobolev wave-record space",
+      "Gaussian detector-resolution family",
+      "joint system-instrument inverse map",
+      "calibration-invariant IQR observable",
+      "reflection-asymmetry preparation resource theory",
+      "coupled state-damping variational family",
+      "typed completion-map diagram",
+      "immutable pre-data physical protocol"
+    ],
+    "strongest_positive_result": "The fractional window now has a genuine interval-arithmetic certificate, and a calibration-invariant operational statistic with a frozen pre-data test has been constructed.",
+    "strongest_negative_result": "KMS/modular theory, maximum entropy, and Morita equivalence do not select w2=1/5 without an additional reference or gap.",
+    "deepest_missing_object": "A strict theorem choosing the reference state/measure on the localized sector algebra; separately, a nonfree signed preparation source and physical calibration standards remain necessary.",
+    "closures_not_claimed": [
+      "canonical uniform sector trace",
+      "strict eta=9/5 source",
+      "strict phase/frequency source",
+      "QW-2191 selector closure",
+      "internal physical units",
+      "full legacy-to-strict completion",
+      "legacy physical-role transfer",
+      "L_total or Theory-of-Everything closure",
+      "external experimental validation"
+    ]
+  }
+}

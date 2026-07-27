@@ -1,0 +1,1204 @@
+{
+  "guardrails": {
+    "L_total_or_ToE_promoted": false,
+    "dimensional_standard_sourced": false,
+    "external_data_admitted": false,
+    "legacy_kernel_role": "intermediate bridge kernel only",
+    "legacy_role_transfer_started": false,
+    "legacy_strict_bridge_complete": false,
+    "selector_QW2191_closed": false,
+    "strict_kernel_primary": true
+  },
+  "metadata": {
+    "author": "Krzysztof \u017buchowski",
+    "date": "2026-07-27",
+    "orcid": "0009-0002-0909-3613",
+    "release": "10.11",
+    "seed": 20260727,
+    "title": "FIN Programs 101--112: Fractional Limits, Source Tests, and Operational Completion"
+  },
+  "program101_independent_interval_certificate": {
+    "arithmetic": "mpmath.iv directed interval arithmetic, 50 decimal digits",
+    "comparison_with_program91_margin": 0.14974807985391195,
+    "disjoint_margin": 0.14958697586117115,
+    "exact_inputs": {
+      "eta": "9/5",
+      "omega": "743/4000",
+      "phi": "13/80"
+    },
+    "native_ratio_interval": [
+      0.15676583914959788,
+      0.15687201703524578
+    ],
+    "p_hat_pi_interval": [
+      -0.3447351882027754,
+      -0.34365580123719797
+    ],
+    "p_hat_pi_over_2_interval": [
+      -0.1603026371716757,
+      -0.1593081527966394
+    ],
+    "partial_normalization_interval": [
+      1.9671282375647778,
+      1.9671282375647783
+    ],
+    "passes": true,
+    "schur_ratio_interval": [
+      0.3064589928964169,
+      0.3067033962895136
+    ],
+    "scope": "Fixed mass 1/4, normalized infinite strict lattice, alternating-site Schur map.",
+    "status": "Proven, computer-assisted with outward intervals and analytic tail",
+    "tail_upper_bound": 0.0009059745795971189,
+    "truncation": 20000
+  },
+  "program102_nonclosure_region": {
+    "mass_interval": [
+      0.01,
+      2.0
+    ],
+    "mass_interval_passes": true,
+    "minimum_certified_margin": 0.00884779185114349,
+    "number_of_interval_cells": 2000,
+    "parameter_grid": {
+      "all_points_pass": true,
+      "minimum_pointwise_certified_margin": 0.07649045888356197,
+      "points": 243,
+      "values": {
+        "beta": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "eta": [
+          1.7,
+          1.8,
+          1.9
+        ],
+        "mass": [
+          0.1,
+          0.25,
+          0.5
+        ],
+        "omega": [
+          0.18075,
+          0.18575,
+          0.19075
+        ],
+        "phi": [
+          0.14250000000000002,
+          0.1625,
+          0.1825
+        ]
+      },
+      "worst_point": {
+        "beta": 0.8,
+        "certified_margin": 0.07649045888356197,
+        "eta": 1.7,
+        "mass": 0.1,
+        "omega": 0.18075,
+        "phi": 0.14250000000000002
+      }
+    },
+    "schur_mass_monotonicity_margin_2b_minus_a": 0.9738811173905033,
+    "scope": "The parameter grid is not an interval theorem between sampled points.",
+    "status": "Computer-assisted theorem on the frozen-profile mass interval; tail-certified pointwise evidence on the multi-parameter grid"
+  },
+  "program103_graphon_error_theorem": {
+    "analytic_rows": [
+      {
+        "N": 32,
+        "combined_bound": 0.1135899331390788,
+        "diagonal_removal_bound": 0.08791404763521646,
+        "midpoint_operator_norm_bound": 0.025675885503862333
+      },
+      {
+        "N": 64,
+        "combined_bound": 0.05548756165259747,
+        "diagonal_removal_bound": 0.04273149969722786,
+        "midpoint_operator_norm_bound": 0.012756061955369605
+      },
+      {
+        "N": 128,
+        "combined_bound": 0.02742976153630615,
+        "diagonal_removal_bound": 0.02107200554096477,
+        "midpoint_operator_norm_bound": 0.0063577559953413776
+      },
+      {
+        "N": 256,
+        "combined_bound": 0.013637904177132095,
+        "diagonal_removal_bound": 0.010464070794016336,
+        "midpoint_operator_norm_bound": 0.003173833383115759
+      },
+      {
+        "N": 512,
+        "combined_bound": 0.006799894475655394,
+        "diagonal_removal_bound": 0.005214235938097695,
+        "midpoint_operator_norm_bound": 0.001585658537557699
+      },
+      {
+        "N": 1024,
+        "combined_bound": 0.003395205877709076,
+        "diagonal_removal_bound": 0.0026026907735155038,
+        "midpoint_operator_norm_bound": 0.0007925151041935724
+      },
+      {
+        "N": 2048,
+        "combined_bound": 0.0016964204623214367,
+        "diagonal_removal_bound": 0.0013002414046964336,
+        "midpoint_operator_norm_bound": 0.000396179057625003
+      }
+    ],
+    "lipschitz_upper_bound": 1.2195785194973314,
+    "low_mode_rows": [
+      {
+        "N": 32,
+        "low_mode_max_error": 7.311590379175574e-05
+      },
+      {
+        "N": 64,
+        "low_mode_max_error": 1.617396379451075e-05
+      },
+      {
+        "N": 128,
+        "low_mode_max_error": 4.030541227023621e-06
+      },
+      {
+        "N": 256,
+        "low_mode_max_error": 1.0059807473844495e-06
+      },
+      {
+        "N": 512,
+        "low_mode_max_error": 2.5127027358795573e-07
+      },
+      {
+        "N": 1024,
+        "low_mode_max_error": 6.278602548287493e-08
+      },
+      {
+        "N": 2048,
+        "low_mode_max_error": 1.569198806311567e-08
+      }
+    ],
+    "normalization_lower_bound": 0.7516996094243219,
+    "observed_low_mode_loglog_slope": -2.0206969287124426,
+    "scope": "This regular coordinate scaling does not yield a local Laplacian.",
+    "status": "Proven analytic bound; numerical convergence check",
+    "theorem": "Midpoint cell averaging and optional diagonal removal converge in L2 operator norm to the bounded circle-convolution operator at O(N^-1)."
+  },
+  "program104_singular_localizing_limit": {
+    "all_fourth_moment_bounds_pass": true,
+    "base_fourth_moment": 0.011259640969474217,
+    "base_variance": 0.07734352417376376,
+    "rows": [
+      {
+        "absolute_error": 0.172580318711552,
+        "covered": true,
+        "epsilon": 0.5,
+        "fourth_moment_bound": 0.1827985653676162,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.354119654450728
+      },
+      {
+        "absolute_error": 2.332479934561763,
+        "covered": true,
+        "epsilon": 0.5,
+        "fourth_moment_bound": 2.9247770458818594,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 3.7743199580873568
+      },
+      {
+        "absolute_error": 9.04336609753712,
+        "covered": true,
+        "epsilon": 0.5,
+        "fourth_moment_bound": 14.806683794776914,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 4.6969336609234
+      },
+      {
+        "absolute_error": 20.396433034471993,
+        "covered": true,
+        "epsilon": 0.5,
+        "fourth_moment_bound": 46.79643273410975,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 4.030766536124485
+      },
+      {
+        "absolute_error": 0.045044650488252014,
+        "covered": true,
+        "epsilon": 0.25,
+        "fourth_moment_bound": 0.04569964134190405,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.4816553226740279
+      },
+      {
+        "absolute_error": 0.690321274846208,
+        "covered": true,
+        "epsilon": 0.25,
+        "fourth_moment_bound": 0.7311942614704648,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 5.416478617802912
+      },
+      {
+        "absolute_error": 3.2551063058452687,
+        "covered": true,
+        "epsilon": 0.25,
+        "fourth_moment_bound": 3.7016709486942285,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 10.485193452615253
+      },
+      {
+        "absolute_error": 9.329919738247051,
+        "covered": true,
+        "epsilon": 0.25,
+        "fourth_moment_bound": 11.699108183527438,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 15.097279832349427
+      },
+      {
+        "absolute_error": 0.011383712556674253,
+        "covered": true,
+        "epsilon": 0.125,
+        "fourth_moment_bound": 0.011424910335476013,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.5153162606056056
+      },
+      {
+        "absolute_error": 0.18017860195300806,
+        "covered": true,
+        "epsilon": 0.125,
+        "fourth_moment_bound": 0.1827985653676162,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 5.9266212906961115
+      },
+      {
+        "absolute_error": 0.895888142836144,
+        "covered": true,
+        "epsilon": 0.125,
+        "fourth_moment_bound": 0.9254177371735571,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 12.844411615624377
+      },
+      {
+        "absolute_error": 2.761285099384832,
+        "covered": true,
+        "epsilon": 0.125,
+        "fourth_moment_bound": 2.9247770458818594,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 21.665914471211646
+      },
+      {
+        "absolute_error": 0.0028536486255830162,
+        "covered": true,
+        "epsilon": 0.0625,
+        "fourth_moment_bound": 0.0028562275838690033,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.5238463245366969
+      },
+      {
+        "absolute_error": 0.04553485022669701,
+        "covered": true,
+        "epsilon": 0.0625,
+        "fourth_moment_bound": 0.04569964134190405,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 6.061265042422423
+      },
+      {
+        "absolute_error": 0.2294823246455735,
+        "covered": true,
+        "epsilon": 0.0625,
+        "fourth_moment_bound": 0.23135443429338928,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 13.510817433814948
+      },
+      {
+        "absolute_error": 0.7207144078120322,
+        "covered": true,
+        "epsilon": 0.0625,
+        "fourth_moment_bound": 0.7311942614704648,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 23.706485162784446
+      },
+      {
+        "absolute_error": 0.0007138956469743274,
+        "covered": true,
+        "epsilon": 0.03125,
+        "fourth_moment_bound": 0.0007140568959672508,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.5259860775153056
+      },
+      {
+        "absolute_error": 0.011414594502332065,
+        "covered": true,
+        "epsilon": 0.03125,
+        "fourth_moment_bound": 0.011424910335476013,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 6.0953852981467875
+      },
+      {
+        "absolute_error": 0.05772118261492487,
+        "covered": true,
+        "epsilon": 0.03125,
+        "fourth_moment_bound": 0.05783860857334732,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 13.682578575845596
+      },
+      {
+        "absolute_error": 0.18213940090678804,
+        "covered": true,
+        "epsilon": 0.03125,
+        "fourth_moment_bound": 0.1827985653676162,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 24.24506016968969
+      },
+      {
+        "absolute_error": 0.00017850414492581734,
+        "covered": true,
+        "epsilon": 0.015625,
+        "fourth_moment_bound": 0.0001785142239918127,
+        "local_limit": 1.52669997316228,
+        "mode": 1,
+        "scaled_eigenvalue": 1.526521469017354
+      },
+      {
+        "absolute_error": 0.0028555825878973096,
+        "covered": true,
+        "epsilon": 0.015625,
+        "fourth_moment_bound": 0.0028562275838690033,
+        "local_limit": 6.10679989264912,
+        "mode": 2,
+        "scaled_eigenvalue": 6.103944310061222
+      },
+      {
+        "absolute_error": 0.014452306453158315,
+        "covered": true,
+        "epsilon": 0.015625,
+        "fourth_moment_bound": 0.01445965214333683,
+        "local_limit": 13.740299758460521,
+        "mode": 3,
+        "scaled_eigenvalue": 13.725847452007363
+      },
+      {
+        "absolute_error": 0.04565837800932826,
+        "covered": true,
+        "epsilon": 0.015625,
+        "fourth_moment_bound": 0.04569964134190405,
+        "local_limit": 24.42719957059648,
+        "mode": 4,
+        "scaled_eigenvalue": 24.38154119258715
+      }
+    ],
+    "scope": "The singular localization and epsilon^-2 clock are additional premises, not sourced by FIN.",
+    "status": "Proven conditional continuum theorem plus quadrature check",
+    "theorem": "For p_epsilon(x)=epsilon^-1 p(x/epsilon), (I-T_epsilon)/epsilon^2 converges modewise to (sigma^2/2)(-Delta), with the displayed O(epsilon^2) bound."
+  },
+  "program105_fractional_tail_universality": {
+    "even_symbol_odd_residual": 0.0,
+    "fitted_constant": 1.1329979597094484,
+    "fitted_loglog_slope": 0.7983228184373516,
+    "fractional_order": 0.8,
+    "normalization_partial": 1.9676797946362259,
+    "predicted_abelian_constant": 1.1474679863772292,
+    "q_values": [
+      0.001,
+      0.001192699881804259,
+      0.001422533008055892,
+      0.0016966549505709192,
+      0.002023600159008544,
+      0.0024135476704685702,
+      0.0028786380212968057,
+      0.003433351227757946,
+      0.004094957603539406,
+      0.0048840554497349,
+      0.005825212357624257,
+      0.00694773009042316,
+      0.008286556857655588,
+      0.009883375384690092,
+      0.01178790065314699,
+      0.014059427715728755,
+      0.0167686777747852,
+      0.02
+    ],
+    "scaled_constant_range": [
+      1.1371283342462377,
+      1.1450850362775162
+    ],
+    "scope": "The lattice route is fractional and nonlocal; it is not the local limit of Program 104.",
+    "status": "Analytic theorem from standard equidistribution/Abelian lemmas; strong numerical check",
+    "symbol_values": [
+      0.0045542019858212214,
+      0.0052453471222377495,
+      0.006040970309978948,
+      0.006956882287822718,
+      0.008011196894105935,
+      0.00922476301205108,
+      0.010621537463941103,
+      0.012229038000479262,
+      0.014078856478842319,
+      0.016207226831837705,
+      0.01865570863284895,
+      0.02147187358346709,
+      0.02471012433054596,
+      0.028432585220039747,
+      0.032710045669385075,
+      0.03762297378005046,
+      0.04326258920611759,
+      0.049731719754845256
+    ],
+    "theorem": "Equidistribution of the irrational cosine phase and the weighted Abelian theorem give 1-p_hat(q)~C|q|^(eta-1), here order 4/5.",
+    "truncation": 1000000
+  },
+  "program106_long_range_semigroup": {
+    "cycle_size": 262144,
+    "maximum_large_radius_deviation_from_one": 0.00019923302051783054,
+    "rows": [
+      {
+        "heat_over_t_one_jump": 0.9990513935044181,
+        "heat_tail": 0.0016708298525063615,
+        "one_jump_tail": 0.016724163174884482,
+        "radius": 128,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9998494915739385,
+        "heat_tail": 0.0009446219015494966,
+        "one_jump_tail": 0.009447640965066612,
+        "radius": 256,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9999178857285564,
+        "heat_tail": 0.0005417489994362838,
+        "one_jump_tail": 0.005417934884138578,
+        "radius": 512,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9998510347151536,
+        "heat_tail": 0.0003096433209469138,
+        "one_jump_tail": 0.003096894539246316,
+        "radius": 1024,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9999615451056361,
+        "heat_tail": 0.0001748162471743441,
+        "one_jump_tail": 0.001748229699731868,
+        "radius": 2048,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9999817761464637,
+        "heat_tail": 9.766945474355716e-05,
+        "one_jump_tail": 0.0009767123468983284,
+        "radius": 4096,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9999886409698465,
+        "heat_tail": 5.334239671735717e-05,
+        "one_jump_tail": 0.0005334300264213266,
+        "radius": 8192,
+        "time": 0.1
+      },
+      {
+        "heat_over_t_one_jump": 0.9953993089166144,
+        "heat_tail": 0.008323610233244353,
+        "one_jump_tail": 0.016724163174884482,
+        "radius": 128,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9991943706114691,
+        "heat_tail": 0.004720014833926433,
+        "one_jump_tail": 0.009447640965066612,
+        "radius": 256,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9995487370676475,
+        "heat_tail": 0.002707744985477733,
+        "one_jump_tail": 0.005417934884138578,
+        "radius": 512,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9992745738935772,
+        "heat_tail": 0.0015473239855493543,
+        "one_jump_tail": 0.003096894539246316,
+        "radius": 1024,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9998028411057459,
+        "heat_tail": 0.0008739425103486833,
+        "one_jump_tail": 0.001748229699731868,
+        "radius": 2048,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9999049303583349,
+        "heat_tail": 0.0004883097456027495,
+        "one_jump_tail": 0.0009767123468983284,
+        "radius": 4096,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9999408542763953,
+        "heat_tail": 0.0002666992381582107,
+        "one_jump_tail": 0.0005334300264213266,
+        "radius": 8192,
+        "time": 0.5
+      },
+      {
+        "heat_over_t_one_jump": 0.9911081082159038,
+        "heat_tail": 0.016575453725753843,
+        "one_jump_tail": 0.016724163174884482,
+        "radius": 128,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.9982640745648814,
+        "heat_tail": 0.009431240564813485,
+        "one_jump_tail": 0.009447640965066612,
+        "radius": 256,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.9990078774000726,
+        "heat_tail": 0.005412559628495088,
+        "one_jump_tail": 0.005417934884138578,
+        "radius": 512,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.9985908590574235,
+        "heat_tail": 0.0030925305783562227,
+        "one_jump_tail": 0.003096894539246316,
+        "radius": 1024,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.9995940041332024,
+        "heat_tail": 0.001747519925699564,
+        "one_jump_tail": 0.001748229699731868,
+        "radius": 2048,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.9998007669794822,
+        "heat_tail": 0.0009765177535472788,
+        "one_jump_tail": 0.0009767123468983284,
+        "radius": 4096,
+        "time": 1.0
+      },
+      {
+        "heat_over_t_one_jump": 0.999876928063381,
+        "heat_tail": 0.0005333643761549242,
+        "one_jump_tail": 0.0005334300264213266,
+        "radius": 8192,
+        "time": 1.0
+      }
+    ],
+    "scope": "Polynomial direct jumps preclude an exponential finite-speed cone in this lattice model.",
+    "status": "Standard subexponential-tail theorem; finite-cycle numerical check",
+    "theorem": "The Poissonized semigroup e^{-t(I-P)} has fixed-time far tails asymptotic to t times the regularly varying one-jump tail."
+  },
+  "program107_adaptive_information_manifold": {
+    "final_functional": 6.105592851530119e-08,
+    "final_probability": [
+      0.1666666773877556,
+      0.16666667722350728,
+      0.1666666769915346,
+      0.16666667674292654,
+      0.16666667647583536,
+      0.1666666762343672
+    ],
+    "initial_functional": 0.6022626789526916,
+    "initial_strict_shell_probability": [
+      0.5661430009441414,
+      0.23133495124206768,
+      0.11013457020542913,
+      0.05665116252529034,
+      0.029068382307597684,
+      0.006667932775473756
+    ],
+    "maximum_analytic_derivative": -3.0318078474637134e-16,
+    "maximum_functional_increase": 2.973548361441405e-09,
+    "maximum_simplex_sum_residual": 6.105592653682379e-08,
+    "minimum_probability": 0.006667932775473756,
+    "scope": "The chosen source-neutral F drives the strict profile away; it does not derive FIN.",
+    "status": "Proven geometric identity plus numerical integration",
+    "strict_stationarity_residual": 0.42365086076510844,
+    "theorem": "Replicator-form Fisher gradient flow preserves the open simplex and satisfies dF/dt=-Var_q(grad F)<=0.",
+    "unconstrained_euclidean_unit_step_minimum": -1.5416170064893446
+  },
+  "program108_inverse_source_mdl": {
+    "candidates": [
+      {
+        "heldout_N17_gradient_norm": 0.020993922570109996,
+        "hessian_eigenvalues": [
+          -0.08338849244605624,
+          -0.007227979299879415,
+          -0.003975437911248535,
+          0.03308934136761062
+        ],
+        "local_minimum": false,
+        "training_gradient_norm": 1.8246784350562798e-16,
+        "weights": [
+          -0.9199168098688255,
+          0.16488057765594705,
+          0.18002307603249307,
+          0.2580602892238437,
+          0.08361679526170374,
+          -0.1434303622120227
+        ]
+      },
+      {
+        "heldout_N17_gradient_norm": 0.014882891534005486,
+        "hessian_eigenvalues": [
+          -0.04509978850509935,
+          -0.0004861764360348254,
+          0.005416516558012154,
+          0.0194344062680208
+        ],
+        "local_minimum": false,
+        "training_gradient_norm": 1.3985787785349405e-17,
+        "weights": [
+          -0.030371515393010886,
+          -0.8222725341730108,
+          -0.0845071996903975,
+          0.5500568034213135,
+          -0.060739212558306416,
+          0.09773558648536003
+        ]
+      }
+    ],
+    "conclusion": "Stationarity can be engineered nonuniquely at N=13, but it is coefficient-heavy and fails the N=17 transfer test; no source theorem results.",
+    "feature_names": [
+      "nearest roughness",
+      "mean square",
+      "square of mean",
+      "fourth moment",
+      "spectral entropy",
+      "two-step roughness"
+    ],
+    "gradient_matrix_rank": 4,
+    "gradient_matrix_singular_values": [
+      1.018385162673836,
+      0.08360331474083733,
+      0.028898607579015804,
+      0.008336999424649032
+    ],
+    "heldout_cycle": 17,
+    "parameter_count_comparison": {
+      "source_coefficients_up_to_scale": 5,
+      "source_has_mdl_advantage": false,
+      "strict_tuple": 4
+    },
+    "stationary_coefficient_nullity": 2,
+    "status": "Negative result for the declared six-feature inverse-source family",
+    "training_cycle": 13
+  },
+  "program109_chiral_source_intake": {
+    "audited_classes": [
+      "fundamental_action_reconstruction/generated/p2948*",
+      "fundamental_action_reconstruction/generated/p2958*",
+      "fundamental_action_reconstruction/generated/p2965*",
+      "FIN Programs 101--108"
+    ],
+    "finding": "The 4/5 fractional symbol is exactly even. Tail universality, localization, graphon convergence, and scalar adaptive geometry supply no inversion-odd signed value.",
+    "fractional_symbol_odd_residual": 0.0,
+    "guardrail": "QW-2191 and the orientation-torsor polarity remain open.",
+    "new_explicit_signed_formula_admitted": false,
+    "status": "Proven symmetry obstruction for the new limits; no-source certificate"
+  },
+  "program110_process_tensor_preregistration": {
+    "canonical_sha256": "2c70ed37434a01bf62ad79c93db7146157eab3edb94402735263b7432fe75b2b",
+    "file": "FIN_Programs_101_112_Process_Tensor_Preregistration.json",
+    "file_sha256": "3d2be86b463211a237b831f96b2f0105ec3437449d9bdc4e3cf1928e5867d513",
+    "status": "Preregistered protocol; no external data admitted"
+  },
+  "program111_correlated_apparatus_ledger": {
+    "identity": "W_complete - DeltaF = h_rate(E) + Sigma(tau) >= 0",
+    "maximum_identity_residual": 8.326672684688674e-17,
+    "minimum_complete_excess": 0.065602905161391,
+    "rows": [
+      {
+        "complete_excess": 0.39851524334587257,
+        "duration": 0.5,
+        "error_entropy_rate": 0.1985152433458726,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.4946319372140727,
+        "persistence": 0.0,
+        "system_work": 0.2946319372140727
+      },
+      {
+        "complete_excess": 0.29851524334587254,
+        "duration": 1.0,
+        "error_entropy_rate": 0.1985152433458726,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.4946319372140727,
+        "persistence": 0.0,
+        "system_work": 0.39463193721407275
+      },
+      {
+        "complete_excess": 0.24851524334587255,
+        "duration": 2.0,
+        "error_entropy_rate": 0.1985152433458726,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.4946319372140727,
+        "persistence": 0.0,
+        "system_work": 0.44463193721407274
+      },
+      {
+        "complete_excess": 0.21851524334587258,
+        "duration": 5.0,
+        "error_entropy_rate": 0.1985152433458726,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.4946319372140727,
+        "persistence": 0.0,
+        "system_work": 0.4746319372140727
+      },
+      {
+        "complete_excess": 0.3456563396409085,
+        "duration": 0.5,
+        "error_entropy_rate": 0.14565633964090852,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": 0.0,
+        "information_rate": 0.5474908409190368,
+        "persistence": 0.5,
+        "system_work": 0.34749084091903676
+      },
+      {
+        "complete_excess": 0.2456563396409085,
+        "duration": 1.0,
+        "error_entropy_rate": 0.14565633964090852,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": -2.7755575615628914e-17,
+        "information_rate": 0.5474908409190368,
+        "persistence": 0.5,
+        "system_work": 0.4474908409190368
+      },
+      {
+        "complete_excess": 0.1956563396409085,
+        "duration": 2.0,
+        "error_entropy_rate": 0.14565633964090852,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.5474908409190368,
+        "persistence": 0.5,
+        "system_work": 0.4974908409190368
+      },
+      {
+        "complete_excess": 0.16565633964090853,
+        "duration": 5.0,
+        "error_entropy_rate": 0.14565633964090852,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 2.7755575615628914e-17,
+        "information_rate": 0.5474908409190368,
+        "persistence": 0.5,
+        "system_work": 0.5274908409190368
+      },
+      {
+        "complete_excess": 0.245602905161391,
+        "duration": 0.5,
+        "error_entropy_rate": 0.04560290516139103,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.6475442753985543,
+        "persistence": 0.9,
+        "system_work": 0.4475442753985543
+      },
+      {
+        "complete_excess": 0.14560290516139096,
+        "duration": 1.0,
+        "error_entropy_rate": 0.04560290516139103,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": -8.326672684688674e-17,
+        "information_rate": 0.6475442753985543,
+        "persistence": 0.9,
+        "system_work": 0.5475442753985543
+      },
+      {
+        "complete_excess": 0.09560290516139103,
+        "duration": 2.0,
+        "error_entropy_rate": 0.04560290516139103,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.6475442753985543,
+        "persistence": 0.9,
+        "system_work": 0.5975442753985543
+      },
+      {
+        "complete_excess": 0.065602905161391,
+        "duration": 5.0,
+        "error_entropy_rate": 0.04560290516139103,
+        "error_probability": 0.05,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": -2.7755575615628914e-17,
+        "information_rate": 0.6475442753985543,
+        "persistence": 0.9,
+        "system_work": 0.6275442753985543
+      },
+      {
+        "complete_excess": 0.5250829733914483,
+        "duration": 0.5,
+        "error_entropy_rate": 0.32508297339144826,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": 0.0,
+        "information_rate": 0.368064207168497,
+        "persistence": 0.0,
+        "system_work": 0.16806420716849702
+      },
+      {
+        "complete_excess": 0.4250829733914483,
+        "duration": 1.0,
+        "error_entropy_rate": 0.32508297339144826,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": 0.0,
+        "information_rate": 0.368064207168497,
+        "persistence": 0.0,
+        "system_work": 0.268064207168497
+      },
+      {
+        "complete_excess": 0.37508297339144825,
+        "duration": 2.0,
+        "error_entropy_rate": 0.32508297339144826,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.368064207168497,
+        "persistence": 0.0,
+        "system_work": 0.31806420716849704
+      },
+      {
+        "complete_excess": 0.3450829733914483,
+        "duration": 5.0,
+        "error_entropy_rate": 0.32508297339144826,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.368064207168497,
+        "persistence": 0.0,
+        "system_work": 0.348064207168497
+      },
+      {
+        "complete_excess": 0.44747760038264417,
+        "duration": 0.5,
+        "error_entropy_rate": 0.24747760038264416,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": 0.0,
+        "information_rate": 0.44566958017730113,
+        "persistence": 0.5,
+        "system_work": 0.24566958017730112
+      },
+      {
+        "complete_excess": 0.3474776003826442,
+        "duration": 1.0,
+        "error_entropy_rate": 0.24747760038264416,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": 0.0,
+        "information_rate": 0.44566958017730113,
+        "persistence": 0.5,
+        "system_work": 0.3456695801773011
+      },
+      {
+        "complete_excess": 0.29747760038264415,
+        "duration": 2.0,
+        "error_entropy_rate": 0.24747760038264416,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.44566958017730113,
+        "persistence": 0.5,
+        "system_work": 0.39566958017730114
+      },
+      {
+        "complete_excess": 0.2674776003826442,
+        "duration": 5.0,
+        "error_entropy_rate": 0.24747760038264416,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.44566958017730113,
+        "persistence": 0.5,
+        "system_work": 0.4256695801773011
+      },
+      {
+        "complete_excess": 0.2806551632291124,
+        "duration": 0.5,
+        "error_entropy_rate": 0.08065516322911241,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.6124920173308329,
+        "persistence": 0.9,
+        "system_work": 0.4124920173308329
+      },
+      {
+        "complete_excess": 0.18065516322911235,
+        "duration": 1.0,
+        "error_entropy_rate": 0.08065516322911241,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.6124920173308329,
+        "persistence": 0.9,
+        "system_work": 0.5124920173308329
+      },
+      {
+        "complete_excess": 0.13065516322911241,
+        "duration": 2.0,
+        "error_entropy_rate": 0.08065516322911241,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.6124920173308329,
+        "persistence": 0.9,
+        "system_work": 0.5624920173308329
+      },
+      {
+        "complete_excess": 0.10065516322911239,
+        "duration": 5.0,
+        "error_entropy_rate": 0.08065516322911241,
+        "error_probability": 0.1,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": -2.7755575615628914e-17,
+        "information_rate": 0.6124920173308329,
+        "persistence": 0.9,
+        "system_work": 0.5924920173308329
+      },
+      {
+        "complete_excess": 0.7004024235381878,
+        "duration": 0.5,
+        "error_entropy_rate": 0.5004024235381879,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": 0.0,
+        "information_rate": 0.19274475702175742,
+        "persistence": 0.0,
+        "system_work": -0.007255242978242593
+      },
+      {
+        "complete_excess": 0.6004024235381878,
+        "duration": 1.0,
+        "error_entropy_rate": 0.5004024235381879,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": 0.0,
+        "information_rate": 0.19274475702175742,
+        "persistence": 0.0,
+        "system_work": 0.09274475702175741
+      },
+      {
+        "complete_excess": 0.5504024235381879,
+        "duration": 2.0,
+        "error_entropy_rate": 0.5004024235381879,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.19274475702175742,
+        "persistence": 0.0,
+        "system_work": 0.14274475702175743
+      },
+      {
+        "complete_excess": 0.5204024235381879,
+        "duration": 5.0,
+        "error_entropy_rate": 0.5004024235381879,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.19274475702175742,
+        "persistence": 0.0,
+        "system_work": 0.17274475702175743
+      },
+      {
+        "complete_excess": 0.5946687121150098,
+        "duration": 0.5,
+        "error_entropy_rate": 0.39466871211500987,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": 0.0,
+        "information_rate": 0.2984784684449354,
+        "persistence": 0.5,
+        "system_work": 0.09847846844493541
+      },
+      {
+        "complete_excess": 0.49466871211500985,
+        "duration": 1.0,
+        "error_entropy_rate": 0.39466871211500987,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": 0.0,
+        "information_rate": 0.2984784684449354,
+        "persistence": 0.5,
+        "system_work": 0.1984784684449354
+      },
+      {
+        "complete_excess": 0.44466871211500986,
+        "duration": 2.0,
+        "error_entropy_rate": 0.39466871211500987,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.2984784684449354,
+        "persistence": 0.5,
+        "system_work": 0.24847846844493543
+      },
+      {
+        "complete_excess": 0.4146687121150099,
+        "duration": 5.0,
+        "error_entropy_rate": 0.39466871211500987,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.2984784684449354,
+        "persistence": 0.5,
+        "system_work": 0.2784784684449354
+      },
+      {
+        "complete_excess": 0.334185164977503,
+        "duration": 0.5,
+        "error_entropy_rate": 0.13418516497750302,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.2,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.5589620155824423,
+        "persistence": 0.9,
+        "system_work": 0.3589620155824423
+      },
+      {
+        "complete_excess": 0.23418516497750297,
+        "duration": 1.0,
+        "error_entropy_rate": 0.13418516497750302,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.1,
+        "identity_residual": -5.551115123125783e-17,
+        "information_rate": 0.5589620155824423,
+        "persistence": 0.9,
+        "system_work": 0.4589620155824423
+      },
+      {
+        "complete_excess": 0.18418516497750304,
+        "duration": 2.0,
+        "error_entropy_rate": 0.13418516497750302,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.05,
+        "identity_residual": 0.0,
+        "information_rate": 0.5589620155824423,
+        "persistence": 0.9,
+        "system_work": 0.5089620155824423
+      },
+      {
+        "complete_excess": 0.154185164977503,
+        "duration": 5.0,
+        "error_entropy_rate": 0.13418516497750302,
+        "error_probability": 0.2,
+        "finite_time_dissipation": 0.02,
+        "identity_residual": 0.0,
+        "information_rate": 0.5589620155824423,
+        "persistence": 0.9,
+        "system_work": 0.5389620155824423
+      }
+    ],
+    "scope": "Temperature/action scale and reset implementation remain external operational data.",
+    "status": "Proven information-theoretic identity in an explicitly imported thermodynamic model"
+  },
+  "program112_eta_source_skeleton": {
+    "artifact_inventory": [
+      {
+        "exists": true,
+        "path": "fundamental_action_reconstruction/generated/p2948_s1898_torsion_character_ratio_package_theorem_skeleton.md",
+        "sha256": "6cacf07541f3dd3f705b5717c8c25e94cc0ff66e05b8cb8158ff116d4daaf866"
+      },
+      {
+        "exists": true,
+        "path": "fundamental_action_reconstruction/generated/p2950_s1900_exact_package_beta_eta_scale_coupling_obstruction.md",
+        "sha256": "8079a1eb75fe98084a522a19e016277dd80cdbd1c55d87a672120b428272c49e"
+      },
+      {
+        "exists": true,
+        "path": "fundamental_action_reconstruction/generated/p2958_s1908_p2938_strict_provenance_theorem_interface.md",
+        "sha256": "42671f4f49d30e0b0fb0825ca3d6d9854de217077227d63607165ebe8cb5996e"
+      },
+      {
+        "exists": true,
+        "path": "fundamental_action_reconstruction/generated/p2965_s1915_primitive_mean_scale_unit_quotient_candidate.md",
+        "sha256": "a856b372472b044adc3c967f368d80714b3a9c2b13fbd83185dd973d0fb27eea"
+      },
+      {
+        "exists": true,
+        "path": "fundamental_action_reconstruction/generated/p2860_s1810_compression_tail_multiplicative_scale_law_no_eta_source_audit.md",
+        "sha256": "9cef356189bf24abd6ca6cc76fd92b6af99885aeac2c512fd4866be3982df790"
+      }
+    ],
+    "conclusion": "The identity compresses several observed 9/5 constructions into one scale law, but the fivefold input and its damping coupling are still premises. It therefore explains compatibility, not necessity.",
+    "derived_eta": 1.7999999999999998,
+    "derived_increment": 0.7999999999999999,
+    "exact_chain": [
+      "alpha_geo = 4 ln 2",
+      "r_5 = exp(-alpha_geo/5) = 2^(-4/5)",
+      "C(2d)=r_5 C(d) and exact dyadic homogeneity imply C(d) proportional to d^(-4/5)",
+      "multiplying a legacy d^(-1) envelope yields strict d^(-9/5)",
+      "equivalently eta = 1 + 4/5 = 9/5"
+    ],
+    "five_component_candidate": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "five_component_mean": 1.8,
+    "five_component_sum": 9,
+    "guardrail": "No generic bridge completion or legacy-role transfer follows.",
+    "numeric_retention": 0.5743491774985175,
+    "obligations": {
+      "coupling_to_the_damping_completion_operator": false,
+      "non_target_coded_reason_for_dividing_alpha_geo_by_five": false,
+      "strict_source_of_fivefold_quotient": false,
+      "target_independent_beta_or_length_unit_source": false
+    },
+    "status": "Exact conditional derivation skeleton; not a strict FIN source theorem"
+  }
+}

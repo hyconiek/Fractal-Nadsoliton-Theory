@@ -3353,3 +3353,397 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - Finite operator-class matrix: graph Laplacian / integral / spectral / diffusion are available; Dirac, Maxwell, Yang–Mills are not exported from radial scalar K* alone; most other classes are conditional.
 - Do not promote Legacy* dual dynamics, Gram PSD threshold, or radial inverse recovery to unit-bearing L_total, SM/GR, selector closure, bridge completion, role transfer, or ToE.
 - A next pure-math move may develop the LegacyStarRadialCirculantFamily (PSD threshold, indefinite Gram, dual Borel calculus). A physics move requires an explicit new axiom package (units, continuum, gauge/spin), marked as imported.
+
+## Current Green response and fractal Schur-compression guardrail (Programs 51–60 / Release 10.6, 2026-07-27)
+
+- Programs 51–60 audit the Green-function and state-space-geometry proposals in `Funkcja Greena w kontekście FIN qwen.md` and `geometria przestrzeni stanow.md`; their corrected executable record is `FIN_Programs_51_60_Green_Fractal_Physics_Results.json`.
+- The fixed value `s=1.660307278766099` is the `C12` strict row sum to numerical precision; it is not a canonical legacy shift.  Canonical legacy has row sum `-11.174051961650372`, and reusing strict `s` gives `lambda_min=-8.542700570007279`.
+- Use the standard resolvent domain rule: `G(z)=(zI-A)^-1` exists for `z` outside the spectrum.  Do not require positivity for every resolvent, and do not write `G(0)=A^-1` for an unregularized graph Laplacian without quotienting the zero mode, using a pseudoinverse, or declaring a shift.
+- For arbitrary positive-definite `A`, `R_ij=G_ii+G_jj-2 Re(G_ij)` is a squared Hilbert distance; `sqrt(R_ij)` is the general metric.  Do not claim `R` itself is always a metric.  Effective resistance `R` is metric only with the additional connected positive graph-Laplacian structure.
+- Cauchy functional calculus reconstructs both `exp(-itA)` and `exp(-tA)` from one resolvent, but record differences still require state, preparation, clock, instrument, environment, apparatus, and record map; do not reduce outcome JSD to a contour choice alone.
+- A degree-6 functional map from canonical legacy to strict exists on `C12` with residual `9.25e-14`, but transfer of the same map to `C16` has relative error `916.795186`.  Treat the `C12` result as support-specific spectral interpolation, not a continuum bridge, universality theorem, strict parameter source, or role-transfer result.
+- The typed binary Green-Schur compression `A_eff=A_EE-A_EO*A_OO^-1*A_OE` preserves the retained Green block with residual `1.44e-14`.  It is an exact information marginalization and an admissible new compression object.
+- The tested one-step and two-step canonical-legacy compressions do not generate the strict profile: amplitude-fit residuals remain `0.95117` and `0.94673`; strict-phase tail-fit residuals are approximately `1`, so fitted exponents are non-identifiable and must not be promoted to `eta=9/5`.
+- Binary/fractal compression exports relative scale ratios `2^k`, not an absolute `ell_*`, `tau_*`, `hbar_*`, mass, energy, or action unit.  Do not use coarse-graining depth as a strict physical-unit source or as discharge of the `S_+ / Omega_scale` obstruction.
+- Finite heat-trace curves in the tested strict/legacy realizations show no robust `d_s=1` plateau (only `0.120–0.137` decades inside `1+-0.15`), and extrapolated signed kernels require declared positivity repair.  Do not promote a spectral-dimension crossing to emergent spacetime dimension.
+- In the declared regularized Gaussian model, Schur compression lowers legacy-versus-strict KL divergence from `23.63624` to `11.60157`; this is dimensionless information data processing, not thermodynamic entropy, Landauer heat, or physical action without a bath, temperature, clock, and work/heat instrument.
+- Inversion-odd Green response survives Schur compression with nonzero response norm `1.93502`, while the `+lambda/-lambda` compressed branches remain mirror-paired and isospectral.  Compression transports the chiral receiver but does not source its directed chart or sign; `QW-2191` remains open.
+- Preserve the current kernel policy: `K_strict_gate` is the primary strict working kernel; `K_legacy_ont` at `A=4 ln 2`, `beta_tors=0.01` is the sole canonical non-strict intermediate bridge kernel; `K*(A,beta)` is a stress-test family, not a third canonical kernel.
+- The shortest honest experiment-facing architecture after Programs 51–60 is `W0 + CA + OA`, with `SA` added only for origin/polarity/chirality-sensitive records: `W0` informational nadsoliton and dimensionless Green/Schur results; `CA` calibrated conversion units; `OA` state/preparation/clock/instrument/environment/apparatus/record; `SA` signed sector law.  Results using CA/OA/SA remain conditioned and must not be promoted to strict units, strict selector closure, bridge completion, role transfer, `L_total`, SM/GR generation, or ToE.
+
+## Current post-Programs-51–60 research steering guardrail (2026-07-27)
+
+- Do not replay arbitrary Green-distance, finite polynomial-functional bridge, untyped Dyson/RG, or scalar exponent-fitting claims.  Each continuation must specify its operator domain, zero-mode treatment, positivity repair, coarse-graining map, normalization, and transfer support.
+- The next preferred typed mathematical object is a projective continuum family for Green-Schur compression with a fixed normalization and a transfer test across `C_(2^k N) -> C_N`.
+- A second admissible move is a regularizer-independence theorem comparing positive shift, zero-mode quotient, and Moore-Penrose Green constructions.
+- A physics continuation must attack one explicit missing interface: operational tomography, calibrated CA identifiability, a finite causal-order/light-cone condition, a concrete signed source law `Source_mirror(nadsoliton)->lambda*C`, or an explicit bath/work protocol.  Do not substitute generic informational language for these typed obligations.
+
+## Current continuum and operational-interface guardrail (Programs 61–70 / Release 10.7, 2026-07-27)
+
+- Programs 61–70 execute the typed continuation after Release 10.6; the reproducible record is `FIN_Programs_61_70_Continuum_Operational_Physics_Results.json`.
+- Under absolute-value repair, unit row normalization, mass floor `1/4`, and mean-diagonal comparison, exact Schur compression does not yet equal the native lower-resolution family.  At retained `N=48`, Green naturality defects are `0.310317` for strict-absolute and `0.241924` for legacy-absolute.
+- Legacy-absolute projective defects decrease monotonically on `N=6,12,24,48` with fitted operator slope `-0.5606` and Green slope `-0.2447`; this is a promising conditioned trend, not a continuum theorem, raw-legacy result, fixed point, physical dimension, or bridge completion.
+- For connected positive graph realizations, shifted Green resistance converges to Moore-Penrose effective resistance as `delta -> 0+`, while the full Green norm diverges as `1/delta`.  At `delta=1e-7`, resistance relative errors are `8.46e-8` (strict) and `6.40e-9` (legacy absolute).  Use quotient resistance as regularizer-independent geometry; do not promote full static covariance or raw signed legacy.
+- Nested Green-Schur elimination is exactly transitive: direct `48->12` and sequential `48->24->12` agree to relative residual `1.29e-16`.  This exports a compression semigroup/partial category, not a native-family fixed point or RG closure.
+- The tested signed legacy precision has inertia `11 negative / 1 positive`.  It supports Hermitian resolvents and unitary dynamics, but raw diffusion has norm `8.43767`, minimum entry `-1.06109`, and an indefinite static Green geometry.  A Krein fundamental symmetry produces `|A|` and stable diffusion only by changing the generator; do not identify that repair with canonical legacy.
+- Under the known strict circulant model class, one localized preparation and one optimized binary detector distinguish unitary from diffusive records at dimensionless `t=1` with total variation `0.359654`; pair coarse graining leaves `0.340589`.  This is operational distinguishability, not a kernel-sourced preparation, clock, Born instrument, or apparatus.
+- The full strict `C12` generator couples the opposite site at first matrix order, giving far-site wave probability `O(t^2)` and diffusion `O(t)`; a nearest-neighbour control gives `O(t^12)` and `O(t^6)`.  Do not claim an exact causal/light cone or Lorentz symmetry from the current finite kernel.  Causal order/local continuum structure remains an added typed obligation.
+- The conversion triple `(ell_*,tau_*,hbar_*)` has calibration rank three only after independent length, clock, and energy/action experiment classes are supplied.  Any two classes have rank two.  Additional dimensionless FIN records cannot replace a missing calibration direction or discharge `S_+/Omega_scale`.
+- The explicit translation-invariant reflection-odd triangular loop source is exactly zero on radial strict and legacy.  It becomes nonzero only after an oriented antisymmetric datum is inserted, with sign inherited from that datum.  General rule: if `F(RWR)=-F(W)` and `RWR=W`, then `F(W)=0`.  Do not replay radial odd functionals as nonpremise selector sources or `QW-2191` discharge.
+- The executed reversible two-state erasure protocol reaches `beta W` and `beta Q_bath -> ln 2` with first-law residual below `1.2e-16`, but only after importing a bath, temperature, `k_B`, Hamiltonian protocol, and work/heat instruments.  This is a valid conditioned Shannon-to-thermodynamics bridge, not a strict FIN unit or energy theorem.
+- In the blinded synthetic challenge, the exact hidden generator was excluded; strict won held-out mean empirical KL `0.013373`, ahead of nearest-neighbour `0.363475`, legacy-absolute `0.931205`, legacy Green-Schur `1.562417`, and signed legacy `2.421993`.  The hidden generator was an 8% site-modulated strict-like model, so this validates the scoring method and local family recovery only; it is not evidence that nature selected strict.
+- Programs 61–70 do not export continuum closure, a local causal generator, strict CA, a chiral sign source, bridge completion, role transfer, unit-bearing `L_total`, SM/GR generation, or ToE.
+
+## Current post-Programs-61–70 research steering guardrail (2026-07-27)
+
+- Highest priority is an analytic Fourier/two-sublattice symbol theorem for the Schur map.  Derive the normalized symbol transformation, its fixed symbols, and linearized RG eigenvalues before extending dense finite scans.
+- Large-`N` projective tests are admissible only with preregistered normalization, both lattice-distance and coordinate-rescaled conventions, error bounds, and a stop rule if the naturality defect plateaus above zero.
+- A regularizer-free information continuation should work on the zero-mode quotient `1^perp` using pseudoinverses and pseudodeterminants; do not import the mass floor into physical action.
+- A causal continuation must quantify the trade-off between kernel truncation error and an approximate Lieb-Robinson/locality cone.  Do not label analytic nonzero tails as Lorentzian propagation.
+- A selector continuation is admissible only for one explicit nonradial, state-dependent source law `rho_nad -> lambda(rho_nad) C` with origin covariance, nonzero value, and sign provenance.  Stop after one complete falsification; do not return to radial odd receiver inventories.
+- Thermodynamic continuation must use finite-time master equations and stochastic work tests such as Jarzynski, keeping system Shannon entropy, bath entropy, and mutual information separate.
+- External physical-data work must freeze observables, CA/OA calibration, null models, exclusions, and held-out scoring before dataset selection.  Synthetic wins alone must never update physical kernel claims.
+
+## Current Fourier-symbol and operational-bridge guardrail (Programs 71–80 / Release 10.8, 2026-07-27)
+
+- Programs 71–80 execute the post-Release-10.7 typed continuation; the machine-readable record is `FIN_Programs_71_80_Symbol_Operational_Bridge_Results.json`, and the English monograph is `FIN_Programs_71_80_Symbol_Operational_Bridge_Monograph.pdf`.
+- For a real symmetric positive circulant precision, even/odd elimination is exactly diagonalized by the two-sublattice Fourier block symbol:
+  `s(k)=B00(k)-B01(k)*B11(k)^(-1)*B10(k)`.  Dense and symbol Schur implementations agree to relative residual `9.97e-17`.  This is an exact finite operator theorem, not native-family continuum closure.
+- The massive nearest-neighbour chain `A=m I+c L_NN` closes exactly under odd-site Schur elimination with
+  `c'=c^2/(m+2c)` and `m'=m(m+4c)/(m+2c)`.  For `r=m/c`, `r'=r(r+4)`; the only nonnegative fixed point is `r=0`, with unrescaled derivative `4`.
+- Large-`N` testing on retained `N=48,...,1536` separates lattice distance `K(d)` from coordinate-rescaled `K(d/N)`.  Under absolute repair, row normalization, mass `1/4`, and unit-diagonal comparison, strict lattice-distance operator defects plateau from `0.077602` to `0.074508` and the final Green defect is `0.258937`; do not claim a strict native Schur-projective continuum limit from current evidence.
+- Legacy-absolute lattice-distance defects decrease to `0.011949` (operator) and `0.051760` (Green), with slopes about `-0.4465/-0.4480`.  Both coordinate-rescaled strict and legacy-absolute families have operator slopes about `-0.505` and final Green defects about `0.05069`.  These are conditioned trends: legacy uses positive repair, and `d/N` imports compact-coordinate/length semantics.  Their near-equality may be generic smooth dense-kernel quadrature rather than FIN-specific universality.
+- The common Laplacian zero mode can be removed without a mass regulator by restricting Gaussian information geometry to `1^perp`.  For the declared raw-amplitude absolute realizations on `C12`, quotient KL values are `47.6804886423` (strict||legacy) and `8.0627221376` (legacy||strict); the common-shift full-space KL converges to the quotient with error `3.99e-7` at `delta=1e-8`.  The theorem is regulator-free, but the numerical values remain repair/amplitude-convention dependent.
+- Strict-kernel range truncation quantifies locality/fidelity rather than exporting a causal cone.  Radius one differs from the full operator by `0.432079` and reaches the opposite `C12` site first through `L^6`, giving wave probability `O(t^12)` and diffusion entry `O(t^6)`; the full radial graph reaches it at first order.  Do not promote the truncation hierarchy to Lorentz symmetry or a physical speed.
+- In the noisy log-scale design for `(ell_*,tau_*,hbar_*)`, length, clock, and energy/action rows are jointly rank three and every two-class subset is rank two.  Under the declared noise model, the D-optimal 30-record allocation is `10/10/10`.  This is conditioned experimental identifiability; external standards remain necessary and `S_+/Omega_scale` is not discharged.
+- The state-kernel current `Lambda(rho,W)=sum_i 2 Im(rho_(i,i+1) W_(i+1,i))` is translation invariant and reflection odd.  On Fourier states `k=+1/-1`, strict gives `-0.469986/+0.469986` and raw legacy gives `-0.710494/+0.710494`, with covariance residuals below `2.3e-16`.  This exports a valid nonradial chiral receiver interface, but the `+k/-k` pair remains degenerate: the missing selector is transferred to the state/preparation law, and `QW-2191` remains open.
+- The finite-time two-state bath protocol satisfies `<W> >= Delta F`, with `Delta F=0.6864318321`, monotonically decreasing dissipation from `1.614374` at duration `0.1` to `0.082016` at duration `10`, and Jarzynski residual below `1e-15`.  The bath, inverse temperature, Hamiltonian schedule, clock, and work convention are imported OA/CA data; no strict energy or temperature is derived.
+- In short-time noisy process tomography (`t=0.03,0.06,0.12`), one localized preparation with two shots per time distinguishes strict-wave from strict-diffusion records with accuracy `0.644` under full readout; three preparations raise it to `0.818`, and 50 shots give near-perfect separation.  This validates an operational design only; synthetic records do not identify nature's dynamics.
+- The fixed no-fit map “legacy absolute row-normalized precision -> repeated even-site Schur elimination -> unit-diagonal normalization” does not approach native strict: from retained `N=768` to `N=48`, operator defect changes `0.283948 -> 0.295072` and Green defect `0.496876 -> 0.558777`.  Treat this precise repaired Schur-flow bridge as refuted; do not generalize to every possible typed completion map and do not start role transfer.
+- The external-data protocol is frozen before dataset selection in `FIN_Programs_71_80_External_Data_Preregistration.json`, canonical core SHA-256 `1a10b804a3e8265969fa66626f5152acc00830440841f2ddee6a8a59c018db4e`.  No external dataset was selected, so no physical evidence is claimed.
+- Programs 71–80 do not export strict continuum closure, a physical coordinate/unit, exact causal cone, nonpremise chiral state source, `QW-2191` discharge, bridge completion, role transfer, unit-bearing `L_total`, SM/GR generation, or ToE.
+
+## Current post-Programs-71–80 research steering guardrail (2026-07-27)
+
+- Highest priority is Program 81: an analytic large-`N` symbol theorem separating low-frequency, bulk, and Nyquist sectors and proving either a vanishing naturality rate or a positive strict-lattice `liminf`.  Do not extend finite-size extrapolation before this theorem attempt.
+- Program 82 may classify positive radial fixed symbols and relevant directions under a fully declared Schur/rescaling map.  Normalization and field rescaling are part of the map and must not be fitted silently.
+- Program 83 should test whether coordinate-rescaled convergence is a generic smooth-kernel quadrature theorem.  If generic, demote the current strict/legacy match from FIN evidence to discretization universality.
+- Program 84 should replace exact-cone language with the strongest valid Lieb–Robinson/heat-kernel bound for the declared decay and graph metric.  No graph bound supplies Lorentz invariance or a physical speed without CA.
+- Program 85 should formulate quotient action, pseudodeterminant entropy, and adaptive dynamics on `1^perp`; do not restore an infrared mass as a physical constant.
+- A selector continuation is admissible only as Program 87: one explicit strict state-generation law with nonzero signed `Lambda(rho,W)`, reflection covariance, stability, and sign provenance.  Two symmetry-related attractors are spontaneous branch multiplicity, not a unique selector.
+- Operational continuations should use robust CA design (Program 86), feedback information thermodynamics (Program 88), and process tensors including preparation/instrument/environment/record (Program 89).  Keep all imported bath, apparatus, clock, and unit data explicit.
+- External-data work may proceed only through the frozen Program-80 protocol (Program 90).  If an independent dataset lacks preparation, instrument, calibration, boundary/environment, or raw-count provenance, classify it as inadmissible rather than retuning the model.
+- Reopen the legacy-to-strict bridge only under Program 91 after exactly one genuinely new typed completion atom is supplied and passes provenance, target-independence, uniqueness, symbol prediction, and held-out transfer tests.  Without such an atom, preserve the Program-79 bounded no-go and do not replay generic bridge or role-transfer claims.
+- Program 92 should consolidate durable theorems into a pure mathematical paper, excluding cosmology and ToE claims.
+
+## Current asymptotic spectral and operational-completion guardrail (Programs 81–90 / Release 10.9, 2026-07-27)
+
+- Programs 81–90 execute the Release-10.8 roadmap; the machine-readable record is `FIN_Programs_81_90_Asymptotic_Operational_Completion_Results.json`, and the English monograph is `FIN_Programs_81_90_Asymptotic_Operational_Completion_Monograph.pdf`.
+- Alternating-site Schur reduction has the exact precision-spectrum alias law `lambda_coarse(k)=2*lambda(k)*lambda(k+N)/(lambda(k)+lambda(k+N))`; the direct block-symbol residual is `2.46e-16`.  Treat binary compression as harmonic aliasing of precision spectra, not as automatic native-family or continuum closure.
+- The strict lattice-distance naturality obstruction persists through retained `N=49152`: Frobenius operator defect `0.074284`, uniform symbol defect `0.154303`, first-mode relative defect `0.891376`, and Green Frobenius defect `0.256016`.  Do not continue Frobenius-only finite-size scans or claim a strict Schur-projective continuum limit; the remaining hard target is an analytic positive `liminf` theorem.
+- For strict coordinate scaling `K(d/N)`, the Frobenius defect falls with slope `-0.5008` to `6.181e-4`, but the uniform symbol defect remains `0.132518` and the mode-1 defect remains `0.023086`.  Vanishing averaged/Frobenius error is not uniform spectral closure.
+- The `N^-1/2` Frobenius law is generic under dense normalized sampling: constant, exponential, Gaussian, rational-power, strict, and legacy-coordinate profiles all have slopes between `-0.503` and `-0.501`, while their final uniform symbol defects remain above `0.13`.  Do not use this rate as FIN-specific evidence.
+- The constant-profile counterexample is exact at fixed mass `m=1/4`: the normalized native zero mode tends to `m/(m+1)=1/5`, the normalized Schur zero mode to `2m/(2m+1)=1/3`, and the uniform gap is `2/15`.  This proves that Frobenius convergence can coexist with a nonzero spectral obstruction.
+- In the affine-cosine cone `lambda(q)=m+2c(1-cos q)`, normalized harmonic-alias RG has the massless nearest-neighbour fixed symbol and the ultralocal constant boundary; the ratio obeys `r'=r(r+4)`.  Every `r>0` flows toward the constant boundary.  In eight tested steps, repaired strict distance to constant falls `0.299102 -> 3.786e-4`; repaired legacy-absolute falls `0.019599 -> 0.003805`.  A fixed positive mass is a relevant RG direction, not a passive regulator.
+- The finite-volume approximate-locality theorem combines a radius-`R` factorial series tail with Duhamel error `t||L-L_R||`.  On opposite sites of strict-positive `C64`, best amplitude bounds are `0.014724`, `0.085322`, and `0.179187` at `t=0.1,0.5,1`.  These bounds are rigorous but loose and do not export a Lorentz cone or physical speed.
+- On `1^perp`, the quotient action `S[f]=1/2<f,Lf>-<J,f>` is gauge invariant, has stationary class `L^+J+c1`, uses `pdet(L)` in its Gaussian partition function, and obeys `d(1/2<f,Lf>)/dt=-||Lf||^2` under heat flow.  Finite residuals are below `1.1e-10`.  Use this regulator-free variational structure; do not restore the mass floor as a physical constant.
+- A five-parameter CA model including clock drift and distance bias was tested with six redundant record classes.  Maximin D-optimal allocation among `118755` even 60-record designs is `12/6/12/8/12/10`; omitting both length classes, both clock classes, or the energy class drops rank from five to four.  Robust calibration is possible only with external standards and redundancy.
+- The bounded chiral mixture `rho(q)=(1+q)rho_+/2+(1-q)rho_-/2` under reflection-symmetric flow `dq/dt=(1-q^2)q` has paired stable branches `q=+-1`; symmetric noise selects the positive branch with frequency `0.4952`.  A unique positive branch in the tested family requires an explicit bias `h=1.2`.  Spontaneous branch multiplicity does not discharge `QW-2191`; the state law and bias remain non-strict inputs.
+- The binary feedback protocol exactly saturates `<W>=Delta F-I` and the generalized Jarzynski equality, with residuals below `1.2e-16`.  Including apparatus-memory reset makes the saving exactly `I`; do not treat mutual information as free energy after omitting measurement, controller, bath, and reset costs.
+- The two-slot process map `T[M]=E_t2 o M o E_t1(rho0)` supplies an operational wave/diffusion witness: site dephasing changes the wave output with TV `0.003883`, `0.023601`, `0.085392` at half-times `0.1`, `0.25`, `0.5`, while diffusion contrast is exactly zero; joint-record JSD reaches `0.178597`.  Same generator does not imply the same process tensor.
+- Program 90 admits `0` external datasets because no intake directory/manifests satisfy the frozen provenance package.  Its template digest is `7c533e7433fc2cfb34b3ce6f25068e9cd2ceaa3b73333d97ca67a31a6ddd7b98`.  The symmetric synthetic strict/null runner check validates method direction only and must not update physical claims.
+- Programs 81–90 do not export a strict continuum limit, local spacetime, physical scale, nonpremise chiral state source, `QW-2191` discharge, bridge completion, role transfer, unit-bearing `L_total`, SM/GR generation, or external physical evidence.
+
+## Current post-Programs-81–90 research steering guardrail (2026-07-27)
+
+- Highest hard-math priority is Program 91: prove a positive strict-lattice uniform-symbol or resolvent-defect lower bound from the limiting Fourier series.  Further large-`N` Frobenius scans are repetition-gated.
+- Program 92 may introduce target-independent `m_N` and field factor `Z_N` to classify critical tuning.  Do not tune either sequence after comparing with the desired strict target.
+- Program 93 should identify the coordinate-rescaled limit in graphon, Hilbert–Schmidt, strong/resolvent, and conditional-covariance topologies.  A dense nonlocal integral limit must not be renamed a local field or spacetime.
+- Program 94 should derive decay-sensitive long-range propagation bounds for the strict `eta=1.8` envelope.  Keep graph distance and dimensionless time separate from calibrated CA speed.
+- Program 95 should test whether the adaptive law is a gradient flow on `1^perp`; compute an integrability/curl obstruction if no quotient potential exists.
+- A selector continuation is admissible only as Program 96 for one formula-level strict state source with nonzero signed current, reflection covariance, origin independence, stability, and torsor coupling.  Do not replay generic chiral inventories.
+- Operational continuation should optimize noisy two-slot witnesses (Program 97) and close a finite-time apparatus-inclusive feedback ledger (Program 98), keeping all preparation, intervention, bath, controller, and reset data explicit.
+- External physical work remains blocked until Program 99 admits an independent dataset satisfying the frozen Program-90 schema.  Semantically unrelated or provenance-incomplete datasets are inadmissible.
+- Reopen the legacy-to-strict bridge only as Program 100 after one genuinely new typed completion atom is supplied.  Program 79's bounded no-fit Schur-flow no-go remains in force otherwise.
+- Program 101 should compare any nonlocal continuum candidate with graphon integral operators and fractional Laplacians using an explicit equivalence topology.
+- Program 102 should consolidate the exact harmonic-alias theorem, dense-row dilution theorem, `2/15` counterexample, quotient action, locality bound, and process-tensor distinction into a pure mathematical paper without cosmology or ToE claims.
+
+## Current critical-scaling, nonlocal-continuum, and operational-completion guardrail (Programs 91–100 / Release 10.10, 2026-07-27)
+
+- Programs 91–100 execute the Release-10.9 roadmap; the machine-readable record is `FIN_Programs_91_100_Critical_Nonlocal_Operational_Results.json`, and the English monograph is `FIN_Programs_91_100_Critical_Nonlocal_Operational_Monograph.pdf`.
+- For the normalized infinite-lattice absolute strict profile at fixed `m2=1/4`, an explicit `D=10^6` Fourier-tail certificate separates the native zero/high-mode ratio `[0.1568166565,0.1568245799]` from the alternating-site Schur ratio `[0.3065726598,0.3065922757]`, with disjoint margin `0.1497480799`.  Therefore the declared strict lattice family is not closed even up to scalar field/operator normalization under one Schur step.  This supersedes further finite-size Frobenius plateau scans in this realization.
+- The nearest-neighbour local precision has exact parameter map `c'=c^2/(m+2c)`, `m'=m(m+4c)/(m+2c)` and ratio map `r'=r(r+4)`.  A finite local continuum mass requires critical tuning `r_N=mu^2/N^2`; the massless kinetic coefficient requires a factor-two operator rescaling.  These are additional scale-dependent prescriptions, not exports of the frozen strict tuple.
+- The coordinate-rescaled dense strict matrices converge in tested low Fourier modes at rate `N^-1.002` to the bounded circle-convolution precision `A=m2 I+I-T`.  Its high-mode eigenvalues tend to `m2+1`, not to an unbounded `k^2` law.  Treat this as a genuine nonlocal graphon/integral continuum, not a local Laplacian, spacetime, or Lorentzian field.
+- The normalized strict lattice tail obeys `tau(R)<=2/[Z(eta-1)] R^(1-eta)` and the observed exponent is `-0.80143`, consistent with `eta=1.8`.  For both wave and heat semigroups, finite-range truncation has Duhamel error at most `2|t|tau(R)`.  This is polynomial approximate locality and does not export an exact causal cone or physical speed.
+- The adaptive moment law is an exact projected gradient flow only after an admissible operator subspace and orthogonal projection are supplied.  For the tested nonlinear moment functional, nonzero defects under `K->K+cI` refute a regulator-free scalar-shift quotient interpretation.  Independent reproduction of P2772 gives nonzero gradient norms `2.0011536` (legacy) and `0.08688565` (strict); neither frozen tuple is stationary for that unsourced candidate loss.
+- The post-P2721 intake of P2749/P2750/P2759/P2777 admits zero new strict signed sources.  A strict chiral continuation still requires one explicit formula, nonzero signed value, nonpremise provenance, selected P2721 coupling polarity, and declared gauge/automorphism robustness; `QW-2191` remains open.
+- In the declared noisy two-slot process-tensor design, full-site records at half-time `0.97244106` maximize the tested worst-case wave/diffusion JSD `0.15104699` over detector confusion `0,0.05,0.10`; Chernoff information at error `0.10` is `0.17530377`.  Preparation, clock, projective intervention, detector, and decision rule remain imported OA/CA data.
+- The complete binary feedback ledger gives `W_system=DeltaF-I`, memory reset `H(Y)=ln2`, and `W_complete-DeltaF=H(Y|X)>=0` to residual below `1.2e-16`.  This blocks free-energy claims that omit apparatus reset; bath, temperature, Hamiltonian, and dimensional energy conversion remain external.
+- Program 99 supplies model-based Chernoff acquisition counts and a provenance template but admits zero external datasets.  No physical claim may be updated until independently calibrated raw records satisfy the immutable intake and blind-holdout schema.
+- The exact frozen-envelope damping atom is `C_damp(d)=(1+beta_tors*d)/(1+beta*d^(9/5))`, with asymptotic degree `-4/5` and reconstruction residual `2.78e-17`.  It is target-coded from both kernels and therefore specifies a necessary bridge obligation only; it does not source `eta=9/5`, `beta=1`, amplitude, phase/frequency, selector data, bridge completion, or legacy role transfer.
+- Programs 91–100 do not export a local physical continuum, dimensional standard, Born rule, strict selector, `QW-2191` discharge, completed legacy-to-strict bridge, physical-role transfer, role-bearing `L_total`, SM/GR generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-91–100 research steering guardrail (2026-07-27)
+
+- Highest hard-math priority is Program 101: replace floating summation in the Program-91 certificate by independently checkable directed-rounding or rational intervals.  Do not widen the mode scan while the present two-mode margin is already decisive.
+- Program 102 may certify an open nonclosure neighborhood in `(m2,omega,phi,beta,eta)` or locate an exceptional closure surface by interval branch-and-bound.  Any exceptional locus remains a mathematical locus, not a FIN source law.
+- Program 103 should prove operator/Hilbert–Schmidt convergence with rate for the coordinate graphon route.  Program 104 may search for a singular localizing limit, but every rescaling not sourced by W0 must remain an explicit conversion axiom.
+- Program 105 should test the Tauberian/fractional law `1-p_hat(q) asymp |q|^(eta-1)=|q|^0.8`.  Program 106 may sharpen long-range propagation bounds; neither route licenses Lorentz terminology without a new causal and dimensional theorem.
+- Program 107 should define the adaptive kernel manifold, its metric/mobility, invariance cone, and well-posed flow.  Program 108 may attack one non-target-coded inverse source functional for the frozen tuple; minimum-description-length comparison against direct fitting is mandatory.
+- Program 109 is admissible only after one genuinely new signed source formula is supplied; otherwise preserve the Program-96 zero-admission certificate.  Do not replay candidate-name inventories.
+- Program 110 should freeze the Program-97 process-tensor protocol before external data.  Program 111 should extend the feedback ledger to finite-time dissipation and correlated apparatus memory.
+- Program 112 may attack exactly the source of the `-4/5` damping degree.  Success requires prediction of `eta=9/5`, positive beta, and coupling without putting the strict target values in the premises; otherwise classify the construction as parametrization and do not start role transfer.
+
+## Current fractional-limit, source-test, and operational-completion guardrail (Programs 101–112 / Release 10.11, 2026-07-27)
+
+- Programs 101–112 execute the Release-10.10 roadmap; the machine-readable record is `FIN_Programs_101_112_Fractional_Source_Completion_Results.json`, and the English monograph is `FIN_Programs_101_112_Fractional_Source_Completion_Monograph.pdf`.
+- Program 101 independently rechecks the normalized infinite strict-lattice Schur obstruction using 50-decimal `mpmath.iv` directed intervals, exact rational inputs `omega=743/4000`, `phi=13/80`, `eta=9/5`, truncation `D=20000`, and analytic tail `0.00090597458`.  At mass `1/4`, the native ratio `[0.1567658391,0.1568720170]` and Schur ratio `[0.3064589929,0.3067033963]` are disjoint by `0.1495869759`.  This is an independent computer-assisted theorem, not another finite-size plateau scan.
+- Program 102 certifies positive ratio separation on all 2,000 mass cells covering `[0.01,2]`, with minimum margin `0.00884779185`.  A separate 243-point `(omega,phi,beta,eta,m)` grid also passes, with minimum tail-certified pointwise margin `0.0764904589`; the grid is robustness evidence only and is not a continuous parameter-box theorem.
+- Program 103 proves an explicit `O(N^-1)` `L2` operator-norm bound for regular midpoint sampling and optional diagonal removal of the coordinate-rescaled strict profile.  The limit is a bounded circle-convolution graphon; observed modes 1–8 decay near `N^-2` by midpoint cancellation.  Do not rename this regular limit a local Laplacian, spacetime, or Lorentzian field.
+- Program 104 proves that a local Laplacian arises only after adding the singular family `p_epsilon(x)=epsilon^-1 p(x/epsilon)` and clock/operator scaling `(I-T_epsilon)/epsilon^2`.  The local coefficient is `sigma^2/2` with `sigma^2=0.07734352417`, and all tested mode errors satisfy the explicit fourth-moment bound.  The localization parameter and `epsilon^-2` clock are unsourced conversion premises.
+- Program 105 combines irrational phase equidistribution and the weighted Abelian law to identify the infinite strict lattice as a symmetric fractional generator of order `eta-1=4/5`: the fitted exponent is `0.7983228184`, the predicted constant is `1.1474679864`, and the observed scaled range is `[1.1371283342,1.1450850363]`.  This fractional lattice route is distinct from both the bounded graphon and conditional local routes.
+- Program 106 applies the standard subexponential one-big-jump theorem to the strict heat semigroup.  On `C_(2^18)`, `P_t(|X|>R)/(t p(|X|>R))` differs from one by at most `1.99233e-4` for `R>=4096` in the tested times.  Polynomial direct jumps obstruct an exponential finite-speed cone in this lattice model; they do not define physical causality or Lorentz symmetry.
+- Program 107 defines a Fisher/Shahshahani gradient flow on the six-shell probability simplex and proves `dF/dt=-Var_q(grad F)<=0`.  The flow remains positive and simplex-preserving but the strict profile has stationarity residual `0.423650861` and flows to the uniform reference.  This exports a well-posed adaptive information manifold, not a strict source law.
+- Program 108 tests a declared six-feature inverse variational grammar.  The `4x6` gradient matrix has rank four and a two-dimensional stationary coefficient nullspace at `C13`, but both candidates are saddles, fail held-out `C17` transfer, and use more coefficient ratios than direct storage of the four strict parameters.  Do not treat target-fitted stationarity as action reconstruction or necessity.
+- Program 109 admits no new strict signed formula.  The fractional symbol is exactly even, and the graphon, local moment, scalar tail, and Fisher metric remain orientation-blind.  `QW-2191`, torsor polarity, and a nonpremise chiral source remain open.
+- Program 110 freezes the optimized two-slot wave/diffusion process-tensor protocol in `FIN_Programs_101_112_Process_Tensor_Preregistration.json`, canonical core digest `2c70ed37434a01bf62ad79c93db7146157eab3edb94402735263b7432fe75b2b`.  No external data are admitted.
+- Program 111 extends the apparatus ledger to stationary Markov detector memory and finite-time dissipation.  Within the explicitly imported thermodynamic model, `W_complete-DeltaF=h_rate(E)+Sigma(tau)>=0`; the maximum identity residual is `8.33e-17`.  Temperature, action/energy scale, reset protocol, bath, and clock remain OA/CA inputs.
+- Program 112 gives the exact conditional chain `alpha_geo=4 ln 2 -> exp(-alpha_geo/5)=2^(-4/5) -> C(2d)=2^(-4/5)C(d) -> C(d) proportional d^(-4/5) -> d^(-9/5)`.  This unifies the recurring `[1,2,2,2,2]` mean `9/5` and damping-degree observations only as a compatibility skeleton.  No current strict artifact sources the fivefold quotient, gives a non-target-coded reason for division by five, couples it to the damping operator, or supplies target-independent positive `beta`/length units.
+- Programs 101–112 do not export a unique continuum physics, strict selector, `QW-2191` discharge, dimensional standard, Lorentz symmetry, Born rule, completed legacy-to-strict bridge, legacy role transfer, role-bearing `L_total`, SM/GR generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-101–112 research steering guardrail (2026-07-27)
+
+- Highest hard-math priority is Program 113: derive a closed-form positivity proof for the mass-dependent native/Schur ratio gap on the Program-101 symbol rectangle and identify its maximal mass interval.  Program 114 may replace the 243-point grid by a genuine interval Taylor/branch-and-bound theorem on a continuous parameter box; denser point grids alone are repetition-gated.
+- Program 115 should prove an effective finite-`q` Abelian remainder using explicit phase-discrepancy control.  Program 116 may then prove a functional invariance principle to a symmetric `4/5`-stable Lévy process.  Program 117 may study the associated fractional wave propagator and operational records, but its time remains dimensionless until independently calibrated.
+- Program 118 may classify a declared local/fractional crossover family; no mixed operator is canonical until its relative scaling is sourced.  Keep regular graphon, singular local, and infinite-lattice fractional routes separate.
+- Program 119 may search for an intrinsic adaptive functional only with basis-free invariants, graph-size naturality, target-independent coefficients, strict stationarity, and positive Hessian modulo symmetries.  Program 120 may enumerate a finite variational grammar only with an explicit code-length charge and held-out graph transfer.
+- Program 121 should extend the frozen process-tensor protocol to hidden-Markov apparatus noise with finite-sample identifiability and calibration-only detector fitting.  Program 124 may execute the preregistered experiment only after immutable preparation, clock, graph/operator, instrument, environment, calibration-split, and raw-record provenance are supplied.
+- Program 122 may attack exactly one source atom: a strict non-target-coded origin of five equal scale sectors and the primitive vector `[1,2,2,2,2]`.  It must not assume `eta=9/5`, `4/5`, or the target retention.  Without such an export, preserve Program 112 as a conditional identity only.
+- Program 123 is admissible only after Program 122 succeeds: construct a damping cocycle that couples `2^(-4/5)` to strict compression and sources positive `beta` without a reference cell or target length.  Do not identify `beta_tors` with strict `beta`, start role transfer, or claim bridge completion.
+- Scalar fractional laws remain inversion-even.  Do not use `|q|^(4/5)`, entropy, amplitude, positive damping, graphon limits, local moments, or Fisher metrics as chiral sources or selector closure.
+
+## Current constructive-completion and fractional-operational guardrail (Programs 113–124 / Release 10.12, 2026-07-27)
+
+- Programs 113–124 execute the Release-10.11 constructive roadmap; the machine-readable record is `FIN_Programs_113_124_Constructive_Completion_Results.json`, and the English monograph is `FIN_Programs_113_124_Constructive_Completion_Monograph.pdf`.
+- Program 113 upgrades the strict-lattice alternating-site Schur obstruction to every positive mass.  With `a=1-p_hat(pi)` and `b=1-p_hat(pi/2)`, the exact gap is `m*((3a-2b)*m+a*(2a-b))/((m+a)*(2m+a)*(m+b))`.  Program-101 intervals give lower coefficients `3a-2b>=1.7103621294` and `a(2a-b)>=2.0517744548`; hence the gap is positive for all `m>0`, while tending to zero at both mass boundaries.
+- Program 114 replaces the perturbation grid by a continuous theorem on `|omega-omega_*|<=0.0005`, `|phi-phi_*|<=0.002`, `|beta-1|<=0.02`, `|eta-9/5|<=0.01`, and every `m>0`.  Fully analytic Hölder/integral bounds give unnormalized variation `<=0.1663548695`, normalized symbol variation `<=0.1847593622`, and positive coefficient margins `0.7865653184/1.1272943515`.
+- Program 115 certifies the fractional Abelian approximation at 20 points on `q in [1e-3,2e-2]` with maximum relative enclosure `0.00903080`.  A continuous effective remainder is not exported because no explicit Diophantine discrepancy modulus for `743/(8000*pi)` is supplied.
+- Program 116 places the strict jump law in the normal domain of attraction of a symmetric `4/5`-stable Lévy process under spatial scaling `n^(-5/4)`, with limiting generator `C*(-Delta)^(2/5)`.  This is a dimensionless functional-limit theorem and does not source physical space, time, or action units.
+- Program 117 constructs an explicit ten-component dimensionless operational process: Hilbert space, state, fractional generator, wave/diffusion maps, clock, preparation, instrument, environment, apparatus, and record.  Full-record JSD reaches `0.2384985031` at dimensionless `t=3.54`; the optimal binary event has wave/diffusion probabilities `0.8664620648/0.2377974746`.  This is not physical validation.
+- Program 118 constructs `A_(kappa,nu)=kappa*(-Delta)+nu*(-Delta)^(2/5)`.  Its crossover is `q_*=(nu/kappa)^(5/6)` and its relative fractional coupling runs as `g(b)=g*b^(6/5)`; every `nu>0` is infrared-relevant.  The relative coupling is not sourced.
+- Program 119 proves that `F_V(q)=KL(q||r)+<V,q>` selects an interior `q_*` only for `V=-log(q_*/r)+constant`.  For strict FIN this is exactly `log(1+d^(9/5))-log|cos((743/4000)d+13/80)|+constant`; the unique adaptive potential is target-equivalent and not a source theorem.
+- Program 120 exhausts a declared 440-action target-free grammar on `C12/C24`; no candidate is exact.  Adding the strict rational tuple yields zero defect only by carrying the same four-parameter payload as direct kernel storage, so no MDL compression is exported.
+- Program 121 constructs a two-state hidden-Markov apparatus flip channel fitted only on 2,000 known-input calibration records and frozen for held-out likelihoods.  Synthetic accuracy reaches `0.9983` at 100 records; this validates the inference object only, not nature.
+- Program 122 constructs a new coefficient-free `Z12` homological-character fibre object
+  `F_p = reduced_H0(ker[m_p:Z12->Z12]) direct-sum X_p^-`,
+  where `X_p^-` is the negative real unit-character fibre.  For primes `2,3,5,7,11`, the exact dimensions are `[1,2,2,2,2]`.  The uniform normalized trace is `9/5`, but a general probability trace gives `eta(w)=2-w_2`; current strict data do not force `w_2=1/5`.
+- Program 123 combines the Program-122 trace family with a nonzero multiplicative tail `T(d)=beta*d^eta`.  The multiplicativity defect is `-a^eta*b^eta*beta*(beta-1)`, so positive nonzero multiplicativity forces `beta=1`.  Conditional on `w_2=1/5`, it gives `eta=9/5`, retention `2^(-4/5)=exp(-alpha_geo/5)`, and exact damping multiplier `(1+beta_tors*d)/(1+d^(9/5))`.  The trace source and multiplicative-compression source remain premises; no full bridge follows.
+- Program 124 completes a twelve-field operational type package by adding calibration and decision rule, and freezes `FIN_Programs_113_124_External_Data_Intake.json`.  The mathematical operational object is type-complete, but `ell_*`, `tau_*`, `hbar_*`, and independent calibrated raw records remain missing; zero external datasets are admitted.
+- Programs 113–124 do not export the uniform trace source, strict compression-law source, phase/frequency source, amplitude bridge, strict selector, `QW-2191` discharge, physical units, completed legacy-to-strict bridge, role transfer, role-bearing `L_total`, SM/GR generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-113–124 research steering guardrail (2026-07-27)
+
+- Highest source priority is Program 125: classify all traces on the five-sector Program-122 algebra compatible with the actual multiplication/automorphism/tensor data and prove either `w_2=1/5` or a surviving trace simplex.  Do not declare the trace uniform merely because it gives `9/5`.
+- Program 126 may construct exactly one typed natural transformation from the strict nadsoliton/Z12 carrier to the homological-character fibre object.  It must not assume the P2938 vector, target exponent, or uniform trace, and must pass presentation-independence and origin-covariance tests.
+- Program 127 should derive an explicit Diophantine discrepancy modulus and continuous Abelian remainder.  Program 128 may then prove a quantitative stable functional-limit rate.  Do not replace either theorem by denser finite-q or finite-n scans.
+- Program 129 may construct the fractional wave group on a rigged Hilbert space with declared UV domain and finite detector observables.  Program 132 may classify the local/fractional crossover RG phase diagram; neither route supplies a physical spacetime or Lorentz symmetry.
+- Program 130 may add only an explicit conditional calibration triple `ell_*,tau_*,hbar_*` with rank and uncertainty propagation.  Dimensionless traces, entropy, stable scaling, and dyadic retention cannot replace a missing calibration direction.
+- Program 131 should generalize apparatus memory to calibration-only process-tensor tomography.  Program 137 may use external records only through the frozen Program-124 immutable intake; synthetic or provenance-incomplete data do not update physical claims.
+- Program 133 is one bounded attempt at a coefficient-free source for `omega=743/4000` and `phi=13/80`.  Any candidate containing those rationals in its premises is target-coded and rejected.
+- Program 134 may construct a role-safe amplitude absorption/normalization morphism for `alpha_geo`; role transfer remains forbidden.  Program 135 may install the damping completion only after Programs 125/126 export the required trace/localizer, and it must remain separate from phase, frequency, amplitude, and role claims.
+- Program 136 is the only admissible selector continuation: one state-dependent, nonradial, inversion-odd signed law with nonzero value, origin covariance, stability, and fixed torsor coupling.  The Program-122 dimension object, traces, fractional symbols, and damping cocycle are inversion-even and do not discharge `QW-2191`.
+
+## Current trace-localizer and fractional-physics guardrail (Programs 125–137 / Release 10.13, 2026-07-27)
+
+- Programs 125–137 execute the Release-10.12 roadmap; the machine-readable record is `FIN_Programs_125_137_Trace_Localizer_Physics_Results.json`, and the English monograph is `FIN_Programs_125_137_Trace_Localizer_Physics_Monograph.pdf`.
+- Program 125 distinguishes two symmetry scopes.  Changes of generator of `C12` commute with every `m_p` and fix the prime labels individually, so carrier naturality alone leaves the full probability simplex.  Under the deliberately enlarged abstract symmetry `Aut(U(12)) ~= S3`, the sector orbits are `{2}`, `{3}`, and `{5,7,11}`, giving invariant traces `(x,y,z/3,z/3,z/3)` with `x+y+z=1` and exponent readout `eta=2-x`.  Even the enlarged symmetry does not force `x=w_2=1/5`; the normalized Hilbert trace has weights `[1,2,2,2,2]/9` and gives `17/9`, not `9/5`.  Do not conflate abstract unit-group automorphisms with `C12` carrier automorphisms or call the uniform trace canonical without a new state-selection theorem.
+- Program 126 upgrades the fibre formula to a natural finite-carrier localizer
+  `F_p(C_n)=reduced_H0(ker m_p) direct-sum X_p^-`.  For every cyclic-group isomorphism `psi`, `psi o m_p=m_p o psi`; all `C12` generator changes preserve `[1,2,2,2,2]`.  This closes presentation dependence at the strict `C12` carrier level only.  It does not source the carrier from ontology, select a trace/state, or couple the localizer to damping.
+- Program 127 covers every FFT frequency cell in `q in [1e-3,2e-2]` using `N=2^21`, analytic tail bounds, and a finite derivative bound.  The maximum conservative relative-remainder upper bound around `C*|q|^(4/5)` is `0.0226460484`.  Because the FFT uses guarded ordinary floating point rather than directed interval arithmetic, classify this as strong evidence, not a formal computer-assisted theorem or a full `q->0` remainder rate.
+- Program 128 gives quantitative finite-step characteristic intervals for `q_n=k*n^(-5/4)` inside the Program-127 window.  The largest endpoint-distance bound is `0.0087261515`; some conservative finite and stable intervals remain separated by at most `0.0049583271`.  Do not claim uniform overlap or a global asymptotic convergence rate.
+- Program 129 constructs the cutoff fractional wave family `U_t^Lambda=1_(|q|<=Lambda) exp(-it C|q|^(4/5))`.  The standard dyadic curvature estimate grows as `t^(-1/2)*Lambda^(3/5)` and is not UV summable.  The uncut `L2` unitary group is valid, but pointwise wave records require a bandwidth, detector-resolution, weighted-space, or distributional specification.  Do not infer a physical point detector or Lorentzian propagation from the spectral group alone.
+- Program 130 constructs the conditional physical map `x_phys=ell*x`, `t_phys=tau*t`, `H_phys=(hbar/tau)A`, with `D_(4/5)=ell^(4/5)/tau`.  Its log-dimension matrix has determinant one and rank three.  Length, clock, and action remain three independent calibration directions; no internal FIN unit source is exported.
+- Program 131 constructs a Jeffreys-smoothed finite-memory apparatus process-tomography estimator.  In the synthetic order-one Markov challenge, order one has the best 10,000-calibration-record held-out log loss (`0.119580`, versus `0.119683` for order two and `0.311244` for iid).  This validates a calibration method only and supplies no external physical evidence.
+- Program 132 proves the exact projective crossover flow for `A=kappa*(-Delta)+nu*(-Delta)^(2/5)`: with `x=g/(1+g)` and `g=nu/kappa`, `dx/dlog(b)=(6/5)x(1-x)`.  The local endpoint is UV and the fractional endpoint IR; the coupling values are not sourced.
+- Program 133 records exact arithmetic identities for the frozen phase and frequency using the new finite-object integers, but rejects them as target-driven encodings.  No natural transformation, variational selection, uniqueness, or robustness theorem selects those formulas.  Do not cite exact rational equality as a phase/frequency source.
+- Program 134 constructs the idempotent amplitude quotient `Pi_0(K)=K/K(0)`.  It removes `alpha_geo` from legacy shape, but the projectivized legacy/strict relative `L2` mismatch on `d=0..64` is `3.70714`, and the best scalar-only residual is `0.933864`.  Absolute-amplitude roles are erased by the quotient; no full bridge or role transfer follows.
+- Program 135 constructs the exact conditional family `D_w(d)=(1+beta_tors*d)/(1+d^(2-w_2))`.  Only after adding `w_2=1/5` and nonzero multiplicative monomial-tail premises does it give `(eta,beta)=(9/5,1)` and `2^(-4/5)=exp(-alpha_geo/5)`.  Program 125 leaves the state premise unsourced; phase, frequency, amplitude roles, bridge completion, and role transfer remain open.
+- Program 136 constructs the fractional-circulant signed receiver `Lambda(rho,A)=2 Im sum_i rho_(i,i+1) A_(i+1,i)`.  Prepared Fourier states have paired currents `+/-0.498004` for `k=+/-1` and `+/-0.862568` for `k=+/-2`, while thermal/reflection-invariant states give zero.  The receiver reads a prepared sign but does not choose a branch; no nonpremise preparation law, fixed torsor polarity, `QW-2191` discharge, or strict selector closure is exported.
+- Program 137 finds no explicitly admitted external dataset among the five named intake/preregistration JSON artifacts.  Programs 125–137 use repository-internal and synthetic records only.
+- Programs 125–137 do not export a canonical uniform trace, strict `eta=9/5` source, phase/frequency source, nonpremise signed preparation, `QW-2191` discharge, internal physical units, point-detector UV limit, completed legacy-to-strict bridge, legacy role transfer, role-bearing `L_total`, SM/GR generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-125–137 research steering guardrail (2026-07-27)
+
+- Highest proof-upgrade priority is Program 141: replace the Program-127 floating-point FFT by a validated interval FFT and retain analytic cell/tail bounds.  Program 142 may then attack a true Diophantine oscillatory-tail remainder rate; denser ordinary frequency scans are repetition-gated.
+- Highest source priority is Programs 138–140: test modular/KMS selection, maximum-relative-entropy reference measures, and Morita stability of the sector state/readout.  A modular Hamiltonian, reference measure, constraint, or amplification chosen to encode `w_2=1/5` is an added premise and must not be reported as a strict source.
+- Wave continuations must respond to the Program-129 UV obstruction.  Program 143 may seek weighted/frequency-localized estimates; Program 144 should introduce an explicit detector response `R_sigma` and test resolution-independent observable limits.  Do not repeat an unqualified cutoff-free point-propagator claim.
+- Operational physics should prioritize Program 146 calibration-invariant record ratios and Program 145 joint system–instrument identifiability.  Physical-data intake remains forbidden until preparation, environment, clock, detector response, calibration split, null/alternative, statistic, exclusions, and rejection threshold are frozen.
+- The only admissible selector continuation is Program 147 as a preparation resource theory for the existing signed receiver.  Prove whether reflection-symmetric strict operations can generate nonzero signed preparation.  Do not relabel the Program-136 receiver as a selector or replay generic pseudoscalar inventories.
+- Program 148 may construct one target-free coupled state–damping variational functional.  Any term whose coefficient, minimizer, or constraint already contains `w_2=1/5`, `eta=9/5`, or the frozen strict tuple is target-coded and rejected.
+- Program 149 should assemble a full typed completion-map diagram and prove exactly which squares commute.  Keep amplitude quotient, state-dependent damping, phase/frequency source, topological data, and role semantics as separate arrows.  Role transfer remains downstream of full source closure.
+- Program 150 may freeze one pre-data physical protocol using calibration-invariant observables and finite detector resolution.  Until independently calibrated raw records are admitted, it is a protocol artifact and not physical evidence.
+
+## Current state-selection, detector, and bridge-architecture guardrail (Programs 138–150 / Release 10.14, 2026-07-27)
+
+- Programs 138–150 execute the Release-10.13 roadmap; the machine-readable record is `FIN_Programs_138_150_State_Detector_Bridge_Results.json`, the English monograph is `FIN_Programs_138_150_State_Detector_Bridge_Monograph.pdf`, and the immutable protocol is `FIN_Programs_138_150_PreData_Physical_Protocol.json`.
+- Program 138 proves modular/KMS nonselection.  On `A_F=C^5`, every continuous one-parameter automorphism group is trivial because `Aut(C^5)=S5` is discrete, so every probability state is KMS.  On `B=M1(C) direct-sum M2(C)^4`, every faithful density defines its own modular flow.  The block-Gibbs family reaches `eta=9/5` only at the added modular gap `theta=ln(2)=alpha_geo/4`; no strict theorem sources that gap.
+- Program 139 proves maximum-entropy reference dependence.  Sector-counting reference gives `eta=9/5`, Hilbert microstate reference gives `17/9`, and Hilbert-Schmidt reference gives `33/17`.  Imposing mean dimension `9/5` is equivalent to imposing `w2=1/5`; full `S5` symmetry exchanges nonisomorphic dimension-1/dimension-2 fibres and is not admitted.  Do not call the uniform state reference-free or entropy-forced.
+- Program 140 proves that normalized Hilbert central weights are not Morita invariant.  Strongly Morita-equivalent block amplifications `direct-sum M_(n_p d_p)(C)` change the induced state: `[1,1,1,1,1]` gives `17/9`, while `[2,1,1,1,1]` gives `9/5`.  Morita equivalence preserves the center up to isomorphism but does not choose a state on it.
+- Programs 138–140 jointly close the current modular/entropy/Morita routes to a strict `w2=1/5` source.  A new state-selection continuation must introduce a genuinely new natural measure, carrier-sourced Hamiltonian, induction/restriction law, or other typed source; rewriting `ln(2)`, choosing sector counting, or choosing block multiplicities is an added premise.
+- Program 141 implements a 42-decimal-place `mpmath.iv` radix-two interval FFT with `N=2^14`, retained distance `8191`, analytic tail `<=0.001850420657`, and 50 cells covering `q in [0.001,0.02]`.  Every symbol lower bound is positive and every cell is compatible with `C|q|^(4/5)`, but the maximum formal relative-remainder upper bound is `1.08134524`.  This is a genuine formal continuous-window certificate; it does not formally recover the Program-127 tight `2.2647%` floating-point bound.
+- Program 142 certifies the continued-fraction prefix `[0;16,1,10,2,67,2,2,5,1,2,928]` for `743/(4000*pi)` and a Denjoy–Koksma/Ostrowski discrepancy modulus for every `N<=10^6`.  The formal discrepancy bound at `10^6` is `124`; observed discrepancy is `0.313828`.  A finite prefix, especially with partial quotient `928`, does not prove an all-scale Diophantine type or a global `q^(4/5+delta)` remainder.
+- Program 143 proves `H^s`, `s>1/2`, point-record boundedness for `U_t=exp(-it C(-Delta)^(2/5))`, while preserving the no-smoothing/no-unqualified-`L1->Linf` boundary.  Regularity of preparation is operational input, not a strict kernel source.
+- Program 144 constructs Gaussian detector response `R_sigma` and proves resolution removal for regular preparations, with numerical small-`sigma` error slope `1.99924` for a Gaussian state.  An ideal delta preparation has peak `1/(sqrt(2pi)*sigma)` and no resolution-independent limit.  Do not claim a point detector independently of preparation class.
+- Program 145 constructs an exact joint inverse for `(alpha,epsilon,rho)` from two system-spin means and one lag product in the declared three-parameter model.  The joint Jacobian has rank three; a one-time mean has rank one.  Synthetic RMSE is `0.001284/0.000277/0.009423`.  This does not establish identifiability for arbitrary instrument families.
+- Program 146 constructs the calibration-invariant statistic `T=log(IQR(t2)/IQR(t1))/log(t2/t1)=1/alpha`.  For `alpha=4/5`, synthetic mean is `1.25065` without detector noise and `1.24799` with relative detector noise.  Multiplicative length/time scales cancel, but preparation, time ordering, detector model, and raw records remain necessary.
+- Program 147 constructs a reflection-asymmetry preparation resource theory.  Free states satisfy `rho=R rho R`, free channels are reflection covariant, and `M(rho)=0.5||rho-R rho R||_1` is monotone.  For reflection-odd `C`, `|Tr(rho C)|<=M(rho)||C||_infinity`.  The `k=+/-1` states have `M=1` and paired `Lambda=+/-0.498004`; their symmetric mixture has `M=0`.  Reflection-symmetric strict operations cannot create signed preparation.  This is a no-go theorem, not `QW-2191` discharge.
+- Program 148 constructs the strictly convex family `F_(a,kappa)=KL(w||r_a)+(kappa/2)(eta-sum w_p d_p)^2`, `r_a,p proportional d_p^a`.  Its unique solution is `w=r_a`; `a=0` gives `9/5`, while `a=1` gives `17/9`.  The missing object is a source theorem for `a`; choosing `a=0` for the target value is forbidden target coding.
+- Program 149 constructs the full typed completion diagram.  Amplitude quotient plus conditional damping commutes with projective strict only in the shared-phase/frequency control (residual `5.67e-17`).  For canonical legacy `(pi/4,pi/6)` versus strict `(743/4000,13/80)`, the residual is `0.47086477`.  Phase/frequency transport, topological-selector transport, and physical-role transport remain absent; bridge completion and role transfer remain blocked.
+- Program 150 freezes `FIN-P150-FRACTIONAL-IQR-001`, testing local `alpha=2` against fractional `alpha=4/5` with the IQR log-slope threshold `0.875`.  Its canonical core digest is `0c292bf5d8efce3055a27daa16e60d60b53e2e2cb9852c37827418ec1ec453f5`.  Synthetic false-positive rate is zero and power one in the declared simple challenge; no external data are admitted, and no FIN ontology/bridge claim follows from this protocol.
+- Programs 138–150 do not export a canonical uniform state, strict `eta=9/5` source, strict phase/frequency source, nonfree signed preparation, `QW-2191` discharge, internal physical units, tight formal sub-3-percent Abelian remainder, all-scale Diophantine rate, completed legacy-to-strict bridge, legacy role transfer, role-bearing `L_total`, SM/GR generation, ToE closure, or external physical evidence.
+
+## Current post-Programs-138–150 research steering guardrail (2026-07-27)
+
+- Highest proof-upgrade priority is Program 151: a larger validated/ball FFT whose preregistered acceptance target is a formal relative remainder below `3%` throughout `[0.001,0.02]`.  Ordinary denser floating-point scans are repetition-gated.
+- Program 152 may attack one explicit effective irrationality measure for `743/(4000*pi)`.  A finite continued-fraction extension alone is not an all-scale theorem; practical constants and the implication for the Abelian remainder must be stated.
+- State-selection work may continue only through Programs 153/154/161: a functorial probability measure on the fibre groupoid, a carrier-sourced modular Hamiltonian, or a finite target-free grammar for the reference exponent.  Modular gaps containing `ln(2)`, sector-counting reference, target mean `9/5`, or chosen amplification multiplicities are premises, not closures.
+- The selector lane should continue only through Program 155 as a classification of reflection-asymmetry resources and free channels.  A strict selector requires a nonfree state or operation with provenance; receiver values and resource monotones do not discharge `QW-2191`.
+- Operational priority is Programs 158/156/159: a finite-sample theorem for the IQR exponent, detector deconvolution/bias, and a blind adversarial challenge including tempered, truncated, local, fractional, and apparatus-confounded alternatives.  A simple synthetic power of one is not model specificity or physical evidence.
+- Program 157 may extend joint identifiability to semiparametric finite-memory apparatus families and must include explicit nonidentifiable counterexamples.
+- The next bridge move is Program 160: a representation-theoretic phase/frequency transport or obstruction between the legacy period-eight numerator and strict carrier/irrational-phase structure.  Do not repeat amplitude or damping completion as if it addressed this arrow.
+- Program 162 may construct a conditional role-transfer obstruction matrix only to list necessary conditions and destroyed roles.  It must not start role transfer before phase/frequency, selector/topological, amplitude semantics, and full completion are exported.
+- Program 163 may audit external-data readiness against the frozen Program-150 schema.  Admit no dataset lacking preparation provenance, time ratio, raw records, detector calibration, apparatus-memory calibration, and exclusion audit.
+
+## Current axiomatic-operational foundations guardrail (Programs 151–164 / Release 10.15, 2026-07-27)
+
+- Programs 151–164 execute the Release-10.14 roadmap and add the requested
+  axiomatic synthesis.  The machine-readable record is
+  `FIN_Programs_151_164_Axiomatic_Operational_Results.json`, the extracted
+  six-axiom architecture is
+  `FIN_Programs_151_164_Minimal_Axiomatic_System.json`, and the English
+  monograph is
+  `FIN_Programs_151_164_Axiomatic_Operational_Foundations_Monograph.pdf`.
+- Program 151 doubles the formal interval FFT to `N=32768`, retained distance
+  `16383`, and 100 continuous cells on `q in [0.001,0.02]`.  All formal symbol
+  lower bounds are positive and all cells are compatible with
+  `C*|q|^(4/5)`.  The worst relative enclosure improves from about `1.08135`
+  to `0.6129831478`, but remains above the preregistered `3%` target.  Preserve
+  the no-tight-certificate boundary; further work must introduce
+  cancellation-aware tail bounds or stronger ball arithmetic, not another
+  ordinary dense scan.
+- Program 152 isolates the genuinely missing all-scale premise as
+  `D(kappa,nu): ||q theta|| >= kappa*q^(-nu)` for every `q>=1`.
+  Irrationality alone is insufficient by the Liouville counterexample.  The
+  certified finite prefix gives positive finite constants but is not an
+  all-scale theorem for `theta=743/(4000*pi)`.
+- Program 153 classifies invariant fibre-groupoid measures as
+  `(x,y,z/3,z/3,z/3)` with `x+y+z=1`.  Naturality on the admitted structural
+  orbits leaves a two-dimensional simplex and does not select the uniform
+  centre or `w2=1/5`.
+- Program 154 constructs one transparent axiom-augmented state closure:
+  `H_F|p=(d_p-1)I` and
+  `A_ME: beta_F=alpha_geo/|Hom(U(12),{+1,-1})|=alpha_geo/4=ln(2)`.
+  With Hilbert degeneracy this gives exactly `w_p=1/5` and `eta=9/5`; for the
+  unit gap the temperature is unique.  This is conditional on `A_ME`, not a
+  strict source theorem.  Removing the temperature relation, unit gap,
+  degeneracy, or carrier energy destroys the exact construction.
+- Program 155 proves that every affine trace-preserving
+  reflection-covariant channel on the declared two-branch orbit line is
+  `r -> lambda*r`, `|lambda|<=1`.  Consequently `M(rho_r)=|r|` is a complete
+  deterministic conversion monotone on that line.  It classifies use of a
+  signed preparation but does not create the nonfree input and does not
+  discharge `QW-2191`.
+- Programs 156/158 derive
+  `Var(IQR_hat)=1/[4*n*f(q_0.75)^2]+o(n^-1)` for symmetric continuous laws and
+  the corresponding independent-time log-slope variance.  In the declared
+  `alpha=4/5`, `n=4000` model, predicted slope SD is `0.0307072` and Monte
+  Carlo SD is `0.0294257`.  Absolute Gaussian resolution biases the finite
+  time-ratio slope downward; algebraic Gaussian deconvolution is
+  UV-ill-posed because its inverse multiplier is unbounded.
+- Program 157 proves semiparametric nonidentifiability under unrestricted
+  positive apparatus gain: for any `alpha'`,
+  `h'(t)=h(t)*t^(1/alpha-1/alpha')` preserves the record.  A constant unknown
+  gain is harmless, but an unknown linear term in `log(t)` exactly confounds
+  the exponent.  More time points alone do not remove this obstruction.
+- Program 159 adversarially falsifies FIN specificity of the frozen P150
+  threshold.  It accepts a generic stable `alpha=1` alternative and a local
+  Gaussian process with time-dependent gain; the IQR is also insensitive to
+  the audited far-tail truncation.  Treat P150 as a scaling discriminator,
+  not a FIN ontology/kernel validator.
+- Program 160 proves a representation obstruction: the legacy oscillation is
+  a period-eight character, while `exp(i*(743/4000)d)` has infinite order and
+  is not a `Z12` character (`Z12` defect `1.79538117`).  No
+  generator-preserving translation-equivariant character bridge exists.
+  Nonlinear or explicitly symmetry-breaking completion maps remain open.
+- Program 161 exhausts 343 integer formulas in the declared orbit-invariant
+  energy grammar.  Six realize the target energy, but `d-1` is the unique
+  minimum-`L1` formula of complexity one.  This supports the simplicity of
+  the Program-154 Hamiltonian only within the declared grammar; it does not
+  derive `A_ME` or the target state.
+- Program 162 defines six necessary completion edges: amplitude, damping
+  semantics, phase/frequency, selector/topology, physical units, and spectral
+  equivalence.  Zero of nine audited legacy roles is currently eligible for
+  transfer.  Structural availability of dual operator dynamics is not
+  spectral equivalence or physical-role transport.
+- Program 163 reuses the immutable P150 protocol core and finds zero local
+  external candidates and zero admitted datasets.  The validator is ready;
+  no external physical evidence is claimed.
+- Program 164 defines AFIS with six independent axioms: `A0` conservative
+  spectral Dirichlet generator; `A1` sector state; `A2` preparation resource;
+  `A3` instrument/environment/apparatus/record; `A4` dimensional calibration;
+  `A5` typed legacy-to-strict completion.  All 64 subsets are enumerated.
+  Minimum layers are `A0` for shared spectral dynamics,
+  `A0+A1+A3` for generic operational probabilities,
+  `A0+A1+A2+A3` for a signed operational outcome, and
+  `A0+A1+A2+A3+A4` for a calibrated signed test.  Full conditional FIN uses
+  all six, but role-transfer eligibility is not role-transfer proof.
+- The AFIS countermodel theorem fixes the same `A0` while independently
+  varying state, preparation, instrument, conversion standards, and
+  completion map.  Therefore no theorem whose only input is the bare
+  spectral generator can uniquely create all missing physical structures.
+  The obstruction is state-theoretic, resource-theoretic, operational,
+  dimensional, and representation-theoretic.
+- A mirror/reflection coupling represents the relevant `Z2` symmetry but
+  does not choose its own polarity.  A signed preparation, noncovariant
+  instrument, nonzero inversion-odd source, or explicit boundary/initial
+  condition remains required.  Do not treat a symmetric mirror pair as
+  selector closure.
+- Programs 151–164 do not export strict `A_ME`, strict selector closure,
+  `QW-2191` discharge, internal physical units, completed legacy-to-strict
+  bridge, any legacy physical-role transfer, role-bearing `L_total`, SM/GR
+  generation, ToE closure, or external physical validation.
+
+## Current post-Programs-151–164 axiomatic research steering guardrail (2026-07-27)
+
+- Highest source priority is Program 166: try to derive or falsify `A_ME` from
+  tensor composition, real-character functoriality, coarse graining, and
+  stability.  A successful conditional calculation at `beta_F=ln(2)` is not
+  a derivation of the temperature-identification law.
+- Program 170 should compute perturbative sensitivity of the `A_ME`
+  equilibrium to energy gaps, degeneracies, dimensions, and beta.  Quantify
+  fine tuning before assigning physical meaning.
+- Program 167 should formalize AFIS consistency and independence in a proof
+  assistant.  Keep the analytic Dirichlet-form hypotheses separate from
+  finite matrix countermodels.
+- Operational priority is Program 173 for calibration controls that make the
+  exponent score transverse to apparatus nuisance, followed by Program 174
+  for preregistered composite model comparison and Program 172 for
+  nonasymptotic detector statistics.
+- Program 165 may seek the formal sub-`3%` fractional certificate only through
+  cancellation-aware oscillatory tail splitting and Arb/acb-style ball
+  arithmetic.  Absolute-tail interval replay at larger `N` is low priority.
+- Program 171 may extend the reflection resource theory to the full density
+  space.  Monotone completeness on the orbit line does not imply a full-space
+  selector or source.
+- Program 175 should generalize the phase obstruction categorically and
+  quantify the minimum symmetry-breaking input.  Program 176 may test exactly
+  one explicit nonlinear completion candidate against all six Program-162
+  edges, stopping at the first failed edge.
+- Program 177 may build a conditional AFIS CP-instrument model for double-slit
+  records.  Keep unitary propagation, diffusion/decoherence, instrument,
+  detector, and record as separate typed maps; do not call `P_t` measurement
+  collapse.
+- Programs 168/169 may respectively seek an effective all-scale
+  irrationality measure and monoidal groupoid valuation classification.
+  Finite continued-fraction extensions and unnormalized symmetry slogans are
+  not source theorems.

@@ -1,0 +1,1406 @@
+{
+  "system_name": "AFIS: Axiomatic FIN Informational-Spectral system",
+  "axioms": {
+    "A0": {
+      "name": "conservative spectral Dirichlet generator",
+      "statement": "(H,E,A,1) with E a closed Markovian Dirichlet form, A its self-adjoint nonnegative generator and A1=0; Borel functional calculus defines U_t, P_t and resolvents.",
+      "rank": 1
+    },
+    "A1": {
+      "name": "sector equilibrium/state",
+      "statement": "A localized finite algebra A_F, a faithful central state omega_F, and eta=omega_F(d); A_ME is one explicit non-strict realization.",
+      "rank": 3
+    },
+    "A2": {
+      "name": "preparation resource",
+      "statement": "A declared preparation set including a nonfree signed resource whenever an orientation-sensitive record is required.",
+      "rank": 3
+    },
+    "A3": {
+      "name": "instrument and record",
+      "statement": "A normalized completely positive instrument, apparatus/environment channel, outcome sigma-algebra and persistent record.",
+      "rank": 2
+    },
+    "A4": {
+      "name": "dimensional calibration",
+      "statement": "Positive conversion standards (ell_*,tau_*,hbar_*) and their operational calibration maps for every dimensional claim.",
+      "rank": 2
+    },
+    "A5": {
+      "name": "typed legacy-to-strict completion",
+      "statement": "A typed map carrying amplitude, damping/compression, phase/frequency, selector/topology and an explicit role-semantics audit.",
+      "rank": 4
+    }
+  },
+  "capability_requirements": {
+    "dual_unitary_diffusive_dynamics": [
+      "A0"
+    ],
+    "target_exponent_as_selected_state": [
+      "A0",
+      "A1"
+    ],
+    "generic_outcome_probabilities": [
+      "A0",
+      "A1",
+      "A3"
+    ],
+    "signed_operational_outcome": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "calibrated_dimensional_observation": [
+      "A0",
+      "A1",
+      "A3",
+      "A4"
+    ],
+    "calibrated_signed_test": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "typed_kernel_completion": [
+      "A0",
+      "A1",
+      "A5"
+    ],
+    "role_transfer_eligibility_only": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5"
+    ]
+  },
+  "all_64_subsets": [
+    {
+      "axioms": [],
+      "count": 0,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A3"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A3"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A3"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A3"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A3"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A3"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": true,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A4"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A4"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A4"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A4"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A3",
+        "A4"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A3",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A3",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A3",
+        "A4"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": true,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": true,
+        "calibrated_dimensional_observation": true,
+        "calibrated_signed_test": true,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A5"
+      ],
+      "count": 1,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A5"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A5"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A5"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A3",
+        "A5"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A3",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A3",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A3",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A3",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A3",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A3",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A5"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": true,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A4",
+        "A5"
+      ],
+      "count": 2,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A4",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A4",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A4",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A4",
+        "A5"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 3,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": true,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 4,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 5,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": false,
+        "target_exponent_as_selected_state": false,
+        "generic_outcome_probabilities": false,
+        "signed_operational_outcome": false,
+        "calibrated_dimensional_observation": false,
+        "calibrated_signed_test": false,
+        "typed_kernel_completion": false,
+        "role_transfer_eligibility_only": false
+      }
+    },
+    {
+      "axioms": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "count": 6,
+      "capabilities": {
+        "dual_unitary_diffusive_dynamics": true,
+        "target_exponent_as_selected_state": true,
+        "generic_outcome_probabilities": true,
+        "signed_operational_outcome": true,
+        "calibrated_dimensional_observation": true,
+        "calibrated_signed_test": true,
+        "typed_kernel_completion": true,
+        "role_transfer_eligibility_only": true
+      }
+    }
+  ],
+  "minimum_axiom_sets": {
+    "dual_unitary_diffusive_dynamics": [
+      [
+        "A0"
+      ]
+    ],
+    "target_exponent_as_selected_state": [
+      [
+        "A0",
+        "A1"
+      ]
+    ],
+    "generic_outcome_probabilities": [
+      [
+        "A0",
+        "A1",
+        "A3"
+      ]
+    ],
+    "signed_operational_outcome": [
+      [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    ],
+    "calibrated_dimensional_observation": [
+      [
+        "A0",
+        "A1",
+        "A3",
+        "A4"
+      ]
+    ],
+    "calibrated_signed_test": [
+      [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    ],
+    "typed_kernel_completion": [
+      [
+        "A0",
+        "A1",
+        "A5"
+      ]
+    ],
+    "role_transfer_eligibility_only": [
+      [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    ]
+  },
+  "removal_countermodels": {
+    "A0": "Choose a nonnormal, indefinite, nonconservative, or non-Markov generator. One respectively loses the shared spectral calculus, contractivity, mass conservation, or positivity preservation.",
+    "A1": "Uniform-sector and Hilbert-trace states share A0,A2--A5 but give eta=9/5 and 17/9 respectively.",
+    "A2": "Restrict preparations to reflection-invariant states. Every reflection-odd record has zero expectation under free operations.",
+    "A3": "Retain states and dynamics but specify no CP instrument or outcome map. No probability distribution over recorded events is defined.",
+    "A4": "Rescale ell_*, tau_* and hbar_* while leaving all dimensionless operator statements fixed. Absolute length, time and action change.",
+    "A5": "Use the canonical legacy and strict kernels. Their audited scalar completion residual and inequivalent phase representations remain."
+  },
+  "full_system_removal_losses": {
+    "A0": [
+      "dual_unitary_diffusive_dynamics",
+      "target_exponent_as_selected_state",
+      "generic_outcome_probabilities",
+      "signed_operational_outcome",
+      "calibrated_dimensional_observation",
+      "calibrated_signed_test",
+      "typed_kernel_completion",
+      "role_transfer_eligibility_only"
+    ],
+    "A1": [
+      "target_exponent_as_selected_state",
+      "generic_outcome_probabilities",
+      "signed_operational_outcome",
+      "calibrated_dimensional_observation",
+      "calibrated_signed_test",
+      "typed_kernel_completion",
+      "role_transfer_eligibility_only"
+    ],
+    "A2": [
+      "signed_operational_outcome",
+      "calibrated_signed_test",
+      "role_transfer_eligibility_only"
+    ],
+    "A3": [
+      "generic_outcome_probabilities",
+      "signed_operational_outcome",
+      "calibrated_dimensional_observation",
+      "calibrated_signed_test",
+      "role_transfer_eligibility_only"
+    ],
+    "A4": [
+      "calibrated_dimensional_observation",
+      "calibrated_signed_test",
+      "role_transfer_eligibility_only"
+    ],
+    "A5": [
+      "typed_kernel_completion",
+      "role_transfer_eligibility_only"
+    ]
+  },
+  "layered_minima": {
+    "minimal_mathematical_core": [
+      "A0"
+    ],
+    "selected_dimensionless_operator_model": [
+      "A0",
+      "A1"
+    ],
+    "generic_dimensionless_operational_physics": [
+      "A0",
+      "A1",
+      "A3"
+    ],
+    "signed_dimensionless_operational_physics": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "generic_calibrated_physics": [
+      "A0",
+      "A1",
+      "A3",
+      "A4"
+    ],
+    "calibrated_signed_test": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "full_conditional_FIN_architecture": [
+      "A0",
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5"
+    ]
+  },
+  "central_independence_theorem": "No single one of A1--A5 is forced by A0: finite countermodels preserve the spectral generator while varying the state, preparation set, instrument, units, or completion map independently.",
+  "A0_internal_necessity": {
+    "self_adjointness": "Without it exp(-itA) need not be unitary and no projection-valued spectral measure is guaranteed.",
+    "nonnegativity": "Without it exp(-tA) can grow exponentially on negative spectrum.",
+    "conservativity": "Without A1=0 the diffusion semigroup need not preserve total mass.",
+    "Markov_property": "A nonnegative self-adjoint contraction need not preserve positivity; the Dirichlet/Markov property supplies that implication."
+  },
+  "smallest_new_state_axiom_candidate": "A_ME from Program 154",
+  "smallest_single_theorem_connecting_every_layer_found": false,
+  "obstruction_type": [
+    "state-theoretic",
+    "resource-theoretic",
+    "operational",
+    "dimensional",
+    "representation-theoretic"
+  ],
+  "status": "Axiom system constructed; independence proven by countermodels",
+  "confidence": "Proven as a logical architecture",
+  "claim_boundary": "AFIS is an explicit axiom-augmented research architecture, not a strict-core derivation, role-transfer theorem, L_total, or ToE closure."
+}

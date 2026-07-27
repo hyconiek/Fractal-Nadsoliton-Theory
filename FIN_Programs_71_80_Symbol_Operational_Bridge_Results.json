@@ -1,0 +1,692 @@
+{
+  "release": "10.8",
+  "title": "Programs 71--80: Symbol, Quotient, and Operational Bridge",
+  "date": "2026-07-27",
+  "author": "Krzysztof Żuchowski",
+  "orcid": "0009-0002-0909-3613",
+  "ontology_guardrail": "The nadsoliton is treated as primordial fractal information in a solitonic state; no lower informational substrate is introduced.",
+  "program71": {
+    "fourier_block_formula": "For the even/odd block symbol B(k), s(k)=B00(k)-B01(k) B11(k)^(-1) B10(k).",
+    "dense_symbol_relative_residual": 9.970398646932332e-17,
+    "nearest_neighbour_exact_map": {
+      "m": 0.37,
+      "c": 1.21,
+      "c_prime": 0.5247670250896057,
+      "m_prime": 0.6909318996415771,
+      "ratio_m_over_c": 0.30578512396694213,
+      "ratio_prime_numeric": 1.316645037907247,
+      "ratio_prime_formula_r_times_r_plus_4": 1.3166450379072465,
+      "relative_residual": 1.962704672859274e-16,
+      "nonnegative_fixed_points": [
+        0.0
+      ],
+      "linearized_derivative_at_zero": 4.0
+    },
+    "status": "Proven (finite Fourier diagonalization and exact algebra)",
+    "interpretation": "Schur elimination is an exact symbol-level operation.  Exactness of this operation does not imply equality with any native coarse FIN kernel; that separate naturality question is tested in Program 72."
+  },
+  "program72": {
+    "sizes": [
+      48,
+      96,
+      192,
+      384,
+      768,
+      1536
+    ],
+    "fixed_conventions": {
+      "positive_realization": "absolute-value weights",
+      "row_normalization": "weights sum to one",
+      "mass_squared": 0.25,
+      "post_compression_normalization": "unit diagonal"
+    },
+    "cases": {
+      "strict_lattice_distance": {
+        "rows": [
+          {
+            "retained_n": 48,
+            "operator_defect": 0.07760171444168457,
+            "green_defect": 0.31031735023342666
+          },
+          {
+            "retained_n": 96,
+            "operator_defect": 0.07661541096467175,
+            "green_defect": 0.2874841601866101
+          },
+          {
+            "retained_n": 192,
+            "operator_defect": 0.07565417427442735,
+            "green_defect": 0.27352363689686443
+          },
+          {
+            "retained_n": 384,
+            "operator_defect": 0.07497705663959686,
+            "green_defect": 0.2654008547662057
+          },
+          {
+            "retained_n": 768,
+            "operator_defect": 0.07469495000996759,
+            "green_defect": 0.26133731048083786
+          },
+          {
+            "retained_n": 1536,
+            "operator_defect": 0.07450779156220516,
+            "green_defect": 0.2589372662680463
+          }
+        ],
+        "operator_loglog_slope": -0.01189509537395928,
+        "green_loglog_slope": -0.050340266189162285,
+        "operator_monotone_decreasing": true,
+        "green_monotone_decreasing": true,
+        "final_operator_defect": 0.07450779156220516,
+        "final_green_defect": 0.2589372662680463
+      },
+      "legacy_absolute_lattice_distance": {
+        "rows": [
+          {
+            "retained_n": 48,
+            "operator_defect": 0.05569887342430375,
+            "green_defect": 0.24192374158199212
+          },
+          {
+            "retained_n": 96,
+            "operator_defect": 0.03935280114294682,
+            "green_defect": 0.18581594407467056
+          },
+          {
+            "retained_n": 192,
+            "operator_defect": 0.028134717155285045,
+            "green_defect": 0.13792947633597039
+          },
+          {
+            "retained_n": 384,
+            "operator_defect": 0.020503130732424053,
+            "green_defect": 0.10026929057111207
+          },
+          {
+            "retained_n": 768,
+            "operator_defect": 0.015378764163102337,
+            "green_defect": 0.07213803788087957
+          },
+          {
+            "retained_n": 1536,
+            "operator_defect": 0.01194853883880335,
+            "green_defect": 0.051760464323763605
+          }
+        ],
+        "operator_loglog_slope": -0.4464902064957979,
+        "green_loglog_slope": -0.44795220225262666,
+        "operator_monotone_decreasing": true,
+        "green_monotone_decreasing": true,
+        "final_operator_defect": 0.01194853883880335,
+        "final_green_defect": 0.051760464323763605
+      },
+      "strict_coordinate_rescaled": {
+        "rows": [
+          {
+            "retained_n": 48,
+            "operator_defect": 0.02019621849690859,
+            "green_defect": 0.2408922063378195
+          },
+          {
+            "retained_n": 96,
+            "operator_defect": 0.014131830406622014,
+            "green_defect": 0.18479385870670062
+          },
+          {
+            "retained_n": 192,
+            "operator_defect": 0.009940904351253086,
+            "green_defect": 0.13696834750087775
+          },
+          {
+            "retained_n": 384,
+            "operator_defect": 0.0070111185283958525,
+            "green_defect": 0.0993543836097734
+          },
+          {
+            "retained_n": 768,
+            "operator_defect": 0.004951215253260102,
+            "green_defect": 0.07119589959559644
+          },
+          {
+            "retained_n": 1536,
+            "operator_defect": 0.003498781971529894,
+            "green_defect": 0.05068692624332023
+          }
+        ],
+        "operator_loglog_slope": -0.5053947535412802,
+        "green_loglog_slope": -0.45242428397174533,
+        "operator_monotone_decreasing": true,
+        "green_monotone_decreasing": true,
+        "final_operator_defect": 0.003498781971529894,
+        "final_green_defect": 0.05068692624332023
+      },
+      "legacy_absolute_coordinate_rescaled": {
+        "rows": [
+          {
+            "retained_n": 48,
+            "operator_defect": 0.020471415602211166,
+            "green_defect": 0.24093120201685161
+          },
+          {
+            "retained_n": 96,
+            "operator_defect": 0.014329996417591445,
+            "green_defect": 0.184815559233147
+          },
+          {
+            "retained_n": 192,
+            "operator_defect": 0.010082356979684497,
+            "green_defect": 0.136982025362793
+          },
+          {
+            "retained_n": 384,
+            "operator_defect": 0.007111621579495401,
+            "green_defect": 0.09936359141557136
+          },
+          {
+            "retained_n": 768,
+            "operator_defect": 0.005022453681583722,
+            "green_defect": 0.07120227598188596
+          },
+          {
+            "retained_n": 1536,
+            "operator_defect": 0.0035492163254017576,
+            "green_defect": 0.05069139351443225
+          }
+        ],
+        "operator_loglog_slope": -0.5051856204415873,
+        "green_loglog_slope": -0.452443223148627,
+        "operator_monotone_decreasing": true,
+        "green_monotone_decreasing": true,
+        "final_operator_defect": 0.0035492163254017576,
+        "final_green_defect": 0.05069139351443225
+      }
+    },
+    "semantic_warning": "K(d) and K(d/N) are different model families.  Coordinate rescaling is imported lattice semantics, not a FIN-derived length.",
+    "status": "Numerical evidence under declared discretizations"
+  },
+  "program73": {
+    "quotient_dimension": 11,
+    "strict_nonzero_eigenvalue_min": 0.7541211542070796,
+    "legacy_absolute_nonzero_eigenvalue_min": 15.185443105285541,
+    "kl_strict_to_legacy_on_quotient": 47.68048864231407,
+    "kl_legacy_to_strict_on_quotient": 8.062722137568322,
+    "shifted_limit_rows": [
+      {
+        "delta": 0.1,
+        "full_shifted_kl_strict_to_legacy": 43.356843554144504,
+        "absolute_error_to_quotient": 4.323645088169563
+      },
+      {
+        "delta": 0.01,
+        "full_shifted_kl_strict_to_legacy": 47.20744146331917,
+        "absolute_error_to_quotient": 0.47304717899489646
+      },
+      {
+        "delta": 0.001,
+        "full_shifted_kl_strict_to_legacy": 47.63272970172625,
+        "absolute_error_to_quotient": 0.047758940587819154
+      },
+      {
+        "delta": 0.0001,
+        "full_shifted_kl_strict_to_legacy": 47.675708152697055,
+        "absolute_error_to_quotient": 0.0047804896170120514
+      },
+      {
+        "delta": 1e-05,
+        "full_shifted_kl_strict_to_legacy": 47.68001054680373,
+        "absolute_error_to_quotient": 0.0004780955103385054
+      },
+      {
+        "delta": 1e-06,
+        "full_shifted_kl_strict_to_legacy": 47.680440828997064,
+        "absolute_error_to_quotient": 4.7813317003431166e-05
+      },
+      {
+        "delta": 1e-07,
+        "full_shifted_kl_strict_to_legacy": 47.68048390704397,
+        "absolute_error_to_quotient": 4.735270096034583e-06
+      },
+      {
+        "delta": 1e-08,
+        "full_shifted_kl_strict_to_legacy": 47.68048824337151,
+        "absolute_error_to_quotient": 3.9894256076422607e-07
+      }
+    ],
+    "last_absolute_error": 3.9894256076422607e-07,
+    "status": "Proven quotient construction; numerically verified limit",
+    "scope": "The construction removes the common constant zero mode without a mass regulator.  It still uses a declared positive absolute-value realization of the legacy weights."
+  },
+  "program74": {
+    "rows": [
+      {
+        "truncation_radius": 1,
+        "operator_relative_error": 0.432079372909805,
+        "first_nonzero_matrix_power_to_opposite_site": 6,
+        "leading_wave_probability_power": 12,
+        "leading_diffusion_entry_power": 6,
+        "wave_output_tv_at_t1": 0.03318851799010058,
+        "diffusion_output_tv_at_t1": 0.28026946915539763
+      },
+      {
+        "truncation_radius": 2,
+        "operator_relative_error": 0.20279492768531174,
+        "first_nonzero_matrix_power_to_opposite_site": 3,
+        "leading_wave_probability_power": 6,
+        "leading_diffusion_entry_power": 3,
+        "wave_output_tv_at_t1": 0.008778172906341357,
+        "diffusion_output_tv_at_t1": 0.13760836222648376
+      },
+      {
+        "truncation_radius": 3,
+        "operator_relative_error": 0.0942075923903677,
+        "first_nonzero_matrix_power_to_opposite_site": 2,
+        "leading_wave_probability_power": 4,
+        "leading_diffusion_entry_power": 2,
+        "wave_output_tv_at_t1": 0.00253235052095399,
+        "diffusion_output_tv_at_t1": 0.06596027576798157
+      },
+      {
+        "truncation_radius": 4,
+        "operator_relative_error": 0.03820016915960128,
+        "first_nonzero_matrix_power_to_opposite_site": 2,
+        "leading_wave_probability_power": 4,
+        "leading_diffusion_entry_power": 2,
+        "wave_output_tv_at_t1": 0.000819159033679724,
+        "diffusion_output_tv_at_t1": 0.025777314321194057
+      },
+      {
+        "truncation_radius": 5,
+        "operator_relative_error": 0.00862570101455797,
+        "first_nonzero_matrix_power_to_opposite_site": 2,
+        "leading_wave_probability_power": 4,
+        "leading_diffusion_entry_power": 2,
+        "wave_output_tv_at_t1": 0.0002100085602280822,
+        "diffusion_output_tv_at_t1": 0.004765763627147367
+      },
+      {
+        "truncation_radius": 6,
+        "operator_relative_error": 0.0,
+        "first_nonzero_matrix_power_to_opposite_site": 1,
+        "leading_wave_probability_power": 2,
+        "leading_diffusion_entry_power": 1,
+        "wave_output_tv_at_t1": 0.0,
+        "diffusion_output_tv_at_t1": 0.0
+      }
+    ],
+    "status": "Proven short-time order; numerical finite-time comparison",
+    "interpretation": "Finite-range truncation increases the perturbative order required to reach a distant site, but changes the operator and its t=1 outputs.  The untruncated radial kernel has immediate graph edges to every site and therefore does not by itself define a strict finite propagation cone."
+  },
+  "program75": {
+    "parameterization": [
+      "log_length",
+      "log_time",
+      "log_action"
+    ],
+    "measurement_jacobians": {
+      "length_standard": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clock_standard": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "energy_standard": [
+        0.0,
+        -1.0,
+        1.0
+      ]
+    },
+    "assumed_log_noise_standard_deviations": {
+      "length_standard": 0.01,
+      "clock_standard": 0.005,
+      "energy_standard": 0.02
+    },
+    "total_measurements": 30,
+    "d_optimal_allocation": {
+      "length_standard": 10,
+      "clock_standard": 10,
+      "energy_standard": 10
+    },
+    "fisher_matrix": [
+      [
+        100000.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        425000.0,
+        -25000.0
+      ],
+      [
+        0.0,
+        -25000.0,
+        25000.0
+      ]
+    ],
+    "covariance_lower_bound": [
+      [
+        1e-05,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.4999999999999998e-06,
+        2.4999999999999998e-06
+      ],
+      [
+        0.0,
+        2.4999999999999998e-06,
+        4.25e-05
+      ]
+    ],
+    "one_sigma_log_parameter_bounds": [
+      0.0031622776601683794,
+      0.0015811388300841897,
+      0.006519202405202649
+    ],
+    "fisher_condition_number": 18.195039966835868,
+    "log_determinant": 34.538776394910684,
+    "rank_after_omitting_each_class": {
+      "length_standard": 2,
+      "clock_standard": 2,
+      "energy_standard": 2
+    },
+    "status": "Proven identifiability; conditional numerical design",
+    "scope": "The design proves that three independent operational standards are sufficient and individually necessary for this parameterization. Their values and noise levels are external conditioning data; FIN does not generate an SI unit."
+  },
+  "program76": {
+    "formula": "J_ij=2 Im(rho_ij W_ji), Lambda(rho,W)=sum_i J_{i,i+1}.",
+    "kernels": {
+      "strict": [
+        {
+          "fourier_mode_k": 0,
+          "lambda": 0.0,
+          "reflection_sum_residual": 0.0,
+          "translation_invariance_residual": 0.0
+        },
+        {
+          "fourier_mode_k": 1,
+          "lambda": -0.4699856726450202,
+          "reflection_sum_residual": 1.1102230246251565e-16,
+          "translation_invariance_residual": 5.551115123125783e-17
+        },
+        {
+          "fourier_mode_k": -1,
+          "lambda": 0.4699856726450202,
+          "reflection_sum_residual": 1.1102230246251565e-16,
+          "translation_invariance_residual": 5.551115123125783e-17
+        }
+      ],
+      "legacy_raw_signed": [
+        {
+          "fourier_mode_k": 0,
+          "lambda": 0.0,
+          "reflection_sum_residual": 0.0,
+          "translation_invariance_residual": 0.0
+        },
+        {
+          "fourier_mode_k": 1,
+          "lambda": -0.7104938272793258,
+          "reflection_sum_residual": 2.220446049250313e-16,
+          "translation_invariance_residual": 1.1102230246251565e-16
+        },
+        {
+          "fourier_mode_k": -1,
+          "lambda": 0.7104938272793258,
+          "reflection_sum_residual": 2.220446049250313e-16,
+          "translation_invariance_residual": 1.1102230246251565e-16
+        }
+      ]
+    },
+    "status": "Proven covariance properties; source remains open",
+    "interpretation": "A nonradial state can supply a signed pseudoscalar current even when the kernel is real and radial.  Reflection reverses the sign and translation preserves it.  However +k and -k remain paired: the selector obstruction is transferred to the preparation/state law unless a strict chiral nadsoliton state is independently derived.  QW-2191 is therefore not discharged."
+  },
+  "program77": {
+    "protocol": "Two-state memory, beta=1, E1:0->5, Markov relaxation toward the instantaneous Gibbs distribution, 600 quenches.",
+    "rows": [
+      {
+        "duration": 0.1,
+        "mean_work": 2.3008054507711635,
+        "work_variance": 5.644912861823412,
+        "free_energy_difference": 0.6864318320708274,
+        "dissipated_work": 1.6143736187003361,
+        "jarzynski_average_exp_minus_work": 0.5033689734995427,
+        "exp_minus_delta_free_energy": 0.5033689734995427,
+        "jarzynski_absolute_residual": 0.0,
+        "final_excited_probability": 0.40303858296225925
+      },
+      {
+        "duration": 0.3,
+        "mean_work": 1.986411366645352,
+        "work_variance": 4.5812292921213045,
+        "free_energy_difference": 0.6864318320708274,
+        "dissipated_work": 1.2999795345745246,
+        "jarzynski_average_exp_minus_work": 0.5033689734995426,
+        "exp_minus_delta_free_energy": 0.5033689734995427,
+        "jarzynski_absolute_residual": 1.1102230246251565e-16,
+        "final_excited_probability": 0.26580964358454734
+      },
+      {
+        "duration": 1.0,
+        "mean_work": 1.3937993977717387,
+        "work_variance": 2.316761960277294,
+        "free_energy_difference": 0.6864318320708274,
+        "dissipated_work": 0.7073675657009113,
+        "jarzynski_average_exp_minus_work": 0.5033689734995422,
+        "exp_minus_delta_free_energy": 0.5033689734995427,
+        "jarzynski_absolute_residual": 4.440892098500626e-16,
+        "final_excited_probability": 0.07540939874583855
+      },
+      {
+        "duration": 3.0,
+        "mean_work": 0.9562351303890066,
+        "work_variance": 0.699216141342671,
+        "free_energy_difference": 0.6864318320708274,
+        "dissipated_work": 0.2698032983181793,
+        "jarzynski_average_exp_minus_work": 0.5033689734995426,
+        "exp_minus_delta_free_energy": 0.5033689734995427,
+        "jarzynski_absolute_residual": 1.1102230246251565e-16,
+        "final_excited_probability": 0.014308586607166838
+      },
+      {
+        "duration": 10.0,
+        "mean_work": 0.7684473997993806,
+        "work_variance": 0.17811474456389642,
+        "free_energy_difference": 0.6864318320708274,
+        "dissipated_work": 0.08201556772855323,
+        "jarzynski_average_exp_minus_work": 0.5033689734995417,
+        "exp_minus_delta_free_energy": 0.5033689734995427,
+        "jarzynski_absolute_residual": 9.992007221626409e-16,
+        "final_excited_probability": 0.00798523261771097
+      }
+    ],
+    "mean_work_lower_bound_satisfied": true,
+    "dissipation_monotone_with_duration": true,
+    "status": "Conditional theorem instance and numerical protocol",
+    "scope": "The bath, inverse temperature, energy schedule, Markov rule, and work convention are imported operational structure.  The result does not derive thermodynamic temperature or energy from FIN."
+  },
+  "program78": {
+    "times": [
+      0.03,
+      0.06,
+      0.12
+    ],
+    "rows": [
+      {
+        "configuration": "one_prep_full",
+        "preparations": [
+          0
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 2,
+        "classification_accuracy": 0.644
+      },
+      {
+        "configuration": "one_prep_full",
+        "preparations": [
+          0
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 10,
+        "classification_accuracy": 0.938
+      },
+      {
+        "configuration": "one_prep_full",
+        "preparations": [
+          0
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 50,
+        "classification_accuracy": 0.998
+      },
+      {
+        "configuration": "one_prep_pair_coarse",
+        "preparations": [
+          0
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 2,
+        "classification_accuracy": 0.656
+      },
+      {
+        "configuration": "one_prep_pair_coarse",
+        "preparations": [
+          0
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 10,
+        "classification_accuracy": 0.882
+      },
+      {
+        "configuration": "one_prep_pair_coarse",
+        "preparations": [
+          0
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 50,
+        "classification_accuracy": 0.994
+      },
+      {
+        "configuration": "three_preps_full",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 2,
+        "classification_accuracy": 0.818
+      },
+      {
+        "configuration": "three_preps_full",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 10,
+        "classification_accuracy": 0.984
+      },
+      {
+        "configuration": "three_preps_full",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "full",
+        "shots_per_preparation_time": 50,
+        "classification_accuracy": 1.0
+      },
+      {
+        "configuration": "three_preps_pair_coarse",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 2,
+        "classification_accuracy": 0.798
+      },
+      {
+        "configuration": "three_preps_pair_coarse",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 10,
+        "classification_accuracy": 0.984
+      },
+      {
+        "configuration": "three_preps_pair_coarse",
+        "preparations": [
+          0,
+          3,
+          6
+        ],
+        "instrument": "adjacent_pairs",
+        "shots_per_preparation_time": 50,
+        "classification_accuracy": 1.0
+      }
+    ],
+    "status": "Synthetic operational numerical evidence",
+    "scope": "The computation shows which preparations, instruments, and shot counts distinguish two dynamics generated from the same operator. It is not external physical evidence and does not select which dynamics nature realizes."
+  },
+  "program79": {
+    "start_n": 1536,
+    "map": "absolute-value row-normalized legacy precision; repeated even-site Schur elimination; unit-diagonal normalization; no fitted parameter",
+    "rows": [
+      {
+        "retained_n": 768,
+        "schur_steps": 1,
+        "operator_defect_to_native_strict": 0.2839477359089136,
+        "green_defect_to_native_strict": 0.4968760033097964
+      },
+      {
+        "retained_n": 384,
+        "schur_steps": 2,
+        "operator_defect_to_native_strict": 0.2827699329909208,
+        "green_defect_to_native_strict": 0.49956695697579545
+      },
+      {
+        "retained_n": 192,
+        "schur_steps": 3,
+        "operator_defect_to_native_strict": 0.2842041875410658,
+        "green_defect_to_native_strict": 0.5100350592417888
+      },
+      {
+        "retained_n": 96,
+        "schur_steps": 4,
+        "operator_defect_to_native_strict": 0.2879438134440195,
+        "green_defect_to_native_strict": 0.5286269869041257
+      },
+      {
+        "retained_n": 48,
+        "schur_steps": 5,
+        "operator_defect_to_native_strict": 0.29507163263397357,
+        "green_defect_to_native_strict": 0.5587771851147499
+      }
+    ],
+    "operator_defect_monotone_along_coarsening": false,
+    "green_defect_monotone_along_coarsening": false,
+    "status": "Numerical falsification test under one fixed positive map",
+    "guardrail": "Even a decreasing defect would not establish the repository's legacy-to-strict completion map, phase/topological completion, selector closure, or physical-role transfer.  This experiment tests only the declared repaired operator flow."
+  },
+  "program80": {
+    "preregistration_file": "FIN_Programs_71_80_External_Data_Preregistration.json",
+    "canonical_core_sha256": "1a10b804a3e8265969fa66626f5152acc00830440841f2ddee6a8a59c018db4e",
+    "status": "Protocol frozen; no physical evidence claimed",
+    "next_gate": "Select an independently produced dataset whose preparation, instrument, calibration, environment, and raw records satisfy the frozen operational requirements."
+  },
+  "global_guardrail": "No result in this suite closes QW-2191, derives a dimensional standard, establishes Lorentz invariance, transfers legacy physical roles, proves the legacy-to-strict completion bridge, or converts FIN into an experimentally validated physical theory."
+}
