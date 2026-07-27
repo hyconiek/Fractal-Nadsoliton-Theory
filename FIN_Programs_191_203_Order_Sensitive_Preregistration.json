@@ -1,0 +1,30 @@
+{
+  "core": {
+    "protocol_id": "FIN-P197-ORDER-OPEN-SET-001",
+    "feature_names": [
+      "lag1_spearman",
+      "sign_persistence",
+      "ordinal_entropy",
+      "exact_tie_fraction",
+      "time_rank_trend",
+      "ordinal_reversal_asymmetry"
+    ],
+    "calibration_model": "continuous iid Gaussian",
+    "score": "regularized Mahalanobis distance",
+    "threshold": "empirical 0.99 calibration quantile",
+    "challenges": [
+      "iid_gaussian_validation",
+      "iid_stable_0.8",
+      "sorted_same_multiset",
+      "AR1_phi_0.8",
+      "repeated_block_20",
+      "linear_drift"
+    ],
+    "training_records": 1400,
+    "validation_records": 420,
+    "record_length": 360,
+    "seed": 20260924,
+    "frozen_before_challenge": true
+  },
+  "canonical_core_sha256": "1f3033aa89805f0c5c39f3934437c7808bdf29816252d0be5cb83a0feec73814"
+}

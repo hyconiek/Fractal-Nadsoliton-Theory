@@ -1,0 +1,615 @@
+{
+  "metadata": {
+    "title": "FIN Programs 191-203: Reference States, Operational Quotients, and Conditional Prediction",
+    "release": "10.18",
+    "version": "1.0.0",
+    "date": "2026-07-27",
+    "creator": "\u017buchowski, Krzysztof",
+    "affiliation": "Independent Researcher \u2014 Fractal Information Theory Project",
+    "orcid": "0009-0002-0909-3613",
+    "language": "English",
+    "license": "CC BY 4.0",
+    "seed": 20260727,
+    "firecrawl_used": false,
+    "external_web_used": false,
+    "external_dataset_used": false
+  },
+  "programs": {
+    "191": {
+      "constructed_object": {
+        "name": "CentralMeasureFunctor",
+        "algebra": "A = direct_sum_i M_{d_i}(C)",
+        "state": "omega_w(a)=sum_i w_i tr(a_i)/d_i",
+        "central_weight_space": "probability simplex on simple summands"
+      },
+      "dimensions": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "unitary_invariance_theorem": "On each simple block M_d, invariance under all inner unitaries forces the density matrix I_d/d. On a direct sum it leaves a probability vector on the centre.",
+      "isomorphism_natural_family": "w(a)=(a,(1-a)/4,(1-a)/4,(1-a)/4,(1-a)/4), 0<=a<=1",
+      "permutation_residual": 0.0,
+      "uniform_central_weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "normalized_full_trace_weights": [
+        0.1111111111111111,
+        0.2222222222222222,
+        0.2222222222222222,
+        0.2222222222222222,
+        0.2222222222222222
+      ],
+      "uniform_central_expectation": 1.7999999999999998,
+      "normalized_full_trace_expectation": 1.8888888888888888,
+      "uniform_central_exact": "9/5",
+      "normalized_full_trace_exact": "17/9",
+      "tensor_compatibility": "simple-block normalized traces satisfy tau_d tensor tau_e = tau_{de}; central weights tensor multiplicatively as w_i v_j",
+      "simple_trace_tensor_residual": 0.0,
+      "unique_reference_state_selected": false,
+      "minimal_missing_datum": "a probability measure on the centre, or an additional naturality/Morita principle that fixes it",
+      "status": "Reference-state classification theorem; central source remains open",
+      "confidence": "Proven",
+      "claim_boundary": "Normalized trace is unique on a simple matrix algebra, not on a non-simple direct sum. Neither 9/5 nor 17/9 is promoted to a strict temperature or physical state source."
+    },
+    "192": {
+      "constructed_object": {
+        "name": "BetaGaugeQuotient",
+        "action": "(d,beta,omega,eta,phi) -> (c*d,beta*c^(-eta),omega/c,eta,phi)",
+        "complete_reduced_profile": "k_hat(x)=cos(nu*x+phi)/(1+x^eta), x=beta^(1/eta)d, nu=omega/beta^(1/eta)"
+      },
+      "maximum_orbit_residual": 1.1102230246251565e-16,
+      "invariant_rows": {
+        "legacy": {
+          "eta": 1.0,
+          "nu": 78.53981633974483,
+          "phi": 0.5235987755982988
+        },
+        "strict": {
+          "eta": 1.8,
+          "nu": 0.18575,
+          "phi": 0.1625
+        }
+      },
+      "quotient_profile_L2_gap": 0.3816158693100294,
+      "beta_one_is_gauge_representative": true,
+      "gauge_closes_legacy_strict_bridge": false,
+      "status": "Scale quotient constructed; invariant bridge mismatch remains",
+      "confidence": "Proven quotient theorem; numerical profile integral",
+      "claim_boundary": "The quotient attacks one compression-scale atom only. It does not source eta, omega, phi, complete the bridge or transfer legacy physical roles."
+    },
+    "193": {
+      "constructed_object": {
+        "name": "CertificateDependencyDAG",
+        "nodes": [
+          "finite FFT cells",
+          "average/polylogarithmic term",
+          "cancellation correction tail",
+          "denominator replacement",
+          "resonant interval fallbacks"
+        ],
+        "acceptance": "all nodes enclosed by one directed-rounding Arb engine"
+      },
+      "environment": {
+        "python": "3.12.3",
+        "platform": "Linux-7.1.4-x64v3-xanmod1-x86_64-with-glibc2.39",
+        "python_flint_available": false,
+        "arb_binary_available": false,
+        "flint_module_origin": null
+      },
+      "components": [
+        {
+          "component": "finite FFT cells",
+          "available": true,
+          "directed_rounding": true,
+          "closed": true,
+          "value": 0.6129831478193526,
+          "same_arb_engine": false
+        },
+        {
+          "component": "average/polylogarithmic term",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": null,
+          "same_arb_engine": false
+        },
+        {
+          "component": "cancellation correction tail",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 4.129713895224133e-07,
+          "same_arb_engine": false
+        },
+        {
+          "component": "denominator replacement",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 8.483299610034831e-12,
+          "same_arb_engine": false
+        },
+        {
+          "component": "resonant interval fallbacks",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 63,
+          "same_arb_engine": false
+        }
+      ],
+      "closed_components": 1,
+      "total_components": 5,
+      "full_one_engine_certificate": false,
+      "formal_worst_relative_enclosure": 0.6129831478193526,
+      "target_relative_width": 0.03,
+      "formal_sub_three_percent_certificate": false,
+      "status": "Blocked: reproducible Arb/python-flint engine unavailable locally",
+      "confidence": "Proven environment/dependency audit",
+      "claim_boundary": "The wide existing enclosure is an upper bound, not a lower bound on achievable width. No false impossibility or formal certificate is claimed."
+    },
+    "194": {
+      "constructed_object": {
+        "name": "FiniteDirichletCertificate",
+        "scope": "finite symmetric nonnegative W with constant row sum s; A=sI-W",
+        "theorems": [
+          "<f,Af>=1/2 sum_xy W_xy |f_x-f_y|^2 >=0",
+          "A*1=0",
+          "exp(-itA) is unitary",
+          "exp(-tA) is positivity preserving and stochastic"
+        ]
+      },
+      "exact_rational_cycle_cases": 150,
+      "minimum_exact_energy": "16/9",
+      "lean_source": "FIN_Programs_191_203_Dirichlet_Library.lean",
+      "lean_launcher_available": true,
+      "installed_lean_toolchains": [],
+      "lean_machine_compiled": false,
+      "compilation_output_tail": "not attempted: no installed Lean toolchain",
+      "maximum_unitarity_residual": 2.6173584678017377e-14,
+      "maximum_heat_row_residual": 9.547918011776346e-15,
+      "minimum_heat_entry": 4.335723738739164e-23,
+      "status": "Exact general proof supplied; proof-assistant compilation blocked",
+      "confidence": "Proven on paper and exact rational checks; compilation status explicit",
+      "claim_boundary": "Finite Dirichlet mathematics does not supply a continuum limit, Born rule, apparatus, physical clock or empirical interpretation."
+    },
+    "195": {
+      "constructed_object": {
+        "name": "AlbertiUhlmannReflectionCone",
+        "trace_norm_function": "g_(r,z)(u)=max(u,sqrt(r^2+u^2 z^2)), 0<=u<=1",
+        "criterion": "source converts to target iff g_source(u)>=g_target(u) for all u",
+        "closed_boundary": "r_target,max^2=min_{x in {0,1,r_s^2/(1-z_s^2)}} [max(x,r_s^2+x z_s^2)-x z_t^2]"
+      },
+      "counterexample_boundary": 0.36,
+      "counterexample_active_x": 0.36,
+      "counterexample_active_constraint": "source-kink",
+      "maximum_closed_vs_choi_grid_residual": 6.678462392412099e-06,
+      "median_closed_vs_choi_grid_residual": 3.211940990954787e-10,
+      "random_cross_checks": 500,
+      "active_constraint_counts": {
+        "u=0": 219,
+        "u=1": 0,
+        "source-kink": 281
+      },
+      "tensor_catalysis_classified": false,
+      "status": "Numerical maximization eliminated; complete one-qubit boundary derived",
+      "confidence": "Proven analytic criterion; finite numerical cross-check",
+      "claim_boundary": "The qubit one-copy preorder is complete. Tensor catalysis leaves the two-state qubit Alberti--Uhlmann setting and remains open. The theorem does not source asymmetry or discharge QW-2191."
+    },
+    "196": {
+      "constructed_object": {
+        "name": "ObservedRegenerationFrame",
+        "chain": "with probability p refresh from F; otherwise repeat the previous value; refresh flags are recorded",
+        "mixing_bound": "beta(k) <= (1-p)^k"
+      },
+      "theorem": "Conditional on R recorded refreshes, the retained values are iid F and DKW holds with epsilon(R,delta)=sqrt(log(2/delta)/(2R)). Mixing over the random R preserves the failure bound.",
+      "n": 4000,
+      "refresh_probability": 0.05,
+      "replicates": 320,
+      "true_exponent": 1.25,
+      "nominal_record_coverage": 0.85625,
+      "regenerative_coverage": 1.0,
+      "nominal_mean_width": 0.5112094859011077,
+      "regenerative_mean_width": 2.45786595709767,
+      "mean_retained_fraction": 0.05029257812500001,
+      "status": "Nonasymptotic theorem executed for an explicit beta-mixing acquisition class",
+      "confidence": "Proven conditional theorem; strong numerical coverage evidence",
+      "claim_boundary": "Refresh flags are an acquisition assumption. Hidden general beta-mixing requires a different coupling or concentration theorem."
+    },
+    "197": {
+      "protocol": "FIN_Programs_191_203_Order_Sensitive_Preregistration.json",
+      "protocol_sha256": "1f3033aa89805f0c5c39f3934437c7808bdf29816252d0be5cb83a0feec73814",
+      "threshold": 4.647948119635029,
+      "rows": [
+        {
+          "challenge": "iid_gaussian_validation",
+          "rejection_rate": 0.014285714285714285,
+          "median_score": 1.9533309187162058
+        },
+        {
+          "challenge": "iid_stable_0.8",
+          "rejection_rate": 0.007142857142857143,
+          "median_score": 1.9764042934009407
+        },
+        {
+          "challenge": "sorted_same_multiset",
+          "rejection_rate": 1.0,
+          "median_score": 468.6341179496587
+        },
+        {
+          "challenge": "AR1_phi_0.8",
+          "rejection_rate": 1.0,
+          "median_score": 18.59876586404866
+        },
+        {
+          "challenge": "repeated_block_20",
+          "rejection_rate": 1.0,
+          "median_score": 27124.54359287148
+        },
+        {
+          "challenge": "linear_drift",
+          "rejection_rate": 1.0,
+          "median_score": 19.983355572181082
+        }
+      ],
+      "feature_means": {
+        "iid_gaussian_validation": [
+          -0.002366404468699234,
+          0.33176376695929766,
+          0.997275813073834,
+          0.0,
+          -0.003090879718477153,
+          -0.0002527267890396381
+        ],
+        "iid_stable_0.8": [
+          -0.003161235939963634,
+          0.3324088853418459,
+          0.9973763337193949,
+          0.0,
+          -0.0038908313886901694,
+          -0.00016626762436818362
+        ],
+        "sorted_same_multiset": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.9999999999999999,
+          1.0
+        ],
+        "AR1_phi_0.8": [
+          0.776916788809309,
+          0.4676775738228253,
+          0.9756434561624836,
+          0.0,
+          0.0075017290820267694,
+          0.0023676509710029276
+        ],
+        "repeated_block_20": [
+          0.950324565453468,
+          0.9050279329608917,
+          0.0,
+          0.9526462395543227,
+          -0.015907442801496387,
+          0.0
+        ],
+        "linear_drift": [
+          0.5897692582499966,
+          0.33337323756318127,
+          0.9974069257261775,
+          0.0,
+          0.7676505997682473,
+          0.007382282521947333
+        ]
+      },
+      "exact_multiset_residual_sorted_challenge": 0.0,
+      "order_feature_mean_shift": 2.1101028291818644,
+      "closed_set_completeness_claimed": false,
+      "status": "Frozen order-sensitive protocol executed on six synthetic challenges",
+      "confidence": "Strong synthetic evidence; exact multiset identity",
+      "claim_boundary": "The detector distinguishes declared temporal alternatives. It is not a universal open-set classifier, memory theorem or external experimental validation."
+    },
+    "198": {
+      "constructed_object": {
+        "name": "GaussianTwoStepTomographyFrame",
+        "parameters": [
+          "log_detector_blur",
+          "increment_variance_v",
+          "covariance_c"
+        ],
+        "contrasts": [
+          "single_visibility",
+          "plus_visibility",
+          "echo_visibility"
+        ],
+        "linear_log_model": [
+          [
+            1.0,
+            -0.5,
+            0.0
+          ],
+          [
+            1.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            -1.0,
+            1.0
+          ]
+        ]
+      },
+      "rank_three_contrasts": 3,
+      "rank_without_echo": 2,
+      "condition_number": 7.287398012748143,
+      "minimality_theorem": "In the declared three-parameter family, fewer than three scalar contrasts have Jacobian rank at most two. The single/plus/echo matrix has determinant -1 and identifies all three parameters.",
+      "closed_form_inverse": {
+        "c": "(log V_echo-log V_plus)/2",
+        "v": "2[log V_single-(log V_plus+log V_echo)/2]",
+        "log_b": "2 log V_single-(log V_plus+log V_echo)/2"
+      },
+      "simulation": {
+        "replicates": 6000,
+        "log_noise_sd": 0.015,
+        "truth": [
+          -0.1743533871447778,
+          0.45,
+          0.2
+        ],
+        "mean_estimate": [
+          -0.17436977355335695,
+          0.4501202977321622,
+          0.2001926526121754
+        ],
+        "estimate_sd": [
+          0.031903654380818866,
+          0.036868751069222924,
+          0.010634114436001166
+        ]
+      },
+      "status": "Minimal rank theorem and finite-noise tomography executed",
+      "confidence": "Proven rank/minimality in declared family; strong synthetic evidence",
+      "claim_boundary": "Gaussian equal-variance increments and multiplicative detector blur are explicit model assumptions, not strict FIN consequences."
+    },
+    "199": {
+      "constructed_object": {
+        "name": "OperationalEnvironmentQuotient",
+        "equivalence": "two environments are k-equivalent when all preparation/intervention/measurement probabilities in the declared k-step experiment agree",
+        "minimal_dilation_rule": "minimal Stinespring dilations of one channel are unique only up to an environment isometry"
+      },
+      "one_time_counterexample": {
+        "common_gamma": 0.8,
+        "distribution_A": "equal atoms at +/-acos(0.8)",
+        "distribution_B": "mass 0.9 at 0 and 0.1 at pi",
+        "one_time_characteristic_A": 0.8,
+        "one_time_characteristic_B": 0.8,
+        "two_time_characteristic_A": 0.28000000000000025,
+        "two_time_characteristic_B": 1.0
+      },
+      "one_time_channels_identical": true,
+      "multi_time_processes_distinguishable": true,
+      "finite_identifiability_theorem": "A finite set of observed characteristic-function values defines a finite-dimensional affine image of the probability-measure simplex; generally its fibres contain multiple microscopic phase laws. Only quotient data, not microscopic coordinates, are operationally identifiable.",
+      "status": "Explicit environment quotient and one-time nonidentifiability witness",
+      "confidence": "Proven by construction",
+      "claim_boundary": "Process tomography can refine the quotient but finite data do not identify an arbitrary environment distribution or dilation."
+    },
+    "200": {
+      "constructed_object": {
+        "name": "PhaseSourceNaturalityNoGo",
+        "source": "z_legacy=exp(i*pi/4)",
+        "target": "z_strict=exp(i*743/4000)"
+      },
+      "endomorphism_theorem": "Every continuous group endomorphism U(1)->U(1) is z->z^n. It maps the order-eight legacy phase to a root of unity, whereas exp(i*743/4000) is transcendental by Lindemann--Weierstrass.",
+      "minimum_distance_from_endomorphism_images": 0.18548307581980727,
+      "candidate_rows": [
+        {
+          "class": "continuous_group_endomorphism_U1",
+          "normal_form": "f(z)=z^n, n in Z",
+          "target_independent": true,
+          "origin_bearing": false,
+          "produces_strict": false,
+          "verdict": "roots of unity map to roots of unity"
+        },
+        {
+          "class": "rational_or_algebraic_functional_calculus",
+          "normal_form": "f algebraic over Qbar",
+          "target_independent": true,
+          "origin_bearing": false,
+          "produces_strict": false,
+          "verdict": "algebraic input remains algebraic when defined"
+        },
+        {
+          "class": "polynomial_interpolation",
+          "normal_form": "f(z)=z_strict*z/z_legacy",
+          "target_independent": false,
+          "origin_bearing": false,
+          "produces_strict": true,
+          "verdict": "receiver construction inserts target"
+        },
+        {
+          "class": "logarithm_and_reexponentiation",
+          "normal_form": "f(z)=exp(c Log z)",
+          "target_independent": false,
+          "origin_bearing": false,
+          "produces_strict": true,
+          "verdict": "requires branch origin and target coefficient c"
+        },
+        {
+          "class": "constant_holomorphic_map",
+          "normal_form": "f(z)=z_strict",
+          "target_independent": false,
+          "origin_bearing": false,
+          "produces_strict": true,
+          "verdict": "pure target coding"
+        }
+      ],
+      "accepted_source_operations": 0,
+      "strict_phase_source_exported": false,
+      "status": "Natural analytic classes exhausted; only target-coded receivers remain",
+      "confidence": "Proven for declared operation classes",
+      "claim_boundary": "Arbitrary holomorphic interpolation can map one point to another but has no source content. No phase origin, selector or coupling law is generated."
+    },
+    "201": {
+      "constructed_object": {
+        "name": "ProjectiveSpectralObservableAlgebra",
+        "universal_property": "Every observable invariant under (A,t,z)->(cA,t/c,cz) factors through the projective spectral class [A] and the dimensionless products tA and z/A_scale."
+      },
+      "catalogue": [
+        "eigenvalue ratios",
+        "condition number on support",
+        "spectral probability entropy",
+        "heat trace at fixed tau=t*gap",
+        "gap-normalized resolvent at fixed z/gap",
+        "dimensionless unitary transition probabilities",
+        "beta-gauge quotient profile (eta,nu,phi)"
+      ],
+      "noninvariants": [
+        "raw spectral gap",
+        "raw time",
+        "raw resolvent energy",
+        "beta representative",
+        "mass, length and energy in physical units"
+      ],
+      "maximum_invariance_residuals": {
+        "normalized_spectrum": 9.992007221626409e-16,
+        "condition_number": 7.638334409421077e-14,
+        "spectral_entropy": 4.440892098500626e-16,
+        "dimensionless_heat_trace": 2.7755575615628914e-16,
+        "dimensionless_resolvent": 9.43689570931383e-16
+      },
+      "raw_gap_ratio": 1000000000000.0018,
+      "strict_physical_scale_exported": false,
+      "status": "Scale-orbit quotient and executable observable catalogue constructed",
+      "confidence": "Proven factorization statement; numerical invariance audit",
+      "claim_boundary": "The catalogue supports scale-free falsification only. A physical clock or scale-charged source remains additional CA or new strict input."
+    },
+    "202": {
+      "constructed_object": {
+        "name": "OperationalBundleSchemaInstance",
+        "metadata": "FIN_Programs_191_203_Synthetic_Operational_Bundle.json",
+        "raw_event_file": "FIN_Programs_191_203_Synthetic_Operational_Bundle.csv",
+        "raw_event_sha256": "c06fd7cc0a9683b34a2a44ac5ee56aa848ac3c1196684572988cbbf48fb255ee"
+      },
+      "source_class": "synthetic_method_validation",
+      "passed_required_fields": 10,
+      "total_required_fields": 11,
+      "failed_fields": [
+        "independent_analysis_boundary"
+      ],
+      "external_bundle_admitted": false,
+      "external_protocol_executed": false,
+      "status": "Synthetic intake dry run passes 10/11; independent external boundary fails",
+      "confidence": "Proven schema/hash audit",
+      "claim_boundary": "The generated event record validates the intake and analysis machinery only. It is not external evidence and cannot validate physics."
+    },
+    "203": {
+      "constructed_object": {
+        "name": "ConditionalGaussianVisibilityLaw",
+        "equation": "V(a1,a2)=b exp[-v(a1^2+a2^2)/2-c a1 a2]",
+        "heldout_setting": {
+          "a1": 1.0,
+          "a2": 0.5
+        }
+      },
+      "dependency_ledger": {
+        "W0": "self-adjoint spectral generator and admissible unitary phase evolution; no physical scale or environment supplied",
+        "CA": "tau_star=0.002 s imported as a conditional clock",
+        "OP": "preparation, Gaussian two-step environment, phase POVM, detector blur, event record and fitting rule"
+      },
+      "estimated_parameters": {
+        "blur": 0.7491521024481518,
+        "variance": 0.2893844654764615,
+        "covariance": 0.2159538771858234
+      },
+      "observed_visibilities": {
+        "reference": 0.8639781139198384,
+        "single": 0.6482327436675647,
+        "plus": 0.45196452591698344,
+        "echo": 0.6961126137698278,
+        "heldout": 0.597675204035638
+      },
+      "heldout_predicted_visibility": 0.5612126042367506,
+      "heldout_observed_visibility": 0.597675204035638,
+      "heldout_residual": 0.03646259979888744,
+      "reference_control_residual": 0.11482601147168658,
+      "program202_external_gate_passed": false,
+      "synthetic_method_validation_only": true,
+      "external_physical_prediction_tested": false,
+      "status": "Conditional prediction executed only as a synthetic pipeline dry run",
+      "confidence": "Strong synthetic method evidence; no external physics evidence",
+      "claim_boundary": "Because Program 202 did not admit an independent external bundle, this result is not an empirical FIN prediction. CA and OP inputs remain explicit and are not promoted to strict W0."
+    }
+  },
+  "global_verdict": {
+    "programs_executed": [
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203
+    ],
+    "new_theoretical_objects": [
+      "CentralMeasureFunctor",
+      "BetaGaugeQuotient",
+      "CertificateDependencyDAG",
+      "FiniteDirichletCertificate",
+      "AlbertiUhlmannReflectionCone",
+      "ObservedRegenerationFrame",
+      "OrderSensitiveOpenSetProtocol",
+      "GaussianTwoStepTomographyFrame",
+      "OperationalEnvironmentQuotient",
+      "PhaseSourceNaturalityNoGo",
+      "ProjectiveSpectralObservableAlgebra",
+      "OperationalBundleSchemaInstance",
+      "ConditionalGaussianVisibilityLaw"
+    ],
+    "central_measure_source_found": false,
+    "strict_beta_source_found": false,
+    "full_arb_certificate": false,
+    "lean_library_compiled": false,
+    "analytic_qubit_conversion_completed": true,
+    "mixing_theorem_completed_in_declared_class": true,
+    "minimal_process_tomography_completed": true,
+    "strict_phase_source_found": false,
+    "external_bundle_admitted": false,
+    "conditional_pipeline_dry_run_completed": true,
+    "QW_2191_discharged": false,
+    "strict_selector_exported": false,
+    "canonical_physical_unit_exported": false,
+    "legacy_strict_bridge_completed": false,
+    "legacy_role_transfer_started": false,
+    "L_total_or_ToE_claimed": false,
+    "external_physical_validation_claimed": false
+  },
+  "recommended_next_programs": {
+    "204": "Morita-natural central measure and categorical trace classification",
+    "205": "renormalization-cocycle test for eta and quotient bridge invariants",
+    "206": "reproducible Arb container or rational directed-rounding replacement",
+    "207": "machine-compiled finite Dirichlet library with semigroup positivity",
+    "208": "tensor conversion and catalysis beyond the one-qubit reflection cone",
+    "209": "unknown-refresh and hidden-mixing confidence sequences",
+    "210": "sequential conformal calibration for temporal open-set detection",
+    "211": "finite-shot confidence regions for process-tensor tomography",
+    "212": "moment-problem bounds from finitely sampled environment characteristics",
+    "213": "formal phase-source no-go via topological group and functional calculus",
+    "214": "preregistered scale-free falsification protocol",
+    "215": "independently sourced experimental bundle satisfying all intake fields",
+    "216": "first held-out conditional prediction on an admitted external bundle"
+  }
+}

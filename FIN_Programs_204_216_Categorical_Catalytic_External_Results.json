@@ -1,0 +1,586 @@
+{
+  "metadata": {
+    "title": "FIN Programs 204-216: Categorical State, Catalytic Reference, and External Falsification Gates",
+    "release": "10.19",
+    "version": "1.0.0",
+    "date": "2026-07-27",
+    "creator": "\u017buchowski, Krzysztof",
+    "affiliation": "Independent Researcher \u2014 Fractal Information Theory Project",
+    "orcid": "0009-0002-0909-3613",
+    "language": "English",
+    "license": "CC BY 4.0",
+    "seed": 20260727,
+    "firecrawl_used": false,
+    "external_web_used": false,
+    "external_dataset_used": false
+  },
+  "programs": {
+    "204": {
+      "constructed_object": {
+        "name": "MoritaCentralTrace",
+        "definition": "normalized trace on every simple block plus invariance under Morita autoequivalences permuting all simple summands"
+      },
+      "morita_constraint_rank": 4,
+      "morita_constraint_nullity": 1,
+      "normalized_unique_weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "morita_expectation": 1.7999999999999998,
+      "morita_expectation_exact": "9/5",
+      "represented_trace_expectation": 1.8888888888888888,
+      "represented_trace_exact": "17/9",
+      "represented_trace_morita_permutation_residual": 0.1111111111111111,
+      "all_unital_homomorphism_no_go": {
+        "map": "f:C^2->C^3, f(a,b)=(a,b,b)",
+        "pullback_uniform_C3": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "automorphism_natural_C2": [
+          0.5,
+          0.5
+        ],
+        "defect": 0.16666666666666669
+      },
+      "theorem": "Morita-permutation invariance uniquely selects uniform central weights, but no automorphism-natural state assignment is contravariantly natural under all unital *-homomorphisms.",
+      "strict_central_measure_source_exported": false,
+      "status": "Conditional uniqueness theorem plus global naturality no-go",
+      "confidence": "Proven",
+      "claim_boundary": "The 9/5 value is selected only after adding Morita-permutation invariance as an axiom. The repository does not currently source that axiom as a physical preparation law."
+    },
+    "205": {
+      "constructed_object": {
+        "name": "ExponentCocycleModuli",
+        "equation": "b(t+s)=b(t)+b(s)",
+        "continuous_solution": "b(t)=kappa*t"
+      },
+      "legacy_eta": 1.0,
+      "strict_eta": 1.8,
+      "required_increment_exact": "4/5",
+      "number_of_displayed_rate_time_pairs": 601,
+      "maximum_cocycle_residual": 4.440892098500626e-16,
+      "candidate_rows": [
+        {
+          "law": "continuous additive cocycle",
+          "normal_form": "b(t)=kappa*t",
+          "selects_9_over_5": false,
+          "reason": "only product kappa*t*=4/5 is fixed by the target"
+        },
+        {
+          "law": "multiplicative exponent flow",
+          "normal_form": "eta(t)=eta0*exp(kappa*t)",
+          "selects_9_over_5": false,
+          "reason": "only product kappa*t*=log(9/5) is fixed"
+        },
+        {
+          "law": "stable fixed point",
+          "normal_form": "eta(t)=eta*+(eta0-eta*)exp(-kappa*t)",
+          "selects_9_over_5": false,
+          "reason": "eta*=9/5 is inserted as a fixed-point parameter"
+        },
+        {
+          "law": "monomial multiplication",
+          "normal_form": "d^eta0*d^b=d^(eta0+b)",
+          "selects_9_over_5": false,
+          "reason": "requires unsourced cocycle increment b=4/5"
+        }
+      ],
+      "target_independent_eta_source_exported": false,
+      "beta_gauge_compatibility": "eta is invariant under the Program-192 beta/length gauge, so an eta flow is an additional typed layer rather than a scale choice",
+      "status": "Cocycle classification/no-selection theorem",
+      "confidence": "Proven for continuous one-parameter cocycles",
+      "claim_boundary": "A semigroup can interpolate from 1 to 9/5 after choosing a rate and RG interval, but the semigroup law selects neither. No bridge completion or role transfer is exported."
+    },
+    "206": {
+      "constructed_object": {
+        "name": "CertificationEnvironmentContract",
+        "path": "FIN_Programs_204_216_Arb_Environment_Contract.json",
+        "sha256": "e4b9058f006a0f38ddeb8dd0ae80a7d810106d0fa5df1ab3f829eedd442981e5"
+      },
+      "python_flint_available": false,
+      "arb_binary_available": false,
+      "docker_cli_available": true,
+      "docker_socket_permission_probe": true,
+      "docker_server_accessible": false,
+      "docker_probe_tail": "\npermission denied while trying to connect to the docker API at unix:///var/run/docker.sock\n",
+      "formal_five_node_run_executed": false,
+      "formal_sub_three_percent_certificate": false,
+      "inherited_formal_worst_enclosure": 0.6129831478193526,
+      "status": "Reproducibility contract frozen; local formal engine remains unavailable",
+      "confidence": "Proven environment and contract audit",
+      "claim_boundary": "A contract is not a certificate. Building or downloading an external container was not authorized or available in the local execution boundary."
+    },
+    "207": {
+      "constructed_object": {
+        "name": "FormalBuildContract",
+        "path": "FIN_Programs_204_216_Lean_Build_Contract.json",
+        "sha256": "6ee8ffdd88ae99cebd168463b83f36ffd48a584aa25d4fec276d6d7cf6d0be64"
+      },
+      "lean_source": "FIN_Programs_204_216_Dirichlet_Library.lean",
+      "lean_source_sha256": "009aef7a97d518f6874257439bf5d62fbc9b80b107435fbc28bcbd62bca2ab79",
+      "core_probe_source": "FIN_Programs_204_216_Lean_Core_Probe.lean",
+      "core_probe_source_sha256": "64051b533becde8fa440386f9110a5c2fdedb738b05dd07f0e4ec248f9b8a884",
+      "lean_launcher_available": true,
+      "lake_launcher_available": true,
+      "installed_toolchains": [
+        "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/.elan/toolchains/leanprover--lean4---v4.28.0"
+      ],
+      "direct_lean_binary": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/.elan/toolchains/leanprover--lean4---v4.28.0/bin/lean",
+      "core_probe_machine_compiled": true,
+      "core_probe_compilation_output_tail": "27\n",
+      "machine_compiled": false,
+      "compilation_output_tail": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/FIN_Programs_204_216_Dirichlet_Library.lean:1:0: error: unknown module prefix 'Mathlib'\n\nNo directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:\n\n/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/.elan/toolchains/leanprover--lean4---v4.28.0/lib/lean\n",
+      "new_exact_weighted_circulant_cases": 200,
+      "status": "Core Lean probe machine-compiled; general Mathlib library remains uncompiled in the clean local environment",
+      "confidence": "Proven exact witnesses; compilation status explicit",
+      "claim_boundary": "The dependency-free core probe is proof-assistant verified. The general weighted-graph library is not verified until Mathlib is pinned and the complete source compiles without errors."
+    },
+    "208": {
+      "constructed_object": {
+        "name": "PerfectZ2ReferenceCatalyst",
+        "catalyst": "Pi_+=(I+sigma_x)/2",
+        "channel": "measure catalyst in {Pi_+,Pi_-}; prepare target or reflected target and reprepare the same orthogonal catalyst branch"
+      },
+      "invariant_catalyst_no_help_theorem": "If R kappa R=kappa and the catalyst is returned, every Alberti-Uhlmann pair trace norm is multiplied by ||kappa||_1=1; a violated one-copy inequality remains violated.",
+      "perfect_catalyst_channel_trace_preservation_residual": 0.0,
+      "perfect_catalyst_covariance_residual": 0.0,
+      "perfect_catalyst_mapping_residual": 0.0,
+      "partial_catalyst_scan_points": 100,
+      "best_partial_catalyst_necessary_margin": -0.808036981970047,
+      "perfect_catalyst_necessary_margin": -1.8189894035458565e-12,
+      "arbitrary_target_conversion_with_perfect_reference": true,
+      "strict_selector_source_exported": false,
+      "status": "Invariant no-help theorem and perfect-reference catalytic construction",
+      "confidence": "Proven constructions; finite necessary-condition scan for imperfect catalysts",
+      "claim_boundary": "The perfect catalyst is a supplied fully asymmetric orientation bit. It operationalizes a selector but does not derive one from the strict kernel or discharge QW-2191."
+    },
+    "209": {
+      "constructed_object": {
+        "name": "CoupledThinningFrame",
+        "assumption": "beta(k)<= (1-p0)^k with calibrated p0>0",
+        "bound": "P(D_m>eps) <= 2 exp(-2m eps^2)+(m-1) beta(L) by Berbee coupling plus DKW"
+      },
+      "n": 10000,
+      "p_lower": 0.05,
+      "p_true": 0.06,
+      "selected_lag": 166,
+      "thinned_count": 61,
+      "per_sequence_coupling_budget": 0.012030113598433922,
+      "valid_epsilon": 0.20396025438984203,
+      "nominal_epsilon": 0.014802071873007984,
+      "replicates": 240,
+      "nominal_coverage": 0.8458333333333333,
+      "coupling_valid_coverage": 1.0,
+      "nominal_mean_width": 0.33015874586415506,
+      "valid_mean_width": 6.587421631218677,
+      "status": "Hidden-refresh nonasymptotic theorem and coverage challenge executed",
+      "confidence": "Proven under calibrated mixing bound; strong numerical evidence",
+      "claim_boundary": "Refresh flags are no longer observed, but a validated lower bound p0 remains an apparatus calibration input. Arbitrary hidden dependence is not covered."
+    },
+    "210": {
+      "constructed_object": {
+        "name": "IndependentBlockConformalEProcess",
+        "rank": "r_t=1+#{calibration scores >= test score}",
+        "e_value": "(m+1)/(H_{m+1} r_t)",
+        "martingale": "under iid continuous null and fresh independent calibration blocks, ranks are uniform and E[e_t]=1"
+      },
+      "calibration_records_per_step": 15,
+      "horizon": 20,
+      "record_length": 120,
+      "streams_per_model": 200,
+      "ville_alpha": 0.05,
+      "threshold": 20.0,
+      "rows": [
+        {
+          "model": "iid_gaussian",
+          "time_uniform_rejection_rate": 0.02,
+          "mean_crossing_time": 9.0,
+          "median_terminal_log_e": -7.376703774901534
+        },
+        {
+          "model": "sorted",
+          "time_uniform_rejection_rate": 1.0,
+          "mean_crossing_time": 2.0,
+          "median_terminal_log_e": 31.089947150599908
+        },
+        {
+          "model": "AR1",
+          "time_uniform_rejection_rate": 1.0,
+          "mean_crossing_time": 2.0,
+          "median_terminal_log_e": 31.089947150599908
+        },
+        {
+          "model": "repeated",
+          "time_uniform_rejection_rate": 1.0,
+          "mean_crossing_time": 2.0,
+          "median_terminal_log_e": 31.089947150599908
+        },
+        {
+          "model": "drift",
+          "time_uniform_rejection_rate": 1.0,
+          "mean_crossing_time": 2.0,
+          "median_terminal_log_e": 31.089947150599908
+        }
+      ],
+      "status": "Time-uniform conformal detector constructed and challenged",
+      "confidence": "Proven null e-process; strong synthetic power evidence",
+      "claim_boundary": "Fresh calibration blocks are expensive but make the theorem exact. Reusing one calibration set requires a different dependence proof."
+    },
+    "211": {
+      "constructed_object": {
+        "name": "FiniteShotProcessRegion",
+        "raw_data": "six independent binomial counts at phases 0 and pi",
+        "coverage_method": "six Clopper-Pearson intervals with Bonferroni allocation, then monotone log-linear transport and physical intersection",
+        "physical_constraints": "0<b<=1, v>=0, |c|<=v"
+      },
+      "shots_per_phase_context": 1000,
+      "replicates": 600,
+      "nonempty_regions": 600,
+      "simultaneous_coverage": 1.0,
+      "memory_detection_power": 1.0,
+      "mean_parameter_interval_widths": {
+        "log_blur": 0.6528688679982919,
+        "variance": 0.9280387116404463,
+        "covariance": 0.27516984364215374
+      },
+      "truth": {
+        "blur": 0.84,
+        "variance": 0.45,
+        "covariance": 0.2
+      },
+      "status": "Finite-shot simultaneous region and memory-power audit executed",
+      "confidence": "Proven coverage construction; strong simulation evidence",
+      "claim_boundary": "The region is conservative and conditional on independent binomial phase scans and the Gaussian visibility family."
+    },
+    "212": {
+      "constructed_object": {
+        "name": "ToeplitzMomentInterval",
+        "matrix": "T2=[[1,c1,c2],[c1,1,c1],[c2,c1,1]]",
+        "determinant_factorization": "(1-c2)(1+c2-2*c1^2)"
+      },
+      "given_c1": 0.8,
+      "sharp_c2_lower": 0.28,
+      "sharp_c2_lower_exact": "7/25",
+      "sharp_c2_upper": 1.0,
+      "sharp_c2_upper_exact": "1",
+      "lower_extremizer": "equal atoms at +/-acos(4/5)",
+      "lower_extremizer_value": 0.28000000000000025,
+      "upper_extremizer": "mass 9/10 at 0 and 1/10 at pi",
+      "upper_extremizer_value": 1.0,
+      "minimum_psd_eigenvalue_on_interval_grid": -2.5246700440754316e-16,
+      "theorem": "For a real symmetric phase law with c1=gamma, Toeplitz positivity gives 2 gamma^2-1 <= c2 <= 1, and both endpoints have explicit representing measures.",
+      "status": "Sharp finite trigonometric moment problem solved",
+      "confidence": "Proven",
+      "claim_boundary": "The interval bounds an operationally unmeasured visibility. It does not choose one microscopic environment inside the interval."
+    },
+    "213": {
+      "constructed_object": {
+        "name": "PhaseNaturalityHierarchyCertificate",
+        "path": "FIN_Programs_204_216_Phase_NoGo_Certificate.json",
+        "sha256": "0319d6b95430bc6e91622fd5714fc3f2d48bb5d39d1586626faa02dafbed28ad"
+      },
+      "legacy_order": 8,
+      "distinct_natural_endomorphism_images": 8,
+      "operation_class_rows": [
+        {
+          "class": "continuous group homomorphisms U(1)->U(1)",
+          "reduction": "z->z^n by lift/degree classification",
+          "result": "legacy order divides 8 after mapping; target is not torsion"
+        },
+        {
+          "class": "Borel measurable group homomorphisms",
+          "reduction": "automatic continuity for lcsc groups",
+          "result": "same z->z^n obstruction"
+        },
+        {
+          "class": "continuous normalized 1-cocycles with trivial action",
+          "reduction": "cocycle equation is the homomorphism equation",
+          "result": "same torsion obstruction"
+        },
+        {
+          "class": "unrestricted holomorphic point interpolation",
+          "reduction": "no group/naturality constraint",
+          "result": "can hit target only with target-coded coefficient"
+        }
+      ],
+      "continuous_no_go": true,
+      "borel_homomorphism_no_go": true,
+      "trivial_action_cocycle_no_go": true,
+      "strict_phase_source_exported": false,
+      "status": "Phase naturality no-go extended through measurable homomorphisms",
+      "confidence": "Proven using standard automatic-continuity theorem",
+      "claim_boundary": "Non-homomorphic analytic interpolation remains possible but is target-coded. The certificate does not select an origin or orientation."
+    },
+    "214": {
+      "constructed_object": {
+        "name": "ProjectiveSpectralFingerprintProtocol",
+        "path": "FIN_Programs_204_216_Scale_Free_Preregistration.json",
+        "sha256": "cdd171311ce488552e8002901ba1f8951d0e4b489520b8f8df7d950b81132137"
+      },
+      "strict_row_sum_s": 1.6603072787660986,
+      "target_signature": [
+        0.3219737582130896,
+        0.32197375821308977,
+        0.673324911011518,
+        0.6733249110115186,
+        0.8374271630127021,
+        0.8374271630127023,
+        0.9391109703226599,
+        0.9391109703226607,
+        0.9813952253489757,
+        0.9813952253489762,
+        1.0
+      ],
+      "target_structural_gate": {
+        "psd": true,
+        "zero_count": 1,
+        "min_eigenvalue": 1.1926223897340549e-17
+      },
+      "acceptance_threshold": 0.02,
+      "challenge_rows": [
+        {
+          "challenge": "strict_scale_1e-06",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 9.926167350636332e-24
+          },
+          "distance": 1.2212453270876722e-15,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_scale_3e-04",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": -6.988021814847978e-21
+          },
+          "distance": 9.992007221626409e-16,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_scale_6e-02",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 3.209238430557093e-17
+          },
+          "distance": 8.881784197001252e-16,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_scale_2e+01",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 3.982925100842749e-15
+          },
+          "distance": 5.551115123125783e-16,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_scale_4e+03",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 1.1368683772161603e-12
+          },
+          "distance": 1.2212453270876722e-15,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_scale_1e+06",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": -3.001332515850663e-11
+          },
+          "distance": 1.2212453270876722e-15,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_node_permutation",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 7.771561172376096e-16
+          },
+          "distance": 1.3322676295501878e-15,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_edge_noise_0.01",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 4.705907353706331e-16
+          },
+          "distance": 0.0023326212613816732,
+          "accepted": true
+        },
+        {
+          "challenge": "strict_edge_noise_0.10",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": 8.440176209941086e-16
+          },
+          "distance": 0.04209934410787053,
+          "accepted": false
+        },
+        {
+          "challenge": "nearest_neighbour_C12",
+          "structural_gate": {
+            "psd": true,
+            "zero_count": 1,
+            "min_eigenvalue": -3.157196726277789e-16
+          },
+          "distance": 0.4233249110115187,
+          "accepted": false
+        },
+        {
+          "challenge": "legacy_C12_raw_generator",
+          "structural_gate": {
+            "psd": false,
+            "zero_count": 1,
+            "min_eigenvalue": -21.377059810423745
+          },
+          "distance": null,
+          "accepted": false
+        }
+      ],
+      "external_data_used": false,
+      "status": "Scale-free protocol frozen and internal falsification challenge executed",
+      "confidence": "Proven invariances; computer-assisted finite challenge",
+      "claim_boundary": "This fingerprints the declared finite strict-kernel operator. It is not yet a physical prediction because no experimental operator reconstruction has passed the intake gate."
+    },
+    "215": {
+      "constructed_object": {
+        "name": "IndependentExternalBundleRequest",
+        "path": "FIN_Programs_204_216_External_Bundle_Request.json",
+        "sha256": "9b52dfda82227e1e59d2b30395188869dad1612b3544e6d844b52e4f4998dc26"
+      },
+      "candidate_rows": [
+        {
+          "bundle": "raw_strain_unfiltered",
+          "source_class": "local_external_lineage_candidate",
+          "passed_fields": 1,
+          "total_fields": 11,
+          "admitted": false
+        },
+        {
+          "bundle": "beta_channel_true_external_v2",
+          "source_class": "local_external_lineage_candidate",
+          "passed_fields": 2,
+          "total_fields": 11,
+          "admitted": false
+        },
+        {
+          "bundle": "confirmatory_dataset_external_source_rebuild",
+          "source_class": "local_external_lineage_candidate",
+          "passed_fields": 1,
+          "total_fields": 11,
+          "admitted": false
+        },
+        {
+          "bundle": "FIN_Programs_191_203_Synthetic_Operational_Bundle.json",
+          "source_class": "synthetic_method_validation",
+          "passed_fields": 10,
+          "total_fields": 11,
+          "admitted": false
+        }
+      ],
+      "admitted_bundles": [],
+      "external_11_of_11_bundle_found": false,
+      "web_or_firecrawl_used": false,
+      "status": "No independent external bundle admitted; request contract frozen",
+      "confidence": "Proven for current local intake scope",
+      "claim_boundary": "The workspace contains partial external-lineage material and one complete synthetic method bundle, but no independent 11/11 physical record."
+    },
+    "216": {
+      "constructed_object": {
+        "name": "ConditionalPredictionLock",
+        "path": "FIN_Programs_204_216_External_Prediction_Preregistration.json",
+        "sha256": "42400ab10a5348cb9e0012b740b87c53b151969ecc1c46e858fdfb478369afe5"
+      },
+      "program215_gate_passed": false,
+      "external_prediction_executed": false,
+      "external_physical_validation_claimed": false,
+      "status": "Prediction protocol frozen but correctly not executed",
+      "confidence": "Proven gate status",
+      "claim_boundary": "The earlier synthetic dry run is not reused as external evidence. Execution remains locked until an independent bundle is admitted."
+    }
+  },
+  "global_verdict": {
+    "programs_executed": [
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216
+    ],
+    "new_theoretical_objects": [
+      "MoritaCentralTrace",
+      "ExponentCocycleModuli",
+      "CertificationEnvironmentContract",
+      "FormalBuildContract",
+      "PerfectZ2ReferenceCatalyst",
+      "CoupledThinningFrame",
+      "IndependentBlockConformalEProcess",
+      "FiniteShotProcessRegion",
+      "ToeplitzMomentInterval",
+      "PhaseNaturalityHierarchyCertificate",
+      "ProjectiveSpectralFingerprintProtocol",
+      "IndependentExternalBundleRequest",
+      "ConditionalPredictionLock"
+    ],
+    "morita_uniform_central_trace_conditionally_unique": true,
+    "strict_central_measure_source_found": false,
+    "target_independent_eta_source_found": false,
+    "full_arb_certificate": false,
+    "lean_library_compiled": false,
+    "perfect_reference_catalysis_constructed": true,
+    "hidden_mixing_theorem_completed_in_declared_class": true,
+    "time_uniform_conformal_eprocess_completed": true,
+    "finite_shot_process_region_completed": true,
+    "sharp_environment_moment_interval_completed": true,
+    "strict_phase_source_found": false,
+    "scale_free_protocol_preregistered": true,
+    "external_bundle_admitted": false,
+    "external_prediction_executed": false,
+    "QW_2191_discharged": false,
+    "strict_selector_exported": false,
+    "canonical_physical_unit_exported": false,
+    "legacy_strict_bridge_completed": false,
+    "legacy_role_transfer_started": false,
+    "L_total_or_ToE_claimed": false,
+    "external_physical_validation_claimed": false
+  },
+  "recommended_next_programs": {
+    "217": "preparation-natural central state and empirical sector-frequency theorem",
+    "218": "eta-flow identification with an independently calibrated RG clock",
+    "219": "execute the five-node Arb certificate in an authorized pinned environment",
+    "220": "compile and CI-lock the finite Dirichlet formal library",
+    "221": "quantitative asymmetry degradation and approximate catalytic tradeoff",
+    "222": "optimal hidden-mixing thinning with uncertainty in p0",
+    "223": "reusable-calibration conformal e-process with dependence correction",
+    "224": "likelihood-ratio finite-shot process region and model misspecification test",
+    "225": "higher-order Toeplitz moment hierarchy and semidefinite certificates",
+    "226": "machine formalization of phase automatic-continuity and torsion no-go",
+    "227": "robustness and power theory for the projective spectral fingerprint",
+    "228": "independent acquisition of an 11-of-11 external process or double-slit bundle",
+    "229": "registered external replication of the conditional held-out prediction"
+  }
+}

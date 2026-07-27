@@ -1,0 +1,19 @@
+{
+  "core": {
+    "protocol_id": "FIN-P229-EXTERNAL-SEMIGROUP-HOLDOUT-001",
+    "prerequisite": "Program 228 admits one independent 11-of-11 bundle",
+    "calibration": "reconstruct P_tau from the committed calibration subset",
+    "held_out_prediction": "P_2tau_predicted = P_tau @ P_tau",
+    "primary_statistic": "maximum column total-variation distance to held-out P_2tau",
+    "spectral_secondary": "Program-214 projective fingerprint distance",
+    "negative_controls": [
+      "time-order permutation",
+      "preparation-label permutation",
+      "nearest-neighbour C12",
+      "both-closed/dark-count double-slit control when applicable"
+    ],
+    "execution_rule": "one execution after immutable bundle hash and analyst unblinding",
+    "frozen_before_external_data": true
+  },
+  "canonical_core_sha256": "f17827ed8df2b989a7770194688be6fd8f3d753ddb42d2d775519d4b0a27f08b"
+}

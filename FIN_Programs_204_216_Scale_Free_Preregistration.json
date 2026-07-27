@@ -1,0 +1,25 @@
+{
+  "core": {
+    "protocol_id": "FIN-P214-SCALE-FREE-SPECTRAL-001",
+    "target": "strict C12 graph generator from the frozen strict kernel",
+    "observable": "sorted positive eigenvalues divided by lambda_max",
+    "structural_gate": "12x12 symmetric PSD with exactly one zero mode",
+    "distance": "L_infinity distance between normalized signatures",
+    "acceptance_threshold": 0.02,
+    "invariances": [
+      "positive scalar multiplication",
+      "node permutation"
+    ],
+    "challenges": [
+      "six exact positive scales",
+      "node permutation",
+      "one-percent edge perturbation",
+      "ten-percent edge perturbation",
+      "nearest-neighbour C12",
+      "legacy C12 raw generator"
+    ],
+    "seed": 20260941,
+    "frozen_before_challenge": true
+  },
+  "canonical_core_sha256": "cdd171311ce488552e8002901ba1f8951d0e4b489520b8f8df7d950b81132137"
+}

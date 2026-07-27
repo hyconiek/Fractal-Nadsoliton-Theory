@@ -1,0 +1,84 @@
+{
+  "bundle_id": "FIN-P202-SYNTHETIC-DRYRUN-001",
+  "source_class": "synthetic_method_validation",
+  "external_empirical_record": false,
+  "required_fields": [
+    "public_source_identifier",
+    "license_identifier",
+    "immutable_hashes",
+    "preparation_provenance",
+    "raw_time_ordered_records",
+    "physical_units_and_timestamps",
+    "detector_calibration",
+    "apparatus_memory_calibration",
+    "reference_control",
+    "exclusion_audit",
+    "independent_analysis_boundary"
+  ],
+  "fields": {
+    "public_source_identifier": {
+      "pass": true,
+      "value": "repository-relative:FIN-P202-SYNTHETIC-DRYRUN-001"
+    },
+    "license_identifier": {
+      "pass": true,
+      "value": "CC-BY-4.0"
+    },
+    "immutable_hashes": {
+      "pass": true,
+      "value": {
+        "FIN_Programs_191_203_Synthetic_Operational_Bundle.csv": "c06fd7cc0a9683b34a2a44ac5ee56aa848ac3c1196684572988cbbf48fb255ee"
+      }
+    },
+    "preparation_provenance": {
+      "pass": true,
+      "value": "declared Gaussian two-increment simulator; seed 20260929"
+    },
+    "raw_time_ordered_records": {
+      "pass": true,
+      "value": "12000 event-level ordered rows"
+    },
+    "physical_units_and_timestamps": {
+      "pass": true,
+      "value": "timestamps in seconds under imported conditional clock tau_star=0.002 s; phase in radians"
+    },
+    "detector_calibration": {
+      "pass": true,
+      "value": "reference-context phase scan; injected blur b=0.84"
+    },
+    "apparatus_memory_calibration": {
+      "pass": true,
+      "value": "declared covariance challenge c=0.20 and echo context"
+    },
+    "reference_control": {
+      "pass": true,
+      "value": "reference context a1=a2=0"
+    },
+    "exclusion_audit": {
+      "pass": true,
+      "value": "no events excluded; all generated rows retained"
+    },
+    "independent_analysis_boundary": {
+      "pass": false,
+      "value": "generator and evaluator belong to the same release"
+    }
+  },
+  "conditional_clock": {
+    "tau_star_seconds": 0.002,
+    "source": "CA input"
+  },
+  "generator_truth": {
+    "blur": 0.84,
+    "variance": 0.45,
+    "covariance": 0.2,
+    "visibility_by_context": {
+      "reference": 0.84,
+      "single": 0.6707536237578767,
+      "plus": 0.4385184524792535,
+      "echo": 0.65419265777998,
+      "heldout": 0.5737259778558208
+    }
+  },
+  "data_file": "FIN_Programs_191_203_Synthetic_Operational_Bundle.csv",
+  "data_sha256": "c06fd7cc0a9683b34a2a44ac5ee56aa848ac3c1196684572988cbbf48fb255ee"
+}

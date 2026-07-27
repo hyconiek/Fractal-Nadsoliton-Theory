@@ -3850,3 +3850,468 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   provenance/unit/control/resolution/license intake gate passes.  With no
   admissible dataset, publish an intake-failure record rather than simulated
   validation.
+
+## Programs 178–190 composition/process/scale guardrail (Release 10.17, 2026-07-27)
+
+- Program 178 classifies continuous degree-zero state laws under the declared
+  positive replication action as `beta=F(alpha/log(h))`; replication leaves
+  the function `F` arbitrary.  Adding arbitrary label-splitting invariance
+  collapses the family to unselected constants and does not select `ln(2)`.
+  Do not promote composition, coarse graining, or the surviving constant
+  family to a strict state/temperature source.
+- Program 179 constructs `CompressionScaleTorsor`: under `d'=c*d`,
+  `beta -> beta*c^(-eta)`, and the action is transitive on `beta>0`.
+  `x=beta^(1/eta)*d` collapses every positive beta to
+  `1/(1+x^eta)`.  Positivity selects the positive orbit, not the
+  representative `beta=1`.  Coordinate normalization and external length
+  calibration are conditional choices, not strict beta sources.
+- Program 180 assembles the five obligations for the fractional symbol
+  certificate.  The analytic cancellation correction is
+  `4.129713895e-7`, but the previous formal worst relative enclosure remains
+  `0.6129831478 > 0.03`; Arb/python-flint is absent.  Preserve the
+  no-full-ball-certificate boundary until finite cells, average term,
+  correction modes, denominator replacement, and resonant fallbacks are
+  enclosed in one directed-rounding engine.
+- Program 181 verifies an exact finite four-cycle Dirichlet model:
+  `spec(A)=(0,1,1,2)`, constants are in the kernel, and the archived rational
+  test vector has `f^T A f=15`, equal to the Dirichlet sum.  The finite Lean
+  source is included without a machine-compilation claim.  Do not promote
+  the finite example to a continuum or physical theorem.
+- Program 182 constructs a complete Choi/LMI criterion for deterministic
+  single-qubit `Z2` reflection-covariant conversion.  From source
+  `(r,z)=(0.6,0)`, the equal-`M` target `(0.6,0.8)` has maximum reachable
+  transverse magnitude `0.36` and is impossible.  The old scalar monotone
+  remains complete only on its declared orbit line; the new criterion
+  classifies use of a resource but does not create signed preparation or
+  discharge `QW-2191`.
+- Program 183 proves DKW for the exact repeated-independent-block class with
+  effective sample size `m=n/b`.  At nominal `n=4000`, `m=40`, invalid iid
+  coverage is `0.625`; the valid block interval covers all declared trials
+  but has mean width `10.579`.  Do not transfer this theorem to arbitrary
+  mixing or hidden dependence, and do not treat nominal record count as
+  independent sample size.
+- Program 184 constructs `MultiControlCalibrationFrame` for a shared
+  quadratic log-time gain.  The nine-cell design has rank six and corrects
+  mean target exponent from `1.94963` to `1.24950` for truth `1.25`.  One
+  control is algebraically sufficient inside the exact model; the second
+  control supplies a falsification contrast.  Keep shared-gain and known
+  control exponents explicit.
+- Program 185 proves an exact feature-class obstruction for the P174
+  marginal-quantile protocol: time reordering preserves all features
+  identically.  Ordered unseen Gaussian records are falsely accepted at rate
+  `0.9389`.  Do not interpret high closed-set accuracy or rejection of some
+  unseen marginal laws as memory identification or open-set completeness.
+- Program 186 constructs a conditional `TwoStepProcessInstrument`.  In the
+  declared quasistatic model, the nonfactorization witness is
+  `-0.249255`; echo visibility is `1`, versus `0.527292` for matched Markov
+  dephasing.  This separates the declared quasistatic, Markov, detector-blur,
+  and path-diffusion mechanisms only with explicit preparations,
+  interventions, calibration, and record.  It is not a strict FIN prediction.
+- Program 187 gives an explicit environment no-go: the same fixed system
+  generator admits the continuum of CPTP channels
+  `rho_01 -> cos(g)*rho_01`.  The environment/decoherence process is not a
+  function of `A` alone.  The minimal operational replacement is a reduced
+  process-tensor equivalence class, which remains additional typed input.
+- Program 188 identifies the phase correction in
+  `H^1(Z,U(1))` and proves an algebraic source obstruction:
+  `exp(i*pi/4)` is cyclotomic/algebraic, whereas `exp(i*743/4000)` and the
+  quotient correction are transcendental.  Finite algebraic legacy
+  operations cannot generate the strict character.  The exact quotient is
+  target-coded and does not source strict frequency or phase origin.
+- Program 189 proves the free scale-orbit symmetry
+  `(A,t,z)->(cA,t/c,cz)`: unitary, heat, and covariantly normalized resolvent
+  predictions remain invariant while the raw gap changes by `10^6` in the
+  audit.  `SpectralClockFrame` is a conditional chosen section, not a strict
+  unit source.  Full physical dimensions still require CA or an actual
+  scale-charged source.
+- Program 190 audits three local external-lineage bundles against eleven
+  operational fields.  Some contain genuine external provenance, hashes, or
+  raw time order, but zero bundles contain the complete preparation, units,
+  detector calibration, memory calibration, reference control, license, and
+  independent-boundary package.  No external protocol was executed.
+- Programs 178–190 export no strict state law, target-independent strict
+  `beta`, full Arb certificate, nonpremise selector, `QW-2191` discharge,
+  strict unit, completed legacy-to-strict bridge, role transfer,
+  role-bearing `L_total`, SM/GR generation, ToE closure, or external physical
+  validation.
+
+## Current post-Programs-178–190 research steering guardrail (2026-07-27)
+
+- First priority is Program 191: formulate state selection as a natural
+  reference-state transformation on fibre algebras.  Determine whether
+  normalized trace is unique or identify the exact new datum required for
+  central-sector weighting; do not return to scalar `ln(2)` target matching.
+- Program 192 may quotient the positive beta torsor and classify
+  beta-gauge-invariant bridge observables under an explicitly conditional
+  length frame.  It attacks one completion atom and must not claim bridge or
+  role-transfer closure.
+- Program 193 may continue the fractional certificate only in a reproducible
+  Arb/python-flint environment placing all five obligations in one engine.
+  Program 194 should compile a general finite Dirichlet proof library rather
+  than another Boolean capability model.
+- Program 195 should derive a closed-form reflection-conversion boundary and
+  extremal channels.  Program 196 should move from repeated blocks to one
+  explicit mixing or martingale class with a real nonasymptotic theorem.
+- Program 197 must add ordering-sensitive features and challenge them with
+  multiset-preserving permutations before making any memory claim.
+  Program 198 should derive minimal process-tensor tomography rank and
+  conditioning with detector blur kept as a separate nuisance.
+- Program 199 may classify environment dilation equivalence and operational
+  causal identifiability; unidentifiable microscopic dilation coordinates
+  cannot receive physical roles.
+- Program 200 may classify analytic phase-source operations after the
+  algebraic no-go, but every accepted route must be repository-sourced,
+  target-independent, origin-bearing, and coupled.  Stop on target coding.
+- Program 201 should catalogue maximal scale-free observables invariant under
+  the Program-189 orbit.  These are the only predictions admissible before a
+  clock/scale frame.
+- Program 202 may build or acquire one experimental bundle only if all eleven
+  Program-190 fields are frozen with explicit license and hashes.
+  Program 203 may derive one narrow `W0+CA+OP` conditional prediction only
+  after that gate; it remains conditional and cannot promote strict FIN or
+  ToE closure.
+
+## Programs 191–203 reference/process/prediction guardrail (Release 10.18, 2026-07-27)
+
+- Program 191 classifies inner-unitary-invariant states on
+  `A=direct_sum_i M_{d_i}(C)`: normalized trace is unique on each simple
+  block, but a probability measure on the centre remains free.  For
+  `d=(1,2,2,2,2)`, uniform central weights give `9/5` and the normalized full
+  representation trace gives `17/9`.  Isomorphism naturality leaves the
+  one-parameter family
+  `(a,(1-a)/4,(1-a)/4,(1-a)/4,(1-a)/4)`.  Do not promote either value to a
+  strict state or temperature source without a central-measure theorem.
+- Program 192 constructs `BetaGaugeQuotient` under
+  `(d,beta,omega)->(c*d,beta*c^(-eta),omega/c)`.  The complete reduced
+  profile is `cos(nu*x+phi)/(1+x^eta)` with
+  `x=beta^(1/eta)*d` and `nu=omega/beta^(1/eta)`.  The orbit-collapse
+  residual is `1.11e-16`, but the legacy/strict quotient-profile RMS gap is
+  `0.3816158693` and their invariant `(eta,nu,phi)` tuples differ.  `beta=1`
+  is a gauge representative; no strict beta source, bridge closure, or role
+  transfer follows.
+- Program 193 builds the five-node `CertificateDependencyDAG` for the common
+  fractional-symbol certificate.  Arb/python-flint is unavailable locally,
+  only one inherited node is closed, and the inherited formal worst
+  enclosure `0.6129831478` remains above target `0.03`.  This is a toolchain
+  and dependency blocker, not an impossibility lower bound.
+- Program 194 proves the general finite Dirichlet identity, positivity,
+  constant kernel, unitary exponential, and entrywise-positive stochastic
+  heat semigroup for symmetric nonnegative constant-row-sum `W`.  It executes
+  150 exact rational cycle cases.  The supplied Lean source is not machine
+  compiled because no local Lean toolchain is installed; do not describe it
+  as proof-assistant-verified or promote the finite theorem to continuum
+  physics.
+- Program 195 eliminates the Program-182 numerical maximization.  The
+  complete real-plane qubit reflection boundary is
+  `r_t,max^2=min_{x in {0,1,r_s^2/(1-z_s^2)}}`
+  `[max(x,r_s^2+x*z_s^2)-x*z_t^2]`.  It gives exactly `r_t,max=0.36` for
+  source `(0.6,0)` and target `z_t=0.8`; 500 Choi-grid cross-checks have
+  maximum discretization discrepancy `6.68e-6`.  Tensor catalysis remains
+  open, and resource conversion does not source preparation or discharge
+  `QW-2191`.
+- Program 196 constructs `ObservedRegenerationFrame` for the explicit chain
+  that refreshes from `F` with recorded probability `p` and otherwise
+  repeats.  Conditional on the observed refresh count `R`, the retained
+  values are iid and DKW holds with random effective size `R`; mixing over
+  `R` preserves coverage.  At `n=4000,p=0.05`, nominal-record coverage is
+  `0.85625`, regenerative coverage is `1.0`, and the retained fraction is
+  `0.05029`.  Do not transfer this theorem to hidden general beta mixing.
+- Program 197 freezes an order-sensitive Mahalanobis protocol using lag-one
+  rank correlation, sign persistence, ordinal entropy, tie rate, time-rank
+  trend, and reversal asymmetry.  Gaussian and iid-stable rejection rates
+  are `0.01429` and `0.00714`; sorted-same-multiset, AR(1), repeated-block,
+  and drift challenges are each rejected at rate `1.0`.  This is strong
+  synthetic evidence, not universal open-set completeness or external memory
+  identification.
+- Program 198 proves minimal rank-three tomography in the declared Gaussian
+  two-step dephasing plus unknown detector-blur family.  Single, plus, and
+  echo log visibilities identify `(log b,v,c)`; removing echo gives rank two.
+  Gaussianity, equal increment variance, blur factorization, preparation,
+  intervention, and record remain explicit OP assumptions.
+- Program 199 constructs `OperationalEnvironmentQuotient`.  The phase laws
+  `1/2(delta_-a+delta_a)` with `cos a=0.8` and
+  `0.9 delta_0+0.1 delta_pi` have the same one-time dephasing channel but
+  two-time characteristic values `0.28` and `1.0`.  Do not assign physical
+  roles to microscopic dilation coordinates that are not operationally
+  identified.
+- Program 200 proves a natural analytic phase-source no-go in the declared
+  classes.  Continuous endomorphisms of `U(1)` are `z->z^n`, so the
+  order-eight algebraic legacy phase cannot generate the transcendental
+  strict phase.  Polynomial, logarithmic, and constant maps that hit the
+  target insert its value, branch, or coefficient.  No strict phase origin,
+  selector, or coupling source is exported.
+- Program 201 constructs `ProjectiveSpectralObservableAlgebra`: every
+  observable invariant under `(A,t,z)->(cA,t/c,c z)` factors through
+  projective spectral data and dimensionless combinations.  On the audited
+  scale range the raw gap changes by `10^12`, while normalized residuals are
+  below `8e-14`.  Raw time, gap, mass, length, energy, and beta representative
+  remain noninvariants requiring CA or a scale-charged source.
+- Program 202 creates a 12,000-event ordered synthetic operational bundle
+  with hashes, preparations, conditional units, detector calibration, memory
+  challenge, control, and exclusions.  It passes 10/11 intake fields but
+  fails the independent-analysis boundary and is explicitly
+  `synthetic_method_validation`.  No external dataset is admitted.
+- Program 203 executes one held-out
+  `V(a1,a2)=b*exp[-v(a1^2+a2^2)/2-c*a1*a2]` prediction only on that synthetic
+  dry run.  The predicted visibility is `0.56121`, observed synthetic
+  visibility `0.59768`, and residual `0.03646`.  The clock
+  `tau_*=0.002 s`, Gaussian environment, phase POVM, detector, and record are
+  explicit CA/OP inputs.  This is not an empirical FIN prediction.
+- Programs 191–203 export no strict central state, target-independent strict
+  beta, full Arb certificate, compiled proof-assistant library, nonpremise
+  selector, `QW-2191` discharge, canonical physical unit, completed
+  legacy-to-strict bridge, role transfer, role-bearing `L_total`, SM/GR
+  generation, ToE closure, or external physical validation.
+
+## Current post-Programs-191–203 research steering guardrail (2026-07-27)
+
+- First priority is Program 204: test whether direct-sum, amplification,
+  Morita, and declared coarse-graining naturality uniquely selects a central
+  probability measure.  A receiver-selected expectation is not a source
+  theorem; an independence theorem is an acceptable result.
+- Program 205 may attack only the `eta=9/5` bridge atom through a
+  target-independent renormalization/semigroup cocycle compatible with the
+  Program-192 quotient.  Do not replay generic bridge completion or begin
+  role transfer.
+- Programs 206 and 207 are reproducibility tasks: respectively supply one
+  pinned Arb/python-flint directed-rounding environment and one pinned
+  Lean/Mathlib compilation.  Do not promote mixed floating-point bounds or
+  uncompiled propositions.
+- Program 208 may study tensor conversion/catalysis beyond the complete
+  one-copy qubit cone.  Program 209 may remove observed refresh flags only
+  under a new observable mixing, coupling, or martingale condition.
+- Program 210 should provide time-uniform sequential calibration for the
+  temporal open-set detector.  Program 211 should put finite-shot,
+  positivity-respecting confidence regions around `(b,v,c)`.
+- Program 212 should solve the finite trigonometric moment bounds induced by
+  operational environment data rather than select a microscopic phase law.
+  Program 213 may formalize the phase-source no-go or produce one genuinely
+  source-bearing counterexample.
+- Program 214 may preregister one scale-free spectral falsification.  Programs
+  215 and 216 remain strictly downstream: first acquire an independent
+  external 11/11 bundle, then run one held-out `W0+CA+OP` conditional
+  prediction.  Synthetic or same-release records cannot unlock external
+  validation.
+
+## Programs 204–216 categorical/catalytic/external guardrail (Release 10.19, 2026-07-27)
+
+- Program 204 constructs `MoritaCentralTrace`.  Invariance under a declared
+  Morita-permutation action on all five simple summands gives constraint rank
+  four, nullity one, uniform central weights, and exact expectation `9/5`.
+  The represented-space normalized trace instead gives `17/9` and has
+  permutation residual `1/9`.  This is conditional uniqueness under an added
+  axiom, not a strict state or preparation source.
+- Program 204 also proves that automorphism-natural uniform states cannot be
+  contravariantly natural under all unital star homomorphisms: the map
+  `f:C^2->C^3`, `f(a,b)=(a,b,b)`, pulls uniform `C^3` weights back to
+  `(1/3,2/3)` rather than `(1/2,1/2)`, with exact defect `1/6`.  Always state
+  the morphism category when invoking central-state naturality.
+- Program 205 classifies continuous additive exponent cocycles as
+  `b(t)=kappa*t`.  The legacy-to-strict exponent change fixes only
+  `kappa*t*=4/5`; multiplicative and stable-fixed-point variants likewise
+  leave a parameter or insert `9/5`.  Eta is invariant under the Program-192
+  beta/length gauge.  No target-independent eta source, bridge completion,
+  or role transfer is exported.
+- Program 206 freezes a reproducible Arb environment contract.  Python-flint
+  and an Arb executable are absent; Docker CLI exists but the server socket
+  denies access.  The formal five-node run did not execute, inherited worst
+  enclosure `0.6129831478` remains above `0.03`, and a contract must not be
+  called a certificate.
+- Program 207 finds and directly uses the local Lean 4.28.0 toolchain.  The
+  dependency-free core probe machine-compiles, and 200 new exact rational
+  weighted-circulant Dirichlet witnesses pass.  The general graph library
+  fails before theorem verification because Mathlib is absent.  Claim only
+  scoped core machine checking, not full formal-library closure.
+- Program 208 proves invariant-catalyst no-help for the declared
+  reflection-conversion trace-norm inequalities.  It also constructs a
+  covariant measure-and-prepare channel with the perfect reference
+  `Pi_+=(I+sigma_x)/2`; trace-preservation, covariance, and target-mapping
+  residuals are zero, and the catalyst is returned exactly.  This catalyst
+  is a supplied fully asymmetric orientation bit.  It does not source a
+  strict selector or discharge `QW-2191`.
+- Program 209 constructs `CoupledThinningFrame` under the calibrated envelope
+  `beta(k)<=(1-p0)^k`.  At `n=10000`, `p0=0.05`, selected lag `166` leaves
+  `61` observations; nominal iid coverage is `0.845833`, while the
+  coupling-valid construction covers all declared trials with mean width
+  `6.58742`.  Do not extend the theorem to arbitrary hidden dependence or
+  omit the apparatus-supplied mixing calibration.
+- Program 210 constructs a fresh-independent-block conformal e-process with
+  `e_t=(m+1)/(H_{m+1} r_t)`.  Its product has exact Ville control under the
+  continuous iid null.  In the declared simulation, iid rejection is `0.02`
+  and four temporal alternatives reject at rate `1.0`.  Calibration reuse
+  is outside the theorem.
+- Program 211 constructs conservative simultaneous finite-shot regions for
+  `(log b,v,c)` from six Bonferroni Clopper-Pearson intervals.  At 1000 shots
+  per phase/context and 600 simulations, all regions are nonempty, empirical
+  coverage is `1.0`, and memory power is `1.0`.  Keep independent binomial
+  scans and the Gaussian visibility family explicit.
+- Program 212 proves the sharp real-symmetric moment bound
+  `2*c1^2-1<=c2<=1`.  At `c1=4/5`, this is exactly
+  `7/25<=c2<=1`, with explicit endpoint measures.  The theorem bounds an
+  operationally unmeasured moment and does not select a microscopic
+  environment.
+- Program 213 studies the oscillatory step datum
+  `z_l=exp(i*omega_l)=exp(i*pi/4)` of order eight, not the separate legacy
+  offset `phi_l=pi/6`.  Continuous and Borel circle homomorphisms and
+  trivial-action continuous one-cocycles preserve torsion and cannot produce
+  `exp(i*743/4000)`.  Unrestricted interpolation is target-coded.  No strict
+  frequency, phase origin, orientation, or selector source is exported.
+- Program 214 freezes `ProjectiveSpectralFingerprintProtocol` for the strict
+  C12 generator with row sum `1.6603072787660986`.  Positive eigenvalue
+  ratios are invariant under twelve decades of scaling and node
+  permutation.  One-percent edge noise passes at distance `0.00233262`;
+  ten-percent noise and nearest-neighbour C12 fail.  The raw legacy generator
+  fails this strict PSD gate, which is not a global rejection of the legacy
+  intermediate bridge kernel or a role-transfer theorem.
+- Program 215 admits no independent external 11/11 record.  Three local
+  external-lineage candidates pass at most 2/11 fields; the synthetic method
+  bundle passes 10/11 but remains nonexternal.  No web or Firecrawl was used.
+- Program 216 freezes the external prediction protocol but does not execute
+  it because Program 215 is false.  Never recycle the synthetic dry run as
+  external evidence.
+- Programs 204–216 export no nonpremise strict selector, `QW-2191`
+  discharge, canonical physical unit, target-independent eta/beta source,
+  completed legacy-to-strict bridge, legacy role transfer, role-bearing
+  `L_total`, SM/GR generation, ToE closure, or external physical validation.
+
+## Current post-Programs-204–216 research steering guardrail (2026-07-27)
+
+- Program 217 should classify natural central states only in a precisely
+  declared operational morphism category and test provenance of the
+  Morita-permutation axiom.  Do not infer a physical preparation from
+  categorical symmetry alone.
+- Program 218 may search a finite declared class of target-independent eta
+  generators whose input data do not contain `9/5`.  A no-go certificate is
+  preferable to target-coded flow fitting.
+- Programs 219 and 220 are exact infrastructure closures: execute the frozen
+  Arb contract and compile the pinned Lean/Mathlib library.  Preserve failed
+  thresholds and compiler errors rather than weakening statements.
+- Program 221 should quantify approximate finite symmetry-reference cost,
+  disturbance, and reuse.  Treat the perfect Program-208 reference as a
+  supplied resource, never as an internal selector theorem.
+- Programs 222–224 should respectively optimize valid hidden-mixing
+  acquisition, construct a reusable-calibration e-process, and reduce
+  finite-shot tomography conservatism while preserving coverage.
+- Program 225 should extend Toeplitz moment bounds and recover only
+  operational environment equivalence data.  Program 226 may extend the
+  phase no-go to nontrivial actions or supply one genuinely target-independent
+  source; stop on origin, orientation, or coefficient insertion.
+- Highest physics-bridge priority is Program 227: construct an explicit,
+  uncertainty-bearing instrument-to-spectrum reconstruction theorem.
+  Program 228 must then acquire one independent 11/11 bundle.  Program 229
+  may execute the frozen held-out prediction exactly once only after that
+  gate passes.
+
+## Programs 217–229 operational-section/spectral-tomography guardrail (Release 10.20, 2026-07-27)
+
+- Program 217 constructs `BistochasticCentralStateAndFrequencySection`.
+  Uniform central weights are the unique state fixed by every sector
+  permutation and hence by every bistochastic sector endomorphism; the FIN
+  dimension expectation is exactly `9/5`.  A nonuniform preparation law is a
+  separate operational section estimated from frequencies with a simultaneous
+  Hoeffding band.  Do not promote bistochastic naturality or preparation
+  frequencies to a strict state source.
+- Program 218 proves `AffineNaturalEtaVectorFieldNoGo`.  For
+  `x=eta-1`, continuous positive homogeneity plus reflection oddness forces
+  `F(x)=kappa*x`.  Nonzero `kappa` fixes only zero, while zero `kappa` fixes
+  every point.  The degree-eight polynomial constraint has rank eight,
+  nullity one, and only a linear survivor.  No unique nonzero `x=4/5`
+  fixed point, target-independent eta source, bridge completion, or role
+  transfer is exported.
+- Program 219 records `ArbExecutionAttestation`: python-flint and an Arb
+  executable remain absent, Docker server access fails, the five-node common
+  formal run does not execute, and no sub-three-percent certificate exists.
+  An immutable attestation is not a formal numerical certificate.
+- Program 220 machine-compiles the dependency-free
+  `FIN_Programs_217_229_Dirichlet_Core.lean`.  It checks constant null modes,
+  equality of two independent C4 formulas on the archived vector, exact
+  energy `30`, and its nonnegativity.  The general Mathlib library remains
+  uncompiled.  Do not promote the C4 certificate to the general graph,
+  semigroup, continuum, or physical theorem.
+- Program 221 proves an imperfect-reference no-broadcast theorem when no
+  second asymmetric source is consumed.  Exact uncorrelated return after
+  producing target asymmetry would decrease squared fidelity from `1-r^2`
+  to `(1-r^2)(1-t^2)`.  Exact marginal return is possible by retaining
+  correlations; at `r=0.8,t=0.6`, the constructed ledger stores
+  `0.1783636517` bits.  This quantifies a supplied orientation resource and
+  does not source its sign or discharge `QW-2191`.
+- Program 222 optimizes hidden-mixing acquisition with a separately
+  calibrated one-sided lower refresh bound.  The realized robust design uses
+  lag `161`, count `63`, and DKW radius `0.1991022457`, improving the
+  inherited `0.2039602544`; calibration-bound coverage is `0.990333`.
+  Preserve the separate mixing calibration and exact failure-budget ledger.
+- Program 223 constructs `SequentialInsertionRankEProcess`.
+  Insertion-rank factors `N/(H_N r_N)` form a mean-one martingale in the
+  insertion-rank filtration under iid continuous scores.  Null rejection is
+  `0.029167` and the declared shifted alternative rejects at rate `1.0`.
+  Raw-score-dependent stopping, weak dependence, and adaptive drift are
+  outside the theorem.  Naive fixed calibration does not have the same
+  conditional e-value property.
+- Program 224 constructs an asymptotic likelihood-quadratic process region.
+  Empirical simultaneous coverage is `0.956667`; widths are approximately
+  half the exact conservative Program-211 widths; the independent fourth
+  contrast has null rejection `0.040833` and declared misspecification power
+  `0.408333`.  This is strong method evidence, not an exact finite-sample
+  confidence theorem.
+- Program 225 proves the sharp order-three moment interval.  Given
+  `c1=4/5,c2=1/2`, Toeplitz positivity is equivalent to
+  `-11/180<=c3<=11/20`; both endpoints have explicit symmetric atomic phase
+  measures.  The interval constrains an operational environment quotient and
+  does not identify a unique microscopic phase law.
+- Program 226 machine-compiles the finite order-eight residue orbit and
+  `gcd(743,4000)=1` in
+  `FIN_Programs_217_229_Phase_Torsion_Core.lean`.  Continuous circle
+  endomorphism classification, Borel automatic continuity, and the
+  transcendence-based non-torsion theorem remain analytic, not Lean-closed.
+  No strict frequency, phase origin, or selector source is exported.
+- Program 227 constructs `HeatKernelTomographyInstrument`: all twelve vertex
+  basis preparations, one positive heat duration, the vertex POVM, and one
+  multinomial transition column per preparation.  Exact
+  `P_tau=exp(-tau*A)` gives `A=-(1/tau)log(P_tau)`; without an absolute clock,
+  projective eigenvalue ratios remain identifiable.  Exact fingerprint
+  residual is `7.77e-16`; Program-214 pass rates are `0.0375`, `0.7292`, and
+  `1.0` at 2k, 10k, and 50k shots per preparation.  This is a conditional
+  instrument theorem, not a laboratory realization or physical clock.
+- Program 228 strengthens independent custody for either an ordered process
+  record or event-level double-slit record.  Both-open, left-only, right-only,
+  and both-closed events, detector calibration, clock, controls, holdout, and
+  provider/registrar/analyst separation are required.  No local bundle
+  passes 11/11; a rendered interference image and the synthetic 10/11 bundle
+  are not admitted.  No web or Firecrawl was used.
+- Program 229 freezes the external semigroup holdout
+  `P_2tau,pred=P_tau@P_tau` plus the projective fingerprint and negative
+  controls.  It does not execute because Program 228 fails.  Never promote
+  the algebraic semigroup identity to external physical validation.
+- Programs 217–229 export no strict central state, target-independent eta
+  source, complete Arb certificate, general Mathlib closure, nonpremise
+  selector, `QW-2191` discharge, canonical physical unit, completed
+  legacy-to-strict bridge, legacy role transfer, role-bearing `L_total`,
+  SM/GR generation, external validation, or ToE closure.
+
+## Current post-Programs-217–229 research steering guardrail (2026-07-27)
+
+- Highest mathematical physics priority is Program 240: optimize heat-kernel
+  tomography times/preparations and prove nonasymptotic spectral concentration
+  bounds.  Treat the Program-227 map as conditional on explicit preparation,
+  clock, POVM, and record.
+- Highest empirical priority is Program 241: acquire one blind-custody
+  event-level process or double-slit bundle satisfying all Program-228
+  fields.  Program 242 may execute the frozen semigroup holdout exactly once
+  only after admission.
+- Program 234 should extend the finite-reference theorem to multiple uses,
+  tracking disturbance, recovery error, and accumulated correlations.  Do
+  not reinterpret a correlation ledger as a strict selector source.
+- Program 238 should extend the exact Toeplitz hierarchy to fourth and fifth
+  moments with sparse endpoint measures, while preserving environment
+  nonidentifiability.
+- Programs 232 and 233 are infrastructure closures: authorized pinned Arb
+  execution and a pinned Mathlib general operator library.  Failed thresholds
+  and compile errors must remain visible.
+- Programs 235–237 may improve mixing allocation, weak-dependence e-processes,
+  and exact finite-shot process regions.  Every result must retain its
+  calibration, filtration, and model class.
+- Program 230 may experimentally distinguish invariant and prepared central
+  states.  Program 231 may admit exactly one genuinely new strict-derived
+  non-affine eta datum; otherwise preserve the affine no-go.  Program 239 may
+  formalize the full analytic phase hierarchy but cannot source the phase by
+  formalization alone.

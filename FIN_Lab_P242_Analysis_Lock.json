@@ -1,0 +1,32 @@
+{
+  "core": {
+    "protocol_id": "FIN-LAB-P242-EXTERNAL-SEMIGROUP-HOLDOUT-V1",
+    "depends_on": [
+      "FIN-LAB-P240-OPTIMAL-HEAT-TOMOGRAPHY-V1",
+      "FIN-P241-1.0 signed admission"
+    ],
+    "resource_type": "heat_process",
+    "required_dimension": 12,
+    "calibration_record": "subset=calibration and evolution_multiple=1",
+    "held_out_record": "subset=holdout and evolution_multiple=2",
+    "prediction": "P_2tau_predicted=P_tau@P_tau",
+    "primary_statistic": "maximum over preparation columns of total-variation distance between empirical P_2tau and P_tau@P_tau",
+    "primary_alpha_total": 0.05,
+    "primary_finite_count_bound": "Bretagnolle-Huber-Carol L1 multinomial bounds, unioned over twelve columns and propagated through the stochastic product",
+    "primary_decision_labels": [
+      "FALSIFIED_AT_REGISTERED_LEVEL",
+      "NOT_FALSIFIED_AT_REGISTERED_LEVEL"
+    ],
+    "secondary_statistic": "maximum absolute distance of the reconstructed projective positive spectrum from the frozen strict C12 fingerprint",
+    "secondary_raw_threshold": 0.02,
+    "negative_controls": [
+      "cyclic preparation-label shift",
+      "time reversal/misassignment",
+      "best calibration-fit nearest-neighbour C12 heat model"
+    ],
+    "execution_rule": "one atomic execution claim per admitted bundle digest; report failure and every control without model or threshold repair",
+    "nonpromotion_rule": "NOT_FALSIFIED is not proof that nature selected FIN; an emulator implementation tests the registered operator/instrument map only",
+    "double_slit_rule": "event-level double-slit data remain a P241 operational/custody record unless a separate 12-state process map was preregistered"
+  },
+  "canonical_core_sha256": "8b22348c9226311cbbd0bffcfa0ad7f3fec919f01836567cdb0d9b0dafe3a972"
+}

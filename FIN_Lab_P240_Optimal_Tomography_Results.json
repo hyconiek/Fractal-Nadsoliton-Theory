@@ -1,0 +1,76 @@
+{
+  "program": 240,
+  "constructed_object": "OptimalHeatKernelTomographyDesign",
+  "strict_target": {
+    "n": 12,
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8,
+    "row_sum": 1.6603072787660986,
+    "lambda_max": 2.342182041146298,
+    "spectral_gap": 0.7541211542070796,
+    "tau_dimensionless": 0.426952295949885
+  },
+  "strict_row_sum_reference_error": 4.440892098500626e-16,
+  "strict_weight_minimum": 0.011070817321442113,
+  "generator_minimum_eigenvalue": -6.938893903907228e-17,
+  "transition_minimum_eigenvalue_at_tau": 0.3678794411714421,
+  "transition_minimum_eigenvalue_at_2tau": 0.1353352832366125,
+  "exact_optimum_x": 1.0,
+  "grid_optimum_x": 1.0,
+  "uniform_allocation_theorem": "For a convex cyclic-permutation-invariant design risk, averaging any allocation over C12 cannot increase risk and produces the uniform allocation. Thus a minimax design exists with equal shots for all twelve basis preparations.",
+  "time_optimum_theorem": "After normalizing lambda_max=1, the local absolute-noise amplification of inverse-log recovery for the fastest mode is g(x)=exp(x)/x. Since g'(x)=exp(x)(x-1)/x^2, its unique positive minimum is x=1.",
+  "matrix_concentration_theorem": "For m independent categorical shots in every one of n columns, the raw transition estimate obeys rectangular matrix Bernstein with v<=n/(2m), R<=sqrt(2)/m, and dilation dimension 2n. Symmetrization does not increase operator error. If epsilon is below lambda_min(P), Weyl plus log Lipschitz continuity yields the recorded nonasymptotic generator and projective bounds.",
+  "shot_rows": [
+    {
+      "shots_per_preparation": 10000,
+      "replicates": 300,
+      "spd_failures": 0,
+      "mean_projective_distance": 0.01662851676538499,
+      "p95_projective_distance": 0.026915245791639914,
+      "p214_0p02_pass_rate": 0.7233333333333334,
+      "matrix_bernstein_operator_radius_alpha_0p05": 0.0866549655484039,
+      "distribution_free_rate_error_bound": 1.4434142237013454,
+      "distribution_free_projective_bound": 3.211984665416107
+    },
+    {
+      "shots_per_preparation": 25000,
+      "replicates": 300,
+      "spd_failures": 0,
+      "mean_projective_distance": 0.009631970094912647,
+      "p95_projective_distance": 0.015302578552521148,
+      "p214_0p02_pass_rate": 0.99,
+      "matrix_bernstein_operator_radius_alpha_0p05": 0.05467010691614125,
+      "distribution_free_rate_error_bound": 0.8176470405071713,
+      "distribution_free_projective_bound": 1.0726510577512374
+    },
+    {
+      "shots_per_preparation": 50000,
+      "replicates": 300,
+      "spd_failures": 0,
+      "mean_projective_distance": 0.0064191417089727925,
+      "p95_projective_distance": 0.010078978925788374,
+      "p214_0p02_pass_rate": 1.0,
+      "matrix_bernstein_operator_radius_alpha_0p05": 0.038609383059684046,
+      "distribution_free_rate_error_bound": 0.5492768102919157,
+      "distribution_free_projective_bound": 0.612722636801239
+    }
+  ],
+  "shots_per_preparation_for_distribution_free_0p02_projective_bound": 22565113,
+  "design_lock": {
+    "path": "FIN_Lab_P240_Design_Lock.json",
+    "sha256": "3f58a7b79a6c3119c53744beec21f217c892b50fbcb210b2f273fd55ee89fd18"
+  },
+  "figure": {
+    "path": "FIN_Lab_P240_242_Transfer_Figures/p240_optimal_tomography.png",
+    "sha256": "a2c393c838aeb4ca1372f1db26e930364576bc0e6913ac7df07e524353e2e750"
+  },
+  "claim_status": {
+    "analytic_time_optimum": "PROVEN_IN_DECLARED_LOCAL_NOISE_MODEL",
+    "uniform_minimax_allocation": "PROVEN_BY_CYCLIC_SYMMETRIZATION",
+    "finite_shot_rows": "SYNTHETIC_METHOD_EVIDENCE",
+    "external_data_used": false,
+    "external_validation_claimed": false
+  }
+}

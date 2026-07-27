@@ -1,0 +1,22 @@
+{
+  "core": {
+    "protocol_id": "FIN-P216-EXTERNAL-CONDITIONAL-PREDICTION-001",
+    "prerequisite": "Program-215 validator admits one source_class=external bundle with 11/11 fields",
+    "model": "V(a1,a2)=b exp[-v(a1^2+a2^2)/2-c a1 a2]",
+    "training_contexts": [
+      "single=(1,0)",
+      "plus=(1,1)",
+      "echo=(1,-1)"
+    ],
+    "heldout_context": "(1,0.5)",
+    "estimator": "binomial phase-scan likelihood with 0<b<=1, v>=0, |c|<=v",
+    "primary_score": "held-out visibility residual standardized by the Program-211 finite-shot simultaneous uncertainty",
+    "acceptance_rule": "report residual and interval; no binary theory confirmation; reject declared conditional model if held-out intervals are disjoint",
+    "data_split": "immutable training/held-out split frozen before fitting",
+    "claim_class": "conditional W0+CA+OP only",
+    "external_execution_authorized": false
+  },
+  "canonical_core_sha256": "42400ab10a5348cb9e0012b740b87c53b151969ecc1c46e858fdfb478369afe5",
+  "program215_gate_passed": false,
+  "execution_status": "LOCKED_NO_DATA"
+}

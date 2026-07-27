@@ -1,0 +1,58 @@
+{
+  "core": {
+    "protocol_id": "FIN-LAB-P240-OPTIMAL-HEAT-TOMOGRAPHY-V1",
+    "frozen_target": {
+      "n": 12,
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8,
+      "row_sum": 1.6603072787660986,
+      "lambda_max": 2.342182041146298,
+      "spectral_gap": 0.7541211542070796,
+      "tau_dimensionless": 0.426952295949885,
+      "strict_kernel": "cos(0.18575*d+0.16250)/(1+d^1.8), zero diagonal, undirected cyclic distance on Z12",
+      "row_sum_reference": 1.660307278766099
+    },
+    "preparations": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preparation_allocation": "uniform by C12 minimax symmetrization",
+    "base_time_rule": "tau*lambda_max=1",
+    "base_dimensionless_time": 0.426952295949885,
+    "registered_process_times": {
+      "calibration": "tau",
+      "held_out": "2*tau",
+      "optional_duality_diagnostic": [
+        "tau/4",
+        "tau/2",
+        "tau"
+      ]
+    },
+    "recommended_shots_per_preparation_per_registered_time": 50000,
+    "registered_event_total": 1200000,
+    "fingerprint_distance_threshold": 0.02,
+    "primary_semigroup_test": "maximum column total-variation distance between held-out P_2tau and P_tau@P_tau with a preregistered finite-count bound",
+    "secondary_test": "projective strict spectral fingerprint",
+    "physical_clock_required": true,
+    "apparatus_required": true,
+    "external_record_required": true,
+    "program_241_gate_required": true,
+    "synthetic_data_are_external_evidence": false,
+    "strict_selector_or_unit_exported": false,
+    "legacy_to_strict_bridge_completed": false,
+    "external_validation_claimed": false
+  },
+  "canonical_core_sha256": "0607e9be43443fc963194ff762d8cd9523df2cf4cc78e921f9671c97a234ac68"
+}

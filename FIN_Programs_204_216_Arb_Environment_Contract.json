@@ -1,0 +1,35 @@
+{
+  "core": {
+    "contract_id": "FIN-P206-ARB-ONE-ENGINE-001",
+    "required_engine": "Arb through python-flint or a directly callable Arb binary",
+    "required_pins": [
+      "container image digest",
+      "Arb/FLINT version",
+      "python-flint version",
+      "Python version",
+      "source commit hash"
+    ],
+    "required_nodes": [
+      "finite FFT cells",
+      "average/polylogarithmic term",
+      "cancellation correction tail",
+      "denominator replacement",
+      "resonant interval fallbacks"
+    ],
+    "acceptance": "all five nodes evaluated by the same directed-rounding engine; formal relative enclosure below 0.03 or a formal obstruction",
+    "forbidden": [
+      "ordinary-float promotion",
+      "mixed engines without interval transport proof",
+      "unhashed container tag"
+    ]
+  },
+  "canonical_core_sha256": "e961c8127ec10d16081950b9f2822249ca46e726c4c7a28aee82e1d41546150d",
+  "local_probe": {
+    "flint_module": null,
+    "arb_binary": null,
+    "docker_binary": "/usr/bin/docker",
+    "docker_socket_permission_probe": true,
+    "docker_server_accessible": false,
+    "docker_probe_tail": "\npermission denied while trying to connect to the docker API at unix:///var/run/docker.sock\n"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "core": {
+    "request_id": "FIN-P228-INDEPENDENT-CUSTODY-11-OF-11-V2",
+    "accepted_resource_types": [
+      "ordered process record",
+      "double-slit event record"
+    ],
+    "required_fields": [
+      "independent provider identity and license",
+      "immutable raw-event hash",
+      "ordered event or detection coordinates",
+      "preparation or slit-configuration labels",
+      "intervention or shutter-control labels",
+      "clock and dimensional calibration",
+      "detector geometry, efficiency, dark-count and blur calibration",
+      "environment and background record",
+      "negative-control record",
+      "held-out target committed before analysis",
+      "provider-registrar-analyst custody separation"
+    ],
+    "double_slit_specialization": {
+      "minimum_configurations": [
+        "both open",
+        "left only",
+        "right only",
+        "both closed"
+      ],
+      "required_event_fields": [
+        "detector coordinate",
+        "timestamp",
+        "configuration",
+        "run id"
+      ],
+      "forbidden_substitute": "rendered interference image without event-level data"
+    },
+    "admission": "all eleven fields pass before unblinding the held-out target",
+    "firecrawl_or_web_used": false
+  },
+  "canonical_core_sha256": "648220be09337541a0bd6f66378c4d8d36a094cfafb44b45a3ebc6e3db9e50aa"
+}

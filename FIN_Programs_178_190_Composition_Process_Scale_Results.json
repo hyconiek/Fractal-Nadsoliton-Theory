@@ -1,0 +1,630 @@
+{
+  "metadata": {
+    "title": "FIN Programs 178-190: Composition Laws, Process Memory, and Scale Obstructions",
+    "release": "10.17",
+    "version": "1.0.0",
+    "date": "2026-07-27",
+    "creator": "Żuchowski, Krzysztof",
+    "affiliation": "Independent Researcher — Fractal Information Theory Project",
+    "orcid": "0009-0002-0909-3613",
+    "seed": 20260728,
+    "previous_results_sha256": "a5dd257cca077db93bd9727b35e53757ef2bc274db43e4e998aa8485dc12f9b7",
+    "firecrawl_used": false,
+    "external_web_used": false
+  },
+  "programs": {
+    "178": {
+      "replication_action": "(alpha,r=log h) -> (n alpha,n r)",
+      "classification_theorem": "Every continuous degree-zero scalar under positive replication has the form F(alpha/r) on the positive cone. Replication intensivity therefore leaves an arbitrary function F.",
+      "coarse_graining_no_go": "If arbitrary label splitting changes r while alpha is fixed and beta is invariant, F(alpha/r) must be constant. The constant is not selected by composition and cannot derive ln(2).",
+      "candidate_rows": [
+        {
+          "candidate": "raw_cardinality_alpha_over_h",
+          "one_copy": 0.6931471805599453,
+          "max_replication_defect": 0.6928087297881875,
+          "max_label_split_defect": 0.5545177444479562,
+          "replication_intensive": false,
+          "label_split_invariant": false
+        },
+        {
+          "candidate": "replication_invariant_alpha_over_log_h",
+          "one_copy": 2.0,
+          "max_replication_defect": 0.0,
+          "max_label_split_defect": 1.0744871473609634,
+          "replication_intensive": true,
+          "label_split_invariant": false
+        },
+        {
+          "candidate": "inverse_ratio_log_h_over_alpha",
+          "one_copy": 0.5,
+          "max_replication_defect": 0.0,
+          "max_label_split_defect": 0.5804820237218407,
+          "replication_intensive": true,
+          "label_split_invariant": false
+        },
+        {
+          "candidate": "constant_log2",
+          "one_copy": 0.6931471805599453,
+          "max_replication_defect": 0.0,
+          "max_label_split_defect": 0.0,
+          "replication_intensive": true,
+          "label_split_invariant": true
+        },
+        {
+          "candidate": "extensive_alpha",
+          "one_copy": 2.772588722239781,
+          "max_replication_defect": 19.408121055678468,
+          "max_label_split_defect": 0.0,
+          "replication_intensive": false,
+          "label_split_invariant": true
+        }
+      ],
+      "unique_target_free_beta_selected": false,
+      "constructed_object": "StateLawModuli = continuous functions F on alpha/log(h); coarse-graining quotient collapses this moduli space to unselected constants.",
+      "status": "Classification/no-go theorem in the declared composition class",
+      "confidence": "Proven",
+      "claim_boundary": "A richer state law may use new typed data, but composition and label invariance alone do not select beta=ln(2)."
+    },
+    "179": {
+      "constructed_object": {
+        "name": "CompressionScaleTorsor",
+        "carrier": "R_{>0}",
+        "action": "c · beta = beta*c^(-eta) under d' = c*d",
+        "orbit_statement": "the action is transitive on beta>0"
+      },
+      "orbit_collapse": [
+        {
+          "beta": 0.01,
+          "collapse_residual": 2.220446049250313e-16
+        },
+        {
+          "beta": 0.03162277660168379,
+          "collapse_residual": 2.220446049250313e-16
+        },
+        {
+          "beta": 0.1,
+          "collapse_residual": 2.220446049250313e-16
+        },
+        {
+          "beta": 0.31622776601683794,
+          "collapse_residual": 2.220446049250313e-16
+        },
+        {
+          "beta": 1.0,
+          "collapse_residual": 0.0
+        },
+        {
+          "beta": 3.1622776601683795,
+          "collapse_residual": 1.1102230246251565e-16
+        },
+        {
+          "beta": 10.0,
+          "collapse_residual": 1.6653345369377348e-16
+        },
+        {
+          "beta": 31.622776601683793,
+          "collapse_residual": 2.220446049250313e-16
+        },
+        {
+          "beta": 100.0,
+          "collapse_residual": 2.220446049250313e-16
+        }
+      ],
+      "source_candidates": [
+        {
+          "source": "positivity_of_denominator",
+          "positive": true,
+          "target_independent": true,
+          "selects_value_one": false,
+          "verdict": "selects only beta>=0"
+        },
+        {
+          "source": "monoid_unitality_A(1)=1",
+          "positive": true,
+          "target_independent": true,
+          "selects_value_one": false,
+          "verdict": "fixes intercept, not compression slope"
+        },
+        {
+          "source": "tail_ratio_inversion",
+          "positive": true,
+          "target_independent": false,
+          "selects_value_one": true,
+          "verdict": "receiver inversion uses strict target"
+        },
+        {
+          "source": "A_ME_cardinality",
+          "positive": true,
+          "target_independent": false,
+          "selects_value_one": false,
+          "verdict": "fails tensor intensivity and needs normalization"
+        },
+        {
+          "source": "coordinate_choice_beta=1",
+          "positive": true,
+          "target_independent": true,
+          "selects_value_one": true,
+          "verdict": "gauge convention, not source law"
+        },
+        {
+          "source": "external_length_calibration",
+          "positive": true,
+          "target_independent": true,
+          "selects_value_one": true,
+          "verdict": "conditional A4 input, not strict"
+        }
+      ],
+      "accepted_strict_sources": 0,
+      "source_theorem": "Without a selected length coordinate, all beta>0 are equivalent under rescaling. Invariant data can select the positive orbit but cannot select beta=1.",
+      "strict_beta_source_exported": false,
+      "status": "Positive-orbit theorem; target-independent value source absent",
+      "confidence": "Proven",
+      "claim_boundary": "The theorem does not reject beta=1 as a working gauge; it rejects its promotion to a strict physical constant without a scale frame."
+    },
+    "180": {
+      "arb_or_python_flint_available": false,
+      "components": [
+        {
+          "component": "finite FFT cells",
+          "available": true,
+          "directed_rounding": true,
+          "closed": true,
+          "value": 0.6129831478193526
+        },
+        {
+          "component": "average/polylogarithmic term",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": null
+        },
+        {
+          "component": "cancellation correction tail",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 4.129713895224133e-07
+        },
+        {
+          "component": "denominator replacement",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 8.483299610034831e-12
+        },
+        {
+          "component": "resonant interval fallbacks",
+          "available": true,
+          "directed_rounding": false,
+          "closed": false,
+          "value": 63
+        }
+      ],
+      "formal_worst_relative_enclosure_from_P151": 0.6129831478193526,
+      "analytic_cancellation_bound_from_P165": 4.129713895224133e-07,
+      "preregistered_target": 0.03,
+      "full_one_engine_certificate": false,
+      "bottleneck_migration": "Cancellation is no longer the dominant analytic obstruction. The open obligation is a common directed-rounding evaluation of the average term, correction modes, resonant fallbacks, and cells.",
+      "status": "Certificate assembly executed; full sub-3% certificate remains open",
+      "confidence": "Proven ledger; no false ball-arithmetic claim"
+    },
+    "181": {
+      "constructed_object": "FiniteDirichletSystem(H,W,A=I-W)",
+      "exact_test_vector": [
+        1,
+        2,
+        -1,
+        3
+      ],
+      "exact_quadratic_form": "15",
+      "exact_dirichlet_sum": "15",
+      "exact_identity": true,
+      "exact_constant_kernel": true,
+      "eigenvalues": [
+        -4.2934406030425976e-16,
+        1.0,
+        1.0000000000000002,
+        1.9999999999999998
+      ],
+      "max_unitarity_residual": 1.2812033908257476e-15,
+      "max_stochastic_row_residual": 5.551115123125783e-16,
+      "minimum_heat_entry": 0.0,
+      "lean_source": "FIN_Programs_178_190_Dirichlet_Core.lean",
+      "lean_source_sha256": "9a35ea521c2c0b1b44328d32880d68379de6732615d8dba592453cf514d6c366",
+      "lean_machine_compiled": false,
+      "lean_note": "The core-only source contains concrete finite theorems. No local Lean toolchain was available after the documented Release-10.16 download failures, so no machine-compilation claim is made.",
+      "status": "Exact algebraic core executed; proof-assistant source uncompiled",
+      "confidence": "Proven exact finite identity; numerical exponential checks",
+      "claim_boundary": "The computation proves a finite model, not a continuum theorem or a physical interpretation."
+    },
+    "182": {
+      "constructed_object": {
+        "name": "Z2CovariantQubitConversionLMI",
+        "choi_form": "[[a,0,0,w],[0,1-a,zeta,0],[0,zeta*,c,0],[w*,0,0,1-c]]",
+        "positivity": "|w|^2<=a(1-c), |zeta|^2<=(1-a)c, 0<=a,c<=1"
+      },
+      "complete_real_plane_criterion": "For source (r,z) and target (r',z'), conversion exists iff there are a,c in [0,1] with p'=p*a+(1-p)*c and r'<=r[sqrt(a(1-c))+sqrt((1-a)c)]. Free z rotations extend the criterion to arbitrary transverse phase.",
+      "counterexample": {
+        "source": [
+          0.6,
+          0.0
+        ],
+        "target": [
+          0.6,
+          0.8
+        ],
+        "same_M": true,
+        "maximum_transverse_factor": 0.6,
+        "maximum_reachable_target_M": 0.36,
+        "optimal_a": 0.9,
+        "optimal_c": 0.9,
+        "conversion_feasible": false
+      },
+      "grid_valid_targets": 11583,
+      "grid_false_positives_of_M_only": 1366,
+      "M_complete_on_full_state_space": false,
+      "status": "Complete Choi/LMI criterion constructed for qubit reflection covariance",
+      "confidence": "Proven criterion; finite boundary evaluated numerically",
+      "claim_boundary": "This classifies use of an existing asymmetry resource and does not generate the signed preparation or discharge QW-2191."
+    },
+    "183": {
+      "dependence_class": "m iid latent draws, each repeated in one contiguous block of size b",
+      "theorem": "The repeated record has exactly the empirical CDF of the m latent draws. DKW therefore holds with m=n/b, not nominal n.",
+      "nominal_n": 4000,
+      "independent_blocks": 40,
+      "block_size": 100,
+      "epsilon_invalid_nominal": 0.02340413060410993,
+      "epsilon_valid_block": 0.23404130604109932,
+      "replicates": 360,
+      "coverage_invalid_nominal": 0.625,
+      "coverage_valid_block": 1.0,
+      "mean_width_invalid_nominal": 0.5163345451356279,
+      "mean_width_valid_block": 10.578864150402913,
+      "run_length_detected_block_size": 100,
+      "status": "Exact block-class theorem and finite coverage challenge executed",
+      "confidence": "Proven for repeated iid blocks; strong numerical coverage evidence",
+      "claim_boundary": "The theorem does not cover arbitrary mixing or hidden dependence. Block size must be known or certified by the acquisition protocol."
+    },
+    "184": {
+      "model": "log Q_j=a_j+T_j*x+g1*x+g2*x^2, x=log t",
+      "controls": {
+        "T_C1": 0.5,
+        "T_C2": 1.0
+      },
+      "design_rank": 6,
+      "parameters": 6,
+      "one_control_reduced_rank": 5,
+      "times_in_log_coordinates": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "simulation": {
+        "replicates": 1500,
+        "records_per_cell": 12,
+        "true_target": 1.25,
+        "naive_mean": 1.9496290523853725,
+        "controlled_mean": 1.249501459289648,
+        "controlled_sd": 0.029929594699179357,
+        "shared_gain_violation_delta": 0.25,
+        "shared_gain_violation_detection_rate": 1.0
+      },
+      "constructed_object": "MultiControlCalibrationFrame = target + two known-exponent controls + shared quadratic gain + a cross-control falsification contrast.",
+      "status": "Full-rank nonlinear calibration and assumption diagnostic executed",
+      "confidence": "Proven rank; strong synthetic evidence",
+      "claim_boundary": "Identifiability remains conditional on the declared shared-gain family; the second control tests but cannot prove universality."
+    },
+    "185": {
+      "protocol": "FIN_Programs_178_190_Open_Set_Preregistration.json",
+      "protocol_sha256": "d412d725f9da5e48f159e573a60d5c7b722b85a3555946efc9e63da7840e3710",
+      "rows": [
+        {
+          "unknown_model": "copula_ordered_gaussian",
+          "rejection_rate": 0.06111111111111111,
+          "false_accept_rate": 0.9388888888888889,
+          "accepted_as": {
+            "local_gaussian": 169,
+            "stable_0.8": 0,
+            "stable_1.0": 0,
+            "stable_1.2": 0,
+            "truncated_0.8": 0,
+            "gain_confounded_local": 0
+          }
+        },
+        {
+          "unknown_model": "tempered_stable_0.8",
+          "rejection_rate": 1.0,
+          "false_accept_rate": 0.0,
+          "accepted_as": {
+            "local_gaussian": 0,
+            "stable_0.8": 0,
+            "stable_1.0": 0,
+            "stable_1.2": 0,
+            "truncated_0.8": 0,
+            "gain_confounded_local": 0
+          }
+        },
+        {
+          "unknown_model": "gaussian_cauchy_mixture",
+          "rejection_rate": 1.0,
+          "false_accept_rate": 0.0,
+          "accepted_as": {
+            "local_gaussian": 0,
+            "stable_0.8": 0,
+            "stable_1.0": 0,
+            "stable_1.2": 0,
+            "truncated_0.8": 0,
+            "gain_confounded_local": 0
+          }
+        },
+        {
+          "unknown_model": "nonshared_random_gain",
+          "rejection_rate": 0.9833333333333333,
+          "false_accept_rate": 0.016666666666666666,
+          "accepted_as": {
+            "local_gaussian": 3,
+            "stable_0.8": 0,
+            "stable_1.0": 0,
+            "stable_1.2": 0,
+            "truncated_0.8": 0,
+            "gain_confounded_local": 0
+          }
+        }
+      ],
+      "exact_order_blindness_residual": 0.0,
+      "impossibility_theorem": "Every P174 feature is a function of one-time empirical multisets. Any reordering changes temporal dependence while preserving all features exactly; therefore the protocol cannot identify memory.",
+      "open_set_complete": false,
+      "external_data_used": false,
+      "status": "Frozen open-set challenge executed; feature-class incompleteness proven",
+      "confidence": "Proven order-blindness; strong synthetic challenge"
+    },
+    "186": {
+      "constructed_object": {
+        "name": "TwoStepProcessInstrument",
+        "components": [
+          "path preparation",
+          "two-step random-unitary process",
+          "optional echo intervention",
+          "path-population control",
+          "phase POVM",
+          "detector calibration",
+          "record"
+        ]
+      },
+      "quasistatic_one_step_coherence": 0.7261490370736908,
+      "quasistatic_two_step_coherence": 0.2780373004531941,
+      "markov_factorized_two_step": 0.5272924240430484,
+      "nonfactorization_memory_witness": -0.24925512358985435,
+      "echo_static": 1.0,
+      "echo_markov": 0.5272924240430484,
+      "intervention_vectors": {
+        "quasistatic_memory": [
+          0.2780373004531941,
+          1.0,
+          0.0
+        ],
+        "markov_dephasing": [
+          0.5272924240430484,
+          0.5272924240430484,
+          0.0
+        ],
+        "detector_blur": [
+          0.84,
+          0.84,
+          0.0
+        ],
+        "path_diffusion": [
+          0.0,
+          0.0,
+          0.30119421191220214
+        ]
+      },
+      "memory_present_for_quasistatic_process": true,
+      "status": "Conditional two-step process instrument and memory witness constructed",
+      "confidence": "Proven finite random-unitary formulas",
+      "claim_boundary": "The intervention vector separates the declared mechanisms; it is not a device-independent theorem or an external FIN prediction."
+    },
+    "187": {
+      "fixed_system_generator": "A=[[1,-1],[-1,1]]",
+      "dilation_family": "U_g=|0><0| tensor I + |1><1| tensor exp(-i g sigma_z), environment initially |+>.",
+      "reduced_channel": "off-diagonal rho_01 -> cos(g)*rho_01",
+      "sample_rows": [
+        {
+          "g": 0.0,
+          "gamma": 1.0,
+          "choi_eigenvalues": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "g": 0.3,
+          "gamma": 0.955336489125606,
+          "choi_eigenvalues": [
+            0.977668244562803,
+            0.02233175543719701,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "g": 0.7,
+          "gamma": 0.7648421872844885,
+          "choi_eigenvalues": [
+            0.8824210936422443,
+            0.11757890635775575,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "g": 1.1,
+          "gamma": 0.4535961214255773,
+          "choi_eigenvalues": [
+            0.7267980607127886,
+            0.27320193928721137,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "g": 1.5707963267948966,
+          "gamma": 6.123233995736766e-17,
+          "choi_eigenvalues": [
+            0.5,
+            0.49999999999999994,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "same_A_distinct_channels": true,
+      "uniqueness_no_go": "A contains no value of g. Holding A fixed while varying g gives a continuum of CPTP dephasing channels and records. Therefore no unique environment or decoherence law is a function of A alone.",
+      "minimal_operational_replacement": "EnvironmentProcessClass = reduced process tensor modulo operationally equivalent dilations.",
+      "status": "Environment-from-generator uniqueness refuted",
+      "confidence": "Proven by explicit dilation family"
+    },
+    "188": {
+      "cohomology": "H^1(Z,U(1))=Hom(Z,U(1))=U(1) for trivial coefficients",
+      "legacy_generator": "exp(i*pi/4), algebraic root of unity",
+      "strict_generator": "exp(i*743/4000), transcendental by Lindemann-Weierstrass",
+      "correction_generator": "exp(i*(743/4000-pi/4)), transcendental",
+      "offset_statement": "delta_phi=13/80-pi/6 is an affine phase-origin correction, not part of a normalized group character.",
+      "algebraic_source_no_go": "Finite algebraic operations on legacy cyclotomic values remain algebraic. They cannot produce the transcendental strict generator or correction value.",
+      "delta_omega": -0.5996481633974483,
+      "delta_phi": -0.36109877559829884,
+      "correction_residual": 2.2887833992611187e-16,
+      "strict_phase_source_exported": false,
+      "status": "Cohomology class identified; algebraic legacy-source no-go proven",
+      "confidence": "Proven",
+      "claim_boundary": "An analytic source law with genuinely new input could produce the strict character; the exact target quotient is not such a law."
+    },
+    "189": {
+      "scale_action": "(A,t,z) -> (cA,t/c,cz)",
+      "max_unitary_orbit_residual": 3.5652682413747997e-16,
+      "max_heat_orbit_residual": 2.4902799884605145e-16,
+      "max_resolvent_covariance_residual": 2.023684124003798e-15,
+      "normalized_gap_variation": 4.996003610813204e-16,
+      "raw_gap_scale_ratio": 1000000.0,
+      "no_section_theorem": "All invariant spectral data are constant on the free R_{>0} orbit. An invariant rule cannot choose one orbit representative; a scale-charged datum or explicit calibration is necessary.",
+      "constructed_object": {
+        "name": "SpectralClockFrame",
+        "definition": "a chosen positive tau_* such that tau_* A is dimensionless",
+        "transformation": "A->cA requires tau_*->tau_*/c",
+        "status": "conditional calibration object, not strict source"
+      },
+      "full_physical_units": "A single clock frame calibrates this generator. Independent length/action/mass dimensions still require the rank-three CA package or equivalent conversion data.",
+      "status": "Intrinsic one-generator scale obstruction proven",
+      "confidence": "Proven"
+    },
+    "190": {
+      "required_fields": [
+        "public_source_identifier",
+        "license_identifier",
+        "immutable_hashes",
+        "preparation_provenance",
+        "raw_time_ordered_records",
+        "physical_units_and_timestamps",
+        "detector_calibration",
+        "apparatus_memory_calibration",
+        "reference_control",
+        "exclusion_audit",
+        "independent_analysis_boundary"
+      ],
+      "audited_bundles": [
+        {
+          "bundle": "raw_strain_unfiltered",
+          "evidence": "16 .h5 paths, 9 valid HDF5 signatures, datasets lack embedded attributes",
+          "passes": {
+            "public_source_identifier": false,
+            "license_identifier": false,
+            "immutable_hashes": false,
+            "preparation_provenance": false,
+            "raw_time_ordered_records": true,
+            "physical_units_and_timestamps": false,
+            "detector_calibration": false,
+            "apparatus_memory_calibration": false,
+            "reference_control": false,
+            "exclusion_audit": false,
+            "independent_analysis_boundary": false
+          }
+        },
+        {
+          "bundle": "beta_channel_true_external_v2",
+          "evidence": "manifest with 5 hashes; 5 listed files present",
+          "passes": {
+            "public_source_identifier": true,
+            "license_identifier": false,
+            "immutable_hashes": true,
+            "preparation_provenance": false,
+            "raw_time_ordered_records": false,
+            "physical_units_and_timestamps": false,
+            "detector_calibration": false,
+            "apparatus_memory_calibration": false,
+            "reference_control": false,
+            "exclusion_audit": false,
+            "independent_analysis_boundary": false
+          }
+        },
+        {
+          "bundle": "confirmatory_dataset_external_source_rebuild",
+          "evidence": "manifest with generic license text; 2 summary files present",
+          "passes": {
+            "public_source_identifier": false,
+            "license_identifier": false,
+            "immutable_hashes": true,
+            "preparation_provenance": false,
+            "raw_time_ordered_records": false,
+            "physical_units_and_timestamps": false,
+            "detector_calibration": false,
+            "apparatus_memory_calibration": false,
+            "reference_control": false,
+            "exclusion_audit": false,
+            "independent_analysis_boundary": false
+          }
+        }
+      ],
+      "admitted_bundles": [],
+      "external_protocol_executed": false,
+      "intake_failure_record": true,
+      "status": "Local external-candidate intake audited; no bundle admitted",
+      "confidence": "Proven for the declared local schema audit",
+      "claim_boundary": "Some files have genuine external lineage, but none supplies the specific preparation/control/calibration record required by the Programs 172--185 operational protocol."
+    }
+  },
+  "global_verdict": {
+    "spectral_core_survives": true,
+    "tensor_intensive_state_law_derived": false,
+    "strict_positive_beta_value_derived": false,
+    "full_ball_certificate_closed": false,
+    "complete_reflection_conversion_object_constructed": true,
+    "dependence_robust_block_theorem_constructed": true,
+    "nonlinear_calibration_object_constructed": true,
+    "process_memory_object_constructed": true,
+    "environment_unique_from_A": false,
+    "strict_phase_cocycle_sourced": false,
+    "intrinsic_scale_selected": false,
+    "external_dataset_admitted": false,
+    "QW_2191_discharged": false,
+    "legacy_strict_bridge_completed": false,
+    "legacy_role_transfer_started": false,
+    "L_total_or_ToE_claimed": false
+  },
+  "recommended_next_programs": [
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203
+  ]
+}

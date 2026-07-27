@@ -1,0 +1,32 @@
+{
+  "core": {
+    "certificate_id": "FIN-P213-PHASE-NATURALITY-NOGO-001",
+    "legacy_relation": "z_legacy^8=1",
+    "target": "exp(i*743/4000)",
+    "target_non_torsion_proof": "If target^N=1, then N*743/4000=2*pi*k. k=0 is impossible; k!=0 would make pi rational, contradicting transcendence of pi.",
+    "operation_classes": [
+      {
+        "class": "continuous group homomorphisms U(1)->U(1)",
+        "reduction": "z->z^n by lift/degree classification",
+        "result": "legacy order divides 8 after mapping; target is not torsion"
+      },
+      {
+        "class": "Borel measurable group homomorphisms",
+        "reduction": "automatic continuity for lcsc groups",
+        "result": "same z->z^n obstruction"
+      },
+      {
+        "class": "continuous normalized 1-cocycles with trivial action",
+        "reduction": "cocycle equation is the homomorphism equation",
+        "result": "same torsion obstruction"
+      },
+      {
+        "class": "unrestricted holomorphic point interpolation",
+        "reduction": "no group/naturality constraint",
+        "result": "can hit target only with target-coded coefficient"
+      }
+    ],
+    "conclusion": "no continuous, Borel-homomorphic, or trivial-action cocycle source maps legacy phase to strict phase"
+  },
+  "canonical_core_sha256": "f642af91e4534fb740ed6770b97011219fd20df45ec333040f00178fc1cf476a"
+}
