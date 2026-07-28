@@ -4513,3 +4513,122 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   requires explicit Hamiltonian, temperature, bath, reset protocol and
   dimensional conversion; scale and orientation remain separate supplied
   sections and neither sources the other.
+
+## Programs-P267–P280 result guardrail (Release 10.25, 2026-07-28)
+
+- Program 267 proves uniqueness of the finite visible pole-residue measure of
+  an exact positive atomic Stieltjes response.  It does not identify
+  zero-residue or decoupled hidden modes.  The frozen noisy inverse is severely
+  ill-conditioned: at relative noise `1e-4`, the median maximum pole error is
+  `0.1654` and the 95-percent error is `7.2928`.  Do not infer stable
+  reconstruction from analytic uniqueness; regularization and uncertainty
+  bounds are now mandatory.
+- Program 268 exports the executable category core for Schur reductions:
+  identity, nested composition, and positive-cone preservation.  The maximum
+  residual over 50,000 chains is `8.88e-16`.  This is not a Lean/Coq/Isabelle
+  kernel certificate, sheaf theorem, contextuality theorem, or higher-category
+  closure.
+- Program 269 proves that five independent strict current coefficients require
+  at least six outcomes in one normalized POVM and constructs a six-outcome
+  regular-simplex POVM attaining the bound.  The result is an abstract
+  measurement design; loss, phase calibration, dark counts, contrast, and
+  platform implementation remain external apparatus obligations.
+- Program 270 proves a rank-defect no-go for simple size-restoring linear
+  liftings.  For any isometric `E:C^n->C^12`, a lifted reduced Laplacian has
+  rank at most `n-1`, whereas the connected strict generator has rank 11.
+  Zero-padding, replication, or an equivalent rank-preserving lift cannot
+  export a strict RG fixed point.  A new RG move must introduce non-target-coded
+  complement dynamics or an explicit observable quotient.
+- Program 271 proves the conditional quantum Process Information Ledger:
+  input quantum relative entropy separates into record divergence,
+  record-weighted conditional-state divergence, and a nonnegative instrument
+  loss.  The instrument, state space, and quantum postulates are supplied; no
+  FIN-derived Born rule, Hamiltonian, bath, process tensor, or laboratory
+  measurement is exported.
+- Program 272 attacks exactly one frozen completion atom,
+  `A_legacy -> A_legacy + gamma*(I-11^T/12)`, with
+  `gamma=7.7101445453` derived from legacy spectral data.  The atom repairs
+  positivity but leaves strict fingerprint defect `0.4865` and normalized
+  self-energy defect `0.8680`.  Treat it only as a cone repair, not a
+  legacy-to-strict bridge, nonlinear damping completion, selector, or role
+  transfer.
+- Program 273 finds zero production P241 manifests and zero event rows in both
+  templates.  P242 is not authorized as a physical confirmatory run.
+  Repository code cannot generate independent custody, genuine events, human
+  role separation, or a trusted detached signature.
+- Program 274 gives only a synthetic two-flux bias-noise design.  Under the
+  frozen matrix-noise proxy and 50,000 shots per flux, the tested optimum is
+  `h=0.1118278` with median relative error `0.01152`.  Do not transfer this
+  value to hardware before a detector-level likelihood and calibration audit.
+- Program 275 proves deterministic fingerprint exclusion radii for the 400
+  frozen positive-circulant nulls.  All fail the tolerance `0.02`; the minimum
+  fingerprint distance is `0.1213`.  This is not a distribution-free
+  random-matrix false-positive probability and must not be generalized to
+  untested null ensembles.
+- Program 276 proves the calibrated two-time homogeneous-semigroup criterion:
+  SPD symmetric observations require commutation and equality of their
+  time-normalized matrix logarithms.  Static and uniformly scaled FIN pass;
+  shape drift and mixture memory fail.  The test rejects homogeneity but does
+  not uniquely identify whether adaptation, bath, drift, or apparatus memory
+  caused failure.  Without an independent clock, `(cA,t)` and `(A,ct)` remain
+  exactly equivalent.
+- Program 277 proves identifiability only inside the frozen four-law panel.
+  Supplied interventions raise the two-parameter design rank from one to two
+  and select the synthetic driven-additive law on hold-out data.  The law,
+  forcing direction, and candidate family are supplied; no strict adaptive
+  source law or out-of-panel exclusion is exported.
+- Program 278 gives a task-specific nonlinear reservoir result.  FIN exceeds
+  all 60 matched controls only on NARMA10 and not on delay-5, nonlinear
+  prediction, or parity-3.  Do not promote one of four favorable tasks to a
+  general computational, biological, neural, or physical advantage.
+- Program 279 proves
+  `D(rho||gamma)=beta*(F(rho)-F(gamma))` and a zero-residual conditional
+  information-to-free-energy conversion after `H`, `T`, and `k_B` are
+  supplied.  These are conversion axioms, not strict FIN outputs; no physical
+  bath, reset process, unit, heat, or work theorem is exported.
+- Program 280 constructs the conditioned product torsor
+  `T_scale x T_orientation = R_{>0} x Z_2`.  A section
+  `s=(kappa,epsilon)` supplies scale and orientation, but positive scaling
+  cannot select orientation and sign reversal cannot select scale.  This does
+  not discharge `QW-2191`, export a canonical unit, or couple the two missing
+  resources.
+- Release 10.25 constructs `O26--O39` and identifies the smallest surviving
+  mathematical architecture as `(A,C)`, extended operationally to
+  `(A,C,O)`.  Physicalization still requires explicit conversion and
+  symmetry-breaking resources.  No selector, physical unit, completed bridge,
+  role transfer, laboratory validation, `L_total`, SM/GR generation, or ToE
+  closure is exported.
+
+## Post-Programs-P267–P280 research steering guardrail (2026-07-28)
+
+- Highest inference priority is P281: derive minimax or regularized stability
+  bounds for the visible Stieltjes inverse.  Pole-count selection, positivity,
+  uncertainty, and global failure regions must be explicit.
+- P282 should machine-check the P268 Schur category core without adding sheaf
+  or contextuality claims not present in the formal objects.
+- Highest operational priorities are P283 and P290: implement the six-outcome
+  current POVM in one declared hardware model and use at least three calibrated
+  time slices plus interventions to separate homogeneous dynamics, generator
+  drift, environment memory, and apparatus memory.
+- P284 may admit exactly one non-target-coded complement-dynamics rule or one
+  explicit observable quotient.  Linear lifting and replication are closed by
+  P270 and must not be replayed as RG closure.
+- P285 may extend the conditional quantum ledger to a multitime process tensor.
+  It must keep the supplied quantum/instrument boundary explicit.
+- P286 may test exactly one genuinely new legacy-sourced nonlinear
+  damping/compression atom.  The formula and source must be frozen before
+  strict comparison; generic bridge replay, selector import, and role transfer
+  remain forbidden.
+- P287 becomes admissible only when a real independent signed P241 event bundle
+  arrives.  P242 remains one-shot, blinded, and failure-reporting without model
+  repair.
+- P288/P289 should replace the synthetic matrix-noise and finite-null
+  conclusions with a detector likelihood and a declared ensemble-level
+  false-positive analysis.
+- P291/P292 should optimize intervention design and independently replicate the
+  nonlinear reservoir result with multiple seeds, task-search correction, and
+  frozen controls.
+- P293 remains a conditional physicalization audit requiring a concrete bath,
+  reset, work store, and complete resource accounting.  P294 may classify
+  equivariant sections of the joint scale-orientation torsor, but may not infer
+  a sign from a positive scalar or a physical unit from a sign.

@@ -1,0 +1,2838 @@
+{
+  "metadata": {
+    "programs": "267-280",
+    "seed": 20260730,
+    "strict_kernel": [
+      0.46998567264502017,
+      0.19204355169010282,
+      0.09142861427792497,
+      0.0470291687456504,
+      0.02413122336363006,
+      0.011070817321442113
+    ],
+    "scope": "finite proofs and synthetic audits; no fabricated laboratory data, strict selector, physical scale, role transfer, or ToE closure"
+  },
+  "P267": {
+    "status": "[Proven] uniqueness; [Strong evidence] local noisy recovery",
+    "visible_atomic_poles": [
+      1.1710910205731502,
+      1.5263637131430885,
+      1.8883091818804103
+    ],
+    "visible_atomic_weights": [
+      1.3714541784670637,
+      1.1927171396640708,
+      0.19376516116565567
+    ],
+    "pole_separation_minimum": 0.3552726925699383,
+    "noise_stability": {
+      "1e-06": {
+        "median_max_relative_pole_error": 0.022766597041359263,
+        "p95_max_relative_pole_error": 0.13150100886363447,
+        "median_max_relative_weight_error": 0.30050248147889297,
+        "p95_max_relative_weight_error": 0.7358016897317264
+      },
+      "0.0001": {
+        "median_max_relative_pole_error": 0.16544249576391878,
+        "p95_max_relative_pole_error": 7.292806154363459,
+        "median_max_relative_weight_error": 0.7793500999754093,
+        "p95_max_relative_weight_error": 4.435353741331761
+      },
+      "0.001": {
+        "median_max_relative_pole_error": 0.4314341947923229,
+        "p95_max_relative_pole_error": 195237.9011872985,
+        "median_max_relative_weight_error": 1.2668307257316003,
+        "p95_max_relative_weight_error": 4580.807403807803
+      }
+    },
+    "theorem": "A finite positive atomic Stieltjes transform has a unique visible pole-residue measure. Analytic equality on an open interval implies equality of rational continuations and of all principal parts.",
+    "boundary": "The theorem identifies only visible atoms. Zero-residue and decoupled hidden modes remain unidentifiable."
+  },
+  "P268": {
+    "status": "[Proven] algebraic theorem with executable finite certificate",
+    "chains_audited": 50000,
+    "maximum_composition_residual": 8.881784197001252e-16,
+    "minimum_reduced_positive_eigenvalue": 0.4236852855837408,
+    "identity_residual": 0.0,
+    "formal_core": {
+      "objects": "nonempty subsets E of V",
+      "morphisms": "unique reduction r_{F->E} when E is a subset of F",
+      "identity": "zero elimination",
+      "composition": "associativity of block Gaussian elimination",
+      "positive_cone_preservation": "Schur complement of an SPD matrix is SPD"
+    },
+    "boundary": "This is an executable algebraic core, not a Lean/Coq/Isabelle kernel check and not a sheaf or contextuality theorem."
+  },
+  "P269": {
+    "status": "[Proven] minimal outcome count in the five-current subspace; [Strong evidence] shot audit",
+    "current_subspace_dimension": 5,
+    "minimum_outcomes_by_normalization_bound": 6,
+    "constructed_outcomes": 6,
+    "response_rank": 5,
+    "response_condition_number_nonzero_subspace": 1.0000000000000007,
+    "povm_completeness_residual": 3.0184188481996443e-16,
+    "minimum_effect_eigenvalue": 0.016666666666666722,
+    "minimum_test_state_eigenvalue": 0.059291702772990694,
+    "exact_coefficient_reconstruction_residual": 1.5501285534357745e-16,
+    "shots": 200000,
+    "relative_coefficient_reconstruction_error": 0.16725799365370878,
+    "original_current_gram_condition_number": 15.172968275787266,
+    "theorem": "M outcome probabilities carry at most M-1 independent real statistics. Five independent currents therefore require at least six outcomes in one POVM; the regular-simplex construction attains the bound.",
+    "boundary": "Loss, dark-count, and phase calibration remain apparatus obligations. The POVM is a mathematical design, not a built detector."
+  },
+  "P270": {
+    "status": "[Proven] rank-defect no-go for linear isometric liftings",
+    "rows": [
+      {
+        "context_size": 6,
+        "reduced_rank": 5,
+        "lifted_rank": 5,
+        "strict_rank": 11,
+        "best_frobenius_scale": 1.2338745645621965,
+        "relative_best_fit_residual": 0.7018680792267544
+      },
+      {
+        "context_size": 3,
+        "reduced_rank": 2,
+        "lifted_rank": 2,
+        "strict_rank": 11,
+        "best_frobenius_scale": 1.5670955625884366,
+        "relative_best_fit_residual": 0.8690510101895691
+      },
+      {
+        "context_size": 1,
+        "reduced_rank": 0,
+        "lifted_rank": 0,
+        "strict_rank": 11,
+        "best_frobenius_scale": 0.0,
+        "relative_best_fit_residual": 1.0
+      }
+    ],
+    "theorem": "For an isometric embedding E:C^n->C^12, rank(E B E*) is at most n-1 for a Laplacian B. Since the connected strict generator has rank 11, no n<12 lifted reduced Laplacian can equal it, under any scalar normalization.",
+    "missing_object": "A genuine size-restoring RG comparison must add complement dynamics or an equivalence after quotienting observables; zero-padding or replication alone cannot close the fixed point."
+  },
+  "P271": {
+    "status": "[Proven] conditional quantum-information theorem with finite audit",
+    "instrument_completeness_residual": 0.0,
+    "pairs_audited": 400,
+    "minimum_information_loss_nats": 0.011489932530495572,
+    "median_information_loss_nats": 0.08303100400589264,
+    "maximum_chain_decomposition_residual": 2.220446049250313e-16,
+    "theorem": "For a quantum instrument, D(rho||sigma) is at least the classical record divergence plus the record-weighted conditional quantum relative entropies. The remainder is nonnegative by monotonicity under the CPTP instrument channel.",
+    "boundary": "This is a supplied quantum instrument and not a FIN-derived Hamiltonian, bath, measurement postulate, or laboratory process tensor."
+  },
+  "P272": {
+    "status": "[Proven] one-atom positive-shift completion test",
+    "frozen_atom": "A_legacy -> A_legacy + gamma*(I-11^T/12)",
+    "gamma_derived_from_legacy_only": 7.710144545321277,
+    "legacy_minimum_mean_zero_eigenvalue": -7.710144544321277,
+    "completed_minimum_mean_zero_eigenvalue": 1.000000359275502e-09,
+    "completed_row_sum_residual": 1.9860273225978185e-15,
+    "projective_strict_fingerprint_defect": 0.48650887481597044,
+    "normalized_self_energy_defect_at_z_0_2": 0.8679621512828689,
+    "verdict": "The positive shift repairs the generator cone using legacy data alone, but it does not reproduce the strict spectral or memory shape.",
+    "boundary": "This closes only the positive-shift atom. It is not a kernel-profile bridge, phase/frequency source, nonlinear damping completion, or role transfer."
+  },
+  "P273": {
+    "status": "[Executed no-admission certificate: external evidence absent]",
+    "production_p241_manifests_found": 0,
+    "production_manifest_paths": [],
+    "template_event_rows": [
+      0,
+      0
+    ],
+    "validator_checks_required": 11,
+    "detached_signature_required": true,
+    "p242_execution_authorized": false,
+    "verdict": "Only schemas and empty event headers are present. No independent external record can be admitted, and P242 must not be run as a confirmatory physical test.",
+    "boundary": "Code can validate custody structure but cannot generate independence, human role separation, empirical events, or a trusted signature."
+  },
+  "P274": {
+    "status": "[Strong evidence] synthetic two-flux noise-bias design",
+    "shots_per_flux_setting": 50000,
+    "tomography_noise_scale": 0.0015652475842498528,
+    "grid": [
+      {
+        "h": 0.003,
+        "relative_noiseless_bias": 4.290584137023164e-06,
+        "median_relative_error": 0.3706080308190194,
+        "p95_relative_error": 0.4507003131216846
+      },
+      {
+        "h": 0.004168486483119414,
+        "relative_noiseless_bias": 8.284139548439465e-06,
+        "median_relative_error": 0.25504675460347037,
+        "p95_relative_error": 0.3160023100928882
+      },
+      {
+        "h": 0.005792093186649751,
+        "relative_noiseless_bias": 1.5995356744067777e-05,
+        "median_relative_error": 0.19129771021740785,
+        "p95_relative_error": 0.2236259433236987
+      },
+      {
+        "h": 0.008048087385839177,
+        "relative_noiseless_bias": 3.088662551865897e-05,
+        "median_relative_error": 0.134606283950245,
+        "p95_relative_error": 0.1599255766353115
+      },
+      {
+        "h": 0.011182781160944824,
+        "relative_noiseless_bias": 5.9649243182672625e-05,
+        "median_relative_error": 0.09711554876865469,
+        "p95_relative_error": 0.11797208132731513
+      },
+      {
+        "h": 0.015538424037693637,
+        "relative_noiseless_bias": 0.00011522621944913035,
+        "median_relative_error": 0.07121218740377176,
+        "p95_relative_error": 0.08248957285283937
+      },
+      {
+        "h": 0.02159057019003457,
+        "relative_noiseless_bias": 0.00022269672957989716,
+        "median_relative_error": 0.05181786471315543,
+        "p95_relative_error": 0.061186977130336016
+      },
+      {
+        "h": 0.030000000000000013,
+        "relative_noiseless_bias": 0.0004308182246626342,
+        "median_relative_error": 0.0362340954520598,
+        "p95_relative_error": 0.04236989279655124
+      },
+      {
+        "h": 0.041684864831194136,
+        "relative_noiseless_bias": 0.0008349914827778383,
+        "median_relative_error": 0.025941049679224434,
+        "p95_relative_error": 0.030004472507052384
+      },
+      {
+        "h": 0.05792093186649751,
+        "relative_noiseless_bias": 0.0016241777877949485,
+        "median_relative_error": 0.018915388242560553,
+        "p95_relative_error": 0.02239573200656583
+      },
+      {
+        "h": 0.08048087385839177,
+        "relative_noiseless_bias": 0.0031813630398823895,
+        "median_relative_error": 0.014000938037615249,
+        "p95_relative_error": 0.016586210818546665
+      },
+      {
+        "h": 0.11182781160944824,
+        "relative_noiseless_bias": 0.006315943545637064,
+        "median_relative_error": 0.011524827480930701,
+        "p95_relative_error": 0.01382758622681491
+      },
+      {
+        "h": 0.15538424037693635,
+        "relative_noiseless_bias": 0.012862725450339804,
+        "median_relative_error": 0.014694480267893831,
+        "p95_relative_error": 0.016356953460293477
+      },
+      {
+        "h": 0.2159057019003456,
+        "relative_noiseless_bias": 0.02740375090636101,
+        "median_relative_error": 0.02779320695385311,
+        "p95_relative_error": 0.02923799635794626
+      },
+      {
+        "h": 0.3,
+        "relative_noiseless_bias": 0.06235641552780228,
+        "median_relative_error": 0.06243175115003845,
+        "p95_relative_error": 0.06358343721041289
+      }
+    ],
+    "optimal_h_on_frozen_grid": 0.11182781160944824,
+    "optimal_median_relative_error": 0.011524827480930701,
+    "optimal_p95_relative_error": 0.01382758622681491,
+    "verdict": "The two-flux estimator has the expected small-h noise amplification and large-h truncation bias, yielding an interior optimum.",
+    "boundary": "Synthetic matrix noise is not a detector model. Apparatus feasibility, phase calibration, losses, and event-level uncertainties remain external."
+  },
+  "P275": {
+    "status": "[Proven] deterministic exclusion bound for the frozen finite null set",
+    "null_count": 400,
+    "tolerance": 0.02,
+    "false_positive_count": 0,
+    "minimum_fingerprint_distance": 0.12130213593229959,
+    "median_fingerprint_distance": 0.5350854955783895,
+    "minimum_positive_certified_radius": 0.10282494479191408,
+    "median_certified_radius": 0.40474905703654185,
+    "bound": "If ||E||_2<=epsilon<lambda_max and 2*sqrt(11)*epsilon/(lambda_max-epsilon)<distance-tolerance, the perturbed null fingerprint cannot enter the acceptance ball.",
+    "boundary": "This is a certified robustness radius for 400 frozen nulls, not a distribution-free random-matrix false-positive probability.",
+    "rows": [
+      {
+        "index": 0,
+        "fingerprint_distance": 0.5492308102778802,
+        "certified_operator_norm_exclusion_radius": 0.5478964675700836,
+        "passes_tolerance": false
+      },
+      {
+        "index": 1,
+        "fingerprint_distance": 0.5650568888417339,
+        "certified_operator_norm_exclusion_radius": 0.44711260226185573,
+        "passes_tolerance": false
+      },
+      {
+        "index": 2,
+        "fingerprint_distance": 0.5290249619186365,
+        "certified_operator_norm_exclusion_radius": 0.29115825865221456,
+        "passes_tolerance": false
+      },
+      {
+        "index": 3,
+        "fingerprint_distance": 0.6935851101004457,
+        "certified_operator_norm_exclusion_radius": 0.48512383324096336,
+        "passes_tolerance": false
+      },
+      {
+        "index": 4,
+        "fingerprint_distance": 0.5587118958465416,
+        "certified_operator_norm_exclusion_radius": 0.5262756748532824,
+        "passes_tolerance": false
+      },
+      {
+        "index": 5,
+        "fingerprint_distance": 0.8282960973068452,
+        "certified_operator_norm_exclusion_radius": 0.38890330601298484,
+        "passes_tolerance": false
+      },
+      {
+        "index": 6,
+        "fingerprint_distance": 0.2894860179654085,
+        "certified_operator_norm_exclusion_radius": 0.30544897153503325,
+        "passes_tolerance": false
+      },
+      {
+        "index": 7,
+        "fingerprint_distance": 0.6551229993995632,
+        "certified_operator_norm_exclusion_radius": 0.3003205437165185,
+        "passes_tolerance": false
+      },
+      {
+        "index": 8,
+        "fingerprint_distance": 0.4681537574781911,
+        "certified_operator_norm_exclusion_radius": 0.4383414493073139,
+        "passes_tolerance": false
+      },
+      {
+        "index": 9,
+        "fingerprint_distance": 0.5032493220042281,
+        "certified_operator_norm_exclusion_radius": 0.43312225967854967,
+        "passes_tolerance": false
+      },
+      {
+        "index": 10,
+        "fingerprint_distance": 0.5337745676397674,
+        "certified_operator_norm_exclusion_radius": 0.26004880639130146,
+        "passes_tolerance": false
+      },
+      {
+        "index": 11,
+        "fingerprint_distance": 0.6095388950212475,
+        "certified_operator_norm_exclusion_radius": 0.34395585998732325,
+        "passes_tolerance": false
+      },
+      {
+        "index": 12,
+        "fingerprint_distance": 0.7075426144303667,
+        "certified_operator_norm_exclusion_radius": 0.406457832152174,
+        "passes_tolerance": false
+      },
+      {
+        "index": 13,
+        "fingerprint_distance": 0.7572488508130399,
+        "certified_operator_norm_exclusion_radius": 0.5195887994610258,
+        "passes_tolerance": false
+      },
+      {
+        "index": 14,
+        "fingerprint_distance": 0.21827285743766,
+        "certified_operator_norm_exclusion_radius": 0.1696120466829718,
+        "passes_tolerance": false
+      },
+      {
+        "index": 15,
+        "fingerprint_distance": 0.6030110841566613,
+        "certified_operator_norm_exclusion_radius": 0.5141925543725979,
+        "passes_tolerance": false
+      },
+      {
+        "index": 16,
+        "fingerprint_distance": 0.564023724108426,
+        "certified_operator_norm_exclusion_radius": 0.31995908716494287,
+        "passes_tolerance": false
+      },
+      {
+        "index": 17,
+        "fingerprint_distance": 0.4832341647965899,
+        "certified_operator_norm_exclusion_radius": 0.43139125040161214,
+        "passes_tolerance": false
+      },
+      {
+        "index": 18,
+        "fingerprint_distance": 0.32427450462703267,
+        "certified_operator_norm_exclusion_radius": 0.17712867487519815,
+        "passes_tolerance": false
+      },
+      {
+        "index": 19,
+        "fingerprint_distance": 0.5501897735161048,
+        "certified_operator_norm_exclusion_radius": 0.3364892252165346,
+        "passes_tolerance": false
+      },
+      {
+        "index": 20,
+        "fingerprint_distance": 0.489766136027084,
+        "certified_operator_norm_exclusion_radius": 0.5763822620401673,
+        "passes_tolerance": false
+      },
+      {
+        "index": 21,
+        "fingerprint_distance": 0.5274205159198988,
+        "certified_operator_norm_exclusion_radius": 0.49272043606114113,
+        "passes_tolerance": false
+      },
+      {
+        "index": 22,
+        "fingerprint_distance": 0.3906075750894552,
+        "certified_operator_norm_exclusion_radius": 0.3003490481420833,
+        "passes_tolerance": false
+      },
+      {
+        "index": 23,
+        "fingerprint_distance": 0.502865425681656,
+        "certified_operator_norm_exclusion_radius": 0.4138802235696775,
+        "passes_tolerance": false
+      },
+      {
+        "index": 24,
+        "fingerprint_distance": 0.4648978483578254,
+        "certified_operator_norm_exclusion_radius": 0.3302534451344123,
+        "passes_tolerance": false
+      },
+      {
+        "index": 25,
+        "fingerprint_distance": 0.5544356324729464,
+        "certified_operator_norm_exclusion_radius": 0.3347009688663767,
+        "passes_tolerance": false
+      },
+      {
+        "index": 26,
+        "fingerprint_distance": 0.32739464982107475,
+        "certified_operator_norm_exclusion_radius": 0.416667453856947,
+        "passes_tolerance": false
+      },
+      {
+        "index": 27,
+        "fingerprint_distance": 0.3915493382198126,
+        "certified_operator_norm_exclusion_radius": 0.5124190352980971,
+        "passes_tolerance": false
+      },
+      {
+        "index": 28,
+        "fingerprint_distance": 0.6132064843345849,
+        "certified_operator_norm_exclusion_radius": 0.30196382632878593,
+        "passes_tolerance": false
+      },
+      {
+        "index": 29,
+        "fingerprint_distance": 0.5837214662322283,
+        "certified_operator_norm_exclusion_radius": 0.4692056872307811,
+        "passes_tolerance": false
+      },
+      {
+        "index": 30,
+        "fingerprint_distance": 0.5788382755219472,
+        "certified_operator_norm_exclusion_radius": 0.32557489996075467,
+        "passes_tolerance": false
+      },
+      {
+        "index": 31,
+        "fingerprint_distance": 0.46130447459614715,
+        "certified_operator_norm_exclusion_radius": 0.46855877465911877,
+        "passes_tolerance": false
+      },
+      {
+        "index": 32,
+        "fingerprint_distance": 0.5190156683198833,
+        "certified_operator_norm_exclusion_radius": 0.3460310947430755,
+        "passes_tolerance": false
+      },
+      {
+        "index": 33,
+        "fingerprint_distance": 0.5777736025752127,
+        "certified_operator_norm_exclusion_radius": 0.40135172990448503,
+        "passes_tolerance": false
+      },
+      {
+        "index": 34,
+        "fingerprint_distance": 0.7078014639359824,
+        "certified_operator_norm_exclusion_radius": 0.4379035046791844,
+        "passes_tolerance": false
+      },
+      {
+        "index": 35,
+        "fingerprint_distance": 0.5560456587239911,
+        "certified_operator_norm_exclusion_radius": 0.905514761351462,
+        "passes_tolerance": false
+      },
+      {
+        "index": 36,
+        "fingerprint_distance": 0.6420916205045641,
+        "certified_operator_norm_exclusion_radius": 0.812977760942581,
+        "passes_tolerance": false
+      },
+      {
+        "index": 37,
+        "fingerprint_distance": 0.6952093838931064,
+        "certified_operator_norm_exclusion_radius": 0.5190409133027222,
+        "passes_tolerance": false
+      },
+      {
+        "index": 38,
+        "fingerprint_distance": 0.38313498437014243,
+        "certified_operator_norm_exclusion_radius": 0.30344561535755776,
+        "passes_tolerance": false
+      },
+      {
+        "index": 39,
+        "fingerprint_distance": 0.6220573661014286,
+        "certified_operator_norm_exclusion_radius": 0.4378905928725419,
+        "passes_tolerance": false
+      },
+      {
+        "index": 40,
+        "fingerprint_distance": 0.6212765083610319,
+        "certified_operator_norm_exclusion_radius": 0.4590293526266901,
+        "passes_tolerance": false
+      },
+      {
+        "index": 41,
+        "fingerprint_distance": 0.29632310445421944,
+        "certified_operator_norm_exclusion_radius": 0.2660514709587864,
+        "passes_tolerance": false
+      },
+      {
+        "index": 42,
+        "fingerprint_distance": 0.4912126254094162,
+        "certified_operator_norm_exclusion_radius": 0.40822426020108,
+        "passes_tolerance": false
+      },
+      {
+        "index": 43,
+        "fingerprint_distance": 0.6281502731216936,
+        "certified_operator_norm_exclusion_radius": 0.4480540002356441,
+        "passes_tolerance": false
+      },
+      {
+        "index": 44,
+        "fingerprint_distance": 0.555299701132571,
+        "certified_operator_norm_exclusion_radius": 0.36274010834017606,
+        "passes_tolerance": false
+      },
+      {
+        "index": 45,
+        "fingerprint_distance": 0.4980862154547968,
+        "certified_operator_norm_exclusion_radius": 0.8897170500106052,
+        "passes_tolerance": false
+      },
+      {
+        "index": 46,
+        "fingerprint_distance": 0.7948510663455205,
+        "certified_operator_norm_exclusion_radius": 0.44067514326739976,
+        "passes_tolerance": false
+      },
+      {
+        "index": 47,
+        "fingerprint_distance": 0.5642573748200229,
+        "certified_operator_norm_exclusion_radius": 0.43095906271293466,
+        "passes_tolerance": false
+      },
+      {
+        "index": 48,
+        "fingerprint_distance": 0.5602529974227193,
+        "certified_operator_norm_exclusion_radius": 0.3755637081330277,
+        "passes_tolerance": false
+      },
+      {
+        "index": 49,
+        "fingerprint_distance": 0.42430775477197336,
+        "certified_operator_norm_exclusion_radius": 0.5869498816251412,
+        "passes_tolerance": false
+      },
+      {
+        "index": 50,
+        "fingerprint_distance": 0.2973389402797915,
+        "certified_operator_norm_exclusion_radius": 0.3454411655809765,
+        "passes_tolerance": false
+      },
+      {
+        "index": 51,
+        "fingerprint_distance": 0.8022471980538791,
+        "certified_operator_norm_exclusion_radius": 0.49645794512720104,
+        "passes_tolerance": false
+      },
+      {
+        "index": 52,
+        "fingerprint_distance": 0.62463757430446,
+        "certified_operator_norm_exclusion_radius": 0.4613756082825518,
+        "passes_tolerance": false
+      },
+      {
+        "index": 53,
+        "fingerprint_distance": 0.4820684932322638,
+        "certified_operator_norm_exclusion_radius": 0.465664675250969,
+        "passes_tolerance": false
+      },
+      {
+        "index": 54,
+        "fingerprint_distance": 0.4060050611088442,
+        "certified_operator_norm_exclusion_radius": 0.5721344828179743,
+        "passes_tolerance": false
+      },
+      {
+        "index": 55,
+        "fingerprint_distance": 0.4859827845078675,
+        "certified_operator_norm_exclusion_radius": 0.3853556933943049,
+        "passes_tolerance": false
+      },
+      {
+        "index": 56,
+        "fingerprint_distance": 0.27239602805588997,
+        "certified_operator_norm_exclusion_radius": 0.21122942988278318,
+        "passes_tolerance": false
+      },
+      {
+        "index": 57,
+        "fingerprint_distance": 0.6109879062243504,
+        "certified_operator_norm_exclusion_radius": 0.43096791629350695,
+        "passes_tolerance": false
+      },
+      {
+        "index": 58,
+        "fingerprint_distance": 0.421873414685863,
+        "certified_operator_norm_exclusion_radius": 0.3312450088402756,
+        "passes_tolerance": false
+      },
+      {
+        "index": 59,
+        "fingerprint_distance": 0.7095028474632827,
+        "certified_operator_norm_exclusion_radius": 0.3698940916583732,
+        "passes_tolerance": false
+      },
+      {
+        "index": 60,
+        "fingerprint_distance": 0.642378592218758,
+        "certified_operator_norm_exclusion_radius": 0.6700907631816885,
+        "passes_tolerance": false
+      },
+      {
+        "index": 61,
+        "fingerprint_distance": 0.4015301310720349,
+        "certified_operator_norm_exclusion_radius": 0.7042015196348228,
+        "passes_tolerance": false
+      },
+      {
+        "index": 62,
+        "fingerprint_distance": 0.5514044947593981,
+        "certified_operator_norm_exclusion_radius": 0.3775077975796047,
+        "passes_tolerance": false
+      },
+      {
+        "index": 63,
+        "fingerprint_distance": 0.5363383027852789,
+        "certified_operator_norm_exclusion_radius": 0.3805256742118365,
+        "passes_tolerance": false
+      },
+      {
+        "index": 64,
+        "fingerprint_distance": 0.6424850108984838,
+        "certified_operator_norm_exclusion_radius": 0.22338702400805088,
+        "passes_tolerance": false
+      },
+      {
+        "index": 65,
+        "fingerprint_distance": 0.5612939325155609,
+        "certified_operator_norm_exclusion_radius": 0.3833784697011729,
+        "passes_tolerance": false
+      },
+      {
+        "index": 66,
+        "fingerprint_distance": 0.4608954940581351,
+        "certified_operator_norm_exclusion_radius": 0.2991723303731166,
+        "passes_tolerance": false
+      },
+      {
+        "index": 67,
+        "fingerprint_distance": 0.48654421933287517,
+        "certified_operator_norm_exclusion_radius": 0.3635762720823122,
+        "passes_tolerance": false
+      },
+      {
+        "index": 68,
+        "fingerprint_distance": 0.529621561077821,
+        "certified_operator_norm_exclusion_radius": 0.22643122697780854,
+        "passes_tolerance": false
+      },
+      {
+        "index": 69,
+        "fingerprint_distance": 0.39039541416536366,
+        "certified_operator_norm_exclusion_radius": 0.5545216905662321,
+        "passes_tolerance": false
+      },
+      {
+        "index": 70,
+        "fingerprint_distance": 0.48016666758853016,
+        "certified_operator_norm_exclusion_radius": 0.4162468320785865,
+        "passes_tolerance": false
+      },
+      {
+        "index": 71,
+        "fingerprint_distance": 0.39113352316564115,
+        "certified_operator_norm_exclusion_radius": 0.5901233261710248,
+        "passes_tolerance": false
+      },
+      {
+        "index": 72,
+        "fingerprint_distance": 0.398225740626406,
+        "certified_operator_norm_exclusion_radius": 0.30553288551957575,
+        "passes_tolerance": false
+      },
+      {
+        "index": 73,
+        "fingerprint_distance": 0.6155555159513162,
+        "certified_operator_norm_exclusion_radius": 0.4912916801278692,
+        "passes_tolerance": false
+      },
+      {
+        "index": 74,
+        "fingerprint_distance": 0.37589577679611175,
+        "certified_operator_norm_exclusion_radius": 0.24976109070529515,
+        "passes_tolerance": false
+      },
+      {
+        "index": 75,
+        "fingerprint_distance": 0.5498495016342657,
+        "certified_operator_norm_exclusion_radius": 0.40347831385455424,
+        "passes_tolerance": false
+      },
+      {
+        "index": 76,
+        "fingerprint_distance": 0.6436622297302892,
+        "certified_operator_norm_exclusion_radius": 0.42835109001845606,
+        "passes_tolerance": false
+      },
+      {
+        "index": 77,
+        "fingerprint_distance": 0.6451716607735734,
+        "certified_operator_norm_exclusion_radius": 0.6776424234475887,
+        "passes_tolerance": false
+      },
+      {
+        "index": 78,
+        "fingerprint_distance": 0.5294497548139164,
+        "certified_operator_norm_exclusion_radius": 0.5687650723512573,
+        "passes_tolerance": false
+      },
+      {
+        "index": 79,
+        "fingerprint_distance": 0.5805834600040192,
+        "certified_operator_norm_exclusion_radius": 0.6534094540785435,
+        "passes_tolerance": false
+      },
+      {
+        "index": 80,
+        "fingerprint_distance": 0.6572359759971798,
+        "certified_operator_norm_exclusion_radius": 0.4505970728915228,
+        "passes_tolerance": false
+      },
+      {
+        "index": 81,
+        "fingerprint_distance": 0.6563497786969901,
+        "certified_operator_norm_exclusion_radius": 0.5084367711898498,
+        "passes_tolerance": false
+      },
+      {
+        "index": 82,
+        "fingerprint_distance": 0.6691171748258784,
+        "certified_operator_norm_exclusion_radius": 0.4768094425680365,
+        "passes_tolerance": false
+      },
+      {
+        "index": 83,
+        "fingerprint_distance": 0.5179544758419289,
+        "certified_operator_norm_exclusion_radius": 0.3059854323453335,
+        "passes_tolerance": false
+      },
+      {
+        "index": 84,
+        "fingerprint_distance": 0.5067917750161821,
+        "certified_operator_norm_exclusion_radius": 0.3709534771779761,
+        "passes_tolerance": false
+      },
+      {
+        "index": 85,
+        "fingerprint_distance": 0.5001277034991178,
+        "certified_operator_norm_exclusion_radius": 0.31465705118093235,
+        "passes_tolerance": false
+      },
+      {
+        "index": 86,
+        "fingerprint_distance": 0.5488289890295595,
+        "certified_operator_norm_exclusion_radius": 0.4321908361734993,
+        "passes_tolerance": false
+      },
+      {
+        "index": 87,
+        "fingerprint_distance": 0.46366922237261876,
+        "certified_operator_norm_exclusion_radius": 0.3933421320878491,
+        "passes_tolerance": false
+      },
+      {
+        "index": 88,
+        "fingerprint_distance": 0.5630305664295397,
+        "certified_operator_norm_exclusion_radius": 0.24335265316507618,
+        "passes_tolerance": false
+      },
+      {
+        "index": 89,
+        "fingerprint_distance": 0.692113014896061,
+        "certified_operator_norm_exclusion_radius": 0.3669239000593456,
+        "passes_tolerance": false
+      },
+      {
+        "index": 90,
+        "fingerprint_distance": 0.4882562923804352,
+        "certified_operator_norm_exclusion_radius": 0.32247583230800647,
+        "passes_tolerance": false
+      },
+      {
+        "index": 91,
+        "fingerprint_distance": 0.4473335765634072,
+        "certified_operator_norm_exclusion_radius": 0.3756977733420913,
+        "passes_tolerance": false
+      },
+      {
+        "index": 92,
+        "fingerprint_distance": 0.4282830671827787,
+        "certified_operator_norm_exclusion_radius": 0.4270299836408667,
+        "passes_tolerance": false
+      },
+      {
+        "index": 93,
+        "fingerprint_distance": 0.5641726827894357,
+        "certified_operator_norm_exclusion_radius": 0.3601624724691532,
+        "passes_tolerance": false
+      },
+      {
+        "index": 94,
+        "fingerprint_distance": 0.6192843464851465,
+        "certified_operator_norm_exclusion_radius": 0.411909586637124,
+        "passes_tolerance": false
+      },
+      {
+        "index": 95,
+        "fingerprint_distance": 0.6658080249728898,
+        "certified_operator_norm_exclusion_radius": 0.6952242087246081,
+        "passes_tolerance": false
+      },
+      {
+        "index": 96,
+        "fingerprint_distance": 0.5520613448801427,
+        "certified_operator_norm_exclusion_radius": 0.693038416039876,
+        "passes_tolerance": false
+      },
+      {
+        "index": 97,
+        "fingerprint_distance": 0.5261681522552554,
+        "certified_operator_norm_exclusion_radius": 0.41166398493841233,
+        "passes_tolerance": false
+      },
+      {
+        "index": 98,
+        "fingerprint_distance": 0.7650580883612956,
+        "certified_operator_norm_exclusion_radius": 0.5404435128959468,
+        "passes_tolerance": false
+      },
+      {
+        "index": 99,
+        "fingerprint_distance": 0.3904462854642867,
+        "certified_operator_norm_exclusion_radius": 0.24039686529771973,
+        "passes_tolerance": false
+      },
+      {
+        "index": 100,
+        "fingerprint_distance": 0.5829213327004624,
+        "certified_operator_norm_exclusion_radius": 0.5920490798041337,
+        "passes_tolerance": false
+      },
+      {
+        "index": 101,
+        "fingerprint_distance": 0.5589837848856158,
+        "certified_operator_norm_exclusion_radius": 0.3550068049190946,
+        "passes_tolerance": false
+      },
+      {
+        "index": 102,
+        "fingerprint_distance": 0.5666346837859259,
+        "certified_operator_norm_exclusion_radius": 0.34599644095508514,
+        "passes_tolerance": false
+      },
+      {
+        "index": 103,
+        "fingerprint_distance": 0.41684482180392823,
+        "certified_operator_norm_exclusion_radius": 0.366562079870677,
+        "passes_tolerance": false
+      },
+      {
+        "index": 104,
+        "fingerprint_distance": 0.7594173038192755,
+        "certified_operator_norm_exclusion_radius": 0.5337515192778979,
+        "passes_tolerance": false
+      },
+      {
+        "index": 105,
+        "fingerprint_distance": 0.6147746992393831,
+        "certified_operator_norm_exclusion_radius": 0.535787412439548,
+        "passes_tolerance": false
+      },
+      {
+        "index": 106,
+        "fingerprint_distance": 0.4653330569999957,
+        "certified_operator_norm_exclusion_radius": 0.6669960238962106,
+        "passes_tolerance": false
+      },
+      {
+        "index": 107,
+        "fingerprint_distance": 0.43976609935713146,
+        "certified_operator_norm_exclusion_radius": 0.2142048295935616,
+        "passes_tolerance": false
+      },
+      {
+        "index": 108,
+        "fingerprint_distance": 0.5911291524238543,
+        "certified_operator_norm_exclusion_radius": 0.47787324172526513,
+        "passes_tolerance": false
+      },
+      {
+        "index": 109,
+        "fingerprint_distance": 0.6386878752656061,
+        "certified_operator_norm_exclusion_radius": 0.35963820222197124,
+        "passes_tolerance": false
+      },
+      {
+        "index": 110,
+        "fingerprint_distance": 0.3873934975019455,
+        "certified_operator_norm_exclusion_radius": 0.26399524655179807,
+        "passes_tolerance": false
+      },
+      {
+        "index": 111,
+        "fingerprint_distance": 0.4387695955196326,
+        "certified_operator_norm_exclusion_radius": 0.31724985804871986,
+        "passes_tolerance": false
+      },
+      {
+        "index": 112,
+        "fingerprint_distance": 0.5770523358635029,
+        "certified_operator_norm_exclusion_radius": 0.6222690247579639,
+        "passes_tolerance": false
+      },
+      {
+        "index": 113,
+        "fingerprint_distance": 0.3853477216950964,
+        "certified_operator_norm_exclusion_radius": 0.3665882569958564,
+        "passes_tolerance": false
+      },
+      {
+        "index": 114,
+        "fingerprint_distance": 0.2789617188319958,
+        "certified_operator_norm_exclusion_radius": 0.3672195138067783,
+        "passes_tolerance": false
+      },
+      {
+        "index": 115,
+        "fingerprint_distance": 0.2720432419617363,
+        "certified_operator_norm_exclusion_radius": 0.4093724369683934,
+        "passes_tolerance": false
+      },
+      {
+        "index": 116,
+        "fingerprint_distance": 0.26956070201981663,
+        "certified_operator_norm_exclusion_radius": 0.22989423866896508,
+        "passes_tolerance": false
+      },
+      {
+        "index": 117,
+        "fingerprint_distance": 0.5962723609116944,
+        "certified_operator_norm_exclusion_radius": 0.4857561420340932,
+        "passes_tolerance": false
+      },
+      {
+        "index": 118,
+        "fingerprint_distance": 0.46214742812042264,
+        "certified_operator_norm_exclusion_radius": 0.21829709891319418,
+        "passes_tolerance": false
+      },
+      {
+        "index": 119,
+        "fingerprint_distance": 0.5222440160410493,
+        "certified_operator_norm_exclusion_radius": 0.8075818843352515,
+        "passes_tolerance": false
+      },
+      {
+        "index": 120,
+        "fingerprint_distance": 0.5231265065474444,
+        "certified_operator_norm_exclusion_radius": 0.9428708790858507,
+        "passes_tolerance": false
+      },
+      {
+        "index": 121,
+        "fingerprint_distance": 0.3411337571376354,
+        "certified_operator_norm_exclusion_radius": 0.2844420595978982,
+        "passes_tolerance": false
+      },
+      {
+        "index": 122,
+        "fingerprint_distance": 0.6976260152640824,
+        "certified_operator_norm_exclusion_radius": 0.629353503361809,
+        "passes_tolerance": false
+      },
+      {
+        "index": 123,
+        "fingerprint_distance": 0.5793225897384892,
+        "certified_operator_norm_exclusion_radius": 0.35610994826225667,
+        "passes_tolerance": false
+      },
+      {
+        "index": 124,
+        "fingerprint_distance": 0.43207882640272144,
+        "certified_operator_norm_exclusion_radius": 0.46717320549832975,
+        "passes_tolerance": false
+      },
+      {
+        "index": 125,
+        "fingerprint_distance": 0.5816503504084816,
+        "certified_operator_norm_exclusion_radius": 0.4052814205885087,
+        "passes_tolerance": false
+      },
+      {
+        "index": 126,
+        "fingerprint_distance": 0.7038148284227003,
+        "certified_operator_norm_exclusion_radius": 0.43692989259533427,
+        "passes_tolerance": false
+      },
+      {
+        "index": 127,
+        "fingerprint_distance": 0.4901891629935909,
+        "certified_operator_norm_exclusion_radius": 0.24871051895155002,
+        "passes_tolerance": false
+      },
+      {
+        "index": 128,
+        "fingerprint_distance": 0.580035966989062,
+        "certified_operator_norm_exclusion_radius": 0.8942902523279805,
+        "passes_tolerance": false
+      },
+      {
+        "index": 129,
+        "fingerprint_distance": 0.6878881306465017,
+        "certified_operator_norm_exclusion_radius": 0.6051628879502673,
+        "passes_tolerance": false
+      },
+      {
+        "index": 130,
+        "fingerprint_distance": 0.6088106929426439,
+        "certified_operator_norm_exclusion_radius": 0.6319620013877839,
+        "passes_tolerance": false
+      },
+      {
+        "index": 131,
+        "fingerprint_distance": 0.5088792313665419,
+        "certified_operator_norm_exclusion_radius": 0.48098122969418733,
+        "passes_tolerance": false
+      },
+      {
+        "index": 132,
+        "fingerprint_distance": 0.5212631051490496,
+        "certified_operator_norm_exclusion_radius": 0.2528462831971181,
+        "passes_tolerance": false
+      },
+      {
+        "index": 133,
+        "fingerprint_distance": 0.5842114757769479,
+        "certified_operator_norm_exclusion_radius": 0.3266678034947558,
+        "passes_tolerance": false
+      },
+      {
+        "index": 134,
+        "fingerprint_distance": 0.6985175821442198,
+        "certified_operator_norm_exclusion_radius": 0.46424036738567503,
+        "passes_tolerance": false
+      },
+      {
+        "index": 135,
+        "fingerprint_distance": 0.6552244975309721,
+        "certified_operator_norm_exclusion_radius": 0.7232967625285815,
+        "passes_tolerance": false
+      },
+      {
+        "index": 136,
+        "fingerprint_distance": 0.5738859711101195,
+        "certified_operator_norm_exclusion_radius": 0.3489523540811134,
+        "passes_tolerance": false
+      },
+      {
+        "index": 137,
+        "fingerprint_distance": 0.6830831518361226,
+        "certified_operator_norm_exclusion_radius": 0.6637687190033579,
+        "passes_tolerance": false
+      },
+      {
+        "index": 138,
+        "fingerprint_distance": 0.5735003563640907,
+        "certified_operator_norm_exclusion_radius": 0.4168898922493421,
+        "passes_tolerance": false
+      },
+      {
+        "index": 139,
+        "fingerprint_distance": 0.653928923424154,
+        "certified_operator_norm_exclusion_radius": 0.5697511733786759,
+        "passes_tolerance": false
+      },
+      {
+        "index": 140,
+        "fingerprint_distance": 0.5587979026062168,
+        "certified_operator_norm_exclusion_radius": 0.5502628090038103,
+        "passes_tolerance": false
+      },
+      {
+        "index": 141,
+        "fingerprint_distance": 0.35946564632769307,
+        "certified_operator_norm_exclusion_radius": 0.19741443567245875,
+        "passes_tolerance": false
+      },
+      {
+        "index": 142,
+        "fingerprint_distance": 0.2988990862744164,
+        "certified_operator_norm_exclusion_radius": 0.4747126888842463,
+        "passes_tolerance": false
+      },
+      {
+        "index": 143,
+        "fingerprint_distance": 0.36985247715773845,
+        "certified_operator_norm_exclusion_radius": 0.35212860583060757,
+        "passes_tolerance": false
+      },
+      {
+        "index": 144,
+        "fingerprint_distance": 0.5521096550493739,
+        "certified_operator_norm_exclusion_radius": 0.4902026719853875,
+        "passes_tolerance": false
+      },
+      {
+        "index": 145,
+        "fingerprint_distance": 0.43502130177117515,
+        "certified_operator_norm_exclusion_radius": 0.31291324552486255,
+        "passes_tolerance": false
+      },
+      {
+        "index": 146,
+        "fingerprint_distance": 0.3236255463092019,
+        "certified_operator_norm_exclusion_radius": 0.20547793292204675,
+        "passes_tolerance": false
+      },
+      {
+        "index": 147,
+        "fingerprint_distance": 0.4691660384489685,
+        "certified_operator_norm_exclusion_radius": 0.5057565330567836,
+        "passes_tolerance": false
+      },
+      {
+        "index": 148,
+        "fingerprint_distance": 0.5131131467552427,
+        "certified_operator_norm_exclusion_radius": 0.6430253350547367,
+        "passes_tolerance": false
+      },
+      {
+        "index": 149,
+        "fingerprint_distance": 0.5442340591737955,
+        "certified_operator_norm_exclusion_radius": 0.44626937623175367,
+        "passes_tolerance": false
+      },
+      {
+        "index": 150,
+        "fingerprint_distance": 0.6720716211754396,
+        "certified_operator_norm_exclusion_radius": 0.33636677197945153,
+        "passes_tolerance": false
+      },
+      {
+        "index": 151,
+        "fingerprint_distance": 0.48841875087961706,
+        "certified_operator_norm_exclusion_radius": 0.29781082593023217,
+        "passes_tolerance": false
+      },
+      {
+        "index": 152,
+        "fingerprint_distance": 0.6242903525833982,
+        "certified_operator_norm_exclusion_radius": 0.3304379070222375,
+        "passes_tolerance": false
+      },
+      {
+        "index": 153,
+        "fingerprint_distance": 0.50749735955728,
+        "certified_operator_norm_exclusion_radius": 0.3698689575392237,
+        "passes_tolerance": false
+      },
+      {
+        "index": 154,
+        "fingerprint_distance": 0.5813318015093029,
+        "certified_operator_norm_exclusion_radius": 0.4829417518874135,
+        "passes_tolerance": false
+      },
+      {
+        "index": 155,
+        "fingerprint_distance": 0.7727356471053445,
+        "certified_operator_norm_exclusion_radius": 0.4015855566282758,
+        "passes_tolerance": false
+      },
+      {
+        "index": 156,
+        "fingerprint_distance": 0.42963203646976633,
+        "certified_operator_norm_exclusion_radius": 0.4093679864857685,
+        "passes_tolerance": false
+      },
+      {
+        "index": 157,
+        "fingerprint_distance": 0.7678659690380504,
+        "certified_operator_norm_exclusion_radius": 0.366788283441828,
+        "passes_tolerance": false
+      },
+      {
+        "index": 158,
+        "fingerprint_distance": 0.5708170464106288,
+        "certified_operator_norm_exclusion_radius": 0.4315436892135788,
+        "passes_tolerance": false
+      },
+      {
+        "index": 159,
+        "fingerprint_distance": 0.618267097808246,
+        "certified_operator_norm_exclusion_radius": 0.36676319988062855,
+        "passes_tolerance": false
+      },
+      {
+        "index": 160,
+        "fingerprint_distance": 0.38561248690947864,
+        "certified_operator_norm_exclusion_radius": 0.3916016806071485,
+        "passes_tolerance": false
+      },
+      {
+        "index": 161,
+        "fingerprint_distance": 0.5505152427151269,
+        "certified_operator_norm_exclusion_radius": 0.5951599476409674,
+        "passes_tolerance": false
+      },
+      {
+        "index": 162,
+        "fingerprint_distance": 0.8191376185188649,
+        "certified_operator_norm_exclusion_radius": 0.6130374923029179,
+        "passes_tolerance": false
+      },
+      {
+        "index": 163,
+        "fingerprint_distance": 0.5940241725265546,
+        "certified_operator_norm_exclusion_radius": 0.31879225095079483,
+        "passes_tolerance": false
+      },
+      {
+        "index": 164,
+        "fingerprint_distance": 0.4821425000553175,
+        "certified_operator_norm_exclusion_radius": 0.5047661608337823,
+        "passes_tolerance": false
+      },
+      {
+        "index": 165,
+        "fingerprint_distance": 0.4510537429636949,
+        "certified_operator_norm_exclusion_radius": 0.36658150022052216,
+        "passes_tolerance": false
+      },
+      {
+        "index": 166,
+        "fingerprint_distance": 0.5889727778485302,
+        "certified_operator_norm_exclusion_radius": 0.5457734520912892,
+        "passes_tolerance": false
+      },
+      {
+        "index": 167,
+        "fingerprint_distance": 0.4806543511294965,
+        "certified_operator_norm_exclusion_radius": 0.43436502864112386,
+        "passes_tolerance": false
+      },
+      {
+        "index": 168,
+        "fingerprint_distance": 0.4891512201642103,
+        "certified_operator_norm_exclusion_radius": 0.47919027230377337,
+        "passes_tolerance": false
+      },
+      {
+        "index": 169,
+        "fingerprint_distance": 0.12130213593229959,
+        "certified_operator_norm_exclusion_radius": 0.10282494479191408,
+        "passes_tolerance": false
+      },
+      {
+        "index": 170,
+        "fingerprint_distance": 0.6061188399450084,
+        "certified_operator_norm_exclusion_radius": 0.715889253618573,
+        "passes_tolerance": false
+      },
+      {
+        "index": 171,
+        "fingerprint_distance": 0.88113855294619,
+        "certified_operator_norm_exclusion_radius": 0.46302134212946466,
+        "passes_tolerance": false
+      },
+      {
+        "index": 172,
+        "fingerprint_distance": 0.6160114797822643,
+        "certified_operator_norm_exclusion_radius": 0.5257270709640657,
+        "passes_tolerance": false
+      },
+      {
+        "index": 173,
+        "fingerprint_distance": 0.6958206318909907,
+        "certified_operator_norm_exclusion_radius": 0.5003238939168893,
+        "passes_tolerance": false
+      },
+      {
+        "index": 174,
+        "fingerprint_distance": 0.45981214495267103,
+        "certified_operator_norm_exclusion_radius": 0.4809136530088371,
+        "passes_tolerance": false
+      },
+      {
+        "index": 175,
+        "fingerprint_distance": 0.475986511257228,
+        "certified_operator_norm_exclusion_radius": 0.6217333698484372,
+        "passes_tolerance": false
+      },
+      {
+        "index": 176,
+        "fingerprint_distance": 0.5699764090696299,
+        "certified_operator_norm_exclusion_radius": 1.17720298566084,
+        "passes_tolerance": false
+      },
+      {
+        "index": 177,
+        "fingerprint_distance": 0.5517832959701584,
+        "certified_operator_norm_exclusion_radius": 0.4465519346949219,
+        "passes_tolerance": false
+      },
+      {
+        "index": 178,
+        "fingerprint_distance": 0.491833755512812,
+        "certified_operator_norm_exclusion_radius": 0.5087358048608676,
+        "passes_tolerance": false
+      },
+      {
+        "index": 179,
+        "fingerprint_distance": 0.48123308003179427,
+        "certified_operator_norm_exclusion_radius": 0.36314155894157013,
+        "passes_tolerance": false
+      },
+      {
+        "index": 180,
+        "fingerprint_distance": 0.43880109465923134,
+        "certified_operator_norm_exclusion_radius": 0.7090227963894302,
+        "passes_tolerance": false
+      },
+      {
+        "index": 181,
+        "fingerprint_distance": 0.5957450227813973,
+        "certified_operator_norm_exclusion_radius": 0.465716937021201,
+        "passes_tolerance": false
+      },
+      {
+        "index": 182,
+        "fingerprint_distance": 0.6987120801280821,
+        "certified_operator_norm_exclusion_radius": 0.4329432958488737,
+        "passes_tolerance": false
+      },
+      {
+        "index": 183,
+        "fingerprint_distance": 0.6343432469457734,
+        "certified_operator_norm_exclusion_radius": 0.458287608147057,
+        "passes_tolerance": false
+      },
+      {
+        "index": 184,
+        "fingerprint_distance": 0.45213199330785725,
+        "certified_operator_norm_exclusion_radius": 0.5326638214652949,
+        "passes_tolerance": false
+      },
+      {
+        "index": 185,
+        "fingerprint_distance": 0.44783615442991137,
+        "certified_operator_norm_exclusion_radius": 0.4299463418291017,
+        "passes_tolerance": false
+      },
+      {
+        "index": 186,
+        "fingerprint_distance": 0.47510734822722545,
+        "certified_operator_norm_exclusion_radius": 0.5284424839896422,
+        "passes_tolerance": false
+      },
+      {
+        "index": 187,
+        "fingerprint_distance": 0.6662730411659498,
+        "certified_operator_norm_exclusion_radius": 0.32118179745842784,
+        "passes_tolerance": false
+      },
+      {
+        "index": 188,
+        "fingerprint_distance": 0.48200214064336083,
+        "certified_operator_norm_exclusion_radius": 0.38826323948081154,
+        "passes_tolerance": false
+      },
+      {
+        "index": 189,
+        "fingerprint_distance": 0.37796654367765486,
+        "certified_operator_norm_exclusion_radius": 0.2477373598087815,
+        "passes_tolerance": false
+      },
+      {
+        "index": 190,
+        "fingerprint_distance": 0.5071153337334294,
+        "certified_operator_norm_exclusion_radius": 0.3231909340196705,
+        "passes_tolerance": false
+      },
+      {
+        "index": 191,
+        "fingerprint_distance": 0.7674918896830508,
+        "certified_operator_norm_exclusion_radius": 0.46594667251330435,
+        "passes_tolerance": false
+      },
+      {
+        "index": 192,
+        "fingerprint_distance": 0.4325752870139941,
+        "certified_operator_norm_exclusion_radius": 0.2461555780775382,
+        "passes_tolerance": false
+      },
+      {
+        "index": 193,
+        "fingerprint_distance": 0.47132470786879055,
+        "certified_operator_norm_exclusion_radius": 0.43673432927024536,
+        "passes_tolerance": false
+      },
+      {
+        "index": 194,
+        "fingerprint_distance": 0.8052512355660106,
+        "certified_operator_norm_exclusion_radius": 0.3281413046787103,
+        "passes_tolerance": false
+      },
+      {
+        "index": 195,
+        "fingerprint_distance": 0.4104404255178023,
+        "certified_operator_norm_exclusion_radius": 0.31853585162104714,
+        "passes_tolerance": false
+      },
+      {
+        "index": 196,
+        "fingerprint_distance": 0.49074825750248446,
+        "certified_operator_norm_exclusion_radius": 0.3030168403678809,
+        "passes_tolerance": false
+      },
+      {
+        "index": 197,
+        "fingerprint_distance": 0.6615643048803975,
+        "certified_operator_norm_exclusion_radius": 0.5844953765706427,
+        "passes_tolerance": false
+      },
+      {
+        "index": 198,
+        "fingerprint_distance": 0.5688126996667128,
+        "certified_operator_norm_exclusion_radius": 0.3423483046294374,
+        "passes_tolerance": false
+      },
+      {
+        "index": 199,
+        "fingerprint_distance": 0.5652753721429746,
+        "certified_operator_norm_exclusion_radius": 0.3817542834939849,
+        "passes_tolerance": false
+      },
+      {
+        "index": 200,
+        "fingerprint_distance": 0.5559861174000889,
+        "certified_operator_norm_exclusion_radius": 0.4300335121398657,
+        "passes_tolerance": false
+      },
+      {
+        "index": 201,
+        "fingerprint_distance": 0.6198090268338714,
+        "certified_operator_norm_exclusion_radius": 0.452674172834705,
+        "passes_tolerance": false
+      },
+      {
+        "index": 202,
+        "fingerprint_distance": 0.4411680645839437,
+        "certified_operator_norm_exclusion_radius": 0.4960592392684034,
+        "passes_tolerance": false
+      },
+      {
+        "index": 203,
+        "fingerprint_distance": 0.48033312859394806,
+        "certified_operator_norm_exclusion_radius": 0.5305281794305553,
+        "passes_tolerance": false
+      },
+      {
+        "index": 204,
+        "fingerprint_distance": 0.608154644972041,
+        "certified_operator_norm_exclusion_radius": 0.5578889836883583,
+        "passes_tolerance": false
+      },
+      {
+        "index": 205,
+        "fingerprint_distance": 0.5672274340839499,
+        "certified_operator_norm_exclusion_radius": 0.3700170872112677,
+        "passes_tolerance": false
+      },
+      {
+        "index": 206,
+        "fingerprint_distance": 0.6467946982602214,
+        "certified_operator_norm_exclusion_radius": 0.32176175626279946,
+        "passes_tolerance": false
+      },
+      {
+        "index": 207,
+        "fingerprint_distance": 0.41688498455319273,
+        "certified_operator_norm_exclusion_radius": 0.2814053042164141,
+        "passes_tolerance": false
+      },
+      {
+        "index": 208,
+        "fingerprint_distance": 0.7683869309821582,
+        "certified_operator_norm_exclusion_radius": 0.4382989645256326,
+        "passes_tolerance": false
+      },
+      {
+        "index": 209,
+        "fingerprint_distance": 0.9073247796440846,
+        "certified_operator_norm_exclusion_radius": 0.41506094142227584,
+        "passes_tolerance": false
+      },
+      {
+        "index": 210,
+        "fingerprint_distance": 0.5338326883715001,
+        "certified_operator_norm_exclusion_radius": 0.511816657079745,
+        "passes_tolerance": false
+      },
+      {
+        "index": 211,
+        "fingerprint_distance": 0.42191027135996956,
+        "certified_operator_norm_exclusion_radius": 0.35983440121491467,
+        "passes_tolerance": false
+      },
+      {
+        "index": 212,
+        "fingerprint_distance": 0.44111714077899794,
+        "certified_operator_norm_exclusion_radius": 0.27556185988865556,
+        "passes_tolerance": false
+      },
+      {
+        "index": 213,
+        "fingerprint_distance": 0.4606371547215159,
+        "certified_operator_norm_exclusion_radius": 0.414148819744103,
+        "passes_tolerance": false
+      },
+      {
+        "index": 214,
+        "fingerprint_distance": 0.5546919272093794,
+        "certified_operator_norm_exclusion_radius": 0.3435767163361083,
+        "passes_tolerance": false
+      },
+      {
+        "index": 215,
+        "fingerprint_distance": 0.526025528840122,
+        "certified_operator_norm_exclusion_radius": 0.5983812782174462,
+        "passes_tolerance": false
+      },
+      {
+        "index": 216,
+        "fingerprint_distance": 0.440530487123717,
+        "certified_operator_norm_exclusion_radius": 0.43237119364781007,
+        "passes_tolerance": false
+      },
+      {
+        "index": 217,
+        "fingerprint_distance": 0.5664074062355094,
+        "certified_operator_norm_exclusion_radius": 0.4981053209966591,
+        "passes_tolerance": false
+      },
+      {
+        "index": 218,
+        "fingerprint_distance": 0.5103260886543644,
+        "certified_operator_norm_exclusion_radius": 0.4798390063151005,
+        "passes_tolerance": false
+      },
+      {
+        "index": 219,
+        "fingerprint_distance": 0.4786756557841169,
+        "certified_operator_norm_exclusion_radius": 0.27873119811833746,
+        "passes_tolerance": false
+      },
+      {
+        "index": 220,
+        "fingerprint_distance": 0.5416058971412132,
+        "certified_operator_norm_exclusion_radius": 0.46749394433392333,
+        "passes_tolerance": false
+      },
+      {
+        "index": 221,
+        "fingerprint_distance": 0.3324475996794279,
+        "certified_operator_norm_exclusion_radius": 0.28903556518226436,
+        "passes_tolerance": false
+      },
+      {
+        "index": 222,
+        "fingerprint_distance": 0.45768093651295305,
+        "certified_operator_norm_exclusion_radius": 0.5026715477891219,
+        "passes_tolerance": false
+      },
+      {
+        "index": 223,
+        "fingerprint_distance": 0.7088644356777215,
+        "certified_operator_norm_exclusion_radius": 0.5807615160936463,
+        "passes_tolerance": false
+      },
+      {
+        "index": 224,
+        "fingerprint_distance": 0.5154103143004894,
+        "certified_operator_norm_exclusion_radius": 0.31760134434642956,
+        "passes_tolerance": false
+      },
+      {
+        "index": 225,
+        "fingerprint_distance": 0.5011575970992251,
+        "certified_operator_norm_exclusion_radius": 0.4042857165714663,
+        "passes_tolerance": false
+      },
+      {
+        "index": 226,
+        "fingerprint_distance": 0.41792918093092357,
+        "certified_operator_norm_exclusion_radius": 0.428659396620054,
+        "passes_tolerance": false
+      },
+      {
+        "index": 227,
+        "fingerprint_distance": 0.6280930516581049,
+        "certified_operator_norm_exclusion_radius": 0.35230252324305794,
+        "passes_tolerance": false
+      },
+      {
+        "index": 228,
+        "fingerprint_distance": 0.3940983071728004,
+        "certified_operator_norm_exclusion_radius": 0.2645050879681306,
+        "passes_tolerance": false
+      },
+      {
+        "index": 229,
+        "fingerprint_distance": 0.5400521022404909,
+        "certified_operator_norm_exclusion_radius": 0.26573762917129923,
+        "passes_tolerance": false
+      },
+      {
+        "index": 230,
+        "fingerprint_distance": 0.7690643643298399,
+        "certified_operator_norm_exclusion_radius": 0.7122470416677924,
+        "passes_tolerance": false
+      },
+      {
+        "index": 231,
+        "fingerprint_distance": 0.41760149452214346,
+        "certified_operator_norm_exclusion_radius": 0.33034132030623176,
+        "passes_tolerance": false
+      },
+      {
+        "index": 232,
+        "fingerprint_distance": 0.6961928474083978,
+        "certified_operator_norm_exclusion_radius": 0.5414565122916837,
+        "passes_tolerance": false
+      },
+      {
+        "index": 233,
+        "fingerprint_distance": 0.6902074474644346,
+        "certified_operator_norm_exclusion_radius": 0.5215141017095273,
+        "passes_tolerance": false
+      },
+      {
+        "index": 234,
+        "fingerprint_distance": 0.6170955702770617,
+        "certified_operator_norm_exclusion_radius": 0.44433774447682295,
+        "passes_tolerance": false
+      },
+      {
+        "index": 235,
+        "fingerprint_distance": 0.45202950884726983,
+        "certified_operator_norm_exclusion_radius": 0.34684642674254645,
+        "passes_tolerance": false
+      },
+      {
+        "index": 236,
+        "fingerprint_distance": 0.6234693283000012,
+        "certified_operator_norm_exclusion_radius": 0.40048779957625613,
+        "passes_tolerance": false
+      },
+      {
+        "index": 237,
+        "fingerprint_distance": 0.48734396349337794,
+        "certified_operator_norm_exclusion_radius": 0.33384626334368844,
+        "passes_tolerance": false
+      },
+      {
+        "index": 238,
+        "fingerprint_distance": 0.5690158014509239,
+        "certified_operator_norm_exclusion_radius": 0.3309564664751247,
+        "passes_tolerance": false
+      },
+      {
+        "index": 239,
+        "fingerprint_distance": 0.22735525710384077,
+        "certified_operator_norm_exclusion_radius": 0.18663621511669148,
+        "passes_tolerance": false
+      },
+      {
+        "index": 240,
+        "fingerprint_distance": 0.28711202863621954,
+        "certified_operator_norm_exclusion_radius": 0.32409476007222005,
+        "passes_tolerance": false
+      },
+      {
+        "index": 241,
+        "fingerprint_distance": 0.778214541270422,
+        "certified_operator_norm_exclusion_radius": 0.46650576973247837,
+        "passes_tolerance": false
+      },
+      {
+        "index": 242,
+        "fingerprint_distance": 0.8437557328562952,
+        "certified_operator_norm_exclusion_radius": 0.5850831721198512,
+        "passes_tolerance": false
+      },
+      {
+        "index": 243,
+        "fingerprint_distance": 0.5758810308305686,
+        "certified_operator_norm_exclusion_radius": 0.39487740418505296,
+        "passes_tolerance": false
+      },
+      {
+        "index": 244,
+        "fingerprint_distance": 0.5260240718533236,
+        "certified_operator_norm_exclusion_radius": 0.39488242382637245,
+        "passes_tolerance": false
+      },
+      {
+        "index": 245,
+        "fingerprint_distance": 0.6267446340204,
+        "certified_operator_norm_exclusion_radius": 0.3011123949464315,
+        "passes_tolerance": false
+      },
+      {
+        "index": 246,
+        "fingerprint_distance": 0.478324524015104,
+        "certified_operator_norm_exclusion_radius": 0.3685263078643412,
+        "passes_tolerance": false
+      },
+      {
+        "index": 247,
+        "fingerprint_distance": 0.31119036033677167,
+        "certified_operator_norm_exclusion_radius": 0.2806484649297942,
+        "passes_tolerance": false
+      },
+      {
+        "index": 248,
+        "fingerprint_distance": 0.34540103050927473,
+        "certified_operator_norm_exclusion_radius": 0.32828564097716856,
+        "passes_tolerance": false
+      },
+      {
+        "index": 249,
+        "fingerprint_distance": 0.49971694833119906,
+        "certified_operator_norm_exclusion_radius": 0.5634572276885653,
+        "passes_tolerance": false
+      },
+      {
+        "index": 250,
+        "fingerprint_distance": 0.6377465663923048,
+        "certified_operator_norm_exclusion_radius": 0.3679730879701515,
+        "passes_tolerance": false
+      },
+      {
+        "index": 251,
+        "fingerprint_distance": 0.3703819654062089,
+        "certified_operator_norm_exclusion_radius": 0.2913554509194924,
+        "passes_tolerance": false
+      },
+      {
+        "index": 252,
+        "fingerprint_distance": 0.6342049400346456,
+        "certified_operator_norm_exclusion_radius": 0.8014924613385894,
+        "passes_tolerance": false
+      },
+      {
+        "index": 253,
+        "fingerprint_distance": 0.44689317857904737,
+        "certified_operator_norm_exclusion_radius": 0.3152301380255182,
+        "passes_tolerance": false
+      },
+      {
+        "index": 254,
+        "fingerprint_distance": 0.5984712204887389,
+        "certified_operator_norm_exclusion_radius": 0.29269332257574837,
+        "passes_tolerance": false
+      },
+      {
+        "index": 255,
+        "fingerprint_distance": 0.48854480027966296,
+        "certified_operator_norm_exclusion_radius": 0.5197750745860148,
+        "passes_tolerance": false
+      },
+      {
+        "index": 256,
+        "fingerprint_distance": 0.30349487177290985,
+        "certified_operator_norm_exclusion_radius": 0.2876438822595139,
+        "passes_tolerance": false
+      },
+      {
+        "index": 257,
+        "fingerprint_distance": 0.36513443711367416,
+        "certified_operator_norm_exclusion_radius": 0.6122951709705797,
+        "passes_tolerance": false
+      },
+      {
+        "index": 258,
+        "fingerprint_distance": 0.48977362045055256,
+        "certified_operator_norm_exclusion_radius": 0.3382041593714748,
+        "passes_tolerance": false
+      },
+      {
+        "index": 259,
+        "fingerprint_distance": 0.5041782759184444,
+        "certified_operator_norm_exclusion_radius": 0.4322345265732831,
+        "passes_tolerance": false
+      },
+      {
+        "index": 260,
+        "fingerprint_distance": 0.7483724686274117,
+        "certified_operator_norm_exclusion_radius": 0.6851183918962586,
+        "passes_tolerance": false
+      },
+      {
+        "index": 261,
+        "fingerprint_distance": 0.7222897107732492,
+        "certified_operator_norm_exclusion_radius": 0.483606046382933,
+        "passes_tolerance": false
+      },
+      {
+        "index": 262,
+        "fingerprint_distance": 0.7425869489185725,
+        "certified_operator_norm_exclusion_radius": 0.41675955033806955,
+        "passes_tolerance": false
+      },
+      {
+        "index": 263,
+        "fingerprint_distance": 0.5318696537466884,
+        "certified_operator_norm_exclusion_radius": 0.3023854968205442,
+        "passes_tolerance": false
+      },
+      {
+        "index": 264,
+        "fingerprint_distance": 0.6710067307162532,
+        "certified_operator_norm_exclusion_radius": 0.5698384550388439,
+        "passes_tolerance": false
+      },
+      {
+        "index": 265,
+        "fingerprint_distance": 0.5782734810515255,
+        "certified_operator_norm_exclusion_radius": 0.6024631990674244,
+        "passes_tolerance": false
+      },
+      {
+        "index": 266,
+        "fingerprint_distance": 0.3630312456631555,
+        "certified_operator_norm_exclusion_radius": 0.24430529065669976,
+        "passes_tolerance": false
+      },
+      {
+        "index": 267,
+        "fingerprint_distance": 0.584090877040553,
+        "certified_operator_norm_exclusion_radius": 0.4552850864308661,
+        "passes_tolerance": false
+      },
+      {
+        "index": 268,
+        "fingerprint_distance": 0.4431478746619186,
+        "certified_operator_norm_exclusion_radius": 0.3138826824151223,
+        "passes_tolerance": false
+      },
+      {
+        "index": 269,
+        "fingerprint_distance": 0.3590843123183101,
+        "certified_operator_norm_exclusion_radius": 0.507948041481695,
+        "passes_tolerance": false
+      },
+      {
+        "index": 270,
+        "fingerprint_distance": 0.39491576544100065,
+        "certified_operator_norm_exclusion_radius": 0.29455940236658423,
+        "passes_tolerance": false
+      },
+      {
+        "index": 271,
+        "fingerprint_distance": 0.3487892306049913,
+        "certified_operator_norm_exclusion_radius": 0.3199211847903088,
+        "passes_tolerance": false
+      },
+      {
+        "index": 272,
+        "fingerprint_distance": 0.5515311722250059,
+        "certified_operator_norm_exclusion_radius": 0.30859907291229655,
+        "passes_tolerance": false
+      },
+      {
+        "index": 273,
+        "fingerprint_distance": 0.39793299581677627,
+        "certified_operator_norm_exclusion_radius": 0.4614946122043455,
+        "passes_tolerance": false
+      },
+      {
+        "index": 274,
+        "fingerprint_distance": 0.5971509901856474,
+        "certified_operator_norm_exclusion_radius": 0.40309108064511134,
+        "passes_tolerance": false
+      },
+      {
+        "index": 275,
+        "fingerprint_distance": 0.5986914259104689,
+        "certified_operator_norm_exclusion_radius": 0.3578684808279484,
+        "passes_tolerance": false
+      },
+      {
+        "index": 276,
+        "fingerprint_distance": 0.454677715773053,
+        "certified_operator_norm_exclusion_radius": 0.3679198620186679,
+        "passes_tolerance": false
+      },
+      {
+        "index": 277,
+        "fingerprint_distance": 0.3625457806468004,
+        "certified_operator_norm_exclusion_radius": 0.6101049547470451,
+        "passes_tolerance": false
+      },
+      {
+        "index": 278,
+        "fingerprint_distance": 0.40549100037331315,
+        "certified_operator_norm_exclusion_radius": 0.3833363114099364,
+        "passes_tolerance": false
+      },
+      {
+        "index": 279,
+        "fingerprint_distance": 0.6072774868979051,
+        "certified_operator_norm_exclusion_radius": 0.34151198682587497,
+        "passes_tolerance": false
+      },
+      {
+        "index": 280,
+        "fingerprint_distance": 0.5387270603988935,
+        "certified_operator_norm_exclusion_radius": 0.37637227771034815,
+        "passes_tolerance": false
+      },
+      {
+        "index": 281,
+        "fingerprint_distance": 0.5432620587998107,
+        "certified_operator_norm_exclusion_radius": 0.28288242132819946,
+        "passes_tolerance": false
+      },
+      {
+        "index": 282,
+        "fingerprint_distance": 0.9694792806327183,
+        "certified_operator_norm_exclusion_radius": 0.4052123975016174,
+        "passes_tolerance": false
+      },
+      {
+        "index": 283,
+        "fingerprint_distance": 0.5098222130954224,
+        "certified_operator_norm_exclusion_radius": 0.5559889172117173,
+        "passes_tolerance": false
+      },
+      {
+        "index": 284,
+        "fingerprint_distance": 0.4632667658891525,
+        "certified_operator_norm_exclusion_radius": 0.23491579766263548,
+        "passes_tolerance": false
+      },
+      {
+        "index": 285,
+        "fingerprint_distance": 0.3915127734585267,
+        "certified_operator_norm_exclusion_radius": 0.2862584296550256,
+        "passes_tolerance": false
+      },
+      {
+        "index": 286,
+        "fingerprint_distance": 0.5405524327279971,
+        "certified_operator_norm_exclusion_radius": 0.5063403581822263,
+        "passes_tolerance": false
+      },
+      {
+        "index": 287,
+        "fingerprint_distance": 0.48427216476201096,
+        "certified_operator_norm_exclusion_radius": 0.45829984913285704,
+        "passes_tolerance": false
+      },
+      {
+        "index": 288,
+        "fingerprint_distance": 0.5452499554452999,
+        "certified_operator_norm_exclusion_radius": 0.32733583452728,
+        "passes_tolerance": false
+      },
+      {
+        "index": 289,
+        "fingerprint_distance": 0.5481434638851027,
+        "certified_operator_norm_exclusion_radius": 0.28503000529288786,
+        "passes_tolerance": false
+      },
+      {
+        "index": 290,
+        "fingerprint_distance": 0.5475983675825278,
+        "certified_operator_norm_exclusion_radius": 0.3242193017619136,
+        "passes_tolerance": false
+      },
+      {
+        "index": 291,
+        "fingerprint_distance": 0.708798835966731,
+        "certified_operator_norm_exclusion_radius": 0.460145858977521,
+        "passes_tolerance": false
+      },
+      {
+        "index": 292,
+        "fingerprint_distance": 0.5181723460458705,
+        "certified_operator_norm_exclusion_radius": 0.3040204917936977,
+        "passes_tolerance": false
+      },
+      {
+        "index": 293,
+        "fingerprint_distance": 0.4591776547331214,
+        "certified_operator_norm_exclusion_radius": 0.40105880124141086,
+        "passes_tolerance": false
+      },
+      {
+        "index": 294,
+        "fingerprint_distance": 0.5326521148643666,
+        "certified_operator_norm_exclusion_radius": 0.458917479077523,
+        "passes_tolerance": false
+      },
+      {
+        "index": 295,
+        "fingerprint_distance": 0.5437161681136153,
+        "certified_operator_norm_exclusion_radius": 0.40157635589049273,
+        "passes_tolerance": false
+      },
+      {
+        "index": 296,
+        "fingerprint_distance": 0.4730810232883603,
+        "certified_operator_norm_exclusion_radius": 0.3756491724688207,
+        "passes_tolerance": false
+      },
+      {
+        "index": 297,
+        "fingerprint_distance": 0.5150116780994458,
+        "certified_operator_norm_exclusion_radius": 0.33396004370356286,
+        "passes_tolerance": false
+      },
+      {
+        "index": 298,
+        "fingerprint_distance": 0.6569997426874793,
+        "certified_operator_norm_exclusion_radius": 0.41569376764089433,
+        "passes_tolerance": false
+      },
+      {
+        "index": 299,
+        "fingerprint_distance": 0.7045433929933226,
+        "certified_operator_norm_exclusion_radius": 0.4820309640443987,
+        "passes_tolerance": false
+      },
+      {
+        "index": 300,
+        "fingerprint_distance": 0.5055301445660577,
+        "certified_operator_norm_exclusion_radius": 0.3690608331662442,
+        "passes_tolerance": false
+      },
+      {
+        "index": 301,
+        "fingerprint_distance": 0.40942033786121124,
+        "certified_operator_norm_exclusion_radius": 0.2504901701277402,
+        "passes_tolerance": false
+      },
+      {
+        "index": 302,
+        "fingerprint_distance": 0.45655389718584366,
+        "certified_operator_norm_exclusion_radius": 0.3621823755574792,
+        "passes_tolerance": false
+      },
+      {
+        "index": 303,
+        "fingerprint_distance": 0.6268593989315051,
+        "certified_operator_norm_exclusion_radius": 0.3985312299313463,
+        "passes_tolerance": false
+      },
+      {
+        "index": 304,
+        "fingerprint_distance": 0.44045761401759087,
+        "certified_operator_norm_exclusion_radius": 0.4488567550648109,
+        "passes_tolerance": false
+      },
+      {
+        "index": 305,
+        "fingerprint_distance": 0.7057723768755243,
+        "certified_operator_norm_exclusion_radius": 0.3848996918728816,
+        "passes_tolerance": false
+      },
+      {
+        "index": 306,
+        "fingerprint_distance": 0.8092245943313597,
+        "certified_operator_norm_exclusion_radius": 0.6302721457301084,
+        "passes_tolerance": false
+      },
+      {
+        "index": 307,
+        "fingerprint_distance": 0.641769844495114,
+        "certified_operator_norm_exclusion_radius": 0.35229585380528994,
+        "passes_tolerance": false
+      },
+      {
+        "index": 308,
+        "fingerprint_distance": 0.598563375628568,
+        "certified_operator_norm_exclusion_radius": 0.3793425521402975,
+        "passes_tolerance": false
+      },
+      {
+        "index": 309,
+        "fingerprint_distance": 0.5218821614003313,
+        "certified_operator_norm_exclusion_radius": 0.30540648327180325,
+        "passes_tolerance": false
+      },
+      {
+        "index": 310,
+        "fingerprint_distance": 0.5662409646006198,
+        "certified_operator_norm_exclusion_radius": 0.6972378115037415,
+        "passes_tolerance": false
+      },
+      {
+        "index": 311,
+        "fingerprint_distance": 0.6325228359736833,
+        "certified_operator_norm_exclusion_radius": 0.59942317815348,
+        "passes_tolerance": false
+      },
+      {
+        "index": 312,
+        "fingerprint_distance": 0.4887468840197032,
+        "certified_operator_norm_exclusion_radius": 0.7805860720259062,
+        "passes_tolerance": false
+      },
+      {
+        "index": 313,
+        "fingerprint_distance": 0.7892012164137253,
+        "certified_operator_norm_exclusion_radius": 0.4073515255621159,
+        "passes_tolerance": false
+      },
+      {
+        "index": 314,
+        "fingerprint_distance": 0.55718367581761,
+        "certified_operator_norm_exclusion_radius": 0.5168418618942608,
+        "passes_tolerance": false
+      },
+      {
+        "index": 315,
+        "fingerprint_distance": 0.5510027601500251,
+        "certified_operator_norm_exclusion_radius": 0.4384028190028079,
+        "passes_tolerance": false
+      },
+      {
+        "index": 316,
+        "fingerprint_distance": 0.529858897191964,
+        "certified_operator_norm_exclusion_radius": 0.41077361348880936,
+        "passes_tolerance": false
+      },
+      {
+        "index": 317,
+        "fingerprint_distance": 0.6231496401237033,
+        "certified_operator_norm_exclusion_radius": 0.4425654658222226,
+        "passes_tolerance": false
+      },
+      {
+        "index": 318,
+        "fingerprint_distance": 0.6904480842289398,
+        "certified_operator_norm_exclusion_radius": 0.2966575888979121,
+        "passes_tolerance": false
+      },
+      {
+        "index": 319,
+        "fingerprint_distance": 0.5231377244899976,
+        "certified_operator_norm_exclusion_radius": 0.24058590764272508,
+        "passes_tolerance": false
+      },
+      {
+        "index": 320,
+        "fingerprint_distance": 0.5141846965899532,
+        "certified_operator_norm_exclusion_radius": 0.6113664553111472,
+        "passes_tolerance": false
+      },
+      {
+        "index": 321,
+        "fingerprint_distance": 0.4306874332872159,
+        "certified_operator_norm_exclusion_radius": 0.2491624636734697,
+        "passes_tolerance": false
+      },
+      {
+        "index": 322,
+        "fingerprint_distance": 0.3961525447979155,
+        "certified_operator_norm_exclusion_radius": 0.24628535137487373,
+        "passes_tolerance": false
+      },
+      {
+        "index": 323,
+        "fingerprint_distance": 0.6141283237261563,
+        "certified_operator_norm_exclusion_radius": 0.5381741439552284,
+        "passes_tolerance": false
+      },
+      {
+        "index": 324,
+        "fingerprint_distance": 0.4922025994149916,
+        "certified_operator_norm_exclusion_radius": 0.3755930017413847,
+        "passes_tolerance": false
+      },
+      {
+        "index": 325,
+        "fingerprint_distance": 0.594690097312371,
+        "certified_operator_norm_exclusion_radius": 0.39904803062154964,
+        "passes_tolerance": false
+      },
+      {
+        "index": 326,
+        "fingerprint_distance": 0.4828595290389631,
+        "certified_operator_norm_exclusion_radius": 0.288163434140197,
+        "passes_tolerance": false
+      },
+      {
+        "index": 327,
+        "fingerprint_distance": 0.4833389498720308,
+        "certified_operator_norm_exclusion_radius": 0.5626485388035362,
+        "passes_tolerance": false
+      },
+      {
+        "index": 328,
+        "fingerprint_distance": 0.673361242844292,
+        "certified_operator_norm_exclusion_radius": 0.5070113345493622,
+        "passes_tolerance": false
+      },
+      {
+        "index": 329,
+        "fingerprint_distance": 0.4539896657726252,
+        "certified_operator_norm_exclusion_radius": 0.3520106344392962,
+        "passes_tolerance": false
+      },
+      {
+        "index": 330,
+        "fingerprint_distance": 0.9399382405812877,
+        "certified_operator_norm_exclusion_radius": 0.3770214032191619,
+        "passes_tolerance": false
+      },
+      {
+        "index": 331,
+        "fingerprint_distance": 0.5652118514767815,
+        "certified_operator_norm_exclusion_radius": 0.6039765501163151,
+        "passes_tolerance": false
+      },
+      {
+        "index": 332,
+        "fingerprint_distance": 0.6746559548707585,
+        "certified_operator_norm_exclusion_radius": 0.5762241575341623,
+        "passes_tolerance": false
+      },
+      {
+        "index": 333,
+        "fingerprint_distance": 0.42456386066274215,
+        "certified_operator_norm_exclusion_radius": 0.4929586284084592,
+        "passes_tolerance": false
+      },
+      {
+        "index": 334,
+        "fingerprint_distance": 0.5721518042525837,
+        "certified_operator_norm_exclusion_radius": 0.3026777931955316,
+        "passes_tolerance": false
+      },
+      {
+        "index": 335,
+        "fingerprint_distance": 0.5159845826319495,
+        "certified_operator_norm_exclusion_radius": 0.3984160006888496,
+        "passes_tolerance": false
+      },
+      {
+        "index": 336,
+        "fingerprint_distance": 0.478118953448929,
+        "certified_operator_norm_exclusion_radius": 0.48224962341044464,
+        "passes_tolerance": false
+      },
+      {
+        "index": 337,
+        "fingerprint_distance": 0.5285219079936062,
+        "certified_operator_norm_exclusion_radius": 0.5724617556158358,
+        "passes_tolerance": false
+      },
+      {
+        "index": 338,
+        "fingerprint_distance": 0.49992835542161745,
+        "certified_operator_norm_exclusion_radius": 0.26959680042342044,
+        "passes_tolerance": false
+      },
+      {
+        "index": 339,
+        "fingerprint_distance": 0.4897921241483214,
+        "certified_operator_norm_exclusion_radius": 0.3265724376932098,
+        "passes_tolerance": false
+      },
+      {
+        "index": 340,
+        "fingerprint_distance": 0.5065028367123939,
+        "certified_operator_norm_exclusion_radius": 0.3676738683308922,
+        "passes_tolerance": false
+      },
+      {
+        "index": 341,
+        "fingerprint_distance": 0.5279324432832876,
+        "certified_operator_norm_exclusion_radius": 0.5958828294983057,
+        "passes_tolerance": false
+      },
+      {
+        "index": 342,
+        "fingerprint_distance": 0.47629825454045926,
+        "certified_operator_norm_exclusion_radius": 0.410522759807829,
+        "passes_tolerance": false
+      },
+      {
+        "index": 343,
+        "fingerprint_distance": 0.5913601256673197,
+        "certified_operator_norm_exclusion_radius": 0.26803482884573,
+        "passes_tolerance": false
+      },
+      {
+        "index": 344,
+        "fingerprint_distance": 0.6079389940512123,
+        "certified_operator_norm_exclusion_radius": 0.36143514697913304,
+        "passes_tolerance": false
+      },
+      {
+        "index": 345,
+        "fingerprint_distance": 0.3367299505895955,
+        "certified_operator_norm_exclusion_radius": 0.1964176885396491,
+        "passes_tolerance": false
+      },
+      {
+        "index": 346,
+        "fingerprint_distance": 0.4873811348141127,
+        "certified_operator_norm_exclusion_radius": 0.3166711351742509,
+        "passes_tolerance": false
+      },
+      {
+        "index": 347,
+        "fingerprint_distance": 0.5165081256912942,
+        "certified_operator_norm_exclusion_radius": 0.39395313330305476,
+        "passes_tolerance": false
+      },
+      {
+        "index": 348,
+        "fingerprint_distance": 0.772135995816459,
+        "certified_operator_norm_exclusion_radius": 0.47043217555113614,
+        "passes_tolerance": false
+      },
+      {
+        "index": 349,
+        "fingerprint_distance": 0.4674405479773256,
+        "certified_operator_norm_exclusion_radius": 0.41411112589114196,
+        "passes_tolerance": false
+      },
+      {
+        "index": 350,
+        "fingerprint_distance": 0.6562029862300094,
+        "certified_operator_norm_exclusion_radius": 0.5414769732493531,
+        "passes_tolerance": false
+      },
+      {
+        "index": 351,
+        "fingerprint_distance": 0.47393818693861,
+        "certified_operator_norm_exclusion_radius": 0.4772664906096233,
+        "passes_tolerance": false
+      },
+      {
+        "index": 352,
+        "fingerprint_distance": 0.6868618183021541,
+        "certified_operator_norm_exclusion_radius": 0.3166312427899104,
+        "passes_tolerance": false
+      },
+      {
+        "index": 353,
+        "fingerprint_distance": 0.45733626738601946,
+        "certified_operator_norm_exclusion_radius": 0.3216718422012077,
+        "passes_tolerance": false
+      },
+      {
+        "index": 354,
+        "fingerprint_distance": 0.542544210918688,
+        "certified_operator_norm_exclusion_radius": 0.47254779030605076,
+        "passes_tolerance": false
+      },
+      {
+        "index": 355,
+        "fingerprint_distance": 0.7062074213253103,
+        "certified_operator_norm_exclusion_radius": 0.34194707539412295,
+        "passes_tolerance": false
+      },
+      {
+        "index": 356,
+        "fingerprint_distance": 0.3979665084955876,
+        "certified_operator_norm_exclusion_radius": 0.28886637299924073,
+        "passes_tolerance": false
+      },
+      {
+        "index": 357,
+        "fingerprint_distance": 0.5084031336259821,
+        "certified_operator_norm_exclusion_radius": 0.2804133813995405,
+        "passes_tolerance": false
+      },
+      {
+        "index": 358,
+        "fingerprint_distance": 0.4949917557360705,
+        "certified_operator_norm_exclusion_radius": 0.4031470466028184,
+        "passes_tolerance": false
+      },
+      {
+        "index": 359,
+        "fingerprint_distance": 0.5687436791584501,
+        "certified_operator_norm_exclusion_radius": 0.44832976246542455,
+        "passes_tolerance": false
+      },
+      {
+        "index": 360,
+        "fingerprint_distance": 0.6092301325172932,
+        "certified_operator_norm_exclusion_radius": 0.5316606884935504,
+        "passes_tolerance": false
+      },
+      {
+        "index": 361,
+        "fingerprint_distance": 0.35749350050753254,
+        "certified_operator_norm_exclusion_radius": 0.2600169336189527,
+        "passes_tolerance": false
+      },
+      {
+        "index": 362,
+        "fingerprint_distance": 0.7373774416272022,
+        "certified_operator_norm_exclusion_radius": 0.5047034389134762,
+        "passes_tolerance": false
+      },
+      {
+        "index": 363,
+        "fingerprint_distance": 0.6341995716912151,
+        "certified_operator_norm_exclusion_radius": 0.3463930694374401,
+        "passes_tolerance": false
+      },
+      {
+        "index": 364,
+        "fingerprint_distance": 0.7862000205302642,
+        "certified_operator_norm_exclusion_radius": 0.5165652587386435,
+        "passes_tolerance": false
+      },
+      {
+        "index": 365,
+        "fingerprint_distance": 0.571871104151038,
+        "certified_operator_norm_exclusion_radius": 0.43099512861772415,
+        "passes_tolerance": false
+      },
+      {
+        "index": 366,
+        "fingerprint_distance": 0.7006118646486821,
+        "certified_operator_norm_exclusion_radius": 0.3712809386859049,
+        "passes_tolerance": false
+      },
+      {
+        "index": 367,
+        "fingerprint_distance": 0.5457101219895687,
+        "certified_operator_norm_exclusion_radius": 0.4195006282088771,
+        "passes_tolerance": false
+      },
+      {
+        "index": 368,
+        "fingerprint_distance": 0.34413045668231024,
+        "certified_operator_norm_exclusion_radius": 0.35599020907954065,
+        "passes_tolerance": false
+      },
+      {
+        "index": 369,
+        "fingerprint_distance": 0.44474857917684724,
+        "certified_operator_norm_exclusion_radius": 0.43883860569808936,
+        "passes_tolerance": false
+      },
+      {
+        "index": 370,
+        "fingerprint_distance": 0.7236958947068458,
+        "certified_operator_norm_exclusion_radius": 0.5172627434844655,
+        "passes_tolerance": false
+      },
+      {
+        "index": 371,
+        "fingerprint_distance": 0.5231033790906068,
+        "certified_operator_norm_exclusion_radius": 0.39069919405681186,
+        "passes_tolerance": false
+      },
+      {
+        "index": 372,
+        "fingerprint_distance": 0.4747923072590455,
+        "certified_operator_norm_exclusion_radius": 0.6146954575037971,
+        "passes_tolerance": false
+      },
+      {
+        "index": 373,
+        "fingerprint_distance": 0.46116296531865647,
+        "certified_operator_norm_exclusion_radius": 0.44970354576852967,
+        "passes_tolerance": false
+      },
+      {
+        "index": 374,
+        "fingerprint_distance": 0.4462666628500308,
+        "certified_operator_norm_exclusion_radius": 0.3465400906081085,
+        "passes_tolerance": false
+      },
+      {
+        "index": 375,
+        "fingerprint_distance": 0.6957749724260818,
+        "certified_operator_norm_exclusion_radius": 0.3562092463977213,
+        "passes_tolerance": false
+      },
+      {
+        "index": 376,
+        "fingerprint_distance": 0.720890864088212,
+        "certified_operator_norm_exclusion_radius": 0.4016597707714858,
+        "passes_tolerance": false
+      },
+      {
+        "index": 377,
+        "fingerprint_distance": 0.6218385805554857,
+        "certified_operator_norm_exclusion_radius": 0.44978699565352237,
+        "passes_tolerance": false
+      },
+      {
+        "index": 378,
+        "fingerprint_distance": 0.4673490303120642,
+        "certified_operator_norm_exclusion_radius": 0.219459671422678,
+        "passes_tolerance": false
+      },
+      {
+        "index": 379,
+        "fingerprint_distance": 0.5762925023455631,
+        "certified_operator_norm_exclusion_radius": 1.0187577051853458,
+        "passes_tolerance": false
+      },
+      {
+        "index": 380,
+        "fingerprint_distance": 0.5023809943635327,
+        "certified_operator_norm_exclusion_radius": 0.35836177908320677,
+        "passes_tolerance": false
+      },
+      {
+        "index": 381,
+        "fingerprint_distance": 0.4669957130159312,
+        "certified_operator_norm_exclusion_radius": 0.37851824127752925,
+        "passes_tolerance": false
+      },
+      {
+        "index": 382,
+        "fingerprint_distance": 0.7534745051944896,
+        "certified_operator_norm_exclusion_radius": 0.3356726912316623,
+        "passes_tolerance": false
+      },
+      {
+        "index": 383,
+        "fingerprint_distance": 0.3530226805381871,
+        "certified_operator_norm_exclusion_radius": 0.31524978326867487,
+        "passes_tolerance": false
+      },
+      {
+        "index": 384,
+        "fingerprint_distance": 0.45842865449871123,
+        "certified_operator_norm_exclusion_radius": 0.34804695140317865,
+        "passes_tolerance": false
+      },
+      {
+        "index": 385,
+        "fingerprint_distance": 0.47646402399329113,
+        "certified_operator_norm_exclusion_radius": 0.363364442762076,
+        "passes_tolerance": false
+      },
+      {
+        "index": 386,
+        "fingerprint_distance": 0.5665642459805624,
+        "certified_operator_norm_exclusion_radius": 0.3733392509304179,
+        "passes_tolerance": false
+      },
+      {
+        "index": 387,
+        "fingerprint_distance": 0.5426859588154033,
+        "certified_operator_norm_exclusion_radius": 0.344044197003145,
+        "passes_tolerance": false
+      },
+      {
+        "index": 388,
+        "fingerprint_distance": 0.6260819851091538,
+        "certified_operator_norm_exclusion_radius": 0.5449495693402122,
+        "passes_tolerance": false
+      },
+      {
+        "index": 389,
+        "fingerprint_distance": 0.805709058779403,
+        "certified_operator_norm_exclusion_radius": 0.35502562474438326,
+        "passes_tolerance": false
+      },
+      {
+        "index": 390,
+        "fingerprint_distance": 0.4707351856527869,
+        "certified_operator_norm_exclusion_radius": 0.3333424331864347,
+        "passes_tolerance": false
+      },
+      {
+        "index": 391,
+        "fingerprint_distance": 0.5965173102983385,
+        "certified_operator_norm_exclusion_radius": 0.5087702730193878,
+        "passes_tolerance": false
+      },
+      {
+        "index": 392,
+        "fingerprint_distance": 0.4369024122287397,
+        "certified_operator_norm_exclusion_radius": 0.2444944377333798,
+        "passes_tolerance": false
+      },
+      {
+        "index": 393,
+        "fingerprint_distance": 0.4548916933065839,
+        "certified_operator_norm_exclusion_radius": 0.3829107867876389,
+        "passes_tolerance": false
+      },
+      {
+        "index": 394,
+        "fingerprint_distance": 0.485084700471219,
+        "certified_operator_norm_exclusion_radius": 0.8175689540860416,
+        "passes_tolerance": false
+      },
+      {
+        "index": 395,
+        "fingerprint_distance": 0.5251153851544876,
+        "certified_operator_norm_exclusion_radius": 0.256705939052572,
+        "passes_tolerance": false
+      },
+      {
+        "index": 396,
+        "fingerprint_distance": 0.6332965196209892,
+        "certified_operator_norm_exclusion_radius": 0.2836622143568321,
+        "passes_tolerance": false
+      },
+      {
+        "index": 397,
+        "fingerprint_distance": 0.4538224337827586,
+        "certified_operator_norm_exclusion_radius": 0.4388492875960223,
+        "passes_tolerance": false
+      },
+      {
+        "index": 398,
+        "fingerprint_distance": 0.7570066856593712,
+        "certified_operator_norm_exclusion_radius": 0.8220553491321686,
+        "passes_tolerance": false
+      },
+      {
+        "index": 399,
+        "fingerprint_distance": 0.6671392543248095,
+        "certified_operator_norm_exclusion_radius": 0.4135383929510085,
+        "passes_tolerance": false
+      }
+    ]
+  },
+  "P276": {
+    "status": "[Proven] two-time semigroup consistency theorem and finite witnesses",
+    "times": [
+      0.2,
+      0.55
+    ],
+    "static": {
+      "relative_log_generator_defect": 1.8447014746955394e-15,
+      "commutator_residual": 1.3601825071757791e-16
+    },
+    "uniform_scaled_with_calibrated_clock": {
+      "relative_log_generator_defect": 1.764097637029579e-15,
+      "commutator_residual": 1.7860071305544555e-16
+    },
+    "shape_drift": {
+      "relative_log_generator_defect": 0.054073939662278254,
+      "commutator_residual": 0.008528611723247627
+    },
+    "mixture_memory_model": {
+      "relative_log_generator_defect": 0.01842918818236225,
+      "commutator_residual": 0.003985407948254228
+    },
+    "uncalibrated_scale_clock_degeneracy_residual": 2.2856846533740963e-16,
+    "theorem": "For symmetric positive-definite P1,P2 at calibrated times t1,t2, one homogeneous PSD generator exists iff the matrices commute and log(P2)/t2=log(P1)/t1; when it exists, A=-log(P1)/t1 is unique.",
+    "boundary": "Two matrices can reject a homogeneous semigroup but do not uniquely identify which adaptive, environmental, or apparatus-memory mechanism caused the defect."
+  },
+  "P277": {
+    "status": "[Proven] identifiability inside the frozen linear family; [Strong evidence] synthetic holdout",
+    "true_law": "driven_additive",
+    "true_parameters": [
+      0.24,
+      0.075
+    ],
+    "candidate_rows": [
+      {
+        "law": "static",
+        "fitted_parameters": [],
+        "train_mse": 0.00029977254343706744,
+        "holdout_mse": 0.00038841782475340934
+      },
+      {
+        "law": "relaxation",
+        "fitted_parameters": [
+          0.22449396705274943
+        ],
+        "train_mse": 1.55462687464105e-05,
+        "holdout_mse": 0.0004167646233568504
+      },
+      {
+        "law": "driven_additive",
+        "fitted_parameters": [
+          0.24037045750046973,
+          0.0750176006286153
+        ],
+        "train_mse": 3.441896242376757e-11,
+        "holdout_mse": 2.825357673978555e-10
+      },
+      {
+        "law": "multiplicative",
+        "fitted_parameters": [
+          0.00018737626668749048,
+          0.19123937841325184
+        ],
+        "train_mse": 0.00011629220959415482,
+        "holdout_mse": 0.0011623014142192064
+      }
+    ],
+    "holdout_winner": "driven_additive",
+    "design_rank_without_intervention": 1,
+    "design_rank_with_intervention": 2,
+    "verdict": "The supplied interventions raise the parameter-design rank from one to two and select the true member of the preregistered finite family.",
+    "boundary": "The candidate family and intervention direction are supplied. This does not derive a strict adaptive law or exclude mechanisms outside the panel."
+  },
+  "P278": {
+    "status": "[Strong evidence] preregistered synthetic nonlinear benchmark",
+    "control_count": 60,
+    "fin_metrics": {
+      "ensemble": "FIN",
+      "index": 0,
+      "delay5_r2": 0.24730724440298357,
+      "nonlinear_prediction_r2": 0.7106592751037498,
+      "narma10_r2": 0.6866741123279103,
+      "parity3_accuracy": 0.7547058823529412
+    },
+    "fin_percentiles": {
+      "delay5_r2": 0.4166666666666667,
+      "nonlinear_prediction_r2": 0.3,
+      "narma10_r2": 1.0,
+      "parity3_accuracy": 0.06666666666666667
+    },
+    "control_ranges": {
+      "delay5_r2": {
+        "minimum": 0.20943188346126584,
+        "median": 0.24997338540505465,
+        "maximum": 0.6807436143424503
+      },
+      "nonlinear_prediction_r2": {
+        "minimum": 0.6233689949629053,
+        "median": 0.8361198157362952,
+        "maximum": 0.9719354996206803
+      },
+      "narma10_r2": {
+        "minimum": 0.5466772843036347,
+        "median": 0.66265281218772,
+        "maximum": 0.6836858419092083
+      },
+      "parity3_accuracy": {
+        "minimum": 0.5523529411764706,
+        "median": 0.9547058823529411,
+        "maximum": 1.0
+      }
+    },
+    "tasks_on_which_fin_exceeds_all_controls": 1,
+    "task_count": 4,
+    "verdict": "FIN is assessed task by task against spectrum- and radius-matched controls; no ontology or general computational advantage follows."
+  },
+  "P279": {
+    "status": "[Proven] conditioned thermodynamic identity",
+    "supplied_axioms": {
+      "hamiltonian_gap": 1.3,
+      "temperature": 2.0,
+      "boltzmann_constant": 1.0,
+      "thermalization_channel_strength": 0.37
+    },
+    "relative_entropy_before_nats": 0.08058373049189964,
+    "relative_entropy_after_nats": 0.03102546478977913,
+    "information_ledger_loss_nats": 0.049558265702120505,
+    "free_energy_drop": 0.09911653140424082,
+    "maximum_gibbs_free_energy_identity_residual": 1.700029006457271e-16,
+    "information_to_energy_conversion_residual": 1.942890293094024e-16,
+    "landauer_one_bit_lower_bound": 1.3862943611198906,
+    "theorem": "For gamma=exp(-beta H)/Z, D(rho||gamma)=beta(F(rho)-F(gamma)). A decrease of relative entropy becomes a free-energy decrease only after H, T, and k_B are supplied.",
+    "boundary": "The supplied dimensional data are conversion axioms. They are not generated by strict FIN, and the identity does not prove a physical bath or reset protocol."
+  },
+  "P280": {
+    "status": "[Proven] conditioned product-torsor construction",
+    "rows": [
+      {
+        "scale_section": 0.5,
+        "orientation_section": -1,
+        "oriented_current": 0.015049333998608128,
+        "spectral_fingerprint_norm": 2.684542342015177,
+        "transition_reparameterization_residual": 0.0
+      },
+      {
+        "scale_section": 0.5,
+        "orientation_section": 1,
+        "oriented_current": -0.015049333998608128,
+        "spectral_fingerprint_norm": 2.684542342015177,
+        "transition_reparameterization_residual": 0.0
+      },
+      {
+        "scale_section": 1.7,
+        "orientation_section": -1,
+        "oriented_current": 0.015049333998608128,
+        "spectral_fingerprint_norm": 2.684542342015177,
+        "transition_reparameterization_residual": 3.568324553335473e-16
+      },
+      {
+        "scale_section": 1.7,
+        "orientation_section": 1,
+        "oriented_current": -0.015049333998608128,
+        "spectral_fingerprint_norm": 2.684542342015177,
+        "transition_reparameterization_residual": 3.568324553335473e-16
+      }
+    ],
+    "scale_fingerprint_invariance_residual": 8.270975252328749e-16,
+    "orientation_sign_pair_residual": 0.0,
+    "object": "Operational section s=(kappa,epsilon) of T_scale x T_orientation, with A_phys=kappa*A and J_phys=epsilon*J.",
+    "independence_theorem": "The product group R_{>0} x Z_2 acts independently: positive rescaling cannot select epsilon, and orientation reversal cannot set kappa. A section supplies both choices but generates neither.",
+    "boundary": "This is conditioned on external scale and orientation resources. It does not discharge QW-2191 or export a canonical physical unit."
+  }
+}

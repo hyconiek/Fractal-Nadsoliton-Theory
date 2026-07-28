@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "programs": "P281-P294",
+    "seed": 20260731,
+    "scope": "finite proofs, one dependency-free Lean certificate, and synthetic audits; no fabricated laboratory data, strict selector, physical unit, role transfer, or ToE closure"
+  },
+  "P281": {
+    "status": "[Proven] conditional compactness/existence; [Strong evidence] bounded recovery audit",
+    "frozen_model_order": 3,
+    "frozen_pole_window": [
+      0.55,
+      2.55
+    ],
+    "visible_poles": [
+      1.1710910205731502,
+      1.5263637131430885,
+      1.8883091818804103
+    ],
+    "visible_weights": [
+      1.3714541784670637,
+      1.1927171396640708,
+      0.19376516116565567
+    ],
+    "summaries": {
+      "1e-06": {
+        "median_maximum_relative_pole_error": 0.05914479828012241,
+        "p95_maximum_relative_pole_error": 0.17816222160884287,
+        "median_maximum_relative_weight_error": 1.2363818976896241,
+        "p95_maximum_relative_weight_error": 3.836133065385686,
+        "median_relative_curve_rmse": 9.245666445949076e-07,
+        "p95_relative_curve_rmse": 1.090280666134792e-06,
+        "median_minimum_fitted_pole_separation": 0.2941189238660661,
+        "p95_minimum_fitted_pole_separation": 0.3387173731061773
+      },
+      "0.0001": {
+        "median_maximum_relative_pole_error": 0.22161178398841486,
+        "p95_maximum_relative_pole_error": 0.530352474454618,
+        "median_maximum_relative_weight_error": 1.4194229616133858,
+        "p95_maximum_relative_weight_error": 4.870853943299359,
+        "median_relative_curve_rmse": 9.462966423082234e-05,
+        "p95_relative_curve_rmse": 0.00011080068202006953,
+        "median_minimum_fitted_pole_separation": 0.32360033195262017,
+        "p95_minimum_fitted_pole_separation": 0.7402110503523088
+      },
+      "0.001": {
+        "median_maximum_relative_pole_error": 0.3504144272298798,
+        "p95_maximum_relative_pole_error": 0.5303524744551268,
+        "median_maximum_relative_weight_error": 1.1377363652728982,
+        "p95_maximum_relative_weight_error": 4.615737380667986,
+        "median_relative_curve_rmse": 0.0009632661768520981,
+        "p95_relative_curve_rmse": 0.0011152735839044302,
+        "median_minimum_fitted_pole_separation": 0.12463177357221078,
+        "p95_minimum_fitted_pole_separation": 0.7786223308455719
+      }
+    },
+    "theorem": "With fixed pole count, a compact pole window, bounded nonnegative residues, and continuous least-squares loss, a minimizer exists. These priors prevent runaway poles but do not create uniform inverse stability near pole collisions or vanishing residues.",
+    "boundary": "Model order and spectral window are supplied regularization data. The audit is not a minimax-optimality theorem and does not identify invisible modes."
+  },
+  "P282": {
+    "status": "[Proven] machine-checked exact rational witness",
+    "lean_runtime": ".elan/toolchains/leanprover--lean4---v4.28.0/bin/lean",
+    "lean_version": "Lean (version 4.28.0, x86_64-unknown-linux-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)",
+    "source": "FIN_Programs_281_294_Schur_Core.lean",
+    "source_sha256": "bb2bb819a540f732f05b7ac2c5d325774f6f13bb810c457c6e8ee75fa70d8a4f",
+    "kernel_exit_code": 0,
+    "kernel_exit_zero": true,
+    "stdout": "(13 : Rat)/5\n(13 : Rat)/5",
+    "stderr": "",
+    "checked_statements": [
+      "identity reduction",
+      "positive rational pivots",
+      "nested Schur value 13/5",
+      "direct Schur value 13/5",
+      "exact nested/direct equality",
+      "positive reduced value"
+    ],
+    "boundary": "This dependency-free certificate checks one exact rational three-by-three witness. It is not the general Mathlib theorem for arbitrary positive matrices."
+  },
+  "P283": {
+    "status": "[Proven] Naimark/isometry realization and calibration rank; [Strong evidence] frozen detector audit",
+    "ideal_outcomes": 6,
+    "physical_record_outcomes_including_no_click": 7,
+    "dilation_shape": [
+      72,
+      12
+    ],
+    "isometry_residual": 2.144176779623353e-15,
+    "minimum_effect_eigenvalue": 0.016666666666666722,
+    "detector_model": {
+      "efficiency": 0.82,
+      "nearest_neighbor_cross_talk": 0.018,
+      "dark_probability_per_trial": 0.0002
+    },
+    "confusion_column_stochastic_residual": 0.0,
+    "calibrated_response_rank": 5,
+    "calibrated_response_condition_number": 1.0581896551724137,
+    "shots": 500000,
+    "relative_coefficient_error": 0.15849524040500002,
+    "theorem": "V=stack_y sqrt(E_y) is an isometry because V*V=sum_y E_y=I. Projective measurement of the outcome ancilla realizes the POVM. A known full-rank detector confusion channel preserves identifiability on the five-current response subspace.",
+    "boundary": "Naimark dilation proves realizability in abstract quantum mechanics. It is not an optical mesh, detector calibration, or built apparatus."
+  },
+  "P284": {
+    "status": "[Proven] PSD rank-restoring complement theorem; [Refuted] as exact strict fixed point",
+    "frozen_rule": "R(B)=E B E* + mean(nonzero_eigenvalues(B))*(I-E E*)",
+    "rows": [
+      {
+        "context_size": 6,
+        "alpha_mean_coarse_nonzero_eigenvalue": 1.5813457542732323,
+        "bare_rank": 5,
+        "completed_rank": 11,
+        "minimum_completed_eigenvalue": 1.659689062344285e-16,
+        "row_sum_residual": 2.1065000811460206e-15,
+        "bare_best_fit_residual": 0.7018680792267544,
+        "completed_best_fit_residual": 0.2724336691827167,
+        "completed_projective_fingerprint_distance": 0.45687364430846533
+      },
+      {
+        "context_size": 3,
+        "alpha_mean_coarse_nonzero_eigenvalue": 1.4035958634839671,
+        "bare_rank": 2,
+        "completed_rank": 11,
+        "minimum_completed_eigenvalue": -5.551115123126048e-17,
+        "row_sum_residual": 2.2093159237770886e-15,
+        "bare_best_fit_residual": 0.8690510101895691,
+        "completed_best_fit_residual": 0.29533450416642737,
+        "completed_projective_fingerprint_distance": 1.0926296144790089
+      }
+    ],
+    "theorem": "If B is a connected n-state Laplacian and E maps its constant mode to the twelve-state constant mode, the supplied complement term is PSD, restores rank 11, and preserves the global null mode. It is determined from B, not from the strict target.",
+    "boundary": "Rank restoration is not RG closure. The frozen isotropic complement does not reproduce the strict fingerprint and no physical coarse-graining law selects it."
+  },
+  "P285": {
+    "status": "[Proven] conditioned two-step quantum process ledger",
+    "pairs_audited": 300,
+    "minimum_losses": {
+      "first_instrument_loss": 0.0007214258465374768,
+      "intermediate_channel_loss": 0.0015526371614021693,
+      "second_instrument_loss": 0.00020440514448096634
+    },
+    "median_total_discarded_information": 0.19834552394123542,
+    "maximum_decomposition_residual": 4.440892098500626e-16,
+    "maximum_chain_record_residual": 2.42861286636753e-16,
+    "theorem": "Sequential application of quantum relative-entropy data processing and the classical chain rule decomposes input distinguishability into first-instrument loss, channel loss, second-instrument loss, joint-record divergence, and final conditional quantum divergence.",
+    "boundary": "The instruments and branch-dependent channels are supplied. This is a finite two-step process tree, not a general process-tensor reconstruction theorem or a FIN-derived bath."
+  },
+  "P286": {
+    "status": "[Refuted] as sufficient legacy-to-strict completion atom",
+    "frozen_atom": "K_fc(d)=alpha_geo*cos(pi*d/4+pi/6)/(1+beta_tors*d**D_f), with D_f=alpha_geo=4 ln 2",
+    "candidate_weights": [
+      0.7104938272793256,
+      -1.297623471914599,
+      -2.212750359957738,
+      -1.6368261967978017,
+      -0.3843850622861555,
+      0.5688245579956691
+    ],
+    "minimum_mean_zero_eigenvalue": -17.328241680974976,
+    "minimum_hidden_block_eigenvalue": -12.576632196066338,
+    "positive_generator": false,
+    "strict_projective_fingerprint_defect": null,
+    "normalized_self_energy_defect": null,
+    "verdict": "Replacing linear distance by the canonical legacy fractal power does not by itself enter the strict positive-generator class.",
+    "boundary": "Exactly one legacy-sourced nonlinear compression atom was tested. No positivity shift, strict parameter fit, selector, amplitude absorption, or role transfer was added."
+  },
+  "P287": {
+    "status": "[Executed no-admission certificate: external evidence absent]",
+    "production_manifest_count": 0,
+    "production_manifest_paths": [],
+    "template_event_rows": [
+      0,
+      0
+    ],
+    "p242_authorized": false,
+    "verdict": "No independently signed production event bundle is present. The confirmatory P242 pipeline remains blocked.",
+    "boundary": "Files whose research-program numbers begin with p241 are not P241 laboratory custody packages."
+  },
+  "P288": {
+    "status": "[Strong evidence] frozen detector-level likelihood audit",
+    "gradient_norm": 1.7422018568086417,
+    "detector_model": {
+      "efficiency": 0.78,
+      "visibility": 0.91,
+      "dark_probability": 0.0002,
+      "cross_talk": 0.015
+    },
+    "shots_per_flux": 100000,
+    "optimal_tested_h": 0.14811136718755005,
+    "optimal_median_relative_error": 0.011803415652145773,
+    "optimal_p95_relative_error": 0.027732537821737808,
+    "grid": [
+      {
+        "h": 0.004,
+        "relative_noiseless_bias": 8.09402651143296e-06,
+        "median_relative_error": 0.2939863284294423,
+        "p95_relative_error": 0.8306491367630723,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.00528099823159876,
+        "relative_noiseless_bias": 1.4108339436765478e-05,
+        "median_relative_error": 0.22371330096646788,
+        "p95_relative_error": 0.6699382250917093,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.006972235580537307,
+        "relative_noiseless_bias": 2.459158921385639e-05,
+        "median_relative_error": 0.1718816836116464,
+        "p95_relative_error": 0.4470491507046591,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.009205090942776866,
+        "relative_noiseless_bias": 4.286435335395681e-05,
+        "median_relative_error": 0.11041438324474247,
+        "p95_relative_error": 0.33123125280585825,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.012153017247627594,
+        "relative_noiseless_bias": 7.471437848031073e-05,
+        "median_relative_error": 0.09294991124392557,
+        "p95_relative_error": 0.2564161865014611,
+        "plus_click_probability": 0.7801999999999999
+      },
+      {
+        "h": 0.016045015648327637,
+        "relative_noiseless_bias": 0.00013022939293217488,
+        "median_relative_error": 0.07306665928764211,
+        "p95_relative_error": 0.22669391013692886,
+        "plus_click_probability": 0.7801999999999999
+      },
+      {
+        "h": 0.021183424816198164,
+        "relative_noiseless_bias": 0.0002269909117393055,
+        "median_relative_error": 0.05972089704583833,
+        "p95_relative_error": 0.13865167369606338,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.027967407248386943,
+        "relative_noiseless_bias": 0.0003956385064409502,
+        "median_relative_error": 0.04113586920293935,
+        "p95_relative_error": 0.12592239663928625,
+        "plus_click_probability": 0.7801999999999999
+      },
+      {
+        "h": 0.03692395705528344,
+        "relative_noiseless_bias": 0.0006895603918848007,
+        "median_relative_error": 0.02901273618380474,
+        "p95_relative_error": 0.08285239980027555,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.04874883797814509,
+        "relative_noiseless_bias": 0.001201759591171429,
+        "median_relative_error": 0.02244547717424408,
+        "p95_relative_error": 0.057464201647434286,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.06436063178876966,
+        "relative_noiseless_bias": 0.002094176438261239,
+        "median_relative_error": 0.01668830735681817,
+        "p95_relative_error": 0.04993592896487592,
+        "plus_click_probability": 0.7802000000000001
+      },
+      {
+        "h": 0.08497209566526787,
+        "relative_noiseless_bias": 0.0036485680723730503,
+        "median_relative_error": 0.01258272899280614,
+        "p95_relative_error": 0.033788674226098096,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.11218437173588004,
+        "relative_noiseless_bias": 0.006354492588089751,
+        "median_relative_error": 0.011904830315811878,
+        "p95_relative_error": 0.031982230552554954,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.14811136718755005,
+        "relative_noiseless_bias": 0.011060544194870696,
+        "median_relative_error": 0.011803415652145773,
+        "p95_relative_error": 0.027732537821737808,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.1955439670492816,
+        "relative_noiseless_bias": 0.019231535477995644,
+        "median_relative_error": 0.018665736482596285,
+        "p95_relative_error": 0.031133857316972238,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.2581668360467655,
+        "relative_noiseless_bias": 0.033377410267482664,
+        "median_relative_error": 0.03314878482482122,
+        "p95_relative_error": 0.04295340725585432,
+        "plus_click_probability": 0.7802
+      },
+      {
+        "h": 0.3408446511551038,
+        "relative_noiseless_bias": 0.05774287093382646,
+        "median_relative_error": 0.05789734988926498,
+        "p95_relative_error": 0.06421753538267021,
+        "plus_click_probability": 0.7802000000000001
+      },
+      {
+        "h": 0.45,
+        "relative_noiseless_bias": 0.09933774963708634,
+        "median_relative_error": 0.099424128693995,
+        "p95_relative_error": 0.10423903193607603,
+        "plus_click_probability": 0.7802
+      }
+    ],
+    "boundary": "The categorical click likelihood is detector-level but synthetic. Its constants are supplied and do not calibrate a real instrument."
+  },
+  "P289": {
+    "status": "[Strong evidence] importance-sampled ensemble probability",
+    "null_ensemble": "Dirichlet(1,...,1) normalized positive circulant weights",
+    "tolerance": 0.02,
+    "importance_sample_count": 240000,
+    "proposal_concentration": 350.0,
+    "importance_event_count": 1540,
+    "estimated_false_positive_probability": 2.8719829918595482e-08,
+    "log_estimated_probability": -17.365678014838398,
+    "estimated_standard_error": 8.201821308067059e-10,
+    "event_effective_sample_size": 1219.9161468297002,
+    "direct_sample_count": 120000,
+    "direct_event_count": 0,
+    "direct_zero_event_rule_of_three_upper_95": 2.5e-05,
+    "minimum_direct_distance": 0.044005504257223625,
+    "boundary": "The estimate is specific to the declared Dirichlet null and importance proposal. It is not distribution-free and requires ESS and proposal-sensitivity checks before use as a discovery threshold."
+  },
+  "P290": {
+    "status": "[Proven] distinct frozen noiseless templates; [Strong evidence] synthetic causal classification",
+    "times": [
+      0.15,
+      0.35,
+      0.65
+    ],
+    "mechanisms": [
+      "homogeneous",
+      "generator_drift",
+      "environment_mixture",
+      "apparatus_lag"
+    ],
+    "intervention_strength": 0.12,
+    "trials_per_class": 500,
+    "relative_feature_noise": 0.035,
+    "classification_accuracy": 1.0,
+    "minimum_standardized_template_separation": 0.618072448658385,
+    "confusion_rows": [
+      {
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "homogeneous",
+        "count": 500
+      },
+      {
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "generator_drift",
+        "count": 500
+      },
+      {
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "environment_mixture",
+        "count": 500
+      },
+      {
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 500
+      }
+    ],
+    "boundary": "Three times plus one intervention separate only the frozen four-template family. Arbitrary time-dependent generators, baths, and apparatus kernels remain nonidentifiable."
+  },
+  "P291": {
+    "status": "[Strong evidence] frozen maximin intervention search",
+    "candidate_count": 244,
+    "sequence_length": 160,
+    "amplitude_constraint": 1.0,
+    "best_design": {
+      "design": "single_pulse",
+      "input_energy": 160.0,
+      "information_minimum_eigenvalue": 8.758123183988685,
+      "information_determinant": 3026.943897981294,
+      "information_condition_number": 39.46228903073736
+    },
+    "named_designs": {
+      "zero": {
+        "design": "zero",
+        "input_energy": 0.0,
+        "information_minimum_eigenvalue": 0.0,
+        "information_determinant": 0.0,
+        "information_condition_number": Infinity
+      },
+      "single_pulse": {
+        "design": "single_pulse",
+        "input_energy": 160.0,
+        "information_minimum_eigenvalue": 8.758123183988685,
+        "information_determinant": 3026.943897981294,
+        "information_condition_number": 39.46228903073736
+      },
+      "sinusoid": {
+        "design": "sinusoid",
+        "input_energy": 79.5,
+        "information_minimum_eigenvalue": 0.8380286249997753,
+        "information_determinant": 10.314852389256188,
+        "information_condition_number": 14.687413123129145
+      },
+      "prbs": {
+        "design": "prbs",
+        "input_energy": 160.0,
+        "information_minimum_eigenvalue": 0.19362484944716313,
+        "information_determinant": 1.502571892442348,
+        "information_condition_number": 40.078649071904145
+      }
+    },
+    "verdict": "A persistently exciting signed sequence maximizes the worst local parameter direction within the frozen two-parameter law.",
+    "boundary": "The search is local at supplied parameters and restricted to one adaptive law, one direction, and a finite input family."
+  },
+  "P292": {
+    "status": "[Strong evidence] preregistered primary-task replication",
+    "replications": 24,
+    "controls_per_replication": 12,
+    "primary_task": "narma10_r2",
+    "primary_win_count_against_all_controls": 16,
+    "primary_win_rate": 0.6666666666666666,
+    "median_primary_percentile": 1.0,
+    "median_advantage_over_best_control": NaN,
+    "p05_advantage_over_best_control": NaN,
+    "secondary_median_percentiles": {
+      "delay5_r2": 0.4166666666666667,
+      "nonlinear_prediction_r2": 0.3333333333333333,
+      "parity3_accuracy": 0.08333333333333333
+    },
+    "boundary": "NARMA10 was frozen as the primary replication target after P278. The benchmark remains synthetic, software-specific, and dependent on input coupling and hyperparameters."
+  },
+  "P293": {
+    "status": "[Proven] conditioned finite-step erasure ledger",
+    "supplied_resources": {
+      "temperature": 2.0,
+      "boltzmann_constant": 1.0,
+      "maximum_gap": 24.0,
+      "ideal_fresh_gibbs_bath_qubits": 800,
+      "classical_work_meter": true
+    },
+    "steps": 800,
+    "final_excited_probability": 6.144174602214718e-06,
+    "information_erased_nats": 0.693067306271241,
+    "total_work": 1.3936438951670336,
+    "heat_dumped_to_bath": 1.3936438951670378,
+    "generalized_landauer_bound": 1.386134612542482,
+    "work_above_bound": 0.007509282624551528,
+    "total_entropy_production": 0.0037546413122775224,
+    "energy_balance_residual": 4.218847493575595e-15,
+    "theorem": "Each gap change is work and each Gibbs collision is heat. Summing the first law gives Delta U=W+Q; summing relative-entropy contraction gives W >= k_B T times the erased information, with finite-step dissipation.",
+    "boundary": "The bath temperature, Hamiltonian control, fresh Gibbs ancillas, and work meter are supplied physical resources. They are not generated by the strict FIN operator."
+  },
+  "P294": {
+    "status": "[Proven] finite product-torsor section theorem",
+    "finite_model": "G=Z3 x Z2 acting regularly on T=G",
+    "group_order": 6,
+    "equivariant_sections_from_trivial_input": 0,
+    "equivariant_maps_from_resource_torsor": 6,
+    "pointed_equivariant_maps": 1,
+    "theorem": "A free nontrivial G-torsor has no G-fixed point, so no equivariant section exists from a trivial input. Equivariant self-maps of the regular torsor are translations; specifying a base point leaves exactly the identity map.",
+    "new_object": "Pointed Physicalization Resource (T,t0): a scale-orientation torsor together with a supplied base point.",
+    "boundary": "Pointing the torsor makes a unique operational section possible but does not derive the point, a strict selector, or a physical unit."
+  }
+}
