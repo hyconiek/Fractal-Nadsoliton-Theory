@@ -1,0 +1,1145 @@
+
+\documentclass[11pt,a4paper,openany]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage[margin=22mm,headheight=23pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{finblue}{HTML}{1F5A99}
+\definecolor{fingreen}{HTML}{19733A}
+\definecolor{finorange}{HTML}{D55E00}
+\definecolor{finred}{HTML}{A61B1B}
+\definecolor{finviolet}{HTML}{6A3D9A}
+\definecolor{fingray}{HTML}{4D4D4D}
+
+\hypersetup{
+  unicode=true,
+  colorlinks=true,
+  linkcolor=finblue,
+  citecolor=fingreen,
+  urlcolor=finblue,
+  pdftitle={FIN Research Programs P281--P294},
+  pdfauthor={Krzysztof Żuchowski},
+  pdfsubject={Regularized spectral inference, resource-explicit physics, and the pointed-torsor boundary},
+  pdfkeywords={FIN, spectral operator, Stieltjes inverse, Schur complement, Naimark dilation, process ledger, mechanism identification, Landauer erasure, torsor}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small FIN Programs P281--P294}
+\fancyhead[R]{\small Release 10.26}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep,leftmargin=2em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\emergencystretch=3em
+\newcommand{\one}{\bm 1}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\statusProven}{\textcolor{fingreen}{[Proven]}}
+\newcommand{\statusStrong}{\textcolor{finblue}{[Strong evidence]}}
+\newcommand{\statusModerate}{\textcolor{finviolet}{[Moderate evidence]}}
+\newcommand{\statusWeak}{\textcolor{fingray}{[Weak evidence]}}
+\newcommand{\statusSpeculative}{\textcolor{finorange}{[Speculative]}}
+\newcommand{\statusRefuted}{\textcolor{finred}{[Refuted]}}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{8mm}
+{\Large\bfseries FIN --- Release 10.26\par}
+\vspace{10mm}
+{\Huge\bfseries Research Programs P281--P294\par}
+\vspace{7mm}
+{\Large Regularized spectral inference, resource-explicit physics,\\
+and the pointed-torsor boundary\par}
+\vspace{15mm}
+{\Large Krzysztof \.Zuchowski\par}
+\vspace{2mm}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+\vspace{2mm}
+{\normalsize ORCID:
+\href{https://orcid.org/0009-0002-0909-3613}{0009-0002-0909-3613}\par}
+\vspace{8mm}
+{\large 29 July 2026\par}
+{\normalsize Publication --- Preprint; Version 1.0.0\par}
+\vfill
+\begin{minipage}{0.91\textwidth}
+\small
+\textbf{Central result.}
+The strict finite spectral generator supports exact mathematical and
+operational constructions, but physicalization still requires explicitly
+supplied operational, dimensional, sector, and pointing resources.
+
+\medskip
+\textbf{New boundary object.}
+\[
+\mathfrak P=(T,t_0),
+\]
+the Pointed Physicalization Resource, removes an operational torsor ambiguity
+after a point is supplied. Equivariance alone cannot derive that point.
+
+\medskip
+\textbf{Repository.}
+\url{https://github.com/hyconiek/Fractal-Nadsoliton-Theory}
+
+\textbf{License.} CC BY 4.0.
+\end{minipage}
+\vfill
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\chapter*{Publication statement}
+\addcontentsline{toc}{chapter}{Publication statement}
+This monograph reports all executed Programs P281--P294 and recommends
+Programs P295--P308. Proof, simulation, conditional construction, refutation,
+and missing empirical evidence are kept distinct. The strict and legacy
+kernels remain separated, QW-2191 remains open, and no role transfer,
+dimensional emergence, physical closure, or Theory of Everything claim is
+made.
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter*{Confidence convention}
+\addcontentsline{toc}{chapter}{Confidence convention}
+
+\begin{itemize}
+\item 
+\textbf{\statusProven{}} --- an analytic identity, exact finite theorem, or machine-checked statement in the explicitly declared class.
+
+\item 
+\textbf{\statusStrong{}} --- a reproducible synthetic audit with frozen inputs, controls, metrics, and stop rules.
+
+\item 
+\textbf{\statusModerate{}} --- a stable conclusion still depending on an additional equivalence, source, or modeling assumption.
+
+\item 
+\textbf{\statusSpeculative{}} --- a proposed object or program without sufficient proof.
+
+\item 
+\textbf{\statusRefuted{}} --- an explicit counterexample or no-go theorem in the declared class.
+
+\end{itemize}
+
+A proof of a mathematical statement is not proof that nature realizes its hypotheses.
+
+\chapter{Executive summary}
+
+All fourteen Programs P281--P294 were executed. The suite contains one Lean-kernel certificate, exact finite theorems, importance sampling, and synthetic detector, dynamics, adaptation, reservoir, and thermodynamic audits. Nineteen regression and boundary tests pass.
+
+The main results are:
+
+\begin{enumerate}
+\item 
+Compact pole and residue priors prevent catastrophic Stieltjes fits from escaping to arbitrarily large poles, but do not cure the inverse problem. At relative noise \(10^{-6}\), the median maximum pole error is \(5.9\%\) and the median maximum residue error is \(124\%\). \textbf{\statusProven{}} existence of a constrained minimizer; \textbf{\statusStrong{}} for the frozen recovery audit.
+
+\item 
+Lean 4.28 machine-checks identity reduction, positive rational pivots, nested and direct Schur values \(13/5\), and their exact equality for a rational \(3\times3\) witness. This is a real kernel check, but not the general positive-matrix theorem. \textbf{\statusProven{}}
+
+\item 
+The minimal six-outcome current POVM has an exact Naimark isometry
+
+\[
+   V=\begin{bmatrix}\sqrt{E_1}\\ \vdots\\ \sqrt{E_6}\end{bmatrix},
+   \qquad V^\ast V=I.
+   \]
+
+A frozen loss/\allowbreak{}crosstalk/\allowbreak{}dark-count channel preserves response rank five and has calibrated condition number \(1.058\). \textbf{\statusProven{}} algebraically; \textbf{\statusStrong{}} for the synthetic count audit.
+
+\item 
+A non-target-coded isotropic complement restores a coarse lifted Laplacian from rank \(n-1\) to rank eleven and preserves the global null mode. It reduces best-fit residuals, but its strict fingerprint defects are \(0.457\) and \(1.093\). Rank restoration is not an RG fixed point. \textbf{\statusProven{}} /\allowbreak{} \textbf{\statusRefuted{}} as exact strict closure.
+
+\item 
+A two-step quantum process tree satisfies an exact information ledger: first-instrument loss, channel loss, second-instrument loss, joint-record divergence, and final conditional divergence sum to the input relative entropy. Maximum residual is \(4.44\times10^{-16}\). \textbf{\statusProven{}} under the supplied quantum instruments and channels.
+
+\item 
+The single legacy-sourced fractal compression atom
+
+\[
+   K_{\rm fc}(d)
+   =
+   \frac{\alpha_{\rm geo}
+   \cos(\pi d/4+\pi/6)}
+   {1+\beta_{\rm tors}d^{D_f}},
+   \qquad D_f=\alpha_{\rm geo}=4\ln2,
+   \]
+
+has minimum mean-zero eigenvalue \(-17.328\). It fails before strict spectral matching. \textbf{\statusRefuted{}} as a sufficient completion atom.
+
+\item 
+No production P241 laboratory bundle is present. P242 remains blocked. \textbf{[Executed no-admission certificate]}
+
+\item 
+An event-level click likelihood with efficiency, visibility, dark counts, and crosstalk gives an interior two-flux optimum \(h=0.148111\). Median relative error is \(1.18\%\). The detector constants are synthetic. \textbf{\statusStrong{}}
+
+\item 
+For the explicitly declared \(\operatorname{Dirichlet}(1,\ldots,1)\) positive-circulant null ensemble, three importance proposals estimate the strict fingerprint false-positive probability as approximately
+
+\[
+   2.9\times10^{-8}
+   \]
+
+at tolerance \(0.02\). Proposal estimates differ by only a factor \(1.13\), with central event ESS \(583\). This is ensemble-specific, not distribution-free. \textbf{\statusStrong{}}
+
+\item 
+Three calibrated time slices plus one intervention distinguish four frozen mechanism templates---homogeneous dynamics, generator drift, environmental mixture, and apparatus lag---with accuracy \(96.9\%\) at reference feature noise \(0.20\), falling to \(91.5\%\) at noise \(0.35\). \textbf{[Strong evidence]} inside the finite panel.
+
+\item 
+A maximin search over 244 intervention sequences finds that a balanced long two-level pulse gives the largest worst-direction information eigenvalue, \(8.758\), for the frozen two-parameter adaptive law. Passive observation has zero information in one parameter direction. \textbf{[Strong evidence]}
+
+\item 
+The previously favorable NARMA10 result is only partially replicated: FIN exceeds all twelve controls in 13 of 24 independent input realizations. The median advantage over the best control is \(0.000962\), but its fifth percentile is \(-0.00713\). The effect is task-specific and not universal. \textbf{\statusStrong{}}
+
+\item 
+A finite-step collision-model erasure protocol closes the resource ledger: work \(1.39364\), heat dumped \(1.39364\), generalized Landauer bound \(1.38613\), positive dissipation \(0.00751\), and first-law residual \(4.22\times10^{-15}\). Every dimensional resource is supplied. \textbf{\statusProven{}}, conditional.
+
+\item 
+For the regular product torsor \(G=\mathbb Z_3\times\mathbb Z_2\), there are zero equivariant sections from a trivial input, six equivariant torsor self-maps, and exactly one pointed equivariant map. This constructs the \textbf{Pointed Physicalization Resource} and proves that pointing enables uniqueness but does not derive the point. \textbf{\statusProven{}}
+
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_281_294_Figures/p281_p283_recovery_povm.png}
+\caption{Bounded Stieltjes recovery and the current POVM under a calibrated detector channel.}
+\end{figure}
+
+\chapter{Scope and current state map}
+
+The strict finite generator remains
+
+\[
+W_{xy}=K_{\rm strict}(d(x,y)),
+\qquad
+A=\operatorname{diag}(W\mathbf1)-W,
+\]
+
+with
+
+\[
+A=A^\ast,\qquad A\mathbf1=0,\qquad A\succeq0.
+\]
+
+The mathematical core is
+
+\[
+(A,\mathcal C),
+\]
+
+where \(\mathcal C\) is the context/\allowbreak{}Schur-reduction category. An experiment requires an operational package \(\mathfrak O\), and dimensional physics requires conversion and sector resources:
+
+\[
+(A,\mathcal C)
+\longrightarrow
+(A,\mathcal C,\mathfrak O)
+\longrightarrow
+(A,\mathcal C,\mathfrak O,\mathfrak C,\mathfrak S).
+\]
+
+The ontology remains:
+
+\[
+\text{nadsoliton}
+\to
+\text{light}
+\to
+\text{matter}
+\to
+\text{emergent observer}.
+\]
+
+The nadsoliton is treated internally as primordial information in a solitonic state. No lower informational substrate is introduced.
+
+The legacy kernel remains an intermediate bridge object. No legacy physical role is transferred to strict, and QW-2191 remains open.
+
+\chapter{Results matrix}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.100\textwidth}p{0.307\textwidth}p{0.161\textwidth}p{0.292\textwidth}@{}}
+\toprule
+\textbf{Program} & \textbf{Result} & \textbf{Status} & \textbf{Principal boundary} \\
+\midrule
+\endhead
+P281 & compact bounded Stieltjes recovery & \statusProven{} /\allowbreak{} \statusStrong{} & regularization prevents escape, not ill-conditioning \\
+P282 & Lean rational Schur certificate & \statusProven{} & not general Mathlib theorem \\
+P283 & Naimark current readout with detector channel & \statusProven{} /\allowbreak{} \statusStrong{} & no physical mesh or calibration \\
+P284 & rank-restoring complement RG & \statusProven{} /\allowbreak{} \statusRefuted{} & rank restoration is not strict closure \\
+P285 & two-step quantum process ledger & \statusProven{}, conditional & supplied instruments/\allowbreak{}channels \\
+P286 & legacy fractal compression atom & \statusRefuted{} & one atom only; no generic bridge no-go \\
+P287 & external evidence admission & no admission & no production P241 bundle \\
+P288 & detector-level flux design & \statusStrong{} & synthetic detector constants \\
+P289 & importance-sampled false-positive probability & \statusStrong{} & declared ensemble only \\
+P290 & three-time mechanism classification & \statusStrong{} & frozen four-class panel \\
+P291 & maximin intervention design & \statusStrong{} & local finite candidate search \\
+P292 & NARMA10 replication & \statusStrong{} & 13/\allowbreak{}24 wins, not universal \\
+P293 & collision-model erasure ledger & \statusProven{}, conditional & all physical resources supplied \\
+P294 & pointed product-torsor theorem & \statusProven{} & point supplied, not derived \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\chapter{P281 --- Compactly regularized Stieltjes inverse}
+
+For three visible atoms,
+
+\[
+s(z)=\sum_{j=1}^{3}\frac{w_j}{z+\mu_j},
+\qquad
+w_j\ge0.
+\]
+
+P281 freezes:
+
+\[
+\mu_j\in[0.55,2.55],
+\qquad
+0\le w_j\le4,
+\]
+
+the model order \(r=3\), three initial grids, and a robust least-squares loss.
+
+\section{Existence theorem}
+
+The feasible parameter set is compact and the loss is continuous. Therefore a global minimizer exists.
+
+This theorem excludes the runaway-pole pathology of the unconstrained parameterization. It does not imply uniqueness of the fitted parameters, uniform inverse stability, or accurate residue recovery.
+
+\section{Recovery results}
+
+\begin{center}
+\begingroup\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.187\textwidth}p{0.181\textwidth}p{0.139\textwidth}p{0.189\textwidth}p{0.164\textwidth}@{}}
+\toprule
+\textbf{Relative noise} & \textbf{Median maximum pole error} & \textbf{95\% pole error} & \textbf{Median maximum residue error} & \textbf{95\% residue error} \\
+\midrule
+\endhead
+\(10^{-6}\) & 0.0591 & 0.1782 & 1.2364 & 3.8361 \\
+\(10^{-4}\) & 0.2216 & 0.5304 & 1.4194 & 4.8709 \\
+\(10^{-3}\) & 0.3504 & 0.5304 & 1.1377 & 4.6157 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The fitted response curve remains accurate at the noise scale, even when the individual residues are wrong. This is a direct demonstration of sloppiness: many pole-residue combinations produce nearly indistinguishable responses.
+
+\textbf{Verdict.} Compact priors convert catastrophic numerical divergence into bounded ambiguity. They do not solve the inverse problem. Multi-probe operator-valued data are now a higher priority than further tuning of a scalar trace fit.
+
+\chapter{P282 --- Lean rational Schur certificate}
+
+The dependency-free Lean source defines the rational symmetric matrix
+
+\[
+M=
+\begin{pmatrix}
+3&-1&0\\
+-1&3&-1\\
+0&-1&2
+\end{pmatrix}.
+\]
+
+Lean 4.28 machine-checks:
+
+\[
+\operatorname{Schur}_{3\to1}^{\rm nested}(M)
+=
+\operatorname{Schur}_{3\to1}^{\rm direct}(M)
+=
+\frac{13}{5},
+\]
+
+together with positive pivots and a positive reduced value.
+
+The kernel exits with code zero. There are no admitted axioms, placeholders, or uncompiled proof terms in the certificate.
+
+\textbf{Boundary.} This is an exact witness-level formalization. Without Mathlib it does not prove the general theorem for arbitrary finite positive matrices. P296 should formalize that theorem.
+
+\chapter{P283 --- Loss-augmented Naimark current readout}
+
+For the six effects \(E_y\) constructed in P269, define
+
+\[
+V:\mathbb C^{12}\to\mathbb C^6\otimes\mathbb C^{12},
+\qquad
+V\psi=\sum_y |y\rangle\sqrt{E_y}\psi.
+\]
+
+Then
+
+\[
+V^\ast V=\sum_yE_y=I.
+\]
+
+Thus ancilla projective measurement realizes the POVM.
+
+Certificate:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Result} \\
+\midrule
+\endhead
+dilation shape & \(72\times12\) \\
+isometry residual & \(2.14\times10^{-15}\) \\
+minimum effect eigenvalue & 0.0166667 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The detector channel supplies:
+
+\[
+\eta=0.82,\qquad
+c_{\rm xtalk}=0.018,\qquad
+p_{\rm dark}=2\times10^{-4}.
+\]
+
+A seventh record outcome represents no click.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Result} \\
+\midrule
+\endhead
+column-stochastic residual & 0 \\
+calibrated response rank & 5 \\
+calibrated condition number & 1.05819 \\
+shots & 500,000 \\
+relative current-coefficient error & 0.15850 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The large coefficient error is caused by weak current contrast, not loss of rank.
+
+\textbf{Verdict.} The measurement is realizable in abstract quantum mechanics and remains identifiable after the declared detector channel. A physical optical or qubit compilation, calibration uncertainty, and drift model remain absent.
+
+\chapter{P284 --- Isotropic complement RG}
+
+For a coarse generator \(B\) and isometry \(E\), define one frozen, non-target-coded completion:
+
+\[
+\mathcal R(B)
+=
+EBE^\ast
++
+\overline\lambda(B)(I-EE^\ast),
+\]
+
+where \(\overline\lambda(B)\) is the mean nonzero eigenvalue of \(B\).
+
+If \(B\) is a connected Laplacian and \(E\) sends its constant mode to the global constant mode, then:
+
+\begin{itemize}
+\item 
+\(\mathcal R(B)\succeq0\);
+
+\item 
+\(\mathcal R(B)\mathbf1=0\);
+
+\item 
+\(\operatorname{rank}\mathcal R(B)=11\).
+
+\end{itemize}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.149\textwidth}p{0.194\textwidth}p{0.228\textwidth}p{0.288\textwidth}@{}}
+\toprule
+\textbf{Coarse size} & \textbf{Bare residual} & \textbf{Completed residual} & \textbf{Strict fingerprint defect} \\
+\midrule
+\endhead
+6 & 0.70187 & 0.27243 & 0.45687 \\
+3 & 0.86905 & 0.29533 & 1.09263 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_281_294_Figures/p284_p286_rg_bridge.png}
+\caption{Complement RG rank restoration and the failed one-atom fractal legacy completion.}
+\end{figure}
+
+\textbf{Verdict.} Complement dynamics repairs the rank obstruction from P270 and substantially improves a Frobenius fit. It does not reproduce the strict spectral fingerprint. The complement is an admissible mathematical object, not a selected physical coarse-graining law.
+
+\chapter{P285 --- Two-step quantum process information ledger}
+
+Let the first instrument produce \(y\), a branch channel act conditionally on \(y\), and a second instrument produce \(z\). Sequential data processing and the classical chain rule give
+
+\[
+\begin{aligned}
+D(\rho\Vert\sigma)
+={}&
+\mathcal L_1
++\mathcal L_{\rm channel}
++\mathcal L_2\\
+&+D(p_{yz}\Vert q_{yz})
++\sum_{y,z}p_{yz}
+D(\rho_{yz}\Vert\sigma_{yz}).
+\end{aligned}
+\]
+
+Audit over 300 state pairs:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Result} \\
+\midrule
+\endhead
+minimum first-instrument loss & 0.000721 \\
+minimum channel loss & 0.001553 \\
+minimum second-instrument loss & 0.000204 \\
+median total discarded information & 0.198346 nat \\
+maximum ledger residual & \(4.44\times10^{-16}\) \\
+maximum record-chain residual & \(2.43\times10^{-16}\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\textbf{Verdict.} The one-step ledger extends consistently to a finite multitime process tree. The instruments and branch channels are supplied. A general process-tensor theorem and experimental reconstruction remain open.
+
+\chapter{P286 --- Legacy fractal-compression atom}
+
+Exactly one new legacy-sourced atom was admitted:
+
+\[
+1+\beta_{\rm tors}d
+\longmapsto
+1+\beta_{\rm tors}d^{D_f},
+\qquad
+D_f=\alpha_{\rm geo}=4\ln2.
+\]
+
+No strict parameter, positivity shift, selector, or role formula was imported.
+
+Results:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Quantity} & \textbf{Result} \\
+\midrule
+\endhead
+minimum mean-zero eigenvalue & \(-17.32824\) \\
+minimum hidden-block eigenvalue & \(-12.57663\) \\
+positive generator & no \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The atom therefore fails before a strict fingerprint or positive Stieltjes memory comparison is admissible.
+
+\textbf{Verdict.} Canonical fractal exponentiation of the legacy distance is not the missing completion. This is a no-go for one atom, not for every possible legacy-to-strict bridge.
+
+\chapter{P287 --- External-evidence gate}
+
+The repository contains:
+
+\begin{itemize}
+\item 
+zero production bundle\_manifest.json files;
+
+\item 
+zero heat-process event rows;
+
+\item 
+zero double-slit event rows.
+
+\end{itemize}
+
+P242 is not authorized.
+
+Files named p2410, p2411, and similar inside fundamental\_action\_reconstruction are research-program identifiers, not blind-custody laboratory packages.
+
+\textbf{Verdict.} The empirical boundary has not moved.
+
+\chapter{P288 --- Detector-level flux design}
+
+The ideal click law was replaced by a categorical event likelihood containing finite efficiency, interference visibility, nearest-neighbour crosstalk, dark-count probability, and a no-click outcome. For source flux \(h\), the frozen detector constants were
+
+\[
+\eta=0.78,\qquad
+\nu=0.91,\qquad
+p_{\rm dark}=2\times10^{-4},\qquad
+p_{\rm xtalk}=0.015.
+\]
+
+The design criterion minimized the median reconstruction error over a two-flux experiment rather than maximizing raw count rate. Over \(h\in[0.004,0.45]\), the optimum was
+
+\[
+h_\star=0.148111,
+\]
+
+with median relative coefficient error \(0.01180\) and 95th percentile \(0.02773\) at \(10^5\) shots per flux.
+
+The interior optimum matters: at low flux the Fisher information is shot-limited, whereas at high flux the nonlinear click response and cross-contamination dominate. The optimum is therefore an apparatus-aware design property, not an intrinsic number generated by the strict kernel.
+
+\textbf{Verdict. \statusStrong{}} An event-level likelihood can close the simulation side of the flux-design problem. Its detector constants must be independently calibrated before it becomes an experimental prescription.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_281_294_Figures/p288_p289_detector_false_positive.png}
+\caption{Detector-aware flux design and the declared-null false-positive audit.}
+\end{figure}
+
+\chapter{P289 --- Strict-fingerprint false positives under a declared null}
+
+The null was declared before evaluation:
+
+\[
+w\sim\operatorname{Dirichlet}(1,\ldots,1)
+\]
+
+on normalized nonnegative circulant weights. A null draw was counted as a strict-like false positive when its frozen fingerprint distance was at most \(\varepsilon=0.02\).
+
+Direct Monte Carlo observed no event in \(120{,}000\) draws, which gives only the weak rule-of-three upper bound \(2.5\times10^{-5}\). Importance sampling with three independently frozen proposal concentrations produced:
+
+\begin{center}
+\begingroup\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.193\textwidth}p{0.079\textwidth}p{0.213\textwidth}p{0.191\textwidth}p{0.184\textwidth}@{}}
+\toprule
+\textbf{proposal concentration} & \textbf{event count} & \textbf{probability estimate} & \textbf{standard error} & \textbf{central-event ESS} \\
+\midrule
+\endhead
+220 & 295 & \(3.0080\times10^{-8}\) & \(1.87\times10^{-9}\) & 258.6 \\
+350 & 777 & \(2.9027\times10^{-8}\) & \(1.20\times10^{-9}\) & 583.1 \\
+550 & 1,852 & \(2.6623\times10^{-8}\) & \(8.66\times10^{-10}\) & 938.5 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The largest estimate divided by the smallest is \(1.130\). Proposal agreement is reassuring, but it is not a universal uniqueness theorem. Changing the null measure, positivity class, normalization, or tolerance changes the probability.
+
+\textbf{Verdict. \statusStrong{}} The strict fingerprint occupies a rare region of this one declared positive-circulant ensemble. Nothing distribution-free has been proved.
+
+\chapter{P290 --- Interventional mechanism discrimination}
+
+Four operational mechanisms were represented by frozen templates:
+
+\begin{enumerate}
+\item 
+a homogeneous generator;
+
+\item 
+time-dependent generator drift;
+
+\item 
+an environmental mixture;
+
+\item 
+apparatus lag.
+
+\end{enumerate}
+
+The observation design used three calibrated times \(\tau=(0.15,0.35,0.65)\) and a signed intervention of magnitude \(0.12\). Across 500 trials per class, the classification accuracy was:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{reference feature-noise scale} & \textbf{accuracy} \\
+\midrule
+\endhead
+0.05 & 1.0000 \\
+0.10 & 0.9985 \\
+0.20 & 0.9690 \\
+0.35 & 0.9150 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The minimum standardized template separation was \(0.618\). Thus a short interventional protocol can distinguish these four alternatives under the declared simulator.
+
+The result does not prove that arbitrary non-Markovian environments, time-dependent generators, and detector memory are identifiable. Outside the finite panel, observational equivalences can be constructed.
+
+\textbf{Verdict. \statusStrong{}} The intervention breaks degeneracies inside a calibrated four-mechanism atlas; global mechanism identification remains open.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_281_294_Figures/p290_p291_mechanism_intervention.png}
+\caption{Three-time mechanism discrimination and maximin intervention design.}
+\end{figure}
+
+\chapter{P291 --- Maximin intervention for the adaptive law}
+
+For the frozen two-parameter adaptive law, local sensitivities were propagated through 244 bounded intervention sequences. The score was the smallest eigenvalue of the local information matrix,
+
+\[
+\Phi(u)=\lambda_{\min}\!\left(
+\sum_t
+\frac{\partial m_t}{\partial\theta}
+\frac{\partial m_t}{\partial\theta}^{\!T}
+\right).
+\]
+
+Passive input gives \(\Phi(0)=0\): one parameter direction is locally invisible. The best sequence in the frozen catalogue was a balanced long two-level pulse, positive in the first half and negative in the second:
+
+\[
+\Phi(u_\star)=8.75812,\qquad
+\det F(u_\star)=3026.94,\qquad
+\kappa(F)=39.46.
+\]
+
+A sinusoid and a pseudo-random binary sequence were less effective in this particular local model. Consequently, the correct conclusion is not that randomness is universally optimal, but that sustained sign reversal exposes the weakest local direction of this adaptive law.
+
+\textbf{Verdict. \statusStrong{}} Controlled intervention can turn a locally unidentifiable passive experiment into an identifiable one. Optimality is only over the frozen candidate class and nominal parameter point.
+
+\chapter{P292 --- Independent reservoir replication}
+
+The primary endpoint was NARMA10 prediction. Twenty-four independent input realizations were evaluated against twelve matched controls per realization: six isospectral controls and six spectral-radius controls.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{quantity} & \textbf{result} \\
+\midrule
+\endhead
+wins against every control & \(13/24=0.5417\) \\
+median control percentile & 1.000 \\
+median advantage over best control & 0.000962 \\
+fifth percentile of the advantage & \(-0.00713\) \\
+median delay-task percentile & 0.4167 \\
+median nonlinear-task percentile & 0.4167 \\
+median parity-task percentile & 0.0833 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+During falsification, the original NARMA input convention overflowed on some replications and generated non-finite targets. That implementation was rejected. P292 was rerun with the standard stable independent NARMA driving range \(u_t\in[0,0.40]\); the reservoir-control inputs otherwise remain matched. The correction is methodological, not cosmetic: non-finite trials cannot count as supporting evidence.
+
+\textbf{Verdict. \statusStrong{}} A small primary-task advantage replicates only partially. The negative lower-tail advantage and weak secondary-task percentiles refute any claim of universal computational superiority.
+
+\chapter{P293 --- Resource-explicit collision-model erasure}
+
+P293 does not derive temperature, energy, time, or a work scale from the dimensionless strict generator. It supplies them explicitly:
+
+\[
+k_B=1,\qquad T=2,\qquad
+\text{maximum gap}=24,
+\]
+
+together with 800 fresh ideal Gibbs ancillas and a classical work meter. A finite sequence of quenches and thermalizing collisions gives:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{ledger item} & \textbf{value} \\
+\midrule
+\endhead
+final excited-state probability & \(6.144\times10^{-6}\) \\
+erased information & \(0.693067\) nat \\
+work supplied & 1.393644 \\
+heat dumped & 1.393644 \\
+generalized Landauer lower bound & 1.386135 \\
+work above bound & 0.007509 \\
+entropy production & 0.003755 \\
+first-law residual & \(4.22\times10^{-15}\) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The protocol demonstrates how informational erasure becomes thermodynamic only after a bath state, Hamiltonian gaps, temperature, interaction schedule, and work convention have been added.
+
+\textbf{Theorem (conditional finite resource ledger).} For the supplied collision-model protocol, work, heat, information loss, and entropy production obey the finite first- and second-law ledger to numerical precision.
+
+\textbf{Boundary.} This does not identify \(k_B T\), a Hamiltonian scale, or a physical clock from FIN. It is a valid information-to-physics bridge with all conversion resources exposed.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_281_294_Figures/p292_p294_replication_thermo_torsor.png}
+\caption{Reservoir replication, the thermodynamic resource ledger, and pointed-torsor counts.}
+\end{figure}
+
+\chapter{P294 --- The pointed physicalization resource}
+
+Let
+
+\[
+G=\mathbb Z_3\times\mathbb Z_2
+\]
+
+act regularly on the torsor \(T=G\). A section from a trivial one-point \(G\)-space would have to choose a fixed point of \(T\), but a nontrivial regular torsor has no fixed point. The finite enumeration gives:
+
+\[
+\#\operatorname{Sec}_G(\ast,T)=0,
+\qquad
+\#\operatorname{End}_G(T)=6.
+\]
+
+After adjoining a distinguished point \(t_0\in T\), the pointed equivariant endomorphism is unique:
+
+\[
+\#\operatorname{End}_{G,\ast}(T,t_0)=1.
+\]
+
+This motivates the newly constructed object
+
+\[
+\boxed{\mathfrak P=(T,t_0)}
+\]
+
+called the \textbf{Pointed Physicalization Resource}. It is the minimal operational datum that turns a symmetry-related family of equivalent conventions into a unique convention-compatible map.
+
+\textbf{Theorem. \statusProven{}} Pointing the regular finite torsor removes the translation ambiguity in its pointed equivariant self-map.
+
+\textbf{Impossibility boundary. \statusProven{}} Equivariance alone cannot derive the point. Thus \(\mathfrak P\) can encode a prepared origin, clock zero, detector label, chirality choice, or calibration reference, but it cannot be used to claim that strict FIN internally generates any of them.
+
+\chapter{Theoretical objects constructed or sharpened}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.247\textwidth}p{0.264\textwidth}p{0.136\textwidth}p{0.213\textwidth}@{}}
+\toprule
+\textbf{Object} & \textbf{Definition or role} & \textbf{Status} & \textbf{What it does not supply} \\
+\midrule
+\endhead
+O40 Compactly Regularized Stieltjes Inverse & bounded positive pole/\allowbreak{}residue inverse problem & \statusProven{} existence; \statusStrong{} numerics & uniqueness or stable residues \\
+O41 Lean Rational Schur Kernel Certificate & exact \(3\times3\) rational nested/\allowbreak{}direct Schur witness & \statusProven{} & general matrix theorem \\
+O42 Loss-Augmented Naimark Current Readout & Naimark dilation followed by a stochastic detector channel & \statusProven{} algebra; \statusStrong{} counts & apparatus construction \\
+O43 Isotropic Complement RG Functor & \(B\mapsto EBE^\ast+\bar\lambda(I-EE^\ast)\) & \statusProven{} PSD/\allowbreak{}rank facts & strict fixed-point closure \\
+O44 Two-Step Quantum Process Ledger & multitime decomposition of relative entropy loss & \statusProven{}, conditional & arbitrary process-tensor tomography \\
+O45 Legacy Fractal Compression Atom & \(d\mapsto d^{4\ln2}\) in the legacy denominator & \statusRefuted{} as sufficient & generic bridge obstruction \\
+O46 External Evidence Admission Gate & manifest/\allowbreak{}schema/\allowbreak{}hash/\allowbreak{}hold-out preconditions for P242 & \statusProven{} as protocol & physical data \\
+O47 Detector-Likelihood Flux Design & apparatus-aware optimization of event likelihood & \statusStrong{} & intrinsic FIN flux \\
+O48 Dirichlet-Null Fingerprint Risk & ensemble-conditioned false-positive probability & \statusStrong{} & distribution-free uniqueness \\
+O49 Interventional Three-Time Mechanism Atlas & finite diagnostic map for four mechanism classes & \statusStrong{} & arbitrary causal identification \\
+O50 Maximin Adaptive Control Design & maximize the weakest local information direction & \statusStrong{} & global input optimality \\
+O51 Primary-Task Replication Ledger & paired seeds and matched control families & \statusStrong{} & universal computational advantage \\
+O52 Collision-Model Erasure Resource Ledger & work/\allowbreak{}heat/\allowbreak{}information accounting with exposed resources & \statusProven{}, conditional & emergent dimensional constants \\
+O53 Pointed Physicalization Resource & a torsor plus a supplied distinguished point & \statusProven{} finite theorem & derivation of the point \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The strongest new conceptual result is O53. It makes the mathematics-to-physics boundary precise: a symmetric mathematical object can support many equivalent operational coordinatizations, while a physical realization necessarily contains a preparation/\allowbreak{}calibration event that points one of them. The pointing may be supplied by an experiment, boundary condition, environment, or new symmetry-breaking law. It is not produced by the spectral theorem.
+
+\chapter{Falsification register}
+
+The following attractive conclusions did not survive:
+
+\begin{enumerate}
+\item 
+\textbf{"Compact Stieltjes priors solve spectral inversion."} Refuted. They give existence and prevent runaway solutions, but pole/\allowbreak{}residue recovery remains ill-conditioned.
+
+\item 
+\textbf{"Rank-complete lifted RG is the strict kernel."} Refuted by nonzero strict-fingerprint residuals.
+
+\item 
+\textbf{"Fractal compression alone completes legacy into strict."} Refuted for the one canonical atom tested by negative mean-zero and hidden spectra.
+
+\item 
+\textbf{"No direct null hits means the false-positive rate is zero."} Refuted as an inference; importance sampling resolves a small but nonzero ensemble-conditioned probability.
+
+\item 
+\textbf{"Three-time observations identify the true mechanism."} Refuted beyond the frozen panel; the result is finite-class discrimination.
+
+\item 
+\textbf{"Random or broadband intervention is necessarily best."} Refuted in the frozen local design; a balanced two-level pulse wins.
+
+\item 
+\textbf{"The FIN reservoir is universally superior."} Refuted by incomplete primary-task wins and weak secondary-task ranks.
+
+\item 
+\textbf{"Landauer converts dimensionless information into physics without extra structure."} Refuted. The successful ledger explicitly supplies temperature, gaps, bath, work meter, and protocol.
+
+\item 
+\textbf{"Equivariance selects an operational origin."} Refuted by the absence of a section from a trivial input to a nontrivial regular torsor.
+
+\item 
+\textbf{"A pointed torsor derives the selector."} Refuted as a logical direction. Pointing removes ambiguity only after the point is supplied.
+
+\end{enumerate}
+
+\chapter{Present mathematical and physical state of FIN}
+
+The repository's most defensible core remains finite spectral operator theory with adaptive, informational, and operational extensions. The present chain is
+
+\[
+\boxed{
+\text{strict kernel}
+\Rightarrow
+A
+\Rightarrow
+\{e^{-itA},e^{-tA},(A+zI)^{-1},E_A\}
+}
+\]
+
+followed, only with extra data, by
+
+\[
+(A,\mathcal C)
+\xrightarrow{\ \mathfrak O\ }
+\text{prepared and measured process}
+\xrightarrow{\ \mathfrak C,\mathfrak S,\mathfrak P\ }
+\text{dimensional, sector-resolved physical model}.
+\]
+
+Here:
+
+\begin{itemize}
+\item 
+\(\mathfrak O\) contains state preparation, clock protocol, instruments, environment, detector response, and immutable event records;
+
+\item 
+\(\mathfrak C\) contains dimensional conversion resources such as energy and time scales;
+
+\item 
+\(\mathfrak S\) specifies the physical sector and observable semantics;
+
+\item 
+\(\mathfrak P\) supplies a point in the relevant calibration or symmetry torsor.
+
+\end{itemize}
+
+P281--P294 do not close QW-2191. They do not derive a canonical UV/\allowbreak{}length unit, the strict damping source, a role-safe legacy amplitude, a full nonproxy Lagrangian/\allowbreak{}EOM, Standard Model fields, general relativity, \(L_{\rm total}\), or a Theory of Everything.
+
+The round does, however, replace several vague gaps by executable statements:
+
+\begin{itemize}
+\item 
+the inverse spectral obstruction is conditioning, not absence of a finite minimizer;
+
+\item 
+an operational current measurement has an explicit dilation and detector channel;
+
+\item 
+resource-explicit thermodynamics is possible but conditional;
+
+\item 
+physical convention selection is naturally represented by a pointed torsor;
+
+\item 
+the point itself is the irreducible missing datum unless a new internal symmetry-breaking theorem is found.
+
+\end{itemize}
+
+\chapter{Recommended Programs P295--P308}
+
+The following programs are new bounded moves, not replays of closed FAR lanes. Probabilities are estimates of producing a scientifically decisive result, not probabilities that FIN is physically correct.
+
+\begin{center}
+\begingroup\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.055\textwidth}p{0.091\textwidth}p{0.267\textwidth}p{0.290\textwidth}p{0.157\textwidth}@{}}
+\toprule
+\textbf{Rank} & \textbf{Program} & \textbf{Proposed study} & \textbf{Decisive output} & \textbf{Success probability} \\
+\midrule
+\endhead
+1 & P295 & Multi-probe operator-valued Stieltjes recovery with minimax bounds & identifiability/\allowbreak{}stability theorem or matched lower bound & 0.80 \\
+2 & P296 & General positive Schur-complement theorem in Lean/\allowbreak{}Mathlib & reusable machine-checked theorem extending O41 & 0.78 \\
+3 & P297 & Compile O42 into an optical/\allowbreak{}unitary mesh with tolerance propagation & component-level executable apparatus specification & 0.72 \\
+4 & P304 & Adversarial out-of-family mechanism identifiability & equivalence classes and a no-go/\allowbreak{}witness criterion & 0.72 \\
+5 & P303 & Coarea/\allowbreak{}Laplace asymptotics for the Dirichlet fingerprint rare event & analytic exponent/\allowbreak{}prefactor checked against P289 & 0.70 \\
+6 & P299 & General process-tensor ledger and finite Markov-order tomography & theorem plus reconstruction protocol & 0.68 \\
+7 & P302 & Sequential detector tomography with calibration uncertainty & joint design for \(h\) and nuisance parameters & 0.67 \\
+8 & P298 & Uniqueness/\allowbreak{}no-go classification of complement RG completions & classification of admissible target-independent complements & 0.65 \\
+9 & P305 & Nonlinear adaptive model discovery under interventions & out-of-panel recovery and falsification suite & 0.63 \\
+10 & P307 & Embed \(A_{\rm phys}=\kappa A\) into collision thermodynamics & identify scale-free predictions and scale-dependent observables & 0.62 \\
+11 & P308 & General pointed-torsor nonsection/\allowbreak{}minimal-resource theorem & abstract theorem and Lean formalization & 0.60 \\
+12 & P300 & Phase-fixed denominator-only legacy completion no-go class & proof or counterexample for a defined bridge class & 0.58 \\
+13 & P306 & External/\allowbreak{}hardware reservoir replication & preregistered effect estimate against matched controls & 0.45 \\
+14 & P301 & Admit and execute a real P241 blind-custody laboratory bundle & P242 accept/\allowbreak{}reject report without model repair & 0.35 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\section{Stop rules}
+
+\begin{itemize}
+\item 
+P295 stops with a minimax lower bound if residue stability cannot be made uniform.
+
+\item 
+P297 stops if the compiled mesh cannot preserve POVM completeness within a declared calibration budget.
+
+\item 
+P298 may not target-code the strict answer into the complement.
+
+\item 
+P300 studies one explicitly stated completion class and may not imply a generic legacy-to-strict no-go.
+
+\item 
+P301 remains blocked until an external provider supplies the production manifest, event rows, hashes, custody roles, and frozen hold-out.
+
+\item 
+P306 must freeze the primary endpoint and matched controls before hardware data are unblinded.
+
+\item 
+P307 must expose \(\kappa\); it may not rename an inserted dimensional scale as an emergent prediction.
+
+\item 
+P308 may prove that pointing is minimal, but may not claim that strict FIN derives the point.
+
+\end{itemize}
+
+\chapter{Recommended execution order}
+
+The immediate mathematical sequence is:
+
+\[
+\boxed{\text{P295}\rightarrow\text{P296}\rightarrow\text{P303}
+\rightarrow\text{P304}\rightarrow\text{P298}}.
+\]
+
+The operational sequence is:
+
+\[
+\boxed{\text{P297}\rightarrow\text{P302}\rightarrow
+\text{P301/P306 when external data exist}}.
+\]
+
+The information-to-physics sequence is:
+
+\[
+\boxed{\text{P299}\rightarrow\text{P307}\rightarrow\text{P308}}.
+\]
+
+P300 is a bounded bridge-class falsification and should not displace these higher-yield programs.
+
+\chapter{Reproducibility}
+
+The release contains:
+
+\begin{itemize}
+\item 
+fin\_programs\_281\_294.py --- deterministic research runner;
+
+\item 
+test\_fin\_programs\_281\_294.py --- 19 regression and guardrail tests;
+
+\item 
+FIN\_Programs\_281\_294\_Schur\_Core.lean --- dependency-free Lean 4.28 certificate;
+
+\item 
+FIN\_Programs\_281\_294\_Results.json --- full machine-readable results;
+
+\item 
+FIN\_Programs\_281\_294\_Summary.csv --- one-row-per-program summary;
+
+\item 
+five detailed CSV audit tables;
+
+\item 
+five generated figures;
+
+\item 
+this English report and its PDF rendering.
+
+\end{itemize}
+
+The numerical suite is reproduced by setting MPLCONFIGDIR to /\allowbreak{}tmp/\allowbreak{}matplotlib-p281-294 and running python3 -m unittest -v test\_fin\_programs\_281\_294.py.
+
+The Lean certificate prints the nested and direct rational Schur values \(13/5\) and exits successfully. Random generators use frozen seeds. P292 uses a separate stable NARMA input stream after the overflow falsification described in Section 15.
+
+\chapter{Final conclusion}
+
+P281--P294 advance FIN most strongly by clarifying boundaries.
+
+The spectral generator supports exact wave, diffusion, resolvent, measurement, reduction, and information-ledger constructions. These are consequences of a finite positive operator plus supplied contexts. They are not by themselves a physical law.
+
+The smallest new bridge object found in this round is not a new kernel. It is the Pointed Physicalization Resource
+
+\[
+\mathfrak P=(T,t_0).
+\]
+
+It expresses a general fact: experimental physics needs a prepared reference inside a symmetry family. Once supplied, that reference can make an operational map unique. Mathematics based only on the unpointed symmetric object cannot select it.
+
+Accordingly, the deepest conclusion surviving falsification is:
+
+\[
+\begin{gathered}
+\text{FIN currently defines a coherent finite spectral-information dynamics,}\\
+\text{but physicalization requires explicit resources}\\
+\mathfrak O,\ \mathfrak C,\ \mathfrak S,\ \mathfrak P.
+\end{gathered}
+\]
+
+This is a constructive boundary, not a dismissal. It tells the next research round exactly what must be proved, calibrated, or externally supplied---and what must no longer be inferred from spectral coherence alone.
+
+
+\clearpage
+\chapter*{Reproduction certificate}
+\addcontentsline{toc}{chapter}{Reproduction certificate}
+\begin{Verbatim}[fontsize=\small]
+MPLCONFIGDIR=/tmp/matplotlib-p281-294 \
+python3 -m unittest -v test_fin_programs_281_294.py
+\end{Verbatim}
+Expected result: 19 tests passed, 0 failed. The suite recompiles the
+dependency-free Lean 4.28 rational Schur witness. Synthetic and conditional
+studies are not laboratory evidence. P287 certifies that no independent
+production P241 event bundle was available and therefore P242 was not
+authorized.
+
+\medskip
+\noindent\textbf{Suggested citation:}
+
+\.Zuchowski, K. (2026). \emph{FIN Research Programs P281--P294:
+Regularized Spectral Inference, Resource-Explicit Physics, and the
+Pointed-Torsor Boundary} (Release 10.26; Version 1.0.0) [Preprint]. Zenodo.
+
+\end{document}

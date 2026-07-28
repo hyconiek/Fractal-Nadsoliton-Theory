@@ -1269,8 +1269,8 @@ def program_291(
             "best_design": best,
             "named_designs": named,
             "verdict": (
-                "A persistently exciting signed sequence maximizes the worst "
-                "local parameter direction within the frozen two-parameter law."
+                "A balanced long two-level pulse maximizes the worst local "
+                "parameter direction within the frozen two-parameter law."
             ),
             "boundary": (
                 "The search is local at supplied parameters and restricted to "
@@ -1694,6 +1694,8 @@ def make_figures(results: dict[str, Any]) -> None:
     names = results["P290"]["mechanisms"]
     confusion = np.zeros((len(names), len(names)))
     for row in results["P290"]["confusion_rows"]:
+        if row["relative_feature_noise"] != results["P290"]["reference_noise"]:
+            continue
         confusion[names.index(row["true_mechanism"]),
                   names.index(row["predicted_mechanism"])] = row["count"]
     confusion /= confusion.sum(axis=1, keepdims=True)
@@ -1771,7 +1773,7 @@ def summary_rows(results: dict[str, Any]) -> list[dict[str, Any]]:
         "P288": "detector likelihood has a finite optimal flux separation",
         "P289": "false-positive probability is ensemble-specific",
         "P290": "three times plus intervention separate only the frozen mechanism panel",
-        "P291": "persistent excitation improves local adaptive-law identifiability",
+        "P291": "a balanced two-level intervention improves local adaptive-law identifiability",
         "P292": "NARMA10 advantage receives a multi-seed replication test",
         "P293": "Landauer accounting closes only with supplied physical resources",
         "P294": "a pointed resource torsor gives a unique section but not its source",

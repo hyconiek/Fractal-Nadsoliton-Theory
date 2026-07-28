@@ -4632,3 +4632,103 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   reset, work store, and complete resource accounting.  P294 may classify
   equivariant sections of the joint scale-orientation torsor, but may not infer
   a sign from a positive scalar or a physical unit from a sign.
+
+## Programs P281–P294 result guardrail (Release 10.26, 2026-07-29)
+
+- P281 proves existence of a compactly constrained positive three-atom
+  Stieltjes fit and gives a reproducible bounded audit, but the inverse remains
+  ill-conditioned: at relative noise `1e-6` the median maximum pole error is
+  `0.0591` and the median maximum residue error is `1.236`.  Do not promote
+  compactness to uniqueness or stable residue recovery.
+- P282 is a dependency-free Lean 4.28 certificate for one exact rational
+  `3x3` Schur witness.  It proves identity reduction, positive pivots, and
+  equality of nested and direct values `13/5`; it is not the general
+  positive-matrix/category theorem.
+- P283 proves the algebraic Naimark isometry for the six-outcome current POVM
+  and tests a supplied loss/crosstalk/dark-count detector channel.  Response
+  rank five and condition number `1.058` are model results, not a constructed
+  optical apparatus.
+- P284 proves PSD/rank/null-mode properties of the non-target-coded isotropic
+  complement rule.  Its strict-fingerprint distances `0.457` and `1.093`
+  refute exact strict RG closure; rank restoration alone is insufficient.
+- P285 closes an exact two-step relative-information ledger for supplied
+  instruments and branch channels, with maximum residual
+  `4.44e-16`.  It does not export a general process-tensor theorem or an
+  experimental instrument.
+- P286 tests exactly one new legacy-sourced fractal-compression atom,
+  `d -> d^(4 ln 2)`, with no strict import or positivity repair.  Negative
+  mean-zero and hidden-block eigenvalues refute that atom as a sufficient
+  legacy-to-strict completion.  This is not a generic bridge no-go and does
+  not authorize a second silent atom, selector, or role transfer.
+- P287 again finds no production P241 manifest or event rows.  P242 remains
+  unauthorized; similarly numbered FAR programs are not laboratory bundles.
+- P288 gives a synthetic detector-level two-flux optimum `h=0.148111` under
+  supplied efficiency, visibility, crosstalk, and dark counts.  It is not a
+  hardware constant and requires independent calibration.
+- P289 estimates a strict-fingerprint false-positive probability near
+  `2.9e-8` only for the declared `Dirichlet(1,...,1)` positive-circulant null
+  at tolerance `0.02`.  Three proposal estimates agree within a factor
+  `1.13`; no distribution-free uniqueness claim is licensed.
+- P290 discriminates four frozen mechanism templates using three calibrated
+  times plus one intervention, reaching accuracy `0.969` at reference feature
+  noise `0.20`.  Arbitrary drift, environment, and apparatus mechanisms may
+  remain observationally equivalent.
+- P291 finds a balanced long two-level pulse—not a generic randomness
+  principle—as the best of 244 local intervention candidates.  It raises the
+  weakest information eigenvalue from zero to `8.758`; global input
+  optimality is not proved.
+- P292 partially replicates the NARMA10 advantage: FIN beats all twelve matched
+  controls in `13/24` independent realizations, while secondary-task
+  percentiles remain weak.  An inherited overflowing NARMA convention was
+  rejected and replaced by the stable independent input range `[0,0.40]`.
+  Do not claim universal computational superiority.
+- P293 proves a finite collision-model work/heat/information ledger only after
+  explicitly supplying `k_B`, temperature, Hamiltonian gaps, 800 Gibbs
+  ancillas, protocol, and work meter.  It does not derive a dimensional scale
+  from FIN.
+- P294 proves that the regular `Z3 x Z2` torsor has no equivariant section from
+  a trivial input and exactly one pointed equivariant self-map after a point is
+  supplied.  The new Pointed Physicalization Resource `P=(T,t0)` removes an
+  operational ambiguity but does not derive `t0`, discharge `QW-2191`, or
+  export a canonical clock, unit, detector label, or chirality.
+- Release 10.26 constructs `O40--O53`.  The current physicalization interface
+  is `(A,C,O,C_conv,S,P)`: strict spectral generator/context, operational
+  package, conversion resources, sector semantics, and pointing resource.
+  This notation does not claim that the added resources are strict FIN
+  outputs.  No role transfer, completed bridge, full nonproxy Lagrangian/EOM,
+  laboratory validation, `L_total`, SM/GR generation, or ToE closure is
+  exported.
+
+## Post-Programs-P281–P294 research steering guardrail (2026-07-29)
+
+- Highest mathematical priorities are P295 and P296: derive minimax stability
+  or lower bounds for multi-probe operator-valued Stieltjes recovery, then
+  replace the finite Lean witness by a general positive Schur-complement
+  theorem.  Failure/lower bounds are admissible primary results.
+- P297 may compile the exact Naimark readout into one optical/unitary mesh only
+  with a component tolerance budget; it may not treat the current synthetic
+  detector channel as hardware calibration.
+- P298 may classify target-independent complement/quotient RG maps.  It must
+  not target-code the strict fingerprint or replay rank restoration as
+  closure.
+- P299 should extend the finite information ledger to a declared
+  process-tensor/Markov-order class with an executable tomography boundary.
+- P300 may study a precisely defined phase-fixed denominator-only legacy
+  completion class.  Any no-go remains class-scoped; generic bridge replay,
+  selector import, and physical-role transfer remain forbidden.
+- P301 remains externally blocked until a genuinely independent,
+  hash-committed P241 production bundle is supplied.  No repository generator
+  may manufacture custody or empirical events.
+- P302/P303 should quantify detector nuisance uncertainty and derive
+  coarea/Laplace rare-event asymptotics for the exact P289 declared null.
+- P304/P305 must attack out-of-panel mechanism equivalence and nonlinear
+  adaptive-law discovery; finite-panel classification cannot be renamed
+  causal identification.
+- P306 requires preregistered external or hardware reservoir data, paired
+  seeds, a frozen primary endpoint, and matched controls.
+- P307 must expose the supplied conversion scale in
+  `A_phys = kappa A`, distinguish scale-free from scale-dependent predictions,
+  and must not rename `kappa` as emergent.
+- P308 may generalize the pointed-torsor nonsection/minimal-resource result and
+  formalize it in Lean.  It may not infer a strict source for the point,
+  discharge `QW-2191`, or couple scale and orientation without a new theorem.

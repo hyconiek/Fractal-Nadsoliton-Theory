@@ -321,17 +321,45 @@
     "status": "[Strong evidence] importance-sampled ensemble probability",
     "null_ensemble": "Dirichlet(1,...,1) normalized positive circulant weights",
     "tolerance": 0.02,
-    "importance_sample_count": 240000,
-    "proposal_concentration": 350.0,
-    "importance_event_count": 1540,
-    "estimated_false_positive_probability": 2.8719829918595482e-08,
-    "log_estimated_probability": -17.365678014838398,
-    "estimated_standard_error": 8.201821308067059e-10,
-    "event_effective_sample_size": 1219.9161468297002,
+    "importance_sample_count_per_proposal": 120000,
+    "proposal_rows": [
+      {
+        "concentration": 220.0,
+        "sample_count": 120000,
+        "event_count": 295,
+        "probability": 3.008037905365706e-08,
+        "log_probability": -17.319392736426316,
+        "standard_error": 1.868586865004534e-09,
+        "event_ess": 258.5849032101562
+      },
+      {
+        "concentration": 350.0,
+        "sample_count": 120000,
+        "event_count": 777,
+        "probability": 2.9026911233885124e-08,
+        "log_probability": -17.35504246367899,
+        "standard_error": 1.1991565252015746e-09,
+        "event_ess": 583.0885163706397
+      },
+      {
+        "concentration": 550.0,
+        "sample_count": 120000,
+        "event_count": 1852,
+        "probability": 2.6622697727342506e-08,
+        "log_probability": -17.44150168699015,
+        "standard_error": 8.656211419388237e-10,
+        "event_ess": 938.5090887293314
+      }
+    ],
+    "proposal_sensitivity_max_to_min_ratio": 1.1298771958321636,
+    "estimated_false_positive_probability": 2.9026911233885124e-08,
+    "log_estimated_probability": -17.35504246367899,
+    "estimated_standard_error": 1.1991565252015746e-09,
+    "event_effective_sample_size": 583.0885163706397,
     "direct_sample_count": 120000,
     "direct_event_count": 0,
     "direct_zero_event_rule_of_three_upper_95": 2.5e-05,
-    "minimum_direct_distance": 0.044005504257223625,
+    "minimum_direct_distance": 0.04281848320298163,
     "boundary": "The estimate is specific to the declared Dirichlet null and importance proposal. It is not distribution-free and requires ESS and proposal-sensitivity checks before use as a discovery threshold."
   },
   "P290": {
@@ -349,86 +377,396 @@
     ],
     "intervention_strength": 0.12,
     "trials_per_class": 500,
-    "relative_feature_noise": 0.035,
-    "classification_accuracy": 1.0,
+    "classification_accuracy_by_noise": {
+      "0.05": 1.0,
+      "0.1": 0.9985,
+      "0.2": 0.969,
+      "0.35": 0.915
+    },
+    "reference_noise": 0.2,
+    "reference_classification_accuracy": 0.969,
     "minimum_standardized_template_separation": 0.618072448658385,
     "confusion_rows": [
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "homogeneous",
         "predicted_mechanism": "homogeneous",
         "count": 500
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "homogeneous",
         "predicted_mechanism": "generator_drift",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "homogeneous",
         "predicted_mechanism": "environment_mixture",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "homogeneous",
         "predicted_mechanism": "apparatus_lag",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "generator_drift",
         "predicted_mechanism": "homogeneous",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "generator_drift",
         "predicted_mechanism": "generator_drift",
         "count": 500
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "generator_drift",
         "predicted_mechanism": "environment_mixture",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "generator_drift",
         "predicted_mechanism": "apparatus_lag",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "environment_mixture",
         "predicted_mechanism": "homogeneous",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "environment_mixture",
         "predicted_mechanism": "generator_drift",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "environment_mixture",
         "predicted_mechanism": "environment_mixture",
         "count": 500
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "environment_mixture",
         "predicted_mechanism": "apparatus_lag",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "apparatus_lag",
         "predicted_mechanism": "homogeneous",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "apparatus_lag",
         "predicted_mechanism": "generator_drift",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
         "true_mechanism": "apparatus_lag",
         "predicted_mechanism": "environment_mixture",
         "count": 0
       },
       {
+        "relative_feature_noise": 0.05,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "homogeneous",
+        "count": 499
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "environment_mixture",
+        "count": 1
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "generator_drift",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "homogeneous",
+        "count": 2
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "environment_mixture",
+        "count": 498
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.1,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "homogeneous",
+        "count": 474
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "environment_mixture",
+        "count": 26
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "generator_drift",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "homogeneous",
+        "count": 36
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "environment_mixture",
+        "count": 464
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.2,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "homogeneous",
+        "count": 418
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "environment_mixture",
+        "count": 82
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "homogeneous",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "generator_drift",
+        "count": 500
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "generator_drift",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "homogeneous",
+        "count": 88
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "environment_mixture",
+        "count": 412
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "environment_mixture",
+        "predicted_mechanism": "apparatus_lag",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "homogeneous",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "generator_drift",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
+        "true_mechanism": "apparatus_lag",
+        "predicted_mechanism": "environment_mixture",
+        "count": 0
+      },
+      {
+        "relative_feature_noise": 0.35,
         "true_mechanism": "apparatus_lag",
         "predicted_mechanism": "apparatus_lag",
         "count": 500
@@ -454,7 +792,7 @@
         "input_energy": 0.0,
         "information_minimum_eigenvalue": 0.0,
         "information_determinant": 0.0,
-        "information_condition_number": Infinity
+        "information_condition_number": null
       },
       "single_pulse": {
         "design": "single_pulse",
@@ -473,12 +811,12 @@
       "prbs": {
         "design": "prbs",
         "input_energy": 160.0,
-        "information_minimum_eigenvalue": 0.19362484944716313,
-        "information_determinant": 1.502571892442348,
-        "information_condition_number": 40.078649071904145
+        "information_minimum_eigenvalue": 0.22829917733337202,
+        "information_determinant": 4.840533716951315,
+        "information_condition_number": 92.87194831745227
       }
     },
-    "verdict": "A persistently exciting signed sequence maximizes the worst local parameter direction within the frozen two-parameter law.",
+    "verdict": "A balanced long two-level pulse maximizes the worst local parameter direction within the frozen two-parameter law.",
     "boundary": "The search is local at supplied parameters and restricted to one adaptive law, one direction, and a finite input family."
   },
   "P292": {
@@ -486,14 +824,14 @@
     "replications": 24,
     "controls_per_replication": 12,
     "primary_task": "narma10_r2",
-    "primary_win_count_against_all_controls": 16,
-    "primary_win_rate": 0.6666666666666666,
+    "primary_win_count_against_all_controls": 13,
+    "primary_win_rate": 0.5416666666666666,
     "median_primary_percentile": 1.0,
-    "median_advantage_over_best_control": NaN,
-    "p05_advantage_over_best_control": NaN,
+    "median_advantage_over_best_control": 0.0009617336248102792,
+    "p05_advantage_over_best_control": -0.007127479685447529,
     "secondary_median_percentiles": {
       "delay5_r2": 0.4166666666666667,
-      "nonlinear_prediction_r2": 0.3333333333333333,
+      "nonlinear_prediction_r2": 0.4166666666666667,
       "parity3_accuracy": 0.08333333333333333
     },
     "boundary": "NARMA10 was frozen as the primary replication target after P278. The benchmark remains synthetic, software-specific, and dependent on input coupling and hyperparameters."
