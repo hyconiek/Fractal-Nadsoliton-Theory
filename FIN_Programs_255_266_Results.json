@@ -1,0 +1,586 @@
+{
+  "metadata": {
+    "release": "10.24",
+    "seed": 20260729,
+    "scope": "Programs 255--266",
+    "warning": "finite proofs and synthetic audits only; no external laboratory record or physical closure"
+  },
+  "P255": {
+    "status": "[Proven]",
+    "contexts_audited": 4094,
+    "minimum_hidden_principal_eigenvalue": 0.12526983271479356,
+    "minimum_signed_derivative_eigenvalue_orders_0_to_4": -3.4730087850037875e-15,
+    "maximum_measure_reconstruction_residual": 3.727829165356388e-15,
+    "maximum_measure_mass_residual": 1.9884783289406677e-15,
+    "maximum_zero_limit_spectral_residual": 1.1324274851176597e-14,
+    "infinity_limit_residual_norm": {
+      "10.0": 0.14377267811822933,
+      "100.0": 0.01587506527139948,
+      "1000.0": 0.0016042189870795636,
+      "10000.0": 0.0001605909606897105
+    },
+    "zero_limit_residual_norm": {
+      "0.1": 0.09213274278698723,
+      "0.01": 0.00991533252030709,
+      "0.001": 0.0009991468239389004,
+      "0.0001": 9.999146168325478e-05
+    },
+    "theorem": "Sigma_E(z)=sum_mu Gamma_mu/(z+mu), Gamma_mu>=0, and (-1)^n Sigma_E^(n)(z)>=0 for every nonempty proper context."
+  },
+  "P256": {
+    "status": "[Proven]",
+    "declared_hidden_dimension": 6,
+    "controllable_observable_rank": 5,
+    "minimal_stieltjes_realization_dimension": 5,
+    "hidden_spectral_poles": 4,
+    "visible_self_energy_poles": 3,
+    "spectral_residues": [
+      {
+        "pole": 1.1710910205731502,
+        "residue_rank": 1,
+        "residue_trace": 1.3714541784670637,
+        "minimum_residue_eigenvalue": -9.963037132163277e-17
+      },
+      {
+        "pole": 1.5263637131430885,
+        "residue_rank": 2,
+        "residue_trace": 1.1927171396640708,
+        "minimum_residue_eigenvalue": -1.9185582174567048e-16
+      },
+      {
+        "pole": 1.8883091818804103,
+        "residue_rank": 2,
+        "residue_trace": 0.19376516116565567,
+        "minimum_residue_eigenvalue": -3.135072972298761e-17
+      },
+      {
+        "pole": 1.9614068619764466,
+        "residue_rank": 0,
+        "residue_trace": 1.9855664251028726e-30,
+        "minimum_residue_eigenvalue": -4.4101537617527313e-32
+      }
+    ],
+    "spectral_reconstruction_residual": 9.54809671836152e-16,
+    "decoupled_two_mode_augmentation_residual": 4.163336342344337e-17,
+    "nonidentifiability_theorem": "Sigma determines only the minimal pole-residue realization up to hidden orthogonal equivalence; arbitrary decoupled hidden modes remain invisible."
+  },
+  "P257": {
+    "status": "[Proven]",
+    "category": "objects are nonempty vertex contexts; an inclusion E subset F induces the contravariant Schur restriction B_F -> B_E",
+    "chains_audited": 20000,
+    "maximum_composition_residual": 6.661338147750939e-16,
+    "identity_residual": 0.0,
+    "proof_core": "associativity follows from uniqueness of block Gaussian elimination, equivalently iterated minimization of one positive quadratic form",
+    "not_proven": "no sheaf gluing axiom and no quantum contextuality claim"
+  },
+  "P258": {
+    "status": "[Proven]",
+    "formula": "Xi=B' R B* + B R B'^* - B R C' R B*, where R=(zI+C)^-1",
+    "z_audit": {
+      "0.05": {
+        "operator_norm": 1.3540268444004113,
+        "analytic_vs_finite_difference_residual": 5.424713927750492e-13,
+        "inversion_odd_covariance_residual": 1.939095632194328e-16,
+        "proved_norm_bound": 3.0967159792107104,
+        "norm_to_bound_ratio": 0.43724605468840094
+      },
+      "0.1": {
+        "operator_norm": 1.3053118493326905,
+        "analytic_vs_finite_difference_residual": 5.254665048281089e-13,
+        "inversion_odd_covariance_residual": 1.9785425352847358e-16,
+        "proved_norm_bound": 2.9404548874859042,
+        "norm_to_bound_ratio": 0.44391493808930194
+      },
+      "0.2": {
+        "operator_norm": 1.2175076426738674,
+        "analytic_vs_finite_difference_residual": 4.943059835152494e-13,
+        "inversion_odd_covariance_residual": 1.0877950044162257e-16,
+        "proved_norm_bound": 2.6691108108608175,
+        "norm_to_bound_ratio": 0.45614728235325974
+      },
+      "0.5": {
+        "operator_norm": 1.0122441135442573,
+        "analytic_vs_finite_difference_residual": 4.234171348250731e-13,
+        "inversion_odd_covariance_residual": 2.680609879691333e-16,
+        "proved_norm_bound": 2.0834434095932317,
+        "norm_to_bound_ratio": 0.4858515037573717
+      },
+      "1.0": {
+        "operator_norm": 0.7890582769749092,
+        "analytic_vs_finite_difference_residual": 4.594349367562148e-13,
+        "inversion_odd_covariance_residual": 1.9399013502754793e-16,
+        "proved_norm_bound": 1.5173492880958335,
+        "norm_to_bound_ratio": 0.5200241520956073
+      },
+      "2.0": {
+        "operator_norm": 0.5464850605410688,
+        "analytic_vs_finite_difference_residual": 4.1025062562558124e-13,
+        "inversion_odd_covariance_residual": 1.723242117675841e-16,
+        "proved_norm_bound": 0.9765965981085888,
+        "norm_to_bound_ratio": 0.5595811633989581
+      }
+    },
+    "maximum_derivative_residual": 5.424713927750492e-13,
+    "maximum_covariance_residual": 2.680609879691333e-16,
+    "maximum_norm_to_bound_ratio": 0.5595811633989581,
+    "selector_boundary": "Xi is an inversion-odd tangent receiver for a supplied twist; it does not select the sign of theta."
+  },
+  "P259": {
+    "status": "[Proven] no-cycle for the declared strict-decimation category; [Moderate evidence] descriptor audit",
+    "levels": [
+      {
+        "level": 0,
+        "context": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "cardinality": 12,
+        "descriptor": [
+          0.04094698851894895,
+          0.34973689095108457,
+          0.6867012721297562,
+          0.7991175285387261,
+          0.8719469344221642,
+          0.9416041927217879,
+          0.9821570348430091,
+          1.0,
+          0.07867257213012868,
+          0.3753158266261905,
+          0.6990252805130808,
+          0.8070194989015833,
+          0.8769840664412416,
+          0.9439012669018843,
+          0.9828589108246731,
+          1.0,
+          0.17592117350735967,
+          0.44125293033702784,
+          0.7307939760219934,
+          0.8273891126319466,
+          0.8899687308762979,
+          0.9498226398772222,
+          0.9846681991384241,
+          1.0,
+          0.29920572478961116,
+          0.5248430913133181,
+          0.7710679677830276,
+          0.8532121954627145,
+          0.9064297236901366,
+          0.9573293165790044,
+          0.9869618804329827,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "memory_fraction_by_z": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "level": 1,
+        "context": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "cardinality": 6,
+        "descriptor": [
+          0.0932046682927858,
+          0.46311459435900887,
+          0.6110785647854982,
+          0.6581962835077521,
+          0.893784877119022,
+          0.9409025958412762,
+          0.9577875684580545,
+          1.0,
+          0.17156702852832692,
+          0.505375913211095,
+          0.6388994670842024,
+          0.6825875896903489,
+          0.9010282027210811,
+          0.9447163253272279,
+          0.96051166094802,
+          1.0,
+          0.34549230797315167,
+          0.6013467727127582,
+          0.7036885586086008,
+          0.7394218971184119,
+          0.9180885896674665,
+          0.9538219281772777,
+          0.9670156629837698,
+          1.0,
+          0.5198212050986388,
+          0.7009386704739564,
+          0.7733856566240839,
+          0.8006148278935586,
+          0.9367606842409307,
+          0.9639898555104055,
+          0.9742784682217183,
+          1.0,
+          0.1808183209944486,
+          0.1598243649788055,
+          0.11498551739368565,
+          0.07335513515399958
+        ],
+        "memory_fraction_by_z": [
+          0.1808183209944486,
+          0.1598243649788055,
+          0.11498551739368565,
+          0.07335513515399958
+        ]
+      },
+      {
+        "level": 2,
+        "context": [
+          0,
+          4,
+          8
+        ],
+        "cardinality": 3,
+        "descriptor": [
+          0.23013406886092852,
+          0.4500957634720918,
+          0.670057458083255,
+          0.8900191526944183,
+          0.9999999999999999,
+          0.9999999999999999,
+          1.0,
+          1.0,
+          0.38422229925191254,
+          0.5601587851799374,
+          0.7360952711079625,
+          0.9120317570359874,
+          0.9999999999999999,
+          0.9999999999999999,
+          1.0,
+          1.0,
+          0.634111538506146,
+          0.7386510989329613,
+          0.8431906593597768,
+          0.9477302197865922,
+          0.9999999999999999,
+          0.9999999999999999,
+          1.0,
+          1.0,
+          0.7970519177938236,
+          0.8550370841384454,
+          0.9130222504830672,
+          0.9710074168276891,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.21260983354890892,
+          0.16223663231520635,
+          0.08451357334545538,
+          0.03874834202038334
+        ],
+        "memory_fraction_by_z": [
+          0.21260983354890892,
+          0.16223663231520635,
+          0.08451357334545538,
+          0.03874834202038334
+        ]
+      },
+      {
+        "level": 3,
+        "context": [
+          0
+        ],
+        "cardinality": 1,
+        "descriptor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.3639960045568194,
+          0.17986211940134517,
+          0.04481335904132526,
+          0.011353036017034359
+        ],
+        "memory_fraction_by_z": [
+          0.3639960045568194,
+          0.17986211940134517,
+          0.04481335904132526,
+          0.011353036017034359
+        ]
+      }
+    ],
+    "successive_descriptor_distances": [
+      0.5588838277788288,
+      0.7420199976243078,
+      1.411288241821873
+    ],
+    "minimum_successive_descriptor_distance": 0.5588838277788288,
+    "fixed_point_no_go": "a strict context reduction decreases cardinality 12>6>3>1; there is no nontrivial fixed point or cycle in the category whose object includes context dimension",
+    "open_requirement": "a genuine RG fixed point requires an additional size-restoring embedding/equivalence and normalization law"
+  },
+  "P260": {
+    "status": "[Proven] for the declared classical instrument ledger",
+    "steps": [
+      {
+        "step": 1,
+        "input_distinguishability": 1.130713082854939,
+        "discarded_environment_loss": 0.5877943312476591,
+        "joint_postchannel_distinguishability": 0.5429187516072799,
+        "apparatus_record_distinguishability": 0.004217370570014943,
+        "conditional_system_carry": 0.538701381037265,
+        "chain_rule_residual": 0.0
+      },
+      {
+        "step": 2,
+        "input_distinguishability": 0.5429187516072799,
+        "discarded_environment_loss": 0.22990519561363254,
+        "joint_postchannel_distinguishability": 0.31301355599364733,
+        "apparatus_record_distinguishability": 0.001411235294950696,
+        "conditional_system_carry": 0.31160232069869664,
+        "chain_rule_residual": 0.0
+      },
+      {
+        "step": 3,
+        "input_distinguishability": 0.31301355599364733,
+        "discarded_environment_loss": 0.11919921854219101,
+        "joint_postchannel_distinguishability": 0.19381433745145632,
+        "apparatus_record_distinguishability": 0.00047237533947016436,
+        "conditional_system_carry": 0.19334196211198618,
+        "chain_rule_residual": -2.7755575615628914e-17
+      },
+      {
+        "step": 4,
+        "input_distinguishability": 0.19381433745145632,
+        "discarded_environment_loss": 0.06895642226557738,
+        "joint_postchannel_distinguishability": 0.12485791518587894,
+        "apparatus_record_distinguishability": 0.00015789517388774005,
+        "conditional_system_carry": 0.12470002001199126,
+        "chain_rule_residual": -6.938893903907228e-17
+      },
+      {
+        "step": 5,
+        "input_distinguishability": 0.12485791518587894,
+        "discarded_environment_loss": 0.04251201797842599,
+        "joint_postchannel_distinguishability": 0.08234589720745294,
+        "apparatus_record_distinguishability": 5.270553700339629e-05,
+        "conditional_system_carry": 0.08229319167044953,
+        "chain_rule_residual": 1.3877787807814457e-17
+      }
+    ],
+    "telescoping_total_loss": 1.048367185647486,
+    "sum_of_step_losses": 1.048367185647486,
+    "telescoping_residual": 0.0,
+    "maximum_record_chain_rule_residual": 6.938893903907228e-17,
+    "minimum_step_environment_loss": 0.04251201797842599,
+    "minimum_loss_over_1000_random_pairs": 0.08766201556375164,
+    "physical_boundary": "the ledger is dimensionless accessible distinguishability, not thermodynamic entropy or heat without a bath, Hamiltonian and scale"
+  },
+  "P261": {
+    "status": "[Proven] amplitude-only completion obstruction",
+    "completion_map_frozen_before_test": "divide K_legacy by alpha_geo, preserve legacy omega, phi and beta_tors, then apply the same A=diag(W1)-W and context map",
+    "strict_generator_minimum_eigenvalue": -2.636779683484747e-16,
+    "legacy_amplitude_absorbed_generator_minimum_eigenvalue": -7.710144544321277,
+    "strict_hidden_minimum_eigenvalue": 1.1710910205731506,
+    "legacy_hidden_minimum_eigenvalue": -5.82479826397418,
+    "legacy_positive_resolvent_ray_pole": 5.82479826397418,
+    "projective_self_energy_shape_defect": {
+      "6.5": 1.272072083857251,
+      "8.0": 1.1546865402326296,
+      "12.0": 1.0241535649709086,
+      "20.0": 0.9454797325568819
+    },
+    "verdict": "amplitude absorption alone does not map the legacy object into the strict positive Stieltjes-generator class; this does not exclude a bridge with additional sign/phase/damping/compression data"
+  },
+  "P262": {
+    "status": "[Strong evidence] synthetic planning audit; external experiment not executed",
+    "replicates": 300,
+    "shots_per_preparation": 50000,
+    "projective_threshold": 0.03,
+    "independent_scale_threshold": 0.02,
+    "invalid_reconstructions": 0,
+    "projective_error_median": 0.006202576031016038,
+    "projective_error_95_percentile": 0.010499035876618252,
+    "scale_error_median": 0.0032472392631390234,
+    "scale_error_95_percentile": 0.00957359412822284,
+    "joint_pass_rate": 1.0,
+    "scale_orbit_transition_invariance_residual": 0.0,
+    "gate_boundary": "fingerprint is tested before independent clock calibration; P242 remains blocked without a P241-admitted external bundle"
+  },
+  "P263": {
+    "status": "[Proven] vertex-POVM no-go and current-observable construction; [Strong evidence] synthetic Xi protocol",
+    "minimum_eigenvalue_rho_plus": 0.04333333333333333,
+    "minimum_eigenvalue_rho_minus": 0.04333333333333333,
+    "vertex_population_residual": 0.0,
+    "harmonic_currents_rho_plus_d1_to_d5": [
+      0.0,
+      0.0,
+      0.0,
+      -0.015049333998608128,
+      0.0
+    ],
+    "harmonic_currents_rho_minus_d1_to_d5": [
+      0.0,
+      0.0,
+      0.0,
+      0.015049333998608128,
+      0.0
+    ],
+    "opposite_current_residual": 0.0,
+    "five_current_observable_rank": 5,
+    "current_observable_gram_condition_number": 15.172968275787266,
+    "xi_analytic_vs_two_flux_process_tomography_residual": 4.942723677505402e-11,
+    "no_go": "rho and rho* have identical vertex probabilities and opposite currents; a vertex POVM alone cannot identify C_d or C_chi",
+    "required_instrument": "phase-sensitive interferometric current observables plus generator/process tomography at supplied opposite flux twists"
+  },
+  "P264": {
+    "status": "[Proven] finite false-positive atlas for frozen ensembles and thresholds",
+    "thresholds": {
+      "strict_fingerprint_max_error": 0.02,
+      "algebraic_residual": 1e-09
+    },
+    "ensemble_pass_rates": {
+      "random_positive_circulant": {
+        "strict_fingerprint": 0.0,
+        "stieltjes_memory": 1.0,
+        "context_composition": 1.0,
+        "chiral_covariance_scaffold": 1.0,
+        "information_contraction_channel": 1.0,
+        "all_five": 0.0,
+        "count": 100
+      },
+      "random_positive_dense": {
+        "strict_fingerprint": 0.0,
+        "stieltjes_memory": 1.0,
+        "context_composition": 1.0,
+        "chiral_covariance_scaffold": 0.0,
+        "information_contraction_channel": 1.0,
+        "all_five": 0.0,
+        "count": 100
+      },
+      "random_signed_circulant": {
+        "strict_fingerprint": 0.0,
+        "stieltjes_memory": 0.24,
+        "context_composition": 1.0,
+        "chiral_covariance_scaffold": 1.0,
+        "information_contraction_channel": 0.03,
+        "all_five": 0.0,
+        "count": 100
+      },
+      "strict_five_percent_circulant": {
+        "strict_fingerprint": 0.52,
+        "stieltjes_memory": 1.0,
+        "context_composition": 1.0,
+        "chiral_covariance_scaffold": 1.0,
+        "information_contraction_channel": 1.0,
+        "all_five": 0.52,
+        "count": 100
+      },
+      "strict_target": {
+        "strict_fingerprint": 1.0,
+        "stieltjes_memory": 1.0,
+        "context_composition": 1.0,
+        "chiral_covariance_scaffold": 1.0,
+        "information_contraction_channel": 1.0,
+        "all_five": 1.0,
+        "count": 1
+      }
+    },
+    "interpretation": "Stieltjes positivity and Schur composition are generic operator properties; strict spectral shape supplies most specificity, while chiral covariance is common to circulants."
+  },
+  "P265": {
+    "status": "[Proven] identifiability quotient and exact scale-clock no-go; [Strong evidence] synthetic diagnostic table",
+    "exact_uniform_generator_vs_clock_degeneracy_residual": 0.0,
+    "scenarios": {
+      "static_operator": {
+        "projective_fingerprint_drift": 0.0,
+        "two_step_semigroup_defect": 0.0,
+        "independent_clock_required": false
+      },
+      "uniform_generator_or_clock_scale": {
+        "projective_fingerprint_drift": 8.881784197001252e-16,
+        "two_step_semigroup_defect": 0.0,
+        "independent_clock_required": true
+      },
+      "nonuniform_generator_change": {
+        "projective_fingerprint_drift": 0.09239311701996833,
+        "one_step_transition_change": 0.05432079345544105,
+        "two_step_semigroup_defect": 0.0,
+        "independent_clock_required": false
+      },
+      "apparatus_memory": {
+        "projective_fingerprint_drift": 0.0,
+        "two_step_semigroup_defect": 0.09056505664424622,
+        "independent_clock_required": false
+      }
+    },
+    "identifiability_quotient": {
+      "scale_orbit": "(cA,t) is observationally equivalent to (A,ct) without an external clock",
+      "memory_class": "one-step transition is insufficient; multi-time interventions test semigroup defects",
+      "shape_class": "projective spectral drift detects nonuniform generator changes"
+    },
+    "adaptive_law_boundary": "finite operator snapshots do not uniquely identify an update vector field; causal interventions and held-out trajectories are required"
+  },
+  "P266": {
+    "status": "[Strong evidence] controlled computational benchmark",
+    "fin_metrics": {
+      "ensemble": "FIN_heat_reservoir",
+      "index": 0,
+      "memory_capacity_delays_1_to_20": 4.060103104242483,
+      "controllability_effective_dimension": 1.0697666350615662,
+      "recovery_steps_to_1e_minus_3": 135.0,
+      "minimal_readout_dimension_95_percent": 1
+    },
+    "control_count": 120,
+    "fin_percentile_among_controls": {
+      "memory_capacity_delays_1_to_20": 0.0,
+      "controllability_effective_dimension": 0.041666666666666664,
+      "recovery_steps_to_1e_minus_3": 1.0,
+      "minimal_readout_dimension_95_percent": 0.09166666666666666
+    },
+    "distinctive_outlier_under_declared_2_5_percent_rule": true,
+    "verdict": "FIN passes as a finite fading-memory reservoir, but a biological or cybernetic advantage is retained only if it outperforms matched controls on held-out tasks.",
+    "ontology_boundary": "mechanistic benchmark only; no biological ontology is inferred"
+  }
+}

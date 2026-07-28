@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Czy interferencja wybiera kierunek? — prąd na okręgu Z12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1622; --bg2:#0c1b29; --panel:#0f2030; --panel2:#102636;
+    --line:rgba(140,180,210,.12); --line2:rgba(140,180,210,.22);
+    --ink:#e9eef3; --mut:#8ea4b6; --mut2:#5f7689;
+    --amber:#f2a65a; --amber-d:#c97f33;
+    --teal:#3fc7c0; --teal-d:#1f9a93;
+    --coral:#ff6f78; --coral-d:#d8475a;
+    --ice:#cfe8ff;
+    --grid:rgba(120,160,195,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-weight:300; line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* ambient instrument background */
+  .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 72% 18%, rgba(63,199,192,.07), transparent 60%),
+      radial-gradient(1100px 700px at 18% 88%, rgba(242,166,90,.06), transparent 60%),
+      linear-gradient(180deg,#0a1622,#081320 60%,#0a1622);
+  }
+  .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.9;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:46px 46px;
+    mask-image:radial-gradient(circle at 50% 40%,#000 30%,transparent 92%);
+  }
+  .glow{position:fixed;left:50%;top:46%;width:680px;height:680px;transform:translate(-50%,-50%);
+    z-index:0;pointer-events:none;border-radius:50%;
+    background:radial-gradient(circle,rgba(63,199,192,.10),transparent 62%);
+    animation:breathe 9s ease-in-out infinite;filter:blur(8px)}
+  @keyframes breathe{0%,100%{opacity:.45;transform:translate(-50%,-50%) scale(.92)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.06)}}
+  .wrap{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 28px}
+
+  /* ---------- header (asymmetric, NOT centered trio) ---------- */
+  header{padding:74px 0 30px;display:grid;grid-template-columns:1.55fr .9fr;gap:46px;align-items:end}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.34em;
+    text-transform:uppercase;color:var(--teal);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .kicker::before{content:"";width:34px;height:1px;background:var(--teal);display:inline-block}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(38px,6vw,76px);line-height:.98;
+    letter-spacing:-.02em;font-variation-settings:"opsz" 144,"SOFT" 30}
+  h1 em{font-style:italic;font-weight:400;color:var(--amber);font-variation-settings:"opsz" 144}
+  h1 .q{color:var(--coral)}
+  .lead{margin-top:22px;max-width:46ch;color:var(--mut);font-size:16.5px}
+  .lead b{color:var(--ink);font-weight:500}
+  .status{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--mut);
+    border:1px solid var(--line2);background:linear-gradient(180deg,rgba(16,38,54,.6),rgba(12,27,41,.4));
+    padding:18px 20px;border-radius:4px;backdrop-filter:blur(2px)}
+  .status .row{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line)}
+  .status .row:last-child{border-bottom:0}
+  .status .k{color:var(--mut2)}
+  .status .v{color:var(--ice)}
+  .status .v.amber{color:var(--amber)} .status .v.teal{color:var(--teal)} .status .v.coral{color:var(--coral)}
+
+  .rule{height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent);margin:8px 0 40px}
+
+  /* ---------- instrument ---------- */
+  .instrument{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:stretch}
+  .stage{position:relative;border:1px solid var(--line2);border-radius:6px;
+    background:radial-gradient(120% 120% at 50% 30%,rgba(13,30,45,.7),rgba(8,18,28,.85));
+    padding:8px;min-height:520px}
+  .stage canvas{display:block;width:100%;height:100%}
+  .stage .tag{position:absolute;top:14px;left:16px;font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut2)}
+  .stage .tag b{color:var(--teal)}
+  #tip{position:absolute;pointer-events:none;z-index:5;font-family:"IBM Plex Mono",monospace;
+    font-size:11px;color:var(--ink);background:rgba(8,18,28,.92);border:1px solid var(--line2);
+    padding:7px 10px;border-radius:4px;opacity:0;transition:opacity .12s;white-space:nowrap;transform:translate(-50%,-130%)}
+
+  .console{display:flex;flex-direction:column;gap:16px}
+  .ctl{border:1px solid var(--line);border-radius:5px;background:rgba(15,32,48,.55);padding:15px 16px}
+  .ctl .lab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+  .ctl .lab .name{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--mut)}
+  .ctl .lab .name .sym{font-family:"Fraunces",serif;font-style:italic;font-size:17px;color:var(--ink);margin-right:6px}
+  .ctl .lab .val{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600}
+  .ctl.phi .val{color:var(--ice)} .ctl.eta .val{color:var(--teal)} .ctl.time .val{color:var(--amber)}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;border-radius:3px;
+    background:var(--line2);outline:none;cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--line2);transition:transform .12s}
+  input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
+  input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--ink);border:2px solid var(--bg)}
+  .ctl.phi input[type=range]::-webkit-slider-thumb{background:var(--ice)}
+  .ctl.eta input[type=range]::-webkit-slider-thumb{background:var(--teal)}
+  .ctl.time input[type=range]::-webkit-slider-thumb{background:var(--amber)}
+  .ctl .hint{font-size:11.5px;color:var(--mut2);margin-top:8px;line-height:1.45}
+
+  .btnrow{display:flex;gap:10px;align-items:center}
+  button.play{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
+    background:var(--amber);color:#1a1206;border:0;padding:9px 16px;border-radius:4px;cursor:pointer;
+    font-weight:600;transition:filter .15s,transform .1s}
+  button.play:hover{filter:brightness(1.12)} button.play:active{transform:translateY(1px)}
+  .toggle{display:flex;align-items:center;gap:10px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--mut);cursor:pointer;user-select:none}
+  .toggle .sw{width:38px;height:20px;border-radius:20px;background:var(--line2);position:relative;transition:background .2s;flex:none}
+  .toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--mut);transition:.2s}
+  .toggle.on .sw{background:var(--coral-d)} .toggle.on .sw::after{left:20px;background:var(--coral)}
+
+  /* circulation verdict meter */
+  .meter{border:1px solid var(--line2);border-radius:6px;padding:18px 18px 16px;
+    background:linear-gradient(180deg,rgba(216,71,90,.07),rgba(15,32,48,.4));position:relative;overflow:hidden}
+  .meter .mt{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut2)}
+  .meter .big{font-family:"Fraunces",serif;font-weight:900;font-size:54px;line-height:1;margin:6px 0 2px;
+    font-variation-settings:"opsz" 144;transition:color .2s}
+  .meter .dir{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--mut);min-height:18px}
+  .meter .bar{height:8px;border-radius:8px;background:var(--line);margin-top:12px;position:relative;overflow:hidden}
+  .meter .bar .mid{position:absolute;left:50%;top:-2px;width:1px;height:12px;background:var(--mut2)}
+  .meter .bar .fill{position:absolute;top:0;height:100%;border-radius:8px;transition:width .08s linear,left .08s linear,background .2s}
+  .meter .scale{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:5px}
+  .minic{margin-top:14px}
+  .minic .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--mut2);text-transform:uppercase;margin-bottom:4px}
+
+  /* oscilloscope strip */
+  .strip-wrap{margin-top:30px;border:1px solid var(--line2);border-radius:6px;background:rgba(8,18,28,.6);padding:14px 14px 8px}
+  .strip-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:10px}
+  .strip-head .t{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut2)}
+  .legend{display:flex;gap:18px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+  .legend span{display:flex;align-items:center;gap:7px}
+  .legend i{width:14px;height:3px;border-radius:3px;display:inline-block}
+  #strip{display:block;width:100%;height:230px}
+
+  /* ---------- verdict typography ---------- */
+  .verdict{margin:96px 0 30px}
+  .verdict .vh{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4vw,46px);line-height:1.04;
+    letter-spacing:-.01em;max-width:18ch;font-variation-settings:"opsz" 120}
+  .verdict .vh em{font-style:italic;color:var(--teal)}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+  .card-x{border:1px solid var(--line2);border-radius:6px;padding:26px 26px 24px;position:relative}
+  .card-x.yes{border-color:rgba(63,199,192,.35);background:linear-gradient(180deg,rgba(63,199,192,.06),transparent)}
+  .card-x.no{border-color:rgba(255,111,120,.32);background:linear-gradient(180deg,rgba(255,111,120,.06),transparent)}
+  .card-x .stamp{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+  .card-x.yes .stamp{color:var(--teal)} .card-x.no .stamp{color:var(--coral)}
+  .card-x .word{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(40px,7vw,84px);line-height:.9;margin:8px 0 12px;font-variation-settings:"opsz" 144}
+  .card-x.yes .word{color:var(--teal)} .card-x.no .word{color:var(--coral)}
+  .card-x .scope{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .card-x p{color:var(--mut);font-size:15px}
+  .card-x p b{color:var(--ink);font-weight:500}
+  .formula{margin:42px 0;border-left:2px solid var(--amber-d);padding:6px 0 6px 22px}
+  .formula .eq{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(18px,2.6vw,26px);color:var(--ink);letter-spacing:.01em}
+  .formula .eq .am{color:var(--amber)} .formula .eq .te{color:var(--teal)} .formula .eq .co{color:var(--coral)}
+  .formula .cap{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--mut2);margin-top:10px;max-width:62ch;line-height:1.5}
+  .closing{margin:46px 0 0;max-width:64ch;color:var(--mut);font-size:16.5px}
+  .closing b{color:var(--ink);font-weight:500}
+  .closing .hl{color:var(--amber)}
+  .audit-note{margin:34px 0 0;border:1px solid rgba(242,166,90,.32);border-radius:6px;
+    background:linear-gradient(180deg,rgba(242,166,90,.07),rgba(15,32,48,.35));
+    padding:22px 24px;color:var(--mut);font-size:14px}
+  .audit-note h3{font-family:"Fraunces",serif;font-size:23px;font-weight:600;color:var(--amber);margin-bottom:10px}
+  .audit-note ul{padding-left:20px}
+  .audit-note li{margin:5px 0}
+  .audit-note b{color:var(--ink);font-weight:500}
+
+  footer{margin:80px 0 50px;border-top:1px solid var(--line);padding-top:22px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    header{grid-template-columns:1fr;gap:24px}
+    .instrument{grid-template-columns:1fr}
+    .duo{grid-template-columns:1fr}
+    .stage{min-height:420px}
+  }
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+<div class="grid-bg"></div>
+<div class="glow"></div>
+
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="kicker">FIN · Z12 · prąd prawdopodobieństwa</div>
+      <h1>Czy interferencja<br><em>wybiera</em> kierunek<span class="q">?</span></h1>
+      <p class="lead">Na symetrycznym okręgu dwanaściu modów interferencja tworzy <b>prąd</b> — lokalne strzałki przepływu. Pytanie brzmi, czy pełny, dalekozasięgowy prąd ma <b>znak orientacji</b>, czy się znosi. Przekręć fazę φ i porównaj licznik C<sub>χ</sub> z kontrolą najbliższych sąsiadów C₁.</p>
+    </div>
+    <div class="status reveal">
+      <div class="row"><span class="k">generator</span><span class="v">A = sI − W, s=1.660307278766099</span></div>
+      <div class="row"><span class="k">szczeliny</span><span class="v amber">a=10, b=2</span></div>
+      <div class="row"><span class="k">ewolucja</span><span class="v teal">U_t = e^{−itA}</span></div>
+      <div class="row"><span class="k">prąd krawędzi</span><span class="v coral">J = 2W·Im(ψ_y ψ_x*)</span></div>
+      <div class="row"><span class="k">prąd grupowy</span><span class="v">Cχ = Σ_x Σ_{d=1}^5 d J(x→x+d)</span></div>
+      <div class="row"><span class="k">kontrola lokalna</span><span class="v" id="c1check">C₁ = Σ_x J(x→x+1)</span></div>
+      <div class="row"><span class="k">kontrola numeryczna</span><span class="v teal" id="selfcheck">oczekuje…</span></div>
+      <div class="row"><span class="k">symetria R</span><span class="v">m ↔ −m (degeneracja)</span></div>
+    </div>
+  </header>
+
+  <div class="rule"></div>
+
+  <!-- ============ INSTRUMENT ============ -->
+  <section class="instrument">
+    <div class="stage reveal">
+      <div class="tag">interferometr na <b>Z12</b> · rozkład + prąd</div>
+      <canvas id="ring"></canvas>
+      <div id="tip"></div>
+    </div>
+
+    <div class="console">
+      <div class="ctl phi reveal">
+        <div class="lab"><span class="name"><span class="sym">φ</span>faza przygotowania</span><span class="val" id="vphi">0.000</span></div>
+        <input type="range" id="phi" min="-3.14159" max="3.14159" step="0.001" value="0">
+        <div class="hint">To jest „selektor" włożony z zewnątrz. φ=0 → przygotowanie symetryczne pod odbiciem.</div>
+      </div>
+
+      <div class="ctl eta reveal">
+        <div class="lab"><span class="name"><span class="sym">η</span>koherencja / which-path</span><span class="val" id="veta">1.00</span></div>
+        <input type="range" id="eta" min="0" max="1" step="0.01" value="1">
+        <div class="hint">η=1 pełna interferencja. η=0 zapis which-path gasi człon krzyżowy. Lokalne prądy obu osobnych pakietów mogą pozostać, ale nie dostarczają znaku cyrkulacji.</div>
+      </div>
+
+      <div class="ctl time reveal">
+        <div class="lab"><span class="name"><span class="sym">t</span>czas (bezwymiarowy)</span><span class="val" id="vt">1.5525</span></div>
+        <input type="range" id="time" min="0" max="5" step="0.001" value="1.5525">
+        <div class="btnrow" style="margin-top:11px">
+          <button class="play" id="play">▶ ANIMUJ</button>
+          <label class="toggle" id="tgAsym"><span class="sw"></span><span>inna separacja (a=10,b=3; nadal para odbiciowa)</span></label>
+        </div>
+      </div>
+
+      <div class="meter reveal">
+        <div class="mt">zorientowany prąd pełnego jądra Cχ(φ,η,t)</div>
+        <div class="big" id="cval">+0.0000</div>
+        <div class="dir" id="cdir">· strzałki lustrzane — brak netto obrotu</div>
+        <div class="bar"><div class="mid"></div><div class="fill" id="cfill"></div></div>
+        <div class="scale"><span>↺ lewo</span><span>0</span><span>prawo ↻</span></div>
+        <div class="minic">
+          <div class="lab">Cχ jako funkcja φ (bieżące η, t)</div>
+          <canvas id="minic" height="74"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OSCILLOSCOPE STRIP ============ -->
+  <div class="strip-wrap reveal">
+    <div class="strip-head">
+      <div class="t">trzy tory · zsynchronizowane z okręgiem</div>
+      <div class="legend">
+        <span><i style="background:var(--amber)"></i>p(x) rozkład</span>
+        <span><i style="background:var(--teal)"></i>ηRe(e^{−iφ}u_a u_b*) człon krzyżowy</span>
+        <span><i style="background:var(--coral)"></i>J(x→x+1) prąd krawędzi</span>
+      </div>
+    </div>
+    <canvas id="strip"></canvas>
+  </div>
+
+  <!-- ============ VERDICT ============ -->
+  <section class="verdict">
+    <h2 class="vh reveal">Interferencja jest <em>mechanizmem</em>, nie źródłem kierunku.</h2>
+
+    <div class="duo">
+      <div class="card-x yes reveal">
+        <div class="stamp">lokalnie — tak</div>
+        <div class="word">TAK</div>
+        <div class="scope">człon krzyżowy niesie prąd</div>
+        <p>Re(ηe<sup>−iφ</sup>u<sub>a</sub>u<sub>b</sub>*) to nie tylko „jasne i ciemne prążki". Jego część urojona wnosi <b>interferencyjny prąd prawdopodobieństwa</b> J(x→y)=2W·Im(ρ<sub>yx</sub>). Przy η=0 znika właśnie wkład krzyżowy. Lokalne prądy pochodzące z propagacji każdej szczeliny osobno mogą pozostać, lecz ich orientacyjne sumy znoszą się. Interferencja przenosi znak fazy na przepływ, ale nie tworzy tego znaku z niczego.</p>
+      </div>
+      <div class="card-x no reveal">
+        <div class="stamp">globalnie — nie (dopóki R nie złamane)</div>
+        <div class="word">NIE</div>
+        <div class="scope">netto obrót = 0 przy φ=0</div>
+        <p>Przy symetrycznym przygotowaniu prąd jest <b>nieparzysty</b> pod odbiciem: J(x→y)=−J(Rx→Ry). Wkłady zorientowane <b>znoszą się</b> — C<sub>χ</sub>=0 dla <i>każdego</i> t. Żeby dostać znak netto, trzeba włożyć zespoloną fazę φ≠0,π albo inny jawny zasób chiralny. Sama zmiana odległości dwóch jednakowych szczelin nadal pozostawia odbicie, które je zamienia, więc nie jest automatycznym selektorem.</p>
+      </div>
+    </div>
+
+    <div class="formula reveal">
+      <div class="eq">Cχ(φ) = −Cχ(−φ) &nbsp;⟹&nbsp; <span class="co">Cχ(0)=Cχ(π)=0</span> &nbsp;·&nbsp; <span class="te">Cχ ∝ η</span> &nbsp;·&nbsp; <span class="am">Cχ ≈ κηφ dla małego φ</span></div>
+      <div class="cap">Cχ:=Σ_xΣ_{d=1}^5 dJ(x→x+d) jest zorientowanym prądem grupowym pełnego jądra; pomija nieorientowalną parę antypodalną d=6. Odbicie R zamienia φ→−φ i odwraca przyjętą orientację, więc Cχ jest nieparzystą i okresową funkcją fazy. Interferencja (η) jest konieczna dla niezerowego Cχ tego przygotowania, ale faza φ — dostarczona w przygotowaniu — nadaje znak. Nie ma globalnej monotoniczności w |φ|; przy φ=π stan znów może być rzeczywisty i Cχ wraca do zera.</div>
+    </div>
+
+    <p class="closing reveal">Więc intuicja „interferując wybiera kierunek strzałek" jest <b>częściowo prawdziwa na poziomie mechanizmu</b>: człony krzyżowe przenoszą znak przygotowanej fazy do obserwowalnego prądu. Jest jednak <b>fałszywa jako twierdzenie o źródle</b>: z domyślnego stanu φ=0 radialny operator daje lustrzany wzór o zerowym C<sub>χ</sub>. Kierunek pojawia się dopiero po dostarczeniu <span class="hl">chiralnej fazy przygotowania</span> lub innego jawnego zasobu nieparzystego. Przekręć φ: C<sub>χ</sub> wychodzi z zera nieparzyście, osiąga maksimum, a następnie wraca do zera przy φ=π. Kontrola C₁ pozostaje zerowa dla tej nieprzyległej pary szczelin: to ważna lekcja, że różne obserwable widzą różne harmoniczne prądu.</p>
+
+    <div class="audit-note reveal">
+      <h3>Granica metodologiczna symulatora</h3>
+      <ul>
+        <li><b>Strzałki na ringu pokazują tylko prądy najbliższych sąsiadów</b> J(x→x+1), mimo że operator W jest dalekozasięgowy. Licznik Cχ uwzględnia odległości 1…5; para antypodalna d=6 nie ma wyróżnionego znaku.</li>
+        <li><b>Cχ zależy od jawnie wybranej orientacji i podniesienia odległości na okręgu.</b> Jest detektorem zasobu chiralnego (odpowiednikiem prądu grupowego/odpowiedzi na skręt fazowy), ale nie dowodem, że orientację wybrał sam operator.</li>
+        <li><b>η modeluje redukcję koherencji w zadanej rodzinie stanów.</b> Nie jest pełnym modelem konkretnego środowiska ani aparatu which-path.</li>
+        <li><b>Symulacja jest skończona i bezwymiarowa.</b> Nie ustanawia kontinuum, prędkości światła, jednostki czasu ani fizycznej realizacji FIN.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>model: strict K(d)=cos(0.18575d+0.16250)/(1+d^1.8) na Z12 · α_m z audytu Fouriera</span>
+    <span>symulacja operacyjna · nie jest dowodem, że natura wybrała FIN</span>
+  </footer>
+
+</div>
+
+<script>
+"use strict";
+const N = 12;
+const K = [0.46998567264502017,0.19204355169010282,0.09142861427792497,0.04702916874565040,0.02413122336363006,0.011070817321442113];
+const S_REFERENCE = 1.660307278766099;
+const S = 2*K.slice(0,5).reduce((acc,v)=>acc+v,0) + K[5];
+// Recompute the spectrum from the displayed kernel. A copied eigenvalue table
+// could silently drift away from W after a parameter edit.
+const ALPHA = Array.from({length:N},(_,m)=>{
+  let lambdaW=0;
+  for(let d=1;d<=5;d++) lambdaW+=2*K[d-1]*Math.cos(2*Math.PI*m*d/N);
+  lambdaW+=K[5]*Math.cos(Math.PI*m);
+  return S-lambdaW;
+});
+const SPECTRUM_OK = Math.abs(S-S_REFERENCE)<1e-12 && Math.abs(ALPHA[0])<1e-12 && ALPHA.every(v=>v>=-1e-12);
+function dist(x,y){let d=Math.abs(x-y)%N;return Math.min(d,N-d);}
+const W=[];for(let x=0;x<N;x++){W[x]=[];for(let y=0;y<N;y++){W[x][y]= x===y?0:K[dist(x,y)-1];}}
+
+// U_t(x,a) = (1/N) sum_m exp(i 2pi m (x-a)/N) exp(-i t alpha_m)
+function uAt(x,a,t){
+  let re=0,im=0;
+  for(let m=0;m<N;m++){
+    const ph = 2*Math.PI*m*(x-a)/N - t*ALPHA[m];
+    re+=Math.cos(ph); im+=Math.sin(ph);
+  }
+  return [re/N, im/N];
+}
+const cAdd=(a,b)=>[a[0]+b[0],a[1]+b[1]];
+const cMul=(a,s)=>[a[0]*s,a[1]*s];
+const cConj=a=>[a[0],-a[1]];
+const cMulC=(a,b)=>[a[0]*b[0]-a[1]*b[1], a[0]*b[1]+a[1]*b[0]];
+
+function probabilityAt(phi,eta,t,a,b){
+  const ua=[],ub=[];
+  for(let x=0;x<N;x++){ua[x]=uAt(x,a,t);ub[x]=uAt(x,b,t);}
+  const p=[],cross=[];
+  const emphi=[Math.cos(phi),-Math.sin(phi)];
+  for(let x=0;x<N;x++){
+    const A2=ua[x][0]*ua[x][0]+ua[x][1]*ua[x][1];
+    const B2=ub[x][0]*ub[x][0]+ub[x][1]*ub[x][1];
+    const diag=(A2+B2)/2;
+    // cross complex = u_a * conj(u_b)
+    const cr=cMulC(ua[x],cConj(ub[x]));
+    // Re(e^{-i phi} * cr)
+    const crp=cMulC(emphi,cr);
+    cross[x]=eta*crp[0];
+    p[x]=diag+cross[x];
+  }
+  return {p,cross,ua,ub};
+}
+
+function compute(phi,eta,t,a,b,withDiagnostics=false){
+  const base=probabilityAt(phi,eta,t,a,b);
+  const {p,cross,ua,ub}=base;
+  const jEdge=[], jAll=Array.from({length:N},()=>Array(N).fill(0));
+  const ephi=[Math.cos(phi),Math.sin(phi)], emphi=[Math.cos(phi),-Math.sin(phi)];
+  // J(x->y)=2 W_xy Im(rho_yx). pairCurrent is twice Im(rho_yx),
+  // so multiplication by W gives the declared density current.
+  for(let x=0;x<N;x++){
+    const y=(x+1)%N;
+    jEdge[x]=pairCurrent(x,y,ua,ub,eta,ephi,emphi)*W[x][y];
+  }
+  for(let x=0;x<N;x++)for(let y=0;y<N;y++){
+    if(x===y)continue;
+    jAll[x][y]=pairCurrent(x,y,ua,ub,eta,ephi,emphi)*W[x][y];
+  }
+  // Two distinct observables are kept separate:
+  // C1 sees only the first hopping harmonic; Cchi is the oriented group-current
+  // proxy for the full long-range kernel. The antipodal d=6 edge has no
+  // orientation-compatible shortest lift and is therefore excluded.
+  const C1=jEdge.reduce((acc,v)=>acc+v,0);
+  let C=0;
+  for(let x=0;x<N;x++)for(let d=1;d<=5;d++)C+=d*jAll[x][(x+d)%N];
+  const diagnostics={
+    normalization:Math.abs(p.reduce((acc,v)=>acc+v,0)-1),
+    continuity:NaN
+  };
+  if(withDiagnostics){
+    const h=1e-5;
+    const pp=probabilityAt(phi,eta,t+h,a,b).p;
+    const pm=probabilityAt(phi,eta,t-h,a,b).p;
+    diagnostics.continuity=Math.max(...p.map((_,x)=>{
+      const dp=(pp[x]-pm[x])/(2*h);
+      const outgoing=jAll[x].reduce((acc,v)=>acc+v,0);
+      return Math.abs(dp+outgoing);
+    }));
+  }
+  return {p,cross,jEdge,jAll,C,C1,ua,ub,diagnostics};
+}
+function pairCurrent(x,y,ua,ub,eta,ephi,emphi){
+  // Im(u_a(y) conj(u_a(x))) + Im(u_b(y) conj(u_b(x))) + eta*Im(e^{i phi} u_b(y) conj(u_a(x)) + e^{-i phi} u_a(y) conj(u_b(x)))
+  const imA=cMulC(ua[y],cConj(ua[x]))[1];
+  const imB=cMulC(ub[y],cConj(ub[x]))[1];
+  const t1=cMulC(ephi,cMulC(ub[y],cConj(ua[x])));
+  const t2=cMulC(emphi,cMulC(ua[y],cConj(ub[x])));
+  return imA+imB+eta*(t1[1]+t2[1]);
+}
+
+// ---------- state ----------
+let phi=0, eta=1, t=1.5525, playing=false, asym=false;
+let a=10,b=2;
+let curveScale=1e-6;
+
+// ---------- ring canvas ----------
+const ring=document.getElementById('ring'), rctx=ring.getContext('2d');
+const tip=document.getElementById('tip');
+let nodePos=[], ringW=0, ringH=0, hover=-1;
+function fitRing(){
+  const r=ring.getBoundingClientRect();
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  ring.width=r.width*dpr; ring.height=r.height*dpr;
+  rctx.setTransform(dpr,0,0,dpr,0,0);
+  ringW=r.width; ringH=r.height;
+}
+function drawRing(res){
+  rctx.clearRect(0,0,ringW,ringH);
+  const cx=ringW/2, cy=ringH/2+6;
+  const R=Math.min(ringW,ringH)*0.30;
+  nodePos=[];
+  for(let x=0;x<N;x++){
+    const ang=-Math.PI/2 + 2*Math.PI*x/N;
+    nodePos[x]={x:cx+R*Math.cos(ang), y:cy+R*Math.sin(ang), ang};
+  }
+  // base circle
+  rctx.strokeStyle='rgba(140,180,210,.18)'; rctx.lineWidth=1;
+  rctx.beginPath(); rctx.arc(cx,cy,R,0,7); rctx.stroke();
+  // edge current arrows (between neighbours)
+  const jmax=Math.max(1e-9,...res.jEdge.map(Math.abs));
+  for(let x=0;x<N;x++){
+    const y=(x+1)%N;
+    const j=res.jEdge[x];
+    const p0=nodePos[x], p1=nodePos[y];
+    const mag=Math.abs(j)/jmax;
+    if(mag<0.02)continue;
+    const col = j>=0 ? '63,199,192' : '255,111,120';
+    // draw along arc-ish as straight chord offset outward a touch
+    const mx=(p0.x+p1.x)/2, my=(p0.y+p1.y)/2;
+    const dx=p1.x-p0.x, dy=p1.y-p0.y, ln=Math.hypot(dx,dy);
+    const ux=dx/ln, uy=dy/ln;
+    const len=ln*0.62*(0.35+0.65*mag);
+    const dir=j>=0?1:-1;
+    const sx=mx-ux*len*0.5*dir, sy=my-uy*len*0.5*dir;
+    const ex=mx+ux*len*0.5*dir, ey=my+uy*len*0.5*dir;
+    rctx.strokeStyle=`rgba(${col},${0.35+0.6*mag})`;
+    rctx.lineWidth=1.4+3.4*mag;
+    rctx.lineCap='round';
+    rctx.beginPath(); rctx.moveTo(sx,sy); rctx.lineTo(ex,ey); rctx.stroke();
+    // arrow head
+    const ah=5+4*mag, aa=Math.atan2(ey-sy,ex-sx);
+    rctx.fillStyle=`rgba(${col},${0.5+0.5*mag})`;
+    rctx.beginPath();
+    rctx.moveTo(ex,ey);
+    rctx.lineTo(ex-ah*Math.cos(aa-0.5),ey-ah*Math.sin(aa-0.5));
+    rctx.lineTo(ex-ah*Math.cos(aa+0.5),ey-ah*Math.sin(aa+0.5));
+    rctx.closePath(); rctx.fill();
+  }
+  // radial probability bars + glow nodes
+  const pmax=Math.max(1e-9,...res.p);
+  for(let x=0;x<N;x++){
+    const p=res.p[x];
+    const n=nodePos[x];
+    const outx=Math.cos(n.ang), outy=Math.sin(n.ang);
+    const barLen=(p/pmax)*R*0.95;
+    // glow
+    const g=rctx.createRadialGradient(n.x,n.y,0,n.x,n.y,16+22*(p/pmax));
+    g.addColorStop(0,`rgba(242,166,90,${0.20+0.45*(p/pmax)})`);
+    g.addColorStop(1,'rgba(242,166,90,0)');
+    rctx.fillStyle=g; rctx.beginPath(); rctx.arc(n.x,n.y,16+22*(p/pmax),0,7); rctx.fill();
+    // bar
+    rctx.strokeStyle=`rgba(242,166,90,${0.5+0.5*(p/pmax)})`;
+    rctx.lineWidth=3; rctx.lineCap='round';
+    rctx.beginPath(); rctx.moveTo(n.x+outx*9,n.y+outy*9); rctx.lineTo(n.x+outx*(9+barLen),n.y+outy*(9+barLen)); rctx.stroke();
+    // node dot
+    const isSlit=(x===a||x===b);
+    rctx.fillStyle= isSlit? '#cfe8ff' : (x===hover? '#fff':'#9fb2c0');
+    rctx.beginPath(); rctx.arc(n.x,n.y, isSlit?5.5:(x===hover?5:3.4),0,7); rctx.fill();
+    if(isSlit){rctx.strokeStyle='rgba(207,232,255,.5)';rctx.lineWidth=1;rctx.beginPath();rctx.arc(n.x,n.y,9,0,7);rctx.stroke();}
+    // label
+    rctx.fillStyle='rgba(143,164,182,.7)';
+    rctx.font='10px "IBM Plex Mono",monospace'; rctx.textAlign='center'; rctx.textBaseline='middle';
+    rctx.fillText(x, n.x+outx*(R*0.95+22), n.y+outy*(R*0.95+22));
+  }
+  // central circulation spinner (ambient feedback)
+  const cNorm=Math.max(-1,Math.min(1,res.C/Math.max(curveScale,1e-6)));
+  rctx.save(); rctx.translate(cx,cy);
+  if(Math.abs(cNorm)>1e-6){
+    rctx.rotate(performance.now()/600*Math.sign(cNorm)*Math.min(1,Math.abs(cNorm)*1.4));
+  }
+  const cr=R*0.34;
+  rctx.strokeStyle=`rgba(${Math.abs(cNorm)<0.04?'143,164,182':(cNorm>0?'255,111,120':'63,199,192')},${0.25+0.5*Math.abs(cNorm)})`;
+  rctx.lineWidth=2;
+  rctx.beginPath(); rctx.arc(0,0,cr,0.3,Math.PI*1.7); rctx.stroke();
+  const ea=Math.PI*1.7, ahx=cr*Math.cos(ea), ahy=cr*Math.sin(ea);
+  rctx.fillStyle=rctx.strokeStyle;
+  rctx.beginPath(); rctx.moveTo(ahx,ahy);
+  rctx.lineTo(ahx-7*Math.cos(ea-0.6),ahy-7*Math.sin(ea-0.6));
+  rctx.lineTo(ahx-7*Math.cos(ea+0.9),ahy-7*Math.sin(ea+0.9)); rctx.closePath(); rctx.fill();
+  rctx.restore();
+  rctx.fillStyle='rgba(95,118,137,.9)'; rctx.font='10px "IBM Plex Mono",monospace'; rctx.textAlign='center';
+  rctx.fillText('Cχ', cx, cy+1);
+}
+
+// ---------- strip (3 tracks) ----------
+const strip=document.getElementById('strip'), sctx=strip.getContext('2d');
+function fitStrip(){
+  const r=strip.getBoundingClientRect(); const dpr=Math.min(window.devicePixelRatio||1,2);
+  strip.width=r.width*dpr; strip.height=r.height*dpr; sctx.setTransform(dpr,0,0,dpr,0,0);
+}
+function drawStrip(res){
+  const w=strip.getBoundingClientRect().width, h=strip.getBoundingClientRect().height;
+  sctx.clearRect(0,0,w,h);
+  const tracks=[
+    {data:res.p, col:'242,166,90', label:'p(x)', min:0},
+    {data:res.cross, col:'63,199,192', label:'cross', min:null},
+    {data:res.jEdge, col:'255,111,120', label:'J edge', min:null}
+  ];
+  const padL=70, padR=14, padT=8, padB=8;
+  const th=(h-padT-padB)/3;
+  tracks.forEach((tr,ti)=>{
+    const y0=padT+ti*th, yc=y0+th/2;
+    // separator
+    if(ti>0){sctx.strokeStyle='rgba(140,180,210,.10)';sctx.beginPath();sctx.moveTo(padL,y0);sctx.lineTo(w-padR,y0);sctx.stroke();}
+    // baseline
+    const maxv=Math.max(1e-9,...tr.data.map(Math.abs));
+    const useMin = tr.min===0;
+    const baseY = useMin? y0+th-6 : yc;
+    const amp = useMin? (th-12) : (th/2-6);
+    sctx.strokeStyle='rgba(140,180,210,.14)'; sctx.lineWidth=1;
+    sctx.beginPath(); sctx.moveTo(padL,baseY); sctx.lineTo(w-padR,baseY); sctx.stroke();
+    // label
+    sctx.fillStyle=`rgba(${tr.col},.9)`; sctx.font='10px "IBM Plex Mono",monospace'; sctx.textAlign='left'; sctx.textBaseline='middle';
+    sctx.fillText(tr.label, 8, yc);
+    // bars
+    const bw=(w-padL-padR)/N;
+    for(let x=0;x<N;x++){
+      const v=tr.data[x];
+      const bx=padL+x*bw+bw*0.18, bwid=bw*0.64;
+      const hh=(v/maxv)*amp;
+      sctx.fillStyle=`rgba(${tr.col},${0.45+0.5*Math.min(1,Math.abs(v)/maxv)})`;
+      if(useMin){ sctx.fillRect(bx, baseY-hh, bwid, hh); }
+      else { sctx.fillRect(bx, baseY-(hh>0?hh:0), bwid, Math.abs(hh)); }
+    }
+  });
+}
+
+// ---------- mini C(phi) ----------
+const minic=document.getElementById('minic'), mctx=minic.getContext('2d');
+function fitMini(){const r=minic.getBoundingClientRect();const dpr=Math.min(window.devicePixelRatio||1,2);minic.width=r.width*dpr;minic.height=74*dpr;mctx.setTransform(dpr,0,0,dpr,0,0);}
+function drawMini(){
+  const w=minic.getBoundingClientRect().width, h=74;
+  mctx.clearRect(0,0,w,h);
+  const pad=6, midy=h/2;
+  mctx.strokeStyle='rgba(140,180,210,.16)';mctx.beginPath();mctx.moveTo(pad,midy);mctx.lineTo(w-pad,midy);mctx.stroke();
+  // sample C over phi at current eta,t
+  const M=80; const vals=[]; let mx=1e-9;
+  for(let i=0;i<=M;i++){const ph=-Math.PI+2*Math.PI*i/M; vals.push(compute(ph,eta,t,a,b).C);}
+  vals.forEach(v=>mx=Math.max(mx,Math.abs(v)));
+  mx=Math.max(mx,1e-9);
+  curveScale=mx;
+  mctx.beginPath();
+  for(let i=0;i<=M;i++){
+    const x=pad+(w-2*pad)*i/M;
+    const y=midy-(vals[i]/mx)*(h/2-6);
+    i?mctx.lineTo(x,y):mctx.moveTo(x,y);
+  }
+  mctx.strokeStyle='rgba(207,232,255,.7)';mctx.lineWidth=1.6;mctx.stroke();
+  // marker at current phi
+  const mxp=pad+(w-2*pad)*((phi+Math.PI)/(2*Math.PI));
+  const myp=midy-(resCache.C/mx)*(h/2-6);
+  mctx.fillStyle='var(--coral)';mctx.fillStyle='#ff6f78';
+  mctx.beginPath();mctx.arc(mxp,myp,3.4,0,7);mctx.fill();
+  mctx.strokeStyle='rgba(255,111,120,.4)';mctx.beginPath();mctx.moveTo(mxp,pad);mctx.lineTo(mxp,h-pad);mctx.stroke();
+}
+
+// ---------- meter ----------
+const cval=document.getElementById('cval'), cdir=document.getElementById('cdir'), cfill=document.getElementById('cfill');
+function updateMeter(C){
+  const sign=C>=0?'+':'−';
+  cval.textContent=sign+Math.abs(C).toFixed(4);
+  const norm=Math.max(-1,Math.min(1,C/Math.max(curveScale,1e-9)));
+  const pct=Math.abs(norm)*50;
+  if(norm>=0){cfill.style.left='50%';cfill.style.width=pct+'%';cfill.style.background='linear-gradient(90deg,rgba(255,111,120,.4),var(--coral))';}
+  else{cfill.style.left=(50-pct)+'%';cfill.style.width=pct+'%';cfill.style.background='linear-gradient(90deg,var(--teal),rgba(63,199,192,.4))';}
+  if(Math.abs(C)<0.0006){cval.style.color='#9fb2c0';cdir.textContent='· strzałki lustrzane — brak netto obrotu';}
+  else if(C>0){cval.style.color='#ff6f78';cdir.textContent='↻ dodatni znak z chiralnej fazy przygotowania';}
+  else{cval.style.color='#3fc7c0';cdir.textContent='↺ ujemny znak z chiralnej fazy przygotowania';}
+}
+
+// ---------- loop ----------
+let resCache=compute(phi,eta,t,a,b,true);
+function refresh(){
+  a=asym?10:10; b=asym?3:2;
+  resCache=compute(phi,eta,t,a,b,true);
+  drawMini(); drawRing(resCache); drawStrip(resCache); updateMeter(resCache.C);
+  document.getElementById('vphi').textContent=phi.toFixed(3);
+  document.getElementById('veta').textContent=eta.toFixed(2);
+  document.getElementById('vt').textContent=t.toFixed(4);
+  document.getElementById('c1check').textContent=`C₁=${resCache.C1.toExponential(2)} (kontrola harmonicznej d=1)`;
+  const nerr=resCache.diagnostics.normalization;
+  const cerr=resCache.diagnostics.continuity;
+  const check=document.getElementById('selfcheck');
+  check.textContent=`Σp−1=${nerr.toExponential(1)} · ciągłość=${cerr.toExponential(1)} · widmo=${SPECTRUM_OK?'OK':'BŁĄD'}`;
+  check.className=(SPECTRUM_OK && nerr<1e-10 && cerr<1e-7)?'v teal':'v coral';
+}
+let last=performance.now();
+function loop(now){
+  if(playing){ t+= (now-last)*0.0009; if(t>5)t-=5; document.getElementById('time').value=t; }
+  last=now;
+  if(playing) refresh(); else drawRing(resCache); // keep spinner alive
+  requestAnimationFrame(loop);
+}
+
+// ---------- controls ----------
+document.getElementById('phi').addEventListener('input',e=>{phi=+e.target.value;refresh();});
+document.getElementById('eta').addEventListener('input',e=>{eta=+e.target.value;refresh();});
+document.getElementById('time').addEventListener('input',e=>{t=+e.target.value;playing=false;document.getElementById('play').textContent='▶ ANIMUJ';refresh();});
+document.getElementById('play').addEventListener('click',e=>{playing=!playing;e.target.textContent=playing?'❚❚ PAUZA':'▶ ANIMUJ';last=performance.now();});
+const tg=document.getElementById('tgAsym');
+tg.addEventListener('click',()=>{asym=!asym;tg.classList.toggle('on',asym);refresh();});
+
+// hover tooltip on ring
+ring.addEventListener('mousemove',e=>{
+  const r=ring.getBoundingClientRect(); const mx=e.clientX-r.left, my=e.clientY-r.top;
+  let best=-1,bd=18;
+  for(let x=0;x<N;x++){const d=Math.hypot(mx-nodePos[x].x,my-nodePos[x].y);if(d<bd){bd=d;best=x;}}
+  hover=best;
+  if(best>=0){
+    tip.style.opacity=1; tip.style.left=nodePos[best].x+'px'; tip.style.top=nodePos[best].y+'px';
+    const j=resCache.jEdge[best];
+    tip.innerHTML=`x=${best} &nbsp; p=${resCache.p[best].toFixed(3)} &nbsp; J<sub>→</sub>=${j>=0?'+':''}${j.toFixed(3)}`;
+  } else tip.style.opacity=0;
+  if(!playing)drawRing(resCache);
+});
+ring.addEventListener('mouseleave',()=>{hover=-1;tip.style.opacity=0;if(!playing)drawRing(resCache);});
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+window.addEventListener('resize',()=>{fitRing();fitStrip();fitMini();refresh();});
+fitRing();fitStrip();fitMini();refresh();requestAnimationFrame(loop);
+</script>
+</body>
+</html>

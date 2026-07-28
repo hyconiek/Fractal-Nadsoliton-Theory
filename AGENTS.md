@@ -4315,3 +4315,201 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   non-affine eta datum; otherwise preserve the affine no-go.  Program 239 may
   formalize the full analytic phase hierarchy but cannot source the phase by
   formalization alone.
+
+## Programs 240–242 laboratory-transfer guardrail (Release 10.21, 2026-07-28)
+
+- Program 240 constructs a conditional heat-kernel tomography design for the
+  strict finite generator.  The dimensionless optimum for the declared
+  one-time sensitivity criterion is
+  `tau_star=1/lambda_max=0.4269523037`; it is not a physical time until an
+  independently calibrated clock supplies a unit.  The recommended nominal
+  allocation is 50,000 records per preparation and time, while the supplied
+  worst-case Bernstein guarantee is much more conservative.  Preserve both
+  numbers and their distinct meanings.
+- Program 241 is a fail-closed validator for the five Program-227 measurement
+  obligations: informationally complete preparations, calibrated time,
+  vertex-resolving measurement, finite transition records, and independent
+  custody/holdout/role separation.  Software can verify fields 1--4 only
+  conditionally; it cannot create the human and institutional independence
+  required by field 5.  An external registrar signature remains mandatory.
+- Program 242 is a one-shot frozen holdout pipeline.  It may run only on a
+  Program-241-admitted external bundle and must preserve a failure without
+  model repair or threshold tuning.  No such independent bundle was supplied
+  in Release 10.21, so the external experiment remains unexecuted.
+- Photonic graph walks, Ramsey/Mach--Zehnder dephasing, and event-level
+  double-slit records are feasibility hypotheses for laboratory review, not
+  claims that any apparatus already realizes the FIN generator, a homogeneous
+  heat semigroup, twelve basis states, or the vertex POVM.
+- Release 10.21 exports an executable specification and falsification
+  protocol, not laboratory validation, a physical clock, a selector,
+  `QW-2191` discharge, bridge completion, role transfer, `L_total`, SM/GR
+  generation, or ToE closure.
+
+## Z12 current audit and first puzzle-atlas guardrail (Release 10.22, 2026-07-28)
+
+- The audited `Z12 sim.html` now distinguishes local edge currents from the
+  oriented full-kernel group current
+  `C_chi=sum_x sum_{d=1}^5 d J(x->x+d)`.  For the slit pair `10/2`, the
+  nearest-neighbour circulation `C1` is numerically blind, while
+  `C_chi(+0.7)=0.1211880893` and `C_chi(-0.7)=-0.1211880893`.
+- Removing source coherence (`eta=0`) cancels the declared state-dependent
+  global chiral signal, not every local edge current.  Do not repeat the
+  stronger false statement.  The antipodal `d=6` edge is self-inverse and is
+  excluded from the oriented sum unless an additional convention is declared.
+- The finite audit verifies the strict-generator row sum
+  `s=1.660307278766099`, positive-semidefinite spectrum to floating precision,
+  trace/normalization conservation, and the continuity equation.  The
+  simulator is a mathematical model, not an event-level laboratory record.
+- The first puzzle atlas screens 12 characteristics against 15 external
+  mathematical domains and all 66 pairs.  Its new proof-grade object is the
+  exact dynamic Schur self-energy
+  `Sigma_E(z)=A_EH(zI+A_HH)^(-1)A_HE`: projected dynamics generally fails the
+  semigroup law because hidden excursions produce memory.  Static Schur
+  reduction must not be substituted for exact reduced dynamics.
+- Release 10.22 introduces a new typed memory object outside the previously
+  closed replay lanes.  It does not export a selector, scale, physical
+  environment, legacy-to-strict completion, role transfer, or experimental
+  validation.
+
+## Second-generation nadsoliton puzzle-atlas guardrail (Release 10.23, 2026-07-28)
+
+- The generation grammar exhausts all 12 singles, 66 pairs, and 220 triples,
+  plus seven declared groups of size 4--6: 305 combinations in total.  It
+  admits 109 typed/inherited derivative rows, rejects 184 untyped visual
+  juxtapositions, and records 15 second-generation objects `O01--O15` and ten
+  third-generation objects `G01--G10`.  A grammar hit is a construction
+  candidate, never evidence of cross-domain equivalence or physical truth.
+- The strongest exact synthesis is `G02`, the Stieltjes--Schur context
+  functor: nested Schur reductions compose, and
+  `Sigma_E(z)=A_EH(zI+A_HH)^(-1)A_HE` satisfies
+  `(-1)^n Sigma_E^(n)(z)=n! A_EH(zI+A_HH)^(-n-1)A_HE >= 0`.
+  This is a finite operator theorem and an exact memory representation, not a
+  physical ontology.
+- `O02` reconstructs the exact frequency-dependent quadratic effective
+  action from the block resolvent.  Its stationarity residual is
+  `4.90e-16`, but it is not a complete physical Lagrangian: the spectral
+  parameter, action unit, interactions, and operational clock remain extra
+  data.
+- `O05`, the chiral memory susceptibility
+  `Xi_E(z)=partial_theta Sigma_E(z,theta)|_0`, is nonzero on the declared
+  even/odd strict-Z12 context and inversion-odd with residual `2.17e-16`.
+  It is a new orientation receiver/tangent.  The twist parameter and its sign
+  are supplied; therefore `O05` does not source an orientation, fix the
+  sign-torsor polarity, or discharge `QW-2191`.
+- `O09` defines operational information loss as the contraction ledger
+  `L_t(p,q)=D(p||q)-D(P_t p||P_t q)`.  The deterministic 1000-pair audit finds
+  zero negative values below `-1e-12`.  This is loss of accessible
+  distinguishability under a channel, not thermodynamic entropy, heat,
+  energy, or a sourced negative-information coupling.
+- `O07/O08/O15` separate projective spectral prediction, positive scale
+  calibration, and orientation resource into distinct torsors/sections.
+  Current data supply neither canonical section.  Do not merge scale and
+  orientation into one missing constant or infer them from scalar strict
+  data.
+- Programs 255--266 are the next admissible agenda.  Highest proof priority is
+  the analytic Stieltjes/context theorem and closed formula for `Xi_E`;
+  highest empirical priority is a held-out multi-context memory experiment.
+  Adaptive, biological, categorical, transport, and physicalization objects
+  remain explicitly moderate or speculative until their stated
+  falsification tests are passed.
+- Release 10.23 exports no strict selector, canonical physical unit,
+  phase-origin source, legacy-to-strict completion, legacy role transfer,
+  role-bearing `L_total`, laboratory validation, SM/GR derivation, or ToE
+  closure.
+
+## Programs 255–266 operator-memory/identifiability guardrail (Release 10.24, 2026-07-28)
+
+- Program 255 proves the finite all-context memory-measure theorem.  For every
+  one of the 4,094 nonempty proper strict-Z12 contexts,
+  `Sigma_E(z)=A_EH(zI+A_HH)^(-1)A_HE` is the Stieltjes transform of a positive
+  atomic operator measure and
+  `(-1)^n Sigma_E^(n)(z)>=0`.  The maximum measure-reconstruction residual is
+  `3.73e-15`.  Treat this as a finite operator theorem, not as proof of a
+  physical bath or unique environment.
+- Program 256 identifies the even/odd hidden realization quotient.  The
+  declared hidden dimension is six, but controllability/observability and the
+  pole-residue ranks give minimal dimension five and only three visible
+  self-energy poles.  Adding two decoupled modes changes `Sigma` by at most
+  `4.16e-17`.  Do not infer a unique microscopic hidden sector from the
+  memory function.
+- Program 257 defines the contravariant Schur context category.  Direct and
+  nested restriction agree over 20,000 audited context chains with maximum
+  residual `6.66e-16`.  This exports composition and identity, not a sheaf
+  gluing theorem or a quantum-contextuality claim.
+- Program 258 proves the closed chiral-memory derivative
+  `Xi=B'RB*+BRB'^*-BRC'RB*`, with `R=(zI+C)^(-1)`, its inversion-odd
+  covariance, and an explicit resolvent norm bound.  `Xi` is a receiver for a
+  supplied flux twist; it does not choose the sign of the twist, fix the
+  orientation torsor, or discharge `QW-2191`.
+- Program 259 proves only a typed no-cycle result for the declared strict
+  decimation `12->6->3->1`: an object retaining context cardinality cannot
+  have a nontrivial fixed point or cycle under strict size decrease.  A
+  genuine RG fixed-point claim requires a new size-restoring
+  embedding/equivalence and normalization law.
+- Program 260 constructs the classical Process Information Ledger:
+  input distinguishability separates into discarded channel loss, apparatus
+  record distinguishability, and conditional system carry.  The five-step
+  telescoping residual is zero.  This is a dimensionless relative-entropy
+  identity, not thermodynamic entropy, heat, work, or energy.
+- Program 261 attacks exactly one predeclared bridge atom:
+  amplitude-only absorption `K_legacy/alpha_geo`, with all legacy phase,
+  frequency, and damping data preserved.  The resulting generator has
+  minimum eigenvalue `-7.7101445443`, its hidden block has minimum eigenvalue
+  `-5.8247982640`, and its self-energy has a positive-axis pole at
+  `z=5.8247982640`.  Amplitude-only completion is therefore excluded from the
+  positive strict Stieltjes class.  This is not a no-go for a richer bridge
+  containing explicit strict-side sign/shift, phase/frequency, nonlinear
+  compression, and selector-source data; role transfer remains forbidden.
+- Program 262 validates only a frozen synthetic projective-first,
+  calibration-second design: 300/300 replicates pass the declared joint
+  thresholds at 50,000 counts per preparation.  No independent P241 bundle
+  exists, so P242 remains unexecuted and no laboratory validation is exported.
+- Program 263 proves a vertex-POVM current no-go.  Two positive states
+  `rho` and `rho*` have identical vertex populations and opposite fourth
+  harmonic currents.  Current tomography requires the five phase-sensitive
+  interferometric observables plus separate two-flux process tomography for
+  `Xi`; vertex counts alone are insufficient.
+- Program 264 quantifies specificity on frozen null ensembles.  Positive
+  dense and circulant Laplacians pass Stieltjes, Schur, and information tests
+  generically, while none passes the strict spectral fingerprint.  Strict
+  five-percent circulant perturbations pass all five tests at rate `0.52`.
+  Do not present generic positive-Laplacian properties as FIN identifiers.
+- Program 265 defines the Mechanism Identifiability Quotient.  Without an
+  independent clock, `(cA,t)` and `(A,ct)` are exactly observationally
+  equivalent.  Nonuniform generator drift is detected by projective spectral
+  change, while apparatus memory requires multi-time semigroup-defect tests.
+  Finite snapshots do not identify a unique adaptive vector field.
+- Program 266 gives a negative matched-reservoir result under the frozen
+  protocol.  FIN linear memory capacity is `4.0601`, below all 120 controls;
+  recovery takes `135` steps and is slowest in the comparison.  This refutes
+  automatic computational/biological advantage in that benchmark, while
+  leaving preregistered nonlinear tasks open.
+- Release 10.24 constructs `O16--O25` but exports no selector, physical unit,
+  full legacy-to-strict bridge, role transfer, unique environment, unique
+  adaptive law, laboratory realization, `L_total`, SM/GR generation, or ToE
+  closure.
+
+## Post-Programs-255–266 research steering guardrail (2026-07-28)
+
+- Highest proof priority is P267: uniqueness and noisy stability of the
+  positive operator memory measure/minimal realization.  P268 should place
+  the Schur context category in a proof assistant.
+- Highest operational priority is P269/P276: prove minimality of the
+  phase-sensitive current instrument and the two-time/independent-clock
+  identifiability theorem before acquiring new laboratory data.
+- P270 may search for exactly one size-restoring RG equivalence; without it,
+  do not claim a fixed point from a size-decreasing context tower.
+- P272 may attack exactly one new legacy-to-strict completion atom with a
+  frozen map and stop rule.  Do not reopen generic bridge fitting or begin
+  role transfer after the amplitude-only no-go.
+- P271, P277, and P278 may respectively extend the information ledger to
+  quantum instruments, causally identify a finite adaptive-law family, and
+  benchmark nonlinear reservoirs.  Universal approximators and unheld-out
+  tasks are not admissible evidence.
+- P273/P274 require external experimental coordination.  P242 remains
+  one-shot and blocked until a genuinely independent P241-admitted record is
+  supplied.
+- P279/P280 are conditional operational programs only: a thermodynamic bridge
+  requires explicit Hamiltonian, temperature, bath, reset protocol and
+  dimensional conversion; scale and orientation remain separate supplied
+  sections and neither sources the other.
