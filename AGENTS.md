@@ -4732,3 +4732,535 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - P308 may generalize the pointed-torsor nonsection/minimal-resource result and
   formalize it in Lean.  It may not infer a strict source for the point,
   discharge `QW-2191`, or couple scale and orientation without a new theorem.
+
+## Programs P295–P308 result guardrail (Release 10.27, 2026-07-30)
+
+- The historical legacy-to-physics chain has been reclassified.  The formulas
+  `sin^2(theta_W)=alpha_geo/12`,
+  `alpha_EM^-1=alpha_geo(1-beta_tors)/(2 beta_tors)`, and
+  `G_eff/G0=beta_tors^N` are conditional parameter maps, not proved
+  functionals of the legacy kernel, its spectrum, propagator, or measurement
+  law.  They remain benchmark hypotheses only.
+- Historical corrections are binding: the legacy cosine zeros are
+  `d=4/3+4k`, not integer nodes; `d^1.6*d^-0.6=d^1`, not `d^-1`; and the old
+  electroweak manipulation cancels to `alpha_geo`, not `alpha_geo/12`.
+  Repository Wilson-loop calculations remain internal simulations, not
+  laboratory measurements.
+- P295 finds full local Jacobian rank for one- and four-probe shared-pole
+  Stieltjes models, and four probes improve median pole error at noise `1e-4`
+  from `0.496` to `0.150`.  This is conditional local injectivity, not uniform
+  minimax stability.
+- P296 machine-checks the general staged-minimization logic in Lean 4.28 and
+  confirms 400 exact rational SPD Schur witnesses.  The Lean source is not yet
+  a full Mathlib theorem for arbitrary positive matrix blocks.
+- P297 correctly uses Hermitian adjoints and a complex-unitary Givens
+  decomposition.  The ideal `72x72` mesh has unitarity residual `2.12e-15`;
+  `1e-3`-radian parameter quantization gives maximum POVM-effect error
+  `1.16e-3`.  This is not a fabricated chip, loss map, or detector
+  calibration.
+- P298 refutes scalar isotropic complement closure by forced flat-band
+  multiplicity and refutes monotone Bernstein completion from
+  `A_legacy_abs` to `A_strict` by 32 Fourier-mode order inversions.  A
+  non-scalar parent, anisotropic source, signed resource, or carrier transport
+  is genuinely additional structure.
+- P299 distinguishes a supplied persistent hidden-rate process from a
+  homogeneous Markov chain: exact CMI is `0.0010569` nat versus numerical zero,
+  and the best one-step Markov prediction differs by TV `0.02157`.  The bath
+  and rates are supplied.
+- P300 proves the legacy hyperbola is exactly a positive Laplace mixture of
+  exponential distance attenuations.  The strict `eta=1.8` envelope is not
+  completely monotone, and unchanged legacy phase has four sign mismatches on
+  `d=1,...,6`.  This refutes positive fixed-phase/path-scale completion only;
+  it does not prove temporal non-Markovianity or a generic bridge no-go.
+- P301 and P306 keep the external gates closed: no admitted independent P241
+  laboratory bundle or certified hardware reservoir record was supplied.
+  P242 must not be run on synthetic substitutes.
+- P302 gives a full-rank five-parameter synthetic detector design with
+  gradient RMSE `0.00906`; it is an apparatus-design calculation, not a real
+  calibration.
+- P303 proves a regular local fingerprint-chart rank of five and therefore a
+  local small-ball exponent five; finite importance sampling gives exponent
+  `5.217`.  Singular charts and global look-elsewhere effects remain open.
+- P304 supplies a positive time-warp counterexample matching all three frozen
+  observation times exactly while differing off-grid.  Finite-time data do
+  not identify homogeneous strict dynamics unless homogeneity or a restricted
+  clock class is preregistered.
+- P305 recovers a supplied synthetic completion-coordinate law after
+  interventions raise design rank from four to six.  The coordinate and law
+  were inserted; they are not a FIN bridge theorem or physical discovery.
+- P307 proves the strict heat/Gibbs scale orbit and a rank-one clock/scale
+  sensitivity.  The historical electromagnetic and `beta^20` gravity roles
+  fail the distance-coordinate gauge test; the electroweak number is gauge
+  invariant only because it ignores beta and still lacks a strict observable.
+  No unchanged role transfer is licensed.
+- P308 proves the no-invariant-point and pointed-equivariant-uniqueness
+  theorems.  Pointing is additional data unless a strict source is exported.
+  None of the historical EW/EM/gravity roles has a complete Role-Transfer
+  Certificate; `QW-2191` remains open.
+- Release 10.27 constructs `O54--O61`: Spectral Observation Signature,
+  Bernstein Spectral Completion, Operational Prediction Pseudometric,
+  Positive Path-Scale Measure, Scale-Orbit Prediction Quotient, Role-Transfer
+  Certificate, Pointed Operational Kernel Package, and Typed Legacy--Strict
+  Completion Span.  These objects organize missing structure; they do not
+  close the bridge, source units, transfer roles, promote `L_total`, or export
+  SM/GR/ToE closure.
+
+## Post-Programs-P295–P308 research steering guardrail (2026-07-30)
+
+- Do not replay positive fixed-phase damping, positive exponential
+  distance-mixture completion, scalar isotropic complements, or monotone
+  Bernstein functional calculus as legacy-to-strict closure without a
+  genuinely new hypothesis that evades the corresponding P298/P300 no-go.
+- The preferred mathematical route is
+  `P311 -> P316 -> P312 -> P315 -> P320`: add a realistic loss/drift layer to
+  the ideal current mesh; quantify the minimum signed/complex path resource;
+  construct or obstruct a nontrivial cross-supported common parent; compute
+  an operational legacy/strict pseudometric; and design times/interventions
+  that defeat the P304 clock-warp class.
+- P309 should seek a genuine minimax lower bound and optimal-probe theorem,
+  not another nonlinear fit.  P310 should formalize arbitrary positive block
+  Schur elimination in Mathlib.
+- P313/P314 may test regular-variation/path-sum and torsion-to-nontorsion phase
+  obstructions.  Any completion must be carrier-natural and may not import
+  strict target parameters by interpolation.
+- P317 and P321 are external gates.  Execute them only after independent
+  providers, registrars, calibrated apparatus, hash-committed event records,
+  and frozen hold-outs exist.
+- P322 may attack one physical role only through the complete
+  Role-Transfer-Certificate schema: typed completion naturality, a strict-side
+  observable, operational/scale invariance, and an independent dimensional
+  anchor when required.  Numerical proximity alone is inadmissible.
+
+## Programs P309–P322 result guardrail (Release 10.28, 2026-07-30)
+
+- P309 proves a two-pole equal-residue collision lower bound: the Gaussian
+  Kullback--Leibler information is quartic in pole separation, so the local
+  resolution modulus scales as
+  `delta ~ sqrt(sigma) P^(-1/4)`.  The finite E-optimal probe designs improve
+  conditioning but do not remove this minimax obstruction.
+- P310 machine-checks the completion-square minimizer implication in Lean 4.28
+  and verifies 300 exact rational positive block identities.  The result is
+  not yet a Mathlib primitive theorem over arbitrary finite matrices.
+- P311 completes the synthetic lossy readout with explicit loss/no-click and
+  confusion effects.  All 144 tested POVMs remain complete and positive, but
+  this is a component-tolerance calculation, not hardware calibration.
+- P312 constructs a cross-supported positive common parent only after an
+  explicit absolute-value positivity repair of the legacy operator.  Its
+  off-diagonal block imports both repaired legacy and strict square roots.
+  Therefore it is a joint representation, not a source or completion theorem.
+- P313 proves that every positive mixture of legacy hyperbolic scales retains
+  a `d^(-1)` tail and cannot reproduce the strict `d^(-1.8)` attenuation.
+  This no-go is scoped to the declared positive scale-mixture class.
+- P314 proves that the finite legacy phase subgroup cannot generate the frozen
+  strict phase tuple.  Under exact frozen-decimal semantics, adjoining the
+  single infinite-order generator `exp(i/4000)` is sufficient and minimal.
+  This target-coded phase resource is not a strict selector source.
+- P315 refutes finite-menu operational equivalence after optimizing the legacy
+  scale.  The maximum total-variation witnesses are `0.2304` for heat and
+  `0.4221` for wave dynamics.  These are lower bounds for the declared
+  preparation/measurement/time menu, not full channel or diamond distances.
+- P316 proves that the strict attenuation moments lie outside the positive
+  exponential path cone: `Delta^4 h(0)=-0.0715275581`, giving the rigorous
+  continuum negative-mass lower bound `N_path >= 0.0715275581`.  The finite
+  moment-grid optimum near `0.4067` is discretization-dependent and is not a
+  quantum-negativity theorem.
+- P317 and P321 remain blocked by external evidence.  No admitted independent
+  P241 laboratory bundle or certified physical-reservoir hardware package is
+  present; P242 remains unauthorized.
+- P318 provides strong synthetic evidence that a tuned sequential
+  drift-aware filter can beat a matched static estimator for the supplied
+  drift law.  It is not uniformly superior at every cadence and is not an
+  empirical detector result.
+- P319 exhaustively finds all `6! = 720` spectral order chambers feasible in
+  the declared positive simplex; every center fingerprint Jacobian has rank
+  five.  The P289 probability remains tied to its declared null and needs a
+  look-elsewhere correction.
+- P320 proves the uncalibrated scale/clock rank defect.  With the external
+  convention `tau'(0)=1`, four optimized times improve the weakest Fisher
+  eigenvalue by a factor `2.41` over the reference design.  Higher clock-warp
+  classes remain unclosed.
+- P322 proves that an unlabeled two-sector spectrum has a free sector-swap and
+  therefore cannot transfer the historical electroweak role.  None of the
+  tested spectrum-only candidates completes the six-part Role-Transfer
+  Certificate.  An explicitly axiom-augmented pointed-sector model remains a
+  separate possible branch.
+- Release 10.28 constructs `O62--O73`, culminating in the Minimal Bridge
+  Resource Budget: signed path weight, a nontorsion phase generator, an
+  independently sourced cross-parent law, operational pointing, and a
+  dimensional scale.  These components are separately typed necessities;
+  they are not a derived bridge, physical theory, selector closure, role
+  transfer, `L_total`, SM/GR generation, or ToE closure.
+
+## Post-Programs-P309–P322 research steering guardrail (2026-07-30)
+
+- The preferred proof-grade sequence is
+  `P323 -> P325 -> P324 -> P326 -> P327`: solve the continuum signed-moment
+  dual problem; audit an internal source for the exact nontorsion phase
+  generator; seek a source-independent common-parent theorem; strengthen
+  finite-menu operational separation under loss; and certify the spectral
+  chamber decomposition over exact algebraic data.
+- Do not replay positive hyperbolic mixtures, positive exponential path
+  measures, finite torsion phase completion, scalar monotone parents, or
+  spectrum-only electroweak transfer.  Reopening one of these lanes requires a
+  genuinely new typed resource that explicitly evades the corresponding
+  P313/P314/P316/P322 obstruction.
+- P328 may formulate a quantum-comb or diamond-norm SDP only after specifying
+  common input/output spaces and instruments.  P329 must optimize against a
+  declared bounded analytic or spline clock family rather than another
+  finite-time interpolation.
+- P330 and P336 are external gates and must not be simulated into success.
+  P331 is an executable transfer specification, not a claim that a photonic
+  apparatus already realizes FIN.
+- P332 must distinguish classical signed measures, quasiprobability,
+  interference, and active feedback; the signed path resource alone does not
+  select an interpretation.  P333 may test noncyclic carriers without silently
+  transporting Z12 phase or role data.
+- P334 may construct the smallest axiom-augmented electroweak package, but it
+  must label every supplied sector point, coupling convention, and scale as an
+  axiom.  P335 should test logical independence among the five bridge
+  resources; dependency is not to be assumed from a common numerical fit.
+
+## Programs P323–P336 result guardrail (Release 10.29, 2026-07-30)
+
+- P323 supplies a matching primal/dual extremal certificate for the declared
+  seven strict-attenuation moments.  Three positive atoms and one negative
+  atom at zero give minimum negative Jordan mass
+  `0.406706334692258...`; the bounded dual polynomial has the same value.
+  The optimality implication is theorem-grade, while the displayed FIN
+  algebraic-number evaluation is a 90-digit computation rather than a fully
+  kernel-checked interval proof.
+- P324 proves source-independent nonidentification: one repaired legacy input
+  admits several distinct positive target parents, and the current cross block
+  `sqrt(A_L)sqrt(A_T)` reads the selected target.  This blocks target-importing
+  parenthood as derivation, but it does not prohibit a genuinely new
+  independent source law.
+- P325 identifies the exact provenance of the phase unit:
+  `187/800 - 3*(2/125)=743/4000` and
+  `-11/80 + 6*(1/20)=13/80=650/4000`.  Thus `1/4000` is the gcd unit of the
+  QW-2030/QW-2038 refreeze lattice.  It is a procedural grid source, not a
+  strict ontological/dynamical source, selector, or `QW-2191` discharge.
+- P326 preserves finite-menu operational separation under the supplied
+  synthetic efficiency, no-click, nearest-neighbor confusion, and clock
+  jitter model.  Fifth-percentile TV is `0.1858` for heat and `0.3415` for
+  wave.  These are apparatus-design numbers, not calibration or evidence.
+- P327 replaces the P319 floating-point chamber result by an exact
+  `Q(sqrt(3))` construction: all `720` mode orders have positive witnesses,
+  global minimum radial weight `7/50`, and minimum adjacent mode gap `1/50`.
+  This proves order nonselection, not a chamber probability or strict source.
+- P328 computes the declared one-use ideal wave-channel diamond distance and
+  finds half-distance one on the sampled time range.  It does not implement
+  the optimal input/measurement and does not close an adaptive multitime comb.
+- P329 proves the free linear-clock/generator-scale rank defect and gives a
+  strong finite minimax design for a calibrated quartic clock family.  The
+  best five-time design improves worst-case information by factor `3.86`.
+  External `tau'(0)=1` calibration and the declared warp bounds remain inputs.
+- P330 and P336 remain externally blocked.  No independent P241 production
+  bundle or certified physical-reservoir package was admitted; Validator 241,
+  Pipeline 242, and hardware execution were not run.
+- P331 defines a synthetic photonic transfer tolerance certificate for a
+  dense signed 12-mode implementation.  The nonzero coupling dynamic range is
+  about `42.45`; relative coupling error SD `0.03` passes the declared p95 TV
+  budget in the simulation and `0.05` fails.  Feasibility remains a platform
+  hypothesis, not a hardware claim.
+- P332 proves scalar-realization nonuniqueness: a Jordan negative atom and a
+  phase-`pi` complex amplitude give the same moment functional.  Signed path
+  mass alone does not imply quasiprobability, quantum interference, Krein
+  physics, open-system memory, feedback, energy loss, or negative information.
+- P333 uses commutation as a necessary scalar-functional-calculus condition.
+  The cycle commutes, whereas the path, random 3-regular, and irregular
+  barbell carriers have nonzero relative commutators.  This obstructs scalar
+  carrier-natural completion only; nonscalar or enlarged parents remain open.
+- P334 constructs only an explicit axiom-augmented angle package: one discrete
+  sector point and the historical role-law axiom
+  `sin^2(theta_W)=alpha_geo/12`.  Full electroweak physics still needs gauge
+  representations, couplings, a symmetry-breaking scale/dynamics, observable
+  map, chirality, and anomaly constraints.
+- P335 proves five-way logical independence in the minimal product signature:
+  signed path, nontorsion phase, independent cross law, pointing, and scale
+  each have a single-omission model while the other four are present.  This
+  does not preclude a future FIN coupling law that co-generates resources.
+- Release 10.29 constructs `O74--O87`.  These organize exact resource,
+  provenance, operational, conditional, and admission objects; they do not
+  close the legacy-to-strict bridge, source a selector/unit, transfer a role,
+  validate a laboratory model, promote `L_total`, generate SM/GR, or close ToE.
+
+## Post-Programs-P323–P336 research steering guardrail (2026-07-30)
+
+- The preferred proof-grade continuation is
+  `P337 -> P338 -> P339 -> P340 -> P341 -> P343`: kernel-check the P323
+  algebraic/interval certificate; extend signed-resource analysis to the full
+  oscillatory strict kernel; audit continuous refreeze sensitivity on a
+  frozen hold-out; classify carrier-natural parent transformations; compile
+  the P331 photonic mesh and inverse calibration; then formulate the declared
+  multitime comb SDP.
+- Do not replay the finite moment grid as if P323 were still unresolved.
+  P337 must certify the existing extremizer, not search another discretized
+  optimum.  P338 must distinguish the signed oscillatory kernel from its
+  positive attenuation envelope.
+- Do not promote the P325 procedural phase lattice to an internal FIN source.
+  P339 may test stability of the refreeze objective and coordinate under
+  continuous optimization, but cannot rename stability as ontology or
+  discharge `QW-2191`.
+- P340/P345 must state carrier naturality explicitly.  Cycle commutation or
+  Fourier interpolation cannot be transported silently to noncyclic carriers.
+- P341 remains an executable transfer design until an independently calibrated
+  device record exists.  P343 must declare common input/output, memory, and
+  instrument spaces before using comb or diamond language.
+- P342 and P350 are external gates and must not be simulated into success.
+- P346/P347 may define free bridge operations, monotones, and coupling laws,
+  but no O86 resource implication is available without an explicit new axiom
+  or theorem.  P348/P349 must retain the `conditioned-on-sector/conversion`
+  label and expose every supplied coupling, unit, and metrology reference.
+
+## Programs P337–P350 result guardrail (Release 10.30, 2026-07-30)
+
+- P337 supplies an exact rational dual lower certificate for the seven
+  strict-attenuation moments.  Exact Bernstein subdivision and exact rational
+  fifth-root brackets prove
+  `N_env >= 0.4067063265581317`, within `8.14e-9` of the P323 100-digit primal
+  evaluation.  The matching primal atom/weight boxes are not yet a fully
+  interval-certified formal theorem; that is P351.
+- P338 separates the complete oscillatory strict sequence from its positive
+  attenuation envelope.  Moments `k_8,...,k_11` are negative and the strong
+  numerical continuum enclosure is
+  `0.7072784747 <=~ N_osc <=~ 0.7073599749`.  The raw monomial HiGHS objective
+  is retained only as an ill-conditioning diagnostic; the upper evaluation
+  comes from a 100-digit solve on 12 fixed rational support points.  Do not
+  call the P338 enclosure theorem-grade until degree-11 extrema and weight
+  signs are interval-certified.  Signed path mass is not quantum negativity,
+  information loss, feedback, or negative information.
+- P339 reproduces the frozen QW-2038 score and finds a better continuous
+  bounded candidate near
+  `(omega,phi,beta,eta)=(0.18425313,0.1625,0.99999977,1.79984890)`.
+  The optimizer reached its iteration cap, so this is a best candidate, not a
+  global optimum.  QW-2038 reuses the same mass/flavor/GW inputs for search
+  and scoring and exports no independent frozen hold-out.  Refreeze stability
+  remains procedural in-sample evidence and does not source ontology,
+  selector closure, `QW-2191`, or predictive physics.
+- P340 proves the scalar-functional commutation necessity and shows that the
+  degree-six C12 spectral interpolant fails on every tested noncycle carrier;
+  K12 also shows that commutation is not sufficient.  P345 distinguishes
+  formula-level carrier-independent input coefficients from carrier-dependent
+  spectra and energies.  Do not silently transport the C12 interpolant,
+  Fourier basis, phase data, or physical roles to another carrier.
+- P341 compiles the ideal 12-mode witness unitary into 66 complex Givens
+  rotations and quantifies a synthetic short-time inverse calibration.  It
+  also proves one-time logarithm branch nonuniqueness by
+  `A' = A + (2*pi/t)P`.  This is an executable transfer design, not a
+  fabricated/calibrated device.
+- P342 finds no admitted independent frozen-holdout manifest.  P343 proves
+  only the declared ideal parallel `n`-use unitary-channel subclass, with
+  first sampled perfect times `0.72,0.36,0.24,0.18` for `n=1,2,3,4`; the
+  unrestricted adaptive comb SDP remains open.
+- P344 proves finite-design nonidentification for the declared monotone
+  bounded-curvature clock class.  Equispacing is minimax only for its
+  maximum-gap/curvature criterion and does not replace external time
+  calibration.
+- P346 defines a typed five-resource preorder: signed path, nontorsion phase,
+  independent cross law, pointing, and dimensional scale each has its own
+  declared free-operation/monotone pair.  P347 refutes the four tested
+  co-generation shortcuts, including the counterfactual minimum-phase
+  reconstruction.  These results do not prove a universal resource-coupling
+  no-go.
+- P348 is only a conditional five-component electroweak falsification vector
+  after supplying the historical angle role law, pointed sectors, gauge
+  representations, Higgs tree relations, and a renormalization convention.
+  It is not strict legacy-role transfer or strict electroweak physics.
+- P349 proves the rank-three dimensional-identifiability theorem for the
+  external Conversion-Axiom frame `(ell_*,tau_*,hbar_*)`.  Dimensionless FIN
+  observables have zero unit Jacobian.  The construction is metrology, not
+  emergent units.
+- P350 remains blocked by external evidence; no certified physical reservoir,
+  calibrated hardware, raw-event custody package, or one-shot execution was
+  admitted.
+- Release 10.30 constructs `O88--O100`.  They do not close the
+  legacy-to-strict bridge, source a non-premise selector/unit, transfer a
+  legacy physical role, validate a laboratory model, promote `L_total`,
+  generate SM/GR, or close ToE.
+
+## Post-Programs-P337–P350 research steering guardrail (2026-07-30)
+
+- The preferred proof-grade sequence is
+  `P351 -> P352 -> P354 -> P355 -> P357`: interval-certify the P337 primal;
+  interval-certify the P338 degree-11 dual/primal enclosure; define a graph
+  category and prove/obstruct a natural completion; compile a loss-aware mesh
+  digital twin; then formulate the full adaptive comb SDP with common spaces,
+  memory, instruments, and causal constraints.
+- Do not replay the P323 finite moment grid, the P338 ill-conditioned raw LP,
+  the QW-2038 grid point as a unique source, the C12 scalar interpolant on
+  noncyclic carriers, or Kramers–Kronig language on distance without a newly
+  declared causal analytic extension.
+- P353, P356, P361, P362, and P364 require independent providers,
+  registrars, calibrated standards/hardware, frozen hashes, raw records, and
+  one-shot unblinding.  Repository code must not synthesize those gates into
+  success.
+- P359 may seek completeness/catalysis for the typed bridge-resource preorder.
+  P360 may prove a causal analytic amplitude-phase theorem or no-go.  P363 may
+  axiomatize the resource category, but every conversion law and conditional
+  physical sector must remain explicit.
+
+## Programs P351–P364 result guardrail (Release 10.31, 2026-07-31)
+
+- P351 closes the P337 primal-certification task with an exact rational
+  six-variable Krawczyk inclusion.  It proves a unique positive ordered
+  three-atom solution in the declared box and the global enclosure
+  `0.4067063265581317 <= N_env <= 0.4067063346922584`.  This is a classical
+  signed Hausdorff-moment cost, not information destruction, quantum
+  negativity, entropy, energy, or a coupling.
+- P352 replaces the P338 numerical continuum bracket by exact rational
+  interval evidence: Taylor/Lagrange cosine bounds, fifth-root brackets,
+  4096-subinterval Bernstein feasibility, and an exact rational Vandermonde
+  inverse prove
+  `0.7072782253162320 <= N_osc <= 0.7073599748862595`.  All 12 fixed-support
+  weight signs are certified (8 positive, 4 negative).  The support was
+  discovered numerically but certified independently; no physical
+  interpretation of the signed resource is selected.
+- P353 finds no admitted independent QW hold-out.  Do not promote P339/QW-2038
+  in-sample stability to prediction, ontology, or a unique parameter source.
+- P354 proves radial-kernel naturality on the graph-isomorphism groupoid and
+  refutes naturality for arbitrary graph homomorphisms via the identity
+  `P3 -> K3`, whose strict endpoint defect is `0.2779421209549173`.
+  Carrier-natural claims must declare a distance-preserving or enriched
+  morphism class.  This does not complete the legacy-to-strict bridge.
+- P355 is a synthetic loss-aware 66-Givens digital twin.  Its worst tested
+  p95 corrected vertex-TV defect is about `1.60e-3` only under the declared
+  diagonal-loss/phase/calibration model.  P356 finds no admitted calibrated
+  hardware bundle.  Do not describe either result as a laboratory
+  realization.
+- P357 proves the structural perfect-comb collapse theorem: an exact
+  parallel convex-zero relative-phase witness saturates the universal
+  full-adaptive trace-distance bound.  The FIN witnesses at per-use times
+  `0.72,0.36,0.24,0.18` have numerical residual at most `5.55e-16` and remain
+  strong numerical evidence until interval phase-certified.  The subcritical
+  adaptive-comb optimum remains open.
+- P358 proves equispacing is minimax for the declared maximum-gap
+  bounded-curvature clock criterion after an external anchor is supplied.
+  Seven equal intervals on `[0,1.4]` first meet the `1e-3` interpolation
+  target for `|tau''|<=0.2`.  It does not generate a clock or time unit.
+- P359 defines the additive product resource category
+  `(N^5,+,>=)`.  Its five coordinate monotones are complete and addition is
+  cancellative, hence no catalysis occurs in that declared category.  This is
+  not a theorem that FIN physical dynamics realizes its free morphisms; other
+  tensor products/free operations require a fresh audit.
+- P360 proves the analytic inner-factor no-go: finite Blaschke products
+  preserve boundary amplitude and change phase.  Analyticity/causality plus
+  amplitude cannot determine the frozen strict phase without an
+  outer/minimum-phase axiom, a causal analytic coordinate, and normalization.
+  Do not apply Kramers–Kronig directly to graph distance.
+- P361 admits no blinded conditional electroweak record.  P362 proves only the
+  log-covariance pushforward for a supplied `(ell_*,tau_*,hbar_*)` frame and
+  admits no external standards.  No historical legacy role is transferred.
+- P363 constructs the five-axiom FIN Operational Resource Completion (FORC):
+  typed kernel base, `N^5` grading, monotone free morphisms, additive
+  composition, and an operational realization functor.  A1--A4 remain pure
+  mathematics; A5 is an additional bridge to preparations, clocks, channels,
+  environments, instruments, apparatus, and records.  FORC is
+  axiom-augmented organization, not strict-core selector/unit/bridge/role,
+  `L_total`, SM/GR, or ToE closure.
+- P364 finds no admitted physical-reservoir execution.  Synthetic heat
+  semigroup samples are not physical reservoir evidence.
+- Release 10.31 constructs `O101--O112`.  Preserve all legacy/strict,
+  selector, dimensional-source, role-transfer, laboratory, `L_total`, SM/GR,
+  and ToE boundaries.
+
+## Post-Programs-P351–P364 research steering guardrail (2026-07-31)
+
+- The preferred nonreplay sequence is
+  `P365 -> P366 -> P368 -> P371 -> P373`: independently kernel-check the exact
+  rational certificates; tighten the oscillatory alternation enclosure;
+  classify the maximal graph-morphism naturality category; solve the
+  subcritical full comb with primal-dual certificates; then derive or obstruct
+  physical operational semantics for every O108 resource coordinate.
+- Do not rerun floating moment grids, treat compact rational hashes as proof
+  without recomputation, promote numerical P357 zeros to exact phase
+  identities, replay C12 scalar interpolation on arbitrary carriers, or
+  identify the O109 inner-factor torsor with a strict selector source.
+- P367, P370, P372, P375, P376, and P378 require genuinely external providers,
+  standards, calibrated hardware, custody separation, frozen hashes, raw
+  records, and one-shot procedures.  Code-generated evidence is inadmissible.
+- P377 may test whether FORC is initial/free/universal, but a categorical
+  universal property cannot create its empirical realization functor.
+
+## Programs P365–P378 result guardrail (Release 10.32, 2026-07-31)
+
+- P365 independently recomputes the P351/P352 exact identities with a
+  standard-library rational-arithmetic checker importing no FIN research
+  module.  All 12 P351 endpoint identities, 12 P352 safe dual-coefficient
+  identities, 24 P352 signed-weight endpoints, Bernstein feasibility, and
+  weight signs pass.  This is implementation diversity, not yet
+  proof-assistant reflection of the large numerical certificates.
+- P366 tightens the oscillatory signed-moment enclosure with 16,384 exact
+  dyadic Bernstein cells and a 12-variable rational Krawczyk inclusion for a
+  seven-atom signed measure:
+  `0.7072784585518420 <= N_osc <= 0.7073534683998260`.
+  The sign pattern is `(-,+,+,+,+,-,+)`.  This remains a classical
+  signed-representation cost, not information loss, quantum negativity,
+  entropy, energy, or a physical coupling.
+- P367 admits no independent QW hold-out.  Existing in-repository material
+  remains in-sample and cannot be promoted to external prediction.
+- P368 proves that the maximal naturality category of a radial kernel
+  consists of maps preserving the quotient
+  `d ~_k e iff k(d)=k(e)`.  If `k` is injective on attainable distances,
+  these maps are precisely isometric embeddings.  For all 30 connected
+  unlabeled graphs on 2--5 vertices, exactly 1,664 of 77,130 graph
+  homomorphisms are both isometric and strict-kernel preserving, with zero
+  mismatch.  Exact intervals separate `k(1),...,k(4)` only; no global
+  integer-distance injectivity is claimed.
+- P369's 132-parameter 66-Givens component model is locally full-rank only
+  for complex-transfer tomography.  Intensity and conditional-intensity
+  observation maps are rank-deficient/ill-conditioned.  Its reported
+  vertex-TV errors are synthetic, local, model-dependent evidence, not
+  calibrated hardware validation.
+- P370 admits no calibrated photonic pilot.
+- P371 proves the unrestricted adaptive optimum only for the declared
+  commuting ideal-unitary comparison and only through its first perfect
+  time:
+  `0.5||U_strict^(x n)-U_legacy^(x n)||_diamond =
+  sin(n*t*Delta/2)` for `0 <= t <= pi/(n*Delta)`, with
+  `Delta=4.365523996749653`.  Parallel extremal-eigenvector probes attain the
+  adaptive angle upper bound.  Do not extend this theorem to loss,
+  dephasing, clock uncertainty, noncommuting generators, or global
+  post-threshold revival behavior without a new proof.
+- P372 admits no traceable clock anchor.
+- P373 supplies five exact data-processing monotones as candidate
+  operational semantics: Jordan negative mass, `l1` coherence, reflection
+  asymmetry, Fisher information, and mutual information.  Their association
+  with FIN O108 coordinates remains conditional on explicit realization
+  functors; they do not source selector, unit, phase, scale, cross-law, or
+  physical-role closure.
+- P374 constructs the zero-free outer family
+  `F_rho(z)=sum_d K_strict(d) rho^d z^d` for
+  `0<rho<12631/19031`.  The scale `rho` is inserted and the coefficients
+  already contain the frozen phase.  Do not promote this existence theorem
+  to a canonical causal coordinate, phase source, clock, selector, or unit.
+- P375, P376, and P378 admit no blinded electroweak record, dimensional
+  standards bundle, or reservoir process-tomography bundle.
+- P377 proves only that the FORC `N^5` resource skeleton is the free
+  commutative monoid on five generators.  It refutes unique operational
+  universality: empirically different probability models may share one
+  grade.  A5 operational realization is not generated by A1--A4.
+- Release 10.32 constructs O113--O120.  Preserve all legacy/strict,
+  selector, dimensional-source, role-transfer, laboratory, `L_total`, SM/GR,
+  and ToE boundaries.
+
+## Post-Programs-P365–P378 research steering guardrail (2026-07-31)
+
+- The preferred nonreplay sequence is
+  `P379 -> P380 -> P381 -> P385 -> P387`: reflect the exact arithmetic through
+  a proof-assistant kernel; reduce the oscillatory primal-dual contact gap;
+  classify global integer-distance collisions of the strict radial law;
+  solve the declared lossy/dephasing adaptive comb; then construct one
+  explicit typed FIN-to-operational resource encoding functor.
+- P382 may test exactly one enriched legacy/strict naturality square, but
+  must name one carrier, one distance quotient, and one new completion atom.
+  It must not restart the generic bridge audit or transfer historical
+  physical roles.
+- P383 may classify global gauges of the 132-parameter photonic component
+  model.  P386 may propagate a supplied clock-equivalence tube through the
+  P371 discrimination law.  P388 may test typed resource conversions and
+  catalysis.  P389 may seek a canonical outer scale or prove its scale-orbit
+  no-go.
+- P384, P390, P391, P392, and P393 require independent physical providers,
+  calibrated standards/hardware, raw records, custody separation, frozen
+  hashes, hold-outs, and one-shot unblinding.  Repository code may validate
+  supplied manifests but must not synthesize their evidential status.
