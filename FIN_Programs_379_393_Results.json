@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "programs": "P379-P393",
+    "release": "10.33",
+    "seed": 20260764,
+    "scope": "proof-kernel terminal reflection, near-contact oscillatory certificate, global distance injectivity, one damping naturality square, component gauges, noisy combs, robust clocks, one realization functor, conversion obstructions, outer-scale no-go, and external falsification gates",
+    "new_theoretical_objects": {
+      "O121_kernel_reflected_terminal_certificate": "Lean-checked exact endpoint predicates",
+      "O122_near_contact_Bernstein_extremal_pair": "sub-1e-7 signed-moment enclosure",
+      "O123_global_strict_radial_embedding_theorem": "integer-distance injectivity",
+      "O124_damping_completion_natural_transformation": "one target-defined bridge atom",
+      "O125_photonic_component_gauge_quotient_chart": "phase lattice quotient",
+      "O126_heralded_noisy_comb_sandwich": "loss/dephasing lower-upper bounds",
+      "O127_clock_tube_discrimination_envelope": "robust time-to-discrimination map",
+      "O128_Jordan_sampling_realization_functor": "explicit signed-resource operationalization",
+      "O129_resource_conversion_obstruction_matrix": "twenty cross-implication countermodels",
+      "O130_outer_scale_dilation_torsor": "semigroup canonicality no-go"
+    }
+  },
+  "P380": {
+    "status": "[Proven] exact rational primal-dual gap below 1e-7",
+    "bernstein_basis_degree": 11,
+    "dyadic_depth": 14,
+    "dyadic_cells": 16384,
+    "safe_bernstein_range": [
+      -1.0,
+      0.0
+    ],
+    "certified_enclosure": [
+      0.7073534379053974,
+      0.707353468399826
+    ],
+    "certified_gap": 3.049442855924734e-08,
+    "gap_below_1e_7": true,
+    "previous_P366_enclosure": [
+      0.707278458551842,
+      0.707353468399826
+    ],
+    "width_reduction_fraction_from_P366": 0.9995934610004038,
+    "theorem": "A degree-11 polynomial optimized in the Bernstein basis is frozen rationally and affine-normalized by its exact depth-14 dyadic Bernstein range. It lies in [-1,0] on [0,1]. Combined with the P366 exact seven-atom Krawczyk primal, weak duality gives the displayed global enclosure.",
+    "boundary": "This is a classical signed-moment optimum. Near contact does not select quantum negativity, information loss, energy, or a physical coupling.",
+    "new_object": "O122 near-contact Bernstein extremal pair"
+  },
+  "P379": {
+    "status": "[Proven] exact terminal certificate predicates reflected through the Lean kernel; [Open] end-to-end algorithm reflection",
+    "kernel_checked_predicate_count": 35,
+    "krawczyk_containment_predicates": 24,
+    "weight_sign_predicates": 7,
+    "bernstein_predicates": 2,
+    "order_and_gap_predicates": 2,
+    "lean_returncode": 0,
+    "arithmetic_source": "FIN_Programs_379_393_Arithmetic_Reflection.lean",
+    "theorem_scope": "Lean checks the exact cross-multiplied integer inequalities for all P366 Krawczyk containments, all seven signs, the P380 Bernstein range, weak-duality order, and the sub-1e-7 gap.",
+    "boundary": "Python still generates the rational predicates and supplies the Taylor, fifth-root, interval, and Bernstein algorithms. This shrinks but does not eliminate the trusted computing base.",
+    "new_object": "O121 kernel-reflected terminal certificate"
+  },
+  "P381": {
+    "status": "[Proven] global injectivity on nonnegative integer distances",
+    "domain": "d in N_0",
+    "finite_diagnostic_range": [
+      0,
+      4096
+    ],
+    "finite_double_collision_count": 0,
+    "theorem": "Let x_d=(743d+650)/4000 and a_d=(1+d^(9/5))^(-1). Both are nonzero algebraic numbers for integer d>=0, and x_d are distinct positive rationals. If k(d)=k(e), d!=e, then a_d(e^(ix_d)+e^(-ix_d))-a_e(e^(ix_e)+e^(-ix_e))=0. The four exponents are distinct algebraic numbers. Lindemann-Weierstrass linear independence of their exponentials over the algebraic numbers gives a contradiction.",
+    "consequence": "On every graph with finite integer shortest-path distance, the P368 strict k-distance quotient is the ordinary distance set. Strict-kernel-preserving maps are exactly isometric maps.",
+    "boundary": "The theorem concerns the frozen strict radial formula and integer graph distances. It does not identify legacy and strict kernels or transport physical roles.",
+    "new_object": "O123 global strict radial embedding theorem"
+  },
+  "P382": {
+    "status": "[Proven] one target-defined damping naturality square; [Refuted] damping atom alone completes the full kernel",
+    "completion_atom": "C_damp(d)=(1+0.01d)/(1+d^(9/5))",
+    "exact_identity": "C_damp(d)/(1+0.01d)=1/(1+d^(9/5))",
+    "naturality_theorem": "For an isometric embedding f, pullback of radial matrices commutes with entrywise multiplication by C_damp because d_H(fx,fy)=d_G(x,y). This gives one enriched commutative square for the attenuation layer.",
+    "C12_full_kernel_relative_l2_residual_after_damping_only": 0.9944110996910609,
+    "source_independent": false,
+    "boundary": "C_damp reads the strict exponent and scale from its target. It does not source beta/eta, repair amplitude or phase/frequency, close the generic bridge, or transfer any legacy physical role.",
+    "new_object": "O124 damping-completion natural transformation"
+  },
+  "P383": {
+    "status": "[Proven] coordinate phase lattice gauge; [Strong evidence] no additional tested coordinate aliases; [Open] global nonlocal alias classification",
+    "component_count": 66,
+    "parameter_space_before_quotient": "R_+^66 x R^66",
+    "certified_coordinate_gauge": "(2*pi*Z)^66 on phase coordinates",
+    "canonical_chart": "R_+^66 x (-pi,pi]^66",
+    "maximum_single_two_pi_defect": 7.987408732301544e-16,
+    "maximum_combined_lattice_defect": 3.732051347279426e-15,
+    "minimum_single_pi_defect": 0.28505168649772467,
+    "minimum_single_loss_shift_defect": 0.004987520807317657,
+    "theorem_scope": "Every component phase enters through complex exponentials, so independent 2pi shifts are exact gauges. The frozen coordinatewise pi and positive-loss shifts are not aliases in the finite audit.",
+    "boundary": "Coordinate tests do not exclude compensating, distant, multi-parameter aliases. Complex transfer tomography and a global quotient-identifiability theorem remain required.",
+    "new_object": "O125 photonic component gauge quotient chart"
+  },
+  "P384": {
+    "status": "[Blocked by external evidence] no calibrated P384 photonic pilot",
+    "program": "P384",
+    "candidate_count": 0,
+    "admitted_paths": [],
+    "admitted": false,
+    "hardware_execution_performed": false,
+    "required_fields": [
+      "analyst",
+      "calibration_hash",
+      "freeze_timestamp",
+      "provider",
+      "raw_record_hash",
+      "registrar",
+      "unblinding_authorization"
+    ],
+    "boundary": "The executable repository can validate a supplied bundle but cannot manufacture physical preparation, calibration, custody separation, raw events, or an independent record."
+  },
+  "P385": {
+    "status": "[Proven] analytic upper and feasible lower sandwich for the declared reduced heralded-loss/dephasing channel; [Open] exact lossy adaptive optimum",
+    "model": "two extremal relative-generator modes; independent heralded survival eta; eigenbasis coherence q",
+    "single_use_half_diamond": "eta*q*sin(t*Delta/2)",
+    "adaptive_upper": "min(1,n*eta*q*sin(t*Delta/2))",
+    "feasible_strategies": [
+      "independent extremal probes with erasure-pattern readout",
+      "GHZ extremal probe surviving only on the all-click branch"
+    ],
+    "maximum_grid_certificate_gap": 0.5591201237717311,
+    "theorem_scope": "The hybrid argument gives the adaptive upper bound. Orthogonal heralded-erasure blocks give the product lower exactly, and the all-surviving GHZ block gives the second lower.",
+    "boundary": "The bounds do not solve the full twelve-mode lossy comb, unheralded loss, noncommuting noise, or apparatus calibration.",
+    "new_object": "O126 heralded noisy-comb sandwich"
+  },
+  "P386": {
+    "status": "[Proven] conditional robust discrimination tube",
+    "supplied_curvature_bound": 0.2,
+    "supplied_maximum_clock_gap": 0.2,
+    "interpolation_error_bound": 0.0010000000000000002,
+    "maximum_reported_discrimination_band_width": 0.016132668106540238,
+    "theorem": "On the first P371 branch D_n(tau)=sin(n*Delta*tau/2) is monotone. Therefore a certified tau interval maps exactly to its endpoint sine interval. The bounded-curvature interpolation theorem supplies epsilon=M*h^2/8.",
+    "boundary": "M, h, the clock anchor, and the relation between laboratory time and tau are supplied. The theorem propagates calibration uncertainty; it does not generate a clock or time unit.",
+    "new_object": "O127 clock-tube discrimination envelope"
+  },
+  "P387": {
+    "status": "[Proven] explicit mathematical operational realization; [Conditional] physical preparation and calibration",
+    "functor_name": "Jordan Sampling Realization JSR",
+    "source_object": "finite signed measure w on [0,1]",
+    "preparation": "q_i=|w_i|/||w||_1 with classical sign label",
+    "instrument": "record (atom i, node x_i, sign s_i)",
+    "score": "||w||_1*s_i*f(x_i)",
+    "reconstruction_identity": "E_q[||w||_1*s*f(x)]=sum_i w_i f(x_i)",
+    "free_channel": "positive column-stochastic map T on the signed vector; ||Tw||_1<=||w||_1",
+    "monotone": "N(w)=(||w||_1-sum_i w_i)/2",
+    "total_variation": 2.40153283998998,
+    "signed_mass": 0.9868259031903286,
+    "negative_mass": 0.7073534683998259,
+    "negative_label_probability": 0.294542492453602,
+    "maximum_center_moment_residual": 1.3877787807814457e-17,
+    "theorem_scope": "JSR gives preparation, channel class, instrument, score, and record semantics for the signed-path coordinate. Triangle inequality proves Jordan negativity is nonincreasing.",
+    "boundary": "The sign is an importance-sampling record, not negative probability, destroyed information, quantum quasiprobability, or energy. A laboratory realization remains external.",
+    "new_object": "O128 Jordan-sampling realization functor"
+  },
+  "P388": {
+    "status": "[Proven] no forced positive cross-conversion in the minimal free resource category; [Open] model-specific conversion laws",
+    "identity_conversions": 5,
+    "directed_cross_conversion_implications_refuted": 20,
+    "catalysis": "absent by cancellativity of N^5",
+    "reset_maps": "resource-destroying maps to grade zero exist but do not generate a target resource",
+    "theorem": "For every ordered i!=j, the free generator e_i has positive i-coordinate and zero j-coordinate, refuting any axiom-free universal implication i>0 => j>0. If a+c>=b+c in N^5 then a>=b coordinatewise, so catalysts add no conversions.",
+    "boundary": "This is a theorem about the minimal product signature. A new FIN coupling law or typed operational encoder can add model-specific conversions and must then be audited separately.",
+    "new_object": "O129 resource conversion obstruction matrix"
+  },
+  "P389": {
+    "status": "[Proven] dilation-semigroup law and invariant-selector no-go for a canonical positive outer scale",
+    "certified_outer_domain_upper": 0.6637065839945352,
+    "semigroup": "D_a F_rho = F_(a*rho)",
+    "additive_parameter": "t=-log(rho)",
+    "maximum_truncated_numerical_defect": 6.938893903907228e-18,
+    "no_go": "A selector invariant under every admissible dilation would satisfy rho=rho/2, hence rho=0, outside the positive outer family. The semigroup alone therefore selects no positive rho.",
+    "fixed_boundaries": [
+      "rho->0 gives the constant coefficient K(0)",
+      "rho->1 approaches the undamped generating series boundary"
+    ],
+    "boundary": "The no-go excludes canonicality from dilation invariance alone. A new normalization, RG boundary condition, apparatus resolution, or dimensional axiom could select rho conditionally.",
+    "new_object": "O130 outer-scale dilation torsor"
+  },
+  "P390": {
+    "status": "[Blocked by external evidence] no admitted independent QW hold-out",
+    "program": "P390",
+    "candidate_count": 0,
+    "admitted_paths": [],
+    "admitted": false,
+    "hardware_execution_performed": false,
+    "required_fields": [
+      "analyst",
+      "calibration_hash",
+      "freeze_timestamp",
+      "provider",
+      "raw_record_hash",
+      "registrar",
+      "unblinding_authorization"
+    ],
+    "boundary": "The executable repository can validate a supplied bundle but cannot manufacture physical preparation, calibration, custody separation, raw events, or an independent record."
+  },
+  "P391": {
+    "status": "[Blocked by external evidence] no admitted dimensional standards bundle",
+    "program": "P391",
+    "candidate_count": 0,
+    "admitted_paths": [],
+    "admitted": false,
+    "hardware_execution_performed": false,
+    "required_fields": [
+      "analyst",
+      "calibration_hash",
+      "freeze_timestamp",
+      "provider",
+      "raw_record_hash",
+      "registrar",
+      "unblinding_authorization"
+    ],
+    "boundary": "The executable repository can validate a supplied bundle but cannot manufacture physical preparation, calibration, custody separation, raw events, or an independent record."
+  },
+  "P392": {
+    "status": "[Blocked by external evidence] no admitted reservoir tomography bundle",
+    "program": "P392",
+    "candidate_count": 0,
+    "admitted_paths": [],
+    "admitted": false,
+    "hardware_execution_performed": false,
+    "required_fields": [
+      "analyst",
+      "calibration_hash",
+      "freeze_timestamp",
+      "provider",
+      "raw_record_hash",
+      "registrar",
+      "unblinding_authorization"
+    ],
+    "boundary": "The executable repository can validate a supplied bundle but cannot manufacture physical preparation, calibration, custody separation, raw events, or an independent record."
+  },
+  "P393": {
+    "status": "[Blocked by external evidence] no admitted electroweak blind-test bundle",
+    "program": "P393",
+    "candidate_count": 0,
+    "admitted_paths": [],
+    "admitted": false,
+    "hardware_execution_performed": false,
+    "required_fields": [
+      "analyst",
+      "calibration_hash",
+      "freeze_timestamp",
+      "provider",
+      "raw_record_hash",
+      "registrar",
+      "unblinding_authorization"
+    ],
+    "boundary": "The executable repository can validate a supplied bundle but cannot manufacture physical preparation, calibration, custody separation, raw events, or an independent record."
+  },
+  "formal_verification": {
+    "lean_structural_returncode": 0,
+    "lean_arithmetic_returncode": 0,
+    "structural_scope": "damping-square naturality, l1 contraction interface, free-resource cross-conversion obstruction, and scale no-fixed-point",
+    "arithmetic_scope": "terminal exact rational inequalities generated and compiled by P379"
+  }
+}

@@ -5264,3 +5264,87 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   calibrated standards/hardware, raw records, custody separation, frozen
   hashes, hold-outs, and one-shot unblinding.  Repository code may validate
   supplied manifests but must not synthesize their evidential status.
+
+## Programs P379–P393 result guardrail (Release 10.33, 2026-07-31)
+
+- P379 reflects 35 exact terminal rational predicates through Lean 4.28:
+  24 P366 Krawczyk containment inequalities, seven signed-weight predicates,
+  two P380 Bernstein bounds, weak-duality order, and the sub-`1e-7` gap.
+  Python still generates the predicates and implements Taylor/fifth-root,
+  interval, Krawczyk, and Bernstein algorithms.  Do not describe P379 as
+  end-to-end proof-assistant formalization of the numerical pipeline.
+- P380 proves the exact rational enclosure
+  `0.7073534379053974 <= N_osc <= 0.7073534683998260`, with width
+  about `3.0494428559e-8`, using a rational degree-11 Bernstein dual on
+  16,384 exact dyadic cells and the P366 exact seven-atom Krawczyk primal.
+  This remains a classical signed-moment cost, not quantum negativity,
+  negative information, thermodynamic destruction, energy, or a coupling.
+- P381 proves global injectivity of the frozen strict radial law on
+  nonnegative integer distances by Lindemann-Weierstrass linear independence.
+  Consequently, on every integer shortest-path metric, strict-kernel
+  preserving maps are exactly isometric maps.  Do not transport this theorem
+  to continuous metrics, the legacy kernel, bridge completion, or physical
+  spacetime without separate premises.
+- P382 admits exactly one enriched damping-layer square:
+  `C_damp(d)=(1+0.01d)/(1+d^(9/5))`.  It is natural under isometries and
+  maps the legacy attenuation factor to the strict attenuation factor.
+  It is target-defined, not source-independent, and damping-only full-kernel
+  completion is refuted by a `C12` relative profile residual about `0.9944`.
+  It does not source `beta/eta`, repair amplitude/phase/frequency, close the
+  generic bridge, or authorize legacy-role transfer.
+- P383 proves only the coordinate phase lattice
+  `(2*pi*Z)^66` for the 66-Givens mesh and defines the canonical chart
+  `R_+^66 x (-pi,pi]^66`.  Single `pi` phase and positive loss shifts are
+  nonaliases in the frozen audit.  Global distant compensating aliases and
+  quotient identifiability remain open.
+- P384 admits no calibrated photonic pilot.
+- P385 proves an adaptive hybrid upper bound and two feasible parallel lower
+  bounds for a declared reduced two-mode channel with independent heralded
+  survival `eta` and eigenbasis coherence `q`.  It does not solve the exact
+  noisy adaptive optimum, the full twelve-mode comb, unheralded loss,
+  noncommuting noise, or hardware calibration.
+- P386 maps a supplied bounded-curvature time tube through the monotone first
+  P371 sine branch.  Its `epsilon=M*h^2/8` and discrimination intervals are
+  conditional on the supplied clock anchor and bounds; no clock or time unit
+  is generated.
+- P387 constructs the Jordan Sampling Realization for one signed-resource
+  coordinate: positive preparation probabilities
+  `q_i=|w_i|/||w||_1`, a sign record, importance score, positive Markov free
+  channels, and Jordan-negativity monotonicity.  This is a mathematical
+  operational model, not negative probability or physical execution.  It
+  does not realize all five FORC coordinates, provide calibration, or source
+  a selector/unit.
+- P388 refutes all 20 forced positive cross-conversion implications in the
+  minimal free `N^5` signature and preserves the no-catalysis result by
+  cancellativity.  New typed coupling laws may create model-specific
+  conversions and require separate audits.
+- P389 proves `D_a F_rho=F_(a*rho)` and excludes a positive scale selector
+  invariant under all admissible dilations.  It does not exclude conditional
+  scale selection by a new normalization, RG boundary condition, apparatus
+  resolution, entropy reference, or dimensional axiom.
+- P390--P393 admit no independent QW hold-out, dimensional standards bundle,
+  reservoir process tomography, or electroweak blind-test bundle.
+- Release 10.33 constructs O121--O130.  Preserve all legacy/strict,
+  selector, dimensional-source, role-transfer, laboratory, `L_total`, SM/GR,
+  and ToE boundaries.
+
+## Post-Programs-P379–P393 research steering guardrail (2026-07-31)
+
+- The preferred nonreplay sequence is
+  `P394 -> P395 -> P396 -> P400 -> P403`: formalize the numerical algorithms
+  end to end; resolve exact oscillatory contact geometry/uniqueness; formalize
+  the global injectivity theorem; close or sharpen the noisy adaptive-comb
+  gap; then turn Jordan Sampling Realization into an executable external
+  protocol and validator.
+- P397 may audit exactly one source class for `C_damp`; it must not rename the
+  target-defined identity as a strict legacy-to-strict derivation or restart
+  the generic bridge.  P398 may classify global photonic quotient aliases.
+  P401 may lift P385 to twelve modes.  P402 may optimize against a supplied
+  clock tube.  P404/P405 may construct typed operational conversions, but a
+  sign register must not be silently promoted to a strict selector.
+- P406 may introduce exactly one new outer-scale boundary/normalization law
+  and must label the result strict, conditional, or target-defined.
+- P399 and P407--P410 require independent hardware/data providers, calibrated
+  standards, raw records, custody separation, frozen hashes, hold-outs, and
+  one-shot unblinding.  Code may validate supplied bundles but cannot create
+  their empirical status.
