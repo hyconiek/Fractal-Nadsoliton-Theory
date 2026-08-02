@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "programs": [
+      "P448",
+      "P449",
+      "P450"
+    ],
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false
+  },
+  "P448": {
+    "status": "[Computer-assisted proof] a global full-simplex upper bound via a concave fine-grained-erasure majorant; [Open] exact full-simplex globality",
+    "majorization_theorem": "Coarse graining over the unobserved lost computational values is CPTP, so the original heralded trace distance is no larger than the fine-grained distance. Each fine block has form Tr|P^(1/2) H P^(1/2)|/2 and is concave in diagonal P by the nuclear-norm variational formula. Reversal invariance then places the majorant maximum on p=(a,1/2-a,1/2-a,a).",
+    "certificate": {
+      "incumbent_a": 0.236328125,
+      "incumbent_lower": 0.4656336192495863,
+      "global_upper": 0.4666305033804779,
+      "majorant_gap": 0.0009968841308916065,
+      "maximizer_hull": [
+        0.1796875,
+        0.29296875
+      ],
+      "evaluated_boxes": 152,
+      "live_boxes": 100,
+      "terminal_boxes": 53
+    },
+    "original_certified_lower": 0.46327828319203235,
+    "original_full_simplex_global_upper": 0.4666305033804779,
+    "original_full_simplex_gap": 0.003352220188445554,
+    "maximum_random_monotonicity_defect": -6.961902153490573e-06,
+    "maximum_random_symmetrization_defect": -0.0005670462290918721,
+    "proof_boundary": "The majorant reveals the lost computational value and can be strictly larger than the operational coarse-grained objective. Therefore the certificate does not prove that the P436 witness is the exact full-simplex maximizer.",
+    "new_object": "O164 Concave Fine-Grained-Erasure Majorant"
+  },
+  "P449": {
+    "status": "[Proven] exact recursive characterization of the compressed causal tester normalizer cone; [Computer-assisted proof] an explicit rational echo-history tester beats three-slot GHZ; [Open] the global three-slot optimum",
+    "recursion": "N_n=B_0 direct-sum B_1, B_0>=0, B_1>=0, and B_0+B_1 belongs to C_(n-1); C_1={diag(r,1-r):0<=r<=1}.",
+    "affine_dimension_recurrence": "d_1=1; d_n=d_(n-1)+4^(n-1)",
+    "affine_dimensions_n1_to_n5": {
+      "1": 1,
+      "2": 5,
+      "3": 21,
+      "4": 85,
+      "5": 341
+    },
+    "three_slot_affine_dimension": 21,
+    "three_slot_diagonal_simplex_dimension": 7,
+    "three_slot_coherence_excess_dimension": 14,
+    "ghz_half_distance": 0.473026320645779,
+    "ghz_half_distance_interval": [
+      "0.47302632064577882",
+      "0.47302632064577882"
+    ],
+    "echo_history_law": [
+      "9/40",
+      "1/40",
+      "9/40",
+      "1/40",
+      "1/40",
+      "9/40",
+      "1/40",
+      "9/40"
+    ],
+    "echo_rule": "weight 9/40 when the first and third history bits agree, 1/40 otherwise; the middle bit is free",
+    "echo_half_distance": 0.490638990184333,
+    "echo_half_distance_interval": [
+      "0.49063899018433244",
+      "0.49063899018433377"
+    ],
+    "certified_echo_advantage_over_ghz": "0.017612669538553616",
+    "echo_success_probability_lower": "0.74531949509216622",
+    "ghz_success_probability_upper": "0.73651316032288938",
+    "full_xi3_causality_residual": 0.0,
+    "inherited_xi2_causality_residual": 0.0,
+    "full_support_compression_residual": 0.0,
+    "full_xi3_minimum_eigenvalue": 0.024999999999999994,
+    "maximum_random_feasible_distance": 0.4929886420607703,
+    "maximum_recursion_residual": 0.0,
+    "minimum_random_normalizer_eigenvalue": 0.024999999999999887,
+    "maximum_random_offdiagonal_norm": 0.1850186623258295,
+    "optimization_boundary": "The exact cone has 21 affine dimensions, fourteen more than the diagonal history simplex. A diagonal correlated echo-history law already refutes GHZ optimality. The P445 one-coherence square completion does not survive as a scalar identity; no matching three-slot dual or global optimum is claimed.",
+    "new_object": "O165 Recursive Causal-Support Cone"
+  },
+  "P450": {
+    "status": "[Proven] O163 is invariant under same-sign splitting at an identical node but is not invariant under exact moment-null-cycle augmentation",
+    "null_cycle": "nu_12=sum_(j=0)^12 (-1)^j binom(12,j) delta_(j/12); its moments of orders 0 through 11 vanish exactly.",
+    "maximum_exact_null_moment_residual": "0",
+    "same_sign_identical_node_split_invariant": true,
+    "base_risk": 9.618004785993307,
+    "largest_tested_risk": 3533.5256522692066,
+    "largest_tested_risk_ratio": 367.386555828614,
+    "unboundedness_theorem": "For mu_epsilon=mu+epsilon*nu_12 the twelve target moments are fixed, while the O163 score sum grows at least linearly in |epsilon| because nu_12 has nonzero support. Hence the declared minimax risk is unbounded along one exact representation gauge orbit.",
+    "necessity": "A preparation-level representation rule is necessary. Minimal support, reduced Jordan form, minimum total variation, or an explicit instrument must be supplied; the moment functional alone cannot determine the sampler.",
+    "physical_boundary": "The null cycle is a mathematical counterexample, not an apparatus process. Selecting a representation remains an operational premise.",
+    "new_object": "O166 Moment-Null Representation Gauge"
+  }
+}

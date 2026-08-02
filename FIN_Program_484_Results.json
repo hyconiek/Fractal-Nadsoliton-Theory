@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "program": "P484",
+    "execution_mode": "local analytical and computational research only",
+    "network_used": false,
+    "laboratory_data_used": false,
+    "external_audit_used": false,
+    "selector_boundary": "QW-2191 remains open.",
+    "kernel_boundary": "No legacy/strict substitution or role transfer is made.",
+    "physical_boundary": "No dimensional or experimentally validated physics is claimed."
+  },
+  "status": "[Strong evidence; exact proof obligation open] the P473 O167 optimizer has a nontrivial complex affine phase-face candidate; full-cone optimizer uniqueness is not yet rigorously refuted",
+  "exact_representation_checks": {
+    "basis_orthonormal": true,
+    "normalizer_parity_offblock_zero": true,
+    "normalizer_plus_equals_minus": true,
+    "X_parity_offblock_zero": true,
+    "K_parity_diagonal_blocks_zero": true,
+    "K_lower_cross_is_negative_transpose": true,
+    "standard_X_blocks_equal": true,
+    "standard_X_value": true,
+    "standard_K_value": true
+  },
+  "exact_odd_dimension_counterexample": {
+    "checks": {
+      "rotation_orthogonal": true,
+      "rotation_orientation_preserving": true,
+      "fixed_axis": true,
+      "axis_not_causal_equal_endpoint": true,
+      "plus_Riccati_block": true,
+      "minus_Riccati_block": true
+    },
+    "B": [
+      [
+        "-3/5",
+        "0",
+        "4/5"
+      ],
+      [
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "4/5",
+        "0",
+        "3/5"
+      ]
+    ],
+    "fixed_axis": [
+      [
+        "1"
+      ],
+      [
+        "0"
+      ],
+      [
+        "2"
+      ]
+    ],
+    "meaning": "With N0=X+=X-=I3 and C=2B^T, both active Riccati blocks hold and B is orientation-preserving orthogonal, yet its fixed axis (1,0,2) is outside the causal equal-endpoint plane. Thus odd dimension and active Riccati congruence alone are insufficient."
+  },
+  "conditional_analytic_theorem": "Swap and complement reduce the active real sector to equal positive 3x3 normalizer blocks N0, dual blocks X+/X-, and a cross block C. Positive Riccati congruence gives X-=C^T X+^-1 C/4. Hence B=X-^-1 C^T/2 is orientation-preserving N0-orthogonal. In odd dimension B has a fixed skew form. IF its fixed covector lies in the causal equal-endpoint plane, transforming back gives nonzero real skew Q with X3 Q X3+K Q K/4=0. Therefore N(t)=N+i t Q is causal, positive for all sufficiently small nonzero t, obeys the same Riccati equation, and attains the same exact dual value.",
+  "open_exact_step": "The exact shared-entry and standard-sector equations have not been shown by a symbolic identity or interval existence certificate to force the fixed covector into the causal equal-endpoint plane. The six tangent equations agree to high precision, but this is not a zero proof.",
+  "full_cone_optimizer_uniqueness_refuted": false,
+  "exact_nonzero_optimal_segment_proved": false,
+  "conditional_nonzero_optimal_segment_theorem": true,
+  "numerical_phase_face_dimension_lower_bound": 1,
+  "complete_optimal_face_dimension_proved": false,
+  "rho_high_precision_values": [
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630",
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630",
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630",
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630",
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630",
+    "0.029790441493099964789595384425487076089699217376938662471668989497783241886345630"
+  ],
+  "rho_high_precision_spread": "0",
+  "rho_spread_boundary": "Zero here means equality after the displayed 80-digit rounding. A 180-digit rerun resolves differences of order 1e-102 caused by the finite nonlinear-solve tolerance; neither observation proves exact equality.",
+  "numeric_metric_rotation": {
+    "A_times_B_residual": 4.907803950399849e-15,
+    "metric_orthogonality_residual": 4.2490302134762485e-16,
+    "B_determinant": 1.0,
+    "B_eigenvalues": [
+      {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      {
+        "real": 0.27043878237911334,
+        "imag": 0.9627371733683622
+      },
+      {
+        "real": 0.27043878237911334,
+        "imag": -0.9627371733683622
+      }
+    ],
+    "fixed_axis": [
+      1.0,
+      0.021065023194308797,
+      0.9999999999999978
+    ],
+    "axis_balance_residual": 2.220446049250313e-15,
+    "tangent_residual_infinity_norm": 6.648717570940496e-16,
+    "Q_operator_norm": 1.4143704377574406,
+    "inherited_exact_normalizer_lower": "24999999997/2500000000000",
+    "displayed_safe_half_interval": 0.003535141760547375
+  },
+  "conditional_positivity_statement": "If the candidate Q is proved to be the exact causal tangent, then after scaling Q to operator norm one, the exact P473 lower bound mu=24999999997/2500000000000 guarantees N+i t Q>0 for every |t|<mu.",
+  "interpretation": "O167 selects a unique local real polynomial representative and an exact dual support; whether the complete complex operational normalizer is unique remains open, with strong evidence for nonuniqueness.",
+  "boundary": "The audit does not prove nonuniqueness or an exact phase face. It isolates one exact missing identity/certificate. Even conditional on that identity, it would not classify the complete face, turn the phase into a selector or observable, supply physical units, or add evidence.",
+  "new_object": "O185 Conditional Odd-Dimensional Complex Comb Phase Face"
+}

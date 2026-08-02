@@ -1,0 +1,243 @@
+{
+  "metadata": {
+    "programs": "P454/P455/P457",
+    "checkpoint": "P454-P457",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false,
+    "legacy_role_transfer_started": false
+  },
+  "P454": {
+    "status": "[Proven] exact nested three-slot comb dual derivation; [Computer-assisted proof] exact-rational feasible dual and global full-cone bracket of width below 6.7e-6",
+    "primal": "maximize Tr(Delta*(T_plus-T_minus))/2 over T_plus,T_minus>=0, T_plus+T_minus=B0 direct-sum B1, B0+B1=C0 direct-sum C1, C0+C1=diag(r,1-r)",
+    "dual": "minimize lambda subject to X3>=+/-Delta/2; X2>=each 4x4 block of X3; X1>=each 2x2 block of X2; lambda>=both diagonal entries of X1",
+    "strong_duality_scope": "Both primal and dual have strict feasible points in the finite reduced comb SDP, so standard finite-dimensional Slater duality applies.",
+    "inherited_primal_lower": "52332810026048937/100000000000000000",
+    "certified_dual_upper": "130833675063/250000000000",
+    "certified_global_gap": "659999151063/100000000000000000",
+    "certified_success_probability_interval": [
+      "152332810026048937/200000000000000000",
+      "380833675063/500000000000"
+    ],
+    "rational_dual_certificate": {
+      "status": "[Computer-assisted proof] exact-rational feasible nested comb dual",
+      "feasible": true,
+      "rationalization_scale": 1000000000000,
+      "lambda_upper": "130833675063/250000000000",
+      "smallest_certified_slack_lower": "4.9999999969485233e-07",
+      "half_delta_maximum_entry_radius": "3.8143459608252896e-17",
+      "slacks": [
+        {
+          "slack": "X3_plus_halfDelta",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "4.9999999969485233e-07",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "6246346142393758776237381415711679717508779631857162449062363760890584722795330815775514014846624190031327619758671/21684043449710088680149056017398834228515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X3_minus_halfDelta",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "4.9999999969485233e-07",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "6246346142393758776237381415711679717508779631857162449062363760890584722795330815775514014846624190031327619758671/21684043449710088680149056017398834228515625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block0",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/2000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "29560136444039111006127951/1000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block1",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/2000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "5912027897179714299284043/200000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block0",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/2000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "5508582471/10000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block1",
+          "exact_sylvester_margin": "1/2000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/2000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "55086398731/100000000000000000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag0",
+          "exact_sylvester_margin": "599997/1000000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "599997/1000000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "599997/1000000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag1",
+          "exact_sylvester_margin": "119999/200000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "119999/200000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "119999/200000000000"
+        }
+      ]
+    },
+    "central_path_steps": 12,
+    "final_barrier_scout_lambda": 0.5233347002511172,
+    "boundary": "The bracket proves a global value bound, not exact attainment by the O167 face and not uniqueness of an optimal tester. It concerns only the declared reduced three-slot channel.",
+    "new_object": "O170 Nested Comb Dual Ladder"
+  },
+  "P455": {
+    "status": "[Proven] real plus global-complement symmetry leaves a five-dimensional fixed affine space, two dimensions larger than the O167 face; [Strong evidence] all five-dimensional starts return to the O167 value",
+    "real_c3_affine_dimension": 14,
+    "complement_constraint_rank": 9,
+    "real_complement_fixed_dimension": 5,
+    "O167_face_dimension": 3,
+    "face_contained_in_fixed_space": true,
+    "symmetry_allowed_residual_dimensions": 2,
+    "exact_nullspace_vectors": [
+      [
+        "0",
+        "-1",
+        "1",
+        "0",
+        "-1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "1",
+        "0",
+        "-1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "face_optimum_parameters": [
+      0.28716641518022373,
+      0.068777213178814,
+      0.009493712418100549
+    ],
+    "face_optimum_half_distance": 0.5233281002710417,
+    "face_minimum_eigenvalue": 0.05772355418756086,
+    "face_hessian_eigenvalues": [
+      -30.62851805038887,
+      -11.967601687535524,
+      -1.0497599502678274
+    ],
+    "fixed_space_best_half_distance": 0.5233281002710424,
+    "fixed_space_best_coordinates": [
+      -0.21838921256495122,
+      0.12608707167420008,
+      0.08119378522732544,
+      0.026852254861186482,
+      0.026852266819900536
+    ],
+    "fixed_space_hessian_eigenvalues": [
+      -2.4558749308776986,
+      -1.4969196669344305,
+      -1.0049972467059012,
+      -0.6617437959976301,
+      -0.30450145369141907
+    ],
+    "fixed_space_starts": 8,
+    "maximum_fixed_minus_face_gain": 6.661338147750939e-16,
+    "obstruction": "Known conjugation and global-complement symmetries cannot by themselves reduce the ordered causal cone to the three-parameter O167 face; two symmetry-allowed directions remain. Numerical non-improvement is not a theorem.",
+    "new_object": "O171 Ordered-Comb Symmetry Residual Space"
+  },
+  "P457": {
+    "status": "[Computer-assisted proof] globally licensed full-simplex coarse-erasure interval of width below 1e-6",
+    "license": "P452 proves every declared four-sector simplex point is dominated by its palindromic reversal average; therefore this one-dimensional outward cover is a full-simplex certificate, not merely a line result.",
+    "global_lower": 0.463278283192093,
+    "global_upper": 0.46327928294340853,
+    "global_gap": 9.997513155113325e-07,
+    "incumbent_a": 0.2276921272277832,
+    "maximizer_hull": [
+      0.2178955078125,
+      0.234619140625
+    ],
+    "evaluated_boxes": 5008,
+    "terminal_boxes": 5009,
+    "improvement_factor_over_P452_gap": 992.7121134353879,
+    "boundary": "The certificate retains the exact P452 parameter/code/loss scope. It does not prove a closed-form maximizer, uniqueness, unrestricted input optimality, adaptivity, or laboratory performance.",
+    "new_object": "O172 Six-Decimal Coarse-Erasure Cover"
+  }
+}

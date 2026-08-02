@@ -1,0 +1,99 @@
+{
+  "schema": "FIN-JSR-P403/1.0",
+  "status": "executable specification; not a physical result",
+  "program": "P403",
+  "source": "P366/P380 seven-atom signed-moment certificate",
+  "atoms": [
+    {
+      "atom_id": 0,
+      "node": 0.019826532267005523,
+      "signed_weight": -0.6263975202722428,
+      "sampling_probability": 0.2608323774888943,
+      "sign": -1
+    },
+    {
+      "atom_id": 1,
+      "node": 0.12942143496593872,
+      "signed_weight": 0.6199498168348376,
+      "sampling_probability": 0.2581475491450803,
+      "sign": 1
+    },
+    {
+      "atom_id": 2,
+      "node": 0.2950420036616848,
+      "signed_weight": 0.5921198733170435,
+      "sampling_probability": 0.2465591406693044,
+      "sign": 1
+    },
+    {
+      "atom_id": 3,
+      "node": 0.5266898453623859,
+      "signed_weight": 0.3211350863146134,
+      "sampling_probability": 0.13372088066717977,
+      "sign": 1
+    },
+    {
+      "atom_id": 4,
+      "node": 0.814059045463453,
+      "signed_weight": 0.14195366099001397,
+      "sampling_probability": 0.059109606425622005,
+      "sign": 1
+    },
+    {
+      "atom_id": 5,
+      "node": 0.9418486479939021,
+      "signed_weight": -0.08095594812758317,
+      "sampling_probability": 0.03371011496470769,
+      "sign": -1
+    },
+    {
+      "atom_id": 6,
+      "node": 1.0,
+      "signed_weight": 0.019020934133646014,
+      "sampling_probability": 0.00792033063921182,
+      "sign": 1
+    }
+  ],
+  "event_schema": [
+    "event_id",
+    "timestamp_utc",
+    "run_id",
+    "blinded_config",
+    "atom_id",
+    "node",
+    "sign",
+    "detector_channel",
+    "accepted"
+  ],
+  "manifest_required": [
+    "experiment_id",
+    "apparatus_id",
+    "calibration_ids",
+    "provider",
+    "registrar",
+    "analyst",
+    "raw_events_sha256",
+    "holdout_frozen_utc",
+    "unblinding_utc",
+    "physical_units",
+    "pre_registered_tests"
+  ],
+  "custody": {
+    "roles_must_be_distinct": [
+      "provider",
+      "registrar",
+      "analyst"
+    ],
+    "hash_before_unblinding": true,
+    "single_analysis_run": true,
+    "no_model_repair_after_failure": true
+  },
+  "estimator": "TV * sign * f(node), with TV=sum_i |w_i|",
+  "acceptance": {
+    "probability_sum_tolerance": 1e-12,
+    "node_match_tolerance": 1e-12,
+    "minimum_accepted_events": 1000,
+    "requires_real_apparatus_id": true,
+    "templates_and_synthetic_records_are_evidence": false
+  }
+}

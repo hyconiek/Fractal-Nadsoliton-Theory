@@ -1,0 +1,880 @@
+
+\documentclass[11pt,a4paper,openany]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage[margin=22mm,headheight=23pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{finblue}{HTML}{1F5A99}
+\definecolor{fingreen}{HTML}{19733A}
+\definecolor{finorange}{HTML}{D55E00}
+\definecolor{finred}{HTML}{A61B1B}
+\definecolor{finviolet}{HTML}{6A3D9A}
+\definecolor{fingray}{HTML}{4D4D4D}
+
+\hypersetup{
+  unicode=true,colorlinks=true,linkcolor=finblue,citecolor=fingreen,
+  urlcolor=finblue,
+  pdftitle={FIN Local Research Checkpoint P445--P447},
+  pdfauthor={Krzysztof Żuchowski},
+  pdfsubject={Exact two-slot noisy-comb closure, scoped global heralded-code certification, and detector-allocation interval propagation},
+  pdfkeywords={FIN, quantum comb, process tester, dephasing, GHZ, heralded erasure, representation theory, interval branch and bound, Jordan sampling}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small FIN Checkpoint P445--P447}
+\fancyhead[R]{\small Release 10.38}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep,leftmargin=2em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\emergencystretch=3em
+\newcommand{\one}{\bm 1}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\statusProven}{\textcolor{fingreen}{[Proven]}}
+\newcommand{\statusStrong}{\textcolor{finblue}{[Strong evidence]}}
+\newcommand{\statusModerate}{\textcolor{finviolet}{[Moderate evidence]}}
+\newcommand{\statusWeak}{\textcolor{fingray}{[Weak evidence]}}
+\newcommand{\statusSpeculative}{\textcolor{finorange}{[Speculative]}}
+\newcommand{\statusRefuted}{\textcolor{finred}{[Refuted]}}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{8mm}
+{\Large\bfseries FIN Local Research --- Release 10.38\par}
+\vspace{10mm}
+{\Huge\bfseries Checkpoint P445--P447\par}
+\vspace{6mm}
+{\Large Exact Closure of a Two-Slot Noisy Comb,\
+a Scoped Global Code Certificate,\
+and Full Atom-Box Propagation\par}
+\vspace{14mm}
+{\Large Krzysztof \.Zuchowski\par}
+\vspace{2mm}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+\vspace{2mm}
+{\normalsize ORCID: 0009-0002-0909-3613\par}
+\vspace{8mm}
+{\large 1 August 2026\par}
+{\normalsize Publication --- Preprint; Version 1.0.0\par}
+\vfill
+\begin{minipage}{0.92\textwidth}
+\small
+\textbf{Central theorem.}
+For every causal two-slot tester of the declared reduced phase/dephasing
+channel at q=4/5 and theta=pi/8, the exact optimal half-distance is
+eight times the square root of two divided by twenty-five.
+The GHZ history law is globally optimal, including arbitrary intermediate
+memory.
+
+\medskip
+\textbf{Boundary.}
+The three-use full code simplex is not closed: only a global \(10^{-3}\)
+palindromic certificate and strong full-simplex evidence are obtained.  No
+laboratory data, detector calibration, selector, unit source, complete
+legacy--strict bridge, role transfer, or physical closure is claimed.
+
+\medskip
+\textbf{License.} CC BY 4.0.
+\end{minipage}
+\vfill
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\chapter*{Publication statement}
+\addcontentsline{toc}{chapter}{Publication statement}
+This monograph reports local analytical and computer-assisted Programs P445,
+P446, and P447.  It uses no laboratory record, external audit, internet
+result, remote computation, or physical validation.
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Executive summary}
+
+Programs P445--P447 continue directly from Release 10.37.
+
+\begin{itemize}
+\item 
+\textbf{P445 -- \statusProven{}.} The complete two-slot process-tester problem for the declared reduced phase/\allowbreak{}dephasing channel admits an exact diagonal-support reduction. Every causal tester compression is parameterized by four history weights and one cancelling block coherence. Completing a square proves that at (q=4/\allowbreak{}5), (theta=pi/\allowbreak{}8), the GHZ history law is globally optimal over \textbf{all} admissible two-slot testers, including arbitrary intermediate memory. The exact half-distance and equal-prior success are
+
+\end{itemize}
+
+\[
+D_2^\star=\frac{8\sqrt2}{25}
+=0.4525483399593904\ldots,
+\]
+
+\[
+p_{\mathrm{succ},2}^\star
+=\frac12+\frac{4\sqrt2}{25}
+=0.7262741699796952\ldots.
+\]
+
+This closes the P435 two-slot gap without installing an SDP dependency. It does not solve three or more uses or the full twelve-mode channel.
+
+\begin{itemize}
+\item 
+\textbf{P446 -- [Computer-assisted proof /\allowbreak{} Strong evidence /\allowbreak{} Open].} The (S\_3)-invariant three-use heralded output decomposes into a four-dimensional symmetric block and two repeated two-dimensional standard blocks. Directed interval branch-and-bound proves a global upper/\allowbreak{}lower gap below (10\textasciicircum{}\{-3\}) on the palindromic family
+
+\end{itemize}
+
+\[
+p(a)=(a,1/2-a,1/2-a,a),\qquad0\le a\le1/2.
+\]
+
+The inherited rational P436 witness gives lower bound (0.46327828319203235); the exhaustive interval upper bound is (0.4642707484333634). Twenty-four deterministic multistarts on the full three-dimensional Hamming-sector simplex converge to the same neighborhood, and sixteen sampled interior Hessians have largest eigenvalue at most (-0.60629). These are strong falsification results, not a proof of full-simplex concavity or globality.
+
+\begin{itemize}
+\item 
+\textbf{P447 -- \textcolor{fingreen}{[Computer-assisted proof]}.} The complete (10\textasciicircum{}\{-20\})-scale P429 isolating boxes, not only their midpoints, are propagated through the detector-envelope minimax sampler O160. The largest certified sampling-probability width is (3.2548\textbackslash{}times10\textasciicircum{}\{-20\}). The strict worst-MSE ordering survives:
+
+\end{itemize}
+
+\[
+\mathrm{MSE}_{\mathrm{P447}}
+<\mathrm{MSE}_{\mathrm{P422}}
+<\mathrm{MSE}_{|w|}.
+\]
+
+The certified reduction relative to P422 lies in a width-(8.7\textbackslash{}times10\textasciicircum{}\{-19\}) interval around (0.003400659850200921). The detector envelope remains a supplied synthetic model and is not calibration.
+
+The strongest result is P445: an open multiround SDP cell has become an exact theorem through a structural reduction. The most important failed hypothesis is that the P446 symmetry and numerical Hessian evidence already imply globality on the full simplex; they do not.
+
+No selector, dimensional source, complete legacy-to-strict bridge, physical-role transfer, laboratory realization, total action, Standard Model, gravity theory, or Theory-of-Everything closure is obtained.
+
+\chapter{Confidence convention}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Status} & \textbf{Meaning in this checkpoint} \\
+\midrule
+\endhead
+\statusProven{} & Exact algebra or an analytic theorem under explicit hypotheses. \\
+\textcolor{fingreen}{[Computer-assisted proof]} & A finite theorem checked by deterministic enclosing computation. \\
+\statusStrong{} & Reproducible numerical falsification attempts without a full certificate. \\
+\textcolor{finviolet}{[Conditional]} & Valid only after the stated channel, measure, detector model, or reference is supplied. \\
+\textcolor{finorange}{[Open]} & The typed object exists, but the requested theorem is not established. \\
+\textcolor{finred}{[Blocked by external evidence]} & A real record, traceable calibration, custody, or unblinding is required. \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+Synthetic models validate theorems and software only. Floating-point convergence is not promoted to proof.
+
+\chapter{Inherited state and kernel boundary}
+
+The binding split remains
+
+\[
+K_{\mathrm{legacy,ont}}(d)
+=\alpha_{\mathrm{geo}}
+\frac{\cos(\omega_Ld+\phi_L)}{1+\beta_{\mathrm{tors}}d},
+\]
+
+\[
+K_{\mathrm{strict,gate}}(d)
+=\frac{\cos(\omega_Sd+\phi_S)}{1+\beta d^\eta}.
+\]
+
+The research-backed reconstructed historical class
+
+\[
+K^*_{\mathrm{legacy}}(d)
+=A\frac{\cos(\pi d/4+\pi/6)}{1+\beta d}
+\]
+
+remains a fixed-phase subclass of the intermediate legacy kernel. P445--P447 are downstream operational and estimator theorems. They neither derive a kernel nor complete or transfer roles across this split. They do not convert the coupling intuition in DIAGRAMS\_KERNEL\_TRANSFORMATION.md into a typed self-evolution.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.265\textwidth}p{0.269\textwidth}p{0.326\textwidth}@{}}
+\toprule
+\textbf{Lane} & \textbf{Before} & \textbf{After P445--P447} \\
+\midrule
+\endhead
+One-slot reduced tester & Exact & Unchanged \\
+Two-slot reduced comb & Exact instance; open (0.07987) success gap & Exact GHZ optimum over all causal testers \\
+Three-use heralded code & One rational feasible gain proved & Palindromic global upper within (10\textasciicircum{}\{-3\}); full simplex open \\
+Detector minimax allocation & Midpoint theorem & Complete P429 atom boxes propagated \\
+QW-2191 selector & Open & Open \\
+Dimensional source & Missing & Missing \\
+Physical record & Absent & Absent \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The ontology remains
+
+\[
+\text{nadsoliton}\longrightarrow\text{light}\longrightarrow
+\text{matter}\longrightarrow\text{emergent observer},
+\]
+
+with no lower informational layer beneath the nadsoliton.
+
+\chapter{P445 -- exact two-slot comb closure}
+
+\section{Question and obstruction left by P435}
+
+P435 supplied exact Choi operators and causal primal/\allowbreak{}dual constraints but no local multiround solver. The question was whether the support and symmetry of those operators reduce the tester cone enough to solve the selected cell analytically.
+
+The success criterion was an upper bound matching the feasible GHZ half-distance. The falsification criterion was any admissible tester normalization whose coherence raised the value above GHZ.
+
+\section{Process support}
+
+For (s\textbackslash{}in\{+1,-1\}), the one-slot Choi matrix is
+
+\[
+J_s=
+|00\rangle\langle00|+|11\rangle\langle11|
++q e^{-is\theta}|00\rangle\langle11|
++q e^{is\theta}|11\rangle\langle00|.
+\]
+
+Thus the two-slot process
+
+\[
+R_s=J_s\otimes J_s
+\]
+
+is supported on four histories
+
+\[
+00,\quad01,\quad10,\quad11.
+\]
+
+Only the tester compression to this four-dimensional process support affects the objective.
+
+\section{General causal normalizer on the support}
+
+The two-slot tester normalization equations imply that its support compression has two positive (2\textbackslash{}times2) blocks:
+
+\[
+N=
+\begin{pmatrix}
+t_{00}&c&0&0\\
+\overline c&t_{01}&0&0\\
+0&0&t_{10}&-c\\
+0&0&-\overline c&t_{11}
+\end{pmatrix},
+\]
+
+where
+
+\[
+t_{ab}\ge0,
+\qquad
+\sum_{a,b}t_{ab}=1,
+\]
+
+\[
+|c|^2\le\min\{t_{00}t_{01},t_{10}t_{11}\}.
+\]
+
+The opposite signs of the two off-diagonal blocks express the intermediate causality trace constraint. Neglecting (c) would describe only diagonal normalizers and would not prove the complete comb theorem.
+
+\section{Rank-two trace-norm reduction}
+
+Set
+
+\[
+a=2q|\sin\theta|,
+\qquad
+b=2q^2|\sin2\theta|.
+\]
+
+The compressed process difference has rank two. Since the normalized hypothesis probabilities agree, the nonzero eigenvalues of
+
+\[
+N^{1/2}(R_+-R_-)N^{1/2}
+\]
+
+are (pm D). Writing (c=u+iv), exact trace algebra gives
+
+\[
+\begin{aligned}
+D^2={}&a^2(t_{00}+t_{11})(t_{01}+t_{10})
++b^2t_{00}t_{11}\\
+&-4a^2u^2+2ab(t_{11}-t_{00})u.
+\end{aligned}
+\]
+
+The imaginary part (v) cancels identically. This cancellation was checked against 128 admissible random normalizers with maximum direct-matrix defect (2.78\textbackslash{}times10\textasciicircum{}\{-16\}); the theorem follows from the symbolic identity, not that float check.
+
+\section{Square completion}
+
+Let
+
+\[
+x=t_{00}+t_{11},
+\qquad
+\delta=t_{11}-t_{00}.
+\]
+
+Since
+
+\[
+t_{00}t_{11}=\frac{x^2-\delta^2}{4},
+\]
+
+completion of the square gives
+
+\[
+D^2
+=F(x)-4a^2
+\left(u-\frac{b\delta}{4a}\right)^2,
+\]
+
+where
+
+\[
+F(x)=a^2x(1-x)+\frac{b^2}{4}x^2.
+\]
+
+Therefore every causal tester satisfies
+
+\[
+D^2\le F(x),\qquad0\le x\le1.
+\]
+
+If (b\textasciicircum{}2\textbackslash{}ge2a\textasciicircum{}2), (F) is maximized at (x=1). Equality requires (t\_\{00\}=t\_\{11\}=1/\allowbreak{}2) and (u=0), which is the GHZ history law.
+
+At (q=4/\allowbreak{}5), (theta=pi/\allowbreak{}8), the condition reduces exactly to
+
+\[
+2q^2\cos^2\theta-1
+=\frac{8\sqrt2-9}{25}>0,
+\]
+
+because (128>81). Hence
+
+\[
+D_2^\star=q^2\sin(2\theta)=\frac{8\sqrt2}{25}.
+\]
+
+This is an analytic upper certificate and a matching feasible strategy. It closes the selected two-slot comb cell.
+
+\chapter{P446 -- scoped global code certification}
+
+\section{Why P445 does not solve P446}
+
+P446 concerns a different object: the three-use heralded-erasure-aware input code. The code law changes the input amplitudes, whereas P445 optimized a two-slot tester normalization for a fixed memoryless channel. The P445 square completion cannot be silently reused.
+
+\section{(S\_3) representation reduction}
+
+For a three-qubit Hamming-sector law (p=(p\_0,p\_1,p\_2,p\_3)), every heralded difference matrix commutes with permutations of the surviving qubits.
+
+For three survivors, Schur decomposition gives:
+
+\begin{itemize}
+\item 
+one four-dimensional symmetric block in the Dicke basis;
+
+\item 
+two equivalent two-dimensional standard blocks.
+
+\end{itemize}
+
+If (K\_\{mathrm\{sym\}\}) is the real skew (4\textbackslash{}times4) block and (K\_\{mathrm\{std\}\}) one real skew (2\textbackslash{}times2) block, then
+
+\[
+\frac12\|K_3\|_*
+=\frac12\|K_{\mathrm{sym}}\|_*
++\|K_{\mathrm{std}}\|_*.
+\]
+
+For a real skew (4\textbackslash{}times4) matrix with upper entries (k\_\{ij\}),
+
+\[
+\frac12\|K_{\mathrm{sym}}\|_*
+=\sqrt{
+\sum_{i<j}k_{ij}^2
++2|\operatorname{pf}K_{\mathrm{sym}}|
+}.
+\]
+
+The one- and two-survivor blocks reduce respectively to a (2\textbackslash{}times2) skew block and a (3\textbackslash{}times3) skew block. These identities replace repeated (8\textbackslash{}times8) eigensolutions by scalar interval formulas.
+
+\section{Directed interval branch-and-bound}
+
+On the palindromic family
+
+\[
+p(a)=(a,1/2-a,1/2-a,a),
+\]
+
+all amplitudes, block entries, Pfaffians, and square roots were evaluated by outward-rounded binary64 interval primitives. Every addition, multiplication, square, absolute value, and square root is expanded by at least one neighboring representable number. Rational P436 enclosures supply the trigonometric constants.
+
+The algorithm used 148 evaluated boxes and 149 terminal boxes. It imported the already proved P436 rational feasible lower value. The result is
+
+\[
+0.46327828319203235
+\le
+\max_{0\le a\le1/2}D(p(a))
+\le
+0.4642707484333634.
+\]
+
+The rigorous optimality gap is
+
+\[
+9.924652413310642\times10^{-4}.
+\]
+
+The broad surviving maximizer hull
+
+\[
+a\in[0.1484375,0.28125]
+\]
+
+reflects interval dependency, not physical uncertainty.
+
+\section{Full-simplex falsification audit}
+
+The full Hamming-sector simplex is three-dimensional. A deterministic 24-start SLSQP audit found best value
+
+\[
+0.4632782831921028
+\]
+
+at
+
+\[
+(0.2276921878,0.2723078117,0.2723078154,0.2276921850).
+\]
+
+Its reversal defect is below (3.76\textbackslash{}times10\textasciicircum{}\{-9\}). At sixteen frozen interior points, the largest sampled Hessian eigenvalue is at most
+
+\[
+-0.6062949146.
+\]
+
+These tests sought asymmetric optima and local nonconcavity and found neither. They do not cover the continuum, the boundary strata, or prove differentiability across spectral degeneracies. Full-simplex globality remains open.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_445_447_Figures/p445_p447_exact_reduction_and_intervals.png}
+\caption{The exact P445 two-slot envelope, the scoped P446 palindromic certificate, and the full P429-box detector-allocation tube.}
+\end{figure}
+
+\chapter{P447 -- certified detector-allocation tube}
+
+\section{Question}
+
+P440 evaluated its minimax detector allocation at P429 atom midpoints. P447 asks whether the complete certified P429 node and weight boxes could change allocation positivity, normalization, or the ordering of estimator risks.
+
+\section{Interval map}
+
+For each certified atom define
+
+\[
+r_i=\sqrt{\sum_{k=0}^{11}x_i^{2k}},
+\]
+
+\[
+\underline\epsilon_i=0.65+0.25x_i,
+\qquad
+\overline d_i=0.03-0.02x_i,
+\]
+
+\[
+\overline h_i
+=\frac1{\underline\epsilon_i}
++\frac{\overline d_i(1-\overline d_i)}{\underline\epsilon_i^2}.
+\]
+
+The score and normalized allocation are
+
+\[
+s_i=|w_i|r_i\sqrt{\overline h_i},
+\qquad
+q_i=\frac{s_i}{\sum_js_j}.
+\]
+
+All operations are performed on the exact P429 rational boxes. Integer square-root bracketing encloses every nonrational radical.
+
+\section{Allocation result}
+
+The midpoint display and maximum certified widths are:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.082\textwidth}p{0.389\textwidth}p{0.389\textwidth}@{}}
+\toprule
+\textbf{Atom} & \textbf{(q\_i) midpoint} & \textbf{Certified width} \\
+\midrule
+\endhead
+0 & 0.24000091596029191 & (3.255\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+1 & 0.23410446671319241 & (3.230\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+2 & 0.22459244891098445 & (3.214\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+3 & 0.13122814297957672 & (2.354\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+4 & 0.08062266714704100 & (2.332\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+5 & 0.06826223139843195 & (2.980\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+6 & 0.02118912689048153 & (2.438\textbackslash{}times10\textasciicircum{}\{-20\}) \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+Every lower endpoint is positive. Normalization is inherited from the exact score quotient.
+
+\section{Risk ordering}
+
+The interval computations certify narrow tubes around
+
+\[
+\begin{aligned}
+V_{|w|}&=10.393243449520376\ldots,\\
+V_{\mathrm{P422}}&=9.650823955540266\ldots,\\
+V_{\mathrm{P447}}&=9.618004785993303\ldots.
+\end{aligned}
+\]
+
+The upper endpoint of each better design lies strictly below the lower endpoint of the preceding design. Therefore
+
+\[
+V_{\mathrm{P447}}<V_{\mathrm{P422}}<V_{|w|}
+\]
+
+throughout the complete P429 isolating box.
+
+This is uncertainty in a mathematical signed-atom solution, not detector uncertainty. The efficiency/\allowbreak{}dark-count envelope remains an explicit supplied premise.
+
+\chapter{Newly constructed objects}
+
+\section{O161 -- Diagonal-Support Comb Reduction}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} a pair of two-slot phase/\allowbreak{}dephasing process Choi operators and causal testers to a four-history normalizer and scalar distance polynomial.
+
+\item 
+\textbf{Definition:} the support normalizer (N(t,c)) and completed-square formula in Section 4.
+
+\item 
+\textbf{Premises:} two memoryless uses of the declared commuting phase/\allowbreak{}dephasing channel and equal priors.
+
+\item 
+\textbf{Transformation law:} invariant under simultaneous conjugations preserving the diagonal Choi support; history relabellings permute (t) and (c).
+
+\item 
+\textbf{Generated theorem:} exact GHZ optimality in the selected cell.
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} omitting (c) fails to represent all causal normalizers; retaining it reveals a nonpositive square correction.
+
+\item 
+\textbf{Kernel relation:} downstream of a supplied reduced channel; derives neither legacy nor strict kernel.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} supplies no orientation, phase origin, clock, or physical unit.
+
+\item 
+\textbf{Failure mode:} more slots or noncommuting noise need new constraints.
+
+\item 
+\textbf{Status:} \statusProven{}.
+
+\end{itemize}
+
+\section{O162 -- Palindromic Heralded-Code Global Upper Certificate}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} a palindromic sector interval (a\textbackslash{}in[0,1/\allowbreak{}2]) to an enclosing heralded discrimination interval.
+
+\item 
+\textbf{Definition:} the (S\_3) block formulas plus exhaustive outward-rounded branch-and-bound.
+
+\item 
+\textbf{Premises:} the P418 three-use independent dephasing and heralding model.
+
+\item 
+\textbf{Generated theorem:} global palindromic value within (10\textasciicircum{}\{-3\}).
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} without representation reduction the interval dependency and eigensolver trust boundary are much larger.
+
+\item 
+\textbf{Kernel relation:} kernel-split robust after the reduced channel is supplied.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} no selector or unit.
+
+\item 
+\textbf{Failure mode:} it does not cover asymmetric sector laws.
+
+\item 
+\textbf{Status:} \textcolor{fingreen}{[Computer-assisted proof]} in the declared family; \textcolor{finorange}{[Open]} on the full simplex.
+
+\end{itemize}
+
+\section{O163 -- Certified Detector-Allocation Tube}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} the P429 rational isolating box to seven probability intervals and estimator-risk intervals.
+
+\item 
+\textbf{Definition:} exact interval propagation through O160.
+
+\item 
+\textbf{Premises:} the supplied detector nuisance envelope and P429 signed-atom theorem.
+
+\item 
+\textbf{Generated theorem:} positive normalized allocation and strict risk ordering over the full atom box.
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} midpoint evaluation alone cannot prove robustness to the atom uncertainty.
+
+\item 
+\textbf{Kernel relation:} consumes a mathematical signed representation; does not physically realize it.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} allocation uses absolute weights and cannot select polarity; no unit.
+
+\item 
+\textbf{Failure mode:} a different detector model or moment loss requires a new map.
+
+\item 
+\textbf{Status:} \textcolor{fingreen}{[Computer-assisted proof]}.
+
+\end{itemize}
+
+\chapter{Failed approaches and adversarial checks}
+
+\begin{enumerate}
+\item 
+\textbf{Diagonal tester normalization only -- rejected.} Causality permits cancelling off-diagonal blocks (c,-c). P445 includes them explicitly.
+
+\item 
+\textbf{Numerical off-diagonal search as proof -- rejected.} Feasible random and SLSQP searches found no improvement, but the theorem comes from square completion.
+
+\item 
+\textbf{Promoting P445 to arbitrary use number -- rejected.} The four-history rank-two identity is two-slot specific.
+
+\item 
+\textbf{Promoting palindromic optimality to the full P446 simplex -- rejected.} Reversal symmetry does not by itself force a pure optimal input to be palindromic.
+
+\item 
+\textbf{Calling sampled negative Hessians global concavity -- rejected.} Boundary and spectral-degeneracy regions remain uncovered.
+
+\item 
+\textbf{Demanding an unnecessarily fine P446 interval cover -- terminated.} Exact rational fractions caused expression growth; outward-rounded binary64 intervals produced the declared finite (10\textasciicircum{}\{-3\}) certificate. The coarser theorem is reported honestly.
+
+\item 
+\textbf{Treating equal displayed P447 endpoints as zero uncertainty -- rejected.} Decimal interchange rounds them equally at 17 digits; exact widths up to (3.2548\textbackslash{}times10\textasciicircum{}\{-20\}) are retained separately.
+
+\item 
+\textbf{Treating P447 as apparatus robustness -- rejected.} Only P429 mathematical uncertainty is propagated.
+
+\end{enumerate}
+
+\chapter{Selector, dimensional, legacy/\allowbreak{}strict, and physical audit}
+
+O161, O162, and O163 do not create a non-premise orientation. P445's optimal GHZ history law is invariant under exchanging the two diagonal histories. P446's certified family is explicitly reversal symmetric. P447 uses absolute weights. QW-2191 is therefore unchanged.
+
+All channel phases, efficiencies, dark probabilities, and estimator losses are dimensionless. No physical time, length, mass, energy, action, (k\_B), (hbar), or SI anchor is derived.
+
+The reconstructed (K\textasciicircum{}*\_\{\textbackslash{}mathrm\{legacy\}\}) remains an intermediate legacy class. None of the three programs types the historical coupling diagram as a state self-map, sources its free amplitude/\allowbreak{}damping parameters, completes the strict kernel, or transfers a legacy electroweak, electromagnetic, or gravity-hierarchy role.
+
+The exact comb theorem is a theorem about a supplied mathematical channel. It does not prove that a laboratory implements that channel, prepares the code, resolves FIN vertices, maintains the declared coherence, or records herald events.
+
+\chapter{Explicit nonclaims}
+
+This checkpoint does not claim:
+
+\begin{itemize}
+\item 
+an (n\textbackslash{}ge3) adaptive-comb optimum;
+
+\item 
+a full twelve-mode FIN channel optimum;
+
+\item 
+full-simplex globality of the P436/\allowbreak{}P446 code;
+
+\item 
+correlated or unheralded loss correction;
+
+\item 
+detector calibration or laboratory counts;
+
+\item 
+selector closure or canonical chirality;
+
+\item 
+dimensional physics;
+
+\item 
+a legacy-to-strict completion or role-transfer theorem;
+
+\item 
+Standard Model, gravity, (L\_\{\textbackslash{}mathrm\{total\}\}), or Theory-of-Everything closure.
+
+\end{itemize}
+
+\chapter{Recommended next programs}
+
+\begin{center}
+\begingroup\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.055\textwidth}p{0.079\textwidth}p{0.340\textwidth}p{0.261\textwidth}p{0.125\textwidth}@{}}
+\toprule
+\textbf{Rank} & \textbf{Program} & \textbf{Study} & \textbf{Decisive output} & \textbf{Probability} \\
+\midrule
+\endhead
+1 & P448 & Full-simplex concavity or counterexample for the three-use heralded code & Rigorous Hessian/\allowbreak{}epigraph cover, or explicit asymmetric improvement & 0.68 \\
+2 & P449 & Three-slot extension of O161 & Causal support-recursion theorem or explicit new coherence obstruction & 0.64 \\
+3 & P450 & Representation-independence of O163 & Allocation/\allowbreak{}risk invariants across all admitted signed-atom representations, or counterexample & 0.61 \\
+4 & P451 & Sharpen O162 by interval Newton on the palindromic derivative & Unique maximizer interval and value gap below (10\textasciicircum{}\{-10\}) & 0.59 \\
+5 & P452 & Four-use rational heralded witness & Certified gain in the largest P418 cell & 0.55 \\
+6 & P453 & General two-slot commuting-Schur channel theorem & Necessary and sufficient endpoint-optimality condition beyond the selected cell & 0.53 \\
+7 & P454 & Covariance-weighted detector minimax allocation & Exact law for non-diagonal moment loss & 0.51 \\
+8 & P455 & Detector drift and dependence obstruction & Robust law or no-go under bounded temporal correlations & 0.48 \\
+9 & P456 & One complete-Bernstein damping-source class & Exact source theorem or bounded no-go & 0.45 \\
+10 & P457 & Photonic chart interval cover & Certified injectivity box or explicit alias & 0.42 \\
+11 & P458 & Catalytic phase-reference ledger & Exact recovery/\allowbreak{}consumption law without polarity promotion & 0.40 \\
+12 & P459 & Formal real-cosine provider & Proof-kernel completion of the P428 rational-cut interface & 0.32 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The preferred next bounded batch is
+
+\[
+\boxed{P448\to P449\to P450.}
+\]
+
+P448 attacks the principal remaining boundary around the strongest code theorem. P449 tests whether P445 is an isolated two-slot accident or the first member of a causal support recursion. P450 checks whether the detector allocation is an invariant of the moment problem or an artifact of the selected seven-atom representation.
+
+\chapter{Artifact list}
+
+\begin{itemize}
+\item 
+FIN\_Local\_Research\_Checkpoint\_P445\_P447\_EN.md
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P445\_P447\_EN.tex
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P445\_P447\_EN.pdf
+
+\item 
+FIN\_Current\_Local\_Research\_Report\_EN.pdf
+
+\item 
+fin\_programs\_445\_447.py
+
+\item 
+fin\_programs\_445\_447\_to\_latex.py
+
+\item 
+test\_fin\_programs\_445\_447.py
+
+\item 
+test\_fin\_checkpoint\_p445\_p447.py
+
+\item 
+FIN\_Programs\_445\_447\_Results.json
+
+\item 
+FIN\_Programs\_445\_447\_Summary.csv
+
+\item 
+FIN\_Programs\_445\_447\_P445\_Two\_Slot\_Reduction.csv
+
+\item 
+FIN\_Programs\_445\_447\_P446\_Palindromic\_Certificate.csv
+
+\item 
+FIN\_Programs\_445\_447\_P446\_Full\_Simplex\_Audit.csv
+
+\item 
+FIN\_Programs\_445\_447\_P447\_Atom\_Box\_Propagation.csv
+
+\item 
+FIN\_Programs\_445\_447\_Figures/\allowbreak{}p445\_p447\_exact\_reduction\_and\_intervals.png
+
+\item 
+RELEASE\_10\_38\_PROGRAMS\_445\_447.md
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P445\_P447\_State.json
+
+\item 
+FIN\_Checkpoint\_P445\_P447\_AGENTS\_Guardrail.txt
+
+\item 
+FIN\_PROGRAMS\_445\_447\_RELEASE\_MANIFEST.sha256
+
+\end{itemize}
+
+\chapter{Reproducibility and Restart instructions}
+
+``bash MPLCONFIGDIR=/\allowbreak{}tmp/\allowbreak{}fin-mpl-1038 python3 fin\_programs\_445\_447.py python3 fin\_programs\_445\_447\_to\_latex.py lualatex -interaction=nonstopmode -halt-on-error FIN\_Local\_Research\_Checkpoint\_P445\_P447\_EN.tex lualatex -interaction=nonstopmode -halt-on-error FIN\_Local\_Research\_Checkpoint\_P445\_P447\_EN.tex python3 -m unittest -v test\_fin\_programs\_445\_447.py test\_fin\_checkpoint\_p445\_p447.py sha256sum -c FIN\_PROGRAMS\_445\_447\_RELEASE\_MANIFEST.sha256 `
+
+To resume, read AGENTS.md, its mandatory packets, SUMMARY\_GROK.md, FIN\_GOAL\_STATE.md`, the P435--P440 checkpoint, this checkpoint, and the P435/\allowbreak{}P445 structured results. Begin only P448/\allowbreak{}P449/\allowbreak{}P450 unless a fresh broad state-map audit identifies a more decisive typed object. Preserve the kernel split, QW-2191, all dimensional and physical-evidence boundaries, and the distinction between mathematical detector envelopes and calibration.
+
+\chapter{Final interpretation}
+
+P445 illustrates the highest-value pattern for the current local frontier: a missing numerical dual certificate was replaced by an exact structural theorem. The causal normalizer contains more freedom than the first diagonal ansatz, but that freedom becomes a negative square and cannot improve the selected two-slot value.
+
+P446 shows the contrasting boundary. Symmetry reduction and strong numerical concavity evidence are not enough to turn a three-dimensional global optimization into a theorem. P447 shows that once a typed theorem exists, very small upstream uncertainty can be propagated exactly without confusing it with experimental uncertainty.
+
+These advances strengthen FIN's operational mathematics. They still do not supply the external operational structure that would make the mathematics an experimentally tested physical theory.
+
+
+\clearpage
+\chapter*{Reproduction certificate}
+\addcontentsline{toc}{chapter}{Reproduction certificate}
+\begin{Verbatim}[fontsize=\small]
+MPLCONFIGDIR=/tmp/fin-mpl-1038 \
+python3 fin_programs_445_447.py
+
+python3 -m unittest -v \
+  test_fin_programs_445_447.py \
+  test_fin_checkpoint_p445_p447.py
+
+lualatex -interaction=nonstopmode -halt-on-error \
+  FIN_Local_Research_Checkpoint_P445_P447_EN.tex
+
+sha256sum -c FIN_PROGRAMS_445_447_RELEASE_MANIFEST.sha256
+\end{Verbatim}
+
+\noindent\textbf{Suggested citation:}
+
+\.Zuchowski, K. (2026). \emph{FIN Local Research Checkpoint P445--P447:
+Exact Closure of a Two-Slot Noisy Comb, a Scoped Global Code Certificate,
+and Full Atom-Box Propagation} (Release 10.38; Version 1.0.0) [Preprint].
+\end{document}

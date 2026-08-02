@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "programs": "P465/P468/P469",
+    "checkpoint": "P465-P469",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false,
+    "legacy_role_transfer_started": false,
+    "exact_O167_attainment_proven": false
+  },
+  "P465": {
+    "status": "[Proven] P452 reversal symmetrization is strict off the palindromic fixed set; together with P458 this proves uniqueness of the declared coarse-erasure maximizer on the complete four-sector simplex",
+    "d2_defect_formula": "D2(sym p)^2-D2(p)^2 = 16 q^2 sin(theta)^2 Y^4 [c0+c1 r+c2 r^2], r=X/Y, with c0=cos^2(2 beta)/9, c1=2 sqrt(3)(1-sin(2 beta)cos(alpha-beta))/9, and c2=((kappa-1)cos^2(alpha+beta)+sin^2(alpha-beta))/3",
+    "strict_condition_interval_kappa_minus_one": [
+      "1.1364871761393385",
+      "1.1364871761393385"
+    ],
+    "interior_equality_case": "For X,Y>0, c2=0 iff alpha=beta=pi/4; hence x=w and y=z.",
+    "X_zero_equality_case": "For X=0<Y, c0=0 iff beta=pi/4; hence x=w=0 and y=z.",
+    "Y_zero_equality_case": "For Y=0<X, D2 is blind, but D3(sym)-D3=q^3 sin(3 theta)(x-w)^2, so equality iff x=w.",
+    "full_simplex_unique_maximizer_interval": [
+      0.2276921883225489,
+      0.22769218832267057
+    ],
+    "checked_nonpalindromic_points": 4098,
+    "minimum_observed_objective_gain": 3.776242863018364e-06,
+    "proof_boundary": "The theorem is exact only for the declared three-use, permutation-symmetric Hamming-sector code with q=4/5, theta=2*pi/15, and its heralded-loss objective. It is not an unrestricted adaptive-channel, laboratory, selector, dimensional, or physical-uniqueness theorem.",
+    "new_object": "O176 Strict Reversal Equality Isolator"
+  },
+  "P468": {
+    "status": "[Computer-assisted proof] the P469 support ladder yields a new exact-rational feasible dual with certified global gap below 1e-8",
+    "stationary_parameters_used": [
+      0.2871664153717576,
+      0.06877721090495502,
+      0.009493709596691087
+    ],
+    "attempted_shifts": [
+      1e-09,
+      3e-10,
+      1e-10
+    ],
+    "strict_improvement_accepted": true,
+    "previous_certified_upper": "52332832027103/100000000000000",
+    "accepted_certified_upper": "6541601258388011/12500000000000000",
+    "inherited_primal_lower": "52332810026048937/100000000000000000",
+    "accepted_global_gap": "41055151/100000000000000000",
+    "gap_reduction_factor_over_P464": 535.8902239331674,
+    "accepted_shift": 1e-10,
+    "accepted_certificate": {
+      "feasible": true,
+      "rationalization_scale": 100000000000000000,
+      "lambda_upper": "6541601258388011/12500000000000000",
+      "smallest_certified_slack_lower": "9.9996948523231345e-12",
+      "half_delta_maximum_entry_radius": "3.8143459608252896e-17",
+      "slacks": [
+        {
+          "slack": "X3_plus_halfDelta",
+          "exact_sylvester_margin": "1/100000000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "9.9996948523231345e-12",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "1104574949563783302733043473769086822329131400749658457436809134165647984897106554543385540816429583980369/1455191522836685180664062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X3_minus_halfDelta",
+          "exact_sylvester_margin": "1/100000000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "9.9996948523231345e-12",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "1104574949563783302733043473769086822329131400749658457436809134165647984897106554543385540816429583980369/1455191522836685180664062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block0",
+          "exact_sylvester_margin": "1/100000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "25628860685232007798500513/390625000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block1",
+          "exact_sylvester_margin": "1/100000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "25628974592007228859123977/390625000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block0",
+          "exact_sylvester_margin": "1/100000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "5062455000039/625000000000000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block1",
+          "exact_sylvester_margin": "1/10000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/10000000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "23/625000000000000000000000000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag0",
+          "exact_sylvester_margin": "1/10000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/10000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "1/10000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag1",
+          "exact_sylvester_margin": "1250003/12500000000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1250003/12500000000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "1250003/12500000000000000"
+        }
+      ]
+    },
+    "methodological_result": "The floating P469 stationarity point only proposes a dual. Globality is licensed solely by exact rational Sylvester positivity and the full paid trigonometric perturbation radius.",
+    "boundary": "A nonzero certified gap, however small, does not prove exact O167 attainment or uniqueness of the full ordered-comb optimizer.",
+    "new_object": "O178 Support-Ladder Rational Closure Tube"
+  },
+  "P469": {
+    "status": "[Strong evidence] the O167 interior candidate satisfies the complete nested support-ladder KKT equations to floating residual below 1e-11; [Open] exact root isolation and exact complementarity",
+    "stationary_parameters": [
+      0.2871664153717576,
+      0.06877721090495502,
+      0.009493709596691087
+    ],
+    "normalizer_minimum_eigenvalue": 0.057723558496969855,
+    "transformed_delta_minimum_absolute_eigenvalue": 0.008009754936339366,
+    "block3_residual_frobenius": 2.408655631223323e-15,
+    "block2_residual_frobenius": 1.546375975750693e-15,
+    "scalar_residual": 2.220446049250313e-16,
+    "full_residual_infinity_norm": 1.3322676295501878e-15,
+    "primal_value": 0.5233281002710412,
+    "support_lambda": 0.5233281002710407,
+    "support_gap": -4.440892098500626e-16,
+    "sum_trace_contacts": -7.087973286988105e-16,
+    "maximum_absolute_trace_contact": 4.198098375228894e-16,
+    "necessity_theorem": "Because B0,B1,C0,C1 and d0,d1 are positive at an interior O167 optimum, complementary slackness forces both lower slacks at every causal level to vanish. The tested block equalities are therefore necessary full-cone stationarity equations, not merely face gradients.",
+    "boundary": "Floating least-squares residuals do not prove a nonlinear exact root, dual feasibility of averaged near-zero lower slacks, exact O167 global attainment, or uniqueness. An interval Krawczyk/Newton certificate is required.",
+    "new_object": "O177 Interior Comb Support Ladder"
+  }
+}

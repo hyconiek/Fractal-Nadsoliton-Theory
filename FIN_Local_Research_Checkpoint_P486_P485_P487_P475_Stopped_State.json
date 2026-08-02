@@ -1,0 +1,55 @@
+{
+  "release": "10.47",
+  "date": "2026-08-02",
+  "campaign": "P486 -> P485 -> P487 -> P475-unlimited",
+  "campaign_status": "stopped_by_user",
+  "network_used": false,
+  "laboratory_data_used": false,
+  "external_audit_used": false,
+  "running_processes_remaining": false,
+  "programs": {
+    "P486": {
+      "execution_status": "completed",
+      "epistemic_status": "Computer-assisted proof",
+      "result_file": "FIN_Program_486_Results.json",
+      "result": "All determinant-sign, positive-branch, pivot-localization, and rho-reference premises required by P485/P487 are certified on the exact P473 box.",
+      "new_object": "O188 P473 Orientation-and-Localization Premise Certificate"
+    },
+    "P485": {
+      "execution_status": "failed_before_groebner",
+      "epistemic_status": "Open; no scientific verdict",
+      "status_file": "FIN_Program_485_Unlimited_Status.json",
+      "error_type": "CoercionFailed",
+      "error": "expected Rational object, got -4*sqrt(2)",
+      "interpretation": "Coefficient-domain implementation failure, not a counterexample and not an algebraic no-go."
+    },
+    "P487": {
+      "execution_status": "failed_before_groebner",
+      "epistemic_status": "Open; no scientific verdict",
+      "status_file": "FIN_Program_487_Unlimited_Status.json",
+      "error_type": "CoercionFailed",
+      "error": "expected Rational object, got -4*sqrt(2)",
+      "interpretation": "Coefficient-domain implementation failure, not a completed elimination."
+    },
+    "P475-unlimited": {
+      "execution_status": "stopped_by_user_during_full_lex_groebner",
+      "epistemic_status": "Open; no scientific verdict",
+      "status_file": "FIN_Program_475_Unlimited_Status.json",
+      "result_file": null,
+      "interpretation": "Manual interruption returned neither a basis nor a polynomial relation."
+    }
+  },
+  "new_exact_observation": {
+    "name": "O191 coefficient-field closure map",
+    "status": "Proven analytically; not yet executed in P485/P487",
+    "formula": "sqrt(2) = 2 - 4*alpha^2 for alpha = sin(pi/8)",
+    "consequence": "The offending coefficient already lies in Q(alpha); future code may rationalize it before constructing Poly(..., domain=QQ)."
+  },
+  "nonclaims": [
+    "P485 did not prove or refute the causal-axis identity.",
+    "P487 did not return a relation or minimal polynomial for L.",
+    "P475-unlimited did not prove nonexistence or transcendence.",
+    "No selector, dimensional source, apparatus, laboratory record, legacy-to-strict completion, role transfer, L_total, Standard Model, gravity, or Theory-of-Everything closure is exported."
+  ],
+  "restart_policy": "Do not resume automatically. Require an explicit user request after exact coefficient-closure unit tests and a bounded checkpoint policy are installed."
+}

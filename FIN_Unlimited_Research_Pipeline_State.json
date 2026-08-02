@@ -1,0 +1,55 @@
+{
+  "pipeline": "FIN-P486-P485-P487-P475-unlimited-v1",
+  "pid": 2,
+  "started_unix_time": 1785625308.0257568,
+  "status": "stopped_by_user",
+  "execution_order": [
+    "P486",
+    "P485",
+    "P487",
+    "P475-unlimited"
+  ],
+  "reason_for_sequential_execution": "Prevent concurrent exact-CAS jobs from competing for 16 GB RAM.",
+  "no_application_time_limit": true,
+  "no_application_memory_limit": true,
+  "network_used": false,
+  "stages": {
+    "P486": {
+      "script": "fin_program_486.py",
+      "log": "FIN_Program_486_Pipeline.log",
+      "status": "completed",
+      "started_unix_time": 1785625308.0263035,
+      "finished_unix_time": 1785625358.9950237,
+      "return_code": 0
+    },
+    "P485": {
+      "script": "fin_program_485_unlimited.py",
+      "log": "FIN_Program_485_Unlimited.log",
+      "status": "failed",
+      "started_unix_time": 1785625358.9953918,
+      "finished_unix_time": 1785626053.6959803,
+      "return_code": 1
+    },
+    "P487": {
+      "script": "fin_program_487_unlimited.py",
+      "log": "FIN_Program_487_Unlimited.log",
+      "status": "failed",
+      "started_unix_time": 1785626053.696374,
+      "finished_unix_time": 1785626723.3303833,
+      "return_code": 1
+    },
+    "P475-unlimited": {
+      "script": "fin_program_475_unlimited.py",
+      "log": "FIN_Program_475_Unlimited.log",
+      "status": "stopped_by_user",
+      "started_unix_time": 1785626723.3308582,
+      "last_recorded_stage": "full_lex_groebner_running",
+      "return_code": 130,
+      "scientific_verdict": "none"
+    }
+  },
+  "updated_iso_time": "2026-08-02T14:16:24+02:00",
+  "current_stage": null,
+  "stop_reason": "Manual interruption requested by the user after the full lexicographic P475 computation ran too long.",
+  "scientific_summary": "P486 completed. P485 and P487 failed before Groebner elimination because an explicit sqrt(2) coefficient was coerced into QQ. P475 was interrupted and has no result."
+}

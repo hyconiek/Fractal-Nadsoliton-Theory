@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "programs": "P471/P472/P473",
+    "checkpoint": "P471-P473",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false,
+    "legacy_role_transfer_started": false
+  },
+  "P471": {
+    "status": "[Proven] the interior O167 KKT support condition is equivalent to a 13-variable polynomial Riccati system with exactly 13 residual orbits; [Strong evidence] its located root has a well-conditioned Jacobian",
+    "unknowns": [
+      "A",
+      "B",
+      "u",
+      "L",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    "upper_triangle_equations": 36,
+    "exact_residual_orbits": 13,
+    "residual_orbits": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      [
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    "polynomial_degree_maximum": 3,
+    "floating_root": [
+      0.28716641537176957,
+      0.06877721090495262,
+      0.009493709596686299,
+      0.5233281002710417,
+      0.3576804333492875,
+      0.413115271749897,
+      0.11593969306414464,
+      0.3631242690235351,
+      0.11641687175252172,
+      -0.21582333569001838,
+      0.4116038160348598,
+      0.34605909442730937,
+      0.33986737581577736
+    ],
+    "floating_residual_infinity_norm": 6.158268339717665e-17,
+    "jacobian_determinant": 1.862465032211432e-16,
+    "jacobian_singular_values": [
+      3.833325700590803,
+      0.5910357911430197,
+      0.5584906044421472,
+      0.3098044285755966,
+      0.2583692772034168,
+      0.23797976654101857,
+      0.016952341795342857,
+      0.014785838283949023,
+      0.012396178303639763,
+      0.010745714341171204,
+      0.009378532729783375,
+      0.007552062140820994,
+      0.003267495644871251
+    ],
+    "jacobian_condition_number": 1173.1693373815797,
+    "equivalence_theorem": "For N>0 and X3>0, X3*N*X3=Delta*N*Delta/4 iff N^(1/2) X3 N^(1/2)=|N^(1/2) Delta N^(1/2)|/2. The imposed 10-parameter X3 pattern is exactly the full nested block-equality KKT ladder under the declared O167 symmetries.",
+    "boundary": "The symbolic reduction is exact, but floating residual and Jacobian conditioning alone do not prove an exact real root.",
+    "new_object": "O179 Polynomialized Interior KKT Core"
+  },
+  "P472": {
+    "status": "[Computer-assisted proof] exact rational interval polynomial and Jacobian provider admits at least one strict Krawczyk box",
+    "exact_rational_interval_arithmetic": true,
+    "sine_enclosure_decimal_scale": 1000000000000000000000000000000,
+    "tested_radii": [
+      "1/100000000",
+      "1/1000000000",
+      "1/10000000000",
+      "1/100000000000",
+      "1/1000000000000",
+      "1/10000000000000",
+      "3/100000000000000",
+      "1/100000000000000"
+    ],
+    "admitted_radii": [
+      "1/100000000",
+      "1/1000000000",
+      "1/10000000000",
+      "1/100000000000",
+      "1/1000000000000",
+      "1/10000000000000",
+      "3/100000000000000"
+    ],
+    "selected_radius": "3/100000000000000",
+    "strict_inclusion": true,
+    "minimum_inclusion_margin": "8881602834553053263568986041993890518633693719335525465568965873552620759960409/488281250000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "maximum_krawczyk_image_width": "10085167341227633336151111629181134900075574432685498907089557564539847/244140625000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "maximum_point_residual_radius": "2578316652730988399863415635138537769853025498781197775161421/39062500000000000000000000000000000000000000000000000000000000000000000000000",
+    "provider_boundary": "The provider encloses the polynomial Riccati system and all Jacobian entries with exact fractions. It does not rely on interval eigendecomposition.",
+    "new_object": "O180 Rational Polynomial Krawczyk Provider"
+  },
+  "P473": {
+    "status": "[Computer-assisted proof] a unique exact positive polynomial KKT root exists in the admitted box and yields exact O167 primal-dual attainment for the declared three-slot ordered comb",
+    "exact_root_proved": true,
+    "root_unique_in_box": true,
+    "exact_O167_attainment_proved": true,
+    "full_cone_optimizer_uniqueness_proved": false,
+    "root_box_radius": "3/100000000000000",
+    "exact_global_value_interval": [
+      "5233281002710117/10000000000000000",
+      "5233281002710717/10000000000000000"
+    ],
+    "exact_global_value_interval_width": "3/50000000000000",
+    "normalizer_center_sylvester_margin": "1/100",
+    "normalizer_box_positive_lower": "24999999997/2500000000000",
+    "x3_center_sylvester_margin": "1/100",
+    "x3_box_positive_lower": "124999999997/12500000000000",
+    "attainment_theorem": "At the exact positive root, the Riccati identity makes X3 the trace-norm support and hence X3>=+/-Delta/2. The polynomial pattern makes every lower dual slack zero. Recursive trace identities give primal value Tr(N X3)=lambda, so weak duality is attained exactly.",
+    "boundary": "The theorem is confined to the declared reduced three-slot channel and proves one exact optimal O167 normalizer. It does not by itself exclude other full-cone optimizers outside the certified root box.",
+    "new_object": "O181 Exact O167 Primal-Dual Contact Certificate"
+  }
+}

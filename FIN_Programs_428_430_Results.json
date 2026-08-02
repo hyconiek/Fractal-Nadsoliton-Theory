@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "programs": "P428-P430",
+    "checkpoint": "P428-P430",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "kernel_split_preserved": true,
+    "selector_discharged": false,
+    "dimensional_source_exported": false
+  },
+  "legacy_star_coupling_context": {
+    "status": "[Proven audit] the diagram contains four coupling mechanisms and two cross-modulation formulas; [Refuted] its displayed path exponent and integer-node derivations; [Conditional] these formulas are a self-coupling intuition, not a typed dynamical self-coupling theorem",
+    "source_checks": {
+      "four_factor_product_present": true,
+      "effective_legacy_formula_present": true,
+      "resonance_feedback_present": true,
+      "topology_torsion_feedback_present": true
+    },
+    "legacy_star_definition": "A*cos(pi*d/4+pi/6)/(1+beta*d), A>0, beta>0",
+    "relation_to_binding_legacy": "the fixed-phase subclass of K_legacy_ont with alpha_geo=A, omega=pi/4, phi=pi/6, beta_tors=beta",
+    "path_sum_exponent_claim": 1.0,
+    "path_sum_exponent_required_for_inverse_linear_tail": -2.6,
+    "alleged_integer_node_cosine_values": {
+      "2": -0.4999999999999998,
+      "5": -0.25881904510252063,
+      "8": 0.8660254037844386,
+      "11": -0.9659258262890678
+    },
+    "exact_real_zero_set": "d=4/3+4n",
+    "self_coupling_type_boundary": "No map S:X->X, no state variable, no evolution equation, no feedback closure, and no fixed-point condition is defined in the diagram.",
+    "physical_evidence_boundary": "Historical Wilson-loop and accuracy statements in the local diagram are repository claims, not admitted external laboratory evidence.",
+    "selector_discharged": false,
+    "physical_role_transfer_exported": false
+  },
+  "P428": {
+    "status": "[Proven] FIN-specific rational side conditions and type-correct cut-interface reduction compile in Lean; [Refuted] Rat->Rat is a type-adequate interface for standard real cosine; [Blocked locally] the standard real-analysis cosine theorem is absent",
+    "lean_returncode": 0,
+    "angle_count": 12,
+    "maximum_rational_width": 1.9128718516949603e-37,
+    "mathlib_present": false,
+    "local_real_trig_candidate_files": 3,
+    "old_interface": "Rat -> Rat",
+    "old_interface_type_adequate_for_real_cosine": false,
+    "replacement_interface": "Rat -> CutValue(lowerBound, upperBound, compatibility)",
+    "formal_reduction": "All twelve FIN bounds follow from one generic standard alternating-cosine provider on 0<=x and x^2<12; every FIN-specific side condition is proof-kernel checked.",
+    "boundary": "The local Lean/Std toolchain contains no standard real-number trigonometric analysis library. The theorem relating the power series to the usual real cosine remains an external mathematical provider, not a FIN axiom and not an internally compiled theorem.",
+    "new_object": "O155 Rational-Cut Cosine Provider Interface"
+  },
+  "P429": {
+    "status": "[Computer-assisted proof] unique seven-contact KKT zero in the declared exact-rational box",
+    "attempts": 1,
+    "successful_relative_radius_exponent": 20,
+    "all_25_variables_strictly_included": true,
+    "weight_signs": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "node_order_certified": true,
+    "weighted_infinity_contraction_upper": 4.0672647472032875e-11,
+    "moment_enclosure": "exact Fraction arithmetic; rational Taylor/Lagrange cosine bounds and exact fifth-root brackets",
+    "preconditioner": "70-decimal rational rounding of a 180-digit numerical inverse; the rounded matrix is used exactly in the Krawczyk map",
+    "boundary": "The certificate concerns the 25-equation contact system and this isolating box. Global dual feasibility and global optimality are separate P430 obligations.",
+    "new_object": "O156 Exact-Rational Seven-Contact KKT Isolating Box",
+    "refinement": {
+      "newton_iterations": 3,
+      "residual_history": [
+        "3.4204011261e-28",
+        "6.00757387968e-73",
+        "8.47896850692e-147"
+      ],
+      "maximum_residual": "8.47896850692178735069802207249e-147",
+      "smallest_double_singular_value": 2.0441169470988953e-15,
+      "double_condition_number": 6.654783805064521e+17
+    },
+    "objective_midpoint": 0.7073534677231137,
+    "objective_interval_lower": 0.7073534677231137,
+    "objective_interval_upper": 0.7073534677231137,
+    "objective_interval_width": 4e-20
+  },
+  "P430": {
+    "status": "[Computer-assisted proof] the unique P429 dual obeys -1<=p<=0 on [0,1]",
+    "global_feasibility_certified": true,
+    "stationary_contacts_certified": 6,
+    "stationary_contacts_total": 6,
+    "endpoint_certified": true,
+    "noncontact_gaps_certified": 7,
+    "noncontact_gaps_total": 7,
+    "bernstein_terminal_cells": 7,
+    "maximum_subdivision_depth": 0,
+    "theorem_scope": "Krawczyk uniqueness supplies exact contact equations; interval curvature handles the six stationary contacts, interval monotonicity handles x=1, and Bernstein ranges handle the complement.",
+    "boundary": "This certifies dual feasibility for the P429 contact solution. Primal moment feasibility is part of the same KKT zero, but global optimality also uses the signed-measure duality theorem inherited from P337--P380. It creates no physical interpretation.",
+    "new_object": "O157 Contact-Aware Global Dual Certificate"
+  }
+}

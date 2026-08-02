@@ -1,0 +1,1085 @@
+
+\documentclass[11pt,a4paper,openany]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage[margin=22mm,headheight=23pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{finblue}{HTML}{1F5A99}
+\definecolor{fingreen}{HTML}{19733A}
+\definecolor{finorange}{HTML}{D55E00}
+\definecolor{finred}{HTML}{A61B1B}
+\definecolor{finviolet}{HTML}{6A3D9A}
+\definecolor{fingray}{HTML}{4D4D4D}
+
+\hypersetup{
+  unicode=true,colorlinks=true,linkcolor=finblue,citecolor=fingreen,
+  urlcolor=finblue,
+  pdftitle={FIN Local Research Checkpoint P448--P450},
+  pdfauthor={Krzysztof Żuchowski},
+  pdfsubject={A full-simplex erasure majorant, a three-slot causal echo counterexample, and a representation-gauge no-go},
+  pdfkeywords={FIN, quantum comb, causal tester, channel discrimination, echo history, heralded erasure, concavity, interval arithmetic, signed moments, representation gauge}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small FIN Checkpoint P448--P450}
+\fancyhead[R]{\small Release 10.39}
+\fancyfoot[C]{\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep,leftmargin=2em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\emergencystretch=3em
+\newcommand{\one}{\bm 1}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\statusProven}{\textcolor{fingreen}{[Proven]}}
+\newcommand{\statusStrong}{\textcolor{finblue}{[Strong evidence]}}
+\newcommand{\statusModerate}{\textcolor{finviolet}{[Moderate evidence]}}
+\newcommand{\statusWeak}{\textcolor{fingray}{[Weak evidence]}}
+\newcommand{\statusSpeculative}{\textcolor{finorange}{[Speculative]}}
+\newcommand{\statusRefuted}{\textcolor{finred}{[Refuted]}}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+\vspace*{8mm}
+{\Large\bfseries FIN Local Research --- Release 10.39\par}
+\vspace{10mm}
+{\Huge\bfseries Checkpoint P448--P450\par}
+\vspace{6mm}
+{\Large A Full-Simplex Erasure Majorant,\
+a Three-Slot Causal Echo Counterexample,\
+and a Representation-Gauge No-Go\par}
+\vspace{14mm}
+{\Large Krzysztof \.Zuchowski\par}
+\vspace{2mm}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+\vspace{2mm}
+{\normalsize ORCID: 0009-0002-0909-3613\par}
+\vspace{8mm}
+{\large 1 August 2026\par}
+{\normalsize Publication --- Preprint; Version 1.0.0\par}
+\vfill
+\begin{minipage}{0.92\textwidth}
+\small
+\textbf{Central result.}
+An explicit rational three-slot causal echo-history tester has certified
+half-distance at least 0.49063899018433244, exceeding the three-slot GHZ
+value by at least 0.017612669538553616.
+
+\medskip
+\textbf{Additional theorems.}
+A concave fine-erasure majorant gives the first rigorous full-simplex P446
+upper bound.  An exact twelve-moment null cycle proves that the O163 sampler
+is not representation independent.
+
+\medskip
+\textbf{Boundary.}
+No global three-slot optimum, selector, dimensional source, laboratory
+record, complete legacy--strict bridge, role transfer, or physical closure
+is claimed.
+
+\medskip
+\textbf{License.} CC BY 4.0.
+\end{minipage}
+\vfill
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\chapter*{Publication statement}
+\addcontentsline{toc}{chapter}{Publication statement}
+This monograph reports local analytical and computer-assisted Programs P448,
+P449, and P450.  It uses no laboratory record, external audit, internet
+result, remote computation, or physical validation.
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Executive summary}
+
+Programs P448--P450 start from the verified Release-10.38 boundary and produce three different kinds of result.
+
+\begin{itemize}
+\item 
+\textbf{P448 -- [Computer-assisted proof /\allowbreak{} Open].} A new object, O164, replaces a blind three-dimensional interval cover by a concave fine-grained-erasure majorant. Revealing the computational value of every lost bit can only increase distinguishability. Each resulting fine block has a nuclear-norm variational representation that is concave in the Hamming-sector law. Reversal symmetry therefore reduces the global majorant optimization on the complete four-probability simplex to one palindromic coordinate. An outward-rounded interval cover proves
+
+\end{itemize}
+
+\[
+0.46327828319203235
+\le D_{\mathrm{P446}}^{\mathrm{global}}
+\le 0.4666305033804779.
+\]
+
+The remaining rigorous full-simplex gap is 0.003352220188445554. Exact globality of the P436 witness remains open because the majorant gives the receiver information absent from the original coarse-grained channel.
+
+\begin{itemize}
+\item 
+\textbf{P449 -- [Proven /\allowbreak{} Computer-assisted proof /\allowbreak{} Open].} The support compression of every causal n-slot tester obeys the exact recursion
+
+\end{itemize}
+
+\[
+\mathcal C_n
+=\left\{
+B_0\oplus B_1:
+B_0,B_1\succeq0,
+\ B_0+B_1\in\mathcal C_{n-1}
+\right\},
+\]
+
+with affine dimensions 1, 5, 21, 85, and 341 for one through five slots. The three-slot cone has fourteen affine coherence/\allowbreak{}history-correlation directions beyond the seven-dimensional diagonal history simplex.
+
+More importantly, the simple rational history law
+
+\[
+t_{abc}
+=\begin{cases}
+9/40,&a=c,\\
+1/40,&a\ne c,
+\end{cases}
+\]
+
+is extended explicitly to a full positive causal tester normalization. Rigorous rational transcendental enclosures and exact characteristic-polynomial root isolation give
+
+\[
+D_{\mathrm{echo}}
+\in[0.49063899018433244,
+0.49063899018433377],
+\]
+
+\[
+D_{\mathrm{GHZ},3}
+=0.47302632064577882,
+\]
+
+hence
+
+\[
+D_{\mathrm{echo}}-D_{\mathrm{GHZ},3}
+\ge0.017612669538553616.
+\]
+
+Three-slot GHZ optimality is therefore \textbf{refuted} in the declared reduced phase/\allowbreak{}dephasing comb. The global three-slot optimum remains open.
+
+\begin{itemize}
+\item 
+\textbf{P450 -- \statusProven{}.} O163 is invariant under same-sign splitting of an atom at an identical node, but it is not determined by the twelve target moments. The exact signed null cycle
+
+\end{itemize}
+
+\[
+\nu_{12}
+=\sum_{j=0}^{12}(-1)^j\binom{12}{j}\,\delta_{j/12}
+\]
+
+has zero moments of orders 0 through 11. Adding epsilon times this cycle leaves the complete twelve-moment functional unchanged while the O163 detector-weighted allocation risk is unbounded as the magnitude of epsilon grows. At epsilon equal to 0.01, the displayed risk ratio is already 367.386555828614. A preparation-level representation rule is mathematically necessary; the moment functional alone cannot choose the sampler.
+
+The strongest result is the P449 echo-history counterexample. The most important failed hypothesis is that the exact two-slot GHZ theorem extends naturally to three slots. It does not.
+
+No selector, canonical orientation, dimensional source, complete legacy-to-strict bridge, physical-role transfer, laboratory realization, Standard Model, gravity theory, total action, or Theory-of-Everything closure is obtained.
+
+\chapter{Confidence convention}
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.420\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{Status} & \textbf{Meaning in this checkpoint} \\
+\midrule
+\endhead
+\statusProven{} & Exact algebra or analytic theorem under explicit hypotheses. \\
+\textcolor{fingreen}{[Computer-assisted proof]} & Finite enclosing computation with deterministic artifacts. \\
+\statusStrong{} & Reproducible numerical falsification without a complete certificate. \\
+\textcolor{finviolet}{[Conditional]} & Valid only after a stated channel, measure, detector model, or reference is supplied. \\
+\textcolor{finorange}{[Open]} & The typed object exists, but the requested closure theorem is absent. \\
+\statusRefuted{} & An explicit admissible counterexample violates the proposed statement. \\
+\textcolor{finred}{[Blocked by external evidence]} & A real record, calibration, custody chain, or unblinding is required. \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+Synthetic models validate mathematics and code only. A floating-point optimum is never promoted to a theorem.
+
+\chapter{Inherited assumptions and state map}
+
+The binding kernel split is unchanged:
+
+\[
+K_{\mathrm{legacy,ont}}(d)
+=\alpha_{\mathrm{geo}}
+\frac{\cos(\omega_Ld+\phi_L)}{1+\beta_{\mathrm{tors}}d},
+\]
+
+\[
+K_{\mathrm{strict,gate}}(d)
+=\frac{\cos(\omega_Sd+\phi_S)}{1+\beta d^\eta}.
+\]
+
+The research-backed historical subclass
+
+\[
+K^*_{\mathrm{legacy}}(d)
+=A\frac{\cos(\pi d/4+\pi/6)}{1+\beta d}
+\]
+
+remains an intermediate legacy object, not the strict kernel. The coupling sketches in DIAGRAMS\_KERNEL\_TRANSFORMATION.md remain provenance and intuition: they do not export the state self-map, feedback law, source of A or beta, or fixed-point theorem needed for a typed self-coupling.
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.250\textwidth}p{0.256\textwidth}p{0.354\textwidth}@{}}
+\toprule
+\textbf{Lane} & \textbf{Release 10.38} & \textbf{After P448--P450} \\
+\midrule
+\endhead
+P446 full code simplex & Palindromic certificate; globality open & Global full-simplex interval width 0.00335223; exact optimum open \\
+Two-slot comb & Exact GHZ theorem & Unchanged \\
+Three-slot comb & Not reduced & Exact 21-dimensional support recursion; GHZ refuted by rational echo law \\
+Detector allocation & Certified on P429 representation & Proven representation-gauge dependence \\
+Canonical preparation representation & Missing & Proven necessary; still missing \\
+QW-2191 selector & Open & Open \\
+Dimensional source & Missing & Missing \\
+Physical record & Absent & Absent \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The ontology remains
+
+\[
+\text{nadsoliton}
+\longrightarrow\text{light}
+\longrightarrow\text{matter}
+\longrightarrow\text{emergent observer},
+\]
+
+with no informational layer beneath the nadsoliton.
+
+\chapter{P448 -- global full-simplex majorization}
+
+\section{Exact question}
+
+P446 established a global interval certificate only on the palindromic line. The P448 question is whether one can bound the original operational objective over every probability vector
+
+\[
+p=(p_0,p_1,p_2,p_3),
+\qquad p_k\ge0,
+\qquad\sum_kp_k=1,
+\]
+
+without a blind three-dimensional subdivision.
+
+The success criterion is a rigorous full-simplex upper bound close to the certified P436 lower witness. The falsification criterion is either a probability law exceeding that upper bound or a failure of the proposed concavity/\allowbreak{}majorization chain.
+
+\section{Coarse and fine erasure records}
+
+For a fixed heralded survivor set S, the original model traces over the computational values ell carried by lost qubits. Its signed output difference is
+
+\[
+\Delta_S(p)=\sum_\ell\Delta_{S,\ell}(p).
+\]
+
+Define the refined direct-sum record
+
+\[
+\widehat\Delta_S(p)
+=\bigoplus_\ell\Delta_{S,\ell}(p).
+\]
+
+Forgetting ell is a completely positive trace-preserving coarse graining. Contractivity of trace distance gives
+
+\[
+\frac12\|\Delta_S(p)\|_1
+\le
+\frac12\|\widehat\Delta_S(p)\|_1
+=\sum_\ell\frac12\|\Delta_{S,\ell}(p)\|_1.
+\]
+
+Summing with the exact herald probabilities defines the fine majorant M(p) and proves
+
+\[
+D_{\mathrm{coarse}}(p)\le M(p).
+\]
+
+This inequality was also attacked numerically at 256 deterministic random laws. The largest observed coarse-minus-fine defect was negative 6.96 times 10 to the minus 6. The theorem, however, is contractivity, not the random check.
+
+\section{Concavity theorem}
+
+Every fixed fine block has the form
+
+\[
+X(P)=P^{1/2}HP^{1/2},
+\]
+
+where H is a fixed Hermitian phase/\allowbreak{}dephasing difference matrix and P is a diagonal matrix whose entries are affine functions of p. For positive definite P, the nuclear-norm variational formula gives
+
+\[
+\operatorname{Tr}|X|
+=\inf_{Y\succ0}
+\frac12\operatorname{Tr}
+\left(Y+XY^{-1}X\right).
+\]
+
+Set
+
+\[
+Y=P^{1/2}ZP^{1/2}.
+\]
+
+Then
+
+\[
+\operatorname{Tr}|P^{1/2}HP^{1/2}|
+=\inf_{Z\succ0}
+\frac12\operatorname{Tr}
+P\left(Z+HZ^{-1}H\right).
+\]
+
+The right side is an infimum of affine functions of P and is therefore concave. Continuity extends the result to the boundary P positive semidefinite. Hence M is concave on the complete probability simplex.
+
+Let R reverse Hamming sectors:
+
+\[
+R(p_0,p_1,p_2,p_3)=(p_3,p_2,p_1,p_0).
+\]
+
+The sum over all fine erasure records satisfies M(Rp)=M(p). Concavity gives
+
+\[
+M(p)
+\le M\left(\frac{p+Rp}{2}\right).
+\]
+
+Therefore its global maximum lies on
+
+\[
+p(a)=(a,1/2-a,1/2-a,a),
+\qquad0\le a\le1/2.
+\]
+
+This is a theorem about the majorant. It does not assert the same symmetrization inequality for the coarse objective.
+
+\section{Directed interval certificate}
+
+The one-dimensional cover uses:
+
+\begin{itemize}
+\item 
+exact rational Machin enclosures of pi;
+
+\item 
+alternating-series sine intervals;
+
+\item 
+outward-rounded binary64 addition, multiplication, square, absolute value, and square root;
+
+\item 
+the exact S3 irreducible blocks used by P446;
+
+\item 
+a deterministic heap-based branch-and-bound with tolerance 0.001.
+
+\end{itemize}
+
+The certificate evaluated 152 boxes. It gives
+
+\[
+0.4656336192495863
+\le\max_a M(p(a))
+\le0.4666305033804779.
+\]
+
+The live maximizer hull is contained in
+
+\[
+a\in[0.1796875,0.29296875].
+\]
+
+Combining the majorization theorem with the certified P436 witness produces the full-simplex bracket stated in the executive summary.
+
+\section{What P448 does not prove}
+
+At the candidate neighborhood, revealing the lost value increases the objective by roughly two times 10 to the minus 3. The majorant is therefore not tight enough to prove the exact P436 optimizer. The correct result is a rigorous global enclosure, not a global optimum theorem.
+
+\chapter{P449 -- recursive causal support and the echo-history counterexample}
+
+\section{Tester normalization}
+
+For n ordered channel calls, a causal tester normalization has the recursive form
+
+\[
+\sum_rT_r=I_{Y_n}\otimes\Xi_n,
+\]
+
+\[
+\operatorname{Tr}_{X_n}\Xi_n
+=I_{Y_{n-1}}\otimes\Xi_{n-1},
+\]
+
+continuing to a density operator rho with trace one. The declared channel Choi matrices are supported on Y\_k=X\_k in the computational basis.
+
+Let C\_n be the set of compressions of the tester normalization to the resulting 2-to-the-n-dimensional history support.
+
+\section{Recursive support theorem}
+
+The identity on Y\_n forces a compression to be block diagonal in the newest history bit:
+
+\[
+N_n=B_0\oplus B_1.
+\]
+
+Tracing X\_n says that the two blocks sum to the preceding support normalizer:
+
+\[
+B_0+B_1\in\mathcal C_{n-1}.
+\]
+
+Positivity gives B\_0 and B\_1 positive semidefinite. Conversely, every positive decomposition of a compressed preceding normalizer admits a positive full-space lift. One way to see this is to write a positive extension R of the inherited normalizer and apply the Douglas factorization/\allowbreak{}effect construction to
+
+\[
+0\preceq B_0\preceq PRP.
+\]
+
+An effect E with B\_0=PR\textasciicircum{}\{1/\allowbreak{}2\}ER\textasciicircum{}\{1/\allowbreak{}2\}P gives the two positive full blocks
+
+\[
+R^{1/2}ER^{1/2},
+\qquad
+R^{1/2}(I-E)R^{1/2}.
+\]
+
+This proves the recursion
+
+\[
+\mathcal C_n
+=\{B_0\oplus B_1:B_0,B_1\succeq0,
+B_0+B_1\in\mathcal C_{n-1}\}.
+\]
+
+The affine dimension therefore satisfies
+
+\[
+d_1=1,
+\qquad
+d_n=d_{n-1}+4^{n-1},
+\]
+
+so
+
+\[
+d_n=\frac{4^n-1}{3}-1.
+\]
+
+For n=3, d\_3=21. A diagonal eight-history law has only seven affine dimensions; fourteen additional real directions survive causal compression.
+
+\section{The rational echo-history law}
+
+The P445 two-slot theorem might suggest that endpoint GHZ histories remain optimal at three slots. P449 attacks that hypothesis directly.
+
+Write a, b, c for newest, middle, and oldest history bits. Define
+
+\[
+t_{abc}
+=\begin{cases}
+9/40,&a=c,\\
+1/40,&a\ne c.
+\end{cases}
+\]
+
+In lexicographic order this is
+
+\[
+t=\frac1{40}(9,1,9,1,1,9,1,9).
+\]
+
+Its two newest-bit blocks are
+
+\[
+B_0=\frac1{40}\operatorname{diag}(9,1,9,1),
+\]
+
+\[
+B_1=\frac1{40}\operatorname{diag}(1,9,1,9),
+\]
+
+and
+
+\[
+B_0+B_1=I_4/4\in\mathcal C_2.
+\]
+
+Thus it is an admissible element of C\_3. It correlates the first and third calls while leaving the middle bit uniform, hence the working name "echo-history tester".
+
+\section{Explicit full-space extension}
+
+To avoid relying only on the abstract lifting theorem, the executable artifact constructs the full operator. Let Xi\_2=I\_8/\allowbreak{}4. On the equality support Y\_2=X\_2 and Y\_1=X\_1, embed B\_0 in a sixteen-dimensional operator and fill its complement by I/\allowbreak{}8. Call the result B\_0 full. Define
+
+\[
+B_1^{\mathrm{full}}=I_{16}/4-B_0^{\mathrm{full}},
+\]
+
+\[
+\Xi_3=B_0^{\mathrm{full}}\oplus B_1^{\mathrm{full}},
+\]
+
+\[
+\sum_rT_r=I_{Y_3}\otimes\Xi_3.
+\]
+
+The smallest eigenvalue of Xi\_3 is 0.025. The generated full-space checks give exactly zero floating residual for
+
+\[
+\operatorname{Tr}_{X_3}\Xi_3-I_{Y_2}\otimes\Xi_2,
+\]
+
+for the inherited Xi\_2 constraint, and for compression back to the displayed eight-history normalizer.
+
+\section{Certified discrimination advantage}
+
+At
+
+\[
+q=4/5,
+\qquad\theta=\pi/8,
+\]
+
+the support difference is a purely imaginary Hermitian matrix whose real factor is skew symmetric. Every entry of the echo witness is enclosed using:
+
+\begin{itemize}
+\item 
+the exact rational probabilities t;
+
+\item 
+rational square-root enclosures;
+
+\item 
+a Machin interval for pi;
+
+\item 
+alternating sine intervals for multiples of pi/\allowbreak{}8;
+
+\item 
+exact characteristic-polynomial root isolation for the rational midpoint of K-transpose-K;
+
+\item 
+an explicit nuclear-norm perturbation remainder.
+
+\end{itemize}
+
+The resulting intervals are
+
+\[
+D_{\mathrm{echo}}
+\in[0.49063899018433244,
+0.49063899018433377],
+\]
+
+\[
+D_{\mathrm{GHZ},3}
+\in[0.47302632064577882,
+0.47302632064577882].
+\]
+
+The strict lower advantage is 0.017612669538553616. In equal-prior success probability, the certified echo lower bound is 0.74531949509216622, whereas the GHZ upper bound is 0.73651316032288938.
+
+This refutes three-slot GHZ optimality in the declared reduced channel. It does not determine the global optimum. Thirty-two deterministic feasible full-cone scouts reached 0.4929886420607703; that larger value is \statusStrong{}, not a certified optimum.
+
+\section{Interpretation and failure of the two-slot extrapolation}
+
+The two-slot proof collapses every admissible coherence correction to one negative square. At three slots, the affine cone grows from dimension 5 to dimension 21. Even its diagonal face contains temporal correlations unavailable to the two-endpoint GHZ history.
+
+The echo law is a mathematical causal tester strategy. It does not prove a physical delay line, quantum memory, clock, preparation, vertex POVM, detector, or laboratory record.
+
+\chapter{P450 -- the moment-null representation gauge}
+
+\section{Exact question}
+
+O163 assigns detector-aware sampling probabilities to a signed atomic representation
+
+\[
+\mu=\sum_iw_i\delta_{x_i}
+\]
+
+of the twelve-moment functional. P450 asks whether the allocation and its risk depend only on the moments, or on the selected representation.
+
+\section{A limited positive invariance}
+
+If one atom w delta\_x is split into two same-sign atoms lambda w delta\_x and (1-lambda) w delta\_x at the identical node, then
+
+\[
+|\lambda w|r(x)\sqrt{h(x)}
++|(1-\lambda)w|r(x)\sqrt{h(x)}
+=|w|r(x)\sqrt{h(x)}.
+\]
+
+The aggregated allocation and minimized risk are unchanged. The code verifies this at lambda equal to 2/\allowbreak{}5.
+
+\section{Exact null cycle}
+
+Define
+
+\[
+\nu_{12}
+=\sum_{j=0}^{12}(-1)^j\binom{12}{j}\delta_{j/12}.
+\]
+
+The finite-difference identity gives, exactly,
+
+\[
+\int x^k\,d\nu_{12}(x)=0,
+\qquad k=0,1,\ldots,11.
+\]
+
+Therefore every representation
+
+\[
+\mu_\epsilon=\mu+\epsilon\nu_{12}
+\]
+
+has precisely the same twelve moments as mu.
+
+\section{Risk divergence}
+
+For the supplied detector envelope, define
+
+\[
+s_i=|w_i|r_i\sqrt{h_i},
+\qquad
+q_i^*=\frac{s_i}{\sum_js_j}.
+\]
+
+The minimized worst second-moment coefficient is
+
+\[
+V(\mu)=\left(\sum_i s_i\right)^2-\|m\|_2^2,
+\]
+
+where m is the twelve-moment vector. Along the null orbit, m is fixed. Because nu\_12 has nonzero support, the score sum grows at least linearly in the magnitude of epsilon. Consequently
+
+\[
+\sup_\epsilon V(\mu_\epsilon)=+\infty.
+\]
+
+This is an analytic no-go for representation independence.
+
+The deterministic finite examples are:
+
+\begin{center}
+\begingroup\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.249\textwidth}p{0.191\textwidth}p{0.420\textwidth}@{}}
+\toprule
+\textbf{epsilon} & \textbf{Exact moment defect} & \textbf{Risk ratio to reduced P429 representation} \\
+\midrule
+\endhead
+0 & 0 & 1.000000 \\
+0.00000001 & 0 & 1.00003849 \\
+0.000001 & 0 & 1.00385180 \\
+0.0001 & 0 & 1.41764264 \\
+0.001 & 0 & 8.12753817 \\
+0.01 & 0 & 367.38655583 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth]{FIN_Programs_448_450_Figures/p448_p450_global_majorant_and_gauge_obstruction.png}
+\caption{The global fine-erasure majorant, the three-slot causal-cone audit, and the exact moment-null representation-gauge obstruction.}
+\end{figure}
+
+\section{The missing operational object}
+
+The moment functional cannot specify how its signed representation is physically or algorithmically prepared. At least one additional typed rule is necessary, for example:
+
+\begin{itemize}
+\item 
+a reduced Jordan representation;
+
+\item 
+minimal support under explicit admissibility conditions;
+
+\item 
+minimum total variation;
+
+\item 
+a preparation instrument that fixes the atoms operationally;
+
+\item 
+a quotient-invariant estimator that does not consume a presentation.
+
+\end{itemize}
+
+These alternatives are not equivalent, and P450 does not select one. O166 is the representation gauge itself: two presentations are gauge-related when their difference annihilates the declared moment space.
+
+This is distinct from QW-2191. Fixing a preparation representation does not select an orientation on Z12.
+
+\chapter{Newly constructed objects}
+
+\section{O164 -- Concave Fine-Grained-Erasure Majorant}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} a four-sector probability law to a nonnegative discrimination upper bound.
+
+\item 
+\textbf{Definition:} the herald-weighted sum of trace distances after adjoining the lost computational value as an orthogonal classical record.
+
+\item 
+\textbf{Premises:} the declared independent dephasing and heralded erasure channel.
+
+\item 
+\textbf{Transformation law:} invariant under Hamming-sector reversal and survivor permutations.
+
+\item 
+\textbf{Generated theorem:} global full-simplex upper bound after one-dimensional interval optimization.
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} without the fine record, concavity has not been proved; with it, the bound is not tight.
+
+\item 
+\textbf{Kernel relation:} downstream and kernel-split robust after the reduced channel is supplied.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} no orientation and no physical unit.
+
+\item 
+\textbf{Operational interpretation:} an information-enhanced receiver used only for upper bounding.
+
+\item 
+\textbf{Failure mode:} strict coarse-graining loss prevents exact globality.
+
+\item 
+\textbf{Status:} \textcolor{fingreen}{[Computer-assisted proof]} as a global certificate; \textcolor{finorange}{[Open]} as an exact optimizer.
+
+\end{itemize}
+
+\section{O165 -- Recursive Causal-Support Cone}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} n-slot causal tester normalizations to positive history-support matrices.
+
+\item 
+\textbf{Definition:} C\_1 is the one-bit diagonal density interval and C\_n consists of positive block decompositions whose block sum lies in C\_(n-1).
+
+\item 
+\textbf{Premises:} ordered qubit calls and the diagonal Choi support of the declared channel.
+
+\item 
+\textbf{Transformation law:} compatible with chronological relabeling; reversal is not silently identified with causal reversal.
+
+\item 
+\textbf{Generated theorem:} exact cone recursion and affine dimension; admission of the echo-history witness.
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} using only the diagonal independent-history face misses both causal correlations and fourteen three-slot directions.
+
+\item 
+\textbf{Kernel relation:} consumes a supplied reduced channel; derives neither kernel.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} no Z12 selector and no unit.
+
+\item 
+\textbf{Operational interpretation:} the mathematical memory/\allowbreak{}adaptation normalizer available to a process tester.
+
+\item 
+\textbf{Failure mode:} different Choi support or noncommuting noise requires a new compression theorem.
+
+\item 
+\textbf{Status:} \statusProven{}.
+
+\end{itemize}
+
+\section{O166 -- Moment-Null Representation Gauge}
+
+\begin{itemize}
+\item 
+\textbf{Domain/\allowbreak{}codomain:} signed atomic measures to equivalence classes modulo annihilators of polynomials of degree at most eleven.
+
+\item 
+\textbf{Definition:} mu is equivalent to mu-prime when their moments of orders 0 through 11 coincide.
+
+\item 
+\textbf{Premises:} the declared twelve-moment interface.
+
+\item 
+\textbf{Transformation law:} addition of any signed measure in the moment-null space.
+
+\item 
+\textbf{Generated theorem:} O163 risk is unbounded on a single gauge orbit.
+
+\item 
+\textbf{Necessity/\allowbreak{}removal:} without a gauge fixing or quotient-invariant estimator, the moment data cannot determine a preparation allocation.
+
+\item 
+\textbf{Kernel relation:} applies to the P429 signed representation and does not change either kernel.
+
+\item 
+\textbf{Selector/\allowbreak{}dimension:} not a selector and supplies no unit.
+
+\item 
+\textbf{Operational interpretation:} ambiguity between an abstract functional and a concrete preparation list.
+
+\item 
+\textbf{Failure mode:} a separately justified canonical measure could remove the ambiguity in its declared class.
+
+\item 
+\textbf{Status:} \statusProven{}.
+
+\end{itemize}
+
+\chapter{Falsification and failed approaches}
+
+\begin{enumerate}
+\item 
+\textbf{Blind full-simplex interval subdivision -- terminated.} The dependency width made the initial three-dimensional cover computationally disproportionate. O164 replaces it with a proved one-dimensional majorant.
+
+\item 
+\textbf{Calling the majorant exact -- refuted.} Lost-value disclosure creates a strict gap near the candidate optimizer.
+
+\item 
+\textbf{Promoting numerical concavity of the coarse objective -- rejected.} P448 proves concavity only for the fine majorant.
+
+\item 
+\textbf{Extrapolating two-slot GHZ optimality -- refuted.} The rational echo law is an admissible strict counterexample at three slots.
+
+\item 
+\textbf{Treating a compressed normalizer as automatically physical -- rejected.} P449 supplies both the lifting theorem and an explicit full Xi\_3 extension.
+
+\item 
+\textbf{Treating a floating advantage as proof -- rejected.} The echo advantage is enclosed by rational transcendental and spectral certificates.
+
+\item 
+\textbf{Calling the largest random P449 value optimal -- rejected.} It is only a feasible scout.
+
+\item 
+\textbf{Assuming moment equality fixes the sampler -- refuted.} The exact finite-difference null cycle preserves all twelve moments and changes the risk without bound.
+
+\item 
+\textbf{Treating atom splitting as a universal counterexample -- rejected.} Same-sign splitting at the identical node is actually invariant after aggregation; the nontrivial obstruction requires a null cycle.
+
+\item 
+\textbf{Interpreting the null cycle as laboratory noise -- rejected.} It is a mathematical representation transformation, not a physical process.
+
+\end{enumerate}
+
+\chapter{Selector, dimensional, kernel, and physical audit}
+
+O164 is reversal invariant. O165 describes causal normalization but does not choose a Z12 direction. The echo rule correlates temporal endpoints inside an already ordered tester; the chronology is a supplied interface and is not a non-premise strict selector. O166 is a representation gauge and likewise does not discharge QW-2191.
+
+All phases, coherence factors, probabilities, detector envelopes, and risks remain dimensionless. No clock, length, action, mass, energy, hbar, k\_B, or SI anchor is generated.
+
+The programs neither derive the legacy or strict kernel nor complete their bridge. They do not source A, beta, alpha\_geo, beta\_tors, or the strict compression exponent. No legacy electroweak, electromagnetic, or gravity-hierarchy role is transferred.
+
+The mathematical duality
+
+\[
+U_t=e^{-itA},
+\qquad
+P_t=e^{-tA}
+\]
+
+remains a functional-calculus duality. P448--P450 do not supply its physical state, clock, environment, apparatus, preparation, instrument, measurement, observer, or record.
+
+The echo tester is an executable mathematical specification. A laboratory would still have to establish preparation, calibrated time, channel stationarity, memory implementation, resolved measurement, counts, independent custody, hold-out, and unblinding.
+
+\chapter{Explicit nonclaims}
+
+This checkpoint does not claim:
+
+\begin{itemize}
+\item 
+the exact full-simplex P446 optimizer;
+
+\item 
+a global three-slot comb optimum;
+
+\item 
+an n-slot echo theorem;
+
+\item 
+a full twelve-mode FIN comb optimum;
+
+\item 
+a canonical preparation representation;
+
+\item 
+detector calibration or empirical counts;
+
+\item 
+selector closure or canonical chirality;
+
+\item 
+a physical time or dimensional scale;
+
+\item 
+a legacy-to-strict completion or physical-role transfer theorem;
+
+\item 
+Standard Model, gravity, total action, or Theory-of-Everything closure.
+
+\end{itemize}
+
+\chapter{Recommended next programs}
+
+\begin{center}
+\begingroup\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{@{}p{0.055\textwidth}p{0.094\textwidth}p{0.299\textwidth}p{0.264\textwidth}p{0.148\textwidth}@{}}
+\toprule
+\textbf{Rank} & \textbf{Program} & \textbf{Study} & \textbf{Decisive output} & \textbf{Probability} \\
+\midrule
+\endhead
+1 & P451 & Exact/\allowbreak{}global optimization of the three-slot recursive cone & Matching analytic/\allowbreak{}interval upper bound for the echo neighborhood, or a stronger certified witness & 0.73 \\
+2 & P452 & Close the P448 coarse-graining gap & Direct full-simplex interval/\allowbreak{}SOS certificate below 0.46664, or an asymmetric counterexample & 0.66 \\
+3 & P453 & Canonical representation rule for O163 & Uniqueness theorem for a reduced/\allowbreak{}minimum-TV admissible measure, or a no-go & 0.63 \\
+4 & P454 & Four-slot echo-history extension & Certified rational witness and comparison with GHZ/\allowbreak{}product baselines & 0.60 \\
+5 & P455 & General n-slot cone formalization & Machine-checked recursion, dimension formula, and lift theorem & 0.56 \\
+6 & P456 & Quotient-invariant moment estimator & Estimator whose risk is invariant on O166 gauge classes, or impossibility theorem & 0.54 \\
+7 & P457 & Full twelve-mode support recursion & Typed support cone or explicit obstruction from non-diagonal Fourier structure & 0.50 \\
+8 & P458 & Covariance-aware canonical atom preparation & Exact risk law after a chosen operational representation interface & 0.47 \\
+9 & P459 & Sharpen O164 with partial lost-value disclosure & Hierarchy of upper bounds converging to the coarse objective & 0.45 \\
+10 & P460 & Echo strategy robustness & Certified neighborhood in q and theta where GHZ remains refuted & 0.44 \\
+11 & P461 & Typed legacy-star self-coupling candidate & One explicit state self-map and fixed-point/\allowbreak{}instability theorem, without role transfer & 0.38 \\
+12 & P462 & Formal nuclear-norm concavity provider & Local proof-assistant theorem or explicit library obstruction & 0.34 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{center}
+
+The preferred next bounded batch is
+
+\[
+\boxed{P451\longrightarrow P452\longrightarrow P453.}
+\]
+
+P451 is now the highest-value lane because P449 supplies a certified counterexample with a large margin. P452 attacks the only remaining gap around the three-use erasure-aware code. P453 responds directly to the operational ambiguity proved by P450.
+
+\chapter{Artifact list}
+
+\begin{itemize}
+\item 
+FIN\_Local\_Research\_Checkpoint\_P448\_P450\_EN.md
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P448\_P450\_EN.tex
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P448\_P450\_EN.pdf
+
+\item 
+FIN\_Current\_Local\_Research\_Report\_EN.pdf
+
+\item 
+fin\_programs\_448\_450.py
+
+\item 
+fin\_programs\_448\_450\_to\_latex.py
+
+\item 
+test\_fin\_programs\_448\_450.py
+
+\item 
+test\_fin\_checkpoint\_p448\_p450.py
+
+\item 
+FIN\_Programs\_448\_450\_Results.json
+
+\item 
+FIN\_Programs\_448\_450\_Summary.csv
+
+\item 
+FIN\_Programs\_448\_450\_P448\_Full\_Simplex\_Majorant.csv
+
+\item 
+FIN\_Programs\_448\_450\_P449\_Three\_Slot\_Recursion.csv
+
+\item 
+FIN\_Programs\_448\_450\_P449\_Three\_Slot\_Witness.npz
+
+\item 
+FIN\_Programs\_448\_450\_P450\_Null\_Cycle.csv
+
+\item 
+FIN\_Programs\_448\_450\_Figures/\allowbreak{}p448\_p450\_global\_majorant\_and\_gauge\_obstruction.png
+
+\item 
+RELEASE\_10\_39\_PROGRAMS\_448\_450.md
+
+\item 
+FIN\_Local\_Research\_Checkpoint\_P448\_P450\_State.json
+
+\item 
+FIN\_Checkpoint\_P448\_P450\_AGENTS\_Guardrail.txt
+
+\item 
+FIN\_PROGRAMS\_448\_450\_RELEASE\_MANIFEST.sha256
+
+\end{itemize}
+
+\chapter{Reproducibility and restart instructions}
+
+``bash MPLCONFIGDIR=/\allowbreak{}tmp/\allowbreak{}fin-mpl-1038 python3 fin\_programs\_448\_450.py python3 fin\_programs\_448\_450\_to\_latex.py lualatex -interaction=nonstopmode -halt-on-error FIN\_Local\_Research\_Checkpoint\_P448\_P450\_EN.tex lualatex -interaction=nonstopmode -halt-on-error FIN\_Local\_Research\_Checkpoint\_P448\_P450\_EN.tex MPLCONFIGDIR=/\allowbreak{}tmp/\allowbreak{}fin-mpl-1038 python3 -m unittest -v test\_fin\_programs\_448\_450.py test\_fin\_checkpoint\_p448\_p450.py sha256sum -c FIN\_PROGRAMS\_448\_450\_RELEASE\_MANIFEST.sha256 `
+
+To resume, read AGENTS.md, its mandatory packets, SUMMARY\_GROK.md, FIN\_GOAL\_STATE.md`, the P445--P447 checkpoint, this checkpoint, and both structured result files. Begin P451/\allowbreak{}P452/\allowbreak{}P453 unless a fresh state-map audit identifies a more decisive typed object. Preserve the kernel split, QW-2191, the dimensional and physical-evidence boundaries, and the distinction between a mathematical tester and a laboratory instrument.
+
+\chapter{Final interpretation}
+
+This checkpoint exposes two different operational lessons.
+
+First, causal memory is not a minor perturbation of a parallel GHZ code. At two calls, all freedom collapses to a negative square; at three calls, an elementary endpoint-correlation law already defeats GHZ by a certified margin. The missing object was not a new kernel but the correctly typed recursive causal-support cone.
+
+Second, an abstract moment functional is not an executable preparation. Exact null directions leave every advertised moment unchanged while altering the optimal sampling risk without bound. A canonical representation or quotient-invariant protocol is therefore logically prior to any claim that the signed atomic measure specifies an apparatus.
+
+Both advances are mathematical and operational. Neither turns FIN into tested physics. They identify precisely what local mathematics can establish and what additional typed structures remain necessary.
+
+
+\clearpage
+\chapter*{Reproduction certificate}
+\addcontentsline{toc}{chapter}{Reproduction certificate}
+\begin{Verbatim}[fontsize=\small]
+MPLCONFIGDIR=/tmp/fin-mpl-1038 \
+python3 fin_programs_448_450.py
+
+python3 -m unittest -v \
+  test_fin_programs_448_450.py \
+  test_fin_checkpoint_p448_p450.py
+
+lualatex -interaction=nonstopmode -halt-on-error \
+  FIN_Local_Research_Checkpoint_P448_P450_EN.tex
+
+sha256sum -c FIN_PROGRAMS_448_450_RELEASE_MANIFEST.sha256
+\end{Verbatim}
+
+\noindent\textbf{Suggested citation:}
+
+\.Zuchowski, K. (2026). \emph{FIN Local Research Checkpoint P448--P450:
+A Full-Simplex Erasure Majorant, a Three-Slot Causal Echo Counterexample,
+and a Representation-Gauge No-Go} (Release 10.39; Version 1.0.0) [Preprint].
+\end{document}

@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "programs": "P411-P427",
+    "release": "10.35",
+    "seed": 20260766,
+    "date": "2026-07-31",
+    "kernel_split": "legacy intermediate and strict working kernels remain distinct; no role transfer",
+    "new_theoretical_objects": [
+      "O143",
+      "O144",
+      "O145",
+      "O146",
+      "O147",
+      "O148",
+      "O149",
+      "O150",
+      "O151",
+      "O152",
+      "O153",
+      "O154"
+    ]
+  },
+  "P411": {
+    "status": "[Proven] exact Taylor-polynomial algorithm reflected by Lean; [Open] in-assistant analytic cosine bridge",
+    "angle_count": 12,
+    "taylor_orders": [
+      40,
+      42
+    ],
+    "maximum_rational_width": 1.9128718516949603e-37,
+    "lean_returncode": 0,
+    "source": "FIN_Programs_411_427_Taylor_Cosine.lean",
+    "theorem_scope": "Lean computes the factorials, powers, alternating sums, ordering, and sub-1e-30 widths for all twelve rational phases.",
+    "boundary": "The dependency-free file types the analytic alternating-remainder theorem as AnalyticCosineBridge; it does not formalize real cosine itself.",
+    "new_object": "O143 Taylor trust lattice"
+  },
+  "P412": {
+    "status": "[Strong evidence] simultaneous seven-contact KKT candidate; [Open] 25-variable interval uniqueness and global feasibility",
+    "equation_count": 25,
+    "unknown_count": 25,
+    "contact_pattern": [
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    "maximum_80_digit_residual": 3.4204011260970964e-28,
+    "objective": 0.7073534677231137,
+    "frozen_P380_exact_Sturm_audit": {
+      "exact_derivative_roots_in_unit_interval": 9,
+      "isolated_root_boxes": 9,
+      "maximum_root_box_width": 8.881784197001252e-16,
+      "positive_primal_slack_atoms": 7,
+      "minimum_primal_slack_lower": 5.53659989375616e-10
+    },
+    "smallest_double_jacobian_singular_value": 4.989966160033542e-13,
+    "double_jacobian_condition_number": 2726094392049807.5,
+    "interpretation": "The near-optimum is organized by two negative contacts at dual level -1 and five positive contacts at level 0, with stationarity at the six interior nodes.",
+    "boundary": "A high-precision stationary point is not an interval theorem. Ill-conditioning and global polynomial feasibility still require exact Krawczyk/Bernstein certification.",
+    "new_object": "O144 simultaneous contact replacement candidate",
+    "relation_to_P395": "P395 proved the frozen P380 dual is only near-contact; P412 solves the simultaneous contact equations numerically instead of freezing that dual."
+  },
+  "P413": {
+    "status": "[Proven] proof-assistant dependency localization; [Blocked] local formal Lindemann-Weierstrass library",
+    "source": "FIN_Programs_394_410_Injectivity_Reduction.lean",
+    "lean_returncode": 0,
+    "formal_gap": "ExpIndependent axiom (Lindemann-Weierstrass corollary)",
+    "theorem_scope": "The proof assistant checks how an equality-derived nontrivial four-exponential relation contradicts the named independence provider. The analytic provider itself remains imported as an axiom.",
+    "boundary": "This is dependency localization, not a formal proof of Lindemann-Weierstrass and not an additional FIN axiom.",
+    "new_object": "O145 transcendence provider boundary"
+  },
+  "P414": {
+    "status": "[Refuted] target C_damp arises from the declared normalized nonlinear RG recurrence",
+    "source_class": "c_(d+1)=c_d/(1+gamma*c_d), c_0=1",
+    "forced_gamma_from_d1": "99/101",
+    "predicted_c2_exact": "101/299",
+    "equality_would_force": "(10199/10100)^5=16",
+    "exact_integer_defect": -1571262110836960349001,
+    "theorem_scope": "The d=1 target fixes gamma uniquely; the d=2 target then contradicts an exact integer identity.",
+    "boundary": "This excludes one nonlinear cocycle/flow class only. Fractional, nonlocal, state-dependent, and operator-valued sources remain open.",
+    "new_object": "O146 nonlinear RG-recurrence obstruction"
+  },
+  "P415": {
+    "status": "[Strong evidence] full local rank on a sampled bounded chart; [Open] global interval identifiability or alias",
+    "samples": 9,
+    "parameter_count": 132,
+    "full_rank_samples": 9,
+    "minimum_sampled_singular_value": 0.013067445362125282,
+    "maximum_sampled_condition_number": 194.05780433970364,
+    "theorem_scope": "Central-difference complex-transfer Jacobians are numerically full column rank at the origin and eight frozen random chart points.",
+    "boundary": "Finite floating-point regularity samples do not cover the continuum box and cannot exclude distant compensating aliases.",
+    "new_object": "O147 sampled photonic regularity atlas"
+  },
+  "P416": {
+    "status": "[Blocked by external evidence] independent calibrated photonic pilot",
+    "admitted": false,
+    "candidate_count": 0,
+    "required_evidence": "independent_calibrated_photonic_record",
+    "boundary": "Code cannot create independent custody, calibration, apparatus output, a physical clock, or blinded data."
+  },
+  "P417": {
+    "status": "[Strong evidence] improved primal atlas and exact ideal-boundary closure; [Open] noisy SDP dual certificate",
+    "grid_rows": 36,
+    "minimum_gap": 0.0,
+    "maximum_gap": 0.5276337778984095,
+    "zero_gap_rows_below_1e_8": 3,
+    "solver_boundary": "No certified semidefinite optimizer is installed locally; nonlinear pure-state lower bounds cannot substitute for a comb dual certificate.",
+    "boundary": "The unrestricted noisy adaptive comb, ancillas, mixed inputs, and full twelve-mode channel remain outside this result.",
+    "new_object": "O148 noisy comb primal-dual-gap atlas"
+  },
+  "P418": {
+    "status": "[Strong evidence] erasure-aware symmetric codes strictly improve the two baseline families",
+    "grid_rows": 16,
+    "strict_improvement_rows": 16,
+    "maximum_gain": 0.026941871478324386,
+    "theorem_scope": "Every heralded survivor subset is retained as an orthogonal classical block and the lost qubits are traced out exactly for n<=4.",
+    "boundary": "The optimization is numerical and symmetry-restricted; it is not a general quantum erasure-code or adaptive-comb theorem.",
+    "new_object": "O149 heralded erasure-aware symmetric code"
+  },
+  "P419": {
+    "status": "[Strong evidence] optimized full twelve-mode one-use inputs; [Open] multi-use adaptive gap below 1e-3",
+    "rows": 8,
+    "relative_generator_diameter": 9.287194058748886,
+    "fourier_off_diagonal_defect": 5.072290401408621e-15,
+    "maximum_gain_over_extremal_pair": 0.0,
+    "boundary": "The dephasing and heralded survival laws are supplied. One-use pure-state optimization is not a full process-comb certificate.",
+    "new_object": "O150 twelve-mode noise-adapted simplex"
+  },
+  "P420": {
+    "status": "[Blocked by external evidence] traceable physical clock anchor",
+    "admitted": false,
+    "candidate_count": 0,
+    "required_evidence": "traceable_SI_to_tau_clock_anchor",
+    "boundary": "Code cannot create independent custody, calibration, apparatus output, a physical clock, or blinded data."
+  },
+  "P421": {
+    "status": "[Blocked by external evidence] external event-level JSR execution",
+    "admitted": false,
+    "candidate_count": 0,
+    "required_evidence": "provider_registrar_separated_JSR_events",
+    "boundary": "Code cannot create independent custody, calibration, apparatus output, a physical clock, or blinded data."
+  },
+  "P422": {
+    "status": "[Proven] variance-optimal unbiased sampler for the declared equal-weight twelve-moment loss",
+    "baseline_total_variance": 7.265442172518194,
+    "optimal_total_variance": 6.424478008297815,
+    "relative_variance_reduction": 0.1157485180188148,
+    "law": "q_i proportional to |w_i| sqrt(sum_{k=0}^{11} x_i^{2k})",
+    "proof": "Cauchy-Schwarz minimizes sum_i w_i^2 r_i^2/q_i on the probability simplex; the importance estimator remains unbiased.",
+    "boundary": "Optimality is tied to the declared twelve moments and equal loss weights. It is not apparatus efficiency or a universal physical sampler.",
+    "new_object": "O151 variance-optimal JSR sampling law"
+  },
+  "P423": {
+    "status": "[Proven] conditional reference-frame resource ledger; [Refuted] free classical sign creates U(1) coherence",
+    "free_no_go": "U(1)-covariant incoherent operations map diagonal sign records to zero-coherence states.",
+    "conditional_encoder": "consume an aligned |+> phase reference and apply the sign-controlled phase 0/pi",
+    "chosen_encoder_reference_budget_bits": 1.0,
+    "selector_discharge": false,
+    "boundary": "The aligned phase origin and polarity are supplied resources. Swapping the encoding leaves costs invariant and QW-2191 open.",
+    "new_object": "O152 phase-reference conversion ledger"
+  },
+  "P424": {
+    "status": "[Proven] nonzero inversion-odd JSR record current; [Refuted] nonconventional strict selector source",
+    "formula": "J_or=sum_i w_i sin(2*pi*x_i)",
+    "value": 0.7858270815460081,
+    "reflected_value": -0.7858270815460082,
+    "oddness_defect": -1.1102230246251565e-16,
+    "nonzero": true,
+    "selector_discharge": false,
+    "theorem_scope": "Reflection x->1-x sends J_or to -J_or exactly; the frozen seven-atom representation gives a nonzero numerical value.",
+    "boundary": "The coordinate orientation x increasing from 0 to 1 is supplied. Reversing that chart flips the sign, so the object is an oriented receiver/record, not an internal polarity source.",
+    "new_object": "O153 oriented JSR record current"
+  },
+  "P425": {
+    "status": "[Proven] the three declared conditional scale sections are inequivalent under a shared control coordinate",
+    "common_baseline_rho": 0.4296970877901551,
+    "laws": 3,
+    "pairwise_distinct_baseline_elasticities": true,
+    "theorem": "Equal values at one control point do not identify sections; their logarithmic derivatives at that point are 1, log(rho0), and -log(rho0).",
+    "boundary": "A nonlinear redefinition of the external control can map any monotone section to another. No section is canonical without physical semantics and calibration for that control.",
+    "new_object": "O154 conditional scale-section comparison groupoid"
+  },
+  "P426": {
+    "status": "[Blocked by external evidence] independent QW, standards, and reservoir admission campaign",
+    "admitted": false,
+    "candidate_count": 0,
+    "required_evidence": "QW_standards_reservoir_campaign",
+    "boundary": "Code cannot create independent custody, calibration, apparatus output, a physical clock, or blinded data."
+  },
+  "P427": {
+    "status": "[Blocked by external evidence] blinded electroweak role-transfer test",
+    "admitted": false,
+    "candidate_count": 0,
+    "required_evidence": "post_bridge_electroweak_blind_bundle",
+    "boundary": "Code cannot create independent custody, calibration, apparatus output, a physical clock, or blinded data."
+  }
+}

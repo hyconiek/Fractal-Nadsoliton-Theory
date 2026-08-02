@@ -60,6 +60,103 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 
 - Agent acknowledgment: instructions received on 2026-05-17 for automated sessions.
 
+## Programs P454--P457 nested-dual/symmetry-obstruction/refined-cover guardrail (Release 10.41, 2026-08-01)
+
+- P454 derives the exact finite three-slot primal SDP and nested dual ladder 8->4->2->1 for the declared reduced causal discrimination problem. An explicit rational dual is feasible: all six matrix slacks satisfy exact Sylvester positivity and both scalar slacks are positive; after paying the full trigonometric operator perturbation, the smallest certified slack is >4.9999999969e-7. Together with the P451 rational primal witness this proves the global full-cone half-distance bracket [0.52332810026048937, 0.523334700252], gap 6.59999151063e-6. Do not promote the O167 face to exact global attainment or claim optimizer uniqueness without a matching primal/KKT inclusion.
+- P455 proves that the real C3 causal affine space has dimension 14, global complement imposes rank 9, and the complement-fixed space has dimension 5. O167 is a contained three-dimensional face, so two symmetry-allowed directions remain. Conjugation plus global complement cannot force the O167 reduction. Eight deterministic five-dimensional starts and a negative sampled Hessian provide strong evidence of no improvement only; they are not an exact optimality or uniqueness theorem.
+- P457 reuses the P452 reversal-symmetrization license and an outward 5,008-box cover to prove the declared full-simplex coarse-erasure bracket [0.463278283192093, 0.46327928294340853], gap <1e-6. Do not promote it to a closed-form or unique maximizer, unrestricted/adaptive code optimality, other parameter cells, or laboratory performance.
+- P454--P457 are downstream, dimensionless, and kernel-split robust only after their declared reduced channels are supplied. They do not derive either kernel, type the historical coupling diagram as self-evolution, complete Legacy* or K_legacy_ont -> K_strict_gate, or transfer any legacy physical role.
+- No QW-2191/selector discharge, canonical orientation, dimensional source, laboratory apparatus/record, independent custody, L_total, Standard Model, gravity, or ToE closure is exported.
+- The next bounded local batch is P464/P458/P459: first seek a five-dimensional restricted-dual/KKT closure of the P454 gap; then isolate the P457 derivative for uniqueness; finally propagate P453 through the O163 detector box. Preserve rational/interval proof layers and do not accept floating stationarity as a theorem.
+
+## Programs P458/P459/P464 curvature/allocation/dual-refinement guardrail (Release 10.42, 2026-08-01)
+
+- P458 uses P452/P457 and second-order outward interval automatic differentiation to prove strict curvature F''<=-3.8902642987 on the entire certified palindromic maximizer hull and isolate the unique palindromic maximizer in [0.2276921883225489,0.22769218832267057]. Do not promote this to full-simplex uniqueness: asymmetric equality cases of the P452 symmetrization inequality remain open.
+- P459 proves, conditional on P429/P430/P453 and the supplied synthetic O160 envelope, that each detector-box fiber has one unique strictly convex minimax allocation q_i=s_i/sum(s), with invariant seven-label order. The box is not collapsed to a physical detector, and no calibration, preparation, or record is generated. Removing minimum-TV restores P450 representation dependence.
+- P464 accepts a denominator-1e14 rational nested dual after exact Sylvester and perturbation checks, proving [0.52332810026048937,0.52332832027103] for the declared global three-slot half-distance, gap 2.2001054063e-7. Do not claim exact O167 attainment or optimizer uniqueness while the gap is positive.
+- P458/P459/P464 are downstream and dimensionless. They derive neither kernel, complete no legacy-to-strict bridge, and transfer no legacy physical role. No QW-2191 discharge, dimensional source, laboratory evidence, L_total, Standard Model, gravity, or ToE closure is exported.
+- Next bounded batch: P465/P468/P469. First audit strict equality in P452, then reduce the dual gap, then test full nested KKT complementarity.
+
+## Programs P465/P468/P469 strict-equality/support-ladder guardrail (Release 10.43, 2026-08-01)
+
+- P465 proves that P452 reversal symmetrization is strict away from the palindromic fixed set for the exact declared three-use Hamming-sector code, q=4/5, theta=2*pi/15, and heralded-loss objective. Together with P458 it proves one unique maximizer on the complete declared four-sector simplex, with a in [0.2276921883225489,0.22769218832267057]. Do not promote this to unrestricted/adaptive-channel, other-parameter, apparatus, or physical uniqueness.
+- P469 constructs the canonical interior support X3=N^(-1/2)|N^(1/2) Delta N^(1/2)|N^(-1/2)/2 and proves that positive lower primal variables force equal inherited blocks at every causal level at any interior optimum. The O167 candidate satisfies the full floating residual to 1.3322676295501878e-15, but no exact nonlinear root, zero-shift feasible dual, exact O167 attainment, or full-cone uniqueness is proved.
+- P468 shifts and rationalizes the P469 support ladder, then admits it through exact Sylvester positivity and full trigonometric perturbation payment. It proves [0.52332810026048937,0.52332810067104088] for the declared global three-slot half-distance, exact gap 4.1055151e-10. The positive gap must not be reported as zero.
+- P465/P468/P469 are downstream and dimensionless. They derive neither kernel, complete no legacy-to-strict bridge, and transfer no legacy physical role. No QW-2191 discharge, dimensional source, laboratory evidence, L_total, Standard Model, gravity, or ToE closure is exported.
+- Next bounded batch: P471/P472/P473. Build a verified matrix-functional-calculus and interval-root certificate before claiming exact O167 attainment; floating precision escalation alone is not admissible.
+
+## Programs P471/P472/P473 exact-O167-attainment guardrail (Release 10.44, 2026-08-01)
+
+- P471 proves that, inside the positive cone, the O177 matrix support condition is equivalent to X3*N*X3=Delta*N*Delta/4. The exact O167 and nested block-equality patterns reduce the complete 36-entry symmetric residual to 13 polynomial orbits in 13 unknowns, maximum degree 3.
+- P472 evaluates every residual and all 169 Jacobian entries with exact rational interval arithmetic and outward rational sine boxes. It proves a strict Krawczyk inclusion at radius 3e-14. The attempted 1e-14 box fails and remains rejected.
+- P473 separately certifies positivity of N and X3 on the whole root box. At the exact root the Riccati identity gives X3>=+/-Delta/2, all lower dual slacks vanish by the block pattern, and recursive trace identities give primal value=lambda. Therefore one exact O167 normalizer globally attains the declared reduced three-slot optimum in [0.5233281002710117,0.5233281002710717].
+- P473 proves root uniqueness only inside the certified 13-dimensional box. Do not claim uniqueness of the full-cone optimizer until P474 or an equivalent global optimal-face theorem excludes disconnected/distant optima.
+- P471/P472/P473 are downstream and dimensionless. They derive neither kernel, complete no legacy-to-strict bridge, and transfer no legacy physical role. No QW-2191 discharge, dimensional source, laboratory evidence, L_total, Standard Model, gravity, or ToE closure is exported.
+- Next bounded batch: P474/P483/P479. First test complete-cone uniqueness, then parametric persistence, then formalize the reusable Riccati/support theorem.
+
+## Programs P474/P479/P483 optimal-face/parametric-tube guardrail (Release 10.45, 2026-08-01)
+
+- P483 proves a uniform positive O181 polynomial root in one common coefficient box for every `|q-4/5|<=3e-9` and `|theta-pi/8|<=3e-9`. The positive Riccati and trace-telescope argument therefore proves exact O167 primal-dual attainment for the declared reduced three-slot channel throughout this rectangle.
+- P483 proves root uniqueness only inside the common 13-dimensional box of radius `1e-5`; it does not prove uniqueness of the optimizer over the complete complex causal cone or maximality of the parameter rectangle.
+- P474 gives strong floating evidence for a one-dimensional complex optimal face: the full contact/causality system has numerical rank `127/128`, the independent imaginary-causal Riccati tangent map has rank `6/7`, and a positive finite segment is objective-flat to about `1.1e-15`. Do not mark full-cone uniqueness refuted until an exact nonzero tangent certificate is exported.
+- P479 exports a dependency-free Lean interface, but the local `lean` launcher has no installed toolchain. Do not describe the source as machine checked; no network installation was attempted.
+- P474/P479/P483 are downstream and dimensionless. They derive neither kernel, complete no legacy-to-strict bridge, and transfer no legacy physical role. No QW-2191 discharge, dimensional source, laboratory evidence, `L_total`, Standard Model, gravity, or ToE closure is exported.
+- Next bounded batch: P484/P480/P475. First seek an exact P474 flat-direction certificate, then build a standard-library-only O180/O181 checker, then attempt algebraic elimination subject to an explicit local resource stop.
+
+## Programs P475/P480/P484 replay/elimination/phase-audit guardrail (Release 10.46, 2026-08-01)
+
+- P480 exports a standard-library-only exact replay of the finite O180/O181
+  rational Krawczyk and positivity certificate. It recomputes all
+  polynomial/Jacobian intervals and Sylvester payments and rejects a zeroed
+  preconditioner. This strengthens reproducibility; it does not replace the
+  analytic Riccati-support/trace-telescope theorem or add physical evidence.
+- P484 proves the exact swap/complement block representation and gives strong
+  high-precision evidence for one complex phase-face direction. Do not mark
+  full-complex-cone optimizer nonuniqueness refuted or an exact phase segment
+  proved: the shared-entry/standard-sector implication forcing the fixed
+  covector into the causal equal-endpoint plane remains open.
+- P484 gives an exact rational counterexample showing that active Riccati
+  congruence, orientation-preserving metric orthogonality, and odd dimension
+  alone do not force a causal axis. Any future closure must use and explicitly
+  certify the additional FIN shared-entry/standard-sector equations.
+- P475 proves the degree-four coefficient-field reduction and affine
+  dependence on `A/B/u`. Its 45-second, 3-GiB lexicographic timeout is only a
+  resource-bounded no-go for that workflow. Do not infer transcendence,
+  nonexistence of a minimal polynomial, ideal dimension, or solution count.
+- No selector/QW-2191 discharge, dimensional source, laboratory realization,
+  legacy-to-strict completion, role transfer, `L_total`, SM/GR, or ToE closure
+  follows from P475/P480/P484.
+- The next bounded proof-grade batch is P485/P486/P487: exact causal-axis
+  identity or counterexample, orientation-premise certification, then
+  structure-aware elimination through the affine normalizer coordinates.
+
+## Unlimited local P486/P485/P487/P475 execution guardrail (2026-08-02)
+
+- `run_fin_p475_p485_p486_p487_unlimited.py` is the durable sequential runner
+  for P486 -> P485 -> P487 -> P475-unlimited. It intentionally applies no
+  application-level wall-time, CPU, or memory limit; operating-system and
+  hardware limits still apply. Do not launch duplicate heavy instances on the
+  16-GB host while its recorded PID is alive.
+- P486 now certifies on the exact P473 box that `det(C)>0`, the selected active
+  `A/B/u` pivot is nonzero, the selected rho coefficient is nonzero, and the
+  positive standard branch is `125*(L-b)-36*alpha=0`. Together with positive
+  Riccati congruence this pays `det(Bmap)=1`. P486 does not itself prove the
+  causal equal-endpoint axis.
+- P485 may be promoted only if all five exact tangent-consistency remainders
+  reduce to zero in the pivot-localized positive-branch ideal and the P486
+  premises remain paid. A numerical near-zero, unfinished Groebner job, or a
+  nonzero unreduced target is not a theorem.
+- P487 first eliminates `A/B/u`, selects the exact positive standard branch,
+  and localizes at the certified pivot before lexicographic elimination.
+  P475-unlimited retains the original 14-variable route as an independent,
+  lower-priority cross-check.
+- A returned `L` relation is not yet a minimal polynomial: isolate the P473
+  factor, prove irreducibility, and verify it exactly before promotion.
+- These background calculations remain downstream, dimensionless, local
+  mathematics. They do not discharge QW-2191, complete the legacy-to-strict
+  bridge, transfer legacy roles, or supply apparatus/laboratory evidence.
+
+
 ## Current state-map-first steering guardrail (P2681/S1631, 2026-06-13)
 
 - Do not treat the older `legacy -> strict completion bridge` priority as an automatic next-step generator.  It remains a major theoretical problem, but P2679/P2680 have already converted the generic bridge lane into a finite list of missing source atoms; repeating the generic bridge audit is now a loop unless a new typed object, theorem, or source atom is introduced.
@@ -5348,3 +5445,307 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   standards, raw records, custody separation, frozen hashes, hold-outs, and
   one-shot unblinding.  Code may validate supplied bundles but cannot create
   their empirical status.
+
+## Programs P394–P410 result guardrail (Release 10.34, 2026-07-31)
+
+- P394 reflects exact fifth-root terminal predicates through Lean and keeps
+  the Python cosine/Taylor, interval, matrix, and Krawczyk generators outside
+  the local proof kernel.  Do not call this end-to-end formalization.
+- P395 proves the exact Sturm topology of the frozen P380 dual and strictly
+  positive complementary slack at all seven P366 atoms.  The frozen pair is
+  near-contact, not an exact complementary optimizer pair.
+- P396 localizes global integer-distance injectivity to a four-exponential
+  Lindemann--Weierstrass provider.  The local structural reduction compiles,
+  but transcendence theory is not mechanized in the dependency-free stack.
+- P397 excludes the positive multiplicative-character source class for
+  `C_damp`.  It excludes no non-character, fractional, nonlocal, or
+  operator-valued source.
+- P398 gives bounded-chart synthetic photonic recovery only; global aliases
+  and physical calibration remain open.  P399 admits no physical pilot.
+- P400--P402 are conditional noisy-channel and clock-design results.  They do
+  not solve the unrestricted noisy adaptive comb or generate a clock.
+- P403 supplies an executable Jordan-sampling protocol and validator.  Its
+  bundled synthetic record is software evidence only and must always retain
+  `physical_evidence_admitted=false`.
+- P404/P405 type sign/coherence conversions but do not turn the JSR sign
+  register into a strict orientation source or discharge `QW-2191`.
+- P406 selects an outer scale only after a supplied boundary/apparatus law.
+  P407--P410 remain external gates.
+- Release 10.34 constructs O131--O142.  Preserve every legacy/strict,
+  selector, unit, role-transfer, laboratory, `L_total`, SM/GR, and ToE
+  boundary.
+
+## Programs P411–P427 result guardrail (Release 10.35, 2026-07-31)
+
+- P411 proof-kernel checks exact degree-40/42 rational Taylor arithmetic for
+  all twelve strict phases, with maximum width about `1.913e-37`.  The real
+  cosine alternating-remainder theorem remains the explicit
+  `AnalyticCosineBridge`; do not claim full analytic formalization.
+- P412 constructs a simultaneous 25-equation seven-contact KKT candidate
+  with residual about `3.42e-28` and objective
+  `0.7073534677231137`.  Its condition number is about `2.73e15`; no exact
+  optimizer, interval local uniqueness, or global dual feasibility is yet
+  exported.
+- P413 preserves the P396 transcendence-provider boundary.  Do not treat an
+  axiomatized local interface as a formal proof of Lindemann--Weierstrass.
+- P414 exactly excludes one new nonlinear source class,
+  `c_(d+1)=c_d/(1+gamma*c_d)`, for the target-defined damping atom.  It does
+  not reopen or close the generic legacy-to-strict bridge.
+- P415 finds numerical full rank for all 132 complex-transfer directions at
+  nine sampled chart points (`sigma_min >= 0.01307`), but no interval cover or
+  global alias theorem.  P416 admits no independent photonic pilot.
+- P417 leaves a nonideal noisy-comb primal/upper gap as large as about
+  `0.52763`; no SDP dual certificate is available.  Do not promote optimized
+  pure parallel inputs to the unrestricted adaptive optimum.
+- P418 constructs the heralded-erasure-aware symmetric code O149.  It beats
+  product and GHZ baselines in all 16 declared numerical cells, with maximum
+  gain about `0.02694`.  This is strong finite numerical evidence for
+  `n<=4`, not a global code theorem or hardware result.
+- P419 finds no gain over the extremal relative-generator mode pair in eight
+  full twelve-mode one-use cells.  Do not extend this finite one-use result to
+  adaptive multi-use, nonuniform noise, or arbitrary apparatus channels.
+- P420 and P421 admit no traceable clock anchor or external JSR execution.
+- P422 proves the declared equal-weight twelve-moment variance-optimal JSR
+  law `q_i proportional to |w_i| sqrt(sum_(k=0)^11 x_i^(2k))`, giving about
+  `11.57%` variance reduction.  This is estimator-specific, not universal
+  apparatus efficiency.
+- P423 shows that sign-to-coherence encoding consumes an aligned phase
+  reference.  P424 constructs a nonzero inversion-odd record current
+  `J_or=sum_i w_i sin(2*pi*x_i)`, but its sign reverses with the supplied
+  coordinate chart.  Neither object discharges `QW-2191` or exports a
+  nonconventional strict selector.
+- P425 proves three supplied scale sections inequivalent under one shared
+  control coordinate; arbitrary control reparameterization remains possible.
+  No canonical length, time, action, mass, or energy unit is generated.
+- P426/P427 admit no independent QW/standards/reservoir campaign or blinded
+  electroweak role-transfer bundle.
+- Release 10.35 constructs O143--O154.  Preserve all kernel-split, selector,
+  dimensional-source, role-transfer, laboratory, `L_total`, SM/GR, and ToE
+  guardrails.
+
+## Post-Programs-P411–P427 research steering guardrail (2026-07-31)
+
+- The preferred nonreplay sequence is
+  `P428 -> P429 -> P430 -> P435 -> P436 -> P440`: formalize the analytic
+  cosine bridge; interval-certify the O144 KKT point; certify its global dual
+  feasibility; obtain a noisy-comb SDP dual; rigorously certify at least one
+  O149 gain cell; then incorporate apparatus response into the optimal JSR
+  estimator.
+- P432 may test exactly one complete-Bernstein/subordination damping source
+  class.  It must stop at a scoped theorem/no-go and must not replay generic
+  bridge completion or legacy role transfer.
+- P442 may audit O153 across support change, relabeling, and JSR realization
+  nonuniqueness.  An odd receiver remains distinct from a strict source unless
+  its polarity survives those changes without a supplied chart.
+- P431 may import a genuine formal transcendence library.  P433 may seek an
+  interval photonic chart cover.  P437 may address a multi-use twelve-mode
+  comb.  None may silently import selector, clock, scale, or physical-role
+  closure.
+- P434, P438, P439, P443, and P444 require external providers, calibrated
+  clocks/standards/hardware, custody separation, frozen raw hashes, and
+  preregistered one-shot analysis.  Repository-generated data cannot satisfy
+  these gates.
+
+## Goal-mode durable baseline checkpoint guardrail (Checkpoint 000, 2026-08-01)
+
+- `FIN_Local_Research_Checkpoint_000_EN.pdf` freezes Release 10.35 / P411--P427
+  as the accepted baseline before expensive P428--P430 work.  It is a durable
+  recovery artifact, not a new closure theorem or physical release.
+- The first bounded local batch is P428 (analytic cosine bridge), P429
+  (25-variable interval KKT certificate), and P430 (contact-aware global dual
+  feasibility).  Sampling, smaller residuals, or an assumed analytic bridge
+  are insufficient for theorem status.
+- Preserve every existing kernel-split, selector, dimensional-source,
+  role-transfer, laboratory, `L_total`, SM/GR, and ToE boundary during the
+  batch.  In particular, P428--P430 concern mathematical trust of the strict
+  signed-moment certificate and cannot discharge `QW-2191` or start legacy
+  role transfer.
+- No later expensive batch may begin until a separate self-contained
+  P428--P430 PDF, regression tests, structured results, restart state, and
+  SHA-256 manifest have been compiled and verified.
+
+## Programs P428–P430 exact signed-moment closure guardrail (Release 10.36, 2026-08-01)
+
+- P428 refutes `Rat -> Rat` as a type-adequate interface for ordinary real
+  cosine and replaces it with O155, a rational-cut provider interface. Lean
+  checks all twelve FIN-specific rational domain/order/width conditions
+  (`max width about 1.913e-37`) and the reduction to one standard
+  alternating-cosine provider. The local Lean/Std stack contains no suitable
+  real-trigonometric library; do not call the standard real-cosine theorem
+  proof-kernel compiled.
+- P429 constructs O156 and proves, by exact rational Krawczyk arithmetic, one
+  unique zero of the declared 25-equation seven-contact system inside the
+  relative-radius `1e-20` box. All 25 coordinates are strictly included, the
+  weighted infinity contraction bound is about `4.0673e-11 < 1`, node order
+  and weight signs `(-,+,+,+,+,-,+)` are certified, and the objective box has
+  width `4e-20` around `0.7073534677231137`. The theorem is local to the
+  isolating box and depends on the standard analytic moment enclosures.
+- P430 constructs O157 and proves `-1 <= p(x) <= 0` on `[0,1]` by exact
+  interval curvature at six stationary contacts, endpoint monotonicity, and
+  seven rational Bernstein complement cells. With the inherited P337--P380
+  signed-measure weak-duality theorem, the enclosed primal--dual value is
+  globally optimal for the declared dimensionless moment problem. Do not
+  promote this to global uniqueness of every optimizer, a proof-assistant
+  theorem, or a physical observable.
+- The current reconstructed historical kernel is
+  `K*_legacy(d)=A*cos(pi*d/4+pi/6)/(1+beta*d)`, `A,beta>0`: a fixed-phase
+  subclass of the intermediate `K_legacy_ont`, not `K_strict_gate`.
+  `DIAGRAMS_KERNEL_TRANSFORMATION.md` records four coupling mechanisms and
+  two cross-modulations, but exports no typed state self-map, feedback
+  evolution, or fixed-point law. Its displayed `d^1.6*d^-0.6 -> d^-1` step
+  and alleged integer zero sequence `2,5,8,11` are refuted. Treat the diagram
+  as self-coupling intuition/provenance only; `A` and `beta` remain unsourced
+  and no legacy physical role transfers.
+- P428--P430 discharge no selector, `QW-2191`, canonical orientation,
+  dimensional unit, laboratory gate, legacy-to-strict completion,
+  role-transfer theorem, `L_total`, SM/GR, or ToE claim. Historical
+  measurement/accuracy prose in the diagram is not admitted external
+  evidence.
+- The next bounded local batch is P435/P436/P440: a genuine noisy-comb SDP
+  primal/dual certificate or local solver obstruction; rigorous certification
+  of at least one O149 erasure-gain cell; and a detector-/finite-sample-aware
+  JSR estimator or minimax obstruction. Do not begin an external gate or
+  manufacture laboratory evidence.
+
+## Programs P435/P436/P440 operational-certificate guardrail (Release 10.37, 2026-08-01)
+
+- P435 constructs O158. For the reduced qubit phase/dephasing channel at
+  `q=4/5`, `theta=pi/8`, the one-slot process-tester SDP has the exact
+  matching value `(1+(4/5)sin(pi/8))/2`. The genuine two-slot memoryless
+  comb and its causal primal/dual constraints are exported, but the inherited
+  half-distance interval `[0.45254833995939053, 0.6122934917841437]` is not
+  closed. No local `cvxpy/cvxopt/clarabel/scs` solver or independent checker
+  is installed. Do not promote the one-slot theorem, nonlinear parallel
+  lower bound, or hybrid upper bound to a solved multiround comb or full
+  twelve-mode optimum.
+- P436 constructs O159 and gives a computer-assisted proof that the exact
+  symmetric sector law `(56923,68077,68077,56923)/250000` at
+  `n=3, q=eta=4/5, theta=2*pi/15` beats both product and GHZ baselines by at
+  least `0.022572776021405654`. The proof uses rational Machin/Taylor and
+  square-root intervals, exact heralded partial traces, exact rational
+  characteristic-polynomial root isolation, and an explicit nuclear-norm
+  perturbation bound. Do not promote this scoped feasible-code theorem to
+  global symmetric-simplex optimality, unrestricted/adaptive optimality,
+  fault tolerance, apparatus implementability, or a twelve-mode theorem.
+- P440 constructs O160. Conditional on a supplied independent Bernoulli
+  efficiency plus subtracted-dark-count model, the detector-envelope minimax
+  law is `q_i proportional to |w_i| ||f_i|| sqrt(1/epsilon_low_i +
+  d_high_i(1-d_high_i)/epsilon_low_i^2)`. On the declared synthetic envelope
+  and P429 atom midpoints it reduces the worst MSE coefficient by about
+  `7.4591%` versus absolute-weight sampling and `0.3401%` versus P422. The
+  uniform twelve-coordinate Hoeffding ledger gives `1,909,937` sufficient
+  attempts for tolerance `0.02` and familywise error `0.05`. Do not treat the
+  envelope, allocation, or count as detector calibration, laboratory data,
+  or physical evidence.
+- P435/P436/P440 are downstream operational mathematics and are
+  kernel-split robust only after their reduced channel or signed atomic input
+  is separately supplied. They do not derive either kernel, type the
+  self-coupling intuition in `DIAGRAMS_KERNEL_TRANSFORMATION.md`, complete
+  `K*_legacy -> K_strict_gate`, or transfer any legacy physical role.
+- No selector or `QW-2191` discharge, canonical orientation, dimensional
+  source, laboratory realization, role transfer, `L_total`, Standard Model,
+  gravity, or ToE closure is exported.
+- The next bounded local batch is P445/P446/P447: first attempt a
+  dependency-free symmetry/support reduction of the two-slot comb; then a
+  rigorous branch-and-bound or counterexample for globality of O159 inside
+  the three-use symmetric simplex; then propagate the full P429 atom boxes
+  through O160. Do not start with a blind full-cone optimizer, external
+  dependency installation, or synthetic apparatus claim.
+
+## Programs P445--P447 structural-closure guardrail (Release 10.38, 2026-08-01)
+
+- P445 constructs O161 and proves that every causal two-slot tester for the
+  declared reduced qubit phase/dephasing channel compresses to four history
+  weights plus one constrained block coherence. Completing a square proves
+  the GHZ history law globally optimal at `q=4/5, theta=pi/8`, with exact
+  half-distance `8*sqrt(2)/25`, including arbitrary intermediate memory.
+  Do not promote this two-slot commuting-support theorem to three or more
+  slots, noncommuting noise, unheralded loss, or the full twelve-mode FIN
+  channel.
+- P446 constructs O162 and proves only a global `1e-3` upper/lower
+  certificate on the declared palindromic three-use code line. Deterministic
+  full-simplex multistarts and sampled negative Hessians are strong evidence,
+  not a proof of concavity or full-simplex globality.
+- P447 constructs O163, propagates all exact P429 atom boxes through the
+  conditional O160 detector-envelope allocation, and certifies the strict
+  worst-MSE ordering. The detector envelope remains synthetic and supplied;
+  this is not detector calibration, a laboratory record, or physical
+  evidence.
+- P445/P446/P447 neither derive a kernel nor type the historical coupling
+  diagram as a self-evolution. They do not complete or transfer roles across
+  the legacy/strict split, discharge QW-2191, source orientation or
+  dimensional units, or close a physical theory.
+- The next bounded local batch is P448/P449/P450: full-simplex
+  concavity/counterexample, three-slot causal-support recursion, and
+  representation-dependence of O163. Preserve all current kernel, selector,
+  dimensional, and physical-evidence boundaries.
+
+## Programs P448--P450 global-majorant/causal-echo/gauge guardrail (Release 10.39, 2026-08-01)
+
+- P448 constructs O164. Contractivity, nuclear-norm concavity, reversal
+  symmetrization, and outward interval branch-and-bound prove the complete
+  P446 simplex lies between `0.46327828319203235` and
+  `0.4666305033804779`. The fine majorant reveals lost computational values
+  and is not the original coarse objective. Do not promote this bracket to
+  exact full-simplex globality or uniqueness.
+- P449 constructs O165 and proves the compressed causal recursion
+  `C_n={B0 direct-sum B1: B0,B1>=0, B0+B1 in C_(n-1)}`, with
+  `d_1=1` and `d_n=d_(n-1)+4^(n-1)`. The rational echo-history law
+  `(9,1,9,1,1,9,1,9)/40` has an explicit full positive Xi3 extension and
+  beats three-slot GHZ by at least `0.017612669538553616` in half-distance.
+  Three-slot GHZ optimality is refuted in the declared reduced channel. Do
+  not promote the witness or random scouts to the global three-slot optimum,
+  an n-slot theorem, a twelve-mode theorem, or a laboratory implementation.
+- P450 constructs O166. The exact finite-difference null cycle annihilates
+  moments zero through eleven and proves O163 risk is unbounded on one
+  representation gauge orbit. Same-sign splitting at an identical node is
+  invariant, but moment equality alone does not fix a sampler. A canonical
+  reduced/minimum-TV representation, explicit preparation instrument, or
+  quotient-invariant estimator remains necessary.
+- Chronological order in O165 is a supplied tester interface, not a
+  non-premise Z12 orientation source. No QW-2191 discharge, dimensional
+  source, kernel derivation, typed legacy self-coupling, legacy-to-strict
+  bridge, role transfer, laboratory evidence, `L_total`, or physical closure
+  is exported.
+- The next bounded local batch is P451/P452/P453: global/sharper three-slot
+  cone optimization, direct closure of the P448 coarse-graining gap, and a
+  canonical representation theorem or no-go.
+
+## Programs P451--P453 coherence/symmetry/canonical-gauge guardrail (Release 10.40, 2026-08-01)
+
+- P451 proves the global diagonal-face optimum for the declared three-slot
+  reduced phase/dephasing channel at `q=4/5`, `theta=pi/8`: half-distance
+  `0.5227633693019748...`. An exact-rational positive coherent `C3` tester has
+  certified half-distance in `[0.52332810026048937,
+  0.52332810026049204]`, exceeding the diagonal upper bound by at least
+  `0.00056473095851463685`. Diagonal optimality is refuted. Eight full-cone
+  scouts near `0.5233281002704` are strong evidence only; do not claim the
+  global 21-dimensional optimum or uniqueness without a matching
+  dual/interval KKT certificate.
+- P452 proves reversal symmetrization for the exact coarse P446 objective
+  under `4 q^2 cos^2(theta)>=1`. At `q=4/5`, `theta=2*pi/15` the condition
+  has certified positive margin `1.1364871761393385...`. The inherited
+  palindromic line cover is therefore a full four-sector simplex certificate
+  `[0.46327828319203235, 0.4642707484333634]`, gap `<1e-3`. Do not promote
+  this declared Hamming-sector/heralded-loss theorem to unrestricted or
+  adaptive code optimality, other parameter cells, exact maximizer
+  uniqueness, or laboratory performance.
+- P453 combines P429/P430 strict complementary contacts with a positive
+  Vandermonde lower bound to prove the global minimum-negative-mass signed
+  measure is unique; at fixed zeroth moment it is also the unique minimum-TV
+  representation. This fixes O163 only inside the declared variational
+  gauge. Moments alone remain noncanonical by the P450 null cycle, and no
+  physical preparation instrument is generated.
+- P451--P453 are downstream, dimensionless, and kernel-split robust only
+  after their reduced channel or strict moments are supplied. They do not
+  derive either kernel, type the historical coupling diagram as a
+  self-evolution, complete `Legacy*` or `K_legacy_ont -> K_strict_gate`, or
+  transfer any legacy physical role.
+- No QW-2191/selector discharge, canonical orientation, dimensional source,
+  laboratory apparatus/record, independent custody, `L_total`, Standard
+  Model, gravity, or ToE closure is exported.
+- The next bounded local batch is P454/P455/P457: first derive and try to
+  certify the full three-slot comb dual; then solve the coherent symmetry
+  face exactly if the full dual remains open; finally tighten the
+  now-licensed P452 one-dimensional interval. Do not promote a floating
+  optimizer to a theorem.

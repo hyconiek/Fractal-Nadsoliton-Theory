@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "programs": [
+      "P435",
+      "P436",
+      "P440"
+    ],
+    "checkpoint": "P435-P440 bounded batch",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false
+  },
+  "P435": {
+    "status": "[Proven] exact one-slot process-tester SDP primal/dual equality at a nonideal cell; [Constructed] explicit two-slot memoryless comb and primal/dual SDP; [Blocked locally] no installed SDP solver or checker closes the two-slot gap",
+    "one_slot_exact_formula": "(1 + (4/5)*sin(pi/8))/2",
+    "one_slot_optimal_success": 0.653073372946036,
+    "one_slot_checks": {
+      "choi_plus_causality_defect": 0.0,
+      "choi_minus_causality_defect": 0.0,
+      "tester_normalization_defect": 0.0,
+      "minimum_tester_eigenvalue": -1.4150003977845598e-16,
+      "minimum_dual_slack_eigenvalue": -8.326672684688674e-17,
+      "dual_reduction_scalar_defect": 1.5700924586837752e-16,
+      "primal_dual_gap": -1.1102230246251565e-16
+    },
+    "two_slot_checks": {
+      "comb_plus_causality_defect": 0.0,
+      "comb_minus_causality_defect": 0.0,
+      "process_dimension": 16,
+      "primal_real_variables_before_equalities": 580,
+      "dual_real_variables_before_inequality_reduction": 273
+    },
+    "two_slot_parallel_half_distance_lower": 0.45254833995939053,
+    "two_slot_hybrid_half_distance_upper": 0.6122934917841437,
+    "two_slot_success_gap": 0.07987257591237659,
+    "solver_inventory": {
+      "cvxpy": false,
+      "cvxopt": false,
+      "clarabel": false,
+      "scs": false
+    },
+    "two_slot_primal_constraints": [
+      "T_plus,T_minus >= 0",
+      "T_plus+T_minus = I_Y2 tensor B2",
+      "Tr_X2(B2) = I_Y1 tensor rho",
+      "rho >= 0 and Tr(rho)=1"
+    ],
+    "two_slot_dual_constraints": [
+      "Y >= R_plus/2 and Y >= R_minus/2",
+      "Tr_Y2(Y) <= I_X2 tensor Z",
+      "Tr_Y1(Z) <= lambda I_X1"
+    ],
+    "boundary": "The exact certificate proves only the one-slot reduced qubit channel. The exported two-slot instance is a genuine comb specification, but no matching multi-slot dual certificate is claimed. It is not the full twelve-mode FIN channel.",
+    "new_object": "O158 Process-Tester SDP Admission Certificate"
+  },
+  "P436": {
+    "status": "[Computer-assisted proof] the declared rational symmetric code strictly beats both product and GHZ baselines in the n=3, q=eta=4/5, theta=2*pi/15 cell",
+    "cell": {
+      "uses": 3,
+      "coherence": "4/5",
+      "survival": "4/5",
+      "theta": "2*pi/15"
+    },
+    "candidate_probabilities": [
+      "56923/250000",
+      "68077/250000",
+      "68077/250000",
+      "56923/250000"
+    ],
+    "candidate_total_interval": [
+      "0.46327828319203235",
+      "0.46327828319203362"
+    ],
+    "product_total_interval": [
+      "0.44070550717062451",
+      "0.44070550717062668"
+    ],
+    "ghz_total_interval": [
+      "0.24931375940767625",
+      "0.24931375940767719"
+    ],
+    "certified_gain_lower": "0.022572776021405654",
+    "pi_interval_width": "3.5153137078612331e-86",
+    "proof_method": "Machin and alternating Taylor rational intervals; exact partial traces; exact rational characteristic-polynomial root isolation for K^T K; nuclear-norm perturbation enclosure",
+    "boundary": "This proves feasibility and strict improvement over two named baseline families in one reduced three-use cell. It does not prove global simplex optimality, adaptive-comb optimality, apparatus implementability, or a twelve-mode result.",
+    "new_object": "O159 Rational Heralded-Code Gain Certificate"
+  },
+  "P440": {
+    "status": "[Proven conditional theorem] detector-envelope minimax sampling law for a supplied calibrated Bernoulli-efficiency plus subtracted-dark-count model; [Computed design] P429 atom allocation and a uniform finite-sample ledger",
+    "detector_model": "given atom i, X_i=B_i+D_i-d_i with B_i~Bernoulli(epsilon_i), D_i~Bernoulli(d_i), independent; estimate w_i f_i X_i/(q_i epsilon_i)",
+    "nuisance_envelope": "epsilon_i in [0.65+0.25*x_i, min(0.99,0.70+0.25*x_i)], d_i in [0,0.01+0.02*(1-x_i)]",
+    "minimax_law": "q_i proportional to |w_i| ||f_i|| sqrt(1/epsilon_low_i + d_upper_i*(1-d_upper_i)/epsilon_low_i^2)",
+    "proof": "The worst second-moment factor is decreasing in epsilon and increasing in d on d<=1/2; Cauchy-Schwarz minimizes sum_i a_i/q_i on the simplex.",
+    "worst_mse_coefficients": {
+      "absolute_weight_baseline": 10.393243449520375,
+      "P422_spectral_radius": 9.650823955540265,
+      "P440_detector_minimax": 9.618004785993307
+    },
+    "reduction_vs_absolute_weight": 0.07459063835965885,
+    "reduction_vs_P422": 0.003400659850200327,
+    "confidence_ledger": {
+      "familywise_alpha": 0.05,
+      "coordinate_tolerance": 0.02,
+      "maximum_single_draw_coordinate_range": 15.731809400877701,
+      "hoeffding_sufficient_attempts": 1909937,
+      "coordinates": 12
+    },
+    "boundary": "The nuisance envelope is a transparent synthetic design assumption. The theorem does not supply detector calibration, dark-count stationarity, event independence, apparatus data, custody, or a physical FIN realization.",
+    "new_object": "O160 Detector-Envelope Minimax Jordan Sampler"
+  }
+}

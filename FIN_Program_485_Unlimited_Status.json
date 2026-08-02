@@ -1,0 +1,11 @@
+{
+  "program": "P485",
+  "pid": 11,
+  "stage": "failed",
+  "unix_time": 1785626050.975185,
+  "no_application_time_limit": true,
+  "no_application_memory_limit": true,
+  "error_type": "CoercionFailed",
+  "error": "expected `Rational` object, got -4*sqrt(2)",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_program_485_unlimited.py\", line 164, in <module>\n    main()\n  File \"/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_program_485_unlimited.py\", line 58, in main\n    reduced = algebra.reduced_branch_system(context)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_phase_exact_algebra.py\", line 262, in reduced_branch_system\n    polynomial = sp.Poly(expression, *reduced_variables, domain=sp.QQ)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3/dist-packages/sympy/polys/polytools.py\", line 182, in __new__\n    return cls._from_expr(rep, opt)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3/dist-packages/sympy/polys/polytools.py\", line 312, in _from_expr\n    return cls._from_dict(rep, opt)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3/dist-packages/sympy/polys/polytools.py\", line 259, in _from_dict\n    rep[monom] = domain.convert(coeff)\n                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3/dist-packages/sympy/polys/domains/domain.py\", line 451, in convert\n    return self.from_sympy(element)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3/dist-packages/sympy/polys/domains/rationalfield.py\", line 65, in from_sympy\n    raise CoercionFailed(\"expected `Rational` object, got %s\" % a)\nsympy.polys.polyerrors.CoercionFailed: expected `Rational` object, got -4*sqrt(2)\n"
+}

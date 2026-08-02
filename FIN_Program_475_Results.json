@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "program": "P475",
+    "execution_mode": "local analytical and resource-bounded computational research",
+    "network_used": false,
+    "laboratory_data_used": false,
+    "external_audit_used": false,
+    "hardware_envelope": "Intel i3-10110U, 16 GB RAM"
+  },
+  "question": "Does the exact O181 optimum L have a tractable algebraic minimal polynomial under the declared local envelope?",
+  "status": "[Open; resource-bounded no-go] no univariate minimal-polynomial candidate was obtained within the declared exact-elimination envelope",
+  "exact_field_reduction": {
+    "primitive_element": "alpha=sin(pi/8)",
+    "primitive_polynomial": "8*alpha**4 - 8*alpha**2 + 1",
+    "sine_reconstruction": {
+      "sin(pi/8)": "alpha",
+      "sin(pi/4)": "1 - 2*alpha**2",
+      "sin(3*pi/8)": "3*alpha - 4*alpha**3"
+    },
+    "field_degree": 4,
+    "exact": true
+  },
+  "system_inventory": {
+    "equations_before_field_relation": 13,
+    "unknown_operator_coordinates": 13,
+    "rational_elimination_variables_with_alpha": 14,
+    "maximum_total_degree_after_Q_specialization": 7,
+    "maximum_monomial_count": 29,
+    "total_monomial_occurrences": 262,
+    "all_equations_affine_in_normalizer_coordinates_A_B_u": true,
+    "naive_cubic_Bezout_bound_over_Q_alpha": 1594323,
+    "warning": "The Bezout number is only a crude projective complexity bound and is not a root count for the admitted positive branch."
+  },
+  "local_linear_pivot": {
+    "rows": [
+      5,
+      10,
+      11
+    ],
+    "floating_absolute_determinant": 0.02238991247834834,
+    "exact_pivot_determinant_is_nonzero_polynomial": true,
+    "exact_pivot_determinant_total_degree": 10,
+    "exact_pivot_determinant_term_count": 409
+  },
+  "bounded_lexicographic_attempt": {
+    "completed": false,
+    "termination": "wall_clock_timeout",
+    "wall_limit_seconds": 45,
+    "elapsed_seconds": 45.077804120999645,
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  "minimal_polynomial_candidate_obtained": false,
+  "candidate_relations": [],
+  "proved": [
+    "The three trigonometric coefficients lie in the degree-four algebraic field Q(alpha).",
+    "The exact Riccati system is polynomial over Q(alpha) and affine in A, B, and u.",
+    "The declared bounded local SymPy lexicographic workflow either completed as recorded or was forcibly stopped by its stated resource envelope."
+  ],
+  "not_proved": [
+    "No claim is made that L lacks a minimal polynomial; L is expected to be algebraic if the certified isolated branch is a zero-dimensional algebraic component.",
+    "No irreducibility, algebraic degree, global ideal dimension, or complete solution count is proved unless a univariate relation was actually returned.",
+    "A timeout or resource kill is not a mathematical impossibility theorem and does not exclude modular, resultant, homotopy, or structure-aware elimination."
+  ],
+  "falsification": {
+    "alternative_checked": "Exact one-generator trigonometric specialization and an exact affine normalizer-variable audit were performed before lexicographic elimination.",
+    "failure_mode": "A future structure-aware or modular reconstruction can refute the tractability boundary by producing and verifying a univariate relation inside a comparable envelope."
+  },
+  "new_object": "O187 Resource-Bounded Algebraic Elimination Burden Certificate",
+  "boundary": "P475 concerns a dimensionless exact operator optimum only. It does not close the legacy-to-strict bridge, QW-2191, physical units, apparatus, or laboratory evidence."
+}

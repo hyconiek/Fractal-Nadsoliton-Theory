@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "programs": "P458/P459/P464",
+    "checkpoint": "P458-P464",
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false,
+    "legacy_role_transfer_started": false
+  },
+  "P458": {
+    "status": "[Computer-assisted proof] the P457 palindromic maximizer is unique and therefore, through the P452 symmetrization theorem, gives the unique palindromic representative of the declared global optimum",
+    "inherited_global_maximizer_hull": [
+      0.2178955078125,
+      0.234619140625
+    ],
+    "curvature_cells": 256,
+    "minimum_second_derivative_lower": -4.002571478626325,
+    "maximum_second_derivative_upper": -3.890264298788524,
+    "left_endpoint_derivative_interval": [
+      0.03881422991489784,
+      0.03881422991492505
+    ],
+    "right_endpoint_derivative_interval": [
+      -0.027120573501572463,
+      -0.027120573501547406
+    ],
+    "unique_maximizer_interval": [
+      0.2276921883225489,
+      0.22769218832267057
+    ],
+    "unique_maximizer_width": 1.2168044349891716e-13,
+    "objective_interval_at_root_box": [
+      0.46327828319191316,
+      0.4632782831922923
+    ],
+    "numerical_objective_at_midpoint": 0.4632782831921028,
+    "globality_chain": "P452 places at least one global optimizer on the palindromic line; P457 confines every palindromic maximizer to the inherited hull; P458 proves F''<0 throughout that hull and opposite derivative signs.",
+    "boundary": "Uniqueness is proved for the palindromic representative in the exact P452 code/parameter/loss model. P452 does not prove that every asymmetric optimizer is equal to its reversal average, so uniqueness on the original full simplex is not claimed without strict symmetrization equality analysis.",
+    "new_object": "O173 Palindromic Curvature Isolator"
+  },
+  "P459": {
+    "status": "[Proven, conditional on P429/P430/P453 and the supplied O160 detector envelope] every realized detector-box coefficient vector has one unique minimum-worst-MSE allocation, and its seven-label ordering is invariant",
+    "variational_objective": "R(q)=sum_i s_i^2/q_i-M, q_i>0, sum_i q_i=1; s_i=|w_i| r(x_i) sqrt(hbar_i)",
+    "unique_solution": "q_i=s_i/sum_j s_j",
+    "strict_convexity": "The ambient Hessian is diagonal with entries 2 s_i^2/q_i^3>0; its restriction to the simplex tangent space is positive definite.",
+    "minimum_certified_hessian_diagonal_lower": "90.508132204117672",
+    "allocation_intervals": [
+      [
+        "0.24000091596029191",
+        "0.24000091596029191"
+      ],
+      [
+        "0.23410446671319241",
+        "0.23410446671319241"
+      ],
+      [
+        "0.22459244891098445",
+        "0.22459244891098445"
+      ],
+      [
+        "0.13122814297957672",
+        "0.13122814297957672"
+      ],
+      [
+        "0.080622667147040999",
+        "0.080622667147040999"
+      ],
+      [
+        "0.068262231398431947",
+        "0.068262231398431947"
+      ],
+      [
+        "0.021189126890481531",
+        "0.021189126890481531"
+      ]
+    ],
+    "allocation_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "minimum_adjacent_ranking_margin": "0.0058964492470994908",
+    "fiberwise_canonical": true,
+    "box_collapsed_to_single_physical_allocation": false,
+    "representation_dependency": "P453 removes the P450 signed-measure gauge only after the minimum-TV rule is imposed. Removing that rule restores representation dependence.",
+    "physical_boundary": "The detector envelope is synthetic and dimensionless. Fiberwise uniqueness does not choose an actual detector realization, calibrate an apparatus, or generate a laboratory preparation or record.",
+    "new_object": "O174 Fiberwise Canonical Allocation Tube"
+  },
+  "P464": {
+    "status": "[Computer-assisted proof] improved exact-rational global dual bound",
+    "attempted_barriers": [
+      1e-07,
+      3e-08,
+      1e-08
+    ],
+    "candidate_rational_certificate_feasible": true,
+    "strict_improvement_accepted": true,
+    "previous_certified_upper": "130833675063/250000000000",
+    "accepted_certified_upper": "52332832027103/100000000000000",
+    "accepted_global_gap": "22001054063/100000000000000000",
+    "candidate_certificate": {
+      "feasible": true,
+      "rationalization_scale": 100000000000000,
+      "lambda_upper": "52332832027103/100000000000000",
+      "smallest_certified_slack_lower": "9.9999996948523228e-09",
+      "half_delta_maximum_entry_radius": "3.8143459608252896e-17",
+      "slacks": [
+        {
+          "slack": "X3_plus_halfDelta",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "9.9999996948523228e-09",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "398295363098315530578226718166165817334213651266957142265619882187901235043508130649702374629644505798027308771953/710542735760100185871124267578125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X3_minus_halfDelta",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "3.0514767686602317e-16",
+          "certified_exact_minimum_eigenvalue_lower": "9.9999996948523228e-09",
+          "positive_leading_principal_minors": 8,
+          "smallest_leading_principal_minor": "398295363098315530578226718166165817334213651266957142265619882187901235043508130649702374629644505798027308771953/710542735760100185871124267578125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block0",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "5844060134018969961424072067/100000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X2_minus_X3_block1",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000",
+          "positive_leading_principal_minors": 4,
+          "smallest_leading_principal_minor": "2922031061050633714988265267/50000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block0",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "1378608844521/1250000000000000000000000000"
+        },
+        {
+          "slack": "X1_minus_X2_block1",
+          "exact_sylvester_margin": "1/100000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "1/100000000",
+          "positive_leading_principal_minors": 2,
+          "smallest_leading_principal_minor": "2757217249283/2500000000000000000000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag0",
+          "exact_sylvester_margin": "2000001/100000000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "2000001/100000000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "2000001/100000000000000"
+        },
+        {
+          "slack": "lambda_minus_X1_diag1",
+          "exact_sylvester_margin": "2000001/100000000000000",
+          "transcendental_operator_perturbation": "0",
+          "certified_exact_minimum_eigenvalue_lower": "2000001/100000000000000",
+          "positive_leading_principal_minors": 1,
+          "smallest_leading_principal_minor": "2000001/100000000000000"
+        }
+      ]
+    },
+    "methodological_result": "A floating central-path decrease is not an upper-bound theorem. Only exact rational Sylvester positivity after trigonometric perturbation payment is admissible.",
+    "boundary": "The improved upper certificate does not decide exact O167 attainment or optimizer uniqueness; a future failed continuation would not prove the remaining gap irreducible.",
+    "new_object": "O175 Rational-Dual Admission Gate"
+  }
+}

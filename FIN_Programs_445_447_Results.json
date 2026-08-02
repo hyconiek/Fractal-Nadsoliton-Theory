@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "programs": [
+      "P445",
+      "P446",
+      "P447"
+    ],
+    "date": "2026-08-01",
+    "local_only": true,
+    "external_physical_evidence": false,
+    "selector_discharged": false,
+    "dimensional_source_exported": false,
+    "legacy_strict_bridge_complete": false
+  },
+  "P445": {
+    "status": "[Proven] exact diagonal-support characterization of every two-slot tester for the declared phase/dephasing comb and exact GHZ optimality at q=4/5, theta=pi/8",
+    "history_simplex": "t=(t00,t01,t10,t11), t>=0, sum(t)=1, with normalizer coherence c=u+iv satisfying |c|^2<=min(t00*t01,t10*t11)",
+    "reduced_formula": "D(t,c)^2=a^2(t00+t11)(t01+t10)+b^2*t00*t11-4a^2*u^2+2ab(t11-t00)u, a=2q sin(theta), b=2q^2 sin(2theta); Im(c) cancels",
+    "square_completion": "D^2=F(x)-4a^2(u-b(t11-t00)/(4a))^2, F(x)=a^2*x*(1-x)+(b^2/4)*x^2",
+    "one_variable_upper": "D(t,c)^2<=F(x), x=t00+t11",
+    "ghz_condition": "b^2 >= 2*a^2",
+    "exact_condition_check": "(8*sqrt(2)-9)/25 > 0, because 128 > 81",
+    "condition_margin_float": 0.06939335983756167,
+    "optimal_history_law": [
+      "1/2",
+      "0",
+      "0",
+      "1/2"
+    ],
+    "optimal_half_distance_exact": "8*sqrt(2)/25",
+    "optimal_half_distance": 0.4525483399593904,
+    "optimal_success": 0.7262741699796952,
+    "maximum_random_formula_defect": 5.551115123125783e-16,
+    "theorem_scope": "All causally admissible two-slot testers for the declared reduced memoryless qubit channel; arbitrary intermediate memory is included by tester normalization.",
+    "boundary": "The proof uses the diagonal Choi support and two slots. It does not extend automatically to three or more uses, noncommuting noise, unheralded loss, or the full twelve-mode FIN channel.",
+    "new_object": "O161 Diagonal-Support Comb Reduction"
+  },
+  "P446": {
+    "status": "[Computer-assisted proof] a global 1e-3 palindromic-line upper/lower certificate from directed interval representation reduction; [Strong evidence / Open] full simplex",
+    "palindromic_family": "p(a)=(a,1/2-a,1/2-a,a), 0<=a<=1/2",
+    "palindromic_certificate": {
+      "incumbent_a": 0.227692,
+      "incumbent_lower": 0.46327828319203235,
+      "global_upper": 0.4642707484333634,
+      "optimality_gap": 0.0009924652413310642,
+      "maximizer_hull": [
+        0.1484375,
+        0.28125
+      ],
+      "evaluated_boxes": 148,
+      "terminal_boxes": 149
+    },
+    "full_simplex_audit": {
+      "status": "[Strong evidence] all deterministic multistarts converge to the palindromic certificate neighborhood and sampled interior Hessians are negative; [Open] rigorous global full-simplex concavity or interval cover",
+      "starts": 24,
+      "best_value": 0.4632782831921028,
+      "best_vector": [
+        0.22769218783834116,
+        0.272307811688706,
+        0.272307815445498,
+        0.2276921850274549
+      ],
+      "maximum_best_reversal_defect": 3.756791988607233e-09,
+      "maximum_sampled_hessian_eigenvalue": -0.6062949145754428,
+      "sampled_hessian_points": 16,
+      "boundary": "SLSQP convergence and sampled negative Hessians are falsification evidence, not a global concavity theorem. The palindromic interval proof cannot be promoted to the full three-dimensional simplex."
+    },
+    "proof_method": "S3 irreducible block reduction (4D symmetric plus two repeated 2D standard blocks), outward-rounded binary64 intervals, and exhaustive one-dimensional branch-and-bound",
+    "boundary": "Globality is proved only on the palindromic line. The full symmetric Hamming-sector simplex remains open despite multistart and sampled-Hessian evidence.",
+    "new_object": "O162 Palindromic Heralded-Code Global Upper Certificate"
+  },
+  "P447": {
+    "status": "[Computer-assisted proof] the complete P429 isolating boxes propagate through the declared O160 detector envelope without changing positivity, normalization, or the ordering of the three worst-MSE coefficients",
+    "P447_probability_intervals": [
+      [
+        "0.24000091596029191",
+        "0.24000091596029191"
+      ],
+      [
+        "0.23410446671319241",
+        "0.23410446671319241"
+      ],
+      [
+        "0.22459244891098445",
+        "0.22459244891098445"
+      ],
+      [
+        "0.13122814297957672",
+        "0.13122814297957672"
+      ],
+      [
+        "0.080622667147040999",
+        "0.080622667147040999"
+      ],
+      [
+        "0.068262231398431947",
+        "0.068262231398431947"
+      ],
+      [
+        "0.021189126890481531",
+        "0.021189126890481531"
+      ]
+    ],
+    "maximum_probability_width": "3.2547095453761505e-20",
+    "mse_absolute_weight_interval": [
+      "10.393243449520376",
+      "10.393243449520376"
+    ],
+    "mse_P422_interval": [
+      "9.6508239555402664",
+      "9.6508239555402664"
+    ],
+    "mse_P447_interval": [
+      "9.6180047859933033",
+      "9.6180047859933033"
+    ],
+    "reduction_vs_absolute_weight_interval": [
+      "0.074590638359659359",
+      "0.074590638359659359"
+    ],
+    "reduction_vs_P422_interval": [
+      "0.0034006598502009208",
+      "0.0034006598502009217"
+    ],
+    "strict_order_certified": true,
+    "proof_method": "exact P429 rational boxes, rational interval arithmetic, and integer square-root enclosures",
+    "boundary": "This propagates mathematical atom uncertainty only. The detector nuisance envelope remains supplied and synthetic; no calibration or event record is generated.",
+    "new_object": "O163 Certified Detector-Allocation Tube"
+  }
+}
