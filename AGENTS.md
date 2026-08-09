@@ -156,6 +156,52 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   mathematics. They do not discharge QW-2191, complete the legacy-to-strict
   bridge, transfer legacy roles, or supply apparatus/laboratory evidence.
 
+## Stopped P486/P485/P487/P475 campaign guardrail (Release 10.47, 2026-08-02)
+
+- The unlimited campaign was manually stopped at the user's request. No P475,
+  P485, P487, or campaign-runner process remains active; do not restart it
+  automatically.
+- P486 completed and O188 is accepted in scope: determinant signs, the
+  positive standard branch, the active `A/B/u` pivot, the nonzero tangent
+  reference, and `det(Bmap)=+1` are certified on the exact P473 box.
+- P485 and P487 failed before any Groebner computation because an explicit
+  `-4*sqrt(2)` coefficient was coerced into `QQ`. This is an implementation
+  failure, not a counterexample, no-go, causal-axis verdict, or value relation.
+- P475-unlimited was interrupted during the full fourteen-variable lexicographic
+  computation and returned no basis. It supplies no new scientific verdict.
+- O191 proves the coefficient closure `sqrt(2)=2-4*alpha^2` for
+  `alpha=sin(pi/8)`. A future explicitly authorized restart must first apply
+  and unit-test this normalization and use bounded durable checkpoints.
+
+## Colab/Kaggle exact-algebra transfer guardrail (2026-08-02)
+
+- `FIN_Exact_Algebra_P485_P487_Colab_Kaggle.ipynb` and
+  `FIN_Exact_Algebra_Colab_Kaggle_Bundle.zip` are the portable remote-runtime
+  package. The default campaign is P486/P485/P487; P475 is explicitly off.
+- The portable helper removes historical import-chain dependence and applies
+  O191 before rational polynomial coercion. A clean-directory replay of P486
+  completed and emitted its checkpoint ZIP.
+- The remote runner creates a master state, per-stage logs, and checkpoint ZIP
+  after each stage or handled keyboard interruption. Colab users should opt
+  into Drive persistence; Kaggle users must retain/download `/kaggle/working`.
+- Remote completion does not change epistemic gates: P485 requires five exact
+  zero remainders; P487 output requires P473 factor isolation,
+  irreducibility, and independent verification before a minimal-polynomial
+  claim. Remote computation supplies no laboratory or external-audit evidence.
+
+## Singular remote exact-algebra guardrail (2026-08-02)
+
+- `FIN_Exact_Algebra_Singular_Colab_Kaggle.ipynb` uses Python only for exact
+  input construction/audit and delegates the P485 Groebner basis, five normal
+  forms, and P487 elimination to Singular. P475 is a separate disabled action.
+- The local host has no SageMath/Singular installation, so only notebook JSON,
+  Python syntax, source hashes, and input-side logic are locally validated;
+  do not claim a local Singular replay until an external runtime returns its
+  logs and checkpoint.
+- Singular results retain the existing gates: five literal zero normal forms
+  plus P486 are required for P485; any P487/P475 elimination relation remains
+  nonminimal until factor isolation, irreducibility, and exact verification.
+
 
 ## Current state-map-first steering guardrail (P2681/S1631, 2026-06-13)
 

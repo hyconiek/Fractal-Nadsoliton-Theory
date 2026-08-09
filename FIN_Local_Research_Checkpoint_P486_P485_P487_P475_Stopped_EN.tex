@@ -1,0 +1,543 @@
+\documentclass[11pt,a4paper,openany]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{xcolor}
+\usepackage[margin=22mm,headheight=23pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{finblue}{HTML}{1F5A99}
+\definecolor{fingreen}{HTML}{19733A}
+\definecolor{finorange}{HTML}{D55E00}
+\definecolor{finred}{HTML}{A61B1B}
+\definecolor{finviolet}{HTML}{6A3D9A}
+\definecolor{fingray}{HTML}{4D4D4D}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=finblue,citecolor=fingreen,
+urlcolor=finblue,pdftitle={FIN Stopped Algebra Campaign P486-P485-P487-P475},
+pdfauthor={Krzysztof Żuchowski},
+pdfsubject={Certified orientation premises, coefficient-field failure, and honest nonresults after manual interruption},
+pdfkeywords={FIN, exact algebra, Riccati system, Groebner basis, algebraic number field, quantum comb}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small FIN Stopped Algebra Campaign}
+\fancyhead[R]{\small Release 10.47}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{nosep,leftmargin=2em}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\emergencystretch=4em
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\statusProven}{\textcolor{fingreen}{[Proven]}}
+\newcommand{\statusCAP}{\textcolor{fingreen}{[Computer-assisted proof]}}
+\newcommand{\statusOpen}{\textcolor{finorange}{[Open]}}
+\newcommand{\statusStopped}{\textcolor{finred}{[Stopped]}}
+\newcommand{\statusFailed}{\textcolor{finred}{[Implementation failure]}}
+\newcommand{\statusBoundary}{\textcolor{finviolet}{[Boundary]}}
+
+\begin{document}\hypersetup{pageanchor=false}
+\begin{titlepage}\centering\vspace*{8mm}
+{\Large\bfseries FIN Local Research --- Release 10.47\par}\vspace{10mm}
+{\Huge\bfseries Stopped Unlimited Algebra Campaign\par}\vspace{6mm}
+{\Large Certified Orientation Premises, a Coefficient-Field Failure,\par}
+{\Large and Honest Nonresults from P485, P487, and P475\par}\vspace{14mm}
+{\Large Krzysztof \.Zuchowski\par}\vspace{2mm}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+{\normalsize ORCID: 0009-0002-0909-3613\par}\vspace{8mm}
+{\large 2 August 2026\par}
+{\normalsize Publication --- Preprint; Version 1.0.0\par}
+\vfill
+\begin{minipage}{0.92\textwidth}\small
+\textbf{Completed result.} P486 exactly certifies, on the P473 root box, all
+orientation, branch-selection, pivot-localization, and nonzero-reference
+premises required by the proposed P485/P487 reductions.
+
+\medskip\textbf{Failed computations.} P485 and P487 did not enter their
+Gröbner computations. Both failed while coercing an explicit
+\( -4\sqrt2\) coefficient into \(\Q\). This is an implementation-domain
+error, not a mathematical counterexample or no-go theorem.
+
+\medskip\textbf{Manual stop.} The original fourteen-variable P475
+lexicographic computation was manually interrupted after running for more
+than twelve hours without returning a basis. It yields no new scientific
+verdict.
+
+\medskip\textbf{Recoverable defect.} For
+\(\alpha=\sin(\pi/8)\), \(\sqrt2=2-4\alpha^2\). Hence the offending
+coefficient already lies in \(\Q(\alpha)\). This repair is proved here but
+has not been executed through P485/P487.
+
+\medskip\textbf{License.} CC BY 4.0.
+\end{minipage}\vfill
+\end{titlepage}
+\hypersetup{pageanchor=true}\pagenumbering{roman}
+\chapter*{Publication statement}\addcontentsline{toc}{chapter}{Publication statement}
+This monograph records the local analytical and computational state of the
+P486--P485--P487--P475 campaign at manual interruption. It uses no network,
+Firecrawl, external AI, external audit, remote computation, laboratory
+record, or empirical physical evidence. A stopped or failed program is not
+silently promoted to a theorem.
+\tableofcontents\clearpage\pagenumbering{arabic}
+
+\chapter{Executive summary}
+
+The campaign was launched sequentially to avoid competition between exact
+computer-algebra jobs on a 16-GB host. The execution order was
+\[
+ \mathrm{P486}\longrightarrow\mathrm{P485}\longrightarrow
+ \mathrm{P487}\longrightarrow\mathrm{P475\mbox{-}unlimited}.
+\]
+No application-level CPU, wall-time, or memory cap was imposed. The operating
+system and physical machine nevertheless remained real constraints.
+
+Only P486 completed scientifically. It exports O188, the P473
+Orientation-and-Localization Premise Certificate. The exact output proves:
+\begin{itemize}
+\item \(\det C>0\) uniformly on the P473 box;
+\item one declared \(3\times3\) pivot for eliminating \(A,B,u\) is uniformly
+nonzero;
+\item the selected coefficient in the affine tangent parameter \(\rho\) is
+uniformly nonzero;
+\item \(B>0\), \(L-b>0\), and \(\alpha>0\);
+\item the exact standard-sector residual selects
+\(125(L-b)-36\alpha=0\), not its negative companion;
+\item the induced metric rotation has determinant \(+1\).
+\end{itemize}
+
+P486 does \emph{not} prove the missing P485 assertion that the invariant axis
+belongs to the full causal equal-endpoint plane. Thus it does not yet turn the
+P484 complex phase face into an exact theorem.
+
+P485 and P487 both failed before Gröbner-basis construction. The source
+requested \texttt{Poly(..., domain=QQ)} after the parity-basis transformation,
+but a coefficient remained as \(-4\sqrt2\). The correct classification is
+\statusFailed{}, not refutation. The obstruction is representational and
+repairable because \(\sqrt2\in\Q(\alpha)\).
+
+P475 then entered the original full fourteen-variable lexicographic Gröbner
+computation. It was manually interrupted at the user's request after more
+than twelve hours. No basis, elimination polynomial, or result JSON was
+returned. Its status is therefore \statusStopped{} and its mathematical
+question remains \statusOpen{}.
+
+\begin{center}\small
+\begin{longtable}{@{}p{0.13\textwidth}p{0.24\textwidth}p{0.46\textwidth}@{}}
+\toprule
+\textbf{Program} & \textbf{Execution status} & \textbf{Scientific status}\\ \midrule\endhead
+P486 & Completed & \statusCAP{} premise certificate O188\\
+P485 & Failed before Gröbner & \statusOpen{}; no causal-axis verdict\\
+P487 & Failed before Gröbner & \statusOpen{}; no relation for \(L\)\\
+P475 unlimited & Manually interrupted & \statusOpen{}; no basis and no no-go\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+The principal methodological result of this checkpoint is epistemic as well
+as algebraic: a long calculation has been stopped without turning incomplete
+machine work into evidence. The durable positive mathematics is P486 plus the
+new exact coefficient-closure identity O191.
+
+\chapter{Inherited exact problem}
+
+\section{The reduced three-slot operator problem}
+
+The campaign operates downstream of the declared finite three-slot process
+tester. For the compressed Hermitian process difference \(\Delta\), the
+inner value at a positive comb normalizer \(N\) is
+\[
+ F(N)=\frac12\left\|N^{1/2}\Delta N^{1/2}\right\|_1.
+\]
+P473 certified, inside a rational thirteen-dimensional box, a positive
+solution of the structured Riccati equation
+\[
+ X_3 N X_3=\frac14\Delta N\Delta,                                  \tag{2.1}
+\]
+and used the exact causal block pattern and trace telescope to establish
+primal--dual attainment. The value lies in
+\[
+ 0.5233281002710117\le L\le0.5233281002710717.                      \tag{2.2}
+\]
+Root uniqueness is certified only inside that local real chart.
+
+\section{Parity form and the complex tangent question}
+
+The exact P484 parity representation splits the active Riccati system into
+three-dimensional blocks
+\[
+ X_+N_0X_+=\frac14CN_0C^{\mathsf T},\qquad
+ X_-N_0X_-=\frac14C^{\mathsf T}N_0C.                               \tag{2.3}
+\]
+An antisymmetric imaginary causal direction is parametrized by one scalar
+\(\rho\). Its linearized contact condition reduces to six affine equations
+\[
+ c_j(z)\rho+d_j(z)=0,\qquad j=0,\ldots,5,                          \tag{2.4}
+\]
+where \(z\) denotes the exact real Riccati variables and
+\(\alpha=\sin(\pi/8)\).
+
+Choosing a reference equation \(r\) with \(c_r\ne0\), consistency is
+equivalent to five polynomial identities
+\[
+ c_r d_j-c_jd_r=0,\qquad j\ne r.                                  \tag{2.5}
+\]
+P485 was designed to test whether these five polynomials belong to the
+localized positive-branch Riccati ideal. This is the precise missing theorem;
+neither numerical near-zero values nor orientation alone suffice.
+
+\section{Exact coefficient field}
+
+All trigonometric input is generated by
+\[
+ \alpha=\sin(\pi/8),\qquad
+ 8\alpha^4-8\alpha^2+1=0,                                         \tag{2.6}
+\]
+with
+\[
+ \sin(\pi/4)=1-2\alpha^2,qquad
+ \sin(3\pi/8)=3\alpha-4\alpha^3.                                 \tag{2.7}
+\]
+Thus the intended coefficient field is the degree-four algebraic field
+\(\Q(\alpha)\), represented computationally by adjoining the polynomial
+(2.6) to rational polynomial equations.
+
+\chapter{P486: completed orientation and localization certificate}
+
+\section{Uniform determinant payments}
+
+P486 evaluated exact rational polynomial intervals over the complete P473
+box. The key enclosures are
+\begin{align*}
+ \det C &\in [0.04328307091427969,\,0.04328307091427969],\\
+ \det P_{3,5,6}
+ &\in[-0.15345958532886037,\,-0.1534595852158078],\\
+ c_r&\in[-0.03682747265490332,\,-0.03682747265474969],\\
+ B&\in[0.0687772109049226,\,0.0687772109049826],\\
+ L-b&\in[0.1102128285210847,\,0.1102128285212047].                 \tag{3.1}
+\end{align*}
+The displayed decimals summarize stored rational endpoints; the sign tests
+were performed on the rational endpoints, not by floating rounding.
+
+The nonzero pivot \(P_{3,5,6}\) licenses exact Cramer/adjugate elimination of
+the three normalizer coordinates \(A,B,u\) on this local branch. The nonzero
+reference coefficient \(c_r\) licenses
+\[
+ \rho=-\frac{d_r}{c_r}.                                            \tag{3.2}
+\]
+These facts are prerequisites for P485 and P487; they do not themselves make
+the remaining equations vanish.
+
+\section{Positive standard branch}
+
+The standard antisymmetric sector gives the exact factorization
+\[
+ -\frac{B}{15625}
+ \bigl(-125L+125b+36\alpha\bigr)
+ \bigl(125L-125b+36\alpha\bigr)=0.                                \tag{3.3}
+\]
+On the certified box, \(B>0\), \(L-b>0\), and \(\alpha>0\). The factor
+\(125(L-b)+36\alpha\) is strictly positive, hence (3.3) selects
+\[
+ 125(L-b)-36\alpha=0,
+ \qquad b=L-\frac{36}{125}\alpha.                                 \tag{3.4}
+\]
+This is not a heuristic branch choice. It is an exact consequence of the
+factorization and certified signs.
+
+\section{Orientation theorem}
+
+Define
+\[
+ \mathcal B=X_-^{-1}\frac{C^{\mathsf T}}2.
+\]
+The second identity in (2.3) gives
+\[
+ \mathcal B N_0\mathcal B^{\mathsf T}=N_0.                         \tag{3.5}
+\]
+Taking determinants yields \((\det\mathcal B)^2=1\). P473 supplies
+\(X_->0\), so \(\det X_->0\); P486 supplies \(\det C>0\). Therefore
+\[
+ \det\mathcal B=+1.                                                \tag{3.6}
+\]
+This proves that \(\mathcal B\) is an orientation-preserving isometry of the
+positive metric \(N_0\). In odd dimension it has a fixed axis.
+
+The exact boundary is essential: (3.6) proves existence of an invariant axis,
+but it does not prove that this axis satisfies the independent causal
+equal-endpoint constraint. P484 already supplied an exact counterexample to
+the claim that odd dimension plus metric orthogonality alone would force that
+membership. P485 remains necessary.
+
+\section{Verdict}
+
+\statusCAP{} O188 is accepted in its declared scope. It pays every explicit
+orientation, branch, pivot, and reference-nonvanishing premise used by the
+proposed reduced computations. It does not prove the complex phase face,
+full-cone nonuniqueness, or any physical interpretation.
+
+\chapter{P485: intended theorem and actual failure}
+
+\section{Exact ideal-membership design}
+
+Let \(I_+\) be generated by the nine post-pivot active Riccati residuals, the
+minimal polynomial (2.6), and the localizer equation
+\[
+ t\,\det P_{3,5,6}-1=0.                                            \tag{4.1}
+\]
+Equation (3.4) has already been substituted. P485 asks whether each
+consistency polynomial in (2.5) reduces to zero modulo a Gröbner basis of
+\(I_+\). A successful certificate, combined with \(c_r\ne0\), would produce
+one exact \(\rho\). Together with strict positivity of P473 this would prove
+that a nontrivial local complex optimal segment exists in the declared finite
+comb and would refute uniqueness over the full complex causal cone.
+
+That theorem was never reached.
+
+\section{Observed exception}
+
+During construction of the reduced polynomial system, the program called
+\[
+ \texttt{Poly(expression, variables, domain=QQ)}.
+\]
+At least one transformed expression contained the coefficient
+\(-4\sqrt2\). SymPy therefore raised
+\begin{Verbatim}[fontsize=\small]
+CoercionFailed: expected `Rational` object, got -4*sqrt(2)
+\end{Verbatim}
+before the Gröbner-basis call. The stored status and traceback identify the
+failure point in \texttt{reduced\_branch\_system}.
+
+The correct verdict is:
+\begin{itemize}
+\item no ideal basis was computed;
+\item no target remainder was computed;
+\item no causal-axis identity was proved;
+\item no counterexample was produced;
+\item no algebraic complexity no-go follows.
+\end{itemize}
+
+\section{Why this is representational, not mathematical}
+
+The explicit square root enters through the orthonormal parity basis. It is
+not a genuinely new field generator. Indeed,
+\[
+ \alpha^2=\sin^2(\pi/8)
+ =\frac{1-\cos(\pi/4)}2
+ =\frac{2-\sqrt2}{4}.
+\]
+Consequently
+\[
+ \boxed{\sqrt2=2-4\alpha^2}.                                      \tag{4.2}
+\]
+This defines O191, the coefficient-field closure map. After substituting
+(4.2), every such parity coefficient is again polynomial over \(\Q\) in
+\(\alpha\), subject to (2.6).
+
+Equation (4.2) is \statusProven{}. The repaired P485 computation is
+\statusOpen{} because the substitution and subsequent ideal computation have
+not been executed in this campaign.
+
+\chapter{P487: structure-aware elimination and the same early failure}
+
+P487 was intended to improve the blind P475 workflow in three steps:
+\begin{enumerate}
+\item eliminate \(A,B,u\) through the certified nonzero pivot;
+\item select the positive branch (3.4);
+\item localize at the pivot and order \(L\) last in an exact lexicographic
+elimination.
+\end{enumerate}
+This is mathematically preferable to attacking all fourteen variables at
+once. A returned polynomial solely in \(L\) would still require factor
+isolation at the P473 interval, irreducibility, and exact substitution before
+being called a minimal polynomial.
+
+P487 used the same reduction helper as P485 and encountered the same
+\(-4\sqrt2\) coercion failure before starting its lexicographic Gröbner
+calculation. Therefore it returned no basis and no relation in \(L\).
+
+The failure does not invalidate the structural reduction: O188 licenses the
+pivot and branch, and O191 gives an exact coefficient normalization. It does
+show that a program specification is incomplete until its coefficient domain
+is closed under every basis transformation actually used.
+
+\chapter{P475 unlimited: manual interruption}
+
+P475 retained the original full polynomial system:
+\begin{itemize}
+\item fourteen variables;
+\item thirteen Riccati equations plus the algebraic equation (2.6);
+\item exact rational coefficients after direct sine substitution;
+\item lexicographic order with \(L\) last;
+\item no application-level resource limit.
+\end{itemize}
+
+It entered the stage \texttt{full\_lex\_groebner\_running} with fourteen
+generators. The job remained there for more than twelve hours. At the user's
+request the encompassing execution session was sent an interrupt and exited
+with code 130. A process check after interruption found no remaining P475,
+P485, P487, or campaign runner.
+
+No compressed basis file and no
+\texttt{FIN\_Program\_475\_Unlimited\_Results.json} were produced. Thus the
+manual stop means only:
+\[
+ \text{this particular exact computation did not finish before interruption.}
+\]
+It does \emph{not} mean that \(L\) is transcendental, that the ideal is
+positive-dimensional, that no elimination relation exists, or that exact
+elimination is impossible.
+
+This result is consistent with the earlier 45-second, 3-GiB P475 test but is
+not logically stronger as a theorem: both are observations about workflows,
+not algebraic impossibility proofs.
+
+\chapter{Epistemic ledger and nonclaims}
+
+\begin{center}\small
+\begin{longtable}{@{}p{0.33\textwidth}p{0.20\textwidth}p{0.32\textwidth}@{}}
+\toprule
+\textbf{Statement} & \textbf{Status} & \textbf{Reason}\\ \midrule\endhead
+P473 local positive Riccati root and attainment & \statusCAP{} & Inherited exact rational interval certificate\\
+P486 signs, branch, pivot, and orientation & \statusCAP{} & Exact symbolic identities and rational intervals\\
+\(\sqrt2=2-4\alpha^2\) & \statusProven{} & Elementary identity for \(\alpha=\sin(\pi/8)\)\\
+P485 causal-axis ideal membership & \statusOpen{} & Program failed before basis construction\\
+Exact complex phase face & \statusOpen{} & Causal equal-endpoint identity remains unpaid\\
+P487 relation in \(L\) & \statusOpen{} & Program failed before elimination\\
+P475 full lex result & \statusOpen{} & Manually interrupted; no basis returned\\
+Minimal polynomial of \(L\) & \statusOpen{} & No isolated irreducible factor\\
+Full complex optimizer uniqueness & \statusOpen{} & Strong evidence against; exact phase face absent\\
+Selector / QW-2191 & \statusBoundary{} & No non-premise strict source\\
+Dimensional physics & \statusBoundary{} & No canonical time, length, action, mass, or energy unit\\
+Laboratory realization & \statusBoundary{} & No apparatus, calibration, custody, or event record\\
+Legacy--strict role transfer & \statusBoundary{} & Completion and transfer theorem absent\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+In particular, this campaign exports no new kernel theorem, no strict
+selector, no dimensional constant, no physical apparatus, no laboratory
+evidence, no legacy-to-strict completion, no physical-role transfer, no
+\(L_{\mathrm{total}}\), and no Standard Model, gravity, cosmological, or
+Theory-of-Everything closure.
+
+\chapter{A safer restart specification}
+
+The present campaign is stopped and must not restart automatically. If a
+future explicit instruction reopens it, the smallest responsible sequence is:
+
+\section{P485R: coefficient closure before algebra}
+\begin{enumerate}
+\item Apply the exact normalization
+\(\sqrt2\mapsto2-4\alpha^2\) after every parity-basis transformation.
+\item Assert that every coefficient belongs to
+\(\Q[\alpha,z]\) before constructing \texttt{Poly(..., domain=QQ)}.
+\item Add a unit test that deliberately searches all expressions for
+\texttt{sqrt(2)} and algebraic-number atoms.
+\item Serialize generator and target statistics before entering a basis
+computation.
+\item Run a short bounded dry run and preserve its checkpoint even if the
+subsequent exact calculation is stopped.
+\end{enumerate}
+
+\section{P485M: modular scouting before characteristic zero}
+
+Reduce the rationalized ideal modulo several good primes, excluding primes
+that annihilate the certified pivot denominators. Measure dimension, leading
+monomials, degree growth, and target remainders. Agreement across primes is
+not a characteristic-zero proof, but disagreement can cheaply expose a
+faulty ordering or positive-dimensional branch before another long run.
+
+\section{P485C: check the five targets separately}
+
+Rather than computing more than needed, seek explicit ideal certificates
+\[
+ q_j=\sum_k h_{jk}g_k
+\]
+for the five consistency polynomials \(q_j\). A sparse syzygy or
+normal-form computation may be much cheaper than a complete elimination
+basis. Each target should produce its own durable result.
+
+\section{P487R: structure-aware value elimination}
+
+Only after the normalized reduced ideal passes exact construction tests
+should value elimination be attempted. Use graded order first, inspect
+dimension and Hilbert data, and convert to lexicographic form only if the
+branch is certified zero-dimensional. A returned factor must be isolated by
+the P473 interval and proved irreducible before promotion.
+
+\section{Checkpoint policy}
+
+Every future long calculation should emit a PDF-ready state packet at these
+milestones:
+\begin{enumerate}
+\item exact system constructed and coefficient audit passed;
+\item branch and localizer verified against O188;
+\item modular scouts completed;
+\item each target remainder or certificate completed;
+\item elimination factor isolated and independently replayed.
+\end{enumerate}
+This policy addresses the practical risk that computational credits or wall
+time end before a final monograph exists.
+
+\chapter{Conclusions}
+
+The stopped campaign contains one genuine advance and three honest
+nonresults.
+
+The advance is P486: the local P473 solution is now surrounded by an exact
+orientation-and-localization premise certificate. The correct positive
+standard branch is fixed, the elimination pivot and tangent reference are
+nonzero, and the induced metric rotation has determinant \(+1\).
+
+The remaining causal-axis theorem was not decided. P485 and P487 were blocked
+by a coefficient representation error before algebraic elimination began.
+The error is exactly repairable inside the existing field by O191,
+\(\sqrt2=2-4\alpha^2\), but the repaired computations have not been run.
+P475 was manually interrupted and provides no mathematical verdict.
+
+Therefore the deepest conclusion justified by this checkpoint is modest and
+precise: the orientation premises are certified, the computational path is
+repairable, and the central exact phase-face and value-elimination questions
+remain open. No background computation remains active, and no restart is
+authorized by this document.
+
+\appendix
+\chapter{Artifact map}
+
+\begin{center}\small
+\begin{longtable}{@{}p{0.42\textwidth}p{0.44\textwidth}@{}}
+\toprule
+\textbf{Artifact} & \textbf{Role}\\ \midrule\endhead
+\url{FIN_Program_486_Results.json} & Completed exact interval/symbolic certificate\\
+\url{FIN_Program_485_Unlimited_Status.json} & Stored P485 exception and traceback\\
+\url{FIN_Program_487_Unlimited_Status.json} & Stored P487 exception and traceback\\
+\url{FIN_Program_475_Unlimited_Status.json} & Manual-stop marker and last active stage\\
+\url{FIN_Unlimited_Research_Pipeline_State.json} & Corrected campaign terminal state\\
+\url{FIN_Local_Research_Checkpoint_P486_P485_P487_P475_Stopped_State.json} & Machine-readable epistemic ledger\\
+\url{fin_phase_exact_algebra.py} & Shared exact construction; contains the identified pre-repair domain defect\\
+\url{fin_program_486.py} & Completed P486 implementation\\
+\url{fin_program_485_unlimited.py} & P485 intended ideal-membership implementation\\
+\url{fin_program_487_unlimited.py} & P487 intended structure-aware elimination\\
+\url{fin_program_475_unlimited.py} & Original full lexicographic cross-check\\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\chapter{Status vocabulary}
+
+\statusProven{} denotes an exact analytic consequence. \statusCAP{} denotes
+a finite exact rational or outward-interval certificate whose artifacts are
+available locally. \statusOpen{} denotes a proposition not decided by the
+current artifacts. \statusFailed{} denotes a software or representation
+failure before the scientific decision point. \statusStopped{} denotes a
+manual interruption with no returned result. These categories are not
+interchangeable.
+
+\end{document}

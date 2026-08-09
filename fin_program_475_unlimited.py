@@ -13,7 +13,7 @@ import traceback
 
 import sympy as sp
 
-import fin_programs_471_472_473 as p471
+import fin_phase_exact_algebra as algebra
 
 
 ROOT = Path(__file__).resolve().parent
@@ -38,7 +38,7 @@ def stamp(stage: str, **extra: object) -> None:
 def main() -> None:
     started = time.monotonic()
     stamp("constructing_full_14_variable_system")
-    system = p471.polynomial_system()
+    system = algebra.polynomial_system()
     alpha = sp.symbols("alpha", real=True)
     s1, s2, s3 = system["sines"]
     substitution = {

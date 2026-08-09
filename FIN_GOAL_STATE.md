@@ -1,10 +1,10 @@
 # FIN Goal-Mode State
 
-- Date: 2026-08-01
-- Active durable checkpoint: `FIN_Local_Research_Checkpoint_P475_P480_P484_EN.pdf`
-- Latest completed scientific release: 10.46 / P475, P480, P484
-- Current batch: P485, P486, P487
-- Current phase: O181 exact replay is dependency-minimal; complex phase-face remains strong evidence with one exact causal-axis identity open; blind algebraic elimination is resource-gated
+- Date: 2026-08-02
+- Active durable checkpoint: `FIN_Local_Research_Checkpoint_P486_P485_P487_P475_Stopped_EN.pdf`
+- Latest completed scientific release: 10.47 / stopped P486-P485-P487-P475 campaign
+- Current batch: stopped by user; no background computation active
+- Current phase: P486 orientation/localization premises are certified; P485/P487 failed before Groebner on a repairable coefficient-domain defect; P475 was interrupted without a result
 - Physical evidence admitted: no
 - QW-2191 discharged: no
 - Dimensional source exported: no
@@ -13,9 +13,9 @@
 
 ## Resume
 
-1. Validate the Release-10.46 PDF and SHA-256 manifest.
-2. Re-run `test_fin_programs_480_484.py`; P480 must accept the genuine certificate and reject the zero-preconditioner corruption.
-3. For P485, prove an exact ideal identity forcing the P473 fixed covector into the causal equal-endpoint plane, or export a certified counterexample. Do not infer this from odd dimension alone.
-4. For P486, certify determinant signs and all orientation premises uniformly on the exact P473 box.
-5. For P487, exploit the exact affine `A/B/u` structure and a certified pivot before attempting reduced elimination; do not repeat blind 14-variable lexicographic elimination.
-6. Compile the next self-contained PDF after P485--P487 or immediately after an earlier theorem, counterexample, or bounded no-go.
+1. Do not restart automatically.
+2. On an explicit future request, first normalize `sqrt(2)` as
+   `2-4*alpha**2` and unit-test coefficient closure over `QQ[alpha]`.
+3. Use bounded, durable stages: construction audit, modular scout, separate
+   P485 target certificates, then structure-aware P487 elimination.
+4. Never interpret the stopped P475 calculation as a mathematical no-go.

@@ -16,13 +16,80 @@ from typing import Any, Iterable
 import numpy as np
 import sympy as sp
 
-import fin_programs_471_472_473 as p471
-import fin_program_484 as p484
-
-
 ROOT = Path(__file__).resolve().parent
 CERTIFICATE_PATH = ROOT / "FIN_Program_480_Standalone_Certificate.json"
 Interval = tuple[Fraction, Fraction]
+
+
+def polynomial_system() -> dict[str, Any]:
+    """Construct the portable exact 13-variable Riccati/KKT system."""
+
+    A, B, u = sp.symbols("A B u", real=True)
+    L, a, b, c, d, e, f, g, h, i = sp.symbols(
+        "L a b c d e f g h i", real=True
+    )
+    s1, s2, s3 = sp.symbols("s1 s2 s3", real=True)
+    variables = (A, B, u, L, a, b, c, d, e, f, g, h, i)
+    C0 = sp.Rational(1, 2)-A-2*B
+    left = sp.Matrix([[A,u,u,0],[u,B,0,-u],[u,0,B,-u],[0,-u,-u,C0]])
+    right = sp.Matrix([[C0,-u,-u,0],[-u,B,0,u],[-u,0,B,u],[0,u,u,A]])
+    normalizer = sp.diag(left, right)
+    x2 = sp.Matrix([[L,a,a,c],[a,L,b,a],[a,b,L,a],[c,a,a,L]])
+    cross = sp.Matrix([[d,e,e,f],[g,h,h,e],[g,h,h,e],[i,g,g,d]])
+    x3 = x2.row_join(cross).col_join(cross.T.row_join(x2))
+    q = sp.Rational(4, 5)
+    sine = {0:0, 1:s1, 2:s2, 3:s3, -1:-s1, -2:-s2, -3:-s3}
+    delta = sp.zeros(8)
+    for row in range(8):
+        for column in range(8):
+            exponent = (row ^ column).bit_count()
+            difference = row.bit_count()-column.bit_count()
+            delta[row, column] = 2*sp.I*q**exponent*sine[difference]
+    residual = sp.expand(x3*normalizer*x3-delta*normalizer*delta/4)
+    groups: list[tuple[sp.Expr, list[tuple[int, int]]]] = []
+    for row in range(8):
+        for column in range(row, 8):
+            expression = sp.expand(residual[row, column])
+            for index, (representative, positions) in enumerate(groups):
+                if sp.expand(expression-representative) == 0:
+                    positions.append((row, column))
+                    groups[index] = (representative, positions)
+                    break
+            else:
+                groups.append((expression, [(row, column)]))
+    if len(groups) != 13:
+        raise AssertionError(f"expected 13 residual orbits, found {len(groups)}")
+    equations = tuple(group[0] for group in groups)
+    return {
+        "variables": variables, "sines": (s1,s2,s3),
+        "normalizer": normalizer, "x3": x3, "delta": delta,
+        "equations": equations, "groups": [positions for _, positions in groups],
+    }
+
+
+def six_dimensional_symmetry_basis() -> sp.Matrix:
+    root_two = sp.sqrt(2)
+    basis = sp.zeros(8, 6)
+    for row, value in ((0,1/root_two),(7,1/root_two)): basis[row,0] = value
+    for row in (1,2,5,6): basis[row,1] = sp.Rational(1,2)
+    for row, value in ((3,1/root_two),(4,1/root_two)): basis[row,2] = value
+    for row, value in ((0,1/root_two),(7,-1/root_two)): basis[row,3] = value
+    for row, value in ((1,sp.Rational(1,2)),(2,sp.Rational(1,2)),
+                       (5,-sp.Rational(1,2)),(6,-sp.Rational(1,2))):
+        basis[row,4] = value
+    for row, value in ((3,1/root_two),(4,-1/root_two)): basis[row,5] = value
+    return basis
+
+
+def exact_representation_audit(system: dict[str, Any]) -> dict[str, Any]:
+    transform = six_dimensional_symmetry_basis()
+    reduced_n = sp.simplify(transform.T*system["normalizer"]*transform)
+    reduced_x = sp.simplify(transform.T*system["x3"]*transform)
+    reduced_k = sp.simplify(transform.T*(system["delta"]/sp.I)*transform)
+    return {
+        "N_plus": reduced_n[:3,:3], "X_plus": reduced_x[:3,:3],
+        "X_minus": reduced_x[3:,3:], "C": reduced_k[:3,3:],
+    }
 
 
 def json_ready(value: Any) -> Any:
@@ -46,14 +113,15 @@ def json_ready(value: Any) -> Any:
 def exact_context() -> dict[str, Any]:
     """Build the exact one-generator parity/Riccati context."""
 
-    system = p471.polynomial_system()
-    representation = p484.exact_representation_audit(system)
+    system = polynomial_system()
+    representation = exact_representation_audit(system)
     alpha = sp.symbols("alpha", real=True)
     s1, s2, s3 = system["sines"]
     sine_substitution = {
         s1: alpha,
         s2: 1 - 2 * alpha**2,
         s3: 3 * alpha - 4 * alpha**3,
+        sp.sqrt(2): 2 - 4 * alpha**2,
     }
     specialize = lambda value: sp.expand(value.subs(sine_substitution))
     n0 = specialize(representation["N_plus"])
