@@ -1,0 +1,134 @@
+{
+  "audit": {
+    "cycle_detected": false,
+    "missing_dependencies": [],
+    "node_count": 6,
+    "schema_failures": [],
+    "valid": true
+  },
+  "canonical_payload_sha256": "79259faf581ecd506124ad1a52465a5fe1e1bc7b95bb8b616ea259598441da81",
+  "schema": "FIN-proof-interface-1.0",
+  "theorems": [
+    {
+      "assumptions": [
+        "A is self-adjoint",
+        "Av=lambda*v",
+        "|v_x| is constant",
+        "r>0",
+        "g>0",
+        "the supplied gain-saturation flow holds"
+      ],
+      "claim_level": "conditional_exact",
+      "conclusion": "sqrt(r/g)/|v_x| times v rotating at lambda is an exact persistent solution",
+      "depends_on": [],
+      "id": "T488-CYCLE",
+      "nonclaims": [
+        "localization",
+        "physical source of r or g"
+      ],
+      "proof_skeleton": [
+        "substitute the rotating ansatz",
+        "cancel r-g|psi_x|^2",
+        "use Av=lambda*v"
+      ]
+    },
+    {
+      "assumptions": [
+        "a phase record exp(-itA) is used",
+        "c>0"
+      ],
+      "claim_level": "exact",
+      "conclusion": "A->A/c and t->ct leave every phase record unchanged",
+      "depends_on": [
+        "T488-CYCLE"
+      ],
+      "id": "T489-SCALE",
+      "nonclaims": [
+        "absolute time unit",
+        "clock selection"
+      ],
+      "proof_skeleton": [
+        "compute exp(-i(ct)(A/c))=exp(-itA)"
+      ]
+    },
+    {
+      "assumptions": [
+        "A=sI-W",
+        "x is nonzero"
+      ],
+      "claim_level": "exact",
+      "conclusion": "R_W(x)=s-R_A(x)",
+      "depends_on": [],
+      "id": "T492-COMPLEMENT",
+      "nonclaims": [
+        "a dynamical resonance selector"
+      ],
+      "proof_skeleton": [
+        "expand x*(sI-W)x",
+        "divide by x*x"
+      ]
+    },
+    {
+      "assumptions": [
+        "c_0=1",
+        "q_0=0",
+        "theta_0=phi",
+        "the exponent-lift recurrence holds"
+      ],
+      "claim_level": "exact",
+      "conclusion": "c_d=(1+beta*d^eta)^-1 and K_d=a*c_d*cos(theta_d)",
+      "depends_on": [],
+      "id": "T493-INDUCTION",
+      "nonclaims": [
+        "parameter provenance",
+        "legacy role transfer"
+      ],
+      "proof_skeleton": [
+        "induct on q",
+        "invert the c update",
+        "telescope powers and phases"
+      ]
+    },
+    {
+      "assumptions": [
+        "the supplied focusing DNLS holds",
+        "mu=-1",
+        "g=1",
+        "one-site anti-continuum state"
+      ],
+      "claim_level": "conditional_exact_local",
+      "conclusion": "a unique local real stationary branch exists for sufficiently small kappa",
+      "depends_on": [],
+      "id": "T497-IFT",
+      "nonclaims": [
+        "global continuation theorem",
+        "physical nadsoliton"
+      ],
+      "proof_skeleton": [
+        "evaluate stationary residual",
+        "Jacobian is diag(-2,1,...,1)",
+        "apply the implicit-function theorem"
+      ]
+    },
+    {
+      "assumptions": [
+        "z_x is S1-valued",
+        "edge increments avoid the branch cut by epsilon",
+        "neighbor update differences are below epsilon"
+      ],
+      "claim_level": "exact",
+      "conclusion": "integer winding is preserved; midpoint geodesic refinement preserves winding",
+      "depends_on": [],
+      "id": "T503-WINDING",
+      "nonclaims": [
+        "kernel-derived phase field",
+        "particle identification"
+      ],
+      "proof_skeleton": [
+        "no edge crosses the principal branch",
+        "update increments telescope",
+        "refinement splits each increment in two"
+      ]
+    }
+  ]
+}

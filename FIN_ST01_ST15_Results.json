@@ -1,0 +1,1040 @@
+{
+  "ST01": {
+    "certificate_schema": {
+      "finite_target_and_error_metric": "required for L2",
+      "independent_external_prediction_and_record": "required for L5",
+      "internally_sourced_scales_symmetries_observables_parameters": "required for L4",
+      "mathematical_representation": "required for L1",
+      "physical_shadow_maps": [
+        "sector_or_vacuum_selector",
+        "dimensional_unit_map",
+        "coarse_graining_or_continuum_map",
+        "observable_pullback",
+        "preparation_family",
+        "environment_or_dilation",
+        "instrument_and_apparatus",
+        "system_composition_law",
+        "independent_record_map"
+      ],
+      "refinement_family_and_vanishing_intertwining_residual": "required for L3"
+    },
+    "composition_identity_residual": 2.8108601893111292e-15,
+    "composition_norm_bound_rhs": 64.88645291070175,
+    "composition_norm_lhs": 15.570953494269865,
+    "composition_theorem": "If C1 Phi-Psi C1=R1 and C2 Psi-Xi C2=R2, then (C2 C1)Phi-Xi(C2 C1)=C2 R1+R2 C1 and its norm is at most ||C2|| ||R1||+||R2|| ||C1||.",
+    "current_functional_calculus_level": "E1 exact mathematics / L1 physical representation",
+    "negative_control_missing_instrument_rejected": true,
+    "nonclaim": "The schema does not supply any missing physical map.",
+    "object": "Typed Physical-Shadow Certificate",
+    "program": "ST01",
+    "status": "proven_schema_and_composition_bound"
+  },
+  "ST02": {
+    "alias_margin_pi_minus_t_lambda_max": 2.040767094251032,
+    "altered_channel_rejected": true,
+    "altered_heat_generator_relative_residual": 0.023856149851005194,
+    "boundary": "This is a synthetic closed-loop validation, not independent physical tomography.",
+    "common_case_accepts": true,
+    "frozen_channel_scales": {
+      "beta": 0.8,
+      "t_heat": 0.61,
+      "t_unitary": 0.47,
+      "t_wave": 0.55,
+      "z_green": 0.7
+    },
+    "object": "Frozen Common-Generator Consistency Test",
+    "program": "ST02",
+    "relative_reconstruction_errors": {
+      "gibbs": 1.8602223244541063e-15,
+      "green": 3.00831520056983e-16,
+      "heat": 9.38560375090995e-16,
+      "unitary": 1.2809078217119407e-15,
+      "wave": 4.207959002864172e-15
+    },
+    "status": "proven_round_trip_and_executable_falsifier",
+    "uncontrolled_alias_relative_error": 0.9992840681980717,
+    "uncontrolled_alias_time": 3.0,
+    "wave_branch_margin_pi_minus_t_sqrt_lambda_max": 2.299862252899194
+  },
+  "ST03": {
+    "ensemble_summary": {
+      "isospectral_rotations": {
+        "markov_m_matrix_rate": 0.0,
+        "maximum_isospectral_error": 4.884981308350689e-15,
+        "median_dihedral_residual": 0.2852919079575561,
+        "median_kernel_law_fingerprint": 1.0859094474126079,
+        "minimum_kernel_law_fingerprint": 0.593710399710475,
+        "psd_rate": 1.0,
+        "sample_count": 1200
+      },
+      "positive_nonradial_graph": {
+        "markov_m_matrix_rate": 1.0,
+        "median_dihedral_residual": 0.2363831170302212,
+        "median_kernel_law_fingerprint": 1.062655007492896,
+        "minimum_kernel_law_fingerprint": 0.7209162092363908,
+        "psd_rate": 1.0,
+        "sample_count": 1200
+      },
+      "positive_radial": {
+        "markov_m_matrix_rate": 1.0,
+        "median_dihedral_residual": 3.3177317495707836e-16,
+        "median_kernel_law_fingerprint": 1.1619885144000568,
+        "minimum_kernel_law_fingerprint": 0.3262963092449679,
+        "psd_rate": 1.0,
+        "sample_count": 1200
+      },
+      "random_psd_fixed_zero_mode": {
+        "markov_m_matrix_rate": 0.0,
+        "median_dihedral_residual": 0.5155575829869378,
+        "median_kernel_law_fingerprint": 1.2718536445532558,
+        "minimum_kernel_law_fingerprint": 0.5313004788683442,
+        "psd_rate": 1.0,
+        "sample_count": 1200
+      },
+      "signed_radial_kernel": {
+        "markov_m_matrix_rate": 0.015,
+        "median_dihedral_residual": 3.146787735265471e-16,
+        "median_kernel_law_fingerprint": 2.443891471026851,
+        "minimum_kernel_law_fingerprint": 0.6227867772707604,
+        "psd_rate": 0.20416666666666666,
+        "sample_count": 1200
+      }
+    },
+    "isospectral_obstruction": "Orthogonal rotations fixing the zero mode preserve every eigenvalue while generically destroying vertex, dihedral and Markov structure; spectrum alone cannot identify the FIN geometry.",
+    "object": "Five-Class Generic-Operator Null Atlas",
+    "program": "ST03",
+    "specificity_result": "The frozen kernel-law fingerprint is highly specific to its defining formula in the sampled classes, but is an implementation fingerprint, not a physical prediction. No physics-specific invariant was found.",
+    "status": "strong_multiclass_null_falsification_and_isospectral_no_go",
+    "strict_metrics": {
+      "dihedral_residual": 3.1768739014906426e-16,
+      "kernel_law_fingerprint": 1.8129866073473578e-16,
+      "m_matrix_markov_condition": true,
+      "minimum_eigenvalue": 1.1926223897340549e-17,
+      "normalized_gap": 0.41635529370416546,
+      "reflection_commutator": 8.65017603654884e-17,
+      "translation_commutator": 9.988362926478247e-17
+    }
+  },
+  "ST04": {
+    "conditional_full_algebra_theorem": "A matrix commuting with a diagonal B with distinct entries is diagonal. If it also commutes with A and every off-diagonal A_xy is nonzero, all diagonal entries coincide. The joint commutant is scalar; the finite-dimensional Burnside theorem gives the full matrix algebra.",
+    "generated_algebra_dimensions": {
+      "A_plus_circulant_chiral_generator": 12,
+      "A_plus_distinct_vertex_labels": 144,
+      "A_plus_unoriented_anchor_distance": 74,
+      "Cstar_A": 7
+    },
+    "minimum_additional_generator_count": 1,
+    "object": "One-Generator Algebra Completion",
+    "orientation_cost": "B=diag(0,...,11) supplies labels and an orientation externally. The anchor preserves reflection and the chiral circulant remains inside a commuting Fourier algebra; neither is a strict selector theorem.",
+    "program": "ST04",
+    "status": "proven_conditional_minimal_completion_with_selector_cost"
+  },
+  "ST05": {
+    "boundary": "This does not prove that no canonical FIN_N family can be added; it proves that current A_12 does not determine one.",
+    "continuation_rows": [
+      {
+        "N": 12,
+        "dense_scaled_gap": 0.7541211542070796,
+        "direct_integer_extension_markov": true,
+        "direct_integer_extension_minimum_weight": 0.011070817321442113,
+        "direct_integer_extension_psd": true,
+        "local_gap": 0.7541211542070796
+      },
+      {
+        "N": 24,
+        "dense_scaled_gap": 0.5933587832879577,
+        "direct_integer_extension_markov": false,
+        "direct_integer_extension_minimum_weight": -0.008257210373477082,
+        "direct_integer_extension_psd": true,
+        "local_gap": 0.24198631348424138
+      },
+      {
+        "N": 48,
+        "dense_scaled_gap": 0.5326797916406463,
+        "direct_integer_extension_markov": false,
+        "direct_integer_extension_minimum_weight": -0.008269073207303619,
+        "direct_integer_extension_psd": false,
+        "local_gap": 0.06410804939767989
+      },
+      {
+        "N": 96,
+        "dense_scaled_gap": 0.5064795741136097,
+        "direct_integer_extension_markov": false,
+        "direct_integer_extension_minimum_weight": -0.008269073207303619,
+        "direct_integer_extension_psd": false,
+        "local_gap": 0.016263693099357032
+      },
+      {
+        "N": 192,
+        "dense_scaled_gap": 0.49427373741531455,
+        "direct_integer_extension_markov": false,
+        "direct_integer_extension_minimum_weight": -0.008269073207303619,
+        "direct_integer_extension_psd": false,
+        "local_gap": 0.004080892827956027
+      }
+    ],
+    "dense_scaled_gap_scaling_exponent": -0.08635478516358758,
+    "endpoint_reconstruction_error_N12": 0.0,
+    "first_negative_weight_in_direct_integer_extension": 8,
+    "local_gap_scaling_exponent": -1.964854107320211,
+    "object": "Continuum-Extension Nonuniqueness Certificate",
+    "program": "ST05",
+    "status": "proven_nonidentifiability_and_naive_extension_markov_obstruction",
+    "theorem": "A single finite endpoint A_12 cannot select a unique refinement family: infinitely many sequences agree at N=12 and differ for every larger N. The two explicit continuations already have incompatible gap scaling."
+  },
+  "ST06": {
+    "boundary": "An approximate cone may exist only after a new refinement/localization theorem; Lorentzian signature is not generated here.",
+    "exact_derivative_statement": "For x!=y, dU_t(x,y)/dt at t=0 equals -i A_xy=i W_xy. Since strict W_xy is nonzero at every cyclic distance 1,...,6, every vertex has an immediate first-order unitary amplitude outside any nontrivial local cone. Heat has the same first-order tail, while cos(t sqrt(A)) has the direct far term -t^2 A_xy/2.",
+    "minimum_direct_far_coupling": 0.011070817321442113,
+    "nearest_neighbor_control_rows": [
+      {
+        "heat_mass_outside_radius": 2.2071359533425173e-07,
+        "time": 0.001,
+        "unitary_probability_outside_radius": 2.4395427124400874e-14
+      },
+      {
+        "heat_mass_outside_radius": 2.1916481379473776e-05,
+        "time": 0.01,
+        "unitary_probability_outside_radius": 2.4395130751928293e-10
+      },
+      {
+        "heat_mass_outside_radius": 0.000531112287654939,
+        "time": 0.05,
+        "unitary_probability_outside_radius": 1.5242466878557444e-07
+      },
+      {
+        "heat_mass_outside_radius": 0.002044069808379453,
+        "time": 0.1,
+        "unitary_probability_outside_radius": 2.436551068140126e-06
+      }
+    ],
+    "object": "Exact-Cone Obstruction and Leakage Audit",
+    "program": "ST06",
+    "status": "proven_no_exact_cyclic_causal_cone_for_frozen_strict_kernel",
+    "strict_rows": [
+      {
+        "heat_mass_outside_radius": 0.0007200222818518407,
+        "time": 0.001,
+        "unitary_probability_outside_radius": 9.619052676145426e-08
+      },
+      {
+        "heat_mass_outside_radius": 0.007172025850768053,
+        "time": 0.01,
+        "unitary_probability_outside_radius": 9.619170960447204e-06
+      },
+      {
+        "heat_mass_outside_radius": 0.035237218818954294,
+        "time": 0.05,
+        "unitary_probability_outside_radius": 0.00024055089338751093
+      },
+      {
+        "heat_mass_outside_radius": 0.06893608885869787,
+        "time": 0.1,
+        "unitary_probability_outside_radius": 0.0009630954484388907
+      }
+    ]
+  },
+  "ST07": {
+    "axiom_removal_ledger": [
+      {
+        "failure": "no entropy, expectation or operational preparation is defined",
+        "removed": "state rho"
+      },
+      {
+        "failure": "probabilities do not identify energy levels",
+        "removed": "Hamiltonian H"
+      },
+      {
+        "failure": "no equilibrium temperature or heat direction is defined",
+        "removed": "beta/bath"
+      },
+      {
+        "failure": "a state alone defines neither work, heat nor erasure",
+        "removed": "process family P"
+      },
+      {
+        "failure": "all outputs remain dimensionless and scale-equivariant",
+        "removed": "energy/action unit E_*"
+      }
+    ],
+    "boundary": "FIN supplies Shannon-compatible mathematics but does not currently source H, beta, the bath, the process or E_*.",
+    "gibbs_scale_orbit_error": 2.0253964504621835e-16,
+    "minimal_equilibrium_semantics": [
+      "state rho",
+      "Hamiltonian H",
+      "inverse bath temperature beta",
+      "energy unit E_*"
+    ],
+    "minimal_thermodynamic_process_tuple": [
+      "state rho",
+      "Hamiltonian H",
+      "inverse bath temperature beta",
+      "process family P",
+      "energy/action unit E_*"
+    ],
+    "object": "Conditional Relative-Entropy/Free-Energy Bridge",
+    "program": "ST07",
+    "relative_entropy_free_energy_identity_error": 6.439293542825908e-15,
+    "status": "proven_conditional_bridge_and_scale_nonidentifiability"
+  },
+  "ST08": {
+    "boundary": "The link phases, U(1) group and flux were inserted. A global DNLS phase symmetry is not a local gauge law, and no electric field, Gauss constraint or Yang-Mills dynamics is derived.",
+    "continuity_equation_residual": 6.672002579236221e-17,
+    "flux": 0.37,
+    "gauge_covariance_residual": 6.246810330277654e-16,
+    "holonomy_invariance_residual": 3.885780586188048e-16,
+    "magnetic_laplacian_minimum_eigenvalue": 0.000446777370539117,
+    "object": "Inserted U(1) Link Connection",
+    "program": "ST08",
+    "status": "proven_conditional_U1_receiver"
+  },
+  "ST09": {
+    "boundary": "The saturation law, R and mu are constructed additional axioms, not strict-core consequences; soliton orbital stability is not proved.",
+    "effective_density_energy": "-R**2*g**2*rho**2/(2*b*(R + rho)**2) + mu*rho/2",
+    "global_lower_bound": -24.0,
+    "joint_density_energy": "b*chi**2/2 - chi*g*rho/(1 + rho/R) + mu*rho/2",
+    "large_amplitude_energy": 726.1147866031341,
+    "object": "Coercive Saturating-Mediator Completion",
+    "parameters": {
+      "R": 2.0,
+      "b": 1.0,
+      "g": 1.0,
+      "mu": 0.15
+    },
+    "program": "ST09",
+    "sample_minimum_energy": -8.195593506595191,
+    "small_density_series_through_rho3": "mu*rho/2 - g**2*rho**2/(2*b) + g**2*rho**3/(R*b)",
+    "stationary_mediator": "R*g*rho/(b*(R + rho))",
+    "status": "proven_axiomatic_global_coercive_completion",
+    "theorem": "For b,g,R,mu>0, stationary elimination gives -g^2 q(rho)^2/(2b)+mu rho/2, q=rho/(1+rho/R). It has the P527 attractive quartic jet, is bounded below by -N g^2 R^2/(2b), and the positive mu term makes the finite-dimensional energy coercive."
+  },
+  "ST10": {
+    "hamiltonian_stable_sample_count": 34,
+    "hamiltonian_unstable_sample_count": 17,
+    "maximum_hamiltonian_structure_residual": 0.0,
+    "minimum_nonzero_absolute_sampled_Krein_form": 0.005709638000783772,
+    "object": "Hamiltonian-Structure and Krein-Closure Audit",
+    "positive_energy_sufficient_condition_ever_holds": false,
+    "program": "ST10",
+    "relaxation_unit_scale_spectral_abscissa": 0.6727785371524378,
+    "sampled_Krein_signature_speed": 1.6,
+    "sampled_positive_imaginary_mode_signature_counts": {
+      "near_zero": 0,
+      "negative": 0,
+      "positive": 47
+    },
+    "sampled_transition_bracket": [
+      1.24,
+      1.28
+    ],
+    "speed_rows": [
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.5291821947075455e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.6688926612378601,
+        "speed": 0.6,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.844776743789474e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.6406479345787468,
+        "speed": 0.64,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 2.3780209800641087e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.6124705928682179,
+        "speed": 0.6799999999999999,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.159215507490818e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.5842665820228389,
+        "speed": 0.72,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.744247332470823e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.555948087898903,
+        "speed": 0.76,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.9312821273514154e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.5274278895734802,
+        "speed": 0.8,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 9.060766565640796e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.4986129411812929,
+        "speed": 0.84,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 8.864181719230512e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.46939682098021596,
+        "speed": 0.88,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 2.6947106380682355e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.4396502512468584,
+        "speed": 0.9199999999999999,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 4.6877580612708816e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.4092081826140577,
+        "speed": 0.96,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 4.4764325574119836e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.3778506008211547,
+        "speed": 1.0,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.1817377382654313e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.34527140675666984,
+        "speed": 1.04,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.2120071471152813e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.31102315906830663,
+        "speed": 1.08,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.4869540657417527e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.27440809344126427,
+        "speed": 1.12,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 6.276003863207019e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.23423149150121467,
+        "speed": 1.1600000000000001,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 2.451979769714681e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.18811577378061173,
+        "speed": 1.2,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.7367146201578393e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 0.12972053426409838,
+        "speed": 1.24,
+        "unstable_count": 1
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 2.2012124711867642e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.2012140699079197e-07,
+        "speed": 1.28,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.347552916943634e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.887379141862766e-15,
+        "speed": 1.3199999999999998,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 2.2550798935604352e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.0539125955565396e-15,
+        "speed": 1.3599999999999999,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 4.677266071903515e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.1102230246251565e-15,
+        "speed": 1.4,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.9879090983407334e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.9984014443252818e-15,
+        "speed": 1.44,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.6704429684670855e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.5543122344752192e-15,
+        "speed": 1.48,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.506691097775438e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 8.881784197001252e-16,
+        "speed": 1.52,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.0850230820291472e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.061650767297806e-15,
+        "speed": 1.56,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.2412576938878579e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.2906342661267445e-15,
+        "speed": 1.6,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.0169122128792789e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 8.881784197001252e-16,
+        "speed": 1.6400000000000001,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 6.626768736856974e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.7763568394002505e-15,
+        "speed": 1.6800000000000002,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 3.142973907001422e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.3322676295501878e-15,
+        "speed": 1.7200000000000002,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.3746468687810383e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.4224732503009818e-15,
+        "speed": 1.7599999999999998,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.0455225130396546e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.5543122344752192e-15,
+        "speed": 1.7999999999999998,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.4125718385361718e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.7763568394002505e-15,
+        "speed": 1.8399999999999999,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.2601948025296388e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.4424906541753444e-15,
+        "speed": 1.88,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 9.088724837086081e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.5543122344752192e-15,
+        "speed": 1.92,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.4322711856672997e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.1102230246251565e-15,
+        "speed": 1.96,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.1763337662776353e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 6.661338147750939e-16,
+        "speed": 2.0,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.2338786728110735e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.5543122344752192e-15,
+        "speed": 2.04,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 5.264521999831293e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.5543122344752192e-15,
+        "speed": 2.08,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.45029080806873e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.7763568394002505e-15,
+        "speed": 2.12,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 9.952337383587703e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.1102230246251565e-15,
+        "speed": 2.16,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.427738257670491e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.220446049250313e-15,
+        "speed": 2.2,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.3074787055006434e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.7763568394002505e-15,
+        "speed": 2.24,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.224682629153809e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.1015494072452725e-15,
+        "speed": 2.28,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 8.449255009441312e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.1102230246251565e-15,
+        "speed": 2.32,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 4.661313090728116e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.6645352591003757e-15,
+        "speed": 2.36,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 7.075910650241105e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.886579864025407e-15,
+        "speed": 2.4,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.1645206357036967e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 2.6645352591003757e-15,
+        "speed": 2.44,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 6.825245119060092e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 3.1363800445660672e-15,
+        "speed": 2.48,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 7.958303460328664e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.7763568394002505e-15,
+        "speed": 2.52,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 7.273293193416075e-08,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.3322676295501878e-15,
+        "speed": 2.56,
+        "unstable_count": 0
+      },
+      {
+        "L_negative_inertia": 1,
+        "L_positive_inertia": 94,
+        "hamiltonian_symmetry_residual": 0.0,
+        "neutral_residual": 1.1240123746067184e-07,
+        "positive_energy_sufficient_condition": false,
+        "spectral_abscissa": 1.3322676295501878e-15,
+        "speed": 2.6,
+        "unstable_count": 0
+      }
+    ],
+    "status": "partial_exact_structure_strong_numerical_transition_no_exact_Krein_closure",
+    "verdict": "The Hamiltonian realization has the required J0 L structure to numerical precision, but L is indefinite throughout the scan, so the elementary positive-energy stability theorem does not apply. The sampled stability transition remains numerical; an exact Krein-collision certificate was not obtained."
+  },
+  "ST11": {
+    "boundary": "No scale family, beta function, universal exponent or fractal fixed point follows from finite Schur associativity.",
+    "exact_elimination_order_A": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11
+    ],
+    "exact_elimination_order_B": [
+      7,
+      8,
+      10,
+      11,
+      1,
+      2,
+      4,
+      5
+    ],
+    "exact_scheme_difference": 3.4106622324849034e-16,
+    "object": "Exact Schur Associativity versus Truncated RG Scheme Dependence",
+    "program": "ST11",
+    "retained_vertices": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "status": "proven_exact_gaussian_scheme_independence_and_truncation_dependence",
+    "truncated_scheme_relative_difference": 0.007821283352001374,
+    "truncation_threshold": 0.08
+  },
+  "ST12": {
+    "boundary": "Numerical proximity of historical formulas to known constants is not derivation and cannot be inherited by strict.",
+    "completion_endpoint_available": false,
+    "object": "Legacy-to-Strict Role-Transfer Gate Matrix",
+    "program": "ST12",
+    "role_invariance_theorem_available": false,
+    "roles": [
+      {
+        "historical_value": 0.23104906018664842,
+        "role": "weak-mixing formula",
+        "status": "BLOCKED_NO_COMPLETION_OR_ROLE_TRANSFER"
+      },
+      {
+        "historical_value": 137.24314175086917,
+        "role": "electromagnetic inverse coupling",
+        "status": "BLOCKED_NO_COMPLETION_OR_ROLE_TRANSFER"
+      },
+      {
+        "historical_value": null,
+        "role": "beta^N gravity hierarchy",
+        "status": "BLOCKED_NO_DIMENSIONAL_OR_ROLE_TRANSFER_THEOREM"
+      },
+      {
+        "historical_value": null,
+        "role": "phase/orientation selector",
+        "status": "REFUTED_INSIDE_AUT_INVARIANT_FUNCTIONAL_CALCULUS"
+      },
+      {
+        "historical_value": 2.772588722239781,
+        "role": "alpha_geo information normalization",
+        "status": "NUMERICAL_IDENTITY_ONLY_NO_STRICT_TRANSFER"
+      }
+    ],
+    "status": "proven_gate_failure_role_audit_not_admissible",
+    "typed_strict_additions_available": false
+  },
+  "ST13": {
+    "all_synthetic_same_A_channels_pass": true,
+    "altered_generator_holdout_rejected": true,
+    "altered_unitary_holdout_relative_error": 0.01079587003352317,
+    "boundary": "Every accepted channel was generated locally from the same A; this is not evidence that nature uses the common generator.",
+    "calibration_channel": "heat only",
+    "frozen_prediction_errors": {
+      "gibbs": 1.0176301055445108e-15,
+      "green": 9.53848746965949e-16,
+      "unitary": 8.005672293226291e-16,
+      "wave": 1.5530794225247685e-15
+    },
+    "object": "Heat-Calibrated No-Refit Cross-Channel Prediction",
+    "program": "ST13",
+    "status": "proven_synthetic_pipeline_validation"
+  },
+  "ST14": {
+    "holdout_count": 5000,
+    "holdout_false_accept_count": 0,
+    "holdout_minimum_score": 0.2621158217020206,
+    "object": "Hashed Frozen Kernel-Fingerprint Holdout",
+    "preregistration_sha256": "2f16938bd05d50a8767ad76e7a9e0acaeff95f474216bd5be8426017e4c3e76a",
+    "program": "ST14",
+    "status": "passed_preregistered_implementation_fingerprint_but_failed_physical_prediction_requirement",
+    "strict_score": 0.0,
+    "threshold": 0.02,
+    "training_minimum_score": 0.4492915497982954,
+    "verdict": "The holdout distinguishes the frozen analytic kernel law from the declared lognormal null without refit. Because the observable is constructed from the defining formula, it is not a novel physical prediction and does not satisfy L5.",
+    "zero_event_exact_95pct_upper_rate": 0.0005989670023148763
+  },
+  "ST15": {
+    "Aut_Z12_unit_orbit": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "all_checks_pass": true,
+    "checks": {
+      "Aut_Z12_orbit_contains_plus_and_minus_orientation": true,
+      "exact_rational_shifted_Schur_inverse_block_identity": true,
+      "strict_functional_algebra_dimension_is_7": true,
+      "strict_translation_reflection_residual_below_1e-12": true,
+      "symbolic_Dirichlet_identity": true,
+      "symbolic_energy_temperature_scale_orbit": true
+    },
+    "object": "Formal-Core Replay Certificate",
+    "program": "ST15",
+    "scope": "SymPy exact identities plus binary64 strict-kernel replay; not proof-assistant machine checking.",
+    "status": "passed_exact_symbolic_and_numerical_replay_with_explicit_trust_boundary",
+    "strict_symmetry_residual": 6.280369834735101e-16
+  },
+  "environment": {
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "sympy": "1.12"
+  },
+  "epistemic_boundary": "All outputs are local finite mathematics, constructed conditional models or synthetic controls. They do not discharge QW-2191, source units, select a canonical refinement, complete legacy-to-strict, transfer legacy roles, supply a laboratory record, derive the Standard Model or gravity, or establish FIN as a Theory of Everything.",
+  "language": "English",
+  "programs": "ST01-ST15",
+  "recommended_next_programs": [
+    {
+      "id": "ST16",
+      "priority": 1,
+      "study": "derive or refute an exact Krein-collision certificate for the P530 Hamiltonian memory family"
+    },
+    {
+      "id": "ST17",
+      "priority": 2,
+      "study": "classify selector-free additional observable algebras; prove a strict no-go if all Aut(Z12)-natural candidates remain reducible"
+    },
+    {
+      "id": "ST18",
+      "priority": 3,
+      "study": "search for a FIN-internal refinement functor rather than choosing one of the incompatible ST05 continuations"
+    },
+    {
+      "id": "ST19",
+      "priority": 4,
+      "study": "replace the tautological ST14 fingerprint with a derived, preregistered cross-sector observable"
+    },
+    {
+      "id": "ST20",
+      "priority": 5,
+      "study": "construct interval error bars for the ST02 joint matrix logarithm and branch matching"
+    },
+    {
+      "id": "ST21",
+      "priority": 6,
+      "study": "test approximate Lieb-Robinson-type bounds for truncated and decaying FIN_N candidates"
+    },
+    {
+      "id": "ST22",
+      "priority": 7,
+      "study": "prove minimality or redundancy of the complete operational tuple from ST01"
+    },
+    {
+      "id": "ST23",
+      "priority": 8,
+      "study": "derive a gauge connection from a new strict-sourced object or certify that the ST08 receiver is purely inserted"
+    },
+    {
+      "id": "ST24",
+      "priority": 9,
+      "study": "classify all globally coercive saturations sharing the P527 fourth-order jet and compare universality"
+    },
+    {
+      "id": "ST25",
+      "priority": 10,
+      "study": "formalize ST15 in a proof assistant after installing and pinning a verified toolchain"
+    },
+    {
+      "id": "ST26",
+      "priority": 11,
+      "study": "build a dimensional-equivariance theorem covering unitary, wave, heat and Gibbs sectors simultaneously"
+    },
+    {
+      "id": "ST27",
+      "priority": 12,
+      "study": "design a synthetic adversarial record in which sector-specific refits mimic H1A and prove the frozen protocol rejects it"
+    }
+  ],
+  "release": "10.55"
+}

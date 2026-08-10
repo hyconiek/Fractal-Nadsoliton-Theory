@@ -5795,3 +5795,335 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   face exactly if the full dual remains open; finally tighten the
   now-licensed P452 one-dimensional interval. Do not promote a floating
   optimizer to a theorem.
+
+## Programs P488--P496 low-compute nonlinear/time/memory/topology guardrail (Release 10.49, 2026-08-10)
+
+- P488 constructs O192 by supplying the nonlinear law
+  `psi_dot=(r-g*abs(psi)^2)*psi-i*A*psi`. Every constant-modulus strict
+  Fourier mode is then an exact persistent cycle. The reported transverse
+  exponents are floating linearization evidence: modes 1, 2, 4, 5, and 6
+  are damped in the declared model, while mode 3 has an additional neutral
+  direction. All cycles have IPR `1/12`; do not call them localized
+  solitons. Neither `r` nor `g` is derived by FIN.
+- P489 constructs O193, a relative phase clock with dimensionless first-mode
+  period `8.3317982424005`. Simultaneous generator/time rescaling leaves all
+  phase records invariant. Do not claim an absolute second, dimensional
+  time source, or internally selected clock.
+- P490 constructs O194, a log-positive three-pole Stieltjes learning flow.
+  The parameterization preserves positive residues and complete
+  monotonicity, and the declared synthetic response is recovered, but the
+  Jacobian condition number is about `3.52e7`. The target, loss, and context
+  are supplied; this is not an internally derived self-learning law.
+- P491 constructs O195 and excludes an exact normalized dynamic fixed point
+  only for the declared attenuation-envelope family on C12/C24/C48/C96.
+  Nonzero, nonmonotone finite-size discrepancies do not prove or refute a
+  continuum limit, universal fractal fixed point, or arbitrary Schur
+  context family.
+- P492 proves O196: for `A=sI-W`, maximizing the `W` Rayleigh quotient is
+  exactly minimizing the `A` Dirichlet quotient. Maximum `A` frequency uses
+  the opposite ordering. Do not describe FIN as selecting the “highest
+  resonance” without specifying which operator and a selector/dynamical law.
+- P493 proves the O197 exponent-lift recurrence represents both Legacy* and
+  strict formula classes at supplied parameter points for integer distance.
+  It does not derive strict parameters, complete the historical
+  `K_legacy_ont -> K_strict_gate` bridge, or transfer any legacy physical
+  role. The reported passive-homotopy threshold near `t=0.93` is sampled,
+  not interval-certified.
+- P494 proves O198: the unconstrained scalar state space `C^12` is
+  contractible, so Fourier phase labels are not protected particle winding
+  sectors. A nonvanishing `S1`-valued field, edge interpolation, and a
+  refinement law are additional prerequisites; the Nyquist mode remains
+  phase-increment ambiguous in the declared audit.
+- P495 constructs O199 only as a synthetic identifiability atlas. In the
+  declared four-model experiment, vertex-plus-Fourier records separate the
+  models while population-only records do not. This is not apparatus
+  calibration, a laboratory record, external validation, or evidence that a
+  physical system realizes FIN.
+- P496/O200 is a dependency-minimal exact rational replay of Dirichlet,
+  Rayleigh-complementarity, Green--Schur, and eta-one Legacy* recurrence
+  identities. It is not proof-assistant checking and does not certify the
+  strict transcendental constants.
+- P488--P496 export no QW-2191/selector discharge, canonical orientation,
+  dimensional source, laboratory evidence, legacy-to-strict completion,
+  role-transfer theorem, `L_total`, Standard Model, gravity, or ToE closure.
+  The strongest bounded low-compute continuations are P497 localized
+  nonlinear strict states, P500 Stieltjes identifiability bounds, and P506
+  parameter-source identifiability/no-go.
+
+## Programs P497--P506 localization/certification/identifiability guardrail (Release 10.50, 2026-08-10)
+
+- P497/O201 supplies the focusing DNLS law
+  `i*psi_dot=kappa*A*psi-|psi|^2*psi`, with `mu=-1`. At the one-site
+  anti-continuum state its stationary Jacobian is exactly
+  `diag(-2,1,...,1)`, so a unique local real branch is an IFT theorem.
+  Numerical continuation reaches `kappa=1` with residual `2.22e-16`, IPR
+  `0.6545783247`, and peak-power fraction `0.804496225`. Do not call the
+  complete branch theorem-certified, orbitally stable, mobile, continuum,
+  or physical. The cubic focusing sign/coefficient and `mu` are supplied,
+  not derived by FIN; the branch has twelve translation-equivalent centres.
+- P498/O202 reduces the P488 Jacobian to exact Fourier `2x2` block formulas
+  and uses outward intervals for the declared decimal strict model. Every
+  nonzero real part has a strictly negative upper bound; the largest is
+  `-0.0019318267...`. Global phase gives `q=0` neutrality, and `(m,q)=(3,6)`
+  is an additional exact symmetry-neutral block. Do not promote mode three
+  to asymptotic stability or the interval result to other parameter cells.
+- P499/O203 proves the general two-frequency periodic/irrational-injective
+  dichotomy. The strict ratio interval excludes rationals with denominator
+  at most `10^6`; global irrationality, an absolute time unit, and an
+  internally selected clock remain unproved.
+- P500/O204 gives a local rational-left-inverse certificate only for the
+  declared rounded three-pole Stieltjes response, inside log-parameter radius
+  `1e-9`. Its self-consistent response-noise threshold is about `1.17e-16`.
+  This proves narrow local identifiability while demonstrating practical
+  fragility; it does not source a target, loss, poles, or adaptive law.
+- P501/O205 derives the even/odd polyphase integral fingerprint for the
+  summable attenuation-envelope context. `C192/C384` approach its FFT proxy,
+  with `C384` maximum discrepancy `0.00324399`; convergence after `C96` is
+  numerical evidence. This is not an exact finite fractal fixed point,
+  universal refinement theorem, or certified normalized-response error rate.
+- P502/O206 proves the exact all-radial-weights-nonnegative homotopy boundary
+  is the final `d=6` phase crossing `t=0.9257900390444757...`. A separate
+  Fourier audit isolates the earlier signed-Laplacian PSD boundary near
+  `t=0.7008185569046573`; the latter remains a numerical/interval-sign
+  isolation, not a closed-form source theorem. Neither boundary turns the
+  chosen linear parameter homotopy into a Legacy*->strict derivation or role
+  transfer.
+- P503/O207 adds a nonvanishing `S1` phase field, principal-edge
+  interpolation, a branch-cut margin, and an admissible update/refinement
+  law. Under those added premises, bounded updates and geodesic midpoint
+  refinement preserve integer winding exactly. This meets P494's topology
+  obligation conditionally; it does not derive the phase field, select a
+  winding sector, identify a particle, or discharge QW-2191.
+- P504/O208 exhausts only the 36 contexts and four synthetic dynamics of
+  P495. Nine single contexts separate all four; the selected one uses
+  Fourier-1 preparation, `t=0.55`, and Fourier measurement, with finite
+  simulated accuracy `0.99925`. This is not a robust apparatus theorem,
+  calibration, raw laboratory record, or external evidence.
+- P505/O209 is a schema- and DAG-validated proof-assistant-neutral interface
+  for six theorem nodes. It is not machine-checked proof.
+- P506/O210 finds local rank five for static Legacy*, midpoint, and strict
+  kernel parameter maps, but proves that any finite observation-time set
+  admits infinitely many smooth parameter trajectories with the same sampled
+  kernels. Endpoints or finite snapshots cannot source the bridge law.
+  Time-labelled continuous full-rank observations may recover a path
+  conditionally, but not its causal law.
+- P497--P506 export no strict source for the nonlinear law, no full certified
+  DNLS branch/orbital stability, no absolute unit, no selector/QW-2191
+  discharge, no Legacy*->strict completion or role transfer, no laboratory
+  evidence, `L_total`, Standard Model, gravity, or ToE closure. Immediate
+  bounded priorities are P507 nonlinear-source/no-go, P508 interval global
+  continuation, and P509 orbital stability.
+
+## Programs P507--P516 nonlinear-source/certified-localization/frequency-arithmetic guardrail (Release 10.51, 2026-08-10)
+
+- P507/O211 proves that the strict quadratic core fixes only a second-order
+  action jet.  Focusing and defocusing quartic actions have identical value,
+  gradient, and Hessian at the vacuum but opposite cubic equations of motion.
+  Do not report the P497 DNLS sign, coefficient, or chemical frequency as
+  derived from FIN without a new fourth-order functional or nonlinear axiom.
+- P508/O212 conditionally certifies one unique fold-free real site-centred
+  branch for the supplied focusing DNLS on the declared finite C12 strict
+  operator and `kappa in [0,1]`: 401 interval Krawczyk charts and all 400
+  interface inclusions pass.  This does not certify orbital stability,
+  continuum persistence, physical realization, or an internally sourced
+  nonlinear law.
+- P509/O213 supplies a finite GSS/VK numerical ledger.  Its hypotheses are
+  favourable at `omega=1`, while `dP/domega` changes sign near
+  `0.7221436889`.  Do not promote this to an interval theorem or to stability
+  of the whole branch/frequency family.
+- P510/O214 finds that the localized bond-centred family does not reach the
+  site-centred target power before delocalizing into the uniform branch.  The
+  declared localized equal-power Peierls--Nabarro barrier is therefore
+  undefined; do not infer pinning, mobility, or travelling states from the
+  translation-degenerate site energies.
+- P511/O215 shows numerical persistence of a stationary localized branch under
+  the declared Stieltjes--Bernstein memory loading.  It is conditional on the
+  supplied memory measure and is not a theorem about temporal non-Markovian
+  evolution, stability, or an environment derived from FIN.
+- P512/O216 proves exactly, by a Lindemann--Weierstrass and Laurent-polynomial
+  argument, that the declared strict ratio `lambda_2/lambda_1` is
+  transcendental and hence irrational.  This closes P499's arithmetic question
+  for the declared decimals, but supplies neither an absolute time unit nor an
+  internally selected operational clock.
+- P513/O217 certifies a conservative `O(n^(-4/5))` context-error envelope for
+  the declared attenuation kernel.  The normalized bound becomes usable only
+  from C1536 and is extremely loose; do not describe C384 convergence as
+  sharply certified or as a universal fractal fixed point.
+- P514/O218 gives a global interval PSD/non-PSD classification for the declared
+  linear Legacy*--strict homotopy, with a final transition bracket of width
+  below `3.5e-10`.  It does not source that homotopy, complete the historical
+  bridge, or transfer legacy physical roles.
+- P515/O219 is a synthetic one-context robustness budget with assumed
+  preparation, POVM, and timing errors.  It is not detector calibration,
+  apparatus construction, raw laboratory evidence, or independent validation.
+- P516/O220 gives locally full-rank observation designs for supplied
+  polynomial parameter-velocity classes of degree zero through two.  Finite
+  identifiability is conditional on that model-class axiom; the P506
+  unrestricted bridge-law nonidentifiability remains.
+- P507--P516 export no selector/QW-2191 discharge, canonical orientation,
+  dimensional source, nonlinear-law source, legacy-to-strict completion,
+  role-transfer theorem, laboratory evidence, `L_total`, Standard Model,
+  gravity, or ToE closure.  The strongest bounded local continuations are P517
+  information-functional fourth-order jet, P519 interval orbital-stability
+  certification, and P521 temporal memory stability.
+
+## Programs P517--P526 fourth-jet/stability/memory/frequency-torus guardrail (Release 10.52, 2026-08-10)
+
+- P517/O221 proves a family-level source obstruction: entropy, Fisher and
+  compression language does not determine the attractive fourth-order jet.
+  Positive convex relative information has the defocusing sign; focusing
+  requires an objective reversal or added negative nonlinear response.  Do not
+  report the P497 DNLS nonlinearity as information-derived without a reference
+  measure, extremum direction and quartic coupling normalization.
+- P518/O222 exactly replays 401 exported parametric-chart and 400 interface
+  acceptance inequalities as dyadic rationals.  The standard-library checker
+  does not independently regenerate the upstream transcendental interval
+  enclosures; preserve that explicit trust boundary.
+- P519/O223 uses 208 outward state charts and 207 nested interface root boxes
+  to certify one connected finite-DNLS branch on `omega in [0.68,1.20]`, the
+  required `L-/L+` inertia, and a unique VK sign transition in
+  `[0.722143668857225,0.722143708857225]` within the certified positive-curvature
+  neighbourhood.  This is conditional on the supplied focusing DNLS and does
+  not source the nonlinear law, physical time, continuum stability or a lab
+  realization.
+- P520/O224 identifies the scanned bond-to-uniform transition with the mode-one
+  uniform bifurcation `omega=lambda_1/2=0.3770605771035399`.  No independent
+  fold is resolved away from it.  Fifteen phase-kick trials produce no state
+  satisfying the declared displacement, localization and monotonicity tests;
+  do not promote large displacement of a delocalized density to soliton
+  transport or to a universal no-travelling-state theorem.
+- P521/O225 supplies one explicit causal three-pole hidden-relaxation
+  realization of P511 stationary memory.  Its 96-dimensional floating
+  linearization has a positive spectral abscissa from loading `0.01`; hence
+  stationary persistence does not imply temporal stability for this
+  realization.  Do not generalize the numerical counterexample to every
+  passive, Hamiltonian, or non-Markovian realization without P530-level
+  classification.
+- P522/O226 proves exactly that the six distinct positive strict frequencies
+  are linearly independent over the algebraic numbers; the distance-to-mode
+  determinant is `-3456*sqrt(3)`.  The resulting dimensionless six-torus does
+  not select an absolute clock: `(A,t)->(cA,t/c)` leaves all internal ratios and
+  orbits invariant.
+- P523/O227 transfers the fractional `n^-0.8` context envelope to C384 with
+  maximum normalized bound `0.0670791`, conditional on the declared `2e-9`
+  FFT rounding allowance.  Do not describe it as a dependency-free interval
+  FFT certificate or a universal fractal fixed point.
+- P524/O228 exactly replays the exported 573-box P514 partition and sign ledger
+  with standard-library rational arithmetic.  Three adjacent unresolved boxes
+  form one width-`3.5e-10` component.  The replay does not independently
+  regenerate mpmath transcendental intervals or source the Legacy*--strict
+  homotopy.
+- P525/O229 constructs a conservative seven-variable detector-error polytope.
+  Its positive synthetic margin uses hypothetical loss, dark-count,
+  coarse-graining, preparation, POVM, timing and drift budgets; it is not
+  apparatus calibration, raw laboratory evidence or external validation.
+- P526/O230 finds that frozen-holdout polynomial-law selection changes with
+  ridge prior and proves the exact finite-record bump-polynomial no-free-lunch
+  theorem.  It does not derive a Legacy*--strict causal bridge law; no strict
+  endpoint was inserted.
+- P517--P526 export no selector/QW-2191 discharge, canonical orientation,
+  dimensional source, FIN-derived nonlinear law, legacy-to-strict completion,
+  role-transfer theorem, laboratory evidence, `L_total`, Standard Model,
+  gravity, or ToE closure.  The strongest bounded continuations are P527
+  axiomatic fourth-jet representation, P529 validated nonlinear dynamics and
+  P530 temporal memory-realization classification.
+
+## Programs P527--P536 auxiliary-field/memory-realization/exact-replay guardrail (Release 10.53, 2026-08-10)
+
+- P527/O231 proves a minimal conditional sign mechanism: a positive quadratic
+  mediator `B>0`, nonzero linear coupling to `rho=|psi|^2`, and stationary
+  elimination generate the attractive Schur complement
+  `-(g^2/2)<rho,B^-1 rho>`.  For `B=bI` this is a local focusing quartic.  FIN
+  has not been shown to source the mediator, `g^2/b`, its temporal law, or the
+  saturation/higher-order term required for global boundedness.  Do not report
+  this construction as a strict-core derivation.
+- P528/O232 exactly replays all 208 O223 state charts and 207 bridge boxes with
+  dyadic-rational acceptance inequalities.  This checks exported Krawczyk,
+  inertia, slope, curvature and nesting signs; it does not independently
+  regenerate the upstream outward state/spectral enclosures.
+- P529/O233 gives conservation-controlled nonlinear evidence across the VK
+  boundary.  At `dt=0.005`, stable-side cases `omega=0.75,1.00` stay within
+  orbital distance `0.0053` to time 80, while `omega=0.70` reaches `0.199` and
+  has positive linearized growth.  The unstable long-time value is step
+  sensitive and no interval flow enclosure was produced; retain strong
+  numerical-evidence status.
+- P530/O234 proves the no-inference principle that one zero-frequency memory
+  operator does not determine a temporal realization or its stability.  The
+  declared relaxation family is numerically unstable across six decades of
+  time scale, whereas the full-loading Hamiltonian family is numerically
+  spectrally stable for sampled mediator speeds from about `1.585` upward.
+  The numerical boundary is not a Krein-signature theorem and neither temporal
+  completion is derived from FIN.
+- P531/O235 proves that exact strict linear translating recurrences have IPR
+  at most `1/8`; thirteen nonlinear kicks to time 300 yield no declared
+  relative-periodic candidate.  Do not promote the finite nonlinear scan to a
+  universal no-travelling-breather theorem.
+- P532/O236 combines P522 with Kronecker--Weyl/Dirichlet recurrence.  The best
+  integer time through two million is `1752344` with phase sup-error
+  `0.1460418407`.  Every time remains dimensionless and rescales under
+  `(A,t)->(cA,t/c)`; soliton frequency does not supply seconds by itself.
+- P533/O237 replaces P523's standalone `2e-9` FFT allowance with outward
+  input/twiddle/butterfly disk arithmetic and proves a maximum normalized
+  C384-to-limit bound `0.0650748` under its stated IEEE-754 model.  This does
+  not prove a universal fractal fixed point or remove the analytic-kernel
+  premise.
+- P534/O238 independently reconstructs all 573 P514 classifications using
+  exact Machin/atanh constants, Taylor remainder enclosures, rational sign
+  replay and local subdivision.  It agrees on 388 NONPSD, 182 PSD and three
+  unresolved boxes.  It does not source the declared homotopy or transfer any
+  legacy role.
+- P535/O239 converts the synthetic P525 polytope into an inverse maximum-
+  product allocation, 80-percent tolerance caps, an illustrative Hoeffding
+  count, raw-event fields and custody protocol.  These are mathematical target
+  specifications, not detector calibration, apparatus realization, raw data,
+  or independent custody evidence.
+- P536/O240 proves that finite-record likelihood is constant on every
+  vanishing-bump law fiber, so posterior selection along that fiber is prior-
+  inherited.  Future fits must state the admissible class and compare
+  inequivalent priors; no prior-free Legacy*--strict causal law is obtained.
+- P527--P536 export no selector/QW-2191 discharge, canonical orientation,
+  dimensional source, FIN-internal mediator, legacy-to-strict completion,
+  role-transfer theorem, laboratory evidence, `L_total`, Standard Model,
+  gravity, or ToE closure.  The strongest next local programs are P537 global
+  mediator coercivity, P538 validated nonlinear flow, and P539 exact
+  Hamiltonian-memory Krein analysis.
+
+## Counterfactual FIN-as-ToE shadow-atlas guardrail (Release 10.54, 2026-08-10)
+
+- `H_TOE` in Release 10.54 is a counterfactual organizing hypothesis, not an
+  established result.  The narrower `H_1A` ansatz asserts that selected
+  unitary, heat, wave, Green and Gibbs channels are functions of one frozen
+  generator after a preregistered finite set of channel-scale maps.  Spectral incompatibility
+  falsifies `H_1A`, not every possible multi-sector version of `H_TOE`.
+- The exact core is a common finite spectral-transform family.  `U_t`, `P_t`,
+  `C_t`, `G_z` and formal Gibbs matrices are mathematical candidates for
+  physical shadows; they are not physical shadows until sector, units,
+  reduction, observable, preparation, instrument and record maps are supplied.
+- The strict operator has seven distinct eigenvalues, so its one-generator
+  functional algebra `C*(A)` is commutative and seven-dimensional versus
+  `dim M_12(C)=144`.  This blocks noncommutativity, CCR/CAR, local gauge
+  curvature and orientation selection from `f(A)` alone.  It does not exclude
+  a noncommutative commutant, vertex algebra, context algebra or additional
+  generator; each such extension requires its own provenance theorem.
+- The 10,000-instance null calculation samples one declared lognormal measure
+  on positive radial circulant Laplacians.  Common functional calculus and
+  Markov positivity are generic in that class; percentiles are measure-
+  dependent and do not establish genericity over all PSD operators.
+- The identity `argmax mu(W)=argmin lambda(A)` is physical resonance language
+  only after defining resonance strength as an eigenvalue of `W`.  For the
+  positive strict `W`, the Perron maximizer is the uniform mode, not a
+  localized nadsoliton.
+- Shifted Schur elimination exactly preserves a visible Green block for
+  `z>0`; one Schur complement is generic Gaussian elimination and is not proof
+  of fractal compression.  Fractality still requires a self-similar refinement
+  family, recursion law and error control.
+- The bounded legacy-shape diagnostic has relative residual about `0.99126`
+  and supplies no completion bridge.  `alpha_geo=4 ln 2` belongs to the
+  historical legacy/scalar-shape layer; numerical equality to `ln 16` does not
+  establish an entropy origin or authorize strict-side role transfer.
+- Release 10.54 exports no selector/QW-2191 discharge, canonical orientation,
+  dimensional source, physical clock, legacy-to-strict completion, role-
+  transfer theorem, apparatus or record, Standard Model, gravity, `L_total`,
+  or ToE closure.  Its leading local continuations are ST01 formal shadow
+  maps, ST02 common-generator equivalence classes, ST03 broader null ensembles,
+  and ST04 minimal algebra completion.
