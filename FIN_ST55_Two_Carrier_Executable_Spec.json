@@ -1,0 +1,55 @@
+{
+  "sha256": "70e4bcf50bacff312c2089ccd0b3287bd79ca044689c5c916c2d26e21826bfb4",
+  "specification": {
+    "carrier_A": {
+      "basis": "vertex",
+      "effects": "12 vertex effects",
+      "generator": "A",
+      "preparations": "12 vertex states"
+    },
+    "carrier_B": {
+      "basis": "dense Q-basis",
+      "effects": "Q E_y Q^T",
+      "generator": "Q A Q^T",
+      "preparations": "Q rho_x Q^T"
+    },
+    "clock": {
+      "calibration_required_for_physical_run": true,
+      "dimensionless_time": 0.63
+    },
+    "counts": {
+      "outcomes": 12,
+      "preparations": 12,
+      "shots_per_preparation": 1200
+    },
+    "decision_rule": {
+      "one_run": true,
+      "score": "Pearson discrepancy from carrier-A table",
+      "threshold_source": "frozen 0.99 null quantile"
+    },
+    "failure_rule": "report failure without refitting Q, time, effects, threshold or kernel",
+    "hypotheses": {
+      "H0": "carrier B transports generator, preparations, effects, clock and record labels by one calibrated isomorphism Q",
+      "H1": "at least one operational component is not transported by the registered Q"
+    },
+    "local_preregistration_sha256": "ffdf4cf52a136f2c203487cf99b23600f95e64dd5e57f34e8a53fa5ac0241ad1",
+    "physical_boundary": "The local packet does not supply apparatus, SI time, independent roles or external raw events.",
+    "raw_event_schema": [
+      "timestamp",
+      "carrier_id",
+      "preparation_id",
+      "outcome_id",
+      "run_id",
+      "calibration_split",
+      "blind_label"
+    ],
+    "roles": {
+      "analyst": "blinded",
+      "custodian": "holds mapping until hash freeze",
+      "provider": "must be external",
+      "registrar": "must differ from provider"
+    },
+    "title": "FIN two-carrier operational-equivalence transfer test",
+    "version": "1.0.0"
+  }
+}

@@ -6127,3 +6127,287 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   or ToE closure.  Its leading local continuations are ST01 formal shadow
   maps, ST02 common-generator equivalence classes, ST03 broader null ensembles,
   and ST04 minimal algebra completion.
+
+## Programs ST01--ST15 shadow-to-physics bridge guardrail (Release 10.55, 2026-08-10)
+
+- ST01 exports a typed physical-shadow certificate and proves the composition
+  identity and norm bound for approximate reductions.  The certificate tests
+  supplied sector, unit, refinement, observable, preparation, environment,
+  instrument/apparatus, composition and record maps; it does not generate any
+  of them.
+- ST02/ST13 recover the frozen generator in closed-loop synthetic unitary,
+  heat, Green, Gibbs and wave channels with relative matrix errors below
+  `4.3e-15`, and reject declared altered/aliased controls.  These are generated-
+  transform round trips and an executable falsifier for `H_1A`, not independent
+  tomography or physical cross-sector evidence.
+- ST03 samples five declared null classes (6,000 matrices total).  Isospectral
+  rotations preserve all eigenvalues to `4.9e-15` while generically destroying
+  FIN vertex geometry and the M-matrix property.  Spectrum alone therefore
+  does not identify substrate geometry.  Every ensemble frequency and
+  percentile remains measure-dependent; the strict formula fingerprint is
+  definitional rather than predictive.
+- ST04 proves conditionally that one diagonal observable with twelve distinct
+  vertex labels completes `C*(A)` from dimension 7 to `M_12(C)` of dimension
+  144.  This added observable imports labels and orientation.  The anchored
+  distance observable reaches dimension 74 and the chiral circulant reaches
+  12; no selector/QW-2191 discharge follows.
+- ST05 constructs two continuations agreeing exactly at `N=12` with fitted gap
+  exponents about `-1.96485` and `-0.08635`.  Hence `A_12` does not determine a
+  canonical continuum family.  The literal integer-distance extension first
+  has a negative weight at distance 8 and loses the Markov property.  This is
+  an endpoint nonidentifiability theorem, not a proof that no refinement law
+  can be added.
+- ST06 proves that frozen strict all-distance coupling has direct remote tails
+  at first order for unitary/heat dynamics and second order for the wave
+  propagator.  It excludes an exact nontrivial cone in the original cyclic
+  metric, while leaving a scale-dependent approximate continuum bound open.
+- ST07 proves the relative-entropy/free-energy identity only after a state,
+  Hamiltonian, inverse bath temperature, process semantics and dimensional
+  energy unit are supplied.  The `(H,beta)->(cH,beta/c)` orbit prevents the
+  Gibbs state from selecting absolute energy or temperature.
+- ST08 is a valid inserted `U(1)` link/holonomy receiver with covariance and
+  continuity residuals below `7e-16`; it does not derive the group,
+  connection, Gauss constraint, Ward hierarchy or gauge dynamics from strict.
+- ST09 constructs a globally coercive saturating-mediator completion sharing
+  the attractive P527 fourth-order jet.  The saturation map, scale `R` and
+  positive term `mu` are new axioms; no strict-derived nonlinear law, soliton
+  existence or orbital-stability theorem is exported.
+- ST10 exactly verifies the implemented Hamiltonian block form `J=J0 L` and
+  finds one negative, 94 positive and one neutral Hessian direction.  The
+  mediator-speed transition bracket `[1.24,1.28]` and positive sampled Krein
+  forms at speed 1.6 are numerical evidence only.  Exact zero-mode quotient,
+  collision classification and Krein stability remain open.
+- ST11 verifies exact Schur-elimination associativity; a declared truncation
+  creates `0.007821` relative order dependence.  Exact Gaussian elimination is
+  not an RG flow, continuum fixed point or fractal-compression theorem.
+- ST12 blocks all legacy physical-role transfer because the completion map,
+  typed residual strict additions and role-invariance theorem remain absent.
+  Historical numerical identities are not strict predictions.
+- ST14 hashes a definitional strict-kernel fingerprint before an independent
+  synthetic holdout and records zero false accepts under its declared measure.
+  It is not a physical prediction or independent custody record.
+- ST15 passes six symbolic/rational/numerical replay checks, but is not proof-
+  assistant machine verification; strict checks retain binary64 and rank-
+  tolerance trust boundaries.
+- ST01--ST15 export no canonical selector or orientation, dimensional source,
+  physical clock, FIN-internal refinement, legacy-to-strict completion,
+  role-transfer theorem, laboratory record, Standard Model, gravity,
+  `L_total`, or ToE closure.  The leading continuations are ST16 exact
+  Hamiltonian-memory Krein analysis, ST17 selector-free algebra
+  classification, ST18 internal refinement-functor search and ST19 a genuinely
+  derived preregistered observable.
+- All newly generated PDF reports after Release 10.55 must be written in
+  English unless the user explicitly requests another language.
+
+## Programs ST16--ST27 selector/refinement/dimensional-bridge guardrail (Release 10.56, 2026-08-10)
+
+- ST16 analytically reduces the declared P530 Hamiltonian-memory transition to
+  the gauge-Jordan solvability condition `(J0 v0)^T v1=0`, `J v1=v0`.
+  Hidden-block elimination makes this a quadratic in inverse mediator speed.
+  The one positive binary64 root is `1.278014751820449`, and reduced/full
+  invariants agree below `2.9e-15`.  The stationary state and coefficients are
+  not interval enclosed; do not call the root exact or claim global Krein
+  stability.
+- ST17 proves that the full real symmetric dihedral-invariant algebra on C12
+  is seven-dimensional and already equals `C*(A)`.  No deterministic
+  stabilizer-invariant self-adjoint generator can complete `M_12(C)` or
+  discharge QW-2191.  State-dependent, orbit-valued, boundary-sourced or
+  explicitly broken generators remain outside this no-go and require their
+  own provenance.
+- ST18 constructs the infinite positive translation-invariant lift family
+  `A24(q)`, `q>=0`, with exact formula `A24(q)J=JA12`.  The free antipodal fine
+  weight changes unresolved odd modes.  Positivity, cyclic covariance and
+  exact coarse intertwining therefore do not select a canonical refinement;
+  the family itself is not a FIN-derived functor.
+- ST19 freezes and hashes the derived common-generator identity
+  `U_t P_tau=exp(-(tau+i t)A)` before separate 400+400 synthetic holdouts.  It
+  separates all declared common/altered cases, but provider, registrar,
+  analyst and custodian remain one local workflow.  This is protocol logic,
+  not a physical prediction or independent record.
+- ST20 interval-encloses the scalar strict spectrum with `mpmath.iv`, proving
+  positive distinct-gap and branch margins for unitary, heat, Green, Gibbs and
+  wave projector matching conditional on that library.  It is not a proof-
+  assistant or independently replayed transcendental certificate.
+- ST21 proves the finite-range path-order exponential-series bound and the
+  Hermitian Duhamel truncation bound.  The literal long-range continuation has
+  a polynomial absolute tail but becomes signed at distance 8; its unitary is
+  valid while its heat channel is not a Markov probability semigroup.  No
+  Lorentzian continuum follows.
+- ST22 compresses the ST01 operational list to five obligation groups relative
+  to finite operational-process semantics: sector, dimensional calibration,
+  refinement, operational process structure, and external record/custody.
+  Preparations, observables, environments and apparatus metadata can be
+  packaged but not erased semantically.  This is a relative, not universal,
+  foundations theorem.
+- ST23 proves that the five-dimensional translation-invariant antisymmetric
+  one-form space has zero reflection-invariant subspace.  A deterministic
+  stabilizer-equivariant map from strict A cannot source a nonzero continuous
+  oriented U(1) connection.  Discrete pi holonomy, state/boundary sources and
+  genuine symmetry breaking remain open additional objects.
+- ST24 classifies the constructed family
+  `q_a(rho)=rho/(1+rho/R)^(1-a)`: all members share the attractive P527 local
+  fourth-order jet, but coercivity holds for `a<1/2`, has the stated coefficient
+  threshold at `a=1/2`, and fails for `a>1/2`.  The saturation and positive
+  density term remain added axioms; no FIN-derived soliton law follows.
+- ST25 exports `FIN_ST25_Formal_Core.lean`, but the local elan launcher has no
+  configured toolchain.  The source is not machine checked and no network
+  installation was attempted.
+- ST26 proves a multiweight positive scale orbit.  Unitary/heat time rescales
+  as `t/c`, wave time as `t/sqrt(c)`, Green operators carry inverse scale, and
+  Gibbs states preserve `beta E`.  A single dimension assignment to A cannot
+  make it both a first-order generator and a second-order wave stiffness;
+  phase frequencies do not produce seconds.
+- ST27 proves the no-refit principle on injective spectral branches and tests
+  isospectral projector-rotation adversaries.  Eigenvalue-only and sector-
+  refitted tests accept by construction; the frozen matrix protocol rejects
+  every sampled rotation of size at least `0.01` at its declared threshold.
+  The adversaries and threshold are synthetic.
+- ST16--ST27 export no QW-2191 discharge, canonical state or orientation,
+  dimensional source, physical clock, FIN-derived refinement, gauge field,
+  nonlinear law, legacy-to-strict completion, role transfer, apparatus,
+  laboratory record, Standard Model, gravity, `L_total`, or ToE closure.  The
+  leading continuations are ST28 interval Jordan certification, ST29 state-
+  dependent symmetry breaking, ST30 associative refinement classification and
+  ST31 finite-count mixed-channel likelihood testing.
+
+## Programs ST28--ST45 carrier-invariance/symmetry-breaking guardrail (Release 10.57, 2026-08-10)
+
+- ST28 certifies one unique positive collision speed only for the frozen exact-
+  decimal coefficient model: `1.278014751804222 <= s* <=
+  1.2780147518366733`.  The interval width is about `3.25e-11` and the root
+  derivative is bounded below by `0.530298`.  The strict transcendental weights
+  and upstream memory state have not been interval-regenerated; do not call
+  this a complete upstream certificate.
+- ST29 proves that a state-density observable can escape the seven-dimensional
+  invariant algebra.  The audited uniform, reflection-anchored, and generic
+  cases generate dimensions `7`, `74`, and `144`, respectively.  A symmetric
+  rule canonically provides the state orbit, not one member; the generic state
+  is constructed and does not discharge QW-2191.
+- ST30 proves that ordinary dyadic intertwining associativity is automatic and
+  leaves one new nonnegative fine parameter at each level.  Do not describe
+  path independence alone as selecting a canonical refinement.
+- ST31 is a retained falsification: at 2,500 counts per preparation, the frozen
+  mixed-channel Pearson receiver has false-rejection rate `0.0125` and only
+  `0.0475` power against the declared alteration.  It supplies neither evidence
+  for the common-generator hypothesis nor laboratory performance.
+- ST32 proves a polynomial long-range influence bound for the declared
+  `eta=1.8` envelope without Markov positivity.  It does not export a causal
+  cone, Lorentz symmetry, or continuum locality.
+- ST33 proves that reflection-compatible U(1) cycle flux classes are `0` and
+  `pi`, and that every connection built from one single-valued state phase has
+  trivial holonomy.  The pi sector requires an independent link/projective
+  object and is not strict-selected.
+- ST34 proves existence and Lyapunov set stability of a nonzero global
+  minimizer for the constructed saturating DNLS energy.  The best 60-start
+  candidate is uniform with IPR `1/12`; no localized stationary candidate was
+  found.  Do not claim a soliton, particle, or FIN-derived nonlinearity.
+- ST35 remains blocked: local lean/elan launchers have no configured toolchain,
+  no network install was attempted, and the source is not machine checked.
+- ST36 proves rank/nullity `6/1` with calibrated channel times and `6/4`
+  without calibrated clocks.  Mode frequency supplies dimensionless phase
+  ratios, not seconds or SI calibration.
+- ST37 gives only a frozen synthetic noise-and-clock-nuisance curve.  Its
+  `0.0025` null false-rejection rate and reported adversarial powers are not
+  calibrated apparatus sensitivities.
+- ST38 proves a no-go only for the declared one-vector construction class: no
+  one state jointly supplies a canonical orbit member, full `M_12(C)`, and
+  nontrivial holonomy.  Multi-component/projective objects remain open.
+- ST39 records nine axiom groups as relatively independent for the stated
+  targets and current construction classes.  It is not an absolute minimality
+  theorem over all future mathematics.
+- ST40 proves carrier/representation invariance only under simultaneous
+  faithful transport of generator, states, preparations, effects, composition,
+  and records.  The record residual is below `8.9e-16`; transporting the
+  isospectral generator alone with fixed instruments changes records by total
+  variation `0.1498688`.
+- ST41/ST42 identify the candidate carrier-neutral information object as the
+  complete operational isomorphism class, not the spectrum alone.  Information
+  may be independent of a particular faithful carrier, but operational
+  information is undefined after removing every realization structure.  Do
+  not convert this into a claim that information propagates without a carrier.
+- ST43 is a constructed C12-equivariant polar selection flow.  Symmetry supplies
+  twelve equivalent possibilities; inserted positive gain amplifies, inserted
+  saturation bounds growth, and the initial event selects a member.  The origin
+  is fixed by continuous extension and no smooth polynomial normal-form claim
+  is made.  None of the gain, saturation, anisotropy, or event is strict-derived.
+- ST44 shows that strict A supplies a canonical two-dimensional degenerate
+  subspace but no preferred axis.  A conditionally selected reflection axis
+  generates dimension `74`, not the full algebra.  This is a symmetry reservoir
+  and partial selector mechanism, not QW-2191 closure.
+- ST45 proves that complete operational carrier transports are invariant while
+  unitary and heat channels of the same A are inequivalent on every positive
+  spectral mode; only the one-dimensional zero mode is common.  Wave frequencies
+  scale as `sqrt(lambda)`, unlike unitary phase and heat decay rates.  Shared A
+  means common spectral organization, not identical dynamics.
+- ST28--ST45 export no physical carrier identification, dimensional source,
+  canonical history, strict-derived gain/nonlinearity, continuum, apparatus,
+  external record, legacy-to-strict completion, role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure.  The ranked continuation is ST46--ST57,
+  led by full upstream interval regeneration, strict gain derivation/refutation,
+  and multi-component/projective selector-algebra-holonomy tests.
+
+## Programs ST46--ST57 projective-state/carrier-transfer/entropy guardrail (Release 10.58, 2026-08-10)
+
+- ST46 interval-regenerates the exact-decimal strict input and conservatively
+  propagates it through spectral clusters, memory, stationary state, Jordan
+  coefficients and the collision root.  It confines the collision speed to
+  `1.2780147516944267 <= s* <= 1.2780147519464700`, but remains a strong partial
+  certificate: projector, memory, inverse and final root inequalities are
+  evaluated in binary64 with a factor-16 payment, not one all-directed interval
+  or proof-assistant replay.  Do not promote it to complete upstream closure.
+- ST47 proves `tr(A24(q))/24=tr(A12)/12+q`.  Trace-density conservation uniquely
+  selects `q=0`, but this is an added refinement axiom; a different prescribed
+  scale multiplier selects a different q.  Do not call intertwining alone a
+  canonical refinement law.
+- ST48 proves strict gain-sign nonidentifiability.  The same strict A and
+  reflection symmetry admit equivariant adaptive potentials with negative,
+  zero, or positive reflection-odd linear gain while keeping A stationary.
+  Symmetry supplies alternatives but not amplification; a response functional
+  or state law remains necessary.
+- ST49 constructs a two-component real projective half-angle texture with
+  Pancharatnam holonomy `-1`.  Distinct inserted amplitudes give one density
+  maximum, joint commutant dimension `1`, and full algebra dimension `144`.
+  This conditionally packages selector data, full algebra and pi holonomy, but
+  the texture and amplitude ordering are inserted.  Pi flux does not select
+  chirality or an origin, and QW-2191 remains open.
+- ST50 exactly classifies finite linear intertwiners among the declared
+  unitary, heat, wave, Green and Gibbs spectral images.  Their self-intertwiner
+  dimension is `22`; sparse cross-intertwiners do not yield invertible
+  cross-channel similarities.  Gibbs weights are a state spectrum, and the
+  classification is parameter-specific.
+- ST51 freezes a synthetic two-carrier receiver at 1,200 shots per preparation.
+  Complete operational transport agrees to `1.55e-15`, while the declared
+  mismatch gives mean TV `0.14414`, hold-out false rejection `0.003333`, and
+  sampled power `1.0`.  These are local synthetic results, not apparatus or
+  laboratory performance.
+- ST52 exactly proves that the constructed ST34 saturating DNLS energy has the
+  uniform U(1) orbit as its complete global minimizer set and proves orbital
+  stability modulo phase.  This is a nonlocalization theorem; it supplies no
+  localized soliton, particle, or strict-derived nonlinear law.
+- ST53 proves Shannon increase and relative-entropy contraction for the strict
+  doubly stochastic heat kernel and von Neumann entropy invariance under the
+  unitary channel.  Normalized amplitude heat filtering is nonlinear with
+  affinity defect `0.31095` and is not silently CPTP.  No thermodynamic entropy,
+  bath, energy scale, temperature or SI unit follows.
+- ST54 proves the universal factorization property of the operational-
+  isomorphism quotient.  It is a classification theorem and does not derive
+  which physical carrier groupoid nature realizes.
+- ST55 exports a hashed, type-complete local two-carrier executable
+  specification with seven event fields and four logical roles.  File-level
+  role separation does not create independent custody, calibration, apparatus,
+  or external raw events.
+- ST56 proves that every coarse-intertwining loss is zero on the declared lift
+  fibre and uses directed intervals to separate all three ratios `K(2d)/K(d)`
+  for `d=1,2,3`.  The tested coarse compression and one exact dyadic amplitude
+  law do not select refinement.  A richer sourced fine-data fractal code remains
+  open and must not be assumed.
+- ST57 retains all nine current physical-completion source groups.  The
+  projective state, two-carrier packet and saturating order parameter can
+  package multiple obligations only conditionally; no strict axiom reduction
+  is proved.
+- ST46--ST57 export no QW-2191 discharge, strict-derived projective state or
+  gain, dimensional source, canonical refinement, physical carrier experiment,
+  legacy-to-strict completion, legacy role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure.  The next ranked batch is ST58--ST69, led by a full
+  directed-interval ST46 replay, strict gain source audit, and projective-state
+  source/obstruction theorem.
