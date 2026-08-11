@@ -1,0 +1,32 @@
+{
+  "depolarizing_noise_action": "H_delta=(1-delta)H+delta I/12 preserves the complete optimizer set",
+  "examples": [
+    {
+      "c": 0,
+      "minimum_eigenvalue": 0.08333333333333333,
+      "rank": 12
+    },
+    {
+      "c": 0.25,
+      "minimum_eigenvalue": 0.06249999999999995,
+      "rank": 12
+    },
+    {
+      "c": 0.5,
+      "minimum_eigenvalue": 0.04166666666666664,
+      "rank": 12
+    },
+    {
+      "c": 0.75,
+      "minimum_eigenvalue": 0.020833333333333297,
+      "rank": 12
+    },
+    {
+      "c": 1.0,
+      "minimum_eigenvalue": -1.130489480980311e-16,
+      "rank": 1
+    }
+  ],
+  "optimal_set": "H>=0, Tr(H)=1, H_ii=1/12 for all i, and H_ij>=0 for i!=j",
+  "theorem": "Optimality first forces every diagonal entry to equal 1/12 because the adversary contains E_ii. Write K=H-I/12. If some K_ij<0, a normalized rank-one adversary proportional to (e_i+epsilon e_j)(e_i+epsilon e_j)^T lowers the response below 1/12 for small epsilon. Conversely nonnegative off-diagonal K pairs nonnegatively with every entrywise-nonnegative adversary. These conditions are therefore necessary and sufficient."
+}

@@ -1,0 +1,76 @@
+{
+  "Dobrushin_contraction": 0.7,
+  "asymptotic_bound_exponent": 0.015010851896839685,
+  "bad_state_output": "erasure",
+  "good_state_probabilities": {
+    "p0": 0.72,
+    "p1": 0.94
+  },
+  "one_good_event_Chernoff": 0.04942597528209407,
+  "rows": [
+    {
+      "Chernoff_upper_bound": 0.49196260174164946,
+      "events": 1,
+      "exact_Bayes_error": 0.4633333333333333,
+      "expected_good_events": 0.3333333333333333
+    },
+    {
+      "Chernoff_upper_bound": 0.484235282382963,
+      "events": 2,
+      "exact_Bayes_error": 0.43664,
+      "expected_good_events": 0.6666666666666666
+    },
+    {
+      "Chernoff_upper_bound": 0.46234940441938455,
+      "events": 5,
+      "exact_Bayes_error": 0.38419024022528014,
+      "expected_good_events": 1.666666666666667
+    },
+    {
+      "Chernoff_upper_bound": 0.4287065241767656,
+      "events": 10,
+      "exact_Bayes_error": 0.32325707325084957,
+      "expected_good_events": 3.333333333333335
+    },
+    {
+      "Chernoff_upper_bound": 0.3689190332888411,
+      "events": 20,
+      "exact_Bayes_error": 0.23869554946597943,
+      "expected_good_events": 6.666666666666672
+    },
+    {
+      "Chernoff_upper_bound": 0.2351561053498658,
+      "events": 50,
+      "exact_Bayes_error": 0.11656492387314868,
+      "expected_good_events": 16.666666666666693
+    },
+    {
+      "Chernoff_upper_bound": 0.11101962381642903,
+      "events": 100,
+      "exact_Bayes_error": 0.04356504831113117,
+      "expected_good_events": 33.33333333333347
+    },
+    {
+      "Chernoff_upper_bound": 0.02474495889210114,
+      "events": 200,
+      "exact_Bayes_error": 0.0074429075070613394,
+      "expected_good_events": 66.6666666666672
+    }
+  ],
+  "stationary_distribution": [
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "theorem": "The common hidden availability state is a stationary two-state Markov chain; a bad state emits an erasure and a good state emits one Bernoulli sample. Conditional on K good events the exact error is the K-sample binomial overlap. Averaging its Chernoff bound gives a two-by-two tilted transfer matrix, whose spectral radius is below one and therefore proves a positive finite-count exponent.",
+  "tilted_spectral_radius": 0.9851012493279235,
+  "transition_matrix": [
+    [
+      0.9,
+      0.1
+    ],
+    [
+      0.2,
+      0.8
+    ]
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "algorithm": "Propagate for every source-to-node path its affine parity a and a bit mask encoding the linear twist expression b. Unequal a values give an immediate obstruction. Equal a values give XOR equations; Gaussian elimination over F2 returns rank r and 2^(E-r) coherent assignments.",
+  "coherent_example": {
+    "GF2_rank": 3,
+    "coherent_twist_count": 32,
+    "edges": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        3
+      ],
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        4,
+        3
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        3,
+        5,
+        3
+      ],
+      [
+        4,
+        5,
+        3
+      ]
+    ],
+    "linear_equations": 5,
+    "nodes": 6,
+    "parity_obstruction_nodes": [],
+    "path_counts": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      4
+    ]
+  },
+  "parity_obstructed_example": {
+    "GF2_rank": 1,
+    "coherent_twist_count": 0,
+    "edges": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        4,
+        3
+      ],
+      [
+        2,
+        4,
+        3
+      ],
+      [
+        3,
+        5,
+        3
+      ],
+      [
+        4,
+        5,
+        3
+      ]
+    ],
+    "linear_equations": 1,
+    "nodes": 6,
+    "parity_obstruction_nodes": [
+      3,
+      5
+    ],
+    "path_counts": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      4
+    ]
+  },
+  "theorem": "The algorithm is necessary and sufficient for path independence on every finite topologically ordered refinement DAG."
+}

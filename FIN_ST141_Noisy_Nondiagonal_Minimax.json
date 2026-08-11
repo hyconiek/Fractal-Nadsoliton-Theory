@@ -1,0 +1,14 @@
+{
+  "adversary": "trace-one PSD matrices Delta with entrywise nonnegative entries; A+t Delta remains graph-feasible for every 0<=t<=4 min_d w_d",
+  "depolarizing_measurement_noise": "H_delta=(1-delta)H+delta I/12",
+  "detector_budget": "H>=0, Tr(H)=1",
+  "minimax_value": 0.08333333333333333,
+  "random_response_range": [
+    0.3723167942411315,
+    0.7707296869636554
+  ],
+  "safe_lift_amplitude": 0.04428326928576845,
+  "theorem": "The adversary contains every coordinate projector E_ii, so min_Delta Tr(H Delta)<=min_i H_ii<=1/12. The uniform detector I/12 returns 1/12 for every trace-one Delta and is fixed by depolarizing measurement noise. Hence the minimax value remains 1/12 for every declared noise strength. An independent worst additive response error epsilon reduces the certified guarantee to max(0,1/12-epsilon).",
+  "uniform_detector": "I/12",
+  "worst_additive_calibration_error_formula": "max(0,1/12-epsilon)"
+}

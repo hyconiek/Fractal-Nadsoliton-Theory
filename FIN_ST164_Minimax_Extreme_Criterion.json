@@ -1,0 +1,36 @@
+{
+  "affine_dimension": 66,
+  "certified_partition_extreme_points": 4213597,
+  "criterion": "Write H=VV^T with row vectors v_i in R^r and let Z be the zero off-diagonal positions. H is extreme iff the only R in Sym_r satisfying v_i^T R v_i=0 for every i and v_i^T R v_j=0 for every (i,j) in Z is R=0.",
+  "examples": [
+    {
+      "extremality_constraint_rank": 78,
+      "extreme": true,
+      "matrix_rank": 12,
+      "name": "discrete_partition_I_over_12",
+      "symmetric_range_dimension": 78
+    },
+    {
+      "extremality_constraint_rank": 1,
+      "extreme": true,
+      "matrix_rank": 1,
+      "name": "one_block_J_over_12",
+      "symmetric_range_dimension": 1
+    },
+    {
+      "extremality_constraint_rank": 21,
+      "extreme": true,
+      "matrix_rank": 6,
+      "name": "six_pairs",
+      "symmetric_range_dimension": 21
+    },
+    {
+      "extremality_constraint_rank": 6,
+      "extreme": true,
+      "matrix_rank": 3,
+      "name": "three_blocks_of_four",
+      "symmetric_range_dimension": 6
+    }
+  ],
+  "theorem": "The optimizer set has affine dimension 66. The displayed linear criterion is necessary and sufficient for extremality. Every set partition of twelve labels yields one extreme block-correlation matrix, giving at least Bell(12)=4,213,597 distinct extreme points."
+}

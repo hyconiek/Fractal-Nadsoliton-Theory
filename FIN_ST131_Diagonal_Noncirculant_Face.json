@@ -1,0 +1,42 @@
+{
+  "dimension": 12,
+  "extreme_rays": 12,
+  "face": "F_diag={A+Diag(t): t in R_+^12}",
+  "face_count": 4096,
+  "rank_at_vertex": 11,
+  "rank_for_every_nonzero_t": 12,
+  "sample_checks": [
+    {
+      "circulant": true,
+      "minimum_eigenvalue": 1.1926223897340549e-17,
+      "rank": 11,
+      "support_size": 0
+    },
+    {
+      "circulant": false,
+      "minimum_eigenvalue": 0.027275670533477774,
+      "rank": 12,
+      "support_size": 1
+    },
+    {
+      "circulant": false,
+      "minimum_eigenvalue": 0.05147693854101622,
+      "rank": 12,
+      "support_size": 2
+    },
+    {
+      "circulant": false,
+      "minimum_eigenvalue": 0.14778689213163237,
+      "rank": 12,
+      "support_size": 6
+    },
+    {
+      "circulant": false,
+      "minimum_eigenvalue": 0.37093414213773834,
+      "rank": 12,
+      "support_size": 12
+    }
+  ],
+  "theorem": "Fixing every off-diagonal graph inequality at its lower endpoint exposes a twelve-dimensional face of the complete lift fiber. It is affinely the nonnegative orthant, hence has 2^12 faces, one vertex A, and rays E_ii.  Since the strict graph is connected, x*(A+Diag(t))x=0 implies x is constant and every supported t_i x_i^2 vanishes. Thus every nonzero t makes the block positive definite. Consequently this face contains no nontrivial low-rank stratum beyond its rank-eleven vertex.",
+  "vertex_count": 1
+}

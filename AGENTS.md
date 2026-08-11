@@ -6905,3 +6905,147 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   led by natural operational quotients beyond functional calculus.  All new
   FIN research PDFs remain English unless explicitly requested otherwise for
   a specific artifact.
+
+## Programs ST142--ST153 natural-quotient/constrained-selection/bath-resource guardrail (Release 10.66, 2026-08-11)
+
+- ST142 proves a no-go only for the fully automorphism-natural, unlabeled
+  doubled datum `(H tensor C2, A tensor I2)`.  Its doubled commutant has complex
+  dimension 88, while invariance under all commutant unitaries leaves only the
+  seven-dimensional spectral center.  The desired `M12 direct-sum C` algebra
+  has dimension 145 and cannot be recovered in this class.  Named sectors,
+  region nets, instruments, environments, preparations, or a smaller
+  automorphism group evade the theorem only as additional typed structure.
+- ST143 proves the complete coordinate-edge star at the lift vertex: 66
+  bounded off-diagonal segments and 12 diagonal rays.  Every nonvertex point
+  on a bounded segment is positive definite, including its sign-flipped
+  endpoint.  Non-coordinate curved faces and global face adjacency remain
+  unclassified.
+- ST144 materially revises the fold landscape.  Sixty-nine seeds produce 35
+  numerical clusters; 29 of the first 32 tested representatives have disjoint
+  radius-`1e-7` Krawczyk certificates.  The exact statement is existence of at
+  least 29 distinct locally unique roots.  Do not promote 35 clusters to an
+  exact root count or claim compact-domain completeness; three tested boxes
+  failed and three clusters were outside the declared certificate budget.
+- ST145 proves exact maximum-likelihood recovery only for the supplied
+  coherent balanced-involution leakage, syndrome pinching, and asymmetric
+  readout model.  Generic unitary-spectrum leakage remains open.
+- ST146 proves positive selector cost only after imposing a robust vertex
+  probability gap `g>0`: minimum total variation is `11g/12`, with the exact
+  displayed relative-entropy cost.  The preferred outcome, POVM, and gap are
+  supplied; no strict selector or QW-2191 discharge follows.
+- ST147 proves that one constructed bounded `C12`- and reflection-invariant
+  potential has twelve stable and twelve angularly unstable branches.  All
+  stable branches remain symmetry-equivalent.  The anisotropy, coefficients,
+  initial condition/noise, and gradient clock are supplied, so this is a
+  branching mechanism rather than a realized strict selector.
+- ST148 proves a uniform local stationary root through nuisance halfwidth
+  `1.4599609375e-5`; the first failed halfwidth is `1.4609375e-5`.  This brackets
+  failure of the declared common-box/preconditioner certificate method, not a
+  physical bifurcation or loss of the root.  Global beta optimality remains
+  open.
+- ST149 gives a necessary-and-sufficient affine-transport/GF(2) algorithm for
+  coherence on finite topologically ordered refinement DAGs.  The graph,
+  degrees, and twists are supplied and no strict refinement or spin law is
+  derived.
+- ST150 proves that a labeled atomic causal net with commuting full matrix
+  factors selects its conditioning algebras.  Removing singleton labels gives
+  swap ambiguity; removing factor algebras restores the ST138 continuum.  The
+  net and its physical interpretation remain operational input.
+- ST151 proves an exact finite-count law and positive tilted exponent
+  `0.015010851896839685` for the declared two-state Markov-modulated
+  availability model.  The erasure reveals availability; a fully hidden
+  non-erasure HMM remains open.
+- ST152 proves that exact full-rank Gibbs replacement on dimension 12 needs a
+  bath of dimension at least 12 under a unitary dilation with bath rank at most
+  its dimension.  An isospectral Gibbs bath and SWAP attain the bound.  Treating
+  the strict spectrum as a Hamiltonian, beta, bath preparation, interaction
+  time, energy scale, and apparatus are all supplied.
+- ST153 completely classifies minimax detectors for the declared
+  entrywise-nonnegative positive unit-trace adversary cone: optimizers have
+  uniform diagonal `1/12` and nonnegative off-diagonal entries.  Depolarizing
+  detector noise preserves this continuum; uniqueness is false in scope.
+- ST142--ST153 export no strict fine-gauge source, QW-2191 discharge, strict
+  anisotropy source, dimensional clock/unit, apparatus or laboratory record,
+  physical projection theorem, legacy-to-strict completion or role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.  The ranked continuation
+  is ST154--ST165, led by environment-induced superselection without a
+  predeclared fine algebra and an interval-cover fold count.  All new FIN
+  research PDFs remain English unless explicitly requested otherwise for a
+  specific artifact.
+
+## Programs ST154--ST165 interaction-algebra/minimal-anisotropy/operational-completion guardrail (Release 10.67, 2026-08-11)
+
+- ST154 proves that the fixed algebra of the declared finite Hermitian
+  dephasing interaction is the joint commutant of its Hamiltonian and coupling
+  observables.  Strict monitoring by `A` leaves complex dimension 22;
+  `Q_vertex` monitoring leaves dimension 12; monitoring both leaves only
+  scalars; `A tensor I2` leaves dimension 88.  The environment can generate an
+  algebra only after its coupling is typed.  No strict source of the coupling
+  or desired fine-blind algebra follows.
+- ST155 adaptively retests all 35 ST144 representatives.  Thirty-one have
+  strict Krawczyk certificates and larger uniqueness boxes, giving 31 proved
+  local roots and root-free shells around them.  Four representatives remain
+  uncertified.  Do not promote this union of neighborhoods to an exhaustive
+  cover or exact root count on the filtered 15-dimensional domain.
+- ST156 proves `F_e*=sum_y max_a p_a q(y|a)` for any finite
+  Hilbert--Schmidt-orthogonal unitary error family with the supplied classical
+  syndrome channel.  Nonorthogonal unitary errors, the error prior, coupling,
+  pinching, and readout remain outside or input to the theorem.
+- ST157 proves the sharp probability-simplex kinetic preparation bound
+  `A_min=11 g^2/(24 T)` and its power-limited time consequence.  The Euclidean
+  control metric, preferred outcome, gap, clock, and physical interpretation
+  are supplied; this is not a strict physical action, energy, or time theorem.
+- ST158 proves an exact new structural result: on the normalized first real
+  Fourier mode of `C12`, local even vertex monomials below degree twelve are
+  angularly isotropic, while
+  `sum_j cos(theta+2pi*j/12)^12=693/256+(3/512)cos(12theta)`.
+  Thus degree twelve is the first local `C12` anisotropy and its projection
+  factor is fixed.  The nonlinear coupling `g`, its sign, units, and strict
+  dynamical source remain missing; do not claim selector/QW-2191 closure.
+- ST159 partitions the complete nuisance cube of halfwidth `5e-5` into 64
+  interval cells and proves Krawczyk inclusion in every cell, with minimum
+  margin `0.001345222066206242`.  This falsifies the ST148 single-box failure
+  near `1.46e-5` as a root-loss boundary.  It does not locate a maximal
+  continuation domain or prove global beta optimality.
+- ST160 proves functorial coarse-graining for rooted all-odd reachable
+  refinement DAGs: coherent twists are vertex coboundaries, restriction to
+  retained vertices is surjective, and its kernel counts eliminated nonroot
+  vertices.  Mixed parity retains a separate affine-linear obstruction.  The
+  graph, parities, and twists are supplied; no strict fractal refinement law
+  follows.
+- ST161 proves an exact noiseless reconstruction criterion: two labeled,
+  commuting, tomographically complete `M2` instrument factors generating `M4`
+  determine the atomic net up to local unitaries, with labels removing swap.
+  Instrument completeness, labels, exact data, and physical-region meaning are
+  supplied; noisy tomography remains open.
+- ST162 proves a positive conservative discrimination exponent for a declared
+  fully hidden non-erasure two-state HMM.  Its first implementation omitted one
+  first-event symbol; the validator caught the defect, the forward enumeration
+  was corrected, and all results were regenerated.  The pair-path row-sum
+  certificate is `0.7939043351829553<1`, giving exponent at least
+  `0.23079230965008812`.  Emissions and transition law remain supplied, and
+  this is not the exact asymptotic Chernoff rate.
+- ST163 combines the dimension-12 exact-reset lower bound with
+  `||E_t-Id||_diamond<=4 sin(gt/2)` for total generator norm at most `g`.  Exact
+  Gibbs reset obeys `gt>=1.0019408674489125` in the declared bound, while a
+  two-site isospectral SWAP completes at `gt=pi/2`.  Microscopic qubit locality,
+  Lieb--Robinson geometry, beta, units, controls, and apparatus remain open or
+  supplied.
+- ST164 proves affine dimension 66 and a necessary-and-sufficient linear
+  extremality criterion for the real ST153 optimizer spectrahedron.  Every set
+  partition gives an extreme point, certifying at least
+  `Bell(12)=4,213,597` extremes.  The complete criterion is not a full
+  enumeration beyond this family.
+- ST165 exports a conditional operational tuple with eleven typed atoms:
+  `ALG/GAUGE/PREP/DYN/CLOCK/INST/ENV/APP/SELECT/UNITS/RECORD`.  Each has an
+  explicit inequivalent-choice/deletion witness at fixed strict `A`.  This is
+  signature-minimal relative to declared obligations, not an absolute minimal
+  ontology, laboratory instantiation, or code-generated independent custody.
+- ST154--ST165 export no strict environment coupling, fine algebra,
+  QW-2191 discharge, strict anisotropy coefficient, dimensional unit,
+  calibrated physical clock, apparatus or independent record, physical
+  projection theorem, legacy-to-strict completion or role transfer, Standard
+  Model, gravity, `L_total`, or ToE closure.  The ranked continuation is
+  ST166--ST177, led by a carrier-change operational invariant and a strict
+  interaction-source audit.  All new FIN research PDFs remain English unless
+  explicitly requested otherwise for a specific artifact.
