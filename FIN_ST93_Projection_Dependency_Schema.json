@@ -1,0 +1,112 @@
+{
+  "acyclic": true,
+  "central_verdict": "ST86 and ST88 prove exact finite projection/quotient mechanisms. They establish mathematical possibility and nonidentifiability, not a derivation of the physical projection map. H_PROJ still depends on independent selector, boundary, clock, unit, preparation, instrument and record resources.",
+  "hypothesis": "H_PROJ: observable universe is an operational projection/quotient of a deeper FIN object",
+  "hypothesis_status": "counterfactual_not_established_physics",
+  "missing_source_count": 6,
+  "missing_source_nodes": [
+    "SRC_SEL",
+    "CLK",
+    "UNIT",
+    "PREP",
+    "INST",
+    "REC"
+  ],
+  "nodes": {
+    "BC": {
+      "dependencies": [],
+      "kind": "boundary/state choice"
+    },
+    "CLK": {
+      "dependencies": [],
+      "kind": "missing clock calibration"
+    },
+    "H_PROJ": {
+      "dependencies": [
+        "PF",
+        "IR",
+        "SP",
+        "SEL",
+        "TIME",
+        "SCALE",
+        "OBS"
+      ],
+      "kind": "counterfactual interpretation"
+    },
+    "INST": {
+      "dependencies": [],
+      "kind": "missing calibrated instrument/apparatus"
+    },
+    "IR": {
+      "dependencies": [
+        "W0"
+      ],
+      "evidence": "ST75/ST88",
+      "kind": "irreversible quotient"
+    },
+    "OBS": {
+      "dependencies": [
+        "PREP",
+        "INST",
+        "REC"
+      ],
+      "kind": "operational observables"
+    },
+    "PF": {
+      "dependencies": [
+        "W0"
+      ],
+      "evidence": "ST86",
+      "kind": "projection fiber"
+    },
+    "PREP": {
+      "dependencies": [],
+      "kind": "missing physical preparations"
+    },
+    "REC": {
+      "dependencies": [],
+      "kind": "missing independent physical record"
+    },
+    "SCALE": {
+      "dependencies": [
+        "UNIT",
+        "W0"
+      ],
+      "kind": "dimensionful energy/length scale"
+    },
+    "SEL": {
+      "dependencies": [
+        "SRC_SEL"
+      ],
+      "kind": "selector/symmetry breaking"
+    },
+    "SP": {
+      "dependencies": [
+        "W0",
+        "BC"
+      ],
+      "evidence": "ST85",
+      "kind": "spin/projective lift"
+    },
+    "SRC_SEL": {
+      "dependencies": [],
+      "kind": "missing strict source"
+    },
+    "TIME": {
+      "dependencies": [
+        "CLK",
+        "W0"
+      ],
+      "kind": "dimensionful clock/order"
+    },
+    "UNIT": {
+      "dependencies": [],
+      "kind": "missing physical unit source"
+    },
+    "W0": {
+      "dependencies": [],
+      "kind": "strict mathematical core"
+    }
+  },
+  "schema_version": "1.0"
+}

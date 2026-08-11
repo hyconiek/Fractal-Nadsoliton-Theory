@@ -6549,3 +6549,82 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   The leading next tasks are ST82 full independent ST58 enclosure regeneration,
   ST83 interval certification of the ST77 fold, and ST84--ST86 typed source
   searches for temporal order, spin lift, and fine-record compression.
+
+## Programs ST82--ST93 projection-fiber/passive-time guardrail (Release 10.61, 2026-08-11)
+
+- Treat `H_PROJ` (the observable universe is an operational projection or
+  quotient of a deeper FIN realization) only as a counterfactual research
+  hypothesis.  ST82--ST93 do not prove that physical reality is a FIN
+  projection.  In FIN ontology, a fine realization is not an informational
+  layer below the nadsoliton; the nadsoliton remains primordial fractal
+  information in a solitonic state.
+- ST82's independent exact-rational regeneration implementation was stopped
+  after a bounded local attempt and emitted no certificate.  Preserve ST70's
+  accepted exact replay and mark the full upstream regeneration open.  Do not
+  infer a counterexample, invalidate ST58, or promote unfinished Fraction
+  arithmetic.
+- ST83 refines the ST77 fold at
+  `kappa=0.016589052386382905`.  The augmented floating Jacobian has stable
+  minimum singular values above `0.08024666` over the declared finite-
+  difference steps, but no outward interval Jacobian/Krawczyk inclusion was
+  obtained.  The fold remains strong numerical evidence, not an interval
+  theorem or a global branch result.
+- ST84 proves that the certified positive-pole, positive-residue Stieltjes
+  memory is completely monotone and passive.  It cannot by itself generate
+  active positive gain or a temporal selector.  Retardation is not a strict
+  time arrow; a pump, nonequilibrium population, signed active component,
+  oriented boundary/preparation, or other source remains necessary.
+- ST85 classifies the periodic and antiperiodic Z2 spin-boundary classes.  The
+  C24/half-angle lift exists conditionally, but scalar strict A and its
+  stabilizer do not select the lift, boundary class, orientation, physical
+  spin, chirality, or fermion sector.
+- ST86 proves the exact dyadic projection-fiber theorem.  With
+  `P=(I,I)^T/sqrt(2)` and `F=(I,-I)^T/sqrt(2)`, every declared lift satisfies
+  `P* A24(q) P=A12`, `P* A24(q) F=0`, and therefore
+  `P* f(A24(q)) P=f(A12)` for every finite spectral function.  The fine block
+  varies with `q`.  This is an exact mathematical projection model and an
+  exact nonidentifiability theorem: infinitely many deeper lifts have the same
+  complete coarse spectral dynamics for fixed functional-calculus channels.
+  Preserve the Gibbs normalization caveat: unnormalized Boltzmann operators
+  compress exactly, but a globally normalized 24-state Gibbs state has a
+  `q`-dependent coarse-sector probability through `Z24(q)`; only the Gibbs
+  state conditioned and renormalized inside the coarse sector equals the
+  12-state Gibbs state.  ST86 does not select `q`, a physical quotient, a
+  universe, apparatus, or observer.
+- ST87's robust Chernoff optimization is strong numerical evidence for one
+  declared synthetic contamination model.  Its nominal/worst rates are about
+  `0.0873568/0.0404023` nats per joint event.  Do not transfer its event count
+  to laboratory performance or undeclared nuisance classes.
+- ST88 proves that every full-space ST75 intertwiner is irreversible because
+  spectral pinching has kernel dimension `122`.  Reversible maps survive on
+  `C direct-sum M2^5 direct-sum C` as its finite C*-algebra automorphisms.  No
+  physical measurement map is derived.
+- ST89 gives an explicit Gibbs-preserving CPTP channel that is not time-
+  translation covariant and hence not a thermal operation.  Do not identify
+  Gibbs preservation alone with thermodynamic dynamics; energy scale, bath,
+  process class, and heat/work semantics remain added resources.
+- ST90 is a finite, nonexhaustive reflection-reduced multistart inventory.
+  Its solution-signature counts are lower bounds on solver hits, not exact
+  branch counts, existence/uniqueness theorems, or stability results.
+- ST91 proves a local exchange of stability only for the constructed
+  twelve-branch potential after adding its coupling, gradient metric and
+  clock.  Symmetry supplies an orbit of possible branches; symmetry is not
+  itself positive feedback and the strict selector remains absent.
+- ST92 proves a no-go only for the declared strict-generated class comprising
+  powers `A^0..A^12`, their diagonal contractions, and polynomial
+  commutators.  This seven-dimensional reflection-even class contains no
+  nonzero reflection-odd selector and does not discharge QW-2191.  Explicitly
+  sourced state-dependent tensors or boundary/record objects remain outside.
+- ST93 exports an acyclic projection-hypothesis dependency graph.  Six source
+  nodes remain explicitly missing: selector source, clock calibration,
+  physical unit, preparation, calibrated instrument/apparatus, and independent
+  record; the boundary/state class is an additional unselected resource.
+- ST82--ST93 export no QW-2191 discharge, physical projection theorem,
+  legacy-to-strict completion, legacy role transfer, dimensional source,
+  laboratory evidence, Standard Model, gravity, `L_total`, or ToE closure.
+  The ranked continuation is ST94--ST105, led by projection uniqueness under
+  an explicit operational-sufficiency axiom, complete lift-fiber
+  classification, Petz recovery, and a genuinely state-dependent selector.
+- From Release 10.61 onward, all newly generated FIN research PDFs must be in
+  English unless the user explicitly requests another language for a specific
+  document.
