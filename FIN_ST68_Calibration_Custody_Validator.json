@@ -1,0 +1,63 @@
+{
+  "actual_endpoint_TV_values": [
+    0.0005486477126224129,
+    0.0005491420884469808
+  ],
+  "duplicate_role_rejection": {
+    "accepted": false,
+    "checks": {
+      "calibration_bound_within_budget": true,
+      "hash_frozen_before_unblinding": true,
+      "raw_events_present": true,
+      "roles_pairwise_distinct": false
+    }
+  },
+  "missing_external_record_rejection": {
+    "accepted": false,
+    "checks": {
+      "calibration_bound_within_budget": true,
+      "hash_frozen_before_unblinding": true,
+      "raw_events_present": false,
+      "roles_pairwise_distinct": true
+    }
+  },
+  "sha256": "72ab3694cd530a703b3e0d17a94a6c2646523ba70700490b73655839cd90162b",
+  "specification": {
+    "calibration": {
+      "absolute_time_uncertainty": 0.001,
+      "analytic_probability_TV_upper_bound": 0.0023421820411463003,
+      "declared_TV_budget": 0.01,
+      "registered_time": 0.63
+    },
+    "event_schema": [
+      "timestamp",
+      "carrier_id",
+      "preparation_id",
+      "outcome_id",
+      "run_id",
+      "calibration_split",
+      "blind_label"
+    ],
+    "frozen_model": "FIN ST55 two-carrier operational transfer",
+    "hash_before_unblinding": true,
+    "holdout_frozen": true,
+    "no_refit_after_failure": true,
+    "required_distinct_roles": [
+      "provider",
+      "registrar",
+      "analyst",
+      "custodian"
+    ],
+    "single_pipeline_run": true,
+    "version": "1.0.0"
+  },
+  "valid_synthetic_case": {
+    "accepted": true,
+    "checks": {
+      "calibration_bound_within_budget": true,
+      "hash_frozen_before_unblinding": true,
+      "raw_events_present": true,
+      "roles_pairwise_distinct": true
+    }
+  }
+}

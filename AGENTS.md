@@ -6411,3 +6411,73 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   `L_total`, or ToE closure.  The next ranked batch is ST58--ST69, led by a full
   directed-interval ST46 replay, strict gain source audit, and projective-state
   source/obstruction theorem.
+
+## Programs ST58--ST69 interval-closure/projective-source/thermodynamic-bridge guardrail (Release 10.59, 2026-08-11)
+
+- ST58 uses the exact circulant structure of strict A and the even/odd hidden
+  blocks to replace floating projector grouping by scalar 6- and 12-point
+  Fourier intervals.  Directed transcendental evaluation, a strict nonlinear
+  Krawczyk inclusion, two strict linear inclusions and interval quadratic-root
+  evaluation prove `1.278014751813487 <= s* <=
+  1.2780147518274094` for the declared exact-decimal finite memory chain.  The
+  certificate pays `2e-14` per component for fixed binary64 preconditioner
+  operations.  It is not a proof-assistant replay, global branch theorem,
+  global Krein theorem, dimensional result, or physical stability experiment.
+- ST59 proves gain-sign nonidentifiability for every adaptive-functional source
+  class closed under `Phi -> -Phi`: stationarity at A and stabilizer invariance
+  are shared while the response Hessian and gradient-flow gain reverse sign.
+  Any positive-gain source must add an order, time orientation, monotonicity,
+  entropy-production direction, or equivalent non-sign-closed premise.
+- ST60 proves that every scalar strict two-dimensional spectral eigenspace is
+  an integer C12 Fourier doublet.  Its projector-column Pancharatnam holonomy is
+  `+1` whenever defined; the orthogonal k=3 neighbor link is undefined.  The
+  ST49 `-1` half-angle texture therefore requires added spin/projective data and
+  is not sourced by scalar functions or spectral projectors of A.
+- ST61 refutes complete normalized heat-signature stationarity in the declared
+  dyadic lift.  The first derivative forces `q=0`, but the outward normalized
+  second-moment mismatch at q=0 lies in
+  `[-6.1281498283e-5,-6.1281497880e-5]`.  Do not describe trace conservation or
+  full heat matching as a strict fractal refinement source.  A nonstationary
+  fine-data rate-distortion/RG code remains open.
+- ST62 proves, conditional on the frozen ideal ST51 binary64 probability tables,
+  a two-sided information bound: at target errors 0.01, 2 shots per preparation
+  are KL-necessary and 5 are Chernoff-sufficient.  The prior 1,200-shot budget
+  is not a laboratory recommendation; loss, drift, dark counts and custody are
+  absent.
+- ST63 proves that canonical spectral pinching is CPTP and intertwines unitary
+  evolution with A-dephasing on the 22-dimensional equal-eigenvalue block
+  algebra.  It is noninvertible and no invertible CP cross-channel equivalence
+  exists at the declared parameters.  A-dephasing is not the classical vertex
+  heat semigroup; do not merge them.
+- ST64 proves the standard relative-entropy/free-energy/entropy-production
+  identity only after adding `H=E_* A`, `S=k_B S_vN`, a Gibbs bath and a
+  thermalization process.  The orbit `(E_*,T)->(cE_*,cT)` leaves all
+  dimensionless states/records fixed, so neither energy nor temperature scale
+  is strict-identifiable.  No `E_*`, `k_B`, bath, heat/work instrument or SI
+  calibration is exported.
+- ST65 gives strong numerical evidence only: the regular localized
+  anti-continuum continuation reaches `kappa=0.0165`, not strict coupling 1;
+  240 full-coupling starts give 166 stationary convergences and zero IPR>0.10
+  hits.  This is not a nonexistence theorem.  A fold or disconnected branch
+  requires pseudo-arclength and interval analysis before promotion.
+- ST66 proves a complete branch classification for one constructed smooth
+  coercive polynomial C12-equivariant potential: twelve stable nonzero branches
+  and twelve angular saddles.  Gain, saturation, anisotropy, coupling to the
+  strict doublet and the realized event are inserted, not strict-derived.
+- ST67 constructs a CP1 two-winding texture with pi Pancharatnam holonomy in
+  both orientations and a gauge-invariant Bargmann chirality `+/-0.9460599`.
+  Hence pi holonomy and chirality are independent data.  The texture and sign
+  are inserted; no QW-2191 or strict orientation source follows.
+- ST68 exports a hashed calibration/custody validator.  It accepts a complete
+  synthetic packet and rejects duplicate-role and missing-record cases; its
+  clock-TV bound is `0.00234219` for `|delta t|<=0.001`.  Validation code cannot
+  create independent custody, apparatus calibration, or external raw events.
+- ST69 retains all nine physical-completion source groups.  ST58 closes one
+  arithmetic obligation; ST59--ST68 prove obstructions or conditional
+  constructions and therefore do not reduce the strict axiom/source ledger.
+- ST58--ST69 export no QW-2191 discharge, strict positive-gain source, strict
+  spin/projective source, canonical refinement, dimensional calibration,
+  laboratory evidence, legacy-to-strict completion, legacy role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.  The ranked continuation
+  is ST70--ST81, led conceptually by time-oriented response, projective-source,
+  and nonstationary fine-data fractal-code programs.
