@@ -912,7 +912,7 @@ def make_figures(results: dict) -> None:
     resources = results["ST76"]["resources"]
     ax.barh(range(len(resources)), [1] * len(resources))
     ax.set_yticks(range(len(resources)), [row["resource"] for row in resources]); ax.set_xticks([])
-    ax.set(title="independently necessary conditional thermodynamic resources")
+    ax.set(title="conditional thermodynamic resources")
     fig.tight_layout(); fig.savefig(FIG_DIR / "st76_resource_minimality.png", dpi=190); plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(7.5, 4.2))

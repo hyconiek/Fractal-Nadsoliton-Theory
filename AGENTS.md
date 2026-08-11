@@ -6481,3 +6481,71 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   Standard Model, gravity, `L_total`, or ToE closure.  The ranked continuation
   is ST70--ST81, led conceptually by time-oriented response, projective-source,
   and nonstationary fine-data fractal-code programs.
+
+## Programs ST70--ST81 independent-replay/spin-cover/source-architecture guardrail (Release 10.60, 2026-08-11)
+
+- ST70 exactly replays every serialized ST58 acceptance inequality with
+  standard-library rational arithmetic.  It proves the exported collision
+  polynomial has one root in `[1.278014751813487,
+  1.2780147518274094]`, conditional on the exported interval inputs.  It does
+  not independently regenerate cosine, fifth-root, Fourier, stationary-box,
+  inverse, preconditioner, or Krawczyk enclosures; do not call it a full
+  independent interval rederivation.
+- ST71 proves, in the declared five-dimensional reflection-odd linear
+  response class, that uniform positive gradient-flow gain at rate `mu` is
+  equivalent to the one-sided condition `H_- <= -mu I`.  This condition is an
+  added time/order premise.  Strict symmetry supplies the sector but not the
+  curvature sign, time orientation, or gain magnitude.
+- ST72 constructs the nontrivial central extension `C24 -> C12` with the carry
+  cocycle.  All 1,728 cocycle equations pass and GF(2) coboundary ranks `10/11`
+  prove nontriviality.  Both the trivial and nontrivial lifts induce the same
+  scalar C12 action, so scalar strict A does not select a spin cover.  No
+  QW-2191 discharge or strict spin source follows.
+- ST73 proves that supplied fine-only data plus a positive quadratic rate
+  penalty uniquely select a dyadic lift parameter, and conversely that every
+  admissible parameter can be selected by a suitable supplied fine record.
+  This is a conditional nonstationary code, not a FIN-derived fractal/RG law or
+  canonical refinement.
+- ST74 gives a conservative synthetic nuisance bracket under declared
+  uniform loss/dark mixing up to `0.12` and calibration TV balls `0.003`:
+  `32` necessary versus `14,301` distribution-free sufficient uniformly
+  sampled joint events, with expected means `3` and `1,192` per preparation.
+  These are not fixed-stratum guarantees, detector calibration, or laboratory
+  count recommendations.
+- ST75 proves the complete linear/CPTP intertwiner characterization for the
+  declared unitary and A-dephasing channels.  Every intertwiner factors through
+  the 22-dimensional equal-energy block algebra; the complex linear space has
+  dimension `484`, and the CPTP cone is its Choi-positive trace-preserving
+  part.  This does not identify physical carriers or the classical vertex heat
+  semigroup.
+- ST76 proves relative independent necessity of four conditional
+  thermodynamic resource types: positive energy scale, entropy unit, Gibbs
+  reference/bath, and Gibbs-preserving process with operational heat/work
+  semantics.  It derives none of these resources from strict FIN.
+- ST77 numerically crosses the first localized ST65 fold at
+  `kappa=0.01658905238638291`, IPR `0.9776497495`, and follows a return branch.
+  This refutes the numerical-termination interpretation.  The result remains
+  strong binary64 evidence: it is not interval-certified, does not reach
+  `kappa=1`, establish stability, or exclude disconnected branches.
+- ST78 proves, for the constructed ST66 potential coupled to the strict first
+  doublet, a quenching threshold `g_c=mu/lambda_1=0.4641164062928421`.
+  Unit coupling removes the nonzero branches in that conditional model.  The
+  potential, coupling, and identification remain added structures; no general
+  FIN no-soliton or physical-phase theorem follows.
+- ST79 proves a stabilizer no-go: every deterministic reflection-covariant
+  Bargmann chirality sourced only by scalar strict A vanishes.  State,
+  boundary, history, projective-lift, or record data can evade the theorem only
+  as additional sourced objects.
+- ST80 exports a hash-linked Ed25519 validator and rejects synthetic event
+  tampering and duplicate public keys.  Its keys and events are deterministic
+  local fixtures; signatures do not create external identity, apparatus,
+  calibration, raw laboratory data, or independent custody.
+- ST81 retains all nine strict physical-source groups and organizes the
+  conditional completion as `W0+CA+SA+RA+OA`.  Packaging does not constitute
+  strict axiom reduction.
+- ST70--ST81 export no QW-2191 discharge, strict time/gain/spin/refinement or
+  dimensional source, laboratory evidence, legacy-to-strict completion,
+  legacy role transfer, Standard Model, gravity, `L_total`, or ToE closure.
+  The leading next tasks are ST82 full independent ST58 enclosure regeneration,
+  ST83 interval certification of the ST77 fold, and ST84--ST86 typed source
+  searches for temporal order, spin lift, and fine-record compression.
