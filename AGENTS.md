@@ -7049,3 +7049,84 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   ST166--ST177, led by a carrier-change operational invariant and a strict
   interaction-source audit.  All new FIN research PDFs remain English unless
   explicitly requested otherwise for a specific artifact.
+
+## Programs ST166--ST177 carrier-invariant/uniform-fold/executable-boundary guardrail (Release 10.68, 2026-08-11)
+
+- ST166 proves exact invariance of the full logical preparation--effect
+  probability table under reversible stochastic carrier embeddings `E_i`
+  with stochastic left inverses `D_i`, when every logical effect `m` is
+  transported as `m D_i`.  The two explicit carriers have zero left-inverse
+  and probability-table mismatch.  Equal Shannon entropy is refuted as a
+  sufficient operational invariant.  Do not promote representation
+  invariance to physical propagation without a carrier, causal transfer, or
+  an ontology below the nadsoliton.
+- ST167 proves that every environment interaction family restricted to
+  `L_k=f_k(A)` has joint commutant containing the strict commutant of complex
+  dimension 22.  It cannot generate the 12-dimensional vertex pointer algebra
+  or a smaller irreducible algebra.  A nonlinear, state-dependent,
+  vertex-typed, environmental, or symmetry-breaking coupling would be a new
+  object and remains open.
+- ST168 completely classifies only the declared reflection-even uniform fold
+  branch.  Stationarity gives `c=0` or
+  `3 rho^3+18 rho^2-284 rho+24=0`, `rho=c^2`; the cubic has exactly two
+  positive roots.  The constant-mode resultant is the nonzero integer
+  `-108263374848000`.  Five real amplitudes times six positive Fourier classes
+  give exactly 30 geometric fold null lines and 60 normalized roots after
+  null-vector sign.  Do not promote this to a global count on the nonuniform
+  15-dimensional fold domain.
+- ST169 proves the exact globally optimal entanglement fidelity for the
+  declared binary qubit phase-error family with noisy syndrome:
+  `sum_y (alpha_y+beta_y+|alpha_y+beta_y exp(i theta)|)/2`.  Three or more
+  nonorthogonal errors and higher-dimensional families remain open.
+- ST170 proves that a `C12`-covariant Markov/Lindblad semigroup preserving the
+  uniform state cannot start a selector from that state.  For a supplied
+  Fisher--Rao control, preferred vertex, gap, and time horizon, the sharp
+  geodesic action is `d_FR(g)^2/(2T)`.  Symmetry provides equivalent
+  alternatives but is not positive feedback by itself; no QW-2191 discharge
+  or physical action follows.
+- ST171 proves that `V_g=V_0+(g/12) sum_j psi_j^12` has the same strict
+  quadratic operator, declared symmetries, and field jet through order eleven
+  for every `g`.  No functor of those lower data can identify the coupling,
+  sign, or magnitude.  A new twelfth-order datum, microscopic nonlinear law,
+  measurement, or source axiom is necessary.
+- ST172 partitions the nuisance cube of halfwidth `7.5e-5` into 125 cells of
+  halfwidth `1.5e-5` and certifies Krawczyk inclusion in all cells.  The minimum
+  margin is `0.0007980574254414785`.  Maximal continuation range and physical
+  parameter calibration remain open.
+- ST173 proves the exact independent-edge parity law
+  `q_m=(1-(1-2 epsilon)^m)/2` and exact odd-repetition majority tail.  This is
+  a supplied error-correcting compression model, not a strict fractal
+  compression or dynamics theorem.
+- ST174 proves that the ideal `X tensor I, Z tensor I` commutator Laplacian has
+  a four-dimensional kernel and gap four.  Generator errors bounded by `eta`
+  perturb it by at most `16 eta+8 eta^2`; when this is below two, a unique
+  four-dimensional low subspace is separated.  This does not recover physical
+  labels, exact factors, apparatus calibration, or adversarial systematic
+  errors.
+- ST175 uses outward Collatz--Wielandt bounds to certify the supplied hidden-
+  HMM pair-transfer spectral radius in
+  `[0.7211542214950951,0.7211542214950967]`, giving exponent at least
+  `0.32690226513199694`.  This sharpens ST162 but is not the exact observed-
+  process Chernoff rate.
+- ST176 proves that a twelve-level bath requires at least four qubits.  Four
+  disjoint pairwise SWAP gates give depth one and time `pi/(2g)` per-edge or
+  `2pi/G` under a global sum-norm budget.  The manifestly energy-conserving
+  register-SWAP generator is eight-qubit for an arbitrary encoded strict
+  Hamiltonian.  No universal no-go for all energy-conserving 2-local controlled
+  constructions is claimed.
+- ST177 implements the eleven-atom ST165 schema, canonical event/holdout
+  hashes, declared role separation, and deletion detection.  All eleven
+  deletions are caught.  The local template verdict is
+  `MATHEMATICAL_PACKET_READY_PHYSICAL_EXECUTION_BLOCKED`; code cannot generate
+  physical units, clock/apparatus calibration, laboratory execution, or
+  independent custody.
+- ST166--ST177 export no strict nonlinear environment coupling, irreversible
+  universal carrier invariant, QW-2191 discharge, strict twelfth-order
+  coupling, dimensional unit, calibrated apparatus or independent record,
+  physical projection theorem, legacy-to-strict completion or role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.  The ranked continuation
+  is ST178--ST189, led by irreversible-carrier sufficient statistics, one new
+  strict nonlinear/state-dependent interaction candidate, and validated
+  continuation from the 30 exact uniform folds.  All new FIN research PDFs
+  remain English unless explicitly requested otherwise for a specific
+  artifact.

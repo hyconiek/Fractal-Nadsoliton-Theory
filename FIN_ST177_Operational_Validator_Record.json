@@ -1,0 +1,170 @@
+{
+  "all_eleven_deletions_detected": true,
+  "boundary": "Code verifies schema, hashes, declared role separation, and deletion behavior. It cannot create physical units, apparatus calibration, laboratory execution, or independent custody.",
+  "deletion_audit": [
+    {
+      "corresponding_check": "atom_ALG",
+      "corresponding_check_passed": false,
+      "deleted_atom": "ALG",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_GAUGE",
+      "corresponding_check_passed": false,
+      "deleted_atom": "GAUGE",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_PREP",
+      "corresponding_check_passed": false,
+      "deleted_atom": "PREP",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_DYN",
+      "corresponding_check_passed": false,
+      "deleted_atom": "DYN",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_CLOCK",
+      "corresponding_check_passed": false,
+      "deleted_atom": "CLOCK",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_INST",
+      "corresponding_check_passed": false,
+      "deleted_atom": "INST",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_ENV",
+      "corresponding_check_passed": false,
+      "deleted_atom": "ENV",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_APP",
+      "corresponding_check_passed": false,
+      "deleted_atom": "APP",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_SELECT",
+      "corresponding_check_passed": false,
+      "deleted_atom": "SELECT",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_UNITS",
+      "corresponding_check_passed": false,
+      "deleted_atom": "UNITS",
+      "structural_packet_valid": false
+    },
+    {
+      "corresponding_check": "atom_RECORD",
+      "corresponding_check_passed": false,
+      "deleted_atom": "RECORD",
+      "structural_packet_valid": false
+    }
+  ],
+  "packet": {
+    "ALG": {
+      "algebra": "typed finite observable algebra",
+      "composition_embeddings": "declared"
+    },
+    "APP": {
+      "apparatus": null,
+      "calibration_record": null
+    },
+    "A_strict": {
+      "dimension": 12,
+      "dimensionless": true,
+      "source": "strict decimal kernel"
+    },
+    "CLOCK": {
+      "calibration_to_seconds": null,
+      "parameter": "tau"
+    },
+    "DYN": {
+      "channels": [
+        "unitary",
+        "heat"
+      ],
+      "selected_channel": null
+    },
+    "ENV": {
+      "bath_model": null,
+      "dilation": null
+    },
+    "GAUGE": {
+      "equivalence": "declared operational carrier equivalence"
+    },
+    "INST": {
+      "instrument": "vertex POVM placeholder",
+      "tomography": null
+    },
+    "PREP": {
+      "preparations": [
+        "vertex_basis",
+        "informationally_complete_placeholder"
+      ],
+      "realized": false
+    },
+    "RECORD": {
+      "holdout": {
+        "indices": [],
+        "rule": "single frozen analysis after registration",
+        "status": "empty_no_laboratory_data"
+      },
+      "holdout_sha256": "bd506854f644cc6552c242147a3d9d67d5d4ebeb4bc1362ff60d28567c979150",
+      "raw_events": [],
+      "raw_events_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "SELECT": {
+      "branch_rule": null,
+      "strict_source": false
+    },
+    "UNITS": {
+      "energy_scale": null,
+      "length_scale": null,
+      "mode": "dimensionless_only",
+      "time_scale": null
+    },
+    "independent_custody_verified": false,
+    "laboratory_execution_verified": false,
+    "roles": {
+      "analyst": "UNASSIGNED_ANALYST",
+      "provider": "UNASSIGNED_PROVIDER",
+      "registrar": "UNASSIGNED_REGISTRAR"
+    }
+  },
+  "packet_sha256": "ccc57d89d1755e73c665ec340062240027af718d71e3a4ee6ad1b249a37c82b5",
+  "validation": {
+    "checks": {
+      "apparatus_calibrated": false,
+      "atom_ALG": true,
+      "atom_APP": true,
+      "atom_CLOCK": true,
+      "atom_DYN": true,
+      "atom_ENV": true,
+      "atom_GAUGE": true,
+      "atom_INST": true,
+      "atom_PREP": true,
+      "atom_RECORD": true,
+      "atom_SELECT": true,
+      "atom_UNITS": true,
+      "clock_calibrated": false,
+      "holdout_hash": true,
+      "independent_custody": false,
+      "laboratory_execution": false,
+      "physical_units_supplied": false,
+      "record_hash": true,
+      "roles_declared_distinct": true
+    },
+    "physical_execution_valid": false,
+    "structural_packet_valid": true,
+    "verdict": "MATHEMATICAL_PACKET_READY_PHYSICAL_EXECUTION_BLOCKED"
+  }
+}
