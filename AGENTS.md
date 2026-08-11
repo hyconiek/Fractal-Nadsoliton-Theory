@@ -6628,3 +6628,280 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - From Release 10.61 onward, all newly generated FIN research PDFs must be in
   English unless the user explicitly requests another language for a specific
   document.
+
+## Programs ST94--ST105 projection-uniqueness/recovery/falsification guardrail (Release 10.62, 2026-08-11)
+
+- ST94 proves uniqueness only relative to a supplied unital observable
+  algebra and normalized trace.  For
+  `B = P M12 P* direct-sum C P_f`, the unique trace-preserving conditional
+  expectation is `E_B(X)=P_c X P_c + Tr(P_f X P_f) P_f/12`.  Do not promote
+  this to a strict theorem selecting `B`, the plus sector, an apparatus, or a
+  physical projection.
+- ST95 proves the complete real symmetric graph-Laplacian lift fiber over
+  strict `A12`: every `L=L*` with `L P=P A12` is uniquely
+  `L=P A12 P*+F B F*`.  It is PSD iff `B>=0`, and the graph-sign conditions
+  are `B_ii>=A_ii` and `A_ij<=B_ij<=-A_ij` for `i!=j`.  The admissible set has
+  nonempty interior and full symmetric-matrix dimension `78`.  The dyadic
+  `q` family is only one-dimensional; coarse data do not select it or a
+  physical refinement law.
+- ST96 proves the Petz/relative-entropy frontier for supplied coarse/fine
+  pinching and a faithful reference state in its range:
+  `D(rho||sigma)=D(rho||Pi rho)+D(Pi rho||sigma)`.  Exact recovery of `rho`
+  holds iff `rho=Pi rho`; discarded cross-sector coherence is not recoverable.
+  The pinching and reference remain supplied operational objects.
+- ST97 constructs a C12-equivariant state-dependent flow with twelve stable
+  branches.  Nonzero initial states outside the unstable separatrices select
+  branches through their initial phases, while the symmetric state remains
+  invariant and nonselecting.  This relocates selection into initial/boundary
+  data and does not discharge QW-2191.  Symmetry is a reservoir of equivalent
+  possibilities, not positive feedback by itself.
+- ST98 extends the passive-memory no-go to reciprocal realizations
+  `M(z)=B*(zI+C)^(-1)B`, `C=C*>0`.  Their poles are stable and residue matrices
+  are positive; commuting real strict functional calculus produces no signed
+  active residue or temporal orientation.  Pumps, antisymmetric couplings,
+  indefinite metrics and nonequilibrium states remain new source classes.
+- ST99 proves a strict Krawczyk inclusion for the 15-variable first-fold
+  system of the frozen binary64 strict operator.  The radius-`1e-8` box has
+  minimum inclusion margin `9.999987060638205e-9`; five smaller boxes also
+  pass.  This is a source-code interval theorem for the exact binary64 matrix
+  used locally.  It is not yet a proof-assistant result, a transcendental
+  cosine/`d^(9/5)` enclosure, a branch-to-`kappa=1` theorem, or stability.
+- ST100 proves that degree-two pullback squares Z2 holonomy.  The compatible
+  sequences through `12->24->48` are `(+1,+1,+1)` and `(-1,+1,+1)`; a
+  stationary antiperiodic sequence does not exist.  Maintaining `-1` requires
+  a new unselected twist at each refinement and supplies no physical spin or
+  fermion source.
+- ST101 proves `B(q)=B(0)+2q I` for the dyadic fine block.  One calibrated
+  fine generator expectation identifies `q`.  Equivalently, a globally
+  normalized Gibbs coarse/fine occupation is strictly monotone in `q` and
+  identifies it only after supplying `beta`, global preparation, baseline
+  partition functions and a coarse/fine measurement.  Conditioned coarse
+  functional-calculus records remain nonidentifying.
+- ST102 proves a finite commuting-square tower of group-averaged conditional
+  expectations and the composite `12->24->48` generator intertwining.  This
+  coherence is automatic for arbitrary fine parameters and is not a
+  selector, physical RG law, or refinement source.
+- ST103 proves by data processing that common uniform contamination has its
+  worst Chernoff endpoint at `epsilon=0.12`.  It does not certify the full
+  independent `(epsilon_P,epsilon_Q)` nuisance rectangle; retain ST87's
+  independent-box optimum as strong numerical evidence only.
+- ST104 proves `TO subseteq CGP subsetneq GP`; ST89 supplies right strictness.
+  Whether `TO subsetneq CGP` for the declared strict degeneracies remains open
+  without a bath/dilation class.  The 22-dimensional zero-Bohr-frequency
+  sector does not provide a physical Hamiltonian scale, bath, or instrument.
+- ST105 proves exact indistinguishability for tests confined to conditioned
+  coarse records.  Its supplied global coarse/fine Gibbs observable separates
+  synthetic `q=0.2` and `q=0.7`; the 154-event one-percent Bayes threshold is
+  a deterministic binary64 evaluation, not an interval theorem or laboratory
+  recommendation.
+- ST94--ST105 retain `H_PROJ` as a counterfactual mathematical architecture.
+  They export no QW-2191 discharge, physical projection theorem,
+  legacy-to-strict completion, legacy role transfer, physical clock or unit,
+  laboratory evidence, Standard Model, gravity, `L_total`, or ToE closure.
+  The ranked continuation is ST106--ST117, led by observable-algebra
+  naturality/locality, the extreme geometry of the 78-dimensional lift fiber,
+  transcendental enclosure of ST99, and multi-reference Petz sufficiency.
+
+## Programs ST106--ST117 projection-selection/interval/adversarial-lift guardrail (Release 10.63, 2026-08-11)
+
+- ST106 proves that layer-swap invariance selects the commutant
+  `M12 direct-sum M12` of complex dimension `288`, not the fine-blind algebra
+  `M12 direct-sum C` of dimension `145`.  Invariance under all fine-sector
+  `U(12)` conjugations gives the latter by Schur's lemma, but that condition is
+  exactly an added fine-blindness premise.  Do not describe symmetry or
+  naturality alone as deriving the projection algebra or apparatus.
+- ST107 proves that the recession cone of the complete ST95 lift spectrahedron
+  is the nonnegative diagonal orthant, with twelve rank-one extreme rays
+  `R_+ E_ii`, and that `B=A` is a vertex because all 78 independent lower
+  coordinate bounds are active.  A complete bounded-face/vertex enumeration
+  remains open.
+- ST108 propagates outward intervals for the exact-decimal declaration
+  `omega=0.18575`, `phi=0.16250`, `eta=9/5` through the full 15-variable fold
+  system.  The radius-`1e-8` common root box has strict Krawczyk inclusion
+  margin `9.999987060638205e-9`.  For every operator in the enclosed
+  transcendental parameter family there is one unique root in that common
+  box; the roots need not be identical across parameters.  This is a
+  source-code interval theorem, not a proof-assistant result, physical
+  bifurcation measurement, branch-to-`kappa=1` theorem, or stability theorem.
+- ST109 proves that coarse/fine pinching has exactly recoverable quantum codes
+  of maximal dimension 12.  Matched-copy isometries
+  `V psi=sqrt(alpha)P psi+sqrt(1-alpha)F U psi` attain the bound and recover
+  arbitrary, including noncommuting, code-state families.  The encoding,
+  sector instrument, `alpha`, `U`, and recovery remain supplied resources.
+- ST110 proves that the unique `C12`-invariant probability on twelve
+  transitive branches is uniform, with entropy `ln 12`.  It provides no
+  canonical branch, sign, or orientation.  A stochastic realization also
+  requires an event and record; QW-2191 remains open.
+- ST111 proves that adding one antisymmetric state-space block to a collocated
+  realization creates oscillatory phase but preserves the storage inequality
+  whenever the symmetric dissipative block is positive.  Antisymmetry or a
+  mirror-like coupling is not active gain by itself.  A pump, indefinite
+  dissipative block, noncollocated port, or nonequilibrium source is new data.
+- ST112 exports an exact Fisher-information formula and a 500-point synthetic
+  beta-grid design for `q=0.2` versus `q=0.7` under a declared symmetric
+  detector bit-flip bound.  The displayed beta optimum is strong numerical
+  evidence only, not an interval global optimum or laboratory performance.
+- ST113 proves that noninvertible refinement maps form a directed category,
+  not a groupoid.  Untwisted binary pullback makes every post-first-level Z2
+  holonomy periodic; independent twists generate all histories but are new
+  supplied boundary data.  No strict physical spin/fermion source follows.
+- ST114 proves that all vertex projectors plus a connected weighted graph
+  generator generate the full algebra `M24` of dimension `576`.  Ordinary
+  vertex locality therefore selects too many observables and cannot derive
+  the fine-blind projection algebra.
+- ST115 closes ST103's declared full independent uniform-contamination box for
+  the frozen synthetic ST87 tables.  Concavity, an interval-isolated unique
+  Chernoff exponent, positive curvature, and positive envelope derivatives
+  prove the global worst corner `(epsilon_P,epsilon_Q)=(0.12,0.12)`, with
+  Chernoff information `0.04040228862548783`.  Do not transfer this theorem to
+  correlated, nonuniform, drifting, misspecified, or laboratory nuisance.
+- ST116 does not export a CGP-outside-TO witness.  It proves that the question
+  is under-typed on current artifacts because no admissible bath Hamiltonian,
+  energy-conserving dilation, catalyst, ancillary-dimension, or limit class is
+  declared.  Do not infer `CGP=TO` or physical thermodynamics.
+- ST117 constructs adversarial noncirculant lifts
+  `L_(i,t)=PAP*+F(A+t E_ii)F*`, `t>=0`.  They preserve every conditioned
+  coarse functional-calculus record exactly, break translation symmetry for
+  `t>0`, lie outside the dyadic q-family, and are detected by a supplied fine
+  site observable.  They prove structural coarse nonuniqueness, not a physical
+  hidden layer.
+- ST106--ST117 retain `H_PROJ` as counterfactual and export no QW-2191
+  discharge, physical projection theorem, legacy-to-strict completion or role
+  transfer, clock, unit, preparation, apparatus, laboratory record, Standard
+  Model, gravity, `L_total`, or ToE closure.  The ranked continuation is
+  ST118--ST129, led by an operational-equivalence derivation/no-go for the
+  fine-blind algebra, full lift-face classification, and a dependency-minimal
+  replay of the ST108 certificate.  All new FIN research PDFs remain English
+  unless the user explicitly requests another language for a specific file.
+
+## Programs ST118--ST129 operational-equivalence/certified-design guardrail (Release 10.64, 2026-08-11)
+
+- ST118 proves a universal property only after arbitrary fine-sector `U(12)`
+  basis changes are declared operational gauge.  The fixed algebra is
+  `M12 direct-sum C`, and Haar twirling is its unique trace-preserving
+  expectation.  This isolates the fine-blindness axiom; it does not derive
+  that gauge, a sector, or an apparatus from strict `A`.
+- ST119 exactly classifies the real symmetric circulant section of the ST95
+  lift fiber as `[s,infinity) times product_d[-w_d,w_d]`.  Positivity follows
+  from diagonal dominance.  The section has 64 vertices and one recession
+  ray.  Do not promote this seven-parameter result to a face enumeration of
+  the full 78-dimensional noncirculant spectrahedron.
+- ST120 independently recomputes the ST108 interval kernel, fold equations,
+  all Jacobian entries and Krawczyk images using only NumPy and mpmath as
+  third-party dependencies.  It reproduces the radius-`1e-8` inclusion and
+  margin `9.999987060638205e-9`.  The published numerical center remains an
+  input; this is not standard-library-only or proof-assistant verification.
+- ST120 corrects the ST108/Release 10.63 precision description: internal
+  transcendental evaluation uses 70 decimal digits, but conversion to outward
+  binary64 endpoints produces stored/propagated kernel widths of approximately
+  one ulp (`1.11e-16` down to `3.47e-18`), not float enclosures of order
+  `1e-70`.  The Krawczyk theorem is unaffected because it used the wider
+  outward binary64 intervals.
+- ST121 proves a complete normal form for every maximal twelve-dimensional
+  code recoverable after coarse/fine pinching.  For `0<alpha<1` all are graph
+  codes `sqrt(alpha) P Uc + sqrt(1-alpha) F Uf`; the endpoints are the whole
+  coarse or fine sector.  `alpha` and the sector unitaries remain unselected.
+- ST122 proves that normalized positive strict functional-calculus states are
+  cyclic/reflection invariant and give uniform probabilities under every
+  covariant transitive twelve-branch instrument.  This class cannot generate
+  a nonuniform selector; noninvariant state/instrument data are new sources
+  and QW-2191 remains open.
+- ST123 proves a constructed scalar active threshold for
+  `x_dot=(g-gamma)x-kappa x^3+u`.  Nonzero stable branches appear only for
+  `g>gamma`; the storage balance explicitly pays pump, dissipation and
+  saturation.  Do not infer a strict FIN information amplifier: pump, loss,
+  nonlinearity, clock and units are supplied.
+- ST124 proves one unique stationary Chernoff design inside a radius-`1e-6`
+  Krawczyk box centered at approximately
+  `(beta,s)=(2.186189925005268,0.539833703306343)`, with inclusion margin
+  `9.9983368e-7`.  The global interval cover on `beta in [0.05,5]` remains
+  open: 274 boxes are unresolved.  A 2,001-point audit finds one sign change
+  but is strong numerical evidence only; do not claim a global optimum.
+- ST125 proves that degree-`m` refinement pulls Z2 holonomy back as `h^m`.
+  Odd degrees preserve the sign; the first even degree maps both signs to
+  `+1`.  Twisted recovery remains newly supplied boundary data and gives no
+  strict physical spin/fermion source.
+- ST126 constructs an isotone fine-gauge-fixed coarse local net whose global
+  algebra is `M12 direct-sum C`, but proves that removing the fine gauge gives
+  a larger algebra.  Gauge equivalence, not locality or causality alone, does
+  the selecting work.
+- ST127 proves that one-event marginals and detector-error bounds imply no
+  positive finite-count discrimination exponent under arbitrary temporal
+  correlation.  A shared latent Bernoulli event repeated `n` times preserves
+  the one-event Bayes error for every `n`.  Count scaling requires a separately
+  certified independence, Markov, or mixing premise.
+- ST128 proves the reset-to-Gibbs channel is CGP but outside one explicitly
+  declared finite-bath subclass with `H_B=0` and exact energy conservation.
+  This does not separate CGP from standard thermal operations with
+  energy-bearing baths, catalysts, approximation, or unbounded ancillas.
+- ST129 proves, for the normalized diagonal adversarial lift simplex and a
+  diagonal fine-detector budget, that `P_f/12` is the unique minimax detector
+  with guaranteed response `1/12`.  The cone, budget, and fine access are
+  supplied; no laboratory POVM follows.
+- ST118--ST129 export no strict fine-gauge source, QW-2191 discharge,
+  dimensional unit, physical apparatus/record, legacy-to-strict completion or
+  role transfer, Standard Model, gravity, `L_total`, or ToE closure.  The next
+  ranked batch is ST130--ST141, led by a strict source/no-go for fine gauge,
+  noncirculant lift faces, independent interval center isolation, and
+  dependent-count bounds under certified mixing.  New FIN research PDFs
+  remain English unless the user explicitly requests another language.
+
+## Programs ST130--ST141 strict-source/robust-recovery/typed-thermalization guardrail (Release 10.65, 2026-08-11)
+
+- ST130 proves only a declared-class obstruction: the seven-dimensional
+  abelian strict functional calculus, finite direct sums, and transformations
+  preserving strict dynamics cannot generate the full fine `U(12)` gauge.
+  The strict spectral multiplicities are `1,2,2,2,2,2,1`, with interval class
+  separation greater than `0.0435757690672`.  Dilations, environments,
+  state-dependent redundancies, and operational quotients lie outside the
+  theorem and remain possible only as additional typed objects.
+- ST131 exposes the exact noncirculant face
+  `F_diag={A+Diag(t):t in R_+^12}`.  It is a twelve-dimensional orthant with
+  4,096 faces, one rank-eleven vertex, and twelve extreme rays; every nonzero
+  `t` gives full rank.  Do not promote this to a complete enumeration of the
+  bounded faces of the 78-dimensional lift spectrahedron.
+- ST132 no longer reads the published ST108/ST120 center.  A coarse localized
+  ansatz converges in four damped-Newton steps and an independently rebuilt
+  radius-`1e-8` Krawczyk box has margin `9.999987060638205e-9`.  This proves
+  one local root in the selected basin, not a global root count.
+- ST133 proves optimal recovery only for the declared channel
+  `(1-epsilon) Pi_cf + epsilon D_24`; its average fidelity is
+  `1-11 epsilon/12`.  Coherent leakage, asymmetric noise, correlated uses, and
+  apparatus remain open.
+- ST134 proves rank-one symmetry breaking is sufficient but the infimum of
+  trace-distance and relative-entropy asymmetry over noninvariant selector
+  states is zero.  A positive selector cost requires a separately declared
+  preparation/robustness resource constraint.  QW-2191 remains open.
+- ST135 proves orbital stability for the constructed decoupled pumped-mode
+  equation only.  The first positive strict eigenspace is twofold degenerate,
+  so the pump produces an orbit rather than a unique orientation.  Pump,
+  loss, clock, saturation, and mode decoupling are supplied.
+- ST136 proves a uniform local stationary Chernoff root for
+  `q0 in [0.19999,0.20001]`, `q1 in [0.69999,0.70001]`, and detector flip
+  `delta in [0.04999,0.05001]` using a rectangular Krawczyk box.  No global
+  beta optimum, physical inverse temperature, or detector calibration follows.
+- ST137 reduces arbitrary finite twisted Z2 refinement coherence to equality
+  of affine transports over `F2`; parity-product mismatch is an exact
+  obstruction.  Degrees and twists remain input and no strict spin source is
+  exported.
+- ST138 gives a finite counterexample proving that abstract conditional
+  independence cannot identify its own conditioning algebra.  A typed causal
+  region net or accessible instrument class is additional operational data.
+- ST139 proves exact finite-count laws only for the declared block-dependent
+  model with known block length five.  Its positive raw-event exponent is
+  reduced to `0.009885195056418813`; arbitrary hidden Markov drift remains open.
+- ST140 constructs an exact matched-gap bath-qubit dilation for one selected
+  two-level transition and proves that one such qubit cannot Gibbs-reset the
+  full twelve-level strict spectrum.  Bath Hamiltonian, selected gap, beta,
+  clock, and dimensional energy interpretation are supplied.
+- ST141 proves minimax value `1/12` for the declared bounded non-diagonal,
+  entrywise-nonnegative graph-feasible perturbation class, unchanged by the
+  declared depolarizing detector noise.  It does not construct a laboratory
+  POVM or classify all optimal detectors.
+- ST130--ST141 export no strict fine-gauge source, QW-2191 discharge,
+  dimensional clock/unit, apparatus or laboratory record, legacy-to-strict
+  completion or role transfer, Standard Model, gravity, `L_total`, physical
+  projection theorem, or ToE closure.  The ranked continuation is ST142--ST153,
+  led by natural operational quotients beyond functional calculus.  All new
+  FIN research PDFs remain English unless explicitly requested otherwise for
+  a specific artifact.
