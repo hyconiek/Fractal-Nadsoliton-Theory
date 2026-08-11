@@ -1,0 +1,88 @@
+{
+  "definition": "D_t(i,j)=||e_i^T exp(-tA)-e_j^T exp(-tA)||_2",
+  "first_mode_chordal_limit": [
+    0.2113248654051871,
+    0.40824829046386296,
+    0.5773502691896257,
+    0.7071067811865475,
+    0.7886751345948129,
+    0.816496580927726
+  ],
+  "large_t_rescaled_distances_t10": [
+    0.21132489348585323,
+    0.40824833405700023,
+    0.5773503102737693,
+    0.7071068063396962,
+    0.7886751421190062,
+    0.8164965809410868
+  ],
+  "maximum_t10_limit_error": 4.359313726665093e-08,
+  "rows": [
+    {
+      "condition_number": 1.2639202547205708,
+      "distance_by_cycle_separation": [
+        1.1439572916613083,
+        1.1771618272057902,
+        1.1905086262512485,
+        1.1968793247526737,
+        1.2002439164733538,
+        1.20193524518661
+      ],
+      "t": 0.1,
+      "triangle_violations": 0
+    },
+    {
+      "condition_number": 3.225509817091878,
+      "distance_by_cycle_separation": [
+        0.5022342303423445,
+        0.5895998779599874,
+        0.637904917320897,
+        0.666429741812437,
+        0.6825491662055154,
+        0.6887103550532157
+      ],
+      "t": 0.5,
+      "triangle_violations": 0
+    },
+    {
+      "condition_number": 10.403913580155974,
+      "distance_by_cycle_separation": [
+        0.19769673549731545,
+        0.2814883611614695,
+        0.3394879119253298,
+        0.3783802785595245,
+        0.4012869078643653,
+        0.4091974672014288
+      ],
+      "t": 1,
+      "triangle_violations": 0
+    },
+    {
+      "condition_number": 108.24141778335432,
+      "distance_by_cycle_separation": [
+        0.05280373051243669,
+        0.09708882140681027,
+        0.13315919751586774,
+        0.15976073506406313,
+        0.17608006951560945,
+        0.1815968784775538
+      ],
+      "t": 2,
+      "triangle_violations": 0
+    },
+    {
+      "condition_number": 11716.204523751245,
+      "distance_by_cycle_separation": [
+        0.010379341192229654,
+        0.020037487019151864,
+        0.028314703504574348,
+        0.03465337212123167,
+        0.03863184911976217,
+        0.039987711967335346
+      ],
+      "t": 4,
+      "triangle_violations": 0
+    }
+  ],
+  "theorem": "For every finite t, exp(-tA) is invertible, so its row embedding is injective and D_t is a genuine translation-invariant Euclidean metric. After rescaling by exp(t lambda_1), the spectral gap makes D_t converge to the chordal metric of the first Fourier circle, sqrt(2/3)|sin(pi d/12)|."
+}

@@ -1,0 +1,54 @@
+{
+  "required_event_fields": [
+    "timestamp",
+    "outcome",
+    "config",
+    "run_id"
+  ],
+  "self_test": {
+    "clean": {
+      "boundary": "This program validates syntax, hashes, a frozen holdout declaration, and distinct role labels. It cannot verify human identity, create independent custody, certify calibration, or prove that laboratory events occurred.",
+      "checks": {
+        "calibration_hash_present": false,
+        "event_file_hash": true,
+        "external_paths_supplied": false,
+        "holdout_hash": true,
+        "independent_custody_attested_externally": false,
+        "jsonl_parse": true,
+        "laboratory_execution_attested": false,
+        "nonempty_required_event_fields": true,
+        "registration_frozen_before_unblinding": true,
+        "roles_declared_distinct": true
+      },
+      "event_count": 2,
+      "parse_error": null,
+      "physical_execution_valid": false,
+      "structural_record_valid": true,
+      "verdict": "EXTERNAL_RECORD_STRUCTURALLY_VALID_PHYSICAL_ATTESTATION_BLOCKED"
+    },
+    "no_external_record_supplied": true,
+    "synthetic_only": true,
+    "tampered": {
+      "boundary": "This program validates syntax, hashes, a frozen holdout declaration, and distinct role labels. It cannot verify human identity, create independent custody, certify calibration, or prove that laboratory events occurred.",
+      "checks": {
+        "calibration_hash_present": false,
+        "event_file_hash": false,
+        "external_paths_supplied": false,
+        "holdout_hash": true,
+        "independent_custody_attested_externally": false,
+        "jsonl_parse": true,
+        "laboratory_execution_attested": false,
+        "nonempty_required_event_fields": true,
+        "registration_frozen_before_unblinding": true,
+        "roles_declared_distinct": true
+      },
+      "event_count": 2,
+      "parse_error": null,
+      "physical_execution_valid": false,
+      "structural_record_valid": false,
+      "verdict": "EXTERNAL_RECORD_INVALID"
+    },
+    "test_passed": true
+  },
+  "theorem": "The executable interface detects event-file tampering, verifies a frozen holdout hash and distinct declared roles, and refuses to mark physical execution valid without externally supplied paths, calibration hash, custody attestation, and laboratory attestation."
+}

@@ -1,0 +1,74 @@
+{
+  "final_parameter": 3.75,
+  "geometric_four_layer_family": [
+    {
+      "base": 2.823529411764706,
+      "ratio": 0.25,
+      "total": 3.75
+    },
+    {
+      "base": 2.0,
+      "ratio": 0.5,
+      "total": 3.75
+    },
+    {
+      "base": 0.9375,
+      "ratio": 1,
+      "total": 3.75
+    },
+    {
+      "base": 0.25,
+      "ratio": 2,
+      "total": 3.75
+    },
+    {
+      "base": 0.04411764705882353,
+      "ratio": 4,
+      "total": 3.75
+    }
+  ],
+  "schedule_rows": [
+    {
+      "final_map_error_from_exp_minus_3_75A": 0.0,
+      "increments": [
+        3.75
+      ],
+      "schedule": "single",
+      "total": 3.75
+    },
+    {
+      "final_map_error_from_exp_minus_3_75A": 1.3877787807814457e-16,
+      "increments": [
+        0.9375,
+        0.9375,
+        0.9375,
+        0.9375
+      ],
+      "schedule": "uniform_four",
+      "total": 3.75
+    },
+    {
+      "final_map_error_from_exp_minus_3_75A": 4.718447854656915e-16,
+      "increments": [
+        0.25,
+        0.5,
+        1,
+        2
+      ],
+      "schedule": "dyadic_four",
+      "total": 3.75
+    },
+    {
+      "final_map_error_from_exp_minus_3_75A": 5.551115123125783e-16,
+      "increments": [
+        0.1,
+        0.2,
+        0.45,
+        3.0
+      ],
+      "schedule": "irregular",
+      "total": 3.75
+    }
+  ],
+  "theorem": "For any nonnegative schedule, product_j exp(-t_j A)=exp[-(sum_j t_j)A]. Hence a final composite generated only by A identifies the total parameter but not the number, order, or ratios of layers. For every r>0 there is a geometric four-layer schedule with the same total, so no dyadic ratio is selected by final-map data. Intermediate maps recover increments only after a parameter normalization for A is fixed."
+}

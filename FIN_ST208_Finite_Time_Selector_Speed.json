@@ -1,0 +1,33 @@
+{
+  "field_bound_beta_h": 4.0,
+  "initial_preferred_probability": 0.08333333333333333,
+  "maximum_control_equilibrium_probability": 0.8323123442590664,
+  "relaxation_rate_bound": 1.0,
+  "rows": [
+    {
+      "entropy_production_at_speed_saturating_constant_control": 0.4004786586555502,
+      "minimum_time": 0.1693274726661508,
+      "reachable": true,
+      "target": 0.2
+    },
+    {
+      "entropy_production_at_speed_saturating_constant_control": 0.8935088475669448,
+      "minimum_time": 0.5495626142185732,
+      "reachable": true,
+      "target": 0.4
+    },
+    {
+      "entropy_production_at_speed_saturating_constant_control": 1.2139297930072706,
+      "minimum_time": 1.1706281826653615,
+      "reachable": true,
+      "target": 0.6
+    },
+    {
+      "entropy_production_at_speed_saturating_constant_control": 1.3617414949765279,
+      "minimum_time": 3.143261627906927,
+      "reachable": true,
+      "target": 0.8
+    }
+  ],
+  "theorem": "For every reduced selector control satisfying 0<=r(t)<=R and pi(t)<=pi_B, x_dot=r(t)(pi(t)-x) <= R(pi_B-x). Hence reaching x_f<pi_B requires T>=R^-1 log[(pi_B-x_0)/(pi_B-x_f)]. The constant maximal control r=R, pi=pi_B attains equality. Its integrated entropy production equals D(x_0||pi_B)-D(x_f||pi_B). Targets x_f>=pi_B are unreachable under the frozen field bound."
+}

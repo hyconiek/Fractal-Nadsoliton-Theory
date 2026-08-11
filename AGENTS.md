@@ -7130,3 +7130,360 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   continuation from the 30 exact uniform folds.  All new FIN research PDFs
   remain English unless explicitly requested otherwise for a specific
   artifact.
+
+## Programs ST178--ST189 layered-compression/validated-continuation guardrail (Release 10.69, 2026-08-11)
+
+- ST178 proves for every finite stochastic coarse-graining `C` that visible
+  deep linear effects are exactly `range(C^T)` and indistinguishable state
+  differences are exactly `ker(C)`.  Along a hierarchy, visible dimensions
+  are the ranks of composite maps.  The explicit `12->6->3` hard hierarchy
+  has rank three and invisible dimension nine.  Full column rank gives a
+  linear decoder; a stochastic decoder additionally requires positivity.
+  Do not promote representation loss to physical carrierlessness or a strict
+  FIN hierarchy.
+- ST179 introduces `L_rho=diag(diag(A rho A))`, a cyclic-equivariant
+  state-dependent interaction outside the strict `f(A)` class.  Uniform rho
+  yields a scalar interaction/commutant dimension 144; a localized state gives
+  dimension 22; the supplied generic asymmetric state gives twelve distinct
+  pointer values and dimension 12.  The asymmetric state already carries the
+  selector, and joint inclusion with `A` gives scalars in the generic example.
+  No spontaneous selector or QW-2191 discharge follows.
+- ST180 fixes both signed modal slices at distance `1e-3` from each of the 30
+  exact ST168 uniform folds.  All 60 nonuniform stationary states receive
+  outward Krawczyk certificates, with minimum margin
+  `9.966522740434414e-8`.  This is a complete result only for those declared
+  reflection-even local slices, not a global branch atlas, collision theorem,
+  stability result, or physical phase transition.
+- ST181 proves for arbitrary finite commuting qubit phase errors that each
+  syndrome branch has optimum `(W+|c|)/2`, with the conic certificate
+  `[[t,c],[c*,t]]>=0` at `t=|c|`.  The normalized three-error example gives
+  `F_e*=0.947717686823979`.  Generic noncommuting errors remain open.
+- ST182 proves the exact controlled detailed-balance trajectory
+  `g(t)=g_inf(1-exp(-r t))`, with
+  `g_inf=(exp(beta h)-1)/(exp(beta h)+11)` and
+  `r=gamma(exp(beta h/2)+11 exp(-beta h/2))`.  The preferred vertex, field,
+  inverse temperature, rate, and clock are supplied; this does not source
+  selection from strict FIN.
+- ST183 proves two equivalent conditional response estimators for
+  `V_g=V_0+(g/12)sum psi_j^12`: the vertex twelfth derivative divided by
+  `11!`, and the first-mode `r^12 cos(12 theta)` coefficient multiplied by
+  `2048*6^6`.  They identify `g` when nonlinear response is supplied but do
+  not derive its value, units, or microscopic source.
+- ST184 partitions the nuisance cube of halfwidth `1e-4` into 343 cells and
+  certifies Krawczyk inclusion in every cell; minimum margin is
+  `0.0009526523284221211`.  Maximal range, global optimality, dimensional
+  calibration, and apparatus tolerance remain open.
+- ST185 defines the Layer Visibility Spectrum as the singular spectrum of the
+  composite observation map.  Zero modes are exactly invisible; nonzero modes
+  require inverse-singular-value noise amplification; total variation and
+  relative entropy contract.  For repeated circulant soft layers, Fourier
+  visibility is `|mu_k|^n`; the audited highest mode after twelve layers is
+  `2^-12`, with inverse amplification 4096.  This makes observation through
+  supplied self-similar compression layers rigorous, but does not derive those
+  layers from FIN or identify any layer with a geometric fractal, Planck scale,
+  spacetime, matter, or observed physics.
+- ST186 proves the noiseless finite classification of labeled commuting `M2`
+  factors generating `M4`, with local `U(2)xU(2)` gauge and an additional swap
+  if unlabeled.  Seeded noise produces a nearby low commutant subspace that is
+  not exactly multiplication closed.  Physical subsystem labels, instruments,
+  and apparatus remain inputs.
+- ST187 proves the finite inequality between the observed Hellinger
+  coefficient and the pair-hidden-path upper bound.  At `n=20`, complete
+  floating enumeration gives a bound/exact-finite-value ratio
+  `4340.225943645024` and rates `0.3228480916674504` versus
+  `0.7416321759918023`.  This is strong gap evidence, not an interval proof of
+  the exact asymptotic observed Chernoff/Hellinger rate.
+- ST188 proves exact commutation of global register SWAP with
+  `H tensor I+I tensor H`.  In the declared four-qubit zero-padded strict
+  encoding, the four static pairwise-SWAP commutators have positive numerical
+  Gram eigenvalues (minimum `212.00755977196792`).  Treat the restricted local
+  ansatz no-go as strong numerical evidence only; other encodings, controls,
+  ancillas, and local generator classes remain open.
+- ST189 validates JSONL syntax, immutable hashes, a frozen holdout, and
+  distinct declared roles; it detects a one-byte tamper.  Only a synthetic
+  self-test was executed.  The interface cannot verify identities, create
+  custody, certify calibration, or prove laboratory execution.
+- ST178--ST189 export no strict hierarchy map, physical carrierlessness,
+  geometric fractal/Planck layer, spacetime projection, strict selector,
+  QW-2191 discharge, dimensional source, calibrated apparatus or external
+  record, legacy-to-strict completion or role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure.  The ranked continuation is ST190--ST202,
+  led by one repository-sourced hierarchy-map candidate tested through the
+  Layer Visibility Spectrum, Blackwell sufficiency, and a dynamics/no-start
+  test for the ST179 interaction.  All new FIN research PDFs remain English
+  unless explicitly requested otherwise for a specific artifact.
+
+## Programs ST190--ST202 strict-generated-layer/selection/operational-limit guardrail (Release 10.70, 2026-08-11)
+
+- ST190 proves that the strict graph Laplacian generates the positive
+  stochastic heat family `C(t)=exp(-tA)`.  For a supplied dyadic schedule
+  `t_j=2^(j-1) tau0`, the composite is exactly
+  `exp(-(2^n-1)tau0 A)` and Fourier visibility is the corresponding spectral
+  exponential.  The operator does not select `tau0`, the dyadic schedule, a
+  length ratio, seconds, a Planck layer, spacetime, or the physical observing
+  layer.  Treat this as an internal continuous layer mechanism, not a derived
+  strict fractal scale law.
+- ST191 proves the finite Blackwell criterion: a deterministic statistic is
+  sufficient exactly when likelihood columns in every fiber are
+  proportional; maximal proportionality classes give the unique minimal
+  sufficient quotient up to relabeling.  The declared exact rational
+  twelve-outcome experiment has four classes and an exact decoder;
+  over-merging reduces total variation from `3/8` to `1/8`.  Sufficiency is
+  relative to supplied preparations/hypotheses and instruments.
+- ST192 constructs the cyclic-equivariant replicator law
+  `p_dot_i=gamma p_i[(M p)_i-p^T M p]` with `M=A Hadamard-square A`.  Uniform
+  is an exact unstable fixed point; all nonconstant tangent rates are
+  positive, and vertices are locally attracting.  Exchangeable perturbations
+  select different orbit members.  The feedback law and perturbation source
+  are supplied; no canonical branch label, strict selector, or QW-2191
+  discharge follows.
+- ST193 continues every one of the sixty ST180 signed roots to modal slices
+  `|epsilon|=0.002` and `0.005`.  All 120 new roots receive outward Krawczyk
+  certificates; the minimum inclusion margin is
+  `2.9844724869221295e-7`.  This is a fixed-slice continuation ladder, not a
+  global pseudo-arclength atlas, collision theorem, stability theorem, or
+  physical phase transition.
+- ST194 proves a global recovery theorem for the declared three-error
+  noncommuting random-unitary qubit channel.  The Bloch trace-norm upper bound
+  is saturated by the positive-orientation polar unitary, giving
+  `F_e*=0.9237212568973701` over all CPTP recoveries.  Negative polar
+  orientation, nonunital channels, and higher dimensions remain outside the
+  theorem.
+- ST195 proves the reversible free-energy lower bound and a convergent
+  equilibrate-then-step protocol for a supplied detailed-balance selector.
+  The preferred vertex, bath, field, control schedule, inverse temperature,
+  and time scale remain resources; this prices selection but does not source
+  it or create physical energy units.
+- ST196 proves an infinite-family no-go: every `g>0` in
+  `V_g=psi^T A psi/2+(g/12)sum psi_j^12` has the same strict Hessian, cyclic
+  symmetry, and coercivity, while the twelfth response is `11! g`.  Strict
+  linear data determine neither the magnitude nor microscopic source of `g`.
+- ST197 certifies all 343 nuisance cells at halfwidth `0.00013045`, minimum
+  margin `5.352221340571006e-7`.  At halfwidth `0.00013050`, six cells fail the
+  same fixed-grid Krawczyk test.  This brackets a certificate-method boundary,
+  not a root-loss or maximal-continuation theorem.
+- ST198 proves Fisher-information and Pinsker sample lower bounds for the
+  declared multinomial/Poisson deep-mode observation models.  If visibility
+  is `2^-n`, leading sample cost grows as `4^n`; the displayed `n=12`
+  estimation lower bound is `41,943,039,975`.  The physical channel and noise
+  law remain supplied.
+- ST199 proves a sequential exact-factor projection: matrix-sign projection of
+  an invertible Hermitian generator, followed by matrix sign of the odd part
+  of the second generator, yields exact anticommuting involutions and an `M2`
+  factor under balanced multiplicities.  Uniqueness is sequential, not a
+  global nearest-joint-factor theorem; gauge and physical labels remain.
+- ST200 encloses observed hidden-HMM Hellinger coefficients through `n=12`
+  using exact rational forward likelihoods and integer-square-root outward
+  bounds.  This removes finite floating uncertainty but does not prove the
+  exact asymptotic observed-process exponent.
+- ST201 pays the outward strict-kernel perturbation and proves positive lower
+  singular bounds for both the four pairwise-SWAP commutator map
+  (`>14.1421355883`) and the full 60-dimensional corresponding-pair Pauli map
+  (`>6.3245552412`).  These bounds use shifted-Cholesky residuals, the strict
+  input enclosure, and an explicit conservative arithmetic payment.  No
+  nonzero static energy-conserving generator lies in
+  either declared span.  Time-dependent controls, ancillas, noncorresponding
+  edges, other encodings, and higher locality remain open.
+- ST202 correctly refuses physical execution because no genuine external
+  event path, calibration, independent custody, or laboratory attestation was
+  supplied.  A synthetic self-test is not external evidence.
+- ST190--ST202 export no physical carrierlessness, preferred strict fractal
+  schedule, Planck scale, spacetime projection, canonical selector,
+  QW-2191 discharge, dimensional clock/length/action source, external record,
+  legacy-to-strict completion or physical-role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure.  The ranked continuation is ST203--ST217,
+  led by classification/internal selection of strict semigroup schedules,
+  Blackwell-experiment lattices, and an endogenous fluctuation-source test.
+  All future FIN research PDFs remain English unless explicitly requested
+  otherwise for a specific artifact.
+
+## Programs ST203--ST217 schedule-obstruction/fluctuation/diffusion-geometry guardrail (Release 10.71, 2026-08-11)
+
+- ST203 proves exact heat-schedule collapse:
+  `prod_j exp(-t_j A)=exp(-(sum_j t_j)A)`.  The final strict heat map
+  identifies total semigroup time only and cannot recover or select layer
+  number, ordering, or ratios.  Every positive four-layer geometric ratio has
+  a matching base increment for the same final map.  Do not promote the strict
+  continuous layer family to a preferred dyadic/fractal history without a new
+  noncommuting generator, retained refinement label, or state-dependent scale
+  law.
+- ST204 exhausts the deterministic quotient experiments on the four ST191
+  minimal atoms.  They form the exact fifteen-element partition lattice
+  `Pi_4`, with block counts `1,7,6,1` and 31 Hasse edges.  Blackwell order is
+  partition refinement.  This lattice is relative to the supplied preparation
+  family and is not observer-independent ontology.
+- ST205 constructs the mean-zero Ornstein--Uhlenbeck candidate
+  `d xi=-A xi dt+sqrt(2A)dB`, whose invariant covariance is `Q=I-J/12`.
+  Its exact law is cyclic- and inversion-invariant.  Coupling samples to the
+  ST192 feedback selects orbit members, but symmetry forces equal exact branch
+  probabilities and cannot canonically orient or label the result.  Brownian
+  stochasticity, normalization, and feedback coupling remain added premises;
+  QW-2191 is not discharged.
+- ST206 validates forty two-sided pseudo-arclength correctors on one mode-one
+  nonuniform branch.  Every outward Krawczyk box passes; minimum seven-row
+  Jacobian rank margin is `0.0007152686601899622` and minimum tangent alignment
+  is `0.9999749674679983`.  This is one finite reflection-even segment, not a
+  global branch graph, collision census, stability theorem, or particle.
+- ST207 proves that the negative-orientation Pauli channel with exact
+  probabilities `(1/10,3/10,3/10,3/10)` has global recovery optimum
+  `F_e*=3/10` over all CPTP maps, by Pauli twirling and a finite linear
+  objective.  Generic negative-orientation non-Pauli/nonunital recovery remains
+  open.
+- ST208 proves the reduced bounded-control speed limit
+  `T >= R^-1 log((pi_B-x0)/(pi_B-xf))`, attained by constant maximum rate and
+  field.  Its entropy production is the decrease in relative entropy to the
+  fixed equilibrium.  This is fastest selection in a supplied reduced family,
+  not the general fixed-time minimum-dissipation solution or a strict selector
+  source.
+- ST209 proves the scalar field-coordinate invariant
+  `I12=R12/(11! R2^6)=g/Ajj^6`.  Since all lower jets are independent of `g`,
+  one twelfth response is the minimal extra local jet datum in the declared
+  model.  Response access and transported direction are supplied; no value,
+  units, or microscopic source of `g` is derived.
+- ST210 refines the failed ST197 cover to `14^3=2744` child cells and certifies
+  every box throughout global nuisance halfwidth `0.0002`; minimum inclusion
+  margin is `0.0009471393045054066`.  This confirms the prior failure was a
+  fixed-grid method boundary, not root loss.  Maximal continuation and
+  apparatus tolerances remain open.
+- ST211 proves the local uniform-state Fisher spectrum
+  `diag(12 sigma_k^2)` for six orthonormal transmitted Fourier contrasts and
+  the exchangeable cluster design factor `1+(m-1)rho`.  At twelve layers the
+  displayed worst-mode bound is `13,981,013,334` iid samples and
+  `27,262,976,000` samples for `m=20,rho=0.05`.  The preparation, local model,
+  and count correlation remain supplied.
+- ST212 gives an exact continuum counterexample to unconditional global
+  nearest-joint-factor uniqueness.  For invertible targets
+  `X0=Z0=c sigma_x`, a circle of anticommuting involution pairs globally
+  minimizes joint Frobenius error.  The sequential odd-part gap is zero, so a
+  future local theorem with ST199 gap/transversality premises remains open.
+- ST213 proves quasi-multiplicativity
+  `(3/10)Z_m Z_n <= Z_(m+n) <= (12/5)Z_m Z_n` for the declared observed HMM.
+  The exact Hellinger rate exists and the ST200 `n=12` block yields
+  `[0.6765650779659954,0.8498518731059818]`.  This is conservative and fixed at
+  Hellinger `s=1/2`, not the optimized Chernoff exponent.
+- ST214 combines ST201 injectivity with pointwise conservation.  Any measurable
+  time-dependent control inside the declared 60-dimensional corresponding-pair
+  Pauli span that commutes with total energy almost everywhere is zero almost
+  everywhere, so its propagator is identity.  Net-only final conservation,
+  ancillas, noncorresponding edges, higher locality, and other encodings remain
+  open.
+- ST215 proves that strict heat-kernel rows define a genuine dimensionless
+  diffusion metric for every finite `t`.  After multiplication by
+  `exp(t lambda_1)`, distances converge to the first-Fourier chordal circle
+  `sqrt(2/3)|sin(pi d/12)|`; at `t=10` maximum displayed error is
+  `4.359313726665093e-8`.  Do not promote this to meters, a Planck scale,
+  Lorentzian/causal spacetime, or unique physical geometry.
+- ST216 proves that viewable effects (`range(C^T)`), Blackwell sufficiency,
+  injective reconstruction, and stable reconstruction are four distinct
+  properties.  The hard `12->3` map has kernel dimension nine; finite strict
+  heat is algebraically invertible but the depth-eight exact spectral
+  condition number is about `7.02e64`.
+- ST217 correctly remains blocked: the local tamper-sensitive package has no
+  genuine external record, independent registration/custody, calibration, or
+  laboratory attestation.  Repeated local execution cannot manufacture those
+  atoms.
+- ST203--ST217 export no carrierless information, preferred strict fractal
+  schedule, Planck scale, dimensional/causal spacetime, canonical selector,
+  QW-2191 discharge, dimensional source, external evidence, legacy-to-strict
+  completion or physical-role transfer, Standard Model, gravity, `L_total`,
+  or ToE closure.  The ranked continuation is ST218--ST232, led by one genuine
+  noncommuting strict-derived layer candidate, preparation-dependent Blackwell
+  lattices, and a complete invariant-fluctuation selector classification.  All
+  future FIN research PDFs remain English unless explicitly requested
+  otherwise for a specific artifact.
+
+## Programs ST218--ST232 single-generator-obstruction/carrier-naturality/exact-refinement guardrail (Release 10.72, 2026-08-12)
+
+- ST218 proves a complete no-go in the declared single-object equivariant
+  class.  Every layer `L=f(A)` lies in one commutative functional calculus;
+  every real symmetric matrix invariant under the same `D12` translations and
+  reflection lies in the seven-dimensional distance-circulant association
+  algebra and also commutes with `A`.  The strict polynomial algebra has
+  dimension 7, while the full spectral commutant has dimension 22 because of
+  degenerate eigenspaces.  Do not treat an arbitrary basis choice inside that
+  commutant as a strict-derived second generator.  A state, boundary,
+  environment, orientation, or genuinely second typed operator remains a new
+  premise unless its source is proved.
+- ST219 proves the finite preparation-relative Blackwell theorem: if a chosen
+  preparation/instrument experiment has `m` proportional-likelihood atoms,
+  its deterministic quotients form `Pi_m`.  The audited families give
+  `m=12,7,1,1`; the spectral seven is exact from the strict degeneracies, while
+  the localized vertex twelve has a positive frozen numerical ratio gap and
+  is not yet a transcendental interval theorem.  Do not interpret the lattice
+  as observer-independent ontology.
+- ST220 classifies the complete `D12`-invariant Gaussian/Levy fluctuation
+  class.  Invariant covariance dimension is 7 and the mean-zero fixed drift
+  dimension is 0.  Equivariant dynamics can realize individual branches, but
+  translations force equal vertex probabilities and reflection pairs both
+  orientations.  No canonical selector or `QW-2191` discharge follows.
+  State-conditioned or asymmetric noise lies outside the theorem precisely
+  because its conditioning/asymmetry is an additional selector premise.
+- ST221 starts from all sixty signed ST193 roots at `|epsilon|=0.005` and
+  validates six outward pseudo-arclength steps per seed: all `360/360`
+  Krawczyk boxes pass.  Minimum seven-row rank margin is
+  `0.00259783892642643` and minimum tangent alignment is
+  `0.999891324255868`.  This is a finite local atlas, not a global branch
+  component/collision census, stability theorem, soliton, or particle.
+- ST222 proves the full-CPTP recovery optimum `F_e*=41/100` for the declared
+  non-diagonal two-sided rotated-Pauli negative-orientation channel.  Pauli
+  twirling plus unitary covariance gives an exact simplex primal and scalar
+  dual certificate.  Generic nonunital recovery remains open.
+- ST223 proves the finite-control selector-dissipation bracket
+  `[0.3831118347443919,0.39312517557325116]` for the declared eight-step,
+  dimensionless control alphabet and terminal interval.  Field-switching work,
+  continuous controls, the bath, preferred vertex, and clock normalization
+  remain supplied; this is not a strict selector source.
+- ST224 proves the coordinate-free response invariant
+  `I12(V,x;v)=D^12V[v^12]/(11! D^2V[v^2]^6)` is natural under every invertible
+  linear carrier map and projective under `v->c v`.  It transports an already
+  supplied potential and response direction; it does not derive `g`, a
+  physical carrier, or units.
+- ST225 certifies all `28^3=21,952` boxes of the nuisance cube with global
+  halfwidth `0.0004`, minimum inclusion margin
+  `0.0009360737126348218`.  This doubles the ST210 cube while preserving local
+  cell radius.  The campaign then makes an explicit finite resource stop; do
+  not promote it to a maximal continuation domain or apparatus tolerance.
+- ST226 proves nonlocal Le Cam/Pinsker and derivative-bias Cramer--Rao lower
+  bounds for the declared depth-twelve Bernoulli observation model.  The
+  observation law, visibility, radius, and count model remain premises.
+- ST227 proves unique global nearest anticommuting factors in the traceless
+  qubit class when the two-column Bloch target has full rank: the unique
+  solution is its rectangular polar factor.  The displayed minimum Gram gap
+  is `0.4161946708373659`.  ST212 is the rank-one boundary; higher-dimensional
+  Clifford pairs remain open.
+- ST228 extends exact rational HMM belief-cylinder recursion to all `2^16`
+  records and proves the asymptotic Hellinger-rate bracket
+  `[0.6898819928911887,0.8198470892461787]`, width
+  `0.12996509635498973`, exactly 75 percent of the ST213 width.  This is still
+  `s=1/2`, not an optimized Chernoff theorem.
+- ST229 proves an exact constructive distinction between pointwise and final
+  energy conservation.  Four corresponding qubit-pair SWAP pulses multiply
+  to the global register SWAP, which commutes with
+  `H tensor I + I tensor H` and maps `rho tensor blank` to
+  `blank tensor rho`.  This is a reversible reset with a prepared identical
+  ancilla: information is transferred, not destroyed.  Do not infer erasure,
+  a physical apparatus, or a free blank state.
+- ST230 proves that the strict diffusion, square-root resistance,
+  heat-Hellinger (Fisher-local), and first-projector chord metrics are positive
+  and cyclic but not scalar-identical on the frozen instance.  Do not promote
+  correlation or common ordering to meters, Lorentzian geometry, causal
+  structure, or a uniquely observed physical metric.
+- ST231 proves the exact refinement
+  `A24=A12 tensor I2 + mu I12 tensor L2`,
+  `R e_i=e_i tensor (1,1)/sqrt(2)`.  For every `mu>=0`,
+  `A24 R=R A12` and the entire coarse heat/diffusion geometry is preserved.
+  The arbitrary fiber rate is a continuum nonuniqueness theorem: this does not
+  derive a strict `Z24` kernel, preferred fractal scale, physical length ratio,
+  Planck scale, or observing layer.
+- ST232 correctly remains blocked because no genuine independently registered
+  event record, calibration, custody, or laboratory attestation exists.  Local
+  hashes and tests certify reproducibility, not nature.
+- ST218--ST232 export no carrierless information, preferred strict fractal
+  schedule, strict second generator, canonical selector, `QW-2191` discharge,
+  dimensional clock/length/action source, spacetime, external evidence,
+  legacy-to-strict completion or role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure.  The ranked continuation is ST233--ST247.  ST233
+  may introduce exactly one new typed second operator only with a source and
+  transformation law; ST245/ST246 continue exact refinement without assigning
+  an unjustified physical length.  All future FIN research PDFs remain English
+  unless explicitly requested otherwise for a specific artifact.

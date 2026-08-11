@@ -1,0 +1,38 @@
+{
+  "local_model": "Bernoulli(1/2+sigma theta), |theta|<=0.2, sigma=2^-12",
+  "rows": [
+    {
+      "Pinsker_TV_upper": 0.09765625030346281,
+      "bias_derivative_0_25_CR_lower_bound": 2.359296,
+      "optimized_Le_Cam_risk_lower_bound": 0.018046874993930748,
+      "samples": 1000000,
+      "two_point_half_separation": 0.2,
+      "unbiased_local_CR_variance": 4.194304
+    },
+    {
+      "Pinsker_TV_upper": 0.6665039056760086,
+      "bias_derivative_0_25_CR_lower_bound": 0.02359296,
+      "optimized_Le_Cam_risk_lower_bound": 0.003106891301734094,
+      "samples": 100000000,
+      "two_point_half_separation": 0.13649999999999998,
+      "unbiased_local_CR_variance": 0.04194304
+    },
+    {
+      "Pinsker_TV_upper": 0.6689453490885902,
+      "bias_derivative_0_25_CR_lower_bound": 0.0002359296,
+      "optimized_Le_Cam_risk_lower_bound": 3.106782371478126e-05,
+      "samples": 10000000000,
+      "two_point_half_separation": 0.0137,
+      "unbiased_local_CR_variance": 0.0004194304
+    },
+    {
+      "Pinsker_TV_upper": 0.6835882320993599,
+      "bias_derivative_0_25_CR_lower_bound": 2.359296e-06,
+      "optimized_Le_Cam_risk_lower_bound": 3.100835325426274e-07,
+      "samples": 1000000000000,
+      "two_point_half_separation": 0.0014000000000000002,
+      "unbiased_local_CR_variance": 4.194304e-06
+    }
+  ],
+  "theorem": "Le Cam's two-point reduction and Pinsker's inequality give a nonlocal minimax squared-risk lower bound delta^2(1-sqrt(n KL/2))/2 for every estimator, biased or unbiased. Separately, if a scalar estimator has differentiable bias with |b'|<=beta<1, the biased Cramer--Rao inequality gives MSE >= (1-beta)^2/(n I). Applying either bound to the least visible orthonormal mode lower-bounds the worst-coordinate risk of every simultaneous six-mode estimator."
+}
