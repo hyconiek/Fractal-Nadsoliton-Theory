@@ -1,0 +1,39 @@
+{
+  "controller": "H_c=(pi/(2 tau))(I-SWAP) for 0<t<tau",
+  "exact_unitary": "exp(-i tau H_c)=SWAP",
+  "ideal_net_switching_work": 0.0,
+  "rows": [
+    {
+      "beta_times_gap": 1,
+      "reset_ground_state_error": 0.2689414213699951,
+      "thermal_blank_entropy": 0.5822031088882179,
+      "thermal_blank_excited_probability": 0.2689414213699951
+    },
+    {
+      "beta_times_gap": 2,
+      "reset_ground_state_error": 0.11920292202211755,
+      "thermal_blank_entropy": 0.36533385508720767,
+      "thermal_blank_excited_probability": 0.11920292202211755
+    },
+    {
+      "beta_times_gap": 4,
+      "reset_ground_state_error": 0.01798620996209156,
+      "thermal_blank_entropy": 0.09009476776617596,
+      "thermal_blank_excited_probability": 0.01798620996209156
+    },
+    {
+      "beta_times_gap": 8,
+      "reset_ground_state_error": 0.0003353501304664781,
+      "thermal_blank_entropy": 0.0030182074166275985,
+      "thermal_blank_excited_probability": 0.0003353501304664781
+    },
+    {
+      "beta_times_gap": 12,
+      "reset_ground_state_error": 6.144174602214718e-06,
+      "thermal_blank_entropy": 7.987428870430199e-05,
+      "thermal_blank_excited_probability": 6.144174602214718e-06
+    }
+  ],
+  "target_error_gap_law": "beta*epsilon=log((1-delta)/delta)",
+  "theorem": "For identical register Hamiltonians, I-SWAP commutes with total energy. A constant pulse H_c=pi(I-SWAP)/(2 tau) implements SWAP exactly. Sudden on/off switching has zero net system-plus-interaction work because H_c is conserved during the pulse, although controller dissipation is outside the closed model. A finite-temperature Gibbs blank resets only to its excited probability delta=(1+e^{beta epsilon})^-1; an exact pure blank requires beta epsilon to diverge. Restoring the used ancilla to the Gibbs blank can extract at most its nonequilibrium free-energy excess, whereas preparing a low-error blank requires the displayed dimensionless gap."
+}

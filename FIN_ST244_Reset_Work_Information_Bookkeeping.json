@@ -1,0 +1,19 @@
+{
+  "identity": "rho tensor blank -> blank tensor rho",
+  "nonequilibrium_free_energy": "F_beta(sigma)=Tr(H sigma)-beta^{-1}S(sigma)",
+  "rows": [
+    {
+      "S_rho": 2.5369246775162404,
+      "degenerate_H_blank_restoration_min_work_beta1": 2.5369246775162404,
+      "input": "declared random diagonal rho",
+      "swap_step_total_entropy_change": 0.0
+    },
+    {
+      "S_rho": 2.772588722239781,
+      "degenerate_H_blank_restoration_min_work_beta1": 2.772588722239781,
+      "input": "maximally mixed rho",
+      "swap_step_total_entropy_change": 0.0
+    }
+  ],
+  "theorem": "The ideal global SWAP preserves the joint spectrum, von Neumann entropy, and total energy for identical register Hamiltonians, so its reversible logical step has Delta F_total=0 and no Landauer erasure cost. It consumes a prepared blank resource by transferring rho into the ancilla. Restoring that ancilla requires work at least F_beta(blank)-F_beta(rho); for a degenerate Hamiltonian and beta=1 this equals S(rho), reaching log(16) for the maximally mixed input. Thus the thermodynamic cost is displaced to blank preparation/recycling, not avoided."
+}

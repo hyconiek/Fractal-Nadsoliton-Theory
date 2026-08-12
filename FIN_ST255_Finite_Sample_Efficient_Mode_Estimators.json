@@ -1,0 +1,64 @@
+{
+  "cluster_model": "with probability rho a cluster shares one common categorical draw; otherwise its m draws are iid",
+  "estimator": "theta_hat_k = v_k^T(p_hat-u)/sigma_k",
+  "mode_orthonormality_error": 6.330241107020794e-16,
+  "rows": [
+    {
+      "cluster_trace_MSE": 0.0009750000000000001,
+      "declared_n": 1000,
+      "layers": 0,
+      "maximum_exact_covariance_minus_CR": 0.0,
+      "trace_MSE": 0.0005,
+      "worst_modal_variance": 8.333333333333333e-05
+    },
+    {
+      "cluster_trace_MSE": 0.0004985755683969477,
+      "declared_n": 13334,
+      "layers": 2,
+      "maximum_exact_covariance_minus_CR": 0.0,
+      "trace_MSE": 0.00025567977866510134,
+      "worst_modal_variance": 9.99950002499875e-05
+    },
+    {
+      "cluster_trace_MSE": 0.0003546210993873641,
+      "declared_n": 213334,
+      "layers": 4,
+      "maximum_exact_covariance_minus_CR": 1.3552527156068805e-20,
+      "trace_MSE": 0.0001818569740448021,
+      "worst_modal_variance": 9.999968750097656e-05
+    },
+    {
+      "cluster_trace_MSE": 0.00029977315052336144,
+      "declared_n": 3413334,
+      "layers": 6,
+      "maximum_exact_covariance_minus_CR": 0.0,
+      "trace_MSE": 0.00015372982078121097,
+      "worst_modal_variance": 9.999998046875381e-05
+    },
+    {
+      "cluster_trace_MSE": 0.0002699173317993239,
+      "declared_n": 54613334,
+      "layers": 8,
+      "maximum_exact_covariance_minus_CR": 4.1359030627651384e-25,
+      "trace_MSE": 0.0001384191445124738,
+      "worst_modal_variance": 9.999999877929689e-05
+    },
+    {
+      "cluster_trace_MSE": 0.0002506249191469835,
+      "declared_n": 873813334,
+      "layers": 10,
+      "maximum_exact_covariance_minus_CR": 2.5849394142282115e-26,
+      "trace_MSE": 0.00012852559956255563,
+      "worst_modal_variance": 9.999999992370605e-05
+    },
+    {
+      "cluster_trace_MSE": 0.0002370678643275179,
+      "declared_n": 13981013334,
+      "layers": 12,
+      "maximum_exact_covariance_minus_CR": 3.3881317890172014e-21,
+      "trace_MSE": 0.00012157326375770148,
+      "worst_modal_variance": 9.999999999523163e-05
+    }
+  ],
+  "theorem": "In the declared local multinomial family p(theta)=u+sum_k sigma_k theta_k v_k with orthonormal mean-zero modes, theta_hat is exactly unbiased at every admissible theta and at theta=0 has covariance diag((12 n sigma_k^2)^-1), exactly equal to the Cramer--Rao matrix. It is therefore finite-sample efficient at the uniform state, not merely asymptotically efficient. Under the declared common-shock exchangeable cluster construction, every modal covariance is multiplied exactly by 1+(m-1)rho=1.95."
+}

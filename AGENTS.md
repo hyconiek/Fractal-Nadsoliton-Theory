@@ -7213,6 +7213,98 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   test for the ST179 interaction.  All new FIN research PDFs remain English
   unless explicitly requested otherwise for a specific artifact.
 
+## Programs ST233--ST247 typed-second-operator/nonlinear-carrier/refinement-moduli guardrail (Release 10.73, 2026-08-12)
+
+- ST233 introduces the typed equivariant map from a vertex probability state
+  to the multiplication algebra, `rho -> M_rho=diag(rho)`.  For the supplied
+  preparation `rho=exp(-0.7 A) delta_0`, the commutator norm is
+  `||[A,M_rho]||_F=0.2651939971197018` and layer order is observable.  This is
+  a conditional operational completion, not a strict source theorem: the
+  localized preparation carries symmetry-breaking data and must not be hidden
+  or promoted to a consequence of symmetric `A`.
+- ST234 uses outward interval Fourier functional calculus on the complete
+  frozen strict-entry enclosure and proves twelve positive, pairwise disjoint
+  likelihood-ratio classes for adjacent localized heat preparations at
+  `t=0.7`.  The minimum adjacent interval gap is
+  `0.024286748979774675`.  This is a preparation/instrument-relative
+  Blackwell statement, not observer-independent ontology.
+- ST235 proves the stabilizer resource theorem for equivariant conditioned
+  noise.  Uniform, localized-even, and chiral conditions have stabilizer
+  orders `24`, `2`, and `1`; they yield respectively `1`, `7`, and `12`
+  vertex orbits.  Conditioned selection is allowed, but every orbit label not
+  retained by the stabilizer is supplied by the conditioning state.  No
+  strict selector or `QW-2191` discharge follows.
+- ST236 validates two pseudo-arclength steps from each of sixty signed seeds:
+  all `120/120` outward Krawczyk boxes pass.  Together with thirty exact
+  uniform-fold links and positive nonfold clearance, the declared finite
+  incidence graph has thirty components.  This is a bounded finite graph, not
+  a global component atlas, stability theorem, soliton census, or particle
+  spectrum.
+- ST237 proves the global full-CPTP recovery optimum `189/500` for the declared
+  nonunital negative-orientation Pauli-plus-replacer channel.  The rational
+  unitary-X Choi primal and dual have zero gap.  Do not extend the result to
+  generic affine qubit channels without a new certificate.
+- ST238 proves, inside the supplied dimensionless two-state bath/control
+  model, a unique continuous selector trajectory with
+  `C in [0.0744,0.0747]` and entropy production in
+  `[0.31769108870743823,0.3191979591266695]`.  The preferred vertex, bath,
+  endpoints, maximum rate, and dimensionless time are premises; this prices
+  selection but neither sources it nor produces joules.
+- ST239 gives an exact nonlinear carrier-chart counterexample: under
+  `x=y+c y^6`, the normalized twelfth-response numerator shifts by
+  `6 a c^2`.  Ordinary higher derivatives therefore do not supply nonlinear
+  carrier naturality.  A transported connection or equivalent jet splitting
+  conditionally repairs the object, but no canonical strict FIN connection is
+  derived.
+- ST240 deliberately tests a `4^3` stratified diagnostic sample, not a full
+  nuisance cover.  All 64 coarse cells fail at local halfwidth
+  `2.0833333333333333e-5`; all 512 children pass at half that radius, minimum
+  margin `0.001779046642169213`.  This proves certificate-method failure rather
+  than root loss in those parents only.  Do not report the halfwidth-0.0005
+  cube as certified.
+- ST241 gives conditional LAN trace-risk and worst-modal-coordinate constants
+  for the supplied six-mode experiment.  Exchangeable cluster size 20 and
+  correlation 0.05 multiply the constants by the declared design effect
+  `1.95`.  This is asymptotic and model-relative, not a finite detector
+  guarantee.
+- ST242 proves the fixed-balanced-involution higher-dimensional Clifford
+  theorem: after fixing `X=diag(I_n,-I_n)`, the unique nearest anticommuting
+  factor is determined by the polar unitary of an invertible odd block.  Do
+  not infer joint global uniqueness when both Clifford factors vary.
+- ST243 is intentionally **strong numerical evidence**, not a proof
+  certificate.  Exact strict convexity implies at most one finite-block
+  Chernoff stationary point; long-double enumeration of all `2^16` records
+  locates it near `0.5022593032702813` and improves on `s=1/2`.  The endpoint
+  sums are not outward intervals, so neither the optimizer enclosure nor its
+  conservative asymptotic rate bracket may be labeled proven.
+- ST244 proves that ideal global SWAP preserves joint entropy and energy for
+  identical Hamiltonians and transfers, rather than erases, information.
+  Recycling the blank costs at least the corresponding free-energy
+  difference, equal to `S(rho)` for degenerate `H` and beta one.  Controller
+  work, finite-time friction, and a physical Hamiltonian remain open.
+- ST245 classifies every self-adjoint exact isometric refinement as
+  `A_tilde = R A R^* direct-sum B` on the coarse range and its complement.
+  Positivity requires `B>=0`.  For fiber cardinalities `q=2,3,4,5`, the real
+  symmetric complement-moduli dimensions are `78,300,666,1176`.  Exact coarse
+  diffusion geometry therefore does not select a unique deeper operator.
+  Graph-Laplacian signs, locality, strict `Z_24` provenance, and physical
+  length remain additional constraints.
+- ST246 proves the exact repeated-refinement formula
+  `d_s(t)=2t<lambda>_t + sum_j 4 mu_j t/(exp(2 mu_j t)+1)`.  Constant and
+  geometric rate atlases are computational illustrations.  Free fiber rates
+  and the orbit `mu_j->c mu_j, t->t/c` prevent any inference of seconds,
+  lengths, Planck scale, or a uniquely observed fractal layer.
+- ST247 remains blocked: no independently registered raw event record,
+  calibration hash, custody chain, or laboratory attestation exists.  Local
+  reproducibility cannot substitute for external evidence.
+- ST233--ST247 export no strict source for the preparation, canonical
+  selector, canonical connection, `QW-2191` discharge, physical clock/length/
+  action unit, spacetime, external evidence, legacy-to-strict completion or
+  role transfer, Standard Model, gravity, `L_total`, or ToE closure.  The next
+  ranked batch is ST248--ST262, led by the preparation-source question.  All
+  future FIN research PDFs remain English unless explicitly requested
+  otherwise for a specific artifact.
+
 ## Programs ST190--ST202 strict-generated-layer/selection/operational-limit guardrail (Release 10.70, 2026-08-11)
 
 - ST190 proves that the strict graph Laplacian generates the positive
@@ -7487,3 +7579,172 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   transformation law; ST245/ST246 continue exact refinement without assigning
   an unjustified physical length.  All future FIN research PDFs remain English
   unless explicitly requested otherwise for a specific artifact.
+
+## Current ST233--ST247 steering marker (Release 10.73, 2026-08-12)
+
+- The complete Release 10.73 guardrail is recorded under the heading
+  `Programs ST233--ST247 typed-second-operator/nonlinear-carrier/refinement-moduli guardrail`.
+  It supersedes the ST218--ST232 recommendation to execute ST233--ST247.
+
+## Programs ST248--ST262 preparation-source/affine-connection/log-Haar-refinement guardrail (Release 10.74, 2026-08-12)
+
+- ST248 proves a sharp obstruction in its declared class: every deterministic
+  `D12`-natural probability state constructed from the strict symmetric
+  operator `A` alone is uniform.  The localized preparation entering
+  `M_rho=diag(rho)` is therefore an additional orbit-carrying premise.  Do not
+  promote this class-specific theorem to the claim that no state-dependent,
+  stochastic, boundary-conditioned, or genuinely symmetry-breaking source can
+  exist.
+- ST249 classifies the linear `D12`-equivariant vertex-state processors as the
+  seven-dimensional distance algebra.  These maps cannot create selector
+  information absent from the input state.  This does not discharge
+  `QW-2191`, source a canonical orientation, or make the ST233 preparation
+  strict-derived.
+- ST250 certifies 360 additional pseudo-arclength boxes, giving eight local
+  steps on every one of the sixty signed seeds.  The finite graph still has
+  thirty components and the smallest reported nonfold clearance is
+  `0.009448174321804254`.  The declared resource stop is not a global branch
+  classification or component-count theorem.
+- ST251 proves the exact global entanglement-fidelity optimum `81/100` for the
+  declared rational rotated amplitude-damping channel.  ST252 supplies strong
+  numerical evidence for a feasible ten-knot selector control of total cost
+  `0.4405461745`; without an interval KKT/global certificate it must not be
+  labeled proven.
+- ST253 proves, conditional on the explicitly supplied mean-zero affine
+  amplitude carrier, that `g_A(u,v)=u^T A v` is positive and has a unique flat
+  Levi-Civita connection; the exact chart calculation cancels the ST239
+  derivative artifact.  This is not a spacetime, gauge, physical-clock, or
+  dimensional connection, and the affine carrier itself is not derived from
+  the strict kernel.
+- ST254 certifies all `28^3=21952` boxes in the declared nuisance cube of
+  halfwidth `0.0005`.  ST255 proves exact finite-sample efficiency only in the
+  declared local multinomial model and gives clustered design inflation
+  `1.95`.  ST256 proves global uniqueness for positive aligned two-gap targets;
+  generic misaligned targets remain open.
+- ST257 proves the direct positive-operator spectral-radius enclosure
+  `[0.43742682966007307,0.49115205262406514]` and, after intersection with the
+  independent earlier rate certificate, the Hellinger-rate interval
+  `[0.7110015196496613,0.8198470892461787]`.  Do not infer laboratory
+  identifiability from this synthetic declared model.
+- ST258 proves the ideal SWAP identity and the finite-temperature blank error
+  `1/(1+exp(beta*epsilon))`; exact pure reset requires the singular
+  `beta*epsilon -> infinity` limit.  The zero ideal switch-work identity omits
+  controller realization and cyclic free-energy costs.
+- ST259 reduces the exact self-adjoint two-child refinement family to a
+  seven-dimensional positive graph-Laplacian cone: six edge-split intervals
+  plus one vertical-rate ray.  Locality and positivity do not select a unique
+  refinement.
+- ST260 proves the conditional log-Haar theorem: scale invariance selects
+  `rho dmu/mu` and its ideal integrated spectral-dimension contribution is
+  `2 rho ln(2)`.  The density, cutoffs, trace-class completion, physical
+  realization, and units remain unsourced.  Do not identify this result with
+  Planck layers, transfer `alpha_geo`, octave, or other legacy physical roles,
+  or claim physical fractal geometry without a separate bridge theorem.
+- ST261 proves that coarse preparations/effects are exactly blind to the hidden
+  complement generator, while complement-resolving instruments recover
+  `exp(-tB)` and, under the declared principal-log condition, `B`.  This is an
+  operational mathematical specification, not laboratory execution.
+- ST262 remains blocked: no independently registered raw event record was
+  supplied.  ST248--ST262 export no strict selector source, `QW-2191`
+  discharge, physical unit, Planck scale, spacetime, laboratory evidence,
+  legacy-to-strict completion or role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure.
+- The next bounded local batch is ST263--ST277.  Highest priority is one
+  genuinely new strict symmetry-breaking state source outside the exhausted
+  deterministic `D12`-natural class; otherwise preserve the ST248 no-go.  Then
+  classify nonlinear equivariant typed maps, certify or refute ST252 with
+  interval KKT methods, audit connection naturality under refinement, sharpen
+  the belief-transfer enclosure, price a finite controller, and bound the
+  finite-cutoff log-Haar completion.  ST277 may resume only with independently
+  registered events.  All future PDFs are to be written in English.
+- The live frontier is ST248--ST262.  First test whether the localized
+  preparation entering `M_rho=diag(rho)` has a strict source; otherwise retain
+  it as an explicit operational premise.  Do not hide selector data in the
+  condition, promote the ST243 long-double enclosure to a proof, treat the
+  ST240 stratified sample as a full cube, or infer physical scale from the
+  ST245/ST246 refinement moduli and spectral-dimension flows.
+- No `QW-2191`, legacy-to-strict role transfer, dimensional physics,
+  laboratory evidence, Standard Model, gravity, `L_total`, or ToE closure is
+  exported.  All future FIN research PDFs remain English unless explicitly
+  requested otherwise for a specific artifact.
+
+## Programs ST263--ST277 spontaneous-phase/certified-selector/trace-class guardrail (Release 10.75, 2026-08-12)
+
+- ST263 proves that the strict operator canonically supplies a two-dimensional
+  lowest positive Fourier eigenspace but no phase in it.  The first scalar
+  `D12`-anisotropic invariant is `Re(z^12)`; conditional on a supplied nonzero
+  radius and positive coefficient, `-kappa Re(z^12)` has exactly twelve stable
+  angular branches.  Their equal ensemble is symmetric.  Do not promote this
+  to a strict selector source: `kappa`, the radius, and the realized branch are
+  not derived, and `QW-2191` remains open.
+- ST264 classifies the reflection-compatible polynomial `D12`-equivariant
+  module on the lowest Fourier carrier through degree 11.  Its seven generators
+  are `z|z|^(2q)` for `q=0,...,5` and `conjugate(z)^11`.  Equivariance implies
+  `Stab(z) subset Stab(F(z))`; nonlinear processing may amplify but cannot
+  create broken-symmetry orbit information absent from its input.
+- ST265 certifies 44 new pseudo-arclength boxes on the previously closest
+  nonfold seed pair 20/23.  The minimum new interval-box clearance is
+  `0.018393006354206848` and the minimum outward stationary full-row-rank lower
+  bound is `2.052539939450647e-05`.  This excludes a collision/rank-loss event
+  only on the finite traced segment, not globally.
+- ST266 proves the rational global CPTP recovery optimum `3/8` for the declared
+  nonorthogonal measure-and-prepare qubit channel.  Its Choi rank, nonunitality,
+  and noncommuting outputs place it outside the tested Pauli and qubit
+  amplitude-damping unitary orbits.  It is a supplied mathematical channel, not
+  a FIN-derived physical noise source.
+- ST267 supplies an outward active-set KKT certificate and a strict-convexity
+  proof for the exact declared ten-knot, 600-step selector-control discretization.
+  Its unique global value is `0.4405461745248221`.  This closes the numerical
+  status of ST252 only in that supplied dimensionless model; it does not source
+  the endpoint, bath, clock, rate, coefficients, selector, or physical joules.
+- ST268 proves uniqueness and naturality of the flat mean-zero affine
+  Levi-Civita connection under the complete exact linear-isometric refinement
+  class.  Do not identify this carrier connection with spacetime, gauge
+  curvature, gravity, or a dimensional physical geometry.
+- ST269 certifies all `40^3=64000` cells of the nuisance cube at halfwidth
+  `0.00070`.  At halfwidth `0.00075` with the same forty-cell resolution, five
+  of eight tested corner tiles fail.  This is a fixed-resolution certificate
+  boundary, not root loss, a singularity, maximal continuation, or apparatus
+  tolerance.
+- ST270 proves conservative simultaneous finite-confidence rectangles under
+  the supplied independent-cluster/common-shock count law.  ST271 gives an
+  exact qubit counterexample: two positive marginal sign gaps can coexist with
+  a circle of global joint Clifford minimizers, so full column rank is an
+  essential hypothesis in the earlier uniqueness theorem.
+- ST272 rigorously narrows the fixed-`s=1/2` Hellinger-rate enclosure to
+  `[0.7129988031061385,0.8228442593887783]`; its intersection with the
+  independent previous bound is
+  `[0.7129988031061385,0.8198470892461787]`.  The Chernoff candidate
+  `s=0.500739416715181` remains strong numerical evidence and must not be
+  reported as a certified all-`s` optimum.
+- ST273 proves the conditional finite-controller ledger: erasing an uncertain
+  binary record costs at least `h2(p)/beta`, while a known reversibly uncomputed
+  program has no universal positive Landauer cost.  The bath, Hamiltonian,
+  record distribution, and dimensional energy scale remain supplied.
+- ST274 adds the explicit premise that two-point fibers are unlabelled and
+  independent local relabellings are natural.  This forces equal aligned and
+  crossed horizontal weights and reduces the ST259 seven-dimensional cone to
+  one vertical-rate ray.  The remaining rate is unsourced; no unique
+  refinement, length ratio, or physical fractal scale follows.
+- ST275 proves that a nonzero exactly scale-invariant log-Haar density on all
+  positive rates is incompatible with a trace-class heat completion because
+  the heat trace diverges logarithmically at zero.  Finite cutoffs give an exact
+  controlled plateau formula and error bound but break exact scale invariance.
+  Do not identify the cutoffs with Planck scale, octaves, `alpha_geo`, or legacy
+  physical roles without separate source and role-transfer theorems.
+- ST276 exports an executable mathematical fiber-resolving instrument and
+  frozen record/custody schema.  Positive child-basis counts reconstruct
+  `exp(-tB)` and the stated principal logarithm reconstructs `B`.  ST277 remains
+  blocked because no independently registered raw events exist; simulation is
+  not evidence of laboratory execution.
+- ST263--ST277 export no strict selector coefficient, `QW-2191` discharge,
+  physical vacuum, dimensional clock/length/action source, Planck scale,
+  spacetime, laboratory evidence, legacy-to-strict completion or role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST278--ST292.  ST278 has highest theoretical
+  priority: derive the degree-twelve phase coefficient and nonzero radius from
+  one genuinely strict nonlinear interaction, or prove a source obstruction.
+  ST290 is the highest multiscale priority: classify near-Haar trace-class
+  densities and quantify the plateau-width/trace-class tradeoff.  ST292 may
+  resume empirical validation only after independently registered raw events
+  exist.  All future research PDFs remain English.

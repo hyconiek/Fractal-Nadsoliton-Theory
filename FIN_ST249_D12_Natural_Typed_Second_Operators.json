@@ -1,0 +1,38 @@
+{
+  "affine_Markov_classification": "C=sum_{d=0}^6 c_d B_d with entrywise nonnegativity and unit column sum; rho maps to M_{C rho}=diag(C rho)",
+  "basis_labels": [
+    "distance_0",
+    "distance_1",
+    "distance_2",
+    "distance_3",
+    "distance_4",
+    "distance_5",
+    "distance_6"
+  ],
+  "conditioning_rows": [
+    {
+      "conditioning": "uniform",
+      "input_stabilizer_order": 24,
+      "operator_commutator_norm": 0.0,
+      "output_minimum": 0.08333333333333334,
+      "output_stabilizer_order": 24
+    },
+    {
+      "conditioning": "localized even",
+      "input_stabilizer_order": 2,
+      "operator_commutator_norm": 0.040270469809788524,
+      "output_minimum": 0.06151566710040961,
+      "output_stabilizer_order": 2
+    },
+    {
+      "conditioning": "chiral",
+      "input_stabilizer_order": 1,
+      "operator_commutator_norm": 0.01876621712436425,
+      "output_minimum": 0.07090432364785987,
+      "output_stabilizer_order": 1
+    }
+  ],
+  "linear_equivariant_dimension": 7,
+  "maximum_basis_equivariance_error": 0.0,
+  "theorem": "The D12 permutation representation on vertices is multiplicity-free over the seven real distance sectors. Therefore every linear D12-equivariant state-to-state map is a unique linear combination of the seven distance matrices B_d. Positivity and preservation of total mass cut out the affine Markov polytope. The typed second operators are M_{C rho}. Equivariance implies Stab(rho) is contained in Stab(C rho), so such processing can preserve or erase selector information but cannot create localization or orientation absent from rho. No conditioning gives only a scalar multiplication operator; even localization selects a vertex orbit but not orientation; chiral conditioning is the minimal class with trivial stabilizer."
+}
