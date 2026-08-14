@@ -1,0 +1,37 @@
+{
+  "abstract_theorem": "Let a finite group act transitively on n simplex coordinates.  Let F be continuous and invariant.  If m>1/2, an explicit feasible point has value below every point with max p_i<=m, and F is strictly convex on every cap {p_i>m}, then argmin F contains exactly n points and is one group orbit.",
+  "application": "ST402 meets every hypothesis with n=12, G=D12, and m=0.94.",
+  "axiom_removal_tests": [
+    {
+      "axiom": "existence/compactness",
+      "counterexample": "F(x)=x on the open interval (0,1) has no minimizer",
+      "necessity": 5
+    },
+    {
+      "axiom": "outside-cap separation",
+      "counterexample": "a strictly convex invariant entropy may minimize at the uniform point outside all caps",
+      "necessity": 5
+    },
+    {
+      "axiom": "strict cap convexity",
+      "counterexample": "an invariant continuous function may have a flat continuum of cap minima",
+      "necessity": 5
+    },
+    {
+      "axiom": "transitive invariance",
+      "counterexample": "unequal cap depths can leave only one preferred cap",
+      "necessity": 5
+    },
+    {
+      "axiom": "m>1/2/disjoint caps",
+      "counterexample": "overlapping caps invalidate the orbit-counting step even when minima exist",
+      "necessity": 4
+    }
+  ],
+  "proof": [
+    "compactness and continuity give one minimizer",
+    "separation puts it in a cap; m>1/2 makes caps disjoint",
+    "transitivity creates a minimizer in every cap",
+    "strict convexity gives at most one minimizer in each cap"
+  ]
+}

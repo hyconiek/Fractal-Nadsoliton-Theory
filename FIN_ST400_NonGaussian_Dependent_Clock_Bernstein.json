@@ -1,0 +1,78 @@
+{
+  "premise": "centered, |X_i|<=0.01, Var(X_i)<=1e-6, and m-dependent",
+  "rows": [
+    {
+      "Bernstein_union_radius": 0.0517545600089053,
+      "confidence": 0.95,
+      "levels": 100,
+      "m_dependence": 0
+    },
+    {
+      "Bernstein_union_radius": 0.11048641136344042,
+      "confidence": 0.95,
+      "levels": 1000,
+      "m_dependence": 0
+    },
+    {
+      "Bernstein_union_radius": 0.29621283284221683,
+      "confidence": 0.95,
+      "levels": 10000,
+      "m_dependence": 0
+    },
+    {
+      "Bernstein_union_radius": 0.10029360338371018,
+      "confidence": 0.95,
+      "levels": 100,
+      "m_dependence": 1
+    },
+    {
+      "Bernstein_union_radius": 0.1908207774591857,
+      "confidence": 0.95,
+      "levels": 1000,
+      "m_dependence": 1
+    },
+    {
+      "Bernstein_union_radius": 0.47709283767623595,
+      "confidence": 0.95,
+      "levels": 10000,
+      "m_dependence": 1
+    },
+    {
+      "Bernstein_union_radius": 0.19905718883607948,
+      "confidence": 0.95,
+      "levels": 100,
+      "m_dependence": 3
+    },
+    {
+      "Bernstein_union_radius": 0.33683583569487596,
+      "confidence": 0.95,
+      "levels": 1000,
+      "m_dependence": 3
+    },
+    {
+      "Bernstein_union_radius": 0.7725301727046763,
+      "confidence": 0.95,
+      "levels": 10000,
+      "m_dependence": 3
+    },
+    {
+      "Bernstein_union_radius": 0.4037131030489912,
+      "confidence": 0.95,
+      "levels": 100,
+      "m_dependence": 7
+    },
+    {
+      "Bernstein_union_radius": 0.611441640175208,
+      "confidence": 0.95,
+      "levels": 1000,
+      "m_dependence": 7
+    },
+    {
+      "Bernstein_union_radius": 1.268336952508901,
+      "confidence": 0.95,
+      "levels": 10000,
+      "m_dependence": 7
+    }
+  ],
+  "theorem": "Partition an m-dependent sequence into m+1 independent residue classes, apply two-sided Bernstein to each class, and union-bound.  Cauchy on class lengths gives radius sqrt(2 sigma^2 (m+1)L log(2(m+1)/alpha)) plus 2b(m+1)log(2(m+1)/alpha)/3.  The leading growth is square-root depth without a Gaussian premise."
+}

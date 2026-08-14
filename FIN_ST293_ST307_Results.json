@@ -1,0 +1,4010 @@
+{
+  "ST293": {
+    "boundary": "The no-go does not cover active, nonnormal, state-dependent, negative-residue, or nonequilibrium strict laws. It does not source g or discharge QW-2191.",
+    "linear_mode_rates": [
+      -1.1926223897340549e-17,
+      -0.7541211542070796,
+      -0.75412115420708,
+      -1.5770495144276084,
+      -1.5770495144276098,
+      -1.9614068619764462,
+      -1.9614068619764466,
+      -2.19956884933321,
+      -2.199568849333212,
+      -2.2986062720790974,
+      -2.2986062720790983,
+      -2.3421820411463004
+    ],
+    "lowest_carrier_instability_threshold": 15.912562501468873,
+    "memory_eigenvalue_interval": [
+      6.938893903907228e-17,
+      0.18820974786342054
+    ],
+    "negative_feedback_requirement": "a source with negative quadratic sign or active gain must be added",
+    "object": "Passive Functional-Calculus No-Go for the Negative Information Gain",
+    "packet_file": "FIN_ST293_Passive_Feedback_Source_No_Go.json",
+    "packet_sha256": "b995e2f4cfe01b5f7bef6558be67278f95e35953a6bab3ccbfcf16d1d9a649db",
+    "passive_generator_class": "C=f(A) with f(lambda)>=0, gradient flow q_dot=-C q",
+    "positive_Stieltjes_poles": [
+      1.3210910205731505,
+      1.6763637131430889,
+      2.0383091818804093
+    ],
+    "positive_Stieltjes_residues": [
+      0.22857569641117714,
+      0.19878618994401176,
+      0.032294193527609275
+    ],
+    "program": "ST293",
+    "status": "proven_no_go_in_passive_self_adjoint_and_Stieltjes_class",
+    "strict_spectrum": [
+      1.1926223897340549e-17,
+      0.7541211542070796,
+      0.75412115420708,
+      1.5770495144276084,
+      1.5770495144276098,
+      1.9614068619764462,
+      1.9614068619764466,
+      2.19956884933321,
+      2.199568849333212,
+      2.2986062720790974,
+      2.2986062720790983,
+      2.3421820411463004
+    ],
+    "theorem": "Every self-adjoint passive response C=f(A) with f(lambda)>=0 generates q_dot=-Cq and has nonpositive modal growth rates. Positive Stieltjes memory is also positive semidefinite. Therefore no member of this passive functional-calculus class can generate the active negative-information term -(g/2)<q,Aq> with g>0. A pump, negative residue, nonequilibrium boundary condition, or another signed state-dependent law is necessary. The theorem excludes a declared class; it does not prove that no strict nonlinear active law can exist."
+  },
+  "ST294": {
+    "boundary": "Only the three threshold identities and ordering are proven. Multistart optimization is not a global classification of all simplex critical points.",
+    "first_uniform_Hessian_instability": 5.123427551398615,
+    "lowest_mode_instability": 15.912562501468873,
+    "multistart_rows": [
+      {
+        "best_max_probability": 0.0833333591339485,
+        "best_min_probability": 0.08333331780984163,
+        "best_value": 5.61862699744907e-15,
+        "distinct_multistart_minima": 1,
+        "g": 0.0
+      },
+      {
+        "best_max_probability": 0.08333336490831181,
+        "best_min_probability": 0.08333329822210919,
+        "best_value": 1.5532383800898914e-14,
+        "distinct_multistart_minima": 1,
+        "g": 2.5
+      },
+      {
+        "best_max_probability": 0.9246210364451304,
+        "best_min_probability": 0.002576893354501908,
+        "best_value": -0.06247614950964797,
+        "distinct_multistart_minima": 10,
+        "g": 2.9933093488992286
+      },
+      {
+        "best_max_probability": 0.9902034517003612,
+        "best_min_probability": 0.0002146688143601414,
+        "best_value": -0.8451985076775972,
+        "distinct_multistart_minima": 10,
+        "g": 4.0
+      },
+      {
+        "best_max_probability": 0.9986788375702579,
+        "best_min_probability": 1.8437535433677054e-05,
+        "best_value": -1.7696392877514047,
+        "distinct_multistart_minima": 16,
+        "g": 5.123427551398615
+      },
+      {
+        "best_max_probability": 0.9999944410548253,
+        "best_min_probability": 2.793657072769588e-08,
+        "best_value": -4.156327906836998,
+        "distinct_multistart_minima": 9,
+        "g": 8.0
+      },
+      {
+        "best_max_probability": 0.9999999981615417,
+        "best_min_probability": 4.580633529086722e-12,
+        "best_value": -10.724965013747585,
+        "distinct_multistart_minima": 9,
+        "g": 15.912562501468873
+      }
+    ],
+    "object": "Global Simplex Competition and Refutation of Lowest-Mode Global Selection",
+    "ordering": [
+      2.9933093488992286,
+      5.123427551398615,
+      15.912562501468873
+    ],
+    "packet_file": "FIN_ST294_Global_Simplex_State_Competition.json",
+    "packet_sha256": "4b5743ddc3a55dacc89091173a3fa42dd617363a24fb4e1a0e0a2e1e6e7d2729",
+    "program": "ST294",
+    "status": "proven_threshold_ordering_plus_numerical_branch_map",
+    "theorem": "The simplex Hessian of I-(g/2)<q,Aq> at the uniform state has eigenvalues 12-g lambda_k. Hence the first local instability occurs in the largest-eigenvalue sector at g=12/lambda_max, not in the lowest Fourier carrier at 12/lambda_1. Independently, every pure vertex has value log(12)-g s/2 and beats the uniform state for g>2 log(12)/s. For the strict operator this energetic crossing occurs below both Hessian thresholds. Therefore the lowest-mode degree-12 bifurcation is not the global simplex selection mechanism; boundary-localized states can win first. The multistart diagram is numerical evidence only.",
+    "uniform_value": 0.0,
+    "vertex_beats_uniform_energy_threshold": 2.9933093488992286,
+    "vertex_value_formula": "log(12)-g*s/2",
+    "vertex_values_at_energy_threshold": [
+      4.440892098500626e-16,
+      8.881784197001252e-16,
+      4.440892098500626e-16,
+      0.0,
+      0.0,
+      4.440892098500626e-16,
+      4.440892098500626e-16,
+      -4.440892098500626e-16,
+      -8.881784197001252e-16,
+      8.881784197001252e-16,
+      4.440892098500626e-16,
+      0.0
+    ]
+  },
+  "ST295": {
+    "basin_counts_by_peak_vertex": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "boundary": "The coupling is supplied, the Hessian is finite-difference numerical, and multistart sampling cannot prove global exhaustion, orbital stability, or a physical vacuum.",
+    "declared_coupling_g": 4.0,
+    "distinct_localized_minima_at_tolerance_1e_3": 12,
+    "multistart_count": 192,
+    "numerical_logit_Hessian_eigenvalues": [
+      1.9069186514643116e-05,
+      0.00023220545866089873,
+      0.0006439775388904028,
+      0.0007081305897239634,
+      0.0009582643943399986,
+      0.001018837198062984,
+      0.0011409867533108946,
+      0.0011906760280581989,
+      0.0012475540748316638,
+      0.001293623161474156,
+      0.009984493555219803
+    ],
+    "object": "Localized Translation Orbit, Numerical Hessian, and Basin Audit",
+    "packet_file": "FIN_ST295_Localized_Orbit_Hessian_and_Basins.json",
+    "packet_sha256": "90118f81846ee0a4155fc9691b6794b88da76fafae43e45f351c24b619d0813d",
+    "program": "ST295",
+    "representative_max_probability": 0.9902034287688656,
+    "representative_probability": [
+      0.0006468134274567136,
+      0.0009644315044715219,
+      0.0011499749385147798,
+      0.0012591997140050605,
+      0.0013263691806931009,
+      0.0012591761068863783,
+      0.0011499903950377148,
+      0.0009644185960955177,
+      0.0006468258695525156,
+      0.00021467694544956444,
+      0.9902034287688656,
+      0.00021469455297155285
+    ],
+    "represented_peak_labels": 12,
+    "result": "At the supplied coupling g=4, frozen peak-stratified descent finds strongly vertex-localized endpoints and samples all twelve peak labels. The representative logit Hessian is numerically positive. This is strong numerical evidence for at least one localized basin per label, not an interval existence, exact twelve-count, or global exhaustion theorem.",
+    "status": "strong_numerical_evidence_for_twelve_localized_basins_at_supplied_g",
+    "translation_orbit_energy_spread": 1.3322676295501878e-15
+  },
+  "ST296": {
+    "boundary": "The theorem excludes positive Stieltjes loading. Active memory, pumps, nonlinear hidden variables, and nonequilibrium preparations remain outside scope.",
+    "loading_rows": [
+      {
+        "epsilon": 0.0,
+        "maximum_stiffness": 2.3421820411463004,
+        "minimum_positive_stiffness": 0.7541211542070796
+      },
+      {
+        "epsilon": 0.25,
+        "maximum_stiffness": 2.389234478112156,
+        "minimum_positive_stiffness": 0.7801077778681884
+      },
+      {
+        "epsilon": 0.5,
+        "maximum_stiffness": 2.436286915078012,
+        "minimum_positive_stiffness": 0.8060944015292957
+      },
+      {
+        "epsilon": 1.0,
+        "maximum_stiffness": 2.530391789009721,
+        "minimum_positive_stiffness": 0.8580676488515113
+      },
+      {
+        "epsilon": 2.0,
+        "maximum_stiffness": 2.718601536873143,
+        "minimum_positive_stiffness": 0.962014143495944
+      }
+    ],
+    "memory_commutator_with_A": 1.1650891229709244e-16,
+    "object": "Passive Memory Loading Cannot Generate the Negative Information Coupling",
+    "packet_file": "FIN_ST296_Passive_Memory_Cannot_Source_Gain.json",
+    "packet_sha256": "34033c302c003cfb21a9fca43b6ec38c08d436b11dbd22cd6dd3fb4fafe7669a",
+    "poles": [
+      1.3210910205731505,
+      1.6763637131430889,
+      2.0383091818804093
+    ],
+    "program": "ST296",
+    "residues": [
+      0.22857569641117714,
+      0.19878618994401176,
+      0.032294193527609275
+    ],
+    "status": "proven_passive_memory_strengthens_stability",
+    "theorem": "The certified-sign Stieltjes memory M is a positive function of A and commutes with A. Adding epsilon M for epsilon>=0 increases or preserves every modal stiffness. It therefore cannot cross the negative-information instability threshold or source active g. A negative memory coefficient would be exactly the additional signed premise under investigation, not a deduction from passive memory."
+  },
+  "ST297": {
+    "analytic_germ_form": "F(z)=a(u,v) z+b(u,v) conjugate(z)^11, u=|z|^2, v=Re(z^12)",
+    "boundary": "This is local at the carrier origin and does not cover arbitrary smooth, singular, nonlocal, or history-dependent responses.",
+    "coefficient_class": "real-analytic germs a,b near the origin",
+    "global_warning": "local analytic germ theorem; singular/nonanalytic equivariants may lie outside",
+    "object": "Analytic Completion of the D12 Equivariant Module",
+    "packet_file": "FIN_ST297_Analytic_D12_Equivariant_Completion.json",
+    "packet_sha256": "d86109d3e8cdae8a87693d67638ae9750c19e27c39928a8da6803831df3de47c",
+    "program": "ST297",
+    "status": "proven_local_real_analytic_free_rank_two_completion",
+    "theorem": "Expanding a real-analytic reflection-compatible D12-equivariant germ into its convergent z,conjugate(z) series and applying the congruence p-q=1 mod 12 termwise groups every monomial uniquely into a(u,v)z+b(u,v)conjugate(z)^11. Thus the polynomial free rank-two structure persists for local analytic germs.",
+    "uniqueness": "unique after collecting convergent power series in u and v"
+  },
+  "ST298": {
+    "boundary": "No continuous tube enclosure, fold exclusion between sections, global continuation, collision theorem, or particle interpretation is claimed.",
+    "certified_boxes": 160,
+    "minimum_sample": {
+      "center": [
+        0.2776189249306625,
+        0.3038995062569946,
+        0.2776189249300239,
+        0.3038995062577849,
+        0.27761892492874796,
+        0.3038995062585748,
+        0.2776189249281098,
+        0.11172413075932261
+      ],
+      "certificate": {
+        "included": true,
+        "margin": 1.8110757393774435e-08,
+        "radius": 2e-08
+      },
+      "kappa": 0.11172413075932261,
+      "point_singular_value": 2.9624158688204913e-06,
+      "step": 85
+    },
+    "object": "Validated Fine Pseudo-Arclength Chain Through the Near-Rank Event",
+    "packet_file": "FIN_ST298_Validated_Near_Event_Arc_Resolution.json",
+    "packet_sha256": "db9b38f48bc38ae35a65ed48ca9d9bc945813843c494c0298e99468ff0102e3d",
+    "program": "ST298",
+    "root_boxes": 160,
+    "rows": [
+      {
+        "center": [
+          0.27848040462236373,
+          0.3032079140655659,
+          0.27848040462236445,
+          0.30320791406556713,
+          0.27848040462236107,
+          0.30320791406556935,
+          0.2784804046223589,
+          0.11180472115711838
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9989188193569873e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180472115711838,
+        "point_singular_value": 0.0005179289184115296,
+        "step": 1
+      },
+      {
+        "center": [
+          0.27847017099748317,
+          0.30321618499186404,
+          0.27847017099748356,
+          0.303216184991863,
+          0.2784701709974857,
+          0.3032161849918617,
+          0.2784701709974866,
+          0.11180379001633979
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998907173117459e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180379001633979,
+        "point_singular_value": 0.0005118802229991625,
+        "step": 2
+      },
+      {
+        "center": [
+          0.2784599368380244,
+          0.30322445501053874,
+          0.27845993683802156,
+          0.30322445501054307,
+          0.27845993683801423,
+          0.30322445501054823,
+          0.2784599368380093,
+          0.11180285819335244
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988939281567752e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180285819335244,
+        "point_singular_value": 0.0005058277660411832,
+        "step": 3
+      },
+      {
+        "center": [
+          0.2784497021440642,
+          0.30323272412158114,
+          0.27844970214405645,
+          0.3032327241215913,
+          0.2784497021440403,
+          0.3032327241216018,
+          0.27844970214403164,
+          0.11180192568819423
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988778854340694e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180192568819423,
+        "point_singular_value": 0.0004997715504735453,
+        "step": 4
+      },
+      {
+        "center": [
+          0.27843946691566546,
+          0.30324099232498863,
+          0.27843946691566523,
+          0.30324099232498897,
+          0.2784394669156653,
+          0.3032409923249894,
+          0.2784394669156637,
+          0.11180099250090247
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998865689634144e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180099250090247,
+        "point_singular_value": 0.0004937115792456417,
+        "step": 5
+      },
+      {
+        "center": [
+          0.27842923115295976,
+          0.3032492596207157,
+          0.278429231152959,
+          0.3032492596207179,
+          0.27842923115295415,
+          0.30324925962072175,
+          0.2784292311529502,
+          0.11180005863151518
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988519561753293e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11180005863151518,
+        "point_singular_value": 0.0004876478553211211,
+        "step": 6
+      },
+      {
+        "center": [
+          0.27841899485601146,
+          0.3032575260087599,
+          0.2784189948560114,
+          0.30325752600876155,
+          0.2784189948560074,
+          0.3032575260087645,
+          0.27841899485600435,
+          0.11179912408007008
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988380783875215e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11179912408007008,
+        "point_singular_value": 0.0004815803816784094,
+        "step": 7
+      },
+      {
+        "center": [
+          0.2784087580249252,
+          0.303265791489093,
+          0.27840875802491916,
+          0.3032657914891016,
+          0.27840875802490506,
+          0.30326579148911087,
+          0.27840875802489695,
+          0.11179818884660461
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988207256016466e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11179818884660461,
+        "point_singular_value": 0.0004755091613113063,
+        "step": 8
+      },
+      {
+        "center": [
+          0.27839852065977105,
+          0.303274056061708,
+          0.278398520659763,
+          0.3032740560617197,
+          0.27839852065974324,
+          0.30327405606173263,
+          0.2783985206597326,
+          0.1117972529311565
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988043498120334e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117972529311565,
+        "point_singular_value": 0.0004694341972277312,
+        "step": 9
+      },
+      {
+        "center": [
+          0.27838828276064664,
+          0.3032823197265818,
+          0.27838828276063354,
+          0.3032823197265997,
+          0.2783882827606046,
+          0.3032823197266167,
+          0.2783882827605929,
+          0.1117963163337639
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998790083446167e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117963163337639,
+        "point_singular_value": 0.00046335549245021254,
+        "step": 10
+      },
+      {
+        "center": [
+          0.27837804432762076,
+          0.3032905824837078,
+          0.278378044327612,
+          0.30329058248372065,
+          0.2783780443275902,
+          0.3032905824837353,
+          0.27837804432757723,
+          0.111795379054465
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9987736910032083e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.111795379054465,
+        "point_singular_value": 0.00045727305001428434,
+        "step": 11
+      },
+      {
+        "center": [
+          0.27836780536078065,
+          0.3032988443330699,
+          0.2783678053607828,
+          0.30329884433306803,
+          0.2783678053607847,
+          0.3032988443330683,
+          0.27836780536078287,
+          0.11179444109329593
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998758070165252e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11179444109329593,
+        "point_singular_value": 0.0004511868729786868,
+        "step": 12
+      },
+      {
+        "center": [
+          0.2783575658602651,
+          0.30330710527461785,
+          0.27835756586026,
+          0.30330710527462473,
+          0.27835756586024946,
+          0.30330710527462984,
+          0.2783575658602474,
+          0.1117935024502959
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9987410115884785e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117935024502959,
+        "point_singular_value": 0.0004450969644089865,
+        "step": 13
+      },
+      {
+        "center": [
+          0.27834732582609756,
+          0.30331536530837466,
+          0.2783473258261002,
+          0.30331536530836956,
+          0.2783473258261104,
+          0.30331536530836317,
+          0.2783473258261151,
+          0.11179256312550215
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9987251353992264e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11179256312550215,
+        "point_singular_value": 0.00043900332738871134,
+        "step": 14
+      },
+      {
+        "center": [
+          0.27833708525844403,
+          0.30332362443427185,
+          0.278337085258434,
+          0.30332362443428607,
+          0.2783370852584107,
+          0.30332362443430083,
+          0.2783370852583986,
+          0.1117916231189527
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998704013406183e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117916231189527,
+        "point_singular_value": 0.0004329059650176971,
+        "step": 15
+      },
+      {
+        "center": [
+          0.2783268441572853,
+          0.3033318826523618,
+          0.2783268441572896,
+          0.3033318826523579,
+          0.2783268441572947,
+          0.3033318826523547,
+          0.2783268441572971,
+          0.11179068243068503
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986861998777528e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11179068243068503,
+        "point_singular_value": 0.00042680488041322206,
+        "step": 16
+      },
+      {
+        "center": [
+          0.27831660252280455,
+          0.303340139962566,
+          0.2783166025228042,
+          0.3033401399625673,
+          0.278316602522802,
+          0.303340139962568,
+          0.2783166025228022,
+          0.11178974106073702
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986697685769883e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178974106073702,
+        "point_singular_value": 0.00042070007670638173,
+        "step": 17
+      },
+      {
+        "center": [
+          0.27830636035505807,
+          0.30334839636488636,
+          0.27830636035505196,
+          0.303348396364895,
+          0.27830636035503736,
+          0.30334839636490435,
+          0.2783063603550299,
+          0.11178879900914683
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998648752055132e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178879900914683,
+        "point_singular_value": 0.00041459155704321143,
+        "step": 18
+      },
+      {
+        "center": [
+          0.27829611765410334,
+          0.30335665185932453,
+          0.27829611765410445,
+          0.30335665185932453,
+          0.27829611765410306,
+          0.30335665185932614,
+          0.27829611765410084,
+          0.11178785627595184
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986299615304404e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178785627595184,
+        "point_singular_value": 0.00040847932458880836,
+        "step": 19
+      },
+      {
+        "center": [
+          0.2782858744200742,
+          0.30336490644583486,
+          0.27828587442007036,
+          0.30336490644583997,
+          0.27828587442006264,
+          0.3033649064458433,
+          0.27828587442006175,
+          0.11178691286119027
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998609161502074e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178691286119027,
+        "point_singular_value": 0.00040236338252351637,
+        "step": 20
+      },
+      {
+        "center": [
+          0.27827563065303385,
+          0.3033731601244139,
+          0.27827563065302957,
+          0.30337316012441956,
+          0.2782756306530203,
+          0.3033731601244257,
+          0.27827563065301497,
+          0.11178596876489967
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985875010508636e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178596876489967,
+        "point_singular_value": 0.00039624373404247834,
+        "step": 21
+      },
+      {
+        "center": [
+          0.2782653863530587,
+          0.3033814128950521,
+          0.27826538635306186,
+          0.3033814128950486,
+          0.2782653863530665,
+          0.30338141289504666,
+          0.27826538635306697,
+          0.11178502398711804
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985627319751842e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178502398711804,
+        "point_singular_value": 0.0003901203823602795,
+        "step": 22
+      },
+      {
+        "center": [
+          0.27825514152026254,
+          0.30338966475771556,
+          0.2782551415202682,
+          0.30338966475770995,
+          0.27825514152027575,
+          0.3033896647577048,
+          0.2782551415202803,
+          0.11178407852788298
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985413379774997e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178407852788298,
+        "point_singular_value": 0.0003839933307074269,
+        "step": 23
+      },
+      {
+        "center": [
+          0.2782448961547459,
+          0.30339791571237895,
+          0.27824489615474246,
+          0.3033979157123839,
+          0.2782448961547337,
+          0.3033979157123911,
+          0.2782448961547257,
+          0.11178313238723275
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985162580393734e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178313238723275,
+        "point_singular_value": 0.00037786258232921856,
+        "step": 24
+      },
+      {
+        "center": [
+          0.27823465025655686,
+          0.30340616575904966,
+          0.27823465025655275,
+          0.3034061657590555,
+          0.27823465025654304,
+          0.3034061657590621,
+          0.27823465025653704,
+          0.1117821855652046
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998493243116073e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117821855652046,
+        "point_singular_value": 0.0003717281404925734,
+        "step": 25
+      },
+      {
+        "center": [
+          0.2782244038257768,
+          0.30341441489771437,
+          0.2782244038257842,
+          0.3034144148977056,
+          0.27822440382579827,
+          0.3034144148976969,
+          0.2782244038258043,
+          0.1117812380618371
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998466148123157e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117812380618371,
+        "point_singular_value": 0.00036559000847636366,
+        "step": 26
+      },
+      {
+        "center": [
+          0.27821415686255013,
+          0.303422663128319,
+          0.27821415686255496,
+          0.3034226631283157,
+          0.27821415686255774,
+          0.3034226631283148,
+          0.27821415686255774,
+          0.11178028987716784
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9984410015716492e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11178028987716784,
+        "point_singular_value": 0.0003594481895800991,
+        "step": 27
+      },
+      {
+        "center": [
+          0.278203909366913,
+          0.3034309104508811,
+          0.2782039093669211,
+          0.3034309104508711,
+          0.2782039093669369,
+          0.3034309104508622,
+          0.2782039093669426,
+          0.11177934101123439
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998414939086146e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177934101123439,
+        "point_singular_value": 0.0003533026871219615,
+        "step": 28
+      },
+      {
+        "center": [
+          0.2781936613390178,
+          0.303439156865341,
+          0.27819366133900664,
+          0.30343915686535344,
+          0.27819366133898904,
+          0.30343915686536405,
+          0.27819366133898027,
+          0.11177839146407505
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99838580683398e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177839146407505,
+        "point_singular_value": 0.0003471535044348463,
+        "step": 29
+      },
+      {
+        "center": [
+          0.2781834127788616,
+          0.3034474023717367,
+          0.27818341277885883,
+          0.3034474023717419,
+          0.2781834127788488,
+          0.3034474023717491,
+          0.2781834127788419,
+          0.11177744123572766
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998356463639439e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177744123572766,
+        "point_singular_value": 0.0003410006448695655,
+        "step": 30
+      },
+      {
+        "center": [
+          0.2781731636865774,
+          0.30345564697002564,
+          0.278173163686579,
+          0.30345564697002403,
+          0.27817316368658124,
+          0.30345564697002275,
+          0.27817316368658207,
+          0.11177649032622987
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9983298849002296e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177649032622987,
+        "point_singular_value": 0.0003348441117995097,
+        "step": 31
+      },
+      {
+        "center": [
+          0.27816291406227134,
+          0.3034638906601768,
+          0.27816291406226984,
+          0.3034638906601793,
+          0.2781629140622656,
+          0.30346389066018226,
+          0.27816291406226246,
+          0.11177553873562032
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99829406355434e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177553873562032,
+        "point_singular_value": 0.0003286839086095537,
+        "step": 32
+      },
+      {
+        "center": [
+          0.2781526639060087,
+          0.3034721334421873,
+          0.2781526639060075,
+          0.3034721334421911,
+          0.27815266390599963,
+          0.30347213344219576,
+          0.2781526639059963,
+          0.11177458646393616
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9982646481953026e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177458646393616,
+        "point_singular_value": 0.00032252003870924146,
+        "step": 33
+      },
+      {
+        "center": [
+          0.27814241321787453,
+          0.3034803753160422,
+          0.2781424132178761,
+          0.3034803753160419,
+          0.27814241321787553,
+          0.303480375316043,
+          0.27814241321787336,
+          0.11177363351121554
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9982289323206004e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177363351121554,
+        "point_singular_value": 0.00031635250552306026,
+        "step": 34
+      },
+      {
+        "center": [
+          0.2781321619979754,
+          0.3034886162817123,
+          0.2781321619979735,
+          0.3034886162817151,
+          0.2781321619979688,
+          0.3034886162817184,
+          0.2781321619979657,
+          0.11177267987749648
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998195242602918e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177267987749648,
+        "point_singular_value": 0.0003101813124959677,
+        "step": 35
+      },
+      {
+        "center": [
+          0.2781219102463959,
+          0.30349685633918194,
+          0.2781219102463869,
+          0.3034968563391929,
+          0.27812191024636984,
+          0.3034968563392029,
+          0.27812191024636257,
+          0.11177172556281677
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9981576504513043e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177172556281677,
+        "point_singular_value": 0.0003040064630909348,
+        "step": 36
+      },
+      {
+        "center": [
+          0.27811165796317955,
+          0.3035050954884608,
+          0.27811165796318327,
+          0.3035050954884562,
+          0.2781116579631905,
+          0.30350509548845267,
+          0.2781116579631919,
+          0.11177077056721493
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9981200471974603e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11177077056721493,
+        "point_singular_value": 0.00029782796078810746,
+        "step": 37
+      },
+      {
+        "center": [
+          0.27810140514847936,
+          0.30351333372949163,
+          0.2781014051484812,
+          0.3035133337294903,
+          0.2781014051484828,
+          0.3035133337294894,
+          0.27810140514848314,
+          0.11176981489072807
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9980801513330704e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176981489072807,
+        "point_singular_value": 0.000291645809092344,
+        "step": 38
+      },
+      {
+        "center": [
+          0.2780911518023541,
+          0.30352157106227545,
+          0.2780911518023533,
+          0.3035215710622766,
+          0.2780911518023519,
+          0.3035215710622776,
+          0.2780911518023505,
+          0.11176885853339495
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9980389565077417e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176885853339495,
+        "point_singular_value": 0.00028546001152257724,
+        "step": 39
+      },
+      {
+        "center": [
+          0.27808089792489055,
+          0.3035298074867955,
+          0.27808089792488794,
+          0.3035298074867982,
+          0.27808089792488455,
+          0.30352980748679975,
+          0.2780808979248838,
+          0.11176790149525305
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9979918719492673e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176790149525305,
+        "point_singular_value": 0.00027927057162058656,
+        "step": 40
+      },
+      {
+        "center": [
+          0.27807064351620703,
+          0.3035380430030147,
+          0.2780706435161893,
+          0.3035380430030369,
+          0.2780706435161541,
+          0.3035380430030582,
+          0.27807064351613797,
+          0.11176694377634062
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9979468413033885e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176694377634062,
+        "point_singular_value": 0.000273077492945934,
+        "step": 41
+      },
+      {
+        "center": [
+          0.27806038857625986,
+          0.30354627761099856,
+          0.27806038857627846,
+          0.3035462776109756,
+          0.2780603885763153,
+          0.3035462776109528,
+          0.2780603885763326,
+          0.11176598537669521
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9978976917300884e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176598537669521,
+        "point_singular_value": 0.00026688077908017173,
+        "step": 42
+      },
+      {
+        "center": [
+          0.27805013310535687,
+          0.3035545113105921,
+          0.2780501331053532,
+          0.3035545113105977,
+          0.2780501331053437,
+          0.3035545113106039,
+          0.27805013310533805,
+          0.11176502629635555
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9978521670349636e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176502629635555,
+        "point_singular_value": 0.00026068043362303657,
+        "step": 43
+      },
+      {
+        "center": [
+          0.2780398771033843,
+          0.30356274410190465,
+          0.2780398771033996,
+          0.30356274410188594,
+          0.2780398771034292,
+          0.3035627441018675,
+          0.27803987710344363,
+          0.11176406653535899
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9977966225770416e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176406653535899,
+        "point_singular_value": 0.000254476460197179,
+        "step": 44
+      },
+      {
+        "center": [
+          0.2780296205705874,
+          0.30357097598481925,
+          0.2780296205705869,
+          0.3035709759848218,
+          0.27802962057058156,
+          0.3035709759848265,
+          0.2780296205705756,
+          0.11176310609374414
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9977465293141705e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176310609374414,
+        "point_singular_value": 0.00024826886244210406,
+        "step": 45
+      },
+      {
+        "center": [
+          0.27801936350695333,
+          0.30357920695938384,
+          0.2780193635069479,
+          0.3035792069593909,
+          0.2780193635069364,
+          0.3035792069593978,
+          0.2780193635069315,
+          0.11176214497154832
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9976890086592647e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176214497154832,
+        "point_singular_value": 0.00024205764402407802,
+        "step": 46
+      },
+      {
+        "center": [
+          0.278009105912587,
+          0.3035874370255684,
+          0.27800910591258343,
+          0.3035874370255731,
+          0.2780091059125758,
+          0.30358743702557733,
+          0.2780091059125729,
+          0.11176118316881027
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9976251930398092e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176118316881027,
+        "point_singular_value": 0.00023584280862295266,
+        "step": 47
+      },
+      {
+        "center": [
+          0.27799884778758965,
+          0.30359566618334777,
+          0.2779988477875872,
+          0.3035956661833514,
+          0.2779988477875809,
+          0.30359566618335637,
+          0.27799884778757544,
+          0.11176022068556753
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9975591569743045e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11176022068556753,
+        "point_singular_value": 0.00022962435994503439,
+        "step": 48
+      },
+      {
+        "center": [
+          0.27798858913203434,
+          0.3036038944327144,
+          0.27798858913203867,
+          0.30360389443271013,
+          0.2779885891320447,
+          0.3036038944327073,
+          0.2779885891320456,
+          0.1117592575218587
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9974984277748575e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117592575218587,
+        "point_singular_value": 0.0002234023017162192,
+        "step": 49
+      },
+      {
+        "center": [
+          0.27797832994605337,
+          0.3036121217736234,
+          0.27797832994604793,
+          0.3036121217736312,
+          0.27797832994603433,
+          0.303612121773641,
+          0.2779783299460248,
+          0.11175829367772111
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.997420495669644e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175829367772111,
+        "point_singular_value": 0.00021717663768528836,
+        "step": 50
+      },
+      {
+        "center": [
+          0.27796807022968734,
+          0.30362034820608663,
+          0.27796807022967984,
+          0.30362034820609807,
+          0.27796807022965986,
+          0.303620348206111,
+          0.27796807022964887,
+          0.11175732915319335
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9973472986656304e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175732915319335,
+        "point_singular_value": 0.00021094737162093068,
+        "step": 51
+      },
+      {
+        "center": [
+          0.27795780998304115,
+          0.3036285737300774,
+          0.27795780998302805,
+          0.30362857373009344,
+          0.27795780998300273,
+          0.3036285737301097,
+          0.277957809982989,
+          0.11175636394831338
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9972638598542147e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175636394831338,
+        "point_singular_value": 0.0002047145073152392,
+        "step": 52
+      },
+      {
+        "center": [
+          0.2779475492061734,
+          0.3036367983455945,
+          0.277947549206172,
+          0.3036367983455984,
+          0.27794754920616355,
+          0.3036367983456048,
+          0.27794754920615716,
+          0.11175539806311917
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9971791831441266e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175539806311917,
+        "point_singular_value": 0.00019847804858119246,
+        "step": 53
+      },
+      {
+        "center": [
+          0.27793728789923566,
+          0.30364502205258426,
+          0.2779372878992224,
+          0.3036450220525994,
+          0.27793728789919914,
+          0.30364502205261434,
+          0.27793728789918704,
+          0.11175443149764892
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9970875286823286e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175443149764892,
+        "point_singular_value": 0.00019223799925689237,
+        "step": 54
+      },
+      {
+        "center": [
+          0.2779270260621906,
+          0.3036532448511045,
+          0.27792702606221314,
+          0.3036532448510758,
+          0.27792702606225983,
+          0.30365324485104744,
+          0.27792702606228104,
+          0.11175346425194078
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.996987314401011e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175346425194078,
+        "point_singular_value": 0.00018599436319896166,
+        "step": 55
+      },
+      {
+        "center": [
+          0.27791676369533536,
+          0.30366146674100924,
+          0.2779167636953319,
+          0.3036614667410131,
+          0.27791676369532664,
+          0.3036614667410152,
+          0.2779167636953262,
+          0.11175249632603251
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.996888671085273e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175249632603251,
+        "point_singular_value": 0.00017974714429191358,
+        "step": 56
+      },
+      {
+        "center": [
+          0.27790650079857826,
+          0.30366968772239245,
+          0.27790650079857937,
+          0.30366968772239145,
+          0.27790650079858076,
+          0.30366968772239034,
+          0.27790650079858187,
+          0.11175152771996291
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9967745512605717e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175152771996291,
+        "point_singular_value": 0.00017349634643756807,
+        "step": 57
+      },
+      {
+        "center": [
+          0.2778962373720767,
+          0.30367790779519477,
+          0.2778962373720743,
+          0.3036779077951971,
+          0.2778962373720723,
+          0.30367790779519666,
+          0.2778962373720746,
+          0.11175055843376938
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.996653015146066e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11175055843376938,
+        "point_singular_value": 0.0001672419735675149,
+        "step": 58
+      },
+      {
+        "center": [
+          0.27788597341593424,
+          0.3036861269593881,
+          0.2778859734159171,
+          0.30368612695940916,
+          0.2778859734158838,
+          0.3036861269594298,
+          0.2778859734158672,
+          0.11174958846749049
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9965265329879855e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174958846749049,
+        "point_singular_value": 0.0001609840296307472,
+        "step": 59
+      },
+      {
+        "center": [
+          0.2778757089301453,
+          0.30369434521501404,
+          0.2778757089301468,
+          0.303694345215013,
+          0.2778757089301474,
+          0.3036943452150133,
+          0.27787570893014635,
+          0.11174861782116431
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9963826258795336e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174861782116431,
+        "point_singular_value": 0.00015472251860441865,
+        "step": 60
+      },
+      {
+        "center": [
+          0.277865443914923,
+          0.3037025625619771,
+          0.2778654439149145,
+          0.3037025625619909,
+          0.27786544391488904,
+          0.3037025625620086,
+          0.2778654439148726,
+          0.11174764649482886
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9962265451756167e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174764649482886,
+        "point_singular_value": 0.00014845744448800996,
+        "step": 61
+      },
+      {
+        "center": [
+          0.27785517837029855,
+          0.3037107790002966,
+          0.27785517837027707,
+          0.30371077900032756,
+          0.27785517837022333,
+          0.30371077900036175,
+          0.27785517837019535,
+          0.11174667448852216
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9960604891178235e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174667448852216,
+        "point_singular_value": 0.00014218881130683428,
+        "step": 62
+      },
+      {
+        "center": [
+          0.2778449122962706,
+          0.3037189945300116,
+          0.2778449122962764,
+          0.303718994530005,
+          0.27784491229628655,
+          0.30371899453000006,
+          0.2778449122962882,
+          0.11174570180228267
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9958763919358802e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174570180228267,
+        "point_singular_value": 0.00013591662310817796,
+        "step": 63
+      },
+      {
+        "center": [
+          0.2778346456930886,
+          0.30372720915100254,
+          0.27783464569308597,
+          0.30372720915100576,
+          0.2778346456930807,
+          0.30372720915100954,
+          0.27783464569307725,
+          0.11174472843614859
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9956828023470763e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174472843614859,
+        "point_singular_value": 0.0001296408839651444,
+        "step": 64
+      },
+      {
+        "center": [
+          0.2778243785607842,
+          0.30373542286328725,
+          0.27782437856076564,
+          0.3037354228633121,
+          0.2778243785607243,
+          0.30373542286333816,
+          0.27782437856070286,
+          0.11174375439015787
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9954568941660256e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174375439015787,
+        "point_singular_value": 0.00012336159797563808,
+        "step": 65
+      },
+      {
+        "center": [
+          0.27781411089938274,
+          0.3037436356668892,
+          0.2778141108993683,
+          0.3037436356669082,
+          0.277814110899337,
+          0.30374363566692864,
+          0.27781411089931896,
+          0.11174277966434853
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9952218655028275e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174277966434853,
+        "point_singular_value": 0.00011707876926435959,
+        "step": 66
+      },
+      {
+        "center": [
+          0.2778038427090337,
+          0.30375184756175255,
+          0.27780384270901337,
+          0.30375184756177764,
+          0.2778038427089733,
+          0.30375184756180246,
+          0.27780384270895336,
+          0.11174180425875938
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9949508711647468e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174180425875938,
+        "point_singular_value": 0.00011079240197938765,
+        "step": 67
+      },
+      {
+        "center": [
+          0.2777935739897302,
+          0.3037600585479181,
+          0.2777935739897444,
+          0.30376005854790183,
+          0.27779357398976945,
+          0.3037600585478856,
+          0.27779357398978327,
+          0.11174082817342791
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9946466256470785e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11174082817342791,
+        "point_singular_value": 0.00010450250029585314,
+        "step": 68
+      },
+      {
+        "center": [
+          0.27778330474168605,
+          0.3037682686252915,
+          0.2777833047417097,
+          0.3037682686252638,
+          0.2777833047417526,
+          0.30376826862523865,
+          0.27778330474177043,
+          0.11173985140839289
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9943081630557913e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173985140839289,
+        "point_singular_value": 9.820906841323654e-05,
+        "step": 69
+      },
+      {
+        "center": [
+          0.27777303496501715,
+          0.3037764777938391,
+          0.2777730349650087,
+          0.30377647779384953,
+          0.277773034964992,
+          0.3037764777938604,
+          0.2777730349649827,
+          0.11173887396369223
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9939100259769305e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173887396369223,
+        "point_singular_value": 9.191211056097891e-05,
+        "step": 70
+      },
+      {
+        "center": [
+          0.2777627646597065,
+          0.30378468605360753,
+          0.2777627646596813,
+          0.30378468605363895,
+          0.27776276465963123,
+          0.3037846860536715,
+          0.27776276465960276,
+          0.11173789583936417
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9934693284984206e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173789583936417,
+        "point_singular_value": 8.56116309904426e-05,
+        "step": 71
+      },
+      {
+        "center": [
+          0.2777524938258336,
+          0.30379289340458576,
+          0.2777524938258099,
+          0.30379289340461657,
+          0.27775249382575906,
+          0.3037928934046488,
+          0.2777524938257319,
+          0.11173691703544687
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.992945275475222e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173691703544687,
+        "point_singular_value": 7.930763398329353e-05,
+        "step": 72
+      },
+      {
+        "center": [
+          0.2777422224634606,
+          0.30380109984677245,
+          0.2777422224634688,
+          0.3038010998467651,
+          0.2777422224634785,
+          0.30380109984676007,
+          0.2777422224634811,
+          0.11173593755197896
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9923306449065592e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173593755197896,
+        "point_singular_value": 7.30001238455042e-05,
+        "step": 73
+      },
+      {
+        "center": [
+          0.2777319505727508,
+          0.3038093053801057,
+          0.27773195057278,
+          0.30380930538006967,
+          0.27773195057283806,
+          0.30380930538003276,
+          0.2777319505728686,
+          0.1117349573889982
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9916146953846692e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117349573889982,
+        "point_singular_value": 6.668910491432682e-05,
+        "step": 74
+      },
+      {
+        "center": [
+          0.2777216781539537,
+          0.30381751000446544,
+          0.2777216781539187,
+          0.3038175100045098,
+          0.27772167815384663,
+          0.30381751000455476,
+          0.2777216781538098,
+          0.11173397654654328
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9907437920352322e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173397654654328,
+        "point_singular_value": 6.037458154871971e-05,
+        "step": 75
+      },
+      {
+        "center": [
+          0.27771140520681775,
+          0.3038257137200476,
+          0.2777114052067977,
+          0.30382571372007094,
+          0.277711405206761,
+          0.3038257137200955,
+          0.27771140520673865,
+          0.11173299502465237
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.989660847190322e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173299502465237,
+        "point_singular_value": 5.405655814054206e-05,
+        "step": 76
+      },
+      {
+        "center": [
+          0.27770113173174077,
+          0.30383391652664066,
+          0.2777011317316651,
+          0.303833916526736,
+          0.27770113173150995,
+          0.30383391652683284,
+          0.27770113173143135,
+          0.11173201282336295
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9882691992823e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173201282336295,
+        "point_singular_value": 4.773503910975591e-05,
+        "step": 77
+      },
+      {
+        "center": [
+          0.2776908577284493,
+          0.3038421184244542,
+          0.27769085772842256,
+          0.3038421184244886,
+          0.27769085772836627,
+          0.3038421184245237,
+          0.2776908577283377,
+          0.11173102994271435
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.986512737639501e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173102994271435,
+        "point_singular_value": 4.1410028901115725e-05,
+        "step": 78
+      },
+      {
+        "center": [
+          0.2776805831973236,
+          0.3038503194132897,
+          0.2776805831973046,
+          0.30385031941331214,
+          0.27768058319727007,
+          0.30385031941333285,
+          0.27768058319725386,
+          0.11173004638274446
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.984064817994735e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11173004638274446,
+        "point_singular_value": 3.508153199141417e-05,
+        "step": 79
+      },
+      {
+        "center": [
+          0.2776703081381651,
+          0.3038585194933062,
+          0.2776703081382604,
+          0.3038585194931878,
+          0.27767030813845195,
+          0.3038585194930687,
+          0.27767030813854837,
+          0.11172906214349182
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9805624584812165e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172906214349182,
+        "point_singular_value": 2.8749552883617207e-05,
+        "step": 80
+      },
+      {
+        "center": [
+          0.27766003255143173,
+          0.30386671866425746,
+          0.27766003255156235,
+          0.3038667186640989,
+          0.27766003255181526,
+          0.30386671866394366,
+          0.2776600325519384,
+          0.11172807722499407
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9749966384541295e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172807722499407,
+        "point_singular_value": 2.2414096112725552e-05,
+        "step": 81
+      },
+      {
+        "center": [
+          0.277649756437397,
+          0.30387491692601504,
+          0.2776497564373824,
+          0.303874916926033,
+          0.2776497564373537,
+          0.3038749169260514,
+          0.2776497564373379,
+          0.11172709162728994
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9652006189030402e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172709162728994,
+        "point_singular_value": 1.6075166244720502e-05,
+        "step": 82
+      },
+      {
+        "center": [
+          0.2776394797965869,
+          0.3038831142782871,
+          0.27763947979603687,
+          0.30388311427897013,
+          0.27763947979493386,
+          0.3038831142796512,
+          0.2776394797943867,
+          0.11172610535041795
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9425506481152155e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172610535041795,
+        "point_singular_value": 9.732767870407954e-06,
+        "step": 83
+      },
+      {
+        "center": [
+          0.27762920262522406,
+          0.303891310723453,
+          0.2776292026256765,
+          0.3038913107228919,
+          0.27762920262658297,
+          0.3038913107223314,
+          0.2776292026270345,
+          0.11172511839441589
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.8350024277857813e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172511839441589,
+        "point_singular_value": 3.3869056143311826e-06,
+        "step": 84
+      },
+      {
+        "center": [
+          0.2776189249306625,
+          0.3038995062569946,
+          0.2776189249300239,
+          0.3038995062577849,
+          0.27761892492874796,
+          0.3038995062585748,
+          0.2776189249281098,
+          0.11172413075932261
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.8110757393774435e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172413075932261,
+        "point_singular_value": 2.9624158688204913e-06,
+        "step": 85
+      },
+      {
+        "center": [
+          0.27760864670620095,
+          0.30390770088309965,
+          0.27760864670577223,
+          0.3039077008836308,
+          0.2776086467049139,
+          0.3039077008841615,
+          0.2776086467044856,
+          0.11172314244517619
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9398402439918527e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172314244517619,
+        "point_singular_value": 9.315191893762067e-06,
+        "step": 86
+      },
+      {
+        "center": [
+          0.27759836795450793,
+          0.30391589460015356,
+          0.2775983679542982,
+          0.30391589460041335,
+          0.2775983679538787,
+          0.3039158946006723,
+          0.2775983679536699,
+          0.11172215345201494
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.964246393315605e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172215345201494,
+        "point_singular_value": 1.5671417743691608e-05,
+        "step": 87
+      },
+      {
+        "center": [
+          0.2775880886755714,
+          0.30392408740820087,
+          0.27758808867564166,
+          0.3039240874081147,
+          0.27758808867578005,
+          0.30392408740803,
+          0.27758808867584717,
+          0.11172116377987734
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9746297375000665e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172116377987734,
+        "point_singular_value": 2.2031088671234952e-05,
+        "step": 88
+      },
+      {
+        "center": [
+          0.2775778088701865,
+          0.303932279306788,
+          0.27757780887024136,
+          0.30393227930672084,
+          0.2775778088703494,
+          0.30393227930665384,
+          0.27757780887040395,
+          0.11172017342880172
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9802921413791807e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11172017342880172,
+        "point_singular_value": 2.8394199894922527e-05,
+        "step": 89
+      },
+      {
+        "center": [
+          0.2775675285377891,
+          0.3039404702963007,
+          0.27756752853786193,
+          0.3039404702962124,
+          0.2775675285380032,
+          0.3039404702961257,
+          0.27756752853807254,
+          0.11171918239882628
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9839059561821415e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171918239882628,
+        "point_singular_value": 3.4760746603932804e-05,
+        "step": 90
+      },
+      {
+        "center": [
+          0.2775572476785987,
+          0.3039486603766429,
+          0.27755724767865153,
+          0.303948660376576,
+          0.2775572476787619,
+          0.3039486603765075,
+          0.2775572476788173,
+          0.1117181906899898
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9863702904743263e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117181906899898,
+        "point_singular_value": 4.113072395239545e-05,
+        "step": 91
+      },
+      {
+        "center": [
+          0.2775469662928882,
+          0.30395684954768015,
+          0.2775469662927994,
+          0.30395684954779095,
+          0.27754696629261977,
+          0.3039568495479017,
+          0.27754696629253023,
+          0.11171719830233
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.988170239553e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171719830233,
+        "point_singular_value": 4.750412706365884e-05,
+        "step": 92
+      },
+      {
+        "center": [
+          0.27753668438010126,
+          0.30396503780979645,
+          0.27753668438006457,
+          0.30396503780984263,
+          0.2775366843799891,
+          0.30396503780989065,
+          0.27753668437994805,
+          0.11171620523588592
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9895873670794373e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171620523588592,
+        "point_singular_value": 5.3880951027092e-05,
+        "step": 93
+      },
+      {
+        "center": [
+          0.27752640194075234,
+          0.3039732251627108,
+          0.27752640194074885,
+          0.303973225162716,
+          0.2775264019407404,
+          0.30397322516272146,
+          0.2775264019407352,
+          0.1117152114906958
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9906906345568132e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117152114906958,
+        "point_singular_value": 6.026119089714718e-05,
+        "step": 94
+      },
+      {
+        "center": [
+          0.2775161189748967,
+          0.3039814116064267,
+          0.2775161189749246,
+          0.3039814116063927,
+          0.27751611897497996,
+          0.3039814116063583,
+          0.2775161189750075,
+          0.11171421706679796
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9915809501558357e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171421706679796,
+        "point_singular_value": 6.664484169618732e-05,
+        "step": 95
+      },
+      {
+        "center": [
+          0.27750583548270946,
+          0.3039895971408733,
+          0.2775058354827237,
+          0.30398959714085605,
+          0.27750583548275143,
+          0.3039895971408392,
+          0.27750583548276503,
+          0.11171322196423049
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9923153404821647e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171322196423049,
+        "point_singular_value": 7.30318984109073e-05,
+        "step": 96
+      },
+      {
+        "center": [
+          0.27749555146425103,
+          0.3039977817660525,
+          0.2774955514642152,
+          0.30399778176609316,
+          0.27749555146415456,
+          0.30399778176612713,
+          0.27749555146413035,
+          0.11171222618303202
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9929244643446253e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171222618303202,
+        "point_singular_value": 7.942235599281918e-05,
+        "step": 97
+      },
+      {
+        "center": [
+          0.2774852669193874,
+          0.30400596548207987,
+          0.27748526691938996,
+          0.30400596548207814,
+          0.2774852669193915,
+          0.3040059654820779,
+          0.27748526691939085,
+          0.1117112297232416
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.993456183457809e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117112297232416,
+        "point_singular_value": 8.58162093656931e-05,
+        "step": 98
+      },
+      {
+        "center": [
+          0.277474981848446,
+          0.30401414828879597,
+          0.27747498184844077,
+          0.30401414828880435,
+          0.27747498184842584,
+          0.3040141482888136,
+          0.27747498184841785,
+          0.11171023258489685
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.993914877651548e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11171023258489685,
+        "point_singular_value": 9.22134534048758e-05,
+        "step": 99
+      },
+      {
+        "center": [
+          0.2774646962514476,
+          0.30402233018622393,
+          0.2774646962514265,
+          0.30402233018625124,
+          0.27746469625138126,
+          0.30402233018628,
+          0.2774646962513567,
+          0.11170923476803657
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9942991091870255e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170923476803657,
+        "point_singular_value": 9.861408295981e-05,
+        "step": 100
+      },
+      {
+        "center": [
+          0.277454410128335,
+          0.3040305111744371,
+          0.2774544101283615,
+          0.30403051117440383,
+          0.2774544101284159,
+          0.30403051117437013,
+          0.27745441012844335,
+          0.11170823627269896
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9946489182576244e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170823627269896,
+        "point_singular_value": 0.00010501809283932218,
+        "step": 101
+      },
+      {
+        "center": [
+          0.2774441234794321,
+          0.3040386912532715,
+          0.2774441234794553,
+          0.30403869125324384,
+          0.27744412347949987,
+          0.3040386912532156,
+          0.27744412347952346,
+          0.11170723709892286
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9949474683311763e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170723709892286,
+        "point_singular_value": 0.0001114254778195044,
+        "step": 102
+      },
+      {
+        "center": [
+          0.2774338363047952,
+          0.3040468704227322,
+          0.27743383630477503,
+          0.304046870422756,
+          0.2774338363047375,
+          0.3040468704227782,
+          0.27743383630472074,
+          0.11170623724674628
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9952243746068632e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170623724674628,
+        "point_singular_value": 0.00011783623263499857,
+        "step": 103
+      },
+      {
+        "center": [
+          0.2774235486043188,
+          0.3040550486829197,
+          0.27742354860431684,
+          0.3040550486829225,
+          0.2774235486043121,
+          0.30405504868292504,
+          0.27742354860431057,
+          0.11170523671620831
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.995471021754014e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170523671620831,
+        "point_singular_value": 0.00012425035198803373,
+        "step": 104
+      },
+      {
+        "center": [
+          0.27741326037826125,
+          0.3040632260337146,
+          0.2774132603782477,
+          0.3040632260337288,
+          0.277413260378227,
+          0.3040632260337418,
+          0.2774132603782159,
+          0.11170423550734722
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9956824193201328e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170423550734722,
+        "point_singular_value": 0.00013066783053859057,
+        "step": 105
+      },
+      {
+        "center": [
+          0.277402971626655,
+          0.3040714024751314,
+          0.27740297162663635,
+          0.30407140247515596,
+          0.2774029716265949,
+          0.3040714024751825,
+          0.2774029716265721,
+          0.1117032336202009
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99589103022646e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1117032336202009,
+        "point_singular_value": 0.00013708866291036852,
+        "step": 106
+      },
+      {
+        "center": [
+          0.27739268234953773,
+          0.30407957800718827,
+          0.2773926823495346,
+          0.3040795780071918,
+          0.2773926823495294,
+          0.3040795780071943,
+          0.27739268234952835,
+          0.11170223105480845
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9960708252941828e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170223105480845,
+        "point_singular_value": 0.0001435128436875504,
+        "step": 107
+      },
+      {
+        "center": [
+          0.27738239254711317,
+          0.30408775262979465,
+          0.2773823925470954,
+          0.30408775262981547,
+          0.2773823925470631,
+          0.3040877526298366,
+          0.27738239254704333,
+          0.11170122781120852
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9962396957673434e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170122781120852,
+        "point_singular_value": 0.00014994036741923557,
+        "step": 108
+      },
+      {
+        "center": [
+          0.2773721022193112,
+          0.3040959263430323,
+          0.27737210221932507,
+          0.30409592634301424,
+          0.2773721022193561,
+          0.3040959263429941,
+          0.2773721022193735,
+          0.11170022388943888
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9963956821023032e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11170022388943888,
+        "point_singular_value": 0.00015637122860785423,
+        "step": 109
+      },
+      {
+        "center": [
+          0.27736181136640614,
+          0.30410409914676917,
+          0.2773618113664067,
+          0.3041040991467679,
+          0.27736181136640903,
+          0.3041040991467671,
+          0.27736181136640864,
+          0.11169921928953878
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9965350039896634e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169921928953878,
+        "point_singular_value": 0.00016280542172464934,
+        "step": 110
+      },
+      {
+        "center": [
+          0.2773515199883408,
+          0.304112271041078,
+          0.2773515199883543,
+          0.3041122710410626,
+          0.27735151998837826,
+          0.3041122710410492,
+          0.27735151998838725,
+          0.11169821401154628
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9966663711290522e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169821401154628,
+        "point_singular_value": 0.00016924294119373209,
+        "step": 111
+      },
+      {
+        "center": [
+          0.2773412280852794,
+          0.3041204420258966,
+          0.27734122808529144,
+          0.3041204420258831,
+          0.277341228085313,
+          0.3041204420258698,
+          0.2773412280853233,
+          0.11169720805550033
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.996783582924877e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169720805550033,
+        "point_singular_value": 0.00017568378140111904,
+        "step": 112
+      },
+      {
+        "center": [
+          0.2773309356573088,
+          0.3041286121012087,
+          0.27733093565730654,
+          0.30412861210121167,
+          0.27733093565730166,
+          0.3041286121012133,
+          0.2773309356573028,
+          0.11169620142143878
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9968986519902643e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169620142143878,
+        "point_singular_value": 0.00018212793669040636,
+        "step": 113
+      },
+      {
+        "center": [
+          0.27732064270442747,
+          0.3041367812670519,
+          0.27732064270444473,
+          0.30413678126703086,
+          0.277320642704479,
+          0.3041367812670094,
+          0.2773206427044968,
+          0.11169519410940106
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9970032960614503e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169519410940106,
+        "point_singular_value": 0.000188575401368291,
+        "step": 114
+      },
+      {
+        "center": [
+          0.27731034922689257,
+          0.30414494952330534,
+          0.27731034922687875,
+          0.3041449495233246,
+          0.2773103492268449,
+          0.30414494952334653,
+          0.2773103492268259,
+          0.11169418611942536
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.997100534945062e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169418611942536,
+        "point_singular_value": 0.0001950261696941767,
+        "step": 115
+      },
+      {
+        "center": [
+          0.2773000552245892,
+          0.30415311687007934,
+          0.27730005522458967,
+          0.30415311687007957,
+          0.27730005522458834,
+          0.3041531168700809,
+          0.2773000552245867,
+          0.11169317745155014
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9971923947981196e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169317745155014,
+        "point_singular_value": 0.00020148023588473213,
+        "step": 116
+      },
+      {
+        "center": [
+          0.2772897606977169,
+          0.30416128330728726,
+          0.2772897606977255,
+          0.3041612833072768,
+          0.27728976069774186,
+          0.30416128330726766,
+          0.2772897606977482,
+          0.11169216810581398
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9972827891567846e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169216810581398,
+        "point_singular_value": 0.00020793759411714204,
+        "step": 117
+      },
+      {
+        "center": [
+          0.2772794656464174,
+          0.3041694488348796,
+          0.2772794656463999,
+          0.30416944883490166,
+          0.2772794656463639,
+          0.3041694488349229,
+          0.2772794656463472,
+          0.11169115808225548
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9973593889943686e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169115808225548,
+        "point_singular_value": 0.0002143982385225903,
+        "step": 118
+      },
+      {
+        "center": [
+          0.27726917007059937,
+          0.30417761345295063,
+          0.27726917007061014,
+          0.3041776134529363,
+          0.2772691700706346,
+          0.304177613452921,
+          0.2772691700706474,
+          0.11169014738091307
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.997435827849614e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11169014738091307,
+        "point_singular_value": 0.00022086216318929026,
+        "step": 119
+      },
+      {
+        "center": [
+          0.2772588739705486,
+          0.30418577716136097,
+          0.2772588739705461,
+          0.30418577716136463,
+          0.2772588739705401,
+          0.3041857771613683,
+          0.2772588739705368,
+          0.11168913600182599
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99750980756086e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168913600182599,
+        "point_singular_value": 0.00022732936216257585,
+        "step": 120
+      },
+      {
+        "center": [
+          0.2772485773462105,
+          0.3041939399601834,
+          0.2772485773462207,
+          0.3041939399601718,
+          0.2772485773462388,
+          0.30419393996015986,
+          0.27724857734625,
+          0.1116881239450319
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9975740672695252e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1116881239450319,
+        "point_singular_value": 0.0002337998294378617,
+        "step": 121
+      },
+      {
+        "center": [
+          0.27723828019774904,
+          0.30420210184935353,
+          0.27723828019776187,
+          0.3042021018493398,
+          0.2772382801977826,
+          0.30420210184932756,
+          0.2772382801977919,
+          0.11168711121057022
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99764145780712e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168711121057022,
+        "point_singular_value": 0.00024027355897147799,
+        "step": 122
+      },
+      {
+        "center": [
+          0.27722798252524483,
+          0.30421026282886016,
+          0.27722798252525294,
+          0.30421026282885366,
+          0.27722798252526026,
+          0.3042102628288505,
+          0.277227982525261,
+          0.11168609779847906
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9977029197537632e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168609779847906,
+        "point_singular_value": 0.0002467505446683386,
+        "step": 123
+      },
+      {
+        "center": [
+          0.27721768432873345,
+          0.3042184228987199,
+          0.27721768432875205,
+          0.30421842289869866,
+          0.2772176843287856,
+          0.3042184228986789,
+          0.2772176843288004,
+          0.11168508370879728
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9977582921271164e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168508370879728,
+        "point_singular_value": 0.0002532307803889921,
+        "step": 124
+      },
+      {
+        "center": [
+          0.2772073856083909,
+          0.3042265820588611,
+          0.2772073856083949,
+          0.3042265820588566,
+          0.2772073856084017,
+          0.3042265820588529,
+          0.27720738560840413,
+          0.11168406894156335
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9978152410171646e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168406894156335,
+        "point_singular_value": 0.00025971425994774505,
+        "step": 125
+      },
+      {
+        "center": [
+          0.277197086364236,
+          0.3042347403093089,
+          0.2771970863642365,
+          0.30423474030931086,
+          0.2771970863642312,
+          0.3042347403093152,
+          0.27719708636422574,
+          0.11168305349681634
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9978687593180666e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168305349681634,
+        "point_singular_value": 0.0002662009771123705,
+        "step": 126
+      },
+      {
+        "center": [
+          0.2771867865963484,
+          0.3042428976500541,
+          0.27718678659635554,
+          0.30424289765004736,
+          0.2771867865963644,
+          0.3042428976500425,
+          0.277186786596368,
+          0.11168203737459433
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9979200294173438e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168203737459433,
+        "point_singular_value": 0.0002726909255975982,
+        "step": 127
+      },
+      {
+        "center": [
+          0.2771764863048501,
+          0.3042510540810582,
+          0.2771764863048597,
+          0.3042510540810484,
+          0.2771764863048736,
+          0.30425105408104114,
+          0.2771764863048777,
+          0.11168102057493637
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9979667698066805e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168102057493637,
+        "point_singular_value": 0.0002791840990753469,
+        "step": 128
+      },
+      {
+        "center": [
+          0.2771661854898248,
+          0.30425920960230834,
+          0.27716618548983163,
+          0.3042592096022995,
+          0.27716618548984623,
+          0.30425920960229136,
+          0.277166185489852,
+          0.11168000309788091
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.99801296063562e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11168000309788091,
+        "point_singular_value": 0.00028568049116371253,
+        "step": 129
+      },
+      {
+        "center": [
+          0.27715588415136966,
+          0.30426736421378126,
+          0.27715588415136816,
+          0.3042673642137832,
+          0.2771558841513652,
+          0.304267364213785,
+          0.2771558841513635,
+          0.11167898494346641
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9980545939990435e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167898494346641,
+        "point_singular_value": 0.00029218009543394114,
+        "step": 130
+      },
+      {
+        "center": [
+          0.27714558228955494,
+          0.3042755179154722,
+          0.2771455822895456,
+          0.3042755179154836,
+          0.2771455822895274,
+          0.3042755179154944,
+          0.2771455822895186,
+          0.11167796611173193
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998097215460959e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167796611173193,
+        "point_singular_value": 0.0002986829054065274,
+        "step": 131
+      },
+      {
+        "center": [
+          0.27713527990443376,
+          0.3042836707073855,
+          0.2771352799044361,
+          0.30428367070738394,
+          0.27713527990443754,
+          0.30428367070738355,
+          0.27713527990443704,
+          0.11167694660271629
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998138332570676e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167694660271629,
+        "point_singular_value": 0.0003051889145513639,
+        "step": 132
+      },
+      {
+        "center": [
+          0.2771249769961512,
+          0.30429182258947096,
+          0.27712497699615274,
+          0.30429182258947024,
+          0.2771249769961535,
+          0.3042918225894697,
+          0.27712497699615385,
+          0.11167592641645797
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998175042094985e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167592641645797,
+        "point_singular_value": 0.00031169811628455724,
+        "step": 133
+      },
+      {
+        "center": [
+          0.27711467356479424,
+          0.30429997356171307,
+          0.27711467356478336,
+          0.30429997356172533,
+          0.27711467356476427,
+          0.304299973561737,
+          0.2771146735647546,
+          0.11167490555299546
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9982109578098317e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167490555299546,
+        "point_singular_value": 0.0003182105039714558,
+        "step": 134
+      },
+      {
+        "center": [
+          0.2771043696103758,
+          0.30430812362413895,
+          0.27710436961038326,
+          0.30430812362413173,
+          0.27710436961039336,
+          0.30430812362412646,
+          0.2771043696103965,
+          0.11167388401236786
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998247756151983e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167388401236786,
+        "point_singular_value": 0.00032472607092725664,
+        "step": 135
+      },
+      {
+        "center": [
+          0.27709406513307094,
+          0.3043162727766828,
+          0.2770940651330751,
+          0.3043162727766769,
+          0.2770940651330853,
+          0.30431627277667117,
+          0.27709406513308926,
+          0.11167286179461332
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9982786980676792e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167286179461332,
+        "point_singular_value": 0.0003312448104077743,
+        "step": 136
+      },
+      {
+        "center": [
+          0.27708376013294117,
+          0.30432442101934065,
+          0.27708376013294217,
+          0.30432442101934165,
+          0.2770837601329394,
+          0.30432442101934365,
+          0.2770837601329368,
+          0.11167183889977117
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998310883433163e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167183889977117,
+        "point_singular_value": 0.00033776671562245786,
+        "step": 137
+      },
+      {
+        "center": [
+          0.2770734546100529,
+          0.30433256835211275,
+          0.2770734546100543,
+          0.3043325683521116,
+          0.27707345461005556,
+          0.3043325683521118,
+          0.27707345461005384,
+          0.11167081532787988
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998344878462177e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11167081532787988,
+        "point_singular_value": 0.00034429177972014933,
+        "step": 138
+      },
+      {
+        "center": [
+          0.27706314856451875,
+          0.30434071477496666,
+          0.277063148564513,
+          0.3043407147749721,
+          0.27706314856450587,
+          0.3043407147749754,
+          0.27706314856450465,
+          0.11166979107897808
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9983720511707048e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166979107897808,
+        "point_singular_value": 0.0003508199957961542,
+        "step": 139
+      },
+      {
+        "center": [
+          0.27705284199640196,
+          0.3043488602878996,
+          0.27705284199639896,
+          0.30434886028790303,
+          0.27705284199639363,
+          0.3043488602879068,
+          0.2770528419963895,
+          0.11166876615310474
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9984045418475205e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166876615310474,
+        "point_singular_value": 0.0003573513568939128,
+        "step": 140
+      },
+      {
+        "center": [
+          0.277042534905768,
+          0.3043570048909092,
+          0.2770425349057877,
+          0.30435700489088974,
+          0.2770425349058151,
+          0.3043570048908762,
+          0.277042534905822,
+          0.1116677405502986
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9984292554120486e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1116677405502986,
+        "point_singular_value": 0.00036388585599585893,
+        "step": 141
+      },
+      {
+        "center": [
+          0.27703222729279314,
+          0.3043651485839299,
+          0.2770322272927993,
+          0.3043651485839225,
+          0.27703222729281135,
+          0.3043651485839153,
+          0.27703222729281746,
+          0.11166671427059827
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9984579824328108e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166671427059827,
+        "point_singular_value": 0.0003704234860243702,
+        "step": 142
+      },
+      {
+        "center": [
+          0.2770219191574974,
+          0.3043732913669815,
+          0.27702191915750174,
+          0.3043732913669778,
+          0.27702191915750685,
+          0.3043732913669747,
+          0.2770219191575093,
+          0.11166568731404289
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9984851051813024e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166568731404289,
+        "point_singular_value": 0.00037696423985378135,
+        "step": 143
+      },
+      {
+        "center": [
+          0.2770116104999751,
+          0.30438143324004663,
+          0.27701161049997924,
+          0.3043814332400426,
+          0.2770116104999852,
+          0.3043814332400395,
+          0.27701161049998674,
+          0.11166465968067045
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998508841749569e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166465968067045,
+        "point_singular_value": 0.0003835081102907242,
+        "step": 144
+      },
+      {
+        "center": [
+          0.2770013013203168,
+          0.30438957420310625,
+          0.2770013013203239,
+          0.3043895742031002,
+          0.2770013013203313,
+          0.30438957420309726,
+          0.2770013013203316,
+          0.11166363137052027
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985317178949913e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166363137052027,
+        "point_singular_value": 0.0003900550900877062,
+        "step": 145
+      },
+      {
+        "center": [
+          0.2769909916186102,
+          0.30439771425614615,
+          0.2769909916186183,
+          0.30439771425613715,
+          0.2769909916186321,
+          0.3043977142561295,
+          0.27699099161863744,
+          0.11166260238363122
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985567145663907e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166260238363122,
+        "point_singular_value": 0.00039660517193471534,
+        "step": 146
+      },
+      {
+        "center": [
+          0.2769806813949609,
+          0.3044058533991373,
+          0.27698068139496446,
+          0.3044058533991349,
+          0.27698068139496684,
+          0.3044058533991344,
+          0.2769806813949658,
+          0.11166157272004176
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9985819665890858e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166157272004176,
+        "point_singular_value": 0.0004031583484630718,
+        "step": 147
+      },
+      {
+        "center": [
+          0.2769703706494159,
+          0.3044139916320904,
+          0.2769703706494252,
+          0.30441399163207933,
+          0.27697037064944324,
+          0.30441399163206934,
+          0.2769703706494499,
+          0.11166054237979117
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986016397410822e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11166054237979117,
+        "point_singular_value": 0.0004097146122419138,
+        "step": 148
+      },
+      {
+        "center": [
+          0.27696005938212004,
+          0.3044221289549533,
+          0.27696005938211976,
+          0.3044221289549538,
+          0.2769600593821189,
+          0.30442212895495485,
+          0.27696005938211715,
+          0.11165951136291798
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986237942415386e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165951136291798,
+        "point_singular_value": 0.00041627395577819996,
+        "step": 149
+      },
+      {
+        "center": [
+          0.27694974759310664,
+          0.30443026536774237,
+          0.27694974759311086,
+          0.3044302653677411,
+          0.27694974759310925,
+          0.30443026536774365,
+          0.2769497475931051,
+          0.11165847966946106
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986439447894355e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165847966946106,
+        "point_singular_value": 0.0004228363715171962,
+        "step": 150
+      },
+      {
+        "center": [
+          0.2769394352824654,
+          0.3044384008704441,
+          0.27693943528247705,
+          0.3044384008704299,
+          0.27693943528250087,
+          0.304438400870416,
+          0.2769394352825109,
+          0.11165744729945873
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986630905854952e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165744729945873,
+        "point_singular_value": 0.0004294018518359384,
+        "step": 151
+      },
+      {
+        "center": [
+          0.2769291224503446,
+          0.3044465354630021,
+          0.2769291224503459,
+          0.30444653546300066,
+          0.27692912245034884,
+          0.30444653546299827,
+          0.2769291224503514,
+          0.11165641425295073
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9986849286723896e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165641425295073,
+        "point_singular_value": 0.0004359703890546782,
+        "step": 152
+      },
+      {
+        "center": [
+          0.27691880909678257,
+          0.30445466914543046,
+          0.2769188090967805,
+          0.3044546691454363,
+          0.27691880909676847,
+          0.3044546691454451,
+          0.27691880909675864,
+          0.1116553805299756
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9987026811385533e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1116553805299756,
+        "point_singular_value": 0.0004425419754255381,
+        "step": 153
+      },
+      {
+        "center": [
+          0.27690849522186084,
+          0.30446280191771924,
+          0.2769084952218593,
+          0.3044628019177245,
+          0.27690849522184785,
+          0.3044628019177339,
+          0.27690849522183625,
+          0.11165434613057143
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998720605689286e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165434613057143,
+        "point_singular_value": 0.00044911660312959304,
+        "step": 154
+      },
+      {
+        "center": [
+          0.2768981808256622,
+          0.3044709337798557,
+          0.27689818082566675,
+          0.3044709337798507,
+          0.2768981808256747,
+          0.30447093377984563,
+          0.27689818082567913,
+          0.11165331105477826
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998738552444479e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165331105477826,
+        "point_singular_value": 0.00045569426428755753,
+        "step": 155
+      },
+      {
+        "center": [
+          0.2768878659083186,
+          0.3044790647317944,
+          0.2768878659083193,
+          0.3044790647317945,
+          0.2768878659083186,
+          0.3044790647317956,
+          0.2768878659083166,
+          0.11165227530263444
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998755772003591e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165227530263444,
+        "point_singular_value": 0.0004622749509526823,
+        "step": 156
+      },
+      {
+        "center": [
+          0.2768775504698934,
+          0.30448719477353653,
+          0.27687755046988705,
+          0.3044871947735437,
+          0.2768775504698759,
+          0.3044871947735503,
+          0.2768775504698704,
+          0.1116512388741784
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998773496714179e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1116512388741784,
+        "point_singular_value": 0.00046885865510464013,
+        "step": 157
+      },
+      {
+        "center": [
+          0.27686723451043393,
+          0.3044953239050884,
+          0.27686723451044293,
+          0.3044953239050795,
+          0.27686723451045553,
+          0.3044953239050731,
+          0.2768672345104591,
+          0.11165020176944987
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998790266632966e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11165020176944987,
+        "point_singular_value": 0.0004754453686609916,
+        "step": 158
+      },
+      {
+        "center": [
+          0.27685691803009593,
+          0.3045034521263951,
+          0.2768569180301021,
+          0.3045034521263896,
+          0.2768569180301094,
+          0.30450345212638613,
+          0.2768569180301111,
+          0.11164916398848707
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.9988067867515724e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.11164916398848707,
+        "point_singular_value": 0.0004820350834620606,
+        "step": 159
+      },
+      {
+        "center": [
+          0.2768466010289418,
+          0.30451157943745655,
+          0.2768466010289394,
+          0.3045115794374585,
+          0.2768466010289377,
+          0.30451157943745844,
+          0.2768466010289388,
+          0.1116481255313291
+        ],
+        "certificate": {
+          "included": true,
+          "margin": 1.998822407589529e-08,
+          "radius": 2e-08
+        },
+        "kappa": 0.1116481255313291,
+        "point_singular_value": 0.0004886277912810444,
+        "step": 160
+      }
+    ],
+    "status": "proven_160_box_unique_root_chain_continuous_minimum_still_open",
+    "step_size": 2.5e-05,
+    "theorem": "One hundred sixty consecutive pseudo-arclength hyperplanes have unique stationary roots in outward Krawczyk boxes. The point singular value reaches a positive sampled minimum and reopens. This resolves the earlier coarse near-event into a certified chain of unique roots. The boxes certify discrete hyperplane intersections, not every point of the continuous connecting curve; a continuous interval minimum theorem remains open."
+  },
+  "ST299": {
+    "binary_reduction_status": "absent in general: there is no single signed difference operator whose positive part defines all three effects",
+    "boundary": "No exact optimizer is claimed for every rational triple, and the supplied states are not a derived FIN laboratory channel.",
+    "dual_SDP": "minimize tr(Gamma), Gamma>=tau_i for i=0,1,2",
+    "object": "Three-Output Recovery SDP and Binary-Formula Obstruction",
+    "packet_file": "FIN_ST299_Three_Output_Recovery_SDP_Obstruction.json",
+    "packet_sha256": "d7279467e7d64999361800cf118537af4e743afc0c56b39175e92894fac2ab6d",
+    "pairwise_commutator_norms": [
+      0.1767766952966369,
+      0.1767766952966369,
+      0.0
+    ],
+    "primal_SDP": "maximize sum_i tr(M_i tau_i), M_i>=0, sum_i M_i=I",
+    "program": "ST299",
+    "rational_output_states": [
+      [
+        [
+          "3/4",
+          "0"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ],
+      [
+        [
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/2"
+        ]
+      ],
+      [
+        [
+          "1/2",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "1/2"
+        ]
+      ]
+    ],
+    "status": "proven_exact_SDP_reduction_and_no_single_binary_difference_formula",
+    "theorem": "For three measure-and-prepare outputs, optimal recovery is exactly minimum-error discrimination of the three states and is characterized by the displayed primal/dual SDP. The Helstrom binary trace-norm formula does not extend as one pairwise norm when the outputs are noncommuting. A closed binary-style scalar reduction is therefore obstructed; the finite SDP is the correct exact object."
+  },
+  "ST300": {
+    "boundary": "This is not proof that no contraction certificate exists. It shows that the proposed bounded-likelihood argument alone is insufficient.",
+    "certified_uniform_contraction_constant": null,
+    "finite_depth_certified_bracket": [
+      0.45,
+      0.55
+    ],
+    "maximum_one_step_log_likelihood_ratio": 3.8918202981106265,
+    "naive_derivative_tail_bound": "grows at most linearly with unresolved depth without a contraction constant",
+    "object": "All-Depth Chernoff Derivative-Tail Obstruction Audit",
+    "packet_file": "FIN_ST300_Chernoff_Tail_Bound_Audit.json",
+    "packet_sha256": "b39a2555b51bd7363d0d1d8d6540d96e52b691bd811cb91f70bd1106f0439dae",
+    "program": "ST300",
+    "promotion_status": "not obtained",
+    "status": "bounded_no_go_for_naive_tail_promotion",
+    "theorem": "Bounded one-step likelihood ratios control the derivative at each fixed depth but yield a bound proportional to depth. Without a certified projective contraction or spectral-gap estimate uniform in s and beliefs, this does not produce a vanishing derivative tail. The ST287 finite-depth bracket cannot be promoted to the infinite-depth spectral-radius optimizer by boundedness alone."
+  },
+  "ST301": {
+    "boundary": "The result is campaign-relative. It is not a maximal mathematical radius, physical tolerance, or evidence that larger cubes lack roots.",
+    "frozen_call_budget": 500000,
+    "inherited_complete_covers": [
+      {
+        "calls": 64000,
+        "complete": true,
+        "halfwidth": 0.0007
+      },
+      {
+        "calls": 464960,
+        "complete": true,
+        "halfwidth": 0.00075
+      }
+    ],
+    "larger_radius_corner_screens": [
+      {
+        "complete_cover": false,
+        "corner_minimum_margin": -0.00034345521564194126,
+        "corner_pass_count": 0,
+        "halfwidth": 0.0008
+      },
+      {
+        "complete_cover": false,
+        "corner_minimum_margin": -0.0009010333922336855,
+        "corner_pass_count": 0,
+        "halfwidth": 0.0009
+      },
+      {
+        "complete_cover": false,
+        "corner_minimum_margin": -0.0014598070371745209,
+        "corner_pass_count": 0,
+        "halfwidth": 0.001
+      }
+    ],
+    "largest_proven_complete_halfwidth": 0.00075,
+    "object": "Frozen-Budget Nuisance-Cover Boundary",
+    "packet_file": "FIN_ST301_Frozen_Budget_Nuisance_Boundary.json",
+    "packet_sha256": "0e33bb58b5a47cb5b39b2c120edc4e04d16a4d98f13d3cf3ad8dd268310b7e03",
+    "program": "ST301",
+    "status": "proven_largest_completed_radius_in_declared_campaign_not_global_maximum",
+    "verdict": "Under the frozen 500000-call ledger, 0.00075 is the largest already complete certified radius. Larger-radius corner failures at base resolution trigger no root-loss claim and do not constitute a full cover."
+  },
+  "ST302": {
+    "boundary": "The theorem concerns exact involutions and anticommutation. Approximate, noninvertible, graded, or enlarged representations lie outside scope.",
+    "identity": "XZ=-ZX with invertible involutions implies det(XZ)=det(-ZX)=(-1)^d det(XZ)",
+    "object": "Odd-Dimensional Obstruction for Anticommuting Hermitian Involutions",
+    "odd_dimensions": [
+      {
+        "determinant_sign_contradiction": true,
+        "dimension": 1
+      },
+      {
+        "determinant_sign_contradiction": true,
+        "dimension": 3
+      },
+      {
+        "determinant_sign_contradiction": true,
+        "dimension": 5
+      },
+      {
+        "determinant_sign_contradiction": true,
+        "dimension": 7
+      },
+      {
+        "determinant_sign_contradiction": true,
+        "dimension": 9
+      }
+    ],
+    "packet_file": "FIN_ST302_Odd_Dimensional_Clifford_Obstruction.json",
+    "packet_sha256": "a97b2ae1ca13a2f4be7918ce0a8ab189799adc209d646c97bc6c83e27cad4d63",
+    "program": "ST302",
+    "status": "proven_no_exact_Clifford_pair_in_odd_complex_dimension",
+    "theorem": "Two Hermitian involutions are invertible. If they anticommute in complex dimension d, determinants give det(XZ)=(-1)^d det(ZX)=(-1)^d det(XZ). For odd d this is impossible. Hence exact anticommuting involutive Clifford pairs exist only in even dimension; the even-dimensional nonuniqueness lift has no odd-dimensional analogue."
+  },
+  "ST303": {
+    "boundary": "Full level-exchange naturality is an added premise. The common dimensionless rate is not a length, time, Planck scale, or strict source.",
+    "cocycle_status": "coassociative constant 1-cocycle only after level-exchange naturality; magnitude remains free",
+    "maximum_equal_rate_permutation_defect": 0.0,
+    "maximum_unequal_permutation_defect": 2.08,
+    "object": "Three-Level Coassociative Refinement and Constant Scale Cocycle",
+    "packet_file": "FIN_ST303_Three_Level_Refinement_Cocycle.json",
+    "packet_sha256": "1030866062d87f6a5836acc85150e55bff0223c8983cb13136044333033f7978",
+    "program": "ST303",
+    "status": "proven_single_modulus_after_full_level_exchange",
+    "surviving_object": "one common rate v>=0",
+    "theorem": "Three sequential binary refinements form an associative Kronecker sum with three rates. Naturality under the complete S3 permutation of indistinguishable refinement levels forces all three rates equal. The resulting constant rate composes consistently and may be read as a one-parameter scale cocycle, but its magnitude is not selected.",
+    "three_rates": [
+      0.31,
+      0.57,
+      0.83
+    ]
+  },
+  "ST304": {
+    "best_grid_row": {
+      "a": 0.0009765625,
+      "alpha": 2.0,
+      "heat_trace_t1": 4.685214896865447,
+      "log_plateau_width": 9.447856312800782
+    },
+    "boundary": "The result is grid- and family-dependent. It does not derive the density, cutoff, observer layer, absolute unit, or optimal profile over all monotone softenings.",
+    "declared_heat_trace_budget": 5.0,
+    "declared_relative_plateau_tolerance": 0.02,
+    "grid_rows": [
+      {
+        "a": 6.103515625e-05,
+        "alpha": 0.25,
+        "heat_trace_t1": 11.941134960721078,
+        "log_plateau_width": 14.56764437057551
+      },
+      {
+        "a": 0.000244140625,
+        "alpha": 0.25,
+        "heat_trace_t1": 10.597510195815136,
+        "log_plateau_width": 13.19533004581115
+      },
+      {
+        "a": 0.0009765625,
+        "alpha": 0.25,
+        "heat_trace_t1": 9.243364886670225,
+        "log_plateau_width": 11.770234400863545
+      },
+      {
+        "a": 0.00390625,
+        "alpha": 0.25,
+        "heat_trace_t1": 7.8860576586345825,
+        "log_plateau_width": 10.397920076099187
+      },
+      {
+        "a": 0.015625,
+        "alpha": 0.25,
+        "heat_trace_t1": 6.5388045814422115,
+        "log_plateau_width": 9.025605751334826
+      },
+      {
+        "a": 0.0625,
+        "alpha": 0.25,
+        "heat_trace_t1": 5.229912473427395,
+        "log_plateau_width": 7.653291426570467
+      },
+      {
+        "a": 0.25,
+        "alpha": 0.25,
+        "heat_trace_t1": 4.013444890806388,
+        "log_plateau_width": 6.228195781622863
+      },
+      {
+        "a": 1.0,
+        "alpha": 0.25,
+        "heat_trace_t1": 2.9630381580222163,
+        "log_plateau_width": 4.855881456858503
+      },
+      {
+        "a": 6.103515625e-05,
+        "alpha": 0.5,
+        "heat_trace_t1": 9.81803143727431,
+        "log_plateau_width": 13.723143247643595
+      },
+      {
+        "a": 0.000244140625,
+        "alpha": 0.5,
+        "heat_trace_t1": 8.434477082639887,
+        "log_plateau_width": 12.350828922879236
+      },
+      {
+        "a": 0.0009765625,
+        "alpha": 0.5,
+        "heat_trace_t1": 7.053650833147781,
+        "log_plateau_width": 10.978514598114877
+      },
+      {
+        "a": 0.00390625,
+        "alpha": 0.5,
+        "heat_trace_t1": 5.68297142372929,
+        "log_plateau_width": 9.606200273350517
+      },
+      {
+        "a": 0.015625,
+        "alpha": 0.5,
+        "heat_trace_t1": 4.34230015814051,
+        "log_plateau_width": 8.181104628402913
+      },
+      {
+        "a": 0.0625,
+        "alpha": 0.5,
+        "heat_trace_t1": 3.0787771948387523,
+        "log_plateau_width": 6.808790303638553
+      },
+      {
+        "a": 0.25,
+        "alpha": 0.5,
+        "heat_trace_t1": 1.9792938485979432,
+        "log_plateau_width": 5.436475978874193
+      },
+      {
+        "a": 1.0,
+        "alpha": 0.5,
+        "heat_trace_t1": 1.1444430798065814,
+        "log_plateau_width": 4.064161654109834
+      },
+      {
+        "a": 6.103515625e-05,
+        "alpha": 1.0,
+        "heat_trace_t1": 8.43484769241804,
+        "log_plateau_width": 12.98420476507817
+      },
+      {
+        "a": 0.000244140625,
+        "alpha": 1.0,
+        "heat_trace_t1": 7.051333326913088,
+        "log_plateau_width": 11.611890440313811
+      },
+      {
+        "a": 0.0009765625,
+        "alpha": 1.0,
+        "heat_trace_t1": 5.674132504218149,
+        "log_plateau_width": 10.186794795366207
+      },
+      {
+        "a": 0.00390625,
+        "alpha": 1.0,
+        "heat_trace_t1": 4.316200782249085,
+        "log_plateau_width": 8.814480470601849
+      },
+      {
+        "a": 0.015625,
+        "alpha": 1.0,
+        "heat_trace_t1": 3.012203536524224,
+        "log_plateau_width": 7.442166145837488
+      },
+      {
+        "a": 0.0625,
+        "alpha": 1.0,
+        "heat_trace_t1": 1.8395822516969722,
+        "log_plateau_width": 6.069851821073129
+      },
+      {
+        "a": 0.25,
+        "alpha": 1.0,
+        "heat_trace_t1": 0.9229106320837304,
+        "log_plateau_width": 4.644756176125525
+      },
+      {
+        "a": 1.0,
+        "alpha": 1.0,
+        "heat_trace_t1": 0.36132861678822253,
+        "log_plateau_width": 3.272441851361165
+      },
+      {
+        "a": 6.103515625e-05,
+        "alpha": 2.0,
+        "heat_trace_t1": 7.435878975509164,
+        "log_plateau_width": 12.245266282512747
+      },
+      {
+        "a": 0.000244140625,
+        "alpha": 2.0,
+        "heat_trace_t1": 6.054776770563978,
+        "log_plateau_width": 10.872951957748386
+      },
+      {
+        "a": 0.0009765625,
+        "alpha": 2.0,
+        "heat_trace_t1": 4.685214896865447,
+        "log_plateau_width": 9.447856312800782
+      },
+      {
+        "a": 0.00390625,
+        "alpha": 2.0,
+        "heat_trace_t1": 3.3499211266604076,
+        "log_plateau_width": 8.075541988036424
+      },
+      {
+        "a": 0.015625,
+        "alpha": 2.0,
+        "heat_trace_t1": 2.1063349036406063,
+        "log_plateau_width": 6.703227663272064
+      },
+      {
+        "a": 0.0625,
+        "alpha": 2.0,
+        "heat_trace_t1": 1.069530034959094,
+        "log_plateau_width": 5.330913338507704
+      },
+      {
+        "a": 0.25,
+        "alpha": 2.0,
+        "heat_trace_t1": 0.3843659487255957,
+        "log_plateau_width": 3.905817693560101
+      },
+      {
+        "a": 1.0,
+        "alpha": 2.0,
+        "heat_trace_t1": 0.08398585066466777,
+        "log_plateau_width": 2.5335033687957407
+      },
+      {
+        "a": 6.103515625e-05,
+        "alpha": 4.0,
+        "heat_trace_t1": 6.604442357200517,
+        "log_plateau_width": 11.506327799947321
+      },
+      {
+        "a": 0.000244140625,
+        "alpha": 4.0,
+        "heat_trace_t1": 5.227680945819966,
+        "log_plateau_width": 10.134013475182963
+      },
+      {
+        "a": 0.0009765625,
+        "alpha": 4.0,
+        "heat_trace_t1": 3.8714738162703157,
+        "log_plateau_width": 8.761699150418604
+      },
+      {
+        "a": 0.00390625,
+        "alpha": 4.0,
+        "heat_trace_t1": 2.5739970947638993,
+        "log_plateau_width": 7.389384825654243
+      },
+      {
+        "a": 0.015625,
+        "alpha": 4.0,
+        "heat_trace_t1": 1.4238625930497757,
+        "log_plateau_width": 5.964289180706639
+      },
+      {
+        "a": 0.0625,
+        "alpha": 4.0,
+        "heat_trace_t1": 0.5705354630263968,
+        "log_plateau_width": 4.59197485594228
+      },
+      {
+        "a": 0.25,
+        "alpha": 4.0,
+        "heat_trace_t1": 0.13092870656746947,
+        "log_plateau_width": 3.21966053117792
+      },
+      {
+        "a": 1.0,
+        "alpha": 4.0,
+        "heat_trace_t1": 0.012376842064523714,
+        "log_plateau_width": 1.7945648862303167
+      }
+    ],
+    "object": "Soft Infrared Near-Haar Plateau Optimization",
+    "packet_file": "FIN_ST304_Soft_IR_Plateau_Optimization.json",
+    "packet_sha256": "a5d293a46193706facfad9fa6a2e5a7d110bd84f708224ab73773d1038511de3",
+    "program": "ST304",
+    "result": "Within the frozen alpha/a grid, soft infrared profiles produce finite near-Haar windows. The best feasible row is reported under the declared heat-trace budget, but no theorem shows that this two-parameter family or grid contains a global optimizer.",
+    "soft_family": "q=(mu/(mu+a))^alpha",
+    "status": "strong_numerical_finite_grid_tradeoff_evidence",
+    "status_note": "finite-grid optimization only; no continuum extremizer theorem"
+  },
+  "ST305": {
+    "boundary": "This formalizes observer-relative units but does not produce laboratory calibrations, SI constants, physical dimensions, or a strict source for the anchors.",
+    "calibration_group": "G=(R_+)^3 acting by (ell,tau,epsilon)",
+    "gauge_invariant_examples": [
+      "length_ratio",
+      "time_ratio",
+      "energy_ratio"
+    ],
+    "no_canonical_section": "a free positive calibration torsor has no distinguished point from dimensionless invariant data alone",
+    "object": "Observer-Context Calibration Torsor and Scale-Cocycle Theorem",
+    "observable_weights": {
+      "absolute_energy": [
+        0,
+        0,
+        1
+      ],
+      "absolute_length": [
+        1,
+        0,
+        0
+      ],
+      "absolute_time": [
+        0,
+        1,
+        0
+      ],
+      "action": [
+        0,
+        1,
+        1
+      ],
+      "energy_ratio": [
+        0,
+        0,
+        0
+      ],
+      "length_ratio": [
+        0,
+        0,
+        0
+      ],
+      "time_ratio": [
+        0,
+        0,
+        0
+      ],
+      "velocity": [
+        1,
+        -1,
+        0
+      ]
+    },
+    "observer_context": "O_n=(H_n,A_n,P_n,M_n,omega_n,C_n,R_n)",
+    "packet_file": "FIN_ST305_Observer_Calibration_Torsor.json",
+    "packet_sha256": "4072aea0e920f604520a2fa8690e59a694c933261d14b56ff298906d328ef3cb",
+    "program": "ST305",
+    "status": "proven_relational_invariants_and_no_canonical_absolute_scale_section",
+    "theorem": "Calibration choices over observer layers form a principal (R_+)^3 torsor. Dimensionless ratios are invariant under its action; absolute length, time, and energy transform with nonzero weights. Layer-transition maps obey a multiplicative cocycle law. Because the action is free, invariant dimensionless FIN data cannot select a canonical global section. At least one dimensional anchor per independent unit direction, or relations reducing the structure group, remains necessary.",
+    "transition_law": "g_kn=g_km*g_mn componentwise"
+  },
+  "ST306": {
+    "boundary": "The fixture has no independent custody, physical apparatus, detector events, calibration, or empirical content.",
+    "empirical_errors": [
+      "synthetic record cannot pass the empirical-evidence gate"
+    ],
+    "empirical_pass": false,
+    "event_rows": 576,
+    "object": "Complete Synthetic Validator-Conformance Fixture",
+    "packet_file": "FIN_ST306_Complete_Synthetic_Conformance_Record.json",
+    "packet_sha256": "07523bc1be0c9d269bb13e1b2b9d90c92ef0fbc663000a345507619a48408ca1",
+    "permanent_flag": "PERMANENT_NON_EVIDENCE",
+    "program": "ST306",
+    "record_file": "FIN_ST306_Complete_Synthetic_Conformance_Fixture.json",
+    "record_sha256": "31077791182acd42fa0fd3cceecdcacc7383b0ce09f426b0753a4452624b0cd4",
+    "status": "proven_complete_syntax_fixture_permanently_non_empirical",
+    "syntax_errors": [],
+    "syntax_pass": true,
+    "theorem": "The complete 576-setting synthetic record passes the frozen structural validator and fails the empirical gate solely because it is synthetic. It is a conformance fixture, not a measurement, and its permanent non-evidence flag must not be removed."
+  },
+  "ST307": {
+    "boundary": "This is an evidentiary stop, not a negative experiment or mathematical no-go.",
+    "independent_record_count": 0,
+    "matching_records": [],
+    "object": "Independent Child-Resolved Evidence Gate",
+    "packet_file": "FIN_ST307_Independent_Record_Stop.json",
+    "packet_sha256": "b2c51c020fc70b25f8072a4814759c2592503171b107e254f2c48bebe150737c",
+    "program": "ST307",
+    "required_pattern": "FIN_ST307_INDEPENDENT_RAW_EVENTS*.jsonl",
+    "status": "blocked_no_independently_registered_raw_events",
+    "theorem": "No independently registered, hashed, child-resolved raw event record is present. ST306 is explicitly synthetic and cannot satisfy this gate. Empirical analysis remains blocked."
+  },
+  "metadata": {
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "scope": "local exact, analytic, interval, and bounded numerical research",
+    "seed": 20260814,
+    "strict_row_sum": 1.6603072787660986,
+    "sympy": "1.12"
+  }
+}

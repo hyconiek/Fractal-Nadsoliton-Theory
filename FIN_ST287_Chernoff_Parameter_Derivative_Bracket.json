@@ -1,0 +1,23 @@
+{
+  "belief_boxes": 100,
+  "certified_finite_depth_minimizer_bracket": [
+    0.45,
+    0.55
+  ],
+  "derivative_audits": [
+    {
+      "derivative_global_lower": -0.02420909261482512,
+      "derivative_global_upper": -0.001777048123608171,
+      "s": 0.45
+    },
+    {
+      "derivative_global_lower": 0.0014244883993376012,
+      "derivative_global_upper": 0.028082873438575445,
+      "s": 0.55
+    }
+  ],
+  "finite_depth": 7,
+  "inherited_numerical_infinite_depth_candidate": 0.500739416715181,
+  "log_convexity_statement": "each fixed-history Chernoff sum is log-convex in s; the supremum is convex",
+  "theorem": "Outward value-and-derivative recursion over a complete belief-square cover proves that the declared finite-depth transfer objective is decreasing at s=0.45 and increasing at s=0.55. Convexity therefore places every finite-depth minimizer inside [0.45,0.55]. This is a rigorous but coarse bracket. It does not control the depth-to-infinity derivative error, so the numerical candidate near 0.500739 is not promoted to a certified spectral-radius optimizer."
+}

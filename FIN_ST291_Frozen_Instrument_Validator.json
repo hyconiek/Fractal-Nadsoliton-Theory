@@ -1,0 +1,25 @@
+{
+  "required_fail_closed_rules": [
+    "provider, registrar, and analyst must be distinct",
+    "holdout must be frozen before analysis",
+    "time and hashes must be present and valid",
+    "all 24x24 child-resolved setting pairs must be present for reconstruction",
+    "synthetic records can validate syntax but cannot pass the empirical-evidence gate"
+  ],
+  "self_test_checks": {
+    "empirical_gate_errors": [
+      "synthetic record cannot pass the empirical-evidence gate"
+    ],
+    "hash_lengths": true,
+    "holdout_frozen": true,
+    "positive_time": true,
+    "roles_distinct": true,
+    "syntax_errors": [],
+    "synthetic_flag": true,
+    "validator_exists": true
+  },
+  "self_test_pass": true,
+  "theorem": "The validator converts the ST276 custody and child-resolved instrument specification into a fail-closed executable schema. A synthetic self-test checks syntax and role separation, but the validator explicitly rejects synthetic input as empirical evidence and requires complete setting coverage before matrix reconstruction.",
+  "validator_file": "validate_fin_st276_record.py",
+  "validator_sha256": "eb03f449a6b31dcfdc3e19c02a7a11df615170b4bda78f0dd7930a432f465f71"
+}

@@ -1,0 +1,58 @@
+{
+  "confidence": 0.95,
+  "coordinates": 6,
+  "result": "finite-sample variance-adaptive regions are valid, but need not improve on Hoeffding at worst-case variance and modest cluster count",
+  "rows": [
+    {
+      "Hoeffding_max_halfwidth": 0.19114809133831281,
+      "clusters": 50,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.48645166779038185,
+      "layers": 0
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.20933991446172553,
+      "clusters": 667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.30340986037619877,
+      "layers": 2
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.209388971222988,
+      "clusters": 10667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.23862247429774597,
+      "layers": 4
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.20939203841579093,
+      "clusters": 170667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.22240612280297797,
+      "layers": 6
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.20939223011981647,
+      "clusters": 2730667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.21835128302144036,
+      "layers": 8
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.20939224210133556,
+      "clusters": 43690667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.2173375333893513,
+      "layers": 10
+    },
+    {
+      "Hoeffding_max_halfwidth": 0.20939224285018057,
+      "clusters": 699050667,
+      "coordinates_improved_at_worst_variance": 0,
+      "empirical_Bernstein_worst_variance_max_halfwidth": 0.21708409361510833,
+      "layers": 12
+    }
+  ],
+  "theorem": "Applying a scalar empirical-Bernstein inequality to each independent cluster vector coordinate and a union bound over the six modes gives a simultaneous finite-sample confidence rectangle. It is adaptive to the observed between-cluster variance. The worst-variance audit shows that the additional finite-n range term can make it wider than Hoeffding; improvement is data dependent and is not guaranteed.",
+  "valid_formula": "For independent bounded cluster vectors Y_c,k with range R_k, use |mean-EY| <= sqrt(2 Vhat_k log(3k/alpha)/n)+3 R_k log(3k/alpha)/n simultaneously."
+}

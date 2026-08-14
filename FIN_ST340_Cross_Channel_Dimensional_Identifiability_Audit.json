@@ -1,0 +1,64 @@
+{
+  "candidate_exponent_rows": {
+    "action_E_times_T": [
+      0,
+      1,
+      1
+    ],
+    "diffusion_L2_over_T": [
+      2,
+      -1,
+      0
+    ],
+    "energy_time_E_times_T": [
+      0,
+      1,
+      1
+    ],
+    "speed_L_over_T": [
+      1,
+      -1,
+      0
+    ],
+    "unitary_A_as_inverse_T": [
+      0,
+      -1,
+      0
+    ],
+    "wave_A_as_inverse_T2": [
+      0,
+      -2,
+      0
+    ]
+  },
+  "dimension_basis": "(L,T,E)",
+  "identifiability_requirement": "each sector map needs an operational calibration experiment; dimensional rank alone cannot identify it",
+  "incompatibility": "one raw A cannot simultaneously carry inverse-time and inverse-time-squared dimensions without distinct sector conversion maps",
+  "rank_audits": [
+    {
+      "rank": 1,
+      "relations": [
+        "speed_L_over_T"
+      ],
+      "residual_calibration_dimension": 2
+    },
+    {
+      "rank": 2,
+      "relations": [
+        "speed_L_over_T",
+        "action_E_times_T"
+      ],
+      "residual_calibration_dimension": 1
+    },
+    {
+      "rank": 3,
+      "relations": [
+        "speed_L_over_T",
+        "action_E_times_T",
+        "diffusion_L2_over_T"
+      ],
+      "residual_calibration_dimension": 0
+    }
+  ],
+  "theorem": "Dimensional relations reduce the calibration group only by the rank of genuinely independent exponent rows. Repeated action relations add no rank. More importantly, assigning the same raw A both T^{-1} in unitary/heat dynamics and T^{-2} in wave dynamics is inconsistent unless channel-specific conversion maps are supplied. Dimensional closure and operational identifiability are separate obligations."
+}

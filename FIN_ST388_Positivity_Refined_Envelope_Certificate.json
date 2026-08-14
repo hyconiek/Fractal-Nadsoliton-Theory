@@ -1,0 +1,145 @@
+{
+  "envelope_certificate_gap": 3.4098204561794354e-05,
+  "explicit_strict_candidate_interval": [
+    -0.8451985076795934,
+    -0.8451985076795931
+  ],
+  "explicit_strict_candidate_rational": {
+    "denominator": 1000000000000000000,
+    "numerators": [
+      990203417165851249,
+      214679626404651,
+      646847198151996,
+      964416593927450,
+      1149990004433645,
+      1259169290919532,
+      1326377406474203,
+      1259169290919532,
+      1149990004433645,
+      964416593927450,
+      646847198151996,
+      214679626404651
+    ]
+  },
+  "global_derivative_isolation_box_t_rho": [
+    [
+      0.01082,
+      0.010825
+    ],
+    [
+      0.124945,
+      0.12495
+    ]
+  ],
+  "outward_global_lower": -0.8461602753704237,
+  "proof_ingredients": [
+    "KKT water filling for min w.y on the simplex collision ball",
+    "support transitions 11->9->7->5->3->1",
+    "outward supportwise signs of partial_rho F outside the isolated strip",
+    "strict positivity of partial_tt F and outward partial_t signs",
+    "feasible rational SOCP dual lower bound on the final box"
+  ],
+  "remaining_gap_to_candidate_upper": 0.0009617676908305617,
+  "rho_derivative_sign_cover": {
+    "endpoint_slivers": "At rho=1/11, L'_11 diverges negatively while h' has finite limit; at rho=1, h' diverges positively while the one-point water-filled value is constant.",
+    "k11_global_upper": -1.2066043882875634,
+    "k9_hsecond_cells": 512,
+    "k9_hsecond_lower": -21.815921759884198,
+    "k9_rho_derivative_monotonicity_lower": 3.960926807622762,
+    "later_support_full_range_intervals": {
+      "3": [
+        1.0417154670776374,
+        20.004720079557448
+      ],
+      "5": [
+        1.1537923517155841,
+        3.4182705897152683
+      ],
+      "7": [
+        0.03767235683564334,
+        3.311009336045484
+      ]
+    },
+    "passed": true,
+    "root_left_interval": [
+      -0.0002962765859308564,
+      -0.0001751215631691089
+    ],
+    "root_right_interval": [
+      0.00021404678967876914,
+      0.00035079288452371593
+    ],
+    "support_transition_intervals": {
+      "11": [
+        0.11423989763854668,
+        0.11423989763854671
+      ],
+      "3": [
+        0.9999999999999998,
+        1.0000000000000002
+      ],
+      "5": [
+        0.35034714044340354,
+        0.35034714044340365
+      ],
+      "7": [
+        0.21089128168632798,
+        0.21089128168632804
+      ],
+      "9": [
+        0.1490343806956522,
+        0.14903438069565225
+      ]
+    },
+    "transition_checks": {
+      "11_to_9": [
+        [
+          -3.473265142768089,
+          -3.3782232338296683
+        ],
+        [
+          -3.473265142768105,
+          -3.3782232338296545
+        ]
+      ],
+      "9_to_7": [
+        [
+          1.0134239733195074,
+          1.0477210406568664
+        ],
+        [
+          1.0134239733195003,
+          1.0477210406568662
+        ]
+      ]
+    },
+    "unresolved_boxes": []
+  },
+  "sampled_minimizer_t_rho": [
+    0.010821116712606906,
+    0.12494690985940449
+  ],
+  "sampled_upper": -0.8461261771658619,
+  "t_derivative_isolation": {
+    "full_t_second_derivative": [
+      26.15277914720163,
+      219.52602811226873
+    ],
+    "lower_edge_derivative": [
+      -0.00014208987665523858,
+      -4.873209168602316e-05
+    ],
+    "upper_edge_derivative": [
+      0.0002855260385960524,
+      0.00037888382381466584
+    ]
+  },
+  "theorem": "Positivity changes the inadmissible Cauchy extremizer into an exact finite water-filling law.  Supportwise derivative signs isolate every minimizer of the refined envelope in the displayed box, and a feasible outward dual value certifies the global lower bound.  The residual gap to the explicit strict state is below 10^-3.",
+  "water_filling_support_transitions": {
+    "11": 0.1142398976385467,
+    "3": 1.0,
+    "5": 0.35034714044340365,
+    "7": 0.21089128168632804,
+    "9": 0.14903438069565225
+  }
+}

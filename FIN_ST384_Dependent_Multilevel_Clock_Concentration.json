@@ -1,0 +1,91 @@
+{
+  "premise": "centered stationary log-ratio errors with |Cov(X_i,X_j)|<=sigma^2 rho^|i-j|",
+  "rows": [
+    {
+      "Chebyshev_95_radius": 0.044721359549995794,
+      "Gaussian_subcase_95_radius": 0.02716203031481239,
+      "correlation_rho": 0.0,
+      "levels": 100,
+      "variance_bound": 0.0001
+    },
+    {
+      "Chebyshev_95_radius": 0.1414213562373095,
+      "Gaussian_subcase_95_radius": 0.08589388166934751,
+      "correlation_rho": 0.0,
+      "levels": 1000,
+      "variance_bound": 0.001
+    },
+    {
+      "Chebyshev_95_radius": 0.4472135954999579,
+      "Gaussian_subcase_95_radius": 0.2716203031481239,
+      "correlation_rho": 0.0,
+      "levels": 10000,
+      "variance_bound": 0.01
+    },
+    {
+      "Chebyshev_95_radius": 0.05773502691896258,
+      "Gaussian_subcase_95_radius": 0.03506603035281646,
+      "correlation_rho": 0.25,
+      "levels": 100,
+      "variance_bound": 0.0001666666666666667
+    },
+    {
+      "Chebyshev_95_radius": 0.18257418583505536,
+      "Gaussian_subcase_95_radius": 0.11088852441549782,
+      "correlation_rho": 0.25,
+      "levels": 1000,
+      "variance_bound": 0.0016666666666666668
+    },
+    {
+      "Chebyshev_95_radius": 0.5773502691896257,
+      "Gaussian_subcase_95_radius": 0.35066030352816463,
+      "correlation_rho": 0.25,
+      "levels": 10000,
+      "variance_bound": 0.016666666666666666
+    },
+    {
+      "Chebyshev_95_radius": 0.07745966692414834,
+      "Gaussian_subcase_95_radius": 0.04704601654198113,
+      "correlation_rho": 0.5,
+      "levels": 100,
+      "variance_bound": 0.00030000000000000003
+    },
+    {
+      "Chebyshev_95_radius": 0.2449489742783178,
+      "Gaussian_subcase_95_radius": 0.14877256711061895,
+      "correlation_rho": 0.5,
+      "levels": 1000,
+      "variance_bound": 0.003
+    },
+    {
+      "Chebyshev_95_radius": 0.7745966692414834,
+      "Gaussian_subcase_95_radius": 0.4704601654198113,
+      "correlation_rho": 0.5,
+      "levels": 10000,
+      "variance_bound": 0.03
+    },
+    {
+      "Chebyshev_95_radius": 0.1949358868961793,
+      "Gaussian_subcase_95_radius": 0.11839654524365549,
+      "correlation_rho": 0.9,
+      "levels": 100,
+      "variance_bound": 0.0019000000000000004
+    },
+    {
+      "Chebyshev_95_radius": 0.6164414002968976,
+      "Gaussian_subcase_95_radius": 0.3744027500651265,
+      "correlation_rho": 0.9,
+      "levels": 1000,
+      "variance_bound": 0.019000000000000003
+    },
+    {
+      "Chebyshev_95_radius": 1.949358868961793,
+      "Gaussian_subcase_95_radius": 1.1839654524365548,
+      "correlation_rho": 0.9,
+      "levels": 10000,
+      "variance_bound": 0.19000000000000003
+    }
+  ],
+  "sigma": 0.001,
+  "theorem": "Summing the geometric covariance tail gives Var(sum_1^L X_i)<=L sigma^2 (1+rho)/(1-rho). Chebyshev therefore preserves square-root-depth scaling under correlation decay; the sharper displayed Gaussian radius requires the additional Gaussian premise."
+}

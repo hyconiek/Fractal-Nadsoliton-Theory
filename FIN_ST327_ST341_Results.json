@@ -1,0 +1,1073 @@
+{
+  "ST327": {
+    "boundary": "The branch is local and g is supplied. Global minimality, a unique transition, physical vacuum selection, and a strict source for g remain open.",
+    "certified_crossing_bracket": [
+      2.9,
+      2.905
+    ],
+    "continuous_parametric_root_tube": {
+      "component_radii": [
+        0.0015,
+        0.0001,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.015
+      ],
+      "gain_interval": [
+        2.9,
+        2.905
+      ],
+      "included": true,
+      "minimum_margin": 6.738885299695414e-05
+    },
+    "endpoint_certificates": [
+      {
+        "center": [
+          0.9041973862383973,
+          0.0034502734254584035,
+          0.007244886536094775,
+          0.009462933878670735,
+          0.010626264121394493,
+          0.011276586403699664,
+          0.011680725030966545,
+          0.9420681302081158
+        ],
+        "certificate": {
+          "gain_interval": [
+            2.9,
+            2.9
+          ],
+          "included": true,
+          "margin": 9.99886062835742e-09,
+          "root_radius": 1e-08
+        },
+        "g": 2.9,
+        "value_interval": [
+          0.0016740014039841585,
+          0.0016751190579807425
+        ]
+      },
+      {
+        "center": [
+          0.9054807716417876,
+          0.0033940612324060123,
+          0.007142271213993962,
+          0.009336474636060438,
+          0.010488236182127497,
+          0.011132334777873938,
+          0.011532472273288833,
+          0.954696740310477
+        ],
+        "certificate": {
+          "gain_interval": [
+            2.905,
+            2.905
+          ],
+          "included": true,
+          "margin": 9.99885119146171e-09,
+          "root_radius": 1e-08
+        },
+        "g": 2.905,
+        "value_interval": [
+          -0.0016823922872346883,
+          -0.0016812705052815385
+        ]
+      }
+    ],
+    "endpoint_signs": [
+      "positive",
+      "negative"
+    ],
+    "object": "Interval-Certified First-Order Energy Crossing",
+    "packet_file": "FIN_ST327_Interval_First_Order_Energy_Crossing.json",
+    "packet_sha256": "b5bf2bcd3c81a1f4c89fc49d87222f92e6700463b454e3dbd51d4a6df158e5b1",
+    "program": "ST327",
+    "status": "proven_at_least_one_local_branch_energy_crossing_in_0005_bracket",
+    "theorem": "Outward Krawczyk boxes isolate the endpoint roots, and one parametric Krawczyk tube contains a unique positive reflection-even root for every g in [2.900,2.905]. Direct interval evaluation of the full entropy-minus-quadratic objective is strictly positive at the first endpoint box and strictly negative at the second. Continuity of this certified branch therefore proves at least one energy-equality crossing in the interval. This certifies local coexistence with the uniform energy, not global phase selection or uniqueness of the crossing."
+  },
+  "ST328": {
+    "augmented_fold_Jacobian_min_singular": 0.2550237911564817,
+    "boundary": "No interval fold theorem, global branch classification, dynamical stability theorem, or physical spinodal is claimed.",
+    "fold_center": [
+      0.7294492316098099,
+      0.012336344024244073,
+      0.02178046794713692,
+      0.026596477758425552,
+      0.028912824153807446,
+      0.03015829023286866,
+      0.03098196015722476,
+      -0.02014047542666704,
+      2.6649080510055607,
+      0.28360074988505235,
+      -0.016104398049368092,
+      -0.024336692564857283,
+      -0.02768155098286125,
+      -0.028987127228910243,
+      -0.02961876538364137,
+      -0.03014368146577586,
+      0.9567270006737262
+    ],
+    "gain_candidate": 2.6649080510055607,
+    "interval_certificate": null,
+    "object": "Localized-Branch Spinodal Candidate and Certificate Boundary",
+    "packet_file": "FIN_ST328_Localized_Branch_Spinodal_Certificate.json",
+    "packet_sha256": "d9881924c7d73763dc46c8a469f78ff38c8f9b56bc84c126ee09eeeb6e328b46",
+    "program": "ST328",
+    "residual_inf": 4.3298697960381105e-14,
+    "result": "The augmented stationarity-nullvector-normalization system has a well-conditioned floating root at g approximately 2.66490805. The stationary Jacobian has one numerical null direction and the augmented Jacobian is nonsingular, giving strong evidence for a simple fold/spinodal. A 17-dimensional outward certificate is not supplied in this batch, so the spinodal is not promoted to theorem status.",
+    "stationarity_Jacobian_singular_values": [
+      77.31542605565795,
+      41.92697831293871,
+      34.09878666056067,
+      31.18228233599284,
+      28.706968683671285,
+      26.538280419206213,
+      3.3806225765379687,
+      1.1616941402020517e-15
+    ],
+    "status": "strong_numerical_evidence_for_simple_fold_interval_certificate_open"
+  },
+  "ST329": {
+    "boundary": "Failure of a tensor cover is not evidence against global minimality. Structure-aware symmetry or convex-envelope reductions remain required.",
+    "coercive_sublevel_radius_bound": 18.737456329170403,
+    "complete_cover_executed": false,
+    "dual_dimension": 11,
+    "frozen_box_budget": 1000000,
+    "object": "Compact Dual Sublevel Theorem and Frozen-Cover Feasibility No-Go",
+    "packet_file": "FIN_ST329_Global_Dual_Cover_Feasibility_Audit.json",
+    "packet_sha256": "2b392d6bd217601176c30639c56f04f6292345b42222631a8b5e1b98d5732353",
+    "program": "ST329",
+    "status": "proven_compactness_reduction_resource_bounded_tensor_cover_not_executed",
+    "theorem": "Using log mean exp(h_i)<=||h||_2 and A^+>=I/lambda_max on the mean-zero subspace, every negative dual sublevel lies inside ||h||<=2g lambda_max. This makes the global problem compact. However, even a coarse tensor grid in eleven dimensions exceeds the frozen one-million-box budget by many orders of magnitude. No complete cover was executed; the result is a rigorous compactness reduction plus a resource-bounded method no-go, not a global-minimum verdict.",
+    "uniform_grid_estimates": {
+      "16_per_axis": 17592186044416,
+      "32_per_axis": 36028797018963968,
+      "width_0.05": 42235136032104492187500000000000
+    }
+  },
+  "ST330": {
+    "boundary": "Optimality is approximation-theoretic. No FIN law chooses a rank, mediator subspace, coupling magnitude, or physical resource.",
+    "g": 4.0,
+    "object": "Optimal Lower-Rank Conservative Mediator Classification",
+    "optimal_subspace": "span of the m largest-eigenvalue modes of A",
+    "packet_file": "FIN_ST330_Optimal_Lower_Rank_Conservative_Mediators.json",
+    "packet_sha256": "9b1f44933dd8b38aedddeb90cb3c4cbb92df2c9906e75232173799ff535bea4d",
+    "program": "ST330",
+    "rank_tradeoff": [
+      {
+        "captured_trace_fraction": 0.0,
+        "mediator_rank": 0,
+        "optimal_Frobenius_error": 25.150747448659118,
+        "optimal_operator_error": 9.368728164585201
+      },
+      {
+        "captured_trace_fraction": 0.11755765890952802,
+        "mediator_rank": 1,
+        "optimal_Frobenius_error": 23.34067329372358,
+        "optimal_operator_error": 9.194425088316393
+      },
+      {
+        "captured_trace_fraction": 0.2329281840665423,
+        "mediator_rank": 2,
+        "optimal_Frobenius_error": 21.453428096686068,
+        "optimal_operator_error": 9.19442508831639
+      },
+      {
+        "captured_trace_fraction": 0.34829870922355655,
+        "mediator_rank": 3,
+        "optimal_Frobenius_error": 19.383294982923243,
+        "optimal_operator_error": 8.798275397332848
+      },
+      {
+        "captured_trace_fraction": 0.4586983963509438,
+        "mediator_rank": 4,
+        "optimal_Frobenius_error": 17.271435216209014,
+        "optimal_operator_error": 8.79827539733284
+      },
+      {
+        "captured_trace_fraction": 0.5690980834783309,
+        "mediator_rank": 5,
+        "optimal_Frobenius_error": 14.862463606696991,
+        "optimal_operator_error": 7.845627447905787
+      },
+      {
+        "captured_trace_fraction": 0.6675440602693518,
+        "mediator_rank": 6,
+        "optimal_Frobenius_error": 12.622953474090755,
+        "optimal_operator_error": 7.845627447905785
+      },
+      {
+        "captured_trace_fraction": 0.7659900370603727,
+        "mediator_rank": 7,
+        "optimal_Frobenius_error": 9.888634099698868,
+        "optimal_operator_error": 6.308198057710439
+      },
+      {
+        "captured_trace_fraction": 0.8451445372843532,
+        "mediator_rank": 8,
+        "optimal_Frobenius_error": 7.615229584354334,
+        "optimal_operator_error": 6.308198057710434
+      },
+      {
+        "captured_trace_fraction": 0.9242990375083334,
+        "mediator_rank": 9,
+        "optimal_Frobenius_error": 4.265953455808418,
+        "optimal_operator_error": 3.01648461682832
+      },
+      {
+        "captured_trace_fraction": 0.9621495187541668,
+        "mediator_rank": 10,
+        "optimal_Frobenius_error": 3.0164846168283184,
+        "optimal_operator_error": 3.0164846168283184
+      },
+      {
+        "captured_trace_fraction": 1.0,
+        "mediator_rank": 11,
+        "optimal_Frobenius_error": 0.0,
+        "optimal_operator_error": 0.0
+      }
+    ],
+    "status": "proven_exact_rank_error_tradeoff_by_spectral_truncation",
+    "strict_positive_eigenvalues": [
+      0.7541211542070796,
+      0.75412115420708,
+      1.5770495144276084,
+      1.5770495144276098,
+      1.9614068619764462,
+      1.9614068619764466,
+      2.19956884933321,
+      2.199568849333212,
+      2.2986062720790974,
+      2.2986062720790983,
+      2.3421820411463004
+    ],
+    "theorem": "Every rank-m conservative Schur mediator induces a positive semidefinite matrix of rank at most m. Eckart--Young--Mirsky proves that the best rank-m approximation to gA retains its m largest eigenmodes. The exact Frobenius error is the Euclidean norm of the discarded eigenvalues and the exact operator error is the largest discarded eigenvalue. Thus lower-rank mediators source selected stiff modes, not the full strict geometry."
+  },
+  "ST331": {
+    "D12_invariant": true,
+    "boundary": "No positive c, active g, branch, selector, or dynamics is derived. The result is an invariant completion template.",
+    "bounded_simplex_note": "the probability simplex is compact, so V is bounded even at c=0",
+    "candidate": "V=D(p||u)-(g/2)Q+(c/4)Q^2, Q=<q,Aq>",
+    "object": "Strict-Invariant Quartic Stabilizer Shape and Coefficient Obstruction",
+    "packet_file": "FIN_ST331_Strict_Invariant_Stabilizer_Audit.json",
+    "packet_sha256": "1969340867b6e8ac200da6b95ffc530e1dc3fe68f2836a3848fd3fcf1d26a1b2",
+    "program": "ST331",
+    "rows": [
+      {
+        "c": 0,
+        "large_form_leading_coefficient": 0.0,
+        "radial_quartic": "(c/4)<q,Aq>^2"
+      },
+      {
+        "c": 0.25,
+        "large_form_leading_coefficient": 0.0625,
+        "radial_quartic": "(c/4)<q,Aq>^2"
+      },
+      {
+        "c": 1,
+        "large_form_leading_coefficient": 0.25,
+        "radial_quartic": "(c/4)<q,Aq>^2"
+      },
+      {
+        "c": 4,
+        "large_form_leading_coefficient": 1.0,
+        "radial_quartic": "(c/4)<q,Aq>^2"
+      }
+    ],
+    "source_status": "shape is built from strict A; coefficient c and its sign are not fixed by A",
+    "status": "proven_admissible_stabilizer_shape_coefficient_remains_unsourced",
+    "theorem": "The quartic Q^2 is a strict-operator invariant, D12-symmetric, and for c>0 stabilizes the unconstrained mean-zero carrier against a negative quadratic Q term. On the probability simplex compactness already prevents divergence, so the quartic changes phase geometry rather than rescuing boundedness. Functional calculus fixes the admissible shape but cannot choose a positive coefficient from A alone; c remains a new scalar premise.",
+    "unconstrained_carrier_stabilization": "for c>0 the Q^2 term is coercive on the mean-zero carrier"
+  },
+  "ST332": {
+    "boundary": "The synthetic HMM is not laboratory evidence. The missing weighted derivative constant may exist; this batch does not prove impossibility.",
+    "filter_contraction": "rho=5/7",
+    "normalized_transfer_derivative_Lipschitz_constant": null,
+    "object": "Projective Memory-Tail Theorem and Chernoff Weight Obstruction",
+    "one_step_log_weight_oscillation_bound": "log(49)",
+    "packet_file": "FIN_ST332_Chernoff_Derivative_Tail_Certificate_Audit.json",
+    "packet_sha256": "41bd9f5d91b4e23e3a4bf19b4b6abbdf1f8869b3c1fbd088287181d2bc7c7219",
+    "program": "ST332",
+    "promotion_status": "not obtained",
+    "rows": [
+      {
+        "depth": 7,
+        "projective_Lipschitz_tail_envelope": 1.2921846373105286
+      },
+      {
+        "depth": 12,
+        "projective_Lipschitz_tail_envelope": 0.24026161668325116
+      },
+      {
+        "depth": 20,
+        "projective_Lipschitz_tail_envelope": 0.016280214012052627
+      },
+      {
+        "depth": 40,
+        "projective_Lipschitz_tail_envelope": 1.9458053630137846e-05
+      },
+      {
+        "depth": 80,
+        "projective_Lipschitz_tail_envelope": 2.7795722608784548e-11
+      }
+    ],
+    "status": "proven_belief_observable_tail_full_derivative_tail_open",
+    "theorem": "For observables with a certified Hilbert-projective Lipschitz constant L, the future dependence tail is at most L rho^n/(1-rho). The frozen filters therefore have a geometric belief-memory tail. The Chernoff derivative recursion also differentiates multiplicative path weights; no uniform normalized-transfer derivative Lipschitz constant was derived from the current packets. Hence the belief tail is theorem-grade but the infinite-depth Chernoff minimizer remains unpromoted."
+  },
+  "ST333": {
+    "accepted_slabs": 26,
+    "boundary": "Rejected boxes do not imply branch loss. They only falsify the declared isotropic overlapping-box strategy.",
+    "first_failed_indices": [
+      57,
+      61,
+      65,
+      69,
+      73,
+      77,
+      81,
+      85,
+      89,
+      93
+    ],
+    "object": "Attempted Overlapping Implicit-Function Slabs",
+    "packet_file": "FIN_ST333_Overlapping_Implicit_Function_Slabs.json",
+    "packet_sha256": "afb9f246ab31f4e3bfa10c25af9056b7bc53c9e4de8c73e7bedfc67ea7e6d2b5",
+    "program": "ST333",
+    "result": "Overlapping center-box slabs require at least half-step radius. Re-running outward Krawczyk tests at 40 representative sections accepts only the reported subset; the first rejected sections are explicit. Therefore this center-box strategy still does not certify a continuous tube. A parameterized interval implicit-function theorem with separate transverse and longitudinal widths is the remaining appropriate method.",
+    "slab_trials": [
+      {
+        "included": true,
+        "index": 1,
+        "margin": 8.43101340530783e-06,
+        "radius": 1.2750000010388764e-05,
+        "required_radius": 1.2750000010388764e-05
+      },
+      {
+        "included": true,
+        "index": 5,
+        "margin": 8.216346204903413e-06,
+        "radius": 1.2750000010388427e-05,
+        "required_radius": 1.2750000010388427e-05
+      },
+      {
+        "included": true,
+        "index": 9,
+        "margin": 7.978641342887283e-06,
+        "radius": 1.2750000010386093e-05,
+        "required_radius": 1.2750000010386093e-05
+      },
+      {
+        "included": true,
+        "index": 13,
+        "margin": 7.713980293366784e-06,
+        "radius": 1.2750000010384458e-05,
+        "required_radius": 1.2750000010384458e-05
+      },
+      {
+        "included": true,
+        "index": 17,
+        "margin": 7.4175021038680455e-06,
+        "radius": 1.2750000010387946e-05,
+        "required_radius": 1.2750000010387946e-05
+      },
+      {
+        "included": true,
+        "index": 21,
+        "margin": 7.083102237570582e-06,
+        "radius": 1.2750000010382742e-05,
+        "required_radius": 1.2750000010382742e-05
+      },
+      {
+        "included": true,
+        "index": 25,
+        "margin": 6.703007467856459e-06,
+        "radius": 1.2750000010366152e-05,
+        "required_radius": 1.2750000010366152e-05
+      },
+      {
+        "included": true,
+        "index": 29,
+        "margin": 6.267164041062756e-06,
+        "radius": 1.2750000010365393e-05,
+        "required_radius": 1.2750000010365393e-05
+      },
+      {
+        "included": true,
+        "index": 33,
+        "margin": 5.762334991110674e-06,
+        "radius": 1.2750000010369984e-05,
+        "required_radius": 1.2750000010369984e-05
+      },
+      {
+        "included": true,
+        "index": 37,
+        "margin": 5.1707320150029545e-06,
+        "radius": 1.2750000010359311e-05,
+        "required_radius": 1.2750000010359311e-05
+      },
+      {
+        "included": true,
+        "index": 41,
+        "margin": 4.467875404368105e-06,
+        "radius": 1.2750000010358606e-05,
+        "required_radius": 1.2750000010358606e-05
+      },
+      {
+        "included": true,
+        "index": 45,
+        "margin": 3.6191211335023787e-06,
+        "radius": 1.2750000010357553e-05,
+        "required_radius": 1.2750000010357553e-05
+      },
+      {
+        "included": true,
+        "index": 49,
+        "margin": 2.5737738155173773e-06,
+        "radius": 1.2750000010360124e-05,
+        "required_radius": 1.2750000010360124e-05
+      },
+      {
+        "included": true,
+        "index": 53,
+        "margin": 1.2545732543389754e-06,
+        "radius": 1.2750000010367393e-05,
+        "required_radius": 1.2750000010367393e-05
+      },
+      {
+        "included": false,
+        "index": 57,
+        "margin": -4.623293520245042e-07,
+        "radius": 1.2750000010348821e-05,
+        "required_radius": 1.2750000010348821e-05
+      },
+      {
+        "included": false,
+        "index": 61,
+        "margin": -2.7887221805134033e-06,
+        "radius": 1.2750000010344918e-05,
+        "required_radius": 1.2750000010344918e-05
+      },
+      {
+        "included": false,
+        "index": 65,
+        "margin": -6.1192298693169e-06,
+        "radius": 1.27500000103421e-05,
+        "required_radius": 1.27500000103421e-05
+      },
+      {
+        "included": false,
+        "index": 69,
+        "margin": -1.128292152485777e-05,
+        "radius": 1.2750000010360106e-05,
+        "required_radius": 1.2750000010360106e-05
+      },
+      {
+        "included": false,
+        "index": 73,
+        "margin": -2.0368191336217478e-05,
+        "radius": 1.2750000010355029e-05,
+        "required_radius": 1.2750000010355029e-05
+      },
+      {
+        "included": false,
+        "index": 77,
+        "margin": -4.0577740560376885e-05,
+        "radius": 1.2750000010335055e-05,
+        "required_radius": 1.2750000010335055e-05
+      },
+      {
+        "included": false,
+        "index": 81,
+        "margin": -0.00012460210173437236,
+        "radius": 1.2750000010324408e-05,
+        "required_radius": 1.2750000010324408e-05
+      },
+      {
+        "included": false,
+        "index": 85,
+        "margin": -0.00022436967534872343,
+        "radius": 1.275000001031565e-05,
+        "required_radius": 1.275000001031565e-05
+      },
+      {
+        "included": false,
+        "index": 89,
+        "margin": -5.087982356588583e-05,
+        "radius": 1.2750000010331676e-05,
+        "required_radius": 1.2750000010331676e-05
+      },
+      {
+        "included": false,
+        "index": 93,
+        "margin": -2.4004531368859716e-05,
+        "radius": 1.2750000010307329e-05,
+        "required_radius": 1.2750000010307329e-05
+      },
+      {
+        "included": false,
+        "index": 97,
+        "margin": -1.3095602467649847e-05,
+        "radius": 1.2750000010321073e-05,
+        "required_radius": 1.2750000010321073e-05
+      },
+      {
+        "included": false,
+        "index": 101,
+        "margin": -7.183691599188524e-06,
+        "radius": 1.275000001031573e-05,
+        "required_radius": 1.275000001031573e-05
+      },
+      {
+        "included": false,
+        "index": 105,
+        "margin": -3.4754250151092236e-06,
+        "radius": 1.2750000010303068e-05,
+        "required_radius": 1.2750000010303068e-05
+      },
+      {
+        "included": false,
+        "index": 109,
+        "margin": -9.324400223054141e-07,
+        "radius": 1.2750000010319667e-05,
+        "required_radius": 1.2750000010319667e-05
+      },
+      {
+        "included": true,
+        "index": 113,
+        "margin": 9.198056714621039e-07,
+        "radius": 1.2750000010303099e-05,
+        "required_radius": 1.2750000010303099e-05
+      },
+      {
+        "included": true,
+        "index": 117,
+        "margin": 2.32898024626893e-06,
+        "radius": 1.2750000010302457e-05,
+        "required_radius": 1.2750000010302457e-05
+      },
+      {
+        "included": true,
+        "index": 121,
+        "margin": 3.436985176796803e-06,
+        "radius": 1.275000001030289e-05,
+        "required_radius": 1.275000001030289e-05
+      },
+      {
+        "included": true,
+        "index": 125,
+        "margin": 4.33096842406e-06,
+        "radius": 1.2750000010295951e-05,
+        "required_radius": 1.2750000010295951e-05
+      },
+      {
+        "included": true,
+        "index": 129,
+        "margin": 5.067409576009485e-06,
+        "radius": 1.2750000010291366e-05,
+        "required_radius": 1.2750000010291366e-05
+      },
+      {
+        "included": true,
+        "index": 133,
+        "margin": 5.684519532367371e-06,
+        "radius": 1.2750000010287938e-05,
+        "required_radius": 1.2750000010287938e-05
+      },
+      {
+        "included": true,
+        "index": 137,
+        "margin": 6.209074188023855e-06,
+        "radius": 1.2750000010276256e-05,
+        "required_radius": 1.2750000010276256e-05
+      },
+      {
+        "included": true,
+        "index": 141,
+        "margin": 6.660394002100389e-06,
+        "radius": 1.2750000010272133e-05,
+        "required_radius": 1.2750000010272133e-05
+      },
+      {
+        "included": true,
+        "index": 145,
+        "margin": 7.052770011284348e-06,
+        "radius": 1.2750000010272048e-05,
+        "required_radius": 1.2750000010272048e-05
+      },
+      {
+        "included": true,
+        "index": 149,
+        "margin": 7.397000169551138e-06,
+        "radius": 1.2750000010273757e-05,
+        "required_radius": 1.2750000010273757e-05
+      },
+      {
+        "included": true,
+        "index": 153,
+        "margin": 7.701395031312064e-06,
+        "radius": 1.275000001026941e-05,
+        "required_radius": 1.275000001026941e-05
+      },
+      {
+        "included": true,
+        "index": 157,
+        "margin": 7.97245496264587e-06,
+        "radius": 1.2750000010266788e-05,
+        "required_radius": 1.2750000010266788e-05
+      }
+    ],
+    "status": "bounded_enclosure_attempt_incomplete_with_explicit_failed_sections",
+    "tested_slabs": 40
+  },
+  "ST334": {
+    "boundary": "The continuum optimizer, sourced density, physical observer response, cutoff, and absolute units remain open.",
+    "continuum_primal": "maximize z with integral d_tj q >= z for all j, heat budget, 0<=q<=1",
+    "dual_structure": "a convex combination of active time kernels minus heat-price times cost; q is thresholded by its sign",
+    "finite_grid": {
+      "active_time_values": [
+        1.297236313598205,
+        1.2763170102567067,
+        1.2763170101993997
+      ],
+      "budget": 3.0,
+      "fractional_grid_cells": 2,
+      "heat_cost": 3.000000001329563,
+      "minimax_value": 1.2763170088549631,
+      "points": 500,
+      "success": true,
+      "times": [
+        0.25,
+        1.0,
+        4.0
+      ]
+    },
+    "object": "Multi-Time Soft-IR Convex Dual and Threshold-Band Structure",
+    "packet_file": "FIN_ST334_Multi_Time_Soft_IR_Convex_Dual.json",
+    "packet_sha256": "28a13144cb6cc7a9f963fdc5310498c1d18cb3c229870a543a963f86eaae3c7e",
+    "program": "ST334",
+    "status": "proven_finite_measure_LP_dual_structure_plus_numerical_grid_solution",
+    "theorem": "Linear-programming duality proves that a finite multi-time minimax design is bang--bang according to one dual weighted sum of the time kernels minus the heat cost, with fractional mass only on zero-score level sets. Unlike the single-time bathtub order, several threshold bands may occur. The displayed grid solution illustrates the structure but is not a continuum interval optimizer."
+  },
+  "ST335": {
+    "boundary": "The triangle and its rates are supplied mathematical data. No strict FIN refinement cycle or physical scale curvature has been derived.",
+    "cycle_holonomy": 0.9333333333333332,
+    "flatness_condition": "g01*g12=g02 iff holonomy=1",
+    "gauge_rescaling": [
+      2.0,
+      3.0,
+      5.0
+    ],
+    "object": "Gauge-Invariant Scale Holonomy on the Minimal Refinement Cycle",
+    "packet_file": "FIN_ST335_Cyclic_Refinement_Scale_Holonomy.json",
+    "packet_sha256": "ea76c4a6d665b4dc681f40e6dbeebb9075c650071e9d0338db4e785772a6a43e",
+    "program": "ST335",
+    "rescaled_edges": {
+      "01": 1.7999999999999998,
+      "02": 2.25,
+      "12": 1.1666666666666667
+    },
+    "rescaled_holonomy": 0.9333333333333333,
+    "status": "proven_one_cycle_holonomy_classification",
+    "theorem": "On the smallest cyclic refinement diagram, vertex calibration changes cancel around the loop. The multiplicative holonomy H=g01 g12/g02 is gauge invariant and is the complete one-cycle obstruction to path-independent scale comparison. H=1 gives a coboundary; H not equal to 1 is genuine relative calibration curvature. FIN currently supplies no cyclic refinement law or value of H.",
+    "triangle_edge_cocycle": {
+      "01": 1.2,
+      "02": 0.9,
+      "12": 0.7
+    }
+  },
+  "ST336": {
+    "boundary": "The BSC family is an operational model, not a claim about an implemented FIN observer or human perception.",
+    "exact_formula": "for 0<=e_f<=e_c<1/2, delta(BSC(e_f),BSC(e_c))=0 and reverse delta=e_c-e_f",
+    "experiment_family": "binary symmetric child-resolution channels BSC(e)",
+    "object": "Exact Le Cam Observer Depth for Partial Child Resolution",
+    "packet_file": "FIN_ST336_Quantitative_Blackwell_LeCam_Observer_Depth.json",
+    "packet_sha256": "0711c3fc050780e307466607cd5f91f53361bcc96e85aec3148e81bf705b0891",
+    "program": "ST336",
+    "rows": [
+      {
+        "coarse_error": 0.05,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.02,
+        "reverse_deficiency": 0.030000000000000002,
+        "symmetric_LeCam_distance": 0.030000000000000002
+      },
+      {
+        "coarse_error": 0.1,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.02,
+        "reverse_deficiency": 0.08,
+        "symmetric_LeCam_distance": 0.08
+      },
+      {
+        "coarse_error": 0.2,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.02,
+        "reverse_deficiency": 0.18000000000000002,
+        "symmetric_LeCam_distance": 0.18000000000000002
+      },
+      {
+        "coarse_error": 0.35,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.02,
+        "reverse_deficiency": 0.32999999999999996,
+        "symmetric_LeCam_distance": 0.32999999999999996
+      },
+      {
+        "coarse_error": 0.49,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.02,
+        "reverse_deficiency": 0.47,
+        "symmetric_LeCam_distance": 0.47
+      },
+      {
+        "coarse_error": 0.1,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.05,
+        "reverse_deficiency": 0.05,
+        "symmetric_LeCam_distance": 0.05
+      },
+      {
+        "coarse_error": 0.2,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.05,
+        "reverse_deficiency": 0.15000000000000002,
+        "symmetric_LeCam_distance": 0.15000000000000002
+      },
+      {
+        "coarse_error": 0.35,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.05,
+        "reverse_deficiency": 0.3,
+        "symmetric_LeCam_distance": 0.3
+      },
+      {
+        "coarse_error": 0.49,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.05,
+        "reverse_deficiency": 0.44,
+        "symmetric_LeCam_distance": 0.44
+      },
+      {
+        "coarse_error": 0.2,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.1,
+        "reverse_deficiency": 0.1,
+        "symmetric_LeCam_distance": 0.1
+      },
+      {
+        "coarse_error": 0.35,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.1,
+        "reverse_deficiency": 0.24999999999999997,
+        "symmetric_LeCam_distance": 0.24999999999999997
+      },
+      {
+        "coarse_error": 0.49,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.1,
+        "reverse_deficiency": 0.39,
+        "symmetric_LeCam_distance": 0.39
+      },
+      {
+        "coarse_error": 0.35,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.2,
+        "reverse_deficiency": 0.14999999999999997,
+        "symmetric_LeCam_distance": 0.14999999999999997
+      },
+      {
+        "coarse_error": 0.49,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.2,
+        "reverse_deficiency": 0.29,
+        "symmetric_LeCam_distance": 0.29
+      },
+      {
+        "coarse_error": 0.49,
+        "deficiency_fine_to_coarse": 0.0,
+        "fine_error": 0.35,
+        "reverse_deficiency": 0.14,
+        "symmetric_LeCam_distance": 0.14
+      }
+    ],
+    "status": "proven_exact_deficiency_metric_in_binary_symmetric_instrument_family",
+    "theorem": "A BSC with smaller error Blackwell-dominates every larger-error BSC by an explicit additional flip. In the reverse direction no stochastic postprocessing can increase row total-variation separation, and the optimal deficiency is e_c-e_f. This gives a quantitative operational layer depth from zero (equivalent) to one-half (blind limit), refining the binary kernel order."
+  },
+  "ST337": {
+    "boundary": "The matrix count is an order bound, not a sharp apparatus sample complexity. Independence, calibration, detector noise, and custody remain premises.",
+    "matrix_extension": "recovering d free fiber parameters requires at least order d/epsilon^2 effective independent counts before log-confidence factors",
+    "object": "Finite-Count Lower Bound for Fiber Recovery",
+    "packet_file": "FIN_ST337_Finite_Count_Fiber_Recovery_Lower_Bound.json",
+    "packet_sha256": "c9cbbda585eff6aa2551f4253b737c27f7bfb8d1ec0d3b5f8a2c01ffa0dd2107",
+    "program": "ST337",
+    "rows": [
+      {
+        "Pinsker_TV_upper": 0.2974644765837439,
+        "absolute_error_minimax_lower": 0.0029244959476114538,
+        "counts": 100,
+        "p": 0.2,
+        "two_point_separation": 0.016651092223153956
+      },
+      {
+        "Pinsker_TV_upper": 0.2953260165872866,
+        "absolute_error_minimax_lower": 0.0009276218556688648,
+        "counts": 1000,
+        "p": 0.2,
+        "two_point_separation": 0.005265537695468319
+      },
+      {
+        "Pinsker_TV_upper": 0.2946593153240358,
+        "absolute_error_minimax_lower": 0.00029361731973205087,
+        "counts": 10000,
+        "p": 0.2,
+        "two_point_separation": 0.0016651092223153956
+      },
+      {
+        "Pinsker_TV_upper": 0.30067728327004445,
+        "absolute_error_minimax_lower": 0.003638902203130331,
+        "counts": 100,
+        "p": 0.5,
+        "two_point_separation": 0.020813865278942443
+      },
+      {
+        "Pinsker_TV_upper": 0.296309250947519,
+        "absolute_error_minimax_lower": 0.001157909426590055,
+        "counts": 1000,
+        "p": 0.5,
+        "two_point_separation": 0.006581922119335399
+      },
+      {
+        "Pinsker_TV_upper": 0.29496708640576663,
+        "absolute_error_minimax_lower": 0.00036686150201926607,
+        "counts": 10000,
+        "p": 0.5,
+        "two_point_separation": 0.0020813865278942446
+      },
+      {
+        "Pinsker_TV_upper": 0.3074281072637015,
+        "absolute_error_minimax_lower": 0.002883019614279098,
+        "counts": 100,
+        "p": 0.8,
+        "two_point_separation": 0.016651092223153953
+      },
+      {
+        "Pinsker_TV_upper": 0.29830554551067473,
+        "absolute_error_minimax_lower": 0.0009236996502036552,
+        "counts": 1000,
+        "p": 0.8,
+        "two_point_separation": 0.005265537695468318
+      },
+      {
+        "Pinsker_TV_upper": 0.2955855328912378,
+        "absolute_error_minimax_lower": 0.00029323175637879616,
+        "counts": 10000,
+        "p": 0.8,
+        "two_point_separation": 0.0016651092223153954
+      }
+    ],
+    "scaling": "Omega(1/sqrt(N)) for a Bernoulli-resolved fiber parameter away from boundaries",
+    "status": "proven_scalar_two_point_lower_bound_and_dimension_scaling_requirement",
+    "theorem": "Le Cam's two-point method applied to child-resolved Bernoulli counts gives a nonzero minimax absolute-error lower bound of order N^{-1/2}. Ideal identifiability at open times does not imply finite-count exact recovery. For a 78-parameter symmetric fiber, parameter counting alone requires order 78/epsilon^2 effective independent events, subject to conditioning and design."
+  },
+  "ST338": {
+    "Blahut_Arimoto_rows": [
+      {
+        "beta": 0,
+        "distortion": 0.5000000000000002,
+        "rate_bits_per_symbol": 0.0
+      },
+      {
+        "beta": 0.5,
+        "distortion": 0.42938767123928123,
+        "rate_bits_per_symbol": 0.003156297031677003
+      },
+      {
+        "beta": 1,
+        "distortion": 0.35893148332334635,
+        "rate_bits_per_symbol": 0.012276262286541365
+      },
+      {
+        "beta": 2,
+        "distortion": 0.26219793849055745,
+        "rate_bits_per_symbol": 0.0376691444460423
+      },
+      {
+        "beta": 4,
+        "distortion": 0.18411432352587043,
+        "rate_bits_per_symbol": 0.07673243504775612
+      },
+      {
+        "beta": 8,
+        "distortion": 0.11262323371699971,
+        "rate_bits_per_symbol": 0.15377363652186765
+      },
+      {
+        "beta": 16,
+        "distortion": 0.05343960469302605,
+        "rate_bits_per_symbol": 0.2737099562959499
+      }
+    ],
+    "asymptotic_source_entropy_rate": 0.4689955935892812,
+    "blocklength": 8,
+    "boundary": "The Markov law, p=0.1, blocklength, and distortion are supplied. No FIN theorem selects them or identifies physical information density.",
+    "distortion": "normalized Hamming",
+    "lossless_arbitrary_history_rate": 1.0,
+    "object": "First FIN-Style Markov Branch Rate--Distortion Model",
+    "packet_file": "FIN_ST338_Fractal_Markov_Rate_Distortion.json",
+    "packet_sha256": "258ff40bf38500d13cd6641209cf4cc2ab587cc70d10484ca676a3f7aa7a054d",
+    "program": "ST338",
+    "result": "Once the branch class is restricted to a correlated Markov process, numerical block rate--distortion drops below the one-bit arbitrary-history bound at nonzero distortion, and the lossless asymptotic entropy rate is h2(0.1) approximately 0.469 bits per layer. This demonstrates controlled fractal-history compression for a declared source, not compression of arbitrary universe states or a strict FIN source law.",
+    "state_class": "stationary binary first-order Markov branch process with flip probability 0.1",
+    "status": "strong_numerical_block_rate_distortion_for_declared_correlated_state_class"
+  },
+  "ST339": {
+    "boundary": "The operator-error premise must be established by an actual refinement/instrument. No time arrow or absolute calibration follows.",
+    "object": "Stability Bounds for Relative Clocks under Approximate Refinement",
+    "packet_file": "FIN_ST339_Approximate_Refinement_Clock_Stability.json",
+    "packet_sha256": "e0e855b892738ed92301f2e8e6bb4a689e887dd7fd5e7fb14a14238a08e45dbd",
+    "program": "ST339",
+    "reference_ratio_lambda2_over_lambda1": 2.091241580520038,
+    "rows": [
+      {
+        "heat_unitary_ratio_interval": [
+          2.090831721745423,
+          2.0916515480074582
+        ],
+        "intertwining_operator_error": 0.0001,
+        "wave_ratio_interval": [
+          1.445970857847911,
+          1.4462543165043478
+        ]
+      },
+      {
+        "heat_unitary_ratio_interval": [
+          2.087147877723742,
+          2.0953461546157883
+        ],
+        "intertwining_operator_error": 0.001,
+        "wave_ratio_interval": [
+          1.4446964656022876,
+          1.447531054801861
+        ]
+      },
+      {
+        "heat_unitary_ratio_interval": [
+          2.050786718571768,
+          2.1327837616963548
+        ],
+        "intertwining_operator_error": 0.01,
+        "wave_ratio_interval": [
+          1.4320568140167371,
+          1.4604053415734806
+        ]
+      },
+      {
+        "heat_unitary_ratio_interval": [
+          1.8990291530551604,
+          2.310752211755165
+        ],
+        "intertwining_operator_error": 0.05,
+        "wave_ratio_interval": [
+          1.378052667010648,
+          1.5201158547147533
+        ]
+      }
+    ],
+    "spectral_gap_to_zero": 0.7541211542070796,
+    "status": "proven_Weyl_ratio_bounds_for_approximate_coarse_intertwining",
+    "theorem": "If the compressed refined operator differs from A by operator norm at most epsilon<lambda1, Weyl bounds place each positive coarse eigenvalue in [lambda-epsilon,lambda+epsilon]. Therefore heat/unitary ratios and square-root wave ratios lie in the displayed explicit intervals. Approximate refinement preserves relative clocks continuously but does not select seconds, channel maps, or fiber clocks."
+  },
+  "ST340": {
+    "boundary": "No candidate physical relation or channel conversion is derived from FIN. The audit prevents silent unit reuse; it does not fix a calibration.",
+    "candidate_exponent_rows": {
+      "action_E_times_T": [
+        0,
+        1,
+        1
+      ],
+      "diffusion_L2_over_T": [
+        2,
+        -1,
+        0
+      ],
+      "energy_time_E_times_T": [
+        0,
+        1,
+        1
+      ],
+      "speed_L_over_T": [
+        1,
+        -1,
+        0
+      ],
+      "unitary_A_as_inverse_T": [
+        0,
+        -1,
+        0
+      ],
+      "wave_A_as_inverse_T2": [
+        0,
+        -2,
+        0
+      ]
+    },
+    "dimension_basis": "(L,T,E)",
+    "identifiability_requirement": "each sector map needs an operational calibration experiment; dimensional rank alone cannot identify it",
+    "incompatibility": "one raw A cannot simultaneously carry inverse-time and inverse-time-squared dimensions without distinct sector conversion maps",
+    "object": "Cross-Channel Dimensional Rank and Identifiability Audit",
+    "packet_file": "FIN_ST340_Cross_Channel_Dimensional_Identifiability_Audit.json",
+    "packet_sha256": "666a6d419a25d87d5de7c39663f9dde157142dfa64dc1562da02245c9e597bdb",
+    "program": "ST340",
+    "rank_audits": [
+      {
+        "rank": 1,
+        "relations": [
+          "speed_L_over_T"
+        ],
+        "residual_calibration_dimension": 2
+      },
+      {
+        "rank": 2,
+        "relations": [
+          "speed_L_over_T",
+          "action_E_times_T"
+        ],
+        "residual_calibration_dimension": 1
+      },
+      {
+        "rank": 3,
+        "relations": [
+          "speed_L_over_T",
+          "action_E_times_T",
+          "diffusion_L2_over_T"
+        ],
+        "residual_calibration_dimension": 0
+      }
+    ],
+    "status": "proven_rank_count_and_raw_operator_dimension_incompatibility",
+    "theorem": "Dimensional relations reduce the calibration group only by the rank of genuinely independent exponent rows. Repeated action relations add no rank. More importantly, assigning the same raw A both T^{-1} in unitary/heat dynamics and T^{-2} in wave dynamics is inconsistent unless channel-specific conversion maps are supplied. Dimensional closure and operational identifiability are separate obligations."
+  },
+  "ST341": {
+    "boundary": "This stop is evidentiary, not a failed experiment.",
+    "independent_record_count": 0,
+    "matching_records": [],
+    "object": "Independent Evidence Gate",
+    "packet_file": "FIN_ST341_Independent_Record_Stop.json",
+    "packet_sha256": "bee2313fdb7702c151194628d685051b7f4866113de700ddc2a85a218c3e417f",
+    "program": "ST341",
+    "required_pattern": "FIN_ST341_INDEPENDENT_RAW_EVENTS*.jsonl",
+    "status": "blocked_no_independent_events",
+    "theorem": "No independently registered raw-event packet exists; local computation cannot generate custody or empirical evidence."
+  },
+  "metadata": {
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "scope": "local analytic, interval, exact finite, and bounded numerical research",
+    "seed": 20260816,
+    "strict_row_sum": 1.6603072787660986
+  }
+}

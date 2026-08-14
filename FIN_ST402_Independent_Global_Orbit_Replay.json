@@ -1,0 +1,91 @@
+{
+  "cap_curvature_certificate": {
+    "extreme_pair_count": 121,
+    "minimum_Euclidean_curvature": 0.312161527688847,
+    "minimum_L1_curvature": 0.624323055377694,
+    "worst_pair": {
+      "coefficient_intervals": [
+        [
+          16.666666666666647,
+          16.666666666666654
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          -16.042343611288953,
+          -16.042343611288945
+        ]
+      ],
+      "i": 1,
+      "j": 1
+    }
+  },
+  "cap_threshold": 0.94,
+  "discovered_radial_residual_inf": 8.881784197001252e-16,
+  "gain": 4.0,
+  "implementation_independence": "The strict matrix, qualitative radial solve, rational benchmark, 10,000-cell outside cover, and 121-pair curvature reduction are rebuilt here.  No ST389/ST390 cap routine, root packet, or conclusion is read.",
+  "independent_radial_Krawczyk": {
+    "component_margins": [
+      9.998007088896088e-09,
+      9.999530016594751e-09,
+      9.99983599267798e-09,
+      9.999883013333578e-09,
+      9.999897453063372e-09,
+      9.999903652097714e-09,
+      9.999906914678891e-09,
+      9.98661109363752e-09
+    ],
+    "included": true,
+    "minimum_margin": 9.98661109363752e-09,
+    "radius": 1e-08
+  },
+  "logical_proof": [
+    "compactness gives a global minimizer",
+    "the outward cover forces every minimizer into one of twelve disjoint caps p_i>0.94",
+    "the entropy directional derivative excludes every simplex-boundary minimizer",
+    "the 121-pair Fisher reduction proves strict convexity in every cap",
+    "D12 invariance and transitivity move one minimizer into every cap",
+    "strict convexity permits at most one minimizer per cap"
+  ],
+  "matrix_row_sum_defect": 2.220446049250313e-16,
+  "outside_minus_benchmark_certificate": {
+    "cells": 10000,
+    "lower": 9.552083849820894e-05,
+    "worst_collision_cell": [
+      0.8565809999999999,
+      0.8566666666666666
+    ]
+  },
+  "rational_benchmark": {
+    "denominator": 1000000000000000000,
+    "entropy_interval": [
+      2.407468144925446,
+      2.407468144925447
+    ],
+    "numerators": [
+      990203417165851260,
+      214679626404651,
+      646847198151995,
+      964416593927450,
+      1149990004433644,
+      1259169290919530,
+      1326377406474200,
+      1259169290919530,
+      1149990004433644,
+      964416593927450,
+      646847198151995,
+      214679626404651
+    ],
+    "objective_interval": [
+      -0.8451985076795943,
+      -0.8451985076795925
+    ],
+    "quadratic_interval": [
+      1.6263333263025197,
+      1.6263333263025201
+    ]
+  },
+  "theorem": "The supplied dimensionless strict functional at g=4 has exactly twelve global minimizers, forming one D12 orbit.  This independently reproduces ST390 without using its cap or root certificate."
+}

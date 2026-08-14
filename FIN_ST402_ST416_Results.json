@@ -1,0 +1,1271 @@
+{
+  "ST402": {
+    "boundary": "The theorem neither sources g=4 nor chooses an orbit member; QW-2191 and physical interpretation remain open.",
+    "cap_curvature_certificate": {
+      "extreme_pair_count": 121,
+      "minimum_Euclidean_curvature": 0.312161527688847,
+      "minimum_L1_curvature": 0.624323055377694,
+      "worst_pair": {
+        "coefficient_intervals": [
+          [
+            16.666666666666647,
+            16.666666666666654
+          ],
+          [
+            -5e-324,
+            5e-324
+          ],
+          [
+            -16.042343611288953,
+            -16.042343611288945
+          ]
+        ],
+        "i": 1,
+        "j": 1
+      }
+    },
+    "cap_threshold": 0.94,
+    "discovered_radial_residual_inf": 8.881784197001252e-16,
+    "gain": 4.0,
+    "implementation_independence": "The strict matrix, qualitative radial solve, rational benchmark, 10,000-cell outside cover, and 121-pair curvature reduction are rebuilt here.  No ST389/ST390 cap routine, root packet, or conclusion is read.",
+    "independent_radial_Krawczyk": {
+      "component_margins": [
+        9.998007088896088e-09,
+        9.999530016594751e-09,
+        9.99983599267798e-09,
+        9.999883013333578e-09,
+        9.999897453063372e-09,
+        9.999903652097714e-09,
+        9.999906914678891e-09,
+        9.98661109363752e-09
+      ],
+      "included": true,
+      "minimum_margin": 9.98661109363752e-09,
+      "radius": 1e-08
+    },
+    "logical_proof": [
+      "compactness gives a global minimizer",
+      "the outward cover forces every minimizer into one of twelve disjoint caps p_i>0.94",
+      "the entropy directional derivative excludes every simplex-boundary minimizer",
+      "the 121-pair Fisher reduction proves strict convexity in every cap",
+      "D12 invariance and transitivity move one minimizer into every cap",
+      "strict convexity permits at most one minimizer per cap"
+    ],
+    "matrix_row_sum_defect": 2.220446049250313e-16,
+    "object": "Independent Exact Global-Minimizer Orbit Replay",
+    "outside_minus_benchmark_certificate": {
+      "cells": 10000,
+      "lower": 9.552083849820894e-05,
+      "worst_collision_cell": [
+        0.8565809999999999,
+        0.8566666666666666
+      ]
+    },
+    "packet_file": "FIN_ST402_Independent_Global_Orbit_Replay.json",
+    "packet_sha256": "a23ac440e59aad310d56751c49d01626442e4a362da682cc0bef571f15ee1091",
+    "program": "ST402",
+    "rational_benchmark": {
+      "denominator": 1000000000000000000,
+      "entropy_interval": [
+        2.407468144925446,
+        2.407468144925447
+      ],
+      "numerators": [
+        990203417165851260,
+        214679626404651,
+        646847198151995,
+        964416593927450,
+        1149990004433644,
+        1259169290919530,
+        1326377406474200,
+        1259169290919530,
+        1149990004433644,
+        964416593927450,
+        646847198151995,
+        214679626404651
+      ],
+      "objective_interval": [
+        -0.8451985076795943,
+        -0.8451985076795925
+      ],
+      "quadratic_interval": [
+        1.6263333263025197,
+        1.6263333263025201
+      ]
+    },
+    "status": "proven_independent_exactly_twelve_global_minima",
+    "theorem": "The supplied dimensionless strict functional at g=4 has exactly twelve global minimizers, forming one D12 orbit.  This independently reproduces ST390 without using its cap or root certificate."
+  },
+  "ST403": {
+    "abstract_theorem": "Let a finite group act transitively on n simplex coordinates.  Let F be continuous and invariant.  If m>1/2, an explicit feasible point has value below every point with max p_i<=m, and F is strictly convex on every cap {p_i>m}, then argmin F contains exactly n points and is one group orbit.",
+    "application": "ST402 meets every hypothesis with n=12, G=D12, and m=0.94.",
+    "axiom_removal_tests": [
+      {
+        "axiom": "existence/compactness",
+        "counterexample": "F(x)=x on the open interval (0,1) has no minimizer",
+        "necessity": 5
+      },
+      {
+        "axiom": "outside-cap separation",
+        "counterexample": "a strictly convex invariant entropy may minimize at the uniform point outside all caps",
+        "necessity": 5
+      },
+      {
+        "axiom": "strict cap convexity",
+        "counterexample": "an invariant continuous function may have a flat continuum of cap minima",
+        "necessity": 5
+      },
+      {
+        "axiom": "transitive invariance",
+        "counterexample": "unequal cap depths can leave only one preferred cap",
+        "necessity": 5
+      },
+      {
+        "axiom": "m>1/2/disjoint caps",
+        "counterexample": "overlapping caps invalidate the orbit-counting step even when minima exist",
+        "necessity": 4
+      }
+    ],
+    "boundary": "The theorem is a reusable variational statement; it contains no physical selector, dimensional scale, or source law.",
+    "object": "Abstract Finite Orbit-Exhaustion Theorem",
+    "packet_file": "FIN_ST403_Abstract_Orbit_Exhaustion_Theorem.json",
+    "packet_sha256": "29a40b1317347c3ece7075c95192c53800fba39a5c5cd3c908b44b668c41e95e",
+    "program": "ST403",
+    "proof": [
+      "compactness and continuity give one minimizer",
+      "separation puts it in a cap; m>1/2 makes caps disjoint",
+      "transitivity creates a minimizer in every cap",
+      "strict convexity gives at most one minimizer in each cap"
+    ],
+    "status": "proven_abstract_theorem_and_necessity_counterexamples"
+  },
+  "ST404": {
+    "boundary": "A stabilizer theorem describes degeneracy; it does not select one of the twelve translates.",
+    "group": "D12 of order 24",
+    "larger_stabilizer_excluded": true,
+    "object": "Exact Stabilizer and Orbit-Size Certificate",
+    "orbit_size_by_orbit_stabilizer": 12,
+    "packet_file": "FIN_ST404_Exact_Orbit_Stabilizer_Certificate.json",
+    "packet_sha256": "e93ec38e043ae7dc2730932390f7cad2cef6021eb5bfde90ecafcbd2c7a74bb3",
+    "program": "ST404",
+    "proof": "Uniqueness in cap zero forces invariance under its reflection.  Any stabilizer must fix the unique maximum vertex zero.  Exactly two D12 elements fix that vertex, so the stabilizer is precisely the displayed reflection subgroup.",
+    "stabilizer_elements": [
+      "identity",
+      "reflection j -> -j fixing vertex 0"
+    ],
+    "stabilizer_order": 2,
+    "status": "proven_exact_reflection_stabilizer_order_two",
+    "unique_maximum_from_cap": "p_0>0.94>1/2"
+  },
+  "ST405": {
+    "boundary": "The interval is a robustness theorem, not a strict derivation of any gain or a physical phase interval.",
+    "common_rational_benchmark": {
+      "denominator": 1000000000000000000,
+      "numerators": [
+        990203417165851260,
+        214679626404651,
+        646847198151995,
+        964416593927450,
+        1149990004433644,
+        1259169290919530,
+        1326377406474200,
+        1259169290919530,
+        1149990004433644,
+        964416593927450,
+        646847198151995,
+        214679626404651
+      ]
+    },
+    "gain_interval": [
+      3.999,
+      4.001
+    ],
+    "minimum_Q_minus_energy_upper": 0.06630873330167342,
+    "monotonicity_payment": "On the audited collision interval Q_benchmark-E_upper(r)>0, so the outside-minus-benchmark separation is worst at g=3.999.  Cap curvature is worst at g=4.001.",
+    "object": "Uniform Nonzero Gain-Persistence Tube",
+    "packet_file": "FIN_ST405_Uniform_Gain_Persistence_Tube.json",
+    "packet_sha256": "167b8a2575db78bec7667b218f66262cc6aa935cc38a60226be28eebeb6c76b8",
+    "program": "ST405",
+    "status": "proven_uniform_twelve_minimum_orbit_on_gain_interval",
+    "theorem": "For every supplied gain in [3.999,4.001], the strict functional has exactly twelve global minimizers forming one D12 orbit.",
+    "uniform_cap_curvature": {
+      "extreme_pair_count": 121,
+      "minimum_Euclidean_curvature": 0.3100312347374352,
+      "minimum_L1_curvature": 0.6200624694748704,
+      "worst_pair": {
+        "coefficient_intervals": [
+          [
+            16.666666666666647,
+            16.666666666666654
+          ],
+          [
+            -5e-324,
+            5e-324
+          ],
+          [
+            -16.046604197191776,
+            -16.04660419719177
+          ]
+        ],
+        "i": 1,
+        "j": 1
+      }
+    },
+    "uniform_outside_separation": {
+      "cells": 10000,
+      "lower": 6.236647184737222e-05,
+      "worst_collision_cell": [
+        0.8565809999999999,
+        0.8566666666666666
+      ]
+    }
+  },
+  "ST406": {
+    "boundary": "The local coexistence point must not be called the physical or global critical gain.",
+    "certified_local_coexistence_crossing_reused": [
+      2.902496471747767,
+      2.9024964917477667
+    ],
+    "certified_nonuniform_global_range": [
+      3.999,
+      4.001
+    ],
+    "conservative_uniform_global_range_candidate": [
+      0,
+      2.2521603818541887
+    ],
+    "failed_objective": "Every global transition and its uniqueness were not certified.",
+    "object": "Global Gain-Transition Audit",
+    "packet_file": "FIN_ST406_Global_Gain_Transition_Bracket.json",
+    "packet_sha256": "a8b32471cbdd2dd9335c15c5fefc8baf35aa3f3b5b2150f3962c8df1d129d1f4",
+    "program": "ST406",
+    "rigorous_conclusion": "ST405 proves the localized orbit global near four, while g=0 has the unique uniform global minimizer.  Hence at least one global orbit change occurs in (0,3.999].  The narrow 2.90249648 crossing remains branch-local, not a certified global transition.",
+    "sampled_minimum_Dmin_over_collision": 2.637684800080037,
+    "sampled_ratio_location": 0.757576875,
+    "status": "partial_existential_global_transition_full_classification_open",
+    "uniform_Hessian_loss_gain": 5.123427551398616
+  },
+  "ST407": {
+    "boundary": "No sampled saddle count or Morse index is promoted to a complete landscape theorem.",
+    "certified_stationary_orbits": {
+      "global_localized_orbit": {
+        "Morse_index": 0,
+        "certificate": "ST402 cap curvature and global exhaustion",
+        "orbit_size": 12
+      },
+      "uniform": {
+        "Morse_index": 0,
+        "minimum_tangent_Hessian_eigenvalue": 2.6312718354148004,
+        "value": 0.0
+      }
+    },
+    "deterministic_start_count": 1200,
+    "object": "Certified Core and Sampled Morse Landscape at g=4",
+    "packet_file": "FIN_ST407_Certified_and_Sampled_Morse_Landscape.json",
+    "packet_sha256": "a3883e98e67b454c3e179074b8c520fb392a96011667ba261169a5678056fd06",
+    "program": "ST407",
+    "result": "The uniform local minimum and the twelve-point global orbit are certified.  The additional stationary-orbit/Morse catalog is deterministic numerical evidence only; multistart discovery is not an exhaustive interval cover.",
+    "sampled_distinct_D12_orbits": 9,
+    "sampled_index_histogram": {
+      "0": 2,
+      "1": 4,
+      "2": 3
+    },
+    "sampled_stationary_catalog": [
+      {
+        "Morse_index": 0,
+        "maximum_probability": 0.9902034171658513,
+        "minimum_probability": 0.00021467962640465092,
+        "near_zero_modes": 0,
+        "representative": [
+          0.0012591692909195325,
+          0.001149990004433645,
+          0.0009644165939274492,
+          0.0006468471981519951,
+          0.00021467962640465092,
+          0.9902034171658513,
+          0.00021467962640465092,
+          0.0006468471981519946,
+          0.00096441659392745,
+          0.0011499900044336438,
+          0.0012591692909195325,
+          0.001326377406474201
+        ],
+        "value": -0.8451985076795934
+      },
+      {
+        "Morse_index": 0,
+        "maximum_probability": 0.08333333333333333,
+        "minimum_probability": 0.08333333333333333,
+        "near_zero_modes": 0,
+        "representative": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "value": 0.0
+      },
+      {
+        "Morse_index": 1,
+        "maximum_probability": 0.21566689724838406,
+        "minimum_probability": 0.05247943531186448,
+        "near_zero_modes": 0,
+        "representative": [
+          0.0756340302929073,
+          0.07669891142852107,
+          0.07716484589575302,
+          0.07833073655792855,
+          0.07716484589807944,
+          0.07669891144032774,
+          0.07563402995452301,
+          0.07102396052079955,
+          0.05247943531186448,
+          0.21566689724838406,
+          0.05247943541327086,
+          0.07102396003764097
+        ],
+        "value": 0.008648609533356347
+      },
+      {
+        "Morse_index": 1,
+        "maximum_probability": 0.3998211276244508,
+        "minimum_probability": 0.014571967383748744,
+        "near_zero_modes": 0,
+        "representative": [
+          0.014571967383748744,
+          0.3998211276244508,
+          0.014571967390399296,
+          0.022889000708599578,
+          0.02525693604143277,
+          0.02288900095322587,
+          0.014571967393250142,
+          0.3998211270974559,
+          0.014571967385820223,
+          0.022889001124667022,
+          0.02525693600657031,
+          0.022889000890379388
+        ],
+        "value": 0.012074405014509404
+      },
+      {
+        "Morse_index": 1,
+        "maximum_probability": 0.39119501068402024,
+        "minimum_probability": 0.015318333468553283,
+        "near_zero_modes": 0,
+        "representative": [
+          0.015318333471144939,
+          0.39119501068402024,
+          0.01606802321798637,
+          0.025385329424201224,
+          0.028892689464985213,
+          0.028892689464894164,
+          0.025385329428702037,
+          0.01606802322851174,
+          0.3911950102610581,
+          0.015318333468553283,
+          0.023140614109446487,
+          0.02314061377649642
+        ],
+        "value": 0.018549419839797188
+      },
+      {
+        "Morse_index": 2,
+        "maximum_probability": 0.25990758670021424,
+        "minimum_probability": 0.038226422642818204,
+        "near_zero_modes": 0,
+        "representative": [
+          0.05334715141732116,
+          0.038226422642818204,
+          0.25990758670021424,
+          0.038226422652637045,
+          0.05334715163718132,
+          0.05694526463544013,
+          0.05334715163718134,
+          0.038226422652637045,
+          0.25990758670021424,
+          0.038226422642818204,
+          0.053347151417321215,
+          0.056945265264215714
+        ],
+        "value": 0.025621653347065065
+      },
+      {
+        "Morse_index": 1,
+        "maximum_probability": 0.3696394137985784,
+        "minimum_probability": 0.01733220691200234,
+        "near_zero_modes": 0,
+        "representative": [
+          0.01733220691200236,
+          0.3696394137985784,
+          0.018737520812831785,
+          0.030232869513281375,
+          0.03451204129861891,
+          0.03556039096013005,
+          0.03451204129861891,
+          0.030232869513281375,
+          0.018737520812831785,
+          0.3696394137985784,
+          0.01733220691200234,
+          0.023531504369244418
+        ],
+        "value": 0.027164364665398844
+      },
+      {
+        "Morse_index": 2,
+        "maximum_probability": 0.26855334913170775,
+        "minimum_probability": 0.035976859550312434,
+        "near_zero_modes": 0,
+        "representative": [
+          0.05671225593328193,
+          0.05209393773624855,
+          0.03687693653855657,
+          0.26855334913170775,
+          0.035976859550312434,
+          0.04978666090580342,
+          0.049786660902815374,
+          0.03597685955484282,
+          0.26855334903996175,
+          0.03687693653747841,
+          0.05209393759977709,
+          0.05671225656921397
+        ],
+        "value": 0.027466171973158815
+      },
+      {
+        "Morse_index": 2,
+        "maximum_probability": 0.2857007379108874,
+        "minimum_probability": 0.03140711391858907,
+        "near_zero_modes": 0,
+        "representative": [
+          0.053550111902829656,
+          0.05458712169862314,
+          0.05355011197881672,
+          0.048694705940670775,
+          0.0328702751506616,
+          0.2857007379108874,
+          0.03140711391858907,
+          0.0409669885817177,
+          0.031407113925416945,
+          0.2857007377247677,
+          0.03287027513564763,
+          0.04869470613137151
+        ],
+        "value": 0.029843012544338632
+      }
+    ],
+    "status": "two_certified_minimum_orbits_plus_nonexhaustive_numerical_saddles"
+  },
+  "ST408": {
+    "basin_proof": "The ball lies in the positive cap.  Strong monotonicity of the tangent gradient makes squared distance to the unique cap minimizer decrease at rate at least 2mu; the ball is forward invariant and trajectories converge exponentially.",
+    "boundary": "The gradient law, its time parameter, gain, and preparation are premises.  No Born weights or physical basin probabilities follow.",
+    "cap_clearance": 0.050203417165851416,
+    "center_enclosure_radius": 1e-08,
+    "certified_center_enclosure_source": "independent ST402 radial Krawczyk inclusion",
+    "declared_dynamics": "p_dot=-P_T grad V_4(p), P_T=I-11^T/12, inside the positive simplex",
+    "distance_decay": "||p(t)-p*|| <= exp(-0.312161527688847 t) ||p(0)-p*||",
+    "explicit_local_Euclidean_radius": 7.155654213488357e-05,
+    "minimum_center_probability": 0.00021467962640465068,
+    "object": "Explicit Local Basin for a Declared Projected Gradient Flow",
+    "packet_file": "FIN_ST408_Projected_Gradient_Local_Basin.json",
+    "packet_sha256": "512783cd5b6ec310177dae39027eb63505b87b6534c16125efa0787a14c4e16c",
+    "program": "ST408",
+    "status": "proven_conditional_local_forward_invariance_and_exponential_convergence",
+    "strong_convexity_rate_lower": 0.312161527688847
+  },
+  "ST409": {
+    "boundary": "Do not infer a source from the fact that a supplied gain has mathematically interesting consequences.",
+    "found": null,
+    "object": "Gain-Source Admission Gate",
+    "packet_file": "FIN_ST409_Gain_Source_Admission_Gate.json",
+    "packet_sha256": "9d75ef77cf4a3e5f3f03771b6bdb1cc1dec9e361e1bf421073d5f017909f9b75",
+    "program": "ST409",
+    "required_new_export": "a typed strict object fixing a nonzero signed gain with coupling semantics",
+    "searched_current_strict_objects": [
+      "A",
+      "spectral projectors",
+      "D12 invariants",
+      "entropy",
+      "finite orbit theorem"
+    ],
+    "status": "blocked_no_new_strict_gain_source",
+    "verdict": "The orbit theorem strengthens the consequences of g but cannot reverse-engineer a source for g."
+  },
+  "ST410": {
+    "boundary": "This rejects two proof mechanisms, not global minimality of the rank-seven state.",
+    "global_rank7_certificate": null,
+    "local_root_maximum_probability": 0.9033060188294947,
+    "maximum_weight": 0.7102544783597498,
+    "minimum_weight": -0.17141297146000997,
+    "negative_offdiagonal_weight_count": 4,
+    "new_method_obstruction": "The strict positivity/refined water-filling envelope cannot be transferred: the rank-seven Fourier truncation has sign-changing effective row weights.  Its local root also remains below the cap-curvature threshold.",
+    "object": "Rank-Seven Replacement-Envelope Audit",
+    "packet_file": "FIN_ST410_Rank7_Replacement_Envelope_Audit.json",
+    "packet_sha256": "fe5738350f2ad87f11f73bf4075d5e08a43d1b4bc359deca159eca52cfe96b0c",
+    "previous_cap_curvature_threshold": 0.9323580131224308,
+    "program": "ST410",
+    "rank7_row_weights": [
+      0.7102544783597498,
+      0.12346618833839197,
+      -0.17141297146000997,
+      -0.1472350536405737,
+      0.04670400338683532,
+      0.14822554402486374,
+      0.04670400338683532,
+      -0.1472350536405737,
+      -0.17141297146000997,
+      0.12346618833839197,
+      0.7102544783597498
+    ],
+    "status": "bounded_no_go_for_strict_positive_weight_and_cap_methods"
+  },
+  "ST411": {
+    "Molien_degree8_dimension": 1892,
+    "boundary": "No explicit minimal relation basis or full invariant-ring presentation is claimed.",
+    "degree6_declared_candidate_syzygies": 0,
+    "degree8_formal_product_counts": {
+      "primitive4_products": 528,
+      "q2_times_primitive4": 672,
+      "q4": 126,
+      "q_times_primitive6": 702
+    },
+    "forced_degree8_relation_nullity_lower_bound": 136,
+    "generators_through_degree_six": {
+      "degree2": 6,
+      "primitive_degree4": 32,
+      "primitive_degree6": 117
+    },
+    "object": "First Forced Relations in the D12 Invariant Generator Family",
+    "packet_file": "FIN_ST411_First_Forced_Invariant_Relations.json",
+    "packet_sha256": "026ad2dbfd7d3cd84164edc2a7c91eb67dab09666599794be4a602eeb49a5918",
+    "program": "ST411",
+    "status": "proven_at_least_136_degree8_syzygies_by_rank_nullity",
+    "theorem": "The declared degree-six generated family is independent, but its 2,028 formal degree-eight products map into a 1,892-dimensional invariant space.  Rank-nullity forces at least 136 degree-eight relations.  Degree eight is therefore the first forced relation degree for this chosen generator family.",
+    "total_degree8_candidates": 2028
+  },
+  "ST412": {
+    "boundary": "The design and noise are synthetic; no laboratory instrument or measured coefficient is supplied.",
+    "coefficients": 365,
+    "column_normalization": "unit Euclidean norm",
+    "condition_number": 15034.560307866826,
+    "exact_algebraic_rank_source": "ST378/ST393 modular rank 365",
+    "largest_singular_value": 4.573200851487497,
+    "numerical_rank_tolerance_1e_10": 365,
+    "object": "Noise-Aware Sextic Invariant Coefficient Rank",
+    "observations": 500,
+    "packet_file": "FIN_ST412_Noise_Aware_Invariant_Coefficient_Rank.json",
+    "packet_sha256": "71ff37ab45e83bfdf0845aefa7acd080e8ae9b22c3697932efdaff85a55e0850",
+    "program": "ST412",
+    "result": "Generic vertex-resolving evaluations retain full numerical rank after column normalization, but the finite design is ill-conditioned.  Algebraic identifiability does not imply stable coefficient recovery under noise.",
+    "singular_values_below_1e_2": 11,
+    "smallest_singular_value": 0.0003041792215961628,
+    "status": "exact_algebraic_rank_with_numerical_noise_conditioning_warning",
+    "supplied_generic_design_seed": 20261234,
+    "supplied_noise_sigma": 0.001,
+    "worst_direction_least_squares_standard_deviation": 3.2875355349801936
+  },
+  "ST413": {
+    "Birkhoff_gap_lower": 0.019926291589078788,
+    "adapted_product_metric_weight_Lipschitz": 0.18333333333333332,
+    "boundary": "The HMM and Chernoff fixture remain synthetic and are not a FIN-derived detector.",
+    "declared_s_interval": [
+      0.45,
+      0.55
+    ],
+    "derivation": "max_b |d_h log(e1+(e0-e1)b)|=|sqrt(e0)-sqrt(e1)|/(sqrt(e0)+sqrt(e1))",
+    "exact_emission_log_derivative_bound": "1/3",
+    "filter_contraction": 0.7142857142857143,
+    "improvement_in_log10_orders": 69.8995720210112,
+    "invariant_cone_slope": 0.6416666666666667,
+    "log10_gap_lower": -1.7005735187734994,
+    "object": "Adapted-Metric Chernoff Cone Gap",
+    "packet_file": "FIN_ST413_Adapted_Chernoff_Cone_Gap.json",
+    "packet_sha256": "221d9b077d191f28dd081d2cfccc853aba7a2f812eb20e4dd53de860bdab84da",
+    "previous_log10_gap_lower": -71.60014553978469,
+    "program": "ST413",
+    "projective_diameter_upper": 9.197698608704016,
+    "state_diameter": 7.16703787691222,
+    "status": "proven_conditional_gap_improved_by_over_69_orders",
+    "theorem": "Using the exact Hilbert-coordinate derivative of the supplied binary emission weights replaces the coarse 6.6 bound by 11/60.  The same invariant-cone argument then gives the displayed nonastronomical explicit contraction gap."
+  },
+  "ST414": {
+    "active_time_box": [
+      3.9945,
+      4.0055
+    ],
+    "boundary": "Maximality is only relative to the fixed center/radius template.  A full complement-sign topology cover is not re-certified on the enlarged box.",
+    "budget_box": [
+      2.9945,
+      3.0055
+    ],
+    "certified_delta": 0.0055,
+    "expansion_factor_over_ST395_parameter_halfwidth": 54.99999999999999,
+    "fixed_template_bisection_trials": [
+      {
+        "delta": 0.0055,
+        "included": true,
+        "minimum_margin": 8.935778132057592e-05
+      },
+      {
+        "delta": 0.00575,
+        "included": false,
+        "minimum_margin": -0.00042712428596036744
+      },
+      {
+        "delta": 0.005625,
+        "included": false,
+        "minimum_margin": -0.00016307802296910978
+      },
+      {
+        "delta": 0.0055625,
+        "included": false,
+        "minimum_margin": -3.541008261409573e-05
+      },
+      {
+        "delta": 0.00553125,
+        "included": true,
+        "minimum_margin": 2.733620048056551e-05
+      },
+      {
+        "delta": 0.005546875,
+        "included": false,
+        "minimum_margin": -3.946333491544607e-06
+      },
+      {
+        "delta": 0.0055390625,
+        "included": true,
+        "minimum_margin": 1.1717582913295388e-05
+      },
+      {
+        "delta": 0.00554296875,
+        "included": true,
+        "minimum_margin": 3.891287375434871e-06
+      },
+      {
+        "delta": 0.005544921875,
+        "included": false,
+        "minimum_margin": -2.610735361230354e-08
+      },
+      {
+        "delta": 0.0055439453125,
+        "included": true,
+        "minimum_margin": 1.9329439324700104e-06
+      },
+      {
+        "delta": 0.00554443359375,
+        "included": true,
+        "minimum_margin": 9.535067699850686e-07
+      },
+      {
+        "delta": 0.005544677734375,
+        "included": true,
+        "minimum_margin": 4.6372182849196975e-07
+      }
+    ],
+    "fixed_template_first_failed_delta": 0.005544921875,
+    "fixed_template_last_included_delta": 0.005544677734375,
+    "object": "Expanded Uniform Continuum-IR Krawczyk Tube",
+    "packet_file": "FIN_ST414_Expanded_IR_Krawczyk_Tube.json",
+    "packet_sha256": "7e10b342cd3e09d80173c64c88d91a3eee554f6619b03a63be1faf5a989abbf5",
+    "parametric_Krawczyk": {
+      "component_margins": [
+        0.000373103173134607,
+        0.001958201391523584,
+        8.935778132057592e-05,
+        0.0002542584480735993,
+        0.0013730847835601162
+      ],
+      "included": true,
+      "minimum_margin": 8.935778132057592e-05,
+      "radii": [
+        0.00055,
+        0.022,
+        0.027499999999999997,
+        0.00055,
+        0.0022
+      ]
+    },
+    "program": "ST414",
+    "root_derivative_intervals": [
+      [
+        3.681871060302459,
+        3.72658457769382
+      ],
+      [
+        -0.040057023125086924,
+        -0.02211581191881845
+      ],
+      [
+        0.016721554563799795,
+        0.025677912486132583
+      ]
+    ],
+    "root_radii": [
+      0.00055,
+      0.022,
+      0.027499999999999997,
+      0.00055,
+      0.0022
+    ],
+    "status": "proven_unique_root_tube_55_times_wider_in_parameters",
+    "theorem": "One common interval box contains a unique KKT root for every parameter pair in the displayed rectangle, expanding the certified ST395 parameter halfwidth by 55."
+  },
+  "ST415": {
+    "boundary": "The boundary is a supplied dimensionless optimization transition, not a physical phase transition or IR scale.",
+    "branch_attachment_status": "strong numerical evidence, not an interval-certified singular continuation",
+    "interpretation": "At a=0 the large-y linear term disappears, so the third threshold escapes to infinity and the upper active band vanishes.  The limiting four-equation face has a unique root in the certified box.",
+    "limiting_face": "a=0 and y3=+infinity",
+    "limiting_face_Krawczyk": {
+      "component_margins": [
+        9.999996147119772e-09,
+        9.997356720248263e-09,
+        9.999978442531976e-09,
+        9.99988358785231e-09
+      ],
+      "included": true,
+      "minimum_margin": 9.997356720248263e-09,
+      "radius": 1e-08
+    },
+    "limiting_root_center": [
+      0.028635829467934998,
+      3.8912089037595443,
+      0.06945008282208044,
+      2.442181977094556
+    ],
+    "limiting_unknowns": [
+      "y1",
+      "y2",
+      "nu",
+      "T"
+    ],
+    "numerical_branch_approach_rows": [
+      {
+        "T": 4.0,
+        "a": 0.020731900077375385,
+        "residual": 2.220446049250313e-16,
+        "y3": 2.559097629565374
+      },
+      {
+        "T": 3.98,
+        "a": 0.02045002025369468,
+        "residual": 4.971995037905685e-13,
+        "y3": 2.5810975923486095
+      },
+      {
+        "T": 3.96,
+        "a": 0.02017013499826035,
+        "residual": 5.171973960216292e-13,
+        "y3": 2.6034987487741628
+      },
+      {
+        "T": 3.94,
+        "a": 0.01989224318874547,
+        "residual": 5.378197887040415e-13,
+        "y3": 2.6263125870245116
+      },
+      {
+        "T": 3.92,
+        "a": 0.019616343195642504,
+        "residual": 5.589140261719194e-13,
+        "y3": 2.6495510808292977
+      },
+      {
+        "T": 3.9,
+        "a": 0.019342432861415217,
+        "residual": 5.8056337515211e-13,
+        "y3": 2.673226718259487
+      },
+      {
+        "T": 3.88,
+        "a": 0.019070509478271564,
+        "residual": 6.026013021909193e-13,
+        "y3": 2.6973525327718777
+      },
+      {
+        "T": 3.86,
+        "a": 0.01880056976431419,
+        "residual": 6.250694406517709e-13,
+        "y3": 2.721942136726771
+      },
+      {
+        "T": 3.84,
+        "a": 0.01853260983790694,
+        "residual": 6.478706460200101e-13,
+        "y3": 2.747009757623158
+      },
+      {
+        "T": 3.82,
+        "a": 0.01826662519007709,
+        "residual": 6.707551181150961e-13,
+        "y3": 2.7725702773244825
+      },
+      {
+        "T": 3.8,
+        "a": 0.01800261065475283,
+        "residual": 6.937089791492212e-13,
+        "y3": 2.798639274580434
+      },
+      {
+        "T": 3.78,
+        "a": 0.01774056037661101,
+        "residual": 7.16468551154037e-13,
+        "y3": 2.8252330711871854
+      },
+      {
+        "T": 3.76,
+        "a": 0.017480467776283818,
+        "residual": 7.389505674026964e-13,
+        "y3": 2.8523687821706036
+      },
+      {
+        "T": 3.74,
+        "a": 0.017222325512642835,
+        "residual": 7.60821960987812e-13,
+        "y3": 2.8800643704250097
+      },
+      {
+        "T": 3.7199999999999998,
+        "a": 0.016966125441843966,
+        "residual": 7.817774205776118e-13,
+        "y3": 2.908338706295028
+      },
+      {
+        "T": 3.7,
+        "a": 0.01671185857277794,
+        "residual": 8.014838792647083e-13,
+        "y3": 2.9372116326511457
+      },
+      {
+        "T": 3.68,
+        "a": 0.01645951501852621,
+        "residual": 8.324313460761346e-13,
+        "y3": 2.9667040360819876
+      },
+      {
+        "T": 3.66,
+        "a": 0.016209083943371144,
+        "residual": 8.738287871068451e-13,
+        "y3": 2.9968379249098613
+      },
+      {
+        "T": 3.64,
+        "a": 0.0159605535048511,
+        "residual": 9.1773810773077e-13,
+        "y3": 3.027636514832346
+      },
+      {
+        "T": 3.62,
+        "a": 0.015713910790284197,
+        "residual": 9.643813525528344e-13,
+        "y3": 3.0591243231043466
+      },
+      {
+        "T": 3.6,
+        "a": 0.015469141747107918,
+        "residual": 1.0141193440560414e-12,
+        "y3": 3.0913272723043024
+      },
+      {
+        "T": 3.58,
+        "a": 0.015226231106293984,
+        "residual": 1.0672851491477786e-12,
+        "y3": 3.1242728048789106
+      },
+      {
+        "T": 3.56,
+        "a": 0.01498516229799582,
+        "residual": 1.124253468098857e-12,
+        "y3": 3.15799000983625
+      },
+      {
+        "T": 3.54,
+        "a": 0.014745917358469298,
+        "residual": 1.1855655346337812e-12,
+        "y3": 3.1925097631627795
+      },
+      {
+        "T": 3.52,
+        "a": 0.014508476827172044,
+        "residual": 1.2517209491136327e-12,
+        "y3": 3.2278648837807267
+      },
+      {
+        "T": 3.5,
+        "a": 0.0142728196327886,
+        "residual": 1.32342747871661e-12,
+        "y3": 3.264090307146263
+      },
+      {
+        "T": 3.48,
+        "a": 0.01403892296674753,
+        "residual": 1.401365135045296e-12,
+        "y3": 3.301223278923882
+      },
+      {
+        "T": 3.46,
+        "a": 0.013806762142582115,
+        "residual": 1.5645262863017706e-12,
+        "y3": 3.3393035715694825
+      },
+      {
+        "T": 3.44,
+        "a": 0.013576310439239412,
+        "residual": 1.8696155734687636e-12,
+        "y3": 3.378373727126435
+      },
+      {
+        "T": 3.42,
+        "a": 0.013347538926150112,
+        "residual": 2.2082335959794364e-12,
+        "y3": 3.418479330102103
+      },
+      {
+        "T": 3.4,
+        "a": 0.01312041626753111,
+        "residual": 2.5794921754140887e-12,
+        "y3": 3.4596693149660807
+      },
+      {
+        "T": 3.38,
+        "a": 0.012894908502989395,
+        "residual": 2.9840574455874957e-12,
+        "y3": 3.501996313622146
+      },
+      {
+        "T": 3.36,
+        "a": 0.012670978801021929,
+        "residual": 3.4203750942651823e-12,
+        "y3": 3.5455170491836183
+      },
+      {
+        "T": 3.34,
+        "a": 0.012448587181442589,
+        "residual": 3.891109656706249e-12,
+        "y3": 3.590292783567456
+      },
+      {
+        "T": 3.32,
+        "a": 0.012227690202099515,
+        "residual": 4.396261132910695e-12,
+        "y3": 3.63638982786537
+      },
+      {
+        "T": 3.3,
+        "a": 0.012008240604448888,
+        "residual": 4.937827924322846e-12,
+        "y3": 3.683880126215144
+      },
+      {
+        "T": 3.2800000000000002,
+        "a": 0.011790186911598121,
+        "residual": 5.520250923041203e-12,
+        "y3": 3.732841926064199
+      },
+      {
+        "T": 3.26,
+        "a": 0.011573472971287723,
+        "residual": 6.151301690238142e-12,
+        "y3": 3.7833605503958876
+      },
+      {
+        "T": 3.24,
+        "a": 0.011358037434902182,
+        "residual": 6.837863608666339e-12,
+        "y3": 3.8355292908148115
+      },
+      {
+        "T": 3.2199999999999998,
+        "a": 0.011143813161933299,
+        "residual": 7.593703443831146e-12,
+        "y3": 3.88945044453958
+      },
+      {
+        "T": 3.2,
+        "a": 0.010930726537296213,
+        "residual": 8.433698184262539e-12,
+        "y3": 3.9452365235648696
+      },
+      {
+        "T": 3.1799999999999997,
+        "a": 0.010718696686429552,
+        "residual": 9.378720022823472e-12,
+        "y3": 4.003011670841826
+      },
+      {
+        "T": 3.16,
+        "a": 0.010507634570091481,
+        "residual": 1.0453193866055699e-11,
+        "y3": 4.062913326700576
+      },
+      {
+        "T": 3.14,
+        "a": 0.01029744193704733,
+        "residual": 1.1685541423389623e-11,
+        "y3": 4.125094199459065
+      },
+      {
+        "T": 3.12,
+        "a": 0.010088010108257174,
+        "residual": 1.3113732322267424e-11,
+        "y3": 4.189724607982088
+      },
+      {
+        "T": 3.1,
+        "a": 0.009879218560477738,
+        "residual": 1.4778844814600234e-11,
+        "y3": 4.256995281902638
+      },
+      {
+        "T": 3.08,
+        "a": 0.00967093327009603,
+        "residual": 1.6729950758076484e-11,
+        "y3": 4.327120728712398
+      },
+      {
+        "T": 3.06,
+        "a": 0.009463004769124943,
+        "residual": 1.9021006991692957e-11,
+        "y3": 4.4003433079375
+      },
+      {
+        "T": 3.04,
+        "a": 0.009255265854110333,
+        "residual": 2.1712187603384336e-11,
+        "y3": 4.476938193903949
+      },
+      {
+        "T": 3.02,
+        "a": 0.009047528874573456,
+        "residual": 2.486255645806068e-11,
+        "y3": 4.557219464079626
+      },
+      {
+        "T": 3.0,
+        "a": 0.008839582509694204,
+        "residual": 2.852207359183012e-11,
+        "y3": 4.641547625267176
+      },
+      {
+        "T": 2.98,
+        "a": 0.008631187919134677,
+        "residual": 3.272293547240679e-11,
+        "y3": 4.730338993138253
+      },
+      {
+        "T": 2.96,
+        "a": 0.008422074124807397,
+        "residual": 3.744649035297698e-11,
+        "y3": 4.824077483649676
+      },
+      {
+        "T": 2.94,
+        "a": 0.008211932443240255,
+        "residual": 4.258882135843578e-11,
+        "y3": 4.923329575417691
+      },
+      {
+        "T": 2.92,
+        "a": 0.008000409740831197,
+        "residual": 4.78892481226012e-11,
+        "y3": 5.0287634866496305
+      },
+      {
+        "T": 2.9,
+        "a": 0.00778710022425119,
+        "residual": 5.2833071251257024e-11,
+        "y3": 5.14117401904015
+      },
+      {
+        "T": 2.88,
+        "a": 0.007571535403079924,
+        "residual": 5.6523452585111045e-11,
+        "y3": 5.261515116202591
+      },
+      {
+        "T": 2.86,
+        "a": 0.007353171769865746,
+        "residual": 5.7565952005234067e-11,
+        "y3": 5.390943062565339
+      },
+      {
+        "T": 2.84,
+        "a": 0.007131375635624309,
+        "residual": 5.4114268621674455e-11,
+        "y3": 5.53087456320094
+      },
+      {
+        "T": 2.8200000000000003,
+        "a": 0.006905404445630045,
+        "residual": 4.4328318793418475e-11,
+        "y3": 5.683065940217498
+      },
+      {
+        "T": 2.8,
+        "a": 0.0066743838090680485,
+        "residual": 2.7425617332710317e-11,
+        "y3": 5.849722751463354
+      },
+      {
+        "T": 2.7800000000000002,
+        "a": 0.006437279476048992,
+        "residual": 3.934108594449981e-11,
+        "y3": 6.033653922470924
+      },
+      {
+        "T": 2.76,
+        "a": 0.006192863745848141,
+        "residual": 5.60850810238378e-11,
+        "y3": 6.2384920223583045
+      },
+      {
+        "T": 2.74,
+        "a": 0.005939676638675625,
+        "residual": 6.931030749335321e-11,
+        "y3": 6.469013282238261
+      },
+      {
+        "T": 2.7199999999999998,
+        "a": 0.005675984336356633,
+        "residual": 7.552326819482147e-11,
+        "y3": 6.7316099789992965
+      },
+      {
+        "T": 2.7,
+        "a": 0.00539974232474063,
+        "residual": 7.273225077764067e-11,
+        "y3": 7.034997815370544
+      },
+      {
+        "T": 2.6799999999999997,
+        "a": 0.005108580866832722,
+        "residual": 8.618245006530856e-13,
+        "y3": 7.39128729995202
+      },
+      {
+        "T": 2.66,
+        "a": 0.004799849245579493,
+        "residual": 5.846850781310309e-13,
+        "y3": 7.81761756576692
+      },
+      {
+        "T": 2.6399999999999997,
+        "a": 0.004470783073358224,
+        "residual": 3.2951419370874646e-13,
+        "y3": 8.33865384257686
+      },
+      {
+        "T": 2.62,
+        "a": 0.004118878858485053,
+        "residual": 1.2012613126444194e-13,
+        "y3": 8.990423846053737
+      },
+      {
+        "T": 2.5999999999999996,
+        "a": 0.0037425068832569685,
+        "residual": 4.430900091279e-13,
+        "y3": 9.826401161302929
+      },
+      {
+        "T": 2.58,
+        "a": 0.003341554677364438,
+        "residual": 6.0748628349927e-13,
+        "y3": 10.928168739614833
+      },
+      {
+        "T": 2.56,
+        "a": 0.00291751791530166,
+        "residual": 6.899238125246399e-11,
+        "y3": 12.427482690589216
+      },
+      {
+        "T": 2.54,
+        "a": 0.002472525718352308,
+        "residual": 4.9917486810713285e-11,
+        "y3": 14.558956477137434
+      },
+      {
+        "T": 2.52,
+        "a": 0.002007846368689621,
+        "residual": 7.464232010256922e-11,
+        "y3": 17.79883636886069
+      },
+      {
+        "T": 2.5,
+        "a": 0.0015232845916783916,
+        "residual": 5.261915902998737e-12,
+        "y3": 23.28994767282454
+      },
+      {
+        "T": 2.48,
+        "a": 0.0010177816720912133,
+        "residual": 1.0296763441886014e-12,
+        "y3": 34.601784937955465
+      },
+      {
+        "T": 2.46,
+        "a": 0.0004900366957601809,
+        "residual": 3.407843451874726e-12,
+        "y3": 71.33520893411239
+      }
+    ],
+    "object": "Certified Limiting Face for Continuum-IR Upper-Band Loss",
+    "packet_file": "FIN_ST415_Certified_Limiting_IR_Band_Loss_Face.json",
+    "packet_sha256": "a2742e008d2b25127481067b21955fa2e4e1ffee5c91843ca958cf7d9f433459",
+    "point_residual_inf": 1.6997514507011147e-13,
+    "program": "ST415",
+    "status": "proven_unique_limiting_face_root_branch_attachment_numerical",
+    "theorem_scope": "unique limiting-face root only"
+  },
+  "ST416": {
+    "boundary": "Local analytic and computational work cannot manufacture external evidence.",
+    "independent_evidence_gate": {
+      "external_referee": "absent",
+      "independent_lab": "absent",
+      "new_empirical_data": "absent"
+    },
+    "mathematical_exports": [
+      "independent orbit replay",
+      "gain persistence tube",
+      "degree-eight relation lower bound",
+      "adapted Chernoff gap",
+      "expanded IR root tube",
+      "limiting IR face"
+    ],
+    "object": "Strict-Source and Independent-Evidence Gates",
+    "packet_file": "FIN_ST416_Strict_Source_and_Independent_Evidence_Gates.json",
+    "packet_sha256": "e966eb5ac4b7d2825144c941f202042a2945c919959f377add1d8fc797300f89",
+    "program": "ST416",
+    "promotion_forbidden": [
+      "physical vacuum",
+      "Born probabilities",
+      "Standard Model",
+      "gravity",
+      "Theory of Everything"
+    ],
+    "status": "gates_remain_open_despite_new_local_mathematics",
+    "strict_source_gate": {
+      "gain": "open",
+      "laboratory_record": "absent",
+      "legacy_to_strict_bridge": "open",
+      "selector": "QW-2191 open",
+      "units": "open"
+    }
+  },
+  "metadata": {
+    "date": "2026-08-14",
+    "mpmath": "1.2.1",
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "seed": 20260822,
+    "title": "FIN ST402--ST416 research results"
+  }
+}

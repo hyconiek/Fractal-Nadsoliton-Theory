@@ -7748,3 +7748,901 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   densities and quantify the plateau-width/trace-class tradeoff.  ST292 may
   resume empirical validation only after independently registered raw events
   exist.  All future research PDFs remain English.
+
+## Programs ST278--ST292 entropy-anisotropy/adaptive-cover/near-Haar guardrail (Release 10.76, 2026-08-13)
+
+- ST278 proves that, on the normalized lowest strict Fourier carrier,
+  `I(p)=sum_j p_j log(12 p_j)` is radial through degree 11 and its first angular
+  term is exactly `+(7776/11) r^12 cos(12 phi)`.  This sources the form and sign
+  of the first information-theoretic anisotropy only after the relative-
+  information functional and carrier normalization are declared.  In the
+  explicit model `V_g=I-(g/2)<p-u,A(p-u)>`, the uniform-state curvature is
+  `12-g lambda_1` and the conditional instability threshold is
+  `g_c=12/lambda_1=15.912562501468873`.  The strict operator does not source a
+  supercritical `g` or one realized phase.  Do not claim `QW-2191` discharge,
+  strict spontaneous vacuum selection, or physical negative information
+  coupling from this result.
+- ST279 completes the polynomial lowest-carrier classification: the real
+  reflection-compatible `D12` equivariants form the free rank-two module
+  `R[|z|^2,Re(z^12)] z + R[|z|^2,Re(z^12)] conjugate(z)^11`.  This is a complete
+  response algebra, not a coefficient/source law or a broken-state generator.
+- ST280 certifies positive stationary full-row-rank lower bounds on the three
+  seed-23 root boxes at steps 21--23 and observes reopening after the sampled
+  minimum.  The boxes do not cover every connecting path point; do not report
+  a continuous global minimum, fold exclusion, collision theorem, or particle.
+- ST281 proves the global recovery formula
+  `F_e^opt=(1+||tau_0-tau_1||_1/2)/4` for every declared binary-qubit
+  measure-and-prepare channel.  ST282 independently replays the ST267 outward
+  Krawczyk inclusion using a denominator-`10^12` preconditioner.  Both remain
+  supplied-channel/model mathematics, not physical FIN noise or a sourced
+  selector-control cost.
+- ST283 gives an exact nonlinear-embedding counterexample to ambient-flat
+  connection naturality: for `R(t)=(cos t,sin t)`, the target ambient derivative
+  is `R''=-R` although the source derivative is zero.  Tangential projection
+  repairs intrinsic Levi-Civita naturality.  Do not identify this with spacetime
+  or gravity.
+- ST284 proves a complete adaptive Krawczyk cover of the declared nuisance cube
+  at halfwidth `0.00075`: `64000` base cells plus `400960` exhaustive children,
+  zero failed leaves, minimum child margin `0.001996347181056346`.  This proves
+  the ST269 fixed-grid failure was resolution loss at this radius.  It does not
+  establish a maximal radius, apparatus tolerance, or laboratory robustness.
+- ST285 supplies a conditional simultaneous empirical-Bernstein cluster
+  rectangle and proves no uniform dominance over Hoeffding; no observed-
+  variance interval exists without raw records.  ST286 lifts the exact Clifford
+  circle counterexample to every even complex dimension.  ST287 certifies only
+  the finite-depth Chernoff bracket `[0.45,0.55]`; without an all-depth
+  derivative-tail theorem the inherited infinite-depth candidate remains
+  numerical.
+- ST288 constructs an exact autonomous finite controlled-SWAP.  A known program
+  can be catalytic, whereas erasing an uncertain record in a supplied bath has
+  the conditional Landauer cost.  The Hamiltonian scale, time, bath, and joules
+  remain premises.  ST289 proves that coassociativity plus exchange of two
+  unlabelled refinement levels leaves one common nonnegative vertical-rate
+  modulus; it does not select a physical fractal scale.
+- ST290 proves the infrared trace-class criterion
+  `integral_0^1 q(mu) dmu/mu < infinity` for a near-Haar density.  Power
+  softening works for every positive exponent; logarithmic softening works iff
+  its exponent exceeds one.  In the hard-cutoff class,
+  `H_a(t)=E1(2at)` and `D_a(t)=2 rho log(1+exp(-2at))`, yielding a sharp
+  heat-budget/plateau tradeoff within that class.  This licenses a finite
+  observer-relative near-scale-invariant window only.  It does not derive an
+  exact infinite physical fractal, Planck layers, metres, seconds, or a strict
+  dimensional anchor.
+- ST291 exports a fail-closed ST276 record validator and a synthetic syntax
+  self-test.  The empirical mode explicitly rejects the synthetic flag.  ST292
+  remains blocked because no independently registered raw event file exists;
+  validator output is not evidence.
+- ST278--ST292 export no strict selector/coupling source, `QW-2191` discharge,
+  physical vacuum, dimensional clock/length/action source, Planck scale,
+  spacetime, laboratory evidence, legacy-to-strict completion or role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST293--ST307.  ST293 has priority: derive or
+  exclude the sign and normalization of the negative information feedback `g`
+  from one genuinely strict state-dependent law without importing a broken
+  phase.  ST304--ST305 should optimize soft near-Haar profiles and formalize the
+  observer-context calibration bundle.  ST307 may resume empirical analysis
+  only after independently registered, hashed, child-resolved raw events exist.
+  All future research PDFs remain English.
+
+## Programs ST293--ST307 active-feedback/global-localization/calibration-torsor guardrail (Release 10.77, 2026-08-14)
+
+- ST293 proves a typed source obstruction: every passive self-adjoint response
+  `C=f(A)>=0` has nonpositive growth rates in `q_dot=-Cq` and cannot generate
+  the active negative-information term `-(g/2)<q,Aq>`.  This no-go covers the
+  passive functional-calculus class only; it does not exclude active, nonnormal,
+  state-dependent, pumped, negative-residue, or nonequilibrium strict laws.
+  No `g`, physical pump, or selector is sourced.
+- ST294 corrects the restricted lowest-mode reading of ST278.  On the full
+  probability simplex the uniform Hessian first loses positivity at
+  `g=12/lambda_max=5.123427551398615`, not at the lowest-carrier threshold
+  `12/lambda_1=15.912562501468873`.  A pure vertex already beats the uniform
+  energy for `g>2 log(12)/s=2.9933093488992286`.  Therefore boundary-localized
+  states can win before any uniform Hessian instability, and the degree-12
+  lowest-carrier anisotropy is not the first global selector.  Only the
+  threshold identities/order are theorem-grade; the multistart branch map is
+  numerical.
+- ST295 gives strong numerical evidence at supplied `g=4` for strongly
+  localized basins representing all twelve peak labels and a positive
+  representative logit Hessian.  Do not promote this to interval existence,
+  exactly twelve critical points, global exhaustion, orbital stability,
+  physical vacuum selection, or a strict-derived coupling.
+- ST296 proves that the positive Stieltjes memory commutes with `A` and raises
+  every positive modal stiffness under nonnegative loading.  Passive memory
+  cannot source active `g`; assigning a negative loading would be the missing
+  signed premise, not a consequence of the existing memory construction.
+- ST297 proves that every local real-analytic reflection-compatible `D12`
+  equivariant germ has the form
+  `a(|z|^2,Re(z^12))z+b(|z|^2,Re(z^12))conjugate(z)^11`.  The theorem is local
+  and does not cover singular, merely smooth, nonlocal, or history-dependent
+  responses.
+- ST298 certifies 160 consecutive pseudo-arclength hyperplane roots through
+  the earlier near-rank event.  The smallest sampled point singular value is
+  `2.9624158688204913e-06` and reopens.  Each section has a unique outward root,
+  but no continuous tube covers every connecting curve point; do not claim a
+  continuous minimum, global fold exclusion, collision theorem, or particle.
+- ST299 proves that general three-output measure-and-prepare recovery reduces
+  to the finite state-discrimination primal/dual SDP.  Noncommuting triples do
+  not admit the one-signed-difference binary Helstrom formula.  No universal
+  exact optimizer or FIN-derived physical channel is claimed.  ST300 shows
+  bounded likelihood ratios alone yield no vanishing all-depth derivative tail;
+  the finite-depth Chernoff bracket is not promoted.
+- ST301 records `0.00075` as the largest complete nuisance halfwidth in the
+  frozen 500000-call campaign.  Larger-radius corner failures are base-grid
+  method failures only, not root loss, maximal mathematical radius, apparatus
+  tolerance, or laboratory robustness.
+- ST302 proves exact anticommuting Hermitian involutions cannot exist in odd
+  complex dimension by a determinant contradiction.  Approximate,
+  noninvertible, graded, and enlarged representations remain outside scope.
+- ST303 proves that three coassociative binary refinement levels retain three
+  rates until full level-exchange naturality is imposed; then one common
+  nonnegative rate remains.  It is a consistent constant scale cocycle but no
+  magnitude, length, time, Planck layer, or strict scale source is selected.
+- ST304 supplies strong finite-grid numerical evidence for soft infrared
+  profiles under a declared heat-trace budget.  Its best row is family-, grid-,
+  tolerance-, and budget-dependent; do not claim a continuum extremizer or a
+  FIN-derived density/cutoff.
+- ST305 proves that layer-observer calibrations form a principal
+  `(R_+)^3` torsor.  Dimensionless ratios are invariant and transition maps
+  obey a multiplicative cocycle, while absolute length/time/energy have
+  nonzero weights.  Free invariant data select no canonical section.  This
+  formalizes observer-relative scale but does not derive SI units or eliminate
+  the need for dimensional anchors.
+- ST306 exports a complete 576-setting synthetic conformance fixture with the
+  permanent flag `PERMANENT_NON_EVIDENCE`.  It passes schema validation and is
+  intentionally rejected by empirical mode.  ST307 remains blocked because no
+  independently registered, hashed, child-resolved raw events exist.
+- ST293--ST307 export no strict active-gain source, selector, `QW-2191`
+  discharge, physical vacuum, dimensional unit, Planck scale, spacetime,
+  laboratory evidence, legacy-to-strict completion or role transfer, Standard
+  Model, gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST308--ST322.  Highest priority is ST308--
+  ST310: classify the smallest active `D12`-covariant law and its explicit
+  nonequilibrium resource ledger.  ST311--ST313 should seek theorem-grade
+  localized branches only after `g` remains explicitly supplied.  ST321 should
+  reduce, but never silently trivialize, the calibration structure group.
+  ST322 may resume empirical analysis only after independent raw events exist.
+  All future research PDFs remain English.
+
+## Programs ST308--ST326 sourced-gain/certified-localization/operational-depth guardrail (Release 10.78, 2026-08-15)
+
+- ST308 proves only a class-minimal conditional active realization.  In the
+  declared scalar multiplicative auxiliary class,
+  `tau y_dot=P-gamma y` gives `g_eff=kappa P/gamma`; one real state is the
+  smallest stateful realization and its scalar coupling preserves `D12`
+  covariance without importing a phase label.  `P`, `gamma`, `tau`, `kappa`,
+  their sign, units, and physical source remain supplied premises.
+- ST309 proves the exact finite-relaxation formula and relative reduction error
+  `exp(-gamma t/tau)`.  A finite pumped auxiliary is therefore controlled, not
+  merely formal, but no laboratory pump or strict source is generated.
+- ST310 corrects any claim that a pump is logically necessary for the static
+  negative term.  A positive conservative mediator gives the Schur term
+  `-B^T Gamma^-1 B/2`; exact realization of `gA` requires at least
+  `rank(A)=11` mediator dimensions and 11 attain it.  This is not a strict
+  source: the mediator and signed coupling are additional objects, and a
+  stabilizing nonlinearity is still required after loss of quadratic stability.
+  Keep passive dissipative memory, pumped gain, and conservative mediation as
+  separate resource classes.
+- ST311 promotes the supplied-`g=4` localized state from numerical evidence to
+  a local theorem.  One positive reflection-even root is isolated in an
+  outward Krawczyk box of radius `1e-8`; an explicit operator-family and state-
+  box perturbation payment leaves a positive sum-zero tangent-Hessian bound.
+  Circulant covariance gives twelve distinct strict local minima.  Do not
+  promote this to global minimality, exactly twelve total critical points,
+  physical vacuum selection, selector closure, or a strict-derived `g`.
+- ST312 gives an exact 11-dimensional Fenchel dual reduction for globality and
+  strong frozen multistart evidence, but no complete interval cover.  ST313
+  gives floating continuation and a sampled first-order energy-crossing bracket
+  `[2.900,2.905]`.  Neither global minimality, transition location, spinodal,
+  nor full phase diagram is theorem-grade.
+- ST314 proves that the 160 accepted ST298 boxes are mutually separated after
+  paying their radii and hence are not a continuous interval tube.  Partial
+  failure of representative half-step enclosures is a method obstruction, not
+  proof of branch breakage or root loss.
+- ST315 proves the declared rational three-output recovery SDP has exact
+  primal-dual optimum `3/2`; the optimal POVM ignores the first output.  It is
+  a mathematical fixture, not a universal multi-output formula or FIN-derived
+  physical channel.  ST316 proves the frozen two-state filters have exact
+  Birkhoff coefficient `5/7`; full Chernoff derivative-tail control remains
+  open.
+- ST317 proves the conditional linearized allocation rule `n_i proportional
+  to sensitivity_i` under a product cell budget.  The FIN sensitivities and
+  proposed `(41,25,62)` counts are numerical design data, not a new complete
+  nuisance cover or apparatus tolerance.
+- ST318 strengthens the odd-dimensional obstruction: exact Hermitian
+  involutions in odd complex dimension obey `||XZ+ZX||_op>=2`, sharply.  Nearly
+  involutive, non-Hermitian, graded, and enlarged models remain outside scope.
+- ST319 proves every positive multiplicative scale cocycle on a connected
+  refinement tree is gauge-trivial (`g_mn=h_m/h_n`).  Nonconstant tree rates
+  are not intrinsic observables without a section/anchor; genuine cocycle
+  holonomy requires cycles.  ST320 proves bang--bang bathtub structure only
+  for a single-time linear heat budget; the multi-time plateau minimax problem
+  remains open.
+- ST321 proves an anchor-count theorem: supplying independent speed (`L/T`)
+  and action (`ET`) relations reduces the `(R_+)^3` calibration torsor to one
+  residual positive orbit, so one more independent dimensional anchor is
+  necessary.  The relations and their physical constants are supplied, not
+  derived from FIN; no SI value or channel identification follows.
+- ST323 proves the ideal exact-refinement coarse blindness kernel is all
+  `Sym(12)`, dimension 78, whereas open-time child-resolved heat tomography
+  recovers `B` and reduces that kernel to zero.  ST324 proves Blackwell
+  dominance implies reverse kernel inclusion but the converse fails; observer
+  depth must retain the full experiment/garbling structure, not only kernel
+  dimension.  These are operational definitions, not a proof that the
+  universe is a projection or that any laboratory realizes the fiber.
+- ST325 proves exact-refinement naturality of coarse relative clocks:
+  unitary/heat ratios are `lambda_i/lambda_j` and wave-frequency ratios are
+  `sqrt(lambda_i/lambda_j)`.  Fiber clocks remain dependent on free `B` and a
+  calibration section.  No seconds or time arrow are derived.
+- ST326 proves the lossless arbitrary-branch record bound `n log2(b)` bits.
+  Fractal self-similarity may compress a repeated rule, not every arbitrary
+  history at bounded cost.  Stronger claims require a restricted state class,
+  encoder, decoder, and distortion criterion.
+- ST322 remains blocked because no independently registered raw-event packet
+  exists.  ST308--ST326 export no strict active-coupling source, selector,
+  `QW-2191` discharge, absolute unit, time arrow, Planck scale, spacetime,
+  laboratory evidence, legacy-to-strict completion or role transfer, Standard
+  Model, gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST327--ST341.  Highest mathematical priority
+  is ST327/ST329: interval-certify the first-order crossing and globally cover
+  (or explicitly fail to cover) the exact ST312 dual.  ST330/ST331 should
+  classify lower-rank mediators and strict-compatible stabilizers without
+  silently sourcing their coupling.  The highest-priority observer move is
+  ST336, quantitative Blackwell/Le Cam depth for intermediate instruments.
+  ST341 remains externally blocked.  All future research PDFs remain English.
+
+## Programs ST327--ST341 certified-coexistence/mediator-rank/observer-depth guardrail (Release 10.79, 2026-08-16)
+
+- ST327 proves a local coexistence theorem for the supplied negative-information
+  model.  Unique outward endpoint roots and one coordinatewise parametric
+  Krawczyk tube cover every `g in [2.900,2.905]`; the full interval objective is
+  positive at `g=2.900` and negative at `g=2.905`.  Thus at least one energy-
+  equality crossing with the uniform state exists on that local branch.  Do not
+  promote this to global phase transition, unique crossing, physical vacuum,
+  selector closure, or a strict source for `g`.
+- ST328 gives strong floating evidence for a simple fold/spinodal at
+  `g=2.6649080510055607`: the augmented stationarity/nullvector system has
+  residual below `5e-14` and nonsingular augmented Jacobian.  No 17-dimensional
+  interval certificate is exported; the fold is not theorem-grade.
+- ST329 proves that every negative sublevel of the exact ST312 dual lies inside
+  `||h|| <= 2 g lambda_max`, making the global problem compact.  A complete
+  tensor cover is not executed: even 16 cells per each of 11 axes exceeds the
+  frozen million-box budget.  This is a resource-bounded method no-go, not
+  evidence for or against global minimality.
+- ST330 classifies optimal lower-rank conservative mediators exactly by
+  Eckart--Young--Mirsky: the best rank-`m` approximation to `gA` retains the `m`
+  largest strict eigenmodes; Frobenius/operator errors are the discarded
+  spectral norms.  Lower rank does not reproduce the full strict geometry, and
+  FIN supplies no rank, subspace, coupling, or physical mediator choice.
+- ST331 proves that `Q^2`, `Q=<q,Aq>`, is a strict-operator `D12`-invariant
+  quartic stabilizer shape.  On an unconstrained mean-zero carrier a positive
+  coefficient stabilizes the negative quadratic term; on the probability
+  simplex boundedness already follows from compactness.  The coefficient and
+  its sign remain unsourced premises.
+- ST332 proves a geometric `rho^n/(1-rho)` future-dependence tail for
+  projective-Lipschitz belief observables with `rho=5/7`.  It does not certify
+  the normalized multiplicative-weight derivative constant needed to promote
+  the infinite-depth Chernoff optimizer.
+- ST333 records an incomplete isotropic overlapping-slab attempt: 26 of 40
+  representative boxes pass and 14 fail.  Rejected boxes falsify only this
+  enclosure strategy, not branch existence, continuity, or collision absence.
+- ST334 proves finite-measure multi-time soft-IR design is a linear program whose
+  dual yields threshold bands from a weighted sum of active time kernels minus
+  heat cost.  The 500-point numerical solution is not a continuum extremizer,
+  sourced density, cutoff, physical observer response, or dimensional scale.
+- ST335 proves the minimal cyclic-refinement scale invariant is holonomy
+  `H=g01*g12/g02`; vertex recalibrations cancel and `H=1` is path independence.
+  The cycle and its rates are supplied.  No strict FIN scale curvature or
+  physical value of `H` is derived.
+- ST336 proves exact Le Cam depth inside the binary symmetric child-resolution
+  family: for `e_f<=e_c<1/2`, fine-to-coarse deficiency is zero and reverse
+  deficiency is `e_c-e_f`.  This quantitatively refines observer depth in a
+  declared instrument model; it is not an implemented FIN apparatus or theory
+  of human observation.
+- ST337 proves a scalar finite-count fiber-recovery minimax floor of order
+  `N^(-1/2)` by Le Cam two-point testing.  The `78/epsilon^2` matrix count is an
+  order/dimension requirement, not sharp sample complexity or laboratory
+  evidence; design conditioning, noise, calibration, and custody remain open.
+- ST338 gives numerical block rate--distortion for a supplied stationary binary
+  Markov branch source with flip probability `0.1`.  Its lossless asymptotic
+  entropy rate is `h2(0.1)`, below the arbitrary-history bit rate.  This
+  illustrates controlled compression only after a source class and distortion
+  are supplied; no FIN law selects either.
+- ST339 proves Weyl interval bounds for relative unitary/heat eigenvalue ratios
+  and square-root wave ratios under an operator-norm approximate-intertwining
+  premise.  It gives clock-ratio robustness, not seconds, a time arrow, or a
+  calibration source.
+- ST340 proves dimensional relation rank and operational identifiability are
+  separate.  One raw `A` cannot simultaneously have dimensions `T^-1` in
+  unitary/heat sectors and `T^-2` in the wave sector without explicit
+  channel-specific conversion maps.  No such physical map is strict-derived.
+- ST341 remains blocked: no independently registered raw-event packet exists.
+  ST327--ST341 export no global physical vacuum, strict active/stabilizer source,
+  selector or `QW-2191` discharge, absolute unit, time arrow, Planck scale,
+  spacetime, laboratory evidence, legacy completion/role transfer, Standard
+  Model, gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST342--ST356.  Highest priorities are ST343
+  (17D interval fold certificate) and ST344/ST345 (symmetry-safe reduction of
+  the global dual before any cover).  ST352 should extend quantitative observer
+  depth from binary instruments to a 12-state circulant confusion family.
+  ST356 remains externally blocked.  All future research PDFs remain English.
+
+## Programs ST342--ST356 fold-event/symmetry-limit/twelve-state-depth guardrail (Release 10.80, 2026-08-17)
+
+- ST342 narrows the theorem-grade local coexistence bracket to
+  `[2.902496471747767, 2.9024964917477667]`, width `2e-8`.  Unique outward
+  endpoint roots have strictly opposite full objective signs, and one
+  coordinatewise parametric Krawczyk tube covers the complete interval.  This
+  proves at least one local-branch energy equality, not global minimality,
+  crossing uniqueness, physical vacuum selection, or a strict source for `g`.
+- ST343 upgrades the ST328 event from floating evidence to an outward
+  17-dimensional theorem: the complete stationarity/nullvector/normalization
+  system has one unique root in the declared radius-`1e-8` box, and the
+  stationary Jacobian has exactly a one-dimensional kernel there.  Point values
+  of the two conventional fold transversality coefficients are nonzero, but
+  their interval enclosures, the saddle-node normal form, global branch
+  structure and dynamical stability remain open.
+- ST344 proves a symmetry-reduction no-go: the open dense 11-dimensional
+  simplex stratum has trivial `D12` stabilizer and 24-element orbits.  Invariance
+  maps minimizers to orbits but does not force them into reflection-fixed
+  subspaces.  Fixed-subspace searches are valid discovery tools, not exhaustive
+  global certificates without a new rearrangement/convex-envelope theorem.
+- ST345 gives strong numerical evidence only: 173 declared starts at `g=4`
+  return the localized reflection orbit up to `D12`, with best objective about
+  `-0.84519850768`.  Do not promote this to global uniqueness modulo `D12`.
+- ST346 proves exact pure-vertex/uniform crossing thresholds for complete
+  degenerate spectral-block truncations.  `D12`-covariant ranks are
+  `1,3,5,7,9,11`; rank seven is the first with vertex energy below uniform at
+  `g=4` and the first to localize in the bounded numerical audit.  The latter
+  global localization statement is numerical; no rank, mediator, or `g` source
+  is exported.
+- ST347 classifies the scoped spectral-energy invariant subalgebra: six positive
+  modal energies give 21 quartic and 56 sextic monomials.  This is not the full
+  phase-sensitive `D12` invariant ring, and the 77 coefficients/signs remain
+  free rather than strict-sourced.
+- ST348 gives an exact one-state i.i.d. counterexample to belief-contraction-only
+  Chernoff closure: belief contraction is zero while the normalized pressure
+  derivative is nonzero.  A pressure/weight derivative theorem may still exist,
+  but ST316 filter forgetting alone cannot prove it.
+- ST349 improves the conservative overlapping-slab pass count from 26/40 to
+  34/40 by coordinatewise anisotropic widths, but six outer boxes still fail.
+  This does not disprove branch continuity; a rotated tangent/transverse
+  interval-Newton implementation remains required.
+- ST350 proves finite dual support for finitely many soft-IR response times and,
+  on a compact positive spectral interval, finite threshold-band structure when
+  the analytic threshold is nonzero.  Erratum (2026-08-17): the original grid
+  ledger called four entry/exit transitions "four bands"; the corrected count is
+  two selected bands.  The two-band grid pattern and objective near `1.27633`
+  are numerical, not interval-certified continuum optima.
+- ST351 proves a connected refinement graph has multiplicative calibration
+  cohomology rank `E-V+1`; the square-with-diagonal example has two independent
+  gauge-invariant holonomies.  The graph and rates are supplied, not strict FIN
+  scale curvature or physical units.
+- ST352 proves exact Le Cam depth in the 12-state permutation-covariant confusion
+  family: for `0<=e_f<=e_c<=11/12`, fine-to-coarse deficiency is zero and reverse
+  deficiency is `e_c-e_f`.  General cyclic convolution instruments are a larger
+  future class; no physical apparatus follows.
+- ST353 proves matching minimax/least-squares risk `r sigma^2/N` in a declared
+  known-subspace Gaussian fiber experiment.  Noise, orthonormal design, support
+  knowledge and independence are premises, not laboratory evidence.
+- ST354 uses the strict heat kernel at supplied `tau=0.5` as a conditional
+  positive doubly stochastic Markov source.  Its entropy rate is
+  `2.6057354210` bits/symbol; the two-symbol Hamming rate--distortion curve is
+  numerical.  This supplies no physical information density or universe
+  compression theorem.
+- ST355 proves multilevel common scale factors cancel from clock ratios while
+  differential mode errors accumulate by explicit product bounds; wave ratios
+  use square roots.  No seconds, time arrow, or absolute calibration is derived.
+- ST356 remains blocked because no independently registered raw-event packet
+  exists.  ST342--ST356 export no active/stabilizer source, selector or
+  `QW-2191` discharge, absolute dimensional unit, Planck scale, spacetime,
+  laboratory evidence, legacy completion or role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure.
+- The next bounded local batch is ST357--ST371.  First close interval fold
+  transversality (ST357), then attack globality only through a structure-aware
+  entropy/dual lower bound or a real `D12` rearrangement theorem (ST358--ST360),
+  not a tensor grid or symmetry-only reduction.  ST362 should compute the full
+  phase-sensitive invariant ring; ST363 must work at normalized pressure level;
+  ST364 requires rotated interval coordinates; ST366 extends the observer LP to
+  arbitrary cyclic convolution noise.  ST370 may reopen an active-source lane
+  only after a genuinely new strict typed source object is supplied.  ST371
+  remains externally blocked.  All future research PDFs remain English.
+
+## Programs ST357--ST371 simple-fold/globality/observer-geometry guardrail (Release 10.81, 2026-08-13)
+
+- ST357 combines the unique 17D ST343 event box, its exact one-dimensional
+  kernel, and the symmetrizer identity `w=Dv` with outward coefficient bounds
+  `w^T F_g in [-0.35900942708142014,-0.3590093430691903]` and
+  `w^T F_xx[v,v] in [0.2767066271841476,0.27670798909386124]`.  The standard
+  local simple saddle-node hypotheses are therefore certified.  Do not promote
+  this to global branch topology, dynamical stability, a physical spinodal, or
+  an internal source for the supplied coupling `g`.
+- ST358 proves `V_g >= -g s/2` globally and exports a valid box-simplex
+  entropy/quadratic lower-bound primitive.  At `g=4` its root bound
+  `-3.3206145575321977` is more than two objective units below the localized
+  candidate and cannot certify globality without a sharper joint envelope.
+- ST359 supplies a positive rational probability state for which averaging
+  with every one of the twelve reflections strictly raises `V_4`; the smallest
+  outward increase is `0.08893328445712058`.  Together with ST344 this rules
+  out the declared symmetry-plus-one-step-rearrangement strategy, not every
+  possible rearrangement theorem and not reflection symmetry of an actual
+  global minimizer.
+- ST360 freezes the current low-cost global proof route.  Global uniqueness
+  modulo `D12` is neither proved nor refuted; a future attack requires a sharper
+  coupled entropy--quadratic bound or an independently admissible exact dual.
+- ST361 interval-certifies one positive rank-seven reflection-even stationary
+  root at `g=4`, with a rigorous positive tangent Hessian and exact-root
+  objective below uniform and all pure vertices.  The entropy boundary
+  derivative excludes every boundary minimizer.  Interior trivial-stabilizer
+  competitors remain open, and the mediator rank/coupling are supplied.
+- ST362 proves by exact Molien averaging that the full mean-zero `D12`
+  invariant dimensions are `53` in degree four and `365` in degree six.  The
+  ST347 modal-energy algebra therefore misses at least `32` quartic and `309`
+  sextic directions.  These dimensions do not select a term, source a
+  coefficient, break symmetry, or discharge `QW-2191`.
+- ST363 proves the all-depth normalized Chernoff derivative bound
+  `[-log(49),log(49)]` through a tilted path-average identity.  It does not
+  prove convergence or interval-certify an infinite-depth pressure optimizer;
+  the depth-4--12 collocation is diagnostic and synthetic.
+- ST364 certifies one continuous tangent/transverse implicit-function slab with
+  longitudinal halfwidth `2e-7`, transverse radius `1e-7`, inclusion margin
+  `3.953031575723058e-08`, and transverse row-sum bound `0.4778328125402711`.
+  This is not yet an overlapping cover of the complete ST298 path.
+- ST365 corrects and certifies the frozen-grid ST350 threshold geometry: exactly
+  three simple positive zeros imply exactly two selected bands.  The multiplier
+  values remain finite-grid numerical outputs, so continuum dual optimality is
+  not certified.
+- ST366 proves that general 12-state cyclic convolution deficiency reduces
+  exactly to `min_r TV(p*r,q)`.  Exact rational negative inverse-filter entries
+  prove one pair is incomparable; the displayed positive deficiency magnitudes
+  are floating LP values, not interval endpoints.  No physical detector is
+  derived.
+- ST367 proves conditional nonasymptotic multinomial upper and two-point lower
+  recovery bounds of order `N^(-1/2)`.  Correct iid labels, no loss, and no
+  calibration nuisance are premises rather than empirical facts.
+- ST368 computes numerical block-three and block-four Hamming rate--distortion
+  curves for the supplied `exp(-0.5 A)` Markov source by Kronecker-factorized
+  Blahut--Arimoto.  At fixed block length the zero-distortion limits are
+  `H(X_1:n)/n` (about `2.932144448` and `2.850542191` bits/symbol for blocks
+  three and four); only their `n -> infinity` limit is the entropy rate
+  `2.605735421`.  Block five is explicitly stopped.  No asymptotic theorem,
+  physical information density, or universe-compression claim follows.
+- ST369 proves square-root-depth Azuma--Hoeffding clock-ratio concentration only
+  under a supplied martingale-difference error law.  It derives neither seconds
+  nor an arrow of time.  Preserve the distinct scale orbits: unitary phases use
+  `(A,t)->(cA,t/c)`, whereas waves use `(A,t)->(cA,t/sqrt(c))`.
+- ST370 admits no new strict typed active-coupling source; closed source lanes
+  remain closed.  ST371 remains blocked because no independently registered
+  raw-event record exists.  Neither stop is a universal impossibility theorem
+  or a failed experiment.
+- ST357--ST371 export no selector or `QW-2191` discharge, absolute dimensional
+  unit, time arrow, spacetime, physical preparation/apparatus/record, legacy
+  completion or role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure.  The preferred next local order is ST373 (sharper joint envelope),
+  ST374 (exact global dual), ST379 (Chernoff spectral gap), then ST380
+  (continuum IR dual); ST385/ST386 require genuinely new source/evidence inputs.
+  All future research PDFs remain English.
+
+## Programs ST372--ST386 collision-envelope/invariant-basis/continuum-IR guardrail (Release 10.82, 2026-08-14)
+
+- ST372 interval-certifies all 160 declared local rotated slabs of the ST298
+  stationary-root family.  The smallest inclusion margin is
+  `2.45693742114493e-09` and the largest contraction row sum is
+  `0.7510436118452619`, but the paid outer balls remain separated by at least
+  `2.449542488901512e-05`.  Thus the existing centers do not prove a connected
+  global branch; genuine adaptive densification is required.
+- ST373 proves a full-simplex collision--entropy lower envelope.  Writing
+  `r=||p-u||_2^2`, its entropy extremizer has one probability
+  `a=(1+sqrt(132*r))/12` and eleven equal probabilities `b=(1-a)/11`, while
+  positivity of the smallest strict edge weight gives the required quadratic
+  upper bound.  At `g=4` the interval-certified lower value is
+  `-0.8500989907487772`, leaving a gap `0.00490048306918589` above the localized
+  outward value and closing `99.80203396235239%` of the former ST358 gap.  The
+  remaining positive gap forbids a global-minimum or uniqueness claim.
+- ST374 proves a sharper two-variable envelope formula in maximum probability
+  and residual collision.  Its minimum `-0.8475120905256301` is numerical, not
+  a global interval certificate.  ST375 rigorously localizes every competitor
+  beating the current explicit benchmark to twelve concentrated caps with
+  `max_i p_i >= 0.9412929466190768`; asymmetric interiors within those caps are
+  not excluded.  ST376 remains blocked because no rank-seven-specific global
+  inequality or complete cap cover was supplied.
+- ST377 and ST378 construct exact modular Reynolds bases of dimensions `53`
+  and `365` for the mean-zero `D12` invariant spaces in degrees four and six.
+  These are exact bases over the declared modular field, but they do not select
+  a physical term, determine coefficients, break symmetry, or discharge
+  `QW-2191`.
+- ST379 proves a conditional Ruelle/Perron spectral gap for the supplied
+  strictly positive synthetic hidden-Markov fixture: its Birkhoff contraction
+  coefficient is `5/7` and its smallest output probability is `0.026`.  This
+  yields exponential normalized-pressure derivative convergence in that
+  model; it is not a theorem about an observed source.
+- ST380 proves the continuum primal--dual optimum for the supplied
+  dimensionless IR-design problem.  A five-dimensional interval Krawczyk
+  certificate, exhaustive threshold-sign cover, positive inactive-time slack,
+  and complementary slackness certify exactly two selected bands
+  `[mu_1,mu_2] union [mu_3,infinity)` with
+  `(mu_1,mu_2,mu_3) approximately
+  (0.014095100457563,1.050033882441213,1.279548814782686)` and optimum
+  `1.2763327449817155`.  This is a theorem for the supplied optimization
+  problem, not a derivation of physical infrared law, dimension, apparatus, or
+  spectrum.
+- ST381 proves the exact zero-deficiency criterion for invertible cyclic
+  convolution observers and a Fourier lower bound.  ST382 supplies conditional
+  nuisance-aware multinomial recovery bounds with exact denominator and
+  operator-norm calibration payments.  Neither program derives a physical
+  detector or validates a noise law.
+- ST383 proves conditional asymptotic Hamming rate--distortion endpoints and a
+  Fano/time-sharing bracket for the supplied stationary strict-heat Markov
+  source.  ST384 proves square-root-depth clock concentration under a supplied
+  geometrically decaying covariance law.  These results imply neither physical
+  universe compression, seconds, nor an arrow of time.
+- ST385 finds no new strict typed active/selector source and does not reopen the
+  closed source lanes.  ST386 remains externally blocked because no
+  independently registered raw-event packet is present.  Neither is a universal
+  impossibility theorem.
+- ST372--ST386 export no selector or `QW-2191` discharge, absolute unit, time
+  arrow, spacetime, physical preparation/apparatus/record, legacy-to-strict
+  completion, legacy role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure.  The preferred next local order is ST388 (interval two-variable
+  envelope), ST389 (twelve-cap cover), ST395 (robust continuum-IR parameter
+  tube), then ST394 (quantitative Chernoff gap).  All future research PDFs
+  remain English.
+
+## Programs ST387--ST401 global-orbit/invariant-quotient/robust-IR guardrail (Release 10.83, 2026-08-14)
+
+- ST387 tests larger rotated slabs at all 160 inherited continuation centers.
+  It certifies the two regular flanks, indices `0--56` and `111--159`, but
+  fails at the ill-conditioned fold core `57--110`; twice the accepted
+  longitudinal reach remains below the minimum inherited center spacing.  No
+  connected global branch tube is proved, and missing centers must not be
+  manufactured by interpolation.
+- ST388 replaces the inadmissible signed Cauchy extremizer by the exact
+  positivity-constrained water-filling law for the eleven-coordinate remainder.
+  Exact support sizes pass through `11->9->7->5->3->1`.  Outward derivative
+  signs isolate the two-variable envelope minimizer in
+  `t in [0.010820,0.010825]`, `rho in [0.124945,0.124950]`; a feasible outward
+  SOCP dual gives lower value `-0.8461602753704237`, leaving
+  `0.0009617676908324491` to the exact rational strict benchmark.  This is a
+  global lower envelope, not equality with the full simplex functional.
+- ST389 proves the required full-simplex exhaustion for the declared strict
+  `g=4` functional.  A 10,000-cell outward collision cover, including a
+  separate analytic origin-cell payment, proves that every global minimizer
+  lies in one of twelve disjoint caps `p_i>0.94`; the separation from an
+  exactly normalized denominator-`10^18` rational benchmark is
+  `9.552083849706516e-05`.  On every cap, Fisher curvature plus convex
+  extreme-pair reduction leaves exactly 121 one-variable interval quadratics;
+  the minimum Euclidean curvature lower bound is
+  `0.312161527688847`.  Do not reverse the central Fisher inequality: the paid
+  bound is `v_0^2/p_0 >= v_0^2`, not `v_0^2/m_0`.
+- ST390 combines ST389 with the existing/replayed positive Krawczyk root and
+  translation covariance.  For the declared strict finite operator and
+  supplied `g=4`, the global minimizer set consists of exactly twelve points
+  forming one `D12` orbit; equivalently, it is unique modulo `D12`.  This is a
+  finite variational theorem, not a selector theorem.  It does not choose one
+  member, source `g=4`, discharge `QW-2191`, prove physical spontaneous
+  symmetry breaking, or identify a physical vacuum.  ST402 should seek an
+  independent implementation/replay before wider reuse.
+- ST391 shows that the ST389 cap proof cannot be silently transferred to the
+  supplied rank-seven mediator.  Its sampled curvature-safe threshold is
+  about `0.932358`, above the certified local-root maximum near `0.903306`;
+  no rank-seven global theorem follows.
+- ST392 gives exact modular generator quotients on the mean-zero `D12`
+  representation: six quadratic generators, 21 independent quartic products,
+  32 primitive quartics, 248 independent inherited sextics, and 117 primitive
+  sextic quotient directions, totaling `365`.  The declared 248-element
+  inherited sextic family has zero modular syzygies.  These objects do not
+  source coefficients, interactions, selectors, or physical fields.
+- ST393 proves observer dependence of sextic identifiability: modal-energy-only
+  access has rank `56` and nullity `309`, while the declared generic
+  state-evaluation design has exact modular rank `365`.  Algebraic separation
+  is not a physical instrument or noise-robust empirical identifiability.
+- ST394 exports a conditional explicit cone-gap constant for the supplied
+  synthetic HMM.  The gap is positive but only
+  `2.5110447948404326e-72`; do not present it as a useful empirical rate or a
+  FIN-derived detector law.
+- ST395 proves a uniform parametric Krawczyk tube for the supplied continuum IR
+  design on heat budget `[2.9999,3.0001]` and active time
+  `[3.9999,4.0001]`.  Three simple roots, exactly two selected bands, inactive
+  time slack, and complement signs persist throughout the rectangle.  This is
+  dimensionless design robustness, not a physical IR scale or law.  ST396 is
+  only a numerical `21x21` diagram: 433 valid roots and eight unresolved grid
+  points; solver failures are not certified phase transitions.
+- ST397 proves exact Fourier/LP deficiency equality for the constructed family
+  `q_j=(1+epsilon*cos(pi*j/2))/12`: forward deficiency is `epsilon/4` and
+  reverse deficiency is zero.  ST398 proves a conditional calibration-induced
+  two-point minimax `L2` floor `0.001237671136743529`.  Neither derives a
+  physical detector.
+- ST399 conditionally promotes the supplied positive strict-heat Markov source
+  to an operational asymptotic rate-distortion limit using Dobrushin mixing;
+  it does not derive the exact interior curve or universe compression.  ST400
+  proves a Bernstein square-root-depth clock bound under supplied bounded
+  `m`-dependent errors; it creates neither seconds nor a time arrow.
+- ST401 finds no new strict typed source and no independently registered
+  raw-event packet.  No selector/QW-2191 discharge, gain source, absolute unit,
+  time arrow, spacetime, apparatus/record, legacy-to-strict completion, legacy
+  role transfer, Standard Model, gravity, `L_total`, or ToE closure follows
+  from ST387--ST401.  Preferred next order: ST402 (independent orbit replay),
+  ST403 (abstract cap theorem), ST405 (gain-persistence tube), then ST407
+  (Morse landscape).  All future research PDFs remain English.
+
+## Programs ST402--ST416 independent-orbit/gain-persistence/invariant-relation/IR-face guardrail (Release 10.84, 2026-08-14)
+
+- ST402 independently rebuilds the strict transcendental matrix, qualitative
+  radial solve, denominator-`10^18` benchmark, 10,000-cell outside-cap cover,
+  121-pair Fisher-curvature reduction, and an eight-dimensional Krawczyk root
+  enclosure.  It does not read the ST389/ST390 cap code or conclusion.  The
+  outside-minus-benchmark margin is `9.552083849820894e-05`, the minimum
+  Euclidean cap curvature is `0.312161527688847`, and the independent root-box
+  inclusion margin is `9.98661109363752e-09`.  Compactness, boundary exclusion,
+  outside separation, cap convexity, and transitive `D12` invariance therefore
+  prove exactly twelve global minima in one orbit at supplied `g=4`.
+- ST403 abstracts the proof: for a transitive finite coordinate action,
+  continuous invariant functional, disjoint caps `m>1/2`, strict outside
+  separation, and strict cap convexity force exactly one minimizer per cap and
+  one group orbit.  The five hypotheses have explicit removal counterexamples;
+  this proves necessity for the declared proof architecture, not for every
+  conceivable orbit theorem.
+- ST404 proves that the cap-zero minimizer has exactly the order-two vertex
+  reflection stabilizer, hence orbit size `24/2=12`.  This is an exact
+  degeneracy theorem, not a selector: it does not choose a translate or
+  discharge `QW-2191`.
+- ST405 proves the twelve-minimum orbit uniformly for every supplied
+  `g in [3.999,4.001]`.  The uniform outside margin is
+  `6.236647184737222e-05` and the minimum Euclidean curvature is
+  `0.3100312347374352`.  This is gain robustness, not a strict gain source or
+  physical phase interval.
+- ST406 proves only that at least one global minimizer-orbit change occurs
+  between `g=0` and the ST405 interval.  The narrow earlier crossing near
+  `2.90249648` remains branch-local, and the numerical uniform Hessian loss
+  near `5.12342755` is a different event.  Do not claim a unique global or
+  physical critical gain.
+- ST407 certifies the exact uniform local-minimum orbit and the twelve-point
+  localized global-minimum orbit.  Its nine-orbit stationary/Morse catalog from
+  1,200 starts is nonexhaustive numerical evidence only.  ST408 proves a local
+  invariant ball and exponential convergence rate at least
+  `0.312161527688847` only for the explicitly supplied projected Euclidean
+  gradient law; no physical time, Born weights, or basin probabilities follow.
+- ST409 finds no new strict typed gain source.  Interesting consequences of a
+  supplied coefficient cannot be inverted into its provenance.  Closed source
+  lanes remain closed without a genuinely new provider.
+- ST410 proves a bounded no-go for transferring the positive-weight envelope
+  and strict-cap method to the rank-seven Fourier mediator: four effective row
+  weights are negative and its local root lies below the sampled curvature-safe
+  threshold.  Rank-seven global minimality itself remains open.
+- ST411 uses the six quadratic, 32 primitive quartic, and 117 primitive sextic
+  even generators.  Their 2,028 formal degree-eight products map into the
+  1,892-dimensional Molien space, so rank--nullity forces at least 136
+  degree-eight relations.  No explicit minimal syzygy basis or complete
+  invariant-ring presentation is exported.
+- ST412 preserves exact algebraic sextic rank 365 but finds a supplied
+  500-state normalized numerical design condition number about `1.50346e4`.
+  Exact algebraic distinguishability must not be promoted to noise-robust
+  laboratory identifiability.
+- ST413 replaces the coarse synthetic Chernoff log-weight bound `6.6` by the
+  exact Hilbert-coordinate bound `11/60`.  The conditional cone gap improves
+  from about `10^-71.60` to `0.019926291589078788`, over 69 decimal orders.
+  The HMM and metric remain supplied synthetic fixtures, not a FIN detector.
+- ST414 proves a unique continuum-IR KKT root throughout budget
+  `[2.9945,3.0055]` and active time `[3.9945,4.0055]`, a 55-fold parameter
+  halfwidth expansion over ST395.  The fixed-box-template inclusion fails near
+  delta `0.0055448`, but this is not mathematical maximality.  The complete
+  complement-sign/two-band topology cover is not re-certified on the enlarged
+  rectangle.
+- ST415 interval-isolates the unique compactified limiting-face root
+  `(y1,y2,nu,T) approximately
+  (0.028635829467935,3.89120890375954,0.0694500828220804,2.44218197709456)`
+  at `a=0`, `y3=infinity`.  Finite-branch attachment and upper-band loss have
+  strong numerical continuation evidence only; no physical phase transition
+  or IR scale follows.
+- ST416 confirms that no strict selector, gain source, dimensional scale,
+  laboratory record, independent empirical evidence, legacy-to-strict
+  completion, legacy role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure is exported.  Preferred next local order: ST417 (explicit
+  degree-eight syzygies), ST419 (singular IR attachment), ST418 (global gain
+  transition), with ST423/ST426 as independent secondary tracks.  ST429--ST431
+  remain source/evidence gated.  All future research PDFs remain English.
+
+## Programs ST417--ST431 gain-enclosure/singular-attachment/local-Morse guardrail (Release 10.85, 2026-08-14)
+
+- ST417 preserves the exact ST411 lower bound of at least `136` degree-eight
+  relations among the declared `2028` even-generator products, but does not
+  export an explicit syzygy basis.  The complete `1892 x 2028` modular
+  evaluation matrix was generated; local Singular `syz` and rank attempts
+  exceeded the declared 60-second stop and were interrupted without output.
+  Do not treat a future one-prime modular kernel as a characteristic-zero
+  relation basis without multi-prime lifting and direct integer verification.
+- ST418 proves `D(p||u) >= 2.6365287447281363 ||p-u||_2^2` by the
+  entropy/collision extremal reduction and a 46,200-cell outward cover.  Exact
+  circulant spectral intervals give
+  `lambda_max(A) <= 2.342182041146301`; hence the uniform probability is the
+  unique global minimizer for every supplied
+  `g in [0,2.2513440017990893]`.  Together with ST405/ST420, the first global
+  orbit change lies in `[2.2513440017990893,3.999]`.  The branch-local crossing
+  near `2.90249648` is not proved global or unique and must not be promoted.
+- ST419 regularizes the continuum-IR singularity by `b=1/y3`, `c=a*y3`, so
+  `a=b*c`.  Explicit flat-tail bounds and one common parametric Krawczyk box
+  prove a unique root for every `b in [0,0.002]`; its smallest inclusion margin
+  is `2.3433822195217946e-08`.  For `b>0` the root solves the original finite
+  KKT system and at `b=0` it is the ST415 face.  Thus branch attachment to
+  `a=0, y3=infinity` is proved.  This is a dimensionless optimization theorem,
+  not a physical IR scale or phase transition.
+- ST420 doubles the certified gain halfwidth: exactly twelve global minima in
+  one `D12` orbit persist for every supplied `g in [3.998,4.002]`.  The outside
+  margin is `1.8111997968955744e-4`, the cap-curvature margin is
+  `0.30790094178602523`, and the benchmark-energy monotonicity gap is positive.
+  This neither sources gain nor approaches the complete transition diagram.
+- ST421 interval-isolates all nine previously sampled stationary-orbit
+  representatives at `g=4` in radius-`2e-9` boxes.  Their certified Morse-index
+  histogram is `2` minima, `4` index-one saddles, and `3` index-two saddles;
+  the minimum Krawczyk margin is `1.9994619293584037e-09`.  This is a local
+  atlas only: no full-simplex interval cover proves that nine is exhaustive.
+  ST422's four saddle connections are deterministic replicator-gradient
+  integrations and remain numerical, not heteroclinic or Conley certificates.
+- ST423 certifies the enlarged finite-root tube and the new singular-root tube
+  but does not export a complete complement-sign topology cover on the entire
+  enlarged IR rectangle.  Do not infer absence of additional roots outside the
+  certified boxes.
+- ST424 adds odd invariants to the modular quotient census.  Primitive modular
+  counts through degrees `2--6` are `(6,12,32,52,55)`; the degree-five
+  generated rank is `72` and the joint degree-six generated rank is `310`.
+  These are exact in the declared modular calculation, not a complete minimal
+  characteristic-zero presentation through degree eight.
+- ST425 improves the condition number of a supplied synthetic 500-row sextic
+  design from `18764.64` to `14965.05` by pivoted QR, a factor about `1.254`.
+  ST426 compares the rigorous synthetic Chernoff contraction upper bound with
+  Ulam-grid modulus ratios near `0.5958`; grid stability is numerical and does
+  not certify the infinite-dimensional spectrum.  Neither program supplies a
+  physical detector or calibration.
+- ST427 proves a conditional local input-to-state stability inequality on a
+  radius-`1e-6` ball.  After paying Hessian variation, the strong-convexity
+  lower bound is `64.43085576028571`; admissible tangent forcing is below
+  `3.221542788014285e-5`.  The flow, forcing, and time are supplied
+  dimensionless objects.
+- ST428 remains blocked: the rank-seven mediator has both positive and
+  negative off-diagonal entries, so shared eigenvalues do not license transfer
+  of the strict positive-weight global envelope.  ST429 finds no strict typed
+  gain source; ST430 finds no nonpremise selector/orientation provider and does
+  not discharge `QW-2191`; ST431 adds no independent referee, laboratory raw
+  record, hold-out custody, or empirical datum.
+- ST417--ST431 export no absolute unit, time arrow, apparatus, legacy-to-strict
+  completion, legacy physical-role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure.  Preferred next order is ST433/ST434 (global
+  branch-and-bound and transition isolation), ST432/ST439 (checkpointed exact
+  syzygies and characteristic-zero presentation), ST437/ST438 (larger singular
+  tube and complete IR topology), then ST435/ST436 (stationary completeness and
+  certified connections).  ST444--ST446 remain event-driven source/selector/
+  external-evidence gates.  All future research PDFs remain English.
+
+## Programs ST432--ST446 sector-exclusion/orbit-census/IR-degree guardrail (Release 10.86, 2026-08-14)
+
+- ST432 evaluates all `2028` declared degree-eight invariant candidates at
+  exact mean-zero points over primes `1000003` and `1000033`.  No signature is
+  zero and no two signatures are projectively proportional, so rational
+  support-one or support-two syzygies are excluded.  The forced nullity lower
+  bound `136` remains, but no support-`>=3` relation or characteristic-zero
+  basis is exported.
+- ST433 rewrites the first global gain as the ratio infimum
+  `inf_{p!=u} 2 D(p||u)/(q^T A q)` and proves a two-sector exclusion for every
+  supplied `g<=2.88`.  No negative competitor exists for
+  `max(p)<=0.14824732498259885` or `max(p)>=0.8`; the concentrated cover has
+  paid lower margin `0.005770490891026778`.  The intermediate band remains
+  open, so retain the global transition enclosure
+  `[2.2513440017990893,3.999]` and do not promote the local crossing.
+- ST434 evaluates the complete ST342 parametric root tube and proves
+  `q^T A q in [1.3425510930635947,1.3425627339848665]`.  Hence the
+  reflection-even branch equal-value crossing is transverse, with
+  `dV/dg in [-0.6712813669924332,-0.6712755465317973]`, and locally unique in
+  gain.  Full-simplex third-competitor exclusion remains absent.
+- ST435 uses symmetry-averaged invariant Krawczyk boxes to prove the exact
+  stabilizer orders `(2,24,2,4,2,4,2,2,2)` for the nine isolated roots.  Their
+  orbit sizes `(12,1,12,6,12,6,12,12,12)` certify `85` distinct stationary
+  points.  ST436 gives the certified partial Morse polynomial
+  `13+42 t+30 t^2`, whose alternating sum is `1`.  Euler balance is a
+  consistency check, not an exhaustive stationary atlas or Conley/heteroclinic
+  theorem; additional canceling index pairs remain possible.
+- ST437 enlarges the compactified continuum-IR attachment from `b<=0.002` to
+  `b<=0.017`.  The common-box inclusion margin is
+  `1.712194970145131e-07` and the weighted derivative contraction is below
+  `0.16`, proving one unique branch root throughout the tube.  Fixed-template
+  failure at `b=0.018` is not a fold, band loss, or maximality theorem.
+- ST438 proves `||I-CJ||_infinity <= 0.9381006920243792` on the common box for
+  `b in [0,0.015]`; the midpoint Jacobian determinant is negative.  The local
+  compactified branch component therefore has Brouwer degree `-1`.  A full
+  complement cover excluding additional root components remains open.
+- ST439 upgrades the degree-five decomposable rank to an exact
+  characteristic-zero result: rank `72`, primitive quotient dimension `52`.
+  At degree six, two-prime rank `310` proves only characteristic-zero
+  decomposable rank in `[310,326]` and primitive quotient dimension in
+  `[39,55]`.  Multi-prime agreement is not an upper-rank proof.
+- ST440's one weakest-direction row exchange improves the supplied synthetic
+  E metric by factor `1.0428994478808848` and the A metric by factor
+  `1.041606013341873`.  ST441's Ulam modulus ratios stabilize near `0.595740`,
+  but only the prior Birkhoff cone bound is rigorous for the
+  infinite-dimensional synthetic transfer.  Neither result supplies a
+  detector, apparatus, calibration, or empirical record.
+- ST442 improves the conservative local ISS radius to `1.93e-6` and the paid
+  forcing threshold to `4.2162881924051014e-5`, conditional on the supplied
+  dimensionless flow and forcing.  ST443 remains blocked by mixed rank-seven
+  edge signs and lacks a certified sign-aware SDP dual; shared eigenvalues do
+  not transfer the strict global variational proof.
+- ST444 finds no strict typed gain source.  ST445 finds no nonpremise selector
+  and does not discharge `QW-2191`.  ST446 adds no independent referee,
+  laboratory record, custody split, or held-out empirical evidence.
+- ST432--ST446 export no dimensional unit, physical clock, time arrow,
+  apparatus, legacy-to-strict completion, legacy physical-role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.  Preferred next order is
+  ST448/ST449 (intermediate-band global closure), ST450/ST451 (stationary
+  exhaustion and Conley connections), ST447/ST454 (exact relations), and
+  ST452/ST453 (adaptive IR continuation and complement topology).  ST459--ST461
+  remain event-driven gain/selector/evidence gates.  All future research PDFs
+  remain English.
+
+## Programs ST447--ST461 global-transition/exact-degree6/adaptive-IR guardrail (Release 10.87, 2026-08-14)
+
+- ST447 performs exact projective-incidence audits of the complete `64 x 2028`
+  degree-eight evaluation matrix over primes `1000003` and `1000033`.  It
+  checks respectively `1337` and `1390` projected collinear triples in the
+  full matrix and finds no rank-two triple.  Together with ST432 this excludes
+  every rational syzygy of support at most three.  At least `136` relations are
+  still forced, but they have support at least four and no explicit
+  degree-eight basis is exported.
+- ST448 proves the separable bound
+  `D(p||u)>=h(m)||p-u||^2` on `max(p)<=m`, with
+  `h(m)=[m log(12m)-(m-1/12)]/(m-1/12)^2`.  At supplied `g=2.8934`,
+  `m=0.33426904850345385` leaves scalar margin
+  `4.949286539379649e-4`.  A complementary adaptive `(t,rho)` cover has
+  `224626` accepted leaves, maximum depth `9`, and paid positive lower margin
+  `2.437168031224723e-9`.  Hence the uniform probability is the unique global
+  minimizer for every supplied `0<=g<=2.8934`.
+- ST449 combines ST448 with the ST342 negative interval competitor at
+  `g=2.9024964917477667` and proves that a first global transition exists in
+  `[2.8934,2.9024964917477667]`, width `0.0090964917477665`.  Do not identify
+  the reflection-even local branch as the first global competitor or claim a
+  unique transition: a third orbit may attain the ratio earlier inside the
+  bracket.  This theorem constrains supplied gain and does not source it.
+- ST450 records the strong Morse factorization
+  `13+42t+30t^2=1+(1+t)(12+30t)`.  It is a necessary compatibility theorem,
+  not completeness.  ST451 proves only that each certified simple
+  index-one negative eigenline is stabilizer invariant; no heteroclinic
+  endpoint or Conley connection matrix is certified.
+- ST452 replaces the failed common IR box by 28 adaptive parametric Krawczyk
+  cells on `b in [0.017,0.1]`.  Every one of the 28 interfaces, including the
+  ST437 join, has a separately certified common root box contained in both
+  neighbors.  The minimum cell margin is `1.802415362794907e-7` and maximum
+  weighted contraction is `0.04729364804807008`.  Together with ST437 this
+  proves one connected locally unique component from `b=0` through `0.1`.
+  ST453 proves on that component `y1<y2<y3`, `0<a<1`, `T>1`, negative
+  Jacobian orientation, and local Brouwer degree `-1`.  A global complement
+  root count remains open; the variables remain dimensionless.
+- ST454 reconstructs 16 primitive integer relations among the 326 declared
+  decomposable degree-six invariants by two-prime CRT/rational lifting.  Every
+  combination is verified in characteristic zero by exact polynomial
+  divisibility by `x0+...+x11`.  The triangular leading columns prove relation
+  independence, while the modular nonzero minor supplies the reverse rank
+  inequality.  Therefore characteristic-zero decomposable rank is exactly
+  `310` and primitive degree-six quotient dimension is exactly `55`.  This
+  closes ST439 degree six but does not close degree eight.
+- ST455's five synthetic weakest-direction exchanges improve in-design E and
+  A metrics by factors `1.1719513359045173` and `1.1587010959547477`, but
+  worsen frozen holdout maximum leverage from `3.58940` to `4.02581` and its
+  95th percentile from `2.78823` to `2.85715`.  Treat the procedure as
+  overfitting evidence, not robust design or calibration.  ST456 extends the
+  numerical Ulam sequence to grids 71/81; the last-two ratio spread grows to
+  `1.0652364910712642e-5`, weakening the prior plateau interpretation.  No
+  infinite-dimensional two-sided gap bracket is proved.
+- ST457 proves the unique optimum only inside the declared conservative scalar
+  ISS formula: radius `1.9360740424894534e-6`, curvature
+  `43.5554668807046`, forcing `4.216330441812063e-5`.  It is not a global
+  basin or physical noise theorem.  ST458 remains a bounded no-go for current
+  rank-seven sign-aware/absolute-value global relaxations; failure of those
+  methods is not failure of the rank-seven model.
+- ST459 finds no internal strict gain source.  ST460 finds no nonpremise
+  selector and leaves `QW-2191` open.  ST461 adds no independent referee,
+  laboratory record, custody chain, or held-out empirical datum.
+- ST447--ST461 export no absolute unit, physical clock, time arrow, apparatus,
+  legacy-to-strict completion, legacy physical-role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure.  Preferred next order is ST462/ST463
+  (resolve the residual global-transition strip and attaining orbit), ST468
+  (degree-eight exact nullspace), ST470 (adaptive IR continuation/complement),
+  ST466 (support-four/five circuits), and ST472 (transfer discretization
+  theorem).  ST474--ST476 remain method/source/evidence gated.  All future
+  research PDFs remain English.

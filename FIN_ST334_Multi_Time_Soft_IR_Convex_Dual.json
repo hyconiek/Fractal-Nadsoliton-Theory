@@ -1,0 +1,23 @@
+{
+  "continuum_primal": "maximize z with integral d_tj q >= z for all j, heat budget, 0<=q<=1",
+  "dual_structure": "a convex combination of active time kernels minus heat-price times cost; q is thresholded by its sign",
+  "finite_grid": {
+    "active_time_values": [
+      1.297236313598205,
+      1.2763170102567067,
+      1.2763170101993997
+    ],
+    "budget": 3.0,
+    "fractional_grid_cells": 2,
+    "heat_cost": 3.000000001329563,
+    "minimax_value": 1.2763170088549631,
+    "points": 500,
+    "success": true,
+    "times": [
+      0.25,
+      1.0,
+      4.0
+    ]
+  },
+  "theorem": "Linear-programming duality proves that a finite multi-time minimax design is bang--bang according to one dual weighted sum of the time kernels minus the heat cost, with fractional mass only on zero-score level sets. Unlike the single-time bathtub order, several threshold bands may occur. The displayed grid solution illustrates the structure but is not a continuum interval optimizer."
+}

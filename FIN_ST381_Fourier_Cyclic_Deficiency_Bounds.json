@@ -1,0 +1,39 @@
+{
+  "example": {
+    "Fourier_lower": 0.07720018726587646,
+    "alternative_to_fine_LP": 0.30000000000000004,
+    "fine_to_alternative_LP": 0.2,
+    "minimum_forward_inverse_filter": -0.11498178506375219,
+    "minimum_reverse_inverse_filter": -0.32637741811485077,
+    "per_mode_forward_bounds": [
+      0.0,
+      0.0,
+      0.012310562561765992,
+      0.07720018726587646,
+      0.041792987938403414,
+      0.0,
+      0.04179298793840336,
+      0.07720018726587646,
+      0.012310562561765992,
+      0.0,
+      0.0
+    ],
+    "per_mode_reverse_bounds": [
+      0.15669384700684508,
+      0.22087121525220804,
+      0.0,
+      0.0,
+      0.0,
+      5.551115123125783e-17,
+      0.0,
+      0.0,
+      0.0,
+      0.22087121525220807,
+      0.15669384700684508
+    ],
+    "reverse_Fourier_lower": 0.22087121525220807
+  },
+  "relaxed_Fourier_lower_bound": "delta(C_p,C_q)>=1/2 max_k (|qhat_k|-|phat_k|)_+",
+  "theorem": "Fourier diagonalization turns exact cyclic garbling into componentwise multiplication. Invertibility gives the exact zero-deficiency criterion. Character duality bounds every Fourier residual by its l1 norm and yields the displayed computable lower bound.",
+  "zero_deficiency_criterion": "if every Fourier coefficient of p is nonzero, delta(C_p,C_q)=0 iff IDFT(qhat/phat) is a probability vector"
+}

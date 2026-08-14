@@ -1,0 +1,881 @@
+{
+  "ST357": {
+    "boundary": "The theorem is local to the supplied negative-information model. It does not prove dynamical stability, global branch topology, a physical spinodal, or an internal source for g.",
+    "inherited_unique_17D_root_box": [
+      2.664908041005561,
+      2.6649080610055607
+    ],
+    "interval_wT_Fg": [
+      -0.35900942708142014,
+      -0.3590093430691903
+    ],
+    "interval_wT_Fxx_vv": [
+      0.2767066271841476,
+      0.27670798909386124
+    ],
+    "left_nullvector_identity": "w=Dv, D=diag(1,2,2,2,2,2,1,1), because DJ is symmetric",
+    "object": "Interval-Certified Simple Fold Normal Form",
+    "packet_file": "FIN_ST357_Interval_Simple_Fold_Normal_Form.json",
+    "packet_sha256": "2bf7205dae0abac8367a8651768f8edc7b54e99ca8662572022d34e6b9017290",
+    "product_interval": [
+      -0.09934077663343897,
+      -0.0993402644482722
+    ],
+    "program": "ST357",
+    "status": "proven_local_simple_saddle_node_fold",
+    "theorem": "At the unique ST343 event, symmetrizability gives the exact left nullvector w=Dv. Outward interval evaluation proves w^T F_g<0 and w^T F_xx[v,v]>0 throughout the complete root box. Together with the one-dimensional kernel and nonsingular augmented system, the standard saddle-node hypotheses hold and the stationary set has the local simple-fold normal form."
+  },
+  "ST358": {
+    "boundary": "At g=4 the root lower bound lies far below the localized value. No complete adaptive cover or global minimizer certificate is obtained.",
+    "cell_formula": "sum_i min_[li,ui] p log(12p) - (g/2) max_[box intersect simplex] <p-u,A(p-u)>",
+    "cell_quadratic_maximum_rule": "a convex quadratic reaches its maximum at a polytope vertex",
+    "certified_localized_candidate_point_value": -0.8451985076795925,
+    "global_theorem_lower_bound": -3.3206145575321977,
+    "localized_radius_1e_3_demonstration_lower_bound": -0.9085537030114246,
+    "object": "Entropy-Convex Global and Cell Lower-Bound Theorem",
+    "packet_file": "FIN_ST358_Entropy_Convex_Global_Cell_Lower_Bound.json",
+    "packet_sha256": "db0e379a45ebc1e962660bc792f072ad65365487b9f258e7a51cd092a6e2924a",
+    "program": "ST358",
+    "status": "proven_lower_bound_primitive_too_loose_for_global_closure",
+    "strict_row_sum_interval": [
+      1.6603072787660984,
+      1.6603072787660988
+    ],
+    "theorem": "Relative entropy is nonnegative and the convex Laplacian quadratic reaches its simplex maximum at a pure vertex, where it equals the strict row sum s. Hence V_g>=-gs/2 globally. On every box-simplex cell, separable entropy minima and vertex enumeration give a rigorous computable lower bound.",
+    "unresolved_global_bound_gap": 2.475416049852605
+  },
+  "ST359": {
+    "all_twelve_reflection_averages": [
+      {
+        "difference_interval": [
+          0.08893328445712058,
+          0.0889332844571251
+        ],
+        "reflection_axis": 0
+      },
+      {
+        "difference_interval": [
+          0.24441783395138592,
+          0.24441783395138986
+        ],
+        "reflection_axis": 1
+      },
+      {
+        "difference_interval": [
+          0.34765798933384523,
+          0.34765798933384917
+        ],
+        "reflection_axis": 2
+      },
+      {
+        "difference_interval": [
+          0.3504534303035027,
+          0.3504534303035066
+        ],
+        "reflection_axis": 3
+      },
+      {
+        "difference_interval": [
+          0.21416711154113457,
+          0.21416711154113852
+        ],
+        "reflection_axis": 4
+      },
+      {
+        "difference_interval": [
+          0.12337796831923724,
+          0.12337796831924157
+        ],
+        "reflection_axis": 5
+      },
+      {
+        "difference_interval": [
+          0.08893328445712058,
+          0.0889332844571251
+        ],
+        "reflection_axis": 6
+      },
+      {
+        "difference_interval": [
+          0.24441783395138592,
+          0.24441783395138986
+        ],
+        "reflection_axis": 7
+      },
+      {
+        "difference_interval": [
+          0.34765798933384523,
+          0.34765798933384917
+        ],
+        "reflection_axis": 8
+      },
+      {
+        "difference_interval": [
+          0.3504534303035027,
+          0.3504534303035066
+        ],
+        "reflection_axis": 9
+      },
+      {
+        "difference_interval": [
+          0.21416711154113457,
+          0.21416711154113852
+        ],
+        "reflection_axis": 10
+      },
+      {
+        "difference_interval": [
+          0.12337796831923724,
+          0.12337796831924157
+        ],
+        "reflection_axis": 11
+      }
+    ],
+    "boundary": "This refutes the declared symmetrization strategy, not every possible multi-step rearrangement theorem and not reflection symmetry of the actual global minimizer.",
+    "denominator": 993,
+    "minimum_certified_objective_increase": 0.08893328445712058,
+    "object": "Certified Counterexample to One-Step Reflection Rearrangement",
+    "packet_file": "FIN_ST359_Reflection_Symmetrization_Counterexample.json",
+    "packet_sha256": "8fc5f08a58cdfdce1df53b21af1090cde281f3313b3b6fbb642e6e2e6cae9575",
+    "program": "ST359",
+    "rational_probability_numerators": [
+      500,
+      1,
+      3,
+      2,
+      1,
+      470,
+      1,
+      1,
+      1,
+      11,
+      1,
+      1
+    ],
+    "status": "proven_all_reflection_averages_raise_objective_for_explicit_state",
+    "theorem": "For the explicit positive rational probability vector, averaging with every one of the twelve reflections strictly increases the g=4 objective, after paying the complete transcendental strict-operator interval. Therefore no global proof may assume that some one-step reflection symmetrization is nonincreasing."
+  },
+  "ST360": {
+    "boundary": "Global uniqueness modulo D12 is neither proved nor refuted. The stop applies only to the declared combination of methods.",
+    "global_minimizer_certificate": null,
+    "object": "Post-Falsification Global-Minimizer Strategy Boundary",
+    "packet_file": "FIN_ST360_Global_Minimizer_Strategy_Boundary.json",
+    "packet_sha256": "57f53c23cb6dbacd02e4a46a60cb0c3e914e6d65b5325ae5ebbf9f26b5e579fb",
+    "program": "ST360",
+    "result": "The three proposed low-cost global routes do not compose into a proof. Symmetry is nonexhaustive, one-step reflection averaging is false, and the current cell primitive is too weak at the root node. A successful proof now requires sharper coupled entropy-quadratic envelopes or a different exact dual certificate.",
+    "status": "bounded_no_go_for_current_symmetry_plus_root_bound_strategy",
+    "strategy_components": {
+      "multistart": "strong numerical evidence only",
+      "one_step_reflection_rearrangement": "ruled out by ST359 certified counterexample",
+      "root_entropy_quadratic_lower_bound": "valid but too loose by more than two objective units",
+      "symmetry_only": "ruled out by ST344 trivial-stabilizer stratum"
+    }
+  },
+  "ST361": {
+    "Krawczyk_certificate": {
+      "included": true,
+      "margin": 9.996256267186254e-09,
+      "maximum_image_halfwidth": 3.742783860616328e-12,
+      "radius": 1e-08
+    },
+    "boundary": "Interior competitors with trivial stabilizer are not excluded. Rank seven and g=4 remain supplied; no physical mediator or global minimum is derived.",
+    "boundary_minimizer_theorem": "none: p log p has derivative -infinity at zero while the quadratic has finite directional derivative",
+    "exact_root_objective_interval": [
+      -0.1388483496855981,
+      -0.13884697633920928
+    ],
+    "mediator_rank": 7,
+    "object": "Certified Rank-Seven Modal-Mediator Localized Minimum",
+    "packet_file": "FIN_ST361_Certified_Rank7_Mediator_Localized_State.json",
+    "packet_sha256": "a7ccbb0a0b5286e85799315658996877755110a979d322f98c140eb49c58d3bd",
+    "program": "ST361",
+    "pure_vertex_value_interval": [
+      -0.05865101819930111,
+      -0.058651018199300096
+    ],
+    "retained_fourier_modes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "root_center": [
+      0.9033060188294947,
+      0.0006825835253757515,
+      0.00551777307502512,
+      0.01679448301227788,
+      0.015313979140981164,
+      0.00744070162865187,
+      0.005194940405881753,
+      1.2378888103623946
+    ],
+    "status": "proven_strict_local_minimum_beating_uniform_vertices_boundary_excluded",
+    "tangent_Hessian_lower_bound": 5.7880714233475645,
+    "theorem": "The Fourier-defined rank-seven truncation has a unique positive reflection-even stationary root in the declared interval box. Its tangent Hessian is positive, and its objective is below uniform and every pure vertex. For any finite matrix and coupling, no boundary probability can minimize entropy minus a smooth quadratic, because adding epsilon to a zero coordinate lowers epsilon log epsilon dominantly.",
+    "uniform_value": 0.0
+  },
+  "ST362": {
+    "Molien_formula": "(1-t)/24 sum_g product_cycles (1-t^length)^(-1)",
+    "additional_phase_sensitive_or_nonspectral_dimensions": {
+      "degree_4": 32,
+      "degree_6": 309
+    },
+    "boundary": "Dimensions are complete, but an explicit Reynolds-reduced basis and coefficient-source law are not supplied.",
+    "cycle_type_counts": {
+      "(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)": 1,
+      "(1, 1, 2, 2, 2, 2, 2)": 6,
+      "(12,)": 4,
+      "(2, 2, 2, 2, 2, 2)": 7,
+      "(3, 3, 3, 3)": 2,
+      "(4, 4, 4)": 2,
+      "(6, 6)": 2
+    },
+    "degree_4_full_dimension": 53,
+    "degree_6_full_dimension": 365,
+    "mean_zero_invariant_dimensions_degree_0_to_8": [
+      1,
+      0,
+      6,
+      12,
+      53,
+      124,
+      365,
+      807,
+      1892
+    ],
+    "object": "Full D12 Molien Count through Degree Eight",
+    "packet_file": "FIN_ST362_Full_D12_Molien_Invariant_Count.json",
+    "packet_sha256": "f3e32b584244495b3cf2bbe5cb01ea90beb51ee4aedaf288a79658813afdf5c0",
+    "program": "ST362",
+    "spectral_energy_subalgebra_dimensions": {
+      "degree_4": 21,
+      "degree_6": 56
+    },
+    "status": "proven_full_invariant_dimensions_explicit_basis_deferred",
+    "theorem": "Molien character averaging for the mean-zero permutation representation of D12 gives invariant dimensions 53 in degree four and 365 in degree six. Therefore the ST347 modal-energy algebra is a proper subalgebra and misses at least 32 quartic and 309 sextic invariant directions."
+  },
+  "ST363": {
+    "boundary": "The pressure optimizer is still not interval-certified at infinite depth. Collocation is diagnostic, and the HMM fixture is synthetic.",
+    "certified_infinite_depth_optimizer": null,
+    "exact_all_depth_bound": [
+      -3.8918202981106265,
+      3.8918202981106265
+    ],
+    "identity": "(1/n) d_s log T_n is a tilted expectation of the path-average log likelihood ratio",
+    "numerical_depth_rows": [
+      {
+        "depth": 4,
+        "derivative_range_over_collocation": [
+          -0.48195279787934214,
+          -0.30588304124949367
+        ],
+        "maximum_collocation_Tn_root": 0.5017398312812568,
+        "normalized_derivative_at_maximizer": -0.34063119011233156,
+        "s": 0.45
+      },
+      {
+        "depth": 4,
+        "derivative_range_over_collocation": [
+          -0.040076095766355166,
+          0.1425602824892122
+        ],
+        "maximum_collocation_Tn_root": 0.4976271374750391,
+        "normalized_derivative_at_maximizer": 0.017233932713906237,
+        "s": 0.500739416715181
+      },
+      {
+        "depth": 4,
+        "derivative_range_over_collocation": [
+          0.36406446131573156,
+          0.5961465412072705
+        ],
+        "maximum_collocation_Tn_root": 0.502337267139562,
+        "normalized_derivative_at_maximizer": 0.36406446131573156,
+        "s": 0.55
+      },
+      {
+        "depth": 6,
+        "derivative_range_over_collocation": [
+          -0.4514986611647461,
+          -0.35343232327342844
+        ],
+        "maximum_collocation_Tn_root": 0.4974868106253804,
+        "normalized_derivative_at_maximizer": -0.35343232327342844,
+        "s": 0.45
+      },
+      {
+        "depth": 6,
+        "derivative_range_over_collocation": [
+          -0.018216048024680475,
+          0.07987060519025749
+        ],
+        "maximum_collocation_Tn_root": 0.49314830820304256,
+        "normalized_derivative_at_maximizer": 0.009465818111451526,
+        "s": 0.500739416715181
+      },
+      {
+        "depth": 6,
+        "derivative_range_over_collocation": [
+          0.36260822552039756,
+          0.5185058303701332
+        ],
+        "maximum_collocation_Tn_root": 0.49770035928254824,
+        "normalized_derivative_at_maximizer": 0.36260822552039756,
+        "s": 0.55
+      },
+      {
+        "depth": 8,
+        "derivative_range_over_collocation": [
+          -0.4367391276205997,
+          -0.3620593562498566
+        ],
+        "maximum_collocation_Tn_root": 0.4950439424307572,
+        "normalized_derivative_at_maximizer": -0.3620593562498566,
+        "s": 0.45
+      },
+      {
+        "depth": 8,
+        "derivative_range_over_collocation": [
+          -0.015723577986348904,
+          0.047276116379609656
+        ],
+        "maximum_collocation_Tn_root": 0.490533879456328,
+        "normalized_derivative_at_maximizer": 0.002786198923243543,
+        "s": 0.500739416715181
+      },
+      {
+        "depth": 8,
+        "derivative_range_over_collocation": [
+          0.35905573641268596,
+          0.47108663839961035
+        ],
+        "maximum_collocation_Tn_root": 0.49493436618819936,
+        "normalized_derivative_at_maximizer": 0.35905573641268596,
+        "s": 0.55
+      },
+      {
+        "depth": 10,
+        "derivative_range_over_collocation": [
+          -0.4280977721784439,
+          -0.36799041548832595
+        ],
+        "maximum_collocation_Tn_root": 0.4935060910043594,
+        "normalized_derivative_at_maximizer": -0.36799041548832595,
+        "s": 0.45
+      },
+      {
+        "depth": 10,
+        "derivative_range_over_collocation": [
+          -0.017442543977504773,
+          0.029244038473597318
+        ],
+        "maximum_collocation_Tn_root": 0.4888700898726771,
+        "normalized_derivative_at_maximizer": -0.002437233277340882,
+        "s": 0.500739416715181
+      },
+      {
+        "depth": 10,
+        "derivative_range_over_collocation": [
+          0.3554620112777969,
+          0.441803371557618
+        ],
+        "maximum_collocation_Tn_root": 0.49314631581802676,
+        "normalized_derivative_at_maximizer": 0.3554620112777969,
+        "s": 0.55
+      },
+      {
+        "depth": 12,
+        "derivative_range_over_collocation": [
+          -0.4224188119317549,
+          -0.37219798091452005
+        ],
+        "maximum_collocation_Tn_root": 0.492464195300383,
+        "normalized_derivative_at_maximizer": -0.37219798091452005,
+        "s": 0.45
+      },
+      {
+        "depth": 12,
+        "derivative_range_over_collocation": [
+          -0.01911187177991066,
+          0.018373002614310165
+        ],
+        "maximum_collocation_Tn_root": 0.4877356652112965,
+        "normalized_derivative_at_maximizer": -0.0064116974428365045,
+        "s": 0.500739416715181
+      },
+      {
+        "depth": 12,
+        "derivative_range_over_collocation": [
+          0.3523994740672377,
+          0.42266373714207695
+        ],
+        "maximum_collocation_Tn_root": 0.49191499368695263,
+        "normalized_derivative_at_maximizer": 0.3523994740672377,
+        "s": 0.55
+      }
+    ],
+    "object": "Normalized Chernoff Pressure-Derivative Audit",
+    "packet_file": "FIN_ST363_Normalized_Chernoff_Pressure_Derivative_Audit.json",
+    "packet_sha256": "97c2dd3ff1c483a12e98d816825a7c65d0b93df0a57f72622cde42efa30a03bd",
+    "program": "ST363",
+    "status": "proven_uniform_normalized_bound_numerical_convergence_only",
+    "theorem": "For every depth and initial belief, the normalized log-transfer derivative is a tilted expectation of the average one-step log-likelihood ratio and therefore lies in [-log49,log49]. This prevents growth with depth but does not prove a vanishing depth-to-infinity derivative error."
+  },
+  "ST364": {
+    "ST298_center_index": 85,
+    "boundary": "One local slab is certified, not the full 160-section chain. Overlap between a sequence of rotated slabs remains to be proved.",
+    "included_for_every_longitudinal_parameter": true,
+    "longitudinal_halfwidth": 2e-07,
+    "maximum_transverse_contraction_row_sum": 0.4778328125402711,
+    "minimum_Krawczyk_margin": 3.953031575723058e-08,
+    "object": "Rotated Tangent/Transverse Interval Implicit-Function Slab",
+    "packet_file": "FIN_ST364_Rotated_Interval_Implicit_Function_Slab.json",
+    "packet_sha256": "78506aa7d4741cc885e6ae2ca3eb3826499210dd980d357f6ba5c560fbfd86f9",
+    "program": "ST364",
+    "status": "proven_continuous_local_branch_slab",
+    "theorem": "A Taylor-form interval Krawczyk argument in one tangent and seven transverse coordinates proves that, for every longitudinal parameter s in [-2e-7,2e-7], there is one unique transverse correction in the radius-1e-7 ball. This is a continuous local branch slab through the worst-conditioned sampled ST298 region.",
+    "transverse_radius": 1e-07
+  },
+  "ST365": {
+    "analytic_tail_y_ge_10_lower_at_endpoint": 0.3109936632520658,
+    "boundary": "The multipliers come from a finite grid and are not certified continuum-optimal. The theorem certifies their threshold geometry only.",
+    "certified_simple_zeros": [
+      {
+        "derivative_interval": [
+          3.7011798284974162,
+          3.701179838042348
+        ],
+        "mu_interval": [
+          0.014228304472143516,
+          0.014228304672143515
+        ],
+        "y_interval": [
+          0.028456608944287032,
+          0.02845660934428703
+        ]
+      },
+      {
+        "derivative_interval": [
+          -0.030305255210079225,
+          -0.030305255055938275
+        ],
+        "mu_interval": [
+          1.049764683361569,
+          1.049764683561569
+        ],
+        "y_interval": [
+          2.099529366723138,
+          2.099529367123138
+        ]
+      },
+      {
+        "derivative_interval": [
+          0.02118503253706622,
+          0.02118503258833759
+        ],
+        "mu_interval": [
+          1.2738113230864785,
+          1.2738113232864785
+        ],
+        "y_interval": [
+          2.547622646172957,
+          2.547622646572957
+        ]
+      }
+    ],
+    "erratum_to_ST350": "four threshold transitions correspond to two selected bands, not four bands",
+    "exhaustive_sign_boxes_on_y_2e_5_to_10": 318,
+    "frozen_grid_dual_weights": [
+      0.0,
+      0.020987715890706173,
+      0.9790122841092939
+    ],
+    "frozen_heat_price": 0.10874159861065014,
+    "object": "Certified Zeros and Corrected Band Count for the Frozen IR Dual",
+    "packet_file": "FIN_ST365_Certified_IR_Dual_Threshold_Zeros.json",
+    "packet_sha256": "f307e123c8c88b142c0b21563d171c56059efc7ba0a2e23ce92ac242dc9febbc",
+    "program": "ST365",
+    "selected_bands_in_mu": [
+      [
+        0.014228304672143515,
+        1.049764683361569
+      ],
+      [
+        1.2738113232864785,
+        100000.0
+      ]
+    ],
+    "status": "proven_three_simple_zeros_two_selected_bands_for_frozen_dual",
+    "theorem": "For the frozen 1000-grid dual multipliers, the transformed analytic threshold has exactly three simple positive zeros on the declared spectral interval. An exhaustive outward sign cover excludes every other zero; the asymptotic lower bound is positive beyond y=10. Hence the selector has exactly two bands.",
+    "unresolved_complement_boxes": []
+  },
+  "ST366": {
+    "boundary": "These are instrument families, not a FIN-derived detector. Numerical LP values are not empirical observer depths.",
+    "exact_reduction": "delta(C_p,C_q)=min_{r in simplex} TV(p*r,q)",
+    "garbling_example": {
+      "added_noise": [
+        0.8,
+        0.0,
+        0.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "coarse_noise": [
+        0.6400000000000001,
+        0.10000000000000002,
+        0.16000000000000003,
+        0.020000000000000004,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.08000000000000002
+      ],
+      "coarse_to_fine": 0.17928571428571424,
+      "fine_noise": [
+        0.8,
+        0.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "fine_to_coarse": 0.0,
+      "recovered_forward_filter": [
+        0.8000000000000002,
+        0.0,
+        0.20000000000000004,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "incomparable_example": {
+      "alternative_noise": [
+        0.7,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alternative_to_fine": 0.30000000000000004,
+      "exact_minimum_alternative_to_fine_inverse_filter": "-1437467/4404309",
+      "exact_minimum_fine_to_alternative_inverse_filter": "-505/4392",
+      "fine_to_alternative": 0.2
+    },
+    "object": "Exact LP for General Twelve-State Cyclic Observer Deficiency",
+    "packet_file": "FIN_ST366_General_Cyclic_Convolution_Observer_Deficiency.json",
+    "packet_sha256": "44c2ded3eadf67cca1663b78c436d4784d0fac4769573d5966a317bb5884dc6a",
+    "program": "ST366",
+    "status": "proven_convolution_LP_and_explicit_incomparability",
+    "theorem": "Cyclic twirling of any postprocessing cannot increase worst-row total variation. Therefore Le Cam deficiency between two 12-state cyclic convolution experiments is exactly the displayed twelve-variable convolution LP. The order is generally partial: exact rational deconvolution in either direction has a negative entry, so the explicit pair has positive deficiency both ways. The displayed positive deficiency magnitudes are floating LP evaluations, not interval endpoints."
+  },
+  "ST367": {
+    "boundary": "Bounds assume independent correctly labelled multinomial events. Detector loss, calibration, nuisance parameters, adaptive design and custody are absent.",
+    "confidence": 0.95,
+    "lower_theorem": "two-point Le Cam with exact categorical KL and product Pinsker",
+    "multinomial_states": 12,
+    "object": "Finite-Sample Multinomial Fiber Recovery Bounds",
+    "packet_file": "FIN_ST367_Multinomial_Fiber_Recovery_Bounds.json",
+    "packet_sha256": "bbcbdc96ce37d73cad8b7629cf360746e4069db4fe857a5895f1b82014f384b8",
+    "program": "ST367",
+    "rows": [
+      {
+        "Pinsker_product_TV_upper": 0.24583773614318657,
+        "counts": 100,
+        "minimax_expected_L2_lower": 0.0026663662544407557,
+        "simultaneous_L2_radius_95": 0.6086272802250292,
+        "two_point_L2_separation": 0.014142135623730952
+      },
+      {
+        "Pinsker_product_TV_upper": 0.24503722475747217,
+        "counts": 1000,
+        "minimax_expected_L2_lower": 0.0008440740429620938,
+        "simultaneous_L2_radius_95": 0.19246484516246495,
+        "two_point_L2_separation": 0.00447213595499958
+      },
+      {
+        "Pinsker_product_TV_upper": 0.24495779312924074,
+        "counts": 10000,
+        "minimax_expected_L2_lower": 0.000266947732280185,
+        "simultaneous_L2_radius_95": 0.060862728022502914,
+        "two_point_L2_separation": 0.0014142135623730952
+      },
+      {
+        "Pinsker_product_TV_upper": 0.24494985610149614,
+        "counts": 100000,
+        "minimax_expected_L2_lower": 8.441717240890264e-05,
+        "simultaneous_L2_radius_95": 0.019246484516246498,
+        "two_point_L2_separation": 0.00044721359549995795
+      }
+    ],
+    "scaling": "both root risks are order N^(-1/2) for fixed state dimension",
+    "status": "proven_nonasymptotic_upper_and_two_point_lower_bounds",
+    "upper_theorem": "coordinate Hoeffding plus a 24-event union bound"
+  },
+  "ST368": {
+    "block5_executed": false,
+    "block5_state_count": 248832,
+    "block_results": {
+      "3": [
+        {
+          "beta": 0.0,
+          "bits_per_symbol": -1.0678088346049721e-16,
+          "distortion": 0.9166666666666664,
+          "iterations": 0
+        },
+        {
+          "beta": 1.0,
+          "bits_per_symbol": 0.014915653436338841,
+          "distortion": 0.8595909995487299,
+          "iterations": 1199
+        },
+        {
+          "beta": 2.0,
+          "bits_per_symbol": 0.08015409722911013,
+          "distortion": 0.770814411744883,
+          "iterations": 637
+        },
+        {
+          "beta": 4.0,
+          "bits_per_symbol": 0.3764263794615149,
+          "distortion": 0.5635445374075319,
+          "iterations": 219
+        },
+        {
+          "beta": 8.0,
+          "bits_per_symbol": 1.1101005339874639,
+          "distortion": 0.30364212391221235,
+          "iterations": 252
+        },
+        {
+          "beta": 16.0,
+          "bits_per_symbol": 2.5004358613876683,
+          "distortion": 0.04675661257667497,
+          "iterations": 280
+        }
+      ],
+      "4": [
+        {
+          "beta": 0.0,
+          "bits_per_symbol": -8.008566259537292e-17,
+          "distortion": 0.9166666666666663,
+          "iterations": 0
+        },
+        {
+          "beta": 1.0,
+          "bits_per_symbol": 0.008688791552868128,
+          "distortion": 0.8718734974094728,
+          "iterations": 1199
+        },
+        {
+          "beta": 2.0,
+          "bits_per_symbol": 0.04650435696235844,
+          "distortion": 0.802535218267211,
+          "iterations": 1060
+        },
+        {
+          "beta": 4.0,
+          "bits_per_symbol": 0.22493507466740317,
+          "distortion": 0.6371248716250488,
+          "iterations": 315
+        },
+        {
+          "beta": 8.0,
+          "bits_per_symbol": 0.714882456014918,
+          "distortion": 0.4062897602703742,
+          "iterations": 1180
+        },
+        {
+          "beta": 16.0,
+          "bits_per_symbol": 1.867873494224285,
+          "distortion": 0.13060202433877371,
+          "iterations": 1199
+        }
+      ]
+    },
+    "boundary": "Tau, Markov interpretation and Hamming distortion remain premises. Finite-block curves do not prove the asymptotic rate-distortion function or physical compression density.",
+    "exact_entropy_rate_bits": 2.6057354210091535,
+    "object": "Block-Three and Block-Four Strict-Heat Rate-Distortion",
+    "packet_file": "FIN_ST368_Strict_Heat_Block_Rate_Distortion_Extension.json",
+    "packet_sha256": "f032f84475506e0092ec4cadc837710d242aff1d60e2c2536943d20b28d2e3cc",
+    "program": "ST368",
+    "resource_stop": "block five was not needed for the low-compute batch; tensor source storage alone has 248832 entries",
+    "result": "Kronecker-factorized Blahut--Arimoto avoids the impossible 12^(2n) distortion matrix and computes complete block-three and block-four curves. At fixed block length the zero-distortion limit is H(X_1:n)/n; these block entropies converge to the exact strict-heat Markov entropy rate only as n tends to infinity. Block five is left as an explicit bounded resource continuation, not silently approximated.",
+    "status": "strong_numerical_block3_block4_curves_block5_stopped",
+    "transition": "exp(-0.5 A)",
+    "zero_distortion_block_entropy_bits_per_symbol": {
+      "3": 2.932144447579821,
+      "4": 2.850542190937154
+    }
+  },
+  "ST369": {
+    "Azuma_Hoeffding_bound": "P(|sum X_n|>=sqrt(2 log(2/alpha) sum b_n^2))<=alpha",
+    "boundary": "Independence/conditional centering is an added stochastic law, not strict-derived. No seconds, time arrow, or physical noise mechanism follows.",
+    "declared_premise": "independent mode-pair log-error differences, conditionally mean zero and bounded by b_n",
+    "object": "Martingale Concentration for Multilevel Relative Clocks",
+    "packet_file": "FIN_ST369_Martingale_Multilevel_Clock_Concentration.json",
+    "packet_sha256": "dcc389e84e052e36f20661a2288ef3613f5d007f31510dee2d92e37fcfc8ea1e",
+    "program": "ST369",
+    "rows": [
+      {
+        "95_percent_log_drift_radius": 0.0017178776391136921,
+        "eta": 0.0001,
+        "levels": 10,
+        "wave_clock_radius": 0.0008589388195568461,
+        "worst_case_log_drift": 0.002000000006667229
+      },
+      {
+        "95_percent_log_drift_radius": 0.005432406081072026,
+        "eta": 0.0001,
+        "levels": 100,
+        "wave_clock_radius": 0.002716203040536013,
+        "worst_case_log_drift": 0.02000000006667229
+      },
+      {
+        "95_percent_log_drift_radius": 0.017178776391136918,
+        "eta": 0.0001,
+        "levels": 1000,
+        "wave_clock_radius": 0.008589388195568459,
+        "worst_case_log_drift": 0.2000000006667229
+      },
+      {
+        "95_percent_log_drift_radius": 0.05432406081072025,
+        "eta": 0.0001,
+        "levels": 10000,
+        "wave_clock_radius": 0.027162030405360124,
+        "worst_case_log_drift": 2.000000006667229
+      },
+      {
+        "95_percent_log_drift_radius": 0.01717878206013133,
+        "eta": 0.001,
+        "levels": 10,
+        "wave_clock_radius": 0.008589391030065665,
+        "worst_case_log_drift": 0.020000006666670216
+      },
+      {
+        "95_percent_log_drift_radius": 0.05432407873765463,
+        "eta": 0.001,
+        "levels": 100,
+        "wave_clock_radius": 0.027162039368827315,
+        "worst_case_log_drift": 0.20000006666670214
+      },
+      {
+        "95_percent_log_drift_radius": 0.17178782060131328,
+        "eta": 0.001,
+        "levels": 1000,
+        "wave_clock_radius": 0.08589391030065664,
+        "worst_case_log_drift": 2.0000006666670216
+      },
+      {
+        "95_percent_log_drift_radius": 0.5432407873765462,
+        "eta": 0.001,
+        "levels": 10000,
+        "wave_clock_radius": 0.2716203936882731,
+        "worst_case_log_drift": 20.000006666670217
+      },
+      {
+        "95_percent_log_drift_radius": 0.1717934899410723,
+        "eta": 0.01,
+        "levels": 10,
+        "wave_clock_radius": 0.08589674497053615,
+        "worst_case_log_drift": 0.20000666706669434
+      },
+      {
+        "95_percent_log_drift_radius": 0.5432587154030141,
+        "eta": 0.01,
+        "levels": 100,
+        "wave_clock_radius": 0.27162935770150703,
+        "worst_case_log_drift": 2.0000666706669437
+      },
+      {
+        "95_percent_log_drift_radius": 1.7179348994107229,
+        "eta": 0.01,
+        "levels": 1000,
+        "wave_clock_radius": 0.8589674497053614,
+        "worst_case_log_drift": 20.000666706669435
+      },
+      {
+        "95_percent_log_drift_radius": 5.4325871540301405,
+        "eta": 0.01,
+        "levels": 10000,
+        "wave_clock_radius": 2.7162935770150702,
+        "worst_case_log_drift": 200.00666706669435
+      }
+    ],
+    "status": "proven_conditional_sqrt_depth_concentration",
+    "theorem": "Under the declared martingale-difference premise, relative log-clock drift scales as square root of depth at fixed confidence rather than linearly as in the adversarial ST355 bound. Common calibration gauge still cancels exactly."
+  },
+  "ST370": {
+    "admission_obligations": [
+      "strict provenance",
+      "nonzero signed coupling",
+      "D12 typing",
+      "selector safety",
+      "kernel-split safety",
+      "no hidden dimensional premise"
+    ],
+    "admitted_source_count": 0,
+    "boundary": "This preserves prior no-new-frontier certificates. It is not proof that no source can exist in an enlarged theory.",
+    "matching_new_typed_sources": [],
+    "object": "Strict Active-Coupling Source Admission Gate",
+    "packet_file": "FIN_ST370_Strict_Active_Source_Admission_Gate.json",
+    "packet_sha256": "fad059e42030ca25eabe0e86aa35c22bc89085abb4a57ad717c1f86586252695",
+    "program": "ST370",
+    "required_pattern": "FIN_ST370_NEW_STRICT_ACTIVE_SOURCE*.json",
+    "status": "blocked_no_new_strict_typed_source",
+    "theorem": "No new typed source object exists in the declared admission channel; closed source lanes are not replayed."
+  },
+  "ST371": {
+    "boundary": "The stop is evidentiary, not a failed physical experiment.",
+    "independent_record_count": 0,
+    "matching_records": [],
+    "object": "Independent Evidence Gate",
+    "packet_file": "FIN_ST371_Independent_Record_Stop.json",
+    "packet_sha256": "dc949d74f79583d7c6d978717fa4cc686fb5ef0f82fd5a308940ca5a5bd6e9d2",
+    "program": "ST371",
+    "required_pattern": "FIN_ST371_INDEPENDENT_RAW_EVENTS*.jsonl",
+    "status": "blocked_no_independent_events",
+    "theorem": "Local mathematics cannot generate independent custody, apparatus calibration, unblinding, or empirical events."
+  },
+  "metadata": {
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.17.1",
+    "scope": "local analytical, interval, exact finite and bounded numerical research",
+    "seed": 20260818,
+    "strict_row_sum": 1.6603072787660986
+  }
+}

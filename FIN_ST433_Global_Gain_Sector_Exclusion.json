@@ -1,0 +1,33 @@
+{
+  "concentrated_sector_cover": {
+    "cells": 1000000,
+    "certificate_logic": "Entropy is minimized at t_hi and rho_lo; collision is maximized at t_lo,rho_hi; the SOCP-dual water-fill value and w_min give a cross-term lower bound.",
+    "gain": 2.88,
+    "maximum_coordinate_sector": [
+      0.8,
+      1.0
+    ],
+    "minimum_outward_paid_lower_bound": 0.005770490891026778,
+    "roundoff_payment_per_cell": 1e-10,
+    "worst_cell_t_rho": [
+      0.1208,
+      0.121,
+      0.11636363636363636,
+      0.11727272727272728
+    ]
+  },
+  "critical_gain_identity": "g_global=inf_{p!=u} 2 D(p||u)/((p-u)^T A (p-u))",
+  "global_transition_enclosure_retained": [
+    2.2513440017990893,
+    3.999
+  ],
+  "remaining_competitor_band": [
+    0.14824732498259885,
+    0.8
+  ],
+  "result": "At every g<=2.88 a negative competitor is excluded in both displayed outer sectors. Any missed competitor must lie in the explicit intermediate band.",
+  "uniform_convex_sector": {
+    "maximum_coordinate_upper": 0.14824732498259885,
+    "proof": "diag(1/p)-gA is positive definite on the tangent space when max(p)<1/(g lambda_max(A)); the convex sector contains the uniform stationary point."
+  }
+}

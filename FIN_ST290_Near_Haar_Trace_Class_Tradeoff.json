@@ -1,0 +1,131 @@
+{
+  "a_values": [
+    1.52587890625e-05,
+    3.0517578125e-05,
+    6.103515625e-05,
+    0.0001220703125,
+    0.000244140625,
+    0.00048828125,
+    0.0009765625,
+    0.001953125,
+    0.00390625,
+    0.0078125,
+    0.015625,
+    0.03125,
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "classification": [
+    "exact Haar q=1: not trace class at mu=0",
+    "hard cutoff q=1_[a,infinity), a>0: trace class for every t>0",
+    "soft power q(mu)=O(mu^alpha), alpha>0: trace class near zero",
+    "log-soft q(mu)=O((log(1/mu))^{-p}): trace class near zero iff p>1"
+  ],
+  "declared_tolerance": 0.027725887222397813,
+  "exact_curve_at_guaranteed_endpoint": [
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728,
+    1.3587606489477728
+  ],
+  "exact_plateau_endpoint": [
+    914.9078990835409,
+    457.45394954177044,
+    228.72697477088522,
+    114.36348738544261,
+    57.181743692721305,
+    28.590871846360653,
+    14.295435923180326,
+    7.147717961590163,
+    3.5738589807950816,
+    1.7869294903975408,
+    0.8934647451987704,
+    0.4467323725993852,
+    0.2233661862996926,
+    0.1116830931498463,
+    0.05584154657492315,
+    0.027920773287461575,
+    0.013960386643730787
+  ],
+  "guaranteed_plateau_endpoint": [
+    908.5218725035315,
+    454.26093625176577,
+    227.13046812588289,
+    113.56523406294144,
+    56.78261703147072,
+    28.39130851573536,
+    14.19565425786768,
+    7.09782712893384,
+    3.54891356446692,
+    1.77445678223346,
+    0.88722839111673,
+    0.443614195558365,
+    0.2218070977791825,
+    0.11090354888959125,
+    0.055451774444795626,
+    0.027725887222397813,
+    0.013862943611198907
+  ],
+  "hard_cutoff_deficit_bound": "0<=2 rho ln2-D_a(t)<=2 rho a t",
+  "hard_cutoff_dimension_curve": "D_a(t)=2 rho log(1+exp(-2at))",
+  "hard_cutoff_heat_trace": "H_a(t)=E1(2at)",
+  "sharp_tradeoff_in_hard_cutoff_class": "For heat-trace budget B at t0, a must satisfy E1(2 a t0)<=B. The longest exact epsilon-plateau uses the smallest admissible a, a=E1^{-1}(B)/(2t0), and ends at -log(2 exp(-epsilon/(2rho))-1)/(2a).",
+  "soft_power_audit": [
+    {
+      "alpha": 0.25,
+      "near_zero_order": "mu^0.25",
+      "numeric_heat_trace_t1": 11.578045825701954
+    },
+    {
+      "alpha": 0.5,
+      "near_zero_order": "mu^0.5",
+      "numeric_heat_trace_t1": 9.327184587274454
+    },
+    {
+      "alpha": 1.0,
+      "near_zero_order": "mu^1.0",
+      "numeric_heat_trace_t1": 7.941765710732589
+    },
+    {
+      "alpha": 2.0,
+      "near_zero_order": "mu^2.0",
+      "numeric_heat_trace_t1": 6.943354063974756
+    }
+  ],
+  "theorem": "A near-Haar density q(mu)dmu/mu is heat-trace class at the infrared end exactly when integral_0 q(mu)dmu/mu is finite. Power softening with any alpha>0 works, while logarithmic softening requires exponent p>1. In the monotone hard-cutoff class, H_a(t)=E1(2at) and D_a(t)=2 rho log(1+e^{-2at}); the deficit is at most 2 rho a t and its exact epsilon endpoint is displayed. Since H_a decreases and plateau length increases as a decreases, a fixed heat-trace budget yields the stated sharp one-parameter budget/plateau tradeoff. Exact scale invariance remains impossible.",
+  "trace_budget_at_t1": [
+    9.820022560842942,
+    9.12690589716264,
+    8.433819748965066,
+    7.740794627542457,
+    7.047891542909688,
+    6.355232464831072,
+    5.663061131877428,
+    4.971864218189709,
+    4.2826118666812185,
+    3.597231594610182,
+    2.919527782809549,
+    2.2569099008363493,
+    1.6234256405841687,
+    1.0442826344437381,
+    0.5597735947761608,
+    0.2193839343955205,
+    0.048900510708061125
+  ]
+}
