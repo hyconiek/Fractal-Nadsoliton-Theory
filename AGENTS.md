@@ -8646,3 +8646,37 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   ST466 (support-four/five circuits), and ST472 (transfer discretization
   theorem).  ST474--ST476 remain method/source/evidence gated.  All future
   research PDFs remain English.
+
+## FIN current-state compendium guardrail (Release 10.88, 2026-08-14)
+
+- `FIN_Release_10_88_Current_State_Compendium_EN.pdf` is the standalone English
+  synthesis of the founding ontology, kernel genealogy, strict spectral core,
+  dual dynamics, Green/Schur compression, observer/refinement results,
+  ST278--ST461 variational frontier, FAR source obstructions, operational
+  transfer package, and current roadmap.  The Zenodo description is
+  `ZENODO_RELEASE_10_88_FIN_CURRENT_STATE_COMPENDIUM.md`.
+- The central dual-dynamics theorem is exactly scoped: `U_t=exp(-itA)` and
+  `P_t=exp(-tA)` are different Borel functions of one self-adjoint generator
+  and share its spectral projectors.  They do not share physical semantics,
+  measurement rules, or a calibrated clock.  The wave channel uses
+  `cos(t sqrt(A))` and therefore has `sqrt(lambda)` rather than `lambda`
+  frequency scaling.
+- The active-gain functional
+  `V_g(p)=D(p||u)-g (p-u)^T A (p-u)/2` is a conditional extension.  Its global
+  transition bracket and twelve-minimum theorem are accepted in their stated
+  finite models, but passive strict calculus does not source `g`; one
+  `D12` orbit is degeneracy, not a selector, and `QW-2191` remains open.
+- An observer inside a refinement layer may be modeled by coarse-channel
+  operational equivalence.  Exact blind fibers and relative clocks are valid
+  in the declared models.  They do not create an absolute meter, second,
+  action unit, physical layer count, Planck endpoint, or second informational
+  substrate beneath the nadsoliton.
+- Preserve the kernel split: `K_legacy_ont` is the intermediate bridge object,
+  `K_strict_gate` is the enriched working profile, and Legacy* is an audited
+  historical class.  No completion or legacy physical-role transfer theorem
+  follows from Release 10.88.
+- The release exports no strict active source, nonpremise selector, absolute
+  unit, physical clock, continuum spacetime, laboratory record, Standard
+  Model, gravity, `L_total`, or ToE closure.  Closed FAR lanes must not be
+  replayed without a genuinely new typed source/provider.  All future PDFs
+  remain English.
