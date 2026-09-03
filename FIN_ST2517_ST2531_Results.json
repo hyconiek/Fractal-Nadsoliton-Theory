@@ -1,0 +1,153 @@
+{
+  "ST2517": {
+    "boundary": "Strongest current ternary candidate.",
+    "law": "p proportional exp(theta sum tau_f Y_f)",
+    "object": "CandidateObject",
+    "packet_file": "FIN_ST2517_CandidateObject.json",
+    "packet_sha256": "113b5c831f8741a33afee78d69d674f4cd7a28ee7deb9c1d7727934bed64cc14",
+    "program": "ST2517",
+    "status": "Constructed"
+  },
+  "ST2518": {
+    "boundary": "tau shape and D12 covariance.",
+    "object": "StrictContent",
+    "packet_file": "FIN_ST2518_StrictContent.json",
+    "packet_sha256": "8537d65555037809af4188ae7c80bc2d07f8b11f3cb6e6f8233ada0beeea8914",
+    "program": "ST2518",
+    "status": "Proven",
+    "strict": [
+      "tau"
+    ]
+  },
+  "ST2519": {
+    "boundary": "theta family and parity instrument.",
+    "conditional": [
+      "theta",
+      "state law",
+      "instrument"
+    ],
+    "object": "ConditionalContent",
+    "packet_file": "FIN_ST2519_ConditionalContent.json",
+    "packet_sha256": "314924aeaa9950f503b1c1ab197fb38ddf43b4b3e0d97995cb14ae91abfd3774",
+    "program": "ST2519",
+    "status": "Constructed"
+  },
+  "ST2520": {
+    "boundary": "No current scalar sources magnitude.",
+    "object": "ThetaNoGo",
+    "packet_file": "FIN_ST2520_ThetaNoGo.json",
+    "packet_sha256": "94a68184224648aa32a102753cdc35c0ac36b975200274e9d6cc78dd7712b899",
+    "program": "ST2520",
+    "status": "No-go",
+    "strict_theta": false
+  },
+  "ST2521": {
+    "boundary": "Global flip pairs signs.",
+    "object": "PolarityNoGo",
+    "packet_file": "FIN_ST2521_PolarityNoGo.json",
+    "packet_sha256": "7a8a7cb34981a27b73f857860b8cf6ba0bc1cf19362656459daf1eef35c5dbed",
+    "program": "ST2521",
+    "status": "No-go",
+    "strict_polarity": false
+  },
+  "ST2522": {
+    "boundary": "Prism q generates extra interactions.",
+    "object": "RefinementNoGo",
+    "packet_file": "FIN_ST2522_RefinementNoGo.json",
+    "packet_sha256": "a6665932185cdcd3dd5625aa09971c3441db9e5b6f4f2b7ba7165854ceb2f620",
+    "program": "ST2522",
+    "status": "No-go",
+    "unique_transport": false
+  },
+  "ST2523": {
+    "boundary": "U/P do not realize configuration Gibbs dynamics.",
+    "extra_generator": true,
+    "object": "ChannelNoGo",
+    "packet_file": "FIN_ST2523_ChannelNoGo.json",
+    "packet_sha256": "1a7e3627e74d71418bec703087a245fd6fa88c41da8bc19ab91289bec6566425",
+    "program": "ST2523",
+    "status": "No-go"
+  },
+  "ST2524": {
+    "boundary": "No external record.",
+    "evidence": false,
+    "object": "OperationalBoundary",
+    "packet_file": "FIN_ST2524_OperationalBoundary.json",
+    "packet_sha256": "dc34ca0ebb412b8ca23c3ffe86b38a61540121f25cef78f8b9d6a77b9434a8ec",
+    "program": "ST2524",
+    "status": "Boundary"
+  },
+  "ST2525": {
+    "boundary": "Ten rows.",
+    "file": "FIN_ST2517_ST2531_TernaryGibbsSourceGate.json",
+    "object": "Gate",
+    "packet_file": "FIN_ST2525_Gate.json",
+    "packet_sha256": "8c678568e0541dbc3d213ae0e13da3fa4f2b2550ab9dae829be49132dc7f7c56",
+    "program": "ST2525",
+    "status": "Gate constructed"
+  },
+  "ST2526": {
+    "boundary": "Three mathematical rows pass.",
+    "object": "GateScore",
+    "packet_file": "FIN_ST2526_GateScore.json",
+    "packet_sha256": "f34eb4e6c0e72587fd7cd6c97aeadd945e1cc4fcb5652953337125f7e736f483",
+    "passes": 3,
+    "program": "ST2526",
+    "rows": 10,
+    "status": "Gate result"
+  },
+  "ST2527": {
+    "boundary": "Theta is not the only missing object after refinement.",
+    "object": "SingleScalarHypothesis",
+    "packet_file": "FIN_ST2527_SingleScalarHypothesis.json",
+    "packet_sha256": "5fd49e92b8266a185d5b69f9a25e44fd6af202c49d8500893de175cf228710f4",
+    "program": "ST2527",
+    "single_missing_scalar": false,
+    "status": "Refuted"
+  },
+  "ST2528": {
+    "boundary": "Do not call conditional Gibbs law strict physics.",
+    "object": "StopRules",
+    "packet_file": "FIN_ST2528_StopRules.json",
+    "packet_sha256": "5aa86292dcee648cee01fac412a3aa5030c8fe3b80e46ff8b55f486df4150513",
+    "program": "ST2528",
+    "status": "Stop",
+    "stop": [
+      "theta=alpha_geo",
+      "theta=eta",
+      "Gibbs=heat",
+      "prism=transport theorem"
+    ]
+  },
+  "ST2529": {
+    "boundary": "A new strict configuration-space generator with sourced detailed-balance affinity and refinement closure is required.",
+    "next": "strict Markov generator source or impossibility theorem",
+    "object": "HighestValueNext",
+    "packet_file": "FIN_ST2529_HighestValueNext.json",
+    "packet_sha256": "2c91f54099fda622cd8afe6e3ae205415496e883999732f1f3ec89a0650913a5",
+    "program": "ST2529",
+    "status": "Recommendation"
+  },
+  "ST2530": {
+    "boundary": "FIN pair tensor determines interaction shape, not statistical law, sign, refinement or physics.",
+    "fundamental_physics": false,
+    "object": "FinalInterpretation",
+    "packet_file": "FIN_ST2530_FinalInterpretation.json",
+    "packet_sha256": "84ff1f1d303e0a683780011dcee76c22242d55c57fcb26a6079f34c7046984e7",
+    "program": "ST2530",
+    "status": "Final verdict"
+  },
+  "ST2531": {
+    "boundary": "Release 11.11.",
+    "gate_sha256": "19cd6b50483586af4c9cf1f50a7405d5755d4d8f30ff8f0028c38b877f6298bb",
+    "object": "CycleTrigger",
+    "packet_file": "FIN_ST2531_CycleTrigger.json",
+    "packet_sha256": "89fc147d1a200a714f95b0285d833a6466109ef5c130b9542bda614c71dac0ad",
+    "program": "ST2531",
+    "programs": 90,
+    "range": "ST2442-ST2531",
+    "rounds": 6,
+    "status": "Cycle complete",
+    "strict_ToE_closure": false
+  }
+}

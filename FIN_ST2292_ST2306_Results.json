@@ -1,0 +1,172 @@
+{
+  "ST2292": {
+    "boundary": "Assumes a positive continuous valuation of multiplicative edge/loop composition.",
+    "domain": "positive reals",
+    "law": "g(xy)=g(x)g(y)",
+    "object": "PositiveMultiplicativeValuation",
+    "packet_file": "FIN_ST2292_PositiveMultiplicativeValuation.json",
+    "packet_sha256": "4014341057808794b5456cdccb8b8cba6247ae87bd67c17530f576297ae4d141",
+    "program": "ST2292",
+    "status": "Defined"
+  },
+  "ST2293": {
+    "boundary": "Continuity excludes discontinuous Cauchy characters.",
+    "object": "PowerLawClassification",
+    "packet_file": "FIN_ST2293_PowerLawClassification.json",
+    "packet_sha256": "8d09034e04013850740b81d0d88c1eb339d167b733f623d5dffc6951e8e37eb8",
+    "program": "ST2293",
+    "status": "Proven classification",
+    "theorem": "Every continuous positive multiplicative g is g(x)=x^p for a real p; monotonicity gives p>=0."
+  },
+  "ST2294": {
+    "boundary": "Mean normalization removes common amplitude but not exponent.",
+    "map": "T_p(x)=x^p/mean(x^p)",
+    "object": "NormalizedPowerMap",
+    "packet_file": "FIN_ST2294_NormalizedPowerMap.json",
+    "packet_sha256": "f6873068e327f36df3e1ce2a731da1c12f330bceb6fb259b1a50565f79350cfd",
+    "program": "ST2294",
+    "status": "Constructed",
+    "strict_profile_nonconstant": true
+  },
+  "ST2295": {
+    "boundary": "Exact algebra; finite residual shown for the strict orbit vector.",
+    "composition": "T_p composed with T_q equals T_(pq)",
+    "object": "PowerMapComposition",
+    "packet_file": "FIN_ST2295_PowerMapComposition.json",
+    "packet_sha256": "fb2e55e446f6f231610b44cdd17310f55b4ab12f8d5b4cd5e71b105760320c27",
+    "program": "ST2295",
+    "residual_inf": 3.552713678800501e-15,
+    "status": "Proven"
+  },
+  "ST2296": {
+    "boundary": "Scale-stationary two-step equals one-step requires T_(p^2)(x)=T_p(x).",
+    "idempotence_residuals": {
+      "0.0": 0.0,
+      "0.5": 2.431651612098245,
+      "1.0": 0.0,
+      "1.8": 0.6253035102816771,
+      "2.0": 0.46732419990767227
+    },
+    "object": "IdempotenceEquation",
+    "packet_file": "FIN_ST2296_IdempotenceEquation.json",
+    "packet_sha256": "5552ecb2ef04cdd03e3abdfa7d13c54b395bd151f97306662796d818e5299683",
+    "program": "ST2296",
+    "status": "Proven"
+  },
+  "ST2297": {
+    "boundary": "Use any unequal pair xi/xj and compare its transformed ratio.",
+    "object": "NonconstantProfileTheorem",
+    "packet_file": "FIN_ST2297_NonconstantProfileTheorem.json",
+    "packet_sha256": "1b53b2399a6011ffa69752da7c26af79aa3e7cbe950697b4d9484c5e1c9ff528",
+    "program": "ST2297",
+    "status": "Proven theorem",
+    "theorem": "For nonconstant positive x, T_p(T_p(x))=T_p(x) implies p^2=p, hence p in {0,1}."
+  },
+  "ST2298": {
+    "boundary": "p=0 sends every positive profile to the uniform vector and erases all orbit information.",
+    "information_preserving": false,
+    "object": "TrivialErasureBranch",
+    "output_distinct_values": 1,
+    "p": 0,
+    "packet_file": "FIN_ST2298_TrivialErasureBranch.json",
+    "packet_sha256": "ae05b6133c41051751733d39f8475489f71cc6990c5cd521f378a9edb5ab3784",
+    "program": "ST2298",
+    "status": "Proven"
+  },
+  "ST2299": {
+    "boundary": "p=1 is the identity on mean-normalized profiles.",
+    "information_preserving": true,
+    "nontrivial_compression": false,
+    "object": "NontrivialIdentityBranch",
+    "p": 1,
+    "packet_file": "FIN_ST2299_NontrivialIdentityBranch.json",
+    "packet_sha256": "6f847aa8487dd093ae2aa07ff65d5ea282307e30dccf1a262c3bad73c4b3d277",
+    "program": "ST2299",
+    "status": "Proven"
+  },
+  "ST2300": {
+    "axiom": "scale-stationary path independence/idempotence",
+    "boundary": "Stronger than ordinary coassociativity: the same direct map must represent one or any number of refinement steps.",
+    "object": "ScaleStationaryPathPrinciple",
+    "packet_file": "FIN_ST2300_ScaleStationaryPathPrinciple.json",
+    "packet_sha256": "9a5df042af635617751d879791708388ec26658a9f63900766688aec5bb9d719",
+    "program": "ST2300",
+    "status": "Conditional axiom",
+    "strict_exported": false
+  },
+  "ST2301": {
+    "boundary": "Every premise is needed for the p=1 conclusion.",
+    "necessary": [
+      "positive multiplicative power class",
+      "nonconstant profile",
+      "idempotence",
+      "information preservation"
+    ],
+    "object": "PrincipleNecessityAudit",
+    "packet_file": "FIN_ST2301_PrincipleNecessityAudit.json",
+    "packet_sha256": "0155dffdc5bc73469205f4f67d43505f83302f0029e789655e1454dbae9627cd",
+    "program": "ST2301",
+    "removals": {
+      "idempotence": "all p survive",
+      "information preservation": "p=0 survives",
+      "nonconstant": "p unidentifiable",
+      "power class": "other maps survive"
+    },
+    "status": "Axiom-removal audit"
+  },
+  "ST2302": {
+    "boundary": "Continuous refinement semigroups remain possible without idempotence.",
+    "composition": "p(t+s)=p(t)p(s)",
+    "family": "p(t)=exp(-c t), c>=0",
+    "free_rate": "c",
+    "object": "ContinuousSemigroupFreedom",
+    "packet_file": "FIN_ST2302_ContinuousSemigroupFreedom.json",
+    "packet_sha256": "640ff2270321a0332e48f3b8dc6242387beca682d80f5f01c96010510fc332ca",
+    "program": "ST2302",
+    "status": "Proven counterfamily"
+  },
+  "ST2303": {
+    "boundary": "ST289/ST619 already prove that plain coassociativity leaves a rate modulus/per-level sequence.",
+    "object": "CoassociativityBoundary",
+    "ordinary_coassociativity_selects_p": false,
+    "packet_file": "FIN_ST2303_CoassociativityBoundary.json",
+    "packet_sha256": "5ba25c3c14efaf6e2b498ba3179b5ceaf82d0c2518363698fb6081d2921e072f",
+    "program": "ST2303",
+    "status": "Guardrail confirmed"
+  },
+  "ST2304": {
+    "boundary": "p=1 follows only after adding scale-stationary idempotence and excluding erasure.",
+    "object": "ConditionalPSelectionGate",
+    "p_selected": 1,
+    "packet_file": "FIN_ST2304_ConditionalPSelectionGate.json",
+    "packet_sha256": "950d289be4bd436d70f526ea936cdacb22ce0c6709c6782d2091fa1280f435ac",
+    "program": "ST2304",
+    "status": "Conditional pass",
+    "strict_selection": false
+  },
+  "ST2305": {
+    "boundary": "Fractal path independence can select p=1, but only in a strong idempotent form absent from current FIN.",
+    "breakthrough_conditional": true,
+    "object": "RoundThreeVerdict",
+    "packet_file": "FIN_ST2305_RoundThreeVerdict.json",
+    "packet_sha256": "4833323f2a98359945a3b842774101e54252010bec603ffb01133f782be75621",
+    "program": "ST2305",
+    "status": "Round verdict",
+    "strict_theorem": false
+  },
+  "ST2306": {
+    "boundary": "Test the strong principle on the actual nonconstant orbit vector, including relabellings, entropy flow and level-dependent rates.",
+    "next": [
+      "permutation self-similarity",
+      "entropy monotonicity",
+      "fixed-profile no-go",
+      "vertical-rate escape",
+      "legacy sign boundary"
+    ],
+    "object": "RoundThreeRecommendation",
+    "packet_file": "FIN_ST2306_RoundThreeRecommendation.json",
+    "packet_sha256": "3b16a14f2ddbe0c79504bc4798717b517e5a968556c796b902185eb129b18039",
+    "program": "ST2306",
+    "status": "Recommendation"
+  }
+}

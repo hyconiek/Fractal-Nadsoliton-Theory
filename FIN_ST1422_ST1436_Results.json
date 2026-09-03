@@ -1,0 +1,164 @@
+{
+  "ST1422": {
+    "E_n": "product q(X_i)/p(X_i)",
+    "boundary": "Simple frozen hypotheses only.",
+    "object": "LikelihoodRatio_EProcess",
+    "outcomes": "seven distance classes",
+    "packet_file": "FIN_ST1422_LikelihoodRatio_EProcess.json",
+    "packet_sha256": "947d090038a4e811fcce7a373f48beb33178107c2b0dcf8589a10959eaf93435",
+    "program": "ST1422",
+    "status": "constructed_full_record_likelihood_ratio_e_process"
+  },
+  "ST1423": {
+    "E_C[E_n]": 1.0,
+    "boundary": "IID simple null.",
+    "object": "MartingaleUnderClassical",
+    "packet_file": "FIN_ST1423_MartingaleUnderClassical.json",
+    "packet_sha256": "9e1e8be2aa70881d0f4234f2b96b61218e459ec1d7c4300e030d01be1c29550c",
+    "program": "ST1423",
+    "status": "proven_E_n_is_nonnegative_mean_one_martingale_under_C"
+  },
+  "ST1424": {
+    "E_Q[1/E_n]": 1.0,
+    "boundary": "IID simple alternative.",
+    "object": "ReverseMartingaleUnderQuantum",
+    "packet_file": "FIN_ST1424_ReverseMartingaleUnderQuantum.json",
+    "packet_sha256": "a5041b5e59467277e8bd5306cbabca73bfeee50b81db8f980b13585a0f8a8a4a",
+    "program": "ST1424",
+    "status": "proven_inverse_likelihood_is_mean_one_martingale_under_Q"
+  },
+  "ST1425": {
+    "C_threshold": 0.01,
+    "Q_threshold": 100.0,
+    "alpha": 0.01,
+    "boundary": "Stopping rule may be data-dependent.",
+    "each_wrong_boundary_probability_at_most": 0.01,
+    "object": "VilleAnytimeBounds",
+    "packet_file": "FIN_ST1425_VilleAnytimeBounds.json",
+    "packet_sha256": "5f07eeb48dc079435b0f68ee2ec314a40f05f76dd0a148875787b24b78a0e8db",
+    "program": "ST1425",
+    "status": "proven_symmetric_anytime_error_bounds_by_Ville"
+  },
+  "ST1426": {
+    "boundary": "Full vertex/distance record.",
+    "object": "ExpectedLogGrowth",
+    "packet_file": "FIN_ST1426_ExpectedLogGrowth.json",
+    "packet_sha256": "34cd7cad3251131e87cc14ea11598673667e8527bfb17a8362cf1d6434485d4b",
+    "program": "ST1426",
+    "status": "proven_expected_log_likelihood_growth_rates",
+    "under_C": -0.706146122009315,
+    "under_Q": 0.4134894066196461
+  },
+  "ST1427": {
+    "boundary": "Ignores overshoot and is not a guarantee.",
+    "object": "ApproximateStoppingLengths",
+    "packet_file": "FIN_ST1427_ApproximateStoppingLengths.json",
+    "packet_sha256": "92fc181b1459c4f75ac6b9d56aaa06186823bbbd73a89788dbe375c9ea5ca533",
+    "program": "ST1427",
+    "status": "constructed_Wald_scale_stopping_length_estimates",
+    "under_C": 6.521554169106296,
+    "under_Q": 11.137335351916816
+  },
+  "ST1428": {
+    "binary_C": 0.4218128334046286,
+    "binary_Q": 0.35744222947815313,
+    "boundary": "Frozen models.",
+    "full_C": 0.706146122009315,
+    "full_Q": 0.4134894066196461,
+    "object": "FullVsBinarySequentialGain",
+    "packet_file": "FIN_ST1428_FullVsBinarySequentialGain.json",
+    "packet_sha256": "bdd1b8e7d79e8adcedb085a2cd51e17923cff428dec41a2878752e68fe26c835",
+    "program": "ST1428",
+    "status": "proven_full_record_has_larger_expected_growth_than_binary_return"
+  },
+  "ST1429": {
+    "boundary": "No fixed sample size needed for Type-I control.",
+    "model_adaptation_allowed": false,
+    "object": "OptionalStoppingSafety",
+    "packet_file": "FIN_ST1429_OptionalStoppingSafety.json",
+    "packet_sha256": "36710928904e5e37f47981117b97df8de8a33836b6639f54ea1778473374632f",
+    "peeking_allowed": true,
+    "program": "ST1429",
+    "status": "proven_optional_stopping_is_safe_for_declared_simple_e_process"
+  },
+  "ST1430": {
+    "boundary": "Composite null/alternative warning.",
+    "naive_refit_safe": false,
+    "object": "CompositePluginWarning",
+    "packet_file": "FIN_ST1430_CompositePluginWarning.json",
+    "packet_sha256": "8725253f56366cd8ac6e4c4f46a7c44b4b660f7224700d56b3a61775f675af08",
+    "program": "ST1430",
+    "status": "proven_plug_in_maximized_nuisance_likelihood_is_not_automatically_an_e_process"
+  },
+  "ST1431": {
+    "boundary": "Future work.",
+    "implemented": false,
+    "object": "CompositeEProcessRequirement",
+    "options": [
+      "predeclared mixture likelihood",
+      "safe test martingale",
+      "universal inference with proved domination"
+    ],
+    "packet_file": "FIN_ST1431_CompositeEProcessRequirement.json",
+    "packet_sha256": "3d6666b14599b61b5ee562f7899479e1718b262566d638023407d7e5606ab3bb",
+    "program": "ST1431",
+    "status": "constructed_valid_composite_extension_requirements"
+  },
+  "ST1432": {
+    "boundary": "Includes interval and sequential upgrades.",
+    "file": "FIN_ST1422_ST1436_Protocol_10_99.json",
+    "object": "Protocol1099Freeze",
+    "packet_file": "FIN_ST1432_Protocol1099Freeze.json",
+    "packet_sha256": "f5da6313562b78ba97122ff200004aa78739cb3167e6ae6319ad4b3ae932fc06",
+    "program": "ST1432",
+    "sha256": "dadf5a902a007b80ea679ed163e1094ba2b048123ae92a5792cdcd8258466bc5",
+    "status": "constructed_protocol_10_99_freeze"
+  },
+  "ST1433": {
+    "boundary": "Local schema test.",
+    "errors": [],
+    "object": "SequentialValidator",
+    "packet_file": "FIN_ST1433_SequentialValidator.json",
+    "packet_sha256": "339acc3b09add3c3d0e689adf17878a1bd264d3a3f00fccce7db538630e20066",
+    "program": "ST1433",
+    "status": "proven_protocol_passes_sequential_validator"
+  },
+  "ST1434": {
+    "C_decision": "C",
+    "C_n": 6,
+    "Q_decision": "Q",
+    "Q_n": 9,
+    "boundary": "Random code fixtures, not evidence.",
+    "file": "FIN_ST1422_ST1436_SequentialFixtures.json",
+    "object": "SyntheticSequentialFixtures",
+    "packet_file": "FIN_ST1434_SyntheticSequentialFixtures.json",
+    "packet_sha256": "b62f6208ca7068f869931bf8832cd123de914fa2d8c16807a3034cca9f74a120",
+    "program": "ST1434",
+    "status": "synthetic_sequential_fixtures_stop_on_correct_boundaries"
+  },
+  "ST1435": {
+    "boundary": "Protocol readiness only.",
+    "external_hash_custody": false,
+    "object": "CustodyBoundary",
+    "packet_file": "FIN_ST1435_CustodyBoundary.json",
+    "packet_sha256": "3f500e0f54e61d374afdad148f987aa783a551c2ccdb9fd964c6b7f7dfa10b06",
+    "program": "ST1435",
+    "raw_events": false,
+    "status": "blocked_no_independent_registration_or_nature_sequence"
+  },
+  "ST1436": {
+    "boundary": "Final theorem/status/roadmap round.",
+    "next": [
+      "certificate synthesis",
+      "claim ladder",
+      "remaining composite gap",
+      "laboratory boundary",
+      "next programmes"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1436_RoundFive_Recommendation.json",
+    "packet_sha256": "2704346910d4b5a18d84a2143aad8dc3785c87828e8145bbf10dd5850d60b25b",
+    "program": "ST1436",
+    "status": "recommended_ST1437_ST1451"
+  }
+}

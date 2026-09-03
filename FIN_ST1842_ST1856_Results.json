@@ -1,0 +1,182 @@
+{
+  "ST1842": {
+    "E": 66,
+    "V": 12,
+    "boundary": "All pair weights positive.",
+    "degree": 11,
+    "diameter": 1,
+    "object": "CompleteSupportGraph",
+    "packet_file": "FIN_ST1842_CompleteSupportGraph.json",
+    "packet_sha256": "3a0e88725ab2f878f279caf1b9579315e0b85e3bda5d8c1897ce9545eff8509f",
+    "program": "ST1842",
+    "status": "proven_strict_weight_support_graph_is_complete_K12"
+  },
+  "ST1843": {
+    "boundary": "Connected graph cycle rank.",
+    "cycle_rank": 55,
+    "object": "OneSkeletonCycleRank",
+    "packet_file": "FIN_ST1843_OneSkeletonCycleRank.json",
+    "packet_sha256": "b64011f5086bc422fda4074344f380c010b582eb99238a24d0b4a95a9693eac8",
+    "program": "ST1843",
+    "status": "proven_edge_only_connection_mod_vertex_gauge_has_55_cycle_degrees"
+  },
+  "ST1844": {
+    "boundary": "Candidate 2-cells.",
+    "object": "TriangleFaceCount",
+    "packet_file": "FIN_ST1844_TriangleFaceCount.json",
+    "packet_sha256": "d5afa8e34d707db8a2c6c49b75c1586d89422c0cb71590d1c65d591f21fb0572",
+    "program": "ST1844",
+    "status": "proven_complete_support_has_220_triangle_cliques",
+    "triangles": 220
+  },
+  "ST1845": {
+    "boundary": "All one-cycle homology killed when triangles attached.",
+    "expected_cycle_rank": 55,
+    "object": "TriangleBoundaryRank",
+    "packet_file": "FIN_ST1845_TriangleBoundaryRank.json",
+    "packet_sha256": "52573bb87a843ea42de3231328d1f15b6e364f8c65324cec44d6166789b7ef28",
+    "program": "ST1845",
+    "rank": 55,
+    "status": "proven_triangle_to_edge_boundary_map_has_rank_55"
+  },
+  "ST1846": {
+    "H1": 0,
+    "boundary": "No nontrivial H1/topological gauge sector.",
+    "dimension": 11,
+    "object": "CliqueComplexTopology",
+    "packet_file": "FIN_ST1846_CliqueComplexTopology.json",
+    "packet_sha256": "562765ceb27be0c58ee12d798734f6125a1710169a798b7b35d13704d36af15a",
+    "program": "ST1846",
+    "status": "proven_full_clique_complex_of_K12_is_contractible_11_simplex"
+  },
+  "ST1847": {
+    "boundary": "55 holonomies remain modulo gauge.",
+    "local_Maxwell": false,
+    "object": "NoFaceGaugeDegrees",
+    "packet_file": "FIN_ST1847_NoFaceGaugeDegrees.json",
+    "packet_sha256": "2ab6caf0c4b4c634a7b608b7ed21537eb23592ae0351dab8d9dcf17899b3e4aa",
+    "program": "ST1847",
+    "status": "proven_without_2_cells_no_local_curvature_action_is_defined"
+  },
+  "ST1848": {
+    "boundary": "Simply connected.",
+    "object": "AllTriangleFlatness",
+    "packet_file": "FIN_ST1848_AllTriangleFlatness.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1848",
+    "status": "proven_zero_all_triangle_holonomies_make_U1_connection_pure_gauge_on_clique_complex"
+  },
+  "ST1849": {
+    "action": "sum_faces kappa_f [1-Re holonomy_f]",
+    "boundary": "Additional coefficients.",
+    "free_face_weights": 220,
+    "object": "WilsonActionFamily",
+    "packet_file": "FIN_ST1849_WilsonActionFamily.json",
+    "packet_sha256": "0fe4d227ad8e5615a634e9f88907a05575a979007d093cd6701a8e79a7bbd68d",
+    "program": "ST1849",
+    "status": "constructed_infinite_Wilson_action_family_on_triangles"
+  },
+  "ST1850": {
+    "boundary": "Product, mean, minimum and external areas all possible.",
+    "canonical_face_measure": false,
+    "object": "FaceWeightNonuniqueness",
+    "packet_file": "FIN_ST1850_FaceWeightNonuniqueness.json",
+    "packet_sha256": "cb956de7976eb30e1020daef0d745e825795150170212eedca9ef14161576ba8",
+    "program": "ST1850",
+    "status": "proven_edge_weights_do_not_uniquely_determine_face_areas_or_Wilson_coefficients"
+  },
+  "ST1851": {
+    "bands": [
+      {
+        "cycle_rank": 1,
+        "edges": 12,
+        "max_distance": 1
+      },
+      {
+        "cycle_rank": 13,
+        "edges": 24,
+        "max_distance": 2
+      },
+      {
+        "cycle_rank": 25,
+        "edges": 36,
+        "max_distance": 3
+      },
+      {
+        "cycle_rank": 37,
+        "edges": 48,
+        "max_distance": 4
+      },
+      {
+        "cycle_rank": 49,
+        "edges": 60,
+        "max_distance": 5
+      },
+      {
+        "cycle_rank": 55,
+        "edges": 66,
+        "max_distance": 6
+      }
+    ],
+    "boundary": "Every threshold is an extra choice.",
+    "object": "BandThresholdTopology",
+    "packet_file": "FIN_ST1851_BandThresholdTopology.json",
+    "packet_sha256": "0c7df2af1d5efc90c1613536ab9becc3a2dd36bdba12c33e45bf2a1e2576c536",
+    "program": "ST1851",
+    "status": "constructed_distance_band_threshold_topology_ladder"
+  },
+  "ST1852": {
+    "C12_edges": 12,
+    "H1": 1,
+    "boundary": "Not selected by nonzero support.",
+    "discarded": 54,
+    "object": "C12Contrast",
+    "packet_file": "FIN_ST1852_C12Contrast.json",
+    "packet_sha256": "a4abcbf15fc5c623a9214715d58d8980f29d05136289e948699410be25ef2431",
+    "program": "ST1852",
+    "status": "proven_nearest_neighbor_C12_has_H1_dimension_one_but_discards_54_strict_edges"
+  },
+  "ST1853": {
+    "boundary": "Diameter one conflicts with emergent extended space unless weights/refinement add metric.",
+    "object": "GraphLocalityNoGo",
+    "packet_file": "FIN_ST1853_GraphLocalityNoGo.json",
+    "packet_sha256": "4d161fb5ff8da08d3dec5398f089def6dcbdcb72d2849e46bb04667184fec179",
+    "program": "ST1853",
+    "status": "proven_complete_support_has_no_graph_geodesic_locality_or_large_diameter",
+    "support_lightcone": false
+  },
+  "ST1854": {
+    "Maxwell_continuum": false,
+    "boundary": "Gauge matter action does not generate gauge dynamics.",
+    "object": "MaxwellContinuumBoundary",
+    "packet_file": "FIN_ST1854_MaxwellContinuumBoundary.json",
+    "packet_sha256": "e0a835b88d4737c75c6a07edcca5255a1e0ba1586b2cb84001319a496fa7583c",
+    "program": "ST1854",
+    "status": "blocked_no_canonical_2_complex_face_area_or_3plus1_scaling_for_Maxwell_limit"
+  },
+  "ST1855": {
+    "boundary": "Conditional clique or band complexes remain possible.",
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1855_RoundThree_Verdict.json",
+    "packet_sha256": "2c3edba6bf815b7f5432fdf7c0f3cc83356802d74f5e1a996c36d38895912f03",
+    "program": "ST1855",
+    "status": "round_three_falsifies_support_graph_as_unique_gauge_curvature_geometry",
+    "unique_cell_complex": false
+  },
+  "ST1856": {
+    "boundary": "Test exact refinement transport and whether it selects locality/dimension.",
+    "next": [
+      "A24 incidence",
+      "coarse gauge lift",
+      "relative fiber gauges",
+      "cycle growth",
+      "q scaling",
+      "continuum no-go"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1856_RoundThree_Recommendation.json",
+    "packet_sha256": "c1071eea7ffeb1b57119e16fe7c1fc2ba675bfe70b064c9568d8a35e01dc3aba",
+    "program": "ST1856",
+    "status": "recommended_ST1857_ST1871"
+  }
+}

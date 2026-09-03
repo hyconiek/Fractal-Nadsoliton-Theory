@@ -1,0 +1,133 @@
+{
+  "ST2097": {
+    "boundary": "Output depends only on three oriented boundary edges.",
+    "object": "TriangleLocalAnsatz",
+    "packet_file": "FIN_ST2097_TriangleLocalAnsatz.json",
+    "packet_sha256": "3c9118a5ae6c11bc5f4529a5072cc064f76b25133b5c5b780b2e1002f2308429",
+    "program": "ST2097",
+    "row": "a x_ij+b x_jk+c x_ik",
+    "status": "constructed_boundary_local_triangle_row_ansatz"
+  },
+  "ST2098": {
+    "boundary": "Exact SymPy linear solve.",
+    "object": "LocalChainKernel",
+    "packet_file": "FIN_ST2098_LocalChainKernel.json",
+    "packet_sha256": "6788fdd5b939934071aa2d388133c7e3e335358ccbd701de4e3b427420870c57",
+    "program": "ST2098",
+    "solution": "{(-c, -c, c)}",
+    "status": "proven_local_row_annihilates_all_gradients_iff_coefficients_proportional_to_standard_boundary"
+  },
+  "ST2099": {
+    "boundary": "Before symmetry.",
+    "object": "PerFaceOneDimensionality",
+    "packet_file": "FIN_ST2099_PerFaceOneDimensionality.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2099",
+    "status": "proven_each_triangle_has_one_dimensional_local_chain_row_space"
+  },
+  "ST2100": {
+    "boundary": "Orbit classification.",
+    "object": "D12OrbitReduction",
+    "packet_file": "FIN_ST2100_D12OrbitReduction.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2100",
+    "status": "proven_D12_equivariance_makes_row_scale_constant_on_each_of_twelve_triangle_orbits"
+  },
+  "ST2101": {
+    "boundary": "Full triangle space.",
+    "dimension": 12,
+    "object": "TwelveParameterLocalFamily",
+    "packet_file": "FIN_ST2101_TwelveParameterLocalFamily.json",
+    "packet_sha256": "fd6ebfa4649009fb121858265ed0f561ff599bfe66b49f819f80b63e43212ba5",
+    "program": "ST2101",
+    "status": "proven_boundary_local_D12_equivariant_chain_maps_form_twelve_dimensional_family"
+  },
+  "ST2102": {
+    "boundary": "Canonical after choosing cellular incidence convention.",
+    "object": "StandardCoboundary",
+    "packet_file": "FIN_ST2102_StandardCoboundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2102",
+    "status": "constructed_standard_simplicial_coboundary_as_all_orbit_scales_one"
+  },
+  "ST2103": {
+    "boundary": "If rows must be primitive cellular boundaries.",
+    "object": "IntegralIncidenceRestriction",
+    "packet_file": "FIN_ST2103_IntegralIncidenceRestriction.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2103",
+    "status": "proven_primitive_integral_incidence_coefficients_restrict_each_nonzero_orbit_scale_to_plusminus_one"
+  },
+  "ST2104": {
+    "boundary": "All-nonzero primitive integral rows equivalent to standard d1 up to face orientation.",
+    "object": "OrientationSignQuotient",
+    "packet_file": "FIN_ST2104_OrientationSignQuotient.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2104",
+    "status": "proven_face_orientation_reversal_absorbs_individual_minus_signs"
+  },
+  "ST2105": {
+    "boundary": "Unavailable symmetry enlargement.",
+    "object": "FullS12SymmetryBoundary",
+    "packet_file": "FIN_ST2105_FullS12SymmetryBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2105",
+    "status": "full_S12_naturality_would_force_one_orbit_scale_but_does_not_preserve_weighted_A"
+  },
+  "ST2106": {
+    "boundary": "Prior face-measure ambiguity reappears in d1 normalization.",
+    "object": "WeightDependentOrbitScalars",
+    "packet_file": "FIN_ST2106_WeightDependentOrbitScalars.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2106",
+    "status": "proven_D12_natural_weight_functions_can_assign_distinct_positive_scales_to_twelve_triangle_orbits"
+  },
+  "ST2107": {
+    "boundary": "Topology cannot select scales.",
+    "object": "TopologyKernelInvariance",
+    "packet_file": "FIN_ST2107_TopologyKernelInvariance.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2107",
+    "status": "proven_nonzero_orbit_row_rescaling_does_not_change_kernel_of_d1_or_H1"
+  },
+  "ST2108": {
+    "boundary": "Gauge redundancy between d1 normalization and Hodge star.",
+    "invariant": "m_orbit c_orbit^2",
+    "object": "HodgeParameterCombination",
+    "packet_file": "FIN_ST2108_HodgeParameterCombination.json",
+    "packet_sha256": "2893adcbc9e6b770653c628b0dbfe75b02fd0c71469a906c2e3bcae2ce572e06",
+    "program": "ST2108",
+    "status": "proven_curvature_energy_depends_only_on_products_face_measure_times_row_scale_squared"
+  },
+  "ST2109": {
+    "boundary": "Strong reduction/no-go.",
+    "object": "LocalityNoUniqueness",
+    "packet_file": "FIN_ST2109_LocalityNoUniqueness.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2109",
+    "status": "locality_reduces_517_to12_but_not_to_unique_physical_operator"
+  },
+  "ST2110": {
+    "boundary": "Conditional positive result.",
+    "object": "RoundTwo_Verdict",
+    "packet_file": "FIN_ST2110_RoundTwo_Verdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2110",
+    "status": "round_two_finds_unique_combinatorial_incidence_only_after_primitive_integrality_and_chosen_face_complex"
+  },
+  "ST2111": {
+    "boundary": "Add exact refinement chain-map intertwiners and classify vertical coefficients.",
+    "next": [
+      "coarse pullback",
+      "lifted faces",
+      "square rows",
+      "vertical orbit scales",
+      "two-level growth"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST2111_RoundTwo_Recommendation.json",
+    "packet_sha256": "5b2485b26cf3b466b433949ccd1b5f308abd1160f78934493c3a8d38d36468cd",
+    "program": "ST2111",
+    "status": "recommended_ST2112_ST2126"
+  }
+}

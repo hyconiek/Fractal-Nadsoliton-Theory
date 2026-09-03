@@ -1,0 +1,202 @@
+{
+  "ST1092": {
+    "Q_offdiag_max": 0.4699856726450201,
+    "Q_offdiag_min": 0.011070817321442113,
+    "Q_row_sum_residual": 2.220446049250313e-16,
+    "all_offdiagonal_rates_positive": true,
+    "boundary": "This licenses a classical Markov candidate; it does not select it as the ontology.",
+    "object": "StrictA_MarkovGeneratorCertificate",
+    "packet_file": "FIN_ST1092_StrictA_MarkovGeneratorCertificate.json",
+    "packet_sha256": "4a5b9b8c3afe1bba172e39908c53fbec9b177f4945304bcca5566060debe213b",
+    "program": "ST1092",
+    "status": "proven_strict_A_is_irreducible_reversible_CTMC_laplacian",
+    "uniform_detailed_balance": true
+  },
+  "ST1093": {
+    "absolute_residual": 7.105427357601002e-15,
+    "boundary": "Algebraic identity follows from symmetry and zero row sums; numbers are a replay witness.",
+    "conductance_max": 0.4699856726450201,
+    "conductance_min": 0.011070817321442113,
+    "edge_form": 36.43783296807047,
+    "fAf": 36.43783296807046,
+    "object": "StrictA_DirichletFormCertificate",
+    "packet_file": "FIN_ST1093_StrictA_DirichletFormCertificate.json",
+    "packet_sha256": "00d7e52a9fa94eae0b20d84f576395586aa9a6331d9b993fed661b779f590733",
+    "program": "ST1093",
+    "status": "proven_dirichlet_form_identity_numerically_replayed"
+  },
+  "ST1094": {
+    "P_min": 0.025668428704485106,
+    "boundary": "Canonical after choosing the vertex/probability category.",
+    "column_sum_residual": 6.661338147750939e-16,
+    "object": "ClassicalSimplex_StateCandidate",
+    "packet_file": "FIN_ST1094_ClassicalSimplex_StateCandidate.json",
+    "packet_sha256": "a72b4a9483aa7dbe0886f1c60c4df31a53e376a1dcb6e8e51d680aaef97c00d0",
+    "program": "ST1094",
+    "real_dimension": 11,
+    "row_sum_residual": 3.3306690738754696e-16,
+    "state_space": "Delta_11={p>=0, 1^T p=1}",
+    "status": "constructed_canonical_classical_simplex_candidate"
+  },
+  "ST1095": {
+    "boundary": "Canonical after choosing complex Hilbert/ray semantics.",
+    "evolution": "[psi]->[exp(-itA)psi]",
+    "object": "QuantumPureRay_StateCandidate",
+    "packet_file": "FIN_ST1095_QuantumPureRay_StateCandidate.json",
+    "packet_sha256": "b5f480a19b405417095ce76c1e1592d29a82edd31a983f29e87dd35f0f7506ad",
+    "program": "ST1095",
+    "real_dimension": 22,
+    "state_space": "CP^11",
+    "status": "constructed_canonical_quantum_pure_ray_candidate"
+  },
+  "ST1096": {
+    "affine_real_dimension": 143,
+    "boundary": "Canonical after choosing density-operator semantics.",
+    "convex": true,
+    "evolution": "rho->exp(-itA) rho exp(itA)",
+    "object": "QuantumDensity_StateCandidate",
+    "packet_file": "FIN_ST1096_QuantumDensity_StateCandidate.json",
+    "packet_sha256": "2788f28dc2a950694907fb86fb9f65facdce5c3af85ab713a316570cd398de0f",
+    "program": "ST1096",
+    "state_space": "D_12={rho>=0, Tr rho=1}",
+    "status": "constructed_canonical_quantum_density_candidate"
+  },
+  "ST1097": {
+    "boundary": "Quantum stationary dimension uses the observed exact-degeneracy pattern up to the declared tolerance.",
+    "classical_stationary_state_count": 1,
+    "object": "StationarySet_Contrast",
+    "packet_file": "FIN_ST1097_StationarySet_Contrast.json",
+    "packet_sha256": "9e0e0d83534268eedafe1c8af2224a4d0511b4e01029b37bd81ce840108c66bc",
+    "program": "ST1097",
+    "quantum_commutant_hermitian_real_dimension": 22,
+    "quantum_trace_one_stationary_affine_dimension": 21,
+    "spectral_multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "status": "proven_stationary_sets_are_inequivalent"
+  },
+  "ST1098": {
+    "boundary": "Finite strict model.",
+    "heat_contrast_t10": 0.0002166795029535337,
+    "heat_converges_to_uniform": true,
+    "heat_inverse_not_stochastic": true,
+    "object": "HeatVsUnitary_DynamicalContrast",
+    "packet_file": "FIN_ST1098_HeatVsUnitary_DynamicalContrast.json",
+    "packet_sha256": "81bdceeafb084ae9d4dbb431040b3ad69650593a50839d7757bec3b24e6205b7",
+    "program": "ST1098",
+    "status": "proven_heat_and_unitary_have_incompatible_asymptotics",
+    "unitary_inverse_exists": true,
+    "unitary_norm_preserved": true,
+    "unitary_norm_t10": 0.9999999999999998
+  },
+  "ST1099": {
+    "boundary": "Uses dimension and boundary/convex-stratum invariants.",
+    "density_states": "affine dimension 143, convex body with rank-stratified boundary",
+    "object": "CandidateDimension_TopologyAudit",
+    "packet_file": "FIN_ST1099_CandidateDimension_TopologyAudit.json",
+    "packet_sha256": "72f058d66615ad7b73619ff05e7e243d100fd148949d209527c690de7766f40f",
+    "program": "ST1099",
+    "pure_rays": "dimension 22, compact boundaryless manifold",
+    "simplex": "dimension 11 with boundary/corners",
+    "status": "proven_candidate_state_spaces_are_not_homeomorphic"
+  },
+  "ST1100": {
+    "boundary": "No-go concerns the operator datum alone; richer FIN data might select a category.",
+    "candidates": [
+      "Delta_11 heat",
+      "CP^11 unitary",
+      "D_12 unitary conjugation"
+    ],
+    "object": "OperatorToState_NonuniquenessTheorem",
+    "packet_file": "FIN_ST1100_OperatorToState_NonuniquenessTheorem.json",
+    "packet_sha256": "62dfb4b79e78bb0c29529a87abeead1ff397d40b92e8679c334c1a3346cde4dd",
+    "program": "ST1100",
+    "status": "proven_A_alone_does_not_select_unique_state_ontology",
+    "theorem": "the same A canonically supports at least three pairwise inequivalent normalized state spaces and two incompatible complete dynamics",
+    "unique_state_functor_from_A": false
+  },
+  "ST1101": {
+    "boundary": "Not post-hoc renormalization.",
+    "classical": "1^T exp(-tA)p=1^T p",
+    "density_quantum": "Tr(U rho U*)=Tr rho",
+    "object": "Normalization_IsDynamicalHere",
+    "packet_file": "FIN_ST1101_Normalization_IsDynamicalHere.json",
+    "packet_sha256": "ec4439b7ffafd104fa5b4bd7891f1462fdaf70ee385d395b7a8bfabc21b445ad",
+    "program": "ST1101",
+    "pure_quantum": "||exp(-itA)psi||=||psi||",
+    "status": "proven_normalization_is_dynamically_conserved_in_declared_channels"
+  },
+  "ST1102": {
+    "boundary": "Exclusion does not identify which state category is physical.",
+    "density": "trace one",
+    "object": "ZeroExclusion_AcrossCandidates",
+    "packet_file": "FIN_ST1102_ZeroExclusion_AcrossCandidates.json",
+    "packet_sha256": "21240dc8d46206d24acfca9063036210bf82a15f8aa6099f63124baf0c8045ce",
+    "program": "ST1102",
+    "rays": "zero has no ray",
+    "shared_nonannihilation": "conditional on category and channel",
+    "simplex": "mass one",
+    "status": "proven_zero_excluded_but_for_different_reasons"
+  },
+  "ST1103": {
+    "A_supplies_functional_by_itself": false,
+    "GNS_inputs": [
+      "*-algebra",
+      "positive normalized functional"
+    ],
+    "boundary": "Normalized trace or uniform state is available only after algebra/state-category input.",
+    "circularity": "using the desired state to construct its own state space",
+    "object": "GNS_StateInputCircularity",
+    "packet_file": "FIN_ST1103_GNS_StateInputCircularity.json",
+    "packet_sha256": "6e857c6706592e309e16b6ed177a80f3f8ea5321b43d7d71a58490e33c295e46",
+    "program": "ST1103",
+    "status": "proven_GNS_requires_a_state_functional_not_A_alone"
+  },
+  "ST1104": {
+    "boundary": "All three candidates admit the inherited cyclic permutation action.",
+    "density_action": "rho->R rho R*",
+    "object": "SymmetryDoesNotSelectStateCategory",
+    "packet_file": "FIN_ST1104_SymmetryDoesNotSelectStateCategory.json",
+    "packet_sha256": "43697a765d7503863d2011ac944839c7328a0cdd4cf95c02fb3e76165f75f2b2",
+    "program": "ST1104",
+    "ray_action": "[psi]->[Rpsi]",
+    "selector_QW2191_discharged": false,
+    "simplex_action": "p->Rp",
+    "status": "proven_Z12_symmetry_does_not_select_classical_vs_quantum_category"
+  },
+  "ST1105": {
+    "boundary": "This is a strict underdetermination result, not a no-go for every richer FIN construction.",
+    "kernel_to_unique_state_bridge": false,
+    "minimal_extra_choice": [
+      "state category",
+      "admissible channel",
+      "operational observable algebra"
+    ],
+    "object": "CanonicalStateMap_CurrentVerdict",
+    "packet_file": "FIN_ST1105_CanonicalStateMap_CurrentVerdict.json",
+    "packet_sha256": "bb7f963083f1c66376ebc7c8eef536b8bcd23e87fa8f79dc7141915c44c2b654",
+    "program": "ST1105",
+    "status": "total_state_map_nonunique_on_current_operator_datum"
+  },
+  "ST1106": {
+    "boundary": "Next round classifies complete conservative, killed and quantum channels.",
+    "next": [
+      "Markov generator iff test",
+      "no-killing criterion",
+      "Lindblad alternatives",
+      "nonlinear completeness boundary",
+      "strict no-killing verdict"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1106_RoundOne_Recommendation.json",
+    "packet_sha256": "20a445383261903a4c854a23674ca8ce218342177045187fc2e3da726c022a4e",
+    "program": "ST1106",
+    "status": "recommended_ST1107_ST1121"
+  }
+}

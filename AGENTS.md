@@ -8680,3 +8680,1091 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   Model, gravity, `L_total`, or ToE closure.  Closed FAR lanes must not be
   replayed without a genuinely new typed source/provider.  All future PDFs
   remain English.
+
+## Programs ST462--ST551 symmetric-vacuum/blockwise-algebra/operational-duality guardrail (Release 10.89, 2026-08-29)
+
+- ST462--ST551 were rerun locally from source; the pre-existing Polish
+  ST462--ST476 PDF is not used as evidence.  The first script's dead import was
+  removed, and its spurious 24-element orbit count was repaired by recording
+  the reflection residual and an explicit orbit-merging tolerance.  The final
+  candidate branch has stabilizer order two and orbit size twelve.
+- The supplied variational family retains the theorem-level global bracket
+  `g_* in [2.8934,2.9024964917477667]`.  The isolated reflection-even
+  candidate has ratio `2.9024964817477654`, 268 declared multistart hits,
+  certified boundary exclusion, and paid local tangent curvature above
+  `5.61067314`.  Do not call it globally first: every other interior
+  multilevel orbit below the candidate has not been interval-excluded.
+- ST512 proves the deterministic equivariant vacuum no-go: every locally
+  unique `D12`-equivariant vector field tangent to the simplex fixes the exact
+  uniform state.  ST527 supplies removal witnesses for every premise.  This
+  does not forbid noisy or seeded symmetry breaking; it proves that a seed,
+  stochastic forcing, asymmetric boundary/apparatus, or nonunique solution
+  rule is an additional typed escape resource.
+- Seed/fluctuation, sustaining gain and canonical selection remain distinct.
+  `E[xi^T A xi]=Tr(A Sigma)` converts supplied covariance into mean gain, but
+  `Sigma`/bath/pump is the source.  Invariant stochastic or irreducible Markov
+  selection on the transitive twelve-branch orbit is uniform `1/12`; a
+  nonuniform or deterministic branch needs an explicit breaking datum.
+- Exact dense modular elimination gives degree-eight decomposable rank `1791`
+  and nullity `237` over five primes and two integer point ensembles, with a
+  common pivot schema and complete modular nullspaces.  Sequential and
+  QR-conditioned 100-bit CRT probes reconstruct zero tested rational columns;
+  retain `rank_Q in [1791,1892]` and relation nullity in `[136,237]`.
+- ST537--ST539 localize the algebraic obstruction.  The four families
+  `q^4`, `q^2 p4`, `p4 p4`, and `q p6` have exact modular ranks equal to their
+  column counts `126,672,528,702`, proving each family separately independent
+  over `Q`.  Cumulative ranks are `126,798,1288,1791`: 38 cross-family
+  relations appear after `p4 p4`, and a further 199 after `q p6`.  Future
+  rational work must attack the `38+199` blocks, not replay an unstructured
+  2028-column lift.
+- The central dual dynamics remains exact but operationally typed:
+  `U_t=exp(-itA)` and `P_t=exp(-tA)` share `(A,E_A)`.  The universal modal
+  distance has maximum `1.069432244918415`; finite Wick continuation gives
+  `P_t=U_{-it}` analytically, not physically.  Spectral dephasing has factor
+  `exp[-it Delta_lambda-gamma t Delta_lambda^2]` and differs from classical
+  heat (declared vertex-record L1 difference `0.6377202662`).  Medium
+  invariance requires transporting preparations, interventions, effects and
+  records; eigenvalues alone are insufficient.
+- The same locally unique dimensionless IR component is interval-chained from
+  `b=0` through `b=0.253`.  Finer radius inflation is now repetition-gated;
+  continuation requires a genuinely new analytic chart.  Numerical multistart
+  finds one positive cluster through `b=0.3`, but no global complement theorem
+  follows.
+- The complete six-round suite passes 56 tests.  It exports no strict gain
+  source, nonpremise selector/QW-2191 discharge, scale-charged unit, absolute
+  clock, laboratory record, legacy-to-strict completion, role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure.  Recommended next cycle
+  is ST552--ST566: stage-one 38-relation characteristic-zero attack, interior
+  multilevel transition cover, trace-preserving operational tester, analytic
+  IR reparameterization, and source/evidence gates.  All future PDFs remain
+  English.
+
+## Programs ST552--ST641 refinement-speed/causal-cone/two-clock guardrail (Release 10.90, 2026-08-30)
+
+- The fixed strict `C12` symbol has a formal wave-slope proxy
+  `c_hat_C12=1.9015886526044143`, but its first available phase/group speeds
+  are `1.6585246836702614` and `1.2265636960944826`.  `C12` has no `q->0`
+  sequence and the full radial graph has no exact causal cone.  Do not call
+  any endpoint proxy physical `c` or the SI value `299792458 m/s`.
+- A paired finite-range continuation has quadratic symbol and conditional
+  limit `c_hat_FR=1.9532829071846787`.  A positive `d^-1.8` envelope has
+  fractional symbol order `alpha=0.8`, wave order `0.4`, and divergent low-k
+  group speed.  The literal signed oscillatory strict extension has negative
+  Laplacian modes already at tested `N=48`.  These are inequivalent refinement
+  universality classes; current strict data select none.
+- For `lambda(k)~C|k|^nu`, finite nonzero low-k wave speed occurs iff `nu=2`.
+  Finite-range one-particle propagation admits an exponential-moment cone
+  bound, but not exact finite propagation or a many-body/Lorentz theorem.
+  Long-range direct edges create immediate polynomial spatial tails.
+- The exact dyadic family `A_24(q)J=J A_12`, `q>=0`, preserves every coarse
+  generator/unitary/heat record while its formal fine speed satisfies
+  `c_hat(q)^2=c_hat(0)^2+72q`.  Hence complete coarse FIN dynamics is exactly
+  blind to a continuous unbounded fine-speed/locality fiber.  One fine odd
+  Fourier mode recovers `q` through its exact `2q` shift.
+- Across a dyadic tower the exact recurrence is
+  `C_2N=C_N+N^2 q_N/2`.  For nonnegative rates, finite infinite-depth formal
+  speed requires `sum N^2 q_N<infinity`; `q_N~kappa/N^2` still diverges with
+  depth.  A uniform exponential-moment cone requires exponential, not merely
+  polynomial, decay in antipodal distance.  Exact speed or trace-density
+  stationarity conditionally selects `q_N=0`, but neither law is strict-sourced.
+  Coassociativity alone leaves one new rate per level.
+- A base observer remains exactly blind to all finite rate sequences, while
+  child-resolved odd-mode measurements reconstruct each rate.  Constant
+  physical speed can be maintained for any positive tower by a compensating
+  length/time calibration cocycle; observed constant `c` alone does not
+  identify the hidden refinement law.
+- On the conditional zero-rate finite-range tower with lattice spacing
+  `a_N=L/N`, `A_N/a_N^2` converges on smooth periodic functions to
+  `-C partial_x^2`, `C=3.81531411549983`.  Numerical wave tails outside
+  `1.05 sqrt(C) t` fall to `8.203131405e-9` at `N=12288`.  This supplies a
+  conditional scalar `1+1` continuum light-cone mechanism, not strict FIN
+  inevitability, `3+1` Lorentz spacetime, Maxwell light, or a photon sector.
+- There is a theorem-level one-clock no-go: unitary/heat continuum limits need
+  refinement time scaling `a^-2`, whereas the second-order wave channel needs
+  `a^-1`.  At least two channel-specific clock classes plus a dimensional
+  length/time anchor are necessary.  The common finite spectral theorem
+  remains valid; wave refinement scaling is a separate operational map.
+- The naive log-coordinate interval IR chart is rejected by dependency
+  inflation despite a ~35-fold floating conditioning improvement.  Existing
+  x-chart certification ends at `b=0.2592`; future IR work requires a
+  predictor-correlated interval formulation, not finer radius replay.
+- ST552--ST641 pass 31 tests.  They export no canonical refinement/rate source,
+  physical `c`, exact Lorentz cone, strict clock/anchor, light field,
+  laboratory record, legacy-to-strict completion, role transfer, Standard
+  Model, gravity, `L_total`, or ToE closure.  Recommended next cycle is
+  ST642--ST656: zero-rate source/locality selector, strong continuum
+  convergence, uniform tail certificate, `3+1` isotropic/Lorentz/gauge lift,
+  two-clock apparatus, predictor-correlated IR, and evidence gates.  All
+  future PDFs remain English.
+
+## Programs ST642--ST731 conditional-3+1/Maxwell/current-strict-no-go guardrail (Release 10.91, 2026-08-30)
+
+- Uniform fixed-range locality plus exact scale-shift self-similarity
+  conditionally forces the zero antipodal-rate tower.  Neither premise is
+  strict-sourced.  Every functional of complete coarse spectral/Green data is
+  constant on the exact refinement-speed fiber and cannot select its rate.
+- On fixed Fourier bands, the conditional zero-rate wave propagators converge
+  strongly.  A supplied threefold Cartesian product has leading isotropic
+  symbol `C|k|^2`; cubic anisotropy and tested boost defects are `O(a^2)`.
+  This is a conditional `3D` construction, not a source of spatial dimension.
+- A supplied cubic cochain complex has exact `d1*d0=0`, Abelian gauge
+  kinematics, gauge-invariant Maxwell-type energy, preserved Gauss sector,
+  transverse dispersion and two transverse directions.  The same scalar
+  Laplacian admits infinitely many inequivalent gauge-complex/harmonic
+  extensions.  Scalar FIN does not uniquely export gauge structure.
+- Three conditional principles intersect at `3+1`: Maxwell 2-form conformal
+  invariance selects four spacetime dimensions, two massless-vector
+  polarizations select three spatial dimensions, and the minimal sharp
+  Huygens spatial dimension is three.  These import Maxwell/polarization/
+  Huygens premises and must not be called strict FIN dimension derivation.
+- Gauge propagation retains independent electric/magnetic coefficients:
+  speed depends on their product and impedance on their ratio.  Gauge
+  coupling, charge/action units, photon Fock representation, vacuum, Born
+  instruments and helicity source are absent.  `QW-2191` remains open.
+- A six-model falsification library separates local scalar dimensions,
+  conditional gauge, fractional and unstable signed classes using
+  calibration-invariant features (dimension, dispersion exponent,
+  polarizations, Gauss, stability, tail and clock classes).  Validators for
+  two clocks and noncircular anchors are software schemas only; code cannot
+  generate independent custody.
+- The minimal conditional causal-light bridge is
+  `A12 + R + T + D + G + C + O + S`: refinement/coordinates, two clock
+  classes, dimension/carrier, gauge/Maxwell data, calibration, operations/
+  records, and state/orientation.  Removing each restores a distinct proved
+  fiber, no-go or missing empirical capability.
+- Current-strict causal-physics no-go: no deterministic construction invariant
+  under all established strict equivalences can uniquely export physical
+  causal-light theory from the finite radial spectral core.  This is not an
+  absolute no-go for a future richer nadsoliton source outside the audited
+  classes.
+- ST642--ST731 pass 13 combined tests covering all 90 packet hashes and key
+  nonpromotion gates.  No physical SI `c`, strict `3+1`/Lorentz source,
+  Maxwell photon, two-clock apparatus, independent anchor, laboratory record,
+  legacy bridge/role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure is exported.  Recommended next cycle is ST732--ST746, but all closed
+  source lanes require genuinely new strict atoms or methods.  All future PDFs
+  remain English.
+
+## Programs ST732--ST821 current-strict declared-class total-no-go guardrail (Release 10.92, 2026-08-30)
+
+- Endpoint support, eta, positivity, symmetry, coarse Shannon/spectral data,
+  complete retained Green--Schur response, generic minimality, MDL, trace
+  stationarity, edge cost, quadratic penalties, maximum resonance, Bayesian
+  priors, joint actions, bootstrap and self-consistency do not provide a
+  prior-independent strict selector for local refinement/causal-light physics.
+- Selection principles can be used conditionally when typed and falsifiable.
+  `NO NEW PHYSICS BY ASSUMPTION` is a claim-status rule, not a ban on explicit
+  constructions.  Assumptions remain classified as strict-derived,
+  conditional-minimal, conditional-phenomenological, empirical-input or
+  speculative.
+- The bridge decomposes into at least seven independent fibers/packages:
+  refinement `R`, clock grading `T`, dimension `D`, gauge complex `G`,
+  calibration `C`, operations/records `O`, and state/orientation `S`.  Current
+  base data have no natural global section.  Removing each package restores a
+  distinct proved nonidentifiability or missing empirical capability.
+- A joint action or fixed-point equation has no predictive content without a
+  restricted sourced law: for any target section one can construct a potential
+  with that unique minimum or a map with that fixed point.  Strict convexity
+  supplies uniqueness but not provenance/location.  Coarse likelihood/Fisher
+  data remain degenerate along exact hidden fibers.
+- One deeper object remains admissible only if it carries all seven bridge
+  charges, derives their coupling law, supplies a unique natural section and
+  makes held-out predictions.  No current object passes that gate.
+- Current-strict declared-class total no-go: using only the present finite
+  radial core and constructions invariant under current coarse spectral/Green
+  equivalences, with no new fine/charged/dimensional/oriented/operational
+  datum, no unique physical causal-light/3+1/Maxwell theory can be exported.
+  This is not an absolute no-go for a future richer strict nadsoliton source.
+- The conditional effective theory `A12+R+T+D+G+C+O+S` remains coherent and
+  falsifiable in principle.  A fail-closed transfer packet covers nuisance
+  models, two clocks, polarization, Gauss, causal tails, independent anchor
+  hashes, blind extraction, one-shot scoring, out-of-library stops and role
+  separation.  All physical apparatus/custody rows remain open.
+- ST732--ST821 contain 90 packets and pass the combined hash/nonpromotion test.
+  No laboratory evidence, physical SI speed, photon/charge, strict Lorentz/
+  gauge source, legacy bridge/role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure follows.  Further work requires a genuinely new
+  strict charged object, fine record, or independent empirical state change;
+  replay of the closed coarse-selector classes is prohibited.  All future
+  PDFs remain English.
+
+## Programs ST822--ST911 recommended-path exhaustion/local-research-stop guardrail (Release 10.93, 2026-08-30)
+
+- The seven-row strict-object intake gate requires type, transformation law,
+  source formula, nonzero witness, coupling, target independence and held-out
+  carrier transfer.  Zero current nonlinear, seven-charge, memory-bridge,
+  gravity or gauge candidates pass all rows.
+- The conditional finite DNLS model has coherent conservation/energy and
+  uniform branches, but nonlinearity, pump/loss, seed, selector, localization,
+  stability and refinement scaling remain unsourced.  Do not call it a proved
+  nadsoliton/soliton or strict source law.
+- Stieltjes--Schur memory is the correct dynamic bridge type, but no signed,
+  target-independent, cross-carrier legacy-to-strict measure is exported.
+  Role transfer remains forbidden.
+- Metric-response gravity intake has zero complete rows: no sourced metric
+  family, conserved nonproxy stress tensor, anisotropic Bianchi-I source,
+  Newton/action unit, equivalence-principle theorem or held-out geometry.
+  `a8_gravity_bridge.py` remains partial/frozen without a new functor.
+- Synthetic fine tomography, two clocks, polarization/Gauss, causal tails,
+  signed-instability, blind scoring and failure-stop fixtures are ready.
+  Independent anchors, staffed custody roles, apparatus and raw nature events
+  are absent.
+- Local-research stop: repeated coarse receiver/source inventories, priors,
+  generic actions/bootstrap, more ordinary primes/multistarts, IR radius/log
+  replay, FRW residual tables and target fits are closed.  Meaningful progress
+  requires either a new strict formula passing intake, a genuinely new exact
+  method for transition/algebra/IR/continuum, or an external state change.
+- ST822--ST911 contain 90 packets and pass the combined hash test.  No strict
+  physics, laboratory evidence, legacy bridge/role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure follows.  All future PDFs remain English.
+
+## Programs ST912--ST1001 nadsoliton-annihilation/persistence guardrail (Release 10.94, 2026-08-30)
+
+- Distinguish global zero-state extinction, pattern/localization loss,
+  coherence loss, and topological/attractor identity loss.  They are not
+  interchangeable meanings of annihilation.
+- Closed unitary strict dynamics preserves Hilbert norm, so a nonzero state
+  never reaches global zero.  Strict heat preserves total mass but erases every
+  mean-zero pattern exponentially at gap `0.754121...`, converging to uniform.
+  Conditional wave dynamics preserves phase-space energy.  These do not prove
+  localized nadsoliton identity.
+- A positive conserved `U(1)` charge blocks global zero.  Discrete winding is
+  protected only while every amplitude remains nonzero and phase increments
+  avoid the branch cut; linear unitary dynamics does not guarantee this gap.
+- Conditional DNLS conserves norm/energy, but no FIN-parameter localized
+  breather/soliton and orbital-stability theorem is exported.  The soliton name
+  remains programmatic until existence/localization/stability are proved.
+- Pump/loss can create a nonzero attractor `Q*=P/gamma`, but persistence is
+  nonequilibrium, consumes a reservoir and disappears when the pump is
+  removed.  Detailed balance alone does not protect an excited object without
+  charge/topology/constraint.
+- Superselection charge, dark states, decoherence-free subspaces and quantum
+  error correction can protect encoded information conditionally.  They
+  require charge/noise/code/recovery objects and often an entropy sink; global
+  information conservation does not preserve a local pattern.
+- Current FIN has no multisoliton/collision law, so annihilation in a collision
+  is not yet a well-posed internal model question.
+- Final status: current strict FIN protects unitary norm, heat mass and
+  conditional wave energy, but not nadsoliton localization, topological charge,
+  pump, quantum code, selector, orbital stability or collision identity.  Full
+  persistence needs a nonlinear stable branch plus charge/topology or pump,
+  perturbation stability and operational state definition.
+- ST912--ST1001 contain 90 packets and pass the combined hash test.  No physical
+  immortal object, laboratory persistence, particle-annihilation law, strict
+  nonlinear source, Standard Model, gravity or ToE closure follows.  All
+  future PDFs remain English.
+
+## Programs ST1002--ST1091 total-nadsoliton ontological-persistence guardrail (Release 10.95, 2026-08-30)
+
+- The user-clarified primary type is `one nadsoliton = the entire fundamental
+  being`, not one localized excitation among several.  Separate the total
+  state, internal patterns, a physical vacuum, and literal nonexistence.  A
+  vacuum is a state; nonexistence is not an ordinary state.
+- ST1077 proves only the conditional total-state annihilation no-go: if
+  `M_tot` is nonempty, `dagger` is excluded, and `Phi_t:M_tot->M_tot` is a
+  globally defined invariant evolution, no internal trajectory reaches
+  `dagger`.  This is state-space closure/completeness, not a new repulsive
+  force and not an explanation of why something exists.
+- The frozen strict channels supply concrete corollaries: `exp(-itA)` preserves
+  Hilbert norm and `exp(-tA)` preserves total mass, while heat erases internal
+  contrast at gap `0.7541211542070798`.  Do not promote protection of the total
+  normalization to protection of every internal pattern, record, coherence or
+  localized soliton.
+- Normalization is protective only when dynamically conserved.  Conditional
+  renormalization can hide lost survival weight; projective rays are blind to
+  absolute survival amplitude.  Audit the unnormalized trace before claiming
+  nonannihilation.
+- Fixed-point/bootstrap existence does not imply stability.  Because the
+  nadsoliton is the whole being, an external pump is not an admissible
+  fundamental explanation; only explicitly internal, globally balanced
+  circulation may be considered, and no such strict source law is exported.
+- Total annihilation removes an internal observer, apparatus, clock and record,
+  so no internal post-event record can verify it.  This is an operational
+  limitation, not proof that annihilation cannot occur.
+- Current FIN has not derived the canonical total-state manifold, the full
+  nonlinear autonomous law, global completeness, or a no-killing/boundary
+  theorem from the kernel.  The next admissible lane is ST1092--ST1106: a
+  noncircular kernel-to-total-state construction or a total no-go for it.
+- ST1002--ST1091 contain 90 packets and pass hash and semantic nonpromotion
+  tests.  No legacy bridge/role transfer, QW-2191 discharge, physical scale,
+  laboratory evidence, light/matter derivation, Standard Model, gravity,
+  `L_total`, or ToE closure follows.  All future PDFs remain English.
+
+## Programs ST1092--ST1181 operator-to-total-state nonuniqueness guardrail (Release 10.96, 2026-08-30)
+
+- `Q=-A` passes the full finite CTMC generator criterion: every off-diagonal
+  rate is positive and row sums vanish.  Thus `exp(-tA)` is an irreducible,
+  reversible, positive mass-preserving Markov semigroup for every `t>=0`, not
+  merely on sampled vectors.  Its unique classical stationary state is
+  uniform and Shannon entropy production is nonnegative.
+- ST1167 proves a terminal no-go for the current `A`-only state-selection lane.
+  The same `A` supports at least three pairwise inequivalent normalized models:
+  classical `Delta_11` with heat, pure rays `CP^11` with unitary flow, and
+  density states `D_12` with unitary conjugation.  Their real dimensions are
+  `11/22/143`; boundary, stationary-set, invertibility and asymptotic
+  structures differ.  Do not claim a unique total-state ontology from `A`.
+- Inherited `Z12` symmetry acts on all three candidates and cannot select a
+  category.  Exact two-fiber refinements intertwine both heat and unitary
+  dynamics but retain a free fiber rate `q` and repeat the state ambiguity.
+  Do not reopen symmetry/functional-calculus/refinement-only state selection.
+- Strict heat has antisymmetric edge currents, a continuity equation and
+  detailed-balance relaxation, but every stationary current is zero.  It is
+  not a sustained internal pump/circulation.
+- A fixed-time CPTP measure-and-prepare dilation exists.  A single finite closed
+  environment with fixed initial state and time-independent Hamiltonian cannot
+  realize the nontrivial convergent heat semigroup exactly for all times,
+  because finite closed unitary dynamics is almost periodic.  An infinite
+  internal bath, fresh ancillas or a limit procedure is additional structure.
+- A literal single 12-level carrier has at most `log2(12)` classical bits per
+  use and cannot hold an unbounded independent record history.  Composition,
+  growing refinement or an infinite algebra is required for a complete
+  record-bearing total model.
+- Annihilation blockers are now explicitly model-relative: classical mass,
+  quantum norm/trace, or conditional state-space closure.  `A` alone does not
+  select which blocker is physical.  At least a state/observable category and
+  a channel/clock/instrument semantics must be newly derived or explicitly
+  postulated.
+- Reopening the `A`-only lane requires genuinely new typed strict data, not
+  another function of `A`.  No legacy bridge/role transfer, QW-2191 discharge,
+  dimensional scale, laboratory evidence, Standard Model, gravity, `L_total`,
+  or ToE closure follows.  All future PDFs remain English.
+
+## Programs ST1182--ST1271 strategic three-package architecture guardrail (Release 10.97, 2026-08-30)
+
+- The earlier conditional architecture `W0 + CA + SA -> W3` is coherent but
+  mathematically insufficient after the Release 10.96 state nonuniqueness
+  theorem.  The corrected architecture is
+  `W0 + (CA x SA x OA) -> W3_conditional`.
+- `W0` remains the only strict layer: dimensionless kernel/operator results,
+  `alpha_geo`, `A_phi`, finite witnesses and no-go theorems.  No new strict
+  `S_+`, translation-breaking source or adaptive state-category law was found.
+- On the finite carrier, sampled `W=sI-A` adds no selector data beyond `(A,s)`.
+  `C*(A)` is commutative of dimension 7.  The chosen vertex diagonal algebra
+  together with `A` generates full `M12` because `E_ii A E_jj=A_ij E_ij` and
+  all off-diagonal entries are nonzero.  Do not promote this algebraic fact to
+  physical quantum semantics: choosing the observable algebra is extra input.
+- `CA=(ell_*,tau_*,hbar_*)` is the unique rank-three length/time/action subset
+  and gives consistent derived units, but remains a free `(R_+)^3` torsor.  It
+  supplies neither selector, state category, thermodynamic `k_B` bridge nor
+  observed constants.
+- `SA=(A_origin,A_lambda,A_coupling)` acts on the free transitive 24-frame
+  torsor `Z12 x {+/-1}`.  It selects one frame only in an explicitly non-strict
+  branch.  The invariant measure is uniform and selector-blind; QW-2191 stays
+  open.
+- ST1239 proves two-package insufficiency: classical heat and quantum unitary
+  models can share identical `W0/CA/SA` yet predict return probabilities
+  `0.2628294052832485` and `0.5843533247056469` at dimensionless time one.
+- The independent package `OA` must type StateCategory, PhysicalChannel,
+  ClockMap, Preparation, Instrument and RecordRule.  Removing any field leaves
+  a concrete ambiguity or destroys falsifiability.  `OA` is conditional and
+  has no laboratory record or strict source.
+- Annihilation blockers remain model-relative until `OA` is fixed: mass in the
+  classical model, norm/trace in quantum models, and conditional state-space
+  closure for literal nonexistence.  CA units and SA labels do not select the
+  survival observable.
+- Do not repeat functions of `A` as ontology selectors, weight-zero unit
+  monomials, invariant frame measures, CA-as-selector, SA-as-unit-source,
+  adaptive terminology without a typed law, or receiver fits as sources.
+- No strict state category, apparatus, evidence, legacy bridge/role transfer,
+  Lorentz theory, Standard Model, gravity, `L_total`, or ToE closure follows.
+  All future PDFs remain English.
+
+## Programs ST1272--ST1361 frozen-OA dual-dynamics discrimination guardrail (Release 10.98, 2026-08-31)
+
+- The conditional OA comparison freezes vertex-0 preparation and return
+  measurement for classical heat `exp(-tA)` versus closed quantum unitary
+  `exp(-itA)`.  It does not select either channel as physical.
+- Return formulas are `C(t)=mean(exp(-lambda*t))` and
+  `Q(t)=|mean(exp(-i*lambda*t))|^2`.  Strong numerical optimization on
+  `[0,10]` finds `t*=0.59453079...` and gap `0.4112409998...`; this is not an
+  outward interval proof of global uniqueness.  The protocol freezes `t=0.6`.
+- At `t=0.6`, ideal probabilities are `p_C=0.4123573971501711` and
+  `p_Q=0.8235756226155311`.  Under perfect iid preparation/readout, 29 clicks
+  and threshold 19 give both binomial errors below 1 percent.  Do not apply
+  this guarantee to composite/noisy hypotheses.
+- Full vertex readout has greater Chernoff information than binary return
+  (`0.1364798000...` versus `0.1002859998...`) for the frozen models.
+- ST1321 proves the critical single-time composite obstruction: free
+  energy-basis dephasing can exactly mimic the classical return.  A single
+  return probability does not distinguish classical heat from all open
+  quantum alternatives.
+- The four-time design `(0.3,0.6,1.2,2.0)` is strongly numerically separated
+  from the declared dephased family when clock scale is restricted to
+  `[0.9,1.1]`; it is not a certified global minimax theorem.  Wide clock-scale
+  freedom allows near mimicry, so independent calibration is indispensable.
+- Uniform loss is hidden by conditioning on clicks.  Every valid record must
+  retain attempts and no-clicks; postselected-only records are invalid.
+- `FIN_ST1332_ST1346_Protocol.json` and `fin_oa_protocol_validator.py` freeze a
+  fail-closed executable specification.  Synthetic fixtures test code only.
+  Provider, registrar and analyst separation, raw nature events and laboratory
+  evidence remain absent.
+- This protocol distinguishes internal channel models; it does not test
+  literal annihilation/nonexistence of the whole nadsoliton.
+- No state-category source, apparatus, evidence, legacy bridge/role transfer,
+  selector, Standard Model, gravity, `L_total`, or ToE closure follows.  All
+  future PDFs remain English.
+
+## Programs ST1362--ST1451 interval-certified OA inference guardrail (Release 10.99, 2026-08-31)
+
+- Interval theorems use an explicitly frozen seven-value decimal spectrum with
+  multiplicities `1,2,2,2,2,2,1`.  They are not symbolic-kernel certificates
+  and do not cover uncertainty in the entries of `A` unless separately lifted.
+- ST1372 proves on `[0,10]` that the absolute classical/quantum return gap has
+  one global maximizer in `[0.59453078,0.59453079]`.  Its value lies in
+  `[0.4112409998076315,0.41124099980763185]`.  The proof uses 4,995 outward
+  Taylor boxes outside `[0.59,0.60]`, positivity/strict concavity inside, and
+  certified derivative signs.
+- ST1384 proves four-time identifiability for the declared dephased-quantum box
+  `alpha in [0.9,1.1]`, `gamma in [0,100]`: a complete 1,000-cell interval
+  cover gives `RSS >= 0.046692011213846946`.  At least one of the four return
+  residuals is therefore at least `0.10804167160619894`.
+- The composite theorem is not universal over all Lindblad/noise laws.  The
+  clock band and energy-dephasing family are paid premises.
+- Independent scalar probability errors bounded by `epsilon` reduce the base
+  return gap by at most `2 epsilon`.  Known common detector confusion scales
+  the gap by `|1-a-b|`.  Attempts/no-clicks and calibrated efficiency remain
+  mandatory; vertex-dependent detector response is not covered by scalar loss.
+- Full 12-vertex likelihood reduces without loss to seven cyclic-distance
+  classes.  Its Chernoff information is `0.13647980004881377`, greater than the
+  binary-return value `0.10028599984500335`.  A product Chernoff bound gives 29
+  full-record shots for simple-model equal-prior error below one percent.
+- The certified composite Hoeffding/union design is conservative: 1,146 binary
+  shots at each of four times.  Do not call this optimal.
+- For the two frozen simple models, the likelihood ratio is an e-process under
+  the classical null and its inverse is one under the quantum null.  Boundaries
+  `100/0.01` give anytime-valid one-percent wrong-boundary control.  A nuisance
+  likelihood refitted after every event is not automatically an e-process.
+- `FIN_ST1422_ST1436_Protocol_10_99.json` and
+  `fin_oa_protocol_validator_10_99.py` freeze the interval/sequential upgrade.
+  Synthetic fixtures are code tests only; custody and nature events are absent.
+- These results strengthen only a conditional OA.  No state ontology, strict
+  clock, apparatus, evidence, legacy bridge/role transfer, selector, Standard
+  Model, gravity, `L_total`, or ToE closure follows.  All future PDFs remain
+  English.
+
+## Programs ST1452--ST1541 structured-uncertainty/calibration/refinement guardrail (Release 11.00, 2026-08-31)
+
+- The Release 10.99 interval certificates survive a declared row-sum-preserving
+  real symmetric circulant entry box of radius `5e-15`; the induced eigenvalue
+  radius is `6e-14`.  Every admissible spectrum has one maximum root in
+  `[0.5945307,0.5945309]`, and composite `RSS` remains at least
+  `0.04669201121378897`.
+- This uncertainty theorem preserves Fourier eigenvectors.  Do not extend it
+  to noncirculant matrices, eigenvector uncertainty or symbolic
+  `omega/phi/beta/eta` boxes without a new proof.
+- A finite-grid KL minimax programme suggests time weights
+  `(0.3155394972,0,0,0.6844605028)` at `(0.3,0.6,1.2,2.0)` and improves the
+  sampled metric by about `1.67` over equal allocation.  A finer held-out grid
+  supports it; an adaptive interval cover plus a two-point dual bound proves
+  the continuous minimax value lies in `[0.05,0.05370588868619479]`.  Exact
+  optimizing weights are not proved.  Four times remain the default for the
+  independent RSS certificate.
+- The 18-component frozen nuisance mixture defines a valid one-sided e-process
+  for rejecting the classical null.  Crossing 100 has anytime Type-I error at
+  most one percent.  It does not provide symmetric uniform acceptance of the
+  classical model and has no off-grid power theorem.
+- A common affine calibration polytope with preparation contamination <=5%,
+  false positive/negative <=2%, and click efficiency >=80% preserves factor
+  `0.912` and gives calibrated `RSS >=0.03883580017500168`.  Independent
+  calibration maps require tighter bounds: the declared 5%+2% example is not
+  certified, while 3%+2% is.
+- Attempts and no-clicks remain mandatory.  Vertex-dependent detector response
+  needs a matrix polytope and is not covered by scalar calibration/loss.
+- The exact Kronecker refinement `A24=A12 tensor I2 + I12 tensor Bq` transports
+  all coarse return/interval/likelihood certificates independently of `q`.
+  Fiber-resolving returns `(1+exp(-2qt))/2` and `cos^2(qt)` add a fine test but
+  do not source `q`, physical units or ontology.
+- `FIN_ST1527_ST1541_Protocol_11_00.json` freezes parent hashes, uncertainty,
+  calibration and refinement.  No platform, external calibration, raw event,
+  custody, state ontology, legacy bridge/role transfer, selector, Standard
+  Model, gravity, `L_total`, or ToE closure follows.  All future PDFs remain
+  English.
+
+## Programs ST1542--ST1631 noncirculant/continuum/fiber guardrail (Release 11.01, 2026-08-31)
+
+- For self-adjoint PSD graph Laplacians, Duhamel bounds imply heat/unitary
+  propagator differences <=`t epsilon`, classical return difference <=`t
+  epsilon`, quantum return difference <=`2t epsilon`, and gap difference
+  <=`3t epsilon` when `||B-A||<=epsilon`.
+- Every global return-gap maximizer remains in `[0.59,0.60]` for arbitrary
+  noncirculant graph-Laplacian perturbations with operator norm below
+  `9.720652006795929e-8`.  This does not prove uniqueness inside the interval
+  and does not cover non-PSD heat or dephasing-generator sensitivity.
+- An adaptive interval KL cover and two-point dual nuisance measure prove the
+  continuous minimax value lies in `[0.05,0.05370588868619479]`.  Exact
+  optimizing weights and exact value remain open.
+- The uniform continuous-prior likelihood integral is an exact one-sided
+  e-process theorem by Tonelli/Fubini.  The positive 7x9 Gauss--Legendre object
+  is a separate valid 63-component finite mixture; do not call it the exact
+  integral or infer uniform power.
+- Independent classical and quantum affine calibration boxes with preparation
+  contamination <=5% and false positive/negative <=2% retain base separation
+  and give composite `RSS >=0.022937735365240054`.  This does not cover
+  vertex-dependent detector matrices.
+- Fine classical fiber return `(1+exp(-2qt))/2` globally identifies `q>=0` for
+  known heat dynamics.  Quantum return `cos^2(qt)` is aliased, becoming
+  injective only on a declared monotone branch.  Two times `(0.6,1.0)` give
+  interval-certified heat/unitary separation on `q in [0.1,2]` with
+  `RSS >=0.009270580748993435`.
+- At `q=0`, fine heat and unitary returns are exactly one for all times; no
+  channel discriminator exists there.  Do not extend the q theorem outside
+  its range or treat q as physically sourced.
+- `FIN_ST1617_ST1631_Protocol_11_01.json` freezes parent hashes, noncirculant
+  threshold, continuous value bracket, prior quadrature, independent
+  calibration and fine-fiber range.  No platform, physical calibration, raw
+  event, custody, state ontology, legacy bridge/role transfer, selector,
+  Standard Model, gravity, `L_total`, or ToE closure follows.  All future PDFs
+  remain English.
+
+## Programs ST1632--ST1721 Lindblad/kernel/KKT/q-clock guardrail (Release 11.02, 2026-08-31)
+
+- For the declared generator `L_A=-i ad_A-(gamma/2)ad_A^2`,
+  `||L_B-L_A|| <= 2epsilon + 2gamma epsilon(||A||+||B||)`.  Hilbert--Schmidt
+  contractivity and Duhamel propagate this to the return effect.  At
+  `gamma<=100`, `epsilon=8.041872774817993e-8`, the prior composite residual
+  remains at least `0.10789050485132269`.
+- This sensitivity theorem is specific to dephasing jump `A`; do not extend it
+  to arbitrary GKSL jumps, trace-norm claims or non-Markov heat.
+- Outward parameter propagation for
+  `cos(omega d+phi)/(1+beta d^eta)` gives a large diagnostic box with operator
+  bound `0.00020105649070913632` and a small certified box with bound
+  `8.041872774817993e-8`.  The large box preserves the simple gap but fails
+  current sufficient location/composite gates.  Neither box is a measured or
+  strict confidence interval.
+- The reduced continuous KKT candidate is
+  `gamma=16.05917256231611`, weights
+  `(0.31859567830451857,0.6814043216954815)`, value
+  `0.053705210722682`.  It is strong numerical geometry consistent with the
+  certified value bracket, not an exact optimizer or global active-set theorem.
+- The finite-grid symmetric rule chooses Q when the mixture LR reaches 100,
+  chooses C when every component LR is <=0.01, and otherwise abstains.  Either
+  wrong boundary has anytime probability <=1% under the declared finite-grid
+  null.  Off-grid/continuum uniform control is absent.
+- A column-stochastic detector ball with per-column misclassification <=5%
+  preserves simple full-distribution TV at least `0.3112182254653598` even for
+  independent C/Q detector matrices.  This is not an apparatus calibration.
+- Physical-time fiber returns depend only on `kappa=q/tau_*`.  The exact action
+  `(q,tau_*) -> (c q,c tau_*)` leaves every number of observations invariant;
+  q and clock scale are not separately identifiable without an independent
+  anchor.
+- `FIN_ST1707_ST1721_Protocol_11_02.json` freezes the parent chain, Lindblad
+  bound, parameter boxes, KKT candidate, symmetric rule and q-clock no-go.  No
+  physical CI, clock anchor, platform, raw event, custody, state ontology,
+  legacy bridge/role transfer, selector, Standard Model, gravity, `L_total`,
+  or ToE closure follows.  All future PDFs remain English.
+
+## Programs ST1722--ST1811 repository-wide kernel-to-Ltotal falsification guardrail (Release 11.03, 2026-08-31)
+
+- The current chain `legacy -> APD -> strict -> c0,c1,c2 -> free effective
+  couplings -> displayed L_total/EOM` is not a derivation of unique physical
+  dynamics.  Preserve every positive sub-result only in its declared scope.
+- On a finite carrier with nonzero legacy values, diagonal completion
+  `Q_i=S_i/L_i` exists automatically for every target.  The Z12 APD multiplier
+  has six positive and six negative values and is not a positive channel.
+- In the real continuum, legacy zeros occur at `d=4/3+4k`; strict values at the
+  first zeros are nonzero.  APD has nonremovable poles and no bounded continuous
+  global multiplicative completion.  P2363 remains valid as finite/local-germ
+  moment transport, not a global source theorem.
+- Literal variation of `-y phi psibar psi` gives `+y psibar psi` in the scalar
+  Euler row under the sheet's convention, opposite to the compact draft sign.
+  The standalone `A_mu A^mu phi^2` term is not locally gauge invariant and has
+  a Ward defect.  A charged-complex-scalar repair requires both derivative
+  current and seagull tied to one charge, or new Higgs/Stueckelberg structure.
+- Claimed covariant EOM rows contain H/cubic/RF2/curvature-squared terms absent
+  from the displayed action and omit explicit rows from displayed interactions.
+  Do not claim one literal current action generates all rows.  Reduced/FRW
+  actions remain separate conditional models.
+- The three-moment map is reference dependent and has Jacobian rank 3 for four
+  kernel parameters.  Distinct tuples reproduce the same three moments but
+  differ off-reference.  Five free base couplings make the effective map
+  nonpredictive for absolute coefficients.  A fourth jet lifts local parameter
+  rank only; it supplies no physical source or scale.
+- In the current finite construction `W=sI-A`.  It cannot be a normal-ordered
+  resolvent of the same A on seven distinct eigenvalues.  W has seven negative
+  and five positive modes; using it as Euclidean covariance gives an indefinite
+  inverse Hessian.
+- The deepest unavoidable variational object is the finite Dirichlet action
+  `S=1/2 f^T A f-J^T f`, with Green `A+` on the mean-zero subspace.  It supports
+  heat/unitary/wave calculi but does not select physical state, channel, scale,
+  spacetime or apparatus.
+- `FIN_ST1797_ST1811_DecisiveSourceActionGate.json` defines seven necessary
+  source-action obligations.  Current strict FIN passes zero complete joint
+  rows.  Highest-value next target: derive/refute one globally regular,
+  refinement-compatible, gauge-covariant source action from strict algebra/
+  Dirichlet data before any further SM/GR coefficient promotion.
+- No legacy role transfer, QW-2191 discharge, units, strict state category,
+  Standard Model, gravity, `L_total`, or ToE closure follows.  All future PDFs
+  remain English.
+
+## Programs ST1812--ST1901 direct gauge-Dirichlet/topology guardrail (Release 11.04, 2026-09-01)
+
+- The strict weighted incidence operator gives `A=d_W^* d_W`.  After explicitly
+  choosing complex matter, local U(1), unit charge and one link per nonzero
+  edge, `S=1/2 sum w_ij |psi_i-U_ij psi_j|^2+sum V(|psi_i|^2)` is globally
+  regular, positive, exactly gauge invariant and yields one literal covariant
+  EOM.  This is a conditional construction, not a strict group/charge source.
+- The same A admits U(1) with all integer charges, Z_N, SU(2), U(k), and real
+  non-gauge models.  Complexification, group, representation, connection state
+  and potential coefficients are not selected.  Do not promote the minimal
+  U(1) repair to unique physics.
+- Strict support is complete K12: 12 vertices, 66 edges, diameter 1, cycle rank
+  55.  Without faces there is no local curvature action.  There are 220
+  triangles and the triangle boundary map has rank 55; the full clique complex
+  is the contractible 11-simplex.
+- Nearest-neighbour C12 has H1 dimension one only after discarding 54 nonzero
+  strict edges.  No distance threshold, 2-complex, face area or Wilson
+  coefficient is canonical from support/weights alone.
+- Exact A24 refinement transports normalized fiber-constant matter action, but
+  grows cycle rank from 55 to 121, adds relative fiber gauge modes and leaves
+  q, lengths, face areas, dimension and continuum scaling free.
+- No nontrivial vertex-diagonal grading anticommutes with a full-support vertex
+  Dirac operator.  The doubled vertex-edge incidence Dirac is even and squares
+  to a block containing A, but has 56 zero modes and index -54.  It does not
+  automatically supply SM chirality, fermion generations, real structure,
+  spectral action scale or gravity.
+- `FIN_ST1887_ST1901_GaugeSourceActionGate.json` retains seven open strict rows.
+  Highest-value next theorem: derive/refute an automorphism-natural,
+  refinement-functorial oriented weighted 2-complex and positive face measure
+  with controlled Maxwell/spectral continuum scaling.
+- No legacy role transfer, QW-2191, physical units, state ontology, gauge
+  group, Standard Model, gravity, `L_total`, platform, evidence or ToE closure
+  follows.  All future PDFs remain English.
+
+## Programs ST1902--ST1991 automorphism-natural cell-complex no-go guardrail (Release 11.05, 2026-09-01)
+
+- The weighted strict graph has exact automorphism group D12.  Its 220
+  triangles split into 12 orbits, so support-automorphism-natural face sets are
+  4096 orbit unions.
+- Exact GF2 elimination proves at least 2542 natural face sets have full
+  boundary rank 55; at least 338 are inclusion-minimal and use five orbits.
+  Two distinct 76-face five-orbit complexes have exact rational rank 55.
+  Naturality, H1=0, minimality and minimum face count do not select a complex.
+- Positive D12-natural face measures form an Rplus^12 orbit cone, or Rplus^5 on
+  a five-orbit complex.  Five explicit edge-derived positive rules have rank 5
+  and are nonproportional.  Positivity and degree-one homogeneity do not select
+  a Hodge star or Wilson normalization.
+- The refined support K12 square K2 has cycle rank 121.  Its 440 flag triangles
+  have boundary rank 110, leaving H1 dimension 11.  The typed product provides
+  66 non-clique squares; triangles plus squares have rank 121 and restore H1=0.
+- Therefore the support-only flag complex is not exact-product-refinement
+  functorial.  Product cellular repair is conditional on the refinement map and
+  inherits all base face choices plus six square-orbit weights.
+- A positive Wilson action exists after cells and weights are chosen, but face
+  areas, overall gauge coupling, lattice spacing and action units remain free.
+- Finite heat-trace spectral dimension tends to zero at both time extremes.
+  Under iterated refinement `Z_k=Z_12 product_l(1+exp(-2q_l t))`; intermediate
+  dimension depends on every unsourced q_l.  A fitted dimension-four plateau
+  is not a strict derivation.
+- The canonical base flag complex is the contractible 11-simplex with 4096
+  simplices.  Its refined flag complex gains 11 Hodge one-form zero modes;
+  product-history squares are required to remove them.
+- `FIN_ST1977_ST1991_CellularRefinementGate.json` defines seven open rows.
+  Highest-value next theorem: classify positive face inner products whose
+  curvature energy commutes with FIN coarse/refinement maps across 12->24->48,
+  proving uniqueness up to scale or a no-go.
+- No legacy role transfer, QW-2191, physical units, unique gauge geometry,
+  continuum Maxwell theory, state ontology, platform, evidence, Standard
+  Model, gravity, `L_total`, or ToE closure follows.  All future PDFs remain
+  English.
+
+## Programs ST1992--ST2081 Hodge-energy/refinement classification guardrail (Release 11.06, 2026-09-01)
+
+- Under 12->24 diagonal curvature-energy compatibility,
+  `kappa_f,0+kappa_f,1=kappa_f`.  Fiber-swap symmetry uniquely gives halves on
+  inherited horizontal faces, but all 66 new square weights are unconstrained;
+  D12 reduction leaves an Rplus^6 vertical cone.
+- The unreduced 506-variable fine measure has 220 coarse-energy equations and
+  affine nullity 286.  Positivity only restricts the new weights to an open
+  cone; it does not select them.
+- At 24->48, inherited base faces carry quarters, old square weights halve, and
+  144 new squares appear.  There are at least seven new natural square orbits,
+  so the two-level vertical cone has dimension at least 13 and grows under
+  further refinements.
+- Exact product-cell counts are `(V,E,F)=(12,66,220),(24,144,506),
+  (48,312,1156)` with GF2 boundary ranks `(55,121,265)` and H1 zero at all
+  levels.  Vertical nonuniqueness is dynamical, not a topology-closure failure.
+- Positive natural rules `wq`, `sqrt(wq)`, harmonic, min and max are distinct.
+  Degree-one homogeneity does not select.  Separate bilinearity plus
+  associativity forces only `mu=c w q`, leaving c, base faces, base measure,
+  gauge coupling and dimensions free.
+- The exact square Schur model minimizes to `r=s=0` and
+  `E_min=k a^2/2`, independent of vertical weight mu.  Network flat extension
+  gives the same no-go: coarse classical energy and its Schur complement cannot
+  identify vertical Hodge weights.
+- A tensor-product/monoidal Hodge family is coherent and positive only after
+  base complex/measure, factor normalization, q and differential calculus are
+  supplied.  Do not call it a bootstrap from A.
+- `FIN_ST2067_ST2081_EquivariantD1Gate.json` defines the next seven-row gate.
+  Highest-value theorem: classify all D12-equivariant `d1:C1->C2` with
+  `d1 d0=0` and 12->24->48 refinement intertwiners, determining uniqueness
+  modulo scale or a no-go.
+- No strict d1, face measure, gauge coupling, continuum Maxwell scaling,
+  physical units, state ontology, platform, evidence, legacy role transfer,
+  QW-2191, Standard Model, gravity, `L_total`, or ToE closure follows.  All
+  future PDFs remain English.
+
+## Programs ST2082--ST2171 equivariant-d1/Hodge-spectrum guardrail (Release 11.07, 2026-09-01)
+
+- Exact oriented D12 character theory gives
+  `dim Hom_D12(C1,C2)=615` and dimension `517` for equivariant maps satisfying
+  `d1 d0=0`.  Equivariance plus the chain condition is radically nonunique.
+- Boundary locality reduces the full-triangle family to one row scale per 12
+  triangle orbits.  Primitive integral cellular incidence fixes each nonzero
+  row to the standard boundary up to face orientation, but only after a face
+  complex has been chosen.
+- Use the unweighted topological differential with strict edge Hodge star, or
+  equivalently the weighted differential `R d0` with compensated
+  `d1_weighted=d1 R^-1`.  Weighting d0 without compensating d1 breaks
+  `d1 d0=0`.
+- Refinement intertwiners fix lifted triangle coefficients but do not constrain
+  product-square rows.  Six vertical orbit coefficients remain at level 24 and
+  at least 13 after level 48 unless primitive integral cell structure is
+  supplied.
+- Curvature energy depends only on `h_f=m_f c_f^2`; inverse rescaling between
+  d1 rows and face Hodge weights is an exact descriptive gauge.  After quotient,
+  positive D12-natural quadratic forms still form an Rplus^12 cone.
+- For the unweighted full simplex, the exact identity is
+  `L1=d0 d0^*+d1^* d1=12 I_66`.  Natural orbit Hodge weights split the spectrum
+  without changing H1; the explicit witness has 33 distinct rounded
+  eigenvalues.  No nonzero gauge spectral prediction is strict-invariant over
+  the admissible cone.
+- The exact dimension ladder is `517 -> 12 -> 1`, where the last arrow requires
+  chosen primitive integral cells.  Pairwise kernel/0-form data contain no
+  independent ternary face source.
+- `FIN_ST2157_ST2171_ThreePointTwoFormSourceGate.json` defines seven open rows.
+  Highest-value next theorem: derive/refute an intrinsic strict ternary
+  cumulant/associator/cycle observable with D12 orbit witness, positive Hodge
+  source and 12->24->48 coherence.
+- No ternary source, unique face complex, Hodge measure, gauge coupling,
+  continuum Maxwell scaling, physical units, state ontology, platform,
+  evidence, legacy role transfer, QW-2191, Standard Model, gravity, `L_total`,
+  or ToE closure follows.  All future PDFs remain English.
+
+## Programs ST2172--ST2261 loop-product/hidden-synergy guardrail (Release 11.08, 2026-09-01)
+
+- Correct the Release 11.07 gate distinction: strict pair data do generate the
+  reducible positive three-cycle field `tau_ijk=W_ij W_jk W_ki`.  All 220
+  strict triangle values are positive and form 12 D12 orbits.  This is a
+  strict mathematical graph statistic, not an irreducible connected third
+  cumulant or a physical 2-form source.
+- The strict support graph is complete, so its support-clique complex is the
+  full 11-simplex.  This is a canonical mathematical flag lift, but its use as
+  physical gauge cells is not sourced.
+- Centered Gaussian/quadratic FIN states have zero connected third cumulants;
+  linear unitary/wave/heat dynamics preserve that boundary.  `C*(A)` is
+  commutative and associative, so functions of one A cannot generate a
+  nonzero commutator curvature or associator.
+- Fourier states `k=+1/-1` have equal strict energy and opposite current
+  `-0.4699856726450202/+0.4699856726450202`; reflection exchanges them.
+  Mixtures, D12 twirls and Gibbs states have zero current.  State chirality is
+  a receiver unless a nonpremise preparation/polarity law is exported.
+- For elementary positive-covariance Hebb with positive decay, `W=C/gamma` is
+  the fixed point.  Strict W is indefinite (`lambda_min=-0.6818747624`), so
+  this specific learning law cannot derive it.  Do not promote this bounded
+  no-go to all nonlinear adaptive laws.
+- The exact family `p_epsilon=1/8(1+epsilon*x1*x2*x3)` has identical complete
+  one/two-point records and third moment epsilon.  Pair/coarse data cannot in
+  general reconstruct irreducible ternary information; marginalization erases
+  it coassociatively.
+- The strict Hodge candidates `h_f(p)=tau_f^p/mean(tau^p)`, `p>0`, are all
+  positive, target-free and D12-natural but have different spectra.  No unique
+  exponent or gauge dynamics is exported.  Do not set `p=eta=1.8` without a
+  damping-to-face-measure theorem.
+- Conditional loop-product uniqueness requires four extra axioms: local
+  triangle dependence, support-zero, separate edge linearity, and one
+  universal face rule.  Removing each admits a counterfamily; explicit
+  permutation symmetry is redundant.  None is currently a strict physical
+  law.
+- Legacy raw triangle products have 108 positive and 112 negative values.
+  Strict positivity does not transfer to `K_legacy_ont`; no bridge or legacy
+  physical-role transfer follows.
+- `FIN_ST2247_ST2261_TernarySourceGateV2.json` passes 3/9 strict mathematical
+  rows and 0/9 physical-source rows.  No selector, QW-2191 discharge, unique
+  Hodge measure, refined lift, physical scale, continuum Maxwell theory, OA
+  record, legacy completion/role transfer, Standard Model, gravity,
+  `L_total`, or ToE closure follows.
+- Highest-value next theorem: derive or refute separate edge linearity and
+  face universality from the strict composition/adaptive/refinement law.
+  Do not enumerate more cycle functions unless they attack one of these two
+  premises.  All future PDFs remain English.
+
+## Programs ST2262--ST2351 composition/fractal-fixed-point guardrail (Release 11.09, 2026-09-01)
+
+- Dirichlet energy is exactly additive under parallel edge-conductance
+  addition, but this does not force separate linearity of an edge-to-face
+  lift.  Geometric mean, harmonic mean and minimum are local, positive,
+  symmetric, support-zero counterrules.  A3 separate edge additivity remains
+  an extra face-lift premise.
+- All six strict distance weights are distinct and distance-one edges form the
+  unique maximum-weight C12.  Therefore the exact weighted automorphism group
+  is `Aut(W)=D12`.  It has 12 triangle orbits, all separated by the strict loop
+  product.  Strict symmetry permits orbit-dependent face laws and does not
+  force A4 universality.
+- For `T_p(x)=x^p/mean(x^p)`, exact composition is
+  `T_p o T_q=T_(p*q)`.  On a positive nonconstant profile, idempotence
+  `T_p^2 x=T_p x` forces `p in {0,1}`.  Information preservation removes
+  `p=0`, conditionally selecting `p=1`.
+- The conditional `p=1` result requires scale-stationary path
+  independence/idempotence, which is stronger than current FIN
+  coassociativity.  Current ST289/ST619-style coassociativity remains
+  compatible with `p(t)=exp(-c t)` for arbitrary c or one exponent/rate per
+  level.
+- In centered log coordinates, `T_p` is `y -> p y`.  Exact self-similarity up
+  to any permutation of the 12 loop-product orbits forces `p=1`; this is the
+  identity map.  `p=0` is total erasure.  Nontrivial exact finite power
+  self-similarity is therefore impossible on the nonconstant strict profile.
+- For `0<p<1`, the finite profile flows toward uniformity and entropy rises;
+  for `p>1`, it sharpens and entropy falls.  A nontrivial fractal hierarchy
+  needs new level-dependent exponents/rates or new degrees of freedom, none of
+  which is strict-selected.
+- The minimal hidden-synergy observable is the three-body parity
+  `Y=x1*x2*x3`.  Pair-only Fisher information is zero; parity Fisher
+  information is `1/(1-epsilon^2)`.  The sample mean is efficient, and 19
+  events suffice for the declared Hoeffding sign test at
+  `|epsilon|>=0.75`, `delta=0.01`.
+- The exact minimal non-Gaussian family
+  `p_theta=exp(theta*x1*x2*x3)/(8*cosh(theta))` has
+  `epsilon=tanh(theta)`.  It explicitly adds the missing three-body statistic
+  and source parameter.  Neither theta/J, its polarity, preparation, physical
+  platform nor record is strict-exported.
+- Gate v3 has 7/11 mathematical constructions, 3/11 strict-source rows and
+  0/11 physical rows.  The current pair/refinement route is a bounded no-go;
+  freeze additional face-function enumeration, `p=eta` transfer, S12
+  universality imports and plain-coassociativity replay.
+- A next admissible object must be a genuinely strict non-Gaussian three-body
+  state law with formula, provenance, nonzero connected third cumulant, fixed
+  polarity and coherent 12->24->48 transport.  Otherwise preserve the
+  no-new-live-frontier result.
+- No QW-2191 discharge, selector, nontrivial strict fractal scale law, unique
+  Hodge physics, physical units, continuum Maxwell theory, OA evidence,
+  legacy completion/role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure follows.  All future PDFs remain English.
+
+## Programs ST2352--ST2366 triangular-prism guardrail (2026-09-01)
+
+- The right regular triangular prism is exactly the product cell
+  `Delta2 x I`: 6 vertices, 9 edges, 2 horizontal triangles, 3 vertical
+  squares and 1 volume cell.  Primitive integral incidence gives exact
+  `d1 d0=0`, `d2 d1=0`, ranks `5,4,1`, boundary Betti numbers `(1,0,1)` and
+  filled-solid Betti numbers `(1,0,0,0)`.
+- Its graph is `C3 square K2` with Laplacian spectrum
+  `{0,2,3,3,5,5}`.  The unweighted one-form cellular Hodge spectrum is
+  `{2,3,3,3,5,5,5,5,5}`.
+- D3h-natural face weights leave two positive moduli: triangle weight `t` and
+  square weight `q`.  The exact coexact spectrum is
+  `{3t,5q,5q,3t+2q}`; the prism does not select `t/q`.
+- The prism is the canonical conditional local transport cell for an already
+  selected triangle.  It supplies two lifted triangles and three vertical
+  squares, but does not select the base triangle, a layer/time arrow, an
+  irreducible ternary source, Hodge ratio, aspect ratio, absolute scale,
+  apparatus or record.
+- The symmetry group `D3h` has order 12 and exchanges the two bases.  Do not
+  promote a chosen top/bottom convention to QW-2191 discharge or time-arrow
+  source.
+- An exhaustive scan finds 55,440 triangular-prism embeddings on the strict
+  12-vertex carrier.  Sum-of-nine-weights and product-of-nine-weights scoring
+  choose different optima.  Each optimum is 12-fold degenerate and is one
+  complete D12 orbit.  Strict W therefore does not select a canonical global
+  prism without a score functional, and no score removes the symmetry orbit.
+- A single triangular prism has 6 rather than 12 vertices and must not be
+  identified with the full Z12 carrier.  Two-prism or hexagonal-prism
+  decompositions require additional unsourced structure.
+- No selector, unique global cell complex, physical scale, continuum physics,
+  legacy completion/role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure follows.
+
+## Programs ST2367--ST2441 triangular-prism completion guardrail (2026-09-01)
+
+- In the score family `S_alpha(P)=sum_(e in P) W_e^alpha`, the two winning
+  prism orbits cross at `alpha*=0.0055703936174915595`.  Each side has one
+  12-element D12 optimum orbit; the crossing has degeneracy 24.  Score choice
+  is an unsourced selector and is not robust near the crossing.
+- Applying `Delta2 x I` to every one of the 220 full-simplex triangles gives
+  the conditional product complex `Delta11 x I` with cell counts
+  `[24,144,506,1210,2079,2640,2508,1782,935,352,90,14,1]`.
+  It contains 220 triangular prisms and 66 vertical squares in six D12
+  distance orbits.  Primitive product incidence fixes vertical boundary
+  coefficients but inherits full-simplex nonlocality.
+- The layer-odd receiver `J_triangle=tau_+-tau_-` is valid and changes sign
+  under base exchange, but strict pullback data give zero flux.  Calling one
+  base earlier imports a clock/orientation; dual U/P channels do not source
+  that choice.
+- With triangle weight `t` and square weight `q`, the exact one-form spectrum
+  is the union of gradient `{2,3,3,5,5}` and coexact
+  `{3t,5q,5q,3t+2q}` sectors.  Spectra may estimate supplied t,q but do not
+  source them; geometry alone does not fix the DEC Hodge star.
+- The final prism gate passes 3/10 conditional mathematical rows and zero
+  physical rows.  Preserve the role `canonical conditional local transport
+  cell`; do not promote it to a global Z12 decomposition, selector, time
+  arrow, ternary source, unique Hodge physics, continuum, or ToE closure.
+
+## Programs ST2442--ST2531 ternary-Gibbs/prism-RG guardrail (2026-09-01)
+
+- The strict loop tensor `tau_ijk=W_ij W_jk W_ki` defines the conditional
+  4096-state family `p_theta proportional exp(theta sum_f tau_f x_i x_j x_k)`.
+  At theta zero its triangle linear response is exactly tau; finite replay at
+  theta `1e-3` has residual `1.20e-10`.
+- The tensor shape is strict-derived, but theta magnitude/sign, probability-law
+  postulate and preparation are not.  Global bit flip exchanges theta and
+  minus theta; Z, entropy and Fisher information do not select polarity.
+- The finite exponential family is regular and strictly convex with
+  `d2 log Z/dtheta2=Var(S)>0`.  Conditional identifiability of theta from a
+  supplied moment is not provenance or physics.
+- A symmetric triangular-prism interaction with bottom/top cubic theta and
+  vertical pair coupling q closes exactly under top-layer marginalization.
+  One- and two-body Walsh terms cancel (finite residual below `5.6e-17`).
+  With `A=e^(3q)+3e^(-q)` and `B=3e^q+e^(-3q)`, the exact map is
+  `theta_eff=theta+0.5 log[(e^theta A+e^-theta B)/(e^-theta A+e^theta B)]`.
+- This is a real conditional RG theorem, but it refutes the one-missing-scalar
+  hypothesis: every level still needs q_n or a strict recurrence.  Prism
+  incidence does not source q_n.
+- U_t and P_t share A but do not by themselves realize a Markov dynamics on
+  the 4096 configurations.  A Glauber/detailed-balance generator, bath, rates,
+  clock, energy scale and joint parity instrument are additional objects.
+- The final source gate passes 3/10 mathematical rows and zero physical rows.
+  Highest-value next object is a strict configuration-space generator sourcing
+  theta polarity/magnitude and q_n while preserving prism RG closure.
+- No QW-2191 discharge, physical state law, units, OA evidence, legacy
+  completion/role transfer, Standard Model, gravity, `L_total`, or ToE closure
+  follows.
+
+## Programs ST2532--ST2621 configuration-generator/dynamic-RG guardrail (2026-09-01)
+
+- The 12-bit single-flip graph has 4096 states and 24,576 undirected edges.
+  Reversible generators are parameterized by positive symmetric edge
+  activities; exact D12 quotienting leaves 1056 activity orbits (992 of size
+  24 and 64 of size 12).  Detailed balance does not select kinetics.
+- Metropolis, heat-bath and square-root rates share the same three-bit Gibbs
+  state but have inequivalent relaxation spectra and gaps.  The difference is
+  not only an overall clock rescaling.
+- Maximum caliber requires a reference generator/path prior, activity budget,
+  mobility and time scale.  It relocates these premises and is not a strict
+  kinetic source.
+- Exact stationary prism RG closure does not imply dynamical RG closure.  For
+  q nonzero, bottom flip rates depend on hidden top spins, violating strong
+  lumpability; the coarse process needs memory or an enlarged hidden state.
+  q zero restores lumpability only in the trivial uncoupled refinement.
+- Unitary `-iA`, vertex heat `-A`, and configuration generator `Q` act on
+  different spaces and are operationally inequivalent.  No strict canonical
+  functor `A -> Q` is exported.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  Next
+  admissible target is a strict kinetic activity/clock source compatible with
+  prism RG, or a broader functorial impossibility theorem.
+- No selector, physical clock, units, OA evidence, legacy completion/role
+  transfer, Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST2622--ST2711 general-kinetic/time-arrow guardrail (2026-09-01)
+
+- Every positive local detailed-balance rate depending only on energy change
+  is `r(D)=exp(-D/2) h(D)` with arbitrary positive even h.  Analyticity,
+  positivity, locality and D12 covariance do not select h.
+- Heat-bath, square-root and Metropolis rates are unique only after mutually
+  different added normalizations.  No current strict packet sources one such
+  kinetic convention or its overall clock.
+- Functorial construction from A/W/tau/energy remains nonunique: every h gives
+  a different natural configuration generator.
+- Dropping reversibility adds divergence-free stationary circulations.  The
+  12-cube cycle space has exact dimension 20,481 before symmetry reduction.
+  A finite square-cycle witness gives opposite currents with the same Gibbs
+  state and equal positive entropy production.
+- Entropy-production magnitude does not select time orientation.  A kinetic
+  arrow requires a nonequilibrium circulation source, polarity, bath and clock.
+- Stationary prism RG closure still does not imply dynamical lumpability.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, physical time arrow, units, OA evidence, legacy completion/role
+  transfer, Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST2712--ST2801 clock-source/moment-closure guardrail (2026-09-01)
+
+- `Q -> cQ` preserves stationary state, detailed-balance ratios, embedded jump
+  chain and every timestamp-free state sequence.  Only holding times scale.
+  Generator magnitude is an Rplus clock torsor invisible without calibrated
+  temporal records.
+- The ternary configuration law does not close on first moments.  At theta
+  zero, heat-bath degree-one modes all decay at rate one and cannot reproduce
+  the nontrivial strict A spectrum.  No exact A-to-Q moment intertwiner follows.
+- Spectral gap, lambda max, trace density and maximum-rate normalizations are
+  distinct natural dimensionless clock conventions.  Strict FIN selects none
+  and none supplies seconds.
+- Full D12 averaging cancels reflection-odd circulation.  Opposite currents
+  share stationary state and entropy-production magnitude; neither selects a
+  time arrow.
+- With calibrated waits, `c_hat=n/sum(lambda_x T_x)` and Fisher information is
+  `n/c^2`.  This proves conditional identifiability after timestamps, not a
+  strict clock source or independent evidence.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, SI clock, physical arrow, units, OA evidence, legacy role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST2802--ST2891 five-axis operational-completion guardrail (2026-09-01)
+
+- The declared completion family uses five typed axes: equilibrium theta,
+  vertical refinement q, kinetic activity a, clock scale c and signed current
+  j.  A five-record observable map has local Jacobian rank 5 and determinant
+  `-3.3901090721157604e-4` at the audited interior point.
+- Record ranks are 2 for stationary equilibrium, 3 after untimed jumps, 4
+  after either calibrated waits or signed current, and 5 for the complete
+  record.  Clock and arrow instruments remove independent fibres.
+- No smooth one-scalar parametrization covers an open neighbourhood of this
+  declared five-axis family.  This is a scoped local theorem, not an absolute
+  lower bound over every future formulation.
+- Treat the missing bridge as a typed operational package unless a new strict
+  theorem couples axes and demonstrably lowers rank.  Do not replace one axis
+  by another or call a hash/fixture independent custody.
+- The final gate passes 3/10 mathematical rows and zero strict physical rows.
+  No selector, clock, units, OA evidence, legacy role transfer, Standard Model,
+  gravity, `L_total`, or ToE closure follows.
+
+## Programs ST2892--ST2981 exact-prism-RG/fixed-point guardrail (2026-09-01)
+
+- Exact prism RG simplifies to
+  `theta'=theta+atanh(tanh(q)^3 tanh(theta))`, or
+  `m'=m(1+r)/(1+r m^2)` with `m=tanh(theta)`, `r=tanh(q)^3`.
+- For q nonzero there is no finite nonzero fixed point.  Fixed objects are the
+  disordered state, the q-zero identity line and infinite-order boundaries.
+- Positive q strictly amplifies existing |theta| toward perfect order;
+  negative q attenuates it toward zero; q zero is neutral.  The leading weak-q
+  effect is cubic.  The map never selects theta polarity.
+- A bounded nonzero multilevel hierarchy requires a selected q_n sequence.
+  Observed transitions can infer q conditionally but do not source it.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, physical feedback resource, clock, units, OA evidence, Standard
+  Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST2982--ST3071 summable-refinement-hierarchy guardrail (2026-09-01)
+
+- For q_n nonnegative, the exact prism hierarchy has a finite nonzero theta
+  limit iff `sum tanh(q_n)^3` converges; divergence drives absolute theta to
+  infinity.  For q_n nonpositive, divergent absolute cubic sum drives theta
+  to zero, while absolute summability leaves a nonzero same-sign limit.
+- For `q_n=C n^-alpha`, the sharp boundedness threshold is `alpha>1/3`.
+  Every positive dyadic/exponential decay is bounded.
+- The candidate `q_n=q0 2^(-1.8 n)` is mathematically convergent, but strict
+  eta controls spatial damping rather than interlayer coupling.  No eta-to-q
+  bridge, q0 source, layer spacing or physical scale is exported.
+- Boundedness does not select eta=1.8 or a universal theta limit; limits retain
+  theta0, q0 and ordered-sequence dependence.  Mixed-sign ordering matters.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, layer source, clock, units, OA evidence, legacy role transfer,
+  Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3072--ST3161 dyadic-kernel-recurrence guardrail (2026-09-02)
+
+- The conditional recurrence `q_n=K_strict(2^n)` is absolutely summable and,
+  for theta0=0.3, gives theta infinity `0.32668864347458015`.  The absolute
+  cubic sum is `0.09106826887155`.
+- Rigorous envelope control gives
+  `|tanh K(2^n)|^3 <= 2^(-3 eta n)`, so every eta>0 yields a bounded dyadic
+  hierarchy.  Convergence does not depend on oscillatory cancellation.
+- From n=3 onward the recurrence evaluates distances 8,16,... outside the
+  frozen Z12 distance domain 1..6.  Formula evaluation is not strict operator
+  provenance; no layer-to-distance embedding is exported.
+- General `K(a r^n)` sampling converges for every r>1 but limits depend on a
+  and r.  Binary refinement makes r=2 natural without deriving the distance
+  map or physical layer spacing.
+- Legacy dyadic sampling is also cubically summable but has different early
+  amplitudes/signs.  Shared convergence is not bridge completion or role
+  transfer.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, strict hierarchy source, physical scale, clock, OA evidence,
+  Standard Model, gravity, `L_total`, or ToE closure follows.

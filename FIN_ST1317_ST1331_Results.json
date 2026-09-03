@@ -1,0 +1,226 @@
+{
+  "ST1317": {
+    "boundary": "Dense sampling within each window.",
+    "object": "TimingWindow_Robustness",
+    "packet_file": "FIN_ST1317_TimingWindow_Robustness.json",
+    "packet_sha256": "8d187b9fa4c9a5b3650c9ca67a8a86605347b8e70c78945e36492e909fa325cb",
+    "program": "ST1317",
+    "status": "strong_numerical_timing_window_audit",
+    "windows": {
+      "0.005": [
+        0.4111578700107318,
+        0.605,
+        0.41124083153661556
+      ],
+      "0.01": [
+        0.41106020134270727,
+        0.61,
+        0.4112409998071642
+      ],
+      "0.05": [
+        0.40898734762539396,
+        0.65,
+        0.4112409995252471
+      ],
+      "0.1": [
+        0.4034085907978347,
+        0.7,
+        0.41124099908317907
+      ]
+    }
+  },
+  "ST1318": {
+    "at": 0.606,
+    "boundary": "One percent of t=0.6.",
+    "epsilon": 0.006,
+    "min_gap": 0.41114130740732996,
+    "object": "OnePercentClockWindow",
+    "packet_file": "FIN_ST1318_OnePercentClockWindow.json",
+    "packet_sha256": "f85a814c57d31022f26563dca0d5a84d8be0cff474ac166ce1a3b22091790653",
+    "program": "ST1318",
+    "status": "proven_effect_remains_above_0_4111_in_one_percent_time_window_numerically"
+  },
+  "ST1319": {
+    "at": 0.6599999999999999,
+    "boundary": "No other nuisance.",
+    "epsilon": 0.06,
+    "min_gap": 0.40812601414789745,
+    "object": "TenPercentClockWindow",
+    "packet_file": "FIN_ST1319_TenPercentClockWindow.json",
+    "packet_sha256": "fd9d05ba3b0573a090ee265ef375887a0950ee5b3e518df9f32c23118be6a630",
+    "program": "ST1319",
+    "status": "proven_effect_remains_above_0_408_in_ten_percent_time_window_numerically"
+  },
+  "ST1320": {
+    "boundary": "A-sourced Lindblad operator with free rate gamma.",
+    "formula": "rho_jk(t)=rho_jk(0) exp[-i Delta_jk t-(gamma/2)Delta_jk^2 t]",
+    "gamma_domain": [
+      0,
+      "infinity"
+    ],
+    "object": "EnergyDephasing_Family",
+    "packet_file": "FIN_ST1320_EnergyDephasing_Family.json",
+    "packet_sha256": "972ef64ae90985f57b6eb38c54d646d2702ca114b09f063c29d7b3774fcd35f4",
+    "program": "ST1320",
+    "status": "constructed_energy_basis_dephasing_alternative"
+  },
+  "ST1321": {
+    "boundary": "Root in scalar nuisance family.",
+    "common_return": 0.4123573971501711,
+    "gamma_mimic": 12.837352783930317,
+    "object": "SingleTime_DephasingMimic",
+    "packet_file": "FIN_ST1321_SingleTime_DephasingMimic.json",
+    "packet_sha256": "c950083a3d8324a529202225a5a8698f93a747d2dcd24799ea37bd1cf2f8d69d",
+    "program": "ST1321",
+    "status": "proven_single_time_return_can_be_exactly_mimicked_by_dephased_quantum_model_numerically",
+    "time": 0.6
+  },
+  "ST1322": {
+    "boundary": "Energy dephasing does not converge to classical uniform return.",
+    "classical_equilibrium": 0.08333333333333333,
+    "limit": 0.1527777777777778,
+    "object": "DephasingAsymptotic",
+    "packet_file": "FIN_ST1322_DephasingAsymptotic.json",
+    "packet_sha256": "3a4dcfb97528947b35f758b0339d11109abe1a157ec5abf0cd4182fd96b2f98f",
+    "program": "ST1322",
+    "status": "proven_strong_dephasing_limit_uses_degenerate_shell_weight"
+  },
+  "ST1323": {
+    "boundary": "Chosen to defeat one-time nuisance matching.",
+    "object": "MultiTime_Design",
+    "packet_file": "FIN_ST1323_MultiTime_Design.json",
+    "packet_sha256": "461d534fd9dcde910f8843be1f4e4a57217bc6cf647a72e1f50261fd81a724d9",
+    "program": "ST1323",
+    "shots_each": 100,
+    "status": "frozen_four_time_robust_design",
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ]
+  },
+  "ST1324": {
+    "RSS": 0.05239469837328462,
+    "best_alpha": 1.0999999999993826,
+    "best_dephased_quantum": [
+      0.4931324774971527,
+      0.40501591672217085,
+      0.3315045182672755,
+      0.28573108841138
+    ],
+    "best_gamma": 12.373117825382856,
+    "boundary": "Differential evolution; not formal global minimax proof.",
+    "classical": [
+      0.6236881984862294,
+      0.4123573971501711,
+      0.2191937597678312,
+      0.13512465335393706
+    ],
+    "clock_scale_band": [
+      0.9,
+      1.1
+    ],
+    "max_abs_residual": 0.15060643505744295,
+    "object": "CalibratedCompositeFit",
+    "packet_file": "FIN_ST1324_CalibratedCompositeFit.json",
+    "packet_sha256": "5e0e4511d4569d4eb8e533da51243b5f0fa9b77b9679b7bed955b4e24da10312",
+    "program": "ST1324",
+    "status": "strong_numerical_calibrated_composite_separation"
+  },
+  "ST1325": {
+    "RSS": 0.0007118276556929398,
+    "best_alpha": 2.9124374350435773,
+    "best_gamma": 0.5773913824135377,
+    "boundary": "Shows calibration is indispensable.",
+    "clock_scale_band": [
+      0.1,
+      10
+    ],
+    "max_abs_residual": 0.019501965841196178,
+    "object": "UnboundedClockScale_MimicRisk",
+    "packet_file": "FIN_ST1325_UnboundedClockScale_MimicRisk.json",
+    "packet_sha256": "1810aa0ab761d80a79f6815af81faf342efc778a49939dd427a0cfa455ac4367",
+    "program": "ST1325",
+    "status": "strong_numerical_wide_clock_scale_can_nearly_mimic_multitime_curve"
+  },
+  "ST1326": {
+    "boundary": "Survival/no-click channel required.",
+    "conditional_vertex_distribution_unchanged": true,
+    "lost_information": "absolute detection probability",
+    "object": "UniformLoss_ConditionalBlindness",
+    "packet_file": "FIN_ST1326_UniformLoss_ConditionalBlindness.json",
+    "packet_sha256": "69d97a69600dad8463996f3ca635f25338790827efd463a8c4a0790f0c3a8bb9",
+    "program": "ST1326",
+    "status": "proven_uniform_detection_loss_is_invisible_after_conditioning_on_clicks"
+  },
+  "ST1327": {
+    "boundary": "Prevents postselection from hiding loss.",
+    "object": "NoClick_Record_Necessity",
+    "packet_file": "FIN_ST1327_NoClick_Record_Necessity.json",
+    "packet_sha256": "a16ca8504c9c5a303e61e00c047625bbba3ce14daeefda4b1cbf85e1788bfdab",
+    "program": "ST1327",
+    "record_fields": [
+      "attempt count",
+      "click/no-click",
+      "vertex if click",
+      "timestamp",
+      "run id"
+    ],
+    "status": "constructed_no_click_record_requirement"
+  },
+  "ST1328": {
+    "boundary": "Toy detector model mixes with uniform distribution.",
+    "epsilon": 0.1,
+    "formula": "p_obs=(1-eps)p+eps/12",
+    "gap_after": 0.37009640291882395,
+    "object": "DetectorUniformNoise_Effect",
+    "packet_file": "FIN_ST1328_DetectorUniformNoise_Effect.json",
+    "packet_sha256": "baf0c226aefa6566107ff4e836c630c744bde0b857df4923021fb27dc241ff52",
+    "program": "ST1328",
+    "status": "proven_uniform_vertex_confusion_shrinks_return_gap_linearly"
+  },
+  "ST1329": {
+    "boundary": "Model-library boundary explicit.",
+    "not_robust_to": [
+      "unknown dephasing at one time",
+      "unbounded clock scale",
+      "unrecorded loss"
+    ],
+    "object": "Robustness_Classification",
+    "packet_file": "FIN_ST1329_Robustness_Classification.json",
+    "packet_sha256": "22f39aa4ac4750b26936af3b524ae2ab18786421e9d8fe83fea30c4d006747d6",
+    "program": "ST1329",
+    "robust_to": [
+      "moderate timing error",
+      "known uniform vertex noise"
+    ],
+    "status": "classified_base_robustness_and_nuisance_failure"
+  },
+  "ST1330": {
+    "boundary": "Requires interval/minimax proof and detector nuisance library.",
+    "calibrated_numerical_separation": true,
+    "formal_global_composite_certificate": false,
+    "object": "CompositeVerdict",
+    "packet_file": "FIN_ST1330_CompositeVerdict.json",
+    "packet_sha256": "d033129f88bf9351066baa46d48a2dd245e27493afdbe5362d2a9e055e417a6e",
+    "program": "ST1330",
+    "status": "composite_four_time_design_promising_but_not_certified"
+  },
+  "ST1331": {
+    "boundary": "Build fail-closed protocol, validator and synthetic fixtures.",
+    "next": [
+      "protocol JSON",
+      "hash freeze",
+      "single-time scorer",
+      "four-time fields",
+      "synthetic positive/negative fixtures",
+      "custody gate"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1331_RoundFour_Recommendation.json",
+    "packet_sha256": "35a94d9d2ebf69ccdbc7d9bff40b695f95b6f4c9eac140ce82f56121f0fc5de9",
+    "program": "ST1331",
+    "status": "recommended_ST1332_ST1346"
+  }
+}

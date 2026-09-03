@@ -1,0 +1,56 @@
+{
+  "hypotheses": {
+    "C": "p(t)=exp(-tA)delta0",
+    "Q": "rho(t)=exp(-itA)|0><0|exp(itA)"
+  },
+  "invalid_record_rules": [
+    "missing field",
+    "count ordering failure",
+    "shot mismatch",
+    "unfrozen time",
+    "post-unblinding model edit"
+  ],
+  "matrix_fingerprint_sha256": "faf664a35cf511856921b82f27a858c56b5b5f258a674b53b5b106cacfeb66b1",
+  "primary": {
+    "max_ideal_error_target": 0.01,
+    "return_threshold_Q": 19,
+    "shots": 29,
+    "time": 0.6
+  },
+  "raw_event_fields": [
+    "timestamp",
+    "attempt_id",
+    "click",
+    "vertex_if_click",
+    "config_id",
+    "run_id"
+  ],
+  "robust": {
+    "clock_scale_band": [
+      0.9,
+      1.1
+    ],
+    "dephasing_gamma_band": [
+      0,
+      100
+    ],
+    "shots_each": [
+      100,
+      100,
+      100,
+      100
+    ],
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ]
+  },
+  "role_requirements": {
+    "hash_before_unblinding": true,
+    "one_shot_analysis": true,
+    "provider_equals_analyst_allowed": false
+  },
+  "schema_version": "FIN-OA-10.98-v1"
+}

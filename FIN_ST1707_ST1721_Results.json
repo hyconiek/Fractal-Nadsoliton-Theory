@@ -1,0 +1,200 @@
+{
+  "ST1707": {
+    "boundary": "Conditional OA hierarchy.",
+    "layers": [
+      "propagator",
+      "Lindblad generator",
+      "kernel parameters",
+      "minimax geometry",
+      "composite decision",
+      "detector matrix",
+      "q-clock"
+    ],
+    "object": "ExtendedRobustnessLattice",
+    "packet_file": "FIN_ST1707_ExtendedRobustnessLattice.json",
+    "packet_sha256": "c1638463b90e254289797505a86ed5679297fc6c39b39e8616ece1c161499894",
+    "program": "ST1707",
+    "status": "constructed_generator_parameter_inference_detector_clock_robustness_lattice"
+  },
+  "ST1708": {
+    "boundary": "Other jumps open.",
+    "epsilon_example": 8.041872774817993e-08,
+    "object": "LindbladSensitivityVerdict",
+    "packet_file": "FIN_ST1708_LindbladSensitivityVerdict.json",
+    "packet_sha256": "9534a49523547a31c33ea3178eabd3000c194b833828b4aa13e7f1a2743facd7",
+    "program": "ST1708",
+    "residual_lower": 0.10789050485132269,
+    "status": "proven_declared_A_dephasing_composite_separation_survives_small_noncirculant_graph_perturbations"
+  },
+  "ST1709": {
+    "boundary": "Neither box physical CI.",
+    "large_operator_bound": 0.00020105649070913632,
+    "object": "KernelParameterBoxVerdict",
+    "packet_file": "FIN_ST1709_KernelParameterBoxVerdict.json",
+    "packet_sha256": "d24ff874b5253e0afd07bdd02e07283bca1d6290bb50d83d0aa909877737e6e8",
+    "program": "ST1709",
+    "small_operator_bound": 8.041872774817993e-08,
+    "status": "kernel_parameter_propagation_has_large_base_robust_box_and_tiny_full_certificate_box"
+  },
+  "ST1710": {
+    "boundary": "Exact active-set theorem open.",
+    "certified_value_bracket": [
+      0.05,
+      0.05370588868619479
+    ],
+    "gamma": 16.05917256231611,
+    "object": "KKTGeometryVerdict",
+    "packet_file": "FIN_ST1710_KKTGeometryVerdict.json",
+    "packet_sha256": "efb8b0d5652c1c77fae66bfa8bd5de95bfed66f05abbf7aa7a982f040dc69090",
+    "program": "ST1710",
+    "status": "reduced_continuous_KKT_candidate_isolated_strong_numerically_value_already_certified",
+    "value": 0.053705210722682,
+    "weights": [
+      0.31859567830451857,
+      0.6814043216954815
+    ]
+  },
+  "ST1711": {
+    "C_boundary": "max component LR<=.01",
+    "Q_boundary": "mixture LR>=100",
+    "alpha": 0.01,
+    "boundary": "Off-grid Q not covered.",
+    "object": "SymmetricGridDecisionVerdict",
+    "packet_file": "FIN_ST1711_SymmetricGridDecisionVerdict.json",
+    "packet_sha256": "2e5a5cbc73df6ec0aaf43685654ba8e265e0384f9c1ee0f854fe538d02b037cc",
+    "program": "ST1711",
+    "status": "finite_grid_symmetric_decision_has_two_valid_error_boundaries_and_abstention"
+  },
+  "ST1712": {
+    "boundary": "Independent 5% detector matrices.",
+    "ideal_TV": 0.4112182254653598,
+    "lower_TV": 0.3112182254653598,
+    "object": "DetectorMatrixVerdict",
+    "packet_file": "FIN_ST1712_DetectorMatrixVerdict.json",
+    "packet_sha256": "7f9ce274fd14285d8da832f02849a97ad3a120e1eedeea7f62b8fd066f32e3b8",
+    "program": "ST1712",
+    "status": "arbitrary_vertex_misclassification_ball_preserves_simple_full_distribution_separation"
+  },
+  "ST1713": {
+    "boundary": "Any number of physical times.",
+    "invariant": "kappa=q/tau_*",
+    "object": "JointQClockVerdict",
+    "packet_file": "FIN_ST1713_JointQClockVerdict.json",
+    "packet_sha256": "d1bbbd16cd734fd083efb29f8d3f0feafa043b6a1af160dbcc6990b3cb039b56",
+    "program": "ST1713",
+    "requires_anchor": true,
+    "status": "proven_joint_q_clock_scaling_torsor_blocks_separate_identification",
+    "transformation": "(q,tau)->(cq,c tau)"
+  },
+  "ST1714": {
+    "boundary": "Composed parent chain.",
+    "figure": "FIN_ST1632_ST1721_Figures/lindblad_kernel_qclock_summary.png",
+    "file": "FIN_ST1707_ST1721_Protocol_11_02.json",
+    "object": "Protocol1102Freeze",
+    "packet_file": "FIN_ST1714_Protocol1102Freeze.json",
+    "packet_sha256": "a7f5e7fd43c9689a2c0c7f633d2626846acb862582b3126981c8794aca6a40ec",
+    "program": "ST1714",
+    "sha256": "1dba7087548673c7fa6b5c41a25f6f57e1f457fd7066b64ea946a41093081702",
+    "status": "constructed_protocol_11_02_hash_freeze"
+  },
+  "ST1715": {
+    "boundary": "Evidence boundary.",
+    "clock_anchor": false,
+    "events": false,
+    "object": "EvidenceBoundary",
+    "packet_file": "FIN_ST1715_EvidenceBoundary.json",
+    "packet_sha256": "2797f968a2c6a7d4487bfcf00538b1a683b5efc143fb6b68efc2a644a952a441",
+    "parameter_CI": false,
+    "platform": false,
+    "program": "ST1715",
+    "status": "blocked_no_physical_parameter_CI_clock_anchor_platform_or_events"
+  },
+  "ST1716": {
+    "boundary": "Ontology.",
+    "literal_nonexistence": false,
+    "object": "AnnihilationScope",
+    "packet_file": "FIN_ST1716_AnnihilationScope.json",
+    "packet_sha256": "0116f65239455f55db8e1dc5d7146a21145dea764e1546b9235de101719d56d2",
+    "program": "ST1716",
+    "status": "all_new_tests_remain_internal_channel_parameter_inference_not_total_annihilation"
+  },
+  "ST1717": {
+    "blockers": [
+      "arbitrary Lindblad jumps",
+      "physical kernel CI",
+      "exact KKT active set",
+      "continuous symmetric decision",
+      "detector plus loss matrix box",
+      "independent q/tau anchor",
+      "platform law"
+    ],
+    "boundary": "Nonreplay.",
+    "object": "RemainingBlockers",
+    "packet_file": "FIN_ST1717_RemainingBlockers.json",
+    "packet_sha256": "18b83d3d4c1d43d2f42f26f887780c129f147f83f25196fb0b90f4c928ae0eb0",
+    "program": "ST1717",
+    "status": "listed_remaining_mathematical_frontier"
+  },
+  "ST1718": {
+    "boundary": "Next six-round candidates.",
+    "object": "RecommendedNextProgrammes",
+    "packet_file": "FIN_ST1718_RecommendedNextProgrammes.json",
+    "packet_sha256": "800ddcc7d5228b396581852941479e2762907deefcbc0c858287661ed9c27882",
+    "program": "ST1718",
+    "programmes": [
+      "general GKSL jump-operator ball",
+      "interval parameter CI from kernel provenance",
+      "Krawczyk KKT isolation",
+      "continuous sup-LR certification",
+      "detector-loss augmented matrix polytope",
+      "joint q/tau with second scaling observable",
+      "multi-fiber q consistency",
+      "information-optimal continuous prior",
+      "platform forward model",
+      "external clock calibration",
+      "independent audit",
+      "raw events after freeze"
+    ],
+    "status": "recommended_next_programmes"
+  },
+  "ST1719": {
+    "boundary": "No scope inflation.",
+    "object": "StopRules",
+    "packet_file": "FIN_ST1719_StopRules.json",
+    "packet_sha256": "f7b9ba56f8483bef35704ca9a618771a5026047b214a6e5cddbb302565e975af",
+    "program": "ST1719",
+    "status": "installed_release1102_stop_rules",
+    "stop_if": [
+      "A-dephasing bound used for arbitrary jumps",
+      "small box called measured CI",
+      "KKT candidate called exact optimizer",
+      "finite grid called continuum decision",
+      "TV ball called calibrated apparatus",
+      "kappa called separate q and tau"
+    ]
+  },
+  "ST1720": {
+    "boundary": "Strict physics unchanged.",
+    "conditional_strength": true,
+    "laboratory": false,
+    "object": "FinalScientificVerdict",
+    "packet_file": "FIN_ST1720_FinalScientificVerdict.json",
+    "packet_sha256": "391dc50c46b6a97f534f802c16dc22236ee33147ae7f7f166606f76e4535f175",
+    "program": "ST1720",
+    "status": "final_verdict_conditional_OA_now_has_generator_parameter_inference_and_detector_level_theorems_plus_qclock_no_go",
+    "strict_state_category": false
+  },
+  "ST1721": {
+    "boundary": "Release 11.02.",
+    "breakthrough": "Lindblad sensitivity, parameter boxes, symmetric grid decision, detector ball, q-clock no-go",
+    "object": "CycleSix_ReportTrigger",
+    "packet_file": "FIN_ST1721_CycleSix_ReportTrigger.json",
+    "packet_sha256": "c172e3bbc79bf4c482fa9dbfeaeaf2bbd9e39e87ffb5947443560da58110634b",
+    "program": "ST1721",
+    "programs": 90,
+    "release": "11.02",
+    "rounds": 6,
+    "status": "six_round_cycle_complete_report_required",
+    "strict_ToE_closure": false
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "ST2562": {
+    "boundary": "Optimize path entropy with constraints.",
+    "object": "MaximumCaliberSetup",
+    "packet_file": "FIN_ST2562_MaximumCaliberSetup.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2562",
+    "status": "Conditional"
+  },
+  "ST2563": {
+    "boundary": "Need mean jump/activity constraints.",
+    "object": "PathEntropyConstraint",
+    "packet_file": "FIN_ST2563_PathEntropyConstraint.json",
+    "packet_sha256": "516e2d0a6aa9cb9348af638716ff267f2ffabb1ddf56113e2b5a6ae1a6142501",
+    "program": "ST2563",
+    "status": "Boundary",
+    "supplied": true
+  },
+  "ST2564": {
+    "boundary": "Relative path entropy requires a reference generator.",
+    "object": "ReferenceMeasure",
+    "packet_file": "FIN_ST2564_ReferenceMeasure.json",
+    "packet_sha256": "f07889964fb85c944ab536630976790400d4cc109a3042451db09f6529ca1a2b",
+    "program": "ST2564",
+    "reference_strict": false,
+    "status": "No-go"
+  },
+  "ST2565": {
+    "boundary": "Uniform edge prior yields square-root/symmetric rates.",
+    "object": "SymmetricSolution",
+    "packet_file": "FIN_ST2565_SymmetricSolution.json",
+    "packet_sha256": "1185f2fac5b1eb6ad3e719cca6ed5def4e7ee315245d12471c9e0dbcf0434a30",
+    "program": "ST2565",
+    "rule": "exp(-DeltaE/2)",
+    "status": "Conditional"
+  },
+  "ST2566": {
+    "boundary": "Mean activity fixes overall rate.",
+    "object": "ActivityBudget",
+    "packet_file": "FIN_ST2566_ActivityBudget.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2566",
+    "status": "Boundary"
+  },
+  "ST2567": {
+    "boundary": "Budget is a clock scale.",
+    "object": "BudgetTimeScale",
+    "packet_file": "FIN_ST2567_BudgetTimeScale.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2567",
+    "status": "No-go"
+  },
+  "ST2568": {
+    "boundary": "Metropolis/heat-bath arise from different choices.",
+    "object": "DifferentPriors",
+    "packet_file": "FIN_ST2568_DifferentPriors.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2568",
+    "status": "Proven"
+  },
+  "ST2569": {
+    "boundary": "Stationary Fisher geometry does not specify mobility.",
+    "object": "FisherMetricBoundary",
+    "packet_file": "FIN_ST2569_FisherMetricBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2569",
+    "status": "No-go"
+  },
+  "ST2570": {
+    "boundary": "Gradient flow needs Onsager operator.",
+    "object": "GradientFlowBoundary",
+    "packet_file": "FIN_ST2570_GradientFlowBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2570",
+    "status": "Conditional"
+  },
+  "ST2571": {
+    "boundary": "Reversible Dirichlet form needs edge conductances.",
+    "object": "DirichletFormBoundary",
+    "packet_file": "FIN_ST2571_DirichletFormBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2571",
+    "status": "Conditional"
+  },
+  "ST2572": {
+    "boundary": "No source for prior/mobility/activity.",
+    "object": "CanonicalityGate",
+    "packet_file": "FIN_ST2572_CanonicalityGate.json",
+    "packet_sha256": "19efb1443da2d0800e089dbe36c9df5803db2c7f61e0520f4412a88211f1793f",
+    "program": "ST2572",
+    "status": "Gate fail",
+    "strict": false
+  },
+  "ST2573": {
+    "boundary": "Information state and kinetic law are independent layers.",
+    "object": "StateKineticsSeparation",
+    "packet_file": "FIN_ST2573_StateKineticsSeparation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2573",
+    "status": "Proven"
+  },
+  "ST2574": {
+    "boundary": "Maximum caliber cannot choose dynamics without constraints/prior.",
+    "object": "InformationPrincipleNoGo",
+    "packet_file": "FIN_ST2574_InformationPrincipleNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2574",
+    "status": "Proven no-go"
+  },
+  "ST2575": {
+    "boundary": "Information optimization relocates rather than removes kinetic axioms.",
+    "object": "RoundThreeVerdict",
+    "packet_file": "FIN_ST2575_RoundThreeVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2575",
+    "status": "Round verdict"
+  },
+  "ST2576": {
+    "boundary": "Test prism dynamical lumpability.",
+    "object": "RoundThreeRecommendation",
+    "packet_file": "FIN_ST2576_RoundThreeRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2576",
+    "status": "Recommendation"
+  }
+}

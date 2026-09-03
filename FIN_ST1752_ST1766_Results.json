@@ -1,0 +1,163 @@
+{
+  "ST1752": {
+    "L": "-B*y*phi(x) + R*xi*phi(x)**2 + g*A(x)**2*phi(x)**2/2 - lam*phi(x)**4/4 - m2*phi(x)**2/2 + Derivative(phi(x), x)**2/2",
+    "boundary": "Suppresses spin/gravity derivatives only for sign/source audit.",
+    "object": "LiteralFlatAction",
+    "packet_file": "FIN_ST1752_LiteralFlatAction.json",
+    "packet_sha256": "9f3c4ccb4567025ecd96b1b850f46a551873bc8db44fec0ee225c592acc68f1c",
+    "program": "ST1752",
+    "status": "constructed_literal_flat_scalar_vector_source_action_from_displayed_terms"
+  },
+  "ST1753": {
+    "E_phi": "B*y - 2*R*xi*phi(x) - g*A(x)**2*phi(x) + lam*phi(x)**3 + m2*phi(x) + Derivative(phi(x), (x, 2))",
+    "boundary": "Using equation-sheet EL convention.",
+    "object": "ScalarVariation",
+    "packet_file": "FIN_ST1753_ScalarVariation.json",
+    "packet_sha256": "c80f8f2b9dd95c74eb6054f10d49d0b607d3027e8fd62a233499cdd7b51cad94",
+    "program": "ST1753",
+    "status": "proven_literal_scalar_Euler_row"
+  },
+  "ST1754": {
+    "boundary": "L contains -y phi psibarpsi but displayed compact EOM contains -y psibarpsi.",
+    "derived_coefficient": "y",
+    "draft_coefficient": "-y",
+    "match": false,
+    "object": "YukawaSignDefect",
+    "packet_file": "FIN_ST1754_YukawaSignDefect.json",
+    "packet_sha256": "cefbbc81498b550c4f3563dcc908e6d50e1ee509dcc6573d5e1bc6afce25c27f",
+    "program": "ST1754",
+    "status": "proven_compact_draft_Yukawa_source_sign_disagrees_with_literal_variation"
+  },
+  "ST1755": {
+    "boundary": "Multiply full Maxwell equation by -1.",
+    "mass_term": "g phi^2 A",
+    "minus_dL_dA": "-g*A(x)*phi(x)**2",
+    "object": "GaugeVariation",
+    "packet_file": "FIN_ST1755_GaugeVariation.json",
+    "packet_sha256": "85b87413b2523e64784dcbcd7a5b6bf6eafce3c2741d3b5c5c2c2ce10ca44545",
+    "program": "ST1755",
+    "status": "proven_literal_vector_interaction_variation_matches_masslike_term_up_to_Maxwell_overall_convention"
+  },
+  "ST1756": {
+    "E_psibar": "(i gamma D - y phi)psi",
+    "boundary": "Displayed fermion row locally consistent.",
+    "object": "FermionVariation",
+    "packet_file": "FIN_ST1756_FermionVariation.json",
+    "packet_sha256": "1fd40853fa36aa307735e9eed1c5a8a865c1718905011b1be51e09dd3b69e58f",
+    "program": "ST1756",
+    "status": "proven_fermion_variation_gives_Dirac_minus_yphi_operator"
+  },
+  "ST1757": {
+    "boundary": "sqrt(-g) typing inconsistent in compact sum.",
+    "compact_density_consistent": false,
+    "later_covariant_presentation_repairs_notation": true,
+    "object": "DensityTypeMismatch",
+    "packet_file": "FIN_ST1757_DensityTypeMismatch.json",
+    "packet_sha256": "3c87b02f2412ebf2ad418d5e695cd2fab990508b5a2a268ee6133a8096b3c05e",
+    "program": "ST1757",
+    "status": "proven_compact_Ltotal_adds_scalar_Lagrangians_to_gravity_density_before_covariant_repair"
+  },
+  "ST1758": {
+    "boundary": "Off-shell infinitesimal variation nonzero.",
+    "delta": "g phi^2 A^mu partial_mu alpha",
+    "integrated": "-g alpha partial_mu(phi^2 A^mu)+boundary",
+    "object": "GaugeInvarianceNoGo",
+    "packet_file": "FIN_ST1758_GaugeInvarianceNoGo.json",
+    "packet_sha256": "5bf4f285856bc71ac0188c7527371d648c8cdf788bab3426f0ef48a2e348481a",
+    "program": "ST1758",
+    "status": "proven_A2phi2_seagull_alone_is_not_local_gauge_invariant"
+  },
+  "ST1759": {
+    "boundary": "Adds more than the existing term.",
+    "expansion": "|D Phi|^2=|partial Phi|^2 + iq A(Phi*partial Phi-Phi partial Phi*) + q^2 A^2|Phi|^2",
+    "object": "ChargedScalarRepairExpansion",
+    "packet_file": "FIN_ST1759_ChargedScalarRepairExpansion.json",
+    "packet_sha256": "dfc88bf6161a5053782fe85b48a3d571b67ae99e7a4d392fe21a729af685e331",
+    "program": "ST1759",
+    "status": "constructed_minimal_complex_charged_scalar_repair"
+  },
+  "ST1760": {
+    "boundary": "Current draft has independent g_eff and no required derivative current.",
+    "constraint": "g_eff=q^2 modulo normalization",
+    "missing_current": true,
+    "object": "GaugeCoefficientConstraint",
+    "packet_file": "FIN_ST1760_GaugeCoefficientConstraint.json",
+    "packet_sha256": "4678afc8285216445ae35a5750e25c8af79a90767489cde9a349da17b26d4d60",
+    "program": "ST1760",
+    "status": "proven_gauge_repair_ties_seagull_and_derivative_current_to_same_charge"
+  },
+  "ST1761": {
+    "boundary": "Consistent effective vector option but abandons gauge/BRST claim.",
+    "constraint": "divergence of phi-dependent Proca equation",
+    "local_gauge": false,
+    "object": "ProcaFork",
+    "packet_file": "FIN_ST1761_ProcaFork.json",
+    "packet_sha256": "23dbff58107208c20ec813a8b995bc16e7958dd58e8e569bb3accf6c38cca999",
+    "program": "ST1761",
+    "status": "constructed_Proca_interpretation_fork"
+  },
+  "ST1762": {
+    "H_sector": "add complex Higgs kinetic/potential",
+    "T_SM_mix": "define and vary all matter sectors",
+    "boundary": "Cannot arise from coefficient renaming.",
+    "chi_RG_RF2": "add R F^2 term",
+    "curvature_squared": "add R^2,Ricci^2,Riemann^2 action",
+    "lambda3_phi3": "add cubic potential",
+    "object": "CovariantExtraActionRequirements",
+    "packet_file": "FIN_ST1762_CovariantExtraActionRequirements.json",
+    "packet_sha256": "42c577739e94fde37e5bd602830f624397f8ce28126d24d7e6dc7fa67080637e",
+    "phi2_H2": "add mixing potential",
+    "program": "ST1762",
+    "status": "proven_claimed_covariant_EOM_extras_require_explicit_additional_action_terms"
+  },
+  "ST1763": {
+    "boundary": "-lambda phi^4/4 yields lambda phi^3; lambda4/3! corresponds lambda4 phi^4/4!.",
+    "lambda3_action_absent": true,
+    "normalization_map_supplied": false,
+    "object": "PotentialNormalizationMismatch",
+    "packet_file": "FIN_ST1763_PotentialNormalizationMismatch.json",
+    "packet_sha256": "061d995d5f9ba0464bfe176d71a9a3096e1624d2a8a84fe323c720ef0bfd49da",
+    "program": "ST1763",
+    "status": "proven_quartic_and_cubic_normalizations_differ_between_scaffold_and_sector_rows_without_exported_map"
+  },
+  "ST1764": {
+    "boundary": "Term-source/sign audit.",
+    "object": "SingleActionCoverage",
+    "packet_file": "FIN_ST1764_SingleActionCoverage.json",
+    "packet_sha256": "df17eb6c1b7f9268bb03e65a00e8a5ed697864ddae028b9300fcdc96f42742df",
+    "program": "ST1764",
+    "reasons": [
+      "unsourced sectors",
+      "Yukawa sign",
+      "gauge seagull",
+      "normalization mismatch"
+    ],
+    "single_action_closure": false,
+    "status": "proven_no_single_literal_displayed_action_generates_all_current_covariant_rows"
+  },
+  "ST1765": {
+    "boundary": "Reduced recomposition zero is internally valid.",
+    "full_covariant": false,
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1765_RoundThree_Verdict.json",
+    "packet_sha256": "6150e0e79f490c8f97f1095365f1f6d4d2fb92ef65b58cdccfbd74b8b34fcda2",
+    "program": "ST1765",
+    "reduced_models": true,
+    "status": "round_three_falsifies_full_Ltotal_claim_but_preserves_reduced_termwise_models_as_separate_actions"
+  },
+  "ST1766": {
+    "boundary": "Falsify the moment-to-coupling map: reference dependence, rank and predictive content.",
+    "next": [
+      "dref variation",
+      "coordinate rescaling",
+      "Jacobian rank",
+      "free base couplings",
+      "moment-equivalent kernels"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1766_RoundThree_Recommendation.json",
+    "packet_sha256": "638049a908fcd36e1769ef70a3b752f84dd45f13b2bc142dcb98d537aee4392f",
+    "program": "ST1766",
+    "status": "recommended_ST1767_ST1781"
+  }
+}

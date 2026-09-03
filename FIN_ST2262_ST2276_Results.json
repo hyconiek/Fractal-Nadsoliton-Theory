@@ -1,0 +1,166 @@
+{
+  "ST2262": {
+    "boundary": "Current strict data expose edge energy, spectral calculus, adaptive potential and refinement; no face-composition law is exported.",
+    "candidate_compositions": [
+      "parallel conductance addition",
+      "series/harmonic composition",
+      "path multiplication",
+      "mean aggregation"
+    ],
+    "object": "CompositionLawInventory",
+    "packet_file": "FIN_ST2262_CompositionLawInventory.json",
+    "packet_sha256": "97314f35d6d1a9d716a084ff22347376688872139c8ecdced9bf07ab4fdb557a",
+    "program": "ST2262",
+    "status": "Classified"
+  },
+  "ST2263": {
+    "boundary": "Dirichlet energy is linear in W for a fixed field f.",
+    "object": "DirichletParallelAdditivity",
+    "packet_file": "FIN_ST2263_DirichletParallelAdditivity.json",
+    "packet_sha256": "407bf68e4dda43c69249dd83284a8f7214577e513d47509bc62f5b5693062e09",
+    "parallel_energy_additivity_residual": 0.0,
+    "program": "ST2263",
+    "status": "Proven"
+  },
+  "ST2264": {
+    "boundary": "Linearity of a scalar edge-energy sum does not determine a nonlinear map from three edge weights to one face weight.",
+    "edge_energy_linear": true,
+    "face_rule_logically_determined": false,
+    "object": "LiftNonImplication",
+    "packet_file": "FIN_ST2264_LiftNonImplication.json",
+    "packet_sha256": "455a9161fd5b73b8d03465f18c2e62fe62b0211c762eeb4129eb2ed75caac08d",
+    "program": "ST2264",
+    "status": "Proven nonimplication"
+  },
+  "ST2265": {
+    "boundary": "Continuity rules out pathological Cauchy solutions.",
+    "object": "SeparateAdditivityTheorem",
+    "packet_file": "FIN_ST2265_SeparateAdditivityTheorem.json",
+    "packet_sha256": "6425e8208ab3a0fb6aad638598d7782e983ffa98c88b6630ef848d1b28605d1a",
+    "program": "ST2265",
+    "status": "Conditional theorem",
+    "theorem": "A continuous support-zero rule additive in each positive edge variable is F(a,b,c)=kappa*a*b*c."
+  },
+  "ST2266": {
+    "additivity_defect": -2.168404344971009e-19,
+    "boundary": "The product satisfies separate parallel additivity.",
+    "object": "ProductRuleTest",
+    "packet_file": "FIN_ST2266_ProductRuleTest.json",
+    "packet_sha256": "8b57666b79cb30fd4e338861f00ff63bfc5932d900f91b7586d4decb08504acd",
+    "program": "ST2266",
+    "status": "Proven"
+  },
+  "ST2267": {
+    "additivity_defect": -0.07852213213637244,
+    "boundary": "Local, symmetric, positive, support-zero and degree-one, but not separately additive.",
+    "object": "GeometricMeanCounterrule",
+    "packet_file": "FIN_ST2267_GeometricMeanCounterrule.json",
+    "packet_sha256": "04152576d3fe6c283e4b6f99319c676382d51c5ccf18c646404887d58bbda355",
+    "program": "ST2267",
+    "rule": "(abc)^(1/3)",
+    "status": "Counterexample"
+  },
+  "ST2268": {
+    "additivity_defect": -0.07859662727913248,
+    "boundary": "Natural series-conductance aggregation violates separate additivity.",
+    "object": "HarmonicMeanCounterrule",
+    "packet_file": "FIN_ST2268_HarmonicMeanCounterrule.json",
+    "packet_sha256": "5b16f2bc29624c8909e0679420d745a522c0e54e91a26c7846bf57b4d0a63d9b",
+    "program": "ST2268",
+    "rule": "3/(1/a+1/b+1/c)",
+    "status": "Counterexample"
+  },
+  "ST2269": {
+    "additivity_defect": -0.0470291687456504,
+    "boundary": "Local, symmetric, monotone and support-zero, but nonsmooth/nonadditive.",
+    "object": "MinimumCounterrule",
+    "packet_file": "FIN_ST2269_MinimumCounterrule.json",
+    "packet_sha256": "e4165a582d258ff2ae0a67dc12540efbff2b53963e150f2d51ab1a4b6567e342",
+    "program": "ST2269",
+    "rule": "min(a,b,c)",
+    "status": "Counterexample"
+  },
+  "ST2270": {
+    "boundary": "Product has total degree three; geometric/harmonic/minimum have degree one.",
+    "homogeneity_degrees": {
+      "geometric_mean": 1,
+      "harmonic_mean": 1,
+      "minimum": 1,
+      "product": 3
+    },
+    "object": "HomogeneityConflict",
+    "packet_file": "FIN_ST2270_HomogeneityConflict.json",
+    "packet_sha256": "8f77aef560aeafdcb1cd3cf28a9aa1351a9af57d8291c3905e4e54e47421c35e",
+    "program": "ST2270",
+    "status": "Proven ambiguity",
+    "strict_face_dimension_exported": false
+  },
+  "ST2271": {
+    "boundary": "Support-zero alone permits infinitely many symmetric positive rules.",
+    "examples": [
+      "(abc)^p",
+      "harmonic mean",
+      "min",
+      "abc/(a+b+c)^2"
+    ],
+    "object": "SupportZeroClassification",
+    "packet_file": "FIN_ST2271_SupportZeroClassification.json",
+    "packet_sha256": "79c28e0ecd41690b5a5978587c1538eefee6caed675ad94230af06acfc1b5d8b",
+    "program": "ST2271",
+    "status": "Proven"
+  },
+  "ST2272": {
+    "boundary": "A3 is equivalent to requiring the face lift to preserve parallel addition independently in every edge slot.",
+    "object": "ParallelAdditivityPremise",
+    "packet_file": "FIN_ST2272_ParallelAdditivityPremise.json",
+    "packet_sha256": "003a91ff9a5a79e431e06d44372aad5e3437694a9b3bff7ff6caf0767907effa",
+    "premise": "face-lift parallel additivity",
+    "present_in_edge_energy": true,
+    "present_in_face_lift": false,
+    "program": "ST2272",
+    "status": "Identified missing premise"
+  },
+  "ST2273": {
+    "boundary": "No current strict packet exports face-lift parallel additivity as a source theorem.",
+    "object": "StrictSourceAudit",
+    "packet_file": "FIN_ST2273_StrictSourceAudit.json",
+    "packet_sha256": "f6c7a674f792639709723ea99393c1cec5f9d2c1aef9dadab8acaf4095f3eaa6",
+    "program": "ST2273",
+    "status": "Repository audit",
+    "strict_A3_source": false
+  },
+  "ST2274": {
+    "boundary": "A3 selects the loop product conditionally but is not derived by the strict pair operator.",
+    "conditional_selection": true,
+    "object": "SeparateLinearityGate",
+    "packet_file": "FIN_ST2274_SeparateLinearityGate.json",
+    "packet_sha256": "e78c481dc270d353d32de31b409daa6246f797aa9114fee634c10823567e04d2",
+    "program": "ST2274",
+    "separate_linearity_strict": false,
+    "status": "Gate fail"
+  },
+  "ST2275": {
+    "A3_unavoidable": false,
+    "boundary": "Dirichlet linearity does not propagate automatically one categorical level upward to triangle weights.",
+    "object": "RoundOneVerdict",
+    "packet_file": "FIN_ST2275_RoundOneVerdict.json",
+    "packet_sha256": "b58ab0bf09e270581d74001544466e5fad9fcf584886dd8e4430691867750e20",
+    "program": "ST2275",
+    "status": "Round verdict"
+  },
+  "ST2276": {
+    "boundary": "Audit A4 using the exact weighted-graph automorphism group and triangle orbit separation.",
+    "next": [
+      "Aut(W)",
+      "D12 completeness",
+      "triangle orbit count",
+      "tau orbit separation",
+      "S12 counterfactual"
+    ],
+    "object": "RoundOneRecommendation",
+    "packet_file": "FIN_ST2276_RoundOneRecommendation.json",
+    "packet_sha256": "54b0e394df9a7c5db6c7dd1debc890fe7e0b662ef2b0ce94e7d87b7c5fca200e",
+    "program": "ST2276",
+    "status": "Recommendation"
+  }
+}

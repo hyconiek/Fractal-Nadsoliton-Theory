@@ -1,0 +1,184 @@
+{
+  "ST1662": {
+    "alpha": 1.1,
+    "boundary": "Candidate active structure.",
+    "object": "ReducedActiveFace",
+    "packet_file": "FIN_ST1662_ReducedActiveFace.json",
+    "packet_sha256": "5e126d9c9f00c25397bbe69ac58d8f40bf917d81044f283d194166bcacc856c7",
+    "program": "ST1662",
+    "status": "constructed_reduced_two_time_upper_clock_boundary_KKT_face",
+    "times": [
+      0.3,
+      2.0
+    ]
+  },
+  "ST1663": {
+    "boundary": "Numerical branch margins.",
+    "forward": [
+      0.0537093760227923,
+      0.053703263266168755
+    ],
+    "object": "DirectionalKLBranch",
+    "packet_file": "FIN_ST1663_DirectionalKLBranch.json",
+    "packet_sha256": "e289026ea2ade4adbcb3e099913c5fe6a26636b6c831f9402a6b332e483b5fad",
+    "program": "ST1663",
+    "reverse": [
+      0.05473306556074525,
+      0.06390182590215886
+    ],
+    "status": "proven_forward_C_to_Q_KL_branch_is_active_near_candidate",
+    "strict": true
+  },
+  "ST1664": {
+    "boundary": "Envelope interior weight condition.",
+    "equation": "d_0.3(gamma)=d_2.0(gamma)",
+    "object": "EqualDivergenceEquation",
+    "packet_file": "FIN_ST1664_EqualDivergenceEquation.json",
+    "packet_sha256": "e2c9e8b0d597e6947c0ae09de5541cb4f84d5fc4493cef13b7abc9a70ac52788",
+    "program": "ST1664",
+    "status": "constructed_equal_endpoint_divergence_equation"
+  },
+  "ST1665": {
+    "boundary": "Brent scalar root.",
+    "bracket": [
+      16,
+      16.25
+    ],
+    "gamma": 16.05917256231611,
+    "object": "GammaRoot",
+    "packet_file": "FIN_ST1665_GammaRoot.json",
+    "packet_sha256": "13bc3c1018995ff7bde206991d60f1f42c231c0b6cb2a2de1952f83a3797fb24",
+    "program": "ST1665",
+    "residual": 5.551115123125783e-17,
+    "status": "strong_numerical_gamma_root_isolated"
+  },
+  "ST1666": {
+    "boundary": "Required for interior weight.",
+    "derivatives": [
+      0.005034023559807865,
+      -0.002353695301854364
+    ],
+    "object": "GammaDerivativeSigns",
+    "packet_file": "FIN_ST1666_GammaDerivativeSigns.json",
+    "packet_sha256": "1a73cfebd6be3989be15e5aaf950623095fef05f0173499021eb0d0513a81d8f",
+    "program": "ST1666",
+    "status": "strong_numerical_endpoint_divergence_gamma_derivatives_have_opposite_signs"
+  },
+  "ST1667": {
+    "boundary": "Solves w d0'+(1-w)d3'=0.",
+    "object": "StationarityWeight",
+    "packet_file": "FIN_ST1667_StationarityWeight.json",
+    "packet_sha256": "3f7e1d33c3761e6545b1d079befca5c896abeed6c3a43561e6e008b6e93ec2a1",
+    "program": "ST1667",
+    "status": "constructed_KKT_stationarity_weight",
+    "weight_t03": 0.31859567830451857,
+    "weight_t2": 0.6814043216954815
+  },
+  "ST1668": {
+    "boundary": "Equal active divergences.",
+    "object": "KKTValue",
+    "packet_file": "FIN_ST1668_KKTValue.json",
+    "packet_sha256": "4d77bca1dfbe6989faeaa3e159278d8fbec445452925de20b3cad4bf86dd1e10",
+    "program": "ST1668",
+    "status": "constructed_reduced_KKT_candidate_value",
+    "value": 0.053705210722682
+  },
+  "ST1669": {
+    "boundary": "One-sided derivative.",
+    "boundary_min_consistent": true,
+    "object": "AlphaBoundaryDerivative",
+    "packet_file": "FIN_ST1669_AlphaBoundaryDerivative.json",
+    "packet_sha256": "78c9505a999651633d4157f744ca02e8a2bd00fab69d6927799f63d6e6817e05",
+    "per_time": [
+      0.07656366956820815,
+      -0.045249138141967286
+    ],
+    "program": "ST1669",
+    "status": "strong_numerical_upper_alpha_boundary_is_worst_direction_for_candidate",
+    "weighted_left_derivative": -0.006440104043366056
+  },
+  "ST1670": {
+    "boundary": "Numerical LP dual data.",
+    "object": "InactiveTimeReducedCosts",
+    "packet_file": "FIN_ST1670_InactiveTimeReducedCosts.json",
+    "packet_sha256": "8cad83631d55d1d705c63469545188862ee62f30d7d79da05333d18fffbedbbd",
+    "program": "ST1670",
+    "reduced_costs": [
+      0.05129721,
+      0.03237585
+    ],
+    "status": "proven_inactive_middle_times_have_positive_reduced_cost_in_fine_grid_LP"
+  },
+  "ST1671": {
+    "boundary": "Finite-difference derivative component.",
+    "object": "KKTResidual",
+    "packet_file": "FIN_ST1671_KKTResidual.json",
+    "packet_sha256": "0d0cc3da3875b82963348816bfe828fad068540d1cc39207ba687c2d371f03e2",
+    "program": "ST1671",
+    "residual": 5.572799166575493e-17,
+    "status": "strong_numerical_reduced_KKT_residual"
+  },
+  "ST1672": {
+    "boundary": "Consistency check.",
+    "bracket": [
+      0.05,
+      0.05370588868619479
+    ],
+    "inside": true,
+    "object": "GlobalValueBracketCompatibility",
+    "packet_file": "FIN_ST1672_GlobalValueBracketCompatibility.json",
+    "packet_sha256": "9bcf788a3a58eb21259b84339193a9e13eec95755845fd510daea75a53b860ea",
+    "program": "ST1672",
+    "status": "proven_candidate_value_lies_inside_certified_continuous_minimax_bracket",
+    "value": 0.053705210722682
+  },
+  "ST1673": {
+    "boundary": "No promotion to exact optimizer.",
+    "global_active_set": false,
+    "interval_Jacobian": false,
+    "object": "ExactIsolationBoundary",
+    "packet_file": "FIN_ST1673_ExactIsolationBoundary.json",
+    "packet_sha256": "3e20bb86cb5fca33532ac44fcf59f3e41b94e6991ea0e84f6d9a0de56d02b9ed",
+    "program": "ST1673",
+    "status": "exact_KKT_isolation_and_global_active_set_theorem_remain_open"
+  },
+  "ST1674": {
+    "boundary": "Strong numerical.",
+    "gamma": 16.05917256231611,
+    "object": "CandidateUpgrade",
+    "packet_file": "FIN_ST1674_CandidateUpgrade.json",
+    "packet_sha256": "6c02b20a3496bf1f44296f0c0f805ad933b0d20f88fffb396df5891e0bc7994f",
+    "program": "ST1674",
+    "status": "upgraded_candidate_from_grid_weights_to_reduced_continuous_KKT_solution",
+    "value": 0.053705210722682,
+    "weights": [
+      0.31859567830451857,
+      0.6814043216954815
+    ]
+  },
+  "ST1675": {
+    "boundary": "Status.",
+    "geometry_certified": false,
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1675_RoundThree_Verdict.json",
+    "packet_sha256": "a1c2e08ecf0e153a67b9e32f158d9510b9b2da3ce075809f0364289f35711a83",
+    "program": "ST1675",
+    "status": "continuous_minimax_value_certified_candidate_geometry_strong_but_not_theorem_grade",
+    "value_certified": true
+  },
+  "ST1676": {
+    "boundary": "Build symmetric finite-grid composite decisions with abstention.",
+    "next": [
+      "mixture reject-C boundary",
+      "uniform reject-grid-Q boundary",
+      "error proof",
+      "abstention",
+      "continuum boundary"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1676_RoundThree_Recommendation.json",
+    "packet_sha256": "65ae9956040175946bab445ea562b2d5e340a11f15da7c4d7c78a5c01e5aeb18",
+    "program": "ST1676",
+    "status": "recommended_ST1677_ST1691"
+  }
+}

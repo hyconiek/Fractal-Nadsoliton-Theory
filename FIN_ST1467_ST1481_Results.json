@@ -1,0 +1,235 @@
+{
+  "ST1467": {
+    "boundary": "Numerical design metric, not exact error exponent for composite families.",
+    "object": "AllocationObjective",
+    "objective": "maximize_w min_theta sum_i w_i min[D(C_i||Q_i),D(Q_i||C_i)]",
+    "packet_file": "FIN_ST1467_AllocationObjective.json",
+    "packet_sha256": "062ddf0d67782a9d6001b6dc7956bc7a0c98d903564de13534d7b5a5d2e415d0",
+    "program": "ST1467",
+    "simplex": "w_i>=0,sum w=1",
+    "status": "constructed_bidirectional_KL_allocation_objective"
+  },
+  "ST1468": {
+    "alpha_points": 41,
+    "boundary": "Includes box boundaries.",
+    "gamma_points": 201,
+    "object": "TrainingNuisanceGrid",
+    "packet_file": "FIN_ST1468_TrainingNuisanceGrid.json",
+    "packet_sha256": "6b1d92a43e5cbe5bbfb81a9a27943b9f376d7060c71ec24a698d1859e73f1f06",
+    "program": "ST1468",
+    "rows": 8241,
+    "status": "constructed_training_nuisance_grid"
+  },
+  "ST1469": {
+    "boundary": "Finite grid.",
+    "maximum": 0.419598616107139,
+    "minimum": 1.0540959222154903e-11,
+    "object": "PerTimeSymmetricKL",
+    "packet_file": "FIN_ST1469_PerTimeSymmetricKL.json",
+    "packet_sha256": "71a660284ebaca81a4384092d6c85bb27e71a040ed4060aced046e3f9ac67685",
+    "program": "ST1469",
+    "status": "proven_training_per_time_divergences_nonnegative"
+  },
+  "ST1470": {
+    "boundary": "LP optimality only for sampled rows.",
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "object": "LinearProgram",
+    "packet_file": "FIN_ST1470_LinearProgram.json",
+    "packet_sha256": "be2dcd63fda5660dc752d04df520dfb2d05e1037f58108d82d27553d8d8392f6",
+    "program": "ST1470",
+    "status": "solved_finite_grid_linear_program",
+    "success": true
+  },
+  "ST1471": {
+    "boundary": "Middle times get zero weight in this metric/grid.",
+    "object": "OptimalGridWeights",
+    "objective": 0.05370676081429881,
+    "packet_file": "FIN_ST1471_OptimalGridWeights.json",
+    "packet_sha256": "d96824abe2124e1ea7689d38fcbdb491e9cc8483338d5380b965e07f4ff989ae",
+    "program": "ST1471",
+    "status": "strong_numerical_minimax_grid_allocation_uses_endpoint_times",
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ],
+    "weights": [
+      0.3155394971590464,
+      0.0,
+      0.0,
+      0.6844605028409537
+    ]
+  },
+  "ST1472": {
+    "alpha_gamma": [
+      1.1,
+      16.0
+    ],
+    "boundary": "Grid row.",
+    "object": "TrainingWorstCase",
+    "packet_file": "FIN_ST1472_TrainingWorstCase.json",
+    "packet_sha256": "150bb14af92ba91fe9f84eaa6cdcefb022f7189b80fc17eac890a30356865dfa",
+    "per_time_divergences": [
+      0.05340712674579037,
+      0.002356442946647823,
+      0.021446894944365802,
+      0.053844893523076656
+    ],
+    "program": "ST1472",
+    "status": "identified_training_worst_case",
+    "value": 0.053706760814298815
+  },
+  "ST1473": {
+    "boundary": "Same training grid/metric.",
+    "equal_objective": 0.03222008274007606,
+    "equal_worst": [
+      1.1,
+      13.5
+    ],
+    "object": "EqualAllocationBaseline",
+    "optimized_objective": 0.05370676081429881,
+    "packet_file": "FIN_ST1473_EqualAllocationBaseline.json",
+    "packet_sha256": "0bf01c3cc0231f45550fbebcb906374ec255317521f756cde55250543a3e8e9d",
+    "program": "ST1473",
+    "ratio": 1.6668722190305594,
+    "status": "proven_grid_objective_improves_over_equal_allocation"
+  },
+  "ST1474": {
+    "alpha_gamma": [
+      1.1,
+      16.25
+    ],
+    "boundary": "Not continuous certificate.",
+    "heldout_rows": 32481,
+    "minimum": 0.0537030927793231,
+    "object": "HeldOutGridAudit",
+    "packet_file": "FIN_ST1474_HeldOutGridAudit.json",
+    "packet_sha256": "d1fef04afb620bbb501e694aee3136f69afc16dcb5126b7ab844e1861a69e65d",
+    "program": "ST1474",
+    "status": "strong_heldout_finer_grid_preserves_allocation_value"
+  },
+  "ST1475": {
+    "boundary": "Practical rounding.",
+    "object": "HundredShotIntegerAllocation",
+    "packet_file": "FIN_ST1475_HundredShotIntegerAllocation.json",
+    "packet_sha256": "d1ca025d4ab9a5072c8d51f637819830bf5013737e0843eb33360a5745c2a9e2",
+    "program": "ST1475",
+    "shots": [
+      32,
+      0,
+      0,
+      68
+    ],
+    "status": "constructed_hundred_shot_integer_allocation",
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ],
+    "total": 100
+  },
+  "ST1476": {
+    "accepted_boxes": 1380,
+    "adaptive_splits": 380,
+    "boundary": "Adaptive outward cover.",
+    "continuous_KL_lower": 0.05,
+    "minimum_accepted_lower": 0.0502309757473335,
+    "object": "TwoTimeIntervalResidual",
+    "packet_file": "FIN_ST1476_TwoTimeIntervalResidual.json",
+    "packet_sha256": "23964ae2ae8b0b3e9968b9296f2c8e02cd352747311eaa113ca876b5de72be68",
+    "program": "ST1476",
+    "status": "proven_positive_two_time_interval_residual_and_continuous_KL_candidate_lower_bound",
+    "weak_cell": {
+      "alpha": [
+        1.09,
+        1.1
+      ],
+      "gamma": [
+        0,
+        2
+      ]
+    },
+    "weighted_squared_lower": 0.004681946504692073,
+    "weights": [
+      0.3155394971590464,
+      0.6844605028409537
+    ]
+  },
+  "ST1477": {
+    "boundary": "Upper bound uses two explicit nuisance points and a fixed dual mixture.",
+    "dual_points": [
+      [
+        1.1,
+        16.0
+      ],
+      [
+        1.1,
+        16.25
+      ]
+    ],
+    "dual_weights": [
+      0.7622353358423254,
+      0.2377646641576765
+    ],
+    "four_time_RSS_lower": 0.046692011213846946,
+    "lower": 0.05,
+    "object": "CertifiedVsOptimizedSeparation",
+    "packet_file": "FIN_ST1477_CertifiedVsOptimizedSeparation.json",
+    "packet_sha256": "72e2c7c698e0786aed19058c7fae9f3c0b1c4046ec83111c9709031b419b9433",
+    "program": "ST1477",
+    "status": "proven_continuous_minimax_value_bracket_for_declared_metric",
+    "upper": 0.05370588868619479
+  },
+  "ST1478": {
+    "boundary": "Warning for model sensitivity.",
+    "object": "BoundaryActivity",
+    "packet_file": "FIN_ST1478_BoundaryActivity.json",
+    "packet_sha256": "8df369f1df8be2afc95184054f65cd1ca8c78efdaef1f2e5a055108be7532415",
+    "program": "ST1478",
+    "status": "proven_grid_optimum_lies_on_clock_boundary_and_two_time_face",
+    "worst_alpha": 1.1,
+    "zero_middle_weights": true
+  },
+  "ST1479": {
+    "LP_grid_exact": true,
+    "boundary": "Value bracket is rigorous for frozen decimal/declared box; exact weights are not.",
+    "continuous_optimality": false,
+    "continuous_value_bracket": [
+      0.05,
+      0.05370588868619479
+    ],
+    "object": "AllocationEvidenceStatus",
+    "packet_file": "FIN_ST1479_AllocationEvidenceStatus.json",
+    "packet_sha256": "2c3b2f62e80e287f3895b015e6f541efe4f5b5a712b4359aff7fb36a80db8492",
+    "program": "ST1479",
+    "status": "allocation_has_certified_continuous_near_minimax_value_but_exact_optimizer_remains_open",
+    "two_time_exact_match_excluded": true
+  },
+  "ST1480": {
+    "boundary": "Conservative recommendation.",
+    "candidate": "32 shots at 0.3, 68 at 2.0 per 100",
+    "default": "four times",
+    "object": "RoundTwo_Verdict",
+    "packet_file": "FIN_ST1480_RoundTwo_Verdict.json",
+    "packet_sha256": "476c7f91fd89b8c869e7538da457d4431024fd423434909ec6025dfc546c43a6",
+    "program": "ST1480",
+    "status": "endpoint_weighting_is_promising_but_four_time_design_remains_certified_default"
+  },
+  "ST1481": {
+    "boundary": "Build a finite-mixture e-process without nuisance refitting.",
+    "next": [
+      "predeclared nuisance grid prior",
+      "mixture LR martingale",
+      "one-sided Ville test",
+      "off-grid boundary",
+      "validator"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1481_RoundTwo_Recommendation.json",
+    "packet_sha256": "e9b627e6de38b7a85d1cdc05ac0cf20e6fedcd814f95ebb847853e75bd9dcfc9",
+    "program": "ST1481",
+    "status": "recommended_ST1482_ST1496"
+  }
+}

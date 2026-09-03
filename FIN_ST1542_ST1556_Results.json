@@ -1,0 +1,157 @@
+{
+  "ST1542": {
+    "A_B": "self-adjoint positive semidefinite graph Laplacians",
+    "B_minus_A_norm_le_epsilon": true,
+    "boundary": "Conditional class.",
+    "circulant_required": false,
+    "object": "PerturbationClass",
+    "packet_file": "FIN_ST1542_PerturbationClass.json",
+    "packet_sha256": "75b7832e7a9dbc432d627f06930ac5f6495ddf731cdb99a059093aac3b4df5ab",
+    "program": "ST1542",
+    "row_sum_zero": true,
+    "status": "constructed_noncirculant_graph_laplacian_operator_norm_class"
+  },
+  "ST1543": {
+    "bound": "||exp(-tB)-exp(-tA)||<=t epsilon",
+    "boundary": "Requires A,B positive semidefinite.",
+    "object": "HeatDuhamelBound",
+    "packet_file": "FIN_ST1543_HeatDuhamelBound.json",
+    "packet_sha256": "a943f3d410a17679a157e78897aecf30f58943185f5c1e00ca095532283228e2",
+    "program": "ST1543",
+    "status": "proven_heat_semigroup_Duhamel_contraction_bound"
+  },
+  "ST1544": {
+    "bound": "||exp(-itB)-exp(-itA)||<=t epsilon",
+    "boundary": "Self-adjoint A,B.",
+    "object": "UnitaryDuhamelBound",
+    "packet_file": "FIN_ST1544_UnitaryDuhamelBound.json",
+    "packet_sha256": "efbc042a1194c66fb27dd121c0f0dd8e479343cbb4f1634d1e46c7921cfb9faf",
+    "program": "ST1544",
+    "status": "proven_unitary_group_Duhamel_bound"
+  },
+  "ST1545": {
+    "bound": "|C_B(t)-C_A(t)|<=t epsilon",
+    "boundary": "Same vertex effect.",
+    "object": "ClassicalReturnBound",
+    "packet_file": "FIN_ST1545_ClassicalReturnBound.json",
+    "packet_sha256": "ee7675ced504c66a148222c6e5bb0b2fb0b8d0ea2ce759d3d7ab411875d9cb6e",
+    "program": "ST1545",
+    "status": "proven_classical_return_probability_perturbation_bound"
+  },
+  "ST1546": {
+    "bound": "|Q_B(t)-Q_A(t)|<=2t epsilon",
+    "boundary": "Uses |u|+|v|<=2.",
+    "object": "QuantumReturnBound",
+    "packet_file": "FIN_ST1546_QuantumReturnBound.json",
+    "packet_sha256": "717ff49be8ffb71802cf150dc7f416167a97dabb385f751cc05be1c506cc1f96",
+    "program": "ST1546",
+    "status": "proven_quantum_return_probability_perturbation_bound"
+  },
+  "ST1547": {
+    "bound": "|D_B(t)-D_A(t)|<=3t epsilon",
+    "boundary": "Triangle inequality.",
+    "object": "GapPerturbationBound",
+    "packet_file": "FIN_ST1547_GapPerturbationBound.json",
+    "packet_sha256": "e405aa6a867435823c065849fe0f622fc2d99fadc5e0d73d23568a5e6b7ca75c",
+    "program": "ST1547",
+    "status": "proven_return_gap_perturbation_bound"
+  },
+  "ST1548": {
+    "boundary": "Noncirculant class.",
+    "epsilon": 1e-08,
+    "lower_gap": 0.41121820746536,
+    "object": "BaseTimeRobustGap",
+    "packet_file": "FIN_ST1548_BaseTimeRobustGap.json",
+    "packet_sha256": "250cd2cd517b6633bdc35612b9111eb150a13aec91009f864d1a47ea5c236a09",
+    "program": "ST1548",
+    "status": "proven_base_t06_gap_stays_positive_under_operator_perturbation"
+  },
+  "ST1549": {
+    "boundary": "Compares candidate time with every outside time <=10.",
+    "lower_margin": "m-3(tc+10)epsilon",
+    "m": 3.089572412462438e-06,
+    "object": "GlobalLocationMarginFormula",
+    "packet_file": "FIN_ST1549_GlobalLocationMarginFormula.json",
+    "packet_sha256": "89ed90ee42551f102010c32d728310e863f2ced061c9cf4c846a95ffbde1fd43",
+    "program": "ST1549",
+    "status": "proven_global_target_location_margin_formula",
+    "tc": 0.5945308
+  },
+  "ST1550": {
+    "boundary": "Does not prove uniqueness inside.",
+    "epsilon_strict_upper": 9.720652006795929e-08,
+    "object": "OperatorNormThreshold",
+    "packet_file": "FIN_ST1550_OperatorNormThreshold.json",
+    "packet_sha256": "50258fef9ec7abcefb4de2495116d94240d2540186d08cb73f83cc547835dc21",
+    "program": "ST1550",
+    "status": "proven_operator_norm_threshold_for_all_global_maximizers_to_remain_in_target_interval",
+    "target": [
+      0.59,
+      0.6
+    ]
+  },
+  "ST1551": {
+    "boundary": "Arbitrary symmetric entrywise perturbation bound.",
+    "delta_strict_upper": 8.100543338996607e-09,
+    "object": "EntrywiseThreshold",
+    "packet_file": "FIN_ST1551_EntrywiseThreshold.json",
+    "packet_sha256": "63993d52e6009a7b8a373f362a184d7176e17404d63c8aaf34831ff8bc768f5e",
+    "program": "ST1551",
+    "status": "constructed_entrywise_sufficient_threshold_via_norm_le_12delta"
+  },
+  "ST1552": {
+    "boundary": "Explicit witness.",
+    "epsilon": 1e-08,
+    "margin": 2.771736488462438e-06,
+    "object": "OneEminus8Witness",
+    "packet_file": "FIN_ST1552_OneEminus8Witness.json",
+    "packet_sha256": "e8ae25f23182270c35d27a44ce7f76f787fe78f29e2fbccfd7bf9808ca25af11",
+    "program": "ST1552",
+    "status": "proven_epsilon_1e_minus8_retains_large_exclusion_margin"
+  },
+  "ST1553": {
+    "boundary": "Operator norm witness.",
+    "epsilon": 6e-14,
+    "margin": 3.089570505446894e-06,
+    "object": "RoundingScaleWitness",
+    "packet_file": "FIN_ST1553_RoundingScaleWitness.json",
+    "packet_sha256": "82c40d9068243e7f99a7cf00b075d2635ed905362aa4b4e701b0c28a5d2bb45a",
+    "program": "ST1553",
+    "status": "proven_previous_rounding_scale_is_far_inside_noncirculant_location_threshold",
+    "threshold_ratio": 1620108.6677993217
+  },
+  "ST1554": {
+    "boundary": "Derivative/eigenvector perturbation not certified.",
+    "global_location": true,
+    "object": "UniquenessBoundary",
+    "packet_file": "FIN_ST1554_UniquenessBoundary.json",
+    "packet_sha256": "6e4a5af1607d7103244c115a59f72ed5f3c8b7004b7822cd87d0b313502ad51b",
+    "program": "ST1554",
+    "status": "noncirculant_bound_localizes_global_maxima_but_does_not_preserve_unique_stationary_root",
+    "unique_maximum": false
+  },
+  "ST1555": {
+    "arbitrary_open_quantum": false,
+    "boundary": "Scope boundary.",
+    "composite_RSS_lift": false,
+    "object": "CompositeDephasingBoundary",
+    "packet_file": "FIN_ST1555_CompositeDephasingBoundary.json",
+    "packet_sha256": "10705a21bcafff55d290bd52afb93b8ac3f4c744dea88c97a129fc788a73ef6f",
+    "program": "ST1555",
+    "status": "Duhamel_lift_does_not_cover_dephasing_generator_sensitivity_or_nonPSD_heat"
+  },
+  "ST1556": {
+    "boundary": "Export the newly obtained continuous minimax value certificate under new numbering.",
+    "next": [
+      "adaptive interval KL cover",
+      "dual upper bound",
+      "value bracket",
+      "exact-weight boundary"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1556_RoundOne_Recommendation.json",
+    "packet_sha256": "e2b70c009d8ca4b2b33a45fe91a4fadf0c5977809e26c03d856b6d51fcece6df",
+    "program": "ST1556",
+    "status": "recommended_ST1557_ST1571"
+  }
+}

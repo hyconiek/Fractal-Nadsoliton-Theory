@@ -1,0 +1,141 @@
+{
+  "ST942": {
+    "Qdot": "2(P-gamma Q)Q",
+    "boundary": "Conditional pump model.",
+    "object": "LogisticNorm_Flow",
+    "packet_file": "FIN_ST942_LogisticNorm_Flow.json",
+    "packet_sha256": "172ea0c86cc091a5d330c56ad5b7100da0a45644499c88ee9d20166212e78554",
+    "program": "ST942",
+    "status": "proven_logistic_norm_reduction"
+  },
+  "ST943": {
+    "boundary": "P supplied.",
+    "linear_rate": "2P",
+    "object": "ZeroStability_PumpSign",
+    "packet_file": "FIN_ST943_ZeroStability_PumpSign.json",
+    "packet_sha256": "d7b5ab59fd0c69681400fa257a63f0da4e5d96b033d3cc169e0dca81550f35df",
+    "program": "ST943",
+    "status": "proven_zero_stable_if_P_negative_unstable_if_positive"
+  },
+  "ST944": {
+    "Qstar": "P/gamma for P>0",
+    "boundary": "Only norm.",
+    "object": "NonzeroAttractor",
+    "packet_file": "FIN_ST944_NonzeroAttractor.json",
+    "packet_sha256": "30924539bcd4b93464c389f655c2f1751d1d82aff694031acde7cdbb835e0381",
+    "program": "ST944",
+    "status": "proven_nonzero_attractor_Qstar"
+  },
+  "ST945": {
+    "basin": "Q0>0",
+    "boundary": "Deterministic.",
+    "object": "Basin_PositiveNorm",
+    "packet_file": "FIN_ST945_Basin_PositiveNorm.json",
+    "packet_sha256": "c91a16af37a9c33b1db16530c532b9f2097d887673e5600972349283393e386e",
+    "program": "ST945",
+    "status": "proven_positive_norm_basin_excludes_zero"
+  },
+  "ST946": {
+    "P": 0,
+    "boundary": "No intrinsic persistence.",
+    "object": "PumpRemoval_Decay",
+    "packet_file": "FIN_ST946_PumpRemoval_Decay.json",
+    "packet_sha256": "c587b24635a3c60d53f9e16c780be8d3ccd1358dc28b5d7acc4f1c2a5a545c90",
+    "program": "ST946",
+    "status": "proven_pump_removal_causes_decay"
+  },
+  "ST947": {
+    "boundary": "Noise source added.",
+    "object": "AdditiveNoise_ZeroNotAbsorbing",
+    "packet_file": "FIN_ST947_AdditiveNoise_ZeroNotAbsorbing.json",
+    "packet_sha256": "80fe0bf8a123ff24534ccbf048f8d2c48f1346b58a987f06a8ff29081c2b5945",
+    "program": "ST947",
+    "status": "proven_additive_noise_makes_zero_nonabsorbing",
+    "zero_absorbing": false
+  },
+  "ST948": {
+    "boundary": "Boundary convention needed.",
+    "object": "MultiplicativeNoise_Extinction",
+    "packet_file": "FIN_ST948_MultiplicativeNoise_Extinction.json",
+    "packet_sha256": "3563354f3acd623fc11cec5074fa9507420b18b7fdf523b41d654cc42bc1b401",
+    "possible": true,
+    "program": "ST948",
+    "status": "multiplicative_noise_extinction_model_dependent"
+  },
+  "ST949": {
+    "boundary": "No values.",
+    "object": "FiniteNoise_EscapeRate",
+    "packet_file": "FIN_ST949_FiniteNoise_EscapeRate.json",
+    "packet_sha256": "465534bea844a868338987ba1e2ebbcb0bdd2446d44650d8f251c76989ebc6a9",
+    "program": "ST949",
+    "rate": "~exp(-DeltaV/D)",
+    "status": "Kramers_escape_rate_requires_potential_noise_scale"
+  },
+  "ST950": {
+    "V": "(gamma/2)(Q-P/gamma)^2",
+    "boundary": "Shape dynamics needed.",
+    "object": "Lyapunov_Attractor",
+    "packet_file": "FIN_ST950_Lyapunov_Attractor.json",
+    "packet_sha256": "8f54dd42351385b26deb4de4ed0a4bb88df3429649a0578487c5552e95ec8edb",
+    "program": "ST950",
+    "status": "conditional_Lyapunov_attractor"
+  },
+  "ST951": {
+    "boundary": "D12 orbit.",
+    "object": "AttractorShape_Selector",
+    "packet_file": "FIN_ST951_AttractorShape_Selector.json",
+    "packet_sha256": "6cf9caaaea23a11a38d790fa130310cc399b28973eb1f133e04f1bde492d379e",
+    "program": "ST951",
+    "selector": false,
+    "status": "blocked_no_attractor_shape_selector"
+  },
+  "ST952": {
+    "boundary": "Reservoir required.",
+    "entropy_production": "nonzero generally",
+    "object": "ReservoirResource_Cost",
+    "packet_file": "FIN_ST952_ReservoirResource_Cost.json",
+    "packet_sha256": "b6cd34dfc44b1e58805ba8637ffeb8556e4cb2a7602393fdb60c00e2d284de77",
+    "program": "ST952",
+    "status": "proven_persistent_nonequilibrium_cost"
+  },
+  "ST953": {
+    "boundary": "Topology/constraint exceptions.",
+    "object": "DetailedBalance_NoPersistentExcitation",
+    "packet_file": "FIN_ST953_DetailedBalance_NoPersistentExcitation.json",
+    "packet_sha256": "ea9a4aeb5deb9d174aa45319cc5900e891ba1898401094e0b3ace18d49540720",
+    "persistent_excited_state": false,
+    "program": "ST953",
+    "status": "proven_detailed_balance_relaxes_excitation_without_protection"
+  },
+  "ST954": {
+    "boundary": "Not strict.",
+    "mechanisms": [
+      "pump",
+      "saturation",
+      "feedback"
+    ],
+    "object": "NonequilibriumPersistence",
+    "packet_file": "FIN_ST954_NonequilibriumPersistence.json",
+    "packet_sha256": "44b828964806f34b98404d15d0daac5f9e33a7eeada40f0b22a4d52eb9bd5ce6",
+    "program": "ST954",
+    "status": "conditional_nonequilibrium_persistence_mechanism"
+  },
+  "ST955": {
+    "boundary": "No resource law.",
+    "object": "StrictPumpSource_Gate",
+    "packet_file": "FIN_ST955_StrictPumpSource_Gate.json",
+    "packet_sha256": "9ae9343f176ff49fe027200a0d2d4d5e52e78ceddda8a24cf34407c4a77e1afc",
+    "program": "ST955",
+    "source": false,
+    "status": "blocked_no_strict_pump_reservoir_source"
+  },
+  "ST956": {
+    "boundary": "Round three local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST956_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST956",
+    "status": "blocked_no_evidence"
+  }
+}

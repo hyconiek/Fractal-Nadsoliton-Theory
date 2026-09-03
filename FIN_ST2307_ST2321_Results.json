@@ -1,0 +1,162 @@
+{
+  "ST2307": {
+    "boundary": "Twelve strictly positive and distinct orbit values.",
+    "dimension": 12,
+    "distinct": 12,
+    "maximum": 9.0863846363767,
+    "minimum": 0.01982285068521734,
+    "object": "StrictOrbitProfile",
+    "packet_file": "FIN_ST2307_StrictOrbitProfile.json",
+    "packet_sha256": "3195078fce56771e620220474a7a5c6ac73458d9fa127719af7f8f7a7208f60b",
+    "program": "ST2307",
+    "status": "Computed"
+  },
+  "ST2308": {
+    "boundary": "Mean-zero log-ratio coordinates turn T_p into scalar multiplication y->p y.",
+    "centered_log_norm": 6.754167805373671,
+    "nonzero": true,
+    "object": "CenteredLogCoordinates",
+    "packet_file": "FIN_ST2308_CenteredLogCoordinates.json",
+    "packet_sha256": "67a3084d8ed03bfd7d813368c2577e571ba3a62d35bab082df67d9ecc327bbbd",
+    "program": "ST2308",
+    "status": "Constructed"
+  },
+  "ST2309": {
+    "boundary": "If T_p(x)=P x for a permutation P, then p||y||=||Py||=||y||; for p>0 and nonconstant x, p=1.",
+    "object": "PermutationSelfSimilarityTheorem",
+    "packet_file": "FIN_ST2309_PermutationSelfSimilarityTheorem.json",
+    "packet_sha256": "489194620c33bf52db340e367a19146fe8ea2f1629548a0cbf6c17f9393590a3",
+    "program": "ST2309",
+    "self_similarity_up_to_orbit_permutation_requires_p": 1,
+    "status": "Proven theorem"
+  },
+  "ST2310": {
+    "boundary": "Large residuals reject nontrivial idempotence on the strict profile.",
+    "idempotence_residuals_inf": {
+      "0.0": 0.0,
+      "0.5": 2.431651612098245,
+      "1.0": 0.0,
+      "1.8": 0.6253035102816771,
+      "2.0": 0.46732419990767227
+    },
+    "object": "IdempotenceNumericalWitness",
+    "packet_file": "FIN_ST2310_IdempotenceNumericalWitness.json",
+    "packet_sha256": "e29242452675af1f93ba888e6b38bd89864c9857f03ff566b3e57e5fe3f0ded8",
+    "program": "ST2310",
+    "status": "Computed witness"
+  },
+  "ST2311": {
+    "base_entropy_nats": 0.8726944445624496,
+    "boundary": "For 0<p<1 the normalized power map moves the finite profile toward uniformity.",
+    "entropy_increases": true,
+    "object": "CompressionEntropyFlow",
+    "p_half_entropy_nats": 1.8714636899718688,
+    "packet_file": "FIN_ST2311_CompressionEntropyFlow.json",
+    "packet_sha256": "29703b4906b5e62476e977d3f37ad035da55c06a19d2b647a28afee07995c49c",
+    "program": "ST2311",
+    "status": "Proven/Computed"
+  },
+  "ST2312": {
+    "boundary": "For p>1 the map sharpens the largest orbit and lowers entropy.",
+    "entropy_decreases": true,
+    "object": "SharpeningEntropyFlow",
+    "p_1_8_entropy_nats": 0.24951460256133073,
+    "p_2_entropy_nats": 0.18629039708273618,
+    "packet_file": "FIN_ST2312_SharpeningEntropyFlow.json",
+    "packet_sha256": "4e16bef00269a748a48a9cbb96d2e9aac2946ec039490080b52f002ebfd247ad",
+    "program": "ST2312",
+    "status": "Proven/Computed"
+  },
+  "ST2313": {
+    "boundary": "A nonconstant finite positive profile cannot be an exact fixed shape of T_p for p not equal to 1, even up to relabelling.",
+    "nontrivial_exact_power_self_similarity": false,
+    "object": "FixedProfileNoGo",
+    "packet_file": "FIN_ST2313_FixedProfileNoGo.json",
+    "packet_sha256": "37d79c6ef602a68874813ef2f9e949fe032132dd22b69f813a258ae754f39219",
+    "program": "ST2313",
+    "status": "Proven no-go"
+  },
+  "ST2314": {
+    "boundary": "p=1 preserves the profile but performs no compression or renormalization evolution.",
+    "map": "identity",
+    "object": "IdentityBranchBoundary",
+    "p": 1,
+    "packet_file": "FIN_ST2314_IdentityBranchBoundary.json",
+    "packet_sha256": "6c58ad10f90dac7ea40ef6f06646188d7ea78f06831e7565da6d4e54b40e5b91",
+    "program": "ST2314",
+    "status": "Boundary"
+  },
+  "ST2315": {
+    "boundary": "p=0 is idempotent but collapses all orbit information to uniformity.",
+    "map": "erasure",
+    "object": "ErasureBranchBoundary",
+    "p": 0,
+    "packet_file": "FIN_ST2315_ErasureBranchBoundary.json",
+    "packet_sha256": "22a08813946ee569025254aeba1d9466db4bd5997a54369ec4f584f403591d4d",
+    "program": "ST2315",
+    "status": "Boundary"
+  },
+  "ST2316": {
+    "boundary": "Without fixed-profile/idempotence, p_n may vary and cumulative exponent is product_n p_n.",
+    "free_data": "one exponent/rate per level",
+    "object": "SemigroupRateFreedom",
+    "packet_file": "FIN_ST2316_SemigroupRateFreedom.json",
+    "packet_sha256": "68d57799e0cadfb866d4af391a053fbab28dc38ecb7790c1d7e2069ac947d5b7",
+    "program": "ST2316",
+    "status": "Proven"
+  },
+  "ST2317": {
+    "boundary": "A direct level-n map may use the cumulative exponent; ordinary path composition remains exact for arbitrary sequences.",
+    "object": "LevelDependentEscape",
+    "packet_file": "FIN_ST2317_LevelDependentEscape.json",
+    "packet_sha256": "f57c2e2000ad6b82af1a0aacef3d504d0a4784dc199ccb2347a16d3e189d174e",
+    "path_consistency_without_stationarity": true,
+    "program": "ST2317",
+    "rate_selected": false,
+    "status": "Proven escape"
+  },
+  "ST2318": {
+    "boundary": "Independent vertical q_N modes from ST552--ST641 supply further unsourced refinement freedom.",
+    "object": "VerticalRateCompatibility",
+    "packet_file": "FIN_ST2318_VerticalRateCompatibility.json",
+    "packet_sha256": "2d1686c6c27be42593639e6c86b4e0b5410ba228e001d762785e208ad7ecb281",
+    "program": "ST2318",
+    "selected": false,
+    "status": "Guardrail alignment",
+    "vertical_rates_per_level": true
+  },
+  "ST2319": {
+    "boundary": "Legacy loop products have both signs; real noninteger powers require abs/sign choices.",
+    "legacy_bridge_completed": false,
+    "noninteger_power_on_signed_legacy_real_without_extra_rule": false,
+    "object": "LegacySignedBoundary",
+    "packet_file": "FIN_ST2319_LegacySignedBoundary.json",
+    "packet_sha256": "d9ac1418f970a28b8cb5aaf74792db689a46c127bcc4292d5131fd59df4d13f6",
+    "program": "ST2319",
+    "status": "Kernel-split boundary"
+  },
+  "ST2320": {
+    "boundary": "Exact finite self-similarity selects only identity or erasure; nontrivial fractal evolution requires new level data.",
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST2320_RoundFourVerdict.json",
+    "packet_sha256": "b31e4a4669d7736c928ff26f1c44661e1f6cfe5a117e00c57b2841c2bed27a37",
+    "program": "ST2320",
+    "status": "Round verdict",
+    "strict_nontrivial_self_similar_refinement": false
+  },
+  "ST2321": {
+    "boundary": "Construct the minimal instrument and non-Gaussian state law that would make hidden ternary information operational, then mark every added premise.",
+    "next": [
+      "parity observable",
+      "Fisher information",
+      "sample bound",
+      "three-body exponential family",
+      "adaptive source parameter"
+    ],
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST2321_RoundFourRecommendation.json",
+    "packet_sha256": "92455919363dd136f1313653d2034e1206211378f92138d8ec9779d7a8c77048",
+    "program": "ST2321",
+    "status": "Recommendation"
+  }
+}

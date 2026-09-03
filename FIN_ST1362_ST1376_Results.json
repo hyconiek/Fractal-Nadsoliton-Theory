@@ -1,0 +1,218 @@
+{
+  "ST1362": {
+    "boundary": "Certificate is for these decimals, not symbolic kernel parameters.",
+    "eigenvalues": [
+      "0",
+      "0.75412115420707981",
+      "1.5770495144276093",
+      "1.9614068619764458",
+      "2.1995688493332102",
+      "2.2986062720790965",
+      "2.3421820411462999"
+    ],
+    "multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "object": "FrozenDecimalSpectrum",
+    "packet_file": "FIN_ST1362_FrozenDecimalSpectrum.json",
+    "packet_sha256": "ea82fd171bbdc5c28cdd1fc6b80b8baf7a6e9ff11442fdfaf878c18a93e125a1",
+    "program": "ST1362",
+    "status": "constructed_exact_decimal_spectral_model"
+  },
+  "ST1363": {
+    "boundary": "Relies on mpmath interval implementation.",
+    "cover_step": 0.002,
+    "decimal_precision": 25,
+    "domain": [
+      0,
+      10
+    ],
+    "object": "IntervalArithmeticContract",
+    "packet_file": "FIN_ST1363_IntervalArithmeticContract.json",
+    "packet_sha256": "7e99d198a8b8e5fae0aff5579c62d14edb4cf6a5d3844d5861d054a81fb355d7",
+    "program": "ST1363",
+    "status": "constructed_outward_mpmath_interval_contract"
+  },
+  "ST1364": {
+    "F_lower": 0.4112409998076313,
+    "F_upper": 0.4112409998076313,
+    "boundary": "Outward interval point evaluation.",
+    "object": "CandidatePointLowerBound",
+    "packet_file": "FIN_ST1364_CandidatePointLowerBound.json",
+    "packet_sha256": "28e753d35323b5d0feb7eef2167fb67ad8b208a219ab65c99529f6105b801dbf",
+    "program": "ST1364",
+    "status": "proven_candidate_point_lower_bound_in_frozen_decimal_model",
+    "time": "0.5945308"
+  },
+  "ST1365": {
+    "boundary": "Mean-value/Taylor enclosure per box.",
+    "boxes": 4995,
+    "covered": [
+      [
+        0,
+        0.59
+      ],
+      [
+        0.6,
+        10
+      ]
+    ],
+    "object": "GlobalCoverConstruction",
+    "packet_file": "FIN_ST1365_GlobalCoverConstruction.json",
+    "packet_sha256": "5bf763a1262c915cb39df7df422be3eaf9b5fe8d799ff5f4b31ea71be0bf621f",
+    "program": "ST1365",
+    "status": "constructed_complete_Taylor_interval_cover_outside_target",
+    "target_excluded": [
+      0.59,
+      0.6
+    ]
+  },
+  "ST1366": {
+    "boundary": "Global exclusion outside target interval.",
+    "candidate_lower": 0.4112409998076313,
+    "largest_box": [
+      0.588,
+      0.59
+    ],
+    "largest_outside_upper": 0.41123791023521883,
+    "object": "OutsideCoverUpperBound",
+    "packet_file": "FIN_ST1366_OutsideCoverUpperBound.json",
+    "packet_sha256": "74b7f9a1e1e45d84b6b52dfdb1ef5c814e62598954f488f17b4abd221d213b43",
+    "program": "ST1366",
+    "status": "proven_all_outside_boxes_below_candidate_value",
+    "strict_margin": 3.089572412462438e-06
+  },
+  "ST1367": {
+    "F_interval": [
+      0.3966679604508919,
+      0.425775515327064
+    ],
+    "boundary": "Therefore |F|=F there.",
+    "object": "TargetIntervalPositivity",
+    "packet_file": "FIN_ST1367_TargetIntervalPositivity.json",
+    "packet_sha256": "31433299fb6b1d718d66b2884a294a66d6a2919e24447ebb82d51584f0d7cf81",
+    "program": "ST1367",
+    "status": "proven_F_positive_on_target_interval"
+  },
+  "ST1368": {
+    "Fpp_interval": [
+      -1.6864459900506021,
+      -1.3685959622948138
+    ],
+    "boundary": "Outward second derivative enclosure.",
+    "object": "TargetIntervalStrictConcavity",
+    "packet_file": "FIN_ST1368_TargetIntervalStrictConcavity.json",
+    "packet_sha256": "ba9936d90e8197e9d5bec93ef0d030a06f2b359cb6bd5a6807fc51215318663f",
+    "program": "ST1368",
+    "status": "proven_strict_concavity_on_target_interval",
+    "upper_negative": true
+  },
+  "ST1369": {
+    "Fp_interval": [
+      2.5452303868190474e-09,
+      2.5452303868190486e-09
+    ],
+    "boundary": "Point interval.",
+    "object": "LeftDerivativeSign",
+    "packet_file": "FIN_ST1369_LeftDerivativeSign.json",
+    "packet_sha256": "8dfd025cf981c8e22302ee588050fef4edca2783d00691091708144d0a8fda5e",
+    "program": "ST1369",
+    "status": "proven_positive_derivative_at_left_root_endpoint",
+    "time": "0.59453078"
+  },
+  "ST1370": {
+    "Fp_interval": [
+      -1.2746103229835985e-08,
+      -1.2746103229835985e-08
+    ],
+    "boundary": "Point interval.",
+    "object": "RightDerivativeSign",
+    "packet_file": "FIN_ST1370_RightDerivativeSign.json",
+    "packet_sha256": "62d3f04eb62379d7d6db163842e084b53d9260054c781779aa066f59590d70c9",
+    "program": "ST1370",
+    "status": "proven_negative_derivative_at_right_root_endpoint",
+    "time": "0.59453079"
+  },
+  "ST1371": {
+    "boundary": "Intermediate value plus strict decreasing derivative.",
+    "object": "UniqueRootBracket",
+    "packet_file": "FIN_ST1371_UniqueRootBracket.json",
+    "packet_sha256": "a9df15b9080b00c530d421b70a5b636aea390c3d13e58df67b084306b69a8324",
+    "program": "ST1371",
+    "root_bracket": [
+      0.59453078,
+      0.59453079
+    ],
+    "status": "proven_unique_stationary_root_in_bracket",
+    "width": 1e-08
+  },
+  "ST1372": {
+    "boundary": "Combines outside cover, positivity, concavity and derivative signs.",
+    "domain": [
+      0,
+      10
+    ],
+    "maximizer_bracket": [
+      0.59453078,
+      0.59453079
+    ],
+    "object": "UniqueGlobalMaximumTheorem",
+    "packet_file": "FIN_ST1372_UniqueGlobalMaximumTheorem.json",
+    "packet_sha256": "b42271fabe1e30335d5cad95cb8478b71f09610a2270a6a8ce1c2fefc84d60d2",
+    "program": "ST1372",
+    "status": "proven_unique_global_maximum_of_absolute_return_gap_on_0_10_for_frozen_decimal_spectrum",
+    "unique": true
+  },
+  "ST1373": {
+    "boundary": "Center lower plus mean-value upper on root bracket.",
+    "object": "MaximumValueBracket",
+    "packet_file": "FIN_ST1373_MaximumValueBracket.json",
+    "packet_sha256": "9e9654353f977f28b0455b0819c4c12f399f6382691488b91679bfd830c7058b",
+    "program": "ST1373",
+    "status": "proven_maximum_value_bracket",
+    "value_lower": 0.4112409998076315,
+    "value_upper": 0.41124099980763185,
+    "width": 3.3306690738754696e-16
+  },
+  "ST1374": {
+    "boundary": "Scope narrowed explicitly.",
+    "current": "interval-certified frozen-decimal theorem",
+    "object": "Release1098_Upgrade",
+    "packet_file": "FIN_ST1374_Release1098_Upgrade.json",
+    "packet_sha256": "3ba1605505f9deee6bd9cf1042c3c636f95bd11e31a1a5bef993c5628fcdf837",
+    "previous": "strong numerical",
+    "program": "ST1374",
+    "status": "upgraded_release1098_strong_numerical_maximum_to_interval_theorem_for_frozen_decimal_model"
+  },
+  "ST1375": {
+    "boundary": "No promotion beyond input model.",
+    "floating_matrix_uncertainty_box": false,
+    "object": "CertificateScope",
+    "packet_file": "FIN_ST1375_CertificateScope.json",
+    "packet_sha256": "604e4a4792acee2c3649b7636e67ca632dbd9633b31f14da139543ef37339bff",
+    "program": "ST1375",
+    "status": "certificate_does_not_cover_symbolic_kernel_or_eigenvalue_uncertainty",
+    "symbolic_kernel_certificate": false
+  },
+  "ST1376": {
+    "boundary": "Interval-certify four-time composite separation over the nuisance box.",
+    "next": [
+      "alpha-gamma box cover",
+      "RSS lower bound",
+      "residual lower bound",
+      "candidate upper",
+      "scope audit"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1376_RoundOne_Recommendation.json",
+    "packet_sha256": "bbfbab82f81ac53a9e8a287ceb823ac1bff85a1336f3338bd6ace75a8524ed22",
+    "program": "ST1376",
+    "status": "recommended_ST1377_ST1391"
+  }
+}

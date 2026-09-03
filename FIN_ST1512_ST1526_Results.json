@@ -1,0 +1,163 @@
+{
+  "ST1512": {
+    "boundary": "Conditional refinement family.",
+    "dimension": 24,
+    "formula": "A24=A12 tensor I2 + I12 tensor Bq",
+    "object": "RefinedGenerator",
+    "packet_file": "FIN_ST1512_RefinedGenerator.json",
+    "packet_sha256": "2671e3bad1e87913daca08a32155de016bfa498c454fcce6fd54c55a3b1e841b",
+    "program": "ST1512",
+    "q": 0.37,
+    "status": "constructed_exact_two_fiber_refined_generator"
+  },
+  "ST1513": {
+    "boundary": "Analytic commuting Kronecker-sum identity.",
+    "heat_residual": 7.997075224253081e-16,
+    "object": "KroneckerSemigroupFactorization",
+    "packet_file": "FIN_ST1513_KroneckerSemigroupFactorization.json",
+    "packet_sha256": "5be965de121887e94d7dcda61aa10a2f863ebc923f9e8c3fedf0bf2552a93ef6",
+    "program": "ST1513",
+    "status": "proven_heat_and_unitary_Kronecker_factorization_numerically_replayed",
+    "unitary_residual": 1.5124974257314023e-15
+  },
+  "ST1514": {
+    "base": 0.4123573971501711,
+    "boundary": "Fiber summed measurement.",
+    "object": "ClassicalCoarseReturnInvariance",
+    "packet_file": "FIN_ST1514_ClassicalCoarseReturnInvariance.json",
+    "packet_sha256": "55ed6e9f68cf13e6eddea15cb2f893cb2e224185ab72caa187294ad1808f6b32",
+    "program": "ST1514",
+    "refined": 0.41235739715017095,
+    "residual": 1.6653345369377348e-16,
+    "status": "proven_classical_coarse_node_return_equals_base_return"
+  },
+  "ST1515": {
+    "base": 0.8235756226155311,
+    "boundary": "Projector onto node0 tensor full fiber.",
+    "object": "QuantumCoarseReturnInvariance",
+    "packet_file": "FIN_ST1515_QuantumCoarseReturnInvariance.json",
+    "packet_sha256": "59a4b5a87b89d94f25bd8675f99307a9d5c995df1a623fd69612a222a136fff9",
+    "program": "ST1515",
+    "refined": 0.8235756226155311,
+    "residual": 0.0,
+    "status": "proven_quantum_coarse_node_return_equals_base_return"
+  },
+  "ST1516": {
+    "boundary": "Both fiber basis preparations.",
+    "classical_difference": 1.1102230246251565e-16,
+    "object": "FiberStateIndependence",
+    "packet_file": "FIN_ST1516_FiberStateIndependence.json",
+    "packet_sha256": "e7b464e80a2514a428c663ee6cc9fcc8cbdcc7f88d4885c554088da68b8f527f",
+    "program": "ST1516",
+    "quantum_difference": 0.0,
+    "status": "proven_coarse_return_independent_of_initial_fiber_basis_state"
+  },
+  "ST1517": {
+    "boundary": "Any q>=0 by factorization/unitarity/mass.",
+    "coarse_predictions_unchanged": true,
+    "object": "QBlindCoarseProtocol",
+    "packet_file": "FIN_ST1517_QBlindCoarseProtocol.json",
+    "packet_sha256": "bd0bbb5ee14dc7c0cfcb5c7d6f09f25e0d398355f7d0d708189d61c5389f83f5",
+    "program": "ST1517",
+    "q_selected": false,
+    "status": "proven_coarse_OA_discriminator_is_exactly_q_blind_for_declared_refinement"
+  },
+  "ST1518": {
+    "boundary": "Initial fiber basis state.",
+    "formula": "H_q(t)=(1+exp(-2qt))/2",
+    "object": "FineClassicalFiberReturn",
+    "packet_file": "FIN_ST1518_FineClassicalFiberReturn.json",
+    "packet_sha256": "8f0ab1ec31a5b3a220e93a228f34120c589ee45eadef7d3fb4d4e4da6ad55bb6",
+    "program": "ST1518",
+    "status": "proven_fine_classical_fiber_return_formula",
+    "value": 0.8207327104136599
+  },
+  "ST1519": {
+    "boundary": "Initial fiber basis state.",
+    "formula": "R_q(t)=cos^2(qt)",
+    "object": "FineQuantumFiberReturn",
+    "packet_file": "FIN_ST1519_FineQuantumFiberReturn.json",
+    "packet_sha256": "f3ac715531bba5f558483db90de6ccc924c23a3201a59274721325b9fc2d7d67",
+    "program": "ST1519",
+    "status": "proven_fine_quantum_fiber_return_formula",
+    "value": 0.9515203359496974
+  },
+  "ST1520": {
+    "absolute_gap": 0.1307876255360375,
+    "boundary": "Requires fiber-resolving instrument.",
+    "gap": 0.1307876255360375,
+    "object": "FineDualDiscriminator",
+    "packet_file": "FIN_ST1520_FineDualDiscriminator.json",
+    "packet_sha256": "4c318e2bf10d3df33eb60c5f68bfd3e3a29eaec3b2f58bb1f8479f74e7c71f9b",
+    "program": "ST1520",
+    "status": "constructed_fine_fiber_dual_dynamics_discriminator"
+  },
+  "ST1521": {
+    "boundary": "q=0.37,t=0.6.",
+    "classical_formula": 0.8207327104136599,
+    "classical_matrix_fiber_return": 0.3384352042221819,
+    "object": "NumericalRefinementReplay",
+    "packet_file": "FIN_ST1521_NumericalRefinementReplay.json",
+    "packet_sha256": "266e34646e07b922380361eb6d503091abef9eeeb7d38a832f00faa34cd64dff",
+    "program": "ST1521",
+    "quantum_formula": 0.9515203359496974,
+    "quantum_matrix_fiber_return": 0.7836489531111114,
+    "status": "proven_refinement_numerical_replay_matches_closed_form"
+  },
+  "ST1522": {
+    "boundary": "Within exact lift and coarse instrument.",
+    "four_time_RSS": true,
+    "object": "ProtocolCertificateTransport",
+    "packet_file": "FIN_ST1522_ProtocolCertificateTransport.json",
+    "packet_sha256": "e8f7cd98d98ee3f036ec821533b725664d1da1f68e4d53cf2aed19c8b783680d",
+    "program": "ST1522",
+    "seven_node_distance_likelihood": true,
+    "status": "proven_all_coarse_interval_and_statistical_certificates_transport_exactly",
+    "time_optimum": true
+  },
+  "ST1523": {
+    "boundary": "No hardware map.",
+    "coarse_detector": 12,
+    "fine_detector": 24,
+    "object": "RefinedDetectorRequirement",
+    "packet_file": "FIN_ST1523_RefinedDetectorRequirement.json",
+    "packet_sha256": "a86ae2a0bba990ee75c6f5180a2f7b98cd5e31bfc2baff46cca94db79c0fcd48",
+    "program": "ST1523",
+    "status": "refined_physical_instrument_needs_24_outcome_or_coarse_fiber_blind_calibration"
+  },
+  "ST1524": {
+    "boundary": "Refinement does not fix CA.",
+    "object": "RefinementScaleBoundary",
+    "packet_file": "FIN_ST1524_RefinementScaleBoundary.json",
+    "packet_sha256": "d7531572882b771969477ff2a5dab59753f78ccfdd5d06699e7fabc3ef4abbc8",
+    "program": "ST1524",
+    "q_physical_value": false,
+    "status": "q_remains_dimensionless_relative_fiber_rate_without_new_scale_source"
+  },
+  "ST1525": {
+    "boundary": "Conditional result.",
+    "coarse_transport": true,
+    "fine_information": true,
+    "object": "RoundFive_Verdict",
+    "packet_file": "FIN_ST1525_RoundFive_Verdict.json",
+    "packet_sha256": "35666d75342af6a36b63e5434302d5e8831e33908156e4b8f17121f69ab598d6",
+    "program": "ST1525",
+    "state_category_selected": false,
+    "status": "refinement_preserves_coarse_test_but_adds_optional_fine_test_not_new_ontology"
+  },
+  "ST1526": {
+    "boundary": "Final synthesis and Release 11.00.",
+    "next": [
+      "robustness ladder",
+      "certified/numerical split",
+      "mixture scope",
+      "refinement scope",
+      "next programmes"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1526_RoundFive_Recommendation.json",
+    "packet_sha256": "1b06a307fa4cee40155ecfb4143bac5d756e0f1ddd54c02bb6bf0c9f487a446d",
+    "program": "ST1526",
+    "status": "recommended_ST1527_ST1541"
+  }
+}

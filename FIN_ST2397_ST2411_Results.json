@@ -1,0 +1,138 @@
+{
+  "ST2397": {
+    "boundary": "Involution exchanging bottom/top vertices.",
+    "object": "LayerSwap",
+    "packet_file": "FIN_ST2397_LayerSwap.json",
+    "packet_sha256": "536ce8cb93e303109e4cbb1b322727e719f97e5f4ffa73a20a725ce0a8d36daa",
+    "program": "ST2397",
+    "sigma_squared": "identity",
+    "status": "Constructed"
+  },
+  "ST2398": {
+    "base_exchange_is_symmetry": true,
+    "boundary": "Belongs to D3h.",
+    "object": "BaseExchangeSymmetry",
+    "packet_file": "FIN_ST2398_BaseExchangeSymmetry.json",
+    "packet_sha256": "8f827ae23fcbdeb57328470f4686d1104faa02802c5b30ab5224eb5cf17e5ddc",
+    "program": "ST2398",
+    "status": "Proven"
+  },
+  "ST2399": {
+    "boundary": "tau_minus and tau_plus live on two bases.",
+    "object": "TriangleTransport",
+    "packet_file": "FIN_ST2399_TriangleTransport.json",
+    "packet_sha256": "224cdea6c02a06c4ddcacf2a8486dcdbb11e6f37394fcc6c2974855bfcf24068",
+    "program": "ST2399",
+    "status": "Conditional positive",
+    "transport_interface": true
+  },
+  "ST2400": {
+    "boundary": "J=tau_plus-tau_minus.",
+    "formula": "J_triangle=tau_+-tau_-",
+    "object": "DiscreteFlux",
+    "packet_file": "FIN_ST2400_DiscreteFlux.json",
+    "packet_sha256": "09bac6070e6a4c94acd08ff43c03e214ffffa089e9531cd3d51a0c5e17280d2b",
+    "program": "ST2400",
+    "status": "Constructed receiver"
+  },
+  "ST2401": {
+    "boundary": "Layer swap sends J to -J.",
+    "object": "FluxOddness",
+    "packet_file": "FIN_ST2401_FluxOddness.json",
+    "packet_sha256": "ad7348d5958d981f22e9590d45333cfadb730ebd06cd1a9757f4aa5d9cc426c8",
+    "program": "ST2401",
+    "reflection_odd": true,
+    "status": "Proven"
+  },
+  "ST2402": {
+    "boundary": "Identical lifted data give J=0.",
+    "object": "SymmetricInputFlux",
+    "packet_file": "FIN_ST2402_SymmetricInputFlux.json",
+    "packet_sha256": "4ccb6906f47ebe1eb31e99fdf0f7ed3bcc8687e17d4f7a532882a3f056ee8f80",
+    "program": "ST2402",
+    "status": "Proven",
+    "strict_pullback_flux": 0
+  },
+  "ST2403": {
+    "boundary": "Requires state and calibrated step.",
+    "channel": "U_dt",
+    "object": "UnitaryTransport",
+    "packet_file": "FIN_ST2403_UnitaryTransport.json",
+    "packet_sha256": "8a909f7ad77523b8d031f0fda4e8eee000932bf951a6d3b72eb5c794e7d022c9",
+    "program": "ST2403",
+    "status": "Conditional"
+  },
+  "ST2404": {
+    "boundary": "Requires state and calibrated step.",
+    "channel": "P_dt",
+    "object": "DiffusiveTransport",
+    "packet_file": "FIN_ST2404_DiffusiveTransport.json",
+    "packet_sha256": "7af4de11f6e009336351b9d0743157426bced386182bb44a6c9075dcd2d7a625",
+    "program": "ST2404",
+    "status": "Conditional"
+  },
+  "ST2405": {
+    "boundary": "U and P share A but are different operational channels.",
+    "common_generator": true,
+    "object": "DualDynamicsComparison",
+    "packet_file": "FIN_ST2405_DualDynamicsComparison.json",
+    "packet_sha256": "10d5732e4e058aa73cf6b38053520d5c1910133e6963d55f1d40f9ef3fcbf10b",
+    "program": "ST2405",
+    "same_physical_process": false,
+    "status": "Boundary"
+  },
+  "ST2406": {
+    "boundary": "Calling one base earlier imports a clock/orientation.",
+    "object": "ClockPremise",
+    "packet_file": "FIN_ST2406_ClockPremise.json",
+    "packet_sha256": "2f076535669974ff776d2e72eeffcddc3666220b5dd4e01020c5ce5fb21b8e55",
+    "program": "ST2406",
+    "status": "Proven no-go",
+    "strict_time_arrow": false
+  },
+  "ST2407": {
+    "boundary": "Parity can be jointly recorded on each triangular base.",
+    "new_source_generated": false,
+    "object": "TernaryParityTransport",
+    "packet_file": "FIN_ST2407_TernaryParityTransport.json",
+    "packet_sha256": "ee451ecf932d9afd9ce1dbd06f4a6ed9663bfde41bae3e20652b5f5ff754056d",
+    "program": "ST2407",
+    "status": "Conditional positive"
+  },
+  "ST2408": {
+    "boundary": "Three squares transport the three pair-edge histories.",
+    "object": "SquareFaceRole",
+    "packet_file": "FIN_ST2408_SquareFaceRole.json",
+    "packet_sha256": "0bef81ee556b1017f2b6ee28a50478dd9065c63c7d5ba5d45f2cca8a3beee917",
+    "pair_transport_faces": 3,
+    "program": "ST2408",
+    "status": "Proven"
+  },
+  "ST2409": {
+    "QW2191_discharged": false,
+    "boundary": "Two layer orientations remain paired.",
+    "object": "OrientationTorsor",
+    "packet_file": "FIN_ST2409_OrientationTorsor.json",
+    "packet_sha256": "c8251a5aa7ab994dec2773b320d451ef081ef77c7c64f9f0cf9f3d58f904b91c",
+    "program": "ST2409",
+    "status": "Proven no-go"
+  },
+  "ST2410": {
+    "boundary": "Prism supplies an excellent odd flux receiver but no sign/time source.",
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST2410_RoundFourVerdict.json",
+    "packet_sha256": "4ee9f6e5b1600b6b80ca08ca6f355a3c92162f635fc4f81333e6c65bac4ebca2",
+    "program": "ST2410",
+    "selector_source": false,
+    "status": "Round verdict"
+  },
+  "ST2411": {
+    "boundary": "Classify metric/Hodge identifiability.",
+    "next": "t q h/a spectra",
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST2411_RoundFourRecommendation.json",
+    "packet_sha256": "2360ef45188f12317041ec98025fd15c241eebcb408ac8e6cdc9c5b818d75909",
+    "program": "ST2411",
+    "status": "Recommendation"
+  }
+}

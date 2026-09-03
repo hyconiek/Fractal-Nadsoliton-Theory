@@ -1,0 +1,148 @@
+{
+  "ST1992": {
+    "E0": "1/2 sum_f kappa_f F_f^2",
+    "boundary": "Chosen base face complex.",
+    "faces": 220,
+    "object": "FaceEnergyModel",
+    "packet_file": "FIN_ST1992_FaceEnergyModel.json",
+    "packet_sha256": "b7b1a2a2edfd68365dd7b9e9591e5c4dcd34da34ecd2b47552607093edb122dd",
+    "program": "ST1992",
+    "status": "constructed_diagonal_face_curvature_energy"
+  },
+  "ST1993": {
+    "boundary": "Two identical horizontal copies and zero product-square curvature.",
+    "map": "F -> (F,F,0_square)",
+    "object": "CoarseCurvatureEmbedding",
+    "packet_file": "FIN_ST1993_CoarseCurvatureEmbedding.json",
+    "packet_sha256": "736893033f415d2131464c832e4a7615c450518a513edbfb20bdebaf11bcb17f",
+    "program": "ST1993",
+    "status": "constructed_coarse_to_fine_curvature_embedding"
+  },
+  "ST1994": {
+    "boundary": "Coefficientwise identity.",
+    "condition": "kappa_f,0+kappa_f,1=kappa_f",
+    "object": "EnergyCompatibilityEquation",
+    "packet_file": "FIN_ST1994_EnergyCompatibilityEquation.json",
+    "packet_sha256": "76ab6f2a2fd55d3957e461057e86f5872df0cb2ad30f8eba366fba2087658c44",
+    "program": "ST1994",
+    "status": "proven_energy_compatibility_iff_copy_weights_sum_to_base_weight"
+  },
+  "ST1995": {
+    "boundary": "Before symmetry.",
+    "free_parameters": 220,
+    "object": "HorizontalWeightClassification",
+    "packet_file": "FIN_ST1995_HorizontalWeightClassification.json",
+    "packet_sha256": "2e01963d3fa56a17137abb30119f012d3cf1b599b0e60a58c365007b4a46b7ca",
+    "program": "ST1995",
+    "solution": "(a_f kappa_f,(1-a_f)kappa_f)",
+    "status": "proven_general_horizontal_solution_has_one_split_parameter_per_base_face"
+  },
+  "ST1996": {
+    "boundary": "Conditional uniqueness.",
+    "copy_factor": 0.5,
+    "object": "FiberSwapHalving",
+    "packet_file": "FIN_ST1996_FiberSwapHalving.json",
+    "packet_sha256": "b4a56be6cb1ace801bd34c249d958ba8f614e73fac32b70096c4bfd0344eb7f4",
+    "program": "ST1996",
+    "status": "proven_fiber_swap_symmetry_uniquely_sets_each_horizontal_copy_to_one_half"
+  },
+  "ST1997": {
+    "boundary": "Square curvature is zero on image.",
+    "free_positive_square_weights": 66,
+    "object": "SquareWeightInvisibility",
+    "packet_file": "FIN_ST1997_SquareWeightInvisibility.json",
+    "packet_sha256": "cb75ff54b74583c93729920a6b61a822f106ac5f525a744182eff6a4e2f03b26",
+    "program": "ST1997",
+    "status": "proven_all_new_square_weights_are_invisible_to_coarse_curvature_energy"
+  },
+  "ST1998": {
+    "boundary": "506 fine face weights minus 220 equations.",
+    "constraints": 220,
+    "fine_faces": 506,
+    "nullity": 286,
+    "object": "UnreducedConstraintRank",
+    "packet_file": "FIN_ST1998_UnreducedConstraintRank.json",
+    "packet_sha256": "1651bba1a2203f5f4295b23bb2f8188323f0815256fb8cdc7a9845ea29d48aff",
+    "program": "ST1998",
+    "status": "proven_unreduced_linear_energy_constraints_leave_286_dimensional_affine_solution_space"
+  },
+  "ST1999": {
+    "boundary": "Horizontal orbit weights inherited/halved.",
+    "object": "OrbitReducedNullity",
+    "packet_file": "FIN_ST1999_OrbitReducedNullity.json",
+    "packet_sha256": "1f50ddb4efe50374065104f1018d7936cf7c0aeffeb53fff9200ecaf6e3a1470",
+    "program": "ST1999",
+    "status": "proven_D12_and_fiber_swap_reduction_still_leaves_six_square_orbit_parameters",
+    "vertical_nullity": 6
+  },
+  "ST2000": {
+    "E0": 129.09815407333735,
+    "E1": 129.09815407333735,
+    "boundary": "Numerical witness.",
+    "object": "RandomEnergyReplay",
+    "packet_file": "FIN_ST2000_RandomEnergyReplay.json",
+    "packet_sha256": "ee6683bb5a81828962d38b7cc039a43b7f4101a8d0720a26aecfd92d123d2213",
+    "program": "ST2000",
+    "residual": 0.0,
+    "status": "proven_random_energy_identity_replay"
+  },
+  "ST2001": {
+    "boundary": "Does not choose values.",
+    "cone": "R_+^66 or R_+^6 after symmetry",
+    "object": "PositiveCone",
+    "packet_file": "FIN_ST2001_PositiveCone.json",
+    "packet_sha256": "b8c0937c7ae096476dc9cef13408115c0fe9c6617927b4af8d3971c612c908e5",
+    "program": "ST2001",
+    "status": "proven_positivity_only_restricts_square_weights_to_open_positive_cone"
+  },
+  "ST2002": {
+    "boundary": "Set relative fields flat.",
+    "object": "MinimalExtensionPrinciple",
+    "packet_file": "FIN_ST2002_MinimalExtensionPrinciple.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2002",
+    "status": "proven_minimum_energy_extension_of_coarse_flat_fiber_state_is_independent_of_square_weights"
+  },
+  "ST2003": {
+    "boundary": "Explains invisibility.",
+    "object": "SchurPreview",
+    "packet_file": "FIN_ST2003_SchurPreview.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2003",
+    "status": "constructed_Schur_complement_preview_square_sector_lies_transverse_to_coarse_embedding"
+  },
+  "ST2004": {
+    "boundary": "Horizontal halves unique under swap; six vertical orbit weights arbitrary.",
+    "horizontal": "kappa/2",
+    "object": "ClassificationTheorem",
+    "packet_file": "FIN_ST2004_ClassificationTheorem.json",
+    "packet_sha256": "c66d14db61447438370fadff7889e1393f58d0be720a6091def036bd70753749",
+    "program": "ST2004",
+    "status": "proven_12_to24_energy_compatible_measure_classification",
+    "vertical": "R_+^6"
+  },
+  "ST2005": {
+    "boundary": "Partial classification positive.",
+    "object": "RoundOne_Verdict",
+    "packet_file": "FIN_ST2005_RoundOne_Verdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2005",
+    "status": "round_one_falsifies_energy_preservation_as_unique_face_measure_selector"
+  },
+  "ST2006": {
+    "boundary": "Iterate classification through 24-to-48 and test associativity.",
+    "next": [
+      "cell counts",
+      "boundary rank",
+      "quarter weights",
+      "old square halves",
+      "new square orbits",
+      "moduli growth"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST2006_RoundOne_Recommendation.json",
+    "packet_sha256": "4a74277681ace3e112e8400ac9507fc85fe1327f7c7ddbad8de6f86c0c40152d",
+    "program": "ST2006",
+    "status": "recommended_ST2007_ST2021"
+  }
+}

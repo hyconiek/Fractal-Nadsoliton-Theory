@@ -1,0 +1,137 @@
+{
+  "ST2502": {
+    "boundary": "U_t acts on complex amplitudes, not this classical Gibbs law.",
+    "object": "UnitaryChannel",
+    "packet_file": "FIN_ST2502_UnitaryChannel.json",
+    "packet_sha256": "ee4799a9b6968fc4ebfc774ddcdd0137ef2ab9608cfb2da2ee08655161d8e85f",
+    "program": "ST2502",
+    "stationary_general": false,
+    "status": "Boundary"
+  },
+  "ST2503": {
+    "boundary": "P_t is vertex diffusion, not 12-bit configuration dynamics.",
+    "object": "HeatChannel",
+    "packet_file": "FIN_ST2503_HeatChannel.json",
+    "packet_sha256": "ee4799a9b6968fc4ebfc774ddcdd0137ef2ab9608cfb2da2ee08655161d8e85f",
+    "program": "ST2503",
+    "stationary_general": false,
+    "status": "Boundary"
+  },
+  "ST2504": {
+    "boundary": "p_theta is not automatically stationary for either channel.",
+    "common_A_sufficient": false,
+    "object": "GibbsStationarity",
+    "packet_file": "FIN_ST2504_GibbsStationarity.json",
+    "packet_sha256": "64a7ab4609628615fb490d9c74a21d6a68f4c8b1be91f09848e46a569a5424d8",
+    "program": "ST2504",
+    "status": "No-go"
+  },
+  "ST2505": {
+    "boundary": "Single-bit-flip Glauber dynamics can realize p_theta.",
+    "generator_added": true,
+    "object": "GlauberRealization",
+    "packet_file": "FIN_ST2505_GlauberRealization.json",
+    "packet_sha256": "8bc3fc5e7ed2fde9f097b210fd1909dd607fff7d77a2f9d02ce53d434b1c46f1",
+    "program": "ST2505",
+    "status": "Conditional construction"
+  },
+  "ST2506": {
+    "boundary": "Rates require theta and clock normalization.",
+    "object": "DetailedBalanceRates",
+    "packet_file": "FIN_ST2506_DetailedBalanceRates.json",
+    "packet_sha256": "f6ae562d0216c8cc2067faa51b84c44c59d71c36774a008da885d97c4e3dcda2",
+    "program": "ST2506",
+    "status": "Conditional",
+    "strict_rates": false
+  },
+  "ST2507": {
+    "bath_strict": false,
+    "boundary": "Thermodynamic Gibbs interpretation needs bath/temperature.",
+    "object": "BathRequirement",
+    "packet_file": "FIN_ST2507_BathRequirement.json",
+    "packet_sha256": "8d3fff9ce36ac6bb7c6465eab3d5e32e2bf9936870010fe1a57f0cac4cbaacca",
+    "program": "ST2507",
+    "status": "Boundary"
+  },
+  "ST2508": {
+    "boundary": "Joint triangle parity sees theta.",
+    "object": "ParityInstrument",
+    "observable": "x_i x_j x_k",
+    "packet_file": "FIN_ST2508_ParityInstrument.json",
+    "packet_sha256": "a77e6052323110eb1e7c4f1feea625ee860fa41b937f1ed8ae579ec63e54d8c9",
+    "program": "ST2508",
+    "status": "Proven"
+  },
+  "ST2509": {
+    "Fisher_at_zero_for_pair": 0,
+    "boundary": "Pair-only records lose irreducible information.",
+    "object": "PairInstrumentNoGo",
+    "packet_file": "FIN_ST2509_PairInstrumentNoGo.json",
+    "packet_sha256": "552d0b46bf4e7703fb748608e104f8c2aa9c346c0c87c975fc8f5a8b40a8cecc",
+    "program": "ST2509",
+    "status": "Proven"
+  },
+  "ST2510": {
+    "boundary": "Shot bound depends on effect size and confidence.",
+    "calibration_needed": true,
+    "object": "FiniteSampleSpec",
+    "packet_file": "FIN_ST2510_FiniteSampleSpec.json",
+    "packet_sha256": "37df9f831c0f3eee3a9f2f81951db2deb740bc30b8185a03e15b308327ef2ec2",
+    "program": "ST2510",
+    "status": "Conditional"
+  },
+  "ST2511": {
+    "boundary": "Keep run, three bits, face, layer, time, config.",
+    "fields": 7,
+    "object": "RawRecord",
+    "packet_file": "FIN_ST2511_RawRecord.json",
+    "packet_sha256": "3af5645c43233fe28a63773ee9f257543145ccbc0e6e9625285a55c2937d2a59",
+    "program": "ST2511",
+    "status": "Executable spec"
+  },
+  "ST2512": {
+    "boundary": "Shared A does not make U/P/Glauber identical.",
+    "dualism_preserved": true,
+    "object": "DualDynamicsBoundary",
+    "packet_file": "FIN_ST2512_DualDynamicsBoundary.json",
+    "packet_sha256": "8492a686e01aa4f0bb0734ebd15eb9c7c1cbf5d407d2b9d4954eb0872f7e51f4",
+    "program": "ST2512",
+    "status": "Proven"
+  },
+  "ST2513": {
+    "boundary": "Dimensionless rate does not supply seconds.",
+    "clock_strict": false,
+    "object": "TimeScale",
+    "packet_file": "FIN_ST2513_TimeScale.json",
+    "packet_sha256": "0c899b220d9d67f47ca5046dc4ad9351bb0c80d77734b19e75843bd1198091b2",
+    "program": "ST2513",
+    "status": "No-go"
+  },
+  "ST2514": {
+    "boundary": "theta dimensionless does not supply joules.",
+    "energy_strict": false,
+    "object": "PhysicalEnergy",
+    "packet_file": "FIN_ST2514_PhysicalEnergy.json",
+    "packet_sha256": "d6a0a8df9aae8c36dd84c8085098fe99a6a4b08cbda88cb048c31a4d7f97c88f",
+    "program": "ST2514",
+    "status": "No-go"
+  },
+  "ST2515": {
+    "boundary": "An operational mathematical model exists only after a new configuration-space dynamics and apparatus.",
+    "object": "RoundFiveVerdict",
+    "packet_file": "FIN_ST2515_RoundFiveVerdict.json",
+    "packet_sha256": "c0f5737784a0a236c41c1938898b8388ede731aca929392b3f7262126ccce92e",
+    "physical_evidence": false,
+    "program": "ST2515",
+    "status": "Round verdict"
+  },
+  "ST2516": {
+    "boundary": "Synthesize gate.",
+    "next": "source theorem or no-go",
+    "object": "RoundFiveRecommendation",
+    "packet_file": "FIN_ST2516_RoundFiveRecommendation.json",
+    "packet_sha256": "37ae5093e7b4318e82fcb0b0828b340a49a30949ae64677acde0d1230c5f39f5",
+    "program": "ST2516",
+    "status": "Recommendation"
+  }
+}

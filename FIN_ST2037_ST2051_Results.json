@@ -1,0 +1,137 @@
+{
+  "ST2037": {
+    "E": "k*(a**2 + r**2)/2 + mu*(2*r + s)**2/2",
+    "boundary": "a coarse average, r horizontal relative mode, s vertical-edge difference.",
+    "object": "SquareToyEnergy",
+    "packet_file": "FIN_ST2037_SquareToyEnergy.json",
+    "packet_sha256": "82c7b3bca5676e4f471d504afe864b21354ef953dde00ca59766b6e232ddfc07",
+    "program": "ST2037",
+    "status": "constructed_single_product_square_quadratic_energy"
+  },
+  "ST2038": {
+    "boundary": "Fiber-swap horizontal weights assumed.",
+    "object": "CoarseConstraint",
+    "packet_file": "FIN_ST2038_CoarseConstraint.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2038",
+    "status": "constructed_fixed_coarse_average_constraint_a0_equals_a_plus_r_a1_equals_a_minus_r"
+  },
+  "ST2039": {
+    "boundary": "All k,mu>0.",
+    "object": "ExactMinimizer",
+    "packet_file": "FIN_ST2039_ExactMinimizer.json",
+    "packet_sha256": "7b3584e6cd7606d79d0e4b556b1d96066d7c3c8c3a9a530c37e19cbcfe2e2bb3",
+    "program": "ST2039",
+    "solution": {
+      "r": "0",
+      "s": "0"
+    },
+    "status": "proven_exact_relative_and_vertical_minimizer_is_flat"
+  },
+  "ST2040": {
+    "E_min": "a**2*k/2",
+    "boundary": "Exact Schur/minimal extension.",
+    "contains_mu": false,
+    "object": "SchurEnergyIndependence",
+    "packet_file": "FIN_ST2040_SchurEnergyIndependence.json",
+    "packet_sha256": "fcf43107be7c40f1d9e7d92a51b68ace78b70f45bdfdbb86cf18d73b935903c4",
+    "program": "ST2040",
+    "status": "proven_minimized_coarse_energy_is_k_a2_over2_independent_of_mu"
+  },
+  "ST2041": {
+    "boundary": "Flat kernel direction.",
+    "object": "VerticalWeightUnidentifiability",
+    "packet_file": "FIN_ST2041_VerticalWeightUnidentifiability.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2041",
+    "status": "proven_vertical_square_weight_cannot_be_identified_from_any_coarse_minimal_energy_measurement_in_toy_sector"
+  },
+  "ST2042": {
+    "boundary": "Every square curvature zero.",
+    "object": "NetworkFlatExtension",
+    "packet_file": "FIN_ST2042_NetworkFlatExtension.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2042",
+    "status": "proven_network_product_has_global_flat_extension_with_identical_layer_connection_and_zero_fiber_potential"
+  },
+  "ST2043": {
+    "boundary": "Gauge fixing needed but does not alter mu invisibility.",
+    "object": "GaugeZeroMode",
+    "packet_file": "FIN_ST2043_GaugeZeroMode.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2043",
+    "status": "proven_common_vertical_potential_shift_is_gauge_zero_mode"
+  },
+  "ST2044": {
+    "boundary": "Not admissible repair under current axioms.",
+    "object": "AsymmetricHorizontalBoundary",
+    "packet_file": "FIN_ST2044_AsymmetricHorizontalBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2044",
+    "status": "asymmetric_horizontal_copy_weights_can_make_mu_enter_reduced_energy_but_break_fiber_swap_and_prior_energy_classification"
+  },
+  "ST2045": {
+    "boundary": "Quantum/thermal measure could probe vertical weights.",
+    "object": "QuantumDeterminantDependence",
+    "packet_file": "FIN_ST2045_QuantumDeterminantDependence.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2045",
+    "status": "proven_Gaussian_fluctuation_determinant_depends_on_mu_even_when_classical_coarse_minimum_does_not"
+  },
+  "ST2046": {
+    "boundary": "New conditional structure.",
+    "object": "RenormalizationPremise",
+    "packet_file": "FIN_ST2046_RenormalizationPremise.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2046",
+    "status": "quantum_determinant_selection_requires_path_integral_measure_regularization_temperature_or_hbar_and_counterterms"
+  },
+  "ST2047": {
+    "boundary": "OA fine instrument.",
+    "object": "FineObservableRequirement",
+    "packet_file": "FIN_ST2047_FineObservableRequirement.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2047",
+    "status": "proven_fine_square_holonomy_or_relative_mode_observable_is_required_to_measure_mu_classically"
+  },
+  "ST2048": {
+    "boundary": "General flat-extension no-go.",
+    "object": "CoarseDataNoGo",
+    "packet_file": "FIN_ST2048_CoarseDataNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2048",
+    "status": "proven_coarse_energy_and_Schur_consistency_cannot_select_vertical_face_weights"
+  },
+  "ST2049": {
+    "boundary": "Block-diagonal on coarse/vertical decomposition.",
+    "object": "SchurClassification",
+    "packet_file": "FIN_ST2049_SchurClassification.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2049",
+    "status": "classified_energy_compatible_Schur_family_as_same_coarse_form_times_arbitrary_positive_vertical_Hodge_block"
+  },
+  "ST2050": {
+    "boundary": "Fine/quantum data needed.",
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST2050_RoundFour_Verdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2050",
+    "status": "round_four_falsifies_minimal_extension_or_Schur_complement_as_vertical_measure_selector"
+  },
+  "ST2051": {
+    "boundary": "Test monoidal tensor-Hodge repair and differential-calculus ambiguity.",
+    "next": [
+      "tensor inner product",
+      "product rule",
+      "associativity",
+      "junk quotient",
+      "base measure",
+      "scale"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST2051_RoundFour_Recommendation.json",
+    "packet_sha256": "f0f8f4687248dec7dd88039193f5949e7dc946b7f470543b38f2e9e5da9eb214",
+    "program": "ST2051",
+    "status": "recommended_ST2052_ST2066"
+  }
+}

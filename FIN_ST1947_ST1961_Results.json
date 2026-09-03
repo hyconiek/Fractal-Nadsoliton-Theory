@@ -1,0 +1,166 @@
+{
+  "ST1947": {
+    "action": "sum kappa_f(1-Re U_f)",
+    "boundary": "1-Re U_f>=0.",
+    "object": "WilsonActionPositivity",
+    "packet_file": "FIN_ST1947_WilsonActionPositivity.json",
+    "packet_sha256": "90219e61f16fb6a7c364ef501aa213bc05525f1c2668c44998081baa415e0739",
+    "program": "ST1947",
+    "status": "proven_Wilson_face_action_nonnegative_for_positive_face_weights"
+  },
+  "ST1948": {
+    "boundary": "For U_f=exp(iF_f).",
+    "limit": "1-cos F = F^2/2+O(F^4)",
+    "object": "SmallCurvatureQuadraticLimit",
+    "packet_file": "FIN_ST1948_SmallCurvatureQuadraticLimit.json",
+    "packet_sha256": "45004a938c738d739ee9168c4d7e92a3f3d5c83259e50532b02aea0b7a25e3fa",
+    "program": "ST1948",
+    "status": "proven_small_holonomy_limit_is_positive_quadratic_curvature"
+  },
+  "ST1949": {
+    "boundary": "Not fixed by matter Dirichlet weights.",
+    "object": "FaceScaleFreedom",
+    "packet_file": "FIN_ST1949_FaceScaleFreedom.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1949",
+    "status": "proven_face_weights_and_overall_gauge_coupling_set_curvature_scale"
+  },
+  "ST1950": {
+    "Z": [
+      11.998007828926808,
+      11.802726246965767,
+      10.1923037902731,
+      3.1539528633989784,
+      1.0010617984350294
+    ],
+    "boundary": "Dimensionless.",
+    "object": "FiniteHeatTrace",
+    "packet_file": "FIN_ST1950_FiniteHeatTrace.json",
+    "packet_sha256": "2b1a9d0f9ba4806fefb9a43736d1cd9783ffa11a63636561e57205ab7d4c81d5",
+    "program": "ST1950",
+    "status": "constructed_exact_finite_heat_trace_from_A_spectrum",
+    "times": [
+      0.0001,
+      0.01,
+      0.1,
+      1,
+      10
+    ]
+  },
+  "ST1951": {
+    "boundary": "No asymptotic continuum power law for fixed finite graph.",
+    "object": "FiniteSpectralDimensionLimits",
+    "packet_file": "FIN_ST1951_FiniteSpectralDimensionLimits.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1951",
+    "status": "proven_finite_heat_trace_spectral_dimension_tends_zero_at_both_time_extremes"
+  },
+  "ST1952": {
+    "boundary": "Kronecker sums.",
+    "formula": "Z_k(t)=Z_12(t) product_l(1+exp(-2q_l t))",
+    "object": "IteratedRefinementHeatTrace",
+    "packet_file": "FIN_ST1952_IteratedRefinementHeatTrace.json",
+    "packet_sha256": "30243ef30c8bcab776815c1933a5e72d96ef7a38e17c70231771efb5afcbe9e4",
+    "program": "ST1952",
+    "status": "proven_iterated_binary_refinement_heat_trace_factorization"
+  },
+  "ST1953": {
+    "boundary": "Log derivative.",
+    "formula": "d_s=2t[sum lambda e^-tlambda/Z12 + sum 2q_l/(exp(2q_l t)+1)]",
+    "object": "SpectralDimensionFormula",
+    "packet_file": "FIN_ST1953_SpectralDimensionFormula.json",
+    "packet_sha256": "a620d0378b0f5a83a4fb41ee4c83529ad6214509c4fc71bd1b0684f02e3fe566",
+    "program": "ST1953",
+    "status": "proven_effective_spectral_dimension_depends_explicitly_on_all_free_q_l"
+  },
+  "ST1954": {
+    "boundary": "No stable four-dimensional limit.",
+    "object": "ConstantQGrowth",
+    "packet_file": "FIN_ST1954_ConstantQGrowth.json",
+    "packet_sha256": "45cb78db297ff4ac6dcc1efffcd68a9f45e6d79f834a903fd8fd5068c4b4c733",
+    "program": "ST1954",
+    "rows": [
+      {
+        "d_s": 1.8829325450289336,
+        "k": 1
+      },
+      {
+        "d_s": 2.420815387768924,
+        "k": 2
+      },
+      {
+        "d_s": 3.496581073248904,
+        "k": 4
+      },
+      {
+        "d_s": 5.648112444208865,
+        "k": 8
+      }
+    ],
+    "status": "proven_constant_q_refinement_spectral_dimension_grows_with_number_of_layers_at_fixed_time"
+  },
+  "ST1955": {
+    "boundary": "Requires scaling choice.",
+    "object": "GeometricQFreedom",
+    "packet_file": "FIN_ST1955_GeometricQFreedom.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1955",
+    "status": "proven_geometric_or_other_q_sequences_can_shape_intermediate_plateaus_arbitrarily"
+  },
+  "ST1956": {
+    "boundary": "Receiver fit not source.",
+    "object": "DimensionFourTuningBoundary",
+    "packet_file": "FIN_ST1956_DimensionFourTuningBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1956",
+    "status": "dimension_four_plateau_can_be_fitted_but_is_not_derived_without_q_l_and_length_scaling_law"
+  },
+  "ST1957": {
+    "boundary": "Product adds rather than removes them.",
+    "object": "SupportLocality",
+    "packet_file": "FIN_ST1957_SupportLocality.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1957",
+    "status": "proven_base_complete_support_keeps_eleven_nonlocal_neighbors_per_vertex_at_every_refinement"
+  },
+  "ST1958": {
+    "boundary": "Analytic continuation would be extra.",
+    "object": "EuclideanSignature",
+    "packet_file": "FIN_ST1958_EuclideanSignature.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1958",
+    "status": "proven_constructed_Dirichlet_and_Wilson_actions_are_Euclidean_and_do_not_source_Lorentz_signature"
+  },
+  "ST1959": {
+    "boundary": "CA remains external.",
+    "object": "MaxwellNormalizationGap",
+    "packet_file": "FIN_ST1959_MaxwellNormalizationGap.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1959",
+    "status": "blocked_no_face_area_lattice_spacing_action_unit_or_gauge_coupling_for_Maxwell_normalization"
+  },
+  "ST1960": {
+    "boundary": "Conditional plateau models remain possible.",
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST1960_RoundFour_Verdict.json",
+    "packet_sha256": "7312601ab8c08363a46e852e9227abda2c5b0b760b160525a5f2ab765c15ab6f",
+    "program": "ST1960",
+    "status": "round_four_falsifies_finite_or_freely_refined_heat_trace_as_unique_3plus1_continuum_source",
+    "unique_dimension": false
+  },
+  "ST1961": {
+    "boundary": "Test canonical flag/Hodge repair against refinement functoriality.",
+    "next": [
+      "base flag Hodge",
+      "refined flag zero modes",
+      "product squares",
+      "weighted Hodge ambiguity",
+      "spectral action"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1961_RoundFour_Recommendation.json",
+    "packet_sha256": "3268d06e66b1de2bab72dbbd120bc680aa1274beb87bbe8ac0f32b5ed3fa8b33",
+    "program": "ST1961",
+    "status": "recommended_ST1962_ST1976"
+  }
+}

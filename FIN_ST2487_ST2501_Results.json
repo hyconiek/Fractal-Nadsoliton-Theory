@@ -1,0 +1,148 @@
+{
+  "ST2487": {
+    "boundary": "Two triangle bases.",
+    "object": "PrismLift",
+    "packet_file": "FIN_ST2487_PrismLift.json",
+    "packet_sha256": "b6c73dff0bcf251e98cd35efc924ead945918282152ee324e04704363b11bbdd",
+    "program": "ST2487",
+    "status": "Constructed",
+    "variables": 6
+  },
+  "ST2488": {
+    "boundary": "q=0 factorizes; marginal preserves bottom theta.",
+    "closed": true,
+    "object": "IndependentLayerClosure",
+    "packet_file": "FIN_ST2488_IndependentLayerClosure.json",
+    "packet_sha256": "a54ac5bb1f80f63e97d0fdea2ed11b5d547130e28378703d643019b310611f98",
+    "program": "ST2488",
+    "status": "Proven"
+  },
+  "ST2489": {
+    "boundary": "q sum_i b_i t_i.",
+    "object": "VerticalPairCoupling",
+    "packet_file": "FIN_ST2489_VerticalPairCoupling.json",
+    "packet_sha256": "de4c60f3e37de59f15a40a9aca7cf3b2e539925b3fad8a589e63fccfb9a2bb79",
+    "program": "ST2489",
+    "q_strict": false,
+    "status": "Constructed"
+  },
+  "ST2490": {
+    "boundary": "Walsh coefficients of log marginal.",
+    "coefficients": [
+      2.183384018437203,
+      0.0,
+      0.0,
+      0.0,
+      -5.551115123125783e-17,
+      -5.551115123125783e-17,
+      -5.551115123125783e-17,
+      0.3022399512016273
+    ],
+    "object": "ExactMarginalWalsh",
+    "packet_file": "FIN_ST2490_ExactMarginalWalsh.json",
+    "packet_sha256": "cfb59334dc4d6e3e19d36ecb6f83b61e5970b517d760f034d1513beb35951f47",
+    "program": "ST2490",
+    "status": "Computed exact finite"
+  },
+  "ST2491": {
+    "boundary": "Symmetry cancels one-body terms.",
+    "max_abs": 0.0,
+    "object": "GeneratedOneBody",
+    "packet_file": "FIN_ST2491_GeneratedOneBody.json",
+    "packet_sha256": "32cfad64f7b728cfc09c273ef366382a8b8716bbfa7dccfd1cc6971f6cd24814",
+    "program": "ST2491",
+    "status": "Proven cancellation"
+  },
+  "ST2492": {
+    "boundary": "All pair Walsh terms vanish.",
+    "max_abs": 5.551115123125783e-17,
+    "object": "GeneratedPairBody",
+    "packet_file": "FIN_ST2492_GeneratedPairBody.json",
+    "packet_sha256": "64af67c98ae38e0a31f68debf8115e2e128b7a3bc3fcb84858fc1337e40a7f47",
+    "program": "ST2492",
+    "status": "Proven cancellation"
+  },
+  "ST2493": {
+    "boundary": "Only the cubic coefficient changes.",
+    "object": "RenormalizedThreeBody",
+    "packet_file": "FIN_ST2493_RenormalizedThreeBody.json",
+    "packet_sha256": "581922de17dadb3bf8fdbc6ca183d77a5bc73200fef8d9ca473d016b00a147d9",
+    "program": "ST2493",
+    "status": "Computed",
+    "theta_effective": 0.3022399512016273
+  },
+  "ST2494": {
+    "boundary": "Top marginal depends only on bottom parity.",
+    "formula": "theta_eff=theta+0.5*log[(e^theta A+e^-theta B)/(e^-theta A+e^theta B)]",
+    "object": "FamilyClosure",
+    "packet_file": "FIN_ST2494_FamilyClosure.json",
+    "packet_sha256": "d53409211cc9f83997b328933938c82abdd5e32fb966df6748d38056e12d32b6",
+    "program": "ST2494",
+    "pure_family_closed": true,
+    "status": "Proven exact closure"
+  },
+  "ST2495": {
+    "boundary": "q is an additional vertical source.",
+    "object": "RefinementParameterQ",
+    "packet_file": "FIN_ST2495_RefinementParameterQ.json",
+    "packet_sha256": "894836409afbffcb884d09860785396e9c7db403ffd2ed9284e742b0f2e1209b",
+    "program": "ST2495",
+    "status": "No-go",
+    "strict_q": false
+  },
+  "ST2496": {
+    "boundary": "Closure holds but every level needs q_n or a strict recurrence.",
+    "object": "TwoStepCoherence",
+    "packet_file": "FIN_ST2496_TwoStepCoherence.json",
+    "packet_sha256": "2ee42729a3f11b8402aa157740318644d1302724005e83dd66e28b1867a62840",
+    "path_unique": false,
+    "program": "ST2496",
+    "status": "Conditional RG law"
+  },
+  "ST2497": {
+    "boundary": "Coarse records cannot reconstruct hidden q.",
+    "object": "CoarseBlindness",
+    "packet_file": "FIN_ST2497_CoarseBlindness.json",
+    "packet_sha256": "c237b07d73df1d5cbeb241e99d57bf4430eecc447e9de28f69dcc2f792509adb",
+    "prior_no_go_applies": true,
+    "program": "ST2497",
+    "status": "Proven"
+  },
+  "ST2498": {
+    "boundary": "Prism fixes cells and closure shape, not coefficients.",
+    "object": "PrimitiveIncidenceBoundary",
+    "packet_file": "FIN_ST2498_PrimitiveIncidenceBoundary.json",
+    "packet_sha256": "aed80c1e5d58e9131183121ad4759ea3aea373427576cd962536f570ca639ead",
+    "program": "ST2498",
+    "source_coefficients": false,
+    "status": "Conditional"
+  },
+  "ST2499": {
+    "boundary": "No unique 12-24-48 transport without q_n law.",
+    "coherent_strict_transport": false,
+    "object": "RefinementGate",
+    "packet_file": "FIN_ST2499_RefinementGate.json",
+    "packet_sha256": "fceeb314456b52e1b328fa3d410eff90825fcfbe2d6143efe90fed2458315b0f",
+    "program": "ST2499",
+    "status": "Gate fail"
+  },
+  "ST2500": {
+    "boundary": "Symmetric prism marginalization exactly closes the ternary family; q remains unsourced.",
+    "closure_breakthrough": true,
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST2500_RoundFourVerdict.json",
+    "packet_sha256": "e2f602d614ac0ea3709ef04050fc71aa39e3a0e7192f923461df879ccff35872",
+    "program": "ST2500",
+    "single_missing_scalar_refuted": true,
+    "status": "Round verdict"
+  },
+  "ST2501": {
+    "boundary": "Audit dual dynamics and OA.",
+    "next": "channel realization",
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST2501_RoundFourRecommendation.json",
+    "packet_sha256": "bf5d058a918ffcec728c20aa83d5d7270bd9e029b11d9413c7e912eda22f731f",
+    "program": "ST2501",
+    "status": "Recommendation"
+  }
+}

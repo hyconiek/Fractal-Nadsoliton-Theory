@@ -1,0 +1,173 @@
+{
+  "ST1482": {
+    "alpha": [
+      0.9,
+      1.0,
+      1.1
+    ],
+    "boundary": "Not continuum-complete.",
+    "components": 18,
+    "gamma": [
+      0,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "object": "MixtureGridDefinition",
+    "packet_file": "FIN_ST1482_MixtureGridDefinition.json",
+    "packet_sha256": "4b5e672275402a9a2a930db50d41891a39cccd85870bf50b0586655125d5c7e0",
+    "program": "ST1482",
+    "status": "constructed_predeclared_finite_nuisance_grid"
+  },
+  "ST1483": {
+    "boundary": "Prior chosen before fixtures/data.",
+    "object": "MixturePriorFreeze",
+    "packet_file": "FIN_ST1483_MixturePriorFreeze.json",
+    "packet_sha256": "efd5c697b698568713281d1cebca78cc7cbba293aa8567bfa096ed2225c6d936",
+    "program": "ST1483",
+    "status": "frozen_uniform_mixture_prior",
+    "sum": 1.0,
+    "weight": 0.05555555555555555
+  },
+  "ST1484": {
+    "boundary": "Deterministic time schedule, iid conditional events.",
+    "components": 18,
+    "object": "ComponentLikelihoodProcesses",
+    "packet_file": "FIN_ST1484_ComponentLikelihoodProcesses.json",
+    "packet_sha256": "6a2bf16c7a90762ac4671d38e32c88f7e9a94dbc0a560f19c62a14b915a4eef2",
+    "program": "ST1484",
+    "status": "proven_each_component_likelihood_ratio_is_C_null_martingale"
+  },
+  "ST1485": {
+    "E_C[E_n]": 1.0,
+    "boundary": "Convex combination theorem.",
+    "object": "MixtureMartingaleTheorem",
+    "packet_file": "FIN_ST1485_MixtureMartingaleTheorem.json",
+    "packet_sha256": "9e1e8be2aa70881d0f4234f2b96b61218e459ec1d7c4300e030d01be1c29550c",
+    "program": "ST1485",
+    "status": "proven_weighted_mixture_is_nonnegative_mean_one_C_null_martingale"
+  },
+  "ST1486": {
+    "alpha": 0.01,
+    "boundary": "One-sided composite-alternative test.",
+    "object": "VilleOneSidedBound",
+    "optional_stopping": true,
+    "packet_file": "FIN_ST1486_VilleOneSidedBound.json",
+    "packet_sha256": "83bed44e90bb96e15a79cc2b675e0915aac9b7fbd89abb4f39cbb151312abcd3",
+    "program": "ST1486",
+    "status": "proven_anytime_rejection_of_C_has_one_percent_bound",
+    "threshold": 100
+  },
+  "ST1487": {
+    "boundary": "E_mix >= pi_j LR_j.",
+    "log_penalty": 2.8903717578961645,
+    "object": "PriorDilutionCost",
+    "packet_file": "FIN_ST1487_PriorDilutionCost.json",
+    "packet_sha256": "8a42a3830dca0038ab535bd1c2531c946d8ed3647818aad9a235726518a7b671",
+    "program": "ST1487",
+    "status": "proven_true_grid_component_pays_at_most_log18_initial_mixture_dilution_in_lower_bound"
+  },
+  "ST1488": {
+    "boundary": "Random code fixture only.",
+    "decision": "REJECT_C_FOR_MIXTURE_Q",
+    "log_e": 4.713290925305673,
+    "n": 32,
+    "object": "SyntheticGridAlternative",
+    "packet_file": "FIN_ST1488_SyntheticGridAlternative.json",
+    "packet_sha256": "833165c882b4b4bad97b150ca660466c2f6445b05b8fd69022591d57cb03dd83",
+    "program": "ST1488",
+    "status": "synthetic_grid_alternative_crosses_mixture_boundary"
+  },
+  "ST1489": {
+    "boundary": "Not an empirical error estimate.",
+    "decision": "CONTINUE",
+    "log_e": -9.845524961225557,
+    "n": 500,
+    "object": "SyntheticClassicalSafety",
+    "packet_file": "FIN_ST1489_SyntheticClassicalSafety.json",
+    "packet_sha256": "085e8f7f96e423ae52e39add0d7b755a47b0ffe0d596220396c69e8380a12bb3",
+    "program": "ST1489",
+    "status": "synthetic_classical_sequence_does_not_cross_in_fixture"
+  },
+  "ST1490": {
+    "boundary": "Validator behavior.",
+    "decision": "INVALID",
+    "log_e": -Infinity,
+    "n": 0,
+    "object": "InvalidEventFailClosed",
+    "packet_file": "FIN_ST1490_InvalidEventFailClosed.json",
+    "packet_sha256": "949b255a8abf38e9a34b6bb7f95db8b99e911b045ce25804d7c5ffef064eac73",
+    "program": "ST1490",
+    "status": "proven_invalid_mixture_event_fails_closed"
+  },
+  "ST1491": {
+    "accept_C_against_every_component_valid": false,
+    "boundary": "Composite asymmetry.",
+    "object": "NoSymmetricCompositeAcceptance",
+    "packet_file": "FIN_ST1491_NoSymmetricCompositeAcceptance.json",
+    "packet_sha256": "3ec50660c5f13427d71e40ad33d6e0db7350764dc467bae23009aa1b310f091d",
+    "program": "ST1491",
+    "reject_C_valid": true,
+    "status": "proven_mixture_eprocess_only_supports_anytime_rejection_of_C_not_uniform_acceptance_of_C"
+  },
+  "ST1492": {
+    "boundary": "Type-I remains valid, power may be poor.",
+    "continuum_coverage": false,
+    "object": "OffGridPowerBoundary",
+    "packet_file": "FIN_ST1492_OffGridPowerBoundary.json",
+    "packet_sha256": "2b6c453c528971743d2fbd26ffeabec64eaa75680f9e296877185d3f3532433b",
+    "program": "ST1492",
+    "status": "off_grid_quantum_power_is_not_guaranteed_by_finite_mixture"
+  },
+  "ST1493": {
+    "boundary": "Future theorem.",
+    "object": "ContinuousMixtureRequirement",
+    "packet_file": "FIN_ST1493_ContinuousMixtureRequirement.json",
+    "packet_sha256": "ce31659a4a250f9d50b33086f2442d879a541395c50b343a60feea14e3bca481",
+    "program": "ST1493",
+    "requires": [
+      "normalized prior density on alpha,gamma",
+      "stable quadrature or analytic integral",
+      "power/cover theorem"
+    ],
+    "status": "constructed_continuous_mixture_extension_requirement"
+  },
+  "ST1494": {
+    "boundary": "Reproducibility.",
+    "fixtures": "FIN_ST1482_ST1496_MixtureFixtures.json",
+    "grid_file": "FIN_ST1482_ST1496_MixtureGrid.json",
+    "object": "MixtureArtifactHash",
+    "packet_file": "FIN_ST1494_MixtureArtifactHash.json",
+    "packet_sha256": "a961ab22b4bad3c0f6ca9e6e645d157b8acb29975ec98816411d29f6df77748e",
+    "program": "ST1494",
+    "sha256": "948a5ff55a7c96c47fad8234a4326a5e75ccd1cd9f137cdec155e87cdd963cb3",
+    "status": "constructed_mixture_grid_hash_freeze"
+  },
+  "ST1495": {
+    "boundary": "No symmetric composite decision.",
+    "continuous_minimax": false,
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1495_RoundThree_Verdict.json",
+    "packet_sha256": "90d28213d52d1447b15ed3b8e204dc86e23d2720d477887178c4dc8989f882db",
+    "program": "ST1495",
+    "status": "finite_mixture_eprocess_closes_naive_plugin_gap_only_on_one_side_and_grid_scope",
+    "valid_anytime_C_rejection": true
+  },
+  "ST1496": {
+    "boundary": "Construct common and independent calibration polytopes.",
+    "next": [
+      "preparation simplex",
+      "binary confusion box",
+      "common-map certificate",
+      "independent-map failure",
+      "no-click efficiency"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1496_RoundThree_Recommendation.json",
+    "packet_sha256": "6c35ac450f4e024ed6152b0c2c315271e4ea1b10d1c69e507db09054ffbd7cdf",
+    "program": "ST1496",
+    "status": "recommended_ST1497_ST1511"
+  }
+}

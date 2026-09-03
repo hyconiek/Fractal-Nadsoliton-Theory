@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,longtable,xcolor,geometry,fancyhdr,hyperref}
+\geometry{margin=22mm}\hypersetup{colorlinks=true,urlcolor=blue,pdftitle={FIN ST912--ST1001: What Prevents Nadsoliton Annihilation?},pdfauthor={Krzysztof Żuchowski}}\pagestyle{fancy}\fancyhf{}\fancyhead[L]{FIN ST912--ST1001}\fancyhead[R]{Release 10.94}\fancyfoot[C]{\thepage}\setlength{\headheight}{14pt}
+\begin{document}\begin{titlepage}\centering\vspace*{18mm}{\Huge\bfseries FIN ST912--ST1001\par}\vspace{6mm}{\Large What Prevents Nadsoliton Annihilation?\par}\vspace{14mm}{\Large Krzysztof Żuchowski\par}{\normalsize Independent Researcher --- Fractal Information Theory Project\par}{\normalsize ORCID: 0009-0002-0909-3613\par}\vspace{10mm}{\large Six research rounds --- Release 10.94\par}{\large 30 August 2026\par}\vfill\small No nonlinear/topological/quantum persistence mechanism is silently assumed to be strict-derived.\vfill\end{titlepage}
+\begin{abstract}
+ST912--ST1001 investigate what, if anything, prevents the FIN nadsoliton from annihilating. Four inequivalent meanings are separated: extinction of the entire state, delocalization of its pattern, loss of coherence, and loss of topological/attractor identity.
+
+For the frozen strict generator, closed unitary dynamics preserves Hilbert norm and makes the zero state unreachable from nonzero initial data. Heat dynamics preserves total mass but exponentially erases every mean-zero pattern at the spectral-gap rate $0.754121\ldots$, converging to the uniform state. A second-order wave model preserves phase-space energy. Dephasing destroys coherence while preserving spectral populations. These theorems protect conserved totals, not the identity of a localized nonlinear object.
+
+Conditional stronger mechanisms are classified. A $U(1)$ Noether charge prevents global zero when positive. A discrete winding is homotopy-protected only while all amplitudes remain nonzero and phase increments avoid their branch cut; linear unitary dynamics does not guarantee that gap. DNLS conserves norm and energy but a FIN-specific localized orbitally stable breather is unproved. Pump/loss can create a nonzero attracting norm, but persistence consumes a nonequilibrium resource and disappears when the pump is removed. Superselection charge, dark states, decoherence-free subspaces and quantum error correction can protect quantum information, but require additional charge/noise/code/recovery structures and often an entropy sink.
+
+The current FIN model contains no multisoliton collision law, so annihilation in a collision is not yet a well-posed internal question. The final result is a no-go for strict nadsoliton identity protection: current strict mathematics protects unitary norm, heat mass and conditional wave energy, but does not prove localization, topological charge, pumping, quantum code, orbital stability or collision balance. A conditional persistence theory is supplied, together with pump-off, winding, perturbation, noise and information-recovery tests; no laboratory apparatus or record exists.
+\end{abstract}\tableofcontents\newpage
+
+\section{Four meanings of annihilation}
+\begin{longtable}{@{}p{.26\textwidth}p{.32\textwidth}p{.32\textwidth}@{}}\toprule Type&Meaning&Possible protection\\\midrule\endhead
+Global extinction&state becomes identically zero&positive conserved norm/mass/charge\\
+Pattern annihilation&localization or modulation disappears&nonlinear orbital stability/topology\\
+Coherence annihilation&off-diagonal phases become inaccessible&DFS, dark state, QEC\\
+Identity/sector annihilation&topological charge or attractor is lost&winding gap, pump basin, superselection\\\bottomrule\end{longtable}
+
+\section{Round I: linear strict dynamics}
+For $U_t=e^{-itA}$,
+\[
+\|U_t\psi\|=\|\psi\|,
+\]
+so a nonzero state never becomes zero. For $P_t=e^{-tA}$,
+\[
+\mathbf1^TP_tp=\mathbf1^Tp,
+\qquad
+\|P_t(p-u)\|\le e^{-0.754121\,t}\|p-u\|.
+\]
+Heat therefore preserves mass but annihilates the nonuniform pattern. The constant zero mode persists but carries no localization. Finite unitary almost-recurrence is a spectral-torus property, not soliton stability.
+
+Adding uniform loss gives the counterexample
+\[
+\dot\psi=-(A+\gamma I)\psi\longrightarrow0.
+\]
+Thus persistence is channel-dependent and not a property of $A$ alone.
+
+\section{Round II: charge, winding and nonlinearity}
+A phase-invariant Hamiltonian/DNLS has Noether charge
+\[
+Q=\sum_x|\psi_x|^2.
+\]
+If $Q>0$ is conserved, global zero is impossible. A discrete phase winding
+\[
+W=\frac1{2\pi}\sum_x\operatorname{Arg}(\psi_{x+1}/\psi_x)
+\]
+is constant under a continuous homotopy only while $\min_x|\psi_x|>0$ and no phase increment reaches its cut. Unwinding requires an amplitude-zero or cut event. The linear strict unitary does not prevent component zeros.
+
+DNLS conservation is real, but the repository still lacks a FIN-parameter proof of a localized discrete breather and its orbital stability. Hence ``nadsoliton'' remains a programme name rather than a completed soliton theorem.
+
+\section{Round III: nonequilibrium attractor}
+For a pumped norm model,
+\[
+\dot Q=2(P-\gamma Q)Q,
+\]
+zero is unstable for $P>0$ and
+\[
+Q_*=P/\gamma
+\]
+is attracting for every $Q(0)>0$. This blocks extinction conditionally, but the pump is a resource. Turning it off restores decay. Symmetric pumping also stabilizes a norm/orbit, not one selected $D_{12}$ branch.
+
+Detailed balance normally relaxes excitations unless topology, a conservation law or degeneracy prevents it. Sustained excited persistence is generally nonequilibrium and has an entropy/resource cost.
+
+\section{Round IV: quantum and informational protection}
+Closed unitary dynamics preserves norm/purity; amplitude damping sends excitations to vacuum. A nonzero superselection charge blocks the transition only when vacuum belongs to another charge sector. Dark-state and decoherence-free protection require
+\[
+L_k|\psi\rangle=0
+\]
+or scalar noise action on a code. Quantum error correction requires
+\[
+P E_a^\dagger E_b P=c_{ab}P.
+\]
+These structures are not supplied by the scalar strict kernel.
+
+Global information conservation does not protect a local pattern: information may disperse into inaccessible correlations or the environment. Autonomous correction also requires an entropy sink. Self-reference or a bootstrap equation is not a stability theorem.
+
+\section{Rounds V--VI: falsification and final theorem}
+The operational library distinguishes Hamiltonian charge, winding protection, pumped attractors and quantum-code protection using norm, inverse participation/localization, coherence, winding and recovery fidelity. Required interventions include pump-off, controlled perturbations, noise scaling, amplitude-zero logging and charge/dark-state tests. A collision test cannot be specified until a multisoliton evolution and charge-balance law exist.
+
+\subsection{Final status}
+\begin{longtable}{@{}p{.3\textwidth}p{.26\textwidth}p{.34\textwidth}@{}}\toprule Mechanism&Current FIN status&What it protects\\\midrule\endhead
+Unitary norm&proved&nonzero global state\\
+Heat mass&proved&total probability, not pattern\\
+Wave energy&conditional&phase-space energy\\
+$U(1)$ charge&conditional&global nonzero state\\
+Winding&conditional&topological sector while amplitude gap remains\\
+DNLS breather&open&localized pattern if existence/stability proved\\
+Pump attractor&conditional&nonzero nonequilibrium norm/basin\\
+DFS/dark/QEC&conditional&encoded quantum information\\
+Collision protection&undefined&requires multisoliton theory\\\bottomrule\end{longtable}
+
+\textbf{Final theorem-scope answer.} Current strict FIN does not prove protection of nadsoliton identity. It proves only conservation laws that prevent particular notions of extinction. Full protection requires
+\[
+A+\text{nonlinear persistent branch}+\text{charge/topology or pump}+\text{selector}+\text{perturbation stability},
+\]
+or a quantum code/dark-state package. None is presently strict-sourced.
+
+\section{Recommended next programmes}
+\begin{enumerate}
+\item prove or refute a localized DNLS/breather branch for strict $A$;
+\item interval-certify its Bogoliubov/orbital stability;
+\item construct a strict $U(1)$ or winding-charge source and amplitude-gap theorem;
+\item define a multisoliton sector and collision charge balance;
+\item derive or reject an internal pump/resource law;
+\item execute the pump-off/winding/noise persistence protocol with independent records.
+\end{enumerate}
+
+\appendix\section{Reproducibility}
+The authoritative packets run from \path{FIN_ST912_ST926_Results.json} through \path{FIN_ST987_ST1001_Results.json}. Six scripts, summaries and the combined test cover all 90 programme packet hashes.
+
+\section{Nonclaims}
+No physical immortal object, laboratory persistence, particle annihilation law, photon, gravity, Standard Model or ToE closure is established. All future PDFs remain English.
+\end{document}

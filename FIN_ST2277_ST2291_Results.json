@@ -1,0 +1,187 @@
+{
+  "ST2277": {
+    "boundary": "All six cyclic-distance conductances are distinct in the frozen strict matrix.",
+    "distance_weights": [
+      0.4699856726450201,
+      0.1920435516901028,
+      0.09142861427792495,
+      0.0470291687456504,
+      0.02413122336363006,
+      0.011070817321442113
+    ],
+    "minimum_pairwise_separation": 0.013060406042187948,
+    "object": "DistanceWeightSeparation",
+    "packet_file": "FIN_ST2277_DistanceWeightSeparation.json",
+    "packet_sha256": "a5fb09879e4eea9c20df0596ccb317979e56f1e0a54c36b184ffa5045534acb1",
+    "program": "ST2277",
+    "status": "Proven"
+  },
+  "ST2278": {
+    "boundary": "Distance-one edges have the unique maximum weight and form the cycle C12.",
+    "maximum_distance": 1,
+    "maximum_edge_subgraph": "C12",
+    "object": "MaximumEdgeCycle",
+    "packet_file": "FIN_ST2278_MaximumEdgeCycle.json",
+    "packet_sha256": "15083f3440c6589068a883e665f86a1b2b02d99574f92e75be49902527bea4d7",
+    "program": "ST2278",
+    "status": "Proven"
+  },
+  "ST2279": {
+    "automorphism_group": "D12",
+    "boundary": "Aut(C12) is the dihedral group with 24 elements.",
+    "object": "CycleAutomorphismGroup",
+    "order": 24,
+    "packet_file": "FIN_ST2279_CycleAutomorphismGroup.json",
+    "packet_sha256": "99b0d124abf4b321891fc3c9b58b700efd36ad2b6b5368415f006159de322035",
+    "program": "ST2279",
+    "status": "Proven"
+  },
+  "ST2280": {
+    "Aut_W": "D12",
+    "boundary": "Every weighted automorphism preserves the unique maximum-edge C12, hence lies in D12; every D12 element preserves all cyclic distances.",
+    "object": "WeightedGraphAutomorphismTheorem",
+    "order": 24,
+    "packet_file": "FIN_ST2280_WeightedGraphAutomorphismTheorem.json",
+    "packet_sha256": "35c6866540cabe154c36d62229035187a19b96efc0911421527d834afb7328d6",
+    "program": "ST2280",
+    "status": "Proven"
+  },
+  "ST2281": {
+    "boundary": "Direct finite conjugation replay.",
+    "maximum_residual_inf": 0.0,
+    "object": "D12Replay",
+    "packet_file": "FIN_ST2281_D12Replay.json",
+    "packet_sha256": "d7b72aea1d55192a16f7f7b9376d426643879e068111366d46a8e61401b2298e",
+    "program": "ST2281",
+    "status": "Proven",
+    "tested_elements": 24
+  },
+  "ST2282": {
+    "boundary": "Exact finite orbit census.",
+    "object": "TriangleOrbitCount",
+    "orbit_sizes": [
+      12,
+      24,
+      24,
+      24,
+      24,
+      12,
+      24,
+      24,
+      12,
+      12,
+      24,
+      4
+    ],
+    "packet_file": "FIN_ST2282_TriangleOrbitCount.json",
+    "packet_sha256": "c7a5905ca82650b1fc0b07a467ee1b7c81fec69e4eabdac36fa23823e4d73b07",
+    "program": "ST2282",
+    "status": "Proven",
+    "triangle_orbits": 12
+  },
+  "ST2283": {
+    "boundary": "The strict loop product distinguishes all twelve triangle orbits numerically with a large nonzero separation.",
+    "distinct": 12,
+    "minimum_separation": 2.5670401181609407e-07,
+    "object": "TauOrbitSeparation",
+    "orbit_values": [
+      0.04241983422019662,
+      0.008252138068007066,
+      0.002020849907728043,
+      0.0005333732868303007,
+      0.00012555778424600653,
+      0.0017344698745588919,
+      0.00042370267550049146,
+      9.998773175041058e-05,
+      0.00011183002152028325,
+      9.254308214867096e-05,
+      0.00010375971725544324,
+      0.00010401642126725933
+    ],
+    "packet_file": "FIN_ST2283_TauOrbitSeparation.json",
+    "packet_sha256": "74627c47bb36763df8d58678304a00fa6e01d7bf56d85f8e7fb9dd4dcbe7c509",
+    "program": "ST2283",
+    "status": "Proven"
+  },
+  "ST2284": {
+    "boundary": "Aut(W)-naturality permits one scalar/function value per triangle orbit.",
+    "equivariant_face_scalar_dimension": 12,
+    "object": "OrbitCoefficientFreedom",
+    "packet_file": "FIN_ST2284_OrbitCoefficientFreedom.json",
+    "packet_sha256": "578a159cbdc87386a057b14121bc503b8bf5537b3ba84b3f6fad275a1dd22f37",
+    "program": "ST2284",
+    "status": "Proven"
+  },
+  "ST2285": {
+    "boundary": "Full S12 would make triangles one orbit but is not a symmetry of W.",
+    "object": "S12Counterfactual",
+    "packet_file": "FIN_ST2285_S12Counterfactual.json",
+    "packet_sha256": "821f3e87947ebc2666cb5469a93682ba7ce2eb36aaad8a8d3c219e8a752c7665",
+    "program": "ST2285",
+    "proposal": "derive universality from S12",
+    "status": "Refuted",
+    "transposition_residual_inf": 0.9178297106471561
+  },
+  "ST2286": {
+    "boundary": "Multiplication by unit 5 permutes cyclic distances with unequal weights and is not a weighted symmetry.",
+    "object": "AffineUnitFailure",
+    "packet_file": "FIN_ST2286_AffineUnitFailure.json",
+    "packet_sha256": "f61b67fce9f554fabb63b1014486f62acfd6bbde1c135900f1fed732cd409e77",
+    "program": "ST2286",
+    "status": "Proven",
+    "unit5_residual_inf": 1.7834177971255603
+  },
+  "ST2287": {
+    "boundary": "One common formula across all weighted graphs is a category-level universality axiom, stronger than Aut(W)-equivariance.",
+    "exported_by_strict_FIN": false,
+    "object": "UniversalityAsExtraNaturality",
+    "packet_file": "FIN_ST2287_UniversalityAsExtraNaturality.json",
+    "packet_sha256": "7a38b27fabce5280bb60c433bf6bfede77ea156b94b4cac2e6cd601c3c46eafa",
+    "program": "ST2287",
+    "status": "Conditional",
+    "universal_graph_functor_would_select_common_formula": true
+  },
+  "ST2288": {
+    "boundary": "The strict carrier provides D12, not a theorem erasing its twelve face orbits.",
+    "object": "A4SourceAudit",
+    "packet_file": "FIN_ST2288_A4SourceAudit.json",
+    "packet_sha256": "22762a8bfb1e9d03e01b8ffb4827aed00eb54bfe014c893d68c0bdfa21d55269",
+    "program": "ST2288",
+    "status": "Repository audit",
+    "strict_A4_source": false
+  },
+  "ST2289": {
+    "boundary": "Face universality is compatible but not unavoidable.",
+    "object": "UniversalityGate",
+    "orbit_moduli": 12,
+    "packet_file": "FIN_ST2289_UniversalityGate.json",
+    "packet_sha256": "d0297626a4708e5decf9382867480a2bc462493a1cbef19f3fbef7d6331a43e0",
+    "program": "ST2289",
+    "status": "Gate fail",
+    "universality_strict": false
+  },
+  "ST2290": {
+    "A4_unavoidable": false,
+    "boundary": "The actual strict symmetry positively supports orbit-dependent face physics; it cannot force A4.",
+    "object": "RoundTwoVerdict",
+    "packet_file": "FIN_ST2290_RoundTwoVerdict.json",
+    "packet_sha256": "3c3d0d5672d5df9a0edd35306dd9f49ac905ef3f8c19b7c844a1c26235cf6054",
+    "program": "ST2290",
+    "status": "Round verdict"
+  },
+  "ST2291": {
+    "boundary": "Replace A3/A4 by a stronger fractal hypothesis and classify normalized multiplicative refinement maps.",
+    "next": [
+      "power valuation theorem",
+      "composition law",
+      "idempotence",
+      "scale-stationary path independence",
+      "nontriviality"
+    ],
+    "object": "RoundTwoRecommendation",
+    "packet_file": "FIN_ST2291_RoundTwoRecommendation.json",
+    "packet_sha256": "fa10319ac6faf89bcf255dbf00fc0db9ab43ae1f6d9ffff1365a6923ce931a81",
+    "program": "ST2291",
+    "status": "Recommendation"
+  }
+}

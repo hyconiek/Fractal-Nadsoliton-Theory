@@ -1,0 +1,208 @@
+{
+  "ST1107": {
+    "boundary": "Only the selected linear laws.",
+    "finite_time_blowup": false,
+    "heat": "exp(-tA) exists for all t>=0",
+    "object": "FiniteLinear_CompleteFlows",
+    "packet_file": "FIN_ST1107_FiniteLinear_CompleteFlows.json",
+    "packet_sha256": "639916ff4afb45f329b657531022cd61ec2c5456db8a3ec8349a0da377b1e172",
+    "program": "ST1107",
+    "status": "proven_finite_matrix_exponentials_are_global",
+    "unitary": "exp(-itA) exists for all real t"
+  },
+  "ST1108": {
+    "boundary": "Standard finite-state theorem applied to Q=-A.",
+    "criterion": "Q_ij>=0 for i!=j and Q1=0",
+    "object": "MarkovGenerator_IffCriterion",
+    "offdiag_min": 0.011070817321442113,
+    "packet_file": "FIN_ST1108_MarkovGenerator_IffCriterion.json",
+    "packet_sha256": "f71700b6cd6ad12451642ac877a39d8bdec1775134da2f0335d2b4bbd758e381",
+    "program": "ST1108",
+    "row_residual": 2.220446049250313e-16,
+    "status": "proven_finite_CTMC_generator_criterion_paid"
+  },
+  "ST1109": {
+    "boundary": "Follows from the Metzler-generator theorem, stronger than sampling times.",
+    "entrywise_nonnegative": true,
+    "killing_rate": 0.0,
+    "object": "StrictHeat_ConservativeCertificate",
+    "packet_file": "FIN_ST1109_StrictHeat_ConservativeCertificate.json",
+    "packet_sha256": "3bc0c0242d3aba9bc3c38712284b43d0b574cd710c17264005208f5324b9d5f7",
+    "program": "ST1109",
+    "semigroup": "P_t=exp(-tA)",
+    "status": "proven_strict_heat_is_positive_and_mass_preserving_for_all_t",
+    "stochastic": true
+  },
+  "ST1110": {
+    "A_selects_gamma": false,
+    "boundary": "Each gamma is additional physics/mathematics.",
+    "family": "Q_gamma=-A-gamma I",
+    "gammas": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "object": "UniformKilling_Counterfamily",
+    "packet_file": "FIN_ST1110_UniformKilling_Counterfamily.json",
+    "packet_sha256": "633fbec6cdbce9a5d3c6bd2f1e3d90f1abbc0a88b520daae416584e6b0b62d06",
+    "program": "ST1110",
+    "status": "proven_one_parameter_killing_extensions_exist",
+    "survival_t1": [
+      0.9900498337491681,
+      0.9048374180359595,
+      0.36787944117144233
+    ]
+  },
+  "ST1111": {
+    "boundary": "Quantum density-state category supplied.",
+    "generator": "L_H(rho)=-i[A,rho]",
+    "invertible": true,
+    "object": "HamiltonianDensity_CompleteFlow",
+    "packet_file": "FIN_ST1111_HamiltonianDensity_CompleteFlow.json",
+    "packet_sha256": "6788451d75e7ad50a1e0e6c0510cb5ee6ec9b5361aaf5c31c5acf6683ed4286e",
+    "positive": true,
+    "program": "ST1111",
+    "status": "proven_hamiltonian_density_flow_is_complete_CPTP_group",
+    "trace_preserving": true
+  },
+  "ST1112": {
+    "boundary": "Rate gamma remains free; this is not selected by A alone.",
+    "gamma_domain": "gamma>=0",
+    "generator": "L_gamma(rho)=-i[A,rho]+gamma(A rho A-1/2{A^2,rho})",
+    "object": "A_Dephasing_LindbladFamily",
+    "packet_file": "FIN_ST1112_A_Dephasing_LindbladFamily.json",
+    "packet_sha256": "e8131408c52862f60cff715fd2635b119fab4f2146fc04bd732b75a37fee8046",
+    "program": "ST1112",
+    "stationary_commutant": true,
+    "status": "constructed_A_sourced_dephasing_family",
+    "trace_preserving": true
+  },
+  "ST1113": {
+    "A_unique_relaxation_law": false,
+    "QW2191_discharged": false,
+    "boundary": "A has five two-dimensional eigenspaces.",
+    "issue": "mapping each excited shell to the ground ray needs a covector/basis or summed noise convention",
+    "object": "RelaxationJump_SelectorObstruction",
+    "packet_file": "FIN_ST1113_RelaxationJump_SelectorObstruction.json",
+    "packet_sha256": "ae06eb2f42dcfd577b7b3ff0dde9c1f63d7028b8804229d1afc68ed4ac567118",
+    "program": "ST1113",
+    "spectral_multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "status": "proven_canonical_relaxation_jump_requires_extra_selector_inside_degenerate_shells"
+  },
+  "ST1114": {
+    "A_commutator_pays_criterion": true,
+    "boundary": "Finite quantum dynamical semigroup.",
+    "criterion": "L*(I)=0",
+    "killing_or_leakage": "L*(I)<0 in a subunital survival model",
+    "object": "TracePreservation_HeisenbergCriterion",
+    "packet_file": "FIN_ST1114_TracePreservation_HeisenbergCriterion.json",
+    "packet_sha256": "0ae51fb8ab5369dca10e499998a8fe0d79bad7c3c05012a679aeef350dd65754",
+    "program": "ST1114",
+    "status": "proven_trace_preservation_equals_Lstar_identity_zero"
+  },
+  "ST1115": {
+    "boundary": "Hamiltonian, dephasing rates, Markov heat and killed laws are inequivalent.",
+    "families": [
+      "unitary",
+      "classical heat",
+      "A-dephasing gamma>=0",
+      "uniform killing gamma>0"
+    ],
+    "object": "InfiniteChannelFamily_Underdetermination",
+    "packet_file": "FIN_ST1115_InfiniteChannelFamily_Underdetermination.json",
+    "packet_sha256": "10d12a3ab7f7ab6b6bde1051d9e185a37fb57373eb49929ab907495efaf43610",
+    "program": "ST1115",
+    "status": "proven_infinitely_many_complete_channels_share_A",
+    "unique_channel": false
+  },
+  "ST1116": {
+    "boundary": "Not an ontological consequence of self-reference.",
+    "classical": "Q1=0",
+    "object": "NoKilling_LinearClassification",
+    "packet_file": "FIN_ST1116_NoKilling_LinearClassification.json",
+    "packet_sha256": "fa01bb0ea2eb8a8cd19608bb6b63304ad44eed1cc484d109f3a935af7de2552a",
+    "program": "ST1116",
+    "quantum": "L*(I)=0",
+    "status": "proven_linear_no_killing_is_a_generator_constraint",
+    "survival_extension": "adjoin cemetery state for missing mass/trace"
+  },
+  "ST1117": {
+    "boundary": "A controls only the linear part; nonlinear growth and boundary behavior require a specified law.",
+    "finite_time_collapse_excluded": false,
+    "full_vector_field": false,
+    "global_Lipschitz_or_coercive_bound": false,
+    "object": "NonlinearBoundary_NotControlled",
+    "packet_file": "FIN_ST1117_NonlinearBoundary_NotControlled.json",
+    "packet_sha256": "158b40715eeb050988328f52f3b237aebc74bde4823b5bf2a151b5a275bb0802",
+    "program": "ST1117",
+    "status": "blocked_no_full_nonlinear_completeness_from_A"
+  },
+  "ST1118": {
+    "boundary": "Compactness alone does not stop a proposed ambient vector field from leaving the set.",
+    "object": "CompactState_NotEnoughForVectorField",
+    "packet_file": "FIN_ST1118_CompactState_NotEnoughForVectorField.json",
+    "packet_sha256": "b3548238b12a23406ac29dbe815efbc1f48ca12635939d1139c0acbc1fe22522",
+    "program": "ST1118",
+    "required": [
+      "tangency/inward condition",
+      "regularity",
+      "global solution"
+    ],
+    "status": "proven_compact_state_space_needs_tangent_invariant_vector_field",
+    "supplied_by_A_for_unknown_nonlinearity": false
+  },
+  "ST1119": {
+    "boundary": "No universal theorem over future nonlinear/open extensions.",
+    "closed": [
+      "unitary norm",
+      "classical heat mass",
+      "density unitary trace",
+      "A-dephasing trace"
+    ],
+    "object": "StrictNoKilling_CurrentScope",
+    "open": [
+      "full nadsoliton nonlinearity",
+      "state-dependent environment",
+      "boundary sectors"
+    ],
+    "packet_file": "FIN_ST1119_StrictNoKilling_CurrentScope.json",
+    "packet_sha256": "2e62e1c2f4d6bda0cb14f8d71ccbb8a8554b6d90b24565a36d5b2b835899c58a",
+    "program": "ST1119",
+    "status": "strict_no_killing_proven_only_for_declared_linear_channels"
+  },
+  "ST1120": {
+    "boundary": "The linear channels are complete but mutually incompatible as state ontologies.",
+    "full_FIN_completeness": false,
+    "linear_completeness": true,
+    "object": "CompletenessBridge_Verdict",
+    "packet_file": "FIN_ST1120_CompletenessBridge_Verdict.json",
+    "packet_sha256": "ee07b8e1ee2bfc458ed66a1b002bd8e1a1cd8837ddbc9cc0d3f50b75670745e2",
+    "program": "ST1120",
+    "selection_from_A": false,
+    "status": "kernel_to_complete_full_flow_bridge_open_and_nonunique"
+  },
+  "ST1121": {
+    "boundary": "Next round tests whether heat can be internalized without an external pump.",
+    "next": [
+      "edge-current continuity",
+      "entropy production",
+      "stationary-current no-go",
+      "Kraus dilation",
+      "finite-environment recurrence obstruction",
+      "internal resource verdict"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1121_RoundTwo_Recommendation.json",
+    "packet_sha256": "10a549e27743a7b1fde04197fd6ef0e0db4efc45589b456f11a3c30203d3af8f",
+    "program": "ST1121",
+    "status": "recommended_ST1122_ST1136"
+  }
+}

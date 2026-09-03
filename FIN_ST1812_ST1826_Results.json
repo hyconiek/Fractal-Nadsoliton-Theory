@@ -1,0 +1,152 @@
+{
+  "ST1812": {
+    "boundary": "One edge per nonzero unordered coupling.",
+    "edges": 66,
+    "object": "WeightedIncidence",
+    "packet_file": "FIN_ST1812_WeightedIncidence.json",
+    "packet_sha256": "6309a8b577824c4c2f02bd316c1d0e11750645b20ac691b136354efc354423ce",
+    "program": "ST1812",
+    "status": "constructed_weighted_first_order_incidence_from_strict_A_support",
+    "vertices": 12,
+    "weight_max": 0.4699856726450201,
+    "weight_min": 0.011070817321442113
+  },
+  "ST1813": {
+    "boundary": "Analytic edge-sum identity.",
+    "identity": "A=d_W^* d_W",
+    "object": "DirichletFactorization",
+    "packet_file": "FIN_ST1813_DirichletFactorization.json",
+    "packet_sha256": "631211a762300a3ccacb5076a49ee88bfee49fe864e8af79131b5485548e6e4d",
+    "program": "ST1813",
+    "residual": 5.134781488891349e-16,
+    "status": "proven_exact_Dirichlet_factorization_numerically_replayed"
+  },
+  "ST1814": {
+    "U_ij": "unit complex phase",
+    "U_ji": "conjugate U_ij",
+    "boundary": "Conditional localization of global phase symmetry.",
+    "object": "LinkVariableDefinition",
+    "packet_file": "FIN_ST1814_LinkVariableDefinition.json",
+    "packet_sha256": "79af0e8c8c551e5de57cb5c777dd697a8d388e174a55ac195bb3688c4eda337e",
+    "program": "ST1814",
+    "status": "constructed_U1_link_connection_on_every_weighted_edge"
+  },
+  "ST1815": {
+    "U": "U_ij -> g_i U_ij g_j^-1",
+    "boundary": "Local U(1).",
+    "object": "GaugeTransformation",
+    "packet_file": "FIN_ST1815_GaugeTransformation.json",
+    "packet_sha256": "ea2301bca25b57b8b21ea54b20fc5ee066bfe3d824206eca381fb860dfd55857",
+    "program": "ST1815",
+    "psi": "psi_i -> g_i psi_i",
+    "status": "constructed_vertex_gauge_action_on_fields_and_links"
+  },
+  "ST1816": {
+    "D_Upsi": "psi_i-U_ij psi_j",
+    "boundary": "Direct substitution.",
+    "law": "(D_U psi)'_ij=g_i(D_U psi)_ij",
+    "object": "GaugeCovariance",
+    "packet_file": "FIN_ST1816_GaugeCovariance.json",
+    "packet_sha256": "908c2819c9d7e41e97ccfed85e3700da5d513a152f70dc3fb3084f99fddb755e",
+    "program": "ST1816",
+    "status": "proven_edge_covariant_difference_transforms_at_source_vertex"
+  },
+  "ST1817": {
+    "action": "S=1/2 sum_ij w_ij |psi_i-U_ij psi_j|^2",
+    "boundary": "No continuum approximation.",
+    "object": "GaugeInvariantMatterAction",
+    "packet_file": "FIN_ST1817_GaugeInvariantMatterAction.json",
+    "packet_sha256": "0e570cded62334ec1a73377f6cbe4314b2f518a9ee99188bd58f5a5f73438794",
+    "program": "ST1817",
+    "status": "proven_minimal_link_matter_action_is_exactly_gauge_invariant"
+  },
+  "ST1818": {
+    "Hermitian_residual": 1.445988344246763e-17,
+    "boundary": "Any U(1) links.",
+    "lambda_min": 0.3731000208341305,
+    "object": "CovariantLaplacian",
+    "packet_file": "FIN_ST1818_CovariantLaplacian.json",
+    "packet_sha256": "c535b9ba2330c4e0c0dd69621ef8e5c1013b80bec089e7e3c89360ff20a555ce",
+    "program": "ST1818",
+    "status": "proven_covariant_laplacian_is_Hermitian_positive_semidefinite"
+  },
+  "ST1819": {
+    "boundary": "Exact finite replay.",
+    "object": "ZeroConnectionRecovery",
+    "packet_file": "FIN_ST1819_ZeroConnectionRecovery.json",
+    "packet_sha256": "90a65ea1e48ee8468983a9d45b2b4ee221751751c48642c5dbae3c7cbbf6d722",
+    "program": "ST1819",
+    "residual": 5.134781488891349e-16,
+    "status": "proven_trivial_connection_recovers_strict_A"
+  },
+  "ST1820": {
+    "EOM": "A_U psi + V'(|psi|^2)psi = J",
+    "boundary": "Single action source.",
+    "object": "GaugeCovariantEulerEquation",
+    "packet_file": "FIN_ST1820_GaugeCovariantEulerEquation.json",
+    "packet_sha256": "8a89a3f76b75f383aba0a57dbf5aec586645a7616c618531ed7e654ae9780ccf",
+    "program": "ST1820",
+    "status": "proven_literal_variation_gives_A_U_psi_plus_radial_potential_equals_source"
+  },
+  "ST1821": {
+    "boundary": "Mass/quartic radial terms allowed.",
+    "does_not_fix_coefficients": true,
+    "object": "PotentialCompatibility",
+    "packet_file": "FIN_ST1821_PotentialCompatibility.json",
+    "packet_sha256": "4da26e15f0d32841b4e6c3a00403887740459ffdbf572e774ee4a9ce5446b5f1",
+    "program": "ST1821",
+    "status": "proven_any_vertex_local_potential_V_of_abspsi2_is_gauge_invariant"
+  },
+  "ST1822": {
+    "action_after": 19.460855350396848,
+    "action_before": 19.460855350396848,
+    "boundary": "Independent numerical witness.",
+    "object": "NumericalGaugeReplay",
+    "packet_file": "FIN_ST1822_NumericalGaugeReplay.json",
+    "packet_sha256": "db2511ef5cfea7de4c2bb3b099ac319d13722db3cd8de0bbbfaac90986c716b3",
+    "program": "ST1822",
+    "residual": 0.0,
+    "status": "proven_random_finite_gauge_replay_to_machine_precision"
+  },
+  "ST1823": {
+    "boundary": "Orientation is bookkeeping.",
+    "object": "OrientationIndependence",
+    "packet_file": "FIN_ST1823_OrientationIndependence.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1823",
+    "status": "proven_edge_orientation_choice_does_not_change_matter_action"
+  },
+  "ST1824": {
+    "boundary": "No APD quotient/poles.",
+    "configuration_space": "U(1)^66 x C^12",
+    "object": "GlobalRegularity",
+    "packet_file": "FIN_ST1824_GlobalRegularity.json",
+    "packet_sha256": "919c96cf8ba0bfa98448986f659e74a10a6cccf9099285764c09cc7fa84a7af2",
+    "program": "ST1824",
+    "status": "proven_direct_link_action_is_globally_regular_on_compact_U1_edge_torus"
+  },
+  "ST1825": {
+    "Maxwell_Wilson_action": false,
+    "boundary": "Link phases are nondynamical until a face/cycle action is supplied.",
+    "object": "MissingGaugeKinetic",
+    "packet_file": "FIN_ST1825_MissingGaugeKinetic.json",
+    "packet_sha256": "110fc388997c5792b77daab01d45e1049a7376c21bfe29d3df42e7d2417abf02",
+    "program": "ST1825",
+    "status": "gauge_matter_action_contains_no_dynamical_gauge_curvature_term"
+  },
+  "ST1826": {
+    "boundary": "Falsify uniqueness: gauge group, charge, calculus and connection source.",
+    "next": [
+      "group alternatives",
+      "charge aliases",
+      "factorization freedom",
+      "complexification premise",
+      "flat connection selection"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1826_RoundOne_Recommendation.json",
+    "packet_sha256": "0abed11643ece48767bb3d09e13c8038a033bf2059240ba928de0953be481712",
+    "program": "ST1826",
+    "status": "recommended_ST1827_ST1841"
+  }
+}

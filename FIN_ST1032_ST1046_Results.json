@@ -1,0 +1,198 @@
+{
+  "ST1032": {
+    "boundary": "General mathematical obstruction; no FIN-specific fixed-point law is assumed.",
+    "counterexample": "F(x)=2x has fixed point 0 but multiplier 2",
+    "fixed_point": 0.0,
+    "object": "Bootstrap_FixedPoint_NotStability",
+    "packet_file": "FIN_ST1032_Bootstrap_FixedPoint_NotStability.json",
+    "packet_sha256": "e6d25e2634c221a753ac4238fcf60d51c15a9d2091396d1b3a5f60ae8be8690f",
+    "program": "ST1032",
+    "spectral_radius_derivative": 2.0,
+    "status": "proven_fixed_point_existence_does_not_imply_dynamical_stability"
+  },
+  "ST1033": {
+    "boundary": "Identity-map toy model.",
+    "fixed_point_set": "all x",
+    "lesson": "bootstrap equality alone supplies neither uniqueness nor persistence",
+    "map": "F(x)=x",
+    "object": "IdentityMap_MaximalNonselection",
+    "packet_file": "FIN_ST1033_IdentityMap_MaximalNonselection.json",
+    "packet_sha256": "495ec5e7cd3e9d28b4a97085c455b4118dd70a24eac029a73c77f340e7e3ee38",
+    "program": "ST1033",
+    "selector_exported": false,
+    "status": "proven_self_consistency_can_fail_to_select"
+  },
+  "ST1034": {
+    "boundary": "Discrete iteration example.",
+    "map": "F(x)=2x",
+    "object": "UnstableSelfConsistentFixedPoint",
+    "orbit_x0_0.1_after_5": 3.2,
+    "packet_file": "FIN_ST1034_UnstableSelfConsistentFixedPoint.json",
+    "packet_sha256": "8312c409810a70c18763ea9d3eb0aeeef0ec37b48b8c425a3049535be92f97c1",
+    "program": "ST1034",
+    "stable": false,
+    "status": "proven_unique_bootstrap_can_be_unstable",
+    "unique_fixed_point": 0.0
+  },
+  "ST1035": {
+    "boundary": "Conditional architecture; contraction is not strict-sourced.",
+    "error_12": 0.000244140625,
+    "fixed_point": 1.0,
+    "iteration_12": 0.999755859375,
+    "map": "F(x)=x/2+1/2",
+    "object": "Contraction_StableBootstrap",
+    "packet_file": "FIN_ST1035_Contraction_StableBootstrap.json",
+    "packet_sha256": "f2b6d7e5e3c7134616e7c23652ee0d26389dc8c7b02c8f9eaae2f5a7953c2a7c",
+    "program": "ST1035",
+    "status": "proven_contraction_bootstrap_is_unique_and_attracting",
+    "theorem": "Banach contraction gives existence, uniqueness, and convergence"
+  },
+  "ST1036": {
+    "boundary": "Counterexample to verbal self-sourcing arguments.",
+    "law": "x_dot=-x (state determines its own decay rate)",
+    "limit_zero": true,
+    "object": "SelfSourcing_CollapseCounterexample",
+    "packet_file": "FIN_ST1036_SelfSourcing_CollapseCounterexample.json",
+    "packet_sha256": "f5cadb11cf311469f7604d800c257ddcbdd5c041f96b54b454ef0716c8a12897",
+    "program": "ST1036",
+    "status": "proven_self_coupling_can_still_decay_to_zero",
+    "x0": 1.0,
+    "x_t10": 4.5399929762484854e-05
+  },
+  "ST1037": {
+    "J_row_sum_residual": 0.0,
+    "J_skew_residual": 0.0,
+    "boundary": "Three-sector toy model, not derived from strict A.",
+    "norm2_after": 1.200000000000092,
+    "norm2_initial": 1.2000000000000002,
+    "object": "ClosedSkewCirculation",
+    "packet_file": "FIN_ST1037_ClosedSkewCirculation.json",
+    "packet_sha256": "02e9dd157b46ccd8ce2d70307750056039cd7e63d65d60bffc71b137db6e295b",
+    "program": "ST1037",
+    "status": "proven_closed_skew_circulation_preserves_global_quadratic_resource",
+    "total_after": 0.8000000000000004,
+    "total_initial": 0.7999999999999999
+  },
+  "ST1038": {
+    "boundary": "A subsystem pump is admissible only with its source sector and backreaction included.",
+    "external_creation": false,
+    "global_rate": 2.7755575615628914e-17,
+    "object": "InternalPump_GlobalConservation",
+    "packet_file": "FIN_ST1038_InternalPump_GlobalConservation.json",
+    "packet_sha256": "55a6bf650dea110586464da5699845dcf1f03e582de4a6467402f36551ac6bdd",
+    "program": "ST1038",
+    "sector_rate": [
+      -0.3,
+      0.1,
+      0.2
+    ],
+    "status": "constructed_internal_pump_as_zero_sum_transfer"
+  },
+  "ST1039": {
+    "boundary": "Requires an internal partition and coupling; it does not derive a FIN environment.",
+    "global_conserved": true,
+    "lesson": "local death does not entail death of the whole nadsoliton",
+    "model": "amplitude/information leaves subsystem S and enters internal sector E",
+    "object": "SubsystemDissipation_GlobalPersistence",
+    "packet_file": "FIN_ST1039_SubsystemDissipation_GlobalPersistence.json",
+    "packet_sha256": "ce5c91a1b1ac07dd0858de629244db91463e3ee0f1e54d1f7402b59530d22755",
+    "program": "ST1039",
+    "status": "proven_effective_subsystem_decay_is_compatible_with_total_persistence",
+    "subsystem_monotone_possible": true
+  },
+  "ST1040": {
+    "boundary": "Two-qubit Bell-state witness, used only as a finite information theorem.",
+    "global_entropy": -0.0,
+    "global_spectrum": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "object": "GlobalPure_SubsystemMixed",
+    "packet_file": "FIN_ST1040_GlobalPure_SubsystemMixed.json",
+    "packet_sha256": "16ad065703d8237a35008bedd2314d2af7da34f6bfc844694414fd10a7c667c2",
+    "program": "ST1040",
+    "reduced_spectrum": [
+      0.5,
+      0.5
+    ],
+    "status": "proven_global_purity_can_coexist_with_subsystem_entropy",
+    "subsystem_entropy": 0.6931471805599453
+  },
+  "ST1041": {
+    "boundary": "Choice of observable algebra/basis is an additional operational structure.",
+    "object": "CoarsePinching_InformationLoss",
+    "packet_file": "FIN_ST1041_CoarsePinching_InformationLoss.json",
+    "packet_sha256": "76c9d4885a8458d2bfb3bb674b267a22fa14aa8e83c412c3294a98b8eb4578be",
+    "program": "ST1041",
+    "purity_after": 0.5,
+    "purity_before": 1.0,
+    "status": "proven_pinching_erases_accessible_coherence_without_erasing_state",
+    "trace_after": 1.0,
+    "trace_before": 1.0
+  },
+  "ST1042": {
+    "boundary": "Recurrence requires a finite/discrete spectral setting and says nothing about ontology outside the model.",
+    "does_not_protect": "a named localized identity at every time",
+    "mechanism": "compact torus of finitely many eigenphases",
+    "object": "FiniteClosed_AlmostRecurrence",
+    "packet_file": "FIN_ST1042_FiniteClosed_AlmostRecurrence.json",
+    "packet_sha256": "28db56b595904e51f3d547e12ea2caa23e4b261b2b275565e4ce478213ae52e7",
+    "program": "ST1042",
+    "protects": "arbitrarily close returns",
+    "status": "proven_finite_closed_unitary_has_almost_recurrence_not_immortality_theorem"
+  },
+  "ST1043": {
+    "boundary": "Scalar counterexamples.",
+    "correct_object": "invariant complete dynamics, not the sign word 'positive'",
+    "not_necessary": "x_dot=Jx with J skew preserves norm without positive gain",
+    "not_sufficient": "x_dot=x blows up and need not define a complete total state",
+    "object": "PositiveFeedback_NotPersistence",
+    "packet_file": "FIN_ST1043_PositiveFeedback_NotPersistence.json",
+    "packet_sha256": "1d1725ee39f9514a7c839b4e4067c2887820f742f5f9ede9914fb18a93e6e43e",
+    "program": "ST1043",
+    "status": "proven_positive_feedback_is_neither_necessary_nor_sufficient"
+  },
+  "ST1044": {
+    "boundary": "Conditional theorem, not a strict FIN closure.",
+    "conclusion": "a unique/stable self-consistent state persists inside K",
+    "object": "BootstrapPersistence_MinimalTheorem",
+    "packet_file": "FIN_ST1044_BootstrapPersistence_MinimalTheorem.json",
+    "packet_sha256": "cba24280d9f914cdbd9b3affbbe8c160794a14dbbb0ef5c639d0beb7e908210f",
+    "premises": [
+      "F maps a complete invariant set K into itself",
+      "F is a contraction or has certified stable index",
+      "the generated evolution is globally well posed",
+      "K excludes the annihilation boundary"
+    ],
+    "program": "ST1044",
+    "status": "constructed_bootstrap_persistence_theorem_schema"
+  },
+  "ST1045": {
+    "boundary": "Current repository has self-reference language but no single certified full-state contraction/index/completeness theorem.",
+    "object": "CurrentFIN_BootstrapGap",
+    "packet_file": "FIN_ST1045_CurrentFIN_BootstrapGap.json",
+    "packet_sha256": "2b2962073a9979da6bd70584f1acaba943258622efe64d17006d1806b5ac2e1a",
+    "program": "ST1045",
+    "status": "blocked_no_strict_bootstrap_stability_source",
+    "strict_fixed_point_map": false,
+    "strict_internal_resource_partition": false,
+    "strict_stability_certificate": false
+  },
+  "ST1046": {
+    "boundary": "Next round asks what total annihilation could mean to an observer who is inside the total state.",
+    "next": [
+      "record and observer typing",
+      "vacuum versus nonexistence",
+      "coarse blindness and pattern death",
+      "dual unitary/heat channels",
+      "internal falsifiability obstruction"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1046_RoundThree_Recommendation.json",
+    "packet_sha256": "2bce93d4f22403b6183dc4401e976d2b5724f395c0a1977e78d399d2adfcba21",
+    "program": "ST1046",
+    "status": "recommended_ST1047_ST1061"
+  }
+}

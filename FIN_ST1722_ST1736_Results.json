@@ -1,0 +1,238 @@
+{
+  "ST1722": {
+    "boundary": "Uses AGENTS, two requested drafts, kernel split notes and current state maps.",
+    "bridge": "APD-completed local moment transport",
+    "lagrangian": "coefficient scaffold",
+    "object": "RepositoryStateMap",
+    "open": [
+      "global bridge source",
+      "gauge closure",
+      "tensor EOM",
+      "units",
+      "selector",
+      "OA evidence"
+    ],
+    "packet_file": "FIN_ST1722_RepositoryStateMap.json",
+    "packet_sha256": "a96855b667e6c1939f48ac7cdee93521bc7850b4c471c2bcfb41ca6931216cb5",
+    "program": "ST1722",
+    "status": "constructed_current_repository_claim_dependency_map",
+    "strict_core": "dimensionless finite kernel/operator results"
+  },
+  "ST1723": {
+    "boundary": "Literal equations in requested drafts.",
+    "count": 10,
+    "object": "DisplayedActionTermLedger",
+    "packet_file": "FIN_ST1723_DisplayedActionTermLedger.json",
+    "packet_sha256": "7fa8493c6f0c7544399389991ccbd1bf8794fff85bd15ac496de8b42ae871e55",
+    "program": "ST1723",
+    "status": "constructed_displayed_covariant_action_term_ledger",
+    "terms": [
+      "phi_kinetic",
+      "phi_mass",
+      "phi_quartic",
+      "xi_phi2_R",
+      "fermion_Dirac",
+      "y_phi_psipsi",
+      "Maxwell_F2",
+      "g_A2_phi2",
+      "Einstein_R",
+      "Lambda"
+    ]
+  },
+  "ST1724": {
+    "boundary": "Rows E_phi,E_H,E_A,E_psi,E_g.",
+    "count": 20,
+    "object": "ClaimedEOMTermLedger",
+    "packet_file": "FIN_ST1724_ClaimedEOMTermLedger.json",
+    "packet_sha256": "630b0249fe51974585b16d9994b997b455f9b2ba84e9c3cd6f7e02190409e716",
+    "program": "ST1724",
+    "status": "constructed_claimed_covariant_EOM_term_ledger",
+    "terms": [
+      "box_phi",
+      "mphi2_phi",
+      "lambda3_phi2",
+      "lambda4_phi3",
+      "phi_H_mixing",
+      "xi_phiR_Rphi",
+      "D2_H",
+      "muH2_H",
+      "lambdaH_H3",
+      "xiHR_RH",
+      "Yukawa_H",
+      "Maxwell",
+      "J_current",
+      "chiRG_d_RF",
+      "Dirac",
+      "yf_Hpsi",
+      "Einstein",
+      "Lambda",
+      "curvature_squared_tensor",
+      "T_SM_mix"
+    ]
+  },
+  "ST1725": {
+    "boundary": "Literal term-name/source audit.",
+    "claimed_count": 20,
+    "coverage_fraction": 0.4,
+    "directly_sourced_count": 8,
+    "object": "ActionEOMCoverageMatrix",
+    "packet_file": "FIN_ST1725_ActionEOMCoverageMatrix.json",
+    "packet_sha256": "d7e6bc69fb07ea7feef53c1dc152d65ed3291f54f6de66f96af019daf7482513",
+    "program": "ST1725",
+    "status": "proven_displayed_action_does_not_source_all_claimed_covariant_EOM_rows"
+  },
+  "ST1726": {
+    "boundary": "Not merely missing notation.",
+    "object": "UnsourcedEOMTerms",
+    "packet_file": "FIN_ST1726_UnsourcedEOMTerms.json",
+    "packet_sha256": "9a1acad7b31693fe7d14ea0c5228a51400c6ce843ef18d51496bbee5fbeac1f8",
+    "program": "ST1726",
+    "status": "proven_multiple_claimed_EOM_terms_require_additional_action_terms",
+    "unsourced_or_different_field_terms": [
+      "D2_H",
+      "J_current",
+      "T_SM_mix",
+      "Yukawa_H",
+      "chiRG_d_RF",
+      "curvature_squared_tensor",
+      "lambda3_phi2",
+      "lambdaH_H3",
+      "muH2_H",
+      "phi_H_mixing",
+      "xiHR_RH",
+      "yf_Hpsi"
+    ]
+  },
+  "ST1727": {
+    "boundary": "Compact template has it; later sector sheet does not.",
+    "missing_rows": [
+      "E_phi contribution -g_eff A^2 phi",
+      "E_A contribution +g_eff phi^2 A_mu"
+    ],
+    "object": "UnexportedDisplayedInteractionRows",
+    "packet_file": "FIN_ST1727_UnexportedDisplayedInteractionRows.json",
+    "packet_sha256": "0fefc3ac89b1c0cf0a1c5d6824c7fdf8c319a532b67a6d45e86998150bbe317d",
+    "program": "ST1727",
+    "status": "proven_displayed_A2phi2_interaction_is_not_explicitly_carried_by_covariant_sector_rows"
+  },
+  "ST1728": {
+    "boundary": "Unless A is Proca or extra Higgs/Stueckelberg structure is supplied.",
+    "generic_zero": false,
+    "object": "GaugeVariationNoGo",
+    "packet_file": "FIN_ST1728_GaugeVariationNoGo.json",
+    "packet_sha256": "c1a8dcc768e845a015750b9bdc18c39e5354eb22e02ec65762df0d9bb47b1fee",
+    "program": "ST1728",
+    "status": "proven_A_mu_A_mu_phi2_term_breaks_local_Abelian_gauge_invariance_off_shell",
+    "variation": "delta L = g_eff phi^2 A^mu partial_mu alpha = -g_eff alpha partial_mu(phi^2 A^mu)+boundary"
+  },
+  "ST1729": {
+    "boundary": "Ward identity failure.",
+    "defect": "g_eff partial_mu(phi^2 A^mu)",
+    "identically_zero": false,
+    "object": "WardIdentityDefect",
+    "packet_file": "FIN_ST1729_WardIdentityDefect.json",
+    "packet_sha256": "aa22e8e1b436a806ec7185012b6605ac0f5b5e39e44c3b0fd414484d44e4766a",
+    "program": "ST1729",
+    "status": "proven_gauge_EOM_divergence_contains_nonzero_constraint_defect"
+  },
+  "ST1730": {
+    "Proca_option": "drop gauge/BRST claim",
+    "boundary": "Current draft does not type the choice.",
+    "gauge_repair": [
+      "complex charged scalar with |Dphi|^2",
+      "Higgs/Stueckelberg phase"
+    ],
+    "object": "GaugeOrProcaFork",
+    "packet_file": "FIN_ST1730_GaugeOrProcaFork.json",
+    "packet_sha256": "87816443ca2e6b4a36e75109b252621e8b2fd948f258dacccf0cc420af1032c4",
+    "program": "ST1730",
+    "status": "constructed_unavoidable_gauge_or_Proca_interpretation_fork",
+    "strict_source_for_repair": false
+  },
+  "ST1731": {
+    "boundary": "Does not source rho,p,H,Lambda or validate tensor equations.",
+    "object": "FRWResidualTautologyBoundary",
+    "packet_file": "FIN_ST1731_FRWResidualTautologyBoundary.json",
+    "packet_sha256": "975e6bff3a186b9a32f8fb228844a7cfca04416e24036041669ba9ac6402e4d7",
+    "physical_solution_theorem": false,
+    "program": "ST1731",
+    "status": "proven_solving_FRW_residual_rows_and_substituting_back_is_algebraic_normal_form_not_background_derivation",
+    "zero_after_substitution": true
+  },
+  "ST1732": {
+    "boundary": "Integer Z12 carrier avoids these poles.",
+    "global_bounded_completion": false,
+    "legacy_zero_family": "d=4/3+4k",
+    "object": "APDContinuumPoleWarning",
+    "packet_file": "FIN_ST1732_APDContinuumPoleWarning.json",
+    "packet_sha256": "3056339cf6a888e118ff58e45b13d4c6db350ccd1291bc7ed596cfd908a98f79",
+    "program": "ST1732",
+    "status": "proven_APD_ratio_has_continuum_poles_at_legacy_cosine_zeros_with_nonzero_strict_target",
+    "witnesses": [
+      {
+        "K_strict": 0.342391717824373,
+        "d": 1.3333333333333333
+      },
+      {
+        "K_strict": 0.01899603464268229,
+        "d": 5.333333333333333
+      },
+      {
+        "K_strict": -0.00563504734414846,
+        "d": 9.333333333333334
+      }
+    ]
+  },
+  "ST1733": {
+    "boundary": "d_ref=1 and d normalization are extra choices.",
+    "canonical_length_source": false,
+    "object": "MomentReferenceWarning",
+    "packet_file": "FIN_ST1733_MomentReferenceWarning.json",
+    "packet_sha256": "e08a1d9f4be973aa49bd679ad584b13b782e8a8914b2c34d2e1769830caa8508",
+    "program": "ST1733",
+    "status": "proven_three_derivative_moments_depend_on_arbitrary_reference_coordinate_and_scale",
+    "under_dprime_a_d": "c1 scales as 1/a and c2 as 1/a^2 when expressed in dprime"
+  },
+  "ST1734": {
+    "boundary": "Kernel supplies multiplicative factors, not physical coefficients.",
+    "free": [
+      "m2",
+      "lambda",
+      "y",
+      "g",
+      "xi"
+    ],
+    "object": "FreeBaseCouplingWarning",
+    "packet_file": "FIN_ST1734_FreeBaseCouplingWarning.json",
+    "packet_sha256": "efb74ede1f71e5da8be67b8e50748067b9a74205b2e4e3a7cca48808b88a6c39",
+    "program": "ST1734",
+    "status": "proven_effective_coupling_map_retains_five_free_base_couplings",
+    "unique_physics": false
+  },
+  "ST1735": {
+    "all_EOM_from_action": false,
+    "boundary": "Scaffold remains usable only as mixed-lineage conditional ansatz.",
+    "full_action_derived": false,
+    "gauge_covariant": false,
+    "object": "RoundOne_Verdict",
+    "packet_file": "FIN_ST1735_RoundOne_Verdict.json",
+    "packet_sha256": "b52c2d6b0853f331075d4539ee4b2df11daf690c12a242119b5586c4fbd7b573",
+    "program": "ST1735",
+    "status": "round_one_falsifies_current_draft_as_single_derived_gauge_covariant_Ltotal"
+  },
+  "ST1736": {
+    "boundary": "Highest-value next target is APD completion: test triviality, domain and positivity.",
+    "next": [
+      "finite diagonal completion theorem",
+      "continuum pole theorem",
+      "local germ status",
+      "positivity/channel test",
+      "regular repair obstruction"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1736_RoundOne_Recommendation.json",
+    "packet_sha256": "936512578b97fb81cefc1a40ab22f20001af85d45f704ad657138bfde1f11472",
+    "program": "ST1736",
+    "status": "recommended_ST1737_ST1751"
+  }
+}

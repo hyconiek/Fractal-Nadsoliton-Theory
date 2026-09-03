@@ -1,0 +1,16 @@
+program,status,object,boundary
+ST2772,Proven,HoldingTimeLaw,"At state x, T~Exp(c lambda_x)."
+ST2773,Defined,ExposureVariable,u=lambda_x T has Exp(c).
+ST2774,Proven,ClockLikelihood,logL=n log c-c sum u.
+ST2775,Proven,ClockMLE,c_hat=n/sum u.
+ST2776,Proven,ClockFisher,I_n(c)=n/c^2.
+ST2777,Proven,CramerRao,Var>=c^2/n.
+ST2778,Conditional,SyntheticPrecision,100 waits permit ~10 percent relative one-sigma scale.
+ST2779,Boundary,TimestampCalibration,T requires calibrated external clock ticks.
+ST2780,No-go,StateSequenceInsufficiency,Visited states alone give zero scale information.
+ST2781,Proven,DurationRequirement,Counts require known calibrated observation duration.
+ST2782,Boundary,IndependentCustody,Hashed timestamps do not create independent custody.
+ST2783,Executable spec,OAFields,"run,state_before,state_after,wait,timestamp,config,clock_calibration."
+ST2784,No-go,DimensionConversion,Conversion to seconds remains CA.
+ST2785,Round verdict,RoundFiveVerdict,Clock rate is statistically identifiable only after the missing calibrated time record is supplied.
+ST2786,Recommendation,RoundFiveRecommendation,Synthesize.

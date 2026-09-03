@@ -1,0 +1,153 @@
+{
+  "ST1677": {
+    "boundary": "Finite grid and deterministic schedule.",
+    "decisions": [
+      "Q_MIXTURE",
+      "C_ALL_GRID",
+      "CONTINUE",
+      "INVALID"
+    ],
+    "object": "ThreeDecisionRule",
+    "packet_file": "FIN_ST1677_ThreeDecisionRule.json",
+    "packet_sha256": "285c58b3664f49145fde39cde0af8cdee9033d31f6352ca16202bb4d8382eee8",
+    "program": "ST1677",
+    "status": "constructed_Q_mixture_C_all_grid_continue_decision_rule"
+  },
+  "ST1678": {
+    "boundary": "Prior-weighted LR e-process.",
+    "object": "MixtureQBoundary",
+    "packet_file": "FIN_ST1678_MixtureQBoundary.json",
+    "packet_sha256": "1eac850fba3b66628089f160f6a3946cb1478c52fa0d0f904dbbfcbd9e2325a2",
+    "program": "ST1678",
+    "status": "proven_mixture_boundary_is_anytime_valid_under_C",
+    "wrong_Q_probability_at_most": 0.01
+  },
+  "ST1679": {
+    "boundary": "Equivalent max_j LR_j<=alpha.",
+    "object": "AllGridCBoundary",
+    "packet_file": "FIN_ST1679_AllGridCBoundary.json",
+    "packet_sha256": "59f3d33c89bcb6ffaf54043ef6a7a0073b906bee31514dc4d2ac2389504a0123",
+    "program": "ST1679",
+    "status": "constructed_uniform_C_boundary_as_all_component_LRs_below_alpha"
+  },
+  "ST1680": {
+    "boundary": "Ville.",
+    "object": "ClassicalWrongQBound",
+    "packet_file": "FIN_ST1680_ClassicalWrongQBound.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1680",
+    "status": "proven_classical_wrong_Q_boundary_probability_at_most_one_percent"
+  },
+  "ST1681": {
+    "boundary": "Event all LR<=alpha implies true component inverse LR>=1/alpha.",
+    "object": "GridQWrongCBound",
+    "packet_file": "FIN_ST1681_GridQWrongCBound.json",
+    "packet_sha256": "119c58c777beffa73dd371c10faa4ad8526604951e9a8bff275939be2302aed6",
+    "program": "ST1681",
+    "status": "proven_each_true_grid_Q_component_has_wrong_C_boundary_probability_at_most_one_percent",
+    "uniform_over_grid": true
+  },
+  "ST1682": {
+    "boundary": "If all component LR<=.01 then mixture LR<=.01, not >=100.",
+    "object": "MutualExclusivity",
+    "packet_file": "FIN_ST1682_MutualExclusivity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1682",
+    "status": "proven_Q_and_C_boundaries_are_mutually_exclusive"
+  },
+  "ST1683": {
+    "boundary": "Neither boundary need be reached.",
+    "object": "AbstentionNecessity",
+    "packet_file": "FIN_ST1683_AbstentionNecessity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1683",
+    "status": "proven_abstention_is_required_for_finite_time_symmetric_error_control"
+  },
+  "ST1684": {
+    "boundary": "Code fixture.",
+    "decision": "C_ALL_GRID",
+    "n": 142,
+    "object": "SyntheticClassicalDecision",
+    "packet_file": "FIN_ST1684_SyntheticClassicalDecision.json",
+    "packet_sha256": "2fde1bf1f576bfb5ac13aad2afef6074533c23c54778fc33e9f04d1eb38cc80a",
+    "program": "ST1684",
+    "status": "synthetic_classical_fixture_reaches_C_all_grid_boundary"
+  },
+  "ST1685": {
+    "boundary": "Code fixture.",
+    "decision": "Q_MIXTURE",
+    "n": 35,
+    "object": "SyntheticGridQDecision",
+    "packet_file": "FIN_ST1685_SyntheticGridQDecision.json",
+    "packet_sha256": "24ea89a77c837963f75bf0ff1e1b9555f36feb27ea48d136f9e9ae1b8b53e967",
+    "program": "ST1685",
+    "status": "synthetic_grid_Q_fixture_reaches_Q_mixture_boundary"
+  },
+  "ST1686": {
+    "boundary": "Validator.",
+    "decision": "INVALID",
+    "max_component_logLR": Infinity,
+    "mixture_logLR": -Infinity,
+    "n": 0,
+    "object": "InvalidEvent",
+    "packet_file": "FIN_ST1686_InvalidEvent.json",
+    "packet_sha256": "5c7ed49f1312e3007bf0334e11043f12a153f5dce6637a099054d0bd16b0245a",
+    "program": "ST1686",
+    "status": "proven_invalid_event_fails_closed"
+  },
+  "ST1687": {
+    "boundary": "Model library boundary.",
+    "continuum_valid": false,
+    "object": "OffGridBoundary",
+    "packet_file": "FIN_ST1687_OffGridBoundary.json",
+    "packet_sha256": "5165332caff3bda842d634ae034d7321d32b431bfbbf2bff34d414198a72a943",
+    "program": "ST1687",
+    "status": "finite_grid_C_decision_has_no_uniform_off_grid_Q_error_bound"
+  },
+  "ST1688": {
+    "C_boundary": "sup_theta LR_theta<=alpha",
+    "Q_boundary": "integral LR_theta pi(dtheta)>=1/alpha",
+    "boundary": "Not executable/certified.",
+    "object": "ContinuousAllQTheoremSchema",
+    "packet_file": "FIN_ST1688_ContinuousAllQTheoremSchema.json",
+    "packet_sha256": "8f5b77f2a3ce7bf79f24cedbfd21a07b87b7acff1a61c44acb24f6a8227a246c",
+    "program": "ST1688",
+    "status": "constructed_continuous_symmetric_schema",
+    "validity": "formal if sup/integral exact"
+  },
+  "ST1689": {
+    "boundary": "Reproducibility.",
+    "file": "FIN_ST1677_ST1691_SymmetricFixtures.json",
+    "object": "ArtifactHash",
+    "packet_file": "FIN_ST1689_ArtifactHash.json",
+    "packet_sha256": "145be775b00e0d03fffa9b3d53981e7801935fa516d087de25aad984e5722a84",
+    "program": "ST1689",
+    "sha256": "27834752f4a84af37ccb5013c8147d9a14e59359fefd0534f2f1024e8adfcfae",
+    "status": "constructed_symmetric_fixture_hash"
+  },
+  "ST1690": {
+    "boundary": "Status.",
+    "continuous": false,
+    "finite_grid": true,
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST1690_RoundFour_Verdict.json",
+    "packet_sha256": "7568a6b3d67de254500b5ca5e125e494eee9a245f2028abb5852f8512d17e3de",
+    "program": "ST1690",
+    "status": "symmetric_finite_grid_decision_closed_with_abstention_continuous_implementation_open"
+  },
+  "ST1691": {
+    "boundary": "Add arbitrary vertex misclassification bounds and joint q-clock no-go.",
+    "next": [
+      "column stochastic detector ball",
+      "TV lower bound",
+      "loss augmentation",
+      "q/tau scaling torsor",
+      "calibration necessity"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1691_RoundFour_Recommendation.json",
+    "packet_sha256": "7619a7e3e7d02a9bf9eeefe1826d17f014aa546684704411c9289f24412d74fa",
+    "program": "ST1691",
+    "status": "recommended_ST1692_ST1706"
+  }
+}

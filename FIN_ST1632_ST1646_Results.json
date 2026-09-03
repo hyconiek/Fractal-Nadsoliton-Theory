@@ -1,0 +1,154 @@
+{
+  "ST1632": {
+    "L_A": "-i ad_A -(gamma/2) ad_A^2",
+    "boundary": "Hilbert-Schmidt operator space.",
+    "gamma_range": [
+      0,
+      100
+    ],
+    "object": "DephasingGenerator",
+    "packet_file": "FIN_ST1632_DephasingGenerator.json",
+    "packet_sha256": "230da9e6107a01091b14768cb092dc25b63f8f111556577d0842b7bb09da9446",
+    "program": "ST1632",
+    "status": "constructed_A_dephasing_Lindblad_generator"
+  },
+  "ST1633": {
+    "bound": "||ad_B-ad_A||<=2 epsilon",
+    "boundary": "A,B self-adjoint.",
+    "object": "CommutatorPerturbation",
+    "packet_file": "FIN_ST1633_CommutatorPerturbation.json",
+    "packet_sha256": "6eb4835aeb5dc1329295010f28cfcbaf18a4ca9c07954106e72ca1ebbdf7cddc",
+    "program": "ST1633",
+    "status": "proven_commutator_superoperator_perturbation_bound"
+  },
+  "ST1634": {
+    "bound": "||ad_B^2-ad_A^2||<=4 epsilon (||A||+||B||)",
+    "boundary": "Factorization X^2-Y^2.",
+    "object": "SquaredCommutatorPerturbation",
+    "packet_file": "FIN_ST1634_SquaredCommutatorPerturbation.json",
+    "packet_sha256": "deb47c52fce3e157768ed87cd78bf0735c087065640bcbc5154d5bac1cd1e3cd",
+    "program": "ST1634",
+    "status": "proven_squared_commutator_perturbation_bound"
+  },
+  "ST1635": {
+    "bound": "Delta_L<=2epsilon+2gamma epsilon(||A||+||B||)",
+    "boundary": "Combine Hamiltonian/dissipative terms.",
+    "object": "LindbladGeneratorDifference",
+    "packet_file": "FIN_ST1635_LindbladGeneratorDifference.json",
+    "packet_sha256": "63c6c7e3b4576471586dbf38d7d4e57bcc93d5b3b96359a036e170c9ea0151b6",
+    "program": "ST1635",
+    "status": "proven_dephasing_generator_difference_bound"
+  },
+  "ST1636": {
+    "boundary": "Generator is normal with nonpositive real spectrum in A energy basis.",
+    "contraction": true,
+    "object": "HSContraction",
+    "packet_file": "FIN_ST1636_HSContraction.json",
+    "packet_sha256": "faa580a61fd3292ab641e43b1a7f65dfdee16271ad2f432a0903862af07da911",
+    "program": "ST1636",
+    "status": "proven_each_declared_dephasing_semigroup_is_HS_contractive"
+  },
+  "ST1637": {
+    "bound": "||exp(tL_B)-exp(tL_A)||<=t Delta_L",
+    "boundary": "Between two contractive declared semigroups.",
+    "object": "LindbladDuhamelBound",
+    "packet_file": "FIN_ST1637_LindbladDuhamelBound.json",
+    "packet_sha256": "3e663c0eb18a12e76ba16cfa602960892e725be6e4985f8aa00cfbec55697760",
+    "program": "ST1637",
+    "status": "proven_Lindblad_semigroup_Duhamel_bound"
+  },
+  "ST1638": {
+    "bound": "|Q_B,gamma(t)-Q_A,gamma(t)|<=t Delta_L",
+    "boundary": "HS norms of state/effect equal one.",
+    "object": "ReturnEffectBound",
+    "packet_file": "FIN_ST1638_ReturnEffectBound.json",
+    "packet_sha256": "029f3dee1fc5de910ebb6392384a25ebb1139f2455400dbec1e0f564ff043f87",
+    "program": "ST1638",
+    "status": "proven_rank_one_return_probability_perturbation_bound"
+  },
+  "ST1639": {
+    "Delta_L": 7.550295871037898e-05,
+    "boundary": "Worst t<=2 plus heat target perturbation.",
+    "epsilon": 8.041872774817993e-08,
+    "object": "Gamma100NumericBound",
+    "packet_file": "FIN_ST1639_Gamma100NumericBound.json",
+    "packet_sha256": "5330762212ffeaa1f8bbf6c4e24efb8c9272acbd9d619dec0fcb39c1534e9b85",
+    "program": "ST1639",
+    "status": "proven_gamma100_small_parameter_box_numeric_bound",
+    "total_return_residual_perturbation": 0.00015116675487625433
+  },
+  "ST1640": {
+    "boundary": "Uses prior at-least-one residual lower.",
+    "object": "CompositeResidualStability",
+    "original_residual_lower": 0.10804167160619894,
+    "packet_file": "FIN_ST1640_CompositeResidualStability.json",
+    "packet_sha256": "0589be4d44df83567e7467f0718d04424a3a98e9e2ae103c979efdedd2ac924e",
+    "perturbed_lower": 0.10789050485132269,
+    "program": "ST1640",
+    "status": "proven_four_time_composite_residual_remains_positive_under_declared_noncirculant_Lindblad_perturbation"
+  },
+  "ST1641": {
+    "boundary": "Drops epsilon inside ||B|| upper for closed formula.",
+    "denominator": 1879.74563291704,
+    "epsilon_threshold_approx": 5.7476750957275513e-05,
+    "object": "CompositeEpsilonThreshold",
+    "packet_file": "FIN_ST1641_CompositeEpsilonThreshold.json",
+    "packet_sha256": "7645d9296f821dbcfc95a8e3a022e76130409e73dd9261786872a55bd98156f4",
+    "program": "ST1641",
+    "status": "constructed_conservative_operator_epsilon_threshold_for_composite_residual_positivity"
+  },
+  "ST1642": {
+    "boundary": "Structured rounding witness.",
+    "epsilon": 6e-14,
+    "object": "RoundingWitness",
+    "packet_file": "FIN_ST1642_RoundingWitness.json",
+    "packet_sha256": "a43adb9c1c1a67301dd94d125b32baaaeccdc4257f6cde25892937527fd402f1",
+    "program": "ST1642",
+    "status": "proven_rounding_scale_has_negligible_Lindblad_perturbation",
+    "total_bound": 1.1278473797502383e-10
+  },
+  "ST1643": {
+    "boundary": "Graph Laplacian class.",
+    "epsilon": 1e-08,
+    "object": "NoncirculantWitness",
+    "packet_file": "FIN_ST1643_NoncirculantWitness.json",
+    "packet_sha256": "3c3c6bc928d69ff59ce3d7aedaba0a45440cb0ed9a787704e4643b0a13b93f46",
+    "perturbed_lower": 0.10802287414982978,
+    "program": "ST1643",
+    "status": "proven_noncirculant_epsilon_1e_minus8_preserves_composite_residual"
+  },
+  "ST1644": {
+    "boundary": "Scope.",
+    "object": "OtherJumpBoundary",
+    "other_Lindblad_jumps": false,
+    "packet_file": "FIN_ST1644_OtherJumpBoundary.json",
+    "packet_sha256": "35aa7f00af9f755253ed837470141265619b32ed1c6a16fcc0037256cc589ac7",
+    "program": "ST1644",
+    "status": "sensitivity_theorem_does_not_cover_arbitrary_jump_operators_nonMarkov_heat_or_trace_norm",
+    "trace_norm_contraction_claim": false
+  },
+  "ST1645": {
+    "boundary": "Conditional theorem.",
+    "composite_positive": true,
+    "object": "RoundOne_Verdict",
+    "packet_file": "FIN_ST1645_RoundOne_Verdict.json",
+    "packet_sha256": "8646ab409a5019e7002846f19c02e1ae9680a72ee1814dcadc64c5499a699821",
+    "program": "ST1645",
+    "status": "closed_declared_dephasing_sensitivity_gap_for_small_noncirculant_graph_perturbations"
+  },
+  "ST1646": {
+    "boundary": "Propagate explicit kernel-parameter boxes to A norm bounds.",
+    "next": [
+      "large audit box",
+      "small certified box",
+      "weight positivity",
+      "operator norm",
+      "location/composite gates"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1646_RoundOne_Recommendation.json",
+    "packet_sha256": "1bfdf32044d220a66c6cc04a86ff386f97606e88a83a3305ebdc41b4d6852c98",
+    "program": "ST1646",
+    "status": "recommended_ST1647_ST1661"
+  }
+}

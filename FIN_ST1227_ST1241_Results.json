@@ -1,0 +1,193 @@
+{
+  "ST1227": {
+    "CA": {
+      "ell": 2.0,
+      "hbar": 5.0,
+      "tau": 3.0
+    },
+    "SA": {
+      "coupling": "assumed",
+      "lambda0": 1,
+      "r0": 0
+    },
+    "W0": "strict dimensionless informational core",
+    "boundary": "Explicit non-strict branch.",
+    "object": "TwoPackage_Architecture",
+    "packet_file": "FIN_ST1227_TwoPackage_Architecture.json",
+    "packet_sha256": "eea1a68a8937b56e0bd50c269897bbbdec83f1a29d7c158de838dce18d4f280d",
+    "program": "ST1227",
+    "status": "constructed_W0_CA_SA_conditional_architecture"
+  },
+  "ST1228": {
+    "boundary": "Countermodels to sufficiency.",
+    "models": [
+      "classical Delta11 heat",
+      "pure quantum CP11 unitary",
+      "density quantum D12 conjugation"
+    ],
+    "object": "SameCASA_ThreeStateModels",
+    "packet_file": "FIN_ST1228_SameCASA_ThreeStateModels.json",
+    "packet_sha256": "ef3759a6cf3020784ee4c8513d7a98d5163a65e516340e5ce68a7e01f55577e7",
+    "program": "ST1228",
+    "same_A": true,
+    "same_selected_frame": true,
+    "same_units": true,
+    "status": "constructed_three_models_with_identical_W0_CA_SA"
+  },
+  "ST1229": {
+    "boundary": "Dimensions/topology unchanged by units and a frame label.",
+    "dimensions": [
+      11,
+      22,
+      143
+    ],
+    "object": "StateTopology_AmbiguityPersists",
+    "packet_file": "FIN_ST1229_StateTopology_AmbiguityPersists.json",
+    "packet_sha256": "be11f647041ca2e8d978a9b432c9f956268e95e34c605fe0af4936762cf2c249",
+    "pairwise_homeomorphic": false,
+    "program": "ST1229",
+    "status": "proven_CA_and_SA_do_not_change_state_space_inequivalence"
+  },
+  "ST1230": {
+    "boundary": "This is dimensional compatibility, not physical equivalence.",
+    "heat": "exp[-(t_phys/tau_*)A]",
+    "object": "DimensionfulDualDynamics",
+    "packet_file": "FIN_ST1230_DimensionfulDualDynamics.json",
+    "packet_sha256": "1268958b1b37c0f9fadd09584b5719d8b165b59e79e9b8eb2d763f990a123787",
+    "physical_channel_selected": false,
+    "program": "ST1230",
+    "status": "proven_same_tau_dimensionalizes_both_incompatible_channels",
+    "unitary": "exp[-i(t_phys/tau_*)A]"
+  },
+  "ST1231": {
+    "boundary": "Preparation semantics already differs by category.",
+    "classical": "p0=delta_r0",
+    "object": "SelectedFrame_PreparationCandidate",
+    "packet_file": "FIN_ST1231_SelectedFrame_PreparationCandidate.json",
+    "packet_sha256": "74f9ead462175f2046719b57ccc4156af593e3abeb34e388c3bc97cb56ba3fe0",
+    "program": "ST1231",
+    "quantum": "rho0=|r0><r0|",
+    "selected_r0": 0,
+    "status": "constructed_same_selected_vertex_preparation_in_classical_and_quantum_models"
+  },
+  "ST1232": {
+    "absolute_difference": 0.32152391942239844,
+    "boundary": "Operational discriminator once category/channel is specified.",
+    "classical_return": 0.2628294052832485,
+    "dimensionless_time": 1.0,
+    "object": "SameInput_DifferentPredictions",
+    "packet_file": "FIN_ST1232_SameInput_DifferentPredictions.json",
+    "packet_sha256": "0762e77cc30abb2a8695f13e20dd1e2e550439db2e1ba639f0028701312b6b58",
+    "program": "ST1232",
+    "quantum_return": 0.5843533247056469,
+    "status": "proven_same_W0_CA_SA_yields_different_return_predictions"
+  },
+  "ST1233": {
+    "boundary": "Uses the documented schematic law only.",
+    "classical_or_quantum_state_selected": false,
+    "law": "K_dot=-Pi(V'(K)-C(K))",
+    "needs": [
+      "operator manifold",
+      "projection Pi",
+      "potential V",
+      "feedback C"
+    ],
+    "object": "AdaptiveOperatorLaw_TypeAudit",
+    "packet_file": "FIN_ST1233_AdaptiveOperatorLaw_TypeAudit.json",
+    "packet_sha256": "2916485debcfa5f5332896f140dc5435cff88adb87b3687934cdbf79ce0a432b",
+    "program": "ST1233",
+    "status": "proven_repository_adaptive_law_is_operator_space_typed_not_state_category_typed"
+  },
+  "ST1234": {
+    "boundary": "Counterexample to adaptive-law-as-category-selector.",
+    "flow": "A_dot=-gamma A, gamma>0",
+    "object": "AdaptiveScalingFlow_Counterexample",
+    "packet_file": "FIN_ST1234_AdaptiveScalingFlow_Counterexample.json",
+    "packet_sha256": "f645db01ea9661932290e4f59da9da34b9b1956d3d1c98d73a09eac22a9ce749",
+    "program": "ST1234",
+    "remains_Markov_laplacian_up_to_time_rescaling": true,
+    "remains_self_adjoint_quantum_generator": true,
+    "solution": "A(t)=exp(-gamma t)A0",
+    "status": "proven_simple_adaptive_operator_flow_preserves_both_classical_and_quantum_uses"
+  },
+  "ST1235": {
+    "boundary": "Algebraic reachability is not operational semantics.",
+    "generated_algebra_dimension": 144,
+    "instrument_selector": false,
+    "object": "FullMatrixAlgebra_NotOperationalSelection",
+    "packet_file": "FIN_ST1235_FullMatrixAlgebra_NotOperationalSelection.json",
+    "packet_sha256": "61a9fc366b5cef8731e8aa69e8b7759b717dc6fa34425681d49a4528846b7ed3",
+    "program": "ST1235",
+    "state_selector": false,
+    "status": "proven_M12_generation_does_not_supply_preparation_instrument_or_record"
+  },
+  "ST1236": {
+    "Landauer_process": false,
+    "Shannon_bits": true,
+    "boundary": "Temperature/bath/process structure absent.",
+    "kB": false,
+    "object": "ThermodynamicBridge_StillMissing",
+    "packet_file": "FIN_ST1236_ThermodynamicBridge_StillMissing.json",
+    "packet_sha256": "dca5083ea573b1301a24850fc81fc3986d3a6bb77c785c9008337689274ddb66",
+    "program": "ST1236",
+    "status": "proven_CA_SA_does_not_complete_information_to_thermodynamics",
+    "temperature": false
+  },
+  "ST1237": {
+    "Lorentz_group": false,
+    "boundary": "A speed unit is not a light cone.",
+    "c_star": "ell_*/tau_*",
+    "linear_massless_dispersion": false,
+    "object": "LorentzCausalBridge_StillMissing",
+    "packet_file": "FIN_ST1237_LorentzCausalBridge_StillMissing.json",
+    "packet_sha256": "25f0a6d55f58e8052510bda1767a4e34112cef85bbb4561a17dcf0f9ad034824",
+    "program": "ST1237",
+    "status": "proven_cstar_does_not_create_Lorentz_or_causal_structure"
+  },
+  "ST1238": {
+    "boundary": "Units and frame do not choose conserved object.",
+    "classical": "mass",
+    "object": "AnnihilationMeaning_StillAmbiguous",
+    "packet_file": "FIN_ST1238_AnnihilationMeaning_StillAmbiguous.json",
+    "packet_sha256": "47dec958d83e565128e0072206269a96785cabbc9e9d859ac9d16d1d74aaf3bf",
+    "program": "ST1238",
+    "quantum": "norm/trace",
+    "single_physical_answer": false,
+    "status": "proven_annihilation_blocker_remains_category_dependent_after_CA_SA"
+  },
+  "ST1239": {
+    "boundary": "New theorem relative to the earlier strategic two-package proposal.",
+    "missing_package": "state/channel/clock/preparation/instrument/record semantics",
+    "object": "TwoPackage_InsufficiencyTheorem",
+    "packet_file": "FIN_ST1239_TwoPackage_InsufficiencyTheorem.json",
+    "packet_sha256": "9849b6d58c38c15f65e8876952520ded19d33fb5a54e988671c376b743222cd3",
+    "program": "ST1239",
+    "proof": "three pairwise inequivalent models share identical W0, CA and SA and predict different return probabilities",
+    "status": "proven_W0_plus_CA_plus_SA_is_insufficient_for_unique_operational_physics"
+  },
+  "ST1240": {
+    "boundary": "Do not discard CA/SA; add an independently labelled package.",
+    "object": "RoundFour_Verdict",
+    "operational_model_closed": false,
+    "packet_file": "FIN_ST1240_RoundFour_Verdict.json",
+    "packet_sha256": "9d1a5074cb2fb99f6ee3e850c87aa7b24a8d83ed45ff64f482cabfca43ed689b",
+    "program": "ST1240",
+    "sector_closed_conditionally": true,
+    "status": "two_package_architecture_is_coherent_but_not_operationally_complete",
+    "units_closed_conditionally": true
+  },
+  "ST1241": {
+    "boundary": "Construct and minimize an Operational/State package OA.",
+    "next": [
+      "classical and quantum OA witnesses",
+      "necessity of category/channel/clock/preparation/instrument/record",
+      "finite discriminants",
+      "evidence boundary"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1241_RoundFour_Recommendation.json",
+    "packet_sha256": "23d51ad15f4451d12ce305873f4683ddd6c15f5edb0f5b37e95b115328065a38",
+    "program": "ST1241",
+    "status": "recommended_ST1242_ST1256"
+  }
+}

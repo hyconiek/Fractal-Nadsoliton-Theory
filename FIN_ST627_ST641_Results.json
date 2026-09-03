@@ -1,0 +1,440 @@
+{
+  "ST627": {
+    "boundary": "The result is asymptotic and conditional on the zero-rate finite-range tower and physical coordinate embedding.",
+    "common_raw_time_scaling": false,
+    "heat_nontrivial_limit": "dimensionless time t_H~T/a_N^2",
+    "lattice_spacing": "a_N=L/N",
+    "low_mode_eigenvalue": "lambda_N(a_N k)~C a_N^2 k^2",
+    "object": "Wave_Heat_Unitary_Refinement_TimeScaling",
+    "packet_file": "FIN_ST627_Wave_Heat_Unitary_Refinement_TimeScaling.json",
+    "packet_sha256": "995be964a54f48bdd739eba340849ffff8234e97462293d0ddd7fdd31da829b1",
+    "program": "ST627",
+    "status": "proven_channel_refinement_time_scaling_exponents",
+    "theorem": "Under a fixed-physical-length finite-range refinement, unitary and heat channels require diffusive a^-2 time acceleration, while the second-order wave channel requires ballistic a^-1 acceleration.",
+    "unitary_nontrivial_limit": "dimensionless time t_U~T/a_N^2",
+    "wave_nontrivial_limit": "dimensionless time t_W~T/a_N"
+  },
+  "ST628": {
+    "boundary": "The no-go concerns one raw refinement clock; it does not contradict common finite spectral projectors or dimensionless duality.",
+    "escape_options": [
+      "channel-specific conversion maps",
+      "rescale the generator differently by sector",
+      "drop one continuum channel"
+    ],
+    "object": "SingleClock_Continuum_NoGo",
+    "one_universal_clock": false,
+    "packet_file": "FIN_ST628_SingleClock_Continuum_NoGo.json",
+    "packet_sha256": "d7e9a68abbc76fc8493ce8b95aa3ca9fc2d67e6304c83b3c8cfe0412d4f00a9d",
+    "program": "ST628",
+    "required_exponents": {
+      "heat": 2,
+      "unitary": 2,
+      "wave": 1
+    },
+    "status": "proven_single_clock_three_channel_continuum_no_go",
+    "theorem": "No single power-law clock t_dimless~a^-z yields simultaneous nontrivial unitary/heat and wave continuum dynamics: z must equal 2 and 1 at once."
+  },
+  "ST629": {
+    "absolute_normalization_count_after_exponents": 2,
+    "boundary": "Proportionality constants and physical seconds remain calibration inputs.",
+    "independent_exponent_count": 2,
+    "minimal_maps": {
+      "unitary_heat": "tau_D,N proportional to a_N^2",
+      "wave": "tau_W,N proportional to a_N"
+    },
+    "object": "Minimal_ChannelSpecific_Clock_Maps",
+    "packet_file": "FIN_ST629_Minimal_ChannelSpecific_Clock_Maps.json",
+    "packet_sha256": "301854c8f251eaa62cda6a229e49e29ddf5070a599e3c4c9769f622a7804b201",
+    "program": "ST629",
+    "status": "proven_minimal_two_clock_class_continuum_architecture",
+    "strict_clock_source": false,
+    "theorem": "Two channel classes of clock conversion are sufficient and necessary for nontrivial limits: one diffusive/Schrodinger map shared by U and P, and one ballistic map for the second-order wave equation."
+  },
+  "ST630": {
+    "C": 3.81531411549983,
+    "boundary": "The zero-rate tower and fixed circumference are added premises; convergence of symbols is not laboratory evidence.",
+    "c_hat": 1.9532829071846787,
+    "maximum_last_level_relative_error": 4.3103624954626736e-05,
+    "object": "ZeroRate_Rescaled_Dispersion_Convergence",
+    "packet_file": "FIN_ST630_ZeroRate_Rescaled_Dispersion_Convergence.json",
+    "packet_sha256": "81c47df01eedaa34c57fd7f8c8acdab31b73a405196d51b9472e7cc2c0e7e7b4",
+    "program": "ST630",
+    "rows": [
+      {
+        "N": 48,
+        "a": 0.25,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 0.019370392156791434,
+            "scaled_lambda": 1.025728790362881
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 0.07461330548584783,
+            "scaled_lambda": 3.871781015747881
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.157813902871502,
+            "scaled_lambda": 7.928264329191593
+          }
+        ]
+      },
+      {
+        "N": 96,
+        "a": 0.125,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 0.004888831530595028,
+            "scaled_lambda": 1.0408763583588598
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 0.019370392156791434,
+            "scaled_lambda": 4.102915161451524
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.042901329071291135,
+            "scaled_lambda": 9.010040985137508
+          }
+        ]
+      },
+      {
+        "N": 192,
+        "a": 0.0625,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 0.0012251201204218395,
+            "scaled_lambda": 1.0447085639571192
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 0.004888831530595028,
+            "scaled_lambda": 4.163505433435439
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.01095636898986092,
+            "scaled_lambda": 9.310767972171123
+          }
+        ]
+      },
+      {
+        "N": 384,
+        "a": 0.03125,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 0.0003064624008275008,
+            "scaled_lambda": 1.0456694707703955
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 0.0012251201204218395,
+            "scaled_lambda": 4.178834255828477
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.002753787559013654,
+            "scaled_lambda": 9.38798633755047
+          }
+        ]
+      },
+      {
+        "N": 768,
+        "a": 0.015625,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 7.662700395510406e-05,
+            "scaled_lambda": 1.0459098763034642
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 0.0003064624008275008,
+            "scaled_lambda": 4.182677883081582
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.0006893693903120791,
+            "scaled_lambda": 9.407420584901807
+          }
+        ]
+      },
+      {
+        "N": 1536,
+        "a": 0.0078125,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 1.9157462949694547e-05,
+            "scaled_lambda": 1.0459699888702343
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 7.662700395510406e-05,
+            "scaled_lambda": 4.183639505213857
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 0.00017240006721142852,
+            "scaled_lambda": 9.412287287709654
+          }
+        ]
+      },
+      {
+        "N": 3072,
+        "a": 0.00390625,
+        "modes": [
+          {
+            "continuum_Ck2": 1.0459900273854297,
+            "k": 0.5235987755982988,
+            "relative_error": 4.789411817903115e-06,
+            "scaled_lambda": 1.045985017708431
+          },
+          {
+            "continuum_Ck2": 4.183960109541719,
+            "k": 1.0471975511965976,
+            "relative_error": 1.9157462949694547e-05,
+            "scaled_lambda": 4.183879955480937
+          },
+          {
+            "continuum_Ck2": 9.413910246468868,
+            "k": 1.5707963267948966,
+            "relative_error": 4.3103624954626736e-05,
+            "scaled_lambda": 9.413504472812248
+          }
+        ]
+      }
+    ],
+    "status": "proven_rescaled_zero_rate_dispersion_convergence",
+    "theorem": "For every fixed physical k, a^-2 lambda(a k)->C k^2 with O(a^2 k^4) error because the finite-range fourth moment is finite."
+  },
+  "ST631": {
+    "boundary": "Finite grids retain analytic tails; the numerical sequence is not an outward uniform convergence proof.",
+    "cone_margin": 1.05,
+    "last_tail": 8.203131405455484e-09,
+    "monotone_last5": true,
+    "object": "ZeroRate_WaveCone_Tail_Convergence",
+    "packet_file": "FIN_ST631_ZeroRate_WaveCone_Tail_Convergence.json",
+    "packet_sha256": "eb89ebfccf7e8e0c54ca9a57585936beb05d603856f921af9332ed647e13246c",
+    "physical_time": 0.5,
+    "program": "ST631",
+    "rows": [
+      {
+        "N": 48,
+        "maximum_outside_amplitude": 0.05067129761975063,
+        "outside_1_05ct_relative_L2": 0.009738394655626809
+      },
+      {
+        "N": 96,
+        "maximum_outside_amplitude": 0.04613559171519069,
+        "outside_1_05ct_relative_L2": 0.01061846960904146
+      },
+      {
+        "N": 192,
+        "maximum_outside_amplitude": 0.03895651660814115,
+        "outside_1_05ct_relative_L2": 0.010317888183548693
+      },
+      {
+        "N": 384,
+        "maximum_outside_amplitude": 0.03119728205633946,
+        "outside_1_05ct_relative_L2": 0.009657733747777833
+      },
+      {
+        "N": 768,
+        "maximum_outside_amplitude": 0.018853283965906353,
+        "outside_1_05ct_relative_L2": 0.004217816572888511
+      },
+      {
+        "N": 1536,
+        "maximum_outside_amplitude": 0.009113710181444874,
+        "outside_1_05ct_relative_L2": 0.0008189391930109476
+      },
+      {
+        "N": 3072,
+        "maximum_outside_amplitude": 0.0034723595029843312,
+        "outside_1_05ct_relative_L2": 0.00015091427406120888
+      },
+      {
+        "N": 6144,
+        "maximum_outside_amplitude": 0.0005600839806251967,
+        "outside_1_05ct_relative_L2": 4.239683666946992e-06
+      },
+      {
+        "N": 12288,
+        "maximum_outside_amplitude": 2.4005621446357635e-05,
+        "outside_1_05ct_relative_L2": 8.203131405455484e-09
+      }
+    ],
+    "status": "strong_zero_rate_wave_tail_convergence",
+    "theorem_status": "strong numerical continuum-cone diagnostic"
+  },
+  "ST632": {
+    "Taylor_remainder_coefficient_bound": "(a^2/12) sum_d w_d d^4 times ||f''''||",
+    "boundary": "Consistency plus stability is a route to convergence; no strict selection of the tower, field ontology, or apparatus follows.",
+    "continuum_operator": "-C partial_x^2",
+    "discrete_operator": "a^-2 A_N on the paired finite-range zero-rate tower",
+    "fourth_moment": 52.41766130594285,
+    "object": "Conditional_Continuum_Wave_Operator_Theorem",
+    "packet_file": "FIN_ST632_Conditional_Continuum_Wave_Operator_Theorem.json",
+    "packet_sha256": "939997b0f78bb31ae693444fbba4abbca37cd26688f41a8777075657c4df7c46",
+    "physical_field_theory": false,
+    "program": "ST632",
+    "second_moment": 3.81531411549983,
+    "status": "proven_conditional_continuum_wave_operator_consistency",
+    "theorem": "On periodic C^4 functions sampled on a fixed circle, the rescaled finite-range generator converges uniformly to -C d^2/dx^2 with an explicit O(a^2) consistency bound."
+  },
+  "ST633": {
+    "boundary": "The channel equations use different dimensional roles and operational state spaces despite the shared spatial symbol.",
+    "heat_limit": "exp(T C partial_x^2)",
+    "object": "Conditional_Heat_Unitary_Continuum_Limits",
+    "packet_file": "FIN_ST633_Conditional_Heat_Unitary_Continuum_Limits.json",
+    "packet_sha256": "f84f8f2fce475465884b6822339878ed3264f303f6f1a78013a240a5bc1bd451",
+    "program": "ST633",
+    "rescaled_generator": "A_N/a_N^2",
+    "shared_physical_time_dimension": false,
+    "status": "proven_conditional_three_functional_continuum_calculi",
+    "theorem": "The same rescaled spatial stencil supports heat and Schrodinger-type first-order limits when their physical generator is A_N/a^2, and a wave limit when A_N/a^2 is interpreted as stiffness in a second-order equation.",
+    "unitary_limit": "exp(i T C partial_x^2) up to sign convention",
+    "wave_limit": "cos(T sqrt(-C partial_x^2))"
+  },
+  "ST634": {
+    "boundary": "This sharpens rather than weakens the common spectral theorem; channel-specific time maps remain mandatory.",
+    "continuum_scaling": "U/P use t~a^-2; wave cos(t sqrt(A)) uses t~a^-1",
+    "dual_dynamics_refuted": false,
+    "finite_level_identity": "U_t=exp(-itA), P_t=exp(-tA)",
+    "object": "DualDynamics_Continuum_Scaling_Incompatibility",
+    "packet_file": "FIN_ST634_DualDynamics_Continuum_Scaling_Incompatibility.json",
+    "packet_sha256": "35837332426e4f91c377896c1bc20cf8193dec5e33150a7dda7372b6993bf039",
+    "program": "ST634",
+    "status": "proven_duality_survives_but_wave_scaling_separates",
+    "theorem": "Finite spectral duality commutes with diffusive scaling for U/P, but the wave square-root calculus belongs to a different dynamic scaling exponent. No single refinement-time functor preserves all three raw parameterizations."
+  },
+  "ST635": {
+    "FIN_prediction_of_SI_c": false,
+    "SI_value": "299792458 m/s is exact by SI definition",
+    "boundary": "Defining the meter by light propagation would make agreement circular; independent clock/ruler records are required for a predictive test.",
+    "dimensionless_continuum_speed": 1.9532829071846787,
+    "object": "PhysicalSpeed_Anchor_and_SI_Boundary",
+    "one_anchor_after_ratio": "one transverse length/time calibration fixes the numeric speed",
+    "packet_file": "FIN_ST635_PhysicalSpeed_Anchor_and_SI_Boundary.json",
+    "packet_sha256": "e00180ccfc2d9657d310b93c4fd8ccd02a1f7396f346b5cacfa6b940cb62bafd",
+    "physical_speed": "c_phys=(ell_*/tau_W,*) c_hat",
+    "program": "ST635",
+    "status": "proven_dimensionless_speed_plus_anchor_boundary",
+    "theorem": "The continuum slope determines only a dimensionless factor. A physical number requires one independent length/time ratio after the wave clock class is chosen."
+  },
+  "ST636": {
+    "boundary": "The premises are not strict-sourced, and a scalar 1+1 wave cone is not observed 3+1 Lorentzian spacetime or electromagnetism.",
+    "causal_speed": "sqrt(C) in internal units",
+    "limit_equation": "partial_T^2 phi-C partial_x^2 phi=0",
+    "object": "Conditional_LightCone_Emergence_Theorem",
+    "packet_file": "FIN_ST636_Conditional_LightCone_Emergence_Theorem.json",
+    "packet_sha256": "519ee3ac551861ff5157a48a1967715a3fe330cbd0db60e13202022f780e386d",
+    "premises": [
+      "zero-rate finite-range tower",
+      "fixed physical circle embedding",
+      "ballistic wave time scaling",
+      "continuum convergence/stability"
+    ],
+    "program": "ST636",
+    "status": "proven_conditional_continuum_lightcone_mechanism",
+    "strict_FIN_consequence": false,
+    "theorem": "Under the declared premises the limiting 1+1 wave equation has an exact domain of dependence with speed sqrt(C), even though every finite lattice has exponentially small analytic tails."
+  },
+  "ST637": {
+    "available": "conditional scalar 1+1 wave equation and speed",
+    "boundary": "No physical photon/light field is derived.",
+    "missing": [
+      "3+1 dimensional refinement",
+      "isotropy under spatial rotations",
+      "Lorentz boost representation on states/observables",
+      "Maxwell or gauge connection",
+      "massless light sector source",
+      "matter coupling",
+      "operational rods/clocks"
+    ],
+    "object": "Lorentz_and_LightField_Obligation_Audit",
+    "packet_file": "FIN_ST637_Lorentz_and_LightField_Obligation_Audit.json",
+    "packet_sha256": "469d67350b295a3e24457b5f72169b8621d2ea3c657a81791349ff66d02e183f",
+    "program": "ST637",
+    "status": "proven_Lorentz_lightfield_obligation_separation",
+    "theorem": "Linear low-k dispersion alone does not establish Lorentz symmetry or identify the mode as physical light."
+  },
+  "ST638": {
+    "boundary": "This is a no-go for inevitability under current axioms, not for all future FIN completions.",
+    "coarse_A12_allows_speed_fiber": true,
+    "conclusion": "Current FIN permits a mathematically coherent emergent-cone completion but does not make it inevitable. Refinement, channel clocks and calibration remain independent bridge data.",
+    "conditional_wave_cone_available": true,
+    "object": "RefinementCalibration_NoGo_Consolidation",
+    "one_clock_three_channel_no_go": true,
+    "packet_file": "FIN_ST638_RefinementCalibration_NoGo_Consolidation.json",
+    "packet_sha256": "af1993d35f0fdc058192015d8fe3a344bbf53d66e82911c80fed1b6b6005dc29",
+    "physical_c_derived": false,
+    "program": "ST638",
+    "status": "consolidated_refinement_calibration_no_go_with_conditional_bridge",
+    "zero_rate_selected_only_by_added_stationarity": true
+  },
+  "ST639": {
+    "boundary": "Propagation progress does not close independent mathematical frontiers.",
+    "first_transition_global_identity": false,
+    "full_degree8_rank_Q_closed": false,
+    "lanes": "method gated",
+    "object": "Transition_and_Algebra_Frontier_Gate",
+    "packet_file": "FIN_ST639_Transition_and_Algebra_Frontier_Gate.json",
+    "packet_sha256": "9a72dd8f64a92089f42dae0443d3306048a23eddfd3708b4c0c6fed267baf21c",
+    "program": "ST639",
+    "rank_Q_first1326_closed": false,
+    "status": "transition_and_algebra_frontiers_remain_open"
+  },
+  "ST640": {
+    "QW_2191": "open",
+    "boundary": "No bridge/role transfer, SM/GR, L_total, apparatus, or ToE closure.",
+    "canonical_zero_rate_tower": false,
+    "length_time_anchor": false,
+    "light_sector_source": false,
+    "object": "Strict_Physics_Source_Admission_Gate",
+    "packet_file": "FIN_ST640_Strict_Physics_Source_Admission_Gate.json",
+    "packet_sha256": "e39d840b18ce120a8a35d535bfaea08e2a0979d7d7900b60f418dae244c472dc",
+    "program": "ST640",
+    "seed_gain_selector": false,
+    "status": "blocked_no_strict_physics_source_package",
+    "wave_clock_source": false
+  },
+  "ST641": {
+    "boundary": "Round six and the complete cycle are local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 6,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST641_Independent_Evidence_Gate.json",
+    "packet_sha256": "35d8c348e3f8739473bd703a92359ecbd7cb435a3e799930a93dee13d09c3994",
+    "program": "ST641",
+    "six_round_cycle": "complete",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

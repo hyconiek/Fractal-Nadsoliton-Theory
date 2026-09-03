@@ -1,0 +1,199 @@
+{
+  "ST1257": {
+    "CA": "units",
+    "OA": "state/channel/clock/preparation/instrument/record",
+    "SA": "sector frame/coupling",
+    "boundary": "All non-W0 packages explicitly conditional.",
+    "chain": "W0 -> (CA x SA x OA) -> W3 conditional operational physics",
+    "object": "ThreePackage_Architecture",
+    "packet_file": "FIN_ST1257_ThreePackage_Architecture.json",
+    "packet_sha256": "d5d2e88e63bef6ed239a1e13e436c41c474a2f0f0fd89ed07cf4774edde59f3b",
+    "program": "ST1257",
+    "status": "constructed_W0_CA_SA_OA_three_package_architecture"
+  },
+  "ST1258": {
+    "boundary": "Relative to H,L,T target basis.",
+    "object": "CA_Necessity",
+    "packet_file": "FIN_ST1258_CA_Necessity.json",
+    "packet_sha256": "e8dea4a6eb436d6b864dddebbf977adc62d11a40193d22f9eaf3fbbf0921643a",
+    "program": "ST1258",
+    "proper_CA_subset_rank_lt_3": true,
+    "remove_CA": "all W0/SA/OA predictions remain dimensionless",
+    "status": "proven_CA_is_necessary_for_dimensionful_HLT_predictions"
+  },
+  "ST1259": {
+    "CA_or_OA_selects_frame": false,
+    "boundary": "Relative to the 24-frame torsor.",
+    "object": "SA_Necessity",
+    "packet_file": "FIN_ST1259_SA_Necessity.json",
+    "packet_sha256": "0a830a314f2313da078c159c6249010f32c7478f068975a82d668882fd84d02c",
+    "program": "ST1259",
+    "remove_SA": "24 symmetry-related frames remain",
+    "status": "proven_SA_is_necessary_for_one_selected_oriented_frame"
+  },
+  "ST1260": {
+    "boundary": "Release 10.96 countermodels survive CA+SA.",
+    "object": "OA_Necessity",
+    "packet_file": "FIN_ST1260_OA_Necessity.json",
+    "packet_sha256": "8ba197e3f8239e4a618cd708fc2b6aa7635e2679944d994704b03d0cc0ca113c",
+    "program": "ST1260",
+    "remove_OA": "at least three inequivalent state models remain",
+    "status": "proven_OA_is_necessary_for_testable_state_and_measurement_semantics",
+    "test_record_defined": false
+  },
+  "ST1261": {
+    "boundary": "Constructive product countermodels.",
+    "object": "PackageIndependence_Theorem",
+    "packet_file": "FIN_ST1261_PackageIndependence_Theorem.json",
+    "packet_sha256": "94a4e66ab4ca79af7f5bcd0a240676a12d82ed4743fd0c0485810b1d98a7e469",
+    "parameter_space": "(R_+)^3 x Frame_24 x OA_choices",
+    "program": "ST1261",
+    "status": "proven_CA_SA_OA_are_independent_factors_in_declared_architecture",
+    "vary_CA_fix_others": true,
+    "vary_OA_fix_others": true,
+    "vary_SA_fix_others": true
+  },
+  "ST1262": {
+    "boundary": "Minimality is by obligation class, not number of scalar axioms.",
+    "no_two_packages_cover_all_three": true,
+    "object": "ConditionalMinimality_Theorem",
+    "obligations": {
+      "CA": "dimension",
+      "OA": "operation",
+      "SA": "sector"
+    },
+    "packet_file": "FIN_ST1262_ConditionalMinimality_Theorem.json",
+    "packet_sha256": "7f1573c5c39fe5b753a104ea911f4cc6fae237196c1966bf140a4e1633d2b065",
+    "program": "ST1262",
+    "status": "proven_three_package_class_minimality"
+  },
+  "ST1263": {
+    "CA": "units them",
+    "OA": "chooses state and survival record",
+    "SA": "labels a branch",
+    "W0": "candidate norm/mass invariants",
+    "boundary": "CA/SA do not say what survival observable is measured.",
+    "literal_nonexistence": "still not internally recordable",
+    "object": "AnnihilationInterpretation_Final",
+    "packet_file": "FIN_ST1263_AnnihilationInterpretation_Final.json",
+    "packet_sha256": "285fa76d69d80731c188dd2c519ca75a88c7403b513a0234814fe18523d501e7",
+    "program": "ST1263",
+    "status": "proven_annihilation_question_requires_OA_after_ontological_typing"
+  },
+  "ST1264": {
+    "boundary": "OA must select or relate channels.",
+    "heat": true,
+    "object": "DualDynamics_Status",
+    "packet_file": "FIN_ST1264_DualDynamics_Status.json",
+    "packet_sha256": "d2b39f3a716d686da2348dd8a5da5623077316a9f1b278e723184d43206f61f9",
+    "physical_equivalence": false,
+    "program": "ST1264",
+    "same_spectrum": true,
+    "status": "dual_dynamics_remains_a_mathematical_resource_not_a_physical_choice",
+    "unitary": true
+  },
+  "ST1265": {
+    "boundary": "Operator adaptation can preserve multiple interpretations.",
+    "category_selector": false,
+    "future_success_condition": "prove invariant cone/algebra and unique operational readout",
+    "object": "AdaptiveLaw_Status",
+    "packet_file": "FIN_ST1265_AdaptiveLaw_Status.json",
+    "packet_sha256": "8d0d945f4e58f6e4fa01a94c3708b7de535cc225e0ae4687f141613f0399adbb",
+    "program": "ST1265",
+    "status": "adaptive_law_does_not_select_OA_without_cone_or_algebra_specific_axioms",
+    "strict_adaptive_source": false
+  },
+  "ST1266": {
+    "boundary": "Not strict ToE.",
+    "dimensionful_generator": true,
+    "empirical_validation": false,
+    "executable_operational_predictions": true,
+    "object": "ConditionalW3_Status",
+    "packet_file": "FIN_ST1266_ConditionalW3_Status.json",
+    "packet_sha256": "468dd1dd53cd8089a9df10132e97428e91f0e5356971280ca5e3e47f66736d19",
+    "program": "ST1266",
+    "selected_sector": true,
+    "status": "conditional_W3_can_be_mathematically_coherent_after_all_three_packages"
+  },
+  "ST1267": {
+    "boundary": "No silent promotion.",
+    "conditional": [
+      "units",
+      "sector",
+      "state/channel/instrument"
+    ],
+    "object": "StrictCore_Status",
+    "packet_file": "FIN_ST1267_StrictCore_Status.json",
+    "packet_sha256": "a388f3fedea673919a4d060052714cb76ec26aa70aa4ba04181ad1d9dbaa53b7",
+    "program": "ST1267",
+    "status": "strict_core_remains_W0_only_on_current_artifacts",
+    "strict": [
+      "dimensionless operator/kernel theorems",
+      "dual functional calculus",
+      "no-go results"
+    ]
+  },
+  "ST1268": {
+    "boundary": "Important structural correction after Release 10.96.",
+    "new": "W0+(CA x SA x OA)->W3",
+    "object": "StrategicVerdict_Update",
+    "old": "W0+CA+SA->W3",
+    "packet_file": "FIN_ST1268_StrategicVerdict_Update.json",
+    "packet_sha256": "1118c33af594fa87c62db679e9eaebcd92c8d97ad50a9de1c6aa7148d09fb1c6",
+    "program": "ST1268",
+    "reason": "CA+SA leave exact classical/quantum operational ambiguity",
+    "status": "strategic_two_package_verdict_upgraded_to_three_independent_packages"
+  },
+  "ST1269": {
+    "boundary": "Only nonreplay routes.",
+    "object": "RecommendedNextProgrammes",
+    "packet_file": "FIN_ST1269_RecommendedNextProgrammes.json",
+    "packet_sha256": "39c35feec0ccc2780ed5031844c32ff80e32fd6c92a7bf0c58cab216f48f93ca",
+    "program": "ST1269",
+    "programmes": [
+      "publish W0 as standalone informational mathematics",
+      "formalize CA/SA/OA typed interfaces",
+      "choose one explicitly conditional OA model",
+      "derive a frozen classical-vs-quantum prediction table",
+      "prove global well-posedness for one nonlinear completion",
+      "construct refinement-limit internal environment",
+      "seek a genuinely new strict state-category source outside C*(A)",
+      "seek one scale-charged S_plus only if a formula exists",
+      "seek one translation-breaking source only if a formula exists",
+      "formalize package independence in Lean/Sage",
+      "design independent-record laboratory transfer only after OA freeze",
+      "audit legacy role transfer only after bridge completion"
+    ],
+    "status": "recommended_post_verdict_programmes"
+  },
+  "ST1270": {
+    "boundary": "Preserve negative knowledge.",
+    "do_not_repeat": [
+      "functions of A as ontology selectors",
+      "weight-zero unit monomials",
+      "invariant frame measures",
+      "CA as selector",
+      "SA as unit source",
+      "adaptive terminology without a typed law",
+      "receiver fits as sources"
+    ],
+    "object": "ReplayStopRules",
+    "packet_file": "FIN_ST1270_ReplayStopRules.json",
+    "packet_sha256": "fac5926a8935d687a635c8800e9f9beed86938159e14da7bf0e4970829c9b720",
+    "program": "ST1270",
+    "status": "installed_replay_stop_rules"
+  },
+  "ST1271": {
+    "boundary": "No laboratory or external audit.",
+    "breakthrough": "two-package architecture is insufficient; OA is an independent necessary package",
+    "object": "CycleSix_ReportTrigger",
+    "packet_file": "FIN_ST1271_CycleSix_ReportTrigger.json",
+    "packet_sha256": "63754959c311543410fdb70de1568ed7dbd3a65acab56eb91e66b9b8a0083bce",
+    "program": "ST1271",
+    "programs": 90,
+    "report_release": "10.97",
+    "rounds": 6,
+    "status": "six_round_cycle_complete_report_required",
+    "strict_ToE_closure": false
+  }
+}

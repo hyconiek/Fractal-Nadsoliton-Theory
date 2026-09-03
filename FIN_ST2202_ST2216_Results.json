@@ -1,0 +1,174 @@
+{
+  "ST2202": {
+    "boundary": "The repository formula is a family until V, C, projection and state law are sourced.",
+    "free_objects": [
+      "V",
+      "C",
+      "Pi",
+      "initial state",
+      "time scale"
+    ],
+    "law": "dot K=Pi[C-V'(K)]",
+    "object": "DeclaredOperatorGradientFlow",
+    "packet_file": "FIN_ST2202_DeclaredOperatorGradientFlow.json",
+    "packet_sha256": "7fd54bb4dbe236f93ea0c7d46cdbdb0c91ec2c28c13df370cef6052ad64ac779",
+    "program": "ST2202",
+    "status": "Classified"
+  },
+  "ST2203": {
+    "boundary": "If C and V'(K) lie in C*(K), the vector field remains in the same commutative spectral algebra.",
+    "can_generate_noncommuting_associator": false,
+    "object": "SpectralSourceInvariantManifold",
+    "packet_file": "FIN_ST2203_SpectralSourceInvariantManifold.json",
+    "packet_sha256": "e48c1f83c4810355631ac0c9a9659d073e8690ee9202608bea5f3fd0079ca9d2",
+    "program": "ST2203",
+    "status": "Proven"
+  },
+  "ST2204": {
+    "boundary": "For a simple spectrum, commuting flow changes eigenvalues but not eigenvectors; degeneracies require state data to split.",
+    "new_orientation_without_degenerate_block_source": false,
+    "object": "CommutingFlowEigenbasisBoundary",
+    "packet_file": "FIN_ST2204_CommutingFlowEigenbasisBoundary.json",
+    "packet_sha256": "702b9372ceb72a2fe245975f0bb111b17c35e7d79fad97156a531596b8a131df",
+    "program": "ST2204",
+    "status": "Proven"
+  },
+  "ST2205": {
+    "boundary": "Infinite-time unitary covariance of a localized state.",
+    "object": "SelfGeneratedDephasedCovariance",
+    "packet_file": "FIN_ST2205_SelfGeneratedDephasedCovariance.json",
+    "packet_sha256": "3c3fa877f217745922c19931f61bbd60e25c475f1a12d64512016c6d1ef9762d",
+    "program": "ST2205",
+    "rank": 7,
+    "spectral_multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "status": "Constructed",
+    "trace": 0.9999999999999998
+  },
+  "ST2206": {
+    "boundary": "Time dephasing is block diagonal in A's spectral projections.",
+    "commutator_residual_inf": 3.3566899260151217e-16,
+    "object": "DephasedCovarianceCommutator",
+    "packet_file": "FIN_ST2206_DephasedCovarianceCommutator.json",
+    "packet_sha256": "a0e8bc66c5a2bb79ac11cbdcd1f44faaecdf3db5d0f4896092b60093380b20bb",
+    "program": "ST2206",
+    "status": "Proven"
+  },
+  "ST2207": {
+    "boundary": "The localized covariance changes when the prepared delta origin is translated.",
+    "object": "InitialStateOriginTransfer",
+    "origin_is_sourced_by_preparation": true,
+    "packet_file": "FIN_ST2207_InitialStateOriginTransfer.json",
+    "packet_sha256": "1ba12a9753aab2e6fcdf19fb3d6ab66e8a51a22f5689a1f50a9eb4bf6ad7595b",
+    "program": "ST2207",
+    "status": "Proven",
+    "translation_difference_fro": 0.40824829046386196
+  },
+  "ST2208": {
+    "boundary": "For dot W=eta(C-gamma W), the only fixed point is W=C/gamma.",
+    "gamma_positive": true,
+    "object": "LinearHebbFixedPoint",
+    "packet_file": "FIN_ST2208_LinearHebbFixedPoint.json",
+    "packet_sha256": "c02341bee00d05d8eab97fb37a594cfde7ef548605dcdaffb158f0dd1058c79f",
+    "program": "ST2208",
+    "status": "Proven",
+    "strict_fixed_point_residual_at_gamma1_fro": 2.570669316604739
+  },
+  "ST2209": {
+    "PSD_covariance_can_equal_positive_gamma_W": false,
+    "W_lambda_max": 1.6603072787660988,
+    "W_lambda_min": -0.6818747623802017,
+    "boundary": "This targets positive-covariance linear Hebb with positive decay, not all nonlinear learning laws.",
+    "object": "StrictWIndefinitenessNoGo",
+    "packet_file": "FIN_ST2209_StrictWIndefinitenessNoGo.json",
+    "packet_sha256": "2eb66b7b721fb088b14c21caaba9728933a3ed1d53bd9bee46fb8a770a316827",
+    "program": "ST2209",
+    "proposal": "strict W is a fixed point of linear covariance Hebb",
+    "status": "Refuted"
+  },
+  "ST2210": {
+    "boundary": "Uniform preparation gives a rank-one learned covariance; localized dephasing gives rank seven, neither derives W.",
+    "localized_dephased_rank": 7,
+    "object": "OjaCompressionBoundary",
+    "packet_file": "FIN_ST2210_OjaCompressionBoundary.json",
+    "packet_sha256": "7dd35d4798e13f6e8290f461348e04c13f3a79bc2e05974ed0a95536694bc8f3",
+    "program": "ST2210",
+    "status": "Proven",
+    "uniform_covariance_rank": 1
+  },
+  "ST2211": {
+    "boundary": "The uniform state is the zero mode and carries no chiral/origin datum.",
+    "object": "SymmetricPreparationOutcome",
+    "overlap_with_k1": 1.6184142622847344e-16,
+    "packet_file": "FIN_ST2211_SymmetricPreparationOutcome.json",
+    "packet_sha256": "33284c79bc466da6720f791ac32ce204f3e7a3a12fb7330bf2897e503283ca28",
+    "program": "ST2211",
+    "status": "Proven",
+    "uniform_energy": 1.0516202191160117e-16
+  },
+  "ST2212": {
+    "boundary": "Infinitely many V can be made stationary at a chosen target K; stationarity is not derivation.",
+    "object": "PotentialReconstructionFreedom",
+    "packet_file": "FIN_ST2212_PotentialReconstructionFreedom.json",
+    "packet_sha256": "3c0ec056555769f480aa25a821a69b00c9ecac4898dfc028268cc39c5c65a5c0",
+    "program": "ST2212",
+    "status": "Proven underdetermination",
+    "target_fitting_needed": true,
+    "unique_variational_law_from_K": false
+  },
+  "ST2213": {
+    "boundary": "Linear Gaussian state/operator evolution preserves zero connected third cumulants.",
+    "escape_requires": [
+      "non-Gaussian initial law",
+      "nonlinear state interaction",
+      "non-Gaussian noise"
+    ],
+    "object": "GaussianAdaptiveClosureBoundary",
+    "packet_file": "FIN_ST2213_GaussianAdaptiveClosureBoundary.json",
+    "packet_sha256": "3115cd50b5ff537af17dbc4120a4dd2fd5c4dd60354a4785d4d853ff09ae5d1a",
+    "program": "ST2213",
+    "status": "Proven"
+  },
+  "ST2214": {
+    "asymmetric_input_needed": true,
+    "boundary": "An equivariant deterministic recursion started in the fixed set stays in the fixed set by induction.",
+    "object": "EquivariantAdaptiveSymmetryNoGo",
+    "packet_file": "FIN_ST2214_EquivariantAdaptiveSymmetryNoGo.json",
+    "packet_sha256": "5f1e362be1d36310b617d9423e34d6ea1e5c998d4bbe1bd592c943f3e544744a",
+    "program": "ST2214",
+    "roundoff_or_noise_branch_is_strict_selector": false,
+    "status": "Proven"
+  },
+  "ST2215": {
+    "adaptive_source_gate_pass": false,
+    "boundary": "Current adaptive laws amplify or learn supplied covariance/state structure; they do not export an intrinsic odd or irreducible ternary source.",
+    "linear_Hebb_strictW_refuted": true,
+    "object": "RoundThreeVerdict",
+    "packet_file": "FIN_ST2215_RoundThreeVerdict.json",
+    "packet_sha256": "e6344662ad637107a3c5ba483760072f43fb2e896be4949a8e915d525c850517",
+    "program": "ST2215",
+    "status": "Round verdict"
+  },
+  "ST2216": {
+    "boundary": "Use an exact refinement counterexample to decide whether pair/coarse records can ever reconstruct hidden third-order information.",
+    "next": [
+      "binary-fiber synergy family",
+      "equal one/two-point moments",
+      "different triple moment",
+      "coarse marginal",
+      "refinement no-lift theorem"
+    ],
+    "object": "RoundThreeRecommendation",
+    "packet_file": "FIN_ST2216_RoundThreeRecommendation.json",
+    "packet_sha256": "a07a7b0590c6963e1e1c7564d99d0bf322d7300ee7ee8f38e53d19538f9ea0f5",
+    "program": "ST2216",
+    "status": "Recommendation"
+  }
+}

@@ -1,0 +1,589 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage{xcolor,geometry,fancyhdr,hyperref}
+\geometry{margin=22mm}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue,
+  citecolor=blue!55!black,
+  pdftitle={FIN ST1002--ST1091: Total Nadsoliton Ontological Persistence and Annihilation No-Go},
+  pdfauthor={Krzysztof Żuchowski}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{FIN ST1002--ST1091}
+\fancyhead[R]{Release 10.95}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\Mtot}{\mathcal M_{\mathrm{tot}}}
+\newcommand{\nothingstate}{\dagger}
+\newcommand{\status}[1]{\textsf{[#1]}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{16mm}
+{\Huge\bfseries FIN ST1002--ST1091\par}
+\vspace{5mm}
+{\LARGE Total Nadsoliton Ontological Persistence\par}
+\vspace{2mm}
+{\LARGE and the Annihilation No-Go\par}
+\vspace{13mm}
+{\Large Krzysztof \.Zuchowski\par}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+{\normalsize ORCID: 0009-0002-0909-3613\par}
+\vspace{10mm}
+{\large Six research rounds --- 90 programmes\par}
+{\large Release 10.95 --- 30 August 2026\par}
+\vfill
+\begin{minipage}{0.86\textwidth}\small
+\textbf{Ontological scope.} In this report, one nadsoliton means the entire
+fundamental being, not one localized excitation among several objects.  The
+internal order remains nadsoliton $\to$ light $\to$ matter $\to$ emergent
+observer.  The report derives no new physical law by naming the whole state a
+``soliton.''
+\end{minipage}
+\vfill
+{\small English research report.  Mathematical status labels are explicit;
+no laboratory or external-audit evidence is claimed.}
+\end{titlepage}
+
+\begin{abstract}
+This report corrects the type of the annihilation question in FIN.  If one
+nadsoliton is the whole fundamental being, its annihilation cannot be modelled
+as the decay of a localized particle inside a pre-existing space.  Four types
+must be separated: the complete state, an internal pattern, a physical vacuum,
+and literal nonexistence.  A vacuum is a state; literal nonexistence is not.
+
+The central result is a conditional ontological annihilation no-go.  Let
+$\Mtot$ be a nonempty state space for the entire nadsoliton, let
+$\nothingstate\notin\Mtot$ denote nonexistence, and let
+$\Phi_t:\Mtot\to\Mtot$ be a globally defined invariant evolution.  Then no
+internal trajectory reaches $\nothingstate$.  If $\Mtot$ is normalized, it
+also cannot reach the zero vector.  This is a theorem of state-space typing and
+complete invariance, not a new repulsive force.  It does not explain why there
+is something rather than nothing.
+
+The frozen strict operator supplies two genuine corollaries.  The unitary
+group $e^{-itA}$ preserves Hilbert norm.  The heat semigroup $e^{-tA}$
+preserves total mass while exponentially erasing internal contrast.  Thus the
+whole normalized state can persist while patterns, records or coherence die.
+However, FIN has not yet derived the canonical total-state manifold, the full
+nonlinear autonomous law, its global completeness, or a theorem excluding all
+killing/boundary extensions.  Post-hoc normalization can hide extinction, so
+normalization is protective only when it is dynamically conserved.
+
+Bootstrap existence is shown not to imply stability.  An external pump is
+inadmissible as a fundamental explanation when the nadsoliton is the entire
+being; only internal zero-sum circulation is ontologically compatible.  An
+internal observer cannot create a post-event record of total annihilation,
+because the event would remove observer, apparatus, clock and record.  This is
+an operational no-go, not proof of eternal existence.  Six model classes
+falsify overstrong versions of the claim.  The report closes with a minimal
+axiom/removal audit and programmes ST1092--ST1121 for constructing or refuting
+the missing kernel-to-total-state bridge.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Executive answer}
+
+The shortest scientifically defensible answer to ``what blocks the
+nadsoliton from annihilation?'' is:
+\begin{quote}
+\emph{Under the stated one-nadsoliton ontology, nonexistence is not an
+internal target state.  A complete invariant evolution of a normalized total
+state therefore cannot reach it.  In the present strict channels the concrete
+mathematical blockers are conservation of Hilbert norm for $e^{-itA}$ and
+conservation of total mass for $e^{-tA}$.  These protect the total normalized
+state, not every internal pattern.}
+\end{quote}
+
+The answer has three different epistemic levels:
+\begin{enumerate}[label=\textbf{E\arabic*.}]
+\item \status{Proven, conditional}: closure of a complete state space excludes
+      a target outside that space.
+\item \status{Proven}: the frozen finite strict operator generates a norm-
+      preserving unitary group and a mass-preserving heat semigroup.
+\item \status{Open}: FIN does not yet derive that these normalized spaces and
+      channels constitute the unique full ontology and full dynamics of the
+      total nadsoliton.
+\end{enumerate}
+
+This result is important mainly because it removes a category error.  It is
+not yet a physical explanation of existence and it is not evidence for an
+immortal object.
+
+\section{Correction of the object type}
+
+The previous ST912--ST1001 cycle correctly distinguished global norm,
+localization, coherence and topological identity, but it treated the word
+``nadsoliton'' partly as if it denoted a localized nonlinear excitation.  The
+user's clarification changes the primary type:
+\[
+  \boxed{\text{one nadsoliton}=\text{the complete fundamental being}.}
+\]
+Consequently, localized structures, light, matter, observers and records must
+be internal sectors or patterns of that one state.  Their disappearance is not
+the disappearance of the carrier of all states.
+
+\begin{longtable}{@{}p{.22\textwidth}p{.35\textwidth}p{.34\textwidth}@{}}
+\toprule
+Object & Mathematical type & What its disappearance means \\
+\midrule\endhead
+Total nadsoliton & complete state in $\Mtot$ & loss of the entire carrier/state space \\
+Internal pattern & localization, excitation, correlation or subsystem state & redistribution, mixing or local decay \\
+Vacuum & a distinguished physical state on an algebra & absence of selected excitations, not absence of being \\
+Literal nothing & $\nothingstate$, no carrier/algebra/state & not an ordinary element of the physical state space \\
+\bottomrule
+\end{longtable}
+
+The twelve FIN positions or modes must therefore not be read as twelve
+fundamental nadsolitons.  They are degrees of freedom in a finite mathematical
+representation of aspects of the one proposed total object.
+
+\section{Minimal mathematical core}
+
+\begin{definition}[Total-state model]
+A total-state model is a pair $(\Mtot,\Phi)$ in which $\Mtot$ is a nonempty
+state space and $\Phi_t:\Mtot\to\Mtot$ is the admitted evolution for every
+admitted time $t$.  The evolution is \emph{complete} when it is defined for
+all such times without a boundary exit or blow-up.
+\end{definition}
+
+\begin{definition}[Ontological annihilation extension]
+Introduce a cemetery/nonexistence symbol $\nothingstate$ and the enlarged set
+\[
+  \widehat{\Mtot}=\Mtot\sqcup\{\nothingstate\}.
+\]
+An ontological annihilation occurs only if a separately specified law
+$\widehat\Phi_t$ maps some $x\in\Mtot$ to $\nothingstate$.  Merely writing the
+symbol does not create such a transition.
+\end{definition}
+
+\begin{definition}[Annihilation boundary]
+For a representation in a larger linear or metric carrier, define
+$\partial_0\Mtot$ as the limit points representing loss of normalization or
+loss of the carrier.  On the Hilbert unit sphere and probability simplex the
+zero vector lies at positive distance:
+\[
+ \inf_{\|\psi\|=1}\|\psi\|=1,
+ \qquad
+ \inf_{p\ge0,\,\mathbf1^Tp=1}\|p\|_1=1.
+\]
+Projective Hilbert space
+$\mathbb P(\mathcal H)=(\mathcal H\setminus\{0\})/\mathbb C^*$ has no zero ray.
+\end{definition}
+
+\begin{theorem}[Total-nadsoliton annihilation no-go]
+Let $\Mtot$ be the state space of the complete nadsoliton, let
+$\nothingstate\notin\Mtot$, and let $\Phi_t:\Mtot\to\Mtot$ be globally
+defined for all admitted times.  Then no internal trajectory reaches
+$\nothingstate$.  If in addition there is a conserved functional
+$Q:\Mtot\to(0,\infty)$ whose extension satisfies $Q(0)=0$, no nonzero orbit
+reaches the zero state either.
+\end{theorem}
+
+\begin{proof}
+By invariance, $\Phi_t(x)\in\Mtot$ for every $x\in\Mtot$ and every admitted
+$t$.  Since $\nothingstate\notin\Mtot$, equality
+$\Phi_t(x)=\nothingstate$ is impossible.  In the strengthened statement,
+$Q(\Phi_t(x))=Q(x)>0$, whereas $Q(0)=0$, hence $\Phi_t(x)\ne0$.
+\end{proof}
+
+The proof is deliberately elementary.  Its strength is exact typing; its
+weakness is that the decisive premises have not yet been derived from FIN's
+kernel.  If ``total state'' is defined to be closed under evolution, the
+result is close to tautological.  The scientific problem is therefore shifted
+to constructing $\Mtot$ and proving global invariance/completeness without
+assuming the desired conclusion.
+
+\section{Round I: ST1002--ST1016 --- well-posedness}
+
+The first round introduced the four-type ledger and tested the frozen strict
+matrix.  Numerically, for the independently reconstructed $12\times12$
+strict operator,
+\[
+ \|A-A^T\|_\infty=0,
+ \qquad \|A\mathbf1\|_\infty=2.22\times10^{-16},
+\]
+\[
+ \lambda_0\simeq-5.11\times10^{-16},\quad
+ \lambda_1=0.7541211542070798,\quad
+ \lambda_{\max}=2.3421820411463.
+\]
+For a normalized test vector, $e^{-3iA}$ preserved norm to displayed machine
+precision.  For a normalized probability vector, $e^{-3A}$ preserved mass to
+$2.2\times10^{-16}$ while reducing contrast from $0.1533110$ to $0.0126443$.
+Thus internal homogenization and total-state persistence coexist.
+
+The round also showed that a killed semigroup
+\[
+ T_t=e^{-t(A+\gamma I)}
+\]
+is a consistent counterextension.  Its survival mass is $e^{-\gamma t}$.
+Therefore the strict no-killing result is not automatic for every possible
+extension of $A$.
+
+\section{Round II: ST1017--ST1031 --- boundary protection}
+
+The annihilation boundary makes the missing premises visible.  Three exact
+facts were established:
+\begin{enumerate}
+\item normalized Hilbert and probability states remain a positive distance
+      from zero;
+\item a positive conserved charge forbids zero;
+\item for an autonomous locally Lipschitz ODE with $f(0)=0$, a nonzero
+      trajectory cannot first hit zero in finite time without contradicting
+      uniqueness.
+\end{enumerate}
+
+Neither regularity nor finite-time no-hit prevents asymptotic extinction:
+\[
+ \dot x=-x,\qquad x(t)=x_0e^{-t}\longrightarrow0.
+\]
+Dropping local Lipschitz regularity permits finite-time collapse:
+\[
+ \dot x=-\sqrt{x},\quad x(0)=1,qquad
+ x(t)=\left(1-\frac t2\right)^2_+,qquad T_{\rm hit}=2.
+\]
+A useful sufficient barrier schema is a coercive functional satisfying
+\[
+ V(x)\to+\infty\quad(x\to\partial_0\Mtot),
+ \qquad V(\Phi_t x)\le V(x).
+\]
+No such full FIN functional is presently strict-sourced.
+
+\section{Round III: ST1032--ST1046 --- bootstrap and internal circulation}
+
+Self-reference is not persistence.  The map $F(x)=2x$ has a fixed point at
+zero but it is unstable.  The identity map has every point fixed and selects
+nothing.  A contraction such as
+\[
+ F(x)=\tfrac12x+\tfrac12
+\]
+has a unique attracting fixed point, but contraction is an additional theorem
+to prove, not a consequence of the word ``bootstrap.''
+
+If the nadsoliton is the whole being, a fundamental external pump would place
+a reservoir below or outside the whole and contradict the stated ontology.
+The compatible replacement is an internal transfer
+\[
+  \sum_a J_a=0,
+\]
+or a closed circulation.  A three-sector witness used
+\[
+ J=\begin{pmatrix}0&1&-1\\-1&0&1\\1&-1&0\end{pmatrix},
+ \qquad J^T=-J,\quad J\mathbf1=0.
+\]
+Then $e^{tJ}$ conserves both quadratic norm and the total sector sum.  This is
+a mathematical example, not a strict derivation of FIN's internal resource
+law.
+
+Global persistence is compatible with subsystem irreversibility.  A global
+pure Bell state has zero von Neumann entropy while either reduced subsystem
+has entropy $\log2$.  Pinching preserves trace but removes accessible
+coherence.  These facts support the distinction between the one total state
+and its internally observed patterns; they do not establish a quantum
+ontology for FIN.
+
+\section{Round IV: ST1047--ST1061 --- the internal observer}
+
+An operational completion must type observer $O$, apparatus $M$, environment
+$E$ and record $R$ as internal patterns of the total state $\Omega$.  A record
+is a correlation, so record erasure is weaker than annihilation of $\Omega$.
+
+\begin{proposition}[No internal post-annihilation record]
+If total annihilation removes the total state, it removes every internal
+observer, apparatus, clock and record.  Hence no record created after that
+event exists inside the theory.
+\end{proposition}
+
+This proposition does not prove that annihilation cannot happen.  It proves
+that direct internal post-event verification is ill-typed.  Only model-
+dependent precursors---loss of subsystem trace, gap closure, coherence decay
+or approach to a boundary---can be recorded before the hypothetical event.
+
+A physical vacuum remains operationally different from nothing: it is a state
+on an observable algebra and may have correlations and response functions.
+Nothing supplies no algebra and no probability distribution.
+
+\subsection{Dual dynamics}
+
+The same positive semidefinite $A$ supports
+\[
+ U_t=e^{-itA},\qquad P_t=e^{-tA}.
+\]
+The unitary channel preserves coherent norm and is reversible.  The heat
+channel preserves mass while suppressing every nonzero spectral mode.  This
+is a precise duality of functional calculus, not a proof that physical time
+and diffusion time are the same, nor a Wick-rotation theorem.  It yields the
+key persistence lesson:
+\[
+ \boxed{\text{the total normalized carrier may persist while internal
+ information contrast becomes inaccessible.}}
+\]
+
+An internal oscillation may be a relational clock candidate through phase
+differences $e^{-it(\lambda_j-\lambda_k)}$, but seconds require a dimensional
+calibration, populated modes and a readout instrument.  Frequency alone does
+not derive physical time.
+
+\section{Round V: ST1062--ST1076 --- falsification}
+
+Six model classes were compared.  They prevent any unconditional promotion of
+the no-go.
+
+\begin{longtable}{@{}p{.23\textwidth}p{.30\textwidth}p{.37\textwidth}@{}}
+\toprule
+Model class & Diagnostic & Verdict \\
+\midrule\endhead
+Closed normalized flow & constant norm/trace, complete orbit & total zero excluded conditionally \\
+Sub-Markov killing & $\operatorname{Tr}\rho_t<1$ before renormalization & annihilation probability allowed \\
+Stochastic cemetery jump & survival $S(t)=e^{-\gamma t}$ & requires hazard and $\nothingstate$ \\
+Finite-time collapse & boundary hit with failed regularity/invariance & possible after a premise is removed \\
+Topological sector & integer label while a gap remains open & protection fails at gap closure \\
+External embedding & transfer from FIN sector to a larger complement & contradicts ``FIN is the whole'' if fundamental \\
+\bottomrule
+\end{longtable}
+
+The sharpest falsification warning concerns renormalization.  If an
+unnormalized surviving state has trace $s(t)<1$, replacing it by
+\[
+ \rho_t^{\rm cond}=\rho_t/\operatorname{Tr}\rho_t
+\]
+returns trace one and hides the lost survival weight.  Hence normalization
+blocks annihilation only when it follows from the dynamical law; postselection
+cannot be used as proof.
+
+Projective state space has the same limitation: $[\psi]=[c\psi]$ for every
+$c\ne0$, so it is blind to absolute survival amplitude.  A trace or survival
+observable must accompany the ray description.
+
+\section{Round VI: ST1077--ST1091 --- theorem, necessity and status}
+
+\subsection{Strict corollaries}
+
+For a finite self-adjoint $A$,
+\[
+ U_t^*U_t=I,
+ \qquad \|U_t\psi\|=\|\psi\|.
+\]
+Thus nonzero Hilbert states do not become zero under the strict unitary group.
+For $A\mathbf1=0$ and the admitted heat embedding,
+\[
+ \mathbf1^TP_tp=\mathbf1^Tp,
+ \qquad
+ \|P_t(p-u)\|_2\le e^{-\lambda_1t}\|p-u\|_2,
+\]
+where $u=\mathbf1/12$ and $\lambda_1=0.7541211542\ldots$.  Total mass
+persists while internal contrast dies.
+
+\subsection{Axiom ranking and removal audit}
+
+\begin{longtable}{@{}p{.07\textwidth}p{.33\textwidth}p{.23\textwidth}p{.28\textwidth}@{}}
+\toprule
+Rank & Premise & Necessity & Removal result \\
+\midrule\endhead
+1 & nonempty typed total-state space $\Mtot$ & definitional & without it no object is modelled \\
+2 & $\nothingstate\notin\Mtot$ & indispensable for internal no-go & add absorbing cemetery state \\
+3 & globally defined invariant $\Phi_t:\Mtot\to\Mtot$ & indispensable dynamically & permit boundary exit or finite collapse \\
+4 & conserved positive norm/mass/charge & independently testable strengthening & killed/sub-Markov evolution loses weight \\
+5 & compactness, topology or coercive barrier & optional robustness & not minimal once closure is proved \\
+\bottomrule
+\end{longtable}
+
+The minimal statement uses premises 1--3.  Premise 4 is valuable because it
+can be checked directly and can prove zero exclusion even in a larger carrier.
+Premise 5 may yield perturbative robustness but is not logically required.
+
+\subsection{Strict versus conditional status}
+
+\begin{longtable}{@{}p{.34\textwidth}p{.20\textwidth}p{.36\textwidth}@{}}
+\toprule
+Claim/object & Status & Boundary \\
+\midrule\endhead
+Unitary norm conservation & \status{Proven} & finite strict self-adjoint $A$ \\
+Heat mass conservation & \status{Proven} & probability embedding and $A\mathbf1=0$ \\
+Heat erasure of contrast & \status{Proven} & spectral gap of frozen $A$ \\
+Total-state annihilation no-go & \status{Proven, conditional} & typed $\Mtot$ and complete invariant flow \\
+Annihilation boundary $\partial_0\Mtot$ & \status{Constructed} & proposed formal device \\
+Closed internal circulation & \status{Constructed} & toy witness, not strict-sourced \\
+Canonical FIN total-state manifold & \status{Open} & no kernel-to-state theorem \\
+Full nonlinear complete evolution & \status{Open} & no global well-posedness proof \\
+No-killing theorem for all admissible laws & \status{Open} & only present channels checked \\
+Internal operational model & \status{Open} & state/clock/preparation/instrument/environment/record incomplete \\
+Physical eternal nadsoliton & \status{Not established} & no empirical or full dynamical proof \\
+\bottomrule
+\end{longtable}
+
+\section{Relation to the kernels and FIN ontology}
+
+This cycle uses the frozen strict generator only for the two spectral
+corollaries.  It does not complete the legacy-to-strict bridge and does not
+transfer any historical legacy physical role.  In particular, no claim about
+electromagnetic coupling, gravity hierarchy, Planck scale, Standard Model or
+cosmology follows.
+
+The missing formal arrow is
+\[
+ (K_{\rm strict},A)
+ \quad\not\Longrightarrow\quad
+ (\Mtot,\Phi,\text{operational state})
+\]
+without additional construction.  An operator admits many state semantics and
+many dynamical extensions.  The next research must derive or reject this
+arrow, rather than naming one preferred semantics after the fact.
+
+Fractal layers are most consistently treated, under the one-nadsoliton
+ontology, as internal scales, refinements or coarse descriptions of the same
+total state.  They are not additional fundamental beings below the
+nadsoliton.  This permits a coarse observer to lose access to fine information
+while the total state remains normalized.  It does not derive length, time,
+energy, a light cone, light or matter.
+
+\section{What has actually been learned}
+
+\begin{enumerate}
+\item The question ``why does the whole being not annihilate?'' is not the
+      same as soliton collision stability.
+\item Within a closed normalized model, literal nonexistence is absent by
+      type.  This is exact but partly definitional.
+\item Strict unitary norm and heat mass are real mathematical invariants.
+\item Internal information patterns may disappear even when the total state
+      persists; heat dynamics demonstrates this explicitly.
+\item A bootstrap equation is not a stability theorem.
+\item A fundamental external pump conflicts with the claim that the
+      nadsoliton is the whole being; only internal balanced transfer is
+      compatible.
+\item Conditional normalization, projective quotienting and coarse observation
+      can conceal survival loss.  The unnormalized trace must be audited.
+\item Total annihilation cannot leave an internal post-event record.  This
+      limits falsifiability but does not establish impossibility.
+\end{enumerate}
+
+\section{Recommended programmes}
+
+The next round is ST1092--ST1106.  The percentages below rank probability of a
+decisive \emph{local mathematical verdict}, not probability that FIN is a
+physical theory.
+
+\begin{longtable}{@{}p{.11\textwidth}p{.56\textwidth}p{.12\textwidth}p{.12\textwidth}@{}}
+\toprule
+Programme & Objective & Priority & Verdict probability \\
+\midrule\endhead
+ST1092 & classify canonical total-state candidates: sphere, rays, simplex, density states, algebraic states & 1 & 85\% \\
+ST1093 & compare GNS, Dirichlet-form and spectral-state constructions from $A$ & 2 & 70\% \\
+ST1094 & derive global existence/completeness criteria for every admitted nonlinear completion & 1 & 55\% \\
+ST1095 & search for a strict coercive functional diverging at $\partial_0\Mtot$ & 2 & 40\% \\
+ST1096 & audit whether normalization is a conserved observable or imposed gauge & 1 & 90\% \\
+ST1097 & classify all positive/trace-preserving versus killed generator extensions compatible with $A$ & 1 & 90\% \\
+ST1098 & construct a typed internal-sector decomposition without an external reservoir & 2 & 65\% \\
+ST1099 & test whether $A$ sources a nontrivial zero-sum resource circulation & 3 & 35\% \\
+ST1100 & build finite unitary dilations of effective subsystem heat/loss channels & 2 & 80\% \\
+ST1101 & impose refinement compatibility on the total-state family & 2 & 55\% \\
+ST1102 & include observer, apparatus, environment and record in one state map & 2 & 45\% \\
+ST1103 & construct a relational clock and prove its domain/monotonicity limits & 3 & 55\% \\
+ST1104 & classify compatibility, not identity, of unitary and heat dynamics & 1 & 85\% \\
+ST1105 & automate counterexample search for boundary, killing and hidden postselection & 2 & 95\% \\
+ST1106 & issue strict/conditional closure verdict for the kernel-to-total-state bridge & 1 & 95\% \\
+\bottomrule
+\end{longtable}
+
+If ST1092--ST1106 produces a noncircular state map, ST1107--ST1121 should test
+state-space uniqueness, exact global-existence intervals, boundary index,
+coarse-layer consistency, internal-record theorems, vacuum sectors,
+charge-versus-gauge ambiguity, refinement persistence, light/matter emergence
+boundaries, falsification equivalence classes, dependency graphs, axiom
+minimization and proof-assistant interfaces.  If it does not, the correct
+outcome is a total no-go for deriving ontological persistence from the current
+kernel alone.
+
+\section{Final verdict}
+
+\begin{quote}
+\textbf{Deepest surviving interpretation.}  When one nadsoliton is defined as
+the whole fundamental being, its literal annihilation is not an internal
+dynamical process unless the theory first adds a larger state space, a
+cemetery/nonexistence state, or a boundary/killing law.  Current strict FIN
+contains no such law and its two principal channels conserve a global total.
+Accordingly, present FIN blocks annihilation structurally---by normalized
+state-space closure and conserved norm or mass---while allowing internal
+patterns and accessible information to decay.  The missing theorem is not a
+new force; it is a noncircular derivation of the total-state manifold and a
+globally complete invariant full dynamics from the FIN kernel.
+\end{quote}
+
+This verdict survives the six countermodel classes.  It does not establish
+that reality is FIN, that the nadsoliton exists, or that it persists physically
+for infinite time.  It precisely states what would have to be proved before
+such a conclusion could become mathematics rather than ontology by
+definition.
+
+\appendix
+
+\section{Programme ledger}
+
+\begin{longtable}{@{}p{.17\textwidth}p{.34\textwidth}p{.39\textwidth}@{}}
+\toprule
+Range & Principal object & Round verdict \\
+\midrule\endhead
+ST1002--ST1016 & total-being type ledger & vacuum/nothing separated; strict norm/mass checked \\
+ST1017--ST1031 & annihilation boundary & finite/asymptotic countermodels isolate necessary premises \\
+ST1032--ST1046 & bootstrap/internal circulation & fixed point not stability; external pump rejected fundamentally \\
+ST1047--ST1061 & internal observer & no internal post-event record; dual dynamics separated \\
+ST1062--ST1076 & falsification lattice & normalization, topology and totality stress-tested \\
+ST1077--ST1091 & no-go theorem and synthesis & conditional theorem proved; strict kernel-to-state bridge open \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducibility}
+
+The authoritative result sets are
+\path{FIN_ST1002_ST1016_Results.json},
+\path{FIN_ST1017_ST1031_Results.json},
+\path{FIN_ST1032_ST1046_Results.json},
+\path{FIN_ST1047_ST1061_Results.json},
+\path{FIN_ST1062_ST1076_Results.json}, and
+\path{FIN_ST1077_ST1091_Results.json}.  Every result references an individual
+JSON packet by SHA-256.  The combined test
+\path{test_fin_st1002_st1091.py} checks all 90 packet hashes and semantic
+nonpromotion gates.
+
+\section{Nonclaims}
+
+No laboratory experiment, external audit, SI scale, physical light speed,
+particle, photon, matter law, selector, QW-2191 discharge, legacy-to-strict
+completion, legacy role transfer, gauge field, Standard Model, gravity,
+$L_{\rm total}$ or Theory-of-Everything closure is established.  The report
+does not prove that nonexistence is impossible outside the conditional model.
+All future FIN PDFs remain English.
+
+\begin{thebibliography}{9}
+\bibitem{reed-simon}
+M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics I:
+Functional Analysis}, Academic Press.
+\bibitem{engel-nagel}
+K.-J. Engel and R. Nagel, \emph{One-Parameter Semigroups for Linear Evolution
+Equations}, Springer.
+\bibitem{perko}
+L. Perko, \emph{Differential Equations and Dynamical Systems}, Springer.
+\bibitem{nielsen-chuang}
+M. A. Nielsen and I. L. Chuang, \emph{Quantum Computation and Quantum
+Information}, Cambridge University Press.
+\end{thebibliography}
+
+\end{document}

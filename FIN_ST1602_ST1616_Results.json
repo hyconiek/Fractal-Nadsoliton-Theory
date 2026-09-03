@@ -1,0 +1,178 @@
+{
+  "ST1602": {
+    "boundary": "Exact two-point fiber refinement.",
+    "heat": "H_q(t)=(1+exp(-2qt))/2",
+    "object": "FineFiberModel",
+    "packet_file": "FIN_ST1602_FineFiberModel.json",
+    "packet_sha256": "341318df297e47b804d988b6f915dae777c9d64419b32c64f48fcfb4611c7632",
+    "program": "ST1602",
+    "status": "constructed_fine_fiber_heat_and_unitary_models",
+    "unitary": "R_q(t)=cos^2(qt)"
+  },
+  "ST1603": {
+    "boundary": "Global q>=0.",
+    "derivative": "-t exp(-2qt)<0",
+    "object": "ClassicalQMonotonicity",
+    "packet_file": "FIN_ST1603_ClassicalQMonotonicity.json",
+    "packet_sha256": "67b78c2bd3dcb8a1f55d863962cef6d2fe6c88d792eb71ed6c9bc82840107c5d",
+    "program": "ST1603",
+    "status": "proven_classical_fiber_return_strictly_decreases_in_q_for_t_positive"
+  },
+  "ST1604": {
+    "boundary": "Requires H in (1/2,1].",
+    "inverse": "q=-log(2H-1)/(2t)",
+    "object": "ClassicalQInverse",
+    "packet_file": "FIN_ST1604_ClassicalQInverse.json",
+    "packet_sha256": "e3f8a5d7a762f853eef9233658c57c62c516681888ec782f522af4fde93fe8e7",
+    "program": "ST1604",
+    "status": "proven_classical_q_has_closed_form_inverse_from_one_nontrivial_return"
+  },
+  "ST1605": {
+    "aliases": "q' = k*pi/t +/- q",
+    "boundary": "Period/reflection symmetry.",
+    "global_injective": false,
+    "object": "QuantumQAliasing",
+    "packet_file": "FIN_ST1605_QuantumQAliasing.json",
+    "packet_sha256": "1ee2b75109cbc48c374e87c2fa1ead29733be758a6bcc20d4b972821aa84e23a",
+    "program": "ST1605",
+    "status": "proven_quantum_single_time_q_is_aliased"
+  },
+  "ST1606": {
+    "boundary": "Single time with prior range.",
+    "inverse": "q=acos(sqrt(R))/t",
+    "object": "QuantumRestrictedInjectivity",
+    "packet_file": "FIN_ST1606_QuantumRestrictedInjectivity.json",
+    "packet_sha256": "adbf734e3cb2b53baf2077ec9dfc040c3be3168cd0109feb1f774dd36ad37839",
+    "program": "ST1606",
+    "range": [
+      0,
+      2.6179938779914944
+    ],
+    "status": "proven_quantum_q_is_injective_on_first_monotone_branch"
+  },
+  "ST1607": {
+    "boundary": "Reference point.",
+    "heat_derivative": -0.3848792524963919,
+    "object": "ReturnDerivatives",
+    "packet_file": "FIN_ST1607_ReturnDerivatives.json",
+    "packet_sha256": "f2bed5752d0718a84cc14d0ed9d89545917c3ea7dfb3da51e1b28e02811227f2",
+    "program": "ST1607",
+    "q": 0.37,
+    "status": "proven_fine_return_derivatives",
+    "t": 0.6,
+    "unitary_derivative": -0.25773303273421533
+  },
+  "ST1608": {
+    "boundary": "Ideal fine measurement.",
+    "classical": 1.0068069525875005,
+    "object": "BernoulliFisherInformation",
+    "packet_file": "FIN_ST1608_BernoulliFisherInformation.json",
+    "packet_sha256": "b89ee71fb6e764d292da6f620bbad8b0c3b086987ff1307ae8cb555aaf3db40f",
+    "program": "ST1608",
+    "quantum": 1.4399999999999977,
+    "quantum_formula": "4t^2",
+    "status": "proven_Bernoulli_Fisher_information_values_away_from_endpoints"
+  },
+  "ST1609": {
+    "boundary": "q=0.37,t=0.6.",
+    "gap": 0.1307876255360375,
+    "heat": 0.8207327104136599,
+    "object": "ReferenceQValues",
+    "packet_file": "FIN_ST1609_ReferenceQValues.json",
+    "packet_sha256": "be3429c6665597f59edfd5331f4cac9667284d13d11a90e227d6da8639948566",
+    "program": "ST1609",
+    "status": "constructed_reference_q_fine_discriminator",
+    "unitary": 0.9515203359496974
+  },
+  "ST1610": {
+    "boundary": "Besides q=0.",
+    "count": 4,
+    "object": "SingleTimeChannelCrossings",
+    "packet_file": "FIN_ST1610_SingleTimeChannelCrossings.json",
+    "packet_sha256": "520f5a135920ce5b5002db5b5705788f539dc99730bd6a8fc452a1f15b608280",
+    "positive_roots": [
+      1.0772464328111668,
+      3.934410632373072,
+      6.544661066642707,
+      9.162992552553298
+    ],
+    "program": "ST1610",
+    "status": "strong_numerical_single_time_channel_crossing_inventory_on_0_10"
+  },
+  "ST1611": {
+    "H_0": 1.0,
+    "R_0": 1.0,
+    "boundary": "No fiber coupling.",
+    "channel_identifiable": false,
+    "object": "QZeroObstruction",
+    "packet_file": "FIN_ST1611_QZeroObstruction.json",
+    "packet_sha256": "a01831d4fa744af490378deca5f13d7c2b1357bc291eecd88cff49bdb8fc8c13",
+    "program": "ST1611",
+    "status": "proven_q_zero_makes_fine_heat_and_unitary_returns_identical_for_all_times"
+  },
+  "ST1612": {
+    "boundary": "q prior interval required.",
+    "object": "TwoTimeFineDesign",
+    "packet_file": "FIN_ST1612_TwoTimeFineDesign.json",
+    "packet_sha256": "26a51a3b708ec7184b3b764efe7701879bf57640245eedb2c344ab6cb5a10b49",
+    "program": "ST1612",
+    "q_range": [
+      0.1,
+      2.0
+    ],
+    "status": "constructed_two_time_fine_channel_design",
+    "times": [
+      0.6,
+      1.0
+    ]
+  },
+  "ST1613": {
+    "boundary": "Frozen analytic fiber formulas.",
+    "boxes": 1900,
+    "object": "TwoTimeIntervalCover",
+    "packet_file": "FIN_ST1613_TwoTimeIntervalCover.json",
+    "packet_sha256": "74aa1621f5c908d0d4907ed32590b46d6f742387414b510a647a845f2d3ecead",
+    "program": "ST1613",
+    "status": "constructed_complete_1900_box_interval_cover_of_q_range",
+    "step": 0.001,
+    "weak_box": [
+      0.1,
+      0.101
+    ]
+  },
+  "ST1614": {
+    "RSS_lower": 0.009270580748993435,
+    "boundary": "Interval RSS certificate.",
+    "object": "TwoTimeResidualBound",
+    "one_time_residual_lower": 0.06808296684558274,
+    "packet_file": "FIN_ST1614_TwoTimeResidualBound.json",
+    "packet_sha256": "92d8cf2748b39331ed705868f274607cdd5157a14cba0691c5affaa146a3fae0",
+    "program": "ST1614",
+    "status": "proven_two_time_fine_heat_and_unitary_models_are_separated_on_q_0_1_to_2"
+  },
+  "ST1615": {
+    "SI_rate": false,
+    "boundary": "No strict physical q.",
+    "object": "PhysicalQBoundary",
+    "packet_file": "FIN_ST1615_PhysicalQBoundary.json",
+    "packet_sha256": "1ddf026b5ce24e388a7a51d1747fe87c9a0f726dd28d125f5e9ea12b5092f2ed",
+    "program": "ST1615",
+    "q_sourced": false,
+    "status": "q_identifiability_is_conditional_on_channel_range_clock_and_fiber_instrument"
+  },
+  "ST1616": {
+    "boundary": "Synthesize noncirculant, continuum, calibration and q results.",
+    "next": [
+      "robustness hierarchy",
+      "claim lattice",
+      "protocol 11.01",
+      "remaining blockers",
+      "roadmap"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1616_RoundFive_Recommendation.json",
+    "packet_sha256": "de88a5a2385427cf2181b738b22372637982fb1a55f0a9e609956774bd282ec9",
+    "program": "ST1616",
+    "status": "recommended_ST1617_ST1631"
+  }
+}

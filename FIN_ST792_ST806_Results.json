@@ -1,0 +1,166 @@
+{
+  "ST792": {
+    "action": "sum costs + couplings",
+    "boundary": "Potential unsourced.",
+    "object": "JointAction_SectionAnsatz",
+    "packet_file": "FIN_ST792_JointAction_SectionAnsatz.json",
+    "packet_sha256": "a76cb9c0f3974896e8856f3e0a1ed2e9c916b61391f3a3f4ce2b3125f31909db",
+    "program": "ST792",
+    "status": "constructed_joint_action_ansatz",
+    "variables": [
+      "q",
+      "D",
+      "gauge",
+      "clock",
+      "scale",
+      "orientation",
+      "apparatus"
+    ]
+  },
+  "ST793": {
+    "boundary": "Restrict potential class.",
+    "object": "ArbitraryTarget_PotentialCounterexample",
+    "packet_file": "FIN_ST793_ArbitraryTarget_PotentialCounterexample.json",
+    "packet_sha256": "a3c2311cec9b91508a6926a1a28c3de616a6489ce8de936be252fd90ce4649b4",
+    "program": "ST793",
+    "status": "proven_arbitrary_target_potential_counterexample",
+    "theorem": "For any desired section x*, V(x)=||x-x*||^2 uniquely selects it; existence of an action alone has zero predictive content."
+  },
+  "ST794": {
+    "boundary": "Coefficients/convex domain supplied.",
+    "object": "ConvexJointAction_Uniqueness",
+    "packet_file": "FIN_ST794_ConvexJointAction_Uniqueness.json",
+    "packet_sha256": "1701bc47e53a0437bfb42146434cc9d1092f89c8b134ccfcaf5b2001bfad0f58",
+    "program": "ST794",
+    "status": "proven_conditional_convex_uniqueness",
+    "theorem": "Strict convexity gives at most one minimizer but does not source its location or physical meaning."
+  },
+  "ST795": {
+    "boundary": "Contraction could select.",
+    "counterexamples": [
+      "identity map: every point fixed",
+      "reflection: paired fixed structure",
+      "constant map: arbitrary chosen fixed point"
+    ],
+    "object": "Bootstrap_FixedPointMultiplicity",
+    "packet_file": "FIN_ST795_Bootstrap_FixedPointMultiplicity.json",
+    "packet_sha256": "017db39ba472a74180190a761edba93ad1f54807fe444fe5d0581419ca427411",
+    "program": "ST795",
+    "status": "proven_bootstrap_fixedpoint_multiplicity"
+  },
+  "ST796": {
+    "boundary": "Need source/naturality.",
+    "object": "SelfConsistency_NotSource",
+    "packet_file": "FIN_ST796_SelfConsistency_NotSource.json",
+    "packet_sha256": "f70c82d5475d17793078738fbc14e2c83eba57a84446e84f4154ef8bcf5d73f9",
+    "program": "ST796",
+    "status": "proven_selfconsistency_not_provenance",
+    "theorem": "Equation x=F(x) certifies consistency after F is supplied; it does not derive F."
+  },
+  "ST797": {
+    "boundary": "Empirical likelihood may dominate.",
+    "object": "BayesianPrior_SectionDependence",
+    "packet_file": "FIN_ST797_BayesianPrior_SectionDependence.json",
+    "packet_sha256": "e9fbc44b707da883cd7de6c788538831cf5f9444bff0d93aa76a66c3c94edb92",
+    "program": "ST797",
+    "result": "posterior section changes with prior when coarse likelihood is fiber-constant",
+    "status": "proven_Bayesian_section_prior_dependence"
+  },
+  "ST798": {
+    "boundary": "Fine Fisher data can help.",
+    "object": "InformationGeometry_SelectorAudit",
+    "packet_file": "FIN_ST798_InformationGeometry_SelectorAudit.json",
+    "packet_sha256": "4adc9174256c2a4daafa956173dd9afbf9a7af6c57a4e7f8a0735ab60586dcca",
+    "program": "ST798",
+    "result": "coarse Fisher metric has null directions along hidden exact fibers",
+    "status": "proven_information_geometry_fiber_degeneracy"
+  },
+  "ST799": {
+    "boundary": "Free operations/order supplied.",
+    "object": "ResourceTheory_BridgeAudit",
+    "packet_file": "FIN_ST799_ResourceTheory_BridgeAudit.json",
+    "packet_sha256": "4704d83fd63c69c76d335df19cd43c8e624946fd09a66e7a169bfe1f471d4e90",
+    "program": "ST799",
+    "resources": [
+      "locality",
+      "orientation",
+      "calibration",
+      "gauge complexity"
+    ],
+    "status": "conditional_resource_theory_bridge"
+  },
+  "ST800": {
+    "boundary": "Fine records can identify.",
+    "object": "CoupledFiber_Identifiability",
+    "packet_file": "FIN_ST800_CoupledFiber_Identifiability.json",
+    "packet_sha256": "d3028909a8757a17f6e472f74a4aa80e8544aaa7556855019b8d5079cfe4ac43",
+    "program": "ST800",
+    "status": "proven_joint_fiber_nonidentifiability_coarse",
+    "theorem": "Coupling hidden variables does not make them identifiable when all admitted coarse records factor through the same quotient."
+  },
+  "ST801": {
+    "boundary": "Requires unseen layers.",
+    "criterion": "one short law predicts q,D,gauge,clocks on held-out layers without target constants",
+    "object": "PredictiveCompression_Criterion",
+    "packet_file": "FIN_ST801_PredictiveCompression_Criterion.json",
+    "packet_sha256": "146be143906eca0cfda74445881f0e01fd265dc8a91430407556ee157bf357e6",
+    "program": "ST801",
+    "status": "constructed_predictive_compression_criterion"
+  },
+  "ST802": {
+    "boundary": "Relative architecture.",
+    "object": "AssumptionRemoval_CoupledModel",
+    "packet_file": "FIN_ST802_AssumptionRemoval_CoupledModel.json",
+    "packet_sha256": "dbfa755234affc625712358b58610a892c535e5ab8caf9fb5be5d93716e33dc7",
+    "program": "ST802",
+    "required": [
+      "restricted law class",
+      "unique solution",
+      "naturality",
+      "heldout transfer",
+      "operational calibration"
+    ],
+    "status": "proven_coupled_model_assumption_necessity"
+  },
+  "ST803": {
+    "boundary": "No candidate exists.",
+    "conditions": [
+      "one typed object carries all seven group charges",
+      "derives coupling law",
+      "unique natural fixed section",
+      "heldout predictions"
+    ],
+    "object": "OneObject_Rehabilitation_Conditions",
+    "packet_file": "FIN_ST803_OneObject_Rehabilitation_Conditions.json",
+    "packet_sha256": "05bcd772f31349f37a167c4f8d1ab0ca68919e5918237e87b46ffbe85cb0a0b0",
+    "program": "ST803",
+    "status": "one_object_hypothesis_conditionally_rehabilitated"
+  },
+  "ST804": {
+    "boundary": "Need formula-level object.",
+    "new_candidate": false,
+    "object": "JointSection_MethodGate",
+    "packet_file": "FIN_ST804_JointSection_MethodGate.json",
+    "packet_sha256": "0d8a724475e06cee29103ad90ddc4936a7f3f5d4b942b6e096bea46920c67d43",
+    "program": "ST804",
+    "status": "joint_section_lane_method_gated"
+  },
+  "ST805": {
+    "boundary": "No coupled source.",
+    "closure": false,
+    "object": "StrictClosure_Gate",
+    "packet_file": "FIN_ST805_StrictClosure_Gate.json",
+    "packet_sha256": "7356290e848dbc70e9050f0bd213138bbe030585f06df8eda0d504c3bf682e8b",
+    "program": "ST805",
+    "status": "blocked_no_strict_joint_closure"
+  },
+  "ST806": {
+    "boundary": "Round five local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST806_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST806",
+    "status": "blocked_no_evidence"
+  }
+}

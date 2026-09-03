@@ -1,0 +1,191 @@
+{
+  "ST1197": {
+    "CA": [
+      "ell_*>0",
+      "tau_*>0",
+      "hbar_*>0"
+    ],
+    "boundary": "Explicit non-strict package.",
+    "dimensions": {
+      "ell": "L",
+      "hbar": "H",
+      "tau": "T"
+    },
+    "object": "CA_Definition",
+    "packet_file": "FIN_ST1197_CA_Definition.json",
+    "packet_sha256": "66e053bcd1d060ea588d11399ee9724057eca2c00ac3d29cbbd216faaf206326",
+    "program": "ST1197",
+    "status": "constructed_CA_positive_scale_triple"
+  },
+  "ST1198": {
+    "boundary": "Replays and independently checks P3146 dimensional algebra.",
+    "object": "CA_RankThree_Minimality",
+    "packet_file": "FIN_ST1198_CA_RankThree_Minimality.json",
+    "packet_sha256": "6a73924e870c4990c58303f941eecd3fa0ca8038e9d91827421a5bd340183f3e",
+    "program": "ST1198",
+    "proper_subset_max_rank": 2,
+    "rank3_subsets": [
+      [
+        "ell",
+        "tau",
+        "hbar"
+      ]
+    ],
+    "status": "proven_full_CA_triple_is_unique_rank_three_subset",
+    "subsets": 8
+  },
+  "ST1199": {
+    "boundary": "State/channel choice remains conditional.",
+    "formula": "H_phys=(hbar_*/tau_*) A",
+    "object": "PhysicalHamiltonian_UnitLift",
+    "packet_file": "FIN_ST1199_PhysicalHamiltonian_UnitLift.json",
+    "packet_sha256": "7ec352d36bf1e693fdc93f530b281eb3fe110daf3d1f4146422ac4be0328ef9e",
+    "program": "ST1199",
+    "status": "constructed_dimensionful_quantum_generator",
+    "unit": "energy",
+    "unitary": "exp[-i H_phys t_phys/hbar_*]=exp[-i(t_phys/tau_*)A]"
+  },
+  "ST1200": {
+    "boundary": "Classical/open channel choice remains conditional.",
+    "formula": "L_heat=-(1/tau_*)A",
+    "object": "PhysicalHeatTime_UnitLift",
+    "packet_file": "FIN_ST1200_PhysicalHeatTime_UnitLift.json",
+    "packet_sha256": "241838424eb3c2852cbcecaac0210b5b22e8169778f58fd4b6c90c376414f393",
+    "program": "ST1200",
+    "semigroup": "exp[-(t_phys/tau_*)A]",
+    "status": "constructed_dimensionful_heat_generator",
+    "unit": "inverse time"
+  },
+  "ST1201": {
+    "boundary": "Not a light-cone theorem.",
+    "equals_observed_c": false,
+    "formula": "c_*=ell_*/tau_*",
+    "object": "DerivedSpeedUnit",
+    "packet_file": "FIN_ST1201_DerivedSpeedUnit.json",
+    "packet_sha256": "64a7cb63169bd21eb39db89d4cca4840ddc6b145fc1e31f666962dea1a0f5fa3",
+    "program": "ST1201",
+    "status": "constructed_derived_speed_scale",
+    "unit": "L/T"
+  },
+  "ST1202": {
+    "boundary": "Pure dimensional consequences.",
+    "energy": "E_*=hbar_*/tau_*",
+    "identity": "E_*=m_* c_*^2",
+    "mass": "m_*=hbar_* tau_*/ell_*^2",
+    "momentum": "p_*=hbar_*/ell_*",
+    "object": "DerivedEnergyMomentumMassUnits",
+    "packet_file": "FIN_ST1202_DerivedEnergyMomentumMassUnits.json",
+    "packet_sha256": "c732600ec9686553ca6f76efc6234a4583270c0f43767993ed3938d240adb34a",
+    "program": "ST1202",
+    "status": "proven_CA_derives_consistent_mechanical_unit_family"
+  },
+  "ST1203": {
+    "boundary": "Does not supply a unique Lagrangian or EOM.",
+    "formula": "S_phys=hbar_* S_dimensionless",
+    "object": "ActionLift",
+    "packet_file": "FIN_ST1203_ActionLift.json",
+    "packet_sha256": "ad16095d4875e64fcb0f08b3639df983d2738564f6e42aab01c14a1c1d74925c",
+    "path_weight": "exp(i S_phys/hbar_*)=exp(i S_dimensionless)",
+    "program": "ST1203",
+    "status": "constructed_action_unit_lift"
+  },
+  "ST1204": {
+    "boundary": "W0 contains no accepted scale-charged selector.",
+    "canonical_numeric_triple": false,
+    "group": "(R_+)^3 acts freely by independent rescaling of ell,tau,hbar",
+    "object": "CA_PositiveScaleTorsor",
+    "packet_file": "FIN_ST1204_CA_PositiveScaleTorsor.json",
+    "packet_sha256": "1efc037c6940a4f4fa0017d59ff55005e156979a4bca03439f2567415fe329a1",
+    "program": "ST1204",
+    "status": "proven_CA_values_form_free_positive_three_torsor"
+  },
+  "ST1205": {
+    "absolute_SI_values": false,
+    "boundary": "Units label physical magnitudes without changing A's ratios.",
+    "invariants": [
+      "eigenvalue ratios",
+      "dimensionless phase",
+      "Markov transition at fixed t/tau",
+      "entropy in nats"
+    ],
+    "object": "DimensionlessPredictions_Invariant",
+    "packet_file": "FIN_ST1205_DimensionlessPredictions_Invariant.json",
+    "packet_sha256": "3858d9cdf883f14ef9b5d7063c15ea2b943ab76eafe1d92bff0dc99f58172549",
+    "program": "ST1205",
+    "status": "proven_dimensionless_W0_predictions_are_CA_rescaling_invariant"
+  },
+  "ST1206": {
+    "Landauer_bridge_complete": false,
+    "Shannon_H": "dimensionless",
+    "boundary": "hbar, ell and tau are insufficient for temperature dimension.",
+    "k_B_in_CA": false,
+    "object": "Thermodynamic_kB_Gap",
+    "packet_file": "FIN_ST1206_Thermodynamic_kB_Gap.json",
+    "packet_sha256": "379a41569c8c71e75e8dcbd46998f78b7e858f35ad53e3a7b209e502d2852905",
+    "physical_entropy": "S=k_B H",
+    "program": "ST1206",
+    "status": "proven_CA_does_not_convert_Shannon_to_thermodynamic_entropy_without_kB_or_temperature_structure"
+  },
+  "ST1207": {
+    "QW2191_discharged": false,
+    "boundary": "Positive scales are unchanged under Z12 origin/polarity action.",
+    "object": "CA_SelectorBlindness",
+    "packet_file": "FIN_ST1207_CA_SelectorBlindness.json",
+    "packet_sha256": "80e96a49d12971c7ca4a0bd4be1ec0c3d727f7c6c2d5ca53eec2318a9d0ae103",
+    "program": "ST1207",
+    "selects_lambda0": false,
+    "selects_r0": false,
+    "status": "proven_CA_is_selector_blind"
+  },
+  "ST1208": {
+    "boundary": "All Release 10.96 candidates accept the same unit triple.",
+    "classical": true,
+    "density_quantum": true,
+    "object": "CA_StateCategoryBlindness",
+    "packet_file": "FIN_ST1208_CA_StateCategoryBlindness.json",
+    "packet_sha256": "1a928d699f0c562456197bdece8facfd30f9206c197b48fb00ce4676e03de861",
+    "program": "ST1208",
+    "pure_quantum": true,
+    "selects_one": false,
+    "status": "proven_CA_is_state_category_blind"
+  },
+  "ST1209": {
+    "boundary": "It does not create conservation or completeness.",
+    "heat_blocker": "mass with dimensional time",
+    "new_ontological_persistence": false,
+    "object": "CA_AnnihilationNeutrality",
+    "packet_file": "FIN_ST1209_CA_AnnihilationNeutrality.json",
+    "packet_sha256": "f436f9a3208721a59e31e06e6ca1565292a9e46601c2ac163ba1d62d8d8d36ab",
+    "program": "ST1209",
+    "status": "proven_CA_only_dimensionalizes_existing_blockers",
+    "unitary_blocker": "norm with dimensional time"
+  },
+  "ST1210": {
+    "boundary": "Conditional success and strict-source failure separated.",
+    "dimension_rank": 3,
+    "instrument": false,
+    "object": "RoundTwo_Verdict",
+    "packet_file": "FIN_ST1210_RoundTwo_Verdict.json",
+    "packet_sha256": "f853ca672acc3506f4b10c2ea41f8313ec65801e55363ce7dcecedb1081bc035",
+    "program": "ST1210",
+    "selector": false,
+    "state_category": false,
+    "status": "CA_is_minimal_for_HLT_units_but_insufficient_for_physics",
+    "strict_source": false
+  },
+  "ST1211": {
+    "boundary": "Audit the sector-axiom package as a finite frame torsor.",
+    "next": [
+      "D12 action on 24 branches",
+      "origin/polarity minimality",
+      "selector potential",
+      "invariant-measure no-go",
+      "units/category independence"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1211_RoundTwo_Recommendation.json",
+    "packet_sha256": "e3a8f358d0c49a38a8d6cb4459ade2e1c4fc64ed57bf64a5c0d93bfb93574009",
+    "program": "ST1211",
+    "status": "recommended_ST1212_ST1226"
+  }
+}

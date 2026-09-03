@@ -1,0 +1,547 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage{xcolor,geometry,fancyhdr,hyperref}
+\geometry{margin=22mm}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue,citecolor=blue!55!black,
+ pdftitle={FIN ST1092--ST1181: Operator-to-Total-State Nonuniqueness and the A-Only No-Go},
+ pdfauthor={Krzysztof Żuchowski}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{FIN ST1092--ST1181}\fancyhead[R]{Release 10.96}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\status}[1]{\textsf{[#1]}}
+\newcommand{\Dclass}{\Delta_{11}}
+\newcommand{\Drho}{\mathcal D_{12}}
+
+\begin{document}
+\begin{titlepage}\centering
+\vspace*{15mm}
+{\Huge\bfseries FIN ST1092--ST1181\par}\vspace{5mm}
+{\LARGE Operator-to-Total-State Nonuniqueness\par}\vspace{2mm}
+{\LARGE and the $A$-Only No-Go\par}\vspace{13mm}
+{\Large Krzysztof \.Zuchowski\par}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+{\normalsize ORCID: 0009-0002-0909-3613\par}\vspace{10mm}
+{\large Six research rounds --- 90 programmes\par}
+{\large Breakthrough/terminal-class report --- Release 10.96\par}
+{\large 30 August 2026\par}
+\vfill
+\begin{minipage}{.87\textwidth}\small
+This report tests whether the strict operator itself can select the state space
+and complete dynamics of the one total nadsoliton.  It proves a terminal no-go
+for that $A$-only route.  The no-go does not exclude a richer FIN construction
+containing independently derived algebraic, nonlinear, refinement-limit or
+operational data.
+\end{minipage}
+\vfill
+{\small English mathematical research report.  No new physics is promoted by assumption.}
+\end{titlepage}
+
+\begin{abstract}
+Release 10.95 showed conditionally that a complete invariant normalized state
+of the whole nadsoliton cannot reach a nonexistence state outside its state
+space.  The unresolved question was whether the frozen strict operator $A$
+itself canonically determines that total-state space and dynamics.
+
+ST1092--ST1181 answer this question negatively for the $A$-only route.  First,
+the positive result is strengthened: $Q=-A$ satisfies the exact finite Markov
+generator criterion.  All off-diagonal rates are positive, row sums vanish,
+and $e^{-tA}$ is a positive mass-preserving irreducible reversible Markov
+semigroup for every $t\ge0$.  Its unique stationary distribution is uniform
+and it has nonnegative Shannon entropy production.
+
+The main theorem is an operator-to-state nonuniqueness no-go.  The same $A$
+canonically supports at least three pairwise inequivalent normalized models:
+the classical simplex $\Dclass$ with heat flow, pure quantum rays
+$\mathbb{CP}^{11}$ with unitary flow, and density operators $\Drho$ with
+unitary conjugation.  Their real dimensions are respectively $11$, $22$ and
+$143$; their boundary/convex structures and stationary sets differ, and the
+heat and unitary dynamics are inequivalent by invertibility and attractor
+structure.  The inherited $\mathbb Z_{12}$ symmetry acts on every candidate
+and therefore does not select one.  Exact $12\to24$ refinements repeat the
+ambiguity and introduce a free fiber rate.
+
+The heat interpretation also has a precise microscopic boundary.  A fixed-
+time CPTP measure-and-prepare dilation exists, but no single finite closed
+environment with a time-independent Hamiltonian and fixed initial state can
+realize the convergent strict heat semigroup exactly for all times: finite
+closed unitary dynamics is almost periodic.  Hence an infinite internal bath,
+fresh ancillas or a limit procedure is additional structure.  Strict heat
+provides detailed-balance gradient currents, not a sustained internal pump.
+
+Consequently, what blocks annihilation remains model-relative: mass in the
+classical model, norm/trace in the quantum models, and state-space closure in
+the ontological theorem.  The operator does not decide which blocker is
+physical.  At least two extra axiom classes are unavoidable: a state/observable
+category and a physical channel with clock/instrument semantics.  Repeating
+$A$-only state searches is now closed; progress requires genuinely new strict
+data or an explicitly labelled axiom.
+\end{abstract}
+
+\tableofcontents\newpage
+
+\section{Executive result}
+
+The six rounds establish both a positive theorem and a terminal obstruction.
+
+\paragraph{Positive theorem.}
+The strict matrix is not merely mass preserving on sampled vectors.  It is a
+weighted complete-graph Laplacian.  Therefore $-A$ is a genuine conservative
+continuous-time Markov generator and $e^{-tA}$ is stochastic for every
+$t\ge0$.
+
+\paragraph{Terminal $A$-only no-go.}
+The operator datum does not choose whether its normalized states are classical
+probabilities, quantum rays, or quantum density matrices, nor whether the
+physical channel is heat, unitary evolution or one of infinitely many
+trace-preserving dephasing laws.  Symmetry and refinement do not remove this
+ambiguity.
+
+The result terminates the route
+\[
+ A\ \text{alone}\quad\longmapsto\quad
+ (\mathcal M_{\rm tot},\Phi,\text{operational meaning})
+\]
+as a unique derivation.  It does not terminate FIN if an additional object can
+be independently derived.
+
+\section{Input and status discipline}
+
+The input is the frozen strict operator
+\[
+ A=sI-W,
+ \qquad s=1.660307278766099,
+\]
+with the certified quadratic form
+\[
+ \langle f,Af\rangle
+ =\frac12\sum_{x,y}W_{xy}|f_x-f_y|^2\ge0.
+\]
+This cycle uses neither a silent legacy substitution nor legacy physical-role
+transfer.  The ontology remains one nadsoliton as the whole fundamental being,
+with light, matter and observer downstream/internal.  No selector or
+QW-2191 closure is imported.
+
+Statuses are used as follows: \status{Proven} for theorems within declared
+finite models, \status{Constructed} for explicit optional structures,
+\status{Conditional} when a state category or operational premise is added,
+and \status{Open} for absent FIN derivations.
+
+\section{Round I: ST1092--ST1106 --- state candidates}
+
+\subsection{Exact Markov certificate}
+
+Let $Q=-A$.  The numerical reconstruction gives
+\[
+ \min_{i\ne j}Q_{ij}=0.011070817321442113>0,
+ \qquad
+ \max_{i\ne j}Q_{ij}=0.4699856726450201,
+\]
+and
+\[
+ \|Q\mathbf1\|_\infty\le2.22\times10^{-16}.
+\]
+The displayed residual is floating reconstruction error; the defining row-sum
+identity is exact in the model.  Since $Q$ is Metzler and conservative,
+$P_t=e^{tQ}=e^{-tA}$ is entrywise nonnegative and stochastic.  Because every
+off-diagonal rate is positive, the chain is irreducible.  Symmetry gives
+detailed balance with the uniform distribution $u=\mathbf1/12$.
+
+The Dirichlet form was independently replayed:
+\[
+ f^TAf=\frac12\sum_{i,j}W_{ij}(f_i-f_j)^2.
+\]
+
+\subsection{Three canonical candidates}
+
+After the corresponding state category is chosen, the same $A$ gives:
+\begin{align*}
+ \text{classical: }&\quad
+   \Dclass=\{p\ge0:\mathbf1^Tp=1\},
+   &p(t)&=e^{-tA}p(0),\\
+ \text{pure quantum: }&\quad
+   \mathbb{CP}^{11},
+   &[\psi(t)]&=[e^{-itA}\psi(0)],\\
+ \text{mixed quantum: }&\quad
+   \Drho=\{\rho\ge0:\operatorname{Tr}\rho=1\},
+   &\rho(t)&=e^{-itA}\rho(0)e^{itA}.
+\end{align*}
+
+Their real dimensions are
+\[
+ \dim\Dclass=11,
+ \qquad \dim_{\mathbb R}\mathbb{CP}^{11}=22,
+ \qquad \dim_{\mathbb R}\Drho=12^2-1=143.
+\]
+The simplex has faces and corners; projective space is a compact boundaryless
+manifold; the density-state body is convex with a rank-stratified boundary.
+They are not homeomorphic state spaces.
+
+The strict spectrum has multiplicities
+\[
+ 1,2,2,2,2,2,1.
+\]
+Thus the classical heat chain has one stationary probability state, while the
+Hermitian quantum commutant has real dimension
+\[
+ 1^2+5\cdot2^2+1^2=22,
+\]
+and its trace-one stationary slice has affine dimension $21$.  The stationary
+content is therefore also inequivalent.
+
+\section{The operator-to-state nonuniqueness theorem}
+
+\begin{theorem}[$A$-only state-selection no-go]
+Let $A$ be the frozen $12\times12$ real symmetric strict Laplacian.  The datum
+consisting of $A$, its inherited vertex basis, its symmetry group and its
+functional calculus does not determine a unique normalized total-state space
+and physical channel.  In particular, the three constructions
+$(\Dclass,e^{-tA})$, $(\mathbb{CP}^{11},e^{-itA})$ and
+$(\Drho,\rho\mapsto e^{-itA}\rho e^{itA})$ are valid, pairwise inequivalent
+realisations of the same operator datum.
+\end{theorem}
+
+\begin{proof}
+The Markov criterion proves that the first construction is a normalized
+positive semigroup.  Self-adjointness proves that the second and third are a
+unitary ray flow and a trace-preserving positive conjugation group.  The state
+spaces are pairwise nonhomeomorphic by their distinct covering dimensions and
+boundary/convex structures.  The heat dynamics has a unique global stationary
+probability attractor and its inverse is not a stochastic channel, whereas the
+unitary dynamics is a bijective recurrent group and has a higher-dimensional
+stationary commutant.  Hence no state-space/dynamical equivalence identifies
+the constructions.  All inherit the cyclic permutation action, so symmetry
+does not remove the alternatives.  Therefore $A$ and the declared associated
+data do not select a unique one.
+\end{proof}
+
+\begin{corollary}
+Any unique operational FIN theory requires at least one independently justified
+state/observable-category premise and one physical-channel/instrument premise,
+unless richer strict data proves an equivalent selection theorem.
+\end{corollary}
+
+The theorem is not a claim that the three candidates exhaust all models.
+Additional candidates strengthen rather than weaken nonuniqueness.
+
+\section{Round II: ST1107--ST1121 --- completeness and killing}
+
+Finite matrix exponentials exist globally.  The declared unitary and heat
+channels therefore have no finite-time blow-up.  For linear channels,
+no-killing is a generator condition:
+\[
+ Q\mathbf1=0
+ \quad\text{(classical)},
+ \qquad
+ \mathcal L^*(I)=0
+ \quad\text{(quantum)}.
+\]
+It is not a consequence of the word ``self-reference.''
+
+The same $A$ supports infinitely many additional complete quantum channels,
+for example
+\[
+ \mathcal L_\gamma(\rho)
+ =-i[A,\rho]
+ +\gamma\left(A\rho A-\frac12\{A^2,\rho\}\right),
+ \qquad \gamma\ge0.
+\]
+Every $\gamma$ is trace preserving, but $A$ does not select $\gamma$.  Uniform
+killing supplies the contrasting classical family
+\[
+ Q_\gamma=-A-\gamma I,
+ \qquad S(t)=e^{-\gamma t}.
+\]
+Again, $\gamma$ is new input.
+
+The full nonlinear nadsoliton law remains absent.  Compactness of a candidate
+state space is insufficient unless the vector field is tangent/inward,
+regular and globally solvable.  Therefore no universal no-killing theorem for
+future nonlinear or open extensions follows from the linear certificate.
+
+\section{Round III: ST1122--ST1136 --- internal heat and dilation}
+
+For a classical probability state define the edge current into $i$ from $j$:
+\[
+ J_{ij}=W_{ij}(p_j-p_i)=-J_{ji}.
+\]
+It obeys the exact continuity equation
+\[
+ \dot p_i=\sum_jJ_{ij}=-(Ap)_i,
+ \qquad \sum_i\dot p_i=0.
+\]
+Shannon entropy satisfies
+\[
+ \frac{dH}{dt}
+ =\frac12\sum_{i,j}W_{ij}(p_i-p_j)(\log p_i-\log p_j)\ge0.
+\]
+Because the chain is irreducible and detailed-balanced, a stationary state is
+uniform and every stationary edge current vanishes.  Strict heat is therefore
+a relaxational gradient flow, not a sustained internal pump or circulation.
+
+\subsection{Fixed-time quantum embedding}
+
+For $P=e^{-A}$, one CPTP embedding is the measure-and-prepare channel with
+Kraus operators
+\[
+ K_{ij}=\sqrt{P_{ij}}\,|i\rangle\langle j|,
+ \qquad
+ \sum_{i,j}K_{ij}^*K_{ij}=I,
+\]
+so
+\[
+ \mathcal E(\rho)=\operatorname{diag}(P\operatorname{diag}\rho).
+\]
+All $144$ entries of $P$ are positive, and this declared channel has full Choi
+rank $144$.  It destroys input coherence.  Other quantum extensions of the
+same classical transition matrix exist, so this is not a state-category
+selector.
+
+\begin{proposition}[finite closed dilation obstruction]
+No single finite-dimensional environment in a fixed initial state, coupled by
+one time-independent total Hamiltonian, realizes the nontrivial strict mixing
+heat semigroup exactly for every $t\ge0$.
+\end{proposition}
+
+\begin{proof}
+For finite system and environment, every matrix element of the reduced
+dynamics is a finite sum of exponentials of energy differences and is almost
+periodic.  A nonstationary strict heat trajectory converges exponentially to
+the unique uniform state.  A nonconstant almost-periodic function cannot have
+a one-sided limit.  The two behaviours are incompatible.
+\end{proof}
+
+A fixed-time Stinespring dilation remains valid.  Exact all-time irreversible
+heat requires an infinite internal bath, fresh internal ancillas, or a
+continuum/singular limit.  Such structure may remain internal to the one total
+nadsoliton, but it is not supplied by $A$ alone.
+
+\section{Round IV: ST1137--ST1151 --- refinement and duality}
+
+An exact two-point-fiber family is
+\[
+ A_{24}(q)=A_{12}\otimes I_2+I_{12}\otimes
+ \begin{pmatrix}q&-q\\-q&q\end{pmatrix},
+ \qquad q\ge0.
+\]
+Let $C$ sum each two-point fiber.  Then
+\[
+ CA_{24}(q)=A_{12}C,
+\]
+and consequently
+\[
+ Ce^{-tA_{24}(q)}=e^{-tA_{12}}C,
+ \qquad
+ Ce^{-itA_{24}(q)}=e^{-itA_{12}}C.
+\]
+The dual functional calculi are exactly compatible with this refinement.
+However, every $q\ge0$ gives the same coarse dynamics.  At $q=0$ the refined
+kernel dimension is two; for $q>0$ it is one.  Fine topology/connectivity can
+therefore change while the coarse observer is exactly blind.
+
+The spectrum is
+\[
+ \operatorname{spec}A_{24}(q)
+ =\operatorname{spec}A_{12}
+ \cup\bigl(\operatorname{spec}A_{12}+2q\bigr).
+\]
+For a fine classical state, entropy decomposes as
+\[
+ H(p_{24})=H(Cp_{24})+
+ \sum_i(Cp_{24})_iH(p_{\mathrm{fiber}|i}).
+\]
+This makes hidden information precise.  Yet each $A_{24}(q)$ again admits
+simplex, ray and density-state models.  Refinement repeats rather than resolves
+the state-category ambiguity.  The parameter $q$ is only a relative inverse
+time scale until a dimensional anchor is supplied.
+
+\section{Round V: ST1152--ST1166 --- observer, clock and record}
+
+A single perfectly distinguishable $12$-state carrier stores at most
+\[
+ \log_2 12=3.5849625007\ldots
+\]
+classical bits.  The Holevo bound gives the same single-use upper bound for
+classical information extracted from a $12$-dimensional quantum system.  A
+literal single $12$-level model cannot contain an unbounded independent record
+history.  A complete record-bearing model therefore needs composition,
+repeated carriers, unbounded refinement or an infinite algebra.  This does not
+exclude such a FIN completion; it excludes identifying the lone finite
+$A_{12}$ model with the whole operational universe.
+
+Two natural measurements illustrate further ambiguity.  The vertex POVM
+$E_x=|x\rangle\langle x|$ has twelve outcomes but is not informationally
+complete for density matrices.  The spectral PVM has seven effects because of
+degeneracies and does not resolve vertices.  Even a fixed POVM does not fix an
+instrument:
+\[
+ \mathcal I_x^{\rm L}(\rho)=E_x\rho E_x,
+ \qquad
+ \mathcal I_x^{\rm MP}(\rho)=\operatorname{Tr}(E_x\rho)\sigma_x
+\]
+have the same outcome probabilities and different postmeasurement states.
+$A$ does not select the states $\sigma_x$, apparatus, ancilla or record.
+
+The spectral gap gives two dimensionless clock candidates:
+\[
+ \text{unitary phase: }e^{-it\lambda_1},
+ \qquad T_1=\frac{2\pi}{\lambda_1}=8.331\ldots,
+\]
+\[
+ \text{heat contrast: }a(t)=a_0e^{-\lambda_1t}.
+\]
+The first is periodic and phase-valued; the second is monotone but saturates
+and is irreversible.  They share a number, not an operational clock.  Neither
+produces SI seconds.
+
+An internal observer also requires a subalgebra or factorization, memory
+states, an interaction/instrument and a record channel.  There is no canonical
+system--observer split in $A_{12}$.
+
+\section{Round VI: ST1167--ST1181 --- terminal verdict}
+
+The complete falsification matrix is:
+\begin{longtable}{@{}p{.31\textwidth}p{.24\textwidth}p{.35\textwidth}@{}}
+\toprule
+Proposed selector & Test & Result \\
+\midrule\endhead
+positivity/mass & strict Markov criterion & selects a valid classical model, not uniqueness \\
+self-adjointness/norm & unitary theorem & selects valid quantum models, not uniqueness \\
+$\mathbb Z_{12}$ symmetry & action on candidates & shared by all candidates \\
+spectral stationary structure & fixed-set comparison & candidates remain inequivalent \\
+dual dynamics & heat/unitary calculus & supplies two incompatible channels \\
+exact refinement & $12\to24$ intertwining & ambiguity repeats; $q$ remains free \\
+measurement & POVM/instrument audit & apparatus and poststate remain free \\
+closed internal dilation & recurrence test & finite all-time heat dilation impossible \\
+\bottomrule
+\end{longtable}
+
+Thus the current $A$-only lane has reached a total no-go.  This is the requested
+terminal scientific outcome for that lane, not a rhetorical stop.
+
+\section{Consequences for nadsoliton annihilation}
+
+Release 10.95 remains valid at its conditional level.  Once a state model is
+chosen:
+\begin{longtable}{@{}p{.24\textwidth}p{.28\textwidth}p{.38\textwidth}@{}}
+\toprule
+Model & Blocker & What may still disappear \\
+\midrule\endhead
+classical heat on $\Dclass$ & conserved mass & contrast, localization, records \\
+pure quantum rays & conserved norm / absence of zero ray & phases relative to coarse access, local patterns \\
+density operators & conserved trace/positivity & coherence under added dephasing, subsystem purity \\
+ontological total-state model & $\dagger$ excluded and flow complete/invariant & internal sectors and accessible structure \\
+\bottomrule
+\end{longtable}
+
+The new result adds a decisive qualification:
+\[
+ \boxed{A\text{ proves blockers inside several models but does not select which
+ model is physical.}}
+\]
+Therefore the phrase ``what blocks annihilation?'' has no unique physical
+answer from $A$ alone.  It has several exact mathematical answers and one
+conditional ontological answer.
+
+\section{Minimal unavoidable extra axioms}
+
+At least two axiom classes are necessary for a unique operational theory:
+\begin{enumerate}
+\item \textbf{State/observable category}: classical probability space,
+      complex Hilbert rays, a density-operator algebra, or another explicitly
+      defined category.
+\item \textbf{Physical channel and operational semantics}: which semigroup or
+      group represents time, together with clock, preparation, instrument and
+      record rules.
+\end{enumerate}
+Removing the first leaves the three nonhomeomorphic state spaces.  Removing
+the second leaves heat, unitary and infinitely many dephasing/open channels on
+compatible carriers.  Hence both classes are necessary in the declared
+problem.  They need not be arbitrary assumptions if future FIN mathematics
+derives them from genuinely new strict data.
+
+\section{Research after the no-go}
+
+Further local work is admissible only if it leaves the exhausted $A$-only
+class.  Recommended programmes are:
+\begin{enumerate}
+\item derive an observable algebra from independently defined coupling
+      composition rather than functional calculus of $A$;
+\item test whether the adaptive law supplies a state-category selector;
+\item construct and certify a full nonlinear invariant total-state manifold;
+\item derive an infinite internal dilation from a refinement limit;
+\item seek a unique refinement-limit state functor with an explicit
+      universality property;
+\item formulate classical-versus-quantum operational discriminants;
+\item construct observer, apparatus and record algebras inside the total state;
+\item derive a relational clock and dimensional anchor together;
+\item audit full strict-kernel data beyond $A$ for categorical information;
+\item formalize the no-go theorem in a proof assistant;
+\item stop any candidate that reduces to another function of $A$;
+\item postpone laboratory transfer until one operational model is uniquely
+      specified.
+\end{enumerate}
+
+\section{Final verdict}
+
+\begin{quote}
+\textbf{The strict operator is richer than a generic symmetric matrix: it is
+simultaneously a valid graph/Markov Laplacian and a self-adjoint quantum
+generator.  That dual success is exactly why it cannot select the ontology.}
+The same datum generates multiple exact, inequivalent normalized worlds.  No
+amount of repeating its spectrum, symmetry, functional calculus or the tested
+refinement removes the ambiguity.  The $A$-only bridge to a unique total-state
+theory is therefore mathematically impossible.  A state category and an
+operational dynamics must be independently derived or explicitly postulated.
+\end{quote}
+
+This is a total no-go for the declared current-datum lane and an important
+structural result for FIN.  It is not a no-go for every possible enriched FIN
+theory and it is not evidence that any candidate describes nature.
+
+\appendix
+\section{Six-round ledger}
+\begin{longtable}{@{}p{.18\textwidth}p{.32\textwidth}p{.40\textwidth}@{}}
+\toprule
+Range & Main object & Verdict \\
+\midrule\endhead
+ST1092--ST1106 & three canonical state candidates & exact Markov certificate; state nonuniqueness \\
+ST1107--ST1121 & complete/no-killing channels & declared linear laws complete; full nonlinear law open \\
+ST1122--ST1136 & currents and dilation & detailed-balance relaxation, no pump; finite all-time dilation no-go \\
+ST1137--ST1151 & two-fiber refinement & exact dual intertwining with free $q$ \\
+ST1152--ST1166 & observer, clock and record & finite capacity and instrument ambiguity \\
+ST1167--ST1181 & terminal theorem & total no-go for unique state ontology from $A$ alone \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducibility}
+
+The six authoritative result sets run from
+\path{FIN_ST1092_ST1106_Results.json} through
+\path{FIN_ST1167_ST1181_Results.json}.  Each contains fifteen programmes and
+references its individual JSON packet by SHA-256.  The combined test
+\path{test_fin_st1092_st1181.py} checks all ninety packet hashes, the Markov
+certificate, nonuniqueness, dilation obstruction, refinement intertwiners,
+capacity boundary and no-go scope.
+
+\section{Nonclaims}
+
+No laboratory event, external audit, unique physical state category, SI scale,
+selector, QW-2191 discharge, legacy-to-strict bridge, legacy role transfer,
+photon, matter law, Standard Model, gravity, $L_{\rm total}$ or Theory of
+Everything is established.  All future FIN PDFs remain English.
+
+\begin{thebibliography}{9}
+\bibitem{norris} J. R. Norris, \emph{Markov Chains}, Cambridge University Press.
+\bibitem{engel} K.-J. Engel and R. Nagel, \emph{One-Parameter Semigroups for Linear Evolution Equations}, Springer.
+\bibitem{breuer} H.-P. Breuer and F. Petruccione, \emph{The Theory of Open Quantum Systems}, Oxford University Press.
+\bibitem{nielsen} M. A. Nielsen and I. L. Chuang, \emph{Quantum Computation and Quantum Information}, Cambridge University Press.
+\end{thebibliography}
+\end{document}

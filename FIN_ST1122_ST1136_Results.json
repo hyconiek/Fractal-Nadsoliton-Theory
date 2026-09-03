@@ -1,0 +1,178 @@
+{
+  "ST1122": {
+    "antisymmetry_residual": 0.0,
+    "boundary": "Classical Markov-state candidate required.",
+    "definition": "J_ij=W_ij(p_j-p_i)",
+    "edge_weight_min": 0.011070817321442113,
+    "object": "EdgeCurrent_Definition",
+    "packet_file": "FIN_ST1122_EdgeCurrent_Definition.json",
+    "packet_sha256": "2307111adec303fd31d8e60b554ce47e0cc2939b68caeb8d9ada1982efb4c5d3",
+    "program": "ST1122",
+    "status": "constructed_strict_edge_current"
+  },
+  "ST1123": {
+    "boundary": "Finite exact formula, floating replay.",
+    "equation": "p_dot_i=sum_j J_ij=-(Ap)_i",
+    "global_rate": -8.326672684688674e-17,
+    "object": "ContinuityEquation_Certificate",
+    "packet_file": "FIN_ST1123_ContinuityEquation_Certificate.json",
+    "packet_sha256": "28423330bef3fbf4f5223d0ad2c95a0c837bc899cfcfe31b6057bcdcdbc8c03e",
+    "program": "ST1123",
+    "residual": 2.7755575615628914e-17,
+    "status": "proven_vertex_continuity_equation"
+  },
+  "ST1124": {
+    "boundary": "Only for the classical symmetric heat candidate.",
+    "dH_dt": 0.6757930393843476,
+    "edge_formula": 0.6757930393843478,
+    "nonnegative": true,
+    "object": "ShannonEntropyProduction",
+    "packet_file": "FIN_ST1124_ShannonEntropyProduction.json",
+    "packet_sha256": "cf920eb3b9096408cef2f9115755a80e88b93adb26a75be35fd9744360d533d2",
+    "program": "ST1124",
+    "residual": 1.1102230246251565e-16,
+    "status": "proven_nonnegative_Shannon_entropy_production"
+  },
+  "ST1125": {
+    "boundary": "Uniform state follows from symmetric positive rates.",
+    "detailed_balance_residual": 0.0,
+    "object": "UniformDetailedBalance",
+    "packet_file": "FIN_ST1125_UniformDetailedBalance.json",
+    "packet_sha256": "7fd49440027632ac628684c7f141047970539f13f818b8e0bbbde5cca6e06a6d",
+    "program": "ST1125",
+    "stationary_residual": 2.7755575615628914e-17,
+    "status": "proven_uniform_detailed_balance"
+  },
+  "ST1126": {
+    "boundary": "Irreducibility uses all positive offdiagonal W entries.",
+    "object": "StationaryCurrent_NoGo",
+    "packet_file": "FIN_ST1126_StationaryCurrent_NoGo.json",
+    "packet_sha256": "32b0019d9f6bb5ae2ed4eae882d2b0aa4da9e98d7cf891cf17ec443d988557d8",
+    "program": "ST1126",
+    "reason": "gradient detailed-balance flow has zero equilibrium currents",
+    "stationary_current_norm": 0.0,
+    "stationary_distribution": "uniform",
+    "status": "proven_no_nonzero_stationary_edge_circulation_for_strict_heat",
+    "sustained_internal_pump_from_A": false
+  },
+  "ST1127": {
+    "P": "exp(-A) at t=1",
+    "action": "rho -> diag(P diag(rho))",
+    "boundary": "Embedding discards input coherences; it is one channel choice.",
+    "kraus": "K_ij=sqrt(P_ij)|i><j|",
+    "kraus_completeness_residual": 6.661338147750939e-16,
+    "object": "HeatChannel_KrausConstruction",
+    "packet_file": "FIN_ST1127_HeatChannel_KrausConstruction.json",
+    "packet_sha256": "887847f50ffbcdb02cee10bb8ac6c45c6a9dedc073bf88742b6d3078238892f3",
+    "positive_kraus_terms": 144,
+    "program": "ST1127",
+    "status": "constructed_exact_fixed_time_CPTP_heat_embedding"
+  },
+  "ST1128": {
+    "boundary": "For t=1 every P_ij is strictly positive.",
+    "choi_rank": 144,
+    "dimension": 12,
+    "explicit_environment_dimension": 144,
+    "object": "HeatChannel_ChoiRank",
+    "packet_file": "FIN_ST1128_HeatChannel_ChoiRank.json",
+    "packet_sha256": "2be722290a676aa8dc27554edb0ac4eee8df9a2934e5886d2fcef41f594c4062",
+    "program": "ST1128",
+    "status": "proven_declared_measure_prepare_channel_has_full_Choi_rank"
+  },
+  "ST1129": {
+    "A_selects_environment_basis": false,
+    "A_selects_preparation": false,
+    "boundary": "Minimal dilations are unique only up to environment isometry, not as physical apparatus.",
+    "object": "KrausDilation_Nonuniqueness",
+    "packet_file": "FIN_ST1129_KrausDilation_Nonuniqueness.json",
+    "packet_sha256": "df160f7ef19bada4b03d85c86ad6c7370fc8ca7c20ae900e52c580495c71c1a7",
+    "program": "ST1129",
+    "status": "proven_Stinespring_representation_is_nonunique",
+    "unitary_mixing_of_kraus_operators": true
+  },
+  "ST1130": {
+    "boundary": "Assumes one finite environment, fixed initial environment state and time-independent total Hamiltonian.",
+    "exact_all_time_finite_dilation": false,
+    "object": "FiniteEnvironment_SemigroupNoGo",
+    "packet_file": "FIN_ST1130_FiniteEnvironment_SemigroupNoGo.json",
+    "packet_sha256": "79ddd460c237f40dc46f820b6eda562355f31fb0711c8006804f650047039ff0",
+    "program": "ST1130",
+    "proof": "finite closed unitary matrix elements are almost periodic; nonstationary strict heat trajectories converge to uniform and are not almost periodic",
+    "single_time_dilation": true,
+    "status": "proven_fixed_finite_closed_environment_cannot_realize_mixing_heat_semigroup_for_all_times"
+  },
+  "ST1131": {
+    "boundary": "This is an added operational structure, not an external ontological layer.",
+    "object": "InfiniteOrResetEnvironment_Requirement",
+    "options": [
+      "infinite internal bath",
+      "collision model with fresh internal ancillas",
+      "singular/continuum limit"
+    ],
+    "packet_file": "FIN_ST1131_InfiniteOrResetEnvironment_Requirement.json",
+    "packet_sha256": "80af878c8fa3c841d841ec8aabe9ee4a452f403ca6547999348db9219398dcab",
+    "program": "ST1131",
+    "status": "conditional_infinite_or_reset_internal_environment_needed_for_exact_irreversible_semigroup",
+    "strict_source": false
+  },
+  "ST1132": {
+    "boundary": "Requires a system-environment partition.",
+    "classical_heat_entropy_t0": 2.3458510229683944,
+    "classical_heat_entropy_t1": 2.481534731381373,
+    "global_information_loss_required": false,
+    "object": "GlobalVsLocalInformation",
+    "packet_file": "FIN_ST1132_GlobalVsLocalInformation.json",
+    "packet_sha256": "3964f126e0acd21e34c7fbb8bba2eea96b622108e352795f2112ad0e802b1946",
+    "program": "ST1132",
+    "status": "proven_local_entropy_growth_compatible_with_global_unitarity"
+  },
+  "ST1133": {
+    "boundary": "No actual FIN partition or bath is derived.",
+    "external_pump_fundamental": false,
+    "global_closed_state_required": true,
+    "internal_environment_conditional": true,
+    "object": "ExternalPump_Rejection",
+    "packet_file": "FIN_ST1133_ExternalPump_Rejection.json",
+    "packet_sha256": "41f462733fd265404dfaf448e9757a656cf547a9ee3c855f8e0ef3289582f8bb",
+    "program": "ST1133",
+    "status": "ontology_rejects_external_resource_but_allows_internal_partition"
+  },
+  "ST1134": {
+    "boundary": "A different antisymmetric/non-detailed-balance generator would be extra.",
+    "entropy_production_until_equilibrium": true,
+    "equilibrium_current": 0.0,
+    "object": "StrictA_GradientNotCirculation",
+    "packet_file": "FIN_ST1134_StrictA_GradientNotCirculation.json",
+    "packet_sha256": "3597f3eb8127c8a12299f257642d4fc00c624597ab98da5e4bb439df470f67da",
+    "program": "ST1134",
+    "self_sustaining_pump_from_heat": false,
+    "status": "proven_strict_A_supplies_relaxational_gradient_flow_not_sustained_circulation"
+  },
+  "ST1135": {
+    "boundary": "The mathematical heat semigroup itself remains exact.",
+    "closed_finite_microdynamics_from_A_alone": false,
+    "object": "Internalization_CurrentVerdict",
+    "packet_file": "FIN_ST1135_Internalization_CurrentVerdict.json",
+    "packet_sha256": "babf20815e921406aa96b26df8b55fd5bf02869a8fe8f559a25373960f11cd82",
+    "program": "ST1135",
+    "state_ontology_selection": false,
+    "status": "internal_heat_interpretation_requires_noncanonical_environment_structure",
+    "strict_heat_valid": true
+  },
+  "ST1136": {
+    "boundary": "Next round tests refinement/fiber nonuniqueness and dual compatibility.",
+    "next": [
+      "12-to-24 exact lifts",
+      "coarse intertwining",
+      "free fiber rate",
+      "hidden state entropy",
+      "unitary/heat refinement compatibility",
+      "scale-source verdict"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1136_RoundThree_Recommendation.json",
+    "packet_sha256": "ea17599133be120ae70705aaf2cc063a4b2aad055886a6dc3fb117bb2816d82f",
+    "program": "ST1136",
+    "status": "recommended_ST1137_ST1151"
+  }
+}

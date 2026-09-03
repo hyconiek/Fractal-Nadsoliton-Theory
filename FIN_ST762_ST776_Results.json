@@ -1,0 +1,178 @@
+{
+  "ST762": {
+    "boundary": "Synthetic.",
+    "draws": 100000,
+    "failure_rate": 0.0031,
+    "nuisances": [
+      "clock",
+      "q",
+      "polarization",
+      "tail",
+      "scale"
+    ],
+    "object": "NuisanceRobust_ModelLibrary",
+    "packet_file": "FIN_ST762_NuisanceRobust_ModelLibrary.json",
+    "packet_sha256": "cba2d6d7796709c01fc648fad12f2881fba275fb160706a905059b9e02b3212d",
+    "program": "ST762",
+    "status": "strong_synthetic_nuisance_robustness"
+  },
+  "ST763": {
+    "boundary": "No clocks.",
+    "levels": 5,
+    "noise": 0.02,
+    "object": "TwoClock_FiniteLayer_Test",
+    "packet_file": "FIN_ST763_TwoClock_FiniteLayer_Test.json",
+    "packet_sha256": "83f065ead1fb65cc3f8fd829151196c861a3ee0dd3f4d7c5b412c305d728bcbd",
+    "program": "ST763",
+    "slope_separation_zscore": 18.7,
+    "status": "strong_two_clock_layer_test"
+  },
+  "ST764": {
+    "alternative": "rank2 transverse",
+    "boundary": "No detector.",
+    "leakage_threshold": 0.05,
+    "null": "rank1 scalar",
+    "object": "Polarization_Leakage_Test",
+    "packet_file": "FIN_ST764_Polarization_Leakage_Test.json",
+    "packet_sha256": "aefba84fe5e6fb3900bb8bc897104498f798057fe9db8d3edd20406a802c02c5",
+    "program": "ST764",
+    "status": "constructed_polarization_leakage_test"
+  },
+  "ST765": {
+    "boundary": "No gauge apparatus.",
+    "object": "GaussConstraint_Test",
+    "observable": "||d0*E||/||E||",
+    "packet_file": "FIN_ST765_GaussConstraint_Test.json",
+    "packet_sha256": "835e94a88b59bfe3cda273d51ef74fa99ce6b6656e8ca9138145e11afc87d676",
+    "program": "ST765",
+    "status": "constructed_Gauss_constraint_test",
+    "threshold": 0.01
+  },
+  "ST766": {
+    "boundary": "Finite dynamic range.",
+    "classes": [
+      0.8,
+      2.0,
+      "unstable"
+    ],
+    "log_bins": 12,
+    "object": "TailExponent_Test",
+    "packet_file": "FIN_ST766_TailExponent_Test.json",
+    "packet_sha256": "4be2d7e47175caa3b197c0a50fc70eece112891ac26dc74251f4f1d49d20c925",
+    "program": "ST766",
+    "status": "constructed_tail_exponent_test"
+  },
+  "ST767": {
+    "boundary": "External custody absent.",
+    "object": "IndependentAnchor_HashGate",
+    "packet_file": "FIN_ST767_IndependentAnchor_HashGate.json",
+    "packet_sha256": "47b46725cf08a7ba157f452634080bd2d99b0834b2687c1b5253bac7e9e2b87f",
+    "program": "ST767",
+    "required": [
+      "rod_hash",
+      "clock_hash",
+      "timestamp_before_unblind",
+      "not_light_defined"
+    ],
+    "status": "constructed_fail_closed_anchor_hash"
+  },
+  "ST768": {
+    "boundary": "Code not independence.",
+    "features": [
+      "D",
+      "nu",
+      "pol",
+      "Gauss",
+      "stability",
+      "tail",
+      "clocks"
+    ],
+    "model_labels_hidden": true,
+    "object": "BlindFeature_Extraction",
+    "packet_file": "FIN_ST768_BlindFeature_Extraction.json",
+    "packet_sha256": "eca0f5daf498fdf3f71427ceb6ff9546810df5c80e109c410d46a6d3a72f353a",
+    "program": "ST768",
+    "status": "constructed_blind_feature_extraction"
+  },
+  "ST769": {
+    "boundary": "No empirical data.",
+    "frozen_nuisance_cover": true,
+    "object": "OneShot_ModelScore",
+    "packet_file": "FIN_ST769_OneShot_ModelScore.json",
+    "packet_sha256": "829d0ce65891c87f9a6c92503b3f2c43b7c745c56c4a910852a3a1dd001f93fa",
+    "program": "ST769",
+    "reruns_after_unblind": 0,
+    "status": "constructed_one_shot_model_score"
+  },
+  "ST770": {
+    "action": "report unknown; do not repair theory",
+    "boundary": "Threshold synthetic.",
+    "object": "OutOfLibrary_Stop",
+    "packet_file": "FIN_ST770_OutOfLibrary_Stop.json",
+    "packet_sha256": "f949d98076efe0da708cbdd54829c66d1ac9dc5144b1a9bb639d76e1450f3d6b",
+    "program": "ST770",
+    "status": "constructed_out_of_library_stop"
+  },
+  "ST771": {
+    "boundary": "Roles not staffed.",
+    "object": "RoleSeparation_Audit",
+    "packet_file": "FIN_ST771_RoleSeparation_Audit.json",
+    "packet_sha256": "6cdc8321b46ff70fe30bfcc6dc1642eeeb6e390a11dca160ee85eba8e759a0ce",
+    "program": "ST771",
+    "provider_not_registrar_not_analyst": true,
+    "status": "proven_role_separation_required"
+  },
+  "ST772": {
+    "boundary": "No publication action.",
+    "negative_result_preserved": true,
+    "object": "FailureReporting_Rule",
+    "packet_file": "FIN_ST772_FailureReporting_Rule.json",
+    "packet_sha256": "b680177386255148e3d7fe0079d5edd3e81a1333f76c23c0cafc89b3478fb8bd",
+    "program": "ST772",
+    "status": "constructed_failure_reporting_rule"
+  },
+  "ST773": {
+    "achieved_error": 0.0048,
+    "boundary": "Not nature.",
+    "object": "SyntheticPower_Audit",
+    "packet_file": "FIN_ST773_SyntheticPower_Audit.json",
+    "packet_sha256": "5dc8bfd424bf1a6da9053f213faab2e15461112e3ab3301ee7466912519fa0bd",
+    "program": "ST773",
+    "status": "strong_synthetic_power_audit",
+    "target_error": 0.01
+  },
+  "ST774": {
+    "boundary": "All physical rows open.",
+    "object": "ApparatusObligation_Matrix",
+    "packet_file": "FIN_ST774_ApparatusObligation_Matrix.json",
+    "packet_sha256": "86f201c6dc33d7e0ecae0cb07be4e26fd2ee0eb59fed2205bd8112ab2f4e3318",
+    "program": "ST774",
+    "rows": [
+      "multi-axis carrier",
+      "two clocks",
+      "independent rods",
+      "vertex/edge/face instruments",
+      "raw events",
+      "custody"
+    ],
+    "status": "constructed_apparatus_obligation_matrix"
+  },
+  "ST775": {
+    "boundary": "Operational tests do not source theory.",
+    "object": "StrictSource_Gate",
+    "packet_file": "FIN_ST775_StrictSource_Gate.json",
+    "packet_sha256": "9ae9343f176ff49fe027200a0d2d4d5e52e78ceddda8a24cf34407c4a77e1afc",
+    "program": "ST775",
+    "source": false,
+    "status": "blocked_no_strict_source"
+  },
+  "ST776": {
+    "boundary": "Round three local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST776_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST776",
+    "status": "blocked_no_evidence"
+  }
+}

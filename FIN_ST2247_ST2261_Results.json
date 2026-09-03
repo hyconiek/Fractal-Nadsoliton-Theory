@@ -1,0 +1,169 @@
+{
+  "ST2247": {
+    "boundary": "Named mathematical lift, not a physical-law claim.",
+    "map": "W -> (Clique(supp W), tau_ijk=W_ij W_jk W_ki)",
+    "object": "strict loop-product flag lift",
+    "packet_file": "FIN_ST2247_LoopProductFlagLift.json",
+    "packet_sha256": "7c5e125fbecadb06fe19298b21257a9faec56b822d4125072989670393638477",
+    "program": "ST2247",
+    "status": "Constructed"
+  },
+  "ST2248": {
+    "boundary": "Requires L,Z,M,U; overall scale is descriptive until physical calibration.",
+    "object": "ConditionalLoopProductUniqueness",
+    "packet_file": "FIN_ST2248_ConditionalLoopProductUniqueness.json",
+    "packet_sha256": "6af3b2d655d89f8de7c085f1098f847e34ccdccb5957c84a3e5c4e9020fdd912",
+    "program": "ST2248",
+    "status": "Conditional theorem",
+    "theorem": "Every universal local separately-linear support-zero triangle rule is kappa*a*b*c."
+  },
+  "ST2249": {
+    "axiom": "L",
+    "boundary": "Removing locality permits multiplication by arbitrary global invariants such as Tr(W^2).",
+    "counterfamily_exists": true,
+    "object": "LocalityRemoval",
+    "packet_file": "FIN_ST2249_LocalityRemoval.json",
+    "packet_sha256": "63bdaa3490dcc923b2f156b74b206f2b7ca32414250adccb339b1e1d674ed06e",
+    "program": "ST2249",
+    "status": "Axiom necessary"
+  },
+  "ST2250": {
+    "axiom": "Z",
+    "boundary": "Removing support-zero permits symmetric lower-degree terms.",
+    "counterfamily": "c0+c1(a+b+c)+c2(ab+bc+ca)+c3abc",
+    "object": "SupportZeroRemoval",
+    "packet_file": "FIN_ST2250_SupportZeroRemoval.json",
+    "packet_sha256": "8299912ef82564a9b19341c54cd061955a86e108bdc71f9aebc09c2d6e1af83d",
+    "program": "ST2250",
+    "status": "Axiom necessary"
+  },
+  "ST2251": {
+    "axiom": "M",
+    "boundary": "Removing separate linearity admits tau^p and general positive functions.",
+    "counterfamily": "(abc)^p, p>0",
+    "object": "SeparateLinearityRemoval",
+    "packet_file": "FIN_ST2251_SeparateLinearityRemoval.json",
+    "packet_sha256": "d640f605fe859d613e0ff8a13d29d3d760d275a1143afb9178aac758f22d817e",
+    "program": "ST2251",
+    "status": "Axiom necessary"
+  },
+  "ST2252": {
+    "axiom": "U",
+    "boundary": "D12 equivariance alone permits one multiplier for each of twelve triangle orbits.",
+    "counterfamily_dimension": 12,
+    "object": "UniversalityRemoval",
+    "packet_file": "FIN_ST2252_UniversalityRemoval.json",
+    "packet_sha256": "53ccf24d33d528c1b6c712fe54776d02a25866b66cc29beab01ea7295a52efec",
+    "program": "ST2252",
+    "status": "Axiom necessary"
+  },
+  "ST2253": {
+    "axiom": "S",
+    "boundary": "The surviving monomial abc is already symmetric.",
+    "independent_necessity": false,
+    "object": "SymmetryAxiomRedundancy",
+    "packet_file": "FIN_ST2253_SymmetryAxiomRedundancy.json",
+    "packet_sha256": "09362533498f76f69b059b97b4915fd5f323a5a5174af78f91ed4af2fd6c58c2",
+    "program": "ST2253",
+    "status": "Axiom redundant"
+  },
+  "ST2254": {
+    "boundary": "Identical complete pair records can have arbitrary epsilon third moment.",
+    "counterexample": "ST2217-ST2228",
+    "general_pair_sufficiency_for_ternary_information": false,
+    "object": "PairSufficiencyObstruction",
+    "packet_file": "FIN_ST2254_PairSufficiencyObstruction.json",
+    "packet_sha256": "89379e9b32f269f0d1489d56b76774eb801310c1b4fdb70e833ec85ed1ab1bee",
+    "program": "ST2254",
+    "status": "Proven obstruction"
+  },
+  "ST2255": {
+    "boundary": "Separates mathematical lifts from physical source claims.",
+    "file": "FIN_ST2247_ST2261_TernarySourceGateV2.json",
+    "object": "TernarySourceGateV2",
+    "packet_file": "FIN_ST2255_TernarySourceGateV2.json",
+    "packet_sha256": "7ac635c16281576965f324e335e11bb2129b8bf985a9cbce8608d39e3ed492d7",
+    "program": "ST2255",
+    "rows": 9,
+    "status": "Gate constructed"
+  },
+  "ST2256": {
+    "boundary": "Three mathematical rows pass; no physical-source row passes.",
+    "object": "GateScore",
+    "packet_file": "FIN_ST2256_GateScore.json",
+    "packet_sha256": "610747f36d22bef7c04b9f87ba818a7118cd0c78596f62c4d6cd4ea50f36d404",
+    "physical_source_passes": 0,
+    "program": "ST2256",
+    "status": "Gate result",
+    "strict_mathematical_passes": 3
+  },
+  "ST2257": {
+    "boundary": "Only L,Z,M,U give conditional loop-product uniqueness; S is redundant.",
+    "file": "FIN_ST2247_ST2261_LoopProductAxiomLedger.json",
+    "necessary": [
+      "L",
+      "Z",
+      "M",
+      "U"
+    ],
+    "object": "MinimalAxiomLedger",
+    "packet_file": "FIN_ST2257_MinimalAxiomLedger.json",
+    "packet_sha256": "026e407405a93e41df856353c1409c0ef356fbf99651669a37413f74da5a2c4f",
+    "program": "ST2257",
+    "redundant": [
+      "S"
+    ],
+    "status": "Axiom ledger"
+  },
+  "ST2258": {
+    "boundary": "Legacy raw cycle products have both signs, so strict positivity cannot be silently transferred.",
+    "legacy_cycle_stats": {
+      "maximum": 8.841655777459357,
+      "minimum": -12.306887604213907,
+      "negative": 112,
+      "positive": 108
+    },
+    "legacy_role_transfer": false,
+    "object": "LegacyStrictBoundary",
+    "packet_file": "FIN_ST2258_LegacyStrictBoundary.json",
+    "packet_sha256": "7a53066db092be10df27647a12b85e37e0a740de454eb019e65a573e825cdb07",
+    "program": "ST2258",
+    "status": "Kernel-split boundary"
+  },
+  "ST2259": {
+    "ToE_closed": false,
+    "boundary": "No unique Hodge rule, local continuum, units, polarity, state law, apparatus, or record follows.",
+    "fundamental_physics_closed": false,
+    "object": "PhysicsBoundary",
+    "packet_file": "FIN_ST2259_PhysicsBoundary.json",
+    "packet_sha256": "2c5ef1e1e237fcaed301e7afb835932c2a673c2cfdc9466e50645cd8eacf64a6",
+    "program": "ST2259",
+    "status": "Physics no-go"
+  },
+  "ST2260": {
+    "boundary": "Test whether an already strict adaptive/refinement law forces separate linearity M and universality U; otherwise classify them as minimal Sector/Hodge axioms.",
+    "highest_value_next_theorem": "derive or refute M+U from strict composition/refinement rather than assume p=1",
+    "object": "HighestValueNextTheorem",
+    "packet_file": "FIN_ST2260_HighestValueNextTheorem.json",
+    "packet_sha256": "e41f1c7d64143601bce9293bd09f4e086588e51d6b14c1ff03f5cb22e7455b81",
+    "program": "ST2260",
+    "status": "Recommendation",
+    "stop_rule": "do not enumerate more cycle functions unless they attack M or U"
+  },
+  "ST2261": {
+    "axiom_ledger_sha256": "c3d649005f40f1ed522d38442519b2ead69d21ce88977599d3ead53a6b3e835d",
+    "boundary": "Release 11.08 report required.",
+    "figure": "FIN_ST2172_ST2261_Figures/ternary_source_and_flag_hodge_audit.png",
+    "gate_sha256": "b4668886eea524a43ea85a9bd6e2f4c4c02ac12ee6b45c3dc3e628e15da81b72",
+    "main_result": "strict reducible loop-product flag lift exists; irreducible ternary reconstruction and unique Hodge physics fail",
+    "object": "FinalCycleReportTrigger",
+    "packet_file": "FIN_ST2261_FinalCycleReportTrigger.json",
+    "packet_sha256": "bbb03a93b42d993a5bf33ebc10214015461d85a05e28dafce5a1bdf98116478f",
+    "program": "ST2261",
+    "programs": 90,
+    "release": "11.08",
+    "rounds": 6,
+    "status": "Cycle complete",
+    "strict_ToE_closure": false
+  }
+}

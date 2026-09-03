@@ -1,0 +1,191 @@
+{
+  "ST1407": {
+    "boundary": "Simple frozen hypotheses.",
+    "object": "FullVertexLikelihood",
+    "packet_file": "FIN_ST1407_FullVertexLikelihood.json",
+    "packet_sha256": "243e0e886285f3f0518ce377368963361078d2c5ca00cfa218af8a031e60ffb3",
+    "per_event": "log(q_x/p_x)",
+    "program": "ST1407",
+    "sample_LLR": "sum_x n_x log(q_x/p_x)",
+    "status": "constructed_full_twelve_outcome_log_likelihood"
+  },
+  "ST1408": {
+    "boundary": "Uses reflection-symmetric frozen distributions.",
+    "classical": [
+      0.41235739715017083,
+      0.2568786318815676,
+      0.14353788756887625,
+      0.08545230563393637,
+      0.053090404551897945,
+      0.035023465168854975,
+      0.013659908044695399
+    ],
+    "multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "object": "DistanceClassReduction",
+    "packet_file": "FIN_ST1408_DistanceClassReduction.json",
+    "packet_sha256": "18e6eb06c0081eb55928ccdf25f5b6f996f8a22a56ab54f9ee082a8ca9adcbc1",
+    "program": "ST1408",
+    "quantum": [
+      0.8235756226155309,
+      0.14045043403877458,
+      0.026656364374742152,
+      0.006629435821383008,
+      0.0018578291598599947,
+      0.0006032371441678978,
+      0.0002270768455413861
+    ],
+    "status": "constructed_seven_cyclic_distance_classes"
+  },
+  "ST1409": {
+    "boundary": "Paired vertices have identical likelihood ratio.",
+    "classes": 7,
+    "information_loss_vs_12_outcomes": 0.0,
+    "object": "SevenClassSufficiency",
+    "packet_file": "FIN_ST1409_SevenClassSufficiency.json",
+    "packet_sha256": "5fe08bdc1a933b7b8ce0176b7e4dda19aa6a05f797580188f2a7e3c1cb591ac5",
+    "program": "ST1409",
+    "status": "proven_distance_class_is_sufficient_for_frozen_vertex_likelihood"
+  },
+  "ST1410": {
+    "LLR": [
+      0.6917649340158952,
+      -0.6037490799730559,
+      -1.6835710898098173,
+      -2.556438685692495,
+      -3.352587518924167,
+      -4.061463155901788,
+      -4.096931914573202
+    ],
+    "boundary": "All probabilities strictly positive.",
+    "monotone_in_distance": false,
+    "object": "PerClassLogLikelihoodRatios",
+    "packet_file": "FIN_ST1410_PerClassLogLikelihoodRatios.json",
+    "packet_sha256": "93051455a4289389aa3a8c0f40279926b86f97e63e052fadc3124b970b624882",
+    "program": "ST1410",
+    "status": "proven_finite_per_class_log_likelihoods"
+  },
+  "ST1411": {
+    "D_C_Q": 0.706146122009315,
+    "D_Q_C": 0.4134894066196461,
+    "boundary": "Natural logs.",
+    "object": "FullKL_Directions",
+    "packet_file": "FIN_ST1411_FullKL_Directions.json",
+    "packet_sha256": "de832a2ef71d17442660d4be31bab7a6a43ebcc708477c9255d55281cb96e229",
+    "program": "ST1411",
+    "status": "proven_full_directional_KL_values"
+  },
+  "ST1412": {
+    "C": 0.13647980004881377,
+    "boundary": "Scalar bounded optimization.",
+    "object": "FullChernoff",
+    "packet_file": "FIN_ST1412_FullChernoff.json",
+    "packet_sha256": "143c99a92086367f5699dd49dedaf6b21a6ec4a2f17d7061f7336cb6e903e01d",
+    "program": "ST1412",
+    "s_star": 0.5679917094550424,
+    "status": "strong_numerical_full_Chernoff_information"
+  },
+  "ST1413": {
+    "Bayes_error": 0.2943908872673201,
+    "TV": 0.4112182254653598,
+    "boundary": "Simple distributions.",
+    "object": "SingleShotTVBayesError",
+    "packet_file": "FIN_ST1413_SingleShotTVBayesError.json",
+    "packet_sha256": "fefafbfcd15a35fb0792dd828bb9712988c36ee32f2412373f174227e470b37b",
+    "program": "ST1413",
+    "status": "proven_single_shot_equal_prior_Bayes_error"
+  },
+  "ST1414": {
+    "boundary": "Standard product-measure bound.",
+    "formula": "P_e(n)<=0.5 exp(-n C)",
+    "object": "ChernoffFiniteShotBound",
+    "packet_file": "FIN_ST1414_ChernoffFiniteShotBound.json",
+    "packet_sha256": "b22b1c9f25463e8d2630498e388743f31e314827cbbb44fe7f478918d641129b",
+    "program": "ST1414",
+    "status": "proven_Chernoff_equal_prior_error_upper_bound"
+  },
+  "ST1415": {
+    "boundary": "Chernoff bound, not exact minimal n.",
+    "object": "FullRecord_OnePercentBound",
+    "packet_file": "FIN_ST1415_FullRecord_OnePercentBound.json",
+    "packet_sha256": "90b746b2919a8516077ede7c147e490316960749b85164754e7898a278a8f16d",
+    "program": "ST1415",
+    "shots": 29,
+    "status": "constructed_full_record_one_percent_sufficient_shot_bound",
+    "upper": 0.009551458802415994
+  },
+  "ST1416": {
+    "boundary": "Conservative comparison.",
+    "object": "BinaryChernoffBoundComparison",
+    "packet_file": "FIN_ST1416_BinaryChernoffBoundComparison.json",
+    "packet_sha256": "bee6896009388f75549d9420df7d29b52e3c8681bf7064357f1702ee83937437",
+    "program": "ST1416",
+    "shots": 40,
+    "status": "constructed_binary_Chernoff_one_percent_sufficient_bound",
+    "upper": 0.009053651025803008
+  },
+  "ST1417": {
+    "boundary": "Frozen models.",
+    "gain": 0.036193800203810425,
+    "object": "InformationGainRatio",
+    "packet_file": "FIN_ST1417_InformationGainRatio.json",
+    "packet_sha256": "346063dc015e4fde58c73448d8cccafe97eeeda4155fe51e2160dd56a6f2d881",
+    "program": "ST1417",
+    "ratio": 1.360905811975247,
+    "status": "proven_full_record_has_positive_Chernoff_gain"
+  },
+  "ST1418": {
+    "boundary": "Known detector matrix M maps p,q before likelihood calculation.",
+    "data_processing": "Chernoff/TV cannot improve under coarse noise",
+    "formula": "p_obs=M p; q_obs=M q",
+    "object": "MultinomialCalibrationMap",
+    "packet_file": "FIN_ST1418_MultinomialCalibrationMap.json",
+    "packet_sha256": "3d54f8f615e3829fea07b126dcd1093111417690108ca419ee360d7a55de0e19",
+    "program": "ST1418",
+    "status": "constructed_confusion_matrix_likelihood_pushforward"
+  },
+  "ST1419": {
+    "boundary": "Hoeffding union bound, binary returns, per time.",
+    "object": "CompositeCertifiedConservativeShots",
+    "packet_file": "FIN_ST1419_CompositeCertifiedConservativeShots.json",
+    "packet_sha256": "8929a557f9f66b660e25c4dd907722ebdfc3f4e37bfeb7110349b55c4d0f682d",
+    "program": "ST1419",
+    "residual_lower": 0.10804167160619894,
+    "shots_each": 1146,
+    "status": "constructed_conservative_four_time_composite_shot_bound_from_interval_residual",
+    "total_shots": 4584,
+    "type_I_union_bound_target": 0.01
+  },
+  "ST1420": {
+    "boundary": "No exact composite likelihood yet.",
+    "composite_minimax_likelihood_ready": false,
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST1420_RoundFour_Verdict.json",
+    "packet_sha256": "9636f46fb17903a4efa7b1fe54c01067535dc072dd27a9e0884f36d4f17a919a",
+    "program": "ST1420",
+    "simple_full_likelihood_ready": true,
+    "status": "full_distance_class_record_is_preferred_for_simple_models_but_composite_bound_remains_conservative"
+  },
+  "ST1421": {
+    "boundary": "Add anytime-valid likelihood/e-process rules and protocol 10.99.",
+    "next": [
+      "simple e-process",
+      "Ville bounds",
+      "expected growth",
+      "composite warning",
+      "validator upgrade"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1421_RoundFour_Recommendation.json",
+    "packet_sha256": "140bc3d8de34128d4788c42e6eb0d49f5a31978c099c2740fa70be99bc8704fc",
+    "program": "ST1421",
+    "status": "recommended_ST1422_ST1436"
+  }
+}

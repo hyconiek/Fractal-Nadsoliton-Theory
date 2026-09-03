@@ -1,0 +1,167 @@
+{
+  "ST1392": {
+    "C": 0.4123573971501711,
+    "Q": 0.8235756226155311,
+    "boundary": "Float replay of exact model formulas.",
+    "gap": 0.41121822546535997,
+    "object": "BaseGap",
+    "packet_file": "FIN_ST1392_BaseGap.json",
+    "packet_sha256": "cb3943866bb3f329d7f8615f3e0323467c06a3dcf65fda39090f10ce459c5873",
+    "program": "ST1392",
+    "status": "proven_frozen_base_return_gap",
+    "time": 0.6
+  },
+  "ST1393": {
+    "boundary": "Uniform state is stationary for both declared channels.",
+    "formula": "p'_H=(1-epsilon)p_H+epsilon/12",
+    "gap_factor": "1-epsilon",
+    "object": "CommonUniformPreparationContamination",
+    "packet_file": "FIN_ST1393_CommonUniformPreparationContamination.json",
+    "packet_sha256": "2fcba952091098a52dfdca5fe91c89f160421770a060a9354e2136e0a44f48f9",
+    "program": "ST1393",
+    "status": "proven_common_uniform_source_contamination_shrinks_gap_linearly"
+  },
+  "ST1394": {
+    "assumption": "each model return prediction perturbed by at most epsilon",
+    "boundary": "Triangle inequality.",
+    "lower_gap": "D-2epsilon",
+    "object": "IndependentPreparationTVBound",
+    "packet_file": "FIN_ST1394_IndependentPreparationTVBound.json",
+    "packet_sha256": "ca6f96f0df767179d043f1f321b22ce12435fca63fd2b4510dfd25dff3a02905",
+    "program": "ST1394",
+    "status": "proven_independent_return_probability_errors_reduce_gap_by_at_most_two_epsilon"
+  },
+  "ST1395": {
+    "at_threshold_lower_gap": 0.0,
+    "boundary": "Binary return only.",
+    "epsilon_must_be_below": 0.20560911273267998,
+    "object": "PreparationIdentifiabilityThreshold",
+    "packet_file": "FIN_ST1395_PreparationIdentifiabilityThreshold.json",
+    "packet_sha256": "540088116caa1923847870293191b1c2a751864dad657ac70fd5eb3cc61952cf",
+    "program": "ST1395",
+    "status": "proven_adversarial_preparation_identifiability_threshold"
+  },
+  "ST1396": {
+    "a": "false positive",
+    "b": "false negative",
+    "boundary": "Common calibrated rates.",
+    "formula": "p_obs=a+(1-a-b)p",
+    "object": "BinaryDetectorConfusionMap",
+    "packet_file": "FIN_ST1396_BinaryDetectorConfusionMap.json",
+    "packet_sha256": "6b844860047364d33eb103c3bb40670f7c75913801e3cea427e9489e5bc47704",
+    "program": "ST1396",
+    "status": "constructed_binary_detector_confusion_channel"
+  },
+  "ST1397": {
+    "boundary": "Invertible when a+b!=1.",
+    "gap_factor": "abs(1-a-b)",
+    "nonidentifying_surface": "a+b=1",
+    "object": "KnownConfusionGap",
+    "packet_file": "FIN_ST1397_KnownConfusionGap.json",
+    "packet_sha256": "95632696ffdc5665ad8f88a62df676c64e299b7bf84e828d2b67df823e57aa5a",
+    "program": "ST1397",
+    "status": "proven_known_common_detector_confusion_scales_gap"
+  },
+  "ST1398": {
+    "boundary": "Worst-case scalar probability errors.",
+    "delta_threshold": 0.20560911273267998,
+    "lower_gap": "D-2delta",
+    "object": "UnknownDetectorErrorBound",
+    "packet_file": "FIN_ST1398_UnknownDetectorErrorBound.json",
+    "packet_sha256": "9d64d4bb4f17428b9b87e91bbfea3007dcd7310f98e46c26165bfc94197f5842",
+    "program": "ST1398",
+    "status": "proven_independent_unknown_detector_bias_has_D_minus_2delta_bound"
+  },
+  "ST1399": {
+    "boundary": "Simple additive worst-case budget.",
+    "certified_lower_gap": 0.21121822546535995,
+    "detector_error_each": 0.05,
+    "object": "CombinedAdversarialErrorBound",
+    "packet_file": "FIN_ST1399_CombinedAdversarialErrorBound.json",
+    "packet_sha256": "35e1dde8e7efa43f1920f68b8c779e5041977c43dd9a0a13023f126a9c1eb4db",
+    "positive": true,
+    "preparation_error_each": 0.05,
+    "program": "ST1399",
+    "status": "constructed_combined_adversarial_error_budget"
+  },
+  "ST1400": {
+    "boundary": "Common contamination model.",
+    "epsilon": 0.1,
+    "gap_after": 0.37009640291882395,
+    "object": "TenPercentCommonContamination",
+    "packet_file": "FIN_ST1400_TenPercentCommonContamination.json",
+    "packet_sha256": "eb03d0f79e57b6bac4157147c460d92c8877badf19a697d3cd6eb282c7f3b31a",
+    "program": "ST1400",
+    "status": "proven_ten_percent_common_uniform_preparation_retains_large_gap"
+  },
+  "ST1401": {
+    "attempt_level_click_probability": 0.8,
+    "boundary": "No-click probability remains informative.",
+    "click_conditioned_gap": 0.41121822546535997,
+    "efficiency": 0.8,
+    "object": "KnownUniformLoss",
+    "packet_file": "FIN_ST1401_KnownUniformLoss.json",
+    "packet_sha256": "34e131364116a9c1cf0ea3aba246c1835323d5130574e297e66fcd50be7f5048",
+    "program": "ST1401",
+    "status": "proven_known_uniform_loss_preserves_conditional_vertex_distribution"
+  },
+  "ST1402": {
+    "boundary": "Postselection obstruction.",
+    "object": "UnknownLossNoClick",
+    "packet_file": "FIN_ST1402_UnknownLossNoClick.json",
+    "packet_sha256": "25f7c32e697e1799cd48b5c12562973762b6f7df0b47ec4734c6c9bb2806540e",
+    "program": "ST1402",
+    "requires_attempt_count": true,
+    "requires_no_click_record": true,
+    "status": "proven_unknown_uniform_loss_is_unidentifiable_if_no_clicks_discarded"
+  },
+  "ST1403": {
+    "boundary": "Not covered by scalar loss model.",
+    "formula": "p_obs(x) proportional eta_x p(x)",
+    "object": "VertexDependentEfficiency",
+    "packet_file": "FIN_ST1403_VertexDependentEfficiency.json",
+    "packet_sha256": "6596f8e5474a4eb3b72ffaa6ec157b593ee74397688211cd0cbb1870c33c3568",
+    "program": "ST1403",
+    "requires_calibration_matrix": true,
+    "status": "constructed_vertex_dependent_efficiency_as_higher_risk_nuisance"
+  },
+  "ST1404": {
+    "boundary": "Separates assumptions from predictions.",
+    "clock": "alpha band",
+    "detector": "confusion/efficiency matrix",
+    "environment": "dephasing family",
+    "object": "RobustnessResponsibilityMatrix",
+    "packet_file": "FIN_ST1404_RobustnessResponsibilityMatrix.json",
+    "packet_sha256": "db02dd37886cc64413317d5487d117840e79716d96b2749f13c80ddbe8c10047",
+    "program": "ST1404",
+    "record": "attempts+no-clicks",
+    "source": "preparation contamination bound",
+    "status": "constructed_OA_calibration_responsibility_matrix"
+  },
+  "ST1405": {
+    "adversarial_scalar_bound": true,
+    "boundary": "No apparatus characterization.",
+    "common_uniform_models": true,
+    "full_detector_drift": false,
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1405_RoundThree_Verdict.json",
+    "packet_sha256": "d274307ea144111b1d3f0778c911cd89f4dcea96f9fdebce78ffc7812d264329",
+    "program": "ST1405",
+    "status": "base_discriminator_has_explicit_positive_error_budgets_but_not_complete_hardware_robustness"
+  },
+  "ST1406": {
+    "boundary": "Use the full vertex likelihood and symmetry-reduced sufficient statistic.",
+    "next": [
+      "seven distance classes",
+      "likelihood ratios",
+      "Chernoff bounds",
+      "sample design",
+      "coarse-return information loss"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1406_RoundThree_Recommendation.json",
+    "packet_sha256": "e6209f599d6fbe59106f70352159f7ae04a3cc49d13e38d365dcb9978b0e96be",
+    "program": "ST1406",
+    "status": "recommended_ST1407_ST1421"
+  }
+}

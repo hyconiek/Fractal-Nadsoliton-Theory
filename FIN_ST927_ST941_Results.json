@@ -1,0 +1,143 @@
+{
+  "ST927": {
+    "Q": "sum |psi_x|^2",
+    "boundary": "Model conditional.",
+    "object": "U1_NoetherCharge",
+    "packet_file": "FIN_ST927_U1_NoetherCharge.json",
+    "packet_sha256": "3d8648c16b693bf218eb3c7765db13d6ff27012f1f6a29e136de276fff93e4d9",
+    "program": "ST927",
+    "status": "proven_U1_charge_for_phase_invariant_Hamiltonian"
+  },
+  "ST928": {
+    "Q>0": "psi cannot be identically zero",
+    "boundary": "Does not protect shape.",
+    "object": "ChargeBlocksZeroState",
+    "packet_file": "FIN_ST928_ChargeBlocksZeroState.json",
+    "packet_sha256": "e626b1e35a5d6752a2ae2888328788629ee8a0a1bb09cc7173431456516b284a",
+    "program": "ST928",
+    "status": "proven_positive_charge_blocks_global_zero"
+  },
+  "ST929": {
+    "W": "(1/2pi) sum principal phase increments",
+    "boundary": "Branch convention needed.",
+    "object": "DiscreteWinding_Definition",
+    "packet_file": "FIN_ST929_DiscreteWinding_Definition.json",
+    "packet_sha256": "158ad8df4867506d6ecf0181a175c83c3b2eb4b55322cf0256059b5905ddd106",
+    "program": "ST929",
+    "status": "constructed_discrete_winding"
+  },
+  "ST930": {
+    "boundary": "Requires gap from zero/cut.",
+    "integer": true,
+    "object": "WindingHomotopyProtection",
+    "packet_file": "FIN_ST930_WindingHomotopyProtection.json",
+    "packet_sha256": "924586aef4b6a6387966b396f6b4b2498180f7d3667dcb3d866ffcace162b24b",
+    "program": "ST930",
+    "status": "proven_winding_constant_under_nonzero_continuous_homotopy"
+  },
+  "ST931": {
+    "boundary": "Finite lattice.",
+    "gate": "min |psi_x|=0 or increment hits branch cut",
+    "object": "AmplitudeZero_UnwindingGate",
+    "packet_file": "FIN_ST931_AmplitudeZero_UnwindingGate.json",
+    "packet_sha256": "85b3151b4729585dc39824dc47f65c5752f4e8e39a4c71f2fe3e190206d543f4",
+    "program": "ST931",
+    "status": "proven_unwinding_requires_amplitude_zero_or_phasecut_event"
+  },
+  "ST932": {
+    "boundary": "Components may cross zero.",
+    "object": "LinearUnitary_WindingNotProtected",
+    "packet_file": "FIN_ST932_LinearUnitary_WindingNotProtected.json",
+    "packet_sha256": "0b37a3e20c2626420a96f3057a1df4888787c1ef0ac582495bae7d24b511db5e",
+    "program": "ST932",
+    "protected": false,
+    "status": "linear_unitary_does_not_guarantee_winding_protection"
+  },
+  "ST933": {
+    "boundary": "g supplied.",
+    "invariants": [
+      "Q",
+      "H"
+    ],
+    "object": "DNLS_ChargeEnergy",
+    "packet_file": "FIN_ST933_DNLS_ChargeEnergy.json",
+    "packet_sha256": "eb0e2d14139012d944b4bf30d9d0e90788172f7e4c9ee71597226b20c3a48461",
+    "program": "ST933",
+    "status": "proven_DNLS_norm_energy_conservation"
+  },
+  "ST934": {
+    "boundary": "No proof for FIN parameters.",
+    "methods": [
+      "anti-continuum continuation",
+      "variational constrained minimizer"
+    ],
+    "object": "DiscreteBreather_Route",
+    "packet_file": "FIN_ST934_DiscreteBreather_Route.json",
+    "packet_sha256": "94e7178f5605871720f55ab4007c694d2319f2ea2a2d2075d6d068cc419ad5d8",
+    "program": "ST934",
+    "status": "conditional_discrete_breather_existence_route"
+  },
+  "ST935": {
+    "boundary": "Need spectral/GSS analysis.",
+    "object": "OrbitalStability_Obligation",
+    "packet_file": "FIN_ST935_OrbitalStability_Obligation.json",
+    "packet_sha256": "ae36e1af96fc94158ec8308c01ca10e681cdd03c1a66ac66f0c5198b70634e53",
+    "pass": false,
+    "program": "ST935",
+    "status": "blocked_no_orbital_stability_theorem"
+  },
+  "ST936": {
+    "boundary": "No sourced phase field/nonzero constraint.",
+    "charge": false,
+    "object": "TopologicalCharge_NotExported",
+    "packet_file": "FIN_ST936_TopologicalCharge_NotExported.json",
+    "packet_sha256": "81042c755943800d785ec73bd50d8e3ec9393d4c4ac302932162a998eebeb973",
+    "program": "ST936",
+    "status": "blocked_no_strict_topological_charge"
+  },
+  "ST937": {
+    "Qstar": "P/gamma",
+    "boundary": "Pump supplied.",
+    "object": "PumpedAttractor_Persistence",
+    "packet_file": "FIN_ST937_PumpedAttractor_Persistence.json",
+    "packet_sha256": "0185c1c116b92ba4675a6a000918622cfe8ae3feb5a40eaa3ac47ffad206e820",
+    "program": "ST937",
+    "status": "proven_pump_loss_nonzero_attractor_conditionally"
+  },
+  "ST938": {
+    "boundary": "Pump removal permits decay.",
+    "external_resource": true,
+    "object": "AttractorNotConservation",
+    "packet_file": "FIN_ST938_AttractorNotConservation.json",
+    "packet_sha256": "25248a4031289733fb8476838fafa5a88cbcc76fc2c36de272a72efeef454aab",
+    "program": "ST938",
+    "status": "proven_attractor_persistence_not_conservation"
+  },
+  "ST939": {
+    "boundary": "Need multi-soliton/scattering law.",
+    "object": "CollisionAnnihilation_Question",
+    "open": true,
+    "packet_file": "FIN_ST939_CollisionAnnihilation_Question.json",
+    "packet_sha256": "8b97e6f325d70b01ada37847c86a957944661225d9a90bcd8f15cd7818bfd8d3",
+    "program": "ST939",
+    "status": "collision_annihilation_not_defined_current_model"
+  },
+  "ST940": {
+    "boundary": "Only norm/mass conditional mechanisms.",
+    "nadsoliton_identity": false,
+    "object": "StrictProtection_Gate",
+    "packet_file": "FIN_ST940_StrictProtection_Gate.json",
+    "packet_sha256": "2438bfb4bd56f63020451bec9065c935c85ba40279e657a042aa6542c9ed3746",
+    "program": "ST940",
+    "status": "blocked_no_strict_identity_protection"
+  },
+  "ST941": {
+    "boundary": "Round two local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST941_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST941",
+    "status": "blocked_no_evidence"
+  }
+}

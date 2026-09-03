@@ -1,0 +1,134 @@
+{
+  "ST2622": {
+    "boundary": "Local rate depends on DeltaE.",
+    "object": "RateDifferenceAnsatz",
+    "packet_file": "FIN_ST2622_RateDifferenceAnsatz.json",
+    "packet_sha256": "fb906f4d5b4e8c3390d600ea2d0736a52ae04feb23aafd1584edeaa4f6a46516",
+    "program": "ST2622",
+    "r": "r(Delta)",
+    "status": "Defined"
+  },
+  "ST2623": {
+    "boundary": "Detailed balance.",
+    "equation": "r(D)/r(-D)=exp(-D)",
+    "object": "DetailedBalanceEquation",
+    "packet_file": "FIN_ST2623_DetailedBalanceEquation.json",
+    "packet_sha256": "698a09cec397b58134e82838346200d419f97797c5b511365c0e133513fd30f1",
+    "program": "ST2623",
+    "status": "Proven"
+  },
+  "ST2624": {
+    "boundary": "Set h(D)=exp(D/2)r(D).",
+    "object": "GeneralSolution",
+    "packet_file": "FIN_ST2624_GeneralSolution.json",
+    "packet_sha256": "e6a425be2cf4ceca7b0be121d911ea04497dfe0f79d5fb2fdb46eb52a741e94b",
+    "program": "ST2624",
+    "solution": "r(D)=exp(-D/2)h(D), h even positive",
+    "status": "Proven classification"
+  },
+  "ST2625": {
+    "boundary": "Every even positive h is admissible.",
+    "dimension": "infinite",
+    "object": "EvenActivityFunction",
+    "packet_file": "FIN_ST2625_EvenActivityFunction.json",
+    "packet_sha256": "1a61f57c3066c6b856b226992440ebfb35121668ea9d67fde67605e9c204b91d",
+    "program": "ST2625",
+    "status": "Proven"
+  },
+  "ST2626": {
+    "boundary": "h>0 gives irreducibility.",
+    "object": "Positivity",
+    "packet_file": "FIN_ST2626_Positivity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2626",
+    "status": "Boundary"
+  },
+  "ST2627": {
+    "boundary": "Infinitely many analytic h.",
+    "examples": [
+      "1",
+      "1/(2 cosh(D/2))",
+      "exp(a D^2)"
+    ],
+    "object": "AnalyticFreedom",
+    "packet_file": "FIN_ST2627_AnalyticFreedom.json",
+    "packet_sha256": "0822c7db599c321481b14cac183622417ea0b74cc38c698fc40f2adbd9559417",
+    "program": "ST2627",
+    "status": "Proven"
+  },
+  "ST2628": {
+    "boundary": "Additional monotonicity still leaves families.",
+    "object": "MonotoneFreedom",
+    "packet_file": "FIN_ST2628_MonotoneFreedom.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2628",
+    "status": "Proven"
+  },
+  "ST2629": {
+    "boundary": "h=1.",
+    "object": "SymmetricRate",
+    "packet_file": "FIN_ST2629_SymmetricRate.json",
+    "packet_sha256": "404e6829ff296089e6da07c7d94ccc9d8c9ae4f55f3abd2d86693993c3478309",
+    "program": "ST2629",
+    "r": "exp(-D/2)",
+    "status": "Example"
+  },
+  "ST2630": {
+    "boundary": "h=1/(2cosh(D/2)).",
+    "object": "HeatBathRate",
+    "packet_file": "FIN_ST2630_HeatBathRate.json",
+    "packet_sha256": "3ff09a25b6fdfbf447eff0a00ad37ebc32967317ba0f80d581b349b885ff47ba",
+    "program": "ST2630",
+    "r": "1/(1+exp(D))",
+    "status": "Example"
+  },
+  "ST2631": {
+    "boundary": "h=exp(-abs(D)/2).",
+    "object": "MetropolisRate",
+    "packet_file": "FIN_ST2631_MetropolisRate.json",
+    "packet_sha256": "35faa97c9a723e3e0dd3e0d2b897515d35cf7af47d78996bad7de4ffd3b3c559",
+    "program": "ST2631",
+    "r": "min(1,exp(-D))",
+    "status": "Example"
+  },
+  "ST2632": {
+    "boundary": "All satisfy identical forward/backward ratio.",
+    "object": "CommonRatio",
+    "packet_file": "FIN_ST2632_CommonRatio.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2632",
+    "status": "Proven"
+  },
+  "ST2633": {
+    "boundary": "h->c h rescales time.",
+    "object": "TimeScale",
+    "packet_file": "FIN_ST2633_TimeScale.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2633",
+    "status": "No-go"
+  },
+  "ST2634": {
+    "boundary": "Energy and detailed balance leave infinite functional freedom.",
+    "object": "FunctionSpaceNoGo",
+    "packet_file": "FIN_ST2634_FunctionSpaceNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2634",
+    "status": "Proven no-go"
+  },
+  "ST2635": {
+    "boundary": "No unique local reversible rate follows from Gibbs energy.",
+    "object": "RoundOneVerdict",
+    "packet_file": "FIN_ST2635_RoundOneVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2635",
+    "status": "Round verdict"
+  },
+  "ST2636": {
+    "boundary": "Audit extra axioms selecting named rules.",
+    "object": "RoundOneRecommendation",
+    "packet_file": "FIN_ST2636_RoundOneRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2636",
+    "status": "Recommendation"
+  }
+}

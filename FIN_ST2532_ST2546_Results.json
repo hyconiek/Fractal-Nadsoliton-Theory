@@ -1,0 +1,139 @@
+{
+  "ST2532": {
+    "boundary": "Binary state space.",
+    "object": "ConfigurationSpace",
+    "packet_file": "FIN_ST2532_ConfigurationSpace.json",
+    "packet_sha256": "909a9babc5ca70da0a1ca93d17ad96f6776b27f0b5f3720f3acd0dbb994576ae",
+    "program": "ST2532",
+    "states": 4096,
+    "status": "Constructed"
+  },
+  "ST2533": {
+    "boundary": "12-cube single flips.",
+    "object": "FlipGraph",
+    "packet_file": "FIN_ST2533_FlipGraph.json",
+    "packet_sha256": "57bbb0ddc2f699fd0862181787ab6af56232686961880230fd990b8a8ea58645",
+    "program": "ST2533",
+    "status": "Proven",
+    "undirected_edges": 24576
+  },
+  "ST2534": {
+    "boundary": "Every reversible generator is Q_xy=c_xy/pi_x with c_xy=c_yx>0.",
+    "object": "ReversibleConductanceForm",
+    "packet_file": "FIN_ST2534_ReversibleConductanceForm.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2534",
+    "status": "Proven"
+  },
+  "ST2535": {
+    "boundary": "Ratio fixed, product/activity free.",
+    "object": "DetailedBalanceRatio",
+    "packet_file": "FIN_ST2535_DetailedBalanceRatio.json",
+    "packet_sha256": "a167acb255938fb0f45b5c200b7a4bc828edf232535fe82343cf0c947447b33e",
+    "program": "ST2535",
+    "ratio": "r_xy/r_yx=pi_y/pi_x",
+    "status": "Proven"
+  },
+  "ST2536": {
+    "boundary": "One positive activity per undirected edge.",
+    "dimension": 24576,
+    "object": "ActivityFreedom",
+    "packet_file": "FIN_ST2536_ActivityFreedom.json",
+    "packet_sha256": "0f52d723b5689bc9e3a7092b0fb47c05d0087ca5b28a6d01fb25b74800ada733",
+    "program": "ST2536",
+    "status": "Proven no-go"
+  },
+  "ST2537": {
+    "activity_orbits": 1056,
+    "boundary": "After D12.",
+    "object": "D12OrbitCount",
+    "packet_file": "FIN_ST2537_D12OrbitCount.json",
+    "packet_sha256": "7deebd552fc38b79a64a4c9e6acf3d2dab64aa4cc6147803e38989a274c40b08",
+    "program": "ST2537",
+    "status": "Proven exhaustive"
+  },
+  "ST2538": {
+    "boundary": "Exact orbit census.",
+    "object": "OrbitSizes",
+    "packet_file": "FIN_ST2538_OrbitSizes.json",
+    "packet_sha256": "08de5821d21e29dcc164b13e689512265bea88ed4c607b33a1b8afea5fa27f27",
+    "program": "ST2538",
+    "sizes": {
+      "12": 64,
+      "24": 992
+    },
+    "status": "Proven"
+  },
+  "ST2539": {
+    "boundary": "tau fixes energy shape.",
+    "object": "StrictEnergyShape",
+    "packet_file": "FIN_ST2539_StrictEnergyShape.json",
+    "packet_sha256": "94a68184224648aa32a102753cdc35c0ac36b975200274e9d6cc78dd7712b899",
+    "program": "ST2539",
+    "status": "Conditional",
+    "strict_theta": false
+  },
+  "ST2540": {
+    "boundary": "Generator depends on theta.",
+    "object": "ThetaDependency",
+    "packet_file": "FIN_ST2540_ThetaDependency.json",
+    "packet_sha256": "5e7765a29126634721e520acbcaa63e266df282466e6df640b6f36ea9b6cc5a3",
+    "program": "ST2540",
+    "status": "No-go",
+    "strict_generator": false
+  },
+  "ST2541": {
+    "boundary": "Positive rates make Q12 connected.",
+    "object": "Irreducibility",
+    "packet_file": "FIN_ST2541_Irreducibility.json",
+    "packet_sha256": "d542aad06f4f9a606c35d88371bd2d01799a65214e2e203df9d144692287d1b6",
+    "program": "ST2541",
+    "requires": "all activities positive",
+    "status": "Conditional"
+  },
+  "ST2542": {
+    "boundary": "Finite irreducible chain has unique pi.",
+    "kinetics_unique": false,
+    "object": "StationaryUniqueness",
+    "packet_file": "FIN_ST2542_StationaryUniqueness.json",
+    "packet_sha256": "79c058ec49ae0b39d8243e1f2ce3f6aa0831357fee1de28b94c17778188caa6b",
+    "program": "ST2542",
+    "status": "Proven"
+  },
+  "ST2543": {
+    "boundary": "Q->cQ changes clock only.",
+    "global_time_scale_free": true,
+    "object": "RateScale",
+    "packet_file": "FIN_ST2543_RateScale.json",
+    "packet_sha256": "f3d67e06449c96ba366cc6911e151c5eb068ce037f4860f2c1fc978505bfbc3f",
+    "program": "ST2543",
+    "status": "No-go"
+  },
+  "ST2544": {
+    "boundary": "Detailed-balance generators form a positive cone.",
+    "object": "GeneratorCone",
+    "packet_file": "FIN_ST2544_GeneratorCone.json",
+    "packet_sha256": "388ed9ad43fbef9288e84c621e1ba7b87f7f3962ac39281763f7579d96f8166c",
+    "program": "ST2544",
+    "rays": 24576,
+    "status": "Proven"
+  },
+  "ST2545": {
+    "boundary": "Stationary Gibbs state does not determine dynamics, even after D12.",
+    "object": "RoundOneVerdict",
+    "packet_file": "FIN_ST2545_RoundOneVerdict.json",
+    "packet_sha256": "8d2dfd0a548f081f52087dc98ee4d5cb9318e06e1d00ee11c19123ea37c1049c",
+    "program": "ST2545",
+    "status": "Round verdict",
+    "unique_generator": false
+  },
+  "ST2546": {
+    "boundary": "Compare standard rules.",
+    "next": "kinetic spectral counterexample",
+    "object": "RoundOneRecommendation",
+    "packet_file": "FIN_ST2546_RoundOneRecommendation.json",
+    "packet_sha256": "191f9eac0c643c4a33aa11628fe1e6c91a24e8b0cc91334e6e237da7302c4d0f",
+    "program": "ST2546",
+    "status": "Recommendation"
+  }
+}

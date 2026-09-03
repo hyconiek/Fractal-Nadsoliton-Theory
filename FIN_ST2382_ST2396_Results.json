@@ -1,0 +1,183 @@
+{
+  "ST2382": {
+    "base_cells": [
+      12,
+      66,
+      220,
+      495,
+      792,
+      924,
+      792,
+      495,
+      220,
+      66,
+      12,
+      1
+    ],
+    "boundary": "Support clique of strict complete graph.",
+    "dimension": 11,
+    "object": "FullFlagBase",
+    "packet_file": "FIN_ST2382_FullFlagBase.json",
+    "packet_sha256": "e81da8a07a9fe8bd3621879e9f86e6078efd0a6d236ecea316dc4ea80cf984bb",
+    "program": "ST2382",
+    "status": "Constructed"
+  },
+  "ST2383": {
+    "boundary": "Canonical after choosing the full flag-complex interpretation.",
+    "dimension": 12,
+    "object": "Delta11 x I",
+    "packet_file": "FIN_ST2383_ProductTower.json",
+    "packet_sha256": "f77e2ec0bc8d2fcd8f406614cb040e12851f5a6ab71f11af6689791884e6814f",
+    "program": "ST2383",
+    "status": "Constructed"
+  },
+  "ST2384": {
+    "boundary": "Product CW formula.",
+    "formula": "C_k(product)=2*C_k(base)+C_(k-1)(base)",
+    "object": "ProductCellFormula",
+    "packet_file": "FIN_ST2384_ProductCellFormula.json",
+    "packet_sha256": "475a98a6e04cf28cc7bc1c7c09187c5feeb171f5fc981535feccdb1aa5bf9342",
+    "program": "ST2384",
+    "status": "Proven"
+  },
+  "ST2385": {
+    "boundary": "k=0..12.",
+    "counts": [
+      24,
+      144,
+      506,
+      1210,
+      2079,
+      2640,
+      2508,
+      1782,
+      935,
+      352,
+      90,
+      14,
+      1
+    ],
+    "object": "ProductCellCounts",
+    "packet_file": "FIN_ST2385_ProductCellCounts.json",
+    "packet_sha256": "808d538fa79eb4c1fe5c3c65cb6bca198d5ade5c88bad2e81750fd4be5afe78b",
+    "program": "ST2385",
+    "status": "Proven exact"
+  },
+  "ST2386": {
+    "alternating_sum": 1,
+    "boundary": "Contractible product.",
+    "object": "EulerCheck",
+    "packet_file": "FIN_ST2386_EulerCheck.json",
+    "packet_sha256": "72a6011f244316f08211eab9a94baf269f17d0d43e5babe117d57411e4efd18a",
+    "program": "ST2386",
+    "status": "Proven exact"
+  },
+  "ST2387": {
+    "C0": 24,
+    "C1": 144,
+    "C2": 506,
+    "C3": 1210,
+    "boundary": "Operational low skeleton.",
+    "object": "LowCells",
+    "packet_file": "FIN_ST2387_LowCells.json",
+    "packet_sha256": "b24167c413dd916f82ce6369d497473137179ec214c67bb4053a4e2332d030f5",
+    "program": "ST2387",
+    "status": "Proven"
+  },
+  "ST2388": {
+    "boundary": "One prism for every base triangle.",
+    "object": "PrismCountInBundle",
+    "packet_file": "FIN_ST2388_PrismCountInBundle.json",
+    "packet_sha256": "16ce4ebd36608ac2ae0ea54c44b4a11fc7938b23966630e856a4c8d398daa7f7",
+    "program": "ST2388",
+    "status": "Proven",
+    "triangular_prisms": 220
+  },
+  "ST2389": {
+    "boundary": "One vertical square for every base edge.",
+    "object": "VerticalSquareCount",
+    "packet_file": "FIN_ST2389_VerticalSquareCount.json",
+    "packet_sha256": "6ae0568302a557da4d89880295bef609c69e81716e6013b1d338eaf150dd1c94",
+    "program": "ST2389",
+    "status": "Proven",
+    "vertical_squares": 66
+  },
+  "ST2390": {
+    "boundary": "D12 distance classes.",
+    "object": "VerticalOrbitCount",
+    "packet_file": "FIN_ST2390_VerticalOrbitCount.json",
+    "packet_sha256": "cfc05bfdabb5afb7a79d0db9b9f658f9d69f4a3b16d45ab17a17787b8534aa58",
+    "program": "ST2390",
+    "status": "Proven",
+    "vertical_square_orbits": 6
+  },
+  "ST2391": {
+    "boundary": "Fixes all product boundary coefficients to primitive integers.",
+    "object": "PrimitiveIncidence",
+    "packet_file": "FIN_ST2391_PrimitiveIncidence.json",
+    "packet_sha256": "2ca33a5452492ba34f6ed3aa9f6992534b6e9e1a8e4cb13e93b7bff2be190737",
+    "program": "ST2391",
+    "status": "Conditional positive",
+    "vertical_coefficients_free_after_integrality": false
+  },
+  "ST2392": {
+    "Betti": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "boundary": "Full product is contractible.",
+    "object": "LowCohomology",
+    "packet_file": "FIN_ST2392_LowCohomology.json",
+    "packet_sha256": "13d91cb737c2ec4a6df186dea3709ebc7f1b2d566ba78425a0f902bc418607aa",
+    "program": "ST2392",
+    "status": "Proven"
+  },
+  "ST2393": {
+    "boundary": "Before 3-cells, H2 dimension is C2-rank(d1)=506-121.",
+    "object": "TwoSkeletonH2",
+    "packet_file": "FIN_ST2393_TwoSkeletonH2.json",
+    "packet_sha256": "8d05ccfb4b2c81f8998e90441be1bc4909d1c3755783974aaa6c3237d271c7cf",
+    "program": "ST2393",
+    "status": "Proven",
+    "two_skeleton_H2": 385
+  },
+  "ST2394": {
+    "boundary": "Canonical construction is combinatorially large and nonlocal.",
+    "object": "CellExplosion",
+    "packet_file": "FIN_ST2394_CellExplosion.json",
+    "packet_sha256": "998503805a15c119ff3ebec69ddbbf196f818cf821cd4f3190171b396cd9af1f",
+    "physical_dimension": false,
+    "program": "ST2394",
+    "status": "Boundary",
+    "total_cells": 12285
+  },
+  "ST2395": {
+    "boundary": "The full prism bundle repairs conditional incidence globally but inherits full-simplex nonlocality.",
+    "object": "RoundThreeVerdict",
+    "packet_file": "FIN_ST2395_RoundThreeVerdict.json",
+    "packet_sha256": "0e505b9e79566afa70c53a3c799e15ee169ca99b5db5b58f195d138abbabceae",
+    "program": "ST2395",
+    "status": "Round verdict",
+    "strict_physical_complex": false
+  },
+  "ST2396": {
+    "boundary": "Audit layer swap and ternary flux.",
+    "next": "prism layer-exchange odd receiver",
+    "object": "RoundThreeRecommendation",
+    "packet_file": "FIN_ST2396_RoundThreeRecommendation.json",
+    "packet_sha256": "55e0a7440fca2167ff7899088228b3110647153a4a9f7ed3dc5c4fb3d3b9a3a3",
+    "program": "ST2396",
+    "status": "Recommendation"
+  }
+}

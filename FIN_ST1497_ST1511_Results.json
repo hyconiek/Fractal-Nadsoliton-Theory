@@ -1,0 +1,178 @@
+{
+  "ST1497": {
+    "boundary": "Common nuisance map applied to both hypotheses.",
+    "false_negative_b": [
+      0,
+      0.02
+    ],
+    "false_positive_a": [
+      0,
+      0.02
+    ],
+    "object": "CommonCalibrationPolytope",
+    "packet_file": "FIN_ST1497_CommonCalibrationPolytope.json",
+    "packet_sha256": "8c4f9860874f42a9ce15650b0de65ca9539739b33fb5c05f2645b71e1e56ff33",
+    "program": "ST1497",
+    "status": "constructed_common_calibration_polytope",
+    "uniform_click_efficiency_eta": [
+      0.8,
+      1
+    ],
+    "uniform_preparation_epsilon": [
+      0,
+      0.05
+    ]
+  },
+  "ST1498": {
+    "boundary": "Binary return channel.",
+    "formula": "T(p)=a+(1-a-b)[(1-epsilon)p+epsilon/12]",
+    "object": "CommonMapFormula",
+    "packet_file": "FIN_ST1498_CommonMapFormula.json",
+    "packet_sha256": "bc0097b348ae2ff1afd2507c91c038123fe57ffe9aa4ff78fd0b5d123135c835",
+    "program": "ST1498",
+    "status": "proven_common_preparation_detector_map_is_affine"
+  },
+  "ST1499": {
+    "base_gap": 0.41121822546535997,
+    "boundary": "Worst factor at upper nuisance corner.",
+    "factor_lower": 0.9119999999999999,
+    "object": "CommonGapFactor",
+    "observed_gap_lower": 0.37503102162440827,
+    "packet_file": "FIN_ST1499_CommonGapFactor.json",
+    "packet_sha256": "28ab5787f4ba034a7eb260660898dee93c7d935ae5a3f5d012e36cf2c2160725",
+    "program": "ST1499",
+    "status": "proven_common_polytope_preserves_positive_base_gap"
+  },
+  "ST1500": {
+    "RSS_lower": 0.03883580017500168,
+    "boundary": "Same common map at all four times.",
+    "object": "CommonCompositeRSS",
+    "one_time_residual_lower": 0.09853400450479226,
+    "packet_file": "FIN_ST1500_CommonCompositeRSS.json",
+    "packet_sha256": "dc7291b4a1b03d50bad3828da78980ae6b255907734f4c281f532ea2237cb874",
+    "program": "ST1500",
+    "status": "proven_common_affine_map_preserves_composite_RSS_certificate_up_to_scale"
+  },
+  "ST1501": {
+    "boundary": "Each hypothesis may have a different map.",
+    "object": "IndependentCalibrationBound",
+    "packet_file": "FIN_ST1501_IndependentCalibrationBound.json",
+    "packet_sha256": "b937ab475ff4bac098f05dfc114131f5a24bdd3943f414f451c51f6fff036e8d",
+    "per_model_error_bound": "11 epsilon_p/12 + delta_detector",
+    "program": "ST1501",
+    "required_less_than": 0.054020835803065936,
+    "status": "proven_independent_calibration_error_condition"
+  },
+  "ST1502": {
+    "boundary": "Does not prove actual nonidentifiability.",
+    "object": "IndependentDefaultBudgetFailure",
+    "packet_file": "FIN_ST1502_IndependentDefaultBudgetFailure.json",
+    "packet_sha256": "e1490f7bcd5cdfdfa0422b5b38d81d5b256b7f90059222f2f88dd97f9616a786",
+    "passes": false,
+    "per_model_bound": 0.06583333333333334,
+    "program": "ST1502",
+    "status": "proven_default_independent_5pct_plus_2pct_budget_not_certified_by_current_residual_bound",
+    "threshold": 0.054020835803065936
+  },
+  "ST1503": {
+    "boundary": "Conservative sufficient condition.",
+    "object": "IndependentSafeBudget",
+    "packet_file": "FIN_ST1503_IndependentSafeBudget.json",
+    "packet_sha256": "868c158a38258d67e118bfff8d716888ec943d1e7d3cf2ff6ac9a05889ae7de3",
+    "passes": true,
+    "per_model_bound": 0.0475,
+    "program": "ST1503",
+    "remaining_one_time_gap": 0.013041671606131872,
+    "status": "proven_independent_3pct_plus_2pct_example_passes_bound",
+    "threshold": 0.054020835803065936
+  },
+  "ST1504": {
+    "boundary": "Attempts remain essential.",
+    "conditional_gap_factor": 1,
+    "eta_band": [
+      0.8,
+      1
+    ],
+    "object": "KnownLossEfficiencyBox",
+    "packet_file": "FIN_ST1504_KnownLossEfficiencyBox.json",
+    "packet_sha256": "eab686e465cf3cf2a1730e47ff71713664ba8c6a1b2e8d8606e662a0460ff5b7",
+    "program": "ST1504",
+    "status": "proven_known_uniform_loss_does_not_change_click_conditioned_model_gap"
+  },
+  "ST1505": {
+    "boundary": "Fail-closed ordering.",
+    "constraints": "0<=returns<=clicks<=attempts",
+    "no_clicks": "attempts-clicks",
+    "object": "AttemptClickAccounting",
+    "packet_file": "FIN_ST1505_AttemptClickAccounting.json",
+    "packet_sha256": "48279ae053769366ba07b717c23b7793006e71b7c08ba553b9322ca5e33d251d",
+    "program": "ST1505",
+    "status": "constructed_attempt_click_vertex_record_chain"
+  },
+  "ST1506": {
+    "1146_clicks_mean_attempts": 1432.5,
+    "boundary": "Expectation only, not high-probability guarantee.",
+    "eta_min": 0.8,
+    "mean_factor": 1.25,
+    "object": "ExpectedAttemptInflation",
+    "packet_file": "FIN_ST1506_ExpectedAttemptInflation.json",
+    "packet_sha256": "3acf83223a461a92c90a9558a0696f5f7ebb0ea5025b746640fc54fe3f8b7225",
+    "program": "ST1506",
+    "status": "constructed_worst_mean_attempt_inflation_for_target_clicks"
+  },
+  "ST1507": {
+    "boundary": "Scalar certificate does not cover it.",
+    "implemented": false,
+    "needed": "stochastic/substochastic detector matrix box",
+    "object": "VertexDependentConfusionBoundary",
+    "packet_file": "FIN_ST1507_VertexDependentConfusionBoundary.json",
+    "packet_sha256": "2d11009d422e1e6795eac22e0d15f1683370bb676f80092cb26940f31e81960e",
+    "program": "ST1507",
+    "status": "vertex_dependent_efficiency_or_confusion_requires_matrix_polytope"
+  },
+  "ST1508": {
+    "boundary": "Reproducibility.",
+    "file": "FIN_ST1497_ST1511_CalibrationPolytope.json",
+    "object": "CalibrationArtifact",
+    "packet_file": "FIN_ST1508_CalibrationArtifact.json",
+    "packet_sha256": "ae6ed7c2cb04564af3994f09cfaf0866c44ad325ee5889e058b77bd7b85b65fd",
+    "program": "ST1508",
+    "sha256": "1cb036f8a7a0fc37d96af05fb1a34e96bdc171f6f3bf0b7ab44664f38e6d0291",
+    "status": "constructed_calibration_polytope_hash_freeze"
+  },
+  "ST1509": {
+    "boundary": "Scope split.",
+    "common_polytope": true,
+    "full_detector_polytope": false,
+    "independent_safe_example": true,
+    "object": "CalibrationStatus",
+    "packet_file": "FIN_ST1509_CalibrationStatus.json",
+    "packet_sha256": "2e70530d41202d78b938b0c6a5f124e6a1334f0a2fc922704fa8727e798d693b",
+    "program": "ST1509",
+    "status": "common_calibration_robustness_proven_independent_calibration_only_conditionally_bounded"
+  },
+  "ST1510": {
+    "boundary": "No physical calibration record.",
+    "laboratory_calibration": false,
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST1510_RoundFour_Verdict.json",
+    "packet_sha256": "12461272b2a5982be2a0e16715f3725723d851559d2ecf3c2f37a072d5fb139f",
+    "program": "ST1510",
+    "status": "calibration_is_an_OA_premise_not_a_strict_FIN_prediction"
+  },
+  "ST1511": {
+    "boundary": "Transport coarse protocol through exact 12-to-24 refinement.",
+    "next": [
+      "Kronecker factorization",
+      "coarse return invariance",
+      "fine fiber dynamics",
+      "q blindness",
+      "detector expansion"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1511_RoundFour_Recommendation.json",
+    "packet_sha256": "380a15791f2df6873f45961be143ebe44cb73081f67bf27f8423f199788b55da",
+    "program": "ST1511",
+    "status": "recommended_ST1512_ST1526"
+  }
+}

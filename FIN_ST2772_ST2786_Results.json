@@ -1,0 +1,127 @@
+{
+  "ST2772": {
+    "boundary": "At state x, T~Exp(c lambda_x).",
+    "object": "HoldingTimeLaw",
+    "packet_file": "FIN_ST2772_HoldingTimeLaw.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2772",
+    "status": "Proven"
+  },
+  "ST2773": {
+    "boundary": "u=lambda_x T has Exp(c).",
+    "object": "ExposureVariable",
+    "packet_file": "FIN_ST2773_ExposureVariable.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2773",
+    "status": "Defined"
+  },
+  "ST2774": {
+    "boundary": "logL=n log c-c sum u.",
+    "object": "ClockLikelihood",
+    "packet_file": "FIN_ST2774_ClockLikelihood.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2774",
+    "status": "Proven"
+  },
+  "ST2775": {
+    "boundary": "c_hat=n/sum u.",
+    "object": "ClockMLE",
+    "packet_file": "FIN_ST2775_ClockMLE.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2775",
+    "status": "Proven"
+  },
+  "ST2776": {
+    "Fisher": 25.0,
+    "boundary": "I_n(c)=n/c^2.",
+    "c": 2.0,
+    "n": 100,
+    "object": "ClockFisher",
+    "packet_file": "FIN_ST2776_ClockFisher.json",
+    "packet_sha256": "d4770d77ae3574f624550e58b0a7a7e3c9c038f69364f512813246ae541d0da6",
+    "program": "ST2776",
+    "status": "Proven"
+  },
+  "ST2777": {
+    "boundary": "Var>=c^2/n.",
+    "object": "CramerRao",
+    "packet_file": "FIN_ST2777_CramerRao.json",
+    "packet_sha256": "4b20755fd8927f6a0b69077a492e55a3bd9ed82397ba49e352198deeb92939b7",
+    "program": "ST2777",
+    "relative_sd_lower": 0.1,
+    "status": "Proven"
+  },
+  "ST2778": {
+    "boundary": "100 waits permit ~10 percent relative one-sigma scale.",
+    "object": "SyntheticPrecision",
+    "packet_file": "FIN_ST2778_SyntheticPrecision.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2778",
+    "status": "Conditional"
+  },
+  "ST2779": {
+    "boundary": "T requires calibrated external clock ticks.",
+    "object": "TimestampCalibration",
+    "packet_file": "FIN_ST2779_TimestampCalibration.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2779",
+    "status": "Boundary"
+  },
+  "ST2780": {
+    "boundary": "Visited states alone give zero scale information.",
+    "object": "StateSequenceInsufficiency",
+    "packet_file": "FIN_ST2780_StateSequenceInsufficiency.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2780",
+    "status": "No-go"
+  },
+  "ST2781": {
+    "boundary": "Counts require known calibrated observation duration.",
+    "object": "DurationRequirement",
+    "packet_file": "FIN_ST2781_DurationRequirement.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2781",
+    "status": "Proven"
+  },
+  "ST2782": {
+    "boundary": "Hashed timestamps do not create independent custody.",
+    "object": "IndependentCustody",
+    "packet_file": "FIN_ST2782_IndependentCustody.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2782",
+    "status": "Boundary"
+  },
+  "ST2783": {
+    "boundary": "run,state_before,state_after,wait,timestamp,config,clock_calibration.",
+    "fields": 7,
+    "object": "OAFields",
+    "packet_file": "FIN_ST2783_OAFields.json",
+    "packet_sha256": "3af5645c43233fe28a63773ee9f257543145ccbc0e6e9625285a55c2937d2a59",
+    "program": "ST2783",
+    "status": "Executable spec"
+  },
+  "ST2784": {
+    "boundary": "Conversion to seconds remains CA.",
+    "object": "DimensionConversion",
+    "packet_file": "FIN_ST2784_DimensionConversion.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2784",
+    "status": "No-go"
+  },
+  "ST2785": {
+    "boundary": "Clock rate is statistically identifiable only after the missing calibrated time record is supplied.",
+    "object": "RoundFiveVerdict",
+    "packet_file": "FIN_ST2785_RoundFiveVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2785",
+    "status": "Round verdict"
+  },
+  "ST2786": {
+    "boundary": "Synthesize.",
+    "object": "RoundFiveRecommendation",
+    "packet_file": "FIN_ST2786_RoundFiveRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2786",
+    "status": "Recommendation"
+  }
+}

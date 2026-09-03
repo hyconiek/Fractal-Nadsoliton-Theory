@@ -1,0 +1,453 @@
+{
+  "ST2352": {
+    "boundary": "A right regular triangular prism has equilateral bases; height h remains free. The uniform prism additionally sets h=a.",
+    "edges": 9,
+    "faces": 5,
+    "object": "PrismDefinition",
+    "packet_file": "FIN_ST2352_PrismDefinition.json",
+    "packet_sha256": "2b472617b38df617815557d7633d86c2f155c0b0f0c38e1004a338390ae7c4a6",
+    "program": "ST2352",
+    "rectangular_faces": 3,
+    "status": "Defined",
+    "triangular_faces": 2,
+    "vertices": 6,
+    "volume_cells": 1
+  },
+  "ST2353": {
+    "boundary": "Coordinates use side a and height h; h=a makes all nine edges equal and side faces square.",
+    "coordinates": [
+      "(0,0,-h/2)",
+      "(a,0,-h/2)",
+      "(a/2,sqrt(3)a/2,-h/2)",
+      "(0,0,h/2)",
+      "(a,0,h/2)",
+      "(a/2,sqrt(3)a/2,h/2)"
+    ],
+    "object": "ExactCoordinates",
+    "packet_file": "FIN_ST2353_ExactCoordinates.json",
+    "packet_sha256": "ed607a53b7d3ddc34054c0e8cb33e6cfe52b1d6802d69986272242b9df77104b",
+    "program": "ST2353",
+    "status": "Proven geometry",
+    "surface_area": "sqrt(3)*a^2/2+3*a*h",
+    "volume": "sqrt(3)*a^2*h/4"
+  },
+  "ST2354": {
+    "C0": 6,
+    "C1": "3*2+3*1=9",
+    "C2": "1*2+3*1=5",
+    "C3": 1,
+    "boundary": "Exact cell counts of filled triangle times interval.",
+    "faces": [
+      "2 horizontal triangles",
+      "3 vertical squares"
+    ],
+    "identity": "Delta2 x I",
+    "object": "ProductCellDecomposition",
+    "packet_file": "FIN_ST2354_ProductCellDecomposition.json",
+    "packet_sha256": "931bb91ec93599c4bbb16ade5af245ce98103fa24197635d8d38e75c3382d618",
+    "program": "ST2354",
+    "status": "Proven product structure"
+  },
+  "ST2355": {
+    "boundary": "Integral primitive incidence with outward face orientations.",
+    "d0": [
+      [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "d1": [
+      [
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        -1
+      ]
+    ],
+    "d2": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "object": "OrientedIncidence",
+    "packet_file": "FIN_ST2355_OrientedIncidence.json",
+    "packet_sha256": "0f321c8117e1ef5f0c3eecd98b563b8d92082c80625b1b3baa5e9bdfd3872b6d",
+    "program": "ST2355",
+    "rank_d0": 5,
+    "rank_d1": 4,
+    "rank_d2": 1,
+    "status": "Constructed exact"
+  },
+  "ST2356": {
+    "boundary": "Boundary of a boundary vanishes.",
+    "d1_d0_zero": true,
+    "d2_d1_zero": true,
+    "object": "ChainIdentity",
+    "packet_file": "FIN_ST2356_ChainIdentity.json",
+    "packet_sha256": "6a386b58bcb7c56d3ac37d244f006b72e5d89e864eb62527e907ac34e53bbada",
+    "program": "ST2356",
+    "status": "Proven exact"
+  },
+  "ST2357": {
+    "Euler_characteristic": 2,
+    "boundary": "The five-face boundary complex is a cellulation of S2.",
+    "boundary_betti": [
+      1,
+      0,
+      1
+    ],
+    "object": "BoundaryHomology",
+    "packet_file": "FIN_ST2357_BoundaryHomology.json",
+    "packet_sha256": "c650501d1e9d0d8c8066ab5433cda1812fcd8bb7bb3b474b94822d5563100a1a",
+    "program": "ST2357",
+    "status": "Proven exact"
+  },
+  "ST2358": {
+    "Euler_characteristic": 1,
+    "boundary": "Adding the one prism volume fills S2 and gives a 3-ball.",
+    "object": "SolidHomology",
+    "packet_file": "FIN_ST2358_SolidHomology.json",
+    "packet_sha256": "3af2fd66aff63993f74e1185e0085831a844a518aba56b488e82ffaeafb4b4d9",
+    "program": "ST2358",
+    "solid_betti": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "status": "Proven exact"
+  },
+  "ST2359": {
+    "adjacency_spectrum": {
+      "-2": 2,
+      "0": 2,
+      "1": 1,
+      "3": 1
+    },
+    "boundary": "Prism graph is C3 Cartesian-product K2; eigenvalues are additive under the product.",
+    "graph_Laplacian_factor": "lambda*(lambda-2)*(lambda-3)^2*(lambda-5)^2",
+    "graph_Laplacian_spectrum": {
+      "0": 1,
+      "2": 1,
+      "3": 2,
+      "5": 2
+    },
+    "object": "GraphSpectrum",
+    "packet_file": "FIN_ST2359_GraphSpectrum.json",
+    "packet_sha256": "c90401c5ca5f13c03cc077c156ab1e09603b7d1a2017366d2eb3a681d29016a9",
+    "program": "ST2359",
+    "status": "Proven exact"
+  },
+  "ST2360": {
+    "L1_spectrum": {
+      "2": 1,
+      "3": 3,
+      "5": 5
+    },
+    "boundary": "Unweighted cellular one-form Hodge Laplacian.",
+    "characteristic_polynomial": "(lambda-2)*(lambda-3)^3*(lambda-5)^5",
+    "object": "UnweightedHodgeSpectrum",
+    "packet_file": "FIN_ST2360_UnweightedHodgeSpectrum.json",
+    "packet_sha256": "8bc10757609384efe523dc6443b0d023ce5f92201c2842edd04074c9ad101de5",
+    "program": "ST2360",
+    "status": "Proven exact",
+    "zero_modes": 0
+  },
+  "ST2361": {
+    "boundary": "D3h-natural face weights leave two positive moduli: t on triangles and q on squares.",
+    "coexact_sector": [
+      "3*t",
+      "5*q (multiplicity 2)",
+      "3*t+2*q"
+    ],
+    "gradient_sector": [
+      2,
+      3,
+      3,
+      5,
+      5
+    ],
+    "object": "WeightedHodgeSpectrum",
+    "packet_file": "FIN_ST2361_WeightedHodgeSpectrum.json",
+    "packet_sha256": "ba161a090f8881c2c952551f71e5882a458fcc822b053dc8908194b59fb2ee9d",
+    "program": "ST2361",
+    "status": "Proven exact",
+    "unique_ratio_selected": false,
+    "unweighted_t_q": [
+      1,
+      1
+    ]
+  },
+  "ST2362": {
+    "QW2191_discharged": false,
+    "boundary": "D3h has order 12 and includes base exchange/reflection. It preserves a two-orbit face split and cannot choose top over bottom.",
+    "canonical_layer_arrow": false,
+    "face_orbits": 2,
+    "object": "SymmetryAndSelector",
+    "order": 12,
+    "packet_file": "FIN_ST2362_SymmetryAndSelector.json",
+    "packet_sha256": "f185eae9ec80e8ed0f1643505e9b371d17354eaea6594e21dc6c6adf28a1e843",
+    "program": "ST2362",
+    "status": "Proven no-go",
+    "symmetry_group": "D3h ~= D3 x C2"
+  },
+  "ST2363": {
+    "boundary": "For every selected base triangle, product incidence supplies lifted cells; exhaustive strict-W scoring does not choose a unique global prism.",
+    "embedding_scan": {
+      "embeddings": 55440,
+      "log_product": {
+        "best": -13.189306060622824,
+        "degeneracy": 12,
+        "gap_to_next_level": 0.002470968459169498,
+        "is_one_D12_orbit": true,
+        "representative_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "same_optimum_for_sum_and_product": false,
+      "sum": {
+        "best": 2.8495753042468612,
+        "degeneracy": 12,
+        "gap_to_next_level": 0.021501500150249875,
+        "is_one_D12_orbit": true,
+        "representative_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      }
+    },
+    "fixes_vertical_square_incidence": true,
+    "object": "FINRefinementRole",
+    "packet_file": "FIN_ST2363_FINRefinementRole.json",
+    "packet_sha256": "a445d1bec4e0cf393f9bf91bf9972cc6199da66ef73bc9d8a0cc69df2c92358b",
+    "program": "ST2363",
+    "selects_base_triangle": false,
+    "status": "Conditional positive / exhaustive no-selector",
+    "strict_global_cell_complex_selected": false
+  },
+  "ST2364": {
+    "boundary": "Triangle data may be transported between layers; square faces carry edge-pair transport. No new connected third cumulant is created.",
+    "generates_irreducible_ternary_source": false,
+    "object": "TernaryTransportRole",
+    "packet_file": "FIN_ST2364_TernaryTransportRole.json",
+    "packet_sha256": "ce3556b59e5250f2dfaae7696760d960815a2ac430b9f1ff93543c6c251aa329",
+    "program": "ST2364",
+    "status": "Conditional positive",
+    "top_minus_bottom_requires_orientation": true,
+    "transports_existing_tau": true
+  },
+  "ST2365": {
+    "Hodge_ratio": "t/q",
+    "absolute_scale": "a",
+    "boundary": "Geometry retains aspect ratio h/a and overall scale a; the cellular Hodge model retains t/q.",
+    "dimensionless_shape_modulus": "h/a unless uniform h=a",
+    "object": "PhysicalScaleBoundary",
+    "packet_file": "FIN_ST2365_PhysicalScaleBoundary.json",
+    "packet_sha256": "df6113977250f7122af08122b37ee29c5dad9fd55caab5bb6de62673318eccc0",
+    "physical_values_derived": false,
+    "program": "ST2365",
+    "status": "Boundary"
+  },
+  "ST2366": {
+    "boundary": "The triangular prism is the correct local refinement cell and repairs conditional product-cell bookkeeping, but it does not source the base face, layer arrow, ternary law, Hodge ratio, scale or physics.",
+    "next_test": "audit whether the 12-state carrier admits a strict prism decomposition or only many symmetry-related decompositions",
+    "object": "FinalPrismVerdict",
+    "packet_file": "FIN_ST2366_FinalPrismVerdict.json",
+    "packet_sha256": "1af8ff628d85ad3f4041becac8c08d30a46148fb830b0a8b7ba38d580b00e85b",
+    "program": "ST2366",
+    "recommended_role": "canonical conditional local cell Delta2 x I",
+    "status": "Final verdict",
+    "strict_ToE_closure": false,
+    "strict_missing_objects_closed": []
+  }
+}

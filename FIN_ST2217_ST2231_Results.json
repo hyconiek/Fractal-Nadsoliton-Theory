@@ -1,0 +1,269 @@
+{
+  "ST2217": {
+    "boundary": "Abstract binary refinement fiber; not asserted as an already exported FIN state law.",
+    "epsilon_interval": [
+      -1,
+      1
+    ],
+    "formula": "p_epsilon(x)=1/8(1+epsilon x1 x2 x3)",
+    "object": "BinaryFiberSynergyFamily",
+    "packet_file": "FIN_ST2217_BinaryFiberSynergyFamily.json",
+    "packet_sha256": "11e01151018ca5aeee29d4b522612bd5c2db62738d69d3414680d92da0d5d624",
+    "program": "ST2217",
+    "status": "Constructed",
+    "support_size": 8
+  },
+  "ST2218": {
+    "boundary": "Exact for every |epsilon|<=1.",
+    "object": "ProbabilityPositivity",
+    "packet_file": "FIN_ST2218_ProbabilityPositivity.json",
+    "packet_sha256": "429298e6482147d3d4872edf5e53eeb7a00f50f1192f2c08525f78b069757d90",
+    "program": "ST2218",
+    "sample_masses": {
+      "-0.25": 1.0,
+      "-0.75": 1.0,
+      "-1.0": 1.0,
+      "0.0": 1.0,
+      "0.25": 1.0,
+      "0.75": 1.0,
+      "1.0": 1.0
+    },
+    "sample_minimum_probabilities": {
+      "-0.25": 0.09375,
+      "-0.75": 0.03125,
+      "-1.0": 0.0,
+      "0.0": 0.125,
+      "0.25": 0.09375,
+      "0.75": 0.03125,
+      "1.0": 0.0
+    },
+    "status": "Proven"
+  },
+  "ST2219": {
+    "all_sample_means": {
+      "-0.25": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "-0.75": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "-1.0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.25": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.75": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "1.0": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "boundary": "Character orthogonality on the cube.",
+    "object": "OnePointMomentEquality",
+    "packet_file": "FIN_ST2219_OnePointMomentEquality.json",
+    "packet_sha256": "c0d4dfa0ea3264fab032ca455ef6ed52d5039b615193ae336da9a1c61e2d46be",
+    "program": "ST2219",
+    "status": "Proven"
+  },
+  "ST2220": {
+    "all_sample_pair_moments": {
+      "-0.25": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "-0.75": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "-1.0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.25": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "0.75": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "1.0": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "boundary": "Every two-variable marginal is uniform and every pair moment is zero.",
+    "maximum_pair_marginal_difference": 0.0,
+    "object": "TwoPointMomentEquality",
+    "packet_file": "FIN_ST2220_TwoPointMomentEquality.json",
+    "packet_sha256": "ad7a03192de8bbfee41e0b1fc71d9949c4cd66688d4e1afe34bca74a8c4a5d58",
+    "program": "ST2220",
+    "status": "Proven"
+  },
+  "ST2221": {
+    "boundary": "Direct exact summation gives E[x1 x2 x3]=epsilon.",
+    "object": "ThirdMomentSeparation",
+    "packet_file": "FIN_ST2221_ThirdMomentSeparation.json",
+    "packet_sha256": "420ec3cc4ab0438af2f98f6d46b8faa66fc70dd271ab574e56d6e683f64565e2",
+    "program": "ST2221",
+    "sample_triples": {
+      "-0.25": -0.25,
+      "-0.75": -0.75,
+      "-1.0": -1.0,
+      "0.0": 0.0,
+      "0.25": 0.25,
+      "0.75": 0.75,
+      "1.0": 1.0
+    },
+    "status": "Proven"
+  },
+  "ST2222": {
+    "boundary": "A continuum of probability laws has identical complete one/two-point records.",
+    "object": "ContinuumPairIndistinguishability",
+    "packet_file": "FIN_ST2222_ContinuumPairIndistinguishability.json",
+    "packet_sha256": "79e4c4feb33bdc132ca426a22a2d8da91e4c3fb8e74811d2e38c0d7183939862",
+    "pair_record_depends_on_epsilon": false,
+    "parameter_cardinality": "continuum",
+    "program": "ST2222",
+    "status": "Proven"
+  },
+  "ST2223": {
+    "boundary": "No deterministic function of the complete one/two-point record can equal epsilon for all family members.",
+    "object": "PairReconstructionNoGo",
+    "packet_file": "FIN_ST2223_PairReconstructionNoGo.json",
+    "packet_sha256": "0a42b1c475a1ea3863546ee2d522f8468aea806bb5a8fe248c8cacf71793b241",
+    "pair_to_triple_reconstruction_exists": false,
+    "program": "ST2223",
+    "proof": "identical input record with distinct required outputs",
+    "status": "Proven impossibility"
+  },
+  "ST2224": {
+    "boundary": "All pair entropies are two bits while full entropy detects |epsilon|, not its sign.",
+    "full_entropy_bits": {
+      "-0.25": 2.954434002924965,
+      "-0.75": 2.543564443199596,
+      "-1.0": 2.0,
+      "0.0": 3.0,
+      "0.25": 2.954434002924965,
+      "0.75": 2.543564443199596,
+      "1.0": 2.0
+    },
+    "object": "EntropySynergy",
+    "packet_file": "FIN_ST2224_EntropySynergy.json",
+    "packet_sha256": "24df088720bcb2497fe4bb4da7795137f139ab2a555f3202a36b1ef468baef14",
+    "pair_entropy_bits": 2.0,
+    "program": "ST2224",
+    "sign_selected_by_entropy": false,
+    "status": "Proven"
+  },
+  "ST2225": {
+    "boundary": "Tracing out any one of the three fine variables returns the same uniform pair state.",
+    "coarse_total_variation": 0.0,
+    "fine_total_variation_plus_vs_minus": 0.75,
+    "object": "MarginalizationErasure",
+    "packet_file": "FIN_ST2225_MarginalizationErasure.json",
+    "packet_sha256": "a685b544e210c6984b9e56dda9f53e8d5d19dd04e4f221138700d207bb146175",
+    "program": "ST2225",
+    "status": "Proven"
+  },
+  "ST2226": {
+    "boundary": "Finite marginalization is associative; changing the order does not restore erased synergy.",
+    "coassociative_marginal_residual": 0.0,
+    "object": "CoassociativeErasure",
+    "packet_file": "FIN_ST2226_CoassociativeErasure.json",
+    "packet_sha256": "3b257c1b654f5ef58ce5c3b634a407a4b6649f11e486699ed208ecadb60da78a",
+    "program": "ST2226",
+    "status": "Proven"
+  },
+  "ST2227": {
+    "boundary": "Three binary fiber labels on a refined triangle realize the exact family.",
+    "compatible_with_12_to24_binary_fibers": true,
+    "object": "RefinementEmbedding",
+    "packet_file": "FIN_ST2227_RefinementEmbedding.json",
+    "packet_sha256": "09ea0716379a6d8738e4fb7cffe23b42535687b1ade0aaca6de1f6832e092bc8",
+    "program": "ST2227",
+    "status": "Conditional construction",
+    "strict_FIN_probability_law_exported": false
+  },
+  "ST2228": {
+    "boundary": "A fixed coarse/pair record admits every epsilon in [-1,1]; refinement intertwining alone cannot choose a lift.",
+    "coassociativity_selects_epsilon": false,
+    "lift_modulus_dimension_at_least": 1,
+    "object": "RefinementLiftNonuniqueness",
+    "packet_file": "FIN_ST2228_RefinementLiftNonuniqueness.json",
+    "packet_sha256": "8d74aee61b8b2156a79e790c18655a9ed62f62c20a3cea131779b5c3937a2962",
+    "program": "ST2228",
+    "status": "Proven nonuniqueness"
+  },
+  "ST2229": {
+    "boundary": "An observer restricted to pair/coarse instruments is exactly blind to fine third-order synergy.",
+    "does_not_derive": [
+      "physical scale",
+      "cosmology",
+      "actual observer"
+    ],
+    "object": "InternalLayerObserverBoundary",
+    "packet_file": "FIN_ST2229_InternalLayerObserverBoundary.json",
+    "packet_sha256": "2dfa224d2e4cf914838df3ad6a7c961cf453c6bd70a95344551c171faae0d04b",
+    "program": "ST2229",
+    "requires": [
+      "binary fiber model",
+      "pair-limited instrument"
+    ],
+    "status": "Conditional implication"
+  },
+  "ST2230": {
+    "boundary": "Irreducible ternary information is mathematically independent of all one/two-point data and can be erased by refinement coarse-graining.",
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST2230_RoundFourVerdict.json",
+    "packet_sha256": "5959426c90ba058f9d273992b8b7a938b8d3560a07527761cf8f722a2eee6d52",
+    "program": "ST2230",
+    "status": "Round verdict",
+    "strict_pair_kernel_can_reconstruct_general_ternary_state": false
+  },
+  "ST2231": {
+    "boundary": "Test the strongest remaining positive construction: use strict loop products as a target-free flag-complex Hodge measure, then attack uniqueness.",
+    "next": [
+      "support clique complex",
+      "tau Hodge",
+      "power-family counterexample",
+      "spectral divergence",
+      "continuum/locality boundary"
+    ],
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST2231_RoundFourRecommendation.json",
+    "packet_sha256": "84e42eb853b90b59f7ebc4f8e07ccebd6df08f38fc56f9f11136e69d2c0d0b6e",
+    "program": "ST2231",
+    "status": "Recommendation"
+  }
+}

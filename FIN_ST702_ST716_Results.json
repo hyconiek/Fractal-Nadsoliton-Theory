@@ -1,0 +1,425 @@
+{
+  "ST702": {
+    "boundary": "The library is representative, not exhaustive or nature-selected.",
+    "feature_semantics": {
+      "tail": {
+        "0": "unstable",
+        "1": "polynomial",
+        "2": "exponential-cone class"
+      }
+    },
+    "models": {
+      "fractional_D3_scalar": {
+        "D": 3,
+        "clocks": 2,
+        "gauss": 0,
+        "nu": 0.8,
+        "pol": 1,
+        "stable": 1,
+        "tail": 1
+      },
+      "local_D1_scalar": {
+        "D": 1,
+        "clocks": 2,
+        "gauss": 0,
+        "nu": 2.0,
+        "pol": 1,
+        "stable": 1,
+        "tail": 2
+      },
+      "local_D2_scalar": {
+        "D": 2,
+        "clocks": 2,
+        "gauss": 0,
+        "nu": 2.0,
+        "pol": 1,
+        "stable": 1,
+        "tail": 2
+      },
+      "local_D3_gauge": {
+        "D": 3,
+        "clocks": 2,
+        "gauss": 1,
+        "nu": 2.0,
+        "pol": 2,
+        "stable": 1,
+        "tail": 2
+      },
+      "local_D3_scalar": {
+        "D": 3,
+        "clocks": 2,
+        "gauss": 0,
+        "nu": 2.0,
+        "pol": 1,
+        "stable": 1,
+        "tail": 2
+      },
+      "signed_D3_scalar": {
+        "D": 3,
+        "clocks": null,
+        "gauss": 0,
+        "nu": null,
+        "pol": 1,
+        "stable": 0,
+        "tail": 0
+      }
+    },
+    "object": "Declared_Propagation_Model_Library",
+    "packet_file": "FIN_ST702_Declared_Propagation_Model_Library.json",
+    "packet_sha256": "8a13ae848da8add6a6c184cfce59fc2e66d5b5c0c1a409e8355cf78dd89cbd66",
+    "program": "ST702",
+    "status": "constructed_declared_six_model_library"
+  },
+  "ST703": {
+    "boundary": "Exact separation concerns the frozen library and ideal values.",
+    "full_signature_unique": true,
+    "object": "Feature_Separation_Matrix",
+    "packet_file": "FIN_ST703_Feature_Separation_Matrix.json",
+    "packet_sha256": "5628d308b0b21b2f4761f912a1079fd71bf1abf9a3a2ac3431f46da12a8fad88",
+    "program": "ST703",
+    "rows": [
+      {
+        "alone_separates_all": false,
+        "distinct_values": 3,
+        "feature": "D"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 3,
+        "feature": "nu"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 2,
+        "feature": "pol"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 2,
+        "feature": "gauss"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 2,
+        "feature": "stable"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 3,
+        "feature": "tail"
+      },
+      {
+        "alone_separates_all": false,
+        "distinct_values": 2,
+        "feature": "clocks"
+      }
+    ],
+    "status": "proven_exact_declared_feature_separation_matrix"
+  },
+  "ST704": {
+    "all_minimal_sets": [
+      [
+        "D",
+        "nu",
+        "pol"
+      ],
+      [
+        "D",
+        "nu",
+        "gauss"
+      ],
+      [
+        "D",
+        "pol",
+        "tail"
+      ],
+      [
+        "D",
+        "gauss",
+        "tail"
+      ]
+    ],
+    "boundary": "Noise and unmodeled alternatives can require more records.",
+    "minimum_feature_count": 3,
+    "object": "Minimal_Falsification_Feature_Set",
+    "packet_file": "FIN_ST704_Minimal_Falsification_Feature_Set.json",
+    "packet_sha256": "4ce622115fcb31afcff60156b7d20c2f50a0dbb2f0a0b92889cfd20fcfd8b06a",
+    "program": "ST704",
+    "status": "proven_minimal_declared_falsification_feature_sets",
+    "theorem": "The listed subsets are exactly the minimum-cardinality ideal feature sets separating all six frozen models."
+  },
+  "ST705": {
+    "absolute_c_needed": false,
+    "boundary": "Extracting the features operationally still requires calibrated resolution/time ordering.",
+    "feature_invariant_under_common_length_time_rescaling": {
+      "D": true,
+      "clocks": true,
+      "gauss": true,
+      "nu": true,
+      "pol": true,
+      "stable": true,
+      "tail": true
+    },
+    "object": "CalibrationInvariant_Feature_Audit",
+    "packet_file": "FIN_ST705_CalibrationInvariant_Feature_Audit.json",
+    "packet_sha256": "a1e0671047634253ebebf2c6c952077c2d212bf986935ccfb656eaea913affde",
+    "program": "ST705",
+    "status": "proven_calibration_invariant_model_features",
+    "theorem": "The declared model classes can be separated using dimensionless exponents, ranks and qualitative tail/stability data before assigning SI units."
+  },
+  "ST706": {
+    "boundary": "Gaussian feature noise is synthetic and categorical constraints are approximated continuously.",
+    "confusion": [
+      [
+        30000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        30000,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        29999,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        30000,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        30000,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        30000
+      ]
+    ],
+    "object": "FiniteCount_Model_Confusion_Replay",
+    "packet_file": "FIN_ST706_FiniteCount_Model_Confusion_Replay.json",
+    "packet_sha256": "fac24b5d9258c124e4c97e1684abb061110476436683d05fe7209f8e2f257e68",
+    "program": "ST706",
+    "scales": [
+      0.12,
+      0.06,
+      0.08,
+      0.03,
+      0.03,
+      0.08,
+      0.05
+    ],
+    "status": "strong_synthetic_finite_count_model_separation",
+    "total_error": 5.555555555591951e-06,
+    "trials_per_model": 30000
+  },
+  "ST707": {
+    "boundary": "Some features are redundant globally; necessity applies to particular minimal sets.",
+    "object": "FeatureRemoval_Degeneracy_Counterexamples",
+    "packet_file": "FIN_ST707_FeatureRemoval_Degeneracy_Counterexamples.json",
+    "packet_sha256": "335a2771e4efb92454d55f7c9a4ca05da84597e4c93aafe57f83f5225c77c3f3",
+    "program": "ST707",
+    "rows": [
+      {
+        "collisions": [
+          [
+            "local_D1_scalar",
+            "local_D2_scalar",
+            "local_D3_scalar"
+          ]
+        ],
+        "removed": "D"
+      },
+      {
+        "collisions": [],
+        "removed": "nu"
+      },
+      {
+        "collisions": [],
+        "removed": "pol"
+      },
+      {
+        "collisions": [],
+        "removed": "gauss"
+      },
+      {
+        "collisions": [],
+        "removed": "stable"
+      },
+      {
+        "collisions": [],
+        "removed": "tail"
+      },
+      {
+        "collisions": [],
+        "removed": "clocks"
+      }
+    ],
+    "status": "proven_feature_removal_collision_catalog"
+  },
+  "ST708": {
+    "boundary": "The hidden class is synthetic; rejection thresholds are not calibrated.",
+    "excluded_from_candidates": true,
+    "hidden": "fractional_D3_scalar",
+    "nearest_distance": 1.5465619569374018,
+    "nearest_wrong_model": "local_D3_scalar",
+    "object": "HeldOut_Synthetic_Model_Challenge",
+    "out_of_library_flag": true,
+    "packet_file": "FIN_ST708_HeldOut_Synthetic_Model_Challenge.json",
+    "packet_sha256": "511f53ee96ad27743862c30966d43f52288585d1a109d9f7afd9acf440185263",
+    "program": "ST708",
+    "status": "strong_heldout_unknown_model_rejection_fixture"
+  },
+  "ST709": {
+    "boundary": "Finite samples need dynamic range and nuisance-error bounds.",
+    "classification": {
+      "fractional": "polynomial direct tail",
+      "local": "factorial/exponential outside proxy cone",
+      "signed": "growth/oscillation with sign-sensitive modes"
+    },
+    "object": "CausalTail_Class_Discriminator",
+    "packet_file": "FIN_ST709_CausalTail_Class_Discriminator.json",
+    "packet_sha256": "60619ded3134286bded11fea688e3593ed845588a97784890fdee19f1a42696a",
+    "program": "ST709",
+    "records": [
+      "short-time distance profile",
+      "tail exponent",
+      "finite-range path-order onset"
+    ],
+    "status": "proven_declared_causal_tail_class_discriminator",
+    "theorem": "Tail order plus stability separates the three declared locality classes without SI calibration."
+  },
+  "ST710": {
+    "boundary": "Krein-unitary-only models require a different operational null.",
+    "object": "SignedInstability_Discriminator",
+    "packet_file": "FIN_ST710_SignedInstability_Discriminator.json",
+    "packet_sha256": "98247dd8af77336d72a5b7c2bc010b7d5b7259c510212f34ba36e48a717022e8",
+    "positive_local": "bounded unitary and contractive heat",
+    "program": "ST710",
+    "signed_negative_mode": "raw heat grows exp(t|lambda_min|), wave grows cosh(t sqrt|lambda_min|)",
+    "status": "proven_signed_instability_discriminator",
+    "test": "monitor norm/population response at two late times",
+    "theorem": "Any certified negative mode supplies a model-level instability discriminator against positive local refinement."
+  },
+  "ST711": {
+    "boundary": "A schema cannot certify real independence without external custody.",
+    "fail_closed": true,
+    "object": "Noncircular_Anchor_Validator",
+    "packet_file": "FIN_ST711_Noncircular_Anchor_Validator.json",
+    "packet_sha256": "6371bf4bba80c3e254a695176377c761a6f39defe61b0f87f3d2beb445a03c4f",
+    "program": "ST711",
+    "required_fields": [
+      "length_standard_id",
+      "clock_standard_id",
+      "calibration_hash",
+      "calibrated_before_wave_unblinding",
+      "standards_not_defined_by_tested_c"
+    ],
+    "status": "constructed_fail_closed_anchor_validator_schema",
+    "valid_fixture": {
+      "calibrated_before_wave_unblinding": true,
+      "calibration_hash": "sha256:fixture",
+      "clock_standard_id": "T-EXT",
+      "length_standard_id": "L-EXT",
+      "standards_not_defined_by_tested_c": true
+    }
+  },
+  "ST712": {
+    "acceptance": "disjoint confidence intervals containing 2 and 1",
+    "boundary": "No physical timing records are supplied.",
+    "object": "TwoClock_Record_Validator",
+    "packet_file": "FIN_ST712_TwoClock_Record_Validator.json",
+    "packet_sha256": "ff595b8f681116fbdd93a15fb569313b4fb7368a1734263eefaf8e35b9ebe694",
+    "program": "ST712",
+    "record_fields": [
+      "layer",
+      "lattice_spacing_ratio",
+      "unitary_or_heat_time",
+      "wave_time",
+      "uncertainty"
+    ],
+    "required_slopes": {
+      "ballistic": 1,
+      "diffusive": 2
+    },
+    "single_clock_record_rejected": true,
+    "status": "constructed_two_clock_record_validator",
+    "tolerance": 0.08
+  },
+  "ST713": {
+    "boundary": "Independent custody and apparatus remain external obligations.",
+    "code_can_generate_independence": false,
+    "object": "LayerSpeed_Laboratory_Executable_Spec",
+    "packet_file": "FIN_ST713_LayerSpeed_Laboratory_Executable_Spec.json",
+    "packet_sha256": "afe004011fa2e05122e279d83abb95e36f035ea6536ca4074324ba0b347eeacb",
+    "pipeline": [
+      "freeze model library and nuisance ranges",
+      "register external rods/clocks",
+      "collect event-level multi-layer responses",
+      "extract blind features",
+      "validate anchors/two clocks",
+      "unblind model scores once",
+      "publish failures unchanged"
+    ],
+    "program": "ST713",
+    "role_split": [
+      "provider",
+      "registrar",
+      "analyst"
+    ],
+    "status": "constructed_layer_speed_executable_transfer_spec"
+  },
+  "ST714": {
+    "boundary": "No dimension/refinement/gauge/clock source is exported.",
+    "canonical_model": false,
+    "object": "Strict_ModelSource_Gate",
+    "packet_file": "FIN_ST714_Strict_ModelSource_Gate.json",
+    "packet_sha256": "75f7caa7344937cdb0d5ec9405b0ff70b205b5e89d2b26a6f97febb86b2d162a",
+    "program": "ST714",
+    "source_formula": false,
+    "status": "blocked_no_strict_model_source"
+  },
+  "ST715": {
+    "boundary": "No SI c, photon, Lorentz apparatus or held-out nature record.",
+    "object": "PhysicalPrediction_Gate",
+    "packet_file": "FIN_ST715_PhysicalPrediction_Gate.json",
+    "packet_sha256": "933fe54ca7189ffab463e5c81f25496b9a58f5140e0e055f44c409826cf7876e",
+    "physical_prediction": false,
+    "program": "ST715",
+    "status": "blocked_no_physical_prediction_record"
+  },
+  "ST716": {
+    "boundary": "Round five is local analytic/computational work.",
+    "external_referee": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 5,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST716_Independent_Evidence_Gate.json",
+    "packet_sha256": "dcadc5b82f69dd8a53a7aa40b6ccd5007caf0bd06c4b6f943656df081ab13aa4",
+    "program": "ST716",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

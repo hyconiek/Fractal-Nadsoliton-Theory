@@ -1,0 +1,581 @@
+{
+  "ST567": {
+    "boundary": "The paired finite-range continuation is an added refinement model; continuous-time lattice propagation still has analytic tails rather than an exact cone.",
+    "convergence_ratio_last_two": 0.2500056991703255,
+    "exact_lattice_causal_cone": false,
+    "exact_small_q_speed": 1.9532829071846787,
+    "object": "FiniteRange_Refinement_Dispersion_Limit",
+    "packet_file": "FIN_ST567_FiniteRange_Refinement_Dispersion_Limit.json",
+    "packet_sha256": "db3a279145b29214930f3c40cd03b713d67b1b3cb68a87a179789e978686acc5",
+    "program": "ST567",
+    "refinement": "paired finite range d<=6 with fixed weights",
+    "rows": [
+      {
+        "N": 24,
+        "lambda1": 0.24198631348424257,
+        "phase_speed": 1.8789999781467732,
+        "q1": 0.2617993877991494,
+        "relative_error_to_limit": 0.03802978501714916
+      },
+      {
+        "N": 48,
+        "lambda1": 0.06410804939768006,
+        "phase_speed": 1.9342724691421467,
+        "q1": 0.1308996938995747,
+        "relative_error_to_limit": 0.0097325574153169
+      },
+      {
+        "N": 96,
+        "lambda1": 0.016263693099357185,
+        "phase_speed": 1.9485024217467246,
+        "q1": 0.06544984694978735,
+        "relative_error_to_limit": 0.0024474106748030217
+      },
+      {
+        "N": 192,
+        "lambda1": 0.004080892827957497,
+        "phase_speed": 1.9520860373997866,
+        "q1": 0.032724923474893676,
+        "relative_error_to_limit": 0.0006127477901381766
+      },
+      {
+        "N": 384,
+        "lambda1": 0.0010211615925492144,
+        "phase_speed": 1.9529835803652018,
+        "q1": 0.016362461737446838,
+        "relative_error_to_limit": 0.00015324294211343508
+      },
+      {
+        "N": 768,
+        "lambda1": 0.00025534909089440044,
+        "phase_speed": 1.9532080686424607,
+        "q1": 0.008181230868723419,
+        "relative_error_to_limit": 3.831423596793826e-05
+      },
+      {
+        "N": 1536,
+        "lambda1": 6.384094170350551e-05,
+        "phase_speed": 1.9532641971226066,
+        "q1": 0.0040906154343617095,
+        "relative_error_to_limit": 9.57877735134124e-06
+      }
+    ],
+    "status": "proven_finite_range_linear_dispersion_limit",
+    "strict_refinement_provenance": false,
+    "theorem": "Taylor expansion gives lambda(q)=q^2 sum_d w_d d^2+O(q^4), so omega(q)/|q| converges to sqrt(sum_d w_d d^2)."
+  },
+  "ST568": {
+    "Tauberian_expected_exponent": 0.8,
+    "boundary": "The positive envelope is not the signed strict kernel; a theorem requires Tauberian upper/lower bounds. The observed exponent is incompatible with relativistic linear wave dispersion.",
+    "finite_nonzero_low_q_speed": false,
+    "fitted_low_q_symbol_exponent_last5": 0.7970028294015348,
+    "implied_group_velocity_exponent": -0.6014985852992326,
+    "implied_wave_exponent": 0.3985014147007674,
+    "object": "Positive_LongRange_Fractional_Dispersion",
+    "packet_file": "FIN_ST568_Positive_LongRange_Fractional_Dispersion.json",
+    "packet_sha256": "6f8987b70f48f7399b14734536805a2d3a44f5a7277761a5ac6cb5edf9a4527c",
+    "positive_envelope": "w_d=1/(1+d^1.8)",
+    "program": "ST568",
+    "rows": [
+      {
+        "N": 64,
+        "lambda1": 0.36692948500540595,
+        "q1": 0.09817477042468103,
+        "wave_phase_speed": 6.170088755247988
+      },
+      {
+        "N": 128,
+        "lambda1": 0.2160140190794955,
+        "q1": 0.04908738521234052,
+        "wave_phase_speed": 9.46827950639151
+      },
+      {
+        "N": 256,
+        "lambda1": 0.12547291346317435,
+        "q1": 0.02454369260617026,
+        "wave_phase_speed": 14.432284723196306
+      },
+      {
+        "N": 512,
+        "lambda1": 0.07243138421048391,
+        "q1": 0.01227184630308513,
+        "wave_phase_speed": 21.93075004573016
+      },
+      {
+        "N": 1024,
+        "lambda1": 0.041694885781986865,
+        "q1": 0.006135923151542565,
+        "wave_phase_speed": 33.27832681780617
+      },
+      {
+        "N": 2048,
+        "lambda1": 0.02397132382914547,
+        "q1": 0.0030679615757712823,
+        "wave_phase_speed": 50.46567579751472
+      },
+      {
+        "N": 4096,
+        "lambda1": 0.013773952279391825,
+        "q1": 0.0015339807878856412,
+        "wave_phase_speed": 76.50844348584839
+      }
+    ],
+    "status": "strong_fractional_long_range_dispersion_evidence",
+    "theorem_scope": "numerical asymptotic audit consistent with fractional order eta-1"
+  },
+  "ST569": {
+    "boundary": "A finite counterexample rejects this naive refinement as a universal positive generator; it does not exclude a different completion map or signed/Krein model.",
+    "first_tested_indefinite_carrier": 48,
+    "literal_extension": "cos(0.18575d+0.1625)/(1+d^1.8) to all cyclic distances",
+    "object": "Signed_Oscillatory_Refinement_Positivity_NoGo",
+    "packet_file": "FIN_ST569_Signed_Oscillatory_Refinement_Positivity_NoGo.json",
+    "packet_sha256": "2b5bb5ea5d46f25f32cd71fc287c7c54a9fb621def92e1d876b1fbe30aa95b62",
+    "program": "ST569",
+    "rows": [
+      {
+        "N": 12,
+        "lambda_mode1": 0.7541211542070796,
+        "minimum_laplacian_eigenvalue": 0.0,
+        "negative_modes": 0,
+        "negative_weights": 0
+      },
+      {
+        "N": 24,
+        "lambda_mode1": 0.15529857378445291,
+        "minimum_laplacian_eigenvalue": 0.0,
+        "negative_modes": 0,
+        "negative_weights": 5
+      },
+      {
+        "N": 48,
+        "lambda_mode1": -0.14619202372665277,
+        "minimum_laplacian_eigenvalue": -0.1461920237266528,
+        "negative_modes": 4,
+        "negative_weights": 17
+      },
+      {
+        "N": 96,
+        "lambda_mode1": -0.008030454371251645,
+        "minimum_laplacian_eigenvalue": -0.14761270028396795,
+        "negative_modes": 6,
+        "negative_weights": 24
+      },
+      {
+        "N": 192,
+        "lambda_mode1": -0.009425033577409939,
+        "minimum_laplacian_eigenvalue": -0.17571719951890802,
+        "negative_modes": 14,
+        "negative_weights": 51
+      },
+      {
+        "N": 384,
+        "lambda_mode1": -0.0027255903053839013,
+        "minimum_laplacian_eigenvalue": -0.19238356645751442,
+        "negative_modes": 30,
+        "negative_weights": 100
+      },
+      {
+        "N": 768,
+        "lambda_mode1": 5.109615332255775e-05,
+        "minimum_laplacian_eigenvalue": -0.20534170519629746,
+        "negative_modes": 58,
+        "negative_weights": 190
+      }
+    ],
+    "status": "proven_finite_counterexample_to_naive_signed_strict_refinement",
+    "theorem": "The literal sampled extension ceases to be a positive graph Laplacian in the tested family; already N=48 has negative modes.",
+    "universal_all_N_no_go": false
+  },
+  "ST570": {
+    "C12_formal_speed": 1.9015886526044143,
+    "boundary": "The condition is exact; FIN has not selected a refinement or dimensional anchor and therefore has not derived physical c.",
+    "finite_range_limit_speed": 1.9532829071846787,
+    "fractional_speed_limit": "diverges or has no finite nonzero limit",
+    "invariance_law": "(alpha_n/beta_n)*(c_hat_{n+1}/c_hat_n)=1",
+    "object": "Layer_Covariant_Physical_Speed_Condition",
+    "packet_file": "FIN_ST570_Layer_Covariant_Physical_Speed_Condition.json",
+    "packet_sha256": "1479fba9de54932e82f142a3cac5d00c8524aeaabf2e0b573bc3a20aaa2e1dfa",
+    "physical_speed_law": "c_phys,n=(ell_n/tau_n)*c_hat_n",
+    "program": "ST570",
+    "status": "proven_layer_speed_covariance_condition_and_refinement_dependence",
+    "theorem": "Equal length/time scaling alpha=beta preserves physical speed only if the dimensionless dispersion slope is itself refinement invariant. Different admitted refinement classes fail that premise.",
+    "universal_layer_c_from_A12": false
+  },
+  "ST571": {
+    "boundary": "The proxy is a declared exponential-moment bound candidate, not a fully proved many-body Lieb--Robinson constant or Lorentz cone.",
+    "exact_Lieb_Robinson_theorem": false,
+    "exponential_moment_proxy": "v_mu=2 sum_d w_d sinh(mu d)/mu",
+    "maximum_sampled_unitary_symbol_velocity": 2.159686057293459,
+    "maximum_sampled_wave_group_velocity": 1.9532828237084212,
+    "object": "FiniteRange_LiebRobinson_Velocity_Proxy",
+    "optimal_mu_in_scan": 1.3866013490870583e-05,
+    "optimized_velocity_proxy": 3.007112630003073,
+    "packet_file": "FIN_ST571_FiniteRange_LiebRobinson_Velocity_Proxy.json",
+    "packet_sha256": "530186ed4a0294c6dd27913c0dac4972495900836a009fb6460e51b9752d2784",
+    "program": "ST571",
+    "status": "computed_finite_range_LR_velocity_proxy",
+    "wave_low_q_limit": 1.9532829071846787
+  },
+  "ST572": {
+    "boundary": "The factor two belongs to the declared Fourier labeling; alternative physical embeddings must state their coordinate map explicitly.",
+    "canonical_transition_cocycle": false,
+    "coarse_mode_eigenvalue": "lambda preserved",
+    "dimensionless_phase_speed_scaling": "c_hat->2 c_hat under the raw mode label",
+    "exact_intertwining": "A_tilde R=R A",
+    "label_wavenumber_under_N_to_2N": "q->q/2",
+    "object": "Exact_Refinement_WaveSpeed_Scaling",
+    "packet_file": "FIN_ST572_Exact_Refinement_WaveSpeed_Scaling.json",
+    "packet_sha256": "81ebca55d94b5a1b64fd0bccc06df56126b3f41269938cc3d4c41b27e84efcff",
+    "physical_invariance_condition": "(ell_child/tau_child)=0.5*(ell_parent/tau_parent) for this labeling",
+    "program": "ST572",
+    "status": "proven_refinement_spectrum_speed_coordinate_distinction",
+    "theorem": "Exact spectral refinement naturality does not by itself preserve a dimensionless phase velocity because the wavenumber coordinate changes. Physical speed is preserved only after a compatible length/time transition cocycle is supplied.",
+    "wave_frequency": "sqrt(lambda) preserved"
+  },
+  "ST573": {
+    "boundary": "Floating power fits illustrate the analytic leading orders; the nonzero opposite coupling already proves absence of an exact finite cone.",
+    "exact_zero_outside_cone": false,
+    "expected_orders": {
+      "heat_probability": 1,
+      "wave_probability": 2
+    },
+    "fitted_heat_power": 1.0053417050917093,
+    "fitted_wave_power": 2.000220343556189,
+    "object": "ShortTime_CausalTail_Operational_Audit",
+    "opposite_vertex": 6,
+    "packet_file": "FIN_ST573_ShortTime_CausalTail_Operational_Audit.json",
+    "packet_sha256": "c45ae3c5e0d5e4f122a32e1297041ab20fecf439a5dfd8e1ff8e331f0d308d7e",
+    "program": "ST573",
+    "rows": [
+      {
+        "far_heat_probability": 1.1073889498963584e-06,
+        "far_wave_probability": 1.2256301094840829e-12,
+        "t": 0.0001
+      },
+      {
+        "far_heat_probability": 3.3240097218499597e-06,
+        "far_wave_probability": 1.1030681629595793e-11,
+        "t": 0.0003
+      },
+      {
+        "far_heat_probability": 1.1101517386052667e-05,
+        "far_wave_probability": 1.2256447453110323e-10,
+        "t": 0.001
+      },
+      {
+        "far_heat_probability": 3.348831891278777e-05,
+        "far_wave_probability": 1.1031867130323393e-09,
+        "t": 0.003
+      },
+      {
+        "far_heat_probability": 0.0001137565676468861,
+        "far_wave_probability": 1.2271083088274417e-08,
+        "t": 0.01
+      }
+    ],
+    "source_vertex": 0,
+    "status": "strong_short_time_far_tail_order_replay"
+  },
+  "ST574": {
+    "boundary": "The prior exhaustive patterns remain numerical until all scalar intervals and endpoint regions are outward certified.",
+    "candidate_margin": 0.010070082679914272,
+    "interval_certificate_completed": false,
+    "minimum_required_total_error_budget": 0.005035041339957136,
+    "numerical_best_ratio": 2.9125665644276797,
+    "object": "TwoLevel_Interval_Certificate_Preparation",
+    "packet_file": "FIN_ST574_TwoLevel_Interval_Certificate_Preparation.json",
+    "packet_sha256": "c1443b760a11fc29009900e2d8879397e45c01d67fc2274706d67e69db930091",
+    "program": "ST574",
+    "proposed_interval_partition": "adaptive scalar intervals around each subset optimum plus analytic endpoint entropy bounds",
+    "status": "two_level_interval_certificate_prepared_not_closed",
+    "subset_orbits": 2047
+  },
+  "ST575": {
+    "best_ratio": 2.902496481747765,
+    "boundary": "This is a method/resource stop, not evidence for another orbit or against candidate globality.",
+    "candidate_hits": 24,
+    "dimension": 6,
+    "global_reflection_quotient_theorem": false,
+    "interval_cover_cells": 0,
+    "multistarts": 240,
+    "object": "ReflectionQuotient_Cover_Stop",
+    "packet_file": "FIN_ST575_ReflectionQuotient_Cover_Stop.json",
+    "packet_sha256": "fcd545db921925bf342c0c3806e662914fab80f41551862a4605f8aeb564c955",
+    "program": "ST575",
+    "result": "No tractable six-dimensional outward cover is exported in this round.",
+    "stationary_clusters": 46,
+    "status": "bounded_stop_no_reflection_quotient_cover"
+  },
+  "ST576": {
+    "best_combination_sha256": "eb352214f144e8f36183fca70756172ad8a5e950b45a14b488303231b02f7322",
+    "boundary": "Small modular support under one prime may be a bad-prime artifact and is not a rational relation without multi-prime alignment and exact polynomial verification.",
+    "coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "coefficient_support": 11,
+    "exact_rational_relation": false,
+    "minimum_support_found": 1299,
+    "object": "Stage1_Modular_Sparse_Circuit_Search",
+    "packet_file": "FIN_ST576_Stage1_Modular_Sparse_Circuit_Search.json",
+    "packet_sha256": "1536f8a1be70dbb4f012492e9d96a1e06749e96050c81d8f59a0e93b04d61009",
+    "prime": 1000003,
+    "program": "ST576",
+    "status": "exact_modular_sparse_combination_search",
+    "trials": 160000
+  },
+  "ST577": {
+    "boundary": "Failure of current methods is not nonexistence of 38 rational relations.",
+    "decision": "Freeze direct CRT and random-combination escalation; next admissible algebra move requires representation-theoretic coordinates, p-adic lifting with height control, or a characteristic-zero CAS checkpoint.",
+    "five_prime_reconstructed_relations": 0,
+    "modular_minimum_support_search": 1299,
+    "new_structure_aware_Q_method_available": false,
+    "object": "Stage1_CharacteristicZero_Method_Gate",
+    "packet_file": "FIN_ST577_Stage1_CharacteristicZero_Method_Gate.json",
+    "packet_sha256": "2f19580332a3aea1f6a76e2e6e49e67ef9720e0176266dc4b4f4ff19602d087c",
+    "program": "ST577",
+    "status": "stage1_characteristic_zero_lane_method_gated"
+  },
+  "ST578": {
+    "boundary": "The response likelihood remains synthetic; no photon/count detector model is supplied.",
+    "object": "ThreeChannel_Likelihood_Robustness",
+    "packet_file": "FIN_ST578_ThreeChannel_Likelihood_Robustness.json",
+    "packet_sha256": "8ad049064063740b165cf7c39b213513108f33ad50f6f9af7c1bf3e9d2096374",
+    "physical_noise_calibration": false,
+    "program": "ST578",
+    "rows": [
+      {
+        "Chernoff_per_sample": 13.856040785069407,
+        "sigma": 0.025,
+        "sufficient_n_union_bound_1pct": 1
+      },
+      {
+        "Chernoff_per_sample": 3.4640101962673517,
+        "sigma": 0.05,
+        "sufficient_n_union_bound_1pct": 2
+      },
+      {
+        "Chernoff_per_sample": 1.539560087229934,
+        "sigma": 0.07500000000000001,
+        "sufficient_n_union_bound_1pct": 4
+      },
+      {
+        "Chernoff_per_sample": 0.8660025490668379,
+        "sigma": 0.1,
+        "sufficient_n_union_bound_1pct": 7
+      },
+      {
+        "Chernoff_per_sample": 0.3848900218074835,
+        "sigma": 0.15000000000000002,
+        "sufficient_n_union_bound_1pct": 15
+      }
+    ],
+    "status": "proven_conditional_three_channel_noise_scaling",
+    "theorem": "Under the supplied equal-covariance Gaussian response model, required sample size scales quadratically with sigma and inversely with squared minimum channel separation."
+  },
+  "ST579": {
+    "all_log_chart_roots": true,
+    "boundary": "Numerical log-chart continuation is not an interval Krawczyk chain; it only selects the next analytic chart to implement.",
+    "interval_log_chart_certificate": false,
+    "median_condition_improvement": 35.40642234606582,
+    "object": "LogChart_IR_Conditioning_Audit",
+    "packet_file": "FIN_ST579_LogChart_IR_Conditioning_Audit.json",
+    "packet_sha256": "a551f0bfce69e71117182d4615d1df32a9fc4bb82f000a494f3c9c1258ed84c5",
+    "program": "ST579",
+    "rows": [
+      {
+        "b": 0.2592,
+        "log_condition": 23.828648026208665,
+        "log_residual": 4.440892098500626e-16,
+        "log_success": true,
+        "x_condition": 814.3370604858371,
+        "x_residual": 4.440892098500626e-16,
+        "x_success": true
+      },
+      {
+        "b": 0.2616,
+        "log_condition": 23.901782160891532,
+        "log_residual": 2.936317855528614e-12,
+        "log_success": true,
+        "x_condition": 819.836904917258,
+        "x_residual": 1.7123247264549946e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.264,
+        "log_condition": 23.973969871926755,
+        "log_residual": 3.055333763768431e-12,
+        "log_success": true,
+        "x_condition": 825.4722815167487,
+        "x_residual": 1.6856793738639908e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.26639999999999997,
+        "log_condition": 24.045128067771156,
+        "log_residual": 3.1659119770210964e-12,
+        "log_success": true,
+        "x_condition": 831.2277122788779,
+        "x_residual": 1.6647794254254222e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2688,
+        "log_condition": 24.115177807605786,
+        "log_residual": 3.2662761384472105e-12,
+        "log_success": true,
+        "x_condition": 837.0887528666192,
+        "x_residual": 1.6496387589270967e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2712,
+        "log_condition": 24.18404432923473,
+        "log_residual": 3.3568703372566233e-12,
+        "log_success": true,
+        "x_condition": 843.041939564429,
+        "x_residual": 1.6405765634885938e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2736,
+        "log_condition": 24.25165709819109,
+        "log_residual": 3.4376945734493347e-12,
+        "log_success": true,
+        "x_condition": 849.0747452268504,
+        "x_residual": 1.6375789613221059e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.27599999999999997,
+        "log_condition": 24.317949661626482,
+        "log_residual": 3.5078606686056446e-12,
+        "log_success": true,
+        "x_condition": 855.1755262903074,
+        "x_residual": 1.640715341366672e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2784,
+        "log_condition": 24.382859776334193,
+        "log_residual": 3.567812711935403e-12,
+        "log_success": true,
+        "x_condition": 861.333474164013,
+        "x_residual": 1.6499718258344842e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2808,
+        "log_condition": 24.44632928418566,
+        "log_residual": 3.617328658833685e-12,
+        "log_success": true,
+        "x_condition": 867.5385610610166,
+        "x_residual": 1.6652929035743114e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2832,
+        "log_condition": 24.50830402914125,
+        "log_residual": 3.6564085093004906e-12,
+        "log_success": true,
+        "x_condition": 873.7814942995612,
+        "x_residual": 1.6863732632543815e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.28559999999999997,
+        "log_condition": 24.568733828720944,
+        "log_residual": 3.68594044175552e-12,
+        "log_success": true,
+        "x_condition": 880.0536613979787,
+        "x_residual": 1.7131990270868869e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.288,
+        "log_condition": 24.627572426876018,
+        "log_residual": 3.7050362777790724e-12,
+        "log_success": true,
+        "x_condition": 886.3470903090978,
+        "x_residual": 1.7453677392254008e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2904,
+        "log_condition": 24.684777302238963,
+        "log_residual": 3.714362151185924e-12,
+        "log_success": true,
+        "x_condition": 892.6544043060809,
+        "x_residual": 1.782754499579653e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2928,
+        "log_condition": 24.740309706452383,
+        "log_residual": 3.715472374210549e-12,
+        "log_success": true,
+        "x_condition": 898.9687760122491,
+        "x_residual": 1.8248180744251385e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2952,
+        "log_condition": 24.794134448231514,
+        "log_residual": 3.707700813038173e-12,
+        "log_success": true,
+        "x_condition": 905.2839012628485,
+        "x_residual": 1.871294785793509e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.2976,
+        "log_condition": 24.84621984654621,
+        "log_residual": 3.6912695122737205e-12,
+        "log_success": true,
+        "x_condition": 911.5939432124387,
+        "x_residual": 1.921726666687107e-12,
+        "x_success": true
+      },
+      {
+        "b": 0.3,
+        "log_condition": 24.896537624991396,
+        "log_residual": 3.667954828756592e-12,
+        "log_success": true,
+        "x_condition": 917.8935208136622,
+        "x_residual": 2.0745627438145675e-12,
+        "x_success": true
+      }
+    ],
+    "status": "strong_log_chart_IR_conditioning_audit"
+  },
+  "ST580": {
+    "Lorentz_symmetry": false,
+    "QW_2191": "open",
+    "boundary": "No bridge/role transfer, SM/GR, L_total, laboratory, or ToE closure follows.",
+    "canonical_refinement": false,
+    "exact_causal_cone": false,
+    "new_nonpremise_selector": false,
+    "new_scale_charged_source": false,
+    "new_strict_gain_source": false,
+    "object": "Speed_Source_Selector_Admission_Gate",
+    "packet_file": "FIN_ST580_Speed_Source_Selector_Admission_Gate.json",
+    "packet_sha256": "baa9037e3e46f05a9ac984ca703ad0edaae58f7c09dcac2503a7bc5d3f32b044",
+    "physical_c_derived": false,
+    "program": "ST580",
+    "reason": "Finite-range, positive-tail and signed strict continuations have inequivalent dispersion/locality behavior.",
+    "status": "blocked_no_physical_speed_cone_or_source_closure"
+  },
+  "ST581": {
+    "boundary": "Round two is local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 2,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST581_Independent_Evidence_Gate.json",
+    "packet_sha256": "c00a358067d4632bf495bb3c20cb6c259afb3f255dbacfba536e980d32c84351",
+    "program": "ST581",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

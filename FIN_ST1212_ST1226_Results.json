@@ -1,0 +1,186 @@
+{
+  "ST1212": {
+    "X": "Z12 x {+1,-1}",
+    "boundary": "Existing P3140 pair space.",
+    "interpretation": "marked origin plus orientation/polarity",
+    "object": "SectorFrame_Torsor",
+    "packet_file": "FIN_ST1212_SectorFrame_Torsor.json",
+    "packet_sha256": "7812eea3e82afd65ee95c68228c1c48a834adfa957abd8abf1e96c2caf02e156",
+    "program": "ST1212",
+    "size": 24,
+    "status": "constructed_oriented_origin_frame_space"
+  },
+  "ST1213": {
+    "boundary": "Finite enumeration.",
+    "group_size": 24,
+    "object": "Dihedral_FreeTransitiveAction",
+    "orbit_size": 24,
+    "packet_file": "FIN_ST1213_Dihedral_FreeTransitiveAction.json",
+    "packet_sha256": "d492bd75dd269772fcc4e3133a134d0561a8a1c2b834458fe0ff84b58a6abe07",
+    "program": "ST1213",
+    "stabilizer_size": 1,
+    "status": "proven_D12_action_is_free_and_transitive_on_sector_frames",
+    "torsor": true
+  },
+  "ST1214": {
+    "SA": [
+      "A_origin:r0 in Z12",
+      "A_lambda:lambda0 in {+1,-1}",
+      "A_coupling:selected frame couples to sector channel"
+    ],
+    "boundary": "Explicitly non-strict.",
+    "object": "SA_Definition",
+    "packet_file": "FIN_ST1214_SA_Definition.json",
+    "packet_sha256": "ea0cc7db066245fe6c86c82bdb87182425e57fe7ca116d903c41960bb96e6b75",
+    "program": "ST1214",
+    "status": "constructed_minimal_conditional_SA"
+  },
+  "ST1215": {
+    "boundary": "Finite count.",
+    "count": 2,
+    "object": "OriginOnly_ResidualPolarity",
+    "packet_file": "FIN_ST1215_OriginOnly_ResidualPolarity.json",
+    "packet_sha256": "336a7dc14b93ad725afc11fd08ee4762f634283cf9031bcdcccf12bbc590a2b0",
+    "program": "ST1215",
+    "r0": 0,
+    "remaining": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "status": "proven_origin_axiom_alone_leaves_two_frames"
+  },
+  "ST1216": {
+    "boundary": "Finite count.",
+    "count": 12,
+    "lambda0": 1,
+    "object": "PolarityOnly_ResidualOrigins",
+    "packet_file": "FIN_ST1216_PolarityOnly_ResidualOrigins.json",
+    "packet_sha256": "61a18a1ab74d0cff67b71600d8d5b183c35dc22a91b01c6b0370110cb3bbc3c6",
+    "program": "ST1216",
+    "status": "proven_polarity_axiom_alone_leaves_twelve_frames"
+  },
+  "ST1217": {
+    "boundary": "This is stipulation, not strict provenance.",
+    "object": "OriginPolarity_UniqueFrame",
+    "packet_file": "FIN_ST1217_OriginPolarity_UniqueFrame.json",
+    "packet_sha256": "5bd0d068db1d3b9a779a1c1bf6b3960b66d92ee116b0552226082294855c89df",
+    "program": "ST1217",
+    "remaining_count": 1,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "proven_origin_plus_polarity_selects_one_frame",
+    "symmetry_broken": true
+  },
+  "ST1218": {
+    "boundary": "Typing theorem.",
+    "object": "CouplingAxiom_Necessity",
+    "packet_file": "FIN_ST1218_CouplingAxiom_Necessity.json",
+    "packet_sha256": "afecfb9d37cfa2762e95afc7cfee7eb6ae4d757b1726ed3905aca3d50c030619",
+    "physical_sector_effect_without_coupling": false,
+    "program": "ST1218",
+    "requires_A_coupling": true,
+    "selected_label_only": true,
+    "status": "proven_frame_selection_without_coupling_does_not_affect_dynamics"
+  },
+  "ST1219": {
+    "boundary": "Replays P3141 with exact integer enumeration.",
+    "formula": "V=mu[w_o d(r,r0)^2+w_l(1-lambda lambda0)/2]",
+    "object": "FiniteSelectorPotential",
+    "packet_file": "FIN_ST1219_FiniteSelectorPotential.json",
+    "packet_sha256": "f3e0cf184818076507994fddc83a7e0fa6a1edce6ba8244cc7a9dee8e4ebdbc5",
+    "program": "ST1219",
+    "status": "proven_axiom_selector_potential_has_unique_minimum_for_positive_audited_weights",
+    "unique_rows": 9,
+    "weight_pairs": 9
+  },
+  "ST1220": {
+    "boundary": "No strict source or unit measure.",
+    "free": [
+      "mu",
+      "w_origin",
+      "w_lambda"
+    ],
+    "object": "PotentialWeightFreedom",
+    "packet_file": "FIN_ST1220_PotentialWeightFreedom.json",
+    "packet_sha256": "effceb5e2495d8448957766c7e665e57023b2c2b42bfd62140de77b2d9851891",
+    "program": "ST1220",
+    "status": "proven_selector_potential_weights_and_scale_remain_free",
+    "strict_values": false
+  },
+  "ST1221": {
+    "boundary": "No localized invariant selector.",
+    "localized": false,
+    "mass_per_frame": 0.041666666666666664,
+    "object": "InvariantMeasure_SelectorNoGo",
+    "packet_file": "FIN_ST1221_InvariantMeasure_SelectorNoGo.json",
+    "packet_sha256": "5326685991b6e9a8dd41ea9bb8e5f4edac20487d61d4d2102ec1b2c79691d4d8",
+    "program": "ST1221",
+    "selected_mass": 0.041666666666666664,
+    "status": "proven_invariant_probability_on_transitive_frame_torsor_is_uniform"
+  },
+  "ST1222": {
+    "CA_breaks_D12": false,
+    "SA_fixes_units": false,
+    "boundary": "Scales and frames are product factors.",
+    "object": "SA_CA_Independence",
+    "packet_file": "FIN_ST1222_SA_CA_Independence.json",
+    "packet_sha256": "9f20a156ce97aa5e29c153f0461db196ebd5c70bf5bc407671ab14d5821899d1",
+    "parameter_space": "(R_+)^3 x (Z12 x +/-)",
+    "program": "ST1222",
+    "status": "proven_SA_and_CA_solve_independent_group_actions"
+  },
+  "ST1223": {
+    "boundary": "The same frame can label classical, ray and density models.",
+    "candidate_categories": 3,
+    "object": "SA_StateCategoryBlindness",
+    "packet_file": "FIN_ST1223_SA_StateCategoryBlindness.json",
+    "packet_sha256": "06a41fb642454cec151c1b50e4cb4c4f0d692fc5a2ba79b0479b4a12ba27b37d",
+    "program": "ST1223",
+    "selected_category": false,
+    "status": "proven_SA_is_state_category_blind"
+  },
+  "ST1224": {
+    "QW2191_discharged": false,
+    "boundary": "Strict QW-2191 remains open.",
+    "conditional_unique_frame": true,
+    "object": "SA_StrictStatus",
+    "packet_file": "FIN_ST1224_SA_StrictStatus.json",
+    "packet_sha256": "ce12799fb17141b142bcce35fd6ca22a4890789f170ab8958e54157e66e37158",
+    "program": "ST1224",
+    "status": "SA_closes_selector_only_in_labelled_axiom_branch",
+    "strict_source": false
+  },
+  "ST1225": {
+    "boundary": "Operational/state leaf remains.",
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1225_RoundThree_Verdict.json",
+    "packet_sha256": "bd3191af26cb7664eaee6d539d0b777115dd90d61fb8723bf895177568367977",
+    "program": "ST1225",
+    "sector": "conditional",
+    "state_and_measurement": "open",
+    "status": "two_strategic_leaf_cuts_CA_and_SA_are_consistently_but_only_conditionally_closed",
+    "units": "conditional"
+  },
+  "ST1226": {
+    "boundary": "Test whether W0+CA+SA is sufficient after the A-only ontology no-go.",
+    "next": [
+      "build same-CA/SA classical and quantum models",
+      "prove two-package insufficiency",
+      "dimensionful dual dynamics",
+      "identify missing operational package"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1226_RoundThree_Recommendation.json",
+    "packet_sha256": "66c11861dffdb34b62b94f2d2b3868dea50d4bbd980d491b304c7d36716ef744",
+    "program": "ST1226",
+    "status": "recommended_ST1227_ST1241"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "ST972": {
+    "boundary": "Synthetic.",
+    "models": [
+      "Hamiltonian charge",
+      "topological winding",
+      "pumped attractor",
+      "quantum code"
+    ],
+    "object": "Persistence_ModelLibrary",
+    "packet_file": "FIN_ST972_Persistence_ModelLibrary.json",
+    "packet_sha256": "3855f8c5763ea5048f3efb079866bb17225ded22a29aaa046b5ccebe3e6e6791",
+    "program": "ST972",
+    "status": "constructed_four_mechanism_library"
+  },
+  "ST973": {
+    "boundary": "No detector.",
+    "object": "NormVsShape_Observables",
+    "observables": [
+      "norm",
+      "IPR/localization",
+      "coherence",
+      "winding",
+      "recovery fidelity"
+    ],
+    "packet_file": "FIN_ST973_NormVsShape_Observables.json",
+    "packet_sha256": "12b861e1f81731125a09e1e64e2c0889ad8bd418e30bb548745caaba258b8fe8",
+    "program": "ST973",
+    "status": "constructed_observable_bundle"
+  },
+  "ST974": {
+    "attractor": "decays",
+    "boundary": "Pump hardware absent.",
+    "conserved/topological": "persists conditionally",
+    "object": "PumpOff_Protocol",
+    "packet_file": "FIN_ST974_PumpOff_Protocol.json",
+    "packet_sha256": "dda8ac189d11b2f2e49a0abb0af9ffdd030590eefc439945fca4e3d378ead2d6",
+    "program": "ST974",
+    "status": "constructed_pump_off_discriminator"
+  },
+  "ST975": {
+    "boundary": "Phase instrument absent.",
+    "log": "winding and min amplitude",
+    "object": "PhaseWinding_Protocol",
+    "packet_file": "FIN_ST975_PhaseWinding_Protocol.json",
+    "packet_sha256": "ce5e550cd1e4e87d323e21b03d2ef051f40cc37c5451d55fb8b2a02c98e7189e",
+    "program": "ST975",
+    "status": "constructed_winding_perturbation_test"
+  },
+  "ST976": {
+    "boundary": "Raw timestamps needed.",
+    "fields": [
+      "t",
+      "vertex",
+      "amplitude proxy",
+      "phase cut"
+    ],
+    "object": "AmplitudeZero_EventLog",
+    "packet_file": "FIN_ST976_AmplitudeZero_EventLog.json",
+    "packet_sha256": "c4a4ca5c665bb16a81084540f0bb4b232a1ebf47d0d250f8ef0a21b16f902235",
+    "program": "ST976",
+    "status": "constructed_zero_event_record"
+  },
+  "ST977": {
+    "boundary": "No system.",
+    "metric": "return distance/rate",
+    "object": "PerturbationRecovery_Test",
+    "packet_file": "FIN_ST977_PerturbationRecovery_Test.json",
+    "packet_sha256": "9f54084d48ecb35fb858050f5e2a727851f27446386c2ddbb9f8c7f2eb3f93a3",
+    "program": "ST977",
+    "status": "constructed_recovery_basin_test"
+  },
+  "ST978": {
+    "boundary": "Noise calibration absent.",
+    "fit": "escape exponent",
+    "object": "NoiseScaling_Test",
+    "packet_file": "FIN_ST978_NoiseScaling_Test.json",
+    "packet_sha256": "e785b03cb3c60323167da60631cd8c8d8c53d6e817a2332f2aa2f6643f1f87c8",
+    "program": "ST978",
+    "status": "constructed_noise_scaling_test"
+  },
+  "ST979": {
+    "boundary": "Theory gap.",
+    "object": "CollisionProtocol",
+    "packet_file": "FIN_ST979_CollisionProtocol.json",
+    "packet_sha256": "a4a8e8237cd87d13a1d027b6aa6ee397322f023691d3a9fa4603f5fafa3e0c73",
+    "program": "ST979",
+    "ready": false,
+    "status": "collision_test_not_defined_without_multisoliton_law"
+  },
+  "ST980": {
+    "boundary": "Lindblad controls absent.",
+    "criterion": "L_k psi=0",
+    "object": "DarkState_ChannelTest",
+    "packet_file": "FIN_ST980_DarkState_ChannelTest.json",
+    "packet_sha256": "7d8f6a0c88fe49196eb9f5f9d6558acb3fa65efba9d23fe01ca678229f042372",
+    "program": "ST980",
+    "status": "constructed_dark_state_test"
+  },
+  "ST981": {
+    "boundary": "Charge observable absent.",
+    "criterion": "vacuum sector differs",
+    "object": "ChargeSector_Test",
+    "packet_file": "FIN_ST981_ChargeSector_Test.json",
+    "packet_sha256": "cc62500aefcd4d2548a27745e7d46a3ae747acc868f1bc378cda35b3aa9af3cf",
+    "program": "ST981",
+    "status": "constructed_charge_sector_test"
+  },
+  "ST982": {
+    "boundary": "Tomography absent.",
+    "global_local_split": true,
+    "object": "AccessibleInformation_Test",
+    "packet_file": "FIN_ST982_AccessibleInformation_Test.json",
+    "packet_sha256": "31b984362c2dcb4743840f0c8015e5b83166d0ec281d868a1b23dc7b5160efb4",
+    "program": "ST982",
+    "status": "constructed_accessible_information_test"
+  },
+  "ST983": {
+    "boundary": "No events.",
+    "object": "BlindHeldout_Scoring",
+    "packet_file": "FIN_ST983_BlindHeldout_Scoring.json",
+    "packet_sha256": "2e355fa1834c1e2ec99ce08b22576219d7e0692a1d4aad0a7c6b61cad2de62a9",
+    "program": "ST983",
+    "repair_after_unblind": false,
+    "status": "constructed_blind_heldout_scoring"
+  },
+  "ST984": {
+    "boundary": "No publication action.",
+    "object": "FailureStop",
+    "packet_file": "FIN_ST984_FailureStop.json",
+    "packet_sha256": "5cdea8cac50c096622e210f5f1a8115d3202912a07916dceffa12c3702855480",
+    "program": "ST984",
+    "status": "constructed_failure_stop",
+    "unknown_model_stop": true
+  },
+  "ST985": {
+    "apparatus": false,
+    "boundary": "All instruments absent.",
+    "object": "ApparatusGate",
+    "packet_file": "FIN_ST985_ApparatusGate.json",
+    "packet_sha256": "5109a273d447b6aa8fa3a88f603cb50ad6ab080b1e94509445b64691600bf6d9",
+    "program": "ST985",
+    "status": "blocked_no_persistence_apparatus"
+  },
+  "ST986": {
+    "boundary": "Round five local.",
+    "laboratory": "absent",
+    "object": "EvidenceGate",
+    "packet_file": "FIN_ST986_EvidenceGate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST986",
+    "status": "blocked_no_evidence"
+  }
+}

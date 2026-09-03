@@ -1,0 +1,196 @@
+{
+  "ST1287": {
+    "boundary": "Floating equality groups tolerance 1e-9.",
+    "eigenvalues": [
+      -5.106592232406726e-16,
+      0.7541211542070798,
+      1.5770495144276093,
+      1.9614068619764458,
+      2.19956884933321,
+      2.2986062720790965,
+      2.3421820411463
+    ],
+    "multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "object": "SpectrumMultiplicityReduction",
+    "packet_file": "FIN_ST1287_SpectrumMultiplicityReduction.json",
+    "packet_sha256": "3f64a8522a6209336b4ce3c82fcc7099baf87e1c1f8db46d4cd47b50c9bcdeda",
+    "program": "ST1287",
+    "status": "proven_return_formulas_reduce_to_seven_spectral_values"
+  },
+  "ST1288": {
+    "C0": 1.0,
+    "boundary": "All nonzero eigenvalues positive.",
+    "derivative_negative_for_t_positive": true,
+    "limit": 0.08333333333333333,
+    "object": "ClassicalReturn_Monotonicity",
+    "packet_file": "FIN_ST1288_ClassicalReturn_Monotonicity.json",
+    "packet_sha256": "6c3ccd7977bf41458e6c00f428e78d2b4a464fb0f8cdea5e0c0edd942e131f77",
+    "program": "ST1288",
+    "status": "proven_classical_return_decreases_to_one_twelfth"
+  },
+  "ST1289": {
+    "Q0": 1.0,
+    "boundary": "Finite unitary spectrum.",
+    "fixed_limit": false,
+    "object": "QuantumReturn_RecurrenceStructure",
+    "packet_file": "FIN_ST1289_QuantumReturn_RecurrenceStructure.json",
+    "packet_sha256": "db8ad9a1e2592b12d8c4d1941976c68779d70e371498ad912c18d10be5f53693",
+    "program": "ST1289",
+    "recurrences": true,
+    "status": "proven_quantum_return_is_finite_almost_periodic_not_monotone"
+  },
+  "ST1290": {
+    "D(t)": "|Q(t)-C(t)|",
+    "boundary": "Binary effect.",
+    "domain": [
+      0,
+      10
+    ],
+    "object": "SeparationFunction",
+    "packet_file": "FIN_ST1290_SeparationFunction.json",
+    "packet_sha256": "aaa778c60438bd8a7443d56692bc4d60446cecc1999dd1d73f1a258863e59d51",
+    "program": "ST1290",
+    "status": "constructed_return_separation_objective"
+  },
+  "ST1291": {
+    "C": 0.4152434794754452,
+    "D": 0.41124099980763157,
+    "Q": 0.8264844792830768,
+    "boundary": "Local bounded optimization, not interval root proof.",
+    "derivative_residual": -1.3677043053661464e-08,
+    "object": "OptimalTime_LocalRoot",
+    "packet_file": "FIN_ST1291_OptimalTime_LocalRoot.json",
+    "packet_sha256": "49e41053cad840b8b84857c73a2e063fefcba602eb76e278973cb3680eb3e733",
+    "program": "ST1291",
+    "status": "strong_numerical_unique_first_positive_separation_maximizer",
+    "t_star": 0.5945307906088023
+  },
+  "ST1292": {
+    "boundary": "Analytic derivative formula evaluated in double precision.",
+    "object": "OptimalTime_Curvature",
+    "packet_file": "FIN_ST1292_OptimalTime_Curvature.json",
+    "packet_sha256": "28b02dbb4a255bd0c13eecc795ce2bb284d60e9aa828e3200c78c2495f88fa1d",
+    "program": "ST1292",
+    "second_derivative": -1.529133341969675,
+    "status": "proven_negative_local_curvature_numerically",
+    "strict_local_maximum": true
+  },
+  "ST1293": {
+    "boundary": "Not outward interval arithmetic.",
+    "grid_max": 0.4112409998071642,
+    "grid_max_time": 0.59453,
+    "grid_points": 1000001,
+    "grid_step": 1e-05,
+    "object": "DenseDomain_Audit",
+    "packet_file": "FIN_ST1293_DenseDomain_Audit.json",
+    "packet_sha256": "c7eff116c5e0196f3ac66bd4ac0aefced68298f91c82cdda24d2404faa87f048",
+    "program": "ST1293",
+    "status": "strong_dense_grid_global_domain_audit"
+  },
+  "ST1294": {
+    "boundary": "Function values are floating; analytic derivative bound is rigorous given eigenvalue bound.",
+    "cover_gap": 3.51327306171945e-05,
+    "cover_upper": 0.4112761325377814,
+    "derivative_bound": 7.0265461234389,
+    "object": "LipschitzCover_Bound",
+    "packet_file": "FIN_ST1294_LipschitzCover_Bound.json",
+    "packet_sha256": "c9292f299313194c0a0201bbdd2d3a5c04e88f828534a2078c04b398d8485586",
+    "program": "ST1294",
+    "status": "constructed_global_Lipschitz_cover_upper_bound"
+  },
+  "ST1295": {
+    "TV": 0.41124099980763157,
+    "boundary": "All nonreturn signed differences share the opposite sign in replay.",
+    "object": "FullDistribution_TV",
+    "packet_file": "FIN_ST1295_FullDistribution_TV.json",
+    "packet_sha256": "afaf77958ed071e75d579c7b7bf4d7037098e681fee7a6ea87e12c9e4ae09b42",
+    "program": "ST1295",
+    "return_gap": 0.41124099980763185,
+    "sign_pattern": true,
+    "status": "proven_full_vertex_TV_equals_return_gap_at_candidate_time_numerically"
+  },
+  "ST1296": {
+    "C": 0.4123573971501711,
+    "D": 0.41121822546535997,
+    "Q": 0.8235756226155311,
+    "boundary": "Simpler design time.",
+    "loss_vs_optimum": 2.2774342271603132e-05,
+    "object": "PracticalTime_06",
+    "packet_file": "FIN_ST1296_PracticalTime_06.json",
+    "packet_sha256": "91bcedc3e8ab4a411dc0d4368e0a7699adb96c2a6b9486ecc5dc7d7f1134693c",
+    "program": "ST1296",
+    "status": "frozen_practical_time_0_6_is_near_optimal",
+    "t": 0.6
+  },
+  "ST1297": {
+    "boundary": "Grid bracketing plus Brent roots.",
+    "object": "CurveCrossings",
+    "packet_file": "FIN_ST1297_CurveCrossings.json",
+    "packet_sha256": "33ae5d7d68b2e557eacc5943da9a0de6a9b8aa536010e68c7e3a2fbc50d33fb6",
+    "positive_roots": [
+      5.667117362587265,
+      7.080512686267876,
+      9.707504019634456
+    ],
+    "program": "ST1297",
+    "root_count": 3,
+    "status": "strong_numerical_return_curve_crossing_inventory_on_0_10"
+  },
+  "ST1298": {
+    "Q_minus_C": -0.049201954312870264,
+    "boundary": "Unitary recurrence makes one-time sign nonuniversal.",
+    "object": "LateTime_Behavior",
+    "packet_file": "FIN_ST1298_LateTime_Behavior.json",
+    "packet_sha256": "0eb2d50e49761d65e5c332371addf61a77a41692c58f0ec8550ffe5555d90bca",
+    "program": "ST1298",
+    "status": "proven_late_time_single_return_order_can_reverse",
+    "t10_C": 0.08342181653625245,
+    "t10_Q": 0.03421986222338219
+  },
+  "ST1299": {
+    "boundary": "Pre-registered for simple hypothesis testing.",
+    "object": "SingleTime_DesignFreeze",
+    "observable": "return/not_return",
+    "packet_file": "FIN_ST1299_SingleTime_DesignFreeze.json",
+    "packet_sha256": "0a822c354d36e0cbf1be7b18885200c1b636b07783e9031aca21697060e501a5",
+    "primary_effect_size": 0.41121822546535997,
+    "program": "ST1299",
+    "status": "frozen_base_single_time_design",
+    "time": 0.6
+  },
+  "ST1300": {
+    "analytic_derivatives": true,
+    "boundary": "No theorem inflation.",
+    "dense_grid": true,
+    "global_unique_max_proven": false,
+    "interval_arithmetic": false,
+    "object": "OptimizationEvidenceStatus",
+    "packet_file": "FIN_ST1300_OptimizationEvidenceStatus.json",
+    "packet_sha256": "134c94cb073ba25716ed88124d31930ac93c8a169321bf9fe8e09fd86b9e1244",
+    "program": "ST1300",
+    "status": "optimization_is_strong_numerical_not_formal_global_certificate"
+  },
+  "ST1301": {
+    "boundary": "Design exact finite-count likelihood tests.",
+    "next": [
+      "Bernoulli KL/Chernoff",
+      "integer thresholds",
+      "sample sizes",
+      "multinomial option",
+      "failure rules"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1301_RoundTwo_Recommendation.json",
+    "packet_sha256": "3db879dcef2567fcf9f07577d3ae2d357f0f25d71791431246604413dd93a139",
+    "program": "ST1301",
+    "status": "recommended_ST1302_ST1316"
+  }
+}

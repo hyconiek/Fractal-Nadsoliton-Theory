@@ -1,0 +1,180 @@
+{
+  "ST1137": {
+    "boundary": "Family is a mathematical lift, not a strict fractal law.",
+    "dimension": 24,
+    "formula": "A24(q)=A12 tensor I2 + I12 tensor [[q,-q],[-q,q]]",
+    "object": "TwoFiber_RefinementFamily",
+    "packet_file": "FIN_ST1137_TwoFiber_RefinementFamily.json",
+    "packet_sha256": "76f6b0363fb1cd6f2a60d236a221c4c5988a6f8b990244909ad457c6b8438d43",
+    "program": "ST1137",
+    "q_domain": "q>=0",
+    "status": "constructed_exact_one_parameter_12_to_24_refinement"
+  },
+  "ST1138": {
+    "boundary": "Coarse map sums each two-point fiber.",
+    "identity": "C A24=A12 C",
+    "object": "CoarseGenerator_Intertwiner",
+    "packet_file": "FIN_ST1138_CoarseGenerator_Intertwiner.json",
+    "packet_sha256": "66d16387fc861688a3571e182d60e5286538b08336e87c2b5d72241565c55491",
+    "program": "ST1138",
+    "residual": 4.440892098500626e-16,
+    "status": "proven_exact_coarse_generator_intertwining"
+  },
+  "ST1139": {
+    "boundary": "Analytic consequence of generator intertwining.",
+    "identity": "C exp(-tA24)=exp(-tA12) C",
+    "object": "HeatSemigroup_Intertwiner",
+    "packet_file": "FIN_ST1139_HeatSemigroup_Intertwiner.json",
+    "packet_sha256": "4439c2e8ba61ec383068af5ce75646ba652bd522b801564e9a51a902cbbb19df",
+    "program": "ST1139",
+    "residual": 1.4432899320127035e-15,
+    "status": "proven_exact_heat_coarse_intertwining_numerically_replayed",
+    "time": 0.83
+  },
+  "ST1140": {
+    "boundary": "C is an amplitude sum, not a CPTP quantum coarse channel.",
+    "identity": "C exp(-itA24)=exp(-itA12) C",
+    "object": "UnitaryGroup_Intertwiner",
+    "packet_file": "FIN_ST1140_UnitaryGroup_Intertwiner.json",
+    "packet_sha256": "5a09a14e81d0a6c10d8f4ca47b36187f3c046ef74b899330f019cd05435b7802",
+    "program": "ST1140",
+    "residual": 2.4407072593958145e-15,
+    "status": "proven_exact_unitary_coarse_intertwining_numerically_replayed",
+    "time": 0.83
+  },
+  "ST1141": {
+    "boundary": "Reproduces the coarse operator for every q; no q selector is supplied.",
+    "canonical_q": false,
+    "coarse_A_independent_of_q": true,
+    "object": "FiberRate_Nonuniqueness",
+    "packet_file": "FIN_ST1141_FiberRate_Nonuniqueness.json",
+    "packet_sha256": "9c80db700dea25b62f959e109ca00849cfa0c15b6ed16690ca7868aa4ed4d722",
+    "program": "ST1141",
+    "status": "proven_continuum_of_fiber_rates_has_identical_coarse_dynamics",
+    "tested_q": [
+      0.0,
+      0.1,
+      0.37,
+      1.0,
+      10.0
+    ]
+  },
+  "ST1142": {
+    "boundary": "q=0 and q>0 have different fine stationary sectors.",
+    "coarse_observer_detects_difference": false,
+    "kernel_dimension_q0": 2,
+    "kernel_dimension_q_positive": 1,
+    "object": "KernelDimension_PhaseChange",
+    "packet_file": "FIN_ST1142_KernelDimension_PhaseChange.json",
+    "packet_sha256": "aebe4d974f825cda6ff58aa13bddf3f151e1a65b98ebc7b0eec1580fe919c488",
+    "program": "ST1142",
+    "status": "proven_hidden_fiber_connectivity_changes_without_coarse_change"
+  },
+  "ST1143": {
+    "boundary": "Kronecker-sum construction.",
+    "formula": "spec(A24)=spec(A12) union (spec(A12)+2q)",
+    "object": "RefinedSpectrum_Formula",
+    "packet_file": "FIN_ST1143_RefinedSpectrum_Formula.json",
+    "packet_sha256": "abc55a5ab5165b382bcbc2674d24b0008fbc8a6639a32cdeb35fc07d6bd97b91",
+    "program": "ST1143",
+    "spectral_residual": 1.6621944556572405e-15,
+    "status": "proven_refined_spectrum_is_two_shifted_copies"
+  },
+  "ST1144": {
+    "boundary": "Blindness is relative to C.",
+    "nullity_C": 12,
+    "object": "CoarseObserver_FiberBlindness",
+    "packet_file": "FIN_ST1144_CoarseObserver_FiberBlindness.json",
+    "packet_sha256": "d3f51adb93a8337091d2d18a6bddc1d28b80b4b90cd1803e22f6a11eaa8e28cd",
+    "program": "ST1144",
+    "rank_C": 12,
+    "status": "proven_coarse_map_has_12_dimensional_hidden_fiber_kernel",
+    "two_states_same_coarse_residual": 0.0
+  },
+  "ST1145": {
+    "H_coarse_plus_conditional": 2.99558269429413,
+    "H_fine": 2.99558269429413,
+    "boundary": "Classical probability candidate.",
+    "object": "Entropy_ChainRule",
+    "packet_file": "FIN_ST1145_Entropy_ChainRule.json",
+    "packet_sha256": "cf9bdc3383e4b5ce05887d810c21caac9db927780577a2714d00231cf8d60eb9",
+    "program": "ST1145",
+    "residual": 0.0,
+    "status": "proven_refinement_entropy_chain_rule"
+  },
+  "ST1146": {
+    "boundary": "Each A24 again admits simplex, ray and density-state models.",
+    "classical_dimension": 23,
+    "density_affine_dimension": 575,
+    "object": "RefinedStateCategory_StillAmbiguous",
+    "packet_file": "FIN_ST1146_RefinedStateCategory_StillAmbiguous.json",
+    "packet_sha256": "ab57003ee1266130ea66231c9e21f567f750e660df488006ef75f1d41379897b",
+    "program": "ST1146",
+    "pure_ray_dimension": 46,
+    "status": "proven_refinement_does_not_select_state_category",
+    "unique_category": false
+  },
+  "ST1147": {
+    "boundary": "Mathematical compatibility, not physical time identification.",
+    "heat_intertwines": true,
+    "object": "DualDynamics_RefinementCompatibility",
+    "packet_file": "FIN_ST1147_DualDynamics_RefinementCompatibility.json",
+    "packet_sha256": "2475603cef11050795148dc43a7de18caaccc6b89ae000314d1be5062a77a857",
+    "program": "ST1147",
+    "single_physical_channel_selected": false,
+    "status": "proven_both_functional_calculi_respect_declared_refinement",
+    "unitary_intertwines": true
+  },
+  "ST1148": {
+    "SI_value": false,
+    "boundary": "Dimensionless model.",
+    "c_or_length_source": false,
+    "object": "NoDimensionalScale_FromFiberRate",
+    "packet_file": "FIN_ST1148_NoDimensionalScale_FromFiberRate.json",
+    "packet_sha256": "1aae0c5df309b5e97f08b40d6c602e2553dc11586d97d85aa9af4a9ab50c33dc",
+    "program": "ST1148",
+    "q_role": "relative fiber relaxation/frequency scale",
+    "status": "proven_q_has_only_inverse_internal_time_units_until_calibrated"
+  },
+  "ST1149": {
+    "boundary": "Interpretation consistent with one total nadsoliton but not forced.",
+    "consistent": "fine state -> coarse record",
+    "not_derived": [
+      "physical fractal hierarchy",
+      "absolute scale",
+      "observer layer"
+    ],
+    "object": "FractalLayer_InterpretationBoundary",
+    "packet_file": "FIN_ST1149_FractalLayer_InterpretationBoundary.json",
+    "packet_sha256": "1c9fd25b0250c47f3491255f7ee7ada9ba0ce21e574f424bb72871e17061facd",
+    "program": "ST1149",
+    "status": "constructed_layers_as_internal_fibers_or_descriptions"
+  },
+  "ST1150": {
+    "QW2191_discharged": false,
+    "boundary": "No new strict selector or role transfer.",
+    "exact_intertwining": true,
+    "free_parameter_q": true,
+    "object": "RefinementBridge_CurrentVerdict",
+    "packet_file": "FIN_ST1150_RefinementBridge_CurrentVerdict.json",
+    "packet_sha256": "205fc60cce09aa9336bb4573634e881af0584934eeea1a890d85432e8405d811",
+    "physical_scale": false,
+    "program": "ST1150",
+    "status": "refinement_bridge_exact_but_nonunique_and_nonphysical"
+  },
+  "ST1151": {
+    "boundary": "Next round asks whether an internal observer/clock/record can select the state category.",
+    "next": [
+      "information-capacity bounds",
+      "POVM versus instrument ambiguity",
+      "relational clocks",
+      "observer inclusion dimension",
+      "operational selector verdict"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1151_RoundFour_Recommendation.json",
+    "packet_sha256": "4c7363b0af66e4fe42c7359332e5b2f51677f6b1382c79198999817b52a1854d",
+    "program": "ST1151",
+    "status": "recommended_ST1152_ST1166"
+  }
+}

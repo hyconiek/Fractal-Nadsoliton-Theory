@@ -1,0 +1,192 @@
+{
+  "ST1557": {
+    "boundary": "Frozen decimal spectrum and nuisance rectangle.",
+    "object": "ContinuousMinimaxProblem",
+    "objective": "sup_w inf_theta sum_i w_i min directional Bernoulli KL",
+    "packet_file": "FIN_ST1557_ContinuousMinimaxProblem.json",
+    "packet_sha256": "7363047b0a02468ec0fc98dd232e244c2249d520dba3ae5273f11ae1e284b0ec",
+    "program": "ST1557",
+    "status": "constructed_continuous_bidirectional_KL_minimax_problem",
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ]
+  },
+  "ST1558": {
+    "boundary": "Finite grid only.",
+    "object": "TrainingLP",
+    "packet_file": "FIN_ST1558_TrainingLP.json",
+    "packet_sha256": "f68824c968e0fa2e354a9d43fa067850c08076fefcd72e4b2aa39bd78ff2b4a2",
+    "program": "ST1558",
+    "rows": 16441,
+    "status": "solved_fine_training_grid_LP",
+    "success": true,
+    "value": 0.05370588868519467
+  },
+  "ST1559": {
+    "boundary": "From fine LP.",
+    "object": "CandidateWeights",
+    "packet_file": "FIN_ST1559_CandidateWeights.json",
+    "packet_sha256": "c1bce9e1c19ac5b1d77b5fe7731056ae5f55b1fdf9a22a3820b44b83b84b187f",
+    "program": "ST1559",
+    "status": "constructed_two_endpoint_candidate_weights",
+    "weights": [
+      0.31753172030015914,
+      0.0,
+      0.0,
+      0.6824682796998407
+    ],
+    "zero_middle": true
+  },
+  "ST1560": {
+    "boundary": "Joint convexity; nearest endpoints when intervals disjoint.",
+    "disjoint_rule": "nearest interval endpoints",
+    "object": "AdaptiveKLRectangleBound",
+    "overlap_lower": 0.0,
+    "packet_file": "FIN_ST1560_AdaptiveKLRectangleBound.json",
+    "packet_sha256": "0d9c6e6247a0f3da08026a5c68c90a09dce17266e8df6c6bbae00f301b07d79c",
+    "program": "ST1560",
+    "status": "proven_analytic_KL_lower_over_probability_rectangles"
+  },
+  "ST1561": {
+    "accepted_boxes": 1380,
+    "boundary": "All boxes accepted above target lower.",
+    "minimum_accepted_lower": 0.05020816368533542,
+    "object": "AdaptiveCover",
+    "packet_file": "FIN_ST1561_AdaptiveCover.json",
+    "packet_sha256": "913c1f6b312dbd20afd9453486ab153dd53c4dd38f25a3d3179ec8910b9705df",
+    "program": "ST1561",
+    "splits": 380,
+    "status": "constructed_complete_adaptive_continuous_KL_cover"
+  },
+  "ST1562": {
+    "boundary": "Outward q intervals and analytic KL rectangle minima.",
+    "lower": 0.05,
+    "object": "ContinuousCandidateLower",
+    "packet_file": "FIN_ST1562_ContinuousCandidateLower.json",
+    "packet_sha256": "f8ceb08fae0af1e4fa81c9dde70925de1ab130f87bb48384602d6c6dcb8f953c",
+    "program": "ST1562",
+    "status": "proven_candidate_continuous_worst_case_value_at_least_0_05"
+  },
+  "ST1563": {
+    "boundary": "Any allocation's worst case is below its dual average.",
+    "object": "DualSupportPoints",
+    "packet_file": "FIN_ST1563_DualSupportPoints.json",
+    "packet_sha256": "ec090cf0a967ad9feeffb9df7776d1f0039cf19afba1d8e05d785edadc04a0a0",
+    "per_time_average": [
+      0.05370588868519478,
+      0.0024086777800061223,
+      0.02133004017108981,
+      0.05370588868519479
+    ],
+    "points": [
+      [
+        1.1,
+        16.0
+      ],
+      [
+        1.1,
+        16.25
+      ]
+    ],
+    "program": "ST1563",
+    "status": "constructed_two_point_dual_nuisance_measure",
+    "weights": [
+      0.7622353358423254,
+      0.2377646641576765
+    ]
+  },
+  "ST1564": {
+    "boundary": "Fixed dual distribution.",
+    "object": "DualUpperBound",
+    "packet_file": "FIN_ST1564_DualUpperBound.json",
+    "packet_sha256": "d75655b2c3627bb7426dd66d2da677234286da5d5fa461382e8535bb691d71cc",
+    "program": "ST1564",
+    "status": "proven_continuous_minimax_upper_bound",
+    "upper": 0.05370588868619479
+  },
+  "ST1565": {
+    "boundary": "Declared metric/model.",
+    "lower": 0.05,
+    "object": "ContinuousValueBracket",
+    "packet_file": "FIN_ST1565_ContinuousValueBracket.json",
+    "packet_sha256": "5c03326980256e557be0db77b5bbc5924018c8545f2ef527f9db427310ec0779",
+    "program": "ST1565",
+    "status": "proven_continuous_minimax_value_bracket",
+    "upper": 0.05370588868619479,
+    "width": 0.003705888686194786
+  },
+  "ST1566": {
+    "boundary": "Value near-optimality only.",
+    "exact_value": false,
+    "exact_weights": false,
+    "object": "ExactWeightsBoundary",
+    "packet_file": "FIN_ST1566_ExactWeightsBoundary.json",
+    "packet_sha256": "87e561cdbdada6ed1d05c6f65355992d3733674d8f89df625564c16d9d103745",
+    "program": "ST1566",
+    "status": "exact_continuous_optimizing_weights_and_active_parameters_remain_open"
+  },
+  "ST1567": {
+    "boundary": "Redundant numerical check.",
+    "minimum": 0.05370588868519468,
+    "object": "HeldOutGrid",
+    "packet_file": "FIN_ST1567_HeldOutGrid.json",
+    "packet_sha256": "32681adb49e409310862fd6d00b6267095cb4a1ddcaf1a1c5ea9d681422b3fc4",
+    "point": [
+      1.1,
+      16.0
+    ],
+    "program": "ST1567",
+    "rows": 32481,
+    "status": "heldout_finer_grid_is_consistent_with_value_bracket"
+  },
+  "ST1568": {
+    "boundary": "Not certified optimal integer design.",
+    "object": "IntegerDesign",
+    "packet_file": "FIN_ST1568_IntegerDesign.json",
+    "packet_sha256": "f5da40a75708ca604bc321f3319fb6869edff2f8221da377f91a3e8e2b67639e",
+    "program": "ST1568",
+    "shots_per_100": [
+      32,
+      0,
+      0,
+      68
+    ],
+    "status": "constructed_integer_near_minimax_candidate"
+  },
+  "ST1569": {
+    "boundary": "Endpoint face may be fragile.",
+    "certified_default": "four times",
+    "object": "FourTimeDefaultBoundary",
+    "packet_file": "FIN_ST1569_FourTimeDefaultBoundary.json",
+    "packet_sha256": "5a8cf3f0850411aec0b9361ae5625f8f69508448f8e362033f6aa08fbe611db2",
+    "program": "ST1569",
+    "status": "continuous_KL_bracket_does_not_replace_four_time_RSS_or_model_library_robustness"
+  },
+  "ST1570": {
+    "boundary": "Status.",
+    "object": "RoundTwo_Verdict",
+    "packet_file": "FIN_ST1570_RoundTwo_Verdict.json",
+    "packet_sha256": "8fa75cc5f0198972497b2881619c88c64ca05d78e34e58a219564b3f96fb7311",
+    "program": "ST1570",
+    "relative_bracket_width": 0.07411777372389572,
+    "status": "continuous_value_problem_closed_to_narrow_bracket_exact_optimizer_open"
+  },
+  "ST1571": {
+    "boundary": "Construct an exact continuous-prior e-process theorem and executable positive quadrature mixture.",
+    "next": [
+      "Fubini martingale theorem",
+      "continuous prior",
+      "positive quadrature",
+      "off-grid fixture",
+      "one-sided boundary"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1571_RoundTwo_Recommendation.json",
+    "packet_sha256": "4f4fc2be56d9862333caac73dbde4ddc8555084551a0a077216a31821032b8aa",
+    "program": "ST1571",
+    "status": "recommended_ST1572_ST1586"
+  }
+}

@@ -1,0 +1,447 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem,xcolor,geometry,fancyhdr,hyperref}
+\geometry{margin=22mm}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue,citecolor=blue!55!black,
+ pdftitle={FIN ST1182--ST1271: Strategic Three-Package Architecture and Operational Completion},
+ pdfauthor={Krzysztof Żuchowski}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{FIN ST1182--ST1271}\fancyhead[R]{Release 10.97}\fancyfoot[C]{\thepage}\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\status}[1]{\textsf{[#1]}}
+
+\begin{document}
+\begin{titlepage}\centering\vspace*{15mm}
+{\Huge\bfseries FIN ST1182--ST1271\par}\vspace{5mm}
+{\LARGE Strategic Three-Package Architecture\par}\vspace{2mm}
+{\LARGE and Operational Completion\par}\vspace{13mm}
+{\Large Krzysztof \.Zuchowski\par}
+{\normalsize Independent Researcher --- Fractal Information Theory Project\par}
+{\normalsize ORCID: 0009-0002-0909-3613\par}\vspace{10mm}
+{\large Six research rounds --- 90 programmes\par}
+{\large Release 10.97 --- 30 August 2026\par}
+\vfill
+\begin{minipage}{.87\textwidth}\small
+This report updates the earlier FIN strategic verdict.  It preserves the strict
+informational core $W0$, the conditional conversion package $CA$, and the
+conditional sector package $SA$, but proves that they do not yet define a
+unique operational theory.  A third independent package $OA$ is necessary.
+No conditional object is promoted to the strict core.
+\end{minipage}\vfill
+{\small English mathematical research report.}
+\end{titlepage}
+
+\begin{abstract}
+The earlier strategic verdict proposed a two-package architecture: a strict
+dimensionless informational core $W0$, conversion axioms $CA$ for units, and
+sector axioms $SA$ for origin/polarity selection, producing conditional
+effective physics $W3$.  Release 10.96 subsequently proved that the same strict
+operator $A$ admits exact classical and quantum state models with incompatible
+dynamics.  ST1182--ST1271 test whether $CA+SA$ removes that ambiguity.
+
+First, the strict-source intake is closed without replay: no new scale-charged
+$S_+$ or translation-breaking source has appeared.  On the finite carrier the
+sampled strict kernel and $A$ are algebraically interdefinable.  The functional
+calculus algebra $C^*(A)$ is commutative and seven-dimensional.  Adding the
+vertex diagonal algebra generates the full $M_{12}$ because every off-diagonal
+entry of $A$ is nonzero, but choosing that diagonal algebra as physical input
+is itself extra structure and still permits both classical and quantum uses.
+
+The conversion package is reconstructed as the positive triple
+$(\ell_*,\tau_*,\hbar_*)$.  It is the unique rank-three subset spanning length,
+time and action, and yields
+\[
+c_*=\ell_*/\tau_*,\quad E_*=\hbar_*/\tau_*,\quad
+p_*=\hbar_*/\ell_*,\quad m_*=\hbar_*\tau_*/\ell_*^2.
+\]
+Its numerical values remain a free $(\mathbb R_+)^3$ torsor.  It does not
+select a sector, state category, temperature scale or instrument.
+
+The sector package is reconstructed on the frame torsor
+$\mathbb Z_{12}\times\{\pm1\}$.  The dihedral action is free and transitive.
+Origin plus polarity select one frame, and a coupling axiom makes that frame
+dynamically relevant, but all are explicitly non-strict.  The unique invariant
+probability measure is uniform and cannot select a frame.
+
+The main theorem falsifies the sufficiency of the earlier two-package
+architecture.  Three pairwise inequivalent models share exactly the same
+$W0$, $CA$ and $SA$.  For the same selected-vertex preparation at dimensionless
+time one, classical heat predicts return probability $0.2628294053$, whereas
+unitary evolution predicts $0.5843533247$.  Thus units and sector choice do not
+choose state or dynamics.
+
+An independent operational/state package $OA$ is therefore unavoidable.  Its
+minimal interface contains StateCategory, PhysicalChannel, ClockMap,
+Preparation, Instrument and RecordRule.  Removing any one leaves a concrete
+ambiguity or destroys falsifiability.  The strategic architecture must be
+upgraded to
+\[
+  W0+(CA\times SA\times OA)\longrightarrow W3_{\rm conditional}.
+\]
+This is a conditional model-building framework, not strict ToE closure.
+\end{abstract}
+
+\tableofcontents\newpage
+
+\section{Strategic input and nonreplay rule}
+
+The current repository verdict separates three previously known cuts:
+dimension, sector selection and the information-to-physics bridge.  It also
+closes repeated searches in invariant/weight-zero receiver classes.  Release
+10.96 adds a fourth fact: the operator datum does not select classical versus
+quantum state semantics.
+
+Accordingly, this cycle did not repeat generic legacy-to-strict fitting,
+invariant selector searches, dimensionless $S_+$ monomials, phase locking or
+boundary fitting to $c$.  No new hard source formula entered the repository.
+The only admissible local continuation was to formalize and falsify the
+explicit conditional architecture.
+
+\section{Round I: ST1182--ST1196 --- strict core $W0$ and algebra}
+
+The strict informational ledger is
+\[
+ W0=\{K_{\rm strict},A,\alpha_{\rm geo},A_\phi,
+      \text{finite spectral/graph theorems and no-go certificates}\},
+\]
+where
+\[
+ \alpha_{\rm geo}=4\ln2,qquad
+ A_\phi=\frac{2\pi}{\alpha_{\rm geo}},qquad
+ \alpha_{\rm geo}A_\phi=2\pi.
+\]
+These identities remain dimensionless and do not define $\hbar$.
+
+On the finite carrier,
+\[
+ W=sI-A,qquad A=sI-W,qquad s=1.660307278766099.
+\]
+Therefore the sampled strict kernel matrix contains no additional state-
+category selector beyond $(A,s)$.  This statement does not collapse the full
+continuous kernel function to its twelve-point sample.
+
+The spectrum has seven distinct values, so
+\[
+ C^*(A)\cong\mathbb C^7
+\]
+is commutative.  It cannot by itself be the full noncommutative observable
+algebra $M_{12}$.
+
+There is nevertheless a useful algebraic result.  Let
+$\mathcal D=\operatorname{span}\{E_{ii}\}$ be the declared vertex diagonal
+algebra.  Since $A_{ij}\ne0$ for every $i\ne j$,
+\[
+ E_{ii}AE_{jj}=A_{ij}E_{ij}.
+\]
+Hence $\mathcal D$ and $A$ generate every matrix unit and therefore $M_{12}$.
+This proves algebraic reachability, not physical quantum semantics: the same
+vertex data also defines the classical Markov model.
+
+\section{Round II: ST1197--ST1211 --- conversion package $CA$}
+
+Define the explicitly conditional positive scales
+\[
+ CA=(\ell_*,\tau_*,\hbar_*)\in(\mathbb R_+)^3
+\]
+with dimensions length, time and action.  The exhaustive audit of all eight
+subsets gives rank three only for the full triple; every proper subset has rank
+at most two.
+
+The package consistently dimensionalizes both main channels:
+\[
+ H_{\rm phys}=\frac{\hbar_*}{\tau_*}A,qquad
+ U(t_{\rm phys})=exp\!\left[-i\frac{t_{\rm phys}}{\tau_*}A\right],
+\]
+\[
+ L_{\rm heat}=-\frac1{\tau_*}A,qquad
+ P(t_{\rm phys})=exp\!\left[-\frac{t_{\rm phys}}{\tau_*}A\right].
+\]
+It also gives
+\[
+ c_*=\frac{\ell_*}{\tau_*},\quad
+ E_*=\frac{\hbar_*}{\tau_*},\quad
+ p_*=\frac{\hbar_*}{\ell_*},\quad
+ m_*=\frac{\hbar_*\tau_*}{\ell_*^2},\quad E_*=m_*c_*^2.
+\]
+These are dimensional identities, not derivations of observed constants,
+Lorentz invariance or particle mass.
+
+The free action of $(\mathbb R_+)^3$ on the scale triple leaves all
+dimensionless $W0$ relations invariant.  Thus $CA$ installs units without
+choosing values.  It is selector-blind and state-category-blind.  Moreover,
+$k_B$ or an equivalent temperature/entropy conversion and a bath/process law
+remain necessary before Shannon entropy becomes thermodynamic entropy.
+
+\section{Round III: ST1212--ST1226 --- sector package $SA$}
+
+Let
+\[
+ X=\mathbb Z_{12}\times\{\pm1\}
+\]
+encode an origin and orientation/polarity.  The dihedral group $D_{12}$ of
+order $24$ acts by rotations
+$(r,\lambda)\mapsto(r+k,\lambda)$ and reflections
+$(r,\lambda)\mapsto(k-r,-\lambda)$.  Direct enumeration proves that the action
+on $X$ is free and transitive.  Thus $X$ is a $D_{12}$ torsor: symmetry alone
+cannot choose a point.
+
+The minimal conditional sector package is
+\[
+ SA=(A_{\rm origin},A_\lambda,A_{\rm coupling}).
+\]
+Origin alone leaves two polarities; polarity alone leaves twelve origins;
+together they select one labelled frame.  Without a coupling axiom the label
+has no dynamical effect.
+
+The finite selector potential
+\[
+ V_{\rm ax}(r,\lambda)=\mu\left[
+ w_o d_{\mathbb Z_{12}}(r,r_0)^2+
+ w_\lambda\frac{1-\lambda\lambda_0}{2}\right]
+\]
+has a unique minimum at $(r_0,\lambda_0)$ for every audited positive
+$w_o,w_\lambda\in\{1,2,3\}$.  Its weights and scale are assumed.  Conversely,
+the unique invariant probability measure on the transitive torsor is uniform
+with mass $1/24$ per branch and is selector-blind.
+
+$CA$ and $SA$ solve independent group actions:
+\[
+ (\mathbb R_+)^3\times X.
+\]
+Neither supplies the other, and neither selects classical versus quantum
+states.
+
+\section{Round IV: ST1227--ST1241 --- two-package insufficiency}
+
+Fix one identical data set
+\[
+ W0,qquad CA=(\ell_*,\tau_*,\hbar_*),qquad
+ SA=(r_0,\lambda_0,\text{coupling}).
+\]
+It admits at least the following normalized models:
+\begin{enumerate}
+\item classical probabilities on $\Delta_{11}$ with $e^{-tA}$;
+\item pure rays in $\mathbb{CP}^{11}$ with $e^{-itA}$;
+\item density states in $\mathcal D_{12}$ with unitary conjugation.
+\end{enumerate}
+Their dimensions $11,22,143$ and topologies remain inequivalent.  $CA$ only
+replaces $t$ by $t_{\rm phys}/\tau_*$.  $SA$ can choose the same preparation
+label $r_0$ in every model.
+
+For $r_0=0$ and dimensionless time $t=1$, the return experiment gives
+\[
+ p_{\rm C}(0|0;1)=(e^{-A})_{00}=0.2628294052832485,
+\]
+\[
+ p_{\rm Q}(0|0;1)=|(e^{-iA})_{00}|^2=0.5843533247056469.
+\]
+The difference is $0.3215239194223984$.  Hence the same $W0+CA+SA$ supplies
+distinct testable predictions after a state/channel interpretation is chosen.
+
+\begin{theorem}[two-package insufficiency]
+$W0+CA+SA$ does not determine a unique operational theory.  Units and a
+selected sector frame do not select the state category, physical channel,
+clock implementation, preparation, instrument or record.
+\end{theorem}
+
+\begin{proof}
+The three models above share identical $W0$, $CA$ and $SA$, but their state
+spaces are pairwise inequivalent and the displayed common preparation/readout
+experiment has unequal predictions.  Therefore those data cannot determine a
+unique operational model.
+\end{proof}
+
+The documented adaptive form
+\[
+ \dot K=-\Pi\bigl(V'(K)-C(K)\bigr)
+\]
+does not repair the theorem.  It is typed on an operator manifold and requires
+$\Pi,V,C$.  The counterflow $\dot A=-\gamma A$ preserves both the Markov-
+Laplacian and self-adjoint quantum-generator interpretations.  An adaptive law
+selects a category only if it uniquely preserves a category-specific cone or
+algebra and supplies an operational readout; no such strict theorem exists.
+
+\section{Round V: ST1242--ST1256 --- operational package $OA$}
+
+The minimal interface found in this cycle is
+\[
+ OA=(\text{StateCategory},\text{PhysicalChannel},\text{ClockMap},
+     \text{Preparation},\text{Instrument},\text{RecordRule}).
+\]
+
+A classical witness chooses $\Delta_{11}$, heat evolution, the clock map
+$t=t_{\rm phys}/\tau_*$, preparation $\delta_{r_0}$, vertex readout and
+timestamped counts.  A quantum witness chooses $\mathcal D_{12}$, unitary
+conjugation, the same dimensionless clock conversion, preparation
+$|r_0\rangle\langle r_0|$, a declared vertex PVM instrument and timestamped
+outcomes.  They reproduce the distinct return probabilities above.
+
+Each field is necessary in the declared operational class:
+\begin{longtable}{@{}p{.25\textwidth}p{.64\textwidth}@{}}
+\toprule
+Removed field & Remaining obstruction \\
+\midrule\endhead
+StateCategory & simplex, ray and density domains remain \\
+PhysicalChannel & heat, unitary and a continuum of open channels remain \\
+ClockMap & a unit exists, but no start/readout/calibration protocol \\
+Preparation & a continuum of inputs gives different predictions \\
+Instrument & one POVM admits different state-update maps and sequential statistics \\
+RecordRule & no frozen event schema or falsifiable data product \\
+\bottomrule
+\end{longtable}
+
+Composition/environment is required for open dynamics and unbounded histories,
+but it is an extension rather than a minimal field for one finite experiment.
+No apparatus, raw event record or independent custody exists in the repository;
+the witnesses are executable specifications only.
+
+\section{Round VI: ST1257--ST1271 --- three-package theorem}
+
+\begin{theorem}[strategic three-package architecture]
+Within the declared FIN conditional construction, the three obligation classes
+conversion, sector selection and operational meaning are independent.  No two
+of $CA$, $SA$ and $OA$ cover all three.  A conditionally dimensionful,
+sector-selected and testable theory therefore requires
+\[
+ \boxed{W0+(CA\times SA\times OA)\longrightarrow W3_{\rm conditional}.}
+\]
+\end{theorem}
+
+\begin{proof}
+Removing $CA$ leaves every prediction dimensionless, and every proper subset
+of its three scale vectors has rank below three.  Removing $SA$ leaves the
+free transitive 24-frame torsor.  Removing $OA$ leaves the exact classical and
+quantum countermodels with unequal return predictions and no unique record
+semantics.  The explicit product
+$(\mathbb R_+)^3\times X\times\{OA\text{ choices}\}$ permits each factor to
+vary while the other two are fixed, proving independence.
+\end{proof}
+
+The minimality is by obligation class, not by scalar count.  A future theorem
+may derive several fields from one deeper object, but no such object is present.
+
+\section{Consequences for annihilation and dual dynamics}
+
+The one-nadsoliton ontology still distinguishes literal nonexistence from
+internal pattern loss.  The package analysis now assigns responsibilities:
+\begin{longtable}{@{}p{.16\textwidth}p{.69\textwidth}@{}}
+\toprule
+Layer & Contribution to the annihilation question \\
+\midrule\endhead
+$W0$ & provides candidate conserved mass, norm or trace in distinct channels \\
+$CA$ & gives those laws dimensional time and units, but adds no persistence \\
+$SA$ & labels an oriented branch, but does not define a survival observable \\
+$OA$ & selects the state/channel and specifies what is prepared, measured and recorded \\
+ontology & excludes literal nonexistence only conditionally through complete state-space closure \\
+\bottomrule
+\end{longtable}
+
+Thus a unique operational statement about ``what blocks annihilation'' requires
+$OA$.  In a classical $OA$ it is mass conservation; in a quantum $OA$ it is
+norm/trace conservation.  Literal annihilation of the entire being still
+cannot leave an internal post-event record.
+
+The dual dynamics remains a valuable mathematical property of $W0$:
+\[
+ e^{-itA},\qquad e^{-tA}.
+\]
+It is not a physical choice until $OA$ selects one channel or supplies a
+derived relation between them.
+
+\section{Updated strategic verdict}
+
+The previous two-package proposal was not wrong; it was incomplete.  $CA$ and
+$SA$ remain the correct conditional answers to independent unit and sector
+cuts.  Release 10.96 shows that neither addresses the state/operation cut.
+
+\begin{longtable}{@{}p{.13\textwidth}p{.26\textwidth}p{.22\textwidth}p{.29\textwidth}@{}}
+\toprule
+Layer & Role & Status & Principal missing source \\
+\midrule\endhead
+$W0$ & informational mathematics & strict in declared scope & physical interpretation \\
+$CA$ & length/time/action conversion & conditional & scale-charged strict values \\
+$SA$ & origin/polarity/coupling & conditional & non-premise selector source \\
+$OA$ & state/channel/measurement/record & conditional & unique strict operational source or evidence \\
+$W3$ & effective physical predictions & conditioned on all packages & empirical validation and full dynamics \\
+\bottomrule
+\end{longtable}
+
+No conditional closure is a strict ToE result.
+
+\section{Recommended next programmes}
+
+Only nonreplay routes remain admissible:
+\begin{enumerate}
+\item publish $W0$ as standalone informational mathematics with its no-go map;
+\item formalize typed interfaces and dependency checks for $CA$, $SA$ and $OA$;
+\item freeze one explicitly conditional $OA$ candidate rather than mixing channels;
+\item produce a complete classical-versus-quantum prediction table for the
+      frozen candidate;
+\item prove global well-posedness for one specified nonlinear completion;
+\item construct a refinement-limit internal environment, not a finite all-time
+      heat dilation;
+\item seek a genuinely new state-category source outside $C^*(A)$;
+\item test a new $S_+$ only if a scale-charged formula is supplied;
+\item test a new origin source only if it breaks translation by formula;
+\item formalize package independence in a proof assistant;
+\item design independent-record laboratory transfer only after $OA$ is frozen;
+\item audit legacy physical roles only after the legacy-to-strict bridge is
+      completed.
+\end{enumerate}
+
+Do not repeat functions of $A$ as ontology selectors, weight-zero unit
+monomials, invariant frame measures, $CA$ as a selector, $SA$ as a unit source,
+adaptive terminology without a typed law, or receiver fits as sources.
+
+\section{Final verdict}
+
+\begin{quote}
+\textbf{The rigorous conditional FIN architecture has three, not two,
+independent missing bridges.}  Conversion axioms can supply units.  Sector
+axioms can choose an oriented branch.  Neither determines what counts as a
+state, which dynamics is physical, how time is read, how the state is prepared,
+what instrument acts, or what record falsifies the prediction.  The operational
+package $OA$ is mathematically unavoidable after the $A$-only nonuniqueness
+theorem.  Current strict FIN remains $W0$; $CA$, $SA$, $OA$ and every resulting
+$W3$ statement are conditional.
+\end{quote}
+
+This is an important refinement of the strategic verdict, not physical
+confirmation of FIN.
+
+\appendix
+\section{Programme ledger}
+\begin{longtable}{@{}p{.18\textwidth}p{.34\textwidth}p{.38\textwidth}@{}}
+\toprule
+Range & Main object & Verdict \\
+\midrule\endhead
+ST1182--ST1196 & $W0$ and operator algebras & no new strict source; $\mathcal D+A$ generates $M_{12}$ conditionally \\
+ST1197--ST1211 & conversion package $CA$ & rank-three dimensional closure, free scale torsor \\
+ST1212--ST1226 & sector package $SA$ & exact frame torsor and conditional selection \\
+ST1227--ST1241 & two-package falsification & same $CA/SA$, inequivalent predictions \\
+ST1242--ST1256 & operational package $OA$ & six necessary interface fields \\
+ST1257--ST1271 & strategic theorem & three independent packages required \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducibility}
+The authoritative result sets run from
+\path{FIN_ST1182_ST1196_Results.json} through
+\path{FIN_ST1257_ST1271_Results.json}.  Each contains fifteen programmes and
+SHA-256 references to individual packets.  The combined test
+\path{test_fin_st1182_st1271.py} checks all ninety hashes, the algebra
+dimensions, $CA/SA$ minimality, the two-package countermodel, $OA$ status and
+the final theorem scope.
+
+\section{Nonclaims}
+No new strict unit, selector, state category, adaptive source law, physical
+clock, apparatus, raw event, independent audit, legacy bridge/role transfer,
+Lorentz theory, Standard Model, gravity, $L_{\rm total}$ or Theory of Everything
+is established.  All future FIN PDFs remain English.
+
+\begin{thebibliography}{9}
+\bibitem{norris} J. R. Norris, \emph{Markov Chains}, Cambridge University Press.
+\bibitem{bratteli} O. Bratteli and D. W. Robinson, \emph{Operator Algebras and Quantum Statistical Mechanics}, Springer.
+\bibitem{nielsen} M. A. Nielsen and I. L. Chuang, \emph{Quantum Computation and Quantum Information}, Cambridge University Press.
+\end{thebibliography}
+\end{document}

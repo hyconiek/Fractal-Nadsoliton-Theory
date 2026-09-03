@@ -1,0 +1,174 @@
+{
+  "ST2442": {
+    "boundary": "Current exported nonlinear families.",
+    "families": [
+      "focusing/saturating DNLS",
+      "negative-information Landau",
+      "Hebb/Oja/BCM/STDP",
+      "operator potential",
+      "ternary Gibbs candidate"
+    ],
+    "object": "NonlinearInventory",
+    "packet_file": "FIN_ST2442_NonlinearInventory.json",
+    "packet_sha256": "3a1dd479872d05618b08e460021923fbd58a76289ee67635d4335f9518b2e6dd",
+    "program": "ST2442",
+    "status": "Classified"
+  },
+  "ST2443": {
+    "boundary": "P507/P517 boundary.",
+    "explicit_three_site_statistic": false,
+    "object": "DNLSBoundary",
+    "packet_file": "FIN_ST2443_DNLSBoundary.json",
+    "packet_sha256": "bf4b684f466e5681dc483285c027b630b424ac96e02d81415845c7c089e9ac1f",
+    "program": "ST2443",
+    "sign_coefficient_strict": false,
+    "status": "Conditional"
+  },
+  "ST2444": {
+    "boundary": "Active gain g is supplied.",
+    "first_angular_term_order": 12,
+    "object": "NegativeInformationBoundary",
+    "packet_file": "FIN_ST2444_NegativeInformationBoundary.json",
+    "packet_sha256": "1f07d83904db7a1321a49e39c1dfc8a38f83c4965be1f9b9ef6c85a705ea3ffb",
+    "program": "ST2444",
+    "status": "Conditional",
+    "strict_active_gain": false
+  },
+  "ST2445": {
+    "boundary": "Covariance rules are second-order.",
+    "connected_three_body_source": false,
+    "object": "HebbBoundary",
+    "packet_file": "FIN_ST2445_HebbBoundary.json",
+    "packet_sha256": "812e1945fdc967bac7827122b05701b0f06b397e85ca1d9060975a7d0e15fd8c",
+    "program": "ST2445",
+    "status": "No-go"
+  },
+  "ST2446": {
+    "boundary": "Delay can source direction but is external and generally non-Hermitian.",
+    "object": "STDPBoundary",
+    "packet_file": "FIN_ST2446_STDPBoundary.json",
+    "packet_sha256": "9cd8a2033ccebfda485ab7a412ecc7df6c1f77a336043c735abb66134e2fa12f",
+    "program": "ST2446",
+    "status": "Conditional",
+    "strict_delay": false
+  },
+  "ST2447": {
+    "boundary": "V is a family until sourced.",
+    "object": "AdaptivePotentialBoundary",
+    "packet_file": "FIN_ST2447_AdaptivePotentialBoundary.json",
+    "packet_sha256": "34c401aeb0510b088956da004d2cb5b4d8cc883a9babd63fd8d36644b607b513",
+    "program": "ST2447",
+    "status": "Underdetermined",
+    "unique_third_jet": false
+  },
+  "ST2448": {
+    "D12_orbits": 12,
+    "boundary": "Loop tensor from W.",
+    "faces": 220,
+    "object": "StrictLoopTensor",
+    "packet_file": "FIN_ST2448_StrictLoopTensor.json",
+    "packet_sha256": "77f992700558062f5064b098debcb9778bea12f4dc892d126b9fb969db6aed24",
+    "positive": 220,
+    "program": "ST2448",
+    "status": "Proven strict shape"
+  },
+  "ST2449": {
+    "H": "-theta sum_f tau_f product_(i in f) x_i",
+    "boundary": "Minimal all-triangle non-Gaussian state law.",
+    "free": [
+      "theta"
+    ],
+    "object": "TernaryHamiltonian",
+    "packet_file": "FIN_ST2449_TernaryHamiltonian.json",
+    "packet_sha256": "6000f371e56fd48d4a82af01666f76349d36670098eef0774139fab377a51f62",
+    "program": "ST2449",
+    "status": "Constructed conditional"
+  },
+  "ST2450": {
+    "boundary": "All 4096 configurations.",
+    "object": "FinitePartition",
+    "packet_file": "FIN_ST2450_FinitePartition.json",
+    "packet_sha256": "95cd3bf3c450e9e5d6cfcaee3f074988c128fe3fdf6b450a4b4818068eac8d0a",
+    "program": "ST2450",
+    "states": 4096,
+    "status": "Proven exact finite",
+    "theta01": {
+      "S_mean": 0.0023374354844984354,
+      "S_var": 0.02337491157633466,
+      "linear_response_residual": 1.1986732090655313e-06,
+      "logZ": 8.317883037797733,
+      "mean_max_abs": 1.2238929239603152e-07,
+      "pair_max_abs": 2.0407164681703668e-05,
+      "theta": 0.1,
+      "tri_max": 0.004241998285442627,
+      "tri_min": 9.280060630169687e-06
+    }
+  },
+  "ST2451": {
+    "S_mean_odd": true,
+    "Z_even": true,
+    "boundary": "Global bit flip sends S to -S and theta to -theta.",
+    "object": "GlobalFlipDuality",
+    "packet_file": "FIN_ST2451_GlobalFlipDuality.json",
+    "packet_sha256": "11ae3a82a680f3dff8eb690b0903a74f80bc7a0ea687ade8f736e5da35f7b5a8",
+    "program": "ST2451",
+    "selects_sign": false,
+    "status": "Proven"
+  },
+  "ST2452": {
+    "boundary": "At theta=0, d<E[Y_f]>/dtheta=tau_f by cube-character orthogonality.",
+    "object": "LinearResponse",
+    "packet_file": "FIN_ST2452_LinearResponse.json",
+    "packet_sha256": "b493770c955a1097452ea8f2da99d49f5d071af0344297634266eefc67977b91",
+    "program": "ST2452",
+    "small_theta_residual": 1.1986506427176524e-10,
+    "status": "Proven"
+  },
+  "ST2453": {
+    "boundary": "Nonzero theta produces nonzero triangle moments.",
+    "object": "NonGaussianWitness",
+    "packet_file": "FIN_ST2453_NonGaussianWitness.json",
+    "packet_sha256": "a096a95a753087ae60c1bf2e658c2f0f034183bd9da091b48af7ef4275fddbd4",
+    "program": "ST2453",
+    "status": "Proven witness",
+    "theta": 0.1,
+    "tri_max": 0.004241998285442627,
+    "tri_min": 9.280060630169687e-06
+  },
+  "ST2454": {
+    "boundary": "Overlapping triangles induce pair correlations beyond first order.",
+    "object": "PairLeakage",
+    "one_point_max_abs": 1.2238929239603152e-07,
+    "packet_file": "FIN_ST2454_PairLeakage.json",
+    "packet_sha256": "472dad6f5a60e1726067e0485a82b184f151e7d2e7b07c7e6de0992fd846be06",
+    "pair_max_abs": 2.0407164681703668e-05,
+    "program": "ST2454",
+    "status": "Computed boundary",
+    "theta": 0.1
+  },
+  "ST2455": {
+    "boundary": "Strict W fixes tensor shape, not theta sign/magnitude or state preparation.",
+    "object": "ThetaSourceGate",
+    "packet_file": "FIN_ST2455_ThetaSourceGate.json",
+    "packet_sha256": "512e1e9ccfd5775c24924a2573429aac3956c6763680d4c0500a94578a3c9199",
+    "program": "ST2455",
+    "status": "Gate fail",
+    "strict_nonGaussian_law": false,
+    "strict_theta": false
+  },
+  "ST2456": {
+    "boundary": "Test symmetry/polarity and whether theta can arise from existing scalar strict data.",
+    "next": [
+      "D12 covariance",
+      "reflection",
+      "global flip",
+      "entropy/Fisher",
+      "source no-go"
+    ],
+    "object": "RoundOneRecommendation",
+    "packet_file": "FIN_ST2456_RoundOneRecommendation.json",
+    "packet_sha256": "973713e564faf53c6b13df440ecc97c08be3785753e3b66d0fc4e9d2c70bd09a",
+    "program": "ST2456",
+    "status": "Recommendation"
+  }
+}

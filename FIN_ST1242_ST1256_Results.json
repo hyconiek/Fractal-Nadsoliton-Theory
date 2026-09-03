@@ -1,0 +1,190 @@
+{
+  "ST1242": {
+    "OA_fields": [
+      "StateCategory",
+      "PhysicalChannel",
+      "ClockMap",
+      "Preparation",
+      "Instrument",
+      "RecordRule"
+    ],
+    "boundary": "Package is explicit and non-strict.",
+    "object": "OA_Definition",
+    "packet_file": "FIN_ST1242_OA_Definition.json",
+    "packet_sha256": "f1faa560f845f8d1bc7e1103e9a4b7ad1778b3103b4614add2becfaaf8d34087",
+    "program": "ST1242",
+    "status": "constructed_minimal_OA_interface"
+  },
+  "ST1243": {
+    "ClockMap": "t=t_phys/tau_*",
+    "Instrument": "vertex readout",
+    "PhysicalChannel": "P_t=exp(-tA)",
+    "Preparation": "delta_r0",
+    "RecordRule": "timestamped outcome counts",
+    "StateCategory": "Delta11",
+    "boundary": "One complete finite operational candidate.",
+    "object": "ClassicalOA_Witness",
+    "packet_file": "FIN_ST1243_ClassicalOA_Witness.json",
+    "packet_sha256": "21521a16cde17e45e261b263377d091755e226360517bf9cc0e64d73b5806f57",
+    "program": "ST1243",
+    "status": "constructed_classical_OA_witness"
+  },
+  "ST1244": {
+    "ClockMap": "t=t_phys/tau_*",
+    "Instrument": "vertex PVM with declared update",
+    "PhysicalChannel": "rho->U_t rho U_t*",
+    "Preparation": "|r0><r0|",
+    "RecordRule": "timestamped outcomes",
+    "StateCategory": "D12",
+    "boundary": "One complete finite operational candidate.",
+    "object": "QuantumOA_Witness",
+    "packet_file": "FIN_ST1244_QuantumOA_Witness.json",
+    "packet_sha256": "fe01e7bda3c0d8b0baf9c3c73026a8f873f8884bd82515b8e340586f38ed3c3a",
+    "program": "ST1244",
+    "status": "constructed_quantum_OA_witness"
+  },
+  "ST1245": {
+    "boundary": "No laboratory data supplied.",
+    "classical": 0.2628294052832485,
+    "difference": 0.32152391942239844,
+    "object": "ReturnProbability_Discriminator",
+    "packet_file": "FIN_ST1245_ReturnProbability_Discriminator.json",
+    "packet_sha256": "d466c5cd2894bd92d4caf398889c3e024ea76b0a78becd1af2bf1fe341d95ad7",
+    "program": "ST1245",
+    "quantum": 0.5843533247056469,
+    "status": "proven_OA_candidates_are_operationally_distinguishable_in_model",
+    "test": "prepare r0, evolve dimensionless time 1, measure r0 return"
+  },
+  "ST1246": {
+    "boundary": "Without it simplex/ray/density domains remain.",
+    "models_remaining_without_field": 3,
+    "object": "StateCategory_Necessity",
+    "packet_file": "FIN_ST1246_StateCategory_Necessity.json",
+    "packet_sha256": "01864c18a34bac30ddff3e327abe9c8ac1b3871030b037e03116134cc6267abb",
+    "program": "ST1246",
+    "status": "proven_StateCategory_field_is_necessary"
+  },
+  "ST1247": {
+    "boundary": "A supports incompatible heat, unitary and dephasing channels.",
+    "channels_remaining_without_field": "at least continuum",
+    "object": "Channel_Necessity",
+    "packet_file": "FIN_ST1247_Channel_Necessity.json",
+    "packet_sha256": "8a2a85c09cf17de151a30261aba4f02dcdea2f1bf56a75bb17850411008b0907",
+    "program": "ST1247",
+    "same_state_carrier_can_have_multiple_channels": true,
+    "status": "proven_PhysicalChannel_field_is_necessary"
+  },
+  "ST1248": {
+    "boundary": "tau supplies a unit but not a readout protocol.",
+    "missing_without_field": [
+      "start event",
+      "elapsed-time observable",
+      "calibration record"
+    ],
+    "object": "ClockMap_Necessity",
+    "packet_file": "FIN_ST1248_ClockMap_Necessity.json",
+    "packet_sha256": "639b19a7499ff3993f7fe1dad63c59d5461272ed77487f20c3267a37df369ef2",
+    "program": "ST1248",
+    "status": "proven_ClockMap_field_is_necessary_for_operational_time"
+  },
+  "ST1249": {
+    "boundary": "A channel without an input ensemble has no unique experimental prediction.",
+    "object": "Preparation_Necessity",
+    "packet_file": "FIN_ST1249_Preparation_Necessity.json",
+    "packet_sha256": "e2a614d2aeb49cb1ee5c495be3f8f0e7e2cf83a88b931453fff1833174b62ea9",
+    "possible_initial_states": "continuum",
+    "program": "ST1249",
+    "selected_by_A": false,
+    "status": "proven_Preparation_field_is_necessary"
+  },
+  "ST1250": {
+    "boundary": "Same POVM admits different postmeasurement maps.",
+    "different_sequential_statistics": true,
+    "example": [
+      "Luders",
+      "measure-and-prepare"
+    ],
+    "object": "Instrument_Necessity",
+    "packet_file": "FIN_ST1250_Instrument_Necessity.json",
+    "packet_sha256": "859c82b6099d7337201b185246ca44fdc3531ba3ad8e788163ab59583974d690",
+    "program": "ST1250",
+    "same_probabilities_single_shot": true,
+    "status": "proven_Instrument_field_is_necessary"
+  },
+  "ST1251": {
+    "boundary": "Outcomes not registered under a frozen schema cannot test the model.",
+    "object": "Record_Necessity",
+    "packet_file": "FIN_ST1251_Record_Necessity.json",
+    "packet_sha256": "d64946c0d8793240defdaf3ca8003e6d71c7f560239f3c74cc0642c73dcf3eb9",
+    "program": "ST1251",
+    "requires": [
+      "event fields",
+      "run/config id",
+      "timestamps",
+      "immutable analysis rule"
+    ],
+    "status": "proven_RecordRule_field_is_necessary_for_falsification"
+  },
+  "ST1252": {
+    "boundary": "Boundary of minimal OA.",
+    "long_history_or_open_system_requires_extension": true,
+    "object": "CompositionEnvironment_Boundary",
+    "packet_file": "FIN_ST1252_CompositionEnvironment_Boundary.json",
+    "packet_sha256": "0cf1105531480dc81b031d3d984167171caaffc8565748c08677bba6bb15a265",
+    "program": "ST1252",
+    "single_test_OA_complete": true,
+    "status": "proven_composition_environment_is_needed_beyond_single_use_but_not_minimal_for_one_finite_test"
+  },
+  "ST1253": {
+    "boundary": "Predictions remain conditional.",
+    "object": "OperationalDiscriminant_Library",
+    "packet_file": "FIN_ST1253_OperationalDiscriminant_Library.json",
+    "packet_sha256": "b5c67800f5badbec8d8101b9eed371654763fcbca1bda16bad77c1588617c91d",
+    "program": "ST1253",
+    "status": "constructed_local_discriminant_library",
+    "tests": [
+      "return curve",
+      "reversibility/echo",
+      "coherence interference",
+      "heat entropy monotonicity",
+      "sequential instrument disturbance"
+    ]
+  },
+  "ST1254": {
+    "apparatus": false,
+    "boundary": "OA witnesses are executable specifications only.",
+    "independent_holdout": false,
+    "object": "Evidence_Status",
+    "packet_file": "FIN_ST1254_Evidence_Status.json",
+    "packet_sha256": "6a90480f4bb81e35991870960fd83d250899ffe39be4c8bfa9d81be5cdb76b58",
+    "program": "ST1254",
+    "raw_events": false,
+    "status": "blocked_no_external_evidence_or_independent_custody"
+  },
+  "ST1255": {
+    "boundary": "Release 10.96 no-go prevents silent selection.",
+    "conditional_package": true,
+    "object": "OA_StrictStatus",
+    "packet_file": "FIN_ST1255_OA_StrictStatus.json",
+    "packet_sha256": "c980379f99df977ca411f63e30590e2f9cf5b731f3afff004baa10fb513ee655",
+    "physical_category_selected": false,
+    "program": "ST1255",
+    "status": "OA_is_unavoidable_but_not_strict_sourced",
+    "strict_source": false
+  },
+  "ST1256": {
+    "boundary": "Prove the three-package architecture and audit necessity/independence.",
+    "next": [
+      "W0+CA+SA+OA theorem",
+      "remove-one-package countermodels",
+      "annihilation interpretation",
+      "strategic stop rules",
+      "post-verdict research programme"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1256_RoundFive_Recommendation.json",
+    "packet_sha256": "989dd466922fb9f4db06910d3afee5dec61fddb499b8a36a06c672fecad65765",
+    "program": "ST1256",
+    "status": "recommended_ST1257_ST1271"
+  }
+}

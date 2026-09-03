@@ -1,0 +1,145 @@
+{
+  "ST2577": {
+    "boundary": "Prior exact theta_eff formula.",
+    "closed_state_family": true,
+    "object": "StationaryRGClosure",
+    "packet_file": "FIN_ST2577_StationaryRGClosure.json",
+    "packet_sha256": "1a0c37190c0ddce736437554ca69f1510fa4bf51c11b0e1bd1c117d9a355e52c",
+    "program": "ST2577",
+    "status": "Proven"
+  },
+  "ST2578": {
+    "boundary": "Forget top spins.",
+    "object": "DynamicProjection",
+    "packet_file": "FIN_ST2578_DynamicProjection.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2578",
+    "status": "Defined"
+  },
+  "ST2579": {
+    "boundary": "Bottom transition totals must be independent of hidden top.",
+    "object": "StrongLumpability",
+    "packet_file": "FIN_ST2579_StrongLumpability.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2579",
+    "status": "Criterion"
+  },
+  "ST2580": {
+    "boundary": "Same bottom, two top states.",
+    "object": "HiddenTopCounterexample",
+    "packet_file": "FIN_ST2580_HiddenTopCounterexample.json",
+    "packet_sha256": "8c0b2b2dfe75ca35d3b0e17c76a61505374aa35bf50dfeb3449a7eaa041a845f",
+    "program": "ST2580",
+    "status": "Constructed",
+    "top": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1
+      ]
+    ]
+  },
+  "ST2581": {
+    "DeltaE": [
+      1.0000000000000002,
+      0.1999999999999999
+    ],
+    "boundary": "Flip energy differs.",
+    "object": "EnergyDifference",
+    "packet_file": "FIN_ST2581_EnergyDifference.json",
+    "packet_sha256": "0913127b7ae1964929a9721b2d3d74c9feca08e5e16005def713237b7ad29f99",
+    "program": "ST2581",
+    "status": "Computed exact formula"
+  },
+  "ST2582": {
+    "boundary": "Any nonconstant detailed-balance rate sees difference.",
+    "object": "RateDifference",
+    "packet_file": "FIN_ST2582_RateDifference.json",
+    "packet_sha256": "1e1b42e0c648c6db94dbe80fd0f910f97ffb0bc481a78e7126b4ae2984d285fc",
+    "program": "ST2582",
+    "status": "Proven",
+    "strongly_lumpable": false
+  },
+  "ST2583": {
+    "RG_trivial": true,
+    "boundary": "At q=0 hidden top drops out.",
+    "lumpable": true,
+    "object": "QZeroBoundary",
+    "packet_file": "FIN_ST2583_QZeroBoundary.json",
+    "packet_sha256": "988e0db692b84492ff6d48d1d52ca45b65e755f76571e565205dfb3e02ebec91",
+    "program": "ST2583",
+    "status": "Proven"
+  },
+  "ST2584": {
+    "boundary": "For q nonzero generic dynamics not lumpable.",
+    "object": "QNonzeroNoGo",
+    "packet_file": "FIN_ST2584_QNonzeroNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2584",
+    "status": "No-go"
+  },
+  "ST2585": {
+    "Markov": false,
+    "boundary": "Projected process acquires memory.",
+    "object": "MemoryKernel",
+    "packet_file": "FIN_ST2585_MemoryKernel.json",
+    "packet_sha256": "9439aa14169716bcc6592e53917fc5a172b0615ac529a2cc4673e3a6595b6f8d",
+    "program": "ST2585",
+    "status": "Conditional"
+  },
+  "ST2586": {
+    "boundary": "Keep top/hidden state to restore Markov property.",
+    "object": "StateAugmentation",
+    "packet_file": "FIN_ST2586_StateAugmentation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2586",
+    "status": "Conditional"
+  },
+  "ST2587": {
+    "boundary": "Stationary theta_eff does not determine coarse kinetics.",
+    "object": "ThetaEffInsufficiency",
+    "packet_file": "FIN_ST2587_ThetaEffInsufficiency.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2587",
+    "status": "Proven"
+  },
+  "ST2588": {
+    "boundary": "Each level needs q_n and activity law.",
+    "object": "TwoLevelRates",
+    "packet_file": "FIN_ST2588_TwoLevelRates.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2588",
+    "status": "No-go"
+  },
+  "ST2589": {
+    "boundary": "No strict dynamic intertwiner.",
+    "object": "PathCoherence",
+    "packet_file": "FIN_ST2589_PathCoherence.json",
+    "packet_sha256": "19efb1443da2d0800e089dbe36c9df5803db2c7f61e0520f4412a88211f1793f",
+    "program": "ST2589",
+    "status": "Gate fail",
+    "strict": false
+  },
+  "ST2590": {
+    "boundary": "Stationary RG closure does not imply dynamical RG closure.",
+    "main_no_go": true,
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST2590_RoundFourVerdict.json",
+    "packet_sha256": "b77f8f92a4f3f27ef12b3e950fb3144bccadf38bc99bf4f7b6f30a11c93a751e",
+    "program": "ST2590",
+    "status": "Round verdict"
+  },
+  "ST2591": {
+    "boundary": "Compare with U/P dual channels.",
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST2591_RoundFourRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2591",
+    "status": "Recommendation"
+  }
+}

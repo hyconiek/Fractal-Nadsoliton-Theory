@@ -1,0 +1,180 @@
+{
+  "ST1017": {
+    "boundary": "A new mathematical object, not a strict-core export.",
+    "definition": "partial_0 M={limit points representing loss of normalization/carrier}",
+    "normalized_models": "partial_0 M is absent or at positive distance",
+    "object": "AnnihilationBoundary_Definition",
+    "packet_file": "FIN_ST1017_AnnihilationBoundary_Definition.json",
+    "packet_sha256": "836a757706c74cda6bc86a8edb649246b8bcc7183b7ccd995db115123816f1c1",
+    "program": "ST1017",
+    "status": "constructed_annihilation_boundary"
+  },
+  "ST1018": {
+    "boundary": "Finite or infinite Hilbert dimension; normalized-state premise required.",
+    "distance": 1.0,
+    "formula": "inf_{||psi||=1}||psi-0||=1",
+    "object": "UnitSphere_PositiveDistanceBarrier",
+    "packet_file": "FIN_ST1018_UnitSphere_PositiveDistanceBarrier.json",
+    "packet_sha256": "78705bdb496935ccb438c8408991ba914d7baacd12f59072b4743c4a86075e00",
+    "program": "ST1018",
+    "status": "proven_unit_sphere_distance_to_zero_is_one"
+  },
+  "ST1019": {
+    "boundary": "Probability normalization premise required.",
+    "distance_l1": 0.9999999999999999,
+    "mass": 0.9999999999999999,
+    "object": "Simplex_MassBarrier",
+    "packet_file": "FIN_ST1019_Simplex_MassBarrier.json",
+    "packet_sha256": "9a5e7a64baeb3157eabf6649842170da912f9723ff55d7d29e4935b116f37fbe",
+    "program": "ST1019",
+    "status": "proven_simplex_l1_distance_to_zero_is_one"
+  },
+  "ST1020": {
+    "boundary": "Charge must be strict-sourced and conserved; current FIN only has channel-dependent norms/mass.",
+    "logical_strength": "sufficient, not necessary",
+    "object": "ConservedCharge_ZeroNoGo",
+    "packet_file": "FIN_ST1020_ConservedCharge_ZeroNoGo.json",
+    "packet_sha256": "1d4312649ee7ff5f3f9f067beb107365208b1775841c321834894dc05d1eb6dc",
+    "program": "ST1020",
+    "status": "proven_positive_conserved_charge_forbids_zero",
+    "theorem": "Q(Phi_t x)=Q(x)=q0>0 and Q(0)=0 implies Phi_t x !=0"
+  },
+  "ST1021": {
+    "boundary": "Autonomous locally Lipschitz ODE and zero equilibrium; backward uniqueness on the relevant interval.",
+    "nonzero_initial_can_hit_zero": false,
+    "object": "LocallyLipschitz_FiniteTimeHitNoGo",
+    "packet_file": "FIN_ST1021_LocallyLipschitz_FiniteTimeHitNoGo.json",
+    "packet_sha256": "5284a45af6a802cbc45b578a76e45a3ce400ea0d73ddb4560aa3596f64764c92",
+    "program": "ST1021",
+    "status": "proven_finite_time_equilibrium_hit_no_go_under_uniqueness",
+    "theorem": "if x(T)=0 and f(0)=0, uniqueness implies x(t)=0 on the shared interval"
+  },
+  "ST1022": {
+    "boundary": "Scalar countermodel, not a FIN law.",
+    "hitting_time": 2.0,
+    "law": "x_dot=-sqrt(x), x>=0",
+    "lesson": "state-space closure or regularity is indispensable",
+    "object": "NonLipschitz_FiniteTimeCollapse",
+    "packet_file": "FIN_ST1022_NonLipschitz_FiniteTimeCollapse.json",
+    "packet_sha256": "483101d69d964248d1a905ec2a3a8b405caffed62027959659e16024212caff2",
+    "program": "ST1022",
+    "status": "proven_nonlipschitz_finite_time_collapse_counterexample",
+    "x0": 1.0,
+    "x_at_t1": 0.25
+  },
+  "ST1023": {
+    "boundary": "Shows finite-time no-hit is weaker than eternal positive lower bound.",
+    "finite_hit": false,
+    "law": "x_dot=-x",
+    "limit_zero": true,
+    "object": "Lipschitz_AsymptoticExtinction",
+    "packet_file": "FIN_ST1023_Lipschitz_AsymptoticExtinction.json",
+    "packet_sha256": "a420721618d24917431e41fa72b317c176080b73fa4087f6f52754123a119e37",
+    "program": "ST1023",
+    "solution": "x(t)=x0 exp(-t)",
+    "status": "proven_lipschitz_dynamics_can_extinguish_asymptotically"
+  },
+  "ST1024": {
+    "boundary": "This conclusion is conditional on invariance and completeness.",
+    "conclusion": "no trajectory leaves M at finite time",
+    "object": "CompleteFlow_StateSpaceInvariance",
+    "packet_file": "FIN_ST1024_CompleteFlow_StateSpaceInvariance.json",
+    "packet_sha256": "8ec5e1cde5129ae2882b43611b60c4e7105a24b3c3e4acdbedc46d268d00e649",
+    "premise": "Phi:R x M -> M",
+    "program": "ST1024",
+    "status": "proven_complete_invariant_flow_has_no_exit_event",
+    "warning": "completeness is not implied by self-reference"
+  },
+  "ST1025": {
+    "boundary": "Applies to projective/ray semantics.",
+    "object": "ProjectivePhase_Quotient",
+    "packet_file": "FIN_ST1025_ProjectivePhase_Quotient.json",
+    "packet_sha256": "7af69f2590cb5969e51a76a1ea20e28cfa031af8e5548bb1e588e4aea7af2f1f",
+    "program": "ST1025",
+    "ray_overlap": 1.0000000000000002,
+    "same_ray": true,
+    "status": "proven_global_phase_is_not_state_annihilation",
+    "zero_ray_exists": false
+  },
+  "ST1026": {
+    "boundary": "Compactness does not by itself prove the set is invariant or select its dynamics.",
+    "does_not_prove": [
+      "localization",
+      "nontrivial recurrence period",
+      "physical realization"
+    ],
+    "object": "CompactInvariantSet_Persistence",
+    "packet_file": "FIN_ST1026_CompactInvariantSet_Persistence.json",
+    "packet_sha256": "08cc8c8dcdce5341b19bdd90d872595724b8e956c0b8851ecf3dc77b6b213a83",
+    "program": "ST1026",
+    "status": "proven_compact_invariant_set_precludes_escape",
+    "theorem": "continuous complete orbit in compact invariant K remains in K"
+  },
+  "ST1027": {
+    "boundary": "Candidate theorem schema; FIN source for V remains open.",
+    "conclusion": "orbit cannot approach partial_0 M",
+    "criterion": "V(x)->infinity near partial_0 M and V(Phi_t x)<=V(x0)",
+    "object": "CoerciveLyapunov_Sublevel",
+    "packet_file": "FIN_ST1027_CoerciveLyapunov_Sublevel.json",
+    "packet_sha256": "4ffbf1aceccadca1afffab5cb92f90d934cec4ea5aeef574fbde56a0389e88fc",
+    "program": "ST1027",
+    "status": "constructed_coercive_barrier_criterion"
+  },
+  "ST1028": {
+    "boundary": "Topology requires a specified state space and continuous dynamics.",
+    "failure_mode": "gap closure/singularity changes the admissible space",
+    "object": "Topology_ComponentProtection",
+    "packet_file": "FIN_ST1028_Topology_ComponentProtection.json",
+    "packet_sha256": "c3e89dd5079d6cd3e042e899999f859eccf3854a1517ae154421755c63604e4d",
+    "program": "ST1028",
+    "status": "proven_component_label_protects_only_if_zero_is_outside_component",
+    "theorem": "continuous paths cannot cross connected components"
+  },
+  "ST1029": {
+    "boundary": "Countermodels establish necessity for the proposed total-state theorem, not metaphysical necessity.",
+    "object": "PremiseRemoval_Countermodels",
+    "packet_file": "FIN_ST1029_PremiseRemoval_Countermodels.json",
+    "packet_sha256": "42b0db527a38a32535399fe40cd158ea88644f4c5636b0b09aa82a5d490bb651",
+    "program": "ST1029",
+    "removals": {
+      "completeness": "x_dot=-sqrt(x) reaches boundary",
+      "exclude_zero": "include absorbing zero and allow decay",
+      "invariance": "x_dot=-x on M=(0,infinity) approaches boundary",
+      "nonempty_carrier": "empty model contains no being to persist"
+    },
+    "status": "proven_each_minimal_premise_is_removable"
+  },
+  "ST1030": {
+    "boundary": "Strict A is real symmetric Laplacian-like; total-state manifold is not yet an exported axiom/theorem.",
+    "missing": [
+      "canonical total-state type",
+      "proof this type is the nadsoliton",
+      "global completeness for full nonlinear law",
+      "no-killing theorem"
+    ],
+    "object": "CurrentFIN_PremiseAudit",
+    "packet_file": "FIN_ST1030_CurrentFIN_PremiseAudit.json",
+    "packet_sha256": "a559f099bce93a8b37b21a560032f0ce025996bdb783bd00e7437df3d8cb8da7",
+    "program": "ST1030",
+    "status": "current_FIN_supplies_channel_invariants_not_total_ontology",
+    "supplied": [
+      "unitary norm conservation",
+      "heat mass conservation",
+      "conditional wave energy"
+    ]
+  },
+  "ST1031": {
+    "boundary": "Next round tests whether bootstrap/self-reference can derive rather than assume persistence.",
+    "next": [
+      "fixed-point existence versus stability",
+      "internal environment and closed resource circulation",
+      "global versus subsystem entropy",
+      "recurrence and irreversible effective dynamics"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1031_RoundTwo_Recommendation.json",
+    "packet_sha256": "6a96df42f40db491a44901ec447aa490b074197f9748d24ff438962213ef4cd8",
+    "program": "ST1031",
+    "status": "recommended_ST1032_ST1046"
+  }
+}

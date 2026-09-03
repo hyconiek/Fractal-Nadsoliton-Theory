@@ -1,0 +1,145 @@
+{
+  "ST912": {
+    "boundary": "Definitions.",
+    "object": "Annihilation_Definition_Lattice",
+    "packet_file": "FIN_ST912_Annihilation_Definition_Lattice.json",
+    "packet_sha256": "660c9f23098a14efee63b38bc1d9b977a18eb90feced7fae4e9ffe42d579a6c7",
+    "program": "ST912",
+    "status": "constructed_four_annihilation_notions",
+    "types": [
+      "zero-state extinction",
+      "pattern delocalization",
+      "coherence loss",
+      "topological/attractor loss"
+    ]
+  },
+  "ST913": {
+    "boundary": "Finite self-adjoint model.",
+    "object": "Unitary_Norm_NoExtinction",
+    "packet_file": "FIN_ST913_Unitary_Norm_NoExtinction.json",
+    "packet_sha256": "a6fc37b1eb5dd8aec5f39a33e08c94035a5ad0a689199859bb5ab29335bf514f",
+    "program": "ST913",
+    "status": "proven_unitary_zero_state_unreachable",
+    "theorem": "||exp(-itA)psi||=||psi||; nonzero state never becomes zero."
+  },
+  "ST914": {
+    "boundary": "Probability embedding.",
+    "object": "Heat_Mass_Conservation",
+    "packet_file": "FIN_ST914_Heat_Mass_Conservation.json",
+    "packet_sha256": "b3a7b67811130f713e5d706ca43a1ae74cfad1f57fde58e213a4513db599e549",
+    "program": "ST914",
+    "status": "proven_heat_total_mass_conservation",
+    "theorem": "1^T exp(-tA)p=1^T p",
+    "zero_mass_only_extinguishes": true
+  },
+  "ST915": {
+    "bound": "||P_t(p-u)||<=exp(-gap t)||p-u||",
+    "boundary": "Localization not protected.",
+    "object": "Heat_Pattern_Decay",
+    "packet_file": "FIN_ST915_Heat_Pattern_Decay.json",
+    "packet_sha256": "64c60cb2ab109559261857378210dd738561e2f3f6de77b34ed4e70912ca03a6",
+    "program": "ST915",
+    "spectral_gap": 0.7541211542070798,
+    "status": "proven_heat_pattern_exponential_decay"
+  },
+  "ST916": {
+    "boundary": "Second-order wave model supplied.",
+    "energy": "||u_dot||^2+<u,Au>",
+    "object": "Wave_PhaseSpace_Energy",
+    "packet_file": "FIN_ST916_Wave_PhaseSpace_Energy.json",
+    "packet_sha256": "5dfabae92ed112a8c340f6ed503a87a05cfdf2304226f5be39df4132feaebf8e",
+    "program": "ST916",
+    "status": "proven_wave_phase_space_energy_conservation"
+  },
+  "ST917": {
+    "boundary": "Carries no localization.",
+    "kernel_dimension": 1,
+    "object": "ZeroMode_Persistence",
+    "packet_file": "FIN_ST917_ZeroMode_Persistence.json",
+    "packet_sha256": "f8eab10b3ef72f058cf0b0cc548e89b0b708c72506cdee4fe92c890c726d990c",
+    "program": "ST917",
+    "status": "proven_constant_zero_mode_persists"
+  },
+  "ST918": {
+    "boundary": "Inverse not stochastic.",
+    "exp_minus_tA_inverse": "exp(tA)",
+    "object": "FiniteTime_Invertibility",
+    "packet_file": "FIN_ST918_FiniteTime_Invertibility.json",
+    "packet_sha256": "e54048988a0df823d6f9fb218e143efc4088084b77d2f324e51bcf4937533d59",
+    "program": "ST918",
+    "status": "proven_finite_time_semigroup_invertibility_linear_space"
+  },
+  "ST919": {
+    "boundary": "Open law additional.",
+    "counterexample": "psi_dot=-(A+gamma I)psi ->0",
+    "object": "OpenLoss_Extinction_Counterexample",
+    "packet_file": "FIN_ST919_OpenLoss_Extinction_Counterexample.json",
+    "packet_sha256": "f8070abc090c9862ec159e673d1ce4074bd3d4d215d4e3a6ed6f60ca7acc7b2a",
+    "program": "ST919",
+    "status": "proven_loss_can_annihilate_without_source"
+  },
+  "ST920": {
+    "boundary": "Environment supplied.",
+    "object": "Dephasing_Coherence_Loss",
+    "packet_file": "FIN_ST920_Dephasing_Coherence_Loss.json",
+    "packet_sha256": "b85463ce2fb989a58e645ba509100ae651b615b832491ff416a4d679e9180866",
+    "program": "ST920",
+    "spectral_diagonal_preserved": true,
+    "status": "proven_dephasing_destroys_coherence_not_populations"
+  },
+  "ST921": {
+    "boundary": "Context dependent.",
+    "mechanism": "coarse channel/Schur tracing",
+    "object": "GlobalVsAccessible_Information",
+    "packet_file": "FIN_ST921_GlobalVsAccessible_Information.json",
+    "packet_sha256": "526136c5ab0d53d0c27a88a7a8a47aa73f4d12aafdc6f441da72548e01ab1ef6",
+    "program": "ST921",
+    "status": "proven_accessible_information_can_vanish_while_global_state_persists"
+  },
+  "ST922": {
+    "boundary": "Not soliton stability.",
+    "object": "FiniteUnitary_Recurrence",
+    "packet_file": "FIN_ST922_FiniteUnitary_Recurrence.json",
+    "packet_sha256": "1f23bc25f10f560843ea117e06ab0b55eb59f3f072a6933e00c453c2ab1f044e",
+    "program": "ST922",
+    "reason": "finite torus of eigenphases",
+    "status": "proven_finite_unitary_almost_recurrence"
+  },
+  "ST923": {
+    "boundary": "Measurements can vanish.",
+    "norm_remains": true,
+    "object": "InstantaneousZero_NotAnnihilation",
+    "packet_file": "FIN_ST923_InstantaneousZero_NotAnnihilation.json",
+    "packet_sha256": "b3f894460e488e0d1ab4c9a4f92c549db10ad7c8a7384ef1a22f8197c41a0603",
+    "program": "ST923",
+    "status": "proven_instantaneous_component_zero_not_global_annihilation"
+  },
+  "ST924": {
+    "boundary": "Nonlinear object absent.",
+    "localized_soliton_proved": false,
+    "object": "StrictCore_Persistence_Status",
+    "packet_file": "FIN_ST924_StrictCore_Persistence_Status.json",
+    "packet_sha256": "0b6f19a1b6777209f5b1e9a763b391c208f9af01b71fb28aa4242e590f5a13f1",
+    "program": "ST924",
+    "status": "strict_core_protects_norm_or_mass_not_nadsoliton_identity",
+    "topological_charge_proved": false
+  },
+  "ST925": {
+    "boundary": "Need nonlinear/topological/pump law.",
+    "object": "PersistenceSource_Gate",
+    "packet_file": "FIN_ST925_PersistenceSource_Gate.json",
+    "packet_sha256": "9ae9343f176ff49fe027200a0d2d4d5e52e78ceddda8a24cf34407c4a77e1afc",
+    "program": "ST925",
+    "source": false,
+    "status": "blocked_no_strict_persistence_source_beyond_linear_conservation"
+  },
+  "ST926": {
+    "boundary": "Round one local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST926_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST926",
+    "status": "blocked_no_evidence"
+  }
+}

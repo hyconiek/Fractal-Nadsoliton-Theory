@@ -1,0 +1,166 @@
+{
+  "ST747": {
+    "boundary": "Edge cost is an added prior.",
+    "functional": "L(q)=L0+gamma q, gamma>0",
+    "minimizer": 0,
+    "object": "EdgeCost_Occam_Selector",
+    "packet_file": "FIN_ST747_EdgeCost_Occam_Selector.json",
+    "packet_sha256": "76831b1e730e6d6e2e7f72303fb81c61320348ee28e269898468ab9a421a6184",
+    "program": "ST747",
+    "status": "proven_conditional_Occam_selects_q0",
+    "theorem": "Any strictly positive cost per new antipodal edge selects q=0."
+  },
+  "ST748": {
+    "Gibbs_high_temperature_entropy_effect": "q changes fine partition function",
+    "boundary": "Trace/entropy objective is not strict-sourced.",
+    "min_trace_q": 0,
+    "object": "TraceEntropy_Selector",
+    "packet_file": "FIN_ST748_TraceEntropy_Selector.json",
+    "packet_sha256": "deaf76d3549fb0d06c688164817d9d0e5160fac1df69a92d309e140f8bf2b517",
+    "program": "ST748",
+    "status": "proven_conditional_trace_entropy_selects_q0",
+    "trace_density": "s+q"
+  },
+  "ST749": {
+    "boundary": "A saturation constraint could change result.",
+    "finite_selector": false,
+    "object": "MaximumResonance_Refinement_Audit",
+    "packet_file": "FIN_ST749_MaximumResonance_Refinement_Audit.json",
+    "packet_sha256": "0d98f9b2411a4ff95a345d27e3bf92e9a89632d6fa4299009b9010025a2c98f8",
+    "program": "ST749",
+    "result": "increasing q raises odd-mode stiffness without finite internal optimum",
+    "status": "proven_maximum_resonance_does_not_select_finite_q"
+  },
+  "ST750": {
+    "action": "S(q)=S_coarse+gamma q^2/2-Jq",
+    "boundary": "Penalty coefficient/source is imported.",
+    "object": "QuadraticRatePenalty_Action",
+    "packet_file": "FIN_ST750_QuadraticRatePenalty_Action.json",
+    "packet_sha256": "32a52bbca7f54e8727f4c7cb2183e654edf02e0cd411ca894970468d63592374",
+    "program": "ST750",
+    "stationary": "q=max(0,J/gamma)",
+    "status": "proven_conditional_penalty_selects_q0",
+    "unsourced_J0_selects_zero": true
+  },
+  "ST751": {
+    "boundary": "Coding language/prior is additional.",
+    "countercode": "a language naming q=q_star in one token reverses ordering",
+    "object": "MDL_Refinement_Selector",
+    "packet_file": "FIN_ST751_MDL_Refinement_Selector.json",
+    "packet_sha256": "4d28fa5bcdea833dec8b0c41e18875f36bf839464a1b4c71f61f8f3f0c5bc23f",
+    "program": "ST751",
+    "shortest_default": "q=0 if nonzero rates require code words",
+    "status": "proven_MDL_selection_is_prior_dependent"
+  },
+  "ST752": {
+    "boundary": "Stationarity is new law.",
+    "fixed_C_nonnegative": "q=0",
+    "object": "RG_SpeedStationary_FixedPoint",
+    "packet_file": "FIN_ST752_RG_SpeedStationary_FixedPoint.json",
+    "packet_sha256": "e86c42aeca7dc2158f8726929c1d4d76e43d8fdd779254e5ffcc0906f57d6a33",
+    "program": "ST752",
+    "recurrence": "C_next=C+N^2 q/2",
+    "status": "proven_conditional_speed_stationary_RG_fixedpoint"
+  },
+  "ST753": {
+    "boundary": "A scale-charged/locality datum can evade.",
+    "object": "InformationOnly_Selector_NoGo",
+    "packet_file": "FIN_ST753_InformationOnly_Selector_NoGo.json",
+    "packet_sha256": "4d61659f719f303897866409c1aa974096ed4d1602499968c27f69ab639fc644",
+    "program": "ST753",
+    "status": "proven_information_only_refinement_selector_no_go",
+    "theorem": "All coarse Shannon/spectral/Green records are q-invariant on the exact fiber; any selector built only from them is constant."
+  },
+  "ST754": {
+    "boundary": "Multiobjective principles remain possible.",
+    "conclusion": "unqualified simplicity does not select observed physics",
+    "minimal_dimension": 1,
+    "minimal_field": "scalar",
+    "minimal_gauge_complex": "none",
+    "object": "Minimality_Selects_Wrong_Physics",
+    "observed_target": "3D gauge with polarizations",
+    "packet_file": "FIN_ST754_Minimality_Selects_Wrong_Physics.json",
+    "packet_sha256": "0745e1614574f55a65e1915941c3df890e92f9a58882fa9f10672a104916f8dc",
+    "program": "ST754",
+    "status": "proven_bare_minimality_conflicts_observed_structure"
+  },
+  "ST755": {
+    "boundary": "Ledger does not source assumptions.",
+    "levels": [
+      "strict-derived",
+      "conditional-minimal",
+      "conditional-phenomenological",
+      "empirical-input",
+      "speculative"
+    ],
+    "object": "ConditionalPhysics_Assumption_Ledger",
+    "packet_file": "FIN_ST755_ConditionalPhysics_Assumption_Ledger.json",
+    "packet_sha256": "c131667e57b3d0d4aee77f52e4e51c9dc0fe7084e28a8d0d43250cbdbc817b23",
+    "program": "ST755",
+    "status": "constructed_assumption_ledger"
+  },
+  "ST756": {
+    "boundary": "Does not license silent promotion.",
+    "object": "Flexible_NoNewPhysics_Rule",
+    "packet_file": "FIN_ST756_Flexible_NoNewPhysics_Rule.json",
+    "packet_sha256": "674d8ed902c1e6f92c60477bf303ed7dbf9d78aaf6f9c199e98f7271e7b8d190",
+    "program": "ST756",
+    "rule": "new physics may be constructed when assumptions are typed, removal-tested and falsifiable",
+    "status": "proven_flexible_assumption_rule_consistency"
+  },
+  "ST757": {
+    "boundary": "No prior-independent q.",
+    "common_minimizer": false,
+    "object": "SelectorPrior_Sensitivity",
+    "packet_file": "FIN_ST757_SelectorPrior_Sensitivity.json",
+    "packet_sha256": "69e13a1733c01a992b773641d670472b890314661e9f98c35fdbb73f9d7f8512",
+    "priors": [
+      "edge cost ->0",
+      "target speed ->q_star",
+      "resonance ->large q",
+      "trace stationarity ->0"
+    ],
+    "program": "ST757",
+    "status": "proven_selector_prior_sensitivity"
+  },
+  "ST758": {
+    "boundary": "No record.",
+    "failure": "no post-unblinding prior change",
+    "holdout": "predict odd fine modes and speed on unseen layer",
+    "object": "HeldOut_Refinement_Prediction_Schema",
+    "packet_file": "FIN_ST758_HeldOut_Refinement_Prediction_Schema.json",
+    "packet_sha256": "ca999fade25e498f2771f7def6f920e35773729c89f543451f9ada4de8605dd5",
+    "program": "ST758",
+    "status": "constructed_heldout_refinement_schema",
+    "train": "choose principle without target layer"
+  },
+  "ST759": {
+    "boundary": "Need genuinely new strict noncoarse datum.",
+    "coarse_information": false,
+    "generic_minimality": false,
+    "object": "SourceClass_Stop",
+    "packet_file": "FIN_ST759_SourceClass_Stop.json",
+    "packet_sha256": "6df6ec49f41183b2d5b36b2f53e33fd88b1b5960efe6226bd0167aadbd683f2b",
+    "program": "ST759",
+    "status": "source_class_bounded_no_go",
+    "unsourced_variation": false
+  },
+  "ST760": {
+    "boundary": "No inevitable causal-light theory.",
+    "object": "PhysicsClosure_Gate",
+    "packet_file": "FIN_ST760_PhysicsClosure_Gate.json",
+    "packet_sha256": "305df29131a857af5a34838239cc622b12105aa9d915901fd0d440985ca00c51",
+    "program": "ST760",
+    "status": "blocked_no_physics_closure",
+    "strict": false
+  },
+  "ST761": {
+    "boundary": "Round two local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST761_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST761",
+    "status": "blocked_no_evidence"
+  }
+}

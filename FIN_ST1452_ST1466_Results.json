@@ -1,0 +1,200 @@
+{
+  "ST1452": {
+    "boundary": "Conditional rounding model.",
+    "entry_radius": 5e-15,
+    "object": "StructuredMatrixBox",
+    "packet_file": "FIN_ST1452_StructuredMatrixBox.json",
+    "packet_sha256": "1b43cdbb3ecb289231b1b3c1a390531190e2607c8976abb2e725c6d3ee8f9146",
+    "preserves": [
+      "circulant",
+      "real symmetric",
+      "row sum zero",
+      "Fourier eigenvectors"
+    ],
+    "program": "ST1452",
+    "status": "constructed_row_sum_preserving_real_symmetric_circulant_entry_box"
+  },
+  "ST1453": {
+    "boundary": "Triangle/Weyl bound.",
+    "formula": "|delta lambda_k|<=12 delta_entry",
+    "object": "SpectralRadiusBound",
+    "packet_file": "FIN_ST1453_SpectralRadiusBound.json",
+    "packet_sha256": "e937d70e24d2e407e8e168fa3ef0828d02994137564a68fd5795834e0791fda9",
+    "program": "ST1453",
+    "spectral_radius": 6e-14,
+    "status": "proven_eigenvalue_radius_bound_by_row_sum_norm"
+  },
+  "ST1454": {
+    "boundary": "Zero mode kept exact by row-sum preservation.",
+    "dps": 25,
+    "object": "UncertainIntervalContext",
+    "packet_file": "FIN_ST1454_UncertainIntervalContext.json",
+    "packet_sha256": "84127515ea56ae35bd8184f1411df08af10cfa4d506daa6fa9abd95b019a0235",
+    "program": "ST1454",
+    "radius": 6e-14,
+    "status": "constructed_outward_uncertain_eigenvalue_context",
+    "zero_exact": true
+  },
+  "ST1455": {
+    "boundary": "Same 4995-box topology with eigenvalue intervals.",
+    "boxes": 4995,
+    "largest_box": [
+      0.588,
+      0.59
+    ],
+    "object": "UncertainOutsideCover",
+    "packet_file": "FIN_ST1455_UncertainOutsideCover.json",
+    "packet_sha256": "e650e88da8a4a98e49d071262715619be53eaf621df36c6f96b25d97d5a7caa1",
+    "program": "ST1455",
+    "status": "constructed_complete_uncertain_Taylor_cover"
+  },
+  "ST1456": {
+    "boundary": "Robust global location exclusion.",
+    "candidate_lower": 0.41124099980757045,
+    "margin": 3.089572290282394e-06,
+    "object": "UncertainOutsideMargin",
+    "outside_upper": 0.41123791023528017,
+    "packet_file": "FIN_ST1456_UncertainOutsideMargin.json",
+    "packet_sha256": "f2e758394229e41f3b39cffc59613a23238bea697793dd9bf09ec169f1271773",
+    "program": "ST1456",
+    "status": "proven_uncertain_outside_cover_below_candidate"
+  },
+  "ST1457": {
+    "F_interval": [
+      0.3966679604508311,
+      0.4257755153271247
+    ],
+    "Fpp_interval": [
+      -1.686445990051945,
+      -1.3685959622934722
+    ],
+    "boundary": "Structured box.",
+    "object": "UncertainConcavity",
+    "packet_file": "FIN_ST1457_UncertainConcavity.json",
+    "packet_sha256": "c4205462e975e0b1097003625c90f4d76fb14d2a2a6fde594c5417b7ff6a10ff",
+    "program": "ST1457",
+    "status": "proven_uncertain_target_positive_and_strictly_concave",
+    "strict": true
+  },
+  "ST1458": {
+    "boundary": "All spectra in box.",
+    "left_Fp": [
+      1.248755894478987e-07,
+      1.2487623447568715e-07
+    ],
+    "left_time": 0.5945307,
+    "object": "UncertainDerivativeSigns",
+    "packet_file": "FIN_ST1458_UncertainDerivativeSigns.json",
+    "packet_sha256": "543e2a5e9123283fc5f76bd84a16f59faa7853e14f0fe79b7512907171c08c42",
+    "program": "ST1458",
+    "right_Fp": [
+      -1.8095107235042816e-07,
+      -1.8095042732263374e-07
+    ],
+    "right_time": 0.5945309,
+    "signs": true,
+    "status": "proven_uniform_derivative_signs_at_wider_endpoints"
+  },
+  "ST1459": {
+    "boundary": "Root may vary with spectrum.",
+    "common_bracket": [
+      0.5945307,
+      0.5945309
+    ],
+    "object": "UncertainRootBracket",
+    "packet_file": "FIN_ST1459_UncertainRootBracket.json",
+    "packet_sha256": "0b1ece7f924e18967745d1c04fca516fca3a2dc136c01f31cfcc3ccee778d458",
+    "program": "ST1459",
+    "status": "proven_each_admissible_spectrum_has_one_stationary_root_in_common_bracket",
+    "unique_per_spectrum": true
+  },
+  "ST1460": {
+    "boundary": "Does not claim one common exact maximizer.",
+    "global_location": [
+      0.59,
+      0.6
+    ],
+    "object": "UncertainGlobalLocation",
+    "outside_margin": 3.089572290282394e-06,
+    "packet_file": "FIN_ST1460_UncertainGlobalLocation.json",
+    "packet_sha256": "3d8dbef33c3d12a3bbf67fcd315a37f945afe84970835510b4ae6966a456bc06",
+    "program": "ST1460",
+    "status": "proven_each_admissible_spectrum_has_global_maximum_inside_0_59_0_60"
+  },
+  "ST1461": {
+    "boundary": "Uses common root bracket and mean-value bound.",
+    "lower_witness": 0.41124099980757045,
+    "object": "UncertainMaximumValue",
+    "packet_file": "FIN_ST1461_UncertainMaximumValue.json",
+    "packet_sha256": "3a913af8ee32e81a769e0aeaad88324dc7dded0ffd319a25f7a41b233b387b38",
+    "program": "ST1461",
+    "status": "constructed_uniform_maximum_value_enclosure",
+    "uniform_upper": 0.41124099980781337,
+    "width": 2.4291679778798425e-13
+  },
+  "ST1462": {
+    "boundary": "1000 nuisance cells with spectral intervals.",
+    "cells": 1000,
+    "object": "UncertainCompositeCover",
+    "packet_file": "FIN_ST1462_UncertainCompositeCover.json",
+    "packet_sha256": "74654094d2bb96403d080d1068ea4dcc75fec925ac1e2fb7077c29ccef9462df",
+    "program": "ST1462",
+    "status": "constructed_complete_uncertain_composite_cover",
+    "weak_cell": {
+      "alpha": [
+        1.09,
+        1.1
+      ],
+      "gamma": [
+        10,
+        12
+      ]
+    }
+  },
+  "ST1463": {
+    "RSS_lower": 0.04669201121378897,
+    "boundary": "Target and alternative share the interval spectrum; independent interval evaluation is conservative.",
+    "object": "UncertainCompositeResidual",
+    "one_time_residual_lower": 0.10804167160613187,
+    "packet_file": "FIN_ST1463_UncertainCompositeResidual.json",
+    "packet_sha256": "7bf276bbd3a3d386dd32459586c6461440c956af2ac502185ee452e78897e9e8",
+    "program": "ST1463",
+    "status": "proven_positive_composite_RSS_lower_bound_under_structured_spectral_uncertainty"
+  },
+  "ST1464": {
+    "arbitrary_entry_perturbations": false,
+    "boundary": "Fourier structure is essential.",
+    "eigenvector_uncertainty": false,
+    "kernel_parameter_box": false,
+    "object": "UncertaintyScope",
+    "packet_file": "FIN_ST1464_UncertaintyScope.json",
+    "packet_sha256": "f51703d7605b96da86ca63b631de3540ea8c50f1f9d8bfe45b6e30288b49b321",
+    "program": "ST1464",
+    "status": "uncertainty_lift_is_not_an_arbitrary_matrix_box_or_symbolic_kernel_theorem"
+  },
+  "ST1465": {
+    "boundary": "Major robustness upgrade.",
+    "composite_identifiability_survives": true,
+    "object": "RoundOne_Verdict",
+    "packet_file": "FIN_ST1465_RoundOne_Verdict.json",
+    "packet_sha256": "db374abb4213f6d34ec4ea314cfa1e939af4d1d5f9e2f708f7046a6e4be9fb9f",
+    "program": "ST1465",
+    "status": "release1099_certificates_survive_declared_structured_rounding_box",
+    "time_location_survives": true
+  },
+  "ST1466": {
+    "boundary": "Optimize measurement-time allocation over nuisance grid.",
+    "next": [
+      "per-time divergences",
+      "linear-program allocation",
+      "held-out grid",
+      "equal-allocation comparison",
+      "certificate boundary"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1466_RoundOne_Recommendation.json",
+    "packet_sha256": "91cb1c1c57680939f97a996b77d8d8f08c27c4df4e62d76cb1378be18328548c",
+    "program": "ST1466",
+    "status": "recommended_ST1467_ST1481"
+  }
+}

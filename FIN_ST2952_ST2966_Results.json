@@ -1,0 +1,127 @@
+{
+  "ST2952": {
+    "boundary": "r=tanh(theta prime-theta)/tanh(theta), q=atanh(cuberoot r).",
+    "object": "InverseFormula",
+    "packet_file": "FIN_ST2952_InverseFormula.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2952",
+    "status": "Proven"
+  },
+  "ST2953": {
+    "boundary": "q identifiable from nonzero theta transition.",
+    "object": "QIdentifiability",
+    "packet_file": "FIN_ST2953_QIdentifiability.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2953",
+    "status": "Conditional"
+  },
+  "ST2954": {
+    "boundary": "At theta=0 every q gives theta prime=0.",
+    "object": "ThetaZeroBlindness",
+    "packet_file": "FIN_ST2954_ThetaZeroBlindness.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2954",
+    "status": "Proven"
+  },
+  "ST2955": {
+    "boundary": "Declared step.",
+    "object": "ObservedTransition",
+    "packet_file": "FIN_ST2955_ObservedTransition.json",
+    "packet_sha256": "7a8d12e705a4847a3ef58733a89567f2684989ca93eae1f28e8200a6a91f7892",
+    "program": "ST2955",
+    "q": 0.2,
+    "status": "Computed",
+    "theta": 0.3,
+    "theta_prime": 0.30223995120162717
+  },
+  "ST2956": {
+    "boundary": "Inverse recovers q.",
+    "object": "InverseReplay",
+    "packet_file": "FIN_ST2956_InverseReplay.json",
+    "packet_sha256": "7c14d08d5ebef16ceb818654112a12ac0d21fb8a98d993d005d7a4eec25fd7ed",
+    "program": "ST2956",
+    "q_recovered": 0.1999999999999994,
+    "residual": 6.106226635438361e-16,
+    "status": "Computed"
+  },
+  "ST2957": {
+    "boundary": "Admissible target steps define q_n when |r|<1.",
+    "object": "TargetTrajectory",
+    "packet_file": "FIN_ST2957_TargetTrajectory.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2957",
+    "status": "Proven"
+  },
+  "ST2958": {
+    "boundary": "Inference/control does not source trajectory.",
+    "object": "ControlFreedom",
+    "packet_file": "FIN_ST2958_ControlFreedom.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2958",
+    "status": "No-go"
+  },
+  "ST2959": {
+    "boundary": "Scale-stationary finite nonzero theta forces q=0.",
+    "object": "FixedPointConstraint",
+    "packet_file": "FIN_ST2959_FixedPointConstraint.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2959",
+    "status": "Proven"
+  },
+  "ST2960": {
+    "boundary": "RG does not derive both theta and q from one fixed-point law.",
+    "object": "SingleLawHypothesis",
+    "packet_file": "FIN_ST2960_SingleLawHypothesis.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2960",
+    "status": "Refuted"
+  },
+  "ST2961": {
+    "boundary": "A separate recurrence q(theta) could couple axes.",
+    "object": "ThetaQCoupling",
+    "packet_file": "FIN_ST2961_ThetaQCoupling.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2961",
+    "status": "Conditional"
+  },
+  "ST2962": {
+    "boundary": "Measured q is not ontological provenance.",
+    "object": "SourceVsInference",
+    "packet_file": "FIN_ST2962_SourceVsInference.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2962",
+    "status": "Boundary"
+  },
+  "ST2963": {
+    "boundary": "RG relation does not fix kinetic clock c.",
+    "object": "ClockIndependence",
+    "packet_file": "FIN_ST2963_ClockIndependence.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2963",
+    "status": "Proven"
+  },
+  "ST2964": {
+    "boundary": "No units/OA.",
+    "object": "PhysicalBoundary",
+    "packet_file": "FIN_ST2964_PhysicalBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2964",
+    "status": "Boundary"
+  },
+  "ST2965": {
+    "boundary": "Exact RG reduces algebra but not source count.",
+    "object": "RoundFiveVerdict",
+    "packet_file": "FIN_ST2965_RoundFiveVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2965",
+    "status": "Round verdict"
+  },
+  "ST2966": {
+    "boundary": "Synthesize.",
+    "object": "RoundFiveRecommendation",
+    "packet_file": "FIN_ST2966_RoundFiveRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST2966",
+    "status": "Recommendation"
+  }
+}

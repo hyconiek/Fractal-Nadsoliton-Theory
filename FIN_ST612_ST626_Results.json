@@ -1,0 +1,322 @@
+{
+  "ST612": {
+    "boundary": "C_N is dimensionless and formal; the q sequence and physical coordinate map remain supplied.",
+    "maximum_recurrence_residual": 4.440892098500626e-16,
+    "object": "Dyadic_FormalSpeed_Recurrence",
+    "packet_file": "FIN_ST612_Dyadic_FormalSpeed_Recurrence.json",
+    "packet_sha256": "6a3a9df55ea140c541994e20952ec4066fe6a05a854398d4382fced81afdd26c",
+    "program": "ST612",
+    "recurrence": "C_2N=C_N+(N^2/2)q_N",
+    "rows": [
+      {
+        "N": 12,
+        "c2": 3.616039403713872,
+        "q_in": null
+      },
+      {
+        "N": 24,
+        "actual_increment": 1.4399999999999995,
+        "c2": 5.056039403713871,
+        "predicted_increment": 1.44,
+        "q_in": 0.02
+      },
+      {
+        "N": 48,
+        "actual_increment": 0.8639999999999999,
+        "c2": 5.920039403713871,
+        "predicted_increment": 0.864,
+        "q_in": 0.003
+      },
+      {
+        "N": 96,
+        "actual_increment": 0.4607999999999999,
+        "c2": 6.380839403713871,
+        "predicted_increment": 0.46080000000000004,
+        "q_in": 0.0004
+      }
+    ],
+    "status": "proven_exact_dyadic_speed_recurrence",
+    "theorem": "The old formal slope coefficient is exactly preserved by weight splitting; the new antipodal edge adds N^2 q_N/2."
+  },
+  "ST613": {
+    "boundary": "Convergence does not choose the series, its sum, or a dimensional speed.",
+    "canonical_limit": false,
+    "finite_limit_criterion": "sum_i N_i^2 q_i < infinity",
+    "nonnegative_rates": true,
+    "object": "InfiniteTower_Speed_Convergence_Criterion",
+    "packet_file": "FIN_ST613_InfiniteTower_Speed_Convergence_Criterion.json",
+    "packet_sha256": "e492cc8b299522d226fc0190820dcae4d3b89651a72ef0716086273a238a7897",
+    "power_law_q_i~N_i^(-2-epsilon)": "converges for epsilon>0 in a dyadic tower",
+    "program": "ST613",
+    "q_i~kappa/N_i^2": "adds kappa/2 per level and diverges linearly in depth",
+    "recurrence": "C_j=C_0+1/2 sum_{i<j} N_i^2 q_i",
+    "status": "proven_infinite_tower_speed_convergence_criterion",
+    "theorem": "For nonnegative dyadic rates, a finite infinite-depth formal speed exists iff the weighted series sum N_i^2 q_i converges."
+  },
+  "ST614": {
+    "boundary": "Speed stationarity is an added refinement law, not a consequence of coarse intertwining or fractal ontology.",
+    "conclusion": "q_N=0 at every level",
+    "nonnegative_q": true,
+    "object": "SpeedStationary_NonnegativeRate_Theorem",
+    "packet_file": "FIN_ST614_SpeedStationary_NonnegativeRate_Theorem.json",
+    "packet_sha256": "206991d721b7c978d6d3ed5a0d7cb2ae7a9ea7f6f08ec7e5e7b4aa7b1be734e9",
+    "premise": "C_2N=C_N at every level",
+    "premise_strict_sourced": false,
+    "program": "ST614",
+    "status": "proven_conditional_zero_rate_speed_stationary_tower",
+    "theorem": "Exact dimensionless speed stationarity and nonnegative antipodal rates force the unique zero-rate tower."
+  },
+  "ST615": {
+    "boundary": "The condition concerns this bound architecture and single-particle tower; other polynomial long-range cones remain possible.",
+    "many_body_LR": false,
+    "mu": 0.1,
+    "object": "Uniform_ExponentialCone_Rate_Criterion",
+    "packet_file": "FIN_ST615_Uniform_ExponentialCone_Rate_Criterion.json",
+    "packet_sha256": "5e7e110b34bfccfa6cdb57b55916bb9296732a8fd96c0360f9e674f9322135d5",
+    "program": "ST615",
+    "rows": [
+      {
+        "last_over_first": 282073.37357044895,
+        "law": "N^-2",
+        "weighted_antipodal_moment": [
+          0.010482370523695645,
+          0.00948998127374322,
+          0.026367662276841567,
+          0.8010406628607072,
+          2956.7976166342646
+        ]
+      },
+      {
+        "last_over_first": 17629.585848153063,
+        "law": "N^-3",
+        "weighted_antipodal_moment": [
+          0.0008735308769746371,
+          0.00039541588640596754,
+          0.0005493262974341994,
+          0.008344173571465701,
+          15.399987586636795
+        ]
+      },
+      {
+        "last_over_first": 1.6749456122892185e-08,
+        "law": "exp(-0.2N)",
+        "weighted_antipodal_moment": [
+          0.13693524473245475,
+          0.04498568374051789,
+          0.004114594829325377,
+          3.3864368090084874e-05,
+          2.293590873323754e-09
+        ]
+      }
+    ],
+    "status": "proven_polynomial_antipodal_rates_fail_uniform_exponential_cone",
+    "theorem": "A uniform exponential-moment propagation bound requires antipodal rates to decay exponentially in distance. Polynomial N^-p rates fail for every fixed mu>0.",
+    "uniform_condition": "sup_N q_N sinh(mu N)<infinity for some mu>0"
+  },
+  "ST616": {
+    "base_observer_identifies_rate_sequence": false,
+    "boundary": "The theorem is finite-depth but extends inductively; fine instruments may resolve the hidden sequence.",
+    "object": "Complete_Coarse_Tower_Speed_Blindness",
+    "packet_file": "FIN_ST616_Complete_Coarse_Tower_Speed_Blindness.json",
+    "packet_sha256": "0686766b32f4ad5ae619ccb1ca9510bb38550cb00c0b92f913553e5c04f5a3c2",
+    "program": "ST616",
+    "rows": [
+      {
+        "base_generator_residual": 0.0,
+        "base_heat_residual": 6.49046272732731e-16,
+        "final_N": 96,
+        "final_formal_speed": 1.9015886526044143,
+        "tower": "zero"
+      },
+      {
+        "base_generator_residual": 6.661338147750939e-16,
+        "base_heat_residual": 1.1196427277769477e-15,
+        "final_N": 96,
+        "final_formal_speed": 4.4757166357706195,
+        "tower": "nonzero"
+      }
+    ],
+    "status": "proven_multilevel_coarse_speed_blindness",
+    "theorem": "Arbitrarily different finite rate sequences give exactly the same complete base generator and heat records under composed normalized embeddings, while final fine formal speeds differ."
+  },
+  "ST617": {
+    "boundary": "One child-resolved preparation/effect and calibrated clock per level are added operational resources.",
+    "maximum_recovery_error": 1.0061396160665481e-16,
+    "object": "LevelResolved_Rate_Tomography",
+    "packet_file": "FIN_ST617_LevelResolved_Rate_Tomography.json",
+    "packet_sha256": "570d070f073b5bb02fa5bcba7593c02eb84103ed1edc0c4984fae1006c3f8a3c",
+    "program": "ST617",
+    "rows": [
+      {
+        "odd_mode_shift": 0.14000000000000012,
+        "parent_N": 12,
+        "q": 0.07,
+        "recovered_q": 0.07000000000000006
+      },
+      {
+        "odd_mode_shift": 0.021999999999999797,
+        "parent_N": 24,
+        "q": 0.011,
+        "recovered_q": 0.010999999999999899
+      },
+      {
+        "odd_mode_shift": 0.0040000000000000036,
+        "parent_N": 48,
+        "q": 0.002,
+        "recovered_q": 0.0020000000000000018
+      }
+    ],
+    "status": "proven_level_resolved_rate_tomography",
+    "theorem": "At each dyadic level, any odd fine Fourier mode shifts by 2q_N and reconstructs that level's hidden rate independently."
+  },
+  "ST618": {
+    "arbitrary_continuous_rate_vector_dimension": 10,
+    "boundary": "Parameter counting is not Kolmogorov complexity of nature and supplies no preferred compression law.",
+    "depth": 10,
+    "fixed_precision_bits_per_rate": 32,
+    "object": "RefinementRate_Record_Complexity",
+    "packet_file": "FIN_ST618_RefinementRate_Record_Complexity.json",
+    "packet_sha256": "58fe9aed9356124cf77297f45e2f801bda56172732caf3972172c2f0ac65c297",
+    "program": "ST618",
+    "record_bits_for_arbitrary_rates": 320,
+    "self_similar_law_example": "q_N=kappa N^(-2-epsilon) uses two real parameters plus depth",
+    "status": "proven_refinement_rate_record_complexity_growth",
+    "theorem": "An arbitrary depth-L refinement rate sequence carries L independent continuous parameters; compression below linear depth requires a declared correlated/self-similar law and distortion precision.",
+    "universe_history_lossless_compression": false
+  },
+  "ST619": {
+    "associativity": "composed periodic embeddings agree canonically",
+    "boundary": "Additional scale stationarity, factor-exchange naturality, or fine records lie outside plain associativity.",
+    "free_rates_per_level": "one new q_N remains at every dyadic step",
+    "object": "Coassociativity_Does_Not_Select_Speed",
+    "packet_file": "FIN_ST619_Coassociativity_Does_Not_Select_Speed.json",
+    "packet_sha256": "a66e83f7843cc73dd5bbce3cf63c81b1c5b163f7169747ae5af03d1bd7444b67",
+    "program": "ST619",
+    "rate_sequence_selected": false,
+    "status": "proven_coassociativity_does_not_select_speed_tower",
+    "theorem": "Plain coassociativity/associativity of the dyadic lift and embeddings imposes no equality among level rates and therefore does not select a speed tower."
+  },
+  "ST620": {
+    "boundary": "Agreement at q=0 does not derive either axiom from strict FIN.",
+    "common_stationary_solution": "q_N=0",
+    "equivalence_of_axioms": false,
+    "object": "Trace_and_Speed_Stationarity_Comparison",
+    "packet_file": "FIN_ST620_Trace_and_Speed_Stationarity_Comparison.json",
+    "packet_sha256": "040dcf5fbe0d7a34df51446f8060be3a059034ee4cd2d305380c1b7de68de8df",
+    "program": "ST620",
+    "reason": "Away from stationarity the two observables weight q_N differently (1 versus N^2/2).",
+    "speed_recurrence": "C_2N=C_N+N^2 q_N/2",
+    "status": "proven_common_zero_solution_but_nonequivalent_scale_laws",
+    "theorem": "For nonnegative dyadic lifts, exact trace-density stationarity and exact formal-speed stationarity independently select the same zero-rate tower.",
+    "trace_recurrence": "tr(A_2N)/(2N)=tr(A_N)/N+q_N"
+  },
+  "ST621": {
+    "boundary": "Independent rulers/clocks or a sourced transition cocycle are required to break the degeneracy.",
+    "formal_speed_sequence": "c_hat_j=sqrt(C_j)",
+    "object": "Calibration_Compensation_Across_Tower",
+    "packet_file": "FIN_ST621_Calibration_Compensation_Across_Tower.json",
+    "packet_sha256": "9aee597a189e2516f62c44a4958618afcc41bd6fb43854d5bd1e1e880c3f4952",
+    "physical_invariance": "ell_j c_hat_j/tau_j = c_phys",
+    "program": "ST621",
+    "recursive_calibration": "(ell_{j+1}/tau_{j+1})/(ell_j/tau_j)=c_hat_j/c_hat_{j+1}",
+    "status": "proven_tower_speed_calibration_compensation",
+    "theorem": "Every positive rate tower can be made to display one constant physical speed by a compensating calibration cocycle. Thus constant observed c alone cannot identify the hidden refinement law.",
+    "unique_calibration": false
+  },
+  "ST622": {
+    "boundary": "This is a conditional local continuum candidate; continuous-time lattice tails, dimension, Lorentz symmetry and physical calibration remain unresolved.",
+    "canonical_physical_continuum": false,
+    "formal_c2_constant": 0.0,
+    "object": "ZeroRate_LocalContinuum_Candidate",
+    "packet_file": "FIN_ST622_ZeroRate_LocalContinuum_Candidate.json",
+    "packet_sha256": "fdd3a2a4b6022c509a0d03a238f4f1c016546c6c517c2f0284501fc7032e47e9",
+    "program": "ST622",
+    "rows": [
+      {
+        "N": 24,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.8355148924839766
+      },
+      {
+        "N": 48,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.8847202730759296
+      },
+      {
+        "N": 96,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.8973493976284461
+      },
+      {
+        "N": 192,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.9005274493230284
+      },
+      {
+        "N": 384,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.90132326486705
+      },
+      {
+        "N": 768,
+        "formal_c2": 3.616039403713872,
+        "phase_speed": 1.901522300236592
+      }
+    ],
+    "status": "proven_zero_rate_tower_quadratic_symbol_candidate",
+    "theorem": "The conditional zero-rate tower preserves the formal quadratic coefficient exactly and its first-mode phase speed converges to sqrt(C12)."
+  },
+  "ST623": {
+    "boundary": "Classification is within declared candidates, not exhaustive over all possible completion maps.",
+    "classes": {
+      "N^-2_antipodal": "speed diverges as sqrt(depth); no infinite limit",
+      "positive_d^-1.8_tail": "fractional symbol 0.8; divergent low-k group speed",
+      "signed_literal_strict": "finite counterexample to positivity at N=48",
+      "summable_antipodal": "finite but law-dependent formal speed; long-range edges may spoil uniform exponential cone",
+      "zero_rate_finite_range": "quadratic symbol; finite formal speed; exponential proxy cone"
+    },
+    "object": "Tower_Tail_Class_Comparison",
+    "packet_file": "FIN_ST623_Tower_Tail_Class_Comparison.json",
+    "packet_sha256": "5bda7035c6038ca8b3701d164f855e976f3dc8889f13abb963bf6081afd75c1b",
+    "program": "ST623",
+    "status": "proven_refinement_universality_class_separation",
+    "theorem": "The current refinement candidates occupy inequivalent universality classes; coarse A12 does not determine which class is physical."
+  },
+  "ST624": {
+    "boundary": "No canonical refinement is derived.",
+    "fine_record_available": false,
+    "new_strict_q_sequence": false,
+    "object": "RefinementRate_Source_Admission_Gate",
+    "packet_file": "FIN_ST624_RefinementRate_Source_Admission_Gate.json",
+    "packet_sha256": "6b79ffdb6fe1138da134a50a769a0af577f157326c2c5b17db7800b42e5d717e",
+    "program": "ST624",
+    "speed_stationarity_strict_sourced": false,
+    "status": "blocked_no_refinement_rate_source",
+    "trace_stationarity_strict_sourced": false
+  },
+  "ST625": {
+    "Lorentz_symmetry": false,
+    "SI_299792458_derived": false,
+    "boundary": "No spacetime, light field, boosts, apparatus, or calibration is exported.",
+    "canonical_continuum": false,
+    "exact_causal_cone": false,
+    "object": "PhysicalSpeed_CausalCone_Gate",
+    "packet_file": "FIN_ST625_PhysicalSpeed_CausalCone_Gate.json",
+    "packet_sha256": "2bcb3a929617bbf5977edc2c6cd08c3ef7b2da0062073d6db898ec1a4af54612",
+    "physical_c": false,
+    "program": "ST625",
+    "status": "blocked_no_physical_speed_or_continuum_closure"
+  },
+  "ST626": {
+    "boundary": "Round five is local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 5,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST626_Independent_Evidence_Gate.json",
+    "packet_sha256": "5942ce8b5b587bab6a35b48286626042f4bee8595c492d4b5a0bea7f753fbddf",
+    "program": "ST626",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

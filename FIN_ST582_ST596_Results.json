@@ -1,0 +1,324 @@
+{
+  "ST582": {
+    "boundary": "A failed Krawczyk inclusion is a method stop, not loss of the numerical root or IR branch.",
+    "cell": {
+      "Jacobian_determinant": -0.00042399565248366804,
+      "b_interval": [
+        0.2592,
+        0.2612
+      ],
+      "endpoint_log_centers": [
+        [
+          -3.558628442010349,
+          1.0766189085734104,
+          -3.1356643549084904,
+          -2.411947923283882,
+          1.1729695214124811
+        ],
+        [
+          -3.5587433493116274,
+          1.0714579119139838,
+          -3.1328445646280496,
+          -2.4088938336598895,
+          1.1763949406283642
+        ]
+      ],
+      "included": false,
+      "log_center": [
+        -3.5586857416431728,
+        1.074039861730622,
+        -3.1342560834038427,
+        -2.4104204024218543,
+        1.1746824065596924
+      ],
+      "log_radii": [
+        0.00010389380321835209,
+        0.004649509669948713,
+        0.0025427337964274745,
+        0.0027515375516496167,
+        0.003085193264980233
+      ],
+      "minimum_margin": -0.006629653663324131,
+      "weighted_contraction": 0.5358265617243193,
+      "x_center": [
+        0.02847622524882265,
+        2.9271810523184447,
+        0.043532126057731185,
+        0.08977754394067439,
+        3.2371146941715367
+      ]
+    },
+    "object": "LogChart_Interval_Krawczyk_Cell",
+    "packet_file": "FIN_ST582_LogChart_Interval_Krawczyk_Cell.json",
+    "packet_sha256": "061d352056dc0a8ab4b8f37448f5292db9ded148308b7442d7f0d71de5102c67",
+    "program": "ST582",
+    "result": "Direct interval substitution x=exp(z) suffers dependency inflation despite improved floating Jacobian conditioning.",
+    "status": "bounded_no_go_for_naive_log_interval_cell",
+    "theorem": null
+  },
+  "ST583": {
+    "all_neighbor_boxes_overlap": false,
+    "boundary": "Box overlap supports component tracking but is weaker than separate common-root Krawczyk links; no global complement root count follows.",
+    "cell_count": 0,
+    "cells": [],
+    "certified_stop": 0.2592,
+    "failure": {
+      "Jacobian_determinant": -0.00042205681650641573,
+      "b_interval": [
+        0.2592,
+        0.25923124999999997
+      ],
+      "endpoint_log_centers": [
+        [
+          -3.558628442010349,
+          1.0766189085734104,
+          -3.1356643549084904,
+          -2.411947923283882,
+          1.1729695214124811
+        ],
+        [
+          -3.5586302279578046,
+          1.0765383586692483,
+          -3.1356203960217575,
+          -2.4119001743051824,
+          1.1730230539041553
+        ]
+      ],
+      "included": false,
+      "log_center": [
+        -3.558629334946434,
+        1.0765786339922943,
+        -3.1356423758669005,
+        -2.4119240486838947,
+        1.1729962876953048
+      ],
+      "log_radii": [
+        1.8074204671312487e-06,
+        7.449558148272328e-05,
+        4.15637212575295e-05,
+        4.497427997697057e-05,
+        5.0179309082696525e-05
+      ],
+      "minimum_margin": -0.001026043061790105,
+      "weighted_contraction": 0.023106308028884578,
+      "x_center": [
+        0.028477831543927003,
+        2.9346219397416577,
+        0.04347181961032134,
+        0.08964265171282532,
+        3.231661132987741
+      ]
+    },
+    "maximum_contraction": null,
+    "minimum_margin": null,
+    "neighbor_box_overlaps": [],
+    "object": "LogChart_Adaptive_IR_Chain_to_0_3",
+    "packet_file": "FIN_ST583_LogChart_Adaptive_IR_Chain_to_0_3.json",
+    "packet_sha256": "6430d040f224884b418a8ab5b056f9269e8b6f5e1d9277e1140a32432e272233",
+    "program": "ST583",
+    "start": 0.2592,
+    "status": "bounded_stop_no_log_chart_interval_chain",
+    "target": 0.3,
+    "target_reached": false,
+    "theorem": null
+  },
+  "ST584": {
+    "all_cells_ordered": false,
+    "all_log_Jacobian_determinants_negative": false,
+    "boundary": "Local degree does not exclude disconnected components.",
+    "cell_count": 0,
+    "local_Brouwer_degree": null,
+    "object": "LogChart_IR_Ordering_and_Degree",
+    "packet_file": "FIN_ST584_LogChart_IR_Ordering_and_Degree.json",
+    "packet_sha256": "b71e4549c7ee9bfabb7c5d259871c9515b1c1b039e3ecdf2750046fbb32da89d",
+    "program": "ST584",
+    "status": "not_run_no_certified_log_cells",
+    "theorem": null
+  },
+  "ST585": {
+    "I_alpha": 1.7733109069087458,
+    "alpha": 0.8,
+    "boundary": "The theorem applies to a positive regularly varying envelope, not automatically to the signed oscillatory strict continuation.",
+    "integral_constant": "I_alpha=int_0^inf (1-cos x)x^(-1-alpha) dx",
+    "object": "PositiveTail_Tauberian_Dispersion_Theorem",
+    "packet_file": "FIN_ST585_PositiveTail_Tauberian_Dispersion_Theorem.json",
+    "packet_sha256": "160fa17cb1c26a73c03431a107fbb98496ffc80cffa1c365461a418ecc4b6f3c",
+    "program": "ST585",
+    "status": "proven_positive_tail_fractional_symbol_theorem",
+    "strict_signed_kernel_covered": false,
+    "symbol_asymptotic_coefficient": 3.5466218138174916,
+    "tail": "a_d~d^(-1-alpha)",
+    "theorem": "For 0<alpha<2 and a_d~c d^(-1-alpha), the even lattice symbol 2 sum_d a_d(1-cos(kd)) is asymptotic to 2c I_alpha |k|^alpha. The proof follows by splitting near/far tails and a Riemann-sum limit."
+  },
+  "ST586": {
+    "Lorentz_symmetry_consequence": false,
+    "assumption": "lambda(k)~C|k|^nu, C>0",
+    "boundary": "Quadratic dispersion is necessary for a finite massless speed, but not sufficient for Lorentz symmetry, isotropy, boosts, or an exact causal cone.",
+    "group_law": "v_g~sqrt(C)*(nu/2)|k|^(nu/2-1)",
+    "object": "DispersionExponent_Speed_Trichotomy",
+    "packet_file": "FIN_ST586_DispersionExponent_Speed_Trichotomy.json",
+    "packet_sha256": "f34b435668480e379228ac26077924638d538b0ca413c83ed1578642c60603fb",
+    "program": "ST586",
+    "status": "proven_dispersion_exponent_speed_trichotomy",
+    "theorem": "A finite nonzero low-k wave speed exists iff the generator symbol is asymptotically quadratic.",
+    "trichotomy": {
+      "nu<2": "speed diverges",
+      "nu=2": "finite nonzero speed sqrt(C)",
+      "nu>2": "speed tends to zero"
+    },
+    "wave_law": "omega(k)~sqrt(C)|k|^(nu/2)"
+  },
+  "ST587": {
+    "Lorentz_cone": false,
+    "bound": "|<x|exp(-itA)|y>| <= exp[-mu(r-v_mu |t|)]",
+    "boundary": "This is an approximate exponential cone for the added finite-range refinement, not strict finite propagation or a many-body Lorentz theorem.",
+    "many_body_LR": false,
+    "object": "FiniteRange_SingleParticle_LiebRobinson_Bound",
+    "optimized_mu": 5.72535946629167e-06,
+    "optimized_velocity": 3.007112629317681,
+    "packet_file": "FIN_ST587_FiniteRange_SingleParticle_LiebRobinson_Bound.json",
+    "packet_sha256": "b3ea39b6baea8b59630f7dbf3c2707e13190dd7a57534405e1f98e0601689b8f",
+    "program": "ST587",
+    "status": "proven_finite_range_single_particle_exponential_cone_bound",
+    "theorem": "For the supplied finite-range one-particle hopping generator, exponential conjugation and the Duhamel/Gronwall estimate give the displayed bound for every mu>0.",
+    "v_mu": "2 sum_d w_d sinh(mu d)/mu"
+  },
+  "ST588": {
+    "boundary": "Short-time matrix response is not a relativistic causal order; operational calibration and a continuum limit remain missing.",
+    "finite_range": {
+      "direct_coupling_beyond_R": false,
+      "exact_zero": false,
+      "tail_type": "exponentially bounded outside a linear proxy cone"
+    },
+    "object": "Finite_vs_LongRange_CausalTail_Classification",
+    "packet_file": "FIN_ST588_Finite_vs_LongRange_CausalTail_Classification.json",
+    "packet_sha256": "53aba123a7ee17d50e985bfa8eb1e40da0dd53a1a62cd6f263e5080d6ac2c8db",
+    "physical_causality": false,
+    "positive_long_range_eta_1_8": {
+      "direct_coupling_all_distances": true,
+      "heat_short_time_probability": "t r^-1.8",
+      "tail_type": "polynomial",
+      "unitary_short_time_probability": "t^2 r^-3.6"
+    },
+    "program": "ST588",
+    "second_order_wave": {
+      "offdiagonal_amplitude": "O(t^2 A_xy)",
+      "probability": "O(t^4 |A_xy|^2)"
+    },
+    "status": "proven_finite_vs_long_range_causal_tail_classification",
+    "theorem": "Direct nonzero long-range matrix elements create immediate polynomial spatial tails; finite-range generators instead require matrix-power paths and admit exponential moment bounds."
+  },
+  "ST589": {
+    "SI_c_prediction": false,
+    "boundary": "The exact SI number is partly definitional and is not predicted by a dimensionless slope.",
+    "dimensionless_speed": "c_hat_n",
+    "gauge_dimension_without_anchor": 1,
+    "invariance": "(alpha/beta)(c_hat_next/c_hat)=1",
+    "layer_transition": "(ell,tau,c_hat)->(alpha ell,beta tau,c_hat_next)",
+    "object": "LayerSpeed_Calibration_Torsor_Theorem",
+    "packet_file": "FIN_ST589_LayerSpeed_Calibration_Torsor_Theorem.json",
+    "packet_sha256": "68a0386d5c4c08a1fed988f1abfc39a8643e28a7ba41aa3c4519b0773b3a1baa",
+    "physical_speed": "c_n=(ell_n/tau_n)c_hat_n",
+    "program": "ST589",
+    "status": "proven_layer_speed_calibration_torsor",
+    "theorem": "Even after a refinement supplies c_hat_n, all speed records are invariant under one common length/time rescaling orbit. A transverse length or time anchor is necessary for an SI-valued speed."
+  },
+  "ST590": {
+    "N": 1536,
+    "boundary": "The Gaussian frequency record, q labeling and refinement are supplied; no apparatus or SI calibration is provided.",
+    "estimator": "mean(omega)/q",
+    "object": "FiniteShot_EffectiveSpeed_Estimator",
+    "omega": 0.007990129207804557,
+    "packet_file": "FIN_ST590_FiniteShot_EffectiveSpeed_Estimator.json",
+    "packet_sha256": "8f6a1c7afc9c8968fc7fe7fdb8b3c68699c65103fbff78d138b211ec0d3d7c37",
+    "physical_length_time_calibration": false,
+    "predicted_relative_standard_error": 0.0001,
+    "program": "ST590",
+    "relative_single_shot_noise": 0.002,
+    "samples": 400,
+    "status": "conditional_finite_shot_dimensionless_speed_estimator",
+    "synthetic_model": "omega observations Gaussian with known q",
+    "true_dimensionless_speed": 1.9532829071846787
+  },
+  "ST591": {
+    "boundary": "The class is not theorem-excluded until the scalar families are outward certified.",
+    "candidate_margin": 0.010070082679914272,
+    "interval_certificate_completed": false,
+    "minimum_required_total_error_budget": 0.005035041339957136,
+    "new_outward_cells": 0,
+    "numerical_best_ratio": 2.9125665644276797,
+    "object": "TwoLevel_Interval_Method_Stop",
+    "packet_file": "FIN_ST591_TwoLevel_Interval_Method_Stop.json",
+    "packet_sha256": "24bec45e3e603457ad5d2d5c20e776c6d7e53cd1db3fc4407e528cbf646add03",
+    "program": "ST591",
+    "proposed_interval_partition": "adaptive scalar intervals around each subset optimum plus analytic endpoint entropy bounds",
+    "result": "No complete 2047-family outward certificate was implemented in this round; preserve the numerical margin only.",
+    "status": "bounded_stop_two_level_interval_certificate",
+    "subset_orbits": 2047
+  },
+  "ST592": {
+    "boundary": "No candidate globality or counterexample follows.",
+    "decision": "Freeze generic box subdivision. A next move requires invariant coordinates or a sum-of-squares/convexity certificate.",
+    "global_reflection_quotient_theorem": false,
+    "new_interval_cells": 0,
+    "object": "ReflectionQuotient_Method_Stop",
+    "packet_file": "FIN_ST592_ReflectionQuotient_Method_Stop.json",
+    "packet_sha256": "5ba07886f49ffe413295da7558f5be3ad88a2710cd1bebd66a27237e0a67733d",
+    "program": "ST592",
+    "reflection_quotient_dimension": 6,
+    "status": "reflection_quotient_lane_method_gated"
+  },
+  "ST593": {
+    "boundary": "No further CRT or random-combination replay is admitted without a new exact basis method.",
+    "decision": "Freeze direct CRT and random-combination escalation; next admissible algebra move requires representation-theoretic coordinates, p-adic lifting with height control, or a characteristic-zero CAS checkpoint.",
+    "five_prime_reconstructed_relations": 0,
+    "modular_minimum_support_search": 1299,
+    "new_Q_relation": false,
+    "new_structure_aware_Q_method_available": false,
+    "object": "Stage1_Algebra_Method_Gate",
+    "packet_file": "FIN_ST593_Stage1_Algebra_Method_Gate.json",
+    "packet_sha256": "7f8e8e7730cbfcce58547bedc7e1d023a183777d9dc4dbcc978e823a57acf152",
+    "program": "ST593",
+    "rank_Q_first1326_closed": false,
+    "status": "stage1_algebra_lane_remains_method_gated"
+  },
+  "ST594": {
+    "QW_2191": "open",
+    "boundary": "No source closure is inferred from dispersion.",
+    "new_nonpremise_selector": false,
+    "new_seed_source": false,
+    "new_strict_gain_source": false,
+    "object": "Seed_Gain_Selector_Admission_Gate",
+    "packet_file": "FIN_ST594_Seed_Gain_Selector_Admission_Gate.json",
+    "packet_sha256": "60005f116f236f04eb7b6f96ee76a68252b2b19300891e65be978bc05d0d9698",
+    "program": "ST594",
+    "reason": "Causal-speed and refinement results classify propagation but do not create the state/pump/branch source resources.",
+    "status": "blocked_no_seed_gain_selector_source"
+  },
+  "ST595": {
+    "Lorentz_symmetry": false,
+    "SI_299792458_derived": false,
+    "boundary": "No continuum spacetime, boosts, isotropy, laboratory calibration, or physical light field is exported.",
+    "exact_causal_cone": false,
+    "finite_physical_c": false,
+    "object": "PhysicalSpeed_Lorentz_Admission_Gate",
+    "packet_file": "FIN_ST595_PhysicalSpeed_Lorentz_Admission_Gate.json",
+    "packet_sha256": "a866cb16dce4f8a3aea93c13b61861b45b46aceb6e29e665ac7943cb97964c8c",
+    "program": "ST595",
+    "quadratic_strict_refinement_selected": false,
+    "reason": "Only the added finite-range refinement has quadratic dispersion; positive long-range and naive signed refinements fail differently.",
+    "status": "blocked_no_physical_c_or_Lorentz_closure"
+  },
+  "ST596": {
+    "boundary": "Round three is local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 3,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST596_Independent_Evidence_Gate.json",
+    "packet_sha256": "853ba8fc8dc0d168fbb51707fcaea86c9037c767c6eaac35f1f8f1ef57c7ef04",
+    "program": "ST596",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

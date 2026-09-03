@@ -1,0 +1,323 @@
+{
+  "ST687": {
+    "N": 4096,
+    "boundary": "The product family, physical volume normalization and time window are supplied.",
+    "dimension_from_fine_heat_trace": true,
+    "object": "Fine_HeatTrace_SpectralDimension",
+    "packet_file": "FIN_ST687_Fine_HeatTrace_SpectralDimension.json",
+    "packet_sha256": "67ad5c78c7d2ea66db391a83b5aebd1ef2f3811e7fcb5e62b82f2622426c3167",
+    "program": "ST687",
+    "rows": [
+      {
+        "D": 1,
+        "median_spectral_dimension_window": 0.9980622499222704,
+        "target": 1
+      },
+      {
+        "D": 2,
+        "median_spectral_dimension_window": 1.9961244998445409,
+        "target": 2
+      },
+      {
+        "D": 3,
+        "median_spectral_dimension_window": 2.9941867497667545,
+        "target": 3
+      },
+      {
+        "D": 4,
+        "median_spectral_dimension_window": 3.9922489996890818,
+        "target": 4
+      },
+      {
+        "D": 5,
+        "median_spectral_dimension_window": 4.990311249611352,
+        "target": 5
+      }
+    ],
+    "status": "strong_fine_heat_trace_dimension_recovery",
+    "theorem_scope": "conditional numerical heat-trace estimator on D-fold product tower"
+  },
+  "ST688": {
+    "boundary": "Observer access, not the scalar endpoint alone, determines dimension identifiability.",
+    "coarse_dimension_identifiable": false,
+    "coarse_endpoint": "same A12 restriction for every D-fold product",
+    "fine_heat_trace": "scales with D and can identify D after fine access",
+    "object": "Coarse_vs_Fine_Dimension_Identifiability",
+    "packet_file": "FIN_ST688_Coarse_vs_Fine_Dimension_Identifiability.json",
+    "packet_sha256": "7014636e91536126d2c39722a2df634bab4c0302a1feacf54827c748763a56cc",
+    "program": "ST688",
+    "status": "proven_coarse_fine_dimension_identifiability_separation",
+    "theorem": "Spatial dimension is operationally identifiable only after fine multi-axis heat records are supplied; complete one-axis coarse dynamics is dimension blind."
+  },
+  "ST689": {
+    "Maxwell_action_sourced": false,
+    "action": "integral F wedge star F",
+    "boundary": "Requiring Maxwell conformal invariance imports the gauge action and is not derived from FIN scalar data.",
+    "object": "Maxwell_Conformal_Dimension_Theorem",
+    "packet_file": "FIN_ST689_Maxwell_Conformal_Dimension_Theorem.json",
+    "packet_sha256": "ceb6265c32f412e61ac66de6260ce79496c9032b22f8080efe040d0faed63716",
+    "program": "ST689",
+    "rows": [
+      {
+        "Weyl_scaling_exponent": -2,
+        "conformal": false,
+        "spacetime_dimension": 2
+      },
+      {
+        "Weyl_scaling_exponent": -1,
+        "conformal": false,
+        "spacetime_dimension": 3
+      },
+      {
+        "Weyl_scaling_exponent": 0,
+        "conformal": true,
+        "spacetime_dimension": 4
+      },
+      {
+        "Weyl_scaling_exponent": 1,
+        "conformal": false,
+        "spacetime_dimension": 5
+      },
+      {
+        "Weyl_scaling_exponent": 2,
+        "conformal": false,
+        "spacetime_dimension": 6
+      },
+      {
+        "Weyl_scaling_exponent": 3,
+        "conformal": false,
+        "spacetime_dimension": 7
+      },
+      {
+        "Weyl_scaling_exponent": 4,
+        "conformal": false,
+        "spacetime_dimension": 8
+      }
+    ],
+    "status": "proven_conditional_Maxwell_conformal_dimension4",
+    "theorem": "Under g->Omega^2 g in n spacetime dimensions, the Maxwell 2-form action scales as Omega^(n-4) and is classically conformally invariant exactly at n=4."
+  },
+  "ST690": {
+    "boundary": "Using the observed polarization count is a physical input, not a zero-data FIN derivation.",
+    "object": "PolarizationCount_SpatialDimension_Selector",
+    "observed_two_polarization_condition": "D-1=2",
+    "packet_file": "FIN_ST690_PolarizationCount_SpatialDimension_Selector.json",
+    "packet_sha256": "850b2afb91753ae9bb0a75b5a71af637be4de5bf8a0f3f4b6ef6ebd2f7b0c118",
+    "program": "ST690",
+    "rows": [
+      {
+        "massless_vector_polarizations": 0,
+        "spatial_D": 1
+      },
+      {
+        "massless_vector_polarizations": 1,
+        "spatial_D": 2
+      },
+      {
+        "massless_vector_polarizations": 2,
+        "spatial_D": 3
+      },
+      {
+        "massless_vector_polarizations": 3,
+        "spatial_D": 4
+      },
+      {
+        "massless_vector_polarizations": 4,
+        "spatial_D": 5
+      },
+      {
+        "massless_vector_polarizations": 5,
+        "spatial_D": 6
+      },
+      {
+        "massless_vector_polarizations": 6,
+        "spatial_D": 7
+      }
+    ],
+    "selected_spatial_D": 3,
+    "status": "proven_conditional_two_polarization_selects_D3",
+    "theorem": "A massless gauge vector in D spatial dimensions has D-1 transverse polarizations; imposing exactly two selects D=3.",
+    "two_polarizations_strict_sourced": false
+  },
+  "ST691": {
+    "D1": "interior interval dependence rather than shell-only support",
+    "Huygens_premise_sourced": false,
+    "boundary": "Huygens behavior is an added continuum principle and can fail with mass, curvature or dispersion.",
+    "even_D": "tails inside the cone",
+    "minimal_nontrivial_sharp_dimension": 3,
+    "object": "Huygens_Principle_Dimension_Classification",
+    "packet_file": "FIN_ST691_Huygens_Principle_Dimension_Classification.json",
+    "packet_sha256": "b4e163d0599c297ba66c94d078bf9d4a0355769c549f77895b287fedd6945f64",
+    "program": "ST691",
+    "sharp_Huygens_spatial_dimensions": "odd D>=3 for the standard massless wave equation",
+    "status": "proven_conditional_Huygens_minimal_D3",
+    "theorem": "Requiring a standard scalar wave fundamental solution supported only on the cone and the smallest nontrivial spatial dimension selects D=3 conditionally."
+  },
+  "ST692": {
+    "boundary": "Agreement of imported principles is coherence, not provenance from the nadsoliton kernel.",
+    "common_result": "3+1",
+    "object": "Combined_Conditional_3plus1_Selector",
+    "packet_file": "FIN_ST692_Combined_Conditional_3plus1_Selector.json",
+    "packet_sha256": "9a18a66f6c705398804583f7c601f82ed914d391db821faaca2074d0fa7c2a76",
+    "program": "ST692",
+    "selectors": {
+      "Maxwell_conformal": "spacetime n=4",
+      "minimal_sharp_Huygens": "spatial D=3",
+      "two_polarizations": "spatial D=3"
+    },
+    "status": "proven_three_conditional_selectors_intersect_at_3plus1",
+    "strict_FIN_dimension_derivation": false,
+    "theorem": "Three independent conditional physics principles intersect at 3+1 dimensions."
+  },
+  "ST693": {
+    "available_scalar_records": [
+      "A12 spectrum",
+      "coarse Green functions",
+      "dual dynamics",
+      "conditional 1D slope"
+    ],
+    "boundary": "Fine cross-axis or gauge records leave this class.",
+    "dimension_fiber": "all D-fold products restrict to the same one-axis records",
+    "new_dimension_source": false,
+    "object": "ScalarEndpoint_Dimension_NoGo_Persistence",
+    "packet_file": "FIN_ST693_ScalarEndpoint_Dimension_NoGo_Persistence.json",
+    "packet_sha256": "2c2ed24374b0271c56670a2c6ced5532ab105bf16ffabb3034f4b31cf5e45a2a",
+    "program": "ST693",
+    "status": "proven_scalar_endpoint_dimension_no_go_persists",
+    "theorem": "No functional of the available scalar endpoint/coarse records can distinguish the conditional product dimension."
+  },
+  "ST694": {
+    "boundary": "No legacy electromagnetic formula is transferred.",
+    "coefficients": [
+      "kappa_E",
+      "kappa_B",
+      "gauge coupling e"
+    ],
+    "coefficients_strict_sourced": false,
+    "object": "GaugeCoefficient_Source_Obligation",
+    "observable_combinations": {
+      "impedance": "sqrt(kappa_E/kappa_B)",
+      "interaction": "e",
+      "speed": "sqrt(kappa_E kappa_B)"
+    },
+    "packet_file": "FIN_ST694_GaugeCoefficient_Source_Obligation.json",
+    "packet_sha256": "780c13029e5c03dbc3dedaba9c0234bf49e757d983ad2a099fcc672a35efff7f",
+    "program": "ST694",
+    "status": "proven_gauge_coefficient_source_obligation",
+    "theorem": "Propagation and free-field records can identify speed/impedance combinations but not source the interaction coupling or unit normalization."
+  },
+  "ST695": {
+    "boundary": "No photon statistics or quantum field is exported.",
+    "classical_input": "symplectic phase space of transverse modes",
+    "object": "PhotonQuantization_Fock_Obligation",
+    "packet_file": "FIN_ST695_PhotonQuantization_Fock_Obligation.json",
+    "packet_sha256": "81bc9dd0eb30f22b9f42d6c8903f782d6771655cdf252fc60582ae42d2e02f43",
+    "photon_sector_derived": false,
+    "program": "ST695",
+    "quantum_additions": [
+      "complex structure/positive-frequency split",
+      "canonical commutators and hbar",
+      "Fock representation",
+      "vacuum state",
+      "Born instruments"
+    ],
+    "status": "proven_photon_quantization_additional_structure_obligation",
+    "theorem": "Classical Maxwell modes and two polarizations do not uniquely determine photon quantization; inequivalent representations can occur beyond finite mode sets."
+  },
+  "ST696": {
+    "QW_2191": "open",
+    "boundary": "Both helicities may coexist physically; the result concerns canonical sign provenance.",
+    "helicity_pair": [
+      "+1",
+      "-1"
+    ],
+    "inversion": "exchanges helicities",
+    "object": "Helicity_Orientation_Selector",
+    "packet_file": "FIN_ST696_Helicity_Orientation_Selector.json",
+    "packet_sha256": "741793cf2ded8e9b897fa27aba82dd138d1b1b3186a2d63e182fe12c106a94e4",
+    "program": "ST696",
+    "radial_scalar_source": "even",
+    "status": "proven_helicity_selector_obstruction",
+    "theorem": "A parity-even scalar kernel cannot canonically choose a helicity sign. Circular polarization can be prepared/measured only after an oriented frame or chiral state is supplied."
+  },
+  "ST697": {
+    "apparatus_available": false,
+    "boundary": "The schema is synthetic and has no independent custody record.",
+    "held_out": true,
+    "model_comparison": [
+      "D=2,3,4 products",
+      "scalar vs gauge",
+      "local vs fractional refinements"
+    ],
+    "object": "DimensionPolarization_Record_Schema",
+    "packet_file": "FIN_ST697_DimensionPolarization_Record_Schema.json",
+    "packet_sha256": "efa43a672eeb2db4be04776ffbad51707daddc5818efdc2aae64eab769514abb",
+    "program": "ST697",
+    "required_records": [
+      "fine heat trace over multiple axes",
+      "two transverse polarization responses",
+      "cone/tail profile",
+      "electric/magnetic coefficient ratio",
+      "independent rods and both clock classes"
+    ],
+    "status": "constructed_dimension_polarization_record_schema"
+  },
+  "ST698": {
+    "additional_anchor": "one independent dimensional rod/clock ratio",
+    "boundary": "Rank accounting is conditional on ideal independent records.",
+    "ideal_record_rank": 4,
+    "object": "GaugeClockCalibration_Identifiability",
+    "packet_file": "FIN_ST698_GaugeClockCalibration_Identifiability.json",
+    "packet_sha256": "93c68e8fe7c723a11a5d6becc69e2e5722aab3c60ce99d1ec074e4844d108083",
+    "physical_identification": false,
+    "program": "ST698",
+    "residual_gauge_dimension": 1,
+    "status": "proven_gauge_clock_calibration_one_orbit",
+    "theorem": "Even combined wave, heat, speed and impedance records leave one common calibration orbit without an independent anchor.",
+    "unknowns": [
+      "ballistic clock scale",
+      "diffusive clock scale",
+      "length scale",
+      "kappa_E",
+      "kappa_B"
+    ]
+  },
+  "ST699": {
+    "Huygens_source": false,
+    "Maxwell_action_source": false,
+    "boundary": "Conditional selectors do not become strict by intersection.",
+    "dimension_source": false,
+    "gauge_coefficients_source": false,
+    "object": "DimensionGauge_Source_Gate",
+    "packet_file": "FIN_ST699_DimensionGauge_Source_Gate.json",
+    "packet_sha256": "36300d18d9900be1d95645fbed6998c96108c7f9584ff14f9deb7aa8b5593701",
+    "polarization_source": false,
+    "program": "ST699",
+    "status": "blocked_no_dimension_gauge_source"
+  },
+  "ST700": {
+    "boundary": "No SM/GR, apparatus, or ToE closure.",
+    "charge_matter_coupling": false,
+    "exact_Lorentz": false,
+    "experiment": false,
+    "object": "PhysicalPhoton_Lorentz_Gate",
+    "packet_file": "FIN_ST700_PhysicalPhoton_Lorentz_Gate.json",
+    "packet_sha256": "9da2d03e9bed07ecbeb1707d1ef19b6bd4578238eb5de02859c5160da15096b9",
+    "physical_photon": false,
+    "program": "ST700",
+    "quantum_Maxwell": false,
+    "status": "blocked_no_physical_photon_Lorentz_closure"
+  },
+  "ST701": {
+    "boundary": "Round four is local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 4,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST701_Independent_Evidence_Gate.json",
+    "packet_sha256": "bf0317b9a2b40c85520c5543e1735cc78359f10dac586ab1639be94bcc02db95",
+    "program": "ST701",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

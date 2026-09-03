@@ -1,0 +1,169 @@
+{
+  "ST2322": {
+    "boundary": "Dimensionless three-body observable on the exact hidden-synergy family.",
+    "expectation": "epsilon",
+    "object": "ParityObservable",
+    "observable": "Y=x1*x2*x3",
+    "outcomes": [
+      -1,
+      1
+    ],
+    "packet_file": "FIN_ST2322_ParityObservable.json",
+    "packet_sha256": "4844bf0d38e95be4d48a03775ac89827d32d27045450a84189e9df668e8fcdc0",
+    "program": "ST2322",
+    "status": "Constructed"
+  },
+  "ST2323": {
+    "boundary": "Fourier characters on the binary cube are orthogonal; parity is not a sum of one/two-body functions.",
+    "minimum_interaction_order": 3,
+    "object": "ThreeBodyMinimality",
+    "packet_file": "FIN_ST2323_ThreeBodyMinimality.json",
+    "packet_sha256": "489c1c82584e628b2d52dca27fb82e3701f8c42f8efffc3fff77d04b740a6b69",
+    "program": "ST2323",
+    "status": "Proven"
+  },
+  "ST2324": {
+    "boundary": "All pair marginals are epsilon-independent, so their score and Fisher information vanish.",
+    "object": "PairInstrumentFisherZero",
+    "packet_file": "FIN_ST2324_PairInstrumentFisherZero.json",
+    "packet_sha256": "9b0851eaa6f87f8297e9f27942db0d11e5f4694fee215be2e728e41ab50348dc",
+    "pair_only_Fisher_information": 0,
+    "program": "ST2324",
+    "status": "Proven"
+  },
+  "ST2325": {
+    "boundary": "Y is Bernoulli on +-1 with P(Y=y)=(1+epsilon*y)/2.",
+    "likelihood": "(1+epsilon*y)/2",
+    "object": "ParityLikelihood",
+    "packet_file": "FIN_ST2325_ParityLikelihood.json",
+    "packet_sha256": "94a97b4d5743691e718843b849c17b16025c9e37639dddce0ee579ef014487b7",
+    "program": "ST2325",
+    "status": "Proven"
+  },
+  "ST2326": {
+    "at_epsilon_0": 2.2857142857142856,
+    "boundary": "Direct score expectation.",
+    "object": "ParityFisherInformation",
+    "packet_file": "FIN_ST2326_ParityFisherInformation.json",
+    "packet_sha256": "35bc18ca219018ffc8f6a80546c0e9a721c0dcc194e67d248ae7cadf436c00bd",
+    "program": "ST2326",
+    "single_event_Fisher": "1/(1-epsilon^2)",
+    "status": "Proven"
+  },
+  "ST2327": {
+    "at_n_bound": 0.023026315789473683,
+    "boundary": "The sample mean of parity is unbiased and reaches the Cramer-Rao variance.",
+    "estimator": "epsilon_hat=mean(Y)",
+    "object": "EfficientEstimator",
+    "packet_file": "FIN_ST2327_EfficientEstimator.json",
+    "packet_sha256": "98c9d8444e19204bd2a9e0778b85e36deeacc5e4d39e43e6bd60145b91c68ad3",
+    "program": "ST2327",
+    "status": "Proven",
+    "variance": "(1-epsilon^2)/n"
+  },
+  "ST2328": {
+    "boundary": "Hoeffding two-sided bound for deciding the sign when |epsilon|>=epsilon0.",
+    "delta": 0.01,
+    "epsilon0": 0.75,
+    "object": "FiniteSampleBound",
+    "packet_file": "FIN_ST2328_FiniteSampleBound.json",
+    "packet_sha256": "80859ea79ddc7ce9a308f4a36a6f06e224e675ca035de532d6c66095aefd19de",
+    "program": "ST2328",
+    "status": "Proven bound",
+    "sufficient_events": 19
+  },
+  "ST2329": {
+    "boundary": "Minimal non-Gaussian extension carrying exactly the missing sufficient statistic.",
+    "epsilon": "tanh(theta)",
+    "family": "p_theta(x)=exp(theta*x1*x2*x3)/(8*cosh(theta))",
+    "object": "ThreeBodyExponentialFamily",
+    "packet_file": "FIN_ST2329_ThreeBodyExponentialFamily.json",
+    "packet_sha256": "1b9172352a99aed6cd9ea9630c5f8edb8409e249f6ed44086a610ea147a4af17",
+    "program": "ST2329",
+    "status": "Constructed"
+  },
+  "ST2330": {
+    "Hamiltonian": "H=-J*x1*x2*x3",
+    "boundary": "A three-body Gibbs interaction realizes theta=beta*J, but beta and J are added dimensional/thermodynamic data.",
+    "object": "ThreeBodyGibbsHamiltonian",
+    "packet_file": "FIN_ST2330_ThreeBodyGibbsHamiltonian.json",
+    "packet_sha256": "d6de5c0a40f7ab132f470cf5b8db7bd5a28bb93c65a91e4376a879babb260a46",
+    "program": "ST2330",
+    "status": "Conditional physical form",
+    "strict_J_source": false
+  },
+  "ST2331": {
+    "boundary": "Expected likelihood gradient has a unique stable stationary point for a supplied target epsilon_star.",
+    "flow": "dot(theta)=epsilon_star-tanh(theta)",
+    "object": "AdaptiveLikelihoodFlow",
+    "packet_file": "FIN_ST2331_AdaptiveLikelihoodFlow.json",
+    "packet_sha256": "f7b684fdfd788ece72ca7a0c2b4a0adccad21e0732a2fe3528c0786402873560",
+    "program": "ST2331",
+    "stationary": "theta=artanh(epsilon_star)",
+    "status": "Constructed"
+  },
+  "ST2332": {
+    "boundary": "With epsilon_star=0 and theta(0)=0 the adaptive flow remains at the pair/Gaussian baseline.",
+    "object": "ZeroSourceInvariant",
+    "packet_file": "FIN_ST2332_ZeroSourceInvariant.json",
+    "packet_sha256": "45353fc374e0c6d69041fc0a1958d34090e7813855b129bfe9d92ba972fa86c2",
+    "program": "ST2332",
+    "spontaneous_nonzero_source": false,
+    "status": "Proven"
+  },
+  "ST2333": {
+    "QW2191_discharged": false,
+    "boundary": "The sign of theta/epsilon is the same unsourced polarity problem in a minimal exact model.",
+    "object": "PolarityBoundary",
+    "odd_source_needed": true,
+    "packet_file": "FIN_ST2333_PolarityBoundary.json",
+    "packet_sha256": "c65ad8a30a372d268132e33cb4908a06c9acf5975b0a31374c9f49c90b580b03",
+    "program": "ST2333",
+    "status": "Boundary"
+  },
+  "ST2334": {
+    "boundary": "Raw records must retain all three outcomes from one jointly prepared trial.",
+    "object": "OperationalRecordSpec",
+    "packet_file": "FIN_ST2334_OperationalRecordSpec.json",
+    "packet_sha256": "bfb86da952e25f1c31c55adfe550d1aea5d890a26cd3f7879c6dd4a33d53d208",
+    "pairwise_histograms_sufficient": false,
+    "physical_platform_supplied": false,
+    "program": "ST2334",
+    "record_fields": [
+      "run_id",
+      "x1",
+      "x2",
+      "x3",
+      "parity",
+      "timestamp",
+      "configuration"
+    ],
+    "status": "Executable specification"
+  },
+  "ST2335": {
+    "boundary": "A minimal ternary instrument and model exist, but both explicitly add the three-body statistic/source absent from strict FIN.",
+    "laboratory_evidence": false,
+    "mathematical_bridge": true,
+    "object": "RoundFiveVerdict",
+    "packet_file": "FIN_ST2335_RoundFiveVerdict.json",
+    "packet_sha256": "eccc570924f7613f8bab423373bd6c1cb5b54c159b00c236030cb4b8782ff895",
+    "program": "ST2335",
+    "status": "Round verdict",
+    "strict_source_bridge": false
+  },
+  "ST2336": {
+    "boundary": "Synthesize the two conditional routes and issue a no-new-live-frontier result for the current pair/refinement core.",
+    "next": [
+      "gate v3",
+      "minimal principle lattice",
+      "strict/conditional split",
+      "stop rules",
+      "next source class"
+    ],
+    "object": "RoundFiveRecommendation",
+    "packet_file": "FIN_ST2336_RoundFiveRecommendation.json",
+    "packet_sha256": "92c77f782c62adb962fd6d411234409d73216548ecda9fd1dd3f09baf5e4f6df",
+    "program": "ST2336",
+    "status": "Recommendation"
+  }
+}

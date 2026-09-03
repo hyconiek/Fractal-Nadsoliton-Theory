@@ -1,0 +1,206 @@
+{
+  "ST1272": {
+    "H_C": "classical heat on Delta11",
+    "H_Q": "closed unitary on D12",
+    "boundary": "Conditional model comparison, not nature data.",
+    "object": "OA_ComparisonScope",
+    "packet_file": "FIN_ST1272_OA_ComparisonScope.json",
+    "packet_sha256": "9861145fb0752ffbd62ed3aca9859296914b1b50ae51d511129be6acebe25342",
+    "program": "ST1272",
+    "shared_A": true,
+    "source_vertex": 0,
+    "status": "constructed_two_hypothesis_OA_scope"
+  },
+  "ST1273": {
+    "boundary": "CA and SA remain conditional.",
+    "channel": "p(t)=exp(-tA)p0",
+    "clock": "t=t_phys/tau_*",
+    "measurement": "vertex return",
+    "object": "FrozenClassicalOA",
+    "packet_file": "FIN_ST1273_FrozenClassicalOA.json",
+    "packet_sha256": "92bd010ab724215cb31b3655ece3c94dcea35e56fa5adf7d6be51befd9ab210a",
+    "program": "ST1273",
+    "state": "p in Delta11",
+    "status": "frozen_classical_OA_hypothesis"
+  },
+  "ST1274": {
+    "U_t": "exp(-itA)",
+    "boundary": "No dephasing in the base alternative.",
+    "channel": "rho(t)=U_t rho0 U_t*",
+    "measurement": "vertex PVM",
+    "object": "FrozenQuantumOA",
+    "packet_file": "FIN_ST1274_FrozenQuantumOA.json",
+    "packet_sha256": "c2c0d4f95c8ee83069ceaab475a26b30c4388babbb4cb3fc10286e56ab213ec0",
+    "program": "ST1274",
+    "state": "rho in D12",
+    "status": "frozen_quantum_OA_hypothesis"
+  },
+  "ST1275": {
+    "SA_frame": [
+      0,
+      1
+    ],
+    "boundary": "Preparation implementation is not laboratory-sourced.",
+    "classical": "delta_0",
+    "object": "CommonPreparation",
+    "packet_file": "FIN_ST1275_CommonPreparation.json",
+    "packet_sha256": "5f2a3ac2f0990680094707186ba20bb273ff5a85422abdbbaa15f40a23d8c4ca",
+    "program": "ST1275",
+    "quantum": "|0><0|",
+    "status": "constructed_common_selected_vertex_preparation"
+  },
+  "ST1276": {
+    "boundary": "Same outcome label, category-specific state update.",
+    "effect": "E0=|0><0|",
+    "instrument_update_frozen": false,
+    "object": "CommonVertexInstrument",
+    "outcomes": [
+      "return",
+      "not_return"
+    ],
+    "packet_file": "FIN_ST1276_CommonVertexInstrument.json",
+    "packet_sha256": "ebad25d6919c9b3af98622f86ae9186216952c6e5696505a3bad7ab4cff7b57e",
+    "program": "ST1276",
+    "status": "constructed_common_vertex_effect"
+  },
+  "ST1277": {
+    "boundary": "Finite categorical result.",
+    "object": "ReturnBernoulliObservable",
+    "p_C(t)": "(exp(-tA))_00",
+    "p_Q(t)": "|(exp(-itA))_00|^2",
+    "packet_file": "FIN_ST1277_ReturnBernoulliObservable.json",
+    "packet_sha256": "60b953af13596a9fc0a4995417044775b272cfc360f6270a3582724cd51b6ed0",
+    "program": "ST1277",
+    "status": "proven_return_measurement_is_Bernoulli_under_each_frozen_model"
+  },
+  "ST1278": {
+    "TV_t1": 0.359654048943292,
+    "boundary": "Return statistic is a coarse binary reduction.",
+    "classical_probabilities_t1": [
+      0.2628294052832485,
+      0.13670979421946436,
+      0.08901539723803222,
+      0.05936806351215792,
+      0.04076510489715251,
+      0.029892723139326022,
+      0.025668428704485116,
+      0.029892723139326026,
+      0.040765104897152515,
+      0.05936806351215795,
+      0.08901539723803226,
+      0.13670979421946441
+    ],
+    "object": "FullVertexObservable",
+    "packet_file": "FIN_ST1278_FullVertexObservable.json",
+    "packet_sha256": "238274c3399c31446e7ff3bc04c9c236a4a293d4778d40f87953bf180d83f23c",
+    "program": "ST1278",
+    "quantum_probabilities_t1": [
+      0.5843533247056469,
+      0.15577485897991125,
+      0.03643332476217712,
+      0.010368996248713,
+      0.003188142114035213,
+      0.0013431837799597586,
+      0.0014296635247602854,
+      0.001343183779959759,
+      0.0031881421140352154,
+      0.010368996248713005,
+      0.036433324762177144,
+      0.15577485897991108
+    ],
+    "status": "constructed_full_vertex_multinomial_observable"
+  },
+  "ST1279": {
+    "boundary": "All Fourier modes have equal source weight 1/12.",
+    "classical": "C(t)=12^-1 sum_k exp(-lambda_k t)",
+    "object": "SpectralReturnFormulas",
+    "packet_file": "FIN_ST1279_SpectralReturnFormulas.json",
+    "packet_sha256": "0dd450a6eeaab48b8894c5935ac5d113af599875a654a31d0f5a51113d1f6718",
+    "program": "ST1279",
+    "quantum": "Q(t)=|12^-1 sum_k exp(-i lambda_k t)|^2",
+    "status": "proven_circulant_spectral_return_formulas"
+  },
+  "ST1280": {
+    "boundary": "Circulant translation symmetry only.",
+    "object": "TranslationEquivariance",
+    "packet_file": "FIN_ST1280_TranslationEquivariance.json",
+    "packet_sha256": "30f655d7ac8ca9c6e9ca59589548c89bd5b7bc927a70116023f2222bae15f1d4",
+    "program": "ST1280",
+    "same_diagonal_all_vertices": true,
+    "selects_absolute_origin": false,
+    "status": "proven_return_curves_are_source_vertex_independent",
+    "vertices": 12
+  },
+  "ST1281": {
+    "boundary": "Numerical replay at t=1.",
+    "classical_min": 0.025668428704485116,
+    "classical_sum": 0.9999999999999998,
+    "object": "ProbabilityNormalization",
+    "packet_file": "FIN_ST1281_ProbabilityNormalization.json",
+    "packet_sha256": "db55b0b7312827526f0ce888c47eb2d527fc865ae865135249caec3c9f0d2591",
+    "program": "ST1281",
+    "quantum_min": 0.0013431837799597586,
+    "quantum_sum": 0.9999999999999998,
+    "status": "proven_both_frozen_output_distributions_are_normalized"
+  },
+  "ST1282": {
+    "boundary": "Fingerprint is reproducibility metadata, not exact symbolic provenance.",
+    "dimension": 12,
+    "object": "MatrixFingerprint",
+    "packet_file": "FIN_ST1282_MatrixFingerprint.json",
+    "packet_sha256": "a66853c9b777948a8e67facd6d6526a0eb6c92cf23f11f48e569285b8a51bcf1",
+    "program": "ST1282",
+    "rounding_decimals": 15,
+    "sha256": "faf664a35cf511856921b82f27a858c56b5b5f258a674b53b5b106cacfeb66b1",
+    "status": "constructed_frozen_matrix_fingerprint"
+  },
+  "ST1283": {
+    "boundary": "Chosen before synthetic or future event records.",
+    "domain": [
+      0.0,
+      10.0
+    ],
+    "object": "TimeDomainFreeze",
+    "optimization_target": "absolute return-probability separation",
+    "packet_file": "FIN_ST1283_TimeDomainFreeze.json",
+    "packet_sha256": "e62ef8ff8261490b1dacb4452c9a0d721c81699247cde430be09371d9dae82fb",
+    "program": "ST1283",
+    "status": "frozen_design_time_domain"
+  },
+  "ST1284": {
+    "boundary": "Robust alternatives are deferred to round four.",
+    "clock_scale": 1.0,
+    "dephasing": 0.0,
+    "loss": 0.0,
+    "object": "NoNuisanceBaseHypotheses",
+    "packet_file": "FIN_ST1284_NoNuisanceBaseHypotheses.json",
+    "packet_sha256": "893e293dfe3c1a3bb7a7701286d9c00f56ee2618071dee71548f84cf293c3ce7",
+    "program": "ST1284",
+    "status": "base_hypotheses_exclude_unfrozen_nuisance_parameters"
+  },
+  "ST1285": {
+    "boundary": "Local generation cannot satisfy external custody.",
+    "object": "BlindRoleBoundary",
+    "packet_file": "FIN_ST1285_BlindRoleBoundary.json",
+    "packet_sha256": "8c4ea4faa85ee34884292b67cd5d51fd72d982bf69b76ae05ab0fafcd9ab8d66",
+    "program": "ST1285",
+    "provider_ne_registrar_ne_analyst": false,
+    "raw_nature_events": false,
+    "status": "blocked_independent_provider_registrar_analyst_roles"
+  },
+  "ST1286": {
+    "boundary": "Derive curves and optimize discrimination times.",
+    "next": [
+      "spectral multiplicity reduction",
+      "stationary derivative",
+      "global grid/Lipschitz audit",
+      "crossings",
+      "practical time freeze"
+    ],
+    "object": "RoundOne_Recommendation",
+    "packet_file": "FIN_ST1286_RoundOne_Recommendation.json",
+    "packet_sha256": "b8b4ca4decce1b7575f6b009aa373fad1d165891ab904c7aec923d38ff7d4ef2",
+    "program": "ST1286",
+    "status": "recommended_ST1287_ST1301"
+  }
+}

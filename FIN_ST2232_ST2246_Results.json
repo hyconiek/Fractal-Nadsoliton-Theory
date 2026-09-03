@@ -1,0 +1,196 @@
+{
+  "ST2232": {
+    "boundary": "Support means nonzero off-diagonal strict conductance.",
+    "edges": 66,
+    "minimum_edge_weight": 0.011070817321442113,
+    "object": "StrictSupportGraph",
+    "packet_file": "FIN_ST2232_StrictSupportGraph.json",
+    "packet_sha256": "061f6120a41789994561bf313f6d5d33b08be5e6b7ee5066396d04971be4bed1",
+    "program": "ST2232",
+    "status": "Proven",
+    "support_is_complete_graph": true,
+    "vertices": 12
+  },
+  "ST2233": {
+    "boundary": "The support-clique functor is canonical, but its use as physical gauge cells is an interpretation.",
+    "complex": "full 11-simplex",
+    "contractible": true,
+    "object": "FlagComplex",
+    "packet_file": "FIN_ST2233_FlagComplex.json",
+    "packet_sha256": "bc81606e6d44171a2d7b140e6e84f2c1aaa567a70280765556984857421661d8",
+    "program": "ST2233",
+    "status": "Constructed canonically",
+    "triangles": 220
+  },
+  "ST2234": {
+    "boundary": "Every strict support edge is positive in the audited W.",
+    "object": "PositiveLoopProduct",
+    "packet_file": "FIN_ST2234_PositiveLoopProduct.json",
+    "packet_sha256": "022ef2076fc01db9fe9e3482e62ddd2bf3464a7377d5f9600ba3e46b66847462",
+    "positive_faces": 220,
+    "program": "ST2234",
+    "status": "Proven",
+    "tau_max": 0.04241983422019662,
+    "tau_min": 9.254308214867097e-05
+  },
+  "ST2235": {
+    "D12_natural": true,
+    "boundary": "Target-free dimensionless candidate; average-one normalization fixes only a convention.",
+    "formula": "h_f=tau_f/mean(tau)",
+    "object": "TauHodgeConstruction",
+    "packet_file": "FIN_ST2235_TauHodgeConstruction.json",
+    "packet_sha256": "d8fe420f353a24eea26f3c3c17cbd54134e72bc4268842699973964ca7c2f925",
+    "positive": true,
+    "program": "ST2235",
+    "status": "Constructed"
+  },
+  "ST2236": {
+    "boundary": "A strict-derived base-level candidate spectrum, not observed gauge physics.",
+    "distinct_rounded_8": 33,
+    "lambda_max": 60.249329680536924,
+    "lambda_min": 0.3480858051809625,
+    "object": "TauHodgeSpectrum",
+    "packet_file": "FIN_ST2236_TauHodgeSpectrum.json",
+    "packet_sha256": "374786ff97489af90dc8896f7588be490019e4506bb116c27cd9f02cf338cc3d",
+    "program": "ST2236",
+    "status": "Computed",
+    "trace": 792.0
+  },
+  "ST2237": {
+    "boundary": "Every p>0 is positive, target-free, D12-natural, and has mean one.",
+    "family": "h_f(p)=tau_f^p/mean(tau^p)",
+    "object": "PositivePowerFamily",
+    "packet_file": "FIN_ST2237_PositivePowerFamily.json",
+    "packet_sha256": "60d5c1fb219628f912068b5868fa2b4caaedaa770280c742cd432d0cd8992a1a",
+    "parameter_domain": "p>0",
+    "program": "ST2237",
+    "sample_metrics": {
+      "0.5": {
+        "distinct_rounded_8": 33,
+        "lambda_max": 33.10477642433536,
+        "lambda_min": 3.2783370215230963,
+        "trace": 791.9999999999999
+      },
+      "1.0": {
+        "distinct_rounded_8": 33,
+        "lambda_max": 60.249329680536924,
+        "lambda_min": 0.3480858051809625,
+        "trace": 792.0
+      },
+      "1.8": {
+        "distinct_rounded_8": 33,
+        "lambda_max": 82.52111777235756,
+        "lambda_min": 0.004149525918569077,
+        "trace": 791.9999999999998
+      },
+      "2.0": {
+        "distinct_rounded_8": 33,
+        "lambda_max": 85.03894863852823,
+        "lambda_min": 0.0012971908761056845,
+        "trace": 792.0000000000002
+      }
+    },
+    "status": "Proven counterfamily"
+  },
+  "ST2238": {
+    "boundary": "Permutation covariance, positivity, support locality and target independence hold for the whole family.",
+    "criteria_shared_by_all_p": [
+      "D12 covariance",
+      "positivity",
+      "same flag complex",
+      "no target fit",
+      "same normalization"
+    ],
+    "object": "PowerFamilyNaturality",
+    "packet_file": "FIN_ST2238_PowerFamilyNaturality.json",
+    "packet_sha256": "4d123de7b2c2d74d37c8bcc577dadb1f3235740ebffd51db7eda0054e00cd1a3",
+    "program": "ST2238",
+    "status": "Proven"
+  },
+  "ST2239": {
+    "boundary": "p=1 and p=2 satisfy the same audited naturality premises but disagree spectrally.",
+    "eigenvalue_vector_residual_inf": 24.7896189579913,
+    "object": "SpectralCounterfamily",
+    "packet_file": "FIN_ST2239_SpectralCounterfamily.json",
+    "packet_sha256": "7dcbeb62856347790e5ead16e2beae6e553377a79f12de1e647e281ccfaeb079",
+    "program": "ST2239",
+    "relative_l2_difference": 0.348415174547731,
+    "status": "Refuted uniqueness"
+  },
+  "ST2240": {
+    "H1_dimension": 0,
+    "boundary": "Positive row weights do not change d1's kernel; the full simplex is contractible.",
+    "kernel_dimension_on_C1": 11,
+    "object": "CohomologyInvariance",
+    "packet_file": "FIN_ST2240_CohomologyInvariance.json",
+    "packet_sha256": "9a937f8d3a28083f8619de4297649fdde07eb1b9c3d52a9a264a5ffe9b71634c",
+    "program": "ST2240",
+    "rank_d1": 55,
+    "status": "Proven"
+  },
+  "ST2241": {
+    "boundary": "Current strict data contain no premise distinguishing p=1 from p=2 or the continuum p>0.",
+    "object": "ExponentSelectionNoGo",
+    "packet_file": "FIN_ST2241_ExponentSelectionNoGo.json",
+    "packet_sha256": "75b875c1b96e11cd85ee26190fba051858c5cabdda008bb13dc0bbd3781d76aa",
+    "program": "ST2241",
+    "status": "Proven no-go",
+    "unique_Hodge_exponent_selected": false
+  },
+  "ST2242": {
+    "boundary": "A continuous positive multiplicative valuation g(xy)=g(x)g(y) has g(x)=x^p; monotonicity gives p>=0.",
+    "object": "MultiplicativeRefinementClassification",
+    "packet_file": "FIN_ST2242_MultiplicativeRefinementClassification.json",
+    "packet_sha256": "ef50338cd980dd9ae2c0e76c197980dc7848e106c7d20c1be753abd698ab1560",
+    "program": "ST2242",
+    "refinement_multiplicativity_reduces_but_does_not_remove_modulus": true,
+    "remaining_modulus": "p",
+    "status": "Proven classification"
+  },
+  "ST2243": {
+    "boundary": "Choosing p=eta=1.8 would silently transfer a damping exponent into a face measure without a theorem.",
+    "eta_to_Hodge_exponent_bridge_exported": false,
+    "object": "StrictEtaTransferBoundary",
+    "packet_file": "FIN_ST2243_StrictEtaTransferBoundary.json",
+    "packet_sha256": "5ab3f29000c7a25ccd555ed9e151030b8a354e6370f536c25beae684a417592f",
+    "program": "ST2243",
+    "status": "Guardrail",
+    "strict_eta": 1.8
+  },
+  "ST2244": {
+    "Lorentz_or_Maxwell_limit_derived": false,
+    "boundary": "Complete support has graph diameter one and no local wavevector/lattice scale.",
+    "object": "DenseContinuumBoundary",
+    "packet_file": "FIN_ST2244_DenseContinuumBoundary.json",
+    "packet_sha256": "cce6a790ad38a22b473cb06f0a6b958dbcc7a0d9565ff601d0ab27ca50eb6926",
+    "program": "ST2244",
+    "status": "Refuted as continuum physics",
+    "support_diameter": 1
+  },
+  "ST2245": {
+    "boundary": "Strict W yields an executable positive weighted flag-Hodge family, but not an unavoidable member or physical gauge theory.",
+    "mathematical_candidate_exists": true,
+    "object": "RoundFiveVerdict",
+    "packet_file": "FIN_ST2245_RoundFiveVerdict.json",
+    "packet_sha256": "0b6f27ff38d7ffc3f4a2b1d930fb93b797b695b6beb6757abee33cba14a876a8",
+    "physical_prediction": false,
+    "program": "ST2245",
+    "status": "Round verdict",
+    "unique_strict_model": false
+  },
+  "ST2246": {
+    "boundary": "Synthesize the corrected gate: separate reducible cycle success from irreducible/provenance/refinement/physics failures.",
+    "next": [
+      "gate v2",
+      "pair-sufficiency obstruction",
+      "power-family no-go",
+      "minimal extra axioms",
+      "next decisive source-law test"
+    ],
+    "object": "RoundFiveRecommendation",
+    "packet_file": "FIN_ST2246_RoundFiveRecommendation.json",
+    "packet_sha256": "2ac85b4c4f23dd8531ea72044d61ea3bae1b4e924a6b3602f7ddb5baf2e7f512",
+    "program": "ST2246",
+    "status": "Recommendation"
+  }
+}

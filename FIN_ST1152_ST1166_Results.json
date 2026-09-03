@@ -1,0 +1,200 @@
+{
+  "ST1152": {
+    "arbitrary_independent_records": false,
+    "boundary": "For one perfectly distinguishable 12-state carrier.",
+    "formula": "log2(12)",
+    "max_bits": 3.584962500721156,
+    "object": "ClassicalSingleUse_RecordCapacity",
+    "packet_file": "FIN_ST1152_ClassicalSingleUse_RecordCapacity.json",
+    "packet_sha256": "fb714f1a69f8148d0d0e1649323f29ad0cbb817e4701e065c27e72ff81c21a7c",
+    "program": "ST1152",
+    "status": "proven_classical_single_use_capacity_bound"
+  },
+  "ST1153": {
+    "boundary": "No entanglement-assisted or repeated-use claim.",
+    "formula": "chi<=log2(d)",
+    "hilbert_dimension": 12,
+    "max_accessible_classical_bits": 3.584962500721156,
+    "object": "QuantumSingleUse_HolevoCapacity",
+    "packet_file": "FIN_ST1153_QuantumSingleUse_HolevoCapacity.json",
+    "packet_sha256": "43f0b9981389f9159cf6e2d53bc540391e219d39d63195cda542fd2ff44853af",
+    "program": "ST1153",
+    "status": "proven_quantum_single_use_Holevo_bound"
+  },
+  "ST1154": {
+    "boundary": "Capacity statement, not a claim about physical universe size.",
+    "object": "ExtensiveRecord_RequiresComposition",
+    "options": [
+      "tensor products/repeated carriers",
+      "growing refinement",
+      "infinite algebra"
+    ],
+    "packet_file": "FIN_ST1154_ExtensiveRecord_RequiresComposition.json",
+    "packet_sha256": "d5d644ff3232b74ff3a740d37ccf3ff67e0c75d11fdd18e9dfb691948cd3b753",
+    "program": "ST1154",
+    "status": "proven_extensive_records_require_composition_or_unbounded_refinement",
+    "supplied_by_single_A12": false
+  },
+  "ST1155": {
+    "boundary": "Uses the declared vertex basis.",
+    "effect_count": 12,
+    "effects": "E_x=|x><x|",
+    "informationally_complete_for_density_matrices": false,
+    "object": "VertexPOVM_Candidate",
+    "packet_file": "FIN_ST1155_VertexPOVM_Candidate.json",
+    "packet_sha256": "87c814144734d192141186ca482f9fa071d04e7d4bbaead92fecd6f86b93dc6c",
+    "program": "ST1155",
+    "resolves_classical_vertices": true,
+    "status": "constructed_vertex_POVM"
+  },
+  "ST1156": {
+    "boundary": "Degenerate eigenspaces remain unresolved.",
+    "distinct_effects": 7,
+    "distinguishes_vertices": false,
+    "object": "SpectralPVM_Candidate",
+    "packet_file": "FIN_ST1156_SpectralPVM_Candidate.json",
+    "packet_sha256": "ee4958f8458d9d8baf6c2d3ae88358aea6a6db97b0cd1cd33fa280b49c7f4ff4",
+    "program": "ST1156",
+    "spectral_multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "status": "constructed_spectral_PVM"
+  },
+  "ST1157": {
+    "boundary": "General measurement theorem.",
+    "different_post_measurement_states": true,
+    "instrument_1": "Luders: I_x(rho)=E_x rho E_x",
+    "instrument_2": "measure-and-prepare: I_x(rho)=Tr(E_x rho) sigma_x",
+    "object": "POVM_DoesNotFixInstrument",
+    "packet_file": "FIN_ST1157_POVM_DoesNotFixInstrument.json",
+    "packet_sha256": "5333b3cbb14a81b9bb3a270cc6dbde8ec8007e92b31b4e5729beee6397d8e5cf",
+    "program": "ST1157",
+    "same_outcome_probabilities": true,
+    "status": "proven_same_POVM_admits_inequivalent_instruments"
+  },
+  "ST1158": {
+    "boundary": "Neither vertex nor spectral effects determine apparatus dynamics.",
+    "canonical_instrument_from_A": false,
+    "free_objects": [
+      "sigma_x",
+      "ancilla",
+      "coupling",
+      "readout record"
+    ],
+    "object": "InstrumentFamily_Nonuniqueness",
+    "packet_file": "FIN_ST1158_InstrumentFamily_Nonuniqueness.json",
+    "packet_sha256": "fd1a9ce9a14f9fdffc59d25312e8e20f339d088ac953a23e1fea591453e39773",
+    "program": "ST1158",
+    "status": "proven_A_does_not_select_postmeasurement_state_family"
+  },
+  "ST1159": {
+    "boundary": "Uses zero and first nonzero modes; dimensional calibration absent.",
+    "frequency": 0.7541211542070798,
+    "object": "UnitaryRelationalModeClock",
+    "packet_file": "FIN_ST1159_UnitaryRelationalModeClock.json",
+    "packet_sha256": "5d85f44cec4a680abe4ca495b81d2f01b5cbb2f333f7c88ec57e0b7a7d884d84",
+    "period": 8.331798242400502,
+    "program": "ST1159",
+    "requires": [
+      "coherent superposition",
+      "phase readout",
+      "orientation/counting"
+    ],
+    "status": "constructed_dimensionless_unitary_mode_clock"
+  },
+  "ST1160": {
+    "SI_seconds": false,
+    "amplitude": "a(t)=a0 exp(-lambda1 t)",
+    "boundary": "Valid only before saturation and after choosing a nonzero eigenmode.",
+    "lambda1": 0.7541211542070798,
+    "monotone": true,
+    "object": "HeatMonotoneClock",
+    "packet_file": "FIN_ST1160_HeatMonotoneClock.json",
+    "packet_sha256": "8ca18a7854ef72632b345d96413217a0daec3e56c40bb84af769493b177bd850",
+    "program": "ST1160",
+    "reversible": false,
+    "status": "constructed_dimensionless_heat_monotone_clock"
+  },
+  "ST1161": {
+    "boundary": "Same eigenvalue scale, different observables and reversibility.",
+    "common_calibrated_time_from_A_alone": false,
+    "heat_record": "positive contrast magnitude",
+    "object": "ClockChannels_NotEquivalent",
+    "packet_file": "FIN_ST1161_ClockChannels_NotEquivalent.json",
+    "packet_sha256": "bb0c84739b01e12af850fab3cede46d70b10b26a73fa799a3d4350d0d74d2bd7",
+    "program": "ST1161",
+    "status": "proven_unitary_phase_clock_and_heat_decay_clock_are_not_operationally_equivalent",
+    "unitary_record": "phase modulo 2pi"
+  },
+  "ST1162": {
+    "boundary": "A12 alone has no canonical system/observer/apparatus tensor split.",
+    "canonical_split_from_A": false,
+    "object": "ObserverInclusion_RequiresFactorization",
+    "packet_file": "FIN_ST1162_ObserverInclusion_RequiresFactorization.json",
+    "packet_sha256": "a23d008e6438ff11e7384633dec283497165a63e174a49ad471a7c16dba46eb0",
+    "program": "ST1162",
+    "required": [
+      "observer algebra",
+      "memory states",
+      "interaction/instrument",
+      "record channel"
+    ],
+    "status": "proven_internal_observer_requires_subalgebra_or_factorization_input"
+  },
+  "ST1163": {
+    "boundary": "Does not exclude a fractal/tensor/infinite completion of FIN.",
+    "consequence": "A12 can be a kernel/sector representation, not by itself a complete record-bearing universe model",
+    "object": "Finite12_TotalLiteralCapacityBoundary",
+    "packet_file": "FIN_ST1163_Finite12_TotalLiteralCapacityBoundary.json",
+    "packet_sha256": "7cd2fb8bfe0235d406ce87ab326d2fa4f0cc53e1b91bf98ae6bba57acd2fee29",
+    "program": "ST1163",
+    "single_use_bits": 3.584962500721156,
+    "status": "proven_literal_single_12_level_total_model_cannot_store_unbounded_independent_records",
+    "unbounded_history_capacity": false
+  },
+  "ST1164": {
+    "bits_12": 3.584962500721156,
+    "bits_24": 4.584962500721156,
+    "boundary": "Classical or quantum single-use bound.",
+    "canonical_number_of_layers": false,
+    "increment_bits": 1.0,
+    "object": "RefinementCapacityGrowth",
+    "packet_file": "FIN_ST1164_RefinementCapacityGrowth.json",
+    "packet_sha256": "61d1df046a457eaa9c923ce7c0a38a74731950f396a33c03b6b2d4709339ad8f",
+    "program": "ST1164",
+    "status": "proven_refinement_increases_capacity_but_does_not_select_depth"
+  },
+  "ST1165": {
+    "boundary": "No chosen state category removes the logical obstruction.",
+    "classical": true,
+    "object": "PostAnnihilation_RecordNoGo_Reconfirmed",
+    "ontological_proof_of_nonoccurrence": false,
+    "packet_file": "FIN_ST1165_PostAnnihilation_RecordNoGo_Reconfirmed.json",
+    "packet_sha256": "f158a5cd9f3299bd59769319a58799d5ca415515984243569518ca8608f1fbe7",
+    "program": "ST1165",
+    "quantum": true,
+    "refined": true,
+    "status": "proven_total_annihilation_still_has_no_internal_postevent_record"
+  },
+  "ST1166": {
+    "boundary": "Final round will state and falsify the A-only state-selection theorem.",
+    "next": [
+      "three-candidate no-go theorem",
+      "topological/dynamical inequivalence",
+      "symmetry/refinement audit",
+      "minimal extra axioms",
+      "terminal current-datum verdict"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1166_RoundFive_Recommendation.json",
+    "packet_sha256": "bdfc2e9cbfa718ef01f3b3421de2f429f6c565e06b5213340fe0154df6b0ec0b",
+    "program": "ST1166",
+    "status": "recommended_ST1167_ST1181"
+  }
+}

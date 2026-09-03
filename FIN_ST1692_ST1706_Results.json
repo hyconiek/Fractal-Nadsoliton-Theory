@@ -1,0 +1,149 @@
+{
+  "ST1692": {
+    "boundary": "Arbitrary destination of misclassification mass.",
+    "condition": "M_xx>=1-delta for every true x",
+    "delta": 0.05,
+    "object": "DetectorMatrixBall",
+    "packet_file": "FIN_ST1692_DetectorMatrixBall.json",
+    "packet_sha256": "aebd3a468b9ddf53d858159973135467b497564c17cc3bffbd71f9fda2fbcb91",
+    "program": "ST1692",
+    "status": "constructed_column_stochastic_vertex_detector_ball"
+  },
+  "ST1693": {
+    "bound": "TV(Mp,p)<=delta",
+    "boundary": "Column coupling argument.",
+    "object": "PerDistributionTVBound",
+    "packet_file": "FIN_ST1693_PerDistributionTVBound.json",
+    "packet_sha256": "31dedc07aae4993c66c6516bbd0b4c89b45d2bef5f16bb6d97e0c00b6ca3f935",
+    "program": "ST1693",
+    "status": "proven_detector_output_is_within_delta_TV_of_ideal_distribution"
+  },
+  "ST1694": {
+    "bound": "TV(M_C p,M_Q q)>=TV(p,q)-2delta",
+    "boundary": "Triangle inequality.",
+    "object": "IndependentDetectorTVBound",
+    "packet_file": "FIN_ST1694_IndependentDetectorTVBound.json",
+    "packet_sha256": "d891279e0de28488854b1345b3fd7a70f4bc5aa912d09d8614c7636a2b1309ca",
+    "program": "ST1694",
+    "status": "proven_independent_detector_matrices_reduce_model_TV_by_at_most_two_delta"
+  },
+  "ST1695": {
+    "boundary": "Full distributions at t=.6.",
+    "ideal_TV": 0.4112182254653598,
+    "lower_TV": 0.3112182254653598,
+    "object": "FivePercentDetectorGap",
+    "packet_file": "FIN_ST1695_FivePercentDetectorGap.json",
+    "packet_sha256": "7f9ce274fd14285d8da832f02849a97ad3a120e1eedeea7f62b8fd066f32e3b8",
+    "program": "ST1695",
+    "status": "proven_five_percent_vertex_dependent_detector_ball_preserves_simple_model_separation"
+  },
+  "ST1696": {
+    "boundary": "Sufficient and sharp for triangle argument.",
+    "delta_must_be_below": 0.2056091127326799,
+    "object": "DetectorIdentifiabilityThreshold",
+    "packet_file": "FIN_ST1696_DetectorIdentifiabilityThreshold.json",
+    "packet_sha256": "cf57e371bfbe7cb2cd75f7b9a1e40360d210f7139d9bfb4204c5831a84635ab1",
+    "program": "ST1696",
+    "status": "proven_independent_detector_identifiability_threshold"
+  },
+  "ST1697": {
+    "boundary": "Current bound remains valid but not optimal.",
+    "object": "CommonDetectorBoundary",
+    "packet_file": "FIN_ST1697_CommonDetectorBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1697",
+    "status": "common_detector_matrix_can_contract_more_and_needs_Dobrushin_or_inverse_calibration_for_sharp_bound"
+  },
+  "ST1698": {
+    "boundary": "Makes loss map stochastic on augmented alphabet.",
+    "object": "NoClickAugmentation",
+    "outcomes": 13,
+    "packet_file": "FIN_ST1698_NoClickAugmentation.json",
+    "packet_sha256": "ce050f95457b2ad5f63c8eb20aa5b9f461a67cd3554226ede60549b96346331b",
+    "program": "ST1698",
+    "status": "constructed_no_click_as_thirteenth_outcome_for_substochastic_efficiency"
+  },
+  "ST1699": {
+    "boundary": "Reproducibility.",
+    "file": "FIN_ST1692_ST1706_DetectorMatrixAndQClock.json",
+    "object": "DetectorArtifact",
+    "packet_file": "FIN_ST1699_DetectorArtifact.json",
+    "packet_sha256": "16ceb26e8c202efae01c8093bd0c1f18402075af7611d01d2e60c9c84c3f90d1",
+    "program": "ST1699",
+    "sha256": "9a8173df9c2fd7b3b43a70c2e542db85f51956e65b075b796f55b9ae953e170f",
+    "status": "constructed_detector_qclock_artifact_hash"
+  },
+  "ST1700": {
+    "boundary": "CA time conversion.",
+    "heat": "(1+exp[-2q t_phys/tau_*])/2",
+    "object": "PhysicalFiberClockModel",
+    "packet_file": "FIN_ST1700_PhysicalFiberClockModel.json",
+    "packet_sha256": "eac72e625b7287264408c8b46456e02729e67b9affa09f943a180c68df587c46",
+    "program": "ST1700",
+    "status": "constructed_dimensionful_fiber_return_models",
+    "unitary": "cos^2(q t_phys/tau_*)"
+  },
+  "ST1701": {
+    "boundary": "All physical-time fiber records invariant.",
+    "object": "QClockScalingSymmetry",
+    "packet_file": "FIN_ST1701_QClockScalingSymmetry.json",
+    "packet_sha256": "6aa7e2468c6fdeab1f33b5e6f019f9cf7b922ba369b4d3ad459c520c53eaabd1",
+    "program": "ST1701",
+    "status": "proven_joint_q_tau_scaling_symmetry",
+    "transformation": "(q,tau_*) -> (c q,c tau_*), c>0"
+  },
+  "ST1702": {
+    "boundary": "Only ratio kappa=q/tau_* appears.",
+    "identifiable": "kappa=q/tau_*",
+    "object": "JointQClockNoGo",
+    "packet_file": "FIN_ST1702_JointQClockNoGo.json",
+    "packet_sha256": "76f96d96c81a4d3aefb3f7e38c10ff779bf6349eb9cef09c3887de768f6618c1",
+    "program": "ST1702",
+    "q_separate": false,
+    "status": "proven_q_and_clock_scale_are_not_jointly_identifiable_from_any_number_of_fiber_return_times",
+    "tau_separate": false
+  },
+  "ST1703": {
+    "boundary": "Same ratio multiplies every time.",
+    "object": "MultipleTimesDoNotBreakScaling",
+    "packet_file": "FIN_ST1703_MultipleTimesDoNotBreakScaling.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1703",
+    "status": "proven_multiple_scheduled_physical_times_do_not_break_exact_scaling_torsor"
+  },
+  "ST1704": {
+    "boundary": "Conditional.",
+    "object": "CalibratedClockRestoresQ",
+    "packet_file": "FIN_ST1704_CalibratedClockRestoresQ.json",
+    "packet_sha256": "03925787522ea8dd7b8be9a91a5a6cb872413fe7ddfa1207a3e2f037ff2e414c",
+    "program": "ST1704",
+    "requires_tau_anchor": true,
+    "status": "proven_external_or_independent_tau_calibration_restores_prior_q_identifiability_results"
+  },
+  "ST1705": {
+    "boundary": "Status split.",
+    "detector": true,
+    "joint_q_tau": false,
+    "object": "RoundFive_Verdict",
+    "packet_file": "FIN_ST1705_RoundFive_Verdict.json",
+    "packet_sha256": "5a5df74c7188340bb64cdeb439fef739126c35dc6da4ae59d6cfd5eff8cad733",
+    "program": "ST1705",
+    "status": "detector_matrix_robustness_positive_joint_q_clock_has_exact_no_go"
+  },
+  "ST1706": {
+    "boundary": "Final synthesis Release 11.02.",
+    "next": [
+      "robustness lattice",
+      "small/large parameter boxes",
+      "KKT status",
+      "symmetric grid decision",
+      "q-clock obstruction",
+      "roadmap"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1706_RoundFive_Recommendation.json",
+    "packet_sha256": "9b762fc5d02d929e574bc1caab42eef7962f95bc92712fa6e26fc69e7430f87f",
+    "program": "ST1706",
+    "status": "recommended_ST1707_ST1721"
+  }
+}

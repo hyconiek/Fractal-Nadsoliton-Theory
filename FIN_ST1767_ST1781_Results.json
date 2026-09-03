@@ -1,0 +1,284 @@
+{
+  "ST1767": {
+    "boundary": "Current P1866/P2363 input.",
+    "map": "(omega,phi,beta,eta;dref)->(c0,c1,c2)",
+    "object": "MomentMapDefinition",
+    "packet_file": "FIN_ST1767_MomentMapDefinition.json",
+    "packet_sha256": "dc72258c57d428d3593cea56dbb2214cce943b5192755e8ea2750b067fd60c66",
+    "program": "ST1767",
+    "status": "constructed_three_jet_moment_map"
+  },
+  "ST1768": {
+    "boundary": "Same kernel.",
+    "object": "ReferenceScaleTable",
+    "packet_file": "FIN_ST1768_ReferenceScaleTable.json",
+    "packet_sha256": "aeb14cbce9be92b0efeb4360f392bc8e002d8c925ec27eaacacd4c6912209c5e",
+    "program": "ST1768",
+    "status": "proven_strict_moments_change_materially_with_reference_point",
+    "table": [
+      {
+        "c": [
+          0.7516996094243219,
+          -0.640201015988692,
+          0.018228477113425713
+        ],
+        "dref": 0.5
+      },
+      {
+        "c": [
+          0.4699856726450201,
+          -0.4546810131394916,
+          0.23191009715464736
+        ],
+        "dref": 1
+      },
+      {
+        "c": [
+          0.1920435516901028,
+          -0.15537098307438277,
+          0.07846765977287941
+        ],
+        "dref": 2
+      }
+    ]
+  },
+  "ST1769": {
+    "boundary": "No dref invariance.",
+    "factors": [
+      {
+        "dref": 0.5,
+        "g": 1.0182284771134258,
+        "lambda": 1.4098573408729533,
+        "m_xi": 1.751699609424322,
+        "y": 1.375849804712161
+      },
+      {
+        "dref": 1,
+        "g": 1.2319100971546473,
+        "lambda": 1.2067348237095545,
+        "m_xi": 1.46998567264502,
+        "y": 1.23499283632251
+      },
+      {
+        "dref": 2,
+        "g": 1.0784676597728795,
+        "lambda": 1.0241401423815002,
+        "m_xi": 1.192043551690103,
+        "y": 1.0960217758450514
+      }
+    ],
+    "object": "CouplingFactorTable",
+    "packet_file": "FIN_ST1769_CouplingFactorTable.json",
+    "packet_sha256": "e8f03deb84f383bf913c861bda7489a68e7ad6e421e4f1a46b8ee43188b32521",
+    "program": "ST1769",
+    "status": "proven_effective_coupling_multipliers_change_with_reference_point"
+  },
+  "ST1770": {
+    "boundary": "dref=1 is a premise.",
+    "canonical_reference": false,
+    "object": "ReferenceDependenceNoGo",
+    "packet_file": "FIN_ST1770_ReferenceDependenceNoGo.json",
+    "packet_sha256": "fe9c5c2f5a18e7b4f335e2754b86b93e0639c3bc7053dc1f23f562a0c72ece21",
+    "program": "ST1770",
+    "status": "proven_no_canonical_dref_or_length_normalization_is_exported_by_moment_map"
+  },
+  "ST1771": {
+    "boundary": "For d'=a d.",
+    "laws": [
+      "c0'(1)=K(1/a)",
+      "c1'(1)=a^-1 K'(1/a)",
+      "c2'(1)=a^-2 K''(1/a)/2"
+    ],
+    "object": "CoordinateRescalingLaw",
+    "packet_file": "FIN_ST1771_CoordinateRescalingLaw.json",
+    "packet_sha256": "c13e27e4ee7bdf4a3f51abd904ce85459c2ce306cebcc67fd20f6bc2ae8cdb9c",
+    "program": "ST1771",
+    "status": "proven_coordinate_rescaling_changes_derivative_moments"
+  },
+  "ST1772": {
+    "boundary": "Nominal tuple.",
+    "matrix": [
+      [
+        -0.17062669049245488,
+        -0.17062669049245488,
+        -0.23499283632251006,
+        0.0
+      ],
+      [
+        -0.10436250774305797,
+        0.06626418274939692,
+        0.015846953879486748,
+        -0.23499283632251006
+      ],
+      [
+        0.07099559853533811,
+        0.00473141578594119,
+        0.19439818368057707,
+        0.1333433720407418
+      ]
+    ],
+    "object": "MomentJacobian",
+    "packet_file": "FIN_ST1772_MomentJacobian.json",
+    "packet_sha256": "aadd22680dde0013ba43fb2ffc26ac28b1674f3b9c7bd4d7bfe4797eb9b5bf43",
+    "program": "ST1772",
+    "rank": 3,
+    "singular_values": [
+      0.3963307077841848,
+      0.28037366488556176,
+      0.09565694039585032
+    ],
+    "status": "proven_three_moment_parameter_Jacobian_has_rank_three_not_four"
+  },
+  "ST1773": {
+    "boundary": "First-order kernel-parameter fiber.",
+    "direction_omega_phi_beta_eta": [
+      -0.5472994793933433,
+      0.7060399273654702,
+      -0.11526035307561927,
+      0.4343799625102666
+    ],
+    "object": "MomentNullDirection",
+    "packet_file": "FIN_ST1773_MomentNullDirection.json",
+    "packet_sha256": "0166c96a560f79fbb730fc1ab3665401c74a092bef05331d146e42af8338b4d9",
+    "program": "ST1773",
+    "residual": 5.594315114139762e-17,
+    "status": "constructed_local_unidentifiable_parameter_direction"
+  },
+  "ST1774": {
+    "boundary": "Numerical root witnesses.",
+    "families": [
+      {
+        "eta": 1.79,
+        "moment_residual": 4.718447854656915e-15,
+        "omega_phi_beta": [
+          0.19836922614061586,
+          0.14562445793843523,
+          1.0030723563367816
+        ]
+      },
+      {
+        "eta": 1.81,
+        "moment_residual": 1.0955680807001045e-12,
+        "omega_phi_beta": [
+          0.17312614785857217,
+          0.17823149242403868,
+          0.9977339098653953
+        ]
+      },
+      {
+        "eta": 1.85,
+        "moment_residual": 6.06736882957648e-14,
+        "omega_phi_beta": [
+          0.12019589043385623,
+          0.2339707216920838,
+          0.995669007287974
+        ]
+      }
+    ],
+    "object": "ExactMomentEquivalentFamily",
+    "packet_file": "FIN_ST1774_ExactMomentEquivalentFamily.json",
+    "packet_sha256": "750c4d3e328a952a31c0768d1c1f1ff073cdb4246fafddfa25ef1aa76d20b19d",
+    "program": "ST1774",
+    "status": "constructed_distinct_parameter_tuples_with_same_three_moments"
+  },
+  "ST1775": {
+    "boundary": "Three jets do not identify global kernel.",
+    "differences": [
+      {
+        "0.5": 0.0003454529549613561,
+        "2": -0.00038214539494557664,
+        "5": -0.0018970789756343406,
+        "eta": 1.79
+      },
+      {
+        "0.5": -0.0003467642621229894,
+        "2": 0.00037324971557164965,
+        "5": 0.0018285262600238952,
+        "eta": 1.81
+      },
+      {
+        "0.5": -0.0017550359250587677,
+        "2": 0.0017914376440392454,
+        "5": 0.008526800142555194,
+        "eta": 1.85
+      }
+    ],
+    "object": "OffReferenceKernelDifference",
+    "packet_file": "FIN_ST1775_OffReferenceKernelDifference.json",
+    "packet_sha256": "f0c164915c9832962cd4fef75e43f616d876e7d1326ec82371019aa0b011b9dc",
+    "program": "ST1775",
+    "status": "proven_moment_equivalent_kernels_differ_away_from_reference"
+  },
+  "ST1776": {
+    "boundary": "Choose each base coupling as target/factor.",
+    "object": "FreeBaseCouplingSurjectivity",
+    "packet_file": "FIN_ST1776_FreeBaseCouplingSurjectivity.json",
+    "packet_sha256": "b9814b9ea7a5bd653d053f20092c640bed6ec4190c6b4976ce5a0c8372171e3b",
+    "predicted_absolute_couplings": false,
+    "program": "ST1776",
+    "status": "proven_five_free_base_couplings_make_effective_map_pointwise_surjective_where_factors_nonzero"
+  },
+  "ST1777": {
+    "boundary": "Example equality of m2 and xi renormalization factors.",
+    "object": "OnlyFactorRelations",
+    "packet_file": "FIN_ST1777_OnlyFactorRelations.json",
+    "packet_sha256": "f2597ee0b29499b9c86d286f8a832a3153c69b5f973ed78b66710d0047886964",
+    "physical_without_base_values": false,
+    "program": "ST1777",
+    "relations": [
+      "m2_eff/m2=xi_eff/xi=1+c0"
+    ],
+    "status": "identified_only_formal_multiplier_relations"
+  },
+  "ST1778": {
+    "boundary": "c1 and -c1 give same lambda multiplier.",
+    "object": "C1SquareInformationLoss",
+    "orientation_information_lost": true,
+    "packet_file": "FIN_ST1778_C1SquareInformationLoss.json",
+    "packet_sha256": "eb0a5fc60821b44182f3af1bcfc1e0cc7dcbc391f8d5b32786f2f733de212555",
+    "program": "ST1778",
+    "status": "proven_lambda_map_discards_sign_of_c1"
+  },
+  "ST1779": {
+    "boundary": "Constructive mathematical repair, not physical source.",
+    "condition_number": 10.779246074018008,
+    "determinant": -0.0006673393338242159,
+    "object": "FourthMomentRankLift",
+    "packet_file": "FIN_ST1779_FourthMomentRankLift.json",
+    "packet_sha256": "d957ae5ffd9d708f8b7867cded500f249608a05559809b13199602cf999f1a5d",
+    "program": "ST1779",
+    "singular_values": [
+      0.42790273307264515,
+      0.315241507304335,
+      0.12462397335250314,
+      0.039696907384278925
+    ],
+    "status": "proven_fourth_jet_locally_lifts_parameter_rank_to_four"
+  },
+  "ST1780": {
+    "boundary": "It remains a chosen feature map.",
+    "object": "RoundFour_Verdict",
+    "packet_file": "FIN_ST1780_RoundFour_Verdict.json",
+    "packet_sha256": "9c16b7afb5b1783d2ececaa03200979a999b0ad0c0221771b490aa5af1b22e43",
+    "predictive_couplings": false,
+    "program": "ST1780",
+    "reference_invariant": false,
+    "status": "round_four_falsifies_three_moment_map_as_unique_or_reference_invariant_kernel_to_physics_bridge",
+    "unique_kernel": false
+  },
+  "ST1781": {
+    "boundary": "Search for the smallest genuinely canonical action object and test propagator claims.",
+    "next": [
+      "Dirichlet action uniqueness",
+      "W versus Green resolvent",
+      "stability of W inverse action",
+      "spectral action inputs",
+      "strict/legacy role boundary"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1781_RoundFour_Recommendation.json",
+    "packet_sha256": "3ed951e817e6f4078cb99945ae2a934f7f15e6a8cc552dd9283b5ab0ef408bcc",
+    "program": "ST1781",
+    "status": "recommended_ST1782_ST1796"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "ST1572": {
+    "alpha": [
+      0.9,
+      1.1
+    ],
+    "boundary": "Mathematical prior, not physical distribution.",
+    "density": 0.05,
+    "gamma": [
+      0,
+      100
+    ],
+    "object": "ContinuousPriorDefinition",
+    "packet_file": "FIN_ST1572_ContinuousPriorDefinition.json",
+    "packet_sha256": "5cbf6c398ee385c60e89c20bce0a400611f8c96319694bd723de1884f6859e6c",
+    "program": "ST1572",
+    "status": "constructed_uniform_continuous_prior_on_nuisance_rectangle"
+  },
+  "ST1573": {
+    "boundary": "Deterministic schedule and conditionally independent events.",
+    "object": "PointwiseLikelihoodMartingales",
+    "packet_file": "FIN_ST1573_PointwiseLikelihoodMartingales.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1573",
+    "status": "proven_each_theta_likelihood_ratio_is_C_null_martingale"
+  },
+  "ST1574": {
+    "E_n": "integral L_theta,n pi(dtheta)",
+    "boundary": "Tonelli/Fubini exchanges expectation and positive integral.",
+    "object": "FubiniMixtureTheorem",
+    "packet_file": "FIN_ST1574_FubiniMixtureTheorem.json",
+    "packet_sha256": "f067cbcf302b2d3395fb2e508749080f0afb392d06d9bd2d40fe8d82c736d767",
+    "program": "ST1574",
+    "status": "proven_continuous_prior_integral_is_nonnegative_mean_one_martingale"
+  },
+  "ST1575": {
+    "boundary": "Exact integral object.",
+    "object": "VilleContinuousPriorBound",
+    "packet_file": "FIN_ST1575_VilleContinuousPriorBound.json",
+    "packet_sha256": "32af259e1fce4ae532e9535b5692793b5eff023e8cc9d1d7732ddf8a215b2639",
+    "program": "ST1575",
+    "status": "proven_continuous_prior_anytime_C_rejection_bound",
+    "threshold": 100,
+    "type_I_at_most": 0.01
+  },
+  "ST1576": {
+    "alpha_nodes": 7,
+    "boundary": "Executable approximation.",
+    "components": 63,
+    "gamma_nodes": 9,
+    "object": "PositiveQuadratureGrid",
+    "packet_file": "FIN_ST1576_PositiveQuadratureGrid.json",
+    "packet_sha256": "29cc0644dc540ea9d3d48a96f856e38b578c83b1a7d42e2f779cbdda3e451210",
+    "program": "ST1576",
+    "status": "constructed_positive_7_by_9_Gauss_Legendre_nuisance_grid"
+  },
+  "ST1577": {
+    "boundary": "Floating construction.",
+    "minimum": 0.0026309528568485385,
+    "object": "QuadratureWeights",
+    "packet_file": "FIN_ST1577_QuadratureWeights.json",
+    "packet_sha256": "9caa9321b799fd7f1a5a8a252efd54d39e039962cc7cdc9e7508f03dbe1a855e",
+    "program": "ST1577",
+    "status": "proven_quadrature_weights_positive_and_normalized",
+    "sum": 1.0
+  },
+  "ST1578": {
+    "boundary": "Validity does not depend on quadrature accuracy.",
+    "object": "QuadratureIsValidFiniteMixture",
+    "packet_file": "FIN_ST1578_QuadratureIsValidFiniteMixture.json",
+    "packet_sha256": "32af259e1fce4ae532e9535b5692793b5eff023e8cc9d1d7732ddf8a215b2639",
+    "program": "ST1578",
+    "status": "proven_quadrature_sum_is_itself_a_valid_finite_mixture_eprocess",
+    "threshold": 100,
+    "type_I_at_most": 0.01
+  },
+  "ST1579": {
+    "boundary": "Accuracy/power approximation remains numerical.",
+    "exact_integral_evaluated": false,
+    "object": "QuadratureVsExactIntegralBoundary",
+    "packet_file": "FIN_ST1579_QuadratureVsExactIntegralBoundary.json",
+    "packet_sha256": "296e39d812587895362825af222b10c37643fcadaa8896fff7639c1f80308a90",
+    "program": "ST1579",
+    "status": "quadrature_eprocess_is_not_the_exact_continuous_integral"
+  },
+  "ST1580": {
+    "boundary": "Power fixture, not theorem/evidence.",
+    "decision": "REJECT_C_FOR_MIXTURE_Q",
+    "n": 243,
+    "object": "OffGridSyntheticAlternative",
+    "packet_file": "FIN_ST1580_OffGridSyntheticAlternative.json",
+    "packet_sha256": "543251a42f2e28d4bb9695764245b8b3ddb102981552619d9fc428ffe2b64a84",
+    "program": "ST1580",
+    "status": "synthetic_off_node_alternative_crosses_quadrature_mixture_boundary",
+    "truth": [
+      1.03,
+      7.3
+    ]
+  },
+  "ST1581": {
+    "boundary": "Not empirical calibration.",
+    "decision": "CONTINUE",
+    "log_e": -25.257954343653555,
+    "n": 500,
+    "object": "ClassicalSyntheticSafety",
+    "packet_file": "FIN_ST1581_ClassicalSyntheticSafety.json",
+    "packet_sha256": "492ee1a99cb9af18802e08112ed273148d9afe8780745fc36c91eba29fdfbaff",
+    "program": "ST1581",
+    "status": "synthetic_classical_fixture_does_not_cross"
+  },
+  "ST1582": {
+    "boundary": "No uniform expected stopping theorem.",
+    "object": "PriorDilution",
+    "packet_file": "FIN_ST1582_PriorDilution.json",
+    "packet_sha256": "6b347a042438756e68ba0947f8309212c5b708d638d9649ddc48fb6cedbf0148",
+    "program": "ST1582",
+    "status": "continuous_prior_can_dilute_local_power_even_while_preserving_validity",
+    "uniform_power_bound": false
+  },
+  "ST1583": {
+    "accept_C_uniformly": false,
+    "boundary": "No symmetric composite acceptance.",
+    "object": "OneSidedDecisionBoundary",
+    "packet_file": "FIN_ST1583_OneSidedDecisionBoundary.json",
+    "packet_sha256": "1438d82967ccb785f1e33d478864f8dd5d8f5d71aeb07e46589ec1364985f7c6",
+    "program": "ST1583",
+    "status": "continuous_and_quadrature_mixtures_remain_one_sided_C_rejection_tools"
+  },
+  "ST1584": {
+    "boundary": "Reproducibility.",
+    "fixtures": "FIN_ST1572_ST1586_ContinuousPriorFixtures.json",
+    "grid": "FIN_ST1572_ST1586_ContinuousPriorQuadrature.json",
+    "object": "ArtifactHash",
+    "packet_file": "FIN_ST1584_ArtifactHash.json",
+    "packet_sha256": "9026ba90e2a5fdaa734a018b569cd7c9c04879eb0b43ef8a39e095463d46f2f3",
+    "program": "ST1584",
+    "sha256": "59881acc7ff14258869537a846d82c88267ca7bdb0cf2680796736ab87476eda",
+    "status": "constructed_continuous_prior_quadrature_hash"
+  },
+  "ST1585": {
+    "boundary": "Status split.",
+    "exact_integral_code": false,
+    "exact_theorem": true,
+    "finite_valid_approximation": true,
+    "object": "RoundThree_Verdict",
+    "packet_file": "FIN_ST1585_RoundThree_Verdict.json",
+    "packet_sha256": "0276bbbad5af2c9d6c6a355c9e16025f00679d691034b84fedff2bfaefed486b",
+    "program": "ST1585",
+    "status": "continuous_prior_theorem_closes_conceptual_grid_gap_executable_integral_accuracy_open"
+  },
+  "ST1586": {
+    "boundary": "Interval-certify independent preparation/detector polytopes.",
+    "next": [
+      "affine vertex extrema",
+      "independent C/Q maps",
+      "composite cover",
+      "efficiency/no-click",
+      "matrix detector boundary"
+    ],
+    "object": "RoundThree_Recommendation",
+    "packet_file": "FIN_ST1586_RoundThree_Recommendation.json",
+    "packet_sha256": "b04e8b4d469935145a75e5a8dfb3440549e53df83c41770e7be189399781ae2c",
+    "program": "ST1586",
+    "status": "recommended_ST1587_ST1601"
+  }
+}

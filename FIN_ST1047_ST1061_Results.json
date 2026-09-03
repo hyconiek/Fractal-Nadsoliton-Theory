@@ -1,0 +1,187 @@
+{
+  "ST1047": {
+    "boundary": "Operational structure remains an added typed layer, as already required by FIN measurement audits.",
+    "external_observer": false,
+    "object": "InternalObserver_TypedInclusion",
+    "packet_file": "FIN_ST1047_InternalObserver_TypedInclusion.json",
+    "packet_sha256": "aad5fe314307f04d94b844d1e193f9c675259a7e2e7b8ad68028adab0292a010",
+    "program": "ST1047",
+    "status": "constructed_internal_observer_inclusion",
+    "typing": "observer O, apparatus M, environment E, and record R are subsystems/patterns of total state Omega"
+  },
+  "ST1048": {
+    "boundary": "A record is an encoded correlation, not the whole being.",
+    "global_state_can_persist": true,
+    "object": "Record_IsInternalPattern",
+    "packet_file": "FIN_ST1048_Record_IsInternalPattern.json",
+    "packet_sha256": "640009d0d319e4e75c5b38ada688ae4fbde4cae33738e473650f5fc2eed68ff6",
+    "program": "ST1048",
+    "record": "correlation between memory and measured sector",
+    "record_can_erase": true,
+    "status": "proven_record_persistence_is_weaker_than_total_persistence"
+  },
+  "ST1049": {
+    "boundary": "Logical/operational no-go, not evidence that annihilation cannot occur.",
+    "conclusion": "no internal record can be produced after the event",
+    "empirical_status": "direct post-event verification from inside is impossible",
+    "object": "TotalAnnihilation_NoPostEventRecord",
+    "packet_file": "FIN_ST1049_TotalAnnihilation_NoPostEventRecord.json",
+    "packet_sha256": "184efddb0b0fd6d00f1765e9714f624a2e049cf6061fbb413a79c20897d2d605",
+    "premise": "total annihilation removes observer, apparatus, clock, and record",
+    "program": "ST1049",
+    "status": "proven_no_internal_post_annihilation_record"
+  },
+  "ST1050": {
+    "boundary": "A physical vacuum requires an observable algebra and state; nothing has neither.",
+    "nothing_has_measurement_statistics": false,
+    "object": "VacuumOperationallyDistinct",
+    "packet_file": "FIN_ST1050_VacuumOperationallyDistinct.json",
+    "packet_sha256": "4fa2426a6eb1e422e5059ab877b606df396a5c6ec6e02df02c3c9a1b7992af03",
+    "program": "ST1050",
+    "status": "proven_vacuum_is_operationally_distinguishable_from_nothing",
+    "vacuum_can_be_prepared_or_approached": true,
+    "vacuum_has_correlators": true
+  },
+  "ST1051": {
+    "boundary": "Specific coarse statistic is total mass; instrument choice is not strict-generated.",
+    "coarse_mass": 0.9999999999999996,
+    "coarse_records_equal": true,
+    "fine_contrast_t4": 0.02000778715932717,
+    "object": "CoarseObserver_PatternBlindness",
+    "packet_file": "FIN_ST1051_CoarseObserver_PatternBlindness.json",
+    "packet_sha256": "9fd47dd37c54b98057fb2fd4eee73f4725cd416497aafab4f2d30e98d099e662",
+    "program": "ST1051",
+    "status": "proven_coarse_observer_can_miss_surviving_fine_pattern",
+    "uniform_mass": 1.0
+  },
+  "ST1052": {
+    "boundary": "Subsystem factorization is conditional.",
+    "example": "Bell state: global pure, each reduced state maximally mixed",
+    "global_purity": 1.0,
+    "local_purity": 0.5,
+    "object": "TraceOut_LocalDeath",
+    "packet_file": "FIN_ST1052_TraceOut_LocalDeath.json",
+    "packet_sha256": "0b8ca9dec26b5e9d4d8ed5a9108815d56cfe9e6db93a4e22f93365595c7e22b0",
+    "program": "ST1052",
+    "status": "proven_local_purity_loss_does_not_imply_global_information_loss"
+  },
+  "ST1053": {
+    "boundary": "Both are functional calculi of A, but their state types differ.",
+    "heat_mass": 1.0,
+    "heat_preserves": "mass while damping nonzero spectral modes",
+    "object": "DualDynamics_SameGeneratorDifferentQuestions",
+    "packet_file": "FIN_ST1053_DualDynamics_SameGeneratorDifferentQuestions.json",
+    "packet_sha256": "b7f5aa1d24628de7b143110c76896935d203ff2c50c5aa0fc07904d0e2820ed0",
+    "program": "ST1053",
+    "status": "proven_dual_channels_answer_distinct_persistence_questions",
+    "unitary_norm": 1.0,
+    "unitary_preserves": "amplitude norm/coherent reversibility"
+  },
+  "ST1054": {
+    "boundary": "No Wick rotation, bath, preparation, clock, or measurement bridge is strict-derived.",
+    "mathematical_relation": "same spectral projectors, multipliers exp(-it lambda) vs exp(-t lambda)",
+    "object": "UnitaryHeat_NotPhysicalEquivalence",
+    "packet_file": "FIN_ST1054_UnitaryHeat_NotPhysicalEquivalence.json",
+    "packet_sha256": "fbc9b0900654e35cae1e7cdafff81d792163b9f1103e1144856e2f0080d8d5c0",
+    "physical_equivalence": false,
+    "program": "ST1054",
+    "status": "proven_same_generator_does_not_make_unitary_and_heat_physically_equivalent"
+  },
+  "ST1055": {
+    "boundary": "A periodic internal mode can serve as a relational clock only with a state, phase readout, and monotonic/counting convention.",
+    "clock_candidate": "relative phase exp(-it(lambda_j-lambda_k))",
+    "object": "WaveClock_Conditional",
+    "packet_file": "FIN_ST1055_WaveClock_Conditional.json",
+    "packet_sha256": "7cb4ea75f86bc4ed38173946996fc1727891b090dc75effddeb6b18bd7c0eb68",
+    "program": "ST1055",
+    "requires": [
+      "two populated modes",
+      "phase-coherent instrument",
+      "calibration scale"
+    ],
+    "status": "conditional_frequency_clock_does_not_prove_total_time",
+    "strict_dimensional_seconds": false
+  },
+  "ST1056": {
+    "boundary": "Conceptual consistency condition; no complete FIN measurement dynamics is exported.",
+    "closed_description": "Omega includes system+observer+apparatus+environment+record",
+    "ignored_backreaction_is_effective": true,
+    "object": "TotalState_ObserverIncluded",
+    "packet_file": "FIN_ST1056_TotalState_ObserverIncluded.json",
+    "packet_sha256": "f5bf530f976d51fe898c350f1197a407eec3fd60a551f13c0d00a77317d4b3d5",
+    "program": "ST1056",
+    "status": "proven_total_state_description_must_include_observer_backreaction"
+  },
+  "ST1057": {
+    "boundary": "Precursors are model-dependent and cannot certify literal nonexistence afterward.",
+    "not_recordable_after_total_event": [
+      "survival probability",
+      "post-event state",
+      "external timestamp"
+    ],
+    "object": "NearBoundary_PrecursorOnly",
+    "packet_file": "FIN_ST1057_NearBoundary_PrecursorOnly.json",
+    "packet_sha256": "b00992112167c5b986adc5fd611f19251a3f1710811c7ecbc703e64304bf01f5",
+    "program": "ST1057",
+    "recordable": [
+      "norm leakage in a subsystem",
+      "gap closure",
+      "loss of coherence",
+      "approach to a model boundary"
+    ],
+    "status": "proven_only_pre_event_precursors_are_internally_recordable"
+  },
+  "ST1058": {
+    "boundary": "An epistemic no-go; it does not settle ontology.",
+    "comparison_requires": "a common record space containing both outcomes",
+    "object": "SelfMeasurement_Limitation",
+    "packet_file": "FIN_ST1058_SelfMeasurement_Limitation.json",
+    "packet_sha256": "532c18938026953b4942519791204fbacce92a1628a7153e925b5783c74099e2",
+    "program": "ST1058",
+    "status": "proven_internal_observer_cannot_operationally_compare_with_absence_of_all_observers",
+    "total_nothing_supplies_common_record_space": false
+  },
+  "ST1059": {
+    "boundary": "Only the first three are internally testable in principle.",
+    "not_directly_internal_testable": [
+      "annihilation of the complete carrier/state space"
+    ],
+    "object": "OperationalAnnihilation_Definitions",
+    "packet_file": "FIN_ST1059_OperationalAnnihilation_Definitions.json",
+    "packet_sha256": "1f8cfa293d73b2598283a11a2505e5d16c338ba4d9beba1fecd0447b9bc546cc",
+    "program": "ST1059",
+    "status": "constructed_operational_annihilation_hierarchy",
+    "testable": [
+      "pattern disappearance",
+      "record/coherence loss",
+      "subsystem vacuum transition"
+    ]
+  },
+  "ST1060": {
+    "boundary": "State, clock, preparation, instrument, environment, apparatus, and record remain unclosed.",
+    "complete_operational_model": false,
+    "laboratory_record": false,
+    "object": "CurrentFIN_OperationalBoundary",
+    "packet_file": "FIN_ST1060_CurrentFIN_OperationalBoundary.json",
+    "packet_sha256": "275454b5f00b77bd21fd1d43d1387389126422770bcc192e0f4393414674078d",
+    "program": "ST1060",
+    "status": "blocked_no_complete_FIN_operational_total_state",
+    "total_annihilation_test": false
+  },
+  "ST1061": {
+    "boundary": "Next round attempts to destroy every proposed protection package.",
+    "next": [
+      "absorbing-zero extension",
+      "stochastic killing",
+      "finite-time collapse",
+      "topological gap closure",
+      "normalization-gauge critique",
+      "observational equivalence and premise-removal matrix"
+    ],
+    "object": "RoundFour_Recommendation",
+    "packet_file": "FIN_ST1061_RoundFour_Recommendation.json",
+    "packet_sha256": "1bf89d46b89a270cb18a94be1f8f8c0e8bb24ec6c8174ec54fb9c9df04c46218",
+    "program": "ST1061",
+    "status": "recommended_ST1062_ST1076"
+  }
+}

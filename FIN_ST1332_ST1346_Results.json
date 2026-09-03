@@ -1,0 +1,212 @@
+{
+  "ST1332": {
+    "boundary": "Conditional OA only.",
+    "object": "ProtocolSchema",
+    "packet_file": "FIN_ST1332_ProtocolSchema.json",
+    "packet_sha256": "9fb40a2e7ae6df8e295b46241c5c09c9b2db865a4a992f83515c07dcc6af9922",
+    "program": "ST1332",
+    "protocol_file": "FIN_ST1332_ST1346_Protocol.json",
+    "schema": "FIN-OA-10.98-v1",
+    "status": "constructed_frozen_executable_protocol_schema"
+  },
+  "ST1333": {
+    "boundary": "Any change requires a new version before data.",
+    "matrix_hash": "faf664a35cf511856921b82f27a858c56b5b5f258a674b53b5b106cacfeb66b1",
+    "object": "FrozenModelAndTimeFields",
+    "packet_file": "FIN_ST1333_FrozenModelAndTimeFields.json",
+    "packet_sha256": "5d8cd88c5f935c7433ae1a10593e1d17f5baf8424c23a10eaf396751af10c103",
+    "primary": {
+      "max_ideal_error_target": 0.01,
+      "return_threshold_Q": 19,
+      "shots": 29,
+      "time": 0.6
+    },
+    "program": "ST1333",
+    "robust": {
+      "clock_scale_band": [
+        0.9,
+        1.1
+      ],
+      "dephasing_gamma_band": [
+        0,
+        100
+      ],
+      "shots_each": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "times": [
+        0.3,
+        0.6,
+        1.2,
+        2.0
+      ]
+    },
+    "status": "frozen_matrix_hypotheses_and_times"
+  },
+  "ST1334": {
+    "boundary": "Ideal simple hypotheses.",
+    "invalid_is_not_C_or_Q": true,
+    "object": "PrimaryDecisionRule",
+    "packet_file": "FIN_ST1334_PrimaryDecisionRule.json",
+    "packet_sha256": "6238a5d22d4559e350b9bc199ae047eb338089a8ed69fc96bd0bfc4c710821d9",
+    "program": "ST1334",
+    "rule": "at t=0.6 with 29 clicks choose Q iff returns>=19; else C",
+    "status": "constructed_fail_closed_primary_integer_rule"
+  },
+  "ST1335": {
+    "boundary": "Aggregate fixtures do not replace raw laboratory events.",
+    "fields": [
+      "timestamp",
+      "attempt_id",
+      "click",
+      "vertex_if_click",
+      "config_id",
+      "run_id"
+    ],
+    "object": "RawEventSchema",
+    "packet_file": "FIN_ST1335_RawEventSchema.json",
+    "packet_sha256": "bf9c164b6762c6f3dc33683dcfb1a31192aba98486f29cdbb2de31b6465b7d91",
+    "program": "ST1335",
+    "status": "constructed_raw_event_schema"
+  },
+  "ST1336": {
+    "attempt_field": true,
+    "boundary": "Protocol counts attempts and clicks separately.",
+    "click_field": true,
+    "conditional_only_record_rejected": true,
+    "object": "NoClickAccounting",
+    "packet_file": "FIN_ST1336_NoClickAccounting.json",
+    "packet_sha256": "0a0003c085a3b6979c952c1d960028ece46c949566d4969aaac80840b47fdec8",
+    "program": "ST1336",
+    "status": "proven_no_click_must_be_recorded_against_postselection"
+  },
+  "ST1337": {
+    "boundary": "Not exhaustive hardware systematics.",
+    "clock_scale_band": [
+      0.9,
+      1.1
+    ],
+    "dephasing_gamma_band": [
+      0,
+      100
+    ],
+    "object": "NuisanceLibrary",
+    "packet_file": "FIN_ST1337_NuisanceLibrary.json",
+    "packet_sha256": "e04e9dea3e85bbccdcd5d157f940dec12dfbcbf205403d0bc1c12faaa706f1d5",
+    "program": "ST1337",
+    "status": "frozen_nuisance_library_bounds",
+    "uniform_loss": "record via no-click"
+  },
+  "ST1338": {
+    "boundary": "Hash must precede unblinding.",
+    "object": "ProtocolHashFreeze",
+    "packet_file": "FIN_ST1338_ProtocolHashFreeze.json",
+    "packet_sha256": "181e3c161f792aff8e1a1b26833a839ca66cdaf88050ce564eac6604154a7169",
+    "program": "ST1338",
+    "sha256": "cda3ee2737ea19ce6dccb9ce78018a9ded9be1fc6750bddbced59084485092db",
+    "status": "constructed_protocol_SHA256_freeze"
+  },
+  "ST1339": {
+    "boundary": "Local synthetic replay.",
+    "classical_errors": [],
+    "object": "ValidatorPositivePath",
+    "packet_file": "FIN_ST1339_ValidatorPositivePath.json",
+    "packet_sha256": "a8d3f300fcee0bfab76f340e94e40f7a416451807fc42451f41f0f3ff5a4ec13",
+    "program": "ST1339",
+    "protocol_errors": [],
+    "quantum_errors": [],
+    "status": "proven_protocol_and_valid_fixtures_pass_validator"
+  },
+  "ST1340": {
+    "boundary": "Negative test.",
+    "errors": [
+      "invalid count ordering at 0"
+    ],
+    "object": "ValidatorNegativePath",
+    "packet_file": "FIN_ST1340_ValidatorNegativePath.json",
+    "packet_sha256": "c0c2180fb6cd7a175b3f66649f8a1d9d1f83736b1d8da5fbd63353d6b5151fc3",
+    "program": "ST1340",
+    "score": "INVALID",
+    "status": "proven_invalid_count_fixture_fails_closed"
+  },
+  "ST1341": {
+    "boundary": "Random fixture, not evidence.",
+    "object": "SyntheticClassicalFixture",
+    "packet_file": "FIN_ST1341_SyntheticClassicalFixture.json",
+    "packet_sha256": "083855fcbe297f217130685dcb68c5b06b7725a3a8b0762c0c38f473ec5cb468",
+    "program": "ST1341",
+    "returns": 8,
+    "score": "C",
+    "status": "synthetic_classical_primary_fixture_classified_C"
+  },
+  "ST1342": {
+    "boundary": "Random fixture, not evidence.",
+    "object": "SyntheticQuantumFixture",
+    "packet_file": "FIN_ST1342_SyntheticQuantumFixture.json",
+    "packet_sha256": "de7450d3d0a98ad2cb83bd9e1aaefeaca4b56200743a14d835baf9ef97af4fe5",
+    "program": "ST1342",
+    "returns": 26,
+    "score": "Q",
+    "status": "synthetic_quantum_primary_fixture_classified_Q"
+  },
+  "ST1343": {
+    "boundary": "Used for future scorer development.",
+    "classical_counts": [
+      74,
+      47,
+      21,
+      15
+    ],
+    "fixture_file": "FIN_ST1332_ST1346_SyntheticFixtures.json",
+    "object": "FourTimeSyntheticFixture",
+    "packet_file": "FIN_ST1343_FourTimeSyntheticFixture.json",
+    "packet_sha256": "a334d68859d260baf314b58f4e131a4d3fe29c231b2f85f071ef3c65e1f41a8b",
+    "program": "ST1343",
+    "quantum_counts": [
+      96,
+      79,
+      50,
+      15
+    ],
+    "status": "constructed_four_time_synthetic_fixture_bundle"
+  },
+  "ST1344": {
+    "boundary": "Prevents model repair after seeing holdout.",
+    "object": "OneShotAnalysisRule",
+    "packet_file": "FIN_ST1344_OneShotAnalysisRule.json",
+    "packet_sha256": "cb9bbab5932d5a4d8d7031a326093a5c65ed5cb07c32f151e3332080bd29315b",
+    "program": "ST1344",
+    "rule": "validate hash and record once; emit C/Q/INVALID; no refit after unblinding",
+    "status": "constructed_one_shot_analysis_rule"
+  },
+  "ST1345": {
+    "boundary": "Cannot be generated by local code.",
+    "independent_analyst": false,
+    "nature_events": false,
+    "object": "CustodyBoundary",
+    "packet_file": "FIN_ST1345_CustodyBoundary.json",
+    "packet_sha256": "1762d0e1716babf35bd0d9a3ae1c5778f4108cd160e921cb63a335f4d115f9b3",
+    "program": "ST1345",
+    "provider": false,
+    "registrar": false,
+    "status": "blocked_independent_custody_and_nature_record"
+  },
+  "ST1346": {
+    "boundary": "Final falsification and research-roadmap round.",
+    "next": [
+      "base-vs-composite verdict",
+      "minimal claim",
+      "failure modes",
+      "laboratory boundary",
+      "next 10 programmes"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1346_RoundFive_Recommendation.json",
+    "packet_sha256": "9d8f84b83ead70403859a0227991205570cb4a121f48d482dcaf8f1bc8ed12c3",
+    "program": "ST1346",
+    "status": "recommended_ST1347_ST1361"
+  }
+}

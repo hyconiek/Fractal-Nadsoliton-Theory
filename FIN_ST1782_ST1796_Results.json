@@ -1,0 +1,188 @@
+{
+  "ST1782": {
+    "action": "S[f;J]=1/2 f^T A f-J^T f",
+    "boundary": "No 4D interpretation.",
+    "object": "DirichletAction",
+    "packet_file": "FIN_ST1782_DirichletAction.json",
+    "packet_sha256": "122901f352a4c4923cdd679a169c4fb81a1eebc0cb9817543e44d10b698649a0",
+    "positive_semidefinite": true,
+    "program": "ST1782",
+    "status": "constructed_canonical_finite_Dirichlet_action_from_A"
+  },
+  "ST1783": {
+    "boundary": "Ordinary finite variation.",
+    "object": "DirichletEulerEquation",
+    "packet_file": "FIN_ST1783_DirichletEulerEquation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST1783",
+    "status": "proven_Dirichlet_Euler_equation_is_Af_equals_J"
+  },
+  "ST1784": {
+    "boundary": "A1=0.",
+    "condition": "1^T J=0",
+    "object": "ZeroModeCompatibility",
+    "packet_file": "FIN_ST1784_ZeroModeCompatibility.json",
+    "packet_sha256": "12675e440cbdbb4d23753810f8b0aaf0fb67d0b14a1f995fc5eba073bc8645ed",
+    "program": "ST1784",
+    "solution_ambiguity": "f -> f+c1",
+    "status": "proven_zero_mode_requires_source_compatibility_and_gauge_fix"
+  },
+  "ST1785": {
+    "Green": "A^+ on 1^perp",
+    "boundary": "Not W.",
+    "object": "DirichletGreen",
+    "packet_file": "FIN_ST1785_DirichletGreen.json",
+    "packet_sha256": "c96ddc120beaaeef52ea1df8ea98c0404effc1dd72668ceb511fec692c2cd320",
+    "program": "ST1785",
+    "status": "proven_mean_zero_Green_operator_is_Moore_Penrose_A_plus"
+  },
+  "ST1786": {
+    "G_m": "(A+m^2 I)^-1",
+    "H_m": "A+m^2 I",
+    "boundary": "Mass is an extra scale/parameter.",
+    "m_positive": true,
+    "object": "MassiveResolventFamily",
+    "packet_file": "FIN_ST1786_MassiveResolventFamily.json",
+    "packet_sha256": "ec9bade227d51c293e4f9e0678d4917124fa0786ab42fb0222769617fb0de452",
+    "program": "ST1786",
+    "status": "constructed_positive_massive_resolvent_family"
+  },
+  "ST1787": {
+    "boundary": "Definition of current finite model.",
+    "commutator_norm": 3.597282817205142e-16,
+    "identity": "W=sI-A",
+    "object": "WAdjacencyIdentity",
+    "packet_file": "FIN_ST1787_WAdjacencyIdentity.json",
+    "packet_sha256": "c5a2e10d4ea13e70d8162eb1c60d1461b0266d861b0a2f62470b0309fd8e0711",
+    "program": "ST1787",
+    "s": 1.6603072787660988,
+    "status": "proven_strict_kernel_matrix_W_is_affine_adjacency_of_A"
+  },
+  "ST1788": {
+    "boundary": "Quadratic polynomial obstruction.",
+    "claim": "no constants a,m2,c make s-lambda=a/(lambda+m2)-c on >2 distinct lambdas",
+    "distinct_A_eigenvalues": 7,
+    "object": "WNotSameAGreenTheorem",
+    "packet_file": "FIN_ST1788_WNotSameAGreenTheorem.json",
+    "packet_sha256": "fb5d15d6a02131845db4237bb769254e2c3dd0510c4509d423d4c04ce03dd925",
+    "program": "ST1788",
+    "status": "proven_W_cannot_equal_normal_ordered_resolvent_of_same_A_on_seven_eigenvalues"
+  },
+  "ST1789": {
+    "boundary": "Frozen strict finite matrix.",
+    "eigenvalues": [
+      -0.6818747623802017,
+      -0.6382989933129983,
+      -0.6382989933129981,
+      -0.5392615705671114,
+      -0.5392615705671113,
+      -0.30109958321034674,
+      -0.3010995832103458,
+      0.08325776433848894,
+      0.08325776433848935,
+      0.906186124559019,
+      0.9061861245590195,
+      1.6603072787660988
+    ],
+    "invertible": true,
+    "negative": 7,
+    "object": "WSpectrumIndefiniteness",
+    "packet_file": "FIN_ST1789_WSpectrumIndefiniteness.json",
+    "packet_sha256": "8e9e032f549875b6e170d4b0400ff63f9b0c5351221fedd59935b7370908af7b",
+    "positive": 5,
+    "program": "ST1789",
+    "status": "proven_W_is_indefinite_not_Euclidean_covariance"
+  },
+  "ST1790": {
+    "Hessian_eigenvalues": [
+      -1.4665449656903669,
+      -1.5666639153065949,
+      -1.5666639153065955,
+      -1.8543876563433874,
+      -1.8543876563433879,
+      -3.3211603594329944,
+      -3.321160359433005,
+      12.010891812257244,
+      12.010891812257185,
+      1.1035260559596782,
+      1.1035260559596778,
+      0.6022981485349967
+    ],
+    "boundary": "Euclidean action unbounded along negative modes.",
+    "bounded_below": false,
+    "object": "WInverseActionInstability",
+    "packet_file": "FIN_ST1790_WInverseActionInstability.json",
+    "packet_sha256": "46973fe18693ae5c0f7bd7453c86857f7a742408c9eaac132a04250766dc33f7",
+    "program": "ST1790",
+    "status": "proven_action_with_propagator_W_has_indefinite_Hessian_W_inverse"
+  },
+  "ST1791": {
+    "boundary": "Finite calculus.",
+    "nonlinear_or_field_content": false,
+    "object": "QuadraticActionUniqueness",
+    "packet_file": "FIN_ST1791_QuadraticActionUniqueness.json",
+    "packet_sha256": "bba18c8c35b2ad1f6e7a4482ec48ba4b83c886ef12b17cdb62fd2293560a28b8",
+    "program": "ST1791",
+    "status": "proven_quadratic_action_with_Hessian_A_unique_up_to_affine_and_constant_terms"
+  },
+  "ST1792": {
+    "boundary": "Mathematical dual/multiple dynamics.",
+    "heat": "exp(-tA)",
+    "object": "HeatUnitaryWaveFromA",
+    "packet_file": "FIN_ST1792_HeatUnitaryWaveFromA.json",
+    "packet_sha256": "b47649494fc1eec96fddff1dd408d7d88db76454c43ed3ce81eaaa6956bc13ea",
+    "program": "ST1792",
+    "status": "proven_same_A_generates_heat_unitary_and_second_order_wave_calculi",
+    "unitary": "exp(-itA)",
+    "wave": "cos(t sqrt(A))"
+  },
+  "ST1793": {
+    "boundary": "Prior OA no-go survives.",
+    "object": "ChannelSelectionBoundary",
+    "packet_file": "FIN_ST1793_ChannelSelectionBoundary.json",
+    "packet_sha256": "10cc873c2f9f6bc58b6b587a62e9567f4736c6f40ba9be99c18f0f344c179637",
+    "physical_theory": false,
+    "program": "ST1793",
+    "status": "proven_Dirichlet_action_does_not_select_physical_channel_clock_state_category_or_observables"
+  },
+  "ST1794": {
+    "boundary": "A alone insufficient.",
+    "missing": [
+      "algebra",
+      "Hilbert representation",
+      "Dirac grading/reality",
+      "cutoff function",
+      "Lambda scale"
+    ],
+    "object": "SpectralActionInputBoundary",
+    "packet_file": "FIN_ST1794_SpectralActionInputBoundary.json",
+    "packet_sha256": "f5628588a93bef478ad9748f497a1de69a06fc8543b93614717e292acac22b87",
+    "program": "ST1794",
+    "status": "proven_noncommutative_spectral_action_requires_extra_algebra_representation_Dirac_cutoff_and_scale"
+  },
+  "ST1795": {
+    "W_same_A_propagator": false,
+    "boundary": "Parent operator could differ, but must be supplied.",
+    "canonical": "Dirichlet form of A",
+    "object": "RoundFive_Verdict",
+    "packet_file": "FIN_ST1795_RoundFive_Verdict.json",
+    "packet_sha256": "b65aee6136188bc0e0951531ee9846cbdfce5e9dbadbb198678f37defdb4fbdb",
+    "program": "ST1795",
+    "status": "round_five_identifies_Dirichlet_form_as_deepest_unavoidable_variational_object_and_refutes_W_as_its_propagator"
+  },
+  "ST1796": {
+    "boundary": "Synthesize all six rounds and rank decisive future routes.",
+    "next": [
+      "proof ledger",
+      "no-go hierarchy",
+      "conditional remnants",
+      "fundamental-physics decision gate",
+      "highest-value next theorem"
+    ],
+    "object": "RoundFive_Recommendation",
+    "packet_file": "FIN_ST1796_RoundFive_Recommendation.json",
+    "packet_sha256": "70c4d20e51e871a134c3de9510f5028adb1d9e76b7dec4466101b228862952dd",
+    "program": "ST1796",
+    "status": "recommended_ST1797_ST1811"
+  }
+}

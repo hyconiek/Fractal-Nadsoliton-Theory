@@ -1,0 +1,16 @@
+program,status,object,boundary
+ST2817,Defined,StationaryRecord,O1=tanh theta.
+ST2818,Defined,PrismStationaryRecord,"O2=theta_eff(theta,q)."
+ST2819,Defined,UntimedJumpRecord,O3=selected jump probability.
+ST2820,Defined,TimedRecord,O4=mean holding time.
+ST2821,Defined,ArrowRecord,O5=signed current.
+ST2822,Proven,ThetaVisibility,O1 sees theta.
+ST2823,Proven,QVisibility,O2 adds q.
+ST2824,Proven,ActivityVisibility,O3 adds activity a.
+ST2825,Proven,ClockGauge,Without O4 c is Rplus gauge.
+ST2826,Proven,CurrentGauge,Without O5 j sign/magnitude invisible.
+ST2827,Proven,PartialOrbitDimensions,Stationary-only leaves at least three-dimensional fibre.
+ST2828,Constructed,RecordHierarchy,stationary -> untimed -> timed -> arrow.
+ST2829,Proven,GaugeSeparation,Clock and arrow gauges are independent.
+ST2830,Round verdict,RoundTwoVerdict,Different record types remove different source fibres.
+ST2831,Recommendation,RoundTwoRecommendation,Compute Jacobian ranks.

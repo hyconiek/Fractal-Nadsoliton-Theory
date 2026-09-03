@@ -1,0 +1,157 @@
+{
+  "ST837": {
+    "boundary": "Conditional.",
+    "conserved": [
+      "norm",
+      "Hamiltonian"
+    ],
+    "equation": "i psi_dot=A psi+g |psi|^2 psi",
+    "object": "DNLS_StateSpace",
+    "packet_file": "FIN_ST837_DNLS_StateSpace.json",
+    "packet_sha256": "08b9fce7566bb92710287ba80061f6b6a25945e3caea2f40c37fb6fb7448c6b4",
+    "program": "ST837",
+    "status": "constructed_finite_DNLS_model"
+  },
+  "ST838": {
+    "H": "psi*A*psi+g/2 sum|psi|^4",
+    "boundary": "g supplied.",
+    "condition": "g>=0",
+    "object": "Defocusing_EnergyBound",
+    "packet_file": "FIN_ST838_Defocusing_EnergyBound.json",
+    "packet_sha256": "5c0ea2322f8e71ffd96bf859e21c838b7a9513bc2ed66c87698060f3ed53e93a",
+    "program": "ST838",
+    "status": "proven_defocusing_energy_bounded_below"
+  },
+  "ST839": {
+    "boundary": "No unconstrained bound.",
+    "condition": "g<0, fixed norm N0",
+    "lower_bound": "g N0^2/2 plus 0",
+    "object": "Focusing_NormConstrainedBound",
+    "packet_file": "FIN_ST839_Focusing_NormConstrainedBound.json",
+    "packet_sha256": "3f876258d949d2be0baecf63c2d04d44b8eebdd0e3e0e7c780e5fc4f51c462a9",
+    "program": "ST839",
+    "status": "proven_focusing_bound_at_fixed_norm"
+  },
+  "ST840": {
+    "boundary": "Not localized.",
+    "mu": "g N0/12",
+    "object": "Uniform_StationaryBranch",
+    "packet_file": "FIN_ST840_Uniform_StationaryBranch.json",
+    "packet_sha256": "749415baa34e4ef7f1095088f52248dcfcad2fa985d39ad83e61e6813999e215",
+    "program": "ST840",
+    "psi": "sqrt(N0/12) exp(-i mu t) 1",
+    "status": "proven_uniform_stationary_branch"
+  },
+  "ST841": {
+    "boundary": "Proof not executed.",
+    "method": [
+      "variational minimizer at fixed norm",
+      "implicit continuation",
+      "concentration compactness finite"
+    ],
+    "object": "LocalizedBranch_ExistenceRoute",
+    "packet_file": "FIN_ST841_LocalizedBranch_ExistenceRoute.json",
+    "packet_sha256": "f9c85de010da3f01da3470a33d2b6bbd724de27365c303604a89b8db7c99d86e",
+    "program": "ST841",
+    "status": "conditional_localized_branch_route"
+  },
+  "ST842": {
+    "blocks": "A+nonlinear diagonal and pairing",
+    "boundary": "No interval spectrum.",
+    "object": "Linearized_StabilityMatrix",
+    "packet_file": "FIN_ST842_Linearized_StabilityMatrix.json",
+    "packet_sha256": "b2913812bf0253991c6bbaebc2642c2c18498d5303e87398e1034a7f8b8e7dff",
+    "program": "ST842",
+    "status": "constructed_Bogoliubov_stability_matrix"
+  },
+  "ST843": {
+    "boundary": "pump/loss supplied.",
+    "equation": "N_dot=2(P-gamma N)N",
+    "nonzero_equilibrium": "N=P/gamma",
+    "object": "PumpLoss_AmplitudeBalance",
+    "packet_file": "FIN_ST843_PumpLoss_AmplitudeBalance.json",
+    "packet_sha256": "6a6e02f039307e8cd05ef8c02d79f3c5fd22dfd1f885a8e6b92e283b1431bdb9",
+    "program": "ST843",
+    "status": "proven_conditional_pump_loss_balance"
+  },
+  "ST844": {
+    "boundary": "Noise/seed needed.",
+    "object": "SeedRequirement",
+    "packet_file": "FIN_ST844_SeedRequirement.json",
+    "packet_sha256": "f831fcbf4606e199a4640be165a9e53735fd3bfbedd0025a765f1278cc4c8dd7",
+    "program": "ST844",
+    "reason": "equivariant deterministic flow preserves uniform orbit",
+    "status": "proven_exact_symmetric_seed_no_go_persists"
+  },
+  "ST845": {
+    "boundary": "g/P/gamma unsourced.",
+    "object": "GainSourceRequirement",
+    "packet_file": "FIN_ST845_GainSourceRequirement.json",
+    "packet_sha256": "9ae9343f176ff49fe027200a0d2d4d5e52e78ceddda8a24cf34407c4a77e1afc",
+    "program": "ST845",
+    "source": false,
+    "status": "blocked_no_strict_gain_coefficient_source"
+  },
+  "ST846": {
+    "QW_2191": "open",
+    "boundary": "D12 orbit not member.",
+    "object": "SelectorRequirement",
+    "packet_file": "FIN_ST846_SelectorRequirement.json",
+    "packet_sha256": "451dc1597b200eaecc419dca0a03291836d6ad07605774dabfeb5133a3d20edc",
+    "program": "ST846",
+    "status": "blocked_no_branch_selector"
+  },
+  "ST847": {
+    "boundary": "Need traveling/localized stability.",
+    "object": "SolitonTerminologyGate",
+    "packet_file": "FIN_ST847_SolitonTerminologyGate.json",
+    "packet_sha256": "1b4c27a67a58f244451a2cfe9fc1eb693e5a1cf98248712ddb443058b5c7674a",
+    "program": "ST847",
+    "requirements": [
+      "localization",
+      "orbital stability",
+      "collision/scattering or coherent persistence"
+    ],
+    "status": "soliton_name_not_yet_earned"
+  },
+  "ST848": {
+    "boundary": "Refinement and nonlinear scaling missing.",
+    "needed": "g_N scaling with a_N and norm density",
+    "object": "ContinuumScaling_Obligation",
+    "packet_file": "FIN_ST848_ContinuumScaling_Obligation.json",
+    "packet_sha256": "f49426572e6ce1532abc3066fa2a721bda72b353e653d8a2a4219a1308633d2d",
+    "program": "ST848",
+    "status": "continuum_scaling_open"
+  },
+  "ST849": {
+    "boundary": "No transfer.",
+    "carriers": [
+      "C16",
+      "C24",
+      "C48"
+    ],
+    "object": "HeldOutCarrier_Transfer",
+    "packet_file": "FIN_ST849_HeldOutCarrier_Transfer.json",
+    "packet_sha256": "4c9073eefa14952830d6fbc83a51abc9440b7cde441b4d1ea08f505ca9a0fbce",
+    "program": "ST849",
+    "status": "heldout_carrier_transfer_required"
+  },
+  "ST850": {
+    "boundary": "Conditional model only.",
+    "object": "StrictSource_Gate",
+    "packet_file": "FIN_ST850_StrictSource_Gate.json",
+    "packet_sha256": "305df29131a857af5a34838239cc622b12105aa9d915901fd0d440985ca00c51",
+    "program": "ST850",
+    "status": "blocked_no_strict_nonlinear_source",
+    "strict": false
+  },
+  "ST851": {
+    "boundary": "Round two local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST851_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST851",
+    "status": "blocked_no_evidence"
+  }
+}

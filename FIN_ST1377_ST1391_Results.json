@@ -1,0 +1,207 @@
+{
+  "ST1377": {
+    "alpha": [
+      0.9,
+      1.1
+    ],
+    "boundary": "Energy-dephasing family only.",
+    "gamma": [
+      0,
+      100
+    ],
+    "object": "CompositeBoxDefinition",
+    "packet_file": "FIN_ST1377_CompositeBoxDefinition.json",
+    "packet_sha256": "87ad62e0160d5d2fd98b85c06da70973f609b4e2ced8779d6e3b48b098592e7d",
+    "program": "ST1377",
+    "status": "constructed_closed_composite_nuisance_box",
+    "times": [
+      0.3,
+      0.6,
+      1.2,
+      2.0
+    ]
+  },
+  "ST1378": {
+    "boundary": "Frozen decimal spectrum.",
+    "object": "FourTimeTargetIntervals",
+    "packet_file": "FIN_ST1378_FourTimeTargetIntervals.json",
+    "packet_sha256": "4259d3a01d3064620377493de9c1c24a8de6566407305e3e3b5f7145146c5aa8",
+    "program": "ST1378",
+    "status": "proven_outward_classical_target_intervals",
+    "targets": [
+      [
+        0.6236881984862294,
+        0.6236881984862294
+      ],
+      [
+        0.4123573971501711,
+        0.4123573971501711
+      ],
+      [
+        0.21919375976783112,
+        0.21919375976783112
+      ],
+      [
+        0.13512465335393697,
+        0.13512465335393697
+      ]
+    ]
+  },
+  "ST1379": {
+    "alpha_cells": 20,
+    "alpha_step": 0.01,
+    "boundary": "Exact decimal endpoints.",
+    "gamma_cells": 50,
+    "gamma_step": 2,
+    "object": "AlphaGammaPartition",
+    "packet_file": "FIN_ST1379_AlphaGammaPartition.json",
+    "packet_sha256": "91cebd5e2cf71ba6bc77604878b6f296ac65e1ad9d44f1727f1e92e6201e92fc",
+    "program": "ST1379",
+    "status": "constructed_complete_rectangular_partition",
+    "total_cells": 1000
+  },
+  "ST1380": {
+    "all_nonnegative": true,
+    "boundary": "Sum of interval squared-residual lower bounds.",
+    "cells_evaluated": 1000,
+    "object": "PerCellRSSLowerBound",
+    "packet_file": "FIN_ST1380_PerCellRSSLowerBound.json",
+    "packet_sha256": "816aa90b3016ceb761623e1e61774366e8b1a4e47081df2a891b3b2c014fbeb1",
+    "program": "ST1380",
+    "status": "proven_each_cell_has_outward_RSS_lower_bound"
+  },
+  "ST1381": {
+    "RSS_lower": 0.046692011213846946,
+    "boundary": "Finite complete cover.",
+    "object": "GlobalRSSLBound",
+    "packet_file": "FIN_ST1381_GlobalRSSLBound.json",
+    "packet_sha256": "3b63344fd9a158ef6486927f15ba42bc0165ca769b91b66e6f4c31ee5d7aa128",
+    "positive": true,
+    "program": "ST1381",
+    "status": "proven_global_positive_RSS_lower_bound_on_declared_box"
+  },
+  "ST1382": {
+    "boundary": "A cover artifact need not contain exact minimizer.",
+    "cell": {
+      "alpha": [
+        1.09,
+        1.1
+      ],
+      "gamma": [
+        10.0,
+        12.0
+      ]
+    },
+    "cell_lower": 0.046692011213846946,
+    "object": "WorstLowerCell",
+    "packet_file": "FIN_ST1382_WorstLowerCell.json",
+    "packet_sha256": "6c51206c5e86e0d29d67150795579fae1d3adb3f5cb7eb937f1328469615f09b",
+    "program": "ST1382",
+    "status": "identified_weakest_partition_cell"
+  },
+  "ST1383": {
+    "RSS_interval": [
+      0.05239469837327923,
+      0.05239469837327923
+    ],
+    "alpha": 1.1,
+    "boundary": "Does not prove optimizer location.",
+    "gamma": 12.373117825382856,
+    "object": "PointCandidateUpperBound",
+    "packet_file": "FIN_ST1383_PointCandidateUpperBound.json",
+    "packet_sha256": "72c611c70542922537cc497dbdbc792ec9e072e5881ecea6d40295ee5149b6a2",
+    "program": "ST1383",
+    "status": "proven_point_candidate_RSS_upper_bound"
+  },
+  "ST1384": {
+    "boundary": "Frozen decimal model theorem.",
+    "exact_match_possible": false,
+    "minimum_RSS_lower": 0.046692011213846946,
+    "object": "CompositeIdentifiabilityTheorem",
+    "packet_file": "FIN_ST1384_CompositeIdentifiabilityTheorem.json",
+    "packet_sha256": "233fc1233edd696ce398f62ec1758df19b828fa8e35f5a0ee061e52e886aa043",
+    "program": "ST1384",
+    "status": "proven_four_time_classical_curve_not_reproducible_by_declared_dephased_quantum_box"
+  },
+  "ST1385": {
+    "boundary": "Pigeonhole from four squared residuals.",
+    "object": "AtLeastOneTimeResidualBound",
+    "packet_file": "FIN_ST1385_AtLeastOneTimeResidualBound.json",
+    "packet_sha256": "90580293241bd658cb668072fe31c79fdb7f9f8f5229feff11b834797d78e8e4",
+    "program": "ST1385",
+    "residual_lower": 0.10804167160619894,
+    "status": "proven_at_least_one_time_has_absolute_residual_lower_bound"
+  },
+  "ST1386": {
+    "boundary": "Certificate fails to address wide alpha torsor.",
+    "object": "ClockBandNecessity",
+    "packet_file": "FIN_ST1386_ClockBandNecessity.json",
+    "packet_sha256": "cf2995268d20fbf42bf6140067ac84f89fc09f7cafb5107aac37c63cf89cfc0b",
+    "paid_band": [
+      0.9,
+      1.1
+    ],
+    "program": "ST1386",
+    "status": "clock_band_is_a_paid_premise_not_strict_CA_value",
+    "strict_clock_calibration": false
+  },
+  "ST1387": {
+    "all_open_quantum_channels": false,
+    "boundary": "Other Lindblad/noise laws absent.",
+    "gamma_covered": [
+      0,
+      100
+    ],
+    "object": "DephasingBandCoverage",
+    "packet_file": "FIN_ST1387_DephasingBandCoverage.json",
+    "packet_sha256": "79fab114ab0900f81c56c41df4e92b08ba19ffdb4cc6127db3110c4c7d945c0f",
+    "program": "ST1387",
+    "status": "dephasing_band_0_100_is_complete_only_for_declared_family"
+  },
+  "ST1388": {
+    "boundary": "No stochastic optimizer.",
+    "cells": 1000,
+    "minimum_repeatable": 0.046692011213846946,
+    "object": "PartitionReplayDeterminism",
+    "packet_file": "FIN_ST1388_PartitionReplayDeterminism.json",
+    "packet_sha256": "dc77501fb65d60aa35bed126d75c877de6adeaa7c49887c9c1ab0d57c0ff0fd5",
+    "program": "ST1388",
+    "status": "constructed_deterministic_partition_replay"
+  },
+  "ST1389": {
+    "boundary": "No claim inflation.",
+    "laboratory_nuisance_complete": false,
+    "object": "CertificateScope",
+    "outward_interval": true,
+    "packet_file": "FIN_ST1389_CertificateScope.json",
+    "packet_sha256": "6179804ddb6a9e5a28f2f2f20fc7c9ce3f7d664f1d67eaabf30178db7d7f5e7e",
+    "program": "ST1389",
+    "status": "certificate_is_interval_grade_for_frozen_decimals_and_box_not_physical_universality",
+    "symbolic_A": false
+  },
+  "ST1390": {
+    "RSS_candidate_upper": 0.05239469837327923,
+    "RSS_lower": 0.046692011213846946,
+    "boundary": "Major local closure.",
+    "object": "RoundTwo_Verdict",
+    "packet_file": "FIN_ST1390_RoundTwo_Verdict.json",
+    "packet_sha256": "21f204e061308dc269a2b9cedfc58dc78053a73828d9519ca35113251334ca18",
+    "program": "ST1390",
+    "status": "upgraded_four_time_composite_separation_from_strong_numerical_to_positive_interval_lower_bound"
+  },
+  "ST1391": {
+    "boundary": "Add preparation, detector confusion and loss boxes.",
+    "next": [
+      "source contamination",
+      "confusion matrix",
+      "loss/no-click",
+      "identifiability thresholds",
+      "failure surfaces"
+    ],
+    "object": "RoundTwo_Recommendation",
+    "packet_file": "FIN_ST1391_RoundTwo_Recommendation.json",
+    "packet_sha256": "6ecbeacec348822f4a54941ed46bb13054fe4b2dee59d670abaa77ba49cdc48e",
+    "program": "ST1391",
+    "status": "recommended_ST1392_ST1406"
+  }
+}

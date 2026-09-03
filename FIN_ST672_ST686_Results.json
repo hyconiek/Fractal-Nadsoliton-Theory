@@ -1,0 +1,338 @@
+{
+  "ST672": {
+    "boundary": "Product carriers are conditional; a new dimension/topology source is required.",
+    "canonical_D": false,
+    "dimensions_tested": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "family": "D-fold Kronecker sums of the same 1D zero-rate continuum candidate",
+    "object": "SpatialDimension_ProductFamily_NoGo",
+    "packet_file": "FIN_ST672_SpatialDimension_ProductFamily_NoGo.json",
+    "packet_sha256": "5c9169ae73a6943a874a2b74e3048533f71545cc4a8532bb30f40372dc15b700",
+    "program": "ST672",
+    "restriction": "states constant in D-1 coordinates recover the same 1D operator",
+    "status": "proven_spatial_dimension_product_family_nonidentifiability",
+    "theorem": "For every D>=1, the D-dimensional product Laplacian contains an isometric copy of the same 1D scalar dynamics. Endpoint/coarse 1D records therefore cannot select spatial dimension."
+  },
+  "ST673": {
+    "boundary": "Equal leading speed across D strengthens rather than resolves dimension nonidentifiability.",
+    "dimension_selected": false,
+    "object": "Ddimensional_Isotropic_LeadingSymbol",
+    "packet_file": "FIN_ST673_Ddimensional_Isotropic_LeadingSymbol.json",
+    "packet_sha256": "5f5299bfca6efe21a08eb572ab9a2f781353589e5b283321423164cd15c701a0",
+    "program": "ST673",
+    "rows": [
+      {
+        "D": 1,
+        "leading_rotation_group": "O(1)",
+        "massless_speed": 1.9532829071846787,
+        "symbol": "C sum_i k_i^2"
+      },
+      {
+        "D": 2,
+        "leading_rotation_group": "O(2)",
+        "massless_speed": 1.9532829071846787,
+        "symbol": "C sum_i k_i^2"
+      },
+      {
+        "D": 3,
+        "leading_rotation_group": "O(3)",
+        "massless_speed": 1.9532829071846787,
+        "symbol": "C sum_i k_i^2"
+      },
+      {
+        "D": 4,
+        "leading_rotation_group": "O(4)",
+        "massless_speed": 1.9532829071846787,
+        "symbol": "C sum_i k_i^2"
+      },
+      {
+        "D": 5,
+        "leading_rotation_group": "O(5)",
+        "massless_speed": 1.9532829071846787,
+        "symbol": "C sum_i k_i^2"
+      }
+    ],
+    "status": "proven_conditional_Ddimensional_isotropic_symbol_family",
+    "theorem": "The D-fold product has leading isotropic symbol C|k|^2 and the same scalar speed sqrt(C) in every dimension."
+  },
+  "ST674": {
+    "boundary": "Additional locality/cell axioms may reduce the fiber but are not supplied by the scalar spectrum.",
+    "object": "GaugeComplex_HarmonicExtension_Nonuniqueness",
+    "packet_file": "FIN_ST674_GaugeComplex_HarmonicExtension_Nonuniqueness.json",
+    "packet_sha256": "3c96fad6b4f4f92cb8e97b11ca1a70df0df5601944a81d5fa7738067a20cfc86",
+    "program": "ST674",
+    "rows": [
+      {
+        "added_harmonic_edges": 0,
+        "edge_dimension": 81,
+        "new_zero_edge_modes": 0,
+        "scalar_laplacian_residual": 0.0
+      },
+      {
+        "added_harmonic_edges": 1,
+        "edge_dimension": 82,
+        "new_zero_edge_modes": 1,
+        "scalar_laplacian_residual": 0.0
+      },
+      {
+        "added_harmonic_edges": 3,
+        "edge_dimension": 84,
+        "new_zero_edge_modes": 3,
+        "scalar_laplacian_residual": 0.0
+      },
+      {
+        "added_harmonic_edges": 7,
+        "edge_dimension": 88,
+        "new_zero_edge_modes": 7,
+        "scalar_laplacian_residual": 0.0
+      }
+    ],
+    "status": "proven_infinite_gauge_complex_fiber_over_scalar_laplacian",
+    "theorem": "Direct-summing arbitrary harmonic edge cycles leaves D*D on vertices unchanged while changing gauge-sector dimension and zero modes.",
+    "unique_gauge_complex": false
+  },
+  "ST675": {
+    "Gauss_vector_norm": 1.1764370246280835e-14,
+    "boundary": "The complex, coefficients, initial Gauss sector and Hamiltonian are added.",
+    "conditional_equations": "dot A=-E, dot E=-C* C A with Gauss D*E=0",
+    "curl_grad_residual": 0.0,
+    "derived_dynamics": false,
+    "energy": 165.37889010772165,
+    "gauge_field_strength_residual": 2.814831396586497e-15,
+    "object": "Conditional_Discrete_Maxwell_Energy_Gauss",
+    "packet_file": "FIN_ST675_Conditional_Discrete_Maxwell_Energy_Gauss.json",
+    "packet_sha256": "724413d93b5f29637f821f90c85816f98b03398dd2686b9b643234244bc1238e",
+    "program": "ST675",
+    "status": "proven_conditional_discrete_Maxwell_energy_and_constraint",
+    "theorem": "On the supplied cochain complex, Maxwell-type energy is gauge invariant and Gauss constraint is preserved by curl-curl evolution when imposed initially."
+  },
+  "ST676": {
+    "boundary": "This is standard conditional lattice gauge kinematics, not a FIN-derived photon.",
+    "coefficient_speed_factor": "sqrt(kappa_E kappa_B) remains supplied",
+    "object": "Cubic_Maxwell_Transverse_Dispersion",
+    "packet_file": "FIN_ST676_Cubic_Maxwell_Transverse_Dispersion.json",
+    "packet_sha256": "b8eb942bc67b62fb80bf623fd472a28571b898caaea3c3dcefd2ff8725b5f2c4",
+    "program": "ST676",
+    "rows": [
+      {
+        "a": 0.25,
+        "continuum_k2": 0.62,
+        "omega2": 0.6187002428125706,
+        "relative_error": 0.002096382560369939
+      },
+      {
+        "a": 0.125,
+        "continuum_k2": 0.62,
+        "omega2": 0.619674819896035,
+        "relative_error": 0.0005244840386531996
+      },
+      {
+        "a": 0.0625,
+        "continuum_k2": 0.62,
+        "omega2": 0.619918689915889,
+        "relative_error": 0.0001311452969531315
+      },
+      {
+        "a": 0.03125,
+        "continuum_k2": 0.62,
+        "omega2": 0.6199796715377198,
+        "relative_error": 3.278784238737498e-05
+      }
+    ],
+    "status": "proven_conditional_cubic_Maxwell_transverse_dispersion",
+    "theorem": "In Coulomb gauge, every nonzero cubic-lattice wave vector has transverse dispersion omega^2=4 a^-2 sum_i sin^2(a k_i/2), converging to |k|^2."
+  },
+  "ST677": {
+    "boundary": "Quantization, helicity source and photon statistics are absent.",
+    "object": "TwoPolarization_Mode_Count",
+    "packet_file": "FIN_ST677_TwoPolarization_Mode_Count.json",
+    "packet_sha256": "4d430e79f37a68ee9734e7dca8ce2d730e9692ab2cfe9201229ec3c6fe8b2d10",
+    "program": "ST677",
+    "rows": [
+      {
+        "k": [
+          1,
+          0,
+          0
+        ],
+        "longitudinal_null_residual": 0.0,
+        "transverse_projector_rank": 2
+      },
+      {
+        "k": [
+          1,
+          1,
+          0
+        ],
+        "longitudinal_null_residual": 0.0,
+        "transverse_projector_rank": 2
+      },
+      {
+        "k": [
+          1,
+          1,
+          1
+        ],
+        "longitudinal_null_residual": 1.9229626863835638e-16,
+        "transverse_projector_rank": 2
+      },
+      {
+        "k": [
+          2,
+          1,
+          1
+        ],
+        "longitudinal_null_residual": 1.7772239894833365e-16,
+        "transverse_projector_rank": 2
+      }
+    ],
+    "status": "proven_conditional_two_transverse_polarizations",
+    "theorem": "For every nonzero 3D wave vector, the orthogonal complement of k has dimension two, producing two classical transverse polarization directions after a 3D vector field is supplied."
+  },
+  "ST678": {
+    "Hamiltonian": "H=(kappa_E ||E||^2+kappa_B ||B||^2)/2",
+    "boundary": "No FIN law selects kappa_E, kappa_B or their dimensions.",
+    "coefficients_sourced": false,
+    "impedance": "Z=sqrt(kappa_E/kappa_B)",
+    "object": "ElectricMagnetic_Coefficient_Speed_Modulus",
+    "packet_file": "FIN_ST678_ElectricMagnetic_Coefficient_Speed_Modulus.json",
+    "packet_sha256": "ec7038b0450cdef1fec53217b857d29b61b4b6c5ad574c6ff72f74efdaa228c5",
+    "program": "ST678",
+    "status": "proven_gauge_speed_impedance_modulus",
+    "theorem": "The scalar spatial stencil fixes only c_hat_spatial. Independent electric/magnetic coefficients supply both propagation speed and impedance; matching scalar and gauge speeds constrains only their product.",
+    "wave_speed": "c_gauge=sqrt(kappa_E kappa_B)*c_hat_spatial"
+  },
+  "ST679": {
+    "boundary": "No electromagnetic fine-structure constant or charge is transferred from legacy claims.",
+    "dimensionless_gauge_coupling": "not fixed by scalar A",
+    "missing_units": [
+      "action/hbar for quantization",
+      "electric charge unit",
+      "energy normalization",
+      "length/time calibration"
+    ],
+    "object": "GaugeCoupling_Unit_Obligation",
+    "packet_file": "FIN_ST679_GaugeCoupling_Unit_Obligation.json",
+    "packet_sha256": "f2f4e368a9713370946c9caa475b1b5bc60482e64a5579fbb9fd790cc89b6f60",
+    "program": "ST679",
+    "status": "proven_gauge_coupling_unit_obligation",
+    "theorem": "Gauge kinematics can be dimensionless, but physical coupling, energy and quantum photon amplitudes require independent conversion/sector data."
+  },
+  "ST680": {
+    "QW_2191": "open",
+    "boundary": "Fine vector/gauge records or new source axioms can leave the no-go class.",
+    "fibers": [
+      "all product dimensions D",
+      "all harmonic gauge extensions",
+      "electric/magnetic coefficient pairs with fixed product",
+      "orientation/helicity pairs"
+    ],
+    "object": "ScalarEndpoint_DimensionGauge_Selector_NoGo",
+    "packet_file": "FIN_ST680_ScalarEndpoint_DimensionGauge_Selector_NoGo.json",
+    "packet_sha256": "57c2190901572b4fc3b327868c26dbfd5830c984da9873de889b3cb6ea281c17",
+    "program": "ST680",
+    "status": "proven_scalar_endpoint_dimension_gauge_selector_no_go",
+    "theorem": "Complete scalar endpoint and continuum dispersion records are constant on nontrivial dimension/gauge/impedance fibers; no deterministic invariant selector from those records can choose the observed light sector."
+  },
+  "ST681": {
+    "boundary": "Clock normalizations and gauge coefficients remain supplied.",
+    "gauge_Maxwell_clock": "also ballistic after coefficient normalization",
+    "object": "GaugeWave_TwoClock_Compatibility",
+    "packet_file": "FIN_ST681_GaugeWave_TwoClock_Compatibility.json",
+    "packet_sha256": "76d9e5329210665a2cbc26d445c875755cf95a767902e582f0cf369f61790a13",
+    "program": "ST681",
+    "single_clock": false,
+    "spatial_wave_clock": "ballistic a^-1",
+    "status": "proven_gauge_wave_clock_compatibility_and_dual_separation",
+    "theorem": "A supplied Maxwell sector can share the ballistic wave clock, but still cannot share the raw refinement clock of U/P. The two-clock architecture survives gauge completion.",
+    "unitary_heat_clock": "diffusive a^-2"
+  },
+  "ST682": {
+    "boundary": "No full convergence theorem or boost action on records is exported.",
+    "continuum_requirements": [
+      "strong propagator convergence",
+      "constraint convergence",
+      "uniform energy estimates"
+    ],
+    "finite_spacing_defects": [
+      "cubic rotational anisotropy O(a^2)",
+      "boost dispersion defect O(a^2)",
+      "gauge complex only cubic-covariant"
+    ],
+    "object": "FiniteSpacing_Maxwell_Lorentz_Defect",
+    "packet_file": "FIN_ST682_FiniteSpacing_Maxwell_Lorentz_Defect.json",
+    "packet_sha256": "6870d2ec00e88ab6757a337f225b6774d1dd2fc41a167405ba6aea2f80664feb",
+    "program": "ST682",
+    "status": "proven_finite_spacing_Maxwell_Lorentz_obligations",
+    "theorem": "Conditional Maxwell kinematics approaches Lorentz-compatible dispersion but is not exactly Lorentz invariant at finite lattice spacing."
+  },
+  "ST683": {
+    "apparatus_available": false,
+    "boundary": "A schema is not a laboratory realization or evidence.",
+    "falsifiers": [
+      "wrong dispersion exponent",
+      "polarization splitting",
+      "Gauss leakage",
+      "noncommon calibrated c"
+    ],
+    "object": "GaugeLight_Operational_Record_Schema",
+    "packet_file": "FIN_ST683_GaugeLight_Operational_Record_Schema.json",
+    "packet_sha256": "67197b09d5fce31ff6b9dd5f917b9133b3a0b87d16df8c5ffd9ccd27ef39abaa",
+    "program": "ST683",
+    "required_preparations": [
+      "transverse edge wave packets in two polarizations",
+      "longitudinal/gauge control"
+    ],
+    "required_records": [
+      "electric edge response",
+      "magnetic plaquette response",
+      "Gauss residual",
+      "two-clock timing",
+      "independent ruler"
+    ],
+    "status": "constructed_conditional_gauge_light_record_schema"
+  },
+  "ST684": {
+    "boundary": "No strict light sector is generated.",
+    "electric_magnetic_coefficients_source": false,
+    "gauge_complex_source": false,
+    "helicity_selector": false,
+    "object": "DimensionGauge_Source_Gate",
+    "packet_file": "FIN_ST684_DimensionGauge_Source_Gate.json",
+    "packet_sha256": "b38803ef29cc2763182ba7adfa5b42faaed2f766e24d42b0990bbbf6bc26cdc1",
+    "polarization_source": false,
+    "program": "ST684",
+    "spatial_dimension_source": false,
+    "status": "blocked_no_dimension_gauge_source"
+  },
+  "ST685": {
+    "Lorentz_3plus1": false,
+    "Maxwell_physical": false,
+    "boundary": "No SM/GR, apparatus, or ToE closure.",
+    "charge_matter_coupling": false,
+    "experimental_record": false,
+    "object": "Physical_MaxwellPhoton_Gate",
+    "packet_file": "FIN_ST685_Physical_MaxwellPhoton_Gate.json",
+    "packet_sha256": "111556ce7a437dc1c224bd9e14c16e6c1cb88062c9aba65ebfab58df0a6a07e5",
+    "photon_quantization": false,
+    "program": "ST685",
+    "status": "blocked_no_physical_Maxwell_photon_closure"
+  },
+  "ST686": {
+    "boundary": "Round three is local analytic/computational work.",
+    "external_referee": "absent",
+    "held_out_empirical_record": "absent",
+    "independent_laboratory_record": "absent",
+    "new_cycle_round": 3,
+    "object": "Independent_Evidence_Gate",
+    "packet_file": "FIN_ST686_Independent_Evidence_Gate.json",
+    "packet_sha256": "853ba8fc8dc0d168fbb51707fcaea86c9037c767c6eaac35f1f8f1ef57c7ef04",
+    "program": "ST686",
+    "status": "blocked_no_independent_empirical_evidence"
+  }
+}

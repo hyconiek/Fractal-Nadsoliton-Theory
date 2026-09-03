@@ -1,0 +1,137 @@
+{
+  "ST957": {
+    "boundary": "Does not protect localized observable.",
+    "object": "UnitaryQuantum_NoExtinction",
+    "packet_file": "FIN_ST957_UnitaryQuantum_NoExtinction.json",
+    "packet_sha256": "9c6ab390511630f07f4524a5a33cfc064ee062e2c5d6d3f2a333b1feea07d16a",
+    "program": "ST957",
+    "status": "proven_closed_unitary_purity_norm_persistence",
+    "zero_unreachable": true
+  },
+  "ST958": {
+    "boundary": "Environment channel supplied.",
+    "limit": "vacuum",
+    "object": "AmplitudeDamping_toVacuum",
+    "packet_file": "FIN_ST958_AmplitudeDamping_toVacuum.json",
+    "packet_sha256": "3265a9f7d55daeaa68db0551e09dee3eaca8231f0a946c0e8f91b45b7f14f151",
+    "program": "ST958",
+    "status": "proven_amplitude_damping_annihilates_excitation"
+  },
+  "ST959": {
+    "boundary": "Charge/operator needed.",
+    "condition": "vacuum different charge sector",
+    "object": "ChargeSuperselection_Protection",
+    "packet_file": "FIN_ST959_ChargeSuperselection_Protection.json",
+    "packet_sha256": "485b439b952467aa3eab239953af469d0bd4c92029f9321c2ddf6f290b1f312d",
+    "program": "ST959",
+    "status": "proven_nonzero_superselection_charge_blocks_vacuum_transition"
+  },
+  "ST960": {
+    "boundary": "Noise algebra supplied.",
+    "condition": "errors act as scalar on code",
+    "object": "DecoherenceFree_Subspace",
+    "packet_file": "FIN_ST960_DecoherenceFree_Subspace.json",
+    "packet_sha256": "649c02b229733e3e76e117be7a7649a86ec4b667bad5395a1731531da957c9a5",
+    "program": "ST960",
+    "status": "conditional_decoherence_free_subspace"
+  },
+  "ST961": {
+    "boundary": "Lindblad operators supplied.",
+    "condition": "L_k psi=0",
+    "object": "DarkState_Protection",
+    "packet_file": "FIN_ST961_DarkState_Protection.json",
+    "packet_sha256": "981e9c28a09bd3606239d8012d8603bb71cbeb44ec587418f15126a7546eb3c0",
+    "program": "ST961",
+    "status": "conditional_dark_state_protection"
+  },
+  "ST962": {
+    "boundary": "Code/recovery supplied.",
+    "condition": "P E_a* E_b P=c_ab P",
+    "object": "QuantumErrorCorrection_Condition",
+    "packet_file": "FIN_ST962_QuantumErrorCorrection_Condition.json",
+    "packet_sha256": "f6c6ad08e1df1c87b6fb35db94704e775f08e6737aea4b19826a93f7cfe2be55",
+    "program": "ST962",
+    "status": "proven_KnillLaflamme_condition"
+  },
+  "ST963": {
+    "boundary": "Encoding can disperse.",
+    "identity_preserved": false,
+    "object": "InformationConservation_NotShape",
+    "packet_file": "FIN_ST963_InformationConservation_NotShape.json",
+    "packet_sha256": "e798878f2d9ef6a815da323c23c33ad299410d551b79c2bfd0954a64822c68c6",
+    "program": "ST963",
+    "status": "proven_global_information_conservation_not_pattern_protection"
+  },
+  "ST964": {
+    "boundary": "Channel context.",
+    "data_processing": true,
+    "object": "DataProcessing_AccessibleLoss",
+    "packet_file": "FIN_ST964_DataProcessing_AccessibleLoss.json",
+    "packet_sha256": "a0718cb57ed02ea8896fbeb0a0b349058d173a8ab3b4c2b10022734b60dc94a4",
+    "program": "ST964",
+    "status": "proven_accessible_information_can_monotonically_decrease"
+  },
+  "ST965": {
+    "boundary": "Recovery may be impossible locally.",
+    "global_vs_local": true,
+    "object": "EntanglementWithEnvironment",
+    "packet_file": "FIN_ST965_EntanglementWithEnvironment.json",
+    "packet_sha256": "9aa1698a56685a1cd69c3d839e751954d1cece6079be7da1ea3fa4e7f25186d8",
+    "program": "ST965",
+    "status": "proven_environment_entanglement_relocates_information"
+  },
+  "ST966": {
+    "boundary": "Temperature/bath supplied.",
+    "cost": "k_B T ln2 per erased bit",
+    "object": "Landauer_ResetCost",
+    "packet_file": "FIN_ST966_Landauer_ResetCost.json",
+    "packet_sha256": "4072a9e85782251baf86991c1ce5ad8ba950b4ca931d5f2fc13aca7f3ba5cd75",
+    "program": "ST966",
+    "status": "conditional_Landauer_reset_cost"
+  },
+  "ST967": {
+    "boundary": "Resource required.",
+    "free_persistence": false,
+    "object": "AutonomousErrorCorrection_Resource",
+    "packet_file": "FIN_ST967_AutonomousErrorCorrection_Resource.json",
+    "packet_sha256": "da044ff743e6ecc12c0d615ca90ce37033c91ca8b5f23222c182b653e791e06c",
+    "program": "ST967",
+    "status": "autonomous_QEC_requires_entropy_sink"
+  },
+  "ST968": {
+    "boundary": "Need dynamical theorem.",
+    "object": "SelfReference_NotProtection",
+    "packet_file": "FIN_ST968_SelfReference_NotProtection.json",
+    "packet_sha256": "2f24a938457e7839d247a00e3c350acd728425713d2f9b84aac5056d1d2a6ed0",
+    "program": "ST968",
+    "protection": false,
+    "status": "self_reference_does_not_imply_stability"
+  },
+  "ST969": {
+    "boundary": "Fixed point may be unstable.",
+    "closure": false,
+    "object": "BootstrapPersistence_Circularity",
+    "packet_file": "FIN_ST969_BootstrapPersistence_Circularity.json",
+    "packet_sha256": "7356290e848dbc70e9050f0bd213138bbe030585f06df8eda0d504c3bf682e8b",
+    "program": "ST969",
+    "status": "bootstrap_persistence_is_circular_without_source"
+  },
+  "ST970": {
+    "boundary": "No sector/noise/code source.",
+    "object": "StrictQuantumProtection_Gate",
+    "packet_file": "FIN_ST970_StrictQuantumProtection_Gate.json",
+    "packet_sha256": "9ae9343f176ff49fe027200a0d2d4d5e52e78ceddda8a24cf34407c4a77e1afc",
+    "program": "ST970",
+    "source": false,
+    "status": "blocked_no_strict_quantum_charge_code"
+  },
+  "ST971": {
+    "boundary": "Round four local.",
+    "laboratory": "absent",
+    "object": "Evidence_Gate",
+    "packet_file": "FIN_ST971_Evidence_Gate.json",
+    "packet_sha256": "ba8e69669abaf52dc899f80fb15da215ef2f1956a33e424f7079b4f3604928e5",
+    "program": "ST971",
+    "status": "blocked_no_evidence"
+  }
+}
