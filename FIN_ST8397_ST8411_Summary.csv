@@ -1,0 +1,16 @@
+program,status,object,boundary
+ST8397,Defined,ProbabilitySimplex,"p_i>0,sum p=1."
+ST8398,Defined,ShannonEntropy,H=sum p log p.
+ST8399,Proven,EntropyGradient,grad H=log p+1.
+ST8400,Defined,LogarithmicMean,"Lambda(a,b)=(a-b)/(loga-logb)."
+ST8401,Proven,DiagonalExtension,"Lambda(a,a)=a."
+ST8402,Constructed,EdgeMobility,"c_ij=W_ij Lambda(p_i,p_j)."
+ST8403,Constructed,OnsagerOperator,K_p graph Laplacian of c.
+ST8404,Proven,Symmetry,Symmetric.
+ST8405,Proven,MassKernel,K_p 1=0.
+ST8406,Proven,Positivity,K_p>=0.
+ST8407,Proven,StrictWeights,Uses strict W only.
+ST8408,Proven,StateDependence,Mobility depends on state p.
+ST8409,Positive result,ConstructedMobility,A canonical candidate exists.
+ST8410,Round verdict,RoundOneVerdict,Shannon and W generate a positive local Onsager mobility.
+ST8411,Recommendation,RoundOneRecommendation,Prove heat identity.

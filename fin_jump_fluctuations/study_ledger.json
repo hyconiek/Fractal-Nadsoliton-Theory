@@ -1,0 +1,50 @@
+{
+  "programme": "ST8548",
+  "date": "2026-09-06",
+  "counting_policy": "One analytical study with recomputation tests; not a batch of automatically declared proof packets.",
+  "findings": [
+    {
+      "id": "T1",
+      "claim": "Exact local current action from positive Markov jump rates is nonquadratic and has a cosh dissipation potential",
+      "status": "Proven conditional on the microscopic independent-walker model",
+      "evidence": ["PROOFS_EN.md sections 2-4", "test_cgf_and_legendre_match_independent_optimization", "test_exact_cosh_gradient_decomposition"],
+      "priority": "Known generalized-gradient literature; not a FIN originality claim"
+    },
+    {
+      "id": "T2",
+      "claim": "Same mean and reversal asymmetry do not imply the same noise: variance ratio is z*coth(z)",
+      "status": "Proven for positive a,b",
+      "evidence": ["PROOFS_EN.md section 5", "test_variance_mismatch_and_near_equilibrium_limit", "test_high_precision_cgf_cumulants"]
+    },
+    {
+      "id": "T3",
+      "claim": "Quadratic log-mean noise violates integer-jump consistency when abs(log(a/b))>2",
+      "status": "Proven in the local integer-valued Markov additive-count class",
+      "evidence": ["PROOFS_EN.md section 5", "test_integer_jump_variance_bound_and_quadratic_violation"]
+    },
+    {
+      "id": "T4",
+      "claim": "Exact jump cost and covariance contract through correlated product fibers",
+      "status": "Proven for positive channels and the specified product generator",
+      "evidence": ["PROOFS_EN.md section 6", "test_exact_current_contraction_for_arbitrary_hidden_conditionals", "test_shot_covariance_projects_for_correlated_states"]
+    },
+    {
+      "id": "C1",
+      "claim": "Old pure-parity three-rule generators differ only by clock scaling",
+      "status": "Proven correction to the previous nonproportional-spectrum assertion",
+      "evidence": ["PROOFS_EN.md section 9", "test_old_three_bit_claim_is_only_clock_rescaling"]
+    }
+  ],
+  "adaptation": [
+    "Ask whether the ST8547 quadratic flux action follows from independent microscopic jumps.",
+    "Derive the local counting Hamiltonian and its Legendre transform; identify a cosh structure.",
+    "Match deterministic drift and reversal asymmetry, then compare noise curvature.",
+    "Test all integer jump laws; derive a stronger variance-to-drift obstruction.",
+    "Revisit ST8547 correlated refinement; find exact stochastic contraction despite a quadratic metric defect.",
+    "Use the full finite-time tilted generator to avoid an invalid finite-window Poisson approximation.",
+    "Audit an older kinetic example and prove its previously missed proportionality.",
+    "Retain microscopic independence and physical calibration as explicit open assumptions."
+  ],
+  "physical_evidence": false,
+  "next_target": "A finite-count protocol distinguishing single/collective jumps and quadratic noise while accounting for detector losses and observation windows."
+}

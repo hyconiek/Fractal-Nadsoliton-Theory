@@ -1,0 +1,56 @@
+{
+  "programme": "ST8547",
+  "policy": "One study; claims require proofs and independent calculations, not generated pass counters.",
+  "findings": [
+    {
+      "id": "T1",
+      "statement": "Binary refinement characterizes phi''(x)=g(log2 x)/x",
+      "status": "Proven in the stated universal edgewise mass-coordinate class",
+      "proof": "PROOFS_EN.md section 4",
+      "countercheck": "test_dyadic_counterexample_survives_all_tested_levels"
+    },
+    {
+      "id": "T2",
+      "statement": "Binary compatibility plus diagonal concavity selects Shannon/logarithmic mean up to scale",
+      "status": "Proven conditional on the declared transport premises",
+      "proof": "PROOFS_EN.md section 5",
+      "counterchecks": [
+        "test_periodic_diagonal_is_not_concave",
+        "test_heat_identity_for_two_different_entropies"
+      ],
+      "strict_FIN_source_for_added_premises": false
+    },
+    {
+      "id": "T3",
+      "statement": "Binary and ternary compatibility is an alternative rigidity condition",
+      "status": "Proven via continuous incommensurate dilation invariance",
+      "proof": "PROOFS_EN.md section 6",
+      "countercheck": "test_reference_density_counterexample_is_not_shannon"
+    },
+    {
+      "id": "T4",
+      "statement": "Coarse Onsager defect is PSD and is zero precisely on product states",
+      "status": "Proven for connected positive graphs and strictly positive fine states",
+      "proof": "PROOFS_EN.md section 7",
+      "countercheck": "test_coarse_defect_positive_and_zero_exactly_on_tested_products"
+    },
+    {
+      "id": "T5",
+      "statement": "Hidden horizontal dissipation equals a weighted sum of conditional KL divergences",
+      "status": "Proven by an exact edgewise decomposition",
+      "proof": "PROOFS_EN.md section 8",
+      "countercheck": "test_horizontal_entropy_gap_equals_KL_formula"
+    }
+  ],
+  "adaptation_log": [
+    "Inspect prior heat-gradient representation and distinguish file integrity from evidence.",
+    "Test entropy selection by equal binary refinement; construct log-periodic counterexample.",
+    "Add independently testable transport convexity; prove conditional rigidity.",
+    "Try to falsify rigidity under transported reference measures; restrict theorem scope.",
+    "Analyze correlated fine states instead of only products; derive PSD defect and equality case.",
+    "Derive exact KL dissipation identity and compare with unchanged coarse dynamics.",
+    "Verify formulas with high-precision and finite matrix tests, then render the report."
+  ],
+  "physical_conclusion": "No physical source closure; new conditional information-transport relations.",
+  "mathematical_priority": "Known logarithmic-mean construction attributed to Maas; no global originality claim."
+}

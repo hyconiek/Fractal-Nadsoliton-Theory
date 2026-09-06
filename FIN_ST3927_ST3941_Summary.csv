@@ -1,0 +1,16 @@
+program,status,object,boundary
+ST3927,Assume,FixedTailMass,sum t_d=M.
+ST3928,Proven,SecondMomentAsExpectation,DeltaC=M E[d2].
+ST3929,Proven,MinimumDistance,d>=7.
+ST3930,Proven,MassLowerBound,DeltaC>=49M.
+ST3931,Proven,NoUpperBound,Move mass to arbitrarily large d.
+ST3932,Assume,MassBudget,sum t_d<=B.
+ST3933,Proven,BudgetStillUnbounded,Tiny mass at huge d gives arbitrary DeltaC.
+ST3934,Assume,FiniteSupportR,Tail support d<=R.
+ST3935,Proven,SupportBounds,49M<=DeltaC<=R2M.
+ST3936,Conditional,MeanDistanceConstraint,Fix first tail moment.
+ST3937,No-go,VarianceFreedom,Second moment still variable.
+ST3938,Proven,MomentHierarchy,Each moment constraint leaves higher freedom.
+ST3939,No-go,ConstraintCount,Finite constraints cannot identify infinite tail generally.
+ST3940,Round verdict,RoundThreeVerdict,Simple mass budgets do not select speed without support/moment laws.
+ST3941,Recommendation,RoundThreeRecommendation,Minimum principles.

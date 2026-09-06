@@ -1,0 +1,124 @@
+{
+  "ST8412": {
+    "boundary": "Lambda(a,b)(loga-logb)=a-b.",
+    "object": "MeanIdentity",
+    "packet_file": "FIN_ST8412_MeanIdentity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8412",
+    "status": "Proven"
+  },
+  "ST8413": {
+    "boundary": "c_ij gradient difference=W_ij(p_i-p_j).",
+    "object": "EdgeFluxIdentity",
+    "packet_file": "FIN_ST8413_EdgeFluxIdentity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8413",
+    "status": "Proven"
+  },
+  "ST8414": {
+    "boundary": "K_p logp=A p.",
+    "object": "OperatorIdentity",
+    "packet_file": "FIN_ST8414_OperatorIdentity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8414",
+    "status": "Proven"
+  },
+  "ST8415": {
+    "boundary": "p_dot=-K_p gradH.",
+    "object": "GradientFlow",
+    "packet_file": "FIN_ST8415_GradientFlow.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8415",
+    "status": "Proven"
+  },
+  "ST8416": {
+    "boundary": "Equals p_dot=-A p.",
+    "object": "HeatEquation",
+    "packet_file": "FIN_ST8416_HeatEquation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8416",
+    "status": "Proven"
+  },
+  "ST8417": {
+    "boundary": "Nonuniform 12-state p.",
+    "object": "NumericalReplay",
+    "packet_file": "FIN_ST8417_NumericalReplay.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8417",
+    "status": "Computed"
+  },
+  "ST8418": {
+    "boundary": "Infinity residual.",
+    "object": "Residual",
+    "packet_file": "FIN_ST8418_Residual.json",
+    "packet_sha256": "2474a62a78d5efdb07c46c42a7357d43c866a956906c7350eac0ced3cba9e693",
+    "program": "ST8418",
+    "residual": 1.1102230246251565e-16,
+    "status": "Computed"
+  },
+  "ST8419": {
+    "boundary": "1^T p constant.",
+    "object": "MassConservation",
+    "packet_file": "FIN_ST8419_MassConservation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8419",
+    "status": "Proven"
+  },
+  "ST8420": {
+    "boundary": "dH/dt=-(logp)^T A p<=0.",
+    "object": "EntropyDissipation",
+    "packet_file": "FIN_ST8420_EntropyDissipation.json",
+    "packet_sha256": "47ff8e4bbbbf502d931f0e1d02b193eb82c7754888d9445ca32d06bf9548a84e",
+    "program": "ST8420",
+    "status": "Proven",
+    "witness": 0.4548090508492339
+  },
+  "ST8421": {
+    "boundary": "Sum W_ij(p_i-p_j)(logp_i-logp_j)/2.",
+    "object": "DirichletEntropyProduction",
+    "packet_file": "FIN_ST8421_DirichletEntropyProduction.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8421",
+    "status": "Proven"
+  },
+  "ST8422": {
+    "boundary": "Connected graph.",
+    "object": "StationaryUniform",
+    "packet_file": "FIN_ST8422_StationaryUniform.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8422",
+    "status": "Proven"
+  },
+  "ST8423": {
+    "boundary": "Unique entropy minimum uniform.",
+    "object": "StrictConvexityOnSimplex",
+    "packet_file": "FIN_ST8423_StrictConvexityOnSimplex.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8423",
+    "status": "Proven"
+  },
+  "ST8424": {
+    "boundary": "Heat semigroup preserves simplex.",
+    "object": "FiniteGlobalFlow",
+    "packet_file": "FIN_ST8424_FiniteGlobalFlow.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8424",
+    "status": "Proven"
+  },
+  "ST8425": {
+    "boundary": "Strict heat is exactly Shannon gradient flow in this metric.",
+    "object": "RoundTwoVerdict",
+    "packet_file": "FIN_ST8425_RoundTwoVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8425",
+    "status": "Round verdict"
+  },
+  "ST8426": {
+    "boundary": "Uniqueness.",
+    "object": "RoundTwoRecommendation",
+    "packet_file": "FIN_ST8426_RoundTwoRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST8426",
+    "status": "Recommendation"
+  }
+}

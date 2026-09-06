@@ -9768,3 +9768,439 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The final gate passes 3/10 mathematical rows and zero physical rows.  No
   selector, strict hierarchy source, physical scale, clock, OA evidence,
   Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3162--ST3251 layer-distance-embedding guardrail (2026-09-04)
+
+- The exported exact refinement is the product/fibre construction
+  `A24=A12 tensor I2+I12 tensor Bq`, with coarse isometry
+  `R e_i=e_i tensor (1,1)/sqrt(2)`.  The generator intertwining residual is
+  `7.69e-16`; heat/unitary intertwining follows by functional calculus.
+- Interleaved labels `(i,b)->2i+b` double the numerical C24 separation of
+  horizontal vertices, but horizontal weights remain inherited `W12(d)`, not
+  resampled `K(2d)`.  The product operator commutes with shift two but not
+  shift one (residual `1.385640646055102`) and is not a C24 distance circulant.
+- On d=1..6 the maximum discrepancy between inherited `W12(d)` and `K(2d)` is
+  `0.2779421209549173`.  Relabelling is not a kernel-resampling theorem.
+- The even-support injection `e_i->e_(2i)` is not an intertwiner for the
+  connected formula-based C24 Laplacian; parity leakage is
+  `2.349074757511797`.  Invariance would require all odd-distance couplings to
+  vanish, splitting parity components and conflicting with vertical q edges.
+- Vertical fibre rate q and horizontal kernel weight K(d) are distinct typed
+  objects.  The recurrence `q_n=K(2^n)` remains a useful conditional axiom but
+  is not sourced by existing refinement.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, strict layer-distance map, physical length/clock, units, OA
+  evidence, legacy role transfer, Standard Model, gravity, `L_total`, or ToE
+  closure follows.
+
+## Programs ST3252--ST3341 Cantor-layer-geometry guardrail (2026-09-04)
+
+- Repeated binary refinement canonically defines a Cantor boundary and the
+  prefix ultrametric family `d_r(x,y)=r^(-LCP(x,y))`, r>1.  Fibre swaps are
+  isometries and the ultrametric inequality is exact.
+- Uniform independent fibre-swap measure gives cylinder mass `2^-n`, while
+  Hausdorff dimension is `log(2)/log(r)`.  The measure and topology do not
+  select r.
+- The typed layered carrier is `Z12 x {0,1}^N`, not one enlarged cyclic
+  distance space.  Prefix sigma algebras and conditional expectations give a
+  rigorous internal-layer observer model; this is not an apparatus claim.
+- A depth law `q_n=q0 r^(-alpha n)` is cubically summable for every r>1 and
+  alpha>0.  Only `alpha log r` is visible in q ratios; q0, alpha, r and physical
+  length ell0 remain free.
+- Strict eta=1.8 can be assigned either to decay exponent alpha or Hausdorff
+  dimension, yielding inequivalent bridges.  No current theorem selects one;
+  legacy D_f/alpha_geo roles do not transfer.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  selector, unique fractal metric, physical scale/clock, OA evidence, Standard
+  Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3342--ST3431 Cantor-Dirichlet metric-energy guardrail (2026-09-04)
+
+- Binary-tree conductances `c_l=rho^l` define a positive rho-family of
+  Dirichlet forms with the same Cantor boundary and Bernoulli measure but
+  different spectra.  At depth 6, rho=.5,1,2 give gaps
+  `.0016936,.0085151,.0241407` and maxima `1.759,5.548,225.199`.
+- Constant total layer energy selects rho=1/2, while constant per-edge
+  conductance selects rho=1.  Natural energy normalizations conflict and none
+  is strict-sourced.
+- With metric scale `delta_l=r^-l`, measure dimension is
+  `D=log2/logr` and energy exponent `sigma=logrho/logr`; equivalently
+  `rho=r^sigma`.  This relation leaves moduli and an overall clock/energy scale.
+- Eta=1.8 can be assigned to Hausdorff, energy, or walk dimension, producing
+  inequivalent theories.  No semantic selector is exported.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  unique resistance form, continuum diffusion, physical scale/clock, OA
+  evidence, Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3432--ST3521 hierarchical-spectral-geometry guardrail (2026-09-04)
+
+- Haar-level eigenvalues `lambda_l=lambda0(2rho)^l` with multiplicity `2^l`
+  have compact resolvent and finite positive-time heat trace iff rho>1/2.
+  Rho<=1/2 is rejected at infinite depth although finite truncations hide it.
+- Exact dimensions are `d_s=2log2/log(2rho)`,
+  `D_H=log2/logr`, `d_w=log(2rho)/logr`, hence `d_s=2D_H/d_w`.
+- The two added axioms `D_H=eta=1.8` and `d_w=2` conditionally select
+  `r=1.4697344922755988`, `rho=1.080059738892306`, and `d_s=1.8`.
+  This is coherent but non-strict: neither semantic identification is exported.
+- Compactness removes rho<=1/2 but leaves a continuum of spectral geometries;
+  alternative target dimensions/normalizations survive.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  unique strict fractal diffusion, physical scale/clock, OA evidence, Standard
+  Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3522--ST3671 ten-round dimension-bridge guardrail (2026-09-04)
+
+- Heat-semigroup existence/positivity does not derive normal walk exponent
+  d_w=2.  In the Cantor hierarchy d_w=log(2rho)/logr; d_w=2 is the added
+  relation 2rho=r^2 and still leaves r free.
+- A 1D long-range continuation `J(n)~n^-eta`, 1<eta<3, has symbol order
+  `alpha=eta-1`.  For eta=1.8 this gives alpha=d_w=.8 and spectral dimension
+  2.5.  A 200000-term replay gives slope `.8002084570`.
+- Wave dispersion is order alpha/2; alpha=.8 has divergent small-k group
+  velocity.  Finite nonzero wave speed requires alpha=2.  A finite-range
+  continuation gives alpha=2, and current finite C12 data select neither class.
+- Kernel tail exponent and Hausdorff dimension are different typed objects.
+  `D_H=eta` remains an added semantic axiom.  The prior branch
+  `D_H=eta=1.8,d_w=2` is coherent but explicitly non-strict.
+- Product heat traces factor and spectral dimensions add.  Long-range base
+  2.5 plus fibre 1.8 gives 4.3.  Target dimension four admits multiple splits,
+  e.g. 2.5+1.5 or 1+3, with different rho.  Four-dimensional closure is not
+  unique or strict-derived.
+- Relative product scale, finite cutoffs and observation windows move apparent
+  dimensional plateaus.  A single finite spectrum cannot prove an asymptotic
+  dimension.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  unique continuum, physical 3+1 spacetime, Lorentz cone, units, OA evidence,
+  Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3672--ST3821 ten-round tail-continuation guardrail (2026-09-04)
+
+- Restricting infinite radial kernels to strict distances 1..6 has an
+  infinite-dimensional tail kernel.  Exact finite strict data cannot identify
+  a continuum completion.
+- Literal signed cosine continuation first becomes negative at d=8.  Its
+  million-term small-k slope is `2.0001640378`, but quadratic coefficient is
+  `-4.3239603981`; it is not a positive Dirichlet/Markov generator.
+- Absolute-cosine continuation matches all six strict weights and is positive,
+  but has fractional slope `.7996811889`, walk order .8, spectral dimension
+  2.5 and divergent fractional-wave group speed.
+- Truncation after d=6 also matches all strict weights and is positive.  Its
+  slope is `1.9999996137` and coefficient `3.8153140664`, giving a conditional
+  local normal-diffusion/wave class.  Its cutoff is unsourced.
+- Literal analyticity, conductance positivity, locality, smoothness and minimal
+  tail norm select incompatible or nonunique extensions.  Standard
+  regularizers are priors, not strict physical laws.
+- Local and fractional positive completions propagate to incompatible product
+  dimensions and causal behaviour while sharing the entire finite operator.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  unique continuum, Lorentz cone, dimension, physical scale, OA evidence,
+  Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3822--ST3896 five-round Hausdorff-moment guardrail (2026-09-04)
+
+- All available alternating finite differences of strict K(1)..K(6) are
+  positive, but this screen is insufficient for a truncated Hausdorff moment
+  representation.
+- Necessary shifted 3x3 moment Gram matrices are indefinite, with minimum
+  eigenvalues `-0.000565002186446` and `-0.001100659961814` and negative
+  determinants.  No positive measure on [0,1] or exact positive mixture of real
+  decaying exponentials reproduces all six strict weights.
+- Any uniform per-moment repair must be at least
+  `0.000366886653938`, about 3.31 percent of K(6).  The obstruction is not a
+  floating-rounding artefact; approximate repair materially changes the frozen
+  data and requires a loss/prior.
+- Canonical legacy weights fail immediately by sign; their absolute values
+  still give strongly indefinite moment matrices.  Signed/complex mixtures do
+  not restore positive relaxation semantics or uniqueness.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  Do not
+  pursue an exact positive Stieltjes/Bernstein/exponential-mixture tail without
+  modifying frozen weights.  No continuum, units, OA evidence, Standard Model,
+  gravity, `L_total`, or ToE closure follows.
+
+## Programs ST3897--ST4046 ten-round positive-local-tail guardrail (2026-09-04)
+
+- Every nonnegative exact-matching tail with finite second moment has quadratic
+  symbol coefficient `C=C0+sum_(d>=7)d^2 t_d`, where
+  `C0=3.8153141154998296` is the zero-tail value.
+- The exact coefficient range is `[C0,infinity)` and the dimensionless wave
+  speed range is `[1.9532829071846785,infinity)`.  Every value is realized by
+  one tail atom at d=7.  Positive locality fixes order, not speed.
+- Fixed tail mass or an upper mass budget does not give an upper coefficient
+  bound without a support/moment law.  Finite support introduces cutoff and
+  weight parameters.
+- Minimizing C or any positive tail norm uniquely selects truncation, but this
+  is an added variational axiom.  Smooth exponential tails remain a two-
+  parameter family.
+- The speed proxy is dimensionless; physical velocity still needs independent
+  length/time calibration.  The lower bound is class-conditional, not SI.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  unique continuum speed, physical light speed, OA evidence, Standard Model,
+  gravity, `L_total`, or ToE closure follows.
+
+## Programs ST4047--ST4346 twenty-round tail-selection guardrail (2026-09-04)
+
+- Minimum positive tail norm or minimum quadratic coefficient uniquely selects
+  truncation, but the minimization principle is an added axiom.  Source terms,
+  entropy constraints, smoothness penalties and analytic priors select other
+  tails or retain parameters.
+- Exact dyadic homogeneity fails inside strict data: required ratio
+  `2^-1.8=.2871746` disagrees with observed successive ratios
+  `.4086,.4761,.5144,.5131,.4588`.
+- The unique exact order-three recurrence through six strict values has an
+  unstable characteristic root `1.1715198406`, becomes negative and grows.
+  Shortest-recurrence continuation is not positive/stable.
+- Six-point analytic interpolation is nonunique via factors vanishing at
+  d=1..6.  Exact positive exponential mixtures remain excluded by the prior
+  Hankel obstruction.
+- Even fixing the quadratic coefficient/speed does not identify the tail: an
+  atom `t7=1/49` and `t8=1/64` have equal second-moment contribution but fourth
+  moments 49 and 64, hence different higher dispersion.
+- Tail RG, spectral action, maximum entropy, Bayesian/MDL and smoothness routes
+  all require normalization, cutoff, prior, constraints or loss functions not
+  strict-sourced.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  The
+  only current route to one tail is a new strict beyond-d6 datum or an
+  independently derived physical tail functional.  No continuum, physical
+  speed, OA evidence, Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST4347--ST4646 twenty-round extension-quotient guardrail (2026-09-04)
+
+- Let R restrict infinite continuations to strict d=1..6 data and V=ker R be
+  the tail space.  V acts freely and transitively on each affine fibre while
+  acting trivially on finite data.  No V-equivariant/natural section can exist:
+  it would require `s(y)=s(y)+v` for every nonzero v.
+- A continuation observable is strict-determined iff it is constant on tail
+  fibres, equivalently iff it factors uniquely through R.  This is the
+  invariant-factorization criterion for future claims.
+- The canonical quotient `X/V` is the finite six-weight core.  Finite spectrum,
+  D12 symmetry, finite dual dynamics and loop tensor factor through it;
+  continuum speed/order, causal class, dimension and higher dispersion do not.
+- Adding any finite number of tail data leaves an infinite residual fibre.
+  Finite-dimensional model classes, regularizers, priors, recurrences and RG
+  sections are additional symmetry-breaking structure.
+- Selecting a tail resembles a mathematical section/gauge fixing, but because
+  representatives predict different physics it is not a harmless physical
+  gauge equivalence.
+- The final gate passes 3/10 mathematical rows and zero physical rows.  No
+  strict continuum section, units, selector closure, OA evidence, Standard
+  Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST4647--ST5396 fifty-round realization-fibration guardrail (2026-09-04)
+
+- The current FIN structure is classified as a finite spectral-information
+  base B with a stratified realization fibration `p:E->B`.  Representative
+  vertical freedoms include infinite tails, 12 Hodge orbit weights, per-level
+  refinement rates, Cantor metric/energy moduli, 1056 D12 kinetic activity
+  orbits, 20481 pre-symmetry circulation dimensions, origin/polarity torsors,
+  conversion scales and OA roles.
+- Master no-natural-section theorem: a nontrivial group acting freely and
+  vertically on a fibre while acting trivially on B forbids an equivariant
+  section.  Any deterministic completion must add structure breaking,
+  quotienting or coupling that action.
+- Invariant-factorization theorem: a realization observable is strict-
+  determined iff it is constant on every fibre, equivalently iff it factors
+  uniquely through p.  Use this as the default future claim test.
+- Finite compact branch orbits admit uniform invariant probability, which
+  predicts a symmetric mixture rather than one realized member.  Noncompact
+  scale/translation torsors admit no finite invariant Haar probability; a
+  normalized prior necessarily adds scale/cutoff/density.
+- Spontaneous symmetry breaking supplies branch orbits and amplification, not
+  a deterministic nonpremise origin/polarity.  Symmetric noise gives symmetric
+  branch laws.
+- Cross-fibre relations reduce ambiguity only when their source and rank
+  reduction are proved.  Homogeneous relations preserve diagonal scale
+  torsors.  A genuine closure theorem must lower the audited completion rank.
+- The finite spectrum, D12 structure, finite dual calculus, loop tensor and
+  scoped prism identities are base invariants.  Continuum speed/class,
+  dimensions, Hodge dynamics, physical units, realized selector and apparatus
+  vary in fibres and are conditional.
+- The minimal conditional physical package remains typed into section/class,
+  sector, dynamics, conversion and operational packages.  Do not collapse
+  these into one hidden scalar.
+- Master gate passes 4/10 mathematical rows and zero physical-closure rows.
+  No selector/QW-2191 discharge, physical continuum/units, OA evidence,
+  legacy role transfer, Standard Model, gravity, `L_total`, or ToE closure
+  follows.
+
+## Programs ST5397--ST6896 hundred-round invariant-selection guardrail (2026-09-04)
+
+- Invariant-minimizer theorem: if J is G-invariant, every G-translate of a
+  minimizer is a minimizer.  A unique minimizer must be G-fixed; a free
+  realization torsor therefore cannot be uniquely selected by an invariant
+  action, strict convexity, least action or free energy without symmetry
+  breaking.
+- Invariant-measure theorem: invariant Gibbs laws produce symmetric mixtures
+  or full minimizer orbits.  Noncompact translation/scale torsors admit no
+  finite invariant Haar probability; normalized priors require cutoff/scale.
+- Equivariant deterministic flows preserve fixed-point sets.  Spontaneous
+  breaking supplies branch orbits and amplification; one realized branch needs
+  history, noise realization, boundary condition or bias.
+- Homogeneous cross-fibre relations leave residual diagonal torsors.  A genuine
+  unification theorem must show independent Jacobian-rank reduction and remove
+  the residual stabilizer; relations among ratios do not create absolute units.
+- The invariant-factorization criterion remains binding: only observables
+  constant on every realization fibre are strict-derived.  Continuum, speed,
+  dimension, kinetics, units, selector and apparatus remain fibre-dependent.
+- The relatively minimal conditional physical structure has five typed
+  packages: class/section, sector, dynamics, conversion and operational.  Each
+  removal restores an explicit certified ambiguity.
+- FIN's surviving core is a finite self-adjoint Dirichlet spectral-information
+  geometry with exact finite functional calculus, loop tensor, scoped prism RG
+  and Cantor topology, plus strong no-go theorems.  It is not yet one selected
+  physical realization.
+- Master gate passes 6/10 mathematical rows and zero physical-closure rows.
+  No QW-2191 discharge, physical units/continuum, OA evidence, legacy role
+  transfer, Standard Model, gravity, `L_total`, or ToE closure follows.
+
+## Programs ST6897--ST8396 hundred-round entropic-frenetic/FDT guardrail (2026-09-04)
+
+- Every positive rate pair decomposes uniquely as
+  `k_xy=a_xy exp(F_xy/2)`, `k_yx=a_xy exp(-F_xy/2)`, with antisymmetric
+  affinity F and positive symmetric activity a.  Local detailed balance fixes
+  F/rate ratios but not a.
+- An equilibrium Gibbs law admits infinitely many reversible conductance/
+  activity choices with different gaps, mixing times and responses.  No
+  natural equilibrium-state-to-kinetics section follows.
+- Forward/reverse path ratios constrain time-antisymmetric entropy flux.  The
+  time-symmetric frenetic action contains escape rates, waits and traffic and
+  remains independent.
+- FDT/Einstein/Onsager relations genuinely couple drift, noise and response but
+  leave mobility, temperature calibration, microscopic dynamics and clock
+  scale.  They reduce rank without closing the realization fibre.
+- Stationary prism RG closure does not imply dynamic closure: hidden traffic
+  can create memory.  Every refinement level still needs activity/clock or a
+  memory kernel.
+- Affinity, traffic, current and clock require distinct transition-ratio,
+  waiting-time, cycle-count and timestamp records.  State histograms alone are
+  insufficient.
+- FIN supplies finite equilibrium/spectral shapes but not the complete
+  frenetic mobility, driven resource, current polarity, bath or calibrated
+  record.
+- Master gate passes 6/10 mathematical rows and zero physical-closure rows.
+  No physical temperature/time, OA evidence, Standard Model, gravity,
+  `L_total`, or ToE closure follows.
+
+## Programs ST8397--ST8546 logarithmic-mean mobility guardrail (2026-09-05)
+
+- For Shannon entropy `H=sum p_i log p_i`, the edge logarithmic mean
+  `Lambda(a,b)=(a-b)/(log a-log b)` defines positive Onsager conductances
+  `c_ij=W_ij Lambda(p_i,p_j)` and satisfies exactly `K_p log p=A p`.
+  The finite replay residual is `1.11e-16`.
+- Hence strict heat `p_dot=-A p` is exactly Shannon gradient flow
+  `p_dot=-K_p grad H`.  Shannon decreases, mass/positivity are preserved and
+  uniform probability is the unique equilibrium on the connected graph.
+- In the continuous symmetric edge-local Shannon class, exact heat matching
+  uniquely forces the logarithmic mean.  This is a real conditional closure of
+  the time-symmetric frenetic mobility shape.
+- Uniqueness is Shannon-conditional: every strictly convex separable entropy
+  phi has its own mean `(a-b)/(phi'(a)-phi'(b))` producing the same heat flow.
+  Heat alone does not select the entropy-metric pair.
+- The construction transports functorially to any supplied positive A24, but
+  does not select q, q_n, refinement clock or continuum.  It acts on the
+  12-vertex simplex, not the 4096-state ternary configuration algebra.
+- Multiplying mobility by a positive scalar restores clock freedom.  No
+  physical temperature, k_B, energy, seconds, apparatus or evidence follows.
+- Gate passes 5/10 mathematical rows and zero physical rows.  No selector,
+  physical clock/heat, configuration kinetics, Standard Model, gravity,
+  `L_total`, or ToE closure follows.
+
+## ST8547 entropy/refinement rigidity and correlation-defect audit (2026-09-05)
+
+- Detailed proofs and scientific tests are in fin_entropy_refinement/.
+  Hash equality certifies artifact integrity, not a theorem or a completed
+  independent research round. The audited previous batch has 144 empty JSON
+  payloads among 150 programme records; do not treat that count as 150
+  independently verified mathematical results.
+- The logarithmic-mean representation of Markov heat as entropy gradient flow,
+  and its general divided-difference mobility, are established results (Maas
+  2011). They represent an already supplied generator W/A; they do not derive
+  microscopic kinetic rates, time units, or physical FDT.
+- Explicit class for the new rigidity statements: universal edgewise heat
+  matching, one C2 entropy phi with phi''>0 on positive masses, the same scalar
+  mobility at each level, and the same clock. Probability collapse C sums
+  child masses and is not the Hilbert isometry R.
+- Exact coarse Onsager compatibility is stronger than heat intertwining.
+  Equal binary compatibility alone admits all
+  phi''(x)=g(log2 x)/x with continuous positive one-periodic g. The smooth
+  non-Shannon log-periodic example in ST8547 satisfies every dyadic split.
+- Adding concavity of the diagonal mobility (implied by joint convexity of
+  the local flux cost j^2/(2M)) forces
+  phi=kappa*x*log(x)+alpha*x+beta, M=Lambda/kappa.
+  Binary-plus-ternary or arbitrary-fraction splitting are alternative
+  sufficient premises. The extra metric/convexity requirement has not been
+  derived from strict FIN. Normalization kappa remains a convention.
+- These claims depend on mass coordinates. Simultaneously refining a reference
+  measure permits non-Shannon relative-entropy constructions; the rigidity
+  theorem must not be transferred silently to that convention.
+- For Shannon on a supplied product graph, the matrix
+  D(P)=K(CP)-C K_fine(P) C^T is PSD. For strictly positive P and connected
+  base support it vanishes iff P is independent between base and child.
+  The coarse linear heat equation still intertwines for correlated states.
+  Thus exact heat closure does not imply equality of transport quadratic forms.
+- The missing horizontal dissipation is exactly
+  sum_(i<j) W_ij [p_i KL(r_i||r_j)+p_j KL(r_j||r_i)],
+  with r_i the conditional child law. It is dimensionless and requires
+  fine-state information; it does not provide a coarse-only measurement or
+  physical heat in joules. Vertical dissipation is additional.
+- Negative Shannon F=sum p log p decreases under heat; Shannon S=-F increases.
+  At zero masses use a limiting edge-flux identity, not a literal finite
+  expression K_p log p.
+- This audit narrows prior global section claims: an equivariance no-section
+  lemma needs a group action preserving the admissible mathematical class.
+  Arbitrary tail translations need not preserve positivity or an action.
+  No global fibration theorem or universal no-physics result follows merely
+  from counting unspecified completion parameters.
+- No strict entropy-selection axiom, q_n, selector/QW-2191 discharge,
+  legacy role transfer, physical units, configuration-space kinetics,
+  apparatus/independent evidence, SM, GR, L_total or ToE closure is exported.
+
+## ST8548 microscopic-current action and covariance audit (2026-09-06)
+
+- Proofs, direct computations and 18 scientific tests are in
+  fin_jump_fluctuations/. This is one study; hashes only certify artifact
+  integrity. The basic nonquadratic gradient construction is established
+  literature (Mielke--Peletier--Renger; Liero et al.), with explicit attribution.
+- Given positive strict W interpreted as rates of N independent Markov
+  walkers, an oriented edge has a=W_ij p_i, b=W_ij p_j and local counting
+  Hamiltonian h(s)=a(exp(s)-1)+b(exp(-s)-1). Its exact Legendre cost is
+  j asinh(j/(2sqrt(ab)))-(j/2)log(a/b)-sqrt(j^2+4ab)+a+b.
+  This is a local large-deviation action; finite-time closed-chain counts
+  are not generally independent Poisson variables.
+- The symmetric dissipation dual is 2sqrt(ab)(cosh(z)-1), with force
+  z=log(a/b)/2. Its entropy convention is one-half of negative relative
+  Shannon entropy. It gives the same mean a-b as the quadratic log-mean
+  representation, but not the same fluctuation law.
+- Normalize the quadratic prescription as (j-(a-b))^2/(4Lambda(a,b)) to
+  match both the mean and reversal asymmetry. The jump variance is a+b,
+  while its quadratic variance is 2Lambda(a,b). Their ratio is z coth(z),
+  at least one, equal only at a=b. The jump fourth cumulant rate is a+b,
+  while the local quadratic prescription has zero fourth cumulant.
+- Every integer-jump Markov count has instantaneous variance at least the
+  absolute drift. The quadratic prescription violates that bound for
+  abs(log(a/b))>2. In the strict p_i=(i+1)/78 edge 0->11 test, the variance
+  ratio is 1.4683539294 and the quadratic variance/drift ratio is 2/log(12)<1.
+  This excludes an exact integer-count interpretation, not a continuous
+  Gaussian approximation.
+- The whole-graph occupation covariance satisfies Sigma(p)-2K_Lambda(p)>=0,
+  with equality only at uniform p for connected support.
+- Exact current costs contract over child channels:
+  inf_(sum j_b=j) sum ell(j_b;a_b,b_b)=ell(j;sum a_b,sum b_b).
+  This holds for correlated fine states. Covariances also project exactly
+  under the product-generator mass map. The ST8547 Onsager defect remains
+  valid but is not a defect of this exact coarse counting law.
+- Product-generator lumpability must not be conflated with the interacting
+  ternary Ising/prism model's coarse dynamics. Their assumptions differ.
+- Correction to ST2547--ST2561 and the ST2532--ST2621 report: in the
+  three-bit pure-parity energy E=-theta*x1*x2*x3 every flip has
+  abs(DeltaE)=2abs(theta). Thus
+  Q_Met=(1+exp(-2abs(theta)))Q_HB and Q_sym=2cosh(theta)Q_HB.
+  Their normalized spectra coincide; the archived claim that this particular
+  example distinguished more than time rescaling is refuted. General
+  kinetic nonuniqueness survives but needs a different counterexample.
+- Synchronized groups of size s have the same mean heat drift but variance
+  s(a+b). Therefore microscopic independence is an additional premise,
+  not a consequence of A. The walker population also differs from the
+  previous 4096-state binary configuration model.
+- No microscopic FIN population, quantum measurement law, physical clock,
+  selector/QW-2191, legacy completion/role transfer, continuum, SM, GR,
+  dimensional L_total, apparatus evidence or ToE closure follows.

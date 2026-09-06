@@ -1,0 +1,126 @@
+{
+  "ST3477": {
+    "boundary": "Set d_s=eta.",
+    "object": "AlternativeDsEta",
+    "packet_file": "FIN_ST3477_AlternativeDsEta.json",
+    "packet_sha256": "0c301f1c92ca0a2cd6bc9ad4db72ecace51398729bbbc039c332f143bfc4110e",
+    "program": "ST3477",
+    "rho": 1.080059738892306,
+    "status": "Conditional"
+  },
+  "ST3478": {
+    "boundary": "Set d_s=2.",
+    "object": "AlternativeDs2",
+    "packet_file": "FIN_ST3478_AlternativeDs2.json",
+    "packet_sha256": "5107f7b2f08e7dd43463020beec73955618c598ef7dc0f30dd7b95c28390b6d9",
+    "program": "ST3478",
+    "rho": 1.0,
+    "status": "Conditional"
+  },
+  "ST3479": {
+    "boundary": "Set d_s=4.",
+    "object": "AlternativeDs4",
+    "packet_file": "FIN_ST3479_AlternativeDs4.json",
+    "packet_sha256": "d4dc770cffa0bf6f715141498c41bbafe14c96cd07d250f40ea380513ed31f38",
+    "program": "ST3479",
+    "rho": 0.7071067811865476,
+    "status": "Conditional"
+  },
+  "ST3480": {
+    "boundary": "Constant edge conductance.",
+    "object": "RhoOne",
+    "packet_file": "FIN_ST3480_RhoOne.json",
+    "packet_sha256": "c786f3d1ec9f3422fdc49cde6952f3442449e1ff5c198d6e54a6929ea7765ba2",
+    "program": "ST3480",
+    "rho": 1,
+    "status": "Conditional"
+  },
+  "ST3481": {
+    "boundary": "rho=1/2.",
+    "object": "LayerEnergyRhoHalf",
+    "packet_file": "FIN_ST3481_LayerEnergyRhoHalf.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3481",
+    "status": "Rejected by compactness"
+  },
+  "ST3482": {
+    "boundary": "Only removes rho<=1/2.",
+    "object": "CompactnessFilter",
+    "packet_file": "FIN_ST3482_CompactnessFilter.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3482",
+    "status": "Proven"
+  },
+  "ST3483": {
+    "boundary": "Continuum rho>1/2 remains.",
+    "object": "MultipleSurvivors",
+    "packet_file": "FIN_ST3483_MultipleSurvivors.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3483",
+    "status": "Proven"
+  },
+  "ST3484": {
+    "boundary": "Distinct d_s.",
+    "object": "DifferentSpectra",
+    "packet_file": "FIN_ST3484_DifferentSpectra.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3484",
+    "status": "Proven"
+  },
+  "ST3485": {
+    "boundary": "Depends r,rho.",
+    "object": "DifferentWalkDimensions",
+    "packet_file": "FIN_ST3485_DifferentWalkDimensions.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3485",
+    "status": "Proven"
+  },
+  "ST3486": {
+    "boundary": "Eta can target D,ds,dw,sigma.",
+    "object": "EtaRoleAmbiguity",
+    "packet_file": "FIN_ST3486_EtaRoleAmbiguity.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3486",
+    "status": "No-go"
+  },
+  "ST3487": {
+    "boundary": "Removing either joint-closure axiom restores modulus.",
+    "object": "AxiomRemoval",
+    "packet_file": "FIN_ST3487_AxiomRemoval.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3487",
+    "status": "Proven"
+  },
+  "ST3488": {
+    "boundary": "Current strict data select no survivor.",
+    "object": "UniquenessGate",
+    "packet_file": "FIN_ST3488_UniquenessGate.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3488",
+    "status": "Fail"
+  },
+  "ST3489": {
+    "boundary": "Joint D=eta,dw=2 is economical but not proven.",
+    "object": "ConditionalRanking",
+    "packet_file": "FIN_ST3489_ConditionalRanking.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3489",
+    "status": "Strategic"
+  },
+  "ST3490": {
+    "boundary": "Compactness strengthens but does not uniquely close geometry.",
+    "object": "RoundFourVerdict",
+    "packet_file": "FIN_ST3490_RoundFourVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3490",
+    "status": "Round verdict"
+  },
+  "ST3491": {
+    "boundary": "Finite heat-trace falsification.",
+    "object": "RoundFourRecommendation",
+    "packet_file": "FIN_ST3491_RoundFourRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3491",
+    "status": "Recommendation"
+  }
+}

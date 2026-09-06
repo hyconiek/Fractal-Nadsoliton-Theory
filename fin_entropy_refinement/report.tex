@@ -1,0 +1,447 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,longtable,graphicx}
+\usepackage[margin=23mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{FIN ST8547}\fancyhead[R]{5 September 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf1}
+\newcommand{\KL}{D_{\mathrm{KL}}}
+\hypersetup{pdftitle={FIN: Entropy Rigidity under Binary Refinement and Hidden Correlation},
+ pdfauthor={Krzysztof Żuchowski}}
+\begin{document}\hypersetup{pageanchor=false}
+\begin{titlepage}\centering
+\vspace*{16mm}
+{\Huge\bfseries Entropy Rigidity under Binary Refinement\par}
+\vspace{5mm}{\LARGE and Hidden Correlation in FIN\par}
+\vspace{12mm}{\Large Programme ST8547\par}
+\vspace{9mm}{\Large Krzysztof \.Zuchowski\par}
+\vspace{3mm}{Independent Researcher --- Fractal Information Theory Project\par}
+{ORCID: 0009-0002-0909-3613\par}
+\vspace{8mm}{5 September 2026\par}
+\vfill
+\begin{minipage}{.87\textwidth}
+An analytical follow-up to ST8397--ST8546 with explicit proofs, a
+log-periodic counterexample, finite strict-graph computations, and independent
+numerical tests. The report distinguishes a conditional mathematical
+selection theorem from an experimental or parameter-free physical theory.
+It makes no claim of global mathematical priority.
+\end{minipage}
+\vfill{\small English research report; CC BY 4.0.}
+\end{titlepage}\hypersetup{pageanchor=true}
+
+\begin{abstract}
+The logarithmic mean represents finite graph heat flow as the gradient flow of
+negative Shannon entropy, but the heat equation alone admits many
+entropy--mobility pairs. We characterize what an additional binary-refinement
+principle selects. In a common mass-coordinate, separable, edge-local class,
+equal binary splitting permits every curvature
+\(\phi''(x)=g(\log_2x)/x\) with positive continuous one-periodic \(g\).
+An explicit smooth convex example disproves Shannon uniqueness under binary
+splitting alone.
+
+Adding concavity of the diagonal mobility---in particular, joint convexity
+of the local flux cost---forces
+\(\phi(x)=\kappa x\log x+\alpha x+\beta\).
+Equal binary and ternary compatibility is an alternative sufficient
+condition. Both are conditional theorems: metric compatibility is stronger
+than the heat intertwiner already used in FIN.
+
+For the Shannon mobility we prove a positive coarse Onsager defect. On a
+connected graph with a strictly positive joint state, that defect vanishes
+exactly for a product state. A second exact identity writes the missing
+horizontal entropy dissipation as a weighted sum of conditional KL
+divergences. Thus a coarse heat equation may close perfectly while concealing
+fine correlations and dissipation. We exhibit this on the strict 12-to-24
+FIN product graph.
+\end{abstract}
+
+\tableofcontents
+\newpage
+\section{Evidence, conventions and priority}
+
+The mathematical inputs are the frozen strict conductances, the positive
+product refinement, and the entropy/Onsager formula in ST8397--ST8546.
+Project history and source boundaries were checked against AGENTS.md, the
+current-state compendium and the kernel-transformation diagram. This is a
+focused analytical follow-up using the repository state map, not a fresh
+verification of every historical report.
+
+An audit of the previous 150 programme entries found 144 payload files equal
+to the empty JSON object. A successful hash replay confirms reproducibility of
+those files; it does not establish the mathematical assertions in their
+status labels. The present proofs and tests address the mathematics directly.
+
+The logarithmic-mean heat-gradient identity and its divided-difference
+generalization are established results in finite Markov-chain transport.
+Maas \cite{maas} gives this framework, including homogeneity/concavity
+assumptions and the entropy-mobility relation. The results below are presented
+as checked consequences and a new connection within the FIN programme;
+world-first novelty has not been established.
+
+Let \(W=W^\top\), \(W_{ij}\ge0\), \(W_{ii}=0\), with connected support, and set
+\[
+A=\operatorname{diag}(W\one)-W.
+\]
+For strict FIN, \(n=12\) and
+\[
+W_{ij}=\frac{\cos(0.18575d+0.16250)}{1+d^{9/5}},\qquad
+d=\min(|i-j|,12-|i-j|).
+\]
+All relevant cosine arguments for \(d=1,\ldots,6\) lie in \((0,\pi/2)\).
+The raw legacy kernel has signed weights and does not satisfy the same
+positive-conductance premise. No kernel completion or role transfer is made.
+
+States are positive masses \(p_i>0\), with \(\sum p_i=1\) when probability is
+required. Scalar axioms are formulated on the full positive mass cone.
+The same scalar \(\phi\) and the same dimensionless clock are used at every
+level; a reference measure is not silently renormalized.
+
+\section{Heat flow does not by itself select entropy}
+
+For \(\phi\in C^2(0,\infty)\), \(\phi''>0\), define
+\[
+F_\phi(p)=\sum_i\phi(p_i),\qquad
+(K_M^W(p)\xi)_i=\sum_jW_{ij}M(p_i,p_j)(\xi_i-\xi_j).
+\]
+We require edgewise heat matching for every \(a,b>0\):
+\begin{equation}
+M(a,b)\big[\phi'(a)-\phi'(b)\big]=a-b. \label{match}
+\end{equation}
+This is a universal edge-local premise, not a conclusion from testing one
+state on a fixed complete graph.
+
+Equation \eqref{match} gives
+\[
+M_\phi(a,b)=\frac{a-b}{\phi'(a)-\phi'(b)},\qquad
+M_\phi(a,a)=\frac1{\phi''(a)}.
+\]
+Then
+\[
+K_{M_\phi}^W(p)\nabla F_\phi(p)=Ap.
+\]
+For negative Shannon entropy, \(\phi(x)=x\log x\),
+\begin{equation}
+\Lambda(a,b)=\frac{a-b}{\log a-\log b}
+=\int_0^1 a^t b^{1-t}\,dt,\qquad \Lambda(a,a)=a. \label{mean}
+\end{equation}
+
+The entropy dissipation is
+\begin{equation}
+\mathcal I_W(p)=
+\sum_{i<j}W_{ij}(p_i-p_j)\log(p_i/p_j)\ge0. \label{diss}
+\end{equation}
+Along heat flow \(\dot p=-Ap\), negative Shannon \(F\) decreases and Shannon
+\(S=-F\) increases. For boundary states, \(K_p\log p\) must be interpreted
+through limiting edge fluxes; \(0\cdot\log0\) in the gradient expression is
+not an ordinary finite product.
+
+The identity represents a supplied heat generator. Microscopic rates are
+already contained in \(W\); they are not inferred by constructing \(K_p\).
+Without edge locality, a positive matrix annihilating both \(\one\) and
+\(\log p\) can be added to \(K_p\), leaving the vector field unchanged.
+
+\section{Refinement of masses and refinement of transport}
+
+On a finite product graph,
+\[
+\widetilde A=A\otimes I_m+I_n\otimes L_B,\qquad
+C=I_n\otimes\one_m^\top.
+\]
+C sums masses and is different from the Hilbert isometry
+\(R=I_n\otimes\one_m/\sqrt m\). For a product state
+\(P_{ib}=p_i r_b\), \(r_b>0\), \(\sum_b r_b=1\), impose
+\begin{equation}
+C K^{\widetilde W}_M(P)C^\top=K_M^W(p). \label{compat}
+\end{equation}
+Lifted potentials are constant in each fiber; vertical edges disappear from
+the left side. Consequently the edgewise condition is
+\begin{equation}
+\sum_bM(r_ba,r_bb)=M(a,b). \label{split}
+\end{equation}
+Equal binary splitting gives
+\begin{equation}
+2M(a/2,b/2)=M(a,b). \label{binary}
+\end{equation}
+
+The repository's linear heat intertwiner \(C\widetilde A=AC\) holds for
+every fine state and every vertical rate. It does not imply
+\eqref{compat}. The latter preserves a quadratic form on \emph{all}
+potentials, not just the entropy gradient used in the heat equation.
+
+\section{A complete counterfamily for binary uniqueness}
+
+\begin{theorem}[Dyadic classification]
+Under \eqref{match}, equal binary compatibility \eqref{binary} holds if and
+only if
+\[
+\phi''(x)=\frac{g(\log_2x)}{x},
+\]
+where \(g\) is positive, continuous and one-periodic.
+\end{theorem}
+\begin{proof}
+Take \(a=b=x\) in \eqref{binary}. The continuous diagonal formula implies
+\(\phi''(x/2)=2\phi''(x)\). Thus \(x\phi''(x)\) is invariant under doubling.
+Conversely, integrate this curvature from \(b/2\) to \(a/2\). A change of
+variable gives
+\(\phi'(a/2)-\phi'(b/2)=\phi'(a)-\phi'(b)\), which proves
+\eqref{binary}.
+\end{proof}
+
+For \(\omega=2\pi/\log2\) and \(0<|\varepsilon|<1\), take
+\[
+\phi_\varepsilon(x)=x\log x-
+\frac{\varepsilon x}{\omega(1+\omega^2)}
+\big[\cos(\omega\log x)+\omega\sin(\omega\log x)\big].
+\]
+Then
+\[
+\phi_\varepsilon''(x)=
+\frac{1+\varepsilon\sin(\omega\log x)}x>0.
+\]
+This is a smooth convex entropy on positive masses, continuous at zero.
+Its mobility generates exactly the same heat flow, and it passes every
+equal dyadic subdivision. It is not Shannon plus an affine function.
+
+At \(\varepsilon=1/4\), \(a=0.07,b=0.19\), the binary relative defect is
+\(2.22\times10^{-16}\), whereas ternary and \(0.3/0.7\) splitting defects are
+\(0.09275176\) and \(0.08029200\).
+Special pairs with dyadic ratios may conceal this difference. All numeric
+figures are diagnostics for the analytic counterexample.
+
+\section{Conditional entropy rigidity}
+
+\begin{theorem}[Binary refinement and convex transport]
+Assume \eqref{match}, \eqref{binary}, and that the diagonal mobility
+\(f(x)=M(x,x)\) is concave. Then
+\[
+\boxed{
+\phi(x)=\kappa x\log x+\alpha x+\beta,\qquad
+M(a,b)=\Lambda(a,b)/\kappa,\quad\kappa>0.}
+\]
+\end{theorem}
+\begin{proof}
+The dyadic condition gives \(f(x/2)=f(x)/2\). The periodic classification and
+positive continuity bound \(f(x)/x\), so \(f(0+)=0\).
+For any concave \(f\) with \(f(0)=0\), \(f(x)/x\) is nonincreasing.
+But this ratio takes equal values at \(x\) and \(2x\), hence is constant on
+\([x,2x]\). Those intervals cover all positive scales. Write
+\(f(x)=x/\kappa\); then \(\phi''(x)=\kappa/x\). Integrating proves the entropy
+formula, and \eqref{match} determines the mobility.
+\end{proof}
+
+Diagonal concavity follows from joint convexity of the local transport cost
+\[
+\Psi(a,b,j)=\frac{j^2}{2M(a,b)}.
+\]
+To see this, restrict to \(a=b=x\), and at endpoints choose
+\(j_i=f(x_i)\). At weight \(t\), put \(s=tf(x_1)+(1-t)f(x_2)>0\).
+Convexity gives \(s^2/[2f(tx_1+(1-t)x_2)]\le s/2\), hence concavity of \(f\).
+Conversely \(\Lambda\) is jointly concave by \eqref{mean}, and the convex
+perspective \(j^2/(2z)\), decreasing in \(z>0\), proves convexity of the
+Shannon transport cost.
+
+This is a sufficient mathematical principle coupling refinement, information
+and transport. The cost-convexity and full metric-compatibility premises are
+additional assumptions for FIN. The result does not derive \(W\), its frozen
+parameters or the time unit.
+
+\begin{longtable}{p{.28\textwidth}p{.63\textwidth}}
+\toprule
+Removed premise & Counterexample or remaining freedom\\
+\midrule\endhead
+Diagonal concavity & The log-periodic family survives all binary splits;
+its diagonal mobility has \(f''(1)>8\) at \(\varepsilon=1/4\).\\
+Binary compatibility & Quadratic entropy with \(M=1\) has convex transport
+cost and heat matching, but the binary left side is 2.\\
+Heat matching & \(M=\sqrt{ab}\) is homogeneous and concave; it does not force
+a separately supplied entropy to generate heat.\\
+Specified mass coordinates & Transporting a reference measure permits
+non-Shannon relative-entropy counterexamples.\\
+\bottomrule
+\end{longtable}
+
+\begin{theorem}[Two independent subdivisions]
+Heat matching plus continuous compatibility with equal binary and ternary
+subdivision also forces the Shannon/logarithmic-mean pair up to scale.
+\end{theorem}
+\begin{proof}
+\(h(x)=x\phi''(x)\) is invariant under multiplying by 2 and by 3.
+On logarithmic coordinates the periods are \(\log2\) and \(\log3\).
+Their ratio is irrational, since \(2^m=3^n\) has no positive integer
+solution. Their integer span is dense; continuity makes \(h\) constant.
+\end{proof}
+
+Arbitrary binary split fractions similarly imply additive
+\(s\mapsto M(sa,sb)\), hence degree-one homogeneity and Shannon. These
+conditions are stronger than equal binary subdivision alone.
+
+\subsection{Reference-measure caveat}
+
+For a reversible reference \(\pi\), use density \(u_i=p_i/\pi_i\) and
+relative entropy \(\sum_i\pi_i\phi(u_i)\).
+If \(\pi\) is simultaneously refined to \(\pi\otimes r\), a product
+state \(p\otimes r\) keeps density \(u_i\) unchanged in each child.
+Any convex \(\phi\) can then inherit product mobility compatibility.
+Quadratic relative entropy is an explicit non-Shannon example.
+The preceding rigidity theorem is not invariant under arbitrarily changing
+its mass/reference-measure conventions.
+
+\section{Hidden correlation despite exact coarse dynamics}
+
+Let \(P_{ib}>0\), \(p_i=\sum_bP_{ib}\), and \(r_i(b)=P_{ib}/p_i\).
+For Shannon mobility define
+\[
+\mathcal D(P)=K_\Lambda^W(p)-
+CK_\Lambda^{\widetilde W}(P)C^\top.
+\]
+
+\begin{theorem}[Coarse Onsager defect]
+\(\mathcal D(P)\) is positive semidefinite. On a connected base graph it
+vanishes if and only if \(P=p\otimes r\).
+\end{theorem}
+\begin{proof}
+Its edge conductance is \(W_{ij}\delta_{ij}\), where
+\[
+\delta_{ij}=\Lambda(p_i,p_j)-
+\sum_b\Lambda(P_{ib},P_{jb})\ge0.
+\]
+Using the integral in \eqref{mean}, H\"older's inequality proves this bound.
+For \(0<t<1\), equality holds exactly when the normalized child distributions
+are equal: \(r_i=r_j\). Integrating retains the strict equality case.
+Thus the defect is a positive Laplacian, zero exactly when equality holds
+on every base edge. Connectedness gives independence globally.
+\end{proof}
+
+\begin{theorem}[Hidden horizontal entropy production]
+With \(\mathcal I_W\) as in \eqref{diss},
+\[
+\boxed{
+\sum_b\mathcal I_W(P_{\cdot b})-\mathcal I_W(p)
+=\sum_{i<j}W_{ij}
+\big[p_i\KL(r_i\Vert r_j)+p_j\KL(r_j\Vert r_i)\big]\ge0.}
+\]
+\end{theorem}
+\begin{proof}
+On each edge split
+\(\log(P_{ib}/P_{jb})=\log(p_i/p_j)+\log(r_i(b)/r_j(b))\).
+The first part sums to the coarse dissipation; the two remaining weighted
+terms are exactly the two KL divergences.
+\end{proof}
+
+The equality condition is the same independence criterion. Full fine
+entropy production additionally contains the vertical contribution.
+The defect is independent of that vertical rate. It requires fine-state
+information and cannot be reconstructed from a coarse-only heat record.
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{findings.pdf}
+\caption{The dyadic-compatible non-Shannon entropy (left) and the hidden
+horizontal dissipation under exactly unchanged coarse heat dynamics (right).
+Both plots come from the executable calculations.}
+\end{figure}
+
+\section{Finite strict-graph verification}
+
+The package contains 15 independent tests of the formulas and counterexamples,
+including high-precision integration of the logarithmic mean and differentiation
+of the non-Shannon entropy. It tests 80 positive strict-graph states, 12
+dyadic depths, biased and ternary splits, correlated product refinements,
+the KL identity, the coarse heat semigroup and unitary spectral preservation.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Computed check & Value\\
+\midrule
+Largest heat identity error, 80 states & \(6.67\times10^{-16}\)\\
+Largest product Onsager defect & \(3.79\times10^{-16}\)\\
+Correlated example, coarse heat error & \(1.39\times10^{-17}\)\\
+Hidden horizontal dissipation & \(0.1286853406\)\\
+KL identity error & \(3.06\times10^{-16}\)\\
+Smallest positive defect eigenvalue & \(0.0006361160\)\\
+Largest defect eigenvalue & \(0.0034115110\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For the correlated example, the defect has eleven positive eigenvalues and
+one mass-conservation zero mode. A second example has uniform coarse
+probabilities: coarse heat remains stationary while hidden dissipation is
+strictly positive. No laboratory data or interval certification is claimed.
+
+\section{Physical meaning, limitations and next research}
+
+The significant result for FIN is the coupling of entropy and mobility by
+a precisely stated refinement/convexity principle, together with an exact
+fine/coarse correlation diagnostic. The theorems are valid on any connected
+positive weighted graph. They are not a fingerprint specific to the strict
+parameter tuple.
+
+The same \(A\) still supplies \(e^{-itA}\), \(e^{-tA}\) and
+\(\cos(t\sqrt A)\). Unitary evolution preserves the density-matrix spectrum,
+whereas the heat channel dissipates the convex entropy. Refinement rigidity
+constrains the heat representation, not the measurement rule, the microscopic
+configuration generator or an absolute clock.
+
+Neither the new convexity axiom nor the stronger mobility equation has been
+derived from the nadsoliton's historical coupling diagram. The factor
+\(\kappa\), graph parameters, reference measure convention, physical preparation,
+units, continuum tail and apparatus remain outside the conclusions.
+
+The earlier abstract no-equivariant-section lemma is valid only when its
+claimed vertical group preserves the admissible class. Arbitrary tail
+translations do not generally preserve positivity or a physical action.
+They must not be imported as physical symmetries without proof.
+
+The following tasks have the highest decision value:
+\begin{enumerate}
+\item Derive or refute joint convexity of the transport cost from an independent
+FIN action, without choosing it to obtain Shannon.
+\item Determine whether an actual coarse measurement requires full Onsager
+compatibility or only the weaker heat intertwiner.
+\item Extend the correlation defect and its equality conditions through
+multiple refinement levels.
+\item Prove quantitative stability bounds for approximate dyadic compatibility
+and approximate convexity.
+\item Construct a physical preparation/measurement map only after the preceding
+source premises are explicit.
+\end{enumerate}
+
+The log-periodic counterexample rules out automatic Shannon selection by
+binary self-similarity. The conditional rigidity theorem explains one
+sufficient extra principle. The KL identity identifies information hidden
+by a coarse layer. None establishes a physical Theory of Everything.
+
+\appendix
+\section{Reproduction}
+
+From the package directory:
+\begin{verbatim}
+python3 analysis.py --output results.json
+python3 -m unittest -v test_analysis.py
+MPLCONFIGDIR=/tmp/fin-st8547-mpl python3 plot_results.py
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+\end{verbatim}
+
+Dependencies are Python with NumPy, SciPy, mpmath and Matplotlib, plus a
+standard pdfLaTeX installation for the PDF. Exact dependency versions used
+are recorded in provenance.json. Proofs are also supplied as PROOFS\_EN.md.
+No long-running computation or network access is required for replay.
+
+\begin{thebibliography}{9}
+\bibitem{maas} J. Maas, \emph{Gradient flows of the entropy for finite Markov
+chains}, Journal of Functional Analysis 261 (2011), 2250--2292.
+\url{https://arxiv.org/abs/1102.5238}.
+\bibitem{local} FIN local source: ST8397--ST8546, logarithmic-mean mobility;
+ST30, ST245 and ST1137, product refinement; AGENTS.md and the current-state
+compendium. Their source hashes and the audit scope are listed in provenance.json.
+\end{thebibliography}
+\end{document}

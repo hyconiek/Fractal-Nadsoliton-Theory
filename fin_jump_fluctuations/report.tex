@@ -1,0 +1,447 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,longtable,graphicx}
+\usepackage[margin=23mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{FIN ST8548}
+\fancyhead[R]{6 September 2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\one}{\mathbf1}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\diag}{\operatorname{diag}}
+\hypersetup{pdftitle={FIN: Same Heat Flow, Different Fluctuation Actions},
+ pdfauthor={Krzysztof Żuchowski}}
+\begin{document}\hypersetup{pageanchor=false}
+\begin{titlepage}\centering\vspace*{16mm}
+{\Huge\bfseries Same FIN Heat Flow,\par}
+\vspace{3mm}{\Huge\bfseries Different Fluctuation Actions\par}
+\vspace{8mm}{\LARGE Cosh dissipation, integer-count constraints,\par}
+{\LARGE and exact coarse current contraction\par}
+\vspace{12mm}{\Large Programme ST8548\par}
+\vspace{8mm}{\Large Krzysztof \.Zuchowski\par}
+\vspace{3mm}{Independent Researcher --- Fractal Information Theory Project\par}
+{ORCID: 0009-0002-0909-3613\par}
+\vspace{9mm}{6 September 2026\par}
+\vfill
+\begin{minipage}{.87\textwidth}
+An analytical and computational follow-up to ST8547. The report tests whether
+the quadratic logarithmic-mean transport cost is a microscopic fluctuation
+law. It derives an alternative from independent Markov walkers, identifies
+observable differences, and proves exact current contraction through product
+refinement. The microscopic realization remains a supplied model.
+\end{minipage}
+\vfill{\small English research preprint; CC BY 4.0.}
+\end{titlepage}\hypersetup{pageanchor=true}
+
+\begin{abstract}
+The logarithmic mean gives a valid quadratic Onsager representation of
+finite graph heat flow. Independent continuous-time Markov walkers with the
+same conductances instead yield a nonquadratic fluctuation action with a
+cosh dissipation potential. Both have the same mean current and the same
+time-reversal cost asymmetry. Their local variances differ by
+\(z\coth z\ge1\), where \(z\) is half the log population ratio.
+For the explicit strict FIN test the ratio is \(1.4683539294\).
+The quadratic prescription even violates the variance lower bound for
+integer-valued Markov counts when \(|\log(a/b)|>2\).
+
+The exact jump action contracts under summing fine channels for arbitrary
+positive hidden conditional distributions. Its covariance also projects
+exactly. This differs from the quadratic Onsager equality criterion in
+ST8547, which requires independence. Thus a defect of one gradient metric
+does not imply failure of exact stochastic coarse-graining.
+
+All conclusions are conditional on supplied rates and a microscopic counting
+model. The underlying nonquadratic gradient structure is established
+literature. This study provides a checked application, a counting test and
+corrections to FIN's interpretation; it makes no claim of new fundamental
+physics or mathematical priority.
+\end{abstract}
+
+\tableofcontents\newpage
+
+\section{Scope, source evidence and conventions}
+
+The project state map in AGENTS.md, the ST8547 proofs and code, and the
+earlier configuration-generator examples were consulted. This is a focused
+proof-level continuation, not a new verification of every historical FIN
+report. The raw archived status labels and hashes are not treated as
+independent proof certificates.
+
+The basic microscopic/gradient distinction was established by Mielke,
+Peletier and Renger \cite{mpr}, with further developments by Liero et al.
+\cite{lmpr}. Maas \cite{maas} supplies the logarithmic-mean quadratic
+representation. The present derivations and numerical tests state exactly
+which of these structures is being used.
+
+The strict conductances are
+\[
+W_{ij}=\frac{\cos(0.18575d+0.16250)}{1+d^{9/5}},\qquad
+d=\min(|i-j|,12-|i-j|),\quad W_{ii}=0.
+\]
+They are positive on \(d=1,\ldots,6\). Let
+\(Q=W-\diag(W\one)=-A\), a row-generator convention.
+The raw legacy kernel has signed weights and is not substituted into this
+positive-rate construction.
+
+Assume \(N\) independent Markov walkers with generator \(Q\). Their empirical
+occupation vector has increments \((e_j-e_i)/N\), occurring at rate
+\(Np_iW_{ij}\). Its exact generator is
+\begin{equation}
+(\mathcal G_NF)(p)=N\sum_{i\ne j}p_iW_{ij}
+\left[F\!\left(p+\frac{e_j-e_i}{N}\right)-F(p)\right]. \label{empirical}
+\end{equation}
+Coordinate functions give the mean equation \(\dot p=-Ap\).
+The population, independence assumption and rate interpretation of \(W\)
+are additional model premises; physical time is not derived.
+
+\section{Exact local current fluctuations}
+
+Orient edge \(i\to j\). Write
+\[
+a=W_{ij}p_i,\qquad b=W_{ij}p_j,\qquad a,b>0.
+\]
+The local current Hamiltonian is
+\begin{equation}
+h(s;a,b)=a(e^s-1)+b(e^{-s}-1). \label{hamiltonian}
+\end{equation}
+It follows either from the two oriented generator increments or from the
+nonlinear exponential transform of \eqref{empirical}. Derivatives at zero
+give instantaneous cumulant rates
+\[
+\kappa_1=a-b,\quad\kappa_2=a+b,\quad
+\kappa_3=a-b,\quad\kappa_4=a+b.
+\]
+For \(N\) independent walkers the total-count cumulants scale by \(N\).
+
+This is an exact \emph{local} action density. For a closed chain it is not
+the finite-time count distribution at arbitrary time: the state changes
+and return transitions occur. Section~\ref{verification} checks finite-time
+counts with the full tilted generator.
+
+\begin{theorem}[Current rate function]
+The Legendre transform of \eqref{hamiltonian} is
+\begin{equation}
+\ell(j;a,b)=j\arsinh\frac{j}{2\sqrt{ab}}
+-\frac j2\log(a/b)-\sqrt{j^2+4ab}+a+b. \label{cost}
+\end{equation}
+It is strictly convex in \(j\), with unique zero \(j_0=a-b\).
+\end{theorem}
+\begin{proof}
+The maximizing tilt solves \(j=ae^s-be^{-s}\), so
+\[
+s_*=\arsinh\frac{j}{2\sqrt{ab}}-\frac12\log(a/b).
+\]
+At that tilt \(ae^s+be^{-s}=\sqrt{j^2+4ab}\), yielding \eqref{cost}.
+Its second derivative is \(1/\sqrt{j^2+4ab}>0\), and direct substitution
+at \(a-b\) gives zero.
+\end{proof}
+
+There is an independent flux representation:
+\[
+\ell(j;a,b)=
+\inf_{u,v\ge0:\,u-v=j}
+\left[u\log(u/a)-u+a+v\log(v/b)-v+b\right].
+\]
+The minimizers are
+\(u=(\sqrt{j^2+4ab}+j)/2\),
+\(v=(\sqrt{j^2+4ab}-j)/2\).
+Relative-entropy perspective convexity proves joint convexity in
+\((j,a,b)\). Also
+\(\ell(cj;ca,cb)=c\ell(j;a,b)\).
+
+\section{The nonquadratic entropy-dissipation structure}
+
+Set \(g=2\sqrt{ab}\), \(z=\frac12\log(a/b)\), and define
+\[
+\mathcal R(j)=j\arsinh(j/g)-\sqrt{j^2+g^2}+g,\qquad
+\mathcal R^*(\zeta)=g(\cosh\zeta-1).
+\]
+These are symmetric Legendre-dual potentials, and
+\[
+\ell(j;a,b)=\mathcal R(j)+\mathcal R^*(z)-jz,\qquad
+j_0=\partial_\zeta\mathcal R^*(z)=a-b.
+\]
+The force \(z\) corresponds to one-half of negative relative Shannon
+entropy in the energy-dissipation convention. This factor follows from
+the reversal identity; it is not a physical constant.
+
+The same microscopic independence premise also gives relative entropy from
+equilibrium counting. For invariant law \(\pi\), independent occupations
+are multinomial:
+\[
+\Pr(Np)=\frac{N!}{\prod_i(Np_i)!}\prod_i\pi_i^{Np_i}.
+\]
+Stirling's formula yields
+\(-N^{-1}\log\Pr(Np)\to D(p\Vert\pi)\).
+Here \(\pi_i=1/12\) since \(W\) is symmetric.
+Thus a microscopic counting assumption can select a conditional entropy
+and dissipation structure together. It is not furnished by \(A\) alone.
+
+\section{Quadratic mobility does not fix microscopic noise}
+
+Let \(m=\Lambda(a,b)=(a-b)/\log(a/b)\), with diagonal value \(m=a\).
+To compare fairly, normalize the quadratic action as
+\begin{equation}
+\ell_{\rm Q}(j;a,b)=\frac{[j-(a-b)]^2}{4m}. \label{quadratic}
+\end{equation}
+It has the same mean and exactly the same reversal asymmetry:
+\[
+\ell(j)-\ell(-j)=\ell_{\rm Q}(j)-\ell_{\rm Q}(-j)
+=-j\log(a/b).
+\]
+The factor 4 compensates the one-half entropy convention; it is chosen
+explicitly rather than hidden in a clock.
+
+\begin{theorem}[Variance mismatch]
+The jump action and the quadratic prescription have local variances
+\[
+v_{\rm jump}=a+b,\qquad v_{\rm Q}=2\Lambda(a,b).
+\]
+Their ratio is
+\[
+\boxed{\frac{v_{\rm jump}}{v_{\rm Q}}=z\coth z\ge1,}
+\]
+with equality precisely at \(a=b\).
+\end{theorem}
+\begin{proof}
+Inverse rate-function curvature at \(j_0\) equals \(a+b\) for
+\eqref{cost} and \(2m\) for \eqref{quadratic}. Write
+\(a=\sqrt{ab}e^z,b=\sqrt{ab}e^{-z}\).
+The ratio becomes \(z/\tanh z\), and
+\(|\tanh z|\le|z|\), strictly off zero.
+\end{proof}
+
+Near equilibrium this ratio is \(1+z^2/3+O(z^4)\).
+Even at equilibrium, the exact fourth cumulant rate is \(2a>0\), while
+the local quadratic Hamiltonian has zero fourth cumulant.
+The deterministic ST8547 gradient identity remains valid.
+
+\begin{theorem}[Integer-count consistency]
+For any Markov additive count with integer increments \(k\), nonnegative
+local rates \(c_k\), and finite first two moments,
+\[
+v=\sum_k k^2c_k\ge\left|\sum_k kc_k\right|=|\mu|.
+\]
+The quadratic prescription violates this necessary condition whenever
+\[
+\boxed{|\log(a/b)|>2.}
+\]
+\end{theorem}
+\begin{proof}
+Use \(k^2\ge|k|\) and the triangle inequality.
+For \eqref{quadratic},
+\(v_{\rm Q}/|j_0|=2/|\log(a/b)|\), which is less than one in the stated
+regime.
+\end{proof}
+
+This excludes an exact integer-valued Markov count interpretation in that
+regime, even allowing collective integer jumps. It does not exclude a
+continuous Gaussian approximation or another coarse observable.
+
+Three means have distinct roles: the logarithmic mean relates mean current
+to finite entropy force; the geometric mean sets the cosh prefactor; the
+arithmetic combination determines local shot noise.
+
+\subsection{Whole-graph covariance}
+
+The empirical-occupation covariance rate per particle is
+\[
+\Sigma(p)=\sum_{i<j}W_{ij}(p_i+p_j)
+(e_i-e_j)(e_i-e_j)^\top.
+\]
+The quadratic prescription uses \(2K_\Lambda(p)\).
+Arithmetic-logarithmic mean ordering yields
+\[
+\boxed{\Sigma(p)-2K_\Lambda(p)\succeq0.}
+\]
+The difference is a graph Laplacian with nonnegative conductances.
+For connected support it is zero exactly at uniform \(p\).
+
+\section{Exact coarse current contraction}
+
+Let one coarse edge aggregate fine channels with positive rates
+\(a_b,b_b\). Set \(a=\sum_ba_b,b=\sum_bb_b\).
+
+\begin{theorem}[Current-action contraction]
+\[
+\boxed{\inf_{\sum_bj_b=j}\sum_b\ell(j_b;a_b,b_b)=\ell(j;a,b).}
+\]
+No equality of forward and reverse conditional child profiles is required.
+\end{theorem}
+\begin{proof}
+Choose \(s\) with \(ae^s-be^{-s}=j\), and
+\(j_b=a_be^s-b_be^{-s}\). All fine costs have derivative \(s\) at this
+feasible vector, so convexity proves optimality. Their Legendre values
+sum to \(sj-\sum_bh(s;a_b,b_b)=sj-h(s;a,b)\).
+\end{proof}
+
+In the supplied product FIN graph, \(a_b=W_{ij}P_{ib}\) and
+\(b_b=W_{ij}P_{jb}\). Consequently this contraction holds for arbitrary
+strictly positive correlated fine states. Its covariance also satisfies
+\[
+C\Sigma_{\rm fine}(P)C^\top=\Sigma_{\rm coarse}(CP),
+\]
+since the edge coefficients are linear in \(P\) and vertical increments
+vanish after projection.
+
+For \(A\otimes I+I\otimes B\), the base-coordinate Markov process is exactly
+lumpable for every initial joint state. This is a product generator, not
+the interacting Ising/prism generator considered in older stationary-RG
+studies. Their different lumpability properties are not contradictory.
+
+The quadratic contraction instead gives
+\[
+\inf_{\sum j_b=j}\sum_b\ell_{\rm Q}(j_b;a_b,b_b)
+=\frac{[j-(a-b)]^2}{4\sum_b\Lambda(a_b,b_b)}.
+\]
+As shown in ST8547,
+\(\sum_b\Lambda(a_b,b_b)\le\Lambda(a,b)\).
+For \(j\ne j_0\), equality of quadratic costs requires matching forward
+and reverse normalized child profiles.
+
+Thus the ST8547 correlation defect is a defect of that quadratic
+representation; it does not force a defect of exact Markov counting
+statistics. Its KL entropy-production identity remains valid.
+
+\section{Strict numerical example and independent checks}\label{verification}
+
+Use \(p_i=(i+1)/78\) and edge \(0\to11\).
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity & Value\\
+\midrule
+\(W_{0,11}\) & \(0.4699856726450201\)\\
+\(a\) & \(0.006025457341602822\)\\
+\(b\) & \(0.07230548809923387\)\\
+Mean current \(a-b\) & \(-0.06628003075763104\)\\
+Jump variance rate & \(0.0783309454408367\)\\
+Quadratic variance rate & \(0.05334609311241991\)\\
+Jump/quadratic variance & \(1.4683539294201824\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The population ratio is 12. The local count ratios are
+\[
+\frac{v_{\rm jump}}{|j_0|}=\frac{13}{11}>1,\qquad
+\frac{v_{\rm Q}}{|j_0|}=\frac2{\log12}<1.
+\]
+
+\begin{figure}[ht]
+\centering\includegraphics[width=\textwidth]{findings.pdf}
+\caption{The exact and quadratic current costs share the deterministic
+minimum (left). Their local variance-to-mean ratios differ, and the
+quadratic prescription crosses below the integer-jump bound (right).}
+\end{figure}
+
+For forward child proportions \((0.8,0.2)\), reverse proportions
+\((0.25,0.75)\) and current \(j=0.04\), the exact contraction error is
+\(2.78\times10^{-17}\). The quadratic fine-contracted and coarse costs are
+\(0.1178653956\) and \(0.1058694675\).
+The graph covariance projection error is \(1.11\times10^{-16}\);
+the quadratic projection defect norm is \(0.0079424221\).
+
+Finite-time counts were independently computed using derivatives of the full
+tilted 12-state generator. For one walker with initial distribution \(p\):
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+Window \(t\) & variance/\(t\) & fourth cumulant/\(t\)\\
+\midrule
+0.1 & 0.0745294243 & 0.0717795571\\
+0.01 & 0.0779222577 & 0.0776108767\\
+0.0001 & 0.0783268250 & 0.0783236669\\
+0.00001 & 0.0783305334 & 0.0783302175\\
+\bottomrule
+\end{tabular}
+\end{center}
+The limits are the local jump value \(0.0783309454\).
+No finite-time Poisson approximation was substituted for this calculation.
+
+Eighteen tests independently check the Legendre transform by optimization,
+the flux-relative-entropy contraction, high-precision derivatives, the
+cosh decomposition, convexity, integer-count bound, covariance order,
+projection, finite-time tilted moments and the correction below.
+These are numerical checks supporting explicit analytical proofs,
+not interval certificates or physical evidence.
+
+\section{A necessary correction to the older kinetic example}
+
+In ST2547--ST2561, the three-bit model has energy
+\(E=-\theta x_1x_2x_3\). Every flip has
+\(|\Delta E|=2|\theta|\). Therefore
+\[
+Q_{\rm Met}=(1+e^{-2|\theta|})Q_{\rm HB},\qquad
+Q_{\rm sym}=2\cosh(\theta)Q_{\rm HB}.
+\]
+They have identical normalized spectral shapes. The earlier claim that
+this example distinguished more than a clock factor is false.
+At \(\theta=0.3\), both proportionality identities replay within
+\(4.45\times10^{-16}\).
+
+General kinetic nonuniqueness remains, but that specific example did not
+prove it beyond time scaling. Historical files are preserved and this
+correction supersedes their interpretation.
+
+\section{Remaining assumptions and the next physical test}
+
+Microscopic independence is essential. If particles instead move in
+synchronized groups of size \(s\), the local Hamiltonian per total particle is
+\[
+h_s(\xi)=\frac1s\left[a(e^{s\xi}-1)+b(e^{-s\xi}-1)\right].
+\]
+Its mean remains \(a-b\), but its variance is \(s(a+b)\). Hence the same
+mean heat equation does not determine a unique population law. The
+12-state walker model is also distinct from a 4096-state binary
+configuration model.
+
+A dimensionless conditional experiment can compare short-window net-count
+variance to the absolute mean net count. Population size and the common clock
+factor cancel. At zero drift, compare local fourth and second cumulants
+instead. Repeated preparation, bidirectional event counts, finite-window
+extrapolation and detector-loss checks are needed; no such laboratory record
+is claimed here.
+
+The main result for FIN is an observable distinction between gradient
+representations with identical deterministic dynamics, and exact coarse
+contraction of the microscopic current action. The best next investigation
+is a finite-noise counting protocol testing single versus collective events
+and the predicted cumulants. A sourced FIN microscopic law must specify what
+those events are.
+
+The strict \(U_t=e^{-itA}\) and \(P_t=e^{-tA}\) remain distinct functional
+calculi of one operator. This study concerns the stochastic realization of
+the heat channel. It derives neither quantum measurement dynamics nor
+physical units, selector/QW-2191, legacy role transfer, continuum spacetime,
+Standard Model, gravity, \(L_{\rm total}\), or a Theory of Everything.
+
+\appendix
+\section{Reproduction}
+\begin{verbatim}
+python3 analysis.py --output replay_results.json
+python3 -m unittest -v test_analysis.py
+MPLCONFIGDIR=/tmp/fin-st8548-mpl python3 plot_results.py
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+\end{verbatim}
+The package includes the full proofs in PROOFS\_EN.md, input hashes and
+dependency versions in provenance.json, and checksums. No network access or
+large computation is required for replay.
+
+\begin{thebibliography}{9}
+\bibitem{maas} J. Maas, \emph{Gradient flows of the entropy for finite Markov
+chains} (2011). \url{https://arxiv.org/abs/1102.5238}.
+\bibitem{mpr} A. Mielke, M. A. Peletier and D. R. M. Renger,
+\emph{On the relation between gradient flows and the large-deviation principle,
+with applications to Markov chains and diffusion}.
+\url{https://arxiv.org/abs/1312.7591}. See Section 4.1 and Example 4.2.
+\bibitem{lmpr} M. Liero, A. Mielke, M. A. Peletier and D. R. M. Renger,
+\emph{On microscopic origins of generalized gradient structures},
+Discrete and Continuous Dynamical Systems--S 10 (2017), 1--35.
+\url{https://doi.org/10.3934/dcdss.2017001}.
+\end{thebibliography}
+\end{document}

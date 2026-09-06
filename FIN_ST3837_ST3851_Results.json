@@ -1,0 +1,170 @@
+{
+  "ST3837": {
+    "boundary": "[K(i+j+1)] i,j=0..2.",
+    "matrix": [
+      [
+        0.4699856726450201,
+        0.1920435516901028,
+        0.09142861427792495
+      ],
+      [
+        0.1920435516901028,
+        0.09142861427792495,
+        0.0470291687456504
+      ],
+      [
+        0.09142861427792495,
+        0.0470291687456504,
+        0.02413122336363006
+      ]
+    ],
+    "object": "ShiftedHankel1",
+    "packet_file": "FIN_ST3837_ShiftedHankel1.json",
+    "packet_sha256": "2fe2e54c5c3478f6e1ef6396da9376e470b5ccd7b9e85d7aaea67107fab3efc3",
+    "program": "ST3837",
+    "status": "Constructed"
+  },
+  "ST3838": {
+    "boundary": "[K(i+j+2)] i,j=0..2.",
+    "matrix": [
+      [
+        0.1920435516901028,
+        0.09142861427792495,
+        0.0470291687456504
+      ],
+      [
+        0.09142861427792495,
+        0.0470291687456504,
+        0.02413122336363006
+      ],
+      [
+        0.0470291687456504,
+        0.02413122336363006,
+        0.011070817321442113
+      ]
+    ],
+    "object": "ShiftedHankel2",
+    "packet_file": "FIN_ST3838_ShiftedHankel2.json",
+    "packet_sha256": "60600cc5e51a54be7da8cf0e9410759f1a27377b08934d59d453e9e3b70c0000",
+    "program": "ST3838",
+    "status": "Constructed"
+  },
+  "ST3839": {
+    "boundary": "Would be Gram integrals of x powers.",
+    "object": "MomentGramMeaning",
+    "packet_file": "FIN_ST3839_MomentGramMeaning.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3839",
+    "status": "Proven"
+  },
+  "ST3840": {
+    "boundary": "Both must be PSD for positive measure.",
+    "object": "PSDRequirement",
+    "packet_file": "FIN_ST3840_PSDRequirement.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3840",
+    "status": "Proven necessity"
+  },
+  "ST3841": {
+    "boundary": "H1.",
+    "eigenvalues": [
+      -0.0005650021864459561,
+      0.016497600192504215,
+      0.5696129122805169
+    ],
+    "object": "EigenvaluesH1",
+    "packet_file": "FIN_ST3841_EigenvaluesH1.json",
+    "packet_sha256": "79b8fabedf2ec2f54638907670781019762baca6535231efffec7a92db61152d",
+    "program": "ST3841",
+    "status": "Computed high margin"
+  },
+  "ST3842": {
+    "boundary": "H2.",
+    "eigenvalues": [
+      -0.0011006599618137553,
+      0.0032323589215451183,
+      0.24801183879746397
+    ],
+    "object": "EigenvaluesH2",
+    "packet_file": "FIN_ST3842_EigenvaluesH2.json",
+    "packet_sha256": "7187cc18b1fbad2847c35b6a688f88f3c7b6eef5a46220aea25b1bcbf89d1f7c",
+    "program": "ST3842",
+    "status": "Computed high margin"
+  },
+  "ST3843": {
+    "boundary": "Negative.",
+    "det": -5.3094645881507935e-06,
+    "object": "DeterminantH1",
+    "packet_file": "FIN_ST3843_DeterminantH1.json",
+    "packet_sha256": "d8a719540bd26da83ed9d403a6cbed671f0ccb892cd5f3aa6a078bf61bde1346",
+    "program": "ST3843",
+    "status": "Computed"
+  },
+  "ST3844": {
+    "boundary": "Negative.",
+    "det": -8.823586749165115e-07,
+    "object": "DeterminantH2",
+    "packet_file": "FIN_ST3844_DeterminantH2.json",
+    "packet_sha256": "30c1e1fd15d3a402f10d93e0017a4f06b947a85104e0450ac27f61cecba825d1",
+    "program": "ST3844",
+    "status": "Computed"
+  },
+  "ST3845": {
+    "boundary": "lambda min H1<0.",
+    "lambda_min": -0.0005650021864459561,
+    "object": "FirstObstruction",
+    "packet_file": "FIN_ST3845_FirstObstruction.json",
+    "packet_sha256": "dd66d562b24817eeab53ee8f20e9eb694528e1e6ddda3e9551738f6c9ff0f6d2",
+    "program": "ST3845",
+    "status": "Proven numerical certificate"
+  },
+  "ST3846": {
+    "boundary": "lambda min H2<0.",
+    "lambda_min": -0.0011006599618137553,
+    "object": "SecondObstruction",
+    "packet_file": "FIN_ST3846_SecondObstruction.json",
+    "packet_sha256": "e97c184a81be0d5e9b46626bc310ac00fdc8f7d08e396e7c838250a94226a175",
+    "program": "ST3846",
+    "status": "Proven numerical certificate"
+  },
+  "ST3847": {
+    "boundary": "No positive measure on [0,1] matches six values.",
+    "object": "HausdorffNoGo",
+    "packet_file": "FIN_ST3847_HausdorffNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3847",
+    "status": "No-go"
+  },
+  "ST3848": {
+    "boundary": "No positive mixture of decaying exponentials matches exactly.",
+    "object": "ExponentialMixtureNoGo",
+    "packet_file": "FIN_ST3848_ExponentialMixtureNoGo.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3848",
+    "status": "No-go"
+  },
+  "ST3849": {
+    "boundary": "Signed measures remain possible but lose positivity.",
+    "object": "StieltjesBoundary",
+    "packet_file": "FIN_ST3849_StieltjesBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3849",
+    "status": "Boundary"
+  },
+  "ST3850": {
+    "boundary": "Strict six-point data already obstruct completely monotone positive tails.",
+    "object": "RoundTwoVerdict",
+    "packet_file": "FIN_ST3850_RoundTwoVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3850",
+    "status": "Round verdict"
+  },
+  "ST3851": {
+    "boundary": "Robustness/repair size.",
+    "object": "RoundTwoRecommendation",
+    "packet_file": "FIN_ST3851_RoundTwoRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST3851",
+    "status": "Recommendation"
+  }
+}

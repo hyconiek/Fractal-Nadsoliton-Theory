@@ -1,0 +1,122 @@
+{
+  "ST4017": {
+    "boundary": "Estimate lambda/k2.",
+    "object": "LowKMeasurement",
+    "packet_file": "FIN_ST4017_LowKMeasurement.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4017",
+    "status": "Required"
+  },
+  "ST4018": {
+    "boundary": "N growth.",
+    "object": "MultipleSizes",
+    "packet_file": "FIN_ST4018_MultipleSizes.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4018",
+    "status": "Required"
+  },
+  "ST4019": {
+    "boundary": "Infer C.",
+    "object": "SecondMomentEstimate",
+    "packet_file": "FIN_ST4019_SecondMomentEstimate.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4019",
+    "status": "Conditional"
+  },
+  "ST4020": {
+    "boundary": "Infer c_hat.",
+    "object": "PropagationFront",
+    "packet_file": "FIN_ST4020_PropagationFront.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4020",
+    "status": "Conditional"
+  },
+  "ST4021": {
+    "boundary": "Direct long-distance response.",
+    "object": "TailMassProbe",
+    "packet_file": "FIN_ST4021_TailMassProbe.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4021",
+    "status": "Required"
+  },
+  "ST4022": {
+    "boundary": "Measure d>=7.",
+    "object": "BeyondSixCouplings",
+    "packet_file": "FIN_ST4022_BeyondSixCouplings.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4022",
+    "status": "Decisive"
+  },
+  "ST4023": {
+    "boundary": "Vary effective range.",
+    "object": "CutoffTest",
+    "packet_file": "FIN_ST4023_CutoffTest.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4023",
+    "status": "Required"
+  },
+  "ST4024": {
+    "boundary": "Fit A,a.",
+    "object": "ExponentialFit",
+    "packet_file": "FIN_ST4024_ExponentialFit.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4024",
+    "status": "Conditional"
+  },
+  "ST4025": {
+    "boundary": "Needs preregistered candidate classes.",
+    "object": "ModelSelection",
+    "packet_file": "FIN_ST4025_ModelSelection.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4025",
+    "status": "Boundary"
+  },
+  "ST4026": {
+    "boundary": "Physical time.",
+    "object": "TimestampCalibration",
+    "packet_file": "FIN_ST4026_TimestampCalibration.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4026",
+    "status": "Missing"
+  },
+  "ST4027": {
+    "boundary": "Finite-size and detector errors.",
+    "object": "NuisanceParameters",
+    "packet_file": "FIN_ST4027_NuisanceParameters.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4027",
+    "status": "Boundary"
+  },
+  "ST4028": {
+    "boundary": "Prevent tail retuning.",
+    "object": "Holdout",
+    "packet_file": "FIN_ST4028_Holdout.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4028",
+    "status": "Required"
+  },
+  "ST4029": {
+    "boundary": "Local simulations are not evidence.",
+    "object": "SyntheticBoundary",
+    "packet_file": "FIN_ST4029_SyntheticBoundary.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4029",
+    "status": "No-go"
+  },
+  "ST4030": {
+    "boundary": "Positive local cone is experimentally distinguishable but currently unobserved.",
+    "object": "RoundNineVerdict",
+    "packet_file": "FIN_ST4030_RoundNineVerdict.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4030",
+    "status": "Round verdict"
+  },
+  "ST4031": {
+    "boundary": "Synthesis.",
+    "object": "RoundNineRecommendation",
+    "packet_file": "FIN_ST4031_RoundNineRecommendation.json",
+    "packet_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "program": "ST4031",
+    "status": "Recommendation"
+  }
+}
