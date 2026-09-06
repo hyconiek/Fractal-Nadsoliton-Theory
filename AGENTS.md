@@ -10204,3 +10204,61 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - No microscopic FIN population, quantum measurement law, physical clock,
   selector/QW-2191, legacy completion/role transfer, continuum, SM, GR,
   dimensional L_total, apparatus evidence or ToE closure follows.
+
+## ST8549--ST8578 thirty-step adaptive falsification campaign (2026-09-06)
+
+- Proofs, thirty substantive result records, an English PDF and 33 scientific
+  tests are in fin_adaptive_30/. The ST8547/ST8548 suites also passed (15+18).
+  A repository inventory and selected proof-level reading were performed;
+  this is not a fresh revalidation of every historical report. Hashes and
+  programme counts are not theorem certificates or independent audits.
+- A positive signed double cover has even Laplacian L_|V| and odd Laplacian
+  diag(|V|1)-V. Its coarse population law forgets signs. The canonical legacy
+  triangle (0,1,2) is frustrated, forbidding switching to all-positive edges.
+  This cover produces |legacy| under collapse, not strict; it is not a
+  legacy->strict completion, sign selector or physical role-transfer theorem.
+- Strict U_t and P_t retain their common spectral generator, but their
+  off-diagonal vertex records start at orders t^2 and t. Rapid measurements
+  with the declared singular Hamiltonian scaling produce |H_ij|^2 rates;
+  H=A therefore gives W_ij^2, not W_ij. Compiling sqrt(W_ij) leaves phases
+  and diagonal Hamiltonian entries undetermined. No physical Wick rotation.
+- Rank-one jumps sqrt(W_ij)|j><i| give an exact Lindblad embedding of heat
+  populations. Arbitrary vertex dephasing remains invisible to those records.
+  Adding H=A does not preserve autonomous heat for all density matrices in
+  the declared rank-one-jump/vertex-dephasing class; do not generalize that
+  restricted no-go to every possible GKSL representation or instrument.
+- The family G_N(theta)=(1-theta)sum_k Q^(k)+theta sum_(i<j) W_ij
+  [f(sigma_ij x)-f(x)] uses common vertex transpositions. For 0<=theta<1
+  it is exchangeable, projectively consistent, irreducible, reversible with
+  the same product-uniform equilibrium, and respects the graph symmetries.
+  Every singleton path law agrees while pair transition records differ.
+  Static entropy, consistency and singleton calculus do not force independence.
+- In a declared finite CTMC on X^N with autonomous singleton Q at EVERY
+  configuration, define B(x)=sum_y g(x,y) binom(K(x,y),2), where K counts
+  coordinates changed in ONE event. B=0 iff the full generator is sum_k Q^(k).
+  If sup B<=epsilon, transition-TV error is at most min(1,2 epsilon t).
+  This is not yet a path-record bound or a derivation of B=0 from FIN.
+  Initial correlations remain separate; zero stationary-averaged cross
+  covariance for selected observables does not imply the nonnegative B=0.
+- Independent mark-resolving thinning gives B_obs=eta^2 B. Finite threshold
+  bins can produce sub-unit variance/mean from ordinary Poisson events.
+  Unknown event merging, efficiency and clock can create exact nonzero
+  record-law aliases; retain those calibration and resolution premises.
+- The supplied two-particle protocol uses 200000 independent resets and
+  threshold 40. Its null error is bounded by (11/16)^20<1e-3 and its
+  alternative miss probability by 3^49/2^108<1e-9, under the explicit
+  parameters and detector model. These are exact rational design bounds,
+  not laboratory evidence or claims about a real apparatus.
+- The old pure-parity heat-bath/Metropolis proportionality remains corrected.
+  A newly declared symmetric field supplies a genuine non-clock counterexample;
+  that field is an additional parameter, not an internal strict source.
+- Equal zero-source Hessian/linear propagator does not determine quartic
+  interactions. Positive Schur completions can share static Green data while
+  having different dynamic memory. These are explicit class-scoped examples,
+  not universal no-physics theorems or interacting-QFT correlator identities.
+- Highest-information next target: an actually sourced FIN composition law
+  fixing or bounding the nonnegative pair budget, with a declared composite
+  state space. Do not insert independence and relabel it a derivation. This
+  does not reopen closed selector, generic bridge or source-audit loops.
+- No physical population/units/clock, selector/QW-2191 closure, legacy role
+  transfer, laboratory evidence, continuum, SM, GR, L_total or ToE closure.

@@ -1,0 +1,58 @@
+{
+  "campaign": "ST8549--ST8578",
+  "rounds": 30,
+  "random_seed": 8549,
+  "git_head": "295cc9009c20ebb9b0433e300baafe05d63c2cf7",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  },
+  "initial_inventory_count_approx": 33000,
+  "current_inventory_by_extension": {
+    ".json": 16321,
+    ".csv": 827,
+    ".pdf": 150,
+    ".txt": 140,
+    ".py": 7394,
+    ".md": 6708,
+    ".png": 751,
+    ".tex": 138,
+    ".ipynb": 32,
+    ".sha256": 47,
+    ".zip": 17,
+    ".lean": 228,
+    ".scd": 1,
+    ".sh": 5,
+    ".c": 1,
+    ".v": 1,
+    ".narrowband": 2,
+    ".html": 2,
+    ".svg": 2,
+    ".htm": 1,
+    "<none>": 2,
+    ".pid": 1,
+    ".par": 152,
+    ".res": 68,
+    ".gif": 1
+  },
+  "scope": "Repository-wide file/section inventory; selected proof-level reading, not revalidation of all historical claims.",
+  "input_sha256": {
+    "AGENTS.md": "af216ff8772974b1708976bd4682646365bc9b69df6035178ab7ad5ad37d4cd6",
+    "SUMMARY_GROK.md": "6e87c0e889086ea4f32d365a488031f34f9964e9724b2f0366642a90110409d2",
+    "FIN_Theory_Compendium_From_Fractal_Information_to_Current_Mathematics_EN.tex": "16d9cf1d84e08593d00e2d17eafdea97892482686660f01db8550271e0a5fc31",
+    "fin_entropy_refinement/PROOFS_EN.md": "1a21a6a81f835ccea0d97ceb4cd2a5b06276f2f2be5c24b15749c3ea9ad1583c",
+    "fin_entropy_refinement/analysis.py": "36899d590d3f142720afd3dab0bfabe807b4bca24e65e132ca6a9605ae5b0335",
+    "fin_jump_fluctuations/PROOFS_EN.md": "642e82725a67dbfba3497089f05236a25694bbb02c4c00b1ec470303fce0b563",
+    "fin_jump_fluctuations/analysis.py": "115415f4572160ac47d8e60b26eebbb1e351ffec18c155a4beb666c28db5e93d"
+  },
+  "local_commands": [
+    "python3 analysis.py --through 30",
+    "python3 -m unittest discover -s . -p 'test_*.py' -v",
+    "python3 build_artifacts.py",
+    "pdflatex -interaction=nonstopmode -halt-on-error report.tex (twice)"
+  ],
+  "precision": "Analytic proofs with rational/symbolic checks; NumPy/SciPy floating computations are not interval certificates.",
+  "no_physical_evidence": true
+}
