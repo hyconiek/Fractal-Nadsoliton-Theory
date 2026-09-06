@@ -86,6 +86,8 @@ def integer_matrix(intervals,cyclic=True):
 
 def sign_certificate(low,high):
     states=np.array(list(itertools.product((-1,1),repeat=12)),dtype=np.int64)
+    safe_bound=12*(int(np.max(abs(low)))+int(np.max(abs(high))))+int(np.max((high-low).sum(axis=1)))
+    if safe_bound>=2**63:raise OverflowError('Integer field arithmetic would not be certified')
     mid=states@(low+high).T
     radius=(high-low).sum(axis=1)
     lower,upper=mid-radius,mid+radius
@@ -108,6 +110,7 @@ def sign_certificate(low,high):
     minimum_margin=int(np.min(np.where(lower>0,lower,-upper)))
     return dict(configurations=len(states),certified_field_signs=int(states.size),
         scale=SCALE,minimum_abs_field_lower_bound=str(F(minimum_margin,2*SCALE)),
+        integer_arithmetic_absolute_bound=safe_bound,
         maximum_interval_radius=str(F(int(max(radius)),2*SCALE)),
         fixed_points=fixed,two_cycles=two,other_cycle_lengths=[k for k in lengths if k not in [1,2]],
         weight_lower_integers=low.tolist(),weight_upper_integers=high.tolist())

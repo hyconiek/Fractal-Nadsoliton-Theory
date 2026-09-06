@@ -10262,3 +10262,103 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   does not reopen closed selector, generic bridge or source-audit loops.
 - No physical population/units/clock, selector/QW-2191 closure, legacy role
   transfer, laboratory evidence, continuum, SM, GR, L_total or ToE closure.
+
+## ST8579--ST8590 replication/activity-Gram/neural audit (2026-09-06)
+
+- Proofs, English PDF, sparse strict computations and exact spin-sign
+  certificates are in fin_replication_consistency/. There are 25 scientific
+  tests; the preceding 33-test campaign is also replayed. Historical scripts
+  are preserved. This is a selected source-level audit, not a fresh proof of
+  every statement in the repository or an external scientific audit.
+- Let G_N be exchangeable finite CTMC generators on X^N, strongly consistent
+  under every coordinate deletion with singleton Q. Let b_ij be the rate
+  that both coordinates change from initial (i,j), delta_i=b_ii, r_i=-Q_ii.
+  Diagonal b_ii describes TWO same-origin coordinates; W_ii=0 does not force
+  b_ii=0. Replicating constituents is not refining the vertices of one graph.
+- With m copies at each origin, the matrix
+  B+diag(r_i-delta_i)/m is a nonnegative Gram matrix. Arbitrarily large
+  consistent replication therefore forces B to be a completely positive
+  REAL MATRIX, hence PSD and b_ij<=sqrt(delta_i delta_j). This notion of
+  complete positivity is not a quantum-channel claim.
+- If all delta_i=0 and unlimited replication is supplied, all pair rates
+  vanish and G_N=sum_k Q^(k). If max delta_i<=delta, the prior transition-TV
+  bound becomes min(1,N(N-1)delta*t). Initial law, actual population, physical
+  clock and detector remain separate. These are not complete path-law bounds.
+- At finite horizon m+1, delta_i=0 gives b_ij<=r_j/m and the target-resolved
+  beta_ij^b<=Q_jb/m. Nonzero diagonal activity gives the explicit quadratic
+  bound in the report; two-origin Gram constraints can improve it.
+- The new antipodal/opposite-parity construction has single antipodal rates
+  a-c*n_opposite and pair antipodal events at rate c=a/(M-1), a=W_6.
+  It is reversible, irreducible, D12-symmetric and consistent through size M.
+  Same-origin pair activity is zero, mixed-parity activity is c. The exact
+  target-resolved bound rules out ANY compatible extension through M+1.
+  Strict M=3 is replayed on 144 and 1728 states; finite checks do not license
+  an unlimited-replication or fractal-composition theorem.
+- The common-transposition realization has B_theta=theta*(sI+W), with the
+  nonnegative unsigned-edge incidence Gram factorization. Its activity
+  interpretation requires that event model; it is not a new strict kernel.
+- Even maximal B=s*1*1^T does not select a unique law. Mixtures of a shared
+  Poisson clock followed by independent W/s updates and common cyclic shifts
+  have identical maximal activity, singleton dynamics, equilibrium and
+  symmetries, but different transition-resolved pair rates. Do not equate
+  maximum collective activity with a sourced maximum-resonance principle.
+- A failed uniform-C4 test is retained: pure same-origin endpoint laws can
+  coincide for all times despite distinct conditional dynamics. Strict C12
+  does not have this particular equality. Endpoint data are not full paths.
+- The exact rational/integer threshold-map audit certifies, for the declared
+  synchronous rule: strict cycle 2 fixed points/111 two-cycles; canonical
+  legacy cycle 6/64; canonical legacy line 6/18; no longer cycles in those
+  complete 4096-state catalogues. These are not memory capacities, vacua,
+  solitons or particles. Every field sign is enclosed away from zero.
+- Any symmetric zero-diagonal signed-spin energy has paired minimizers x,-x;
+  no unique unquotiented fixed state follows. An E/I weight ratio alone does
+  not determine stability of a supplied leak/gain flow. Single-site versus
+  synchronous scheduling is an extra dynamics choice, not a kernel theorem.
+- Next priority is a sourced transition-resolved law T_(i,a),(j,b), then an
+  audit of whether pair data determine higher-order composition. Do not force
+  independence as a desired physical answer. No selector/QW-2191, legacy
+  completion/role transfer, units, apparatus, continuum, SM, GR, L_total or
+  ToE closure is exported.
+
+## Active thirty-round goal: ST8591--ST8600 checkpoint (2026-09-07)
+
+- Current user format instruction: write research in MD, or source-only TeX
+  for an especially important result; do not generate PDFs for this goal.
+  fin_transition_hierarchy/CAMPAIGN.md tracks 10/30 completed rounds.
+  REPORT.md contains proofs; research.py and 18 tests replay actual results.
+  The active thirty-round goal is NOT complete at this checkpoint.
+- The full directed-transition tensor T determines G2 together with Q.
+  Unlimited replication forces T to be a completely positive real matrix,
+  with explicit same-origin block corrections at finite clone count. These
+  Gram and capacity conditions are necessary, not sufficient for extension.
+- A nonnegative circulant Gram factor from (0,1,2,3,2,1) repeated twice
+  yields F01=F12=16/19, F02=11/19 and Fii=1. Coupling strict antipodal
+  transitions at rates W6*Fij gives a valid reversible D12-symmetric G2,
+  but violates the exact three-event inequality by -2*W6/19. Thus no G3
+  with those pair marginals exists, despite complete positivity of T.
+- Infinitely extendible counterexamples use R_u=W/s+uD on [-1,1], where
+  D is the supplied distance-one/two contrast. G_N=s*(E[R_u^tensorN]-I).
+  The laws half-deltas at +/-1/2 and masses 4/5 at -1/4, 1/5 at 1 agree
+  in the COMPLETE G1/G2 but differ in G3 by an exact third-moment mechanism.
+  They share reversibility, graph symmetry, product equilibrium and maximal
+  aggregate activity. D and the fresh-clock sampling law are not sourced.
+- Parity-split binomial laws prove the analogous nonidentification at every
+  finite cutoff m: complete generators through m match, order m+1 differs.
+  This is not nonuniqueness for every particular moment vector, nor a proof
+  against finitely specified physical laws. All ideal orders identify a law
+  on the supplied compact curve; conditioning and feasible-data scope matter.
+- The exact alias laws have latent TV=1 but W1=2/(m+1). Their operational
+  transition-TV difference is bounded by 2*s*N*h*t*W1, capped at one.
+  This does not bound complete continuous-time path records.
+- A supplied fair-binary affine recursion U=rU'+(1-r)epsilon uniquely fixes
+  all moments, with variance (1-r)/(1+r). At variance 1/4 it gives r=3/5,
+  fourth moment 35/272. A ternary-innovation recursion with r=1/3 shares
+  that variance but has fourth moment 11/80. Unspecified fractal similarity
+  therefore does not source the innovation law or complete the hierarchy.
+- D12 acts trivially on this EVEN radial noise coordinate; the old mirror-odd
+  sector does not justify u->-u or fair innovations here. A stationary
+  recursive distribution also does not supply temporal sampling dynamics.
+- Next: temporal semantics and extremal moment exceptions, then stronger
+  sourced composition classes and the live cross-repository source frontier.
+  No legacy role transfer, selector, units, physical population, laboratory
+  evidence, continuum, SM/GR, L_total or ToE closure is exported.

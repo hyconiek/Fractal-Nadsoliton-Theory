@@ -201,6 +201,15 @@ def run():
     alternating=np.array([(-1)**i for i in range(12)])
     negative_witness=float(alternating@B@alternating)
     assert negative_witness<0
+    from scipy.linalg import expm
+    small=np.ones((4,4))-np.eye(4)
+    Gsmall,xsmall=finite_extension(small,2,.5);Gis,_=finite_extension(small,2,0.)
+    endpoint_difference=expm(.1*Gsmall.toarray())-expm(.1*Gis.toarray())
+    exception=dict(initial_failed_expectation='Uniform four-state clone endpoints would differ.',
+        verdict='Refuted for this symmetric test: all pure-clone endpoints agree at every time by an analytic invariant-subspace calculation.',
+        same_origin_difference=float(np.linalg.norm(endpoint_difference[0])),
+        mixed_origin_difference=float(np.linalg.norm(endpoint_difference[xsmall.index((0,1))])),
+        distinction='Finite-time endpoint equality is not equality of all conditional path records.')
     return dict(campaign='ST8579--ST8590',strict_row_sum=s,strict_antipodal_rate=a,
         common_rate=c,finite_horizon=3,common_pair_matrix=B.tolist(),
         three_to_two_projection_error=proj_error,singleton_error=marginal_error,
@@ -214,6 +223,7 @@ def run():
         infinite_gram_counterexample_quadratic_form=negative_witness,
         unsigned_incidence_cp_error=cp_error,maximal_activity_counterexamples=maximum,
         infinite_uniform_diagonal_budget_bound='b_ij <= delta; B_N <= binom(N,2)*delta',
+        retained_failed_test=exception,
         scope='Analytic theorems in report.tex; numerical scans are not interval certificates.')
 
 

@@ -1,0 +1,758 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,longtable,graphicx}
+\usepackage[margin=23mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{FIN: replication and collective activity}
+\fancyhead[R]{ST8579--ST8590}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\one}{\mathbf1}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\E}{\mathbb E}
+\hypersetup{pdftitle={FIN: Replication Consistency, Collective Activity, and the Limits of Neural Interpretation},pdfauthor={Krzysztof Żuchowski}}
+\begin{document}\hypersetup{pageanchor=false}
+\begin{titlepage}\centering\vspace*{18mm}
+{\Huge\bfseries Replication Consistency\par}
+\vspace{3mm}{\Huge\bfseries and Collective Activity\par}
+\vspace{10mm}{\LARGE What FIN coupling laws do not yet select\par}
+\vspace{5mm}{\Large A conditional rigidity theorem, sharp finite counterexamples,\par}
+{\Large and an exact audit of the neural interpretation\par}
+\vspace{12mm}{\Large Programmes ST8579--ST8590\par}
+\vspace{10mm}{\Large Krzysztof \.Zuchowski\par}
+\vspace{3mm}{Independent Researcher --- Fractal Information Theory Project\par}
+{ORCID: 0009-0002-0909-3613\par}
+\vspace{9mm}{6 September 2026\par}
+\vfill
+\begin{minipage}{.88\textwidth}
+A twelve-part continuation of ST8549--ST8578. The main result constrains
+collective event rates through consistency under replication. It reduces
+one conditional independence test to same-origin pair activities, while
+showing why finite replication, maximum collective activity and a static
+neural weight matrix do not select a unique physical theory.
+\end{minipage}
+\vfill{\small English research preprint; CC BY 4.0. AI-assisted; no external audit.}
+\end{titlepage}\hypersetup{pageanchor=true}
+
+\begin{abstract}
+For a projectively consistent, exchangeable family of finite-state Markov
+population generators with fixed singleton generator $Q$, let $b_{ij}$ be
+the instantaneous rate at which both coordinates change when initially
+prepared at $(i,j)$. Arbitrarily large replication forces the matrix
+$B=(b_{ij})$ to be a completely positive real matrix, hence positive
+semidefinite. Consequently $b_{ii}=0$ for every origin forces $B=0$ and
+the independent tensor-sum generator at every population size. Small
+diagonal activities give linear, rather than merely square-root,
+population-error bounds under these premises.
+
+A strict-FIN construction is consistent, exchangeable, reversible and
+dihedrally symmetric through population size three, with zero same-origin
+pair activity and positive mixed-origin activity. It cannot be extended
+consistently to size four. Thus the unlimited-replication premise is
+essential. Conversely, even maximal possible collective activity leaves
+different irreducible microscopic laws with the same singleton dynamics,
+equilibrium, symmetries and activity matrix.
+
+The historical coupling diagrams and mirror operators do not supply the
+required population-composition law. An exact interval/integer audit also
+finds two fixed points and 111 two-cycles for a declared synchronous
+threshold network with strict weights. The canonical legacy network has
+six fixed points and 64 two-cycles. These correct an unsupported unique
+attractor interpretation; they are not physical vacua or solitons.
+No microscopic population, unit, selector, apparatus or ToE closure is
+derived. The next target is a sourced, transition-resolved composition law.
+\end{abstract}
+\tableofcontents\newpage
+
+\section{Outcome, scope and the twelve investigations}
+
+The previous campaign proved that a specified singleton Markov generator
+plus absence of all simultaneous multi-coordinate events fixes the full
+population generator. Its principal limitation was the missing source of
+that absence. This continuation asks whether internal consistency can
+replace part of that premise. The answer is a useful conditional theorem,
+not an unconditional physical derivation.
+
+\begin{longtable}{@{}p{.12\textwidth}p{.80\textwidth}@{}}
+\toprule Programme & Executed investigation and result\\\midrule\endhead
+ST8579 & Typed audit of kernel transformation, mirror coupling and neural
+updates: none of the inspected formulas specifies the required population
+event law. Historical statements are not imported as source theorems.\\[1mm]
+ST8580 & Finite replication bound, including a target-resolved version.\\[1mm]
+ST8581 & Unlimited replication plus zero same-origin activity forces the
+independent transition generator.\\[1mm]
+ST8582 & Stronger activity-Gram theorem: complete positivity and quantitative
+constraints from repeated groups of prepared origins.\\[1mm]
+ST8583 & An explicit finite-horizon counterexample and an obstruction to any
+four-copy extension, not merely to one implementation.\\[1mm]
+ST8584 & Strict $C_{12}$ replay on 144 and 1728 configurations, preserving
+singleton dynamics, reversal, equilibrium, graph symmetry and deletion.\\[1mm]
+ST8585 & Diagonal-activity bounds propagated to full finite-population
+transition total variation.\\[1mm]
+ST8586 & The signless graph Laplacian appears as a legitimate common-event
+activity Gram matrix. It is not the only realization of $W$.\\[1mm]
+ST8587 & Even entrywise maximal activity does not select a unique microscopic
+law; two explicit irreducible alternatives remain.\\[1mm]
+ST8588 & Full, sign-certified threshold-network catalogues for strict and
+legacy; a unique global-attractor interpretation is rejected.\\[1mm]
+ST8589 & Excitation/inhibition and update-schedule audit, including a retained
+failed finite-time test and its symmetry-based explanation.\\[1mm]
+ST8590 & Source-obligation synthesis and twelve ranked follow-up questions.\\
+\bottomrule
+\end{longtable}
+
+\emph{Proven} means a displayed analytic argument or a finite exact
+certificate in its explicit model. Floating matrix checks are numerical
+validation, not interval proofs. \emph{Refuted} concerns a stated
+implication, not the entire FIN programme. The interpretation of FIN as
+primordial fractal information is a motivating hypothesis, not laboratory
+evidence. No claim of global mathematical priority is made.
+
+The reading focused on current AGENTS guardrails and the preceding campaign.
+Inspected sources included the kernel transformation diagram
+(\nolinkurl{DIAGRAMS_KERNEL_TRANSFORMATION.md}), the post-41--50 correction,
+the negative-information-coupling report, relevant adaptive-law passages
+of the kernel referee report, and the complete
+\nolinkurl{neural_coupling_investigation.py}. This is a targeted source audit,
+not another claim to have reverified every historical repository result.
+Historical files remain unchanged; corrections are recorded here and in
+AGENTS. Scientific tests and exact output certificates are packaged with
+the report.
+
+\section{Typed source audit: what the coupling formulas actually specify}
+
+The strict supplied weights, on $X=\{0,\ldots,11\}$, are
+\[
+ W_{ij}=\frac{\cos(0.18575d+0.16250)}{1+d^{9/5}},\quad
+ d=\min(|i-j|,12-|i-j|),\quad W_{ii}=0,
+\]
+with $A=sI-W\succeq0$ and $s\simeq1.6603072787660986$.
+The canonical legacy profile is instead
+\[
+ V_{ij}=4\log2\,\frac{\cos(\pi d/4+\pi/6)}{1+0.01d}.
+\]
+It is signed and is not substituted as a classical rate matrix. We use it
+only in explicitly declared real symmetric spin-network tests below.
+
+The historical four-mechanism diagram combines attenuation, resonance,
+oscillation and path summation into a scalar profile in $d$. It does not
+define an event $x\to y$ in $X^N$, a replication map, or a probability law
+for joint coordinate changes. Its arithmetic defect
+$d^{1.6}d^{-0.6}=d$, not a reciprocal damping law, was already corrected
+in the negative-information report and is not reopened as a new discovery.
+
+The mirror construction $H_\lambda=H_0+\lambda C$, with
+$RCR=-C$, types a Hermitian orientation-sensitive sector. It supplies
+neither a population jump schedule nor a theorem selecting the signed
+$\lambda$. A deterministic adaptive law
+$\dot\psi=iK\psi$, $\dot K=F(\psi,K)$ likewise requires $F$ and its state
+space. It is not a specification of a stochastic generator on $X^N$.
+Hermiticity gives exact norm conservation in this state equation; it does
+not require adiabaticity and does not identify multi-particle noise.
+
+\begin{longtable}{@{}p{.25\textwidth}p{.31\textwidth}p{.36\textwidth}@{}}
+\toprule Inspected object & Mathematical output & Missing input for the present theorem\\\midrule\endhead
+Radial strict or legacy kernel & A finite weight profile & Population state
+space, allowed joint events and their rates\\[1mm]
+Mirror-odd $C$ & A conditional Hermitian sector & Replication law and
+stochastic interpretation\\[1mm]
+Retention / negative feedback & A chosen rate modification or controller &
+Microscopic event composition, not merely damping strength\\[1mm]
+Hebbian / adaptive update & An operator--state differential or iterative law &
+Sampling, update schedule and the connection to singleton Markov paths\\[1mm]
+Fractal graph refinement & Finer vertices, collapse and possibly hidden rates &
+A theorem identifying vertex refinement with replication of constituents\\
+\bottomrule
+\end{longtable}
+
+This is a typing obstruction for the inspected formulas, not proof that no
+future FIN source law can be written. In particular, two operations must
+remain separate:
+\[
+ \underbrace{X\longrightarrow X_{\rm fine}}_{\text{resolution of one carrier}}
+ \qquad\ne\qquad
+ \underbrace{X\longrightarrow X^N}_{\text{population composition}}.
+\]
+The latter does not introduce an informational substrate below the
+nadsoliton. It is a candidate description of a composite system, whose
+physical existence and interpretation have not been derived. ``Clonal''
+preparation below means classical coordinates prepared at the same known
+vertex, not copying an arbitrary unknown quantum state.
+
+\section{Finite replication: a rate-counting theorem}
+
+Let $G_N$ be finite-state continuous-time Markov generators on $X^N$.
+Assume exchangeability under coordinate permutations and strong projective
+consistency under deleting any coordinates. In particular every singleton
+has the same generator $Q$ at every configuration, not only at equilibrium.
+Write $r_i=-Q_{ii}<\infty$. For two coordinates initially at $(i,j)$ define
+\begin{align}
+ b_{ij}&=\sum_{a\ne i,\,b\ne j}
+             G_2((i,j),(a,b)),\qquad \delta_i=b_{ii},\\
+ \beta_{ij}^{\,b}&=\sum_{a\ne i}G_2((i,j),(a,b)),\qquad b\ne j.
+\end{align}
+Exchangeability gives $b_{ij}=b_{ji}$. The diagonal $b_{ii}$ concerns two
+different coordinates that share an initial vertex; it is \emph{not} a
+single-coordinate self-loop $Q_{ii}$ or $W_{ii}$.
+
+\begin{theorem}[Finite same-origin bound]
+If the family extends consistently through $m+1$ coordinates and
+$\delta_i=0$, then
+\[
+ b_{ij}\le\frac{r_j}{m},\qquad
+ \beta_{ij}^{\,b}\le\frac{Q_{jb}}{m}.
+\]
+\end{theorem}
+\begin{proof}
+Prepare $m$ coordinates at $i$ and one at $j$. Strong consistency makes
+the joint-change rate of any pair among the $i$ coordinates equal to
+$\delta_i=0$. Positivity therefore excludes every event changing two or
+more of these $m$ coordinates. Let $Z$ count changed $i$ coordinates in an
+event, and $Y$ indicate whether the $j$ coordinate changes. Thus $ZY\le Y$.
+Summing over positive event rates gives
+$m b_{ij}\le r_j$. Replacing $Y$ by the indicator of the specific
+transition $j\to b$ proves the target-resolved bound.
+\end{proof}
+
+\begin{proposition}[Nonzero same-origin activity]
+For $r_j>0$ and $\delta_i\ge0$, the same construction gives
+\[
+ b_{ij}\le F_m(r_j,\delta_i)
+ :=\frac{r_j}{2m}\left(1+
+ \sqrt{1+\frac{4m(m-1)\delta_i}{r_j}}\right).
+\]
+If $r_j=0$, then $b_{ij}=0$ directly.
+\end{proposition}
+\begin{proof}
+Let $\langle\cdot\rangle_g$ mean summation over the event rates in that
+prepared configuration. Consistency gives
+\[
+ \langle ZY\rangle_g=m b_{ij},\quad
+ \langle Y\rangle_g=r_j,\quad
+ \langle Z(Z-1)\rangle_g=m(m-1)\delta_i.
+\]
+Cauchy--Schwarz in the positive measure restricted to $Y=1$ gives
+$(m b_{ij})^2\le r_j\langle Z^2Y\rangle_g$.
+Also $\langle Z^2Y\rangle_g\le m(m-1)\delta_i+m b_{ij}$.
+Solving the resulting quadratic inequality proves the bound.
+\end{proof}
+
+For zero $\delta_i$ this reduces to $r_j/m$. For positive $\delta_i$
+its limit is $\sqrt{r_j\delta_i}$. The next theorem improves that
+one-group estimate by replicating \emph{both} origins, or all origins
+together.
+
+\section{The activity-Gram theorem}
+
+\begin{theorem}[Replication activity matrix]
+Let $B=(b_{ij})$ and let $n=|X|$. If a consistent family exists through
+$nm$ coordinates, then
+\begin{equation}\label{eq:gram}
+ B+\frac1m\diag(r_i-\delta_i)
+ \quad\text{is a completely positive real matrix}.
+\end{equation}
+If it extends to arbitrarily large population sizes, $B$ itself is a
+completely positive real matrix. In particular,
+\[
+ B\succeq0,\qquad 0\le b_{ij}\le\sqrt{\delta_i\delta_j}.
+\]
+Here ``completely positive matrix'' means $ZZ^T$ for an entrywise
+nonnegative real matrix $Z$; it is not terminology for a quantum channel.
+\end{theorem}
+\begin{proof}
+Prepare $m$ coordinates at each origin $i$. For one event let $Z_i$ count
+the changed coordinates in group $i$. These are nonnegative integers.
+The matrix
+\[
+ M_m=\frac1{m^2}\sum_{y\ne x}g(x,y)Z(x,y)Z(x,y)^T
+\]
+is a sum of nonnegative rank-one outer products. Projective consistency
+gives
+\[
+ \langle Z_i\rangle_g=mr_i,\quad
+ \langle Z_i(Z_i-1)\rangle_g=m(m-1)\delta_i,\quad
+ \langle Z_iZ_j\rangle_g=m^2b_{ij}\ (i\ne j).
+\]
+These identities yield exactly \eqref{eq:gram}. Taking arbitrarily large
+$m$ gives the limit $B$.
+
+For completeness, the real completely-positive cone is closed here.
+In the finite-dimensional space of symmetric matrices, any conic
+combination can be reduced by linear dependence to at most $n(n+1)/2$
+nonnegative rank-one terms. Normalize each nonzero generating vector to
+unit norm. The coefficients then sum to the matrix trace. Along a convergent
+sequence the coefficients are bounded, the vectors lie in a compact
+nonnegative part of the unit sphere, and a subsequence of these finite
+representations converges to one of the same form. Thus $B$ has such a
+representation. Its $2\times2$ principal minors give
+$b_{ij}^2\le\delta_i\delta_j$.
+\end{proof}
+
+For just two origins, $2m$ copies suffice for the corresponding principal
+matrix. Hence a finite family through $M$ copies gives
+\[
+ b_{ij}\le
+ \sqrt{\left(\delta_i+\frac{r_i-\delta_i}{m}\right)
+             \left(\delta_j+\frac{r_j-\delta_j}{m}\right)},
+ \qquad m=\lfloor M/2\rfloor.
+\]
+This can be combined with the one-group bound rather than replacing it:
+the latter can be sharper at small horizons or for a specified target.
+For equal $r_i=s$ and $\delta_i\le\delta\le s$, the two-group bound is
+$\delta+(s-\delta)/m$, and the infinite-horizon bound is simply $\delta$.
+
+\begin{corollary}[Conditional independence from same-origin tests]
+For an exchangeable strongly projectively consistent family at arbitrarily
+large sizes, $b_{ii}=0$ for every $i$ forces $G_N=\sum_{k=1}^NQ^{(k)}$
+for every finite $N$.
+\end{corollary}
+\begin{proof}
+The Gram bound forces every $b_{ij}$ to vanish. In any $N$-coordinate
+configuration, strong consistency makes the pair-change rate for each
+coordinate pair equal to its corresponding $b_{ij}$. Every event changing
+two or more coordinates contributes positively to some pair rate and is
+therefore absent. Only single-coordinate jumps remain; autonomous
+singleton rates fix each of their rates to $Q$. Row sums fix the diagonal.
+\end{proof}
+
+This reduces the \emph{conditional} activity test to $|X|$ same-origin
+preparations, but it imports an unlimited-replication premise. No finite
+experiment verifies that premise for every size. A FIN derivation must
+establish the composition rule mathematically. The theorem does not say
+that independence is physically preferable, and a valid FIN law might
+instead predict nonzero joint activity.
+
+\subsection{Quantitative propagation to the previous theorem}
+
+For any finite configuration let
+\[
+ \mathcal B_N(x)=\sum_{y\ne x}g(x,y)
+                \binom{\#\{k:y_k\ne x_k\}}2.
+\]
+Consistency gives
+$\mathcal B_N(x)=\sum_{k<l}b_{x_kx_l}$. Under unlimited replication and
+$\max_i\delta_i\le\delta$,
+\[
+ \sup_x\mathcal B_N(x)\le\binom N2\delta.
+\]
+The preceding campaign's finite-generator perturbation argument therefore
+gives
+\[
+ \sup_x\TV\left(e^{tG_N}(x,\cdot),
+                     e^{t\sum_kQ^{(k)}}(x,\cdot)\right)
+ \le\min\{1,N(N-1)\delta t\}.
+\]
+For reference, the perturbation proof replaces each joint event changing
+$k$ coordinates by its $k$ marginal single events. The row total-variation
+norm is at most $\sum k g\le2\mathcal B_N$. Duhamel's formula and
+stochastic contraction then give $2t\sup\mathcal B_N$.
+This bounds transition laws, not complete path records. Initial
+correlations, detector calibration and the physical clock remain separate.
+
+\section{A sharp finite-horizon strict-FIN counterexample}
+
+Let $X=C_{12}$, $f(i)=i+6\pmod{12}$, and let the two parity classes be
+even and odd vertices. The antipodal map preserves parity. Put
+$a=W_{i,f(i)}=W_6$ and fix a proposed maximum population size $M$ and
+\[
+ c=\frac{a}{M-1}.
+\]
+For each $N\le M$ use the following rates.
+
+\begin{enumerate}
+\item Coordinate $k$ makes each non-antipodal transition with its original
+rate $W_{x_kj}$.
+\item Its antipodal rate is $a-c n_k^{\rm opp}$, where
+$n_k^{\rm opp}$ is the number of other coordinates in the opposite parity
+class.
+\item Each unordered pair of coordinates in opposite parity classes
+makes the simultaneous antipodal move at rate $c$.
+\end{enumerate}
+
+\begin{theorem}[Finite consistency without infinite extendibility]
+This defines a nonnegative, exchangeable, strongly projectively consistent
+family through size $M$. Its singleton generator is exactly strict $Q$.
+It is reversible with the same product-uniform equilibrium and has the
+full $D_{12}$ symmetry of the supplied graph. It is irreducible. Its pair
+activities satisfy
+\[
+ b_{ij}=\begin{cases}c,&i,j\text{ have opposite parity},\\0,&\text{otherwise},\end{cases}
+ \qquad b_{ii}=0.
+\]
+For $c>0$ fixed as above, no family satisfying the same premises and the
+same two-coordinate generator can extend through size $M+1$.
+\end{theorem}
+\begin{proof}
+Nonnegativity follows from $n_k^{\rm opp}\le N-1\le M-1$.
+The total antipodal rate of a coordinate is
+$a-c n_k^{\rm opp}+c n_k^{\rm opp}=a$. Deleting a partner converts its
+joint event, if active, into an observed singleton antipodal event; this
+exactly compensates the deleted partner's subtraction from the singleton
+rate. All other rates restrict unchanged. This proves strong consistency,
+not just agreement of a numerical marginal.
+
+An antipodal move preserves all parity labels. Its reverse therefore has
+the same partner counts and rate. Each common antipodal map is an
+involution. Non-antipodal rates are symmetric, so the full generator is
+symmetric and product-uniform measure is reversible. Non-antipodal
+single-coordinate edges include the connected nearest-neighbour cycle and
+remain positive; hence all configurations communicate. Particle permutations
+preserve the construction. Vertex rotations and reflections commute with
+the antipode and preserve the relation ``opposite parity'', even when they
+exchange the two parity classes; hence there is no selected parity label or
+orientation.
+
+For origins $(0,1)$ the target-resolved joint rate for the second coordinate
+to make $1\to7$ is $c=a/(M-1)$. If an extension to $M+1$ existed, the
+finite same-origin theorem with $m=M$ would instead require $c\le a/M$.
+This is a strict contradiction. It excludes every extension with the stated
+premises, not merely the displayed formula beyond its domain.
+\end{proof}
+
+For $M=3$,
+\[
+ a\simeq0.01107081732144,\quad c\simeq0.00553540866072.
+\]
+The implemented $G_2,G_3$ have 144 and 1728 states. The deletion residual
+is about $2.66\times10^{-15}$, singleton residual $8.88\times10^{-16}$,
+and reversibility residual zero. All 24 dihedral transformations were
+checked. The forbidden fourth-copy target bound is $a/3<c$.
+The algebraic proof, not the decimal residuals, licenses these conclusions.
+
+The activity matrix has zero diagonal and positive opposite-parity blocks.
+For $v_i=(-1)^i$,
+\[
+ v^TBv=-72c<0.
+\]
+It therefore also violates the necessary infinite-replication Gram
+condition. A finite consistency check, even together with equilibrium and
+symmetry, must not be silently promoted to unlimited self-similarity.
+
+\section{A new useful object, but no unique ``maximum resonance'' law}
+
+The common-vertex-transposition model from the previous campaign has
+activity matrix
+\[
+ B_\theta=\theta(sI+W),\qquad 0\le\theta\le1.
+\]
+Indeed, two coordinates at the same origin $i$ leave together whenever a
+common transposition touches $i$, giving diagonal rate $\theta s$.
+Two different origins change together only when their connecting pair is
+transposed, giving $\theta W_{ij}$.
+
+This is the signless Laplacian, with an explicit nonnegative incidence
+factorization:
+\[
+ sI+W=\sum_{i<j}W_{ij}(e_i+e_j)(e_i+e_j)^T.
+\]
+By comparison,
+\[
+ A=sI-W=\sum_{i<j}W_{ij}(e_i-e_j)(e_i-e_j)^T.
+\]
+The same edge data therefore admit an oriented difference form for mean
+diffusion and an unsigned Gram form for one collective-event realization.
+This is standard graph algebra with an explicit FIN application, not a
+new physical duality theorem. The event construction is what gives the
+plus form its activity interpretation, and $\theta$ is still free.
+In particular, $W_{ii}=0$ does \emph{not} imply $b_{ii}=0$.
+
+One might try to select the missing dynamics by maximizing collective
+activity, as a precise proxy for the informal ``maximum resonance'' idea.
+Even that proxy does not determine the microscopic process.
+
+\begin{theorem}[Maximal-activity ambiguity]
+There are distinct irreducible, reversible, exchangeable, strongly
+projectively consistent families with singleton generator $Q$, all strict
+graph symmetries, the same product-uniform equilibrium, and the same
+entrywise maximal activity matrix $B=s\one\one^T$.
+\end{theorem}
+\begin{proof}
+Set $R=W/s$, which is symmetric, stochastic and zero on the diagonal.
+Define
+\[
+ G_N^{\rm prod}=s(R^{\otimes N}-I),\qquad
+ (G_N^{\rm shift}h)(x)=\sum_{r=1}^{11}W_{0r}
+                     [h(x+r\one)-h(x)].
+\]
+The first model has one rate-$s$ Poisson clock, followed by conditionally
+independent vertex transitions at that tick. The second has common cyclic
+translations. Every coordinate changes at every event in either model,
+so every $b_{ij}=s$. This is the maximum possible rate since a pair-change
+event is contained in either coordinate's rate-$s$ departure event.
+
+Both generators restrict to $Q$ on one coordinate and restrict consistently
+under deletion. They are exchangeable. Symmetry of $R$ and the equality of
+opposite-shift rates give reversibility, while circulant structure gives
+the stated graph symmetries. For each $0\le\alpha<1$ the mixture
+$(1-\alpha)G_N^{\rm prod}+\alpha G_N^{\rm shift}$ is irreducible:
+$R^2$ is entrywise positive on this complete graph, so two product ticks
+can reach every configuration. All these mixtures retain the same $B$.
+
+From $(0,0)$, however, the product model has transition rate
+$W_{01}W_{02}/s>0$ to $(1,2)$, while a common shift has zero rate for that
+transition. Thus different mixtures have different generators.
+\end{proof}
+
+For mixture weights $\alpha=0.25,0.75$, the strict target rates are about
+$0.04077154$ and $0.01359051$, although the entire activity matrix is
+identical. Hence the observed number of simultaneous changes can still
+omit \emph{which} changes occur. A future source law must address the
+transition-resolved object
+\[
+ T_{(i,a),(j,b)}=G_2((i,j),(a,b)),\qquad a\ne i,\ b\ne j,
+\]
+and, potentially, higher-order composition. Its further classification is
+recommended work, not a result claimed in this campaign.
+
+\section{Retained falsification: an invisible finite-time exception}
+
+An attempted regression test expected every mixed-event model in the
+finite construction to differ from independence in endpoint distributions
+after pure same-origin preparation. This expectation failed for a uniform
+four-state kernel. The failure was investigated, not erased by weakening
+the numerical tolerance.
+
+Take $X=C_4$, $W_{ij}=1$ off the diagonal, antipode $i+2$, and the finite
+construction above. The singleton solution from origin $i$ is
+\[
+ p_t=u+e^{-4t}(e_i-u).
+\]
+The parity class not containing $i$ has equal probabilities at its two
+vertices. In the opposite-parity block, the correction to the independent
+forward generator applied to $p\otimes p$ is proportional to
+\[
+ [p(f(a))-p(a)]\,[p(f(b))-p(b)].
+\]
+One factor vanishes. Outside that block the correction is zero. Thus
+$p_t\otimes p_t$ solves both forward equations from every pure clone
+preparation at every time. The uniqueness of the finite linear initial-value
+problem proves exact endpoint equality. Mixed-origin preparations instead
+distinguish the processes. This is not equality of all conditional paths or
+event records.
+
+The strict weights break this special within-class balance. For strict
+preparation $(0,0)$ at time $0.4$, the numerically computed endpoint TV
+difference is about $0.0006491751$, despite zero joint-change rate at the
+initial clone configuration. Both the uniform exception and the strict
+distinction remain in the test suite.
+
+\section{Exact neural audit: schedule, fixed points and false criticality}
+
+The inspected older script labels a few signs of eigenvectors as attractors,
+uses the noncyclic distance $|i-j|$, and infers a single global basin and
+physical vacuum stability. These inferences are unsupported by that test.
+The matrix alone does not specify a neural activation, update schedule,
+noise law, learning rule or physical interpretation.
+
+\subsection{A complete declared finite test}
+
+We explicitly supply the synchronous zero-threshold rule
+\[
+ x_i' =\operatorname{sign}((Wx)_i),\qquad x\in\{-1,1\}^{12},
+\]
+keeping the old spin if the field is zero. We enumerate all 4096
+configurations for strict cyclic, canonical legacy cyclic and legacy
+noncyclic weights. No tested field is zero, as certified below.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule Declared network & Fixed points & Two-cycles & Longer cycles\\\midrule
+Strict, cyclic distance & 2 & 111 & 0\\
+Legacy, cyclic distance & 6 & 64 & 0\\
+Legacy, line distance & 6 & 18 & 0\\\bottomrule
+\end{tabular}
+\end{center}
+These are exact finite catalogues for the specified transcendental weights,
+not counts obtained merely by treating floats as exact. They do not count
+learned memories, physical vacua, particles or solitons. The additional
+floating energy data in the JSON are separately labelled numerical.
+
+\subsection{How the signs are certified}
+
+The checker encloses strict cosine values by alternating rational Taylor
+sums at the exact decimal-rational arguments. It encloses $d^{9/5}$ by an
+integer fifth-root search on a scaled version of $d^9$. Legacy cosines are
+written exactly using $\sqrt2,\sqrt3,\sqrt6$ and their eight-step period;
+these square roots are enclosed by integer root searches. The amplitude
+uses the convergent positive series
+\[
+ \log2=2\sum_{k=0}^{\infty}\frac{(1/3)^{2k+1}}{2k+1}.
+\]
+After 25 terms its remaining tail is bounded above by
+$2(1/3)^{51}/[51(1-1/9)]$.
+
+Outward rounding gives integer matrices $L,U$ with
+$L/10^{12}\le W\le U/10^{12}$ entrywise. For each spin configuration,
+the field lies in the exact interval with midpoint numerator
+$x^T(L+U)$, radius numerator given by the appropriate row sums of $U-L$,
+and denominator $2\cdot10^{12}$. All operations are bounded int64
+operations; the maximum possible sums are checked far below overflow.
+All 49,152 field signs per matrix are separated from zero. Certified
+minimum field magnitudes are respectively greater than
+\[
+ \frac{2767704329}{250000000000},\qquad
+ \frac{5294143023}{500000000000},\qquad
+ \frac{464196229}{500000000000}.
+\]
+The exact successor graph therefore belongs to the actual specified
+weights. Its complete cycle enumeration is checked independently by a
+strongly connected-component calculation for strict. The certificate
+contains the outward integer weight matrices and sign margins. This is
+not a proof-assistant verification; it is an explicit finite interval and
+integer certificate with documented analytic enclosures.
+
+\subsection{A general obstruction to one signed-spin fixed point}
+
+For any real symmetric zero-diagonal $W$, the finite energy
+$E(x)=-x^TWx/2$ has a minimizer. Flipping spin $i$ changes the energy by
+$2x_i(Wx)_i$. At a global minimum this is nonnegative, so that state is a
+fixed point of the threshold rule with the stated tie convention.
+Since $E(-x)=E(x)$, its distinct negative is also a fixed point. A unique
+fixed state is therefore impossible in this unquotiented model. For strict
+positive connected weights, the only ground configurations are the two
+uniform spin signs. Introducing a sign quotient or bias would be a new
+model choice, not something established by the old script.
+
+\subsection{Update schedules and excitation/inhibition are separate data}
+
+A single asynchronous alignment update never increases this energy:
+if a spin flips against its local field, $2x_i(Wx)_i\le0$. A simultaneous
+update need not decrease it, and the certified two-cycles already refute
+global convergence to one fixed point. Thus a single-coordinate update
+schedule builds absence of simultaneous changes into the algorithm; it
+does not derive that absence from the weight matrix. The original Hopfield
+paper likewise specifies an evolution algorithm rather than identifying
+arbitrary static matrices with complete dynamics \cite{hopfield}.
+
+Finally, an excitation/inhibition weight-sum ratio cannot determine linear
+stability. For the supplied continuous extension
+\[
+ \dot z=-z+gVz,
+\]
+the largest growth eigenvalue is $-1+g\lambda_{\max}(V)$.
+For any nonzero symmetric zero-diagonal $V$, trace zero implies
+$\lambda_{\max}(V)>0$. Choosing
+$g=1/(2\lambda_{\max})$ or $2/\lambda_{\max}$ gives maximum growth
+$-1/2$ or $+1$, with exactly the same matrix and E/I ratio. The canonical
+legacy line ratio is approximately $0.59904$ in both cases. A leak,
+activation slope and gain must be specified before ``critical'' or
+``stable'' has a defined dynamical meaning. This does not transfer a
+linear-flow result to the binary threshold dynamics or to physical matter.
+
+\section{Dual dynamics and the remaining source obligations}
+
+Nothing here changes the strict Dirichlet identity or the dual calculus
+\[
+ A=sI-W,\qquad
+ U_t=e^{-itA},\qquad P_t=e^{-tA}.
+\]
+They remain different functions of one self-adjoint operator, with
+different operational semantics. The new activity matrices belong to a
+declared classical population extension; they do not equate heat with
+Born probabilities, derive a bath, or select a coherent quantum completion.
+
+The constructive advance is conditional: unlimited exchangeable replication
+forces an activity Gram structure, and zero diagonal then forces
+independence. Its premises are not yet strict-sourced. Finite replication
+does not suffice, and maximizing activity does not uniquely select the
+alternative. We therefore neither impose independence nor reject
+self-coupling: the actual theory must determine its activity and
+transition laws.
+
+Known exchangeable-process results permit common stochastic influences
+\cite{crane}, so consistency should not be equated with independence in
+general. The proofs here are elementary finite-generator arguments and do
+not rely on an unverified application of a general representation theorem.
+No claim is made that these general mathematical mechanisms are newly
+discovered in the literature. Their role is to sharpen FIN's source tests.
+
+\section{Twelve recommended next studies}
+
+The ordering is by concrete information value and local tractability, not
+by an invented probability of proving a Theory of Everything.
+
+\begin{longtable}{@{}p{.06\textwidth}p{.86\textwidth}@{}}
+\toprule No. & Next test and acceptance criterion\\\midrule\endhead
+1 & Derive a transition-resolved composition law from an actual FIN
+coupling rule. It must distinguish the two maximal-activity families above,
+not merely reproduce $W$ or $B$.\\[2mm]
+2 & Define the directed-transition coincidence matrix $T$ and prove which
+Gram, marginal and positivity conditions its replication consistency
+requires. Do not assume the aggregate $B$ is informationally complete.\\[2mm]
+3 & Test whether equality of full two-coordinate dynamics fixes higher
+coordinate laws. Seek exact third-order counterexamples before claiming
+pairwise closure.\\[2mm]
+4 & Classify finite extendibility on small carriers using exact rational
+linear constraints and nonnegative rates; compare with the sharp
+target-resolved bound, not only matrix eigenvalues.\\[2mm]
+5 & Produce a strict-sourced map, if any, relating fractal refinement to
+population replication. Reject a map justified only by a common number
+of vertices or a visual self-similarity.\\[2mm]
+6 & Optimize finite-horizon diagonal-to-pair bounds using both one-group
+and multi-group moment constraints. Export a verified certificate for any
+claimed optimal bound.\\[2mm]
+7 & Extend the previous finite-resolution counting test to same-origin
+preparations with calibrated efficiency. Separate the testable finite data
+from the non-empirical unlimited-replication premise.\\[2mm]
+8 & Design the minimum mixed-origin or transition-resolved test distinguishing
+the maximal-activity family. Include the uniform four-state endpoint alias
+as an adversarial control.\\[2mm]
+9 & Audit the actual adaptive neural rule, with its activation, leak,
+sampling and schedule fixed. Recompute basins rather than testing only
+eigenvector signs.\\[2mm]
+10 & Study whether a sourced memory or feedback mechanism changes the
+Markov composition class. A non-Markov escape is allowed, but requires a
+new theorem rather than importing the present Markov conclusion.\\[2mm]
+11 & Compare the oriented and unsigned incidence constructions under an
+explicit legacy-to-strict map. Do not treat the new signless activity
+matrix as a replacement kernel or physical-role transfer.\\[2mm]
+12 & Formalize the finite counting and Gram identities and replay the
+exact threshold certificates with an independent integer implementation;
+do not describe that as independent experimental evidence.\\
+\bottomrule
+\end{longtable}
+
+\section{Verification and final judgment}
+
+The package contains the scientific computation, rational enclosure
+checker, 25 regression tests, exact sign certificates, numerical results,
+source audit ledger, figures and this English report. The tests include
+the retained uniform-kernel exception, exact small-matrix projection,
+strict sparse projection on 1728 states, symmetry checks, rational
+inequalities and high-precision cross-checks of transcendental enclosures.
+Tests do not supply physical units or an external scientific audit.
+
+The most promising next object is not another scalar extracted from $A$.
+It is a \emph{source-defined transition-resolved law of composition}.
+This campaign shows both how such a law would be constrained and how
+seemingly strong substitutes---finite consistency, static equilibrium,
+maximal activity, a neural analogy---can fail to select it. A valid
+nonzero-coupling prediction would be as informative as a valid independence
+theorem. The present evidence selects neither as fundamental physics.
+
+No selector/QW-2191 closure, legacy completion or role transfer, physical
+population, clock or unit, laboratory realization, spacetime continuum,
+Standard Model, gravity, $L_{\rm total}$ or ToE closure is exported.
+
+\begin{thebibliography}{9}
+\bibitem{crane} H. Crane and S. P. Lalley,
+\emph{Exchangeable Markov Processes on $[k]^{\mathbb N}$ with Cadlag Sample
+Paths}, arXiv:1307.1713 (2013).
+\href{https://arxiv.org/abs/1307.1713}{Author preprint}.
+\bibitem{hopfield} J. J. Hopfield,
+\emph{Neural networks and physical systems with emergent collective
+computational abilities}, PNAS 79 (1982), 2554--2558.
+\href{https://doi.org/10.1073/pnas.79.8.2554}{Original publication};
+\href{https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/}{Open full text}.
+\end{thebibliography}
+
+\clearpage\appendix
+\section{Numerical and certified comparisons}
+\IfFileExists{findings.pdf}{\includegraphics[width=\textwidth]{findings.pdf}}{}
+All panels describe declared mathematical models, not physical data.
+\end{document}

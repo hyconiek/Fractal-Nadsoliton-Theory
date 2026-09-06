@@ -96,10 +96,21 @@ class ReplicationTests(unittest.TestCase):
         self.assertEqual(Gs[0,ix[(1,2)]],0)
 
     def test_13_zero_initial_pair_rate_is_not_finite_time_independence(self):
-        W=np.ones((4,4))-np.eye(4);G,xs=a.finite_extension(W,2,.5)
+        W=a.strict();G,xs=a.finite_extension(W,2,W[0,6]/2)
         Gi,_=a.finite_extension(W,2,0.)
         self.assertEqual(a.pair_rates(G,xs)[0,0],0.)
-        self.assertGreater(np.linalg.norm(expm(.1*G.toarray())[0]-expm(.1*Gi.toarray())[0]),1e-5)
+        self.assertGreater(np.linalg.norm(expm(.4*G.toarray())[0]-expm(.4*Gi.toarray())[0]),1e-5)
+
+    def test_25_uniform_four_state_exception_preserved(self):
+        W=np.ones((4,4))-np.eye(4);G,xs=a.finite_extension(W,2,.5)
+        Gi,_=a.finite_extension(W,2,0.)
+        for state in [(0,0),(1,1),(2,2),(3,3)]:
+            i=xs.index(state)
+            for t in [.01,.1,1.]:
+                np.testing.assert_allclose(expm(t*G.toarray())[i],
+                                          expm(t*Gi.toarray())[i],atol=2e-14)
+        i=xs.index((0,1))
+        self.assertGreater(np.linalg.norm(expm(.1*G.toarray())[i]-expm(.1*Gi.toarray())[i]),.01)
 
     def test_14_exact_root_intervals(self):
         for n,p in [(2,2),(3,2),(6,2),(6**9,5)]:
