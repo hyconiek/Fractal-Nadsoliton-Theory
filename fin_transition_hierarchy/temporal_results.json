@@ -1,0 +1,124 @@
+{
+  "completed_rounds": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "programs": [
+    "ST8601",
+    "ST8602",
+    "ST8603",
+    "ST8604",
+    "ST8605",
+    "ST8606",
+    "ST8607",
+    "ST8608",
+    "ST8609"
+  ],
+  "stationary_law_does_not_fix_time": {
+    "variance": "1/4",
+    "contraction": "3/5",
+    "discrete_AR_covariances": [
+      "1/4",
+      "3/20",
+      "9/100",
+      "27/500",
+      "81/2500",
+      "243/12500"
+    ],
+    "discrete_iid_covariances": [
+      "1/4",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "Poisson_AR_centered_linear_rate": "2/5",
+    "Poisson_AR_centered_square_rate": "16/25",
+    "matched_reset_rates": [
+      "2/5",
+      "2/5"
+    ]
+  },
+  "telegraph": {
+    "kappa": 0.7,
+    "first_derivative_error": 5.874748045952207e-16,
+    "second_derivative_identity_error": 2.2994019782967924e-15,
+    "extra_second_derivative_norm": 0.19163787243495348,
+    "semigroup_defect": 0.002712106845174254,
+    "schur_resolvent_error": 6.265018137771978e-16,
+    "fast_switching": [
+      {
+        "kappa": 1.0,
+        "operator_error": 0.0046531500089233785,
+        "analytic_upper_bound": 0.05298924144045835
+      },
+      {
+        "kappa": 5.0,
+        "operator_error": 0.0017237703962014982,
+        "analytic_upper_bound": 0.010380106586513808
+      },
+      {
+        "kappa": 20.0,
+        "operator_error": 0.0004836913769909744,
+        "analytic_upper_bound": 0.002584986132236254
+      },
+      {
+        "kappa": 100.0,
+        "operator_error": 9.951448098877764e-05,
+        "analytic_upper_bound": 0.0005164634818027384
+      }
+    ]
+  },
+  "moment_extremes": {
+    "zero_variance": "delta_0",
+    "unit_variance": "(delta_-1+delta_1)/2",
+    "flat_polynomial": "u^2-1/4",
+    "flat_moment_identity": "0"
+  },
+  "subordination": {
+    "low_nonzero_eigenvalue": 0.7541211542070796,
+    "high_eigenvalue": 2.3421820411463004,
+    "positive_atom_shape_gap": 0.025696427507727604,
+    "integral_prediction": 0.025696427507727524,
+    "cutoff": 0.2,
+    "atom_tail_upper_bound": 0.9898655002841438,
+    "one_mode_counterexample": {
+      "drift": 0.6839397205857212,
+      "f1": 1.0,
+      "f2": 1.800211799553136
+    },
+    "small_jump_ambiguity": [
+      {
+        "clock_step": 0.1,
+        "jump_rate": 10.0,
+        "shape_defect": 0.07170147891278211,
+        "first_mode_error": 0.027733431248306073
+      },
+      {
+        "clock_step": 0.01,
+        "jump_rate": 100.0,
+        "shape_defect": 0.007858867493280353,
+        "first_mode_error": 0.0028363592360480805
+      },
+      {
+        "clock_step": 0.001,
+        "jump_rate": 1000.0,
+        "shape_defect": 0.000793211441051711,
+        "first_mode_error": 0.0002842778931297918
+      }
+    ]
+  },
+  "commuting_is_not_heat_mixture": {
+    "min_eigenvalue_R0": -0.4106919069143363,
+    "trace_R0": 0.0,
+    "A_D_commutator": 1.4976376240624357e-16
+  }
+}

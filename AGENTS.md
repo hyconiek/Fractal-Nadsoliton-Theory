@@ -10362,3 +10362,155 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   sourced composition classes and the live cross-repository source frontier.
   No legacy role transfer, selector, units, physical population, laboratory
   evidence, continuum, SM/GR, L_total or ToE closure is exported.
+
+## Active goal checkpoint ST8601--ST8610: time and clock classes (2026-09-07)
+
+- fin_transition_hierarchy/REPORT.md and CAMPAIGN.md now record 20/30 rounds.
+  The goal remains active; rounds 21--30 and final scope/completion audit are
+  unfinished. Current scientific suite: 31 tests. MD only; no PDF generation.
+- A fixed self-similar stationary law does not fix temporal dynamics. The
+  rate-one affine-update process has decay rates 1-r and 1-r^2 for centered
+  linear/square observables, whereas reset sampling has one common decay
+  rate. Matching one clock mode does not match the second.
+- For supplied Q=-A, C=sD and a binary switching environment at rate kappa,
+  the positive joint generator [[Q+C-kI,kI],[kI,Q-C-kI]] has observed first
+  derivative Q but second derivative Q^2+C^2. The coarse family is not a
+  homogeneous semigroup for nonzero symmetric C. This does not preserve the
+  complete strict singleton law, only its instantaneous drift.
+- Hidden-state elimination gives memory C exp((Q-2kI)t) C and its exact
+  Schur resolvent. For the commuting tested class, the finite-time operator
+  error from heat is at most exp(||C||^2 t/(2k))-1. Heat is a fast-switching
+  limit, not exact at finite nonzero noise. Kappa and preparation are supplied.
+- Finite moment data can identify special extremal laws: zero variance,
+  endpoint-saturating variance, or a null-polynomial support certificate.
+  Do not read the earlier generic finite-cutoff counterexample as ambiguity
+  at every individual moment vector. A source for the extremality criterion
+  and the compact noise curve remains necessary.
+- In the explicitly assumed no-killing positive subordinator class
+  f(l)=d*l+integral(1-exp(-l*tau))nu(dtau), two distinct positive modes with
+  f(l_i)=c*l_i force nu=0 and d=c. Strict A has at least two such modes.
+  This is class-conditional clock rigidity, not a derivation of a physical
+  clock, independent tensor composition, or the subordinator premise.
+- The spectral ratio defect bounds nu([tau0,infinity)) by Delta/g(tau0),
+  with g the positive difference of (1-exp(-l*tau))/l at the two modes.
+  Tiny clock jumps at rate 1/h can converge to drift while their total rate
+  diverges; approximate spectral agreement does not certify zero noise.
+- One nonzero mode is insufficient: the explicit two-state positive clock
+  construction fixes f(1)=1 but gives f(2)=1.80021179955. Positivity and
+  removal examples are checked; floating zeros are not exact certificates.
+- R0=W/s and the earlier commuting R_u maps are stochastic but have trace
+  zero and negative operator eigenvalues. They need not be positive heat
+  mixtures. Do not conflate entrywise positivity, PSD, commutation and
+  Bernstein/subordination structure.
+- K1/K2/F2/F3/S2/SUMMARY were read completely and reconciled with later
+  state-map guards. The new self-spectrum clock result is not a replay of
+  P298/P300 legacy-to-strict distance/ordering no-go classes, does not revive
+  stale F3 immediate priorities, and supplies no missing source atom.
+- Applying clock rigidity to an already correlated base leaves that base
+  correlated. Independent A_N=sum_k A^(k) is an additional input if used.
+  Next target: full event-intensity law, its invisible conventions and the
+  remaining source/operational bridge; no selector, units, legacy role
+  transfer, laboratory, SM/GR, L_total or ToE closure.
+
+## ST8611--ST8620 final thirty-round campaign synthesis (2026-09-07)
+
+- fin_transition_hierarchy/REPORT.md contains the completed 30-round research
+  campaign ST8591--ST8620. CAMPAIGN.md records its adaptive chain;
+  COMPLETION_AUDIT.md and verification.json record scope and executed checks.
+  There are 46 scientific tests and three exactly replayed result files.
+  This is completion of the research request, not completion of FIN as physics.
+  Current output policy remains MD or source-only TeX; no PDF was generated.
+- In G_N=int(R^tensorN-I)nu, identity-update atoms are invisible to all state
+  paths. All population orders identify a finite nu modulo that identity atom.
+  Invisible attempted events are not the same ambiguity as different
+  dimensionless higher-order predictions.
+- Nonzero independent tensor dynamics is not a nontrivial pure common-event
+  law with zero pair activity. It is included as a separate Q0 component, or
+  as the controlled small-jump limit eps^-1[(I+eps Q)^tensorN-I].
+- In the declared mixed class sum Q0^(k)+int(R^tensorN-I)nu, with no identity
+  atom and int w(R)nu<infinity for w=sum offdiagonal entries, all-order
+  transition data uniquely determine Q0 and nu. Higher moments determine
+  the finite measure w^2 nu; inversion away from I and the singleton residual
+  finish the proof. This is uniqueness GIVEN representation, not an unproved
+  universal existence theorem. Fixed state labels/full data are assumed.
+- Quantum common-phase channels provide an analogous finite-order ambiguity:
+  densities (1+/-epsilon*cos((m+1)theta))/(2pi) agree through m constituents
+  but differ at m+1. These are supplied OPEN quantum completions. Exact
+  unitary marginals for every joint input are an extremal exception forcing
+  product evolution; do not extend generic ambiguity to that case.
+- Nondegenerate preparation/detector contrasts can have identical complete
+  heat records. Actual operational identification remains separate from the
+  mathematical law. Independent initial states are not forced by product
+  transition generators.
+- The positive legacy sign cover also supports exact matched-pair/different-
+  triple laws. This is kernel-split robustness within that supplied cover,
+  not a legacy-to-strict bridge or any physical-role transfer.
+- A contractive recursive source H with W1(mu,Hmu)<=epsilon gives
+  W1(mu,mu*)<=epsilon/(1-r). Finite bit truncation gives W1<=r^K and the
+  displayed operational transition bounds. The recurrence and innovation
+  laws themselves remain additional, unsourced premises.
+- Independent Poisson reference-clock stopping produces
+  K_omega=omega*(omega I-G)^-1, invariant under joint (G,omega) rescaling.
+  This is observation-time sampling, not a random-clock modification of the
+  underlying generator. Lack of an absolute SI convention alone is not a
+  universal impossibility of physical predictivity; relative rates matter.
+- Source review includes actual A1/A4/A8 scripts and the compendium's broader
+  action/RG/gravity/observer lanes. Their serialized assumptions and scope
+  summaries are not new source-law derivations or experimental proof.
+- Highest-information next step: derive a transition- and time-resolved law
+  from one actual sourced FIN update equation, with a distinguishing higher-
+  order prediction not fitted to that outcome. Do not merely impose
+  independence, maximum activity, fairness, a clock or a continuum and
+  relabel it an inevitable consequence of W.
+- The strongest surviving interpretation is a finite spectral-information
+  framework with incompletely specified composition and operational laws.
+  No universal no-physics theorem, selector/QW-2191 closure, unit source,
+  legacy role transfer, laboratory evidence, SM/GR or L_total/ToE closure.
+
+## New 30-round goal: ST8621--ST8630 projected-learning checkpoint (2026-09-08)
+
+- The goal was started again after ST8591--ST8620 was completed. Do not count
+  the preceding campaign twice. fin_projected_learning/ holds the new
+  10/30 checkpoint, 17 tests and an actual controlled replay of the archived
+  30000-step neural implementation. Outputs are MD/code/JSON, not PDFs.
+- The actual nadsoliton_neural_analysis.py rule is projected leaky covariance
+  tracking: K_next=(1-eta*gamma)K+eta*Pi(xx^T), Pi deletes the diagonal.
+  It is not a normalized Oja/PCA vector rule. Its external random-phase
+  teacher has off-diagonal covariance cos(Omega*(i-j))/2; no legacy phase
+  offset or damping is learned from that teacher covariance.
+- At fixed step size, the exact off-diagonal innovation variance is 7/16
+  for the declared noise, and stationary kernel variance is positive.
+  Same-input differences contract exactly; noise persistence is not chaos.
+- A twelve-label normalized entropy cannot reach log16. The unavoidable
+  relative target error is at least 1-log12/log16=0.1037593748. The archived
+  analysis also emits VERIFIED at correlation -1; its label is not a gate.
+- Preserve ST2209: unprojected PSD covariance cannot equal gamma*strict W.
+  It does not apply unchanged after diagonal deletion. For the explicitly
+  supplied mixed-state extension rho_dot=-i[K,rho], K_dot=eta(Pi Re rho-gamma K),
+  every admissible rho=I/n+gamma K is an exact fixed pair. This includes strict
+  at gamma=1/20 but does not select strict among the continuum of kernels.
+- Degenerate dephasing is sum P_lambda rho P_lambda, not a scalar occupation
+  times a whole degenerate projector in general. The later ST2205 code keeps
+  the blocks correctly. Seven strict Fourier sectors are now independently
+  separated by exact rational eigenvalue enclosures.
+- A pure strict Fourier-state construction has real time-averaged covariance
+  I/n+gamma K, but its instantaneous covariance does not match. This is an
+  averaged witness, not an exact pure-state learning equilibrium or a
+  self-consistent slow-learning theorem.
+- For the supplied closed density extension with eta,gamma>0,
+  F=gamma||K||^2/2-Tr(K rho) obeys F_dot=-eta||Pi Re rho-gamma K||^2.
+  State spectra/entropy are conserved by the unitary part; boundedness gives
+  global existence, not convergence to a uniquely selected state.
+- A two-level exact orbit has K_dot=0 but a moving density. However for n>=3
+  and strictly positive off-diagonal K, Pi[K,[K,diag d]]=0 forces d constant
+  by a positive-weight maximum principle. Hence invariant zero-learning
+  motion at such a fixed K is stationary at the density level.
+- In this dense-positive class a PURE stationary density forces the uniform
+  complete-graph K_ij=1/(gamma*n). Nonuniform strict is therefore excluded
+  as an instantaneous pure-state stationary kernel for this law, even though
+  mixed-state and time-averaged constructions exist. Do not generalize to
+  signed/sparse kernels, different learning laws or other state classes.
+- Next: covariance-completion rank, the isospectral Lyapunov-minimizer
+  landscape and preservation/failure of the strict positive cone. No
+  intrinsic teacher, source selection, legacy role transfer, units, physical
+  population, laboratory evidence or SM/GR/ToE closure is exported.
