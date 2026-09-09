@@ -1,0 +1,505 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Twierdzenie}
+\newtheorem{corollary}{Wniosek}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\op}{\operatorname{op}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\id}{\operatorname{id}}
+\title{FIN: korelacje mikroskopowe i koszt kwantowego odtworzenia jądra}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Naturalne dwuciałowe podniesienie rzutowanego źródła FIN ma bardzo
+restrykcyjną strukturę: na dowolnym skończonym połączonym grafie,
+nawet z dodatkowymi hamiltonianami lokalnymi, jego jedynym
+pełnorządowym stanem iloczynowym w równowadze jest stan maksymalnie
+mieszany. Niezerowy strict nie może więc być takim nieskorelowanym
+stanem mikroskopowym. Jawne skorelowane stany o tym samym marginalnym
+strict istnieją, lecz mogą tylko przechowywać jądro w paśmie płaskim,
+bez odtwarzania jego propagacji. Osobno skonstruowano zgodny z QM
+protokół odtwarzający kanał strict z kopii stanu programu. Ma on
+ścisłą górną granicę błędu i nieusuwalny w tej architekturze składnik
+błędu rzędu $1/N$. Źródło danych jądra pozostaje w programie.
+Wyniki ustanawiają konkretne warunki dla dalszego modelu fizycznego;
+nie są wyprowadzeniem FIN jako teorii fundamentalnej.
+\end{abstract}
+
+\section{Przedmiot twierdzeń i granice interpretacji}
+
+Rozważany jest rzeczywisty rzut źródłowy
+\begin{equation}\label{eq:source}
+ T(\rho)=\Pi\Rea\rho,
+\end{equation}
+gdzie $\Pi$ usuwa przekątną. W proponowanym sprzężeniu stanu i jądra
+$\dot K=\eta(T(\rho)-\gamma K)$, a granica szybkiego śledzenia daje
+$\dot\rho=(i/\gamma)[T(\rho),\rho]$.
+Jest to granica określonego równania, nie założenie, że każde
+samouczenie musi mieć tę postać.
+\footnote{Źródła repozytoryjne: \texttt{The FIN Kernel as an Unknown Mat.md},
+§4.1; \texttt{fin\_projected\_learning/REPORT.md}, §28 (ST8648).
+Wcześniejszy raport \texttt{FIN\_Adaptive\_Feedback\_Operational\_Obstruction.tex}
+oddziela oryginalne równanie czyste od jego rozszerzenia mieszanego.}
+
+Wprowadzamy jawnie dwa dodatkowe modele: skończone oddziaływanie
+dwuciałowe oraz protokół kolejnych zderzeń z kopiami stanu programu.
+Ich poprawność kwantowa nie oznacza, że prawo składania, dopływ kopii
+lub zegar zostały już wyprowadzone z FIN. Liczba $n=12$ oznacza
+wymiar pojedynczego nośnika, a $N$ liczbę składników lub kopii;
+nie utożsamiamy $N$ z wymiarem fraktalnym, liczbą cząstek fizycznych
+ani wykładnikiem hierarchii grawitacyjnej.
+
+Punktem odniesienia pozostaje dokładnie zadany strict na cyklu:
+\begin{equation}\label{eq:strict}
+ W_{ij}=\frac{\cos(\omega d_{ij}+\phi)}{1+d_{ij}^{9/5}},\quad
+ W_{ii}=0,\quad \omega=\frac{743}{4000},\quad\phi=\frac{650}{4000}.
+\end{equation}
+Jego sumę wiersza oznaczamy przez $s$, a $\ell=-\lambda_{\min}(W)>0$.
+Wszystkie czasy i parametry są bezwymiarowe. Zasadnicze wyniki
+o komutantach nie zależą od wartości tych parametrów.
+
+\section{Dokładne podniesienie źródła do oddziaływania kwantowego}
+
+Dla $i<j$ niech $X_{ij}=(|i\rangle\langle j|+|j\rangle\langle i|)/\sqrt2$.
+Jest to ortonormalna baza rzeczywistych symetrycznych macierzy
+o zerowej przekątnej. Oznaczmy przez $S$ zamianę dwóch czynników,
+$|\Omega\rangle=\sum_i|ii\rangle$ oraz $D=\sum_i|ii\rangle\langle ii|$.
+Wówczas
+\begin{equation}\label{eq:V}
+ V=\sum_{i<j}X_{ij}\otimes X_{ij}
+   =\frac{|\Omega\rangle\langle\Omega|+S-2D}{2},\qquad
+ \Tr_2[V(I\otimes\rho)]=T(\rho).
+\end{equation}
+To dokładna tożsamość także dla zespolonej hermitowskiej $\rho$.
+
+Trzy ortogonalne projektory spektralne to
+\begin{align}
+ P_\Omega&=|\Omega\rangle\langle\Omega|/n,&v_\Omega&=(n-1)/2,\\
+ P_+&=(I+S)/2-D,&v_+&=1/2,\\
+ P_-&=I-P_\Omega-P_+,&v_-&=-1/2.
+\end{align}
+Dla $n\ge3$ pierwsza przestrzeń własna jest izolowana i jednowymiarowa.
+Pasmo $P_-$ obejmuje zarówno przestrzeń antysymetryczną, jak i
+bezśladowe wektory diagonalne; nie są to te same przestrzenie.
+Ponadto $\Tr_1V=\Tr_2V=0$ oraz
+\begin{equation}\label{eq:V2}
+ V^2=\frac{I+(n-2)|\Omega\rangle\langle\Omega|}{4}.
+\end{equation}
+
+\section{Główny wynik: pełny rząd wymusza korelacje}
+
+\begin{theorem}[Brak nietrywialnych lokalnych pól w komutancie]\label{thm:local}
+Dla $n\ge3$ i hermitowskich $h,k$,
+\[
+ [V,h\otimes I+I\otimes k]=0
+ \quad\Longleftrightarrow\quad h,k\text{ są skalarne}.
+\]
+\end{theorem}
+
+\begin{proof}
+Izolowana przestrzeń $\Omega$ wymusza $h+k^T=cI$.
+Po utożsamieniu wektora dwuciałowego z macierzą $M$, działanie
+$h\otimes I+I\otimes k$ ma postać $cM+[h,M]$.
+Dla bezśladowej diagonalnej $M$ składowa pochodząca od urojonej
+antysymetrycznej części $h$ jest symetryczna, pozadiagonalna
+i należy do pasma $+1/2$, podczas gdy $M$ należy do pasma $-1/2$.
+Musi zniknąć dla każdej takiej $M$. Zatem $h$ jest rzeczywista
+symetryczna, a $k=cI-h$.
+
+Dla każdej rzeczywistej symetrycznej pozadiagonalnej $M$ komutator
+$[h,M]$ jest antysymetryczny, więc przechodzi z pasma $+1/2$ do $-1/2$.
+Także on musi zniknąć. Komutacja z każdym $E_{ij}+E_{ji}$ wymusza
+$h$ skalarne: trzeci indeks usuwa wszystkie elementy pozadiagonalne,
+a porównanie elementów $ij$ zrównuje przekątną. Skalarność $k$ wynika
+z wcześniejszej relacji. Kierunek odwrotny jest natychmiastowy.
+\end{proof}
+
+\begin{theorem}[Dowolny skończony graf i dowolne pola lokalne]\label{thm:product}
+Niech $G$ będzie skończonym połączonym grafem co najmniej dwóch
+nośników o wymiarze $n\ge3$. Dla
+\[
+ H=\sum_a L_a^{(a)}+\sum_{\{a,b\}\in E(G)}g_{ab}V_{ab},\quad g_{ab}\ne0,
+\]
+gdzie $L_a$ są dowolne hermitowskie, pełnorządowy produkt
+$R=\bigotimes_a C_a$ jest stacjonarny wtedy i tylko wtedy,
+gdy każde $C_a=I/n$.
+\end{theorem}
+
+\begin{proof}
+Z $[H,R]=0$ i dodatniości $R$ wynika przez rachunek funkcyjny
+$[H,\log R]=0$, gdzie $\log R=\sum_a(\log C_a)^{(a)}$.
+Każdy komutator krawędziowy ma zerowe obie jednociałowe ślady
+częściowe. Wynika to z $\Tr_1V=\Tr_2V=0$ i cykliczności śladu
+częściowego względem operatora działającego na śledzonym czynniku.
+
+Rzut całkowitego komutatora na dwuciałową składową o zerowych
+śladach częściowych dla wybranej krawędzi izoluje jej komutator.
+Pola lokalne i inne krawędzie nie mogą go skasować. Twierdzenie
+\ref{thm:local} wymusza skalarność obu logarytmów na każdej krawędzi.
+Spójność grafu i normalizacja stanów kończą dowód. Produkt
+maksymalnie mieszany oczywiście komutuje z każdym $H$.
+\end{proof}
+
+To jest właściwa treść konieczności korelacji w badanej klasie.
+Nie znaczy ona, że każda równowaga musi być splątana.
+Pełny rząd jest istotny: produkt $|+_{ij}\rangle\otimes|-_{ij}\rangle$
+z równymi rzeczywistymi amplitudami na dwóch etykietach należy
+do pasma $-1/2$. Grafy dwudzielne z zerowymi lub zgodnymi polami
+lokalnymi dopuszczają naprzemienne produkty tego typu.
+Również $n=2$ jest wyjątkiem: $V=X\otimes X/2$ ma nietrywialny
+lokalny komutant. Żaden z tych wyjątków nie jest pełnorządowym strict.
+
+\section{Ścisła różnica między polem średnim a skończonym układem}
+
+Dla jawnie przyjętego skalowania
+\[
+ H_N=-\frac g{N-1}\sum_{a<b}V_{ab},\qquad g=1/\gamma,
+\]
+oraz początkowego $C^{\otimes N}$ otrzymujemy równanie pola średniego
+$\dot C_t=ig[T(C_t),C_t]$. Nie utożsamiamy niezależnych kopii
+z fraktalnym uszczegółowieniem nośnika. Zależność granicy od
+początkowej hierarchii stanów jest istotna także w ogólnej literaturze
+o granicy pola średniego.
+\footnote{Z.~Ammari, M.~Falconi, B.~Pawilowski,
+\emph{On the rate of convergence for the mean field approximation of
+many-body quantum dynamics}, \href{https://arxiv.org/abs/1411.6284}{arXiv:1411.6284}.
+Ich ogólnych twierdzeń bosonowych nie przenosi się tu automatycznie
+na dowolny produkt stanów mieszanych; poniższy krótko-czasowy szacunek
+wynika bezpośrednio ze skończonej hierarchii.}
+
+Dla $f_k(t)=\|\rho_N^{(k)}(t)-C_t^{\otimes k}\|_1$,
+$v=\|V\|=(n-1)/2$, hierarchia BBGKY i wzór Duhamela dają
+\[
+ f_k(t)\le\frac{3gv,k(k-1)}{N-1}t
+       +2gvk\int_0^t f_{k+1}(r)\,dr,
+\]
+przy braku ostatniego składnika dla $k=N$. Jeden składnik
+niejednorodny pochodzi od oddziaływań wewnętrznych, dwa od różnicy
+współczynników $(N-k)/(N-1)$ i $1$; użyto
+$\|[V,R]\|_1\le2v\|R\|_1$. Iteracja do poziomu $N$ daje
+\begin{equation}\label{eq:mf}
+ f_1(t)\le\frac{3}{2(N-1)}\sum_{r=1}^{N-1}r q^{r+1}
+ \le\frac{3q^2}{2(N-1)(1-q)^2},\qquad q=2gvt<1.
+\end{equation}
+Jest to kontrola na zadanym krótkim przedziale, nie twierdzenie
+o dowolnie długim czasie.
+
+Jeżeli $[T(C),C]=0$, to dokładnie
+\begin{equation}\label{eq:acceleration}
+ \left.\frac{d^2\rho_N^{(1)}}{dt^2}\right|_0
+ =-\frac{g^2}{N-1}\Tr_2[V,[V,C\otimes C]].
+\end{equation}
+Składniki z trzecim nośnikiem znikają dzięki równowadze pola średniego.
+Stąd nawet dokładna równowaga Hartreego nie oznacza dokładnej
+równowagi skończonego produktu.
+
+Dla rzeczywistego symetrycznego $C$ o stałych przekątnych $C$ i $C^2$
+otrzymujemy ponadto zamknięty wzór dwuciałowy, $\tau=gt$:
+\begin{align}\label{eq:closed}
+ C(\tau)&=C+A(\tau)(C-I/n)
+       +B(\tau)(C^2-\Tr(C^2)I/n),\\
+ A(\tau)&=\frac{2(\cos\tau-1)}n,\qquad
+ B(\tau)=\frac2n\left[\cos\bigl((n/2-1)\tau\bigr)-\cos\tau\right].
+\end{align}
+Dowód polega na oddzieleniu komutującej zamiany $S$ i rozwinięciu
+pozostałej unitarnej części
+$I+(e^{-i\tau}-1)D+(e^{i(n/2-1)\tau}-e^{-i\tau})P_\Omega$.
+Ślad częściowy daje \eqref{eq:closed} bez dopasowania numerycznego.
+
+Strict $C=I/12+\gamma W$ spełnia założenia. Dla $n=12$ mamy
+$C(\pi)=2C/3+I/36$ oraz $C(2\pi)=C$.
+Populacje węzłów są stale równe $1/12$, ale widmo lokalnego stanu
+zmienia się. Zachowanie entropii globalnej i nierówność subaddytywności
+dają $S(C(t))\ge S(C)$ dla produktu początkowego. Nie wynika z tego
+monotoniczność: dokładny powrót w $2\pi$ ją wyklucza.
+
+\section{Skorelowana stacjonarność istnieje, ale nie wystarcza}
+
+Niech $A_-=(I-S)/2$, $n\ge3$ i
+$\lambda_{\min}(C)\ge1/[2(n-1)]$. Wówczas
+\begin{equation}\label{eq:anti}
+ R_A(C)=\frac2{n-2}A_-
+ \left(C\otimes I+I\otimes C-\frac I{n-1}\right)A_-
+\end{equation}
+jest stanem, ma oba marginały równe $C$ i komutuje z $V$.
+W bazie własnej $C$ jest mieszaniną znormalizowanych projektorów
+antysymetrycznych z wagami
+$2(c_i+c_j-1/(n-1))/(n-2)$. Wagi są nieujemne, sumują się do jedności,
+a suma wag incydentnych dla $i$ wynosi $2c_i$; dowodzi to także
+równości marginałów. Stacjonarność wynika z płaskości pasma.
+
+Ta konkretna konstrukcja jest splątana, ponieważ
+\[
+ \langle\Omega/\sqrt n|R_A(C)^{T_2}|\Omega/\sqrt n\rangle=-1/n.
+\]
+Transpozycja częściowa każdego stanu separowalnego jest dodatnia,
+więc ujemna wartość jest wystarczającym świadkiem. Negatywność jest
+co najmniej $1/n$. Nie przypisuje to nośnikom statystyki fermionowej
+ani nie dowodzi konieczności splątania dla wszystkich innych uzupełnień.
+
+Dla strict przy $\gamma=1/20$ dokładny przedział spektralny daje
+$\lambda_{\min}(C)>1/22$, zatem konstrukcja jest dopuszczalna.
+Jest jednak zależna od zadanej odpowiedzi $C$. Co ważniejsze,
+każdy wspólny impuls $U\otimes U$ pozostawia ją w tym samym płaskim
+paśmie: $R_A(UCU^*)$ także pozostaje stacjonarny, nawet gdy równanie
+Hartreego poruszałoby $UCU^*$.
+Zapisanie macierzy jądra w stanie nie jest odtworzeniem jej propagatora.
+Dodanie osobnego hamiltonianu $W$ byłoby dodatkowym źródłem dynamiki.
+
+\section{Kwantowe odtworzenie kanału z dostarczonego programu}
+
+Istnieje inny, jawnie operacyjny model. Przygotowujemy nieznany stan
+sondy $\sigma$ i $N$ niezależnych kopii programu $C$, niezależnych
+od sondy. W każdym kroku przykładamy $e^{ig\delta V}$, odrzucamy
+użyty program i bierzemy $\delta=t/N$. Kanał jednego kroku to
+\[
+ \Phi_\delta(\sigma)=\Tr_2\!left[e^{ig\delta V}
+                    (\sigma\otimes C)e^{-ig\delta V}\right].
+\]
+Jest to wariant znanej symulacji hamiltonianu na podstawie próbek
+stanu, a nie nowa ogólna zasada kwantowa.
+\footnote{S.~Lloyd, M.~Mohseni, P.~Rebentrost,
+\emph{Quantum principal component analysis}, Nature Physics 10,
+631--633 (2014), \href{https://doi.org/10.1038/nphys3029}{doi:10.1038/nphys3029}.
+S.~Kimmel, C.~Y.-Y.~Lin, G.~H.~Low, M.~Ozols, T.~J.~Yoder,
+\emph{Hamiltonian Simulation with Optimal Sample Complexity},
+\href{https://arxiv.org/abs/1608.00281}{arXiv:1608.00281}, §2 i dodatek B.
+Ich ogólnych twierdzeń o optymalności nie utożsamiamy z optymalnością
+poniższej szczególnej architektury.}
+
+Dla $h=T(C)$ i $V_0=V-h\otimes I$ zachodzi
+\begin{align}
+ B_C&=\Tr_2[V_0^2(I\otimes C)]
+     =\frac{I+(n-2)C^T}{4}-h^2\succeq0,\\
+ \mathcal E_C(\sigma)&=\Tr_2[V_0(\sigma\otimes C)V_0],\qquad
+ \mathcal D_C(\sigma)=\mathcal E_C(\sigma)-\tfrac12\{B_C,\sigma\}.
+\end{align}
+Mapa $\mathcal E_C$ jest całkowicie dodatnia i
+$\mathcal E_C^*(I)=B_C$, stąd
+$\|\mathcal D_C\|_\diamond\le2\|B_C\|$.
+Drugi rząd rozwinięcia jest dokładnie
+$\Phi_\delta-\mathcal U_h(\delta)=g^2\delta^2\mathcal D_C+O(\delta^3)$,
+gdzie $\mathcal U_h(t)$ jest sprzężeniem przez $e^{igth}$.
+
+Trzeci rząd reszty kanału unitarnego ma normę co najwyżej
+$\delta^3(2\|H\|)^3/6$. Teleskopowanie kanałów, których normy
+diamentowe są równe jeden, daje ścisłą granicę
+\begin{equation}\label{eq:diamond}
+ \|\Phi_{t/N}^N-\mathcal U_h(t)\|_\diamond
+ \le\frac{2g^2t^2\|B_C\|}{N}
+ +\frac{4g^3|t|^3}{3N^2}\bigl(v^3+\|h\|^3\bigr),
+\end{equation}
+ograniczoną dodatkowo przez $2$. Dotyczy ona także sondy splątanej
+z rejestrem odniesienia.
+
+Przy $C=I/12+W/20$, $g=20$, dokładnie opłacone $\|W\|<3$ daje
+\begin{equation}\label{eq:resource}
+ \|\Phi_{t/N}^N-\mathcal U_W(t)\|_\diamond
+ \le\min\left(2,\frac{2000t^2}{3N}
+                   +\frac{5324108|t|^3}{3N^2}\right).
+\end{equation}
+Dla $t=1$, $N=10^6$ prawa strona wynosi
+$501331027/750000000000<7\cdot10^{-4}$.
+To oszacowanie teoretyczne, nie wynik aparatury.
+Kanał $\mathcal U_W$ jest równy kanałowi laplasjanowemu strict
+z dokładnością do globalnej fazy propagatora. Nie wyprowadzono tu
+kontrolowanej bramki $U$, zera energii ani absolutnej fazy zegara.
+
+\section{Nieusuwalny błąd w zadanej architekturze}
+
+Dla jednorodnego wektora Perrona $u$ połóżmy $P=|u\rangle\langle u|$.
+Każdy program $\rho$ spełniający $T(\rho)=\gamma W$ ma tę samą liczbę
+$c_0=\langle u|\rho|u\rangle=1/n+\gamma s$.
+Bez względu na ukryte dane przekątnej i koherencje urojone programu,
+dokładna utrata prawdopodobieństwa pozostania sondy w $P$ po jednym
+zderzeniu o fazie $\tau=g\delta$ wynosi
+\begin{equation}\label{eq:loss}
+ L(\tau,c_0)=(1-c_0)\left(1-\frac4{n^2}\right)\sin^2\frac\tau2
+     +\frac{4(n-1)c_0}{n^2}\sin^2\frac{(n-2)\tau}{4}.
+\end{equation}
+Aby to sprawdzić, wystarczy obliczyć operator
+$\langle u|e^{i\tau V}|u\rangle$ na programie. Ma on postać
+$a_\tau I+b_\tau P$; kwadraty jego wartości na $u^\perp$ i $u$
+dają oba składniki \eqref{eq:loss}.
+
+Współczynnik $\tau^2$ to
+\[
+ f_0=\frac{n^2-4}{4n^2}+\frac{(n-2)(n-4)}{4n}c_0.
+\]
+Dla $n=12$ jest dodatni. Ponieważ $P$ komutuje z docelowym $W$,
+rozwinięcie $\log\Phi_\delta$ przy ustalonym programie i $t$ daje
+\begin{equation}\label{eq:lower}
+ 1-\Tr[P\Phi_{t/N}^N(P)]
+     =\frac{g^2t^2f_0}{N}+O(N^{-2}).
+\end{equation}
+Jest to dolny świadek odległości śladowej, nie tylko norma pomocnicza.
+Dla $\gamma=1/20$ współczynnik $g^2f_0$ wynosi około $208.12135$.
+Dokładne potęgowanie kanału daje przy $N=10^6$ około $208.09761$
+dla $N$ razy utrata; nie traktujemy tej liczby zmiennoprzecinkowej
+jako dowodu asymptotyki.
+
+Równanie \eqref{eq:lower} nie jest dolną granicą dla wszystkich
+algorytmów kwantowych, programów skorelowanych ani dowolnych reguł
+sterowania. Kopie i architektura są częścią twierdzenia.
+Pełnorządowe programy podlegają również standardowemu ograniczeniu
+programowalności.
+\footnote{M.~A.~Nielsen, I.~L.~Chuang, \emph{Programmable Quantum Gate Arrays},
+Physical Review Letters 79, 321 (1997),
+\href{https://arxiv.org/abs/quant-ph/9703032}{arXiv:quant-ph/9703032}.}
+Jeżeli jedno ustalone urządzenie daje dokładny kanał unitarny dla
+pełnorządowego programu, to przez rozkład tego programu jako
+$\epsilon\rho+(1-\epsilon)\tau$ i ekstremalność kanałów unitarnych
+musi dawać ten sam kanał dla każdego $\rho$.
+Skończony pełnorządowy program nie może zatem dokładnie wybierać
+różnych unitariów w takim urządzeniu.
+
+\section{Optymalizacja programu nie jest źródłem jądra}
+
+Twirl po grupie dihedralnej przekształca dowolny dopuszczalny program
+w $C_\gamma=I/n+\gamma W$, zachowując źródło $T$.
+Jest to mieszanina zwykłych unitarnych permutacji, nie operacja
+antyunitarna. Dlatego jakikolwiek program istnieje wtedy i tylko wtedy,
+gdy
+\[
+ 0<\gamma\le\gamma_*:=1/(n\ell).
+\]
+Kowariancja $B_C$ i wypukłość jego największej wartości własnej
+pokazują, że $C_\gamma$ minimalizuje $\|B_C\|$ przy ustalonym
+$\gamma$. Nie dowodzimy jednoznaczności wszystkich minimizerów.
+
+Dla $n=12$ wartości własne $B_C/\gamma^2$ mają postać
+$11/(24\gamma^2)+5\lambda/(2\gamma)-\lambda^2$.
+Są rosnące w $\lambda$ na całym dopuszczalnym zakresie, gdyż
+$5/(2\gamma)-2s\ge30\ell-2s\ge8\ell>0$.
+Wartość Perrona maleje z $\gamma$, więc optimum tego oszacowania
+osiąga się przy $\gamma_*$:
+\begin{align}
+ \min\frac{\|B_C\|}{\gamma^2}&=66\ell^2+30\ell s-s^2,\\
+ \min\frac{f_0}{\gamma^2}&=55\ell^2+20\ell s.
+\end{align}
+Dokładne zewnętrzne przedziały Fourierowskie dają odpowiednio około
+$\gamma_*=0.1222120805$, $61.8939393$ i $48.2148582$.
+Są to warunkowe parametry kodowania i błędu, nie wyprowadzone stałe fizyczne.
+
+Sama wariancja $B_C$ nie jest uniwersalnym kosztem operacyjnym:
+oddziaływanie $I\otimes Z$ może mieć dodatnią wariancję i jednocześnie
+nie zmieniać sondy. Dlatego ważny jest niezależny świadek
+\eqref{eq:loss}, a nie tylko optymalizacja górnej granicy.
+Ponadto dwa programy o tym samym $T(\rho)$ mogą mieć różny szum;
+dla jego generatora drugiego rzędu
+$\mathcal D_\rho(I)=(n-2)(\rho-\rho^T)/4$.
+Samo $W$ nie ustala całej dynamiki poprawki kwantowej.
+
+\section{Granica arytmetyczna i osobna klasyfikacja legacy}
+
+Wcześniejszy P512/O216 dowodzi, że stosunek dwóch niezerowych
+częstotliwości laplasjanowych strict, $\lambda_2/\lambda_1$, jest
+transcendentalny dla dokładnych parametrów \eqref{eq:strict}.
+Nie jest to nowe twierdzenie tego raportu.
+\footnote{Źródło repozytoryjne:
+\texttt{FIN\_Programs\_507\_516\_Nonlinear\_Source\_and\_Certified\_Localization\_Report\_EN.tex},
+§P512; \texttt{fin\_programs\_507\_516\_research.py}, funkcja
+\texttt{p512\_frequency\_arithmetic}. Dowód używa
+$z=e^{i/4000}$ i nieproporcjonalnych wielomianów Laurenta.}
+
+Nowe zastosowanie jest następujące. Każdy skończony $H_N$ powyżej
+ma wymierne elementy z dokładnością do jednej skali, więc jego
+stosunki niezerowych częstości Bohra są algebraiczne.
+Żadne ustalone liniowe przygotowanie i odczyt nie odtworzą zatem
+dokładnie całej krzywej powrotu $|[e^{-itA}]_{00}|^2$ strict.
+Krzywa ta zawiera obie częstotliwości $\lambda_1,\lambda_2$ z
+dodatnimi współczynnikami; jednoznaczność skończonych sum wykładniczych
+wymuszałaby ich obecność w widmie mikroskopowym, co daje sprzeczność.
+Nie wyklucza to przybliżenia, nieskończonej granicy, dodatkowych
+niezależnie wyprowadzonych sprzężeń ani innego sterowania czasowego.
+Nie jest to również dolna granica błędu odporna na dowolną zmianę
+dokładnych parametrów wewnątrz niepewności pomiarowej.
+
+Dla osobnego kanonicznego cyklu legacy
+$W_d=4\ln2\cos(\pi d/4+\pi/6)/(1+0.01d)$ stosunki widmowe są
+algebraiczne: wspólny czynnik $4\ln2$ się skraca, a reszta wag
+i współczynniki Fouriera są algebraiczne. Przeszkody P512 nie
+wolno na niego przenieść. Nie dowodzi to realizacji legacy przez $V$.
+Twierdzenie o produktach oraz konstrukcja \eqref{eq:anti} stosują się
+natomiast osobno do obu referencji. Dla legacy i $\gamma=1/1000$
+oszacowanie $|W_{ij}|<3$ daje $C\succeq(1/12-33/1000)I\succ I/22$.
+Ujemne wagi legacy nie są tu interpretowane jako dodatnie tempo przejść.
+
+\section{Bilans naukowy i następny test rozstrzygający}
+
+\paragraph{Udowodniono.}
+Podniesienie \eqref{eq:V} ma trywialny lokalny komutant, co wyklucza
+niejednorodne pełnorządowe produkty stacjonarne na dowolnym skończonym
+połączonym grafie. Strict wymaga w tej klasie korelacji; jego równowaga
+pola średniego nie jest dokładną równowagą produktu mikroskopowego.
+Jednocześnie istnieją jawne skorelowane uzupełnienia oraz kontrolowany
+protokół kwantowego odtworzenia kanału, ze skończonym budżetem kopii,
+górną granicą błędu i dolnym świadkiem w zadanej architekturze.
+
+\paragraph{Obalono w zadanych klasach.}
+Nie wystarcza potraktowanie stacjonarności pola średniego jako
+stacjonarności niezależnych składników. Nie wystarcza znalezienie
+skorelowanego stanu o prawidłowym marginałe: pasmo płaskie pokazuje
+różnicę między pamięcią a propagacją. Nie można też usunąć skończonego
+szumu badanego procesora przez dowolną zmianę danych programu
+niewidocznych dla $T$.
+
+\paragraph{Pozostaje otwarte.}
+Konkretne prawo mikroskopowe, identyfikacja jego stopni swobody,
+przygotowanie korelacji lub programu, dopływ kopii i zegar nie zostały
+wyprowadzone z nadsolitonu. Są to rzeczywiste, dopuszczalne zasoby
+modelu operacyjnego, lecz nie dowód samoistnego powstania $W$.
+Stan początkowy może być legalnym wejściem teorii fizycznej; samo
+jego występowanie nie jest argumentem przeciw wszelkiej fizyce FIN.
+
+Najbardziej rozstrzygający dalszy kierunek to wyprowadzenie jednego
+konkretnego prawa mikroskopowego i jego stanu korelacyjnego lub
+strumienia programu, z niezależnie określoną procedurą pomiaru.
+Powinno ono przewidzieć jednocześnie propagację i skończone poprawki,
+nie tylko odtworzyć macierz wpisaną do danych wejściowych.
+Alternatywa kwantowa wymaga jawnych korelacji i kontroli granicy;
+alternatywa klasyczna lub efektywna wymaga własnego prawa operacyjnego.
+
+Nie uzyskano dowodu pierwszeństwa wobec ogólnej literatury, nowej
+cząstki, fizycznego źródła jednostek, mostu legacy--strict, transferu
+ról, rozstrzygnięcia QW-2191, SM/GR, $L_{\rm total}$ ani ToE.
+Nadsoliton jest pierwotną informacją w stanie solitonicznym;
+konstrukcje tensorowe nie ustanawiają pod nim dodatkowej warstwy.
+
+\section*{Źródła i dane sprawdzalne}
+
+\begin{enumerate}
+\item Dokumenty repozytoryjne: \texttt{The FIN Kernel as an Unknown Mat.md},
+§4.1; \texttt{fin\_projected\_learning/REPORT.md}, §28;
+\texttt{fin\_transition\_hierarchy/REPORT.md}; wcześniejszy raport
+\texttt{FIN\_Adaptive\_Feedback\_Operational\_Obstruction.tex}.
+\item Z.~Ammari, M.~Falconi, B.~Pawilowski,
+\emph{On the rate of convergence for the mean field approximation of
+many-body quantum dynamics}, \href{https://arxiv.org/abs/1411.6284}{arXiv:1411.6284}.
+\item S.~Lloyd, M.~Mohseni, P.~Rebentrost,
+\emph{Quantum principal component analysis}, Nature Physics 10,
+631--633 (2014), \href{https://doi.org/10.1038/nphys3029}{doi:10.1038/nphys3029}.
+\item S.~Kimmel, C.~Y.-Y.~Lin, G.~H.~Low, M.~Ozols, T.~J.~Yoder,
+\emph{Hamiltonian Simulation with Optimal Sample Complexity},
+\href{https://arxiv.org/abs/1608.00281}{arXiv:1608.00281}.
+\item M.~A.~Nielsen, I.~L.~Chuang,
+\emph{Programmable Quantum Gate Arrays}, Physical Review Letters 79,
+321 (1997), \href{https://arxiv.org/abs/quant-ph/9703032}{arXiv:quant-ph/9703032}.
+\item P512/O216: wskazany w przypisie raport repozytoryjny i jego
+certyfikat stosunku częstotliwości. Dokładne przedziały wag i widma:
+\texttt{fin\_replication\_consistency/certify.py} oraz
+\texttt{fin\_projected\_learning/research.py}.
+\item Dane tego opracowania: \texttt{fin\_quantum\_lift/results.json},
+\texttt{collision\_results.json} i odpowiadające im implementacje
+\texttt{research.py}, \texttt{collisions.py} oraz testy.
+Przedziały wymierne, tożsamości algebraiczne i wyniki zmiennoprzecinkowe
+mają osobne statusy; żadna mała reszta nie zastępuje dowodu ogólnego.
+\end{enumerate}
+\end{document}

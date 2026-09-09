@@ -17,6 +17,16 @@ def strict(n=12):
         (1+min(abs(i-j),12-abs(i-j))**1.8) for j in range(n)] for i in range(n)])
 
 
+def legacy_cycle():
+    """Same intermediate legacy reference as fin_projected_learning/geometry.py.
+
+    Signed weights are Hamiltonian data here, not positive transition rates.
+    """
+    return np.array([[0. if i==j else
+        4*math.log(2)*math.cos(math.pi*min(abs(i-j),12-abs(i-j))/4+math.pi/6)/
+        (1+.01*min(abs(i-j),12-abs(i-j))) for j in range(12)] for i in range(12)])
+
+
 def source(rho):
     A=rho.real.copy();np.fill_diagonal(A,0);return A
 
@@ -129,6 +139,12 @@ def run():
     assert np.linalg.norm(V@RA-RA@V)<1e-13
     assert pt_eig[0]<-1/n+1e-12 and np.sum(pt_eig<-1e-10)==1
     H=logm(C);L=np.kron(H,np.eye(n))+np.kron(np.eye(n),H)
+    legacy=legacy_cycle();C_legacy=np.eye(n)/n+.001*legacy
+    legacy_product=np.kron(C_legacy,C_legacy)
+    legacy_stationary=antisymmetric_completion(C_legacy)
+    legacy_out,_=product_evolution(C_legacy,.2)
+    assert np.linalg.eigvalsh(C_legacy)[0]>1/22
+    assert np.linalg.norm(legacy_out-product_closed(C_legacy,.2))<1e-12
     return dict(status='Research checkpoint; conditional quantum lift, not sourced fundamental physics.',
         parameters=dict(n=n,gamma=gamma),
         observable_lift_residual=exact_lift_error,hartree_stationary_residual=hartree_residual,
@@ -145,6 +161,12 @@ def run():
             negativity=float(-sum(pt_eig[pt_eig<0])),
             minimum_input_density_eigenvalue=float(np.linalg.eigvalsh(C)[0]),
             sufficient_completion_density_floor=1/(2*(n-1))),
+        separate_legacy_cycle_check=dict(loading=.001,
+            minimum_program_eigenvalue=float(np.linalg.eigvalsh(C_legacy)[0]),
+            product_commutator_norm=float(np.linalg.norm(V@legacy_product-legacy_product@V)),
+            correlated_commutator_norm=float(np.linalg.norm(V@legacy_stationary-legacy_stationary@V)),
+            common_source_amplitude='4 ln(2); phase angles are rational multiples of pi',
+            arithmetic_scope='Canonical legacy ratios are algebraic; the strict P512 transcendence obstruction is not transferred.'),
         scope=['The tensor-pair microscopic law is a declared completion, not a strict-source theorem.',
             'Stationary correlated completion is target dependent, not a universal quantum broadcasting channel.',
             'Mean-field stationary does not imply finite-N product stationary.'])

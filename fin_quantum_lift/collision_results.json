@@ -1,0 +1,103 @@
+{
+  "status": "Conditional sample-programmed quantum simulation with an explicit finite-copy error bound.",
+  "encoding": "C=I/12+(1/20)W; every program copy already contains the target covariance.",
+  "supplied_resources": [
+    "Fresh independent program copies",
+    "Canonical two-body interaction V",
+    "Interaction timing and overall g=20"
+  ],
+  "variance_eigenvalue_range": [
+    0.37193660505688014,
+    0.6589801925292866
+  ],
+  "exact_one_million_copy_diamond_bound": "501331027/750000000000",
+  "asymptotic_perron_loss_times_copies": 208.12135373664776,
+  "optimal_loading": {
+    "maximum_feasible_loading": 0.12221208047419724,
+    "minimum_reference_eigenvalue": -0.6818747623802017,
+    "perron_eigenvalue": 1.6603072787660988,
+    "optimal_variance_cost": 61.893939319368634,
+    "optimal_perron_leakage_cost": 48.21485816014317,
+    "check_variance_cost": 61.893939319368634,
+    "scope": "Optimizes program loading/variance bounds for the specified canonical processor; not universal sample complexity."
+  },
+  "outward_loading_certificate": {
+    "minimum_mode": 6,
+    "perron_mode": 0,
+    "loading_interval": [
+      "25000000000000/204562428714063",
+      "1250000000000/10228121435703"
+    ],
+    "optimal_variance_cost_interval": [
+      "6189393931936820896746214797/100000000000000000000000000",
+      "24757575727747937961162563621/400000000000000000000000000"
+    ],
+    "optimal_leakage_cost_interval": [
+      "301342863500892898252895691/6250000000000000000000000",
+      "96429716320288164438220316091/2000000000000000000000000000"
+    ],
+    "source": "Recomputed outward rational strict Fourier eigenvalue enclosures; analytic optimization in PROOF.md."
+  },
+  "records": [
+    {
+      "copies": 100,
+      "normalized_choi_trace_distance": 0.8188921960340282,
+      "selected_input_trace_distance": 0.7709956687856077,
+      "trace_preservation_error": 2.2605943820428944e-13,
+      "minimum_normalized_choi_eigenvalue": 0.003142799727574228,
+      "perron_survival_loss": 0.8113976109137987,
+      "perron_loss_times_copies": 81.13976109137987,
+      "rigorous_diamond_error_upper": "2",
+      "rigorous_diamond_error_upper_decimal": 2.0
+    },
+    {
+      "copies": 1000,
+      "normalized_choi_trace_distance": 0.16782577367720558,
+      "selected_input_trace_distance": 0.1650067398995927,
+      "trace_preservation_error": 7.549934156438338e-13,
+      "minimum_normalized_choi_eigenvalue": 7.139613058232874e-05,
+      "perron_survival_loss": 0.18610262030716718,
+      "perron_loss_times_copies": 186.10262030716717,
+      "rigorous_diamond_error_upper": "2",
+      "rigorous_diamond_error_upper_decimal": 2.0
+    },
+    {
+      "copies": 10000,
+      "normalized_choi_trace_distance": 0.018276459282685956,
+      "selected_input_trace_distance": 0.01808112134160784,
+      "trace_preservation_error": 8.35497589485246e-12,
+      "minimum_normalized_choi_eigenvalue": 7.842805759185165e-07,
+      "perron_survival_loss": 0.020577381761966107,
+      "perron_loss_times_copies": 205.77381761966106,
+      "rigorous_diamond_error_upper": "6331027/75000000",
+      "rigorous_diamond_error_upper_decimal": 0.08441369333333333
+    },
+    {
+      "copies": 100000,
+      "normalized_choi_trace_distance": 0.0018435309191439818,
+      "selected_input_trace_distance": 0.0018249833615629654,
+      "trace_preservation_error": 6.933906336558617e-11,
+      "minimum_normalized_choi_eigenvalue": 7.909320605044187e-09,
+      "perron_survival_loss": 0.0020788507325916195,
+      "perron_loss_times_copies": 207.88507325916194,
+      "rigorous_diamond_error_upper": "51331027/7500000000",
+      "rigorous_diamond_error_upper_decimal": 0.006844136933333333
+    },
+    {
+      "copies": 1000000,
+      "normalized_choi_trace_distance": 0.00018451287768553903,
+      "selected_input_trace_distance": 0.00018266811375261945,
+      "trace_preservation_error": 3.483030178493315e-10,
+      "minimum_normalized_choi_eigenvalue": 7.915603825104425e-11,
+      "perron_survival_loss": 0.00020809760924178633,
+      "perron_loss_times_copies": 208.09760924178633,
+      "rigorous_diamond_error_upper": "501331027/750000000000",
+      "rigorous_diamond_error_upper_decimal": 0.0006684413693333333
+    }
+  ],
+  "scope": [
+    "This is not the finite-eta deterministic self-feedback law.",
+    "Finite-copy noise is retained; exact finite quantum programming is not claimed.",
+    "No non-target-encoded state source or physical calibration is supplied."
+  ]
+}
