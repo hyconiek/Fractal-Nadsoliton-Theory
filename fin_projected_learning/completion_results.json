@@ -1,0 +1,143 @@
+{
+  "completed_computational_rounds": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "encoded_state_learning": [
+    {
+      "t": 0.0,
+      "kernel_scale": 0.0,
+      "state_derivative": 0.0
+    },
+    {
+      "t": 1.0,
+      "kernel_scale": 0.009950166250831893,
+      "state_derivative": 1.9427915204914393e-19
+    },
+    {
+      "t": 10.0,
+      "kernel_scale": 0.09516258196404048,
+      "state_derivative": 3.051215373996486e-18
+    },
+    {
+      "t": 100.0,
+      "kernel_scale": 0.6321205588285578,
+      "state_derivative": 2.5428643937503312e-17
+    }
+  ],
+  "pure_cyclically_averaged_escape": {
+    "checks": [
+      {
+        "t": 0.0,
+        "cyclic_source_error": 1.924157393805197e-16,
+        "raw_source_error": 0.3600617649322368
+      },
+      {
+        "t": 1.0,
+        "cyclic_source_error": 1.909972533573641e-16,
+        "raw_source_error": 0.36006118202447185
+      },
+      {
+        "t": 10.0,
+        "cyclic_source_error": 1.7063620058833901e-16,
+        "raw_source_error": 0.36292341230108044
+      }
+    ],
+    "scope": "Exact trajectory of a DIFFERENT spatially averaged learning rule; spectral occupations remain supplied."
+  },
+  "Dirichlet_source": {
+    "strict_CND_violation": 0.906186124559019,
+    "supplied_distance_max_centered_eigenvalue": 5.741741591973226e-24
+  },
+  "regular_positive_repair": {
+    "state_step_energy_error": 1.1102230246251565e-16,
+    "projected_energy_drop": -0.0004495406023006243,
+    "upper_bound": -0.00044954060230049383,
+    "minimum_weight": 0.011068718256551329,
+    "row_sum_error": 4.440892098500626e-16
+  },
+  "positive_precision_parent": {
+    "diagonal_lift": 100.0,
+    "minimum_precision_eigenvalue": 0.00983668087150147,
+    "maximum_offdiagonal_precision": -1.0113481053939996e-06,
+    "screened_mass_squared": 0.009836680871501469,
+    "parent_row_sum_error": 2.7647155398380363e-18,
+    "exact_green_reconstruction_error": 7.783827491179224e-14
+  },
+  "precision_flow": {
+    "ascent_F_derivative": 2.0456275194840092,
+    "scalar_ascent_boundary_time": 0.1931471805599453,
+    "corrected_descent_error": 2.6187507920574832e-12,
+    "initial_loss": 3.6211491412548344,
+    "final_loss": 2.6471032420585385
+  },
+  "joint_bootstrap": {
+    "reciprocal_pair_functional_values": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "chain_rule_counterexample": "C(L)=L^-1 makes the frozen-covariance gradient zero, but total gradient of n-logdetL is -L^-1."
+  },
+  "Gibbs_obstruction": {
+    "distinct_strict_eigenvalues": 7,
+    "maximum_scalar_intersections": 2,
+    "near_zero_gamma_examples": [
+      {
+        "gamma": 0.01,
+        "beta": 0.12,
+        "stationary_residual": 0.0015207846902919346
+      },
+      {
+        "gamma": 0.003,
+        "beta": 0.036000000000000004,
+        "stationary_residual": 0.00013529377345414278
+      },
+      {
+        "gamma": 0.001,
+        "beta": 0.012,
+        "stationary_residual": 1.4978156892871947e-05
+      }
+    ],
+    "scope": "Exact no-go at positive gamma; no uniform residual lower bound as gamma tends to zero."
+  },
+  "fast_learning": {
+    "reduced_energy_error": 3.892719480091955e-15,
+    "checks": [
+      {
+        "eta": 20.0,
+        "lag": 0.012840999166813276,
+        "lag_bound": 0.8,
+        "dissipation": 8.226014416082283e-05,
+        "dissipation_bound": 0.64,
+        "reduced_state_error": 0.0006415999557196262
+      },
+      {
+        "eta": 100.0,
+        "lag": 0.0030024170595179165,
+        "lag_bound": 0.16,
+        "dissipation": 3.69159642019945e-05,
+        "dissipation_bound": 0.128,
+        "reduced_state_error": 0.00020200805515762426
+      },
+      {
+        "eta": 500.0,
+        "lag": 0.0006022465177275963,
+        "lag_bound": 0.032,
+        "dissipation": 8.436463696991081e-06,
+        "dissipation_bound": 0.0256,
+        "reduced_state_error": 4.3844701996644045e-05
+      }
+    ]
+  },
+  "basis_covariance": {
+    "Hadamard_normal_ordering_defect": 0.7071067811865474
+  }
+}

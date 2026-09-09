@@ -1,0 +1,475 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Twierdzenie}
+\newtheorem{corollary}{Wniosek}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Dtr}{D_{\mathrm{tr}}}
+\title{FIN: operacyjna przeszkoda dla deterministycznego sprzężenia uczącego
+oraz dokładny mechanizm konwersji koherencji w geometrię}
+\author{Raport badawczy FIN --- ST8651--ST8652}
+\date{9 września 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Najważniejszym wynikiem jest dokładny kontrprzykład dla proponowanego
+sprzężenia $\dot\psi=iK\psi$,
+$\dot K=\eta(\Pi\Rea\psi\psi^* -\gamma K)$, gdzie $\Pi$ usuwa przekątną.
+Dwa zespoły stanów czystych o tej samej początkowej macierzy gęstości,
+z tym samym początkowym jądrem strict, dają różne późniejsze wyniki reguły
+Borna. Różnica pojawia się w drugim rzędzie czasu dla odczytu fazowego
+i w trzecim rzędzie dla zwykłej populacji węzła. Podano jawne dodatnie
+oszacowania przy skończonym czasie, zachowaniu dodatnich wag i dokładnej
+normalizacji stanów. Dlatego ta deterministyczna reguła nie ma wspólnego
+afinicznego, a więc również CPTP, rozszerzenia zgodnego ze wszystkimi
+jej przewidywaniami dla stanów czystych. Jest to istotna przeszkoda dla
+jej dokładnej interpretacji kwantowej, nie dowód niemożliwości FIN jako
+całości ani zakaz przybliżeń klasycznych lub wielociałowych.
+Drugim wynikiem jest dokładny sektor pięciu zmiennych: dostarczona
+koherencja chiralna przechodzi w trwałe odkształcenie geometrii, lecz
+granica zależy od zanikającego zaburzenia i nie daje ciągłego selektora.
+Raport jest źródłem TeX; nie wygenerowano PDF.
+\end{abstract}
+
+\section{Zakres, pochodzenie równań i znaczenie wyniku}
+
+Punktem wyjścia jest rzeczywista propozycja z rozdziału 4.1 dokumentu
+\texttt{The FIN Kernel as an Unknown Mat.md}: układ stanu czystego
+z rzutowanym źródłem Hebbowskim. Nie zastępujemy go inną teorią, aby
+uzyskać kontrprzykład. Wcześniejszy audyt
+\texttt{fin\_projected\_learning/REPORT.md} oddzielił ten układ od
+klasycznej implementacji z zewnętrznym losowym nauczycielem, od
+uśredniania cyklicznego i od jawnego rozszerzenia na stany mieszane.
+Wykorzystano również wcześniejszą analizę prawa składania
+\texttt{fin\_transition\_hierarchy/REPORT.md} oraz dokładne przedziały
+wag w \texttt{fin\_replication\_consistency/certify.py}.
+Nie twierdzimy, że ponownie udowodniono każde historyczne twierdzenie repozytorium.
+
+Badamy
+\begin{equation}\label{eq:pure}
+ \dot\psi=iK\psi,\qquad
+ \dot K=\eta\bigl(T(P)-\gamma K\bigr),\quad
+ P=\psi\psi^*,\quad T(P)=\Pi\Rea P,
+ \quad K\in\Sym_0(\mathbb R^n),\quad \eta,\gamma>0.
+\end{equation}
+Wszystkie czasy i parametry są bezwymiarowe; $\eta$ oznacza szybkość
+uczenia, nie wykładnik tłumienia jądra. Hermitowskość $K(t)$ daje
+$\|\psi(t)\|=1$ dokładnie. Nie daje jednak jednego, niezależnego od
+wejścia operatora unitarnego: cała historia $K(t)$ zależy od $\psi(0)$.
+
+W świadku strict używamy dostarczonego jądra
+\begin{equation}\label{eq:strict}
+ W_{ij}=\frac{\cos(0.18575d_{ij}+0.16250)}{1+d_{ij}^{9/5}},\quad
+ W_{ii}=0,\qquad d_{ij}=\min(|i-j|,12-|i-j|).
+\end{equation}
+Nie jest to nowa derywacja parametrów strict. Główna tożsamość poniżej
+obowiązuje dla dowolnego wspólnego $K(0)$, więc nie można usunąć
+przeszkody przez ponowne dopasowanie tych parametrów. Dotyczy również
+analogicznego sprzężenia rozpoczętego od jądra legacy, bez utożsamiania
+obu jąder lub przenoszenia ich ról fizycznych.
+
+Znaczenie wyniku jest konkretne: przed dalszą próbą uznania uczącego się
+jądra za fundamentalną dynamikę kwantową trzeba rozstrzygnąć jej prawo
+składania, przygotowania i pomiaru. Sama samospójność, zachowanie normy
+lub lepsze dopasowanie widma tego nie załatwia. Ogólny mechanizm
+zależności nieliniowej ewolucji od rozkładu zespołu jest znany z prac
+Gisina i Polchinskiego \cite{Gisin1990,Polchinski1991}. Nowym wynikiem
+tego audytu jest jawny świadek dla badanego równania FIN, jego kontrola
+w pełnym układzie dwunastowęzłowym i certyfikaty skończonego czasu;
+nie zgłaszamy pierwszeństwa dla ogólnego twierdzenia o nieliniowej QM.
+
+\section{Dokładna przeszkoda operacyjna w oryginalnym układzie czystym}
+
+Niech $E_j=|j\rangle\langle j|$. W płaszczyźnie węzłów $0,1$ wybierzmy
+\begin{equation}\label{eq:projectors}
+ P_+=\frac1{10}\begin{pmatrix}9&3\\3&1\end{pmatrix},\qquad
+ P_-=\frac1{10}\begin{pmatrix}1&-3\\-3&9\end{pmatrix},\qquad
+ Y=\begin{pmatrix}0&-i\\i&0\end{pmatrix}.
+\end{equation}
+Macierze te są osadzone w całej przestrzeni, z zerami poza wskazaną
+płaszczyzną. Są to rzeczywiste, ortogonalne projektory rzędu jeden,
+$P_++P_-=E_0+E_1$. Porównujemy zespoły
+\begin{equation}\label{eq:ensembles}
+ \mathcal E_0=\{E_0,E_1,E_2,\ldots,E_{n-1}\}/n,
+ \quad
+ \mathcal E_1=\{P_+,P_-,E_2,\ldots,E_{n-1}\}/n.
+\end{equation}
+Oba mają stan początkowy $I/n$, a w każdej realizacji ten sam $K(0)$.
+Nie wprowadzamy początkowego stanu chiralnego ani zespołowo zależnego
+stanu kontrolera. Każdy stan czysty ewoluuje według \eqref{eq:pure};
+$\bar P_0(t),\bar P_1(t)$ oznaczają średnie po realizacjach.
+
+\begin{theorem}[Brak wspólnego rozszerzenia afinicznego]\label{thm:affine}
+Dla dowolnego $n\ge2$, wspólnego rzeczywistego symetrycznego $K(0)$
+o zerowej przekątnej i $\eta>0$ zachodzi
+\begin{equation}\label{eq:defect}
+ \Delta P(t):=\bar P_1(t)-\bar P_0(t)
+   =\frac{6\eta}{25n}\,t^2Y+O(t^3).
+\end{equation}
+Nie istnieje zatem wspólna afiniczna mapa macierzy gęstości, która dla
+wszystkich czterech wyróżnionych stanów czystych odtwarza ten przepływ
+przy wszystkich dostatecznie małych dodatnich czasach.
+\end{theorem}
+
+\begin{proof}
+Mamy $\dot P=i[K,P]$ oraz
+\begin{equation}\label{eq:second}
+ \ddot P=i\eta[T(P),P]-i\eta\gamma[K,P]-[K,[K,P]].
+\end{equation}
+Dwa ostatnie składniki są liniowe w $P$ przy ustalonym wspólnym $K(0)$,
+więc znikają w różnicy średnich. Dla $E_j$ mamy $T(E_j)=0$.
+Bez żadnych przybliżeń,
+\begin{equation}
+ i[T(P_+),P_+]+i[T(P_-),P_-]=\frac{12}{25}Y.
+\end{equation}
+Początkowe wartości i pierwsze pochodne średnich są równe; rozwinięcie
+Taylora daje \eqref{eq:defect}. Gdyby jedna mapa afiniczna $\Lambda_t$
+zgadzała się na tych wejściach z badanym przepływem, równość
+$P_++P_-=E_0+E_1$ wymuszałaby równość odpowiednich sum wyjściowych.
+To przeczy niezerowej różnicy. Gładkość potrzebna do rozwinięcia wynika
+z wielomianowego pola wektorowego; oszacowanie reszty podajemy poniżej.
+\end{proof}
+
+Odczyt $M_y=|y_+\rangle\langle y_+|$,
+$|y_+\rangle=(|0\rangle+i|1\rangle)/\sqrt2$, daje
+$\Tr(M_y\Delta P)=6\eta t^2/(25n)+O(t^3)$.
+Nie trzeba jednak zakładać dostępności takiego odczytu fazowego.
+
+\begin{theorem}[Różnica populacji kanonicznego węzła]\label{thm:vertex}
+Przy tych samych założeniach,
+\begin{equation}\label{eq:vertex}
+ \Tr(E_0\Delta P(t))=-\frac{12\eta K_{01}(0)}{25n}\,t^3+O(t^4).
+\end{equation}
+Dla dodatniego strict jest to niezerowa różnica zwykłej populacji węzła.
+\end{theorem}
+
+\begin{proof}
+Dla rzeczywistego początkowego $P$ mamy $\Rea\dot P=0$.
+W przekątnej trzeciej pochodnej nieliniowa część wynosi
+\[
+ -\eta\{2[T(P),[K,P]]+[K,[T(P),P]]\}.
+\]
+Pozostałe części znoszą się między zespołami albo mają zerową przekątną.
+Suma dla $P_+,P_-$ ma na przekątnej wartości
+$(-72K_{01}/25,72K_{01}/25,0,\ldots,0)$, przed czynnikiem $\eta/n$.
+Współczynniki sprzężeń do wszystkich pozostałych węzłów znikają:
+$T(P_\pm)$ i $[T(P_\pm),P_\pm]$ są wspierane na płaszczyźnie $0,1$.
+Podzielenie przez $3!$ daje \eqref{eq:vertex}. Tożsamości sprawdza
+również dokładny rachunek symboliczny z dowolnymi dodatkowymi sprzężeniami.
+\end{proof}
+
+\subsection{Skończony czas, dodatnie krawędzie i kontrola reszty}
+
+Dla $n=12$, $K(0)=W$, $\eta=1/5$, $\gamma=1/20$, $T=10^{-4}$
+nie opieramy się tylko na symbolu $O(t^3)$. Dokładne przedziały wag
+potwierdzają $\|W\|_F<3-\eta T$ i $W_{01}>2/5$.
+Z całkowej postaci równania dla $K$ i $\|T(P)\|_F\le1$ dostajemy
+$\|K\|_F\le B=3$ na całym $[0,T]$. Zdefiniujmy
+\begin{align}
+ L&=\eta(1+\gamma B)=23/100,&
+ J&=\eta(2B+\gamma L)=12023/10000,\\
+ A_2&=2L+4B^2,&
+ A_3&=2J+12BL+8B^3=1133423/5000,\\
+ H&=\eta(A_2+\gamma J),&
+ A_4&=2H+12BJ+6LA_2+2BA_3=734156623/500000.
+\end{align}
+Nierówność $\|[A,B]\|_F\le2\|A\|_{\rm op}\|B\|_F$ daje kolejno
+$\|K'\|_F\le L$, $\|K''\|_F\le J$,
+$\|P''\|_F\le A_2$, $\|P'''\|_F\le A_3$ i
+$\|P''''\|_F\le A_4$. Wszystkie cztery różniące się realizacje
+spełniają te same oszacowania; pozostałe dziesięć znosi się dokładnie.
+
+Stąd reszta dla $M_y$ nie przekracza $2A_3T^3/(3n)$, a dla $E_0$
+nie przekracza $A_4T^4/(6n)$. Otrzymujemy
+\begin{align}\label{eq:finite}
+ \Tr(M_y\Delta P(T))
+ &\ge\frac{2466577}{90000000000000000}>2.74\cdot10^{-11},\\
+ \Tr(E_0\bar P_0(T))-\Tr(E_0\bar P_1(T))
+ &\ge\frac{417843377}{360000000000000000000000}>10^{-15}.
+\end{align}
+Jednocześnie $K_{ij}(t)\ge W_{ij}-LT>0$ dla $i\ne j$ na tym samym
+przedziale, co jest sprawdzane na dokładnych dolnych granicach wag.
+To bardzo zachowawcze oszacowania matematyczne, nie czułość istniejącego
+aparatu. Nie przeliczamy bezwymiarowego $T$ na czas laboratoryjny.
+
+Niezależna całka numeryczna pełnego układu czystego dla czterech wejść
+potwierdza znaki i rzędy. Przy $t=0.1$ daje około
+$3.9683\cdot10^{-5}$ różnicy prawdopodobieństwa $M_y$ oraz
+$3.7392\cdot10^{-6}$ różnicy populacji węzła. Te większe wartości są
+wynikami numerycznymi, nie zamiennikami certyfikatów \eqref{eq:finite}.
+
+\subsection{Pamięć kontrolera i granica możliwej dokładności}
+
+Dowolne standardowe urządzenie kwantowe, z dowolną pamięcią i środowiskiem
+o wspólnym stanie początkowym niezależnym od nieznanego wejścia,
+wyznacza przy ustalonym czasie mapę CPTP na wejściowej macierzy gęstości.
+Nie trzeba zakładać dynamiki Markowa. Twierdzenie~\ref{thm:affine}
+wyklucza więc dokładną realizację \eqref{eq:pure} w tej klasie.
+
+Jeśli błąd w odległości śladowej na każdym z czterech wejść jest najwyżej
+$\epsilon$, nierówność trójkąta daje
+$|\Tr(M_y\Delta P)|\le4\epsilon/n$.
+Dla świadka strict i czasu $T$ przynajmniej jedno wejście musi zatem
+mieć błąd co najmniej $2466577/30000000000000000$.
+Nie jest to wykluczenie użytecznego przybliżenia w skończonej tolerancji.
+
+\section{Niezależny, zamknięty świadek dwupoziomowy}
+
+Nie jest on zastępstwem dowodu dla strict, lecz kontrolą analityczną.
+Dla $K=kX$, $X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+początkowych wektorów Blocha $\pm(a,0,b)$, $a=3/5$, $b=4/5$,
+oraz $k(0)=k_0$, mamy $\lambda=\eta\gamma$ i
+\begin{align}
+ k_\pm(t)&=k_0e^{-\lambda t}\pm\frac{a}{2\gamma}(1-e^{-\lambda t}),\\
+ \Theta_0(t)&=\frac{2k_0}{\lambda}(1-e^{-\lambda t}),&
+ \delta(t)&=\frac a\gamma\left[t-\frac{1-e^{-\lambda t}}\lambda\right].
+\end{align}
+Zespół osi $Z$ pozostaje średnio $I/2$, podczas gdy zespół przechylony ma
+średni wektor Blocha
+\[
+ \bar r(t)=b\sin\delta(t)(0,\cos\Theta_0(t),-\sin\Theta_0(t)).
+\]
+Dlatego $\Dtr=\tfrac b2|\sin\delta|$. Dla $\eta=1/5$, $\gamma=1/20$,
+$k_0=t=1$ naprzemienne oszacowania szeregu wykładniczego dają
+\[
+ \frac{299}{5000}<\delta<\frac{119601}{2000000},\qquad
+ \Dtr>\frac{239}{10000},\qquad k_-(1)>\frac{93}{100}.
+\]
+Użyto $\sin\delta\ge\delta-\delta^3/6$. Każda wspólna mapa CPTP musi
+na co najmniej jednym z czterech wejść popełnić błąd odległości śladowej
+większy niż $239/20000$. W tym świadku przeszkoda nie jest wyłącznie
+formalnym efektem nieskończenie małego czasu. Numeryczna kontrola
+oryginalnego równania zgadza się z zamkniętym wzorem do około $2.3\cdot10^{-15}$.
+
+\section{Próby falsyfikacji i rzeczywiste drogi obejścia}
+
+\paragraph{Tłumienie, kształt jądra i dodatniość.}
+Współczynnik \eqref{eq:defect} nie zawiera $K(0)$ ani $\gamma$.
+Zmiana tych danych nie usuwa przeszkody. Dodatniość została opłacona
+osobno; świadek nie korzysta z wcześniejszego problemu ujemnych krawędzi.
+Przy $\eta=0$ znika i odzyskujemy wspólną ewolucję unitarną, co
+potwierdza test kontrolny. Szczególne zespoły o $a=0$ lub $b=0$ też
+nie dają tego kontrastu; nie każda para rozkładów musi go wykazywać.
+
+\paragraph{Propagacja przez laplasjan.}
+Zastąpienie $iK\psi$ przez $-iA(K)\psi$, gdzie
+$A(K)=\operatorname{diag}(K\mathbf1)-K$, nie usuwa drugiego rzędu.
+W nieliniowej części pojawia się $T(P)-\operatorname{diag}(T(P)\mathbf1)$.
+Dla projektorów \eqref{eq:projectors} dodana przekątna jest skalarem
+na wspierającej je płaszczyźnie, więc z nimi komutuje. Współczynnik
+\eqref{eq:defect} pozostaje dokładnie taki sam. Nie przenosimy na ten
+zmieniony układ bez ponownego rachunku wszystkich stałych reszty z sekcji 2.
+
+\paragraph{Równanie zapisane bezpośrednio dla macierzy mieszanej.}
+Układ $\dot\rho=i[K,\rho]$, $\dot K=\eta(T(\rho)-\gamma K)$ jest
+dobrze określonym innym przepisem. Dla $\rho(0)=I/n$ daje
+$\rho(t)=I/n$, $K(t)=e^{-\eta\gamma t}K(0)$. Nie zgadza się jednak
+automatycznie ze średnią po realizacjach stanów czystych.
+Nazwanie $\rho$ macierzą gęstości nie dowodzi zgodności tych dwóch operacji.
+
+\paragraph{Dokładny zakres wniosku o sygnalizacji.}
+Jeżeli przyjmujemy standardowe przygotowanie zdalne z maksymalnie
+splątanego stanu, regułę Borna i ewolucję warunkowo przygotowanych
+stanów według \eqref{eq:pure}, wybór zdalnej bazy przygotowuje
+\eqref{eq:ensembles} bez zmiany lokalnego $I/n$. Różne późniejsze
+populacje dawałyby w tym złożeniu przewidywanie sygnalizacji.
+Jest to wniosek warunkowy, nie zaobserwowany sygnał i nie dowód, że
+sama abstrakcyjna zasada braku sygnalizacji zakazuje każdej nieliniowości.
+Założenia o zespołach są istotne również w literaturze
+\cite{Simon2001,Bona2003}; tutaj zostały przyjęte jawnie, a nie wyprowadzone
+z samego zachowania normy.
+
+\paragraph{Model klasyczny albo wielociałowy.}
+Przepływ na rzeczywistych stanach ontologicznych $(\psi,K)$ i na
+rozkładach prawdopodobieństwa tych stanów jest matematycznie dopuszczalny.
+Wtedy sama średnia $\rho$ nie musi być pełnym stanem fizycznym.
+Przybliżenie pola średniego także nie jest wykluczone: dla wielu
+jednakowo przygotowanych kopii wejścia
+$\sum_jp_jP_j^{\otimes N}$ mogą się różnić mimo równości
+$\sum_jp_jP_j$. Dla dwóch kopii naszych par
+\[
+ \Tr\!\left[(X\otimes Z)
+ \left\{\frac{P_+\otimes P_++P_-\otimes P_-}{2}
+       -\frac{E_0\otimes E_0+E_1\otimes E_1}{2}\right\}\right]
+ =\frac{12}{25}.
+\]
+Nieliniowość może więc odzwierciedlać dodatkowe korelacje wejściowe,
+a nie lokalną operację na jednym nieznanym stanie kwantowym. To wiąże
+wynik z wcześniejszą przeszkodą domknięcia hierarchii: potrzebny jest
+rzeczywisty dostawca wyższych momentów, kontrolera i prawa składania.
+Zaszumione instrumenty kwantowe lub autonomiczna teoria wielociałowa
+mogą być inną drogą, ale ich dodanie nie jest dowodem, że FIN już je wyprowadza.
+
+\section{Drugi wynik: dokładna konwersja koherencji w geometrię}
+
+Ten wynik dotyczy jawnego rozszerzenia mieszanego, nie usuwa przeszkody
+operacyjnej powyżej. Dla $i,j=0,\ldots,11$ połóżmy
+\[
+ E_{ij}=\tfrac13\cos(\pi(i+j)/6),\qquad
+ F_{ij}=\tfrac13\sin(\pi(i+j)/6)
+ \quad\text{gdy $i+j$ jest nieparzyste},
+\]
+a zero w pozostałych przypadkach, oraz $G=[E,F]/(2i)$.
+Dokładna algebra nad $\mathbb Q(\sqrt3,i)$ daje
+\[
+ [E,F]=2iG,\quad[F,G]=2iE,\quad[G,E]=2iF,\quad
+ E^2=F^2=G^2=P_1+P_5.
+\]
+Antykomutatory parami są zerowe. Wszystkie trzy macierze mają zerową
+przekątną i sumy wierszy oraz komutują z dowolnym rzeczywistym
+symetrycznym jądrem cyrkulantowym $C_{12}$.
+
+Dla $R>0$, $r_*=R/\gamma$, $\kappa=\eta\gamma^2/R$, $\tau=r_*t$,
+podstawienie
+\[
+ K=W+r_*(xE+yF),\qquad
+ \rho=I/12+\gamma W+R(uE+vF+zG)
+\]
+daje dokładny, niezmienniczy sektor pełnego równania:
+\begin{equation}\label{eq:spin}
+ x'=\kappa(u-x),\quad y'=\kappa(v-y),\quad
+ u'=-2yz,\quad v'=2xz,\quad z'=-2(xv-yu).
+\end{equation}
+Nie narzucamy tego rzutu podczas ewolucji. Jest to ograniczenie danych
+początkowych, a nie dodatkowy człon dynamiki.
+
+Niech $w=x+iy$, $b=u+iv$. Sfera $|b|^2+z^2=1$ jest niezmiennicza,
+a $|w(0)|\le1$ pociąga $|w(\tau)|\le1$.
+Dopuszczalność stanu zapewnia $R\le\min(c_1,c_5)$,
+$c_j=1/12+\gamma\lambda_j(W)$, przy nieujemnych pozostałych $c_j$.
+Dodatniość krawędzi zapewnia
+$r_*/3<\min(W_1,W_3,W_5)$. Przykład
+$\gamma=1/20$, $R=1/2000$, $\eta=1/5$ spełnia te nierówności według
+dokładnych przedziałów strict. Populacje pozostają dokładnie $1/12$.
+
+\begin{theorem}[Zbieżność, lecz nie ciągły wybór geometrii]
+Dla $w(0)=0$, $b(0)=\epsilon e^{i\phi}$,
+$z(0)=\sqrt{1-\epsilon^2}$, $0<\epsilon\le1$, rozwiązanie
+\eqref{eq:spin} zbiega do jednego punktu
+$w=b=e^{i\Theta}$, $z=0$. Zbiór wszystkich punktów skupienia mapy
+końcowej, gdy dane początkowe dążą do bieguna $w=b=0,z=1$, jest całym
+okręgiem tych geometrii. Nie istnieje ciągły selektor w tym biegunie.
+\end{theorem}
+
+\begin{proof}
+Na zwartej przestrzeni rozważanych trajektorii funkcja
+\[
+ V=|w|^2-2\Rea(\bar wb),\quad
+ V+1=|w-b|^2+z^2,\quad V'=-2\kappa|w-b|^2
+\]
+ma największy zbiór niezmienniczy zerowej pochodnej złożony z dwóch
+biegunów i okręgu równowag. Dla $q=|w|^2$ zachodzi
+$q''+\kappa q'=2|w'|^2$ oraz $q'(0)=0$.
+Ponieważ $w'(0)\ne0$, mamy $q'>0$ dla każdego dodatniego czasu.
+Zasada niezmienniczości wyklucza bieguny jako granice, dając
+$q\to1$, $z\to0$, $w-b\to0$.
+
+Aby wykluczyć wędrówkę po okręgu, od dowolnego $\tau_0>0$ wybierzmy
+ciągłą fazę $\theta=\arg w$. Mamy $\theta'=-\kappa z'/(2q)$, a więc
+\[
+ \theta(T)-\theta(\tau_0)
+ =-\frac\kappa2[z/q]_{\tau_0}^{T}
+  -\frac\kappa2\int_{\tau_0}^{T}\frac{zq'}{q^2}\,d\tau.
+\]
+Całka jest bezwzględnie zbieżna, bo $|z|\le1$, $q'>0$ i
+$\int q'/q^2=1/q(\tau_0)-1/q(T)$. Istnieje więc jedna końcowa faza.
+Symetria $(w,b)\mapsto e^{i\phi}(w,b)$ obraca tę fazę o $\phi$.
+Dla dowolnie małego $\epsilon$ można otrzymać dowolny punkt okręgu;
+dla dokładnie zerowego zaburzenia biegun pozostaje stacjonarny.
+\end{proof}
+
+Linearizacja w dodatnim biegunie ma niestabilny pierwiastek
+$\mu=(-\kappa+\sqrt{\kappa^2+8i\kappa})/2$, $\Rea\mu>0$.
+Końcowe odkształcenie ma normę Frobeniusa $2R/\gamma$ niezależną od
+amplitudy niezerowego zaburzenia, lecz czas jego rozwoju rośnie, gdy
+zaburzenie maleje. Nie ma nieciągłości rozwiązań przy ustalonym skończonym
+czasie. Widmo stanu, jego entropia von Neumanna i wszystkie populacje
+początkowe są te same dla tych danych; informacja rozstrzygająca leży
+w koherencji. Źródło tej informacji i początkowego strict nadal jest dane.
+
+Zaobserwowane logarytmiczne nawijanie fazy dla $K(0)=W$ ma zgodny
+współczynnik $-\Im\mu/\Rea\mu$, ale pełna asymptotyka tej konkretnej
+krzywej wejściowej pozostaje nieudowodniona. Nie jest przesłanką
+powyższego twierdzenia. Nie dowodzimy również stabilności w całej
+przestrzeni dwunastowęzłowej ani nowego uniwersalnego prawa skali.
+
+\section{Bilans i najbardziej rozstrzygający dalszy kierunek}
+
+\paragraph{Udowodniono.}
+Oryginalne czyste sprzężenie \eqref{eq:pure} ma jawną zależność wyniku
+od rozkładu zespołu, a zatem nie ma wspólnego afinicznego rozszerzenia
+na standardowe stany kwantowe. Przeszkoda występuje dla strict przy
+dodatnich krawędziach, obejmuje kanoniczne odczyty i nie znika przez
+zmianę tłumienia ani przejście do propagatora laplasjanowego.
+Osobno udowodniono dokładny sektor konwersji koherencji i brak
+ciągłego, niezależnego od zaburzeń wyboru geometrii w tym sektorze.
+
+\paragraph{Obalono w określonym zakresie.}
+Nie można utożsamiać zachowania normy każdej realizacji ze wspólną
+operacją unitarną, ani traktować zapisu równania dla średniej macierzy
+gęstości jako automatycznie zgodnego ze średnią po przygotowaniach.
+Nie można przypisać temu sprzężeniu bezwarunkowej selekcji strict
+niezależnej od wejściowych danych koherencyjnych.
+
+\paragraph{Pozostaje warunkowe lub otwarte.}
+Wniosek o sygnalizacji wymaga jawnego standardowego prawa przygotowania
+i ewolucji stanów warunkowych. Modele klasyczne, rozkłady na stanach
+ontologicznych, przybliżenia pola średniego i inne prawa złożone nie
+zostały wykluczone. Nie ma tu laboratoryjnego testu FIN, źródła jednostek,
+wyprowadzenia stanu początkowego, pełnego mostu legacy--strict, transferu
+ról fizycznych, rozstrzygnięcia QW-2191, SM/GR, $L_{\rm total}$ ani ToE.
+Nadsoliton pozostaje pierwotną informacją w stanie solitonicznym;
+nie dodajemy pod nim osobnej warstwy informacyjnej.
+
+\paragraph{Następny test o największej wartości informacyjnej.}
+Należy wskazać jedno rzeczywiście wyprowadzone z FIN, skończone prawo
+mikroskopowe dla układu i jego kontrolera lub otoczenia, określić prawo
+składania i wykazać zgodność operacyjną z przygotowaniem i pomiarem.
+Jeżeli ma ono dawać \eqref{eq:pure} tylko jako przybliżenie wielociałowe,
+potrzebna jest kontrolowana granica z błędem, fluktuacjami i jawnym
+źródłem wyższych korelacji, nie założenie ukryte pod słowem
+``samouczenie''. Dopiero wtedy warto badać, czy strict wynika z tego
+prawa bez zakodowania celu w danych wejściowych. To bardziej
+rozstrzygające od kolejnego dopasowania jądra, ponieważ testuje możliwość
+przejścia od poprawnej matematyki do jednej spójnej fizyki.
+
+\section*{Reprodukowalność i kontrola zakresu}
+
+Pliki \texttt{fin\_chiral\_selection/research.py} i
+\texttt{operational.py} odtwarzają obliczenia; dwa pliki testowe
+sprawdzają dokładną algebrę oraz niezależne kontrole numeryczne.
+Dokładne certyfikaty opierają się na liczbach wymiernych, symbolicznych
+komutatorach i zewnętrznie zaokrąglonych przedziałach wag, nie na
+małych resztach zmiennoprzecinkowych. Testy obejmują zerowe uczenie,
+szczególne niewrażliwe zespoły, propagację laplasjanową, normę stanów,
+dodatniość, zmianę chiralności i fazy oraz niezależny wzór dwupoziomowy.
+Plik \texttt{verification.json} zapisuje rzeczywiście wykonany replay,
+wersje narzędzi i identyczność źródeł; nie zastępuje powyższych dowodów.
+Nie instalowano ciężkiego systemu algebraicznego, nie uruchamiano
+zatrzymanej kampanii P475/P485/P487 i nie generowano PDF.
+
+\begin{thebibliography}{9}
+\bibitem{Gisin1990}
+N.~Gisin, \emph{Weinberg's non-linear quantum mechanics and supraluminal
+communications}, Physics Letters A 143 (1990), 1--2.
+\href{https://doi.org/10.1016/0375-9601(90)90786-N}{DOI: 10.1016/0375-9601(90)90786-N}.
+\bibitem{Polchinski1991}
+J.~Polchinski, \emph{Weinberg's nonlinear quantum mechanics and the
+Einstein-Podolsky-Rosen paradox}, Physical Review Letters 66 (1991), 397.
+\href{https://doi.org/10.1103/PhysRevLett.66.397}{DOI: 10.1103/PhysRevLett.66.397}.
+\bibitem{Simon2001}
+C.~Simon, V.~Bužek, N.~Gisin, \emph{The no-signaling condition and quantum
+dynamics}, Physical Review Letters 87 (2001), 170405.
+\href{https://arxiv.org/abs/quant-ph/0102125}{arXiv: quant-ph/0102125}.
+\bibitem{Bona2003}
+P.~Bóna, \emph{Comment on ``No-Signaling Condition and Quantum Dynamics''},
+Physical Review Letters 90 (2003), 208901.
+\href{https://arxiv.org/abs/quant-ph/0201002}{arXiv: quant-ph/0201002}.
+\end{thebibliography}
+\end{document}

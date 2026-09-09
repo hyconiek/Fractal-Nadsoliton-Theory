@@ -10514,3 +10514,143 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   landscape and preservation/failure of the strict positive cone. No
   intrinsic teacher, source selection, legacy role transfer, units, physical
   population, laboratory evidence or SM/GR/ToE closure is exported.
+
+## ST8631--ST8640 covariance rank/minimizer geometry/adaptive duality (2026-09-08)
+
+- fin_projected_learning/ now records 20/30 rounds, 34 scientific tests,
+  exact minor/spectral-assignment certificates and replayable numerical
+  witnesses. The new thirty-round goal remains unfinished; no PDFs.
+- A certified nonzero disjoint 6x6 minor exists for strict, canonical legacy
+  cycle and canonical legacy line. Any Re(rho) completion with those off-
+  diagonal entries has real rank>=6 and complex density rank>=3. Diagonal
+  deletion cannot evade this bound. It does not prove that rank three is
+  attainable and does not count physical particles or spatial dimensions.
+- At a stationary connected strict kernel, Re(rho)=I/12+gamma K and rho
+  commutes with K. The five doublet blocks are c_k I+i b_k J, |b_k|<=c_k.
+  Minimum complex rank is seven for 0<gamma<gamma*, and six at
+  gamma*=-1/(12 lambda_min). Exactly 32 minimum-rank phase choices remain.
+  Entropy/purity extrema have the same signs ambiguity; the actual unitary
+  state equation conserves the spectrum and cannot enact rank minimization
+  from generic initial data.
+- The exact energy-gap identity proves
+  F_min=-(Tr(rho^2)-1/n)/(2gamma) on a supplied state-spectrum orbit.
+  Equality requires a real uniform-diagonal density and K=(rho-I/n)/gamma.
+  A trace-zero Rayleigh-basis induction proves attainability. This is a
+  conditional variational fact, not a source for the input spectrum.
+- Near strict the real isospectral global-minimum set has dimension 50;
+  preserving the uniform Perron vector/row sum leaves dimension 39. The
+  diagonal-map ranks are paid analytically using incidence/Fourier arguments
+  and the exact sector separation. A constrained isospectral numerical curve
+  parametrizes distinct equilibria; it is NOT an evolving learning solution.
+- Additional circulant symmetry radically narrows that result. The exact
+  120-assignment census has two positive kernels and 118 certified negative
+  exclusions: strict and its i->5i mod12 relabeling. They form one group-
+  automorphism orbit. Do not confuse symmetry covariance with restricting
+  every state to the symmetric subspace, or promote given-spectrum
+  identification to a spectrum/source/selector derivation.
+- The raw update does not preserve nonnegative rates. From strict and the
+  specified pure (e0-e1)/sqrt2 state, eta=1000, gamma=1/20 gives
+  K01(t=.001)<-8179/240000 by an explicit bound. The numerical solution
+  checks this result; it is not the proof. All times remain dimensionless.
+- Tangent-cone projection can preserve positivity and a projected-gradient
+  energy identity, but is a new law. A balanced two-six-clique pure fixed
+  point exists on its boundary; no stability or unique selection is claimed.
+  The dense-positive pure strict obstruction remains unchanged in the interior.
+- For the supplied state Hamiltonian K and graph Laplacian A(K),
+  [K,A(K)]_ij=(s_j-s_i)K_ij. Connected support requires constant degree for
+  common instantaneous projectors. The raw update can break degree equality
+  immediately, even before an edge becomes negative. Substituting A(K) for
+  K in the state equation changes the previous Lyapunov calculation.
+- Frozen strict U/P duality is preserved as a theorem. It is not automatically
+  a common fixed-operator calculus along noncommuting adaptive trajectories.
+  Next target: a joint admissible learning/propagation law and its actual
+  source, stability and state dependence; no physical, selector or ToE closure.
+
+## ST8641--ST8650 completed projected-learning campaign (2026-09-09)
+
+- fin_projected_learning/REPORT.md is the final MD report for the 30-round
+  campaign ST8621--ST8650. CAMPAIGN.md records its chain and
+  COMPLETION_AUDIT.md maps the request to evidence. Verification runs 51
+  scientific tests and exactly replays all three result sets, including the
+  archived 30000-step source run. No PDF was generated.
+- An encoded mixed state learns strict exactly from K0=0, but contains the
+  target covariance already. With a DIFFERENT cyclically averaged source,
+  a pure encoded Fourier state also learns strict along an exact trajectory.
+  Do not apply raw instantaneous rank/no-go claims to that averaged map.
+- Matching state propagation to A(K) through a simple Dirichlet-gradient
+  functional gives two scoped outcomes: the passive sign cannot generate
+  positive edges; the active distance source is CND and cannot equal gamma W
+  because strict has a positive zero-sum Fourier eigenvalue.
+- Projection onto positive fixed-degree kernels supplies a viable joint
+  propagation/learning scheme with an energy-decrease bound, but supplies
+  the degree resource and preserves the earlier minimum-family ambiguity.
+- Normal ordering must be undone before a full positive precision inverse
+  is used. For strict, G=cI+W with c=100 gives an exactly justified positive
+  weighted-graph Green parent L=G^-1-I/(c+s). This is a nonunique parent
+  family, not an exact nearest-neighbor Yukawa or physical-mass derivation.
+- For fixed SPD covariance C, the quoted L_dot=C-L^-1 is ascent of
+  Tr(LC)-logdetL. Corrected descent L_dot=L^-1-C converges to C^-1.
+  Self-dependent C(L) needs the full chain rule or a joint functional.
+  Tr(LC)-logdetL-logdetC-n>=0 is a valid Gaussian bootstrap but is flat
+  on every reciprocal pair. Neither construction supplies the covariance.
+- The stated scalar Gibbs closures permit at most two distinct spectral
+  roots and cannot give the seven strict sectors. Arbitrarily small decay
+  permits small residuals, so floating tolerance is not an exact closure.
+- Fast learning has a controlled Hamiltonian tracking limit; on-manifold
+  initialization can make finite-horizon dissipation tend to zero as eta
+  grows. Tracking speed is not a universal selection-rate theorem.
+- Normal ordering selects a diagonal algebra. Its unitary normalizer is
+  monomial; real/positive-kernel restrictions reduce the remaining freedom.
+  Abstract isospectrality alone does not preserve the unchanged learning rule.
+- The strongest conclusion is that self-consistency, stability and source
+  derivation are distinct. The next meaningful target is a non-target-encoded
+  source for spectral/coherence data and an admissible joint learning law.
+  Research completion is not physical FIN completion: no selector, legacy
+  role transfer, units, laboratory evidence, SM/GR or ToE closure is claimed.
+
+## ST8651/ST8652 operational-feedback discovery guardrail (2026-09-09)
+
+- FIN_Adaptive_Feedback_Operational_Obstruction.tex is the single source-only
+  report for the subsequent open discovery goal. No PDF is generated.
+  fin_chiral_selection/ contains 17 scientific tests and two replayable
+  result sets. Verification checks exact identities and conservative finite
+  Taylor bounds; floating ODE trajectories are a separate corroboration.
+- For the ORIGINAL pure law psi_dot=i K psi,
+  K_dot=eta(Pi Re(psi psi*)-gamma K), two rational ensembles with the
+  same initial density I/n and the same K0 have
+  Delta rho=(6 eta/(25 n))t^2 sigma_y+O(t^3). Their canonical vertex-zero
+  probabilities differ at order -12 eta K01/(25 n)t^3. The leading
+  non-affinity is independent of gamma and K0. No fitting of strict/legacy
+  parameters can remove it within this unchanged law.
+- At strict K0, eta=1/5, gamma=1/20, T=1/10000, exact remainder bounds
+  give a y+ probability gap >2.74e-11 and a vertex probability gap >1e-15,
+  while all edges remain positive. These are dimensionless mathematical
+  bounds, not laboratory sensitivities or measurements.
+- Hence no one affine/CPTP density map, including a quantum device with
+  arbitrary memory but a common input-independent initial controller state,
+  exactly reproduces all pure-input predictions. Norm preservation along
+  each state-dependent path is not a common unitary quantum operation.
+  Replacing propagation by the graph Laplacian keeps this second-order
+  witness; its finite-time constants must be paid separately.
+- The no-signalling corollary explicitly assumes standard Born/remote
+  preparation and branchwise evolution of the conditionally prepared
+  states. Do not turn it into a premise-free ban on nonlinear physics.
+  Classical ontic-state models, nonstandard composition/measurement laws,
+  stochastic quantum instruments and many-copy mean-field approximations
+  are not excluded. The two-copy preparation contrast is exactly 12/25.
+  The separately defined mixed-density ODE is not the branchwise ensemble
+  average automatically. Gisin-type obstruction is known general mathematics;
+  no world-priority claim is exported for that mechanism.
+- ST8651 also proves an exact five-variable C12 Fourier-spin sector,
+  global convergence for its nonzero seeds, and a whole-circle endpoint
+  cluster set at a stationary chiral pole. Zero seed stays stationary;
+  nonzero seeds convert supplied coherence to finite kernel distortion.
+  This is no continuous canonical selector. The fixed-K0 fixed-phase
+  logarithmic asymptotic and full-system stability remain unproved.
+- Highest-information continuation: one actual finite microscopic
+  composition/controller law with operational consistency and a controlled
+  limit, then non-target-encoded spectral/coherence sources. Do not substitute
+  another kernel fit for this obligation. Frozen strict duality, prior
+  conditional learning theorems and explicit legacy/strict boundaries survive.
+  No QW-2191, source, legacy bridge, role transfer, units, laboratory evidence,
+  SM/GR, L_total or ToE closure is supplied by this discovery.
