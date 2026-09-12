@@ -62,6 +62,8 @@ Punktem odniesienia pozostaje dokładnie zadany strict na cyklu:
  W_{ii}=0,\quad \omega=\frac{743}{4000},\quad\phi=\frac{650}{4000}.
 \end{equation}
 Jego sumę wiersza oznaczamy przez $s$, a $\ell=-\lambda_{\min}(W)>0$.
+Laplasjan strict to $\mathsf A=sI-W$; dodatniość wag sprawia, że
+$s$ jest wartością własną Perrona.
 Wszystkie czasy i parametry są bezwymiarowe. Zasadnicze wyniki
 o komutantach nie zależą od wartości tych parametrów.
 
@@ -125,7 +127,8 @@ z wcześniejszej relacji. Kierunek odwrotny jest natychmiastowy.
 Niech $G$ będzie skończonym połączonym grafem co najmniej dwóch
 nośników o wymiarze $n\ge3$. Dla
 \[
- H=\sum_a L_a^{(a)}+\sum_{\{a,b\}\in E(G)}g_{ab}V_{ab},\quad g_{ab}\ne0,
+ H=\sum_a L_a^{(a)}+\sum_{\{a,b\}\in E(G)}g_{ab}V_{ab},\quad
+ g_{ab}\in\mathbb R\setminus\{0\},
 \]
 gdzie $L_a$ są dowolne hermitowskie, pełnorządowy produkt
 $R=\bigotimes_a C_a$ jest stacjonarny wtedy i tylko wtedy,
@@ -387,6 +390,12 @@ osiąga się przy $\gamma_*$:
 Dokładne zewnętrzne przedziały Fourierowskie dają odpowiednio około
 $\gamma_*=0.1222120805$, $61.8939393$ i $48.2148582$.
 Są to warunkowe parametry kodowania i błędu, nie wyprowadzone stałe fizyczne.
+Nie wolno przy tym przenieść certyfikatu \eqref{eq:anti} na program
+optymalny: $C_{\gamma_*}$ ma zerową wartość własną, a pozostałe nie
+są jednakowe. Przynajmniej jedna jest mniejsza od $1/(n-1)$,
+więc jedna z wag w \eqref{eq:anti} jest ujemna. Ta konkretna formuła
+nie daje tam stanu dodatniego. Nie wyklucza to innych skorelowanych
+uzupełnień przy $\gamma_*$.
 
 Sama wariancja $B_C$ nie jest uniwersalnym kosztem operacyjnym:
 oddziaływanie $I\otimes Z$ może mieć dodatnią wariancję i jednocześnie
@@ -412,8 +421,10 @@ $z=e^{i/4000}$ i nieproporcjonalnych wielomianów Laurenta.}
 Nowe zastosowanie jest następujące. Każdy skończony $H_N$ powyżej
 ma wymierne elementy z dokładnością do jednej skali, więc jego
 stosunki niezerowych częstości Bohra są algebraiczne.
+Ten argument dotyczy rodziny $-g\sum_{a<b}V_{ab}/(N-1)$, nie
+dowolnych pól lokalnych i sprzężeń z twierdzenia~\ref{thm:product}.
 Żadne ustalone liniowe przygotowanie i odczyt nie odtworzą zatem
-dokładnie całej krzywej powrotu $|[e^{-itA}]_{00}|^2$ strict.
+dokładnie całej krzywej powrotu $|[e^{-it\mathsf A}]_{00}|^2$ strict.
 Krzywa ta zawiera obie częstotliwości $\lambda_1,\lambda_2$ z
 dodatnimi współczynnikami; jednoznaczność skończonych sum wykładniczych
 wymuszałaby ich obecność w widmie mikroskopowym, co daje sprzeczność.
@@ -446,7 +457,7 @@ górną granicą błędu i dolnym świadkiem w zadanej architekturze.
 \paragraph{Obalono w zadanych klasach.}
 Nie wystarcza potraktowanie stacjonarności pola średniego jako
 stacjonarności niezależnych składników. Nie wystarcza znalezienie
-skorelowanego stanu o prawidłowym marginałe: pasmo płaskie pokazuje
+skorelowanego stanu o właściwym stanie zredukowanym: pasmo płaskie pokazuje
 różnicę między pamięcią a propagacją. Nie można też usunąć skończonego
 szumu badanego procesora przez dowolną zmianę danych programu
 niewidocznych dla $T$.

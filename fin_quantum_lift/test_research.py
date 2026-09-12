@@ -69,6 +69,28 @@ class LiftTests(unittest.TestCase):
         np.testing.assert_allclose(V@psi,-psi/2,atol=1e-15)
         np.testing.assert_allclose(V@P,P@V,atol=1e-15)
 
+    def test_local_fields_cannot_cancel_the_pair_component(self):
+        n=3;I=np.eye(n);V,*_=r.structures(n)
+        h=[np.diag([1.,2.,0.]),np.array([[0,1j,1],[-1j,0,0],[1,0,0]]),np.diag([-1.,0.,1.])]
+        fields=[np.roll(np.eye(n),1,axis=0)+np.roll(np.eye(n),-1,axis=0),h[0],h[1]]
+        def on_site(A,k):
+            M=np.ones((1,1))
+            for j in range(3):M=np.kron(M,A if j==k else I)
+            return M
+        pair01=np.kron(V,I)
+        permutation=np.zeros((n**3,n**3))
+        for i,j,k in itertools.product(range(n),repeat=3):permutation[(i*n+j)*n+k,(i*n+k)*n+j]=1
+        pair02=permutation@pair01@permutation.T
+        H=sum(on_site(A,k) for k,A in enumerate(fields))+2*pair01-3*pair02
+        L=sum(on_site(A,k) for k,A in enumerate(h))
+        full=H@L-L@H
+        reduced=np.trace(full.reshape(n*n,n,n*n,n),axis1=1,axis2=3)/n
+        left=np.trace(reduced.reshape(n,n,n,n),axis1=1,axis2=3)
+        right=np.trace(reduced.reshape(n,n,n,n),axis1=0,axis2=2)
+        two_body=reduced-np.kron(left,I)/n-np.kron(I,right)/n+np.trace(reduced)*np.eye(n*n)/n**2
+        local=np.kron(h[0],I)+np.kron(I,h[1])
+        np.testing.assert_allclose(two_body,2*(V@local-local@V),atol=1e-13)
+
     def test_full_hermitian_source_contraction(self):
         rng=np.random.default_rng(8653)
         for n in [3,4,12]:
@@ -94,6 +116,10 @@ class LiftTests(unittest.TestCase):
         marginal=s.Matrix(n,n,lambda i,j:s.simplify(sum(R[i*n+k,j*n+k] for k in range(n))))
         self.assertEqual(marginal,C);self.assertEqual(s.simplify(s.trace(R)),1)
         self.assertEqual(s.simplify(s.trace(S*R)),-1)
+
+    def test_antisymmetric_formula_is_not_a_universal_broadcast_map(self):
+        C=np.diag([1.,0.,0.]);R=r.antisymmetric_completion(C)
+        self.assertLess(np.linalg.eigvalsh(R)[0],-.9)
 
     def test_stationary_storage_is_not_hartree_propagation(self):
         C=np.eye(12)/12+.05*r.strict();U=np.eye(12,dtype=complex);U[0,0]=np.exp(.3j)

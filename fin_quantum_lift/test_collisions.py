@@ -74,6 +74,12 @@ class CollisionTests(unittest.TestCase):
         self.assertTrue(all(b<a for a,b in zip(costs,costs[1:])))
         self.assertAlmostEqual(costs[-1],data['optimal_variance_cost'],places=10)
 
+    def test_optimal_loading_does_not_inherit_the_affine_stationary_certificate(self):
+        gamma=c.loading_data(self.W)['maximum_feasible_loading']
+        program=np.eye(12)/12+gamma*self.W
+        completion=r.antisymmetric_completion(program)
+        self.assertLess(np.linalg.eigvalsh(completion)[0],-1e-8)
+
     def test_explicit_finite_copy_uniform_bound(self):
         self.assertEqual(c.certified_strict_bound(1000000),F(501331027,750000000000))
         self.assertLess(c.certified_strict_bound(1000000),F(7,10000))

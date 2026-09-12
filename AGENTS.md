@@ -10654,3 +10654,52 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   conditional learning theorems and explicit legacy/strict boundaries survive.
   No QW-2191, source, legacy bridge, role transfer, units, laboratory evidence,
   SM/GR, L_total or ToE closure is supplied by this discovery.
+
+## Quantum source/correlation/programming guardrail (2026-09-12)
+
+- FIN_Quantum_Source_Correlation_and_Programming_Report.tex is the single
+  source-only report for the subsequent discovery goal. fin_quantum_lift/
+  contains 25 scientific tests and two replayable result sets. No PDF.
+- For the declared source T(rho)=Pi Re rho, the canonical pair lift is
+  V=sum X_ij tensor X_ij=(|Omega><Omega|+Swap-2D)/2. Its eigenvalues are
+  (n-1)/2, 1/2 and -1/2. This is a conditional microscopic construction;
+  tensor composition and the finite-speed dissipative controller are not
+  thereby derived from FIN.
+- For n>=3, [V,h tensor I+I tensor k]=0 with Hermitian h,k forces both
+  scalar. Consequently any full-rank stationary product on a finite
+  connected graph of nonzero canonical V edges is maximally mixed, even
+  with arbitrary additional one-site Hamiltonians. Rank-one product
+  eigenstates and the n=2 exception remain valid; do not erase them or
+  turn the theorem into a universal demand for entanglement.
+- A strict Hartree equilibrium C=I/12+gamma W is not an exact finite-N
+  product equilibrium. The explicit two-copy marginal has frequencies
+  1 and 5, changes its local spectrum, and revives at pair phase 2pi.
+  Uniform populations do not imply unchanged geometry or entropy.
+- The displayed antisymmetric completion R_A(C) is PSD under its stated
+  density floor and has both marginals C, but it stores C in a flat band.
+  A common unitary pulse exposes the lack of the intended propagation.
+  Its negativity is >=1/n; this does not identify physical fermions.
+  The affine formula becomes nonpositive at the optimal program loading;
+  do not silently combine those certificates or exclude other correlated
+  constructions merely because this one fails there.
+- A separate fresh-copy collision processor is CPTP and approximates the
+  strict density channel. At gamma=1/20, t=1, N=1e6 its proved diamond
+  error bound is <0.0007. The exact uniform-mode survival loss has a
+  positive 1/N coefficient. These are dimensionless theoretical resource
+  bounds, not physical apparatus performance, controlled-U phase closure,
+  or a source-independent derivation of W.
+- Dihedral twirling proves the maximal feasible loading
+  gamma*=1/(12*(-lambda_min(W))) and minimizes the stated variance bound.
+  This is not optimality over all algorithms or a physical normalization
+  theorem. Programs with the same T can have different finite-copy noise.
+- P512/O216 is an OLD strict frequency-ratio theorem. Its application to
+  finite rational H_N excludes exact full strict time-law reproduction
+  in that class, but not approximation, infinite limits or extra sourced
+  couplings. Canonical legacy cycle gap ratios are algebraic, so that
+  arithmetic obstruction is not transferred. Structural correlation
+  results apply separately to strict and legacy, without role transfer.
+- Next source obligation: a microscopic law and independently specified
+  correlation/program preparation predicting BOTH propagation and finite
+  corrections. Initial states can be legitimate physical inputs; their
+  presence is not itself a universal no-physics theorem. No selector,
+  legacy bridge, units, laboratory evidence, SM/GR, L_total or ToE closure.
