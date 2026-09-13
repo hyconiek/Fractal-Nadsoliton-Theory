@@ -10703,3 +10703,204 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   corrections. Initial states can be legitimate physical inputs; their
   presence is not itself a universal no-physics theorem. No selector,
   legacy bridge, units, laboratory evidence, SM/GR, L_total or ToE closure.
+
+## Hartree-equivalence and rank-free correlation floor guardrail (2026-09-12)
+
+- FIN_Hartree_Equivalence_and_Strict_Correlation_Floor.tex is the single
+  source-only report for the next discovery goal. fin_hartree_equivalence/
+  contains 18 scientific tests and an exactly replayable result set. No PDF.
+- Full operator-source equality fixes V uniquely. Equality of ALL mixed
+  projector flows permits V+a Swap+b I. Equality of only PURE projector
+  flows permits V+c P_sym+B_anti with arbitrary Hermitian antisymmetric
+  block: 4357 real parameters at n=12, or 4356 modulo global energy shift.
+  These are different premises, not additional physical fields. The full
+  controller source must not be replaced by the weaker observed flow silently.
+- The exchange shift a=-1/2 admits diagonal inverse-partner full-rank
+  products on bipartite graphs; their T sources are zero. The larger pure
+  class admits a nonzero matching-edge product example. Do not extend the
+  previous canonical 'only maximally mixed' theorem blindly to these classes.
+- Nevertheless, identical pair products are stationary in the reciprocal
+  pure-equivalent class only for I/n, with NO rank assumption when n>=3.
+  The n=2 exception remains. Unequal full-rank partners require a matching
+  support; dense strict and canonical legacy sources fail that condition.
+- More strongly, ANY-rank marginals individually stationary/self-consistent
+  with the same strict W share its simple uniform and alternating modes.
+  Their product has a nonzero commutator matrix element independent of
+  B_anti and c. Opposite rank-six chiralities cannot remove it. The associated
+  graph no-product witness also survives arbitrary one-site fields.
+- For two-body stationary states in the pure-equivalent interaction class,
+  with both strict loadings 1/20, an explicit dual witness proves
+  D_tr(R,C tensor E)>7/1250=0.0056 and mutual information>49/781250 nats.
+  This floor is uniform over the invisible block and an overall nonzero
+  scale, but not over arbitrary additional local fields, altered loadings,
+  different state laws or added pair terms. It is not an entanglement claim,
+  laboratory observation, or existence theorem for every invisible block.
+- The next typed source obligation is an actual correlation mechanism chi
+  with zero marginals, positive C tensor E+chi, and the required commutator
+  cancellation. Merely retuning invisible microscopic parameters does not
+  pay the bound. Known commuting-map/Pinsker tools are not new physics.
+  No selector, physical clock, kernel bridge, legacy-role, SM/GR or ToE
+  closure follows from these conditional mathematical results.
+
+## Separable stationary source and necessary discord guardrail (2026-09-13)
+
+- FIN_Separable_Stationarity_and_Necessary_Discord.tex is the single source-
+  only report for the subsequent discovery goal. fin_separable_stationarity/
+  contains 18 scientific tests and two replayable result sets. No PDF.
+- A 12-label Hadamard design with 11 balanced cuts and both orientations
+  gives an explicit sum of 22 product density matrices. For output
+  C=I/12+W/20 the amplified input is C'=I/12+11W/100, whose smallest
+  eigenvalue is certified >1/125. Both output marginals are C; DR=0 and
+  Swap invariance prove [V,R]=0. Separability is proved by the decomposition,
+  not inferred from PPT. The state has rank 132 and is partial-transpose
+  invariant for this real program.
+- Local projective measurements on two supplied C' copies, accepting
+  opposite cut outcomes, prepare the state with success probability 1/2.
+  Program, shared cut choice, heralding and fresh copies are explicit inputs.
+  Pair stationarity after forgetting the preparation label is not stationarity
+  of every conditional branch or of the full apparatus/record system.
+- For canonical V, the operator block between the simple uniform and
+  alternating eigenvectors of the real marginal C is invertible. A stationary
+  state commuting with C tensor I would force their unequal marginal
+  probabilities to be equal. Thus EVERY stationary state with that marginal
+  has nonzero one-sided discord; with both marginals C, both sides do.
+  Entanglement is not necessary, but zero-discord classicality is excluded
+  in this stated canonical model. Separable and classical-quantum are not
+  interchangeable notions.
+- The explicit state's trace distance to the unrestricted one-sided CQ set
+  is >1/15400. A weaker outward bound >3.45e-8 holds for every canonical
+  stationary state with C. These are not numerical entropic-discord values.
+  A fixed-marginal distance bound cannot be promoted across the degenerate
+  zero-loading limit, where the construction is classically correlated.
+- The criterion does not automatically cover arbitrary invisible microscopic
+  blocks. The exchange shift a=-5/12 makes this cross block singular and is
+  undecided by this criterion alone. Pure SWAP supplies a different-law
+  stationary zero-discord product counterexample to an unrestricted claim.
+- A row-permuted Hadamard frame preserves the same marginal, cut count and
+  pair cut data but changes fourth moments and joint predictions. Exact
+  comparison excludes equivalence under all 24 dihedral relabellings.
+  Minimal cut count therefore is not a unique physical preparation law.
+- The separate canonical legacy cycle at loading 1/1000 also has a positive
+  amplified program and a separable stationary construction. Its simple
+  uniform/alternating modes are verified over Q(sqrt(2),sqrt(3)), so the
+  qualitative no-zero-discord result applies separately. Strict numerical
+  bounds and physical roles are not transferred to signed legacy.
+- Next source obligation: the amplified coherent program and higher-order
+  preparation law, with an independently grounded operational interpretation.
+  No intrinsic source, laboratory evidence, physical clock, selector,
+  legacy bridge, role transfer, SM/GR, L_total or ToE closure is exported.
+
+## Discord robustness and stationary-channel identifiability guardrail (2026-09-13)
+
+- FIN_Discord_Robustness_and_Operational_Identifiability.tex is the single
+  source-only report for the subsequent discovery goal. fin_discord_robustness/
+  contains 20 scientific tests and an exactly replayable result set. No PDF.
+- For H_a=V+a Swap+b I, exact polynomial reconstruction transfers stationary
+  states to canonical V except at a=-1/2 and a=-3. The formerly open -5/12
+  value is NOT a transfer exception. At the two actual exceptions, positive
+  cross-band counterexamples refute naive transfer, but separate inverse-
+  block/norm bounds preserve the same non-CQ equilibrium lower bound for
+  the stated strict first marginal. The conclusion now covers every a,b.
+- For H=V+c P_sym+B_anti and Rbar=(R+Swap R Swap)/2,
+  [V,Rbar]=P_sym[H,R]P_sym exactly. With average marginal C=I/12+W/20,
+  d_CQ_A(R)+D_tr(R,Swap R Swap)/2+(delta_lower/616)||[H,R]||_1>=d0.
+  An overall Hamiltonian scale must be removed from the residual. Equal
+  marginals do not imply state-exchange symmetry, and symmetrizing can
+  destroy one-sided CQ form. This is not the internal Z12 selector problem.
+- A deterministic complement-projector Lüders instrument yields an actual
+  asymmetric CQ equilibrium for V-Swap/2, with marginals I/12 and I/12+W/10.
+  Only their average is strict C. Do not promote it to a counterexample with
+  both individual marginals C. Its swap average is canonical-stationary and
+  non-CQ. The amplified program is still supplied, not intrinsically derived.
+- These two descriptions have identical finite adaptive records only for
+  the declared common outcome-wise swap-covariant instruments and passive
+  free-evolution channels. Labelled marginals and coherent control of the
+  actual Hamiltonian distinguish them; controlled-U gives X values 0 and 1
+  at dimensionless time pi. Symmetry alone does not forbid this stronger
+  access. No controlled-phase or energy-query source is supplied by the proof.
+- E_±(rho)=2/(n-1) P_±(rho tensor I)P_±, with P_+ the off-diagonal symmetric
+  band and P_- the antisymmetric band, are universal CPTP stationary maps.
+  Both have identical local channel [I+(n-2)rho]/[2(n-1)]. Their mixture
+  r E_++(1-r)E_- is separable exactly at r=1/2 and NPT otherwise, for EVERY
+  input density. Joint Swap expectation 2r-1 distinguishes the mixture;
+  only local channels are identical here, not all joint records.
+- E_+ supplies a stationary strict completion across the full invisible
+  antisymmetric Hamiltonian class, using a target-encoded positive program.
+  Stationary storage is not derivation of the strict propagator or source.
+- A separable output does not make the universal one-copy map LOCC from
+  an unknown program held at one fixed party: its marginal Choi partial
+  transpose has eigenvalue -3/88. Quantum routing or an appropriate prior
+  resource is needed in that universal task. A fixed known separable target
+  can still be locally prepared from its classical description.
+- The channel identities and mixture classification apply separately to
+  the positive loaded legacy program; strict numerical discord bounds and
+  physical roles are not transferred. Known cloning/control mechanisms are
+  not claimed as new general physics or as optimal universal protocols.
+- Next obligation: a sourced joint preparation law and operational access
+  model, with joint Swap and coherent-control predictions. No physical
+  calibration, apparatus, selector, legacy bridge, role transfer, SM/GR,
+  L_total or ToE closure is exported by these conditional results.
+
+## Local pre/post-Discord handoff intake and rank-seven scope correction (2026-09-13)
+
+- The user-supplied `FIN_research_artifacts_pre_and_post_Discord/` is an
+  immutable source archive for this intake, not a blanket theorem export.
+  `fin_handoff_audit/REPORT.md` classifies every handoff section;
+  `fin_handoff_audit/PROOF.md` states the accepted corrected mathematics.
+  All 41 supplied artifact sizes/SHA-256 hashes were checked. The bundle has
+  summary CSVs and figures, but no executable global cover or 60-root catalog.
+  Preserve these original artifacts and consult the audit before reuse.
+- Accepted structural results include the weighted incidence decomposition
+  into ranks 11 and 55, passive Schur positivity, the D12-invariant
+  vertex/uniform spectral-budget threshold at rank seven for supplied g=4,
+  exact Gibbs duality and nonlinear entropy completion, CRT/Ising identities,
+  and the law-of-total-covariance parity split. Walker noise A/(6N) is the
+  uniform-state value; away from uniform its quadratic variation depends on p.
+  The Gaussian OU equation is not the exact finite-N jump process.
+- The local rank-seven equal-energy candidate at g approximately
+  3.71834489812038, p_max approximately 0.83636522665, its positive tangent
+  Hessian, and a four-amplitude index-one saddle are independently reproduced
+  numerically. They are not new interval root certificates, first-global-
+  transition proofs, stationary exhaustion, or a physical gain source.
+- The handoff's one-dimensional resolvent parameter is CORRECTED to
+  r=sech(sqrt(lambda3/6)*s3), not exp(-sqrt(lambda3/6)*s3).
+  The corrected scalar expression has a new exact rational-interval
+  Bernstein positivity certificate using the strict spectral enclosures.
+  S_min approximately 0.057549460989 is a reproduced numerical face minimum;
+  no global minimum or Sturm uniqueness certificate is imported from a CSV.
+- A separate new exact rational-interval certificate proves
+  lambda2(Cov(C))<=sigma and lambda2(Mtilde)<=sigma on the entire declared
+  four-amplitude face s4=s5=0, s3,s6>=0, where
+  sigma=[2 lambda3(lambda4+lambda5)-lambda4 lambda5]/(24 lambda3)
+  is approximately 0.267443244229. Equality is only at the compactified
+  q=1, x=t_star boundary. The exact endpoint factor (1-q) is cancelled
+  symbolically before interval evaluation. This is a face theorem, not
+  a global Ising, intraparity-W, off-face, or phase-reduction theorem.
+- The correct general Schur statement is equality of inertia counts with
+  positive eta=1-b6^2/sigma. The scalar resolvent additionally requires
+  invertible sigma I-W and, for the stated sign criterion, exactly one W
+  eigenvalue above sigma. Equality/singular cases cannot be silently skipped.
+- IMPORTANT COUNTEREXAMPLE: the full seven-coordinate everywhere Hessian
+  bound is false. At h_j=2 cos(pi*j/2), the cosine-(4,5) sum and sine-(4,5)
+  difference give two orthogonal covariance directions each >313/960.
+  Thus I7/g-Cov(X) has at least two negative directions for every g>=3.7;
+  at the numerical coexistence gain both are approximately -0.06125315.
+  This exact witness blocks transfer from the four locked amplitudes to
+  the whole seven-dimensional landscape. It is not asserted stationary,
+  so it does not alone refute a stationary-point-only Morse-index theorem.
+- The imported Ising Bernstein cover still has unresolved boxes and lacks
+  replayable closure data. Its dependent dominant-mass/W argument, the
+  off-face ceiling, universal cooperativity claim, and the 60-point phase
+  census are not accepted global theorems. An 'only off-face gap remains'
+  summary is not licensed. No new global campaign is automatically launched.
+- Handoff Delta_L/delta_L are lower enclosures, not identities with exact
+  spectral gaps. Preserve the existing discord bound and distinguish a
+  shared spectral expression from a causal discord/localization mechanism.
+  The 22-product rank-132 cutoff belongs to the separable-stationarity report;
+  the later discord-robustness report is a distinct existing package.
+- `python3 fin_handoff_audit/verify.py` runs 19 new tests and 56 inherited
+  quantum-package regressions and checks the recorded exact audit layer.
+  These are finite executable checks plus the stated analytic arguments,
+  not proof-assistant verification or a replay of absent historical covers.
+  No selector/QW-2191, active-gain source, units, laboratory evidence,
+  legacy completion/role transfer, SM/GR, L_total, or ToE closure follows.

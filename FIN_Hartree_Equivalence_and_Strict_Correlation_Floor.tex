@@ -1,0 +1,435 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Twierdzenie}
+\newtheorem{corollary}{Wniosek}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Dtr}{D_{\rm tr}}
+\title{FIN: równoważność dynamiki Hartreego i wymuszona korelacja strict}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Sama zgodność czystej dynamiki projektowej nie wyznacza oddziaływania
+dwuciałowego: dla 12 etykiet pozostawia 4357 rzeczywistych parametrów.
+Zgodność dla wszystkich stanów mieszanych pozostawia tylko dwa, a
+znajomość pełnej mapy źródłowej usuwa tę swobodę. Pomimo tak dużej
+nieoznaczoności mikroskopowej istnieje element komutatora strict,
+którego nie zmienia żaden z niewidocznych parametrów. Wyklucza on
+stacjonarne produkty stanów strict niezależnie od ich rzędu.
+Dla dwóch nośników i zadanej wartości $\gamma=1/20$ każdy dopuszczalny
+stan stacjonarny o tych marginałach spełnia
+$\Dtr(R,C\otimes E)>0.0056$. Jest to jednolita dolna granica korelacji
+w całej zadeklarowanej klasie, nie tylko niepowodzenie jednej konstrukcji.
+Nie stanowi ona pomiaru, konieczności splątania ani domknięcia FIN
+jako fundamentalnej teorii fizycznej.
+\end{abstract}
+
+\section{Klasa modeli i rozdzielenie przesłanek}
+
+Punktem wyjścia jest mapa $T(\rho)=\Pi\Rea\rho$, gdzie $\Pi$ usuwa
+przekątną w ustalonej bazie etykiet. Jest to źródło z badanego
+sprzężenia uczącego, którego granica szybkiego śledzenia prowadzi
+do $\dot\rho=(i/\gamma)[T(\rho),\rho]$.
+\footnote{Źródła repozytoryjne: \texttt{The FIN Kernel as an Unknown Mat.md},
+§4.1; \texttt{fin\_projected\_learning/REPORT.md}, §28;
+\texttt{FIN\_Quantum\_Source\_Correlation\_and\_Programming\_Report.tex}.
+Obecny wynik nie zastępuje pełnego równania skończonej szybkości uczenia
+jego granicą bez zaznaczenia tej zmiany.}
+
+Niech $S$ zamienia dwa czynniki, $P_s=(I+S)/2$, $P_a=(I-S)/2$,
+$|\Omega\rangle=\sum_i|ii\rangle$ oraz
+$D=\sum_i|ii\rangle\langle ii|$. Kanoniczne podniesienie mapy źródłowej to
+\begin{equation}\label{eq:V}
+ V=\frac{|\Omega\rangle\langle\Omega|+S-2D}{2},\qquad
+ L_V(\rho)=\Tr_2[V(I\otimes\rho)]=T(\rho).
+\end{equation}
+Porównujemy stałe hermitowskie oddziaływania dwuciałowe $H$.
+Warunek $SHS=H$ oznacza tu symetrię wymiany nośników, nie dodatkowe
+twierdzenie o odwróceniu czasu lub fizycznej statystyce cząstek.
+Oznaczamy
+$F_H(\rho)=i[L_H(\rho),\rho]$.
+
+Wszystkie klasyfikacje dotyczą przepływu projektorów lub macierzy
+gęstości. Nie ustalają kontrolowanej fazy bramki, początku zegara,
+jednostek ani kanonicznego selektora. Wymiar nośnika $n=12$ nie jest
+utożsamiany z liczbą fizycznych cząstek.
+
+\begin{theorem}[Trzy poziomy identyfikacji]\label{thm:classes}
+Dla oddziaływań symetrycznych względem wymiany:
+\begin{enumerate}
+\item Jeśli $L_H(P)=T(P)$ dla każdego projektora rzędu jeden, to $H=V$.
+\item Jeśli $F_H(\rho)=F_V(\rho)$ dla każdej macierzy gęstości, to
+$H=V+aS+bI$, gdzie $a,b\in\mathbb R$.
+\item Jeśli równość przepływów jest wymagana tylko dla projektorów
+rzędu jeden, to dokładnie
+\begin{equation}\label{eq:pureclass}
+ H=V+cP_s+B_a,\qquad B_a=P_aB_aP_a=B_a^*,\quad c\in\mathbb R.
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Projektory rzędu jeden rozpinają przestrzeń hermitowską, więc pierwsza
+teza wynika z liniowości i niezdegenerowanego parowania śladu częściowego.
+Dla drugiej rozważmy różnicę map $L$. Wielomianowa tożsamość
+$[L(\rho),\rho]=0$ na wnętrzu zbioru stanów rozszerza się najpierw
+na hiperpłaszczyznę śladu jeden, a przez jednorodność i ciągłość na
+wszystkie macierze hermitowskie. Standardowa klasyfikacja map komutujących
+daje $L(X)=aX+f(X)I$.
+\footnote{M.~Brešar, Š.~Špenko, \emph{Functional identities in one variable},
+wersja autorska, §3, w szczególności Lemmat 3.2,
+\href{https://users.fmf.uni-lj.si/bresar/documents/FIonevar.pdf}{tekst źródłowy}.
+Zasada klasyfikacji map komutujących jest znana; nie jest nowym
+ogólnym twierdzeniem tego raportu.}
+Można to również otrzymać przez polaryzację na diagonalnych macierzach
+i rzeczywistych oraz urojonych jednostkach pozadiagonalnych: współczynnik
+części nieskalarnej musi być jeden dla wszystkich par indeksów.
+Symetria wymiany czyni $L$ samosprzężoną w parowaniu Hilberta--Schmidta,
+co wymusza $f(X)=b\Tr X$. Reprezentantami są $S$ i $I$.
+
+Dla trzeciej tezy niech $Z=H-V$. Na sferze jednostkowej funkcja
+$\mathcal E(\psi)=\langle\psi\psi|Z|\psi\psi\rangle$ ma pochodną
+$4\Rea\langle d\psi|L_Z(P)|\psi\rangle$.
+Zerowy przepływ projektowy oznacza, że $L_Z(P)\psi$ jest proporcjonalne
+do $\psi$, więc pochodna w każdym kierunku stycznym znika.
+Funkcja $\mathcal E$ jest stała, równa $c$. Jednorodność i polaryzacja
+wielomianu w zmiennych zespolonych dają $P_s ZP_s=cP_s$.
+Blok antysymetryczny jest dowolny. Odwrotnie: anihiluje on
+$\psi\otimes\psi$, a $cP_s$ dodaje tylko wspólną fazę.
+\end{proof}
+
+\begin{center}
+\begin{tabular}{p{6.1cm}p{5.0cm}r}
+Przesłanka & Pozostająca różnica $H-V$ & Wymiar dla $n=12$\\\hline
+Pełna mapa źródłowa na stanach czystych & $0$ & 0\\
+Przepływ wszystkich stanów mieszanych & $aS+bI$ & 2\\
+Tylko czysty przepływ projektowy & $cP_s+B_a$ & 4357
+\end{tabular}
+\end{center}
+Ostatni wymiar wynosi $1+66^2$; po odjęciu globalnego przesunięcia
+energii pozostaje 4356. Są to parametry matematycznej przestrzeni
+hamiltonianów, nie liczba fizycznych pól. Znajomości rzeczywistego
+źródła $T$ nie wolno zastępować słabszą znajomością samego przepływu.
+
+\section{Rzeczywiste wyjątki: dlaczego poprzedniej tezy nie wolno rozszerzać bez dowodu}
+
+Dla $V_a=V+aS$ lokalny komutant jest skalarny przy $n\ge3$,
+z jednym wyjątkiem: $a=-1/2$. Wtedy
+$[V_a,h\otimes I+I\otimes k]=0$ zachodzi dokładnie dla diagonalnych
+$h,k$ z $h+k=cI$. Wynika to z rozdzielenia czterech pasm:
+$\Omega$, pozadiagonalnego symetrycznego, diagonalnego bezśladowego
+i antysymetrycznego. Ich jedyne możliwe zbieżności są przy
+$a=0,-1/2,-n/4$; test na diagonalnych i pozadiagonalnych wektorach
+usuwa dodatkową swobodę w dwóch pozostałych przypadkach.
+
+Przykładem pełnorządowej niejednorodnej równowagi iloczynowej jest
+\[
+ C=\operatorname{diag}(1/2,1/3,1/6),\qquad
+ E=\operatorname{diag}(2,3,6)/11
+\]
+dla $V-S/2$. Na grafie dwudzielnym można naprzemiennie przypisać
+$C$ i jego znormalizowaną odwrotność. Cykl nieparzysty wymusza
+jednorodność. Pola lokalne muszą komutować z przypisanymi stanami.
+Przykład obala rozszerzenie wcześniejszego kanonicznego twierdzenia
+na całą nową klasę bez analizy. Nie realizuje jednak niezerowego jądra:
+$T(C)=T(E)=0$.
+
+Jeszcze słabsza przesłanka czystej dynamiki dopuszcza także niezerowy,
+lecz rzadki przykład
+\begin{equation}\label{eq:matchingexample}
+ C=\frac15\begin{pmatrix}2&1&0\\1&2&0\\0&0&1\end{pmatrix},\qquad
+ E=\frac17\begin{pmatrix}2&-1&0\\-1&2&0\\0&0&3\end{pmatrix}.
+\end{equation}
+W bazie antysymetrycznej $(|01\rangle-|10\rangle)/\sqrt2$,
+$(|02\rangle-|20\rangle)/\sqrt2$,
+$(|12\rangle-|21\rangle)/\sqrt2$ przyjmijmy blok
+\[
+ H_a=\begin{pmatrix}-1/2&0&0\\0&0&1/2\\0&1/2&0\end{pmatrix},
+ \qquad H_s=P_sVP_s.
+\]
+Dokładnie $[H,C\otimes E]=0$. Jądro ma tylko jedną krawędź,
+a znak krawędzi partnera jest przeciwny. Dowolne obrócenie bazy
+przy zachowaniu tego samego $T$ nie jest legalnym obejściem:
+normalne porządkowanie wybiera ustaloną algebrę diagonalną.
+
+\section{Przeszkody niezależne od pełnego rzędu lub wybranego bloku}
+
+\begin{theorem}[Identyczne czynniki, dowolny rząd]\label{thm:rankfree}
+Dla $n\ge3$, dowolnego $H$ w klasie \eqref{eq:pureclass} i dowolnego
+stanu $C$,
+\[
+ [H,C\otimes C]=0\quad\Longleftrightarrow\quad C=I/n.
+\]
+\end{theorem}
+
+\begin{proof}
+Żadna niezerowa właściwa podprzestrzeń $M\subset\mathbb C^n$ nie ma
+$\operatorname{Sym}^2M$ niezmienniczej względem $V_s=P_sVP_s$.
+Istotnie, dla $\psi\in M$ działanie $V_s$ po odjęciu
+$\psi\otimes\psi/2$ odpowiada diagonalnej macierzy
+$\operatorname{diag}(q/2-\psi_i^2)$, $q=\sum_i\psi_i^2$,
+której obraz musiałby leżeć w $M$.
+Jeżeli $e_j\in M$, wybór $\psi=e_j$ daje macierz odwracalną
+i wymusza $M=\mathbb C^n$. W przeciwnym razie żadna baza współrzędna
+nie należy do $M$, więc wszystkie współczynniki diagonalne muszą
+znikać. Równości $\psi_i^2=q/2$ dają $(n-2)q=0$, a następnie
+$\psi=0$, sprzeczność. Argument obejmuje zespolone podprzestrzenie.
+
+Stacjonarność produktu wymuszałaby niezmienniczość jego nośnika
+$M\otimes M$, zatem także $\operatorname{Sym}^2M$.
+Wynika stąd pełny rząd $C$. Wtedy logarytm produktu daje pole
+$h\otimes I+I\otimes h$, $h=\log C$. Jego komutacja z $V_s$
+wymusza $h$ skalarne: izolowany wektor $\Omega$ ustala część
+rzeczywistą, a rozdzielenie diagonalnego i pozadiagonalnego pasma
+usuwa część urojoną. Stąd $C=I/n$.
+\end{proof}
+
+Wyjątek $n=2$ jest rzeczywisty: dla $V=X\otimes X/2$ istnieją
+niejednorodne identyczne produkty stacjonarne.
+Dla nierównych czynników pełnego rzędu w klasie \eqref{eq:pureclass}
+można natomiast dowieść warunku koniecznego
+\begin{equation}\label{eq:matching}
+ E=C^{-1}/\Tr(C^{-1}),\qquad
+ \text{pozadiagonalny graf $C$ ma stopień najwyżej jeden}.
+\end{equation}
+W skrócie: logarytmy dają $h+k=cI$. Dla
+$L=P_s(h\otimes I-I\otimes h)P_a$ komutacja bloków i hermitowskość
+wymuszają $[V_s,LL^*]=0$. Projektor $D$ jest sumą projektorów
+spektralnych $V_s$, więc także z nim komutuje $LL^*$.
+W obrazie macierzy diagonalnej współczynnik $d_k$ w elemencie
+pozadiagonalnym $ij$, dla różnych $i,j,k$, wynosi $-2h_{ik}h_{jk}$.
+Musi zniknąć. Każda kolumna $h$ ma najwyżej jedną krawędź,
+a wykładnik zachowuje ten podział na bloki jedno- i dwuwymiarowe.
+To dowodzi \eqref{eq:matching}, także dla zespolonego $C$.
+
+Gęsty strict oraz kanoniczny cykl legacy nie spełniają tego warunku.
+Ich co najmniej dwie krawędzie przy jednym węźle są niezerowe.
+Jest to osobne zastosowanie strukturalne do obu referencji, bez
+zamiany jąder i bez transferu ich ról fizycznych.
+
+\section{Wspólne mody strict usuwają także ograniczenie rzędu partnerów}
+
+Niech $K_\star$ będzie dostarczoną macierzą strict na $C_{12}$:
+\[
+ (K_\star)_{ij}=\frac{\cos((743d_{ij}+650)/4000)}{1+d_{ij}^{9/5}},
+ \quad (K_\star)_{ii}=0.
+\]
+Oznaczmy przez $u$ jednorodny wektor Perrona i przez
+$v_i=(-1)^i/\sqrt{12}$ mod naprzemienny. Obie przestrzenie własne
+są proste. Ich wartości własne to $\lambda_0=s$ i $\lambda_6$.
+Własności te mają oddzielne dokładne przedziały Fourierowskie.
+\footnote{Źródło: \texttt{fin\_replication\_consistency/certify.py} oraz
+\texttt{fin\_projected\_learning/research.py}, funkcja
+\texttt{certify\_strict\_spectrum}. Przedziały są przeliczane w
+certyfikacie bieżącego wyniku, a nie zastępowane zaokrąglonym widmem.}
+
+Nie zakładamy pełnego rzędu. Zakładamy jedynie, że $C,E$ są stanami
+indywidualnie stacjonarnymi i samospójnymi z tym samym strict:
+\begin{equation}\label{eq:states}
+ T(C)=\gamma_CK_\star,\quad[K_\star,C]=0,\qquad
+ T(E)=\gamma_EK_\star,\quad[K_\star,E]=0,
+ \quad\gamma_C,\gamma_E>0.
+\end{equation}
+Spójność grafu wymusza
+$\Rea C=I/n+\gamma_CK_\star$, analogicznie dla $E$.
+Urojona część jest rzeczywistą macierzą antysymetryczną komutującą
+z $K_\star$; na każdej prostej rzeczywistej przestrzeni własnej musi
+znikać. Zatem
+\[
+ Cu=c_0u,\ Cv=c_6v,\quad c_j=1/n+\gamma_C\lambda_j,
+ \qquad Eu=e_0u,\ Ev=e_6v,\quad e_j=1/n+\gamma_E\lambda_j.
+\]
+Mamy $c_0>c_6\ge0$, $e_0>e_6\ge0$, a więc
+$\Delta=c_0e_0-c_6e_6>0$.
+
+\begin{theorem}[Niezmienny element komutatora]\label{thm:entry}
+Dla $\alpha=u\otimes u$, $\beta=v\otimes v$ i
+$\kappa=(n-2)/(2n)=5/12$, każdy $H$ z \eqref{eq:pureclass} spełnia
+\begin{equation}\label{eq:entry}
+ \langle\beta|[H,C\otimes E]|\alpha\rangle=\kappa\Delta>0.
+\end{equation}
+Żaden produkt stanów \eqref{eq:states} nie jest zatem równowagą
+w całej tej klasie, bez względu na ich rzędy i chiralności.
+\end{theorem}
+
+\begin{proof}
+Dokładnie $V\alpha=\alpha/2+\kappa\Omega$ i
+$V\beta=\beta/2+\kappa\Omega$.
+Blok antysymetryczny anihiluje oba wektory, a przesunięcie $cP_s$
+nie zmienia badanego komutatora. Wektory $\alpha,\beta$ są własne
+dla $C\otimes E$, z wartościami $c_0e_0,c_6e_6$.
+To daje \eqref{eq:entry} bez założenia odwracalności stanów.
+\end{proof}
+
+Wynik obejmuje między innymi stany minimalnego rzędu sześć z przeciwnymi
+chiralnościami: ich wspólny mod Perrona nie znika.
+Istnieje także wersja grafowa. W produkcie wielu marginałów
+\eqref{eq:states} porównujemy $u^{\otimes N}$ z wektorem zawierającym
+$v$ dokładnie na końcach wybranej krawędzi. Tylko ta krawędź może
+połączyć te wektory. Dowolne pola jednociałowe i inne krawędzie nie
+kasują elementu \eqref{eq:entry}, pomnożonego przez sprzężenie oraz
+dodatnie czynniki $c_0$ pozostałych nośników. Warunek niezerowego
+sprzężenia kanonicznego na tej krawędzi jest istotny.
+
+\section{Ilościowa dolna granica korelacji}
+
+\begin{theorem}[Granica niezależna od niewidocznego bloku]\label{thm:floor}
+Niech $H$ należy do \eqref{eq:pureclass}, a $R$ będzie dowolnym
+stacjonarnym stanem dwuciałowym o marginałach $C,E$ z \eqref{eq:states}.
+Wtedy
+\begin{equation}\label{eq:floor}
+ \Dtr(R,C\otimes E):=\tfrac12\|R-C\otimes E\|_1
+ \ge\frac{\Delta}{\sqrt{2(n-2)}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Niech $\chi=R-C\otimes E$. Jej oba ślady częściowe są zerowe.
+Dla $d=\alpha-\beta$ zdefiniujmy
+\begin{align}
+ B_0&=\frac\kappa2\bigl(|d\rangle\langle\Omega|
+                         +|\Omega\rangle\langle d|\bigr),\\
+ L&=(|u\rangle\langle u|-|v\rangle\langle v|)\otimes I
+       +I\otimes(|u\rangle\langle u|-|v\rangle\langle v|),\qquad
+ B=B_0-\kappa L/2.
+\end{align}
+Stacjonarność i \eqref{eq:entry} dają
+$\Tr(\chi B_0)=-\kappa\Delta$.
+Odejmowanie $L$ jest dozwolone właśnie dzięki zerowym marginałom
+$\chi$, więc $\Tr(\chi B)=-\kappa\Delta$.
+
+Norma $B$ jest dokładnie $\kappa\sqrt{(n-2)/2}$.
+Na rozpiętości $d$ i $\Omega-\alpha-\beta$ operator ma dwie przeciwne
+wartości własne tej wielkości; na sektorach z jednym czynnikiem $u$
+lub $v$ i jednym ortogonalnym ma wartości $\pm\kappa/2$.
+Pozostałe wartości są zerowe. Nierówność Höldera daje
+$\|\chi\|_1\ge\sqrt{2/(n-2)}\Delta$, czyli \eqref{eq:floor}.
+\end{proof}
+
+Dla $\gamma_C=\gamma_E=1/20$ dokładny przedział daje
+\[
+ \Delta\ge
+ \frac{302968216165207140298707455443}
+      {12000000000000000000000000000000}
+ >\frac{63}{2500}.
+\]
+Ponieważ $\sqrt{20}<9/2$, dostajemy ścisły certyfikat
+\begin{equation}\label{eq:number}
+ \Dtr(R,C\otimes E)>\frac7{1250}=0.0056.
+\end{equation}
+Standardowa nierówność Pinskara, dla logarytmów naturalnych,
+daje następnie
+\[
+ I(A:B)_R=D(R\|C\otimes E)
+ \ge2\Dtr(R,C\otimes E)^2>\frac{49}{781250}\ \text{nat}.
+\]
+\footnote{E.~A.~Carlen, E.~H.~Lieb,
+\emph{Remainder Terms for Some Quantum Entropy Inequalities} (2014),
+równania (2.6)--(2.7),
+\href{https://arxiv.org/abs/1402.3840}{arXiv:1402.3840}.
+Nierówność Pinskara jest narzędziem literaturowym, nie nowym twierdzeniem FIN.}
+
+Granica jest niezależna od dowolnego $B_a$, od $c$ i od wspólnej
+niezerowej skali czasowej całego $H$. Nie gwarantuje, że dla każdego
+$B_a$ istnieje odpowiedni stan $R$. Klasa nie jest jednak pusta:
+wcześniejsza konstrukcja antysymetryczna dla kanonicznego $V$ i
+$C=E=I/12+K_\star/20$ dostarcza stanu stacjonarnego o tych marginałach.
+
+\paragraph{Granica zakresu.}
+Wersja ilościowa dotyczy dwóch nośników i hamiltonianu w klasie
+\eqref{eq:pureclass}, ewentualnie pomnożonego przez jedną skalę.
+Dowolne dodatkowe pola lokalne spoza tej klasy wymagają nowego
+oszacowania. Grafowe wykluczenie produktu dopuszcza takie pola,
+ale nie przenosi na nie automatycznie liczby \eqref{eq:number}.
+Nie jest to granica splątania, procent fizycznej energii ani czułość
+aparatury. Dotyczy korelacji względem iloczynu zadanych marginałów.
+
+\section{Kontrole, status wyników i następny kierunek}
+
+\paragraph{Co udowodniono.}
+Wyznaczono dokładną różnicę między identyfikacją pełnego źródła,
+mieszanego przepływu i czystego przepływu projektowego. W ostatniej,
+najsłabszej klasie wyprowadzono przeszkodę niezależną od rzędu stanów
+strict i jednolitą dodatnią dolną granicę wymaganych korelacji.
+Nie wystarcza więc dobór innego, niewidocznego bloku hamiltonianu,
+aby uzyskać niezależne stacjonarne nośniki tego samego strict.
+
+\paragraph{Co obalono lub zawężono.}
+Nie wolno utożsamiać czystej dynamiki z jej mieszaną ekstrapolacją.
+Nie wolno też rozszerzać kanonicznej tezy o jedynym maksymalnie
+mieszanym produkcie na dowolny zmieniony lift: przykład odwrotnych
+rozkładów i przykład \eqref{eq:matchingexample} są rzeczywistymi wyjątkami.
+Nie realizują one jednak gęstego, samospójnego strict.
+Wyjątek $n=2$, zerowe kodowanie i zmiana bazy bez zmiany $T$ zostały
+oddzielnie uwzględnione.
+
+\paragraph{Dowody a obliczenia.}
+Wymiar dwóch swobód dla przepływu mieszanego potwierdza dokładny
+układ wszystkich współczynników kwadratowych dla $n=3$: rzędy
+$71/81$ bez wzajemności oraz $79/81$ po jej nałożeniu.
+Nie jest to zastępstwo dowodu ogólnego. Gęsty racjonalny przykład
+daje dokładną sprzeczność $\operatorname{rank}M=9$,
+$\operatorname{rank}[M|b]=10$ nawet dla pełnego hermitowskiego
+bloku antysymetrycznego. Przeciwne chiralności rzędu sześć,
+zmiany niewidocznego bloku i pola lokalne na grafie są niezależnymi
+kontrolami formuły \eqref{eq:entry}. Małe reszty numeryczne nie są
+podstawą granicy \eqref{eq:number}.
+
+\paragraph{Co pozostaje warunkowe.}
+Klasa dotyczy stałych hermitowskich interakcji dwuciałowych
+symetrycznych względem wymiany, z określonym czystym przepływem.
+Pamięć kontrolera, inne prawa składania, otwarte układy i inne
+mapy źródłowe nie zostały wykluczone. Protokół świeżych kopii
+z poprzedniego raportu nie jest równowagą, więc ten wynik go nie obala.
+Podstawowe techniki map komutujących, polaryzacji i nierówności
+entropowych są znane; nie zgłasza się dla nich pierwszeństwa.
+Nową treścią dla badanego FIN jest połączenie klasyfikacji z
+niekasowalnym świadkiem strict i jego jawną granicą korelacyjną.
+
+\paragraph{Najbardziej rozstrzygający dalszy obiekt.}
+Potrzebny jest konkretny, niezależnie uzasadniony stan lub mechanizm
+tworzenia korelacji $\chi$, który ma zerowe marginały, zachowuje
+dodatniość $C\otimes E+\chi$ i spełnia
+$[H,\chi]=-[H,C\otimes E]$. Musi w szczególności opłacić świadek
+$\Tr(\chi B)=-\kappa\Delta$ oraz granicę \eqref{eq:floor},
+a następnie przewidzieć mierzalną propagację i poprawki.
+Samo dopasowanie jądra albo zmiana niewidocznego bloku nie realizuje
+tego zadania. To jest konkretny nowy warunek źródłowy, nie kolejny
+ogólny audyt zamkniętej ścieżki.
+
+Nie wyprowadzono jednostek, fizycznego przygotowania ani zapisu
+laboratoryjnego. Nie domknięto QW-2191, mostu legacy--strict,
+transferu ról, SM/GR, $L_{\rm total}$ ani ToE. Nadsoliton pozostaje
+pierwotną informacją w stanie solitonicznym; dodatkowa warstwa
+informacyjna pod nim nie została założona. Strukturalne testy legacy
+nie przenoszą na niego liczby \eqref{eq:number} ani fizycznych ról strict.
+
+\section*{Źródła i dane}
+\begin{enumerate}
+\item Dokumenty źródłowe repozytorium wymienione w przypisach:
+proponowany układ stanu--jądra, granica ST8648 i poprzedni raport
+o kwantowym źródle. Są przesłankami i kontekstem, nie nowymi odkryciami.
+\item M.~Brešar, Š.~Špenko, \emph{Functional identities in one variable},
+§3, \href{https://users.fmf.uni-lj.si/bresar/documents/FIonevar.pdf}{wersja autorska}.
+\item E.~A.~Carlen, E.~H.~Lieb, \emph{Remainder Terms for Some Quantum
+Entropy Inequalities} (2014),
+\href{https://arxiv.org/abs/1402.3840}{arXiv:1402.3840}.
+\item Dokładne przedziały strict:
+\texttt{fin\_replication\_consistency/certify.py} i
+\texttt{fin\_projected\_learning/research.py}.
+Kanoniczna referencja legacy:
+\texttt{fin\_projected\_learning/geometry.py}.
+\item Dane obecnego opracowania:
+\texttt{fin\_hartree\_equivalence/research.py},
+\texttt{results.json}, \texttt{test\_research.py} oraz
+\texttt{verification.json}. Dowody ogólne, dokładne certyfikaty
+skończone i kontrole zmiennoprzecinkowe mają odrębne role.
+\end{enumerate}
+\end{document}

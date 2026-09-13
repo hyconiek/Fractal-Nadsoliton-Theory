@@ -1,0 +1,126 @@
+{
+  "status": "Mixed-flow discord robustness, pure-flow tradeoff and stationary-channel identifiability proved; no fundamental source closure.",
+  "polynomial_transfer": {
+    "n": 12,
+    "reconstruction_polynomial": "-(24*a**3 - 8*a**2*x + 68*a**2 - 24*a*x**2 - 24*a*x + 50*a + 8*x**3 - 44*x**2 - 50*x + 11)/(16*(a + 3)*(2*a + 1))",
+    "denominator": "16*(a + 3)*(2*a + 1)",
+    "genuine_transfer_exceptions": [
+      "-3",
+      "-1/2"
+    ],
+    "old_singular_block_value": "-5/12",
+    "old_value_now_paid": true,
+    "exact_four_band_reconstruction": true
+  },
+  "exceptional_block_bounds": [
+    {
+      "exchange_shift": "-1/2",
+      "inverse_cross_block_norm": "12",
+      "Hamiltonian_norm": "5",
+      "canonical_bound_remains_valid": true
+    },
+    {
+      "exchange_shift": "-3",
+      "inverse_cross_block_norm": "12",
+      "Hamiltonian_norm": "7/2",
+      "canonical_bound_remains_valid": true
+    }
+  ],
+  "exact_tradeoff": {
+    "strict_loading": "1/20",
+    "density_gap_lower": "27234855667/12500000000000",
+    "mode_weight_difference_lower": "234218204114629/2000000000000000",
+    "uniform_CQ_distance_lower": "911271283377980905464649/26400000000000000000000000000000",
+    "uniform_CQ_distance_lower_decimal": 3.451785164310534e-08,
+    "stationarity_residual_coefficient": "27234855667/7700000000000000",
+    "amplified_program_eigenvalue_lower": "249813284145307/30000000000000000",
+    "required_exchange_asymmetry_if_stationary_and_CQ": "911271283377980905464649/13200000000000000000000000000000",
+    "inequality": "d_CQ_A(R) + D_tr(R,Swap R Swap)/2 + coefficient*||[H,R]||_1 >= floor",
+    "premise": "H=V+c P_sym+B_anti; average of the two labelled marginals is the stated strict C.",
+    "attainability_claimed": false
+  },
+  "numerical_checks": {
+    "pure_family_symmetrization_identity_error": 2.2799364356091205e-15,
+    "classical_input_swap_average_marginal_commutator": 1.171091020573149e-05,
+    "CQ_input_stationarity_claimed": false
+  },
+  "actual_transfer_counterexamples": [
+    {
+      "a": -0.5,
+      "stationary_residual": 0.0,
+      "canonical_residual": 0.004910463758239912,
+      "minimum_eigenvalue": 0.0034722222222222233,
+      "strict_marginals_claimed": false
+    },
+    {
+      "a": -3.0,
+      "stationary_residual": 0.0,
+      "canonical_residual": 0.029462782549439483,
+      "minimum_eigenvalue": 0.0034722222222222225,
+      "strict_marginals_claimed": false
+    }
+  ],
+  "asymmetric_CQ_witness": {
+    "first_marginal": "I/12",
+    "second_marginal": "I/12+W/10",
+    "average_marginal": "I/12+W/20",
+    "same_individual_marginals_claimed": false,
+    "program_loading": "11/100",
+    "preparation_success_probability": "11/12",
+    "alternative_deterministic_Luders_instrument": true,
+    "stationary_exchange_shift": "-1/2",
+    "one_sided_CQ_on_first": true,
+    "trace_distance_exchange_asymmetry": 0.4882245541130749,
+    "symmetric_state_nonclassicality_commutator": 0.002244250770940002,
+    "controlled_U_X_expectations_at_time_pi": [
+      -3.2354269956215097e-16,
+      1.0
+    ],
+    "passive_equivalence_scope": "Same fixed outcome-wise swap-covariant instruments and uncontrolled free-evolution channels; not controlled-Hamiltonian or energy-query access."
+  },
+  "exact_broadcasting_certificate": {
+    "marginal_depolarizing_factor": "5/11",
+    "marginal_identity_coefficient": "1/22",
+    "deterministic_CPTP_channels": true,
+    "family": "r E_plus+(1-r)E_minus, 0<=r<=1",
+    "exact_separability_condition": "r=1/2 for every input density",
+    "partial_transpose_minor_offdiagonal": "(2r-1)(rho_ii+rho_jj)/(2(n-1))",
+    "uniform_diagonal_negativity_lower": "abs(2r-1)/n",
+    "local_Choi_partial_transpose_eigenvalue": "-3/88",
+    "one_fixed_party_LOCC_without_quantum_transfer_ruled_out": true,
+    "LOCC_scope": "Universal channel on an unknown input, potentially entangled with a reference; not preparation of one fixed known separable target.",
+    "physical_source_claimed": false
+  },
+  "stationary_channel_mixture_checks": [
+    {
+      "mixing_weight": 0.0,
+      "negativity": 0.09552958628592628,
+      "swap_expectation": -1.0
+    },
+    {
+      "mixing_weight": 0.25,
+      "negativity": 0.047127070656787944,
+      "swap_expectation": -0.5
+    },
+    {
+      "mixing_weight": 0.5,
+      "negativity": 1.4490118008420514e-17,
+      "swap_expectation": 0.0
+    },
+    {
+      "mixing_weight": 0.75,
+      "negativity": 0.04668156932003642,
+      "swap_expectation": 0.5
+    },
+    {
+      "mixing_weight": 1.0,
+      "negativity": 0.10105766537856492,
+      "swap_expectation": 1.0
+    }
+  ],
+  "scope": [
+    "The mixed-flow family has a uniform non-CQ equilibrium bound for all a,b.",
+    "The pure-flow family requires a state-symmetry premise or the explicit asymmetry/residual tradeoff.",
+    "Exchange of the two factors is not the Z12 orientation problem or a physical selector source."
+  ]
+}

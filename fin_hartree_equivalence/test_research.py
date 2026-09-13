@@ -126,6 +126,11 @@ class EquivalenceTests(unittest.TestCase):
             self.assertAlmostEqual(np.linalg.norm(B,2),kappa*np.sqrt((n-2)/2),places=12)
         from fin_quantum_lift import research as q
         W=q.strict();C=np.eye(12)/12+.05*W;R=q.antisymmetric_completion(C)
+        V,*_=q.structures(12)
+        self.assertGreater(np.linalg.eigvalsh(R)[0],-1e-13)
+        self.assertAlmostEqual(np.trace(R).real,1,places=13)
+        np.testing.assert_allclose(q.marginal(R,12),C,atol=1e-13)
+        np.testing.assert_allclose(V@R,R@V,atol=1e-13)
         chi=R-np.kron(C,C);alpha,beta,B,kappa=r.correlation_witness()
         c0=float(np.vdot(np.ones(12)/np.sqrt(12),C@(np.ones(12)/np.sqrt(12))).real)
         v=(-1.)**np.arange(12)/np.sqrt(12);c6=float(v@C@v)
@@ -156,6 +161,33 @@ class EquivalenceTests(unittest.TestCase):
         V,S,P,A,D=r.exact_structure(3);H=V+7*P+3*A
         C=s.eye(3)/3
         self.assertEqual(H*s.kronecker_product(C,C),s.kronecker_product(C,C)*H)
+
+    def test_graph_two_mode_entry_survives_local_fields_and_other_edges(self):
+        n=4;V,S,Ps,Pa,D=r.exact_structure(n)
+        V=np.array(V,complex);Ps=np.array(Ps,complex);Pa=np.array(Pa,complex)
+        W=np.array([[0,1,.2,1],[1,0,1,.2],[.2,1,0,1],[1,.2,1,0]])
+        loadings=[5/36,.1,.05];states=[np.eye(n)/n+g*W for g in loadings]
+        self.assertEqual(np.linalg.matrix_rank(states[0],tol=1e-12),3)
+        R=np.kron(np.kron(states[0],states[1]),states[2]);rng=np.random.default_rng(8657)
+        pair=[]
+        for _ in range(3):
+            A=rng.normal(size=(n*n,n*n))+1j*rng.normal(size=(n*n,n*n));A=(A+A.conj().T)/2
+            pair.append(V+7*Ps+Pa@A@Pa)
+        permutation=np.zeros((n**3,n**3))
+        for i in range(n):
+            for j in range(n):
+                for k in range(n):permutation[n*n*i+n*j+k,n*n*i+n*k+j]=1
+        H=2*np.kron(pair[0],np.eye(n))-3*np.kron(np.eye(n),pair[1])+5*permutation@np.kron(pair[2],np.eye(n))@permutation.T
+        for site in range(3):
+            A=rng.normal(size=(n,n))+1j*rng.normal(size=(n,n));A=(A+A.conj().T)/2
+            term=np.ones((1,1))
+            for k in range(3):term=np.kron(term,A if k==site else np.eye(n))
+            H+=term
+        u=np.ones(n)/np.sqrt(n);v=(-1.)**np.arange(n)/np.sqrt(n)
+        alpha=np.kron(np.kron(u,u),u);beta=np.kron(np.kron(v,v),u)
+        c0=[float(u@C@u) for C in states];cv=[float(v@C@v) for C in states]
+        expected=2*(n-2)/(2*n)*(c0[0]*c0[1]-cv[0]*cv[1])*c0[2]
+        self.assertAlmostEqual(np.vdot(beta,(H@R-R@H)@alpha).real,expected,places=12)
 
 
 if __name__=='__main__':unittest.main()

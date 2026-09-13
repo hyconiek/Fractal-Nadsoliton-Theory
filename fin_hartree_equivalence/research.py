@@ -150,6 +150,7 @@ def correlation_floor_certificate():
     previous=importlib.util.module_from_spec(spec);spec.loader.exec_module(previous)
     certificate=previous.certify_strict_spectrum()
     eig=[tuple(map(F,row)) for row in certificate['eigenvalue_intervals']]
+    assert min(F(1,12)+row[0]/20 for row in eig)>F(1,22)
     c0=tuple(F(1,12)+x/20 for x in eig[0]);c6=tuple(F(1,12)+x/20 for x in eig[6])
     delta=(c0[0]**2-c6[1]**2,c0[1]**2-c6[0]**2)
     assert c6[0]>0 and delta[0]>F(63,2500)
@@ -201,7 +202,7 @@ def run():
     psi=sp.Matrix([1,sp.I,2])/sp.sqrt(6);pure=psi*sp.conjugate(psi.T)
     pure_field=ptr(perturb*sp.kronecker_product(sp.eye(3),pure),3)
     assert sp.simplify(pure_field*pure-pure*pure_field)==sp.zeros(3)
-    return dict(status='Proof checkpoint; three different identification premises kept separate.',
+    return dict(status='Analytic lift classification and rank-free uniform strict correlation floor proved; source/physical closure is not claimed.',
         exact_commuting_map_ranks=ranks,exchange_family_local_ranks=rank_rows,
         twelve_label_invisible_dimensions=dict(full_source=0,mixed_projective_flow=2,
             pure_projective_flow=1+66**2,pure_flow_modulo_global_energy_shift=66**2),
