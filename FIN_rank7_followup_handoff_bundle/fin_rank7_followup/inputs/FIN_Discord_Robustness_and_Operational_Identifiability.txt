@@ -1,0 +1,397 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Twierdzenie}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Dtr}{D_{\rm tr}}
+\newcommand{\CQ}{\mathcal C\!\mathcal Q}
+\title{FIN: odporność dysonansu i identyfikowalność operacyjna}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Zakaz zerowego dysonansu kwantowego dla zadanego marginalnego strict
+nie znika w pełnej rodzinie mikroskopowych oddziaływań zgodnych z tą
+samą mieszaną dynamiką Hartreego. Pozorny wyjątek $a=-5/12$ zostaje
+rozstrzygnięty dokładnym rachunkiem spektralnym. W większej klasie
+zgodnej tylko z dynamiką stanów czystych otrzymujemy ilościowe
+ograniczenie łączące nieklasyczność, asymetrię wymiany i brak stacjonarności.
+Jednocześnie konstruujemy uniwersalne stacjonarne kanały o identycznych
+obu lokalnych kanałach wyjściowych, lecz odmiennym splątaniu.
+Ich mieszanka jest separowalna dokładnie przy równych wagach.
+Wyniki określają, czego nie można wywnioskować z lokalnego jądra
+i jakie dodatkowe pomiary lub zasoby rozróżniają opisy mikroskopowe.
+Nie stanowią wyprowadzenia fundamentalnej teorii fizycznej FIN.
+\end{abstract}
+
+\section{Ustalone dane i trzy różne rodzaje informacji}
+
+Na dwóch nośnikach o wymiarze $n=12$ przyjmujemy
+\[
+ V=\frac{|\Omega\rangle\langle\Omega|+S-2D}{2},\quad
+ |\Omega\rangle=\sum_i|ii\rangle,\quad
+ D=\sum_i|ii\rangle\langle ii|,\quad P_s=(I+S)/2,
+\]
+gdzie $S$ zamienia nośniki. Mapa źródłowa to
+$T(\rho)=\Pi\Re\rho=\Tr_2[V(I\otimes\rho)]$.
+\footnote{Źródła repozytoryjne:
+\texttt{FIN\_Hartree\_Equivalence\_and\_Strict\_Correlation\_Floor.tex}
+oraz \texttt{FIN\_Separable\_Stationarity\_and\_Necessary\_Discord.tex}.
+Rozróżniają pełny operator źródłowy, przepływ stanów mieszanych
+i słabszą zgodność czystych przepływów projektowych.}
+
+Zadany rzeczywisty stan strict to $C=I/12+W/20$,
+\[
+ W_{ij}=\frac{\cos((743d_{ij}+650)/4000)}{1+d_{ij}^{9/5}},\qquad W_{ii}=0,
+\]
+z odległością cykliczną. Dla przepływu $i[T(\rho),\rho]$ wszystkie
+hermitowskie podniesienia symetryczne względem zamiany, zgodne na
+każdym stanie mieszanym, mają postać
+\begin{equation}\label{eq:mixed}
+ H_a=V+aS+bI.
+\end{equation}
+Zgodność tylko na czystych projektorach pozostawia większą klasę
+\begin{equation}\label{eq:pure}
+ H=V+cP_s+B_a,\qquad B_a=P_aB_aP_a=B_a^*,\quad P_a=(I-S)/2.
+\end{equation}
+Są to wcześniejsze klasyfikacje, nie nowe założenie, że obie przesłanki
+są równoważne. Znajomość pełnej mapy $T$ jest jeszcze silniejsza.
+
+Poniższe wyniki rozróżniają: lokalny przepływ, lokalne kanały
+przygotowania oraz pełne wspólne rekordy pomiarowe. Nie są to te same
+dane. Zamiana dwóch nośników nie jest kierunkiem generatora $\mathbb Z_{12}$,
+więc żaden wniosek o asymetrii nie rozstrzyga selektora QW-2191.
+
+\section{Dysonans jest konieczny w całej klasie mieszanego przepływu}
+
+Cztery pasma $H_a-bI$ mają wartości
+\[
+ e_\Omega=a+(n-1)/2,\quad e_+=a+1/2,\quad
+ e_D=a-1/2,\quad e_A=-a-1/2.
+\]
+Wartości kanonicznego $V$ na tych pasmach to odpowiednio
+$(n-1)/2,1/2,-1/2,-1/2$.
+Dla $j\in\{+,\Omega\}$ zdefiniujmy wielomiany Lagrange'a
+$p_j(x)=\prod_{k\ne j}(x-e_k)/(e_j-e_k)$.
+Wtedy
+\begin{equation}\label{eq:poly}
+ V=-I/2+p_+(H_a-bI)+(n/2)p_\Omega(H_a-bI)
+\end{equation}
+wszędzie poza $a=-1/2,-n/4$.
+Zbieżność dwóch pasm przy $a=0$ nie szkodzi, bo mają tę samą wartość $V$.
+
+Dla $n=12$ mianownik po uproszczeniu wynosi
+$16(a+3)(2a+1)$. Jest niezerowy przy $a=-5/12$.
+Dlatego każda równowaga w tym dawnym przypadku nierozstrzygniętym
+jest także równowagą kanonicznego $V$.
+
+Dwa rzeczywiste wyjątki wymagają osobnego dowodu. Istnieją tam dodatnie
+stany stacjonarne z koherencją między pasmami, które nie komutują z $V$;
+nie wolno więc rozszerzać \eqref{eq:poly} przez domysł.
+Jednak blok między jednorodnym $u$ a naprzemiennym $v$ ma wartości
+singularne $(n-2)/(2n)$, $|a+(n-2)/(2n)|$ i $1/n$.
+Przy obu wyjątkach dla $n=12$ norma odwrotności wynosi 12, a normy
+hamiltonianu, po pominięciu skalaru, wynoszą odpowiednio $5$ i $7/2$.
+Nie przekraczają kanonicznego $11/2$.
+
+\begin{theorem}[Jednolita granica dla wszystkich $a,b$]\label{thm:mixed}
+Każdy stacjonarny stan dwuciałowy dla \eqref{eq:mixed}, którego
+pierwszym marginalnym stanem jest zadany $C$, ma odległość od
+zbioru klasyczno-kwantowego po tej stronie co najmniej
+\begin{equation}\label{eq:d0}
+ d_0=\frac{911271283377980905464649}
+ {26400000000000000000000000000000}>3.45\cdot10^{-8}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Poza dwoma wyjątkami \eqref{eq:poly} przenosi stacjonarność na $V$.
+W wyjątkach poprzedni dowód oparty na odwracalnym bloku zachowuje
+tę samą normę odwrotności i nie większą normę hamiltonianu.
+Niech $\delta_L$ będzie dokładną dolną granicą najmniejszej niezerowej
+szczeliny widma $C$, a $\Delta_L$ dolną granicą różnicy jego prostych
+wag modów $u,v$. Ten sam rachunek daje
+$d_0=\delta_L\Delta_L/7392$.
+\footnote{Przeliczane przedziały pochodzą z
+\texttt{fin\_projected\_learning/research.py} i
+\texttt{fin\_replication\_consistency/certify.py}.
+W szczególności $\delta_L=27234855667/12500000000000$ oraz
+$\Delta_L=234218204114629/2000000000000000$.}
+Skalar $bI$ nie zmienia stacjonarności. Istnienie równowagi o tych
+marginałach dla każdego $a$ nie jest częścią twierdzenia.
+\end{proof}
+
+Wniosek dotyczy zerowego jednostronnego dysonansu i geometrycznej
+odległości od zbioru CQ. Nie podaje wartości entropowego dysonansu
+ani miary splątania.
+
+\section{Nieklasyczność, asymetria lub ruch: większa klasa czysta}
+
+Dla dowolnego $R$ połóżmy $\overline R=(R+SRS)/2$.
+W całej klasie \eqref{eq:pure} zachodzi dokładna tożsamość
+\begin{equation}\label{eq:twirlidentity}
+ [V,\overline R]=P_s[H,R]P_s.
+\end{equation}
+Po uśrednieniu stan jest blokowy względem wymiany; na bloku
+symetrycznym $H$ różni się od $V$ tylko skalarem, a na
+antysymetrycznym sam $V$ jest skalarny. To dowodzi tożsamości
+także bez stacjonarności.
+
+Niech $d_A(R)=\inf_{Q\in\CQ_A}\Dtr(R,Q)$,
+$\mathcal A(R)=\Dtr(R,SRS)$ i $\epsilon=\|[H,R]\|_1$.
+Zakładamy tutaj, że średnia obu oznakowanych marginałów jest równa $C$,
+niekoniecznie każdy marginalny stan osobno.
+\begin{theorem}[Trójczłonowe ograniczenie]\label{thm:tradeoff}
+W powyższym zakresie
+\begin{equation}\label{eq:tradeoff}
+ d_A(R)+\tfrac12\mathcal A(R)
+       +\frac{\delta_L}{616}\epsilon\ge d_0.
+\end{equation}
+Analogiczny wynik zachodzi po drugiej stronie.
+\end{theorem}
+
+\begin{proof}
+Stan $\overline R$ ma oba marginały $C$. Rzutowanie go w różne
+przestrzenie własne pierwszego $C$ daje $\widetilde R$.
+Rachunek odwracalnego bloku i \eqref{eq:twirlidentity} dają
+$c_0-c_6\le12\epsilon+24\|V\|\|\overline R-\widetilde R\|_1$.
+Porównanie normy Frobeniusa i śladowej oraz dodatnia szczelina widma
+prowadzą do
+\[
+ \|\overline R-\widetilde R\|_1
+ \le\frac{48(1+\|C\|)}{\delta_L}\,d_A(\overline R).
+\]
+Ponieważ $\|V\|=11/2$, $\|C\|<1/6$, współczynnik łączny nie
+przekracza $7392/\delta_L$. Odległość od dowolnego ustalonego zbioru
+jest 1-lipschitzowska, więc
+$d_A(\overline R)\le d_A(R)+\mathcal A(R)/2$.
+Podzielenie nierówności przez ten współczynnik daje \eqref{eq:tradeoff}.
+\end{proof}
+
+Dla stanu stacjonarnego i symetrycznego dostajemy $d_A(R)\ge d_0$
+niezależnie od 4357 niewidocznych parametrów oddziaływania.
+Dla stacjonarnego stanu CQ konieczna byłaby natomiast
+$\mathcal A(R)\ge2d_0$. Nie jest to dowód nasycenia tej granicy.
+Dla hamiltonianu pomnożonego przez $g\ne0$ resztę komutatora należy
+podzielić przez $|g|$; nie wyprowadzono absolutnej jednostki czasu.
+
+Równe marginały same nie wymuszają symetrii wymiany. Nie wolno również
+zakładać, że uśrednienie zachowuje CQ: dla małego $t>0$ stan
+\[
+ C\otimes C+t(P_u-P_v)\otimes(|u\rangle\langle v|+|v\rangle\langle u|)
+\]
+jest dodatni i CQ po pierwszej stronie, ma oba marginały $C$, ale
+jego średnia po zamianie już nie komutuje z $C\otimes I$.
+Ten przykład nie jest deklarowany jako stacjonarny.
+
+\section{Jawny stan asymetryczny i dostępne rekordy}
+
+Niech $C'=I/12+11W/100$; dokładnie $C'\succ I/125$.
+Dla $Q_i=I-|i\rangle\langle i|$ zdefiniujmy
+\begin{equation}\label{eq:cq}
+ R_{\rm CQ}=\frac1{n-1}\sum_i |i\rangle\langle i|\otimes Q_iC'Q_i.
+\end{equation}
+Jest to wyjście kompletnego instrumentu Lüdersa
+$K_i=Q_i/\sqrt{n-1}$, z zapisem wyniku na pierwszym nośniku.
+Spełnia $\sum_iK_i^*K_i=I$ i jest deterministycznym kanałem CQ
+na dowolnym wejściu. Alternatywna realizacja przez losowy wybór
+projektora i selekcję sukcesu ma prawdopodobieństwo $11/12$;
+nie należy utożsamiać tych dwóch realizacji sprzętowych.
+
+Dla podanego programu marginały \eqref{eq:cq} wynoszą
+\[
+ (R_{\rm CQ})_A=I/12,\qquad
+ (R_{\rm CQ})_B=I/12+W/10,
+\]
+a ich średnia jest $C$. To nie jest kontrprzykład z dwoma
+indywidualnymi marginałami $C$.
+Ponieważ $DR_{\rm CQ}=0$, hamiltonian
+$H_-=V-S/2=(|\Omega\rangle\langle\Omega|-2D)/2$
+anihiluje jego nośnik. Stan oraz każda z jego gałęzi są stacjonarne.
+Średnia $\overline R$ jest natomiast równowagą kanonicznego $V$
+z oboma marginałami $C$ i niezerowym dysonansem po obu stronach.
+Stan \eqref{eq:cq} jest klasyczny tylko po jednej określonej stronie;
+nie ustanawia w pełni klasycznej teorii dwóch nośników.
+
+Dla efektów komutujących z $S$ mamy $\Tr(OR)=\Tr(O\overline R)$.
+Co więcej, dla niekontrolowanych kanałów ewolucji
+\begin{equation}\label{eq:passive}
+ \mathcal P_S\mathcal U_a(t)=\mathcal U_0(t)\mathcal P_S,
+ \qquad \mathcal P_S(R)=(R+SRS)/2.
+\end{equation}
+Każda wspólna, ustalona mapa wyniku instrumentu, kowariantna względem
+$S$, komutuje z $\mathcal P_S$. Indukcja daje zatem identyczne rekordy
+każdego skończonego adaptacyjnego protokołu zbudowanego z takich map
+i pasywnych kanałów dla par opisów $(H_-,R_{\rm CQ})$ i $(V,\overline R)$.
+
+To ograniczona równoważność operacyjna, nie zakaz rozróżnienia modeli.
+Oznakowany lokalny pomiar widzi różne marginały. Sterowanie koherentne
+hamiltonianem jest także mocniejszym zasobem niż jego zwykły kanał.
+\footnote{M.~Araújo, A.~Feix, F.~Costa, Č.~Brukner,
+\emph{Quantum circuits cannot control unknown operations},
+New Journal of Physics 16, 093026 (2014),
+\href{https://arxiv.org/abs/1309.7976}{arXiv:1309.7976}.
+Ogólne rozróżnienie dostępu do bramki i jej kontrolowanej wersji
+nie oznacza niemożliwości kontroli w określonej realizacji fizycznej.}
+Z kontrolą początkowo w $|+\rangle$ odczyt $X$ wynosi
+$\Re\Tr(U(t)R)$: tutaj jest równy $\cos(t/2)$ w pierwszym kanonicznym
+opisie oraz $1$ w opisie przesuniętym. Przy $t=\pi$ otrzymujemy
+$0$ i $1$. Oba kontrolowane hamiltoniany mogą respektować zamianę.
+Dlatego sama symetria nie uzasadnia wykluczenia takiego dostępu.
+Zapytania o energię i kontrolowane czasy nie należą do \eqref{eq:passive}.
+
+\section{Te same lokalne kanały, różne splątanie}
+
+Połóżmy $P_+=(I+S)/2-D$, $P_-=(I-S)/2$.
+Dla dowolnego wejściowego stanu $\rho$ definiujemy
+\begin{equation}\label{eq:channels}
+ \mathcal E_\pm(\rho)=\frac2{n-1}P_\pm(\rho\otimes I)P_\pm.
+\end{equation}
+Kanały tego typu należy odróżnić od dokładnego klonowania.
+Konstrukcje z kompresją do podprzestrzeni są znanym narzędziem
+teorii przybliżonego klonowania; nie zgłasza się tu ich ogólnej optymalności.
+\footnote{R.~F.~Werner, \emph{Optimal Cloning of Pure States},
+Physical Review A 58, 1827 (1998), §3,
+\href{https://arxiv.org/abs/quant-ph/9804001}{arXiv:quant-ph/9804001}.}
+
+\begin{theorem}[Stacjonarna rodzina kanałów]\label{thm:channels}
+Oba kanały \eqref{eq:channels} są CPTP, ich wyjścia są stacjonarne
+dla $V$, a oba lokalne kanały są identyczne:
+\begin{equation}\label{eq:local}
+ \mathcal B(\rho)=\frac{I+(n-2)\rho}{2(n-1)}.
+\end{equation}
+Dla $\mathcal E_r=r\mathcal E_++(1-r)\mathcal E_-$,
+$0\le r\le1$, wyjście jest separowalne dla każdego wejścia dokładnie
+wtedy, gdy $r=1/2$. Przy każdym innym $r$ jest NPT dla każdego stanu wejściowego.
+\end{theorem}
+
+\begin{proof}
+Operatory Krausa to
+$\sqrt{2/(n-1)}P_\pm(I\otimes|j\rangle)$.
+Ich zupełność wynika z $\Tr_2P_\pm=(n-1)I/2$.
+Wyjścia należą do pasm energii $\pm1/2$ kanonicznego $V$, więc są
+stacjonarne. Bezpośredni ślad częściowy daje \eqref{eq:local}.
+
+Mieszanka z wagą $1/2$ jest dokładnie średnią po zamianie wyjścia
+instrumentu \eqref{eq:cq}, z dowolnym $\rho$ zamiast $C'$.
+Jest więc jawną sumą dodatnich produktów. Dla niezrównoważonej
+mieszanki blok transpozycji częściowej na $|ii\rangle,|jj\rangle$
+ma zerową przekątną i element pozadiagonalny
+\[
+ z=\frac{(2r-1)(\rho_{ii}+\rho_{jj})}{2(n-1)}.
+\]
+Istnieje para z $\rho_{ii}+\rho_{jj}>0$. Jej wyznacznik wynosi
+$-|z|^2<0$, co dowodzi NPT i splątania.
+\end{proof}
+
+Dla jednolitej przekątnej wejścia negatywność jest co najmniej
+$|2r-1|/n$, a $\Tr(S\mathcal E_r(\rho))=2r-1$.
+Wspólny pomiar $S$ rozróżnia zatem tę rodzinę. Tylko lokalne kanały,
+nawet badane z rejestrem odniesienia, są identyczne; nie wolno
+przenosić tu pełnej równoważności pasywnej z poprzedniej sekcji.
+
+Przy wejściu $C'$ oba lokalne wyjścia są dokładnie $C$.
+Splątanie można więc zmienić bez zmiany całej lokalnej mapy przygotowania
+i bez utraty stacjonarności. Przy wejściu $I/n$ te same kanały mogą
+dawać splątanie mimo zerowego lokalnego źródła $T(I/n)$.
+Splątanie samo nie określa ani nie generuje kształtu jądra.
+
+Kanał $\mathcal E_+$ jest stacjonarny także dla całej klasy
+\eqref{eq:pure}, ponieważ jego wyjście leży w ustalonym symetrycznym
+paśmie. Zapewnia to niepusty przykład stacjonarnego uzupełnienia strict
+niezależny od dowolnego bloku antysymetrycznego. Nie jest to jednak
+wyprowadzenie programu $C'$ ani propagatora strict z samej stacjonarności.
+
+\section{Koszt zasobów i granice interpretacji kanału}
+
+Mieszanka z wagą $1/2$ jest deterministycznym globalnym kanałem CPTP
+z jednego wejścia. Nie wolno na tej podstawie nazwać jej uniwersalnym
+protokołem LOCC, gdy jedyny nieznany program znajduje się początkowo
+u jednej ustalonej strony. Dla $n=12$ lokalny współczynnik depolaryzacji
+wynosi $5/11$. Znormalizowany stan Choia ma po transpozycji częściowej
+wartość własną
+\[
+ \frac{1-(n+1)(5/11)}{n^2}=-\frac3{88}.
+\]
+Kanał lokalny nie niszczy więc każdego splątania z odniesieniem.
+Przesłanie tej odpowiedzi do drugiej strony wymaga transferu kwantowego
+lub odpowiedniego wcześniejszego zasobu; losowy SWAP nie jest
+automatycznie darmową operacją klasyczną.
+
+Ograniczenie dotyczy uniwersalnego kanału na nieznanym wejściu,
+potencjalnie splątanym z odniesieniem. Jeden ustalony znany stan
+separowalny może być przygotowany lokalnie z jego klasycznego opisu.
+Wcześniejsza konstrukcja LOCC z dwoma kopiami programu pozostaje
+poprawną, inną architekturą zasobów.
+
+Podstawowa teoria odniesień i ograniczeń operacyjnych jest znana;
+zamiana dwóch abstrakcyjnych nośników nie jest tu ogłoszona
+fizyczną regułą superselekcji ani źródłem kierunku w $\mathbb Z_{12}$.
+Źródło musi ustalić, jakie obserwable, rekordy, połączenia kwantowe
+i kontrolę czasu rzeczywiście ma dostępny obserwator.
+
+\section{Bilans i dalszy test rozstrzygający}
+
+\paragraph{Udowodniono.}
+Wyjątek $-5/12$ nie znosi zakazu zerowego dysonansu; jednolita granica
+obowiązuje w całej klasie tego samego mieszanego przepływu.
+W większej klasie czystej zachodzi \eqref{eq:tradeoff}.
+Istnieją dokładne stacjonarne kanały z tymi samymi lokalnymi odpowiedziami
+i całkowicie sklasyfikowaną, odmienną zawartością splątania.
+
+\paragraph{Obalono nadmierne uogólnienia.}
+Symetria hamiltonianu i równe marginały nie wymuszają symetrii stanu.
+Uśrednienie nie musi zachować CQ. Rekonstrukcji wielomianowej nie
+wolno stosować w dwóch prawdziwych przecięciach pasm, choć osobne
+kryterium nadal rozstrzyga nieklasyczność strict. Równoważność kanałów
+pasywnych nie obejmuje sterowania hamiltonianem. Separowalne wyjście
+nie czyni uniwersalnej mapy rozsyłania operacją LOCC bez zasobu kwantowego.
+
+\paragraph{Pozostaje warunkowe.}
+Konstrukcje korzystają z programu zawierającego $W$ i z jawnie zadanych
+instrumentów. Klasyfikacja nie wyprowadza ich z nadsolitonu.
+Przykład asymetryczny odtwarza tylko średnią marginałów, nie dwa
+indywidualne strict. Istnienie stacjonarnego CQ z oboma marginałami
+$C$ w całej klasie czystej bez symetrii stanu nie jest tu rozstrzygnięte.
+Nie określono również optymalnych kosztów wszystkich protokołów.
+
+Najbardziej rozstrzygające dalsze zadanie to źródło wspólnego kanału
+przygotowania i dostępnej algebry operacyjnej. Lokalna geometria i jej
+przepływ nie ustalają wagi $r$, wspólnych rekordów ani dostępu do
+kontrolowanego hamiltonianu. Joint pomiar $S$ i kontrola fazy są
+konkretnymi teoretycznymi sposobami rozróżnienia części modeli,
+ale ich fizyczne pochodzenie i kalibracja pozostają otwarte.
+
+Żaden wynik nie jest pomiarem laboratoryjnym, domknięciem QW-2191,
+mostu legacy--strict, transferem ról, źródłem jednostek, SM/GR,
+$L_{\rm total}$ ani ToE. Program i warunki początkowe mogą być
+legalnymi wejściami fizyki, lecz nie wolno ich relabelować jako
+wyprowadzonego samoistnie jądra. Nadsoliton pozostaje pierwotną
+informacją w stanie solitonicznym, bez osobnej warstwy pod nim.
+
+\section*{Źródła i dane}
+\begin{enumerate}
+\item Poprzednie raporty źródłowe FIN wskazane w pierwszym przypisie,
+oraz dokładne przedziały w
+\texttt{fin\_replication\_consistency/certify.py} i
+\texttt{fin\_projected\_learning/research.py}.
+\item M.~Araújo, A.~Feix, F.~Costa, Č.~Brukner,
+\emph{Quantum circuits cannot control unknown operations},
+New Journal of Physics 16, 093026 (2014),
+\href{https://arxiv.org/abs/1309.7976}{arXiv:1309.7976}.
+\item R.~F.~Werner, \emph{Optimal Cloning of Pure States},
+Physical Review A 58, 1827 (1998),
+\href{https://arxiv.org/abs/quant-ph/9804001}{arXiv:quant-ph/9804001}.
+\item \texttt{fin\_discord\_robustness/research.py},
+\texttt{test\_research.py}, \texttt{results.json} i
+\texttt{verification.json}. Tożsamości symboliczne i wymierne
+certyfikaty są odróżnione od pomocniczych kontroli numerycznych.
+Znane narzędzia klonowania i kontroli kwantowej nie są zgłaszane
+jako nowe ogólne prawa fizyki.
+\end{enumerate}
+\end{document}
