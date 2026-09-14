@@ -1,0 +1,376 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Twierdzenie}
+\newtheorem{corollary}{Wniosek}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Dtr}{D_{\rm tr}}
+\newcommand{\CQ}{\mathcal C\!\mathcal Q}
+\title{FIN: separowalna równowaga i konieczny dysonans kwantowy}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dla kanonicznego kwantowego oddziaływania związanego ze źródłem FIN
+konstruujemy jawną separowalną równowagę o obu stanach zredukowanych
+równych $C=I/12+W/20$, gdzie $W$ jest zadanym strict.
+Stan jest mieszaniną 22 produktów i może być warunkowo przygotowany
+przez lokalne pomiary ze wspólnym wyborem podziału, z prawdopodobieństwem
+powodzenia $1/2$. Splątanie nie jest więc konieczne w tym przykładzie.
+Jednocześnie dowodzimy, że żadna równowaga tego kanonicznego oddziaływania
+z marginalnym $C$ nie ma zerowego jednostronnego dysonansu kwantowego.
+Wymagane korelacje mogą być separowalne, lecz nie w pełni klasyczne.
+Przygotowanie nadal korzysta ze stanu zawierającego dane jądra;
+również minimalny plan podziałów nie wyznacza jednoznacznie stanu wspólnego.
+Wyniki nie stanowią wyprowadzenia fundamentalnej fizyki FIN.
+\end{abstract}
+
+\section{Model, pytanie i rozdzielenie pojęć}
+
+Niech $n=12$, $S$ zamienia dwa nośniki, $D=\sum_i|ii\rangle\langle ii|$
+i $|\Omega\rangle=\sum_i|ii\rangle$. Badane oddziaływanie to
+\begin{equation}\label{eq:interaction}
+ V=\frac{|\Omega\rangle\langle\Omega|+S-2D}{2}.
+\end{equation}
+Odpowiada ono zadanej mapie źródłowej
+$T(\rho)=\Pi\Re\rho$ poprzez $\Tr_2[V(I\otimes\rho)]=T(\rho)$.
+Jest to konkretny model mikroskopowy, nie cała klasa możliwych
+fizycznych rozszerzeń FIN.
+\footnote{Źródła repozytoryjne:
+\texttt{FIN\_Quantum\_Source\_Correlation\_and\_Programming\_Report.tex}
+oraz \texttt{FIN\_Hartree\_Equivalence\_and\_Strict\_Correlation\_Floor.tex}.
+Ostatni raport daje dolną granicę korelacji, lecz nie utożsamia jej
+z koniecznością splątania.}
+
+Docelowy stan zredukowany to
+\begin{equation}\label{eq:C}
+ C=\frac I{12}+\frac W{20},\qquad
+ W_{ij}=\frac{\cos((743d_{ij}+650)/4000)}{1+d_{ij}^{9/5}},\quad W_{ii}=0,
+\end{equation}
+z odległością cykliczną $d_{ij}$. Dane strict pozostają wejściem;
+nie wyprowadzamy ponownie ich parametrów.
+
+Stan separowalny ma postać $R=\sum_r p_r\sigma_r\otimes\tau_r$.
+Stan klasyczno-kwantowy po stronie pierwszego nośnika ma mocniejszą
+postać $Q=\sum_i p_i|a_i\rangle\langle a_i|\otimes\rho_i$, gdzie
+$\{|a_i\rangle\}$ jest jedną bazą ortonormalną. Ta druga klasa,
+oznaczana przez $\CQ_A$, odpowiada zerowemu jednostronnemu
+dysonansowi kwantowemu. Separowalność nie pociąga tej własności.
+\footnote{H.~Ollivier, W.~H.~Zurek,
+\emph{Quantum Discord: A Measure of the Quantumness of Correlations},
+Physical Review Letters 88, 017901 (2001),
+\href{https://doi.org/10.1103/PhysRevLett.88.017901}{doi:10.1103/PhysRevLett.88.017901}.
+Rozróżnienie separowalności i dysonansu jest znaną treścią literatury,
+nie nową definicją FIN.}
+
+\section{Jawna separowalna równowaga strict}
+
+Połóżmy $p=5/11$ i
+\begin{equation}\label{eq:program}
+ C'=I/12+(C-I/12)/p=I/12+11W/100.
+\end{equation}
+Dokładne przedziały spektralne dają
+\[
+ \lambda_{\min}(C')\ge
+ \frac{249813284145307}{30000000000000000}>\frac1{125}.
+\]
+Zatem $C'$ jest dodatnim stanem o jednolitej przekątnej.
+\footnote{Przedziały są przeliczane przez
+\texttt{fin\_projected\_learning/research.py} i
+\texttt{fin\_replication\_consistency/certify.py}.
+Nie zastępuje ich dodatniość zaokrąglonej macierzy numerycznej.}
+
+Macierz Hadamarda $H$ rzędu 12 można skonstruować z reszt kwadratowych
+modulo 11. Pierwszy wiersz i kolumna są dodatnie, a dolny blok ma
+przekątną $-1$ i pozostałe elementy $\chi(j-i)$, gdzie $\chi$ jest
+symbolem reszty kwadratowej. Dokładnie $HH^T=12I$.
+Jedenaście niepierwszych kolumn daje zrównoważone cięcia po sześć etykiet.
+Uwzględnienie obu orientacji daje 22 bloki dodatnie $A_r$ i ich dopełnienia
+$B_r$. Każda etykieta należy do 11 bloków $A_r$, a każda para różnych
+etykiet do pięciu.
+
+\begin{theorem}[Separowalna równowaga]\label{thm:separable}
+Dla
+\begin{equation}\label{eq:state}
+ \sigma_r=2P_{A_r}C'P_{A_r},\quad
+ \tau_r=2P_{B_r}C'P_{B_r},\qquad
+ R_{\rm sep}=\frac1{22}\sum_{r=1}^{22}\sigma_r\otimes\tau_r
+\end{equation}
+stan $R_{\rm sep}$ jest separowalny, ma oba marginały równe $C$
+i spełnia $[V,R_{\rm sep}]=0$.
+\end{theorem}
+
+\begin{proof}
+Każdy czynnik jest dodatni i ma ślad jeden, ponieważ blok zawiera
+sześć elementów przekątnej $1/12$. Mamy więc jawny rozkład separowalny.
+W marginale przekątna pozostaje $1/12$, a każdy element pozadiagonalny
+$C'_{ij}$ jest pomnożony przez $2(5/22)=5/11$. To daje $C$.
+
+Nośniki obu czynników są rozłączne w bazie etykiet, zatem
+$DR_{\rm sep}=R_{\rm sep}D=0$ i również
+$|\Omega\rangle\langle\Omega|R_{\rm sep}=0$.
+Przeciwne orientacje zapewniają $SR_{\rm sep}S=R_{\rm sep}$.
+Stąd $[V,R_{\rm sep}]=[S/2,R_{\rm sep}]=0$.
+\end{proof}
+
+Nie jest to wnioskowanie ``PPT, więc separowalny''.
+Dla rzeczywistego programu rzeczywiście $R_{\rm sep}^{T_B}=R_{\rm sep}$,
+lecz separowalność wynika z \eqref{eq:state}.
+Ponadto
+\[
+ R_{\rm sep}\succeq\frac{12}{11}\lambda_{\min}(C')^2(I-D).
+\]
+Wynika to z sześciu przeciwległych orientacji przypadających na
+każdą uporządkowaną parę różnych etykiet. Rząd stanu jest więc
+dokładnie 132. Jego prawdopodobieństwo koincydencji
+$\Tr(DR_{\rm sep})$ jest zerowe, a dla produktu $C\otimes C$ wynosi $1/12$.
+
+Konstrukcja działa dla dowolnego stanu o jednolitej przekątnej,
+jeżeli wzmocniony program jest dodatni. Dla danego rzeczywistego
+jądra gwarantowany zakres ma postać
+\[
+ \gamma\le\frac{5}{11}\frac1{12(-\lambda_{\min}(W))}.
+\]
+Dla strict granica tego wystarczającego zakresu jest większa niż $0.05$.
+Nie jest to dowód maksymalnego zakresu separowalności wszystkich równowag.
+
+\section{Warunkowe przygotowanie przez operacje lokalne}
+
+Wybierzmy równomiernie jedno z jedenastu niezorientowanych cięć.
+Na dwóch niezależnych kopiach $C'$ wykonujemy lokalne pomiary
+$\{P_A,P_B\}$. Akceptujemy przeciwne wyniki. Krausy sukcesu to
+$P_A\otimes P_B$ oraz $P_B\otimes P_A$; dwa pozostałe wyniki
+uzupełniają instrument do mapy zachowującej ślad.
+
+Ponieważ $\Tr(P_A C')=\Tr(P_B C')=1/2$, prawdopodobieństwo
+powodzenia jest dokładnie $1/2$ dla każdego cięcia. Po zapomnieniu
+orientacji i uśrednieniu cięć stanem zaakceptowanej pary jest
+$R_{\rm sep}$. Jest to jawna procedura lokalna z klasyczną komunikacją,
+bez wejściowego zasobu splątania.
+
+Program $C'$, wspólne losowanie cięcia, porównanie wyników i dostarczanie
+kopii są jednak zadanymi zasobami. Program zawiera już macierz $W$.
+Wybór zaakceptowanej gałęzi jest jawny i nie stanowi deterministycznej
+nieliniowej operacji na jednym nieznanym stanie. Stacjonarność dotyczy
+pary po pominięciu rejestru przygotowania; zachowanie rejestru pozwala
+rozróżnić niestacjonarne gałęzie warunkowe. Nie udowodniono równowagi
+całego układu obejmującego wszystkie rekordy i urządzenia przygotowania.
+
+\section{Dlaczego żadna taka kanoniczna równowaga nie jest klasyczno-kwantowa}
+
+\begin{theorem}[Kryterium odwracalnego bloku]\label{thm:block}
+Niech pierwszy marginalny stan stacjonarnego $R$ dla hamiltonianu $H$
+ma proste wektory własne $u,v$ z różnymi wartościami $c_u,c_v$.
+Jeżeli operator $A=\langle u|H|v\rangle$ na drugim nośniku jest
+odwracalny, to $[R,C\otimes I]\ne0$, a zatem $R\notin\CQ_A$.
+\end{theorem}
+
+\begin{proof}
+Gdyby $[R,C\otimes I]=0$, proste sektory $u$ i $v$ byłyby odłączone
+od wszystkich innych sektorów pierwszego nośnika. Oznaczając
+$R_u=\langle u|R|u\rangle$ i $R_v=\langle v|R|v\rangle$, blok
+$u,v$ równania $[H,R]=0$ daje $AR_v=R_uA$.
+Odwracalność wymusza $\Tr R_v=\Tr R_u$, czyli $c_v=c_u$,
+sprzeczność. Każdy stan klasyczno-kwantowy komutuje ze swoim
+pierwszym marginalnym stanem pomnożonym tensorowo przez $I$.
+\end{proof}
+
+Ten ostatni warunek jest jedynie konieczny dla zerowego dysonansu.
+Jego spełnienie nie jest certyfikatem klasyczności: na przykład
+stan maksymalnie splątany ma marginalny stan proporcjonalny do $I$.
+\footnote{C.~A.~Rodríguez-Rosario, G.~Kimura, H.~Imai, A.~Aspuru-Guzik,
+\emph{Lazy states: sufficient and necessary condition for zero quantum
+entropy rates under any coupling to the environment},
+\href{https://arxiv.org/abs/1004.5405}{arXiv:1004.5405}.
+Klasa stanów komutujących z marginalnym operatorem jest szersza od
+stanów o zerowym dysonansie. Stacjonarność dla jednego $V$ nie oznacza
+zerowej odpowiedzi entropii dla każdego innego oddziaływania.}
+
+Dla strict bierzemy rzeczywisty jednorodny wektor $u$ i mod
+naprzemienny $v_i=(-1)^i/\sqrt{12}$. Są prostymi wektorami własnymi
+kanonicznego $C$ w \eqref{eq:C}, z różnymi wartościami.
+Dla $J=\operatorname{diag}((-1)^i)$ mamy dokładnie
+\begin{align}\label{eq:cross}
+ A&=\frac{|u\rangle\langle v|+|v\rangle\langle u|}{2}-\frac J{12},\\
+ A^2&=\frac1{144}(I-P_u-P_v)+\frac{25}{144}(P_u+P_v).
+\end{align}
+Stąd $\|A^{-1}\|=12$. Twierdzenie \ref{thm:block} dotyczy zatem
+\emph{każdej} równowagi kanonicznego $V$ z pierwszym marginalnym $C$,
+nie tylko zbudowanego przykładu. Przy obu marginałach równych $C$
+dysonans jest niezerowy po obu stronach.
+
+W połączeniu z twierdzeniem \ref{thm:separable} otrzymujemy właściwe
+rozstrzygnięcie: splątanie nie jest konieczne, lecz klasyczno-kwantowy
+opis korelacji jest wykluczony w tym modelu. Klasyczna komunikacja
+w przygotowaniu nie przeczy temu wynikowi, ponieważ lokalne stany
+programu zawierają koherencję i nie tworzą jednej wspólnej bazy klasycznej.
+
+\section{Granice ilościowe i ich definicje}
+
+Dla dowolnego $Q\in\CQ_A$, o dowolnym pierwszym marginale $Q_A$,
+\[
+ \|[R,C\otimes I]\|_1
+ \le2(1+\|C\|)\|R-Q\|_1.
+\]
+Dowód polega na dodaniu i odjęciu $Q$ oraz $Q_A$, użyciu
+$[Q,Q_A\otimes I]=0$ i kontrakcji śladu częściowego. Zatem
+\begin{equation}\label{eq:distance}
+ \inf_{Q\in\CQ_A}\Dtr(R,Q)
+ \ge\frac{\|[R,C\otimes I]\|_1}{4(1+\|C\|)}.
+\end{equation}
+
+Dla skonstruowanego $R_{\rm sep}$ wszystkie elementy są nieujemne,
+a nierówne etykiety mają elementy diagonalne $1/132$.
+W elemencie komutatora między $|00\rangle$ i $|10\rangle$ nie ma
+kasowania znaków, więc jego moduł jest co najmniej $C_{01}/132$.
+Dokładne przedziały dają $C_{01}>1/50$ i $\|C\|=c_0<1/6$.
+Norma śladowa komutatora jest co najmniej podwojonym modułem tego
+elementu. W konsekwencji
+\begin{equation}\label{eq:explicitdistance}
+ \inf_{Q\in\CQ_A}\Dtr(R_{\rm sep},Q)>\frac1{15400}.
+\end{equation}
+Jest to granica odległości od zbioru klasyczno-kwantowego, nie obliczona
+wartość entropowego dysonansu ani miara splątania.
+
+Istnieje też słabsza granica dla wszystkich kanonicznych równowag
+z tym $C$. Niech $\widetilde R$ będzie stanem po rzutowaniu na różne
+przestrzenie własne $C$ po pierwszej stronie. Z odwracalnego bloku,
+stacjonarności i $\|[V,X]\|_1\le2\|V\|\|X\|_1$ otrzymujemy
+\[
+ \|R-\widetilde R\|_1\ge\frac{c_0-c_6}{2\|V\|\,12}.
+\]
+Dla najmniejszej niezerowej szczeliny $d_{\min}$ widma $C$,
+$\|[R,C\otimes I]\|_F\ge d_{\min}\|R-\widetilde R\|_F$.
+Ponieważ pełny wymiar macierzy wynosi 144, norma Frobeniusa jest
+co najmniej $1/12$ jej normy śladowej. Łącząc z \eqref{eq:distance},
+\begin{equation}\label{eq:universal}
+ \inf_{Q\in\CQ_A}\Dtr(R,Q)
+ \ge\frac{d_{\min}(c_0-c_6)}{8\|V\|\,12^2(1+c_0)}
+ \ge\frac{911271283377980905464649}
+          {26400000000000000000000000000000}>0.
+\end{equation}
+Użyto dokładnych zewnętrznych przedziałów szczelin, a nie
+zaokrąglonej diagnozy spektralnej. Dolna granica jest zachowawcza,
+około $3.45\cdot10^{-8}$.
+
+Nie należy jej zastępować pozornie mocniejszym argumentem o ustalonym
+marginale. Jeśli wymaga się dokładnie tego samego $C$ także od stanu
+porównawczego CQ, wykluczenie koincydencji daje dystans co najmniej
+$c_0/12$. Ten zbiór porównawczy zmienia się jednak osobliwie przy
+$\gamma\to0$: wtedy $C\to I/12$ traci proste widmo, a
+$R_{\rm sep}\to(I-D)/132$ jest zwykłym diagonalnym stanem klasycznym.
+Nie wolno wnioskować o skończonym dysonansie przy zerowym kodowaniu.
+
+\section{Plan przygotowania nie jest jednoznacznie wyznaczony}
+
+Jedenaście niezorientowanych cięć jest minimalne tylko dla przyjętego
+izotropowego drugiego momentu: jego macierz ma rząd 11, a jedno
+cięcie wnosi rząd jeden. Nie jest to minimalny koszt wszystkich
+możliwych przygotowań kwantowych ani wyprowadzenie fizycznej liczby 12.
+
+Zamiana wierszy 1 i 2 macierzy Hadamarda zachowuje wszystkie statystyki
+pierwszego i drugiego rzędu, liczbę cięć, marginały, separowalność
+i stacjonarność. Zmienia jednak momenty czwarte. Liczba orientacji,
+w których etykiety $0,1$ są po stronie $A$, a $3,4$ po stronie $B$,
+rośnie z jednego do dwóch. Dlatego
+\[
+ (R'_{\rm sep}-R_{\rm sep})_{03,14}
+    =\frac2{11}C'_{01}C'_{34}\ne0.
+\]
+Porównanie całkowitoliczbowych tensorów czwartego momentu we wszystkich
+24 przestawieniach dihedralnych wyklucza równoważność tych planów
+pod tymi symetriami jądra. Przewidywania dla wspólnej obserwabli
+$|03\rangle\langle14|+|14\rangle\langle03|$ są różne.
+Jednakowa lokalna geometria nie wybiera więc jednego prawa korelacyjnego.
+
+\section{Próby falsyfikacji i osobny zakres legacy}
+
+\paragraph{Zmiana oddziaływania.}
+Twierdzenie o odwracalnym bloku jest kanoniczne, a nie automatycznie
+ważne dla wszystkich 4357 parametrów niewidocznych w czystym przepływie.
+Przy zastąpieniu $V$ przez $V+aS$ blok \eqref{eq:cross} staje się
+osobliwy dla $a=-5/12$. Sam ten test nie daje tam rozstrzygnięcia.
+Nie jest to dowód istnienia stanu CQ w przypadku wyjątkowym.
+Z kolei czysty SWAP jest inną mapą źródłową i ma stacjonarny produkt
+$C\otimes C$ o zerowym dysonansie. Wyklucza to uogólnienie wyniku
+na każdą realizację kwantową. Dla perturbacji hamiltonianu o normie
+mniejszej niż $1/12$ kanoniczny blok pozostaje odwracalny, o ile
+zachowane są te same przesłanki dotyczące marginalnego $C$.
+
+\paragraph{PPT, ranga i rejestry.}
+Dowód separowalności jest konstruktywny. Ujemność lub brak ujemności
+częściowej transpozycji nie zastępuje tego dowodu.
+Poza wystarczającym zakresem wzmocnienia program może przestać być
+dodatni; nie oznacza to niemożliwości innej separowalnej konstrukcji.
+Również stacjonarność pary nie jest stacjonarnością każdej gałęzi
+warunkowanej zachowanym rekordem przygotowania.
+
+\paragraph{Legacy.}
+Dla osobnego kanonicznego cyklu
+$W_d=4\ln2\cos(\pi d/4+\pi/6)/(1+0.01d)$,
+kodowanie $1/1000$ wymaga programu o kodowaniu $11/5000$.
+Oszacowanie $|W_{ij}|<3$ daje dodatnią dolną granicę
+$1/12-33(11/5000)$, więc ta sama konstrukcja separowalna działa.
+Prostotę i nierówność modów 0 i 6 sprawdzono dokładnie w
+$\mathbb Q(\sqrt2,\sqrt3)$ po wyłączeniu wspólnego czynnika $4\ln2$.
+Wynik jakościowy o niezerowym dysonansie stosuje się zatem osobno
+także do tej referencji. Liczb \eqref{eq:explicitdistance}--\eqref{eq:universal}
+nie przenosimy na referencję legacy o wagach zmiennego znaku ani na jej role fizyczne.
+
+\section{Bilans i najważniejszy dalszy problem}
+
+\paragraph{Udowodniono.}
+Wymagane korelacje dla kanonicznego strict mogą być separowalne;
+jawny rozkład i instrument przygotowania spełniają poprzednie
+równanie kompensacji komutatora. Jednocześnie każda równowaga
+kanonicznego oddziaływania z rzeczywistym marginalnym $C$ z \eqref{eq:C}
+ma niezerowy jednostronny dysonans. To precyzyjne rozdzielenie
+splątania, separowalności i pełnej klasyczności jest głównym wynikiem.
+
+\paragraph{Obalono lub ograniczono.}
+Nie można utożsamiać wymaganych korelacji ze splątaniem, uznawać PPT
+za wystarczający certyfikat separowalności ani nazywać wyjścia
+przygotowania z klasyczną komunikacją automatycznie stanem CQ.
+Minimalna liczba cięć i ich statystyki par nie ustalają pełnej
+korelacji. Nie wolno też przenosić kanonicznego no-go na dowolne
+zmienione oddziaływanie.
+
+\paragraph{Pozostaje warunkowe.}
+Program o większej koherencji, prawo losowania cięć, rekord sukcesu
+i operacyjne znaczenie etykiet są nadal dostarczane. Mogą być
+legalnymi zasobami fizycznego modelu, ale sama ich konstrukcja nie
+wyprowadza ich z FIN. Nie uzyskano źródła jednostek, aparatu,
+zapisu laboratoryjnego, selektora QW-2191, mostu legacy--strict,
+transferu ról, SM/GR, $L_{\rm total}$ ani ToE. Nadsoliton pozostaje
+pierwotną informacją w stanie solitonicznym, bez osobnej warstwy pod nim.
+
+Najbardziej rozstrzygający następny kierunek to niezależne uzasadnienie
+stanu programu i jego korelacyjnego prawa wyższych momentów, a następnie
+sprawdzenie przewidywań wspólnych obserwabli. Nie wystarczy ponownie
+dopasować lokalnego jądra. Trzeba ustalić, czy wymagany zasób koherencji
+i wybór przygotowania są rzeczywistymi konsekwencjami teorii, czy jej
+empirycznie dostarczanymi warunkami początkowymi.
+
+\section*{Źródła i dane sprawdzalne}
+\begin{enumerate}
+\item H.~Ollivier, W.~H.~Zurek, \emph{Quantum Discord: A Measure of the
+Quantumness of Correlations}, Physical Review Letters 88, 017901 (2001),
+\href{https://doi.org/10.1103/PhysRevLett.88.017901}{tekst źródłowy}.
+\item C.~A.~Rodríguez-Rosario, G.~Kimura, H.~Imai, A.~Aspuru-Guzik,
+\emph{Lazy states: sufficient and necessary condition for zero quantum
+entropy rates under any coupling to the environment},
+\href{https://arxiv.org/abs/1004.5405}{arXiv:1004.5405}.
+\item Wcześniejsze raporty repozytoryjne wskazane w pierwszym przypisie
+i dokładne certyfikaty widma. Ich wyniki nie są ponownie liczone jako
+odkrycia obecnego opracowania.
+\item \texttt{fin\_separable\_stationarity/research.py},
+\texttt{discord.py}, \texttt{results.json}, \texttt{discord\_results.json}
+i testy. Rozkład produktów oraz rachunek całkowitoliczbowy i wymierny
+stanowią certyfikaty; reszty zmiennoprzecinkowe służą oddzielnym kontrolom.
+\end{enumerate}
+\end{document}

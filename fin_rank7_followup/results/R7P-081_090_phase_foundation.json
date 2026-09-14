@@ -1,0 +1,67 @@
+{
+  "fixture": {
+    "r3": "0.1131879146",
+    "r4": "0.1698528641",
+    "r5": "0.2269339093",
+    "z6": "-0.3380663037",
+    "source": "imported handoff decimal fixture"
+  },
+  "radius_reconstruction": {
+    "formula": "r^2=2|z3|^2/lambda3+2|z4|^2/lambda4+2|z5|^2/lambda5+z6^2/lambda6",
+    "reconstructed_r": 0.36455557011200834,
+    "handoff_r": 0.36455557012840994
+  },
+  "cubic_locks": {
+    "per_z6_sign": 6,
+    "both_signs": 12,
+    "D12_orbit_size": 12,
+    "representative_stabilizer_size": 2
+  },
+  "quartic_compatibility": "all five quartic phase-sensitive cosine factors equal +1 at every cubic lock for positive amplitudes; exact finite resonance enumeration",
+  "sobol_diagnostic": {
+    "seed": 85085,
+    "sobol_power": 16,
+    "samples": 65536,
+    "fixture": {
+      "r3": 0.1131879146,
+      "r4": 0.1698528641,
+      "r5": 0.2269339093,
+      "z6": -0.3380663037
+    },
+    "max_abs_value_diff": 2.1336609823761205e-06,
+    "argmax_value": 34892,
+    "max_grad_diff": 3.572038421497186e-06,
+    "argmax_grad": 4141,
+    "max_hessian_op_diff": 7.345726582867957e-06,
+    "argmax_hessian": 60540
+  },
+  "quartic_roots": {
+    "count": 60,
+    "failures": 0,
+    "index_counts": {
+      "maxima": 6,
+      "saddles": 42,
+      "minima": 12
+    },
+    "min_abs_hessian_eigenvalue": 5.978843480068473e-05
+  },
+  "quartic_interval_isolation": {
+    "radius": 1e-07,
+    "count": 60,
+    "all_inclusions": true,
+    "all_inertia_certified": true,
+    "all_boxes_pairwise_disjoint": true,
+    "min_inertia_margin": 5.978843480064172e-05,
+    "max_krawczyk_offset": 6.357615568922543e-13
+  },
+  "R7P_086_bounded_failed_attempt": {
+    "amplitude_only_full_hessian_bound": 0.16207385317082598,
+    "K4_hessian_bound": 0.0016272874674194593,
+    "remainder_bound_by_triangle": 0.16370114063824545,
+    "quartic_min_hessian_margin": 5.9788434821e-05,
+    "bound_to_margin_ratio": 2738.0067922558715,
+    "status": "too loose; it destroys phase/resonance cancellations and cannot support structural-stability transfer"
+  },
+  "phase_representation": "periodic lifted boxes in R^3 modulo 2pi; seam-crossing root boxes are allowed because the equations are 2pi-periodic in every coordinate",
+  "selected_route": "direct local interval isolation for quartic and full roots; do not claim global census until complement exclusion or a sharp uniform C2 remainder is certified"
+}

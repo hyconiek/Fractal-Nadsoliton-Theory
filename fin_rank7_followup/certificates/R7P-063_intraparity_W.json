@@ -1,0 +1,26 @@
+{
+  "id": "CERT-R7P-063",
+  "claim_id": "CLM-050",
+  "domain": "four-amplitude shared-field parity split J3,J4,J5,J6>=0",
+  "quantifiers": "all finite nonnegative shared fields in the exact C4 model",
+  "assumptions": [
+    "R7P-055 global boundary-Ising theorem for C_plus",
+    "R7P-057 q>=1/2",
+    "R7P-058 Cminus supremum",
+    "R7P-059 dangerous set",
+    "R7P-061 dominant mass",
+    "R7P-062 covariance envelope"
+  ],
+  "proof_type": "two-case Weyl inequality with strict rational interval final margin",
+  "inputs": [
+    "proofs/R7P-057_064_intraparity_closure.md",
+    "results/R7P-060_063_intraparity_closure.json"
+  ],
+  "conclusion": "lambda2(W_par)<=sigma_* throughout the stated shared nonnegative-field domain.",
+  "global_pass": true,
+  "unresolved_leaves": [],
+  "limitations": [
+    "This does not include the rank-one parity-mixing update b b^T.",
+    "No extension to negative J6 or independently optimized parity sectors."
+  ]
+}

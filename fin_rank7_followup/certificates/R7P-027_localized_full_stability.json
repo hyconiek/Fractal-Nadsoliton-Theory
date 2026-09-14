@@ -1,0 +1,67 @@
+{
+  "id": "R7P-027-full-stability",
+  "claim_id": "CLM-027",
+  "domain": "R7P-026 localized root box",
+  "quantifiers": "throughout the certified localized root box",
+  "assumptions": [
+    "R7P-026 inclusion",
+    "reflection symmetry",
+    "R7P-014 inertia transfer"
+  ],
+  "proof_type": "interval LDL plus exact reflection block decomposition",
+  "inputs": [
+    "certificates/R7P-026_equal_energy_event.json",
+    "proofs/R7P-014_stationary_inertia_transfer.md"
+  ],
+  "conclusion": "the localized root has H7 inertia (0,0,7) and primal tangent inertia (0,0,11)",
+  "global_pass": false,
+  "task": "R7P-027",
+  "scientific_status": "VALIDATED_INTERVAL_INERTIA",
+  "root_box_source": "R7P-026",
+  "reflection_block_decomposition": "H7 = H4(cos3,cos4,cos5,k6) direct-sum Hsin(sin3,sin4,sin5)",
+  "H4_LDL_pivots": [
+    [
+      "0.20900212508840076935583310618643893203088056975000197946089589087",
+      "0.20900213220749901311713592462940496460018633543518557791102584498"
+    ],
+    [
+      "0.1907092493290606602898319356993383237357519664461197307017387756",
+      "0.19070925983162708712295552440325767427427398249034131486589024124"
+    ],
+    [
+      "0.17634183085322809241364423457355296985253251596140989125657660305",
+      "0.17634184939057523945293598903710350231901734457616021082910852904"
+    ],
+    [
+      "0.19142584808738220319437596298140712447785771714152501536211193699",
+      "0.1914258659857076231452468663681403893030388706867658598992968969"
+    ]
+  ],
+  "Hsin_LDL_pivots": [
+    [
+      "0.24152113231549554832865057955323637676999695325818264942311948612",
+      "0.24152113263739978601995103789667699945357641937691846455733864836"
+    ],
+    [
+      "0.2412718636776031549608272450165196583452684845842429543399116547",
+      "0.24127186402564249071069382896957407969837957655064785965319352028"
+    ],
+    [
+      "0.22392857157775465792895295731487452224125335239523248720927118339",
+      "0.22392857206367373643580331604943152650117399596148431065160115919"
+    ]
+  ],
+  "H4_positive_definite": true,
+  "Hsin_positive_definite": true,
+  "H7_inertia": [
+    0,
+    0,
+    7
+  ],
+  "primal_tangent_inertia": [
+    0,
+    0,
+    11
+  ],
+  "primal_transfer_basis": "R7P-014 stationary inertia transfer"
+}

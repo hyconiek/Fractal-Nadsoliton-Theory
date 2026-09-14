@@ -1,0 +1,41 @@
+{
+  "radius_interval": [
+    0.4142113229,
+    0.41421132293
+  ],
+  "f_lower_interval": [
+    -1.152194870678218e-11,
+    -1.1452575062503995e-11
+  ],
+  "f_upper_interval": [
+    1.73104180116156e-11,
+    1.73797916558945e-11
+  ],
+  "unique_root_reason": "df/dx = lambda3 sech^2(x) - lambda6*(x sech^2(x)-tanh(x))/x^2 > 0 for x>0",
+  "midpoint_tangent_eigenvalues_at_upper_radius": {
+    "3sin": -0.05916267670675662,
+    "4cos": -0.009734506072924726,
+    "4sin": -0.009734506072924726,
+    "5cos": -0.0014813875107680397,
+    "5sin": -0.0014813875107680397
+  },
+  "all_other_sectors_negative_at_upper_radius": true,
+  "first_crossing_sector": "3cos",
+  "equation": "lambda3(1+tanh x)=lambda6 tanh(x)/x, x=sqrt(lambda6/12) r",
+  "scope": "constrained spherical Hessian of log-mgf on pure k6 branch; not radial localization transition",
+  "id": "R7P-095-angular-instability",
+  "claim_id": "CLM-ANGULAR-095",
+  "domain": "pure k6 branch on the fixed-radius X7 dual sphere",
+  "quantifiers": "for the first transverse constrained-Hessian crossing along the nonnegative radius branch",
+  "assumptions": [
+    "accepted strict lambda3 and lambda6 intervals",
+    "correct constrained spherical Hessian including Lagrange multiplier term"
+  ],
+  "proof_type": "one-dimensional interval sign enclosure plus sector comparison",
+  "inputs": [
+    "results/R7P-081_090_phase_foundation.json",
+    "inputs/AGENTS_latest.md"
+  ],
+  "conclusion": "the first constrained angular instability of the pure k6 branch is the k3 cosine sector in the stated radius interval; this is not the radial gain transition",
+  "global_pass": false
+}

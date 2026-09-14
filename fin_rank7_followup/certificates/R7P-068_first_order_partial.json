@@ -1,0 +1,69 @@
+{
+  "id": "CERT-R7P-068-PARTIAL",
+  "claim_id": "CLM-054",
+  "domain": "physical tangent cone at the compactified equality point",
+  "quantifiers": "all first-order physical tangent directions; strict spectral tuples in accepted intervals",
+  "assumptions": [
+    "R7P-052 local boundary tangent-cone theorem",
+    "R7P-055 global boundary theorem",
+    "R7P-023 parity first-order shifts"
+  ],
+  "proof_type": "degenerate-eigenspace first-order perturbation plus Weyl inequality",
+  "inputs": [
+    "certificates/R7P-052_local_theorem.json",
+    "certificates/R7P-023_parity_first_order.json",
+    "certificates/R7P-023_reoptimized_envelope.json"
+  ],
+  "conclusion": "No first-order physical tangent direction creates an immediate lambda2>sigma_* violation; explicit finite-radius remainder remains open.",
+  "global_pass": false,
+  "unresolved_leaves": [
+    "validated mixed second/higher-order remainder and explicit 4D radius"
+  ],
+  "details": {
+    "id": "R7P-068-first-order-cone-partial",
+    "status": "PARTIAL_ANALYTIC",
+    "root": "(r_*,s,t,y)=(r_*,1,1,0), with r_*=exp(-2J3_*)=(1-tau_*)/(1+tau_*)",
+    "boundary_input": "R7P-055 plus R7P-052: y=0 is globally safe and locally strict away from the unique double root.",
+    "mixing_input": "R7P-023: on the two-dimensional threshold eigenspace, the epsilon=1-q mixing derivative has two strictly negative M-eigenvalue shifts (equivalently positive-definite K=sigma I-M derivative).",
+    "directional_argument": "For any physical boundary tangent H_b, boundary safety implies lambda_min(P H_b P)<=0 for the M-shift cluster. Adding positive parity mixing adds a negative-definite projected M perturbation. Weyl therefore makes the right directional derivative of lambda2 strictly negative whenever the parity-mixing component is first order; pure boundary directions are nonincreasing and locally strict by R7P-052.",
+    "reoptimized_extreme_face": {
+      "id": "R7P-023-reoptimized-envelope-upgrade",
+      "parameter": "epsilon=1-q; J3=J3_*+d*epsilon, J4=J5=0",
+      "branch_derivatives": {
+        "m3_prime": [
+          "-5484961538990058296653894971833665998685712609047024326251337036765656399670501/24044480488801414528286722155625000000000000000000000000000000000000000000000000",
+          "-1096992307797829330418267355895185074306106319529204488686313223052868677916238839/4808896097760380976000443253125000000000000000000000000000000000000000000000000000"
+        ],
+        "m45_prime": [
+          "1767331658773072078952169231047905987364295311789054232217847354878450534799335681501729010193/11544132220830990716106243938931160224054490289339606851928908374062500000000000000000000000000",
+          "39274036861630649995463193573828452974923898802961671007109996917677512529423850240758854191/256536271573982990091485615903415039686579325160578230372305487980418750000000000000000000000"
+        ],
+        "delta3": [
+          "-960172716456752245314769777731851669865919/4616540253849871589431050653880000000000000",
+          "-4800863582283139821411210374193073324950367/23082701269249828684802127615000000000000000"
+        ],
+        "delta45": [
+          "-3537778601489219350984020883061557672819840306328945555600000000000/44329467727985164721919889413665896858752420237808521899651332133481",
+          "-73703720864337922035915317825871047551351670023675074300000000000/923530577666460423244516700434359973850433501034115623655673142133"
+        ]
+      },
+      "optimal_d_interval": [
+        "-1707789591437998090312534070339685498782650305279598722094157275997235456273547131765564049395911336418081484375000000000000000000000000000000000000/5079057255305866838570472063723398351792755649021594743096688045696654353680234560138516367136960716528147909484521293262945196914118690657265710761",
+        "-136623167314955140592411724941524345871843445566965341589651740345329603244616972588682730046510752040584092712625000000000000000000000000000000000/406324580424514377391073080841620032078220821238453582440840168963378164160327244715310498445896890548239580768157819565457200961428167641750143981"
+      ],
+      "envelope_slope_interval": [
+        "-9123020253584383864338132079211296763329420909576405262547000418535377875234267618275303038814346346007600629082413185812158747367374461749237105054039899093340315685205649175892556320168151585423849500000000000000/69491328607304240716572979610248950515795740011899051840805207952539519499744996572740534930999413910098868239755049909038929926133664180967217130104465908829100978837596316074112818946980713423631872485779849021929",
+        "-24328054009546353213252202060604304182538818389807482731689711181309989561806752786120178687709799750020691806225396615852186023027478083685833110986187242236546985245950935810535413646107423713167677161200000/185310209619526702457365436177689440683737662919132458155824506616470859267983219156901630269530194194630061563979464304545789420777328668598514004728847760259558143606383606781175974927159072283291459487051097"
+      ],
+      "display": [
+        -0.13128285840005458,
+        -0.13128285839995527
+      ],
+      "conclusion": "The reoptimized first-order lambda2 envelope slope is strictly negative; the imported ~-0.1312828584 value is now interval-certified on this extreme-face two-branch reduction.",
+      "scope": "first-order extreme-face reoptimization only; not a finite-radius off-face theorem."
+    },
+    "qualitative_conclusion": "No first-order physical tangent direction through the equality point produces lambda2>sigma. By smoothness of the aligned chart near r_*>0,t=1 and the strict boundary tangent-cone certificate, this supports a local-safe neighborhood, but this package does not yet export a machine-checked explicit radius.",
+    "remaining_atom": "validated second/higher-order mixed remainder bound (especially tangential paths with y=o(norm(boundary displacement))) sufficient to state an explicit dyadic 4D neighborhood.",
+    "claim_level": "not promoted to R7P-068 DONE until an explicit radius/remainder is checked."
+  }
+}

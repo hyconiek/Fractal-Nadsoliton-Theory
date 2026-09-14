@@ -1,0 +1,738 @@
+[
+  {
+    "id": "CLM-001",
+    "statement": "Strict W_kernel, A_full sector multiplicities and an outward spectral provider are accepted upstream inputs.",
+    "status": "EXISTING_ACCEPTED_INPUT",
+    "dimension": "12 labels / mean-zero rank 11",
+    "domain": "frozen strict operator",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "master_plan \u00a73; current AGENTS",
+    "handoff_section": "\u00a71 strict data",
+    "evidence_level": "source map; exact provider itself missing from supplied audit package"
+  },
+  {
+    "id": "CLM-002",
+    "statement": "Weighted edge fluctuation decomposition has state-changing rank 11 and cycle rank 55.",
+    "status": "ANALYTIC_IDENTITY_IMPORTED",
+    "dimension": "66 edge coordinates",
+    "domain": "strict positive weighted K12 graph",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "handoff \u00a72",
+    "handoff_section": "\u00a72",
+    "evidence_level": "imported structural identity; numerical reconstruction artifact present"
+  },
+  {
+    "id": "CLM-003",
+    "statement": "Specified passive Schur elimination preserves nonnegative static stiffness and does not source active negative-information gain.",
+    "status": "EXISTING_ACCEPTED_SCOPED",
+    "dimension": "strict even/odd Schur model",
+    "domain": "specified passive reciprocal/self-adjoint model",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "master_plan \u00a73; AGENTS ST293",
+    "handoff_section": "\u00a73",
+    "evidence_level": "accepted scoped theorem/no-go"
+  },
+  {
+    "id": "CLM-004",
+    "statement": "At supplied g=4, rank seven is the first cumulative top-sector rank whose pure vertex beats uniform by the exact spectral budget criterion.",
+    "status": "EXACT_INTERVAL_CERTIFIED_UPSTREAM",
+    "dimension": "rank ladder 1,3,5,7,9,11",
+    "domain": "declared top-sector family at g=4",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a74",
+    "evidence_level": "accepted starting fact; proof provider not in current audit bundle"
+  },
+  {
+    "id": "CLM-005",
+    "statement": "The exact seven-coordinate Gibbs duality is valid; p-u must not be constrained to Range(A7).",
+    "status": "EXISTING_ACCEPTED",
+    "dimension": "7D dual / 12-probability primal",
+    "domain": "g>0, rank-seven mediator",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a76",
+    "evidence_level": "accepted starting theorem"
+  },
+  {
+    "id": "CLM-006",
+    "statement": "CRT/Ising representation and its probability identities are accepted only in the specified locked/conditional sector.",
+    "status": "EXISTING_ACCEPTED_SCOPED",
+    "dimension": "4 amplitude / four-state boundary reduction",
+    "domain": "specified sector",
+    "finite_or_limit": "finite or boundary as stated",
+    "dependencies": [
+      "CLM-005"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a718, \u00a725",
+    "evidence_level": "accepted scoped algebra, not global phase reduction"
+  },
+  {
+    "id": "CLM-007",
+    "statement": "A local equal-energy crossing near g=3.71834489812038 has an independently reconstructed numerical root.",
+    "status": "NUMERICAL_REPRODUCED_STARTING",
+    "dimension": "4 amplitude",
+    "domain": "local branch event",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-005"
+    ],
+    "source": "master_plan \u00a73, \u00a75.5",
+    "handoff_section": "\u00a77",
+    "evidence_level": "seed only; not first global transition theorem"
+  },
+  {
+    "id": "CLM-008",
+    "statement": "A four-amplitude saddle near the crossing is numerical only and requires full seven-coordinate Hessian inspection.",
+    "status": "NUMERICAL_REPRODUCED_STARTING",
+    "dimension": "4 amplitude seed / 7D stability obligation",
+    "domain": "near local crossing",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-007"
+    ],
+    "source": "master_plan \u00a73, \u00a75.5",
+    "handoff_section": "\u00a719",
+    "evidence_level": "numerical seed"
+  },
+  {
+    "id": "CLM-009",
+    "statement": "Corrected one-dimensional resolvent face positivity is an accepted strict-interval face certificate using r=sech, not exp.",
+    "status": "EXACT_STRICT_INTERVAL_ACCEPTED",
+    "dimension": "1D face",
+    "domain": "corrected resolvent face",
+    "finite_or_limit": "finite plus endpoints",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a735",
+    "evidence_level": "accepted corrected proof; audit proof object missing locally"
+  },
+  {
+    "id": "CLM-010",
+    "statement": "Extreme face s4=s5=0 with s3,s6>=0 has an accepted strict-interval second-curvature certificate, with equality only on its stated compactified boundary.",
+    "status": "EXACT_STRICT_INTERVAL_ACCEPTED",
+    "dimension": "2D face within 4D amplitudes",
+    "domain": "s3,s6>=0, s4=s5=0",
+    "finite_or_limit": "includes compactified equality limit",
+    "dependencies": [
+      "CLM-001",
+      "CLM-005"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a738",
+    "evidence_level": "accepted corrected proof; audit proof object missing locally"
+  },
+  {
+    "id": "CLM-011",
+    "statement": "Global boundary-Ising second-curvature bound is open because no complete replayable certificate is supplied.",
+    "status": "UNRESOLVED",
+    "dimension": "3D covariance over four-state boundary probabilities",
+    "domain": "attainable boundary-Ising domain",
+    "finite_or_limit": "compactified boundary",
+    "dependencies": [
+      "CLM-006"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a725-27",
+    "evidence_level": "imported near-certificate only"
+  },
+  {
+    "id": "CLM-012",
+    "statement": "Dominant-mass/intraparity W_par global closure is open and dependency-sensitive.",
+    "status": "UNRESOLVED",
+    "dimension": "intraparity covariance",
+    "domain": "positive shared fields",
+    "finite_or_limit": "finite plus limits",
+    "dependencies": [
+      "CLM-011"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a731-33",
+    "evidence_level": "imported summary not proof object"
+  },
+  {
+    "id": "CLM-013",
+    "statement": "Positive-orthant four-amplitude global second-curvature ceiling is open, including off-face and limit-domain obligations.",
+    "status": "UNRESOLVED",
+    "dimension": "4 amplitude",
+    "domain": "s3,s4,s5,s6>=0",
+    "finite_or_limit": "unbounded/compactified",
+    "dependencies": [
+      "CLM-010",
+      "CLM-011",
+      "CLM-012"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a739",
+    "evidence_level": "open"
+  },
+  {
+    "id": "CLM-014",
+    "statement": "Universal cooperativity/isotonicity is not accepted by intake audit and must be proved under exact hypotheses or refuted.",
+    "status": "UNRESOLVED",
+    "dimension": "4 amplitude exponential family",
+    "domain": "claimed positive orthant",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-006"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a718-19",
+    "evidence_level": "not accepted"
+  },
+  {
+    "id": "CLM-015",
+    "statement": "The reported sixty-point phase census is an imported numerical claim requiring reconstruction of roots, multiplicities, derivative conventions and complement coverage.",
+    "status": "NUMERICAL_IMPORTED",
+    "dimension": "3-torus phase at fixed amplitudes",
+    "domain": "reported coexistence amplitudes",
+    "finite_or_limit": "compact phase torus",
+    "dependencies": [
+      "CLM-005"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "\u00a711",
+    "evidence_level": "summary tables only"
+  },
+  {
+    "id": "CLM-016",
+    "statement": "Everywhere full-seven-coordinate Hessian index<=1 is false.",
+    "status": "COUNTEREXAMPLE_CERTIFIED_STARTING",
+    "dimension": "7D dual Hessian",
+    "domain": "all fields claim",
+    "finite_or_limit": "finite counterexample field",
+    "dependencies": [
+      "CLM-001",
+      "CLM-005"
+    ],
+    "source": "master_plan \u00a73 and explicit witness \u00a73",
+    "handoff_section": "supersedes \u00a720/39 optimistic global reading",
+    "evidence_level": "accepted regression counterexample"
+  },
+  {
+    "id": "CLM-017",
+    "statement": "At h_j=2 cos(pi*j/2), two orthogonal full-7D covariance directions exceed 313/960, giving at least two negative H7 directions for supplied g>=3.7; the field is not asserted stationary.",
+    "status": "COUNTEREXAMPLE_CERTIFIED_STARTING",
+    "dimension": "7D",
+    "domain": "explicit nonstationary field",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-016"
+    ],
+    "source": "master_plan \u00a73 lines 106-112",
+    "handoff_section": "not present/correction",
+    "evidence_level": "accepted counterexample statement; direct proof object unavailable locally"
+  },
+  {
+    "id": "CLM-018",
+    "statement": "The unrestricted stationary-point conjecture index(H7)<=1 is false: an interval-isolated stationary point at exact supplied gain g=5 has H7 inertia (2,0,5). A gain-restricted conjecture near coexistence remains open.",
+    "status": "COUNTEREXAMPLE_CERTIFIED",
+    "dimension": "7D stationary set",
+    "domain": "stationary points only",
+    "finite_or_limit": "finite stationary ball",
+    "dependencies": [
+      "CLM-017"
+    ],
+    "source": "master_plan \u00a73",
+    "handoff_section": "new corrected target",
+    "evidence_level": "validated interval stationary counterexample",
+    "evidence": "R7P-036",
+    "scope_correction": "Unrestricted all-g stationary-point index<=1 claim is false at exact g=5; gain-restricted variants remain separate."
+  },
+  {
+    "id": "CLM-019",
+    "statement": "Global rank-seven minimizer orbit at the local crossing or g=4 is not closed by intake and cannot be transferred from full-rank positive-edge ST389/ST390.",
+    "status": "UNRESOLVED",
+    "dimension": "rank7 simplex/dual",
+    "domain": "rank7 mediator",
+    "finite_or_limit": "global finite simplex",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "master_plan \u00a73; AGENTS ST391/ST410",
+    "handoff_section": "guardrails",
+    "evidence_level": "open/nontransfer"
+  },
+  {
+    "id": "CLM-020",
+    "statement": "For full strict A at supplied g=4, exactly twelve global minima form one D12 orbit.",
+    "status": "EXACT_REPO_THEOREM",
+    "dimension": "11D simplex mean-zero",
+    "domain": "full strict A, g=4",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "AGENTS ST389/ST390",
+    "handoff_section": "guardrail",
+    "evidence_level": "repo theorem; not rank7"
+  },
+  {
+    "id": "CLM-021",
+    "statement": "D12 invariance alone does not force minimizers into reflection-fixed subspaces; the open dense simplex stratum has trivial stabilizer and 24-element orbits.",
+    "status": "EXACT_REPO_THEOREM",
+    "dimension": "11D simplex",
+    "domain": "D12 action",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "AGENTS ST344",
+    "handoff_section": "\u00a715",
+    "evidence_level": "repo theorem"
+  },
+  {
+    "id": "CLM-022",
+    "statement": "One-step reflection averaging is not a valid global rank7 rearrangement proof: ST359 gives a rational state where every reflection average raises V4.",
+    "status": "COUNTEREXAMPLE_CERTIFIED_REPO",
+    "dimension": "rank7 simplex",
+    "domain": "g=4",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-021"
+    ],
+    "source": "AGENTS ST359",
+    "handoff_section": "\u00a740",
+    "evidence_level": "repo counterexample"
+  },
+  {
+    "id": "CLM-023",
+    "statement": "The full strict positive-weight cap proof cannot be silently transferred to the signed rank-seven mediator.",
+    "status": "EXACT_REPO_NOGO_SCOPED",
+    "dimension": "rank7 mediator",
+    "domain": "declared cap/envelope method",
+    "finite_or_limit": "finite",
+    "dependencies": [
+      "CLM-020"
+    ],
+    "source": "AGENTS ST391/ST410",
+    "handoff_section": "\u00a715, \u00a740",
+    "evidence_level": "repo bounded no-go"
+  },
+  {
+    "id": "CLM-024",
+    "statement": "No internal strict active gain source has been established; passive self-adjoint responses cannot source the required active term.",
+    "status": "EXACT_REPO_NOGO_SCOPED",
+    "dimension": "source-law lane",
+    "domain": "passive functional-calculus/self-adjoint response class",
+    "finite_or_limit": "general within class",
+    "dependencies": [
+      "CLM-001"
+    ],
+    "source": "AGENTS ST293/ST459",
+    "handoff_section": "\u00a73, \u00a742",
+    "evidence_level": "repo no-go; active nonequilibrium classes not excluded"
+  },
+  {
+    "id": "CLM-025",
+    "statement": "Quantum separability/discord results are a separate conditional package and do not identify rank7 active-gain physics.",
+    "status": "EXISTING_SEPARATE_SCOPED",
+    "dimension": "12x12 bipartite quantum package",
+    "domain": "canonical/pure-equivalent microscopic classes as stated",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "Discord source files/master_plan \u00a73",
+    "handoff_section": "\u00a716-17",
+    "evidence_level": "separate lane"
+  },
+  {
+    "id": "CLM-026",
+    "statement": "A unique local reflection-even equal-energy stationary event is interval-isolated near g=3.7183448981203875.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "5 variables (4 natural amplitudes plus gain)",
+    "domain": "conditional rank-seven active-gain dual, reflection-even C4 chart",
+    "finite_or_limit": "finite",
+    "source": "R7P-026",
+    "evidence_level": "validated 5D interval Krawczyk"
+  },
+  {
+    "id": "CLM-027",
+    "statement": "The localized state at the certified equal-energy event is a strict local minimum in the full seven-coordinate dual, with H7 inertia (0,0,7), and hence primal tangent inertia (0,0,11).",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "7 dual / 11 primal tangent",
+    "domain": "R7P-026 root box",
+    "finite_or_limit": "finite",
+    "source": "R7P-027",
+    "evidence_level": "interval LDL and exact block/inertia transfer"
+  },
+  {
+    "id": "CLM-028",
+    "statement": "The localized branch crosses the uniform energy transversely at the certified event; dPhi/dg is strictly negative there.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "local one-parameter branch",
+    "domain": "R7P-026 event",
+    "finite_or_limit": "finite",
+    "source": "R7P-028",
+    "evidence_level": "analytic derivative identity plus interval sign"
+  },
+  {
+    "id": "CLM-029",
+    "statement": "At exact rational gain g=3.7183449 a local barrier state is interval-isolated with full H7 inertia (1,0,6) and energy barrier greater than 0.0465 above the named uniform and localized states.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "full seven-coordinate Hessian at one supplied gain",
+    "domain": "conditional rank-seven active-gain dual",
+    "finite_or_limit": "finite",
+    "source": "R7P-029",
+    "evidence_level": "validated root/inertia/energy intervals"
+  },
+  {
+    "id": "CLM-030",
+    "statement": "The corrected nine-variable augmented fold system has a numerically reconstructed root near g=3.51564471684 with a nonsingular augmented Jacobian.",
+    "status": "NUMERICAL_REPRODUCED",
+    "dimension": "9 variables (s,g,v)",
+    "domain": "reflection-even C4 stationary system",
+    "finite_or_limit": "finite",
+    "source": "R7P-030",
+    "evidence_level": "independent augmented residual and singular-value diagnostics"
+  },
+  {
+    "id": "CLM-031",
+    "statement": "The local stationary fold near g=3.51564471684 is an interval-certified simple saddle-node with one full-H7 null direction, six positive transverse directions, and nonzero fold coefficients.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "9D augmented root / full H7 transverse check",
+    "domain": "conditional rank-seven active-gain dual",
+    "finite_or_limit": "finite",
+    "source": "R7P-031",
+    "evidence_level": "validated 9D Krawczyk + interval transversality/inertia"
+  },
+  {
+    "id": "CLM-032",
+    "statement": "In the exact edge-reflection fixed subspace j->3-j, a simple stationary fold is interval-isolated near g=4.35221467865556; at the fold full H7 inertia is (1 negative,1 zero,5 positive).",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "7D augmented restricted fold with full H7 transverse block",
+    "domain": "conditional active-gain rank-seven dual",
+    "finite_or_limit": "finite",
+    "source": "R7P-038 edge-reflection fold",
+    "evidence_level": "validated interval Krawczyk and inertia"
+  },
+  {
+    "id": "CLM-033",
+    "statement": "At exact g=4.36 two distinct edge-reflection stationary orbit representatives are interval-isolated; their full H7 indices are 1 and 2, and disjoint D12-invariant energy intervals prove they are distinct D12 orbits.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "3D fixed roots with 7D Hessian",
+    "domain": "conditional active-gain rank-seven dual",
+    "finite_or_limit": "finite",
+    "source": "R7P-038 edge-reflection branches",
+    "evidence_level": "validated interval root/inertia and invariant-energy separation"
+  },
+  {
+    "id": "CLM-034",
+    "statement": "Restricted/full stability mismatch is systematic for several certified symmetry-fixed roots: odd reflection sectors can add negative modes absent from the restricted Hessian.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "symmetry-block comparison",
+    "domain": "currently certified stationary roots only",
+    "finite_or_limit": "finite",
+    "source": "R7P-039",
+    "evidence_level": "certified mismatch table"
+  },
+  {
+    "id": "CLM-035",
+    "statement": "The even-parity compactified boundary reduces exactly to four (A,Y) states with multiplicities (1,2,1,2), forcing the degeneracy field shift H_Y=3J4/4-log(2)/2 and monomial weights (XYZ^4,2XZ,Y,2Z^3).",
+    "status": "EXACT_PROVED",
+    "dimension": "four-state boundary model",
+    "domain": "conditional rank-seven positive-amplitude boundary",
+    "finite_or_limit": "compactified limit",
+    "source": "R7P-041",
+    "evidence_level": "exact combinatorial/algebraic reconstruction"
+  },
+  {
+    "id": "CLM-036",
+    "statement": "For positive four-state probabilities, g1>=0,g2>=0,g3>=0 exactly characterize the nonnegative J3,J4,J5 exponential family, but the weak zero-probability semialgebraic boundary is a strict outer relaxation of the true closure.",
+    "status": "EXACT_PROVED",
+    "dimension": "3-parameter probability family",
+    "domain": "positive interior and closure of boundary-Ising exponential family",
+    "finite_or_limit": "finite interior plus parameter-infinite boundary",
+    "source": "R7P-042",
+    "evidence_level": "exact ratio inversion and recession-support classification"
+  },
+  {
+    "id": "CLM-037",
+    "statement": "The boundary covariance characteristic invariants are exactly reconstructed, including det M=(3/8) lambda3 lambda4 lambda5 p1p2p3p4.",
+    "status": "EXACT_PROVED",
+    "dimension": "3x3 covariance",
+    "domain": "four-state boundary model",
+    "finite_or_limit": "finite",
+    "source": "R7P-043",
+    "evidence_level": "independent symbolic derivation"
+  },
+  {
+    "id": "CLM-038",
+    "statement": "On the entire four-state boundary feature set, strict intervals prove Ppp(sigma_*)/2=3sigma_*-trCov>0; consequently lambda2>sigma_* is exactly equivalent to P(sigma_*)>0 and Pprime(sigma_*)<0.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "3x3 covariance threshold problem",
+    "domain": "all probability distributions on four exact boundary feature points",
+    "finite_or_limit": "finite",
+    "source": "R7P-044",
+    "evidence_level": "exact root-sign theorem plus rational interval enclosing-ball margin"
+  },
+  {
+    "id": "CLM-039",
+    "statement": "The reported boundary double-root point is exact: two covariance eigenvalues equal sigma_* and the third is lambda4 lambda5/(24 lambda3)<sigma_*; the point satisfies the physical field-domain constraints with J4=J5=0 and J3>0.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "special four-state covariance",
+    "domain": "strict spectral intervals and exact dependent t_*",
+    "finite_or_limit": "finite field-boundary point",
+    "source": "R7P-045",
+    "evidence_level": "symbolic polynomial reduction plus strict rational interval signs"
+  },
+  {
+    "id": "CLM-040",
+    "statement": "The exact compactification r=1/X,s=1/Y,t=1/Z maps the physical boundary-Ising closure to [0,1]^3 with weights proportional to (1,2 s t^3,r t^4,2 r s t); its only zero-probability supports are {1,2},{1,3},{1}, all with covariance rank at most one.",
+    "status": "EXACT_PROVED",
+    "dimension": "three-parameter compactified four-state family",
+    "domain": "boundary-Ising exponential-family closure",
+    "finite_or_limit": "finite compact coordinates including parameter-infinite faces",
+    "source": "R7P-046",
+    "evidence_level": "exact monomial compactification and support/rank classification"
+  },
+  {
+    "id": "CLM-041",
+    "statement": "Each of the three physical probability inequalities g1,g2,g3 is individually essential to this curvature target in the sense that dropping it while keeping the other two admits a rational distribution with lambda2>sigma_*.",
+    "status": "COUNTEREXAMPLE_CERTIFIED",
+    "dimension": "3x3 boundary covariance",
+    "domain": "one-constraint relaxations of the physical semialgebraic domain",
+    "finite_or_limit": "finite rational witnesses",
+    "source": "R7P-047",
+    "evidence_level": "exact rational constraints plus strict interval P(sigma)>0 and Pprime(sigma)<0"
+  },
+  {
+    "id": "CLM-042",
+    "statement": "On the dyadic equality-neighborhood r in [51/128,103/256], s,t in [255/256,1], the cleared polynomial A is nonpositive, and is strictly negative away from the exact R7P-045 double root.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "three compactified boundary coordinates",
+    "domain": "physical tangent cone near the double root",
+    "finite_or_limit": "compactified boundary neighborhood",
+    "source": "R7P-052",
+    "evidence_level": "exact zero value/gradient plus strict interval Hessian Schur-cone certificate"
+  },
+  {
+    "id": "CLM-043",
+    "statement": "For every point of the exact four-state boundary-Ising exponential-family closure, the second covariance eigenvalue satisfies lambda2<=sigma_*. Equality occurs only at the exact R7P-045 double root; in the original four-amplitude family this is a J6->+infinity compactified even-parity boundary point.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "3x3 covariance over three compact parameters",
+    "domain": "entire exact boundary-Ising closure",
+    "finite_or_limit": "compact closure; equality is a parity-saturation limit of the original 4-amplitude chart",
+    "source": "R7P-055",
+    "evidence_level": "independently checked 436-leaf exact-rational interval cover plus local equality theorem"
+  },
+  {
+    "id": "CLM-044",
+    "statement": "For the exact shared-field parity split, C_plus and C_minus are independent of J6 conditionally, C_minus is also independent of J3, and at J6=0 the even parity weight obeys q_even>=1/2 with equality exactly when J3=J5=0 (J4 arbitrary); for J6>=0 the same lower bound persists.",
+    "status": "EXACT_PROVED",
+    "dimension": "parity-conditioned four-amplitude family",
+    "domain": "J3,J4,J5,J6>=0",
+    "finite_or_limit": "finite fields",
+    "source": "R7P-057",
+    "evidence_level": "exact label enumeration, partition functions and positive Taylor-coefficient proof"
+  },
+  {
+    "id": "CLM-045",
+    "statement": "On the exact physical odd conditional domain, sup lambda1(C_minus)=(3 lambda4+lambda5)/32, attained only in the parameter-infinite closure (p0,p+,p-)=(1/2,1/2,0).",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "2x2 nonconstant odd conditional covariance",
+    "domain": "J4,J5>=0 physical odd conditional family",
+    "finite_or_limit": "supremum at infinite-field closure",
+    "source": "R7P-058",
+    "evidence_level": "exact domain/covariance algebra plus strict spectral interval signs and Bernstein positivity"
+  },
+  {
+    "id": "CLM-046",
+    "statement": "Throughout the physical odd conditional domain lambda_min(C_minus)<sigma_*; lambda_max(C_minus)>=sigma_* is exactly characterized by u in [u_-,u_+] and d^2>=dmin^2(u), with all denominator and monotonicity signs certified.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "2x2 odd covariance",
+    "domain": "exact physical (u,d) domain",
+    "finite_or_limit": "finite plus closure",
+    "source": "R7P-059",
+    "evidence_level": "exact determinant equivalence with strict rational interval signs"
+  },
+  {
+    "id": "CLM-047",
+    "statement": "The dangerous-sector dominant C_plus mass reduces exactly to one dimension at J3=0 and d=dmin(u); numerical minimization of that exact reduction gives p_dom\u22480.719071046876 near u\u22480.5280356754.",
+    "status": "NUMERICAL_REPRODUCED",
+    "dimension": "shared-field parity conditionals",
+    "domain": "R7P-059 dangerous set",
+    "finite_or_limit": "finite fields",
+    "source": "R7P-060",
+    "evidence_level": "exact monotonic reduction plus deterministic one-dimensional numerical minimization"
+  },
+  {
+    "id": "CLM-048",
+    "statement": "On the entire dangerous C_minus set, interval covers prove d/u>=1703/2000 and Y^2>=229/20; a fresh rational implication gives p_dom(C_plus)>711/1000.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "one-dimensional dangerous-set reduction",
+    "domain": "shared nonnegative fields satisfying lambda1(C_minus)>=sigma_*",
+    "finite_or_limit": "finite plus endpoint limits",
+    "source": "R7P-061",
+    "evidence_level": "exact-rational Bernstein covers and exact rational exponent comparison"
+  },
+  {
+    "id": "CLM-049",
+    "statement": "For the exact four even feature points, if one probability is at least 711/1000 then e2<(511/2000)^2 and therefore lambda2(C_plus)<511/2000.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "3x3 even conditional covariance",
+    "domain": "four-point probability simplex with max mass>=711/1000",
+    "finite_or_limit": "finite/closed simplex",
+    "source": "R7P-062",
+    "evidence_level": "exact two-branch AM-GM envelope reduction plus strict interval Bernstein covers"
+  },
+  {
+    "id": "CLM-050",
+    "statement": "For every shared nonnegative four-amplitude field J3,J4,J5,J6>=0, the intraparity covariance W_par=q C_plus+(1-q)C_minus satisfies lambda2(W_par)<=sigma_*.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "4x4 intraparity covariance (one parity coordinate constant within each conditional)",
+    "domain": "exact shared-field nonnegative C4 family",
+    "finite_or_limit": "finite fields; uses closure bounds for conditional suprema",
+    "source": "R7P-063",
+    "evidence_level": "R7P-055 boundary theorem + exact q bound + certified dangerous-set complementarity + Weyl with strict interval margin"
+  },
+  {
+    "id": "CLM-051",
+    "statement": "For all nonnegative four-amplitude fields, the full covariance target lambda2(M4)<=sigma_* is exactly equivalent to an inertia bound for the 3x3 Schur-reduced Mtilde, because eta=1-lambda6 q(1-q)/(3 sigma_*) has a strictly positive global lower interval.",
+    "status": "EXACT_PROVED",
+    "domain": "finite nonnegative shared fields",
+    "dimension": "4x4 covariance / 3x3 Schur reduction",
+    "finite_or_limit": "finite",
+    "source": "R7P-065",
+    "evidence_level": "exact block-congruence identity plus strict-spectrum interval sign"
+  },
+  {
+    "id": "CLM-052",
+    "statement": "The entire nonnegative four-field probability-law closure admits an exact compactification to [0,1]^4. In boundary-aligned coordinates r=e^-2J3,s=e^-3J4/2,t=e^-J5/2,y=e^-2J6, y=0 is exactly the certified boundary-Ising cube and odd weights retain the shared t^(2+-sqrt(3)) dependence.",
+    "status": "EXACT_PROVED",
+    "domain": "closure of J3,J4,J5,J6>=0",
+    "dimension": "four compact field coordinates / 12-label law",
+    "finite_or_limit": "finite plus all asymptotic limits",
+    "source": "R7P-067",
+    "evidence_level": "exact finite-state exponential compactification"
+  },
+  {
+    "id": "CLM-053",
+    "statement": "Three fixed-seed differential-evolution searches on the exact compactified closure, plus structured slices, found no lambda2(M4)>sigma_* candidate; all best points converge numerically to the known compactified equality point.",
+    "status": "NUMERICAL_REPRODUCED",
+    "domain": "exact compactified closure [0,1]^4",
+    "dimension": "4D compact numerical search",
+    "finite_or_limit": "finite plus boundary limits",
+    "source": "R7P-066",
+    "evidence_level": "fixed-seed differential evolution plus structured slices and independent finite-field replay"
+  },
+  {
+    "id": "CLM-054",
+    "statement": "On the extreme-face double-root reduction, the J3-reoptimized first-order lambda2 envelope under epsilon=1-q parity mixing has a strictly negative interval-certified slope near -0.1312828584000. More generally no first-order physical tangent through the equality point produces an immediate two-supercritical-direction violation.",
+    "status": "CONDITIONAL_LEMMA",
+    "domain": "physical tangent cone at compactified equality point",
+    "dimension": "local two-dimensional threshold eigenspace",
+    "finite_or_limit": "first-order local/limit statement",
+    "source": "R7P-068 and R7P-023 upgrade",
+    "evidence_level": "strict interval first-order branch formulas plus analytic Weyl/tangent argument; finite radius still open"
+  },
+  {
+    "id": "CLM-055",
+    "statement": "The full-7D discovery atlas numerically saturates at 3 D12 orbit candidates for g=3.7,3.7183449,4 and 15 for g=5 in two fixed-seed batches; this is not stationary exhaustion.",
+    "status": "NUMERICAL_REPRODUCED",
+    "dimension": "7D dual",
+    "domain": "g in {3.7,3.7183449,4,5}",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "results/R7P-037_full7_stationary_atlas.json",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "deterministic bounded numerical replay"
+  },
+  {
+    "id": "CLM-056",
+    "statement": "For the physical four-amplitude model, lambda2(M4)<sigma_* throughout the positive-volume tail exp(-J5/2)<=2^-11; together with prior face/boundary/local certificates this is a partial, not global, off-face theorem.",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "C4 covariance",
+    "domain": "J_i>=0; certified union of subdomains",
+    "finite_or_limit": "finite+limits",
+    "dependencies": [],
+    "source": "proofs/R7P-069_072_off_face_final.md",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "mpmath.iv outward spectral/feature bound plus prior exact certificates"
+  },
+  {
+    "id": "CLM-057",
+    "statement": "The first energetic rank-seven transition admits the rigorous bracket g_global in [2.8934,3.71835].",
+    "status": "INTERVAL_CERTIFIED",
+    "dimension": "11D simplex / rank-7 quadratic mediator",
+    "domain": "all simplex p; supplied strict operator",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "proofs/R7P-097_104_global_frontier.md",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "lower transfer from accepted ST448 via A7<=A_full; rational upper witness with interval evaluation"
+  },
+  {
+    "id": "CLM-058",
+    "statement": "At g=4 the best stationary D12 orbit found numerically has Phi about -0.138847663, but unique global orbit attainment is unresolved.",
+    "status": "NUMERICAL_REPRODUCED",
+    "dimension": "7D dual",
+    "domain": "g=4 stationary discovery atlas",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "results/R7P-097_104_global_frontier.json",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "numerical atlas with explicit uncovered complement"
+  },
+  {
+    "id": "CLM-059",
+    "statement": "The exact independent-walker finite-N generator has state-dependent quadratic variation; A/(6N) occurs only at uniform p, while equilibrium mean-zero mode variance is 1/(12N).",
+    "status": "EXACT_PROVED",
+    "dimension": "finite-N empirical simplex",
+    "domain": "independent symmetric walkers",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "proofs/R7P-105_112_passive_finiteN.md",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "generator algebra and exact small-N checks"
+  },
+  {
+    "id": "CLM-060",
+    "statement": "The even/odd passive memory has visible residue-rank sum five in the supplied symmetric realization; the final hidden pole group has zero visible residue.",
+    "status": "CONDITIONAL_LEMMA",
+    "dimension": "passive even/odd transfer",
+    "domain": "supplied symmetric A_full block decomposition",
+    "finite_or_limit": "finite/frequency-domain",
+    "dependencies": [],
+    "source": "results/R7P-105_112_passive_finiteN.json",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "pole-residue decomposition; exact symmetry cancellation plus numerical nonzero residue ranks"
+  },
+  {
+    "id": "CLM-061",
+    "statement": "For C_gamma=I/12+gamma W with gamma in [0.049,0.05], the accepted canonical mixed-family discord floor scales by at least (49/50)^2, conditional on the historical rational gap certificates.",
+    "status": "CONDITIONAL_LEMMA",
+    "dimension": "bipartite quantum stationary branch",
+    "domain": "canonical mixed interaction; gamma interval; historical gap certificates",
+    "finite_or_limit": "finite",
+    "dependencies": [],
+    "source": "proofs/R7P-113_120_quantum_bridge.md",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "convex positivity and exact linear spectral-gap scaling"
+  },
+  {
+    "id": "CLM-062",
+    "statement": "Shared spectral gaps do not by themselves provide a causal map between the quantum discord branch and classical rank-seven localization.",
+    "status": "EXACT_PROVED",
+    "dimension": "cross-branch scope audit",
+    "domain": "supplied packages only",
+    "finite_or_limit": "conceptual",
+    "dependencies": [],
+    "source": "proofs/R7P-113_120_quantum_bridge.md",
+    "handoff_section": "post-handoff campaign",
+    "evidence_level": "obligation matrix: state-space/generator/preparation/gain maps absent"
+  }
+]

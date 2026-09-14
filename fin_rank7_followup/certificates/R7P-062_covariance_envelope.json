@@ -1,0 +1,18 @@
+{
+  "id": "CERT-R7P-062",
+  "claim_id": "CLM-049",
+  "domain": "four exact even boundary feature points with one probability at least 711/1000",
+  "quantifiers": "all probability vectors on the four feature points satisfying max_i p_i>=711/1000 and accepted strict spectrum",
+  "assumptions": [
+    "R7P-043 exact covariance e2 invariant",
+    "PSD covariance"
+  ],
+  "proof_type": "exact AM-GM branch reduction plus exact-rational interval Bernstein upper covers",
+  "inputs": [
+    "src/intraparity_closure.py",
+    "results/R7P-060_063_intraparity_closure.json"
+  ],
+  "conclusion": "e2<(511/2000)^2 and hence lambda2(C_plus)<511/2000.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

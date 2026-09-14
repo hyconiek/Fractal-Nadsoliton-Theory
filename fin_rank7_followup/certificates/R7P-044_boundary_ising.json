@@ -1,0 +1,21 @@
+{
+  "id": "R7P-044",
+  "claim_id": "CLM-038",
+  "domain": "All probabilities on the exact four-state feature set, accepted strict spectral intervals",
+  "quantifiers": "For the variables and spectral intervals explicitly declared in the accompanying proof note.",
+  "assumptions": [
+    "Accepted strict Laplacian eigenvalue intervals",
+    "Conditional rank-seven active-gain boundary construction; no strict gain-source claim"
+  ],
+  "proof_type": "exact spectral lemma plus strict rational interval sign",
+  "inputs": [
+    "inputs/fin_handoff_audit/results.json",
+    "src/boundary_ising.py"
+  ],
+  "conclusion": "Because 3 sigma_*-tr Cov is globally positive, lambda2(Cov)<=sigma_* iff P(sigma_*)<=0 or Pprime(sigma_*)>=0; violation is exactly P>0 and Pprime<0.",
+  "result_record": "results/R7P-041_045_boundary_ising.json#R7P-044",
+  "limitations": [
+    "No global full-four-field curvature theorem",
+    "No strict FIN gain/selector/units/physics promotion"
+  ]
+}

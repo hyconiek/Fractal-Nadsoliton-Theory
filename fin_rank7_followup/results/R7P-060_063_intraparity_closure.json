@@ -1,0 +1,273 @@
+{
+  "R7P-060": {
+    "status": "EXACT_REDUCTION_PLUS_NUMERICAL_MINIMUM",
+    "same_field_formulas": {
+      "R": "(u+d)/(u-d)",
+      "Z": "R^(1/(2*sqrt(3)))",
+      "Y": "2*(1-u)/sqrt(u^2-d^2)",
+      "Cplus_weights": "(X*Y*Z^4, 2*X*Z, Y, 2*Z^3), X=exp(2J3)>=1"
+    },
+    "monotonicity": [
+      "p1=X*a/(X*(a+b)+c) is strictly increasing in X for c>0, so the minimum has X=1 (J3=0).",
+      "For fixed u, both Y and Z increase with d; p1=1/(1+2/(Y Z^3)+Z^-4+2/(Y Z)) therefore increases with d.",
+      "Dangerous Cminus has d^2>=dmin^2(u), hence the minimum at each u has d=dmin(u).",
+      "The interval proof Y^2>4 on the dangerous u-range makes p1 the largest Cplus mass: p1/p2=Y Z^3/2>1, p1/p3=X Z^4>=1, p1/p4=X Y Z/2>1."
+    ],
+    "Y2_gt_4_cover": [
+      {
+        "interval": [
+          "2/5",
+          "3/5"
+        ],
+        "depth": 0,
+        "min_bernstein_lo": "1753862144957338511003371796558236980312846655339948164679/1220703125000000000000000000000000000000000000000000000"
+      }
+    ],
+    "one_dimensional_expression": "alpha(u)=1/(1+2/(Y(u) Z(u)^3)+Z(u)^(-4)+2/(Y(u) Z(u))), with d(u)=dmin(u), X=1",
+    "numerical_candidate": {
+      "spectral_choice": "midpoints of accepted strict intervals",
+      "u": 0.5280356754218818,
+      "d": 0.45226585859447954,
+      "Y": 3.4634682260073992,
+      "Z": 2.093954929309341,
+      "p": [
+        0.7190710468760139,
+        0.04522604405975143,
+        0.03740265953112581,
+        0.19830024953310896
+      ],
+      "p_dom": 0.7190710468760139,
+      "optimizer_success": true
+    },
+    "proof_scope": "The reduction/monotonicity is exact; the displayed minimizing u and p_dom are numerical, not a global interval certificate."
+  },
+  "R7P-061": {
+    "status": "INTERVAL_CERTIFIED",
+    "dangerous_u_containment": {
+      "outer_rational_interval": [
+        "2/5",
+        "3/5"
+      ],
+      "u_minus_interval": [
+        "12574485711091579049295246925446871/31250000000000000000000000000000000",
+        "25148971422187245046459048162070253/62500000000000000000000000000000000"
+      ],
+      "u_plus_interval": [
+        "37351028577812754953540951837929747/62500000000000000000000000000000000",
+        "18675514288908420950704753074553129/31250000000000000000000000000000000"
+      ]
+    },
+    "denominator_positive_cover": [
+      {
+        "interval": [
+          "2/5",
+          "3/5"
+        ],
+        "depth": 0,
+        "min_bernstein_lo": "422618533725307718915780993818505455405913/7812500000000000000000000000000000000000"
+      }
+    ],
+    "d_over_u_bound": {
+      "bound": "d/u >= 1703/2000",
+      "squared_polynomial_cover": [
+        {
+          "interval": [
+            "2/5",
+            "1/2"
+          ],
+          "depth": 1,
+          "min_bernstein_lo": "12832053309361580363117354195682738512362898982322885251618643/3125000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "1/2",
+            "41/80"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "947646333162666162860164225054319853987918080180741343933666421/5000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "41/80",
+            "21/40"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "18271837879785618069396195244506662939453864815220901472975223779/20000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "21/40",
+            "11/20"
+          ],
+          "depth": 3,
+          "min_bernstein_lo": "21036335326697691248451476188255875901446785412362874643642123493/2500000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "11/20",
+            "3/5"
+          ],
+          "depth": 2,
+          "min_bernstein_lo": "1720751765614435812833569760457236678575695843551308042822046833/31250000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    "Y2_bound": {
+      "bound": "Y^2 >= 229/20",
+      "polynomial_cover": [
+        {
+          "interval": [
+            "2/5",
+            "1/2"
+          ],
+          "depth": 1,
+          "min_bernstein_lo": "4078447734328200018836135618557361213452871489220976387541/3125000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "1/2",
+            "21/40"
+          ],
+          "depth": 3,
+          "min_bernstein_lo": "1704004864056995698911633880442046872639581073848507253972983/6250000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "21/40",
+            "43/80"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "1324313780154908400886979621999408273456581160111979882681907/25000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "43/80",
+            "11/20"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "2816325519428459741829795280392306975449285496301529778709/625000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "11/20",
+            "3/5"
+          ],
+          "depth": 2,
+          "min_bernstein_lo": "45175497429708777487170410885596739471305390091880765524563/1562500000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    "field_corollaries": {
+      "R_lower": "3703/297",
+      "Y_lower": "3383/1000",
+      "Z_lower": "2071/1000",
+      "Z_proof": "2*sqrt(3)<693/200 and (3703/297)^200>(2071/1000)^693"
+    },
+    "dominant_mass_exact_rational_floor": "62233237343020823/87523445165020823",
+    "dominant_mass_decimal_floor": 0.711046477040333,
+    "exported_simple_bound": "p_dom > 711/1000",
+    "note": "The rational 711/1000 bound is freshly recomputed from the certified coarse d/u and Y^2 bounds; the imported decimal 0.7112098557 is not used as a proof input."
+  },
+  "R7P-062": {
+    "status": "INTERVAL_CERTIFIED",
+    "alpha": "711/1000",
+    "e2_exact": "A*(p1*p2*p3+p1*p3*p4)+B*(p1*p2*p4+p2*p3*p4), A=(l3*l4+l3*l5+l4*l5)/4, B=(4l3l4+4l3l5+l4l5)/16",
+    "branch_13": {
+      "parameterization": "p1=alpha (or p3=alpha), p2=p4=x at the maximizing split, p3=1-alpha-2x",
+      "envelope": "-l3*l4*x**3/2 - 461*l3*l4*x**2/1000 + 205479*l3*l4*x/2000000 - l3*l5*x**3/2 - 461*l3*l5*x**2/1000 + 205479*l3*l5*x/2000000 - l4*l5*x**3/8 - 1297*l4*l5*x**2/2000 + 205479*l4*l5*x/2000000",
+      "cover": [
+        {
+          "interval": [
+            "0",
+            "289/4000"
+          ],
+          "depth": 1,
+          "min_bernstein_lo": "128446668221161179194369977435548663/51200000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "289/4000",
+            "2601/32000"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "16337404956895132855845985147361168047/26214400000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "2601/32000",
+            "289/3200"
+          ],
+          "depth": 4,
+          "min_bernstein_lo": "6214969107989605971744113284193850377/98304000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "289/3200",
+            "867/8000"
+          ],
+          "depth": 3,
+          "min_bernstein_lo": "447857324172288709914915155886433643/3276800000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "867/8000",
+            "289/2000"
+          ],
+          "depth": 2,
+          "min_bernstein_lo": "7064789041171700736398726517086737361/2048000000000000000000000000000000000000"
+        }
+      ]
+    },
+    "branch_24": {
+      "parameterization": "p2=alpha (or p4=alpha), p1=p3=x at the maximizing split, p4=1-alpha-2x",
+      "envelope": "-l3*l4*x**3/2 - 461*l3*l4*x**2/1000 + 205479*l3*l4*x/2000000 - l3*l5*x**3/2 - 461*l3*l5*x**2/1000 + 205479*l3*l5*x/2000000 - l4*l5*x**3/2 + 289*l4*l5*x**2/4000 + 205479*l4*l5*x/8000000",
+      "cover": [
+        {
+          "interval": [
+            "0",
+            "289/4000"
+          ],
+          "depth": 1,
+          "min_bernstein_lo": "790332284750780395016639689770843429/64000000000000000000000000000000000000"
+        },
+        {
+          "interval": [
+            "289/4000",
+            "289/2000"
+          ],
+          "depth": 1,
+          "min_bernstein_lo": "14956741102056207107983626329461129/6000000000000000000000000000000000000"
+        }
+      ]
+    },
+    "monotonicity": "For alpha>1/2 the partial derivative of either branch with respect to alpha at fixed x is 2*C*x*(1-2alpha-2x)<0; hence p_i>=alpha is maximized at p_i=alpha.",
+    "certified_e2_bound": "e2 < (511/2000)^2",
+    "lambda2_bound": "lambda2(Cplus) < 511/2000",
+    "justification_lambda2": "Cplus is PSD; with eigenvalues mu1>=mu2>=mu3>=0, e2=mu1*mu2+mu1*mu3+mu2*mu3 >= mu2^2."
+  },
+  "R7P-063": {
+    "status": "INTERVAL_CERTIFIED",
+    "domain": "shared nonnegative fields J3,J4,J5,J6>=0 in the four-amplitude parity decomposition",
+    "sigma_interval": [
+      "10491300288393554887474372849/39228137239529000000000000000",
+      "131141253604923881958598857/490351715494107500000000000"
+    ],
+    "Cminus_sup_interval": [
+      "222432820501967/800000000000000",
+      "222432820501969/800000000000000"
+    ],
+    "dangerous_Cplus_bound": "lambda2(Cplus)<511/2000",
+    "q_bound": "q_even>=1/2",
+    "strict_two_sigma_gap_interval": [
+      "211120002216002280949319787/156912548958116000000000000000",
+      "211120002220093581671004699/156912548958114400000000000000"
+    ],
+    "case_A": "If lambda1(Cminus)<=sigma, R7P-055 gives lambda2(Cplus)<=sigma; Weyl gives lambda2(Wpar)<=q*sigma+(1-q)*sigma=sigma.",
+    "case_B": "If lambda1(Cminus)>=sigma, R7P-059 makes the odd sector dangerous; R7P-061 gives p_dom>711/1000 and R7P-062 gives lambda2(Cplus)<511/2000. R7P-058 gives lambda1(Cminus)<=(3lambda4+lambda5)/32. Since q>=1/2 and the Cminus bound exceeds 511/2000, the affine Weyl RHS is maximized at q=1/2, where the certified two-sigma gap is positive.",
+    "conclusion": "lambda2(W_par)<=sigma_* throughout the stated shared-field nonnegative domain.",
+    "limitations": [
+      "This is an intraparity W_par theorem, not yet the full M=W_par+b b^T off-face theorem.",
+      "No claim is made for negative J6 or independently optimized parity sectors."
+    ]
+  }
+}

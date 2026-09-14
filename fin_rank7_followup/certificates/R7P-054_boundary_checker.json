@@ -1,0 +1,41 @@
+{
+  "id": "R7P-054-boundary-independent-checker",
+  "claim_id": "CLM-043",
+  "domain": "exact compactified boundary-Ising closure represented by [0,1]^3 in (r,s,t)",
+  "quantifiers": "For every point of the full binary Bernstein partition and every strict spectral tuple enclosed by the accepted rational intervals.",
+  "assumptions": [
+    "R7P-048 frozen proof specification is byte-identical to the tree hash",
+    "accepted strict lambda3,lambda4,lambda5 intervals",
+    "R7P-044 shifted-characteristic criterion",
+    "R7P-052 local equality-neighborhood certificate"
+  ],
+  "proof_type": "independent exact-rational interval checker with mutation rejection",
+  "inputs": [
+    "certificates/R7P-048_boundary_proof_spec.json",
+    "results/R7P-053_refined_boundary_cover.json",
+    "src/boundary_checker.py"
+  ],
+  "conclusion": "The independent checker verifies a complete 436-leaf partition of [0,1]^3 with no unresolved leaves: 285 SAFE_A_NONPOS, 150 SAFE_B_NONNEG, and one R7P-052 local-equality leaf. All mandated tree/spec mutations are rejected.",
+  "global_pass": true,
+  "unresolved_leaves": 0,
+  "leaf_count": 436,
+  "reason_counts": {
+    "SAFE_B_NONNEG": 150,
+    "SAFE_A_NONPOS": 285,
+    "LOCAL_EQUALITY_CERTIFICATE": 1
+  },
+  "minimum_SAFE_A_margin": "187098203264182572922910747460687064577906467390411697216551865873138445083974711083266109043791366018168051245058201035055480383440383631629/100433627766186892221372630771322662657637687111424552206336000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "minimum_SAFE_B_margin": "10948090260950400591589227569427950428128592549775630365326112441487170667/23058430092136939520000000000000000000000000000000000000000000000000000000",
+  "coverage": "full binary partition of [0,1]^3",
+  "equality_scope": "unique target equality can occur only at the exact R7P-045 double root",
+  "mutation_tests": [
+    "remove leaf rejected",
+    "corrupt split rejected",
+    "flip leaf reason/sign rejected",
+    "alter spectral interval rejected"
+  ],
+  "limitations": [
+    "Certifies only the boundary-Ising closure, not the full finite four-amplitude interior.",
+    "Does not supply a strict FIN gain source or physical-role promotion."
+  ]
+}

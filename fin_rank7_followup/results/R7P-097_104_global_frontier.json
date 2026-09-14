@@ -1,0 +1,129 @@
+{
+  "R7P-097_099": {
+    "definition": "g_global=inf_{p != u,Q>0} 2D(p||u)/Q",
+    "Q": "(p-u)^T A7 (p-u)",
+    "uniform_limit": "12/lambda_max(A7) along the top active tangent direction; distinct from the finite-amplitude event",
+    "lower_bound": {
+      "g": "2.8934",
+      "reason": "A7<=A_full and accepted ST448 gives V_full>=0 with unique uniform minimizer, hence V7>=V_full"
+    },
+    "upper_witness": {
+      "probability_numerators": [
+        836365227,
+        1700465,
+        10147081,
+        26989852,
+        24859253,
+        13242432,
+        9756607,
+        13242432,
+        24859253,
+        26989852,
+        10147081,
+        1700465
+      ],
+      "denominator": 1000000000,
+      "D_interval": [
+        "[1.68223029068275428297955862703221569195301378938809730545258723548243132558, 1.68223029068275428297955862703221569195301378938809730545258723548243132558]",
+        "[1.68223029068275428297955862703221569195301378938809730545258723548243159725, 1.68223029068275428297955862703221569195301378938809730545258723548243159725]"
+      ],
+      "Q_interval": [
+        "[0.904827463172181293872254662465918810000816255813143959741384034270737744021, 0.904827463172181293872254662465918810000816255813143959741384034270737744021]",
+        "[0.904827463172189600309155803128615352928570404945729976894358823966066207386, 0.904827463172189600309155803128615352928570404945729976894358823966066207386]"
+      ],
+      "ratio_interval": [
+        "[3.71834489812037042927396426152499157201000667772213289728719844076962384516, 3.71834489812037042927396426152499157201000667772213289728719844076962384516]",
+        "[3.71834489812040456417650649102759855944392520119171791252656330560744505236, 3.71834489812040456417650649102759855944392520119171791252656330560744505236]"
+      ],
+      "energy_at_g_3p71835_interval": [
+        "[-0.00000230816040131717521611324942775682796109322688022433998233106467983531043896, -0.00000230816040131717521611324942775682796109322688022433998233106467983531043896]",
+        "[-0.00000230816038587405539043505785891163025377301330461589960042643286724362244149, -0.00000230816038587405539043505785891163025377301330461589960042643286724362244149]"
+      ],
+      "strict_negative": true
+    },
+    "bracket": [
+      "2.8934",
+      "3.71835"
+    ],
+    "nonconclusion": "Does not identify the first attaining orbit or prove uniqueness of the transition."
+  },
+  "R7P-100_101": {
+    "g4_stationary_atlas": "results/R7P-037_full7_stationary_atlas.json",
+    "g4_observed_phis": [
+      -0.13884766301180296,
+      0.0,
+      0.022577225011047197
+    ],
+    "status": "PARTIAL_NUMERICAL_ATLAS_WITH_UNCOVERED_7D_COMPLEMENT",
+    "unique_global_orbit_at_g4": "UNRESOLVED"
+  },
+  "R7P-102": {
+    "reduction_licenses": {
+      "D12": "exact symmetry action; allows orbit deduplication but does not force a generic minimizer into reflection-even C4",
+      "C4_reflection_fixed": "valid only for certified roots/branches in that invariant subspace; no global minimizer forcing theorem",
+      "phase_fixture": "fixed-amplitude torus only; amplitude-zero strata and generic 7D states remain outside",
+      "two_harmonic": "exact invariant restricted family only"
+    },
+    "unsupported_global_reduction": true
+  },
+  "R7P-103": {
+    "law": "theta_dot=-grad Phi_4(theta)",
+    "initial_saddle": [
+      0.7062598459648167,
+      -1.4879640895339835e-15,
+      0.7727536995804457,
+      -3.0340244193569635e-16,
+      0.7342684375615487,
+      3.5160818429680913e-15,
+      0.5218990937623753
+    ],
+    "unstable_eigenvalue": -0.06819664472256198,
+    "branches": [
+      {
+        "sign": -1,
+        "endpoint": [
+          1.3441736046443526e-15,
+          1.2042880249046457e-15,
+          2.719292338012047e-13,
+          1.2524081526587653e-15,
+          7.358303469491143e-12,
+          1.7152708215104949e-15,
+          2.2768106698245086e-11
+        ],
+        "phi": 0.0,
+        "residual": 1.3202361206312141e-12,
+        "distance_to_localized_rep": 4.097844455161513,
+        "distance_to_uniform": 2.392892683026714e-11,
+        "classification": "uniform"
+      },
+      {
+        "sign": 1,
+        "endpoint": [
+          2.0987977738917842,
+          3.4694469519536204e-17,
+          2.2115057986973623,
+          1.353084311261907e-16,
+          2.22827585021529,
+          -1.4723165664407406e-16,
+          1.591039258091007
+        ],
+        "phi": -0.13884766301180207,
+        "residual": 1.880837080092392e-15,
+        "distance_to_localized_rep": 6.662744177749794e-14,
+        "distance_to_uniform": 4.097844455174528,
+        "classification": "localized_orbit_rep"
+      }
+    ],
+    "proof_level": "NUMERICAL; no validated trajectory tube"
+  },
+  "R7P-104": {
+    "global_gain_bracket": [
+      "2.8934",
+      "3.71835"
+    ],
+    "fixed_g4_best_found_phi": -0.13884766301180296,
+    "global_orbit_uniqueness": "UNRESOLVED",
+    "stationary_exhaustion": "UNRESOLVED",
+    "dynamical_connections": "NUMERICAL_FOR_DECLARED_EUCLIDEAN_GRADIENT_FLOW_ONLY"
+  }
+}
