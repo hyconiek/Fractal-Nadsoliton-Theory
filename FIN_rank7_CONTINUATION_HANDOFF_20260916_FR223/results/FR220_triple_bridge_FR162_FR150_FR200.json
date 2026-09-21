@@ -1,0 +1,65 @@
+{
+  "id": "FR220-triple-bridge-FR162-FR150-FR200",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6000",
+      "1/5200"
+    ],
+    "u": [
+      "1/14000",
+      "1/10000"
+    ],
+    "v": [
+      "1/5400",
+      "1/4800"
+    ],
+    "e": [
+      "0",
+      "1/2000"
+    ]
+  },
+  "P_float": [
+    -6.323186699812592e-10,
+    -1.4017540471238967e-13
+  ],
+  "P1_float": [
+    -1.320080293306193e-05,
+    1.1613310347626264e-05
+  ],
+  "c2_float": [
+    0.15993825440918016,
+    0.160056838665078
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR219 landed at the buffered intersection of the FR162 right-x, FR150 upper-v and FR200 upper-u walls. A single bridge covers all three.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6000",
+        "1/5200"
+      ],
+      "u": [
+        "1/14000",
+        "1/10000"
+      ],
+      "v": [
+        "1/5400",
+        "1/4800"
+      ],
+      "e": [
+        "0",
+        "1/1800"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -6.489920103360848e-10,
+      1.0259160718786868e-11
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

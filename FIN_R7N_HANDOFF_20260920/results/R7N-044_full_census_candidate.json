@@ -1,0 +1,55 @@
+{
+  "task": "R7N-044",
+  "status": "COMPLETE_CANDIDATE_PENDING_INDEPENDENT_AUDIT",
+  "fixture": {
+    "r3": 0.1131879146,
+    "r4": 0.1698528641,
+    "r5": 0.2269339093,
+    "z6": -0.3380663037
+  },
+  "cover_layers": [
+    {
+      "layer": "K16 baseline partition",
+      "processed_total": 114000,
+      "safe_leaves": 54341,
+      "residual_leaves": 5382,
+      "root_leaves": 0,
+      "checkpoint": "checkpoints/R7N-044_full_cover_k16.json"
+    },
+    {
+      "layer": "K20 direct reclassification",
+      "source_residual": 5382,
+      "safe_leaves": 2887,
+      "residual_leaves": 2495,
+      "checkpoint": "checkpoints/R7N-044_K20_residual.json"
+    },
+    {
+      "layer": "K20 adaptive residual closure",
+      "source_residual": 2495,
+      "processed_total": 44043,
+      "safe_leaves": 22405,
+      "root_leaves": 864,
+      "residual_leaves": 0,
+      "checkpoint": "checkpoints/R7N-044_K20_adaptive.json"
+    }
+  ],
+  "terminal_leaf_count": 80497,
+  "root_catalog_count": 60,
+  "distinct_root_ids_in_cover": 60,
+  "root_leaf_count": 864,
+  "index_histogram": {
+    "0": 12,
+    "1": 24,
+    "2": 18,
+    "3": 6
+  },
+  "local_root_boxes": "inputs/FR223_20260916/certificates/R7P-092_full_phase_roots.json",
+  "uniqueness_collars": "results/R7N-041_full_uniqueness_collars.json",
+  "surrogate_K20": "results/R7N-043_K20_surrogate.json",
+  "conclusion": "If the independent audit confirms layer coverage, K20 leaf inequalities, and 60 root collars, the exact fixed full log-mgf fixture has exactly 60 critical points on the full normalized phase 3-torus.",
+  "nonconclusions": [
+    "No global quartic-to-full homotopy equivalence is claimed.",
+    "No amplitude robustness is claimed.",
+    "No statement transfers to variable amplitudes or full X7."
+  ]
+}

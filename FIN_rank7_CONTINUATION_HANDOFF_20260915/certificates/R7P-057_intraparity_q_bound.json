@@ -1,0 +1,19 @@
+{
+  "id": "CERT-R7P-057",
+  "claim_id": "CLM-044",
+  "domain": "nonnegative shared fields J3,J4,J5,J6 with the exact C4 parity split",
+  "quantifiers": "all J3,J4,J5>=0 at J6=0; extension all J6>=0",
+  "assumptions": [
+    "same shared fields determine both parity sectors",
+    "exact trigonometric mode table on 12 labels"
+  ],
+  "proof_type": "exact partition-function algebra plus termwise nonnegative hyperbolic series",
+  "inputs": [
+    "src/intraparity.py",
+    "R7P-009 coordinate mapping",
+    "R7P-041 four-state even-parity model"
+  ],
+  "conclusion": "C_plus and C_minus are conditionally independent of J6; C_minus is also independent of J3. At J6=0, q_even>=1/2 with equality iff J3=J5=0 (J4 arbitrary). For J6>=0, q_even>=q0>=1/2.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

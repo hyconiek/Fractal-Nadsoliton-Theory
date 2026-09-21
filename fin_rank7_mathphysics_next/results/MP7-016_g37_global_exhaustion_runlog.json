@@ -1,0 +1,193 @@
+{
+  "task": "MP7-016",
+  "scientific_state": "PROVED_INTERVAL_ASSISTED_GLOBAL_STATIONARY_EXHAUSTION_AT_G_37_10",
+  "gain": "37/10",
+  "coordinate": "unscaled aligned fields J=(J3,J4,J5,J6)",
+  "stationary_equation": "J_i = g d_i m_i(J), d=(lambda3/6,lambda4/6,lambda5/6,lambda6/12)",
+  "initial_box_lo": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "initial_box_hi": [
+    1.2095342315521447,
+    1.3564007904221527,
+    1.4174738677821122,
+    0.7221727960201125
+  ],
+  "spectral_intervals": {
+    "3": [
+      "196140686197643/100000000000000",
+      "39228137239529/20000000000000"
+    ],
+    "4": [
+      "5498922123333/2500000000000",
+      "109978442466661/50000000000000"
+    ],
+    "5": [
+      "57465156801977/25000000000000",
+      "22986062720791/10000000000000"
+    ],
+    "6": [
+      "234218204114629/100000000000000",
+      "234218204114631/100000000000000"
+    ]
+  },
+  "contractor_basis": "accepted nonnegative covariances imply every m_i is isotone; on [l,u], m_i(l)<=m_i(J)<=m_i(u)",
+  "processed_records": 253,
+  "status_counts": {
+    "SPLIT": 126,
+    "TERMINAL_UNIFORM": 1,
+    "EXCLUDED_EMPTY_AFTER_ISOTONE_CONTRACTION": 123,
+    "TERMINAL_SADDLE": 2,
+    "TERMINAL_LOCALIZED": 1
+  },
+  "max_depth": 73,
+  "terminals": [
+    {
+      "path": "R000",
+      "depth": 3,
+      "input_lo": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_hi": [
+        2.172445761059911e-06,
+        2.4192375085096634e-05,
+        6.200672053025372e-05,
+        2.609108426119065e-05
+      ],
+      "contracted_lo": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contracted_hi": [
+        6.100481202689616e-13,
+        2.1107223721274454e-10,
+        2.027641457007433e-09,
+        1.4987386527346588e-09
+      ],
+      "status": "TERMINAL_UNIFORM"
+    },
+    {
+      "path": "R110000001010000101111010100100000100000000000000000011011110101010001011",
+      "depth": 72,
+      "input_lo": [
+        0.5491867312795342,
+        0.6181210708015054,
+        0.6077094412459458,
+        0.30951880811531113
+      ],
+      "input_hi": [
+        0.549186738957288,
+        0.6181210769163296,
+        0.6077094523040192,
+        0.30951881246358026
+      ],
+      "contracted_lo": [
+        0.5491867312795342,
+        0.6181210708015054,
+        0.6077094412459458,
+        0.30951880914635177
+      ],
+      "contracted_hi": [
+        0.5491867389563171,
+        0.6181210769163296,
+        0.6077094523028748,
+        0.30951881246358026
+      ],
+      "status": "TERMINAL_SADDLE"
+    },
+    {
+      "path": "R1100000010100001011110101001000001000000000000000000110111101010100011100",
+      "depth": 73,
+      "input_lo": [
+        0.5491867336014545,
+        0.6181210696238598,
+        0.6077094426974909,
+        0.30951881246358026
+      ],
+      "input_hi": [
+        0.549186737579547,
+        0.6181210769163296,
+        0.6077094503712339,
+        0.3095188169844774
+      ],
+      "contracted_lo": [
+        0.5491867336014545,
+        0.6181210696928829,
+        0.6077094427615234,
+        0.30951881246358026
+      ],
+      "contracted_hi": [
+        0.549186737579547,
+        0.6181210769163296,
+        0.6077094503712339,
+        0.30951881516606744
+      ],
+      "status": "TERMINAL_SADDLE"
+    },
+    {
+      "path": "R1111",
+      "depth": 4,
+      "input_lo": [
+        1.0275937781208486,
+        1.1442790757400987,
+        1.1693381774533438,
+        0.5960039148491946
+      ],
+      "input_hi": [
+        1.027681402923662,
+        1.1443784166984043,
+        1.1693939839352074,
+        0.5960607680669302
+      ],
+      "contracted_lo": [
+        1.0276814028690593,
+        1.1443784166365023,
+        1.1693939838656597,
+        0.5960607680315039
+      ],
+      "contracted_hi": [
+        1.027681402923662,
+        1.1443784166984043,
+        1.1693939839352074,
+        0.5960607680669302
+      ],
+      "status": "TERMINAL_LOCALIZED"
+    }
+  ],
+  "uniform_banach_cube_J_upper": 1e-08,
+  "uniform_DTout_inf_row_upper": [
+    0.6047671872260351,
+    0.6782004752322023,
+    0.7087370149765668,
+    0.7221728555129543
+  ],
+  "uniform_contraction_q_upper": 0.7221728555129543,
+  "nonzero_local_uniqueness_source": "MP7-015 parametric Krawczyk s-boxes; every terminal J box maps wholly into its source s-box for all accepted feature scalings",
+  "root_count_aligned_nonnegative": 3,
+  "root_names": [
+    "uniform",
+    "saddle",
+    "localized"
+  ],
+  "energy_uniform_exact": 0.0,
+  "energy_nonzero_root_intervals": {
+    "localized": [
+      0.008235102001579031,
+      0.008235181373454593
+    ],
+    "saddle": [
+      0.0487900472912212,
+      0.04879010290166141
+    ]
+  },
+  "global_minimum_conclusion": "uniform theta=0 is the unique global minimizer at g=37/10 after MP7-011 phase alignment; both other stationary roots have rigorously positive energy",
+  "scope": "all aligned nonnegative stationary points at exact g=37/10 over the accepted strict spectral enclosure; full-X7 global minimizers reduce to this chart by MP7-011, boundary nonzero roots excluded by MP7-014"
+}

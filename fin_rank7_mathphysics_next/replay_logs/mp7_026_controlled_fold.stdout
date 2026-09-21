@@ -1,0 +1,89 @@
+{
+  "task": "MP7-026",
+  "scientific_state": "PROVED_INTERVAL_ASSISTED_LOCAL_FOLD_SCALING",
+  "source_certificate": "R7P-031_simple_fold.json",
+  "source_sha256_expected": "5537174281996415a20ea3dffce23c33258c51396b3850aedf4168d9280e352e",
+  "coordinate_convention": "s=s_fold+xi*v+E*y, E=(e1,e2,e3), ||v||=1; epsilon=g-g_fold",
+  "epsilon_interval": [
+    "0",
+    "1e-7"
+  ],
+  "epsilon_endpoint_note": "claims apply for 0<epsilon<=1e-7; epsilon=0 is the certified fold itself",
+  "fold_coeff_a": [
+    -0.21257164008401389,
+    -0.212571626020459
+  ],
+  "fold_coeff_b": [
+    0.11898252745049878,
+    0.11898266710322367
+  ],
+  "formal_coefficients": {
+    "abs_xi_over_sqrt_epsilon": [
+      1.8902785022893338,
+      1.890279674151872
+    ],
+    "barrier_over_epsilon_3_2": [
+      0.5357594331508821,
+      0.5357598007359183
+    ],
+    "soft_abs_eigen_over_sqrt_epsilon": [
+      0.22491024577896146,
+      0.22491038521020987
+    ]
+  },
+  "uniform_neighborhood": {
+    "s_coordinate_radius": 0.002,
+    "M2_T3_frobenius_upper": 0.22283387259437062,
+    "M4_T4_frobenius_upper": 0.1901717980001482,
+    "H_frobenius_upper": 0.37676524460316574,
+    "transverse_lambda_lower": 0.009311461667264872,
+    "fold_second_eigen_lower_by_interlacing": 0.01722595538834604,
+    "c_norm_upper": 0.19648625922882754,
+    "d_norm_upper": 0.11107213954797267
+  },
+  "root_bracket": {
+    "relative_bracket_delta": 0.015,
+    "abs_xi_over_sqrt_epsilon": [
+      1.8619243247549937,
+      1.9186338692641498
+    ],
+    "inner_leading_margin_over_epsilon": 0.006329320164759178,
+    "outer_leading_margin_over_epsilon": 0.006424977821539307,
+    "uniform_remainder_over_epsilon_upper": 0.005965415220990058,
+    "branch_sign_pass": true,
+    "transverse_y_norm_upper_at_epsilon_max": 4.30698305509212e-06,
+    "total_s_displacement_upper_at_epsilon_max": 0.0006110322853367361
+  },
+  "reduced_convexity": {
+    "r_xixi_minus_b_abs_upper": 0.010035734193672837,
+    "r_xixi_lower": 0.10894679325682595,
+    "pass": true,
+    "consequence": "exactly two reduced roots in the certified local interval for every 0<epsilon<=1e-7"
+  },
+  "energy_barrier": {
+    "definition": "Phi(saddle)-Phi(minimum) on the two local branches",
+    "barrier_over_epsilon_3_2": [
+      0.5126867995891401,
+      0.558650696110349
+    ],
+    "uniform_integrated_remainder_upper": 0.022890895374430814,
+    "global_barrier_claim": false
+  },
+  "soft_hessian_eigenvalue": {
+    "abs_lambda_soft_over_sqrt_epsilon": [
+      0.21490520515383432,
+      0.2349154318867044
+    ],
+    "fold_gap_lower": 0.01722595538834604,
+    "H_perturbation_upper_at_epsilon_max": 0.00013616678119526498,
+    "schur_correction_upper": 1.0936537626840788e-06,
+    "signs": "negative on xi<0 saddle branch; positive on xi>0 minimum branch",
+    "pass": true
+  },
+  "interpretation": [
+    "The sqrt(epsilon), epsilon^(3/2), and sqrt(epsilon) fold laws are controlled on an explicit punctured interval.",
+    "The energy difference is local saddle-to-minimum, not a proved global escape barrier.",
+    "No physical time, mobility, temperature, or global-transition claim is introduced."
+  ],
+  "all_gates_pass": true
+}

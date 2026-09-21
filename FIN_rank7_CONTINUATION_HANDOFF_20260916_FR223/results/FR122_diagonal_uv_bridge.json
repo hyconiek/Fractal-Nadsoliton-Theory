@@ -1,0 +1,65 @@
+{
+  "id": "FR122-diagonal-u-v-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/7000",
+      "1/5800"
+    ],
+    "u": [
+      "1/30000",
+      "1/16000"
+    ],
+    "v": [
+      "1/5200",
+      "1/4200"
+    ],
+    "e": [
+      "0",
+      "1/5000"
+    ]
+  },
+  "P_float": [
+    -4.716681078369241e-10,
+    -4.44539660775312e-12
+  ],
+  "P1_float": [
+    -1.3643073149694326e-05,
+    -1.6138249782583659e-06
+  ],
+  "c2_float": [
+    0.15994382289049766,
+    0.16000477772707086
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR121 landed simultaneously on the upper-u and upper-v buffered walls of the FR66 thin-u chimney.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/7000",
+        "1/5800"
+      ],
+      "u": [
+        "1/30000",
+        "1/16000"
+      ],
+      "v": [
+        "1/5200",
+        "1/4200"
+      ],
+      "e": [
+        "0",
+        "1/4000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -5.37648574145648e-10,
+      1.0071510568309654e-11
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

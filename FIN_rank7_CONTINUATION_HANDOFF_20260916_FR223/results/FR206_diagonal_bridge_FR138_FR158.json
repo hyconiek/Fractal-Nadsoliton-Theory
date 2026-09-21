@@ -1,0 +1,65 @@
+{
+  "id": "FR206-diagonal-bridge-FR138-FR158",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6500",
+      "1/6000"
+    ],
+    "u": [
+      "1/6200",
+      "1/5600"
+    ],
+    "v": [
+      "1/5500",
+      "1/5000"
+    ],
+    "e": [
+      "0",
+      "1/1500"
+    ]
+  },
+  "P_float": [
+    -8.210668276219934e-10,
+    -2.0190942260725346e-11
+  ],
+  "P1_float": [
+    -1.358264429684271e-05,
+    1.8343228650448666e-05
+  ],
+  "c2_float": [
+    0.1599370390708114,
+    0.16008446315652974
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR205 landed in the diagonal gap between the FR138 upper-u and FR158 left-x walls. A single off-centre bridge covers the gap with a stronger parity radius.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6500",
+        "1/6000"
+      ],
+      "u": [
+        "1/6200",
+        "1/5600"
+      ],
+      "v": [
+        "1/5500",
+        "1/5000"
+      ],
+      "e": [
+        "0",
+        "1/1400"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -9.148375361492581e-10,
+      7.690842897845368e-11
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "FR118-mid-uv-parity-chimney",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6200",
+      "1/5400"
+    ],
+    "u": [
+      "1/6800",
+      "1/6000"
+    ],
+    "v": [
+      "1/5500",
+      "1/5000"
+    ],
+    "e": [
+      "0",
+      "1/2000"
+    ]
+  },
+  "P_float": [
+    -7.223635364123649e-10,
+    -3.2787450922468606e-11
+  ],
+  "P1_float": [
+    -1.3688559898618439e-05,
+    1.0758761629206337e-05
+  ],
+  "c2_float": [
+    0.15993327743034075,
+    0.16004945634124398
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR117 hit the v-wall of FR36/u-wall of FR110. A narrower shifted box around the actual wall point has a much larger direct P<0 margin.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6200",
+        "1/5400"
+      ],
+      "u": [
+        "1/6800",
+        "1/6000"
+      ],
+      "v": [
+        "1/5500",
+        "1/5000"
+      ],
+      "e": [
+        "0",
+        "1/1500"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -8.245600184684658e-10,
+      4.5903383645552054e-11
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

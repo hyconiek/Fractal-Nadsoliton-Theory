@@ -1,0 +1,168 @@
+{
+  "id": "R7P-036-stationary-index2",
+  "claim_id": "CLM-STATIONARY-INDEX2",
+  "domain": "full X7 dual stationary system restricted to the exact invariant two-harmonic family at g=5",
+  "quantifiers": "for the fixed strict spectral tuple enclosed by the accepted outward spectral intervals; Krawczyk inclusion is uniform over those intervals",
+  "assumptions": [
+    "conditional active-gain dual with exact g=5",
+    "accepted strict spectral intervals",
+    "two-harmonic invariant family h_j=J cos(pi j/2)+K(-1)^j"
+  ],
+  "proof_type": "parametric rational interval Krawczyk + exact symmetry block inertia",
+  "inputs": [
+    "inputs/fin_handoff_audit/results.json",
+    "proofs/R7P-034_two_harmonic_reduction.md"
+  ],
+  "conclusion": "there exists a unique stationary root in the stated box and its full H7 inertia is exactly (2 negative, 0 zero, 5 positive); hence unrestricted stationary index<=1 is false",
+  "global_pass": false,
+  "task": "R7P-036",
+  "scientific_status": "INTERVAL_CERTIFIED",
+  "gain": [
+    "5",
+    "5"
+  ],
+  "spectral_inputs": {
+    "lambda3": [
+      "196140686197643/100000000000000",
+      "39228137239529/20000000000000"
+    ],
+    "lambda4": [
+      "5498922123333/2500000000000",
+      "109978442466661/50000000000000"
+    ],
+    "lambda5": [
+      "57465156801977/25000000000000",
+      "22986062720791/10000000000000"
+    ],
+    "lambda6": [
+      "234218204114629/100000000000000",
+      "234218204114631/100000000000000"
+    ]
+  },
+  "root_box": {
+    "J": [
+      "77809255947779/62500000000000",
+      "77809268447779/62500000000000"
+    ],
+    "K": [
+      "3897777604940989/5000000000000000",
+      "3897778604940989/5000000000000000"
+    ]
+  },
+  "certified_intervals": [
+    {
+      "name": "J_root_box",
+      "lo": "77809255947779/62500000000000",
+      "hi": "77809268447779/62500000000000"
+    },
+    {
+      "name": "K_root_box",
+      "lo": "3897777604940989/5000000000000000",
+      "hi": "3897778604940989/5000000000000000"
+    }
+  ],
+  "preconditioner_rational": [
+    [
+      "1189787169976369/500000000000000",
+      "230382973472723/250000000000000"
+    ],
+    [
+      "2751080734519107/5000000000000000",
+      "1759155406808139/1000000000000000"
+    ]
+  ],
+  "F_mid_interval": [
+    [
+      "-454582416331711423/1000000000000000000000000000000",
+      "-110471993805276379/250000000000000000000000000000"
+    ],
+    [
+      "-156310722209672043/500000000000000000000000000000",
+      "-305964783175310461/1000000000000000000000000000000"
+    ]
+  ],
+  "Jacobian_box": [
+    [
+      [
+        "478161222470550451848205823023/1000000000000000000000000000000",
+        "239080770469402634158064231149/500000000000000000000000000000"
+      ],
+      [
+        "-125242260893191620273993019269/500000000000000000000000000000",
+        "-125242126081690633467569531237/500000000000000000000000000000"
+      ]
+    ],
+    [
+      [
+        "-7477800244896774284969010059/50000000000000000000000000000",
+        "-149555843914978718215181549181/1000000000000000000000000000000"
+      ],
+      [
+        "161699788814643271024494814327/250000000000000000000000000000",
+        "323399761336038850716623702161/500000000000000000000000000000"
+      ]
+    ]
+  ],
+  "Krawczyk_image": [
+    [
+      "1244948195165703144518696024177/1000000000000000000000000000000",
+      "622474097582964060179710283573/500000000000000000000000000000"
+    ],
+    [
+      "389777810494458259023111692649/500000000000000000000000000000",
+      "779555620989060523745280352297/1000000000000000000000000000000"
+    ]
+  ],
+  "strict_inclusion_margin": [
+    "49999267939820289716427/500000000000000000000000000000",
+    "99999137276254719647703/1000000000000000000000000000000"
+  ],
+  "root_scope": "For every spectral tuple in the accepted strict intervals, one unique root lies in this J,K box; in particular the strict tuple has one unique root.",
+  "stationary_lift": "The period-4 reflection-even two-harmonic family has zero residual in all omitted X7 coordinates identically, so the certified 2D root is a full seven-coordinate stationary point.",
+  "hessian_blocks": {
+    "x_interval": [
+      "761666405455501074844550559297/1000000000000000000000000000000",
+      "95208315977082403012200653879/125000000000000000000000000000"
+    ],
+    "y_interval": [
+      "49924952925947718910634661999/62500000000000000000000000000",
+      "798799451752272379499113439579/1000000000000000000000000000000"
+    ],
+    "H_3sin": [
+      "41778405459758992027719974013/250000000000000000000000000000",
+      "167113655336123938847069013611/1000000000000000000000000000000"
+    ],
+    "H_36_diag_3cos": [
+      "95632229125652804641513233009/1000000000000000000000000000000",
+      "47816161778031351357316623469/500000000000000000000000000000"
+    ],
+    "H_36_diag_6alt": [
+      "64679917920501228647549977931/500000000000000000000000000000",
+      "64679949872476565063267966051/500000000000000000000000000000"
+    ],
+    "H_36_det": [
+      "339765960376645408696056167/31250000000000000000000000000",
+      "10872532592859339923097175781/1000000000000000000000000000000"
+    ],
+    "H_45_diag_4": [
+      "16702595888898333333333333333/1000000000000000000000000000000",
+      "167025958889/10000000000000"
+    ],
+    "H_45_diag_5": [
+      "4224738663370833333333333333/500000000000000000000000000000",
+      "4224738663371666666666666667/500000000000000000000000000000"
+    ],
+    "H_45_det_each": [
+      "-10113928596287273946764323331/500000000000000000000000000000",
+      "-10113925324025061580833249811/500000000000000000000000000000"
+    ]
+  },
+  "inertia_conclusion": "H7 has exactly 2 negative, 0 zero, and 5 positive eigenvalues throughout the certified stationary root box for the strict spectral tuple.",
+  "claim_consequence": "The unrestricted universal stationary-point conjecture index(H7)<=1 is false (already at exact supplied gain g=5). This does not decide a gain-restricted conjecture near g_eq.",
+  "restricted_full_mismatch": {
+    "H4_index": 1,
+    "H7_index": 2,
+    "extra_negative_sector": "(4sin,5sin)",
+    "statement": "The certified stationary point is index 1 in C4 but index 2 in full X7."
+  }
+}

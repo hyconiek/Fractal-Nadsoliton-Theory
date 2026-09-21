@@ -1,0 +1,142 @@
+{
+  "continuation": "post-R7P-128 frontier 1",
+  "q_lower_bound": {
+    "id": "FR1-q-lower-bound",
+    "status": "EXACT_PROVED",
+    "domain": "J3,J4,J5,J6>=0",
+    "statement": "q/(1-q) >= cosh(J3), hence q >= cosh(J3)/(1+cosh(J3)).",
+    "compact_form": "with a=exp(-J3), q >= (1+a^2)/(1+a)^2; equivalently q*(1+a)^2 >= 1+a^2.",
+    "partition_sums": {
+      "Z_even": "2 exp(J4) cosh(J3+J5)+4 exp(-J4/2) cosh(J3-J5/2)",
+      "Z_odd": "2 exp(J4)+4 exp(-J4/2) cosh(sqrt(3) J5/2)",
+      "odds": "q/(1-q)=exp(2J6) Z_even/Z_odd"
+    },
+    "proof_atoms": [
+      "A=cosh(J3+J5)-cosh(J3)>=0, so increasing J4 only helps after factoring 2 exp(-J4/2).",
+      "At J4=0 the difference equals cosh(J3) A0(J5)+sinh(J3) B0(J5).",
+      "B0(x)=sinh(x)-2sinh(x/2)=2sinh(x/2)(cosh(x/2)-1)>=0.",
+      "A0(x)=cosh(x)+2cosh(x/2)-1-2cosh(sqrt(3)x/2). Its x^2 and x^4 coefficients vanish; for n>=3 the x^(2n) coefficient is proportional to h_n=4^n+2-2*3^n>0.",
+      "h_3=12 and h_(n+1)=4 h_n + 2*3^n-6 >0 for n>=3."
+    ],
+    "equality_note": "At J5=0 the strengthened ratio is exactly cosh(J3); J6=0 then saturates the q lower bound."
+  },
+  "large_J3_tail": {
+    "id": "FR1-large-J3-tail",
+    "status": "INTERVAL_CERTIFIED",
+    "domain": "a=exp(-J3)<=1/30; arbitrary J4,J5,J6>=0",
+    "criterion": "lambda2(M4) <= C1*a + C2*a^2 < sigma_*",
+    "C1_interval": [
+      "2427068352573804238297005393/312373272320300000000000000",
+      "10921807586582148454577756213/1405679725441337500000000000"
+    ],
+    "C2_interval": [
+      "394122323818865097671735637/78093318080075000000000000",
+      "11350722925983371301925149657/2249087560706140000000000000"
+    ],
+    "a_threshold": "1/30",
+    "upper_bound_at_threshold": [
+      "4132696659582754863310950241/15618663616015000000000000000",
+      "59510831897991833013517494209/224908756070614000000000000000"
+    ],
+    "sigma_interval": [
+      "10491300288393554887474372849/39228137239529000000000000000",
+      "131141253604923881958598857/490351715494107500000000000"
+    ],
+    "strict_gap_interval": [
+      "143349808530883672541318740289661171267/50415723140055983422606290320000000000000",
+      "8710491837859658410567826726814893460037/3063455399135342219350052645000000000000000"
+    ],
+    "geometry": "At a=0 only feature values F0 and F4=F8 survive. Project to the orthogonal complement of F4-F0; the limiting covariance is zero on that 3D compression.",
+    "weight_bound": "The six odd-label ratios are <=a and labels 2,6,10 are <=a^2; normalization is >=1.",
+    "courant_fischer": "lambda2 is at most the largest eigenvalue of this 3D compression, which is at most its trace; variance is bounded by second moment about F0.",
+    "exact_coefficients": {
+      "C1": "lambda3 + 2 lambda6 + lambda4 lambda5/(lambda4+lambda5)",
+      "C2": "2 lambda3 + lambda4 lambda5/(lambda4+lambda5)"
+    }
+  },
+  "large_J4_tail": {
+    "id": "FR1-large-J4-tail",
+    "status": "INTERVAL_CERTIFIED",
+    "domain": "s=exp(-3J4/2)<=1/128; arbitrary J3,J5,J6>=0",
+    "criterion": "lambda2(M4) <= lambda6/12 + Cs*s < sigma_*",
+    "Cs_interval": [
+      "5801184498801926307008432807/665627052196179687500000000",
+      "37127580792333018314429295503/4260013134055510000000000000"
+    ],
+    "s_threshold": "1/128",
+    "lambda6_over_12_interval": [
+      "234218204114629/1200000000000000",
+      "78072734704877/400000000000000"
+    ],
+    "upper_bound_at_threshold": [
+      "134584369569133878119635960937/511201576086666000000000000000",
+      "717783304368717013744923633147/2726408405795526400000000000000"
+    ],
+    "sigma_interval": [
+      "10491300288393554887474372849/39228137239529000000000000000",
+      "131141253604923881958598857/490351715494107500000000000"
+    ],
+    "strict_gap_interval": [
+      "2231336609912858506162404697581093533774753/534759615567761913190567215328000000000000000",
+      "418375614360201245901099719957431206833309/100267427918955277795372928238000000000000000"
+    ],
+    "geometry": "At s=0 labels 0,3,6,9 lie in span{u,e6}, where u is the c3/c5 line. Compress to u^perp. The c6 variance is globally <=lambda6/12, and all remaining two compressed coordinates are constant on the s=0 support.",
+    "weight_bound": "Every state that changes those remaining compressed coordinates carries a factor s; its normalized probability is <= its unnormalized anchor ratio <=s.",
+    "exact_coefficient": "Cs=(3 lambda3 lambda4 + 2 lambda3 lambda5 + 3 lambda4 lambda5)/(lambda3+lambda5)"
+  },
+  "large_J5_tail": {
+    "id": "FR1-large-J5-projected-tail",
+    "status": "INTERVAL_CERTIFIED",
+    "domain": "t=exp(-J5/2)<=1/9; arbitrary J3,J4,J6>=0",
+    "criterion": "lambda2(M4) <= C1*t + C2*t^2 + C3*t^3 + C4*t^4 < sigma_*",
+    "t_threshold": "1/9",
+    "sigma_interval": [
+      "10491300288393554887474372849/39228137239529000000000000000",
+      "131141253604923881958598857/490351715494107500000000000"
+    ],
+    "coefficient_intervals": {
+      "C1": [
+        "29640248574349380244039309322879324162373228297540443724489323806998849510227039/13963270777883739603884256022678796874992997589846885912590378179520000000000000",
+        "1543762946580751027615220916817351581522501423113107656448755313963780159935403/727253686348100522638795540084570427931291742130731859478594884437500000000000"
+      ],
+      "C2": [
+        "23217916025185072745909466898375000000000000000000000000000000000/14545073726962228754046100023623746744784372489423839492281643937",
+        "18574332820148392044465581264800000000000000000000000000000000000/11636058981569608362220728641353126846900667874091709751657518151"
+      ],
+      "C3": [
+        "1403703783133110281646168992901881615267267814761664408359939725571276282953937/290901474539244575080922000472474934895687449788476789845632878740000000000000",
+        "22459260530130164884866773367210756667141001472839287076814963615244150540408567/4654423592627843344888291456541250738760267149636683900663007260400000000000000"
+      ],
+      "C4": [
+        "111049403808087616694959291315250000000000000000000000000000000000/43635221180886686262138300070871240234353117468271518476844931811",
+        "3290352705424878371485692872000000000000000000000000000000000000/1292895442396623151357858737928125205211185319343523305739724239"
+      ]
+    },
+    "upper_bound_at_threshold": [
+      "71806275236869197413851070509107940812434457089206037312131973184325231782661529/273471700219985718033088369447151003871131513991001249171658123092032000000000000",
+      "1484882852120492767182112777245676360880676232024457160299749530623446309084869137/5655124665042829664039274119697619647593724586808570939305553821386000000000000000"
+    ],
+    "strict_gap_interval": [
+      "1080422721659408873776125087084179423037924823321406233367032477301100520283904959058325432241/221840006466945588821640565145715912726749485000072270134967138687123539164767194000000000000000",
+      "1306182693356007767398187318014681867136929671208922344970404489331892202105647468511029134113/268194634683920584458955803755996616237578283042578143295547079553888120181152402880000000000000"
+    ],
+    "geometry": "As t->0 the slow labels 5 and 7 have the same C4 feature vector. Together with label 0 they occupy one affine line. Project orthogonally to F5-F0; those slow t^(2-sqrt(3)) states then contribute exactly zero to the compression.",
+    "weight_groups": {
+      "t": "labels 2,10",
+      "t^2": "labels 3,9",
+      "t^3": "labels 1,11,4,8 (using 2+sqrt(3)>=3)",
+      "t^4": "label 6",
+      "removed_line": "labels 0,5,7"
+    },
+    "courant_fischer": "lambda2 is bounded by the trace of the 3D compressed covariance; normalized probabilities are <= anchor-relative unnormalized weights because w0=1.",
+    "improvement_over_R7P069": "Replaces the old certified t<=2^-11 tail by the much larger t<=1/9 tail."
+  },
+  "new_residual_outer_box": {
+    "necessary_conditions_for_unresolved_point": [
+      "a=exp(-J3)>1/30",
+      "s=exp(-3J4/2)>1/128",
+      "t=exp(-J5/2)>1/9"
+    ],
+    "note": "Certified boundary/face/local-cone regions from the completed campaign are additionally removed; this box is only a coarse outer hull of the new residual."
+  }
+}

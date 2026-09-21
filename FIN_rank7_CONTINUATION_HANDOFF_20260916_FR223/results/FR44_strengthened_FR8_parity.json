@@ -1,0 +1,50 @@
+{
+  "id": "FR44-strengthened-FR8-parity",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "anisotropic second-order rational interval AD + R7P-044 characteristic/inertia disjunction",
+  "domain": {
+    "abs_r_minus_rstar": "<=1/6500",
+    "u=1-exp(-3J4/2)": "<=1/8192",
+    "v=1-exp(-J5/2)": "<=1/4600",
+    "e=1-q_even": "<=1/9320"
+  },
+  "conclusion": "lambda2(Mtilde)<=sigma_* and hence lambda2(M4)<=sigma_* throughout the declared box.",
+  "strict_checks": {
+    "signs": {
+      "P1_x_negative": true,
+      "P1_u_negative": true,
+      "P1_v_negative": true,
+      "P1_e_positive": true,
+      "P_ee_positive": true,
+      "c2_positive": true
+    },
+    "boundary_schur_pass": true,
+    "endpoint_schur_pass": true,
+    "boundary_Nvv_interval": [
+      "6.4167325353463e-10",
+      "0.000121430318560937"
+    ],
+    "endpoint_Nvv_interval": [
+      "5.04609709880524e-05",
+      "0.000306505193959317"
+    ],
+    "c2_interval": [
+      "0.159002551385145",
+      "0.161045306433297"
+    ]
+  },
+  "improvement_over_FR8": "parity radius enlarged from 1/100000 to 1/9320 (>10.7x).",
+  "negative_control": {
+    "same_geometry_e_1_over_9300": {
+      "status": "FAILED",
+      "boundary_schur_pass": false,
+      "endpoint_schur_pass": true,
+      "boundary_Nvv_interval": [
+        "-2.29342000306669e-10",
+        "0.000121431182317472"
+      ],
+      "interpretation": "checker failure only; not a physical counterexample"
+    }
+  },
+  "scope": "Physical four-amplitude local theorem only."
+}

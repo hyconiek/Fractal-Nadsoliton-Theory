@@ -1,0 +1,1007 @@
+{
+  "campaign": "R7N",
+  "date": "2026-09-19",
+  "task_count": 64,
+  "tasks": [
+    {
+      "ID": "R7N-001",
+      "title": "Freeze the consolidated starting point",
+      "depends_raw": "none",
+      "class": "S",
+      "objective": "Read the mandatory sources; record git state, environment versions and hashes of the consolidated audit, corrected phase certificates, original FR223 ledger, and all repair trees. Record the difference between source archives and new working outputs. Preserve existing uncommitted work.",
+      "deliver_accept": "baseline manifest and scope note. No earlier result is counted as a new discovery. Missing source files are a real dependency issue, not a reason to reconstruct historical evidence from printed decimals.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-001_intake_manifest.json",
+        "INPUT_MANIFEST.sha256",
+        "environment.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-002",
+      "title": "Run one clean baseline replay",
+      "depends_raw": "001",
+      "class": "M/L",
+      "objective": "Run the documented isolated replay and the seven integration controls once. Classify failures as environment, mutation, checker, or mathematics. Record that the compatibility runner executes unittest cases and no-argument functions; do not claim pytest ran if it did not.",
+      "deliver_accept": "actual logs and counts. Repeatedly overwriting expected results to obtain PASS is forbidden. If the full replay is impractical, state precisely which accepted dependencies remain historical rather than fresh.",
+      "execution_status": "DONE",
+      "scientific_status": "NUMERICAL_REPRODUCED",
+      "evidence": [
+        "results/R7N-002_fresh_119_replay.json",
+        "logs/R7N-002_integration_7_compat.log"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Fresh replay: 29 files / 119 tests pass; 7/7 integration controls pass with NumPy-2 compatibility normalization."
+      ]
+    },
+    {
+      "ID": "R7N-003",
+      "title": "Export one normalized safe-union registry",
+      "depends_raw": "001\u2013002",
+      "class": "S",
+      "objective": "Build a registry containing the 99 directly certified domains and the 18 repair leaves covering the remaining seven masks. Link each leaf to its checker, threshold sigma, source hash, exact endpoints and analytic lemma.",
+      "deliver_accept": "`safe_union_v1.json` with no raw whole-box PASS for the seven repaired cases. Keep geometric-domain identity separate from the number of proof leaves. Do not insert the 1.02 navigation buffer.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/safe_union_v2_audited.json",
+        "results/R7N-003_canonical_vs_alternate_repairs.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-004",
+      "title": "Verify complete split coverage and overlap semantics",
+      "depends_raw": "003",
+      "class": "S",
+      "objective": "Check that every repair tree covers its stated parent domain and has no missing child, shifted endpoint, or unverified terminal leaf. Define closed-boundary semantics for union containment and cell subtraction.",
+      "deliver_accept": "exact coverage tests, including deleting a leaf and moving one boundary by a small rational amount. Volume agreement alone is insufficient: a missing lower-dimensional boundary can invalidate a universal theorem.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-004_coverage_tests.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-005",
+      "title": "Make verification independent of generation side effects",
+      "depends_raw": "001\u2013004",
+      "class": "S/M",
+      "objective": "Build a read-only verification interface in the new package. Distinguish schema validation, saved-evidence consistency, and recomputation of mathematical inequalities. Prevent archived import-time searches and certificate writes.",
+      "deliver_accept": "a clean-copy replay whose source hashes are unchanged after execution. Add an integration test that runs checks in different orders and proves the result does not depend on a previous file rewrite.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-005_readonly_verification.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-006",
+      "title": "Benchmark exact and bounded-rational interval backends",
+      "depends_raw": "005",
+      "class": "M",
+      "objective": "On a small fixed corpus, compare exact Fraction arithmetic with the accepted outward 10^-60 implementation. Measure speed, width inflation and sign margins. Check repeated initialization and context restoration.",
+      "deliver_accept": "an explicit arithmetic policy and containment tests. Never round interval endpoints to nearest or drop spectral dependence to save time. If precision is changed, record it in every affected certificate and replay.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-006_arithmetic_benchmark.json",
+        "results/R7N-006_arithmetic_policy.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-007",
+      "title": "Create the new claim/task dependency ledger",
+      "depends_raw": "001\u2013006",
+      "class": "S",
+      "objective": "Instantiate R7N-001\u2013064, classify Target P and Target S separately, and list which future conclusions require full-domain coverage. Import numerical locators only as candidates. Freeze the exact phase fixture as its own claim domain rather than calling it a physical or exact coexistence state.",
+      "deliver_accept": "TASKS.json, CLAIMS.json and STATE_MAP.md with no circular dependencies or global conclusion supported only by stored status strings.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "TASKS.json",
+        "CLAIMS.json",
+        "STATE_MAP.md"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-008",
+      "title": "Fix the first execution batch and stopping rule",
+      "depends_raw": "007",
+      "class": "S",
+      "objective": "Schedule B, then the first C cover pilot; start E's old-cover audit as an independent ready task. Define what evidence would justify switching to D or to an alternative C certificate primitive.",
+      "deliver_accept": "a short first-batch checklist. Do not automatically restart FR223's optimizer or execute FR224 before checking whether it serves this campaign's global-cover strategy.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-008_first_batch_decision.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-009",
+      "title": "Rebuild the compact probability law independently",
+      "depends_raw": "005,007",
+      "class": "S/M",
+      "objective": "Derive the twelve weights in Section 4 from `h_j=sum J_k c_k(j)`, dividing by the anchor weight. Check normalization and limiting cases. Compare with the original field calculation at independently chosen finite rational fields.",
+      "deliver_accept": "an exact formula/proof plus diagnostics. The tests must detect an incorrect sign of sqrt(3), a missing factor sqrt(r), and a wrong assignment of y to an even label.",
+      "execution_status": "DONE",
+      "scientific_status": "NUMERICAL_REPRODUCED",
+      "evidence": [
+        "results/R7N-009_compact_formula_diagnostics.json"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Independent transcription agrees with original field evaluation; exact symbolic derivation remains represented by the campaign formula contract rather than a separate CAS identity proof."
+      ]
+    },
+    {
+      "ID": "R7N-010",
+      "title": "Prove residual-hull coverage and chart boundaries",
+      "depends_raw": "003,009",
+      "class": "S",
+      "objective": "Show that a point outside the conservative compact hull is covered by FR1 or FR42, including shared endpoints. State the continuity/closure argument for infinite fields. Do not remove points merely because they satisfy the intraparity-W theorem.",
+      "deliver_accept": "a domain decomposition with exact rational hull endpoints and named tail certificates. The remaining compact hull is not assumed safe.",
+      "execution_status": "DONE",
+      "scientific_status": "CONDITIONAL_LEMMA",
+      "evidence": [
+        "proofs/R7N-010_residual_hull.md"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-011",
+      "title": "Preserve the physical y-to-q coupling in interval cells",
+      "depends_raw": "009\u2013010",
+      "class": "M",
+      "objective": "Implement interval A_even, B_odd, q and e. Tighten them using positivity and the accepted parity inequality where valid. Compare direct normalized weights with the conditional-parity representation.",
+      "deliver_accept": "inclusion tests and exact maps from compact cells to mask coordinates. Independently free q only as a documented outer relaxation; a violation in that relaxation is not necessarily a model counterexample.",
+      "execution_status": "DONE",
+      "scientific_status": "CONDITIONAL_LEMMA",
+      "evidence": [
+        "results/R7N-011_physical_coupling.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-012",
+      "title": "Build a generic threshold-a matrix interface",
+      "depends_raw": "009,011",
+      "class": "M",
+      "objective": "Implement M4 directly, eta_a and Mtilde_a for a declared exact threshold a. Verify the Schur inertia identity and denominator positivity. Keep sigma and tau0 as different threshold objects.",
+      "deliver_accept": "exact identities and tests detecting accidental reuse of Mtilde_sigma when a changes. The derivative for the characteristic test must hold Mtilde_a fixed, using a separate spectral variable z.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-012_schur_identity_diagnostics.json",
+        "results/R7N-012_014_generic_threshold_tests.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-013",
+      "title": "Add a cell-adaptive three-dimensional compression certificate",
+      "depends_raw": "012",
+      "class": "M",
+      "objective": "Propose a 4-by-3 basis numerically, rationalize it, prove full column rank, and enclose `B^T(a I-M4)B` over a cell. Use interval LDL or another verified PSD criterion. Basis choice is discovery; the rank and sign checks are proof.",
+      "deliver_accept": "a sufficient second-eigenvalue certificate with mutation tests. A basis that succeeds on one cell is not presumed valid on neighboring cells without recomputation.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "candidates/R7N-013_compression_candidate.json",
+        "results/R7N-013_compression_probe100_v2.json",
+        "src/compression_combined.py"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-014",
+      "title": "Add complementary trace and characteristic primitives",
+      "depends_raw": "012",
+      "class": "M",
+      "objective": "Implement the cheap sufficient trace test, valid projected-trace tests, and the qualified 3-by-3 characteristic disjunction. Add a general shifted- polynomial/inertia fallback if the trace coefficient has uncertain sign.",
+      "deliver_accept": "a hierarchy of sound leaf tests. Test matrices with zero, one, two and more eigenvalues above a, including exact threshold multiplicities. The determinant sign alone must not be used to count negative directions.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-012_014_generic_threshold_tests.json",
+        "src/target_p_e2_bound.py",
+        "src/compression_centered_moment.py"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-015",
+      "title": "Construct an exact mask-containment oracle",
+      "depends_raw": "003\u2013004,011",
+      "class": "M",
+      "objective": "Map an entire compact cell to intervals in `(x,u,v,e)`, paying spectral uncertainty in r_star. Accept containment in one proved mask or subdivide to establish containment in a union. Keep all seven repair trees accessible.",
+      "deliver_accept": "positive and negative fixtures for cells straddling walls, for buffered-but-unproved points, and for cells with midpoint containment but noncontained corners. Never use a sample as a universal containment test.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-015_016_cover_infrastructure.json",
+        "src/target_p_trace_cover.py",
+        "results/safe_union_v2_audited.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-016",
+      "title": "Define a global-cover proof format before searching",
+      "depends_raw": "010\u2013015",
+      "class": "S",
+      "objective": "Freeze the root hull, exact split rule, threshold identity, interval policy, leaf reason codes and checker interface. Every accepted cell must cite a verified inequality or an accepted-domain inclusion.",
+      "deliver_accept": "proof specification and deliberately malformed fixtures. Unresolved cells, budget stops and candidate counterexamples must survive serialization and resume. A global PASS requires a complete partition with no unpaid leaf or tail premise.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "proofs/global_cover_format.json",
+        "results/R7N-015_016_cover_infrastructure.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-017",
+      "title": "Verify the purpose and limits of the rational threshold",
+      "depends_raw": "007,012",
+      "class": "S",
+      "objective": "Using strict interval inputs, check sigma<67/250 and verify the exact gain consequence `g<=250/67`. Locate the existing certified local event gain inside this range. Record Target P as a new open claim.",
+      "deliver_accept": "a short implication theorem and rational inequalities. Explicitly prohibit calling a tau0 result a proof of the sharp sigma ceiling or transferring it to X7.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-017_target_p_implication.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-018",
+      "title": "Map numerical difficulty, without making proof exclusions",
+      "depends_raw": "010\u2013017",
+      "class": "M",
+      "objective": "Run one bounded deterministic sample of the compact hull and structured faces, measuring the tau0 gap and likely useful compression directions. Save seeds, cells, full parameters and covariance values.",
+      "deliver_accept": "a navigation map only. Do not mask out a point solely because the old buffered FR223 search omitted it. Search for admissible positive gaps explicitly and request a certificate for any stable candidate.",
+      "execution_status": "DONE",
+      "scientific_status": "NUMERICAL_NEW",
+      "evidence": [
+        "results/R7N-018_target_p_navigation.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-019",
+      "title": "Execute the first full-hull cover pilot",
+      "depends_raw": "016\u2013018",
+      "class": "L",
+      "objective": "Start from the complete compact hull and apply, in order, accepted-tail/mask containment, cheap trace bounds, adaptive compressed PSD, then the valid Schur/characteristic tests. Run the declared 10,000-leaf pilot.",
+      "deliver_accept": "a complete saved tree with every unresolved leaf. Report accepted volume only as an efficiency diagnostic, not as a substitute for universal coverage. Include the actual time and arithmetic-width bottlenecks.",
+      "execution_status": "DONE",
+      "scientific_status": "UNRESOLVED",
+      "evidence": [
+        "checkpoints/R7N-019_trace_cover.json",
+        "checkpoints/R7N-020_tight_rounded_trace_only.json",
+        "results/R7N-019_024_practical_lane_final.json"
+      ],
+      "remaining_atom": "Residual compact-hull cells remain; no global PASS.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-020",
+      "title": "Diagnose and improve the dominant proof bottleneck",
+      "depends_raw": "019",
+      "class": "M",
+      "objective": "Group failures by cause: field/covariance dependency inflation, uncertain characteristic sign, bad compression basis, poor chart, or genuine candidate violation. Change one design feature at a time and replay a frozen difficult cell corpus.",
+      "deliver_accept": "measured improvement with unchanged model and threshold. Do not merely increase precision or split counts when the same algebraic dependency dominates. Preserve failed approaches and their negative controls.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-021_t_refine_analysis.json",
+        "results/R7N-021_second_t_analysis.json",
+        "results/R7N-019_024_practical_lane_final.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-021",
+      "title": "Perform one justified refined cover or certify a counterexample",
+      "depends_raw": "019\u2013020",
+      "class": "L",
+      "objective": "Resume the exact tree with the improved primitive within the declared next resource bound. Any suspected violation needs a certified two-dimensional supercritical subspace or equivalent full-M4 inertia witness at admissible fields.",
+      "deliver_accept": "complete global coverage, a certified physical-domain counterexample to Target P, or an explicit bounded residual. A failed interval sign test is not itself a violating point.",
+      "execution_status": "DONE",
+      "scientific_status": "UNRESOLVED",
+      "evidence": [
+        "checkpoints/R7N-021_t_refine_once_v2.json",
+        "checkpoints/R7N-021_t_refine_second_cheap_v1.json",
+        "results/R7N-021_t_refine_analysis.json",
+        "results/R7N-021_second_t_analysis.json"
+      ],
+      "remaining_atom": "36.31049472406795% of compact hull volume remains uncertified; new physical-coupled enclosure needed.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-022",
+      "title": "Build an independent checker for the practical cover",
+      "depends_raw": "021",
+      "class": "M/L",
+      "objective": "Read the frozen tree without importing the search logic. Reconstruct cell coordinates, threshold, interval matrices and each terminal proof. Check all mask imports and tail references. Mutate a split, threshold, coefficient, preconditioner and source interval.",
+      "deliver_accept": "independent replay and rejection evidence. If only a partial cover exists, the checker must reject a requested global PASS while still verifying the accepted leaves.",
+      "execution_status": "BLOCKED_DEPENDENCY",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "No complete Target-P cover exists; a full global-PASS checker is therefore inapplicable. Accepted local leaves are checked by their component checkers.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-023",
+      "title": "Export the practical theorem or exact partial result",
+      "depends_raw": "017,021\u2013022",
+      "class": "S",
+      "objective": "State the strongest justified result for Target P and its four-amplitude Hessian consequence. At an endpoint with a non-strict ceiling, preserve the possibility of zero eigenvalues. Give any strict margin only if separately certified.",
+      "deliver_accept": "theorem/refutation/partial-domain record with exact domain and dependencies. A useful weaker result is not a license to relabel sigma as tau0 in the earlier scientific question.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-019_024_practical_lane_final.json",
+        "results/R7N-017_target_p_implication.json"
+      ],
+      "remaining_atom": "Target P remains globally open.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-024",
+      "title": "Make a supervisory pivot decision",
+      "depends_raw": "019\u2013023",
+      "class": "S",
+      "objective": "If Target P is closed, proceed to the sharp target with the new coverage tools. If the same bottleneck survives two bounded passes, prioritize phase tasks and one genuinely different matrix/coordinate lemma before another cover. If Target P is refuted, propagate the implication to the stronger Target S only after verifying that the witness belongs to the identical domain.",
+      "deliver_accept": "updated STATE_MAP and an explicit non-repetition decision.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-019_024_practical_lane_final.json"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Pivoted to phase lane after diminishing returns; prohibited third identical global t split."
+      ]
+    },
+    {
+      "ID": "R7N-025",
+      "title": "Audit which practical-cover certificates transfer to sigma",
+      "depends_raw": "021\u2013024",
+      "class": "S/M",
+      "objective": "Re-evaluate the new cover at sigma. Existing regions proved at sigma remain valid, but tau0-only leaves do not automatically transfer. Quantify the actual sharp residual by exact leaf classification rather than numerical gap coloring. If C is unresolved, start from the accepted baseline union instead.",
+      "deliver_accept": "a sharp-target residual tree and a map of precisely which inequalities fail. Keep practical and sharp claim IDs distinct throughout.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-026",
+      "title": "Exploit the one-variable parity structure without assuming monotonicity",
+      "depends_raw": "011\u2013014,025",
+      "class": "M",
+      "objective": "At fixed r,s,t, write Cp, Cm and their means once; all y dependence enters through q. Derive the actual polynomial/rational dependence on q of suitable threshold determinants and principal minors. Prove the denominator signs.",
+      "deliver_accept": "an exact parity-parameter reduction usable on 3D base cells times an admissible q interval. Do not assume maxima occur at q endpoints or that lambda2 is monotone in q; both shortcuts require separate proofs.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-027",
+      "title": "Add coefficient-certified q slabs",
+      "depends_raw": "026",
+      "class": "M/L",
+      "objective": "For a fixed r,s,t box, enclose coefficients with shared spectral dependencies, then use univariate Bernstein or interval root isolation in q. Retain the physical q interval derived from y and the same fields.",
+      "deliver_accept": "a verified q-slab classifier with mutation tests. Any coefficient interval crossing zero must be handled conservatively. A Sturm sequence for midpoint coefficients is not a strict-spectrum root-count proof.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-028",
+      "title": "Upgrade the large-J6 tail only if it reduces the real residual",
+      "depends_raw": "025,027, accepted FR42",
+      "class": "L",
+      "objective": "Use the enlarged accepted local union as a quarantine set for a shifted boundary ceiling. Choose a modest proposed new y cutoff from an explicit perturbation budget, then verify both the shifted boundary exterior and local inclusions. Check the full binary partition independently.",
+      "deliver_accept": "a genuinely larger global tail or a bounded failed attempt. Do not use a Schur-eigenvalue gap as the physical perturbation reserve; use a direct M4/Cp comparison and the properly rebuilt threshold test.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-029",
+      "title": "Replace manual wall chasing with a budgeted bulk patch policy",
+      "depends_raw": "015,025\u2013028",
+      "class": "M/L",
+      "objective": "Prioritize unresolved cells by a fixed proof-difficulty score. Permit a small number of local rectangles or split trees only when they eliminate identified residual cells or permit a better global tail. Require measured coverage gain per verification cost.",
+      "deliver_accept": "a finite new patch batch with full trees and a residual comparison. After three successive wall patches without useful global progress, invoke the anti-loop stop and report the missing analytic lemma.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-030",
+      "title": "Run a complete-domain sharp-cover attempt",
+      "depends_raw": "025\u2013029",
+      "class": "L",
+      "objective": "Resume from the full sharp residual using the best proved primitives. Include coordinate faces, the FR42 interface, and every repaired-mask boundary. Save unresolved cells instead of excluding them with a numerical navigation buffer. Explicitly certify any putative violating point.",
+      "deliver_accept": "global sharp proof, certified counterexample, or bounded partial certificate. A partial certificate is valid research, but must not inherit a global title from the task objective.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-031",
+      "title": "Audit equality and quantitative-gap claims separately",
+      "depends_raw": "030",
+      "class": "M",
+      "objective": "If the ceiling is proved, determine which equality points are actually excluded and which remain possible. Use direct M4 information or threshold- parameterized certificates for any asserted physical gap. Distinguish an attained finite-field maximum from a limiting boundary value.",
+      "deliver_accept": "an equality theorem, a conditional equality statement, or an explicit open equality problem. Do not infer uniqueness merely from the known double-root picture or from positive margins on sampled points.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Sharp-sigma lane was not re-entered after Target P retained a large certified residual; no tau0-only evidence is transferred to sigma.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-032",
+      "title": "Close the four-amplitude lane honestly",
+      "depends_raw": "023,030\u2013031",
+      "class": "S",
+      "objective": "Compare the final statuses of Target P and Target S. State gain consequences, domain restrictions, tail coverage, unresolved geometry and proof costs. Identify at most two next mathematical atoms rather than a long list of new unmotivated rectangles.",
+      "deliver_accept": "a standalone four-amplitude report. Preserve the already refuted full-X7 index claims and the distinction between a curvature theorem, a stationary census and global minimizer uniqueness.",
+      "execution_status": "DONE",
+      "scientific_status": "UNRESOLVED",
+      "evidence": [
+        "results/R7N-032_four_amplitude_report.md",
+        "results/R7N-019_024_practical_lane_final.json"
+      ],
+      "remaining_atom": "Target P and Target S both remain open globally.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-033",
+      "title": "Audit the old phase-cover partition and exclusions",
+      "depends_raw": "001,005,007",
+      "class": "M",
+      "objective": "Read the old 396 safe leaves, 1272 unresolved leaves, and zero removed root leaves. Reconstruct their total domain and shared boundaries. Identify which results used rounded coefficients or floating phase endpoints. In particular, the stored binary-float value of 2*pi is not the exact torus endpoint.",
+      "deliver_accept": "a provenance/coverage audit. Treat these leaves as a subdivision seed, not as accepted exact exclusions. Explicitly test the latent 0.05-neighborhood issue without falsely claiming that the stored run removed any such leaves.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-033_phase_cover_audit.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-034",
+      "title": "Normalize the exact phase torus and derivative convention",
+      "depends_raw": "033",
+      "class": "S/M",
+      "objective": "Use normalized phase coordinates z=phi/(2pi) on `[0,1]^3` for exact rational coverage cells, with interval pi in evaluations. Carry the corresponding 2pi and (2pi)^2 derivative factors. Reuse the corrected exact-decimal fixture, not the rounded coefficients from the old phase engine.",
+      "deliver_accept": "a periodic chart contract with seam tests and an independent derivative comparison. The fixed sign of the alternating amplitude remains part of the fixture.",
+      "execution_status": "DONE",
+      "scientific_status": "CONDITIONAL_LEMMA",
+      "evidence": [
+        "proofs/R7N-034_normalized_phase_contract.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-035",
+      "title": "Build certified uniqueness collars around the 60 quartic roots",
+      "depends_raw": "034 and accepted local root boxes",
+      "class": "M/L",
+      "objective": "Try larger axis-aligned or carefully represented rotated neighborhoods. Use the known small-root existence plus a uniform preconditioned-Jacobian contraction/injectivity argument on each larger convex chart if available. Do not infer global uniqueness from pointwise Hessian nonsingularity alone.",
+      "deliver_accept": "certified collars with exact containment maps, or retained small boxes with unresolved surrounding annuli. The radius 0.05 is not a default proof radius.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-035_quartic_uniqueness_collars.json",
+        "results/R7N-035_041_phase_local_recertification.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-036",
+      "title": "Revalidate old safe cells for the exact quartic fixture",
+      "depends_raw": "034\u2013035",
+      "class": "M/L",
+      "objective": "Recompute each old gradient exclusion with the corrected interval formula. Convert or outwardly enclose its domain in the new normalized chart without creating gaps; cover any thin boundary strips not covered by the old floating partition. Cells losing their old sign return to the unresolved queue.",
+      "deliver_accept": "a fresh complete partition ledger. Every root-covered cell must lie inside an actual certified collar; a center near a known root does not provide that containment.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-036_revalidated_old_safe_terms.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-037",
+      "title": "Execute a root-aware quartic complement cover",
+      "depends_raw": "035\u2013036",
+      "class": "L",
+      "objective": "Classify cells by a nonzero gradient component, a validated gradient lower bound, or certified collar containment. Near a known saddle, try a rational preconditioned gradient map before further subdivision. Save every terminal reason and unresolved cell.",
+      "deliver_accept": "a bounded complement tree with no missing collars or seams. The Euler/Morse alternating sum is only a consistency check and cannot replace excluded-root coverage.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "checkpoints/R7N-037_quartic_cover_normalized.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-038",
+      "title": "Resolve the hardest quartic cells with a different local tool",
+      "depends_raw": "037",
+      "class": "M/L",
+      "objective": "For persistent cells choose one genuinely different route: interval Newton exclusion, verified preconditioned gradient monotonicity, or a real algebraic phase chart retaining all circle constraints and chart boundaries. Avoid an unbounded elimination.",
+      "deliver_accept": "certified resolution or an explicit local obstruction. If a new critical point appears, isolate it, update the catalog and abandon the assumed target count rather than tuning deduplication to recover 60.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "",
+      "notes": [
+        "R7N-037 exhausted the complement; no persistent hardest cells remained for a different local tool."
+      ]
+    },
+    {
+      "ID": "R7N-039",
+      "title": "Check fixture-preserving symmetry and total root count",
+      "depends_raw": "034\u2013038",
+      "class": "M",
+      "objective": "Derive the action on phases and on the sign of the alternating component. For a fixed nonzero sign, an odd label translation flips that sign and is not automatically a symmetry of the same fixture. Use only the verified sign-preserving subgroup or handle both signs as separate domains.",
+      "deliver_accept": "exact orbit/separation statements and, only if the complement is exhausted, the total quartic count and index histogram. No unlicensed full D12 quotient of a single fixed-sign phase torus.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-039_symmetry_and_count.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-040",
+      "title": "Export a quartic phase theorem or a complete residual",
+      "depends_raw": "037\u2013039",
+      "class": "S",
+      "objective": "State whether there are exactly 60 critical points, a revised exact number, or merely the accepted lower count plus an unresolved complement. Name the amplitude fixture, phase normalization, sign convention and uniqueness collars.",
+      "deliver_accept": "an independently replayable phase report and cover. If unsuccessful, give the exact remaining cells and the specific new lemma needed to eliminate them.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-040_quartic_phase_theorem.json",
+        "results/R7N-040_quartic_phase_theorem.md"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-041",
+      "title": "Establish full-function uniqueness collars",
+      "depends_raw": "034\u2013035 and accepted full local boxes",
+      "class": "M/L",
+      "objective": "Repeat the rigorous collar construction for the full log-mgf, using stable interval normalization and exact field constants. Preserve local index certificates from the consolidated audit but verify any enlarged domain.",
+      "deliver_accept": "full-function root collars or explicit annuli. Nearness to a quartic root does not by itself prove uniqueness on a shared larger region.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-041_full_uniqueness_collars.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-042",
+      "title": "Select direct full exclusion or a proved transfer route",
+      "depends_raw": "040\u2013041",
+      "class": "M",
+      "objective": "Benchmark direct full-gradient enclosure against a quartic-complement gap minus a rigorous full/quartic gradient remainder. Choose the route with an actual certified margin; use a hybrid if different cells favor different methods.",
+      "deliver_accept": "a cell-classification strategy with exact inequalities. The sampled Sobol remainder extrema are not uniform upper bounds and cannot license transfer.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-043_K16_surrogate.json",
+        "results/R7N-043_K20_surrogate.json"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Selected rigorous surrogate-gradient route with explicit global remainder bounds; direct full interval gradient was rejected as too loose on microscopic annuli."
+      ]
+    },
+    {
+      "ID": "R7N-043",
+      "title": "Certify only the remainder bounds actually needed",
+      "depends_raw": "042",
+      "class": "M/L",
+      "objective": "Exploit Fourier cancellations and exact fixed amplitudes. Prove gradient or Hessian remainder bounds on the specific cells or neighborhoods where they are used. Avoid demanding a sharp global C2 constant if a local bound suffices.",
+      "deliver_accept": "reusable cellwise remainder certificates with domains. If a bound is too loose, retain the direct full-function route instead of substituting a numerical estimate.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-043_K16_surrogate.json",
+        "results/R7N-043_K20_surrogate.json",
+        "results/R7N-043_K16_numeric_validation.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-044",
+      "title": "Cover the full-function complement",
+      "depends_raw": "041\u2013043",
+      "class": "L",
+      "objective": "Construct a full torus partition, proving either direct gradient exclusion, valid transferred exclusion, or certified root-collar containment on every cell. Include boundaries, seams and any regions where the quartic route failed.",
+      "deliver_accept": "a full census certificate or a complete unresolved list. Sixty successful local solves and zero observed index changes do not exclude additional full-function roots elsewhere.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-044_full_phase_theorem.md",
+        "results/R7N-044_full_census_candidate.json",
+        "checkpoints/R7N-044_full_cover_k16.json",
+        "checkpoints/R7N-044_K20_residual.json",
+        "checkpoints/R7N-044_K20_adaptive.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-045",
+      "title": "Validate root pairing only to the strength claimed",
+      "depends_raw": "040\u2013044",
+      "class": "M/L",
+      "objective": "If claiming continuous continuation from quartic to full, introduce `K_alpha=(1-alpha)K4+alpha K_full` and certify branch tubes, overlaps and nondegeneracy along alpha in [0,1]. Otherwise claim only the two separately certified endpoint catalogs and their numerical/labelled correspondence.",
+      "deliver_accept": "local continuation certificates or explicitly weaker endpoint matching. No global topology equivalence without complement control through the homotopy as well.",
+      "execution_status": "DONE",
+      "scientific_status": "NUMERICAL_REPRODUCED",
+      "evidence": [
+        "results/R7N-045_endpoint_matching.json"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Only labelled endpoint correspondence is claimed; no global K_alpha homotopy theorem."
+      ]
+    },
+    {
+      "ID": "R7N-046",
+      "title": "Independently audit phase exhaustion and indices",
+      "depends_raw": "039,044\u2013045",
+      "class": "M/L",
+      "objective": "Replay root boxes, collars and complement partitions with a checker independent of the search order. Damage a collar radius, a seam cell, a source amplitude, a gradient sign and a claimed symmetry relation; ensure rejection.",
+      "deliver_accept": "independent replay logs and a complete index count only where exhaustion passed. Tests must distinguish the quartic fixture, full fixture and any optional homotopy result.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-046_phase_exhaustion_final.json",
+        "results/R7N-046_phase_exhaustion_audit.json",
+        "checkpoints/R7N-046_K16_formula_replay.json",
+        "checkpoints/R7N-046_K20_formula_replay.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-047",
+      "title": "Optional: a small amplitude-stability theorem",
+      "depends_raw": "a successful 040 or 044 plus 046",
+      "class": "M/L",
+      "objective": "Only after a fixed-fixture result is secure, consider a small rational amplitude box. Preserve positive amplitudes and the declared alternating sign; pay root, index and complement margins uniformly. If linking to an angular event, obtain its own amplitude enclosure first.",
+      "deliver_accept": "a parameter-scoped theorem or a documented blocked/optional status. Do not identify rounded fixture amplitudes with an exact coexistence root or transfer them to the different radial event.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [],
+      "remaining_atom": "Optional amplitude-stability theorem not attempted; fixed-fixture result is complete and no uniform amplitude-box margins were paid.",
+      "notes": []
+    },
+    {
+      "ID": "R7N-048",
+      "title": "Close the phase lane and rank its remaining atom",
+      "depends_raw": "040\u2013047",
+      "class": "S",
+      "objective": "Separate local lower count, exact quartic count, exact full count, homotopy correspondence, and amplitude robustness. Report exactly which have been achieved, and whether any new roots changed the original narrative.",
+      "deliver_accept": "a concise phase summary plus all root/cover files. Do not hide a useful exact fixed-fixture theorem behind uncompleted robustness work, or hide missing exhaustion behind an impressive local root count.",
+      "execution_status": "DONE",
+      "scientific_status": "INTERVAL_CERTIFIED",
+      "evidence": [
+        "results/R7N-048_phase_lane_summary.json",
+        "results/R7N-046_phase_exhaustion_final.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-049",
+      "title": "Choose one secondary target from actual new evidence",
+      "depends_raw": "024,032,048 as available",
+      "class": "S",
+      "objective": "Choose either a fixed-gain full-X7 stationary exclusion problem, preferably g=4, or a stronger global-uniform lower-gain bound. State why the new tools improve on the previous attempt.",
+      "deliver_accept": "one prioritized secondary target and a hard stop. If no new proof tool is available, mark the expensive tasks below deferred/blocked and deliver the primary results rather than manufacturing activity.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-050",
+      "title": "Audit every proposed reduction license",
+      "depends_raw": "049",
+      "class": "S/M",
+      "objective": "Identify precisely what the four-amplitude and fixed-phase results imply for the selected full-X7 target. Usually they provide local data, not a theorem forcing all minimizers or stationary states into those subspaces.",
+      "deliver_accept": "a reduction-license table. Generic trivial-stabilizer states, amplitude-zero strata and signed/phase-varying directions must remain in the domain unless an actual exclusion theorem removes them.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-051",
+      "title": "Freeze the fixed-gain root domain and known candidates",
+      "depends_raw": "049\u2013050",
+      "class": "M",
+      "objective": "For the selected exact gain, derive a compact stationary theta ball using `theta=g X7^T p` and feature norms. Bring forward the existing numerical roots and verify their exact coordinate conventions. Isolate only missing required representatives; do not count baseline replay as new discovery.",
+      "deliver_accept": "a scoped root catalog, full-H7 indices and a full-domain exclusion obligation. Keep local uniqueness separate from global exhaustion.",
+      "execution_status": "BLOCKED_DEPENDENCY",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-052",
+      "title": "Improve local exclusion neighborhoods in full X7",
+      "depends_raw": "051",
+      "class": "M/L",
+      "objective": "Construct validated root uniqueness neighborhoods and surrounding gradient exclusions. Use D12 only for exact symmetry copies with paid orbit separation. Check all seven directions, not just the cosine block.",
+      "deliver_accept": "larger certified root neighborhoods or a precise obstacle. The known index-two stationary witness at g=5 remains a regression against any accidental universal index-one inference.",
+      "execution_status": "BLOCKED_DEPENDENCY",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-053",
+      "title": "Perform one capped stationary-complement pilot",
+      "depends_raw": "051\u2013052",
+      "class": "L",
+      "objective": "Cover a rigorously defined full-X7 domain using symmetry-aware cells and validated gradient/Newton exclusions. Preserve a complete unresolved complement. Abort an obviously intractable uniform grid rather than expanding it indefinitely.",
+      "deliver_accept": "exact exhaustion at the chosen gain, a new certified root, or a bounded complexity result. A three-orbit discovery atlas is not an exhaustion theorem simply because the same roots keep returning.",
+      "execution_status": "BLOCKED_DEPENDENCY",
+      "scientific_status": "UNRESOLVED",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-054",
+      "title": "Attempt a materially better global energetic lower bound",
+      "depends_raw": "049\u2013050 and a valid full-domain energy primitive",
+      "class": "M/L",
+      "objective": "Prefer improvement of the lower endpoint 2.8934 over shaving insignificant digits from the existing upper witness. A rational trial ladder such as 3, 13/4, 7/2 may guide bounded tests, but none is presumed certifiable. Use entropy/quadratic or full-dual bounds valid on the complete declared domain.",
+      "deliver_accept": "a strictly improved proved lower endpoint or an explicit objective gap. PSD order licenses V7>=V_full, not transfer of full-model minimizers or positive-edge cap geometry.",
+      "execution_status": "OUT_OF_SCOPE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-055",
+      "title": "Assemble only justified global/energetic conclusions",
+      "depends_raw": "053\u2013054",
+      "class": "S/M",
+      "objective": "If root exhaustion is obtained, compare objective intervals of every relevant orbit and account for boundary minimizers before claiming global minimality. If only an improved lower bound is obtained, combine it with the existing certified upper witness and preserve the unknown attaining orbit.",
+      "deliver_accept": "one scoped theorem or a sharper partial statement. Local energy equality, a stationary index count and an energetic bracket are different results.",
+      "execution_status": "BLOCKED_DEPENDENCY",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-056",
+      "title": "Record the secondary stop and next useful theorem",
+      "depends_raw": "049\u2013055",
+      "class": "S",
+      "objective": "Explain what was added beyond the baseline and why the secondary task was stopped or completed. Name at most one new full-X7/global-energy atom that would change the next attempt's prospects.",
+      "deliver_accept": "a short status note. No automatic continuation into source, selector, dimensional, legacy-transfer or laboratory claims is authorized.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-049_056_secondary_stop.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-057",
+      "title": "Enforce claim-to-certificate traceability",
+      "depends_raw": "all available task results; run incrementally",
+      "class": "S",
+      "objective": "Every accepted claim must link to actual inputs, analytic premises, executable checker and full proof object. Resolve all missing output paths. A nonempty provenance string must not count as a substitute for an unavailable file.",
+      "deliver_accept": "zero orphan accepted claims and a terminal status for each of the 64 tasks. DONE plus UNRESOLVED is allowed when the bounded investigation was performed and its residual is fully recorded.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-057_traceability.json",
+        "THEOREM_REGISTER.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-058",
+      "title": "Check global coverage and adversarial mutations independently",
+      "depends_raw": "022,031,046,055 as available",
+      "class": "M/L",
+      "objective": "Recompute the most consequential cover, root and inertia decisions through independent checkers. Delete leaves, alter endpoints, swap sigma/tau0, insert the navigation buffer and enlarge a phase collar without proof.",
+      "deliver_accept": "the checker rejects every invalid fixture. If a checker bug is found, revisit all dependent results instead of repairing only the failing test record.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-058_mutation_audit.json",
+        "results/R7N-046_phase_exhaustion_audit.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-059",
+      "title": "Run complete fresh-copy regressions and source-integrity checks",
+      "depends_raw": "057\u2013058",
+      "class": "M/L",
+      "objective": "Run new and relevant baseline tests with sources protected against mutation. Record environment, test discovery method, actual executed counts, skips, failures, commands and durations. Validate original archive hashes again.",
+      "deliver_accept": "verification.json distinguishing scientific replay from metadata/schema validation. Do not change expected outputs simply because the first run disagreed with a stored historical result.",
+      "execution_status": "DONE",
+      "scientific_status": "NUMERICAL_REPRODUCED",
+      "evidence": [
+        "verification.json",
+        "results/R7N-059_verification.json",
+        "logs/R7N-059_integration_fresh.log"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-060",
+      "title": "Quantify scientific progress, not document volume",
+      "depends_raw": "032,048,056,059",
+      "class": "S",
+      "objective": "Report theorem status, number and geometry of unresolved cells, certified margins, and proof-checking cost. Compare the actual initial and final domains. Separate geometric union size from proof-leaf count, and parameter-space volume from any physical probability interpretation.",
+      "deliver_accept": "concise result tables. A larger number of named boxes, tests or pages is not itself stronger scientific evidence.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "RESULT_TABLES.md"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-061",
+      "title": "Write the main English research report",
+      "depends_raw": "057\u2013060",
+      "class": "S",
+      "objective": "Lead with genuinely new results relative to the September 19 consolidated audit. Separate Target P, Target S, phase counts, optional full-X7 conclusions, counterexamples and unresolved obligations. Include exact quantifiers and nonconclusions for every theorem.",
+      "deliver_accept": "REPORT.md with source and certificate links. A weaker rational-threshold success must not be marketed as sharp-sigma closure. No PDF is required unless the user later asks for one.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "REPORT.md",
+        "THEOREM_REGISTER.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-062",
+      "title": "Prepare a conservative repository integration patch",
+      "depends_raw": "061",
+      "class": "S",
+      "objective": "Draft only accepted new guardrails and corrections for AGENTS.md. Preserve the chronology and original archives. State explicitly which previous open atoms are now closed, refuted, or still open.",
+      "deliver_accept": "AGENTS_PATCH.md and an accepted-result index. Apply the patch only if the later execution authorization includes repository integration; otherwise leave it for supervisory review.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "AGENTS_PATCH.md",
+        "ACCEPTED_RESULTS_R7N.md"
+      ],
+      "remaining_atom": "",
+      "notes": [
+        "Patch prepared only; not applied to upstream/source AGENTS.md."
+      ]
+    },
+    {
+      "ID": "R7N-063",
+      "title": "Build and test a portable handoff bundle",
+      "depends_raw": "059\u2013062",
+      "class": "M",
+      "objective": "Include all new sources, tests, proof objects, root coordinates, cover trees, logs, task/claim ledgers, and required immutable dependency files or an explicit machine-readable dependency manifest. Exclude bytecode/cache files.",
+      "deliver_accept": "a hashed bundle and a clean-directory replay. A summary CSV, a screenshot, an absent historical ZIP name, or a live notebook state is not a portable certificate. List every nonreplayed dependency honestly.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "results/R7N-063_bundle_replay.json",
+        "portable_verify.py",
+        "logs/R7N-063_clean_replay.log"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    },
+    {
+      "ID": "R7N-064",
+      "title": "Deliver the next handoff and stop cleanly",
+      "depends_raw": "057\u2013063",
+      "class": "S",
+      "objective": "Use the template below. Confirm no worker remains active unintentionally. Give at most five ranked next atoms, each justified by a specific unresolved proof obligation or a new admissible witness\u2014not by the next unused number.",
+      "deliver_accept": "HANDOFF.md, verification summary and package location. Do not start another campaign merely because the handoff recommends future research. Return the evidence for independent supervisory evaluation.",
+      "execution_status": "DONE",
+      "scientific_status": "NOT_A_SCIENTIFIC_CLAIM",
+      "evidence": [
+        "HANDOFF.md",
+        "verification.json"
+      ],
+      "remaining_atom": "",
+      "notes": []
+    }
+  ]
+}

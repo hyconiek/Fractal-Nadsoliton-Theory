@@ -1,0 +1,18 @@
+{
+  "id": "CERT-R7P-046",
+  "claim_id": "CLM-040",
+  "domain": "exact compactified boundary-Ising closure r,s,t in [0,1]",
+  "quantifiers": "all zero-probability points of the physical exponential-family closure",
+  "assumptions": [
+    "r=1/X, s=1/Y, t=1/Z with X,Y,Z>=1",
+    "strict spectrum has sigma_*>0"
+  ],
+  "proof_type": "exact algebraic support classification",
+  "inputs": [
+    "src/boundary_cover.py:exact_strata",
+    "R7P-041--045 boundary model"
+  ],
+  "conclusion": "Only supports {1,2}, {1,3}, and {1} occur at zero probability; their covariance rank is at most one, hence lambda2=0<sigma_*.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

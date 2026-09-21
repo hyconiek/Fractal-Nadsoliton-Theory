@@ -1,0 +1,65 @@
+{
+  "id": "FR178-right-x-extension-FR56",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/4600",
+      "1/3000"
+    ],
+    "u": [
+      "0",
+      "1/20000"
+    ],
+    "v": [
+      "1/5200",
+      "1/3600"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "P_float": [
+    -4.245824233335306e-10,
+    -5.032635071802594e-13
+  ],
+  "P1_float": [
+    -1.7556744189533527e-05,
+    -1.1002657539133914e-05
+  ],
+  "c2_float": [
+    0.15989345095252988,
+    0.15994827720883908
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR177 landed on the buffered right-x wall of FR56. A narrow adjacent slab avoids the dependency loss of widening all of FR56 and extends the thin-u arm strongly to the right.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/4600",
+        "1/2990"
+      ],
+      "u": [
+        "0",
+        "1/20000"
+      ],
+      "v": [
+        "1/5200",
+        "1/3600"
+      ],
+      "e": [
+        "0",
+        "1/100000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -4.2842269126309476e-10,
+      1.3308004604090914e-12
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

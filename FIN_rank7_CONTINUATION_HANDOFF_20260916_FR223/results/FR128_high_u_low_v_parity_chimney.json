@@ -1,0 +1,65 @@
+{
+  "id": "FR128-high-u-low-v-parity-chimney",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/7000",
+      "1/5800"
+    ],
+    "u": [
+      "1/3000",
+      "1/2500"
+    ],
+    "v": [
+      "1/16000",
+      "1/12000"
+    ],
+    "e": [
+      "0",
+      "1/3000"
+    ]
+  },
+  "P_float": [
+    -4.807519865191621e-10,
+    -3.440494736933002e-14
+  ],
+  "P1_float": [
+    -1.1838489398066068e-05,
+    5.796751943886347e-06
+  ],
+  "c2_float": [
+    0.15992637484508407,
+    0.16001578273181855
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR127 hit the upper-u wall of FR58 / upper-v wall of FR60; the centered extensions failed but a shifted box around the actual corner has large margin.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/7000",
+        "1/5800"
+      ],
+      "u": [
+        "1/3000",
+        "1/2500"
+      ],
+      "v": [
+        "1/16000",
+        "1/12000"
+      ],
+      "e": [
+        "0",
+        "1/2500"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -5.187381847596564e-10,
+      1.5725652933033398e-11
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

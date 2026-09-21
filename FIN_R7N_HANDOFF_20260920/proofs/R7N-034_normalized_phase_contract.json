@@ -1,0 +1,19 @@
+{
+  "task": "R7N-034",
+  "chart": "z=phi/(2*pi) in [0,1]^3 with periodic seam identification",
+  "derivative_rule": "grad_z=(2*pi) grad_phi; Hess_z=(2*pi)^2 Hess_phi",
+  "evaluation_rule": "use rigorous interval pi in future proof cells; rational z endpoints define coverage exactly",
+  "fixture": {
+    "r3": "0.1131879146",
+    "r4": "0.1698528641",
+    "r5": "0.2269339093",
+    "z6": "-0.3380663037",
+    "source": "imported handoff decimal fixture"
+  },
+  "alternating_sign": "z6 remains negative and fixed for this fixture",
+  "numeric_chain_rule_max_error": 9.687025487314926e-13,
+  "samples": 16,
+  "seam_contract": "z_i=0 and z_i=1 denote the same phase; a cover must account for seam cells exactly once without a gap",
+  "scientific_status": "CONDITIONAL_LEMMA_AND_NUMERICAL_DIAGNOSTIC",
+  "blocked_exact_piece": "corrected exact-decimal phase interval evaluator/certificates from the 2026-09-19 consolidated audit are unavailable in supplied inputs"
+}

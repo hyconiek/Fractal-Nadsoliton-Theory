@@ -1,0 +1,73 @@
+{
+  "id": "FR26-off-centre-shifted-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval AD + midpoint Taylor remainder + R7P-044 characteristic-inertia disjunction",
+  "coordinates": {
+    "x": "r-r_star",
+    "u": "1-exp(-3J4/2)",
+    "v": "1-exp(-J5/2)",
+    "e": "1-q_even"
+  },
+  "domain": {
+    "x": [
+      "1/8000",
+      "1/6500"
+    ],
+    "u": [
+      "1/7000",
+      "1/4500"
+    ],
+    "v": [
+      "1/8500",
+      "1/5500"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "conclusion": "lambda2(M4)<=sigma_* throughout the declared rectangle (indeed the shifted characteristic satisfies P<0 on the full relaxed rectangle).",
+  "strict_ranges": {
+    "P_float": [
+      -1.8374917272905445e-10,
+      -1.9228615539898782e-11
+    ],
+    "P1_float": [
+      -1.3236824536645412e-05,
+      -8.470866455772384e-06
+    ],
+    "c2_float": [
+      0.15993812295441856,
+      0.15996854542713537
+    ]
+  },
+  "criterion_reason": "P_NONPOS",
+  "new_coverage": "The box contains the FR25 buffered-search wall point and extends simultaneously beyond the old FR13 u=1/6800 and FR15 v=1/8192 walls on the positive-x side.",
+  "negative_control": {
+    "box": {
+      "x": [
+        "1/8000",
+        "1/6500"
+      ],
+      "u": [
+        "1/7000",
+        "1/4000"
+      ],
+      "v": [
+        "1/8500",
+        "1/5000"
+      ],
+      "e": [
+        "0",
+        "1/100000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -2.39816636245533e-10,
+      5.774759151412222e-12
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result on a relaxed e-rectangle; no full positive-orthant closure claimed."
+}

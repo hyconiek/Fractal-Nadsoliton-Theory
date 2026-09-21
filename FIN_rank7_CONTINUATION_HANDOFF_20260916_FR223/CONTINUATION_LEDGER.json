@@ -1,0 +1,130 @@
+{
+  "continuation_id": "FIN-rank7-frontier-continuation-2026-09-15",
+  "baseline_handoff": "HANDOFF_BASELINE_20260914.md",
+  "baseline_r7p_ledger": "frozen; R7P-001 through R7P-128 remain terminal and are not renumbered",
+  "scientific_frontier": "residual positive-orthant four-amplitude curvature ceiling",
+  "entries": [
+    {
+      "id": "FR1",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR1_residual_tail_upgrade.md",
+      "result": "results/FR1_residual_tail_upgrade.json",
+      "tests": "tests/test_FR1_residual_tails.py",
+      "summary": "Global projected tails: exp(-J3)<=1/30, exp(-3J4/2)<=1/128, exp(-J5/2)<=1/9; strengthened parity constraint q(1+a)^2>=1+a^2."
+    },
+    {
+      "id": "FR2",
+      "status": "PROOF_NOTE_PRESERVED_REPLAY_SCRIPT_MISSING",
+      "artifact": "proofs/FR2_extreme_face_reserve.md",
+      "summary": "On J4=J5=0 dangerous branch, determinant reserve is monotone in q and R>=19/100; minimum occurs at J6=0."
+    },
+    {
+      "id": "FR3",
+      "status": "PROOF_NOTE_PRESERVED_REPLAY_SCRIPT_MISSING",
+      "artifact": "proofs/FR3_global_extreme_face_tube.md",
+      "summary": "Certified tube around the entire extreme face; simple corollary J4,J5<=1/600000 for arbitrary J3,J6."
+    },
+    {
+      "id": "FR4",
+      "status": "SESSION_CERTIFIED_REPLAY_REQUIRED",
+      "summary": "Hierarchical face-gap atlas around the equality point; useful for position-dependent off-face tubes. No standalone proof object was frozen."
+    },
+    {
+      "id": "FR5",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "summary": "Global large-J6 tail: exp(-2J6)<=1/5,000,000. Shifted boundary reserve sigma_*-1e-6 plus exact parity-mass/covariance perturbation; 508-leaf shifted cover, 0 unresolved.",
+      "artifact": "proofs/FR5_global_large_J6_tail.md",
+      "result": "results/FR5_global_large_J6_tail.json",
+      "tests": "tests/test_FR5_global_J6_tail.py"
+    },
+    {
+      "id": "FR6",
+      "status": "SESSION_CERTIFIED_REPLAY_REQUIRED",
+      "summary": "Provisional J4 anisotropic arm near equality: |r-r*|<=1/8192, u<=1/2048, v<=1/8192, e<=1/30000."
+    },
+    {
+      "id": "FR7",
+      "status": "SESSION_CERTIFIED_REPLAY_REQUIRED",
+      "summary": "Provisional J5 anisotropic arm near equality: |r-r*|<=1/8192, u<=1/8192, v<=1/4096, e<=1/45000."
+    },
+    {
+      "id": "FR8",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR8_FR9_local_staircase.md",
+      "result": "results/FR8_FR9_local_staircase.json",
+      "tests": "tests/test_FR8_FR9_staircase.py",
+      "summary": "Diagonal r-v arm: |r-r*|<=1/6500, u<=1/8192, v<=1/4600, e<=1/100000."
+    },
+    {
+      "id": "FR9",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR8_FR9_local_staircase.md",
+      "result": "results/FR8_FR9_local_staircase.json",
+      "tests": "tests/test_FR8_FR9_staircase.py",
+      "summary": "Diagonal r-u arm: |r-r*|<=1/6500, u<=1/2432, v<=1/8192, e<=1/100000."
+    },
+    {
+      "id": "FR10",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR10_diagonal_uv_local_box.md",
+      "result": "results/FR10_diagonal_uv_local_box.json",
+      "tests": "tests/test_FR10_diagonal_uv.py",
+      "summary": "Diagonal u-v box: |r-r*|<=1/8192, u,v<=1/4800, e<=1/3072."
+    },
+    {
+      "id": "FR11",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR11_low_e_r_arm.md",
+      "result": "results/FR11_low_e_r_arm.json",
+      "tests": "tests/test_FR11_low_e_r_arm.py",
+      "summary": "Low-e r arm: |r-r*|<=1/7600, u,v<=1/4800, e<=1/81920."
+    },
+    {
+      "id": "FR12",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR12_pure_r_arm.md",
+      "result": "results/FR12_pure_r_arm.json",
+      "tests": "tests/test_FR12_pure_r_arm.py",
+      "summary": "Strong pure-r arm: |r-r*|<=1/4096, u,v<=1/8192, e<=1/1024."
+    },
+    {
+      "id": "FR13",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR13_diagonal_bulk_box.md",
+      "result": "results/FR13_diagonal_bulk_box.json",
+      "tests": "tests/test_FR13_diagonal_bulk.py",
+      "summary": "Diagonal bulk box: |r-r*|<=1/6200, u,v<=1/6800, e<=1/400."
+    },
+    {
+      "id": "FR14",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR14_strengthened_rv_arm.md",
+      "result": "results/FR14_strengthened_rv_arm.json",
+      "tests": "tests/test_FR14_strengthened_rv.py",
+      "summary": "Strengthened r-v arm: |r-r*|<=1/6400, u<=1/8192, v<=1/4600, e<=1/100000."
+    },
+    {
+      "id": "FR15",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR15_strengthened_parity_arm.md",
+      "result": "results/FR15_strengthened_parity_arm.json",
+      "tests": "tests/test_FR15_strengthened_parity_arm.py",
+      "summary": "Strengthened FR9 parity arm: |r-r*|<=1/6500, u<=1/2432, v<=1/8192, e<=1/14000; 1/13000 checker negative control."
+    },
+    {
+      "id": "FR16",
+      "status": "INTERVAL_CERTIFIED_REPLAYED",
+      "artifact": "proofs/FR16_wall_adapted_rv_box.md",
+      "result": "results/FR16_wall_adapted_rv_box.json",
+      "tests": "tests/test_FR16_wall_adapted_rv.py",
+      "summary": "Wall-adapted r-v box: |r-r*|<=1/5000, u<=1/8192, v<=1/5600, e<=1/100000; covers the post-FR15 residual-search wall."
+    },
+    {
+      "id": "FR17",
+      "status": "NUMERICAL_SEARCH_ONLY",
+      "result": "results/FR17_residual_adversarial_search.json",
+      "script": "src/frontier_residual_search.py",
+      "summary": "Fixed-seed compact-residual search after FR5/FR15/FR16. All saved gaps negative; best converges to an artificial FR16 wall within ~1e-12. Navigation only."
+    }
+  ]
+}

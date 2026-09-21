@@ -1,0 +1,143 @@
+{
+  "task": "R7P-057",
+  "status": "EXACT_PROVED",
+  "conditional_distributions": {
+    "even_grouped_weights": [
+      "exp(J3 + J4 + J5)",
+      "2*exp(-J3 - J4/2 + J5/2)",
+      "2*exp(J3 - J4/2 - J5/2)",
+      "exp(-J3 + J4 - J5)"
+    ],
+    "even_multiplicities": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "odd_three_state_weights": [
+      "exp(J4)",
+      "exp(-J4/2 + sqrt(3)*J5/2)",
+      "exp(-J4/2 - sqrt(3)*J5/2)"
+    ],
+    "odd_multiplicity_note": "each odd state occurs twice; the common factor 2 cancels conditionally",
+    "independence": {
+      "C_plus": "independent of J6",
+      "C_minus": "independent of J3 and J6"
+    }
+  },
+  "partition_functions": {
+    "E": "2*exp(J4)*cosh(J3 + J5) + 4*exp(-J4/2)*cosh(J3 - J5/2)",
+    "O": "2*exp(J4) + 4*exp(-J4/2)*cosh(sqrt(3)*J5/2)",
+    "q_even": "(exp(5*J4/2)*exp(2*J6)*cosh(J3 + J5) + 2*exp(J4)*exp(2*J6)*cosh(J3 - J5/2))/(exp(5*J4/2)*exp(2*J6)*cosh(J3 + J5) + exp(5*J4/2) + 2*exp(J4)*exp(2*J6)*cosh(J3 - J5/2) + 2*exp(J4)*cosh(sqrt(3)*J5/2))",
+    "q0_at_J6_0": "(2*exp(J4/2)*cosh(J3 - J5/2) + exp(2*J4)*cosh(J3 + J5))/(2*exp(J4/2)*cosh(sqrt(3)*J5/2) + 2*exp(J4/2)*cosh(J3 - J5/2) + exp(2*J4)*cosh(J3 + J5) + exp(2*J4))"
+  },
+  "q_bound": {
+    "statement": "At J6=0 and J3,J4,J5>=0, q_even>=1/2. Equality iff J3=J5=0 (J4 arbitrary). For J6>=0, q_even>=q0>=1/2.",
+    "E": "2*exp(J4)*cosh(J3+J5)+4*exp(-J4/2)*cosh(J3-J5/2)",
+    "O": "2*exp(J4)+4*exp(-J4/2)*cosh(sqrt(3)*J5/2)",
+    "difference_lower_bound": "E-O >= 2*exp(-J4/2)*F(J3,J5)",
+    "F": "cosh(a+b)-1+2*cosh(a-b/2)-2*cosh(sqrt(3)*b/2)",
+    "monotonicity": "dF/da is increasing; dF/da at a=0 is 2*sinh(b/2)*(cosh(b/2)-1)>=0, hence F(a,b)>=F(0,b).",
+    "series": "F(0,b)=sum_{n>=1} b^(2n)/(2n)! * (4^n+2-2*3^n)/4^n.",
+    "series_sign": "coefficients vanish for n=1,2 and are strictly positive for n>=3 because 4^n>2*3^n for n>=3.",
+    "equality": "F=0 only at a=b=0; then E=O for every J4. The extra J6 logistic factor makes q>=q0 for J6>=0."
+  },
+  "parity_table": [
+    {
+      "j": 0,
+      "parity": "even",
+      "c3": "1",
+      "c4": "1",
+      "c5": "1",
+      "c6": 1
+    },
+    {
+      "j": 1,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "-1/2",
+      "c5": "-sqrt(3)/2",
+      "c6": -1
+    },
+    {
+      "j": 2,
+      "parity": "even",
+      "c3": "-1",
+      "c4": "-1/2",
+      "c5": "1/2",
+      "c6": 1
+    },
+    {
+      "j": 3,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "1",
+      "c5": "0",
+      "c6": -1
+    },
+    {
+      "j": 4,
+      "parity": "even",
+      "c3": "1",
+      "c4": "-1/2",
+      "c5": "-1/2",
+      "c6": 1
+    },
+    {
+      "j": 5,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "-1/2",
+      "c5": "sqrt(3)/2",
+      "c6": -1
+    },
+    {
+      "j": 6,
+      "parity": "even",
+      "c3": "-1",
+      "c4": "1",
+      "c5": "-1",
+      "c6": 1
+    },
+    {
+      "j": 7,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "-1/2",
+      "c5": "sqrt(3)/2",
+      "c6": -1
+    },
+    {
+      "j": 8,
+      "parity": "even",
+      "c3": "1",
+      "c4": "-1/2",
+      "c5": "-1/2",
+      "c6": 1
+    },
+    {
+      "j": 9,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "1",
+      "c5": "0",
+      "c6": -1
+    },
+    {
+      "j": 10,
+      "parity": "even",
+      "c3": "-1",
+      "c4": "-1/2",
+      "c5": "1/2",
+      "c6": 1
+    },
+    {
+      "j": 11,
+      "parity": "odd",
+      "c3": "0",
+      "c4": "-1/2",
+      "c5": "-sqrt(3)/2",
+      "c6": -1
+    }
+  ]
+}

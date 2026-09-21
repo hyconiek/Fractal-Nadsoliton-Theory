@@ -1,0 +1,11 @@
+{
+  "id": "R7N-016-cover-format-v1",
+  "root_hull": {"r": ["1/900", "1"], "s": ["1/128", "1"], "t": ["1/9", "1"], "y": ["1/1000000", "1"]},
+  "closed_boundary_semantics": "Both children contain the rational split boundary; duplicate coverage is allowed, gaps are not.",
+  "split_node_required": ["axis", "exact_split", "parent_box", "left", "right"],
+  "terminal_reason_codes": ["SAFE_BY_TAIL", "SAFE_BY_UNION", "SAFE_BY_TRACE", "SAFE_BY_COMPRESSION", "SAFE_BY_CHARACTERISTIC", "COUNTEREXAMPLE_CERTIFIED", "UNRESOLVED", "RESOURCE_STOP"],
+  "terminal_required": ["box", "threshold", "reason_code", "checker", "input_hashes", "proof_payload"],
+  "threshold_identity": "Threshold is part of every cell identity; sigma and 67/250 trees are distinct proof objects.",
+  "global_pass_rule": "Every root-hull point must terminate in a proved safe leaf or a certified admissible counterexample; no UNRESOLVED/RESOURCE_STOP leaf is permitted for global PASS.",
+  "serialization_rule": "Unresolved cells and checkpoints are durable and resumable; navigation buffers never alter proof boxes."
+}

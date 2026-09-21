@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "observed_current_runs": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:..:src python -m pytest -q tests/test_G_checker.py",
+      "result": "5 passed",
+      "mutations": [
+        "altered spectral interval",
+        "corrupt split",
+        "flip leaf reason",
+        "remove leaf"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:..:src python -m pytest -q tests/test_schema_and_resume.py",
+      "result": "6 passed",
+      "mutations": [
+        "float exact endpoint",
+        "global pass with unresolved leaf",
+        "input hash mutation"
+      ]
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:..:src python -m pytest -q tests/test_I_local_cone.py",
+      "result": "4 passed",
+      "mutations": [
+        "larger dyadic rho=1/4096 rejected while rho=1/8192 accepted"
+      ]
+    }
+  ],
+  "independence_level": {
+    "boundary_checker": "separate checker replays frozen proof specification/tree and rejects structural/spectral mutations; shares the specified polynomial identities, so this is not proof-assistant formalization",
+    "input_hash": "copied-package mutation is checked by SHA-256 against immutable input ledger",
+    "local_cone": "same interval checker has explicit negative-control radius"
+  }
+}

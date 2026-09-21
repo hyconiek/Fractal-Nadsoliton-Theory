@@ -1,0 +1,259 @@
+{
+  "task": "R7N-059",
+  "status": "PASS",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "pytest": "9.0.2"
+    }
+  },
+  "baseline_replay": {
+    "method": "isolated per-file compatibility runner; this campaign fresh replay from R7N-002",
+    "files": 29,
+    "tests": 119,
+    "passed_files": 29,
+    "failed_files": [],
+    "total_recorded_seconds": 141.3854740699985,
+    "evidence": "results/R7N-002_fresh_119_replay.json"
+  },
+  "fresh_integration_controls": {
+    "tests": 7,
+    "pass": true,
+    "log": "logs/R7N-059_integration_fresh.log",
+    "numpy2_compatibility_normalization": "Only normalizes repr strings np.float64(x) to x before Fraction parsing; mathematical inputs/thresholds unchanged."
+  },
+  "new_scientific_replay": {
+    "K16_formula_leaves": {
+      "processed": 54341,
+      "passed": 54341,
+      "failed": 0,
+      "complete": true
+    },
+    "K20_formula_leaves": {
+      "processed": 25292,
+      "passed": 25292,
+      "failed": 0,
+      "complete": true
+    },
+    "total_formula_gradient_leaves": 79633,
+    "phase_geometry_mutation_audit_pass": true,
+    "campaign_mutation_firewall_pass": true
+  },
+  "source_integrity": {
+    "all_consolidated_hashes_match": true,
+    "files_checked": 23,
+    "rows": [
+      {
+        "file": "inputs/intake_review_20260919/ACCEPTED_RESULTS.md",
+        "expected": "7dbe9f8031f1a6f2f1c83785f222a6cddcd6887896ddaf59c06a6b70fd5cf0cb",
+        "actual": "7dbe9f8031f1a6f2f1c83785f222a6cddcd6887896ddaf59c06a6b70fd5cf0cb",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR1_independent_geometry.json",
+        "expected": "0c84c5fd0fa5561d6d67041f776e2b6e0ede82579b5ce5968b657aa37696447c",
+        "actual": "0c84c5fd0fa5561d6d67041f776e2b6e0ede82579b5ce5968b657aa37696447c",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR1_replay.json",
+        "expected": "3ee61056126b3fc269dea43c902e086597be49cabea5ab799834bd8673814789",
+        "actual": "3ee61056126b3fc269dea43c902e086597be49cabea5ab799834bd8673814789",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR223_failed_mask_coverage.json",
+        "expected": "a0a3c001516a0590812bf408e8a4e86e877a749c8650f172700e2a7a227cc0c7",
+        "actual": "a0a3c001516a0590812bf408e8a4e86e877a749c8650f172700e2a7a227cc0c7",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR223_subdivision_repairs.json",
+        "expected": "4e222d8cd8eb4804a2a9c6efc669238439cabdd7d47e6132710dcf8ebbe085c0",
+        "actual": "4e222d8cd8eb4804a2a9c6efc669238439cabdd7d47e6132710dcf8ebbe085c0",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR223_union_replay.json",
+        "expected": "acef7b2fca90d83551c9f3b5d3ff7a46e81c9fa920d8d2608f0351068fac1711",
+        "actual": "acef7b2fca90d83551c9f3b5d3ff7a46e81c9fa920d8d2608f0351068fac1711",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR223_union_unrounded_partial.json",
+        "expected": "dbe0af564d93d7b61039b316cecf3204f1d34148a623d825609e70e22dfbf5e0",
+        "actual": "dbe0af564d93d7b61039b316cecf3204f1d34148a623d825609e70e22dfbf5e0",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/FR42_replay.json",
+        "expected": "c04ece19e9827cf53500a3f3a62b5ab89fe02a149e31d418d347286de6ba5232",
+        "actual": "c04ece19e9827cf53500a3f3a62b5ab89fe02a149e31d418d347286de6ba5232",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/README.md",
+        "expected": "5b96419732c944328d58f14bc3ea700d2623090d9fc7c3634d9cc1ab927630ac",
+        "actual": "5b96419732c944328d58f14bc3ea700d2623090d9fc7c3634d9cc1ab927630ac",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/comparison.json",
+        "expected": "9837b2766617ba8be8ce8049f43bf0c28097a8eb98dc398f19a70b6ffda714d6",
+        "actual": "9837b2766617ba8be8ce8049f43bf0c28097a8eb98dc398f19a70b6ffda714d6",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/continuation_inventory.json",
+        "expected": "5edcd7734599b4957c37c5652acfc9fe94c1fbf88ac27d7de6bcad168811f48d",
+        "actual": "5edcd7734599b4957c37c5652acfc9fe94c1fbf88ac27d7de6bcad168811f48d",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/finalize.py",
+        "expected": "186ec7aa4ce460a02ca3a4c7747248e6d5452e50ac6de8f2e78f930835e0316a",
+        "actual": "186ec7aa4ce460a02ca3a4c7747248e6d5452e50ac6de8f2e78f930835e0316a",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/global_rechecks.json",
+        "expected": "6f536ef64aa54a1feacfdab1ece65b1b5535a49fb47f33265787b9f8c7feba73",
+        "actual": "6f536ef64aa54a1feacfdab1ece65b1b5535a49fb47f33265787b9f8c7feba73",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/manifests.json",
+        "expected": "279c172ff23955f086b05b13c8fb3347bca24a5db934e46133b44942ba9ac096",
+        "actual": "279c172ff23955f086b05b13c8fb3347bca24a5db934e46133b44942ba9ac096",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/phase_recertification.json",
+        "expected": "3691676a8cda95478a708ffa706bb07578ded1762eddfefad6aea85189574200",
+        "actual": "3691676a8cda95478a708ffa706bb07578ded1762eddfefad6aea85189574200",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/replay.json",
+        "expected": "e89ff49d566bacde98d869be9b187989540beb229a90408b3c14130ad87faa83",
+        "actual": "e89ff49d566bacde98d869be9b187989540beb229a90408b3c14130ad87faa83",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/replay_latest_fresh.json",
+        "expected": "c373d287bd19a4413cedb0bae9e22507200952ffb5cecbf4a76898983fa3cbe9",
+        "actual": "c373d287bd19a4413cedb0bae9e22507200952ffb5cecbf4a76898983fa3cbe9",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/replay_unittest.json",
+        "expected": "d52cf02c3d6af4f5f9ba1b7248a356eab3c729e74ef27f03be8d4295f2ceaff3",
+        "actual": "d52cf02c3d6af4f5f9ba1b7248a356eab3c729e74ef27f03be8d4295f2ceaff3",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/review.py",
+        "expected": "745d118d9248172108a0b7eb1b16d26ca02fe541410199bcf9be876950b57756",
+        "actual": "745d118d9248172108a0b7eb1b16d26ca02fe541410199bcf9be876950b57756",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/run_test_file.py",
+        "expected": "eb2770a5c3c5f5625d900defa7f213f7f5afdbac72d12ae7aa940831b489b98c",
+        "actual": "eb2770a5c3c5f5625d900defa7f213f7f5afdbac72d12ae7aa940831b489b98c",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/scientific_rechecks.py",
+        "expected": "7854f6d5d881ddb83b6564c8a6ffa397f00784a1f0c5546217aeea55d01b1472",
+        "actual": "7854f6d5d881ddb83b6564c8a6ffa397f00784a1f0c5546217aeea55d01b1472",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/test_integration.py",
+        "expected": "eb81bf84c724231c442caf314eaef19cce8e7520fd8ca291444bf6aecda42bfa",
+        "actual": "eb81bf84c724231c442caf314eaef19cce8e7520fd8ca291444bf6aecda42bfa",
+        "match": true
+      },
+      {
+        "file": "inputs/intake_review_20260919/verify_continuation.py",
+        "expected": "8466a56cb0595b7c7aa10d243ae543bc198ab1326c86c9fa485553c5538077fb",
+        "actual": "8466a56cb0595b7c7aa10d243ae543bc198ab1326c86c9fa485553c5538077fb",
+        "match": true
+      }
+    ],
+    "source_zip_snapshots": [
+      {
+        "path": "/mnt/data/fin_rank7_intake_review.zip",
+        "sha256": "2eceed750a2563ba90c566e47a07c79d524e77d6ff3fe248f4f5a16e17596a05",
+        "bytes": 139202
+      },
+      {
+        "path": "/mnt/data/r7n_inputs/FIN_rank7_CONTINUATION_HANDOFF_20260916_FR223.zip",
+        "sha256": "6b60028e514be0c34e2b933d1051ffa096b50d2b867973b6ff59f7315ca7452e",
+        "bytes": 6550031
+      }
+    ]
+  },
+  "claim_state": {
+    "TARGET_P": {
+      "statement": "For all four shared nonnegative fields J, lambda2(M4(J)) <= 67/250.",
+      "status": "OPEN_PARTIAL_CERTIFICATE",
+      "threshold": "67/250",
+      "domain": "J3,J4,J5,J6 >= 0",
+      "certified_compact_hull_fraction": 0.6368950527593205,
+      "residual_compact_hull_fraction": 0.3631049472406795,
+      "evidence": "results/R7N-019_024_practical_lane_final.json"
+    },
+    "TARGET_S": {
+      "statement": "For all four shared nonnegative fields J, lambda2(M4(J)) <= sigma.",
+      "status": "OPEN_NOT_REENTERED_AFTER_TARGET_P_STOP",
+      "threshold": "sigma",
+      "domain": "J3,J4,J5,J6 >= 0",
+      "reason": "Sharper target was deprioritized after Target P retained a 36.31% compact-hull residual; no valid implication closes sigma."
+    },
+    "QUARTIC_PHASE_EXHAUSTION": {
+      "statement": "Exhaustive critical-point census for exact fixed quartic phase fixture.",
+      "status": "INTERVAL_CERTIFIED_EXACT_60",
+      "count": 60,
+      "index_histogram": {
+        "0": 12,
+        "1": 24,
+        "2": 18,
+        "3": 6
+      },
+      "evidence": "results/R7N-040_quartic_phase_theorem.json"
+    },
+    "FULL_PHASE_EXHAUSTION": {
+      "statement": "Exhaustive critical-point census for exact fixed full log-mgf phase fixture.",
+      "status": "INTERVAL_CERTIFIED_EXACT_60_INDEPENDENTLY_REPLAYED",
+      "count": 60,
+      "index_histogram": {
+        "0": 12,
+        "1": 24,
+        "2": 18,
+        "3": 6
+      },
+      "evidence": "results/R7N-046_phase_exhaustion_final.json"
+    }
+  },
+  "commands": [
+    "python verify.py",
+    "PYTHONDONTWRITEBYTECODE=1 python src/run_integration_compat.py",
+    "python src/audit_full_phase_exhaustion.py",
+    "python src/replay_k16_safe_leaves.py <chunk>",
+    "python src/replay_k20_safe_leaves.py <chunk>",
+    "python src/audit_campaign_mutations.py"
+  ],
+  "distinctions": {
+    "metadata_schema_checks": "Not counted as independent mathematical proofs.",
+    "baseline_119": "Fresh scientific/test replay from R7N-002, not rerun a second time merely for document production.",
+    "phase_79633": "Formula-level recomputation of every stored K16/K20 gradient-exclusion leaf.",
+    "target_P": "Still partial; verification must reject any global PASS."
+  }
+}

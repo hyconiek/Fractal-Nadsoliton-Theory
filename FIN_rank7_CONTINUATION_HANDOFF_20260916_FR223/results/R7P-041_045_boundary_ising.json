@@ -1,0 +1,194 @@
+{
+  "R7P-041": {
+    "states": [
+      {
+        "A": 1,
+        "Y": 1,
+        "multiplicity": 1,
+        "labels": [
+          0
+        ]
+      },
+      {
+        "A": 1,
+        "Y": -1,
+        "multiplicity": 2,
+        "labels": [
+          4,
+          8
+        ]
+      },
+      {
+        "A": -1,
+        "Y": 1,
+        "multiplicity": 1,
+        "labels": [
+          6
+        ]
+      },
+      {
+        "A": -1,
+        "Y": -1,
+        "multiplicity": 2,
+        "labels": [
+          2,
+          10
+        ]
+      }
+    ],
+    "multiplicities": [
+      1,
+      2,
+      1,
+      2
+    ],
+    "weights": [
+      "X*Y*Z^4",
+      "2*X*Z",
+      "Y",
+      "2*Z^3"
+    ],
+    "effective_fields": {
+      "H_A": "J3+J5/4",
+      "H_Y": "3*J4/4-log(2)/2",
+      "K": "3*J5/4"
+    },
+    "inverse_parameter_powers": {
+      "Z6": "p1*p4/(p2*p3)",
+      "Y2": "4*p1*p3/(p2*p4)",
+      "X3": "p1*p2**2/(p3*p4**2)"
+    }
+  },
+  "R7P-042": {
+    "positive_interior_inequalities": [
+      "p1*p4>=p2*p3",
+      "4*p1*p3>=p2*p4",
+      "p1*p2^2>=p3*p4^2"
+    ],
+    "exact_positive_interior_converse": true,
+    "closure": {
+      "exponent_vectors": [
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      "possible_infinite_supports": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "edge_12_condition": "p3=p4=0, p1+p2=1, p1/p2>=1/2 (equiv. p1>=1/3)",
+      "edge_13_condition": "p2=p4=0, p1+p3=1, p1/p3>=1 (equiv. p1>=1/2)",
+      "vertex_condition": "p1=1",
+      "relaxation_counterexample": "p2=1 satisfies weak polynomial inequalities but is not in the exponential-family closure"
+    },
+    "weak_polynomial_boundary_is_outer_relaxation": true
+  },
+  "R7P-043": {
+    "feature_matrix": [
+      [
+        "sqrt(6)*sqrt(l3)/6",
+        "sqrt(6)*sqrt(l4)/8",
+        "sqrt(6)*sqrt(l5)/6"
+      ],
+      [
+        "sqrt(6)*sqrt(l3)/6",
+        "-sqrt(6)*sqrt(l4)/8",
+        "-sqrt(6)*sqrt(l5)/12"
+      ],
+      [
+        "-sqrt(6)*sqrt(l3)/6",
+        "sqrt(6)*sqrt(l4)/8",
+        "-sqrt(6)*sqrt(l5)/6"
+      ],
+      [
+        "-sqrt(6)*sqrt(l3)/6",
+        "-sqrt(6)*sqrt(l4)/8",
+        "sqrt(6)*sqrt(l5)/12"
+      ]
+    ],
+    "pair_distance_coefficients": {
+      "d12": "3*(l4 + l5)/8",
+      "d13": "2*(l3 + l5)/3",
+      "d14": "(16*l3 + 9*l4 + l5)/24",
+      "d23": "(16*l3 + 9*l4 + l5)/24",
+      "d24": "(4*l3 + l5)/6",
+      "d34": "3*(l4 + l5)/8"
+    },
+    "A123": "(l3*l4 + l3*l5 + l4*l5)/4",
+    "A124": "(4*l3*l4 + 4*l3*l5 + l4*l5)/16",
+    "e1": "(16*l3*p1*p3 + 16*l3*p1*p4 + 16*l3*p2*p3 + 16*l3*p2*p4 + 9*l4*p1*p2 + 9*l4*p1*p4 + 9*l4*p2*p3 + 9*l4*p3*p4 + 9*l5*p1*p2 + 16*l5*p1*p3 + l5*p1*p4 + l5*p2*p3 + 4*l5*p2*p4 + 9*l5*p3*p4)/24",
+    "e2": "(4*l3*l4*p1*p2*p3 + 4*l3*l4*p1*p2*p4 + 4*l3*l4*p1*p3*p4 + 4*l3*l4*p2*p3*p4 + 4*l3*l5*p1*p2*p3 + 4*l3*l5*p1*p2*p4 + 4*l3*l5*p1*p3*p4 + 4*l3*l5*p2*p3*p4 + 4*l4*l5*p1*p2*p3 + l4*l5*p1*p2*p4 + 4*l4*l5*p1*p3*p4 + l4*l5*p2*p3*p4)/16",
+    "e3": "3*l3*l4*l5*p1*p2*p3*p4/8",
+    "characteristic_polynomial": "t^3-e1*t^2+e2*t-e3"
+  },
+  "R7P-044": {
+    "shifted_coefficients": {
+      "z3": "1",
+      "z2": "3*sigma-e1",
+      "z1": "Pprime(sigma)",
+      "z0": "P(sigma)"
+    },
+    "criterion_under_z2_positive": "lambda2<=sigma iff P(sigma)<=0 OR Pprime(sigma)>=0",
+    "violation_equivalence": "lambda2>sigma iff P(sigma)>0 AND Pprime(sigma)<0",
+    "enclosing_center_y": "sqrt(6)*l5/(24*sqrt(l4))",
+    "R2": "(16*l3*l4 + 9*l4**2 + 10*l4*l5 + l5**2)/(96*l4)",
+    "trace_margin_symbolic": "-(16*l3**2*l4 - 15*l3*l4**2 - 14*l3*l4*l5 + l3*l5**2 + 12*l4**2*l5)/(96*l3*l4)",
+    "strict_trace_margin_interval": [
+      "492751183840498117551381151192144095907/103541986427322786192398475360000000000000",
+      "123187795961609830833433143382612586578453/25885496606830667968661136027600000000000000"
+    ]
+  },
+  "R7P-045": {
+    "sigma": "(2*l3*l4 + 2*l3*l5 - l4*l5)/(24*l3)",
+    "t_star_squared": "(2*l3 - l4)*(2*l3 - l5)/(4*l3**2)",
+    "probabilities": [
+      "(t + 1)/6",
+      "(t + 1)/3",
+      "-(t - 1)/6",
+      "-(t - 1)/3"
+    ],
+    "P_sigma_remainder_mod_t2": "0",
+    "Pprime_sigma_remainder_mod_t2": "0",
+    "remaining_eigenvalue": "l4*l5/(24*l3)",
+    "sigma_minus_remaining": "(l3*l4 + l3*l5 - l4*l5)/(12*l3)",
+    "domain_constraints": [
+      "0",
+      "0",
+      "t*(t**2 + 3)/27"
+    ],
+    "strict_t_interval": [
+      "426477929501394876999258553055116439/1000000000000000000000000000000000000",
+      "213238964750707263767872731505035769/500000000000000000000000000000000000"
+    ],
+    "strict_gap_interval": [
+      "4708510995703198411894468573/29421102929646750000000000000",
+      "156950366523450713033121267/980703430988215000000000000"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "status": "PASS_WITH_EXPLICIT_NONREPLAYED_HISTORICAL_INPUT",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "baseline_audit": {
+    "status": "PASS",
+    "new_tests": 19,
+    "inherited_regression_tests": 56,
+    "python": "3.12.3",
+    "source": "references/starting_audit/verification.json"
+  },
+  "campaign_regression": {
+    "mode": "sharded fresh-process pytest because monolithic process exceeds execution cap",
+    "passed_tests": 94,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "files": [
+      {
+        "file": "tests/test_B.py",
+        "passed": 8
+      },
+      {
+        "file": "tests/test_C_face.py",
+        "passed": 5
+      },
+      {
+        "file": "tests/test_D_coexistence.py",
+        "passed": 5
+      },
+      {
+        "file": "tests/test_D_fold.py",
+        "passed": 4
+      },
+      {
+        "file": "tests/test_E_edge_reflection.py",
+        "passed": 3
+      },
+      {
+        "file": "tests/test_E_stationary_counterexample.py",
+        "passed": 2
+      },
+      {
+        "file": "tests/test_F_boundary_ising.py",
+        "passed": 5
+      },
+      {
+        "file": "tests/test_G_boundary_cover.py",
+        "passed": 7
+      },
+      {
+        "file": "tests/test_G_checker.py",
+        "passed": 5
+      },
+      {
+        "file": "tests/test_H_intraparity.py",
+        "passed": 6
+      },
+      {
+        "file": "tests/test_H_intraparity_closure.py",
+        "passed": 6
+      },
+      {
+        "file": "tests/test_I_local_cone.py",
+        "passed": 4
+      },
+      {
+        "file": "tests/test_I_off_face.py",
+        "passed": 7
+      },
+      {
+        "file": "tests/test_I_tail_partial.py",
+        "passed": 2
+      },
+      {
+        "file": "tests/test_K_phase_cumulants.py",
+        "passed": 7
+      },
+      {
+        "file": "tests/test_M_global_frontier.py",
+        "passed": 3
+      },
+      {
+        "file": "tests/test_N_passive_finiteN.py",
+        "passed": 6
+      },
+      {
+        "file": "tests/test_O_quantum_bridge.py",
+        "passed": 3
+      },
+      {
+        "file": "tests/test_schema_and_resume.py",
+        "passed": 6
+      }
+    ],
+    "canonical_env": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:..:src"
+  },
+  "verify_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:..:src python verify.py",
+  "verify_result": "VERIFY_PASS; historical missing ZIP reported as NONREPLAYED_INPUT",
+  "nonreplayed_historical_material": {
+    "inputs/FIN_research_artifacts_pre_and_post_Discord.zip": {
+      "reason": "The historical source ZIP named in the starting INPUT_HASHES ledger was not present in the supplied portable bundle. Its extracted handoff, manifest, and imported artifacts are present and individually hashed. The absent ZIP itself is not claimed replayed.",
+      "expected_sha256": "af38b04a99548ebb71b4784d8f45eb80091f969fe73a3bb7d369754ee3bdf30c",
+      "status": "KNOWN_HISTORICAL_NONREPLAYED"
+    }
+  },
+  "mutation_review": "results/R7P-122_mutation_review.json",
+  "cache_portability_fix": "all __pycache__ and .pytest_cache directories are excluded from final bundle; stale bytecode previously preserved old absolute source paths",
+  "notes": [
+    "The monolithic pytest process is not counted as a failed scientific test; it exceeded the single-process execution cap after passing its prefix. Every test file was instead run in a fresh shard.",
+    "No skipped test is included in the 94 passed count."
+  ],
+  "clean_copy_smoke_replay": "results/R7P-127_clean_replay.json",
+  "clean_copy_smoke_summary": "manifest PASS; verify PASS; traceability PASS; 27 representative tests PASS in a fresh path"
+}

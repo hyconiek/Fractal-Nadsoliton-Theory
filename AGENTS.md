@@ -10904,3 +10904,182 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   not proof-assistant verification or a replay of absent historical covers.
   No selector/QW-2191, active-gain source, units, laboratory evidence,
   legacy completion/role transfer, SM/GR, L_total, or ToE closure follows.
+
+## Consolidated R7P / FR223 intake and corrected replay guardrail (2026-09-19)
+
+- `fin_rank7_intake_review/README.md` is the consolidated integration entry
+  point; `fin_rank7_intake_review/ACCEPTED_RESULTS.md` states the accepted
+  mathematical scope. Original handoff directories remain immutable source
+  archives. Their raw DONE/CERTIFIED flags do not override this audit.
+- The newer `fin_rank7_followup` contains all 150 relative paths of the older
+  inner handoff package (141 identical, 9 updated). The 20260915 continuation
+  retains all scientific material from that package; its only omitted path is
+  an obsolete `.py.tmp` file. FR223 retains all 318 paths from 20260915
+  (314 identical, 4 updated), plus 52 paths. Preserve historical wrappers and
+  manifests as provenance rather than deleting them as presumed duplicates.
+- R7P-019/020 corrected-face minimum isolation, local R7P-026--031 event/fold
+  results, the 436-leaf boundary-Ising theorem, and the shared-field
+  intraparity-W bound are now accepted in the scopes stated in the consolidated
+  report. W_par is not M4: its ceiling alone does not remove any full-covariance
+  residual region. No first-global-transition or connected-tube theorem follows
+  from local event/root certificates.
+- R7P-036 supplies a certified genuine full-X7 stationary point at exact g=5
+  with Hessian inertia (2 negative, 0 zero, 5 positive). This separately refutes
+  the unrestricted stationary-only index-one conjecture. The earlier
+  nonstationary witness remains valid; neither decides a gain-restricted
+  stationary-only assertion near g=3.71834489812.
+- FR1 projected tails are accepted for shared nonnegative J3,J4,J5,J6:
+  exp(-J3)<=1/30, exp(-3J4/2)<=1/128, or exp(-J5/2)<=1/9.
+  The audit independently recomputes normalized projected feature distances.
+  The strengthened parity inequality q/(1-q)>=cosh(J3) is accepted under
+  the same premises, not for independently chosen parity laws.
+- FR42 is accepted after replay of all 637 cover leaves, shifted-threshold
+  trace payment, FR9/FR16 local inclusions and covariance perturbation:
+  exp(-2J6)<=1/1000000 implies the declared M4 ceiling. The source's assumption
+  that C4 pair distances are cyclic was not used: all 66 feature pairs were
+  checked to prove D^2<5. The proof pays 5/1000001<1/200000.
+- The raw FR223 106-mask ledger was NOT accepted wholesale. Direct replay
+  certifies 99 masks and rejects whole-box attempts FR32/FR48/FR52/FR54/
+  FR56/FR58/FR60. The audit repairs precisely those seven unchanged domains
+  by 18 certified subrectangles with complete recorded split trees. The
+  accepted union therefore uses 99 direct certificates plus these 18 leaves.
+  Checker rejection is a method failure, not a physical counterexample.
+- FR223 mask endpoints are the exact decimals serialized in its JSON. The
+  1.02 navigation buffer is not certified. Do not convexify the union, infer
+  globality from four negative-gap optimizer runs, or reinstate the withdrawn
+  2e/25 spectral-gap claim. A threshold-specific Schur transform preserves the
+  relevant inertia decision, not numerical eigenvalue gaps of M4.
+- The phase layer was re-certified with interval pi/square roots, exact
+  decimal amplitudes, strict Krawczyk inclusion/contraction, and interval LDL
+  after a verified invertible change of basis. Each of the quartic and full
+  functions has at least 60 distinct local roots for the stated fixed fixture,
+  with index counts (12,24,18,6) for indices (0,1,2,3). No global exhaustion,
+  homotopy-topology equivalence, or amplitude-uniform theorem is exported.
+- The rational negative-energy witness at exact g=3.71835 and the angular
+  instability interval [0.41421132290,0.41421132293] were independently
+  rechecked with exact input endpoints. The energetic bracket
+  [2.8934,3.71835] retains its explicit existing-ST448 lower-bound dependency;
+  no new replay of the entire ST448 cover or first attaining-orbit theorem
+  is claimed by this intake.
+- Ginibre's Proposition 3 / Example 4 apply to the real character cone on
+  Z4 x Z3 with Haar measure and nonnegative supplied fields. The specified
+  covariance-sign/isotone-iteration consequences are accepted, not a physical
+  time law. Exact R7P-079 alignment digits and the absent R7P-077 specialized
+  certificate are not promoted solely from stored summaries.
+- The historical discord delta_L is exactly recovered from the original
+  W-spectrum provider. The reported 5e-16 discrepancy comes from subtracting
+  separately rounded Laplacian intervals and losing a shared dependency;
+  it is not a refutation or required correction of the earlier discord bound.
+- The fresh-copy local replay executes 119 tests across 29 files successfully.
+  Seven additional integration controls reject damaged coverage/sign/geometry
+  records and a bad phase locator; they also preserve the no-buffer proof scope.
+  The original shared-copy sequence had a genuine test-isolation failure:
+  certificate regeneration removed metadata needed by a later schema test.
+  Preserve that failure record; use isolated copies and distinguish schema/hash
+  checks from scientific proof replay. `finalize.py` checks the newly replayed
+  evidence structure; documented scientific replay commands remain separate.
+- FR2/FR3 and missing intermediate reserve/tube claims are not promoted as
+  standalone replayable theorems. Full positive-orthant 4D closure, full-7D
+  stationary exhaustion/global minimizer uniqueness, and the phase complement
+  remain open. No active-gain source, selector/QW-2191, dimensional clock,
+  laboratory evidence, legacy completion/role transfer, SM/GR, L_total, or
+  ToE closure is supplied by these conditional mathematical results.
+
+## R7N fixed-fixture phase exhaustion and partial Target-P guardrail (2026-09-20)
+
+- `fin_r7n_review/README.md` and `fin_r7n_review/ACCEPTED_RESULTS.md` are the
+  accepted integration of `FIN_R7N_HANDOFF_20260920`. The source archive remains
+  unchanged; all 740 original manifest entries match. Absolute historical
+  input paths were resolved to local files with matching hashes.
+- The phase-exhaustion atom is now CLOSED for the exact decimal fixture
+  (r3,r4,r5,z6)=(0.1131879146,0.1698528641,0.2269339093,-0.3380663037).
+  Each of the quartic cumulant phase function K4 and the full phase log-mgf K
+  has exactly 60 critical points on the complete three-torus. Each histogram
+  is (12,24,18,6) at negative phase-Hessian indices (0,1,2,3). All roots are
+  nondegenerate. This is not a variable-amplitude, Cartesian X7, physical-state
+  selection, or global quartic-to-full homotopy theorem.
+- The intake independently recomputes local root existence/inertia and larger
+  uniqueness collars. Uniform preconditioned-Jacobian contraction is paid on
+  radius-0.05 quartic collars and radius-0.0003--0.0015 full collars. Collar
+  separation and exact normalized-torus containment are explicitly checked;
+  the former unlicensed radius-0.05 exclusion shortcut is not used.
+- K16/K20 coefficients are independently reconstructed through the scaled
+  logarithmic-series recurrence E'=K'E. The complex-alpha domain is paid with
+  R>1 and RH<pi/2, and the full-gradient error includes the analytic Cauchy
+  tail and every dropped Fourier resonance. The checked error bounds are
+  approximately 2.38338198436e-8 and 1.98969999786e-10, respectively.
+- All 27,272 quartic, 54,341 K16, and 25,292 K20 gradient-exclusion leaves
+  are freshly recomputed, not sampled. Complete geometry checks cover the
+  torus together with 640 quartic and 864 full collar leaves. The accepted
+  exactly-60 statements depend on this full chain, not on old PASS flags.
+- The quartic fixed-sign symmetry is the 12-element subgroup with even label
+  translations and corresponding reflections. Interval inclusion of images
+  of small root boxes in unique-root collars upgrades numerical target
+  proposals to exact permutations: eight orbits of size six and one of size
+  twelve. Odd translations flip z6 and cannot be identified within this fixture.
+- Target P at tau0=67/250 remains GLOBAL-OPEN. Independent exact partition
+  checks and fresh inequalities accept 13,231 compact-hull leaves and retain
+  5,432 unresolved leaves. Their unresolved coordinate-volume fraction is
+  approximately 0.3631049472406795. This is not physical probability, confidence
+  in the conjecture, or a global error bar. Every imported rational compression
+  basis has its rank checked; matrix signs are recomputed, not inferred from
+  stored numerical eigenvalues.
+- The claimed conditional C4 gain consequence for 0<g<=250/67 remains
+  conditional on global Target-P closure. No tau0-only leaf transfers to the
+  sharper sigma ceiling, which also remains open. No new full-X7 stationary
+  exhaustion, global minimizing-orbit theorem or improved energetic bracket
+  is exported. The existing exact g=5 stationary index-two witness remains.
+- The raw portable verifier checks stored records and samples as well as
+  geometry; it is not a full fresh mathematical replay. Its cache-file manifest
+  dependency, historical /mnt/data paths, and local 120-second timeout are
+  portability/resource issues, not mathematical refutations. The independent
+  repository replay uses relative paths and includes eight new negative-control
+  tests. Historical 119+7 regressions are not counted again as new tests here.
+- Preserve all scope gates: no amplitude robustness or identification with an
+  exact coexistence amplitude, no causal discord/localization source, no strict
+  active gain, dimensional clock, selector/QW-2191, laboratory apparatus or
+  evidence, legacy completion/role transfer, SM/GR, L_total, or ToE closure.
+
+## R7O2 coupled-moment partial-cover integration guardrail (2026-09-20)
+
+- `fin_r7o2_review/README.md` is the accepted R7O2 integration. All 3,100
+  original manifest entries and the identity of the frozen 5,432-parent R7N
+  residual were checked. Original archives remain unchanged; deleted ZIPs
+  were not reconstructed or restored. Verified extracted predecessor inputs
+  supply the declared mathematical dependencies.
+- The physical-coupled centered-second-moment method is accepted for the
+  declared shared-field C4 model at exact tau0=67/250. For fixed rational
+  full-rank B and fixed rational c, Cov(B^T F)<=E[(B^T F-c)(B^T F-c)^T].
+  Positive definiteness of tau0 B^T B minus that moment gives the scoped
+  second-eigenvalue bound. The common parameter/normalization dependence is
+  retained through validated second-order interval jets and Taylor bounds.
+  This supplies no physical origin of gain or dynamics.
+- Every active SAFE leaf was re-certified: 7,340/7,340 passed. The source
+  records omitted c and printed float sign diagnostics; the intake exports
+  replacement certificates on the SAME cells with the saved exact B, a new
+  explicitly saved rational c, exact rank checks and outward sign endpoints.
+  Subsequent replay can use the saved fixed B,c without regenerating proposals.
+- The full replay uses explicit nextafter-outward binary64 intervals with
+  exact rational public endpoints; nonfinite operations and zero-containing
+  denominator intervals are rejected. Six new arithmetic/geometry controls
+  pass. Twenty fixed witnesses additionally pass the outward rational 10^-12
+  backend. Do not describe the entire replay as duplicated with that backend
+  or as proof-assistant formalization.
+- Exact split geometry, not just volume equality, is checked for all 3,460
+  processed parents. Four historical repairs replace the original proofs
+  for parents 332/338/357/363. There are 3,406 fully certified closed parents,
+  54 partial parents containing 171 unresolved terminals, and 1,972 unprocessed
+  original parents. No new search or repair of those unresolved inputs was run
+  as part of this intake.
+- Keep both volume ledgers explicit: conservative whole-parent residual is
+  approximately 0.12318558366584603 of the compact hull; actual unresolved
+  terminals plus unprocessed parents occupy approximately 0.12308767384910356.
+  Thus the accepted compact-hull coverage including R7N is approximately
+  0.8769123261508964. These are coordinate volumes, not physical probabilities
+  or confidence levels. The exploratory R7O residual near 2.26% is not accepted.
+- Global Target P remains OPEN. Sharp sigma, full-X7 globality/uniqueness,
+  selector/QW-2191, physical gain/clock, apparatus/evidence, legacy bridge/role
+  transfer, SM/GR, L_total and ToE closure are not exported. The accepted fixed-
+  fixture R7N phase census remains unchanged. The next completion work must
+  address the exact remaining-index and terminal queues, preserving independent
+  all-leaf and whole-domain proof gates.

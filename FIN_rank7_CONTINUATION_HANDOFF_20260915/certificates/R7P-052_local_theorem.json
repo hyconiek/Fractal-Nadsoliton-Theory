@@ -1,0 +1,18 @@
+{
+  "id": "CERT-R7P-052",
+  "claim_id": "CLM-042",
+  "domain": "r in [51/128,103/256], s,t in [255/256,1]",
+  "quantifiers": "all physical tangent-cone points in the stated dyadic box",
+  "assumptions": [
+    "accepted strict spectral intervals",
+    "exact R7P-045 double-root relation"
+  ],
+  "proof_type": "exact equality/gradient identities plus interval Hessian tangent-cone certificate",
+  "inputs": [
+    "certificates/R7P-052_local_equality.json",
+    "src/boundary_cover.py:local_equality_certificate"
+  ],
+  "conclusion": "A<=0 throughout the box, strictly away from the exact double root; therefore lambda2<=sigma_* locally with equality only at that root.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

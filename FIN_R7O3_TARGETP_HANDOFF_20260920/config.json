@@ -1,0 +1,34 @@
+{
+  "threshold": "67/250",
+  "gain_endpoint": "250/67",
+  "chart": [
+    "sqrt(r)",
+    "1-s",
+    "1-t",
+    "y"
+  ],
+  "compact_hull": [
+    [
+      "1/900",
+      "1"
+    ],
+    [
+      "1/128",
+      "1"
+    ],
+    [
+      "1/9",
+      "1"
+    ],
+    [
+      "1/1000000",
+      "1"
+    ]
+  ],
+  "arithmetic_policy": {
+    "kind": "outward rational intervals",
+    "grid_digits": 9
+  },
+  "feature_order": "four normalized C4 features; aggregate state order [0,4,6,2,3,5,1]",
+  "global_scope": "declared shared nonnegative fields, relying on accepted R7N tail lemmas outside compact hull"
+}

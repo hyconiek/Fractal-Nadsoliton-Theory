@@ -1,0 +1,103 @@
+{
+  "id": "FR48-split-u-lower-v-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "two off-centre second-order rational interval-AD boxes + midpoint Taylor remainder + R7P-044",
+  "union_domain": {
+    "x": [
+      "1/7000",
+      "1/4800"
+    ],
+    "u": [
+      "1/7200",
+      "1/4200"
+    ],
+    "v": [
+      "1/13000",
+      "1/6200"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "split": "u midpoint 19/100800",
+  "boxes": [
+    {
+      "domain": {
+        "x": [
+          "1/7000",
+          "1/4800"
+        ],
+        "u": [
+          "1/7200",
+          "19/100800"
+        ],
+        "v": [
+          "1/13000",
+          "1/6200"
+        ],
+        "e": [
+          "0",
+          "1/100000"
+        ]
+      },
+      "P_float": [
+        -1.8453280004353717e-10,
+        -4.468143703342995e-12
+      ],
+      "P1_float": [
+        -1.2689776174129526e-05,
+        -6.939429993667499e-06
+      ],
+      "c2_float": [
+        0.1599301688194905,
+        0.15997048365976035
+      ],
+      "criterion_reason": "P_NONPOS"
+    },
+    {
+      "domain": {
+        "x": [
+          "1/7000",
+          "1/4800"
+        ],
+        "u": [
+          "19/100800",
+          "1/4200"
+        ],
+        "v": [
+          "1/13000",
+          "1/6200"
+        ],
+        "e": [
+          "0",
+          "1/100000"
+        ]
+      },
+      "P_float": [
+        -1.9579660188259412e-10,
+        -5.208983148233386e-12
+      ],
+      "P1_float": [
+        -1.3396808953364763e-05,
+        -7.646746421116294e-06
+      ],
+      "c2_float": [
+        0.1599239726965768,
+        0.1599642864656413
+      ],
+      "criterion_reason": "P_NONPOS"
+    }
+  ],
+  "conclusion": "lambda2(M4)<=sigma_* throughout the full union; each half has c2>0 and P<0.",
+  "research_origin": "Extends FR46 in u through the FR47 residual wall, from u<=1/5200 to u<=1/4200.",
+  "negative_control": {
+    "unsplit_status": "FAILED",
+    "P_float": [
+      -2.0292526808178885e-10,
+      8.88790546563766e-12
+    ],
+    "interpretation": "Unsplit dependency failure only; both halves certify."
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

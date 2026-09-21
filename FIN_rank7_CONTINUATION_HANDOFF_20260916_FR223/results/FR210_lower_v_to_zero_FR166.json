@@ -1,0 +1,65 @@
+{
+  "id": "FR210-lower-v-to-zero-FR166",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/7000",
+      "1/4800"
+    ],
+    "u": [
+      "1/2800",
+      "1/1840"
+    ],
+    "v": [
+      "0",
+      "1/20000"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "P_float": [
+    -2.1825690583441712e-10,
+    -3.090759619686561e-12
+  ],
+  "P1_float": [
+    -1.2996061292401498e-05,
+    -6.765294429176639e-06
+  ],
+  "c2_float": [
+    0.15990358173851557,
+    0.15995549866032555
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR209 landed on the buffered lower-v wall of FR166. The adjacent slab certifies all the way to v=0, connecting the high-u corridor to the J5=0 face.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/7000",
+        "1/4800"
+      ],
+      "u": [
+        "1/2800",
+        "1/1840"
+      ],
+      "v": [
+        "0",
+        "1/20000"
+      ],
+      "e": [
+        "0",
+        "1/50000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -2.3371673928894764e-10,
+      1.952596559581734e-12
+    ],
+    "interpretation": "checker failure at a doubled parity radius only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

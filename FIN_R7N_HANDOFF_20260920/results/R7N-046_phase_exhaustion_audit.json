@@ -1,0 +1,75 @@
+{
+  "task": "R7N-046",
+  "audit_layer": "geometry + saved inequality consistency + collar containment + mutations",
+  "all_pass": true,
+  "checks": {
+    "baseline_partition": {
+      "pass": true,
+      "detail": {
+        "initial_cells": 64,
+        "terminal_leaves": 59723
+      }
+    },
+    "direct_identity": {
+      "pass": true,
+      "detail": {
+        "source_count": 5382,
+        "safe": 2887,
+        "failed": 2495
+      }
+    },
+    "adaptive_partition": {
+      "pass": true,
+      "detail": {
+        "parents": 2495,
+        "terminal_leaves": 23269
+      }
+    },
+    "saved_signs": {
+      "pass": true,
+      "detail": {
+        "K16_checked": 54341,
+        "K20_direct_checked": 2887,
+        "K20_adaptive_checked": 22405,
+        "bad": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "root_leaves": {
+      "pass": true,
+      "detail": {
+        "checked": 864,
+        "distinct_roots": 60,
+        "bad": []
+      }
+    },
+    "mutations": {
+      "pass": true,
+      "detail": {
+        "delete_leaf_rejected": true,
+        "shift_boundary_rejected": true,
+        "damaged_gradient_sign_rejected": true,
+        "enlarged_collar_rejected": true,
+        "source_amplitude_mutation_rejected": true,
+        "odd_translation_symmetry_rejected": true
+      }
+    },
+    "local_root_catalog": {
+      "pass": true,
+      "detail": {
+        "count": 60,
+        "histogram": {
+          "2": 18,
+          "1": 24,
+          "0": 12,
+          "3": 6
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 11.629695415496826,
+  "note": "This checker is independent of search order and verifies every stored terminal inequality against its declared epsilon. Formula-level recomputation of selected/all leaves is recorded separately."
+}

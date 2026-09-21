@@ -1,0 +1,20 @@
+{
+  "status": "DONE_REGRESSION_GUARDRAILS",
+  "negative_q_witness": {
+    "fields": "J3=J5=0, arbitrary J4, exp(J6)=1/2 (so J6=-log 2)",
+    "exact_q": "1/5",
+    "violated_premise": "q_even>=1/2",
+    "interpretation": "The R7P-063 q shortcut is scoped to J6>=0 and is not silently extended to negative J6."
+  },
+  "relaxed_even_simplex_witness": {
+    "source": "R7P-047 drop_g1",
+    "probabilities": ["3/10", "99/200", "41/200", "0"],
+    "property": "interval-certified lambda2(Cplus)>sigma_* after dropping a physical boundary-domain inequality",
+    "interpretation": "An arbitrary four-state simplex law cannot be substituted for the exact field-generated Cplus family."
+  },
+  "decoupled_physical_sector_search": {
+    "status": "NO_CERTIFIED_VIOLATION_FOUND_IN_BOUNDED_NUMERICAL_SEARCH",
+    "claim": "none",
+    "note": "No theorem is inferred from this negative search; R7P-063 uses the actual shared-field derivation instead."
+  }
+}

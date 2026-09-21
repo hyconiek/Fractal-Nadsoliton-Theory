@@ -1,0 +1,18 @@
+{
+  "id": "CERT-R7P-059",
+  "claim_id": "CLM-046",
+  "domain": "same physical odd conditional sector",
+  "quantifiers": "all physical (u,d) and accepted strict spectrum",
+  "assumptions": [
+    "R7P-058 exact covariance/domain",
+    "accepted strict lambda3,lambda4,lambda5 intervals"
+  ],
+  "proof_type": "exact determinant reduction plus strict rational interval sign checks",
+  "inputs": [
+    "src/intraparity.py",
+    "results/R7P-057_059_intraparity.json"
+  ],
+  "conclusion": "lambda_min(C_minus)<sigma_* globally, and lambda_max(C_minus)>=sigma_* iff u lies in the exact u_\u00b1 interval and d^2>=dmin^2(u), intersected with the physical domain.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "FR10-diagonal-uv-local-box",
+  "status": "INTERVAL_CERTIFIED",
+  "proof_type": "anisotropic second-order rational interval AD + R7P-044 characteristic-inertia disjunction",
+  "domain": {
+    "abs_r_minus_rstar": "<=1/8192",
+    "u=1-exp(-3J4/2)": "<=1/4800",
+    "v=1-exp(-J5/2)": "<=1/4800",
+    "e=1-q_even": "<=1/3072",
+    "J_fields": "J3,J4,J5,J6>=0 with the physical shared-field odd law"
+  },
+  "conclusion": "lambda2(Mtilde)<=sigma_* and hence lambda2(M4)<=sigma_* throughout the declared anisotropic box.",
+  "strict_checks": {
+    "signs": {
+      "P1_x_negative": true,
+      "P1_u_negative": true,
+      "P1_v_negative": true,
+      "P1_e_positive": true,
+      "P_ee_positive": true,
+      "c2_positive": true
+    },
+    "boundary_schur_pass": true,
+    "P1_zero_endpoint_schur_pass": true,
+    "boundary_Nvv_interval": [
+      "7.74736294010552e-09",
+      "0.000121461140601698"
+    ],
+    "endpoint_Nvv_interval": [
+      "4.84422773266607e-05",
+      "0.000308102208635363"
+    ],
+    "c2_interval": [
+      "0.158924289311807",
+      "0.161159347041709"
+    ]
+  },
+  "negative_controls": {
+    "larger_e_1_over_3052": {
+      "status": "FAILED",
+      "boundary_Nvv_interval": [
+        "-3.0470843747349e-10",
+        "0.000121469120424309"
+      ],
+      "interpretation": "checker failure only; not a physical counterexample"
+    },
+    "larger_uv_1_over_4700": {
+      "status": "FAILED",
+      "boundary_Nvv_interval": [
+        "-9.38931208678375e-07",
+        "0.000122420456033792"
+      ],
+      "interpretation": "checker failure only; not a physical counterexample"
+    }
+  },
+  "scope": "Local equality-neighborhood theorem in the physical four-amplitude model only. No full positive-orthant or full-seven-coordinate transfer."
+}

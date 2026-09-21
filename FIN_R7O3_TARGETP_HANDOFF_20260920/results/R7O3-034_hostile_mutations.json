@@ -1,0 +1,68 @@
+{
+  "task": "R7O3-034-hostile-mutations",
+  "count": 12,
+  "rejected_count": 12,
+  "global_pass": true,
+  "results": [
+    {
+      "mutation": "delete_leaf",
+      "rejected": true,
+      "detail": "['missing_leaf:0']"
+    },
+    {
+      "mutation": "overlap_gap_equal_volume",
+      "rejected": true,
+      "detail": "['node_cell_mismatch:None', 'node_cell_mismatch:None']"
+    },
+    {
+      "mutation": "omit_low_index_parent",
+      "rejected": true,
+      "detail": "['parent_count', 'missing_or_extra_parent_index']"
+    },
+    {
+      "mutation": "corrupt_center",
+      "rejected": true,
+      "detail": "formula exact-match rejected"
+    },
+    {
+      "mutation": "corrupt_gram",
+      "rejected": true,
+      "detail": "['gram', 'certificate_hash']"
+    },
+    {
+      "mutation": "corrupt_rank_minor",
+      "rejected": true,
+      "detail": "['rank_evidence', 'certificate_hash']"
+    },
+    {
+      "mutation": "corrupt_split",
+      "rejected": true,
+      "detail": "['node_cell_mismatch:2L', 'node_cell_mismatch:2R']"
+    },
+    {
+      "mutation": "wrong_threshold",
+      "rejected": true,
+      "detail": "['threshold', 'certificate_hash']"
+    },
+    {
+      "mutation": "duplicate_parent",
+      "rejected": true,
+      "detail": "['parent_count', 'duplicate_parent_index']"
+    },
+    {
+      "mutation": "truncated_json",
+      "rejected": true,
+      "detail": ""
+    },
+    {
+      "mutation": "dependency_hash",
+      "rejected": true,
+      "detail": "fake hash rejected by equality"
+    },
+    {
+      "mutation": "global_pass_with_residual",
+      "rejected": true,
+      "detail": "gate rejects nonzero residual"
+    }
+  ]
+}

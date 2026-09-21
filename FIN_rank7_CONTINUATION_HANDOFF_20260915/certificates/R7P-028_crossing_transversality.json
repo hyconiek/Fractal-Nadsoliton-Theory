@@ -1,0 +1,27 @@
+{
+  "id": "R7P-028-crossing-transversality",
+  "claim_id": "CLM-028",
+  "domain": "localized stationary branch at the R7P-026 event",
+  "quantifiers": "at the certified local equal-energy event",
+  "assumptions": [
+    "R7P-026",
+    "R7P-027"
+  ],
+  "proof_type": "stationary branch derivative identity plus interval sign",
+  "inputs": [
+    "certificates/R7P-026_equal_energy_event.json",
+    "certificates/R7P-027_localized_full_stability.json"
+  ],
+  "conclusion": "the localized branch crosses the uniform energy transversely with negative derivative",
+  "global_pass": false,
+  "task": "R7P-028",
+  "scientific_status": "VALIDATED_LOCAL_TRANSVERSALITY",
+  "branch_energy_derivative_formula": "d Phi(s(g),g)/dg = partial_g Phi = -||s||^2/(2g^2) at a stationary branch",
+  "derivative_interval": [
+    "-0.4524137321765795877707059692321018780938455057986831492233582674",
+    "-0.45241373067505210693382256974015309410759790718179546619370165305"
+  ],
+  "nonzero_negative": true,
+  "local_uniqueness_reason": "R7P-026 isolated root + H4 positive definite => implicit-function branch; nonzero energy derivative => locally unique crossing",
+  "connected_tube_certified": false
+}

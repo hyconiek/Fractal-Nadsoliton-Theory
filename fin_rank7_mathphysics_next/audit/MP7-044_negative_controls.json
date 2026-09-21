@@ -1,0 +1,145 @@
+{
+  "task": "MP7-044",
+  "controls": [
+    {
+      "name": "swapped_eigenvalue_ordering",
+      "passed": true,
+      "detail": {
+        "decreasing_lambda2": 0.2,
+        "increasing_lambda2": 0.1
+      }
+    },
+    {
+      "name": "omitted_metric_changes_raw_spectrum",
+      "passed": true,
+      "detail": {
+        "raw_transformed": [
+          0.8,
+          0.1
+        ],
+        "generalized": [
+          0.2,
+          0.1
+        ]
+      }
+    },
+    {
+      "name": "rank_deficient_B_rejected",
+      "passed": true,
+      "detail": {
+        "rank": 1,
+        "columns": 2
+      }
+    },
+    {
+      "name": "compensated_overlap_gap_not_volume_proof",
+      "passed": true,
+      "detail": {
+        "proper": {
+          "gap": false,
+          "overlap": false,
+          "end": 1.0,
+          "total": 1.0
+        },
+        "bad_equal_total": {
+          "gap": true,
+          "overlap": false,
+          "end": 1.1,
+          "total": 1.0
+        }
+      }
+    },
+    {
+      "name": "stale_input_hash_rejected",
+      "passed": true,
+      "detail": {
+        "original": "7ea5ea232c6a5136642ee761a38c6fb3c084ac7e830b2b9a3df2260c6dcf56b4",
+        "mutated": "f21b031d0733bd61dc87022a45abd68bc10c92c85906894a7b7bd3f530d45045"
+      }
+    },
+    {
+      "name": "negative_b_breaks_nonnegative_residue6_weight",
+      "passed": true,
+      "detail": {
+        "sinh_b": -1.1752011936438014,
+        "required_action": "translate odd label first"
+      }
+    },
+    {
+      "name": "zero_amplitude_phase_is_redundant",
+      "passed": true,
+      "detail": {
+        "sampled_zero_mode_terms": [
+          0.0,
+          0.0,
+          -0.0
+        ]
+      }
+    },
+    {
+      "name": "nonstationary_polar_gradient_term_required",
+      "passed": true,
+      "detail": {
+        "Q": -2.0,
+        "r2_Hodd": 0.0,
+        "gradient_corrected_rhs": -2.0
+      }
+    },
+    {
+      "name": "M4_is_not_M7_for_full_fluctuations",
+      "passed": true,
+      "detail": {
+        "M7_uniform_diag": [
+          0.16345057183137,
+          0.16345057183137,
+          0.18329740411110085,
+          0.18329740411110085,
+          0.19155052267325753,
+          0.19155052267325753,
+          0.19518183676219167
+        ],
+        "M4_uniform_diag": [
+          0.16345057183137,
+          0.18329740411110085,
+          0.19155052267325753,
+          0.19518183676219167
+        ],
+        "omitted_positive_sine_variances": [
+          0.16345057183137,
+          0.18329740411110085,
+          0.19155052267325753
+        ]
+      }
+    },
+    {
+      "name": "local_energy_equality_not_global_by_logic",
+      "passed": true,
+      "detail": {
+        "status": "semantic rejection rule retained"
+      }
+    },
+    {
+      "name": "phase_root_not_full_stationary_by_logic",
+      "passed": true,
+      "detail": {
+        "status": "confirmed concretely by MP7-040"
+      }
+    },
+    {
+      "name": "auxiliary_equilibrium_law_not_unique_dynamics",
+      "passed": true,
+      "detail": {
+        "status": "same invariant density admits different reversible mobilities/attempt rates"
+      }
+    },
+    {
+      "name": "translated_equal_mass_not_selector",
+      "passed": true,
+      "detail": {
+        "status": "symmetry multiplicity does not choose one orbit member"
+      }
+    }
+  ],
+  "all_passed": true,
+  "scope": "targeted mathematical/semantic controls; not a replay of unavailable R7O3 leaf corruption tests"
+}

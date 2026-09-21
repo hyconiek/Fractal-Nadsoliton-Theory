@@ -1,0 +1,65 @@
+{
+  "id": "FR130-upper-v-parity-chimney",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6000",
+      "1/5000"
+    ],
+    "u": [
+      "1/25000",
+      "1/15000"
+    ],
+    "v": [
+      "1/4300",
+      "1/3800"
+    ],
+    "e": [
+      "0",
+      "1/2500"
+    ]
+  },
+  "P_float": [
+    -7.878639733652707e-10,
+    -1.3646874374128194e-11
+  ],
+  "P1_float": [
+    -1.5184880844509924e-05,
+    5.430340397958963e-06
+  ],
+  "c2_float": [
+    0.1599314827228293,
+    0.16003239257325333
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR129 landed on the buffered upper-v wall of FR32; a narrower shifted slab above that wall has a much larger direct P<0 margin.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6000",
+        "1/5000"
+      ],
+      "u": [
+        "1/25000",
+        "1/15000"
+      ],
+      "v": [
+        "1/4300",
+        "1/3800"
+      ],
+      "e": [
+        "0",
+        "1/2000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -8.772881684109188e-10,
+      9.057499488669672e-12
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

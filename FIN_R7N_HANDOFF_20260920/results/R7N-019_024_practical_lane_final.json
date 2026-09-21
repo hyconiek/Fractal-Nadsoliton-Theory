@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    "R7N-019",
+    "R7N-020",
+    "R7N-021",
+    "R7N-022",
+    "R7N-023",
+    "R7N-024"
+  ],
+  "target": "P",
+  "threshold": "67/250",
+  "global_status": "UNRESOLVED_PARTIAL_CERTIFICATE",
+  "initial_pilot": {
+    "leaf_budget": 10000,
+    "trace_only_checkpoint": "checkpoints/R7N-020_tight_rounded_trace_only.json",
+    "later_hybrid_methods": [
+      "trace",
+      "e2",
+      "cell-adaptive compression",
+      "centered moment",
+      "directed t splits"
+    ]
+  },
+  "final_certified_partial": {
+    "residual_volume_fraction_of_compact_hull": 0.3631049472406795,
+    "certified_volume_fraction_of_compact_hull": 0.6368950527593205,
+    "residual_leaf_count": 5432,
+    "residual_center_lambda2_max": 0.25392497687445353,
+    "residual_center_count_over_tau0": 0,
+    "first_t_relative_residual_reduction": 0.23225114973493144,
+    "second_t_relative_residual_reduction": 0.131557206840301
+  },
+  "scientific_interpretation": "No admissible counterexample was found, but 36.31049472406795% of the compact hull remains uncertified. Numerical center gaps are navigation only and do not close Target P.",
+  "stop_reason": "Two directed t-refinement passes gave diminishing returns and pairwise compression hit rate on the remaining residual was marginal. Anti-loop policy requires a new analytic/enclosure primitive before further global splitting.",
+  "next_atom": "A new physical-coupled matrix enclosure that preserves the shared r,s,t,y dependencies, especially the t and t^sqrt(3) structure, rather than a third global t split.",
+  "global_pass": false
+}

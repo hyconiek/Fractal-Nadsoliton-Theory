@@ -1,0 +1,65 @@
+{
+  "id": "FR222-diagonal-bridge-FR188-FR140",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6500",
+      "1/5000"
+    ],
+    "u": [
+      "1/4500",
+      "1/4000"
+    ],
+    "v": [
+      "1/15000",
+      "1/12000"
+    ],
+    "e": [
+      "0",
+      "1/3000"
+    ]
+  },
+  "P_float": [
+    -3.1801957874291506e-10,
+    -2.187794332116995e-11
+  ],
+  "P1_float": [
+    -1.0110258384005474e-05,
+    7.040062035980867e-06
+  ],
+  "c2_float": [
+    0.15993729704563492,
+    0.16002588318959313
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR221 landed in the diagonal gap between the FR188 lower-u and FR140 lower-v walls. A single bridge covers both.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6500",
+        "1/5000"
+      ],
+      "u": [
+        "1/4500",
+        "1/4000"
+      ],
+      "v": [
+        "1/15000",
+        "1/12000"
+      ],
+      "e": [
+        "0",
+        "1/2800"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -3.423723707752648e-10,
+      3.2044410858397155e-12
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

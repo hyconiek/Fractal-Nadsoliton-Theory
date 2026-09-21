@@ -1,0 +1,149 @@
+{
+  "task": "MP7-041",
+  "scientific_state": "PROVED_INTERVAL_ASSISTED_EXACT_SYMMETRY_CONTINUATION",
+  "selected_full_phase_root_id": 14,
+  "fixture_amplitudes": [
+    0.1131879146,
+    0.1698528641,
+    0.2269339093,
+    -0.3380663037
+  ],
+  "phase_lock": [
+    1.5707963267948966,
+    2.0943951023931953,
+    2.6179938779914944
+  ],
+  "symmetry_reason": "odd label translation j->j+1 maps this negative-z6 phase lock to the aligned positive-z6 field; phase gradient therefore vanishes identically for all amplitudes preserving signs",
+  "amplitude_box": {
+    "relative_radius": 0.001,
+    "bounds": [
+      [
+        0.11307472668539999,
+        0.11330110251459999
+      ],
+      [
+        0.1696830112359,
+        0.17002271696409998
+      ],
+      [
+        0.22670697539069998,
+        0.2271608432093
+      ],
+      [
+        -0.3384043700037,
+        -0.33772823739630004
+      ]
+    ],
+    "signs_preserved": true
+  },
+  "phase_map": "phi(a) is exactly constant at the displayed phase lock on this box",
+  "phase_phi_hessian_positive_LDL_pivots": [
+    [
+      "0.00059374811889724766667066908556350595772635460990313050961344407169",
+      "0.00071850511129873953527507059718635667880882312617186829899039933935"
+    ],
+    [
+      "0.00044193210221777153273670573672056398863419054101722178317673689126",
+      "0.00070918481570701438316033646675293838695916740866547370693198800759"
+    ],
+    [
+      "0.000036152011281824164961355488198678677331010335405510885580674285022",
+      "0.00045788341627899609970544265524832610730328534801393164579656870123"
+    ]
+  ],
+  "ift_nonsingular": true,
+  "cross_block_K_a_phi": "exactly zero because grad_phi logZ is identically zero along the symmetry-locked amplitude family",
+  "center_logZ_amplitude_hessian": [
+    [
+      0.18260804550811646,
+      0.012494890325388351,
+      0.009523972593858388,
+      -0.0059312767699247265
+    ],
+    [
+      0.012494890325388345,
+      0.17454268330842218,
+      0.007322446104311286,
+      -0.0007366585255807884
+    ],
+    [
+      0.009523972593858385,
+      0.007322446104311283,
+      0.1667518600799552,
+      -0.0008190005002260286
+    ],
+    [
+      -0.005931276769924725,
+      -0.0007366585255807866,
+      -0.0008190005002260216,
+      0.08252042600511184
+    ]
+  ],
+  "quadratic_metric_Q": [
+    [
+      1.0196762531893384,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.9092691054459565,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.8700924661581966,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.4269522959498846
+    ]
+  ],
+  "effective_amplitude_hessian_formula": "H_eff(g)=Q/g-Kaa at the center; more generally Q/g-Hess_aa logZ along the exact phase-locked branch",
+  "center_effective_H_eigs": {
+    "3.5": [
+      0.03879043112782456,
+      0.07027009040349805,
+      0.090633313114244,
+      0.11559461352236364
+    ],
+    "3.7": [
+      0.03203635307065202,
+      0.05638270867234442,
+      0.07687622877759712,
+      0.1001709164003348
+    ],
+    "4.0": [
+      0.022971071980674933,
+      0.03828799586354875,
+      0.05883816893960124,
+      0.07997727850041343
+    ],
+    "5.0": [
+      -0.009464537341836214,
+      0.003234959343792628,
+      0.014431523823144606,
+      0.030573063421968513
+    ]
+  },
+  "fixed_fixture_radial_gain_candidates": [
+    5.062449633797943,
+    5.06244968754705,
+    5.062449674969658,
+    5.062449677543696
+  ],
+  "radial_gain_spread": 5.3749107387091044e-08,
+  "mp7_040_consistency": "The near-equality of radial gain candidates is diagnostic only; MP7-040 interval arithmetic proves they are not exactly equal at this frozen fixture.",
+  "consequence": "Nearby full equilibria on this symmetry family can be searched as a four-amplitude radial problem without re-solving phases.",
+  "nonconclusions": [
+    "does not prove a nearby full equilibrium exists",
+    "does not extend the fixed-fixture 60-root census globally in amplitude space",
+    "does not imply global minimality"
+  ]
+}

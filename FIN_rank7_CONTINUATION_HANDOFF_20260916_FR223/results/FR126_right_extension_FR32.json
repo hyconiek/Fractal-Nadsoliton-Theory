@@ -1,0 +1,65 @@
+{
+  "id": "FR126-right-extension-FR32",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/5000",
+      "1/3300"
+    ],
+    "u": [
+      "1/25000",
+      "1/12000"
+    ],
+    "v": [
+      "1/6500",
+      "1/4300"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "P_float": [
+    -3.6527315867240085e-10,
+    -1.2695353558572332e-12
+  ],
+  "P1_float": [
+    -1.56473804329773e-05,
+    -9.669354479155039e-06
+  ],
+  "c2_float": [
+    0.15990509151234064,
+    0.1599543526811162
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR125 landed on the buffered right-x wall of FR32 while interior in u,v,e.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/5000",
+        "1/3250"
+      ],
+      "u": [
+        "1/25000",
+        "1/12000"
+      ],
+      "v": [
+        "1/6500",
+        "1/4300"
+      ],
+      "e": [
+        "0",
+        "1/100000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -3.8043601488469357e-10,
+      5.682201508479889e-12
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

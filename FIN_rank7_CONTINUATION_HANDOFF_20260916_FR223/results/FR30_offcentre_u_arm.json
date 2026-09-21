@@ -1,0 +1,67 @@
+{
+  "id": "FR30-off-centre-u-arm",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval AD + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/12000",
+      "1/8500"
+    ],
+    "u": [
+      "1/2500",
+      "1/2000"
+    ],
+    "v": [
+      "0",
+      "1/30000"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "conclusion": "lambda2(M4)<=sigma_* throughout the declared relaxed rectangle; P<0 throughout.",
+  "strict_ranges": {
+    "P_float": [
+      -1.4913705255647487e-10,
+      -1.7318798402121717e-11
+    ],
+    "P1_float": [
+      -1.0313162308415173e-05,
+      -6.489838841416315e-06
+    ],
+    "c2_float": [
+      0.15993738747125033,
+      0.15996702057173898
+    ]
+  },
+  "criterion_reason": "P_NONPOS",
+  "research_origin": "Covers the FR29 buffered-search point on the old FR15 u=1/2432 wall with v approximately zero.",
+  "negative_control": {
+    "box": {
+      "x": [
+        "1/12000",
+        "1/8500"
+      ],
+      "u": [
+        "1/2500",
+        "1/1800"
+      ],
+      "v": [
+        "0",
+        "1/20000"
+      ],
+      "e": [
+        "0",
+        "1/100000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -2.2035097844437042e-10,
+      1.1706840433834858e-11
+    ],
+    "interpretation": "method failure only"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

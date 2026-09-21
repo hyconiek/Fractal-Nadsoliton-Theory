@@ -1,0 +1,144 @@
+{
+  "task": "R7N-046-final",
+  "status": "INDEPENDENT_REPLAY_PASS",
+  "quartic_exact_count": 60,
+  "full_exact_count": 60,
+  "index_histogram": {
+    "0": 12,
+    "1": 24,
+    "2": 18,
+    "3": 6
+  },
+  "geometry_and_mutation_audit": {
+    "task": "R7N-046",
+    "audit_layer": "geometry + saved inequality consistency + collar containment + mutations",
+    "all_pass": true,
+    "checks": {
+      "baseline_partition": {
+        "pass": true,
+        "detail": {
+          "initial_cells": 64,
+          "terminal_leaves": 59723
+        }
+      },
+      "direct_identity": {
+        "pass": true,
+        "detail": {
+          "source_count": 5382,
+          "safe": 2887,
+          "failed": 2495
+        }
+      },
+      "adaptive_partition": {
+        "pass": true,
+        "detail": {
+          "parents": 2495,
+          "terminal_leaves": 23269
+        }
+      },
+      "saved_signs": {
+        "pass": true,
+        "detail": {
+          "K16_checked": 54341,
+          "K20_direct_checked": 2887,
+          "K20_adaptive_checked": 22405,
+          "bad": [
+            [],
+            [],
+            []
+          ]
+        }
+      },
+      "root_leaves": {
+        "pass": true,
+        "detail": {
+          "checked": 864,
+          "distinct_roots": 60,
+          "bad": []
+        }
+      },
+      "mutations": {
+        "pass": true,
+        "detail": {
+          "delete_leaf_rejected": true,
+          "shift_boundary_rejected": true,
+          "damaged_gradient_sign_rejected": true,
+          "enlarged_collar_rejected": true,
+          "source_amplitude_mutation_rejected": true,
+          "odd_translation_symmetry_rejected": true
+        }
+      },
+      "local_root_catalog": {
+        "pass": true,
+        "detail": {
+          "count": 60,
+          "histogram": {
+            "2": 18,
+            "1": 24,
+            "0": 12,
+            "3": 6
+          }
+        }
+      }
+    },
+    "elapsed_seconds": 10.86081862449646,
+    "note": "This checker is independent of search order and verifies every stored terminal inequality against its declared epsilon. Formula-level recomputation of selected/all leaves is recorded separately."
+  },
+  "formula_level_replay": {
+    "K16": {
+      "task": "R7N-046-K16-formula-replay",
+      "total": 54341,
+      "processed": 54341,
+      "passed": 54341,
+      "failed": [],
+      "complete": true,
+      "elapsed_last": 5.799948453903198
+    },
+    "K20": {
+      "task": "R7N-046-K20-formula-replay",
+      "total": 25292,
+      "processed": 25292,
+      "passed": 25292,
+      "failed": [],
+      "complete": true,
+      "elapsed_last": 2.7463490962982178
+    },
+    "total_gradient_leaves_recomputed": 79633,
+    "all_pass": true
+  },
+  "full_root_collar_separation": {
+    "min_torus_Linf_center_distance_rad": 0.7131676442373065,
+    "argmin_center_pair": [
+      23,
+      31,
+      [
+        0.175511306940475,
+        0.24035486600077505,
+        0.7131676442373065
+      ]
+    ],
+    "min_disjointness_margin_rad": 0.7123676442373066,
+    "argmin_margin_pair": [
+      23,
+      31,
+      0.7131676442373065,
+      "0.0005",
+      "0.0003",
+      [
+        0.175511306940475,
+        0.24035486600077505,
+        0.7131676442373065
+      ]
+    ],
+    "all_60_collars_pairwise_disjoint": true
+  },
+  "endpoint_matching_only": true,
+  "global_homotopy_claimed": false,
+  "amplitude_robustness_claimed": false,
+  "conclusion": "The exact fixed quartic fixture and the exact fixed full log-mgf fixture each have exactly 60 critical points on the full phase 3-torus. The full census is independently replayed at geometry, mutation, collar, and formula levels.",
+  "nonconclusions": [
+    "No global K_alpha homotopy theorem.",
+    "No amplitude-stability theorem.",
+    "No transfer to variable amplitudes or full X7."
+  ]
+}

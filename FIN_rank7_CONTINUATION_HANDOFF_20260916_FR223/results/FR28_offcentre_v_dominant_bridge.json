@@ -1,0 +1,67 @@
+{
+  "id": "FR28-off-centre-v-dominant-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval AD + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/8000",
+      "1/6500"
+    ],
+    "u": [
+      "1/8500",
+      "1/7000"
+    ],
+    "v": [
+      "1/7000",
+      "1/4500"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "conclusion": "lambda2(M4)<=sigma_* throughout the declared relaxed rectangle; P<0 on the full box.",
+  "strict_ranges": {
+    "P_float": [
+      -2.027098811807341e-10,
+      -2.5780018075613007e-11
+    ],
+    "P1_float": [
+      -1.3833162188884394e-05,
+      -9.189181249742846e-06
+    ],
+    "c2_float": [
+      0.15994158426089902,
+      0.15996766772961232
+    ]
+  },
+  "criterion_reason": "P_NONPOS",
+  "research_origin": "Covers the new FR27 buffered-search corner near u=1.02/8192, v=1.02/6800.",
+  "negative_control": {
+    "box": {
+      "x": [
+        "1/8000",
+        "1/6500"
+      ],
+      "u": [
+        "1/9000",
+        "1/6500"
+      ],
+      "v": [
+        "1/7500",
+        "1/4000"
+      ],
+      "e": [
+        "0",
+        "1/100000"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -2.7086560622673323e-10,
+      1.820081389177463e-11
+    ],
+    "interpretation": "method failure only"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

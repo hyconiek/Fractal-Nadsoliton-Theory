@@ -1,0 +1,42 @@
+{
+  "TARGET_P": {
+    "statement": "For all four shared nonnegative fields J, lambda2(M4(J)) <= 67/250.",
+    "status": "OPEN_PARTIAL_CERTIFICATE",
+    "threshold": "67/250",
+    "domain": "J3,J4,J5,J6 >= 0",
+    "certified_compact_hull_fraction": 0.6368950527593205,
+    "residual_compact_hull_fraction": 0.3631049472406795,
+    "evidence": "results/R7N-019_024_practical_lane_final.json"
+  },
+  "TARGET_S": {
+    "statement": "For all four shared nonnegative fields J, lambda2(M4(J)) <= sigma.",
+    "status": "OPEN_NOT_REENTERED_AFTER_TARGET_P_STOP",
+    "threshold": "sigma",
+    "domain": "J3,J4,J5,J6 >= 0",
+    "reason": "Sharper target was deprioritized after Target P retained a 36.31% compact-hull residual; no valid implication closes sigma."
+  },
+  "QUARTIC_PHASE_EXHAUSTION": {
+    "statement": "Exhaustive critical-point census for exact fixed quartic phase fixture.",
+    "status": "INTERVAL_CERTIFIED_EXACT_60",
+    "count": 60,
+    "index_histogram": {
+      "0": 12,
+      "1": 24,
+      "2": 18,
+      "3": 6
+    },
+    "evidence": "results/R7N-040_quartic_phase_theorem.json"
+  },
+  "FULL_PHASE_EXHAUSTION": {
+    "statement": "Exhaustive critical-point census for exact fixed full log-mgf phase fixture.",
+    "status": "INTERVAL_CERTIFIED_EXACT_60_INDEPENDENTLY_REPLAYED",
+    "count": 60,
+    "index_histogram": {
+      "0": 12,
+      "1": 24,
+      "2": 18,
+      "3": 6
+    },
+    "evidence": "results/R7N-046_phase_exhaustion_final.json"
+  }
+}

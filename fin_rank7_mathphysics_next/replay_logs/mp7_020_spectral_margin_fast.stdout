@@ -1,0 +1,102 @@
+{
+  "task": "MP7-020",
+  "tau": "67/250",
+  "compact_terminal_count": 25656,
+  "expected_compact_terminal_count": 25656,
+  "buckets": {
+    "R7N_COMPRESSION": {
+      "count": 2466,
+      "min_margin_float": 8.415390984300576e-06,
+      "min_meta": {
+        "path": "3R3R0R1L3L0R1R2R3L0R1R2R3R0R1R2R",
+        "reason": "SAFE_BY_COMPRESSION",
+        "bound_kind": "det-trace",
+        "trG": 3.00001145,
+        "d3_lower": 4.0799292487140385e-06,
+        "gersh_lower": -0.030790358430610426
+      }
+    },
+    "R7N_E2": {
+      "count": 2468,
+      "min_margin_float": 0.00012815757351994331,
+      "min_meta": {
+        "path": "3R3R0R1L3L0R1R2R3L0R1R2R3L0L1L2L",
+        "reason": "SAFE_BY_E2",
+        "sqrt_e2_upper": 0.26787184242648004
+      }
+    },
+    "R7N_REFINE_ONCE": {
+      "count": 421,
+      "min_margin_float": 2.6552648106244414e-06,
+      "min_meta": {
+        "path": "3R3R0R1R3R0R1R2R3L0R1R2L3R0R1L2L3L",
+        "reason": "SAFE_BY_COMPRESSION",
+        "bound_kind": "det-trace",
+        "trG": 3.0000113524,
+        "d3_lower": 1.2873188574164506e-06,
+        "gersh_lower": -0.019998716640657527
+      }
+    },
+    "R7N_TRACE": {
+      "count": 3252,
+      "min_margin_float": 3.131778508055804e-05,
+      "min_meta": {
+        "path": "3R3R0R1R3L0R1R2L3R0R1R2L3R0R1L2L",
+        "reason": "SAFE_BY_TRACE"
+      }
+    },
+    "R7N_T_REFINE_ONCE": {
+      "count": 2772,
+      "min_margin_float": 3.4723557171621803e-07,
+      "min_meta": {
+        "path": "3R3L0R1R3L0L1R2R3R0R1R2R3L0R1R2R3L2R",
+        "reason": "SAFE_BY_COMPRESSION",
+        "bound_kind": "det-trace",
+        "trG": 3.0000190154,
+        "d3_lower": 1.6834717314313844e-07,
+        "gersh_lower": -0.0392617802703514
+      }
+    },
+    "R7N_T_REFINE_SECOND": {
+      "count": 1852,
+      "min_margin_float": 9.893043317649465e-07,
+      "min_meta": {
+        "path": "3R3L0R1R3R0R1L2R3L0R1R2R3R0R1L2R3L2R2L",
+        "reason": "SAFE_BY_CENTERED_MOMENT",
+        "bound_kind": "det-trace",
+        "trG": 3.0000103385,
+        "d3_lower": 4.796315703284405e-07,
+        "gersh_lower": -0.02647150492809178
+      }
+    },
+    "R7O3_REPAIRS": {
+      "count": 12425,
+      "min_margin_float": 5.362894232950589e-08,
+      "min_meta": {
+        "leaf_id": 10878,
+        "original_index": 4884,
+        "pd_method": "SYLVESTER",
+        "bound_kind": "det-trace",
+        "trG": 3.0000017389,
+        "d3_lower": 2.6e-08,
+        "gersh_lower": -0.00346744
+      }
+    }
+  },
+  "compact_min_margin_float": 5.362894232950589e-08,
+  "compact_lambda2_upper_float": 0.2679999463710577,
+  "compact_min_source": "R7O3_REPAIRS",
+  "compact_min_meta": {
+    "leaf_id": 10878,
+    "original_index": 4884,
+    "pd_method": "SYLVESTER",
+    "bound_kind": "det-trace",
+    "trG": 3.0000017389,
+    "d3_lower": 2.6e-08,
+    "gersh_lower": -0.00346744
+  },
+  "failures": [],
+  "elapsed_seconds": 2.3041787147521973,
+  "rigor_note": "For R7N saved float lower endpoints, nextafter(value,-inf) is converted exactly to Fraction, hence is <= the exact rational endpoint that was rounded to that float. For 3D SPD K, tr K<=tau tr G and lambda_min(K)>=4 det(K)/tr(K)^2. lambda_max(G)<=tr G.",
+  "scope": "complete 25,656-cell compact refined cover; unbounded tails are separate."
+}

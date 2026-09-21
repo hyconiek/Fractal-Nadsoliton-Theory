@@ -1,0 +1,107 @@
+{
+  "id": "R7P-079-alignment",
+  "status": "CERTIFIED_SCALAR_DIAGNOSTIC",
+  "gain": "3.7183449 exactly",
+  "localized_root_box_same_gain": [
+    [
+      "1.8199035735384613414469458448044684736066197389403874438108636052",
+      "1.8199035935384613414469458448044684736066197389403874438108636325"
+    ],
+    [
+      "1.9139895470728614252269567009718715945984460386647218722362449019",
+      "1.9139895670728614252269567009718715945984460386647218722362450848"
+    ],
+    [
+      "1.9145691250844977815370984777634013654849039847014847634850372158",
+      "1.9145691450844977815370984777634013654849039847014847634850373987"
+    ],
+    [
+      "1.3672032720062058157422489514959455830319070715350104568304695401",
+      "1.3672032920062058157422489514959455830319070715350104568304697231"
+    ]
+  ],
+  "saddle_root_box": [
+    [
+      "0.94095705536065952480338204828344269796679731455207478224671103393",
+      "0.94095707536065952480338204828344269796679731455207478224671113908"
+    ],
+    [
+      "1.0014393904317105014670435336501038725625590769836627887119143852",
+      "1.0014394104317105014670435336501038725625590769836627887119145682"
+    ],
+    [
+      "0.9621088416573166074733604441451476159915939322127599871448571122",
+      "0.96210886165731660747336044414514761599159393221275998714485721735"
+    ],
+    [
+      "0.68641497257793826791318887293472937327006841826755367093820469254",
+      "0.68641499257793826791318887293472937327006841826755367093820479769"
+    ]
+  ],
+  "displacement_midpoint": [
+    0.8789465181778018,
+    0.9125501566411509,
+    0.9524602834271811,
+    0.6807882994282675
+  ],
+  "displacement_box": [
+    [
+      0.8789464981778019,
+      0.8789465381778018
+    ],
+    [
+      0.9125501366411508,
+      0.912550176641151
+    ],
+    [
+      0.9524602634271813,
+      0.9524603034271811
+    ],
+    [
+      0.6807882794282675,
+      0.6807883194282676
+    ]
+  ],
+  "saddle_DT_midpoint_eigenvalues": [
+    0.3421804233485038,
+    0.41807054960904644,
+    0.5909627553566341,
+    1.249108111095936
+  ],
+  "saddle_leading_vector_midpoint": [
+    0.5286439095588638,
+    0.5371491186435735,
+    0.5348225608931259,
+    0.3820618661767634
+  ],
+  "DT_operator_radius_bound": 2.5765830755886037e-07,
+  "certified_reference_separation": 0.6581450980809942,
+  "eigenvector_angle_radius_rad": 3.9149164570265995e-07,
+  "displacement_angle_radius_rad": 2.318714763224998e-08,
+  "midpoint_alignment_cosine": 0.9995548595646514,
+  "alignment_cosine_interval": [
+    0.999554847191933,
+    0.9995548719371979
+  ],
+  "midpoint_angle_degrees": 1.7096305304738386,
+  "conclusion": "The Perron direction at the certified saddle is nearly aligned with the localized-minus-saddle displacement.",
+  "nonconclusions": [
+    "No exact one-dimensional invariant path is proved.",
+    "No minimum-action or physical transition trajectory is proved.",
+    "The sign of an eigenvector is conventional; the reported cosine uses the orientation toward the localized root."
+  ],
+  "claim_id": "CLM-ALIGNMENT-079",
+  "domain": "certified localized and saddle root boxes at exact g=3.7183449 in C4",
+  "quantifiers": "for all points in the certified root boxes and the leading Jacobian eigendirection under the stated perturbation bounds",
+  "assumptions": [
+    "R7P-026/029 root boxes at the common gain",
+    "strictly positive Jacobian entries locally",
+    "certified simple leading eigenvalue gap"
+  ],
+  "proof_type": "root-box displacement enclosure plus Davis-Kahan style eigenvector perturbation bound",
+  "inputs": [
+    "certificates/R7P-026_equal_energy_event.json",
+    "certificates/R7P-029_barrier_saddle.json"
+  ],
+  "global_pass": false
+}

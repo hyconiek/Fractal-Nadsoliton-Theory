@@ -1,0 +1,36 @@
+{
+  "task": "R7N-033",
+  "old_partition": {
+    "processed": 2000,
+    "budget": 2000,
+    "initial_n": 4,
+    "safe_leaf_count": 396,
+    "root_neighborhood_leaf_count": 0,
+    "unresolved_leaf_count": 1272,
+    "complete": false,
+    "root_neighborhood_radius": 0.05
+  },
+  "local_catalogs": {
+    "quartic_count": 60,
+    "quartic_radius": 1e-07,
+    "quartic_global_pass": false,
+    "full_count": 60,
+    "full_global_pass": false
+  },
+  "fixture_source": {
+    "r3": "0.1131879146",
+    "r4": "0.1698528641",
+    "r5": "0.2269339093",
+    "z6": "-0.3380663037",
+    "source": "imported handoff decimal fixture"
+  },
+  "provenance_findings": [
+    "old complement used rounded decimal fixture",
+    "old phase endpoints are binary floats derived from 2*pi",
+    "old complement removed zero root-neighborhood leaves",
+    "radius 0.05 is not licensed by radius-1e-7 quartic uniqueness boxes",
+    "396 old safe leaves require revalidation before promotion to corrected exact fixture"
+  ],
+  "scientific_status": "NUMERICAL_REPRODUCED_AND_PROVENANCE_AUDIT",
+  "conclusion": "Old cover is a subdivision seed only; it does not exhaust the exact corrected fixture."
+}

@@ -1,0 +1,20 @@
+{
+  "task": "R7N-012",
+  "samples": 64,
+  "thresholds": {
+    "sigma": 0.26744324422884014,
+    "tau0": 0.268
+  },
+  "all_sampled_pivots_positive": true,
+  "all_sampled_inertia_matches": true,
+  "max_abs_difference_Mtilde_sigma_vs_tau0_over_samples": 0.00017710224736766644,
+  "difference_witness_x": [
+    0.24017170359698065,
+    0.5652481097051891,
+    0.42238283594481163,
+    0.8908439914338849
+  ],
+  "implementation": "src/generic_threshold_shifted.py rebuilds c=lambda6/(3*a) and K=aI-Mtilde for every explicit a; a=None reproduces historical sigma checker exactly on FR26.",
+  "scientific_status": "NUMERICAL_CROSSCHECK_PLUS_INTERVAL_IMPLEMENTATION",
+  "note": "Exact Schur congruence is algebraic; sampled inertia checks are regression diagnostics, not the proof of the identity."
+}

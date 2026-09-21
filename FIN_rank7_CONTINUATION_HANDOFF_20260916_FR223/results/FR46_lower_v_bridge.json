@@ -1,0 +1,50 @@
+{
+  "id": "FR46-lower-v-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval AD + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/7000",
+      "1/4800"
+    ],
+    "u": [
+      "1/7200",
+      "1/5200"
+    ],
+    "v": [
+      "1/13000",
+      "1/6200"
+    ],
+    "e": [
+      "0",
+      "1/100000"
+    ]
+  },
+  "conclusion": "lambda2(M4)<=sigma_* throughout the declared relaxed rectangle; P<0 throughout.",
+  "strict_ranges": {
+    "P_float": [
+      -1.8580625889121473e-10,
+      -3.513518938038045e-12
+    ],
+    "P1_float": [
+      -1.274417497776701e-05,
+      -6.939427588242508e-06
+    ],
+    "c2_float": [
+      0.15992969214697525,
+      0.15997048367256692
+    ]
+  },
+  "criterion_reason": "P_NONPOS",
+  "research_origin": "Covers the FR45 residual wall below the FR26 lower-v edge and overlaps the FR13 neighborhood.",
+  "negative_control": {
+    "v_lower": "1/15000",
+    "status": "FAILED",
+    "P_float": [
+      -1.9022561335866755e-10,
+      1.522526002722961e-12
+    ],
+    "interpretation": "checker failure only"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

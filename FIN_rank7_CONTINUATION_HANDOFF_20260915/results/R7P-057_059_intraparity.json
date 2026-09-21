@@ -1,0 +1,147 @@
+{
+  "R7P-057": {
+    "partition": {
+      "Z_even": "2*exp(J4)*cosh(J3+J5)+4*exp(-J4/2)*cosh(J3-J5/2)",
+      "Z_odd": "2*exp(J4)+4*exp(-J4/2)*cosh(sqrt(3)*J5/2)",
+      "q_even": "exp(J6)*Z_even/(exp(J6)*Z_even+exp(-J6)*Z_odd)",
+      "q0": "Z_even/(Z_even+Z_odd)",
+      "even_parameters": {
+        "X": "exp(2*J3)",
+        "Y": "exp(3*J4/2)",
+        "Z": "exp(J5/2)"
+      },
+      "odd_parameters": {
+        "Y": "exp(3*J4/2)",
+        "S": "exp(sqrt(3)*J5/2)",
+        "shared_relation": "S=Z**sqrt(3)"
+      }
+    },
+    "parity_weight": {
+      "claim": "Z_even>=Z_odd for J3,J4,J5>=0; equality iff J3=J5=0",
+      "reduction": "F(A,B)=cosh(A+2B)-1+2*cosh(A-B)-2*cosh(sqrt(3)*B)",
+      "dF_dA_at_A0": "2*sinh(B)*(cosh(B)-1)>=0",
+      "d2F_dA2": "cosh(A+2B)+2*cosh(A-B)>0",
+      "F0_series_coefficients_formula": "4^n+2-2*3^n",
+      "first_coefficients_n1_to_n8": [
+        0,
+        0,
+        12,
+        96,
+        540,
+        2640,
+        12012,
+        52416
+      ],
+      "coefficient_induction": "a_2=0; a_(n+1)=4*a_n+2*3^n-6>0 for n>=2",
+      "consequence": "q0>=1/2; for J6>=0, q_even>=q0>=1/2",
+      "equality": "J3=J5=0 (arbitrary J4) at J6=0 for q0=1/2"
+    },
+    "plus_conditional": "p_plus proportional to (X*Y*Z^4,2*X*Z,Y,2*Z^3); conditional C_plus is independent of J6 and equals covariance of the four even feature states.",
+    "minus_conditional": "p_minus proportional to (Y,S,S^-1) on the three odd feature states; conditional C_minus is independent of J3 and J6.",
+    "shared_field_warning": "Y is identical in both sectors and S=Z^sqrt(3); parity sectors may not be optimized independently."
+  },
+  "R7P-058": {
+    "probabilities": [
+      "1 - u",
+      "d/2 + u/2",
+      "-d/2 + u/2"
+    ],
+    "domain": [
+      "0<=d<=u<=1",
+      "4*(1-u)^2 >= u^2-d^2"
+    ],
+    "reconstruction": {
+      "S2": "(u+d)/(u-d)",
+      "Y2": "4*(1-u)^2/(u^2-d^2)",
+      "J5": "log(S2)/sqrt(3)",
+      "J4": "log(Y2)/3"
+    },
+    "covariance": [
+      [
+        "-3*l4*u*(u - 1)/8",
+        "sqrt(3)*d*sqrt(l4*l5)*(u - 1)/8"
+      ],
+      [
+        "sqrt(3)*d*sqrt(l4*l5)*(u - 1)/8",
+        "l5*(-d**2 + u)/8"
+      ]
+    ],
+    "supremum": {
+      "status": "INTERVAL_CERTIFIED_EXACT_FORMULA",
+      "supremum": "(3*lambda4+lambda5)/32",
+      "attainment": "closure point (p0,p_plus,p_minus)=(1/2,1/2,0)",
+      "field_limit": "J4,J5->+infinity with J5=sqrt(3)*J4 asymptotically",
+      "finite_attainment": false,
+      "spectral_signs": {
+        "lambda5_minus_lambda4": [
+          "4951871137293/50000000000000",
+          "990374227459/10000000000000"
+        ],
+        "9lambda4_minus_5lambda5": [
+          "83030882836033/10000000000000",
+          "415154414180179/50000000000000"
+        ],
+        "7lambda4_minus_3lambda5": [
+          "85011631290951/10000000000000",
+          "85011631290953/10000000000000"
+        ]
+      },
+      "determinant_piecewise": {
+        "dy_sign_switch": "u_c=(9*lambda4-lambda5)/(12*lambda4) < 2/3",
+        "u_le_uc_at_y_eq_u2": "(3*lambda4+lambda5)^2*(2*u-1)^2/16",
+        "uc_to_2over3_at_y0": "(3*lambda4+lambda5-4*lambda5*u)*(3*lambda4*(2*u-1)^2+lambda5)/16",
+        "2over3_to_1_lower_boundary_Bernstein": [
+          "(l4 + 3*l5)*(9*l4 - 5*l5)/144",
+          "(3*l4 + l5)*(7*l4 - 3*l5)/144",
+          "5*(3*l4 + l5)**2/144",
+          "(3*l4 + l5)**2/16"
+        ]
+      },
+      "diagonal_bounds": [
+        "8*m-3*lambda4*u*(1-u) >= lambda5/4 >0",
+        "8*m-lambda5*(u-d^2) >= (9*lambda4-5*lambda5)/12 >0"
+      ],
+      "uniqueness": "Only u=d=1/2 makes the determinant zero; elsewhere the PSD inequality is strict."
+    }
+  },
+  "R7P-059": {
+    "sigma_interval": [
+      "10491300288393554887474372849/39228137239529000000000000000",
+      "131141253604923881958598857/490351715494107500000000000"
+    ],
+    "discriminant_interval": [
+      "1662924892557319445080629541/43628126046132961671832263781",
+      "1662924892559579268948171609/43628126046133798818845663005"
+    ],
+    "u_minus_interval": [
+      "12574485711091579049295246925446871/31250000000000000000000000000000000",
+      "25148971422187245046459048162070253/62500000000000000000000000000000000"
+    ],
+    "u_plus_interval": [
+      "37351028577812754953540951837929747/62500000000000000000000000000000000",
+      "18675514288908420950704753074553129/31250000000000000000000000000000000"
+    ],
+    "u_coefficient_switch_interval": [
+      "80983594333867148863367463/119840262068659410184433791",
+      "43731140940290220017358894337/64713741517077329792307640035"
+    ],
+    "uniform_signs": {
+      "8sigma_minus_lambda5_uplus": [
+        "9388531586790485844566080304456504893649075867464753200413369/12258792887352812500000000000000000000000000000000000000000000",
+        "234713289669838396266387156280109951631940127098807576887243383/306469822183817187500000000000000000000000000000000000000000000"
+      ],
+      "3lambda4_1minusuplus_minus_8sigma": [
+        "7901787499656383122399860299059609700911703284579011265684947/15323491109190859375000000000000000000000000000000000000000000",
+        "63214299997319131702684281410819933722066182831304670861075771/122587928873528125000000000000000000000000000000000000000000000"
+      ],
+      "sigma_minus_tracehalf_upper": [
+        "129101104690136502458777488847/1882950587497392000000000000000",
+        "32275276172540181867418656521/470737646874343200000000000000"
+      ]
+    },
+    "dangerous_u_formula": "u_+- = (1 +- sqrt(1-32*sigma/(3*lambda4+lambda5)))/2",
+    "dmin2_formula": "((8*sigma-lambda5*u)*(8*sigma-3*lambda4*u*(1-u)))/(lambda5*(3*lambda4*(1-u)-8*sigma))",
+    "dangerous_set": "u in [u_-,u_+] and d^2 >= dmin2(u), intersected with 0<=d<=u and 4(1-u)^2>=u^2-d^2",
+    "logic": "lambda_min(C_minus)<sigma globally; on [u_-,u_+] the determinant is strictly decreasing in d^2, so lambda_max>=sigma iff det(sigma I-C_minus)<=0 iff d^2>=dmin2(u)."
+  }
+}

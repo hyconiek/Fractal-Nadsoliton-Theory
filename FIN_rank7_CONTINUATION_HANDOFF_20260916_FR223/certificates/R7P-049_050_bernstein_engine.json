@@ -1,0 +1,20 @@
+{
+  "id": "CERT-R7P-049-050",
+  "claim_id": "CLM-043",
+  "domain": "[0,1]^3 compact cube with accepted strict spectral intervals",
+  "quantifiers": "every leaf accepted by the Bernstein classifier",
+  "assumptions": [
+    "frozen R7P-048 A/B polynomial specification",
+    "positive clearing factors",
+    "R7P-044 criterion"
+  ],
+  "proof_type": "exact rational interval Bernstein arithmetic and logical leaf classifier",
+  "inputs": [
+    "certificates/R7P-048_boundary_proof_spec.json",
+    "src/boundary_cover.py",
+    "tests/test_G_boundary_cover.py"
+  ],
+  "conclusion": "SAFE_A_NONPOS and SAFE_B_NONNEG are sound sufficient leaf conclusions; midpoint/optimizer values are never acceptance rules.",
+  "global_pass": true,
+  "unresolved_leaves": []
+}

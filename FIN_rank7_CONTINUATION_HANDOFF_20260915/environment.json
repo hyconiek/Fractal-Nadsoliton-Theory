@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-13T21:06:03.593179+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "processor": "",
+  "cpu_count": 5,
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "matplotlib": "3.10.8",
+    "pandas": "2.2.3"
+  },
+  "git_probe": {
+    "cmd": "git -C /mnt/data status --short",
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  "git_head_probe": {
+    "cmd": "git -C /mnt/data rev-parse HEAD",
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  "memory_probe": {
+    "cmd": "free -b",
+    "returncode": 0,
+    "stdout": "total        used        free      shared  buff/cache   available\nMem:      6236913664  1093599232  5239767040       20480   100278272  5143314432\nSwap:              0           0           0",
+    "stderr": ""
+  },
+  "mandatory_source_availability": {
+    "AGENTS.md": true,
+    "fin_handoff_audit/REPORT.md": false,
+    "fin_handoff_audit/PROOF.md": false,
+    "fin_handoff_audit/research.py": false,
+    "fin_handoff_audit/test_research.py": false,
+    "fin_handoff_audit/verify.py": false,
+    "fin_handoff_audit/results.json": false,
+    "fin_handoff_audit/verification.json": false,
+    "handoff": true,
+    "handoff_manifest": true
+  },
+  "resource_revision": "Current container has ~5.8 GiB RAM and 5 CPUs, not the historical 16-GB host; use smaller class-M/L caps."
+}

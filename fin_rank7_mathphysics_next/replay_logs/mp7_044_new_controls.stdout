@@ -1,0 +1,57 @@
+{
+  "task": "MP7-044-supplement",
+  "controls": [
+    {
+      "name": "raw_PD_determinant_is_not_spectral_gap",
+      "passed": true,
+      "detail": {
+        "raw_det_original": 2.6e-08,
+        "raw_det_after_B_times_2": 1.664e-06,
+        "normalized_bound_original": 5.3628942329505886e-08,
+        "normalized_bound_rescaled": 5.3628942329505886e-08
+      }
+    },
+    {
+      "name": "dual_and_microscopic_source_responses_not_interchangeable",
+      "passed": true,
+      "detail": {
+        "frobenius_difference": 11.663564851727315
+      }
+    },
+    {
+      "name": "MP7_039_crossing_not_1D_pitchfork",
+      "passed": true,
+      "detail": {
+        "critical_dimension": 2,
+        "D3_cubic": "Re(z^3) is D3-invariant and hence symmetry-allowed",
+        "dDelta_dg": [
+          0.0016957351021672582,
+          0.0016960387698923191
+        ]
+      }
+    },
+    {
+      "name": "M4_substitution_breaks_full_simplex_determinant_identity",
+      "passed": true,
+      "detail": {
+        "lhs_full_simplex": 0.1430487375959719,
+        "rhs_M7": 0.14304873759597117,
+        "rhs_wrong_M4": 0.36101675915956144,
+        "wrong_abs_error": 0.21796802156358955
+      }
+    },
+    {
+      "name": "multiplicity_only_gives_wrong_finiteN_shift_logic",
+      "passed": true,
+      "detail": {
+        "log12": 2.4849066497880004,
+        "full_A": [
+          -0.609295503686632,
+          -0.6092953514260531
+        ],
+        "certified_shift_sign": "positive (toward g above the local equal-energy event)"
+      }
+    }
+  ],
+  "all_passed": true
+}

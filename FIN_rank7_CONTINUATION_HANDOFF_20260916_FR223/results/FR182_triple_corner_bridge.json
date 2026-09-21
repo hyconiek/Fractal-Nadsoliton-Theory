@@ -1,0 +1,65 @@
+{
+  "id": "FR182-triple-corner-bridge",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/6000",
+      "1/5200"
+    ],
+    "u": [
+      "1/20000",
+      "1/14000"
+    ],
+    "v": [
+      "1/5600",
+      "1/4700"
+    ],
+    "e": [
+      "0",
+      "1/2620"
+    ]
+  },
+  "P_float": [
+    -5.457424401313692e-10,
+    -5.065538797676246e-13
+  ],
+  "P1_float": [
+    -1.2983164546401648e-05,
+    6.751075033115384e-06
+  ],
+  "c2_float": [
+    0.15994111485099555,
+    0.16003594986501957
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR181 landed at the intersection of the buffered v-wall of FR146, x-wall of FR122 and u-wall of FR152. One compact bridge spans all three walls with a large parity radius.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/6000",
+        "1/5200"
+      ],
+      "u": [
+        "1/20000",
+        "1/14000"
+      ],
+      "v": [
+        "1/5600",
+        "1/4700"
+      ],
+      "e": [
+        "0",
+        "1/2600"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -5.476132008424833e-10,
+      1.495702948386849e-13
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

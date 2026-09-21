@@ -1,0 +1,115 @@
+{
+  "QUARTIC_PHASE_EXACT_60": {
+    "status": "INTERVAL_CERTIFIED",
+    "statement": "For the exact declared quartic fixed-amplitude, fixed-negative-z6 fixture, the phase gradient has exactly 60 zeros on the full normalized phase torus [0,1]^3 modulo periodic seams.",
+    "quantifiers": "All phase triples on the full three-torus for the single declared amplitude fixture.",
+    "assumptions": [
+      "Exact decimal amplitudes from the frozen fixture",
+      "negative alternating component sign",
+      "normalized z=phi/(2*pi) torus convention"
+    ],
+    "dependencies": [
+      "R7N-034 normalized chart",
+      "60 certified local boxes",
+      "60 certified uniqueness collars",
+      "complete quartic complement cover",
+      "fixed-sign symmetry audit"
+    ],
+    "proof_files": [
+      "checkpoints/R7N-037_quartic_cover_normalized.json",
+      "results/R7N-035_quartic_uniqueness_collars.json",
+      "results/R7N-039_symmetry_and_count.json"
+    ],
+    "certificate_file": "results/R7N-040_quartic_phase_theorem.json",
+    "replay_commands": [
+      "python src/audit_phase_symmetry.py"
+    ],
+    "equality_cases": "Not applicable; this is a root-count theorem.",
+    "nonconclusions": [
+      "No amplitude robustness",
+      "No global quartic-to-full homotopy theorem",
+      "No transfer to full X7"
+    ]
+  },
+  "FULL_PHASE_EXACT_60": {
+    "status": "INTERVAL_CERTIFIED_INDEPENDENTLY_REPLAYED",
+    "statement": "For the exact declared full log-mgf fixed-amplitude, fixed-negative-z6 fixture, the phase gradient has exactly 60 zeros on the full normalized phase torus [0,1]^3 modulo periodic seams.",
+    "quantifiers": "All phase triples on the full three-torus for the single declared amplitude fixture.",
+    "assumptions": [
+      "Exact decimal amplitudes r3=0.1131879146, r4=0.1698528641, r5=0.2269339093, z6=-0.3380663037",
+      "normalized z=phi/(2*pi) torus convention",
+      "K16/K20 analytic remainder bounds from the frozen Fourier/cumulant construction"
+    ],
+    "dependencies": [
+      "60 certified full local root boxes",
+      "60 pairwise-disjoint full uniqueness collars",
+      "K16 complement layer",
+      "K20 direct residual layer",
+      "K20 adaptive closure",
+      "independent geometry/mutation audit",
+      "formula-level replay of every K16/K20 safe leaf"
+    ],
+    "proof_files": [
+      "checkpoints/R7N-044_full_cover_k16.json",
+      "checkpoints/R7N-044_K20_residual.json",
+      "checkpoints/R7N-044_K20_adaptive.json",
+      "results/R7N-043_K16_surrogate.json",
+      "results/R7N-043_K20_surrogate.json"
+    ],
+    "certificate_file": "results/R7N-046_phase_exhaustion_final.json",
+    "replay_commands": [
+      "python src/audit_full_phase_exhaustion.py",
+      "python src/replay_k16_safe_leaves.py 60000",
+      "python src/replay_k20_safe_leaves.py 30000"
+    ],
+    "index_histogram": {
+      "0": 12,
+      "1": 24,
+      "2": 18,
+      "3": 6
+    },
+    "nonconclusions": [
+      "No global K_alpha homotopy theorem",
+      "No amplitude stability theorem",
+      "No variable-amplitude phase theorem",
+      "No full-X7 stationary census"
+    ]
+  },
+  "TARGET_P_PARTIAL": {
+    "status": "INTERVAL_CERTIFIED_PARTIAL_DOMAIN_ONLY",
+    "statement": "A rigorously certified subset of the four-amplitude compact hull satisfies lambda2(M4)<=67/250; the remaining compact-hull residual has volume fraction 0.3631049472406795.",
+    "quantifiers": "Only the certified leaves of the declared compact hull plus accepted tails; not the unresolved residual.",
+    "assumptions": [
+      "Accepted FR1/FR42 tails",
+      "canonical sigma-safe union where imported",
+      "tau0=67/250",
+      "current trace/e2/compression/centered-moment proof primitives"
+    ],
+    "proof_files": [
+      "checkpoints/R7N-021_t_refine_second_cheap_v1.json",
+      "results/R7N-019_024_practical_lane_final.json"
+    ],
+    "certificate_file": "results/R7N-019_024_practical_lane_final.json",
+    "replay_commands": [],
+    "nonconclusions": [
+      "Not a global Target P theorem",
+      "Not Target S",
+      "No X7 transfer",
+      "Numerical center margins are not proof"
+    ]
+  },
+  "TARGET_P_GAIN_IMPLICATION_CONDITIONAL": {
+    "status": "INTERVAL_CERTIFIED_CONDITIONAL",
+    "statement": "If Target P is globally proved, then in the four-amplitude Cartesian model H4=I4/g-M4 has at most one strictly negative eigenvalue for supplied 0<g<=250/67; no nonsingularity is inferred at the endpoint from a non-strict ceiling.",
+    "proof_files": [
+      "results/R7N-017_target_p_implication.json"
+    ],
+    "certificate_file": "results/R7N-017_target_p_implication.json",
+    "replay_commands": [
+      "python src/target_p_checks.py"
+    ],
+    "nonconclusions": [
+      "Antecedent Target P is not globally established in this campaign"
+    ]
+  }
+}

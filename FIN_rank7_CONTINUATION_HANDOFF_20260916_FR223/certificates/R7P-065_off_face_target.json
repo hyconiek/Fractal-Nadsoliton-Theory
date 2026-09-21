@@ -1,0 +1,47 @@
+{
+  "id": "CERT-R7P-065",
+  "claim_id": "CLM-051",
+  "domain": "J3,J4,J5,J6>=0, equivalently s3,s4,s5,s6>=0 under positive spectral scalings",
+  "quantifiers": "all finite shared nonnegative four-amplitude fields and accepted strict spectral tuples",
+  "assumptions": [
+    "R7P-016 coordinate domain",
+    "R7P-055 boundary theorem available",
+    "R7P-063 intraparity theorem available",
+    "accepted strict spectral intervals"
+  ],
+  "proof_type": "exact parity block identity plus positive scalar Schur pivot interval bound",
+  "inputs": [
+    "results/R7P-065_067_off_face.json",
+    "inputs/fin_handoff_audit/results.json"
+  ],
+  "conclusion": "lambda2(Mtilde)<=sigma_* (threshold equality retained); never invert the full sigma I-W_par near singularities",
+  "global_pass": true,
+  "unresolved_leaves": [],
+  "details": {
+    "id": "R7P-065-off-face-target",
+    "domain": "J3,J4,J5,J6>=0, equivalently s3,s4,s5,s6>=0 under positive spectral scalings",
+    "target": "lambda2(M4)<=sigma_* where M4=Cov_p(C4), p_j proportional exp(J3 c3j+J4 c4j+J5 c5j+J6 c6j)",
+    "parity_identity": "M4=W_par+b b^T with W_par fourth row/column zero and b6^2=lambda6*q*(1-q)/3",
+    "stable_reduction": "Mtilde=W_par[0:3,0:3]+b[0:3]b[0:3]^T/eta",
+    "inertia_equivalence": "n_-(sigma I4-M4)=n_-(sigma I3-Mtilde), because the scalar Schur pivot sigma-b6^2=sigma*eta is strictly positive",
+    "equivalent_target": "lambda2(Mtilde)<=sigma_* (threshold equality retained); never invert the full sigma I-W_par near singularities",
+    "route": "factored Schur/inertia route for proof work; direct M4 used independently for adversarial numerical checks",
+    "dependencies": {
+      "G": "R7P-055 global boundary theorem DONE",
+      "H": "R7P-063 intraparity theorem DONE",
+      "scope": "no full-7D transfer"
+    },
+    "strict_intervals": {
+      "sigma_interval": [
+        "10491300288393554887474372849/39228137239529000000000000000",
+        "131141253604923881958598857/490351715494107500000000000"
+      ],
+      "eta_global_lower_interval": [
+        "5669360818445841798581331033/20982600576787109774948745698",
+        "17008082455340520128805831913/62947801730363463340127451360"
+      ],
+      "eta_identity": "eta=1-lambda6*q*(1-q)/(3*sigma)",
+      "eta_bound": "q(1-q)<=1/4 => eta>=1-lambda6/(12*sigma)>0"
+    }
+  }
+}

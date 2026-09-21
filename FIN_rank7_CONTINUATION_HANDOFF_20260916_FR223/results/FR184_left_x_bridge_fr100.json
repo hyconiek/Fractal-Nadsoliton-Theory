@@ -1,0 +1,65 @@
+{
+  "id": "FR184-left-x-bridge-FR100",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/8200",
+      "1/7200"
+    ],
+    "u": [
+      "1/8500",
+      "1/7600"
+    ],
+    "v": [
+      "1/7200",
+      "1/6200"
+    ],
+    "e": [
+      "0",
+      "1/2450"
+    ]
+  },
+  "P_float": [
+    -4.787409843750767e-10,
+    -9.330216536399442e-13
+  ],
+  "P1_float": [
+    -1.0843972593620324e-05,
+    9.367499785565711e-06
+  ],
+  "c2_float": [
+    0.15995696427832082,
+    0.16005201400386063
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR183 landed just left of the buffered x-wall of FR100/FR102. A compact bridge with tighter u,v intervals crosses the wall while retaining a large parity radius.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/8200",
+        "1/7200"
+      ],
+      "u": [
+        "1/8500",
+        "1/7600"
+      ],
+      "v": [
+        "1/7200",
+        "1/6200"
+      ],
+      "e": [
+        "0",
+        "1/2400"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -4.821516336081761e-10,
+      3.2156432990287944e-13
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

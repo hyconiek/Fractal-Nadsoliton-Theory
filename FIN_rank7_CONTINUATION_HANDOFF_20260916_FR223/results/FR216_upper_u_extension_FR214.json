@@ -1,0 +1,65 @@
+{
+  "id": "FR216-upper-u-extension-FR214",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "off-centre second-order rational interval-AD box + midpoint Taylor remainder + R7P-044",
+  "domain": {
+    "x": [
+      "1/5700",
+      "1/5000"
+    ],
+    "u": [
+      "1/12000",
+      "1/7460"
+    ],
+    "v": [
+      "1/6000",
+      "1/5300"
+    ],
+    "e": [
+      "0",
+      "1/2200"
+    ]
+  },
+  "P_float": [
+    -5.653201314782551e-10,
+    -1.4848137128769447e-13
+  ],
+  "P1_float": [
+    -1.2960224763469463e-05,
+    1.001044524751413e-05
+  ],
+  "c2_float": [
+    0.15993496034194732,
+    0.1600463671297844
+  ],
+  "criterion_reason": "P_NONPOS",
+  "conclusion": "lambda2(M4)<=sigma_* throughout the rectangle; c2>0 and P<0.",
+  "research_origin": "FR215 landed on the buffered upper-u wall of FR214. The adjacent slab extends this strong bridge substantially upward in u.",
+  "negative_control": {
+    "domain": {
+      "x": [
+        "1/5700",
+        "1/5000"
+      ],
+      "u": [
+        "1/12000",
+        "1/7440"
+      ],
+      "v": [
+        "1/6000",
+        "1/5300"
+      ],
+      "e": [
+        "0",
+        "1/2200"
+      ]
+    },
+    "status": "FAILED",
+    "P_float": [
+      -5.659082587549773e-10,
+      1.2899988348633112e-13
+    ],
+    "interpretation": "checker failure only; not a physical counterexample"
+  },
+  "scope": "Rigorous local four-amplitude result; no global closure claimed."
+}

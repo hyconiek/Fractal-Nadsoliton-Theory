@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-15",
+  "baseline_verify": {
+    "status": "PASS",
+    "tasks": 128,
+    "claims": 62,
+    "known_nonreplayed_input": "inputs/FIN_research_artifacts_pre_and_post_Discord.zip"
+  },
+  "frontier_test_shards": [
+    {"file": "tests/test_FR1_residual_tails.py", "passed": 5},
+    {"file": "tests/test_FR8_FR9_staircase.py", "passed": 3},
+    {"file": "tests/test_FR10_diagonal_uv.py", "passed": 4},
+    {"file": "tests/test_FR11_low_e_r_arm.py", "passed": 3},
+    {"file": "tests/test_FR12_pure_r_arm.py", "passed": 2},
+    {"file": "tests/test_FR13_diagonal_bulk.py", "passed": 2},
+    {"file": "tests/test_FR14_strengthened_rv.py", "passed": 2}
+  ],
+  "frontier_total_passed": 21,
+  "frontier_failed": 0,
+  "notes": [
+    "FR2 and FR3 are preserved as proof notes without standalone replay tests in this continuation tree.",
+    "FR4-FR7 are session-certified/replay-required intermediate results, not promoted to durable standalone theorems in this handoff."
+  ]
+}

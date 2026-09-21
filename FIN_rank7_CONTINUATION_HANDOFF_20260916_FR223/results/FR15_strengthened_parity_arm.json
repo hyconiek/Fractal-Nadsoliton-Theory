@@ -1,0 +1,47 @@
+{
+  "id": "FR15-strengthened-FR9-parity-arm",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "anisotropic second-order rational interval AD + R7P-044 characteristic/inertia disjunction",
+  "domain": {
+    "abs_r_minus_rstar": "<=1/6500",
+    "u=1-exp(-3J4/2)": "<=1/2432",
+    "v=1-exp(-J5/2)": "<=1/8192",
+    "e=1-q_even": "<=1/14000",
+    "J_fields": "J3,J4,J5,J6>=0 with the exact physical shared-field odd law"
+  },
+  "conclusion": "lambda2(Mtilde)<=sigma_* and hence lambda2(M4)<=sigma_* throughout the declared box.",
+  "strict_checks": {
+    "signs": {
+      "P1_x_negative": true,
+      "P1_u_negative": true,
+      "P1_v_negative": true,
+      "P1_e_positive": true,
+      "P_ee_positive": true,
+      "c2_positive": true
+    },
+    "boundary_schur_pass": true,
+    "P1_zero_endpoint_schur_pass": true,
+    "boundary_Nvv_interval": [
+      "1.66640487394556e-08",
+      "0.000121453473948427"
+    ],
+    "endpoint_Nvv_interval": [
+      "5.11782417628268e-05",
+      "0.000305776330506349"
+    ],
+    "c2_interval": [
+      "0.15901541098566",
+      "0.161004180079853"
+    ]
+  },
+  "negative_control": {
+    "e=1/13000": {
+      "status": "FAILED",
+      "boundary_schur_pass": false,
+      "endpoint_pass": true,
+      "interpretation": "checker failure only; not a physical counterexample"
+    }
+  },
+  "research_origin": "Fixed-seed residual search repeatedly hit the old FR9/FR11 artificial wall; the enlarged interval box removes that wall.",
+  "scope": "Physical four-amplitude local equality-neighborhood theorem only; no full-seven-coordinate transfer."
+}

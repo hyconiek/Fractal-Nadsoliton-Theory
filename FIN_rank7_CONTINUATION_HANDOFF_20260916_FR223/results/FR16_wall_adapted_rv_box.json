@@ -1,0 +1,46 @@
+{
+  "id": "FR16-wall-adapted-rv-box",
+  "status": "INTERVAL_CERTIFIED_REPLAYED",
+  "proof_type": "anisotropic second-order rational interval AD + R7P-044 characteristic/inertia disjunction",
+  "domain": {
+    "abs_r_minus_rstar": "<=1/5000",
+    "u=1-exp(-3J4/2)": "<=1/8192",
+    "v=1-exp(-J5/2)": "<=1/5600",
+    "e=1-q_even": "<=1/100000",
+    "J_fields": "J3,J4,J5,J6>=0 with the exact physical shared-field odd law"
+  },
+  "conclusion": "lambda2(Mtilde)<=sigma_* and hence lambda2(M4)<=sigma_* throughout the declared wall-adapted box.",
+  "strict_checks": {
+    "signs": {
+      "P1_x_negative": true,
+      "P1_u_negative": true,
+      "P1_v_negative": true,
+      "P1_e_positive": true,
+      "P_ee_positive": true,
+      "c2_positive": true
+    },
+    "boundary_schur_pass": true,
+    "P1_zero_endpoint_schur_pass": true,
+    "boundary_Nvv_interval": [
+      "8.18425845774862e-07",
+      "0.000120542944030271"
+    ],
+    "endpoint_Nvv_interval": [
+      "5.35075712027133e-05",
+      "0.000303604495835768"
+    ],
+    "c2_interval": [
+      "0.159046941173874",
+      "0.160987042874427"
+    ]
+  },
+  "negative_control": {
+    "rx=1/4800": {
+      "status": "FAILED",
+      "boundary_schur_pass": false,
+      "interpretation": "checker failure only; not a physical counterexample"
+    }
+  },
+  "research_origin": "Residual search after FR15 converged to the FR14 r-wall near v\u22481/5654. Narrowing v to 1/5600 permits a substantially longer certified r-arm.",
+  "scope": "Physical four-amplitude local equality-neighborhood theorem only; no full-seven-coordinate transfer."
+}
