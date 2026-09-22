@@ -1,6 +1,7 @@
 # R7O3 mathematical and implementation audit
 
 Date: 2026-09-21. Source package: `FIN_R7O3_TARGETP_HANDOFF_20260920`.
+Final acceptance: 2026-09-22, after complete replay and exact PD rechecks.
 Global acceptance requires the completed gates in `verification.json`; an
 unfinished replay or this analytic note alone does not establish coverage.
 
@@ -201,3 +202,9 @@ That metadata link is not accepted as current-code provenance. Instead the
 intake replays the inspected shipped checker, records its actual hash, and
 exports new bound records tied to the unchanged source certificates. The
 fresh proof does not depend on reconstructing the historical checker.
+
+The ZIP/extracted comparison passed on 2026-09-21. The ZIP was no longer
+available at finalization on 2026-09-22. Its recorded hash is historical
+evidence, not a claim that it was reread at finalization. All 111 extracted
+manifest entries and the mathematical dependencies were rechecked. The
+archive is not required to evaluate the supplied extracted proof objects.

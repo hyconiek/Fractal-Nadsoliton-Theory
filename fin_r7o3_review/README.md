@@ -1,15 +1,22 @@
 # Audyt i integracja R7O3 — Target P
 
-Data: 2026-09-21. Źródło: `FIN_R7O3_TARGETP_HANDOFF_20260920`.
+Audyt: 2026-09-21; końcowe przyjęcie: 2026-09-22.
+Źródło: `FIN_R7O3_TARGETP_HANDOFF_20260920`.
 
-**Status: trwa pełny replay; przyjęcie globalnego wyniku wymaga końcowego PASS.**
-Źródłowy katalog i ZIP pozostają niezmienione. Nowe wyniki kontroli zapisują
-się wyłącznie tutaj; nie zastępujemy źródeł poprawionymi kopiami.
+**Status: PRZYJĘTE — globalne Target P w zadanej rodzinie C4.**
+Pełny replay 12 425/12 425 liści oraz końcowe bramki akceptacji przeszły.
+Wszystkich 5 432 rodziców zamknięto; nie pozostają nierozstrzygnięte liście.
+Wynik zastępuje wcześniejszy status OPEN wyłącznie dla Target P.
+
+Źródłowy katalog pozostawiono niezmieniony. ZIP został porównany z nim podczas
+audytu 21 września, ale 22 września nie był już dostępny; nie odtwarzano go.
+Końcowa kontrola ponownie sprawdza wszystkie rozpakowane wejścia. Nowe wyniki
+kontroli zapisują się tutaj; źródła nie są zastępowane poprawionymi kopiami.
 
 ## Dokładny zakres twierdzenia
 
 Dla dostarczonego modelu czterech cech C4 i wspólnych nieujemnych pól
-`J3,J4,J5,J6` przedmiotem przyjęcia jest
+`J3,J4,J5,J6` przyjęto
 
 `lambda2(M4) <= 67/250`, gdzie `M4=Cov_p(C4)`.
 
@@ -28,7 +35,7 @@ nie wyklucza zerowych wartości własnych. Nie dowodzi dodatniości całego hesj
 |---|---:|
 | Manifest oraz zgodność katalogu z ZIP-em | 111 plików |
 | Oryginalni rodzice resztowi R7N | 5 432 |
-| Aktywne certyfikaty R7O3 do świeżego replay | 12 425 |
+| Aktywne certyfikaty R7O3 po świeżym replay | 12 425 / 12 425 PASS |
 | Wcześniej przyjęte komórki SAFE R7N | 13 231 |
 | Oryginalny podział zwartej dziedziny | 18 663 komórki |
 | Podział po rozwinięciu naprawionych rodziców | 25 656 liści |
@@ -97,6 +104,7 @@ ważne. Hipotezy z planu kolejnych badań nie stają się wynikami przez to scal
 - [Osobny replay wymierny](rational_sample.json).
 - [Rekonstrukcja modelu i kontrole analityczne](analytic_checks.json).
 - [Pochodzenie i zgodność ZIP-a](provenance.json).
+- [Końcowa weryfikacja i przyjęcie](verification.json).
 - [Checker](review.py), [końcowe bramki akceptacji](finalize.py),
   [testy](test_review.py).
 
@@ -113,6 +121,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 fin_r7o3_review/finalize.py --record
 ```
 
 Pełny replay jest kosztowny i zapisuje atomowy checkpoint co 100 liści.
+Zakończony przebieg z dwoma workerami trwał około 18,9 minuty. Dokładna
+końcowa kontrola macierzy potwierdziła 12 411 certyfikatów Sylvestera i 14
+Gershgorina. Przy braku ZIP-a `provenance.py` zachowuje historyczny raport
+porównania i sprawdza dostępne pliki rozpakowane; nie udaje nowego odczytu ZIP-a.
 Nie uruchamiaj drugiej jego kopii równocześnie. Nie używaj `python -O`.
 Końcowy checker sam nie przelicza ponownie jetów: sprawdza kompletność,
 tożsamość danych, dokładne znaki macierzy i testy, korzystając z zakończonego

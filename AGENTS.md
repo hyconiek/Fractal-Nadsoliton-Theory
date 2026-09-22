@@ -11083,3 +11083,52 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
   fixture R7N phase census remains unchanged. The next completion work must
   address the exact remaining-index and terminal queues, preserving independent
   all-leaf and whole-domain proof gates.
+
+## R7O3 global Target-P acceptance guardrail (2026-09-22)
+
+- `fin_r7o3_review/README.md` and `verification.json` record the completed
+  R7O3 intake. This supersedes earlier GLOBAL-OPEN statements for Target P
+  only: for the supplied shared nonnegative-field C4 family,
+  `lambda2(M4)<=67/250` is accepted globally, using the accepted FR1/FR42 tails.
+  Eigenvalues are ordered DECREASINGLY: lambda2 is the second largest.
+  The source's increasing-order wording is corrected in the accepted statement.
+- All 12,425 fixed-B/fixed-c terminal inequalities were freshly recomputed.
+  Exact tree and predecessor identity checks close all 5,432 original residual
+  parents with zero unresolved terminals. The original compact partition has
+  18,663 cells; expanding the repairs gives 13,231 prior SAFE plus 12,425 new
+  terminals, or 25,656 leaves. Counts at these two tree levels are not additive.
+- The full replay uses inspected shared-parameter jets and nextafter-outward
+  binary64 intervals with exact rational public endpoints. A separate exact
+  rational matrix recheck confirms 12,411 Sylvester and 14 Gershgorin proofs.
+  Twenty-one witnesses also reproduce the source rational-grid bounds exactly;
+  this is not a second all-leaf rational replay or proof-assistant formalization.
+  Fifteen new controls and six inherited tests pass. Independent twelve-label
+  point checks are diagnostics, not substitutes for domain coverage.
+- The current spectral provider, feature normalization, all 111 extracted
+  manifest entries, predecessor SAFE identities and tail dependencies pass.
+  The prior SAFE and tail theorems are reused, not counted as newly re-proved.
+  The ZIP was checked against the extracted package on 2026-09-21 but was
+  absent at finalization; it was not reconstructed. The extracted proof inputs
+  remain sufficient and were rechecked on 2026-09-22.
+- Historical checker hashes in the certificates do not match the shipped
+  checker. Do not claim that metadata link is verified. Acceptance instead
+  uses fresh calculations bound to the inspected shipped source and actual
+  hashes. The source archive files were not rewritten to conceal this defect.
+- The accepted consequence is `index_negative(I4/g-M4)<=1` for supplied
+  `0<g<=250/67`; endpoint zero modes are not excluded by the non-strict bound.
+  A PD-test margin is not a normalized covariance spectral gap. Target S,
+  full-X7 ceiling/exhaustion, global minimizing-orbit uniqueness, physical
+  gain/clock provenance, selector/QW-2191, laboratory evidence, legacy bridge
+  or role transfer, SM/GR, L_total and ToE closure are not exported.
+- The R7O3-based research agenda may reuse its completed MP7-001–006 intake
+  prerequisites with matching hashes. Its proposed analytic phase alignment,
+  stationary C4-to-X7 bridge and finite-N extensions are not accepted results
+  merely because this Target-P integration succeeded.
+
+## MP7 mathematical-physics intake guardrail (2026-09-22)
+
+- `fin_rank7_intake_review/MP7_ANALYTIC_INTAKE.md` is the current repository intake of `fin_rank7_mathphysics_next`. The three predecessor ZIPs and archive checksum list are absent from the MP7 folder, but the scientific inputs used by the checked results are present in unpacked repository directories. All 54 predecessor files in the MP7 clean-replay input manifest match SHA-256 against those directories and `fin_rank7_intake_review`; do not describe the science inputs as missing merely because the ZIP wrappers are absent.
+- MP7-007–011 are accepted analytically for the supplied finite twelve-label rank-seven model: phase alignment maximizes the exact partition function at fixed amplitudes, including zero-amplitude equality strata; every **global minimizer** of the full X7 model is translation-equivalent to an aligned nonnegative C4 representative. Do not transfer this to all stationary points.
+- MP7-016, MP7-017 and MP7-020 were locally rerun from the unpacked inputs, with scientific JSON matching the package (ignoring only MP7-020 `elapsed_seconds`). In their declared domains: the uniform state is the unique full-X7 global minimum at `g=37/10`; the R7P-026 equal-energy event is the first global transition for the supplied strict spectral tuples, with uniform plus a twelve-member localized D12 orbit minimizing at coexistence; and `lambda2(M4)<=0.267999946371058` on the shared-field C4 domain, with normalized separation from `67/250` at least `6500000000000000000000000000/121203210760018863485060548125326941`. These are finite-model, dimensionless, interval-assisted conclusions, not physical observations or independent second-implementation proofs.
+- Other MP7 interval, finite-N and dynamical claims are still package-level candidates pending targeted intake. The old MP7-045 replay manifest has a script-hash difference for `mp7_022_023_response_quant.py`; this does not affect the three reruns above but must be resolved before treating that replay entry as exact source identity.
+- Target S, unrestricted all-stationary X7 index-one, gain/clock/temperature source, selector/QW-2191, laboratory realization, legacy-to-strict bridge or role transfer, `L_total`, SM/GR and ToE closure are not exported.

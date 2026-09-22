@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "date": "2026-09-22",
+  "target_P_global": true,
+  "target_S_global": false,
+  "threshold": "67/250",
+  "eigenvalue_order": "descending; second largest",
+  "domain": "Supplied C4 shared nonnegative fields J3,J4,J5,J6",
+  "manifest_entries": 111,
+  "source_unchanged": true,
+  "archive_sha256": "7ed1f1de9640c1bbc353b1360cafb90180c6772bf6ec8920f358906e07ab22ad",
+  "archive_present_at_finalization": false,
+  "archive_scope": "Historical ZIP/extracted identity check; present archive rechecked only if available. Extracted inputs always fully checked.",
+  "parents_closed": 5432,
+  "formula_leaves_recomputed": 12425,
+  "unresolved": 0,
+  "prior_accepted_safe_cells": 13231,
+  "expanded_compact_leaves": 25656,
+  "exact_pd_rechecks": {
+    "SYLVESTER": 12411,
+    "GERSHGORIN": 14
+  },
+  "rational_crosscheck_count": 21,
+  "certificate_checker_hashes": {
+    "1f13e7d768a7e9a4f3888d19749118096f48b4413100ffd322b9db95fea92da0": 12425
+  },
+  "replayed_checker_sha256": "88bbd4ea7a160ba3e9986ee0d5577c61e5f174be8032993a698f5bac33f66728",
+  "checker_provenance_scope": "Declared historical checker hashes are not assumed to identify the shipped checker; fresh replay uses and binds the actual shipped source",
+  "replay_seconds": 1134.310492411023,
+  "test_log": "test_bad_split_axis (fin_r7o3_review.test_review.ReviewTests.test_bad_split_axis) ... ok\ntest_compact_ancestor_leaf (fin_r7o3_review.test_review.ReviewTests.test_compact_ancestor_leaf) ... ok\ntest_corrupt_center_inequality (fin_r7o3_review.test_review.ReviewTests.test_corrupt_center_inequality) ... ok\ntest_deleted_leaf (fin_r7o3_review.test_review.ReviewTests.test_deleted_leaf) ... ok\ntest_duplicate_active_leaf (fin_r7o3_review.test_review.ReviewTests.test_duplicate_active_leaf) ... ok\ntest_equal_volume_overlap_gap (fin_r7o3_review.test_review.ReviewTests.test_equal_volume_overlap_gap) ... ok\ntest_exact_pd_recheck (fin_r7o3_review.test_review.ReviewTests.test_exact_pd_recheck) ... ok\ntest_false_full_replay_flag (fin_r7o3_review.test_review.ReviewTests.test_false_full_replay_flag) ... ok\ntest_forged_gram (fin_r7o3_review.test_review.ReviewTests.test_forged_gram) ... ok\ntest_forged_pass_does_not_override_moment (fin_r7o3_review.test_review.ReviewTests.test_forged_pass_does_not_override_moment) ... ok\ntest_geometry_complete (fin_r7o3_review.test_review.ReviewTests.test_geometry_complete) ... ok\ntest_rank_deficient_basis (fin_r7o3_review.test_review.ReviewTests.test_rank_deficient_basis) ... ok\ntest_true_sqrt3_exponent_bracket (fin_r7o3_review.test_review.ReviewTests.test_true_sqrt3_exponent_bracket) ... ok\ntest_wrong_parent (fin_r7o3_review.test_review.ReviewTests.test_wrong_parent) ... ok\ntest_wrong_threshold (fin_r7o3_review.test_review.ReviewTests.test_wrong_threshold) ... ok\ntest_arithmetic_encloses_exact_endpoints (fin_r7o2_review.test_review.ReviewTests.test_arithmetic_encloses_exact_endpoints) ... ok\ntest_equal_volume_gap_overlap_rejected (fin_r7o2_review.test_review.ReviewTests.test_equal_volume_gap_overlap_rejected) ... ok\ntest_exact_geometry_and_missing_leaf (fin_r7o2_review.test_review.ReviewTests.test_exact_geometry_and_missing_leaf) ... ok\ntest_nonfinite_rejected (fin_r7o2_review.test_review.ReviewTests.test_nonfinite_rejected) ... ok\ntest_rational_inputs_enclosed (fin_r7o2_review.test_review.ReviewTests.test_rational_inputs_enclosed) ... ok\ntest_zero_denominator_rejected (fin_r7o2_review.test_review.ReviewTests.test_zero_denominator_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.787s\n\nOK\n",
+  "tail_proof_status": "Previously accepted FR1/FR42 reused with identity and domain checks; not newly re-proved",
+  "nonconclusions": [
+    "Target S",
+    "full-X7 ceiling or exhaustion",
+    "global minimizing-orbit uniqueness",
+    "gain/clock source",
+    "selector/QW-2191",
+    "laboratory evidence",
+    "legacy completion/role transfer",
+    "SM/GR",
+    "L_total",
+    "ToE"
+  ],
+  "check_scope": "Integrity, complete replay ledger, and exact PD recheck; run review.py replay for all jet formulas",
+  "environment": {
+    "python": "3.12.3"
+  },
+  "evidence_sha256": {
+    "METHOD_AUDIT.md": "d2376a972515ab429dfee90340cb9049a8371ffdb83945ff7bd1ee09cac1208f",
+    "README.md": "ea558300ec05460a549f50ef09ccba553acdab7054155018fd2278fe09c9b15a",
+    "analytic_checks.json": "5e0c10327811aef8f608ce8889aa06d0434eadb66c58609ea9a982fdaacdae27",
+    "analytic_checks.py": "eed89c9bf4ef45635516d78358b34555a060970612e2075e10432486b7fd4b23",
+    "finalize.py": "1dc9fcd0a12d46684d7bcf849a876e39f43e69ae42d89fb3d282b97cf11d82a3",
+    "leaf_replay.json": "74ac859d4d360a8440b1fde604173882040c20e9c6db36f030b454e53ea0bf4c",
+    "pilot_replay.json": "2eb31187e5981c93b19d01cbf272b7bbef129b56c6d72c41a5283d8d97340eb8",
+    "provenance.json": "6b803d2ff7fb052b1998a550d584744bd8e6869afee87725dec3b1b129086b9b",
+    "provenance.py": "1d69e2046da5e2baa8c7080b5bac35bb1a3d03cb4fe09a84edfe0bc9e5512c19",
+    "rational_sample.json": "7c7d5743486cf1efd332714ad969589f7ba379ac08bdf7308c58d9d3207d4daa",
+    "registry.json": "896022355cdd75a7860559e50bafc5d5b88cc2fa0b42a8b5b25ef3e7af168c0d",
+    "review.py": "4069c6b7b9d8c0c7c705d3f404b791f1ff3bc5ca6df8f21ef4e79582c0226c38",
+    "test_review.py": "41b728c14f433ebdf52c1bf23d4a0538c1f15b7b5017f067077ca3e7a08ebf25"
+  }
+}

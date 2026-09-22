@@ -1,5 +1,16 @@
 # FIN: a mathematical-physics research agenda based on the R7O3 handoff
 
+Repository intake update, 2026-09-22: **Target P has now been accepted** in
+the declared nonnegative shared-field C4 family. See the
+[completed R7O3 audit](fin_r7o3_review/README.md) and
+[verification ledger](fin_r7o3_review/verification.json).
+The intake obligations MP7-001–006 are now satisfied in that recorded scope;
+reuse the verified evidence when its input hashes match instead of repeating
+production or the full replay without a reason. The historical candidate/open
+wording below describes the state when this plan was written and is superseded
+only for Target P by this notice. All proposed phase-alignment, full-X7,
+variational, dynamical and finite-N research remains unproved by that intake.
+
 Date: 2026-09-21. Task namespace: **MP7-001–MP7-048**.
 
 Primary working input, selected by the user:

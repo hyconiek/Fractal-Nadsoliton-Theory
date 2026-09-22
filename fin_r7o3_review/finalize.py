@@ -78,7 +78,12 @@ def main():
     registry=load(HERE/'registry.json')
     provenance=load(HERE/'provenance.json')
     assert provenance['archive_manifest_match'] and provenance['files_compared']==registry['manifest_entries']
-    assert sha(ROOT/provenance['archive_path'])==provenance['archive_sha256']
+    archive=ROOT/provenance['archive_path']
+    archive_present=archive.exists()
+    if archive_present:
+        assert sha(archive)==provenance['archive_sha256']
+    # Extracted proof inputs below remain mandatory and individually hashed.
+    # A subsequently removed archive is not reconstructed or treated as present.
     assert registry['exact_geometry'] and registry['unresolved']==0
     assert registry['parents']==5432 and registry['active_leaves']==12425
     assert registry['prior_safe']==13231 and registry['expanded_compact_leaves']==25656
@@ -116,11 +121,13 @@ def main():
                          capture_output=True,text=True,timeout=90)
     assert test.returncode==0,test.stdout+test.stderr
     evidence=[p for p in HERE.iterdir() if p.suffix in ['.py','.md','.json'] and p.name!='verification.json']
-    out=dict(status='PASS',date='2026-09-21',target_P_global=True,target_S_global=False,
+    out=dict(status='PASS',date='2026-09-22',target_P_global=True,target_S_global=False,
              threshold='67/250',eigenvalue_order='descending; second largest',
              domain='Supplied C4 shared nonnegative fields J3,J4,J5,J6',
              manifest_entries=registry['manifest_entries'],source_unchanged=True,
              archive_sha256=provenance['archive_sha256'],
+             archive_present_at_finalization=archive_present,
+             archive_scope='Historical ZIP/extracted identity check; present archive rechecked only if available. Extracted inputs always fully checked.',
              parents_closed=5432,formula_leaves_recomputed=12425,unresolved=0,
              prior_accepted_safe_cells=13231,expanded_compact_leaves=25656,
              exact_pd_rechecks=dict(counts),rational_crosscheck_count=sample['count'],

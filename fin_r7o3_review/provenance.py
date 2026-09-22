@@ -12,6 +12,14 @@ from fin_r7o3_review.review import HERE,ROOT,SOURCE,load,lines,sha,save
 def main():
     registry=load(HERE/'registry.json')
     archive=ROOT/(SOURCE.name+'.zip')
+    if not archive.exists():
+        historical=load(HERE/'provenance.json')
+        assert historical['archive_manifest_match']
+        assert historical['files_compared']==len(registry['source_sha256'])
+        for rel,want in registry['source_sha256'].items():
+            assert sha(SOURCE/rel)==want,rel
+        print('ZIP absent: historical archive report preserved; all extracted inputs checked. No archive reconstructed.')
+        return
     with zipfile.ZipFile(archive) as z:
         names=[n for n in z.namelist() if not n.endswith('/')]
         assert len(set(names))==len(names)
