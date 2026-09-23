@@ -1,0 +1,46 @@
+# PHY-004 — informational continuity
+
+**Scientific status: universal claim REFUTED_IN_SCOPE; restricted recovery PASS_IN_SCOPE.**
+
+## Exact loss witness
+
+Let `a_j=cos(pi j/3)` and
+
+`p_± = u0 ± a/24`.
+
+Both are strictly positive and distinct. They are related by a shift of three labels, and Fourier orthogonality gives exactly
+
+`X7^T p_+ = X7^T p_- = 0`.
+
+Their total-variation distance is **1/3**. Hence any decoder that sees only `mu=0` must make TV error at least **1/6** on one of these two states.
+
+This is not a numerical accident: on the 11-dimensional simplex tangent, `p -> X7^T p` has rank 7 and a 4-dimensional kernel. Those four lost directions are precisely the missing real Fourier modes k=1 and k=2.
+
+## Full-simplex reversible-channel theorem
+
+A stochastic affine map of a finite simplex with a stochastic inverse must permute the simplex vertices: an affine bijection maps extreme points to extreme points. Therefore a dimensionality-reducing coarse statistic such as `mu` cannot have a stochastic inverse on the full 12-state simplex.
+
+Universal full-state preservation by the retained mean is therefore refuted.
+
+## Restricted Gibbs-family recovery
+
+Define the seven-dimensional exponential family
+
+`E_X={ p(theta)=softmax(X theta) : theta in R^7 }`.
+
+`log Z(theta)` has Hessian `Cov_p(X)`. For any nonzero `v`, zero variance would require `Xv` to be constant over all labels. Since `1^T X=0`, that constant must be zero; full column rank then implies `v=0`. Hence the Hessian is positive definite and `log Z` is strictly convex. Therefore
+
+`theta -> mu = grad log Z(theta)`
+
+is injective, and `p` is exactly recoverable from `mu` on `E_X` by the inverse gradient map. Ten numerical inversion controls recovered `p` with maximum TV error `9.888e-16`.
+
+## Composition consequence
+
+For M cells there are already `2^M` combinations of the `p_±` witness with identical cellwise retained means. A mean-only composition cannot reconstruct this hidden information unless an additional environment/history variable is retained.
+
+## Decision on H-R3
+
+- universal full information continuity through `p -> mu`: **REFUTED_IN_SCOPE**;
+- family-relative sufficiency/recovery on `E_X`: **PASS_IN_SCOPE**;
+- `mu` and declared functions such as `||mu||^2` are exactly retained representational quantities, but this is **not** a dynamical conservation law;
+- no implication to unitarity or quantum mechanics is licensed.

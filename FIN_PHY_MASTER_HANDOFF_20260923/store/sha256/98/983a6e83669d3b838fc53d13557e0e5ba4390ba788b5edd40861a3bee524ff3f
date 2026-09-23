@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+from scipy.optimize import minimize_scalar
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+root=Path(__file__).resolve().parents[1]
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p11=np.array([W[0,r]/s for r in range(1,12)],float)
+c11=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+cat=np.where(c11==1,0,np.where(c11==-1,1,2)); delta=.05
+words11=np.array(list(itertools.product(range(11),repeat=4)),dtype=np.int16)
+pprod=np.prod(p11[words11],axis=1); rr=c11[words11]/p11[words11]
+P11=pprod*(1+delta**2*(rr[:,0]*rr[:,2]+rr[:,1]*rr[:,3])+delta**4*np.prod(rr,axis=1)); P11/=P11.sum()
+Pcat=np.zeros((3,3,3,3))
+for w,pr in zip(words11,P11): Pcat[tuple(cat[w])]+=pr
+H=Pcat.reshape(9,9)
+
+def em_rank3(P,w,A,B,max_iter=20000,tol=2e-15,check=25):
+    last=np.inf
+    for it in range(max_iter):
+        Q=np.einsum('k,ki,kj->ij',w,A,B)
+        R=(w[:,None,None]*A[:,:,None]*B[:,None,:])/(Q[None,:,:]+1e-300)
+        C=R*P[None,:,:]
+        w=C.sum(axis=(1,2)); A=C.sum(axis=2)/(w[:,None]+1e-300); B=C.sum(axis=1)/(w[:,None]+1e-300)
+        w=w/w.sum(); A=np.maximum(A,1e-300); A/=A.sum(1,keepdims=True); B=np.maximum(B,1e-300); B/=B.sum(1,keepdims=True)
+        if it%check==0:
+            Q=np.einsum('k,ki,kj->ij',w,A,B); kl=float(np.sum(P*np.log(P/Q)))
+            if abs(last-kl)<tol: break
+            last=kl
+    Q=np.einsum('k,ki,kj->ij',w,A,B)
+    return float(np.sum(P*np.log(P/Q))),w,A,B,Q,it
+
+runs=[]; best=None
+for seed in range(12):
+    rng=np.random.default_rng(20260923+seed)
+    rec=em_rank3(H,rng.dirichlet(np.ones(3)),rng.dirichlet(np.ones(9),size=3),rng.dirichlet(np.ones(9),size=3))
+    runs.append(rec[0])
+    if best is None or rec[0]<best[0]: best=rec
+kl,w3,A3,B3,Qcat,it=best
+P=H.ravel(); Q=Qcat.ravel(); TV=float(.5*np.abs(P-Q).sum()); BC=float(np.sqrt(P*Q).sum())
+res=minimize_scalar(lambda z:float(np.sum((P**z)*(Q**(1-z)))),bounds=(0,1),method='bounded',options={'xatol':1e-13})
+CI=-math.log(res.fun); N_BH=math.ceil(math.log(5)/kl); N_H=math.ceil(math.log(.19)/(2*math.log(BC))); N_C=math.ceil(math.log(10)/CI)
+sv=np.linalg.svd(Qcat,compute_uv=False)
+# Lift to 11 symbols while preserving strict within-category conditional proportions.
+base=np.array([p11[cat==a].sum() for a in range(3)])
+Afull=np.zeros((3,121)); Bfull=np.zeros((3,121))
+pairs11=list(itertools.product(range(11),repeat=2))
+for k in range(3):
+  for idx,(a,b) in enumerate(pairs11):
+    ca,cb=cat[a],cat[b]
+    Afull[k,idx]=A3[k,3*ca+cb]*(p11[a]/base[ca])*(p11[b]/base[cb])
+    Bfull[k,idx]=B3[k,3*ca+cb]*(p11[a]/base[ca])*(p11[b]/base[cb])
+Q11mat=np.einsum('k,ki,kj->ij',w3,Afull,Bfull); Q11=Q11mat.ravel(); KL11=float(np.sum(P11*np.log(P11/Q11)))
+# Previous challenger metric imported only as reference constants from MEM-04.
+prev_kl=1.0359282401045487e-5; prev_bh=155362; prev_h=321273
+result={
+ 'task':'OCB-MEM-05',
+ 'status':'STRICTLY_BROADER_FINITE_HORIZON_RANK3_BLOCK_CHALLENGER_FOUND__SINGLE_JUMP_HMM_GLOBAL_OPTIMUM_OPEN',
+ 'challenger':{
+   'class':'three-component block-latent model on the 3-category compression: choose K in {1,2,3}, then prefix block U=(Y1,Y2) and suffix block V=(Y3,Y4) are independent conditional on K with arbitrary 9-category laws.',
+   'strictly_contains_previous':'Yes. The previous position-factorized three-component latent-class model is recovered when each 9-category block law factorizes into its two one-step emissions.',
+   'rank_at_most_3':'H_Q=sum_k w_k a_k b_k^T, hence ordinary block-Hankel rank <=3 exactly.',
+   'weights':w3.tolist(),'prefix_block_distributions':A3.tolist(),'suffix_block_distributions':B3.tolist(),
+   'singular_values':sv.tolist(),
+   'multi_start_KL_values':runs,
+   'global_optimum_warning':'Twelve deterministic positive EM starts converge to essentially the same KL, but this is strong numerical evidence only; no global nonnegative-rank-3 optimum certificate is claimed.'
+ },
+ 'distances':{'KL_P_to_Q_category':kl,'KL_after_exact_11_symbol_lift':KL11,'total_variation':TV,'bhattacharyya_coefficient':BC,'chernoff_information':CI,'chernoff_s':float(res.x)},
+ 'information_lower_bounds':{
+   'both_errors_le_5pct_Bretagnolle_Huber_resets_at_least':N_BH,
+   'equal_prior_Bayes_error_le_5pct_Hellinger_resets_at_least':N_H,
+   'simple_pair_Chernoff_5pct_upper_bound_context_only':N_C,
+   'previous_MEM04_bounds':{'BH':prev_bh,'Hellinger':prev_h},
+   'strengthening_factors':{'BH':N_BH/prev_bh,'Hellinger':N_H/prev_h}
+ },
+ 'single_jump_hidden_process_search':{
+   'result':'A separate deterministic search over a 3-state time-inhomogeneous HMM containing the previous latent-class model at the identity-transition boundary produced only a tiny boundary improvement (about 1.0359e-5 KL) and random interior starts were worse.',
+   'claim_level':'diagnostic only; no global HMM optimum is claimed',
+   'interpretation':'The strongest new challenger in this round is the finite-horizon block-latent rank-3 null, not a proved optimal three-state single-jump HMM.'
+ },
+ 'decision':'The explicit rank<=3 null can be made materially closer than MEM-04 without fitting the test statistic. This raises the information-theoretic query lower bound by about 1.7x and confirms that broad composite-rank exclusion is intrinsically difficult.',
+ 'nonconclusion':'No physical hidden state, universal minimax rank-3 projection, or all-horizon process equivalence is established.'
+}
+(root/'inputs'/'mem05_rank3_block_challenger.json').write_text(json.dumps({'weights':w3.tolist(),'A':A3.tolist(),'B':B3.tolist()},indent=2),encoding='utf-8')
+out=root/'results'/'OCB-MEM-05_broader_rank3.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'KL':kl,'TV':TV,'N_BH':N_BH,'N_H':N_H,'lift_KL':KL11,'run_spread':[min(runs),max(runs)]},indent=2))

@@ -1,0 +1,55 @@
+import json, math
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+
+def cycle_lap(n):
+    L=np.zeros((n,n))
+    for i in range(n):
+        for j in ((i-1)%n,(i+1)%n):
+            L[i,i]+=1; L[i,j]-=1
+    return L
+
+def avg_map(n):
+    B=np.zeros((n//2,n))
+    for i in range(n//2): B[i,2*i:2*i+2]=0.5
+    return B
+
+a=0.5; kappa=1.0; n=8
+A=a*np.eye(n)+kappa*cycle_lap(n)
+cols=[]
+for pair in [(0,1),(2,3),(4,5),(6,7)]:
+    v=np.zeros(n);v[list(pair)]=1/math.sqrt(2);cols.append(v)
+for pair in [(0,1),(2,3),(4,5),(6,7)]:
+    v=np.zeros(n);v[pair[0]]=1/math.sqrt(2);v[pair[1]]=-1/math.sqrt(2);cols.append(v)
+T=np.column_stack(cols); Ap=T.T@A@T
+Acc=Ap[:4,:4]; Acf=Ap[:4,4:]; Aff=Ap[4:,4:]; Afc=Acf.T
+gap=float(np.linalg.eigvalsh(Aff)[0]); cfnorm=float(np.linalg.norm(Acf,2))
+Aeff=Acc-Acf@np.linalg.inv(Aff)@Afc
+B84=avg_map(8);B42=avg_map(4);B82=np.zeros((2,8));B82[0,:4]=.25;B82[1,4:]=.25
+A4=a*np.eye(4)+kappa*cycle_lap(4)
+closure=float(np.linalg.norm(B84@A-A4@B84,2))
+freq=[]
+for s in (0.025,0.05,0.1,0.25,0.5,1.0):
+    exact=Acc-Acf@np.linalg.inv(s*np.eye(4)+Aff)@Afc
+    err=float(np.linalg.norm(exact-Aeff,2))
+    bound=cfnorm*cfnorm*s/(gap*(gap-s)) if s<gap else None
+    freq.append({'s':s,'exact_markov_error_norm':err,'bound':bound})
+out={
+ 'task':'PHY-019','scientific_state':'PASS_PROJECTIVE_MAPS_WITH_EXACT_MEMORY__NAIVE_MARKOV_CLOSURE_REFUTED',
+ 'control':'scalar linearized relaxational field on C8: zdot=-(aI+kappa L)z, a=0.5,kappa=1',
+ 'nested_average_defect_norm':float(np.linalg.norm(B42@B84-B82)),
+ 'naive_generator_closure_defect_norm':closure,
+ 'A_cc':Acc.tolist(),'A_cf':Acf.tolist(),'A_ff':Aff.tolist(),
+ 'eliminated_gap':gap,'coupling_norm':cfnorm,
+ 'markov_schur_generator':Aeff.tolist(),
+ 'generated_next_neighbor_coupling_abs':float(abs(Aeff[0,2])),
+ 'memory_kernel':'K(t)=A_cf exp(-A_ff t) A_fc',
+ 'memory_L1_norm_upper':cfnorm*cfnorm/gap,
+ 'frequency_dependent_generator':'A_eff(s)=A_cc-A_cf(sI+A_ff)^(-1)A_fc',
+ 'low_frequency_bound':'||A_eff(s)-A_eff(0)|| <= ||Acf||^2 |s|/[gamma(gamma-|s|)] for |s|<gamma',
+ 'frequency_checks':freq,
+ 'interpretation':['representation coarse maps can be exactly projective while dynamics is non-Markov after elimination','memory decays at least on eliminated gap scale in this SPD linear control','a low-frequency Markov approximation is controlled only relative to that gap','nonlinear FIN requires a separate remainder payment']
+}
+(ROOT/'results'/'PHY-019_projective_memory.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

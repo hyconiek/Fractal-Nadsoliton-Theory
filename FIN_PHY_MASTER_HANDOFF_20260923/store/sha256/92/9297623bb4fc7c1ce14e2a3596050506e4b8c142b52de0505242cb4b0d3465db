@@ -1,0 +1,197 @@
+# FIN PHY source/geometry follow-up report
+
+## Executive status
+
+**PHY-013 is now split into two typed source questions.**
+
+1. **Intracell strict/rank-seven source:** still open. Passive positive local
+   parent laws cannot directly generate A7's extra null sectors; conditional
+   Eckart–Young fixes A7 weights once rank seven is supplied, but the rank and
+   full strict physical provenance remain unsourced.
+2. **Intercell geometry/action source:** a new **conditional target-blind source
+   family has been constructed**. It does not reproduce A7; instead it derives
+   sparse cell geometry and a refinement-compatible quadratic action from the
+   localized phase relation without carrier-specific fitting.
+
+This is a real advance in the physics-transition programme, but it remains a
+conditional bridge, not a derivation of physical spacetime.
+
+## 1. Intracell source challenge
+
+- Identical cells plus full `S_M` relabeling equivariance cannot deterministically
+  source a nontrivial sparse support: only empty or complete graphs are possible
+  without pair-specific data.
+- A7 is not a direct positive connected local Laplacian or passive Schur
+  elimination: it has null sectors `k=0,1,2`.
+- Once rank seven is supplied, the retained strict sectors `(6,5,4,3)` are the
+  canonical top-seven spectral approximation of the supplied full strict A.
+- A natural minimal-rank localization selector picks rank seven at `g=4` but
+  rank nine at the actual MP7 coexistence gain; rank seven is therefore not
+  independently sourced.
+- Freezing the old distance-kernel formula across carriers fails: positivity
+  breaks by q=30 and fixed-g localization loses scalability.
+
+## 2. Continuum localized branch is now certified uniformly
+
+At `g=7`, the smooth continuum three-mode root is interval-assisted locally
+unique and strongly stable. The parity sector has the exact threshold
+
+`g_parity=12/lambda6=5.123427551398616`.
+
+An analytic shifted-trapezoid alias bound combined with the 4D Krawczyk box
+proves:
+
+> For every even `q>=190`, the finite-q smooth-plus-parity dual has a unique
+> stationary point in the declared local box and positive Hessian there.
+
+The old `C^4` bound was superseded; `q=190` is sufficient, not claimed minimal.
+
+## 3. Internal phase geometry
+
+For every even `q>=190` on that branch, the parity-fiber rule is certified to
+produce
+
+`Cay(Z_q,{+/-1,+/-2})`,
+
+with degree four. Its graph metric and low-frequency Laplacian both converge to
+one-dimensional circle geometry.
+
+This is internal phase/state geometry, not yet a cell-space graph.
+
+## 4. State-sourced cell geometry (RG-3)
+
+A cell with nonzero modes `m3,m4` carries the intrinsic phase
+
+`u=m4 conj(m3)/|m4 m3| in S1`.
+
+For pairwise distinct phases, circular-order adjacency gives exactly a degree-2
+cycle without external coordinates or a fitted threshold. The finite-q tie gate
+is quantitative: `q/M^2 -> infinity` is sufficient for collisions to vanish.
+
+The earlier claim of exact finite-q `S1 x Z2` independence is corrected: the
+product fiber is exact in the continuum effective model and asymptotic for the
+two shifted finite-q sublattices.
+
+## 5. Diffuse geometry survives much stronger coupling than first thought
+
+The previous full-distribution condition `N kappa/M ->0` guarantees TV
+convergence to Haar. For geometry alone, Jensen/event transfer yields the much
+wider theorem:
+
+`N kappa=o(M^2)`
+
+is sufficient for every fixed macroscopic angular gap to disappear in
+probability, provided `q/M^2 -> infinity` also removes phase collisions.
+
+Thus, with fixed kappa, `q=M^3` and `N=M^alpha` for any `0<alpha<2` can have
+both `N->infinity` (sharp local phases) and dense state-sourced circle geometry.
+At `N kappa=Theta(M^2)`, interaction and configurational entropy can compete;
+no diffuse theorem is claimed there.
+
+## 6. Rewiring gate
+
+Each isolated adjacent phase crossing changes only two cycle edges out and two
+in. However, for Haar spacings,
+
+`M^2 min_gap => Exp(1)` in distribution.
+
+Therefore there is no positive size-uniform worst-case graph dwell time under
+only a bounded angular-velocity premise. The natural smallest-gap rewiring time
+is `Theta((V M^2)^-1)`.
+
+## 7. Operational metric bridge
+
+For a frozen RG-3 cycle, local-update causal depth equals hop distance. Under
+Haar/diffuse phases, DKW gives uniformly over sampled pairs
+
+`|(2pi/M)d_hop-d_angle| <= 4pi eps + 2pi/M`
+
+with probability at least `1-2 exp(-2M eps^2)`.
+
+Thus normalized causal-depth distance converges to the intrinsic phase metric
+in the diffuse regime. This is dimensionless and conditional; no metre or clock
+is supplied.
+
+## 8. The graph rule is less arbitrary than it first appeared
+
+When every circular gap is `<pi`, the cycle is the **unique inclusion-minimal
+exact metric backbone**: any graph whose edges inherit circle distances and
+whose shortest paths reproduce all sampled circle distances must contain every
+consecutive circular edge.
+
+MST is a useful negative control: it is also canonical and sparse, but removing
+the largest cycle edge can give order-one or larger distortion across that gap.
+The zero-distortion premise is doing real work.
+
+## 9. Refinement-compatible edge law
+
+For local quadratic edge energy
+
+`E_ell(u,v)=0.5 c(ell)(u-v)^2`,
+
+exact subdivision/elimination consistency forces
+
+`c(a+b)=c(a)c(b)/(c(a)+c(b))`.
+
+Hence resistance `R=1/c` is additive. Under regularity,
+
+`c(ell)=kappa0/ell`.
+
+The edge-weight **shape** is therefore uniquely target-blind and transfers to
+arbitrary meshes/refinements without retuning. Only global scale `kappa0`
+remains.
+
+The corresponding energy is exactly the Dirichlet energy of the piecewise
+linear interpolant.
+
+## 10. Conditional finite-speed wave model
+
+If local kinetic mass is also additive under interval refinement,
+
+`m(ell)=mu0 ell`.
+
+On a uniform mesh the inertial model has
+
+`omega(p)=2 sqrt(kappa0/mu0)|sin(ph/2)|/h`,
+
+so
+
+`|v_group| <= sqrt(kappa0/mu0)`
+
+and the continuum limit is a 1D wave equation with that speed in angular/time
+coordinates.
+
+This is not a derivation of physical `c`: the inertial dynamics, clock and the
+ratio `kappa0/mu0` remain added premises. The heat/gradient dynamics on the
+same geometry has diffusive tails instead.
+
+## 11. Coarse dynamics does not close exactly
+
+Even on a frozen cycle, block elimination generates nonzero memory and longer-
+range effective terms (the existing C8->C4 control gives next-neighbor coupling
+`1/7` and memory L1 bound `0.4`). Therefore exact nearest-neighbor Markov
+closure is refuted. The refinement-compatible static Dirichlet law does not
+remove this dynamical memory obligation.
+
+## 12. Dimension gate
+
+The current state-sourced geometry uses one continuous phase `S1` plus a finite
+`Z2` fiber. Increasing q or M only refines that one-dimensional continuum.
+It cannot generate three continuous spatial dimensions.
+
+A higher-dimensional physical-space programme requires additional independent
+continuous relational coordinates or a different higher-dimensional orbit.
+
+## Scientific verdict
+
+The follow-up does **not** solve the fundamental FIN source problem. It does,
+however, produce the first target-blind intercell construction in this campaign
+with all of the following properties:
+
+`FIN localized phase -> intrinsic relation -> sparse cell graph -> exact metric backbone -> refinement-compatible edge weights -> 1D continuum operator -> conditional bounded-speed wave limit`.
+
+Each arrow has explicit premises and kill conditions. The strongest remaining
+source gaps are now much sharper: source the extra continuous relational
+dimensions (if physical space is intended), source/justify the metric-backbone
+and refinement principles from deeper FIN rather than PM, and source the
+kinetic/time scale if a hyperbolic dynamics is intended.

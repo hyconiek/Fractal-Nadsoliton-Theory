@@ -1,0 +1,54 @@
+# PROX-04 — RNG on flat internal tori
+
+Date: 2026-09-23
+
+## Theorem-grade positives
+
+For any finite metric sample, RNG contains every MST edge and is connected.
+For an epsilon-net in a geodesic space, every RNG edge has length at most
+`2 epsilon`.  On a flat `T4`, sufficiently dense RNG stars are therefore local
+Euclidean stars.  The RNG condition implies at least 60-degree angular
+separation between incident edge directions.  A self-contained spherical-cap
+packing argument gives a finite degree bound (`<=34` in the nonsharp audit)
+independent of sample size.
+
+So RNG is a genuine parameter-free sparse proximity rule.
+
+## A structured 4D continuum theorem — and a metric obstruction
+
+On the periodic tensor grid `(Z_m)^4`, RNG is exactly the eight axis-neighbor
+graph.  The scaled graph operator
+
+\[
+h^{-2}\sum_i[f(x+h e_i)+f(x-h e_i)-2f(x)]
+\]
+
+converges to the flat 4D Laplacian with `O(h^2)` error.  The deterministic
+control obtains an error slope `1.9897`.
+
+But its weighted shortest-path metric does **not** converge to Euclidean
+geodesic distance.  For displacement `(h,h,h,h)` the graph distance is `4h`
+and Euclidean distance is `2h`, so stretch is exactly `2` at every resolution.
+
+Hence:
+
+> **Dirichlet/Laplacian continuum and shortest-path metric continuum are
+> different bridge problems.**
+
+## Random-Haar scout
+
+For iid uniform points on flat `T4`, RNG remains sparse, but the normalized
+local direction tensor does not visibly approach `I/4` over `n=80,160,320`;
+median Frobenius anisotropy stays around `0.36–0.40`.
+
+This is numerical evidence only.  It blocks a naive claim of pointwise
+isotropic Laplacian convergence from bounded-degree RNG.  A future result must
+use weighting/averaging, structured populations or a homogenized notion.
+
+## Disposition
+
+`PROX-04 = PARTIAL_PASS_WITH_METRIC_OBSTRUCTION`.
+
+RNG supplies parameter-free sparse connectivity and admits a controlled 4D
+operator continuum on structured samples.  It does not yet supply a unique
+physical metric or a theorem for iid/Haar populations.

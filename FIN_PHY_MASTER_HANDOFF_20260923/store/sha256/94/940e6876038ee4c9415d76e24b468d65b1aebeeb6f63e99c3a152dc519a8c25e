@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'PRIN-03-principle-source-verdict',
+ 'scientific_state':'PARTIAL_NO_GO__COMPOSITION_ALGEBRA_PRESENT_BUT_SELECTION_PRINCIPLES_UNSOURCED',
+ 'backbone':{
+   'derived_after_premise':'Given exact preservation of the sampled phase metric and inclusion-minimality, the cycle is forced.',
+   'not_derived':'Why distortion must be exactly zero rather than traded against sparsity is not selected by current FIN.'},
+ 'refinement':{
+   'derived_after_premise':'Given arbitrary metric subdivision + exact Schur/series consistency + regularity, c(ell)=kappa0/ell is forced.',
+   'not_derived':'Why every metric split represents physically equivalent refinement is not selected by current FIN; equal/dyadic refinement alone is insufficient.'},
+ 'anti_circularity':'Both principles are target-blind and make held-out predictions, so they are legitimate PM/PB candidates. But predictive success cannot be inverted into strict sourcehood.',
+ 'next_source_obligation':'Find a FIN-internal loss/information criterion that fixes (i) zero distortion rather than a Pareto tradeoff and (ii) arbitrary-subdivision invariance rather than a chosen refinement family, before inspecting the desired cycle or 1/ell law.',
+ 'decision':'PRINCIPLE-SOURCE remains open; generic minimality and generic refinement language are refuted as sufficient sources.'
+}
+p=ROOT/'results'/'PRIN-03_principle_verdict.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p)},indent=2))

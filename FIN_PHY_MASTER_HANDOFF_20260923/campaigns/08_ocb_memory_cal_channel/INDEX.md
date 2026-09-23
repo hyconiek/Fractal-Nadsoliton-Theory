@@ -1,0 +1,25 @@
+# 08_ocb_memory_cal_channel
+
+Hidden-memory aliases, calibrated nuisance and first-jet channel boundary.
+
+- Source directory: `fin_phy_ocb_memory`
+- Logical files: 25
+- Logical bytes: 65240
+- New unique store objects introduced here: 23
+- References to objects already stored: 2
+
+## Top-level logical files
+
+- `CALIBRATION_CHANNEL_REPORT.md` → `store/sha256/c8/c859dfa8b8f8a35a7034ad1db0e991b2a897aadeda26e5d48255c95755d4ea45` (`c859dfa8b8f8a35a7034ad1db0e991b2a897aadeda26e5d48255c95755d4ea45`)
+- `CLAIM_REGISTER.json` → `store/sha256/5f/5ff8a2d09ad13bb4868d1172ed31c0cab736484ed225e9ca4193896d793c1020` (`5ff8a2d09ad13bb4868d1172ed31c0cab736484ed225e9ca4193896d793c1020`)
+- `EXPECTED_RESULTS.sha256` → `store/sha256/b2/b27a318065479d01f7ef940c91639a261538b534f1f5f877164a74c580921d03` (`b27a318065479d01f7ef940c91639a261538b534f1f5f877164a74c580921d03`)
+- `HANDOFF.md` → `store/sha256/36/364c73ccf953252c74dc88a9525c695a869c903193db4250d62ddd58fd704f92` (`364c73ccf953252c74dc88a9525c695a869c903193db4250d62ddd58fd704f92`)
+- `MANIFEST.sha256` → `store/sha256/31/31b26bc2bb664f9953525ca4ddbdf881ec0677cfcd853f885d6623b01d2b3d1e` (`31b26bc2bb664f9953525ca4ddbdf881ec0677cfcd853f885d6623b01d2b3d1e`)
+- `MEMORY_ALIAS_REPORT.md` → `store/sha256/b2/b28c3690e427088b42765e32a6385031db8c616cd27841d6e4582e77d310a287` (`b28c3690e427088b42765e32a6385031db8c616cd27841d6e4582e77d310a287`)
+- `NEXT_ATOMS.md` → `store/sha256/3a/3a45a7999d67619cbafdbcfed86e05770321bae6f625aef5d18a3a4932725741` (`3a45a7999d67619cbafdbcfed86e05770321bae6f625aef5d18a3a4932725741`)
+- `NONCONCLUSIONS.md` → `store/sha256/a6/a6440dddf1161abfdc649dd60a19eb2e56ed7bf2ffa620bee0105dee8dbe60d1` (`a6440dddf1161abfdc649dd60a19eb2e56ed7bf2ffa620bee0105dee8dbe60d1`)
+- `PRIOR_WORK_DEDUP.md` → `store/sha256/36/3681e22b70ab20474c7a7b3f221969a660c5163a1ea9dfa7538bb125f485bf37` (`3681e22b70ab20474c7a7b3f221969a660c5163a1ea9dfa7538bb125f485bf37`)
+- `SYNTHESIS.md` → `store/sha256/ca/caf24352af5107b6816c9233c875f95ab30347fe7ca6ce5f1ea566d26bfb6dfb` (`caf24352af5107b6816c9233c875f95ab30347fe7ca6ce5f1ea566d26bfb6dfb`)
+- `TASKS.json` → `store/sha256/8c/8c276ce77728ed4a1832b5467702ca7115337f006e21c2cdfa91c279b3b1391c` (`8c276ce77728ed4a1832b5467702ca7115337f006e21c2cdfa91c279b3b1391c`)
+- `replay.py` → `store/sha256/99/99b6e53db56219f37c078bebc3e0a1d3e746528d06370326419690acf40a1466` (`99b6e53db56219f37c078bebc3e0a1d3e746528d06370326419690acf40a1466`)
+- `verify_package.py` → `store/sha256/e9/e98fc2840378c377377c7f0ce176e1d39620682e84aa74ea4df22fd499e8b446` (`e98fc2840378c377377c7f0ce176e1d39620682e84aa74ea4df22fd499e8b446`)

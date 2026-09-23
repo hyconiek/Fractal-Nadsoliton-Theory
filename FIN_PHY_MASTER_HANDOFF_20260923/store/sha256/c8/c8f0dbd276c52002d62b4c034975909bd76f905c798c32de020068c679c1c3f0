@@ -1,0 +1,72 @@
+# OCB-CAL-02 and OCB-CHANNEL-02
+
+Date: 2026-09-23
+
+## OCB-CAL-02 — interval calibration
+
+### Declared confusion family
+
+The synthetic readout family is
+
+`C(eps)`: correct report `1-2 eps`, two adjacent reported labels `eps` each.
+
+The external calibration interval is `[.04,.06]`; destination efficiencies are allowed to vary
+independently as `eta_j in eta0_j [1-r,1+r]`.
+
+### Structural-zero result
+
+For an embedded jump chain the true destination cannot equal the source.  Therefore every
+admissible deconfused candidate must satisfy `p_i[i]=0`.
+
+Against the frozen nominal observed record, the source-self score is monotone across the declared
+one-parameter confusion interval and has its unique root at
+
+`eps = 0.05`.
+
+Hence, **inside this particular scalar confusion family and in the noiseless full-preparation
+record**, the structural zero collapses the confusion interval to the nominal value.  This is not
+a general theorem for arbitrary 12x12 calibration polytopes.
+
+### Efficiency uncertainty threshold
+
+After the confusion parameter is fixed, multiplicative destination-efficiency uncertainty has an
+exact ordinal threshold.  If shell-1 and shell-2 probabilities are `p1>p2`, then all admissible
+calibrations preserve their order iff
+
+`r < (p1-p2)/(p1+p2)`.
+
+For strict FIN,
+
+`r* = 0.4198336126838737`.
+
+A safe fixture at `0.95 r*` leaves a positive all-source/all-competitor margin.  At `1.05 r*`, an
+explicit choice of high shell-1 censoring and low shell-2 censoring reverses the recovered ranking.
+Thus the uncertainty set has a real **removal witness** rather than merely a qualitative warning.
+
+## OCB-CHANNEL-02 — estimate the first operator jet
+
+The previous carrier theorem admitted channels whose first non-scalar operator term is aligned
+with strict `A`.  This task makes that condition operational in an idealized full-operator record.
+
+For a controlled response family, estimate the first non-scalar jet and fit its off-diagonal part
+to `span{A}`.  Heat, wave amplitude, and coherent unitary amplitude all approach `-A` after their
+appropriate first nonzero rescaling.
+
+At dimensionless control `t=.008`, the relative residuals are approximately:
+
+- heat: `0.0025148`,
+- wave amplitude: `3.35e-6`,
+- unitary amplitude: `0.0025132`.
+
+The control `P1`, the projector on the first positive Fourier doublet, is itself a polynomial /
+functional-calculus direction of `A`, yet its residual to `span{A}` is about `0.833493` and its
+largest shell response is at the antipode `d=6`.
+
+So **generic `f(A)` is not enough**.  The useful carrier-transfer class is genuinely narrower and
+can be rejected by a first-jet experiment.
+
+## Scope
+
+The jet protocol assumes ideal access to amplitudes/operators and a dimensionless control knob.
+Probability-only unitary records have a different leading object and need a separate estimator.
+No physical clock or coherent instrument is derived.

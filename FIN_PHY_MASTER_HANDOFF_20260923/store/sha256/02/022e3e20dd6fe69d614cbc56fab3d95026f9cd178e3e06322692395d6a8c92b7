@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.linalg import expm,cosm
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); N=A.shape[0]
+I=np.eye(N)
+mask=~np.eye(N,dtype=bool)
+Avec=A[mask]
+# first positive spectral projector (two-dimensional Fourier doublet)
+evals,evecs=np.linalg.eigh(A)
+positive=np.where(evals>1e-10)[0]
+lam1=evals[positive[0]]
+idx=np.where(np.abs(evals-lam1)<1e-8)[0]
+P1=evecs[:,idx]@evecs[:,idx].T
+
+def fit_to_A(J):
+    x=Avec; y=np.real_if_close(J[mask])
+    # complex-safe least squares scalar
+    a=np.vdot(x,y)/np.vdot(x,x)
+    resid=np.linalg.norm(y-a*x)/np.linalg.norm(y)
+    align=abs(np.vdot(x,y))/(np.linalg.norm(x)*np.linalg.norm(y))
+    return complex(a),float(resid),float(align)
+
+times=np.array([0.001,0.002,0.004,0.008])
+rows=[]
+# heat first-order jet
+for t in times:
+    K=expm(-t*A)
+    J=(K-I)/t
+    a,res,ali=fit_to_A(J)
+    rows.append({'model':'heat','t':float(t),'expected_order':1,'fit_scalar_real':a.real,'relative_residual':res,'alignment_abs':ali})
+# wave amplitude second-order jet
+for t in times:
+    K=cosm(t*np.asarray(np.linalg.multi_dot([evecs,np.diag(np.sqrt(np.maximum(evals,0))),evecs.T]))) if False else None
+    # spectral construction for cos(t sqrt A)
+    K=evecs@np.diag(np.cos(t*np.sqrt(np.maximum(evals,0))))@evecs.T
+    J=2*(K-I)/(t*t)
+    a,res,ali=fit_to_A(J)
+    rows.append({'model':'wave_amplitude','t':float(t),'expected_order':2,'fit_scalar_real':a.real,'relative_residual':res,'alignment_abs':ali})
+# unitary complex amplitude first-order jet
+for t in times:
+    U=evecs@np.diag(np.exp(-1j*t*evals))@evecs.T
+    J=(U-I)/(1j*t) # tends -A
+    a,res,ali=fit_to_A(J)
+    rows.append({'model':'unitary_amplitude','t':float(t),'expected_order':1,'fit_scalar_real':a.real,'fit_scalar_imag':a.imag,'relative_residual':res,'alignment_abs':ali})
+# projector alternative exact first jet
+Jp=P1
+ap,rp,alp=fit_to_A(Jp)
+# radial shell where |P1| offdiag is largest
+shell=[]
+for d in range(1,7):
+    vals=[]
+    for i in range(N):vals.append(abs(P1[i,(i+d)%N]))
+    shell.append(float(np.mean(vals)))
+max_shell=int(np.argmax(shell)+1)
+# noise robustness: if observed Jhat=J+E and ||E_off||_F <= eps ||J_off||,
+# distance to span(A) changes by at most eps in normalized absolute terms. Freeze empirical gap at t=0.008.
+heat08=[r for r in rows if r['model']=='heat' and abs(r['t']-.008)<1e-12][0]
+wave08=[r for r in rows if r['model']=='wave_amplitude' and abs(r['t']-.008)<1e-12][0]
+unit08=[r for r in rows if r['model']=='unitary_amplitude' and abs(r['t']-.008)<1e-12][0]
+# projector relative distance to A span is rp; use half-gap as simple synthetic acceptance margin.
+accept_resid=rp/2
+result={
+ 'task':'OCB-CHANNEL-02',
+ 'status':'FIRST_OPERATOR_JET_IS_OPERATIONALLY_SEPARABLE_FROM_SPECTRAL_PROJECTOR_DIRECTION',
+ 'protocol':('Measure/control a small dimensionless response family K(t). Determine the first non-scalar order m from scaling, form the corresponding finite-difference jet, '
+             'and fit its off-diagonal entries to the one-dimensional span of strict A. Carrier transfer is admitted only if the residual is below a preregistered tolerance.'),
+ 'strict_A_norm_offdiag':float(np.linalg.norm(Avec)),
+ 'rows':rows,
+ 'projector_control':{
+   'eigenvalue':float(lam1),'multiplicity':int(len(idx)),
+   'fit_scalar_to_A_real':ap.real,'relative_residual_to_span_A':rp,'alignment_abs':alp,
+   'mean_abs_response_by_cycle_shell':shell,'largest_shell':max_shell,
+   'meaning':'P1 is a polynomial/functional-calculus direction of A but is not proportional to A and predicts an antipodal-dominated carrier response.'
+ },
+ 'synthetic_gate':{
+   'preregistered_residual_threshold_half_projector_gap':accept_resid,
+   'heat_t0p008_pass':bool(heat08['relative_residual']<accept_resid),
+   'wave_t0p008_pass':bool(wave08['relative_residual']<accept_resid),
+   'unitary_amplitude_t0p008_pass':bool(unit08['relative_residual']<accept_resid),
+   'projector_pass':bool(rp<accept_resid)
+ },
+ 'scope':('This uses ideal full operator/amplitude records and a dimensionless control parameter. Probability-only unitary records have a different leading object (entrywise W^2) and require a separate estimator. '
+          'No physical clock or coherent amplitude instrument is derived here.'),
+ 'nonconclusion':'Agreement of the first jet with A does not identify the entire channel; higher-order terms, memory, and hidden environments remain independently testable.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-CHANNEL-02_jet_estimation.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'projector_resid':rp,'projector_alignment':alp,'projector_max_shell':max_shell,'gate':result['synthetic_gate'],'at_t0p008':{'heat':heat08['relative_residual'],'wave':wave08['relative_residual'],'unitary':unit08['relative_residual']}},indent=2))

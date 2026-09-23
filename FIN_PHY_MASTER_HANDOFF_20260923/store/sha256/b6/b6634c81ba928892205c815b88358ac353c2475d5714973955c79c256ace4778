@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+import json, math
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+# Certified/numerical continuum modal means at g=7 from phase continuum package.
+rho=[0.5067993253422841,0.5404486437245657,0.5254223561163391]
+ks=[3,4,5]
+C=sum((r*k)**2 for r,k in zip(rho,ks))
+coef=4*math.pi**2*C
+
+def eps_bound(M,N,kappa=1.0): return coef*N*kappa/(M+1)
+def tv_bound(M,N,kappa=1.0):
+    e=eps_bound(M,N,kappa)
+    return e/(1-e) if e<1 else None
+
+def log_no_tie(M,q):
+    if M>q:return -math.inf
+    return sum(math.log1p(-i/q) for i in range(M))
+seq=[]
+for a in [0.25,0.5,0.75]:
+  for p in [4,6,8,10,12]:
+    M=10**p; N=max(2,int(round(M**a))); q=M**3
+    # Birthday approximation only for huge q to avoid O(M) exact product.
+    coll_ub=M*(M-1)/(2*q) # union bound P(any collision)
+    e=eps_bound(M,N,1.0)
+    seq.append({'alpha':a,'M':M,'N':N,'q_formula':'M^3','collision_probability_union_upper':coll_ub,
+                'epsilon_energy_expectation_upper':e,'TV_upper_if_epsilon_lt_1':e/(1-e) if e<1 else None})
+out={
+ 'task':'PHY-013-RG3-joint-scaling',
+ 'scientific_state':'CONDITIONAL_STATE_SOURCED_CELL_CIRCLE_LIMIT_THEOREM',
+ 'smooth_distance_bound':{
+   'C_sum_rho2_k2':C,
+   'inequality':'D_smooth^2(delta)<=C*delta^2 for oriented circular gaps delta in [0,2*pi]',
+   'haar_gap_second_moment':'For M iid Haar points, ordered gap fractions have Dirichlet(1,...,1), so E[sum delta_i^2]=8*pi^2/(M+1).'
+ },
+ 'RG3_phase_gibbs':{
+   'energy':'E=(kappa/2) sum_i D_smooth^2(delta_i) + 2*kappa*z^2*(number of parity domain walls)',
+   'finiteN_weight':'exp(-N E)',
+   'parity_decoupling':'In the continuum S1 x Z2 effective fiber model, summing over Z2 spins gives an Ising-cycle partition factor independent of angular gaps. For finite q, parity lives on two shifted q/2 grids; this product statement is asymptotic, not exact.',
+   'expected_exponent_bound':'E_Haar[N E_smooth] <= 4*pi^2*C*N*kappa/(M+1).',
+   'coefficient_4pi2C':coef,
+   'TV_bound':'If epsilon=4*pi^2*C*N*kappa/(M+1)<1, then TV(P_RG3_angles,Haar^M) <= epsilon/(1-epsilon), using 0<=1-exp(-X)<=X and Z>=1-E[X].'
+ },
+ 'joint_limit_theorem':{
+   'premises':['localized continuum phase branch with nonzero m3,m4','RG3 circular-order/Delaunay graph','continuum/asymptotic parity-fiber reduction','phase-reduced finite-N Gibbs approximation','fixed or controlled kappa','q/M^2 -> infinity','N -> infinity','N*kappa/M -> 0'],
+   'conclusions':['phase collisions vanish in probability','the angular Gibbs marginal converges in total variation to independent Haar phases','maximum angular gap tends to zero in probability','RG3 has degree 2 and its intrinsic weighted metric converges in probability to S1','N can still diverge, so single-cell phase concentration and diffuse inter-cell geometry are compatible in a joint limit'],
+   'example_scaling':'q=M^3, N=M^alpha with any 0<alpha<1 and fixed kappa.'
+ },
+ 'diagnostic_sequences':seq,
+ 'limit_order_obstruction':'N->infinity at fixed M drives the attractive phase penalty toward synchronized minima; M->infinity with N*kappa/M->0 instead leaves the phase-angle ensemble asymptotically Haar. The limits are physically inequivalent.',
+ 'nonconclusions':['No source for choosing this joint scaling is established.','The phase-reduced Gibbs law is a conditional effective description, not empirical physics.','No physical length or clock is generated.','No Lorentz/gravity claim follows.']
+}
+p=ROOT/'results'/'PHY-013_RG3_joint_scaling.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'C':C,'coef':coef,'examples':seq[5:10]},indent=2))

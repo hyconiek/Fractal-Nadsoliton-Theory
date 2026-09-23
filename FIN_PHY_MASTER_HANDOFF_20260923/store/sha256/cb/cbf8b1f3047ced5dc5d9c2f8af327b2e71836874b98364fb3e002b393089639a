@@ -1,0 +1,38 @@
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from scipy.special import softmax
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+coex=json.loads((ROOT/'inputs'/'R7P-026_equal_energy_event.json').read_text())
+fold=json.loads((ROOT/'inputs'/'MP7-026_controlled_fold.json').read_text())
+foldcert=json.loads((ROOT/'inputs'/'R7P-031_simple_fold.json').read_text())
+r=np.array([float(x) for x in coex['root_center']]); geq=float(r[4]); p=softmax(C4@r[:4]); mu=p@X7
+fbox=foldcert['augmented_root_box'][4]; gf=sum(map(float,fbox))/2
+form=fold['formal_coefficients']; Cx=sum(form['abs_xi_over_sqrt_epsilon'])/2; CE=sum(form['barrier_over_epsilon_3_2'])/2; CH=sum(form['soft_abs_eigen_over_sqrt_epsilon'])/2
+R=CE/(CH*(2*Cx)**2)
+active=np.array([L[3],L[4],L[5],L[6]],float)
+out={
+ 'task':'PHY-017','scientific_state':'CLASSIFIED_GENERIC_VS_MODEL_SPECIFIC_DIMENSIONLESS_OBSERVABLES',
+ 'generic_fold_derivation':'For U=a eps xi + b xi^3/6, roots are +/-x; DeltaPhi=2 b x^3/3, lambda_soft(min)=b x, DeltaXi=2x, hence ratio=1/6 exactly.',
+ 'FIN_fold_ratio_midpoint':R,
+ 'one_six':1/6,
+ 'g_eq':geq,'g_fold':gf,'g_eq_over_g_fold':geq/gf,
+ 'localized_jump_mu_norm':float(np.linalg.norm(mu)),
+ 'active_spectral_ratios_to_lambda6':(active/active[-1]).tolist(),
+ 'phase_multiplicity_at_q12':12,
+ 'classification':[
+   {'quantity':'fold exponents 1/2,3/2,1/2','class':'generic simple-fold','discriminator':False},
+   {'quantity':'DeltaPhi/[lambda_soft (DeltaXi)^2] -> 1/6','class':'generic gradient simple-fold','discriminator':False},
+   {'quantity':'g_eq/g_fold','class':'model-specific dimensionless','discriminator':'candidate only after control dictionary fixed'},
+   {'quantity':'||mu_localized-mu_uniform||','class':'model-specific normalized jump','discriminator':'candidate after feature metric/source fixed'},
+   {'quantity':'active spectral ratios','class':'model-specific/source-sensitive','discriminator':'candidate only if source law predicts them'},
+   {'quantity':'symmetry-related phase count','class':'symmetry-protected conditional','discriminator':'changes with q/support/stabilizer'},
+   {'quantity':'susceptibility ratios','class':'not yet source-independent','discriminator':'requires declared source direction and dynamics'}
+ ],
+ 'nonconclusions':['no constant of nature','no equilibrium critical exponent claim from the fold','no universality class assigned']
+}
+(ROOT/'results'/'PHY-017_dimensionless.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

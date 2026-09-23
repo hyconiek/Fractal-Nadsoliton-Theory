@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+  'task':'CG-08-dimension-obstruction','scientific_state':'EXACT_ONE_CONTINUOUS_PHASE_DIMENSION_GATE',
+  'premise':'The current state-sourced cell relation uses only the intrinsic continuous phase u in S1, with an additional discrete Z2 parity fiber.',
+  'theorem':'Any faithful refinement built solely from this coordinate refines a one-dimensional compact phase orbit (or a finite-sheet cover of it). Increasing q refines sampling density and increasing M adds sampled cells; neither operation increases the topological dimension of the underlying relational coordinate space.',
+  'spectral_corollary':'The certified RG-2/RG-3 cycle-type graph families have low-frequency Laplacian growth proportional to k^2 and spectral dimension one. The discrete Z2 fiber changes finite bands/internal multiplicity but does not create additional continuous spatial dimension.',
+  'no_go':'The present S1 x Z2 state-sourced geometry cannot by itself yield three continuous spatial dimensions, irrespective of how large q or M become.',
+  'minimal_extension_options':['derive d independent continuous phase coordinates, giving a candidate torus/product geometry only if their composition law is sourced','derive a higher-dimensional non-product orbit/manifold from a larger symmetry/collective sector','derive an independent relational variable not reducible to the current phase coordinate'],
+  'nonconclusions':['No claim that physical space must be a torus','No source for d=3','No claim that internal phase dimension equals physical spatial dimension','No Lorentz or gravity implication']
+}
+p=ROOT/'results'/'CG-08_dimension_obstruction.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({'output':str(p)},indent=2))

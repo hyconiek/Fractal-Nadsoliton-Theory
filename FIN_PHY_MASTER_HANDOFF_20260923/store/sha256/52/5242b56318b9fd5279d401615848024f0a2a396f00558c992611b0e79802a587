@@ -1,0 +1,111 @@
+{
+  "namespace": "PHY-013-SOURCE-FOLLOWUP",
+  "date": "2026-09-23",
+  "claims": [
+    {
+      "id": "SF-C01",
+      "level": "M",
+      "status": "PROVED_BOUNDED_CLASS_NO_GO",
+      "statement": "Identical cells with no pair-specific datum and full S_M-equivariant deterministic graph sourcing yield only empty or complete support.",
+      "artifact": "KERNEL_SOURCE_CHALLENGE.md"
+    },
+    {
+      "id": "SF-C02",
+      "level": "M",
+      "status": "PROVED_BOUNDED_CLASS_NO_GO",
+      "statement": "A7 cannot be a direct connected positive translation-invariant local Dirichlet Laplacian/passive positive elimination because its null sectors include k=1,2.",
+      "artifact": "KERNEL_SOURCE_CHALLENGE.md"
+    },
+    {
+      "id": "SF-C03",
+      "level": "M",
+      "status": "CONDITIONAL_CANONICAL_COMPRESSION",
+      "statement": "Conditional on choosing rank seven, the A7 active sectors are the canonical top-seven spectral approximation of the supplied full strict operator.",
+      "artifact": "KERNEL_SOURCE_CHALLENGE.md"
+    },
+    {
+      "id": "SF-C04",
+      "level": "M",
+      "status": "INTERVAL_ASSISTED",
+      "statement": "At g=7 the smooth continuum three-mode branch has a locally unique root in the declared box with positive Hessian.",
+      "artifact": "results/PHY-013_smooth_continuum_certificate.json"
+    },
+    {
+      "id": "SF-C05",
+      "level": "M",
+      "status": "INTERVAL_ASSISTED_UNIFORM_Q",
+      "statement": "For every even q>=190 at g=7, the finite-q smooth-plus-parity branch has a unique stationary point in the common local 4D box and positive Hessian there.",
+      "artifact": "results/PHY-013_finite_q_branch_analytic.json"
+    },
+    {
+      "id": "SF-C06",
+      "level": "M",
+      "status": "PROVED_ON_CERTIFIED_BRANCH",
+      "statement": "For every even q>=190 on the certified branch, parity-fiber RG-2 support is exactly Cay(Z_q,{+/-1,+/-2}).",
+      "artifact": "results/PHY-013_RG2_support_certificate.json"
+    },
+    {
+      "id": "SF-C07",
+      "level": "M",
+      "status": "CONDITIONAL_CELL_GRAPH_SOURCE",
+      "statement": "Pairwise-distinct intrinsic cell phases canonically define a degree-two circular-order graph; q/M^2->infinity is sufficient for finite-q ties to vanish in probability.",
+      "artifact": "results/PHY-013_RG3_cell_geometry.json"
+    },
+    {
+      "id": "SF-C08",
+      "level": "M",
+      "status": "CONDITIONAL_GEOMETRY_LIMIT",
+      "statement": "Under q/M^2->infinity and N*kappa=o(M^2), macroscopic phase gaps vanish in probability in the reduced RG-3 Gibbs model.",
+      "artifact": "results/CG-01_diffuse_geometry.json"
+    },
+    {
+      "id": "SF-C09",
+      "level": "M",
+      "status": "PROVED_REWIRING_NO_GO",
+      "statement": "An isolated RG-3 order swap changes O(1) edges, but no positive M-independent worst-case dwell time follows; Haar minimum gaps are Theta(M^-2).",
+      "artifact": "results/CG-02_rewiring.json"
+    },
+    {
+      "id": "SF-C10",
+      "level": "PB_CANDIDATE",
+      "status": "CONDITIONAL_MATHEMATICAL_BRIDGE",
+      "statement": "For a frozen RG-3 cycle under diffuse phases, normalized causal hop depth converges in probability to the intrinsic phase-circle metric.",
+      "artifact": "results/CG-04_influence_metric.json"
+    },
+    {
+      "id": "SF-C11",
+      "level": "M",
+      "status": "PROVED_CONDITIONAL_UNIQUENESS",
+      "statement": "When all sampled circle gaps are <pi, the cycle is the unique inclusion-minimal exact shortest-path realization of the sampled circle metric with inherited edge lengths.",
+      "artifact": "results/CG-05_metric_backbone.json"
+    },
+    {
+      "id": "SF-C12",
+      "level": "M",
+      "status": "PROVED_CONDITIONAL_SOURCE_LAW",
+      "statement": "Positive regular local quadratic edge energy with exact series/refinement consistency uniquely has conductance c(ell)=kappa0/ell up to global scale.",
+      "artifact": "results/CG-06_refinement_dirichlet.json"
+    },
+    {
+      "id": "SF-C13",
+      "level": "PB_CANDIDATE",
+      "status": "CONDITIONAL_DYNAMICAL_BRIDGE",
+      "statement": "Adding refinement-additive kinetic mass m(ell)=mu0 ell gives a 1D lattice wave with bounded group velocity sqrt(kappa0/mu0) and a corresponding continuum wave equation.",
+      "artifact": "results/CG-07_wave_speed.json"
+    },
+    {
+      "id": "SF-C14",
+      "level": "M",
+      "status": "PROVED_CONTROLLED_COUNTEREXAMPLE",
+      "statement": "Frozen-cycle coarse dynamics is not exactly closed in the same nearest-neighbor Markov class; elimination generates memory and longer-range terms.",
+      "artifact": "results/CG-03_coarse_closure.json"
+    },
+    {
+      "id": "SF-C15",
+      "level": "M",
+      "status": "EXACT_DIMENSION_GATE",
+      "statement": "The current S1 x Z2 state-sourced geometry remains one-dimensional under q/M refinement and cannot by itself produce three continuous spatial dimensions.",
+      "artifact": "results/CG-08_dimension_obstruction.json"
+    }
+  ]
+}

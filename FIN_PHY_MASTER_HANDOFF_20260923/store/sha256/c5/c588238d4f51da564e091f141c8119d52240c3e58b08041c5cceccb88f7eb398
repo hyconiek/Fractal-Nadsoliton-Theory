@@ -1,0 +1,61 @@
+# FIN PHY — State ontology, dynamics and proximity controls
+
+Date: 2026-09-23
+
+## STATE-SPACE-SOURCE: abstract A does not select a unique probability cone
+
+The original vertex representation makes `A` a graph Laplacian: symmetric,
+PSD, zero-row-sum, strictly negative off diagonal.  This alone is not enough to
+select that simplex if `A` is treated as an abstract self-adjoint operator.
+
+A continuous orthogonal rotation `Q(e)` in `1^perp`, mixing distinct spectral
+sectors while fixing the uniform vector, gives
+
+`A(e)=Q(e)^T A Q(e)`.
+
+For a nontrivial witness `e=0.2`, `A(e)` is isospectral, has row-sum residual
+`1.63e-15`, and still has all off-diagonal entries negative (largest
+`-0.0068819`).  For the chosen path the first sign crossing occurs only at
+`e≈0.29804`.
+
+Thus an open continuum of different simplicial coordinate systems makes the
+same abstract spectral operator into a valid Markov Laplacian.
+
+**Disposition:** `A` alone does not select the label simplex.  If the typed
+strict datum includes the original vertex kernel `W`, then that representation
+is supplied by the type and can source the finite cycle; this is a different
+claim.
+
+## DYN-SOURCE: category trilemma
+
+The same static `A` supports inequivalent natural evolution categories:
+
+- classical Markov: `exp(-tA)`;
+- real inertial: `u_ddot + A u=0`;
+- complex norm-preserving: `exp(-itA)`.
+
+A real nonnegative orthogonal matrix is a permutation.  Therefore a continuous
+one-parameter family starting at identity that is both stochastic and
+orthogonal must be identically the identity.  There is no nontrivial dynamics
+that simultaneously realizes classical Markov positivity and orthogonal
+reversibility on the same finite simplex.
+
+The source problem is therefore categorical: dissipation/positivity versus
+reversibility/inertia/complex structure must be supplied or independently
+selected.  Static `A` does not choose a physical clock.
+
+## PROX-05: Haar population plus raw RNG is insufficient
+
+On flat `T2`, rectangular periodic grids `n_x=a m`, `n_y=m` all converge to
+Haar measure.  Their relative-neighbourhood graph is the same local four-axis
+neighbour topology.  With density scaling `N=n_x n_y`, however,
+
+`N lambda(p_x,0) -> p_x^2/a`,
+`N lambda(0,p_y) -> a p_y^2`.
+
+The continuum operator therefore depends on microscopic aspect ratio `a`.
+For `a=1,2,3,4`, the limiting y/x eigenvalue ratios are `1,4,9,16`.
+
+So RNG can provide sparse proximity, but Haar density plus unweighted RNG does
+not select a unique isotropic Laplacian.  A metric-volume/conductance rule or a
+stronger sampling law remains necessary.

@@ -1,0 +1,44 @@
+{
+  "conclusion": "RG3 can support a scalable geometry, but its effective dynamics must retain memory/nonlocal corrections or explicitly pay an adiabatic approximation. Coarse geometry does not by itself generate a closed local field dynamics.",
+  "counterexample": {
+    "eliminated_gap": 2.499999999999999,
+    "fine_model": "scalar linearized relaxational field on C8: zdot=-(aI+kappa L)z, a=0.5,kappa=1",
+    "generated_next_neighbor_coupling_abs": 0.14285714285714282,
+    "markov_schur_generator": [
+      [
+        1.357142857142857,
+        -0.4999999999999999,
+        0.14285714285714282,
+        -0.4999999999999999
+      ],
+      [
+        -0.4999999999999999,
+        1.357142857142857,
+        -0.4999999999999999,
+        0.14285714285714282
+      ],
+      [
+        0.14285714285714282,
+        -0.4999999999999999,
+        1.357142857142857,
+        -0.4999999999999999
+      ],
+      [
+        -0.4999999999999999,
+        0.14285714285714282,
+        -0.4999999999999999,
+        1.357142857142857
+      ]
+    ],
+    "memory_L1_norm_upper": 0.39999999999999997,
+    "naive_generator_closure_defect_norm": 1.4142135623730951,
+    "nested_average_defect_norm": 0.0
+  },
+  "low_frequency_repair": "||A_eff(s)-A_eff(0)|| <= ||Acf||^2 |s|/[gamma(gamma-|s|)] for |s|<gamma",
+  "premise": "Condition on an RG3 ordering that does not rewire during the observation window. The cell support is then exactly a cycle C_M, so the controlled cycle-elimination theorem PHY-019 applies verbatim to the linearized relaxational sector.",
+  "rewiring_extension": "If RG3 rewires, the fine generator is piecewise time-dependent and eliminated variables retain switching history as well; this cannot improve exact Markov closure without an additional theorem. CG-02 supplies the separate rewiring gate.",
+  "scientific_state": "EXACT_NEAREST_NEIGHBOR_MARKOV_CLOSURE_REFUTED__MEMORY_REQUIRED",
+  "scope": "Controlled linearized counterexample and bridge template; not a nonlinear all-state no-go.",
+  "task": "CG-03-RG3-coarse-closure",
+  "theorem": "Even with a frozen emergent cycle, exact block coarse-graining is not closed inside the same nearest-neighbor Markov class: elimination generates a nonzero memory kernel and, already at zero frequency, longer-range effective coupling. One exact C8->C4 counterexample refutes universal exact closure of the proposed class."
+}

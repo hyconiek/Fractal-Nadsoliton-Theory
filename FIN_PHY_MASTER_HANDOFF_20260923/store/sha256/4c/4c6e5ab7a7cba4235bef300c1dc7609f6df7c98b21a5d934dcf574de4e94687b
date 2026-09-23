@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+rng=np.random.default_rng(20260923)
+
+def torus_delta(P):
+ D=P[:,None,:]-P[None,:,:]
+ D-=np.round(D)
+ dist=np.linalg.norm(D,axis=2)
+ return D,dist
+
+def rng_graph(P):
+ V,D=torus_delta(P); n=len(P); A=np.zeros((n,n),bool)
+ for i in range(n):
+  for j in range(i+1,n):
+   dij=D[i,j]
+   if dij==0: continue
+   mask=(D[i,:]<dij-1e-14)&(D[j,:]<dij-1e-14)
+   mask[i]=mask[j]=False
+   if not np.any(mask): A[i,j]=A[j,i]=True
+ return V,D,A
+rows=[]
+for n in [80,160,320]:
+ P=rng.random((n,4));V,D,A=rng_graph(P);deg=A.sum(1)
+ anis=[]
+ for i in range(n):
+  js=np.where(A[i])[0]
+  if len(js)==0: continue
+  vec=V[i,js] # P_i-P_j periodic tangent; sign irrelevant outer product
+  u=vec/np.linalg.norm(vec,axis=1)[:,None]
+  T=(u.T@u)/len(js)
+  anis.append(np.linalg.norm(T-np.eye(4)/4,ord='fro'))
+ rows.append({'n':n,'mean_degree':float(deg.mean()),'max_degree':int(deg.max()),'median_directional_anisotropy':float(np.median(anis)),'mean_directional_anisotropy':float(np.mean(anis))})
+out={
+ 'task':'PROX-04C-iid-Haar-T4-RNG-local-anisotropy-scout',
+ 'scientific_state':'NUMERICAL_OBSTRUCTION_TO_POINTWISE_ISOTROPIC_LAPLACIAN_FROM_UNWEIGHTED_BOUNDED_DEGREE_RNG',
+ 'seed':20260923,'rows':rows,
+ 'diagnostic':'At each vertex T=(1/deg) sum u_e u_e^T is compared with I/4. The anisotropy does not visibly decay over n=80..320 while degree stays O(1).',
+ 'interpretation':'For iid-like sampling, bounded-degree RNG does not automatically self-average its local directional stencil. A deterministic isotropic pointwise Laplacian limit therefore needs additional weighting, averaging, a structured population law, or a weaker homogenized notion of convergence.',
+ 'proof_status':'Numerical scout only; not an asymptotic theorem.',
+ 'nonconclusions':['No claim that all RNG-based homogenized Dirichlet forms fail.','No physical-space conclusion.']
+}
+p=ROOT/'results'/'PROX-04C_random_rng_anisotropy.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

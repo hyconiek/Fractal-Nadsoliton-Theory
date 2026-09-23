@@ -1,0 +1,13 @@
+# OCB-HANKEL-03B — checkpointed composite-rank certificate
+
+Status: **ANYTIME_VALID_CHECKPOINTED_MATRIX_RANK_CERTIFICATE_CONSTRUCTED__BROAD_NULL_REMAINS_EXPENSIVE**.
+
+The determinant e-process from HANKEL-03A was exact but power-poor.  This round replaces determinant compression by a direct singular-value certificate on the 4x4 whitened cross-Hankel matrix.  At a frozen checkpoint, rectangular matrix Bernstein bounds `||Hhat-H||_op`; under `rank(H)<=3`, Weyl then forces `sigma4(Hhat)` below the same radius.  Alpha is split over a fixed nine-checkpoint grid, so the union of all checkpoint rejections remains at most 5%.
+
+Frozen alias `sigma4 = 0.003406082785796054`.  The first population-design checkpoint whose radius is below that signal is **256,000,000** reset paths for the broad rank<=3 class, and **16,500,000** if the prefix/suffix two-jump marginals are independently frozen to the strict iid pair law.
+
+The pair-matched improvement is theorem-based: standardized pair features satisfy `E[FF^T]=E[GG^T]=I`, giving the smaller variance proxy.  The residual of this identity in the replay is `4.441e-16`.
+
+## Boundary
+
+This is checkpoint-anytime-valid, not a continuous-time e-process.  A composite likelihood-ratio e-value remains blocked because a certified global likelihood supremum over the continuous positive rank<=3 process class is not available; a local EM optimizer is not an admissible substitute.

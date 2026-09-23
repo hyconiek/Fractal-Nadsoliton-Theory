@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+# Two target-blind multiplicative refinement laws beginning at q0=12.
+def factors(q):
+ out=[];x=q;p=2
+ while p*p<=x:
+  if x%p==0:
+   a=0
+   while x%p==0:a+=1;x//=p
+   out.append((p,a,p**a))
+  p+=1
+ if x>1:out.append((x,1,x))
+ return out
+rows=[]
+for n in range(0,9):
+ qa=12*2**n
+ qb=12*6**n
+ rows.append({'n':n,'q_A':qa,'primary_A':factors(qa),'q_B':qb,'primary_B':factors(qb)})
+out={
+ 'task':'CARRIER-02C_refinement_path_dimension_nonidentifiability',
+ 'scientific_state':'PROVED_FINITE_CARRIER_DOES_NOT_SELECT_NUMBER_OF_GROWING_PRIMARY_FACTORS',
+ 'rows':rows,
+ 'theorem':'For a cyclic carrier Z_q the characteristic p-primary torsor factors are canonical. Along a refinement sequence q_n, a factor can approach a continuous circle only if its prime-power size diverges. Starting from q0=12, q_n=12*2^n has one diverging primary factor, while q_n=12*6^n has two. Both laws are multiplicative, nested and target-blind. Therefore the finite q=12 carrier alone does not select an arithmetic continuum factor count.',
+ 'status_CARRIER_SOURCE_02':'PARTIAL_PASS_FIXED_FINITE_FACTORS__FAIL_FIXED_CONTINUUM_DIMENSION_WITHOUT_REFINEMENT_SOURCE',
+ 'nonconclusions':['Arithmetic factor count is not topological or physical dimension without a sourced metric/limit.']
+}
+p=ROOT/'results'/'CARRIER-02C_refinement_dimension.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

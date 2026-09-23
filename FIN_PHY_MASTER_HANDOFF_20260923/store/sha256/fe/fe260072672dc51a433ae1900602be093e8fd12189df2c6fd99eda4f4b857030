@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+
+def wf(d): return math.cos(0.18575*d+0.1625)/(1+d**1.8)
+extended={d:wf(d) for d in range(1,13)}
+# witness PSD failure of the infinite signed continuation at k=0.18575.
+k=0.18575; D=100
+partial=sum(2*wf(d)*(1-math.cos(k*d)) for d in range(1,D+1))
+# |2 w_d(1-cos kd)| <=4/(1+d^1.8) <=4/d^1.8; integral tail
+abs_tail_bound=4*(D**(-0.8))/0.8
+upper=partial+abs_tail_bound
+# roundoff payment massively conservative relative to the margin
+roundoff_payment=1e-10
+cert_upper=upper+roundoff_payment
+assert cert_upper<0
+out={
+ 'task':'OPERATOR-REFINE-04_literal_strict_formula_extension_test',
+ 'scientific_state':'REFUTED_AS_POSITIVE_DIRICHLET_MARKOV_REFINEMENT',
+ 'literal_extension_formula':'w_d=cos(0.18575*d+0.1625)/(1+d^1.8)',
+ 'predicted_shells':{str(d):extended[d] for d in range(1,13)},
+ 'first_negative_shell':min(d for d,v in extended.items() if v<0),
+ 'negative_shell_value':extended[min(d for d,v in extended.items() if v<0)],
+ 'psd_witness':{'k':k,'partial_sum_D':D,'partial_symbol':partial,'absolute_infinite_tail_bound':abs_tail_bound,'roundoff_payment':roundoff_payment,'certified_symbol_upper_bound':cert_upper},
+ 'theorem':'For an infinite translation-invariant Dirichlet/Markov jump operator, the Fourier symbol must be nonnegative for every k. The literal analytic continuation has symbol <0 at the displayed k even after paying the absolute tail bound, hence it is not a PSD jump-Laplacian continuation.',
+ 'consequence':'The closed formula used to define the finite C12 kernel cannot simply be promoted to an infinite positive spatial interaction law. Formula evaluation beyond the frozen distance domain and positive continuum refinement are different source obligations.',
+ 'nonconclusions':['The finite strict C12 operator is not challenged.','A signed non-Markov operator with different physical semantics is not ruled out by this test.']
+}
+(ROOT/'results'/'OPERATOR-REFINE-04_literal_formula_test.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

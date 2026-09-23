@@ -1,0 +1,42 @@
+# OCB-CHANNEL-05 — preregistered finite two-level protocol
+
+## Purpose
+
+CHANNEL-04 proved conditional finite-control separation of heat, unitary and wave probability laws.  CHANNEL-05 turns that mathematics into a fail-closed protocol while keeping the physical-execution gate open.
+
+## Frozen calibration gate
+
+Before unblinding measurement outcomes an independent calibration must certify:
+
+- first strict dimensionless time `t1 in [0.20,0.25]`;
+- relative two-control distortion `eta <= 0.02`;
+- common attempt-level click efficiency in `[0.98,1]`.
+
+The calibration stage receives failure budget 1%.  FIN does not supply the laboratory clock, conversion to seconds, or a calibration sample-size model.
+
+## Attempt record
+
+Every attempt records exactly one of:
+
+1. escape to another state;
+2. return to the prepared state;
+3. no-click.
+
+No-clicks may not be postselected away.
+
+The theorem-design counts are:
+
+- level 1: **25,514 attempts**, Hoeffding radius `0.0095`;
+- level 2: **2,559 attempts**, Hoeffding radius `0.03`.
+
+Each level receives 2% error budget; together with calibration the frozen union-bound budget is <=5%.
+
+The efficiency-paid level-1 escape bands are approximately:
+
+- wave `[0.0002002, 0.0005671]`;
+- unitary `[0.0208693, 0.0336227]`;
+- heat `[0.260846, 0.415077]`.
+
+Level 2 remains widely separated as well.  The no-fit rule assigns a category only if both confidence intervals intersect exactly one and the same predeclared category band.  Otherwise it returns `NO_FIT`; no nuisance refit is permitted.
+
+These are conservative mathematical design numbers, not laboratory recommendations.

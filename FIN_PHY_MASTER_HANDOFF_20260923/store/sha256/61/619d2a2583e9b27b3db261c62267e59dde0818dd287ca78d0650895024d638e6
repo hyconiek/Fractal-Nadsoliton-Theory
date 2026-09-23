@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+N=12
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+P=W/s; np.fill_diagonal(P,0.0)
+# Synthetic but nontrivial calibrated readout: 90% correct label, 5% to each cyclic adjacent reported label.
+C=np.zeros((N,N),float)
+for j in range(N):
+    C[j,j]=0.90; C[j,(j-1)%N]=0.05; C[j,(j+1)%N]=0.05
+# Destination-dependent recording efficiencies, intentionally breaking D12 at the apparatus level.
+eta=np.linspace(0.80,0.98,N)
+B=np.diag(1/eta)@np.linalg.inv(C.T)
+recovery_err=0.0
+threshold=float('inf'); witness=None
+for i in range(N):
+    p=P[i]
+    z=float(eta@p)
+    q=C.T@(eta*p)/z
+    u=B@q
+    phat=u/u.sum()
+    recovery_err=max(recovery_err,float(np.max(np.abs(phat-p))))
+    near={(i-1)%N,(i+1)%N}
+    for a in near:
+        for b in range(N):
+            if b in near: continue
+            row=(np.eye(N)[a]-np.eye(N)[b])@B
+            margin=float(u[a]-u[b])
+            norm1=float(np.sum(np.abs(row)))
+            eps=margin/norm1
+            if eps<threshold:
+                threshold=eps; witness={'source':i,'near':a,'competitor':b,'inverse_margin':margin,'row_l1':norm1,'true_prob_margin':float(p[a]-p[b])}
+# family-wise Hoeffding control for 12 source preparations x 12 reported labels
+alpha=0.05
+n_all=math.ceil(math.log(2*N*N/alpha)/(2*threshold**2))
+# Explicit nonidentifiability controls
+C_flat=np.ones((N,N))/N
+rank_flat=int(np.linalg.matrix_rank(C_flat))
+result={
+ 'task':'OCB-CAL-01',
+ 'status':'CALIBRATED_LINEAR_IDENTIFIABILITY_WITH_FINITE_SAMPLE_CYCLE_CERTIFICATE',
+ 'model':{
+   'true_jump_law':'p_i over 12 destinations',
+   'destination_efficiency':'eta_j in (0,1]',
+   'confusion':'C[j,y]=P(report y | true destination j)',
+   'observed_conditioned_law':'q_i=C^T diag(eta) p_i / (eta^T p_i)'
+ },
+ 'theorem':{
+   'conditions':['C is invertible','all eta_j > 0 and calibrated'],
+   'inverse':'B=diag(eta)^(-1) (C^T)^(-1), so B q_i = p_i/(eta^T p_i)',
+   'ordinal_recovery':'sign(p_i[a]-p_i[b]) = sign((e_a-e_b)^T B q_i); normalization is unnecessary for ranking.',
+   'confidence_rule':'If ||qhat_i-q_i||_inf <= eps, comparison a>b is certified whenever (e_a-e_b)^T B qhat_i > eps ||(e_a-e_b)^T B||_1.'
+ },
+ 'synthetic_calibration_fixture':{
+   'C':'0.90 correct, 0.05 each adjacent reported label',
+   'eta_min':float(eta.min()),'eta_max':float(eta.max()),
+   'C_condition_number_inf':float(np.linalg.cond(C.T,np.inf)),
+   'max_exact_recovery_error':recovery_err,
+   'uniform_coordinate_error_threshold_preserving_all_24_nearest-neighbour-vs-competitor inequalities':threshold,
+   'limiting_witness':witness,
+   'hoeffding_family_95pct_recorded_exits_per_source':n_all,
+   'note':'This is a synthetic stress fixture for the theorem, not apparatus calibration or a laboratory sample-size recommendation.'
+ },
+ 'failure_controls':{
+   'singular_confusion':'If C is singular, only C^T diag(eta) p is observable; e.g. fully uniform confusion has rank 1 and erases the carrier.',
+   'uncalibrated_censoring':'If eta is unknown, q identifies only the normalized product eta_j p_j; p and eta can trade against each other, so carrier recovery is not generally identifiable.',
+   'zero_efficiency':'Any eta_j=0 makes probability assigned to destination j invisible without extra structure.',
+   'uniform_confusion_rank':rank_flat
+ },
+ 'decision':'A calibrated, invertible readout plus strictly positive calibrated censoring preserves unlabeled cycle identifiability. Calibration is a real premise; without it the operational carrier claim can fail.',
+ 'nonconclusion':'No actual detector/confusion matrix/efficiency calibration or physical data are supplied.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-CAL-01_calibrated_identifiability.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'threshold':threshold,'n95':n_all,'recovery_err':recovery_err,'witness':witness},indent=2))

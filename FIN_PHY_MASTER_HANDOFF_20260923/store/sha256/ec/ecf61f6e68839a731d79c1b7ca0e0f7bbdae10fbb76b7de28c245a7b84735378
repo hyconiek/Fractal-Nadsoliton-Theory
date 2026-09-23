@@ -1,0 +1,246 @@
+{
+  "causal_ball_bridge": {
+    "commuting_diagram": "Marginalize to B_t(y), evolve the restricted causal cone with identical boundary-independent event data, then observe y = evolve globally then observe y.",
+    "cost": "The retained memory grows with causal-ball size; this is not a fixed-dimensional Markov closure.",
+    "defect": "0 exactly for the declared finite-horizon local observable when the full causal-ball joint marginal is retained.",
+    "path9_example_memory_growth": {
+      "0": {
+        "cell_count": 1,
+        "cells": [
+          4
+        ],
+        "full_label_states": 12
+      },
+      "1": {
+        "cell_count": 3,
+        "cells": [
+          3,
+          4,
+          5
+        ],
+        "full_label_states": 1728
+      },
+      "2": {
+        "cell_count": 5,
+        "cells": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "full_label_states": 248832
+      },
+      "3": {
+        "cell_count": 7,
+        "cells": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "full_label_states": 35831808
+      },
+      "4": {
+        "cell_count": 9,
+        "cells": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "full_label_states": 5159780352
+      }
+    },
+    "statement": "For any read-radius-one event rule, a target-cell observable after t causally ordered event layers depends only on the initial joint distribution on graph ball B_t(y) and the event/randomness data inside its causal cone."
+  },
+  "claim_decision": {
+    "finite_horizon_causal_ball_bridge": "PASS_IN_SCOPE_EXACT",
+    "fixed_mu_markov_bridge": "REFUTED_IN_SCOPE",
+    "fixed_one_site_marginal_markov_bridge": "REFUTED_IN_SCOPE",
+    "fixed_pair_marginal_markov_bridge_on_degree2_path": "REFUTED_IN_SCOPE",
+    "full_microstate_information_preservation": "NOT_CLAIMED",
+    "physical_medium_identity": "NOT_LICENSED"
+  },
+  "dynamic_nonclosure": {
+    "barker": {
+      "one_site_marginal_closure_failure": {
+        "labels": [
+          0,
+          1
+        ],
+        "mu_l2": 0.0709231545246903,
+        "preparation_cross": "0.5(a,b)+0.5(b,a)",
+        "preparation_same": "0.5(a,a)+0.5(b,b)",
+        "same_single_site_marginals": true,
+        "tv": 0.11174022568346642
+      },
+      "pair_marginal_closure_failure": {
+        "center_mu_l2_after": 0.0024619941697252546,
+        "center_tv_after": 0.0015019506063046993,
+        "even_support": [
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            10,
+            11,
+            11
+          ],
+          [
+            11,
+            10,
+            11
+          ],
+          [
+            11,
+            11,
+            10
+          ]
+        ],
+        "initial_all_pair_marginals_identical": true,
+        "labels": [
+          10,
+          11
+        ],
+        "odd_support": [
+          [
+            10,
+            10,
+            11
+          ],
+          [
+            10,
+            11,
+            10
+          ],
+          [
+            11,
+            10,
+            10
+          ],
+          [
+            11,
+            11,
+            11
+          ]
+        ],
+        "pair_tv_after": 0.10924534534572894
+      },
+      "retained_mean_closure_failure": {
+        "initial_TV": 0.33333333333333337,
+        "initial_mu_difference_l2": 1.606458802480286e-16,
+        "neighbor_label": 9,
+        "output_distribution_TV": 0.1535846279407757,
+        "output_mu_l2": 0.010660151956244564
+      }
+    },
+    "metropolis": {
+      "one_site_marginal_closure_failure": {
+        "labels": [
+          0,
+          11
+        ],
+        "mu_l2": 0.1741110627065596,
+        "preparation_cross": "0.5(a,b)+0.5(b,a)",
+        "preparation_same": "0.5(a,a)+0.5(b,b)",
+        "same_single_site_marginals": true,
+        "tv": 0.2555694546048739
+      },
+      "pair_marginal_closure_failure": {
+        "center_mu_l2_after": 0.1405857579384475,
+        "center_tv_after": 0.07595228744701858,
+        "even_support": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            11,
+            11
+          ],
+          [
+            11,
+            0,
+            11
+          ],
+          [
+            11,
+            11,
+            0
+          ]
+        ],
+        "initial_all_pair_marginals_identical": true,
+        "labels": [
+          0,
+          11
+        ],
+        "odd_support": [
+          [
+            0,
+            0,
+            11
+          ],
+          [
+            0,
+            11,
+            0
+          ],
+          [
+            11,
+            0,
+            0
+          ],
+          [
+            11,
+            11,
+            11
+          ]
+        ],
+        "pair_tv_after": 0.218800990807202
+      },
+      "retained_mean_closure_failure": {
+        "initial_TV": 0.33333333333333337,
+        "initial_mu_difference_l2": 1.606458802480286e-16,
+        "neighbor_label": 6,
+        "output_distribution_TV": 0.02094404032787576,
+        "output_mu_l2": 0.02421721243996463
+      }
+    }
+  },
+  "error_rule": {
+    "generic": "If an approximate coarse Markov kernel has one-step TV defect <= epsilon and is TV-contractive, the t-step defect is <= t*epsilon by telescoping.",
+    "implication": "The exact witnesses above prove epsilon cannot be zero for coarse states containing only mu, only one-site marginals, or (for a degree-two update) only pair marginals."
+  },
+  "partition_conclusion": "Both tested partitions commute statically. Dynamically every cut active edge requires cross-boundary correlation memory; the alternating partition has more cut edges and therefore a larger structural memory burden. This is a property of the supplied support, not emergent medium identity.",
+  "static_bridge_composition": {
+    "B1": "per-cell distribution p_x -> retained mean mu_x=X^T p_x",
+    "B2": "block arithmetic mean of retained means",
+    "direct": "average p inside each block, then apply X^T",
+    "partitions": {
+      "alternating_B": {
+        "cut_edges_on_path5": 4,
+        "max_B2B1_minus_direct": 2.7755575615628914e-17
+      },
+      "contiguous_A": {
+        "cut_edges_on_path5": 1,
+        "max_B2B1_minus_direct": 5.551115123125783e-17
+      }
+    },
+    "theorem": "Linearity gives B2 o B1 = direct coarse-graining exactly for every partition and every preparation."
+  },
+  "status": "PASS_IN_SCOPE_WITH_GROWING_CAUSAL_MEMORY",
+  "task": "PHY-008"
+}

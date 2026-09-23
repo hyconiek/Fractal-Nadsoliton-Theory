@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+# deterministic mixed subdivisions of a circumference-12 circle
+schemes={
+ 'binary_4':[4]*12,
+ 'ternary_3':[3]*12,
+ 'mixed':[2+(i%4) for i in range(12)]
+}
+
+def vertices(parts):
+ xs=[0.0]
+ x=0.0
+ for m in parts:
+  h=1.0/m
+  for _ in range(m): x+=h; xs.append(x)
+ # last point duplicates circumference endpoint, remove
+ return np.array(xs[:-1])
+
+def circle_dist(x,y,L=12.0):
+ d=abs(x-y)%L; return min(d,L-d)
+
+def energy(xs,fun,kappa=1.0,L=12.0):
+ vals=fun(xs)
+ n=len(xs);E=0.0;mesh=0.0
+ for i in range(n):
+  j=(i+1)%n
+  ell=(xs[j]-xs[i])%L
+  mesh=max(mesh,ell)
+  E+=0.5*kappa*(vals[j]-vals[i])**2/ell
+ return E,mesh
+# smooth periodic test field and exact continuum energy
+fun=lambda x: np.sin(2*np.pi*x/12)+0.3*np.cos(4*np.pi*x/12)
+# integral 1/2 int |u'|^2 = 1/2 * L/2 * ((2pi/L)^2 + .3^2*(4pi/L)^2)
+L=12.0
+exact=0.5*(L/2)*((2*np.pi/L)**2 + (0.3**2)*(4*np.pi/L)**2)
+rows={}
+for name,parts in schemes.items():
+ xs=vertices(parts);E,mesh=energy(xs,fun)
+ # covering radius <= max edge/2 in same ambient circle
+ rows[name]={'vertex_count':len(xs),'mesh':mesh,'GH_upper_bound_via_common_circle':mesh/2,
+             'PL_Dirichlet_energy_on_samples':E,'smooth_continuum_energy':exact,'abs_energy_error':abs(E-exact)}
+# refine uniformly to show convergence
+conv=[]
+for m in [1,2,4,8,16,32,64]:
+ xs=vertices([m]*12);E,mesh=energy(xs,fun)
+ conv.append({'m_per_original_edge':m,'vertices':len(xs),'mesh':mesh,'gh_bound':mesh/2,'energy':E,'error':abs(E-exact)})
+out={
+ 'task':'REFINE-CYCLE-01_schedule_independent_metric_graph_continuum',
+ 'scientific_state':'PROVED_CONDITIONAL_UNIQUE_1D_METRIC_CONTINUUM_UNDER_EDGE_SUBDIVISION',
+ 'theorem_metric':'Give each recovered C12 nearest-neighbor edge the same length ell0. Any refinement obtained by subdividing an old edge into positive sublengths summing to ell0 embeds isometrically into the same metric circle: vertex shortest-path distance equals the circle geodesic distance. If mesh ->0, the vertex metric spaces converge to that circle with GH distance at most mesh/2, independently of binary/ternary/mixed subdivision schedule.',
+ 'theorem_action':'With refinement-compatible conductance c(ell)=kappa0/ell, the discrete edge energy (kappa0/2) sum (u_j-u_i)^2/ell_i is exactly the continuum Dirichlet energy (kappa0/2) int |u_PL_prime|^2 ds of the piecewise-linear interpolation. Hence arbitrary edge subdivision is action-consistent, and smooth sampled fields converge to the same Dirichlet continuum as mesh ->0.',
+ 'schemes':rows,'uniform_convergence':conv,
+ 'interpretation':'Once strict W sources C12 and one adopts metric-edge subdivision as the refinement category, the continuum topology/metric shape is S1 and no arithmetic choice between q x2, x3, x6 changes it. Absolute circumference and physical interpretation remain unsourced.',
+ 'nonconclusions':['The theorem does not prove nature uses strongest-weight adjacency or graph geometric realization.','It does not provide an SI length scale or higher-dimensional space.']
+}
+p=ROOT/'results'/'REFINE-CYCLE-01_continuum.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

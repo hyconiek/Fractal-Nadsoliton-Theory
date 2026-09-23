@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+lam=[float(L[k]) for k in range(1,6)]
+out={
+ 'task':'DYN-TORUS-persistence-controls',
+ 'scientific_state':'PROVED_HD_PHASE_PERSISTENCE_IS_DYNAMICS_DEPENDENT__EXACT_T5_TORI_EXIST_CONDITIONALLY',
+ 'strict_doublet_eigenvalues':lam,
+ 'heat':'I_k(t)=exp(-2 lambda_k t) I_k(0); every nonzero mode radius decays. Phase labels can remain constant but the fixed-radius T5 collapses toward the origin.',
+ 'complex_unitary':'For i dot a_k=lambda_k a_k, each I_k=|a_k|^2 is exactly conserved and each phase advances linearly. Every fixed-power T5 is an exact invariant torus. This is a classical/complex linear-wave fact as well as a Hilbert-space fact; it is not uniquely quantum.',
+ 'real_wave':'Each isotropic doublet conserves its oscillator energy and angular momentum. Generic radii breathe, but circular initial data p_k=+/-sqrt(lambda_k) J q_k give constant radius and uniform phase rotation. The product of five such circular solutions is an exact T5 invariant torus in phase space.',
+ 'selection_no_go':'Heat, unitary/complex-wave and real-wave dynamics are all natural functions/lifts of the same strict A yet have different HDIM persistence. Choosing the dynamics because it preserves T5 would be target coding unless an independent source principle selects it.',
+ 'nonconclusions':['Invariant dynamical tori are not physical space.','No physical clock, quantum postulate or preferred sign of rotation is sourced.']
+}
+p=ROOT/'results'/'DYN-TORUS_persistence.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

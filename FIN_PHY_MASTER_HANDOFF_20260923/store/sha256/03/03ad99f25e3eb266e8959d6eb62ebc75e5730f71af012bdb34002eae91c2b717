@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+need=['HDIM-01_shape_torus.json','HDIM-02_shape_metric_clt.json','HDIM-03_q_refinement_shape.json','HDIM-04_block_stability.json','HDIM-05_population_extent.json','HDIM-06_scalar_cyclic_no_go.json','HDIM-07_rng_tangent_scout.json']
+D={n:json.loads((ROOT/'results'/n).read_text()) for n in need}
+out={
+ 'task':'HDIM-08-integrated-verdict',
+ 'scientific_state':'WEAK_HDIM_INTERNAL_PASS__SPATIAL_HDIM_SOURCE_NOT_FOUND',
+ 'positive_chain':['exact per-cell shape quotient T3/S1 = T2','positive local shape metric from phase Hessian','sqrt(N)-scaled 2D Gaussian tangent in finite-N auxiliary ensemble','rapid q-refinement convergence of the tangent metric','leading Gaussian tangent fixed under independent block averaging','parameter-free sparse RNG candidate on standardized 2D tangent'],
+ 'negative_chain':['T2 directions are massive, not additional symmetry/Goldstone directions','unrescaled cloud collapses for log M/N -> 0','all positive-amplitude scalar harmonics on one cyclic carrier have exactly one continuous translation null direction','RNG continuum/operator bridge is not proved','no current strict source identifies the 2D internal tangent with physical space'],
+ 'verdict':'HDIM-SOURCE succeeds only in a weak/internal sense: current FIN already contains a genuine fixed-dimensional two-dimensional shape manifold and a refinement-stable Gaussian tangent carrier. It fails the stronger emergent-space criterion because that carrier is massive and collapses in the sharp-cell subexponential-population regime. A genuinely higher-dimensional low-energy carrier still requires new non-scalar/product-group/matrix-valued structure or another exact symmetry.',
+ 'next_atoms':['HDIM-09 search current strict/non-scalar objects for a >=2-dimensional exact symmetry orbit rather than another scalar cyclic harmonic','PROX-02 prove/refute RNG graph-Laplacian convergence on a declared 2D manifold sampling model','TIME-SOURCE remains independent','RANK-SOURCE remains independent'],
+ 'forbidden_promotions':['Do not call the T2 shape torus spacetime.','Do not call standardized Gaussian fluctuations extra spatial dimensions.','Do not infer 3D from two massive shape coordinates plus the S1 translation coordinate.']
+}
+p=ROOT/'results'/'HDIM-08_verdict.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

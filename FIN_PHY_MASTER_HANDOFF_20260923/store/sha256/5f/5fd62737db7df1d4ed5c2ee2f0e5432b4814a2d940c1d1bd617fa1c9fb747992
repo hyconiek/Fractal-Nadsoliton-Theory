@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+for name in ['HDIM-09_strict_commutant_torus.json','HDIM-10_simplex_flat_torus.json','HDIM-11_nonlinear_breaking.json','HDIM-12_kronecker_refinement.json']:
+ assert (ROOT/'results'/name).exists()
+out={
+ 'task':'HDIM-13-revised-HDIM-source-verdict',
+ 'scientific_state':'STRONG_OPERATOR_LEVEL_HDIM_PASS__NONLINEAR_SPATIAL_BRIDGE_OPEN',
+ 'new_positive_result':'The full strict Dirichlet/operator core contains an exact canonical continuous centralizer with identity component T5. Generic fixed-radius states therefore carry a genuine five-dimensional compact spectral-phase orbit. A small-radius copy lies entirely inside the probability simplex, and the torus survives Kronecker refinement/forgetful maps exactly on the fiber-constant sector.',
+ 'why_previous_no_go_survives':'The prior no-go concerned low-energy stationary manifolds of the nonlinear entropy-plus-gain model. Entropy couples relative Fourier phases and explicitly breaks the independent T5 rotations; on the localized branch only one continuous phase degeneracy survives. Thus there is no contradiction.',
+ 'updated_hdim_status':{
+   'FIN_internal_fixed_dimensional_manifold': 'PASS (T5 spectral-phase orbit of strict quadratic core)',
+   'refinement_persistence': 'PASS conditionally/exactly for Kronecker-sum refinement with zero fiber mode',
+   'inside_probability_simplex': 'PASS in a nonempty small-radius regime',
+   'protected_by_full_nonlinear_equilibrium_model': 'FAIL',
+   'identified_as_physical_space': 'OPEN / unsupported',
+   'dimension_2_or_3_selected': 'NO; the derived operator orbit dimension is 5, not fitted to a target'
+ },
+ 'central_question_now':'Can any principled FIN law protect/select a nontrivial submanifold of the strict T5 spectral-phase carrier against entropy/nonlinear locking, and can a state/composition law populate it so that locality emerges without choosing target dimension?',
+ 'next_atoms':['HDIM-14 classify exact subgroups/subtori of T5 that remain symmetries after adding admissible nonlinear terms, without target coding','HDIM-15 test parameter-free proximity/continuum on T5 using the strict Dirichlet metric and mandatory null alternatives','HDIM-16 determine whether the T5 phases are operationally observable or removable carrier gauge under complete FIN records','TIME-SOURCE and RANK-SOURCE remain independent'],
+ 'forbidden_promotions':['T5 is not 5D spacetime.','The existence of a flat strict-action orbit does not show nature populates it.','Do not identify independent modal rotations with label translations or a physical gauge group.']
+}
+p=ROOT/'results'/'HDIM-13_revised_verdict.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

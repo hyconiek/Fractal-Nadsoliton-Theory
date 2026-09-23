@@ -1,0 +1,39 @@
+import json, math
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+fold=json.loads((ROOT/'inputs'/'MP7-026_controlled_fold.json').read_text())
+coll=json.loads((ROOT/'results'/'PHY-022_collective.json').read_text())
+CH=sum(fold['formal_coefficients']['soft_abs_eigen_over_sqrt_epsilon'])/2
+eps=1e-8
+r=CH*math.sqrt(eps)
+K=float(coll['dmu_norm_sq']) # set kappa_cont=1 as a dimensionless normalization for diagnostic only
+qvals=np.array([0,0.25,0.5,1,2,4],float)
+over=[]; inert=[]
+gamma=0.1
+for q in qvals:
+    omega2=r+K*q*q
+    over.append({'q':float(q),'decay_rate':float(omega2),'pole':f'{-omega2}+0j'})
+    disc=gamma*gamma-4*omega2
+    if disc>=0:
+        roots=[(-gamma+math.sqrt(disc))/2,(-gamma-math.sqrt(disc))/2]
+        rr=[str(x) for x in roots]
+    else:
+        om=math.sqrt(-disc)/2
+        rr=[str(complex(-gamma/2,om)),str(complex(-gamma/2,-om))]
+    inert.append({'q':float(q),'omega2':float(omega2),'poles_s':rr})
+out={
+ 'task':'PHY-023','scientific_state':'PASS_CONDITIONAL_DISPERSION__PROPAGATION_REQUIRES_IMPORTED_INERTIA',
+ 'diagnostic_branch':'certified stable side of simple fold at epsilon=1e-8',
+ 'soft_curvature_midpoint':r,
+ 'dimensionless_continuum_stiffness_diagnostic':K,
+ 'overdamped_response':'G_R(s,q)=1/[s+Gamma(r+K q^2)] with Gamma=1 in diagnostic; pure relaxation/diffusion',
+ 'overdamped_samples':over,
+ 'inertial_response':'G_R(s,q)=1/[s^2+gamma s+r+K q^2]; inertia and gamma are added PM',
+ 'inertial_gamma':gamma,'inertial_samples':inert,
+ 'continuum_group_speed_high_q':'sqrt(K) in chosen dimensionless coordinates only; requires length/time anchors and inertial PM',
+ 'lattice_influence_consistency':'finite-range continuous-time lattice generators/ODEs have analytic graph-distance tails rather than an exact discrete-time cone; their series begin at order distance, matching the factorial-tail structure of PHY-006. Exact finite-speed wave cones arise only after the continuum hyperbolic PDE premise/limit.',
+ 'nonconclusions':['no photon','no Lorentz invariance','no rest mass identification','no physical c','static inverse Hessian is not a propagator']
+}
+(ROOT/'results'/'PHY-023_propagator.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

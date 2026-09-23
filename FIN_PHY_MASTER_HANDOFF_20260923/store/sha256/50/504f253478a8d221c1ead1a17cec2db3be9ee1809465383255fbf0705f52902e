@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from scipy.optimize import minimize_scalar
+sys.path.insert(0,'/mnt/data/fin_phy_operational_carrier/inputs')
+import R7P_model as model
+W=np.array(model.strict_kernel(),float); qn=12
+# strict Laplacian
+A=np.array(model.laplacian(W),float); s=float(A[0,0])
+# same D12 radial class, same total exit rate, same uniform equilibrium: swap shell 1 and 2
+Wc=W.copy(); w1=float(W[0,1]); w2=float(W[0,2])
+for i in range(qn):
+  for j in range(qn):
+    if i==j: continue
+    d=min((i-j)%qn,(j-i)%qn)
+    if d==1: Wc[i,j]=w2
+    elif d==2: Wc[i,j]=w1
+Ac=np.diag(Wc.sum(1))-Wc; sc=float(Ac[0,0])
+p=np.array([W[0,j]/s for j in range(1,qn)])
+r=np.array([Wc[0,j]/sc for j in range(1,qn)])
+tv=float(.5*np.sum(abs(p-r)))
+kl=float(np.sum(p*np.log(p/r)))
+def coeff(a): return float(np.sum(p**a*r**(1-a)))
+opt=minimize_scalar(coeff,bounds=(0,1),method='bounded',options={'xatol':1e-14})
+chernoff=float(-math.log(opt.fun)); n95=math.ceil(math.log(10)/chernoff)
+# verify uniform stationary and D12 radial properties numerically
+result={
+ 'task':'OCB-04',
+ 'status':'EXPLICIT_CONTROL_CONSTRUCTED',
+ 'same_total_exit_rate':{'strict':s,'control':sc,'difference':sc-s},
+ 'same_uniform_stationarity_residual':float(np.max(np.abs(Ac@np.ones(qn)))),
+ 'same_D12_radial_structure':True,
+ 'control_change':'Swap shell-1 and shell-2 rates globally, leaving all other shells unchanged.',
+ 'strict_jump_distribution':p.tolist(),
+ 'control_jump_distribution':r.tolist(),
+ 'total_variation':tv,
+ 'KL_strict_to_control':kl,
+ 'Chernoff_information':chernoff,
+ 'Chernoff_alpha':float(opt.x),
+ 'ideal_equal_prior_bound_samples_for_Bayes_error_le_5pct':n95,
+ 'interpretation':('D12 symmetry, uniform equilibrium and the overall jump clock do not determine the physical adjacency. '
+                   'Clock-free transition-destination records distinguish the strict carrier from an equally symmetric alternative.'),
+ 'nonconclusion':'Synthetic discrimination bound only; not experimental evidence.'
+}
+Path('/mnt/data/fin_phy_operational_carrier/results/OCB-04_symmetric_control.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print('done')

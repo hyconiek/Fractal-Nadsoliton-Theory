@@ -1,0 +1,40 @@
+# PHY-016 — genuine q extension
+
+**Scientific status: PROVED_GENERAL_Q_PHASE_ALIGNMENT; localized-phase survival is numerical scout only.**
+
+## Genuine families
+
+For `q=12,24,48,96` define low Fourier pairs `k=3,4,5` on `Z_q`. Two families were tested:
+
+1. `smooth_rank6`: the three cosine/sine pairs only;
+2. `smooth_plus_parity`: the same six columns plus the genuine alternating character `k=q/2`.
+
+Pointwise feature amplitudes are held at the q=12 convention. Thus uniform feature covariance stays fixed while the Gram eigenvalues scale with q; this normalization is explicit rather than silently identifying q with a physical length.
+
+Every listed q has q distinct feature rows. The negative control made by literally repeating the twelve q=12 rows has only twelve unique rows, so it is correctly classified as replication rather than state-count growth.
+
+## Exact phase theorem for general q
+
+The MP7 Bessel expansion generalizes directly.
+
+For the rank-six family the Fourier support is
+
+`3 m3 + 4 m4 + 5 m5 = 0 (mod q)`.
+
+All coefficients are nonnegative, so the aligned phase `phi=0` globally maximizes the partition function at fixed amplitudes. Since `gcd(3,4,5,q)=1`, the equality annihilator is precisely the q translation phases.
+
+For even q with an active alternating mode and positive alternating amplitude, the support becomes
+
+`3 m3 + 4 m4 + 5 m5 = 0 (mod q/2)`.
+
+After fixing the alternating sign, the equality annihilator contains exactly the q/2 even translations. Restoring the sign by odd translations gives the full q translation orbit. When all low modes are active their common translation stabilizer is trivial, while reflection fixes the aligned field; hence the generic D_q orbit size is q.
+
+This proves that **phase organization survives genuine q growth**. It does not prove that every q has the same phase diagram or transition gain.
+
+## Frozen numerical scout
+
+Using the fixed grid `g={3.5,4,5,6,7}` and six aligned starts, nonzero low-potential minima are found for q=12,24,48,96 at sufficiently large g. Their onset moves with q. This is evidence that the localized mechanism is not restricted to exactly twelve labels, but it is not a certified global coexistence theorem for q>12.
+
+## Decision
+
+PHY-016 passes through the exact alignment mechanism. The q=12 value is not essential for phase alignment, while symmetry multiplicity and transition locations are q-dependent. The `smooth_plus_parity` family has a two-sublattice character in the large-q limit because the alternating mode remains microscopic; it must not be silently called a smooth circle continuum.

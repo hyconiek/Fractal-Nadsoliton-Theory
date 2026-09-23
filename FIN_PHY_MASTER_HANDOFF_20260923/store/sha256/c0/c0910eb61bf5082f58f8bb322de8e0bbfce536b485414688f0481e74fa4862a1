@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,Lam,X7,C4,A7=model.feature_spaces()
+lam=np.array([Lam[k] for k in range(1,6)],float)
+R=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],float)
+unitary_rates=-(R@lam)
+out={
+ 'task':'DYN-TORUS-exact-linear-calculi',
+ 'scientific_state':'PROVED_STRICT_T5_PHASE_DYNAMICS_IS_EQUATION_DEPENDENT_AND_MODE_DECOUPLED',
+ 'strict_doublet_eigenvalues':lam.tolist(),
+ 'heat':{
+  'law':'dot z_k=-lambda_k z_k',
+  'solution':'z_k(t)=exp(-lambda_k t) z_k(0)',
+  'phase_result':'Each nonzero modal orientation phi_k is constant; origin-free bispectral phase coordinates are constant. Radii decay.',
+  'cross_mode_influence':'zero exactly in the spectral basis.'},
+ 'unitary':{
+  'typing':'complex Hilbert-state extension, not probability-simplex dynamics',
+  'law':'i dot a_k=lambda_k a_k',
+  'solution':'a_k(t)=exp(-i lambda_k t)a_k(0)',
+  'relative_phase_rates_for_declared_T4_characters':unitary_rates.tolist(),
+  'phase_result':'The four origin-free spectral character phases precess at fixed rates n dot (-lambda); carrier-translation invariance n dot k=0 does not imply dynamical invariance n dot lambda=0.',
+  'cross_mode_influence':'zero exactly.'},
+ 'wave':{
+  'law':'q_k_ddot + lambda_k q_k=0 on each real 2D doublet',
+  'solution':'q_k(t)=q_k(0) cos(omega_k t)+p_k(0) sin(omega_k t)/omega_k, omega_k=sqrt(lambda_k)',
+  'Noether_charge':'J_k=q_k1 p_k2-q_k2 p_k1 is conserved for every doublet because of SO(2)^5 symmetry.',
+  'phase_velocity':'where r_k>0, dot phi_k=J_k/r_k^2; generic initial momenta can move the torus angles.',
+  'cross_mode_influence':'zero exactly for the linear strict wave equation.'},
+ 'causal_verdict':'None of the three strict linear calculi generates an intrinsic adjacency or causal propagation law on the internal T4/T5. Heat freezes phase, unitary precesses independent modal phases, and wave gives independent rotors/oscillators. Cross-phase influence requires a new coupling/nonlinearity or observation protocol.',
+ 'time_source':'All rates rescale under an externally chosen generator/clock scale. No physical second or unique dynamics is sourced.',
+ 'nonconclusions':['The internal torus is not spacetime.','Unitary evolution here does not derive quantum mechanics.','Wave group velocities in a spatial graph are a separate construction from these internal spectral phases.']
+}
+p=ROOT/'results'/'DYN-TORUS_exact.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'unitary_relative_rates':unitary_rates.tolist()},indent=2))

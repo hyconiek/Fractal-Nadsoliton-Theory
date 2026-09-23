@@ -1,0 +1,49 @@
+# PHY-022 — collective variable and stiffness from composition
+
+**Scientific status: PASS_CONDITIONAL_MICROSCOPIC_STIFFNESS_AND_CONTROLLED_HARD_MODE_TEMPLATE.**
+
+Start from PM-001, not from an assumed field action:
+
+`I[{p_x}] = sum_x V_g(p_x) + (kappa/2) sum_<xy> ||mu_x-mu_y||^2`, `mu_x=X7^T p_x`.
+
+Near the certified simple fold write the aligned mediator on each cell as
+
+`theta_x = theta_f + xi_x v + hard_x`,
+
+where `v` is the normalized fold null vector. Along the Gibbs map,
+
+`d mu/d xi = Cov_p(X) v`.
+
+At the certified strict fold this derivative is approximately
+
+`(0.1443,0,0.1504,0,0.1575,0,0.1125)`
+
+and
+
+`||d mu/d xi||^2 ≈ 0.08090773446`.
+
+Therefore PM-001 itself produces the leading graph-gradient term
+
+`(kappa/2) * 0.08090773446 * sum_<xy> (xi_x-xi_y)^2`.
+
+No gradient term was inserted after the projection. Changing the composition law changes this coefficient or the functional form; it is therefore conditional physics, not a source theorem.
+
+## Hard-mode elimination
+
+The accepted fold has a hard transverse H7 gap at least `gamma=0.017225955388346`. For a soft/hard quadratic block with hard block `C >= gamma I` and cross coupling norm `||B||<=beta`, exact Schur elimination changes the soft quadratic operator by at most
+
+`beta^2/gamma`.
+
+The inverse hard block also generates spatially nonlocal and, under dynamics, temporally nonlocal terms. PHY-019 supplies the explicit memory control. A later nonlinear reduction must keep `gamma>0` and pay the cubic/higher remainder; the present result is not a blanket Landau-Ginzburg theorem.
+
+## Continuum scaling obligation
+
+On the declared cycle refinement with spacing `h=1/M`, differences scale as `xi_(i+1)-xi_i ~ h xi'`. If the lattice free energy is converted to an integral by multiplying by h, a finite continuum gradient coefficient requires
+
+`kappa_M ~ kappa_cont / h^2 ~ kappa_cont M^2`.
+
+Thus the continuum stiffness does **not** arise from fixed kappa automatically. This scaling changes kinetic/influence scales and must be paid again in PHY-023.
+
+## Decision
+
+A controlled collective soft coordinate and a composition-derived graph stiffness exist conditionally. The coefficient is traceable to PM-001 and the FIN fold data. Nothing here identifies the coordinate with a fundamental field or the fold with an equilibrium critical point.

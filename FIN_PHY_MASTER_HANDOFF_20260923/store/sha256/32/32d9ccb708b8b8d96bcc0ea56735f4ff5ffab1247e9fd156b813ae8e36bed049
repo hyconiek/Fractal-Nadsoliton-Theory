@@ -1,0 +1,50 @@
+{
+  "diagnostics": [
+    {
+      "M": 3,
+      "P_maxgap_ge_half_upper": 0.75
+    },
+    {
+      "M": 4,
+      "P_maxgap_ge_half_upper": 0.5
+    },
+    {
+      "M": 5,
+      "P_maxgap_ge_half_upper": 0.3125
+    },
+    {
+      "M": 8,
+      "P_maxgap_ge_half_upper": 0.0625
+    },
+    {
+      "M": 12,
+      "P_maxgap_ge_half_upper": 0.005859375
+    },
+    {
+      "M": 16,
+      "P_maxgap_ge_half_upper": 0.00048828125
+    },
+    {
+      "M": 32,
+      "P_maxgap_ge_half_upper": 1.4901161193847656e-08
+    },
+    {
+      "M": 64,
+      "P_maxgap_ge_half_upper": 6.938893903907228e-18
+    },
+    {
+      "M": 128,
+      "P_maxgap_ge_half_upper": 7.52316384526264e-37
+    }
+  ],
+  "diffuse_regime": "For iid Haar points on circumference 1, P(maxgap>=1/2)<=M*2^{-(M-1)}, so the uniqueness gate holds with probability tending exponentially to one. CG-01 extends the same conclusion to the reweighted diffuse regime when its event-transfer exponent remains sublinear in M.",
+  "gate_failure": "If one circular gap is >=pi, the direct edge across that gap can be metrically redundant because the complementary arc is no longer longer. The all-gaps<pi premise is therefore substantive, not cosmetic.",
+  "minimality": "All M consecutive edges are therefore forced. The circular cycle is the unique inclusion-minimal exact shortest-path realization of the sampled circle metric (up to the unoriented circular-order isomorphism).",
+  "necessity_under_semicircle_gap_gate": "Assume every consecutive circular gap delta_i<pi. For a consecutive pair x_i,x_{i+1}, d=delta_i and the open shortest arc contains no sampled point. Equality in a path decomposition d(x_i,x_{i+1})=sum d(v_j,v_{j+1}) can hold only if all intermediate vertices lie on that same shortest geodesic. There are none. Hence every exact graph realization must contain the edge {x_i,x_{i+1}}.",
+  "remaining_premise": "The zero-distortion/minimal-edge backbone principle is still a modelling/source premise; single-cell FIN has not derived why physical interactions should realize this graph.",
+  "scientific_state": "CONDITIONAL_UNIQUE_MINIMAL_EXACT_PHASE_METRIC_BACKBONE",
+  "setup": "Distinct points on S1 with intrinsic circle geodesic metric d. Graph edges, when present, carry their original metric length d(x,y). Require graph shortest-path distances to equal d on every sampled pair.",
+  "source_interpretation": "RG3 need not be introduced as an arbitrary Delaunay choice. Conditional on the phase metric and an exact-zero-distortion/minimal-edge backbone principle, the cycle is forced in the diffuse regime.",
+  "sufficiency": "The circular-order cycle with consecutive-gap edge weights realizes d exactly: its two paths between any pair are precisely the two circle arcs, so the shorter path has length d.",
+  "task": "CG-05-metric-backbone-uniqueness"
+}

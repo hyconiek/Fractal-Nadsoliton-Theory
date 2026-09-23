@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+events=json.loads((ROOT/'results'/'PHY-005_events.json').read_text())
+
+# Frozen diamond support: 0->1->3 or 0->2->3. Read-radius-one propagation.
+rates={'r1':1.0,'r2':2.0,'r3':1.5}
+pathA=1/rates['r1']+1/rates['r3']
+pathB=1/rates['r2']+1/rates['r3']
+scale=3.7
+scaledA=pathA/scale;scaledB=pathB/scale
+
+# A simple event-poset example: a,b independent, both precede c.
+linear_extensions=[['a','b','c'],['b','a','c']]
+# causal-depth rank: a,b at 1; c at2 independent of their swap.
+depth={'a':1,'b':1,'c':2}
+
+res={
+ 'task':'PHY-009','status':'PASS_CONDITIONAL_CAUSAL_CLOCK_CLASS__PHYSICAL_TIME_AND_ARROW_NOT_DERIVED',
+ 'event_poset_clock':{
+   'example_relations':['a<c','b<c','a || b'],
+   'linear_extensions':linear_extensions,
+   'depth':depth,
+   'invariance':'Swapping independent events a,b leaves the causal-depth assignment unchanged.',
+   'composition':'Along a causal chain, depth increments add exactly; across concurrent branches depth is a partial-order rank, not a total schedule.'
+ },
+ 'two_clock_comparison':{
+   'graph':'diamond 0-1-3 and 0-2-3',
+   'causal_depth_0_to_3':2,
+   'poisson_node_rates':rates,
+   'expected_ordered_wait_path_0_1_3':pathA,
+   'expected_ordered_wait_path_0_2_3':pathB,
+   'path_duration_difference':abs(pathA-pathB),
+   'conclusion':'Equal causal depth does not imply equal continuous duration when local activities differ.'
+ },
+ 'clock_torsor':{
+   'transformation':'Q -> c Q and t -> t/c',
+   'c':scale,
+   'unscaled_path_times':[pathA,pathB],
+   'scaled_path_times':[scaledA,scaledB],
+   'ratio_check':[scaledA/pathA,scaledB/pathB],
+   'theorem':'The embedded event sequence and equilibrium law are unchanged by common positive generator scaling; only holding times rescale. No timestamp-free record fixes c.'
+ },
+ 'schedule_freedom':{
+   'synchronous_layers':'One may declare one unit per event layer.',
+   'asynchronous_poisson':'One may declare independent local rates and use physical holding times conditionally.',
+   'same_support_order':'Both respect the PHY-006 causal cone, but they assign different durations.',
+   'verdict':'Support order alone does not select a unique clock.'
+ },
+ 'arrow_test':{
+   'metropolis_max_detailed_balance_residual':events['generators']['metropolis']['max_abs_detailed_balance_residual'],
+   'barker_max_detailed_balance_residual':events['generators']['barker']['max_abs_detailed_balance_residual'],
+   'result':'Both declared equilibrium dynamics satisfy detailed balance to numerical precision. Their stationary path law is reversible; no entropy-production arrow is selected by the equilibrium core.',
+   'needed_for_arrow':'A nonequilibrium boundary/preparation, reservoir/current source, or explicitly irreversible rule must be added and separately justified.'
+ },
+ 'claim_decision':{
+   'H-R4_nontrivial_event_order':'PASS_IN_SCOPE_CONDITIONAL_PM',
+   'dimensionless_causal_depth_clock':'PASS_AS_ORDER_PARAMETER',
+   'unique_continuous_time_from_FIN':'REFUTED_IN_SCOPE_FOR_CURRENT_INPUTS',
+   'physical_SI_clock':'NOT_DERIVED',
+   'intrinsic_arrow_of_time':'NOT_DERIVED'
+ },
+ 'acceptance':'A nontrivial dimensionless causal-depth clock composes consistently and is invariant under swaps of independent events, while the residual positive rate/clock freedom is explicit rather than hidden.'
+}
+(ROOT/'results'/'PHY-009_clock.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+# Shape Hessian lower value: deliberately conservative relative to the numeric center values ~1.496,1.859.
+lam_shape=1.4
+rows=[]
+for N in [10,100,1000,10000]:
+    sigma=1/math.sqrt(N*lam_shape)
+    rows.append({'N':N,'gaussian_width_upper_proxy':sigma})
+out={
+ 'task':'DIM-03-shape-phase-population',
+ 'scientific_state':'ASYMPTOTIC_NO_GO_FOR_SHAPE_PHASE_AS_FIXED_EXTENT_COORDINATE',
+ 'premise':'On the localized branch the two translation-invariant shape phases have strictly positive Hessian; the finite-N equilibrium weights are proportional to exp(-N Phi).',
+ 'laplace_scaling':'For any nondegenerate transverse shape coordinate, typical local fluctuations scale as N^(-1/2). A fixed positive curvature therefore collapses its unrescaled distribution as N grows.',
+ 'illustrative_conservative_widths':rows,
+ 'many_cell_note':'For M approximately independent cells, the largest Gaussian-scale fluctuation is O(sqrt(log M/N)); if N/log M -> infinity the entire shape-phase cloud collapses. Rescaling by sqrt(N) produces an internal fluctuation variable, not a fixed-extent new spatial circle.',
+ 'conclusion':'The two shape phases are legitimate internal continuous observables but fail the present DIM-SOURCE criterion for an additional macroscopic relational coordinate on the sharp-cell limit.',
+ 'nonconclusions':['A deliberately chosen noise/temperature scaling could keep them broad, but that is a new dynamical/control premise.']
+}
+p=ROOT/'results'/'DIM-03_shape_fluctuation_collapse.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p)},indent=2))

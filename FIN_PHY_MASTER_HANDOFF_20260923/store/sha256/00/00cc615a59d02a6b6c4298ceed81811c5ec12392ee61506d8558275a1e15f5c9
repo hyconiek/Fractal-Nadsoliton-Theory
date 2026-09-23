@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'POP-SOURCE-Haar-from-exact-phase-symmetry',
+ 'scientific_state':'PROVED_CONDITIONAL_HAAR_POPULATION_LAW_ON_EXACT_COMPACT_PHASE_ORBITS',
+ 'theorem_single_orbit':'Let a compact group G=T^d act transitively on a degenerate phase orbit O and leave both the base measure and the equilibrium weight exp(-N Phi) invariant. The induced normalized probability on O is G-invariant; uniqueness of invariant probability on a compact homogeneous torus makes it Haar. No coordinate-origin prior is needed.',
+ 'laplace_prefactor':'If O is a nondegenerate minimum manifold transverse to the symmetry directions, transverse Hessians at symmetry-related points are conjugate. Their nonzero determinants are equal, so leading Laplace prefactors do not bias one phase point over another.',
+ 'many_uncoupled_cells':'For M uncoupled identical cells the phase law is product Haar on (T^d)^M. G-invariant intercell interactions may correlate relative phases but preserve at least the global diagonal Haar shift unless symmetry is explicitly/spontaneously broken.',
+ 'finite_q_scope':'At finite cyclic q the exact symmetry is only Z_q^d once Umklapp terms are included, so the exact phase measure is discrete-uniform over the finite orbit. Continuous Haar is a continuum/protected-model statement, not an exact finite-q identity.',
+ 'importance':'If a sourced protecting law creates an exact T^d minimum orbit, the phase-population law itself need not be separately guessed; symmetry supplies Haar. This removes one nuisance assumption from future proximity/locality tests.',
+ 'dependency':'Conditional on exact T^d protection/minimum-orbit existence. Current FIN has not sourced that protecting nonlinear law.',
+ 'nonconclusions':['Haar phase population is not empirical evidence.','It does not choose d.','It does not choose a proximity graph or physical measure unit.']
+}
+p=ROOT/'results'/'POP-SOURCE_Haar.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

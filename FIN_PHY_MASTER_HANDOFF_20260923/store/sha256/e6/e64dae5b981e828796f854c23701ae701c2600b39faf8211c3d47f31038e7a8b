@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+d=json.loads((ROOT/'results'/'HDIM-02_shape_metric_clt.json').read_text())
+C=np.array(d['shape_covariance_coefficient_C_for_sqrtN_chi'],float); lmax=float(np.linalg.eigvalsh(C).max())
+# Gaussian tangent exact bound: ||chi|| <= sqrt(lmax/N)||Z||, chi2_2 tail exp(-r^2/2).
+def union_bound(N,M,eps): return min(1.0, M*math.exp(-N*eps*eps/(2*lmax)))
+rows=[]
+for N in [100,1000,10000]:
+ for a in [1,2,4]:
+  M=int(round(N**a)); eps=0.2
+  rows.append({'N':N,'M':M,'polynomial_power':a,'epsilon':eps,'union_bound':union_bound(N,M,eps)})
+# critical log M/N coefficient for fixed epsilon
+crit=[]
+for eps in [0.05,0.1,0.2,0.5]: crit.append({'epsilon':eps,'critical_logM_over_N_for_order1_extreme':eps*eps/(2*lmax)})
+out={
+ 'task':'HDIM-05-population-extent',
+ 'scientific_state':'PROVED_GAUSSIAN_TANGENT_COLLAPSE_FOR_SUBEXPONENTIAL_CELL_COUNTS',
+ 'lambda_max_C':lmax,
+ 'tail_bound':'For the asymptotic Gaussian tangent chi~N(0,C/N), P(||chi||>=eps) <= exp[-N eps^2/(2 lambda_max(C))]. Therefore P(max_{1..M}||chi_i||>=eps) <= M exp[-N eps^2/(2 lambda_max(C))].',
+ 'theorem':'If log M / N -> 0, the entire unrescaled shape cloud collapses to chi* in probability. A fixed O(1) shape extent at sharp N requires at least log M=Omega(N), fixed N, or a new noise/control scaling.',
+ 'diagnostics':rows,
+ 'critical_rates':crit,
+ 'conclusion':'The intrinsic T2 exists and its standardized tangent is stable, but it is not automatically populated as a finite-extent macroscopic geometry in the sharp-cell regime. Polynomially many cells cannot rescue it.',
+ 'nonconclusions':['Exponential M is not proposed as physical.','Rare large deviations are not a new spatial dimension.','Fixed finite N could keep a 2D cloud broad, but that is a different scaling regime.']
+}
+p=ROOT/'results'/'HDIM-05_population_extent.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'lambda_max_C':lmax,'critical':crit},indent=2))

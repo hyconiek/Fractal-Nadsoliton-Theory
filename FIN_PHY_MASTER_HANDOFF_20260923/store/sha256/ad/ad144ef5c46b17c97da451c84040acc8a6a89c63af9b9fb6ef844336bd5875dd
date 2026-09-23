@@ -1,0 +1,74 @@
+{
+  "task": "OCB-CHANNEL-05",
+  "status": "PREREGISTERED_TWO_LEVEL_NO_FIT_PROTOCOL_CONSTRUCTED__PHYSICAL_EXECUTION_OPEN",
+  "calibration_gate": {
+    "required_before_unblinding": "Independent calibration must certify t1 in [0.20,0.25] strict dimensionless units, relative two-control time-ratio distortion eta<=0.02, and common attempt-level detection efficiency in [0.98,1].",
+    "failure_budget": 0.01,
+    "warning": "FIN does not provide a laboratory clock or calibration sample-size model; this is a prerequisite gate, not generated evidence."
+  },
+  "attempt_bookkeeping": {
+    "outcomes_per_attempt": [
+      "escape_to_any_other_state",
+      "return_to_prepared_state",
+      "no_click"
+    ],
+    "rule": "Never postselect away no-clicks. Primary escape frequency uses all attempts in the denominator. The efficiency interval is included in the predicted bands.",
+    "level1_attempts": 25514,
+    "level2_attempts": 2559,
+    "measurement_failure_budget": 0.04
+  },
+  "theory_intervals": {
+    "level1_physical_time": [
+      0.2,
+      0.25
+    ],
+    "level2_physical_time": [
+      0.38431372549019605,
+      0.5204081632653061
+    ],
+    "level1_attempt_escape_intervals": {
+      "heat": [
+        0.2608463833796441,
+        0.41507681969152466
+      ],
+      "unitary": [
+        0.020869305442048052,
+        0.033622723737267074
+      ],
+      "wave": [
+        0.00020023556741351827,
+        0.0005670827340854114
+      ]
+    },
+    "level2_attempt_escape_intervals": {
+      "heat": [
+        0.3868831611237056,
+        0.864037461398684
+      ],
+      "unitary": [
+        0.07488248234119738,
+        0.1456938016503651
+      ],
+      "wave": [
+        0.0023214419530408568,
+        0.013475643358331965
+      ]
+    },
+    "level1_min_gap": 0.02030222270796264,
+    "level2_min_gap": 0.06140683898286541,
+    "level1_hoeffding_radius": 0.0095,
+    "level2_hoeffding_radius": 0.03,
+    "level1_thresholds": {
+      "wave_unitary": 0.010718194088066731,
+      "unitary_heat": 0.1472345535584556
+    },
+    "level2_thresholds": {
+      "wave_unitary": 0.04417906284976467,
+      "unitary_heat": 0.2662884813870353
+    }
+  },
+  "no_fit_rule": "At each level form the simultaneous Hoeffding interval [phat-eps, phat+eps]. Assign a channel category only if BOTH level intervals intersect exactly one same theory category band. If either level is ambiguous, contradictory, calibration fails, or no-click efficiency leaves [0.98,1], return NO_FIT; do not refit time or nuisance parameters.",
+  "error_ledger": "Conditional on calibration gate truth, Hoeffding gives <=0.02 error per measurement level; with alpha_cal=0.01 the preregistered total failure budget is <=0.05 by union bound.",
+  "decision": "The probability-only heat/unitary/wave distinction can be converted into a finite two-control protocol with explicit attempts and a fail-closed decision rule. Absolute dimensionless time calibration makes the required attempt count orders of magnitude smaller than a purely clock-free ratio-only design.",
+  "nonconclusion": "No physical platform, clock conversion, common-efficiency detector law, or real data are supplied. The counts are conservative theorem-design numbers, not experimental recommendations."
+}

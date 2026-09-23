@@ -1,0 +1,109 @@
+{
+  "task": "OCB-MEM-05",
+  "status": "THREE_STATE_EDGE_EMITTING_WEIGHTED_AUTOMATON_IS_CLOSER_RANK3_CHALLENGER",
+  "challenger": {
+    "class": "3-state time-homogeneous edge-emitting probabilistic weighted automaton; each observed category labels a nonnegative 3x3 transition matrix",
+    "initial": [
+      0.4297595339249774,
+      0.3790404153805069,
+      0.1912000506945158
+    ],
+    "category_matrices": [
+      [
+        [
+          0.17343710938867418,
+          0.33287043359597646,
+          0.0070653142415368474
+        ],
+        [
+          0.6175233171056538,
+          0.09115942028645602,
+          0.016358743260049474
+        ],
+        [
+          0.016722674590946802,
+          0.04859698670502635,
+          0.304430596368646
+        ]
+      ],
+      [
+        [
+          0.023527737858323503,
+          0.1961153894837999,
+          0.06446104888670984
+        ],
+        [
+          0.005661217752158808,
+          0.01255460602061845,
+          0.05420689705863076
+        ],
+        [
+          0.09759074069126228,
+          0.13774197791318182,
+          0.19242426751809302
+        ]
+      ],
+      [
+        [
+          0.06947149457105642,
+          0.1266611062955621,
+          0.006390365678360802
+        ],
+        [
+          0.09949841993814199,
+          0.04999494764510979,
+          0.05304243093318083
+        ],
+        [
+          0.1018436732039363,
+          0.017676844887878188,
+          0.08297223812102918
+        ]
+      ]
+    ],
+    "sum_matrix_row_sums": [
+      1.0,
+      0.9999999999999998,
+      1.0
+    ],
+    "lifted_11_symbol_row_sums": [
+      1.0,
+      0.9999999999999998,
+      1.0
+    ],
+    "rank_at_most_3_by_factorization": true,
+    "block_hankel_singular_values": [
+      0.17459956181083267,
+      0.007153803685584156,
+      0.007089905870264564,
+      3.77993346456249e-18,
+      1.8672375262686053e-18,
+      1.1461960026560732e-18,
+      7.82425130115298e-19,
+      3.9111772767297325e-19,
+      1.8748920111030047e-19
+    ],
+    "provenance": "Parameters are a frozen exploratory multistart likelihood fit. Replay verifies the existence witness and all reported distances; no global optimum claim is made."
+  },
+  "distances": {
+    "KL_target_to_challenger": 6.105075046860359e-06,
+    "total_variation": 0.0007938085875820162,
+    "bhattacharyya_coefficient": 0.9999984748001961,
+    "chernoff_information": 1.5252011508694867e-06,
+    "chernoff_s": 0.5001759437237967
+  },
+  "necessary_query_lower_bounds": {
+    "both_typeI_and_typeII_le_5pct_Bretagnolle_Huber": 263623,
+    "equal_prior_Bayes_error_le_5pct_Hellinger": 544431,
+    "simple_pair_Chernoff_sufficient_context_only": 1509693
+  },
+  "comparison_state_emitting_HMM_scout": {
+    "KL": 7.82062093884484e-06,
+    "TV": 0.0009146599214873044,
+    "N_BH": 205795,
+    "N_H": 425301,
+    "scope": "Frozen scout only; edge-emitting automaton is the promoted broader challenger."
+  },
+  "decision": "Allowing observation-labeled hidden transitions produces a strictly broader rank-3 process class and a closer explicit challenger than the state-emitting HMM or latent-class mixture. The rank-4 memory signal is therefore intrinsically hard to distinguish on four-jump records.",
+  "nonconclusion": "This is not the globally closest rank<=3 weighted automaton/HMM and not a universal minimax optimum."
+}

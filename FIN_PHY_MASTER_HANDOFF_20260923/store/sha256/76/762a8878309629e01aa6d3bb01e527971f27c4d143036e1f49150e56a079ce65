@@ -1,0 +1,126 @@
+# Resonance locking and dimension-source continuation
+
+Date: 2026-09-23
+
+## 1. New bridge: strict `T5` -> nonlinear `S1`
+
+Near uniform, label entropy has the exact Taylor form
+
+\[
+D(p\|u)=\frac1q\sum_j\sum_{m\ge2}
+\frac{(-1)^m}{m(m-1)}x_j^m,
+\qquad p_j=q^{-1}(1+x_j).
+\]
+
+The quadratic term is phase blind and protects all five strict doublet phases.
+For modes `k=1,...,5`, the zero-sum cubic phase characters have exact rank four.
+A primitive basis is
+
+\[
+2\phi_1-\phi_2,
+\quad \phi_1+\phi_2-\phi_3,
+\quad \phi_1+\phi_3-\phi_4,
+\quad \phi_1+\phi_4-\phi_5.
+\]
+
+Thus ordinary cubic momentum-conserving resonances enforce
+
+\[
+\phi_k=k\alpha,
+\]
+
+reducing `T5` to the common carrier-translation `S1`.
+
+This provides a structural explanation for the one-dimensional phase geometry
+found earlier: it is the residual translation manifold after nonlinear
+relative-phase locking.
+
+## 2. Finite-q Umklapp hierarchy
+
+With modes `1,...,5`, an order-`m` monomial has absolute wave-number sum at most
+`5m`.  A nonzero reciprocal-lattice transfer is impossible for `5m<q`; at
+`m=ceil(q/5)` one can explicitly sum `m` allowed positive frequencies to `q`.
+Hence the first possible Umklapp order is exactly
+
+\[
+m_U=\lceil q/5\rceil.
+\]
+
+At `q=12`, cubic Umklapp makes the full cubic character rank five and pins the
+remaining continuous shift to discrete `Z12`.  For larger q, relative phases
+lock at cubic order while common-shift pinning moves to increasingly high
+order: `5` at q=24, `10` at q=48, `20` at q=96.
+
+This yields a perturbative hierarchy
+
+\[
+T^5 \xrightarrow{O(r^3)} S^1
+\xrightarrow{O(r^{m_U})} Z_q.
+\]
+
+At any fixed finite Taylor order, large enough q removes all Umklapp at that
+order.
+
+## 3. Small-amplitude approximate T5 theorem
+
+For `rho=q||f||_infinity<1`, Taylor remainder gives
+
+\[
+\left|D(u+f\|u)-\frac q2||f||_2^2\right|
+\le
+\frac{q^2}{6(1-\rho)^2}\sum_j|f_j|^3.
+\]
+
+Strict phase rotations preserve the quadratic term, so relative `T5` breaking
+vanishes uniformly as the amplitude shrinks.  Deterministic phase scans give a
+phase-spread exponent about `3.08`, consistent with cubic leading breaking.
+
+This is an **approximate emergent HD symmetry**, not a stable HD phase: at the
+origin phases are undefined and current radial dynamics does not keep all five
+modal radii nonzero/soft.
+
+## 4. Product-carrier theorem
+
+For carrier `(Z_q)^d`, use low modes
+
+`{e_i, 2e_i, e_i+e_j}`.
+
+Cubic zero-sum relations
+
+\[
+2\phi_{e_i}=\phi_{2e_i},\qquad
+\phi_{e_i}+\phi_{e_j}=\phi_{e_i+e_j}
+\]
+
+have exactly rank `m-d`; their composite-mode block is unimodular.  Therefore
+all phases reduce exactly to
+
+\[
+\phi_k=k\cdot\alpha,
+\qquad \alpha\in T^d.
+\]
+
+This works for every finite `d`; audits for `d=1,...,5` agree exactly.
+For this low-mode set the first axial finite-q Umklapp appears only at
+`ceil(q/2)`.
+
+### Critical guardrail: configuration-space trap
+
+The known composition of `M` cells already produces `(Z_12)^M` and can leave a
+`T^M` phase manifold.  Here `M` is subsystem count, so the dimension grows
+with system size.  That is naturally configuration space, not a fixed physical
+base dimension.
+
+The current strict 12-state operator is not secretly a nontrivial Kronecker
+sum: it has nonzero coupling on every off-diagonal pair, whereas any
+nontrivial `B tensor I + I tensor C` has forced cross-factor zeros.
+
+Moreover, with only full permutation symmetry of otherwise identical cells,
+the linear commutant is `span{I,J}`.  The only natural projector ranks are
+`0,1,M-1,M`; no fixed `d=2,3,4` can be selected independently of `M`.
+
+## Dimension-source verdict
+
+FIN now has a clean theorem for **how a supplied carrier rank d produces a
+residual `T^d` after phase locking**, but still no source for a fixed physical
+`d`.  Choosing `d=3` or `d=4` from the desired answer remains forbidden.

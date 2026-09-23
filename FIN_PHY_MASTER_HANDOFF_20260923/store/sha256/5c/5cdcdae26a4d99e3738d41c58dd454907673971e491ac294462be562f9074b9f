@@ -1,0 +1,58 @@
+{
+  "assumptions": [
+    "phase/cell metric supplies positive edge lengths ell",
+    "quadratic edge-local energy E_ell(u,v)=0.5*c(ell)*(u-v)^2 with c(ell)>0",
+    "exact subdivision consistency: splitting ell=a+b and minimizing over the inserted node reproduces E_{a+b}",
+    "mild regularity such as continuity/measurability plus local boundedness to exclude pathological Cauchy solutions"
+  ],
+  "derivation": {
+    "functional_equation": "Exact refinement requires c(a+b)=c(a)c(b)/(c(a)+c(b)). With R(ell)=1/c(ell), R(a+b)=R(a)+R(b).",
+    "series_elimination": "min_w [0.5 c(a)(u-w)^2+0.5 c(b)(w-v)^2] = 0.5 [c(a)c(b)/(c(a)+c(b))](u-v)^2.",
+    "solution": "Positive regular additive R is R(ell)=ell/kappa0. Hence c(ell)=kappa0/ell, unique up to one global positive scale kappa0."
+  },
+  "exact_piecewise_linear_bridge": "For a circular mesh with gaps ell_i and vertex values f_i, E=(kappa0/2) sum_i (f_{i+1}-f_i)^2/ell_i equals exactly (kappa0/2) integral |f_PL_prime(theta)|^2 dtheta for the piecewise-linear interpolant.",
+  "heldout_transfer": "The law c(ell)=kappa0/ell applies unchanged to every M, every irregular phase sample and every further edge subdivision. Only kappa0 is global; no q- or carrier-specific refit is allowed.",
+  "natural_vertex_measure": "The Voronoi/trapezoid mass m_i=(ell_{i-1}+ell_i)/2 is additive under interval refinement and supplies the standard generalized graph Laplacian M^{-1}K, but its overall normalization and any physical clock remain unsourced.",
+  "nonconclusions": [
+    "kappa0 is not a physical tension/energy scale until calibrated or sourced",
+    "no time evolution follows from a static Dirichlet form",
+    "no 3D space, Lorentz metric or gravity follows",
+    "the refinement-consistency premise is a new source/modelling principle, not proved by the isolated FIN cell"
+  ],
+  "numerical_identity_checks": [
+    {
+      "a": 0.3,
+      "abs_defect": 0.0,
+      "b": 0.7,
+      "coarse_energy": 1.2800000000000002,
+      "fine_min_energy": 1.2800000000000002,
+      "minimizer_w": 0.72,
+      "u": 1.2,
+      "v": -0.4
+    },
+    {
+      "a": 0.11,
+      "abs_defect": 8.881784197001252e-16,
+      "b": 0.29,
+      "coarse_energy": 7.8125,
+      "fine_min_energy": 7.812500000000001,
+      "minimizer_w": -1.3124999999999998,
+      "u": -2.0,
+      "v": 0.5
+    },
+    {
+      "a": 1.7,
+      "abs_defect": 4.440892098500626e-16,
+      "b": 0.2,
+      "coarse_energy": 2.86578947368421,
+      "fine_min_energy": 2.8657894736842104,
+      "minimizer_w": 3.0526315789473686,
+      "u": 0.1,
+      "v": 3.4
+    }
+  ],
+  "projective_consequence": "Adding arbitrary intermediate phase points on an edge and then minimizing/eliminating them leaves the coarse static Dirichlet energy exactly unchanged. The static family is refinement-projective without retuning any edge coefficient.",
+  "relation_to_PHY019": "This exact static edge-subdivision consistency does not contradict PHY-019. PHY-019 coarse-grains dynamics/block variables and shows memory and longer-range terms; CG-06 concerns minimization of a static 1D Dirichlet energy under geometric subdivision.",
+  "scientific_state": "CONDITIONAL_UNIQUE_EDGE_WEIGHT_SHAPE_AND_EXACT_STATIC_CONTINUUM_BRIDGE",
+  "task": "CG-06-refinement-compatible-dirichlet-source"
+}

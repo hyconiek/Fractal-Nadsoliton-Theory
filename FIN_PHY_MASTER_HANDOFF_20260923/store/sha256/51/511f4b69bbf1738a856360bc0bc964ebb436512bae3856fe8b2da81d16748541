@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+# Two parameter-free homogeneous quartic controls on modal powers.
+def p1(I): return float(np.sum(I)**2)
+def p2(I): return float(np.sum(I*I))
+rows=[]
+for I in [np.array([1,0,0,0,0.],float),np.ones(5),np.array([1,2,3,4,5.],float),np.array([1,.5,.25,.125,.0625])]:
+ rows.append({'I':I.tolist(),'Psi_sum_squared':p1(I),'Psi_sum_of_squares':p2(I),'ratio':p1(I)/p2(I)})
+rat=[x['ratio'] for x in rows];assert max(rat)-min(rat)>1
+out={
+ 'task':'PROTECT-02-nonuniqueness-of-protecting-law',
+ 'scientific_state':'PROVED_NONIDENTIFIABILITY_WITHIN_SIMPLE_T5_INVARIANT_NONLINEARITIES',
+ 'rows':rows,
+ 'theorem':'Symmetry, positivity on nonnegative modal powers, degree-four homogeneity and target independence do not select a unique nonlinear law: (sum I_k)^2 and sum I_k^2 satisfy all these properties yet are not proportional and make different cross-mode predictions.',
+ 'source_obligation':'A genuine protecting-law source must select the functional dependence/couplings before phase-population or desired dimensional behavior is inspected, and must transfer to a held-out carrier/refinement.',
+ 'conclusion':'PROTECT has an existence theorem but not a source theorem.'
+}
+p=ROOT/'results'/'PROTECT-02_no_unique_radial_law.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'ratios':rat},indent=2))

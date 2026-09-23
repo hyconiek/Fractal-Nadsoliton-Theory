@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, itertools, math
+import numpy as np
+import sympy as sp
+ROOT=Path(__file__).resolve().parents[1]
+# Five low wavevectors on Z_q^2. These are selected before any target dimension fit as the smallest set
+# containing two primitive generators plus their first sum/doubles.
+K=np.array([[1,0],[0,1],[1,1],[2,0],[0,2]],dtype=int)
+R=np.array([[1,1,-1,0,0],[2,0,0,-1,0],[0,2,0,0,-1]],dtype=int)
+assert np.all(R@K==0) and sp.Matrix(R.tolist()).rank()==3
+# primitive/saturated relation lattice witness: gcd of all 3x3 minors is 1.
+mins=[]
+for cols in itertools.combinations(range(5),3):
+ mins.append(abs(int(round(np.linalg.det(R[:,cols])))))
+g=0
+for x in mins: g=math.gcd(g,x)
+assert g==1
+# phase Jacobian nullspace is exactly span of two translation columns K[:,0],K[:,1]
+assert sp.Matrix(K.tolist()).rank()==2
+# Product carrier exact finite translation action dimensions.
+out={
+ 'task':'HDIM-PRODUCT-2D-resonance-mechanism',
+ 'scientific_state':'PROVED_CONDITIONAL_PRODUCT_CARRIER_MECHANISM_LEAVES_TWO_TRANSLATION_PHASES_AFTER_CUBIC_LOCKING',
+ 'carrier':'Z_q x Z_q with Kronecker-sum/product translation structure',
+ 'low_wavevectors':K.tolist(),
+ 'zero_sum_phase_relation_basis':R.tolist(),
+ 'relation_rank':3,'phase_count':5,'residual_continuous_phase_dimension':2,
+ 'gcd_of_3x3_minors':g,
+ 'theorem':'The three zero-sum cubic relations are primitive and force phi_(1,1)=phi_(1,0)+phi_(0,1), phi_(2,0)=2 phi_(1,0), phi_(0,2)=2 phi_(0,1). Hence the five phase angles reduce exactly to phi_k=k1 alpha1+k2 alpha2, leaving a T2 translation manifold.',
+ 'operator_source':'For a Cartesian-product carrier, A2=A tensor I + I tensor A has exact independent translations in the two carrier factors. The phase-locking mechanism uses vector wave-number conservation, not a hand-inserted Euclidean coordinate.',
+ 'dimension_rule':'The residual translation dimension is the rank of the underlying carrier translation group once a connected low-mode resonance set locks all relative phases.',
+ 'finite_q_guardrail':'At finite q, vector Umklapp terms eventually reduce continuous T2 to discrete Z_q^2. For any fixed Taylor order, they disappear when q exceeds the maximum coordinate wave-sum reachable at that order.',
+ 'source_status':'CONDITIONAL_MODEL_EXTENSION: the product/Kronecker construction is natural and target-blind once two carrier factors are supplied, but current FIN does not select the number of factors d=2 (or d=3).',
+ 'nonconclusions':['This is not physical 2D space.','Choosing d to match observed spatial dimension would be target coding without a separate source law.','No metric, locality or dynamics on the T2 is proved here.']
+}
+p=ROOT/'results'/'HDIM-PRODUCT_2D_resonance.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rank':3,'residual_dim':2,'gcd_minors':g},indent=2))

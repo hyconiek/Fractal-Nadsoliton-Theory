@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.optimize import brentq
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float)
+lam=np.linalg.eigvalsh(A)
+a1=float(lam.mean()); a2=float((lam**2).mean()); L=float(lam.max())
+varlam=float((lam**2).mean()-lam.mean()**2)
+deltas=lam[:,None]-lam[None,:]
+b4=float(np.mean(deltas**4)/24.0)
+# Analytic remainder inequalities used:
+# heat S_H=(1/12)sum(1-exp(-lambda t)): a1 t-a2 t^2/2 <= S_H <= a1 t.
+# unitary S_U=(1/144)sum(1-cos((lambda-kappa)t)):
+# varlam t^2-b4 t^4 <= S_U <= varlam t^2.
+# wave squared offdiag response is Var_k cos(sqrt(lambda_k)t). Let y=1-lambda t^2/2 and |r|<=L^2 t^4/24.
+# Then |Var(y+r)-Var(y)| <= sqrt(varlam)L^2 t^6/24 + L^4 t^8/576.
+ch=a2/(2*a1); du=b4/varlam; aw=varlam/4
+
+def ew(t): return math.sqrt(varlam)*L*L*t**6/24 + L**4*t**8/576
+def rw(t): return ew(t)/(aw*t**4)
+T=.01
+
+def ratios(eta):
+    rlo=2*(1-eta)/(1+eta); rhi=2*(1+eta)/(1-eta)
+    # Conservative all-t1<=T bounds. For numerator remainder terms use rhi*T even when paired with rlo prefactor.
+    heat_upper=rhi/(1-ch*T)
+    unit_lower=rlo**2*(1-du*(rhi*T)**2)
+    unit_upper=rhi**2/(1-du*T**2)
+    wave_lower=rlo**4*(1-rw(rhi*T))/(1+rw(T))
+    return heat_upper,unit_lower,unit_upper,wave_lower
+eta_hu=brentq(lambda e:ratios(e)[1]-ratios(e)[0],.10,.13)
+eta_uw=brentq(lambda e:ratios(e)[3]-ratios(e)[2],.10,.13)
+eta_star=min(eta_hu,eta_uw)
+eta_safe=.11
+b=ratios(eta_safe)
+eta_fail=.115
+bfail=ratios(eta_fail)
+# exact strict numerical check at nominal ratio 2, only for context
+V=np.linalg.eigh(A); evals,evecs=V[0],V[1]
+def heatS(t): return float(1-((evecs*np.exp(-t*evals))@evecs.T)[0,0])
+def unitS(t):
+    U=(evecs*np.exp(-1j*t*evals))@evecs.T; return float(1-abs(U[0,0])**2)
+def waveS(t):
+    C=(evecs*np.cos(t*np.sqrt(np.clip(evals,0,None))))@evecs.T; return float(np.sum(C[0,1:]**2))
+num={}
+for name,f in [('heat',heatS),('unitary',unitS),('wave',waveS)]:
+    num[name]=math.log(f(2*T)/f(T),2)
+result={
+ 'task':'OCB-CHANNEL-04',
+ 'status':'FINITE_CONTROL_CATEGORY_SEPARATION_CERTIFIED_UNDER_LOCALLY_LINEAR_TIME_MAP',
+ 'control_model':{
+   'form':'At two nominal controls u and 2u, physical times are t1=a*u*(1+e1), t2=2*a*u*(1+e2), with unknown a>0 and |e1|,|e2|<=eta.',
+   'consequence':'rho=t2/t1 lies in [2(1-eta)/(1+eta), 2(1+eta)/(1-eta)]. Overall clock scale a cancels from the control-ratio uncertainty.',
+   'finite_window':'Require t1<=T=0.01 in the frozen dimensionless strict units; t2 is then bounded by rho_+ T.'
+ },
+ 'remainder_certificate':{
+   'strict_constants':{'mean_lambda_a1':a1,'mean_lambda2_a2':a2,'var_lambda':varlam,'max_lambda':L,'unitary_fourth_coefficient_b4':b4},
+   'heat':'a1*t-a2*t^2/2 <= S_H(t) <= a1*t',
+   'unitary':'var(lambda)*t^2-b4*t^4 <= S_U(t) <= var(lambda)*t^2',
+   'wave':'|S_W(t)-var(lambda)*t^4/4| <= sqrt(var(lambda))*L^2*t^6/24 + L^4*t^8/576',
+   'basis':'elementary exp/cos Taylor remainder inequalities plus variance/Cauchy-Schwarz; evaluated on the frozen supplied strict spectrum.'
+ },
+ 'certified_separation':{
+   'T':T,
+   'heat_vs_unitary_eta_threshold':eta_hu,
+   'unitary_vs_wave_eta_threshold':eta_uw,
+   'joint_safe_eta_lt':eta_star,
+   'safe_fixture_eta':eta_safe,
+   'safe_fixture_ratio_bounds':{'heat_upper':b[0],'unitary_lower':b[1],'unitary_upper':b[2],'wave_lower':b[3]},
+   'safe_fixture_gaps':{'unitary_minus_heat':b[1]-b[0],'wave_minus_unitary':b[3]-b[2]},
+   'failure_fixture_eta':eta_fail,
+   'failure_fixture_gaps':{'unitary_minus_heat':bfail[1]-bfail[0],'wave_minus_unitary':bfail[3]-bfail[2]},
+   'rule':'Retain total attempts/returns and classify by the two-level escape-ratio interval. Under eta<eta_star and t1<=T, the three channel categories have disjoint certified intervals.'
+ },
+ 'nominal_exact_strict_slopes_at_t1_0p01_t2_0p02':num,
+ 'decision':'Probability-only heat/unitary/wave category separation survives a finite control interval and a locally nonlinear control-to-time map, provided its relative two-point distortion is below an explicit ~11.3% bound and the first physical time lies in the declared small-control window.',
+ 'nonconclusion':'FIN does not source the control-to-time map, the bound eta, the dimensionless time window as laboratory units, or the physical wave/Born interpretation.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CHANNEL-04_finite_control.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'eta_star':eta_star,'eta_heat_unitary':eta_hu,'eta_unitary_wave':eta_uw,'safe_gaps':result['certified_separation']['safe_fixture_gaps']},indent=2))

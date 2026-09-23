@@ -1,0 +1,27 @@
+# 04_resonance_carrier
+
+Protection/proximity/dynamics/observability and resonance-carrier continuation.
+
+- Source directory: `fin_phy_protect_prox_dyn_obs`
+- Logical files: 63
+- Logical bytes: 147905
+- New unique store objects introduced here: 60
+- References to objects already stored: 3
+
+## Top-level logical files
+
+- `CLAIM_REGISTER.json` → `store/sha256/f9/f980948627cf7ba360192be6c98ae2186e559868af17721af87751b0930e0ad9` (`f980948627cf7ba360192be6c98ae2186e559868af17721af87751b0930e0ad9`)
+- `DYN_OBS_REPORT.md` → `store/sha256/5c/5ca93eb709498437e13035f47bf350cf2c8e335718db618c0d6e01ff5ca99d65` (`5ca93eb709498437e13035f47bf350cf2c8e335718db618c0d6e01ff5ca99d65`)
+- `EXPECTED_RESULTS.sha256` → `store/sha256/76/768d9a8544bdc8e78143b79d564cd4c4b56c3b2847d85f964dc6d817c0d2ff19` (`768d9a8544bdc8e78143b79d564cd4c4b56c3b2847d85f964dc6d817c0d2ff19`)
+- `HANDOFF.md` → `store/sha256/d8/d82b090aa7dc530fb2c3cbe9edcc510aa76163b81fec333033578a9808702948` (`d82b090aa7dc530fb2c3cbe9edcc510aa76163b81fec333033578a9808702948`)
+- `MANIFEST.sha256` → `store/sha256/7a/7a1575ce76451b496f7344966c1d6a05a830125f63cc3ac99cb0240175cab4be` (`7a1575ce76451b496f7344966c1d6a05a830125f63cc3ac99cb0240175cab4be`)
+- `NEXT_ATOMS.md` → `store/sha256/71/713abc22d4d976e6c26c996849d8e7e0b9e0d5c1f033924566d39b7053ca7424` (`713abc22d4d976e6c26c996849d8e7e0b9e0d5c1f033924566d39b7053ca7424`)
+- `NONCONCLUSIONS.md` → `store/sha256/c3/c3a8a9a0d93ec6a56bfd1b926a6c181f90832aa51d4671e09f24b707ee510df3` (`c3a8a9a0d93ec6a56bfd1b926a6c181f90832aa51d4671e09f24b707ee510df3`)
+- `PROTECT_SOURCE_REPORT.md` → `store/sha256/5c/5c07d04f7b05ee444a810a04bc80569fa46737583b48d95dcfa355a8d240aa65` (`5c07d04f7b05ee444a810a04bc80569fa46737583b48d95dcfa355a8d240aa65`)
+- `PROX04_REPORT.md` → `store/sha256/ed/edeb612adef3d894b9392f15ed3af7145e7b47cfcc8a0b81402d85dcb744a0e6` (`edeb612adef3d894b9392f15ed3af7145e7b47cfcc8a0b81402d85dcb744a0e6`)
+- `REPLAY.md` → `store/sha256/53/53c836a4eb433665a7f866eeee80040d003a9c5fdfcf06e0f59e27a8532573fb` (`53c836a4eb433665a7f866eeee80040d003a9c5fdfcf06e0f59e27a8532573fb`)
+- `RESONANCE_DIMENSION_REPORT.md` → `store/sha256/76/762a8878309629e01aa6d3bb01e527971f27c4d143036e1f49150e56a079ce65` (`762a8878309629e01aa6d3bb01e527971f27c4d143036e1f49150e56a079ce65`)
+- `SYNTHESIS.md` → `store/sha256/18/181db710cdbde616748cbec53f9897af2d4ea619b3604ae6e56cae9b2de46fc2` (`181db710cdbde616748cbec53f9897af2d4ea619b3604ae6e56cae9b2de46fc2`)
+- `TASKS.json` → `store/sha256/61/6147714d7366446d2e9ede9f900c2463f5e6426960760b15e50f9ec93c81c7cf` (`6147714d7366446d2e9ede9f900c2463f5e6426960760b15e50f9ec93c81c7cf`)
+- `replay.py` → `store/sha256/6c/6c1acf7e1bc4cb5fccaa52569047d8b492296d9ae5855ba5b511beb96b72f494` (`6c1acf7e1bc4cb5fccaa52569047d8b492296d9ae5855ba5b511beb96b72f494`)
+- `verify_package.py` → `store/sha256/e3/e33bce7ab771a0122f6cae30528fe6e38498d304216a2367754216a26cce85cb` (`e33bce7ab771a0122f6cae30528fe6e38498d304216a2367754216a26cce85cb`)

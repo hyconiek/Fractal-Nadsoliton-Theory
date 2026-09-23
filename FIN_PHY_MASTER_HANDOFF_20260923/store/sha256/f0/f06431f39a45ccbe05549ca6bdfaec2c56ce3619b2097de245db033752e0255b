@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+fin=json.loads((ROOT/'results'/'PHY-013_finite_q_branch_analytic.json').read_text())
+center=np.array([float(x) for x in fin['center']]); r=float(fin['box_radius_inf']); g=float(fin['g'])
+rho_lo=(center[:3]-r)/g; rho_hi=(center[:3]+r)/g; zlo=(center[3]-r)/g; zhi=(center[3]+r)/g
+ks=np.array([3.,4.,5.])
+def D2(delta,rho): return float(np.sum(2*rho*rho*(1-np.cos(ks*delta))))
+def dD_bound(rho): return float(np.sum(2*rho*rho*ks))
+# On (0,pi/5), every sin(k delta)>0 -> D2 increasing exactly.
+local_cut=math.pi/5
+# Certified-style remote lower bound on [pi/5,pi] for all branch radii: use rho_lo and grid/Lipschitz.
+N=2_000_000
+xs=np.linspace(local_cut,math.pi,N+1)
+vals=np.sum(2*(rho_lo**2)[None,:]*(1-np.cos(xs[:,None]*ks[None,:])),axis=1)
+imin=int(np.argmin(vals)); vmin=float(vals[imin]); xstar=float(xs[imin])
+h=(math.pi-local_cut)/N; L=dD_bound(rho_lo); remote_lower=vmin-L*h/2
+# q=190 worst local upper; larger q lowers nearest shell distances while remote lower fixed.
+q0=190
+within_upper_q0=D2(4*math.pi/q0,rho_hi)
+cross_upper_q0=D2(2*math.pi/q0,rho_hi)
+assert within_upper_q0<remote_lower and cross_upper_q0<remote_lower and remote_lower>0
+# At q>=190, within-sheet other even offsets have delta>=4pi/q. If <=pi/5 strict monotonicity handles them; if >pi/5 remote bound handles them.
+# Cross-sheet odd offsets similarly compare delta>=2pi/q, with identical parity penalty 4 z^2 for all odd offsets.
+out={
+ 'task':'PHY-013-RG2-support-certification','scientific_state':'ANALYTIC_BRANCH_UNIFORM_RG2_SUPPORT_FROM_Q190',
+ 'branch_premise':'Use the certified finite-q stationary branch box from PHY-013_finite_q_branch_analytic.json for every even q>=190.',
+ 'rho_intervals':[[float(rho_lo[i]),float(rho_hi[i])] for i in range(3)],'z_interval':[float(zlo),float(zhi)],
+ 'smooth_distance':'D^2(delta)=2 sum_{k=3,4,5} rho_k^2 [1-cos(k delta)].',
+ 'local_monotonicity':'For 0<delta<pi/5, dD^2/delta=2 sum rho_k^2 k sin(k delta)>0 because k=3,4,5 and all rho_k>0.',
+ 'remote_certificate':{'interval':[local_cut,math.pi],'grid_subintervals':N,'grid_min_value':vmin,'grid_argmin':xstar,'lipschitz_bound':L,'certified_lower_by_grid_minus_Lh2':remote_lower},
+ 'q190_nearest_shell_upper_bounds':{'within_sheet_r2':within_upper_q0,'cross_sheet_r1_smooth_part':cross_upper_q0,'common_odd_parity_penalty_lower':4*zlo*zlo},
+ 'theorem':'For every even q>=190 on the certified localized branch: among nonzero even offsets the unique nearest shell is r=+/-2; among odd offsets the unique nearest shell is r=+/-1. The common 4 z^2 parity term cancels in the odd-shell comparison. Therefore RG-2 gives exactly Cay(Z_q,{+/-1,+/-2}), degree four.',
+ 'scope':'Support theorem for the internal phase orbit. It does not make this graph a physical cell graph or source physical edge weights.'
+}
+p=ROOT/'results'/'PHY-013_RG2_support_certificate.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'remote_lower':remote_lower,'within_q190':within_upper_q0,'cross_q190':cross_upper_q0,'rho_lo':rho_lo.tolist(),'zlo':zlo},indent=2))

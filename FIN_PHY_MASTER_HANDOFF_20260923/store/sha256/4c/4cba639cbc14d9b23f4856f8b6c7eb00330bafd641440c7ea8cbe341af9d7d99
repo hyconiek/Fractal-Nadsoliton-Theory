@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces
+W,A,L,X,C4,A7=feature_spaces(); q=12;kappa=.25
+D=np.maximum(np.sum(X*X,axis=1)[:,None]+np.sum(X*X,axis=1)[None,:]-2*X@X.T,0.0)
+
+def accept(delta,kind):
+    if kind=='metropolis': return min(1.0,math.exp(delta))
+    if delta>=0:return 1/(1+math.exp(-delta))
+    z=math.exp(delta);return z/(1+z)
+
+def tables(kind):
+    Kend=np.zeros((q,q,q));Kmid=np.zeros((q,q,q,q))
+    for nb in range(q):
+      for c in range(q):
+        for k in range(q):
+          if k==c:continue
+          delta=-kappa/2*(D[k,nb]-D[c,nb]);Kend[nb,c,k]=accept(delta,kind)/(q-1)
+        Kend[nb,c,c]=1-Kend[nb,c].sum()
+    for l in range(q):
+      for r in range(q):
+       for c in range(q):
+        for k in range(q):
+          if k==c:continue
+          delta=-kappa/2*((D[k,l]+D[k,r])-(D[c,l]+D[c,r]));Kmid[l,r,c,k]=accept(delta,kind)/(q-1)
+        Kmid[l,r,c,c]=1-Kmid[l,r,c].sum()
+    return Kend,Kmid
+
+def tv(a,b):return .5*float(np.abs(a-b).sum())
+
+# Static B1: p_x -> mu_x; B2: block averages. Compare two frozen partitions.
+rng=np.random.default_rng(8008)
+P=rng.dirichlet(np.ones(q),size=5)
+MU=P@X
+partitions={
+ 'contiguous_A':[[0,1],[2,3,4]],
+ 'alternating_B':[[0,2,4],[1,3]],
+}
+static={}
+for name,blocks in partitions.items():
+    b2=np.stack([MU[b].mean(0) for b in blocks])
+    direct=np.stack([P[b].mean(0)@X for b in blocks])
+    static[name]={'max_B2B1_minus_direct':float(np.max(np.abs(b2-direct))),
+                  'cut_edges_on_path5':sum(1 for i in range(4) if not any(i in b and i+1 in b for b in blocks))}
+
+witnesses={}
+for kind in ['metropolis','barker']:
+    Kend,Kmid=tables(kind)
+    # 1) Same one-site marginals, different pair correlation.
+    bestpair={'tv':-1}
+    for a in range(q):
+      for b in range(a+1,q):
+        same=.5*Kend[a,a]+.5*Kend[b,b]
+        cross=.5*Kend[b,a]+.5*Kend[a,b]
+        z=tv(same,cross);dm=float(np.linalg.norm((same-cross)@X))
+        if z>bestpair['tv']:
+          bestpair={'labels':[a,b],'tv':z,'mu_l2':dm,
+                    'preparation_same':'0.5(a,a)+0.5(b,b)','preparation_cross':'0.5(a,b)+0.5(b,a)',
+                    'same_single_site_marginals':True}
+    # 2) Same all pair marginals, different triple parity.
+    besttriple={'pair_tv_after':-1}
+    for a in range(q):
+      for b in range(a+1,q):
+        even=[(a,a,a),(a,b,b),(b,a,b),(b,b,a)]
+        odd=[(a,a,b),(a,b,a),(b,a,a),(b,b,b)]
+        def evolve(states):
+          out=np.zeros((q,q,q))
+          for l,c,r in states:
+            for kk,p in enumerate(Kmid[l,r,c]):out[l,kk,r]+=0.25*p
+          return out
+        E=evolve(even);O=evolve(odd)
+        pcE=E.sum((0,2));pcO=O.sum((0,2));p01E=E.sum(2);p01O=O.sum(2);p12E=E.sum(0);p12O=O.sum(0)
+        z=max(tv(p01E,p01O),tv(p12E,p12O));c=tv(pcE,pcO);dm=float(np.linalg.norm((pcE-pcO)@X))
+        if z>besttriple['pair_tv_after']:
+          besttriple={'labels':[a,b],'center_tv_after':c,'pair_tv_after':z,'center_mu_l2_after':dm,
+                      'initial_all_pair_marginals_identical':True,
+                      'even_support':even,'odd_support':odd}
+    # 3) Same retained mu, different hidden modes p+/p-.
+    aa=np.cos(np.pi*np.arange(q)/3); pp=np.ones(q)/q+aa/24; pm=np.ones(q)/q-aa/24
+    bestmu={'output_mu_l2':-1}
+    for nb in range(q):
+      op=pp@Kend[nb];om=pm@Kend[nb]
+      dm=float(np.linalg.norm((op-om)@X)); z=tv(op,om)
+      if dm>bestmu['output_mu_l2']:
+        bestmu={'neighbor_label':nb,'initial_mu_difference_l2':float(np.linalg.norm((pp-pm)@X)),
+                'initial_TV':tv(pp,pm),'output_mu_l2':dm,'output_distribution_TV':z}
+    witnesses[kind]={'one_site_marginal_closure_failure':bestpair,
+                     'pair_marginal_closure_failure':besttriple,
+                     'retained_mean_closure_failure':bestmu}
+
+# Structural exact bridge theorem, checked as dimensions/memory counts on path balls.
+def path_ball(M,y,t):return [x for x in range(M) if abs(x-y)<=t]
+balls={}
+M=9;y=4
+for t in range(5):
+    B=path_ball(M,y,t)
+    balls[str(t)]={'cells':B,'cell_count':len(B),'full_label_states':q**len(B)}
+
+res={
+ 'task':'PHY-008','status':'PASS_IN_SCOPE_WITH_GROWING_CAUSAL_MEMORY',
+ 'static_bridge_composition':{
+   'B1':'per-cell distribution p_x -> retained mean mu_x=X^T p_x',
+   'B2':'block arithmetic mean of retained means',
+   'direct':'average p inside each block, then apply X^T',
+   'partitions':static,
+   'theorem':'Linearity gives B2 o B1 = direct coarse-graining exactly for every partition and every preparation.'
+ },
+ 'dynamic_nonclosure':witnesses,
+ 'causal_ball_bridge':{
+   'statement':'For any read-radius-one event rule, a target-cell observable after t causally ordered event layers depends only on the initial joint distribution on graph ball B_t(y) and the event/randomness data inside its causal cone.',
+   'commuting_diagram':'Marginalize to B_t(y), evolve the restricted causal cone with identical boundary-independent event data, then observe y = evolve globally then observe y.',
+   'defect':'0 exactly for the declared finite-horizon local observable when the full causal-ball joint marginal is retained.',
+   'path9_example_memory_growth':balls,
+   'cost':'The retained memory grows with causal-ball size; this is not a fixed-dimensional Markov closure.'
+ },
+ 'error_rule':{
+   'generic':'If an approximate coarse Markov kernel has one-step TV defect <= epsilon and is TV-contractive, the t-step defect is <= t*epsilon by telescoping.',
+   'implication':'The exact witnesses above prove epsilon cannot be zero for coarse states containing only mu, only one-site marginals, or (for a degree-two update) only pair marginals.'
+ },
+ 'partition_conclusion':'Both tested partitions commute statically. Dynamically every cut active edge requires cross-boundary correlation memory; the alternating partition has more cut edges and therefore a larger structural memory burden. This is a property of the supplied support, not emergent medium identity.',
+ 'claim_decision':{
+   'fixed_mu_markov_bridge':'REFUTED_IN_SCOPE',
+   'fixed_one_site_marginal_markov_bridge':'REFUTED_IN_SCOPE',
+   'fixed_pair_marginal_markov_bridge_on_degree2_path':'REFUTED_IN_SCOPE',
+   'finite_horizon_causal_ball_bridge':'PASS_IN_SCOPE_EXACT',
+   'full_microstate_information_preservation':'NOT_CLAIMED',
+   'physical_medium_identity':'NOT_LICENSED'
+ }
+}
+(ROOT/'results'/'PHY-008_bridge.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

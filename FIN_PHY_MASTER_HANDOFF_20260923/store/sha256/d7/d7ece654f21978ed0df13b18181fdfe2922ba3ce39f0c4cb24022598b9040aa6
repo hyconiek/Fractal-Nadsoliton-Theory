@@ -1,0 +1,22 @@
+# OCB-HANKEL-03B — checkpoint-anytime spectral rank test
+
+## Result
+
+The determinant e-process from HANKEL-03A is exactly valid but statistically unusable for the frozen weak rank-four direction.  This round keeps the full cross-Hankel matrix and uses a pre-registered six-checkpoint rectangular matrix-Bernstein test.
+
+For the whitened 4x4 cross-Hankel of the period-2 alias,
+
+- population singular values are approximately `(1, 0.0583617, 0.0583617, 0.00340608)`;
+- under `rank(H)<=3`, Weyl implies `sigma_4(Hhat) <= ||Hhat-H||_2`;
+- each checkpoint receives alpha `0.05/6`, so the frozen family has at most 5% Type-I error by the union bound.
+
+Two composite null scopes were audited.
+
+1. `H0-single`: rank <=3 and all one-symbol marginals equal the frozen strict marginal.  A rearrangement bound gives the distribution-free variance proxy `62.2550319273`.  The first frozen checkpoint where the population target exceeds the radius is 128,000,000 paths.
+2. `H0-pair`: additionally, both two-symbol block marginals are frozen to strict iid `p x p`.  Then the whitened feature second moment is the identity and the variance proxy drops to `12.9570647503`.  The first population crossing is 16,000,000 paths.
+
+The fixed-seed synthetic power diagnostic under the frozen period-2 alias gives rejection fractions `0`, `0.598`, and `1.0` at 8M, 16M, and 32M paths respectively (500 replicates).  This is a power diagnostic only.
+
+## Interpretation
+
+This is a large improvement over the determinant route because evidence scales with the fourth singular value rather than the determinant.  It is still far above the information-theoretic lower bounds supplied by MEM-05, leaving a large statistical-efficiency gap.

@@ -1,0 +1,193 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import json, math, sys
+from pathlib import Path
+import numpy as np
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+
+OMEGA=0.18575; PHI=0.1625; ETA=1.8
+
+def strict_kernel_q(q:int):
+    W=np.empty((q,q),float)
+    for i in range(q):
+        for j in range(q):
+            if i==j:
+                W[i,j]=0.0
+            else:
+                d=min(abs(i-j),q-abs(i-j))
+                W[i,j]=math.cos(OMEGA*d+PHI)/(1+d**ETA)
+    A=np.diag(W.sum(axis=1))-W
+    L=np.fft.fft(A[0]).real[:q//2+1]
+    return W,A,L
+
+def sector_mult(q,k):
+    return 1 if (q%2==0 and k==q//2) else 2
+
+def minimal_rank_vertex_crossing(q:int,g:float,L:np.ndarray):
+    sectors=[(k,float(L[k]),sector_mult(q,k)) for k in range(1,q//2+1)]
+    sectors=sorted(sectors,key=lambda z:z[1],reverse=True)
+    threshold=2*q*math.log(q)/g
+    cum=0.0; rank=0; chosen=[]
+    for k,lam,m in sectors:
+        cum += m*lam; rank += m; chosen.append({'k':k,'lambda':lam,'mult':m})
+        if cum>threshold:
+            return {'exists':True,'rank':rank,'trace':cum,'threshold':threshold,'chosen':chosen}
+    return {'exists':False,'rank':rank,'trace':cum,'threshold':threshold,'chosen':chosen}
+
+def passive_dirichlet_mode1_positive(q:int):
+    # For every nonzero step r=1..floor(q/2), 1-cos(2*pi*r/q)>0.
+    terms=[1-math.cos(2*math.pi*r/q) for r in range(1,q//2+1)]
+    return min(terms), all(t>0 for t in terms)
+
+def signed_support_control():
+    rt3=math.sqrt(3)
+    ratios=np.array([1.0,3+rt3,5+3*rt3,6+4*rt3])
+    actual=np.array([1.9614068619764455,2.19956884933321,2.298606272079097,2.3421820411463004])
+    actual_ratios=actual/actual[0]
+    scale=float(ratios@actual/(ratios@ratios))
+    rel_l2=float(np.linalg.norm(scale*ratios-actual)/np.linalg.norm(actual))
+    max_rel=float(np.max(np.abs(scale*ratios-actual)/actual))
+    # spectral polynomial P(theta)=product over x roots 1,sqrt3/2,1/2, with x=cos(theta)
+    coeff={
+      'constant': 3/4+rt3/2,
+      'cos1': -(5+3*rt3)/4,
+      'cos2': (3+rt3)/4,
+      'cos3': -1/4,
+    }
+    first_row={
+      'a0':coeff['constant'],
+      'a1':coeff['cos1']/2,
+      'a2':coeff['cos2']/2,
+      'a3':coeff['cos3']/2,
+    }
+    return {
+      'minimal_range':3,
+      'proof_reason':'a symmetric circulant range-R symbol is a degree-R polynomial in x=cos(theta); three distinct prescribed roots x=1,sqrt(3)/2,1/2 require R>=3; R=3 is unique up to scale',
+      'spectral_polynomial':'P(theta)=(1-cos(theta))*(sqrt(3)/2-cos(theta))*(1/2-cos(theta))',
+      'fourier_coefficients':coeff,
+      'circulant_first_row_coefficients':first_row,
+      'mixed_signs': bool(first_row['a1']<0 and first_row['a2']>0 and first_row['a3']<0),
+      'predicted_active_ratios_k3_to_k6':ratios.tolist(),
+      'actual_A7_ratios_k3_to_k6':actual_ratios.tolist(),
+      'best_scale_to_A7':scale,
+      'relative_L2_residual_after_best_scale':rel_l2,
+      'max_component_relative_residual_after_best_scale':max_rel,
+    }
+
+def main():
+    W,A,L,X7,C4,A7=model.feature_spaces()
+    full=[{'k':k,'lambda':float(L[k]),'mult':(1 if k==6 else 2)} for k in range(1,7)]
+    sorted_sec=sorted(full,key=lambda z:z['lambda'],reverse=True)
+    top7=[]; rank=0
+    for row in sorted_sec:
+        top7.append(row); rank += row['mult']
+        if rank>=7: break
+    a7_lams=[float(L[k]) for k in (3,4,5,6)]
+    a7_from_projection=np.linalg.norm(A7 - (np.linalg.eigh(A)[1][:,np.argsort(np.linalg.eigh(A)[0])[-7:]] @ np.diag(np.sort(np.linalg.eigh(A)[0])[-7:]) @ np.linalg.eigh(A)[1][:,np.argsort(np.linalg.eigh(A)[0])[-7:]].T))
+    # safer comparison by spectra/support because eigenvector ordering in degenerate spaces can vary
+    g=4.0
+    q12_sel=minimal_rank_vertex_crossing(12,g,L)
+    # Exact gain thresholds for the conditional pure-vertex rank selector at q=12.
+    q12_sorted=sorted([(k,float(L[k]),(1 if k==6 else 2)) for k in range(1,7)], key=lambda z:z[1], reverse=True)
+    q12_rank_thresholds=[]; _cum=0.0; _rank=0
+    for _k,_lam,_m in q12_sorted:
+        _cum += _m*_lam; _rank += _m
+        q12_rank_thresholds.append({'rank':_rank,'last_added_sector':_k,'trace':_cum,
+                                    'g_critical':2*12*math.log(12)/_cum})
+    geq=3.7183448981203875
+    q12_at_geq=minimal_rank_vertex_crossing(12,geq,L)
+
+    transfer=[]
+    first_indef=None
+    for q in range(12,98,2):
+        _,Aq,Lq=strict_kernel_q(q)
+        mn=float(np.min(Lq[1:])); kmin=int(np.argmin(Lq[1:])+1)
+        psd=mn>=-1e-12
+        sel=minimal_rank_vertex_crossing(q,g,Lq) if psd else None
+        row={'q':q,'min_nonuniform_eigenvalue':mn,'min_mode':kmin,'PSD_nonuniform':psd,
+             'full_trace':float(np.trace(Aq)),
+             'vertex_threshold_trace':2*q*math.log(q)/g,
+             'rank_selector':sel}
+        transfer.append(row)
+        if first_indef is None and not psd: first_indef=q
+
+    dirichlet=[]
+    for q in (12,24,48,96):
+        mn,ok=passive_dirichlet_mode1_positive(q)
+        dirichlet.append({'q':q,'min_1_minus_cos_step_for_k1':mn,'strictly_positive_for_every_nonzero_step':ok})
+
+    # Absolute-summability bound for strict-kernel carrier extension: |W(d)| <= 1/(1+d^eta)
+    # Degree/diagonal is bounded by 2*sum_{d>=1} 1/(1+d^eta), so pure-vertex energy gain is bounded at fixed g,
+    # while entropy log(q) diverges. Numerical finite truncation just records a conservative partial sum + integral tail.
+    D=200000
+    partial=sum(1/(1+d**ETA) for d in range(1,D+1))
+    tail=(D**(1-ETA))/(ETA-1) # integral upper bound for d^-eta; conservative since 1/(1+x^eta)<=x^-eta
+    diag_abs_upper=2*(partial+tail)
+    g4_energy_gain_upper=g*diag_abs_upper/2
+
+    out={
+      'task':'PHY-013-followup',
+      'scientific_state':'REFUTED_IN_NATURAL_PASSIVE_SOURCE_CLASSES__CONDITIONAL_RANK7_COMPRESSION_RECONSTRUCTED__SPARSE_SUPPORT_REQUIRES_NEW_RELATIONAL_DATA',
+      'theorems':{
+        'equivariant_sparse_support_no_go':{
+          'statement':'For M>=3 identical cells with no pair-dependent input, any deterministic simple-graph source equivariant under the full cell relabeling group S_M outputs only the empty or complete graph, because S_M is transitive on unordered vertex pairs.',
+          'consequence':'A nontrivial sparse support requires an additional pairwise relational observable, an explicit symmetry-breaking state/seed, or a stochastic source law; it cannot come from labels plus equivariance alone.'
+        },
+        'positive_dirichlet_no_go':{
+          'statement':'For a nontrivial translation-invariant positive Dirichlet form on Z_q, lambda_1=2 sum_r c_r(1-cos(2*pi*r/q))>0 for c_r>=0, so k=1 cannot be an exact null mode. Therefore such a law cannot directly yield the A7 kernel containing k=1,2.',
+          'heldout_checks':dirichlet
+        },
+        'passive_filter_rank_no_go':{
+          'statement':'If L is a connected graph Laplacian and h(0)=0, h(x)>0 for x>0 (including passive heat/resolvent-type filters), then ker h(L)=span{1} and rank h(L)=q-1. At q=12 this is rank 11, not rank 7.',
+          'scope':'connected passive spectral functions; extra positive-frequency zeros require an additional band-selection/source premise'
+        },
+        'schur_nullity_inheritance':{
+          'statement':'For a connected positive quadratic parent, the Schur/Kron effective form on visible variables has zero energy only on constant boundary data: y^T S y=min_z [y,z]^T L [y,z]. Thus passive elimination cannot create the four extra A7 null directions; they must be present upstream or imposed by projection/constraints.'
+        },
+        'rank7_spectral_compression':{
+          'statement':'Conditional on the supplied full q=12 strict operator A, its best rank-7 PSD approximation in Frobenius/operator norm retains the seven largest eigen-directions (Eckart-Young-Mirsky). These are exactly sectors k=6,5,4,3 with multiplicities 1,2,2,2, reproducing the A7 weights without fitting them.',
+          'full_spectrum':full,
+          'top_rank7_sectors':top7,
+          'A7_active_eigenvalues':a7_lams,
+          'projection_numeric_defect':float(a7_from_projection),
+          'remaining_unsourced':'why the mediator rank should be 7, plus source/provenance of the full strict A and physical coupling'
+        },
+        'conditional_minimal_rank_selector_at_g4':{
+          'rule':'Given full A and supplied g, choose the smallest D_q-covariant top-spectral truncation for which a pure label state has V_g(delta_j)<V_g(u). Criterion: trace(A_m)>2 q log(q)/g.',
+          'q12_g4':q12_sel,
+          'q12_rank_thresholds':q12_rank_thresholds,
+          'q12_at_MP7_coexistence_gain':q12_at_geq,
+          'rank7_gain_window':'3.9077653808482973 < g <= 5.259742451782835 (with strict inequalities at exact vertex-energy equality handled separately)',
+          'status':'At q=12,g=4 the rule selects rank 7 without exposing A7 target coefficients, but at the MP7 coexistence gain g≈3.718344898 it selects rank 9. Thus the rule is conditional on an unsourced gain/criterion and does not source rank 7.'
+        },
+        'heldout_carrier_transfer_failure':{
+          'extension':'Freeze the same distance-kernel formula omega=0.18575, phi=0.1625, eta=1.8 and apply it to even q without refitting.',
+          'first_even_q_with_indefinite_laplacian':first_indef,
+          'records':transfer,
+          'conclusion':'The naive carrier extension is PSD only through q=28 and becomes indefinite first at q=30. Even before that, at fixed g=4 the full q=26 and q=28 operators cannot make a pure state beat uniform. Hence this frozen formula+rank-selector does not furnish a scalable target-blind source law.'
+        },
+        'fixed_g_asymptotic_obstruction':{
+          'statement':'Because eta=1.8>1, the frozen distance-kernel magnitude is absolutely summable, so the per-vertex quadratic gain stays bounded as q grows while D(delta||u)=log q diverges. Therefore any fixed-g pure-vertex localization criterion eventually fails; a scaling g(q) or a different source law is necessary.',
+          'conservative_abs_diagonal_upper':diag_abs_upper,
+          'g4_max_pure_vertex_quadratic_gain_bound':g4_energy_gain_upper
+        },
+        'support_only_minimal_range_control':signed_support_control(),
+      },
+      'source_obligation_refinement':{
+        'SO-PHY-013-A':'Source the extra null/projector structure that removes Fourier sectors k=1,2 (or replace the rank-7 projection by a different derived reduction). Passive local positivity/Schur elimination does not generate it.',
+        'SO-PHY-013-B':'Source the mediator-rank/selection rule independently of the desired localized phase and of an unsourced gain value. Conditional EYM fixes weights once rank/subspace are chosen.',
+        'SO-PHY-013-C':'Source a nonconstant pairwise relational object or an explicit symmetry-breaking/stochastic mechanism before claiming sparse inter-cell support. Full S_M equivariance with identical cells alone permits only empty/complete deterministic supports.',
+        'SO-PHY-013-D':'Source the nonlinear inter-cell interaction functional; PHY-003 PM-001 and PM-002 remain observationally inequivalent with the same isolated core.'
+      },
+      'decision':'PHY-013 can be closed as an executed bounded source challenge: natural passive/local target-blind parent classes are refuted for direct A7 generation; a conditional full-A -> rank7 spectral compression is reconstructed; the strict source problem is narrowed to four explicit atoms rather than solved.'
+    }
+    p=ROOT/'results'/'PHY-013_source_challenge.json'
+    p.write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
+    print(json.dumps({'output':str(p),'state':out['scientific_state'],
+                      'q12_rank':q12_sel['rank'],'first_indef_q':first_indef,
+                      'support_control_relL2':out['theorems']['support_only_minimal_range_control']['relative_L2_residual_after_best_scale']},indent=2))
+
+if __name__=='__main__': main()

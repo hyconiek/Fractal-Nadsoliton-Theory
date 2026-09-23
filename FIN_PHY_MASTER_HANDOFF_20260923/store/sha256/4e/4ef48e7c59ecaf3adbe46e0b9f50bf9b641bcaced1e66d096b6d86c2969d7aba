@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import mpmath as mp
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+mp.mp.dps=90
+lam=[mp.mpf('1.9614068619764455'),mp.mpf('2.19956884933321'),mp.mpf('2.298606272079097'),mp.mpf('2.3421820411463004')]
+c=[mp.sqrt(lam[i]/(6 if i<3 else 12)) for i in range(4)]; k=[3,4,5]; g=mp.mpf(7)
+s0=[mp.mpf('3.547595277395986'),mp.mpf('3.783140506071965'),mp.mpf('3.677956492814370')]
+alpha=g*c[3]**2; b0=mp.findroot(lambda b:b/alpha-mp.tanh(b),mp.mpf('1.08')); s60=b0/c[3]
+r=mp.mpf('0.001'); center=s0+[s60]
+base=json.loads((ROOT/'results'/'PHY-013_smooth_continuum_certificate.json').read_text())
+Jlo=np.zeros((4,4),float); Jhi=np.zeros((4,4),float); Jlo[:3,:3]=np.array(base['J_box_lower']); Jhi[:3,:3]=np.array(base['J_box_upper'])
+blo=c[3]*(s60-r); bhi=c[3]*(s60+r); Jlo[3,3]=float(1/g-c[3]**2/mp.cosh(blo)**2); Jhi[3,3]=float(1/g-c[3]**2/mp.cosh(bhi)**2)
+Flo=np.array([float(x[0]) for x in base['F_interval']]+[0.0]); Fhi=np.array([float(x[1]) for x in base['F_interval']]+[0.0])
+Ainv=np.linalg.inv((Jlo+Jhi)/2)
+sm=[abs(s0[i])+r for i in range(3)]; bmax=c[3]*(abs(s60)+r); Hreal=sum(sm[i]*c[i] for i in range(3)); Zqlower=mp.e**(-Hreal-bmax)
+# Fixed strip widths selected BEFORE certification from a coarse scout at q=190. Using the same widths for all q>=190 makes monotonicity immediate.
+A_Z=mp.mpf('0.458')
+A_M=[mp.mpf('0.452'),mp.mpf('0.450'),mp.mpf('0.448')]
+A_Q=[[mp.mpf('0.446'),mp.mpf('0.444'),mp.mpf('0.440')],
+     [mp.mpf('0.444'),mp.mpf('0.440'),mp.mpf('0.438')],
+     [mp.mpf('0.440'),mp.mpf('0.438'),mp.mpf('0.436')]]
+SAFETY=mp.mpf('1.000000000000000000000000000001')
+
+def Mstrip(kind,a,i=None,j=None):
+    hmax=sum(sm[t]*c[t]*mp.cosh(k[t]*a) for t in range(3))
+    p=mp.mpf(1)
+    if kind=='M': p=c[i]*mp.cosh(k[i]*a)
+    elif kind=='Q': p=c[i]*c[j]*mp.cosh(k[i]*a)*mp.cosh(k[j]*a)
+    return p*mp.e**hmax
+
+def err(kind,n,a,i=None,j=None):
+    # Periodic analytic trapezoid alias theorem, valid for arbitrary shift.
+    return SAFETY*2*Mstrip(kind,a,i,j)/(mp.e**(a*n)-1)
+
+def certify(q):
+    n=q//2
+    eZ=err('Z',n,A_Z); eM=[err('M',n,A_M[i],i=i) for i in range(3)]
+    eQ=[[err('Q',n,A_Q[i][j],i=i,j=j) for j in range(3)] for i in range(3)]
+    eb=mp.e**bmax
+    dm_mp=[eb*(eM[i]+c[i]*eZ)/Zqlower for i in range(3)]+[eb*(2*c[3]*eZ)/Zqlower]
+    dm=np.array([float(x) for x in dm_mp])
+    dsec=np.zeros((4,4),float)
+    for i in range(3):
+        for j in range(3): dsec[i,j]=float(eb*(eQ[i][j]+c[i]*c[j]*eZ)/Zqlower)
+    for i in range(3): dsec[i,3]=dsec[3,i]=float(eb*(c[3]*eM[i]+c[i]*c[3]*eZ)/Zqlower)
+    cf=np.array([float(x) for x in c]); dc=np.zeros((4,4),float)
+    for i in range(4):
+        for j in range(4): dc[i,j]=dsec[i,j]+dm[i]*cf[j]+dm[j]*cf[i]
+    lo=Jlo-dc; hi=Jhi+dc; mid=(lo+hi)/2; rad=(hi-lo)/2
+    fl=Flo-dm; fh=Fhi+dm; fm=(fl+fh)/2; fr=(fh-fl)/2
+    cs=np.abs(-Ainv@fm)+np.abs(Ainv)@fr; C=np.eye(4)-Ainv@mid; Cr=np.abs(Ainv)@rad; rows=np.sum(np.abs(C)+Cr,axis=1); kb=cs+rows*float(r)
+    mine=float(np.linalg.eigvalsh((mid+mid.T)/2).min()-np.linalg.norm(rad,'fro'))
+    return {'q':q,'n':n,'eZ':float(eZ),'max_raw_error':float(max([eZ]+eM+[x for row in eQ for x in row])),
+            'max_dmu':float(dm.max()),'max_dcov':float(dc.max()),'krawczyk_bounds':kb.tolist(),'contraction_rows':rows.tolist(),
+            'hessian_min_lower':mine,'strict':bool(np.all(kb<float(r))),'pd':mine>0}
+
+q188=certify(188); q190=certify(190); q192=certify(192); q256=certify(256)
+assert q190['strict'] and q190['pd']
+out={
+ 'task':'PHY-013-finite-q-analytic-branch-certification',
+ 'scientific_state':'INTERVAL_ASSISTED_UNIFORM_EVEN_Q_BRANCH_CERTIFICATE_ANALYTIC_ALIAS',
+ 'g':7.0,'center':[str(x) for x in center],'box_radius_inf':str(r),
+ 'sufficient_q0_even':190,
+ 'fixed_strip_widths':{'Z':str(A_Z),'M':[str(x) for x in A_M],'Q':[[str(x) for x in row] for row in A_Q]},
+ 'error_theorem':'If a 2pi-periodic f is analytic in |Im z|<=a and |f|<=M_a there, any shifted n-point trapezoid has |T_n(f)-Integral(f)| <= 2 M_a/(exp(a n)-1). A 1e-30 multiplicative safety factor is included in all raw bounds.',
+ 'monotonicity':'The strip widths are frozen. For each raw integral the stated error bound decreases strictly with n=q/2. Therefore the q=190 certificate implies the same or tighter enclosure for every larger even q.',
+ 'q188_diagnostic_same_frozen_bounds':q188,'q190_certificate':q190,'q192_diagnostic':q192,'q256_diagnostic':q256,
+ 'conclusion':'For every even q>=190, at g=7 the finite-q smooth-plus-parity dual has exactly one stationary point in the declared local 4D box by the contraction/Krawczyk enclosure, and the Hessian is positive throughout that box. Thus the localized continuum branch persists uniformly for all such q.',
+ 'scope':'This is a local branch theorem. q=190 is a sufficient certified threshold, not claimed minimal. No global-minimum, physical-gain, or q-extension source claim follows.'
+}
+p=ROOT/'results'/'PHY-013_finite_q_branch_analytic.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'q188':q188,'q190':q190,'q192':q192},indent=2))

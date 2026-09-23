@@ -1,0 +1,44 @@
+import json, math, sys
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces
+W,A,L,X,C4,A7=feature_spaces()
+N=2;g=3.7;kappa=.25;q=12
+states=[]
+def rec(rem,i,cur):
+    if i==q-1: states.append(tuple(cur+[rem]));return
+    for v in range(rem+1):rec(rem-v,i+1,cur+[v])
+rec(N,0,[])
+ns=np.array(states);ps=ns/N;ms=ps@X
+from math import factorial
+mult=np.array([factorial(N)/math.prod(factorial(int(v)) for v in n) for n in ns],float)
+base=mult/q**N;lw=base*np.exp(N*g/2*np.sum(ms*ms,axis=1))
+def d2(V):
+    s=np.sum(V*V,axis=1);return np.maximum(s[:,None]+s[None,:]-2*V@V.T,0)
+Dm=d2(ms);Dp=d2(ps)
+def pair(D):
+    C=np.exp(-N*kappa/2*D);raw=lw[:,None]*lw[None,:]*C;return raw/raw.sum()
+P=pair(Dm).ravel();Q=pair(Dp).ravel()
+TV=.5*np.abs(P-Q).sum();KL=float(np.sum(P*np.log(P/Q)))
+ss=np.linspace(0,1,20001);vals=np.array([np.sum(P**s*Q**(1-s)) for s in ss]);i=int(np.argmin(vals));chern=float(-np.log(vals[i]));sopt=float(ss[i])
+nsamp={str(err):math.ceil(math.log(0.5/err)/chern) for err in (0.1,0.05,0.01)}
+dmf=Dm.ravel();mP=float(np.sum(P*dmf));mQ=float(np.sum(Q*dmf));varP=float(np.sum(P*(dmf-mP)**2));delta=abs(mP-mQ)
+z5=math.ceil((5*math.sqrt(varP)/delta)**2)
+basej=json.loads((ROOT/'results'/'PHY-003_composition.json').read_text())
+out={'task':'PHY-029','scientific_state':'PASS_PREREGISTERABLE_CONDITIONAL_ANALOG_PROTOCOL_SYNTHETIC_POWER_ONLY',
+ 'protocol_class':'classical mesoscopic network of q=12 finite-state units/cells with independently controllable onsite and nearest-neighbor coupling; apparatus technology intentionally unspecified',
+ 'identification_subset':['single-cell stationary occupancy/response -> g under declared control dictionary','independent control calibration -> kappa','clock-rate calibration kept separate from static fit'],
+ 'held_out_observables':{
+  'pair_mutual_information_nats':{'PM001':basej['mean_difference_PM']['pair_mutual_information_nats'],'PM002':basej['full_p_difference_control_PM']['pair_mutual_information_nats']},
+  'pair_expected_feature_distance2':{'PM001':basej['mean_difference_PM']['expected_feature_distance2'],'PM002':basej['full_p_difference_control_PM']['expected_feature_distance2']},
+  'path3_endpoint_mutual_information_nats':{'PM001':basej['mean_difference_PM']['endpoint_mutual_information_nats'],'PM002':basej['full_p_difference_control_PM']['endpoint_mutual_information_nats']}
+ },
+ 'pair_full_distribution':{'TV':TV,'KL_P_to_Q_nats':KL,'Chernoff_information':chern,'Chernoff_s':sopt,'iid_samples_upper_bound_bayes_error':nsamp},
+ 'feature_distance_scalar_power':{'difference':delta,'variance_under_PM001':varP,'n_for_5sigma_mean_separation_idealized':z5},
+ 'nuisances':['state misclassification','correlated samples/effective sample size','control drift','unknown edge heterogeneity','finite-N mismatch','non-equilibrium preparation'],
+ 'null_alternatives':['PM-002 full-p coupling','zero/weak coupling','dense/global coupling control'],
+ 'nonconclusions':['no empirical validation','no apparatus readiness','analog success would not validate primordial ontology']}
+(ROOT/'results'/'PHY-029_measurement_power.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

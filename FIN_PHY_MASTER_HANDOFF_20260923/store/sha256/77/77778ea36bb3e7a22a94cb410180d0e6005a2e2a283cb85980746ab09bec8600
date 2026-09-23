@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.optimize import linprog
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+root=Path(__file__).resolve().parents[1]; N=12
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0]); P=W/s; np.fill_diagonal(P,0.)
+eta0=np.linspace(.80,.98,N); eps=.05; C0=np.zeros((N,N))
+for j in range(N): C0[j,j]=.9; C0[j,(j-1)%N]=eps; C0[j,(j+1)%N]=eps
+M0=np.linalg.inv(C0.T); B0=np.diag(1/eta0)@M0
+records=[]
+for i in range(N):
+ p=P[i]; q=C0.T@(eta0*p)/float(eta0@p); r=B0@q; near=[(i-1)%N,(i+1)%N]
+ for a in near:
+  for b in range(N):
+   if b!=i and b not in near: records.append(float(r[a]-r[b]))
+epsB=min(records)/2
+m_inf=float(np.linalg.norm(M0,np.inf)); mmax=float(np.max(np.abs(M0))); d0=float(1/eta0.min())
+# Exact symmetric enlarged zero-row-sum first-order LP coefficient for each M0 row.
+kappas=[]
+for row in M0:
+ vals=[]
+ for sign in [1,-1]:
+  res=linprog(-sign*row,bounds=[(-1,1)]*N,A_eq=np.ones((1,N)),b_eq=[0.],method='highs')
+  vals.append(-res.fun)
+ kappas.append(max(vals))
+kappa=max(kappas); col_l1=float(np.linalg.norm(M0,1)); first_coeff=kappa*col_l1
+# K=M0 E^T, ||K||inf <=15 gamma. Split exact first Neumann term from quadratic remainder.
+def Mdiff(g):
+ if 15*g>=1: return math.inf
+ return first_coeff*g + m_inf*(15*g)**2/(1-15*g)
+def Bdiff(g,r):
+ if r>=1: return math.inf
+ return d0*r/(1-r)*mmax + d0/(1-r)*Mdiff(g)
+def gamma_max_struct(r):
+ if Bdiff(0,r)>=epsB:return 0.
+ lo=0.;hi=1/15-1e-12
+ for _ in range(100):
+  md=(lo+hi)/2
+  if Bdiff(md,r)<epsB:lo=md
+  else:hi=md
+ return lo
+def gamma_old(r):
+ num=epsB-1.5625*r/(1-r); den=23.4375+15*epsB
+ return max(0.,num/den)
+rows=[]
+for r in [0,.01,.02,.03,.04,.05]:
+ go=gamma_old(r); gs=gamma_max_struct(r); rows.append({'r':r,'old_gamma_max':go,'structured_gamma_max':gs,'expansion_factor':gs/go if go else None})
+result={
+ 'task':'OCB-CAL-05','status':'ZERO_ROW_SUM_NEUMANN_SPLIT_EXPANDS_CERTIFIED_PRIMITIVE_CALIBRATION_REGION',
+ 'theorem':{
+   'premises':'C=C0+E is row stochastic, |E_ij|<=gamma, hence every row of E sums to zero. We enlarge the physical nonnegative set to the symmetric zero-row-sum box, so the bound remains sufficient.',
+   'zero_sum_LP_coefficient_kappa':kappa,'M0_column_l1_norm':col_l1,'first_neumann_entry_coefficient':first_coeff,
+   'first_order_bound':'max_ij |(M0 E^T M0)_ij| <= 1.5625 gamma.',
+   'remainder_bound':'max-entry of sum_{m>=2} (-M0 E^T)^m M0 <= 281.25 gamma^2/(1-15 gamma), valid for gamma<1/15.',
+   'inverse_map_bound':f'max|B-B0| <= ({d0*mmax})*r/(1-r) + {d0}/(1-r)*[1.5625 gamma + 281.25 gamma^2/(1-15 gamma)].',
+   'CAL03_threshold':epsB
+ },
+ 'safe_region_comparison':rows,
+ 'fixture_r_0p02':{'old_gamma_max':gamma_old(.02),'structured_gamma_max':gamma_max_struct(.02),'expansion_factor':gamma_max_struct(.02)/gamma_old(.02)},
+ 'decision':'Using the row-stochastic zero-sum structure only in the first Neumann term expands the rigorous primitive confusion radius by factors of roughly 3.4--13.6 over the previous crude norm propagation, without weakening the CAL-03 carrier guarantee.',
+ 'nonconclusion':'The region is still sufficient, not exact. One-sided nonnegativity and correlations between calibration entries could enlarge it further.'
+}
+(root/'results'/'OCB-CAL-05_structured.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'kappa':kappa,'epsB':epsB,'rows':rows},indent=2))

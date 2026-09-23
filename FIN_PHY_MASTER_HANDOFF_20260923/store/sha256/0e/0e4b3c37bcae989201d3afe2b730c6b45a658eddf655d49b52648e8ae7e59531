@@ -1,0 +1,59 @@
+{
+  "task": "OCB-CAL-05",
+  "status": "ZERO_ROW_SUM_NEUMANN_SPLIT_EXPANDS_CERTIFIED_PRIMITIVE_CALIBRATION_REGION",
+  "theorem": {
+    "premises": "C=C0+E is row stochastic, |E_ij|<=gamma, hence every row of E sums to zero. We enlarge the physical nonnegative set to the symmetric zero-row-sum box, so the bound remains sufficient.",
+    "zero_sum_LP_coefficient_kappa": 1.25,
+    "M0_column_l1_norm": 1.25,
+    "first_neumann_entry_coefficient": 1.5625,
+    "first_order_bound": "max_ij |(M0 E^T M0)_ij| <= 1.5625 gamma.",
+    "remainder_bound": "max-entry of sum_{m>=2} (-M0 E^T)^m M0 <= 281.25 gamma^2/(1-15 gamma), valid for gamma<1/15.",
+    "inverse_map_bound": "max|B-B0| <= (1.397542485937371)*r/(1-r) + 1.25/(1-r)*[1.5625 gamma + 281.25 gamma^2/(1-15 gamma)].",
+    "CAL03_threshold": 0.09025558368189042
+  },
+  "safe_region_comparison": [
+    {
+      "r": 0,
+      "old_gamma_max": 0.003640610246024218,
+      "structured_gamma_max": 0.012373228210952656,
+      "expansion_factor": 3.3986687326568457
+    },
+    {
+      "r": 0.01,
+      "old_gamma_max": 0.0030039834134924764,
+      "structured_gamma_max": 0.011240149926611594,
+      "expansion_factor": 3.7417483319402307
+    },
+    {
+      "r": 0.02,
+      "old_gamma_max": 0.002354364196623352,
+      "structured_gamma_max": 0.00996415753211303,
+      "expansion_factor": 4.2322073816802455
+    },
+    {
+      "r": 0.03,
+      "old_gamma_max": 0.0016913507690971322,
+      "structured_gamma_max": 0.008490093199973408,
+      "expansion_factor": 5.019711673708905
+    },
+    {
+      "r": 0.04,
+      "old_gamma_max": 0.001014524561830783,
+      "structured_gamma_max": 0.00671506221466236,
+      "expansion_factor": 6.618925225964509
+    },
+    {
+      "r": 0.05,
+      "old_gamma_max": 0.0003234493817798789,
+      "structured_gamma_max": 0.004397161397725931,
+      "expansion_factor": 13.594588969467832
+    }
+  ],
+  "fixture_r_0p02": {
+    "old_gamma_max": 0.002354364196623352,
+    "structured_gamma_max": 0.00996415753211303,
+    "expansion_factor": 4.2322073816802455
+  },
+  "decision": "Using the row-stochastic zero-sum structure only in the first Neumann term expands the rigorous primitive confusion radius by factors of roughly 3.4--13.6 over the previous crude norm propagation, without weakening the CAL-03 carrier guarantee.",
+  "nonconclusion": "The region is still sufficient, not exact. One-sided nonnegativity and correlations between calibration entries could enlarge it further."
+}

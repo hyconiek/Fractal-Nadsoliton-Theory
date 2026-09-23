@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+import json, math
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+
+def log_no_collision(M,q):
+    if M>q:return -math.inf
+    return sum(math.log1p(-i/q) for i in range(M))
+
+def p_no_collision(M,q):
+    z=log_no_collision(M,q)
+    return 0.0 if not math.isfinite(z) else math.exp(z)
+
+def q_for_prob(M,target=.95):
+    lo=max(M,1); hi=max(M*M,lo)
+    while p_no_collision(M,hi)<target: hi*=2
+    while lo<hi:
+        mid=(lo+hi)//2
+        if p_no_collision(M,mid)>=target:hi=mid
+        else:lo=mid+1
+    return lo
+
+rows=[]
+for M in [10,30,100,300,1000]:
+    row={'M':M,'q_equal_M':p_no_collision(M,M),'q_M2':p_no_collision(M,M*M),
+         'q_10M2':p_no_collision(M,10*M*M),'q_for_95pct_no_ties':q_for_prob(M,.95)}
+    rows.append(row)
+# Uniform-circle max-gap diagnostic, not proof.
+rng=np.random.default_rng(20260923)
+gaps=[]
+for M in [32,64,128,256,512,1024,2048]:
+    vals=[]
+    for rep in range(64):
+        x=np.sort(rng.random(M)); g=np.diff(np.r_[x,x[0]+1]); vals.append(float(g.max()))
+    gaps.append({'M':M,'median_max_gap':float(np.median(vals)),'p95_max_gap':float(np.quantile(vals,.95)),
+                 'logM_over_M':math.log(M)/M})
+out={
+ 'task':'PHY-013-RG3-cell-geometry',
+ 'scientific_state':'CONDITIONAL_PAIR_SPECIFIC_CELL_GRAPH_SOURCE_FOUND__ORDER_OF_LIMITS_AND_TIE_GATE',
+ 'phase_coordinate':{
+   'definition':'For each cell with nonzero complex retained means m3,m4, set u=(m4*conj(m3))/|m4*m3| in S1.',
+   'covariance':'Under a common phase translation m_k -> exp(i k alpha)m_k, u -> exp(i alpha)u. Reflection conjugates u. Therefore the unoriented circular order and its adjacency graph are D_q-covariant and independent of an absolute origin/orientation.'
+ },
+ 'RG3':{
+   'definition':'For pairwise distinct u_x, take the one-dimensional Delaunay/Voronoi adjacency on S1: connect consecutive cells in circular order.',
+   'output':'C_M, connected and degree 2 for every M>=3 with distinct phases',
+   'parameters':'none beyond the phase coordinate; no threshold/k is fitted',
+   'weighted_metric':'Assign each consecutive edge its intrinsic angular arc gap. Shortest-path distance on the polygon then equals the circle geodesic distance between sampled points.'
+ },
+ 'tie_no_go':{
+   'statement':'If n>=2 cells have exactly the same phase coordinate and no additional pair-specific datum, their stabilizer contains S_n. No deterministic equivariant rule can choose a unique cyclic order among them. Any type-only adjacency is a blow-up and can have degree growing with occupancy.',
+   'finite_q_consequence':'At fixed q and M>q ties are certain. Even for M<=q, the no-tie probability is (q)_M/q^M.'
+ },
+ 'collision_scaling':{
+   'exact_probability':'P(no ties)=(q)_M/q^M',
+   'birthday_asymptotic':'If M^2/q is small, log P(no ties)=-M(M-1)/(2q)+O(M^3/q^2). Thus M^2/q ->0 is sufficient for ties to vanish in probability.',
+   'table':rows
+ },
+ 'continuum_order_limit':{
+   'statement':'If q->infinity first (or q/M^2->infinity) and cell phases are independently Haar-distributed on the symmetry orbit, phases are distinct with probability tending one. As M->infinity the largest circular gap tends to zero almost surely; e.g. P(maxgap>eps)<=M(1-eps)^(M-1). The intrinsic weighted Delaunay polygon therefore converges to S1.',
+   'diagnostic':gaps,
+   'noncommutation':'Taking M->infinity at fixed q produces macroscopic ties and does not yield this canonical cycle. The q and M limits are not interchangeable for RG3.'
+ },
+ 'dynamic_caution':{
+   'statement':'RG3 is a state-sourced geometry. If the same phase variables evolve, the graph rewires when phase order changes. A physical finite-speed law for this rewiring is not derived. Ferromagnetic phase coupling can also favor clustering; a uniform phase filling or its replacement must be dynamically justified.'
+ },
+ 'decision':'RG3 discharges the purely combinatorial S_M no-go conditionally: nonidentical cell states provide pair-specific relational data and yield a parameter-free sparse graph. It does not yet establish a fundamental spatial law because the phase-coordinate population/scaling and graph dynamics are additional bridge obligations.'
+}
+p=ROOT/'results'/'PHY-013_RG3_cell_geometry.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'table':rows,'last_gap':gaps[-1]},indent=2))

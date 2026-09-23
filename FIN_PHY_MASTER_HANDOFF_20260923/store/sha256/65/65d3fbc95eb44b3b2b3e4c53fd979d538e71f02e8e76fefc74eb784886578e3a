@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+from scipy.optimize import minimize
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,LAMFULL,X7,C4,A7=model.feature_spaces()
+lam=np.array([LAMFULL[3],LAMFULL[4],LAMFULL[5],LAMFULL[6]],float)
+c=np.array([math.sqrt(lam[i]/(6 if i<3 else 12)) for i in range(4)])
+g=7.0
+ks=(3,4,5); Lshape=np.array([[-3.,1.,1.],[-1.,2.,-1.]])
+s0=np.array([3.5475952773959873,3.783140506071962,3.677956492814376,2.461572435106137])
+
+def Xalign(q):
+ j=np.arange(q); cols=[c[i]*np.cos(2*np.pi*k*j/q) for i,k in enumerate(ks)]; cols.append(c[3]*((-1.0)**j)); return np.column_stack(cols)
+def eval_all(s,q):
+ X=Xalign(q);h=X@s; hm=float(h.max()); ww=np.exp(h-hm); p=ww/ww.sum(); mu=X.T@p; cov=(X*p[:,None]).T@X-np.outer(mu,mu)
+ phi=float(s@s/(2*g)-(hm+math.log(float(np.mean(ww))))); grad=s/g-mu; H=np.eye(4)/g-cov
+ return phi,grad,H,p
+def solve(q):
+ r=minimize(lambda x:eval_all(x,q)[0],s0,jac=lambda x:eval_all(x,q)[1],method='BFGS',options={'gtol':1e-12,'maxiter':1000})
+ return np.asarray(r.x,float),float(r.fun),float(np.linalg.norm(eval_all(r.x,q)[1]))
+def phase_hessian(s,q):
+ j=np.arange(q); t=2*np.pi*j/q
+ h=sum(c[i]*s[i]*np.cos(ks[i]*t) for i in range(3))+c[3]*s[3]*((-1.0)**j)
+ w=np.exp(h-h.max());p=w/w.sum()
+ D=np.stack([c[i]*s[i]*np.sin(ks[i]*t) for i in range(3)],axis=1)
+ D2=np.stack([-c[i]*s[i]*np.cos(ks[i]*t) for i in range(3)],axis=1)
+ m=p@D; Hlog=(D*p[:,None]).T@D-np.outer(m,m)+np.diag(p@D2); Hp=-Hlog
+ C=Lshape@np.linalg.pinv(Hp,rcond=1e-10)@Lshape.T
+ return Hp,C
+ref=json.loads((ROOT/'inputs'/'DIM-01_phase_coordinate_rank.json').read_text())
+Href=np.array(ref['numeric_center_check']['H_phi'],float); Cref=Lshape@np.linalg.pinv(Href,rcond=1e-12)@Lshape.T
+rows=[]
+for q in [190,192,256,384,768,1536]:
+ s,phi,gn=solve(q); H,C=phase_hessian(s,q); ev=np.linalg.eigvalsh((H+H.T)/2)
+ rows.append({'q':q,'grad_norm':gn,'s':s.tolist(),'phi':phi,'phase_hessian_eigenvalues':ev.tolist(),'shape_C':C.tolist(),'C_max_abs_defect_from_continuum':float(np.max(np.abs(C-Cref))),'s_max_abs_defect_from_continuum':float(np.max(np.abs(s-s0)))})
+assert rows[0]['C_max_abs_defect_from_continuum']<2e-6 and rows[-1]['C_max_abs_defect_from_continuum']<1e-10
+out={
+ 'task':'HDIM-03-q-refinement-stability',
+ 'scientific_state':'NUMERICAL_REPLAY_PLUS_ANALYTIC_CONVERGENCE_STRUCTURE_FOR_T2_TANGENT',
+ 'q_branch_rows':rows,
+ 'continuum_shape_C':Cref.tolist(),
+ 'analytic_bridge':'The finite-q stationary branch exists uniformly for every even q>=190 by the predecessor interval-assisted theorem. Phase Hessian entries are ratios of the same analytic periodic trapezoid sums and their first/second phase derivatives; therefore they converge exponentially in q to the continuum Hessian on the certified compact box. The table is a deterministic numerical diagnostic, not the interval constant for that derivative bound.',
+ 'conclusion':'The two-dimensional shape tangent does not disappear under the genuine q refinement; its local metric/covariance rapidly converges to a q-independent continuum object.',
+ 'nonconclusions':['This does not turn the massive T2 into spatial dimension.','No minimal q for metric convergence is claimed beyond the branch q0=190.']
+}
+p=ROOT/'results'/'HDIM-03_q_refinement_shape.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':[(x['q'],x['C_max_abs_defect_from_continuum']) for x in rows]},indent=2))

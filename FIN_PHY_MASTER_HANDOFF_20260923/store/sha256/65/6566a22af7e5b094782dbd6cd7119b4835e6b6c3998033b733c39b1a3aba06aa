@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import mpmath as mp
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+mp.mp.dps=70
+# Values are inherited from the accepted q=12 strict spectrum; use high precision decimal declarations.
+lam=[mp.mpf('1.9614068619764455'),mp.mpf('2.19956884933321'),mp.mpf('2.298606272079097')]
+c=[mp.sqrt(x/6) for x in lam]; k=[3,4,5]; g=mp.mpf(7)
+s0=[mp.mpf('3.547595277395986'),mp.mpf('3.783140506071965'),mp.mpf('3.677956492814370')]
+r=mp.mpf('0.001'); N=16384
+# high precision trapezoid sums at s0
+Z=mp.mpf('0'); M=[mp.mpf('0') for _ in range(3)]; Q=[[mp.mpf('0') for _ in range(3)] for __ in range(3)]
+for n in range(N):
+    t=2*mp.pi*n/N
+    x=[c[i]*mp.cos(k[i]*t) for i in range(3)]
+    h=sum(s0[i]*x[i] for i in range(3)); e=mp.e**h
+    Z += e
+    for i in range(3):
+        M[i]+=x[i]*e
+        for j in range(3): Q[i][j]+=x[i]*x[j]*e
+Z/=N
+for i in range(3):
+    M[i]/=N
+    for j in range(3): Q[i][j]/=N
+# Fourier/trapezoid error: for 2pi-periodic C^4 f, sample-average error <= 2*zeta(4)*sup|f''''|/N^4.
+sm=[abs(s0[i])+r for i in range(3)]
+H0=sum(sm[i]*c[i] for i in range(3))
+H=[mp.mpf(0)]+[sum(sm[i]*c[i]*(k[i]**n) for i in range(3)) for n in range(1,5)]
+B=[mp.mpf(1),None,None,None,None]
+B[1]=H[1]
+B[2]=H[2]+H[1]**2
+B[3]=H[3]+3*H[1]*H[2]+H[1]**3
+B[4]=H[4]+4*H[1]*H[3]+3*H[2]**2+6*H[1]**2*H[2]+H[1]**4
+expH=mp.e**H0
+zeta4=mp.zeta(4)
+def pderiv_bound(kind,i=None,j=None,n=0):
+    if kind=='Z': return mp.mpf(1) if n==0 else mp.mpf(0)
+    if kind=='M': return c[i]*(k[i]**n)
+    if kind=='Q': return c[i]*c[j]*((k[i]+k[j])**n)
+def fourth_bound(kind,i=None,j=None):
+    return expH*sum(mp.binomial(4,a)*pderiv_bound(kind,i,j,a)*B[4-a] for a in range(5))
+def terr(kind,i=None,j=None):
+    return 2*zeta4*fourth_bound(kind,i,j)/(N**4) + mp.mpf('1e-55')
+eZ=terr('Z'); eM=[terr('M',i=i) for i in range(3)]; eQ=[[terr('Q',i=i,j=j) for j in range(3)] for i in range(3)]
+# simple interval arithmetic via endpoint operations; Z positive.
+Zlo,Zhi=Z-eZ,Z+eZ
+mean=[]
+for i in range(3): mean.append(((M[i]-eM[i])/Zhi,(M[i]+eM[i])/Zlo))
+# F at s0 intervals
+Flo=[];Fhi=[]
+for i in range(3):
+    Flo.append(s0[i]/g-mean[i][1]); Fhi.append(s0[i]/g-mean[i][0])
+# J=I/g-Cov. Q/Z positive; product of means positive in this root box.
+Jlo=np.zeros((3,3),float); Jhi=np.zeros((3,3),float)
+for i in range(3):
+  for j in range(3):
+    qlo=(Q[i][j]-eQ[i][j])/Zhi; qhi=(Q[i][j]+eQ[i][j])/Zlo
+    # Q_ij can be negative in principle. Our high precision center values are positive here? robust endpoint ratio handling.
+    vals=[(Q[i][j]-eQ[i][j])/Zlo,(Q[i][j]-eQ[i][j])/Zhi,(Q[i][j]+eQ[i][j])/Zlo,(Q[i][j]+eQ[i][j])/Zhi]
+    qlo=min(vals); qhi=max(vals)
+    prodlo=mean[i][0]*mean[j][0]; prodhi=mean[i][1]*mean[j][1]
+    covlo=qlo-prodhi; covhi=qhi-prodlo
+    delta=(mp.mpf(1)/g if i==j else mp.mpf(0))
+    Jlo[i,j]=float(delta-covhi); Jhi[i,j]=float(delta-covlo)
+# add box variation via third cumulant |d Cov_ij/ds_l| <= 8 c_i c_j c_l
+for i in range(3):
+  for j in range(3):
+    var=8*c[i]*c[j]*sum(c)*r
+    Jlo[i,j]-=float(var); Jhi[i,j]+=float(var)
+Jmid=(Jlo+Jhi)/2; Jrad=(Jhi-Jlo)/2
+Ainv=np.linalg.inv(Jmid)
+Fmid=np.array([(float(Flo[i])+float(Fhi[i]))/2 for i in range(3)])
+Frad=np.array([(float(Fhi[i])-float(Flo[i]))/2 for i in range(3)])
+center=np.abs(-Ainv@Fmid)+np.abs(Ainv)@Frad
+C=np.eye(3)-Ainv@Jmid
+Crad=np.abs(Ainv)@Jrad
+rowsum=np.sum(np.abs(C)+Crad,axis=1)
+kbound=center+rowsum*float(r)
+inclusion=kbound < float(r)
+min_eig_mid=float(np.linalg.eigvalsh((Jmid+Jmid.T)/2).min())
+rad_frob=float(np.linalg.norm(Jrad,'fro'))
+min_eig_lower=min_eig_mid-rad_frob
+out={
+ 'task':'PHY-013-smooth-continuum-certification',
+ 'scientific_state':'INTERVAL_ASSISTED_LOCAL_CONTINUUM_ROOT_CERTIFICATE',
+ 'box_center':[str(x) for x in s0],'box_radius_inf':str(r),'trapezoid_N':N,
+ 'quadrature_method':'high-precision periodic trapezoid plus analytic C4 Fourier-tail bound 2*zeta(4)*sup|f^(4)|/N^4',
+ 'quadrature_error_bounds':{'Z':str(eZ),'M':[str(x) for x in eM],'Q':[[str(x) for x in row] for row in eQ]},
+ 'F_interval':[[str(Flo[i]),str(Fhi[i])] for i in range(3)],
+ 'J_box_lower':Jlo.tolist(),'J_box_upper':Jhi.tolist(),
+ 'krawczyk_like_component_bounds':kbound.tolist(),'strict_inclusion':inclusion.tolist(),'all_strict':bool(inclusion.all()),
+ 'contraction_row_bounds':rowsum.tolist(),'center_shift_bounds':center.tolist(),
+ 'hessian_min_eigen_mid':min_eig_mid,'hessian_radius_frobenius_bound':rad_frob,'hessian_min_eigen_lower':min_eig_lower,
+ 'conclusion':'The smooth continuum stationarity map has one locally unique root in the declared infinity-norm box by the interval Newton/Krawczyk contraction bound; the Hessian is positive throughout the box.',
+ 'scope':'The certificate concerns the continuum three-mode smooth dual at g=7. It does not by itself quantify the finite-q transfer q0.'
+}
+assert bool(inclusion.all()) and min_eig_lower>0
+p=ROOT/'results'/'PHY-013_smooth_continuum_certificate.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'all_strict':bool(inclusion.all()),'Kbounds':kbound.tolist(),'rowsum':rowsum.tolist(),'minHlower':min_eig_lower,'max_quaderr':max([float(eZ)]+[float(x) for x in eM]+[float(x) for row in eQ for x in row])},indent=2))

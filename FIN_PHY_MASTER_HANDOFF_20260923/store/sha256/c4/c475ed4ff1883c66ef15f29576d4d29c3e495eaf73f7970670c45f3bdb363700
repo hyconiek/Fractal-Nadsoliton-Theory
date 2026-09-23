@@ -1,0 +1,17 @@
+{
+  "task": "PHY-014",
+  "status": "PASS_IN_SCOPE_CONDITIONAL_DICTIONARY",
+  "static_gauge": "A7 -> c A7, g -> g/c leaves the isolated primal invariant",
+  "selected_PM": {
+    "name": "coupling/noise ratio",
+    "relations": ["g=J/sigma", "kappa=K/sigma"]
+  },
+  "interventions": {
+    "A_internal_coupling": "J->aJ at fixed sigma,K: g->ag; kappa fixed",
+    "B_noise_scale": "sigma->sigma/a at fixed J,K: g->ag; kappa->a kappa"
+  },
+  "held_out_discriminator": "At matched final g, pair correlations/propagation observables differ because kappa differs.",
+  "refuted_dictionary": "g as pure overall Markov clock/generator scale",
+  "reason": "Overall generator scaling leaves equilibrium unchanged, whereas g changes the equilibrium variational landscape.",
+  "not_concluded": ["physical temperature", "fundamental coupling", "SI time", "density law", "RG scale"]
+}

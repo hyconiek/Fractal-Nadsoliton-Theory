@@ -1,0 +1,58 @@
+{
+  "task": "OCB-CHANNEL-05",
+  "status": "PREREGISTERED_TWO_LEVEL_PROTOCOL_FROZEN__PHYSICAL_CALIBRATION_AND_EXECUTION_REMAIN_EXTERNAL",
+  "frozen_protocol": {
+    "pre_unblinding_calibration_gate": {
+      "relative_two_control_time_distortion_eta_le": 0.02,
+      "dimensionless_t1_interval": [
+        0.23,
+        0.24
+      ],
+      "failure_budget": 0.025
+    },
+    "main_controls": "two nominal settings u and 2u; retain every attempt, including return/no-escape/no-click and destination when present",
+    "attempts_per_control": 15649551,
+    "total_main_attempts": 31299102,
+    "statistical_failure_budget": 0.025,
+    "relative_escape_frequency_error_target": 0.05263798415949884,
+    "multiplicative_Chernoff_basis": "With true escape probability p>=p_min, two-sided relative error e has probability <=2 exp(-N p e^2/3); union over two controls <=alpha_stat.",
+    "rigorous_smallest_escape_probability_used": 0.00035113313080883994,
+    "true_ratio_intervals": {
+      "heat": [
+        0.9690941889597867,
+        2.732226668550894
+      ],
+      "unitary": [
+        3.453301756086495,
+        4.398937791632855
+      ],
+      "wave": [
+        8.444843517728266,
+        27.050081420129935
+      ]
+    },
+    "observable_ratio_intervals_after_sampling_error": {
+      "heat": [
+        0.8721735660387764,
+        3.0358464077732776
+      ],
+      "unitary": [
+        3.1079316556905976,
+        4.8877714453426435
+      ],
+      "wave": [
+        7.600261532269014,
+        30.056032120069496
+      ]
+    },
+    "separation_margins": {
+      "heat_unitary": 0.07208524791731996,
+      "unitary_wave": 2.712490086926371
+    },
+    "classification_rule": "Compute Rhat=(escape fraction at 2u)/(escape fraction at u). If Rhat lies in exactly one frozen observable interval, report that category; otherwise NO_DECISION. Do not fit eta, t1, or category boundaries after observing the main data."
+  },
+  "why_absolute_calibration_is_needed": "CHANNEL04 correctness needed only an upper bound t1<=T. A finite attempt guarantee also needs t1 bounded away from zero; otherwise wave escape scales as t1^4 and can be arbitrarily rare.",
+  "calibration_boundary": "The 2.5% calibration failure budget and required [0.23,0.24], eta<=0.02 certificate are frozen, but FIN supplies no laboratory calibration-noise law. Therefore a calibration shot count cannot be honestly generated internally; it must come from the external apparatus/calibration model.",
+  "decision": "CHANNEL05 closes the mathematical protocol-design atom. The main experiment has an explicit attempt count and no-fit rule, while the physical-execution gate remains correctly closed on the missing external calibration certificate and real records.",
+  "nonconclusion": "The very large attempt count is a conservative design bound, not an experimental recommendation or evidence that any physical system realizes heat/unitary/wave FIN dynamics."
+}

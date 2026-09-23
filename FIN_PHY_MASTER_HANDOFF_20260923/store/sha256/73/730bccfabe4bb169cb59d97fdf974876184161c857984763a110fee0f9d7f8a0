@@ -1,0 +1,54 @@
+{
+  "consequence": "There is a simple target-blind extension of the complete six-shell stencil that produces an ordinary local 1D Laplacian. However, the extra premise is exactly that interaction range is fixed in lattice-offset units under refinement; current strict data do not source that premise.",
+  "effective_stiffness_sum_wd_d2": 3.81531411549983,
+  "mode1_checks": [
+    {
+      "M": 24,
+      "continuum_limit": 150.6225639435019,
+      "lambda_mode1": 139.38411656692375,
+      "relative_error": -0.07461330548584771
+    },
+    {
+      "M": 48,
+      "continuum_limit": 150.6225639435019,
+      "lambda_mode1": 147.70494581225483,
+      "relative_error": -0.01937039215679162
+    },
+    {
+      "M": 96,
+      "continuum_limit": 150.6225639435019,
+      "lambda_mode1": 149.88619560367582,
+      "relative_error": -0.004888831530595121
+    },
+    {
+      "M": 192,
+      "continuum_limit": 150.6225639435019,
+      "lambda_mode1": 150.43803320982516,
+      "relative_error": -0.0012251201204219338
+    },
+    {
+      "M": 384,
+      "continuum_limit": 150.6225639435019,
+      "lambda_mode1": 150.57640379093695,
+      "relative_error": -0.00030646240082761873
+    }
+  ],
+  "no_refit": true,
+  "nonconclusions": [
+    "This does not defeat the universal nonidentifiability theorem, because long-range refinements use a different scaling rule.",
+    "No physical length or stiffness scale is sourced."
+  ],
+  "observed_error_loglog_slope_vs_M": -1.9838016105972651,
+  "rule": "At every M keep exactly the six strict offset coefficients w_1,...,w_6, keep the stencil radius R=6 fixed in lattice units, set mesh h=1/M, and scale the generalized generator by h^{-2}.",
+  "scientific_state": "CONDITIONAL_TARGET_BLIND_REFINEMENT_CONSTRUCTION__NOT_STRICT_SOURCED",
+  "strict_coefficients": [
+    0.4699856726450201,
+    0.1920435516901028,
+    0.09142861427792495,
+    0.0470291687456504,
+    0.02413122336363006,
+    0.011070817321442113
+  ],
+  "task": "OPERATOR-REFINE-05_fixed_stencil_conditional_local_continuum",
+  "theorem": "For fixed finite stencil radius R, 2 h^{-2} sum_{d=1}^R w_d(1-cos(p d h)) -> p^2 sum_d w_d d^2 with O(h^2) error for fixed p."
+}

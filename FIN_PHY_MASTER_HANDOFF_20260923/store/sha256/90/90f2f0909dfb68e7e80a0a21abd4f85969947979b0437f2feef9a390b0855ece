@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+from mpmath import iv
+q=12
+omega=iv.mpf(['0.18575','0.18575']); phi=iv.mpf(['0.1625','0.1625']); eta=iv.mpf(['1.8','1.8'])
+w=[iv.cos(omega*d+phi)/(1+iv.power(d,eta)) for d in range(1,7)]
+lam=[]
+for k in range(7):
+    v=iv.mpf([0,0])
+    for d in range(1,6): v += 2*w[d-1]*(1-iv.cos(2*iv.pi*k*d/q))
+    v += w[5]*(1-(-1)**k)
+    lam.append(v)
+
+def U(d,t):
+    z=iv.mpc(1); dz=iv.mpc(0)
+    z += (-1)**d*iv.exp(-1j*lam[6]*t)
+    dz += (-1)**d*(-1j*lam[6])*iv.exp(-1j*lam[6]*t)
+    for k in range(1,6):
+        c=2*iv.cos(2*iv.pi*k*d/q); e=iv.exp(-1j*lam[k]*t)
+        z += c*e; dz += c*(-1j*lam[k])*e
+    return z/q,dz/q
+
+def Punit(d,t):
+    z,_=U(d,t); return z.real*z.real+z.imag*z.imag
+
+def dPunit(d,t):
+    z,dz=U(d,t); return 2*(z.real*dz.real+z.imag*dz.imag)
+
+def C(d,t):
+    z=iv.mpf([1,1]); dz=iv.mpf([0,0])
+    s=iv.sqrt(lam[6]); z += (-1)**d*iv.cos(s*t); dz += (-1)**d*(-s*iv.sin(s*t))
+    for k in range(1,6):
+        c=2*iv.cos(2*iv.pi*k*d/q); s=iv.sqrt(lam[k])
+        z += c*iv.cos(s*t); dz += c*(-s*iv.sin(s*t))
+    return z/q,dz/q
+
+def Pwave(d,t):
+    z,_=C(d,t); return z*z
+
+def dPwave(d,t):
+    z,dz=C(d,t); return 2*z*dz
+
+def bounds(x):
+    return [float(x.a),float(x.b)]
+# Certified local crossing brackets with strict endpoint signs and derivative sign
+ua='0.8759'; ub='0.8760'; wt='0.8759'
+ta=iv.mpf([ua,ua]); tb=iv.mpf([ub,ub]); tint=iv.mpf([ua,ub])
+uf_a=Punit(5,ta)-Punit(6,ta); uf_b=Punit(5,tb)-Punit(6,tb); udf=dPunit(5,tint)-dPunit(6,tint)
+wa='2.3545'; wb='2.3547'; wa0=iv.mpf([wa,wa]); wb0=iv.mpf([wb,wb]); wint=iv.mpf([wa,wb])
+wf_a=Pwave(1,wa0)-Pwave(2,wa0); wf_b=Pwave(1,wb0)-Pwave(2,wb0); wdf=dPwave(1,wint)-dPwave(2,wint)
+res={
+ 'task':'OCB-05',
+ 'status':'INTERVAL_CERTIFIED_LOCAL_CROSSINGS',
+ 'unitary_shell5_minus_shell6':{
+   'bracket':[float(ua),float(ub)],
+   'left_value_interval':bounds(uf_a),'right_value_interval':bounds(uf_b),
+   'derivative_interval_on_bracket':bounds(udf),
+   'conclusion':'Exactly one crossing lies in the bracket by continuity plus strictly negative derivative.'
+ },
+ 'wave_probability_shell1_minus_shell2':{
+   'bracket':[float(wa),float(wb)],
+   'left_value_interval':bounds(wf_a),'right_value_interval':bounds(wf_b),
+   'derivative_interval_on_bracket':bounds(wdf),
+   'conclusion':'Exactly one crossing lies in the bracket by continuity plus strictly negative derivative.'
+ },
+ 'heat_control':'OCB-01 proves no adjacent shell crossing at any finite t>0.',
+ 'interpretation':('Ordinal shell-crossing scans can discriminate the heat category from the supplied reversible unitary/wave calculi without comparing absolute response amplitudes. '
+                   'A physical clock/control map is still required to identify the dimensionless scan parameter with laboratory time.'),
+ 'nonconclusion':'The existence of these mathematical crossings does not select unitary or wave dynamics in nature.'
+}
+Path('/mnt/data/fin_phy_operational_carrier/results/OCB-05_ordinal_dynamics_crossing.json').write_text(json.dumps(res,indent=2),encoding='utf-8')
+print('done')

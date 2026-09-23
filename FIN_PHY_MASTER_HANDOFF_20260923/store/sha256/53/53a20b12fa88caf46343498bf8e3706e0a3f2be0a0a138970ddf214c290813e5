@@ -1,0 +1,94 @@
+{
+  "scope": "Bounded integrity, DAG, selected certificate and exact arithmetic checks; no large replay; not repository-wide acceptance",
+  "agents_sha256": "3317ae9c465a249532ec1fe1f5d79c443a17be8ba9089a55dc1c0948f6c1bf6c",
+  "package_manifest": {
+    "present": 165,
+    "missing": [
+      "inputs/archives/FIN_R7N_HANDOFF_20260920.zip",
+      "inputs/archives/FIN_R7O3_TARGETP_HANDOFF_20260920.zip",
+      "inputs/archives/FIN_rank7_followup_FINAL_HANDOFF_20260914.zip",
+      "inputs/archives/SHA256SUMS.txt"
+    ],
+    "changed": []
+  },
+  "claim_hashes": {
+    "entries": 39,
+    "mismatches": []
+  },
+  "clean_inputs": {
+    "count": 72,
+    "predecessors": 54,
+    "issues": [
+      {
+        "path": "work/scripts/mp7_022_023_response_quant.py",
+        "exists": true,
+        "match": false,
+        "expected": "af0f654c3f860d66290c3164759751c8437e77cd4e7211053a5e0ab582c01a59",
+        "actual": "aa6bfb9f03a6551f341694a957445513c5e5d913731c535364fcf19dfcc09991"
+      }
+    ]
+  },
+  "dag": {
+    "nodes": 35,
+    "edges": 54,
+    "acyclic": true,
+    "semantic_correction": "Split MP7-034 local orbit-stabilizer lemma from global phase-weight theorem. The former, independent of GLOBAL_TRANSITION, supplies its multiplicity.",
+    "stale_open_atoms": [
+      "MP7-035: explicit global complement error and uniform moving-minimum remainder in g=g_eq+c/N",
+      "MP7-045: clean-environment replay of the new MP7 executable results"
+    ]
+  },
+  "global_certificates": {
+    "g37_tree_records": 253,
+    "event_records_reported": 253,
+    "event_full_tree_serialized": false,
+    "scope": "Checks recorded structure/signs and inspected code; accepted prior local replay is reused, not repeated"
+  },
+  "selected_exact_float_parameter_checks": [
+    {
+      "mode": 3,
+      "dlo_encloses": true,
+      "dhi_encloses": true,
+      "g37_product_lo": true,
+      "g37_product_hi": true
+    },
+    {
+      "mode": 4,
+      "dlo_encloses": true,
+      "dhi_encloses": true,
+      "g37_product_lo": true,
+      "g37_product_hi": true
+    },
+    {
+      "mode": 5,
+      "dlo_encloses": true,
+      "dhi_encloses": true,
+      "g37_product_lo": true,
+      "g37_product_hi": true
+    },
+    {
+      "mode": 6,
+      "dlo_encloses": true,
+      "dhi_encloses": true,
+      "g37_product_lo": true,
+      "g37_product_hi": true
+    }
+  ],
+  "rounding_correction": {
+    "exact_ceiling": "8120613495921263853499056724396905047/30300802690004715871265137031331735250",
+    "safe_decimal": "0.267999946371058",
+    "claim_C06_decimal_0.267999946371_is_below_proved_ceiling": true
+  },
+  "selected_input_hashes": {
+    "AGENTS.md": "3317ae9c465a249532ec1fe1f5d79c443a17be8ba9089a55dc1c0948f6c1bf6c",
+    "fin_rank7_mathphysics_next/HANDOFF.md": "74d10b5116a8b0ba50e39ed75e525afbf671890a975321679442c05888a79640",
+    "fin_rank7_mathphysics_next/REPORT.md": "c77c8d947e7a7b4d788b595c226a9171715f67d1069334234df7552d7eba5f04",
+    "fin_rank7_mathphysics_next/CLAIM_REGISTER.json": "868298dc1b6a1d86511913e0796a046580bd2e25ba2eb1153de0eb96799d195c",
+    "fin_rank7_mathphysics_next/NONCONCLUSIONS.md": "109f9a73dd190e2311101e8a088aec02aab1578fcc65ab67c47ae0bb7d7f9f3e",
+    "fin_rank7_mathphysics_next/NEXT_ATOMS.md": "c158a9e41c6650661b450470c3fa1a0f7d41e68c0e9b27f7ff1d71fe746c5657",
+    "fin_rank7_mathphysics_next/REPLAY.md": "323b55de143d70031a980c2df05ddac2c0c5f080aa5fab3405f4c207ad8f645a",
+    "fin_rank7_mathphysics_next/AGENTS_PROPOSED_PATCH.md": "50da8db79f49e58a032a336ccab8304f657b824a650761f7fd528ba3c56e5533",
+    "fin_rank7_intake_review/MP7_ANALYTIC_INTAKE.md": "76f6423ed04ad2ca65f0109cf0d476378eee1f88d6e0bddbeafd5917118c7f0f",
+    "fin_r7o3_review/verification.json": "0e0cfa4ac57ef3f9fadbf9167430a76276fe963bcd2cfa025fa1ee7a1ec70125"
+  }
+}

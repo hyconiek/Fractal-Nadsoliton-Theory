@@ -1,0 +1,13 @@
+# OCB-CHANNEL-05 — preregistered two-level probability protocol
+
+Status: **PREREGISTERED_TWO_LEVEL_PROTOCOL_FROZEN__PHYSICAL_CALIBRATION_AND_EXECUTION_REMAIN_EXTERNAL**.
+
+The protocol is now frozen conditionally on an external pre-unblinding calibration certificate:
+
+- control-ratio distortion `eta <= 0.02`;
+- first dimensionless time in `[0.23, 0.24]`;
+- calibration failure budget `0.025`.
+
+Main record: **15,649,551 attempts per control**, two controls, **31,299,102 total attempts**.  Every attempt must remain in the record, including returns/no-escape/no-click outcomes.  The classification is no-fit: compute the escape-ratio and assign a category only if it lands in exactly one frozen observable interval; otherwise return `NO_DECISION`.
+
+A key new boundary emerged: correctness of the category intervals needs only an upper small-time bound, but a finite attempt guarantee also requires a **positive lower bound on t1** because the wave squared response scales as `t1^4`.  FIN supplies neither the laboratory time calibration nor its noise law.  Hence the main attempt count is explicit, while a calibration-shot count cannot be generated without importing an apparatus model.

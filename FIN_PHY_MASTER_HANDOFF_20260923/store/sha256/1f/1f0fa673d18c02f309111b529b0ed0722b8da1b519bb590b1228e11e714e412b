@@ -1,0 +1,88 @@
+# OCB-HANKEL-01 — operational Hankel memory rank
+
+Date: 2026-09-23
+
+## Verdict
+
+**PASS with a new separation between exact predictive rank and practical rank certification.**
+
+For the strict embedded-jump increment process, iid factorization gives complete path-Hankel rank 1.
+For the declared persistent hidden-bit alias, the complete Hankel rank is exactly 2 whenever
+`delta*rho != 0`.  For the rotating period-`L` sign alias from OCB-MEM-01A, the complete visible
+path-Hankel rank is exactly
+
+`rank H = 2^L`.
+
+This is an exact minimal-linear-realization statement for that explicit alias family, not a claim
+that every physical memory of depth `L` has `2^L` states.
+
+## Small raw-word witnesses
+
+Let `a` be one shell-1 increment and `b` one shell-2 increment.
+
+For the persistent-bit model the raw 2x2 minor on `{empty,a}` is
+
+`det H = delta^2 rho c_a^2`.
+
+At `delta=.05, rho=.8` this is `0.002`, so rank is at least two; the two-state hidden realization
+supplies the matching upper bound.
+
+For the period-2 alias the frozen raw 4x4 minor uses
+
+- rows: `empty, a, aa, ab`,
+- columns: `empty, a, ab, bb`.
+
+Its determinant is exactly
+
+`-delta^8 (p_a+p_b)^2`,
+
+which is nonzero for every nonzero allowed `delta`.  The four hidden sign states supply the upper
+bound, hence exact rank four.
+
+## General period-L theorem
+
+Set
+
+`h(x)=c(x)-E_p[c]`.
+
+Because the conditional visible law is `p+delta z c`, one has
+
+`E[h(X_t)|z_t] = 4 delta z_t`.
+
+For an `L`-step block and a subset `S subset {0,...,L-1}`, define
+
+`F_S = product_(j in S) h(X_j)`.
+
+Two consecutive `L`-blocks reuse the same hidden sign word.  Conditioned on that word the two
+blocks are independent, while averaging over the uniform signs gives
+
+`E[F_S(block1) F_T(block2)] = 0` for `S != T`,
+
+and
+
+`E[F_S(block1)^2-like cross term] = (4 delta)^(2|S|)` for `S=T`.
+
+Thus the transformed block Hankel is diagonal with `2^L` strictly positive diagonal entries.
+Each `F_S` is a linear combination of ordinary word indicators, so this is a row/column transform
+of the raw visible path Hankel.  Therefore raw Hankel rank is at least `2^L`; the hidden
+construction has `2^L` states, proving equality.
+
+## Finite-sample lower-rank fixtures
+
+A rank lower bound is much easier than full-rank recovery.  With `delta=.05`:
+
+- persistent bit (`rho=.8`): the lag-1 contrast moment is `0.032`; a deliberately conservative
+  Hoeffding fixture needs `22,872` independent two-jump reset paths to exclude zero at 95%;
+- period-2: the lag-2 contrast moment is `0.04`; the analogous fixture needs `14,638`
+  independent three-jump reset paths to certify rank at least two;
+- certifying all four period-2 Hankel directions through a naive 16-entry union bound plus Weyl is
+  vastly harder: the deliberately conservative count is about `3.26e9` paths.
+
+The last number is a methodological warning, not a laboratory recommendation.  It shows that
+**detecting memory** and **certifying the full minimal predictive dimension** are operationally
+very different tasks.
+
+## Nonconclusion
+
+Hankel rank is the minimal dimension of a linear predictive realization.  It does not identify a
+unique microscopic HMM, physical hidden state, environment, or ontology.

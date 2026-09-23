@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+# Haar upper bound that some gap >= 1/2 circumference: M*(1/2)^(M-1)
+for M in [3,4,5,8,12,16,32,64,128]:
+    rows.append({'M':M,'P_maxgap_ge_half_upper':min(1.0,M*(0.5**(M-1)))})
+out={
+ 'task':'CG-05-metric-backbone-uniqueness','scientific_state':'CONDITIONAL_UNIQUE_MINIMAL_EXACT_PHASE_METRIC_BACKBONE',
+ 'setup':'Distinct points on S1 with intrinsic circle geodesic metric d. Graph edges, when present, carry their original metric length d(x,y). Require graph shortest-path distances to equal d on every sampled pair.',
+ 'sufficiency':'The circular-order cycle with consecutive-gap edge weights realizes d exactly: its two paths between any pair are precisely the two circle arcs, so the shorter path has length d.',
+ 'necessity_under_semicircle_gap_gate':'Assume every consecutive circular gap delta_i<pi. For a consecutive pair x_i,x_{i+1}, d=delta_i and the open shortest arc contains no sampled point. Equality in a path decomposition d(x_i,x_{i+1})=sum d(v_j,v_{j+1}) can hold only if all intermediate vertices lie on that same shortest geodesic. There are none. Hence every exact graph realization must contain the edge {x_i,x_{i+1}}.',
+ 'minimality':'All M consecutive edges are therefore forced. The circular cycle is the unique inclusion-minimal exact shortest-path realization of the sampled circle metric (up to the unoriented circular-order isomorphism).',
+ 'gate_failure':'If one circular gap is >=pi, the direct edge across that gap can be metrically redundant because the complementary arc is no longer longer. The all-gaps<pi premise is therefore substantive, not cosmetic.',
+ 'diffuse_regime':'For iid Haar points on circumference 1, P(maxgap>=1/2)<=M*2^{-(M-1)}, so the uniqueness gate holds with probability tending exponentially to one. CG-01 extends the same conclusion to the reweighted diffuse regime when its event-transfer exponent remains sublinear in M.',
+ 'diagnostics':rows,
+ 'source_interpretation':'RG3 need not be introduced as an arbitrary Delaunay choice. Conditional on the phase metric and an exact-zero-distortion/minimal-edge backbone principle, the cycle is forced in the diffuse regime.',
+ 'remaining_premise':'The zero-distortion/minimal-edge backbone principle is still a modelling/source premise; single-cell FIN has not derived why physical interactions should realize this graph.'
+}
+p=ROOT/'results'/'CG-05_metric_backbone.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

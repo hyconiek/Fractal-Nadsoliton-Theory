@@ -1,0 +1,71 @@
+# OCB-CAL-04 — primitive detector uncertainty to inverse-map certificate
+
+## Verdict
+
+**PASS with a conservative sufficient region.**
+
+The previous `CAL-03` theorem was stated directly as an uncertainty box on the inverse calibration map `B`.  This continuation starts one layer earlier from a primitive detector model.
+
+## Primitive uncertainty set
+
+Nominal confusion matrix:
+
+- 90% correct label;
+- 5% to each cyclic adjacent label.
+
+Nominal destination efficiencies run from 0.80 to 0.98.
+
+Allow
+
+- a row-stochastic, nonnegative confusion matrix with `|C_ij-C0_ij|<=gamma`;
+- `eta_j in eta0_j (1+-r)` independently.
+
+For the nominal matrix,
+
+`||(C0^T)^-1||_inf = 1.25`,
+
+and the entrywise confusion box implies
+
+`||(C-C0)^T||_inf <= 12 gamma`.
+
+Hence `C` is certainly invertible when `15 gamma < 1`, and Neumann bounds give
+
+`||M-M0||_inf <= 18.75 gamma/(1-15 gamma)`, `M=(C^T)^-1`.
+
+Efficiency uncertainty gives
+
+`||D^-1-D0^-1||_inf <= 1.25 r/(1-r)`.
+
+Combining the two yields the outer inverse-map bound
+
+`|B_ij-B0_ij| <= F(gamma,r)`
+
+with
+
+`F(gamma,r) = [1.5625 r/(1-r) + 23.4375 gamma]/(1-15 gamma)`.
+
+## Link to the exact CAL-03 carrier margin
+
+The previous exact inverse-map threshold is
+
+`epsilon_B* = 0.09025558368189042`.
+
+Therefore the primitive box is certified safe whenever
+
+`gamma < [epsilon_B* - 1.5625 r/(1-r)]/[23.4375 + 15 epsilon_B*]`
+
+with positive numerator.
+
+Examples:
+
+- with perfect efficiency calibration (`r=0`), `gamma < 0.00364061` is sufficient;
+- at `r=0.02`, `gamma < 0.00235436` is sufficient;
+- the replay fixture `r=0.02`, `gamma=0.002` maps to an outer `B` radius `0.0811987 < epsilon_B*` and therefore certifies the carrier.
+
+If `gamma=0`, the efficiency-only sufficient radius is `r < 0.05460915`.
+
+## Decision
+
+`OCB-CAL-04 = PASS_PRIMITIVE_TO_INVERSE_SAFE_REGION`.
+
+This region is intentionally conservative.  Leaving it does not prove ambiguity; it only means this norm propagation can no longer certify the graph.

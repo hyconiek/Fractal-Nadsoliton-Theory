@@ -1,0 +1,99 @@
+{
+  "claim_decision": {
+    "H-R3_family_relative_sufficiency_recovery": "PASS_IN_SCOPE",
+    "H-R3_universal_full_information": "REFUTED_IN_SCOPE",
+    "unitarity_implication": "NOT_LICENSED"
+  },
+  "composition_information": {
+    "cellwise_sign_choices_with_identical_retained_means": {
+      "1": 2,
+      "2": 4,
+      "3": 8
+    },
+    "interpretation": "The retained signature can be transported/recovered on the Gibbs family but does not preserve arbitrary full-simplex information; hidden k=1,2 content is lost unless an environment/history is retained."
+  },
+  "exact_loss_witness": {
+    "TV_each_to_uniform": "1/6",
+    "TV_pplus_pminus": "1/3",
+    "analytic_reason": "k=2 Fourier mode is orthogonal to retained k=3,4,5,6 modes",
+    "distinct": true,
+    "minimax_recovery_error_lower_bound_at_mu0_TV": "1/6",
+    "p_minus": [
+      "1/24",
+      "1/16",
+      "5/48",
+      "1/8",
+      "5/48",
+      "1/16",
+      "1/24",
+      "1/16",
+      "5/48",
+      "1/8",
+      "5/48",
+      "1/16"
+    ],
+    "p_plus": [
+      "1/8",
+      "5/48",
+      "1/16",
+      "1/24",
+      "1/16",
+      "5/48",
+      "1/8",
+      "5/48",
+      "1/16",
+      "1/24",
+      "1/16",
+      "5/48"
+    ],
+    "positive": true,
+    "retained_mean_norm_minus_numeric": 2.3680264379386465e-16,
+    "retained_mean_norm_plus_numeric": 2.423350931605181e-16,
+    "shift3_equivalent": true
+  },
+  "full_simplex_stochastic_inverse_theorem": {
+    "consequence": "No 12->7 retained-mean coarse map can have a stochastic inverse on the full simplex; it is noninjective.",
+    "statement": "Any stochastic affine automorphism of the full finite simplex with a stochastic inverse is a permutation of vertices."
+  },
+  "mean_map": {
+    "missing_mode_diagnostics": [
+      {
+        "mode": 1,
+        "retained_projection_norm": 2.9925902333365025e-15,
+        "sum": -1.1102230246251565e-16,
+        "type": "cos"
+      },
+      {
+        "mode": 1,
+        "retained_projection_norm": 2.1872510292684988e-15,
+        "sum": 2.220446049250313e-16,
+        "type": "sin"
+      },
+      {
+        "mode": 2,
+        "retained_projection_norm": 1.798197367460548e-15,
+        "sum": 1.6653345369377348e-16,
+        "type": "cos"
+      },
+      {
+        "mode": 2,
+        "retained_projection_norm": 1.2295372931211717e-15,
+        "sum": 2.220446049250313e-16,
+        "type": "sin"
+      }
+    ],
+    "nullity": 4,
+    "simplex_tangent_rank": 7
+  },
+  "nontrivial_preserved_quantity_under_coarse_representation": "mu itself (and any declared function Q(mu), e.g. ||mu||^2); this is representational preservation, not a dynamical conservation law.",
+  "restricted_gibbs_family_recovery": {
+    "family": "E_X={softmax(X theta): theta in R^7}",
+    "sample_covariance_min_eigenvalue_min": 0.013925656786556,
+    "sample_recovery_max_TV_error": 9.8879238130678e-16,
+    "sample_recovery_max_residual": 1.088833015104571e-15,
+    "sample_recovery_max_theta_error": 6.761716239814802e-15,
+    "theorem": "log Z(theta) is strictly convex because Var_p((Xv)_j)>0 for v!=0; therefore theta->mu is injective and p is exactly recoverable from mu on E_X."
+  },
+  "status": "PASS_RESTRICTED_AND_REFUTE_UNIVERSAL",
+  "task": "PHY-004"
+}

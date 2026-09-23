@@ -1,0 +1,80 @@
+# PHY-013 — target-blind source challenge
+
+**Status:** `EXECUTED_BOUNDED_SOURCE_CHALLENGE__STRICT_SOURCE_NOT_CLOSED`
+
+## Question
+
+Can a parent law specified without the target rank-seven coefficients generate the effective FIN mediator/support rather than encode it?
+
+## Results
+
+### 1. Sparse inter-cell support cannot come from identical cells plus permutation equivariance alone
+
+For `M>=3` cells with no pair-dependent datum, the full relabeling group `S_M` is transitive on unordered pairs. A deterministic simple-graph rule equivariant under all cell relabelings therefore has only two outputs: the empty graph or the complete graph. If one pair is selected, all pairs must be selected.
+
+Thus sparse inter-cell support requires at least one additional typed object: pair-specific relational data, an explicit symmetry-breaking state/seed, or a genuinely stochastic source mechanism. This is an exact no-go, not a failed numerical search.
+
+### 2. A7 is not a direct positive local Laplacian
+
+For a nontrivial translation-invariant positive Dirichlet form on `Z_q`,
+
+`lambda_1 = 2 sum_r c_r [1-cos(2 pi r/q)] > 0`
+
+whenever `c_r>=0` and at least one coupling is nonzero. A connected passive spectral filter `h(L)` with `h(0)=0, h(x)>0` likewise has only the constant null mode. A positive connected Schur/Kron parent cannot create extra exact visible null directions by elimination.
+
+The rank-seven mediator has null sectors `k=0,1,2`. Hence its extra null structure must be present upstream or be introduced by a reduction/projection rule; ordinary positive local coupling plus passive elimination does not generate it.
+
+### 3. Once rank seven is supplied, the A7 weights are not arbitrary
+
+For the supplied full strict operator `A`, the seven largest eigen-directions are exactly the Fourier sectors
+
+`k=6 (1D), k=5 (2D), k=4 (2D), k=3 (2D)`.
+
+Eckart–Young–Mirsky therefore makes their retention the canonical best rank-seven PSD approximation in Frobenius/operator norm. The reconstructed projector agrees numerically with `A7` to about `1.2e-14` in matrix norm.
+
+This narrows the source problem: the active weights follow from the full strict spectrum **conditional on the choice rank=7**. The missing source is principally the rank/reduction rule, plus the provenance of the full strict operator and its physical coupling.
+
+### 4. A natural rank selector works at g=4 but does not source rank seven
+
+A target-blind conditional criterion was tested: retain the smallest Dq-compatible top-spectral truncation for which a pure-label state can beat the uniform state,
+
+`trace(A_m) > 2 q log(q)/g`.
+
+At `q=12, g=4` it selects rank seven exactly. But rank seven is selected only for approximately
+
+`3.90776538085 < g <= 5.25974245178`.
+
+At the certified MP7 coexistence gain `g≈3.71834489812`, the same rule selects rank nine. Therefore this is a useful conditional compression criterion, not an independent source of the rank.
+
+### 5. Frozen carrier transfer fails as a fundamental source law
+
+The same strict distance-kernel formula was applied to even carriers without refitting. The resulting Laplacian remains PSD only through the tested small carriers and first becomes indefinite at `q=30`. At fixed `g=4`, already `q=26,28` cannot satisfy the pure-state localization criterion. Since the declared kernel decay exponent is `eta=1.8>1`, its magnitude is summable: the per-vertex quadratic gain stays bounded with q whereas `D(delta||u)=log q` diverges.
+
+Thus the frozen formula at fixed gain is not a scalable target-blind source law across carriers.
+
+### 6. Encoding only the desired null support still does not recover the A7 weights
+
+If one inserts only the requirement that `k=0,1,2` vanish, the shortest symmetric circulant symbol capable of these three roots has range three and is unique up to scale:
+
+`P(theta)=(1-cos theta)(sqrt(3)/2-cos theta)(1/2-cos theta)`.
+
+Its active ratios for `k=3,4,5,6` are approximately
+
+`1 : 4.732 : 10.196 : 12.928`,
+
+whereas A7 has approximately
+
+`1 : 1.121 : 1.172 : 1.194`.
+
+Even after best global rescaling the relative L2 mismatch is about `0.488`. Support selection and spectral-weight selection are independent source obligations.
+
+## Refined source atoms
+
+- **SO-PHY-013-A:** source the extra null/projector structure removing sectors `k=1,2`, or derive a different reduction.
+- **SO-PHY-013-B:** source mediator rank/selection without choosing it from the desired localized phase or an unsourced gain.
+- **SO-PHY-013-C:** source pair-specific relational data / symmetry breaking / stochasticity needed for sparse inter-cell support.
+- **SO-PHY-013-D:** source the nonlinear inter-cell interaction functional; the two already tested compositions remain observationally inequivalent.
+
+## Decision
+
+PHY-013 is no longer an unexecuted task. It is an **executed bounded source challenge**. Natural passive/local parent classes are ruled out for direct A7 generation, while the full-A -> rank-seven spectral compression is reconstructed conditionally. A strict target-blind physical source law is **not** derived.

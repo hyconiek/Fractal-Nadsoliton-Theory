@@ -1,0 +1,159 @@
+# FIN operational carrier bridge — report
+
+Date: 2026-09-23
+
+## Scope
+
+This campaign deliberately leaves the historically exhausted continuum-tail lane. It asks a narrower question:
+
+> If the strict weighted kernel mathematically sources an unlabeled cyclic carrier, what operational records would recover or falsify that same carrier without importing a cyclic labeling or an absolute clock?
+
+No laboratory data are claimed.
+
+## OCB-01 — all-time heat-shell theorem
+
+Let the strict continuous-time Markov generator be `Q=-A`, with radial off-diagonal rates
+
+`w1>w2>...>w6>0`.
+
+For a row of the heat kernel write `p_r(t)` for the probability at cyclic distance `r=0,...,6` and define
+
+`y_r=p_r-p_{r+1}`, `r=0,...,5`.
+
+After changing coordinates from the seven radial probabilities to `(total mass,y_0,...,y_5)`, total mass decouples and
+
+`ydot=M y`.
+
+The exact symbolic `6x6` matrix is exported in `results/OCB-01_heat_shell_metzler.json`. Every off-diagonal entry is a positive difference `w_a-w_b` with `a<b`; the smallest strict margin is
+
+`0.01306040604218794487...`.
+
+Therefore `M` is irreducible Metzler. Since the localized initial condition has `y(0)=(1,0,...,0)`, strict positivity of `exp(tM)` gives
+
+`p_0(t)>p_1(t)>...>p_6(t)`
+
+for every finite `t>0`.
+
+**New consequence:** in the Markov/heat realization, the complete ordinal six-shell carrier survives for all positive times. It is not merely a short-time derivative statement.
+
+This theorem does not select heat as the physical dynamics.
+
+## OCB-02 — conservative carrier windows for unitary and wave channels
+
+Let `L=||A||=2.3421820411463004`.
+
+For `U(t)=exp(-itA)`, off-diagonal amplitudes obey
+
+`U_ij(t)=i t W_ij+r_ij`,
+
+with
+
+`|r_ij| <= exp(Lt)-1-Lt`.
+
+Hence a shell gap `delta` is guaranteed to preserve amplitude/probability order whenever
+
+`delta t > 2[exp(Lt)-1-Lt]`.
+
+For `C(t)=cos(t sqrt(A))`,
+
+`C_ij(t)=t^2 W_ij/2+r_ij`,
+
+and
+
+`|r_ij| <= cosh(t sqrt(L))-1-Lt^2/2`.
+
+The resulting certified dimensionless windows are:
+
+| record | nearest-shell order | all six shell order |
+|---|---:|---:|
+| unitary transition probability | `t < 0.0487555043` | `t < 0.00237634382` |
+| wave amplitude/probability | `t < 0.544995102` | `t < 0.119451445` |
+
+These are deliberately conservative theorem bounds, not fitted first-crossing times.
+
+## OCB-03 — exact clock-free embedded-jump protocol
+
+For a CTMC generator `Q=-A`, conditioned on leaving state `i`,
+
+`P(next=j | leave i)=W_ij/s_i`.
+
+Any global clock rescaling `Q -> cQ` cancels exactly.
+
+For strict FIN the per-destination probabilities by shell are
+
+`[0.2830715005, 0.1156674756, 0.0550672851, 0.0283255813, 0.0145341912, 0.0066679328]`.
+
+The margin between a nearest-neighbor destination and the next shell is
+
+`0.16740402485`.
+
+Thus any `L_infinity` perturbation below `0.08370201243` preserves the top-two neighbor set.
+
+A direct Hoeffding+union bound gives:
+
+- 435 recorded exits to recover the top-two set for one prepared state at family error <=5%;
+- 612 exits per state for simultaneous protection of all `12x11` destination frequencies at family error <=5%.
+
+These are conservative finite-sample bounds, not optimized laboratory budgets.
+
+The primary test is label-free: the two empirically dominant destinations from every state must form one connected 2-regular graph, hence an unlabeled `C12`.
+
+After this graph is recovered, its graph distance defines the six shell groups and the quantitative shell profile can be tested without importing a cyclic coordinate.
+
+## OCB-04 — equally symmetric negative control
+
+Swap the strict shell-1 and shell-2 rates while leaving all other shells fixed.
+
+The control has:
+
+- the same `D12` radial symmetry;
+- the same uniform stationary state;
+- exactly the same total exit rate;
+- a different operational nearest-neighbor relation.
+
+The embedded-jump distributions have
+
+- TV distance `0.3348080497`;
+- KL `0.2996465192` nats;
+- Chernoff information `0.07654211034`.
+
+Under ideal iid records, the conservative equal-prior Chernoff upper bound reaches Bayes error <=5% by 31 exits from one known preparation for this *specific* two-model discrimination problem.
+
+Therefore symmetry, equilibrium and the overall clock do not by themselves identify the physical carrier; transition records genuinely add information.
+
+## OCB-05 — ordinal dynamics discriminator
+
+OCB-01 proves that heat has no shell crossings at finite positive time.
+
+Directed interval arithmetic proves local unique crossings in the supplied reversible calculi:
+
+- unitary: shells 5 and 6 cross exactly once in `t in [0.8759,0.8760]`;
+- wave probability: shells 1 and 2 cross exactly once in `t in [2.3545,2.3547]`.
+
+The derivative interval is strictly negative throughout each bracket.
+
+Thus an ordinal shell-crossing scan can discriminate heat from the supplied unitary/wave models without comparing absolute amplitudes. It still requires a physical control/clock map to interpret the scan parameter.
+
+## Robustness scope
+
+The clock-free Markov carrier test is exactly invariant under:
+
+- global clock rescaling;
+- destination-blind independent loss after conditioning on a recorded exit;
+- a common uniform destination contamination, which preserves ranking for every contamination fraction `<1`.
+
+A fixed global permutation of state labels changes only the displayed names, not the recovered unlabeled graph.
+
+It is **not** automatically robust to arbitrary state-dependent confusion matrices, hidden merged states, non-Markov memory, preparation drift, or destination-dependent censoring. Those require calibration/nuisance models before physical execution.
+
+## Relation to older repository work
+
+The older repository already contained substantial tail/refinement nonidentifiability, dual-dynamics and clock-source no-go results. Those are not re-promoted as discoveries here.
+
+The substantive additions in this package are the exact radial-difference Metzler theorem, the explicit clock-free unlabeled carrier-recovery protocol, conservative cross-channel carrier windows, and the interval-certified ordinal crossing controls.
+
+## Current verdict
+
+`CARRIER_PHYSICAL_BRIDGE = MATHEMATICALLY_OPERATIONALIZED__PHYSICAL_EXECUTION_OPEN`
+
+The internal carrier is now tied to a falsifiable record structure. What is still absent is an actual physical system with validated preparations, instruments, state ontology, nuisance calibration and raw records.

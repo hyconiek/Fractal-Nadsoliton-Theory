@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, itertools, math
+import numpy as np
+import sympy as sp
+ROOT=Path(__file__).resolve().parents[1]
+k=np.arange(1,6,dtype=int)
+rows=[]
+for n in itertools.product(range(-3,4),repeat=5):
+ if sum(abs(x) for x in n)!=3 or not any(n): continue
+ dot=int(np.dot(n,k))
+ if dot%12!=0: continue
+ if next(x for x in n if x)!=abs(next(x for x in n if x)): continue
+ rows.append((tuple(int(x) for x in n),dot))
+# cleaner canonical sign
+rows=[]
+for n in itertools.product(range(-3,4),repeat=5):
+ if sum(abs(x) for x in n)!=3 or not any(n): continue
+ dot=int(np.dot(n,k))
+ if dot%12!=0: continue
+ first=next(x for x in n if x)
+ if first<0: continue
+ rows.append((tuple(int(x) for x in n),dot))
+M=np.array([r for r,d in rows],float)
+zero=np.array([r for r,d in rows if d==0],float)
+rank_all=int(sp.Matrix([list(r) for r,d in rows]).rank()); rank_zero=int(sp.Matrix([list(r) for r,d in rows if d==0]).rank())
+assert rank_all==5 and rank_zero==4
+basis=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],int)
+assert np.all(basis@k==0) and np.linalg.matrix_rank(basis)==4
+q_examples=[12,24,48,96,192]
+um=[]
+for q in q_examples:
+ m=math.ceil(q/5)
+ r=q-5*(m-1)
+ assert 1<=r<=5
+ um.append({'q':q,'minimal_Umklapp_order':m,'explicit_positive_frequency_sum':[5]*(m-1)+[r]})
+out={
+ 'task':'RESONANCE-LOCKING-1D-full-strict-phases',
+ 'scientific_state':'PROVED_CUBIC_ZERO_SUM_RESONANCES_LOCK_T5_TO_S1__FINITE_Q_UMKLAPP_BREAKS_S1_AT_ORDER_CEIL_Q_OVER_5',
+ 'active_mode_frequencies':k.tolist(),
+ 'q12_cubic_phase_characters':[{'n':list(r),'wave_sum':d} for r,d in rows],
+ 'q12_cubic_character_rank':rank_all,
+ 'zero_sum_cubic_character_rank':rank_zero,
+ 'primitive_zero_sum_basis':basis.tolist(),
+ 'locking_theorem':'The four zero-sum characters form rank four and impose phi2=2 phi1, phi3=3 phi1, phi4=4 phi1, phi5=5 phi1 modulo phases. Thus T5 is reduced to the common translation orbit phi_k=k alpha. These relations arise from ordinary cubic Fourier momentum conservation and are independent of desired spatial dimension.',
+ 'finite_q_theorem':'For modes 1..5, an order-m monomial has |wave sum|<=5m. Hence no nonzero q-Umklapp is possible if 5m<q. Conversely at m=ceil(q/5), write q=5(m-1)+r with 1<=r<=5, giving an allowed product of m positive-frequency factors whose total wave number is q. Since every entropy Taylor order has nonzero coefficient, the first possible continuous-shift-breaking Umklapp order is exactly ceil(q/5).',
+ 'examples':um,
+ 'q12_note':'At q=12 the first Umklapp is cubic; examples include 3*4=12 and 3+4+5=12. These lift the remaining continuous common shift down to discrete Z12.',
+ 'continuum_consequence':'For any fixed perturbative order m, all Umklapp terms disappear once q>5m. Therefore the common S1 translation becomes asymptotically exact order-by-order as q grows, while the four relative phases are already locked by zero-sum cubic resonances.',
+ 'interpretation':'This provides a structural mechanism connecting the strict T5 carrier to the previously observed one-dimensional phase geometry.',
+ 'nonconclusions':['The residual S1 is not yet physical space.','All-orders finite-q entropy still has only discrete translation symmetry.']
+}
+p=ROOT/'results'/'RESONANCE-LOCKING_1D.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rank_all':rank_all,'rank_zero':rank_zero,'examples':um},indent=2))

@@ -1,0 +1,60 @@
+{
+  "task": "PHY-017",
+  "scientific_state": "CLASSIFIED_GENERIC_VS_MODEL_SPECIFIC_DIMENSIONLESS_OBSERVABLES",
+  "generic_fold_derivation": "For U=a eps xi + b xi^3/6, roots are +/-x; DeltaPhi=2 b x^3/3, lambda_soft(min)=b x, DeltaXi=2x, hence ratio=1/6 exactly.",
+  "FIN_fold_ratio_midpoint": 0.16666666666665245,
+  "one_six": 0.16666666666666666,
+  "g_eq": 3.7183448981203875,
+  "g_fold": 3.5156447168395917,
+  "g_eq_over_g_fold": 1.057656617094976,
+  "localized_jump_mu_norm": 0.9512241916875506,
+  "active_spectral_ratios_to_lambda6": [
+    0.8374271630127018,
+    0.9391109703226599,
+    0.9813952253489755,
+    1.0
+  ],
+  "phase_multiplicity_at_q12": 12,
+  "classification": [
+    {
+      "quantity": "fold exponents 1/2,3/2,1/2",
+      "class": "generic simple-fold",
+      "discriminator": false
+    },
+    {
+      "quantity": "DeltaPhi/[lambda_soft (DeltaXi)^2] -> 1/6",
+      "class": "generic gradient simple-fold",
+      "discriminator": false
+    },
+    {
+      "quantity": "g_eq/g_fold",
+      "class": "model-specific dimensionless",
+      "discriminator": "candidate only after control dictionary fixed"
+    },
+    {
+      "quantity": "||mu_localized-mu_uniform||",
+      "class": "model-specific normalized jump",
+      "discriminator": "candidate after feature metric/source fixed"
+    },
+    {
+      "quantity": "active spectral ratios",
+      "class": "model-specific/source-sensitive",
+      "discriminator": "candidate only if source law predicts them"
+    },
+    {
+      "quantity": "symmetry-related phase count",
+      "class": "symmetry-protected conditional",
+      "discriminator": "changes with q/support/stabilizer"
+    },
+    {
+      "quantity": "susceptibility ratios",
+      "class": "not yet source-independent",
+      "discriminator": "requires declared source direction and dynamics"
+    }
+  ],
+  "nonconclusions": [
+    "no constant of nature",
+    "no equilibrium critical exponent claim from the fold",
+    "no universality class assigned"
+  ]
+}

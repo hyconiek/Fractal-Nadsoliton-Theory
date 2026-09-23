@@ -1,0 +1,73 @@
+# RG-3 joint-limit theorem — sharp local phases with diffuse state-sourced geometry
+
+**Status:** `CONDITIONAL_ANALYTIC_GEOMETRY_LIMIT_WITH_FINITE_Q_SCOPE_CORRECTION`
+
+## Effective phase model
+
+On the certified large-q localized branch, each cell carries a smooth phase angle and an asymptotic `Z2` parity fiber. RG-3 orders pairwise-distinct phases and connects circular neighbors.
+
+For a smooth angular gap delta,
+
+`D_smooth^2(delta)<=C delta^2`
+
+with a certified branch-box `C<13.8943` at `g=7`.
+
+The reduced interaction exponent is `X=N E`, with
+
+`E=(kappa/2) sum_i D_smooth^2(delta_i) + parity term`.
+
+The exact product `S1 x Z2` parity factorization is a continuum statement. At finite q the parity coordinate lives on two shifted q/2 grids; see `RG3_FINITE_Q_SCOPE_CORRECTION.md`.
+
+## Strong TV-to-Haar regime
+
+Under the continuum product-fiber approximation,
+
+`E_Haar[X_smooth] <= A N kappa/(M+1)`, `A=4pi^2 C`.
+
+If `epsilon=A N kappa/(M+1)<1`,
+
+`TV(P_RG3_angles,Haar^M)<=epsilon/(1-epsilon)`.
+
+Thus `N kappa/M ->0` is sufficient for full angular-law TV convergence to Haar.
+
+## Wider geometry-only regime
+
+For geometry, full TV convergence is unnecessary. Jensen gives
+
+`Z>=exp(-E_0[X])`
+
+and therefore for every event B,
+
+`P_G(B)<=exp(E_0[X])P_0(B)`.
+
+The Haar max-gap event obeys
+
+`P_0(maxgap>delta)<=M(1-delta)^(M-1)`.
+
+Hence if
+
+`N kappa=o(M^2)`,
+
+then for every fixed delta>0 the Gibbs probability of a macroscopic phase gap tends to zero. Combined with
+
+`q/M^2 -> infinity`,
+
+phase collisions vanish and RG-3 becomes a dense degree-two polygon on `S1` in probability.
+
+A concrete family with fixed kappa is
+
+`q=M^3`, `N=M^alpha`, `0<alpha<2`.
+
+This is compatible with `N->infinity`, so increasingly sharp single-cell phase localization and diffuse cell geometry can coexist.
+
+## Critical scaling warning
+
+At `N kappa=Theta(M^2)`, the interaction reweighting can be exponential in M and can compete with configuration entropy. No diffuse-geometry theorem is asserted at or above that scale.
+
+## Rewiring and operational distance
+
+An isolated adjacent phase crossing changes only O(1) cycle edges, but the minimum Haar spacing is `Theta(M^-2)`, so no positive size-uniform raw dwell time follows. For a frozen graph, normalized causal depth converges to angular distance under the diffuse phase law by the DKW bridge.
+
+## Scope
+
+This is the first current construction in which many effective FIN cells can acquire a sparse degree-two relational graph from their internal states without external coordinates. It remains conditional on the q-extension, localized branch, phase population/scaling, metric-backbone principle and chosen dynamics. It is not a derivation of physical spacetime.

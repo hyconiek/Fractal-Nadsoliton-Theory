@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys, itertools
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+q=12
+j=np.arange(q)
+# Real Fourier projectors: ranks 1,2,...,2,1.
+Ps=[]; labels=[]
+P0=np.ones((q,q))/q; Ps.append(P0); labels.append('k0')
+for k in range(1,q//2):
+    d=j[:,None]-j[None,:]
+    P=(2/q)*np.cos(2*np.pi*k*d/q)
+    Ps.append(P); labels.append(f'k{k}')
+Palt=(((-1.0)**j)[:,None]*((-1.0)**j)[None,:])/q
+Ps.append(Palt); labels.append(f'k{q//2}')
+ranks=[int(np.linalg.matrix_rank(P,tol=1e-10)) for P in Ps]
+orth=max(float(np.linalg.norm(Ps[a]@Ps[b]-(Ps[a] if a==b else 0),ord=2)) for a in range(len(Ps)) for b in range(len(Ps)))
+sumerr=float(np.linalg.norm(sum(Ps)-np.eye(q),ord=2))
+# Translation/reflection covariance.
+S=np.roll(np.eye(q),1,axis=0)
+R=np.eye(q)[(-np.arange(q))%q]
+comm=max(max(float(np.linalg.norm(S@P-P@S)),float(np.linalg.norm(R@P-P@R))) for P in Ps)
+# D12 orbital/distance-shell matrices span dimension 7.
+shells=[]
+for d0 in range(q//2+1):
+    M=np.zeros((q,q))
+    for a in range(q):
+        for b in range(q):
+            d=min((a-b)%q,(b-a)%q)
+            if d==d0: M[a,b]=1
+    shells.append(M)
+shell_rank=int(np.linalg.matrix_rank(np.stack([M.reshape(-1) for M in shells]),tol=1e-10))
+# Every rank is attainable by Dq invariant projector for even q: two 1D irreps + (q/2-1) 2D.
+def attainable_ranks(q):
+    dbl=q//2-1
+    vals=set()
+    for s in range(3): # number of selected 1D sectors, 0,1,2
+        for m in range(dbl+1): vals.add(s+2*m)
+    return sorted(x for x in vals if 0<=x<=q)
+heldout={str(qq):attainable_ranks(qq)==list(range(qq+1)) for qq in [12,24,48,96,192]}
+out={
+ 'task':'CARRIER-02A_Dq_representation_factorization_and_rank_no_go',
+ 'scientific_state':'PROVED_FIXED_LOCAL_ISOTYPIC_FACTORS__REFUTED_RANK_SELECTION_BY_Dq_SYMMETRY',
+ 'q':q,
+ 'projector_labels':labels,'projector_ranks':ranks,
+ 'projector_orthogonality_operator_error':orth,'projector_sum_identity_error':sumerr,
+ 'max_D12_commutator_frobenius':comm,
+ 'D12_orbital_shell_count':len(shells),'orbital_algebra_dimension':shell_rank,
+ 'theorem_local_factorization':'The real permutation representation on a q=12 cyclic carrier decomposes canonically under D12 into two one-dimensional sectors k=0,6 and five two-dimensional Fourier sectors k=1,...,5. Every D12-equivariant self-adjoint operator is scalar on these multiplicity-free sectors.',
+ 'theorem_rank_no_go':'For every even q, the Dq permutation representation has two 1D sectors and q/2-1 two-dimensional sectors. Sums of their invariant orthogonal projectors realize every rank r=0,...,q. Therefore Dq symmetry cannot select rank 7 (or any nontrivial rank).',
+ 'heldout_even_q_all_ranks_attainable':heldout,
+ 'interpretation':'A fixed per-cell spectral factorization exists at q=12, but it is an internal representation decomposition, not a spatial dimension source. The number of doublets grows with q.',
+ 'nonconclusions':['orbital algebra dimension 7 does not source matrix rank 7','five doublets do not imply five physical dimensions']
+}
+p=ROOT/'results'/'CARRIER-02A_representation_factors.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

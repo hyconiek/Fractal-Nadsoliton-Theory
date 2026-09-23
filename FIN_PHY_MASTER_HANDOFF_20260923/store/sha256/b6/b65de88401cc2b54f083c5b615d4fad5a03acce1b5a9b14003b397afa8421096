@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,Lam,X7,C4,A7=model.feature_spaces()
+lam=np.array([Lam[k] for k in range(1,6)],float); r=np.array([0.02]*5)
+D=np.diag(lam*r*r)
+L=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],float)
+# Quotient cometric on invariant phase covectors; inverse is metric in chi coordinates.
+C=L@np.linalg.inv(D)@L.T;G=np.linalg.inv(C);ev=np.linalg.eigvalsh(G)
+assert ev[0]>0
+out={
+ 'task':'HDIM-16-flat-origin-free-T4-metric',
+ 'scientific_state':'PROVED_POSITIVE_FLAT_4D_INTERNAL_QUOTIENT_METRIC_FOR_FIXED_RADII',
+ 'radii':r.tolist(),'strict_doublet_eigenvalues':lam.tolist(),
+ 'quotient_cometric_C':C.tolist(),'quotient_metric_G':G.tolist(),'metric_eigenvalues':ev.tolist(),'condition_number':float(np.linalg.cond(G)),
+ 'derivation':'The strict Dirichlet phase metric at fixed modal radii is D=diag(lambda_k r_k^2). For origin-free coordinates chi=L phi with L k=0, minimizing over the common spectral-shift direction gives cometric C=L D^{-1} L^T and quotient metric G=C^{-1}. Since L has rank four and D>0, G is positive definite.',
+ 'dimension_statement':'The internal origin-free spectral phase geometry has local metric dimension four on this generic fixed-radius strict-operator stratum. Small metric-ball volume therefore scales as R^4.',
+ 'scope':'Fixed positive modal radii; strict quadratic/Dirichlet sector; the equal radii are only a numerical witness, while positivity/dimension are general for all r_k>0.',
+ 'nonconclusions':['No Lorentz signature, time coordinate, 3+1 interpretation or physical unit follows.','The nonlinear entropy model does not preserve this flat T4.']
+}
+p=ROOT/'results'/'HDIM-16_T4_metric.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'eigG':ev.tolist()},indent=2))

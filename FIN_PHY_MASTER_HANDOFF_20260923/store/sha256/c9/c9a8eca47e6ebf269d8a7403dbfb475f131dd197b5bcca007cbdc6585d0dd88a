@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+from scipy.optimize import minimize, minimize_scalar
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); h=c-m; v=float(p@(h*h)); delta=.05
+words=list(itertools.product(range(11),repeat=4)); arr=np.asarray(words,int)
+pprod=np.prod(p[arr],axis=1); rr=c[arr]/p[arr]
+q=pprod*(1+delta**2*(rr[:,0]*rr[:,2]+rr[:,1]*rr[:,3])+delta**4*np.prod(rr,axis=1))
+r_iid=pprod.copy()
+
+def chernoff(q,r):
+    f=lambda z: float(np.sum((q**z)*(r**(1-z))))
+    res=minimize_scalar(f,bounds=(0,1),method='bounded',options={'xatol':1e-13})
+    return -math.log(res.fun),float(res.x)
+
+# Whitened 4x4 feature cross-Hankel, exact under the frozen period-2 law.
+def feat(block):
+    x0,x1=block
+    return np.array([1.0,h[x0]/math.sqrt(v),h[x1]/math.sqrt(v),h[x0]*h[x1]/v])
+rho2=(4*delta)**2/v
+C=np.diag([1.0,rho2,rho2,rho2*rho2])
+EXXT=np.zeros((4,4)); EXTX=np.zeros((4,4)); R=0.0
+for word,pr in zip(words,q):
+    Y=np.outer(feat(word[:2]),feat(word[2:]))-C
+    R=max(R,float(np.linalg.norm(Y,2)))
+    EXXT += pr*(Y@Y.T); EXTX += pr*(Y.T@Y)
+varpar=max(float(np.linalg.norm(EXXT,2)),float(np.linalg.norm(EXTX,2)))
+lam=float(np.min(np.linalg.svd(C,compute_uv=False)))
+alpha=.05; frac=.99; t=frac*lam
+# Rectangular matrix Bernstein via self-adjoint dilation: prefactor d1+d2=8.
+N_mat=math.ceil((2*varpar+(2/3)*R*t)*math.log(8/alpha)/(t*t))
+
+# Old union/Weyl fixture reproduced for comparison.
+b=float(np.max(np.abs(h))); lam_raw=(4*delta)**4; eps=lam_raw/8
+N_old=math.ceil(2*(b**8)*math.log(32/alpha)/(eps**2))
+
+# Highest-order scalar cross feature: useful as a power comparison, but NOT sufficient
+# against arbitrary rank-3 challengers.
+vals=np.prod(h[arr],axis=1)
+mu4=float(q@vals); var4=float(q@((vals-mu4)**2)); M4=float(np.max(np.abs(vals-mu4)))
+N_scalar=math.ceil((2*var4+(2/3)*M4*mu4)*math.log(2/alpha)/(mu4**2))
+
+# Simple-vs-simple iid challenge.
+def ci_and_n(r):
+    ci,z=chernoff(q,r)
+    return ci,z,math.ceil(math.log(.5/.05)/ci),math.ceil(math.log(.5/.01)/ci)
+ci_iid,z_iid,n_iid5,n_iid1=ci_and_n(r_iid)
+kl_iid=float(np.sum(q*np.log(q/r_iid)))
+
+# Best persistent two-state challenger on the frozen four-step record.
+pairs={(i,j):rr[:,i]*rr[:,j] for i in range(4) for j in range(i+1,4)}
+prod4=np.prod(rr,axis=1); dmax=float(min(p[c<0].min(),p[c>0].min())*.999999)
+def persistent(d,rho):
+    S=np.zeros(len(q))
+    for (i,j),term in pairs.items(): S += rho**(j-i)*term
+    return pprod*(1+d*d*S+d**4*rho*rho*prod4)
+def kl_pers(x):
+    d,rho=x
+    if not (0<=d<=dmax and -1<=rho<=1): return 1e6
+    r=persistent(d,rho)
+    if np.any(r<=0): return 1e6
+    return float(np.sum(q*np.log(q/r)))
+# deterministic multistart SLSQP/Nelder-Mead, including rho=1 boundary.
+best=None
+for x0 in [(0.03,.99),(0.05,.8),(0.02,1.0),(0.08,.5)]:
+    res=minimize(kl_pers,np.array(x0),method='Nelder-Mead',options={'maxiter':800,'xatol':1e-12,'fatol':1e-15})
+    d=float(np.clip(res.x[0],0,dmax)); rho=float(np.clip(res.x[1],-1,1)); val=kl_pers((d,rho))
+    if best is None or val<best[0]: best=(val,d,rho)
+# explicit boundary rho=1 scan
+res1=minimize_scalar(lambda d:kl_pers((d,1.0)),bounds=(0,dmax),method='bounded',options={'xatol':1e-14})
+if res1.fun<best[0]: best=(float(res1.fun),float(res1.x),1.0)
+kl_per,d_per,rho_per=best; r_per=persistent(d_per,rho_per)
+ci_per,z_per,n_per5,n_per1=ci_and_n(r_per)
+
+# Declared rank-3 latent-support challenger: same emissions and deterministic period-2 reuse,
+# but one of the four hidden sign-pair components is absent.
+components=[]; zwords=[]
+for z0 in (-1.,1.):
+  for z1 in (-1.,1.):
+    z=np.array([z0,z1,z0,z1]); components.append(pprod*np.prod(1+delta*z[None,:]*rr,axis=1)); zwords.append((z0,z1))
+components=np.asarray(components)
+
+def ci_mix(weights,C3): return chernoff(q,weights@C3)[0]
+best3=None
+for omit in range(4):
+    inds=[i for i in range(4) if i!=omit]; C3=components[inds]
+    def obj2(x):
+        w=np.array([x[0],x[1],1-x[0]-x[1]])
+        if np.min(w)<=1e-10: return 1e3
+        return ci_mix(w,C3)
+    loc=None
+    for st in ([.33,.33],[.1,.45],[.45,.1],[.45,.45],[.2,.2]):
+        res=minimize(obj2,np.array(st),method='Nelder-Mead',options={'maxiter':600,'xatol':1e-10,'fatol':1e-13})
+        if loc is None or res.fun<loc.fun: loc=res
+    w=np.array([loc.x[0],loc.x[1],1-loc.x.sum()]); mix=w@C3
+    ci,z=chernoff(q,mix); kl=float(np.sum(q*np.log(q/mix)))
+    rec=(ci,omit,w,z,kl,mix)
+    if best3 is None or ci<best3[0]: best3=rec
+ci3,omit3,w3,z3,kl3,r3=best3
+n3_5=math.ceil(math.log(.5/.05)/ci3); n3_1=math.ceil(math.log(.5/.01)/ci3)
+
+result={
+ 'task':'OCB-HANKEL-02',
+ 'status':'MATRIX_BERNSTEIN_IMPROVES_GENERIC_BOUND__LIKELIHOOD_MUCH_CHEAPER_ONLY_WITH_DECLARED_MODEL_CLASS',
+ 'frozen_alias':{'delta':delta,'whitened_cross_hankel_diag':np.diag(C).tolist(),'sigma_min':lam},
+ 'nonparametric_matrix_bernstein_power_design':{
+   'centered_sample_operator_norm_R':R,'variance_parameter':varpar,'confidence':.95,'error_fraction_of_sigma_min':frac,
+   'paths_bound':N_mat,
+   'previous_union_weyl_paths':N_old,
+   'improvement_factor':N_old/N_mat,
+   'scope':'Rectangular matrix-Bernstein power bound for independent reset four-jump paths, using the exact frozen alias variance and known whitening. It is not a distribution-free confidence sequence.'
+ },
+ 'scalar_highest_order_diagnostic':{
+   'mean':mu4,'variance':var4,'max_centered_abs':M4,'bernstein_95pct_paths_to_resolve_nonzero_mean':N_scalar,
+   'warning':'A nonzero fourth-order feature alone does NOT certify rank 4 against arbitrary rank-3 mixtures; declared three-support mixtures can retain this moment while losing rank.'
+ },
+ 'likelihood_declared_challengers':{
+   'iid_rank1':{'KL_alias_to_null':kl_iid,'chernoff_information':ci_iid,'chernoff_s':z_iid,'equal_prior_bound_N_5pct':n_iid5,'N_1pct':n_iid1},
+   'persistent_rank2_family_best_four_step_fit':{'delta':d_per,'rho':rho_per,'KL_alias_to_challenger':kl_per,'chernoff_information':ci_per,'chernoff_s':z_per,'equal_prior_bound_N_5pct':n_per5,'N_1pct':n_per1},
+   'three_support_rank3_same_emission_family':{'omitted_hidden_sign_pair':list(zwords[omit3]),'weights_on_remaining_components':w3.tolist(),'KL_alias_to_challenger':kl3,'chernoff_information':ci3,'chernoff_s':z3,'equal_prior_bound_N_5pct':n3_5,'N_1pct':n3_1},
+   'scope':'These likelihood numbers compare only the explicitly declared challenger families. They are not a minimax certificate against every rank<=3 hidden process.'
+ },
+ 'decision':'Full rank is mathematically identifiable but generic noisy certification remains expensive. Structural model commitments can reduce the required sample count by orders of magnitude, and therefore must be reported as premises rather than hidden inside the statistic.',
+ 'nonconclusion':'No laboratory shot recommendation, physical hidden state, or universal rank<=3 exclusion follows.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-HANKEL-02_noisy_rank.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'N_matrix':N_mat,'improvement':N_old/N_mat,'N_scalar':N_scalar,'N_iid5':n_iid5,'N_persistent5':n_per5,'N_rank3_5':n3_5},indent=2))

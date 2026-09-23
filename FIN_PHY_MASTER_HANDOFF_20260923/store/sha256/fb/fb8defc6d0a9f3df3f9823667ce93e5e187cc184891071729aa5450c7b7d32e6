@@ -1,0 +1,60 @@
+# PHY-019 — compatible coarse-graining with retained memory
+
+**Scientific status: PASS_PROJECTIVE_MAPS_WITH_EXACT_MEMORY; naive Markov closure refuted.**
+
+## Exact projective representation maps
+
+For nested pair/block averages on an eight-cell cycle,
+
+`B_(4->2) B_(8->4) = B_(8->2)`
+
+exactly. Thus the coarse **representation** can be coassociative without fitting independent coefficients at every level.
+
+That does not make the coarse **dynamics** Markovian. For the controlled linear relaxation
+
+`dot z = -(a I + kappa L_C8) z`, with `a=0.5`, `kappa=1`,
+
+an orthogonal Haar split into four pair averages `c` and four pair differences `f` gives blocks `A_cc,A_cf,A_ff`. The eliminated block has gap `gamma=2.5` and `||A_cf||=1`.
+
+Eliminating `f` exactly gives
+
+`dot c(t) = -A_cc c(t) - A_cf exp(-A_ff t) f(0) + integral_0^t K(t-s)c(s) ds`,
+
+with
+
+`K(t)=A_cf exp(-A_ff t) A_fc`.
+
+The memory is nonzero. Its L1 operator norm is bounded by `||A_cf||^2/gamma = 0.4`.
+
+## Naive closure fails
+
+Using the same unit-coefficient cycle generator on four coarse cells does not commute with averaging: the generator closure defect has operator norm about `1.4142`.
+
+The zero-frequency Schur/adiabatic generator is
+
+```text
+[[ 1.3571429, -0.5      ,  0.1428571, -0.5      ],
+ [-0.5      ,  1.3571429, -0.5      ,  0.1428571],
+ [ 0.1428571, -0.5      ,  1.3571429, -0.5      ],
+ [-0.5      ,  0.1428571, -0.5      ,  1.3571429]]
+```
+
+so eliminating subcell variables generates a next-neighbor term of magnitude `1/7`, even though the fine law was nearest-neighbor.
+
+## Controlled low-frequency approximation
+
+The exact frequency-dependent generator is
+
+`A_eff(s)=A_cc-A_cf(sI+A_ff)^(-1)A_fc`.
+
+For `|s|<gamma`,
+
+`||A_eff(s)-A_eff(0)|| <= ||A_cf||^2 |s|/[gamma(gamma-|s|)]`.
+
+Thus a Markov approximation is controlled only when observation frequencies are small relative to the eliminated gap. There is no license to discard memory at arbitrary scales.
+
+## FIN interpretation
+
+PHY-008's growing causal-ball memory was not an implementation accident. PHY-019 supplies an exact analytic control showing the same general mechanism: projective observables may compose exactly while eliminated dynamics acquires memory and longer-range effective couplings.
+
+This is not yet a nonlinear FIN continuum theorem. It is the required warning/bridge template for one: any later elimination of hard FIN modes must pay the gap and nonlinear remainder rather than silently replacing the effective process by a local Markov law.

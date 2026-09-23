@@ -1,0 +1,146 @@
+# RG-3 — state-sourced cell geometry from the FIN phase coordinate
+
+**Status:** `CONDITIONAL_PAIR_SPECIFIC_SOURCE_CANDIDATE`
+
+The earlier `S_M` no-go applies only when cells are internally indistinguishable and no pair-dependent state is available. The localized FIN phase supplies a way to make cells relationally distinguishable without external coordinates.
+
+## Intrinsic phase coordinate
+
+Let `m3,m4` be the complex retained means of modes 3 and 4 for one cell. Whenever both are nonzero, define
+
+`u = m4 conj(m3) / |m4 m3| in S1`.
+
+Under a common translation of the FIN phase,
+
+`m_k -> exp(i k alpha) m_k`, hence `u -> exp(i alpha)u`.
+
+Reflection complex-conjugates u. Consequently the *unoriented circular order* of a collection of cells is invariant under the global Dq symmetry up to graph isomorphism; it does not require an absolute phase origin or handedness.
+
+## RG-3 rule
+
+For pairwise distinct cell phases `u_x`, take the one-dimensional Delaunay/Voronoi graph on the circle: connect consecutive cells in circular order.
+
+The output is exactly `C_M`:
+
+- connected,
+- degree two,
+- permutation-equivariant in the cell labels,
+- no fitted distance threshold,
+- no supplied spatial coordinates.
+
+If each edge is assigned its intrinsic angular gap, the weighted shortest-path metric between sampled cells is exactly the corresponding circle geodesic distance (choose the shorter of the two polygon arcs). Thus dense samples converge directly to the phase-circle metric.
+
+## Exact tie obstruction
+
+If two or more cells have exactly the same `u`, their stabilizer permutes those tied cells. With no additional pair-specific datum, a deterministic equivariant rule cannot choose a unique order inside the tied block. This is the same symmetry obstruction as before, now localized to phase collisions.
+
+For q discrete phase values and M independently symmetry-distributed cells,
+
+`P(no ties)=(q)_M/q^M`.
+
+The birthday expansion gives
+
+`log P(no ties) = -M(M-1)/(2q) + O(M^3/q^2)`.
+
+Therefore:
+
+- fixed q then M->infinity: ties are unavoidable;
+- q->infinity first for fixed M: ties disappear;
+- simultaneous scaling: `M^2/q -> 0` is sufficient for no ties with probability tending one.
+
+This produces a genuine **order-of-limits theorem** for the proposed geometry source.
+
+## Continuum cell geometry under a symmetric phase ensemble
+
+If cell phases are independently Haar-distributed on the continuum phase orbit, they are distinct almost surely. Their maximal circular gap tends to zero almost surely; one elementary bound is
+
+`P(max gap > eps) <= M (1-eps)^(M-1)`
+
+for circumference normalized to one. Therefore the RG-3 polygon becomes dense in `S1` and its intrinsic angular metric converges to the circle metric.
+
+This is a parameter-free sparse geometry generated from cell states rather than cell names.
+
+## Why this is not yet physical space
+
+RG-3 is **state-sourced**: changing the internal phases changes the adjacency. No law yet limits the speed of graph rewiring. Moreover, if a later interaction strongly aligns phases, the population can cluster and the uniform dense-circle picture can disappear. The symmetric/Haar phase population and the relative scaling of q and M are therefore bridge premises that must be justified or dynamically derived.
+
+The result should be read as:
+
+`localized FIN phase + many distinct phase states -> canonical sparse relational cell graph`.
+
+It should **not** yet be read as:
+
+`FIN -> physical spacetime`.
+
+## New next atoms
+
+- **CG-01:** derive the phase population law after cells are composed; determine whether a diffuse phase distribution is dynamically stable or collapses.
+- **CG-02:** formulate graph rewiring as an event process and test a size-uniform influence/rewiring bound.
+- **CG-03:** test whether RG-3 plus the existing FIN interaction closes self-consistently under coarse-graining or generates new nonlocal memory.
+- **CG-04:** only if CG-01–03 pass, compare the emergent cell metric with operational influence distance rather than declaring the phase metric spatial by definition.
+
+## Follow-up results
+
+### Diffuse population survives in a much wider joint-scaling window
+
+The earlier TV-to-Haar condition `N kappa/M -> 0` is sufficient but not needed merely to preserve dense geometry. Let `X=N E_smooth`. Under Haar phases,
+
+`E_0[X] <= A N kappa/(M+1)`
+
+with certified branch-box coefficient `A<548.522`. Jensen gives
+
+`Z=E_0[e^{-X}] >= exp(-E_0[X])`,
+
+so for any event B,
+
+`P_G(B) <= exp(E_0[X]) P_0(B)`.
+
+Since `P_0(maxgap>delta)<=M(1-delta)^(M-1)`, the maximal gap still tends to zero for every fixed delta whenever
+
+`N kappa=o(M^2)`.
+
+Thus with fixed kappa, `q=M^3` and `N=M^alpha` for any `0<alpha<2` is compatible with sharp local phase concentration (`N->infinity`), vanishing phase collisions and dense RG-3 circle geometry. This proves geometric density, not TV convergence to Haar.
+
+### Rewiring is local per crossing but has no size-uniform dwell time
+
+A simple adjacent phase crossing changes only two cycle edges out and two edges in. However Haar circular spacings satisfy
+
+`P(M^2 min_gap >= y)=(1-y/M)^(M-1) -> exp(-y)`.
+
+Hence the smallest gap is typically `Theta(M^-2)`. With bounded angular velocity `V`, admissible trajectories can trigger a crossing on time scale `Theta((V M^2)^-1)`. There is no positive M-independent raw graph dwell time without an additional separation/dynamics premise.
+
+### Operational influence metric
+
+For a frozen RG-3 cycle, PHY-006 implies minimal discrete causal depth equals hop distance. Under iid Haar phases, DKW gives with probability at least `1-2 exp(-2M eps^2)`:
+
+`|(2pi/M) d_hop - d_angle| <= 4pi eps + 2pi/M`
+
+uniformly over sampled pairs. Thus normalized operational influence depth converges in probability to the intrinsic phase metric in the diffuse regime.
+
+### Minimal exact metric backbone
+
+If all circular gaps are `<pi`, the RG-3 cycle is not merely one convenient Delaunay choice: it is the unique inclusion-minimal graph with inherited phase distances whose shortest-path metric reproduces all sampled circle distances exactly. This removes one graph-choice ambiguity conditional on a zero-distortion/minimal-edge backbone principle.
+
+### Refinement-compatible edge weights
+
+For local quadratic edge energy `0.5*c(ell)(u-v)^2`, exact consistency under splitting `ell=a+b` and eliminating the inserted point forces
+
+`c(a+b)=c(a)c(b)/(c(a)+c(b))`.
+
+Therefore `R=1/c` is additive and, under regularity,
+
+`c(ell)=kappa0/ell`.
+
+The shape of the edge-weight law is thus unique up to one global positive scale. It transfers without retuning to arbitrary refinements.
+
+### Conditional wave limit
+
+If a local kinetic mass is also additive under interval refinement, `m(ell)=mu0 ell`. On a uniform mesh,
+
+`omega(p)=2 sqrt(kappa0/mu0)|sin(ph/2)|/h`,
+
+so `|v_g|<=sqrt(kappa0/mu0)` and the continuum limit is the one-dimensional wave equation with that dimensionless speed. This is a conditional hyperbolic model, not a derivation of physical `c`.
+
+### Dimensional obstruction
+
+All of the above geometry is sourced from one continuous phase `u in S1` plus a finite `Z2` fiber. Increasing q or M cannot raise the continuous topological dimension. A three-dimensional space requires additional independent relational coordinates or a different higher-dimensional orbit.

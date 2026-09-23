@@ -1,0 +1,36 @@
+# PHY-015 — structural robustness and universality matrix
+
+**Scientific status: PROVED_STRUCTURAL_NEIGHBORHOOD_AND_EXACT_SYMMETRY_BREAKING_WITNESS.**
+
+## 1. What survives changing the selected spectral tuple
+
+For any strictly positive weights on the same Fourier sectors, the MP7-007 Bessel/character expansion keeps nonnegative Fourier coefficients. Their signs do not depend on the magnitudes of `lambda3,lambda4,lambda5,lambda6`. Hence the aligned phase remains a global maximizer of the partition function at fixed amplitudes throughout the whole positive same-support family. This is structural, not a digit-level property of the strict tuple.
+
+At the accepted coexistence point the uniform and localized minima are nondegenerate, the localized-minus-uniform energy crossing is transverse, and the other configurations are separated from the finite minimizing set by a positive compact-complement gap. The implicit-function theorem plus continuity therefore gives an **open D12-symmetric spectral neighborhood** in which the two stable branches and a nearby transverse first-order coexistence event persist. The theorem is qualitative: no explicit maximal radius is claimed.
+
+## 2. What is protected only by D12
+
+Take `h=X7[:,0]` (the k=3 cosine feature) and
+
+`A_eps = A7 + eps h h^T`.
+
+For `eps>-1` this remains centered, PSD and rank seven, but generic nonzero `eps` breaks the D12 rotation symmetry by selecting one orientation inside the k=3 pair. At the accepted localized coexistence state the twelve translated copies have `(h^T p_a)^2` in two exact symmetry classes: six are approximately `0.239550685` and six vanish to numerical roundoff. Their first perturbative primal-energy shift is
+
+`dV/deps = -(g_eq/2)(h^T p_a)^2`.
+
+Thus an arbitrarily small allowed rank-seven noncirculant perturbation splits the 12-fold equality at first order. Local minima persist for sufficiently small `eps`, but exact degeneracy does not.
+
+## 3. Universality matrix
+
+| Object | Status under positive same-support weights | Weak D12 breaking | Classification |
+|---|---|---|---|
+| phase-alignment inequality | exact | generally lost as a symmetry theorem | structural for character-positive family |
+| stable localized branch | persists locally | persists locally | structurally stable nondegenerate minimum |
+| transverse first-order crossing | persists at shifted g | generically becomes split sequential crossings | structurally stable crossing, details variant |
+| 12 equal translated phases | exact | split immediately | symmetry-protected |
+| `g_eq`, `g_fold`, jump sizes | vary | vary | model-specific |
+| fold exponents 1/2,3/2,1/2 | persist for a simple fold | persist if fold remains simple | generic catastrophe theory |
+
+## Decision
+
+PHY-015 passes. FIN contains at least one genuine structural mechanism beyond its precise spectral digits: positive-character phase alignment plus a robust first-order branch crossing. But exact phase multiplicity and numerical ratios are not universal. No RG universality class is asserted.

@@ -1,0 +1,59 @@
+# FIN PHY — OCB Hankel-02 / memory-03 / calibration-03 / channel-03 synthesis
+
+Date: 2026-09-23
+
+## Main result
+
+The operational-carrier programme now separates four logically distinct questions:
+
+1. **Is the carrier graph identifiable?** — yes, conditionally and robustly over declared calibration sets.
+2. **Is the visible process Markov?** — not forced by one-step data; finite hidden aliases exist.
+3. **What is the minimal predictive memory dimension?** — exact Hankel rank can be large and is expensive to certify nonparametrically.
+4. **Which channel category is realized?** — probability-only records preserve the leading carrier but channel category requires additional escape/return scaling information.
+
+The strongest schematic statement is therefore
+
+`carrier identifiability != memory identifiability != channel identifiability`.
+
+## New quantitative hierarchy for rank certification
+
+On the frozen period-2 alias:
+
+- predecessor worst-entry Hoeffding/Weyl full-rank fixture: about `3.26e9` paths;
+- whitened rectangular matrix-Bernstein: about `3.82e6` paths;
+- declared simple likelihood challengers: about `1.7e3--3.8e3` paths for 5% Chernoff upper bounds.
+
+The last line is cheaper precisely because it pays a model-class premise.  It must not be promoted to
+a minimax rank<=3 theorem.
+
+## Memory complexity
+
+The exact rotating-sign family gives rank `H=2^L`, hides perfectly through path length `L`, and first
+breaks at `L+1`.  This supplies an `Omega(log H)` horizon obstruction.  The standard finite-rank
+weighted-automaton argument supplies an `O(H)` sufficient horizon once `H` is independently bounded.
+A universal sparse-query lower bound remains open.
+
+## Calibration
+
+A full 144-dimensional box on the calibrated inverse map has an exact carrier-preservation threshold
+`epsilon*=0.09025558368189042`; a row-l1 uncertainty polytope has threshold
+`beta*=0.3279318016242833`.  Above the first threshold a calibration-only removal witness reverses a
+strict nearest/competitor comparison.
+
+## Probability-only channels
+
+Without coherent amplitude access:
+
+- heat destinations begin with `W` and total escape exponent 1;
+- unitary probabilities begin with `W^2` and exponent 2;
+- zero-velocity wave squared response begins with `W^2` and exponent 4.
+
+Strict positivity/order makes `W` and `W^2` share the same carrier graph.  But conditional
+destination-only records cannot separate unitary from wave at leading order; attempts/return/escape
+information at multiple control settings is required.
+
+## Epistemic status
+
+This campaign strengthens the **operational mathematics** of FIN.  It does not supply a physical
+platform, preparation law, detector calibration, clock map, hidden environment, quantum postulates,
+continuum physics or empirical evidence.

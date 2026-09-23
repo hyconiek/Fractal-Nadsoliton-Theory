@@ -1,0 +1,209 @@
+{
+  "task": "OCB-MEM-02",
+  "status": "GENERIC_EARLY_SPAN_STOP_REFUTED__LINEAR_LAG_PROTOCOL_PASSES_FOR_DECLARED_ALIAS_FAMILY",
+  "generic_kill_test": {
+    "statement": "One-symbol Hankel rank stabilization is not a safe stopping rule with membership/path-probability access alone. Period-L aliases with L>=2 agree with strict on all words through length L and therefore can present local rank 1 before the first hidden correlation is observable.",
+    "rows": [
+      {
+        "period_L": 1,
+        "local_one_step_extended_rank": 2,
+        "true_hankel_rank": 2,
+        "local_entries_queried": 144,
+        "top_singular_values": [
+          1.1953897268362663,
+          0.009763587393227014,
+          1.289253111482306e-17,
+          1.0251847557667747e-18,
+          2.4827939994419206e-19,
+          1.0446659306086543e-19,
+          7.360797902915728e-20,
+          2.02699420412644e-20
+        ],
+        "false_stop_if_rank1_declared_closed": false
+      },
+      {
+        "period_L": 2,
+        "local_one_step_extended_rank": 1,
+        "true_hankel_rank": 4,
+        "local_entries_queried": 144,
+        "top_singular_values": [
+          1.1951533142294932,
+          2.2302525595551368e-17,
+          1.4203778263765906e-18,
+          3.7008872920393895e-19,
+          2.6581851055359803e-19,
+          7.122532989825647e-20,
+          2.1266838203520817e-20,
+          1.7196567264761918e-33
+        ],
+        "false_stop_if_rank1_declared_closed": true
+      },
+      {
+        "period_L": 3,
+        "local_one_step_extended_rank": 1,
+        "true_hankel_rank": 8,
+        "local_entries_queried": 144,
+        "top_singular_values": [
+          1.1951533142294932,
+          3.0001413707355774e-17,
+          4.911277445084985e-18,
+          2.3820594367648794e-18,
+          3.9956098935507185e-19,
+          1.1809295257725825e-19,
+          2.7237728219718576e-20,
+          2.0549366661639493e-33
+        ],
+        "false_stop_if_rank1_declared_closed": true
+      },
+      {
+        "period_L": 4,
+        "local_one_step_extended_rank": 1,
+        "true_hankel_rank": 16,
+        "local_entries_queried": 144,
+        "top_singular_values": [
+          1.1951533142294932,
+          3.823225668713023e-17,
+          6.3924683748513285e-18,
+          2.7202042203241565e-18,
+          1.2728652215846719e-18,
+          2.0744783077207325e-19,
+          1.0535054094541711e-19,
+          1.6537042674068818e-33
+        ],
+        "false_stop_if_rank1_declared_closed": true
+      }
+    ],
+    "consequence": "A generic adaptive finite-equivalence protocol needs an additional completeness/equivalence oracle, a declared structural model class, or a guaranteed horizon; local rank stabilization alone is insufficient."
+  },
+  "fin_specific_periodic_alias_protocol": {
+    "contrast": "h(X)=c(X)-E_p[c]",
+    "formula": "E[h_t h_(t+ell)] = (4 delta)^2 if L divides ell, and 0 otherwise.",
+    "Hmax": 8,
+    "rows": [
+      {
+        "period_L": 1,
+        "lag_moments": [
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001,
+          0.04000000000000001
+        ],
+        "first_nonzero_lag": 1,
+        "expected": 1
+      },
+      {
+        "period_L": 2,
+        "lag_moments": [
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.04000000000000001
+        ],
+        "first_nonzero_lag": 2,
+        "expected": 2
+      },
+      {
+        "period_L": 3,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_lag": 3,
+        "expected": 3
+      },
+      {
+        "period_L": 4,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001
+        ],
+        "first_nonzero_lag": 4,
+        "expected": 4
+      },
+      {
+        "period_L": 5,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_lag": 5,
+        "expected": 5
+      },
+      {
+        "period_L": 6,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0,
+          0.0
+        ],
+        "first_nonzero_lag": 6,
+        "expected": 6
+      },
+      {
+        "period_L": 7,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001,
+          0.0
+        ],
+        "first_nonzero_lag": 7,
+        "expected": 7
+      },
+      {
+        "period_L": 8,
+        "lag_moments": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.04000000000000001
+        ],
+        "first_nonzero_lag": 8,
+        "expected": 8
+      }
+    ],
+    "query_complexity": "O(Hmax) lag observables rather than 11^Hmax word probabilities for this explicit alias family.",
+    "decision": "Scanning lag 1..Hmax detects every declared period-L alias with L<=Hmax at its first nonzero lag L."
+  },
+  "separation_from_standard_theorem": "The standard bounded-state weighted-automaton equivalence theorem remains valid once a complete word agreement condition is established. This result concerns the operational query/stopping problem: local span stabilization does not certify that completeness condition.",
+  "nonconclusion": "The lag protocol is not universal for arbitrary hidden Markov models; an adversarial memory process can hide outside this contrast family."
+}

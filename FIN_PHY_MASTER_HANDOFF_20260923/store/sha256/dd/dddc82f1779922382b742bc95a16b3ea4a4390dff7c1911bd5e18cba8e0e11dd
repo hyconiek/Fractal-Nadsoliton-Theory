@@ -1,0 +1,52 @@
+{
+  "task": "OCB-CHANNEL-04",
+  "status": "FINITE_CONTROL_CATEGORY_SEPARATION_CERTIFIED_UNDER_LOCALLY_LINEAR_TIME_MAP",
+  "control_model": {
+    "form": "At two nominal controls u and 2u, physical times are t1=a*u*(1+e1), t2=2*a*u*(1+e2), with unknown a>0 and |e1|,|e2|<=eta.",
+    "consequence": "rho=t2/t1 lies in [2(1-eta)/(1+eta), 2(1+eta)/(1-eta)]. Overall clock scale a cancels from the control-ratio uncertainty.",
+    "finite_window": "Require t1<=T=0.01 in the frozen dimensionless strict units; t2 is then bounded by rho_+ T."
+  },
+  "remainder_certificate": {
+    "strict_constants": {
+      "mean_lambda_a1": 1.6603072787660986,
+      "mean_lambda2_a2": 3.294583839719961,
+      "var_lambda": 0.5379635797962732,
+      "max_lambda": 2.3421820411463004,
+      "unitary_fourth_coefficient_b4": 0.1395834731925115
+    },
+    "heat": "a1*t-a2*t^2/2 <= S_H(t) <= a1*t",
+    "unitary": "var(lambda)*t^2-b4*t^4 <= S_U(t) <= var(lambda)*t^2",
+    "wave": "|S_W(t)-var(lambda)*t^4/4| <= sqrt(var(lambda))*L^2*t^6/24 + L^4*t^8/576",
+    "basis": "elementary exp/cos Taylor remainder inequalities plus variance/Cauchy-Schwarz; evaluated on the frozen supplied strict spectrum."
+  },
+  "certified_separation": {
+    "T": 0.01,
+    "heat_vs_unitary_eta_threshold": 0.11334621852285263,
+    "unitary_vs_wave_eta_threshold": 0.11493584190028426,
+    "joint_safe_eta_lt": 0.11334621852285263,
+    "safe_fixture_eta": 0.11,
+    "safe_fixture_ratio_bounds": {
+      "heat_upper": 2.5193783083005084,
+      "unitary_lower": 2.571129371251023,
+      "unitary_upper": 6.222103116700453,
+      "wave_lower": 6.60688765608557
+    },
+    "safe_fixture_gaps": {
+      "unitary_minus_heat": 0.05175106295051446,
+      "wave_minus_unitary": 0.3847845393851177
+    },
+    "failure_fixture_eta": 0.115,
+    "failure_fixture_gaps": {
+      "unitary_minus_heat": -0.025461615048333552,
+      "wave_minus_unitary": -0.004953259005294974
+    },
+    "rule": "Retain total attempts/returns and classify by the two-level escape-ratio interval. Under eta<eta_star and t1<=T, the three channel categories have disjoint certified intervals."
+  },
+  "nominal_exact_strict_slopes_at_t1_0p01_t2_0p02": {
+    "heat": 0.9857706845945085,
+    "unitary": 1.9998877009603138,
+    "wave": 3.999814781802346
+  },
+  "decision": "Probability-only heat/unitary/wave category separation survives a finite control interval and a locally nonlinear control-to-time map, provided its relative two-point distortion is below an explicit ~11.3% bound and the first physical time lies in the declared small-control window.",
+  "nonconclusion": "FIN does not source the control-to-time map, the bound eta, the dimensionless time window as laboratory units, or the physical wave/Born interpretation."
+}

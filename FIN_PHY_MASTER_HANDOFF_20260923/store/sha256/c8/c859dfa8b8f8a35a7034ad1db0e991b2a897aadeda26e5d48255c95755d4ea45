@@ -1,0 +1,98 @@
+# FIN PHY — calibration and channel-class continuation
+
+Date: 2026-09-23
+
+## OCB-CAL-01 — calibrated confusion and destination-dependent censoring
+
+Let `p_i` be the true destination distribution from prepared visible state `i`.
+Let `eta_j>0` be the calibrated probability that a jump to true destination `j`
+is retained, and let `C[j,y]` be a calibrated confusion matrix from true
+destination `j` to reported label `y`.
+
+Conditioned on observing a recorded jump,
+
+`q_i = C^T diag(eta) p_i / (eta^T p_i)`.
+
+If `C` is invertible and every `eta_j>0`, define
+
+`B = diag(eta)^(-1) (C^T)^(-1)`.
+
+Then
+
+`B q_i = p_i/(eta^T p_i)`.
+
+Thus every ordinal comparison is linear in the observed probability vector:
+
+`sign(p_i[a]-p_i[b]) = sign((e_a-e_b)^T B q_i)`.
+
+No nonlinear renormalization is needed to certify the top-two set.
+
+If `||qhat-q||_inf<=epsilon`, comparison `a>b` is certified whenever
+
+`(e_a-e_b)^T B qhat > epsilon ||(e_a-e_b)^T B||_1`.
+
+### Synthetic stress fixture
+
+For a nontrivial test only (not apparatus data), use:
+
+- 90 percent correct reported destination;
+- 5 percent confusion to each cyclic adjacent label;
+- destination efficiencies ranging from 0.80 to 0.98.
+
+Exact inversion recovers the strict law to `1.7e-16`.
+The worst strict nearest-neighbour-versus-competitor inequality survives any
+simultaneous observed-coordinate error below
+
+`epsilon = 0.061363680539136226`.
+
+A direct Hoeffding/union bound over all `12x12` reported frequencies gives
+1,150 recorded exits per prepared state for a 95 percent family-wise synthetic
+certificate.  This is conservative and is not a laboratory sample-size claim.
+
+### Failure controls
+
+- singular `C`: carrier can be erased completely (uniform confusion has rank 1);
+- unknown `eta`: only the normalized products `eta_j p_j` are identified;
+- any `eta_j=0`: that destination is invisible without extra assumptions.
+
+So calibration is not bookkeeping; it is part of the operational bridge.
+
+## OCB-CHANNEL-01 — first-nonscalar-jet carrier theorem
+
+A common analytic functional calculus is not enough to guarantee a common
+carrier.
+
+Suppose near a declared control origin
+
+`K_epsilon = c(epsilon) I - a epsilon^m A + R_epsilon`,
+
+with `a>0`, `m>=1`, and destination score monotone in `|K_ij|` in the relevant
+small-response regime.  If
+
+`max_(i!=j) |R_ij| < (a epsilon^m/2)(w_1-w_2)`,
+
+then for every prepared vertex the two largest off-diagonal destination scores
+are exactly the two strict distance-one neighbours.  Replacing `w_1-w_2` by
+the smallest adjacent shell gap gives full six-shell ordering.
+
+This is the shared structure behind the previously certified heat, unitary and
+wave short-control carrier windows: their first non-scalar jet is proportional
+to `A`.
+
+### Counterexample: functional calculus alone
+
+Let `P_1` be the spectral projector onto the `k=1` Fourier doublet.  Because the
+seven sector eigenvalues are distinct, `P_1=f(A)` for a polynomial of degree at
+most six.  Nevertheless its shell amplitudes are
+
+`(0.1443376, 0.0833333, 0, -0.0833333, -0.1443376, -0.1666667)`,
+
+so the largest absolute response is at the antipode `d=6`, not `d=1`.
+The projector, commutator and polynomial reconstruction residuals are all at
+floating replay level (`<=1.5e-13`).
+
+Therefore:
+
+> Carrier robustness is a first-jet statement, not a generic `K=f(A)` statement.
+
+This does not select heat, unitary, wave, or any physical state category.

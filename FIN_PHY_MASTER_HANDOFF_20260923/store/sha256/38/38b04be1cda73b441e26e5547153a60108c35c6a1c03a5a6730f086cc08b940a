@@ -1,0 +1,180 @@
+# FIN PHY carrier-source / all-orders resonance handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+`FIN_PHY_RESONANCE_CARRIER_CONTINUATION_20260923.zip`
+
+SHA-256: `2b435958af4071a64a10b7b09d6be046a0b9d7870d420e4294205baa7763b78d`
+
+## Campaign question
+
+Continue from `CARRIER-SOURCE-02` and determine whether the current strict FIN
+actually sources a fixed relational carrier/factor structure, then push
+`RESONANCE-CERT-02`, `STATE-SPACE-SOURCE`, `PROX-05`, `DYN/TIME-SOURCE`, and
+`RANK-SOURCE` as far as the current data permit without target coding.
+
+## Main positive result — finite carrier source
+
+The current strict weighted kernel itself recovers a one-dimensional cyclic
+carrier without relying on external label names.
+
+The six off-diagonal radial weights are strictly ordered.  The unique strongest
+relation is the degree-two cycle `C12`; graph distance on that relation exactly
+reconstructs the cyclic distances `0,...,6`.  Thus the unlabelled weighted
+kernel has `Aut(W)=D12` and sources a cyclic torsor up to origin/orientation.
+
+**Carrier source status:**
+
+`FINITE_CYCLIC_CARRIER_PROVED__PHYSICAL_INTERPRETATION_OPEN`
+
+## Main structural result — carrier/spectrum/nonlinearity closure
+
+The finite carrier theorem and the new all-orders partition theorem form a
+closed consistency square:
+
+```text
+strict weighted relations
+        |
+        v
+      C12 carrier
+        |
+        v
+ Fourier characters
+        |
+        v
+positive all-orders partition-function locking
+        |
+        v
+same C12 translated phase orbit
+```
+
+The phase embedding is injective and `D12` equivariant.
+
+For cyclic modes `k=1,...,5` at arbitrary positive amplitudes, the Bessel
+expansion has positive coefficients.  Globally:
+
+- finite `q`: equality iff `phi_k=k*2*pi*a/q`;
+- circle continuum: equality iff `phi_k=k*alpha`.
+
+With a fixed positive alternating coordinate, only even translations maximize;
+negative parity gives odd translations; allowing parity sign jointly restores
+the full translated orbit.
+
+The theorem generalizes to any finite Abelian carrier: all-orders phase locking
+reconstructs the supplied carrier by Pontryagin duality.  It therefore explains
+**how a carrier appears as the nonlinear translation manifold**, but does not
+select which carrier nature uses.
+
+## Fixed-factor search
+
+Several intrinsic factor structures exist but do not agree on a physical
+factor count:
+
+- `D12` representation: two 1D sectors + five 2D Fourier sectors;
+- origin-free CRT torsor: `Z12 ~= Z3 x Z4`;
+- `D12` orbital/association algebra: seven relation classes.
+
+The CRT factors are dynamically coupled by the strict operator.  Arithmetic
+factor count also depends on refinement path: `12*2^n` has one diverging primary
+factor, while `12*6^n` has two.
+
+Hence canonical finite factors do not by themselves select continuum dimension.
+
+## Rank-source upgrade
+
+For every even `q`, the `D_q` permutation representation has two 1D sectors and
+`q/2-1` doublets.  Invariant projector sums realize **every rank `0,...,q`**.
+
+Therefore:
+
+- `D_q` symmetry cannot source rank 7;
+- `dim(Bose-Mesner algebra)=7` at `q=12` does not source a rank-7 mediator;
+- the numerical equality `7=7` is a characterization only.
+
+## Conditional 1D continuum
+
+If the recovered nearest-neighbour cycle is interpreted as a metric graph and
+refinement means subdividing its existing edges, then every binary/ternary/mixed
+subdivision embeds into the same metric circle.  Mesh->0 gives `S1`
+independently of subdivision arity.
+
+With the previously derived refinement-compatible law
+`c(ell)=kappa0/ell`, the discrete edge energy equals the continuum Dirichlet
+energy of the piecewise-linear interpolation exactly.
+
+This gives a narrow conditional bridge:
+
+```text
+strict W -> intrinsic C12 -> metric graph -> S1 -> 1D Dirichlet action
+```
+
+up to overall length/stiffness scales and the physical-identification premise.
+
+## New major no-go — continuum operator source
+
+The full strict kernel contains six nonzero distance shells.  Current finite
+data do not determine how interactions beyond distance six continue after
+refinement.
+
+Two positive continuations agree exactly on **all** current shell data:
+
+1. finite range: no interactions beyond shell 6 -> small-k order `2`;
+2. matched `d^-1.8` tail beyond shell 6 -> small-k order `0.8`.
+
+Measured slopes are `1.99999996` and `0.80003028`.
+
+Thus sourcing the finite carrier is much stronger than sourcing the continuum
+operator.  `OPERATOR-REFINEMENT-SOURCE` becomes the highest mathematical
+blocker.
+
+## State ontology result
+
+Treating the typed vertex kernel `W` as primitive supplies the vertex carrier.
+Treating only abstract self-adjoint `A` as primitive does not select a unique
+simplex: there is an open family of orthogonally conjugate, isospectral,
+zero-row-sum matrices with all off-diagonals still negative.
+
+Hence `A + Markov positivity` alone does not source the label cone.
+
+## Dynamics/time result
+
+No nontrivial continuous finite-state evolution can be both stochastic and
+orthogonal: a nonnegative orthogonal matrix is a permutation, and a continuous
+one-parameter permutation flow starting at identity is constant.
+
+Therefore the static operator does not collapse heat, wave and unitary dynamics
+into one law.  A physical temporal category and clock source remain necessary.
+
+## PROX-05 result
+
+Haar point density plus raw/unweighted RNG does not uniquely select an isotropic
+continuum Laplacian.  Rectangular dense grids on the same flat torus all
+converge to Haar measure and have the same four-neighbour RNG topology, yet
+under density scaling their continuum coefficients are `(1/a,a)` for aspect
+ratio `a`.
+
+RNG may source sparse topology, not the continuum metric/operator by itself.
+
+## Execution summary
+
+14 scientific producers, 14 result JSON files.  See `TASKS.json`,
+`CLAIM_REGISTER.json`, and the dedicated reports.
+
+## Highest-value next atoms
+
+1. `OPERATOR-REFINEMENT-SOURCE` — derive/refute a target-blind tail/refinement
+   law predicting held-out shells or low-k response.
+2. `CARRIER-PHYSICAL-BRIDGE` — operationally test whether the recovered cyclic
+   graph distance is physically measured rather than only mathematically
+   intrinsic.
+3. `HIGHER-CARRIER-SOURCE` — only if >1 base dimension is required; current
+   strict kernel sources one cyclic carrier and no hidden product carrier.
+4. `STATE-ONTOLOGY-SOURCE` — use external preparations/effects or a new strict
+   cone theorem to choose a state ontology.
+5. `DYN/TIME-SOURCE-03` — choose dissipative/reversible temporal category and
+   clock by an independent principle.
+6. `RANK-SOURCE` — remains open with symmetry/association shortcuts excluded.
+
+See `NEXT_ATOMS.md` for stop rules.

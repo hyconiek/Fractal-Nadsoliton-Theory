@@ -1,0 +1,64 @@
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from scipy.optimize import minimize
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+lam=np.array([L[3],L[4],L[5],L[6]],float)
+
+def Xq(q, parity=True):
+    j=np.arange(q); cols=[]
+    # Keep pointwise amplitudes equal to q=12 convention, hence uniform feature covariance fixed.
+    for idx,k in enumerate((3,4,5)):
+        amp=math.sqrt(lam[idx]/6)
+        cols += [amp*np.cos(2*np.pi*k*j/q), amp*np.sin(2*np.pi*k*j/q)]
+    if parity:
+        cols.append(math.sqrt(lam[3]/12)*((-1.0)**j))
+    return np.column_stack(cols)
+
+def dual_aligned(s,g,q):
+    X=Xq(q,True)[:,[0,2,4,6]]
+    h=X@s; m=h.max()
+    return float(s@s/(2*g) - (m+math.log(np.mean(np.exp(h-m)))))
+
+rows=[]
+for q in (12,24,48,96):
+    for parity in (False,True):
+        X=Xq(q,parity)
+        uniq=np.unique(np.round(X,12),axis=0).shape[0]
+        cov=X.T@X/q
+        rows.append({'q':q,'family':'smooth_plus_parity' if parity else 'smooth_rank6',
+                     'rank':int(np.linalg.matrix_rank(X,1e-10)),'unique_rows':int(uniq),
+                     'uniform_cov_diag':[float(x) for x in np.diag(cov)]})
+# repeated-row negative control
+rep=[]
+for q in (24,48,96):
+    Xrep=np.vstack([X7 for _ in range(q//12)])
+    rep.append({'q':q,'unique_rows':int(np.unique(np.round(Xrep,12),axis=0).shape[0]),
+                'rank':int(np.linalg.matrix_rank(Xrep,1e-10))})
+# frozen scout grid, not a proof of global transition
+scout=[]
+for q in (12,24,48,96):
+    for g in (3.5,4.0,5.0,6.0,7.0):
+        candidates=[]
+        for scale in (0.0,0.5,1.0,1.5,2.0,3.0):
+            r=minimize(lambda s:dual_aligned(s,g,q),np.ones(4)*scale,method='BFGS',options={'gtol':1e-10,'maxiter':1000})
+            candidates.append((float(r.fun),r.x.tolist(),bool(r.success)))
+        best=min(candidates,key=lambda z:z[0])
+        scout.append({'q':q,'g':g,'best_phi':best[0],'norm_s':float(np.linalg.norm(best[1])),'s':best[1]})
+out={
+ 'task':'PHY-016','scientific_state':'PROVED_GENERAL_Q_PHASE_ALIGNMENT__NUMERICAL_PHASE_SURVIVAL_SCOUT',
+ 'normalization':'pointwise feature amplitudes fixed to q=12 convention; therefore uniform feature covariance remains lambda/12 while nonzero Gram eigenvalues grow q/12',
+ 'families':rows,'replication_control':rep,
+ 'exact_theorem':{
+  'smooth_rank6':'for modes 3,4,5 on Z_q, Bessel/character coefficients are nonnegative with support 3m3+4m4+5m5=0 mod q, hence phi=0 maximizes Z; equality annihilator has q translations because gcd(3,4,5,q)=1',
+  'smooth_plus_parity':'for even q with active alternating mode q/2 and b>0, support is 3m3+4m4+5m5=0 mod q/2; equality annihilator has q/2 even translations after fixing b>=0; restoring sign gives full translation orbit',
+  'generic_translation_stabilizer':'trivial when modes 3,4,5 all active because gcd(q,3,4,5)=1; aligned reflection remains, so D_q orbit size is q'
+ },
+ 'scout_grid':scout,
+ 'nonconclusions':['no certified q-dependent coexistence gain','no spatial continuum','q-fold phase multiplicity is symmetry conditional, not particle count']
+}
+(ROOT/'results'/'PHY-016_q_extension.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

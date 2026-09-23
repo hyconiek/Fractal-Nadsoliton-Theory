@@ -1,0 +1,41 @@
+# PHY-023 — static susceptibility versus propagation
+
+**Scientific status: PASS_CONDITIONAL_DISPERSION; propagation requires an imported kinetic structure.**
+
+Project the composition-derived collective action onto a stable scalar mode with positive local curvature `r` and continuum stiffness `K`.
+
+## Overdamped FIN extension
+
+With the explicitly chosen gradient dynamics
+
+`dot xi = -Gamma (r - K d_x^2) xi`,
+
+the retarded response is
+
+`G_R(s,k)=1/[s+Gamma(r+K k^2)]`.
+
+Every pole is purely decaying. The mode has a static correlation length `sqrt(K/r)` in this conditional continuum, but **no wave frequency**. Calling the inverse Hessian a propagator would therefore be wrong.
+
+On the finite local lattice the matrix exponential has nonzero arbitrarily distant tails for every positive continuous time, but the Taylor series cannot reach graph distance d before order d. This is the same factorial-tail mechanism proved in PHY-006.
+
+## Inertial lift
+
+If new momenta/inertia are added,
+
+`ddot xi + gamma dot xi + (r-K d_x^2) xi = 0`,
+
+then
+
+`G_R(s,k)=1/[s^2+gamma s+r+K k^2]`.
+
+Underdamped poles now have a real oscillation component. In the ideal `gamma=0` continuum the dispersion is
+
+`omega^2=r+K k^2`.
+
+For large k the dimensionless group speed tends `sqrt(K)`. This speed is not a prediction of static FIN: inertia, clock normalization, length scaling and the continuum family have all been supplied.
+
+A diagnostic using the certified stable fold side at `epsilon=1e-8` and the PHY-022 stiffness illustrates the two pole classes; it is not a physical calibration.
+
+## Decision
+
+FIN plus PM-001 supplies a static collective stiffness. FIN plus a relaxational rule supplies decay/diffusion. A propagating wave candidate appears only after an independent inertial/symplectic-type premise. Therefore the current evidence supports a **conditional effective field architecture**, not a sourced relativistic field.

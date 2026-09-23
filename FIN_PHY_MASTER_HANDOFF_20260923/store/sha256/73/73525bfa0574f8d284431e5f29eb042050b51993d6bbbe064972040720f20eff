@@ -1,0 +1,108 @@
+{
+  "conductance_interpretation": "Only alpha=1 satisfies exact series/refinement identity for all splits; other simple powers fail already on the declared split.",
+  "conductance_power_control": [
+    {
+      "alpha": 0,
+      "coarse_target": 1.0,
+      "relative_defect": -0.5,
+      "series_effective": 0.5
+    },
+    {
+      "alpha": 0.5,
+      "coarse_target": 1.0,
+      "relative_defect": -0.286734075809403,
+      "series_effective": 0.713265924190597
+    },
+    {
+      "alpha": 1.0,
+      "coarse_target": 1.0,
+      "relative_defect": 0.0,
+      "series_effective": 1.0
+    },
+    {
+      "alpha": 1.5,
+      "coarse_target": 1.0,
+      "relative_defect": 0.3791026017341219,
+      "series_effective": 1.379102601734122
+    },
+    {
+      "alpha": 2.0,
+      "coarse_target": 1.0,
+      "relative_defect": 0.8733608092918697,
+      "series_effective": 1.8733608092918697
+    }
+  ],
+  "dynamic_interpretation": "Exact-refinement stiffness alpha=1 plus additive mass beta=1 gives a finite nonzero continuum wave-speed scale. Altering either exponent without compensating the other makes the speed vanish/diverge; alpha+beta=2 alone is only a scaling condition, not exact static refinement.",
+  "dynamic_scaling_control": [
+    {
+      "finite_nonzero_if_h_to_0": true,
+      "mass_beta": 1,
+      "speed_squared_h_exponent": 0,
+      "stiffness_alpha": 1
+    },
+    {
+      "finite_nonzero_if_h_to_0": false,
+      "mass_beta": 1,
+      "speed_squared_h_exponent": 1,
+      "stiffness_alpha": 0
+    },
+    {
+      "finite_nonzero_if_h_to_0": false,
+      "mass_beta": 0,
+      "speed_squared_h_exponent": 1,
+      "stiffness_alpha": 1
+    },
+    {
+      "finite_nonzero_if_h_to_0": false,
+      "mass_beta": 1,
+      "speed_squared_h_exponent": 0.5,
+      "stiffness_alpha": 0.5
+    },
+    {
+      "finite_nonzero_if_h_to_0": false,
+      "mass_beta": 0.5,
+      "speed_squared_h_exponent": 0.5,
+      "stiffness_alpha": 1
+    },
+    {
+      "finite_nonzero_if_h_to_0": true,
+      "mass_beta": 0.5,
+      "speed_squared_h_exponent": 0.0,
+      "stiffness_alpha": 1.5
+    }
+  ],
+  "metric_backbone_control": [
+    {
+      "M": 8,
+      "MST_path_distance": 0.6666529625507881,
+      "circle_distance_across_removed_gap": 0.3333470374492119,
+      "distortion_ratio": 1.9998766680275597,
+      "largest_gap": 0.3333470374492119
+    },
+    {
+      "M": 16,
+      "MST_path_distance": 0.8053916149338017,
+      "circle_distance_across_removed_gap": 0.19460838506619826,
+      "distortion_ratio": 4.138524733452973,
+      "largest_gap": 0.19460838506619826
+    },
+    {
+      "M": 32,
+      "MST_path_distance": 0.9217153745676732,
+      "circle_distance_across_removed_gap": 0.07828462543232684,
+      "distortion_ratio": 11.773900296226751,
+      "largest_gap": 0.07828462543232684
+    },
+    {
+      "M": 64,
+      "MST_path_distance": 0.9172734304082104,
+      "circle_distance_across_removed_gap": 0.08272656959178959,
+      "distortion_ratio": 11.088014829267713,
+      "largest_gap": 0.08272656959178959
+    }
+  ],
+  "metric_interpretation": "A canonical sparse alternative (MST = cycle minus largest gap) is relabeling/metric derived but does not preserve the complete circle shortest-path metric; the exact-metric premise is doing real work.",
+  "nonconclusion": "These controls validate logical dependence on the declared principles; they do not prove those principles are fundamental laws of nature.",
+  "scientific_state": "PASS_TARGETED_NEGATIVE_CONTROLS",
+  "task": "PHY-013-source-followup-negative-controls"
+}

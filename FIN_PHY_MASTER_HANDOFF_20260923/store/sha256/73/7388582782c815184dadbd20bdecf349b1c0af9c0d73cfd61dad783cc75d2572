@@ -1,0 +1,122 @@
+# FIN PHY — Carrier source and refinement report
+
+Date: 2026-09-23
+
+## Executive result
+
+`CARRIER-SOURCE-02` is no longer a single undifferentiated blocker.
+
+### Positive theorem: finite carrier is internally recoverable
+
+The strict positive kernel has six strictly ordered off-diagonal radial weights
+for distances `d=1,...,6`.  The largest-weight relation is therefore intrinsic
+to the **unlabelled** weighted kernel.  Its support graph is exactly the cycle
+`C12`.  Any automorphism of the weighted kernel must preserve that shell, so
+it is contained in `Aut(C12)=D12`; every dihedral symmetry preserves all radial
+shells, so equality holds.
+
+Hence the strict kernel itself recovers:
+
+- a 12-point cyclic torsor, up to origin and orientation;
+- its nearest-neighbour graph;
+- all graph distances `0,...,6`.
+
+The smallest gap between successive shell weights is
+`0.013060406042187948`, giving the simple sufficient shell-order robustness
+radius `0.006530203021093974` for common shell perturbations.
+
+**Disposition:** finite one-factor carrier source — **PASS**.
+
+This is a mathematical carrier theorem, not yet a claim that this cycle is
+physical space.
+
+## Canonical internal factorizations do not equal spatial dimension
+
+The same strict carrier has several different canonical decompositions.
+
+1. As a real `D12` representation:
+   `R^12 = V_0 + V_6 + V_1 + ... + V_5`, with two 1D sectors and five 2D
+   Fourier sectors.
+2. As a cyclic torsor, characteristic subgroup quotients give the origin-free
+   CRT factorization `Z12 ~= Z3 x Z4`.
+3. The `D12` orbital/Bose-Mesner algebra has seven distance classes.
+
+These give natural counts 5, 2 and 7, respectively.  None is automatically a
+physical dimension.
+
+The CRT decomposition is genuine but not dynamically decoupled: in CRT
+coordinates the strict kernel violates additive separability and the previous
+Kronecker-sum no-go remains valid.
+
+## Exact rank-source no-go
+
+For every even `q`, the real `D_q` permutation representation contains two
+1D sectors and `q/2-1` doublets.  Sums of the corresponding invariant
+projectors realize **every rank `0,...,q`**.
+
+Therefore `D_q` symmetry cannot select rank 7 or any other nontrivial rank.
+At `q=12`, the equality
+
+```text
+association-algebra dimension = 7 = supplied mediator rank
+```
+
+is a numerical coincidence/characterization, not a theorem of provenance.
+The rule `rank = association-algebra dimension` would predict ranks
+`13,25,49,97` at `q=24,48,96,192`.
+
+## Arithmetic refinement is not a dimension source
+
+The CRT factors of a cyclic torsor are canonical at each fixed `q`, but their
+continuum behaviour depends on a refinement law.
+
+- `q_n=12*2^n`: only the 2-primary factor diverges; the 3-primary factor stays
+  finite.
+- `q_n=12*6^n`: both primary factors diverge.
+
+Thus the same finite `q=12` carrier admits different numbers of growing
+arithmetic factors.  Arithmetic factor count is not a sourced continuum
+spatial dimension.
+
+## Metric-graph subdivision gives a narrower conditional continuum
+
+There is, however, a more intrinsic refinement lane once the recovered
+nearest-neighbour cycle is accepted as the relational graph.
+
+Give all twelve cycle edges the same length.  Any refinement that merely
+subdivides an old edge into positive lengths summing to the old length embeds
+isometrically in the same metric circle.  If the mesh tends to zero, the
+vertex metric spaces converge to `S1` with GH distance at most `mesh/2`,
+independently of binary, ternary or mixed subdivision schedules.
+
+With the previously derived refinement-compatible conductance
+
+`c(ell)=kappa0/ell`,
+
+the discrete quadratic edge energy is **exactly** the continuum Dirichlet
+energy of the piecewise-linear interpolation on every refinement.
+
+This supplies a clean conditional 1D metric/action continuum up to an overall
+length and stiffness scale.
+
+## Major remaining obstruction: full-operator refinement
+
+The full strict operator has nonzero shells out to distance six.  The finite
+carrier does not say how interactions beyond the old diameter continue after
+refinement.
+
+Two explicit positive continuations agree **exactly** on every current visible
+weight `w_1,...,w_6`:
+
+- finite-range continuation `w_d=0` for `d>6`, giving small-`k` symbol order 2;
+- positive tail `w_d=C d^-1.8` for `d>=7`, matched at `d=6`, giving symbol
+  order `0.8`.
+
+Numerical small-`k` slopes are `1.99999996` and `0.80003028`.
+
+Therefore:
+
+> The finite strict kernel sources the cyclic carrier much more strongly than
+> it sources the continuum differential/nonlocal operator.
+
+A tail/refinement law is an independent source obligation.

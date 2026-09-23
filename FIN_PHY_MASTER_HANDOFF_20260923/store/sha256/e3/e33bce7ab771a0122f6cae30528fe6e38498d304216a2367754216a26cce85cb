@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib
+R=Path(__file__).resolve().parent
+bad=[]; n=0
+for line in (R/'MANIFEST.sha256').read_text().splitlines():
+ h,rel=line.split('  ',1);p=R/rel;n+=1
+ got=hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else 'MISSING'
+ if got!=h: bad.append((rel,h,got))
+if bad:
+ print('MANIFEST FAIL',bad);raise SystemExit(1)
+print('MANIFEST PASS',n)

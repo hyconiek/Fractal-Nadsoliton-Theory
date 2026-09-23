@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+# Accepted strict-spectrum declarations used in the predecessor q-extension.
+lam=np.array([1.9614068619764455,2.19956884933321,2.298606272079097],float)
+c=np.sqrt(lam/6.0); r=np.array([3.547595277395986,3.783140506071965,3.677956492814370])
+k=np.array([3,4,5],int)
+# Dense quadrature only illustrates the exact analytic nullspace theorem below.
+N=262144
+t=2*np.pi*np.arange(N)/N
+h=sum(c[i]*r[i]*np.cos(k[i]*t) for i in range(3))
+h0=h.max(); w=np.exp(h-h0); w/=w.sum()
+D=np.stack([c[i]*r[i]*np.sin(k[i]*t) for i in range(3)],axis=1)
+D2=np.stack([-c[i]*r[i]*np.cos(k[i]*t) for i in range(3)],axis=1)
+mean=w@D
+Hlog=(D*w[:,None]).T@D-np.outer(mean,mean)+np.diag(w@D2)
+Hphi=-Hlog
+evals=np.linalg.eigvalsh((Hphi+Hphi.T)/2)
+null_res=float(np.linalg.norm(Hphi@k))
+# Two exact integer resonances, each present with strictly positive Bessel coefficient
+# for positive modal amplitudes.
+R=np.array([[4,-3,0],[5,0,-3]],int)
+rank=int(np.linalg.matrix_rank(R))
+assert rank==2 and np.all(R@k==0)
+# radial positivity inherited from the theorem-grade continuum certificate
+cert=json.loads((ROOT/'inputs'/'PHY-013_smooth_continuum_certificate.json').read_text())
+radial_lower=float(cert['hessian_min_eigen_lower'])
+out={
+ 'task':'DIM-01-current-branch-continuous-coordinate-rank',
+ 'scientific_state':'PROVED_ANALYTIC_ONE_CONTINUOUS_DEGENERACY__SECOND_COORDINATE_REFUTED_ON_CURRENT_BRANCH',
+ 'phase_torus':'T^3 for smooth harmonics k=(3,4,5)',
+ 'translation_action':'phi_k -> phi_k + k alpha',
+ 'translation_generator':k.tolist(),
+ 'shape_invariants':['chi_1=4 phi_3-3 phi_4','chi_2=5 phi_3-3 phi_5'],
+ 'positive_resonance_vectors':R.tolist(),
+ 'analytic_argument':(
+   'The positive Fourier/Bessel expansion of Z contains every resonance n with 3 n3+4 n4+5 n5=0 with positive coefficient when all modal amplitudes are positive. '
+   'In particular r1=(4,-3,0) and r2=(5,0,-3) are independent. At phase alignment the Hessian of -log Z is a positive sum of nn^T terms. '
+   'Its nullspace is therefore the intersection of the orthogonal complements of the resonance lattice, exactly span{(3,4,5)}. Hence the aligned minimum manifold has exactly one continuous phase direction.'),
+ 'numeric_center_check':{'H_phi':Hphi.tolist(),'eigenvalues':evals.tolist(),'translation_null_residual':null_res},
+ 'radial_hessian_lower_from_predecessor':radial_lower,
+ 'parity_sector':'Z2 only; discrete and therefore adds no continuous dimension',
+ 'fold_control':'A simple fold soft coordinate is an isolated cubic degeneracy at one control value, not a flat symmetry orbit and not a persistent second coordinate.',
+ 'conclusion':'Near the certified localized continuum branch the low-energy stationary manifold is one-dimensional up to the finite parity fiber. The two additional smooth phase combinations are massive shape variables, not extra relational spatial coordinates.',
+ 'nonconclusions':['This does not say FIN has only one continuous variable globally.','It rules out a second continuous degeneracy on the current cyclic localized branch.','A different carrier or an added internal continuous symmetry could evade the theorem.']
+}
+assert evals[1]>1.4 and evals[2]>1.8 and null_res<1e-10 and radial_lower>0
+p=ROOT/'results'/'DIM-01_phase_coordinate_rank.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'eigenvalues':evals.tolist(),'radial_lower':radial_lower},indent=2))

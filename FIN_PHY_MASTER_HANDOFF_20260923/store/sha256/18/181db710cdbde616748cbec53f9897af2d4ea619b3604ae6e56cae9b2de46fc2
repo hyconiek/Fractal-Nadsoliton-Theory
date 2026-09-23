@@ -1,0 +1,80 @@
+# FIN PHY — protection, proximity, dynamics and resonance synthesis
+
+Date: 2026-09-23
+
+## Main change in the research picture
+
+The previous campaign discovered an exact strict-operator `T5/T4` carrier but
+left its nonlinear protection and physical meaning open.  This continuation
+shows that **full protection of T5 is probably not the right physical question**.
+The existing label entropy supplies a target-blind phase-locking mechanism:
+its zero-sum cubic resonances remove four relative phases and leave exactly the
+carrier translation phase.  Finite-q Umklapp then discretizes that last phase,
+with the locking order moving upward as q increases.
+
+The emerging hierarchy is therefore
+
+```text
+strict quadratic layer:        T5
+ordinary nonlinear resonances: S1 carrier translation
+finite-q Umklapp:              Zq
+```
+
+This reconciles the higher-dimensional strict carrier with the earlier
+one-dimensional nonlinear phase geometry.
+
+## What is genuinely new and theorem-grade
+
+1. Exact arbitrary split-refinement/additivity selects only quadratic modal
+   power laws; with Kronecker-sum additivity it selects Dirichlet energy up to
+   scale.  No nontrivial nonlinear protecting law survives this strong class.
+2. Entropy is representation-dependent: label KL breaks T5 while modal-power
+   Shannon preserves it.  The missing source is partly a state/observation
+   algebra choice.
+3. Strict `T5` is not a global simplex symmetry.  Its intersection with global
+   simplex automorphisms is finite `D12`.
+4. Cubic zero-sum entropy resonances have rank four and lock `T5 -> S1`.
+5. First finite-q common-shift Umklapp order is exactly `ceil(q/5)` for modes
+   1..5.
+6. Product carriers `(Z_q)^d` admit an exact primitive resonance construction
+   leaving `T^d` for every finite d.
+7. Known M-cell products produce `T^M` configuration tori, not a fixed space
+   dimension; full permutation symmetry cannot select fixed rank d>1.
+8. RNG is connected and asymptotically bounded-degree on dense flat T4
+   samples.  A tensor-grid RNG has a correct 4D Laplacian continuum but a
+   non-Euclidean shortest-path limit.
+9. Four bispectral characters minimally and globally coordinate the generic
+   origin-free T4 phase quotient.
+10. Heat, unitary and wave dynamics give inequivalent phase behavior; no
+    internal causal structure or clock law is selected by static A.
+
+## Current best conditional bridge
+
+A coherent but still conditional chain now exists:
+
+```text
+strict spectral core
+ -> phase doublets
+ -> nonlinear resonance locking
+ -> carrier translation manifold
+ -> pairwise phase metric (if cells carry phases)
+ -> sparse proximity rule (RNG candidate)
+ -> Dirichlet continuum under additional population/weighting conditions
+```
+
+Every arrow has either a theorem or an explicit open premise.  The largest
+remaining source problem is no longer “where can any dimension come from?” but
+rather:
+
+> **What fixed relational carrier/factor structure, independent of subsystem
+> count, is sourced by FIN?**
+
+## What did not become true
+
+- `T4` is not 3+1 spacetime.
+- Product `T^3` is not a derivation of three spatial dimensions.
+- RNG does not yet give a unique physical metric.
+- Current one-parameter gain dynamics does not stabilize all five strict modal
+  radii.
+- Unitariy/wave persistence of T5 does not select quantum mechanics or a clock.
+- Rank seven, physical units and a physical time source remain open.

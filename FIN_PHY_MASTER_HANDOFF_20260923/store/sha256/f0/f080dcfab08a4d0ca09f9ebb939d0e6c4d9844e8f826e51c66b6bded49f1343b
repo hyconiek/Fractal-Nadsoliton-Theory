@@ -1,0 +1,23 @@
+# PHY-009 — clocks, causal depth and arrow
+
+**Scientific status: PASS for a conditional dimensionless causal-order clock; physical time and an intrinsic arrow are NOT derived.**
+
+## Order without a preferred schedule
+
+The event structure supplies a nontrivial partial order. If independent events `a` and `b` both precede `c`, the linearizations `a,b,c` and `b,a,c` give the same causal-depth assignment. Thus swapping independent events does not alter the order clock.
+
+Causal depth is additive along chains and is a useful dimensionless measure of transformation depth.
+
+## Equal depth does not fix duration
+
+On the frozen diamond support `0-1-3` and `0-2-3`, both routes have causal depth two. With local Poisson rates `r1=1`, `r2=2`, `r3=1.5`, their expected ordered waiting times are respectively **1.6667** and **1.1667**. Hence topology/order alone does not fix duration.
+
+Moreover `Q -> cQ`, `t -> t/c` leaves the continuous-time state law and embedded event sequence unchanged. The overall positive clock scale is therefore invisible to timestamp-free data.
+
+## No equilibrium arrow
+
+The Metropolis and Barker dynamics constructed in PHY-005 both satisfy detailed balance to approximately `1e-19`, while having different kinetics. Their stationary path laws are reversible. An arrow requires an additional nonequilibrium preparation, reservoir/current source, or irreversible rule.
+
+## Decision
+
+FIN now has a conditional notion of **before/after and causal depth** once local event support is supplied. It does not yet supply seconds, a unique rate law, or an arrow of time.

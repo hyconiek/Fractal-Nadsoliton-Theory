@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, hashlib
+ROOT=Path(__file__).resolve().parents[1]
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+art={p.name:sha(p) for p in sorted((ROOT/'results').glob('*.json'))}
+claims=[
+ {'id':'DPD-C01','level':'M','status':'PROVED_ANALYTIC','statement':'On the current smooth localized continuum branch, the angular Hessian has exactly one continuous null direction (common translation); the two independent relative phase combinations are positively pinned.','artifacts':['DIM-01_phase_coordinate_rank.json']},
+ {'id':'DPD-C02','level':'M','status':'PROVED_ANALYTIC','statement':'M-cell relative phase configuration space grows as (S1)^M/S1 and does not provide a fixed-dimensional second per-cell base coordinate.','artifacts':['DIM-02_configuration_space.json']},
+ {'id':'DPD-C03','level':'M','status':'ASYMPTOTIC','statement':'Positive transverse shape-phase curvature makes unrescaled finite-N shape fluctuations collapse at N^{-1/2}; they are internal fluctuations, not a fixed-extent second coordinate in the sharp-cell limit.','artifacts':['DIM-03_shape_fluctuation_collapse.json']},
+ {'id':'DPD-C04','level':'M','status':'PROVED_ANALYTIC','statement':'Restoring all scalar Fourier modes on the current cyclic carrier does not raise the continuous symmetry-orbit dimension above one; strict one-parameter mode-softening thresholds are distinct.','artifacts':['DIM-04_full_cyclic_no_go.json']},
+ {'id':'DPD-C05','level':'M/PM','status':'PROVED_COUNTEREXAMPLE','statement':'Generic sparsity/minimal-description objectives do not source the zero-distortion exact metric backbone; a free tradeoff changes the selected graph.','artifacts':['PRIN-01_backbone_tradeoff.json']},
+ {'id':'DPD-C06','level':'M','status':'PROVED_ANALYTIC','statement':'Arbitrary-subdivision exact series consistency forces c(ell)=kappa0/ell under regularity; equal/dyadic subdivision alone admits log-periodic alternatives.','artifacts':['PRIN-02_refinement_classification.json']},
+ {'id':'DPD-C07','level':'M','status':'PROVED_ANALYTIC','statement':'For a finite metric sample with strict triangle inequalities, exact preservation of every pair distance by inherited edge lengths forces the complete graph; the exact-backbone locality mechanism is not generic in dimension >=2.','artifacts':['PRIN-04_exact_backbone_dimension_no_go.json']},
+ {'id':'DPD-C08','level':'M/PM','status':'ANALYTIC_PLUS_NUMERICAL_SCOUT','statement':'Relative-neighborhood graph is a parameter-free metric-only sparse candidate: connected, planar degree <=6, and equal to the cycle on suitable S1 samples; its higher-dimensional continuum metric bridge remains open.','artifacts':['PRIN-05_rng_candidate.json']},
+ {'id':'DPD-C09','level':'M/PM','status':'PROVED_NONIDENTIFIABILITY','statement':'The same refinement-compatible static Dirichlet form admits heat, inertial-wave and other dynamics; bounded continuum wave speed is conditional on added inertia.','artifacts':['DYN-01_three_dynamics.json','DYN-02_clock_gauge.json','DYN-03_verdict.json']},
+ {'id':'DPD-C10','level':'M','status':'PROVED_NONIDENTIFIABILITY','statement':'Rank seven is not selected by common target-blind spectral heuristics; once rank is supplied the top-spectrum weights are canonical, but rank provenance remains open.','artifacts':['RANK-01_rank7_source_no_go.json']},
+]
+for c in claims:
+    c['artifact_hashes']={a:art[a] for a in c['artifacts']}
+out={'date':'2026-09-23','campaign':'FIN_PHY_DIMENSION_PRINCIPLE_DYNAMICS','claims':claims,
+     'global_status':'FOLLOWUP_COMPLETE_WITH_NEW_OPEN_ATOMS','predecessor_sha256':(ROOT/'inputs'/'PREDECESSOR_ZIP.sha256').read_text().split()[0]}
+(ROOT/'CLAIM_REGISTER.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+tasks=[]
+for fn in sorted((ROOT/'results').glob('*.json')):
+    d=json.loads(fn.read_text()); tasks.append({'id':d['task'],'scientific_state':d['scientific_state'],'artifact':f'results/{fn.name}','execution_state':'DONE'})
+(ROOT/'TASKS.json').write_text(json.dumps({'task_count':len(tasks),'tasks':tasks},indent=2,sort_keys=True)+'\n')
+print(json.dumps({'claims':len(claims),'tasks':len(tasks)},indent=2))

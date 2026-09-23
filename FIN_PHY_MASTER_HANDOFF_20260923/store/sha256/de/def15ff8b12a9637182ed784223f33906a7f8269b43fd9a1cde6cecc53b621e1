@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'DIM-02-configuration-space-dimension-trap',
+ 'scientific_state':'PROVED_ANALYTIC_CONFIGURATION_DIMENSION_IS_NOT_NEW_BASE_DIMENSION',
+ 'single_cell_orbit_dimension':1,
+ 'M_cell_phase_configuration_dimension_before_global_quotient':'M',
+ 'M_cell_dimension_after_common_S1_quotient':'M-1 for generic distinct phases',
+ 'argument':'(S1)^M modulo the diagonal S1 action has generic dimension M-1. These are relative positions of M points on the same one-dimensional carrier. The dimension changes when M changes, so it is configuration-space dimension rather than a fixed-dimensional per-cell relational base.',
+ 'projective_obstruction':'Forgetting one cell maps an (M-1)-dimensional quotient to an (M-2)-dimensional quotient. No canonical fixed 2D factor is selected by the current permutation/rotation symmetries.',
+ 'pair_relations':'Two independent relative angles can be formed from three cells, but they encode a three-point configuration on S1; they do not define two independent coordinates attached to each cell.',
+ 'conclusion':'Multi-cell relative phases do not evade DIM-01. They enlarge configuration space while the underlying relational carrier remains S1.',
+ 'nonconclusions':['No no-go for a future higher-dimensional carrier or non-product collective manifold.']
+}
+p=ROOT/'results'/'DIM-02_configuration_space.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p)},indent=2))

@@ -1,0 +1,64 @@
+# PHY-014 — falsifiable control dictionary for g
+
+**Scientific status: PASS_IN_SCOPE_CONDITIONAL_DICTIONARY. No physical interpretation of g is sourced.**
+
+## Identifiability obstruction first
+
+The isolated primal depends on the product `g A7`:
+
+`V_g(p)=D(p||u0) - (g/2) p^T A7 p`.
+
+Therefore
+
+`A7 -> c A7,   g -> g/c`
+
+leaves all static isolated-cell predictions unchanged. A physical meaning for `g` requires an independently calibrated scale for `A7` or another scale-charged observable.
+
+In the multi-cell PM-001 model, `g` and `kappa` are separate dimensionless coefficients. This is useful because competing control dictionaries make different statements about how they co-vary.
+
+## Candidate dictionaries
+
+| dictionary | explicit premise needed | discriminating consequence |
+|---|---|---|
+| inverse temperature | physical energy scales `J,K`, bath `T`, with `g=J/(k_B T)`, `kappa=K/(k_B T)` | varying only `T` scales `g` and `kappa` together, so `kappa/g=K/J` stays fixed |
+| coupling/noise ratio | independently tunable internal coupling `J`, intercell coupling `K`, noise scale `sigma`; `g=J/sigma`, `kappa=K/sigma` | changing `J` at fixed `sigma,K` changes only `g`; changing `sigma` changes both `g,kappa` |
+| density | specified interaction/volume law `g(rho)` | must predict a dilution/extensivity law; arbitrary monotone `g(rho)` is rejected |
+| compression budget | explicit distortion/information constraint and Lagrange multiplier | predicts a recovery/distortion curve, not a clock |
+| coarse-graining/RG | projective maps plus semigroup/flow | `g(bc)` must be compatible with composition, not fitted independently at every scale |
+| pure dynamical clock/rate | `g` multiplies only the generator rate | **incompatible with current equilibrium role of g** unless an additional law also changes the stationary measure |
+
+## First operational dictionary selected
+
+The least committal first test is the **coupling/noise-ratio dictionary**:
+
+`g=J/sigma`, `kappa=K/sigma`.
+
+This is an explicit PM, not a derivation.
+
+Two interventions separate the confounding:
+
+### Intervention A — change internal coupling
+
+`J -> a J` at fixed `sigma,K` gives
+
+`g -> a g`, `kappa -> kappa`.
+
+### Intervention B — change noise/bath scale
+
+`sigma -> sigma/a` at fixed `J,K` gives
+
+`g -> a g`, `kappa -> a kappa`.
+
+Both interventions can therefore produce the **same final g** while predicting different pair correlations and propagation-rate details because `kappa` differs. The transition location alone cannot distinguish them; a held-out intercell observable can.
+
+This also separates a simple thermal interpretation from pure coupling variation: under one bath temperature both physical interaction energies scale with the same beta, whereas changing only the internal interaction does not.
+
+## Immediate rejection in scope
+
+The dictionary `g = pure clock speed` fails for the current model. Multiplying a Markov generator by a positive constant leaves its equilibrium distribution unchanged and only rescales holding times. Changing `g` changes the variational equilibrium landscape and the location/existence of ordered minima. Thus `g` cannot be merely the overall generator magnitude.
+
+## Acceptance
+
+PHY-014 passes because at least one dictionary is already falsified by a non-transition observable/property, and the selected coupling/noise dictionary supplies two interventions with distinct held-out multi-cell predictions.
+
+This does **not** source temperature, density, an SI unit, a fundamental coupling or a physical clock.

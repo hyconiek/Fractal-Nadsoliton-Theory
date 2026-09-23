@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,Lam,X7,C4,A7=model.feature_spaces();q=12;j=np.arange(q);u=np.ones(q)/q
+
+def e(k,phi): return np.sqrt(2/q)*np.cos(2*np.pi*k*j/q+phi)
+r=.025
+# Same modal radii, different relative phase of k=2.
+p1=u+r*e(1,0)+r*e(2,0)+r*e(3,0)+r*e(4,0)+r*e(5,0)
+p2=u+r*e(1,0)+r*e(2,math.pi/2)+r*e(3,0)+r*e(4,0)+r*e(5,0)
+assert p1.min()>0 and p2.min()>0
+# complex Fourier coefficients with convention z_k=<p-u, sqrt(2/q) exp? use DFT raw; phases suffice>
+def z(p,k): return np.sum((p-u)*np.exp(-2j*np.pi*k*j/q))
+z1=[z(p1,k) for k in range(1,6)]; z2=[z(p2,k) for k in range(1,6)]
+pow1=np.array([abs(x)**2 for x in z1]);pow2=np.array([abs(x)**2 for x in z2])
+B1=z1[0]**2*np.conj(z1[1]);B2=z2[0]**2*np.conj(z2[1])
+full_tv=.5*float(np.abs(p1-p2).sum())
+E1=float(.5*(p1-u)@A@(p1-u));E2=float(.5*(p2-u)@A@(p2-u))
+out={
+ 'task':'HDIM-17-operational-status-of-spectral-phases',
+ 'scientific_state':'PROVED_OBSERVER_DEPENDENCE__RELATIVE_PHASES_NOT_PURE_GAUGE_UNDER_FULL_RECORDS',
+ 'min_probabilities':[float(p1.min()),float(p2.min())],
+ 'power_spectrum_max_abs_difference':float(np.max(np.abs(pow1-pow2))),
+ 'strict_quadratic_energy_difference':abs(E1-E2),
+ 'full_state_total_variation':full_tv,
+ 'bispectrum_B11_phases':[float(np.angle(B1)),float(np.angle(B2))],
+ 'bispectrum_phase_difference':float(np.angle(B2/B1)),
+ 'theorem_witness':'The two admissible states have identical modal powers and identical strict quadratic energy but distinct full probability records and distinct translation-invariant bispectrum phase arg(z1^2 conjugate(z2)). Therefore spectral-phase directions are invisible to a power/energy-only observer but observable to a label-resolved or bispectral observer.',
+ 'conclusion':'The T5/T4 phase carrier cannot be dismissed as pure gauge without specifying an observation algebra. Its physical status is observer/interface dependent.',
+ 'nonconclusions':['Observability does not make the phases spatial.','No apparatus or empirical record is supplied.']
+}
+p=ROOT/'results'/'HDIM-17_observability.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'power_defect':out['power_spectrum_max_abs_difference'],'TV':full_tv,'bispectrum_delta':out['bispectrum_phase_difference']},indent=2))

@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+from pathlib import Path
+import json
+getcontext().prec=80
+ROOT=Path(__file__).resolve().parents[1]
+cert=json.loads((ROOT/'inputs'/'R7P-026_equal_energy_event.json').read_text())
+box=[[Decimal(a),Decimal(b)] for a,b in cert['root_box']]
+glo,ghi=box[4]
+rho=[]
+for lo,hi in box[:4]: rho.append((lo/ghi,hi/glo))
+# exact q=12 coefficients 2(1-cos(2*pi*k*r/12)), k=3,4,5.
+sq3lo=Decimal('1.7320508075688772935274463415058723669428052538103806280558069794')
+sq3hi=Decimal('1.7320508075688772935274463415058723669428052538103806280558069796')
+# each entry is (lo,hi) for k3,k4,k5
+C={
+1:[(Decimal(2),Decimal(2)),(Decimal(3),Decimal(3)),(Decimal(2)+sq3lo,Decimal(2)+sq3hi)],
+2:[(Decimal(4),Decimal(4)),(Decimal(3),Decimal(3)),(Decimal(1),Decimal(1))],
+3:[(Decimal(2),Decimal(2)),(Decimal(0),Decimal(0)),(Decimal(2),Decimal(2))],
+4:[(Decimal(0),Decimal(0)),(Decimal(3),Decimal(3)),(Decimal(3),Decimal(3))],
+5:[(Decimal(2),Decimal(2)),(Decimal(3),Decimal(3)),(Decimal(2)-sq3hi,Decimal(2)-sq3lo)],
+6:[(Decimal(4),Decimal(4)),(Decimal(0),Decimal(0)),(Decimal(4),Decimal(4))],
+}
+rows=[]
+for r in range(1,7):
+    lo=Decimal(0); hi=Decimal(0)
+    for i,(cl,ch) in enumerate(C[r]):
+        rlo,rhi=rho[i]
+        lo += cl*rlo*rlo; hi += ch*rhi*rhi
+    if r%2:
+        zlo,zhi=rho[3]; lo+=Decimal(4)*zlo*zlo; hi+=Decimal(4)*zhi*zhi
+    rows.append({'r':r,'d2_lo':str(lo),'d2_hi':str(hi),'d_lo':str(lo.sqrt()),'d_hi':str(hi.sqrt())})
+# prove ordering 3<4<5<2<6<1, where 2 vs 6 close but separated.
+order=[3,4,5,2,6,1]
+by={x['r']:x for x in rows}
+sep=[]
+for a,b in zip(order,order[1:]):
+    gap=Decimal(by[b]['d2_lo'])-Decimal(by[a]['d2_hi'])
+    sep.append({'a':a,'b':b,'d2_gap_lower':str(gap),'strict':gap>0})
+out={
+ 'task':'PHY-013-q12-phase-graph-interval',
+ 'scientific_state':'INTERVAL_CERTIFIED_Q12_PHASE_DISTANCE_SHELL_ORDER',
+ 'root_box_source':'R7P-026_equal_energy_event.json',
+ 'relation':'At stationarity theta=g*mu; hence aligned modal means lie in s_i/g using the certified root/g box.',
+ 'modal_mean_intervals':[[str(a),str(b)] for a,b in rho],
+ 'distance_intervals':rows,
+ 'certified_order':order,
+ 'separations':sep,
+ 'RG1_conclusion':'r=3 is the unique nearest shell but gcd(12,3)=3; adding the unique second shell r=4 gives gcd(12,3,4)=1. Therefore RG1 is exactly C_12({+/-3,+/-4}) on the certified coexistence root box.',
+ 'RG2_q12_conclusion':'Within each parity sheet, even shell r=4 alone is disconnected and adding r=2 connects; the nearest odd cross-sheet shell is r=3. Thus RG2 support is {+/-2,+/-3,+/-4} at q=12.',
+}
+assert all(x['strict'] for x in sep)
+p=ROOT/'results'/'PHY-013_q12_phase_graph_interval.json'; p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'order':order,'min_gap':min(Decimal(x['d2_gap_lower']) for x in sep)},indent=2,default=str))

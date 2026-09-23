@@ -1,0 +1,399 @@
+{
+  "campaign": "FIN physics-driven campaign",
+  "date": "2026-09-23",
+  "namespace": "PHY",
+  "task_count": 31,
+  "terminal_execution_dispositions": 31,
+  "tasks": [
+    {
+      "id": "PHY-001",
+      "title": "Freeze the smallest sufficient MP7 interface.",
+      "package_id": "A",
+      "priority": "P0",
+      "dependencies": [],
+      "execution": "DONE",
+      "scientific": "PASS_IN_SCOPE"
+    },
+    {
+      "id": "PHY-002",
+      "title": "Define a relational FIN unit and observable dictionary.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-001"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_IN_SCOPE"
+    },
+    {
+      "id": "PHY-003",
+      "title": "Compose two units, then three, with a declared interaction.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-002"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_IN_SCOPE_CONDITIONAL_PM"
+    },
+    {
+      "id": "PHY-004",
+      "title": "Test informational continuity against exact loss witnesses.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-002",
+        "PHY-003"
+      ],
+      "execution": "DONE",
+      "scientific": "REFUTED_UNIVERSAL__PASS_RESTRICTED_GIBBS_FAMILY"
+    },
+    {
+      "id": "PHY-005",
+      "title": "Define local transformations and test event causality.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-003",
+        "PHY-004"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_EVENT_CAUSALITY_CONDITIONAL_PM__STATE_REACHABILITY_CAUSALITY_REFUTED"
+    },
+    {
+      "id": "PHY-006",
+      "title": "Prove or refute bounded propagation in the new composition.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-005"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_SPARSE_PROPAGATION_CONDITIONAL_PM__UNCONDITIONAL_LOCALITY_NOT_DERIVED"
+    },
+    {
+      "id": "PHY-007",
+      "title": "Compare propagation-derived distances without hidden embeddings.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-006"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CONDITIONAL_CAUSAL_DEPTH_GEOMETRY"
+    },
+    {
+      "id": "PHY-008",
+      "title": "Test bridge-map composition and information retention.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-004",
+        "PHY-005",
+        "PHY-007"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_WITH_GROWING_CAUSAL_MEMORY__FIXED_DIMENSION_MARKOV_CLOSURE_REFUTED"
+    },
+    {
+      "id": "PHY-009",
+      "title": "Test clocks, causal depth and a possible arrow.",
+      "package_id": "R",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-005",
+        "PHY-006",
+        "PHY-008"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CAUSAL_ORDER_CLASS__PHYSICAL_CLOCK_AND_ARROW_NOT_DERIVED"
+    },
+    {
+      "id": "PHY-010",
+      "title": "Search for stable transported patterns only after a transport law exists.",
+      "package_id": "R",
+      "priority": "exploratory",
+      "dependencies": [
+        "PHY-008",
+        "PHY-023",
+        "PHY-024"
+      ],
+      "execution": "DONE",
+      "scientific": "REFUTED_IN_CONTROLLED_LINEAR_COLLECTIVE_CLASS__NONLINEAR_LANE_OPEN"
+    },
+    {
+      "id": "PHY-011",
+      "title": "Decide whether the relational package adds predictive structure.",
+      "package_id": "R",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-002",
+        "PHY-003",
+        "PHY-004",
+        "PHY-005",
+        "PHY-006",
+        "PHY-007",
+        "PHY-008",
+        "PHY-009"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_RELATIONAL_PACKAGE_ADDS_CONDITIONAL_STRUCTURE__FUNDAMENTAL_SOURCE_UNRESOLVED"
+    },
+    {
+      "id": "PHY-012",
+      "title": "Identify the unsourced degrees of freedom of A7 and composition.",
+      "package_id": "B",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-002",
+        "PHY-003"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_NONIDENTIFIABILITY_THEOREM_AND_NEW_SOURCE_OBLIGATION"
+    },
+    {
+      "id": "PHY-013",
+      "title": "Challenge one target-blind parent construction across carriers.",
+      "package_id": "B",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-012",
+        "PHY-003"
+      ],
+      "execution": "OPEN_WITH_ATOM",
+      "scientific": "AWAITING_GENUINELY_TARGET_BLIND_PARENT_LAW_SO-PHY-012-01"
+    },
+    {
+      "id": "PHY-014",
+      "title": "Give g a falsifiable control dictionary.",
+      "package_id": "B",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-003",
+        "PHY-012"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CONDITIONAL_FALSIFIABLE_GAIN_DICTIONARY"
+    },
+    {
+      "id": "PHY-015",
+      "title": "Test phenomena, not digits, under minimal operator perturbations.",
+      "package_id": "C",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-001",
+        "PHY-012"
+      ],
+      "execution": "DONE",
+      "scientific": "PROVED_STRUCTURAL_NEIGHBORHOOD_AND_EXACT_SYMMETRY_BREAKING_WITNESS"
+    },
+    {
+      "id": "PHY-016",
+      "title": "Increase state count without disguised replication.",
+      "package_id": "C",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-015"
+      ],
+      "execution": "DONE",
+      "scientific": "PROVED_GENERAL_Q_PHASE_ALIGNMENT__NUMERICAL_PHASE_SURVIVAL_SCOUT"
+    },
+    {
+      "id": "PHY-017",
+      "title": "Classify dimensionless observables and generic fold combinations.",
+      "package_id": "C",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-001",
+        "PHY-015"
+      ],
+      "execution": "DONE",
+      "scientific": "CLASSIFIED_GENERIC_VS_MODEL_SPECIFIC_DIMENSIONLESS_OBSERVABLES"
+    },
+    {
+      "id": "PHY-018",
+      "title": "Separate N, M, q, rank and refinement limits.",
+      "package_id": "D",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-003",
+        "PHY-016"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_SEPARATED_LIMITS_AND_UNIFORM_METHOD_OF_TYPES_BOUND"
+    },
+    {
+      "id": "PHY-019",
+      "title": "Establish compatible coarse-graining while retaining memory.",
+      "package_id": "D",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-008",
+        "PHY-018"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_PROJECTIVE_MAPS_WITH_EXACT_MEMORY__NAIVE_MARKOV_CLOSURE_REFUTED"
+    },
+    {
+      "id": "PHY-020",
+      "title": "Test continuum and dimension against adversarial graph controls.",
+      "package_id": "D",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-007",
+        "PHY-018",
+        "PHY-019"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_DECLARED_CYCLE_CONTINUUM__UNIQUENESS_REFUTED_BY_CONTROLS"
+    },
+    {
+      "id": "PHY-021",
+      "title": "Compare five dynamics on the same static structure.",
+      "package_id": "E",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-005",
+        "PHY-014"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_SAME_STATICS_DIFFERENT_KINETICS__DYNAMICS_NOT_SOURCED_BY_POTENTIAL"
+    },
+    {
+      "id": "PHY-022",
+      "title": "Derive collective variables and stiffness from composition.",
+      "package_id": "E",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-001",
+        "PHY-003",
+        "PHY-015"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CONDITIONAL_MICROSCOPIC_STIFFNESS_AND_CONTROLLED_HARD_MODE_TEMPLATE"
+    },
+    {
+      "id": "PHY-023",
+      "title": "Distinguish static inverse Hessians from propagating modes.",
+      "package_id": "E",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-006",
+        "PHY-020",
+        "PHY-021",
+        "PHY-022"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CONDITIONAL_DISPERSION__PROPAGATION_REQUIRES_IMPORTED_INERTIA"
+    },
+    {
+      "id": "PHY-024",
+      "title": "Decide whether relational cost can represent energy.",
+      "package_id": "E",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-021",
+        "PHY-022"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_DIMENSIONLESS_BALANCE_CANDIDATE__PHYSICAL_ENERGY_NOT_DERIVED"
+    },
+    {
+      "id": "PHY-025",
+      "title": "Apply classical-simplex and operational-correlation kill tests.",
+      "package_id": "F",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-002",
+        "PHY-004",
+        "PHY-005"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CLASSICAL_SIMULABILITY_NO_GO_CURRENT_FIN"
+    },
+    {
+      "id": "PHY-026",
+      "title": "Test a minimal explicit complex/composite extension.",
+      "package_id": "F",
+      "priority": "exploratory",
+      "dependencies": [
+        "PHY-025"
+      ],
+      "execution": "DONE",
+      "scientific": "REFUTED_FIN_SPECIFIC_ADVANTAGE_MINIMAL_COMPLEX_EXTENSION"
+    },
+    {
+      "id": "PHY-027",
+      "title": "Apply the dynamical-geometry and universal-probe gate.",
+      "package_id": "G",
+      "priority": "P2",
+      "dependencies": [
+        "PHY-007",
+        "PHY-020",
+        "PHY-023",
+        "PHY-024"
+      ],
+      "execution": "DONE",
+      "scientific": "GATE_CLOSED_CURRENT_LAYER"
+    },
+    {
+      "id": "PHY-028",
+      "title": "Dimensionalize identifiable quantities using independent anchors.",
+      "package_id": "H",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-014",
+        "PHY-009",
+        "PHY-024"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_ANCHOR_COUNT_AND_SCALE_GAUGES"
+    },
+    {
+      "id": "PHY-029",
+      "title": "Design one low-parameter held-out measurement protocol.",
+      "package_id": "H",
+      "priority": "P1",
+      "dependencies": [
+        "PHY-017",
+        "PHY-023",
+        "PHY-028"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_PREREGISTERABLE_CONDITIONAL_PROTOCOL__SYNTHETIC_POWER_ONLY"
+    },
+    {
+      "id": "PHY-030",
+      "title": "Enforce target independence and predictive economy.",
+      "package_id": "H",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-012",
+        "PHY-013",
+        "PHY-015",
+        "PHY-029"
+      ],
+      "execution": "DONE",
+      "scientific": "PASS_CONDITIONAL_PREDICTIVITY__FUNDAMENTAL_SOURCE_BLOCKED_BY_PHY013"
+    },
+    {
+      "id": "PHY-031",
+      "title": "Deliver a fail-closed handoff and a next decision.",
+      "package_id": "I",
+      "priority": "P0",
+      "dependencies": [
+        "PHY-011",
+        "PHY-017",
+        "PHY-020",
+        "PHY-023",
+        "PHY-025",
+        "PHY-026",
+        "PHY-027",
+        "PHY-030"
+      ],
+      "execution": "DONE",
+      "scientific": "FAIL_CLOSED_SYNTHESIS_COMPLETE"
+    }
+  ],
+  "only_open_scientific_atom": "PHY-013 / SO-PHY-012-01 target-blind parent law"
+}

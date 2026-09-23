@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,hashlib,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces,d12_actions
+R7P_MODEL=ROOT/'inputs'/'R7P_model.py'
+W,A,L,X,C4,A7=feature_spaces(); q=12
+u=np.ones(q)/q
+# simplex tangent rank/nullity of mean map
+B=np.column_stack([np.eye(q)[:,i]-np.eye(q)[:,-1] for i in range(q-1)])
+M=X.T@B
+s=np.linalg.svd(M,compute_uv=False)
+rank=int(np.linalg.matrix_rank(M,tol=1e-11)); nullity=(q-1)-rank
+acts=d12_actions(X)
+max_px=0.;max_orth=0.;max_gram=0.
+G=X.T@X
+for (a,e),(P,T) in acts.items():
+    max_px=max(max_px,float(np.max(np.abs(P@X-X@T))))
+    max_orth=max(max_orth,float(np.max(np.abs(T.T@T-np.eye(7)))))
+    max_gram=max(max_gram,float(np.max(np.abs(T.T@G@T-G))))
+row_norms=np.sum(X*X,axis=1)
+res={
+ 'task':'PHY-002','status':'PASS_IN_SCOPE',
+ 'unit_schema':{
+   'internal_label_set':'J=Z_12 (typed internal labels; no spatial meaning)',
+   'microstate':'xi=(xi_1,...,xi_N) in J^N for declared finite-copy N',
+   'occupation':'n in N^12, sum n_j=N','macrostate':'p=n/N in Delta_11',
+   'retained_observable':'mu=X7^T p in R^7','feature_rows':'X_j in R^7',
+   'symmetry':'D12 relabeling of J with induced 7D representation',
+   'equilibrium_weight':'declared MP7 finite-copy Gibbs weight; no clock/dynamics inferred'
+ },
+ 'linear_structure':{'X_shape':list(X.shape),'X_rank':int(np.linalg.matrix_rank(X)),'simplex_tangent_dimension':11,'mean_map_rank_on_tangent':rank,'mean_map_nullity_on_tangent':nullity,'singular_values_mean_map':s.tolist()},
+ 'symmetry_checks':{'actions_tested':len(acts),'max_PX_minus_XT':max_px,'max_TtT_minus_I':max_orth,'max_TtGT_minus_G':max_gram},
+ 'constant_row_norm':{'min':float(row_norms.min()),'max':float(row_norms.max()),'spread':float(np.ptp(row_norms))},
+ 'dictionaries':{
+   'statistical':{'p':'empirical composition/distribution','mu':'retained feature mean','theta':'conjugate auxiliary coordinate'},
+   'relational_candidate':{'j':'internal relational configuration type','p':'mixture of such types','mu':'coarse relational signature','theta':'response coordinate'},
+   'inferential_control':{'p':'distribution/posterior','theta':'natural parameter','Phi':'regularized objective'}
+ },
+ 'new_primitives_required_for_multicell':['cell index set V','interaction support graph Gamma','edge weights w_xy','coupling kappa','relative feature-frame maps if frames differ','transition generator for dynamics'],
+ 'forbidden_promotions':['cell index is not spatial coordinate','j is not particle species','theta is not a physical field','N is not physical volume/time/bit count'],
+ 'source_model_sha256':hashlib.sha256(R7P_MODEL.read_bytes()).hexdigest()
+}
+(ROOT/'results'/'PHY-002_relational_unit.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

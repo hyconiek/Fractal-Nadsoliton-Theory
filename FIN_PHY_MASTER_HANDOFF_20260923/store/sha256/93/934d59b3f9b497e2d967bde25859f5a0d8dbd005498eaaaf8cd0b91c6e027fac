@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float)
+evals,evecs=np.linalg.eigh(A)
+Wrow=W[0].copy(); Wrow[0]=0.0
+p1=Wrow/Wrow.sum(); p2=Wrow**2; p2=p2/p2.sum()
+
+def H(t): return (evecs*np.exp(-t*evals))@evecs.T
+def U(t): return (evecs*np.exp(-1j*t*evals))@evecs.T
+def C(t): return (evecs*np.cos(t*np.sqrt(np.clip(evals,0,None))))@evecs.T
+
+def obs(t,kind):
+    if kind=='heat':
+        M=H(t); off=np.delete(M[0],0); S=float(off.sum()); q=off/S
+    elif kind=='unitary':
+        M=U(t); probs=np.abs(M[0])**2; off=np.delete(probs,0); S=float(off.sum()); q=off/S
+    else:
+        M=C(t); probs=np.abs(M[0])**2; off=np.delete(probs,0); S=float(off.sum()); q=off/S
+    return S,q
+
+rows=[]
+for t in [1e-3,5e-3,1e-2,2e-2]:
+    rec={'t':t}
+    for kind,target in [('heat',np.delete(p1,0)),('unitary',np.delete(p2,0)),('wave',np.delete(p2,0))]:
+        S,q=obs(t,kind); S2,_=obs(2*t,kind)
+        rec[kind]={'total_offdiag_record':S,'log2_slope_t_to_2t':math.log(S2/S,2),'max_normalized_profile_error':float(np.max(np.abs(q-target)))}
+    rows.append(rec)
+# top-two graph from leading probability profiles: squaring positive strict weights preserves ordering.
+near=np.argsort(-np.delete(Wrow,0))[:2].tolist()
+# translate deleted-array positions back to destination labels 1..11
+near_dest=[x+1 for x in near]
+result={
+ 'task':'OCB-CHANNEL-03',
+ 'status':'PROBABILITY_ONLY_LEADING_LAWS_DERIVED__CARRIER_SURVIVES_BUT_CHANNEL_CATEGORY_NEEDS_ESCAPE_SCALING',
+ 'analytic_leading_orders':{
+   'heat':'P_ij(t)=t W_ij+O(t^2) for i!=j; total escape S_H(t)=s_i t+O(t^2). Conditional destination profile -> W_ij/s_i.',
+   'unitary_probability':'|U_ij(t)|^2=t^2 W_ij^2+O(t^4); total off-diagonal probability S_U(t)=t^2 sum_j W_ij^2+O(t^4). Conditional destination profile -> W_ij^2/sum W^2.',
+   'wave_squared_response':'|cos(t sqrt(A))_ij|^2=(t^4/4) W_ij^2+O(t^6) for zero-velocity wave response. Conditional off-diagonal squared-response profile -> W_ij^2/sum W^2.',
+   'carrier_consequence':'Because every strict W_ij is positive and shell weights are strictly ordered, W and W^2 induce the same top-two graph. Thus probability-only records preserve the carrier at leading order even when amplitude access is absent.'
+ },
+ 'channel_category_separator':{
+   'principle':'Retain total escape/off-diagonal mass at two proportional control settings. If physical control t is known only up to an overall multiplicative scale, the log-slope log(S(2t)/S(t))/log 2 is still scale-free to leading order.',
+   'leading_exponents':{'heat':1,'unitary_probability':2,'wave_squared_response':4},
+   'warning':'Conditioning only on the destination and discarding attempts/returns removes this exponent information. Unitary and wave have the same leading normalized W^2 profile.'
+ },
+ 'numerical_strict_checks':rows,
+ 'source0_leading_top_two_destinations':near_dest,
+ 'decision':'Probability-only access is sufficient for leading carrier recovery, but not for the earlier amplitude-level first-operator-jet claim. Channel discrimination requires retaining escape/return information across at least two control levels or another typed observable.',
+ 'nonconclusion':'The wave squared response is a declared mathematical record, not a sourced physical Born probability. No physical channel category or clock map is selected by FIN.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CHANNEL-03_probability_only.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'top_two':near_dest,'slopes_at_0.01':{k:rows[2][k]['log2_slope_t_to_2t'] for k in ('heat','unitary','wave')}},indent=2))

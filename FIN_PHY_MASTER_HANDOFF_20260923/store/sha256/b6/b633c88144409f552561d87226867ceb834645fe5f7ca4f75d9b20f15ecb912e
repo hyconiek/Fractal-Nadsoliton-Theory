@@ -1,0 +1,75 @@
+# FIN PHY Package R — execution report through PHY-006
+
+Date: 2026-09-23
+
+## Verdict
+
+**FIRST DECISION GATE: PASS_WITH_NARROWING.**
+
+The bounded campaign PHY-001–006 was executed. A mathematically consistent multi-cell FIN testbed exists, supports nontrivial correlations, admits a nontrivial supported-event causal structure, and on bounded-degree sparse interaction graphs has a size-uniform propagation theorem. However, the single-cell MP7 core does **not** derive a unique composition law or the sparse graph itself, and the retained 7D mean does **not** preserve arbitrary full-simplex information.
+
+The correct next interpretation is therefore:
+
+`frozen FIN cell + explicit PM composition -> conditional causal/local propagation model`,
+
+not
+
+`FIN core -> derived spacetime`.
+
+## PHY-001 — core interface
+
+PASS. The final MP7 package verifies, the current AGENTS hash matches the planning audit, and the known response-script hash discrepancy is quarantined because PHY-002–006 do not depend on those numerical response digits.
+
+## PHY-002 — relational unit
+
+PASS. The minimal nonspatial unit is `(J=Z12, p, X7, mu=X7^T p)` with D12 internal relabeling. The 11D simplex tangent is mapped to rank 7, leaving a 4D invisible kernel. No spatial coordinates or clock variables are needed to reproduce the core interface.
+
+## PHY-003 — two-/three-cell composition
+
+PASS_CONDITIONAL_PM. The declared retained-mean coupling satisfies zero-coupling recovery, D12 covariance, finite normalization, explicit pair/triple composition and nontrivial correlations. At N=2, g=3.7, kappa=0.25 the pair MI is `0.0176458` nats and the three-cell endpoints acquire MI `9.44157e-05` nats through the middle cell.
+
+But a preregistered full-p coupling has the same isolated-cell core and different coupled predictions. Their pair distributions differ by TV `0.0454045`. Thus the composition law is **not sourced by MP7**.
+
+## PHY-004 — informational continuity
+
+MIXED. Universal preservation is refuted: exact states `p_+ != p_-` have identical `X7^T p=0` and TV distance 1/3. Any decoder from that retained mean alone incurs at least TV 1/6 on one witness. The missing tangent subspace is 4D (Fourier modes k=1,2).
+
+A strong restricted positive theorem survives: on the minimal Gibbs exponential family `p(theta)=softmax(X theta)`, strict convexity makes `theta -> mu` injective, so `mu` exactly recovers `p` on that family. This is family-relative sufficiency, not universal information conservation and not unitarity.
+
+## PHY-005 — event causality
+
+PASS_CONDITIONAL_PM. Metropolis and Barker rules were constructed for the same equilibrium law and independently satisfy detailed balance, proving equilibrium does not select unique kinetics. Raw state reachability is useless as causality because the finite chain is irreducible (one SCC).
+
+Supported events do give a nontrivial order structure. Nonadjacent updates commute exactly; adjacent ones do not. A local intervention can influence a neighbor after one event, cannot influence distance two after one event, and can after two ordered events. For Metropolis the finite scout found max TV `0.0919424` at distance two after two events.
+
+## PHY-006 — propagation
+
+PASS_CONDITIONAL_PM for sparse bounded-degree supports. For discrete event depth, influence is exactly zero outside graph distance `t`. For continuous rate<=1 clocks and maximum degree Delta,
+
+`I_xy(t) <= min(1, sum_{n>=d(x,y)} (Delta t)^n/n!)`.
+
+The bound is uniform in total system size M whenever Delta is uniformly bounded. Dense complete graphs fail the intended locality class because Delta=M-1 and every cell directly supports every other. Long-range supports have immediate tails; `r^-2` weights can retain a bounded weighted influence row sum, whereas unnormalised `r^-1` grows logarithmically.
+
+Crucially, Gamma is still an explicit modelling premise. PHY-006 shows that FIN-compatible local dynamics **can preserve** locality once sparse support is supplied; it does not derive that support.
+
+## H-R status after the gate
+
+| Hypothesis | Decision after PHY-006 |
+|---|---|
+| H-R1 relational description | PASS as a faithful representation; physical uniqueness not shown |
+| H-R2 compositional rules | PASS existence, FAIL uniqueness/derivation; PM required |
+| H-R3 information continuity | REFUTED universally; PASS on declared Gibbs family |
+| H-R4 causal order | state-reachability version REFUTED; supported-event version PASS conditional PM |
+| H-R5 emergent spatial distance | NOT TESTED; next PHY-007 |
+| H-R6 finite propagation | PASS on bounded-degree PM graphs; unconditional FIN locality NOT_DERIVED |
+| H-R7 matter-like patterns | NOT TESTED |
+| H-R8 gravity bridge | NOT TESTED / deferred |
+| H-R9 quantum bridge | NOT TESTED / deferred |
+
+## Scientific meaning
+
+The first relational campaign does not yet show emergent space. It establishes a much sharper boundary: **the difficult missing object is now the source/selection of the interaction support and composition law**, not whether a chosen sparse composition can propagate influence locally. This distinction prevents a supplied graph from being renamed “emergent geometry.”
+
+## Decision after PHY-006
+
+Proceed to PHY-007 and then PHY-008 **only as a conditional geometry/information lane**. In parallel, elevate the source problem (PHY-012, and PHY-013 only if PHY-012 identifies a genuinely target-blind source atom). Any geometry obtained solely from the supplied graph must remain PM-conditioned.

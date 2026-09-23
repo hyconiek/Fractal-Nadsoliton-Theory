@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for M in [8,16,32,64,128,256]:
+    h=1.0/M
+    # Equal points on circumference one. Remove one edge to obtain an MST path.
+    # The two endpoints of the removed gap have true distance h and path distance 1-h.
+    worst_add=(1-h)-h
+    threshold_beta=1.0/worst_add # edge saving 1 versus beta*distortion
+    rows.append({'M':M,'gap':h,'MST_worst_additive_distortion':worst_add,
+                 'beta_threshold_cycle_vs_path_for_cost_E_plus_beta_Dinf':threshold_beta})
+out={
+ 'task':'PRIN-01-metric-backbone-source-test',
+ 'scientific_state':'NO_GO_GENERIC_MINIMALITY_DOES_NOT_SOURCE_ZERO_DISTORTION_BACKBONE',
+ 'setup':'M equally spaced points on a unit circle; compare exact cycle (M edges, zero shortest-path distortion) with an MST path obtained by deleting one edge (M-1 edges).',
+ 'rows':rows,
+ 'theorem':'For the deleted-gap endpoints, true distance is 1/M while path distance is 1-1/M, so worst additive distortion is 1-2/M -> 1. Under a generic scalar objective edge_count + beta*D_infty, the cycle wins iff beta > 1/(1-2/M); the path wins below that threshold.',
+ 'interpretation':'Neither edge minimality nor generic compression/MDL chooses the exact metric backbone. Selection depends on an unsourced tradeoff beta and on the distortion functional/units. The previous cycle theorem is therefore conditional on the explicit zero-distortion constraint.',
+ 'positive_result':'Once zero distortion of all pairwise phase distances is declared, the cycle remains the unique inclusion-minimal realization under maxgap<pi.',
+ 'nonconclusions':['This does not refute the exact-backbone principle as a useful physical postulate.','It shows it is not implied by generic sparsity/minimal-description language alone.']
+}
+p=ROOT/'results'/'PRIN-01_backbone_tradeoff.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'last':rows[-1]},indent=2))

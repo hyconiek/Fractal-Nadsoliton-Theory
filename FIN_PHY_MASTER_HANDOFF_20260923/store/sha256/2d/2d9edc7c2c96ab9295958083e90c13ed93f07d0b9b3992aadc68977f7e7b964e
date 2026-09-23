@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); lam=np.linalg.eigvalsh(A)
+a1=float(lam.mean()); a2=float((lam**2).mean()); L=float(lam.max()); varlam=float((lam**2).mean()-lam.mean()**2)
+d=lam[:,None]-lam[None,:]; b4=float(np.mean(d**4)/24); ch=a2/(2*a1); du=b4/varlam; aw=varlam/4
+
+def ew(t): return math.sqrt(varlam)*L*L*t**6/24 + L**4*t**8/576
+def rw(t): return ew(t)/(aw*t**4)
+def intervals(T,eta):
+    rlo=2*(1-eta)/(1+eta); rhi=2*(1+eta)/(1-eta)
+    return {
+      'heat':[rlo*(1-ch*rhi*T), rhi/(1-ch*T)],
+      'unitary':[rlo**2*(1-du*(rhi*T)**2), rhi**2/(1-du*T**2)],
+      'wave':[rlo**4*(1-rw(rhi*T))/(1+rw(T)), rhi**4*(1+rw(rhi*T))/(1-rw(T))]
+    }
+def emax(obs):
+    r1=obs['unitary'][0]/obs['heat'][1]; r2=obs['wave'][0]/obs['unitary'][1]
+    if min(r1,r2)<=1: return 0
+    f=lambda r:(math.sqrt(r)-1)/(math.sqrt(r)+1)
+    return min(f(r1),f(r2))
+# Frozen conditional protocol: external calibration must establish these before unblinding.
+eta=.02; Tlo=.23; Thi=.24
+ints=intervals(Thi,eta); emaxv=emax(ints); e=.90*emaxv; q=(1+e)/(1-e)
+obsints={k:[v[0]/q,v[1]*q] for k,v in ints.items()}
+# rigorous wave escape lower bound at the lowest admitted t1
+Swlo=aw*Tlo**4*(1-rw(Tlo))
+alpha_total=.05; alpha_cal=.025; alpha_stat=.025
+# two controls, two-sided multiplicative Chernoff: union <=4 exp(-N p e^2/3)
+N=math.ceil(3*math.log(4/alpha_stat)/(Swlo*e*e))
+# verify disjoint observed intervals
+sep={'heat_unitary':obsints['unitary'][0]-obsints['heat'][1],'unitary_wave':obsints['wave'][0]-obsints['unitary'][1]}
+result={
+ 'task':'OCB-CHANNEL-05',
+ 'status':'PREREGISTERED_TWO_LEVEL_PROTOCOL_FROZEN__PHYSICAL_CALIBRATION_AND_EXECUTION_REMAIN_EXTERNAL',
+ 'frozen_protocol':{
+   'pre_unblinding_calibration_gate':{'relative_two_control_time_distortion_eta_le':eta,'dimensionless_t1_interval':[Tlo,Thi],'failure_budget':alpha_cal},
+   'main_controls':'two nominal settings u and 2u; retain every attempt, including return/no-escape/no-click and destination when present',
+   'attempts_per_control':N,'total_main_attempts':2*N,
+   'statistical_failure_budget':alpha_stat,
+   'relative_escape_frequency_error_target':e,
+   'multiplicative_Chernoff_basis':'With true escape probability p>=p_min, two-sided relative error e has probability <=2 exp(-N p e^2/3); union over two controls <=alpha_stat.',
+   'rigorous_smallest_escape_probability_used':Swlo,
+   'true_ratio_intervals':ints,
+   'observable_ratio_intervals_after_sampling_error':obsints,
+   'separation_margins':sep,
+   'classification_rule':'Compute Rhat=(escape fraction at 2u)/(escape fraction at u). If Rhat lies in exactly one frozen observable interval, report that category; otherwise NO_DECISION. Do not fit eta, t1, or category boundaries after observing the main data.'
+ },
+ 'why_absolute_calibration_is_needed':'CHANNEL04 correctness needed only an upper bound t1<=T. A finite attempt guarantee also needs t1 bounded away from zero; otherwise wave escape scales as t1^4 and can be arbitrarily rare.',
+ 'calibration_boundary':'The 2.5% calibration failure budget and required [0.23,0.24], eta<=0.02 certificate are frozen, but FIN supplies no laboratory calibration-noise law. Therefore a calibration shot count cannot be honestly generated internally; it must come from the external apparatus/calibration model.',
+ 'decision':'CHANNEL05 closes the mathematical protocol-design atom. The main experiment has an explicit attempt count and no-fit rule, while the physical-execution gate remains correctly closed on the missing external calibration certificate and real records.',
+ 'nonconclusion':'The very large attempt count is a conservative design bound, not an experimental recommendation or evidence that any physical system realizes heat/unitary/wave FIN dynamics.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CHANNEL-05_protocol.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'attempts_per_control':N,'total':2*N,'e':e,'pmin':Swlo,'separation':sep},indent=2))

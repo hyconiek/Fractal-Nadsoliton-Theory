@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12
+S=float(W[0].sum())
+w=np.array([W[0,d] for d in range(1,7)],float)
+p=w/S
+gaps=p[:-1]-p[1:]
+assert np.all(gaps>0)
+# adjacency only: two true nearest vs nine competitors each =18 comparisons
+adj_gap=float(p[0]-p[1]); N_adj=math.ceil(2*math.log(18/0.05)/(adj_gap**2))
+# full shell ordering: sufficient to establish five adjacent inequalities for both members where applicable.
+# use a deliberately conservative 60 comparison union bound.
+full_gap=float(gaps.min()); N_full=math.ceil(2*math.log(60/0.05)/(full_gap**2))
+# rank response shells for every row, grouping by exact cyclic distance
+ok=True
+for i in range(q):
+    shell_means=[]
+    for d in range(1,7):
+        js={(i-d)%q,(i+d)%q}
+        shell_means.append(float(np.mean([W[i,j]/S for j in js])))
+    ok &= all(shell_means[d]>shell_means[d+1] for d in range(5))
+out={
+ 'task':'CARRIER-PHYSICAL-BRIDGE-02_full_scale_free_metric_response',
+ 'scientific_state':'CONDITIONAL_OPERATIONAL_METRIC_BRIDGE_PROVED__NO_EV',
+ 'normalized_shell_jump_probabilities':p.tolist(),'adjacent_shell_gaps':gaps.tolist(),'strict_order_all_rows':bool(ok),
+ 'theorem':'For Q=-cA with unknown c>0, conditioning each departure from state i on its destination removes c. The destination probabilities are W_ij/sum_l W_il. Since strict shell weights are pairwise distinct and strictly decreasing with cyclic distance, their rank order reconstructs the complete cyclic distance class d=1,...,6 up to origin/reflection.',
+ 'sampling_bounds':{
+   'cycle_adjacency_5pct_Hoeffding_union':N_adj,
+   'full_six_shell_order_5pct_very_conservative_Hoeffding_union':N_full,
+   'note':'Bounds are sufficient synthetic design numbers, not optimized sample recommendations.'},
+ 'falsification':'If controlled short-time transition records do not exhibit two equal strongest channels per state with the D12-consistent six-shell ordering beyond calibrated nuisance/error limits, this Markov physical-carrier bridge fails even though the mathematical carrier theorem remains true.',
+ 'nonconclusions':['No apparatus, calibration or raw nature records are present.','The result assumes typed state preparations/readouts and Markov dynamics.','It does not source a physical meter or continuum refinement.']
+}
+(ROOT/'results'/'CARRIER-PHYSICAL-BRIDGE-02_full_metric.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

@@ -1,0 +1,131 @@
+{
+  "consequence": "The operational causal-depth metric, after the dimensionless scale factor 2pi/M, converges uniformly in probability to the intrinsic phase-circle metric in the diffuse phase regime.",
+  "diagnostics": [
+    {
+      "DKW_epsilon": 0.13581015157406193,
+      "M": 100,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 1.7694725509437528
+    },
+    {
+      "DKW_epsilon": 0.16276236307187292,
+      "M": 100,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 2.1081640295018382
+    },
+    {
+      "DKW_epsilon": 0.19494746035204052,
+      "M": 100,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 2.5126138901836277
+    },
+    {
+      "DKW_epsilon": 0.06073614619083051,
+      "M": 500,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 0.7757992933362344
+    },
+    {
+      "DKW_epsilon": 0.07278954160144185,
+      "M": 500,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 0.9272667272273926
+    },
+    {
+      "DKW_epsilon": 0.08718315467762153,
+      "M": 500,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 1.108142203622353
+    },
+    {
+      "DKW_epsilon": 0.04294694083467375,
+      "M": 1000,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 0.5459703605886458
+    },
+    {
+      "DKW_epsilon": 0.051469978465839845,
+      "M": 1000,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 0.6530740102220088
+    },
+    {
+      "DKW_epsilon": 0.06164779987778186,
+      "M": 1000,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 0.7809722861312326
+    },
+    {
+      "DKW_epsilon": 0.019206455826398412,
+      "M": 5000,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 0.24261207916427643
+    },
+    {
+      "DKW_epsilon": 0.02301807413001365,
+      "M": 5000,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 0.2905102874079805
+    },
+    {
+      "DKW_epsilon": 0.02756973423800469,
+      "M": 5000,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 0.34770813523559
+    },
+    {
+      "DKW_epsilon": 0.013581015157406192,
+      "M": 10000,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 0.17129238831791366
+    },
+    {
+      "DKW_epsilon": 0.016276236307187292,
+      "M": 10000,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 0.2051615361737222
+    },
+    {
+      "DKW_epsilon": 0.019494746035204052,
+      "M": 10000,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 0.24560652224190113
+    },
+    {
+      "DKW_epsilon": 0.006073614619083051,
+      "M": 50000,
+      "confidence": 0.95,
+      "uniform_angular_error_bound_radians": 0.07644895597833112
+    },
+    {
+      "DKW_epsilon": 0.007278954160144186,
+      "M": 50000,
+      "confidence": 0.99,
+      "uniform_angular_error_bound_radians": 0.09159569936744694
+    },
+    {
+      "DKW_epsilon": 0.008718315467762153,
+      "M": 50000,
+      "confidence": 0.999,
+      "uniform_angular_error_bound_radians": 0.10968324700694294
+    }
+  ],
+  "empirical_bridge": {
+    "DKW": "For iid Haar angles normalized to [0,1), P(sup_t |F_M(t)-t|>eps)<=2 exp(-2 M eps^2).",
+    "arc_discrepancy": "Any circular arc count differs from its Haar mass by at most 2 eps under sup-CDF error eps.",
+    "pair_bound": "For all sampled pairs simultaneously, |d_hop/M - d_ang/(2 pi)| <= 2 eps + 1/M (the endpoint convention costs at most one sample).",
+    "scaled_form": "|(2 pi/M)d_hop - d_ang| <= 4 pi eps + 2 pi/M with probability at least 1-2 exp(-2 M eps^2)."
+  },
+  "exact_graph_fact": "For a fixed cycle support, minimal discrete event depth for influence from x to y equals the cycle hop distance d_hop(x,y).",
+  "failure_mode": "For a nonuniform limiting phase density, unweighted hop depth converges to cumulative phase mass rather than angular length. Equality with angular geometry therefore depends on the diffuse/uniform population result, not graph topology alone.",
+  "premises": [
+    "RG3 graph is frozen over the observation window",
+    "updates/interventions are local on RG3 edges as in PHY-005/006",
+    "cell phase sample is iid Haar, or another law with an equivalent uniform empirical-discrepancy bound"
+  ],
+  "rewiring_caution": "If RG3 rewires during the observation window, the fixed-support causal-depth theorem must be replaced by a time-dependent graph theorem; CG-02 shows there is no size-uniform raw dwell time without extra dynamics/separation.",
+  "scientific_state": "CONDITIONAL_OPERATIONAL_METRIC_BRIDGE_UNDER_DIFFUSE_PHASES",
+  "scope": "This is a dimensionless mathematical bridge between two internal metrics. No physical metre, second, c, or spacetime interpretation is sourced.",
+  "task": "CG-04-operational-influence-metric",
+  "weighted_metric_fact": "If each RG3 edge is weighted by its actual angular gap, shortest-path distance between sampled phases equals their circle geodesic distance d_ang exactly."
+}

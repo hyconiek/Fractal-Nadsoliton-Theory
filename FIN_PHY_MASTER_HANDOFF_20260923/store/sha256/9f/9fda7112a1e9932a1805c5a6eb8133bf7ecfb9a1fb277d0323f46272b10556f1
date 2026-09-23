@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+w=np.array([1,2,3,4,5],int)
+B=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],int)
+assert np.linalg.matrix_rank(B)==4 and np.all(B@w==0)
+# gcd of signed maximal minors =1 and null vector exactly w -> primitive quotient character basis.
+mins=[]
+for d in range(5):
+ sub=B[:,[j for j in range(5) if j!=d]]
+ mins.append(int(round(np.linalg.det(sub))))
+cof=np.array([((-1)**d)*mins[d] for d in range(5)],int)
+assert np.array_equal(cof,w)
+# Coarse coset records y=j mod d, d|12. Retained fine Fourier modes are k=l*12/d mod12.
+rows=[]
+for d in [2,3,4,6,12]:
+ retained=sorted(set((l*12//d)%12 for l in range(d)))
+ positive=[k for k in range(1,6) if k in retained or (12-k) in retained]
+ # continuous phases of positive doublets; common carrier translation removes one if any phase retained
+ rel=max(len(positive)-1,0)
+ rows.append({'coarse_bins_d':d,'retained_fine_modes_mod12':retained,'retained_positive_doublets_k1_to5':positive,'max_continuous_origin_free_phase_dimension':rel})
+out={
+ 'task':'OBS-02-operational-quotient-of-strict-phase-carrier',
+ 'scientific_state':'PROVED_FOUR_PHASE_CHARACTERS_ARE_MINIMAL_COMPLETE_COORDINATES_FOR_GENERIC_T5_MOD_COMMON_SHIFT',
+ 'relation_matrix':B.tolist(),'signed_maximal_minors':cof.tolist(),
+ 'theorem':'On the generic stratum z_1...z_5 !=0, the phase torus T5 modulo common carrier shift alpha*(1,2,3,4,5) is a four-torus. Any locally complete real phase record needs at least four independent angular coordinates. The four displayed character phases form a primitive integer basis of the annihilator lattice, so they reconstruct the quotient globally (up to their natural 2pi periods) and attain the dimension lower bound.',
+ 'minimal_character_observables':['arg(z1^2 conjugate(z2))','arg(z1 z2 conjugate(z3))','arg(z1 z3 conjugate(z4))','arg(z1 z4 conjugate(z5))'],
+ 'observation_hierarchy':{
+  'power_only':'retains modal radii and loses all five phase angles; after common-shift quotient it is blind to all four relational phases.',
+  'full_label_distribution':'discrete Fourier transform recovers all z_k exactly, hence all four relative phases on the nonzero stratum.',
+  'coarse_coset_records':rows},
+ 'coarse_result':'No proper subgroup-coset coarse record d=2,3,4,6 can reconstruct the full T4; d=6 retains at most one origin-free continuous phase and d<=4 retains none.',
+ 'gauge_guardrail':'A direction is operationally gauge only relative to a declared observation algebra. It is invisible to power-only records but visible to full labels/bispectra.',
+ 'nonconclusions':['Minimal observable dimension does not imply physical dimension.','No laboratory detector is supplied.']
+}
+p=ROOT/'results'/'OBS-02_operational_quotient.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'coarse':rows},indent=2))

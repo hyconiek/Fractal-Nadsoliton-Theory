@@ -1,0 +1,156 @@
+{
+  "consequence": "RNG can source sparse topology, but not a unique isotropic/homogenized operator from point density alone. A local metric-volume/conductance weighting or stronger sampling law is an independent source obligation.",
+  "families": [
+    {
+      "aspect_a": 1,
+      "predicted_continuum_coeff_x": 1.0,
+      "predicted_continuum_coeff_y": 1,
+      "predicted_eigenvalue_ratio_y_over_x": 1,
+      "sequence": [
+        {
+          "N": 400,
+          "m": 20,
+          "ratio_y_over_x": 1.0,
+          "scaled_lambda_01": 39.15478696387717,
+          "scaled_lambda_10": 39.15478696387717
+        },
+        {
+          "N": 1600,
+          "m": 40,
+          "ratio_y_over_x": 1.0,
+          "scaled_lambda_01": 39.397310095559135,
+          "scaled_lambda_10": 39.397310095559135
+        },
+        {
+          "N": 6400,
+          "m": 80,
+          "ratio_y_over_x": 1.0,
+          "scaled_lambda_01": 39.45812821596206,
+          "scaled_lambda_10": 39.45812821596206
+        },
+        {
+          "N": 25600,
+          "m": 160,
+          "ratio_y_over_x": 1.0,
+          "scaled_lambda_01": 39.47334447498747,
+          "scaled_lambda_10": 39.47334447498747
+        }
+      ]
+    },
+    {
+      "aspect_a": 2,
+      "predicted_continuum_coeff_x": 0.5,
+      "predicted_continuum_coeff_y": 2,
+      "predicted_eigenvalue_ratio_y_over_x": 4,
+      "sequence": [
+        {
+          "N": 800,
+          "m": 20,
+          "ratio_y_over_x": 3.975376681190293,
+          "scaled_lambda_01": 78.30957392775434,
+          "scaled_lambda_10": 19.698655047779567
+        },
+        {
+          "N": 3200,
+          "m": 40,
+          "ratio_y_over_x": 3.9938346674662255,
+          "scaled_lambda_01": 78.79462019111827,
+          "scaled_lambda_10": 19.72906410798103
+        },
+        {
+          "N": 12800,
+          "m": 80,
+          "ratio_y_over_x": 3.9984580724812866,
+          "scaled_lambda_01": 78.91625643192413,
+          "scaled_lambda_10": 19.736672237493735
+        },
+        {
+          "N": 51200,
+          "m": 160,
+          "ratio_y_over_x": 3.999614480963518,
+          "scaled_lambda_01": 78.94668894997494,
+          "scaled_lambda_10": 19.73857463656259
+        }
+      ]
+    },
+    {
+      "aspect_a": 3,
+      "predicted_continuum_coeff_x": 0.3333333333333333,
+      "predicted_continuum_coeff_y": 3,
+      "predicted_eigenvalue_ratio_y_over_x": 9,
+      "sequence": [
+        {
+          "N": 1200,
+          "m": 20,
+          "ratio_y_over_x": 8.934382782940636,
+          "scaled_lambda_01": 117.46436089163153,
+          "scaled_lambda_10": 13.147451116144104
+        },
+        {
+          "N": 4800,
+          "m": 40,
+          "ratio_y_over_x": 8.983561929754543,
+          "scaled_lambda_01": 118.1919302866774,
+          "scaled_lambda_10": 13.156466356091201
+        },
+        {
+          "N": 19200,
+          "m": 80,
+          "ratio_y_over_x": 8.995888369410883,
+          "scaled_lambda_01": 118.37438464788619,
+          "scaled_lambda_10": 13.15872093860122
+        },
+        {
+          "N": 76800,
+          "m": 160,
+          "ratio_y_over_x": 8.998971960244177,
+          "scaled_lambda_01": 118.42003342496241,
+          "scaled_lambda_10": 13.15928463252476
+        }
+      ]
+    },
+    {
+      "aspect_a": 4,
+      "predicted_continuum_coeff_x": 0.25,
+      "predicted_continuum_coeff_y": 4,
+      "predicted_eigenvalue_ratio_y_over_x": 16,
+      "sequence": [
+        {
+          "N": 1600,
+          "m": 20,
+          "ratio_y_over_x": 15.87699720557462,
+          "scaled_lambda_01": 156.6191478555087,
+          "scaled_lambda_10": 9.864532053990516
+        },
+        {
+          "N": 6400,
+          "m": 40,
+          "ratio_y_over_x": 15.969180466285945,
+          "scaled_lambda_01": 157.58924038223654,
+          "scaled_lambda_10": 9.868336118746868
+        },
+        {
+          "N": 25600,
+          "m": 80,
+          "ratio_y_over_x": 15.99229080822163,
+          "scaled_lambda_01": 157.83251286384825,
+          "scaled_lambda_10": 9.869287318281295
+        },
+        {
+          "N": 102400,
+          "m": 160,
+          "ratio_y_over_x": 15.998072432685616,
+          "scaled_lambda_01": 157.89337789994988,
+          "scaled_lambda_10": 9.86952512962489
+        }
+      ]
+    }
+  ],
+  "nonconclusions": [
+    "This does not refute all weighted RNG or Delaunay finite-element schemes.",
+    "It does not refute weak homogenization after adding an independently sourced isotropic sampling/weight law."
+  ],
+  "scientific_state": "REFUTED_HAAR_POPULATION_PLUS_UNWEIGHTED_RNG_AS_UNIQUE_ISOTROPIC_CONTINUUM_SOURCE",
+  "task": "PROX-05_Haar_RNG_operator_nonuniqueness",
+  "theorem": "On the unit flat T2, take periodic rectangular grids nx=a m, ny=m. Their empirical measures all converge to Haar. Their relative-neighborhood graph is the same local four-axis-neighbor topology. With the density scaling N=nx ny, the graph symbol satisfies N*2(1-cos(p_x/nx)) -> p_x^2/a and N*2(1-cos(p_y/ny)) -> a p_y^2. Thus the continuum operator is (1/a) d_x^2 + a d_y^2 and depends on the microscopic aspect sequence a, despite identical Haar limit and the same parameter-free RNG rule."
+}

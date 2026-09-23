@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+rows=[]
+# D12-compatible top-spectrum truncations: k6 singlet plus descending doublets.
+for r,min_k in [(1,7),(3,5),(5,4),(7,3),(9,2),(11,1)]:
+ if r==1: active=[]
+ else: active=list(range(min_k,6))
+ tdim=len(active)
+ rel=max(tdim-1,0)
+ rows.append({'rank':r,'active_doublets':active,'T_dimension':tdim,'origin_free_phase_dimension':rel})
+out={
+ 'task':'RANK-SOURCE-HDIM-consequence-map',
+ 'scientific_state':'PROVED_MEDIATOR_RANK_CONTROLS_INTERNAL_PHASE_DIMENSION__RANK_SOURCE_REMAINS_OPEN',
+ 'strict_sector_eigenvalues_k0_to6':[float(x) for x in L],
+ 'D12_top_spectrum_truncation_table':rows,
+ 'theorem':'For a D12-compatible top-spectrum truncation, every retained real Fourier doublet contributes one SO(2) phase to the connected orthogonal centralizer. Removing the single common carrier-translation phase leaves max(m-1,0) origin-free phase dimensions for m retained doublets.',
+ 'rank7_consequence':'Rank seven retains k=3,4,5 plus the alternating singlet, hence T3 and only a T2 origin-free phase quotient. The T4 discovered in the full strict core requires rank eleven, not rank seven.',
+ 'anti_circularity':'Desired internal dimension cannot be used to source the rank without target coding. Rank selection and HDIM interpretation are logically separate.',
+ 'nonconclusions':['The table does not make any rank physical.','The singlet k=6 contributes no continuous phase.']
+}
+p=ROOT/'results'/'RANK-SOURCE_HDIM_map.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

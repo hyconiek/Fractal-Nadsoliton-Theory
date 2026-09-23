@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+
+def Z(q,b,phi,z=0.0):
+    j=np.arange(q,dtype=float)
+    h=np.zeros(q)
+    for k in range(1,6):
+        h += b[k-1]*np.cos(2*np.pi*k*j/q+phi[k-1])
+    if z!=0:
+        h += z*((-1.0)**np.arange(q))
+    m=float(h.max())
+    return float(np.exp(h-m).mean()*math.exp(m))
+q=12
+b=np.array([0.31,0.47,0.29,0.53,0.38])
+phi0=np.zeros(5)
+z0=Z(q,b,phi0)
+# All q predicted translation maxima for z=0.
+vals=[]
+for a in range(q):
+    alpha=2*np.pi*a/q
+    ph=np.array([(k+1)*alpha for k in range(5)])
+    vals.append(Z(q,b,ph))
+translation_spread=max(vals)-min(vals)
+translation_defect=max(abs(v-z0) for v in vals)
+# deterministic random-control cloud
+rng=np.random.default_rng(20260923)
+controls=[]
+for _ in range(3000):
+    ph=rng.uniform(-np.pi,np.pi,size=5)
+    controls.append(Z(q,b,ph))
+control_max=max(controls)
+# relation matrices
+R_cont=[]
+for k in range(2,6):
+    row=np.zeros(5,dtype=int);row[0]=k;row[k-1]=-1;R_cont.append(row)
+R_cont=np.array(R_cont)
+R_fin=np.vstack([R_cont,np.array([q,0,0,0,0])])
+# parity fixed positive z: predicted even translations; fixed negative: odd.
+z=0.44
+pos=[];neg=[]
+for a in range(q):
+    alpha=2*np.pi*a/q; ph=np.array([(k+1)*alpha for k in range(5)])
+    pos.append(Z(q,b,ph,z));neg.append(Z(q,b,ph,-z))
+pos_even=[pos[a] for a in range(0,q,2)];pos_odd=[pos[a] for a in range(1,q,2)]
+neg_even=[neg[a] for a in range(0,q,2)];neg_odd=[neg[a] for a in range(1,q,2)]
+out={
+ 'task':'RESONANCE-CERT-02_all_orders_phase_locking',
+ 'scientific_state':'PROVED_ANALYTIC_THEOREM_WITH_NUMERICAL_SANITY_CHECK',
+ 'finite_q_theorem':'For q>=11 so modes k=1,...,5 are distinct nonzero character sectors, modes k=1,...,5 with all b_k>0 have Bessel expansion over integer n with sum k*n_k ==0 mod q and strictly positive coefficients. Termwise cos<=1 gives Z_q(phi)<=Z_q(0). Equality holds iff phi_k=k*2*pi*a/q mod 2*pi for one a in Z_q.',
+ 'continuum_theorem':'Replacing the discrete average by the circle integral changes the selection rule to sum k*n_k=0. Equality then holds iff phi_k=k*alpha mod 2*pi, alpha in S1. Thus exact all-orders T5 -> S1 locking holds at arbitrary positive radial amplitudes.',
+ 'fixed_parity_theorem':'For even q and added z*(-1)^j with z>0, positive Fourier coefficients occur in congruence classes 0 and q/2. Equality restricts alpha to 4*pi*a/q (even label translations), giving q/2 maxima. For z<0 the maxima are the odd translations. Jointly allowing parity sign restores the q translated orbit.',
+ 'q':q,'b':b.tolist(),'relation_rank_continuum':int(np.linalg.matrix_rank(R_cont.astype(float))),
+ 'relation_nullity_continuum':5-int(np.linalg.matrix_rank(R_cont.astype(float))),
+ 'relation_rank_finite_q':int(np.linalg.matrix_rank(R_fin.astype(float))),
+ 'z0':z0,'translation_spread_z0':translation_spread,'translation_defect_from_phi0':translation_defect,
+ 'random_control_max':control_max,'random_control_gap_to_max':z0-control_max,
+ 'fixed_parity_z':z,
+ 'positive_z_even_translation_spread':max(pos_even)-min(pos_even),
+ 'positive_z_gap_even_over_odd':min(pos_even)-max(pos_odd),
+ 'negative_z_odd_translation_spread':max(neg_odd)-min(neg_odd),
+ 'negative_z_gap_odd_over_even':min(neg_odd)-max(neg_even),
+ 'bridge_consequence':'Because the strict quadratic radial cost is phase independent, every global minimizer of a dual/free-energy model built from this partition function and positive mode amplitudes must lie on the locked translation set; phase locking does not require a small-amplitude expansion.',
+ 'nonconclusions':['This theorem does not source the radial amplitudes, gain g, carrier q, parity sign, dynamics, or physical spatial interpretation.','It does not by itself prove existence of a localized radial branch.']
+}
+p=ROOT/'results'/'RESONANCE-CERT-02_all_orders.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

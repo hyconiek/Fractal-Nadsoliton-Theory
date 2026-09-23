@@ -1,0 +1,119 @@
+{
+  "claim_decision": {
+    "H-R4_state_reachability_as_causality": "REFUTED_IN_SCOPE",
+    "H-R4_supported_event_causality": "PASS_IN_SCOPE_CONDITIONAL_ON_PM_GRAPH_AND_UPDATE_RULE",
+    "physical_time": "NOT_LICENSED"
+  },
+  "disconnected_control": "If edge (1,2) is removed, K2 depends on no variable influenced by cell0; intervention 0->2 is exactly zero for every event sequence using only components separately.",
+  "event_commutation": {
+    "barker": {
+      "adjacent_witness_state": [
+        0,
+        0,
+        11
+      ],
+      "max_adjacent_K0_K1_TV": 0.043157492330585995,
+      "nonadjacent_K0_K2_TV": "0 (analytic exact factorization)"
+    },
+    "metropolis": {
+      "adjacent_witness_state": [
+        9,
+        9,
+        8
+      ],
+      "max_adjacent_K0_K1_TV": 0.22135395526940643,
+      "nonadjacent_K0_K2_TV": "0 (analytic exact factorization)"
+    }
+  },
+  "event_order_theorem": "For nonadjacent x,y in the declared graph, local kernels K_x and K_y commute because each changes a distinct coordinate and neither rate depends on the other changed coordinate. Adjacent kernels generally do not commute. A perturbation can cross at most one graph edge per causally ordered local event.",
+  "generators": {
+    "barker": {
+      "max_abs_detailed_balance_residual": 1.0842021724855044e-19,
+      "max_rel_detailed_balance_residual": 3.8512959377671126e-16
+    },
+    "metropolis": {
+      "max_abs_detailed_balance_residual": 2.168404344971009e-19,
+      "max_rel_detailed_balance_residual": 4.133277351360029e-16
+    }
+  },
+  "intervention_influence": {
+    "barker": {
+      "max_TV_distance1_after_one_event": 0.13373338230158444,
+      "max_TV_distance2_after_one_event": 0.0,
+      "max_TV_distance2_after_two_ordered_events": 0.012484431113155909,
+      "witness_d1": [
+        [
+          8,
+          9,
+          7
+        ],
+        [
+          9,
+          9,
+          7
+        ]
+      ],
+      "witness_d2": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ]
+      ]
+    },
+    "metropolis": {
+      "max_TV_distance1_after_one_event": 0.35748527855346524,
+      "max_TV_distance2_after_one_event": 0.0,
+      "max_TV_distance2_after_two_ordered_events": 0.09194236292278872,
+      "witness_d1": [
+        [
+          8,
+          8,
+          8
+        ],
+        [
+          9,
+          8,
+          8
+        ]
+      ],
+      "witness_d2": [
+        [
+          8,
+          9,
+          9
+        ],
+        [
+          9,
+          9,
+          9
+        ]
+      ]
+    }
+  },
+  "model": {
+    "N": "1 algebra/control scout",
+    "g": 3.7,
+    "graph": "3-cell path",
+    "kappa": 0.25,
+    "local_event": "single-cell stochastic update depending only on graph neighbors"
+  },
+  "reversible_control": {
+    "involutive": true,
+    "map": "global D12 reflection j -> -j mod 12",
+    "max_pair_feature_distance_invariance_error": 4.440892098500626e-15
+  },
+  "state_graph_obstruction": {
+    "SCC_count": 1,
+    "consequence": "raw state reachability collapses to one SCC and is not a nontrivial causal order",
+    "irreducible": true,
+    "reason": "every one-label proposal has positive acceptance; any finite microstate reaches any other through local replacements"
+  },
+  "status": "PASS_EVENT_CAUSALITY_CONDITIONAL_PM",
+  "task": "PHY-005"
+}

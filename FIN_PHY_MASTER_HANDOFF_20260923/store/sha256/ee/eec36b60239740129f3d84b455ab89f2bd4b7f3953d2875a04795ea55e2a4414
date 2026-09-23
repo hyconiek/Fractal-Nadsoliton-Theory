@@ -1,0 +1,41 @@
+# PHY-005 — local transformations and event causality
+
+**Scientific status: PASS_IN_SCOPE_CONDITIONAL_PM for event causality; raw state-reachability causality REFUTED.**
+
+## Two dynamics with the same equilibrium law
+
+On the declared graph, a local event proposes replacement of one internal label at one cell and reads only that cell and its graph neighbors.
+
+Two local reversible stochastic rules were constructed:
+
+1. Metropolis acceptance `min(1,pi_new/pi_old)`;
+2. Barker acceptance `r/(1+r)`.
+
+Both use the same symmetric proposal. On the 2-cell model their largest detailed-balance residuals were `2.168e-19` and `1.084e-19` respectively. Thus the equilibrium law does not choose a unique kinetics.
+
+A separate reversible symmetry control is the global D12 reflection `j -> -j mod 12`; the edge-feature cost is invariant to `4.441e-15`.
+
+## Why state reachability is not causality
+
+All one-label proposals have positive acceptance. Consequently every finite microstate can reach every other by finitely many local changes: the state-transition graph is one strongly connected component. Its reachability order is therefore causally trivial.
+
+## Event causality
+
+Use supported local events instead. For the 3-cell path 0--1--2:
+
+- nonadjacent updates `K0` and `K2` commute **exactly** because neither changes a variable read by the other;
+- adjacent updates do not commute generically. Maximum order-dependence TV in the finite scout was `0.221354` (Metropolis) and `0.0431575` (Barker).
+
+Intervention tests give the expected causal depth:
+
+- distance 1 after one relevant event: max TV `0.357485` (Metropolis);
+- distance 2 after one event: exactly **0**;
+- distance 2 after the ordered sequence `K1` then `K2`: max TV `0.0919424`.
+
+The disconnected control gives identically zero influence across removed support.
+
+## Theorem in scope
+
+For nonadjacent cells, local event kernels commute when their changed variables are outside each other's read supports. Adjacent kernels may fail to commute. Starting from a local intervention, dependency can cross at most one declared graph edge per causally ordered local event.
+
+This is a nontrivial event-composition structure, but its support graph and update rule are still PM inputs. No physical time or unique microscopic dynamics has been derived.

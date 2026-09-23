@@ -1,0 +1,51 @@
+# OCB-MEM-03 — generic query/horizon complexity
+
+Date: 2026-09-23
+
+## Verdict
+
+**PARTIAL.  A rigorous horizon obstruction is obtained; a universal sparse-query lower bound is not.**
+
+## Explicit lower bound from the rotating-sign aliases
+
+For period `L`, the explicit alias has complete visible Hankel rank
+
+`H = 2^L`,
+
+matches the strict iid path law on **every** word of length at most `L`, and first differs at length
+`L+1`.
+
+Therefore, on the powers-of-two subsequence,
+
+`universal witness horizon for rank<=H >= 1+log2(H)`.
+
+No method restricted to shorter paths can exclude all such aliases.
+
+## Generic finite-H upper bound
+
+From the predecessor weighted-automaton argument: an `H`-hidden-state process minus the strict
+rank-one process has linear representation dimension at most `H+1`.  If all words of lengths
+`0,...,H` agree, the reachable row space has already stabilized and the two processes agree at all
+lengths.
+
+Thus, conditional on a correct finite hidden-state bound `H`,
+
+`some witness exists by length H`.
+
+The currently proved bracket is therefore
+
+`Omega(log H) <= worst necessary horizon <= O(H)`.
+
+## Query-count boundary
+
+The period-L construction does **not** imply that all `11^n` words must be queried.  Once that
+particular family is known, a directed lag scan finds the first correlation using only `O(L)`
+functionals.  Hence exhaustive word enumeration is only the cost of an unstructured protocol, not a
+universal lower bound.
+
+The generic minimax number of adaptively chosen path functionals remains open until a precise query
+model or stronger adversarial HMM construction is supplied.
+
+## Decision
+
+`OCB-MEM-03 = PARTIAL_HORIZON_LOWER_BOUND__SPARSE_QUERY_COMPLEXITY_OPEN`.

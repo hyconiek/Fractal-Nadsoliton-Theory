@@ -1,0 +1,186 @@
+# FIN PHY — HDIM source campaign report
+
+Date: 2026-09-23
+
+## Executive result
+
+The campaign changes the HDIM question substantially.
+
+The nonlinear localized branch still has only one exact continuous soft/translation direction, as proved by the predecessor.  However the **full strict quadratic/operator core** has a different and genuinely higher-dimensional exact object: the five distinct real Fourier doublets of the strict operator give a connected orthogonal centralizer
+
+\[
+SO(2)^5 \cong T^5.
+\]
+
+For a generic strict signal with nonzero projection in every doublet, fixing the five modal radii leaves an exact five-dimensional compact orbit of equal Euclidean norm and equal Dirichlet energy.  A nonempty small-radius copy of that torus lies entirely inside the probability simplex.
+
+Thus a genuinely higher-dimensional FIN-internal carrier exists without inserting a target spatial dimension.
+
+This does **not** derive physical space.  The entropy term in the finite-12 nonlinear equilibrium functional breaks the continuous `T5` accidental quadratic symmetry; its connected orthogonal stabilizer near the uniform state is proved trivial by an exact rank-66 infinitesimal cubic-tensor calculation.
+
+## 1. Exact internal phase manifolds
+
+### HDIM-01/02 — nonlinear branch shape torus and tangent
+
+For the active smooth harmonics `k=(3,4,5)`, the phase torus `T3` modulo the weighted common shift has an exact internal shape quotient `T2`.  A primitive character basis is
+
+\[
+\chi_1=-3\phi_3+\phi_4+\phi_5,\qquad
+\chi_2=-\phi_3+2\phi_4-\phi_5.
+\]
+
+The local phase Hessian has one null direction and two positive directions.  The induced `sqrt(N)` shape fluctuation covariance is
+
+\[
+C_\chi\approx
+\begin{pmatrix}
+7.0354672130 & 2.1751678424\\
+2.1751678424 & 3.2280943999
+\end{pmatrix},
+\]
+
+with eigenvalues about `2.24121` and `8.02235`.  This yields a genuine 2D internal Gaussian tangent, but the unscaled cloud collapses as `N` grows.
+
+### HDIM-09 — strict operator `T5`
+
+The strict spectrum has multiplicities
+
+```text
+1,2,2,2,2,2,1.
+```
+
+Therefore the identity component of the orthogonal centralizer is exactly `SO(2)^5`.  This conclusion is basis-independent and follows from spectral multiplicities alone.
+
+### HDIM-10 — `T5` inside the simplex
+
+For orthonormal Fourier doublets and sufficiently small positive modal radii,
+
+\[
+p=u+\sum_{k=1}^5 r_k(\cos\phi_k\,e_{c,k}+\sin\phi_k\,e_{s,k})
+\]
+
+is positive for every phase tuple.  The campaign uses `r_k=0.02`, for which the rigorous pointwise positivity margin is about `0.04251`.  Over 2,000 deterministic phase samples the Dirichlet-energy spread is below `5e-18`.
+
+The induced phase metrics are exactly flat:
+
+\[
+ds_E^2=\sum r_k^2 d\phi_k^2,\qquad
+ ds_A^2=\sum \lambda_k r_k^2 d\phi_k^2.
+\]
+
+## 2. Origin-free relational phases
+
+The five spectral phases admit four independent translation-invariant combinations.  A primitive lattice basis is
+
+```text
+( 2,-1, 0, 0, 0)
+( 1, 1,-1, 0, 0)
+( 1, 0, 1,-1, 0)
+( 1, 0, 0, 1,-1)
+```
+
+for the frequency vector `(1,2,3,4,5)`.  The associated observables can be realized as bispectral phases such as
+
+\[
+\arg(z_1^2\bar z_2),\qquad
+\arg(z_1z_2\bar z_3),\ldots
+\]
+
+which do not require choosing an absolute label origin.
+
+If one uses the continuous spectral-shift subgroup of the strict quadratic centralizer, the corresponding quotient is `T4`.  This is an **internal spectral-shape quotient**, not `3+1` spacetime.
+
+For equal small radii, the campaign constructs the positive flat quotient metric explicitly.  Its four eigenvalues are approximately
+
+```text
+4.2329e-05, 2.1866e-04, 3.5630e-04, 7.8002e-04.
+```
+
+## 3. Nonlinear breaking theorem
+
+Two admissible states were constructed with identical strict modal powers and identical quadratic energy but different relative phase.  Their entropy differs by about `1.98e-3`.
+
+More strongly, the campaign computes the exact infinitesimal stabilizer of the entropy cubic tensor on the mean-zero tangent space.  There are 66 skew-generator variables and the exact integer constraint matrix has rank 66.  Hence the connected orthogonal stabilizer is trivial.
+
+So the strict `T5` is an accidental symmetry of the quadratic/operator layer, not a continuous symmetry of the finite-12 entropy-plus-gain equilibrium model.
+
+## 4. Refinement persistence
+
+For a Kronecker-sum refinement
+
+\[
+A'=A\otimes I + I\otimes B
+\]
+
+with normalized zero fiber mode `b0`, the embedding `E(f)=f tensor b0` satisfies
+
+\[
+A'E=EA,
+\]
+
+and the forgetful map `F=E*` satisfies `FE=I`.  Every strict rotation `R` commuting with `A` lifts to `R tensor I` commuting with `A'`, and the lift intertwines the embedding.
+
+Therefore the coarse `T5` spectral-phase carrier survives exactly on the fiber-constant refinement sector.
+
+## 5. Protection versus source
+
+The polynomial invariant ring of the product `SO(2)^5` action on the five doublets is generated by the modal powers
+
+\[
+I_k=\|P_k f\|^2.
+\]
+
+Hence any smooth spectral-radial nonlinearity
+
+\[
+\Psi(I_1,\ldots,I_5,\ldots)
+\]
+
+preserves the entire `T5` exactly.  Higher-dimensional protection therefore does not require linearity.
+
+But no unique protecting law is selected.  Even the two parameter-free homogeneous quartics
+
+\[
+(\sum I_k)^2,\qquad \sum I_k^2
+\]
+
+satisfy the same broad symmetry/positivity/homogeneity criteria and are not proportional.  `PROTECT` therefore has an existence theorem but not a source theorem.
+
+## 6. Operational status
+
+The spectral phases are observer-dependent but not automatically gauge.
+
+A constructed pair of states has identical power spectrum and strict quadratic energy, while their full state total-variation distance is about `0.05577` and their `arg(z1^2 conjugate(z2))` phases differ by `pi/2`.
+
+The ideal iid label-record Chernoff information is approximately
+
+```text
+0.0019244820008
+```
+
+which gives a conservative ideal Chernoff upper-bound count of about `1197` samples for Bayes error at most 5%.  This is a synthetic protocol calculation only.
+
+## 7. Dimension-agnostic proximity scout
+
+On a local standardized chart of the internal `T4`, the relative-neighborhood graph remains sparse without a radius or `k` parameter.  For deterministic samples `n=80,160,320,640`, mean degree remains roughly `2.6–3.3`, maximum degree is `<=7`, and the median edge-length log-log slope is `-0.2386`, close to the `-1/4` spacing benchmark.
+
+This is not a continuum theorem.  Graph-Laplacian convergence and global torus consistency remain open.
+
+## 8. Integrated verdict
+
+The old statement
+
+> current FIN has no genuinely higher-dimensional relational object
+
+is too strong.
+
+The corrected statement is:
+
+> **The strict linear/Dirichlet core contains an exact higher-dimensional spectral-phase carrier (`T5`, with four independent origin-free relational phase coordinates).  The current nonlinear entropy equilibrium model does not protect that carrier.  No theorem yet identifies it with physical locality or spacetime.**
+
+The frontier is therefore no longer `find any HDIM object`.  It is:
+
+1. source a protecting nonlinear/compositional law without target coding;
+2. prove or refute a proximity/continuum theorem on the protected internal manifold;
+3. establish whether the relevant phase observables are physical, coarse-gauge, or apparatus-dependent;
+4. keep time, rank source, units and physical interpretation separate.

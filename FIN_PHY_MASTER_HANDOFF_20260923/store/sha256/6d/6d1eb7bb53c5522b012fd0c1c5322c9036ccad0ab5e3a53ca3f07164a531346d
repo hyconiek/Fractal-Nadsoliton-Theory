@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import subprocess,sys,hashlib,argparse
+root=Path(__file__).resolve().parent
+scripts=['hankel03b_checkpoint_cs.py','mem05_weighted_automaton.py','cal05_structured_perturbation.py','channel05_protocol.py']
+for s in scripts:
+    subprocess.run([sys.executable,str(root/'scripts'/s)],check=True,cwd=root,env={**__import__('os').environ,'PYTHONDONTWRITEBYTECODE':'1'})
+if '--check' in sys.argv:
+    exp={}
+    for line in (root/'EXPECTED_RESULTS.sha256').read_text().splitlines():
+        h,p=line.split('  ',1);exp[p]=h
+    bad=[]
+    for p,h in exp.items():
+        got=hashlib.sha256((root/p).read_bytes()).hexdigest()
+        if got!=h:bad.append((p,h,got))
+    if bad:
+        print('REPLAY HASH FAIL',bad);sys.exit(1)
+    print(f'REPLAY CHECK PASS {len(exp)}/{len(exp)}')

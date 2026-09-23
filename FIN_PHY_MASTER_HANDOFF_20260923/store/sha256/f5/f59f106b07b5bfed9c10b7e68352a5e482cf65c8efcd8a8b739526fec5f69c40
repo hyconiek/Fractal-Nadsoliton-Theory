@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+old=json.loads((ROOT/'inputs'/'PHY-019_projective_memory.json').read_text())
+out={
+ 'task':'CG-03-RG3-coarse-closure','scientific_state':'EXACT_NEAREST_NEIGHBOR_MARKOV_CLOSURE_REFUTED__MEMORY_REQUIRED',
+ 'premise':'Condition on an RG3 ordering that does not rewire during the observation window. The cell support is then exactly a cycle C_M, so the controlled cycle-elimination theorem PHY-019 applies verbatim to the linearized relaxational sector.',
+ 'counterexample':{
+   'fine_model':old['control'],'nested_average_defect_norm':old['nested_average_defect_norm'],
+   'naive_generator_closure_defect_norm':old['naive_generator_closure_defect_norm'],
+   'generated_next_neighbor_coupling_abs':old['generated_next_neighbor_coupling_abs'],
+   'eliminated_gap':old['eliminated_gap'],'memory_L1_norm_upper':old['memory_L1_norm_upper'],
+   'markov_schur_generator':old['markov_schur_generator']
+ },
+ 'theorem':'Even with a frozen emergent cycle, exact block coarse-graining is not closed inside the same nearest-neighbor Markov class: elimination generates a nonzero memory kernel and, already at zero frequency, longer-range effective coupling. One exact C8->C4 counterexample refutes universal exact closure of the proposed class.',
+ 'low_frequency_repair':old['low_frequency_bound'],
+ 'rewiring_extension':'If RG3 rewires, the fine generator is piecewise time-dependent and eliminated variables retain switching history as well; this cannot improve exact Markov closure without an additional theorem. CG-02 supplies the separate rewiring gate.',
+ 'conclusion':'RG3 can support a scalable geometry, but its effective dynamics must retain memory/nonlocal corrections or explicitly pay an adiabatic approximation. Coarse geometry does not by itself generate a closed local field dynamics.',
+ 'scope':'Controlled linearized counterexample and bridge template; not a nonlinear all-state no-go.'
+}
+p=ROOT/'results'/'CG-03_coarse_closure.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'defect':old['naive_generator_closure_defect_norm'],'memory':old['memory_L1_norm_upper']},indent=2))

@@ -1,0 +1,81 @@
+{
+  "task": "OCB-MEM-01B",
+  "status": "EXACT_PERSISTENT_HIDDEN_MEMORY_IDENTIFICATION",
+  "model": "Hidden sign h_t is a stationary two-state Markov chain with E[h_t h_{t+l}]=rho^l. Visible jump increment law conditioned on h_t is p+delta*h_t*c. Each conditional law is radial, reversible, and has uniform visible equilibrium.",
+  "validity": {
+    "abs_rho_le_1": true,
+    "abs_delta_lt": 0.11566747562103387
+  },
+  "one_step_alias": "The visible one-step increment law is exactly p for every delta,rho because E[h_t]=0.",
+  "exact_formulas": {
+    "two_step_joint": "p(a)p(b)+delta^2*rho*c(a)c(b)",
+    "two_step_TV_from_strict": "8 delta^2 |rho|",
+    "contrast_covariance_lag_l": "16 delta^2 rho^l",
+    "rho_from_lag1_lag2": "rho=C2/C1 when C1 != 0",
+    "delta_squared_from_lag1_lag2": "delta^2=C1^2/(16 C2) when C2>0"
+  },
+  "cases": [
+    {
+      "delta": 0.02,
+      "rho": 0.8,
+      "two_step_tv": 0.0025600000000000093,
+      "two_step_tv_formula": 0.00256,
+      "lag1_cov": 0.005119999999999958,
+      "lag1_formula": 0.00512,
+      "lag2_cov": 0.004096000000000016,
+      "lag2_formula": 0.004096000000000001,
+      "rho_recovered_from_C2_over_C1": 0.8000000000000097,
+      "delta_squared_recovered_from_C1sq_over_16C2": 0.00039999999999999183,
+      "three_step_tv": 0.004693173646458205,
+      "two_step_chernoff_information": 7.56237737700105e-06,
+      "equal_prior_chernoff_bound_samples_for_error_le_5pct": 304479
+    },
+    {
+      "delta": 0.05,
+      "rho": 0.8,
+      "two_step_tv": 0.016000000000000014,
+      "two_step_tv_formula": 0.016000000000000004,
+      "lag1_cov": 0.03199999999999997,
+      "lag1_formula": 0.03200000000000001,
+      "lag2_cov": 0.02560000000000001,
+      "lag2_formula": 0.02560000000000001,
+      "rho_recovered_from_C2_over_C1": 0.800000000000001,
+      "delta_squared_recovered_from_C1sq_over_16C2": 0.0024999999999999944,
+      "three_step_tv": 0.029332335290363627,
+      "two_step_chernoff_information": 0.00029000571377617805,
+      "equal_prior_chernoff_bound_samples_for_error_le_5pct": 7940
+    },
+    {
+      "delta": 0.05,
+      "rho": -0.6,
+      "two_step_tv": 0.012000000000000007,
+      "two_step_tv_formula": 0.012000000000000002,
+      "lag1_cov": -0.02400000000000005,
+      "lag1_formula": -0.024000000000000004,
+      "lag2_cov": 0.014399999999999913,
+      "lag2_formula": 0.014400000000000003,
+      "rho_recovered_from_C2_over_C1": -0.5999999999999951,
+      "delta_squared_recovered_from_C1sq_over_16C2": 0.0025000000000000256,
+      "three_step_tv": 0.018759343945895096,
+      "two_step_chernoff_information": 0.0001705377332928134,
+      "equal_prior_chernoff_bound_samples_for_error_le_5pct": 13502
+    },
+    {
+      "delta": 0.1,
+      "rho": 0.8,
+      "two_step_tv": 0.06400000000000003,
+      "two_step_tv_formula": 0.06400000000000002,
+      "lag1_cov": 0.12799999999999995,
+      "lag1_formula": 0.12800000000000003,
+      "lag2_cov": 0.10240000000000024,
+      "lag2_formula": 0.10240000000000005,
+      "rho_recovered_from_C2_over_C1": 0.8000000000000023,
+      "delta_squared_recovered_from_C1sq_over_16C2": 0.009999999999999967,
+      "three_step_tv": 0.1173293411614546,
+      "two_step_chernoff_information": 0.004494733224668456,
+      "equal_prior_chernoff_bound_samples_for_error_le_5pct": 513
+    }
+  ],
+  "decision": "Two-step records detect every member of this class with delta*rho != 0. Three-step records add lag-2 covariance and separate persistence rho from contrast amplitude |delta|. This does not defeat the general horizon-alias theorem OCB-MEM-01A, which can hide memory beyond any predeclared finite horizon.",
+  "nonconclusion": "The hidden sign is a falsification control/model class, not a sourced physical environment."
+}

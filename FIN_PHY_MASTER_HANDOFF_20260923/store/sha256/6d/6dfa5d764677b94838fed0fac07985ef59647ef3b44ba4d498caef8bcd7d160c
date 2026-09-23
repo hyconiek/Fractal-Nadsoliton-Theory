@@ -1,0 +1,799 @@
+RUN phy_013_source_challenge.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_source_challenge.json",
+  "state": "REFUTED_IN_NATURAL_PASSIVE_SOURCE_CLASSES__CONDITIONAL_RANK7_COMPRESSION_RECONSTRUCTED__SPARSE_SUPPORT_REQUIRES_NEW_RELATIONAL_DATA",
+  "q12_rank": 7,
+  "first_indef_q": 30,
+  "support_control_relL2": 0.48752749592541506
+}
+RUN phase_geometry_source.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_phase_geometry_source.json",
+  "q12_RG1": {
+    "offsets": [
+      3,
+      4
+    ],
+    "threshold_d2": 1.5902395307673798,
+    "threshold": 1.2610469978424197,
+    "degree": 4,
+    "connected_gcd": 1,
+    "rule": "minimal all-pairs distance threshold making the translation-orbit graph connected"
+  },
+  "full_RG1": [
+    [
+      12,
+      [
+        3,
+        4
+      ],
+      4
+    ],
+    [
+      24,
+      [
+        1,
+        6,
+        10
+      ],
+      6
+    ],
+    [
+      48,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      96,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      192,
+      [
+        1,
+        2,
+        4,
+        6
+      ],
+      8
+    ],
+    [
+      384,
+      [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      12
+    ],
+    [
+      768,
+      [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22
+      ],
+      24
+    ],
+    [
+      1536,
+      [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      48
+    ]
+  ],
+  "full_RG2": [
+    [
+      12,
+      [
+        2,
+        3,
+        4
+      ],
+      6
+    ],
+    [
+      24,
+      [
+        1,
+        6,
+        10
+      ],
+      6
+    ],
+    [
+      48,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      96,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      192,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      384,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      768,
+      [
+        1,
+        2
+      ],
+      4
+    ],
+    [
+      1536,
+      [
+        1,
+        2
+      ],
+      4
+    ]
+  ],
+  "smooth_RG1": [
+    [
+      24,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      48,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      96,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      192,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      384,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      768,
+      [
+        1
+      ],
+      2
+    ],
+    [
+      1536,
+      [
+        1
+      ],
+      2
+    ]
+  ],
+  "q1536_z": 0.351653199107999,
+  "tstar": 0.03097,
+  "cont_k1_last_relerr": 6.66708761342264e-07
+}
+RUN q12_phase_graph_interval.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_q12_phase_graph_interval.json",
+  "order": [
+    3,
+    4,
+    5,
+    2,
+    6,
+    1
+  ],
+  "min_gap": "0.0004814632754597112031523600009666789506135325270298349689484967724112692049963"
+}
+RUN internal_geometry_consistency.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_internal_geometry_consistency.json",
+  "w1": 0.4699856726450201,
+  "rest_bound": 0.22310461320426228,
+  "strict_gap": 0.24688105944075783,
+  "q1536": {
+    "q": 1536,
+    "strict_skeleton_offsets": [
+      1
+    ],
+    "phase_RG2_offsets": [
+      1,
+      2
+    ],
+    "q2lambda_Cq_k1": 39.4783625548007,
+    "q2lambda_Cq12_k1": 197.39115217735525,
+    "metric_distortion_exact": "d_Cq12(0,r)=ceil(d_Cq(0,r)/2)"
+  }
+}
+RUN phase_continuum_limit.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_phase_continuum_limit.json",
+  "gcrit": 5.123427551398616,
+  "z": 0.35165320501516245,
+  "smooth_mu": [
+    0.5067993253422841,
+    0.5404486437245657,
+    0.5254223561163391
+  ],
+  "minH": 0.09758514116799806,
+  "full_phi": -0.5929262736290299,
+  "last_comparison": {
+    "q": 1536,
+    "phi": -0.5929262736290299,
+    "phi_minus_limit": 0.0,
+    "s_smooth_max_abs_diff": 3.5376626073002626e-08,
+    "z_minus_limit": -5.9071634250784655e-09
+  }
+}
+RUN certify_smooth_continuum.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_smooth_continuum_certificate.json",
+  "all_strict": true,
+  "Kbounds": [
+    0.0001588568125748007,
+    0.00015106643121804168,
+    0.000161907392285503
+  ],
+  "rowsum": [
+    0.15884587506350883,
+    0.15105552996500668,
+    0.16189530292815202
+  ],
+  "minHlower": 0.08211508225717416,
+  "max_quaderr": 2.4188848763859235e-08
+}
+RUN certify_finite_q_branch_analytic.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_finite_q_branch_analytic.json",
+  "q188": {
+    "q": 188,
+    "n": 94,
+    "eZ": 3.769729955801696e-09,
+    "max_raw_error": 3.1579055408848625e-08,
+    "max_dmu": 8.764085021297112e-05,
+    "max_dcov": 0.0003217603320601035,
+    "krawczyk_bounds": [
+      0.0006754100711555271,
+      0.0007521456037679338,
+      0.0010045448430973823,
+      0.0003054370147954359
+    ],
+    "contraction_rows": [
+      0.1639201857572053,
+      0.15679394098385563,
+      0.16968408236407098,
+      0.0038833898025244415
+    ],
+    "hessian_min_lower": 0.05531340379527849,
+    "strict": false,
+    "pd": true
+  },
+  "q190": {
+    "q": 190,
+    "n": 95,
+    "eZ": 2.3845331695256583e-09,
+    "max_raw_error": 2.041957699565894e-08,
+    "max_dmu": 5.589835484515074e-05,
+    "max_dcov": 0.00020696932435639357,
+    "krawczyk_bounds": [
+      0.00048722856488887594,
+      0.0005336573903297869,
+      0.0006992087982027954,
+      0.0001934725021487548
+    ],
+    "contraction_rows": [
+      0.16208754585536103,
+      0.15472722278266876,
+      0.16688948529782022,
+      0.002725517718306949
+    ],
+    "hessian_min_lower": 0.05551203912326581,
+    "strict": true,
+    "pd": true
+  },
+  "q192": {
+    "q": 192,
+    "n": 96,
+    "eZ": 1.5083304383162e-09,
+    "max_raw_error": 1.3203660441496602e-08,
+    "max_dmu": 3.5653125937969464e-05,
+    "max_dcov": 0.00013313829650262243,
+    "krawczyk_bounds": [
+      0.00036760458019888443,
+      0.000394591354863479,
+      0.0005045188580416091,
+      0.00012264602075275457
+    ],
+    "contraction_rows": [
+      0.16091688034636326,
+      0.15340496511981716,
+      0.1650977663416547,
+      0.0019894971571095296
+    ],
+    "hessian_min_lower": 0.055639052781309074,
+    "strict": true,
+    "pd": true
+  }
+}
+RUN certify_rg2_support.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_RG2_support_certificate.json",
+  "remote_lower": 0.998420433645751,
+  "within_q190": 0.060351550572995155,
+  "cross_q190": 0.015167784358590428,
+  "rho_lo": [
+    0.5066564681994266,
+    0.5403057865817094,
+    0.5252794989734815
+  ],
+  "zlo": 0.3515103478723054
+}
+RUN cell_geometry_from_phase_order.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_RG3_cell_geometry.json",
+  "table": [
+    {
+      "M": 10,
+      "q_equal_M": 0.00036288000000000005,
+      "q_M2": 0.6281565095552947,
+      "q_10M2": 0.9558606130043975,
+      "q_for_95pct_no_ties": 881
+    },
+    {
+      "M": 30,
+      "q_equal_M": 1.2883160975104698e-12,
+      "q_M2": 0.6134218178820094,
+      "q_10M2": 0.952765730565668,
+      "q_for_95pct_no_ties": 8491
+    },
+    {
+      "M": 100,
+      "q_equal_M": 9.332621544394417e-43,
+      "q_M2": 0.608565964957278,
+      "q_10M2": 0.9516895258677188,
+      "q_for_95pct_no_ties": 96538
+    },
+    {
+      "M": 300,
+      "q_equal_M": 2.2357674438264616e-129,
+      "q_M2": 0.607206082413143,
+      "q_10M2": 0.9513827159990231,
+      "q_for_95pct_no_ties": 874484
+    },
+    {
+      "M": 1000,
+      "q_equal_M": 0.0,
+      "q_M2": 0.6067329714414793,
+      "q_10M2": 0.9512754039989482,
+      "q_for_95pct_no_ties": 9738449
+    }
+  ],
+  "last_gap": {
+    "M": 2048,
+    "median_max_gap": 0.003936289841794838,
+    "p95_max_gap": 0.005200261028746055,
+    "logM_over_M": 0.003722958489335644
+  }
+}
+RUN rg3_joint_scaling.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/PHY-013_RG3_joint_scaling.json",
+  "C": 13.886682097237236,
+  "coef": 548.2242349736856,
+  "examples": [
+    {
+      "alpha": 0.5,
+      "M": 10000,
+      "N": 100,
+      "q_formula": "M^3",
+      "collision_probability_union_upper": 4.9995e-05,
+      "epsilon_energy_expectation_upper": 5.481694180318824,
+      "TV_upper_if_epsilon_lt_1": null
+    },
+    {
+      "alpha": 0.5,
+      "M": 1000000,
+      "N": 1000,
+      "q_formula": "M^3",
+      "collision_probability_union_upper": 4.999995e-07,
+      "epsilon_energy_expectation_upper": 0.5482236867499989,
+      "TV_upper_if_epsilon_lt_1": 1.2134847947343055
+    },
+    {
+      "alpha": 0.5,
+      "M": 100000000,
+      "N": 10000,
+      "q_formula": "M^3",
+      "collision_probability_union_upper": 4.99999995e-09,
+      "epsilon_energy_expectation_upper": 0.054822422949144335,
+      "TV_upper_if_epsilon_lt_1": 0.058002246646816705
+    },
+    {
+      "alpha": 0.5,
+      "M": 10000000000,
+      "N": 100000,
+      "q_formula": "M^3",
+      "collision_probability_union_upper": 4.9999999995e-11,
+      "epsilon_energy_expectation_upper": 0.005482242349188632,
+      "TV_upper_if_epsilon_lt_1": 0.0055124630073357835
+    },
+    {
+      "alpha": 0.5,
+      "M": 1000000000000,
+      "N": 1000000,
+      "q_formula": "M^3",
+      "collision_probability_union_upper": 4.999999999995e-13,
+      "epsilon_energy_expectation_upper": 0.0005482242349731375,
+      "TV_upper_if_epsilon_lt_1": 0.0005485249496440198
+    }
+  ]
+}
+RUN cg01_diffuse_geometry.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-01_diffuse_geometry.json",
+  "A": 548.5214228905032,
+  "examples": [
+    {
+      "alpha": 0.5,
+      "M": 1000000,
+      "N": 1000,
+      "epsilon_partition_penalty": 0.5485208743696288,
+      "maxgap_gt_0p05_upper": 0.0,
+      "log_upper": -51278.87906282381
+    },
+    {
+      "alpha": 1.0,
+      "M": 1000000,
+      "N": 1000000,
+      "epsilon_partition_penalty": 548.5208743696289,
+      "maxgap_gt_0p05_upper": 0.0,
+      "log_upper": -50730.906709328556
+    },
+    {
+      "alpha": 1.5,
+      "M": 1000000,
+      "N": 1000000000,
+      "epsilon_partition_penalty": 548520.8743696288,
+      "maxgap_gt_0p05_upper": 1.0,
+      "log_upper": 497241.44678593066
+    },
+    {
+      "alpha": 1.9,
+      "M": 1000000,
+      "N": 251188643151,
+      "epsilon_partition_penalty": 137782214.1729072,
+      "maxgap_gt_0p05_upper": 1.0,
+      "log_upper": 137730934.7453235
+    },
+    {
+      "alpha": 2.0,
+      "M": 1000000,
+      "N": 1000000000000,
+      "epsilon_partition_penalty": 548520874.3696289,
+      "maxgap_gt_0p05_upper": 1.0,
+      "log_upper": 548469594.9420452
+    },
+    {
+      "alpha": 2.1,
+      "M": 1000000,
+      "N": 3981071705535,
+      "epsilon_partition_penalty": 2183700932.848248,
+      "maxgap_gt_0p05_upper": 1.0,
+      "log_upper": 2183649653.4206643
+    }
+  ]
+}
+RUN cg02_rewiring.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-02_rewiring.json",
+  "rows": [
+    {
+      "M": 1024,
+      "P_M2mingap_gt_0p1": 0.9049213708352312,
+      "P_M2mingap_gt_0p5": 0.606752866785269,
+      "P_M2mingap_gt_1p0": 0.3680591721966195,
+      "P_M2mingap_gt_2p0": 0.135335197024434,
+      "P_M2mingap_gt_5p0": 0.006688590321014262,
+      "median_M2_min_gap_exact": 0.693589741799542
+    },
+    {
+      "M": 2048,
+      "P_M2mingap_gt_0p1": 0.9048793924551831,
+      "P_M2mingap_gt_0p5": 0.6066417410165024,
+      "P_M2mingap_gt_1p0": 0.3679692810780446,
+      "P_M2mingap_gt_2p0": 0.13533526170462518,
+      "P_M2mingap_gt_5p0": 0.006713270253428733,
+      "median_M2_min_gap_exact": 0.6933683971910796
+    },
+    {
+      "M": 4096,
+      "P_M2mingap_gt_0p1": 0.9048584047505216,
+      "P_M2mingap_gt_0p5": 0.6065861948082067,
+      "P_M2mingap_gt_1p0": 0.36792435472626167,
+      "P_M2mingap_gt_2p0": 0.1353352778562448,
+      "P_M2mingap_gt_5p0": 0.006725609034624312,
+      "median_M2_min_gap_exact": 0.6932577728839533
+    }
+  ]
+}
+RUN cg03_coarse_closure.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-03_coarse_closure.json",
+  "defect": 1.4142135623730951,
+  "memory": 0.39999999999999997
+}
+RUN cg04_influence_metric.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-04_influence_metric.json",
+  "examples": [
+    {
+      "M": 1000,
+      "confidence": 0.99,
+      "DKW_epsilon": 0.051469978465839845,
+      "uniform_angular_error_bound_radians": 0.6530740102220088
+    },
+    {
+      "M": 10000,
+      "confidence": 0.99,
+      "DKW_epsilon": 0.016276236307187292,
+      "uniform_angular_error_bound_radians": 0.2051615361737222
+    }
+  ]
+}
+RUN cg05_metric_backbone.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-05_metric_backbone.json",
+  "rows": [
+    {
+      "M": 3,
+      "P_maxgap_ge_half_upper": 0.75
+    },
+    {
+      "M": 4,
+      "P_maxgap_ge_half_upper": 0.5
+    },
+    {
+      "M": 5,
+      "P_maxgap_ge_half_upper": 0.3125
+    },
+    {
+      "M": 8,
+      "P_maxgap_ge_half_upper": 0.0625
+    },
+    {
+      "M": 12,
+      "P_maxgap_ge_half_upper": 0.005859375
+    },
+    {
+      "M": 16,
+      "P_maxgap_ge_half_upper": 0.00048828125
+    },
+    {
+      "M": 32,
+      "P_maxgap_ge_half_upper": 1.4901161193847656e-08
+    },
+    {
+      "M": 64,
+      "P_maxgap_ge_half_upper": 6.938893903907228e-18
+    },
+    {
+      "M": 128,
+      "P_maxgap_ge_half_upper": 7.52316384526264e-37
+    }
+  ]
+}
+RUN cg06_refinement_dirichlet.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-06_refinement_dirichlet.json",
+  "checks": [
+    {
+      "a": 0.3,
+      "b": 0.7,
+      "u": 1.2,
+      "v": -0.4,
+      "minimizer_w": 0.72,
+      "fine_min_energy": 1.2800000000000002,
+      "coarse_energy": 1.2800000000000002,
+      "abs_defect": 0.0
+    },
+    {
+      "a": 0.11,
+      "b": 0.29,
+      "u": -2.0,
+      "v": 0.5,
+      "minimizer_w": -1.3124999999999998,
+      "fine_min_energy": 7.812500000000001,
+      "coarse_energy": 7.8125,
+      "abs_defect": 8.881784197001252e-16
+    },
+    {
+      "a": 1.7,
+      "b": 0.2,
+      "u": 0.1,
+      "v": 3.4,
+      "minimizer_w": 3.0526315789473686,
+      "fine_min_energy": 2.8657894736842104,
+      "coarse_energy": 2.86578947368421,
+      "abs_defect": 4.440892098500626e-16
+    }
+  ]
+}
+RUN cg07_wave_speed.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-07_wave_speed.json",
+  "last": {
+    "M": 512,
+    "h": 0.01227184630308513,
+    "modes": [
+      {
+        "k": 1,
+        "omega_lattice": 0.9999937250863256,
+        "omega_continuum": 1.0,
+        "relative_error": -6.274913674442217e-06
+      },
+      {
+        "k": 2,
+        "omega_lattice": 1.9999498009741001,
+        "omega_continuum": 2.0,
+        "relative_error": -2.5099512949933178e-05
+      },
+      {
+        "k": 3,
+        "omega_lattice": 2.999830579882244,
+        "omega_continuum": 3.0,
+        "relative_error": -5.647337258529728e-05
+      },
+      {
+        "k": 5,
+        "omega_lattice": 4.999215671227077,
+        "omega_continuum": 5.0,
+        "relative_error": -0.00015686575458462304
+      }
+    ]
+  }
+}
+RUN cg08_dimension_obstruction.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/CG-08_dimension_obstruction.json"
+}
+RUN source_negative_controls.py
+{
+  "output": "/mnt/data/fin_phy_source_followup/results/SOURCE_FOLLOWUP_NEGATIVE_CONTROLS.json",
+  "conductance": [
+    {
+      "alpha": 0,
+      "series_effective": 0.5,
+      "coarse_target": 1.0,
+      "relative_defect": -0.5
+    },
+    {
+      "alpha": 0.5,
+      "series_effective": 0.713265924190597,
+      "coarse_target": 1.0,
+      "relative_defect": -0.286734075809403
+    },
+    {
+      "alpha": 1.0,
+      "series_effective": 1.0,
+      "coarse_target": 1.0,
+      "relative_defect": 0.0
+    },
+    {
+      "alpha": 1.5,
+      "series_effective": 1.379102601734122,
+      "coarse_target": 1.0,
+      "relative_defect": 0.3791026017341219
+    },
+    {
+      "alpha": 2.0,
+      "series_effective": 1.8733608092918697,
+      "coarse_target": 1.0,
+      "relative_defect": 0.8733608092918697
+    }
+  ],
+  "metric": [
+    {
+      "M": 8,
+      "largest_gap": 0.3333470374492119,
+      "circle_distance_across_removed_gap": 0.3333470374492119,
+      "MST_path_distance": 0.6666529625507881,
+      "distortion_ratio": 1.9998766680275597
+    },
+    {
+      "M": 16,
+      "largest_gap": 0.19460838506619826,
+      "circle_distance_across_removed_gap": 0.19460838506619826,
+      "MST_path_distance": 0.8053916149338017,
+      "distortion_ratio": 4.138524733452973
+    },
+    {
+      "M": 32,
+      "largest_gap": 0.07828462543232684,
+      "circle_distance_across_removed_gap": 0.07828462543232684,
+      "MST_path_distance": 0.9217153745676732,
+      "distortion_ratio": 11.773900296226751
+    },
+    {
+      "M": 64,
+      "largest_gap": 0.08272656959178959,
+      "circle_distance_across_removed_gap": 0.08272656959178959,
+      "MST_path_distance": 0.9172734304082104,
+      "distortion_ratio": 11.088014829267713
+    }
+  ]
+}

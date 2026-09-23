@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+load=lambda n:json.loads((ROOT/'results'/n).read_text())
+r2=load('PHY-002_relational_unit.json');r3=load('PHY-003_composition.json');r4=load('PHY-004_information.json');r5=load('PHY-005_events.json');r6=load('PHY-006_propagation.json');r7=load('PHY-007_geometry.json');r8=load('PHY-008_bridge.json');r9=load('PHY-009_clock.json');r12=load('PHY-012_source_identifiability.json')
+rows={
+ 'H-R1':{'status':'PASS_AS_MATHEMATICAL_REPRESENTATION_ONLY','basis':'A FIN cell can be described as states/relations without assigning spatial labels; three dictionaries remain mathematically admissible.','not':'Physical relational ontology is not selected.'},
+ 'H-R2':{'status':'EXISTENCE_PASS__UNIQUENESS_REFUTED','basis':'Two-/three-cell compositions exist, but PM-001 and PM-002 share the same isolated core and differ in coupled predictions.','not':'No unique composition law follows from MP7.'},
+ 'H-R3':{'status':'UNIVERSAL_REFUTED__RESTRICTED_PASS','basis':'p->mu loses a 4D simplex-tangent kernel; Gibbs-family recovery and finite-horizon causal-ball sufficiency survive.','not':'No full microstate information conservation or unitarity.'},
+ 'H-R4':{'status':'PASS_CONDITIONAL_EVENT_ORDER','basis':'Raw state reachability is trivial, but supported local events commute off support and generate nontrivial intervention depth.','not':'Support graph and update rule are still PM.'},
+ 'H-R5':{'status':'PASS_CONDITIONAL_CAUSAL_DEPTH_GEOMETRY','basis':'Shortest support path equals minimum possible event-layer influence depth and survives representation changes.','not':'The graph is supplied; emergent physical space is not derived.'},
+ 'H-R6':{'status':'PASS_FOR_BOUNDED_DEGREE_SPARSE_PM','basis':'Exact discrete cone and size-uniform continuous-time tail hold on bounded-degree support; dense/long-range controls fail the same locality claim.','not':'No derived c, Lorentz symmetry or graph source.'},
+ 'H-R7':{'status':'NOT_TESTED__DEFERRED','basis':'Static localized phases are not transported identities; PHY-010 is gated by later transport/conservation tasks.','not':'No particle/matter claim.'},
+ 'H-R8':{'status':'NOT_TESTED__STRONGLY_DEFERRED','basis':'No dynamical geometry/backreaction/conserved source bridge.','not':'No gravity claim.'},
+ 'H-R9':{'status':'NOT_TESTED__DEFERRED','basis':'Current package is classical stochastic/probabilistic.','not':'No quantum bridge from reversibility/information language.'}
+}
+res={
+ 'task':'PHY-011','status':'PASS_RELATIONAL_PACKAGE_ADDS_CONDITIONAL_STRUCTURE__FUNDAMENTAL_SOURCE_UNRESOLVED',
+ 'hypotheses':rows,
+ 'same_core_alternatives':{
+   'interaction_functional':'PHY-003 PM-001 vs PM-002: same isolated core, different coupled distribution.',
+   'support_geometry':'Sparse bounded-degree versus dense complete support: same cell core, incompatible locality/geometry.',
+   'kinetics':'Metropolis versus Barker and arbitrary positive rate scaling: same equilibrium, different trajectories/durations.'
+ },
+ 'premise_minimality':{
+   'derived_from_frozen_cell_plus_declared_local_support':['exact event commutation off read support','discrete causal cone','causal-ball finite-horizon sufficiency','causal-depth metric'],
+   'requires_additional_PM':['cell graph/support','edge strengths','interaction functional','local update generator','continuous clock rates'],
+   'not_currently_available':['target-independent source for graph/coupling','fixed-dimensional autonomous coarse dynamics','physical length/time calibration','empirical observable map']
+ },
+ 'source_side_result_PHY012':{
+   'operator_nonuniqueness':'10 support families under D12/PSD/centering/rank7; fixed 3456 support + trace still leaves 3 continuous dimensions.',
+   'typed_atom':'SO-PHY-012-01'
+ },
+ 'verdict':'The relational lane is scientifically nontrivial but conditional. It produces exact new theorems about influence, causal depth and finite-horizon information, while decisive same-core alternatives show that geometry, kinetics and interaction are not selected by the single-cell core. Continue source/identifiability and controlled refinement work; do not promote to spacetime, matter, QM or gravity.',
+ 'next_atoms':[ 'SO-PHY-012-01 target-blind source/selector for support + edge ratios + interaction class',
+                'PHY-013 held-out source challenge if a genuinely target-blind parent law is proposed',
+                'PHY-014 falsifiable dictionary for g/control',
+                'Later PHY-019/020 refinement/locality only after a graph family/source is fixed or explicitly conditional'],
+ 'kill_test_summary':{
+   'KT-02_information':'Universal mean-map preservation killed; restricted family/causal-ball survival recorded.',
+   'KT-03_causality_time':'State reachability and unique time killed; event order survives conditionally.',
+   'KT-04_locality':'Sparse bounded-degree class passes; dense/long-range exact-locality controls fail.',
+   'KT-05_geometry':'Causal-depth metric passes conditional representation tests; physical-space source remains open.',
+   'KT-01_source':'Current core fails uniqueness/source; new typed source atom required.'
+ }
+}
+(ROOT/'results'/'PHY-011_relational_verdict.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

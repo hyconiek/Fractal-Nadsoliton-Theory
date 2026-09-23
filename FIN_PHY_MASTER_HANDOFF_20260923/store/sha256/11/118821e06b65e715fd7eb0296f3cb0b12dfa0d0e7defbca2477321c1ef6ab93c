@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys, json, math, itertools, hashlib
+import numpy as np
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces, d12_permutation
+R7P_MODEL=ROOT/'inputs'/'R7P_model.py'
+
+OUT=ROOT/'results'/'PHY-003_composition.json'
+Ncopy=2
+g=3.7
+kappa=0.25
+
+W,A,L,X,C4,A7=feature_spaces()
+q=12
+
+# all occupation vectors of Ncopy over q labels
+states=[]
+def rec(rem, idx, cur):
+    if idx==q-1:
+        states.append(tuple(cur+[rem])); return
+    for v in range(rem+1): rec(rem-v,idx+1,cur+[v])
+rec(Ncopy,0,[])
+ns=np.asarray(states,dtype=int)
+assert len(states)==math.comb(Ncopy+q-1,q-1)==78
+ps=ns/Ncopy
+ms=ps@X
+# multinomial x uniform base probability
+factN=math.factorial(Ncopy)
+mult=np.array([factN/math.prod(math.factorial(int(v)) for v in n) for n in ns],float)
+base=mult/(q**Ncopy)
+onsite=np.exp(Ncopy*g/2*np.sum(ms*ms,axis=1))
+local_w=base*onsite
+Z1=float(local_w.sum())
+
+def dist2(V):
+    sq=np.sum(V*V,axis=1)
+    return np.maximum(sq[:,None]+sq[None,:]-2*V@V.T,0.0)
+Dm=dist2(ms)
+Dp=dist2(ps)
+C_mean=np.exp(-Ncopy*kappa/2*Dm)
+C_full=np.exp(-Ncopy*kappa/2*Dp)
+
+def pair_stats(C):
+    raw=local_w[:,None]*local_w[None,:]*C
+    Z=float(raw.sum()); P=raw/Z
+    pa=P.sum(axis=1); pb=P.sum(axis=0)
+    mask=P>0
+    MI=float(np.sum(P[mask]*np.log(P[mask]/(pa[:,None]*pb[None,:])[mask])))
+    return Z,P,MI,float(np.sum(P*Dm)),float(np.sum(P*Dp))
+
+Z2m,P2m,MI2m,Edm_m,Edp_m=pair_stats(C_mean)
+Z2p,P2p,MI2p,Edm_p,Edp_p=pair_stats(C_full)
+# zero-coupling exact numerical identity
+C0=np.ones_like(C_mean)
+Z20=float((local_w[:,None]*local_w[None,:]*C0).sum())
+zero_pair_rel=abs(Z20-Z1**2)/Z1**2
+# triple path factorization and endpoint marginal
+
+def triple_stats(C):
+    middle=C@(local_w[:,None]*C)  # [i,k]=sum_j C[i,j] q[j] C[j,k]
+    raw_end=local_w[:,None]*local_w[None,:]*middle
+    Z=float(raw_end.sum())
+    P=raw_end/Z
+    pa=P.sum(axis=1); pb=P.sum(axis=0);mask=P>0
+    MI=float(np.sum(P[mask]*np.log(P[mask]/(pa[:,None]*pb[None,:])[mask])))
+    return Z,P,MI
+Z3m,Pendm,MIendm=triple_stats(C_mean)
+Z3p,Pendp,MIendp=triple_stats(C_full)
+# zero coupling triple
+Z30=Z1**3
+# explicit direct 3-loop for a random subset isn't needed; verify matrix formula by exact loop over all 474552 states (manageable)
+def triple_direct(C):
+    total=0.0
+    for j in range(len(states)):
+        # factor sum_i and sum_k around fixed j
+        left=float(np.dot(local_w,C[:,j]))
+        right=float(np.dot(C[j,:],local_w))
+        total += local_w[j]*left*right
+    return total
+Z3m_direct=triple_direct(C_mean)
+Z3p_direct=triple_direct(C_full)
+
+# D12 common relabeling invariance over all 24 actions and all occupation states.
+# p' = P p; test onsite and pair distance matrices after induced row permutation.
+max_onsite_err=0.0; max_pair_mean_err=0.0; max_pair_full_err=0.0
+# map occupancy tuple after P action to state index
+index={tuple(n):i for i,n in enumerate(states)}
+for eps in (1,-1):
+    for a in range(12):
+        P=d12_permutation(a,eps)
+        perm=[]
+        for n in ns:
+            n2=P@n
+            perm.append(index[tuple(int(x) for x in n2)])
+        perm=np.asarray(perm,int)
+        max_onsite_err=max(max_onsite_err,float(np.max(np.abs(np.sum(ms[perm]**2,axis=1)-np.sum(ms**2,axis=1)))))
+        max_pair_mean_err=max(max_pair_mean_err,float(np.max(np.abs(Dm[np.ix_(perm,perm)]-Dm))))
+        max_pair_full_err=max(max_pair_full_err,float(np.max(np.abs(Dp[np.ix_(perm,perm)]-Dp))))
+
+# Correlations are genuinely induced at kappa>0, compare to product marginals TV.
+def corr_tv(P):
+    pa=P.sum(axis=1);pb=P.sum(axis=0)
+    return 0.5*float(np.sum(np.abs(P-pa[:,None]*pb[None,:])))
+
+# Associativity of declared composition = additive vertex+edge log weights, test all triple occupation states
+# using two groupings on path 0-1-2; same formula but independently accumulated.
+max_assoc_err=0.0
+for i in range(len(states)):
+  vi=math.log(local_w[i])
+  for j in range(len(states)):
+    vj=math.log(local_w[j]); eij=math.log(C_mean[i,j])
+    # vector over k for efficiency
+    lhs=vi+vj+eij + np.log(local_w)+np.log(C_mean[j,:])
+    rhs=vi + (vj+np.log(local_w)+np.log(C_mean[j,:])) + eij
+    max_assoc_err=max(max_assoc_err,float(np.max(np.abs(lhs-rhs))))
+
+# Alternative composition nonuniqueness witness: distributions differ.
+TV_models=0.5*float(np.sum(np.abs(P2m-P2p)))
+KL_mp=float(np.sum(P2m*np.log(P2m/P2p)))
+
+# K_Gamma positivity sufficient condition for pair/path3 at selected parameters
+# Laplacian max eigenvalues: edge pair=2, path3=3
+kgaps={'pair':g-kappa*2,'path3':g-kappa*3}
+
+res={
+ 'task':'PHY-003','status':'PASS_IN_SCOPE_CONDITIONAL_PM','parameters':{'N':Ncopy,'g':g,'kappa':kappa,'q':q,'graphs':['edge2','path3'],'edge_weight':1.0},
+ 'state_counts':{'single':len(states),'pair':len(states)**2,'triple':len(states)**3},
+ 'single_Z':Z1,
+ 'zero_coupling':{'pair_relative_error':zero_pair_rel,'triple_formula_Z':Z30},
+ 'mean_difference_PM':{'Z_pair':Z2m,'pair_mutual_information_nats':MI2m,'pair_correlation_TV':corr_tv(P2m),'expected_feature_distance2':Edm_m,'expected_p_distance2':Edp_m,'Z_triple_path':Z3m,'Z_triple_direct':Z3m_direct,'triple_factorization_relative_error':abs(Z3m-Z3m_direct)/Z3m,'endpoint_mutual_information_nats':MIendm},
+ 'full_p_difference_control_PM':{'Z_pair':Z2p,'pair_mutual_information_nats':MI2p,'pair_correlation_TV':corr_tv(P2p),'expected_feature_distance2':Edm_p,'expected_p_distance2':Edp_p,'Z_triple_path':Z3p,'Z_triple_direct':Z3p_direct,'triple_factorization_relative_error':abs(Z3p-Z3p_direct)/Z3p,'endpoint_mutual_information_nats':MIendp},
+ 'relabeling':{'max_onsite_invariance_error':max_onsite_err,'max_mean_distance_invariance_error':max_pair_mean_err,'max_full_p_distance_invariance_error':max_pair_full_err},
+ 'associativity':{'max_logweight_grouping_error':max_assoc_err,'rule':'vertex and declared edge contributions are additive; boundary edges must be declared'},
+ 'composition_nonuniqueness':{'pair_distribution_TV_between_two_admissible_PM':TV_models,'KL_mean_to_fullp_nats':KL_mp,'interpretation':'same isolated-cell core and zero-coupling limit, incompatible coupled predictions; MP7 does not source a unique interaction law'},
+ 'gaussian_auxiliary_sufficient_gap':kgaps,
+ 'scope':['graph/support, kappa, edge weights and common frame are PM premises','N=2 scout validates algebra/correlation only, not collective phase selection','no claim of emergent physical adjacency']
+}
+OUT.write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

@@ -1,0 +1,37 @@
+import json, math
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for N in (2,4,8,16,32,64,128,256,512,1024):
+    q=12
+    rows.append({'N':N,'qlogN_over_N':q*math.log(N+1)/N})
+scale=[]
+for M in (8,16,32,64,128,256):
+    cycle_edges=M
+    complete_edges=M*(M-1)//2
+    scale.append({'M':M,'cycle_edges':cycle_edges,'cycle_edges_per_cell':cycle_edges/M,
+                  'complete_edges':complete_edges,'complete_edges_per_cell':complete_edges/M,
+                  'complete_kappa_needed_for_O_M_energy':'kappa0/M'})
+out={
+ 'task':'PHY-018','scientific_state':'PASS_SEPARATED_LIMITS_AND_UNIFORM_METHOD_OF_TYPES_BOUND',
+ 'limit_definitions':{
+  'N':'exchangeable copies inside a fixed cell; MP7 mean-field/type limit',
+  'M':'number of interacting effective cells; graph/network thermodynamic or refinement limit',
+  'q':'number of internal labels/states per cell',
+  'rank':'number of retained feature directions; <=q-1 for centered finite q',
+  'refinement':'a chosen sequence of graphs plus maps/edge scaling; not implied by M alone'
+ },
+ 'uniform_type_bound':'For fixed q and bounded local energy, product method-of-types polynomial factor <=(N+1)^(q M), so log correction per NM <= q log(N+1)/N, independent of M.',
+ 'type_bound_samples':rows,
+ 'graph_scaling':scale,
+ 'chosen_scalable_family':'cycle C_M with degree 2, unit dimensionless edge weights; later geometric refinement h=1/M is an added convention tested in PHY-020',
+ 'order_of_limits':{
+  'N_and_M_bounded_degree':'free-energy-density type-counting correction is uniform in M as N->infinity; this supports commuting N and M at this level, conditional on existence of the M-limit of the variational density',
+  'dense_unnormalized':'nonextensive O(M^2) interaction; must rescale kappa or reject same limit',
+  'q_vs_rank':'not interchangeable; fixed q bounds centered rank by q-1',
+  'q_smooth_plus_parity':'two-sublattice internal limit, not a spatial M-refinement'
+ },
+ 'nonconclusions':['no unique limit selected by FIN','no spatial dimension from N','no continuum theorem yet']
+}
+(ROOT/'results'/'PHY-018_limits.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

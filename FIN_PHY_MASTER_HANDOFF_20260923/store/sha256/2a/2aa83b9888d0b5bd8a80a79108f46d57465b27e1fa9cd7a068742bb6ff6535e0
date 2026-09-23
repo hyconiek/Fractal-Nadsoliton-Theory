@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+from fractions import Fraction
+import numpy as np
+from scipy.special import softmax
+from scipy.optimize import root
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces
+R7P_MODEL=ROOT/'inputs'/'R7P_model.py'
+W,A,L,X,C4,A7=feature_spaces();q=12
+u=np.ones(q)/q
+# exact mode-k=2 witness a_j=cos(pi*j/3) as Fractions
+a=[Fraction(1),Fraction(1,2),Fraction(-1,2),Fraction(-1),Fraction(-1,2),Fraction(1,2),Fraction(1),Fraction(1,2),Fraction(-1,2),Fraction(-1),Fraction(-1,2),Fraction(1,2)]
+pplus=[Fraction(1,12)+x/Fraction(24) for x in a]
+pminus=[Fraction(1,12)-x/Fraction(24) for x in a]
+assert all(x>0 for x in pplus+pminus)
+# exact TV distances
+TV_pm=sum(abs(x-y) for x,y in zip(pplus,pminus))/2
+TV_pu=sum(abs(x-Fraction(1,12)) for x in pplus)/2
+# pminus is shift-by-3 of pplus
+shift3=all(pminus[j]==pplus[(j+3)%12] for j in range(12))
+# numeric retained means; exact zero follows Fourier orthogonality k=2 vs k=3,4,5,6
+pp=np.array([float(x) for x in pplus]); pm=np.array([float(x) for x in pminus])
+muplus=X.T@pp; muminus=X.T@pm
+# rank/nullity tangent
+B=np.column_stack([np.eye(q)[:,i]-np.eye(q)[:,-1] for i in range(q-1)])
+rank=int(np.linalg.matrix_rank(X.T@B,tol=1e-11)); nullity=11-rank
+# identify missing Fourier tangent modes k=1,2
+j=np.arange(q)
+missing=[]
+for k in (1,2):
+    for typ,v in [('cos',np.cos(2*np.pi*k*j/q)),('sin',np.sin(2*np.pi*k*j/q))]:
+        missing.append({'mode':k,'type':typ,'sum':float(v.sum()),'retained_projection_norm':float(np.linalg.norm(X.T@v))})
+# sample exact-in-principle recovery on Gibbs exponential family p(theta)=softmax(X theta)
+rng=np.random.default_rng(20260923)
+rec=[]
+for t in range(10):
+    th=rng.normal(scale=.4,size=7)
+    p=softmax(X@th); mu=p@X
+    def fun(z): return softmax(X@z)@X-mu
+    sol=root(fun,np.zeros(7),method='hybr',tol=1e-12)
+    ph=softmax(X@sol.x)
+    rec.append({'theta_error':float(np.linalg.norm(sol.x-th)),'p_TV_error':float(.5*np.abs(ph-p).sum()),'residual':float(np.linalg.norm(fun(sol.x))),'success':bool(sol.success)})
+# strict-convexity diagnostic: covariance eigenvalues at sample theta
+mins=[]
+for t in range(50):
+    th=rng.normal(scale=1.0,size=7);p=softmax(X@th);mu=p@X;Y=X-mu
+    cov=Y.T@(p[:,None]*Y);mins.append(float(np.linalg.eigvalsh(cov)[0]))
+# product ambiguity: 2^M choices p+/- all same retained means cellwise
+amb={str(M):2**M for M in (1,2,3)}
+res={
+ 'task':'PHY-004','status':'PASS_RESTRICTED_AND_REFUTE_UNIVERSAL',
+ 'exact_loss_witness':{
+   'p_plus':[str(x) for x in pplus],'p_minus':[str(x) for x in pminus],
+   'positive':True,'distinct':True,'shift3_equivalent':shift3,
+   'retained_mean_norm_plus_numeric':float(np.linalg.norm(muplus)),
+   'retained_mean_norm_minus_numeric':float(np.linalg.norm(muminus)),
+   'analytic_reason':'k=2 Fourier mode is orthogonal to retained k=3,4,5,6 modes',
+   'TV_pplus_pminus':str(TV_pm),'TV_each_to_uniform':str(TV_pu),
+   'minimax_recovery_error_lower_bound_at_mu0_TV':str(TV_pm/2)
+ },
+ 'mean_map':{'simplex_tangent_rank':rank,'nullity':nullity,'missing_mode_diagnostics':missing},
+ 'full_simplex_stochastic_inverse_theorem':{
+   'statement':'Any stochastic affine automorphism of the full finite simplex with a stochastic inverse is a permutation of vertices.',
+   'consequence':'No 12->7 retained-mean coarse map can have a stochastic inverse on the full simplex; it is noninjective.'
+ },
+ 'restricted_gibbs_family_recovery':{
+   'family':'E_X={softmax(X theta): theta in R^7}',
+   'theorem':'log Z(theta) is strictly convex because Var_p((Xv)_j)>0 for v!=0; therefore theta->mu is injective and p is exactly recoverable from mu on E_X.',
+   'sample_recovery_max_theta_error':max(x['theta_error'] for x in rec),
+   'sample_recovery_max_TV_error':max(x['p_TV_error'] for x in rec),
+   'sample_recovery_max_residual':max(x['residual'] for x in rec),
+   'sample_covariance_min_eigenvalue_min':min(mins)
+ },
+ 'composition_information':{
+   'cellwise_sign_choices_with_identical_retained_means':amb,
+   'interpretation':'The retained signature can be transported/recovered on the Gibbs family but does not preserve arbitrary full-simplex information; hidden k=1,2 content is lost unless an environment/history is retained.'
+ },
+ 'nontrivial_preserved_quantity_under_coarse_representation':'mu itself (and any declared function Q(mu), e.g. ||mu||^2); this is representational preservation, not a dynamical conservation law.',
+ 'claim_decision':{
+   'H-R3_universal_full_information':'REFUTED_IN_SCOPE',
+   'H-R3_family_relative_sufficiency_recovery':'PASS_IN_SCOPE',
+   'unitarity_implication':'NOT_LICENSED'
+ }
+}
+(ROOT/'results'/'PHY-004_information.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

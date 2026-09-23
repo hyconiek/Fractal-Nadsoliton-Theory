@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+root=Path(__file__).resolve().parents[1]
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); lam=np.linalg.eigvalsh(A)
+a1=float(lam.mean());a2=float((lam**2).mean());L=float(lam.max());var=float((lam**2).mean()-a1*a1);d=lam[:,None]-lam[None,:];b4=float(np.mean(d**4)/24);aw=var/4
+
+def ew(t):return math.sqrt(var)*L*L*t**6/24 + L**4*t**8/576
+def bounds(lo,hi):
+ return {'heat':[a1*lo-a2*lo*lo/2,a1*hi], 'unitary':[var*lo*lo-b4*lo**4,var*hi*hi], 'wave':[aw*lo**4-ew(lo),aw*hi**4+ew(hi)]}
+# Frozen conditional protocol.
+t1lo=.20;t1hi=.25;eta_time=.02;efflo=.98
+rlo=2*(1-eta_time)/(1+eta_time);rhi=2*(1+eta_time)/(1-eta_time);t2lo=t1lo*rlo;t2hi=t1hi*rhi
+b1=bounds(t1lo,t1hi);b2=bounds(t2lo,t2hi)
+def detect(b):return {k:[efflo*v[0],v[1]] for k,v in b.items()}
+d1=detect(b1);d2=detect(b2)
+def mingap(bb):return min(bb['unitary'][0]-bb['wave'][1],bb['heat'][0]-bb['unitary'][1])
+g1=mingap(d1);g2=mingap(d2);eps1=.0095;eps2=.03
+alpha_cal=.01;alpha1=.02;alpha2=.02
+N1=math.ceil(math.log(2/alpha1)/(2*eps1**2));N2=math.ceil(math.log(2/alpha2)/(2*eps2**2))
+def thresholds(bb): return {'wave_unitary':(bb['wave'][1]+bb['unitary'][0])/2,'unitary_heat':(bb['unitary'][1]+bb['heat'][0])/2}
+result={
+ 'task':'OCB-CHANNEL-05','status':'PREREGISTERED_TWO_LEVEL_NO_FIT_PROTOCOL_CONSTRUCTED__PHYSICAL_EXECUTION_OPEN',
+ 'calibration_gate':{
+   'required_before_unblinding':'Independent calibration must certify t1 in [0.20,0.25] strict dimensionless units, relative two-control time-ratio distortion eta<=0.02, and common attempt-level detection efficiency in [0.98,1].',
+   'failure_budget':alpha_cal,'warning':'FIN does not provide a laboratory clock or calibration sample-size model; this is a prerequisite gate, not generated evidence.'
+ },
+ 'attempt_bookkeeping':{
+   'outcomes_per_attempt':['escape_to_any_other_state','return_to_prepared_state','no_click'],
+   'rule':'Never postselect away no-clicks. Primary escape frequency uses all attempts in the denominator. The efficiency interval is included in the predicted bands.',
+   'level1_attempts':N1,'level2_attempts':N2,'measurement_failure_budget':alpha1+alpha2
+ },
+ 'theory_intervals':{
+   'level1_physical_time':[t1lo,t1hi],'level2_physical_time':[t2lo,t2hi],
+   'level1_attempt_escape_intervals':d1,'level2_attempt_escape_intervals':d2,
+   'level1_min_gap':g1,'level2_min_gap':g2,'level1_hoeffding_radius':eps1,'level2_hoeffding_radius':eps2,
+   'level1_thresholds':thresholds(d1),'level2_thresholds':thresholds(d2)
+ },
+ 'no_fit_rule':'At each level form the simultaneous Hoeffding interval [phat-eps, phat+eps]. Assign a channel category only if BOTH level intervals intersect exactly one same theory category band. If either level is ambiguous, contradictory, calibration fails, or no-click efficiency leaves [0.98,1], return NO_FIT; do not refit time or nuisance parameters.',
+ 'error_ledger':'Conditional on calibration gate truth, Hoeffding gives <=0.02 error per measurement level; with alpha_cal=0.01 the preregistered total failure budget is <=0.05 by union bound.',
+ 'decision':'The probability-only heat/unitary/wave distinction can be converted into a finite two-control protocol with explicit attempts and a fail-closed decision rule. Absolute dimensionless time calibration makes the required attempt count orders of magnitude smaller than a purely clock-free ratio-only design.',
+ 'nonconclusion':'No physical platform, clock conversion, common-efficiency detector law, or real data are supplied. The counts are conservative theorem-design numbers, not experimental recommendations.'
+}
+(root/'results'/'OCB-CHANNEL-05_protocol.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'N1':N1,'N2':N2,'gaps':[g1,g2],'intervals1':d1,'intervals2':d2},indent=2))

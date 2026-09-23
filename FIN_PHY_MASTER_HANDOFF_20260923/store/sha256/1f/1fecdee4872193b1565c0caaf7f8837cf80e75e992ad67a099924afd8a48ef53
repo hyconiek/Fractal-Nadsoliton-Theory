@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+q=12
+# map label a to five locked phases, represented as complex unit vector z_k=e^{2pi i k a/q}
+def phasevec(a):
+    return np.array([np.exp(2j*np.pi*k*a/q) for k in range(1,6)])
+# injectivity and D12 equivariance
+V=[phasevec(a) for a in range(q)]
+sep=min(float(np.linalg.norm(V[a]-V[b])) for a in range(q) for b in range(a+1,q))
+max_trans=0.0;max_refl=0.0
+for a in range(q):
+ for t in range(q):
+  mult=np.array([np.exp(2j*np.pi*k*t/q) for k in range(1,6)])
+  max_trans=max(max_trans,float(np.linalg.norm(phasevec((a+t)%q)-phasevec(a)*mult)))
+ max_refl=max(max_refl,float(np.linalg.norm(phasevec((-a)%q)-np.conjugate(phasevec(a)))))
+out={
+ 'task':'CARRIER-CLOSURE-01_strict_carrier_spectral_nonlinear_consistency_square',
+ 'scientific_state':'PROVED_D12_EQUIVARIANT_CARRIER_RECONSTRUCTION_CLOSURE',
+ 'locked_phase_embedding_min_pair_separation':sep,
+ 'translation_equivariance_residual':max_trans,'reflection_equivariance_residual':max_refl,
+ 'theorem':'The strict weighted kernel intrinsically recovers the C12 torsor through its strongest shell. The five Fourier doublets are characters of that torsor. The all-orders positive-coefficient partition theorem identifies its locked phase maxima with evaluation characters at a in C12. The map a -> (exp(2pi i k a/12))_{k=1..5} is injective and D12-equivariant: translations multiply character phases and reflection complex-conjugates them. Thus carrier extraction from W and carrier reconstruction from nonlinear spectral phase locking close to the same D12-torsor.',
+ 'interpretation':'This is an internal mathematical consistency square connecting relation space and spectral phase space. It strengthens the case that the one-dimensional cyclic carrier is structural in the current strict model.',
+ 'nonconclusions':['The square does not identify C12/S1 with physical space.','It does not source continuum length, time, dynamics, or higher dimension.']
+}
+p=ROOT/'results'/'CARRIER-CLOSURE-01_square.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

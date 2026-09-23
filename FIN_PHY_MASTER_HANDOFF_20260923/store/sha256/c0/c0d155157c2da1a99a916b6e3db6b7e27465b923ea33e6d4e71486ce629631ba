@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+from scipy.spatial import Delaunay, distance_matrix
+from scipy.sparse import csr_matrix
+from scipy.sparse.csgraph import dijkstra
+ROOT=Path(__file__).resolve().parents[1]
+rng=np.random.default_rng(20260923)
+def rng_graph(points):
+    n=len(points); D=distance_matrix(points,points); tri=Delaunay(points)
+    cand=set()
+    for s in tri.simplices:
+        for a in range(3):
+            for b in range(a+1,3):
+                i,j=sorted((int(s[a]),int(s[b])));cand.add((i,j))
+    edges=[]
+    for i,j in cand:
+        dij=D[i,j]
+        mask=(D[i,:] < dij-1e-14)&(D[j,:] < dij-1e-14);mask[i]=mask[j]=False
+        if not mask.any(): edges.append((i,j,float(dij)))
+    return D,edges
+rows=[]
+for n in [100,200,400,800]:
+    pts=rng.random((n,2));D,edges=rng_graph(pts)
+    deg=np.zeros(n,int); rr=[];cc=[];dd=[]
+    for i,j,w in edges:
+        deg[i]+=1;deg[j]+=1;rr.extend([i,j]);cc.extend([j,i]);dd.extend([w,w])
+    G=csr_matrix((dd,(rr,cc)),shape=(n,n))
+    src=rng.choice(n,size=min(40,n),replace=False); GD=dijkstra(G,directed=False,indices=src)
+    stretches=[]
+    for a,s in enumerate(src):
+        js=rng.choice(n,size=min(80,n),replace=False); direct=D[s,js];ok=direct>1e-8
+        stretches.extend((GD[a,js][ok]/direct[ok]).tolist())
+    rows.append({'n':n,'edges':len(edges),'mean_degree':float(deg.mean()),'max_degree':int(deg.max()),
+                 'connected':bool(np.isfinite(GD).all()),'median_weighted_stretch':float(np.median(stretches)),
+                 'p95_weighted_stretch':float(np.quantile(stretches,.95))})
+out={
+ 'task':'PRIN-05-relative-neighborhood-candidate',
+ 'scientific_state':'ANALYTIC_SPARSE_METRIC_RULE_PLUS_NUMERICAL_2D_SCOUT',
+ 'definition':'Connect x,y iff there is no z with d(x,z)<d(x,y) and d(y,z)<d(x,y). No distance threshold or neighbor count is supplied.',
+ 'analytic_properties':[
+   'Every MST edge is an RNG edge: otherwise a point in the lune supplies a strictly shorter edge crossing the MST cut. Hence RNG is connected.',
+   'In the Euclidean plane, distinct RNG neighbors around a vertex subtend angles >=60 degrees, so degree <=6 (general-position boundary cases included in the weak bound).',
+   'For distinct samples on S1 with every circular gap < pi, RNG is exactly the consecutive-neighbor cycle: nonconsecutive pairs have an intermediate point in their shorter arc, while consecutive pairs have no point in their lune.'
+ ],
+ '2d_fixed_seed_scout':rows,
+ 'scout_interpretation':'The graph stays O(n), connected and low-degree in the declared random planar samples, but weighted shortest paths do not preserve Euclidean distances exactly and the median stretch in this finite scout remains around 1.2-1.3. No continuum metric theorem is claimed.',
+ 'value':'RNG is a parameter-free metric-only candidate that generalizes the 1D cycle without the complete-graph pathology of exact all-pairs preservation.',
+ 'open_gate':'Prove/refute refinement/continuum convergence of an RNG-based Dirichlet form on a genuinely sourced higher-dimensional relational manifold before using it as space.',
+ 'nonconclusions':['RNG is not derived from FIN.','The numerical scout is not a 2D continuum theorem.','No physical dimension is selected.']
+}
+assert all(r['connected'] and r['max_degree']<=6 for r in rows)
+p=ROOT/'results'/'PRIN-05_rng_candidate.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

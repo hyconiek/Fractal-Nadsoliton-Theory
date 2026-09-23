@@ -1,0 +1,48 @@
+{
+  "task": "OCB-CHANNEL-01",
+  "status": "FIRST_NONSCALAR_JET_CARRIER_THEOREM_WITH_FUNCTIONAL_CALCULUS_COUNTEREXAMPLE",
+  "strict_nearest_shell_weight_gap": 0.2779421209549173,
+  "sufficient_theorem": {
+    "family": "K_eps = c(eps) I - a eps^m A + R_eps with a>0 and m>=1.",
+    "record": "Any destination score monotone in |K_ij| in the relevant small-response range (including amplitude magnitude or its square).",
+    "condition": "max_{i!=j}|R_ij| < (a eps^m/2) (w1-w2).",
+    "conclusion": "For every source i, the two largest off-diagonal destination scores are exactly the two strict distance-one neighbours. Replacing w1-w2 by the minimum adjacent shell gap preserves the full six-shell order.",
+    "reason": "For distance-one response lower bound a eps^m w1-r and any distance>=2 upper bound a eps^m w2+r; the stated condition makes the former strictly larger."
+  },
+  "counterexample_to_functional_calculus_alone": {
+    "object": "P1, the spectral projector onto the k=1 Fourier doublet. Since the seven sector eigenvalues are distinct, P1 is a polynomial f(A) of degree <=6.",
+    "projector_shell_values_d1_to_d6": [
+      0.14433756729740646,
+      0.08333333333333336,
+      1.020538999289461e-17,
+      -0.0833333333333333,
+      -0.14433756729740646,
+      -0.16666666666666666
+    ],
+    "absolute_shell_order": [
+      6,
+      1,
+      5,
+      2,
+      4,
+      3
+    ],
+    "largest_absolute_shell": 6,
+    "expected": "d=6 (antipode), not d=1",
+    "projector_eigen_residual": 3.815928882443468e-16,
+    "idempotence_residual": 1.5251571807779581e-16,
+    "commutator_residual": 3.784010848912522e-16,
+    "polynomial_coefficients_in_A_increasing_degree": [
+      3.0620308978537943e-15,
+      13.790161210571286,
+      -33.93161157392971,
+      33.19381744448385,
+      -16.146550016955295,
+      3.907340320518225,
+      -0.3764727351362732
+    ],
+    "polynomial_reconstruction_residual": 1.456140867747126e-13
+  },
+  "interpretation": "Heat, unitary and wave share the operational carrier near their identity/control origin because their first non-scalar jet is proportional to A. Generic analytic functional calculus f(A) does not preserve carrier adjacency.",
+  "nonconclusion": "This theorem does not choose which state category/channel nature realizes and does not provide a physical control-time calibration."
+}

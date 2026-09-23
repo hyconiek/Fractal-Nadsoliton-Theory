@@ -1,0 +1,66 @@
+{
+  "task": "OCB-CAL-04",
+  "status": "PRIMITIVE_DETECTOR_BOX_PROPAGATES_TO_RIGOROUS_INVERSE_MAP_SAFE_REGION",
+  "primitive_uncertainty_set": {
+    "confusion": "C is row-stochastic and nonnegative; |C_ij-C0_ij|<=gamma for every primitive confusion entry.",
+    "efficiency": "eta_j lies in eta0_j*(1+-r), independently, with r<1.",
+    "nominal_confusion": "90% correct and 5% to each cyclic adjacent recorded label",
+    "nominal_efficiency_range": [
+      0.8,
+      0.98
+    ]
+  },
+  "norm_certificate": {
+    "norm_inv_C0T_inf": 1.25,
+    "norm_D0inv_inf": 1.25,
+    "nonsingularity_condition": "15*gamma < 1",
+    "inverse_difference_bound": "||M-M0||_inf <= 18.75*gamma/(1-15*gamma), M=(C^T)^-1",
+    "efficiency_inverse_difference_bound": "||D^-1-D0^-1||_inf <= 1.25*r/(1-r)",
+    "propagated_inverse_map_entry_bound": "Every entry of B-B0 is bounded by F(gamma,r)=[1.5625*r/(1-r)+23.4375*gamma]/(1-15*gamma)."
+  },
+  "link_to_CAL03": {
+    "CAL03_entrywise_B_threshold": 0.09025558368189042,
+    "safe_region_closed_form": "gamma < [eps_B_star - 1.5625*r/(1-r)]/[23.4375+15*eps_B_star], with positive numerator.",
+    "maximum_efficiency_radius_if_gamma_zero": 0.05460915369036328,
+    "fixtures": [
+      {
+        "relative_efficiency_radius_r": 0,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.003640610246024218,
+        "outer_B_bound_at_95pct_gamma": 0.08549587712843199
+      },
+      {
+        "relative_efficiency_radius_r": 0.01,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.0030039834134924764,
+        "outer_B_bound_at_95pct_gamma": 0.08636542062127152
+      },
+      {
+        "relative_efficiency_radius_r": 0.02,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.002354364196623352,
+        "outer_B_bound_at_95pct_gamma": 0.08723588220505585
+      },
+      {
+        "relative_efficiency_radius_r": 0.03,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.0016913507690971322,
+        "outer_B_bound_at_95pct_gamma": 0.08810726333457626
+      },
+      {
+        "relative_efficiency_radius_r": 0.04,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.001014524561830783,
+        "outer_B_bound_at_95pct_gamma": 0.08897956546769935
+      },
+      {
+        "relative_efficiency_radius_r": 0.05,
+        "safe_entrywise_confusion_radius_gamma_lt": 0.0003234493817798789,
+        "outer_B_bound_at_95pct_gamma": 0.08985279006537504
+      }
+    ],
+    "declared_fixture": {
+      "r": 0.02,
+      "gamma": 0.002,
+      "outer_B_entry_bound": 0.08119871660004208,
+      "carrier_certified": true
+    }
+  },
+  "decision": "A physically interpretable primitive calibration box can be pushed through matrix inversion to a rigorous outer B-box and then into the exact CAL-03 carrier margin theorem. The resulting region is sufficient, conservative, and non-vacuous.",
+  "nonconclusion": "Failure of this sufficient norm bound does not prove carrier ambiguity; the outer polytope is conservative and no real detector calibration is supplied."
+}

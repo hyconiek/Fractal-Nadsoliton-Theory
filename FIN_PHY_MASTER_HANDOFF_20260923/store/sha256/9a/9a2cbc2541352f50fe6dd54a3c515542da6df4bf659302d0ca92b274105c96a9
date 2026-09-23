@@ -1,0 +1,12 @@
+# Replay
+
+The package contains all numerical/scientific producer scripts used in this HDIM campaign and copies of the minimal predecessor inputs.
+
+Run:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay.py --check
+python3 verify_package.py
+```
+
+`replay.py --check` regenerates all result JSON files in dependency-safe filename order and compares their SHA-256 hashes with `EXPECTED_RESULTS.sha256`.

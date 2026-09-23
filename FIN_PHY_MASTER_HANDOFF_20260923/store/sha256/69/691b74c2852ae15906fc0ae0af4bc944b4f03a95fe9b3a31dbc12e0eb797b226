@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib,sys
+root=Path(__file__).resolve().parent
+manifest=root/'MANIFEST.sha256'
+if not manifest.exists():
+    print('manifest missing');sys.exit(1)
+bad=[]; n=0
+for line in manifest.read_text().splitlines():
+    if not line.strip(): continue
+    h,rel=line.split(maxsplit=1); rel=rel.strip(); n+=1
+    p=root/rel
+    if not p.exists(): bad.append((rel,'missing')); continue
+    g=hashlib.sha256(p.read_bytes()).hexdigest()
+    if g!=h: bad.append((rel,g))
+if bad:
+    print('VERIFY FAIL',bad);sys.exit(1)
+print(f'VERIFY PASS: {n}/{n} manifest files match')

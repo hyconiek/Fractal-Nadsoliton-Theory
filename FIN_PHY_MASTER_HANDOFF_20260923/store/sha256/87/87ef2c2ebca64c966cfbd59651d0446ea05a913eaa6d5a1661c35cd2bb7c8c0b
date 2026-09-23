@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,'/mnt/data/fin_phy_source_followup/inputs')
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); L=np.array(L,float)
+# Full smooth positive Fourier sectors 1..5. Independent resonance rows  (j+1)*phi_1 - phi_(j+1)
+# Actually relation (k,0,...,-1 at mode k) satisfies k*1 - k =0.
+R=[]
+for mode in [2,3,4,5]:
+    row=[0]*5; row[0]=mode; row[mode-1]=-1; R.append(row)
+R=np.array(R,int); gen=np.arange(1,6,dtype=int)
+assert np.linalg.matrix_rank(R)==4 and np.all(R@gen==0)
+thresholds={str(k):float(12/L[k]) for k in range(1,7)}
+out={
+ 'task':'DIM-04-full-cyclic-carrier-no-go',
+ 'scientific_state':'PROVED_GENERAL_ONE_DIMENSIONAL_CONTINUOUS_ORBIT_FOR_CURRENT_SCALAR_CYCLIC_CARRIER',
+ 'group_argument':'The continuous closure of label translations on a cyclic carrier is S1. For any state whose stabilizer is finite, every symmetry orbit S1/H is one-dimensional. Adding more scalar Fourier harmonics cannot increase the dimension of that group orbit.',
+ 'full_smooth_modes':[1,2,3,4,5],
+ 'independent_positive_resonance_rows':R.tolist(),
+ 'resonance_argument':'With positive amplitudes the Bessel expansion contains relations k*phi_1-phi_k for k=2..5 with positive coefficients. These four independent resonances pin all relative phases, leaving only common translation.',
+ 'uniform_mode_softening_thresholds_g_12_over_lambda':thresholds,
+ 'multicritical_check':'All strict positive sector eigenvalues are distinct, hence the one-parameter uniform quadratic thresholds are distinct. Simultaneous independent soft doublets require an added tuning/degeneracy premise.',
+ 'conclusion':'Restoring omitted scalar modes k=1,2 does not source a second continuous relational base dimension. A higher-dimensional carrier requires a genuinely larger continuous symmetry/orbit or another independent relational variable.',
+ 'nonconclusions':['Accidental approximate phase softness near zero amplitude is not denied; it is not an exact fixed-extent coordinate.']
+}
+p=ROOT/'results'/'DIM-04_full_cyclic_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'thresholds':thresholds},indent=2))

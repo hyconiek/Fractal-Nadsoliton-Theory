@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+import json, math, sys
+from pathlib import Path
+import numpy as np
+import mpmath as mp
+from scipy.linalg import expm
+from scipy.optimize import brentq
+sys.path.insert(0,'/mnt/data/fin_phy_operational_carrier/inputs')
+import R7P_model as model
+mp.mp.dps=80
+W=np.array(model.strict_kernel(),float); A=np.array(model.laplacian(W),float)
+eigs=np.linalg.eigvalsh(A); L=float(eigs.max())
+w=np.array([W[0,d] for d in range(1,7)])
+gaps=w[:-1]-w[1:]
+delta_near=float(gaps[0]); delta_full=float(gaps.min())
+Lmp=mp.mpf(str(L))
+
+def unit_root(delta):
+    d=mp.mpf(str(delta))
+    f=lambda t: d*t-2*(mp.e**(Lmp*t)-1-Lmp*t)
+    lo=mp.mpf('1e-30'); hi=mp.mpf('1')
+    # nonzero root
+    for _ in range(300):
+        mid=(lo+hi)/2
+        if f(mid)>0: lo=mid
+        else: hi=mid
+    return (lo+hi)/2
+
+def wave_root(delta):
+    d=mp.mpf(str(delta)); s=mp.sqrt(Lmp)
+    f=lambda t: d*t*t-4*(mp.cosh(s*t)-1-Lmp*t*t/2)
+    lo=mp.mpf('1e-20'); hi=mp.mpf('5')
+    for _ in range(300):
+        mid=(lo+hi)/2
+        if f(mid)>0: lo=mid
+        else: hi=mid
+    return (lo+hi)/2
+
+# actual first crossings are strong numerical evidence only
+E,V=np.linalg.eigh(A)
+def vals(ch,t):
+    if ch=='unitary':
+        U=(V*np.exp(-1j*t*E))@V.T
+        return np.array([abs(U[0,d])**2 for d in range(1,7)])
+    C=(V*np.cos(t*np.sqrt(np.maximum(E,0))))@V.T
+    return np.array([abs(C[0,d])**2 for d in range(1,7)])
+
+def first_cross(ch,full=True,tmax=8):
+    pairs=range(5) if full else [0]
+    best=None; which=None
+    grid=np.linspace(1e-7,tmax,30001)
+    for k in pairs:
+        prev=vals(ch,grid[0])[k]-vals(ch,grid[0])[k+1]; tp=grid[0]
+        for t in grid[1:]:
+            cur=vals(ch,t)[k]-vals(ch,t)[k+1]
+            if prev>0 and cur<=0:
+                f=lambda x: vals(ch,x)[k]-vals(ch,x)[k+1]
+                r=brentq(f,tp,t,xtol=1e-13)
+                if best is None or r<best: best=r; which=(k+1,k+2)
+                break
+            prev=cur; tp=t
+    return best,which
+result={
+ 'task':'OCB-02',
+ 'status':'PROVED_CONSERVATIVE_WINDOWS_PLUS_NUMERICAL_WIDER_WINDOWS',
+ 'operator_norm_L':L,
+ 'nearest_gap_w1_minus_w2':delta_near,
+ 'minimum_all_shell_gap':delta_full,
+ 'certified_windows':{
+   'unitary_nearest_t_less_than':mp.nstr(unit_root(delta_near),40),
+   'unitary_all_six_shells_t_less_than':mp.nstr(unit_root(delta_full),40),
+   'wave_nearest_t_less_than':mp.nstr(wave_root(delta_near),40),
+   'wave_all_six_shells_t_less_than':mp.nstr(wave_root(delta_full),40)
+ },
+ 'proof_bounds':{
+   'unitary':('For off-diagonal U(t)=exp(-itA), U_ij=it W_ij+r_ij with |r_ij| <= exp(Lt)-1-Lt. '
+              'If delta*t > 2[exp(Lt)-1-Lt], then |U| (and hence transition probability) preserves the compared shell order.'),
+   'wave':('For C(t)=cos(t sqrt(A)), C_ij=(t^2/2)W_ij+r_ij with |r_ij| <= cosh(t sqrt(L))-1-Lt^2/2. '
+           'If delta*t^2 > 4[cosh(t sqrt(L))-1-Lt^2/2], then |C| and |C|^2 preserve the compared shell order.')
+ },
+ 'strong_numerical_first_crossings':{
+   'unitary_all_shells':first_cross('unitary',True),
+   'unitary_nearest':first_cross('unitary',False),
+   'wave_probability_all_shells':first_cross('wave',True),
+   'wave_probability_nearest':first_cross('wave',False)
+ },
+ 'interpretation':'Carrier adjacency is more robust than the choice of dynamics: heat preserves all shells for all t (OCB-01), while unitary/wave have explicit nonzero dimensionless windows in which the same intrinsic nearest shell is guaranteed. These windows do not supply a physical clock.'
+}
+Path('/mnt/data/fin_phy_operational_carrier/results/OCB-02_cross_channel_bounds.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print('done')

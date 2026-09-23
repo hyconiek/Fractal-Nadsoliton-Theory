@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, math
+import numpy as np
+from scipy.linalg import expm
+from scipy.optimize import brentq
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces();q=12;j=np.arange(q)
+# rotate between distinct k=1 and k=2 cosine eigendirections, fixing uniform vector
+v=np.cos(2*np.pi*j/q);v-=v.mean();v/=np.linalg.norm(v)
+w=np.cos(4*np.pi*j/q);w-=w.mean();w-=v*np.dot(v,w);w/=np.linalg.norm(w)
+K=np.outer(v,w)-np.outer(w,v)
+ones=np.ones(q)
+mask=~np.eye(q,dtype=bool)
+def stats(e):
+ Q=expm(e*K);Ap=Q.T@A@Q
+ return Q,Ap,float(Ap[mask].max()),float(Ap[mask].min()),float(np.linalg.norm(Ap@ones)),float(np.linalg.norm(Ap-A))
+def f(e):return stats(e)[2]
+# first positive crossing in scanned interval
+root=brentq(f,0.2,0.35)
+eps=0.2;Q,Ap,mx,mn,rs,dif=stats(eps)
+# check Q is far from any permutation through max row entries not all 1; use orthogonal mixing witness
+row_max=np.max(np.abs(Q),axis=1)
+# spectra
+spec_err=float(np.max(np.abs(np.linalg.eigvalsh(Ap)-np.linalg.eigvalsh(A))))
+# noncirculant defect against cyclic shift
+S=np.roll(np.eye(q),1,axis=0)
+noncirc=float(np.linalg.norm(S@Ap-Ap@S))
+out={
+ 'task':'STATE-SPACE-SOURCE_Markov_cone_nonidentifiability',
+ 'scientific_state':'PROVED_ABSTRACT_STRICT_OPERATOR_DOES_NOT_UNIQUELY_SELECT_LABEL_SIMPLEX_WITHIN_MARKOV_LAPLACIAN_CLASS',
+ 'rotation_epsilon_witness':eps,'first_offdiagonal_sign_crossing_for_this_rotation':root,
+ 'witness_max_offdiagonal':mx,'witness_min_offdiagonal':mn,'row_sum_residual':rs,
+ 'operator_change_frobenius':dif,'isospectral_max_eigenvalue_error':spec_err,
+ 'cyclic_commutator_after_rotation':noncirc,'min_row_max_abs_Q':float(row_max.min()),'max_row_max_abs_Q':float(row_max.max()),
+ 'theorem':'A has strictly negative off-diagonal entries and A1=0. Let K be any nonzero skew generator on 1^perp mixing distinct eigenspaces. Then Q(e)=exp(eK) fixes 1 and A(e)=Q(e)^T A Q(e) remains symmetric, PSD, isospectral and zero-row-sum. By continuity and strict off-diagonal negativity, an open interval around e=0 also has all off-diagonals negative, so -A(e) is a valid continuous-time Markov generator in a different simplicial basis. Thus abstract self-adjoint A plus Markov positivity does not select a unique vertex/simplex ontology.',
+ 'scope':'This is a carrier-basis nonidentifiability theorem. If the typed strict datum includes the original vertex kernel W as part of the ontology, that extra typing selects the vertex representation by premise; A alone does not.',
+ 'nonconclusions':['This does not erase the intrinsic C12 carrier recovered from the typed weighted kernel W.','Operationally transported preparations/effects may distinguish which representation an apparatus realizes; no such external apparatus is supplied here.']
+}
+p=ROOT/'results'/'STATE-SPACE-SOURCE_markov_nonidentifiability.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

@@ -1,0 +1,35 @@
+# PHY-018 — limits contract
+
+**Scientific status: PASS_SEPARATED_LIMITS_AND_UNIFORM_METHOD_OF_TYPES_BOUND.**
+
+## Five different limits
+
+- `N→∞`: exchangeable copies *inside each cell*; this is the MP7 mean-field/type limit.
+- `M→∞`: number of interacting effective cells.
+- `q→∞`: number of internal labels; PHY-016 gives a genuine internal-state family.
+- `rank→∞`: growth of retained feature directions. At fixed q a centered model has rank at most `q-1`, so rank growth necessarily needs q growth or another carrier.
+- graph refinement: a sequence `Gamma_M` plus inter-level maps and edge scaling. `M→∞` alone is not refinement.
+
+## Uniform N-limit on bounded-degree cell networks
+
+For one q-state cell, the method of types contributes only a polynomial counting uncertainty. A coarse bound is `(N+1)^q` per cell. For M cells the product factor is at most `(N+1)^(qM)`. Dividing its logarithm by the natural large-deviation scale `NM` gives
+
+`q log(N+1)/N`,
+
+which is independent of M.
+
+Therefore for fixed q and a bounded per-cell interaction, the finite-N entropy/type correction goes to zero **uniformly in network size M**. This supports exchanging `N→∞` with a later `M→∞` free-energy-density limit whenever that M-limit itself exists. It does not prove a spatial continuum.
+
+## Extensivity distinguishes sparse and dense compositions
+
+For a cycle `C_M`, `|E|=M`, so the mean-difference interaction is `O(M)` at fixed kappa. For the complete graph, `|E|=M(M-1)/2`; fixed kappa gives `O(M^2)` interaction and a divergent per-cell energy scale. Restoring extensivity requires a new mean-field normalization such as `kappa=kappa0/M`, which changes the causal/locality class.
+
+This is a genuine order-of-model distinction: sparse fixed-coupling composition and dense mean-field composition are not two discretizations of the same law by default.
+
+## Chosen scalable family
+
+For the next gate use `Gamma_M=C_M`, degree two and unit dimensionless edge weights. A geometric spacing `h=1/M` is **not** yet part of the theory; it will be introduced explicitly only as a refinement convention in PHY-020 and challenged by controls.
+
+## Decision
+
+PHY-018 passes. The only presently controlled route toward an extensive local collective limit is a bounded-degree M-family. N, M, q, rank and refinement are now separate typed limits. FIN does not yet select which M-family is fundamental.

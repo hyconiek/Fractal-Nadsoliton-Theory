@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+from scipy.optimize import minimize_scalar
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+root=Path(__file__).resolve().parents[1]
+wa=json.loads((root/'inputs'/'edge_automaton3_challenger.json').read_text()); hmm=json.loads((root/'inputs'/'state_hmm3_scout.json').read_text())
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0]); p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1. if min(r,12-r)==1 else (-1. if min(r,12-r)==2 else 0.) for r in range(1,12)]); cat=np.where(c==1,0,np.where(c==-1,1,2)); base=np.array([p[cat==a].sum() for a in range(3)]); csum=np.array([c[cat==a].sum() for a in range(3)]); delta=.05
+words=np.array(list(itertools.product(range(3),repeat=4)),dtype=int); P=np.zeros(81)
+for z0 in [-1,1]:
+ for z1 in [-1,1]:
+  E=np.array([base+z0*delta*csum,base+z1*delta*csum,base+z0*delta*csum,base+z1*delta*csum]); P += .25*np.prod(E[np.arange(4)[:,None],words.T],axis=0)
+P/=P.sum()
+pi=np.asarray(wa['pi'],float); M=np.asarray(wa['M'],float)
+def qword(w):
+ v=pi.copy()
+ for a in w: v=v@M[a]
+ return float(v.sum())
+Q=np.array([qword(w) for w in words]); Q/=Q.sum(); Hq=Q.reshape(9,9); sv=np.linalg.svd(Hq,compute_uv=False)
+KL=float(np.sum(P*np.log(P/Q))); TV=float(.5*np.abs(P-Q).sum()); BC=float(np.sum(np.sqrt(P*Q))); opt=minimize_scalar(lambda z:float(np.sum((P**z)*(Q**(1-z)))),bounds=(0,1),method='bounded',options={'xatol':1e-14}); CI=-math.log(opt.fun)
+# Verify probabilistic automaton normalization: sum_a M_a is row stochastic.
+Tsum=M.sum(axis=0); rowsum=Tsum.sum(axis=1)
+# Exact lift to 11 symbols: M_j = M_cat(j) * p_j/base_cat(j). Conditional within-category law is identical in target and challenger.
+Mfull=np.array([M[cat[j]]*(p[j]/base[cat[j]]) for j in range(11)])
+fullrows=Mfull.sum(axis=0).sum(axis=1)
+result={
+ 'task':'OCB-MEM-05',
+ 'status':'THREE_STATE_EDGE_EMITTING_WEIGHTED_AUTOMATON_IS_CLOSER_RANK3_CHALLENGER',
+ 'challenger':{
+   'class':'3-state time-homogeneous edge-emitting probabilistic weighted automaton; each observed category labels a nonnegative 3x3 transition matrix',
+   'initial':pi.tolist(),'category_matrices':M.tolist(),'sum_matrix_row_sums':rowsum.tolist(),'lifted_11_symbol_row_sums':fullrows.tolist(),
+   'rank_at_most_3_by_factorization':True,'block_hankel_singular_values':sv.tolist(),
+   'provenance':'Parameters are a frozen exploratory multistart likelihood fit. Replay verifies the existence witness and all reported distances; no global optimum claim is made.'
+ },
+ 'distances':{'KL_target_to_challenger':KL,'total_variation':TV,'bhattacharyya_coefficient':BC,'chernoff_information':CI,'chernoff_s':float(opt.x)},
+ 'necessary_query_lower_bounds':{
+   'both_typeI_and_typeII_le_5pct_Bretagnolle_Huber':math.ceil(math.log(5)/KL),
+   'equal_prior_Bayes_error_le_5pct_Hellinger':math.ceil(math.log(.19)/(2*math.log(BC))),
+   'simple_pair_Chernoff_sufficient_context_only':math.ceil(math.log(10)/CI)
+ },
+ 'comparison_state_emitting_HMM_scout':{'KL':hmm['KL'],'TV':hmm['TV'],'N_BH':hmm['N_BH'],'N_H':hmm['N_H'],'scope':'Frozen scout only; edge-emitting automaton is the promoted broader challenger.'},
+ 'decision':'Allowing observation-labeled hidden transitions produces a strictly broader rank-3 process class and a closer explicit challenger than the state-emitting HMM or latent-class mixture. The rank-4 memory signal is therefore intrinsically hard to distinguish on four-jump records.',
+ 'nonconclusion':'This is not the globally closest rank<=3 weighted automaton/HMM and not a universal minimax optimum.'
+}
+(root/'results'/'OCB-MEM-05_weighted_automaton.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'KL':KL,'TV':TV,'rank_num':int(np.sum(sv>1e-12)),'N_BH':result['necessary_query_lower_bounds']['both_typeI_and_typeII_le_5pct_Bretagnolle_Huber'],'N_H':result['necessary_query_lower_bounds']['equal_prior_Bayes_error_le_5pct_Hellinger']},indent=2))

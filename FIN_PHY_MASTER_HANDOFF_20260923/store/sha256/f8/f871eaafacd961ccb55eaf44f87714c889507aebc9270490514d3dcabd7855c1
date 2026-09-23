@@ -1,0 +1,73 @@
+# FIN PHY Hankel / calibration / channel continuation handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+`FIN_PHY_OCB_MEMORY_CAL_CHANNEL_20260923.zip`
+
+SHA-256: `7b425b827d205a8d24c86f2c71db4b933eb5b151f77d3bc69c03a2685154a737`
+
+## Goal
+
+Continue from OCB-HANKEL-01 and the remaining calibration/channel atoms without reopening already
+closed generic memory/tail lanes.
+
+## Completed atoms
+
+### OCB-HANKEL-01
+
+- strict iid path-Hankel rank: 1;
+- persistent hidden-bit rank: exactly 2;
+- period-2 raw 4x4 Hankel determinant:
+  `-delta^8 (p_shell1+p_shell2)^2`;
+- general rotating period-`L` alias: exact complete Hankel rank `2^L`;
+- conservative finite-sample rank-lower-bound fixtures exported.
+
+### OCB-CAL-02
+
+- in the declared scalar adjacent-confusion family, the embedded-jump structural zero `p_i[i]=0`
+  uniquely recovers `eps=.05` from the noiseless frozen record;
+- independent multiplicative efficiency uncertainty preserves shell1>shell2 iff
+  `r < 0.4198336126838737`;
+- an explicit `r>r*` removal witness reverses the ranking.
+
+### OCB-MEM-02
+
+- generic one-step Hankel span stabilization is **refuted** as an early stopping rule;
+- period-2/3/4 aliases locally look rank 1 before their hidden correlation horizon;
+- for the declared rotating-sign family only, lag contrast scanning detects period `L` at lag `L`
+  with `O(Hmax)` observables.
+
+### OCB-CHANNEL-02
+
+- first operator jet can be estimated in an idealized amplitude/operator record;
+- heat/wave/unitary-amplitude jets align with `-A` at small control;
+- the spectral projector `P1=f(A)` has relative residual about `0.83349` to `span{A}` and an
+  antipodal (`d=6`) dominant response;
+- generic functional calculus is therefore not a valid carrier-transfer class.
+
+## Main synthesis
+
+`intrinsic carrier -> operational carrier`
+
+is distinct from
+
+`operational carrier -> Markov law -> hidden-memory dimension -> complete channel`.
+
+The current programme now has exact mathematical witnesses for each separation.
+
+## Replay
+
+Use `python replay.py --check` and `python verify_package.py`.
+
+## Next highest-value atom
+
+`OCB-HANKEL-02`: improve finite-sample noisy rank certification.  The current exact mathematics is
+strong, but the naive full-rank period-2 Hoeffding/Weyl bound is intentionally enormous; reducing
+that gap is now the best bounded operational problem.
+
+## Nonpromotion boundary
+
+No physical realization, apparatus, raw external events, absolute time/length/energy scale,
+continuum physics, quantum bridge, gravity, Standard Model or ToE follows.

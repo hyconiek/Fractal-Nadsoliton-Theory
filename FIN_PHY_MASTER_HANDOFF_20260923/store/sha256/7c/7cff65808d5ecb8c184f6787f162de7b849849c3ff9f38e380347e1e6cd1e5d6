@@ -1,0 +1,99 @@
+{
+  "task": "OCB-CHANNEL-03",
+  "status": "PROBABILITY_ONLY_LEADING_LAWS_DERIVED__CARRIER_SURVIVES_BUT_CHANNEL_CATEGORY_NEEDS_ESCAPE_SCALING",
+  "analytic_leading_orders": {
+    "heat": "P_ij(t)=t W_ij+O(t^2) for i!=j; total escape S_H(t)=s_i t+O(t^2). Conditional destination profile -> W_ij/s_i.",
+    "unitary_probability": "|U_ij(t)|^2=t^2 W_ij^2+O(t^4); total off-diagonal probability S_U(t)=t^2 sum_j W_ij^2+O(t^4). Conditional destination profile -> W_ij^2/sum W^2.",
+    "wave_squared_response": "|cos(t sqrt(A))_ij|^2=(t^4/4) W_ij^2+O(t^6) for zero-velocity wave response. Conditional off-diagonal squared-response profile -> W_ij^2/sum W^2.",
+    "carrier_consequence": "Because every strict W_ij is positive and shell weights are strictly ordered, W and W^2 induce the same top-two graph. Thus probability-only records preserve the carrier at leading order even when amplitude access is absent."
+  },
+  "channel_category_separator": {
+    "principle": "Retain total escape/off-diagonal mass at two proportional control settings. If physical control t is known only up to an overall multiplicative scale, the log-slope log(S(2t)/S(t))/log 2 is still scale-free to leading order.",
+    "leading_exponents": {
+      "heat": 1,
+      "unitary_probability": 2,
+      "wave_squared_response": 4
+    },
+    "warning": "Conditioning only on the destination and discarding attempts/returns removes this exponent information. Unitary and wave have the same leading normalized W^2 profile."
+  },
+  "numerical_strict_checks": [
+    {
+      "t": 0.001,
+      "heat": {
+        "total_offdiag_record": 0.0016586611281237524,
+        "log2_slope_t_to_2t": 0.9985694607476922,
+        "max_normalized_profile_error": 0.0001207426720233884
+      },
+      "unitary": {
+        "total_offdiag_record": 5.379634402128192e-07,
+        "log2_slope_t_to_2t": 1.9999988770073602,
+        "max_normalized_profile_error": 3.430211442667641e-08
+      },
+      "wave": {
+        "total_offdiag_record": 1.3449083727823022e-13,
+        "log2_slope_t_to_2t": 3.999998148854494,
+        "max_normalized_profile_error": 1.8367119825057898e-08
+      }
+    },
+    {
+      "t": 0.005,
+      "heat": {
+        "total_offdiag_record": 0.008260496451907235,
+        "log2_slope_t_to_2t": 0.9928642200176259,
+        "max_normalized_profile_error": 0.0006033335825784136
+      },
+      "unitary": {
+        "total_offdiag_record": 1.3449002255528254e-05,
+        "log2_slope_t_to_2t": 1.9999719251982142,
+        "max_normalized_profile_error": 8.575537966404312e-07
+      },
+      "wave": {
+        "total_offdiag_record": 8.405591006224984e-11,
+        "log2_slope_t_to_2t": 3.999953695888184,
+        "max_normalized_profile_error": 4.6175657458791264e-07
+      }
+    },
+    {
+      "t": 0.01,
+      "heat": {
+        "total_offdiag_record": 0.016439479419519145,
+        "log2_slope_t_to_2t": 0.9857706845945463,
+        "max_normalized_profile_error": 0.0012057146933643903
+      },
+      "unitary": {
+        "total_offdiag_record": 5.379496216359327e-05,
+        "log2_slope_t_to_2t": 1.9998877009707052,
+        "max_normalized_profile_error": 3.430226973022421e-06
+      },
+      "wave": {
+        "total_offdiag_record": 1.3448513965384948e-09,
+        "log2_slope_t_to_2t": 3.999814781802346,
+        "max_normalized_profile_error": 1.8470590810171217e-06
+      }
+    },
+    {
+      "t": 0.02,
+      "heat": {
+        "total_offdiag_record": 0.032556267314762716,
+        "log2_slope_t_to_2t": 0.9717100316289994,
+        "max_normalized_profile_error": 0.0024075994511250642
+      },
+      "unitary": {
+        "total_offdiag_record": 0.00021516309975943112,
+        "log2_slope_t_to_2t": 1.9995508067299743,
+        "max_normalized_profile_error": 1.3721096478902517e-05
+      },
+      "wave": {
+        "total_offdiag_record": 2.1514860014883593e-08,
+        "log2_slope_t_to_2t": 3.999259102258651,
+        "max_normalized_profile_error": 7.388539751296275e-06
+      }
+    }
+  ],
+  "source0_leading_top_two_destinations": [
+    1,
+    11
+  ],
+  "decision": "Probability-only access is sufficient for leading carrier recovery, but not for the earlier amplitude-level first-operator-jet claim. Channel discrimination requires retaining escape/return information across at least two control levels or another typed observable.",
+  "nonconclusion": "The wave squared response is a declared mathematical record, not a sourced physical Born probability. No physical channel category or clock map is selected by FIN."
+}

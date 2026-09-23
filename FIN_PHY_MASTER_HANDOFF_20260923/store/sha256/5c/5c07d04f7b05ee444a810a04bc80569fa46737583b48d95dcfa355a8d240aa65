@@ -1,0 +1,76 @@
+# PROTECT-03 — protecting-law source audit
+
+Date: 2026-09-23
+
+## Result
+
+`PROTECT-03` does **not** identify a unique nonlinear protecting law.
+It does produce two stronger results than the predecessor.
+
+### 1. Exact refinement/composition rigidity collapses to the quadratic law
+
+For a continuous spectral-radial block-additive law, exact splitting/refinement
+of a modal power gives the Cauchy equation
+
+\[
+\psi(x+y)=\psi(x)+\psi(y),\qquad x,y\ge0,
+\]
+
+hence `psi(x)=c x`.  A nonzero homogeneous polynomial of amplitude degree
+larger than two therefore cannot satisfy this exact split-refinement law.
+
+If one further asks a normalized spectral expectation to be additive for
+independent Kronecker-sum systems, its coefficient function must satisfy
+
+\[
+c(\lambda+\mu)=c(\lambda)+c(\mu).
+\]
+
+Continuity and `c(0)=0` give `c(lambda)=c0 lambda`.  Up to one scale, the
+survivor is precisely the strict Dirichlet quadratic form.
+
+Thus a strong, target-blind naturality principle **selects the existing
+quadratic form but rules out the desired nontrivial protecting nonlinearity**.
+
+### 2. Entropy does not remove the source problem because the representation is unsourced
+
+Label-space Shannon/KL and Shannon entropy of normalized modal powers are both
+parameter-free information functionals with native product-additivity.  They
+make opposite phase predictions:
+
+- label KL changes around a strict `T5` phase orbit;
+- spectral Shannon is exactly constant on the same fixed-power orbit.
+
+The explicit witness in `PROTECT-03B_entropy_basis_ambiguity.json` changes
+label KL by about `1.608e-3` while modal-power probabilities and spectral
+Shannon remain equal to floating precision.
+
+The source question therefore moves one level down: **which observation/state
+algebra is primitive?**  An abstract appeal to entropy cannot choose it.
+
+### 3. State-space symmetry split
+
+The strict operator has connected orthogonal centralizer `T5`, but the full
+probability simplex has only permutation affine automorphisms.  Because the
+strict radial weights are strictly decreasing with carrier distance, a
+permutation preserving the strict operator must preserve the nearest-neighbor
+cycle and hence belongs to `D12`.
+
+Therefore
+
+\[
+\mathrm{Aut}(\Delta_{11})\cap C_{O(12)}(A)=D_{12}.
+\]
+
+The connected `T5` is a genuine operator/energy degeneracy and can act on a
+small interior torus, but it is **not a global symmetry of the probability
+state space**.
+
+## Disposition
+
+`PROTECT-03 = CLOSED_AS_NONIDENTIFIED_WITH_RIGIDITY_RESULT`.
+
+A future exact nonlinear protection law must relax one of the strong
+refinement/additivity premises, retain hidden refinement memory, or source a
+new state/observation algebra.  It must not be chosen because it preserves the
+desired dimension.

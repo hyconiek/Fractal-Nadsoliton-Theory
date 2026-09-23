@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib
+ROOT=Path(__file__).resolve().parent
+def sha(p):
+    h=hashlib.sha256(); h.update(Path(p).read_bytes()); return h.hexdigest()
+manifest=ROOT/'MANIFEST.sha256'
+if not manifest.exists(): print('NO MANIFEST'); raise SystemExit(2)
+bad=[]; n=0
+for line in manifest.read_text().splitlines():
+    if not line.strip(): continue
+    hv,rel=line.split('  ',1); n+=1; p=ROOT/rel
+    if not p.exists(): bad.append((rel,'MISSING')); continue
+    got=sha(p)
+    if got!=hv: bad.append((rel,got))
+print(f'manifest_files={n} manifest_bad={len(bad)}')
+for x in bad[:20]: print('BAD',x)
+raise SystemExit(1 if bad else 0)

@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+# Exhibit a positive continuous log-periodic resistance law that satisfies equal bisection but not arbitrary splitting.
+eps=0.2
+def R(x): return x*(1+eps*math.sin(2*math.pi*math.log(x,2)))
+def c(x): return 1/R(x)
+# R(2x)=2R(x) exactly by periodicity of sin(log2 x).
+xs=[0.37,0.83,1.7]
+bis=[abs(R(2*x)-2*R(x)) for x in xs]
+a,b=0.37,0.61
+arbitrary_defect=R(a+b)-R(a)-R(b)
+out={
+ 'task':'PRIN-02-refinement-principle-source-test',
+ 'scientific_state':'CLASSIFIED__ALL_SPLITS_FORCE_1_OVER_LENGTH__EQUAL_SPLITS_DO_NOT',
+ 'all_split_equation':'c(a+b)=c(a)c(b)/(c(a)+c(b)); equivalently R=1/c satisfies R(a+b)=R(a)+R(b).',
+ 'all_split_theorem':'For positive measurable (or continuous / locally bounded) R on R_+, Cauchy additivity forces R(ell)=rho*ell, hence c(ell)=kappa0/ell.',
+ 'equal_bisection_only':'The weaker equation R(2x)=2R(x) admits infinitely many positive continuous log-periodic solutions R(x)=x f(log_2 x), with f positive and 1-periodic.',
+ 'explicit_counterexample':{'epsilon':eps,'formula':'R(x)=x[1+0.2 sin(2 pi log_2 x)]','bisection_residuals':bis,'arbitrary_split_example':{'a':a,'b':b,'defect':arbitrary_defect}},
+ 'interpretation':'The 1/ell law is genuinely selected by arbitrary-subdivision projective consistency, not by refinement in a single dyadic lattice alone. Therefore the strength of the refinement principle must remain explicit.',
+ 'source_status':'Schur/series elimination supplies the composition algebra after a subdivision is declared; it does not by itself declare that every metric split is physically the same edge at finer resolution.',
+ 'nonconclusions':['No physical kappa0 is sourced.','No claim that arbitrary-subdivision consistency is itself derived from the isolated FIN cell.']
+}
+assert max(bis)<1e-12 and abs(arbitrary_defect)>1e-4
+p=ROOT/'results'/'PRIN-02_refinement_classification.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'arbitrary_defect':arbitrary_defect},indent=2))

@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import argparse,hashlib,subprocess,sys,os
+ROOT=Path(__file__).resolve().parent
+SCRIPTS=[
+ 'scripts/hankel_noisy_certification.py',
+ 'scripts/memory_query_complexity.py',
+ 'scripts/calibration_polytope.py',
+ 'scripts/probability_channel_jet.py'
+]
+RESULTS=[
+ 'results/OCB-HANKEL-02_noisy_rank.json',
+ 'results/OCB-MEM-03_query_complexity.json',
+ 'results/OCB-CAL-03_polytope.json',
+ 'results/OCB-CHANNEL-03_probability_only.json'
+]
+def sha(p):
+    h=hashlib.sha256(); h.update(Path(p).read_bytes()); return h.hexdigest()
+def parse_expected():
+    p=ROOT/'EXPECTED_RESULTS.sha256'; out={}
+    if not p.exists(): return out
+    for line in p.read_text().splitlines():
+        if not line.strip(): continue
+        hv,rel=line.split('  ',1); out[rel]=hv
+    return out
+ap=argparse.ArgumentParser(); ap.add_argument('--check',action='store_true'); args=ap.parse_args()
+env=dict(os.environ); env['PYTHONDONTWRITEBYTECODE']='1'
+for s in SCRIPTS:
+    print('RUN',s,flush=True)
+    subprocess.run([sys.executable,str(ROOT/s)],check=True,cwd=ROOT,env=env)
+if args.check:
+    exp=parse_expected(); bad=[]
+    for rel in RESULTS:
+        got=sha(ROOT/rel); want=exp.get(rel)
+        ok=(got==want); print(('PASS' if ok else 'FAIL'),rel,got)
+        if not ok: bad.append((rel,want,got))
+    if bad:
+        raise SystemExit(1)

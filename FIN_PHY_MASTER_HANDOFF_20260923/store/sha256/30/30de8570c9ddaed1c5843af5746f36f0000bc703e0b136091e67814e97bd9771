@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12
+row=W[0]
+exit_rate=float(row.sum())
+probs=row/exit_rate
+# exclude self; two nearest neighbours are +/-1
+p1=float(W[0,1]/exit_rate); p2=float(W[0,2]/exit_rate); gap=p1-p2
+competitors=q-3 # for each true NN, all nonself non-other-NN competitors = 9
+comparisons=2*competitors
+Nbound=math.ceil(2*math.log(comparisons/0.05)/(gap*gap))
+# short-time derivative: exp(-tA)=I-tA+O(t2), offdiag derivative W_ij
+# embedded jump chain is invariant under global clock scale c.
+# verify top-two destination indices each row reconstruct cycle
+adj=[]
+for i in range(q):
+    dest=[j for j in range(q) if j!=i]
+    top=sorted(dest,key=lambda j:W[i,j],reverse=True)[:2]
+    adj.append(sorted(top))
+expected=[sorted([(i-1)%q,(i+1)%q]) for i in range(q)]
+assert adj==expected
+out={
+ 'task':'CARRIER-PHYSICAL-BRIDGE-01_scale_free_short_time_response',
+ 'scientific_state':'CONDITIONAL_OPERATIONAL_BRIDGE_PROVED__NO_EMPIRICAL_VALIDATION',
+ 'premise':'A physical system realizes the finite-state continuous-time Markov generator Q=-A in the typed vertex basis, and preparations/readouts resolve those vertex states.',
+ 'short_time_identity':'For i!=j, d/dt [exp(-t A)]_{ij}|_{t=0}=W_ij.',
+ 'clock_free_identity':'Conditioned on a jump leaving i, destination probability is W_ij/sum_{l!=i}W_il; a global rescaling A->cA cancels.',
+ 'exit_rate_dimensionless':exit_rate,'nearest_neighbor_destination_probability_each':p1,'second_shell_probability_each':p2,'probability_gap':gap,
+ 'reconstructed_top_two_destinations':adj,
+ 'cycle_reconstructed_exactly':True,
+ 'conservative_sampling_bound':{'method':'Hoeffding + union bound over 18 nearest-vs-competitor comparisons','error_target':0.05,'independent_departures_per_prepared_vertex':Nbound},
+ 'consequence':'Under the declared Markov/state-ontology premises, the intrinsic C12 adjacency is operationally identifiable from transition records without an absolute clock. This is a testable bridge, not evidence that nature realizes those premises.',
+ 'nonconclusions':['No physical apparatus or raw events were supplied.','This does not source the Markov temporal category or the typed vertex simplex.','It does not identify the continuum tail/refinement law.']
+}
+(ROOT/'results'/'CARRIER-PHYSICAL-BRIDGE-01_markov_response.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

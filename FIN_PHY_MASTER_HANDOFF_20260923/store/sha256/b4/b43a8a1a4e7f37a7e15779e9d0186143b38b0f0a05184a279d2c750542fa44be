@@ -1,0 +1,41 @@
+# FIN PHY Handoff — Hankel-03 / MEM-04 / CAL-04 / CHANNEL-04
+
+Date: 2026-09-23
+
+## Executive status
+
+This continuation was run after an explicit live GitHub audit of `hyconiek/Fractal-Nadsoliton-Theory` at HEAD
+`9ad5cd5cd7c9922879f2d25febbc4b9bd9b62426`.
+
+### Main verdicts
+
+- `OCB-HANKEL-03A`: **PASS for anytime validity, negative for practical generic power**.
+- `OCB-MEM-04`: **PASS** — explicit rank-3 challenger gives nontrivial full-path query-count lower bounds.
+- `OCB-CAL-04`: **PASS** — primitive detector uncertainty propagates to a non-vacuous inverse-map safe region.
+- `OCB-CHANNEL-04`: **PASS conditionally** — finite-control probability-only channel category separation survives bounded local time-map nonlinearity.
+
+## Headline numbers
+
+- Andreief determinant signal: `1.1601399943696203e-5`.
+- Generic determinant Hoeffding e-process: mathematically valid but oracle expected-log benchmark is ~`4.16e14` paths for `log 20` evidence.
+- Explicit broad rank-3 challenger: `KL=1.0359282401045487e-5`, `TV=0.001037465057253445`.
+- Necessary independent four-jump reset queries for both errors <=5% (Bretagnolle--Huber): **155,362**.
+- Necessary equal-prior queries for Bayes error <=5% (Bhattacharyya/Hellinger): **321,273**.
+- Primitive calibration replay fixture `r=0.02`, `gamma=0.002`: certified inverse-map radius `0.0811987 < 0.0902556`.
+- Finite control-to-time distortion safe threshold at `t1<=0.01`: **eta < 0.1133462185**.
+
+## Replay
+
+Run
+
+`python replay.py --check`
+
+then
+
+`python verify_package.py`.
+
+All scientific producers are deterministic except the fixed-seed Monte-Carlo **power diagnostic** inside HANKEL-03A; its output is deterministic because the seed is frozen and it is not used for theorem validity.
+
+## Highest next priority
+
+`OCB-HANKEL-03B`: a practical anytime-valid composite-rank test that does not reduce all evidence to the tiny determinant.  In parallel, `OCB-MEM-05` should search one broader explicit rank-3 hidden-process class, with live-repo de-dup first.

@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.optimize import brentq
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12
+evals,evecs=np.linalg.eigh(A)
+
+def row(kind,t):
+    if kind=='heat':
+        M=(evecs*np.exp(-evals*t))@evecs.T
+        return M[0]
+    if kind=='unitary':
+        U=(evecs*np.exp(-1j*evals*t))@evecs.T
+        return np.abs(U[0])**2
+    if kind=='wave':
+        C=(evecs*np.cos(np.sqrt(np.maximum(evals,0))*t))@evecs.T
+        return np.abs(C[0])**2
+    raise ValueError
+
+def shell(kind,t): return np.array([row(kind,t)[d] for d in range(1,7)])
+# locate first adjacent-order crossing numerically for unitary/wave.
+crossings={}
+for kind,hi in [('unitary',2.0),('wave',5.0)]:
+    ts=np.linspace(1e-6,hi,20001)
+    ds=np.array([shell(kind,t)[:-1]-shell(kind,t)[1:] for t in ts])
+    best=None
+    for m in range(5):
+        idx=np.where(ds[:-1,m]*ds[1:,m]<=0)[0]
+        if len(idx):
+            i=int(idx[0]); root=brentq(lambda x: shell(kind,x)[m]-shell(kind,x)[m+1],float(ts[i]),float(ts[i+1]))
+            cand=(root,m+1,m+2)
+            if best is None or cand[0]<best[0]: best=cand
+    crossings[kind]=None if best is None else {'first_adjacent_shell_crossing_time_dimensionless':best[0],'shells':[best[1],best[2]]}
+# heat checked on finite grid only
+heat_grid_all=True
+for t in np.linspace(1e-6,10,20001):
+    v=shell('heat',float(t))
+    if not np.all(v[:-1]>v[1:]): heat_grid_all=False;break
+out={
+ 'task':'CARRIER-PHYSICAL-BRIDGE-04_short_time_category_invariant_carrier',
+ 'scientific_state':'ASYMPTOTIC_THEOREM_PLUS_NUMERICAL_SAFE_WINDOW_SCOUT',
+ 'theorem':'For i!=j and W_ij>0: heat response has leading cross term t W_ij; unitary transition probability has leading term t^2 W_ij^2; zero-velocity wave cross amplitude has leading term (t^2/2) W_ij (and squared intensity proportional to W_ij^2). Any strictly ordered positive shell weights therefore induce the same shell ranking for sufficiently small t in all three categories.',
+ 'strict_shell_weights':[float(W[0,d]) for d in range(1,7)],
+ 'numerical_first_order_crossings':crossings,
+ 'heat_shell_order_verified_grid_t_le_10':heat_grid_all,
+ 'consequence':'The cyclic carrier can be an operationally category-robust short-time object even though heat, unitary and wave dynamics are mutually inequivalent. This separates carrier identification from dynamics selection.',
+ 'nonconclusions':['Crossing times are numerical scouts, not interval-certified maximal windows.','A physical apparatus must still define preparation, record and a controllable approach to short time.','This does not select one dynamics or provide seconds.']
+}
+(ROOT/'results'/'CARRIER-PHYSICAL-BRIDGE-04_category_invariant.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

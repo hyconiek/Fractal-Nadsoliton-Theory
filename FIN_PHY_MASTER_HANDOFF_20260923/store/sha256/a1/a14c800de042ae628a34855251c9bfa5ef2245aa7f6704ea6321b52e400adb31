@@ -1,0 +1,249 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from scipy.optimize import minimize
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+
+W,A,L,X7,C4,A7=model.feature_spaces()
+LAM=np.array([L[3],L[4],L[5],L[6]],float)
+
+
+def aligned_design(q:int, parity:bool):
+    j=np.arange(q,dtype=float)
+    cols=[]
+    for idx,k in enumerate((3,4,5)):
+        amp=math.sqrt(float(LAM[idx])/6.0)
+        cols.append(amp*np.cos(2*np.pi*k*j/q))
+    if parity:
+        cols.append(math.sqrt(float(LAM[3])/12.0)*((-1.0)**np.arange(q)))
+    return np.column_stack(cols)
+
+
+def full_design(q:int, parity:bool):
+    j=np.arange(q,dtype=float); cols=[]
+    for idx,k in enumerate((3,4,5)):
+        amp=math.sqrt(float(LAM[idx])/6.0)
+        cols += [amp*np.cos(2*np.pi*k*j/q),amp*np.sin(2*np.pi*k*j/q)]
+    if parity:
+        cols.append(math.sqrt(float(LAM[3])/12.0)*((-1.0)**np.arange(q)))
+    return np.column_stack(cols)
+
+
+def dual(s,g,Xa):
+    h=Xa@s
+    m=float(np.max(h))
+    return float(s@s/(2*g) - (m+math.log(float(np.mean(np.exp(h-m))))))
+
+
+def optimize_branch(q:int,g:float,parity:bool,warm=None):
+    X=aligned_design(q,parity)
+    d=X.shape[1]
+    starts=[]
+    if warm is not None:
+        w=np.asarray(warm,float)
+        if len(w)==d: starts.append(w)
+    for a in (0.5,1,2,3,4,5): starts.append(np.ones(d)*a)
+    best=None
+    for x0 in starts:
+        r=minimize(lambda x:dual(x,g,X),x0,method='BFGS',options={'gtol':1e-11,'maxiter':1800})
+        cand=(float(r.fun),np.asarray(r.x,float),bool(r.success),float(np.linalg.norm(r.jac)) if getattr(r,'jac',None) is not None else None)
+        if best is None or cand[0]<best[0]: best=cand
+    phi,s,success,grad=best
+    h=X@s; hmax=float(h.max()); p=np.exp(h-hmax); p=p/p.sum()
+    Xf=full_design(q,parity)
+    mu=Xf.T@p
+    # modal radii; aligned root should have sine means approx zero
+    radii=[float(math.hypot(mu[2*i],mu[2*i+1])) for i in range(3)]
+    z=float(mu[-1]) if parity else 0.0
+    return {'q':q,'g':g,'parity':parity,'phi':phi,'s':s.tolist(),'success':success,'grad_norm':grad,
+            'pmax':float(p.max()),'radii':radii,'z':z,'mu':mu.tolist()}
+
+
+def d2_offsets(q:int,radii,z=0.0,parity=False):
+    out=[]
+    for r in range(1,q//2+1):
+        d2=0.0
+        for rho,k in zip(radii,(3,4,5)):
+            d2 += 2*rho*rho*(1-math.cos(2*math.pi*k*r/q))
+        if parity and (r%2): d2 += 4*z*z
+        out.append((r,max(d2,0.0)))
+    return out
+
+
+def degree_for_offsets(q,offs):
+    return sum(1 if (q%2==0 and r==q//2) else 2 for r in offs)
+
+
+def connectivity_offsets(q, dist_rows, allowed=None, divisor=1):
+    # For a circulant on Z_{q/divisor} represented by original offsets r divisible by divisor.
+    # Include complete equal-distance shells in ascending order until gcd condition gives connectivity.
+    n=q//divisor
+    rows=[(r,d2) for r,d2 in dist_rows if (allowed is None or allowed(r))]
+    rows.sort(key=lambda x:(x[1],x[0]))
+    selected=[]; threshold=None
+    i=0
+    while i<len(rows):
+        val=rows[i][1]
+        tol=max(1e-13,1e-11*max(1.0,abs(val)))
+        shell=[]
+        while i<len(rows) and abs(rows[i][1]-val)<=tol:
+            shell.append(rows[i][0]); i+=1
+        selected.extend(shell); threshold=val
+        g=n
+        for r in selected: g=math.gcd(g,r//divisor)
+        if g==1:
+            return {'offsets':sorted(set(selected)),'threshold_d2':float(threshold),'threshold':float(math.sqrt(max(threshold,0))),
+                    'degree':degree_for_offsets(q,selected),'connected_gcd':1}
+    return {'offsets':sorted(set(selected)),'threshold_d2':float(threshold) if threshold is not None else None,
+            'threshold':float(math.sqrt(max(threshold,0))) if threshold is not None else None,
+            'degree':degree_for_offsets(q,selected),'connected_gcd':None}
+
+
+def rg1(rec):
+    rows=d2_offsets(rec['q'],rec['radii'],rec['z'],rec['parity'])
+    out=connectivity_offsets(rec['q'],rows)
+    out['rule']='minimal all-pairs distance threshold making the translation-orbit graph connected'
+    return out
+
+
+def rg2(rec):
+    assert rec['parity'] and rec['q']%2==0
+    q=rec['q']; rows=d2_offsets(q,rec['radii'],rec['z'],True)
+    within=connectivity_offsets(q,rows,allowed=lambda r:r%2==0,divisor=2)
+    odds=[(r,d2) for r,d2 in rows if r%2==1]
+    m=min(d2 for _,d2 in odds); tol=max(1e-13,1e-11*max(1.0,abs(m)))
+    cross=sorted(r for r,d2 in odds if abs(d2-m)<=tol)
+    offs=sorted(set(within['offsets']+cross))
+    return {'rule':'parity-fiber-aware: connect each Z2 sheet at its minimal intrinsic threshold, then add the nearest cross-sheet shell',
+            'within_offsets':within['offsets'],'within_threshold':within['threshold'],'cross_offsets':cross,
+            'cross_threshold':math.sqrt(max(m,0.0)),'offsets':offs,'degree':degree_for_offsets(q,offs)}
+
+
+def lap_eig_jump12(q,k):
+    th=2*math.pi*k/q
+    return 2*(1-math.cos(th))+2*(1-math.cos(2*th))
+
+
+def q12_event():
+    certp=ROOT/'inputs'/'R7P-026_equal_energy_event.json'
+    cert=json.loads(certp.read_text())
+    # certificate center coordinates s3,s4,s5,s6 in aligned C4 chart
+    if 'root_center' in cert: s=cert['root_center'][:4]
+    elif 's_center' in cert: s=cert['s_center']
+    else:
+        # common producer structure: center of root_box coordinates first 4 amplitudes
+        rb=cert.get('root_box') or cert.get('box')
+        if rb:
+            s=[(float(a)+float(b))/2 for a,b in rb[:4]]
+        else:
+            # stable known center from accepted R7P-026, only fallback if schema changed
+            s=[1.81990358,1.91398955,1.91456913,1.36720328]
+    s=np.asarray(s,float)
+    X=aligned_design(12,True); h=X@s; p=np.exp(h-h.max()); p/=p.sum(); Xf=full_design(12,True); mu=Xf.T@p
+    rec={'q':12,'g':float(cert.get('g_root_center',cert.get('g_center',3.7183448981203875))), 'parity':True,
+         's':s.tolist(),'pmax':float(p.max()),'radii':[float(math.hypot(mu[2*i],mu[2*i+1])) for i in range(3)],'z':float(mu[-1]),'mu':mu.tolist()}
+    rec['RG1']=rg1(rec); rec['RG2']=rg2(rec)
+    rec['offset_distances']=[{'r':r,'distance':math.sqrt(d2)} for r,d2 in d2_offsets(12,rec['radii'],rec['z'],True)]
+    return rec
+
+
+def main():
+    g=7.0
+    qs=[12,24,48,96,192,384,768,1536]
+    full=[]; warm=None
+    for q in qs:
+        r=optimize_branch(q,g,True,warm); warm=r['s']; r['RG1']=rg1(r); r['RG2']=rg2(r); full.append(r)
+    smooth=[]; warm=None
+    for q in [24,48,96,192,384,768,1536]:
+        r=optimize_branch(q,g,False,warm); warm=r['s']; r['RG1']=rg1(r); smooth.append(r)
+
+    robustness=[]
+    for q in [48,96,192,384]:
+        warm_g=None
+        for gg in [6.0,7.0,8.0,10.0]:
+            rr=optimize_branch(q,gg,True,warm_g); warm_g=rr['s']; rr2=rg2(rr)
+            robustness.append({'q':q,'g':gg,'phi':rr['phi'],'z':rr['z'],'RG2_offsets':rr2['offsets'],'RG2_degree':rr2['degree']})
+
+    cont=[]
+    for q in [32,64,128,256,512,1024,2048,4096]:
+        row={'q':q}
+        for k in (1,2,3):
+            lam=lap_eig_jump12(q,k)
+            row[f'k{k}_q2lambda']=q*q*lam
+            row[f'k{k}_target']=5*(2*math.pi*k)**2
+            row[f'k{k}_relerr']=abs(q*q*lam-row[f'k{k}_target'])/row[f'k{k}_target']
+        cont.append(row)
+
+    # asymptotic parity obstruction diagnostic from largest q
+    r=full[-1]
+    z=abs(r['z']); rho=r['radii']
+    grid=np.linspace(0,0.5,200001)
+    F=np.zeros_like(grid)
+    for rr,k in zip(rho,(3,4,5)): F += 2*rr*rr*(1-np.cos(2*np.pi*k*grid))
+    target=4*z*z
+    mask=F<=target
+    # connected component from t=0 before first exit
+    idx=np.where(~mask)[0]
+    first_exit=(idx[0] if len(idx) else len(grid))
+    tstar=float(grid[first_exit-1]) if first_exit>0 else 0.0
+
+    event=q12_event()
+    out={
+      'task':'PHY-013-phase-geometry-followup',
+      'scientific_state':'CONDITIONAL_RELATIONAL_PHASE_GEOMETRY_FOUND__NAIVE_PARITY_THRESHOLD_NONLOCAL_ASYMPTOTIC__FIBER_AWARE_BOUNDED_SUPPORT_CANDIDATE',
+      'RG1_definition':'On a finite orbit of phase states with metric d, choose tau* = min tau such that the threshold graph d<=tau is connected. This is permutation-equivariant and invariant under common isometries of the state representation; tau is not fitted.',
+      'RG2_definition':'When the alternating coordinate supplies an intrinsic Z2 fiber label, apply RG1 inside each parity sheet and add the nearest cross-sheet distance shell.',
+      'q12_certified_event_center_numeric_geometry':event,
+      'full_rank7_g7_scout':full,
+      'smooth_rank6_g7_control':smooth,
+      'RG2_gain_robustness_scout':robustness,
+      'analytic_results':{
+        'smooth_rank6_cycle_theorem':{
+          'statement':'For active modes 3,4,5 with positive radii and gcd(3,4,5)=1, the translation-orbit map t -> (rho3 e^{i3t},rho4 e^{i4t},rho5 e^{i5t}) is an injective smooth immersion of S1. Therefore for sufficiently fine uniform Z_q sampling, the nearest relational states are the adjacent samples +/-1 and RG1 returns C_q.',
+          'scope':'conditional on a nonzero localized branch with all three smooth modal radii positive; no claim that this family is selected by strict FIN'
+        },
+        'parity_threshold_degree_growth':{
+          'distance_formula':'D^2(r)=2 sum_{k=3,4,5} rho_k^2[1-cos(2*pi*k*r/q)] + 4 z^2 * 1_{r odd}',
+          'statement':'If along q->infinity the smooth radii converge and |z| stays bounded below, the first odd/cross-fiber shell has O(1) distance while O(q) even offsets sample a nonzero interval of the smooth orbit below that threshold. Hence single-threshold RG1 has degree Theta(q), not bounded degree.',
+          'largest_q_numeric_t_interval_below_cross_parity_threshold':tstar,
+          'largest_q_degree_fraction':full[-1]['RG1']['degree']/full[-1]['q'],
+          'largest_q_z':full[-1]['z'],
+          'scope':'analytic implication conditional on nonvanishing parity amplitude and a nonzero-measure smooth sublevel interval; numerical branch data establish the premise only as scout evidence here'
+        },
+        'fiber_aware_continuum_if_offsets_1_2':{
+          'statement':'If RG2 stabilizes to the unweighted circulant support jumps +/-1,+/-2 and edge spacing is h=1/q, then q^2 lambda_k -> 5(2*pi*k)^2 for each fixed k. Thus the supplied support has a 1D Laplacian continuum with stiffness factor 5.',
+          'diagnostics':cont,
+          'caution':'equal edge weights and physical length scale are not sourced by the support theorem'
+        },
+        'homogeneous_state_obstruction':{
+          'statement':'At the uniform phase all translated phase signatures coincide, so any distance-only relational graph rule is either empty below zero or complete at zero. Phase differentiation/localized orbit structure is therefore a prerequisite for this geometry source.'
+        },
+        'phase_type_to_cell_blowup_no_go':{
+          'statement':'If an M-cell adjacency rule depends only on internal phase types a_x and a_y, then the cell graph is a blow-up of the finite phase-type graph. For a cell of type a its degree is sum_b B_ab n_b (minus the diagonal correction). Therefore any neighboring type with occupancy n_b=Theta(M) produces degree Theta(M). A bounded-degree physical cell graph for arbitrary macroscopic occupancies requires pair-specific relational data beyond phase type, or an additional matching/selection law.',
+          'consequence':'The phase-orbit graph is an internal/state-space geometry. It cannot by itself source sparse spatial adjacency among arbitrarily many indistinguishable cells.'
+        }
+      },
+      'decision':{
+        'positive':'A sparse support can be constructed from relations among symmetry-related localized phases without an external coordinate or fitted threshold. The smooth rank6 family has an asymptotic cycle theorem; a Z2-fiber-aware version of the full parity family is a bounded-degree candidate.',
+        'negative':'The naive one-threshold rule on the full parity orbit becomes nonlocal: its degree grows linearly with q. The result is geometry on phase-state space, not yet a sourced graph between physical FIN cells.',
+        'next_atoms':['certify the localized branch and modal lower bounds uniformly in a q-family or derive them analytically','prove RG2 support stabilization to {+/-1,+/-2} for sufficiently large q under explicit modal inequalities','derive or refute a state-to-cell identification/composition law that turns phase-state adjacency into inter-cell locality without circularly assuming space']
+      }
+    }
+    p=ROOT/'results'/'PHY-013_phase_geometry_source.json'; p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+    summary={
+      'output':str(p),
+      'q12_RG1':event['RG1'],
+      'full_RG1':[(r['q'],r['RG1']['offsets'],r['RG1']['degree']) for r in full],
+      'full_RG2':[(r['q'],r['RG2']['offsets'],r['RG2']['degree']) for r in full],
+      'smooth_RG1':[(r['q'],r['RG1']['offsets'],r['RG1']['degree']) for r in smooth],
+      'q1536_z':full[-1]['z'],'tstar':tstar,
+      'cont_k1_last_relerr':cont[-1]['k1_relerr']
+    }
+    print(json.dumps(summary,indent=2))
+
+if __name__=='__main__': main()

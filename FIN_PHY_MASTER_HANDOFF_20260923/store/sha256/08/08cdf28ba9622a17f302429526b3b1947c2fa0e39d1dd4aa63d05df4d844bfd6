@@ -1,0 +1,158 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+import networkx as nx
+from scipy.linalg import expm
+from scipy.stats import spearmanr
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'results'/'PHY-007_geometry.json'
+
+def mat_metric_checks(D, tol=1e-10):
+    D=np.asarray(D,float); n=D.shape[0]
+    sym=float(np.max(np.abs(D-D.T)))
+    diag=float(np.max(np.abs(np.diag(D))))
+    off=D[~np.eye(n,dtype=bool)]
+    sep=float(np.min(off)) if len(off) else math.nan
+    tri=0.0; witness=None
+    for i in range(n):
+      for j in range(n):
+       for k in range(n):
+        v=D[i,k]-D[i,j]-D[j,k]
+        if v>tri: tri=float(v); witness=(i,j,k)
+    return {'symmetry_defect':sym,'diag_defect':diag,'min_offdiag':sep,
+            'max_triangle_violation':tri,'triangle_witness':witness,
+            'passes_metric_numeric':bool(sym<=tol and diag<=tol and sep>tol and tri<=tol)}
+
+def graph_arrays(G, edge_weights=None):
+    n=G.number_of_nodes(); A=np.zeros((n,n),float)
+    for idx,(u,v) in enumerate(sorted(tuple(sorted(e)) for e in G.edges())):
+        w=1.0 if edge_weights is None else float(edge_weights[idx])
+        A[u,v]=A[v,u]=w
+    return A
+
+def hop_distance(A):
+    G=nx.from_numpy_array((A>0).astype(int))
+    return np.asarray(nx.floyd_warshall_numpy(G),float)
+
+def resistance_distance(A):
+    deg=A.sum(1); L=np.diag(deg)-A
+    Lp=np.linalg.pinv(L, rcond=1e-12)
+    d=np.diag(Lp)
+    R=d[:,None]+d[None,:]-2*Lp
+    R=np.maximum(R,0.0); np.fill_diagonal(R,0.0)
+    edges=np.argwhere(np.triu(A>0,1))
+    scale=np.median([R[i,j] for i,j in edges])
+    return R/scale
+
+def diffusion_distance(A,t=1.0):
+    deg=A.sum(1)
+    P=A/deg[:,None]
+    K=expm(t*(P-np.eye(len(A))))
+    pi=deg/deg.sum()
+    Z=K/np.sqrt(pi[None,:])
+    D=np.sqrt(np.maximum(((Z[:,None,:]-Z[None,:,:])**2).sum(2),0.0))
+    edges=np.argwhere(np.triu(A>0,1))
+    scale=np.median([D[i,j] for i,j in edges])
+    return D/scale
+
+def pair_corr(D, H):
+    n=D.shape[0]
+    x=[];y=[]
+    for i in range(n):
+      for j in range(i+1,n):
+        x.append(H[i,j]);y.append(D[i,j])
+    if np.std(x)<1e-14 or np.std(y)<1e-14: return None
+    return float(spearmanr(x,y).statistic)
+
+def perm_defect(metric_fun,A,perm):
+    D=metric_fun(A)
+    Ap=A[np.ix_(perm,perm)]
+    Dp=metric_fun(Ap)
+    target=D[np.ix_(perm,perm)]
+    return float(np.max(np.abs(Dp-target)))
+
+def rel_change(A,B):
+    den=max(float(np.linalg.norm(A)),1e-15)
+    return float(np.linalg.norm(B-A)/den)
+
+n=12
+graphs={
+ 'path12':nx.path_graph(n),
+ 'ring12':nx.cycle_graph(n),
+ 'expander_control_3regular_seed17':nx.random_regular_graph(3,n,seed=17),
+ 'dense_K12':nx.complete_graph(n),
+}
+perm=np.array([7,2,9,0,11,4,1,8,5,10,3,6])
+results={}
+for name,G in graphs.items():
+    A=graph_arrays(G)
+    H=hop_distance(A)
+    R=resistance_distance(A)
+    DD=diffusion_distance(A,1.0)
+    # deterministic relative physical reweighting: not a coordinate change
+    m=G.number_of_edges()
+    factors=np.array([0.70+0.60*((i*7+3)%max(m,2))/(max(m-1,1)) for i in range(m)],float)
+    Ar=graph_arrays(G,factors)
+    Rr=resistance_distance(Ar); DDr=diffusion_distance(Ar,1.0)
+    # common conductance scaling is a representation/unit change for normalized choices
+    As=3.7*A
+    out={
+      'nodes':n,'edges':G.number_of_edges(),'max_degree':max(dict(G.degree()).values()),
+      'diameter_hops':int(np.max(H[np.isfinite(H)])),
+      'hop':{'checks':mat_metric_checks(H),'spearman_with_causal_depth':1.0,
+             'relabel_defect':perm_defect(hop_distance,A,perm),
+             'common_weight_scale_defect':float(np.max(np.abs(hop_distance(As)-H)))},
+      'resistance':{'checks':mat_metric_checks(R),'spearman_with_causal_depth':pair_corr(R,H),
+             'relabel_defect':perm_defect(resistance_distance,A,perm),
+             'common_weight_scale_defect':float(np.max(np.abs(resistance_distance(As)-R))),
+             'relative_reweighting_change':rel_change(R,Rr),
+             'reweighted_spearman_with_causal_depth':pair_corr(Rr,H)},
+      'diffusion_t1':{'checks':mat_metric_checks(DD),'spearman_with_causal_depth':pair_corr(DD,H),
+             'relabel_defect':perm_defect(lambda Z:diffusion_distance(Z,1.0),A,perm),
+             'common_weight_scale_defect':float(np.max(np.abs(diffusion_distance(As,1.0)-DD))),
+             'relative_reweighting_change':rel_change(DD,DDr),
+             'reweighted_spearman_with_causal_depth':pair_corr(DDr,H)},
+      'causal_depth_identity':{
+          'statement':'For the PHY-005/006 read-radius-one event class, graph hop distance equals the minimum event-layer depth at which influence can possibly be nonzero, provided every support edge has nonzero conditional influence.',
+          'zero_pairs_by_depth':{str(t):int(np.sum(np.triu(H>t,1))) for t in range(0,int(np.max(H))+1)}
+      }
+    }
+    results[name]=out
+
+# Fisher-Rao is a state-space control, not a cell-space geometry.
+rng=np.random.default_rng(20260923)
+P=rng.dirichlet(np.ones(12),size=8)
+F=np.zeros((8,8))
+for i in range(8):
+ for j in range(8):
+    if i==j:
+        F[i,j]=0.0
+    else:
+        bc=float(np.sqrt(P[i]*P[j]).sum()); bc=min(1,max(0,bc))
+        F[i,j]=2*math.acos(bc)
+fisher={'checks':mat_metric_checks(F),'interpretation':'Metric on probability states/preparations; it contains no cell adjacency and therefore is retained only as a state-space control.'}
+
+res={
+ 'task':'PHY-007',
+ 'status':'PASS_IN_SCOPE_CONDITIONAL_GEOMETRY',
+ 'graphs':results,
+ 'fisher_state_space_control':fisher,
+ 'decision':{
+  'admitted_candidate':'shortest supported path / causal-depth distance',
+  'reason':'It is exactly the minimal possible propagation depth for the declared finite-support event rule, obeys metric axioms, and is invariant under node relabeling and common positive rescaling without threshold tuning.',
+  'resistance':'Valid conditional graph metric; captures global bottlenecks but is quantitatively weight-sensitive and is not selected by FIN.',
+  'diffusion':'Valid scale-dependent conditional metric; depends on a chosen generator/time scale and is not selected by FIN.',
+  'dense_control':'K12 collapses hop geometry to diameter one, so the same construction provides no graded locality there.',
+  'emergent_space':'NOT_DERIVED: the support graph is still PM input.'
+ },
+ 'representation_rules':{
+  'node_relabeling':'must only permute the distance matrix',
+  'common_edge_scale':'normalized resistance and random-walk diffusion are invariant; support distance is exactly invariant',
+  'relative_edge_reweighting':'treated as a physical-model change, not a representation change',
+  'internal_feature_frame':'common orthogonal rotations preserve mean-difference edge costs and do not change graph support'
+ }
+}
+OUT.write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

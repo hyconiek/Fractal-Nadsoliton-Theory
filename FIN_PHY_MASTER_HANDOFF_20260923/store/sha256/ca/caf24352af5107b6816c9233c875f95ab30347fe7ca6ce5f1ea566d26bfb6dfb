@@ -1,0 +1,36 @@
+# Synthesis — operational carrier, memory, calibration and channel class
+
+The operational picture is now layered:
+
+1. **One-jump layer:** strict `W` fixes a clock-free destination law and an
+   unlabeled `C12` carrier in a Markov realization.
+2. **Calibration layer:** invertible calibrated readout and positive calibrated
+   censoring preserve that ordinal carrier; uncalibrated nuisance can destroy
+   identifiability.
+3. **Memory layer:** the same one-jump law does not force Markov paths.  Finite
+   hidden models can mimic strict records through a controlled horizon.
+4. **Complexity layer:** if hidden dimension is bounded by `H`, disagreement
+   must be visible by length at most `H`; without such a bound no universal
+   finite horizon exists.
+5. **Channel layer:** heat/unitary/wave share the carrier near their control
+   origin because their first non-scalar jet is proportional to `A`.  Generic
+   `f(A)` does not preserve carrier adjacency.
+
+The cleanest current statement is therefore:
+
+`intrinsic finite carrier -> operational one-jump signature`
+
+is substantially stronger than
+
+`intrinsic finite carrier -> unique dynamics`.
+
+The first implication now has exact nuisance and short-response conditions.
+The second is false without added memory/state-category assumptions.
+
+## Current frontier
+
+The most valuable next step is to make the hidden-dimension bound operational:
+construct finite path-Hankel matrices from visible jump records, derive the
+exact minimal linear-realization rank in the noiseless model, and then a
+finite-sample lower-confidence certificate for rank greater than one.  This
+would turn `H` from a declared model-class bound into something partly testable.

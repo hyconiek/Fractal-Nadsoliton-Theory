@@ -1,0 +1,95 @@
+{
+  "task": "OCB-HANKEL-03B",
+  "status": "PRACTICAL_CHECKPOINT_ANYTIME_SPECTRAL_TEST_EXISTS__STILL_INFORMATION_EXPENSIVE",
+  "nulls": {
+    "H0_single": "rank(H)<=3 plus frozen strict one-symbol marginals for each coordinate",
+    "H0_pair": "H0_single plus both two-symbol block marginals frozen to strict iid p x p",
+    "why_pair_is_relevant": "The period-2 alias used in the memory campaign exactly hides through two jumps, so the lower-order pair record can be separately tested before the rank test."
+  },
+  "theorem": {
+    "feature_dimension": 4,
+    "target_sigma4": 0.0034060827857960545,
+    "max_feature_norm": 3.5995923033406827,
+    "max_outer_norm": 12.957064750269481,
+    "centered_increment_bound_R": 25.914129500538962,
+    "single_marginal_variance_bound": 62.255031927335445,
+    "pair_marginal_variance_bound": 12.957064750269481,
+    "confidence_rule": "At each frozen checkpoint n_k, rectangular matrix Bernstein gives ||Hhat-H||_2 <= r_k except with alpha_k. Under rank(H)<=3, Weyl gives sigma4(Hhat)<=r_k. Reject when sigma4(Hhat)>r_k.",
+    "familywise_validity": "Six frozen checkpoints with alpha_k=0.05/6; union bound gives <=5% false rejection under the declared composite null.",
+    "checkpoint_rows": [
+      {
+        "n": 4000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.014635047933748336,
+        "radius_H0_two_step_marginals": 0.00668475196773108
+      },
+      {
+        "n": 8000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.01034546774670547,
+        "radius_H0_two_step_marginals": 0.004723756387342488
+      },
+      {
+        "n": 16000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.007313813842514809,
+        "radius_H0_two_step_marginals": 0.003338662497898882
+      },
+      {
+        "n": 32000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.005170879224185418,
+        "radius_H0_two_step_marginals": 0.0023600223559947413
+      },
+      {
+        "n": 64000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.0036559797426957198,
+        "radius_H0_two_step_marginals": 0.0016684036501860334
+      },
+      {
+        "n": 128000000,
+        "alpha": 0.008333333333333333,
+        "radius_H0_single_marginals": 0.00258497607443844,
+        "radius_H0_two_step_marginals": 0.0011795474917793095
+      }
+    ]
+  },
+  "target_power_diagnostic": [
+    {
+      "n": 8000000,
+      "radius": 0.004723756387342488,
+      "rejection_fraction_fixed_seed": 0.0,
+      "mean_sigma4_hat": 0.00338752187394737,
+      "q05_q50_q95": [
+        0.002795311274105934,
+        0.003386783406355364,
+        0.003981991610851288
+      ]
+    },
+    {
+      "n": 16000000,
+      "radius": 0.003338662497898882,
+      "rejection_fraction_fixed_seed": 0.598,
+      "mean_sigma4_hat": 0.0033984918021175174,
+      "q05_q50_q95": [
+        0.0030098846260991326,
+        0.003394463776285129,
+        0.0038329703532391096
+      ]
+    },
+    {
+      "n": 32000000,
+      "radius": 0.0023600223559947413,
+      "rejection_fraction_fixed_seed": 1.0,
+      "mean_sigma4_hat": 0.0034144605412969246,
+      "q05_q50_q95": [
+        0.0031477814576776307,
+        0.003406174607643449,
+        0.0037030787331696563
+      ]
+    }
+  ],
+  "decision": "Keeping the full fourth singular value rather than det(H) turns the generic composite-rank test from astronomically weak into a tens-of-millions checkpoint test. Pair-marginal preverification materially improves the bound, but the gap to information-theoretic lower bounds remains large.",
+  "nonconclusion": "The power diagnostic is fixed-seed synthetic evidence, not a theorem. Exact pair marginals are an additional null restriction and must be separately tested in data."
+}

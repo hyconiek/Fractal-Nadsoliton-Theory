@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+w=np.array([1,2,3,4,5],dtype=int)
+L=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],dtype=int)
+assert np.all(L@w==0) and np.linalg.matrix_rank(L)==4
+# signed maximal minors give primitive null vector w; gcd 1 -> primitive lattice basis.
+mins=[]
+for d in range(5): mins.append(round(np.linalg.det(L[:,[j for j in range(5) if j!=d]])))
+cof=np.array([((-1)**d)*mins[d] for d in range(5)],dtype=int)
+assert np.array_equal(cof,w)
+out={
+ 'task':'HDIM-15-origin-free-relational-phase-observables',
+ 'scientific_state':'PROVED_FOUR_INDEPENDENT_TRANSLATION_INVARIANT_PHASE_COORDINATES',
+ 'frequency_vector':w.tolist(),
+ 'primitive_relation_basis':L.tolist(),
+ 'signed_maximal_minors':cof.tolist(),
+ 'coordinates':[
+  {'chi':'2 phi1-phi2','observable':'arg(z1^2 conjugate(z2))'},
+  {'chi':'phi1+phi2-phi3','observable':'arg(z1 z2 conjugate(z3))'},
+  {'chi':'phi1+phi3-phi4','observable':'arg(z1 z3 conjugate(z4))'},
+  {'chi':'phi1+phi4-phi5','observable':'arg(z1 z4 conjugate(z5))'}
+ ],
+ 'theorem':'For nonzero Fourier coefficients z_k, carrier translation z_k->exp(i k alpha) z_k cancels from every character n.phi with n.k=0. The displayed four rows form a primitive Z-basis of the relation lattice because their signed maximal minors equal (1,2,3,4,5). Therefore there are four independent origin-free spectral phase coordinates on the generic five-doublet stratum.',
+ 'topology_statement':'If one additionally quotients the strict T5 spectral-phase torus by the continuous common spectral-shift subgroup alpha->(alpha,2alpha,3alpha,4alpha,5alpha), the quotient is T4. On the finite carrier this continuous quotient is an operator-level construction extending, not identical to, the discrete C12 label translations.',
+ 'refinement_note':'Any refinement/forgetful map that exactly preserves the coarse z_k also preserves these bispectral phase combinations.',
+ 'nonconclusions':['The number four is not 3+1 spacetime.','Bispectrum phases are internal relational observables, not coordinates in physical space.']
+}
+p=ROOT/'results'/'HDIM-15_bispectrum_T4.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'basis':L.tolist(),'cofactors':cof.tolist()},indent=2))

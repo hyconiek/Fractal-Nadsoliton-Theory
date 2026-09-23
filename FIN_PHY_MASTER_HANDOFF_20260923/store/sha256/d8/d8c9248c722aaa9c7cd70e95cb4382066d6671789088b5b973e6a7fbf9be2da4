@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W=model.strict_kernel(); q=W.shape[0]
+weights=[float(W[0,d]) for d in range(1,q//2+1)]
+gaps=[weights[i]-weights[i+1] for i in range(len(weights)-1)]
+min_gap=min(gaps); robust_eps=min_gap/2
+# strongest offdiag relation
+mx=max(weights)
+Adj=(np.abs(W-mx)<1e-13).astype(int);np.fill_diagonal(Adj,0)
+deg=Adj.sum(axis=1).astype(int)
+# connectivity and graph distances
+D=np.full((q,q),99,dtype=int)
+for s in range(q):
+ D[s,s]=0;front=[s]
+ while front:
+  x=front.pop(0)
+  for y in np.where(Adj[x]>0)[0]:
+   if D[s,y]>D[s,x]+1:D[s,y]=D[s,x]+1;front.append(int(y))
+expected=np.array([[min((i-j)%q,(j-i)%q) for j in range(q)] for i in range(q)])
+out={
+ 'task':'CARRIER-02E_strict_operator_intrinsically_sources_finite_cycle_torsor',
+ 'scientific_state':'PROVED_FINITE_CYCLIC_CARRIER_AND_GRAPH_METRIC_RECOVERABLE_FROM_UNLABELED_STRICT_KERNEL',
+ 'radial_offdiagonal_weights_d1_to_d6':weights,'successive_weight_gaps':gaps,'minimum_gap':min_gap,
+ 'entrywise_shell_order_robustness_sufficient_epsilon':robust_eps,
+ 'strongest_relation_degree_sequence':deg.tolist(),
+ 'strongest_relation_is_connected_cycle':bool(np.all(deg==2) and np.max(D)<99),
+ 'graph_distance_matches_original_cyclic_distance':bool(np.array_equal(D,expected)),
+ 'theorem':'Because the six off-diagonal radial weights are strictly ordered, the maximum-weight off-diagonal relation is intrinsic to the unlabeled weighted kernel. Its support is C12. Any weighted-kernel automorphism must preserve this relation, so Aut(W)<=Aut(C12)=D12; conversely D12 preserves every radial shell, hence Aut(W)=D12. The maximum-weight shell therefore recovers the cyclic torsor/nearest-neighbor metric up to origin and orientation. Graph distance on that shell reconstructs all cyclic distances 0,...,6.',
+ 'continuum_candidate':'The abstract metric graph C12 has a canonical one-dimensional geometric realization homeomorphic to S1 once equal edge lengths are assigned; D12 symmetry fixes equality of edge lengths but not the absolute length scale. Treating this realization as physical space is a bridge premise, not a theorem about nature.',
+ 'robustness':'Any independent shell-weight perturbations of magnitude < half the minimum adjacent shell gap preserve the shell ordering and therefore the recovered cycle.',
+ 'consequence':'CARRIER-SOURCE-02 passes at the finite one-factor level: strict A/W itself sources one cyclic relational carrier. What remains unsourced is a physical continuum/refinement/action interpretation and any higher-dimensional carrier.',
+ 'nonconclusions':['Maximum interaction weight need not equal physical adjacency in nature.','Geometric realization does not derive meters, time, Lorentz signature, or 3D space.']
+}
+p=ROOT/'results'/'CARRIER-02E_strict_cycle_source.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

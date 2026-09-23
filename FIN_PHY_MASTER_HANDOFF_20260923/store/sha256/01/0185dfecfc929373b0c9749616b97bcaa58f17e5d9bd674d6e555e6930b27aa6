@@ -1,0 +1,1103 @@
+{
+  "decision": "PHY-013 can be closed as an executed bounded source challenge: natural passive/local target-blind parent classes are refuted for direct A7 generation; a conditional full-A -> rank7 spectral compression is reconstructed; the strict source problem is narrowed to four explicit atoms rather than solved.",
+  "scientific_state": "REFUTED_IN_NATURAL_PASSIVE_SOURCE_CLASSES__CONDITIONAL_RANK7_COMPRESSION_RECONSTRUCTED__SPARSE_SUPPORT_REQUIRES_NEW_RELATIONAL_DATA",
+  "source_obligation_refinement": {
+    "SO-PHY-013-A": "Source the extra null/projector structure that removes Fourier sectors k=1,2 (or replace the rank-7 projection by a different derived reduction). Passive local positivity/Schur elimination does not generate it.",
+    "SO-PHY-013-B": "Source the mediator-rank/selection rule independently of the desired localized phase and of an unsourced gain value. Conditional EYM fixes weights once rank/subspace are chosen.",
+    "SO-PHY-013-C": "Source a nonconstant pairwise relational object or an explicit symmetry-breaking/stochastic mechanism before claiming sparse inter-cell support. Full S_M equivariance with identical cells alone permits only empty/complete deterministic supports.",
+    "SO-PHY-013-D": "Source the nonlinear inter-cell interaction functional; PHY-003 PM-001 and PM-002 remain observationally inequivalent with the same isolated core."
+  },
+  "task": "PHY-013-followup",
+  "theorems": {
+    "conditional_minimal_rank_selector_at_g4": {
+      "q12_at_MP7_coexistence_gain": {
+        "chosen": [
+          {
+            "k": 6,
+            "lambda": 2.3421820411463004,
+            "mult": 1
+          },
+          {
+            "k": 5,
+            "lambda": 2.298606272079097,
+            "mult": 2
+          },
+          {
+            "k": 4,
+            "lambda": 2.19956884933321,
+            "mult": 2
+          },
+          {
+            "k": 3,
+            "lambda": 1.9614068619764455,
+            "mult": 2
+          },
+          {
+            "k": 2,
+            "lambda": 1.5770495144276093,
+            "mult": 2
+          }
+        ],
+        "exists": true,
+        "rank": 9,
+        "threshold": 16.038791782079905,
+        "trace": 18.415445036779023
+      },
+      "q12_g4": {
+        "chosen": [
+          {
+            "k": 6,
+            "lambda": 2.3421820411463004,
+            "mult": 1
+          },
+          {
+            "k": 5,
+            "lambda": 2.298606272079097,
+            "mult": 2
+          },
+          {
+            "k": 4,
+            "lambda": 2.19956884933321,
+            "mult": 2
+          },
+          {
+            "k": 3,
+            "lambda": 1.9614068619764455,
+            "mult": 2
+          }
+        ],
+        "exists": true,
+        "rank": 7,
+        "threshold": 14.909439898728003,
+        "trace": 15.261346007923805
+      },
+      "q12_rank_thresholds": [
+        {
+          "g_critical": 25.46247838435494,
+          "last_added_sector": 6,
+          "rank": 1,
+          "trace": 2.3421820411463004
+        },
+        {
+          "g_critical": 8.594086827286988,
+          "last_added_sector": 5,
+          "rank": 3,
+          "trace": 6.939394585304495
+        },
+        {
+          "g_critical": 5.259742451782835,
+          "last_added_sector": 4,
+          "rank": 5,
+          "trace": 11.338532283970915
+        },
+        {
+          "g_critical": 3.9077653808482973,
+          "last_added_sector": 3,
+          "rank": 7,
+          "trace": 15.261346007923805
+        },
+        {
+          "g_critical": 3.2384642063118467,
+          "last_added_sector": 2,
+          "rank": 9,
+          "trace": 18.415445036779023
+        },
+        {
+          "g_critical": 2.9933093488992286,
+          "last_added_sector": 1,
+          "rank": 11,
+          "trace": 19.923687345193184
+        }
+      ],
+      "rank7_gain_window": "3.9077653808482973 < g <= 5.259742451782835 (with strict inequalities at exact vertex-energy equality handled separately)",
+      "rule": "Given full A and supplied g, choose the smallest D_q-covariant top-spectral truncation for which a pure label state has V_g(delta_j)<V_g(u). Criterion: trace(A_m)>2 q log(q)/g.",
+      "status": "At q=12,g=4 the rule selects rank 7 without exposing A7 target coefficients, but at the MP7 coexistence gain g\u22483.718344898 it selects rank 9. Thus the rule is conditional on an unsourced gain/criterion and does not source rank 7."
+    },
+    "equivariant_sparse_support_no_go": {
+      "consequence": "A nontrivial sparse support requires an additional pairwise relational observable, an explicit symmetry-breaking state/seed, or a stochastic source law; it cannot come from labels plus equivariance alone.",
+      "statement": "For M>=3 identical cells with no pair-dependent input, any deterministic simple-graph source equivariant under the full cell relabeling group S_M outputs only the empty or complete graph, because S_M is transitive on unordered vertex pairs."
+    },
+    "fixed_g_asymptotic_obstruction": {
+      "conservative_abs_diagonal_upper": 2.5755291076885087,
+      "g4_max_pure_vertex_quadratic_gain_bound": 5.1510582153770175,
+      "statement": "Because eta=1.8>1, the frozen distance-kernel magnitude is absolutely summable, so the per-vertex quadratic gain stays bounded as q grows while D(delta||u)=log q diverges. Therefore any fixed-g pure-vertex localization criterion eventually fails; a scaling g(q) or a different source law is necessary."
+    },
+    "heldout_carrier_transfer_failure": {
+      "conclusion": "The naive carrier extension is PSD only through q=28 and becomes indefinite first at q=30. Even before that, at fixed g=4 the full q=26 and q=28 operators cannot make a pure state beat uniform. Hence this frozen formula+rank-selector does not furnish a scalable target-blind source law.",
+      "extension": "Freeze the same distance-kernel formula omega=0.18575, phi=0.1625, eta=1.8 and apply it to even q without refitting.",
+      "first_even_q_with_indefinite_laplacian": 30,
+      "records": [
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 19.923687345193184,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.7541211542070798,
+          "q": 12,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 6,
+                "lambda": 2.3421820411463004,
+                "mult": 1
+              },
+              {
+                "k": 5,
+                "lambda": 2.298606272079097,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 2.19956884933321,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.9614068619764455,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 7,
+            "threshold": 14.909439898728003,
+            "trace": 15.261346007923805
+          },
+          "vertex_threshold_trace": 14.909439898728003
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 23.44343304233568,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.6216049109645067,
+          "q": 14,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 7,
+                "lambda": 2.3484877121620302,
+                "mult": 1
+              },
+              {
+                "k": 6,
+                "lambda": 2.330265913465568,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 2.244664211425279,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 2.1023478282458146,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.8313802063906452,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 9,
+            "threshold": 18.47340130730681,
+            "trace": 19.36580403121664
+          },
+          "vertex_threshold_trace": 18.47340130730681
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 26.814206219165317,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.5040561151695103,
+          "q": 16,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 8,
+                "lambda": 2.354793383177759,
+                "mult": 1
+              },
+              {
+                "k": 7,
+                "lambda": 2.332259714687472,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 2.277434710047034,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 2.1629751264548007,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.9898541676350592,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.6970770848577947,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 11,
+            "threshold": 22.18070977791825,
+            "trace": 23.27399499054208
+          },
+          "vertex_threshold_trace": 22.18070977791825
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 30.04553853729699,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.39993433931966393,
+          "q": 18,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 9,
+                "lambda": 2.3450025334037474,
+                "mult": 1
+              },
+              {
+                "k": 8,
+                "lambda": 2.3327284711566896,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 2.2841876379852035,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 2.2036397206404903,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 2.0677081133808315,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.8718159961648786,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.5650238649451487,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 13,
+            "threshold": 26.01334582106548,
+            "trace": 26.99521014195023
+          },
+          "vertex_threshold_trace": 26.01334582106548
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 33.15052328986343,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.3078369725160886,
+          "q": 20,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 10,
+                "lambda": 2.3352116836297356,
+                "mult": 1
+              },
+              {
+                "k": 9,
+                "lambda": 2.3219408251916973,
+                "mult": 2
+              },
+              {
+                "k": 8,
+                "lambda": 2.286544215658782,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 2.219078061593683,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 2.1188886232573707,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 1.9665133258106258,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.753552568819024,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.4383866572277102,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 15,
+            "threshold": 29.957322735539908,
+            "trace": 30.545020238747522
+          },
+          "vertex_threshold_trace": 29.957322735539908
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 36.14461077782379,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.22660502200909474,
+          "q": 22,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 11,
+                "lambda": 2.3195830537687034,
+                "mult": 1
+              },
+              {
+                "k": 10,
+                "lambda": 2.3104886497891863,
+                "mult": 2
+              },
+              {
+                "k": 9,
+                "lambda": 2.279521499958891,
+                "mult": 2
+              },
+              {
+                "k": 8,
+                "lambda": 2.2269399837597126,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 2.1447310634302266,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 2.028933022309978,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 1.8638714050258811,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.6380733153279814,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.3186534450296645,
+                "mult": 2
+              },
+              {
+                "k": 2,
+                "lambda": 0.8746964553869253,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 19,
+            "threshold": 34.00146698694148,
+            "trace": 35.691400733805594
+          },
+          "vertex_threshold_trace": 34.00146698694148
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 39.04476787760285,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.155298573784453,
+          "q": 24,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 12,
+                "lambda": 2.303954423907672,
+                "mult": 1
+              },
+              {
+                "k": 11,
+                "lambda": 2.29553991537336,
+                "mult": 2
+              },
+              {
+                "k": 10,
+                "lambda": 2.2704758050876164,
+                "mult": 2
+              },
+              {
+                "k": 9,
+                "lambda": 2.226078751501222,
+                "mult": 2
+              },
+              {
+                "k": 8,
+                "lambda": 2.1598717877733105,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 2.065778740585443,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 1.9373347038991722,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 1.7625150530922913,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.5270937121649886,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.2064376728230815,
+                "mult": 2
+              },
+              {
+                "k": 2,
+                "lambda": 0.7639820107626516,
+                "mult": 2
+              }
+            ],
+            "exists": true,
+            "rank": 21,
+            "threshold": 38.13664596417535,
+            "trace": 38.73417073003395
+          },
+          "vertex_threshold_trace": 38.13664596417535
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 41.86881516096946,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.09314469250351887,
+          "q": 26,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 13,
+                "lambda": 2.2874162774930658,
+                "mult": 1
+              },
+              {
+                "k": 12,
+                "lambda": 2.2802476852752562,
+                "mult": 2
+              },
+              {
+                "k": 11,
+                "lambda": 2.258993713954635,
+                "mult": 2
+              },
+              {
+                "k": 10,
+                "lambda": 2.2215877674456923,
+                "mult": 2
+              },
+              {
+                "k": 9,
+                "lambda": 2.1664175015782106,
+                "mult": 2
+              },
+              {
+                "k": 8,
+                "lambda": 2.0890068773556654,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 1.9851713959636943,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 1.846388714340381,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 1.6641360203620317,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.4215712706018824,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.1018833512862678,
+                "mult": 2
+              },
+              {
+                "k": 2,
+                "lambda": 0.6621504510709614,
+                "mult": 2
+              },
+              {
+                "k": 1,
+                "lambda": 0.09314469250351887,
+                "mult": 2
+              }
+            ],
+            "exists": false,
+            "rank": 25,
+            "threshold": 42.35525499427927,
+            "trace": 41.86881516096946
+          },
+          "vertex_threshold_trace": 42.35525499427927
+        },
+        {
+          "PSD_nonuniform": true,
+          "full_trace": 44.634864114267174,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": 0.039487516089049546,
+          "q": 28,
+          "rank_selector": {
+            "chosen": [
+              {
+                "k": 14,
+                "lambda": 2.270878131078458,
+                "mult": 1
+              },
+              {
+                "k": 13,
+                "lambda": 2.265284868126632,
+                "mult": 2
+              },
+              {
+                "k": 12,
+                "lambda": 2.2464239153932795,
+                "mult": 2
+              },
+              {
+                "k": 11,
+                "lambda": 2.215100313163833,
+                "mult": 2
+              },
+              {
+                "k": 10,
+                "lambda": 2.1676607975568736,
+                "mult": 2
+              },
+              {
+                "k": 9,
+                "lambda": 2.1035581005572177,
+                "mult": 2
+              },
+              {
+                "k": 8,
+                "lambda": 2.0167470511146686,
+                "mult": 2
+              },
+              {
+                "k": 7,
+                "lambda": 1.9048611941843407,
+                "mult": 2
+              },
+              {
+                "k": 6,
+                "lambda": 1.75759918685003,
+                "mult": 2
+              },
+              {
+                "k": 5,
+                "lambda": 1.5697732883892064,
+                "mult": 2
+              },
+              {
+                "k": 4,
+                "lambda": 1.3220040849957866,
+                "mult": 2
+              },
+              {
+                "k": 3,
+                "lambda": 1.004876976505725,
+                "mult": 2
+              },
+              {
+                "k": 2,
+                "lambda": 0.5686156986677079,
+                "mult": 2
+              },
+              {
+                "k": 1,
+                "lambda": 0.039487516089049546,
+                "mult": 2
+              }
+            ],
+            "exists": false,
+            "rank": 27,
+            "threshold": 46.650863142452856,
+            "trace": 44.63486411426715
+          },
+          "vertex_threshold_trace": 46.650863142452856
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 47.36082182443471,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.006252139340018115,
+          "q": 30,
+          "rank_selector": null,
+          "vertex_threshold_trace": 51.01796072493233
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 50.063950420785375,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.044607191985174266,
+          "q": 32,
+          "rank_selector": null,
+          "vertex_threshold_trace": 55.451774444795625
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 52.76047779884372,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.07608610803238505,
+          "q": 34,
+          "rank_selector": null,
+          "vertex_threshold_trace": 59.948128918474744
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 55.46526037657375,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.10118777463530493,
+          "q": 36,
+          "rank_selector": null,
+          "vertex_threshold_trace": 64.50334089220998
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 58.19150031243507,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.12041090945956756,
+          "q": 38,
+          "rank_selector": null,
+          "vertex_threshold_trace": 69.11413703480133
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 60.95051991183647,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.13425921659868445,
+          "q": 40,
+          "rank_selector": null,
+          "vertex_threshold_trace": 73.77758908227872
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 63.75159545620191,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.1432432560925756,
+          "q": 42,
+          "rank_selector": null,
+          "vertex_threshold_trace": 78.49106198395074
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 66.6018517349104,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.1478798009781537,
+          "q": 44,
+          "rank_selector": null,
+          "vertex_threshold_trace": 83.25217194620174
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 69.50621734330011,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.14868930877342343,
+          "q": 46,
+          "rank_selector": null,
+          "vertex_threshold_trace": 88.05875211924919
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 72.46743946142959,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.1461920237266532,
+          "q": 48,
+          "rank_selector": null,
+          "vertex_threshold_trace": 92.90882426178939
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 75.48615544340784,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.1409031421926792,
+          "q": 50,
+          "rank_selector": null,
+          "vertex_threshold_trace": 97.80057513570365
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 78.56101719901412,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.13332740808990262,
+          "q": 52,
+          "rank_selector": null,
+          "vertex_threshold_trace": 102.73233668311711
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 81.68886309665132,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.12395345251890211,
+          "q": 54,
+          "rank_selector": null,
+          "vertex_threshold_trace": 107.70256925723541
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 84.86493100705478,
+          "min_mode": 1,
+          "min_nonuniform_eigenvalue": -0.11324814697956148,
+          "q": 56,
+          "rank_selector": null,
+          "vertex_threshold_trace": 112.70984734058419
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 88.08310517889235,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.11280014856084247,
+          "q": 58,
+          "rank_selector": null,
+          "vertex_threshold_trace": 117.75284730584616
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 91.33618892008062,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.12428819040539762,
+          "q": 60,
+          "rank_selector": null,
+          "vertex_threshold_trace": 122.83033686666302
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 94.61619457354124,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.13311280130534162,
+          "q": 62,
+          "rank_selector": null,
+          "vertex_threshold_trace": 127.94116593639784
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 97.91464203618115,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.13953330616804438,
+          "q": 64,
+          "rank_selector": null,
+          "vertex_threshold_trace": 133.0842586675095
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 101.22285707986796,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.14380232271749155,
+          "q": 66,
+          "rank_selector": null,
+          "vertex_threshold_trace": 138.25860648687203
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 104.53226098989879,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.14616453143518462,
+          "q": 68,
+          "rank_selector": null,
+          "vertex_threshold_trace": 143.46326197598765
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 107.83464352912782,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.14685545693943625,
+          "q": 70,
+          "rank_selector": null,
+          "vertex_threshold_trace": 148.69733347172757
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 111.12241194665222,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.14610030185484946,
+          "q": 72,
+          "rank_selector": null,
+          "vertex_threshold_trace": 153.959980284578
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 114.38880965450618,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.14411286763022535,
+          "q": 74,
+          "rank_selector": null,
+          "vertex_threshold_trace": 159.2504084485543
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 117.62809926441494,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.1410945905627037,
+          "q": 76,
+          "rank_selector": null,
+          "vertex_threshold_trace": 164.56786693088057
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 120.83570587502257,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.13723371543999016,
+          "q": 78,
+          "rank_selector": null,
+          "vertex_threshold_trace": 169.91164424089408
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 124.00831779044964,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.13270462370258174,
+          "q": 80,
+          "rank_selector": null,
+          "vertex_threshold_trace": 175.28106538695525
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 127.14394319366897,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.1276673278509614,
+          "q": 82,
+          "rank_selector": null,
+          "vertex_threshold_trace": 180.67548913783438
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 130.2419226521661,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.12226713898685215,
+          "q": 84,
+          "rank_selector": null,
+          "vertex_threshold_trace": 186.09430555141915
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 133.30289865813518,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.11663450989842315,
+          "q": 86,
+          "rank_selector": null,
+          "vertex_threshold_trace": 191.5369337389008
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 136.32874466204242,
+          "min_mode": 2,
+          "min_nonuniform_eigenvalue": -0.11088505199634138,
+          "q": 88,
+          "rank_selector": null,
+          "vertex_threshold_trace": 197.0028198370411
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 139.3224572104574,
+          "min_mode": 3,
+          "min_nonuniform_eigenvalue": -0.11701908153899176,
+          "q": 90,
+          "rank_selector": null,
+          "vertex_threshold_trace": 202.4914351648619
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 142.28801581406265,
+          "min_mode": 3,
+          "min_nonuniform_eigenvalue": -0.12855709987219688,
+          "q": 92,
+          "rank_selector": null,
+          "vertex_threshold_trace": 208.00227454425587
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 145.23021602187242,
+          "min_mode": 3,
+          "min_nonuniform_eigenvalue": -0.13877284687849806,
+          "q": 94,
+          "rank_selector": null,
+          "vertex_threshold_trace": 213.5348547666902
+        },
+        {
+          "PSD_nonuniform": false,
+          "full_trace": 148.15448184056655,
+          "min_mode": 3,
+          "min_nonuniform_eigenvalue": -0.14761270028396845,
+          "q": 96,
+          "rank_selector": null,
+          "vertex_threshold_trace": 219.08871319045613
+        }
+      ]
+    },
+    "passive_filter_rank_no_go": {
+      "scope": "connected passive spectral functions; extra positive-frequency zeros require an additional band-selection/source premise",
+      "statement": "If L is a connected graph Laplacian and h(0)=0, h(x)>0 for x>0 (including passive heat/resolvent-type filters), then ker h(L)=span{1} and rank h(L)=q-1. At q=12 this is rank 11, not rank 7."
+    },
+    "positive_dirichlet_no_go": {
+      "heldout_checks": [
+        {
+          "min_1_minus_cos_step_for_k1": 0.1339745962155613,
+          "q": 12,
+          "strictly_positive_for_every_nonzero_step": true
+        },
+        {
+          "min_1_minus_cos_step_for_k1": 0.03407417371093169,
+          "q": 24,
+          "strictly_positive_for_every_nonzero_step": true
+        },
+        {
+          "min_1_minus_cos_step_for_k1": 0.008555138626189618,
+          "q": 48,
+          "strictly_positive_for_every_nonzero_step": true
+        },
+        {
+          "min_1_minus_cos_step_for_k1": 0.002141076761396521,
+          "q": 96,
+          "strictly_positive_for_every_nonzero_step": true
+        }
+      ],
+      "statement": "For a nontrivial translation-invariant positive Dirichlet form on Z_q, lambda_1=2 sum_r c_r(1-cos(2*pi*r/q))>0 for c_r>=0, so k=1 cannot be an exact null mode. Therefore such a law cannot directly yield the A7 kernel containing k=1,2."
+    },
+    "rank7_spectral_compression": {
+      "A7_active_eigenvalues": [
+        1.9614068619764455,
+        2.19956884933321,
+        2.298606272079097,
+        2.3421820411463004
+      ],
+      "full_spectrum": [
+        {
+          "k": 1,
+          "lambda": 0.7541211542070798,
+          "mult": 2
+        },
+        {
+          "k": 2,
+          "lambda": 1.5770495144276093,
+          "mult": 2
+        },
+        {
+          "k": 3,
+          "lambda": 1.9614068619764455,
+          "mult": 2
+        },
+        {
+          "k": 4,
+          "lambda": 2.19956884933321,
+          "mult": 2
+        },
+        {
+          "k": 5,
+          "lambda": 2.298606272079097,
+          "mult": 2
+        },
+        {
+          "k": 6,
+          "lambda": 2.3421820411463004,
+          "mult": 1
+        }
+      ],
+      "projection_numeric_defect": 1.1905853968683814e-14,
+      "remaining_unsourced": "why the mediator rank should be 7, plus source/provenance of the full strict A and physical coupling",
+      "statement": "Conditional on the supplied full q=12 strict operator A, its best rank-7 PSD approximation in Frobenius/operator norm retains the seven largest eigen-directions (Eckart-Young-Mirsky). These are exactly sectors k=6,5,4,3 with multiplicities 1,2,2,2, reproducing the A7 weights without fitting them.",
+      "top_rank7_sectors": [
+        {
+          "k": 6,
+          "lambda": 2.3421820411463004,
+          "mult": 1
+        },
+        {
+          "k": 5,
+          "lambda": 2.298606272079097,
+          "mult": 2
+        },
+        {
+          "k": 4,
+          "lambda": 2.19956884933321,
+          "mult": 2
+        },
+        {
+          "k": 3,
+          "lambda": 1.9614068619764455,
+          "mult": 2
+        }
+      ]
+    },
+    "schur_nullity_inheritance": {
+      "statement": "For a connected positive quadratic parent, the Schur/Kron effective form on visible variables has zero energy only on constant boundary data: y^T S y=min_z [y,z]^T L [y,z]. Thus passive elimination cannot create the four extra A7 null directions; they must be present upstream or imposed by projection/constraints."
+    },
+    "support_only_minimal_range_control": {
+      "actual_A7_ratios_k3_to_k6": [
+        1.0,
+        1.1214240614600361,
+        1.1719171155355634,
+        1.1941337040017084
+      ],
+      "best_scale_to_A7": 0.22441004729118108,
+      "circulant_first_row_coefficients": {
+        "a0": 1.6160254037844386,
+        "a1": -1.274519052838329,
+        "a2": 0.5915063509461096,
+        "a3": -0.125
+      },
+      "fourier_coefficients": {
+        "constant": 1.6160254037844386,
+        "cos1": -2.549038105676658,
+        "cos2": 1.1830127018922192,
+        "cos3": -0.25
+      },
+      "max_component_relative_residual_after_best_scale": 0.8855872019000431,
+      "minimal_range": 3,
+      "mixed_signs": true,
+      "predicted_active_ratios_k3_to_k6": [
+        1.0,
+        4.732050807568877,
+        10.196152422706632,
+        12.928203230275509
+      ],
+      "proof_reason": "a symmetric circulant range-R symbol is a degree-R polynomial in x=cos(theta); three distinct prescribed roots x=1,sqrt(3)/2,1/2 require R>=3; R=3 is unique up to scale",
+      "relative_L2_residual_after_best_scale": 0.48752749592541506,
+      "spectral_polynomial": "P(theta)=(1-cos(theta))*(sqrt(3)/2-cos(theta))*(1/2-cos(theta))"
+    }
+  }
+}

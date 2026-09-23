@@ -1,0 +1,65 @@
+# FIN PHY — All-orders resonance/carrier reconstruction certificate
+
+Date: 2026-09-23
+
+## Finite cyclic theorem
+
+For a cyclic carrier of size `q>=11` and five distinct positive-amplitude
+character modes `k=1,...,5`, define
+
+`Z_q(phi)=q^-1 sum_j exp[ sum_k b_k cos(2*pi*k*j/q + phi_k) ]`, `b_k>0`.
+
+The Bessel expansion is supported on integer tuples `n` satisfying
+
+`sum_k k n_k = 0 mod q`
+
+and every coefficient is strictly positive.  Hence termwise `cos <= 1` gives
+
+`Z_q(phi) <= Z_q(0)`.
+
+Equality requires every admissible relation phase to vanish.  The relations
+
+`k phi_1 - phi_k = 0`, `k=2,...,5`,
+
+plus `q phi_1=0` imply exactly
+
+`phi_k = k*2*pi*a/q`, `a in Z_q`.
+
+Thus phase locking is exact and all-orders at arbitrary positive radial
+amplitudes; it is not only a cubic/Taylor phenomenon.
+
+## Continuum theorem
+
+For the circle integral, the congruence becomes exact equality
+`sum k n_k=0`; the finite condition `q phi_1=0` disappears.  The equality
+manifold is exactly
+
+`phi_k = k alpha`, `alpha in S1`.
+
+Hence the global all-orders hierarchy is
+
+`T5 -> S1` in the continuum and `T5 -> Z_q` at finite `q`.
+
+For even `q`, an added fixed positive alternating coordinate `z(-1)^j`
+reduces the phase maxima to even translations; negative `z` gives odd
+translations.  Allowing the parity sign jointly restores the full `q` orbit.
+
+## General finite Abelian theorem
+
+Let `G` be a finite Abelian carrier and let the positive-amplitude characters
+used in the partition sum generate its dual.  Relation-respecting phase
+assignments are characters of the generated dual group and, by finite
+Pontryagin duality, are evaluations at points of `G`.
+
+Therefore the locked global-maximizer set is canonically a copy of the supplied
+carrier `G` (modulo a stabilizer if the selected characters do not generate the
+full dual).
+
+For `G=(Z_q)^d`, the all-orders equality set is `(Z_q)^d`; in the torus limit
+it is `T^d`.
+
+### Consequence
+
+The nonlinearity **reconstructs the carrier translation group**.  It does not
+select which carrier nature uses.  This moves the dimension-source problem
+upstream from nonlinear phase locking to carrier/refinement sourcehood.

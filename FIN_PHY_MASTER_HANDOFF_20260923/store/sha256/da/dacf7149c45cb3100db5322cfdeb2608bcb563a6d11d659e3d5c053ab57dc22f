@@ -1,0 +1,18 @@
+# Replay instructions
+
+The portable replay executes the 19 accepted producer scripts in dependency
+order. The superseded C4-only q-transfer script is retained in `rejected/` and
+is not executed.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay.py --check
+```
+
+The replay regenerates the JSON files under `results/` and compares their
+SHA-256 hashes against `EXPECTED_RESULTS.sha256`.
+
+Dependencies used by the scripts are standard Python plus `numpy`, `scipy`, and
+`mpmath`. No network access is used.
+
+A successful replay establishes reproducibility of this implementation, not
+formal-proof-assistant verification or empirical validation.

@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+import mpmath as mp
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+w=np.array([W[0,d] for d in range(1,7)],float)
+u=float(w[-1]/2)
+alphas=[0.4,0.8,1.2,1.6]
+ks=np.logspace(-6,-3,16)
+mp.mp.dps=60
+
+def symbol(k,alpha):
+    s=mp.mpf(1)+mp.mpf(str(alpha)); kk=mp.mpf(str(k))
+    total=mp.zeta(s)-mp.re(mp.polylog(s,mp.e**(1j*kk)))
+    finite=sum(mp.mpf(d)**(-s)*(1-mp.cos(kk*d)) for d in range(1,7))
+    C=mp.mpf(str(u))*mp.mpf(7)**s
+    prefix=sum(mp.mpf(str(w[d-1]))*(1-mp.cos(kk*d)) for d in range(1,7))
+    return float(2*(prefix+C*(total-finite)))
+checks=[]
+for a in alphas:
+    vals=np.array([symbol(k,a) for k in ks])
+    slope=float(np.polyfit(np.log(ks[:8]),np.log(vals[:8]),1)[0])
+    checks.append({'alpha':a,'fitted_slope':slope,'w7_shared':u,'w8':u*(7/8)**(1+a)})
+out={
+ 'task':'OPERATOR-REFINE-03_finite_prefix_universal_continuum_order_no_go',
+ 'scientific_state':'PROVED_CLASS_NO_GO_WITH_NUMERICAL_ASYMPTOTIC_CHECKS',
+ 'visible_shells_d1_to_d6':w.tolist(),'shared_w7':u,
+ 'construction':'For any 0<alpha<2 set w_d=w7*(7/d)^(1+alpha) for every d>=7, with the exact same strict d=1,...,6 prefix and the same w7=w6/2.',
+ 'properties':['positive','strictly decreasing for d>=7','same d=1,...,7 across every alpha control'],
+ 'theorem':'For 0<alpha<2, a positive tail C d^(-(1+alpha)) gives 2 sum_d w_d(1-cos(kd)) ~ c_alpha |k|^alpha as k->0. The finite prefix contributes only O(k^2), hence does not alter the leading order.',
+ 'checks':checks,
+ 'consequence':'No finite list of shell weights, even augmented by positivity and monotone decay and one common held-out shell, identifies the continuum order. A law constraining the asymptotic tail/refinement class is logically independent data.',
+ 'stop_rule':'Do not continue adding finite shell measurements as a purported proof of continuum exponent unless a source law links finite and asymptotic shells.'
+}
+(ROOT/'results'/'OPERATOR-REFINE-03_universal_no_go.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

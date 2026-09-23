@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+cap=2*math.pi*(math.pi/6)-math.pi*math.sin(math.pi/3)
+s3=2*math.pi**2
+bound=math.floor(s3/cap+1e-12)
+out={
+ 'task':'PROX-04A-RNG-metric-theorems-flat-T4',
+ 'scientific_state':'PROVED_CONNECTIVITY_AND_ASYMPTOTIC_BOUNDED_DEGREE__METRIC_CONVERGENCE_NOT_YET_IMPLIED',
+ 'theorem_connectivity':'For any finite metric sample, every MST edge belongs to the relative-neighborhood graph (RNG): if an MST edge uv had a witness w with d(u,w)<d(u,v) and d(v,w)<d(u,v), whichever of uw or vw crosses the cut created by deleting uv would be a strictly shorter replacement. Hence RNG contains an MST and is connected.',
+ 'theorem_edge_length':'In any geodesic metric space, if the sample is an epsilon-net, every RNG edge has length <=2 epsilon. For an edge uv of length L>2 epsilon, a sample point within epsilon of a geodesic midpoint is strictly closer than L to both endpoints and blocks uv.',
+ 'flat_T4_degree':'On a flat T4 with injectivity radius rho, once 2 epsilon<rho, every RNG star is Euclidean. Two incident RNG edges from x have tangent directions separated by at least 60 degrees: if |xy|<=|xz| and angle(yxz)<60 degrees, then |yz|<|xz| and y blocks xz. Thus degree is bounded by a finite S3 spherical-code constant independent of sample size.',
+ 'self_contained_cap_bound':{'S3_area':s3,'S3_cap_radius_pi_over_6_area':cap,'degree_upper_bound_by_disjoint_caps':bound},
+ 'note':'The cap argument is deliberately self-contained and not sharp; no external kissing-number theorem is needed.',
+ 'nonconclusions':['Connectivity plus bounded degree does not prove shortest-path metric convergence.','It does not prove graph-Laplacian convergence for arbitrary or random samples.','No physical locality follows from RNG alone.']
+}
+p=ROOT/'results'/'PROX-04A_rng_theorems.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'degree_bound':bound},indent=2))

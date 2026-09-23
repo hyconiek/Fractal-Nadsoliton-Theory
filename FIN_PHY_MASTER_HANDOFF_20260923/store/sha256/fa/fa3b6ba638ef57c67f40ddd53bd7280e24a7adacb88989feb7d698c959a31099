@@ -1,0 +1,41 @@
+# PHY-024 — energy or relational cost?
+
+**Scientific status: PASS_DIMENSIONLESS_BALANCE_CANDIDATE; physical energy is not derived.**
+
+Let `F` denote the dimensionless multi-cell variational functional derived from the chosen composition.
+
+## Dissipative laws
+
+For any declared SPD gradient mobility `L`,
+
+`dot x = -L grad F`
+
+gives the exact identity
+
+`dF/dt = -(grad F)^T L (grad F) <= 0`.
+
+So `F` is a Lyapunov/free-energy-like cost. A conserved physical energy cannot be inferred from this monotone decrease. In a reversible Markov realization the analogous equilibrium free-energy/relative-entropy functional decreases; a heat/work statement additionally requires a bath, temperature/energy scale and protocol.
+
+## Conservative lift
+
+If one **adds** coordinates `x`, momenta `pi`, a positive kinetic metric `M` and canonical symplectic dynamics, then
+
+`H = (1/2) pi^T M^-1 pi + F(x)`
+
+is exactly conserved for a time-independent Hamiltonian. This is a valid conditional generator/balance candidate. It does not show that the FIN core supplied `pi`, `M`, the symplectic form or the physical energy unit.
+
+The same static F therefore supports both dissipative decrease and conservative motion. Conservation is a property of the added dynamics.
+
+## Composition/extensivity
+
+For bounded-degree graphs and fixed local coupling, both onsite and edge parts of F are `O(M)`, so the dimensionless cost is extensive up to boundary terms. Dense unnormalized composition is `O(M^2)` and requires a separate normalization, as shown in PHY-018.
+
+Coarse elimination may move cost between retained and hidden variables and generate memory. A retained-only balance must include the corresponding memory/environment flux; otherwise apparent nonconservation is bookkeeping error.
+
+## Units
+
+A physical energy requires an independent scale `E_*`, e.g. `E_phys=E_* F`, plus an operational reason that this quantity participates in work/heat or Hamiltonian generation. Multiplying by an arbitrary constant is calibration, not derivation.
+
+## Decision
+
+Keep the uncalibrated object labelled **dimensionless variational cost/free-energy functional**. It may become the potential part of a physical energy under an explicit Hamiltonian or bath bridge, but FIN has not sourced that bridge.

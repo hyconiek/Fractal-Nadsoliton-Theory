@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+w=np.array([W[0,d] for d in range(1,7)],float)
+K=float(sum(w[d-1]*d*d for d in range(1,7)))
+Ms=[24,48,96,192,384]
+rows=[]
+for M in Ms:
+    lam=float(2*M*M*sum(w[d-1]*(1-math.cos(2*math.pi*d/M)) for d in range(1,7)))
+    lim=K*(2*math.pi)**2
+    rows.append({'M':M,'lambda_mode1':lam,'continuum_limit':lim,'relative_error':(lam-lim)/lim})
+# observed convergence exponent from absolute relative errors
+slope=float(np.polyfit(np.log(np.array(Ms,float)),np.log(np.abs([r['relative_error'] for r in rows])),1)[0])
+out={
+ 'task':'OPERATOR-REFINE-05_fixed_stencil_conditional_local_continuum',
+ 'scientific_state':'CONDITIONAL_TARGET_BLIND_REFINEMENT_CONSTRUCTION__NOT_STRICT_SOURCED',
+ 'rule':'At every M keep exactly the six strict offset coefficients w_1,...,w_6, keep the stencil radius R=6 fixed in lattice units, set mesh h=1/M, and scale the generalized generator by h^{-2}.',
+ 'no_refit':True,'strict_coefficients':w.tolist(),'effective_stiffness_sum_wd_d2':K,
+ 'theorem':'For fixed finite stencil radius R, 2 h^{-2} sum_{d=1}^R w_d(1-cos(p d h)) -> p^2 sum_d w_d d^2 with O(h^2) error for fixed p.',
+ 'mode1_checks':rows,'observed_error_loglog_slope_vs_M':slope,
+ 'consequence':'There is a simple target-blind extension of the complete six-shell stencil that produces an ordinary local 1D Laplacian. However, the extra premise is exactly that interaction range is fixed in lattice-offset units under refinement; current strict data do not source that premise.',
+ 'nonconclusions':['This does not defeat the universal nonidentifiability theorem, because long-range refinements use a different scaling rule.','No physical length or stiffness scale is sourced.']
+}
+(ROOT/'results'/'OPERATOR-REFINE-05_fixed_stencil.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

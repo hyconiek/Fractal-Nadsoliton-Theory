@@ -1,0 +1,45 @@
+{
+  "task": "OCB-CAL-01",
+  "status": "CALIBRATED_LINEAR_IDENTIFIABILITY_WITH_FINITE_SAMPLE_CYCLE_CERTIFICATE",
+  "model": {
+    "true_jump_law": "p_i over 12 destinations",
+    "destination_efficiency": "eta_j in (0,1]",
+    "confusion": "C[j,y]=P(report y | true destination j)",
+    "observed_conditioned_law": "q_i=C^T diag(eta) p_i / (eta^T p_i)"
+  },
+  "theorem": {
+    "conditions": [
+      "C is invertible",
+      "all eta_j > 0 and calibrated"
+    ],
+    "inverse": "B=diag(eta)^(-1) (C^T)^(-1), so B q_i = p_i/(eta^T p_i)",
+    "ordinal_recovery": "sign(p_i[a]-p_i[b]) = sign((e_a-e_b)^T B q_i); normalization is unnecessary for ranking.",
+    "confidence_rule": "If ||qhat_i-q_i||_inf <= eps, comparison a>b is certified whenever (e_a-e_b)^T B qhat_i > eps ||(e_a-e_b)^T B||_1."
+  },
+  "synthetic_calibration_fixture": {
+    "C": "0.90 correct, 0.05 each adjacent reported label",
+    "eta_min": 0.8,
+    "eta_max": 0.98,
+    "C_condition_number_inf": 1.25,
+    "max_exact_recovery_error": 1.6653345369377348e-16,
+    "uniform_coordinate_error_threshold_preserving_all_24_nearest-neighbour-vs-competitor inequalities": 0.061363680539136226,
+    "limiting_witness": {
+      "source": 11,
+      "near": 0,
+      "competitor": 1,
+      "inverse_margin": 0.1898396158104541,
+      "row_l1": 3.093680400890868,
+      "true_prob_margin": 0.16740402485103684
+    },
+    "hoeffding_family_95pct_recorded_exits_per_source": 1150,
+    "note": "This is a synthetic stress fixture for the theorem, not apparatus calibration or a laboratory sample-size recommendation."
+  },
+  "failure_controls": {
+    "singular_confusion": "If C is singular, only C^T diag(eta) p is observable; e.g. fully uniform confusion has rank 1 and erases the carrier.",
+    "uncalibrated_censoring": "If eta is unknown, q identifies only the normalized product eta_j p_j; p and eta can trade against each other, so carrier recovery is not generally identifiable.",
+    "zero_efficiency": "Any eta_j=0 makes probability assigned to destination j invisible without extra structure.",
+    "uniform_confusion_rank": 1
+  },
+  "decision": "A calibrated, invertible readout plus strictly positive calibrated censoring preserves unlabeled cycle identifiability. Calibration is a real premise; without it the operational carrier claim can fail.",
+  "nonconclusion": "No actual detector/confusion matrix/efficiency calibration or physical data are supplied."
+}

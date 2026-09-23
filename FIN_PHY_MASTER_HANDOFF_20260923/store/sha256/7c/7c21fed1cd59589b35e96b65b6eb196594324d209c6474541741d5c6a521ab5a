@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+# Probability examples for DKW bridge.
+rows=[]
+for M in [100,500,1000,5000,10000,50000]:
+    for conf in [0.95,0.99,0.999]:
+        alpha=1-conf
+        eps=math.sqrt(math.log(2/alpha)/(2*M))
+        angerr=4*math.pi*eps+2*math.pi/M
+        rows.append({'M':M,'confidence':conf,'DKW_epsilon':eps,'uniform_angular_error_bound_radians':angerr})
+out={
+ 'task':'CG-04-operational-influence-metric','scientific_state':'CONDITIONAL_OPERATIONAL_METRIC_BRIDGE_UNDER_DIFFUSE_PHASES',
+ 'premises':['RG3 graph is frozen over the observation window','updates/interventions are local on RG3 edges as in PHY-005/006','cell phase sample is iid Haar, or another law with an equivalent uniform empirical-discrepancy bound'],
+ 'exact_graph_fact':'For a fixed cycle support, minimal discrete event depth for influence from x to y equals the cycle hop distance d_hop(x,y).',
+ 'weighted_metric_fact':'If each RG3 edge is weighted by its actual angular gap, shortest-path distance between sampled phases equals their circle geodesic distance d_ang exactly.',
+ 'empirical_bridge':{
+   'DKW':'For iid Haar angles normalized to [0,1), P(sup_t |F_M(t)-t|>eps)<=2 exp(-2 M eps^2).',
+   'arc_discrepancy':'Any circular arc count differs from its Haar mass by at most 2 eps under sup-CDF error eps.',
+   'pair_bound':'For all sampled pairs simultaneously, |d_hop/M - d_ang/(2 pi)| <= 2 eps + 1/M (the endpoint convention costs at most one sample).',
+   'scaled_form':'|(2 pi/M)d_hop - d_ang| <= 4 pi eps + 2 pi/M with probability at least 1-2 exp(-2 M eps^2).'
+ },
+ 'consequence':'The operational causal-depth metric, after the dimensionless scale factor 2pi/M, converges uniformly in probability to the intrinsic phase-circle metric in the diffuse phase regime.',
+ 'failure_mode':'For a nonuniform limiting phase density, unweighted hop depth converges to cumulative phase mass rather than angular length. Equality with angular geometry therefore depends on the diffuse/uniform population result, not graph topology alone.',
+ 'rewiring_caution':'If RG3 rewires during the observation window, the fixed-support causal-depth theorem must be replaced by a time-dependent graph theorem; CG-02 shows there is no size-uniform raw dwell time without extra dynamics/separation.',
+ 'diagnostics':rows,
+ 'scope':'This is a dimensionless mathematical bridge between two internal metrics. No physical metre, second, c, or spacetime interpretation is sourced.'
+}
+p=ROOT/'results'/'CG-04_influence_metric.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'examples':[x for x in rows if x['M'] in [1000,10000] and x['confidence']==0.99]},indent=2))

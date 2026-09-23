@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+# Representative frequency sets. The theorem is algebraic and not limited to these rows.
+sets=[[3,4,5],[1,2,3,4,5],[2,4,6],[2,3,5,7],[1,3,4,6,8]]
+rows=[]
+for ks in sets:
+ g=0
+ for k in ks:g=math.gcd(g,k)
+ # resonance lattice over R has dimension m-1 as kernel of one nonzero row k.
+ rows.append({'frequencies':ks,'gcd':g,'phase_torus_dimension':len(ks),'continuous_translation_orbit_dimension':1,'resonance_span_dimension':len(ks)-1,'predicted_aligned_phase_hessian_nullity':1})
+out={
+ 'task':'HDIM-06-general-scalar-cyclic-no-go',
+ 'scientific_state':'PROVED_GENERAL_ONE_GOLDSTONE_DIRECTION_FOR_POSITIVE_SCALAR_CYCLIC_HARMONICS',
+ 'rows':rows,
+ 'theorem':'For m positive-amplitude scalar harmonics with nonzero integer frequencies k=(k1,...,km), phase space is T^m and carrier translation is the one-parameter action phi->phi+k alpha. The resonance lattice {n in Z^m:n.k=0} has real rank m-1. In the exact positive Bessel/Fourier expansion, every resonance has positive coefficient at positive amplitudes; at alignment the phase Hessian is a positive sum of n n^T over this lattice. Its nullspace is therefore span{k}, hence exactly one-dimensional. Adding more scalar harmonics on one cyclic carrier cannot create a second exact Goldstone-like coordinate.',
+ 'escape_condition':'A persistent >=2-dimensional degeneracy requires a genuinely higher-dimensional continuous symmetry/carrier, an exact extra conservation/gauge freedom, zero amplitudes that change the stratum, or tuned multicriticality. More harmonics of one S1 carrier are insufficient.',
+ 'importance':'This upgrades the previous branch-specific dimension no-go to the whole positive-amplitude scalar/cyclic class.',
+ 'nonconclusions':['It does not rule out a massive internal T2 shape manifold.','It does not rule out non-scalar, product-group or matrix-valued future FIN objects.']
+}
+p=ROOT/'results'/'HDIM-06_scalar_cyclic_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'sets':rows},indent=2))

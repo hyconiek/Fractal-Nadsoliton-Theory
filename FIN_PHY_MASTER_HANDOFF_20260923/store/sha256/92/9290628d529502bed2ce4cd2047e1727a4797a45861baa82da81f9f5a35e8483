@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for M in [16,32,64,128,256,512]:
+    h=2*math.pi/M; c0=1.0
+    # max sampled group velocity over Brillouin interval is c0 (continuum derivative formula).
+    # compare first three mode frequencies to continuum omega=k*c0.
+    rec={'M':M,'h':h,'modes':[]}
+    for k in [1,2,3,5]:
+        omega=2*c0/h*math.sin(math.pi*k/M)
+        rec['modes'].append({'k':k,'omega_lattice':omega,'omega_continuum':c0*k,'relative_error':omega/(c0*k)-1})
+    rows.append(rec)
+out={
+ 'task':'CG-07-refinement-wave-speed','scientific_state':'CONDITIONAL_HYPERBOLIC_CONTINUUM_WITH_BOUNDED_GROUP_VELOCITY',
+ 'static_input':'CG-06 gives c_edge(ell)=kappa0/ell from exact static refinement consistency.',
+ 'kinetic_assumption':{
+   'form':'A local positive kinetic mass assigned to an interval is additive under subdivision and regular in ell.',
+   'consequence':'m_interval(ell)=mu0*ell. Standard lumping gives vertex mass m_i=mu0(ell_{i-1}+ell_i)/2.'
+ },
+ 'uniform_mesh':{
+   'spacing':'h=2*pi/M',
+   'equation':'mu0*h*fddot_i=(kappa0/h)(f_{i+1}-2 f_i+f_{i-1})',
+   'dispersion':'omega(p)=2*sqrt(kappa0/mu0)*|sin(p h/2)|/h',
+   'group_velocity':'|d omega/dp|=sqrt(kappa0/mu0)*|cos(p h/2)| <= c0, c0=sqrt(kappa0/mu0).',
+   'continuum':'For fixed p as h->0, omega->c0|p| and f_tt=c0^2 f_{theta theta}.'
+ },
+ 'finite_speed_interpretation':'The continuum hyperbolic limit has an exact finite propagation speed c0 in angular-coordinate/time units. The lattice dispersion has bounded group velocity c0, although continuous lattice evolution need not have a mathematically exact compact support cone; exponentially small outside-cone tails must be treated separately.',
+ 'contrast_heat':'Using the same static Dirichlet form with first-order gradient/heat dynamics gives diffusion and positive-time tails, not a finite-speed wave. Finite propagation therefore comes from the added inertial kinetic structure, not from the static FIN potential alone.',
+ 'diagnostics_unit_c0':rows,
+ 'nonconclusions':['c0 is not the physical speed of light','kappa0, mu0 and the time unit are not sourced by the isolated FIN cell','Lorentz invariance is not proved','the result is 1D internal/emergent phase geometry only']
+}
+p=ROOT/'results'/'CG-07_wave_speed.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'last':rows[-1]},indent=2))

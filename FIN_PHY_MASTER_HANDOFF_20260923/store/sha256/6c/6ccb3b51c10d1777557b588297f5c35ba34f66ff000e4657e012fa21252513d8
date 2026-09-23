@@ -1,0 +1,276 @@
+{
+  "FIN_N1_weighted_sensitivity_scout": {
+    "argmax_labels": [
+      8,
+      9,
+      8,
+      9
+    ],
+    "constants": {
+      "barker_edge_coefficient_upper": 0.24775416404417508,
+      "metropolis_edge_coefficient_upper": 0.9910166561767003,
+      "nearest_neighbor_path_row_sum_upper": {
+        "barker": 0.49550832808835016,
+        "metropolis": 1.9820333123534006
+      }
+    },
+    "derivation": "Changing one neighbor changes a proposed local log-weight ratio by <=(kappa/2)*w*R. Metropolis acceptance is 1-Lipschitz in that log ratio; Barker is <=1/4-Lipschitz.",
+    "kappa": 0.25,
+    "max_neighbor_logratio_difference_geometry_R": 7.9281332494136025
+  },
+  "claim_decision": {
+    "H-R6_conditional_bounded_propagation_on_sparse_PM_graph": "PASS_IN_SCOPE",
+    "H-R6_unconditional_emergent_locality_from_FIN_core": "NOT_DERIVED",
+    "continuous_time_exact_lightcone": "REFUTED_FOR_POSITIVE_RATE_JUMP_PROCESS",
+    "dense_graph_locality": "REFUTED_IN_SCOPE"
+  },
+  "continuous_time_theorem": {
+    "example_bounds": {
+      "degree3": {
+        "Delta": 3,
+        "rows": [
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 0.36700001661267456,
+              "3": 0.08575001661267469,
+              "4": 0.015437516612674668,
+              "5": 0.0022539228626746676,
+              "6": 0.0002763838001746677,
+              "7": 2.9191417362167625e-05,
+              "8": 2.706519203685486e-06
+            },
+            "t": 0.25
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 1.0,
+              "3": 0.8566890703380645,
+              "4": 0.29418907033806485,
+              "5": 0.0832515703380648,
+              "6": 0.019970320338064815,
+              "7": 0.004150007838064817,
+              "8": 0.0007599408737791012
+            },
+            "t": 0.5
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 1.0,
+              "3": 1.0,
+              "4": 1.0,
+              "5": 1.0,
+              "6": 1.0,
+              "7": 0.673036923187668,
+              "8": 0.23910835175909628
+            },
+            "t": 1.0
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 1.0,
+              "3": 1.0,
+              "4": 1.0,
+              "5": 1.0,
+              "6": 1.0,
+              "7": 1.0,
+              "8": 1.0
+            },
+            "t": 2.0
+          }
+        ]
+      },
+      "path_or_ring": {
+        "Delta": 2,
+        "rows": [
+          {
+            "bounds": {
+              "1": 0.6487212707001281,
+              "2": 0.14872127070012814,
+              "3": 0.023721270700128146,
+              "4": 0.002887937366794812,
+              "5": 0.0002837707001281461,
+              "6": 2.3354033461479434e-05,
+              "7": 1.6526445725905418e-06,
+              "8": 1.0254536624133538e-07
+            },
+            "t": 0.25
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 0.718281828459045,
+              "3": 0.2182818284590452,
+              "4": 0.051615161792378565,
+              "5": 0.009948495125711903,
+              "6": 0.001615161792378568,
+              "7": 0.00022627290348967936,
+              "8": 2.7860205076980958e-05
+            },
+            "t": 0.5
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 1.0,
+              "3": 1.0,
+              "4": 1.0,
+              "5": 0.38905609893065013,
+              "6": 0.12238943226398359,
+              "7": 0.033500543375094685,
+              "8": 0.00810371797826927
+            },
+            "t": 1.0
+          },
+          {
+            "bounds": {
+              "1": 1.0,
+              "2": 1.0,
+              "3": 1.0,
+              "4": 1.0,
+              "5": 1.0,
+              "6": 1.0,
+              "7": 1.0,
+              "8": 1.0
+            },
+            "t": 2.0
+          }
+        ]
+      }
+    },
+    "proof_idea": "A disagreement can reach y only through a time-ordered support walk from x to y. Expected ordered n-tuples along one walk are <=t^n/n! and there are <=Delta^n walks; union bound and coupling imply the TV bound.",
+    "statement": "With independent rate<=1 local clocks on a graph of maximum degree Delta, a shared-randomness coupling gives I_xy(t) <= min(1, sum_{n>=d(x,y)} (Delta*t)^n/n!).",
+    "type": "factorial/exponential tail, not an exact continuous-time cone"
+  },
+  "controls": {
+    "bounded_degree_sparse": {
+      "decision": "PASS_IN_SCOPE",
+      "reason": "Delta fixed gives constants independent of M and an exact discrete cone / continuous factorial tail."
+    },
+    "dense_complete": {
+      "decision": "REFUTED_AS_LOCALITY_CLASS",
+      "degree_growth": [
+        {
+          "Delta": 3,
+          "M": 4,
+          "support_path_constant_Delta_rate1": 3
+        },
+        {
+          "Delta": 7,
+          "M": 8,
+          "support_path_constant_Delta_rate1": 7
+        },
+        {
+          "Delta": 15,
+          "M": 16,
+          "support_path_constant_Delta_rate1": 15
+        },
+        {
+          "Delta": 31,
+          "M": 32,
+          "support_path_constant_Delta_rate1": 31
+        },
+        {
+          "Delta": 63,
+          "M": 64,
+          "support_path_constant_Delta_rate1": 63
+        },
+        {
+          "Delta": 127,
+          "M": 128,
+          "support_path_constant_Delta_rate1": 127
+        }
+      ],
+      "reason": "Every pair is direct support (diameter 1) and Delta=M-1; no size-uniform spatially separating cone follows."
+    },
+    "long_range_ring": {
+      "decision": "NO_EXACT_CONE; TAIL_CLASS_DEPENDS_ON_ALPHA",
+      "direct_first_event_sensitivity_upper": {
+        "alpha1_metropolis": {
+          "1": 0.9910166561767003,
+          "16": 0.06193854101104377,
+          "2": 0.49550832808835016,
+          "32": 0.030969270505521885,
+          "4": 0.24775416404417508,
+          "8": 0.12387708202208754
+        },
+        "alpha2_metropolis": {
+          "1": 0.9910166561767003,
+          "16": 0.0038711588131902356,
+          "2": 0.24775416404417508,
+          "32": 0.0009677897032975589,
+          "4": 0.06193854101104377,
+          "8": 0.015484635252760942
+        }
+      },
+      "reason": "Any nonzero long-range edge permits immediate direct dependence. alpha=2 has a bounded weighted row sum but polynomial direct tails; alpha=1 row sum grows logarithmically without normalization.",
+      "row_sums": [
+        {
+          "M": 16,
+          "metropolis_Dobrushin_rowsum_alpha1": 5.263006313338404,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.0119167541400467,
+          "sum_alpha1": 5.310714285714285,
+          "sum_alpha2": 3.03921910430839
+        },
+        {
+          "M": 32,
+          "metropolis_Dobrushin_rowsum_alpha1": 6.638778943607796,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.1363564487864055,
+          "sum_alpha1": 6.698957986457987,
+          "sum_alpha2": 3.164786816889974
+        },
+        {
+          "M": 64,
+          "metropolis_Dobrushin_rowsum_alpha1": 8.013103404875887,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.1983654969319555,
+          "sum_alpha1": 8.08574039087304,
+          "sum_alpha2": 3.2273579631558484
+        },
+        {
+          "M": 128,
+          "metropolis_Dobrushin_rowsum_alpha1": 9.387065166062348,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.2293435865312943,
+          "sum_alpha1": 9.472156807411535,
+          "sum_alpha2": 3.258616862192774
+        },
+        {
+          "M": 256,
+          "metropolis_Dobrushin_rowsum_alpha1": 10.760936210801388,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.2448293243494457,
+          "sum_alpha1": 10.858481685178347,
+          "sum_alpha2": 3.2742429747526725
+        },
+        {
+          "M": 512,
+          "metropolis_Dobrushin_rowsum_alpha1": 12.13478457383441,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.252571779802087,
+          "sum_alpha1": 12.244783675634562,
+          "sum_alpha2": 3.2820556138282977
+        },
+        {
+          "M": 1024,
+          "metropolis_Dobrushin_rowsum_alpha1": 13.50862726627871,
+          "metropolis_Dobrushin_rowsum_alpha2": 3.256442955843735,
+          "sum_alpha1": 13.63107994409944,
+          "sum_alpha2": 3.2859618812129274
+        }
+      ]
+    }
+  },
+  "critical_scope": [
+    "The sparse graph Gamma and its support are PM inputs; this theorem does not derive locality from the single-cell FIN core.",
+    "No identification of graph update depth or continuous time t with physical time.",
+    "No identification of any bound velocity with c; no Lorentz symmetry.",
+    "The support-only theorem applies to the declared local generators; the numerical weighted constants are N=1 scouts."
+  ],
+  "status": "PASS_SPARSE_TAIL_BOUND__REFUTE_UNCONDITIONAL_LOCALITY",
+  "strict_discrete_theorem": {
+    "proof_idea": "Each local event reads only its site and declared neighbors, so the dependency set expands by at most one graph edge per layer; induction gives the exact cone.",
+    "statement": "For a graph-supported local update rule, if two initial preparations differ only at x, then after t causally ordered local event layers the marginal at y is identical whenever graph_distance(x,y)>t.",
+    "uniform_in_M_for_bounded_degree": true
+  },
+  "task": "PHY-006"
+}

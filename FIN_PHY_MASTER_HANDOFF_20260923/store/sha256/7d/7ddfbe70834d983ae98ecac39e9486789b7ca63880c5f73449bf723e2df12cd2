@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+lam=np.array([L[k] for k in range(1,6)],float)
+B=np.array([[2,-1,0,0,0],[1,1,-1,0,0],[1,0,1,-1,0],[1,0,0,1,-1]],float)
+nu_u=B@lam
+nu_w=B@np.sqrt(lam)
+# Dimensionless ratios relative first nonzero rate.
+def ratios(v): return (v/v[0]).tolist()
+out={
+ 'task':'TIME-SOURCE-relative-clock-spectrum',
+ 'scientific_state':'PROVED_DIMENSIONLESS_RELATIVE_CLOCKS_EXIST_CONDITIONALLY__ABSOLUTE_TIME_AND_DYNAMICS_NOT_SOURCED',
+ 'strict_doublet_eigenvalues':lam.tolist(),
+ 'unitary_character_frequency_vector':nu_u.tolist(),
+ 'unitary_frequency_ratios_relative_first':ratios(nu_u),
+ 'wave_character_frequency_proxy_vector':nu_w.tolist(),
+ 'wave_frequency_ratios_relative_first':ratios(nu_w),
+ 'heat_decay_rates':lam.tolist(),
+ 'scale_gauges':{
+  'heat_or_unitary':'A -> c A and t -> t/c leaves dimensionless trajectories unchanged after reparameterization.',
+  'wave':'A -> c A and t -> t/sqrt(c) leaves the wave equation trajectory shape unchanged after reparameterization.'},
+ 'theorem':'A fixed dimensionless A determines ratios of decay/precession/oscillation rates once a dynamics is chosen. It does not determine an absolute time unit. Moreover heat, unitary and wave assign inequivalent functions lambda, lambda and sqrt(lambda) to rates, so static A does not select the clock law.',
+ 'conclusion':'TIME-SOURCE remains open. FIN can provide internal dimensionless clock ratios conditional on dynamics, not a physical second or unique time evolution.',
+ 'nonconclusions':['No SI time.','No arrow of time.','No identification of any internal phase as physical time.']
+}
+p=ROOT/'results'/'TIME-SOURCE_relative_clocks.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'unitary_ratios':out['unitary_frequency_ratios_relative_first'],'wave_ratios':out['wave_frequency_ratios_relative_first']},indent=2))

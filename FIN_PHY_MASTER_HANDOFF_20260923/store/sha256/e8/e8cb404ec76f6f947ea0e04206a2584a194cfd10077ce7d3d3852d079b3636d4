@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for q in [12,24,48,96,192]:
+    alg=q//2+1
+    rows.append({'q':q,'Dq_orbital_algebra_dimension':alg,'rank_equals_algebra_dimension_rule_prediction':alg,
+                 'Dq_invariant_projector_attainable_rank_min':0,'attainable_rank_max':q,'all_integer_ranks_attainable':True})
+out={
+ 'task':'RANK-SOURCE-02_association_dimension_coincidence_no_go',
+ 'scientific_state':'PROVED_ASSOCIATION_ALGEBRA_DIMENSION_DOES_NOT_SOURCE_MEDIATOR_RANK',
+ 'rows':rows,
+ 'theorem':'For even q the Dq action on a q-cycle has q/2+1 distance orbitals and therefore a q/2+1 dimensional Bose-Mesner/commutant algebra. The real permutation representation has two 1D irreducible sectors and q/2-1 doublets, so invariant projector sums realize every rank 0,...,q. Hence no representation-theoretic implication rank(A_med)=dim(association algebra) exists.',
+ 'q12_coincidence':'At q=12 both the relation-algebra dimension and the supplied mediator rank equal 7, but this numerical equality is not forced by D12 symmetry.',
+ 'heldout_failure':'Promoting the coincidence to a rule predicts ranks 13,25,49,97 for q=24,48,96,192, rather than the fixed rank-7 q-extension used elsewhere.',
+ 'nonconclusions':['The rule could be added as a modelling axiom, but then rank is supplied rather than derived.']
+}
+p=ROOT/'results'/'RANK-SOURCE-02_association_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

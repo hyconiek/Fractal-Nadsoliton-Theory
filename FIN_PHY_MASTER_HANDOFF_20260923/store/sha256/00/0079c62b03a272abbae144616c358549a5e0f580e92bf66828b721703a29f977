@@ -1,0 +1,54 @@
+{
+  "task": "OCB-MEM-04",
+  "status": "EXPLICIT_RANK3_CHALLENGER_GIVES_NONTRIVIAL_FULL_PATH_QUERY_LOWER_BOUND",
+  "query_model": {
+    "one_query": "one independent reset returning the complete ordered four-jump destination path",
+    "allowed_test": "arbitrary, including adaptive computation on all previously returned full paths",
+    "why_lower_bound_applies": "Any weaker bounded functional of each returned path is a data-processing of this experiment and cannot be easier to distinguish."
+  },
+  "explicit_null_challenger": {
+    "class": "three-component latent-class mixture; conditional on the latent component, the four destinations are independent with position-dependent emissions",
+    "weights": [
+      0.8136081440005921,
+      0.15633274069300399,
+      0.0300591153064038
+    ],
+    "full_11_symbol_block_hankel_singular_values_first6": [
+      0.038663588081840616,
+      0.0016952656800683604,
+      0.0016391967929071047,
+      3.161123184205483e-18,
+      2.0454285386998592e-18,
+      1.870625491831847e-18
+    ],
+    "numerical_rank_tol_1e-12": 3,
+    "rank_at_most_3_by_construction": true,
+    "provenance_warning": "The challenger was found by exploratory EM and is frozen here as an existence witness. No global best rank-3 approximation claim is made."
+  },
+  "frozen_rank4_alias": {
+    "block_hankel_singular_values_first6": [
+      0.03867307179461326,
+      0.001671292066931668,
+      0.0016712920669316675,
+      7.222641086860385e-05,
+      2.269602217694664e-18,
+      5.256861364850844e-19
+    ],
+    "numerical_rank_tol_1e-12": 4
+  },
+  "distances": {
+    "KL_P_to_Q": 1.0359282401045487e-05,
+    "total_variation": 0.001037465057253445,
+    "bhattacharyya_coefficient": 0.999997415391557,
+    "chernoff_information": 2.5846143604304136e-06,
+    "chernoff_s": 0.5004976293867525
+  },
+  "information_theoretic_lower_bounds": {
+    "both_typeI_and_typeII_at_most_5pct_Bretagnolle_Huber_queries_at_least": 155362,
+    "equal_prior_Bayes_error_at_most_5pct_Hellinger_queries_at_least": 321273,
+    "simple_pair_Chernoff_5pct_upper_bound_for_context_only": 890882,
+    "interpretation": "The first two are necessary lower bounds for any test because the composite rank<=3 null contains this explicit challenger. The Chernoff number is an upper bound for the simple P-vs-Q pair, not a minimax guarantee."
+  },
+  "decision": "A genuine query-count lower bound exists once the query model is fixed. For this concrete period-2 rank-4 alias, even complete four-jump path queries require hundreds of thousands of independent resets against a broad explicit rank-3 challenger.",
+  "nonconclusion": "This is not a universal asymptotic lower bound in hidden dimension H, and it does not prove the frozen challenger is the closest rank<=3 process."
+}

@@ -1,0 +1,45 @@
+{
+  "interpretation": "Operator/Dirichlet continuum and shortest-path metric continuum are distinct bridge questions.",
+  "laplacian_theorem": "With edge length h=1/m, the scaled graph operator h^{-2} sum_i[f(x+h e_i)+f(x-h e_i)-2f(x)] converges to the flat 4D Laplacian with O(h^2) error for C^4 functions.",
+  "metric_obstruction": "For displacement (h,h,h,h), weighted RNG shortest-path length is 4h while flat Euclidean distance is 2h. Stretch=2 for every m. Hence this sparse grid RNG does not converge to the Euclidean geodesic metric even though its Dirichlet/Laplacian operator converges to the Euclidean 4D Laplacian.",
+  "nonconclusions": [
+    "The tensor grid population is not sourced by strict FIN.",
+    "This does not establish a physical four-dimensional space."
+  ],
+  "numerical_control_rows": [
+    {
+      "h": 0.125,
+      "m": 8,
+      "max_error_4D_test_function": 7.952342384942085
+    },
+    {
+      "h": 0.08333333333333333,
+      "m": 12,
+      "max_error_4D_test_function": 3.574935577102991
+    },
+    {
+      "h": 0.0625,
+      "m": 16,
+      "max_error_4D_test_function": 2.0189530005449683
+    },
+    {
+      "h": 0.041666666666666664,
+      "m": 24,
+      "max_error_4D_test_function": 0.8998779574565106
+    },
+    {
+      "h": 0.03125,
+      "m": 32,
+      "max_error_4D_test_function": 0.5066874806934152
+    },
+    {
+      "h": 0.020833333333333332,
+      "m": 48,
+      "max_error_4D_test_function": 0.22535525950269175
+    }
+  ],
+  "observed_error_slope_in_h": 1.9897048338089736,
+  "rng_grid_theorem": "On the periodic tensor grid (Z_m)^4 with flat-torus distance and m sufficiently large, RNG edges are exactly the 8 nearest axis edges +/-e_i. Axis-neighbor edges cannot be blocked because h is the minimum nonzero distance; every non-axis displacement is blocked by taking one nearest step toward the target.",
+  "scientific_state": "PROVED_STRUCTURED_T4_RNG_HAS_4D_DIRICHLET_CONTINUUM_BUT_NOT_EUCLIDEAN_SHORTEST_PATH_LIMIT",
+  "task": "PROX-04B-tensor-grid-RNG-continuum-control"
+}

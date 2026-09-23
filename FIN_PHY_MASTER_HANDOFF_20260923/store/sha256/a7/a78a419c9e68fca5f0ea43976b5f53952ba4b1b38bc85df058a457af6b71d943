@@ -1,0 +1,60 @@
+import json, math
+from pathlib import Path
+import numpy as np
+import networkx as nx
+ROOT=Path(__file__).resolve().parents[1]
+
+def cycle_eigs(M):
+    k=np.arange(M)
+    return 4*np.sin(np.pi*k/M)**2
+
+def spectral_dimension(eigs,tgrid):
+    H=np.array([np.exp(-t*eigs).sum() for t in tgrid])
+    logt=np.log(tgrid); logH=np.log(H)
+    ds=-2*np.gradient(logH,logt)
+    return H,ds
+Ms=[8,16,32,64,128,256]
+low=[];plate=[];controls=[]
+for M in Ms:
+    lam=M*M*cycle_eigs(M)
+    for k in (1,2,3):
+        disc=float(lam[k]); cont=float((2*math.pi*k)**2)
+        low.append({'M':M,'k':k,'disc':disc,'continuum':cont,'relative_error':abs(disc-cont)/cont})
+    # t window spanning lattice to circle scale
+    t=np.logspace(math.log10(max(2/M**2,1e-6)), math.log10(0.05), 240)
+    H,ds=spectral_dimension(lam,t)
+    mask=(ds>0.9)&(ds<1.1)
+    if mask.any():
+        inds=np.where(mask)[0]
+        # longest contiguous run
+        runs=[];start=prev=inds[0]
+        for z in inds[1:]:
+            if z==prev+1:prev=z
+            else:runs.append((start,prev));start=prev=z
+        runs.append((start,prev)); a,b=max(runs,key=lambda r:r[1]-r[0])
+        interval=[float(t[a]),float(t[b])]
+        decades=math.log10(interval[1]/interval[0]) if interval[1]>interval[0] else 0
+    else: interval=None;decades=0
+    plate.append({'M':M,'dimension_0p9_1p1_interval':interval,'log10_width':decades,'ds_mid_median':float(np.median(ds))})
+    # deterministic 3-regular random control
+    G=nx.random_regular_graph(3,M,seed=1729+M)
+    L=nx.laplacian_matrix(G).toarray().astype(float)
+    er=np.linalg.eigvalsh(L)*M*M
+    gap=float(er[1])
+    # complete graph under same M^2 scaling has nonzero eigenvalue M^3
+    controls.append({'M':M,'random3_scaled_gap':gap,'random3_unscaled_gap':gap/(M*M),'complete_scaled_gap':float(M**3)})
+out={
+ 'task':'PHY-020','scientific_state':'PASS_DECLARED_CYCLE_CONTINUUM__UNIQUENESS_REFUTED_BY_CONTROLS',
+ 'refinement_premise':'Gamma_M=C_M, coordinate spacing h=1/M, scaled graph Laplacian Delta_M=M^2 L_C_M',
+ 'exact_spectrum':'lambda_k(Delta_M)=4 M^2 sin^2(pi k/M)',
+ 'continuum_limit':'for every fixed integer k, lambda_k -> (2 pi k)^2; Taylor remainder gives relative error O(k^2/M^2)',
+ 'low_mode_checks':low,
+ 'heat_trace_plateaus':plate,
+ 'controls':controls,
+ 'control_interpretation':'under the same h=1/M scaling, 3-regular expander-like controls have a scaled gap growing ~M^2 and complete graphs gap M^3; they do not approach the circle Laplacian',
+ 'semigroup_statement':'fixed finite Fourier sectors converge spectrally, hence exp(-t Delta_M) converges on those sectors uniformly for t in compact nonnegative intervals',
+ 'decision':'one conditional 1D continuum exists for the declared cycle refinement; single-cell FIN does not select it over incompatible graph families',
+ 'nonconclusions':['no 3+1 dimension','no Lorentz signature','no physical c','no unique continuum selected by FIN']
+}
+(ROOT/'results'/'PHY-020_continuum.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

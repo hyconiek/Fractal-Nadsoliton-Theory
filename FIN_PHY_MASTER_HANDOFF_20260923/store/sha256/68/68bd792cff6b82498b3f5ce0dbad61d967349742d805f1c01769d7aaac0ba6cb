@@ -1,0 +1,48 @@
+# OCB-MEM-04 — adversarial full-path query lower bound
+
+## Verdict
+
+**PASS in a declared query model.**
+
+The earlier horizon lower bound is upgraded to a nontrivial lower bound on the **number of observations**.
+
+## Query model
+
+One query returns one independent reset with the complete ordered four-jump destination path.  The tester may perform arbitrary adaptive computation on all returned paths.  Any test based on a weaker bounded path functional is a data-processing of this experiment.
+
+## Explicit rank-3 challenger
+
+A deterministic exploratory EM search on the three-category compression produced a fixed three-component latent-class distribution.  The replay does **not** claim it is the globally closest rank-3 process; it verifies only that this explicit distribution exists.
+
+After lifting back to all 11 destinations while preserving the strict within-category proportions:
+
+- its first-two / last-two block Hankel has numerical rank exactly 3 (and rank<=3 by construction);
+- frozen period-2 alias block Hankel has rank 4;
+- `KL(P||Q) = 1.0359282401045487e-5`;
+- `TV(P,Q) = 0.001037465057253445`.
+
+Thus the composite rank<=3 null contains a distribution extremely close to the rank-4 alias.
+
+## Information-theoretic lower bounds
+
+Bretagnolle--Huber gives
+
+`alpha + beta >= 0.5 exp(-N KL(P||Q))`.
+
+Therefore any procedure with both type-I and type-II error at most 5% needs at least
+
+**155,362 independent four-jump paths**
+
+against this one null member.
+
+The Bhattacharyya/Hellinger tensor-product bound is stronger for equal-prior Bayes error: obtaining Bayes error <=5% requires at least
+
+**321,273 independent four-jump paths**.
+
+These are lower bounds on **all** tests in the declared full-path reset model, not only Hankel statistics.
+
+## Decision
+
+`OCB-MEM-04 = PASS_INSTANCE_QUERY_LOWER_BOUND`.
+
+The result does not give a universal scaling law in hidden dimension `H`; it proves that even at the concrete period-2/rank-4 instance the rank<=3 composite null can be much harder than the earlier narrow challenger families suggested.

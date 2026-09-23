@@ -1,0 +1,36 @@
+# PHY-003 — composition of two and three FIN units
+
+**Scientific status: PASS_IN_SCOPE_CONDITIONAL_PM.**
+
+## Declared PM-001: retained-mean coupling
+
+For cells `x in V` with `m_x=X7^T p_x`, the testbed is
+
+`P ∝ prod_x multinomial(n_x) 12^(-N) * exp[ N g/2 sum_x ||m_x||^2 - N kappa/2 sum_{xy in E} w_xy ||m_x-m_y||^2 ]`.
+
+`Gamma`, `w_xy`, `kappa`, and the common feature frame are explicit modelling premises, not FIN theorems.
+
+## PM-002 control: full-p coupling
+
+A preregistered alternative replaces the edge cost by `||p_x-p_y||^2` while keeping the same isolated-cell onsite law. It therefore has the same zero-coupling FIN core but couples information that `X7^T p` discards.
+
+## Exact/finite checks
+
+The N=2 occupation space has 78 states per cell, 6,084 pair states and 474,552 triple states. At the frozen scout point `g=3.7`, `kappa=0.25`, unit edge weights:
+
+- zero-coupling pair factorization agrees with `Z1^2` to relative error `1.743e-16`;
+- the 3-cell path factorization agrees with direct summation to `5.754e-16` for PM-001 and `5.912e-16` for PM-002;
+- common D12 relabeling preserves the retained-mean edge cost to `6.217e-15` and the full-p control exactly to floating precision;
+- additive vertex+edge composition is grouping-independent to `3.553e-15` once boundary edges are explicitly declared.
+
+## Nontrivial correlations
+
+For the pair model, PM-001 generates mutual information `0.0176458` nats and correlation TV `0.0663807`. PM-002 also correlates the cells but differently: MI `0.00586955` nats, TV `0.0375696`.
+
+The two admissible coupled distributions differ by TV **0.0454045** despite sharing the same isolated FIN limit.
+
+## Main result
+
+A consistent nontrivial two-/three-cell composition exists. However, the frozen single-cell core **does not select a unique interaction law**: PM-001 and PM-002 both satisfy the required reductions yet make incompatible coupled predictions. Therefore composition is currently a conditional physical-modelling layer, not a derived FIN law.
+
+No N=1 or N=2 result is promoted to a collective phase-selection theorem.

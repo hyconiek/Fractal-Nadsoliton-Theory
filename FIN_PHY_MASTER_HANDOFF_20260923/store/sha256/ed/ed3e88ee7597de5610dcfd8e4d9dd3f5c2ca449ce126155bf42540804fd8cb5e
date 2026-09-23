@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+import json, math, sys
+from pathlib import Path
+import numpy as np
+sys.path.insert(0,'/mnt/data/fin_phy_operational_carrier/inputs')
+import R7P_model as model
+W=np.array(model.strict_kernel(),float); A=np.array(model.laplacian(W),float)
+s=float(A[0,0]); weights=np.array([W[0,d] for d in range(1,7)])
+pt=weights/s
+# top two destinations are shell1; next category shell2
+margin=float((weights[0]-weights[1])/s)
+linf_tolerance=margin/2
+# Hoeffding simultaneous for all 11 destinations of one state and all 132 state-destination pairs
+alpha=0.05
+n_one=math.ceil(2/margin**2*math.log(22/alpha))
+n_all=math.ceil(2/margin**2*math.log(264/alpha))
+# after cycle recovered, shell-aggregated probabilities
+agg=np.array([2*weights[d]/s for d in range(5)]+[weights[5]/s])
+agg_gap=float(np.min(agg[:-1]-agg[1:]))
+n_agg=math.ceil(2/agg_gap**2*math.log(12/alpha))
+result={
+ 'task':'OCB-03',
+ 'status':'PROTOCOL_THEOREM_SYNTHETIC_POWER_ONLY',
+ 'exit_rate_dimensionless':s,
+ 'per_destination_shell_probabilities_d1_to_d6':pt.tolist(),
+ 'embedded_jump_identity':'P(next=j | leave i)=W_ij/s_i; multiplying the generator by any positive clock scale cancels exactly.',
+ 'nearest_shell_margin':margin,
+ 'deterministic_linf_error_tolerance_for_top_two_recovery':linf_tolerance,
+ 'hoeffding_95pct_bound_exits_per_prepared_state':{
+   'one_state_all_11_destinations':n_one,
+   'simultaneous_all_12x11_destination_frequencies':n_all
+ },
+ 'after_cycle_recovery_shell_aggregated_probabilities':agg.tolist(),
+ 'aggregate_min_gap':agg_gap,
+ 'hoeffding_95pct_bound_for_six_aggregate_shell_frequencies':n_agg,
+ 'robustness':{
+   'independent_destination_blind_loss':'Cancels exactly after conditioning on a recorded exit.',
+   'uniform_destination_contamination':'p_obs=(1-eps)p+eps/11 preserves all destination rankings for every eps<1.',
+   'arbitrary_linf_contamination':'Nearest-shell top-two set is guaranteed unchanged when max_j |delta p_j| < margin/2.'
+ },
+ 'kill_condition':('If, after validated state preparation/readout, the two largest clock-free exit-destination probabilities from each state do not form one 12-cycle, '
+                   'the identification of the measured interaction carrier with the strict intrinsic C12 is falsified in the Markov realization.'),
+ 'nonconclusion':'No laboratory system, state ontology, apparatus calibration, or physical time unit is supplied here.'
+}
+Path('/mnt/data/fin_phy_operational_carrier/results/OCB-03_embedded_jump_protocol.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print('done')

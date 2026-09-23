@@ -1,0 +1,54 @@
+{
+  "task": "OCB-CAL-02",
+  "status": "STRUCTURAL_ZERO_COLLAPSES_CONFUSION_INTERVAL__EFFICIENCY_BOX_HAS_EXACT_THRESHOLD",
+  "declared_calibration_family": {
+    "confusion": "C(eps): correct 1-2 eps, adjacent reported labels eps each",
+    "external_eps_interval": [
+      0.04,
+      0.06
+    ],
+    "efficiency_box": "eta_j in eta0_j[1-r,1+r] independently",
+    "nominal_eta_minmax": [
+      0.8,
+      0.98
+    ]
+  },
+  "structural_zero_result": {
+    "principle": "In an embedded jump chain the true destination cannot equal the source, so every deconfused candidate must satisfy p_i[i]=0.",
+    "source0_self_score_root": 0.05,
+    "nominal_eps": 0.05,
+    "root_error": 0.0,
+    "source0_self_score_at_eps_lo": 0.008262124014105096,
+    "source0_self_score_at_eps_hi": -0.009016624423773588,
+    "dense_monotone_decreasing_check_10001_points": true,
+    "max_abs_self_score_all_sources_at_root": 8.4997586796191e-18,
+    "interpretation": "Within this one-parameter confusion family and noiseless full preparation record, the structural zero collapses the external eps interval to the nominal value. This is model-family-specific and not a general calibration theorem."
+  },
+  "efficiency_interval_theorem": {
+    "shell1_probability": 0.2830715004720707,
+    "shell2_probability": 0.11566747562103387,
+    "exact_halfwidth_threshold_r": 0.4198336126838737,
+    "formula": "r*=(p1-p2)/(p1+p2). For every independent multiplicative eta interval eta0_j[1-r,1+r], shell1 outranks shell2 for all calibrations iff r<r*.",
+    "safe_fixture_r": 0.39884193204968,
+    "safe_near_score": 0.2023613204511926,
+    "safe_competitor_score": 0.19240775727323797,
+    "minimum_all_source_safe_margin": 0.009953563177954622,
+    "minimum_margin_witness": {
+      "source": 0,
+      "near": 1,
+      "competitor": 2,
+      "margin": 0.009953563177954622,
+      "p_near": 0.2830715004720707,
+      "p_competitor": 0.11566747562103387
+    }
+  },
+  "removal_witness": {
+    "fail_fixture_r": 0.4408252933180674,
+    "near_score_with_eta_high": 0.19646483288767588,
+    "shell2_score_with_eta_low": 0.2068539120937517,
+    "ranking_reversed": true,
+    "meaning": "Above r*, destination-dependent censoring alone can make a shell-2 destination look more likely than shell-1 while producing an admissible calibration in the declared box."
+  },
+  "scope": "The confusion result is exact only inside the declared scalar adjacent-confusion family. General 12x12 interval calibration still requires a separate robust feasibility calculation; do not silently transfer this collapse theorem.",
+  "nonconclusion": "No real detector calibration or physical data are supplied."
+}

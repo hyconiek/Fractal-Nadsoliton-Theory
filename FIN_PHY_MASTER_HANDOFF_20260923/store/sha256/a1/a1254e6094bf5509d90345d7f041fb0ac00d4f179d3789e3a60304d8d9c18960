@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+d=json.loads((ROOT/'results'/'HDIM-02_shape_metric_clt.json').read_text())
+C=np.array(d['shape_covariance_coefficient_C_for_sqrtN_chi'],float)
+# For independent Gaussian tangent variables Y_i~N(0,C), block variable b^-1/2 sum Y_i has exactly C.
+rows=[]
+for b in [2,3,4,8,16,64]:
+ A=np.ones((1,b))/np.sqrt(b)
+ factor=float(np.sum(A*A))
+ Cb=factor*C
+ rows.append({'block_size':b,'covariance_factor':factor,'max_abs_covariance_defect':float(np.max(np.abs(Cb-C)))})
+assert max(r['max_abs_covariance_defect'] for r in rows)<1e-12
+out={
+ 'task':'HDIM-04-block-forgetful-stability',
+ 'scientific_state':'PROVED_GAUSSIAN_TANGENT_FIXED_POINT_UNDER_INDEPENDENT_BLOCK_AVERAGING',
+ 'rows':rows,
+ 'map':'Y_block = b^{-1/2} sum_{a=1}^b Y_a, equivalently chi_block-chi* = b^{-1} sum(chi_a-chi*) with total microscopic count bN.',
+ 'theorem':'If the local tangent variables are Gaussian N(0,C), the normalized block variable is exactly N(0,C). For the finite-N FIN auxiliary ensemble, the local Laplace limit therefore has a fixed two-dimensional Gaussian tangent law under independent block composition.',
+ 'why_it_matters':'This T2 tangent is not merely a coordinate chart: at leading fluctuation order it has a natural coarse/forgetful stability law.',
+ 'scope':['independent-cell/control composition','leading Laplace/Gaussian tangent','not the interacting PM-001 spatial coarse graining']
+}
+p=ROOT/'results'/'HDIM-04_block_stability.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'max_defect':max(r['max_abs_covariance_defect'] for r in rows)},indent=2))

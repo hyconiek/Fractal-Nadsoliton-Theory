@@ -1,0 +1,48 @@
+{
+  "task": "OCB-02",
+  "status": "PROVED_CONSERVATIVE_WINDOWS_PLUS_NUMERICAL_WIDER_WINDOWS",
+  "operator_norm_L": 2.3421820411463004,
+  "nearest_gap_w1_minus_w2": 0.2779421209549173,
+  "minimum_all_shell_gap": 0.013060406042187948,
+  "certified_windows": {
+    "unitary_nearest_t_less_than": "0.04875550430485277343660711303815755481268",
+    "unitary_all_six_shells_t_less_than": "0.002376343815187615208057521122516834626973",
+    "wave_nearest_t_less_than": "0.5449951016598880272885038300096144026066",
+    "wave_all_six_shells_t_less_than": "0.1194514450999843334723764277029238782228"
+  },
+  "proof_bounds": {
+    "unitary": "For off-diagonal U(t)=exp(-itA), U_ij=it W_ij+r_ij with |r_ij| <= exp(Lt)-1-Lt. If delta*t > 2[exp(Lt)-1-Lt], then |U| (and hence transition probability) preserves the compared shell order.",
+    "wave": "For C(t)=cos(t sqrt(A)), C_ij=(t^2/2)W_ij+r_ij with |r_ij| <= cosh(t sqrt(L))-1-Lt^2/2. If delta*t^2 > 4[cosh(t sqrt(L))-1-Lt^2/2], then |C| and |C|^2 preserve the compared shell order."
+  },
+  "strong_numerical_first_crossings": {
+    "unitary_all_shells": [
+      0.8759246366220668,
+      [
+        5,
+        6
+      ]
+    ],
+    "unitary_nearest": [
+      2.8973009778144103,
+      [
+        1,
+        2
+      ]
+    ],
+    "wave_probability_all_shells": [
+      2.354575462879288,
+      [
+        1,
+        2
+      ]
+    ],
+    "wave_probability_nearest": [
+      2.354575462879288,
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "interpretation": "Carrier adjacency is more robust than the choice of dynamics: heat preserves all shells for all t (OCB-01), while unitary/wave have explicit nonzero dimensionless windows in which the same intrinsic nearest shell is guaranteed. These windows do not supply a physical clock."
+}

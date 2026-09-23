@@ -1,0 +1,174 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c)
+h=c-m
+b=float(np.max(np.abs(h)))
+delta=0.05
+rho=0.8
+
+def strict_prob(word):
+    out=1.0
+    for a in word: out*=p[a]
+    return out
+
+def persistent_prob(word):
+    hs=np.array([-1.0,1.0])
+    T=np.array([[(1+rho*x*y)/2 for y in hs] for x in hs],float)
+    v=np.array([.5,.5])
+    for t,a in enumerate(word):
+        v=v*(p[a]+delta*hs*c[a])
+        if t<len(word)-1: v=v@T
+    return float(v.sum())
+
+def periodic_prob(word,L):
+    out=0.0
+    for mask in range(1<<L):
+        z=np.array([1.0 if (mask>>j)&1 else -1.0 for j in range(L)])
+        pr=1.0
+        for t,a in enumerate(word): pr*=p[a]+delta*z[t%L]*c[a]
+        out+=pr/(1<<L)
+    return float(out)
+
+# strict rank-1 control on a finite word set
+words_small=[(),(0,),(1,),(0,0),(0,1),(1,0),(1,1)]
+H0=np.array([[strict_prob(u+v) for v in words_small] for u in words_small])
+sv0=np.linalg.svd(H0,compute_uv=False)
+
+# Persistent hidden bit: exact 2x2 minor using shell-1 symbol a=0.
+a=0
+Hp=np.array([[1.0,p[a]],[p[a],persistent_prob((a,a))]])
+persistent_det=float(np.linalg.det(Hp))
+persistent_det_formula=float(delta**2*rho*c[a]**2)
+svp=np.linalg.svd(Hp,compute_uv=False)
+
+# Period-2 raw 4x4 minor. Symbol a=0 has c=+1, b=1 has c=-1.
+a,b_sym=0,1
+rows=[(),(a,),(a,a),(a,b_sym)]
+cols=[(),(a,),(a,b_sym),(b_sym,b_sym)]
+H2=np.array([[periodic_prob(u+v,2) for v in cols] for u in rows])
+period2_det=float(np.linalg.det(H2))
+period2_det_formula=float(-(delta**8)*(p[a]+p[b_sym])**2)
+sv2=np.linalg.svd(H2,compute_uv=False)
+
+# General period-L transformed block Hankel theorem.
+# h(X)=c(X)-m has E[h|z]=4 delta z. For block feature F_S=prod_{j in S} h(X_j),
+# two consecutive L-blocks yield diagonal cross-Hankel with entries (4 delta)^(2|S|).
+general=[]
+for L in range(1,7):
+    diag=[]
+    for mask in range(1<<L):
+        k=int(mask.bit_count())
+        diag.append((4*delta)**(2*k))
+    general.append({
+        'L':L,
+        'hidden_states':2**L,
+        'transformed_hankel_rank':sum(abs(x)>0 for x in diag),
+        'min_singular_value':min(diag),
+        'max_singular_value':max(diag),
+        'condition_number':max(diag)/min(diag)
+    })
+
+# Explicit numerical verification for L=2 feature Hankel using exact enumeration of visible words.
+# Features on a block of length 2: 1,h0,h1,h0*h1.
+def feature_vec(block):
+    x0,x1=block
+    return np.array([1.0,h[x0],h[x1],h[x0]*h[x1]])
+G=np.zeros((4,4))
+for word in itertools.product(range(11), repeat=4):
+    pr=periodic_prob(word,2)
+    G += pr*np.outer(feature_vec(word[:2]), feature_vec(word[2:]))
+G_expected=np.diag([1.0,(4*delta)**2,(4*delta)**2,(4*delta)**4])
+
+# Finite-sample Hoeffding rank-lower-bound fixtures.
+# For Z=h(X_t)h(X_{t+lag}), |Z|<=b^2 and E[Z]=mu. A two-feature Hankel [[1,0],[0,mu]]
+# has rank >=2 whenever a confidence interval excludes zero.
+def hoeffding_n_scalar(mu,alpha=0.05):
+    # 2 exp(-N mu^2/(2 b^4)) <= alpha
+    return math.ceil(2*(b**4)*math.log(2/alpha)/(mu**2))
+mu_persistent=(4*delta)**2*rho
+mu_period2=(4*delta)**2
+n_persistent=hoeffding_n_scalar(abs(mu_persistent))
+n_period2=hoeffding_n_scalar(abs(mu_period2))
+
+# Very conservative full-rank-4 certificate for the L=2 transformed 4x4 Hankel.
+lam_min=(4*delta)**4
+entry_bound=b**4
+# If every entry error <= eps=lam_min/8, ||E||_2<=4 eps=lam_min/2.
+eps=lam_min/8
+alpha=0.05
+n_rank4=math.ceil(2*(entry_bound**2)*math.log(32/alpha)/(eps**2))
+
+result={
+ 'task':'OCB-HANKEL-01',
+ 'status':'EXACT_HANKEL_RANK_THEOREMS_WITH_FINITE_SAMPLE_LOWER_CERTIFICATES',
+ 'strict_control':{
+   'finite_word_set_rank':int(np.sum(sv0>1e-12)),
+   'singular_values':sv0.tolist(),
+   'theorem':'For iid strict increments P(uv)=P(u)P(v), the complete path Hankel has rank 1.'
+ },
+ 'persistent_bit':{
+   'delta':delta,'rho':rho,
+   'raw_2x2_minor_rows_cols':['empty','shell1-symbol'],
+   'matrix':Hp.tolist(),
+   'determinant':persistent_det,
+   'determinant_formula':'delta^2 * rho * c_a^2',
+   'formula_value':persistent_det_formula,
+   'singular_values':svp.tolist(),
+   'exact_hankel_rank':'2 for delta*rho != 0 (two-state realization gives upper bound 2; nonzero minor gives lower bound 2).',
+   'feature_cross_moment_mu':mu_persistent,
+   'hoeffding_95pct_independent_two-jump_paths_to_certify_rank_ge_2':n_persistent
+ },
+ 'period2_alias':{
+   'delta':delta,
+   'raw_4x4_rows':[list(x) for x in rows],
+   'raw_4x4_cols':[list(x) for x in cols],
+   'matrix':H2.tolist(),
+   'determinant':period2_det,
+   'determinant_formula':'-delta^8 * (p_shell1 + p_shell2)^2',
+   'formula_value':period2_det_formula,
+   'singular_values':sv2.tolist(),
+   'exact_hankel_rank':'4 (nonzero 4x4 minor; four hidden sign states give upper bound 4).',
+   'transformed_feature_hankel':G.tolist(),
+   'transformed_expected_diagonal':G_expected.tolist(),
+   'max_feature_hankel_error':float(np.max(np.abs(G-G_expected))),
+   'lag2_feature_mu_for_rank_ge_2':mu_period2,
+   'hoeffding_95pct_independent_three-jump_paths_to_certify_rank_ge_2':n_period2,
+   'very_conservative_95pct_paths_for_full_rank4_via_16_entry_union_weyl':n_rank4
+ },
+ 'general_period_L_theorem':{
+   'statement':('For the rotating L-sign alias with 0<delta<delta_max, let h(x)=c(x)-E_p[c]. '
+                'For each subset S of the L positions define F_S(block)=product_{j in S} h(X_j). '
+                'The cross-Hankel of two consecutive L-blocks in the {F_S} basis is diagonal with entry '
+                '(4 delta)^(2|S|). Hence its rank is 2^L. Since the hidden construction has 2^L states, '
+                'the complete visible path Hankel rank and minimal linear realization dimension are exactly 2^L.'),
+   'rows':general,
+   'interpretation':('Hiding memory for longer exact horizons can require exponentially larger minimal linear realization in this explicit alias family. '
+                     'Detecting any memory can be much cheaper than certifying the full hidden rank.')
+ },
+ 'finite_sample_scope':{
+   'contrast_h_bound':b,
+   'note':('Hoeffding counts are deliberately conservative synthetic confidence fixtures for independent reset paths and known contrast h. '
+           'They are not laboratory recommendations and do not identify a unique HMM from rank alone.')
+ },
+ 'nonconclusion':'Hankel rank lower-bounds minimal linear predictive dimension. It does not by itself identify physical hidden states, their ontology, or a unique HMM realization.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-HANKEL-01_memory_rank.json'
+out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({
+ 'status':result['status'],
+ 'strict_rank':result['strict_control']['finite_word_set_rank'],
+ 'persistent_det_error':abs(persistent_det-persistent_det_formula),
+ 'period2_det_error':abs(period2_det-period2_det_formula),
+ 'period2_feature_error':result['period2_alias']['max_feature_hankel_error'],
+ 'n95_rank2_persistent':n_persistent,
+ 'n95_rank2_period2':n_period2,
+ 'n95_rank4_period2_conservative':n_rank4
+},indent=2))

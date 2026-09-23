@@ -1,0 +1,59 @@
+# Draft preregistration — operational test of the strict FIN cyclic carrier
+
+Status: protocol design only; no physical data selected or analyzed.
+
+## Hypothesis
+
+A physical system realizes the strict FIN Markov carrier if its clock-free destination law, after validated preparation/readout, is isomorphic to the normalized strict off-diagonal kernel.
+
+## Required inputs before execution
+
+1. Twelve reproducibly preparable and distinguishable states.
+2. Event-resolved transitions with a destination label.
+3. A calibration split for state confusion, destination-dependent loss and event merging.
+4. A declared Markov adequacy test or an explicit memory model.
+5. Raw attempts/exits retained, including failures/no-clicks when relevant.
+
+No cyclic ordering of the twelve states may be supplied to the analysis.
+
+## Primary endpoint — topology
+
+For each prepared state, estimate the conditional destination frequencies given a recorded exit.
+
+Construct an undirected graph by connecting each state to its two largest destination probabilities, with a preregistered tie rule.
+
+**Pass criterion:** the resulting graph is one connected 2-regular graph on twelve vertices, hence `C12`.
+
+**Kill criterion:** after calibration/nuisance allowances, the graph is not `C12`.
+
+The endpoint is invariant under relabeling of the twelve states.
+
+## Secondary endpoint — shell profile
+
+Only after the primary graph is frozen, define shell distance by graph distance on that recovered cycle.
+
+Test the normalized per-destination strict shell probabilities
+
+`[0.2830715005, 0.1156674756, 0.0550672851, 0.0283255813, 0.0145341912, 0.0066679328]`.
+
+No shell parameter is refit after seeing the data.
+
+## Negative control
+
+Use the frozen alternative obtained by swapping shell-1 and shell-2 rates. It preserves `D12`, uniform equilibrium and total exit rate but predicts a different carrier.
+
+Do not use this single control as an exhaustive alternative class.
+
+## Optional dynamics scan
+
+If a calibrated control parameter maps to dimensionless FIN time:
+
+- heat predicts no adjacent shell crossing for any finite positive time;
+- supplied unitary predicts a shell-5/6 crossing in `[0.8759,0.8760]`;
+- supplied wave predicts a shell-1/2 crossing in `[2.3545,2.3547]`.
+
+The scan is secondary because a physical clock/channel map is not strict-derived.
+
+## Fixed analysis boundaries
+
+A positive result would support only the operational carrier identification in the declared system. It would not establish spacetime, SI length, physical time, rank-7 source, continuum operator, quantum mechanics, gravity or a theory of nature.

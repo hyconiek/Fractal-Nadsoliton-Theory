@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+ev=np.linalg.eigvalsh(A)
+# cluster multiplicities
+clusters=[]
+for x in ev:
+ if not clusters or abs(x-clusters[-1][0])>1e-9: clusters.append([float(x),1])
+ else: clusters[-1][1]+=1
+mult=[m for _,m in clusters]
+centralizer_dim=sum(m*(m-1)//2 for m in mult)
+assert mult==[1,2,2,2,2,2,1] and centralizer_dim==5
+out={
+ 'task':'HDIM-09-strict-orthogonal-commutant',
+ 'scientific_state':'PROVED_EXACT_STRICT_OPERATOR_T5_CONTINUOUS_ORBIT',
+ 'strict_spectrum_clusters':[{'eigenvalue':x,'multiplicity':m} for x,m in clusters],
+ 'orthogonal_centralizer_identity_dimension':centralizer_dim,
+ 'identity_component':'SO(2)^5 ~= T^5 on the five nontrivial Fourier doublets k=1,...,5',
+ 'theorem':'For a real symmetric operator with distinct eigenspaces of multiplicities 1,2,2,2,2,2,1, the orthogonal centralizer is O(1) x O(2)^5 x O(1); its identity component is SO(2)^5. A vector with nonzero projection in every doublet has a five-dimensional torus orbit under this component, with fixed doublet radii, Euclidean norm and Dirichlet energy f^T A f/2.',
+ 'basis_free_note':'The continuous centralizer follows from spectral multiplicities and does not require choosing cosine/sine axes. Choosing phases only coordinatizes the canonical doublet rotations.',
+ 'interpretation':'This is a genuine FIN-internal higher-dimensional continuous object in the strict quadratic/operator sector.',
+ 'nonconclusions':['It is not the automorphism group of the probability simplex.','It is not a symmetry of the nonlinear entropy-plus-gain functional.','Five internal spectral phases are not five spatial dimensions.']
+}
+p=ROOT/'results'/'HDIM-09_strict_commutant_torus.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'multiplicities':mult,'centralizer_dim':centralizer_dim},indent=2))

@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib,json,sys
+R=Path(__file__).resolve().parent
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+# manifest if present
+mf=R/'MANIFEST.sha256'
+if mf.exists():
+    for line in mf.read_text().splitlines():
+        if not line.strip():continue
+        want,rel=line.split(maxsplit=1); p=R/rel
+        if not p.exists() or sha(p)!=want:
+            raise SystemExit(f'MANIFEST_FAIL {rel}')
+# tasks
+T=json.loads((R/'TASKS.json').read_text())
+ids=[x['id'] for x in T['tasks']]
+assert ids==[f'PHY-{i:03d}' for i in range(1,32)]
+assert len(T['tasks'])==31
+open_atoms=[x for x in T['tasks'] if x['execution']=='OPEN_WITH_ATOM']
+assert len(open_atoms)==1 and open_atoms[0]['id']=='PHY-013'
+# required synthesis files
+for f in ['PHY_CAMPAIGN_REPORT.md','CLAIM_REGISTER.json','PM_REGISTER.json','KILL_LEDGER.json','REPLAY.md','NONCONCLUSIONS.md','PREDICTIVITY_AUDIT.md','HANDOFF.md']:
+    assert (R/f).exists(),f
+# claim artifact hashes
+C=json.loads((R/'CLAIM_REGISTER.json').read_text())
+for c in C['claims']:
+    for rel,want in c['artifact_hashes'].items():
+        assert (R/rel).exists() and sha(R/rel)==want,(c['id'],rel)
+# kill ledger complete
+K=json.loads((R/'KILL_LEDGER.json').read_text())['kill_tests']
+assert list(K)==[f'KT-{i:02d}' for i in range(1,11)]
+print('PASS: 31 task dispositions; PHY-013 sole open atom; claims/hashes/kill ledger valid')

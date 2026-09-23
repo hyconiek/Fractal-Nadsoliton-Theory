@@ -1,0 +1,49 @@
+{
+  "conclusion": "Neither the phase metric nor the 1/ell spatial stiffness selects hyperbolic propagation. The bounded-speed result is conditional on an independently supplied inertial/kinetic law.",
+  "continuum_speed_statement": "Wave: finite characteristic/group speed sqrt(kappa0/mu0). Heat: no exact finite cone. Schrodinger continuum group velocity is proportional to |p| and has no finite global maximum; its lattice maximum diverges like 1/h.",
+  "dynamics": {
+    "gradient_heat": "nu0 h du_i/dt = -dF/du_i -> nu0 u_t = kappa0 u_xx",
+    "inertial_wave": "mu0 h d2u_i/dt2 = -dF/du_i -> mu0 u_tt = kappa0 u_xx",
+    "unitary_schrodinger": "i eta0 h du_i/dt = dF/du_i -> i eta0 u_t = -kappa0 u_xx (complex lift required)"
+  },
+  "nonconclusions": [
+    "No preference among these dynamics is inferred from equilibrium FIN.",
+    "The complex Schrodinger lift is only a null/control construction, not a FIN-derived quantum theory."
+  ],
+  "same_statics": "All three use the same refinement-compatible spatial Dirichlet form. The first is dissipative, the second hyperbolic/conservative after adding momentum, and the third dispersive after complexification.",
+  "scientific_state": "PROVED_ANALYTIC_STATIC_REFINEMENT_DOES_NOT_SELECT_TIME_LAW",
+  "shared_static_energy": "F_h=(kappa0/(2h)) sum_i (u_{i+1}-u_i)^2",
+  "speed_contrast": [
+    {
+      "M": 16,
+      "h": 0.0625,
+      "schrodinger_lattice_vmax": 32.0,
+      "wave_vmax": 1.0
+    },
+    {
+      "M": 32,
+      "h": 0.03125,
+      "schrodinger_lattice_vmax": 64.0,
+      "wave_vmax": 1.0
+    },
+    {
+      "M": 64,
+      "h": 0.015625,
+      "schrodinger_lattice_vmax": 128.0,
+      "wave_vmax": 1.0
+    },
+    {
+      "M": 128,
+      "h": 0.0078125,
+      "schrodinger_lattice_vmax": 256.0,
+      "wave_vmax": 1.0
+    },
+    {
+      "M": 256,
+      "h": 0.00390625,
+      "schrodinger_lattice_vmax": 512.0,
+      "wave_vmax": 1.0
+    }
+  ],
+  "task": "DYN-01-static-action-dynamics-nonidentifiability"
+}

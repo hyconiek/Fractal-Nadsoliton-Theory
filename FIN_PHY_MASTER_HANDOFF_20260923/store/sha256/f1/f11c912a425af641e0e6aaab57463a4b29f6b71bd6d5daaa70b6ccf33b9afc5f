@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces();q=12;j=np.arange(q);u=np.ones(q)/q
+E=[]
+for k in range(1,6):
+ E.append((np.sqrt(2/q)*np.cos(2*np.pi*k*j/q),np.sqrt(2/q)*np.sin(2*np.pi*k*j/q)))
+r=np.array([0.02]*5)
+pointwise_bound=float(np.sqrt(2/q)*r.sum()); positivity_margin=float(1/q-pointwise_bound)
+assert positivity_margin>0
+rng=np.random.default_rng(20260923)
+ener=[]; norms=[]; mins=[]
+for _ in range(2000):
+ ph=rng.uniform(0,2*np.pi,5);f=np.zeros(q)
+ for a,(ec,es),phi in zip(r,E,ph): f += a*(math.cos(phi)*ec+math.sin(phi)*es)
+ p=u+f;mins.append(float(p.min()));norms.append(float(f@f));ener.append(float(.5*f@A@f))
+metric_E=np.diag(r*r); metric_A=np.diag(np.array([L[k] for k in range(1,6)])*r*r)
+out={
+ 'task':'HDIM-10-flat-T5-inside-simplex',
+ 'scientific_state':'PROVED_SMALL_RADIUS_T5_EMBEDS_IN_SIMPLEX_WITH_FLAT_STRICT_METRICS',
+ 'equal_doublet_radii':r.tolist(),
+ 'uniform_probability':1/q,
+ 'pointwise_absolute_sum_bound':pointwise_bound,
+ 'guaranteed_positivity_margin':positivity_margin,
+ 'sampled_min_probability':min(mins),
+ 'euclidean_norm_range':[min(norms),max(norms)],
+ 'dirichlet_energy_range':[min(ener),max(ener)],
+ 'dirichlet_energy_sample_spread':max(ener)-min(ener),
+ 'euclidean_phase_metric_diag':np.diag(metric_E).tolist(),
+ 'dirichlet_phase_metric_diag':np.diag(metric_A).tolist(),
+ 'theorem':'With orthonormal Fourier doublets and radii r_k, p=u+sum_k r_k(cos phi_k e_ck+sin phi_k e_sk) stays strictly positive for every phase whenever sqrt(2/12) sum r_k < 1/12. On this T5, the induced Euclidean metric is sum r_k^2 dphi_k^2 and the Dirichlet metric is sum lambda_k r_k^2 dphi_k^2; both are flat and positive for r_k>0.',
+ 'interpretation':'The higher-dimensional torus is not outside the probability-state domain; it is a real compact manifold of admissible states on which the strict quadratic interaction is phase blind.',
+ 'scope':'Small-radius open regime; entropy/nonlinear terms are not included in the degeneracy statement.'
+}
+p=ROOT/'results'/'HDIM-10_simplex_flat_torus.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'margin':positivity_margin,'energy_spread':max(ener)-min(ener)},indent=2))

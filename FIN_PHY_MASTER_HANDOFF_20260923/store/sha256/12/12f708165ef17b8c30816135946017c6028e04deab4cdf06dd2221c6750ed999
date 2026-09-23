@@ -1,0 +1,162 @@
+# Relational phase geometry as a new typed source object
+
+**Status:** `CONDITIONAL_MATHEMATICAL_SOURCE_FOUND__PHYSICAL_CELL_GEOMETRY_NOT_DERIVED`
+
+## 1. Motivation
+
+PHY-013 proves that identical cells plus full relabeling equivariance cannot deterministically generate a nontrivial sparse graph. We therefore asked whether the *relations among the symmetry-related localized phases themselves* contain a canonical sparse structure.
+
+For a localized phase `a`, let `mu_a` be its retained FIN mean vector. Define the intrinsic phase distance
+
+`d(a,b)=||mu_a-mu_b||_2`.
+
+No external spatial coordinate is used.
+
+## 2. RG-1: minimal connectivity threshold
+
+Define
+
+`tau* = min {tau : the graph d(a,b)<=tau is connected}`.
+
+Use all edges at that threshold, including complete distance shells. This rule has no fitted threshold. It is invariant under permutation of the phase labels and under a common Euclidean isometry of all `mu_a`.
+
+At the certified q=12 MP7 coexistence root, interval propagation from the accepted root box proves the distance-shell order
+
+`r=3 < r=4 < r=5 < r=2 < r=6 < r=1`.
+
+The smallest shell `r=3` gives three disconnected four-cycles. Adding the unique second shell `r=4` makes `gcd(12,3,4)=1`. Hence, on the certified coexistence box,
+
+`RG-1 = Cay(Z_12,{+/-3,+/-4})`, degree four.
+
+This is a theorem about the internal orbit geometry, not an inter-cell spatial graph.
+
+## 3. Smooth rank-six theorem
+
+Drop the alternating `q/2` coordinate and suppose the modes `3,4,5` all have positive radii. The translation orbit is
+
+`t -> (rho_3 e^{i3t}, rho_4 e^{i4t}, rho_5 e^{i5t})`.
+
+Because `gcd(3,4,5)=1`, equality of the three phases implies `t=0 mod 2pi`; the map is injective. Its derivative has strictly positive squared norm
+
+`9 rho_3^2 + 16 rho_4^2 + 25 rho_5^2`.
+
+It is therefore a smooth embedded circle. Compactness separates every point from nonlocal points by a positive distance, while adjacent uniform samples have distance `O(1/q)`. Consequently, for all sufficiently large q, the unique nearest translation shell is `r=+/-1`, and RG-1 returns exactly the cycle `C_q`.
+
+The numerical control agrees from every tested `q=24` through `q=1536` at `g=7`.
+
+This gives a genuine conditional theorem:
+
+`localized smooth phase orbit -> intrinsic relational metric -> sparse cycle -> S^1-type continuum`.
+
+It does **not** show that strict FIN selects the rank-six family.
+
+## 4. Why the naive full rank-seven rule becomes nonlocal
+
+With the alternating coordinate `z`, the exact translation-orbit distance is
+
+`D^2(r)=2 sum_{k=3,4,5} rho_k^2 [1-cos(2 pi k r/q)] + 4 z^2 1_{r odd}`.
+
+Even translations pay no parity cost. Odd translations pay the same finite offset `4z^2`.
+
+If the smooth radii converge and `|z|` remains bounded away from zero as `q` grows, then before the first odd shell is admitted, a nonzero interval of even offsets already lies below that distance. The number of admitted even offsets is therefore `Theta(q)`. A single global threshold produces an unbounded-degree graph.
+
+At `g=7` the scout gives:
+
+- q=192: degree 8,
+- q=384: degree 12,
+- q=768: degree 24,
+- q=1536: degree 48,
+
+with `z -> 0.3516532`. For q=1536 the smooth sublevel interval extends to approximately `r/q <= 0.03097`, quantitatively explaining the linear growth.
+
+Thus **RG-1 fails the bounded-degree locality gate for the full parity family**.
+
+## 5. RG-2: use the intrinsic Z2 fiber instead of forcing one threshold
+
+The alternating mode itself supplies an unordered two-sheet decomposition: even and odd translations. Translation by one swaps the sheets, so no sheet is given an absolute preferred label.
+
+Define RG-2:
+
+1. inside each parity sheet, use its own minimal intrinsic connectivity threshold;
+2. then add the nearest cross-sheet distance shell.
+
+This is still defined from the phase representation, not from an external spatial embedding.
+
+### Asymptotic support theorem
+
+Inside either sheet, translations advance by even offsets `r=2s`. The smooth modes again give an embedded circle because `gcd(3,4,5)=1`. Hence for sufficiently fine sampling the nearest within-sheet shell is `s=+/-1`, i.e. `r=+/-2`.
+
+For cross-sheet pairs every odd offset carries the same parity term `4z^2`. Minimizing the total distance among odd offsets therefore reduces to minimizing the smooth part. By the same embedded-circle separation argument, for sufficiently large q the nearest odd shell is `r=+/-1`.
+
+Therefore, whenever the localized branch has nonzero parity coordinate and positive smooth radii,
+
+`RG-2 -> Cay(Z_q,{+/-1,+/-2})`
+
+for all sufficiently large even q.
+
+The preregistered-style scouts give exactly `{+/-1,+/-2}`, degree four, for every tested `q=48,96,192,384,768,1536` at `g=7`. A separate grid `g=6,7,8,10` at `q=48,96,192,384` gives the same support in every tested cell.
+
+## 6. Metric and spectral continuum of the RG-2 support
+
+For the unweighted graph `Cay(Z_q,{+/-1,+/-2})`,
+
+`d_G(0,r)=ceil(min(r,q-r)/2)`.
+
+Hence the dimensionless metric `(2/q)d_G` converges uniformly, with `O(1/q)` error, to the geodesic metric on a unit-circumference circle.
+
+Its combinatorial Laplacian eigenvalue is
+
+`lambda(theta)=2(1-cos theta)+2(1-cos 2theta)`.
+
+For every fixed Fourier mode k,
+
+`q^2 lambda(2 pi k/q) -> 5 (2 pi k)^2`.
+
+Thus the same phase-derived support has both a metric and a spectral one-dimensional continuum limit. The factor five is a dimensionless stiffness of the unweighted graph convention, not a physical speed or length scale.
+
+## 7. Critical no-go: phase geometry is not yet cell-space geometry
+
+Suppose M physical/effective cells carry only phase types `a_x`, and cell adjacency is a deterministic function of the pair of types. Then the cell graph is a **blow-up** of the finite phase graph. If `n_b` cells occupy phase b, the degree of a cell in phase a contains terms `B_ab n_b`.
+
+Therefore any neighboring phase with macroscopic occupancy `n_b=Theta(M)` gives degree `Theta(M)`. Cells with the same type remain mutually indistinguishable. A bounded-degree graph among arbitrarily many cells cannot be obtained from phase type alone.
+
+So the new source object solves a narrower problem:
+
+`phase differentiation -> intrinsic sparse geometry of phase/state space`.
+
+It does not solve:
+
+`many physical FIN cells -> sparse spatial adjacency`.
+
+The latter still requires a pair-specific relational variable, a matching/selection law, or another genuinely new source.
+
+## 8. Epistemic status
+
+### Established
+
+- exact permutation-equivariance of RG-1/RG-2 as rules on the phase orbit;
+- interval-certified q=12 RG-1 shell ordering at coexistence;
+- smooth rank-six asymptotic cycle theorem;
+- analytic parity obstruction for naive one-threshold RG-1;
+- analytic RG-2 asymptotic support theorem under explicit nondegeneracy assumptions;
+- exact metric/spectral continuum of the limiting `{+/-1,+/-2}` support;
+- type-only blow-up no-go for promoting phase adjacency directly to sparse cell adjacency.
+
+### Numerical but reproducible
+
+- existence/locations of the large-q localized scout branches used for q=24...1536;
+- support stabilization observed from q=48 onward and across the tested gain grid.
+
+### Not established
+
+- a theorem that the relevant localized q-family exists for all sufficiently large q with uniform positive modal lower bounds;
+- a physical identification of phase-space distance with spatial distance;
+- a source for absolute length, time, edge weights or propagation speed;
+- a pair-specific law that produces sparse adjacency among many cells.
+
+## 9. Next source atoms
+
+1. **PG-01:** prove a uniform-in-q localized branch with positive `(rho3,rho4,rho5,|z|)` in a declared gain interval, or find its breakdown.
+2. **PG-02:** upgrade RG-2 support stabilization from conditional asymptotic theorem + scouts to a branch-uniform quantitative q0 bound.
+3. **PG-03:** derive or refute a pair-specific cell relation whose coarse quotient gives the phase graph without using an external spatial coordinate.
+4. **PG-04:** only after PG-03, derive edge weights/dynamics and test whether the cell graph has a size-uniform continuum/influence theorem.

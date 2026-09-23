@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for m in [8,12,16,24,32,48]:
+ h=1/m
+ # f=sum_i cos(2pi x_i). By symmetry evaluate all lattice points efficiently via separability.
+ xs=np.arange(m)/m
+ c=np.cos(2*np.pi*xs)
+ # 1D discrete second derivative error propagates additively in 4D.
+ disc1=(np.roll(c,-1)+np.roll(c,1)-2*c)/h**2
+ exact1=-(2*np.pi)**2*c
+ err1=np.max(np.abs(disc1-exact1))
+ # max 4D sum error <=4 times 1D max; actual max attained at all coordinates same sign.
+ err4=4*err1
+ rows.append({'m':m,'h':h,'max_error_4D_test_function':float(err4)})
+coef=np.polyfit(np.log([r['h'] for r in rows]),np.log([r['max_error_4D_test_function'] for r in rows]),1)
+out={
+ 'task':'PROX-04B-tensor-grid-RNG-continuum-control',
+ 'scientific_state':'PROVED_STRUCTURED_T4_RNG_HAS_4D_DIRICHLET_CONTINUUM_BUT_NOT_EUCLIDEAN_SHORTEST_PATH_LIMIT',
+ 'rng_grid_theorem':'On the periodic tensor grid (Z_m)^4 with flat-torus distance and m sufficiently large, RNG edges are exactly the 8 nearest axis edges +/-e_i. Axis-neighbor edges cannot be blocked because h is the minimum nonzero distance; every non-axis displacement is blocked by taking one nearest step toward the target.',
+ 'laplacian_theorem':'With edge length h=1/m, the scaled graph operator h^{-2} sum_i[f(x+h e_i)+f(x-h e_i)-2f(x)] converges to the flat 4D Laplacian with O(h^2) error for C^4 functions.',
+ 'numerical_control_rows':rows,
+ 'observed_error_slope_in_h':float(coef[0]),
+ 'metric_obstruction':'For displacement (h,h,h,h), weighted RNG shortest-path length is 4h while flat Euclidean distance is 2h. Stretch=2 for every m. Hence this sparse grid RNG does not converge to the Euclidean geodesic metric even though its Dirichlet/Laplacian operator converges to the Euclidean 4D Laplacian.',
+ 'interpretation':'Operator/Dirichlet continuum and shortest-path metric continuum are distinct bridge questions.',
+ 'nonconclusions':['The tensor grid population is not sourced by strict FIN.','This does not establish a physical four-dimensional space.']
+}
+assert abs(out['observed_error_slope_in_h']-2)<.1
+p=ROOT/'results'/'PROX-04B_grid_continuum.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'slope':coef[0],'stretch':2.0},indent=2))

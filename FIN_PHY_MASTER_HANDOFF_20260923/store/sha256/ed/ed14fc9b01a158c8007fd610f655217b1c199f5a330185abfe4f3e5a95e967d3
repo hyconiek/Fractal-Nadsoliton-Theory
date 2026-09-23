@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, itertools
+import numpy as np
+import sympy as sp
+ROOT=Path(__file__).resolve().parents[1]
+n=12
+pairs=[(i,j) for i in range(n) for j in range(i+1,n)]
+# skew basis K^a
+Ks=[]
+for i,j in pairs:
+ K=np.zeros((n,n),dtype=int);K[i,j]=1;K[j,i]=-1;Ks.append(K)
+# mean-zero basis v_a=e_a-e_11, a=0..10
+V=[]
+for a in range(n-1):
+ v=np.zeros(n,dtype=int);v[a]=1;v[-1]=-1;V.append(v)
+rows=[]
+# K 1 = 0 constraints
+one=np.ones(n,dtype=int)
+for outi in range(n): rows.append([int((K@one)[outi]) for K in Ks])
+# cubic infinitesimal invariance B_K(x,y,z)=0 on mean-zero space.
+def B(K,x,y,z):
+ return int(np.dot(K@x,y*z)+np.dot(K@y,x*z)+np.dot(K@z,x*y))
+for a in range(n-1):
+ for b in range(a,n-1):
+  for c in range(b,n-1):
+   rows.append([B(K,V[a],V[b],V[c]) for K in Ks])
+M=sp.Matrix(rows);rank=int(M.rank());nullity=len(pairs)-rank
+assert nullity==0
+out={
+ 'task':'HDIM-14-entropy-connected-stabilizer',
+ 'scientific_state':'PROVED_TRIVIAL_CONNECTED_ORTHOGONAL_STABILIZER_OF_ENTROPY_NEAR_UNIFORM',
+ 'unknown_skew_generator_dimension':len(pairs),
+ 'constraint_rows':len(rows),
+ 'exact_integer_rank':rank,
+ 'nullity':nullity,
+ 'theorem':'Any one-parameter orthogonal symmetry fixing the uniform vector and preserving D(p||u) on a neighborhood must preserve the cubic derivative sum_j f_j^3 on the mean-zero tangent space. The exact infinitesimal system K1=0 and d/dt sum_j[(exp tK)f]_j^3|_0=0 has rank 66 in the 66 skew-generator variables. Hence its only infinitesimal generator is K=0; the connected entropy-preserving orthogonal stabilizer is trivial.',
+ 'consequence':'The strict T5 centralizer is an accidental symmetry of the quadratic Dirichlet/operator sector. No nontrivial connected subtorus survives the finite-12 entropy term on an open set.',
+ 'scope':['orthogonal linear symmetries fixing uniform','local neighborhood is enough','does not classify nonlinear diffeomorphism symmetries unrelated to the strict operator'],
+ 'nonconclusions':['Finite D12 permutation symmetries remain.','Continuum q->infinity can acquire a separate continuous shift symmetry; this finite-q theorem does not remove that limit symmetry.']
+}
+p=ROOT/'results'/'HDIM-14_entropy_stabilizer.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rank':rank,'nullity':nullity,'rows':len(rows)},indent=2))

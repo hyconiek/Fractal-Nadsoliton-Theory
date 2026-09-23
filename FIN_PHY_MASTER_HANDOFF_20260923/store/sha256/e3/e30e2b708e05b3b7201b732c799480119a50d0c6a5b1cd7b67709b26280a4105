@@ -1,0 +1,52 @@
+# PHY-006 — bounded propagation
+
+**Scientific status: sparse conditional propagation PASS_IN_SCOPE; unconditional emergent locality NOT_DERIVED.**
+
+## 1. Exact discrete event cone
+
+Consider any graph-supported local rule in which an event at cell `y` reads only `y` and its declared neighbors. Couple two runs with the same random choices and let their initial preparations differ only at `x`.
+
+**Theorem.** After `t` causally ordered local event layers, the marginal at `y` is identical whenever
+
+`d_Gamma(x,y) > t`.
+
+**Proof.** At depth zero the disagreement set is {x}. One local layer can only add cells adjacent to the previous disagreement set, because all other event kernels see identical inputs under the shared coupling. Induction gives disagreement support inside the graph ball of radius `t`. Therefore total-variation influence outside that ball is zero.
+
+This is uniform in the total number of cells M whenever the same bounded-support rule is used.
+
+## 2. Continuous-time tail, not an exact cone
+
+Let every cell have an independent update clock of rate at most 1 and let `Delta` be the maximum graph degree. To transmit a disagreement over graph distance `d`, there must be a time-ordered support walk of length at least `d`. For any fixed length-n walk, the expected number of correctly ordered n-tuples of clock rings by time `t` is at most `t^n/n!`; there are at most `Delta^n` such walks. A union bound plus the shared-randomness coupling yields
+
+`I_xy(t) <= min(1, sum_{n>=d(x,y)} (Delta t)^n/n!)`.
+
+This is a factorial/exponential tail with constants independent of M for bounded degree. It is deliberately **not** called an exact continuous-time light cone.
+
+For a path/ring (`Delta=2`) at `t=0.25`, the resulting upper bounds are about 0.0237 at distance 3, 2.84e-4 at distance 5 and 1.03e-7 at distance 8.
+
+## 3. FIN-specific N=1 sensitivity scout
+
+At `kappa=0.25`, the largest finite feature-geometry change entering a one-neighbor log-rate ratio is `R=7.92813324941`. This gives conservative one-edge influence-coefficient bounds
+
+- Metropolis: `0.991017 * w_xy`;
+- Barker: `0.247754 * w_xy`.
+
+These constants are diagnostic for the N=1 scout, not universal physical velocities.
+
+## 4. Required controls
+
+### Bounded-degree sparse graph
+
+**PASS_IN_SCOPE.** The discrete cone and continuous factorial tail have constants uniform in M.
+
+### Dense complete graph
+
+**REFUTED as a locality class.** Every pair is a direct support edge and `Delta=M-1`; the propagation constant grows with system size and graph diameter is one.
+
+### Long-range ring
+
+Any nonzero long-range edge permits direct one-event dependence, so there is no exact cone relative to ring separation. For weights `w(r)=r^-2`, the weighted row sum remains bounded (approaching `pi^2/3` up to the finite-ring convention), so a polynomial-tail class remains possible. For `w(r)=r^-1`, the unnormalised row sum grows logarithmically with M.
+
+## Decision on H-R6
+
+FIN plus an explicitly supplied sparse interaction graph **can support** a size-uniform local propagation theorem. The current core does **not derive** that sparse graph or its metric. Thus the result is a conditional bridge theorem for the chosen composition, not yet emergent spacetime and not a derivation of `c` or Lorentz symmetry.

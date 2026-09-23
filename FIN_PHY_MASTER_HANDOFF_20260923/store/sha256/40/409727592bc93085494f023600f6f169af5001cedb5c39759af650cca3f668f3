@@ -1,0 +1,42 @@
+# PHY-020 — continuum and adversarial graph controls
+
+**Scientific status: PASS_DECLARED_CYCLE_CONTINUUM; uniqueness/emergence from the single-cell core is refuted.**
+
+## A controlled positive continuum
+
+Choose the explicitly declared scalable family `Gamma_M=C_M` and assign dimensionless spacing `h=1/M`. The rescaled graph Laplacian is
+
+`Delta_M = M^2 L_C_M`.
+
+Its exact eigenvalues are
+
+`lambda_k(M)=4 M^2 sin^2(pi k/M)`.
+
+For every fixed Fourier index k,
+
+`lambda_k(M) -> (2 pi k)^2`,
+
+with relative error `O(k^2/M^2)` from the sine Taylor remainder. Therefore the low spectral sectors converge to the Laplacian spectrum of a unit circle. On every fixed finite set of modes, the heat semigroups `exp(-t Delta_M)` converge uniformly on compact t intervals.
+
+The numerical scout for `M=8,16,32,64,128,256` confirms the `M^-2` low-mode error and an expanding intermediate heat-trace window with spectral dimension near one. The diagnostic is supporting evidence; the fixed-mode spectral convergence is analytic.
+
+## Adversarial controls
+
+The same isolated FIN cell is compatible with completely different graph families.
+
+- deterministic-seed 3-regular random graphs retain an `O(1)` unscaled spectral gap; under the same `h=1/M` rescaling their gap therefore grows as `O(M^2)` rather than approaching `(2pi)^2`;
+- complete graphs have nonzero Laplacian eigenvalue M, hence the same rescaling gives an `M^3` gap and immediate collapse of nonuniform modes.
+
+Thus the continuum result belongs to the **chosen refinement family**, not to the one-cell FIN core. No threshold tuning or positivity repair converts these incompatible controls into the same continuum.
+
+## Relation to PHY-006/007
+
+The cycle family is bounded degree, so the size-uniform causal influence bounds from PHY-006 remain available. Hop distance is the exact discrete causal depth. Supplying `h=1/M` then makes the causal-depth lattice refine a one-dimensional circle. This is a valid conditional bridge:
+
+`cycle support + local updates + h=1/M -> 1D continuum candidate`.
+
+The first and last premises are still PM, not derived from A7.
+
+## Decision
+
+PHY-020 passes for a declared cycle refinement and simultaneously refutes any claim that the current single-cell FIN uniquely produces that continuum. A later physical promotion would need a target-blind law selecting the graph/refinement or held-out evidence discriminating it from the controls.

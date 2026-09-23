@@ -1,0 +1,35 @@
+{
+  "diagnostic": "At each vertex T=(1/deg) sum u_e u_e^T is compared with I/4. The anisotropy does not visibly decay over n=80..320 while degree stays O(1).",
+  "interpretation": "For iid-like sampling, bounded-degree RNG does not automatically self-average its local directional stencil. A deterministic isotropic pointwise Laplacian limit therefore needs additional weighting, averaging, a structured population law, or a weaker homogenized notion of convergence.",
+  "nonconclusions": [
+    "No claim that all RNG-based homogenized Dirichlet forms fail.",
+    "No physical-space conclusion."
+  ],
+  "proof_status": "Numerical scout only; not an asymptotic theorem.",
+  "rows": [
+    {
+      "max_degree": 6,
+      "mean_degree": 3.525,
+      "mean_directional_anisotropy": 0.42661945605377677,
+      "median_directional_anisotropy": 0.40296510001383185,
+      "n": 80
+    },
+    {
+      "max_degree": 8,
+      "mean_degree": 3.9875,
+      "mean_directional_anisotropy": 0.3821187801483593,
+      "median_directional_anisotropy": 0.37459850340526024,
+      "n": 160
+    },
+    {
+      "max_degree": 7,
+      "mean_degree": 3.95,
+      "mean_directional_anisotropy": 0.3829639811089364,
+      "median_directional_anisotropy": 0.36494297311808466,
+      "n": 320
+    }
+  ],
+  "scientific_state": "NUMERICAL_OBSTRUCTION_TO_POINTWISE_ISOTROPIC_LAPLACIAN_FROM_UNWEIGHTED_BOUNDED_DEGREE_RNG",
+  "seed": 20260923,
+  "task": "PROX-04C-iid-Haar-T4-RNG-local-anisotropy-scout"
+}

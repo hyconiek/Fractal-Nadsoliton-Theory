@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.optimize import minimize_scalar
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); S2=float(c@c); delta_max=float(np.min(p[c<0]))
+
+def hidden_path_law(delta,rho,n):
+    # hidden h in +/-1, stationary uniform, Markov persistence E[h_t h_{t+l}]=rho^l
+    # exact enumeration of hidden paths
+    out=np.zeros((11,)*n,float)
+    for h0 in (-1.0,1.0):
+      def rec(t,h,prob,arr):
+        nonlocal out
+        q=p+delta*h*c
+        arr2=np.multiply.outer(arr,q)
+        if t==n-1:
+            out += 0.5*prob*arr2
+            return
+        for hp in (-1.0,1.0):
+            pr=(1+rho*h*hp)/2
+            rec(t+1,hp,prob*pr,arr2)
+      rec(0,h0,1.0,np.array(1.0))
+    return out
+
+def strict(n):
+    arr=np.array(1.0)
+    for _ in range(n): arr=np.multiply.outer(arr,p)
+    return arr
+
+def chernoff(P0,P1):
+    x=P0.ravel(); y=P1.ravel(); mask=(x>0)&(y>0)
+    def sfun(a): return float(np.sum(x[mask]**a*y[mask]**(1-a)))
+    opt=minimize_scalar(sfun,bounds=(0,1),method='bounded',options={'xatol':1e-14})
+    return float(-math.log(opt.fun)),float(opt.x)
+
+cases=[]
+for delta,rho in [(0.02,0.8),(0.05,0.8),(0.05,-0.6),(0.10,0.8)]:
+    J2=hidden_path_law(delta,rho,2); J3=hidden_path_law(delta,rho,3)
+    S2law=strict(2); S3law=strict(3)
+    tv2=float(.5*np.abs(J2-S2law).sum()); tv3=float(.5*np.abs(J3-S3law).sum())
+    # exact contrast correlations
+    # lag1 from J2
+    E1=float(sum(J2[a,b]*c[a]*c[b] for a in range(11) for b in range(11)))
+    # lag2 from J3
+    E2=float(sum(J3[a,b,d]*c[a]*c[d] for a in range(11) for b in range(11) for d in range(11)))
+    C1=E1-m*m; C2=E2-m*m
+    rho_hat=C2/C1 if abs(C1)>1e-15 else None
+    delta2_hat=C1*C1/(16*C2) if C2>1e-15 else None
+    C,a=chernoff(S2law,J2)
+    n95=math.ceil(math.log(10)/C) if C>0 else None
+    cases.append({
+      'delta':delta,'rho':rho,'two_step_tv':tv2,'two_step_tv_formula':8*delta**2*abs(rho),
+      'lag1_cov':C1,'lag1_formula':16*delta**2*rho,
+      'lag2_cov':C2,'lag2_formula':16*delta**2*rho**2,
+      'rho_recovered_from_C2_over_C1':rho_hat,
+      'delta_squared_recovered_from_C1sq_over_16C2':delta2_hat,
+      'three_step_tv':tv3,
+      'two_step_chernoff_information':C,
+      'equal_prior_chernoff_bound_samples_for_error_le_5pct':n95
+    })
+
+result={
+ 'task':'OCB-MEM-01B',
+ 'status':'EXACT_PERSISTENT_HIDDEN_MEMORY_IDENTIFICATION',
+ 'model':('Hidden sign h_t is a stationary two-state Markov chain with E[h_t h_{t+l}]=rho^l. '
+          'Visible jump increment law conditioned on h_t is p+delta*h_t*c. Each conditional law is radial, reversible, and has uniform visible equilibrium.'),
+ 'validity':{'abs_rho_le_1':True,'abs_delta_lt':delta_max},
+ 'one_step_alias':'The visible one-step increment law is exactly p for every delta,rho because E[h_t]=0.',
+ 'exact_formulas':{
+   'two_step_joint':'p(a)p(b)+delta^2*rho*c(a)c(b)',
+   'two_step_TV_from_strict':'8 delta^2 |rho|',
+   'contrast_covariance_lag_l':'16 delta^2 rho^l',
+   'rho_from_lag1_lag2':'rho=C2/C1 when C1 != 0',
+   'delta_squared_from_lag1_lag2':'delta^2=C1^2/(16 C2) when C2>0'
+ },
+ 'cases':cases,
+ 'decision':('Two-step records detect every member of this class with delta*rho != 0. Three-step records add lag-2 covariance and separate persistence rho from contrast amplitude |delta|. '
+             'This does not defeat the general horizon-alias theorem OCB-MEM-01A, which can hide memory beyond any predeclared finite horizon.'),
+ 'nonconclusion':'The hidden sign is a falsification control/model class, not a sourced physical environment.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-MEM-01B_persistent_memory.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'cases':cases},indent=2))

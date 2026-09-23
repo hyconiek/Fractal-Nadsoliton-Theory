@@ -1,0 +1,21 @@
+# OCB-MEM-05 — broader rank-three hidden-process challenger
+
+## Result
+
+A frozen 3-state **edge-emitting probabilistic weighted automaton** was constructed as a strictly broader challenger than the earlier state-emitting HMM and latent-class mixture.  Every observed category labels a nonnegative 3x3 transition matrix; the sum of the three matrices is row stochastic.  Therefore every finite block Hankel has rank at most three.
+
+For the frozen four-jump period-2 target on the three-category compression:
+
+- `KL(P||Q) = 6.10507504686e-6`;
+- `TV(P,Q) = 7.93808587582e-4`;
+- Bhattacharyya coefficient `0.999998474800196`;
+- block-Hankel numerical rank is exactly 3 up to `1e-12`.
+
+The category process lifts exactly to all 11 destinations by distributing each category emission according to the strict within-category proportions.  The target has the same conditional within-category law, so the information distances are unchanged by this lift.
+
+Necessary full-four-jump independent-reset counts are therefore at least
+
+- **263,623** for both Type-I and Type-II errors <=5% (Bretagnolle--Huber);
+- **544,431** for equal-prior Bayes error <=5% (Hellinger/Bhattacharyya).
+
+The challenger is an exploratory multistart fit frozen as an existence witness.  No global closest-rank-three claim is made.

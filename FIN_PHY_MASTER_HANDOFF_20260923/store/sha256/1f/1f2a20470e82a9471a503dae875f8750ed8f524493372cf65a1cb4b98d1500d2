@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json,math
+rows=[]
+for L in range(1,11):
+    H=2**L
+    first=L+1
+    exhaustive=sum(11**n for n in range(first+1))
+    rows.append({'L':L,'alias_rank_H':H,'matches_all_lengths_through':L,'first_possible_witness_length':first,
+                 'generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known':H,
+                 'naive_all_words_through_first_witness':exhaustive,
+                 'targeted_periodic_lag_queries':L})
+result={
+ 'task':'OCB-MEM-03',
+ 'status':'PARTIAL_QUERY_COMPLEXITY_BOUND__GENERIC_SPARSE_QUERY_LOWER_BOUND_REMAINS_OPEN',
+ 'explicit_alias_lower_bound':{
+   'statement':'For H=2^L, the rotating-sign alias has complete visible Hankel rank H, agrees with strict on every path word of length <=L, and first differs at L+1. Therefore any universal horizon for excluding all rank<=H aliases is at least 1+floor(log2 H) on the powers-of-two subsequence.',
+   'rows':rows
+ },
+ 'generic_upper_bound_from_predecessor':{
+   'statement':'If a hidden process has at most H hidden states, the difference from strict iid has linear representation dimension at most H+1; the standard reachable-space argument gives a witness by length H whenever the processes are inequivalent.',
+   'horizon_bracket':'For current proved classes: Omega(log H) necessary from the explicit aliases, O(H) sufficient given a correct rank bound H.'
+ },
+ 'query_count_boundary':{
+   'statement':'The alias family does not prove that all 11^n word probabilities must be queried. In fact its special contrast is detected by scanning only L lags. Therefore naive exhaustive word count is a cost of an unstructured protocol, not a universal lower bound.',
+   'no_safe_local_stop':'A protocol that stops merely because empirical/local Hankel rank failed to increase for a fixed number of extensions can be defeated by choosing L beyond that extension depth.',
+   'open_problem':'A minimax lower bound on the number of arbitrary adaptively chosen path functionals for the full rank-H HMM class requires a stronger adversarial construction or a specified query model.'
+ },
+ 'decision':'Do not claim a universal efficient memory test from the targeted period-L lag scan. The current rigorous result is a horizon obstruction plus a finite-H sufficiency theorem.',
+ 'nonconclusion':'No physical memory dimension or hidden-state ontology is inferred.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-MEM-03_query_complexity.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'H1024_first_witness':rows[-1]['first_possible_witness_length'],'H1024_generic_upper':rows[-1]['generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known']},indent=2))

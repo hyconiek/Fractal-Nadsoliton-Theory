@@ -1,0 +1,28 @@
+# OCB-CAL-05 — structured primitive calibration propagation
+
+## Result
+
+CAL-04 used the crude bound `||(C-C0)^T||_inf <= 12 gamma` through every Neumann term.  Here the first Neumann term pays the row-stochastic identity `E 1 = 0` explicitly.
+
+For `M0=(C0^T)^-1`, the exact zero-sum box LP gives
+
+`sup_{|e_j|<=1, sum e_j=0} |row_i(M0) e| = 1.25`.
+
+Together with the column l1 norm `||M0||_1=1.25`,
+
+`max_ij |(M0 E^T M0)_ij| <= 1.5625 gamma`.
+
+All higher Neumann terms are paid conservatively by
+
+`281.25 gamma^2/(1-15 gamma)`, valid for `gamma<1/15`.
+
+After propagating independent relative efficiency uncertainty `r`, the resulting entrywise inverse-map bound is compared directly with the exact CAL-03 carrier threshold `0.09025558368189042`.
+
+At `r=0.02`, the certified confusion radius expands from
+
+- CAL-04: `gamma < 0.0023543642`;
+- CAL-05: `gamma < 0.0099641575`;
+
+a factor of **4.23**.  Across `r=0...0.05`, the improvement factor ranges from about 3.40 to 13.59.
+
+This is still a sufficient outer certificate.  One-sided nonnegativity and correlated calibration errors are not yet fully exploited.

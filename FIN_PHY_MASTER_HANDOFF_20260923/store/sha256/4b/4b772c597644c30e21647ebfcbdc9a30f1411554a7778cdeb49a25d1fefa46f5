@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import subprocess,sys,os,hashlib,json,time
+ROOT=Path(__file__).resolve().parent
+SCRIPTS=[
+ 'phy_002_relational_unit.py','phy_003_composition.py','phy_004_information.py','phy_005_events.py','phy_006_propagation.py',
+ 'phy_007_geometry.py','phy_008_bridge.py','phy_009_clock.py','phy_011_relational_verdict.py','phy_012_source_identifiability.py',
+ 'phy_015_universality.py','phy_016_q_extension.py','phy_017_dimensionless.py','phy_018_limits.py','phy_019_projective_memory.py',
+ 'phy_020_continuum.py','phy_021_dynamics.py','phy_022_collective.py','phy_023_propagator.py','phy_029_power.py']
+env=dict(os.environ);env['PYTHONDONTWRITEBYTECODE']='1'
+log=[]
+for s in SCRIPTS:
+    t=time.time(); p=subprocess.run([sys.executable,str(ROOT/'scripts'/s)],cwd=ROOT,env=env,capture_output=True,text=True)
+    log.append({'script':s,'returncode':p.returncode,'elapsed_seconds':time.time()-t,'stdout_tail':p.stdout[-1000:],'stderr_tail':p.stderr[-1000:]})
+    if p.returncode:
+        (ROOT/'audit'/'FULL_REPLAY.json').write_text(json.dumps(log,indent=2));sys.exit(p.returncode)
+(ROOT/'audit'/'FULL_REPLAY.json').write_text(json.dumps(log,indent=2))
+print('PASS',len(log),'scripts')

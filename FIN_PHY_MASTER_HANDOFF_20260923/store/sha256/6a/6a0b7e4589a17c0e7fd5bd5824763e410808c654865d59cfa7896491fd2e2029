@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+# Control 1: conductance power laws under one split.
+a,b=0.37,0.63; controls=[]
+for alpha in [0,0.5,1.0,1.5,2.0]:
+    ca=a**(-alpha); cb=b**(-alpha); ce=ca*cb/(ca+cb); target=(a+b)**(-alpha)
+    controls.append({'alpha':alpha,'series_effective':ce,'coarse_target':target,'relative_defect':ce/target-1})
+# Control 2: random phase sample, cycle exact metric vs MST (remove largest gap) distortion.
+rng=np.random.default_rng(20260923); metric=[]
+for M in [8,16,32,64]:
+    x=np.sort(rng.random(M)); gaps=np.diff(np.r_[x,x[0]+1]); imax=int(np.argmax(gaps))
+    # pair endpoints across removed largest gap: circle distance=min(g,1-g), MST path=1-g (since removed direct gap)
+    g=float(gaps[imax]); circle=min(g,1-g); path=1-g
+    metric.append({'M':M,'largest_gap':g,'circle_distance_across_removed_gap':circle,'MST_path_distance':path,'distortion_ratio':path/circle if circle>0 else None})
+# Control 3: continuum wave speed scaling for c~h^-alpha, mass~h^beta: c_eff^2~h^(2-alpha-beta)
+scaling=[]
+for alpha,beta in [(1,1),(0,1),(1,0),(0.5,1),(1,0.5),(1.5,0.5)]:
+    exponent=2-alpha-beta
+    scaling.append({'stiffness_alpha':alpha,'mass_beta':beta,'speed_squared_h_exponent':exponent,
+                    'finite_nonzero_if_h_to_0':abs(exponent)<1e-15})
+out={
+ 'task':'PHY-013-source-followup-negative-controls','scientific_state':'PASS_TARGETED_NEGATIVE_CONTROLS',
+ 'conductance_power_control':controls,
+ 'conductance_interpretation':'Only alpha=1 satisfies exact series/refinement identity for all splits; other simple powers fail already on the declared split.',
+ 'metric_backbone_control':metric,
+ 'metric_interpretation':'A canonical sparse alternative (MST = cycle minus largest gap) is relabeling/metric derived but does not preserve the complete circle shortest-path metric; the exact-metric premise is doing real work.',
+ 'dynamic_scaling_control':scaling,
+ 'dynamic_interpretation':'Exact-refinement stiffness alpha=1 plus additive mass beta=1 gives a finite nonzero continuum wave-speed scale. Altering either exponent without compensating the other makes the speed vanish/diverge; alpha+beta=2 alone is only a scaling condition, not exact static refinement.',
+ 'nonconclusion':'These controls validate logical dependence on the declared principles; they do not prove those principles are fundamental laws of nature.'
+}
+p=ROOT/'results'/'SOURCE_FOLLOWUP_NEGATIVE_CONTROLS.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'conductance':controls,'metric':metric},indent=2))

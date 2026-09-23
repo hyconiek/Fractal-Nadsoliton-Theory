@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12
+S=float(W[0].sum())
+base=np.delete(W[0]/S,0) # destinations 1..11 from prepared 0
+true={0,10}
+rng=np.random.default_rng(20260923)
+rows=[]
+for eps in [0.0,0.1,0.2]:
+    p=(1-eps)*base+eps*np.ones_like(base)/len(base)
+    p1=(1-eps)*(W[0,1]/S)+eps/11
+    p2=(1-eps)*(W[0,2]/S)+eps/11
+    gap=float(p1-p2)
+    Nbound=math.ceil(2*math.log(18/0.05)/(gap*gap))
+    sims=[]
+    for N in [100,150,200,Nbound]:
+        counts=rng.multinomial(N,p,size=20000)
+        top2=np.argpartition(counts,-2,axis=1)[:,-2:]
+        success=float(np.mean([set(x)==true for x in top2]))
+        sims.append({'N':int(N),'synthetic_success_fraction':success})
+    rows.append({'uniform_readout_contamination_epsilon':eps,'top_shell_gap':gap,'Hoeffding_union_N_5pct':Nbound,'synthetic_checks_seed_20260923':sims})
+# farthest shell ideal probability and absence rejection count
+p6=float(W[0,6]/S)
+N_abs=math.ceil(math.log(0.05)/math.log(1-p6))
+out={
+ 'task':'CARRIER-PHYSICAL-BRIDGE-03_clock_free_noise_robust_protocol',
+ 'scientific_state':'CONDITIONAL_PROTOCOL_ROBUSTNESS_PROVED_WITH_SYNTHETIC_CHECKS',
+ 'noise_model':'Recorded jump destination is replaced by a uniform random non-self destination with probability epsilon; independent event loss is destination-blind.',
+ 'theorem':'Uniform destination contamination maps p_j to (1-epsilon)p_j+epsilon/11, multiplying every pairwise probability gap by 1-epsilon. Thus all strict shell rankings, including the nearest-neighbour cycle, are invariant for epsilon<1. Destination-independent event loss changes sample count but not the conditioned destination law.',
+ 'rows':rows,
+ 'full_strict_dense_control':{'opposite_shell_probability_per_departure':p6,'ideal_N_for_95pct_probability_of_at_least_one_opposite_shell_event':N_abs,'interpretation':'Absence of any opposite-shell event after this many ideal independent departures is a 5% one-sided rejection of the exact strict Markov row; it is not validation if events are observed.'},
+ 'falsification_contract':['Recover top-two cycle neighbours from destination-only records.','Check D12-consistent shell ordering without using holding times.','Separately test whether long-range shells predicted by full strict W are present; passing adjacency alone does not validate the dense generator.'],
+ 'nonconclusions':['Synthetic success fractions are implementation/power checks, not empirical evidence.','Real detector confusion need not be uniform or destination-independent.','The bridge still assumes a Markov state ontology and identifiable preparations/effects.']
+}
+(ROOT/'results'/'CARRIER-PHYSICAL-BRIDGE-03_robustness.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

@@ -1,0 +1,49 @@
+# OCB-CAL-03 — general 12x12 calibration polytope
+
+Date: 2026-09-23
+
+## Verdict
+
+**PASS for a genuine 144-dimensional uncertainty set on the calibrated inverse map.**
+
+Let `B0` be the nominal deconvolution map taking a conditioned recorded-destination vector `q` back
+to an unnormalized true-destination score.  Consider the independently supplied convex uncertainty
+box
+
+`|B_jk-B0_jk| <= epsilon`
+
+for all `144` entries.
+
+For a candidate nearest neighbor `a` and competitor `b`, the score difference is
+
+`(row_a(B)-row_b(B)) q`.
+
+Because `q>=0` and `sum q=1`, the box can reduce the nominal margin by at most `2 epsilon`, and this
+bound is attained by shifting every coefficient of the nearest row down and the competitor row up.
+
+Across all twelve source preparations and every strict nearest-vs-nonnearest comparison, the exact
+robustness threshold is
+
+**epsilon_* = 0.09025558368189042**.
+
+Below that value every map in the full 144D box yields the same strict top-two graph.  Above it, an
+explicit perturbation reverses the limiting comparison.
+
+A second control uses a rowwise `l1` uncertainty polytope
+
+`||Delta B_j||_1 <= beta`.
+
+Its exact all-source threshold is
+
+**beta_* = 0.3279318016242833**.
+
+## Scope
+
+This is a robust-feasibility theorem for uncertainty in the **inverse calibration/deconvolution
+operator**.  It is not identical to the nonlinear image of every physically admissible confusion
+matrix plus destination-dependent efficiency vector.  Mapping a primitive detector-parameter
+polytope into a certified `B` polytope remains a separate task.
+
+## Decision
+
+`OCB-CAL-03 = PASS_ON_INVERSE_CALIBRATION_POLYTOPE`.

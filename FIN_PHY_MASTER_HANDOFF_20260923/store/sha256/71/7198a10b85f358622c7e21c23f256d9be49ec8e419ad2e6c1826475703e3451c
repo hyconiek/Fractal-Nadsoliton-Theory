@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,itertools,math
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces,d12_permutation
+W,A,L,X,C4,A7=feature_spaces(); n=12
+T=float(np.trace(A7))
+actual={3:float(L[3]),4:float(L[4]),5:float(L[5]),6:float(L[6])}
+
+# Projectors for real D12 Fourier sectors.
+j=np.arange(n)
+def projector(k):
+    if k==0:
+        v=np.ones(n)/math.sqrt(n); return np.outer(v,v)
+    if k==6:
+        v=(-1.0)**j/math.sqrt(n); return np.outer(v,v)
+    c=np.cos(2*np.pi*k*j/n); s=np.sin(2*np.pi*k*j/n)
+    c=c/np.linalg.norm(c); s=s/np.linalg.norm(s)
+    return np.outer(c,c)+np.outer(s,s)
+P={k:projector(k) for k in range(7)}
+
+def op(weights):
+    Z=np.zeros((n,n))
+    for k,w in weights.items(): Z+=w*P[k]
+    return Z
+
+def checks(M):
+    one=np.ones(n)
+    eig=np.linalg.eigvalsh(M)
+    inv=0.0
+    for eps in (1,-1):
+      for a in range(n):
+        Q=d12_permutation(a,eps)
+        inv=max(inv,float(np.max(np.abs(Q@M@Q.T-M))))
+    return {'rank':int(np.linalg.matrix_rank(M,tol=1e-10)),
+            'min_eigenvalue':float(eig.min()),'centered_norm':float(np.linalg.norm(M@one)),
+            'D12_invariance_defect':inv,'trace':float(np.trace(M))}
+
+# Actual normalized trace contributions.
+trace_contrib={str(k):(2 if k in (3,4,5) else 1)*actual[k]/T for k in actual}
+
+# Alternative weights on same support with same trace, chosen target-blind except positivity/trace.
+base=np.array([1.0,1.0,1.0,1.0])
+mult=np.array([0.72,1.18,0.91,1.27])
+# Scale to weighted trace T.
+raw=base*mult
+scale=T/(2*raw[0]+2*raw[1]+2*raw[2]+raw[3])
+alt_same={3:float(scale*raw[0]),4:float(scale*raw[1]),5:float(scale*raw[2]),6:float(scale*raw[3])}
+# Alternative support among the 10 rank-7 centered D12 supports: choose 1,2,3 + 6.
+raw2=np.array([1.0,1.3,0.8,1.1])
+scale2=T/(2*raw2[0]+2*raw2[1]+2*raw2[2]+raw2[3])
+alt_support={1:float(scale2*raw2[0]),2:float(scale2*raw2[1]),3:float(scale2*raw2[2]),6:float(scale2*raw2[3])}
+Mactual=op(actual); Msame=op(alt_same); Msupp=op(alt_support)
+
+supports=[list(c)+( [6]) for c in itertools.combinations(range(1,6),3)]
+# PM003 composition result, if present
+comp=json.loads((ROOT/'results'/'PHY-003_composition.json').read_text())
+# extract known distribution TV robustly
+pm_tv=None
+for path in [
+    ('comparison','TV_between_PM001_and_PM002'),
+    ('two_cell','pm001_vs_pm002_TV'),
+]:
+    cur=comp
+    try:
+      for x in path:cur=cur[x]
+      pm_tv=float(cur);break
+    except Exception: pass
+if pm_tv is None:
+    # recursive lookup for value near known key
+    def rec(x):
+      if isinstance(x,dict):
+        for k,v in x.items():
+          if 'tv' in k.lower() and isinstance(v,(int,float)) and abs(v-0.0454045)<0.01:return float(v)
+          z=rec(v)
+          if z is not None:return z
+      elif isinstance(x,list):
+        for v in x:
+          z=rec(v)
+          if z is not None:return z
+      return None
+    pm_tv=rec(comp)
+
+res={
+ 'task':'PHY-012','status':'PASS_NONIDENTIFIABILITY_THEOREM_AND_NEW_SOURCE_OBLIGATION',
+ 'operator_classification':{
+   'constraints':['real symmetric circulant / D12 invariant','positive semidefinite','uniform mode k=0 absent (centered)','rank 7'],
+   'rank7_support_theorem':'With k=0 absent, rank 7 requires the one-dimensional k=6 sector plus any three of the five two-dimensional sectors k=1..5.',
+   'number_of_discrete_support_choices':len(supports),
+   'support_choices':supports,
+   'fixed_support_3456_positive_weights':'lambda3,lambda4,lambda5,lambda6 > 0',
+   'trace_constraint':'2 lambda3 + 2 lambda4 + 2 lambda5 + lambda6 = T',
+   'continuous_dimension_after_trace_normalization':3,
+   'without_trace_normalization':{'positive_weight_dimension':4,'static_scale_gauge':'A -> c A, g -> g/c','identifiable_shape_dimension_after_scale_gauge':3},
+   'actual_trace':T,'actual_eigenweights':{str(k):v for k,v in actual.items()},
+   'actual_normalized_trace_contributions':trace_contrib
+ },
+ 'explicit_nonuniqueness_witnesses':{
+   'actual':{'weights':actual,'checks':checks(Mactual)},
+   'same_support_same_trace_alternative':{'weights':alt_same,'checks':checks(Msame),'frobenius_distance_from_A7':float(np.linalg.norm(Msame-Mactual))},
+   'different_support_same_trace_alternative':{'weights':alt_support,'checks':checks(Msupp),'frobenius_distance_from_A7':float(np.linalg.norm(Msupp-Mactual))}
+ },
+ 'composition_nonidentifiability':{
+   'PHY003_PM001_vs_PM002_TV':pm_tv,
+   'functional_choice':'Retained-mean coupling and full-p coupling have the same isolated-cell FIN limit but incompatible coupled predictions; the one-cell core therefore does not choose the nonlinear interaction functional.',
+   'graph_support':'No cell-cell graph is selected by D12, positivity or the single-cell operator.',
+   'edge_parameter_gauge':'Within PM-001 only products c_xy=kappa*w_xy enter the edge energy. For a fixed E-edge support, (kappa,{w_e}) has one global rescaling gauge and E effective edge-strength parameters.',
+   'feature_frame_gauge':'X -> X O for common O in O(7) leaves A7 and ||mu_x-mu_y|| invariant; feature coordinates themselves are gauge.'
+ },
+ 'theorem':'D12 symmetry + PSD + centering + rank seven do not uniquely determine A7. Even after fixing the 3,4,5,6 support and trace, the admissible operators form a three-dimensional positive simplex. If support is not fixed externally, there are at least ten disconnected rank-seven support families before continuous weights are chosen.',
+ 'new_typed_source_obligation':{
+   'id':'SO-PHY-012-01',
+   'statement':'Provide a target-blind rule S that maps declared pre-composition FIN data (or one explicitly new fine relational observable) to: (i) cell-cell support, (ii) edge-strength ratios, and (iii) interaction functional class, equivariantly under cell relabeling and internal D12/common feature-frame gauge.',
+   'anti_circularity':['Freeze S and its free parameters before revealing desired A7 spectral ratios or downstream geometry/locality scores.','Do not use the target A7 entries/eigenvalues or a desired graph metric as priors disguised as constraints.','Use one rule across at least two carrier sizes/topologies and score a held-out spectral/response relation without retuning.'],
+   'success':'A nontrivial held-out relation is predicted across carriers, or a proved variational/elimination principle reduces the residual family below the theorem above.',
+   'failure':'Each carrier/topology needs a new fit, or the desired operator/graph is encoded in the source constraints.'
+ },
+ 'claim_decision':{
+   'D12_plus_PSD_derives_A7':'REFUTED_IN_SCOPE',
+   'fixed_support_plus_trace_derives_A7':'REFUTED_IN_SCOPE',
+   'single_cell_core_derives_composition':'REFUTED_IN_SCOPE',
+   'target_independent_source_lane':'OPEN_WITH_TYPED_ATOM_SO-PHY-012-01'
+ }
+}
+(ROOT/'results'/'PHY-012_source_identifiability.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

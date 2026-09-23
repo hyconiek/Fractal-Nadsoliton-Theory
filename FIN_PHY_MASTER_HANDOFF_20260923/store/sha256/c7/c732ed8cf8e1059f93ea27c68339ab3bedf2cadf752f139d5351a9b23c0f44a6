@@ -1,0 +1,142 @@
+[
+  {
+    "script": "phy_002_relational_unit.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.8895397186279297,
+    "stdout_tail": "stribution\",\n      \"mu\": \"retained feature mean\",\n      \"theta\": \"conjugate auxiliary coordinate\"\n    },\n    \"relational_candidate\": {\n      \"j\": \"internal relational configuration type\",\n      \"p\": \"mixture of such types\",\n      \"mu\": \"coarse relational signature\",\n      \"theta\": \"response coordinate\"\n    },\n    \"inferential_control\": {\n      \"p\": \"distribution/posterior\",\n      \"theta\": \"natural parameter\",\n      \"Phi\": \"regularized objective\"\n    }\n  },\n  \"new_primitives_required_for_multicell\": [\n    \"cell index set V\",\n    \"interaction support graph Gamma\",\n    \"edge weights w_xy\",\n    \"coupling kappa\",\n    \"relative feature-frame maps if frames differ\",\n    \"transition generator for dynamics\"\n  ],\n  \"forbidden_promotions\": [\n    \"cell index is not spatial coordinate\",\n    \"j is not particle species\",\n    \"theta is not a physical field\",\n    \"N is not physical volume/time/bit count\"\n  ],\n  \"source_model_sha256\": \"1588166a7a364daadc4a90f73536d5bf73b35528105da872f6fff1b5b34819aa\"\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_003_composition.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.8612942695617676,
+    "stdout_tail": " \"relabeling\": {\n    \"max_onsite_invariance_error\": 1.4432899320127035e-15,\n    \"max_mean_distance_invariance_error\": 6.217248937900877e-15,\n    \"max_full_p_distance_invariance_error\": 0.0\n  },\n  \"associativity\": {\n    \"max_logweight_grouping_error\": 3.552713678800501e-15,\n    \"rule\": \"vertex and declared edge contributions are additive; boundary edges must be declared\"\n  },\n  \"composition_nonuniqueness\": {\n    \"pair_distribution_TV_between_two_admissible_PM\": 0.045404461209626844,\n    \"KL_mean_to_fullp_nats\": 0.006356640062777155,\n    \"interpretation\": \"same isolated-cell core and zero-coupling limit, incompatible coupled predictions; MP7 does not source a unique interaction law\"\n  },\n  \"gaussian_auxiliary_sufficient_gap\": {\n    \"pair\": 3.2,\n    \"path3\": 2.95\n  },\n  \"scope\": [\n    \"graph/support, kappa, edge weights and common frame are PM premises\",\n    \"N=2 scout validates algebra/correlation only, not collective phase selection\",\n    \"no claim of emergent physical adjacency\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_004_information.py",
+    "returncode": 0,
+    "elapsed_seconds": 1.2459385395050049,
+    "stdout_tail": "recovery_max_theta_error\": 6.761716239814802e-15,\n    \"sample_recovery_max_TV_error\": 9.8879238130678e-16,\n    \"sample_recovery_max_residual\": 1.088833015104571e-15,\n    \"sample_covariance_min_eigenvalue_min\": 0.013925656786556\n  },\n  \"composition_information\": {\n    \"cellwise_sign_choices_with_identical_retained_means\": {\n      \"1\": 2,\n      \"2\": 4,\n      \"3\": 8\n    },\n    \"interpretation\": \"The retained signature can be transported/recovered on the Gibbs family but does not preserve arbitrary full-simplex information; hidden k=1,2 content is lost unless an environment/history is retained.\"\n  },\n  \"nontrivial_preserved_quantity_under_coarse_representation\": \"mu itself (and any declared function Q(mu), e.g. ||mu||^2); this is representational preservation, not a dynamical conservation law.\",\n  \"claim_decision\": {\n    \"H-R3_universal_full_information\": \"REFUTED_IN_SCOPE\",\n    \"H-R3_family_relative_sufficiency_recovery\": \"PASS_IN_SCOPE\",\n    \"unitarity_implication\": \"NOT_LICENSED\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_005_events.py",
+    "returncode": 0,
+    "elapsed_seconds": 1.3145322799682617,
+    "stdout_tail": " no variable influenced by cell0; intervention 0->2 is exactly zero for every event sequence using only components separately.\",\n  \"state_graph_obstruction\": {\n    \"irreducible\": true,\n    \"SCC_count\": 1,\n    \"reason\": \"every one-label proposal has positive acceptance; any finite microstate reaches any other through local replacements\",\n    \"consequence\": \"raw state reachability collapses to one SCC and is not a nontrivial causal order\"\n  },\n  \"event_order_theorem\": \"For nonadjacent x,y in the declared graph, local kernels K_x and K_y commute because each changes a distinct coordinate and neither rate depends on the other changed coordinate. Adjacent kernels generally do not commute. A perturbation can cross at most one graph edge per causally ordered local event.\",\n  \"claim_decision\": {\n    \"H-R4_state_reachability_as_causality\": \"REFUTED_IN_SCOPE\",\n    \"H-R4_supported_event_causality\": \"PASS_IN_SCOPE_CONDITIONAL_ON_PM_GRAPH_AND_UPDATE_RULE\",\n    \"physical_time\": \"NOT_LICENSED\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_006_propagation.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.7889769077301025,
+    "stdout_tail": "21885\n        }\n      },\n      \"reason\": \"Any nonzero long-range edge permits immediate direct dependence. alpha=2 has a bounded weighted row sum but polynomial direct tails; alpha=1 row sum grows logarithmically without normalization.\"\n    }\n  },\n  \"critical_scope\": [\n    \"The sparse graph Gamma and its support are PM inputs; this theorem does not derive locality from the single-cell FIN core.\",\n    \"No identification of graph update depth or continuous time t with physical time.\",\n    \"No identification of any bound velocity with c; no Lorentz symmetry.\",\n    \"The support-only theorem applies to the declared local generators; the numerical weighted constants are N=1 scouts.\"\n  ],\n  \"claim_decision\": {\n    \"H-R6_conditional_bounded_propagation_on_sparse_PM_graph\": \"PASS_IN_SCOPE\",\n    \"H-R6_unconditional_emergent_locality_from_FIN_core\": \"NOT_DERIVED\",\n    \"dense_graph_locality\": \"REFUTED_IN_SCOPE\",\n    \"continuous_time_exact_lightcone\": \"REFUTED_FOR_POSITIVE_RATE_JUMP_PROCESS\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_007_geometry.py",
+    "returncode": 0,
+    "elapsed_seconds": 1.683178186416626,
+    "stdout_tail": " and common positive rescaling without threshold tuning.\",\n    \"resistance\": \"Valid conditional graph metric; captures global bottlenecks but is quantitatively weight-sensitive and is not selected by FIN.\",\n    \"diffusion\": \"Valid scale-dependent conditional metric; depends on a chosen generator/time scale and is not selected by FIN.\",\n    \"dense_control\": \"K12 collapses hop geometry to diameter one, so the same construction provides no graded locality there.\",\n    \"emergent_space\": \"NOT_DERIVED: the support graph is still PM input.\"\n  },\n  \"representation_rules\": {\n    \"node_relabeling\": \"must only permute the distance matrix\",\n    \"common_edge_scale\": \"normalized resistance and random-walk diffusion are invariant; support distance is exactly invariant\",\n    \"relative_edge_reweighting\": \"treated as a physical-model change, not a representation change\",\n    \"internal_feature_frame\": \"common orthogonal rotations preserve mean-difference edge costs and do not change graph support\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_008_bridge.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.8464212417602539,
+    "stdout_tail": " defect <= epsilon and is TV-contractive, the t-step defect is <= t*epsilon by telescoping.\",\n    \"implication\": \"The exact witnesses above prove epsilon cannot be zero for coarse states containing only mu, only one-site marginals, or (for a degree-two update) only pair marginals.\"\n  },\n  \"partition_conclusion\": \"Both tested partitions commute statically. Dynamically every cut active edge requires cross-boundary correlation memory; the alternating partition has more cut edges and therefore a larger structural memory burden. This is a property of the supplied support, not emergent medium identity.\",\n  \"claim_decision\": {\n    \"fixed_mu_markov_bridge\": \"REFUTED_IN_SCOPE\",\n    \"fixed_one_site_marginal_markov_bridge\": \"REFUTED_IN_SCOPE\",\n    \"fixed_pair_marginal_markov_bridge_on_degree2_path\": \"REFUTED_IN_SCOPE\",\n    \"finite_horizon_causal_ball_bridge\": \"PASS_IN_SCOPE_EXACT\",\n    \"full_microstate_information_preservation\": \"NOT_CLAIMED\",\n    \"physical_medium_identity\": \"NOT_LICENSED\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_009_clock.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.6369473934173584,
+    "stdout_tail": "44971009e-19,\n    \"barker_max_detailed_balance_residual\": 1.0842021724855044e-19,\n    \"result\": \"Both declared equilibrium dynamics satisfy detailed balance to numerical precision. Their stationary path law is reversible; no entropy-production arrow is selected by the equilibrium core.\",\n    \"needed_for_arrow\": \"A nonequilibrium boundary/preparation, reservoir/current source, or explicitly irreversible rule must be added and separately justified.\"\n  },\n  \"claim_decision\": {\n    \"H-R4_nontrivial_event_order\": \"PASS_IN_SCOPE_CONDITIONAL_PM\",\n    \"dimensionless_causal_depth_clock\": \"PASS_AS_ORDER_PARAMETER\",\n    \"unique_continuous_time_from_FIN\": \"REFUTED_IN_SCOPE_FOR_CURRENT_INPUTS\",\n    \"physical_SI_clock\": \"NOT_DERIVED\",\n    \"intrinsic_arrow_of_time\": \"NOT_DERIVED\"\n  },\n  \"acceptance\": \"A nontrivial dimensionless causal-depth clock composes consistently and is invariant under swaps of independent events, while the residual positive rate/clock freedom is explicit rather than hidden.\"\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_011_relational_verdict.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.6761124134063721,
+    "stdout_tail": "omote to spacetime, matter, QM or gravity.\",\n  \"next_atoms\": [\n    \"SO-PHY-012-01 target-blind source/selector for support + edge ratios + interaction class\",\n    \"PHY-013 held-out source challenge if a genuinely target-blind parent law is proposed\",\n    \"PHY-014 falsifiable dictionary for g/control\",\n    \"Later PHY-019/020 refinement/locality only after a graph family/source is fixed or explicitly conditional\"\n  ],\n  \"kill_test_summary\": {\n    \"KT-02_information\": \"Universal mean-map preservation killed; restricted family/causal-ball survival recorded.\",\n    \"KT-03_causality_time\": \"State reachability and unique time killed; event order survives conditionally.\",\n    \"KT-04_locality\": \"Sparse bounded-degree class passes; dense/long-range exact-locality controls fail.\",\n    \"KT-05_geometry\": \"Causal-depth metric passes conditional representation tests; physical-space source remains open.\",\n    \"KT-01_source\": \"Current core fails uniqueness/source; new typed source atom required.\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_012_source_identifiability.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.7675580978393555,
+    "stdout_tail": "e.\",\n    \"anti_circularity\": [\n      \"Freeze S and its free parameters before revealing desired A7 spectral ratios or downstream geometry/locality scores.\",\n      \"Do not use the target A7 entries/eigenvalues or a desired graph metric as priors disguised as constraints.\",\n      \"Use one rule across at least two carrier sizes/topologies and score a held-out spectral/response relation without retuning.\"\n    ],\n    \"success\": \"A nontrivial held-out relation is predicted across carriers, or a proved variational/elimination principle reduces the residual family below the theorem above.\",\n    \"failure\": \"Each carrier/topology needs a new fit, or the desired operator/graph is encoded in the source constraints.\"\n  },\n  \"claim_decision\": {\n    \"D12_plus_PSD_derives_A7\": \"REFUTED_IN_SCOPE\",\n    \"fixed_support_plus_trace_derives_A7\": \"REFUTED_IN_SCOPE\",\n    \"single_cell_core_derives_composition\": \"REFUTED_IN_SCOPE\",\n    \"target_independent_source_lane\": \"OPEN_WITH_TYPED_ATOM_SO-PHY-012-01\"\n  }\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_015_universality.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.6995913982391357,
+    "stdout_tail": "ranslated_h_mean_squares\": [\n    0.2395506854850388,\n    3.0024556178916407e-31,\n    0.23955068548503874,\n    7.03159917801162e-32,\n    0.2395506854850388,\n    2.6358556950169676e-32,\n    0.23955068548503874,\n    3.1735976454814775e-31,\n    0.23955068548503874,\n    2.463936743227617e-33,\n    0.2395506854850387,\n    1.4401006282046058e-33\n  ],\n  \"square_unique_rounded\": [\n    0.0,\n    0.239550685485\n  ],\n  \"first_order_energy_shift_formula\": \"dV/deps=-(g/2)*(h^T p)^2 at fixed translated coexistence state\",\n  \"first_order_shift_nonzero_class\": -0.4453660346072678,\n  \"first_order_shift_zero_class\": 0.0,\n  \"conclusion\": [\n    \"phase alignment is structural across the positive same-support spectral family\",\n    \"the first-order coexistence mechanism persists on some open same-symmetry parameter neighborhood\",\n    \"exact 12-fold equality is symmetry-protected and is split by arbitrarily small noncirculant perturbations\",\n    \"specific ratios and transition gains remain model-specific\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_016_q_extension.py",
+    "returncode": 0,
+    "elapsed_seconds": 3.1961829662323,
+    "stdout_tail": "      1.0099454413090543e-11\n      ]\n    },\n    {\n      \"q\": 96,\n      \"g\": 5.0,\n      \"best_phi\": -8.033522059946682e-17,\n      \"norm_s\": 1.2453232511559704e-09,\n      \"s\": [\n        1.3357975579431483e-10,\n        -1.1384641072365715e-09,\n        4.819662873559562e-10,\n        6.778217389520189e-11\n      ]\n    },\n    {\n      \"q\": 96,\n      \"g\": 6.0,\n      \"best_phi\": -0.16658571375621367,\n      \"norm_s\": 5.0970175004747675,\n      \"s\": [\n        2.625046586035687,\n        2.921740945498666,\n        2.7982470067435243,\n        1.649836767057852\n      ]\n    },\n    {\n      \"q\": 96,\n      \"g\": 7.0,\n      \"best_phi\": -0.5931050761833658,\n      \"norm_s\": 6.820049983408073,\n      \"s\": [\n        3.5483956237707925,\n        3.7842148641990447,\n        3.6796518471839437,\n        2.462082536894234\n      ]\n    }\n  ],\n  \"nonconclusions\": [\n    \"no certified q-dependent coexistence gain\",\n    \"no spatial continuum\",\n    \"q-fold phase multiplicity is symmetry conditional, not particle count\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_017_dimensionless.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.7731826305389404,
+    "stdout_tail": ": \"g_eq/g_fold\",\n      \"class\": \"model-specific dimensionless\",\n      \"discriminator\": \"candidate only after control dictionary fixed\"\n    },\n    {\n      \"quantity\": \"||mu_localized-mu_uniform||\",\n      \"class\": \"model-specific normalized jump\",\n      \"discriminator\": \"candidate after feature metric/source fixed\"\n    },\n    {\n      \"quantity\": \"active spectral ratios\",\n      \"class\": \"model-specific/source-sensitive\",\n      \"discriminator\": \"candidate only if source law predicts them\"\n    },\n    {\n      \"quantity\": \"symmetry-related phase count\",\n      \"class\": \"symmetry-protected conditional\",\n      \"discriminator\": \"changes with q/support/stabilizer\"\n    },\n    {\n      \"quantity\": \"susceptibility ratios\",\n      \"class\": \"not yet source-independent\",\n      \"discriminator\": \"requires declared source direction and dynamics\"\n    }\n  ],\n  \"nonconclusions\": [\n    \"no constant of nature\",\n    \"no equilibrium critical exponent claim from the fold\",\n    \"no universality class assigned\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_018_limits.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.6504948139190674,
+    "stdout_tail": "ges\": 256,\n      \"cycle_edges_per_cell\": 1.0,\n      \"complete_edges\": 32640,\n      \"complete_edges_per_cell\": 127.5,\n      \"complete_kappa_needed_for_O_M_energy\": \"kappa0/M\"\n    }\n  ],\n  \"chosen_scalable_family\": \"cycle C_M with degree 2, unit dimensionless edge weights; later geometric refinement h=1/M is an added convention tested in PHY-020\",\n  \"order_of_limits\": {\n    \"N_and_M_bounded_degree\": \"free-energy-density type-counting correction is uniform in M as N->infinity; this supports commuting N and M at this level, conditional on existence of the M-limit of the variational density\",\n    \"dense_unnormalized\": \"nonextensive O(M^2) interaction; must rescale kappa or reject same limit\",\n    \"q_vs_rank\": \"not interchangeable; fixed q bounds centered rank by q-1\",\n    \"q_smooth_plus_parity\": \"two-sublattice internal limit, not a spatial M-refinement\"\n  },\n  \"nonconclusions\": [\n    \"no unique limit selected by FIN\",\n    \"no spatial dimension from N\",\n    \"no continuum theorem yet\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_019_projective_memory.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.6493053436279297,
+    "stdout_tail": "     \"bound\": 0.004040404040404042\n    },\n    {\n      \"s\": 0.05,\n      \"exact_markov_error_norm\": 0.004024144869215179,\n      \"bound\": 0.008163265306122451\n    },\n    {\n      \"s\": 0.1,\n      \"exact_markov_error_norm\": 0.00793650793650791,\n      \"bound\": 0.016666666666666673\n    },\n    {\n      \"s\": 0.25,\n      \"exact_markov_error_norm\": 0.019047619047619008,\n      \"bound\": 0.04444444444444446\n    },\n    {\n      \"s\": 0.5,\n      \"exact_markov_error_norm\": 0.035714285714285664,\n      \"bound\": 0.10000000000000003\n    },\n    {\n      \"s\": 1.0,\n      \"exact_markov_error_norm\": 0.06349206349206336,\n      \"bound\": 0.2666666666666668\n    }\n  ],\n  \"interpretation\": [\n    \"representation coarse maps can be exactly projective while dynamics is non-Markov after elimination\",\n    \"memory decays at least on eliminated gap scale in this SPD linear control\",\n    \"a low-frequency Markov approximation is controlled only relative to that gap\",\n    \"nonlinear FIN requires a separate remainder payment\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_020_continuum.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.966808557510376,
+    "stdout_tail": "  \"M\": 128,\n      \"random3_scaled_gap\": 2883.7205953592184,\n      \"random3_unscaled_gap\": 0.17600833711909292,\n      \"complete_scaled_gap\": 2097152.0\n    },\n    {\n      \"M\": 256,\n      \"random3_scaled_gap\": 11299.568766716815,\n      \"random3_unscaled_gap\": 0.17241773630854515,\n      \"complete_scaled_gap\": 16777216.0\n    }\n  ],\n  \"control_interpretation\": \"under the same h=1/M scaling, 3-regular expander-like controls have a scaled gap growing ~M^2 and complete graphs gap M^3; they do not approach the circle Laplacian\",\n  \"semigroup_statement\": \"fixed finite Fourier sectors converge spectrally, hence exp(-t Delta_M) converges on those sectors uniformly for t in compact nonnegative intervals\",\n  \"decision\": \"one conditional 1D continuum exists for the declared cycle refinement; single-cell FIN does not select it over incompatible graph families\",\n  \"nonconclusions\": [\n    \"no 3+1 dimension\",\n    \"no Lorentz signature\",\n    \"no physical c\",\n    \"no unique continuum selected by FIN\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_021_dynamics.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.7896981239318848,
+    "stdout_tail": "\",\n      \"signature\": \"rates depend on metric/mobility\"\n    },\n    {\n      \"name\": \"Hamiltonian/inertial lift\",\n      \"extra_premises\": \"momenta + symplectic form + kinetic metric\",\n      \"static_relation\": \"same potential minima but conservative phase-space dynamics\",\n      \"signature\": \"oscillation frequencies sqrt(eig(H)) before damping\"\n    }\n  ],\n  \"model_selection_observables\": [\n    \"small-perturbation relaxation spectrum\",\n    \"overshoot/oscillation\",\n    \"one-event neighbor influence\",\n    \"probability current / detailed-balance violation\"\n  ],\n  \"invariants_across_declared_SPD_gradient_mobilities\": [\n    \"stationary points\",\n    \"Lyapunov ordering of Phi under positive mobility\"\n  ],\n  \"not_invariant\": [\n    \"relaxation time\",\n    \"trajectory\",\n    \"causal event timing\",\n    \"oscillation\",\n    \"probability current\"\n  ],\n  \"nonconclusions\": [\n    \"Phi does not source a unique dynamics\",\n    \"Hamiltonian/unitary structure is imported\",\n    \"no physical time unit follows\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_022_collective.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.8992023468017578,
+    "stdout_tail": "72857e-17,\n    0.11249660790517582\n  ],\n  \"dmu_norm_sq\": 0.0809077344557095,\n  \"projected_edge_term\": \"(kappa/2)*0.0809077344557095*sum_edges (xi_x-xi_y)^2 + higher orders\",\n  \"hard_transverse_gap_lower\": 0.01722595538834604,\n  \"hard_elimination_bound\": \"for hard block C>=gamma I and cross block ||B||<=beta, Schur correction norm <= beta^2/gamma; valid only while gamma remains positive and nonlinear remainder is paid\",\n  \"continuum_scaling_note\": \"on C_M with h=1/M, a finite gradient term after multiplying the lattice sum by h requires kappa_M proportional to h^-2=M^2; fixed kappa gives vanishing continuum gradient stiffness under that convention\",\n  \"separations\": [\n    \"coexistence is first order and occurs away from fold\",\n    \"fold soft coordinate is a metastable local branch coordinate\",\n    \"D12 remains discrete\"\n  ],\n  \"nonconclusions\": [\n    \"no fundamental field\",\n    \"no massless particle\",\n    \"no critical universality\",\n    \"stiffness source is conditional on PM-001\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_023_propagator.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.7406954765319824,
+    "stdout_tail": ",\n    {\n      \"q\": 2.0,\n      \"omega2\": 0.32365342885438747,\n      \"poles_s\": [\n        \"(-0.05+0.566704004621802j)\",\n        \"(-0.05-0.566704004621802j)\"\n      ]\n    },\n    {\n      \"q\": 4.0,\n      \"omega2\": 1.2945462423229015,\n      \"poles_s\": [\n        \"(-0.05+1.1366821201738424j)\",\n        \"(-0.05-1.1366821201738424j)\"\n      ]\n    }\n  ],\n  \"continuum_group_speed_high_q\": \"sqrt(K) in chosen dimensionless coordinates only; requires length/time anchors and inertial PM\",\n  \"lattice_influence_consistency\": \"finite-range continuous-time lattice generators/ODEs have analytic graph-distance tails rather than an exact discrete-time cone; their series begin at order distance, matching the factorial-tail structure of PHY-006. Exact finite-speed wave cones arise only after the continuum hyperbolic PDE premise/limit.\",\n  \"nonconclusions\": [\n    \"no photon\",\n    \"no Lorentz invariance\",\n    \"no rest mass identification\",\n    \"no physical c\",\n    \"static inverse Hessian is not a propagator\"\n  ]\n}\n",
+    "stderr_tail": ""
+  },
+  {
+    "script": "phy_029_power.py",
+    "returncode": 0,
+    "elapsed_seconds": 1.6163229942321777,
+    "stdout_tail": "02\": 7.211455761449977e-06\n    }\n  },\n  \"pair_full_distribution\": {\n    \"TV\": 0.045404461209626844,\n    \"KL_P_to_Q_nats\": 0.006356640062777155,\n    \"Chernoff_information\": 0.0016227455403719504,\n    \"Chernoff_s\": 0.49475,\n    \"iid_samples_upper_bound_bayes_error\": {\n      \"0.1\": 992,\n      \"0.05\": 1419,\n      \"0.01\": 2411\n    }\n  },\n  \"feature_distance_scalar_power\": {\n    \"difference\": 0.08181796132349084,\n    \"variance_under_PM001\": 0.748384246483029,\n    \"n_for_5sigma_mean_separation_idealized\": 2795\n  },\n  \"nuisances\": [\n    \"state misclassification\",\n    \"correlated samples/effective sample size\",\n    \"control drift\",\n    \"unknown edge heterogeneity\",\n    \"finite-N mismatch\",\n    \"non-equilibrium preparation\"\n  ],\n  \"null_alternatives\": [\n    \"PM-002 full-p coupling\",\n    \"zero/weak coupling\",\n    \"dense/global coupling control\"\n  ],\n  \"nonconclusions\": [\n    \"no empirical validation\",\n    \"no apparatus readiness\",\n    \"analog success would not validate primordial ontology\"\n  ]\n}\n",
+    "stderr_tail": ""
+  }
+]

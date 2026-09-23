@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+N=12
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+P=W/s; np.fill_diagonal(P,0.0)
+eta0=np.linspace(.80,.98,N)
+eps0=.05
+C0=np.zeros((N,N))
+for j in range(N):
+    C0[j,j]=1-2*eps0; C0[j,(j-1)%N]=eps0; C0[j,(j+1)%N]=eps0
+M0=np.linalg.inv(C0.T); D0inv=np.diag(1/eta0); B0=D0inv@M0
+# Import exact inverse-map threshold from the prior CAL-03 derivation by recomputing it.
+records=[]
+for i in range(N):
+    p=P[i]; norm=float(eta0@p); q=C0.T@(eta0*p)/norm; r=B0@q
+    near=[(i-1)%N,(i+1)%N]
+    for a in near:
+      for b in range(N):
+        if b==i or b in near: continue
+        records.append(float(r[a]-r[b]))
+margin=min(records); eps_B_star=margin/2
+m0=float(np.linalg.norm(M0,np.inf)); d0=float(np.linalg.norm(D0inv,np.inf))
+# Primitive uncertainty set:
+#  C row-stochastic/nonnegative with independent entry deviations |C_ij-C0_ij|<=gamma.
+#  eta_j in [eta0_j(1-r), eta0_j(1+r)].
+# Entrywise C box implies ||(C-C0)^T||_inf <= 12 gamma.
+# Banach/Neumann if m0*12gamma<1.
+# ||M-M0||_inf <= m0^2*(12gamma)/(1-m0*12gamma)
+# ||D^-1-D0^-1||_inf <= d0*r/(1-r), ||D^-1|| not needed for chosen decomposition.
+def outer_B_bound(gamma,r):
+    E=12*gamma
+    if r>=1 or m0*E>=1: return math.inf
+    Mnorm=m0/(1-m0*E)
+    Mdiff=m0*m0*E/(1-m0*E)
+    Ddiff=d0*r/(1-r)
+    return Ddiff*Mnorm + d0*Mdiff
+# closed-form safe gamma threshold as function of r for these numerical norms (both 1.25)
+# solve outer_B_bound(gamma,r)<eps_B_star.
+den=23.4375+15*eps_B_star
+r_max=eps_B_star/(eps_B_star+1.5625)
+def gamma_max(r):
+    num=eps_B_star-1.5625*r/(1-r)
+    return max(0.0,num/den)
+fixtures=[]
+for r in [0,.01,.02,.03,.04,.05]:
+    gm=gamma_max(r)
+    fixtures.append({'relative_efficiency_radius_r':r,'safe_entrywise_confusion_radius_gamma_lt':gm,'outer_B_bound_at_95pct_gamma':outer_B_bound(.95*gm,r) if gm>0 else outer_B_bound(0,r)})
+# Chosen non-vacuous fixture.
+r_fix=.02; g_fix=.002
+bound_fix=outer_B_bound(g_fix,r_fix)
+result={
+ 'task':'OCB-CAL-04',
+ 'status':'PRIMITIVE_DETECTOR_BOX_PROPAGATES_TO_RIGOROUS_INVERSE_MAP_SAFE_REGION',
+ 'primitive_uncertainty_set':{
+   'confusion':'C is row-stochastic and nonnegative; |C_ij-C0_ij|<=gamma for every primitive confusion entry.',
+   'efficiency':'eta_j lies in eta0_j*(1+-r), independently, with r<1.',
+   'nominal_confusion':'90% correct and 5% to each cyclic adjacent recorded label',
+   'nominal_efficiency_range':[float(eta0.min()),float(eta0.max())]
+ },
+ 'norm_certificate':{
+   'norm_inv_C0T_inf':m0,'norm_D0inv_inf':d0,
+   'nonsingularity_condition':'15*gamma < 1',
+   'inverse_difference_bound':'||M-M0||_inf <= 18.75*gamma/(1-15*gamma), M=(C^T)^-1',
+   'efficiency_inverse_difference_bound':'||D^-1-D0^-1||_inf <= 1.25*r/(1-r)',
+   'propagated_inverse_map_entry_bound':'Every entry of B-B0 is bounded by F(gamma,r)=[1.5625*r/(1-r)+23.4375*gamma]/(1-15*gamma).'
+ },
+ 'link_to_CAL03':{
+   'CAL03_entrywise_B_threshold':eps_B_star,
+   'safe_region_closed_form':'gamma < [eps_B_star - 1.5625*r/(1-r)]/[23.4375+15*eps_B_star], with positive numerator.',
+   'maximum_efficiency_radius_if_gamma_zero':r_max,
+   'fixtures':fixtures,
+   'declared_fixture':{'r':r_fix,'gamma':g_fix,'outer_B_entry_bound':bound_fix,'carrier_certified':bool(bound_fix<eps_B_star)}
+ },
+ 'decision':'A physically interpretable primitive calibration box can be pushed through matrix inversion to a rigorous outer B-box and then into the exact CAL-03 carrier margin theorem. The resulting region is sufficient, conservative, and non-vacuous.',
+ 'nonconclusion':'Failure of this sufficient norm bound does not prove carrier ambiguity; the outer polytope is conservative and no real detector calibration is supplied.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CAL-04_primitive_polytope.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'B_threshold':eps_B_star,'r_max_gamma0':r_max,'fixture_bound':bound_fix,'fixture_pass':bound_fix<eps_B_star},indent=2))

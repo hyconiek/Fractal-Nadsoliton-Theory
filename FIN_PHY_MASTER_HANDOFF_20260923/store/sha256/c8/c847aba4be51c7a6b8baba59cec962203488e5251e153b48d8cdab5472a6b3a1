@@ -1,0 +1,80 @@
+{
+  "acceptance": "A nontrivial dimensionless causal-depth clock composes consistently and is invariant under swaps of independent events, while the residual positive rate/clock freedom is explicit rather than hidden.",
+  "arrow_test": {
+    "barker_max_detailed_balance_residual": 1.0842021724855044e-19,
+    "metropolis_max_detailed_balance_residual": 2.168404344971009e-19,
+    "needed_for_arrow": "A nonequilibrium boundary/preparation, reservoir/current source, or explicitly irreversible rule must be added and separately justified.",
+    "result": "Both declared equilibrium dynamics satisfy detailed balance to numerical precision. Their stationary path law is reversible; no entropy-production arrow is selected by the equilibrium core."
+  },
+  "claim_decision": {
+    "H-R4_nontrivial_event_order": "PASS_IN_SCOPE_CONDITIONAL_PM",
+    "dimensionless_causal_depth_clock": "PASS_AS_ORDER_PARAMETER",
+    "intrinsic_arrow_of_time": "NOT_DERIVED",
+    "physical_SI_clock": "NOT_DERIVED",
+    "unique_continuous_time_from_FIN": "REFUTED_IN_SCOPE_FOR_CURRENT_INPUTS"
+  },
+  "clock_torsor": {
+    "c": 3.7,
+    "ratio_check": [
+      0.2702702702702703,
+      0.27027027027027023
+    ],
+    "scaled_path_times": [
+      0.4504504504504504,
+      0.31531531531531526
+    ],
+    "theorem": "The embedded event sequence and equilibrium law are unchanged by common positive generator scaling; only holding times rescale. No timestamp-free record fixes c.",
+    "transformation": "Q -> c Q and t -> t/c",
+    "unscaled_path_times": [
+      1.6666666666666665,
+      1.1666666666666665
+    ]
+  },
+  "event_poset_clock": {
+    "composition": "Along a causal chain, depth increments add exactly; across concurrent branches depth is a partial-order rank, not a total schedule.",
+    "depth": {
+      "a": 1,
+      "b": 1,
+      "c": 2
+    },
+    "example_relations": [
+      "a<c",
+      "b<c",
+      "a || b"
+    ],
+    "invariance": "Swapping independent events a,b leaves the causal-depth assignment unchanged.",
+    "linear_extensions": [
+      [
+        "a",
+        "b",
+        "c"
+      ],
+      [
+        "b",
+        "a",
+        "c"
+      ]
+    ]
+  },
+  "schedule_freedom": {
+    "asynchronous_poisson": "One may declare independent local rates and use physical holding times conditionally.",
+    "same_support_order": "Both respect the PHY-006 causal cone, but they assign different durations.",
+    "synchronous_layers": "One may declare one unit per event layer.",
+    "verdict": "Support order alone does not select a unique clock."
+  },
+  "status": "PASS_CONDITIONAL_CAUSAL_CLOCK_CLASS__PHYSICAL_TIME_AND_ARROW_NOT_DERIVED",
+  "task": "PHY-009",
+  "two_clock_comparison": {
+    "causal_depth_0_to_3": 2,
+    "conclusion": "Equal causal depth does not imply equal continuous duration when local activities differ.",
+    "expected_ordered_wait_path_0_1_3": 1.6666666666666665,
+    "expected_ordered_wait_path_0_2_3": 1.1666666666666665,
+    "graph": "diamond 0-1-3 and 0-2-3",
+    "path_duration_difference": 0.5,
+    "poisson_node_rates": {
+      "r1": 1.0,
+      "r2": 2.0,
+      "r3": 1.5
+    }
+  }
+}

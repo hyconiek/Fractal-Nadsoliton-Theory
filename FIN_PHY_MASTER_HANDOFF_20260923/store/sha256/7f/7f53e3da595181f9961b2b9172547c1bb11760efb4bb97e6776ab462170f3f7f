@@ -1,0 +1,110 @@
+{
+  "task": "OCB-MEM-03",
+  "status": "PARTIAL_QUERY_COMPLEXITY_BOUND__GENERIC_SPARSE_QUERY_LOWER_BOUND_REMAINS_OPEN",
+  "explicit_alias_lower_bound": {
+    "statement": "For H=2^L, the rotating-sign alias has complete visible Hankel rank H, agrees with strict on every path word of length <=L, and first differs at L+1. Therefore any universal horizon for excluding all rank<=H aliases is at least 1+floor(log2 H) on the powers-of-two subsequence.",
+    "rows": [
+      {
+        "L": 1,
+        "alias_rank_H": 2,
+        "matches_all_lengths_through": 1,
+        "first_possible_witness_length": 2,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 2,
+        "naive_all_words_through_first_witness": 133,
+        "targeted_periodic_lag_queries": 1
+      },
+      {
+        "L": 2,
+        "alias_rank_H": 4,
+        "matches_all_lengths_through": 2,
+        "first_possible_witness_length": 3,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 4,
+        "naive_all_words_through_first_witness": 1464,
+        "targeted_periodic_lag_queries": 2
+      },
+      {
+        "L": 3,
+        "alias_rank_H": 8,
+        "matches_all_lengths_through": 3,
+        "first_possible_witness_length": 4,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 8,
+        "naive_all_words_through_first_witness": 16105,
+        "targeted_periodic_lag_queries": 3
+      },
+      {
+        "L": 4,
+        "alias_rank_H": 16,
+        "matches_all_lengths_through": 4,
+        "first_possible_witness_length": 5,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 16,
+        "naive_all_words_through_first_witness": 177156,
+        "targeted_periodic_lag_queries": 4
+      },
+      {
+        "L": 5,
+        "alias_rank_H": 32,
+        "matches_all_lengths_through": 5,
+        "first_possible_witness_length": 6,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 32,
+        "naive_all_words_through_first_witness": 1948717,
+        "targeted_periodic_lag_queries": 5
+      },
+      {
+        "L": 6,
+        "alias_rank_H": 64,
+        "matches_all_lengths_through": 6,
+        "first_possible_witness_length": 7,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 64,
+        "naive_all_words_through_first_witness": 21435888,
+        "targeted_periodic_lag_queries": 6
+      },
+      {
+        "L": 7,
+        "alias_rank_H": 128,
+        "matches_all_lengths_through": 7,
+        "first_possible_witness_length": 8,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 128,
+        "naive_all_words_through_first_witness": 235794769,
+        "targeted_periodic_lag_queries": 7
+      },
+      {
+        "L": 8,
+        "alias_rank_H": 256,
+        "matches_all_lengths_through": 8,
+        "first_possible_witness_length": 9,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 256,
+        "naive_all_words_through_first_witness": 2593742460,
+        "targeted_periodic_lag_queries": 8
+      },
+      {
+        "L": 9,
+        "alias_rank_H": 512,
+        "matches_all_lengths_through": 9,
+        "first_possible_witness_length": 10,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 512,
+        "naive_all_words_through_first_witness": 28531167061,
+        "targeted_periodic_lag_queries": 9
+      },
+      {
+        "L": 10,
+        "alias_rank_H": 1024,
+        "matches_all_lengths_through": 10,
+        "first_possible_witness_length": 11,
+        "generic_weighted_automaton_sufficient_horizon_if_rank_bound_H_known": 1024,
+        "naive_all_words_through_first_witness": 313842837672,
+        "targeted_periodic_lag_queries": 10
+      }
+    ]
+  },
+  "generic_upper_bound_from_predecessor": {
+    "statement": "If a hidden process has at most H hidden states, the difference from strict iid has linear representation dimension at most H+1; the standard reachable-space argument gives a witness by length H whenever the processes are inequivalent.",
+    "horizon_bracket": "For current proved classes: Omega(log H) necessary from the explicit aliases, O(H) sufficient given a correct rank bound H."
+  },
+  "query_count_boundary": {
+    "statement": "The alias family does not prove that all 11^n word probabilities must be queried. In fact its special contrast is detected by scanning only L lags. Therefore naive exhaustive word count is a cost of an unstructured protocol, not a universal lower bound.",
+    "no_safe_local_stop": "A protocol that stops merely because empirical/local Hankel rank failed to increase for a fixed number of extensions can be defeated by choosing L beyond that extension depth.",
+    "open_problem": "A minimax lower bound on the number of arbitrary adaptively chosen path functionals for the full rank-H HMM class requires a stronger adversarial construction or a specified query model."
+  },
+  "decision": "Do not claim a universal efficient memory test from the targeted period-L lag scan. The current rigorous result is a horizon obstruction plus a finite-H sufficiency theorem.",
+  "nonconclusion": "No physical memory dimension or hidden-state ontology is inferred."
+}

@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys, json, math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float)
+A=np.asarray(model.laplacian(W),float)
+s=float(A[0,0])
+# visible increments r=1,...,11 from any vertex on C12
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+assert abs(p.sum()-1)<1e-14 and abs(c.sum())<1e-14
+m=float(p@c)
+delta_max=float(np.min(p[c<0]))
+
+def path_law_periodic(L,delta,n):
+    # exact enumeration of 2^L hidden sign words; returns visible increment tensor for n steps
+    shape=(11,)*n
+    out=np.zeros(shape,float)
+    for mask in range(1<<L):
+        z=np.array([1.0 if (mask>>j)&1 else -1.0 for j in range(L)])
+        arr=np.array([1.0])
+        for t in range(n):
+            q=p+delta*z[t%L]*c
+            arr=np.multiply.outer(arr,q).reshape(arr.shape+(11,)) if False else None
+        # build via einsum-free repeated outer
+        arr=np.array(1.0)
+        for t in range(n):
+            q=p+delta*z[t%L]*c
+            arr=np.multiply.outer(arr,q)
+        out += arr/(1<<L)
+    return out
+
+def tensor_power_p(n):
+    arr=np.array(1.0)
+    for _ in range(n): arr=np.multiply.outer(arr,p)
+    return arr
+
+rows=[]
+for L in range(1,6):
+    delta=0.05
+    for n in (L, L+1):
+        alias=path_law_periodic(L,delta,n)
+        strict=tensor_power_p(n)
+        tv=float(0.5*np.abs(alias-strict).sum())
+        formula=0.0 if n<=L else 8*delta**2
+        rows.append({'L':L,'n_steps':n,'tv':tv,'expected_tv':formula,'abs_error':abs(tv-formula)})
+
+# Explicit period-2 three-step identity
+L=2; delta=0.05
+alias2=path_law_periodic(L,delta,2); strict2=tensor_power_p(2)
+alias3=path_law_periodic(L,delta,3); strict3=tensor_power_p(3)
+# contrast observable first vs last increment
+idx=np.indices((11,11,11))
+obs=np.zeros_like(alias3)
+for a in range(11):
+    for b in range(11):
+        for d in range(11): obs[a,b,d]=c[a]*c[d]
+E0=float(np.sum(strict3*obs)); E1=float(np.sum(alias3*obs))
+
+result={
+ 'task':'OCB-MEM-01A',
+ 'status':'EXACT_FINITE_MEMORY_HORIZON_ALIAS_THEOREM',
+ 'strict_increment_distribution':p.tolist(),
+ 'contrast_vector_shell1_plus_shell2_minus':c.tolist(),
+ 'contrast_mean_m':m,
+ 'valid_delta_interval':[0.0,delta_max],
+ 'construction':('Choose L hidden iid signs Z_0,...,Z_{L-1}; at jump t use visible increment law p+delta*Z_{t mod L}*c and rotate the hidden word. '
+                 'The hidden state space is finite (2^L ordered sign words).'),
+ 'theorem':('For every L>=1 and 0<delta<delta_max, every visible path law of n<=L consecutive jumps is exactly p^{tensor n}. '
+            'At n=L+1 the law differs by delta^2*c tensor p^{tensor(L-1)} tensor c, hence total variation is exactly 8 delta^2, independent of L.'),
+ 'verification_rows_delta_0p05':rows,
+ 'period2_heldout':{
+   'two_step_tv':float(0.5*np.abs(alias2-strict2).sum()),
+   'three_step_tv':float(0.5*np.abs(alias3-strict3).sum()),
+   'three_step_tv_formula':8*delta**2,
+   'endpoint_contrast_expectation_strict':E0,
+   'endpoint_contrast_expectation_alias':E1,
+   'endpoint_contrast_gap':E1-E0,
+   'endpoint_contrast_gap_formula':16*delta**2
+ },
+ 'consequence':('No predeclared finite path horizon can exclude the class of all finite hidden-memory aliases unless an upper bound on memory depth/state complexity is an additional premise. '
+                'For a declared memory bound L, a held-out path of length L+1 can break this explicit alias class.'),
+ 'nonconclusion':'This is an identifiability/no-go theorem for operational path records, not evidence that nature contains the constructed hidden memory.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-MEM-01A_horizon_alias.json'
+out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'delta_max':delta_max,'period2':result['period2_heldout'],'max_row_error':max(r['abs_error'] for r in rows)},indent=2))

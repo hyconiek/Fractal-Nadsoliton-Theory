@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "alpha": 0.4,
+      "fitted_slope": 0.400000061083791,
+      "w7_shared": 0.005535408660721056,
+      "w8": 0.0045915673936039484
+    },
+    {
+      "alpha": 0.8,
+      "fitted_slope": 0.8000029593526486,
+      "w7_shared": 0.005535408660721056,
+      "w8": 0.004352754611980577
+    },
+    {
+      "alpha": 1.2,
+      "fitted_slope": 1.200074164105513,
+      "w7_shared": 0.005535408660721056,
+      "w8": 0.004126362761986377
+    },
+    {
+      "alpha": 1.6,
+      "fitted_slope": 1.5992199805956882,
+      "w7_shared": 0.005535408660721056,
+      "w8": 0.003911745816463643
+    }
+  ],
+  "consequence": "No finite list of shell weights, even augmented by positivity and monotone decay and one common held-out shell, identifies the continuum order. A law constraining the asymptotic tail/refinement class is logically independent data.",
+  "construction": "For any 0<alpha<2 set w_d=w7*(7/d)^(1+alpha) for every d>=7, with the exact same strict d=1,...,6 prefix and the same w7=w6/2.",
+  "properties": [
+    "positive",
+    "strictly decreasing for d>=7",
+    "same d=1,...,7 across every alpha control"
+  ],
+  "scientific_state": "PROVED_CLASS_NO_GO_WITH_NUMERICAL_ASYMPTOTIC_CHECKS",
+  "shared_w7": 0.005535408660721056,
+  "stop_rule": "Do not continue adding finite shell measurements as a purported proof of continuum exponent unless a source law links finite and asymptotic shells.",
+  "task": "OPERATOR-REFINE-03_finite_prefix_universal_continuum_order_no_go",
+  "theorem": "For 0<alpha<2, a positive tail C d^(-(1+alpha)) gives 2 sum_d w_d(1-cos(kd)) ~ c_alpha |k|^alpha as k->0. The finite prefix contributes only O(k^2), hence does not alter the leading order.",
+  "visible_shells_d1_to_d6": [
+    0.4699856726450201,
+    0.1920435516901028,
+    0.09142861427792495,
+    0.0470291687456504,
+    0.02413122336363006,
+    0.011070817321442113
+  ]
+}

@@ -1,0 +1,15 @@
+# Rejected / superseded approaches
+
+## C4-only finite-q transfer bound
+
+The first uniform finite-q attempt used only a periodic `C^4` trapezoid error
+bound. It was mathematically sound as a sufficient-bound strategy but far too
+loose: the common Krawczyk box did not certify below q=2000, and a later scan
+placed its sufficient threshold near q=43160.
+
+It was superseded by the analytic-strip Fourier alias bound, which uses the
+same model and same Krawczyk box but exploits analyticity. The improved
+certificate gives the sufficient uniform threshold `even q >= 190`.
+
+The old script is retained under `rejected/` for auditability and is not part
+of the clean replay.

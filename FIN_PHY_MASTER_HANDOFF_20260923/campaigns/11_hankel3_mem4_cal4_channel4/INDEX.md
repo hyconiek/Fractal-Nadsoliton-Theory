@@ -1,0 +1,28 @@
+# 11_hankel3_mem4_cal4_channel4
+
+Anytime-valid determinant rank test, broader rank-3 witness and CAL/CHANNEL-04.
+
+- Source directory: `fin_phy_hankel3_followup`
+- Logical files: 26
+- Logical bytes: 59267
+- New unique store objects introduced here: 25
+- References to objects already stored: 1
+
+## Top-level logical files
+
+- `CAL04_REPORT.md` → `store/sha256/30/3041b5e71d58833280d5c3899100b67f8194a467cf6a61073d80e0cb50a90aa2` (`3041b5e71d58833280d5c3899100b67f8194a467cf6a61073d80e0cb50a90aa2`)
+- `CHANNEL04_REPORT.md` → `store/sha256/d2/d2289a8c5519c6ebeadc6d163612be4b15ebb441d5421fbb8eb15f27a631ee35` (`d2289a8c5519c6ebeadc6d163612be4b15ebb441d5421fbb8eb15f27a631ee35`)
+- `CLAIM_REGISTER.json` → `store/sha256/3b/3bc691dd9b934485dba5bdd92f2b7c7fbbe61542b24989a6f97da955a872b463` (`3bc691dd9b934485dba5bdd92f2b7c7fbbe61542b24989a6f97da955a872b463`)
+- `EXPECTED_RESULTS.sha256` → `store/sha256/20/20e2c650401a0f83af1c2605ca4b6af3b20dcd731b14031a465f1d347bf9bd55` (`20e2c650401a0f83af1c2605ca4b6af3b20dcd731b14031a465f1d347bf9bd55`)
+- `HANDOFF.md` → `store/sha256/b4/b43a8a1a4e7f37a7e15779e9d0186143b38b0f0a05184a279d2c750542fa44be` (`b43a8a1a4e7f37a7e15779e9d0186143b38b0f0a05184a279d2c750542fa44be`)
+- `HANKEL03_REPORT.md` → `store/sha256/b7/b708714877f0413b12012aea189db1c62baa279941d3ed93eeadec9b0834e918` (`b708714877f0413b12012aea189db1c62baa279941d3ed93eeadec9b0834e918`)
+- `MANIFEST.sha256` → `store/sha256/73/73dcc923cd2e1221db8db602110b31b7c7f7fa32892b8269dcb46653878e541b` (`73dcc923cd2e1221db8db602110b31b7c7f7fa32892b8269dcb46653878e541b`)
+- `MEM04_REPORT.md` → `store/sha256/68/68bd792cff6b82498b3f5ce0dbad61d967349742d805f1c01769d7aaac0ba6cb` (`68bd792cff6b82498b3f5ce0dbad61d967349742d805f1c01769d7aaac0ba6cb`)
+- `NEXT_ATOMS.md` → `store/sha256/45/45059af504fb15321cf2746e32932555d7b2dcf1569823eb55ffe64aa4890d66` (`45059af504fb15321cf2746e32932555d7b2dcf1569823eb55ffe64aa4890d66`)
+- `NONCONCLUSIONS.md` → `store/sha256/43/434ccd5b741767ca34c9ccfeafe59352d0e954a0e42a587443b868dace095f46` (`434ccd5b741767ca34c9ccfeafe59352d0e954a0e42a587443b868dace095f46`)
+- `PRIOR_WORK_DEDUP.md` → `store/sha256/27/277c39f47fecd9f3f8f07d7d9fb1ff6f83ec31c1463765b08afe118fb1d08617` (`277c39f47fecd9f3f8f07d7d9fb1ff6f83ec31c1463765b08afe118fb1d08617`)
+- `REPO_AUDIT.json` → `store/sha256/e8/e8ad8d99af082fdfc0f7703bd718643bb11e3456b32cf37b130e63bca3178174` (`e8ad8d99af082fdfc0f7703bd718643bb11e3456b32cf37b130e63bca3178174`)
+- `SYNTHESIS.md` → `store/sha256/0d/0dd6be6cd59839cab78c7668f7969761a29900dbb0efcd7b0c0b66ade78ed362` (`0dd6be6cd59839cab78c7668f7969761a29900dbb0efcd7b0c0b66ade78ed362`)
+- `TASKS.json` → `store/sha256/b3/b3f42eb638d22f314184da07a485577ada1941535fd22dac6eee8dde7b55e233` (`b3f42eb638d22f314184da07a485577ada1941535fd22dac6eee8dde7b55e233`)
+- `replay.py` → `store/sha256/bf/bf321ad48b394897487144db180a05b3560e1708252158ef3c933123153f2ace` (`bf321ad48b394897487144db180a05b3560e1708252158ef3c933123153f2ace`)
+- `verify_package.py` → `store/sha256/03/038c90c562d6ba0288d94fa105fef7ee5dbf5ab40f3592302dc4cfbf3f25c4d8` (`038c90c562d6ba0288d94fa105fef7ee5dbf5ab40f3592302dc4cfbf3f25c4d8`)

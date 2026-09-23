@@ -1,0 +1,39 @@
+{
+  "task": "OCB-HANKEL-03A",
+  "status": "EXACT_ANYTIME_RANK3_EPROCESS_EXISTS__WORST_CASE_POWER_IS_IMPRACTICAL",
+  "theorem": {
+    "feature_dimension": 4,
+    "population_cross_hankel_diag": [
+      1.0,
+      0.058361655098155454,
+      0.058361655098155454,
+      0.0034060827857960545
+    ],
+    "population_rank": 4,
+    "determinant_signal": 1.1601399943696203e-05,
+    "estimator": "For four independent reset paths with prefix features F_i and suffix features G_i, Z=det(rows F_i)*det(rows G_i)/4! satisfies E[Z]=det(E[F G^T]) by Andreief expansion.",
+    "composite_null": "Every process whose declared 4x4 cross-Hankel has rank <=3 has E[Z]=0.",
+    "finite_support_bound_abs_Z": 48.33916643206737,
+    "eprocess": "For any predictable lambda_t, exp(lambda_t Z_t - lambda_t^2 B^2/2) has conditional expectation <=1 under the rank<=3 null; its product is an anytime-valid e-process for independent reset batches.",
+    "optional_stopping_valid": true
+  },
+  "worst_case_hoeffding_power_screen": {
+    "oracle_lambda_for_frozen_alias": 4.964918051230375e-09,
+    "expected_log_growth_per_four_path_batch": 2.880000000000017e-14,
+    "batches_for_expected_log20": 104018481720625,
+    "paths_for_expected_log20": 416073926882500,
+    "warning": "Expected log growth is a design diagnostic, not a stopping-time power guarantee. Its enormous value shows that the generic determinant e-process is mathematically valid but practically unusable for this weak fourth singular direction."
+  },
+  "fixed_seed_monte_carlo_diagnostic": {
+    "batches": 300000,
+    "sample_mean_Z": -0.00034366126135297956,
+    "true_mean_Z": 1.1601399943696203e-05,
+    "sample_standard_error": 0.001821952117228414,
+    "sample_variance_Z": 0.9958528552419301,
+    "heuristic_variance_adaptive_expected_log_growth": 6.757648981229093e-11,
+    "heuristic_batches_for_log20": 44330983777,
+    "scope": "Power diagnostic only; no theorem or confidence claim uses this Monte-Carlo estimate."
+  },
+  "decision": "Sequential validity can be obtained distribution-free at the composite rank<=3 level, but reducing rank evidence to the determinant creates an extremely low-SNR test. A practical certificate must exploit additional structure or a much sharper matrix/sequential construction.",
+  "nonconclusion": "No physical memory dimension, laboratory sample size, or universal optimal rank test follows."
+}

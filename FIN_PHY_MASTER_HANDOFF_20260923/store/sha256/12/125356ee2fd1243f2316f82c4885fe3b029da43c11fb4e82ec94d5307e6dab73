@@ -1,0 +1,25 @@
+{
+  "task": "PHY-028",
+  "scientific_state": "PASS_ANCHOR_COUNT_AND_SCALE_GAUGES",
+  "anchors": [
+    "E_*",
+    "L_*",
+    "T_*"
+  ],
+  "derived_dimensions": {
+    "speed": "L_*/T_*",
+    "action": "E_* T_*",
+    "mass_dimension": "E_* T_*^2/L_*^2"
+  },
+  "gauges": [
+    "energy/coupling scale",
+    "length/refinement scale",
+    "overall clock-rate torsor"
+  ],
+  "constants_gate": {
+    "k_B": "bath+temperature",
+    "hbar": "quantum/action bridge",
+    "c": "universal calibrated cone",
+    "G": "gravity+mass/source bridge"
+  }
+}

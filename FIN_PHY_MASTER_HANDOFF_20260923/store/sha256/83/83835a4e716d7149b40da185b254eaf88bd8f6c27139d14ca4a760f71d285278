@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib
+ROOT=Path(__file__).resolve().parent
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+manifest=ROOT/'MANIFEST.sha256'
+if not manifest.exists(): raise SystemExit('MANIFEST missing')
+bad=[];n=0
+for line in manifest.read_text().splitlines():
+    if not line.strip():continue
+    h,rel=line.split(maxsplit=1);p=ROOT/rel;n+=1
+    if not p.exists() or sha(p)!=h:bad.append((rel,h,sha(p) if p.exists() else None))
+if bad:
+    print('VERIFY FAIL',bad);raise SystemExit(1)
+print(f'VERIFY PASS files={n}')

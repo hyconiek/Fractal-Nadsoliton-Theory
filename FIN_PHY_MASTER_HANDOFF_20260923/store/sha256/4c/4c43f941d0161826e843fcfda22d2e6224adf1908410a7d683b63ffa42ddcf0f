@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+import json, math, sympy as sp, mpmath as mp
+from pathlib import Path
+mp.mp.dps=80
+q=12
+# strict weights from frozen formula, high precision decimals
+omega=mp.mpf('0.18575'); phi=mp.mpf('0.1625'); eta=mp.mpf('1.8')
+w=[mp.cos(omega*d+phi)/(1+mp.power(d,eta)) for d in range(1,7)]
+# symbolic radial-difference generator
+ws=sp.symbols('w1:7')
+W=sp.zeros(q)
+for i in range(q):
+    for j in range(q):
+        if i!=j:
+            d=min((i-j)%q,(j-i)%q)
+            W[i,j]=ws[d-1]
+A=sp.diag(*[sum(W[i,j] for j in range(q)) for i in range(q)])-W
+Q=-A
+B=sp.zeros(q,7)
+for j in range(q): B[j,min(j,q-j)]=1
+R=(Q*B)[0:7,:]
+mult=sp.Matrix([[1,2,2,2,2,2,1]])
+D=sp.zeros(6,7)
+for i in range(6): D[i,i]=1; D[i,i+1]=-1
+T=mult.col_join(D)
+M=sp.simplify(T*R*T.inv())
+Mb=M[1:,1:]
+subs={ws[i]:sp.Float(str(w[i]),80) for i in range(6)}
+Mn=Mb.evalf(60,subs=subs)
+# collect positive offdiagonal margins
+vals=[]
+for i in range(6):
+    for j in range(6):
+        if i!=j: vals.append(mp.mpf(str(Mn[i,j])))
+min_off=min(vals)
+# weight gaps
+wg=[w[i]-w[i+1] for i in range(5)]
+result={
+  'task':'OCB-01',
+  'status':'PROVED_FOR_FROZEN_STRICT_MODEL_AND_SYMBOLIC_CLASS',
+  'strict_weights_d1_to_d6':[mp.nstr(x,40) for x in w],
+  'strict_weight_gaps':[mp.nstr(x,40) for x in wg],
+  'difference_generator_symbolic':[[str(sp.factor(Mb[i,j])) for j in range(6)] for i in range(6)],
+  'difference_generator_numeric':[[float(Mn[i,j]) for j in range(6)] for i in range(6)],
+  'minimum_offdiagonal_margin':mp.nstr(min_off,40),
+  'theorem':('For a symmetric radial CTMC on C12 with strictly decreasing positive shell rates '
+             'w1>w2>...>w6>0, let p_r(t) be the heat-kernel probability at cyclic distance r '
+             'and y_r=p_r-p_{r+1}, r=0,...,5. In the coordinates (total_mass,y), total mass '
+             'decouples and y satisfies ydot=M y. Every off-diagonal entry of M is a positive '
+             'difference w_a-w_b with a<b. Thus M is irreducible Metzler. Since y(0)=(1,0,...,0), '
+             'exp(tM)y(0) is strictly positive for every t>0. Hence p0(t)>p1(t)>...>p6(t) for every finite t>0.'),
+  'interpretation':('For the Markov/heat realization of strict FIN, the complete six-shell ordinal carrier '
+                    'is preserved at all positive times, not only in a short-time limit. This does not select '
+                    'heat as the physical dynamics.')
+}
+out=Path('/mnt/data/fin_phy_operational_carrier/results/OCB-01_heat_shell_metzler.json')
+out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(out)

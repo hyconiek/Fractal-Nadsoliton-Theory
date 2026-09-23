@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import argparse, subprocess, hashlib, sys
+ROOT=Path(__file__).resolve().parent
+SCRIPTS=[
+'phy_013_source_challenge.py','phase_geometry_source.py','q12_phase_graph_interval.py',
+'internal_geometry_consistency.py','phase_continuum_limit.py','certify_smooth_continuum.py',
+'certify_finite_q_branch_analytic.py','certify_rg2_support.py','cell_geometry_from_phase_order.py',
+'rg3_joint_scaling.py','cg01_diffuse_geometry.py','cg02_rewiring.py','cg03_coarse_closure.py',
+'cg04_influence_metric.py','cg05_metric_backbone.py','cg06_refinement_dirichlet.py',
+'cg07_wave_speed.py','cg08_dimension_obstruction.py','source_negative_controls.py']
+def sha(p):
+    h=hashlib.sha256();h.update(p.read_bytes());return h.hexdigest()
+def read_expected():
+    out={}
+    for line in (ROOT/'EXPECTED_RESULTS.sha256').read_text().splitlines():
+        if not line.strip(): continue
+        h,rel=line.split(maxsplit=1);out[rel]=h
+    return out
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');args=ap.parse_args()
+    for s in SCRIPTS:
+        print('RUN',s,flush=True)
+        subprocess.run([sys.executable,str(ROOT/'scripts'/s)],cwd=ROOT,check=True,env={**__import__('os').environ,'PYTHONDONTWRITEBYTECODE':'1'})
+    if args.check:
+        bad=[]
+        for rel,want in read_expected().items():
+            p=ROOT/rel
+            got=sha(p) if p.exists() else None
+            if got!=want: bad.append((rel,want,got))
+        if bad:
+            for x in bad: print('MISMATCH',x)
+            raise SystemExit(2)
+        print('REPLAY CHECK PASS')
+if __name__=='__main__': main()

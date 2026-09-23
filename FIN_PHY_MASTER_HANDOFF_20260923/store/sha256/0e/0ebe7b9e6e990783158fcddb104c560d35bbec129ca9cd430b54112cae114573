@@ -1,0 +1,92 @@
+{
+  "falsification_contract": [
+    "Recover top-two cycle neighbours from destination-only records.",
+    "Check D12-consistent shell ordering without using holding times.",
+    "Separately test whether long-range shells predicted by full strict W are present; passing adjacency alone does not validate the dense generator."
+  ],
+  "full_strict_dense_control": {
+    "ideal_N_for_95pct_probability_of_at_least_one_opposite_shell_event": 448,
+    "interpretation": "Absence of any opposite-shell event after this many ideal independent departures is a 5% one-sided rejection of the exact strict Markov row; it is not validation if events are observed.",
+    "opposite_shell_probability_per_departure": 0.006667932775473757
+  },
+  "noise_model": "Recorded jump destination is replaced by a uniform random non-self destination with probability epsilon; independent event loss is destination-blind.",
+  "nonconclusions": [
+    "Synthetic success fractions are implementation/power checks, not empirical evidence.",
+    "Real detector confusion need not be uniform or destination-independent.",
+    "The bridge still assumes a Markov state ontology and identifiable preparations/effects."
+  ],
+  "rows": [
+    {
+      "Hoeffding_union_N_5pct": 421,
+      "synthetic_checks_seed_20260923": [
+        {
+          "N": 100,
+          "synthetic_success_fraction": 0.9869
+        },
+        {
+          "N": 150,
+          "synthetic_success_fraction": 0.99825
+        },
+        {
+          "N": 200,
+          "synthetic_success_fraction": 0.99955
+        },
+        {
+          "N": 421,
+          "synthetic_success_fraction": 1.0
+        }
+      ],
+      "top_shell_gap": 0.16740402485103684,
+      "uniform_readout_contamination_epsilon": 0.0
+    },
+    {
+      "Hoeffding_union_N_5pct": 519,
+      "synthetic_checks_seed_20260923": [
+        {
+          "N": 100,
+          "synthetic_success_fraction": 0.9764
+        },
+        {
+          "N": 150,
+          "synthetic_success_fraction": 0.99555
+        },
+        {
+          "N": 200,
+          "synthetic_success_fraction": 0.99915
+        },
+        {
+          "N": 519,
+          "synthetic_success_fraction": 1.0
+        }
+      ],
+      "top_shell_gap": 0.15066362236593311,
+      "uniform_readout_contamination_epsilon": 0.1
+    },
+    {
+      "Hoeffding_union_N_5pct": 657,
+      "synthetic_checks_seed_20260923": [
+        {
+          "N": 100,
+          "synthetic_success_fraction": 0.9565
+        },
+        {
+          "N": 150,
+          "synthetic_success_fraction": 0.98965
+        },
+        {
+          "N": 200,
+          "synthetic_success_fraction": 0.99805
+        },
+        {
+          "N": 657,
+          "synthetic_success_fraction": 1.0
+        }
+      ],
+      "top_shell_gap": 0.13392321988082947,
+      "uniform_readout_contamination_epsilon": 0.2
+    }
+  ],
+  "scientific_state": "CONDITIONAL_PROTOCOL_ROBUSTNESS_PROVED_WITH_SYNTHETIC_CHECKS",
+  "task": "CARRIER-PHYSICAL-BRIDGE-03_clock_free_noise_robust_protocol",
+  "theorem": "Uniform destination contamination maps p_j to (1-epsilon)p_j+epsilon/11, multiplying every pairwise probability gap by 1-epsilon. Thus all strict shell rankings, including the nearest-neighbour cycle, are invariant for epsilon<1. Destination-independent event loss changes sample count but not the conditioned destination law."
+}

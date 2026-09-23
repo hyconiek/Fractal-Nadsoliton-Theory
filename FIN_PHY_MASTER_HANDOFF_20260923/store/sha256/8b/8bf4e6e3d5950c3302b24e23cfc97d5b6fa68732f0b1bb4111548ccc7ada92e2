@@ -1,0 +1,29 @@
+# PHY-025 — classical-simplex quantum null test
+
+**Scientific status: PASS_CLASSICAL_SIMULABILITY_NO_GO_FOR_CURRENT_FIN_PACKAGE.**
+
+## Reversible single-system structure
+
+The current FIN state space is a finite probability simplex. Any affine bijection of a simplex maps extreme points to extreme points, hence every reversible affine state transformation is a permutation of the underlying pure labels. Stochastic maps add classical mixing but do not create a nonclassical state space.
+
+Therefore invertibility, norm preservation, entropy preservation under a permutation, or recoverability on a restricted family are all compatible with entirely classical reversible information processing.
+
+## Bipartite operational test
+
+Take two settings `x,y in {0,1}` and two outcomes `a,b in {0,1}`. Under the current multi-cell FIN construction:
+
+1. the preparation is an ordinary joint probability distribution over finite hidden labels;
+2. each local instrument is a stochastic response conditioned on its local label and local setting;
+3. no communication/postselection is allowed during the Bell trial.
+
+Conditioned on the hidden label, every extremal local response is deterministic. There are `4` deterministic response functions for Alice and `4` for Bob, hence `16` local deterministic joint strategies. Every allowed correlation table is their convex mixture. Consequently the CHSH expression satisfies the classical bound `|S|<=2`.
+
+This is a certificate of classical simulability, not a numerical failure to find a violation.
+
+Sequential disturbance can generate contextual-looking records if measurement changes the hidden state; it must not be confused with a spacelike/noncommunicating Bell test.
+
+## Decision
+
+The present FIN relational package does not operationally exceed classical probability. Covariance, Fourier phases, phase multiplicity, information recovery and reversible permutations do not imply Born structure, entanglement or unitarity.
+
+Any future quantum lane must add a sharply typed primitive that changes the operational state/effect/composition structure and then produce a test that cannot be simulated by the classical simplex under the same independence assumptions.

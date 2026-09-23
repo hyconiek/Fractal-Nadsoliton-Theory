@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces
+R7P_MODEL=ROOT/'inputs'/'R7P_model.py'
+W,A,L,X,C4,A7=feature_spaces(); q=12;g=3.7;kappa=.25
+D=np.maximum(np.sum(X*X,axis=1)[:,None]+np.sum(X*X,axis=1)[None,:]-2*X@X.T,0.0)
+
+def accept(delta,kind):
+    if kind=='metropolis': return min(1.0,math.exp(delta))
+    if delta>=0:return 1/(1+math.exp(-delta))
+    z=math.exp(delta);return z/(1+z)
+
+def tables(kind):
+    Kend=np.zeros((q,q,q)) # neighbor,current,new
+    Kmid=np.zeros((q,q,q,q)) # left,right,current,new
+    for nb in range(q):
+      for c in range(q):
+        for k in range(q):
+          if k==c:continue
+          delta=-kappa/2*(D[k,nb]-D[c,nb])
+          Kend[nb,c,k]=accept(delta,kind)/(q-1)
+        Kend[nb,c,c]=1-Kend[nb,c].sum()
+    for l in range(q):
+      for r in range(q):
+       for c in range(q):
+        for k in range(q):
+          if k==c:continue
+          delta=-kappa/2*((D[k,l]+D[k,r])-(D[c,l]+D[c,r]))
+          Kmid[l,r,c,k]=accept(delta,kind)/(q-1)
+        Kmid[l,r,c,c]=1-Kmid[l,r,c].sum()
+    return Kend,Kmid
+
+def tv(a,b):return .5*float(np.abs(a-b).sum())
+resgen={};comm={};infl={}
+for kind in ['metropolis','barker']:
+    Kend,Kmid=tables(kind)
+    # detailed balance pair under pi(a,b) proportional exp(-kappa D/2); onsite is constant
+    raw=np.exp(-kappa/2*D); pi=raw/raw.sum();ma=mr=0.
+    for a in range(q):
+      for b in range(q):
+       for ap in range(q):
+        if ap==a:continue
+        x=pi[a,b]*Kend[b,a,ap]; y=pi[ap,b]*Kend[b,ap,a]
+        e=abs(x-y);ma=max(ma,e);mr=max(mr,e/max(x,y,1e-300))
+    resgen[kind]={'max_abs_detailed_balance_residual':ma,'max_rel_detailed_balance_residual':mr}
+    # commutation K0,K2 is exact from factorization conditional on unchanged middle.
+    # adjacent witness/max in 3-path over all states, compare joint distribution on updated (0,1), site2 fixed.
+    maxadj=0.;argadj=None
+    for a,b,c in itertools.product(range(q),repeat=3):
+        P01=np.zeros((q,q));P10=np.zeros((q,q))
+        # 0 then 1
+        for i in range(q):
+            if Kend[b,a,i]==0:continue
+            P01[i,:]=Kend[b,a,i]*Kmid[i,c,b,:]
+        # 1 then 0
+        for j in range(q):
+            if Kmid[a,c,b,j]==0:continue
+            P10[:,j]=Kmid[a,c,b,j]*Kend[j,a,:]
+        z=tv(P01,P10)
+        if z>maxadj:maxadj=z;argadj=(a,b,c)
+    comm[kind]={'nonadjacent_K0_K2_TV':'0 (analytic exact factorization)','max_adjacent_K0_K1_TV':maxadj,'adjacent_witness_state':argadj}
+    # interventions
+    max1=0.;arg1=None;max21=0.;max22=0.;arg2=None
+    for s1,s2,a,b in itertools.product(range(q),repeat=4):
+        if a>=b:continue
+        pa=Kmid[a,s2,s1,:];pb=Kmid[b,s2,s1,:]
+        z=tv(pa,pb)
+        if z>max1:max1=z;arg1=((a,s1,s2),(b,s1,s2))
+        # target site2 after one event only: independent of site0
+        z1=tv(Kend[s1,s2,:],Kend[s1,s2,:]);max21=max(max21,z1)
+        # after middle then site2: final target distribution=sum_j P(mid=j) K2(j)
+        M=np.stack([Kend[j,s2,:] for j in range(q)],axis=0)
+        qa=pa@M;qb=pb@M;z=tv(qa,qb)
+        if z>max22:max22=z;arg2=((a,s1,s2),(b,s1,s2))
+    infl[kind]={'max_TV_distance1_after_one_event':max1,'witness_d1':arg1,'max_TV_distance2_after_one_event':max21,'max_TV_distance2_after_two_ordered_events':max22,'witness_d2':arg2}
+
+# D12 reflection control invariance reduces to D[j,k]=D[-j,-k]
+perm=np.array([(-j)%q for j in range(q)])
+refl=float(np.max(np.abs(D[np.ix_(perm,perm)]-D)))
+res={
+ 'task':'PHY-005','status':'PASS_EVENT_CAUSALITY_CONDITIONAL_PM',
+ 'model':{'N':'1 algebra/control scout','g':g,'kappa':kappa,'graph':'3-cell path','local_event':'single-cell stochastic update depending only on graph neighbors'},
+ 'generators':resgen,
+ 'reversible_control':{'map':'global D12 reflection j -> -j mod 12','involutive':True,'max_pair_feature_distance_invariance_error':refl},
+ 'event_commutation':comm,
+ 'intervention_influence':infl,
+ 'disconnected_control':'If edge (1,2) is removed, K2 depends on no variable influenced by cell0; intervention 0->2 is exactly zero for every event sequence using only components separately.',
+ 'state_graph_obstruction':{'irreducible':True,'SCC_count':1,'reason':'every one-label proposal has positive acceptance; any finite microstate reaches any other through local replacements','consequence':'raw state reachability collapses to one SCC and is not a nontrivial causal order'},
+ 'event_order_theorem':'For nonadjacent x,y in the declared graph, local kernels K_x and K_y commute because each changes a distinct coordinate and neither rate depends on the other changed coordinate. Adjacent kernels generally do not commute. A perturbation can cross at most one graph edge per causally ordered local event.',
+ 'claim_decision':{'H-R4_state_reachability_as_causality':'REFUTED_IN_SCOPE','H-R4_supported_event_causality':'PASS_IN_SCOPE_CONDITIONAL_ON_PM_GRAPH_AND_UPDATE_RULE','physical_time':'NOT_LICENSED'}
+}
+(ROOT/'results'/'PHY-005_events.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

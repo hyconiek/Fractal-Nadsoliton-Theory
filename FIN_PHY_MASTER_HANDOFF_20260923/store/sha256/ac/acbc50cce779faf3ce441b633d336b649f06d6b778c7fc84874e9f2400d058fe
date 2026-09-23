@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'PROTECT-03A-refinement-additivity-rigidity',
+ 'scientific_state':'PROVED_EXACT_SPLIT_REFINEMENT_ADDITIVITY_ELIMINATES_NONLINEAR_MODAL_POWER_LAWS',
+ 'theorem_1':'Let Psi(I_1,...,I_m)=sum_k psi_k(I_k) be continuous, T^m-invariant and additive over orthogonal spectral blocks. If splitting one block into two indistinguishable refined copies must preserve the coarse value, then psi_k(x+y)=psi_k(x)+psi_k(y) for all x,y>=0. Continuity implies psi_k(x)=c_k x.',
+ 'corollary':'Any nonzero homogeneous polynomial spectral-radial law of amplitude degree >2 fails exact arbitrary split-refinement additivity. The only continuous block-additive protecting laws are quadratic in amplitudes.',
+ 'tensor_sum_extension':'If a normalized spectral expectation has coefficients c(lambda) and independent Kronecker-sum composition requires c(lambda+mu)=c(lambda)+c(mu), continuity and c(0)=0 imply c(lambda)=c0*lambda. Thus the unique such target-blind expectation law, up to scale, is the Dirichlet quadratic form <f,A f>.',
+ 'meaning':'Strong exact refinement/composition naturality does source the existing quadratic strict energy shape, but does not source a nonlinear protecting equilibrium law.',
+ 'nonconclusions':['No physical energy unit is sourced.','We do not claim all conceivable nonlinear functorial laws are excluded; the theorem covers the declared block-additive/split-consistent class.','A nonlinear law can survive if exact split-refinement additivity is relaxed or if hidden refinement data/memory are retained.']
+}
+p=ROOT/'results'/'PROTECT-03A_refinement_additivity.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

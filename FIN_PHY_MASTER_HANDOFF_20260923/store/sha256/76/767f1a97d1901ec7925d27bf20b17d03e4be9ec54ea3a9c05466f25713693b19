@@ -1,0 +1,32 @@
+{
+  "task": "OCB-MEM-01C",
+  "status": "BOUNDED_HIDDEN_DIMENSION_FINITE_HORIZON_EQUIVALENCE_THEOREM",
+  "theorem": "A finite hidden-state output process with H hidden states has word probabilities represented by H-dimensional weighted matrices. The strict iid embedded-jump law has dimension 1. Their difference has a linear representation of dimension at most H+1. If the two models agree on every visible word of lengths 0 through H (=H+1-1), then the reachable-row span argument implies agreement on every word length. Equivalently, any inequivalent H-state hidden model has a distinguishing visible word of length at most H.",
+  "proof_sketch": "For a d-dimensional linear representation s(w)=alpha M_w beta, breadth-first reachable row spaces R_n=span{alpha M_w: |w|<=n} can strictly increase at most d-1 times. If s(w)=0 for all |w|<=d-1, then a basis of the full reachable space is beta-orthogonal, hence s(w)=0 for all words. Apply this to the direct-sum difference representation with d<=H+1.",
+  "controls": {
+    "persistent_two_state_hidden_model": {
+      "H": 2,
+      "theorem_witness_length_bound": 2,
+      "found_min_witness_length": 2,
+      "example_word_zero_based_offsets": [
+        0,
+        0
+      ],
+      "probability_difference": 0.0020000000000000018
+    },
+    "period2_four_state_hidden_model": {
+      "H": 4,
+      "theorem_witness_length_bound": 4,
+      "found_min_witness_length": 3,
+      "example_word_zero_based_offsets": [
+        0,
+        0,
+        0
+      ],
+      "probability_difference": 0.0007076787511801803
+    }
+  },
+  "relation_to_unbounded_memory_no_go": "OCB-MEM-01A remains valid because its hidden-state size grows with the chosen hidden horizon. There is no model-independent finite horizon when H is not bounded.",
+  "literature_note": "This is the standard finite-equivalence principle for weighted/probabilistic automata specialized to FIN embedded-jump path laws; the new FIN-specific content is the explicit alias/witness constructions and clock-free carrier setting.",
+  "nonconclusion": "A hidden-state cardinality bound H would be an additional operational/model-class premise unless independently justified."
+}

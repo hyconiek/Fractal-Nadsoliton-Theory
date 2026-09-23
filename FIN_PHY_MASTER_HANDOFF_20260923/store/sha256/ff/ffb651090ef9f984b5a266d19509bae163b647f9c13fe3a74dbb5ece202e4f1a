@@ -1,0 +1,68 @@
+{
+  "task": "OCB-HANKEL-02",
+  "status": "MATRIX_BERNSTEIN_IMPROVES_GENERIC_BOUND__LIKELIHOOD_MUCH_CHEAPER_ONLY_WITH_DECLARED_MODEL_CLASS",
+  "frozen_alias": {
+    "delta": 0.05,
+    "whitened_cross_hankel_diag": [
+      1.0,
+      0.058361655098155454,
+      0.058361655098155454,
+      0.0034060827857960545
+    ],
+    "sigma_min": 0.0034060827857960545
+  },
+  "nonparametric_matrix_bernstein_power_design": {
+    "centered_sample_operator_norm_R": 12.859634141784165,
+    "variance_parameter": 4.261848282245476,
+    "confidence": 0.95,
+    "error_fraction_of_sigma_min": 0.99,
+    "paths_bound": 3817408,
+    "previous_union_weyl_paths": 3255755257,
+    "improvement_factor": 852.870653857277,
+    "scope": "Rectangular matrix-Bernstein power bound for independent reset four-jump paths, using the exact frozen alias variance and known whitening. It is not a distribution-free confidence sequence."
+  },
+  "scalar_highest_order_diagnostic": {
+    "mean": 0.0016000000000000092,
+    "variance": 0.23783240167296799,
+    "max_centered_abs": 3.1728995379535134,
+    "bernstein_95pct_paths_to_resolve_nonzero_mean": 690295,
+    "warning": "A nonzero fourth-order feature alone does NOT certify rank 4 against arbitrary rank-3 mixtures; declared three-support mixtures can retain this moment while losing rank."
+  },
+  "likelihood_declared_challengers": {
+    "iid_rank1": {
+      "KL_alias_to_null": 0.0036383093718792155,
+      "chernoff_information": 0.0009021215110398399,
+      "chernoff_s": 0.5020392763679516,
+      "equal_prior_bound_N_5pct": 2553,
+      "N_1pct": 4337
+    },
+    "persistent_rank2_family_best_four_step_fit": {
+      "delta": 0.02884960848513564,
+      "rho": 0.9999999999999776,
+      "KL_alias_to_challenger": 0.0024415812611478464,
+      "chernoff_information": 0.0006015339376966611,
+      "chernoff_s": 0.5036112213988958,
+      "equal_prior_bound_N_5pct": 3828,
+      "N_1pct": 6504
+    },
+    "three_support_rank3_same_emission_family": {
+      "omitted_hidden_sign_pair": [
+        1.0,
+        1.0
+      ],
+      "weights_on_remaining_components": [
+        0.09282545635373055,
+        0.4535872610733638,
+        0.4535872825729057
+      ],
+      "KL_alias_to_challenger": 0.005454329250351676,
+      "chernoff_information": 0.0013609422749219751,
+      "chernoff_s": 0.5005114558301498,
+      "equal_prior_bound_N_5pct": 1692,
+      "N_1pct": 2875
+    },
+    "scope": "These likelihood numbers compare only the explicitly declared challenger families. They are not a minimax certificate against every rank<=3 hidden process."
+  },
+  "decision": "Full rank is mathematically identifiable but generic noisy certification remains expensive. Structural model commitments can reduce the required sample count by orders of magnitude, and therefore must be reported as premises rather than hidden inside the statistic.",
+  "nonconclusion": "No laboratory shot recommendation, physical hidden state, or universal rank<=3 exclusion follows."
+}

@@ -1,0 +1,32 @@
+# PHY-017 — dimensionless observables and generic controls
+
+**Scientific status: CLASSIFIED_GENERIC_VS_MODEL_SPECIFIC.**
+
+## Generic fold benchmark
+
+For the generic gradient fold normal form
+
+`U(xi,eps)=a eps xi + b xi^3/6`,
+
+stationarity gives roots `xi=±x` with `a eps=-(b/2)x^2`. The saddle-minus-minimum energy is `2 b x^3/3`, the positive soft Hessian eigenvalue at the minimum is `b x`, and the branch separation is `DeltaXi=2x`. Therefore
+
+`DeltaPhi / [lambda_soft (DeltaXi)^2] -> 1/6`.
+
+This is algebraic and does not use FIN. Using the formal MP7 fold coefficients reproduces `0.16666666666665`. Therefore the ratio is a **control benchmark**, not distinctive evidence for FIN.
+
+## FIN-specific dimensionless quantities
+
+At the supplied strict tuple:
+
+- `g_eq/g_fold ≈ 1.0576566171`;
+- localized order-parameter jump at coexistence `||mu|| ≈ 0.9512241917`;
+- active spectral ratios relative to lambda6 are approximately `(0.83743, 0.93911, 0.98140, 1)`;
+- the q=12 localized orbit has multiplicity 12, conditional on D12 and its stabilizer.
+
+These are dimensionless, but PHY-015/016 show that they vary with spectral tuple, q or broken symmetry. They are therefore model-specific or symmetry-protected, not constants of nature.
+
+Susceptibility ratios remain candidates only after a source direction, feature metric and dynamics/control dictionary are frozen.
+
+## Decision
+
+PHY-017 passes as a classification task. The simple-fold exponents and 1/6 combination are generic controls and must not be advertised as FIN signatures. Potentially discriminating observables must instead involve source-predicted spectral/jump/response relations across held-out conditions.

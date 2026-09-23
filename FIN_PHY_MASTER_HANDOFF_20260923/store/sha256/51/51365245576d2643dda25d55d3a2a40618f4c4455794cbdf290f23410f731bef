@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float)
+L=np.asarray(model.sector_eigenvalues(A),float)
+# nearest-shell gap in generator off-diagonals = w1-w2
+w=np.array([W[0,d] for d in range(1,7)])
+gap=float(w[0]-w[1])
+# spectral projector onto k=1 real Fourier doublet
+j=np.arange(12)
+c=np.sqrt(2/12)*np.cos(2*np.pi*j/12)
+s=np.sqrt(2/12)*np.sin(2*np.pi*j/12)
+P1=np.outer(c,c)+np.outer(s,s)
+proj_shell=np.array([P1[0,d] for d in range(1,7)])
+abs_order=(np.argsort(-np.abs(proj_shell))+1).tolist()
+# verify spectral projector property and commuting
+lam1=float(L[1])
+res_eig=float(np.linalg.norm(A@P1-lam1*P1,ord=2))
+res_idem=float(np.linalg.norm(P1@P1-P1,ord=2))
+res_comm=float(np.linalg.norm(A@P1-P1@A,ord=2))
+# polynomial interpolation on seven distinct sector eigenvalues: f(lambda1)=1, others 0
+V=np.vander(L,7,increasing=True)
+y=np.zeros(7); y[1]=1
+coef=np.linalg.solve(V,y)
+poly=sum(coef[k]*np.linalg.matrix_power(A,k) for k in range(7))
+res_poly=float(np.linalg.norm(poly-P1,ord=2))
+result={
+ 'task':'OCB-CHANNEL-01',
+ 'status':'FIRST_NONSCALAR_JET_CARRIER_THEOREM_WITH_FUNCTIONAL_CALCULUS_COUNTEREXAMPLE',
+ 'strict_nearest_shell_weight_gap':gap,
+ 'sufficient_theorem':{
+   'family':'K_eps = c(eps) I - a eps^m A + R_eps with a>0 and m>=1.',
+   'record':'Any destination score monotone in |K_ij| in the relevant small-response range (including amplitude magnitude or its square).',
+   'condition':'max_{i!=j}|R_ij| < (a eps^m/2) (w1-w2).',
+   'conclusion':'For every source i, the two largest off-diagonal destination scores are exactly the two strict distance-one neighbours. Replacing w1-w2 by the minimum adjacent shell gap preserves the full six-shell order.',
+   'reason':'For distance-one response lower bound a eps^m w1-r and any distance>=2 upper bound a eps^m w2+r; the stated condition makes the former strictly larger.'
+ },
+ 'counterexample_to_functional_calculus_alone':{
+   'object':'P1, the spectral projector onto the k=1 Fourier doublet. Since the seven sector eigenvalues are distinct, P1 is a polynomial f(A) of degree <=6.',
+   'projector_shell_values_d1_to_d6':proj_shell.tolist(),
+   'absolute_shell_order':abs_order,
+   'largest_absolute_shell':int(abs_order[0]),
+   'expected':'d=6 (antipode), not d=1',
+   'projector_eigen_residual':res_eig,
+   'idempotence_residual':res_idem,
+   'commutator_residual':res_comm,
+   'polynomial_coefficients_in_A_increasing_degree':coef.tolist(),
+   'polynomial_reconstruction_residual':res_poly
+ },
+ 'interpretation':'Heat, unitary and wave share the operational carrier near their identity/control origin because their first non-scalar jet is proportional to A. Generic analytic functional calculus f(A) does not preserve carrier adjacency.',
+ 'nonconclusion':'This theorem does not choose which state category/channel nature realizes and does not provide a physical control-time calibration.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-CHANNEL-01_first_jet.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'gap':gap,'P1_abs_order':abs_order,'residuals':[res_eig,res_idem,res_comm,res_poly]},indent=2))

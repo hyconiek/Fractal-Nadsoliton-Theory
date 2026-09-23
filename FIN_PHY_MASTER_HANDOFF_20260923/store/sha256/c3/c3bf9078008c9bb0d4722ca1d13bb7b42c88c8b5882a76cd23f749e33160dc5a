@@ -1,0 +1,134 @@
+{
+  "task": "OCB-CHANNEL-02",
+  "status": "FIRST_OPERATOR_JET_IS_OPERATIONALLY_SEPARABLE_FROM_SPECTRAL_PROJECTOR_DIRECTION",
+  "protocol": "Measure/control a small dimensionless response family K(t). Determine the first non-scalar order m from scaling, form the corresponding finite-difference jet, and fit its off-diagonal entries to the one-dimensional span of strict A. Carrier transfer is admitted only if the residual is below a preregistered tolerance.",
+  "strict_A_norm_offdiag": 2.540779989994273,
+  "rows": [
+    {
+      "model": "heat",
+      "t": 0.001,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9987171822680793,
+      "relative_residual": 0.00031417937287725185,
+      "alignment_abs": 0.9999999506456596
+    },
+    {
+      "model": "heat",
+      "t": 0.002,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9974363674590141,
+      "relative_residual": 0.0006284079151519896,
+      "alignment_abs": 0.9999998025517264
+    },
+    {
+      "model": "heat",
+      "t": 0.004,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9948807329128208,
+      "relative_residual": 0.0012570119485920586,
+      "alignment_abs": 0.9999992099601684
+    },
+    {
+      "model": "heat",
+      "t": 0.008,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9897933485783832,
+      "relative_residual": 0.0025148038866612296,
+      "alignment_abs": 0.9999968378757064
+    },
+    {
+      "model": "wave_amplitude",
+      "t": 0.001,
+      "expected_order": 2,
+      "fit_scalar_real": -0.999999785793994,
+      "relative_residual": 5.265741173967449e-08,
+      "alignment_abs": 0.9999999999999984
+    },
+    {
+      "model": "wave_amplitude",
+      "t": 0.002,
+      "expected_order": 2,
+      "fit_scalar_real": -0.9999991440570679,
+      "relative_residual": 2.095176022082688e-07,
+      "alignment_abs": 0.9999999999999781
+    },
+    {
+      "model": "wave_amplitude",
+      "t": 0.004,
+      "expected_order": 2,
+      "fit_scalar_real": -0.9999965764692343,
+      "relative_residual": 8.37762771357665e-07,
+      "alignment_abs": 0.9999999999996493
+    },
+    {
+      "model": "wave_amplitude",
+      "t": 0.008,
+      "expected_order": 2,
+      "fit_scalar_real": -0.9999863059810703,
+      "relative_residual": 3.351008019511445e-06,
+      "alignment_abs": 0.9999999999943854
+    },
+    {
+      "model": "unitary_amplitude",
+      "t": 0.001,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9999989968231295,
+      "fit_scalar_imag": 0.0012838197641577061,
+      "relative_residual": 0.000314154749819993,
+      "alignment_abs": 0.9999999506533955
+    },
+    {
+      "model": "unitary_amplitude",
+      "t": 0.002,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9999959872956324,
+      "fit_scalar_imag": 0.0025676360934878723,
+      "relative_residual": 0.0006283095500477752,
+      "alignment_abs": 0.9999998026135355
+    },
+    {
+      "model": "unitary_amplitude",
+      "t": 0.004,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9999839492323291,
+      "fit_scalar_imag": 0.0051352447069601395,
+      "relative_residual": 0.0012566195014054877,
+      "alignment_abs": 0.9999992104534026
+    },
+    {
+      "model": "unitary_amplitude",
+      "t": 0.008,
+      "expected_order": 1,
+      "fit_scalar_real": -0.9999357977260899,
+      "fit_scalar_imag": 0.01027026957498447,
+      "relative_residual": 0.002513242212396513,
+      "alignment_abs": 0.9999968418018037
+    }
+  ],
+  "projector_control": {
+    "eigenvalue": 0.7541211542070799,
+    "multiplicity": 2,
+    "fit_scalar_to_A_real": -0.280745809627171,
+    "relative_residual_to_span_A": 0.8334929221926985,
+    "alignment_abs": 0.5525301337073631,
+    "mean_abs_response_by_cycle_shell": [
+      0.14433756729740635,
+      0.0833333333333333,
+      1.4025904454272665e-16,
+      0.08333333333333327,
+      0.14433756729740635,
+      0.16666666666666657
+    ],
+    "largest_shell": 6,
+    "meaning": "P1 is a polynomial/functional-calculus direction of A but is not proportional to A and predicts an antipodal-dominated carrier response."
+  },
+  "synthetic_gate": {
+    "preregistered_residual_threshold_half_projector_gap": 0.4167464610963493,
+    "heat_t0p008_pass": true,
+    "wave_t0p008_pass": true,
+    "unitary_amplitude_t0p008_pass": true,
+    "projector_pass": false
+  },
+  "scope": "This uses ideal full operator/amplitude records and a dimensionless control parameter. Probability-only unitary records have a different leading object (entrywise W^2) and require a separate estimator. No physical clock or coherent amplitude instrument is derived here.",
+  "nonconclusion": "Agreement of the first jet with A does not identify the entire channel; higher-order terms, memory, and hidden environments remain independently testable."
+}

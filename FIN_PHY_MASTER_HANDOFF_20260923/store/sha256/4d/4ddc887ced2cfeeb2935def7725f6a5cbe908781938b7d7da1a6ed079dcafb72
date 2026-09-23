@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12; j=np.arange(q); u=np.ones(q)/q
+
+def e(k,phi): return np.sqrt(2/q)*np.cos(2*np.pi*k*j/q+phi)
+r=np.array([.018,.021,.024,.027,.030])
+def state(ph):
+ p=u.copy()
+ for kk,rr,pp in zip(range(1,6),r,ph): p += rr*e(kk,pp)
+ assert p.min()>0
+ return p
+
+def z(p,k): return np.sum((p-u)*np.exp(-2j*np.pi*k*j/q))
+def label_KL(p): return float(np.sum(p*np.log(p/u)))
+def spectral_entropy(p):
+ I=np.array([abs(z(p,k))**2 for k in range(1,6)],float); pi=I/I.sum();
+ return float(-np.sum(pi*np.log(pi))),pi
+p0=state(np.zeros(5)); p1=state(np.array([0,.7,-.4,.9,-1.1]))
+H0,pi0=spectral_entropy(p0);H1,pi1=spectral_entropy(p1)
+out={
+ 'task':'PROTECT-03B-entropy-representation-ambiguity',
+ 'scientific_state':'PROVED_PARAMETER_FREE_ENTROPY_PRINCIPLE_DOES_NOT_SELECT_LABEL_VS_SPECTRAL_REPRESENTATION',
+ 'modal_power_probability_max_difference':float(np.max(np.abs(pi0-pi1))),
+ 'spectral_Shannon_values':[H0,H1],
+ 'label_relative_entropy_values':[label_KL(p0),label_KL(p1)],
+ 'label_entropy_change':label_KL(p1)-label_KL(p0),
+ 'theorem_witness':'Phase rotations at fixed modal powers leave the normalized modal-power distribution pi_k invariant, hence any Shannon/Renyi entropy of pi is T5-invariant. The label-space KL/Shannon functional changes on the same phase orbit. Therefore an abstract entropy/information principle, without a sourced choice of sample algebra, does not decide whether T5 is protected or broken.',
+ 'product_additivity_note':'Spectral Shannon is additive for product modal-power distributions pi_ij=pi_i rho_j, just as ordinary Shannon entropy is additive for product label distributions. Additivity alone therefore does not select the representation.',
+ 'conclusion':'PROTECT-03 remains source-nonidentified: one natural exact-refinement principle collapses to quadratic Dirichlet energy, while entropy principles remain representation-dependent.',
+ 'nonconclusions':['Spectral Shannon is not promoted to a physical entropy.','The label KL term remains mathematically valid in its declared finite-copy model.']
+}
+assert out['modal_power_probability_max_difference']<1e-12 and abs(H0-H1)<1e-12 and abs(out['label_entropy_change'])>1e-6
+p=ROOT/'results'/'PROTECT-03B_entropy_basis_ambiguity.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'label_delta':out['label_entropy_change'],'spectral_delta':H1-H0},indent=2))

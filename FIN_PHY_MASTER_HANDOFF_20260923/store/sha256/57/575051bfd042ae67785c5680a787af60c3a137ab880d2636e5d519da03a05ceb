@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+from scipy.special import gammainc, gammaincc
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+from R7P_model import feature_spaces
+R7P_MODEL=ROOT/'inputs'/'R7P_model.py'
+W,A,L,X,C4,A7=feature_spaces();q=12;kappa=.25
+# exact finite max sensitivity geometry for N=1 local acceptance
+D=np.maximum(np.sum(X*X,axis=1)[:,None]+np.sum(X*X,axis=1)[None,:]-2*X@X.T,0.0)
+R=0.0;arg=None
+for k in range(q):
+ for c in range(q):
+  for a in range(q):
+   for b in range(q):
+    z=abs((D[k,a]-D[c,a])-(D[k,b]-D[c,b]))
+    if z>R:R=z;arg=(k,c,a,b)
+# change in local log ratio from changing one neighbor <= kappa/2 * w * R
+cM=kappa*R/2 # Metropolis acceptance Lipschitz <=1
+cB=cM/4      # Barker logistic derivative <=1/4
+
+def poisson_tail_series(a,d):
+    # sum_{n=d} inf a^n/n!, evaluated robustly
+    if d<=0:return math.exp(a)
+    term=a**d/math.factorial(d)
+    s=term;n=d
+    while term>1e-16*max(1,s) and n<10000:
+        n+=1;term*=a/n;s+=term
+    return s
+
+def strict_tail(delta,t,d):
+    return min(1.0,poisson_tail_series(delta*t,d))
+# generic support-only bound with rate-1 clocks and degree Delta
+examples={}
+for Delta,name in [(2,'path_or_ring'),(3,'degree3')]:
+    rows=[]
+    for t in [0.25,0.5,1.0,2.0]:
+        rows.append({'t':t,'bounds':{str(d):strict_tail(Delta,t,d) for d in range(1,9)}})
+    examples[name]={'Delta':Delta,'rows':rows}
+# weighted Dobrushin-style local sensitivity constants on nearest-neighbor graph (N=1 scout)
+weighted={
+ 'metropolis_edge_coefficient_upper':cM,
+ 'barker_edge_coefficient_upper':cB,
+ 'nearest_neighbor_path_row_sum_upper':{'metropolis':2*cM,'barker':2*cB}
+}
+# long-range ring row sums for weights r^-alpha, including two directions, finite M approximation
+def rowsum(M,alpha):
+    half=M//2
+    s=0.
+    for r in range(1,half+1):
+        mult=1 if (M%2==0 and r==half) else 2
+        s+=mult*r**(-alpha)
+    return s
+long=[]
+for M in [16,32,64,128,256,512,1024]:
+    long.append({'M':M,'sum_alpha2':rowsum(M,2.0),'sum_alpha1':rowsum(M,1.0),
+                 'metropolis_Dobrushin_rowsum_alpha2':cM*rowsum(M,2.0),
+                 'metropolis_Dobrushin_rowsum_alpha1':cM*rowsum(M,1.0)})
+# dense degree growth
+Dense=[{'M':M,'Delta':M-1,'support_path_constant_Delta_rate1':M-1} for M in [4,8,16,32,64,128]]
+# first-event direct coefficient at ring distance r for alpha2/1 via weighted sensitivity upper
+first_tail={
+ 'alpha2_metropolis':{str(r):cM/r**2 for r in [1,2,4,8,16,32]},
+ 'alpha1_metropolis':{str(r):cM/r for r in [1,2,4,8,16,32]}
+}
+res={
+ 'task':'PHY-006','status':'PASS_SPARSE_TAIL_BOUND__REFUTE_UNCONDITIONAL_LOCALITY',
+ 'strict_discrete_theorem':{
+  'statement':'For a graph-supported local update rule, if two initial preparations differ only at x, then after t causally ordered local event layers the marginal at y is identical whenever graph_distance(x,y)>t.',
+  'proof_idea':'Each local event reads only its site and declared neighbors, so the dependency set expands by at most one graph edge per layer; induction gives the exact cone.',
+  'uniform_in_M_for_bounded_degree':True
+ },
+ 'continuous_time_theorem':{
+  'statement':'With independent rate<=1 local clocks on a graph of maximum degree Delta, a shared-randomness coupling gives I_xy(t) <= min(1, sum_{n>=d(x,y)} (Delta*t)^n/n!).',
+  'proof_idea':'A disagreement can reach y only through a time-ordered support walk from x to y. Expected ordered n-tuples along one walk are <=t^n/n! and there are <=Delta^n walks; union bound and coupling imply the TV bound.',
+  'type':'factorial/exponential tail, not an exact continuous-time cone',
+  'example_bounds':examples
+ },
+ 'FIN_N1_weighted_sensitivity_scout':{
+  'kappa':kappa,'max_neighbor_logratio_difference_geometry_R':R,'argmax_labels':arg,
+  'derivation':'Changing one neighbor changes a proposed local log-weight ratio by <=(kappa/2)*w*R. Metropolis acceptance is 1-Lipschitz in that log ratio; Barker is <=1/4-Lipschitz.',
+  'constants':weighted
+ },
+ 'controls':{
+  'bounded_degree_sparse':{'decision':'PASS_IN_SCOPE','reason':'Delta fixed gives constants independent of M and an exact discrete cone / continuous factorial tail.'},
+  'dense_complete':{'decision':'REFUTED_AS_LOCALITY_CLASS','degree_growth':Dense,'reason':'Every pair is direct support (diameter 1) and Delta=M-1; no size-uniform spatially separating cone follows.'},
+  'long_range_ring':{'decision':'NO_EXACT_CONE; TAIL_CLASS_DEPENDS_ON_ALPHA','row_sums':long,'direct_first_event_sensitivity_upper':first_tail,'reason':'Any nonzero long-range edge permits immediate direct dependence. alpha=2 has a bounded weighted row sum but polynomial direct tails; alpha=1 row sum grows logarithmically without normalization.'}
+ },
+ 'critical_scope':[
+  'The sparse graph Gamma and its support are PM inputs; this theorem does not derive locality from the single-cell FIN core.',
+  'No identification of graph update depth or continuous time t with physical time.',
+  'No identification of any bound velocity with c; no Lorentz symmetry.',
+  'The support-only theorem applies to the declared local generators; the numerical weighted constants are N=1 scouts.'
+ ],
+ 'claim_decision':{
+  'H-R6_conditional_bounded_propagation_on_sparse_PM_graph':'PASS_IN_SCOPE',
+  'H-R6_unconditional_emergent_locality_from_FIN_core':'NOT_DERIVED',
+  'dense_graph_locality':'REFUTED_IN_SCOPE',
+  'continuous_time_exact_lightcone':'REFUTED_FOR_POSITIVE_RATE_JUMP_PROCESS'
+ }
+}
+(ROOT/'results'/'PHY-006_propagation.json').write_text(json.dumps(res,indent=2,sort_keys=True))
+print(json.dumps(res,indent=2))

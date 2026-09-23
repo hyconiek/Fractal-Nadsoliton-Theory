@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'DYN-02-clock-scale-identifiability',
+ 'scientific_state':'PROVED_ANALYTIC_TIME_SCALE_GAUGE_REMAINS_OPEN',
+ 'wave_gauge':'Replacing mu0 by a^2 mu0 is equivalent to t -> a t and changes c0=sqrt(kappa0/mu0) by 1/a while leaving every static state and static refinement identity unchanged.',
+ 'heat_gauge':'Replacing nu0 by a nu0 rescales all relaxation times by a with the same equilibrium/free-energy landscape.',
+ 'reversible_markov_fact':'If a continuous-time generator L has stationary law pi and detailed balance, alpha L for any alpha>0 has the same pi and the same transition graph but a rescaled clock. Distinct detailed-balance rate choices (e.g. Metropolis/Barker-type) can also share pi while changing kinetics.',
+ 'fisher_metric_warning':'A state-space/Fisher metric can be used either as a mobility in first-order gradient flow or as a kinetic metric after adding velocities. The metric alone does not select temporal order or its overall scale.',
+ 'conclusion':'Current FIN equilibrium/statistical structure cannot identify mu0, nu0, eta0 or an SI time scale. Therefore kappa0/mu0 and the conditional wave speed are not sourced.',
+ 'source_obligation':'A successful DYNAMICAL-SOURCE must supply a state/update law whose temporal order and normalization are fixed before fitting propagation records, and must distinguish it from reversible heat/Markov alternatives.'
+}
+p=ROOT/'results'/'DYN-02_clock_gauge.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p)},indent=2))

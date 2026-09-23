@@ -1,0 +1,76 @@
+# FIN PHY OCB Hankel-02 / memory-03 / calibration-03 / channel-03 handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+`FIN_PHY_HANKEL_CAL_CHANNEL_20260923.zip`
+
+SHA-256: `8440afc8af6396e8a1eab07838294ce9253186d7ccbce69d0be175a19999940c`
+
+## Goal
+
+Continue the operational-carrier identifiability programme without reopening already closed generic
+memory/tail lanes.
+
+## Completed atoms
+
+### OCB-HANKEL-02
+
+- whitened period-2 cross-Hankel has `sigma_min=0.0034060827857960545`;
+- exact-enumeration rectangular matrix-Bernstein power fixture: `3,817,408` reset paths at the
+  declared 95% / `0.99 sigma_min` design;
+- improvement factor over predecessor union/Weyl fixture: about `852.87`;
+- simple declared likelihood challengers require only thousands of paths, demonstrating the price
+  paid/benefit gained by model-class assumptions;
+- a scalar fourth-order moment is explicitly rejected as a universal rank-4 certificate.
+
+### OCB-MEM-03
+
+- explicit rank `H=2^L` aliases force witness horizon at least `L+1`;
+- finite-H weighted-automaton theorem gives sufficient witness horizon `H`;
+- generic sparse-query lower bound remains open and is not replaced by naive word enumeration.
+
+### OCB-CAL-03
+
+- exact 144D inverse-calibration entry-box threshold:
+  `epsilon*=0.09025558368189042`;
+- exact row-l1 threshold: `beta*=0.3279318016242833`;
+- explicit calibration-only reversal witness above threshold.
+
+### OCB-CHANNEL-03
+
+- probability-only leading laws derived for heat/unitary/wave;
+- leading carrier survives because strict `W` and `W^2` have the same order;
+- scale-free escape exponents are `1,2,4` respectively;
+- destination-only postselection cannot separate leading unitary from wave.
+
+## Main synthesis
+
+`carrier identifiable`
+
+does not imply
+
+`Markov dynamics`, `known memory dimension`, or `known channel category`.
+
+Each layer now has a separate positive theorem and a separate kill condition.
+
+## Replay
+
+Run:
+
+`python replay.py --check`
+
+then
+
+`python verify_package.py`.
+
+## Next highest-value atom
+
+`OCB-HANKEL-03`: convert the current frozen-alias matrix power calculation into a genuinely
+sample-valid self-normalized/sequential certificate, or prove a scoped obstruction.
+
+## Nonpromotion boundary
+
+No physical realization, apparatus, external raw record, absolute unit/clock, continuum physics,
+quantum bridge, gravity, Standard Model or ToE follows.

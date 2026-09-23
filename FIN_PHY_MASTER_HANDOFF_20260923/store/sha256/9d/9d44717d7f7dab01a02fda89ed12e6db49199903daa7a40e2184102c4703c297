@@ -1,0 +1,127 @@
+{
+  "task": "PHY-021",
+  "scientific_state": "PASS_SAME_STATICS_DIFFERENT_KINETICS__DYNAMICS_NOT_SOURCED_BY_POTENTIAL",
+  "coexistence_H7_eigenvalues": [
+    0.10582543908959371,
+    0.2142133829822487,
+    0.21516404345129253,
+    0.23462074626318238,
+    0.24018691642945803,
+    0.2471111949592784,
+    0.2584849232402792
+  ],
+  "euclidean_gradient_linear_rates": [
+    0.10582543908959371,
+    0.2142133829822487,
+    0.21516404345129253,
+    0.23462074626318238,
+    0.24018691642945803,
+    0.2471111949592784,
+    0.2584849232402792
+  ],
+  "mobility_2I_linear_rates": [
+    0.21165087817918743,
+    0.4284267659644974,
+    0.43032808690258506,
+    0.46924149252636477,
+    0.48037383285891605,
+    0.4942223899185568,
+    0.5169698464805584
+  ],
+  "hamiltonian_lift_frequencies": [
+    0.32530822167537315,
+    0.46283191655529626,
+    0.4638577836484934,
+    0.48437665743012676,
+    0.49008868220910595,
+    0.4971028011983823,
+    0.5084141257285042
+  ],
+  "damped_inertial_c_0p5_poles": [
+    [
+      "(-0.25+0.20814763772282815j)",
+      "(-0.25-0.20814763772282815j)"
+    ],
+    [
+      "(-0.25+0.3895040217792991j)",
+      "(-0.25-0.3895040217792991j)"
+    ],
+    [
+      "(-0.25+0.39072246345877343j)",
+      "(-0.25-0.39072246345877343j)"
+    ],
+    [
+      "(-0.25+0.41487437407386635j)",
+      "(-0.25-0.41487437407386635j)"
+    ],
+    [
+      "(-0.25+0.42152925928037077j)",
+      "(-0.25-0.42152925928037077j)"
+    ],
+    [
+      "(-0.25+0.4296640489490346j)",
+      "(-0.25-0.4296640489490346j)"
+    ],
+    [
+      "(-0.25+0.4427018446316654j)",
+      "(-0.25-0.4427018446316654j)"
+    ]
+  ],
+  "metropolis_barker_same_equilibrium": true,
+  "metropolis_neighbor_influence_1step": 0.35748527855346524,
+  "barker_neighbor_influence_1step": 0.13373338230158444,
+  "dynamics": [
+    {
+      "name": "Metropolis local Markov",
+      "extra_premises": "proposal/update rates + graph",
+      "static_relation": "detailed balance with declared Gibbs law",
+      "signature": "jump relaxation, no deterministic inertia"
+    },
+    {
+      "name": "Barker local Markov",
+      "extra_premises": "different acceptance law + graph",
+      "static_relation": "same declared Gibbs law",
+      "signature": "different event influence/rates"
+    },
+    {
+      "name": "Euclidean gradient",
+      "extra_premises": "Euclidean mobility on theta",
+      "static_relation": "same stationary critical points",
+      "signature": "pure exponential decay rates eig(H)"
+    },
+    {
+      "name": "information-geometric/natural gradient",
+      "extra_premises": "chosen Fisher/state metric",
+      "static_relation": "same stationary critical points when mobility SPD",
+      "signature": "rates depend on metric/mobility"
+    },
+    {
+      "name": "Hamiltonian/inertial lift",
+      "extra_premises": "momenta + symplectic form + kinetic metric",
+      "static_relation": "same potential minima but conservative phase-space dynamics",
+      "signature": "oscillation frequencies sqrt(eig(H)) before damping"
+    }
+  ],
+  "model_selection_observables": [
+    "small-perturbation relaxation spectrum",
+    "overshoot/oscillation",
+    "one-event neighbor influence",
+    "probability current / detailed-balance violation"
+  ],
+  "invariants_across_declared_SPD_gradient_mobilities": [
+    "stationary points",
+    "Lyapunov ordering of Phi under positive mobility"
+  ],
+  "not_invariant": [
+    "relaxation time",
+    "trajectory",
+    "causal event timing",
+    "oscillation",
+    "probability current"
+  ],
+  "nonconclusions": [
+    "Phi does not source a unique dynamics",
+    "Hamiltonian/unitary structure is imported",
+    "no physical time unit follows"
+  ]
+}

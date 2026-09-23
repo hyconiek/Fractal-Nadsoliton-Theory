@@ -1,0 +1,17 @@
+# OCB-MEM-05 — broader explicit rank-3 challenger
+
+Status: **STRICTLY_BROADER_FINITE_HORIZON_RANK3_BLOCK_CHALLENGER_FOUND__SINGLE_JUMP_HMM_GLOBAL_OPTIMUM_OPEN**.
+
+The prior challenger factorized each of four positions conditional on one latent class.  MEM-05 strictly enlarges that finite-horizon class: conditional on a 3-valued latent variable, the complete two-jump prefix and two-jump suffix have arbitrary 9-category distributions.  Therefore the 2|2 block-Hankel is exactly a sum of three rank-one matrices and has rank <=3.
+
+A deterministic 12-start EM search gives:
+
+- `KL(P||Q) = 6.095626209886831e-06`;
+- `TV = 0.0007923350467442319`;
+- Bhattacharyya coefficient `0.9999984772344584`.
+
+The same KL is reproduced after the exact lift back to all 11 destinations: `6.095626209994554e-06`.
+
+This explicit null strengthens necessary four-jump-reset counts to **264,032** (both Type-I/II <=5%, Bretagnolle--Huber) and **545,301** (equal-prior Bayes error <=5%, Hellinger/Bhattacharyya bound).
+
+A separate 3-state time-inhomogeneous single-jump HMM search, which contains the previous latent-class model at the identity-transition boundary, found only a tiny boundary improvement and worse random interior starts.  That is a diagnostic, **not** a certified global HMM optimum.

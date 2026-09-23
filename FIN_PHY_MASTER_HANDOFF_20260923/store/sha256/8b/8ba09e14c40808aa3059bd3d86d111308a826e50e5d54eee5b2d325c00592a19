@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12
+rows=[]
+for k in range(1,7):
+ rows.append({'k':k,'lambda':float(L[k]),'uniform_Hessian_zero_gain_gk':q/float(L[k])})
+vals=np.array([r['uniform_Hessian_zero_gain_gk'] for r in rows[:5]])
+sep=float(np.min(np.abs(vals[:,None]-vals[None,:]+np.eye(5)*1e9)))
+out={
+ 'task':'HDIM-DYN-radial-softness-no-go',
+ 'scientific_state':'PROVED_SINGLE_GAIN_CANNOT_MAKE_FIVE_STRICT_DOUBLET_RADII_SIMULTANEOUSLY_SOFT',
+ 'thresholds':rows,
+ 'minimum_pairwise_threshold_separation_k1_to5':sep,
+ 'theorem':'For the full strict active-gain quadratic expansion V_g=D(p||u)-(g/2) f^T A f near uniform, the radial Hessian on doublet k is (q-g lambda_k) I_2. The five strict doublet eigenvalues lambda_1,...,lambda_5 are distinct, so no single scalar g makes more than one distinct spectral doublet critical at once.',
+ 'consequence':'The small-amplitude T5/T4 phase carrier is an exact fixed-radius energy symmetry but is not a five-mode soft manifold of the current one-parameter entropy+gain dynamics. Generic gradient evolution changes the five radii at different O(1) rates.',
+ 'physicalization_obligation':'A stable higher-dimensional phase manifold with all modal radii nonzero needs a new protecting radial potential, multiple sourced controls/conserved charges, or another dynamics. The strict T5 degeneracy alone is insufficient.',
+ 'nonconclusions':['This does not remove the exact operator T5.','Multicritical tuning with additional controls is mathematically possible but would be a new model unless sourced.']
+}
+p=ROOT/'results'/'HDIM-DYN_radial_softness_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'thresholds':rows},indent=2))

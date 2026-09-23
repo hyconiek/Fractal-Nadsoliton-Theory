@@ -1,0 +1,46 @@
+# PHY-007 — propagation-derived geometry comparison
+
+**Scientific status: PASS_IN_SCOPE_CONDITIONAL_GEOMETRY. Emergent physical space is NOT derived.**
+
+## Main result
+
+For the local read-radius-one event class established in PHY-005/006, the shortest supported-path distance has an operational meaning that does not require an embedding: it is exactly the minimum event-layer depth at which influence can possibly become nonzero, provided each declared support edge has nonzero conditional influence.
+
+Thus the first admitted geometry candidate is not Euclidean distance but **causal-depth distance on the supplied support graph**.
+
+## Metric controls
+
+Four frozen 12-cell controls were tested: a path, a ring, one fixed 3-regular random graph (seed 17) as an expander-like bounded-degree control, and dense `K12`.
+
+All three graph distances tested were valid metrics numerically on the connected controls:
+
+- hop/shortest-support distance;
+- effective resistance from the positive weighted Laplacian, normalized by the median edge resistance;
+- diffusion distance at declared dimensionless time `t=1`, normalized by the median edge distance.
+
+Fisher-Rao distance was checked separately as a metric on probability states. It is a **state-space control**, not a cell-space geometry, because it contains no cell adjacency.
+
+## Agreement with causal depth
+
+Hop distance agrees exactly by theorem. Spearman correlations of the other graph metrics with causal depth were:
+
+| graph | resistance | diffusion t=1 |
+|---|---:|---:|
+| path12 | 0.9927 | 0.9022 |
+| ring12 | 0.9851 | 0.9884 |
+| 3-regular control | 0.9221 | 0.9308 |
+| dense K12 | non-informative | non-informative |
+
+The dense control has graph diameter one, so no graded notion of local separation survives.
+
+## Representation and model sensitivity
+
+Node relabeling only permutes every distance matrix. Common positive scaling of edge conductances leaves hop distance exactly invariant and, after the declared normalizations, leaves resistance and random-walk diffusion invariant to floating precision.
+
+Relative edge reweighting is not a coordinate change; it changes the physical conditional model. Under one frozen 0.7–1.3 reweighting, resistance and diffusion distances change at the several-percent level while hop support distance remains unchanged. This is expected: resistance/diffusion encode weighted transport details, while hop distance encodes the exact discrete causal cone.
+
+A common orthogonal change of the seven-dimensional feature frame preserves the mean-difference edge cost and does not change graph support.
+
+## Decision
+
+A conditional **causal-depth geometry** survives the PHY-007 gates without threshold tuning. It is useful for refinement and influence tests. It is not yet emergent space because the graph support remains a PM input. Resistance and diffusion are legitimate secondary geometries once weights/generator are supplied, but FIN does not currently select them uniquely.

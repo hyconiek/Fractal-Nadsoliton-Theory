@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, itertools, math
+import numpy as np
+import sympy as sp
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for d in [1,2,3,4,5]:
+ modes=[]; names=[]
+ # primitive basis modes e_i
+ for i in range(d):
+  v=[0]*d;v[i]=1;modes.append(v);names.append(f'e{i+1}')
+ # doubled modes 2e_i
+ for i in range(d):
+  v=[0]*d;v[i]=2;modes.append(v);names.append(f'2e{i+1}')
+ # pair sums e_i+e_j
+ for i in range(d):
+  for j in range(i+1,d):
+   v=[0]*d;v[i]=v[j]=1;modes.append(v);names.append(f'e{i+1}+e{j+1}')
+ K=np.array(modes,int) # m x d
+ m=len(modes)
+ rel=[]
+ # 2 phi(e_i)-phi(2e_i)
+ for i in range(d):
+  r=np.zeros(m,int);r[i]=2;r[d+i]=-1;rel.append(r)
+ # phi(e_i)+phi(e_j)-phi(e_i+e_j)
+ off=2*d
+ c=0
+ for i in range(d):
+  for j in range(i+1,d):
+   r=np.zeros(m,int);r[i]=1;r[j]=1;r[off+c]=-1;rel.append(r);c+=1
+ R=np.array(rel,int)
+ rank=int(sp.Matrix(R.tolist()).rank())
+ assert np.all(R@K==0)
+ assert rank==m-d
+ # primitive: columns corresponding to composite modes form -I, so relation lattice is saturated in its span.
+ comp=R[:,d:]
+ # comp is not square because includes primitive? after first d columns, exactly m-d composite cols.
+ assert comp.shape==(m-d,m-d) and abs(round(np.linalg.det(comp)))==1
+ rows.append({'d':d,'mode_count':m,'relation_count':len(rel),'relation_rank':rank,'residual_phase_dimension':m-rank,'unimodular_composite_minor':int(round(np.linalg.det(comp)))})
+out={
+ 'task':'HDIM-PRODUCT-general-d-resonance-theorem',
+ 'scientific_state':'PROVED_PRODUCT_CARRIER_FAMILY_HAS_RESIDUAL_Td_AFTER_PRIMITIVE_CUBIC_PHASE_LOCKING',
+ 'rows':rows,
+ 'construction':'For carrier (Z_q)^d choose low modes {e_i,2e_i,e_i+e_j}. Cubic zero-sum Fourier resonances impose 2 phi(e_i)-phi(2e_i)=0 and phi(e_i)+phi(e_j)-phi(e_i+e_j)=0.',
+ 'theorem':'There are m=2d+d(d-1)/2 phases and exactly m-d displayed independent primitive relations. The composite-mode coefficient block is -I, so the relation lattice is saturated. Every solution is uniquely phi_k=k dot alpha with alpha in T^d. Thus the residual continuous phase manifold is exactly T^d.',
+ 'interpretation':'Carrier translation rank, not the raw number of modal phases, controls the residual low-order phase dimension after resonance locking.',
+ 'source_gap':'The Kronecker/product construction is a natural scalable family, but current FIN supplies no theorem selecting the number d of independent carrier factors. Dimension selection is therefore still open.',
+ 'nonconclusions':['This does not derive d=3.','T^d is an internal translation manifold, not physical spacetime without locality/dynamics/units bridges.']
+}
+p=ROOT/'results'/'HDIM-PRODUCT_general_d.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

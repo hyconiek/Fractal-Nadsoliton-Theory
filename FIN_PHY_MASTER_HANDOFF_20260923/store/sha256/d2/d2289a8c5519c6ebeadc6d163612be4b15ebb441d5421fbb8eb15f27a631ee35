@@ -1,0 +1,56 @@
+# OCB-CHANNEL-04 — finite-control probability-only channel separation
+
+## Verdict
+
+**PASS conditionally on a declared local control-to-time regularity class.**
+
+The previous `CHANNEL-03` result was asymptotic (`t->0`).  Here the three categories remain separated on a finite control window with analytic remainder bounds.
+
+## Control nuisance
+
+At nominal controls `u` and `2u`, let
+
+`t1 = a u (1+e1)`, `t2 = 2 a u (1+e2)`,
+
+where `a>0` is unknown and `|e1|,|e2|<=eta`.
+Then
+
+`rho=t2/t1 in [2(1-eta)/(1+eta), 2(1+eta)/(1-eta)]`.
+
+The overall clock scale cancels from this ratio.  We additionally require `t1<=T=0.01` in the frozen dimensionless strict units.
+
+## Remainder bounds
+
+For the strict spectrum:
+
+- heat total escape: `a1 t-a2 t^2/2 <= S_H(t) <= a1 t`;
+- unitary total off-diagonal probability: `v t^2-b4 t^4 <= S_U(t) <= v t^2`;
+- zero-velocity wave squared off-diagonal response:
+
+`|S_W(t)-v t^4/4| <= sqrt(v)L^2 t^6/24 + L^4 t^8/576`.
+
+These follow from elementary exponential/cosine Taylor inequalities and a variance/Cauchy--Schwarz bound.
+
+## Certified finite separation
+
+Propagating the worst allowed `rho` and the remainders gives:
+
+- heat-vs-unitary separation up to `eta = 0.1133462185...`;
+- unitary-vs-wave separation up to `eta = 0.1149358419...`.
+
+Thus a joint sufficient threshold is
+
+**`eta < 0.1133462185`**.
+
+At the replay fixture `eta=0.11`, the certified ratio intervals still have positive gaps:
+
+- unitary minus heat: `0.0517511`;
+- wave minus unitary: `0.3847845`.
+
+At `eta=0.115` both conservative gaps are already negative, so this certificate deliberately stops rather than silently extrapolating.
+
+## Decision
+
+`OCB-CHANNEL-04 = PASS_FINITE_CONTROL_WITH_NUISANCE_BOUND`.
+
+The result still requires attempts/returns, not only postselected destinations.  FIN does not source the laboratory clock map, the nuisance bound, or the physical interpretation of the wave squared response.

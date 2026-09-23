@@ -1,0 +1,47 @@
+# Parity-fiber continuum limit of the q-extension
+
+**Status:** `INTERVAL_ASSISTED_CONTINUUM_ROOT + UNIFORM_FINITE_Q_BRANCH_FOR_EVEN_Q_GE_190`
+
+## Continuum factorization
+
+For the genuine even-q extension with smooth modes `3,4,5` and alternating mode `q/2`, the continuum dual splits into a smooth three-mode part and an independent parity part.
+
+Writing `b=c6 s6`, the parity stationarity equation is
+
+`b/(g c6^2)=tanh b`, `c6^2=lambda6/12`.
+
+The positive root exists uniquely iff `g>12/lambda6`. For the supplied strict spectrum,
+
+`g_parity=5.123427551398616`.
+
+At `g=7`, `z=s6/g=0.351653205015...`.
+
+## Certified smooth root
+
+At `g=7` the smooth continuum stationarity map has a unique root inside the declared radius-`1e-3` box around
+
+`(3.547595277395986,3.783140506071965,3.677956492814370)`.
+
+The interval-assisted Hessian lower bound is `>0.0821` throughout the box.
+
+## Uniform transfer to finite q
+
+For finite even `q=2n`, the partition and its first/second moments split into two shifted n-point trapezoid sums on the even/odd sublattices. For a periodic analytic function bounded by `M_a` in `|Im z|<=a`, every shifted n-point trapezoid obeys
+
+`|T_n-I| <= 2 M_a/(exp(a n)-1)`.
+
+Applying frozen strip widths to the partition, first moments and second moments gives a 4D Krawczyk/contraction inclusion at `q=190`. The same explicit bounds decrease for every larger n.
+
+Hence for **every even q>=190** there is a unique continued stationary point in the common local 4D box, with positive Hessian there.
+
+This closes the previous quantitative finite-q branch atom. `q=190` is a sufficient certified threshold, not claimed minimal.
+
+## Consequence for the parity fiber
+
+The localized large-q phase geometry is genuinely a smooth circle base with a nonzero two-sheet parity structure on this branch. Combined with the support certificate, RG-2 is exactly `Cay(Z_q,{+/-1,+/-2})` for every even `q>=190`.
+
+## Scope correction for RG-3
+
+The exact product `S1 x Z2` factorization belongs to the continuum fiber model. At finite q, parity is tied to the shifted even/odd phase grids. Independence of parity and coarse angle is asymptotic, not an exact finite-q identity. See `RG3_FINITE_Q_SCOPE_CORRECTION.md`.
+
+No physical length, clock, Lorentz symmetry or spatial interpretation follows.

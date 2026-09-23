@@ -1,0 +1,48 @@
+import json, math, sys
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+coex=json.loads((ROOT/'inputs'/'R7P-026_equal_energy_event.json').read_text())
+W,A,L,X7,C4,A7=model.feature_spaces()
+r=np.array([float(x) for x in coex['root_center']]); g=float(r[4])
+theta=np.zeros(7); theta[[0,2,4,6]]=r[:4]
+phi,grad,H,p=model.dual7(theta,g,X7)
+e=np.linalg.eigvalsh(H)
+# Euclidean gradient: rates=e. Mobility 2I gives 2e. Hamiltonian lift: omega=sqrt(e).
+# Damped inertial with c=0.5: roots r=(-c +- sqrt(c^2-4e))/2.
+c=0.5
+damped=[]
+for x in e:
+    disc=c*c-4*x
+    if disc>=0:
+        roots=[(-c+math.sqrt(disc))/2,(-c-math.sqrt(disc))/2]
+    else:
+        roots=[complex(-c/2,math.sqrt(-disc)/2),complex(-c/2,-math.sqrt(-disc)/2)]
+    damped.append([str(z) for z in roots])
+ev=json.loads((ROOT/'results'/'PHY-005_events.json').read_text())
+out={
+ 'task':'PHY-021','scientific_state':'PASS_SAME_STATICS_DIFFERENT_KINETICS__DYNAMICS_NOT_SOURCED_BY_POTENTIAL',
+ 'coexistence_H7_eigenvalues':e.tolist(),
+ 'euclidean_gradient_linear_rates':e.tolist(),
+ 'mobility_2I_linear_rates':(2*e).tolist(),
+ 'hamiltonian_lift_frequencies':np.sqrt(e).tolist(),
+ 'damped_inertial_c_0p5_poles':damped,
+ 'metropolis_barker_same_equilibrium':True,
+ 'metropolis_neighbor_influence_1step':ev['intervention_influence']['metropolis']['max_TV_distance1_after_one_event'],
+ 'barker_neighbor_influence_1step':ev['intervention_influence']['barker']['max_TV_distance1_after_one_event'],
+ 'dynamics':[
+   {'name':'Metropolis local Markov','extra_premises':'proposal/update rates + graph','static_relation':'detailed balance with declared Gibbs law','signature':'jump relaxation, no deterministic inertia'},
+   {'name':'Barker local Markov','extra_premises':'different acceptance law + graph','static_relation':'same declared Gibbs law','signature':'different event influence/rates'},
+   {'name':'Euclidean gradient','extra_premises':'Euclidean mobility on theta','static_relation':'same stationary critical points','signature':'pure exponential decay rates eig(H)'},
+   {'name':'information-geometric/natural gradient','extra_premises':'chosen Fisher/state metric','static_relation':'same stationary critical points when mobility SPD','signature':'rates depend on metric/mobility'},
+   {'name':'Hamiltonian/inertial lift','extra_premises':'momenta + symplectic form + kinetic metric','static_relation':'same potential minima but conservative phase-space dynamics','signature':'oscillation frequencies sqrt(eig(H)) before damping'}
+ ],
+ 'model_selection_observables':['small-perturbation relaxation spectrum','overshoot/oscillation','one-event neighbor influence','probability current / detailed-balance violation'],
+ 'invariants_across_declared_SPD_gradient_mobilities':['stationary points','Lyapunov ordering of Phi under positive mobility'],
+ 'not_invariant':['relaxation time','trajectory','causal event timing','oscillation','probability current'],
+ 'nonconclusions':['Phi does not source a unique dynamics','Hamiltonian/unitary structure is imported','no physical time unit follows']
+}
+(ROOT/'results'/'PHY-021_dynamics.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

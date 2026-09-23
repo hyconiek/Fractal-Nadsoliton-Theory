@@ -1,0 +1,56 @@
+{
+  "task": "OCB-CAL-03",
+  "status": "GENERAL_144D_INVERSE_CALIBRATION_BOX_HAS_EXACT_ROBUST_CYCLE_THRESHOLD",
+  "declared_polytope": {
+    "object": "inverse calibration / deconvolution map B acting on the conditioned recorded-destination vector q",
+    "dimension": 144,
+    "entrywise_box": "|B_jk-B0_jk| <= epsilon independently",
+    "nominal_B_frobenius_norm": 4.391818090853633,
+    "scope_warning": "This is a convex uncertainty set on the calibrated inverse map. It is not the same as the nonlinear image of every physically allowed confusion/efficiency matrix."
+  },
+  "exact_entrywise_box_theorem": {
+    "reason": "For any score difference (row_a-row_b) q and q>=0, sum q=1, independent entrywise perturbations can reduce the difference by at most 2 epsilon; this bound is attained by shifting the whole near row down and competitor row up.",
+    "all_source_threshold_epsilon": 0.09025558368189042,
+    "limiting_witness": {
+      "source": 9,
+      "near": 10,
+      "competitor": 11,
+      "margin": 0.18051116736378084,
+      "q_inf": 0.2708334558195271,
+      "norm": 0.9273887443964642
+    },
+    "safe_fixture_epsilon": 0.0857428044977959,
+    "minimum_safe_margin": 0.009025558368189052,
+    "iff_statement": "All strict top-two edges survive every B in the box iff epsilon < min_margin/2; at or above the threshold the limiting comparison can tie/reverse."
+  },
+  "row_l1_polytope_control": {
+    "polytope": "each row perturbation obeys ||Delta B_j||_1 <= beta",
+    "exact_threshold_beta": 0.3279318016242833,
+    "limiting_witness": {
+      "source": 0,
+      "near": 11,
+      "competitor": 2,
+      "margin": 0.1863809993280774,
+      "q_inf": 0.2841764635282568,
+      "norm": 0.8981818181818182
+    },
+    "reason": "Each row score changes by at most beta ||q||_infinity, so a pairwise margin changes by at most 2 beta ||q||_infinity; the bound is attained by placing row mass on an argmax coordinate of q."
+  },
+  "removal_witness": {
+    "epsilon": 0.09115813951870932,
+    "source": 9,
+    "near": 10,
+    "competitor": 11,
+    "nominal_scores": [
+      0.3052349968472939,
+      0.12472382948351304
+    ],
+    "perturbed_scores": [
+      0.2140768573285846,
+      0.21588196900222237
+    ],
+    "ranking_reversed": true
+  },
+  "decision": "Carrier recovery survives a genuinely multidimensional 12x12 calibration uncertainty set only when the independently supplied inverse-calibration polytope is narrower than an explicit margin threshold. Above it, calibration ambiguity alone can change the graph.",
+  "nonconclusion": "No real detector calibration, attempts/no-click record, or physical apparatus is supplied."
+}

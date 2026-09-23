@@ -1,0 +1,227 @@
+{
+  "task": "OCB-HANKEL-01",
+  "status": "EXACT_HANKEL_RANK_THEOREMS_WITH_FINITE_SAMPLE_LOWER_CERTIFICATES",
+  "strict_control": {
+    "finite_word_set_rank": 1,
+    "singular_values": [
+      1.1022522675156354,
+      6.29941757553566e-18,
+      1.7455151251025036e-18,
+      1.056986277089858e-18,
+      2.0266136295835442e-19,
+      2.0048541454800282e-20,
+      9.240678338612266e-38
+    ],
+    "theorem": "For iid strict increments P(uv)=P(u)P(v), the complete path Hankel has rank 1."
+  },
+  "persistent_bit": {
+    "delta": 0.05,
+    "rho": 0.8,
+    "raw_2x2_minor_rows_cols": [
+      "empty",
+      "shell1-symbol"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.2830715004720707
+      ],
+      [
+        0.2830715004720707,
+        0.08212947437950952
+      ]
+    ],
+    "determinant": 0.002000000000000002,
+    "determinant_formula": "delta^2 * rho * c_a^2",
+    "formula_value": 0.0020000000000000005,
+    "singular_values": [
+      1.0802780992554755,
+      0.0018513751240337162
+    ],
+    "exact_hankel_rank": "2 for delta*rho != 0 (two-state realization gives upper bound 2; nonzero minor gives lower bound 2).",
+    "feature_cross_moment_mu": 0.03200000000000001,
+    "hoeffding_95pct_independent_two-jump_paths_to_certify_rank_ge_2": 22872
+  },
+  "period2_alias": {
+    "delta": 0.05,
+    "raw_4x4_rows": [
+      [],
+      [
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "raw_4x4_cols": [
+      [],
+      [
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.2830715004720707,
+        0.032742165879862714,
+        0.013378964916542464
+      ],
+      [
+        0.2830715004720707,
+        0.08012947437950953,
+        0.008560695273137998,
+        0.0034980349846362832
+      ],
+      [
+        0.08012947437950953,
+        0.023390049295826283,
+        0.002498894270750993,
+        0.0009145885971051325
+      ],
+      [
+        0.032742165879862714,
+        0.00955754271337076,
+        0.0013120705247445762,
+        0.00048021429100659764
+      ]
+    ],
+    "determinant": -6.210655119365607e-12,
+    "determinant_formula": "-delta^8 * (p_shell1 + p_shell2)^2",
+    "formula_value": -6.210655119366308e-12,
+    "singular_values": [
+      1.0845069522930515,
+      0.0008044302707668273,
+      0.0007271367557784934,
+      9.790403022920903e-06
+    ],
+    "exact_hankel_rank": "4 (nonzero 4x4 minor; four hidden sign states give upper bound 4).",
+    "transformed_feature_hankel": [
+      [
+        1.0000000000000155,
+        -2.1076890233118206e-16,
+        -8.413408858487514e-17,
+        -2.42861286636753e-17
+      ],
+      [
+        1.2845627339608257e-15,
+        0.04000000000000005,
+        -2.2551405187698492e-17,
+        2.168404344971009e-18
+      ],
+      [
+        -8.239936510889834e-17,
+        -4.163336342344337e-17,
+        0.03999999999999916,
+        -3.469446951953614e-18
+      ],
+      [
+        -2.0469737016526324e-16,
+        -8.673617379884035e-18,
+        -1.0538445116559103e-16,
+        0.0015999999999999762
+      ]
+    ],
+    "transformed_expected_diagonal": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.04000000000000001,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.04000000000000001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0016000000000000003
+      ]
+    ],
+    "max_feature_hankel_error": 1.554312234475219e-14,
+    "lag2_feature_mu_for_rank_ge_2": 0.04000000000000001,
+    "hoeffding_95pct_independent_three-jump_paths_to_certify_rank_ge_2": 14638,
+    "very_conservative_95pct_paths_for_full_rank4_via_16_entry_union_weyl": 3255755257
+  },
+  "general_period_L_theorem": {
+    "statement": "For the rotating L-sign alias with 0<delta<delta_max, let h(x)=c(x)-E_p[c]. For each subset S of the L positions define F_S(block)=product_{j in S} h(X_j). The cross-Hankel of two consecutive L-blocks in the {F_S} basis is diagonal with entry (4 delta)^(2|S|). Hence its rank is 2^L. Since the hidden construction has 2^L states, the complete visible path Hankel rank and minimal linear realization dimension are exactly 2^L.",
+    "rows": [
+      {
+        "L": 1,
+        "hidden_states": 2,
+        "transformed_hankel_rank": 2,
+        "min_singular_value": 0.04000000000000001,
+        "max_singular_value": 1.0,
+        "condition_number": 24.999999999999996
+      },
+      {
+        "L": 2,
+        "hidden_states": 4,
+        "transformed_hankel_rank": 4,
+        "min_singular_value": 0.0016000000000000003,
+        "max_singular_value": 1.0,
+        "condition_number": 624.9999999999999
+      },
+      {
+        "L": 3,
+        "hidden_states": 8,
+        "transformed_hankel_rank": 8,
+        "min_singular_value": 6.400000000000002e-05,
+        "max_singular_value": 1.0,
+        "condition_number": 15624.999999999995
+      },
+      {
+        "L": 4,
+        "hidden_states": 16,
+        "transformed_hankel_rank": 16,
+        "min_singular_value": 2.5600000000000013e-06,
+        "max_singular_value": 1.0,
+        "condition_number": 390624.9999999998
+      },
+      {
+        "L": 5,
+        "hidden_states": 32,
+        "transformed_hankel_rank": 32,
+        "min_singular_value": 1.0240000000000006e-07,
+        "max_singular_value": 1.0,
+        "condition_number": 9765624.999999994
+      },
+      {
+        "L": 6,
+        "hidden_states": 64,
+        "transformed_hankel_rank": 64,
+        "min_singular_value": 4.096000000000002e-09,
+        "max_singular_value": 1.0,
+        "condition_number": 244140624.99999985
+      }
+    ],
+    "interpretation": "Hiding memory for longer exact horizons can require exponentially larger minimal linear realization in this explicit alias family. Detecting any memory can be much cheaper than certifying the full hidden rank."
+  },
+  "finite_sample_scope": {
+    "contrast_h_bound": 1.3348080497020738,
+    "note": "Hoeffding counts are deliberately conservative synthetic confidence fixtures for independent reset paths and known contrast h. They are not laboratory recommendations and do not identify a unique HMM from rank alone."
+  },
+  "nonconclusion": "Hankel rank lower-bounds minimal linear predictive dimension. It does not by itself identify physical hidden states, their ontology, or a unique HMM realization."
+}

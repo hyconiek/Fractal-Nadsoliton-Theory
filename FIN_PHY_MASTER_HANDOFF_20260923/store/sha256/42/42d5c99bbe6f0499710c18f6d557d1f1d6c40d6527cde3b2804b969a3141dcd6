@@ -1,0 +1,37 @@
+{
+  "task": "OCB-03",
+  "status": "PROTOCOL_THEOREM_SYNTHETIC_POWER_ONLY",
+  "exit_rate_dimensionless": 1.6603072787660986,
+  "per_destination_shell_probabilities_d1_to_d6": [
+    0.2830715004720707,
+    0.11566747562103387,
+    0.055067285102714573,
+    0.028325581262645172,
+    0.014534191153798844,
+    0.006667932775473757
+  ],
+  "embedded_jump_identity": "P(next=j | leave i)=W_ij/s_i; multiplying the generator by any positive clock scale cancels exactly.",
+  "nearest_shell_margin": 0.16740402485103684,
+  "deterministic_linf_error_tolerance_for_top_two_recovery": 0.08370201242551842,
+  "hoeffding_95pct_bound_exits_per_prepared_state": {
+    "one_state_all_11_destinations": 435,
+    "simultaneous_all_12x11_destination_frequencies": 612
+  },
+  "after_cycle_recovery_shell_aggregated_probabilities": [
+    0.5661430009441414,
+    0.23133495124206774,
+    0.11013457020542915,
+    0.056651162525290344,
+    0.029068382307597687,
+    0.006667932775473757
+  ],
+  "aggregate_min_gap": 0.02240044953212393,
+  "hoeffding_95pct_bound_for_six_aggregate_shell_frequencies": 21845,
+  "robustness": {
+    "independent_destination_blind_loss": "Cancels exactly after conditioning on a recorded exit.",
+    "uniform_destination_contamination": "p_obs=(1-eps)p+eps/11 preserves all destination rankings for every eps<1.",
+    "arbitrary_linf_contamination": "Nearest-shell top-two set is guaranteed unchanged when max_j |delta p_j| < margin/2."
+  },
+  "kill_condition": "If, after validated state preparation/readout, the two largest clock-free exit-destination probabilities from each state do not form one 12-cycle, the identification of the measured interaction carrier with the strict intrinsic C12 is falsified in the Markov realization.",
+  "nonconclusion": "No laboratory system, state ontology, apparatus calibration, or physical time unit is supplied here."
+}

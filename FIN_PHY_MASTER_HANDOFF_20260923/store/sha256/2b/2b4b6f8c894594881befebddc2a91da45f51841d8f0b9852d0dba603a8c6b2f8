@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+root=Path(__file__).resolve().parents[1]
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); h=c-m; v=float(p@(h*h)); delta=.05
+
+def feat(a,b): return np.array([1.,h[a]/math.sqrt(v),h[b]/math.sqrt(v),h[a]*h[b]/v])
+Bf=max(float(np.linalg.norm(feat(a,b))) for a in range(11) for b in range(11)); Bx=Bf*Bf; R=2*Bx
+rho=(4*delta)**2/v; H=np.diag([1.,rho,rho,rho*rho]); sig4=float(rho*rho)
+# Null H0-1: rank(H)<=3 and both single-symbol marginals equal frozen strict p.
+# E||F||^2 = 3+E[x1^2 x2^2] <= 3+E[x^4] by rearrangement for fixed marginals.
+x=h/math.sqrt(v); E4=float(p@(x**4)); pair_trace_bound=3+E4; v_one=Bx*pair_trace_bound
+# Null H0-2 additionally freezes both 2-symbol block marginals to strict iid p x p; then E[FF^T]=I.
+v_pair=Bx
+checkpoints=[4_000_000,8_000_000,16_000_000,32_000_000,64_000_000,128_000_000]
+alpha_total=.05; alpha_each=alpha_total/len(checkpoints)
+def radius(n,var):
+    L=math.log(8/alpha_each)
+    return (((2/3)*L*R)+math.sqrt(((2/3)*L*R)**2+8*n*L*var))/(2*n)
+rows=[]
+for n in checkpoints:
+    rows.append({'n':n,'alpha':alpha_each,'radius_H0_single_marginals':radius(n,v_one),'radius_H0_two_step_marginals':radius(n,v_pair)})
+# Fixed-seed power diagnostic for the target period-2 alias on the 9x9 compressed pair alphabet.
+cat=np.where(c==1,0,np.where(c==-1,1,2)); idx={(a,b):3*a+b for a in range(3) for b in range(3)}
+frows=np.zeros((9,4))
+for a in range(3):
+  for b in range(3):
+    ia=np.where(cat==a)[0][0]; ib=np.where(cat==b)[0][0]; frows[idx[(a,b)]]=feat(ia,ib)
+words=list(itertools.product(range(11),repeat=4)); arr=np.asarray(words,int); pprod=np.prod(p[arr],axis=1); rr=c[arr]/p[arr]
+q=pprod*(1+delta**2*(rr[:,0]*rr[:,2]+rr[:,1]*rr[:,3])+delta**4*np.prod(rr,axis=1))
+joint=np.zeros((9,9))
+for w,pr in zip(arr,q): joint[idx[(cat[w[0]],cat[w[1]])],idx[(cat[w[2]],cat[w[3]])]] += pr
+outers=np.array([np.outer(frows[i],frows[j]) for i in range(9) for j in range(9)])
+rng=np.random.default_rng(20260923); probs=joint.ravel(); power=[]
+for n in [8_000_000,16_000_000,32_000_000]:
+    rad=radius(n,v_pair); vals=[]
+    for _ in range(500):
+        cnt=rng.multinomial(n,probs); Hhat=np.tensordot(cnt/n,outers,axes=(0,0)); vals.append(float(np.linalg.svd(Hhat,compute_uv=False)[-1]))
+    vals=np.asarray(vals); power.append({'n':n,'radius':rad,'rejection_fraction_fixed_seed':float(np.mean(vals>rad)),'mean_sigma4_hat':float(vals.mean()),'q05_q50_q95':np.quantile(vals,[.05,.5,.95]).tolist()})
+result={
+ 'task':'OCB-HANKEL-03B',
+ 'status':'PRACTICAL_CHECKPOINT_ANYTIME_SPECTRAL_TEST_EXISTS__STILL_INFORMATION_EXPENSIVE',
+ 'nulls':{
+   'H0_single':'rank(H)<=3 plus frozen strict one-symbol marginals for each coordinate',
+   'H0_pair':'H0_single plus both two-symbol block marginals frozen to strict iid p x p',
+   'why_pair_is_relevant':'The period-2 alias used in the memory campaign exactly hides through two jumps, so the lower-order pair record can be separately tested before the rank test.'
+ },
+ 'theorem':{
+   'feature_dimension':4,'target_sigma4':sig4,'max_feature_norm':Bf,'max_outer_norm':Bx,'centered_increment_bound_R':R,
+   'single_marginal_variance_bound':v_one,'pair_marginal_variance_bound':v_pair,
+   'confidence_rule':'At each frozen checkpoint n_k, rectangular matrix Bernstein gives ||Hhat-H||_2 <= r_k except with alpha_k. Under rank(H)<=3, Weyl gives sigma4(Hhat)<=r_k. Reject when sigma4(Hhat)>r_k.',
+   'familywise_validity':'Six frozen checkpoints with alpha_k=0.05/6; union bound gives <=5% false rejection under the declared composite null.',
+   'checkpoint_rows':rows
+ },
+ 'target_power_diagnostic':power,
+ 'decision':'Keeping the full fourth singular value rather than det(H) turns the generic composite-rank test from astronomically weak into a tens-of-millions checkpoint test. Pair-marginal preverification materially improves the bound, but the gap to information-theoretic lower bounds remains large.',
+ 'nonconclusion':'The power diagnostic is fixed-seed synthetic evidence, not a theorem. Exact pair marginals are an additional null restriction and must be separately tested in data.'
+}
+(root/'results'/'OCB-HANKEL-03B_checkpoint_cs.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'sigma4':sig4,'rows':rows,'power':power},indent=2))

@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+from scipy.optimize import minimize_scalar
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+root=Path(__file__).resolve().parents[1]
+chal=json.loads((root/'inputs'/'rank3_challenger.json').read_text())
+weights=np.asarray(chal['weights'],float); Ecat=np.asarray(chal['emissions_category'],float)
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+cat=np.where(c==1,0,np.where(c==-1,1,2)); base=np.array([p[cat==a].sum() for a in range(3)])
+delta=.05
+words=np.array(list(itertools.product(range(11),repeat=4)),dtype=np.int16)
+pprod=np.prod(p[words],axis=1); rr=c[words]/p[words]
+P=pprod*(1+delta**2*(rr[:,0]*rr[:,2]+rr[:,1]*rr[:,3])+delta**4*np.prod(rr,axis=1)); P/=P.sum()
+# Lift the explicit 3-category product mixture to all 11 destinations, preserving within-category strict proportions.
+Efull=np.zeros((3,4,11))
+for k in range(3):
+  for t in range(4):
+    for j in range(11):
+      Efull[k,t,j]=Ecat[k,t,cat[j]]*p[j]/base[cat[j]]
+logQ=np.broadcast_to(np.log(weights+1e-300),(len(P),3)).copy()
+for t in range(4): logQ += np.log(Efull[:,t,words[:,t]].T+1e-300)
+mx=logQ.max(axis=1); Q=np.exp(mx)*np.exp(logQ-mx[:,None]).sum(axis=1); Q/=Q.sum()
+# Block-Hankel rank between first two and last two symbols.
+HP=P.reshape(121,121); HQ=Q.reshape(121,121)
+svP=np.linalg.svd(HP,compute_uv=False); svQ=np.linalg.svd(HQ,compute_uv=False)
+KL=float(np.sum(P*np.log(P/Q))); TV=float(.5*np.abs(P-Q).sum()); BC=float(np.sum(np.sqrt(P*Q)))
+res=minimize_scalar(lambda z:float(np.sum((P**z)*(Q**(1-z)))),bounds=(0,1),method='bounded',options={'xatol':1e-13})
+CI=-math.log(res.fun)
+# Necessary query counts in independent-reset full-path sample model.
+# Bretagnolle-Huber: alpha+beta >= .5 exp(-N KL). For alpha,beta<=.05, N >= log 5/KL.
+N_BH=math.ceil(math.log(5)/KL)
+# Hellinger/Bhattacharyya: TV(P^N,Q^N)<=sqrt(1-BC^(2N)); Bayes error >= (1-TV)/2.
+# Bayes error <=.05 requires TV>=.9, hence BC^(2N)<=.19.
+N_H=math.ceil(math.log(0.19)/(2*math.log(BC)))
+N_Chernoff_upper=math.ceil(math.log(10)/CI)
+result={
+ 'task':'OCB-MEM-04',
+ 'status':'EXPLICIT_RANK3_CHALLENGER_GIVES_NONTRIVIAL_FULL_PATH_QUERY_LOWER_BOUND',
+ 'query_model':{
+   'one_query':'one independent reset returning the complete ordered four-jump destination path',
+   'allowed_test':'arbitrary, including adaptive computation on all previously returned full paths',
+   'why_lower_bound_applies':'Any weaker bounded functional of each returned path is a data-processing of this experiment and cannot be easier to distinguish.'
+ },
+ 'explicit_null_challenger':{
+   'class':'three-component latent-class mixture; conditional on the latent component, the four destinations are independent with position-dependent emissions',
+   'weights':weights.tolist(),
+   'full_11_symbol_block_hankel_singular_values_first6':svQ[:6].tolist(),
+   'numerical_rank_tol_1e-12':int(np.sum(svQ>1e-12)),
+   'rank_at_most_3_by_construction':True,
+   'provenance_warning':'The challenger was found by exploratory EM and is frozen here as an existence witness. No global best rank-3 approximation claim is made.'
+ },
+ 'frozen_rank4_alias':{'block_hankel_singular_values_first6':svP[:6].tolist(),'numerical_rank_tol_1e-12':int(np.sum(svP>1e-12))},
+ 'distances':{'KL_P_to_Q':KL,'total_variation':TV,'bhattacharyya_coefficient':BC,'chernoff_information':CI,'chernoff_s':float(res.x)},
+ 'information_theoretic_lower_bounds':{
+   'both_typeI_and_typeII_at_most_5pct_Bretagnolle_Huber_queries_at_least':N_BH,
+   'equal_prior_Bayes_error_at_most_5pct_Hellinger_queries_at_least':N_H,
+   'simple_pair_Chernoff_5pct_upper_bound_for_context_only':N_Chernoff_upper,
+   'interpretation':'The first two are necessary lower bounds for any test because the composite rank<=3 null contains this explicit challenger. The Chernoff number is an upper bound for the simple P-vs-Q pair, not a minimax guarantee.'
+ },
+ 'decision':'A genuine query-count lower bound exists once the query model is fixed. For this concrete period-2 rank-4 alias, even complete four-jump path queries require hundreds of thousands of independent resets against a broad explicit rank-3 challenger.',
+ 'nonconclusion':'This is not a universal asymptotic lower bound in hidden dimension H, and it does not prove the frozen challenger is the closest rank<=3 process.'
+}
+out=root/'results'/'OCB-MEM-04_query_lower_bound.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'KL':KL,'TV':TV,'rankQ':result['explicit_null_challenger']['numerical_rank_tol_1e-12'],'N_BH':N_BH,'N_H':N_H},indent=2))

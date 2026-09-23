@@ -1,0 +1,111 @@
+{
+  "RG3": {
+    "definition": "For pairwise distinct u_x, take the one-dimensional Delaunay/Voronoi adjacency on S1: connect consecutive cells in circular order.",
+    "output": "C_M, connected and degree 2 for every M>=3 with distinct phases",
+    "parameters": "none beyond the phase coordinate; no threshold/k is fitted",
+    "weighted_metric": "Assign each consecutive edge its intrinsic angular arc gap. Shortest-path distance on the polygon then equals the circle geodesic distance between sampled points."
+  },
+  "collision_scaling": {
+    "birthday_asymptotic": "If M^2/q is small, log P(no ties)=-M(M-1)/(2q)+O(M^3/q^2). Thus M^2/q ->0 is sufficient for ties to vanish in probability.",
+    "exact_probability": "P(no ties)=(q)_M/q^M",
+    "table": [
+      {
+        "M": 10,
+        "q_10M2": 0.9558606130043975,
+        "q_M2": 0.6281565095552947,
+        "q_equal_M": 0.00036288000000000005,
+        "q_for_95pct_no_ties": 881
+      },
+      {
+        "M": 30,
+        "q_10M2": 0.952765730565668,
+        "q_M2": 0.6134218178820094,
+        "q_equal_M": 1.2883160975104698e-12,
+        "q_for_95pct_no_ties": 8491
+      },
+      {
+        "M": 100,
+        "q_10M2": 0.9516895258677188,
+        "q_M2": 0.608565964957278,
+        "q_equal_M": 9.332621544394417e-43,
+        "q_for_95pct_no_ties": 96538
+      },
+      {
+        "M": 300,
+        "q_10M2": 0.9513827159990231,
+        "q_M2": 0.607206082413143,
+        "q_equal_M": 2.2357674438264616e-129,
+        "q_for_95pct_no_ties": 874484
+      },
+      {
+        "M": 1000,
+        "q_10M2": 0.9512754039989482,
+        "q_M2": 0.6067329714414793,
+        "q_equal_M": 0.0,
+        "q_for_95pct_no_ties": 9738449
+      }
+    ]
+  },
+  "continuum_order_limit": {
+    "diagnostic": [
+      {
+        "M": 32,
+        "logM_over_M": 0.10830424696249145,
+        "median_max_gap": 0.1165966712271832,
+        "p95_max_gap": 0.172538593163759
+      },
+      {
+        "M": 64,
+        "logM_over_M": 0.06498254817749487,
+        "median_max_gap": 0.06937988703376258,
+        "p95_max_gap": 0.10906358014238389
+      },
+      {
+        "M": 128,
+        "logM_over_M": 0.03790648643687201,
+        "median_max_gap": 0.039406982572695426,
+        "p95_max_gap": 0.05348280432816925
+      },
+      {
+        "M": 256,
+        "logM_over_M": 0.02166084939249829,
+        "median_max_gap": 0.02339198491913841,
+        "p95_max_gap": 0.03155954488819013
+      },
+      {
+        "M": 512,
+        "logM_over_M": 0.012184227783280288,
+        "median_max_gap": 0.0129539732570213,
+        "p95_max_gap": 0.017067913333499753
+      },
+      {
+        "M": 1024,
+        "logM_over_M": 0.006769015435155716,
+        "median_max_gap": 0.007059941545110471,
+        "p95_max_gap": 0.009704405820277647
+      },
+      {
+        "M": 2048,
+        "logM_over_M": 0.003722958489335644,
+        "median_max_gap": 0.003936289841794838,
+        "p95_max_gap": 0.005200261028746055
+      }
+    ],
+    "noncommutation": "Taking M->infinity at fixed q produces macroscopic ties and does not yield this canonical cycle. The q and M limits are not interchangeable for RG3.",
+    "statement": "If q->infinity first (or q/M^2->infinity) and cell phases are independently Haar-distributed on the symmetry orbit, phases are distinct with probability tending one. As M->infinity the largest circular gap tends to zero almost surely; e.g. P(maxgap>eps)<=M(1-eps)^(M-1). The intrinsic weighted Delaunay polygon therefore converges to S1."
+  },
+  "decision": "RG3 discharges the purely combinatorial S_M no-go conditionally: nonidentical cell states provide pair-specific relational data and yield a parameter-free sparse graph. It does not yet establish a fundamental spatial law because the phase-coordinate population/scaling and graph dynamics are additional bridge obligations.",
+  "dynamic_caution": {
+    "statement": "RG3 is a state-sourced geometry. If the same phase variables evolve, the graph rewires when phase order changes. A physical finite-speed law for this rewiring is not derived. Ferromagnetic phase coupling can also favor clustering; a uniform phase filling or its replacement must be dynamically justified."
+  },
+  "phase_coordinate": {
+    "covariance": "Under a common phase translation m_k -> exp(i k alpha)m_k, u -> exp(i alpha)u. Reflection conjugates u. Therefore the unoriented circular order and its adjacency graph are D_q-covariant and independent of an absolute origin/orientation.",
+    "definition": "For each cell with nonzero complex retained means m3,m4, set u=(m4*conj(m3))/|m4*m3| in S1."
+  },
+  "scientific_state": "CONDITIONAL_PAIR_SPECIFIC_CELL_GRAPH_SOURCE_FOUND__ORDER_OF_LIMITS_AND_TIE_GATE",
+  "task": "PHY-013-RG3-cell-geometry",
+  "tie_no_go": {
+    "finite_q_consequence": "At fixed q and M>q ties are certain. Even for M<=q, the no-tie probability is (q)_M/q^M.",
+    "statement": "If n>=2 cells have exactly the same phase coordinate and no additional pair-specific datum, their stabilizer contains S_n. No deterministic equivariant rule can choose a unique cyclic order among them. Any type-only adjacency is a blow-up and can have degree growing with occupancy."
+  }
+}

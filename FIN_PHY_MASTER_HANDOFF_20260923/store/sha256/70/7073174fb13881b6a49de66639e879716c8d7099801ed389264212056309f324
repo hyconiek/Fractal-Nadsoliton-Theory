@@ -1,0 +1,96 @@
+# FIN PHY operational-carrier handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+`FIN_PHY_CARRIER_SOURCE_CONTINUATION_20260923.zip`
+
+SHA-256: `31dda8190b8663b455c680c550246ed3bfe5ea05d4d425f9897be1e41eaa2c8f`
+
+## Campaign goal
+
+Continue from the intrinsic finite `C12` carrier and make the carrier/physics bridge operational and falsifiable without silently importing a cyclic labeling or absolute clock. Avoid replaying historical continuum-tail searches already present in the repository.
+
+## New results
+
+### OCB-01 — all-time heat shell ordering
+
+For the frozen strict `C12` Markov generator, the six radial shell differences obey an exact irreducible Metzler system. Therefore
+
+`p0(t)>p1(t)>...>p6(t)`
+
+for every finite `t>0`.
+
+Status: `PROVED_FOR_FROZEN_STRICT_MODEL_AND_SYMBOLIC_C12_CLASS`.
+
+### OCB-02 — cross-channel carrier windows
+
+Using operator-norm remainder bounds:
+
+- unitary nearest shell guaranteed for `t<0.0487555043`;
+- unitary full shell order guaranteed for `t<0.00237634382`;
+- wave nearest shell guaranteed for `t<0.544995102`;
+- wave full shell order guaranteed for `t<0.119451445`.
+
+These are dimensionless theorem bounds, not physical clock calibrations.
+
+### OCB-03 — clock-free unlabeled carrier recovery
+
+For heat/CTMC,
+
+`P(next=j | leave i)=W_ij/s_i`.
+
+The top-two destination set from each state is therefore independent of the global clock scale. Strict FIN predicts that the resulting unlabeled graph is one connected 2-regular graph on twelve vertices, hence `C12`.
+
+The nearest-shell probability margin is `0.16740402485`; any arbitrary `L_inf` perturbation below `0.08370201243` preserves the top-two set.
+
+A conservative Hoeffding bound gives 612 exits per state for simultaneous control of all `12x11` destination frequencies at family error <=5%.
+
+### OCB-04 — same-symmetry control
+
+Swapping shell-1 and shell-2 rates preserves:
+
+- D12 radial symmetry;
+- uniform equilibrium;
+- total exit rate.
+
+It changes the operational carrier. The clock-free jump distributions have TV `0.3348080497` and Chernoff information `0.07654211034`.
+
+Thus symmetry/equilibrium/clock do not determine adjacency.
+
+### OCB-05 — ordinal dynamics crossings
+
+Directed interval arithmetic certifies:
+
+- unitary shell 5/6 has exactly one crossing in `[0.8759,0.8760]`;
+- wave-probability shell 1/2 has exactly one crossing in `[2.3545,2.3547]`.
+
+Heat has no adjacent shell crossing at finite positive time by OCB-01.
+
+This supplies an ordinal channel discriminator conditional on a physical control/time map.
+
+## Protocol artifact
+
+`PREREGISTERED_PROTOCOL.md` freezes a two-stage test:
+
+1. recover an unlabeled cycle from top-two clock-free destination frequencies;
+2. only then define graph-distance shells and test the quantitative strict profile.
+
+No physical data were selected or analyzed.
+
+## Historical de-duplication
+
+Repository search showed that local-vs-fractional continuum ambiguity, signed-tail failure, positive-tail speed nonuniqueness, fine-fibre refinement freedom and clock torsors were already established in prior FIN programs. Those are inherited guardrails, not new claims of this package.
+
+## Next atoms
+
+1. `OCB-CAL-01`: nuisance-complete cycle identifiability with a calibrated confusion matrix and destination-dependent loss.
+2. `OCB-MEM-01`: identify two-/three-step records that separate strict Markov destination law from hidden-memory aliases.
+3. `OCB-CHANNEL-01`: generalize carrier recovery to an explicit analytic functional-calculus class.
+4. `OPERATOR-REFINEMENT-SOURCE`: only with a genuinely new source object or external higher-resolution record.
+5. physical execution only after real preparation/instrument/calibration/raw-data provenance exists.
+
+## Nonpromotion boundary
+
+No physical space, SI meter, physical second, state ontology, rank-7 source, unique continuum operator, quantum theory, gravity, Standard Model or ToE follows.

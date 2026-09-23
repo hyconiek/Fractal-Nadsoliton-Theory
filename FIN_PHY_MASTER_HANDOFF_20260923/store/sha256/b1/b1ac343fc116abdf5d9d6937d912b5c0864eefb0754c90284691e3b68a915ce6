@@ -1,0 +1,19 @@
+# FIN PHY handoff — OCB closure
+
+Date: 2026-09-23
+Repository HEAD audited: `9ad5cd5cd7c9922879f2d25febbc4b9bd9b62426`.
+
+## Verdict
+
+The **current OCB continuation queue is execution-complete**.  All four remaining atoms and repository integration have terminal results.  See `FULL_ASSIGNMENT_STATUS.md` for the distinction between completed execution and still-open foundational/experimental questions.
+
+## Headline results
+
+- HANKEL-03B: checkpoint-anytime rank<=3 certificate; first frozen design checkpoints 256M generic / 16.5M pair-matched.
+- MEM-05: broader explicit rank-3 block challenger, KL `6.09562620989e-06`, necessary reset bounds 264,032 / 545,301.
+- CAL-05: support-preserving confusion improves the primitive safe gamma radius exactly 4x in the `r=0.02` fixture.
+- CHANNEL-05: frozen conditional no-fit protocol, 15,649,551 main attempts per control; external calibration/physical execution remain required.
+
+## Replay
+
+Run `python replay.py --check` followed by `python verify_package.py`.

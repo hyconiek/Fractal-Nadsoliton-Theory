@@ -1,0 +1,33 @@
+# PHY-002 — relational FIN unit and observable dictionary
+
+**Scientific status: PASS_IN_SCOPE.**
+
+## Minimal unit
+
+A cell is defined without space or time. Its internal label set is `J=Z_12`. For declared copy number `N`, a microconfiguration is `xi in J^N`, its occupation vector is `n`, and `p=n/N in Delta_11`. The frozen feature rows `X_j in R^7` define the retained cell signature
+
+`mu = X7^T p`.
+
+This is the smallest object that reproduces the finite-copy MP7 interface without assigning spatial meaning to `j` or dynamical meaning to `N`.
+
+## Exact structural check
+
+The simplex tangent has dimension 11. The retained mean map has rank **7**, therefore nullity **4**. Thus four independent directions of a general probability state are intentionally invisible to `mu`.
+
+All 24 D12 relabelings were checked. The largest numerical defect in `P X = X T` was `1.166e-15`, and the induced `T` actions were orthogonal to `1.637e-15`. The row norms of X are constant to floating error (`spread=2.220e-16`).
+
+## Three dictionaries kept separate
+
+- **Statistical:** `p` is an empirical composition/distribution; `mu` is a retained feature mean; `theta` is conjugate/auxiliary.
+- **Relational candidate:** labels are internal relational-configuration types; `p` is a mixture of those types; `mu` is a coarse relational signature.
+- **Inferential control:** `p` is a distribution/posterior and `theta` a natural parameter.
+
+The mathematics alone does not choose among these dictionaries.
+
+## New primitives required for composition
+
+A multi-cell model must additionally declare: cell set `V`, interaction support `Gamma`, edge weights `w_xy`, coupling `kappa`, relative feature frames if they differ, and a transition rule if dynamics is studied. None is derived by PHY-002.
+
+## Acceptance / nonconclusion
+
+Core observables and D12 covariance are reproduced with no spatial or clock semantics. This passes PHY-002. It does **not** establish relational ontology as physically true or unique.

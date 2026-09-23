@@ -1,0 +1,14 @@
+# FIN PHY replay protocol
+
+The package contains a bounded executable replay for every task whose conclusion depends on numerical/enumerative computation. Analytic-only/gate tasks are checked by artifact/status/hash validation.
+
+From the package root:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay_all.py
+PYTHONDONTWRITEBYTECODE=1 python3 verify_package.py
+```
+
+`replay_all.py` executes PHY-002–009, 011, 012, 015–023 and 029 producer scripts in dependency order. PHY-001/010/013/014/024–028/030/031 are analytic, gate, documentation or synthesis tasks and have no hidden producer requirement. PHY-013 is intentionally `OPEN_WITH_ATOM`, not a failed replay.
+
+A final clean-room package test copies/unpacks the handoff into a fresh directory, records pre-replay result hashes, runs the replay, compares scientific result bytes, and reruns the verifier. Timing fields are kept only in the replay log and do not enter scientific result JSON.

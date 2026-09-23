@@ -1,0 +1,152 @@
+{
+  "task": "OCB-HANKEL-03B",
+  "status": "ANYTIME_VALID_CHECKPOINTED_MATRIX_RANK_CERTIFICATE_CONSTRUCTED__BROAD_NULL_REMAINS_EXPENSIVE",
+  "frozen_alias": {
+    "delta": 0.05,
+    "whitened_cross_hankel_diag": [
+      1.0,
+      0.058361655098155454,
+      0.058361655098155454,
+      0.0034060827857960545
+    ],
+    "sigma4": 0.0034060827857960545
+  },
+  "theorem": {
+    "statistic": "At checkpoint N compute Hhat=N^{-1} sum F(U_n)G(V_n)^T and sigma4(Hhat).",
+    "null": "rank(E[F G^T]) <= 3.",
+    "fixed_time_bound": "Rectangular matrix Bernstein on the self-adjoint dilation gives P(||Hhat-H||_op > r)<=8 exp[-N r^2/(2 nu +(2/3)Rr)].",
+    "rejection_rule": "Reject rank<=3 at checkpoint k only if sigma4(Hhat)>r_k, using alpha_k=0.05/K.",
+    "anytime_checkpoint_validity": "By Weyl, rank<=3 implies sigma4(Hhat)<=||Hhat-H||. Union bound over the frozen K checkpoints gives familywise Type-I error <=0.05.",
+    "pair_matched_variance_reason": "If E[FF^T]=E[GG^T]=I, then E[XX^T]<=M I and E[X^T X]<=M I for X=FG^T; ||H||<=1, hence nu<=M and centered norm R<=M+1.",
+    "pair_standardization_residual": 4.440892098500626e-16,
+    "sample_outer_product_norm_M": 12.957064750269481,
+    "checkpoint_alpha_each": 0.005555555555555556,
+    "checkpoints": [
+      1000000,
+      2000000,
+      4000000,
+      8000000,
+      12000000,
+      16500000,
+      32000000,
+      128000000,
+      256000000
+    ]
+  },
+  "classes": {
+    "generic_rank_le3": {
+      "nu": 167.88552694267594,
+      "R": 25.914129500538962,
+      "premise": "iid reset paths only; no pair-marginal matching premise",
+      "checkpoint_rows": [
+        {
+          "N": 1000000,
+          "radius": 0.049478047903590734,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 2000000,
+          "radius": 0.03497323877403833,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 4000000,
+          "radius": 0.0247233041553701,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 8000000,
+          "radius": 0.01747876168164032,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 12000000,
+          "radius": 0.014270172145503166,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 16500000,
+          "radius": 0.012168986329488474,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 32000000,
+          "radius": 0.008737417076222031,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 128000000,
+          "radius": 0.004368217679679833,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 256000000,
+          "radius": 0.0030886946902739564,
+          "rejects_frozen_alias_in_population_design": true
+        }
+      ],
+      "first_frozen_grid_checkpoint_with_radius_below_sigma4": 256000000
+    },
+    "pair_matched_rank_le3": {
+      "nu": 12.957064750269481,
+      "R": 13.957064750269481,
+      "premise": "in addition, prefix and suffix two-jump feature marginals equal the strict iid pair law, so E[FF^T]=E[GG^T]=I",
+      "checkpoint_rows": [
+        {
+          "N": 1000000,
+          "radius": 0.0137618714549813,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 2000000,
+          "radius": 0.009724090681999004,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 4000000,
+          "radius": 0.006872461648014956,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 8000000,
+          "radius": 0.004857810590930274,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 12000000,
+          "radius": 0.003965751572784604,
+          "rejects_frozen_alias_in_population_design": false
+        },
+        {
+          "N": 16500000,
+          "radius": 0.0033816501416421897,
+          "rejects_frozen_alias_in_population_design": true
+        },
+        {
+          "N": 32000000,
+          "radius": 0.0024278472989182056,
+          "rejects_frozen_alias_in_population_design": true
+        },
+        {
+          "N": 128000000,
+          "radius": 0.0012136592366937746,
+          "rejects_frozen_alias_in_population_design": true
+        },
+        {
+          "N": 256000000,
+          "radius": 0.0008581319223482637,
+          "rejects_frozen_alias_in_population_design": true
+        }
+      ],
+      "first_frozen_grid_checkpoint_with_radius_below_sigma4": 16500000
+    }
+  },
+  "comparison": {
+    "previous_determinant_anytime_expected_log_design_paths_about": 416000000000000.0,
+    "previous_fixed_time_frozen_variance_matrix_Bernstein_paths": 3817408,
+    "interpretation": "The new certificate is genuinely composite-null and checkpoint-anytime-valid. It is much cheaper than the determinant e-process but more expensive than a frozen-alternative variance power calculation."
+  },
+  "blocked_route": "A likelihood e-value P_alt(data)/sup_{Q in rank<=3}Q(data) would be attractive, but the global supremum over the continuous nonconvex rank<=3 positive-process class is not certified. A local EM optimum is not admissible as the denominator.",
+  "decision": "HANKEL-03B is partially closed: a practical-in-principle sequential matrix certificate exists without determinant compression, but broad rank<=3 exclusion still needs O(10^8) resets under worst-case bounds and O(10^7) even after exact pair-law matching.",
+  "nonconclusion": "No laboratory sample recommendation or universal optimal rank test follows."
+}

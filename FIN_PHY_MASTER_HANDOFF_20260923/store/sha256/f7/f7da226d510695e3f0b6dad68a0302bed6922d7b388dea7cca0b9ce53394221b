@@ -1,0 +1,37 @@
+# PHY-029 — low-parameter held-out measurement protocol
+
+**Scientific status: PASS_PREREGISTERABLE_CONDITIONAL_PROTOCOL; synthetic power only, no EV.**
+
+## System class
+
+Use a classical mesoscopic platform capable of realizing cells with twelve observable internal states and independently controlled onsite versus nearest-neighbor interaction strength. No apparatus technology is selected or purchased here.
+
+The test is explicitly about the **conditional multi-cell model**, not the primordial FIN ontology.
+
+## Calibration / identification subset
+
+1. Calibrate the single-cell stationary occupancy/response curve and identify `g` under the declared control dictionary.
+2. Calibrate the intercell control amplitude independently enough to set `kappa`; do not fit kappa to the held-out pair distribution.
+3. Calibrate the clock/rate scale separately if dynamic observables are used.
+
+After this subset is frozen, no new parameter is introduced for the held-out observables.
+
+## Held-out observables
+
+At the existing exact N=2 scout point `(g,kappa)=(3.7,0.25)`, PM-001 and the preregistered PM-002 control predict different values for:
+
+- pair mutual information: about `0.01765` versus `0.00587` nats;
+- mean squared feature distance: about `1.73815` versus `1.81996`;
+- three-cell endpoint mutual information: about `9.44e-5` versus `7.21e-6` nats.
+
+The full pair distributions differ by TV `0.0454045` and KL(PM-001||PM-002) `0.00635664` nats. Their Chernoff information is approximately `0.00162275`. Under ideal independent sampling with parameters already fixed, the Chernoff bound gives sufficient sample counts of roughly 992, 1419 and 2411 pair samples to upper-bound optimal equal-prior classification error by 10%, 5% and 1%, respectively.
+
+Using only the mean feature-distance observable is less efficient: the idealized variance under PM-001 implies about 2795 independent samples for a five-standard-error separation from the PM-002 predicted mean.
+
+## Required nuisances/error budget
+
+A real protocol must account for state-readout error, autocorrelation/effective sample size, drift, edge heterogeneity, finite-N mismatch and non-equilibrium preparation. These nuisances are frozen before held-out scoring; adding a new nuisance parameter after seeing the target creates a new prediction ID.
+
+## Decision
+
+The conditional composition has genuinely testable consequences that are not exhausted by fitting the transition location. The protocol is sufficiently specified for preregistration/power planning, but **no empirical validation has occurred**.

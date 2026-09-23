@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); h=c-m; v=float(p@(h*h)); delta=.05
+
+def feat(a,b):
+    return np.array([1.0,h[a]/math.sqrt(v),h[b]/math.sqrt(v),h[a]*h[b]/v])
+F=np.array([feat(a,b) for a in range(11) for b in range(11)])
+max_f=float(np.max(np.linalg.norm(F,axis=1))); M=max_f*max_f
+rho=(4*delta)**2/v
+Halt=np.diag([1.0,rho,rho,rho*rho])
+sigma4=float(np.linalg.svd(Halt,compute_uv=False)[-1])
+# Verify pair-iid standardization used by the narrower matched-pair null.
+EFFT=np.zeros((4,4))
+for a in range(11):
+  for b in range(11): EFFT += p[a]*p[b]*np.outer(feat(a,b),feat(a,b))
+std_res=float(np.max(np.abs(EFFT-np.eye(4))))
+
+alpha=.05
+checkpoints=[1_000_000,2_000_000,4_000_000,8_000_000,12_000_000,16_500_000,32_000_000,128_000_000,256_000_000]
+K=len(checkpoints); ak=alpha/K; L=math.log(8/ak)
+
+def radius(N,nu,R):
+    a=(2/3)*R*L
+    return (a+math.sqrt(a*a+8*nu*N*L))/(2*N)
+classes={
+  'generic_rank_le3':{'nu':M*M,'R':2*M,'premise':'iid reset paths only; no pair-marginal matching premise'},
+  'pair_matched_rank_le3':{'nu':M,'R':M+1,'premise':'in addition, prefix and suffix two-jump feature marginals equal the strict iid pair law, so E[FF^T]=E[GG^T]=I'}
+}
+for rec in classes.values():
+    rec['checkpoint_rows']=[{'N':N,'radius':radius(N,rec['nu'],rec['R']),'rejects_frozen_alias_in_population_design':bool(radius(N,rec['nu'],rec['R'])<sigma4)} for N in checkpoints]
+    hits=[x['N'] for x in rec['checkpoint_rows'] if x['rejects_frozen_alias_in_population_design']]
+    rec['first_frozen_grid_checkpoint_with_radius_below_sigma4']=hits[0] if hits else None
+
+result={
+ 'task':'OCB-HANKEL-03B',
+ 'status':'ANYTIME_VALID_CHECKPOINTED_MATRIX_RANK_CERTIFICATE_CONSTRUCTED__BROAD_NULL_REMAINS_EXPENSIVE',
+ 'frozen_alias':{'delta':delta,'whitened_cross_hankel_diag':np.diag(Halt).tolist(),'sigma4':sigma4},
+ 'theorem':{
+   'statistic':'At checkpoint N compute Hhat=N^{-1} sum F(U_n)G(V_n)^T and sigma4(Hhat).',
+   'null':'rank(E[F G^T]) <= 3.',
+   'fixed_time_bound':'Rectangular matrix Bernstein on the self-adjoint dilation gives P(||Hhat-H||_op > r)<=8 exp[-N r^2/(2 nu +(2/3)Rr)].',
+   'rejection_rule':'Reject rank<=3 at checkpoint k only if sigma4(Hhat)>r_k, using alpha_k=0.05/K.',
+   'anytime_checkpoint_validity':'By Weyl, rank<=3 implies sigma4(Hhat)<=||Hhat-H||. Union bound over the frozen K checkpoints gives familywise Type-I error <=0.05.',
+   'pair_matched_variance_reason':'If E[FF^T]=E[GG^T]=I, then E[XX^T]<=M I and E[X^T X]<=M I for X=FG^T; ||H||<=1, hence nu<=M and centered norm R<=M+1.',
+   'pair_standardization_residual':std_res,
+   'sample_outer_product_norm_M':M,
+   'checkpoint_alpha_each':ak,
+   'checkpoints':checkpoints
+ },
+ 'classes':classes,
+ 'comparison':{
+   'previous_determinant_anytime_expected_log_design_paths_about':4.16e14,
+   'previous_fixed_time_frozen_variance_matrix_Bernstein_paths':3817408,
+   'interpretation':'The new certificate is genuinely composite-null and checkpoint-anytime-valid. It is much cheaper than the determinant e-process but more expensive than a frozen-alternative variance power calculation.'
+ },
+ 'blocked_route':'A likelihood e-value P_alt(data)/sup_{Q in rank<=3}Q(data) would be attractive, but the global supremum over the continuous nonconvex rank<=3 positive-process class is not certified. A local EM optimum is not admissible as the denominator.',
+ 'decision':'HANKEL-03B is partially closed: a practical-in-principle sequential matrix certificate exists without determinant compression, but broad rank<=3 exclusion still needs O(10^8) resets under worst-case bounds and O(10^7) even after exact pair-law matching.',
+ 'nonconclusion':'No laboratory sample recommendation or universal optimal rank test follows.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-HANKEL-03B_checkpoint_cs.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'sigma4':sigma4,'generic_first':classes['generic_rank_le3']['first_frozen_grid_checkpoint_with_radius_below_sigma4'],'pair_first':classes['pair_matched_rank_le3']['first_frozen_grid_checkpoint_with_radius_below_sigma4']},indent=2))

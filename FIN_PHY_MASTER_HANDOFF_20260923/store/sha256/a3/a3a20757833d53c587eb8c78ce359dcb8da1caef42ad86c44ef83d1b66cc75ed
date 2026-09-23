@@ -1,0 +1,11 @@
+# Replay
+
+From the package root:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python replay.py
+python verify_package.py
+```
+
+`replay.py` runs every scientific producer under `scripts/` and compares all
+JSON results byte-for-byte against `EXPECTED_RESULTS.sha256`.

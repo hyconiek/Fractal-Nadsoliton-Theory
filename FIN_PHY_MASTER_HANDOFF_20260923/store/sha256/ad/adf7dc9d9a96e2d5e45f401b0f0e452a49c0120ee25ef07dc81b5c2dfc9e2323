@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+from scipy.optimize import minimize_scalar
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,Lam,X7,C4,A7=model.feature_spaces();q=12;j=np.arange(q);u=np.ones(q)/q
+
+def e(k,phi): return np.sqrt(2/q)*np.cos(2*np.pi*k*j/q+phi)
+r=.025
+p0=u+sum(r*e(k,0) for k in range(1,6))
+p1=u+r*e(1,0)+r*e(2,math.pi/2)+sum(r*e(k,0) for k in range(3,6))
+assert p0.min()>0 and p1.min()>0
+
+def log_ch(s): return math.log(float(np.sum((p0**s)*(p1**(1-s)))))
+res=minimize_scalar(log_ch,bounds=(0,1),method='bounded'); C=-float(res.fun)
+TV=.5*float(np.abs(p0-p1).sum()); KL01=float(np.sum(p0*np.log(p0/p1)));KL10=float(np.sum(p1*np.log(p1/p0)))
+ns={}
+for delta in [0.1,0.05,0.01]: ns[str(delta)]=int(math.ceil(math.log(0.5/delta)/C))
+out={
+ 'task':'OBS-01-relative-phase-operational-protocol',
+ 'scientific_state':'SYNTHETIC_PREREGISTRABLE_DISCRIMINATION_PROTOCOL__NO_EMPIRICAL_VALIDATION',
+ 'preparation':'Two admissible small-radius states with identical five modal powers; only phi_2 is shifted by pi/2.',
+ 'measurement':'IID label-resolved samples j in {0,...,11}. Power-only summaries are declared null/coarse controls; full label counts or the preregistered bispectrum statistic are phase-sensitive.',
+ 'TV_single_sample':TV,'KL_p0_p1':KL01,'KL_p1_p0':KL10,'Chernoff_information':C,'Chernoff_s_star':float(res.x),
+ 'ideal_Chernoff_upper_bound_sample_counts_for_Bayes_error':ns,
+ 'power_only_null':'Exactly identical modal powers and strict quadratic energy; no power-only test can distinguish the pair.',
+ 'held_out_statistic':'arg(z1^2 conjugate(z2)) or full multinomial likelihood, fixed before records.',
+ 'conclusion':'Relative spectral phases have operational content in a label-resolved classical record even though they are invisible to strict energy/power measurements.',
+ 'nonconclusions':['Synthetic sample counts are not a laboratory recommendation.','No apparatus, calibration noise or empirical data are included.']
+}
+p=ROOT/'results'/'OBS-01_phase_protocol.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'Chernoff':C,'n5pct':ns['0.05']},indent=2))

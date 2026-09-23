@@ -1,0 +1,21 @@
+# Dual internal geometry consistency check
+
+Two parameter-free graph extractions now exist inside the declared FIN model:
+
+1. **Strict-weight skeleton.** Treat the full strict off-diagonal weights only as similarities and keep the strongest complete shells until the graph first becomes connected. Since
+   `W(1)=0.469985672645...` while for every `d>=2`, `|W(d)|<=1/(1+2^1.8)=0.223104613204...`, the unique first shell is `d=1`. It already forms `C_q`.
+2. **Localized-phase RG-2 skeleton.** On the continued smooth-plus-parity localized orbit, the intrinsic phase-distance/fiber rule gives `C_q(1,2)` for all sufficiently large even q.
+
+These graphs are metrically close in a precise sense:
+
+`d_{C_q(1,2)}(0,r)=ceil(d_{C_q}(0,r)/2)`.
+
+After circumference normalization, both graph metrics converge to the same circle geodesic metric. Their low-frequency combinatorial Laplacians also have one-dimensional limits,
+
+`q^2 lambda_k(C_q) -> (2 pi k)^2`,
+
+`q^2 lambda_k(C_q(1,2)) -> 5(2 pi k)^2`.
+
+Thus two constructions give the same internal `S1` topology/spectral dimension but different dimensionless stiffness.
+
+This is **not independent evidence for emergent physical space**. The strict kernel was itself written using cyclic distance, and the phase features were extracted from its spectrum. The result is best understood as a nontrivial consistency check across two layers of the same model. Both geometries are internal label/state geometries, not sparse adjacency among many physical cells.

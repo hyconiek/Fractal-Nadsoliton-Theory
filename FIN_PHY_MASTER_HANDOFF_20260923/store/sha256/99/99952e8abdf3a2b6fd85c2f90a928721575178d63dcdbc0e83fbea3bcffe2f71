@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json
+import numpy as np
+from scipy.linalg import qr
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); h=c-m; delta=.05; rho=.8; alphabet=tuple(range(11))
+
+def strict_prob(word):
+ x=1.
+ for a in word:x*=p[a]
+ return x
+
+def periodic_oracle(L):
+ states=[np.array([1. if (mask>>j)&1 else -1. for j in range(L)]) for mask in range(1<<L)]
+ def prob(word):
+  out=0.
+  for z in states:
+   pr=1.
+   for t,a in enumerate(word):pr*=p[a]+delta*z[t%L]*c[a]
+   out+=pr/len(states)
+  return float(out)
+ return prob
+
+def unique(xs):
+ out=[];seen=set()
+ for x in xs:
+  if x not in seen:seen.add(x);out.append(x)
+ return out
+
+def local_one_step_closure(oracle,tol=1e-11):
+ P=[()];S=[()]
+ Pext=unique(P+[u+(a,) for u in P for a in alphabet])
+ Sext=unique(S+[(a,)+v for v in S for a in alphabet])
+ H=np.array([[oracle(u+v) for v in Sext] for u in Pext])
+ sv=np.linalg.svd(H,compute_uv=False)
+ return int(np.sum(sv>tol)),sv[:8].tolist(),len(Pext)*len(Sext)
+
+# Counterexample: local one-step rank stability does not imply global Hankel closure.
+local=[]
+for L in range(1,5):
+ rank,sv,q=local_one_step_closure(periodic_oracle(L))
+ local.append({'period_L':L,'local_one_step_extended_rank':rank,'true_hankel_rank':2**L,'local_entries_queried':q,'top_singular_values':sv,'false_stop_if_rank1_declared_closed':bool(L>=2 and rank==1)})
+
+# FIN-specific linear-cost lag contrast protocol for the rotating-sign alias family.
+# E[h(X_t) h(X_{t+ell})]=(4 delta)^2 if ell divisible by L, else 0 (for ell>0).
+Hmax=8
+lag_rows=[]
+for L in range(1,Hmax+1):
+ vals=[]
+ for ell in range(1,Hmax+1):
+  mu=(4*delta)**2 if ell%L==0 else 0.0
+  vals.append(mu)
+ first=next((ell for ell,mu in enumerate(vals,1) if abs(mu)>1e-15),None)
+ lag_rows.append({'period_L':L,'lag_moments':vals,'first_nonzero_lag':first,'expected':L})
+
+result={
+ 'task':'OCB-MEM-02',
+ 'status':'GENERIC_EARLY_SPAN_STOP_REFUTED__LINEAR_LAG_PROTOCOL_PASSES_FOR_DECLARED_ALIAS_FAMILY',
+ 'generic_kill_test':{
+   'statement':('One-symbol Hankel rank stabilization is not a safe stopping rule with membership/path-probability access alone. '
+                'Period-L aliases with L>=2 agree with strict on all words through length L and therefore can present local rank 1 before the first hidden correlation is observable.'),
+   'rows':local,
+   'consequence':'A generic adaptive finite-equivalence protocol needs an additional completeness/equivalence oracle, a declared structural model class, or a guaranteed horizon; local rank stabilization alone is insufficient.'
+ },
+ 'fin_specific_periodic_alias_protocol':{
+   'contrast':'h(X)=c(X)-E_p[c]',
+   'formula':'E[h_t h_(t+ell)] = (4 delta)^2 if L divides ell, and 0 otherwise.',
+   'Hmax':Hmax,
+   'rows':lag_rows,
+   'query_complexity':'O(Hmax) lag observables rather than 11^Hmax word probabilities for this explicit alias family.',
+   'decision':'Scanning lag 1..Hmax detects every declared period-L alias with L<=Hmax at its first nonzero lag L.'
+ },
+ 'separation_from_standard_theorem':('The standard bounded-state weighted-automaton equivalence theorem remains valid once a complete word agreement condition is established. '
+                                     'This result concerns the operational query/stopping problem: local span stabilization does not certify that completeness condition.'),
+ 'nonconclusion':'The lag protocol is not universal for arbitrary hidden Markov models; an adversarial memory process can hide outside this contrast family.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-MEM-02_adaptive_hankel.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'local':local,'lag_firsts':[(r['period_L'],r['first_nonzero_lag']) for r in lag_rows]},indent=2))

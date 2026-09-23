@@ -1,0 +1,31 @@
+import json, math, sys
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+fold=json.loads((ROOT/'inputs'/'R7P-031_simple_fold.json').read_text())
+W,A,L,X7,C4,A7=model.feature_spaces()
+aug=np.array([sum(map(float,b))/2 for b in fold['augmented_root_box']])
+s=aug[:4]; g=aug[4]; v4=aug[5:]
+theta=np.zeros(7);theta[[0,2,4,6]]=s
+phi,grad,H,p=model.dual7(theta,g,X7)
+mu=p@X7;Y=X7-mu;Cov=Y.T@(p[:,None]*Y)
+v7=np.zeros(7);v7[[0,2,4,6]]=v4
+dmu=Cov@v7
+stiff=float(dmu@dmu)
+hard_gap=0.01722595538834604
+out={
+ 'task':'PHY-022','scientific_state':'PASS_CONDITIONAL_MICROSCOPIC_STIFFNESS_AND_CONTROLLED_HARD_MODE_TEMPLATE',
+ 'source_pm':'PM-001 retained-mean edge coupling',
+ 'fold_gain':g,'fold_null_norm':float(np.linalg.norm(v4)),
+ 'dmu_dxi':dmu.tolist(),'dmu_norm_sq':stiff,
+ 'projected_edge_term':f'(kappa/2)*{stiff:.15g}*sum_edges (xi_x-xi_y)^2 + higher orders',
+ 'hard_transverse_gap_lower':hard_gap,
+ 'hard_elimination_bound':'for hard block C>=gamma I and cross block ||B||<=beta, Schur correction norm <= beta^2/gamma; valid only while gamma remains positive and nonlinear remainder is paid',
+ 'continuum_scaling_note':'on C_M with h=1/M, a finite gradient term after multiplying the lattice sum by h requires kappa_M proportional to h^-2=M^2; fixed kappa gives vanishing continuum gradient stiffness under that convention',
+ 'separations':['coexistence is first order and occurs away from fold','fold soft coordinate is a metastable local branch coordinate','D12 remains discrete'],
+ 'nonconclusions':['no fundamental field','no massless particle','no critical universality','stiffness source is conditional on PM-001']
+}
+(ROOT/'results'/'PHY-022_collective.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))

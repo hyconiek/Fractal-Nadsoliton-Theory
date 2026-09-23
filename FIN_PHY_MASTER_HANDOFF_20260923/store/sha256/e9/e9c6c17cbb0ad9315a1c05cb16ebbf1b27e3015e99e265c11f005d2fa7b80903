@@ -1,0 +1,10 @@
+# Replay
+
+The package contains deterministic producer scripts under `scripts/` and their expected result hashes in `EXPECTED_RESULTS.sha256`.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay.py --check
+python3 verify_package.py
+```
+
+`replay.py --check` reruns every scientific producer except the registry builder, rebuilds the registry, and compares every JSON result against its frozen SHA-256.  The RNG scout uses a fixed seed.

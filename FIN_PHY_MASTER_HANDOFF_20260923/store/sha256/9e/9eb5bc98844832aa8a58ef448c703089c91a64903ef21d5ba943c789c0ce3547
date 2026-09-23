@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+out={
+ 'task':'HDIM-19-campaign-synthesis',
+ 'scientific_state':'NEW_HIGHER_DIMENSIONAL_INTERNAL_CARRIER_ESTABLISHED__SOURCE_OF_PROTECTION_AND_PHYSICALIZATION_OPEN',
+ 'strongest_new_claims':[
+  'Strict A has exact connected orthogonal centralizer T5 from five Fourier doublets.',
+  'A nonempty small-radius T5 lies inside the probability simplex and has flat Euclidean/Dirichlet metrics.',
+  'Four independent origin-free bispectral phase observables form a T4 relational coordinate family with a positive flat quotient metric.',
+  'The T5 carrier survives Kronecker refinement/forgetful maps exactly on the fiber-constant sector.',
+  'Finite-q entropy has trivial connected orthogonal stabilizer near uniform and breaks the T5 accidental quadratic symmetry.',
+  'All spectral-radial nonlinearities Psi(I_k) preserve T5, but no current principle selects one protecting law.',
+  'Relative phases are operationally distinguishable by full/bispectral records while power-only observers are exactly blind.'
+ ],
+ 'conceptual_update':'The previous search for a second spatial-like Goldstone coordinate was too narrow. FIN already contains a genuinely higher-dimensional internal relational manifold in its strict linear spectral degeneracies. What is missing is not higher-dimensional mathematics but a sourced law that protects/populates that manifold and a bridge showing that any of it should be interpreted as locality/space.',
+ 'next_atoms':['PROTECT-03 search repository strict principles for a source of spectral-radial nonlinearity; stop if only free coefficients/functions are found','PROX-04 replace scout by a theorem/counterexample for RNG operator convergence on a compact flat T4 sampling model','DYN-TORUS test heat/wave/unitary evolution of the T5/T4 coordinates and whether any causal bound is intrinsic to the torus metric','RANK-SOURCE and absolute TIME-SOURCE remain independent blockers'],
+ 'guardrail':'The appearance of an internal dimension four is mathematically interesting but has zero licensed connection to 3+1 spacetime. It is a spectral-shape dimension in a quadratic operator sector.'
+}
+p=ROOT/'results'/'HDIM-19_synthesis.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'state':out['scientific_state']},indent=2))

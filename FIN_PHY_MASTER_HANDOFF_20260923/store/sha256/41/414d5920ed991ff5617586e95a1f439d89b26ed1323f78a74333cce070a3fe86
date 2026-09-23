@@ -1,0 +1,45 @@
+# PHY-008 — bridge-map composition and information retention
+
+**Scientific status: PASS_IN_SCOPE_WITH_GROWING_CAUSAL_MEMORY. Fixed-dimensional Markov closure is refuted for the tested coarse variables.**
+
+## Static composition passes exactly
+
+Let `B1` send each per-cell distribution `p_x` to `mu_x=X^T p_x`. Let `B2` average those retained means inside a declared block. Because both operations are linear,
+
+`B2(B1(p)) = X^T (block-average of p)`
+
+exactly. Two frozen partitions of a five-cell path were checked: a contiguous two-block partition and an alternating partition. Maximum numerical defects were below `6e-17`.
+
+This is genuine compositional consistency, but it is only a static statement.
+
+## Dynamics exposes hidden memory
+
+Three exact finite witnesses show that progressively richer fixed coarse descriptions still fail to close the interacting dynamics.
+
+1. **Same one-site marginals, different correlations.** For two cells, `0.5(a,a)+0.5(b,b)` and `0.5(a,b)+0.5(b,a)` have identical one-site marginals. After one endpoint event their output marginals differ by TV up to **0.255569** for Metropolis and **0.111740** for Barker.
+
+2. **Same pair marginals, different triple information.** Even/odd parity mixtures on two labels have identical one- and two-cell marginals. After updating the middle of a three-cell path, the output edge-pair marginals differ by TV up to **0.218801** (Metropolis) and **0.109245** (Barker). Pair marginals therefore do not give an exact degree-two closure.
+
+3. **Same retained FIN mean, different hidden Fourier content.** The exact PHY-004 pair `p_+`,`p_-` has the same retained mean. With a fixed neighbor, one endpoint event produces different retained means: maximum L2 separation is **0.0242172** for Metropolis and **0.0106602** for Barker. Thus there is no exact autonomous `mu -> mu'` rule on the full simplex.
+
+## Exact finite-horizon bridge
+
+There is nevertheless a nontrivial exact statement.
+
+For any read-radius-one local event rule, an observable at target cell `y` after `t` causally ordered event layers depends only on the initial **joint distribution on the causal ball `B_t(y)`** and the event/randomness data inside that causal cone.
+
+Therefore the diagram commutes exactly when the bridge retains the full causal-ball marginal. The defect is zero for the declared local observable and finite horizon.
+
+The price is growing memory. On a path, the retained region expands by one cell per side per layer until it reaches the boundary. This is not a fixed-dimensional Markov closure.
+
+## Coarse partitions
+
+Both tested partitions commute statically. Dynamically, every active cut edge requires cross-boundary correlation memory. The alternating partition cuts four path edges while the contiguous partition cuts one, so their memory burden differs even though the static observable map is equally valid.
+
+## Decision
+
+The strong claim that the same low-dimensional state can be passed through successive “media” with exact autonomous dynamics is refuted in this class. A weaker and more precise statement survives:
+
+> **local predictive information can be carried exactly through finite horizons if the bridge retains the causal-neighborhood memory required by the local interaction.**
+
+This is a first genuine multi-level informational bridge, but it is not full microstate preservation, automatic Markov closure, or evidence of physical medium identity.

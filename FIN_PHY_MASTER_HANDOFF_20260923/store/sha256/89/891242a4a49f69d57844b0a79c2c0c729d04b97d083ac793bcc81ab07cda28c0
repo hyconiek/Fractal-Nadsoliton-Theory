@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); L=np.array(L,float)
+mult={1:2,2:2,3:2,4:2,5:2,6:1}
+ranks=[1,3,5,7,9,11]; active=[[6],[6,5],[6,5,4],[6,5,4,3],[6,5,4,3,2],[6,5,4,3,2,1]]
+rows=[]
+for r,ks in zip(ranks,active):
+    diag=sum(mult[k]*L[k] for k in ks)/12.0
+    gv=2*math.log(12)/diag
+    frob_res=sum(mult[k]*L[k]**2 for k in range(1,7) if k not in ks)
+    rows.append({'rank':r,'retained_modes':ks,'A_r_diagonal':diag,'pure_vertex_crossing_g':gv,'discarded_frobenius_squared':frob_res})
+# largest spectral gap among positive sectors, descending order; cut rank is cumulative multiplicity above the gap
+desc=[6,5,4,3,2,1]
+gaps=[]; cum=0
+for i in range(len(desc)-1):
+    cum+=mult[desc[i]]
+    gaps.append({'cut_after_mode':desc[i],'rank_above_cut':cum,'gap':float(L[desc[i]]-L[desc[i+1]]),'ratio':float(L[desc[i]]/L[desc[i+1]])})
+largest=max(gaps,key=lambda x:x['gap'])
+# Penalized EYM error + beta*r: rank7 iff including k3 but excluding k2: lambda2^2 <= beta < lambda3^2.
+beta_interval=[float(L[2]**2),float(L[3]**2)]
+geq=3.7183448981203875
+first_at_geq=next(x['rank'] for x in rows if x['pure_vertex_crossing_g']<=geq)
+first_at_4=next(x['rank'] for x in rows if x['pure_vertex_crossing_g']<=4.0)
+out={
+ 'task':'RANK-01-rank-seven-source-audit',
+ 'scientific_state':'PROVED_NONIDENTIFIABILITY_OF_RANK_SEVEN_UNDER_COMMON_TARGET_BLIND_SPECTRAL_PRINCIPLES',
+ 'strict_sector_eigenvalues':{str(k):float(L[k]) for k in range(1,7)},
+ 'top_spectral_truncations':rows,
+ 'largest_positive_sector_gap':largest,
+ 'EYM_plus_rank_penalty':{'objective':'||A-A_r||_F^2 + beta*r','rank7_selected_iff_beta_in_half_open_interval':beta_interval,'unsourced_parameter':'beta'},
+ 'pure_vertex_rule':{'rule':'choose the smallest D12-compatible top-spectral rank for which a pure vertex has V_g<0 relative to uniform','at_g_4':first_at_4,'at_rank7_coexistence_g_approx':first_at_geq,'g_used':geq},
+ 'positive_conditional_result':'Once an admissible rank/subspace dimension is supplied, Eckart-Young-Mirsky canonically selects the top spectral subspace and therefore its retained strict eigenvalues; those weights need not be fitted independently.',
+ 'no_go':'Rank seven itself is not selected by the full strict spectrum alone. Natural gap, complexity-penalty and localization-threshold principles disagree or require an unsourced scale/control.',
+ 'source_obligation':'A genuine rank source must choose the rank before inspecting rank-7 localization targets and without an unsourced beta, gain, error tolerance or desired phase multiplicity; it must transfer to a held-out carrier/refinement.',
+ 'nonconclusions':['No claim that rank seven is physically wrong.','No refutation of the rank-seven effective model.','Only its fundamental provenance remains open.']
+}
+assert largest['rank_above_cut']==9 and first_at_4==7 and first_at_geq==9
+p=ROOT/'results'/'RANK-01_rank7_source_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'largest_gap':largest,'rank_at_g4':first_at_4,'rank_at_geq':first_at_geq,'beta_interval':beta_interval},indent=2))

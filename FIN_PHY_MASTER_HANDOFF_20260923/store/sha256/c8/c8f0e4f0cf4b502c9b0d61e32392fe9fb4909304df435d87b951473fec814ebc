@@ -1,0 +1,109 @@
+# FIN phase-orbit geometry theorem package
+
+## Theorem A — certified q=12 phase graph
+
+On the accepted MP7 coexistence root box, the six nonzero translation-shell distances are strictly ordered
+
+`d3 < d4 < d5 < d2 < d6 < d1`.
+
+Therefore the parameter-free minimal-connectivity rule RG-1 gives exactly
+
+`Cay(Z_12,{+/-3,+/-4})`.
+
+The interval certificate is `results/PHY-013_q12_phase_graph_interval.json`.
+
+## Theorem B — smooth-orbit cycle
+
+For any positive modal radii on modes `(3,4,5)`,
+
+`t -> (rho3 e^(i3t),rho4 e^(i4t),rho5 e^(i5t))`
+
+is a smooth embedding of `S1`. Uniform sufficiently fine sampling therefore has adjacent samples as the unique nearest shell.
+
+## Theorem C — parity obstruction
+
+For the full smooth-plus-parity orbit,
+
+`D^2(r)=D_smooth^2(r)+4 z^2 1_(r odd)`.
+
+If `|z|` stays bounded below, the naive one-threshold RG-1 includes `Theta(q)` even neighbors before it can connect the two parity sheets. Its degree is unbounded.
+
+## Theorem D — parity-fiber support with an explicit q gate
+
+Treat the alternating coordinate as an intrinsic unordered `Z2` fiber. The full finite-q localized branch is certified below for every even `q>=190`. On its common branch box all smooth radii and `|z|` are uniformly positive.
+
+For every such `q`, the smooth distance is strictly increasing on `0<delta<pi/5`. A grid-plus-Lipschitz certificate gives the remote lower bound
+
+`D_smooth^2(delta) > 0.9984204` for `delta in [pi/5,pi]`,
+
+while at `q=190` the worst branch-box upper bounds are
+
+- within-sheet `r=2`: `<0.060352`,
+- cross-sheet smooth part `r=1`: `<0.015168`.
+
+Hence for every even `q>=190`:
+
+- the unique nearest nonzero even shell is `r=+/-2`,
+- the unique nearest odd shell is `r=+/-1`.
+
+Therefore RG-2 gives exactly
+
+`Cay(Z_q,{+/-1,+/-2})`, degree four.
+
+See `results/PHY-013_RG2_support_certificate.json`.
+
+## Theorem E — theorem-grade continuum branch persistence at g=7
+
+The continuum smooth three-mode dual has an interval-assisted locally unique root in the radius-`1e-3` box centered at
+
+`(3.547595277395986, 3.783140506071965, 3.677956492814370)`,
+
+with Hessian lower bound `>0.0821` on that box. The parity sector has a unique positive root because
+
+`g=7 > 12/lambda6 = 5.123427551398616`.
+
+Using the analytic periodic trapezoid alias bound on the even/odd `q/2` sublattices and frozen strip widths, a 4D Krawczyk/contraction enclosure passes at `q=190`. The same raw bounds decrease monotonically with `q/2`.
+
+Therefore **for every even q>=190** the finite-q dual has a unique stationary point in the declared 4D box and positive Hessian throughout the box. This is a uniform local branch theorem, not a global-minimum theorem.
+
+See `results/PHY-013_finite_q_branch_analytic.json`.
+
+## Theorem F — internal one-dimensional continuum
+
+For `G_q=Cay(Z_q,{+/-1,+/-2})`,
+
+`d_G(0,r)=ceil(min(r,q-r)/2)`
+
+and `(2/q)d_G` converges uniformly to the geodesic metric on a unit circle. The combinatorial-Laplacian eigenvalues obey
+
+`q^2 lambda_k -> 5(2*pi*k)^2`
+
+for every fixed k.
+
+## Theorem G — state-sourced cell cycle under distinct phases
+
+For cells with nonzero modes `m3,m4`, define the intrinsic phase
+
+`u=m4 conj(m3)/|m4 m3| in S1`.
+
+For pairwise distinct phases, circular-order/Delaunay adjacency gives exactly `C_M`, degree two, without external coordinates or a fitted threshold. For discrete q phases, `q/M^2 -> infinity` is sufficient for phase ties to vanish in probability.
+
+This is conditional cell geometry; it is not yet physical space.
+
+## Theorem H — unique minimal exact metric backbone
+
+For distinct sampled points on `S1` whose consecutive gaps are all `<pi`, require a graph whose edge weights are inherited circle distances and whose shortest-path metric equals the complete sampled circle metric exactly. Every consecutive circular edge is then necessary. Hence the circular cycle is the unique inclusion-minimal exact metric realization.
+
+Under diffuse Haar sampling, the all-gaps-`<pi` gate holds with probability tending exponentially to one.
+
+## No-go I — phase-type blow-up is not cell-space geometry
+
+A cell graph depending only on a finite phase type is a blow-up of the phase graph. Macroscopic phase occupancies give degree `Theta(M)`. Pair-specific state relations or another selection law are necessary.
+
+## No-go J — one continuous phase cannot become three spatial dimensions
+
+The present relational coordinate space is `S1` with a finite `Z2` fiber. Increasing q or M refines that same one-dimensional continuum; it cannot by itself produce three continuous dimensions.
+
+## Scope
+
+These statements concern the declared q-extension, its localized branch and conditional state-sourced graph constructions. They do **not** establish physical space, dimensional units, Lorentz invariance, gravity, or a fundamental source law for the modelling principles used after the isolated FIN cell.

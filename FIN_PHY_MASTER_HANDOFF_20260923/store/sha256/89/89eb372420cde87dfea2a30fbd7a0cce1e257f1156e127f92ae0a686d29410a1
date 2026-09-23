@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for M in [1,2,3,4,8]:
+ rows.append({'cell_count_M':M,'joint_label_count':12**M,'independent_translation_rank':M,'conditional_residual_phase_torus':f'T^{M}'})
+out={
+ 'task':'HDIM-PRODUCT-configuration-space-guard',
+ 'scientific_state':'PROVED_KNOWN_MULTICELL_PRODUCT_GENERATES_CONFIGURATION_TORUS_WITH_DIMENSION_GROWING_WITH_CELL_COUNT__NOT_FIXED_SPACE_DIMENSION',
+ 'rows':rows,
+ 'theorem':'Under the already declared composition of M independent 12-label cells, the joint carrier is (Z_12)^M and the noninteracting generator is the M-fold Kronecker sum. Its independent carrier translations have rank M. The same resonance-locking argument can therefore leave a T^M phase manifold.',
+ 'guardrail':'Here M is the number of subsystems. Since M is arbitrary and grows when more cells are added, this T^M is naturally a configuration-space/internal-product symmetry, not a candidate for a fixed-dimensional physical base space.',
+ 'physical_dimension_obligation':'To use a product-carrier T^d as a physical/base-space dimension, FIN would need a separate fixed internal factorization with d factors per local unit, or a theorem quotienting the M-cell configuration symmetry to a fixed d independent of M.',
+ 'consequence':'The positive general-d resonance theorem does not solve DIMENSION-SOURCE by itself. It identifies a scalable mathematical mechanism but also exposes the configuration-space trap.',
+ 'nonconclusions':['No contradiction with using product carriers as internal models.','No claim that physical configuration spaces are unimportant.']
+}
+p=ROOT/'results'/'HDIM-PRODUCT_configuration_guard.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

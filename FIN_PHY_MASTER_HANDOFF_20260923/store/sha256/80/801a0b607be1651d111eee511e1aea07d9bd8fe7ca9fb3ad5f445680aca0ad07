@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+import json, math, sys
+from pathlib import Path
+import numpy as np
+from scipy.optimize import root, brentq
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); lam=np.array([L[3],L[4],L[5],L[6]],float)
+g=7.0
+ks=np.array([3,4,5]); amps=np.sqrt(lam[:3]/6.0); c6=math.sqrt(lam[3]/12.0)
+
+def solve_smooth(N,x0):
+    t=2*np.pi*np.arange(N)/N
+    X=np.stack([amps[i]*np.cos(ks[i]*t) for i in range(3)],axis=1)
+    def grad(s):
+        h=X@s; m=h.max(); w=np.exp(h-m); w/=w.sum(); return s/g-w@X
+    rr=root(grad,x0,tol=1e-12)
+    s=rr.x; h=X@s; m=h.max(); w=np.exp(h-m); w/=w.sum(); mean=w@X
+    cov=(X*w[:,None]).T@X-np.outer(mean,mean); H=np.eye(3)/g-cov
+    phi=float(s@s/(2*g)-(m+math.log(float(np.mean(np.exp(h-m))))))
+    return {'N':N,'s':s.tolist(),'mu':mean.tolist(),'phi':phi,'hessian_eigenvalues':np.linalg.eigvalsh(H).tolist(),
+            'gradient_norm':float(np.linalg.norm(grad(s))),'success':bool(rr.success)}
+
+rows=[]; x0=np.array([3.55,3.78,3.68])
+for N in [32768,65536,131072,262144]:
+    r=solve_smooth(N,x0); x0=np.array(r['s']); rows.append(r)
+alpha=g*c6*c6; gcrit=1/(c6*c6)
+b=brentq(lambda b:b/alpha-math.tanh(b),1e-9,10)
+s6=b/c6; z=s6/g; phi_par=s6*s6/(2*g)-math.log(math.cosh(b))
+lim=rows[-1]
+full_phi=lim['phi']+phi_par
+# Compare finite q followup
+pg=json.loads((ROOT/'results'/'PHY-013_phase_geometry_source.json').read_text())
+comp=[]
+for r in pg['full_rank7_g7_scout']:
+    if r['q']>=96:
+        comp.append({'q':r['q'],'phi':r['phi'],'phi_minus_limit':r['phi']-full_phi,
+                     's_smooth_max_abs_diff':float(np.max(np.abs(np.array(r['s'][:3])-np.array(lim['s'])))),
+                     'z_minus_limit':r['z']-z})
+out={
+ 'task':'PHY-013-phase-continuum-limit',
+ 'scientific_state':'ANALYTIC_PARITY_LIMIT__HIGH_PRECISION_SMOOTH_CONTINUUM_FIXED_POINT',
+ 'g':g,
+ 'limit_factorization':'For even q, the parity-weighted Riemann sum tends to Z_smooth(s3,s4,s5)*cosh(c6*s6). Hence the continuum dual splits Phi_inf=Phi_smooth + s6^2/(2g)-log cosh(c6*s6).',
+ 'parity_sector':{
+   'c6_squared':c6*c6,'g_critical_exact_form':'12/lambda6','g_critical':gcrit,'alpha_g_c6_squared':alpha,
+   'stationarity_equation':'b/(g*c6^2)=tanh(b), b=c6*s6',
+   'positive_b':b,'s6':s6,'z_mu_parity':z,'phi_parity':phi_par,
+   'theorem':'A nonzero +/- parity pair exists uniquely for g>12/lambda6; only b=0 exists for g<=12/lambda6. This is the continuum Z2 pitchfork sector.'
+ },
+ 'smooth_quadrature_sequence':rows,
+ 'selected_smooth_limit_numeric':lim,
+ 'combined_limit_numeric':{'phi':full_phi,'s':lim['s']+[s6],'mu':lim['mu']+[z],
+                           'min_smooth_hessian_eigenvalue':min(lim['hessian_eigenvalues'])},
+ 'finite_q_comparison':comp,
+ 'proof_scope':{
+   'analytic':'parity factorization in the continuum limit and parity pitchfork criterion',
+   'numerical':'the specific nonzero smooth continuum root and its Hessian; trapezoid convergence is independently checked at four resolutions',
+   'not_yet_interval_certified':'a quantitative q0 guaranteeing the full finite-q localized branch from an interval-certified continuum root'
+ }
+}
+p=ROOT/'results'/'PHY-013_phase_continuum_limit.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'gcrit':gcrit,'z':z,'smooth_mu':lim['mu'],'minH':min(lim['hessian_eigenvalues']),'full_phi':full_phi,'last_comparison':comp[-1]},indent=2))

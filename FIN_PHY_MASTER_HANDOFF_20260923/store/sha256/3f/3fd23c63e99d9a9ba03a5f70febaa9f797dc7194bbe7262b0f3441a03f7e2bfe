@@ -1,0 +1,120 @@
+{
+  "task": "OCB-MEM-01A",
+  "status": "EXACT_FINITE_MEMORY_HORIZON_ALIAS_THEOREM",
+  "strict_increment_distribution": [
+    0.2830715004720707,
+    0.11566747562103387,
+    0.055067285102714573,
+    0.028325581262645172,
+    0.014534191153798844,
+    0.006667932775473757,
+    0.014534191153798844,
+    0.028325581262645172,
+    0.055067285102714573,
+    0.11566747562103387,
+    0.2830715004720707
+  ],
+  "contrast_vector_shell1_plus_shell2_minus": [
+    1.0,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1.0
+  ],
+  "contrast_mean_m": 0.3348080497020737,
+  "valid_delta_interval": [
+    0.0,
+    0.11566747562103387
+  ],
+  "construction": "Choose L hidden iid signs Z_0,...,Z_{L-1}; at jump t use visible increment law p+delta*Z_{t mod L}*c and rotate the hidden word. The hidden state space is finite (2^L ordered sign words).",
+  "theorem": "For every L>=1 and 0<delta<delta_max, every visible path law of n<=L consecutive jumps is exactly p^{tensor n}. At n=L+1 the law differs by delta^2*c tensor p^{tensor(L-1)} tensor c, hence total variation is exactly 8 delta^2, independent of L.",
+  "verification_rows_delta_0p05": [
+    {
+      "L": 1,
+      "n_steps": 1,
+      "tv": 0.0,
+      "expected_tv": 0.0,
+      "abs_error": 0.0
+    },
+    {
+      "L": 1,
+      "n_steps": 2,
+      "tv": 0.020000000000000004,
+      "expected_tv": 0.020000000000000004,
+      "abs_error": 0.0
+    },
+    {
+      "L": 2,
+      "n_steps": 2,
+      "tv": 2.862293735361732e-17,
+      "expected_tv": 0.0,
+      "abs_error": 2.862293735361732e-17
+    },
+    {
+      "L": 2,
+      "n_steps": 3,
+      "tv": 0.02000000000000002,
+      "expected_tv": 0.020000000000000004,
+      "abs_error": 1.734723475976807e-17
+    },
+    {
+      "L": 3,
+      "n_steps": 3,
+      "tv": 3.130551716735129e-17,
+      "expected_tv": 0.0,
+      "abs_error": 3.130551716735129e-17
+    },
+    {
+      "L": 3,
+      "n_steps": 4,
+      "tv": 0.020000000000000014,
+      "expected_tv": 0.020000000000000004,
+      "abs_error": 1.0408340855860843e-17
+    },
+    {
+      "L": 4,
+      "n_steps": 4,
+      "tv": 4.2573153509457223e-17,
+      "expected_tv": 0.0,
+      "abs_error": 4.2573153509457223e-17
+    },
+    {
+      "L": 4,
+      "n_steps": 5,
+      "tv": 0.020000000000000035,
+      "expected_tv": 0.020000000000000004,
+      "abs_error": 3.122502256758253e-17
+    },
+    {
+      "L": 5,
+      "n_steps": 5,
+      "tv": 1.0344252628982101e-16,
+      "expected_tv": 0.0,
+      "abs_error": 1.0344252628982101e-16
+    },
+    {
+      "L": 5,
+      "n_steps": 6,
+      "tv": 0.020000000000000046,
+      "expected_tv": 0.020000000000000004,
+      "abs_error": 4.163336342344337e-17
+    }
+  ],
+  "period2_heldout": {
+    "two_step_tv": 2.862293735361732e-17,
+    "three_step_tv": 0.02000000000000002,
+    "three_step_tv_formula": 0.020000000000000004,
+    "endpoint_contrast_expectation_strict": 0.1120964301453062,
+    "endpoint_contrast_expectation_alias": 0.15209643014530622,
+    "endpoint_contrast_gap": 0.04000000000000002,
+    "endpoint_contrast_gap_formula": 0.04000000000000001
+  },
+  "consequence": "No predeclared finite path horizon can exclude the class of all finite hidden-memory aliases unless an upper bound on memory depth/state complexity is an additional premise. For a declared memory bound L, a held-out path of length L+1 can break this explicit alias class.",
+  "nonconclusion": "This is an identifiability/no-go theorem for operational path records, not evidence that nature contains the constructed hidden memory."
+}

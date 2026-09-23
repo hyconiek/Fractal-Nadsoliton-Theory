@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import subprocess, os, hashlib, sys
+ROOT=Path(__file__).resolve().parent
+env=dict(os.environ);env['PYTHONDONTWRITEBYTECODE']='1'
+producers=[p for p in sorted((ROOT/'scripts').glob('*.py')) if p.name!='build_registry.py']
+for p in producers:
+    subprocess.run([sys.executable,str(p)],cwd=ROOT,env=env,check=True,stdout=subprocess.DEVNULL)
+subprocess.run([sys.executable,str(ROOT/'scripts'/'build_registry.py')],cwd=ROOT,env=env,check=True,stdout=subprocess.DEVNULL)
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+want={line.split()[1]:line.split()[0] for line in (ROOT/'EXPECTED_RESULTS.sha256').read_text().splitlines() if line.strip()}
+bad=[]
+for rel,h in want.items():
+    p=ROOT/rel
+    if not p.exists() or sha(p)!=h:bad.append((rel,h,sha(p) if p.exists() else None))
+if bad:
+    print('REPLAY HASH MISMATCH',bad);raise SystemExit(1)
+print(f'REPLAY PASS producers={len(producers)} result_hashes={len(want)}')

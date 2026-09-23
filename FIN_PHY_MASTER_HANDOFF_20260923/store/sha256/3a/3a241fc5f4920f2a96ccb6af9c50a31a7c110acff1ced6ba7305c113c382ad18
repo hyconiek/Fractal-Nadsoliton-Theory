@@ -1,0 +1,25 @@
+# PHY-021 — same statics, different dynamics
+
+**Scientific status: PASS_SAME_STATICS_DIFFERENT_KINETICS; dynamics is not sourced by the FIN potential.**
+
+At the accepted localized coexistence minimum the full H7 Hessian eigenvalues are all positive, approximately
+
+`0.1058, 0.2142, 0.2152, 0.2346, 0.2402, 0.2471, 0.2585`.
+
+That same static curvature supports very different evolutions once a dynamical rule is supplied.
+
+- Euclidean gradient flow has linear relaxation rates equal to these eigenvalues.
+- Replacing the mobility by `2I` leaves every stationary point unchanged and exactly doubles all rates.
+- A Fisher/natural-gradient choice again preserves stationary points for an SPD mobility but changes the relaxation spectrum.
+- A Hamiltonian lift requires new momenta, symplectic form and kinetic metric; the same positive curvatures become oscillation frequencies `sqrt(lambda_i)` rather than decay rates.
+- The already executed Metropolis and Barker local chains obey detailed balance with the same declared Gibbs equilibrium but have different one-event neighbor influence (`~0.3575` versus `~0.1337` in the fixed scout).
+
+Thus even *within* reversible/relaxational choices the potential does not select kinetics.
+
+## Model-selection observables
+
+A small perturbation experiment can distinguish these models by relaxation spectrum, oscillatory overshoot, one-event influence profile, and probability current/detailed-balance violation. These are predictions of a **dynamics plus FIN statics**, not of statics alone.
+
+## Decision
+
+Stationary points and Lyapunov ordering survive broad SPD gradient mobilities. Rates, trajectories, continuous clocks, inertia and currents do not. PHY-021 therefore passes as a nonuniqueness theorem and supplies the dynamical alternatives needed for later propagator and energy gates.

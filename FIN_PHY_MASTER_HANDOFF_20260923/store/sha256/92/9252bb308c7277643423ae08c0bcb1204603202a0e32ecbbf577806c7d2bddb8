@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json,sys,math
+import numpy as np
+import mpmath as mp
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); eta=1.8
+w=np.array([W[0,d] for d in range(1,7)],dtype=float)
+C=float(w[-1]*(6**eta))
+def s_local(k):
+ d=np.arange(1,7,dtype=float)
+ return float(2*np.sum(w*(1-np.cos(k*d))))
+def s_frac(k):
+ kk=mp.mpf(k)
+ total=mp.zeta(eta)-mp.re(mp.polylog(eta,mp.e**(1j*kk)))
+ finitepow=sum((d**(-eta))*(1-math.cos(k*d)) for d in range(1,7))
+ strict=sum(float(w[d-1])*(1-math.cos(k*d)) for d in range(1,7))
+ return float(2*(strict+C*(total-finitepow)))
+ks=np.logspace(-5,-2,18)
+sl=np.array([s_local(k) for k in ks]);sf=np.array([s_frac(k) for k in ks])
+fitN=10
+slope_local=float(np.polyfit(np.log(ks[:fitN]),np.log(sl[:fitN]),1)[0])
+slope_frac=float(np.polyfit(np.log(ks[:fitN]),np.log(sf[:fitN]),1)[0])
+# exact agreement on all q=12 visible shell weights
+visible_local=w.copy()
+visible_frac=np.array([w[d-1] for d in range(1,7)])
+assert np.array_equal(visible_local,visible_frac)
+out={
+ 'task':'OPERATOR-REFINE-02_same_strict_kernel_inequivalent_continuum_symbols',
+ 'scientific_state':'PROVED_CONTINUUM_OPERATOR_NONIDENTIFIABILITY_FROM_Q12_VISIBLE_SHELLS',
+ 'visible_q12_weights_d1_to_d6':w.tolist(),'power_tail_eta':eta,'tail_match_constant_C':C,
+ 'continuation_A':'w_d=strict w_d for d<=6 and 0 for d>6 (finite-range).',
+ 'continuation_B':'w_d=strict w_d for d<=6 and C*d^{-1.8} for d>=7, with C chosen to match w_6 at d=6 (positive long-range tail).',
+ 'visible_data_exactly_identical':True,
+ 'small_k_fit_range':ks[:fitN].tolist(),'finite_range_symbol_loglog_slope':slope_local,
+ 'long_range_symbol_loglog_slope':slope_frac,'expected_slopes':{'finite_range':2.0,'power_tail':eta-1},
+ 'theorem':'Any finite-range symmetric positive jump kernel with finite second moment has symbol 2 sum_d w_d(1-cos kd)=k^2 sum_d w_d d^2+o(k^2). A positive tail C d^{-eta}, 1<eta<3, instead contributes a leading nonanalytic |k|^{eta-1} term. The two declared continuations agree exactly on every distance visible on C12 (d=1,...,6) yet have inequivalent continuum orders 2 and 0.8.',
+ 'consequence':'The strict q=12 carrier can source a one-dimensional cyclic metric, but it does not source the continuum differential/nonlocal operator. A tail/refinement law is an independent source obligation.',
+ 'nonconclusions':['The d^{-1.8} continuation is a control family, not claimed to be the physical FIN refinement.','This no-go does not invalidate the conditional nearest-neighbor Dirichlet subdivision theorem.']
+}
+p=ROOT/'results'/'OPERATOR-REFINE-02_nonidentifiability.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

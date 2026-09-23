@@ -1,0 +1,12 @@
+# Replay
+
+From package root:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay.py --check
+python3 verify_package.py
+```
+
+All producer scripts use only package-local inputs.  The RNG scout uses a fixed
+seed.  The rejected first syntax attempt for `HDIM-DYN` is not scientific
+evidence and is not included as a producer.

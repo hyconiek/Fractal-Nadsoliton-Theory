@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,itertools
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+
+def strict_word(word):
+    z=1.0
+    for r in word: z*=p[r]
+    return z
+
+def persistent_mats(delta,rho):
+    hs=np.array([-1.0,1.0]); T=np.array([[(1+rho*ha*hb)/2 for hb in hs] for ha in hs])
+    Ms=[]
+    for r in range(11):
+        q=p[r]+delta*hs*c[r]
+        Ms.append(np.diag(q)@T)
+    return np.array([0.5,0.5]),Ms,np.ones(2)
+
+def period2_mats(delta):
+    states=[(-1,-1),(-1,1),(1,-1),(1,1)]; idx={x:i for i,x in enumerate(states)}
+    Ms=[]
+    for r in range(11):
+        M=np.zeros((4,4))
+        for i,(a,b) in enumerate(states):
+            j=idx[(b,a)]
+            M[i,j]=p[r]+delta*a*c[r]
+        Ms.append(M)
+    return np.ones(4)/4,Ms,np.ones(4)
+
+def wordprob(rep,word):
+    a,Ms,b=rep; v=a.copy()
+    for r in word: v=v@Ms[r]
+    return float(v@b)
+
+def min_witness(rep,maxlen):
+    for n in range(1,maxlen+1):
+        best=None
+        for word in itertools.product(range(11),repeat=n):
+            d=wordprob(rep,word)-strict_word(word)
+            if abs(d)>1e-13:
+                if best is None or abs(d)>abs(best[1]): best=(word,d)
+        if best is not None: return n,best
+    return None,None
+
+p2rep=persistent_mats(0.05,0.8)
+per2rep=period2_mats(0.05)
+w1=min_witness(p2rep,2); w2=min_witness(per2rep,4)
+result={
+ 'task':'OCB-MEM-01C',
+ 'status':'BOUNDED_HIDDEN_DIMENSION_FINITE_HORIZON_EQUIVALENCE_THEOREM',
+ 'theorem':('A finite hidden-state output process with H hidden states has word probabilities represented by H-dimensional weighted matrices. '
+            'The strict iid embedded-jump law has dimension 1. Their difference has a linear representation of dimension at most H+1. '
+            'If the two models agree on every visible word of lengths 0 through H (=H+1-1), then the reachable-row span argument implies agreement on every word length. '
+            'Equivalently, any inequivalent H-state hidden model has a distinguishing visible word of length at most H.'),
+ 'proof_sketch':('For a d-dimensional linear representation s(w)=alpha M_w beta, breadth-first reachable row spaces R_n=span{alpha M_w: |w|<=n} can strictly increase at most d-1 times. '
+                 'If s(w)=0 for all |w|<=d-1, then a basis of the full reachable space is beta-orthogonal, hence s(w)=0 for all words. Apply this to the direct-sum difference representation with d<=H+1.'),
+ 'controls':{
+   'persistent_two_state_hidden_model':{'H':2,'theorem_witness_length_bound':2,'found_min_witness_length':w1[0],'example_word_zero_based_offsets':list(w1[1][0]),'probability_difference':w1[1][1]},
+   'period2_four_state_hidden_model':{'H':4,'theorem_witness_length_bound':4,'found_min_witness_length':w2[0],'example_word_zero_based_offsets':list(w2[1][0]),'probability_difference':w2[1][1]}
+ },
+ 'relation_to_unbounded_memory_no_go':'OCB-MEM-01A remains valid because its hidden-state size grows with the chosen hidden horizon. There is no model-independent finite horizon when H is not bounded.',
+ 'literature_note':'This is the standard finite-equivalence principle for weighted/probabilistic automata specialized to FIN embedded-jump path laws; the new FIN-specific content is the explicit alias/witness constructions and clock-free carrier setting.',
+ 'nonconclusion':'A hidden-state cardinality bound H would be an additional operational/model-class premise unless independently justified.'
+}
+(Path(__file__).resolve().parents[1]/'results'/'OCB-MEM-01C_bounded_dimension.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'controls':result['controls']},indent=2))

@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math,itertools
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+p=np.array([W[0,r]/s for r in range(1,12)],float)
+c=np.array([1.0 if min(r,12-r)==1 else (-1.0 if min(r,12-r)==2 else 0.0) for r in range(1,12)])
+m=float(p@c); h=c-m; v=float(p@(h*h)); delta=.05
+
+def feat(a,b):
+    return np.array([1.0,h[a]/math.sqrt(v),h[b]/math.sqrt(v),h[a]*h[b]/v])
+# Only 3 contrast levels -> 9 distinct feature rows.
+uf=[]
+seen=set()
+for a in range(11):
+  for b in range(11):
+    row=tuple(np.round(feat(a,b),14))
+    if row not in seen: seen.add(row); uf.append(np.array(row,float))
+maxdet=0.0; arg=None
+for inds in itertools.combinations(range(len(uf)),4):
+    d=abs(float(np.linalg.det(np.stack([uf[i] for i in inds]))))
+    if d>maxdet: maxdet=d; arg=inds
+B=maxdet*maxdet/math.factorial(4)
+rho=(4*delta)**2/v
+H=np.diag([1.0,rho,rho,rho*rho])
+mu=float(np.linalg.det(H))
+# Andreief estimator Z = det(F)det(G)/4! is unbiased for det H.
+# Under rank(H)<=3, E Z=0. Hoeffding lemma yields an anytime-valid e-process
+# product exp(lambda Z - lambda^2 B^2/2) for predictable fixed lambda.
+lambda_oracle=mu/(B*B)
+expected_log_growth=mu*lambda_oracle-.5*lambda_oracle*lambda_oracle*B*B
+batches_log20=math.ceil(math.log(20)/expected_log_growth)
+paths_log20=4*batches_log20
+
+# Fixed-seed Monte-Carlo power screen only (not used for validity theorem).
+# Aggregate one path to 81 prefix/suffix feature-category pairs.
+cat=np.where(c==1,0,np.where(c==-1,1,2))
+pair_index={(a,b):3*a+b for a in range(3) for b in range(3)}
+frows=np.zeros((9,4))
+for a in range(3):
+  for b in range(3):
+    ia=np.where(cat==a)[0][0]; ib=np.where(cat==b)[0][0]
+    frows[pair_index[(a,b)]]=feat(ia,ib)
+joint=np.zeros((9,9))
+for w in itertools.product(range(11),repeat=4):
+    w=np.asarray(w,int)
+    base=float(np.prod(p[w])); rr=c[w]/p[w]
+    pr=base*(1+delta**2*(rr[0]*rr[2]+rr[1]*rr[3])+delta**4*np.prod(rr))
+    joint[pair_index[(cat[w[0]],cat[w[1]])],pair_index[(cat[w[2]],cat[w[3]])]] += pr
+rng=np.random.default_rng(20260923)
+probs=joint.ravel(); pairs=np.array([(i,j) for i in range(9) for j in range(9)])
+nb=300000
+ids=rng.choice(81,size=(nb,4),p=probs)
+F=frows[pairs[ids,0]]; G=frows[pairs[ids,1]]
+Z=np.linalg.det(F)*np.linalg.det(G)/24.0
+mc_mean=float(Z.mean()); mc_var=float(Z.var(ddof=1)); mc_se=math.sqrt(mc_var/nb)
+# Small-bet oracle growth based on empirical variance: heuristic only.
+heuristic_growth=mu*mu/(2*mc_var)
+heuristic_batches=math.ceil(math.log(20)/heuristic_growth)
+
+result={
+ 'task':'OCB-HANKEL-03A',
+ 'status':'EXACT_ANYTIME_RANK3_EPROCESS_EXISTS__WORST_CASE_POWER_IS_IMPRACTICAL',
+ 'theorem':{
+   'feature_dimension':4,
+   'population_cross_hankel_diag':np.diag(H).tolist(),
+   'population_rank':int(np.linalg.matrix_rank(H,tol=1e-13)),
+   'determinant_signal':mu,
+   'estimator':'For four independent reset paths with prefix features F_i and suffix features G_i, Z=det(rows F_i)*det(rows G_i)/4! satisfies E[Z]=det(E[F G^T]) by Andreief expansion.',
+   'composite_null':'Every process whose declared 4x4 cross-Hankel has rank <=3 has E[Z]=0.',
+   'finite_support_bound_abs_Z':B,
+   'eprocess':'For any predictable lambda_t, exp(lambda_t Z_t - lambda_t^2 B^2/2) has conditional expectation <=1 under the rank<=3 null; its product is an anytime-valid e-process for independent reset batches.',
+   'optional_stopping_valid':True
+ },
+ 'worst_case_hoeffding_power_screen':{
+   'oracle_lambda_for_frozen_alias':lambda_oracle,
+   'expected_log_growth_per_four_path_batch':expected_log_growth,
+   'batches_for_expected_log20':batches_log20,
+   'paths_for_expected_log20':paths_log20,
+   'warning':'Expected log growth is a design diagnostic, not a stopping-time power guarantee. Its enormous value shows that the generic determinant e-process is mathematically valid but practically unusable for this weak fourth singular direction.'
+ },
+ 'fixed_seed_monte_carlo_diagnostic':{
+   'batches':nb,'sample_mean_Z':mc_mean,'true_mean_Z':mu,'sample_standard_error':mc_se,'sample_variance_Z':mc_var,
+   'heuristic_variance_adaptive_expected_log_growth':heuristic_growth,
+   'heuristic_batches_for_log20':heuristic_batches,
+   'scope':'Power diagnostic only; no theorem or confidence claim uses this Monte-Carlo estimate.'
+ },
+ 'decision':'Sequential validity can be obtained distribution-free at the composite rank<=3 level, but reducing rank evidence to the determinant creates an extremely low-SNR test. A practical certificate must exploit additional structure or a much sharper matrix/sequential construction.',
+ 'nonconclusion':'No physical memory dimension, laboratory sample size, or universal optimal rank test follows.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-HANKEL-03A_sequential_rank.json'
+out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'det_signal':mu,'B':B,'paths_log20':paths_log20,'mc_var':mc_var,'heuristic_batches':heuristic_batches},indent=2))

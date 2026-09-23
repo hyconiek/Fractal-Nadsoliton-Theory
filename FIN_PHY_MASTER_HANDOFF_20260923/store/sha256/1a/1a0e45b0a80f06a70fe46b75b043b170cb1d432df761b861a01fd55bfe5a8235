@@ -1,0 +1,138 @@
+{
+  "task": "OCB-MEM-05",
+  "status": "STRICTLY_BROADER_FINITE_HORIZON_RANK3_BLOCK_CHALLENGER_FOUND__SINGLE_JUMP_HMM_GLOBAL_OPTIMUM_OPEN",
+  "challenger": {
+    "class": "three-component block-latent model on the 3-category compression: choose K in {1,2,3}, then prefix block U=(Y1,Y2) and suffix block V=(Y3,Y4) are independent conditional on K with arbitrary 9-category laws.",
+    "strictly_contains_previous": "Yes. The previous position-factorized three-component latent-class model is recovered when each 9-category block law factorizes into its two one-step emissions.",
+    "rank_at_most_3": "H_Q=sum_k w_k a_k b_k^T, hence ordinary block-Hankel rank <=3 exactly.",
+    "weights": [
+      0.749273197818332,
+      0.10753867418405762,
+      0.1431881279976104
+    ],
+    "prefix_block_distributions": [
+      [
+        0.3660803690757699,
+        0.11278348167400631,
+        0.12163974079376944,
+        0.12204104963064225,
+        0.03505823170579652,
+        0.039871708038944194,
+        0.12400004933539521,
+        0.03751018987628886,
+        0.04101517986938733
+      ],
+      [
+        0.2000733309893691,
+        0.027795809500495844,
+        0.05763431537364682,
+        0.3058143421295628,
+        0.10230868235959434,
+        0.10388002558083433,
+        0.1285182461786683,
+        0.032960068180438666,
+        0.041015179707389805
+      ],
+      [
+        0.1725566798970108,
+        0.30361385158728005,
+        0.12093966671463877,
+        0.04637051403187264,
+        0.11345581826388644,
+        0.04053761808071381,
+        0.05535266589355742,
+        0.10615800567055657,
+        0.04101517986048355
+      ]
+    ],
+    "suffix_block_distributions": [
+      [
+        0.36809795226237946,
+        0.11922634036657602,
+        0.12379696666216634,
+        0.11439758052165912,
+        0.03424089448589787,
+        0.03771374678327634,
+        0.12256582037699842,
+        0.03894551865615529,
+        0.04101517988489114
+      ],
+      [
+        0.1554613285133612,
+        0.06176891736031418,
+        0.054918719222794996,
+        0.2983884233937372,
+        0.12038126406636036,
+        0.1065890376746333,
+        0.11524754665411714,
+        0.046229583458149814,
+        0.04101517965653186
+      ],
+      [
+        0.19550407531882352,
+        0.2443848887435746,
+        0.11169085584136347,
+        0.09194426437290354,
+        0.10415970816039047,
+        0.049795221908795935,
+        0.07282438499074821,
+        0.08868142084584887,
+        0.041015179817551345
+      ]
+    ],
+    "singular_values": [
+      0.174599240045685,
+      0.007151080286880417,
+      0.007087099671453668,
+      2.7186065881957345e-18,
+      1.5515844954770625e-18,
+      1.223542128005268e-18,
+      7.932839056768473e-19,
+      1.960117281425963e-19,
+      1.1916670659247902e-19
+    ],
+    "multi_start_KL_values": [
+      6.095626216516733e-06,
+      6.095626219279726e-06,
+      6.095626214701399e-06,
+      6.095626209886831e-06,
+      6.095626215215127e-06,
+      6.09562621294129e-06,
+      6.09562621696811e-06,
+      6.095626218402397e-06,
+      6.095626257914954e-06,
+      6.095626212918079e-06,
+      6.095626217952031e-06,
+      6.095626212010789e-06
+    ],
+    "global_optimum_warning": "Twelve deterministic positive EM starts converge to essentially the same KL, but this is strong numerical evidence only; no global nonnegative-rank-3 optimum certificate is claimed."
+  },
+  "distances": {
+    "KL_P_to_Q_category": 6.095626209886831e-06,
+    "KL_after_exact_11_symbol_lift": 6.095626209994554e-06,
+    "total_variation": 0.0007923350467442319,
+    "bhattacharyya_coefficient": 0.9999984772344584,
+    "chernoff_information": 1.5227669101255797e-06,
+    "chernoff_s": 0.5001752148839522
+  },
+  "information_lower_bounds": {
+    "both_errors_le_5pct_Bretagnolle_Huber_resets_at_least": 264032,
+    "equal_prior_Bayes_error_le_5pct_Hellinger_resets_at_least": 545301,
+    "simple_pair_Chernoff_5pct_upper_bound_context_only": 1512107,
+    "previous_MEM04_bounds": {
+      "BH": 155362,
+      "Hellinger": 321273
+    },
+    "strengthening_factors": {
+      "BH": 1.6994631891968435,
+      "Hellinger": 1.6973134997338712
+    }
+  },
+  "single_jump_hidden_process_search": {
+    "result": "A separate deterministic search over a 3-state time-inhomogeneous HMM containing the previous latent-class model at the identity-transition boundary produced only a tiny boundary improvement (about 1.0359e-5 KL) and random interior starts were worse.",
+    "claim_level": "diagnostic only; no global HMM optimum is claimed",
+    "interpretation": "The strongest new challenger in this round is the finite-horizon block-latent rank-3 null, not a proved optimal three-state single-jump HMM."
+  },
+  "decision": "The explicit rank<=3 null can be made materially closer than MEM-04 without fitting the test statistic. This raises the information-theoretic query lower bound by about 1.7x and confirms that broad composite-rank exclusion is intrinsically difficult.",
+  "nonconclusion": "No physical hidden state, universal minimax rank-3 projection, or all-horizon process equivalence is established."
+}

@@ -1,0 +1,77 @@
+{
+  "constant_row_norm": {
+    "max": 1.2717788339936504,
+    "min": 1.2717788339936502,
+    "spread": 2.220446049250313e-16
+  },
+  "dictionaries": {
+    "inferential_control": {
+      "Phi": "regularized objective",
+      "p": "distribution/posterior",
+      "theta": "natural parameter"
+    },
+    "relational_candidate": {
+      "j": "internal relational configuration type",
+      "mu": "coarse relational signature",
+      "p": "mixture of such types",
+      "theta": "response coordinate"
+    },
+    "statistical": {
+      "mu": "retained feature mean",
+      "p": "empirical composition/distribution",
+      "theta": "conjugate auxiliary coordinate"
+    }
+  },
+  "forbidden_promotions": [
+    "cell index is not spatial coordinate",
+    "j is not particle species",
+    "theta is not a physical field",
+    "N is not physical volume/time/bit count"
+  ],
+  "linear_structure": {
+    "X_rank": 7,
+    "X_shape": [
+      12,
+      7
+    ],
+    "mean_map_nullity_on_tangent": 4,
+    "mean_map_rank_on_tangent": 7,
+    "simplex_tangent_dimension": 11,
+    "singular_values_mean_map": [
+      4.17764955418692,
+      1.5263946737819543,
+      1.5161155206906556,
+      1.4983161360132218,
+      1.4830943494374216,
+      1.426717313020755,
+      1.4005023605751066
+    ]
+  },
+  "new_primitives_required_for_multicell": [
+    "cell index set V",
+    "interaction support graph Gamma",
+    "edge weights w_xy",
+    "coupling kappa",
+    "relative feature-frame maps if frames differ",
+    "transition generator for dynamics"
+  ],
+  "source_model_sha256": "1588166a7a364daadc4a90f73536d5bf73b35528105da872f6fff1b5b34819aa",
+  "status": "PASS_IN_SCOPE",
+  "symmetry_checks": {
+    "actions_tested": 24,
+    "max_PX_minus_XT": 1.1657341758564144e-15,
+    "max_TtGT_minus_G": 1.3322676295501878e-15,
+    "max_TtT_minus_I": 1.636618990479908e-15
+  },
+  "task": "PHY-002",
+  "unit_schema": {
+    "equilibrium_weight": "declared MP7 finite-copy Gibbs weight; no clock/dynamics inferred",
+    "feature_rows": "X_j in R^7",
+    "internal_label_set": "J=Z_12 (typed internal labels; no spatial meaning)",
+    "macrostate": "p=n/N in Delta_11",
+    "microstate": "xi=(xi_1,...,xi_N) in J^N for declared finite-copy N",
+    "occupation": "n in N^12, sum n_j=N",
+    "retained_observable": "mu=X7^T p in R^7",
+    "symmetry": "D12 relabeling of J with induced 7D representation"
+  }
+}

@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+# Certified branch mean centers, used only for a conservative smooth Lipschitz coefficient.
+fin=json.loads((ROOT/'results'/'PHY-013_finite_q_branch_analytic.json').read_text())
+c=[float(x) for x in fin['center'][:3]]; r=float(fin['box_radius_inf']); g=float(fin['g'])
+rho_hi=[(x+r)/g for x in c]; ks=[3,4,5]
+C=sum((rho_hi[i]*ks[i])**2 for i in range(3))
+A=4*math.pi**2*C
+# Haar E[sum gap^2]=8pi^2/(M+1), energy <=kappa*C/2 sum gap², so E[X=N E] <= A*N*kappa/(M+1).
+def eps(M,N,kappa=1): return A*N*kappa/(M+1)
+def maxgap_bound(M,N,delta,kappa=1):
+    # circumference normalized to 1: P0(maxgap>delta)<=M(1-delta)^(M-1)
+    e=eps(M,N,kappa)
+    logb=math.log(M)+(M-1)*math.log1p(-delta)+e
+    return (1.0 if logb>=0 else (math.exp(logb) if logb>-745 else 0.0)),logb,e
+rows=[]
+for alpha in [0.5,1.0,1.5,1.9,2.0,2.1]:
+  for M in [10_000,1_000_000,100_000_000]:
+    N=max(1,int(round(M**alpha)))
+    b,lb,e=maxgap_bound(M,N,0.05)
+    rows.append({'alpha':alpha,'M':M,'N':N,'epsilon_partition_penalty':e,'maxgap_gt_0p05_upper':b,'log_upper':lb})
+out={
+ 'task':'CG-01-diffuse-phase-population','scientific_state':'CONDITIONAL_ENTROPY_DOMINATES_GEOMETRY_FOR_NKAPPA_o_M2',
+ 'coefficient':{'C_upper_sum_rho2k2':C,'A_4pi2C':A},
+ 'proof':{
+   'energy_expectation':'Under independent Haar phases, E_0[X] <= A N kappa/(M+1), X=N E_smooth.',
+   'partition_lower':'Z=E_0[e^{-X}] >= exp(-E_0[X]) by Jensen.',
+   'event_transfer':'For any event B, P_G(B)<=exp(E_0[X]) P_0(B), since e^{-X}<=1.',
+   'haar_maxgap':'For circumference normalized to one, P_0(maxgap>delta)<=M(1-delta)^(M-1).',
+   'conclusion':'If N kappa=o(M^2), then E_0[X]=o(M), so for every fixed delta>0 the Gibbs probability of maxgap>delta tends to zero exponentially at the Haar rate up to an o(M) correction.'
+ },
+ 'collision_gate':'Independently require q/M^2 -> infinity for discrete phase collisions to vanish in probability.',
+ 'joint_scaling_example':'With fixed kappa: q=M^3 and N=M^alpha for any 0<alpha<2 gives N->infinity, vanishing phase collisions, and max angular gap ->0 in probability.',
+ 'critical_scale_warning':'At N*kappa=Theta(M^2), the interaction reweighting has exponential-in-M strength and can compete with configurational entropy. No diffuse-geometry theorem is asserted at or above this scale.',
+ 'diagnostics':rows,
+ 'scope':'This proves geometric density, not TV convergence to Haar. The stronger prior condition N*kappa/M->0 is still useful when full-distribution TV convergence is required.'
+}
+p=ROOT/'results'/'CG-01_diffuse_geometry.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'A':A,'examples':[x for x in rows if x['M']==1000000]},indent=2))

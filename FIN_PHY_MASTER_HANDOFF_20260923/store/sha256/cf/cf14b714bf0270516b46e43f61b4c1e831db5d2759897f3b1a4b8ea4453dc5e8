@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for q in [12,24,48,96,192]:
+ m=math.ceil(q/2)
+ r=q-2*(m-1)
+ assert r in (1,2)
+ rows.append({'q':q,'minimal_Umklapp_order_for_mode_set_max_coordinate_2':m,'explicit_axis_sum':[2]*(m-1)+[r]})
+out={
+ 'task':'HDIM-PRODUCT-finite-q-Umklapp-order',
+ 'scientific_state':'PROVED_PRODUCT_LOW_MODE_Td_BREAKING_IS_DEFERRED_TO_ORDER_CEIL_Q_OVER_2',
+ 'theorem':'For the declared product-carrier low-mode set {e_i,2e_i,e_i+e_j}, each coordinate contribution of one Fourier factor has magnitude at most 2. Therefore an order-m monomial cannot carry a nonzero reciprocal-lattice vector q e_i when 2m<q. Conversely at m=ceil(q/2), q=2(m-1)+r with r in {1,2}, so repeated 2e_i factors plus one r e_i produce an Umklapp term. Hence the first possible finite-q breaking of a continuous translation phase along an axis is exactly ceil(q/2).',
+ 'rows':rows,
+ 'consequence':'For q=12 the product-carrier T^d survives all entropy Taylor terms through order five; its first lattice-locking Umklapp can occur only at sixth order. As q grows the continuous T^d becomes perturbatively exact to increasing order.',
+ 'nonconclusions':['All-orders finite-q symmetry is still discrete Z_q^d.','This does not source the number d or a physical continuum.']
+}
+p=ROOT/'results'/'HDIM-PRODUCT_Umklapp.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

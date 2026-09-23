@@ -1,0 +1,76 @@
+# OCB-HANKEL-02 — noisy full-rank certification
+
+Date: 2026-09-23
+
+## Verdict
+
+**PASS with a sharp model-free / model-conditional separation.**
+
+The frozen period-2 alias has exact complete Hankel rank four, but the cost of certifying that rank
+from noisy finite data depends dramatically on what structural assumptions are admitted.
+
+## 1. Generic whitened matrix certificate
+
+For two consecutive length-two blocks use the whitened feature vector
+
+`F=(1,h0/sqrt(v),h1/sqrt(v),h0*h1/v)`,
+
+where `v=E_p h^2`.  The population cross-Hankel is exactly diagonal:
+
+`diag(1, r, r, r^2)`, with `r=0.058361655098...`.
+
+Hence
+
+`sigma_min = 0.003406082786...`.
+
+Exact enumeration of all `11^4=14641` four-jump words gives the centered single-sample rectangular
+matrix parameters
+
+- operator bound `R = 12.8596341418...`;
+- variance parameter `V = 4.26184828225...`.
+
+Using the standard rectangular matrix-Bernstein inequality via self-adjoint dilation, confidence
+`95%`, and error tolerance `0.99 sigma_min`, the sufficient independent-reset count is
+
+**3,817,408 four-jump paths**.
+
+The predecessor's deliberately crude 16-entry Hoeffding + Weyl fixture was about `3.2558e9`, so the
+matrix bound improves it by a factor of about **852.9**.
+
+This is still a synthetic power design using the exact frozen-alias variance and known whitening. It
+is not a universal distribution-free confidence sequence.
+
+## 2. Why a single fourth-order moment is not enough
+
+The smallest transformed diagonal moment is `0.0016`.  A scalar variance-aware Bernstein calculation
+can resolve that nonzero mean with about **690,295** reset paths, again far below the predecessor
+bound.
+
+However, that scalar is **not a rank-four certificate against arbitrary rank-three alternatives**.
+A three-support mixture of the same four hidden period-2 emission components can retain that
+fourth-order moment while making the complete Hankel rank at most three.  Full-rank certification
+therefore requires either a genuine matrix/minor argument or an explicit structural model class.
+
+## 3. Likelihood if the structural model class is paid
+
+For comparison only, full four-jump likelihoods were evaluated against three declared challenger
+families.
+
+- strict iid rank-one challenger: Chernoff information `0.000902121511...`; equal-prior Chernoff
+  upper bound reaches 5% error at **2553** reset paths;
+- best four-step fit in the declared persistent hidden-bit rank-two family: fitted
+  `delta≈0.0288496`, `rho=1`, Chernoff information `0.000601533938...`; 5% bound at **3828** paths;
+- closest declared three-support rank-three mixture using the same period-2 emissions: Chernoff
+  information `0.001360942275...`; 5% bound at **1692** paths.
+
+These are **not minimax bounds against every rank<=3 hidden process**.  They quantify the price of
+restricting the alternative class.  The gap from millions to thousands is therefore not a free
+statistical improvement; it is purchased with a structural premise.
+
+## Decision
+
+`OCB-HANKEL-02 = PASS_WITH_MODEL_CLASS_SEPARATION`.
+
+Full predictive rank is mathematically identifiable.  Generic noisy matrix certification is much
+cheaper than the predecessor's worst-entry bound but remains expensive.  Family-conditional
+likelihood can be orders of magnitude cheaper, and that assumption must remain explicit.

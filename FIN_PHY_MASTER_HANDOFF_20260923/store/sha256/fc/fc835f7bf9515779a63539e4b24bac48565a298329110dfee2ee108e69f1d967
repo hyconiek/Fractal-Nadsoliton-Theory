@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+N=12
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0])
+P=W/s; np.fill_diagonal(P,0.0)
+eta=np.linspace(.80,.98,N)
+eps=.05
+C=np.zeros((N,N))
+for j in range(N):
+    C[j,j]=1-2*eps; C[j,(j-1)%N]=eps; C[j,(j+1)%N]=eps
+B0=np.diag(1/eta)@np.linalg.inv(C.T)
+records=[]
+for i in range(N):
+    p=P[i]; norm=float(eta@p); q=C.T@(eta*p)/norm; r=B0@q
+    near=[(i-1)%N,(i+1)%N]
+    for a in near:
+      for b in range(N):
+        if b==i or b in near: continue
+        margin=float(r[a]-r[b])
+        records.append({'source':i,'near':a,'competitor':b,'margin':margin,'q_inf':float(np.max(q)),'norm':norm})
+w=min(records,key=lambda x:x['margin'])
+eps_star=w['margin']/2 # entrywise inverse-map box; q is a probability vector, so ||q||_1=1.
+w_l1=min(records,key=lambda x:x['margin']/(2*x['q_inf']))
+beta_star=w_l1['margin']/(2*w_l1['q_inf'])
+# Exact removal witness for entrywise box: lower all coefficients in near row by eps_fail and raise all in competitor row.
+eps_fail=1.01*eps_star
+i=w['source']; a=w['near']; b=w['competitor']; p=P[i]; norm=float(eta@p); q=C.T@(eta*p)/norm
+r0=B0@q
+Bfail=B0.copy(); Bfail[a,:]-=eps_fail; Bfail[b,:]+=eps_fail
+rf=Bfail@q
+# Safe fixture.
+eps_safe=.95*eps_star
+min_safe=min(x['margin']-2*eps_safe for x in records)
+result={
+ 'task':'OCB-CAL-03',
+ 'status':'GENERAL_144D_INVERSE_CALIBRATION_BOX_HAS_EXACT_ROBUST_CYCLE_THRESHOLD',
+ 'declared_polytope':{
+   'object':'inverse calibration / deconvolution map B acting on the conditioned recorded-destination vector q',
+   'dimension':144,
+   'entrywise_box':'|B_jk-B0_jk| <= epsilon independently',
+   'nominal_B_frobenius_norm':float(np.linalg.norm(B0)),
+   'scope_warning':'This is a convex uncertainty set on the calibrated inverse map. It is not the same as the nonlinear image of every physically allowed confusion/efficiency matrix.'
+ },
+ 'exact_entrywise_box_theorem':{
+   'reason':'For any score difference (row_a-row_b) q and q>=0, sum q=1, independent entrywise perturbations can reduce the difference by at most 2 epsilon; this bound is attained by shifting the whole near row down and competitor row up.',
+   'all_source_threshold_epsilon':eps_star,
+   'limiting_witness':w,
+   'safe_fixture_epsilon':eps_safe,
+   'minimum_safe_margin':min_safe,
+   'iff_statement':'All strict top-two edges survive every B in the box iff epsilon < min_margin/2; at or above the threshold the limiting comparison can tie/reverse.'
+ },
+ 'row_l1_polytope_control':{
+   'polytope':'each row perturbation obeys ||Delta B_j||_1 <= beta',
+   'exact_threshold_beta':beta_star,
+   'limiting_witness':w_l1,
+   'reason':'Each row score changes by at most beta ||q||_infinity, so a pairwise margin changes by at most 2 beta ||q||_infinity; the bound is attained by placing row mass on an argmax coordinate of q.'
+ },
+ 'removal_witness':{
+   'epsilon':eps_fail,'source':i,'near':a,'competitor':b,
+   'nominal_scores':[float(r0[a]),float(r0[b])],
+   'perturbed_scores':[float(rf[a]),float(rf[b])],
+   'ranking_reversed':bool(rf[a]<rf[b])
+ },
+ 'decision':'Carrier recovery survives a genuinely multidimensional 12x12 calibration uncertainty set only when the independently supplied inverse-calibration polytope is narrower than an explicit margin threshold. Above it, calibration ambiguity alone can change the graph.',
+ 'nonconclusion':'No real detector calibration, attempts/no-click record, or physical apparatus is supplied.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CAL-03_polytope.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'epsilon_star':eps_star,'beta_star':beta_star,'safe_margin':min_safe,'removal_reversed':result['removal_witness']['ranking_reversed']},indent=2))

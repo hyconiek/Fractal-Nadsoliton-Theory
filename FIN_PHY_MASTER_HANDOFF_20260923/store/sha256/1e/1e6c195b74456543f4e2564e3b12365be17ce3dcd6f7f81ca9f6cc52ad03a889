@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys,json,math
+import numpy as np
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'inputs'))
+import R7P_model as model
+N=12
+W=np.asarray(model.strict_kernel(),float); A=np.asarray(model.laplacian(W),float); s=float(A[0,0]); P=W/s; np.fill_diagonal(P,0)
+eta0=np.linspace(.80,.98,N); eps0=.05
+C0=np.zeros((N,N))
+for j in range(N): C0[j,j]=.90; C0[j,(j-1)%N]=.05; C0[j,(j+1)%N]=.05
+M0=np.linalg.inv(C0.T); B0=np.diag(1/eta0)@M0
+# exact CAL03 inverse-map threshold
+records=[]
+for i in range(N):
+    p=P[i]; q=C0.T@(eta0*p)/float(eta0@p); r=B0@q; near=[(i-1)%N,(i+1)%N]
+    for a in near:
+      for b in range(N):
+        if b==i or b in near: continue
+        records.append(float(r[a]-r[b]))
+epsB=min(records)/2
+m0=float(np.linalg.norm(M0,np.inf)); d0=float(np.linalg.norm(np.diag(1/eta0),np.inf))
+
+def outer(E,r):
+    if r>=1 or m0*E>=1: return math.inf
+    Mnorm=m0/(1-m0*E); Mdiff=m0*m0*E/(1-m0*E); Ddiff=d0*r/(1-r)
+    return Ddiff*Mnorm+d0*Mdiff
+
+def gmax(mult,r):
+    # E=mult*gamma, solve outer(E,r)<epsB analytically by bisection for transparency
+    lo,hi=0.0,0.99/(m0*mult)
+    if outer(0,r)>=epsB: return 0.0
+    for _ in range(100):
+        mid=(lo+hi)/2
+        if outer(mult*mid,r)<epsB: lo=mid
+        else: hi=mid
+    return lo
+rows=[]
+for r in [0,.01,.02,.03,.04,.05]: rows.append({'r':r,'dense_gamma_max':gmax(12,r),'support_preserving_gamma_max':gmax(3,r)})
+# Sharpness witnesses for column-l1 multipliers at small gamma.
+g=.001; jstar=0
+Dd=np.zeros((N,N))
+for i in range(N):
+    Dd[i,jstar]+=g
+    # compensate in a positive nominal support entry distinct from target
+    candidates=[i,(i-1)%N,(i+1)%N]
+    k=next(x for x in candidates if x!=jstar)
+    Dd[i,k]-=g
+Cd=C0+Dd
+# support-preserving: only the 3 rows whose nominal support contains target can perturb target.
+Ds=np.zeros((N,N))
+rows_support=[i for i in range(N) if jstar in {i,(i-1)%N,(i+1)%N}]
+for i in rows_support:
+    Ds[i,jstar]+=g
+    k=next(x for x in [i,(i-1)%N,(i+1)%N] if x!=jstar)
+    Ds[i,k]-=g
+Cs=C0+Ds
+witness={
+ 'dense':{'row_sum_residual':float(np.max(np.abs(Cd.sum(1)-1))),'min_entry':float(Cd.min()),'DeltaCt_inf':float(np.linalg.norm(Dd.T,np.inf)),'target':12*g},
+ 'support_preserving':{'rows_touching_column':rows_support,'row_sum_residual':float(np.max(np.abs(Cs.sum(1)-1))),'min_entry':float(Cs.min()),'DeltaCt_inf':float(np.linalg.norm(Ds.T,np.inf)),'target':3*g}
+}
+result={
+ 'task':'OCB-CAL-05',
+ 'status':'SUPPORT_PRESERVING_ROW_STOCHASTIC_STRUCTURE_EXPANDS_PRIMITIVE_SAFE_REGION_BY_ABOUT_FOURFOLD',
+ 'theorem':{
+   'dense_box':'Row-stochasticity alone does not improve ||Delta C^T||_inf<=12 gamma: all 12 rows can add +gamma to one recorded column and compensate elsewhere. The explicit nonnegative witness attains 12 gamma.',
+   'support_preserving_box':'If each true label may be confused only with itself and its two cyclic neighbours, each recorded column is touched by exactly 3 rows, hence ||Delta C^T||_inf<=3 gamma. The explicit witness attains 3 gamma.',
+   'neumann_propagation':'Insert E=||Delta C^T||_inf into the same Banach/Neumann inverse perturbation theorem used in CAL04; no new inversion approximation is introduced.'
+ },
+ 'constants':{'CAL03_inverse_map_entry_threshold':epsB,'norm_inv_C0T_inf':m0,'norm_D0inv_inf':d0},
+ 'safe_region_rows':rows,
+ 'r_0p02_improvement_factor':rows[2]['support_preserving_gamma_max']/rows[2]['dense_gamma_max'],
+ 'sharpness_witnesses':witness,
+ 'decision':'CAL05 reduces conservatism only after a physically meaningful support-preserving confusion premise is supplied. Row-stochasticity by itself gives no factor improvement. At r=0.02 the certified gamma radius expands from about 0.00235 to about 0.00942.',
+ 'nonconclusion':'The support pattern is an apparatus premise, not a FIN theorem, and no real detector calibration is supplied.'
+}
+out=Path(__file__).resolve().parents[1]/'results'/'OCB-CAL-05_structured.json'; out.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps({'status':result['status'],'r02_dense':rows[2]['dense_gamma_max'],'r02_support':rows[2]['support_preserving_gamma_max'],'factor':result['r_0p02_improvement_factor'],'witness':witness},indent=2))

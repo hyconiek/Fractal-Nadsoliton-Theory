@@ -1,0 +1,60 @@
+# OCB-CHANNEL-03 — probability-only leading channel laws
+
+Date: 2026-09-23
+
+## Verdict
+
+**PASS with an important downgrade from amplitude-jet to probability-jet claims.**
+
+For `i != j` and strict positive weights `W_ij`:
+
+### Heat / Markov
+
+`[exp(-tA)]_ij = t W_ij + O(t^2)`.
+
+The total escape probability is order `t`, and the conditioned destination law tends to
+
+`W_ij / sum_j W_ij`.
+
+### Unitary probabilities
+
+`|[exp(-itA)]_ij|^2 = t^2 W_ij^2 + O(t^4)`.
+
+The conditioned destination profile therefore tends to normalized `W^2`, not normalized `W`.
+
+### Wave squared response
+
+For the declared zero-velocity response,
+
+`|[cos(t sqrt(A))]_ij|^2 = t^4 W_ij^2/4 + O(t^6)`.
+
+Again the normalized leading destination profile is normalized `W^2`.
+
+Because every strict weight is positive and the six shells are strictly ordered, `W` and `W^2`
+produce the same nearest-neighbor ranking.  Thus **probability-only records retain the leading
+carrier graph** even without amplitude access.
+
+## Channel-category information
+
+Destination-only postselection is insufficient to separate unitary from wave at leading order: both
+have the same normalized `W^2` profile.
+
+If attempts/returns are retained at two proportional control values, the total off-diagonal record
+has leading log-slope
+
+- heat: `1`;
+- unitary probability: `2`;
+- wave squared response: `4`.
+
+An unknown overall multiplicative calibration of the control parameter cancels from this exponent,
+provided the control-to-model-time map is locally linear.
+
+At `t=0.01` in the strict numerical control, the measured two-point slopes are approximately
+`0.98577`, `1.99989`, and `3.99981` respectively.
+
+## Decision
+
+`OCB-CHANNEL-03 = PROBABILITY_ONLY_CARRIER_PASS__CHANNEL_CATEGORY_REQUIRES_ESCAPE_SCALING`.
+
+The wave squared response remains a declared mathematical record; FIN has not sourced a physical
+Born/readout rule for it.

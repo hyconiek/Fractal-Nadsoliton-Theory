@@ -1,0 +1,52 @@
+# OCB-MEM-02 — adaptive horizon audit
+
+Date: 2026-09-23
+
+## Verdict
+
+**The generic early-span stopping rule is refuted.  A targeted linear-cost protocol survives for
+the declared rotating-sign alias family.**
+
+## Generic kill test
+
+Starting from a rank-one strict basis, a tempting rule is:
+
+> extend the current prefix and suffix sets by one symbol; if Hankel rank does not increase,
+> declare the predictive span closed.
+
+This rule fails.
+
+For the explicit period-`L` aliases:
+
+- `L=2`: the one-step extended block still has numerical rank 1 while the true complete rank is 4;
+- `L=3`: local rank 1, true rank 8;
+- `L=4`: local rank 1, true rank 16.
+
+The aliases were built precisely to agree with strict on all visible words through length `L`.
+Therefore no local rank plateau before that horizon can certify global closure.
+
+This does not refute the standard finite weighted-automaton equivalence theorem.  It refutes an
+**operational stopping shortcut** that tries to infer the theorem's complete-word premise from a
+single local rank plateau.
+
+## FIN-specific targeted protocol
+
+For the rotating-sign family, the centered contrast
+
+`h(X)=c(X)-E_p[c]`
+
+has
+
+`E[h_t h_(t+ell)] = (4 delta)^2` if `L` divides `ell`, and zero otherwise.
+
+Hence for a declared maximum period `Hmax`, scanning lags `1,...,Hmax` detects every period-`L`
+alias with `L<=Hmax` at its first nonzero lag `L`.
+
+This requires `O(Hmax)` contrast observables rather than enumeration of `11^Hmax` word
+probabilities.
+
+## Nonconclusion
+
+The lag protocol is not universal for arbitrary HMMs.  A generic finite-memory class still needs a
+valid model-class bound, richer Hankel features, or a completeness/equivalence oracle before an
+early stop is sound.

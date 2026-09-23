@@ -1,0 +1,106 @@
+# FIN PHY-013 source/geometry follow-up — handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+This follow-up starts from `FIN_PHY_FULL_CAMPAIGN_20260923.zip`:
+
+`SHA-256 5b6857b742a1d06bdfa33f7ddd49492acfff3a59121d874f429421b394e5f90d`.
+
+The package is self-contained for the computations actually replayed here: the
+required R7P model, coexistence certificate, PHY-012 source audit and PHY-019
+coarse-memory control are copied under `inputs/`.
+
+## Why the campaign was reopened
+
+The full PHY campaign left PHY-013 with one fundamental source atom: a
+**target-blind law** that constrains the extension instead of encoding A7 or a
+chosen spatial graph. This follow-up attacks that atom without exposing target
+coefficients to the parent-law search.
+
+## Main result
+
+The source question splits cleanly:
+
+- **A7/rank-seven intracell provenance remains open.** Positive local/passive
+  parent classes are excluded for direct A7 generation. Once rank seven is
+  supplied, the active spectral weights are canonical top-spectrum data, but
+  rank seven itself is not sourced.
+- **A new target-blind intercell source family is conditionally successful.**
+  A localized FIN phase supplies an intrinsic `S1` relation between cells. In a
+  diffuse joint limit this yields a sparse cycle. Exact metric-backbone and
+  refinement consistency then force the graph and the edge-weight shape
+  `c(ell)=kappa0/ell`, with no carrier-specific refit.
+
+This is a physical-bridge candidate, not a strict spacetime theorem.
+
+## Theorem-grade advances
+
+1. Continuum smooth root at `g=7`: interval-assisted local uniqueness and
+   positive Hessian.
+2. Parity sector: exact threshold `g=12/lambda6`.
+3. **Uniform finite-q continuation:** every even `q>=190` has the unique local
+   continued smooth-plus-parity root in the common box with positive Hessian.
+4. **Uniform RG-2 support:** every even `q>=190` on that branch gives exactly
+   `Cay(Z_q,{+/-1,+/-2})`.
+5. RG-3 distinct-phase cell graph: degree-two circular-order cycle; finite-q
+   phase collisions vanish when `q/M^2 -> infinity`.
+6. Geometry-only population theorem: `N*kappa=o(M^2)` is sufficient for
+   macroscopic phase gaps to vanish in probability in the reduced model.
+7. RG-3 rewiring is O(1) edges per isolated crossing but has no size-uniform raw
+   dwell time; Haar minimum gaps scale as `M^-2`.
+8. Under diffuse phases, normalized causal hop depth converges in probability to
+   the intrinsic angular metric.
+9. Under `maxgap<pi`, the cycle is the unique inclusion-minimal exact metric
+   backbone of the sampled circle metric.
+10. Exact static refinement consistency uniquely forces `c(ell)=kappa0/ell`
+    up to one global scale.
+11. Additive kinetic mass gives `m(ell)=mu0 ell`; the conditional lattice wave
+    has bounded group velocity `sqrt(kappa0/mu0)` and a 1D wave continuum.
+12. Exact nearest-neighbor Markov closure under dynamical coarse-graining is
+    refuted; memory/longer-range corrections remain.
+13. The current `S1 x Z2` relation has one continuous dimension and cannot by
+    itself generate three spatial dimensions.
+
+## Important correction
+
+`RG3_JOINT_LIMIT_THEOREM.md` originally used wording that could be read as exact
+finite-q parity/angle independence. The exact product fiber belongs to the
+continuum effective model. At finite q the even/odd states are two shifted
+`q/2` angular grids. The bridge is asymptotic; see
+`RG3_FINITE_Q_SCOPE_CORRECTION.md`.
+
+## PHY-013 disposition
+
+`PARTIAL_PASS_NEW_INTERCELL_SOURCE_FAMILY__INTRACELL_A7_SOURCE_OPEN`
+
+The original strict A7 source problem is not closed. However the follow-up does
+meet the plan's broader target-independence objective for a **new typed intercell
+operator family**: the graph/Dirichlet law transfers across M/refinement without
+retuning and makes held-out continuum/dynamic predictions.
+
+## Reproducibility
+
+Run from the package root:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 replay.py --check
+python3 verify_package.py
+```
+
+The current tree has already passed two consecutive full producer replays with
+byte-identical JSON results.
+
+## Next high-value atoms
+
+Do not launch another broad queue. The top three are:
+
+1. `DIM-SOURCE`: derive/refute a second independent continuous relational
+   coordinate without choosing target dimension 3.
+2. `PRINCIPLE-SOURCE`: derive/refute the zero-distortion metric-backbone and
+   exact-refinement principles from deeper FIN rather than leaving them PM.
+3. `DYNAMICAL-SOURCE`: derive/refute the additive kinetic/time law and the
+   scale ratio `kappa0/mu0`; keep heat dynamics as the mandatory null.
+
+The rank-seven/full-strict source remains an independent open intracell atom.

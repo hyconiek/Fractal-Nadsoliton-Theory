@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+import numpy as np
+from scipy.spatial.distance import cdist
+from scipy.sparse.csgraph import shortest_path, connected_components
+ROOT=Path(__file__).resolve().parents[1]
+# Standardized tangent coordinates are asymptotically N(0,I2); fixed seed preregistered here.
+rng=np.random.default_rng(20260923)
+
+def rng_graph(P):
+ n=len(P); D=cdist(P,P); A=np.zeros((n,n),bool)
+ # Edge ij iff no k has max(dik,djk)<dij. O(n^3), use vectorized per pair; n<=800.
+ for i in range(n):
+  for j in range(i+1,n):
+   dij=D[i,j]
+   if not np.any((D[i,:] < dij-1e-14) & (D[j,:] < dij-1e-14)):
+    A[i,j]=A[j,i]=True
+ return D,A
+rows=[]
+for n in [100,200,400,800]:
+ P=rng.normal(size=(n,2)); D,A=rng_graph(P); deg=A.sum(1); W=np.where(A,D,np.inf); np.fill_diagonal(W,0.0); SP=shortest_path(W,directed=False)
+ cc=connected_components(A.astype(int),directed=False,return_labels=False)
+ pairs=rng.integers(0,n,size=(3000,2)); stretch=[]
+ for i,j in pairs:
+  if i==j or D[i,j]<1e-12: continue
+  stretch.append(SP[i,j]/D[i,j])
+ rows.append({'n':n,'connected_components':int(cc),'mean_degree':float(deg.mean()),'max_degree':int(deg.max()),'median_stretch':float(np.median(stretch)),'p95_stretch':float(np.quantile(stretch,.95)),'max_sampled_stretch':float(np.max(stretch))})
+assert all(r['connected_components']==1 and r['max_degree']<=6 for r in rows)
+out={
+ 'task':'HDIM-07-RNG-on-standardized-shape-tangent',
+ 'scientific_state':'NUMERICAL_DIMENSION_AGNOSTIC_PROXIMITY_SCOUT__CONTINUUM_OPEN',
+ 'seed':20260923,
+ 'rows':rows,
+ 'analytic_controls':['Euclidean RNG contains the MST and is therefore connected.','In the plane, a standard angular packing argument gives degree <=6.','The rule uses only pairwise distances and has no threshold or k-nearest parameter.'],
+ 'conclusion':'If the standardized FIN shape tangent is used as an internal 2D metric cloud, RNG supplies a sparse parameter-free proximity graph. It does not preserve the metric exactly and no graph-Laplacian continuum theorem is proved here.',
+ 'nonconclusions':['This is not spatial evidence.','The points are synthetic Gaussian tangent samples, not empirical FIN cells.','RNG path stretch and operator convergence remain open.']
+}
+p=ROOT/'results'/'HDIM-07_rng_tangent_scout.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows},indent=2))

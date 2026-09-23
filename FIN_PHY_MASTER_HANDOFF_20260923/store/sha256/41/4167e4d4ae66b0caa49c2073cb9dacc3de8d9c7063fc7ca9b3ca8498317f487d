@@ -1,0 +1,16 @@
+# Intracell rank-source audit
+
+## Verdict
+
+`RANK_SEVEN_PROVENANCE_REMAINS_OPEN`
+
+Once a rank is supplied, Eckart--Young--Mirsky makes the top-spectral truncation canonical.  The unresolved source is the rank itself.
+
+Three common target-blind criteria disagree or require a new scale:
+
+1. The largest strict positive-sector eigengap occurs at the cut producing rank 9, not rank 7.
+2. Penalized approximation `||A-A_r||_F^2 + beta r` selects rank 7 only when
+   `lambda_2^2 <= beta < lambda_3^2`, numerically about `[2.4871,3.8471)`.  `beta` is unsourced.
+3. The rule "smallest D12-compatible top rank whose pure vertex beats uniform" selects rank 7 at supplied `g=4`, but rank 9 at the rank-seven coexistence gain `g≈3.718344898`.
+
+Thus rank seven can be characterized conditionally but is not selected by the current strict spectrum without an additional target-independent principle.

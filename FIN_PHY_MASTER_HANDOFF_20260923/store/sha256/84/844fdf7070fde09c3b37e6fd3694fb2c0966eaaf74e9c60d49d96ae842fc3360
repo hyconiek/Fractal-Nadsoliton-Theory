@@ -1,0 +1,68 @@
+{
+  "task": "OCB-CAL-05",
+  "status": "SUPPORT_PRESERVING_ROW_STOCHASTIC_STRUCTURE_EXPANDS_PRIMITIVE_SAFE_REGION_BY_ABOUT_FOURFOLD",
+  "theorem": {
+    "dense_box": "Row-stochasticity alone does not improve ||Delta C^T||_inf<=12 gamma: all 12 rows can add +gamma to one recorded column and compensate elsewhere. The explicit nonnegative witness attains 12 gamma.",
+    "support_preserving_box": "If each true label may be confused only with itself and its two cyclic neighbours, each recorded column is touched by exactly 3 rows, hence ||Delta C^T||_inf<=3 gamma. The explicit witness attains 3 gamma.",
+    "neumann_propagation": "Insert E=||Delta C^T||_inf into the same Banach/Neumann inverse perturbation theorem used in CAL04; no new inversion approximation is introduced."
+  },
+  "constants": {
+    "CAL03_inverse_map_entry_threshold": 0.09025558368189042,
+    "norm_inv_C0T_inf": 1.25,
+    "norm_D0inv_inf": 1.25
+  },
+  "safe_region_rows": [
+    {
+      "r": 0,
+      "dense_gamma_max": 0.0036406102460242186,
+      "support_preserving_gamma_max": 0.014562440984096875
+    },
+    {
+      "r": 0.01,
+      "dense_gamma_max": 0.0030039834134924764,
+      "support_preserving_gamma_max": 0.012015933653969905
+    },
+    {
+      "r": 0.02,
+      "dense_gamma_max": 0.0023543641966233516,
+      "support_preserving_gamma_max": 0.009417456786493406
+    },
+    {
+      "r": 0.03,
+      "dense_gamma_max": 0.0016913507690971318,
+      "support_preserving_gamma_max": 0.006765403076388527
+    },
+    {
+      "r": 0.04,
+      "dense_gamma_max": 0.0010145245618307828,
+      "support_preserving_gamma_max": 0.004058098247323131
+    },
+    {
+      "r": 0.05,
+      "dense_gamma_max": 0.00032344938177987926,
+      "support_preserving_gamma_max": 0.001293797527119517
+    }
+  ],
+  "r_0p02_improvement_factor": 4.0,
+  "sharpness_witnesses": {
+    "dense": {
+      "row_sum_residual": 0.0,
+      "min_entry": 0.0,
+      "DeltaCt_inf": 0.012000000000000004,
+      "target": 0.012
+    },
+    "support_preserving": {
+      "rows_touching_column": [
+        0,
+        1,
+        11
+      ],
+      "row_sum_residual": 0.0,
+      "min_entry": 0.0,
+      "DeltaCt_inf": 0.003,
+      "target": 0.003
+    }
+  },
+  "decision": "CAL05 reduces conservatism only after a physically meaningful support-preserving confusion premise is supplied. Row-stochasticity by itself gives no factor improvement. At r=0.02 the certified gamma radius expands from about 0.00235 to about 0.00942.",
+  "nonconclusion": "The support pattern is an apparatus premise, not a FIN theorem, and no real detector calibration is supplied."
+}

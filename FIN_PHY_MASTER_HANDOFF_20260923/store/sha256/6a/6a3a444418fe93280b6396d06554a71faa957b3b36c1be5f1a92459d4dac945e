@@ -1,0 +1,156 @@
+{
+  "task": "PHY-019",
+  "scientific_state": "PASS_PROJECTIVE_MAPS_WITH_EXACT_MEMORY__NAIVE_MARKOV_CLOSURE_REFUTED",
+  "control": "scalar linearized relaxational field on C8: zdot=-(aI+kappa L)z, a=0.5,kappa=1",
+  "nested_average_defect_norm": 0.0,
+  "naive_generator_closure_defect_norm": 1.4142135623730951,
+  "A_cc": [
+    [
+      1.4999999999999998,
+      -0.4999999999999999,
+      0.0,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      1.4999999999999998,
+      -0.4999999999999999,
+      0.0
+    ],
+    [
+      0.0,
+      -0.4999999999999999,
+      1.4999999999999998,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      0.0,
+      -0.4999999999999999,
+      1.4999999999999998
+    ]
+  ],
+  "A_cf": [
+    [
+      2.1954436475121754e-17,
+      -0.4999999999999999,
+      0.0,
+      0.4999999999999999
+    ],
+    [
+      0.4999999999999999,
+      2.1954436475121754e-17,
+      -0.4999999999999999,
+      0.0
+    ],
+    [
+      0.0,
+      0.4999999999999999,
+      2.1954436475121754e-17,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      0.0,
+      0.4999999999999999,
+      2.1954436475121754e-17
+    ]
+  ],
+  "A_ff": [
+    [
+      3.499999999999999,
+      0.4999999999999999,
+      0.0,
+      0.4999999999999999
+    ],
+    [
+      0.4999999999999999,
+      3.499999999999999,
+      0.4999999999999999,
+      0.0
+    ],
+    [
+      0.0,
+      0.4999999999999999,
+      3.499999999999999,
+      0.4999999999999999
+    ],
+    [
+      0.4999999999999999,
+      0.0,
+      0.4999999999999999,
+      3.499999999999999
+    ]
+  ],
+  "eliminated_gap": 2.499999999999999,
+  "coupling_norm": 0.9999999999999998,
+  "markov_schur_generator": [
+    [
+      1.357142857142857,
+      -0.4999999999999999,
+      0.14285714285714282,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      1.357142857142857,
+      -0.4999999999999999,
+      0.14285714285714282
+    ],
+    [
+      0.14285714285714282,
+      -0.4999999999999999,
+      1.357142857142857,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      0.14285714285714282,
+      -0.4999999999999999,
+      1.357142857142857
+    ]
+  ],
+  "generated_next_neighbor_coupling_abs": 0.14285714285714282,
+  "memory_kernel": "K(t)=A_cf exp(-A_ff t) A_fc",
+  "memory_L1_norm_upper": 0.39999999999999997,
+  "frequency_dependent_generator": "A_eff(s)=A_cc-A_cf(sI+A_ff)^(-1)A_fc",
+  "low_frequency_bound": "||A_eff(s)-A_eff(0)|| <= ||Acf||^2 |s|/[gamma(gamma-|s|)] for |s|<gamma",
+  "frequency_checks": [
+    {
+      "s": 0.025,
+      "exact_markov_error_norm": 0.00202634245187433,
+      "bound": 0.004040404040404042
+    },
+    {
+      "s": 0.05,
+      "exact_markov_error_norm": 0.004024144869215179,
+      "bound": 0.008163265306122451
+    },
+    {
+      "s": 0.1,
+      "exact_markov_error_norm": 0.00793650793650791,
+      "bound": 0.016666666666666673
+    },
+    {
+      "s": 0.25,
+      "exact_markov_error_norm": 0.019047619047619008,
+      "bound": 0.04444444444444446
+    },
+    {
+      "s": 0.5,
+      "exact_markov_error_norm": 0.035714285714285664,
+      "bound": 0.10000000000000003
+    },
+    {
+      "s": 1.0,
+      "exact_markov_error_norm": 0.06349206349206336,
+      "bound": 0.2666666666666668
+    }
+  ],
+  "interpretation": [
+    "representation coarse maps can be exactly projective while dynamics is non-Markov after elimination",
+    "memory decays at least on eliminated gap scale in this SPD linear control",
+    "a low-frequency Markov approximation is controlled only relative to that gap",
+    "nonlinear FIN requires a separate remainder payment"
+  ]
+}

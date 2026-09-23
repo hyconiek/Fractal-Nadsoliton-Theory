@@ -1,0 +1,27 @@
+# PRINCIPLE-SOURCE — backbone and refinement source audit
+
+## Verdict
+
+`PARTIAL_NO_GO__USEFUL_PM_PRINCIPLES_NOT_STRICT_SOURCED`
+
+### Exact metric backbone
+
+The cycle theorem remains exact on `S1` once zero all-pairs distortion and edge minimality are imposed.  Generic sparsity/MDL does not imply that premise.  On equally spaced circle points an MST saves one edge while incurring worst additive distortion `1-2/M`; an objective `edge_count + beta*distortion` selects different graphs as the unsourced `beta` changes.
+
+More strongly, exact all-pairs metric preservation is not a dimension-agnostic locality principle.  For a finite metric sample with strict triangle inequalities for every distinct triple, any graph with inherited edge lengths whose shortest-path metric equals the original metric on every pair must be complete.  Generic samples in Euclidean dimension >=2 satisfy this condition almost surely.  The sparse exact cycle is therefore a special one-dimensional phenomenon.
+
+### Refinement
+
+For quadratic local edge energy, exact consistency under every split `ell=a+b` gives
+
+`c(a+b)=c(a)c(b)/(c(a)+c(b))`.
+
+Thus resistance `R=1/c` is additive; with standard regularity, `R(ell)=rho ell` and `c(ell)=kappa0/ell`.  However equal/dyadic subdivision alone admits infinitely many positive continuous log-periodic alternatives `R(x)=x f(log_2 x)`.  Arbitrary-subdivision projective consistency is therefore a substantive premise.
+
+### Higher-dimensional candidate
+
+The relative-neighborhood graph (RNG) is a parameter-free metric-only candidate: it contains the MST, is connected, has planar degree <=6, and reduces to the cycle on `S1` when every gap is `<pi`.  Fixed-seed planar scouts remain sparse but do not show exact metric preservation or a continuum theorem.
+
+## Consequence
+
+The previous exact-backbone principle should be retained only for the one-dimensional phase geometry.  A future higher-dimensional DIM-SOURCE should use and test a separate proximity/refinement law rather than importing zero-distortion all-pairs preservation.

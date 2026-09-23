@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+import json, math, sys
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces()
+omega=.18575; phi=.1625; eta=1.8
+w1=math.cos(omega+phi)/(1+1**eta)
+rest_abs_bound=1/(1+2**eta)
+rows=[]
+for q in [12,24,48,96,192,384,768,1536]:
+    # Frozen formula on cyclic carrier; strongest-relation shell is d=1 by global bound for all d>=2.
+    # Compare normalized low-k graph eigenvalues for Cq and Cq(1,2).
+    k=1; th=2*math.pi*k/q
+    l1=2*(1-math.cos(th)); l12=l1+2*(1-math.cos(2*th))
+    rows.append({'q':q,'strict_skeleton_offsets':[1],'phase_RG2_offsets':[1,2],
+                 'q2lambda_Cq_k1':q*q*l1,'q2lambda_Cq12_k1':q*q*l12,
+                 'metric_distortion_exact':'d_Cq12(0,r)=ceil(d_Cq(0,r)/2)'})
+out={
+ 'task':'PHY-013-internal-geometry-consistency',
+ 'scientific_state':'TWO_INTERNAL_GEOMETRY_CONSTRUCTIONS_SHARE_S1_LIMIT__NOT_INDEPENDENT_SOURCE_EVIDENCE',
+ 'strict_similarity_skeleton':{
+   'rule':'For off-diagonal similarities W_ij, choose the largest threshold tau for which the graph W_ij>=tau is connected (complete equal-weight shells retained).',
+   'w_distance1':w1,'absolute_upper_bound_all_distances_ge_2':rest_abs_bound,
+   'proof':'|W(d)|<=1/(1+d^eta)<=1/(1+2^eta)<W(1) for all d>=2. Thus d=1 is the unique strongest shell; it alone forms C_q.',
+   'output':'C_q for every cyclic carrier q under the frozen strict-kernel formula'
+ },
+ 'phase_orbit_skeleton':'The full smooth+parity RG2 theorem gives C_q(1,2) for all sufficiently large even q on the continued localized branch.',
+ 'comparison':{
+   'metric':'d_{Cq(1,2)}(0,r)=ceil(d_Cq(0,r)/2); after natural circumference normalization both converge to the same circle geodesic metric.',
+   'spectral':'q^2 lambda_k(C_q)->(2*pi*k)^2, while q^2 lambda_k(C_q(1,2))->5(2*pi*k)^2.',
+   'interpretation':'same internal topology/spectral dimension, different dimensionless stiffness/metric normalization'
+ },
+ 'diagnostics':rows,
+ 'nonindependence':'The strict kernel formula already uses cyclic distance d, and the phase features are extracted from its spectrum. Agreement is a consistency check, not an independent derivation of space.',
+ 'no_physical_promotion':'Both graphs live on internal labels/phase states. Neither supplies pair-specific adjacency among arbitrarily many physical/effective cells.'
+}
+p=ROOT/'results'/'PHY-013_internal_geometry_consistency.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'w1':w1,'rest_bound':rest_abs_bound,'strict_gap':w1-rest_abs_bound,'q1536':rows[-1]},indent=2))

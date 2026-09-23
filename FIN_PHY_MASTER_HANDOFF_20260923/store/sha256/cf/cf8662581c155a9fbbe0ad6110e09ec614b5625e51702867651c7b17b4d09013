@@ -1,0 +1,55 @@
+# PHY-012 — source identifiability of A7 and composition
+
+**Scientific status: PASS_NONIDENTIFIABILITY_THEOREM_AND_NEW_SOURCE_OBLIGATION.**
+
+## Exact operator nonuniqueness
+
+For a real symmetric D12-invariant circulant operator on 12 labels, Fourier sectors `k=1,...,5` are two-dimensional and `k=6` is one-dimensional. Imposing:
+
+- positive semidefiniteness;
+- removal of the uniform `k=0` mode;
+- rank seven;
+
+still does not select the FIN operator.
+
+Rank seven requires `k=6` plus **any three** of the five two-dimensional sectors. Hence there are
+
+`C(5,3)=10`
+
+distinct support families before any positive eigenweights are chosen.
+
+Even after externally fixing the FIN support `{3,4,5,6}`, positive weights satisfy
+
+`lambda3,lambda4,lambda5,lambda6 > 0`.
+
+Fixing the trace adds only
+
+`2 lambda3 + 2 lambda4 + 2 lambda5 + lambda6 = T`,
+
+leaving a **three-dimensional positive family**. Without trace normalization there are four positive weights, while the static transformation `A -> cA, g -> g/c` supplies one scale gauge, again leaving three shape ratios.
+
+Explicit same-trace operators on the same support and on a different admissible support were constructed and checked to remain PSD, centered, rank seven and D12 invariant while differing substantially from A7.
+
+## Composition is independently unsourced
+
+PHY-003 already provides a nonlinear witness: retained-mean coupling and full-p coupling share the same isolated FIN core and zero-coupling limit, yet their pair distributions differ by TV **0.0454045**.
+
+The cell graph is also not selected by single-cell D12 symmetry. Within retained-mean coupling only products `c_xy=kappa*w_xy` enter, so `kappa` versus edge-weight normalization contains a global gauge.
+
+## New typed source obligation
+
+`SO-PHY-012-01`:
+
+Provide a **target-blind** rule that maps declared pre-composition FIN data (or one explicitly new fine relational observable) to:
+
+1. cell-cell support;
+2. edge-strength ratios;
+3. interaction functional class;
+
+while being equivariant under cell relabeling and internal D12/common-feature-frame gauge.
+
+The rule and its free parameters must be frozen before revealing desired A7 spectral ratios or downstream locality/geometry scores. It must transfer across at least two carrier sizes/topologies and predict a held-out spectral or response relation without retuning.
+
+## Decision
+
+D12 symmetry + positivity + centering + rank do **not** derive A7. The isolated FIN core does **not** derive a unique composition. The source lane remains open only through the new typed, target-independent obligation above.

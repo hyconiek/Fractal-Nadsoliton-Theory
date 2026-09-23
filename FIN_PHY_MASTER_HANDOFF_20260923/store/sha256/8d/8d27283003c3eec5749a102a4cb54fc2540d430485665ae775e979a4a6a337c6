@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+for M in [16,32,64,128,256,512,1024,2048,4096]:
+    # For uniform Dirichlet spacings on circumference 1, P(M^2 min_gap > y)=(1-y/M)^(M-1), 0<=y<=M.
+    rec={'M':M}
+    for y in [0.1,0.5,1.0,2.0,5.0]:
+        rec[f'P_M2mingap_gt_{str(y).replace(".","p")}']=(1-y/M)**(M-1) if y<M else 0.0
+    rec['median_M2_min_gap_exact']=M*(1-0.5**(1/(M-1)))
+    rows.append(rec)
+out={
+ 'task':'CG-02-dynamic-rewiring-gate','scientific_state':'LOCAL_SWAP_REWIRING_BUT_NO_SIZE_UNIFORM_DWELL_TIME',
+ 'exact_locality':{
+   'statement':'If two adjacent phases b,c exchange circular order in ...a,b,c,d..., RG3 changes only edges {a,b},{c,d} into {a,c},{b,d}; the crossing edge {b,c} remains. Each simple crossing changes exactly two edges out and two edges in, independent of M.',
+   'consequence':'Topology updates are combinatorially local per isolated crossing.'
+ },
+ 'minimum_gap_theorem':{
+   'haar_spacings':'For M iid Haar phases, normalized circular spacings are Dirichlet(1,...,1).',
+   'exact_tail':'For 0<=eps<=1/M, P(min_gap >= eps)=(1-M eps)^(M-1). Equivalently P(M^2 min_gap >= y)=(1-y/M)^(M-1).',
+   'limit':'M^2 min_gap converges in distribution to Exp(1). Typical smallest gaps are therefore order M^-2.'
+ },
+ 'dwell_no_go':{
+   'bounded_velocity_class':'If |theta_dot_x|<=V, a closest adjacent pair with gap delta can be driven toward one another at relative speed 2V, producing a crossing within delta/(2V).',
+   'conclusion':'There is no positive M-independent worst-case lower bound on RG3 graph dwell time over the bounded-velocity class. Under Haar geometry the natural worst-gap time scale is order 1/(V M^2).'
+ },
+ 'raw_hop_speed_warning':'A cell moving through angular distance Delta can cross every phase lying in that arc. Without a density/separation premise this can be O(M) swaps in bounded angular time. Thus no size-uniform propagation speed exists in unnormalized hop units merely from a bound on angular velocity.',
+ 'conditional_repair':'In the continuum-normalized phase metric, bounded angular velocity is a finite metric speed. Under a diffuse phase-density theorem, normalized hop count also tracks angular distance; see CG-04.',
+ 'diagnostics':rows,
+ 'scope':'This is a rewiring theorem/no-go for RG3. It does not supply a phase dynamics or a physical clock.'
+}
+p=ROOT/'results'/'CG-02_rewiring.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'rows':rows[-3:]},indent=2))

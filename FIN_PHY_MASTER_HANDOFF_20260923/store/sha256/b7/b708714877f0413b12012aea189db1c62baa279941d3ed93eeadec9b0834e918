@@ -1,0 +1,50 @@
+# OCB-HANKEL-03 — sequential rank certification
+
+## Verdict
+
+**PARTIAL PASS / IMPORTANT NEGATIVE POWER RESULT.**
+
+A genuinely anytime-valid composite-null e-process can be constructed for the declared 4x4 path cross-Hankel rank test, but its generic determinant reduction has unusably weak power on the frozen period-2 alias.
+
+## Exact sequential construction
+
+Let `F` and `G` be the four-dimensional prefix/suffix feature vectors used in the previous whitening construction and
+
+`H = E[F G^T]`.
+
+For four independent reset paths define
+
+`Z = det(F_rows) det(G_rows) / 4!`.
+
+Expanding both determinants and taking expectation gives the Andreief identity
+
+`E[Z] = det(H)`.
+
+Therefore every process in the declared composite null `rank(H)<=3` has `E[Z]=0`.
+The finite feature support gives
+
+`|Z| <= B = 48.33916643206737`.
+
+For predictable `lambda_t`, Hoeffding's lemma gives the conditional e-factor
+
+`exp(lambda_t Z_t - lambda_t^2 B^2 / 2)`,
+
+so the product over independent four-path reset batches is an anytime-valid e-process under the entire declared rank<=3 null.
+
+## Why this does **not** solve practical rank certification
+
+For the frozen period-2 alias,
+
+- `det(H) = 1.1601399943696203e-5`;
+- the oracle Hoeffding bet has expected log growth only `2.88e-14` per four-path batch;
+- reaching expected log evidence `log 20` would require roughly `1.04018481720625e14` four-path batches, i.e. `4.160739268825e14` paths.
+
+A fixed-seed Monte-Carlo power diagnostic estimates `Var(Z)≈0.996`; even an idealized variance-adaptive small-bet approximation still requires order `4e10` four-path batches for `log 20` expected evidence.
+
+The validity theorem is therefore useful primarily as a **stop rule**: a generic determinant e-process is not the practical route for this weak fourth singular direction.
+
+## Decision
+
+`OCB-HANKEL-03A = VALID_ANYTIME_CERTIFICATE__PRACTICALLY_REJECTED_FOR_POWER`.
+
+The next statistically meaningful route must either exploit a declared structural null class or find a matrix-valued/self-normalized construction that does not compress all rank evidence into the tiny determinant.

@@ -1,0 +1,58 @@
+{
+  "task": "PHY-029",
+  "scientific_state": "PASS_PREREGISTERABLE_CONDITIONAL_ANALOG_PROTOCOL_SYNTHETIC_POWER_ONLY",
+  "protocol_class": "classical mesoscopic network of q=12 finite-state units/cells with independently controllable onsite and nearest-neighbor coupling; apparatus technology intentionally unspecified",
+  "identification_subset": [
+    "single-cell stationary occupancy/response -> g under declared control dictionary",
+    "independent control calibration -> kappa",
+    "clock-rate calibration kept separate from static fit"
+  ],
+  "held_out_observables": {
+    "pair_mutual_information_nats": {
+      "PM001": 0.01764583446619213,
+      "PM002": 0.005869549555143358
+    },
+    "pair_expected_feature_distance2": {
+      "PM001": 1.738146015267947,
+      "PM002": 1.819963976591438
+    },
+    "path3_endpoint_mutual_information_nats": {
+      "PM001": 9.441566630431685e-05,
+      "PM002": 7.211455761449977e-06
+    }
+  },
+  "pair_full_distribution": {
+    "TV": 0.045404461209626844,
+    "KL_P_to_Q_nats": 0.006356640062777155,
+    "Chernoff_information": 0.0016227455403719504,
+    "Chernoff_s": 0.49475,
+    "iid_samples_upper_bound_bayes_error": {
+      "0.1": 992,
+      "0.05": 1419,
+      "0.01": 2411
+    }
+  },
+  "feature_distance_scalar_power": {
+    "difference": 0.08181796132349084,
+    "variance_under_PM001": 0.748384246483029,
+    "n_for_5sigma_mean_separation_idealized": 2795
+  },
+  "nuisances": [
+    "state misclassification",
+    "correlated samples/effective sample size",
+    "control drift",
+    "unknown edge heterogeneity",
+    "finite-N mismatch",
+    "non-equilibrium preparation"
+  ],
+  "null_alternatives": [
+    "PM-002 full-p coupling",
+    "zero/weak coupling",
+    "dense/global coupling control"
+  ],
+  "nonconclusions": [
+    "no empirical validation",
+    "no apparatus readiness",
+    "analog success would not validate primordial ontology"
+  ]
+}

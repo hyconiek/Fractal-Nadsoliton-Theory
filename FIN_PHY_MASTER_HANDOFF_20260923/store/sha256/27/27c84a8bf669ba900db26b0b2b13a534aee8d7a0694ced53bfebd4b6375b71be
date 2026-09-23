@@ -1,0 +1,28 @@
+# FIN PHY Handoff — HANKEL-03B / MEM-05 / CAL-05 / CHANNEL-05
+
+Date: 2026-09-23
+Repository de-dup HEAD: `9ad5cd5cd7c9922879f2d25febbc4b9bd9b62426`
+
+## Executive verdict
+
+- `OCB-HANKEL-03B`: **PASS conditional** — composite-rank checkpoint test keeps the fourth singular value and is familywise valid on a frozen grid; still expensive.
+- `OCB-MEM-05`: **PASS explicit witness** — a 3-state edge-emitting weighted automaton is the closest promoted rank-three challenger so far.
+- `OCB-CAL-05`: **PASS conditional** — row-stochastic structure materially enlarges the rigorous calibration-safe region.
+- `OCB-CHANNEL-05`: **protocol constructed; physical execution open**.
+
+## Headline numbers
+
+- Target cross-Hankel `sigma4 = 0.0034060827857960545`.
+- Pair-marginal checkpoint radius: `0.0033386625` at 16M and `0.0023600224` at 32M.
+- MEM-05 weighted automaton: `KL = 6.10507504686e-6`, `TV = 0.0007938086`.
+- Necessary full-path resets against that explicit rank-three witness: **263,623--544,431** depending on the error criterion.
+- CAL-05 at efficiency radius 2%: certified primitive confusion radius grows from `0.00235436` to `0.00996416`.
+- CHANNEL-05 theorem-design counts: **25,514 + 2,559 attempts**, conditional on the frozen calibration gate.
+
+## Replay
+
+Run `python replay.py --check`, then `python verify_package.py`.
+
+## Highest next priority
+
+`OCB-HANKEL-04`: a variance-adaptive matrix confidence sequence that narrows the large gap between the 16--32M generic spectral certificate and the 0.26--0.54M information lower bound.

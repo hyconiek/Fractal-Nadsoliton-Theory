@@ -1,0 +1,96 @@
+{
+  "conclusion": "The intrinsic T2 exists and its standardized tangent is stable, but it is not automatically populated as a finite-extent macroscopic geometry in the sharp-cell regime. Polynomially many cells cannot rescue it.",
+  "critical_rates": [
+    {
+      "critical_logM_over_N_for_order1_extreme": 0.00015581473700072067,
+      "epsilon": 0.05
+    },
+    {
+      "critical_logM_over_N_for_order1_extreme": 0.0006232589480028827,
+      "epsilon": 0.1
+    },
+    {
+      "critical_logM_over_N_for_order1_extreme": 0.002493035792011531,
+      "epsilon": 0.2
+    },
+    {
+      "critical_logM_over_N_for_order1_extreme": 0.015581473700072065,
+      "epsilon": 0.5
+    }
+  ],
+  "diagnostics": [
+    {
+      "M": 100,
+      "N": 100,
+      "epsilon": 0.2,
+      "polynomial_power": 1,
+      "union_bound": 1.0
+    },
+    {
+      "M": 10000,
+      "N": 100,
+      "epsilon": 0.2,
+      "polynomial_power": 2,
+      "union_bound": 1.0
+    },
+    {
+      "M": 100000000,
+      "N": 100,
+      "epsilon": 0.2,
+      "polynomial_power": 4,
+      "union_bound": 1.0
+    },
+    {
+      "M": 1000,
+      "N": 1000,
+      "epsilon": 0.2,
+      "polynomial_power": 1,
+      "union_bound": 1.0
+    },
+    {
+      "M": 1000000,
+      "N": 1000,
+      "epsilon": 0.2,
+      "polynomial_power": 2,
+      "union_bound": 1.0
+    },
+    {
+      "M": 1000000000000,
+      "N": 1000,
+      "epsilon": 0.2,
+      "polynomial_power": 4,
+      "union_bound": 1.0
+    },
+    {
+      "M": 10000,
+      "N": 10000,
+      "epsilon": 0.2,
+      "polynomial_power": 1,
+      "union_bound": 1.488960317364488e-07
+    },
+    {
+      "M": 100000000,
+      "N": 10000,
+      "epsilon": 0.2,
+      "polynomial_power": 2,
+      "union_bound": 0.0014889603173644879
+    },
+    {
+      "M": 10000000000000000,
+      "N": 10000,
+      "epsilon": 0.2,
+      "polynomial_power": 4,
+      "union_bound": 1.0
+    }
+  ],
+  "lambda_max_C": 8.022347719229014,
+  "nonconclusions": [
+    "Exponential M is not proposed as physical.",
+    "Rare large deviations are not a new spatial dimension.",
+    "Fixed finite N could keep a 2D cloud broad, but that is a different scaling regime."
+  ],
+  "scientific_state": "PROVED_GAUSSIAN_TANGENT_COLLAPSE_FOR_SUBEXPONENTIAL_CELL_COUNTS",
+  "tail_bound": "For the asymptotic Gaussian tangent chi~N(0,C/N), P(||chi||>=eps) <= exp[-N eps^2/(2 lambda_max(C))]. Therefore P(max_{1..M}||chi_i||>=eps) <= M exp[-N eps^2/(2 lambda_max(C))].",
+  "task": "HDIM-05-population-extent",
+  "theorem": "If log M / N -> 0, the entire unrescaled shape cloud collapses to chi* in probability. A fixed O(1) shape extent at sharp N requires at least log M=Omega(N), fixed N, or a new noise/control scaling."
+}

@@ -1,0 +1,149 @@
+# FIN PHY memory/calibration/channel handoff
+
+Date: 2026-09-23
+
+## Predecessor
+
+`FIN_PHY_OPERATIONAL_CARRIER_20260923.zip`
+
+SHA-256: `5ddacbb1064b491bdcffaf471a3a0a4665c18c1b41e7b1737b755ee222eee37e`
+
+## Goal
+
+Continue the operational-carrier programme beyond one-jump identifiability.
+Test hidden-memory aliases, calibrated nuisance, and the actual channel-class
+assumption behind carrier transfer.  Avoid replaying historical continuum-tail
+and generic memory results.
+
+## OCB-MEM-01A — exact hidden-horizon alias
+
+Using the strict 11-outcome embedded-jump increment law `p`, define a radial
+contrast `c` that adds probability to shell 1 and removes the same amount from
+shell 2.  A rotating hidden sign word of length `L` gives a finite hidden model
+whose complete visible path law agrees **exactly** with strict iid for every
+path of length `n<=L`.
+
+At length `L+1`,
+
+`P_alias-P_strict = delta^2 c tensor p^(tensor(L-1)) tensor c`,
+
+hence
+
+`TV = 8 delta^2`.
+
+At `delta=0.05`, the frozen period-two alias has two-step TV at replay noise
+`2.9e-17` and three-step TV exactly `0.02`; the endpoint-contrast expectation
+gap is `0.04`.
+
+Verdict: **no universal predeclared finite path horizon exists without a memory
+complexity bound**.
+
+## OCB-MEM-01B — persistent hidden bit
+
+For a stationary hidden sign with `E[h_t h_(t+l)]=rho^l` and visible law
+`p+delta h_t c`, the visible one-step law remains exactly strict.
+
+Exact formulas:
+
+- `TV_2=8 delta^2 |rho|`;
+- `Cov(C_t,C_(t+l))=16 delta^2 rho^l`;
+- `rho=C_2/C_1`;
+- `delta^2=C_1^2/(16 C_2)`.
+
+Thus two steps detect this declared class, while three steps identify persistence
+and contrast amplitude separately.
+
+## OCB-MEM-01C — bounded hidden dimension
+
+The standard weighted/probabilistic-automaton finite-equivalence argument gives:
+if a hidden model has at most `H` states and agrees with the strict rank-one iid
+jump law on every visible word through length `H`, it agrees for all lengths.
+Any inequivalent `H`-state model has a witness by length `H`.
+
+This is a classical automata-theory theorem specialized to FIN; do not label the
+general theorem as a new FIN discovery.  The new FIN-specific objects are the
+explicit strict-carrier aliases and witnesses.
+
+Replay controls:
+
+- `H=2` persistent model: first witness length 2;
+- `H=4` period-two model: first witness length 3, within the general bound 4.
+
+## OCB-CAL-01 — calibrated nuisance
+
+With calibrated confusion `C` and destination efficiencies `eta`,
+
+`q=C^T diag(eta)p/(eta^T p)`.
+
+If `C` is invertible and every `eta_j>0`, then
+
+`B q = p/(eta^T p)`, `B=diag(eta)^-1(C^T)^-1`.
+
+Therefore all ordinal destination comparisons are linear in the observed
+probability vector; no nonlinear normalization is needed.
+
+Synthetic stress fixture:
+
+- 90% correct label, 5% confusion to each adjacent reported label;
+- efficiencies 0.80--0.98;
+- exact recovery error `1.7e-16`;
+- uniform observed-coordinate tolerance preserving every strict top-two
+  inequality: `0.061363680539136226`;
+- conservative family-wise Hoeffding fixture: 1,150 recorded exits per source.
+
+Singular confusion, unknown censoring, or zero efficiency destroys general
+identifiability.  Calibration is a paid operational premise.
+
+## OCB-CHANNEL-01 — first-nonscalar-jet theorem
+
+For
+
+`K_eps=c(eps)I-a eps^m A+R_eps`, `a>0`,
+
+if
+
+`max|R_ij| < (a eps^m/2)(w1-w2)`,
+
+the two largest off-diagonal destination responses are exactly the two strict
+nearest neighbours for every source.  The minimum adjacent-shell gap gives the
+analogous full shell-order statement.
+
+Generic `f(A)` does **not** preserve adjacency.  The `k=1` spectral projector
+`P1=f(A)` is a degree-<=6 polynomial in `A`, yet its largest absolute shell
+response is at `d=6`, not `d=1`.
+
+Thus the heat/unitary/wave carrier agreement is a shared first-jet property, not
+a generic functional-calculus property.
+
+## Prior-work boundary
+
+Earlier repository programmes already contained generic finite-order ambiguity,
+hidden-memory kernels, calibration premises, and channel inequivalence.  See
+`PRIOR_WORK_DEDUP.md`.  Current claims are deliberately scoped to the strict
+embedded-jump carrier, the explicit calibrated-cycle inverse, and the first-jet
+carrier criterion.
+
+## Current picture
+
+`intrinsic C12 carrier -> operational one-jump carrier`
+
+is now substantially controlled under declared calibration/channel conditions.
+
+But
+
+`operational one-jump carrier -> unique Markov dynamics`
+
+is false without added assumptions.
+
+## Next highest-value atom
+
+`OCB-HANKEL-01`: construct finite visible path-Hankel matrices and turn the
+hidden-dimension bound from a declared `H` into an operational lower-rank
+certificate.  Follow with interval-calibration uncertainty and an adaptive
+finite-equivalence protocol.
+
+## Nonpromotion boundary
+
+No physical system, apparatus calibration, absolute clock, Markov ontology,
+continuum operator, quantum theory, spacetime, gravity, Standard Model or ToE
+follows.

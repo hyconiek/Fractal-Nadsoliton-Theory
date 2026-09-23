@@ -1,0 +1,116 @@
+{
+  "task": "PHY-018",
+  "scientific_state": "PASS_SEPARATED_LIMITS_AND_UNIFORM_METHOD_OF_TYPES_BOUND",
+  "limit_definitions": {
+    "N": "exchangeable copies inside a fixed cell; MP7 mean-field/type limit",
+    "M": "number of interacting effective cells; graph/network thermodynamic or refinement limit",
+    "q": "number of internal labels/states per cell",
+    "rank": "number of retained feature directions; <=q-1 for centered finite q",
+    "refinement": "a chosen sequence of graphs plus maps/edge scaling; not implied by M alone"
+  },
+  "uniform_type_bound": "For fixed q and bounded local energy, product method-of-types polynomial factor <=(N+1)^(q M), so log correction per NM <= q log(N+1)/N, independent of M.",
+  "type_bound_samples": [
+    {
+      "N": 2,
+      "qlogN_over_N": 6.591673732008658
+    },
+    {
+      "N": 4,
+      "qlogN_over_N": 4.828313737302301
+    },
+    {
+      "N": 8,
+      "qlogN_over_N": 3.295836866004329
+    },
+    {
+      "N": 16,
+      "qlogN_over_N": 2.1249100080421623
+    },
+    {
+      "N": 32,
+      "qlogN_over_N": 1.3111903355499301
+    },
+    {
+      "N": 64,
+      "qlogN_over_N": 0.782697613105432
+    },
+    {
+      "N": 128,
+      "qlogN_over_N": 0.4556074129089067
+    },
+    {
+      "N": 256,
+      "qlogN_over_N": 0.26011294147946346
+    },
+    {
+      "N": 512,
+      "qlogN_over_N": 0.1462564651211899
+    },
+    {
+      "N": 1024,
+      "qlogN_over_N": 0.08123962372936534
+    }
+  ],
+  "graph_scaling": [
+    {
+      "M": 8,
+      "cycle_edges": 8,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 28,
+      "complete_edges_per_cell": 3.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    },
+    {
+      "M": 16,
+      "cycle_edges": 16,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 120,
+      "complete_edges_per_cell": 7.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    },
+    {
+      "M": 32,
+      "cycle_edges": 32,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 496,
+      "complete_edges_per_cell": 15.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    },
+    {
+      "M": 64,
+      "cycle_edges": 64,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 2016,
+      "complete_edges_per_cell": 31.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    },
+    {
+      "M": 128,
+      "cycle_edges": 128,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 8128,
+      "complete_edges_per_cell": 63.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    },
+    {
+      "M": 256,
+      "cycle_edges": 256,
+      "cycle_edges_per_cell": 1.0,
+      "complete_edges": 32640,
+      "complete_edges_per_cell": 127.5,
+      "complete_kappa_needed_for_O_M_energy": "kappa0/M"
+    }
+  ],
+  "chosen_scalable_family": "cycle C_M with degree 2, unit dimensionless edge weights; later geometric refinement h=1/M is an added convention tested in PHY-020",
+  "order_of_limits": {
+    "N_and_M_bounded_degree": "free-energy-density type-counting correction is uniform in M as N->infinity; this supports commuting N and M at this level, conditional on existence of the M-limit of the variational density",
+    "dense_unnormalized": "nonextensive O(M^2) interaction; must rescale kappa or reject same limit",
+    "q_vs_rank": "not interchangeable; fixed q bounds centered rank by q-1",
+    "q_smooth_plus_parity": "two-sublattice internal limit, not a spatial M-refinement"
+  },
+  "nonconclusions": [
+    "no unique limit selected by FIN",
+    "no spatial dimension from N",
+    "no continuum theorem yet"
+  ]
+}

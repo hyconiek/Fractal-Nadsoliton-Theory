@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math, sys
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces(); q=12;j=np.arange(q);u=np.ones(q)/q
+
+def e(k,phi): return np.sqrt(2/q)*np.cos(2*np.pi*k*j/q+phi)
+def KL(p): return float(np.sum(p*np.log(p/u)))
+rng=np.random.default_rng(20260923)
+rows=[]
+for r in [.003,.005,.008,.012,.018,.025]:
+ vals=[];rhos=[]
+ for _ in range(3000):
+  ph=rng.uniform(0,2*np.pi,5)
+  f=sum(r*e(k,ph[k-1]) for k in range(1,6))
+  p=u+f
+  if p.min()<=0: continue
+  vals.append(KL(p));rhos.append(q*np.max(np.abs(f)))
+ spread=max(vals)-min(vals)
+ rows.append({'r':r,'samples':len(vals),'entropy_phase_spread':spread,'max_rho':max(rhos),'spread_over_r_cubed':spread/r**3})
+# fit small four radii where positivity/scaling clean
+fit=rows[:5]
+coef=np.polyfit(np.log([x['r'] for x in fit]),np.log([x['entropy_phase_spread'] for x in fit]),1)
+out={
+ 'task':'EMERGENT-PROTECT-small-amplitude-T5',
+ 'scientific_state':'PROVED_UNIFORM_APPROXIMATE_T5_SYMMETRY_OF_LABEL_ENTROPY_NEAR_UNIFORM__CUBIC_BREAKING',
+ 'theorem':'Write p_j=(1/q)(1+x_j), sum x_j=0 and rho=max|x_j|<1. Taylor remainder for g(x)=(1+x)log(1+x) gives |D(p||u)-(q/2)||f||_2^2| <= [q^2/(6(1-rho)^2)] sum_j |f_j|^3 <= [q*rho/(6(1-rho)^2)] ||f||_2^2. Since strict T5 rotations preserve ||f||_2, the entropy difference between any two phase rotations with the same modal radii is at most twice this remainder. Relative T5 breaking versus the quadratic entropy therefore vanishes at least linearly in rho.',
+ 'leading_symmetry':'The gain/Dirichlet quadratic terms are also phase-radial in the strict spectral basis, so phase breaking of the current entropy-plus-quadratic model begins beyond quadratic order.',
+ 'numerical_rows':rows,
+ 'sampled_loglog_phase_spread_exponent':float(coef[0]),
+ 'interpretation':'T5 is not an exact symmetry of the finite-12 nonlinear model, but becomes uniformly asymptotically exact in the small-amplitude/linear-response regime. Relative phase directions are therefore parametrically soft on fixed small-radius shells.',
+ 'guardrail':'At f=0 the phases themselves are undefined, and without a mechanism maintaining nonzero modal radii this does not create a stable physical T4 manifold.',
+ 'nonconclusions':['No spontaneous HDIM phase is proved.','No physical space or Goldstone particle follows.','The numerical spread exponent is a scout; the analytic remainder bound is the theorem-grade statement.']
+}
+p=ROOT/'results'/'EMERGENT-PROTECT_small_amplitude.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps({'output':str(p),'fit_exponent':coef[0],'rows':rows},indent=2))

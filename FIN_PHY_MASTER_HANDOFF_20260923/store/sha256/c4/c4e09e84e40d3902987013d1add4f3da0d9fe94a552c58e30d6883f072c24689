@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, math
+ROOT=Path(__file__).resolve().parents[1]
+rows=[]
+# rectangular periodic grid nx=a*m, ny=m, N=a*m^2. Unweighted 4-neighbor RNG.
+for a in [1,2,3,4]:
+  seq=[]
+  for m in [20,40,80,160]:
+    nx=a*m;ny=m;N=nx*ny;hx=1/nx;hy=1/ny
+    # density-scaled low-frequency symbol for Fourier mode (1,0)/(0,1), p=2pi
+    lamx=N*2*(1-math.cos(2*math.pi/nx))
+    lamy=N*2*(1-math.cos(2*math.pi/ny))
+    seq.append({'m':m,'N':N,'scaled_lambda_10':lamx,'scaled_lambda_01':lamy,'ratio_y_over_x':lamy/lamx})
+  rows.append({'aspect_a':a,'predicted_continuum_coeff_x':1/a,'predicted_continuum_coeff_y':a,
+               'predicted_eigenvalue_ratio_y_over_x':a*a,'sequence':seq})
+out={
+ 'task':'PROX-05_Haar_RNG_operator_nonuniqueness',
+ 'scientific_state':'REFUTED_HAAR_POPULATION_PLUS_UNWEIGHTED_RNG_AS_UNIQUE_ISOTROPIC_CONTINUUM_SOURCE',
+ 'families':rows,
+ 'theorem':'On the unit flat T2, take periodic rectangular grids nx=a m, ny=m. Their empirical measures all converge to Haar. Their relative-neighborhood graph is the same local four-axis-neighbor topology. With the density scaling N=nx ny, the graph symbol satisfies N*2(1-cos(p_x/nx)) -> p_x^2/a and N*2(1-cos(p_y/ny)) -> a p_y^2. Thus the continuum operator is (1/a) d_x^2 + a d_y^2 and depends on the microscopic aspect sequence a, despite identical Haar limit and the same parameter-free RNG rule.',
+ 'consequence':'RNG can source sparse topology, but not a unique isotropic/homogenized operator from point density alone. A local metric-volume/conductance weighting or stronger sampling law is an independent source obligation.',
+ 'nonconclusions':['This does not refute all weighted RNG or Delaunay finite-element schemes.','It does not refute weak homogenization after adding an independently sourced isotropic sampling/weight law.']
+}
+p=ROOT/'results'/'PROX-05_rng_nonuniqueness.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))

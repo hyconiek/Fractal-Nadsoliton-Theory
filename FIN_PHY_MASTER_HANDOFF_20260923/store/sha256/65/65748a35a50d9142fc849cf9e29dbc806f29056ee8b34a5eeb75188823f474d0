@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json,sys,numpy as np
+from scipy.linalg import expm
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'inputs'))
+import R7P_model as model
+W,A,L,X7,C4,A7=model.feature_spaces();q=12
+for t in [0.1,0.7]:
+    P=expm(-t*A)
+    assert np.min(P)>-1e-13
+# witnesses at t=.7
+t=.7
+P=expm(-t*A); U=expm(-1j*t*A)
+heat_row_res=float(np.max(np.abs(P.sum(axis=1)-1)))
+heat_min=float(P.min())
+heat_orth_def=float(np.linalg.norm(P.T@P-np.eye(q)))
+unitarity=float(np.linalg.norm(U.conj().T@U-np.eye(q)))
+# unitary is not real stochastic except t=0
+unitary_imag=float(np.max(np.abs(U.imag)))
+# relative modal clocks k=1..5
+pos=L[1:6]
+heat_ratios=(pos/pos[0]).tolist();wave_ratios=(np.sqrt(pos)/np.sqrt(pos[0])).tolist()
+out={
+ 'task':'DYN-SOURCE-02_category_trilemma_and_stochastic_reversible_no_go',
+ 'scientific_state':'PROVED_DYNAMIC_CATEGORY_NONIDENTIFIABILITY_AND_NO_COMMON_NONTRIVIAL_STOCHASTIC_ORTHOGONAL_FLOW',
+ 'heat_witness':{'t':t,'min_entry':heat_min,'row_sum_residual':heat_row_res,'orthogonality_defect':heat_orth_def},
+ 'unitary_witness':{'unitarity_defect':unitarity,'max_imaginary_entry':unitary_imag},
+ 'heat_relative_rates_k1_to_k5':heat_ratios,'wave_relative_frequencies_k1_to_k5':wave_ratios,
+ 'theorem_no_go':'If a real matrix is entrywise nonnegative and orthogonal, each row/column has exactly one nonzero entry equal to 1, so it is a permutation matrix. A continuous one-parameter family P_t with P_0=I that is both stochastic and orthogonal therefore lies in the discrete permutation group and must be P_t=I. Hence no nontrivial finite-state continuous dynamics is simultaneously classical Markov-positive and orthogonally reversible on the same simplex.',
+ 'conditional_uniqueness':'Once the state category is supplied, natural laws become essentially unique up to clock scale: rates W give generator -A and heat exp(-tA); a real inertial extension gives u_ddot + A u=0; a complex Hilbert extension gives i psi_dot=A psi. These are inequivalent categories, not three interpretations selected by static A.',
+ 'consequence':'DYN/TIME sourcing is a source problem for state category and temporal principle. Static strict carrier and operator do not choose dissipation versus reversible wave/unitary dynamics.',
+ 'nonconclusions':['This does not derive a physical arrow of time, SI second, quantum mechanics, or a wave equation from FIN.']
+}
+p=ROOT/'results'/'DYN-SOURCE-02_category_no_go.json';p.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+print(json.dumps(out,indent=2))
