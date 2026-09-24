@@ -1,0 +1,64 @@
+{
+  "boundary_states": {
+    "g_eq": 3.7183448981203875,
+    "left": "uniform s=0",
+    "right": "localized s=s_eq at g_eq",
+    "s_eq": [
+      1.8199035812800828,
+      1.913989554668724,
+      1.914569132546848,
+      1.367203280195504
+    ]
+  },
+  "box_convergence": [
+    {
+      "Lbox": 15.0,
+      "lowest_linearized_eigenvalues": [
+        0.00025131643700604335,
+        0.09215425838418281,
+        0.10299714861585522
+      ],
+      "max_distance_from_straight_radial_line": 0.022540310352198167,
+      "nodes": 907,
+      "solver_status": 0,
+      "translation_mode_correlation": 0.9993266123107739,
+      "wall_energy": 0.7033413734760957
+    },
+    {
+      "Lbox": 20.0,
+      "lowest_linearized_eigenvalues": [
+        1.1823231007788633e-05,
+        0.08507797816398502,
+        0.09229402116938853
+      ],
+      "max_distance_from_straight_radial_line": 0.022558145906740854,
+      "nodes": 1247,
+      "solver_status": 0,
+      "translation_mode_correlation": 0.999967275023441,
+      "wall_energy": 0.7028794439216446
+    },
+    {
+      "Lbox": 25.0,
+      "lowest_linearized_eigenvalues": [
+        -1.2473266265761748e-06,
+        0.08253681489209166,
+        0.08665765774030311
+      ],
+      "max_distance_from_straight_radial_line": 0.022558001817801335,
+      "nodes": 6049,
+      "solver_status": 0,
+      "translation_mode_correlation": 0.9999984320117836,
+      "wall_energy": 0.7028570964215002
+    }
+  ],
+  "interpretation": "The full four-component Euler-Lagrange BVP converges to a localized heteroclinic. The lowest spectral mode tracks translation and the next modes remain positive on the tested boxes.",
+  "kinetic_or_spatial_metric_assumption": "constant radial spatial stiffness G=I; this is a benchmark, not FIN-sourced",
+  "nonconclusions": [
+    "does not source G=I",
+    "does not prove moving wall",
+    "does not supply physical length/time/energy units"
+  ],
+  "proof_grade": "deterministic numerical BVP plus finite-difference spectrum; not interval-certified",
+  "status": "CONDITIONAL_NUMERICAL_FULL_C4_STATIC_WALL_FOUND_FOR_G_IDENTITY",
+  "task": "NL-13"
+}

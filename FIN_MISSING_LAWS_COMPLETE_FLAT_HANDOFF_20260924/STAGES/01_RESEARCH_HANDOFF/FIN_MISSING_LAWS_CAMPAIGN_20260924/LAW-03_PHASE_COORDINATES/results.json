@@ -1,0 +1,54 @@
+{
+  "coordinate_matrix": [
+    [
+      -1,
+      1,
+      0
+    ],
+    [
+      1,
+      -2,
+      1
+    ],
+    [
+      4,
+      -3,
+      0
+    ]
+  ],
+  "definitions": {
+    "alpha": "phi4-phi3",
+    "beta": "phi3-2 phi4+phi5",
+    "gamma": "4 phi3-3 phi4"
+  },
+  "determinant": 1,
+  "identity_map_energy": "If ell_ij=alpha_j-alpha_i>0 and c=kappa/ell, then (1/2)sum c(Delta alpha)^2=(kappa/2)sum ell; at fixed circumference this is constant.",
+  "interpretation": "alpha is a valid translation-covariant geometry coordinate; beta is one invariant transverse deformation but is not complete by itself. gamma is an independent translation-invariant deformation unless separately frozen/slaved.",
+  "inverse": "phi3=3 alpha+gamma; phi4=4 alpha+gamma; phi5=5 alpha+beta+gamma",
+  "inverse_matrix": [
+    [
+      3.0,
+      0.0,
+      1.0
+    ],
+    [
+      4.0,
+      -0.0,
+      1.0
+    ],
+    [
+      5.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "locked_manifold": "phi_k=k a implies beta=gamma=0",
+  "status": "PASS_WITH_ONE_MISSING_INTERNAL_COORDINATE",
+  "task": "LAW-03",
+  "title": "Separate translation geometry from internal phase deformation",
+  "translation_response": [
+    1,
+    0,
+    0
+  ]
+}

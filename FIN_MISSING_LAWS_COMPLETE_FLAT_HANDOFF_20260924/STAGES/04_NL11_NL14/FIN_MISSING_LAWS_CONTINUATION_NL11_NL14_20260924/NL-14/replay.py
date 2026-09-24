@@ -1,0 +1,1 @@
+print('STOP: moving-wall gate not activated; kinetic source missing')

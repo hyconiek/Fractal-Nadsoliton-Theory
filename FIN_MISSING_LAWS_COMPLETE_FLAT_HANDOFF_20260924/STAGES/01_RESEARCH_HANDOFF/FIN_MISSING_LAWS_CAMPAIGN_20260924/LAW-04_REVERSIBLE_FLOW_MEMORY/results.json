@@ -1,0 +1,32 @@
+{
+  "damped_front_gate": "The previous gamma*c*int(a_prime^2)=Delta U forbids c!=0 only when gamma>0 and degenerate wells. With gamma=0 the identity becomes 0=Delta U and no longer fixes c.",
+  "energy_derivative": "0 exactly for time-independent M,K,U",
+  "equations": [
+    "dot beta=M^-1 pi",
+    "dot pi=-K beta-grad U_FIN"
+  ],
+  "general_partition": "D_eff(s)=s^2 M_u+K_uu-K_uv (s^2 M_v+K_vv)^-1 K_vu",
+  "graph_hamiltonian": "H=1/2 pi^T M^-1 pi + 1/2 beta^T K beta + U_FIN(beta,...)",
+  "hidden_mode_example": {
+    "Omega": 3.0,
+    "g": 0.8,
+    "memory_kernel": "(g^2/Omega) sin(Omega t)",
+    "normal_mode_frequencies": [
+      0.9595751086422427,
+      3.013173677515823
+    ],
+    "omega": 1.0,
+    "positive_definite": true,
+    "schur_dynamic_stiffness": "D_eff(s)=s^2+omega^2-g^2/(s^2+Omega^2)"
+  },
+  "interpretation": "Eliminating conservative hidden coordinates produces exact frequency dependence / memory and a term depending on hidden initial conditions; it does not generically produce constant viscous damping.",
+  "remaining_source_obligations": [
+    "derive or independently justify symplectic/reversible category",
+    "source M (candidate LAW-02 gives geometric storage scaling but not physical inertia)",
+    "derive actual U_FIN for transverse modes",
+    "prove existence/stability of any localized moving branch; finite lattice pinning/radiation remain"
+  ],
+  "status": "PASS_AS_STRUCTURALLY_COMPATIBLE_KINETIC_CANDIDATE__SOURCE_OPEN",
+  "task": "LAW-04",
+  "title": "Reversible extended state with stored flow"
+}
