@@ -1,0 +1,38 @@
+{
+  "barrier_to_additive_scalar_map": "NO_GO except zero map",
+  "series_conductance_formula": "Ceff=C1*C2/(C1+C2)",
+  "series_resistance_formula": "Reff=R1+R2",
+  "clock_scaling": {
+    "C": "rho*C",
+    "R": "R/rho"
+  },
+  "fast_clusters": [
+    [
+      0,
+      3,
+      6,
+      9
+    ],
+    [
+      1,
+      4,
+      7,
+      10
+    ],
+    [
+      2,
+      5,
+      8,
+      11
+    ]
+  ],
+  "slow_quotient_generator": "k4*[[-2,1,1],[1,-2,1],[1,1,-2]]",
+  "slow_eigenvalues": [
+    "0",
+    "3*k4",
+    "3*k4"
+  ],
+  "quotient_edge_conductance": "k4/3",
+  "quotient_effective_resistance_between_clusters": "2/k4",
+  "physical_space_derived": false
+}
