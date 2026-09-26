@@ -11221,3 +11221,113 @@ _Last updated: 2026-05-31 (legacy kernel restored as intermediate bridge kernel;
 - The two-trit SWAP uniqueness theorem was independently enumerated over all 9! bijections: exact reset -> diagonal Z3 equivariance -> exchange symmetry -> involution leaves `46656 -> 36 -> 3 -> 1` gates, uniquely SWAP, **under those supplied axioms**. A cycle of swaps yields conditional `n^-2` dimensionless density diffusion when cycle incidence and equal activity split are supplied. A minimum environment for m independent perfect trit resets has `|E|>=3^m` and factors as `Z3^m` at equality, but these are future-record factors, not sourced simultaneous physical sites.
 - CRT `Z12≅Z3×Z4`, barrier-selected `{3,4}` and commuting-transformation torus results concern internal state/transform geometry. The minimum-bottleneck basis is conditional on completeness of mapped saddle families; group factorization does not source elementary generators or spatial dimension. Direct d5 barrier is not necessarily its communication height. Reversible memory-tail bounds require a **coupled** hidden gap; small-N spectral trends and capacities do not establish N-uniform metastability.
 - Current P0 is `RECORD-TO-SPATIAL-ROLE-TRANSFER-256`. Activate `SLOT-ALGEBRA-257` and `INCIDENCE-FROM-TRANSFORMATION-COST-258` only after a typed simultaneous-subsystem carrier exists. Continue large-N capacity/memory separately. Do not add a new graph, free coupling, clock or state-to-space semantic identification at every scale. No SI space/time, QW-2191, legacy-to-strict bridge/role transfer, role-bearing `L_total`, SM/GR, laboratory evidence or ToE closure follows.
+
+## FIN post-255 operational-composition and hydrodynamic-memory guardrail (2026-09-27)
+
+These additions record the subsequent scientific review of reports 131–255.
+They distinguish algebraic scope corrections and conditional consequences from
+proposed source tests. They are not an additional imported campaign, a new
+all-artifact replay, or completion certificates for tasks 256–260. Preserve the
+source handoff and its intake; the new checks below do not upgrade its sampled
+semigroup errors or finite-N capacity trends to uniform theorems.
+
+### Exact quotient correction and existing-theory benchmark
+
+- Read `SECOND_COARSE_LEVEL_NOGO_146.md` as absence of a dynamically
+  distinguished second slow scale, not absence of every nontrivial Markov
+  quotient. For `Q3=k[[-2,1,1],[1,-2,1],[1,1,-2]]`, the partition
+  `{0}|{1,2}` has embedding `J=[[1,0],[0,1],[0,1]]` and exact quotient
+  `Q2=k[[-2,2],[1,-1]]`: `Q3 J=J Q2`. Its nonzero eigenvalue is still
+  `-3k`; choosing the singleton breaks the sector symmetry and creates no
+  new slow hierarchy. This corrects the overbroad wording without reopening
+  the failed recursive-binary programme.
+- On a supplied connected graph with positive edge activities, the closed
+  SWAP model is a colored interchange/exclusion process. The
+  [Caputo–Liggett–Richthammer theorem](https://arxiv.org/html/0906.1238v4#S4.SS1.SSS2)
+  identifies its spectral gap with the random-walk gap in each fixed-count
+  sector containing at least two colors. Thus the cycle gap is not limited
+  to the small-n numerical examples. This is an application of established
+  mathematics, not a FIN-derived incidence law or a FIN-specific physical
+  prediction. The full chain has multiple conserved-count sectors.
+
+### Conditional open/closed transport and memory checks
+
+- Do not identify report 250's global cyclic register update with report
+  241's asynchronous nearest-neighbor SWAP generator. The register delivers
+  fresh records until its full recurrence; local exchanges permit an old
+  record to return after two swaps. The common one-event reset dilation
+  does not imply equal reduced path laws after closing the environment.
+- For a supplied cycle `C_n`, `n>=3`, with edge rate `rho/2`, a fixed
+  observed initial trit and independent uniform initial environment trits,
+  the tagged-site one-time kernel is `R_n(t) I+(1-R_n(t)) U`, where
+  `U_ij=1/3` and
+  `R_n(t)=n^-1 sum_m exp[-rho*t*(1-cos(2*pi*m/n))]`.
+  Taking the infinite-line limit first gives
+  `R_infinity(t)=exp(-rho*t) I0(rho*t) ~ (2*pi*rho*t)^(-1/2)`, not the
+  fresh-bath factor `exp(-rho*t)`. `I0` is the modified Bessel function.
+  This is the standard [discrete heat kernel](https://www.unige.ch/~karlssob/discretegaussian-Sept22.pdf)
+  applied to the declared model. A finite cycle instead has the eventual
+  plateau `1/n`; do not exchange the size and long-time limits silently.
+- In the infinite-line tagged-density equation
+  `dR/dt=-rho R+integral_0^t K(t-s)R(s) ds`, `R(0)=1`, the exact Laplace
+  kernel is `Khat(s)=s+rho-sqrt(s*(s+2*rho))`. Consequently
+  `M0=integral K(t)dt=rho`, while `M1=integral t*K(t)dt` diverges.
+  The finite-N single-cell coupled-gap bounds and finite-M1 one-pole
+  approximation must therefore not be transferred unchanged to an
+  unbounded transport network. Retain conserved slow densities explicitly
+  or retain the nonlocal memory; short microscopic memory does not prove
+  uniformly short memory at every later scale. This is a conditional
+  transport consequence, not a completed FIN continuum/source bridge.
+- Involution is stronger than invertibility or detailed balance. For
+  `F_c(x,e)=(e+c,x+c) mod 3`, every `F_c` is a bijective exact-reset
+  dilation with a fresh uniform environment, and `F_+^-1=F_-`; only
+  `F_0` is involutive. As a robustness countermodel, use `F_0` with weight
+  `1-epsilon` and `F_+,F_-` with weights `epsilon/2` at the same cycle
+  edge activity `rho/2`. The joint generator is uniform-reversible and
+  its color-density modes have
+  `lambda_epsilon(q)=rho*[1-(1-3*epsilon/2)*cos(q)]`.
+  For fixed `0<epsilon<2/3`, the uniform color-density mode decays at
+  `3*rho*epsilon/2`: label-count conservation and the gapless density
+  branch are lost. This does NOT refute report 240 under all its axioms;
+  it exposes the role of its gate-class restriction. The countermodel
+  matches fresh-bath reset behavior, not autonomous closed-site marginals.
+  Do not repair the loss of transport by fitting epsilon at each scale;
+  source the protecting law or mark it explicitly as a modelling premise.
+
+### Operational source criteria and next research direction
+
+- Refine task 256 into reconstruction of independently addressable
+  subsystems from admitted preparations, interventions, readouts and
+  transformation costs, up to relabeling. Pointwise classical observable
+  algebras commute automatically; commutativity alone does not select
+  physical factors. Encodings preserving all admitted operations and
+  measurements cannot be distinguished by merely calling one a memory
+  register and the other space. Require independent operational access,
+  persistence of subsystem identity and controlled influence; do not
+  assume factor-specific controls and then count them as derived locality.
+- The missing transport law concerns which observables/charges the allowed
+  transformations preserve, not just whether each gate preserves
+  information. For pure trit SWAP there are two independent conserved
+  densities because the three counts sum to n; they are not thereby
+  electric charges, particle numbers or spacetime fields. A bijective
+  event also does not source its pair selection, activity budget or
+  schedule. A claim of globally closed information-preserving dynamics
+  must account for the controller/event record, not silently identify a
+  stochastic average with an invertible transformation.
+- Keep P0 at the operational version of 256, with explicit conservation-law
+  and open/closed-memory tests in the already supplied conditional models.
+  Activate the source claims of 257–258 only after its carrier gate passes.
+  Then derive hydrodynamic density/current/noise equations from one generator
+  before pursuing quantum or gravity interpretations. Continue task 260's
+  large-N capacity and coupled-memory bounds separately; do not substitute
+  additional single-cell saddle scans for a composition law.
+- Audit retention of FIN-specific content: after fixing a common effective
+  clock, compare different microscopic kernels and kinetic conventions in
+  response, memory, preparation effects and higher correlations. If only
+  generic SWAP diffusion survives, report a universality-class realization,
+  not empirical evidence selecting A7. An operational test should distinguish
+  fresh bath, cyclic register and retained local environment using return
+  statistics, count conservation and size scaling, with independent
+  calibration. Simulations or designed analogues do not by themselves
+  validate FIN's fundamental ontology. Existing physical-source and
+  promotion gates remain in force.
