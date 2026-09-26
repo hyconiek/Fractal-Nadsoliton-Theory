@@ -1,0 +1,352 @@
+{
+  "minimal_bond_model": "independent Bernoulli Gibbs",
+  "p(epsilon)": "1/(1+exp(epsilon))",
+  "fixed_epsilon_expected_degree": "(n-1)*p = Theta(n)",
+  "finite_degree_requires": "epsilon_n = log((n-1-d)/d) ~ log(n/d)",
+  "bond_refresh_autocorrelation": "exp(-rho*t)",
+  "unit_clock_autocorrelation": {
+    "times": [
+      0,
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "normalized": [
+      1.0,
+      0.7788007830714049,
+      0.6065306597126334,
+      0.36787944117144233,
+      0.1353352832366127,
+      0.01831563888873418,
+      0.00033546262790251185
+    ]
+  },
+  "fixed_valence_escape": "sparse but introduces unsourced integer d",
+  "dense_examples": [
+    {
+      "epsilon": -2,
+      "edge_probability": 0.8807970779778823,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 7.927173701800941
+        },
+        {
+          "n": 30,
+          "degree": 25.543115261358587
+        },
+        {
+          "n": 100,
+          "degree": 87.19891071981034
+        },
+        {
+          "n": 300,
+          "degree": 263.3583263153868
+        },
+        {
+          "n": 1000,
+          "degree": 879.9162808999045
+        }
+      ]
+    },
+    {
+      "epsilon": -1,
+      "edge_probability": 0.7310585786300049,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 6.579527207670044
+        },
+        {
+          "n": 30,
+          "degree": 21.20069878027014
+        },
+        {
+          "n": 100,
+          "degree": 72.37479928437048
+        },
+        {
+          "n": 300,
+          "degree": 218.58651501037147
+        },
+        {
+          "n": 1000,
+          "degree": 730.3275200513749
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "edge_probability": 0.5,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 4.5
+        },
+        {
+          "n": 30,
+          "degree": 14.5
+        },
+        {
+          "n": 100,
+          "degree": 49.5
+        },
+        {
+          "n": 300,
+          "degree": 149.5
+        },
+        {
+          "n": 1000,
+          "degree": 499.5
+        }
+      ]
+    },
+    {
+      "epsilon": 1,
+      "edge_probability": 0.2689414213699951,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 2.420472792329956
+        },
+        {
+          "n": 30,
+          "degree": 7.799301219729858
+        },
+        {
+          "n": 100,
+          "degree": 26.625200715629514
+        },
+        {
+          "n": 300,
+          "degree": 80.41348498962854
+        },
+        {
+          "n": 1000,
+          "degree": 268.6724799486251
+        }
+      ]
+    },
+    {
+      "epsilon": 2,
+      "edge_probability": 0.11920292202211755,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 1.072826298199058
+        },
+        {
+          "n": 30,
+          "degree": 3.456884738641409
+        },
+        {
+          "n": 100,
+          "degree": 11.801089280189638
+        },
+        {
+          "n": 300,
+          "degree": 35.641673684613146
+        },
+        {
+          "n": 1000,
+          "degree": 119.08371910009544
+        }
+      ]
+    },
+    {
+      "epsilon": 4,
+      "edge_probability": 0.01798620996209156,
+      "expected_degree": [
+        {
+          "n": 10,
+          "degree": 0.16187588965882402
+        },
+        {
+          "n": 30,
+          "degree": 0.5216000889006552
+        },
+        {
+          "n": 100,
+          "degree": 1.7806347862470644
+        },
+        {
+          "n": 300,
+          "degree": 5.377876778665376
+        },
+        {
+          "n": 1000,
+          "degree": 17.968223752129468
+        }
+      ]
+    }
+  ],
+  "finite_degree_tuning": [
+    {
+      "target_degree": 2,
+      "values": [
+        {
+          "n": 10,
+          "p": 0.2222222222222222,
+          "epsilon_required": 1.252762968495368,
+          "epsilon_minus_log_n_over_d": -0.3566749439387322
+        },
+        {
+          "n": 30,
+          "p": 0.06896551724137931,
+          "epsilon_required": 2.6026896854443837,
+          "epsilon_minus_log_n_over_d": -0.10536051565782634
+        },
+        {
+          "n": 100,
+          "p": 0.020202020202020204,
+          "epsilon_required": 3.8815637979434374,
+          "epsilon_minus_log_n_over_d": -0.03045920748470854
+        },
+        {
+          "n": 300,
+          "p": 0.006688963210702341,
+          "epsilon_required": 5.000584958242754,
+          "epsilon_minus_log_n_over_d": -0.010050335853501124
+        },
+        {
+          "n": 1000,
+          "p": 0.002002002002002002,
+          "epsilon_required": 6.211603589401893,
+          "epsilon_minus_log_n_over_d": -0.0030045090202985847
+        },
+        {
+          "n": 10000,
+          "p": 0.00020002000200020003,
+          "epsilon_required": 8.516893146407236,
+          "epsilon_minus_log_n_over_d": -0.0003000450090020479
+        }
+      ]
+    },
+    {
+      "target_degree": 3,
+      "values": [
+        {
+          "n": 10,
+          "p": 0.3333333333333333,
+          "epsilon_required": 0.6931471805599455,
+          "epsilon_minus_log_n_over_d": -0.5108256237659906
+        },
+        {
+          "n": 30,
+          "p": 0.10344827586206896,
+          "epsilon_required": 2.159484249353372,
+          "epsilon_minus_log_n_over_d": -0.14310084364067377
+        },
+        {
+          "n": 100,
+          "p": 0.030303030303030304,
+          "epsilon_required": 3.4657359027997265,
+          "epsilon_minus_log_n_over_d": -0.040821994520255256
+        },
+        {
+          "n": 300,
+          "p": 0.010033444816053512,
+          "epsilon_required": 4.591747165655951,
+          "epsilon_minus_log_n_over_d": -0.013423020332140823
+        },
+        {
+          "n": 1000,
+          "p": 0.003003003003003003,
+          "epsilon_required": 5.805134968916488,
+          "epsilon_minus_log_n_over_d": -0.00400802139753953
+        },
+        {
+          "n": 10000,
+          "p": 0.00030003000300030005,
+          "epsilon_required": 8.111328003286733,
+          "epsilon_minus_log_n_over_d": -0.00040008002133973264
+        }
+      ]
+    },
+    {
+      "target_degree": 4,
+      "values": [
+        {
+          "n": 10,
+          "p": 0.4444444444444444,
+          "epsilon_required": 0.22314355131420993,
+          "epsilon_minus_log_n_over_d": -0.6931471805599452
+        },
+        {
+          "n": 30,
+          "p": 0.13793103448275862,
+          "epsilon_required": 1.8325814637483102,
+          "epsilon_minus_log_n_over_d": -0.18232155679395445
+        },
+        {
+          "n": 100,
+          "p": 0.04040404040404041,
+          "epsilon_required": 3.16758253048065,
+          "epsilon_minus_log_n_over_d": -0.05129329438755059
+        },
+        {
+          "n": 300,
+          "p": 0.013377926421404682,
+          "epsilon_required": 4.300680995219929,
+          "epsilon_minus_log_n_over_d": -0.01680711831638071
+        },
+        {
+          "n": 1000,
+          "p": 0.004004004004004004,
+          "epsilon_required": 5.516448376038702,
+          "epsilon_minus_log_n_over_d": -0.005012541823544048
+        },
+        {
+          "n": 10000,
+          "p": 0.00040004000400040005,
+          "epsilon_required": 7.823545885814609,
+          "epsilon_minus_log_n_over_d": -0.0005001250416825087
+        }
+      ]
+    },
+    {
+      "target_degree": 6,
+      "values": [
+        {
+          "n": 10,
+          "p": 0.6666666666666666,
+          "epsilon_required": -0.6931471805599451,
+          "epsilon_minus_log_n_over_d": -1.203972804325936
+        },
+        {
+          "n": 30,
+          "p": 0.20689655172413793,
+          "epsilon_required": 1.3437347467010947,
+          "epsilon_minus_log_n_over_d": -0.26570316573300556
+        },
+        {
+          "n": 100,
+          "p": 0.06060606060606061,
+          "epsilon_required": 2.740840023925201,
+          "epsilon_minus_log_n_over_d": -0.07257069283483553
+        },
+        {
+          "n": 300,
+          "p": 0.020066889632107024,
+          "epsilon_required": 3.8884131397890123,
+          "epsilon_minus_log_n_over_d": -0.023609865639133698
+        },
+        {
+          "n": 1000,
+          "p": 0.006006006006006006,
+          "epsilon_required": 5.1089711948171175,
+          "epsilon_minus_log_n_over_d": -0.007024614936964824
+        },
+        {
+          "n": 10000,
+          "p": 0.0006000600060006001,
+          "epsilon_required": 7.417880657633734,
+          "epsilon_minus_log_n_over_d": -0.000700245114393816
+        }
+      ]
+    }
+  ]
+}
