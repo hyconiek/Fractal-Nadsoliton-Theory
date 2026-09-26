@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Term{array<int,4> e; double a;};
+static const Term T[]={
+ {{{2,2,0,0}},0.04822142787987652},
+ {{{2,0,2,0}},0.05333608476307321},
+ {{{1,2,1,0}},0.11385707390148081},
+ {{{1,1,1,1}},0.3428679997023158},
+ {{{1,0,3,0}},0.06204319383393708},
+ {{{0,2,2,0}},0.0656356460216043},
+ {{{0,2,0,2}},0.13577211811522824},
+ {{{0,1,2,1}},0.2940921349879693},
+ {{{0,0,4,0}},0.017687575726200243},
+ {{{0,0,2,2}},0.1460014318816216}
+};
+struct B{array<double,3> l,u;};
+bool derive(const B&b,array<double,4>&l,array<double,4>&u){double sl=0,su=0;for(int i=0;i<3;i++){l[i]=b.l[i];u[i]=b.u[i];sl+=l[i]*l[i];su+=u[i]*u[i];}if(sl>1)return false;l[3]=sqrt(max(0.0,1-su));u[3]=sqrt(max(0.0,1-sl));return l[3]<=u[3];}
+double mono(const array<double,4>&x,const array<int,4>&e){double z=1;for(int i=0;i<4;i++)for(int k=0;k<e[i];k++)z*=x[i];return z;}
+double UB(const B&b){array<double,4>l,u;if(!derive(b,l,u))return -1e300;double s=0;for(auto&t:T){double box=mono(u,t.e);double inactive=0;for(int i=0;i<4;i++)if(!t.e[i])inactive+=l[i]*l[i];double S=max(0.0,1-inactive),am=1;for(int i=0;i<4;i++)if(t.e[i]){double yi=S*(t.e[i]/4.0); am*=pow(yi,t.e[i]/2.0);}s+=t.a*min(box,am);}return s;}
+pair<double,double> Hrange(const array<double,4>&l,const array<double,4>&u,int i,int j){double lo=0,hi=0;for(auto&t:T){ // c_j*d_i - c_i*d_j
+  if(t.e[i]){auto e=t.e;e[i]--;e[j]++;double a=t.a*t.e[i];double mn=mono(l,e),mx=mono(u,e);lo+=a*mn;hi+=a*mx;}
+  if(t.e[j]){auto e=t.e;e[j]--;e[i]++;double a=-t.a*t.e[j];double mn=mono(l,e),mx=mono(u,e);lo+=a*mx;hi+=a*mn;}
+ }return {lo,hi};}
+int main(int argc,char**argv){double width=argc>1?atof(argv[1]):0.002;double best=0.0932487158813161;vector<B> st(1,B{{0,0,0},{1,1,1}});long long nodes=0,leaves=0,prub=0,prk=0;array<double,4> GL={1,1,1,1},GU={0,0,0,0};while(!st.empty()){B b=st.back();st.pop_back();nodes++;if(UB(b)<best){prub++;continue;}array<double,4>l,u;if(!derive(b,l,u))continue;bool fail=false;for(int j=1;j<4;j++){auto r=Hrange(l,u,0,j);if(r.first>0||r.second<0){fail=true;break;}}if(fail){prk++;continue;}double w=0;int k=0;for(int i=0;i<3;i++)if(b.u[i]-b.l[i]>w){w=b.u[i]-b.l[i];k=i;}if(w<=width){leaves++;for(int i=0;i<4;i++){GL[i]=min(GL[i],l[i]);GU[i]=max(GU[i],u[i]);}continue;}double m=(b.l[k]+b.u[k])*.5;B a=b,c=b;a.u[k]=m;c.l[k]=m;st.push_back(a);st.push_back(c);}cout<<setprecision(17);cout<<"nodes "<<nodes<<" leaves "<<leaves<<" prUB "<<prub<<" prKKT "<<prk<<"\n";for(int i=0;i<4;i++)cout<<"c"<<i+3<<" ["<<GL[i]<<", "<<GU[i]<<"]\n";
+}
