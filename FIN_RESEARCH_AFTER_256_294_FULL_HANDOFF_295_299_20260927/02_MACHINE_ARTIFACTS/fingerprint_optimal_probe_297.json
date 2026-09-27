@@ -1,0 +1,232 @@
+{
+  "status": "P1-297 positive for the declared report-293 comparator; universal minimax separation over all same-rho/same-exit alternatives is impossible without a minimum alternative distance.",
+  "noise_model": {
+    "description": "Independent categorical readout error: correct label with probability 1-eta; otherwise uniformly one of the other 11 labels.",
+    "eta_design": 0.05
+  },
+  "design_split": {
+    "train_N": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "heldout_N": [
+      8
+    ]
+  },
+  "shell_map": {
+    "rank": 6,
+    "determinant_numeric": -5985.967590958036,
+    "determinant_exact": "-3456*sqrt(3)"
+  },
+  "mode_scan": {
+    "1": {
+      "tau_star": 0.5427059872630275,
+      "worst_train_C": 0.006633619093729224,
+      "train_C": [
+        0.006751113495897208,
+        0.006633619093729224,
+        0.0068394434775591656,
+        0.007278795534398598,
+        0.007922463618537953
+      ]
+    },
+    "2": {
+      "tau_star": 0.5195346101582563,
+      "worst_train_C": 0.0021045363458157035,
+      "train_C": [
+        0.0021812348718629644,
+        0.0021045363458157035,
+        0.0021190090564711323,
+        0.002200178276860042,
+        0.0023392743009178216
+      ]
+    },
+    "3": {
+      "tau_star": 0.8401769775791537,
+      "worst_train_C": 0.0014848532987280475,
+      "train_C": [
+        0.0014848532987280475,
+        0.0017040598338457485,
+        0.001981599611987329,
+        0.0023194938465506947,
+        0.00272590093365827
+      ]
+    },
+    "4": {
+      "tau_star": 0.5661996658886767,
+      "worst_train_C": 1.1102230246251565e-16,
+      "train_C": [
+        2.2204460492503136e-16,
+        1.1102230246251565e-16,
+        2.2204460492503136e-16,
+        2.2204460492503136e-16,
+        1.1102230246251565e-16
+      ]
+    },
+    "5": {
+      "tau_star": 0.5427059116701386,
+      "worst_train_C": 0.006633619093729336,
+      "train_C": [
+        0.00675111351113183,
+        0.006633619093729336,
+        0.006839443470837468,
+        0.007278795526423314,
+        0.007922463614666473
+      ]
+    },
+    "6": {
+      "tau_star": 0.6773741678066953,
+      "worst_train_C": 8.412254086631042e-05,
+      "train_C": [
+        0.00017138542963608157,
+        0.00013434158539041684,
+        0.00011000986144749004,
+        9.432205058550908e-05,
+        8.412254086631042e-05
+      ]
+    }
+  },
+  "selected_probe": {
+    "preparation": "localized effective state J=0",
+    "observable": "Y=cos(2*pi*J/12), retain its seven-bin outcome histogram",
+    "tau_star": 0.5427059872630275,
+    "time": "t=tau_star/rho calibrated on an independent dataset",
+    "reason": "Y labels the seven reflection orbits exactly; for reflection-symmetric transition rows it is a sufficient statistic and preserves the full-label Chernoff information."
+  },
+  "training_results": [
+    {
+      "N": 3,
+      "C": 0.006751113495897208,
+      "chernoff_s": 0.4913109954309237,
+      "M_for_Pe_le_0p05_bound": 342,
+      "M_for_Pe_le_0p01_bound": 580
+    },
+    {
+      "N": 4,
+      "C": 0.006633619093729224,
+      "chernoff_s": 0.49400412308973884,
+      "M_for_Pe_le_0p05_bound": 348,
+      "M_for_Pe_le_0p01_bound": 590
+    },
+    {
+      "N": 5,
+      "C": 0.0068394434775591656,
+      "chernoff_s": 0.4956564348103834,
+      "M_for_Pe_le_0p05_bound": 337,
+      "M_for_Pe_le_0p01_bound": 572
+    },
+    {
+      "N": 6,
+      "C": 0.007278795534398598,
+      "chernoff_s": 0.4966801114194706,
+      "M_for_Pe_le_0p05_bound": 317,
+      "M_for_Pe_le_0p01_bound": 538
+    },
+    {
+      "N": 7,
+      "C": 0.007922463618537953,
+      "chernoff_s": 0.4972715266727753,
+      "M_for_Pe_le_0p05_bound": 291,
+      "M_for_Pe_le_0p01_bound": 494
+    }
+  ],
+  "heldout_N8": {
+    "C": 0.00871303017626598,
+    "chernoff_s": 0.49758367583986957,
+    "M_for_Pe_le_0p05_bound": 265,
+    "M_for_Pe_le_0p01_bound": 449,
+    "Y_values": [
+      -1.0,
+      -0.866025403784,
+      -0.5,
+      0.0,
+      0.5,
+      0.866025403784,
+      1.0
+    ],
+    "FIN_probs": [
+      0.03176653782039013,
+      0.07283244016984894,
+      0.12776236398827379,
+      0.13759847494703706,
+      0.05577534724408293,
+      0.0439811130604026,
+      0.5302837227699647
+    ],
+    "comparator_probs": [
+      0.05748958996978931,
+      0.07508781611565202,
+      0.07508781611565205,
+      0.11497917993957861,
+      0.07508781611565205,
+      0.07508781611565202,
+      0.5271799656280238
+    ]
+  },
+  "noise_robustness_fixed_probe": [
+    {
+      "eta": 0.0,
+      "worst_train_C": 0.008031159834799056,
+      "heldout_N8_C": 0.010426290193374219,
+      "worst_train_M_for_Pe_le_0p05_bound": 287,
+      "heldout_N8_M_for_Pe_le_0p05_bound": 221
+    },
+    {
+      "eta": 0.05,
+      "worst_train_C": 0.006633619093729224,
+      "heldout_N8_C": 0.00871303017626598,
+      "worst_train_M_for_Pe_le_0p05_bound": 348,
+      "heldout_N8_M_for_Pe_le_0p05_bound": 265
+    },
+    {
+      "eta": 0.1,
+      "worst_train_C": 0.00548990867283088,
+      "heldout_N8_C": 0.007280361465120763,
+      "worst_train_M_for_Pe_le_0p05_bound": 420,
+      "heldout_N8_M_for_Pe_le_0p05_bound": 317
+    },
+    {
+      "eta": 0.2,
+      "worst_train_C": 0.0037412574594370665,
+      "heldout_N8_C": 0.005037694238170018,
+      "worst_train_M_for_Pe_le_0p05_bound": 616,
+      "heldout_N8_M_for_Pe_le_0p05_bound": 458
+    }
+  ],
+  "timing_robustness_fixed_probe": [
+    {
+      "tau_factor": 0.8,
+      "tau": 0.43416478981042206,
+      "worst_train_C": 0.006454971300939977,
+      "heldout_N8_C": 0.008490135028966898
+    },
+    {
+      "tau_factor": 0.9,
+      "tau": 0.4884353885367248,
+      "worst_train_C": 0.006592141513007129,
+      "heldout_N8_C": 0.008663253011713282
+    },
+    {
+      "tau_factor": 1.0,
+      "tau": 0.5427059872630275,
+      "worst_train_C": 0.006633619093729224,
+      "heldout_N8_C": 0.00871303017626598
+    },
+    {
+      "tau_factor": 1.1,
+      "tau": 0.5969765859893303,
+      "worst_train_C": 0.006597785652699741,
+      "heldout_N8_C": 0.008663165366651057
+    },
+    {
+      "tau_factor": 1.2,
+      "tau": 0.651247184715633,
+      "worst_train_C": 0.006500255634183652,
+      "heldout_N8_C": 0.008533768705940003
+    }
+  ],
+  "chernoff_bound": "For equal priors and M independent shots, optimal Bayes error satisfies the standard Chernoff upper bound Pe <= 0.5*exp(-M*C)."
+}
