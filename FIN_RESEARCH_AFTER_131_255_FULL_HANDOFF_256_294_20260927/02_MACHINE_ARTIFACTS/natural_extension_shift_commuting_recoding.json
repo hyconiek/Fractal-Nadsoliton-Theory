@@ -1,0 +1,20 @@
+{
+  "periodic_ring_length": 5,
+  "global_state_count": 59049,
+  "alphabet": "Z3 x Z3 per history coordinate",
+  "recoding": "y_t=(a_t, b_t+a_{t-1} mod3)",
+  "inverse": "a_t=y_t^a; b_t=y_t^b-y_{t-1}^a mod3",
+  "bijective": true,
+  "commutes_with_shift": true,
+  "image_count": 59049,
+  "preserves_uniform_measure": true,
+  "mixes_neighboring_record_contents": true,
+  "conclusion": "Shift/natural-extension structure does not select a unique one-coordinate record-content basis; an invertible shift-commuting recoding can mix adjacent records.",
+  "base_factor_projection_test": {
+    "original_present_projection": "pi0(x)=x_0=(a_0,b_0)",
+    "after_recoding_present_symbol": "pi0(Cx)=(a_0,b_0+a_{-1} mod3)",
+    "preserves_declared_base_projection": false,
+    "interpretation": "C is a shift automorphism but not an isomorphism OVER the declared base process. Natural-extension uniqueness with its factor map is stronger than shift-only uniqueness."
+  },
+  "refined_conclusion": "Shift alone does not select record content, but the natural extension as an extension over a fixed base factor does distinguish the base records up to base-system relabeling. It still does not identify history coordinates with spatial sites."
+}

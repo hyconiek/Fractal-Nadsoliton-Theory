@@ -1,0 +1,347 @@
+{
+  "definition": {
+    "finite_cycle_measure": "mu_L(x0...x_{L-1}) = [prod_i P(x_i,x_{i+1})] / tr(P^L), x_L=x_0",
+    "block_marginal": "mu_L(x0...xr)=prod_{i<r}P(x_i,x_{i+1}) * (P^(L-r))_{x_r,x_0}/tr(P^L)",
+    "natural_extension_block": "mu_inf(x0...xr)=pi(x0) prod_{i<r}P(x_i,x_{i+1})"
+  },
+  "theorem": "For primitive finite P, P^m -> 1*pi, so every fixed cylinder/window converges to the stationary two-sided Markov natural extension as L->infinity. For the full-reset kernel U, equality is exact whenever L>r.",
+  "primitive_fixture_subleading_eigenvalue_modulus": 0.5999999999999996,
+  "checks": [
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 2,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 3,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 8,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 12,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 24,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 1,
+      "cycle_length_L": 48,
+      "tv_block_distance": 4.163336342344337e-17,
+      "max_abs_block_error": 1.3877787807814457e-17
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 3,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 4,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 24,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 2,
+      "cycle_length_L": 48,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 4,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 5,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 24,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 3,
+      "cycle_length_L": 48,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 5,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 6,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 24,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "full_reset_U",
+      "window_edges_r": 4,
+      "cycle_length_L": 48,
+      "tv_block_distance": 0.0,
+      "max_abs_block_error": 0.0
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 2,
+      "tv_block_distance": 0.2149122807017544,
+      "max_abs_block_error": 0.08903508771929833
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 3,
+      "tv_block_distance": 0.13020833333333331,
+      "max_abs_block_error": 0.061979166666666724
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.01163079560455772,
+      "max_abs_block_error": 0.005815397802278965
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.0015223655775124141,
+      "max_abs_block_error": 0.0007611827887563372
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 24,
+      "tv_block_distance": 3.316884057896069e-06,
+      "max_abs_block_error": 1.6584420290399748e-06
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 1,
+      "cycle_length_L": 48,
+      "tv_block_distance": 1.5716525303410833e-11,
+      "max_abs_block_error": 7.858352857326167e-12
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 3,
+      "tv_block_distance": 0.29020833333333335,
+      "max_abs_block_error": 0.1046354166666667
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 4,
+      "tv_block_distance": 0.16577100646352722,
+      "max_abs_block_error": 0.06571791320406284
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.01931194991973664,
+      "max_abs_block_error": 0.008761903204325044
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.0024889068678458845,
+      "max_abs_block_error": 0.0011292262641153517
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 24,
+      "tv_block_distance": 5.40194445591358e-06,
+      "max_abs_block_error": 2.450882206933569e-06
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 2,
+      "cycle_length_L": 48,
+      "tv_block_distance": 2.5595451105808742e-11,
+      "max_abs_block_error": 1.161284957085229e-11
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 4,
+      "tv_block_distance": 0.31640812557710063,
+      "max_abs_block_error": 0.09350946445060021
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 5,
+      "tv_block_distance": 0.1740686274509803,
+      "max_abs_block_error": 0.05590563725490194
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.031265559922370206,
+      "max_abs_block_error": 0.011721380310418472
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.00392501259412967,
+      "max_abs_block_error": 0.0014892470351620807
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 24,
+      "tv_block_distance": 8.488207044523796e-06,
+      "max_abs_block_error": 3.2206360800202116e-06
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 3,
+      "cycle_length_L": 48,
+      "tv_block_distance": 4.0217706985881674e-11,
+      "max_abs_block_error": 1.5259640773201966e-11
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 5,
+      "tv_block_distance": 0.32596274509803913,
+      "max_abs_block_error": 0.07444276960784313
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 6,
+      "tv_block_distance": 0.17526345880537614,
+      "max_abs_block_error": 0.04335829475778616
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 8,
+      "tv_block_distance": 0.05390430268232007,
+      "max_abs_block_error": 0.014925726730776662
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 12,
+      "tv_block_distance": 0.006244523761438784,
+      "max_abs_block_error": 0.0018629599342960823
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 24,
+      "tv_block_distance": 1.3442567397157925e-05,
+      "max_abs_block_error": 4.01038821085109e-06
+    },
+    {
+      "kernel": "primitive_fixture",
+      "window_edges_r": 4,
+      "cycle_length_L": 48,
+      "tv_block_distance": 6.368959912006521e-11,
+      "max_abs_block_error": 1.9000884199371626e-11
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "examples": [
+    {
+      "q_local_types": 3,
+      "n_units": 120,
+      "type0_count": 40,
+      "same_type_partner_tie": 39,
+      "one_other_type_partner_tie": 40,
+      "different_type_partner_tie": 80,
+      "same_type_degree_fraction": 0.325,
+      "one_other_degree_fraction": 0.3333333333333333
+    },
+    {
+      "q_local_types": 3,
+      "n_units": 1200,
+      "type0_count": 400,
+      "same_type_partner_tie": 399,
+      "one_other_type_partner_tie": 400,
+      "different_type_partner_tie": 800,
+      "same_type_degree_fraction": 0.3325,
+      "one_other_degree_fraction": 0.3333333333333333
+    },
+    {
+      "q_local_types": 3,
+      "n_units": 12000,
+      "type0_count": 4000,
+      "same_type_partner_tie": 3999,
+      "one_other_type_partner_tie": 4000,
+      "different_type_partner_tie": 8000,
+      "same_type_degree_fraction": 0.33325,
+      "one_other_degree_fraction": 0.3333333333333333
+    },
+    {
+      "q_local_types": 4,
+      "n_units": 120,
+      "type0_count": 30,
+      "same_type_partner_tie": 29,
+      "one_other_type_partner_tie": 30,
+      "different_type_partner_tie": 90,
+      "same_type_degree_fraction": 0.24166666666666667,
+      "one_other_degree_fraction": 0.25
+    },
+    {
+      "q_local_types": 4,
+      "n_units": 1200,
+      "type0_count": 300,
+      "same_type_partner_tie": 299,
+      "one_other_type_partner_tie": 300,
+      "different_type_partner_tie": 900,
+      "same_type_degree_fraction": 0.24916666666666668,
+      "one_other_degree_fraction": 0.25
+    },
+    {
+      "q_local_types": 4,
+      "n_units": 12000,
+      "type0_count": 3000,
+      "same_type_partner_tie": 2999,
+      "one_other_type_partner_tie": 3000,
+      "different_type_partner_tie": 9000,
+      "same_type_degree_fraction": 0.24991666666666668,
+      "one_other_degree_fraction": 0.25
+    },
+    {
+      "q_local_types": 12,
+      "n_units": 120,
+      "type0_count": 10,
+      "same_type_partner_tie": 9,
+      "one_other_type_partner_tie": 10,
+      "different_type_partner_tie": 110,
+      "same_type_degree_fraction": 0.075,
+      "one_other_degree_fraction": 0.08333333333333333
+    },
+    {
+      "q_local_types": 12,
+      "n_units": 1200,
+      "type0_count": 100,
+      "same_type_partner_tie": 99,
+      "one_other_type_partner_tie": 100,
+      "different_type_partner_tie": 1100,
+      "same_type_degree_fraction": 0.0825,
+      "one_other_degree_fraction": 0.08333333333333333
+    },
+    {
+      "q_local_types": 12,
+      "n_units": 12000,
+      "type0_count": 1000,
+      "same_type_partner_tie": 999,
+      "one_other_type_partner_tie": 1000,
+      "different_type_partner_tie": 11000,
+      "same_type_degree_fraction": 0.08325,
+      "one_other_degree_fraction": 0.08333333333333333
+    }
+  ],
+  "theorem": {
+    "statement": "For finite type set S and pair score C_ij=c(s_i,s_j), all partners of the same endpoint type b are exactly tied. If type b has count n_b, then a source unit sees n_b (or n_b-1 when a=b) equal-score partners. If n_b/n -> f_b>0, tie multiplicity is Theta(n).",
+    "consequence": "Fixed finite endpoint types cannot by themselves produce unique bounded-degree incidence at nonvanishing type fractions.",
+    "applies_to": [
+      "Z3 coarse state (q=3)",
+      "Z4 fiber label (q=4)",
+      "combined Z3xZ4 localized label (q=12)",
+      "any fixed finite collection of local hidden labels"
+    ],
+    "escape_conditions": [
+      "pair-specific state R_ij",
+      "number of local types grows with n",
+      "accepted type fractions vanish as O(1/n)",
+      "extra nonlocal matching/constraint law"
+    ]
+  }
+}

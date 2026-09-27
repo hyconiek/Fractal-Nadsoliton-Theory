@@ -1,0 +1,96 @@
+{
+  "exhaustive_checks": [
+    {
+      "q": 2,
+      "exact_reset_bijections": 16,
+      "zero_rewrite_bijections": 1,
+      "total_rewrite_cost_histogram": {
+        "0": 1,
+        "2": 6,
+        "4": 9
+      },
+      "zero_rewrite_examples": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "q": 3,
+      "exact_reset_bijections": 46656,
+      "zero_rewrite_bijections": 1,
+      "total_rewrite_cost_histogram": {
+        "0": 1,
+        "2": 24,
+        "3": 36,
+        "4": 249,
+        "5": 624,
+        "6": 1713,
+        "7": 3786,
+        "8": 7152,
+        "9": 10072,
+        "10": 11121,
+        "11": 7902,
+        "12": 3334,
+        "13": 588,
+        "14": 54
+      },
+      "zero_rewrite_examples": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ]
+    }
+  ],
+  "general_theorem": "For any q>=2, if F:SxS->SxS is a bijective exact reset dilation and preserves the unordered input-content multiset for every pair, then F(x,e)=(e,x). Proof: for fixed x, reset requires the first output to realize every symbol as e varies; multiset preservation permits only x or e, forcing first output=e and second=x."
+}

@@ -1,0 +1,38 @@
+{
+  "definition": "Content-mutation cost = minimum Hamming edits after optimally matching the two output records to the two input records.",
+  "gates": [
+    {
+      "c": 0,
+      "gate": "SWAP",
+      "preserves_input_value_multiset_for_every_pair": true,
+      "average_minimum_content_mutations": 0.0,
+      "maximum_minimum_content_mutations": 0,
+      "cost_histogram": {
+        "0": 9
+      }
+    },
+    {
+      "c": 1,
+      "gate": "F_plus",
+      "preserves_input_value_multiset_for_every_pair": false,
+      "average_minimum_content_mutations": 1.3333333333333333,
+      "maximum_minimum_content_mutations": 2,
+      "cost_histogram": {
+        "1": 6,
+        "2": 3
+      }
+    },
+    {
+      "c": 2,
+      "gate": "F_minus",
+      "preserves_input_value_multiset_for_every_pair": false,
+      "average_minimum_content_mutations": 1.3333333333333333,
+      "maximum_minimum_content_mutations": 2,
+      "cost_histogram": {
+        "1": 6,
+        "2": 3
+      }
+    }
+  ],
+  "result": "SWAP uniquely has zero content-rewrite cost and uniquely preserves the empirical two-record value multiset for every input."
+}

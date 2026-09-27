@@ -1,0 +1,512 @@
+{
+  "theorem_discrete": "Conditioned on an event schedule with M hidden reset events whose q-state targets must be independent uniform symbols, any globally invertible implementation needs hidden content entropy at least M log2(q), hence at least q^M distinguishable hidden content states.",
+  "poisson_mean_bound": "For n sites, local hidden reset rate alpha*rho per site and horizon T, E[H_hidden_content | schedule count] >= alpha*n*rho*T*log2(q) bits.",
+  "pure_swap_alpha0": "Requires no fresh target-symbol entropy beyond the controller/event schedule because each event is a permutation of already visible record contents.",
+  "scope_warning": "This compares fresh content entropy conditional on the same declared event schedule. Pure SWAP still requires a reversible account of event/controller randomness. The theorem selects alpha=0 only under a global-closure/minimal-hidden-content principle.",
+  "examples": [
+    {
+      "alpha": 0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 0,
+      "fresh_target_entropy_lower_bound_bits": 0.0
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0.12,
+      "fresh_target_entropy_lower_bound_bits": 0.1901955000865387
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 1.2,
+      "fresh_target_entropy_lower_bound_bits": 1.9019550008653872
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 12.0,
+      "fresh_target_entropy_lower_bound_bits": 19.019550008653873
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0.64,
+      "fresh_target_entropy_lower_bound_bits": 1.0143760004615399
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 6.4,
+      "fresh_target_entropy_lower_bound_bits": 10.1437600046154
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 64.0,
+      "fresh_target_entropy_lower_bound_bits": 101.43760004615399
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 2.56,
+      "fresh_target_entropy_lower_bound_bits": 4.0575040018461594
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 25.6,
+      "fresh_target_entropy_lower_bound_bits": 40.5750400184616
+    },
+    {
+      "alpha": 0.01,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 256.0,
+      "fresh_target_entropy_lower_bound_bits": 405.75040018461596
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 0.6000000000000001,
+      "fresh_target_entropy_lower_bound_bits": 0.9509775004326938
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 6.000000000000001,
+      "fresh_target_entropy_lower_bound_bits": 9.509775004326938
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 60.00000000000001,
+      "fresh_target_entropy_lower_bound_bits": 95.09775004326937
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 3.2,
+      "fresh_target_entropy_lower_bound_bits": 5.0718800023077
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 32.0,
+      "fresh_target_entropy_lower_bound_bits": 50.718800023076994
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 320.0,
+      "fresh_target_entropy_lower_bound_bits": 507.18800023076994
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 12.8,
+      "fresh_target_entropy_lower_bound_bits": 20.2875200092308
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 128.0,
+      "fresh_target_entropy_lower_bound_bits": 202.87520009230798
+    },
+    {
+      "alpha": 0.05,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 1280.0,
+      "fresh_target_entropy_lower_bound_bits": 2028.7520009230798
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 1.2000000000000002,
+      "fresh_target_entropy_lower_bound_bits": 1.9019550008653876
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 12.000000000000002,
+      "fresh_target_entropy_lower_bound_bits": 19.019550008653876
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 120.00000000000001,
+      "fresh_target_entropy_lower_bound_bits": 190.19550008653874
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 6.4,
+      "fresh_target_entropy_lower_bound_bits": 10.1437600046154
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 64.0,
+      "fresh_target_entropy_lower_bound_bits": 101.43760004615399
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 640.0,
+      "fresh_target_entropy_lower_bound_bits": 1014.3760004615399
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 25.6,
+      "fresh_target_entropy_lower_bound_bits": 40.5750400184616
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 256.0,
+      "fresh_target_entropy_lower_bound_bits": 405.75040018461596
+    },
+    {
+      "alpha": 0.1,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 2560.0,
+      "fresh_target_entropy_lower_bound_bits": 4057.5040018461596
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 3.0,
+      "fresh_target_entropy_lower_bound_bits": 4.754887502163468
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 30.0,
+      "fresh_target_entropy_lower_bound_bits": 47.548875021634686
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 300.0,
+      "fresh_target_entropy_lower_bound_bits": 475.48875021634683
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 16.0,
+      "fresh_target_entropy_lower_bound_bits": 25.359400011538497
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 160.0,
+      "fresh_target_entropy_lower_bound_bits": 253.59400011538497
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 1600.0,
+      "fresh_target_entropy_lower_bound_bits": 2535.9400011538496
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 64.0,
+      "fresh_target_entropy_lower_bound_bits": 101.43760004615399
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 640.0,
+      "fresh_target_entropy_lower_bound_bits": 1014.3760004615399
+    },
+    {
+      "alpha": 0.25,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 6400.0,
+      "fresh_target_entropy_lower_bound_bits": 10143.760004615398
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 6.0,
+      "fresh_target_entropy_lower_bound_bits": 9.509775004326936
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 60.0,
+      "fresh_target_entropy_lower_bound_bits": 95.09775004326937
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 600.0,
+      "fresh_target_entropy_lower_bound_bits": 950.9775004326937
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 32.0,
+      "fresh_target_entropy_lower_bound_bits": 50.718800023076994
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 320.0,
+      "fresh_target_entropy_lower_bound_bits": 507.18800023076994
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 3200.0,
+      "fresh_target_entropy_lower_bound_bits": 5071.880002307699
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 128.0,
+      "fresh_target_entropy_lower_bound_bits": 202.87520009230798
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 1280.0,
+      "fresh_target_entropy_lower_bound_bits": 2028.7520009230798
+    },
+    {
+      "alpha": 0.5,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 12800.0,
+      "fresh_target_entropy_lower_bound_bits": 20287.520009230797
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 12.0,
+      "fresh_target_entropy_lower_bound_bits": 19.019550008653873
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 120.0,
+      "fresh_target_entropy_lower_bound_bits": 190.19550008653874
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 12,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 1200.0,
+      "fresh_target_entropy_lower_bound_bits": 1901.9550008653873
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 64.0,
+      "fresh_target_entropy_lower_bound_bits": 101.43760004615399
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 640.0,
+      "fresh_target_entropy_lower_bound_bits": 1014.3760004615399
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 64,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 6400.0,
+      "fresh_target_entropy_lower_bound_bits": 10143.760004615398
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 1,
+      "expected_hidden_reset_events": 256.0,
+      "fresh_target_entropy_lower_bound_bits": 405.75040018461596
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 10,
+      "expected_hidden_reset_events": 2560.0,
+      "fresh_target_entropy_lower_bound_bits": 4057.5040018461596
+    },
+    {
+      "alpha": 1.0,
+      "n_visible_units": 256,
+      "rho": 1.0,
+      "horizon_T": 100,
+      "expected_hidden_reset_events": 25600.0,
+      "fresh_target_entropy_lower_bound_bits": 40575.040018461594
+    }
+  ]
+}

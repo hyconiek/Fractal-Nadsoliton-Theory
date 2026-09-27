@@ -1,0 +1,75 @@
+{
+  "assumptions": [
+    "m reconstructed identical Z3 slots",
+    "all unordered slot pairs are related by S_m symmetry",
+    "the only local gate is the same SWAP on any chosen pair",
+    "pair transformation cost is derived only from one-unit data and therefore is pair-independent"
+  ],
+  "result": "No unique incidence follows. If one minimizes total cost subject to connectedness, every labeled spanning tree ties; there are m^(m-2). If one includes all equally elementary minimum-cost pair gates, the graph is K_m.",
+  "rows": [
+    {
+      "slot_count": 2,
+      "symmetry_equivalent_pair_count": 1,
+      "minimum_edges_for_connectivity": 1,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 1,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 3,
+      "symmetry_equivalent_pair_count": 3,
+      "minimum_edges_for_connectivity": 2,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 3,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 4,
+      "symmetry_equivalent_pair_count": 6,
+      "minimum_edges_for_connectivity": 3,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 16,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 5,
+      "symmetry_equivalent_pair_count": 10,
+      "minimum_edges_for_connectivity": 4,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 125,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 6,
+      "symmetry_equivalent_pair_count": 15,
+      "minimum_edges_for_connectivity": 5,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 1296,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 7,
+      "symmetry_equivalent_pair_count": 21,
+      "minimum_edges_for_connectivity": 6,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 16807,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 8,
+      "symmetry_equivalent_pair_count": 28,
+      "minimum_edges_for_connectivity": 7,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 262144,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 9,
+      "symmetry_equivalent_pair_count": 36,
+      "minimum_edges_for_connectivity": 8,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 4782969,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    },
+    {
+      "slot_count": 10,
+      "symmetry_equivalent_pair_count": 45,
+      "minimum_edges_for_connectivity": 9,
+      "number_of_equal_cost_minimum_connected_graphs_Cayley": 100000000,
+      "all_minimum_cost_edges_if_no_sparsity_penalty": "K_m"
+    }
+  ],
+  "required_new_structure": "pair-dependent relational state/cost, restricted primitive pair set, or another symmetry-breaking relational invariant derived by FIN"
+}
