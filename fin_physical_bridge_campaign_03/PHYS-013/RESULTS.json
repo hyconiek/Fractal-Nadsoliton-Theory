@@ -1,0 +1,206 @@
+{
+  "execution_status": "COMPLETED_PUBLIC_CALIBRATION_DRIVEN_CTMC_DESIGN",
+  "scientific_verdict": "PASS_PREVALIDATION_NUMERICAL_DESIGN__REAL_Q12_DATA_OPEN",
+  "source_rate_table": "VRSPAD_rates_31.5V_100.0uA.npy",
+  "source_blob_sha": "2b0f9ccd766214c122839a40a18da928f25aa769",
+  "public_calibration_rule": {
+    "window_range_V": 0.6,
+    "window_offset_V": 0.07,
+    "center_code": 10
+  },
+  "channel_selection_rule": "calibration only: abs(T-27.25)<=1.5 and abs(baseline_rel)<=0.01; choose 24",
+  "selected_channels": [
+    {
+      "ch": 103,
+      "T": 27.21616378414087,
+      "baseline_rel": 0.002124831534156879,
+      "calBias": 24
+    },
+    {
+      "ch": 132,
+      "T": 27.26326682273862,
+      "baseline_rel": 0.0061154645400471885,
+      "calBias": 24
+    },
+    {
+      "ch": 60,
+      "T": 27.41337226127547,
+      "baseline_rel": -0.008556839939843908,
+      "calBias": 26
+    },
+    {
+      "ch": 10,
+      "T": 26.906115479047102,
+      "baseline_rel": 0.0022846785213488374,
+      "calBias": 21
+    },
+    {
+      "ch": 13,
+      "T": 27.557525159448726,
+      "baseline_rel": 0.006837583062976993,
+      "calBias": 19
+    },
+    {
+      "ch": 37,
+      "T": 26.805303960497984,
+      "baseline_rel": -0.0017595959711329545,
+      "calBias": 21
+    },
+    {
+      "ch": 84,
+      "T": 27.644025711899264,
+      "baseline_rel": 0.005340759246436733,
+      "calBias": 21
+    },
+    {
+      "ch": 88,
+      "T": 26.89875735630125,
+      "baseline_rel": -0.00850552523438075,
+      "calBias": 31
+    },
+    {
+      "ch": 114,
+      "T": 27.744031935187554,
+      "baseline_rel": 0.00492552647818556,
+      "calBias": 35
+    },
+    {
+      "ch": 112,
+      "T": 26.677421561963182,
+      "baseline_rel": 0.0029549696237285428,
+      "calBias": 26
+    },
+    {
+      "ch": 42,
+      "T": 27.836526043158187,
+      "baseline_rel": 0.005667204477395771,
+      "calBias": 29
+    },
+    {
+      "ch": 109,
+      "T": 26.637860287428314,
+      "baseline_rel": 0.00861021470344836,
+      "calBias": 26
+    },
+    {
+      "ch": 45,
+      "T": 28.056035735885136,
+      "baseline_rel": 0.0,
+      "calBias": 10
+    },
+    {
+      "ch": 61,
+      "T": 27.988627437412525,
+      "baseline_rel": 0.005096276013137002,
+      "calBias": 26
+    },
+    {
+      "ch": 96,
+      "T": 26.33227853641043,
+      "baseline_rel": -0.00036473768052680544,
+      "calBias": 24
+    },
+    {
+      "ch": 34,
+      "T": 26.447364855675033,
+      "baseline_rel": -0.006952207273967614,
+      "calBias": 19
+    },
+    {
+      "ch": 87,
+      "T": 26.451423068324804,
+      "baseline_rel": 0.009160266581268894,
+      "calBias": 19
+    },
+    {
+      "ch": 26,
+      "T": 26.20491248228989,
+      "baseline_rel": -0.0028026893922706853,
+      "calBias": 21
+    },
+    {
+      "ch": 20,
+      "T": 28.190333086266843,
+      "baseline_rel": -0.008712116812113369,
+      "calBias": 24
+    },
+    {
+      "ch": 17,
+      "T": 28.26414117021333,
+      "baseline_rel": -0.008080994075530867,
+      "calBias": 26
+    },
+    {
+      "ch": 15,
+      "T": 26.24539960819259,
+      "baseline_rel": 0.008957948219677103,
+      "calBias": 26
+    },
+    {
+      "ch": 104,
+      "T": 26.15516857745329,
+      "baseline_rel": 0.004953831863102609,
+      "calBias": 19
+    },
+    {
+      "ch": 82,
+      "T": 28.321715396935492,
+      "baseline_rel": -0.007595471796703723,
+      "calBias": 24
+    },
+    {
+      "ch": 67,
+      "T": 28.587646568523265,
+      "baseline_rel": 0.00030121384198267265,
+      "calBias": 26
+    }
+  ],
+  "raw_weight_rule": "for destination channel a, w_ab = round(T_a * E_ab), E_ab=-(g/2)A_ab; use directed raw rows to compensate measured channel temperatures",
+  "FIN_predicted_TV_to_ideal": 0.0004127833002121467,
+  "random_40_channel_partition_TV_range": [
+    0.00040810483507578744,
+    0.00042619218782418214
+  ],
+  "weight_code_range": [
+    -55,
+    30
+  ],
+  "stationary_entropy_production_per_total_pair_flux": 1.9965264133242716e-05,
+  "countermodel_results": {
+    "FIN_A7": {
+      "hw_tv_to_own_ideal": 0.0004127833002121467,
+      "wmin": -55,
+      "wmax": 30
+    },
+    "FLAT_P7_TRACE": {
+      "hw_tv_to_own_ideal": 0.00012851884202018556,
+      "ideal_FIN_TV": 0.0117871915793791,
+      "hardware_FIN_TV": 0.011612089025617911
+    },
+    "FULL_POTTS_TRACE": {
+      "hw_tv_to_own_ideal": 0.0023696220364397627,
+      "ideal_FIN_TV": 0.09699878703507755,
+      "hardware_FIN_TV": 0.09801031890136035
+    },
+    "PERT_34_10P": {
+      "hw_tv_to_own_ideal": 0.0016533751424150488,
+      "ideal_FIN_TV": 0.014794589607176011,
+      "hardware_FIN_TV": 0.015770366016342525
+    },
+    "PERT_35_10P": {
+      "hw_tv_to_own_ideal": 0.00044089288245247396,
+      "ideal_FIN_TV": 0.012786129855162733,
+      "hardware_FIN_TV": 0.012615177852571904
+    },
+    "LEAK_K12_2P_TRACE": {
+      "hw_tv_to_own_ideal": 0.0008789677603668611,
+      "ideal_FIN_TV": 0.005629672984603928,
+      "hardware_FIN_TV": 0.006416137552959993
+    },
+    "PERT_36_5P": {
+      "hw_tv_to_own_ideal": 0.0006224359462866959,
+      "ideal_FIN_TV": 0.004415291120947327,
+      "hardware_FIN_TV": 0.005177899344781266
+    }
+  }
+}
