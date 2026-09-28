@@ -1,0 +1,70 @@
+{
+  "task": 326,
+  "date": "2026-09-28",
+  "status": "PASS_COMPUTER_ASSISTED_GLOBAL_B4_CERTIFICATE",
+  "g": 5.145228719489142,
+  "B4_prior": 0.6622191371274597,
+  "B4_high_precision": "0.66221913712746192672595309294540437133287333519006",
+  "interior_halfwall_cover": {
+    "nodes": 1548513,
+    "discard": 772626,
+    "local_boxes": 1631,
+    "remaining": 0,
+    "max_depth": 59,
+    "min_discard_margin": 1.0029449815218949e-06,
+    "representative_halfwall": "P0=P1>=P2",
+    "C4_wedge": "y0>=|y1|",
+    "safety_lower_bound_inflation": 1e-08,
+    "discard_margin_threshold": 1e-06
+  },
+  "triple_junction_cover": {
+    "constraint": "P0=P1=P2=1/3",
+    "dimension": 5,
+    "nodes": 54203,
+    "discard_feasibility": 9306,
+    "discard_energy": 17796,
+    "remaining": 0,
+    "max_depth": 20,
+    "min_discard_margin": 3.5946418671892617e-06
+  },
+  "d4_local_certificate": {
+    "krawczyk_radius": "0.000000000000000001",
+    "krawczyk_strict": true,
+    "convex_cube_radius": 0.02,
+    "hessian_eigen_lower_bound": 0.05510885939961521
+  },
+  "explicit_path_certificate": {
+    "loc_to_d4": {
+      "middle_strict": true,
+      "endpoint_curvature_strict": true,
+      "middle_worst_bound": "0.00239277474965864658545687264516968172464530807804031519036073784593674027614",
+      "left_d2": [
+        "43.2970897540383993486129898147556015063825836138948099617626948596301956235",
+        "54.7616228510936157645632697381681503119729702003449232760323774552799909122"
+      ],
+      "right_d2": [
+        "-1.61592132892821694950188400734211188006096228812561621427804285546845674756",
+        "-1.61313793840545883328512041138802758339333849757284625521773208569888588555"
+      ]
+    },
+    "d4_to_shift4loc": {
+      "middle_strict": true,
+      "endpoint_curvature_strict": true,
+      "middle_worst_bound": "-0.00239277474965843652243915846958563148652712310996395201858011323066112580901",
+      "left_d2": [
+        "-1.61592132892821741161276645163389933936439245501969755134249669258941043152",
+        "-1.61313793840545929361735535104510096043179305700705380137257052963283460378"
+      ],
+      "right_d2": [
+        "43.2970897540386015185528682033054089962971855840166859350615172356264244036",
+        "54.7616228510939330371872926060263351401282953219341391697647997614763555493"
+      ]
+    }
+  },
+  "conclusion": {
+    "communication_height": "Gamma = B4 for transitions between distinct mod-3 sectors in the declared continuous FIN potential",
+    "capacity_exponent_from_324": "lim_{N->infty} -(1/N) log cap_N = B4 for the declared leave-one-out Gibbs chain, under the source/target and valley-mass conditions of 324",
+    "prefactor": "OPEN"
+  },
+  "arithmetic_note": "Global covers use conservative long-double enclosure formulas with explicit 1e-8 lower-bound downward inflation and 1e-6 discard threshold; local root/path layers use high-precision mpmath interval arithmetic. A directed-rounding replay is recommended as an independent formal-audit upgrade."
+}

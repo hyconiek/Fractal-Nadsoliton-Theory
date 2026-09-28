@@ -1,0 +1,51 @@
+{
+  "task": 318,
+  "status": "FROZEN_BEFORE_ANY_N11_MICROSCOPIC_CONSTRUCTION",
+  "B4": 0.66221913712746,
+  "clock_law": "beta_N = B4 - c/N - d/N^2; rho_N = rho_{N-1} exp(-beta_N)",
+  "training_opened_N": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "holdout_N": 11,
+  "rho11_pred": 0.0011255165589794179,
+  "parameters": {
+    "c": 0.849326566145528,
+    "d": -2.3626406172877887,
+    "beta_pred": 0.6045335866290052
+  },
+  "selection_summary": {
+    "linear": {
+      "max_abs_rho_rel_error": 0.04307302989779238,
+      "mean_abs_rho_rel_error": 0.020277822082109875,
+      "max_transition_row_TV": 0.010059824344023903,
+      "mean_transition_row_TV": 0.0060399615328527445
+    },
+    "B4_logN": {
+      "max_abs_rho_rel_error": 0.04653717112392197,
+      "mean_abs_rho_rel_error": 0.03705195436804848,
+      "max_transition_row_TV": 0.01595678067500209,
+      "mean_transition_row_TV": 0.013896139694459637
+    },
+    "B4_beta1": {
+      "max_abs_rho_rel_error": 0.030613882007970772,
+      "mean_abs_rho_rel_error": 0.017947102553150435,
+      "max_transition_row_TV": 0.011242845300719864,
+      "mean_transition_row_TV": 0.008653930067183041
+    },
+    "B4_beta2": {
+      "max_abs_rho_rel_error": 0.020257671213591122,
+      "mean_abs_rho_rel_error": 0.013954847010647087,
+      "max_transition_row_TV": 0.0048195861365567146,
+      "mean_transition_row_TV": 0.0037049479437114424
+    }
+  },
+  "epistemic": "B4-aware laws are conditional on the currently mapped B4 saddle family and are not a global saddle-exhaustion theorem.",
+  "frozen_sha256": "9bd86c61e10fb3baf42fecac157e7496cc801bd6712a9c569a1d8e124ee55a77"
+}
