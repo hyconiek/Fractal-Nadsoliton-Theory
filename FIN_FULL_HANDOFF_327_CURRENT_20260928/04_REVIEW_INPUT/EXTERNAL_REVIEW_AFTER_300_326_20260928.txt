@@ -1,0 +1,432 @@
+## Werdykt
+
+**FIN zrobił postęp w przewidywaniu obserwowanych procesów, ale deklarowane zamknięcie globalnej bariery `Γ=B4` nie jest jeszcze zaakceptowanym wynikiem repozytorium.**
+
+Najbardziej obiecujący nowy kierunek widzę obecnie w **teorii przygotowania stanów dla skończonego `N`**, opartej na dokładnych wagach mikroskopowych. To właśnie przygotowanie — według raportowanych wyników — zaczyna dominować nad błędem pamięci i redukcji dynamiki.
+
+Moja rekomendacja ma więc dwie części:
+
+- obowiązkowo odtworzyć i zweryfikować dowód 326 przed uznaniem bariery globalnej;
+- niezależnie rozwijać dyskretną teorię przygotowania i odpowiedzi, zamiast od razu zwiększać `N` lub dopasowywać kolejny prefaktor.
+
+Przeczytałem aktualny [intake 300–326](/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_research_300_326_review/INTAKE_20260928.md), kluczowe raporty i artefakty. Ponownie sprawdziłem 40 sum kontrolnych oraz wykonałem małe niezależne obliczenia dotyczące minimum, fluktuacji i dokładnych wag konfiguracji. Nie zmieniałem repozytorium.
+
+## 1. Co rzeczywiście osiągnięto
+
+### A. Przejście od histogramu do przewidywania procesu
+
+Raporty 307–313 traktują już rozkłady kilku kolejnych odczytów, nie tylko pojedynczy histogram.
+
+Najważniejsza dokładna zależność ma postać:
+
+\[
+TV(P_{\mathrm{micro}},P_{\mathrm{pred}})
+\leq
+\epsilon_{\mathrm{red}}
++\epsilon_{\mathrm{trans}}
++\epsilon_{\mathrm{prep}}.
+\]
+
+Oddziela ona:
+
+- błąd redukcji mikroskopowej i pamięci;
+- błąd przewidywanego prawa przejść;
+- błąd przygotowania.
+
+To dobry fundament teorii efektywnej: wiadomo, **który element modelu odpowiada za utratę dokładności**.
+
+Trzeba jednak rozdzielić twierdzenie od liczb. Sama nierówność jest dokładna. Natomiast
+
+\[
+B_{313}\approx0.05582
+\]
+
+jest zamrożonym empirycznym ograniczeniem z dotychczasowych obliczeń, a nie udowodnionym ograniczeniem dla wszystkich przyszłych `N`.
+
+### B. Zidentyfikowano rzeczywisty problem z przygotowaniem
+
+Samo polecenie „przygotuj fazę `J=0`” nie wyznacza mikroskopowego rozkładu początkowego. Różne rozkłady wewnątrz tego samego basenu mogą dawać różne późniejsze wyniki.
+
+W raportowanym teście `N=12` składniki błędu wynoszą około:
+
+| Składnik | Raportowana wielkość |
+|---|---:|
+| Redukcja i historia | `0,033%` |
+| Przewidywanie przejść | `0,543%` |
+| Przygotowanie | `1,834%` |
+
+To liczby źródłowe, których nie odtworzyłem niezależnie z pełnego generatora. Jeśli zostaną potwierdzone, wskazują jednak bardzo wyraźnie: **dalsze ulepszanie samego opisu pamięci nie rozwiąże największej części obecnego błędu**.
+
+### C. Przygotowanie otrzymało dokładną strukturę odpowiedzi
+
+Dla zadanej rodziny
+
+\[
+\mu_{N,\kappa}(n)
+\propto
+\pi_N(n)\,1_{J=0}(n)\,e^{\kappa n_0/N}
+\]
+
+oraz liczby defektów
+
+\[
+D=N-n_0
+\]
+
+raport 323 daje dokładnie:
+
+\[
+\frac{dm_N}{d\kappa}
+=
+\frac{\operatorname{Var}_{\kappa}(D)}{N^2},
+\qquad
+m_N=\mathbb E_\kappa[n_0/N].
+\]
+
+Dla późniejszego odczytu o prawdopodobieństwie \(h_y(n)\):
+
+\[
+\frac{dp_y}{d\kappa}
+=
+-\frac1N\operatorname{Cov}_{\kappa}(h_y,D).
+\]
+
+To wartościowy wynik. Przygotowanie nie musi być już wyłącznie empiryczną poprawką: jego wpływ jest związany z konkretnymi fluktuacjami mikroskopowymi. [Raport 323](/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/FIN_FULL_HANDOFF_300_326_20260928/01_REPORTS/PREPARATION_BOUNDARY_LAYER_LAW_323.md).
+
+Jest to rzeczywista struktura fizyki statystycznej — **warunkowa relacja między sterowaniem, fluktuacjami i odpowiedzią**. Nie dostarcza jeszcze fizycznej realizacji sterowania `κ`.
+
+### D. Wyjaśniono rolę bariery w wykładniku przejść
+
+Raport 324 daje użyteczny argument warunkowy:
+
+\[
+\Gamma=B_4
+\quad\Longrightarrow\quad
+-\frac1N\log\operatorname{cap}_N(A,B)\to B_4,
+\]
+
+przy określonych założeniach dotyczących zbiorów źródłowych, docelowych i normalizacji.
+
+To oddziela dwa problemy:
+
+1. ustalenie globalnej wysokości komunikacyjnej;
+2. przejście od tej wysokości do wykładnika pojemności.
+
+Drugi problem został istotnie uporządkowany. Pierwszy nadal wymaga zaakceptowanego certyfikatu.
+
+## 2. Dlaczego nie uznaję jeszcze globalnego zamknięcia 326
+
+Paczka deklaruje wynik `PASS`, ale audyt repozytorium słusznie zachowuje ostrożniejszy status.
+
+Brakuje przede wszystkim:
+
+- pełnych źródeł programów;
+- kompletnych zapisów podziału i wykluczeń;
+- rygorystycznej kontroli wszystkich operacji arytmetycznych;
+- niezależnego przeliczenia lokalnych oszacowań z tych samych dokładnych danych.
+
+Odjęcie `10⁻⁸` od oszacowania energii i wymaganie marginesu `10⁻⁶` nie wystarcza samo w sobie. Część obszarów usuwano także na podstawie wykonalności i wykluczania pierwiastków, więc błąd musi być kontrolowany również w tych decyzjach.
+
+Arytmetyka typu Arb umożliwia propagację rygorystycznych ograniczeń błędu, ale trzeba nią objąć rzeczywisty łańcuch obliczeń. [Dokumentacja Arb](https://fredrikj.net/arb/).
+
+**To nie jest dowód, że `Γ=B4` jest fałszywe. To brak wystarczającej podstawy do oznaczenia go jako udowodnionego.**
+
+Dlatego nie przechodziłbym do 327 z założeniem „bariera globalna została już zamknięta”. Można przygotowywać obliczenia warunkowe, lecz nie eksportować bezwarunkowego prefaktora.
+
+## 3. Najważniejszy nowy kierunek: dyskretna teoria niewielu defektów
+
+To moja główna propozycja wykraczająca poza obecny plan.
+
+### Dlaczego samo rozwinięcie Gaussowskie może być niewystarczające?
+
+Odtworzone minimum daje w przybliżeniu:
+
+\[
+p_0^*\approx0.98069235.
+\]
+
+Dla `N=12`:
+
+\[
+N(1-p_0^*)\approx0.232.
+\]
+
+Średniopolowa liczba etykiet innych niż dominująca jest więc mniejsza od jednej. Najrzadziej obsadzona etykieta ma oczekiwaną liczebność około `0,00053`.
+
+To nie obala asymptotyki Laplace’a przy `N→∞`. Pokazuje natomiast, że **obecnie badane rozmiary są daleko od równomiernie Gaussowskiego reżimu we wszystkich kierunkach simpleksu**.
+
+W takim zakresie naturalne staje się liczenie konfiguracji z zerem, jednym, dwoma i kilkoma defektami.
+
+### Dokładny zapis bez nowego dopasowania
+
+Niech:
+
+\[
+n_0=N-D,\qquad n_a=m_a,\qquad
+D=\sum_{a=1}^{11}m_a.
+\]
+
+Dla \(A=A_7\) zdefiniujmy:
+
+\[
+\delta_a=A_{00}-A_{0a},
+\]
+
+\[
+B_{ab}=A_{ab}-A_{a0}-A_{0b}+A_{00}.
+\]
+
+Wtedy względna waga konfiguracji wobec stanu z samymi etykietami `0` wynosi dokładnie:
+
+\[
+\boxed{
+\frac{w_{N,\kappa}(m)}{w_{N,\kappa}(0)}
+=
+\frac{N!}{(N-D)!\prod_a m_a!}
+\exp\!\left[
+-g\sum_a\delta_a m_a
++\frac{g}{2N}m^\top Bm
+-\frac{\kappa D}{N}
+\right].
+}
+\]
+
+To algebraiczne przepisanie istniejącego modelu, nie nowe prawo fizyczne. Sprawdziłem zgodność tej formuły z bezpośrednimi wagami Gibbsa.
+
+Warunek przynależności do zadeklarowanego basenu `J=0` pozostaje częścią definicji. Nie wolno zastąpić go bez dowodu samym ograniczeniem liczby defektów.
+
+### Co można dzięki temu zyskać?
+
+Liczba konfiguracji jedenastu rodzajów defektów z `D≤4` wynosi:
+
+\[
+\binom{15}{4}=1365.
+\]
+
+Dla `D≤6` wynosi `12376`. To znacznie mniej niż ponad milion pełnych stanów dla `N=12`.
+
+Taka reprezentacja:
+
+- zachowuje dodatniość prawdopodobieństw;
+- zachowuje dokładną kombinatorykę skończonej populacji;
+- nie wymaga zastępowania interakcji defektów swobodnym dopasowaniem;
+- pozwala badać przygotowanie bez zakładania, że wszystkie rzadkie obsadzenia są już Gaussowskie.
+
+Nie rozwiązuje automatycznie całego problemu dynamiki i barier. Upraszcza przede wszystkim **opis przygotowania**.
+
+### Najważniejsza bramka błędu
+
+Jeżeli \(\mu^{(K)}\) jest przygotowaniem obciętym do `D≤K`, to:
+
+\[
+TV(\mu,\mu^{(K)})=\mu(D>K).
+\]
+
+Dla dowolnego późniejszego kanału obserwacji \(\mathcal K\):
+
+\[
+TV(\mu\mathcal K,\mu^{(K)}\mathcal K)
+\leq\mu(D>K).
+\]
+
+Wystarczy więc kontrolować pominiętą masę. Otrzymujemy bezpośrednią kontrolę błędu późniejszych przewidywań, a nie tylko jakości dopasowania kilku momentów.
+
+**Nie wykazałem jeszcze, że potrzebny ogon jest dostatecznie mały dla wszystkich dotychczasowych przygotowań. To powinien być pierwszy kill-test tej drogi.**
+
+## 4. Drugie brakujące ogniwo: co fizycznie oznacza stała siła przygotowania?
+
+Aktualny czynnik
+
+\[
+e^{\kappa n_0/N}
+\]
+
+można interpretować na kilka różnych sposobów. Przy zmianie `N` nie są one równoważne.
+
+| Protokół | Skalowanie | Znaczenie |
+|---|---|---|
+| Stałe `κ` | `κ=O(1)` | Całkowity bias jest ograniczony, a pole przypadające na kopię maleje jak `1/N`. |
+| Stały koszt informacyjny przygotowania | asymptotycznie często `κ=O(√N)` | Zachowujemy zadany koszt odchylenia od przygotowania odniesienia. |
+| Stałe pole na kopię | `κ=Nh` | Przygotowanie zmienia makroskopowy potencjał o składnik `−h p₀`. |
+
+Skalowanie `√N` wymaga odpowiedniego regularnego reżimu asymptotycznego; dla obecnych małych `N` należy wyznaczać je z dokładnego rozkładu.
+
+W zadanej rodzinie:
+
+\[
+D_{\mathrm{KL}}(\mu_\kappa\Vert\mu_0)
+=
+\kappa\,\mathbb E_\kappa[p_0]
+-\log\mathbb E_0e^{\kappa p_0}.
+\]
+
+To pozwala zdefiniować przygotowanie przez **stały budżet informacyjny** i obliczyć potrzebne `κ`, zamiast dopasowywać je niezależnie dla kolejnych `N`.
+
+Najważniejszy wniosek:
+
+> Zanik wpływu przygotowania przy stałym `κ` może częściowo wynikać z tego, że pole na jedną kopię jest coraz słabsze. Nie należy przedstawiać tego automatycznie jako uniwersalnej własności FIN.
+
+Wybór protokołu powinien wynikać z zamierzonego eksperymentu lub jawnej zasady modelowej.
+
+## 5. Trzecie ogniwo: od rozkładu przygotowania do procesu przygotowania
+
+Dotychczas określono rodzinę rozkładów. Nadal potrzebny jest mechanizm, który rzeczywiście ją wytwarza.
+
+Dla pełnego, nieograniczonego rozkładu z biasem `κ` naturalny kandydat to leave-one-out heat-bath z warunkową regułą:
+
+\[
+q_j^{\mathrm{prep}}(n,i)
+=
+\operatorname{softmax}_j
+\left[
+\frac gN A(n-e_i)
++\frac{\kappa}{N}\mathbf e_0
+\right].
+\]
+
+Następnie pole jest wyłączane i układ ewoluuje według dotychczasowego generatora.
+
+Ale taka reguła nie przygotowuje automatycznie dokładnego rozkładu **warunkowanego na basenie `J=0`**. Trzeba zbadać:
+
+- czas relaksacji wewnątrz basenu;
+- prawdopodobieństwo opuszczenia go podczas przygotowania;
+- ewentualną postselekcję;
+- koszt i sposób sterowania.
+
+To jest już konkretny most do fizyki: **kontrola → przygotowany stan → fluktuacje → późniejszy odczyt**.
+
+### Ważna uwaga o odrzucanych wynikach
+
+W części definicji rozkład obserwowany jest warunkowany na pozostaniu w jednej z dwunastu faz zlokalizowanych.
+
+Warunkowanie nie jest zwykłym kanałem zachowującym wszystkie nierówności kontrakcji TV. Jeżeli wynik spoza tych faz jest odrzucany, trzeba jawnie kontrolować prawdopodobieństwo odrzucenia.
+
+Najprostsza operacyjna opcja to zachować dodatkowy wynik „niezlokalizowany/niezaklasyfikowany”. Wówczas rachunek prawdopodobieństwa pozostaje liniowy i kompletny.
+
+Ta kwestia jest szczególnie ważna przy wyprowadzaniu współczynników 328.
+
+## 6. Co jest teraz najbliższe rzeczywistej teorii fizycznej?
+
+Najmocniejszy ciąg nie prowadzi obecnie bezpośrednio do QM czy grawitacji. Prowadzi do:
+
+\[
+\text{mikroskopowe wagi i reguła aktualizacji}
+\to
+\text{realizowalne przygotowanie}
+\to
+\text{kontrolowany proces obserwowany}
+\to
+\text{test poza kalibracją}.
+\]
+
+Nowe elementy przypominające fizykę w ścisłym sensie to:
+
+- odpowiedź na pole sprzężone z obserwablą;
+- zależność podatności od fluktuacji;
+- rozróżnienie przejść rzadkich i relaksacji wewnątrz fazy;
+- jawny bilans błędów przewidywania procesu;
+- możliwość zdefiniowania kosztu przygotowania.
+
+Nadal nie wyprowadzono źródła `A7`, fizycznego znaczenia `g`, przestrzennej kompozycji jednostek ani rzeczywistego aparatu.
+
+To nie przekreśla teorii efektywnej. Ogranicza natomiast zakres twierdzeń fundamentalnych.
+
+## 7. Proponowana kolejna kampania
+
+### P0 — Odtworzenie certyfikatu 326
+
+Potrzebne są pełne źródła i zapisy wykluczeń, nie same podsumowania.
+
+Należy sprawdzić osobno:
+
+1. arytmetykę każdego kryterium odrzucenia;
+2. kompletność pokrycia;
+3. lokalny pierwiastek i Hessian;
+4. ścieżkę realizującą górne ograniczenie;
+5. przejście między problemem separatora a potencjałem pierwotnym.
+
+**Warunek zatrzymania:** bez tych danych pozostawić `Γ=B4` jako kandydat. Nie uruchamiać 327 tak, jakby globalny dowód był już dostępny.
+
+### P0 — Dyskretna teoria przygotowania przez defekty
+
+To mój rekomendowany nowy pakiet badawczy.
+
+Pierwsze zadania:
+
+1. wyprowadzić i odtworzyć dokładne wagi defektów;
+2. zachować właściwy warunek basenu;
+3. zbadać obcięcia `D≤2,3,4,6`;
+4. uzyskać ograniczenia pominiętej masy;
+5. przenieść je do błędu późniejszych obserwacji.
+
+**Sukces:** dodatni model przygotowania z kontrolowaną resztą, bez kolejnej empirycznej korekty PCA.
+
+**Kill-test:** jeżeli ogon nie jest mały, zwiększyć zakres jawnie zachowanych defektów albo ograniczyć klasę przygotowań — nie ukrywać błędu w dopasowaniu.
+
+### P0/P1 — Rozstrzygnięcie skali sterowania
+
+Porównać trzy protokoły: stałe `κ`, stałe pole na kopię i stały koszt informacyjny.
+
+Następnie zamrozić jeden protokół przed nowym testem.
+
+**Sukces:** jedno prawo przygotowania dla wszystkich badanych `N`.
+
+**Kill-test:** jeśli każde nowe `N` wymaga niezależnego wyboru siły lub definicji przygotowania, nie uzyskano jeszcze prawa przenoszącego się między rozmiarami.
+
+### P1 — Wzmocnione zadanie 328
+
+Nie zaczynać od założenia, że sześć amplitud musi mieć wygodną postać liniową w `1/N`.
+
+Najpierw określić:
+
+- dokładną obserwablę wsteczną;
+- czas dopasowania i jego skalowanie z `N`;
+- sposób warunkowania na lokalizacji;
+- regularność potrzebną do rozwinięcia Laplace’a.
+
+Porównać dwa podejścia:
+
+- rozwinięcie lokalne dla dużego `N`;
+- dokładny dyskretny opis defektów dla obecnego zakresu.
+
+**Sukces:** wspólnie zgodne opisy w nakładającym się zakresie, z określonym błędem.
+
+Dla dowolnego odczytu nie należy automatycznie zakładać odpowiedzi `O(1/N)`. Dokładne ograniczenie przez wariancję daje taki rząd dopiero po dodatkowej kontroli odpowiedniej klasy obserwabli.
+
+### P1 — Prefaktor 327, dopiero z poprawną podstawą
+
+Po zaakceptowaniu globalnej bariery wyprowadzić prefaktor z:
+
+- rzeczywistej kinetyki leave-one-out;
+- geometrii minimum i siodła;
+- normalizacji mas dolin;
+- wielokrotności bramek przejścia;
+- dyskretności obsadzeń.
+
+Nie utożsamiać dopasowanego `N^α` z prawem asymptotycznym. Literatura o metastabilności modeli średniego pola stanowi dobry benchmark, lecz jej prefaktorów nie można przenosić bez sprawdzenia operatora i konwencji czasu. [Lee, *Energy Landscape and Metastability of Curie-Weiss-Potts Model*](https://arxiv.org/abs/2110.03160).
+
+### P1 — Nowy test poza dotychczasowym punktem
+
+Po zamrożeniu modelu przygotowania wybrać nowy, nieużyty zakres `g` lub inny zadeklarowany protokół przygotowania.
+
+To będzie bardziej rozstrzygające niż samo otwarcie `N=13`.
+
+Trzeba oddzielić:
+
+- test nowego przewidywania;
+- ponowne dopasowanie architektury po zobaczeniu danych;
+- test kolejnej, już zmienionej wersji modelu.
+
+Obecne wyniki są wartościowe, ale kolejne zmiany prawa zegara i przygotowania oznaczają kolejne wersje predyktora, nie jeden niezmienny model sprawdzony od początku do końca.
+
+## Rekomendacja końcowa
+
+**Pierwszy krok formalny: odzyskanie i rygorystyczny replay 326.**
+
+**Najbardziej wartościowy nowy kierunek: dokładna dyskretna teoria przygotowania, ze świadomie wybraną skalą sterowania i błędem przenoszonym na obserwowany proces.**
+
+Nie zatrzymywałbym tego drugiego kierunku na brakującym certyfikacie bariery — jest od niego w dużej mierze niezależny.
+
+Najważniejsza zmiana naukowa brzmi:
+
+> Dla obecnych rozmiarów FIN nie musi jeszcze zachowywać się jak ciągła chmura Gaussowskich fluktuacji. Może być lepiej opisywany przez dokładną statystykę niewielu defektów. Jeśli ten opis wyjaśni przygotowanie i przewidzi odpowiedzi bez nowych dopasowań, będzie to bardziej bezpośredni krok ku fizyce niż dalsze zwiększanie precyzji pojedynczej bariery.

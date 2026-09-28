@@ -1,0 +1,111 @@
+{
+  "task": 331,
+  "status": "PASS_MECHANISTIC_PREPARATION_REPLACEMENT",
+  "rows": [
+    {
+      "N": 7,
+      "old_preparation_component": 0.0194203162855035,
+      "new_defect_preparation_component_or_bound": 2.725024707298917e-05,
+      "improvement_factor": 712.6656955985252,
+      "old_triangle": 0.03215555042145662,
+      "new_localized_triangle_diagnostic": 0.012762484383026105,
+      "hybrid_explicitU_joint_max": 0.013746912502927018
+    },
+    {
+      "N": 8,
+      "old_preparation_component": 0.014295738472487707,
+      "new_defect_preparation_component_or_bound": 0.00015542581511236768,
+      "improvement_factor": 91.97788965849956,
+      "old_triangle": 0.020656430798896314,
+      "new_localized_triangle_diagnostic": 0.0065161181415209725,
+      "hybrid_explicitU_joint_max": 0.008687189011158123
+    },
+    {
+      "N": 9,
+      "old_preparation_component": 0.021690605432275783,
+      "new_defect_preparation_component_or_bound": 0.0005384842282042784,
+      "improvement_factor": 40.28085558718959,
+      "old_triangle": 0.02822065197448028,
+      "new_localized_triangle_diagnostic": 0.0070685307704087775,
+      "hybrid_explicitU_joint_max": 0.005914974174942368
+    },
+    {
+      "N": 10,
+      "old_preparation_component": 0.014706592292922573,
+      "new_defect_preparation_component_or_bound": 0.0008493079457549046,
+      "improvement_factor": 17.315971628936857,
+      "old_triangle": 0.025004159598745176,
+      "new_localized_triangle_diagnostic": 0.01114687525157751,
+      "hybrid_explicitU_joint_max": 0.009628247106827154
+    },
+    {
+      "N": 11,
+      "old_preparation_component": 0.014710035115688984,
+      "new_defect_preparation_component_or_bound": 0.0016028036630981735,
+      "improvement_factor": 9.177689978106805,
+      "old_triangle": 0.020142782947307248,
+      "new_localized_triangle_diagnostic": 0.007035551494716437,
+      "hybrid_explicitU_joint_max": null
+    },
+    {
+      "N": 12,
+      "old_preparation_component": 0.018339025078148684,
+      "new_defect_preparation_component_or_bound": 0.0014310084109774301,
+      "improvement_factor": 12.815455826442328,
+      "old_triangle": 0.024098856025647344,
+      "new_localized_triangle_diagnostic": 0.007191392661192914,
+      "hybrid_explicitU_joint_max": null
+    }
+  ],
+  "N7_N10_details": {
+    "7": {
+      "tail": 4.363686979008309e-05,
+      "prep_actual": 2.725024707298917e-05,
+      "hybrid_explicitU": 0.013746912502927018,
+      "rank_convergence": {
+        "defect_micro_joint_max": 3.122739425983484e-16,
+        "prior13_max": 3.5187781508017046e-16,
+        "prior_loc12_max": 3.426078865054194e-16,
+        "effective_prep_component_max": 2.2703193491846463e-16,
+        "hybrid_explicitU_vs_micro_max": 1.0973687236681684e-13
+      }
+    },
+    "8": {
+      "tail": 0.0002301075309726712,
+      "prep_actual": 0.00015542581511236768,
+      "hybrid_explicitU": 0.008687189011158123,
+      "rank_convergence": {
+        "defect_micro_joint_max": 2.9999603062130786e-15,
+        "prior13_max": 3.031537694486719e-15,
+        "prior_loc12_max": 3.2591117304914263e-15,
+        "effective_prep_component_max": 3.2863252050208125e-15,
+        "hybrid_explicitU_vs_micro_max": 1.9077812246637293e-12
+      }
+    },
+    "9": {
+      "tail": 0.0008507333448369232,
+      "prep_actual": 0.0005384842282042784,
+      "hybrid_explicitU": 0.005914974174942368,
+      "rank_convergence": {
+        "defect_micro_joint_max": 1.0151445981564089e-11,
+        "prior13_max": 1.1705480877123586e-11,
+        "prior_loc12_max": 1.1707546607522823e-11,
+        "effective_prep_component_max": 1.0922387560369229e-11,
+        "hybrid_explicitU_vs_micro_max": 1.8071463119342934e-09
+      }
+    },
+    "10": {
+      "tail": 0.0014373679295914912,
+      "prep_actual": 0.0008493079457549046,
+      "hybrid_explicitU": 0.009628247106827154,
+      "rank_convergence": null
+    },
+    "11": {
+      "tail_upper": 0.0016028036630981735
+    },
+    "12": {
+      "tail_upper": 0.0014310084109774301
+    }
+  },
+  "caveat": "For N7-N10 the D<=6 distribution is propagated through the exact microscopic burn dynamics before the frozen effective transition. This removes the empirical cross-N preparation map but is not yet a cheap closed-form cross-N preparation predictor. N11-N12 use TV tail bounds only."
+}

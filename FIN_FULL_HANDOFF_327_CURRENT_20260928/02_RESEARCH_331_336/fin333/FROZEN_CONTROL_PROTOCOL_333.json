@@ -1,0 +1,18 @@
+{
+  "task": 333,
+  "status": "FROZEN_BEFORE_NEW_G_HOLDOUT",
+  "protocol": {
+    "initial_state": "deep seed n0=N, n1..n11=0",
+    "preparation_generator": "unrestricted leave-one-out heat-bath at the declared production g with additive field theta on label 0",
+    "theta": 2.0,
+    "kappa_rule": "kappa_N = 2 N",
+    "preparation_duration": 4.0,
+    "hard_basin_wall": false,
+    "postselection": false,
+    "outcomes": "retain all localized labels plus explicit unlocalized/other-phase outcomes",
+    "field_switch": "set theta=0 after Tprep, then run the production generator"
+  },
+  "selection_basis": "N3-N10 already-opened data only; fixed theta is the most stable few-defect control variable from task329 and task332 shows low escape from the deep seed for N>=5. No future g data used.",
+  "future_test_rule": "Do not retune theta or Tprep after choosing the new g holdout. If low-N escape is material, report it as an outcome rather than conditioning it away.",
+  "frozen_sha256": "b7ae70e9b8e482e7a180a960a97f099d01b9f50403596f17817c5f194f10d3ff"
+}
