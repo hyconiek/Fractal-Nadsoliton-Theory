@@ -1,0 +1,108 @@
+{
+  "N2_scope": "two labelled q12 nodes, distinct from M3",
+  "checks": {
+    "FIN_A7": [
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "heat_bath",
+        "max_detailed_balance_residual": 5.204170427930421e-18,
+        "max_rowsum_abs": 7.28583859910259e-16,
+        "max_stationary_residual": 1.8214596497756474e-17,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 1.0
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "metropolis",
+        "max_detailed_balance_residual": 1.734723475976807e-18,
+        "max_rowsum_abs": 5.828670879282072e-16,
+        "max_stationary_residual": 1.2197274440461925e-17,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 0.9999999999999999
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "barker",
+        "max_detailed_balance_residual": 1.734723475976807e-18,
+        "max_rowsum_abs": 6.938893903907228e-16,
+        "max_stationary_residual": 1.5395670849294163e-17,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 1.0
+      }
+    ],
+    "FLAT_P7_TRACE": [
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "heat_bath",
+        "max_detailed_balance_residual": 2.168404344971009e-19,
+        "max_rowsum_abs": 9.992007221626409e-16,
+        "max_stationary_residual": 1.8214596497756474e-17,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 0.9999999999999999
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "metropolis",
+        "max_detailed_balance_residual": 1.0842021724855044e-19,
+        "max_rowsum_abs": 6.800116025829084e-16,
+        "max_stationary_residual": 3.469446951953614e-18,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 0.9999999999999999
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "barker",
+        "max_detailed_balance_residual": 2.168404344971009e-19,
+        "max_rowsum_abs": 1.0685896612017132e-15,
+        "max_stationary_residual": 5.800481622797449e-18,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 0.9999999999999999
+      }
+    ],
+    "FULL_POTTS_TRACE": [
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "heat_bath",
+        "max_detailed_balance_residual": 4.336808689942018e-19,
+        "max_rowsum_abs": 2.7755575615628914e-16,
+        "max_stationary_residual": 1.3877787807814457e-17,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 1.0000000000000009
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "metropolis",
+        "max_detailed_balance_residual": 5.421010862427522e-20,
+        "max_rowsum_abs": 5.828670879282072e-16,
+        "max_stationary_residual": 2.8189256484623115e-18,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 1.0
+      },
+      {
+        "final_invalid_probability": 0.0,
+        "g0_calibration_same_heatbath": true,
+        "kinetic": "barker",
+        "max_detailed_balance_residual": 0.0,
+        "max_rowsum_abs": 6.106226635438361e-16,
+        "max_stationary_residual": 2.168404344971009e-18,
+        "min_joint_probability": 0.0,
+        "total_joint_mass": 1.0000000000000004
+      }
+    ]
+  },
+  "g0_physical_clock": "OPEN_INPUT: no independent measured calibration of time units",
+  "g0_rate_calibration": "all g0 generators equal and nonzero single-copy Fourier autocorr exp(-t); t dimensionless",
+  "kinetic_definitions": {
+    "barker": "proposal among 11 distinct labels; attempt 22/12 per copy; Barker accept",
+    "heat_bath": "rate copy update 1; categorical Gibbs refresh with self draws",
+    "metropolis": "proposal among 11 distinct labels; attempt 11/12 per copy; Metropolis accept"
+  }
+}

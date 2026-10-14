@@ -1,0 +1,41 @@
+{
+  "baseline": "independent baseline g0 uniform at equilibrium, record raw pair states and timestamps",
+  "calibration_and_validation_split": "freeze physical channels / compilation/temperature/g0 clock/confusion/invalid before independent validation; keep disjoint records",
+  "clock": "use independent physical g0 relaxation calibration and document its uncertainty before interpreting model time",
+  "interaction_candidates": [
+    "FIN_A7",
+    "FULL_POTTS_TRACE",
+    "FLAT_P7_TRACE"
+  ],
+  "kinetic_candidates": [
+    "heat_bath",
+    "metropolis",
+    "barker"
+  ],
+  "kinetic_observable": "13x13 two-time joint difference/INVALID at .4 and 1.0 model time",
+  "multiplicity_handling": "Primary/secondary hierarchy must be frozen before exposure to any future validation data; do not select whichever contrast happens to be strongest after observing data.",
+  "no_new_exp_performed": true,
+  "primary_decision_rule": "calibrated nuisance-model observed-law sets must have nonzero separated TV; otherwise no discrimination",
+  "primary_hypothesis": {
+    "fixed_comparison": "FIN_A7 vs FLAT_P7_TRACE",
+    "nominal_tv": 0.011787191579379148,
+    "required_calibration": "separation after real gain/field/readout/invalid/ESS uncertainty sets are frozen and reported",
+    "statistic": "complete 12-outcome N2 stationary difference law at g=3; optional log-Fourier ratio lambda4/lambda3 as descriptive fingerprint",
+    "success_not_claimed": true,
+    "type": "prospective engineered fixed-alternative model selection; not broad A7 uniqueness"
+  },
+  "replication": "serial correlation and trajectory-level effective sample size required; all outcomes incl invalid",
+  "reuses_old_D_windows": false,
+  "secondary_diagnostic": {
+    "comparison": "N2 g0-calibrated heat_bath vs metropolis",
+    "empirical_activation": "OPEN_INPUT",
+    "joint_law": "13x13 difference/invalid at model t=0.4 and 1.0 after uniform g0 preparation and g3 switch",
+    "nominal_tv": 0.2566279210197662,
+    "type": "kinetic sensitivity, to be activated only if independent g0 physical time and readout disturbance calibrated"
+  },
+  "source_independence": "programmed A7 does not explain physical source",
+  "static_observable": "12 outcomes of pair label difference at g3",
+  "status": "DESIGN_ONLY_NOT_EVIDENCE",
+  "system": "proposed PHYS014 N2 q12 pair, not validated apparatus",
+  "unavailable_data": "no selected hardware channel logs, no measured pair distribution, no g0 relaxation clock, no detector error or drift"
+}

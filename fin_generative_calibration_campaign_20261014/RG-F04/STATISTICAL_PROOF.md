@@ -1,0 +1,15 @@
+# Finite-data rule and proof — RG-F04
+
+Let `k=13` include 12 difference symbols and `INVALID`. Let iid validation outcomes have actual distribution `q`; their empirical histogram is `qhat`. For each proper nonempty subset `S` of outcomes, Hoeffding's one-sided bound is `P(qhat(S)-q(S) >= eps) <= exp(-2 n eps²)`. As `TV(qhat,q)=max_S (qhat(S)-q(S))`, union bounding the `2^k-2` proper nonempty subsets yields:
+
+`P(TV(qhat,q)>eps) <= (2^k-2) exp(-2 n eps²)`.
+
+This holds for iid reset records, *not* arbitrary adjacent readouts of one trajectory. A measurable serial dependence factor cannot be replaced by a guessed scalar ESS. For validation allocation `alpha_val=0.025`, choose `eps=rho/3`, `rho=0.00119114` (hypothetical minimum model-set gap). A sufficient integer n is **40,278,676 genuinely independent full-alphabet readouts**. The count is intentionally conservative and is a **design condition, not achieved sampling or an apparatus feasibility claim**. Replacing rho with any verified smaller residual margin increases n quadratically.
+
+Define two composite model sets `H_FIN` and `H_FLAT` of **all** observed distributions admitted by each hypothesis's own independently calibrated gains, readouts, invalid and drift law. Do not force nuisance settings to be common unless physically justified. Reject `H` only if a conservative **lower bound** on `inf_{p in H} TV(qhat,p)` exceeds eps. Return: FIN_ONLY, FLAT_ONLY, INCONCLUSIVE or NEITHER_MODEL_FITS. For a true `q in H`, on the simultaneous concentration event `TV(qhat,q)<=eps`, H cannot be rejected. Hence false rejection has probability at most `alpha_val` under the declared sampling assumptions. If `inf_{p in H_FIN,r in H_FLAT}TV(p,r)>=rho>2eps`, at most one can remain compatible with the *exact* test; a lower-bound implementation may conservatively return inconclusive.
+
+**Executable conservative example:** `decision_rule.py` represents each model by the gain-indexed exact nominal 12-outcome law augmented with zero `INVALID`, then enlarges it by a radius-`0.005` TV output ball. A 241-point gain grid in `[2.97,3.03]` plus the analytic derivative bound `||dp_g/dg||_TV <= range(Arow)/8` (twice the bound used as safety slack in code) yields a **lower bound on distance to the entire continuous gain set**. This is a software model of *hypothetical* calibration; not a real detector characterization.
+
+The one-event comparator is the nominal maximizer `S={0,2,5,6,7,10}`; no robust positive event gap is admitted under the full hypothetical gain/0.005 detector class from the conservative bound used. An iid Bernoulli Hoeffding test might be cheaper **if** a positive fixed-event minimax gap is independently established; do not promote endpoint samples to an interval theorem.
+
+A 2.5% calibration error allocation is reserved but **no calibration coverage method or data exist**. A 5% overall experimental claim requires separate valid calibration confidence accounting, frozen independently of the validation data. The secondary heat-bath versus Metropolis diagnostic is descriptive here and must not be read as a separately powered hypothesis test.

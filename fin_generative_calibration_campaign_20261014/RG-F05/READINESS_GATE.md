@@ -1,0 +1,7 @@
+# RG-F05 gate and stopping decision
+
+**Selected status: NO_NEW_PHYSICAL_INPUT.** A prospective, runnable finite-model and statistical design exists conditionally, but *no independently measured numerical calibration or external q12 records* were supplied. It would be incorrect to mark either empirical readiness or completed statistical testing. `DESIGN_READY_PENDING_CALIBRATION` is a useful description of the software, but the requested single primary disposition is NO_NEW_PHYSICAL_INPUT.
+
+Minimum next input: one documented calibration package providing phase-resolved raw pair states/transition trajectories, full 13-outcome readout including invalid, outcome/successor disturbances, actual gain/field/controller stability, physical g0 clock and g3 rate-stability, burn-in, dataset custody, independent replicate definition, and error/concentration evidence. Re-evaluate the complete gap and finite-data rule before authorizing separate measurements. No G campaign automatically follows.
+
+**Claim ladder:** M = supplied finite N2 generator, exact 12-state quotient, Poisson/TV/concentration theorems; PM = independently identified physical dynamical interface (unpaid); PB = frozen model-to-apparatus gain/clock/preparation/readout map (unpaid); PP = prospective full-law prediction conditional on PM/PB; EV = independent held-out real validation (none). Engineered programming of A7 is not source/ontology evidence.

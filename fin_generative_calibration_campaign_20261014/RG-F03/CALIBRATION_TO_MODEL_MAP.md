@@ -1,0 +1,11 @@
+# Calibration-to-model map — RG-F03
+
+The already reviewed **hypothetical** interaction comparison uses FIN and flat-P7, both at independently varying gain `g in [2.97,3.03]`, with at most `0.005` output-TV deviation **per hypothesis**. The predecessor intake supplied a complete-gain-cover lower bound `0.01119114` before output allowances; hence `0.00119114` after both `0.005` allowances. This F package inherits that conditional result; it does not contain the repository review's exact-fraction gain-cover witness and must not be cited as a new independent interval replication.
+
+Additional unaccounted errors `e_FIN+e_flat` shrink the guaranteed gap to `max(0, 0.00119114-e_FIN-e_flat)`. All unbounded physical errors make the actual gate OPEN. The illustrative allocations in the JSON are not measured. Do not count the same detector uncertainty twice: allocations labelled additional must be disjoint from the already-budgeted `0.005` class.
+
+For a heat-bath reset process, `mu(t)=exp(-2t)mu(0)+(1-exp(-2t))p`. A worst-case equilibrium error `eps_burn` requires `t >= (1/2)log(1/eps_burn)` **in model time**. Converting this to seconds needs an independent measured production clock and a check that the attempt rate is stable when coupling is enabled. Do not treat the earlier `t=.4/1.0` quench as stationary.
+
+For two finite CTMCs on the SAME labelled state space with generators `L,L~` and identical readout semantics, Duhamel and TV contraction give `TV(mu exp(tL), mu~ exp(tL~)) <= TV(mu,mu~) + (t/2) max_x sum_y |L_xy-L~_xy|`. Concatenate this term across intervals; at each observation add the supremum TV over fixed outcome/**successor** kernels `J_o`. Stochastic maps contract TV. This is an unconditional algebraic bound **if** its numerical inputs and representation premises are supplied. A postselected probability requires separately bounded selection mass.
+
+Uniformization `P=I+B/4` is stochastic for all nine nominal 12-state generators and offers positive finite propagation. The Poisson tail bound in the JSON is a high-precision diagnostic; matrix elements and errors of the actual compiled rates still require an independent interval enclosure. No all-operations outward floating-point or physical prediction enclosure is claimed.

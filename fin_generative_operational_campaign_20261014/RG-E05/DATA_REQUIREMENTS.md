@@ -1,0 +1,9 @@
+# RG-E05 physical bridge data intake — prospective, unexecuted
+
+**Calibration dataset**, recorded before unblinding validation: 24 or more physical channel IDs, node split, temperature, baseline and coupled rates, all 144 compiled weights, g=0 relaxation trajectories, measured clock/temperature estimates, detector confusion including invalid/no-hot/multi-hot states, readout latency/back-action, physical drift, timestamp precision and replicate/trajectory IDs. Check PHYS-014's predeclared channel quality box and g=0 control.
+
+**Validation dataset**, independent of calibration: consecutive raw timestamped pair-state observations (not only differences), the mapped difference and invalid flag for every attempt, controller/gain command logs, readout quality, metadata for channel dropouts, and mutually identified trajectories/blocks for ESS. The prospective N2 two-time joint requires recording both observations in a way that permits noninvasive filter modelling; disturbance must be independently bounded or a new instrument map explicitly declared before analysis.
+
+**Planning rules:** freeze alternative matrices (trace-match), g and nuisance sets from calibration only; reserve validation records untouched; no post-test retuning; handle multiple candidate comparisons, event selection and serial correlations. Accept physical engineering bridge only under a predeclared TV or likelihood gate with paid total error. Successful programmed A7 does not make A7 independent of the apparatus.
+
+**Source atom:** for nature-selected A7 a distinct measured/predictive source K,c or selection rule must be fixed without consulting the desired A7 fingerprint. None provided here. The physical validation branch requires a human-authorized separate experiment; local computations do not instantiate it.

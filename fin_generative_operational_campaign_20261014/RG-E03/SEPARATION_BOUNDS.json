@@ -1,0 +1,66 @@
+{
+  "FIN_vs_trace_perturbation_N2_tv": 0.01479458960717607,
+  "M3_ordered_pairwise_nominal_tv": {
+    "FIN_A7_vs_FLAT_P7_TRACE": 0.010157172972605738,
+    "FIN_A7_vs_FULL_POTTS_TRACE": 0.08501153635711711,
+    "FULL_POTTS_TRACE_vs_FLAT_P7_TRACE": 0.09405274812380716
+  },
+  "N2_nominal_plus_hypothetical_robust_separation": {
+    "FIN_A7_vs_FLAT_P7_TRACE": {
+      "actual_calibration_gate": "OPEN_INPUT",
+      "hypothetical_gate": "NOT_GUARANTEED",
+      "lower_bound_if_calibrated": 0.0,
+      "max_common_tv_model_error_for_separation": 0.005893595789689574,
+      "nominal_tv": 0.011787191579379148,
+      "two_sided_model_uncertainty_budget": 0.02474421225067483
+    },
+    "FIN_A7_vs_FULL_POTTS_TRACE": {
+      "actual_calibration_gate": "OPEN_INPUT",
+      "hypothetical_gate": "positive",
+      "lower_bound_if_calibrated": 0.07436361432793899,
+      "max_common_tv_model_error_for_separation": 0.04849939351753874,
+      "nominal_tv": 0.09699878703507749,
+      "two_sided_model_uncertainty_budget": 0.02263517270613849
+    },
+    "FULL_POTTS_TRACE_vs_FLAT_P7_TRACE": {
+      "actual_calibration_gate": "OPEN_INPUT",
+      "hypothetical_gate": "positive",
+      "lower_bound_if_calibrated": 0.0838257318883466,
+      "max_common_tv_model_error_for_separation": 0.0531700703678257,
+      "nominal_tv": 0.1063401407356514,
+      "two_sided_model_uncertainty_budget": 0.022514408846304783
+    }
+  },
+  "N2_pairwise_nominal_tv": {
+    "FIN_A7_vs_FLAT_P7_TRACE": 0.011787191579379148,
+    "FIN_A7_vs_FULL_POTTS_TRACE": 0.09699878703507749,
+    "FULL_POTTS_TRACE_vs_FLAT_P7_TRACE": 0.1063401407356514
+  },
+  "explanation": "A common detector channel K maps all input states to an identical output, causing TV=0. A numerical positive minimax lower bound is prohibited without channel calibration.",
+  "hypothetical_by_model": {
+    "FIN_A7": {
+      "N2_logweight_oscillation_gain_1pct": 0.029730499685301,
+      "gain_tv_cap_from_tanh": 0.00743248805525427,
+      "hypothetical_detector_tv_cap": 0.005,
+      "total_hypothetical_model_radius": 0.01243248805525427
+    },
+    "FLAT_P7_TRACE": {
+      "N2_logweight_oscillation_gain_1pct": 0.029247417990879772,
+      "gain_tv_cap_from_tanh": 0.007311724195420559,
+      "hypothetical_detector_tv_cap": 0.005,
+      "total_hypothetical_model_radius": 0.01231172419542056
+    },
+    "FULL_POTTS_TRACE": {
+      "N2_logweight_oscillation_gain_1pct": 0.02081092637444155,
+      "gain_tv_cap_from_tanh": 0.0052026846508842215,
+      "hypothetical_detector_tv_cap": 0.005,
+      "total_hypothetical_model_radius": 0.010202684650884222
+    }
+  },
+  "hypothetical_design_only_uncertainties": {
+    "detector_TV": 0.005,
+    "fractional_gain": 0.01
+  },
+  "open_input": "instrument confusion/invalid probabilities, true gain uncertainty, source independence, sampling precision",
+  "unconditional_minimax_if_arbitrary_unknown_readout": 0
+}

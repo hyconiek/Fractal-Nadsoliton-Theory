@@ -1,0 +1,742 @@
+{
+  "date": "2026-10-14",
+  "baseline": "08b6d235 plus preceding uncommitted RG-E intake/AGENTS additions",
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "mpmath": "1.2.1"
+  },
+  "manifest": {
+    "files": 70,
+    "mismatches": 0,
+    "stage_entries": 32,
+    "uncovered": []
+  },
+  "predecessor_archive_members_byte_matched": 67,
+  "inherited_gain_cover_bound_locally_bound": true,
+  "plan_byte_identical": false,
+  "plan_format_normalized_identical": true,
+  "input_hashes": {
+    "checker": "aa15631eff2f085732127fe1414a573bd613e8d0a5520a7bc66a194207965e39",
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "AGENTS.md": "ee77c8cf082f4e0a3261713bac473db81bba5f5769b34d57023b2e5bc5e7fb60",
+    "source_manifest": "b668a298a21fa0996870f4902a03c4b4415f7df41a42b99cf024da33676eb7dc"
+  },
+  "independent_process_numeric": [
+    {
+      "model": "FIN_A7",
+      "kinetic": "heat_bath",
+      "noisy_joint_max_discrepancy": 3.469446951953614e-17,
+      "three_time_mass": 1.0,
+      "three_time_min": 1.8312553095900704e-06
+    },
+    {
+      "model": "FIN_A7",
+      "kinetic": "metropolis",
+      "noisy_joint_max_discrepancy": 4.85722573273506e-17,
+      "three_time_mass": 0.9999999999999998,
+      "three_time_min": 2.252241029294217e-06
+    },
+    {
+      "model": "FIN_A7",
+      "kinetic": "barker",
+      "noisy_joint_max_discrepancy": 3.122502256758253e-17,
+      "three_time_mass": 0.9999999999999998,
+      "three_time_min": 5.5980545984864e-06
+    },
+    {
+      "model": "FULL_POTTS_TRACE",
+      "kinetic": "heat_bath",
+      "noisy_joint_max_discrepancy": 2.7755575615628914e-17,
+      "three_time_mass": 1.0000000000000004,
+      "three_time_min": 1.0722062839219373e-05
+    },
+    {
+      "model": "FULL_POTTS_TRACE",
+      "kinetic": "metropolis",
+      "noisy_joint_max_discrepancy": 2.0816681711721685e-17,
+      "three_time_mass": 0.9999999999999992,
+      "three_time_min": 4.647965779211782e-06
+    },
+    {
+      "model": "FULL_POTTS_TRACE",
+      "kinetic": "barker",
+      "noisy_joint_max_discrepancy": 2.2551405187698492e-17,
+      "three_time_mass": 0.9999999999999999,
+      "three_time_min": 8.859394599479327e-06
+    },
+    {
+      "model": "FLAT_P7_TRACE",
+      "kinetic": "heat_bath",
+      "noisy_joint_max_discrepancy": 4.85722573273506e-17,
+      "three_time_mass": 0.9999999999999998,
+      "three_time_min": 1.987143258364258e-06
+    },
+    {
+      "model": "FLAT_P7_TRACE",
+      "kinetic": "metropolis",
+      "noisy_joint_max_discrepancy": 2.0816681711721685e-17,
+      "three_time_mass": 0.9999999999999996,
+      "three_time_min": 2.347426781709451e-06
+    },
+    {
+      "model": "FLAT_P7_TRACE",
+      "kinetic": "barker",
+      "noisy_joint_max_discrepancy": 1.734723475976807e-17,
+      "three_time_mass": 0.9999999999999999,
+      "three_time_min": 5.669018323380463e-06
+    }
+  ],
+  "phase_field_witness": 0.002711545661289616,
+  "statistical_integer_certificates": [
+    {
+      "rho": "0.00119114",
+      "n_min_for_this_union_bound": 40278676,
+      "tail_bound_at_n": [
+        "0.024999996143523",
+        "0.024999996143524"
+      ],
+      "tail_bound_at_n_minus_one": [
+        "0.025000004025826",
+        "0.025000004025827"
+      ],
+      "empirical_radius_interval": [
+        "0.000397046664255",
+        "0.000397046664256"
+      ],
+      "eps_choice": "rho/3",
+      "assumptions": "13 outcomes, iid, actual law in independently frozen hypothesis class",
+      "arithmetic": "mpmath.iv; exact decimal parameters; outward rational endpoint serialization"
+    },
+    {
+      "rho": "0.00039114",
+      "n_min_for_this_union_bound": 373539331,
+      "tail_bound_at_n": [
+        "0.024999999829916",
+        "0.024999999829917"
+      ],
+      "tail_bound_at_n_minus_one": [
+        "0.025000000679863",
+        "0.025000000679864"
+      ],
+      "empirical_radius_interval": [
+        "0.000130379999965",
+        "0.000130379999966"
+      ],
+      "eps_choice": "rho/3",
+      "assumptions": "13 outcomes, iid, actual law in independently frozen hypothesis class",
+      "arithmetic": "mpmath.iv; exact decimal parameters; outward rational endpoint serialization"
+    }
+  ],
+  "interface_probes": {
+    "parser": {
+      "valid_synthetic": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "empty_header": {
+        "accepted": true,
+        "rows": 0,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "nan_elapsed": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "infinite_latency": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "blank_record_id": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "malformed_timestamp": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "same_reset_across_roles": {
+        "accepted": true,
+        "rows": 2,
+        "warnings": [],
+        "iid_certified": false
+      },
+      "negative_elapsed": {
+        "accepted": false,
+        "error": "line 2: negative elapsed_s"
+      },
+      "invalid_without_reason": {
+        "accepted": false,
+        "error": "line 2: invalid requires reason code"
+      },
+      "noisy_difference": {
+        "accepted": true,
+        "rows": 1,
+        "warnings": [
+          "line 2: physical noisy mismatch: observed output 2 versus pair difference 1; NOT overwritten"
+        ],
+        "iid_certified": false
+      }
+    },
+    "sample_size_API": {
+      "nan": {
+        "accepted": true,
+        "outcome": "INCONCLUSIVE"
+      },
+      "infinity": {
+        "accepted": true,
+        "outcome": "FIN_ONLY"
+      },
+      "fractional": {
+        "accepted": true,
+        "outcome": "INCONCLUSIVE"
+      }
+    },
+    "scope": "synthetic in-memory interface probes, zero physical records"
+  },
+  "binary_event_no_go_summary": {
+    "claim": "No single fixed binary event uniformly distinguishes the two hypothetical static law classes",
+    "class": {
+      "gains": "independent [2.97,3.03]",
+      "output_TV_ball_each": "0.005",
+      "nominal_invalid": 0
+    },
+    "proof": "For each event choose admissible gain points with event-probability difference < .01. The projected TV-ball Bernoulli intervals overlap; each common probability is attainable by mass transfer between event and complement.",
+    "integer_scale": 1000000000000000,
+    "valid_label_masks_covered": 4096,
+    "proper_13_output_events_covered": 8190,
+    "max_selected_event_difference_upper": "4087916863371/500000000000000",
+    "limits": [
+      "per-law output-TV balls, not an imposed shared calibrated channel",
+      "one fixed event only; not multivalued statistics, several events or tighter calibration",
+      "input enclosures inherited from audited E mpmath.iv certificates"
+    ],
+    "source_hashes": {
+      "fin_generative_operational_review_20261014/GAIN_BOX_CERTIFICATE.json": "266672a81a11154de1839610d72fcf594400a58f42878a179d7f08548353c300",
+      "fin_generative_calibration_campaign_20261014/source_context/STATIC_INTERVAL_CERTIFICATE.json": "6fa89eeeb1b6cbf042c5550ef0d94112434788a549e1a2833e43efe0830981da"
+    }
+  },
+  "source_replay": {
+    "directory": "/tmp/fin-calibration-intake-nUipS8ry/campaign",
+    "verifier": {
+      "checks": [
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.phase_lumpability",
+          "value": 4.440892098500626e-16
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.full_parent_two_time_law",
+          "value": 8.326672684688674e-17
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.RG_E_regression",
+          "value": 2.7755575615628914e-17
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.heat_bath.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.phase_lumpability",
+          "value": 4.440892098500626e-16
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.full_parent_two_time_law",
+          "value": 5.551115123125783e-17
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.RG_E_regression",
+          "value": 1.3877787807814457e-17
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.metropolis.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.phase_lumpability",
+          "value": 6.661338147750939e-16
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.full_parent_two_time_law",
+          "value": 3.469446951953614e-17
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.RG_E_regression",
+          "value": 6.938893903907228e-18
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FIN_A7.barker.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.phase_lumpability",
+          "value": 2.220446049250313e-16
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.full_parent_two_time_law",
+          "value": 1.1102230246251565e-16
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.RG_E_regression",
+          "value": 5.551115123125783e-17
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.heat_bath.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.phase_lumpability",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.full_parent_two_time_law",
+          "value": 3.469446951953614e-17
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.RG_E_regression",
+          "value": 2.7755575615628914e-17
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.metropolis.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.phase_lumpability",
+          "value": 2.220446049250313e-16
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.full_parent_two_time_law",
+          "value": 5.551115123125783e-17
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.RG_E_regression",
+          "value": 6.938893903907228e-18
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FULL_POTTS_TRACE.barker.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.phase_lumpability",
+          "value": 8.881784197001252e-16
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.full_parent_two_time_law",
+          "value": 2.7755575615628914e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.RG_E_regression",
+          "value": 1.0408340855860843e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.heat_bath.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.phase_lumpability",
+          "value": 4.440892098500626e-16
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.full_parent_two_time_law",
+          "value": 5.551115123125783e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.RG_E_regression",
+          "value": 1.3877787807814457e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.metropolis.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.independent_lumped_matrix",
+          "value": 0.0
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.phase_lumpability",
+          "value": 8.881784197001252e-16
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.full_parent_two_time_law",
+          "value": 2.7755575615628914e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.RG_E_regression",
+          "value": 1.3877787807814457e-17
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.row_sum",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.offdiag_nonnegative",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.positive_mass",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.gibbs_stationary",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.detailed_balance",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "FLAT_P7_TRACE.barker.g0_clock_identity",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "asymmetric_control_saved_witness",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "erasure_obstruction",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "finite_sample_40m_integer_threshold",
+          "value": 0.024999996143523648
+        },
+        {
+          "passed": true,
+          "test": "gap_vs_two_confidence_radii",
+          "value": 0.0007940933333333333
+        },
+        {
+          "passed": true,
+          "test": "positive_example_budget",
+          "value": null
+        },
+        {
+          "passed": true,
+          "test": "poisson_tail_0.4",
+          "value": 1.1263328014830343e-80
+        },
+        {
+          "passed": true,
+          "test": "poisson_tail_0.6",
+          "value": 2.14582596337089e-69
+        },
+        {
+          "passed": true,
+          "test": "poisson_tail_1.0",
+          "value": 1.9481209438274847e-55
+        }
+      ],
+      "checks_passed": 98,
+      "checks_total": 98,
+      "date": "2026-10-14",
+      "independent_verifier": "144 labelled generator + branch-wise sparse uniformization/exp propagation; does not import positive_process",
+      "max_144_vs_12_joint_coordinate_error": 1.1102230246251565e-16,
+      "max_full_parent_quotient_entry_error": 0.0,
+      "scope": "numerical finite-model checks, not independent physical evidence or all-operation outward interval arithmetic"
+    }
+  },
+  "limits": [
+    "zero physical records",
+    "numerical likelihood helper not a globally outward distance oracle",
+    "probability/threshold intervals assume mpmath.iv",
+    "synthetic .05 emission error is not target .005 calibration",
+    "overall calibration confidence coverage missing"
+  ]
+}
