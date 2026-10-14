@@ -1,0 +1,61 @@
+{
+  "execution_status": "COMPLETED",
+  "scientific_verdict": "CONSISTENT_INTRINSIC_MICROSCOPIC_PARENT_WITH_SCOPED_SOURCE_GAPS",
+  "q": 12,
+  "kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "eta": 1.8,
+    "construction": "circulant distance kernel -> Laplacian -> Fourier k3,k4,k5,k6 features -> A=XX^T",
+    "rank": 7
+  },
+  "finite_copy_equilibrium": {
+    "labels": "0..11",
+    "N": "integer >=1",
+    "weight": "exp[(g/(2N)) sum_ab A[x_a,x_b]]",
+    "all_pairs": true,
+    "physical_role": "dimensionless model premise"
+  },
+  "primary_microscopic_kinetics": {
+    "id": "LEAVE_ONE_OUT_GIBBS_HEAT_BATH",
+    "attempt_rate": "1 per labelled copy per model-time unit",
+    "count_jump": "n -> n-e_i+e_j",
+    "rate": "n_i softmax_j[(g/N)A(n-e_i)]",
+    "status": "SUPPLIED_MODEL_PREMISE"
+  },
+  "limiting_objects": {
+    "p": "n/N",
+    "s": "softmax(g A p)",
+    "mu": "X^T p",
+    "theta_ret": "g mu",
+    "drift_p": "s-p",
+    "Phi": "||theta||^2/(2g)-log(mean_j exp(X_j.theta))"
+  },
+  "fold": {
+    "g_interval": [
+      3.5156447068395917,
+      3.5156447268395916
+    ],
+    "a_interval": [
+      -0.21257164008401386,
+      -0.212571626020459
+    ],
+    "b_interval": [
+      0.11898252745049878,
+      0.11898266710322367
+    ],
+    "certificate_sha_from_MP7_026": "5537174281996415a20ea3dffce23c33258c51396b3850aedf4168d9280e352e",
+    "status": "SUPPLIED_INTERVAL_ASSISTED_CERTIFICATE"
+  },
+  "initial_law_classes_for_TH002": [
+    "any initial empirical-law sequence satisfying a good LDP",
+    "deterministic type sequences p_N->p0 (proved special case)",
+    "finite-copy Gibbs equilibrium initial law (method-of-types LDP special case)"
+  ],
+  "distinctions": {
+    "theta_aux": "equilibrium Gaussian latent variable from MP7-032; not microscopic trajectory",
+    "empirical_refresh": "separate finite-N comparison convention; no O(1/N) transfer without generator comparison",
+    "model_time": "attempt clock; not physical seconds"
+  },
+  "input_discrepancy": "The materialized Library AGENTS snapshot predates the user-supplied 2026-10-14 theory reorientation. Binding current campaign guardrails therefore come from the user-supplied TH plan and derived-bridges files; the older AGENTS snapshot is retained only as historical context."
+}

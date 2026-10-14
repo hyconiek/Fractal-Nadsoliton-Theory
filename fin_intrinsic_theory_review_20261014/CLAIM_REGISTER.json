@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-14",
+  "baseline": "ec8baa15",
+  "overall_verdict": "ACCEPT_INTERACTING_PATH_THEORY_AND_MICROSCOPIC_FOLD_COEFFICIENTS__PROCESS_LIMIT_OPEN",
+  "source_preserved": true,
+  "claims": [
+    {
+      "id": "TH-I01",
+      "source_claim": "TH-001",
+      "status": "ADMITTED_LOCAL_MODEL_AND_INPUT_BINDING",
+      "newness": "model reused; local hash and interval spectral binding added by intake",
+      "statement": "The exact-decimal active spectrum is contained in the supplied R7P-031 spectral boxes, and its actual certificate hash matches.",
+      "scope": "supplied q12 Fourier kernel, Gibbs extension and LOO heat bath; mpmath.iv assumption",
+      "dependencies": ["R7P-031", "safe_seed", "declared exact-decimal parameters"],
+      "evidence": ["verification.json", "verify_intake.py"],
+      "physical_level": "M; original model and kinetic premises remain supplied"
+    },
+    {
+      "id": "TH-I02",
+      "source_claim": "TH2-LDP",
+      "status": "ADMITTED_THEOREM_APPLICATION",
+      "newness": "new relative to synthesis's generator-only status",
+      "statement": "Kraaij Theorem 2.3 applies to the interacting empirical LOO chain with an initial good LDP, including declared deterministic type and Gibbs starts.",
+      "scope": "fixed finite g, dimensionless Skorokhod empirical path law at speed N; no critical growing-horizon claim",
+      "dependencies": ["TH-I01", "initial LDP", "Kraaij Theorem 2.3"],
+      "evidence": ["INTAKE_20261014.md", "../fin_intrinsic_theory_campaign_20261014/TH-002/GENERATOR_TO_ACTION_PROOF.md"],
+      "primary_source": "https://arxiv.org/html/1502.05185v3#S2.Thmtheorem3",
+      "physical_level": "M"
+    },
+    {
+      "id": "TH-I03",
+      "source_claim": "TH2-FLUX and TH2-QP",
+      "status": "ADMITTED_ANALYTIC_IDENTITY_AND_BASIN_LOCAL_CONSEQUENCE",
+      "newness": "flux/path consequence new; reversal identity reused",
+      "statement": "Edge-flux relative-entropy action and interior reversal give F(p)-F(m) as a basin-local quasipotential for relaxation-connected targets at nondegenerate stable m.",
+      "scope": "infimum over durations with vanishing local connection cost; no boundary or global barrier assertion",
+      "dependencies": ["TH-I02", "positive interior rates", "stable minimum and basin relaxation"],
+      "evidence": ["INTAKE_20261014.md"],
+      "physical_level": "M"
+    },
+    {
+      "id": "TH-I04",
+      "source_claim": "TH3-NONCLOSURE and TH3-LIFT",
+      "status": "ADMITTED_REUSED_WITNESS_AND_CONSTRUCTIVE_LIFT",
+      "newness": "witness and general recovery reused; selected four-product minimal continuous lift clarified",
+      "statement": "N120/g0 equal means have square-generator difference Lambda5/7200; seven means plus four selected products continuously recover all eleven occupation coordinates.",
+      "scope": "exact algebra; no universal finite-coding or minimal observable-specific reduction theorem",
+      "dependencies": ["q12 Fourier feature convention", "g0 LOO generator"],
+      "evidence": ["INTAKE_20261014.md", "verification.json"],
+      "physical_level": "M"
+    },
+    {
+      "id": "TH-I05",
+      "source_claim": "TH4-NOISE",
+      "status": "ADMITTED_DERIVED_LEADING_COEFFICIENT_AND_OUTWARD_INTERVALS",
+      "newness": "identity reused; local certificate binding and outward serialization added",
+      "statement": "The actual fold soft variance coefficient is 2g_f at leading order; finite-N LOO rate is 2g_f/N+O(N^-2) for corresponding near-fold type states.",
+      "scope": "exact isolated fold and normalized v, supplied clock; not isotropic full noise or exact finite-N equality",
+      "dependencies": ["TH-I01", "fold null equation", "actual jump covariance"],
+      "evidence": ["INTAKE_20261014.md", "verification.json"],
+      "physical_level": "M"
+    },
+    {
+      "id": "TH-I06",
+      "source_claim": "TH5-LIMIT",
+      "status": "FORMAL_CANDIDATE__STOCHASTIC_CONVERGENCE_OPEN",
+      "newness": "generator diagnostic supplied; full convergence still not achieved",
+      "statement": "Critical powers and candidate SDE are consistent with actual generator characteristics; preparation, stable estimates, tightness and stopped-law identification remain unpaid.",
+      "scope": "source finite diagnostic; proposed compact-stopped repair is not source-proved",
+      "dependencies": ["TH-I05", "quantitative preparation", "fast occupation and containment", "martingale convergence"],
+      "evidence": ["INTAKE_20261014.md", "TH_010_DECISION.md"],
+      "physical_level": "M target, not theorem or PP"
+    },
+    {
+      "id": "TH-I07",
+      "source_claim": "intake architectural algebra",
+      "status": "ADMITTED_EXACT_DETERMINISTIC_STRUCTURE_WITH_NUMERIC_CHECK",
+      "newness": "full occupation null-pair and fast-chart implication made explicit",
+      "statement": "At the fold the full normalized occupation Jacobian has the seven retained rates -g_f eig(H7) and four hidden rates -1, hence one soft and ten stable directions.",
+      "scope": "mean-field linearization conditional on accepted fold inertia; not finite-N stochastic gap or averaging theorem",
+      "dependencies": ["A=XX^T", "fold null and inertia", "occupation normalization"],
+      "evidence": ["FAST_MODE_PROOF_ROUTE.md", "verification.json"],
+      "physical_level": "M"
+    },
+    {
+      "id": "TH-I08",
+      "source_claim": "next chain SF-001 to SF-005",
+      "status": "ARCHITECT_DESIGN_ONLY",
+      "newness": "new proof decomposition and proposed prepared compact-stop contract",
+      "statement": "Use a derived ten-mode Lyapunov form, stopped occupation estimates and martingale convergence, then one bounded first-passage law.",
+      "scope": "unexecuted plan with kill gates; no new microscopic law",
+      "dependencies": ["TH-I06", "TH-I07"],
+      "evidence": ["TH_010_DECISION.md", "../FIN_STOCHASTIC_FOLD_CLOSURE_NEXT_CHAIN_20261014.md"],
+      "physical_level": "M research programme only"
+    }
+  ],
+  "unchanged_open_gates": [
+    "independent A7 and kinetic source", "physical units and clock", "spatial incidence and locality",
+    "conserved physical energy", "independent calibration and validation", "global Gamma=B4",
+    "FIN-M0 evidence", "task337/task335", "QW-2191 and legacy role transfer",
+    "spacetime/QM/GR/SM/L_total/ToE"
+  ]
+}

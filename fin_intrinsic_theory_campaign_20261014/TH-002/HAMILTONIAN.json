@@ -1,0 +1,15 @@
+{
+  "finite_N": "H_N(p,xi)=sum_ij p_i softmax_j[g A(p-e_i/N)](exp(xi_j-xi_i)-1)",
+  "limit": "H(p,xi)=sum_ij p_i s_j(p)(exp(xi_j-xi_i)-1)",
+  "factorization": "(sum_i p_i exp(-xi_i))(sum_j s_j exp(xi_j))-1",
+  "gauge": "H(p,xi+c1)=H(p,xi)",
+  "drift": "d_xi H|0=s-p",
+  "quadratic": "d_xi^2 H|0 = diag(p)+diag(s)-p s^T-s p^T",
+  "reversal": "H(p,xi)=H(p,grad F-xi)",
+  "lagrangian_flux": "inf over q_ij>=0 with sum q_ij(e_j-e_i)=v of sum [q log(q/c)-q+c], c_ij=p_i s_j",
+  "fold_soft_cumulants_nominal": {
+    "second": 7.031289433679185,
+    "third": -6.108395039783332e-16,
+    "fourth": 120.50383529864993
+  }
+}

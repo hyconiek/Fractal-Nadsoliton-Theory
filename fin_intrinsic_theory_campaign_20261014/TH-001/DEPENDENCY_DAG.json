@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "A7_X",
+      "type": "SUPPLIED_MODEL_OBJECT"
+    },
+    {
+      "id": "finite_Gibbs",
+      "type": "SUPPLIED_MODEL_EXTENSION",
+      "depends_on": [
+        "A7_X"
+      ]
+    },
+    {
+      "id": "LOO_generator",
+      "type": "SUPPLIED_KINETIC_PREMISE",
+      "depends_on": [
+        "A7_X",
+        "finite_Gibbs"
+      ]
+    },
+    {
+      "id": "path_LDP",
+      "type": "DERIVED_THEOREM",
+      "depends_on": [
+        "LOO_generator",
+        "initial_LDP",
+        "Kraaij_2_3"
+      ]
+    },
+    {
+      "id": "coarse_contraction",
+      "type": "DERIVED_THEOREM",
+      "depends_on": [
+        "path_LDP",
+        "observable_map"
+      ]
+    },
+    {
+      "id": "fold_certificate",
+      "type": "SUPPLIED_VALIDATED_INTERVAL_RESULT",
+      "depends_on": [
+        "A7_X",
+        "Phi"
+      ]
+    },
+    {
+      "id": "microscopic_soft_coefficients",
+      "type": "DERIVED_IDENTITY_PLUS_CERTIFICATE_REUSE",
+      "depends_on": [
+        "LOO_generator",
+        "fold_certificate"
+      ]
+    },
+    {
+      "id": "stochastic_fold_limit",
+      "type": "OPEN_CONVERGENCE_TARGET",
+      "depends_on": [
+        "microscopic_soft_coefficients",
+        "fast_mode_averaging_lemma"
+      ]
+    }
+  ]
+}
