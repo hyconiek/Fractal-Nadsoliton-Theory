@@ -1,0 +1,5 @@
+# Input provenance / caveats
+
+Actual byte inputs bundled: user-supplied KI plan, previously delivered SF ZIP, source-context finite theory_core.py extracted from TH predecessor, E04 kinetic contract extracted from prior RG-E ZIP, SF-002/003 author proofs and SF-004 rational numerical-certificate data. The exact full repository at referenced cf1bf9ae was not checked out in this container. One source file (`safe_seed.py`) was additionally inspected at the requested public GitHub raw URL; its 1/12 Barker coefficient differs from the **explicit 2/12 Barker g0 matched convention** frozen by the KI plan and RG-E K07. Historical input files were not modified; the discrepancy is stated in KI-002.
+
+The inherited exact fold source binding reports an admitted 2026-10-14 R7P-031 interval/root/inertia with conditional interval-backend validity. Its raw certificate was not reacquired or recomputed here. New nominal numbers are computed on the exact-decimal *formula evaluated as binary64*, not exact transcendental interval enclosures. Consequently no SHA of remote HEAD or complete original Git working tree is asserted.

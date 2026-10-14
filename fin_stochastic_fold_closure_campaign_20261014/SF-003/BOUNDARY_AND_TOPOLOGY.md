@@ -1,0 +1,7 @@
+# Process topology and boundary semantics
+
+* Process state before stopping: real Z_N in the open interval (-R,R). After the first soft exit it is frozen at its (possibly slightly overshooting) exit value. Limiting process is frozen exactly at ±R. This is an absorption convention, not conditional postselection or recycling.
+* The auxiliary fast tube \(\|w\|<N^{-1/4}\) is a mathematical localizing stop, **not** a second physical boundary. Its pre-soft-exit probability is O(N^-1/6) under the stated initial class. No statement is made about the un-stopped full process after the first soft exit.
+* Path topology: Skorokhod J1 on D([0,S],R); any subsequential limit is continuous, hence J1 convergence is equivalent to uniform path convergence after a suitable coupling. Exit times/side probabilities require the stronger boundary regularity verification in the theorem, not just finite-dimensional convergence.
+* Nondegenerate one-dimensional Brownian diffusion (coefficient sqrt(2g_f)>0) has instantaneous outward excursions after hitting either boundary, and its hitting-time distribution has no atom at a deterministic positive S. For initial support strictly inside (-R,R), the associated exit-and-freeze map is continuous almost surely. Thus capped exit times and exit sides transfer by continuous mapping.
+* No global stationary density is asserted for the cubic normal form and no globally normalizable cubic potential is used.

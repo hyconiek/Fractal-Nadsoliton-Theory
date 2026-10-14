@@ -1,0 +1,3 @@
+# Architect-only checkpoint — no automatic next task
+
+Classify the prepared, compact-stopped kinetic-invariant statistical law as a mathematically conditional result tied to a fixed supplied A7 and rate family. The remaining local proof obligation, if independent mathematical certification is required, is external scrutiny/formalization of the MET Lipschitz-factor estimate, fourth-moment maximal stopping argument and joint boundary passage for the controls. Physical interpretation additionally requires independently specified kinetic-clock and apparatus mapping; no such input arrived here. Avoid new gain sweeps or multiplying synthetic controls merely to collect PASS flags.

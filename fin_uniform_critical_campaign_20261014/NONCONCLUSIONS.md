@@ -1,0 +1,3 @@
+# Nonconclusions
+
+No microscopic A7/kinetics/gain source; no derived physical seconds; no exact finite-N parity lumpability; no new seven-bit/recursive particle hierarchy; no preferred unique sign from a symmetric start; no global equilibrium quartic approximation; no finite-N asymptotic TV rate; no global metastability/B4/capacity; no unbounded-time weak convergence; no inherited theorem for arbitrary Metropolis variants; no experimental, natural, spatial, conserved-energy, quantum, gravitational, Standard Model or ToE conclusion. Runtime checks do not establish analytical statements independently. Earlier accepted spectral and coexistence certificates are dependencies, not newly proved in this handoff. Architect next step is open.

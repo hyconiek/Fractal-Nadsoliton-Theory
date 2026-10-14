@@ -1,0 +1,9 @@
+# Provenance, dependencies, and independent status
+
+Source user files (byte-for-byte copied): PLAN_UF_USER.md and KI_INTAKE_USER.md. Previous self-contained KI source context bundled via SOURCE_KI_FULL_HANDOFF.zip and source_context/theory_core.py, each hashed. The local predecessor may not include separate KI reviewer artifacts; the pasted KI intake remains a textual accepted-premise snapshot, **not** a cryptographically verified Git checkout. Current remote repository HEAD has not been attested. We have not changed AGENTS.md, source histories or external files.
+
+**Supplied premises:** the exact-decimal kernel, q12, A=XX^T, simple top k6 Fourier eigenvalue and negative ten-fast-mode restriction, normalized count Gibbs law, LOO HB kinetics, frozen diagnostic MET/BAR off-diagonal conventions, iid-uniform starts selected as a mathematical initial experiment, gain sequence g_N=g_c+lambda N^-1/2. The accepted KI intake provides interval spectral boxes; original certificate bytes were not separately provided in this upload. The finite-N Gibbs coexistence witness at g_eq<g_c is reused as an earlier admitted theorem.
+
+**Derived:** q12 parity generator, critical drift/noise, local Lipschitz logarithmic-mean force structure, symmetry cancellation, fast Lyapunov bound, stopped energy/exit rates, process-level weak limit, quartic invariant density, preparation/order-of-limits distinction. **Fitted:** none. **Numerical diagnostics:** all binary64, not outward intervals; the independently reconstructed source matrix is independent of the producer code but not independent of the shared mathematical definitions.
+
+Scientific flags come from the proofs in UF-001 through UF-004. `DIAGNOSTICS.json` and `INDEPENDENT_VERIFICATION.json` are reproducibility/consistency checks only. Prior static parity pitchfork/census, two-copy physical N2 design, SF fold, KI controller comparisons and field/particle interpretations are not replayed or promoted.

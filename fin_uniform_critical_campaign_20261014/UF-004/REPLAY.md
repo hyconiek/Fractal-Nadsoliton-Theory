@@ -1,0 +1,1 @@
+Run `python uf_analysis.py` and `python independent_verify.py` from the parent directory (requires numpy/scipy). Read the parent proof document. Compare input hashes before interpreting numerical outputs. The scripts are model diagnostics and consistency checks, not an automated theorem prover.

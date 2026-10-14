@@ -1,0 +1,364 @@
+{
+  "date": "2026-10-14",
+  "baseline": "cf1bf9ae plus pre-existing SF integration",
+  "source_manifest": {
+    "matched": 72,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "source_inputs": {
+    "matched": 8,
+    "mismatches": 0
+  },
+  "task_inputs": {
+    "KI-001": {
+      "matched": 4,
+      "mismatches": 0
+    },
+    "KI-002": {
+      "matched": 6,
+      "mismatches": 0
+    },
+    "KI-003": {
+      "matched": 8,
+      "mismatches": 0
+    },
+    "KI-004": {
+      "matched": 9,
+      "mismatches": 0
+    },
+    "KI-005": {
+      "matched": 10,
+      "mismatches": 0
+    }
+  },
+  "SF_review_manifest": {
+    "matched": 12,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "inherited_SF_inputs_unchanged": 7,
+  "plan_binding": {
+    "repo_sha256": "23d02b4b315fea32e152b69f64a1fa448b540558282e536c7d7adfce0ba9016b",
+    "attached_sha256": "5a1de5a17b8444a1b752b825b90d348d29cb033d66d42a3a5603e86a8e06dc03",
+    "byte_identical": false
+  },
+  "SF_archive": {
+    "matched": 61,
+    "mismatches": []
+  },
+  "nominal_mobilities": {
+    "HB": {
+      "m": 3.5156447168395926,
+      "m_over_HB": 1.0000000000000002,
+      "d": 1.4814354133480339,
+      "LV2": 8.315882544134962e-10,
+      "LV2_positive_payment": 3.3657500723965295e-10,
+      "scope": "floating diagnostic; no outward moment constants"
+    },
+    "MET": {
+      "m": 0.46077117240094556,
+      "m_over_HB": 0.13106306510265303,
+      "d": 11.303225757674168,
+      "LV2": 1.2540645335487062e-09,
+      "LV2_positive_payment": 5.911138637673651e-10,
+      "scope": "floating diagnostic; no outward moment constants"
+    },
+    "BAR": {
+      "m": 0.8694091205061648,
+      "m_over_HB": 0.2472972073491331,
+      "d": 5.990506036150057,
+      "LV2": 9.642060521624235e-10,
+      "LV2_positive_payment": 4.5426994764394287e-10,
+      "scope": "floating diagnostic; no outward moment constants"
+    }
+  },
+  "finite_DB": [
+    {
+      "kinetic": "HB",
+      "cases": 132,
+      "max_log_discrepancy": 5.551115123125783e-16
+    },
+    {
+      "kinetic": "MET",
+      "cases": 132,
+      "max_log_discrepancy": 5.134781488891349e-16
+    },
+    {
+      "kinetic": "BAR",
+      "cases": 132,
+      "max_log_discrepancy": 5.551115123125783e-16
+    }
+  ],
+  "fold_free_energy_nominal": 0.08057461187750947,
+  "next_lane_derived_spectral_bounds": {
+    "g_uniform_critical": [
+      "5.12342755139859",
+      "5.12342755139864"
+    ],
+    "retained_fast_rate_lower": "0.01860477465101",
+    "scope": "exact Fraction propagation of inherited spectral boxes; not a new critical stochastic theorem"
+  },
+  "checks": [
+    {
+      "name": "attached plan normalized text",
+      "passed": true
+    },
+    {
+      "name": "SF archive members match",
+      "passed": true,
+      "matched": 61,
+      "mismatches": []
+    },
+    {
+      "name": "producer reconstruction core byte bound",
+      "passed": true
+    },
+    {
+      "name": "E04 matched-clock contract byte bound",
+      "passed": true
+    },
+    {
+      "name": "independent fold residual",
+      "passed": true
+    },
+    {
+      "name": "primal tangent ten positive eigenvalues",
+      "passed": true,
+      "eigenvalues": [
+        -3.55271868708786e-14,
+        12.741873439483392,
+        12.745350000995307,
+        17.24609791111631,
+        22.3340374946935,
+        29.430376270756742,
+        30.42966487833387,
+        37.53129112024473,
+        38.596210790640896,
+        126.30867604839037,
+        146.59528909014108
+      ]
+    },
+    {
+      "name": "primal Hessian null",
+      "passed": true
+    },
+    {
+      "name": "primal dual a identity",
+      "passed": true
+    },
+    {
+      "name": "primal dual b identity",
+      "passed": true
+    },
+    {
+      "name": "HB strictly positive tangent mobility",
+      "passed": true
+    },
+    {
+      "name": "HB equilibrium conductance symmetry",
+      "passed": true
+    },
+    {
+      "name": "HB source soft clock",
+      "passed": true
+    },
+    {
+      "name": "HB equilibrium D=2K",
+      "passed": true
+    },
+    {
+      "name": "HB projected variance=2m",
+      "passed": true
+    },
+    {
+      "name": "HB actual fast restricted spectrum",
+      "passed": true
+    },
+    {
+      "name": "HB derivative of actual drift vs -KHF",
+      "passed": true,
+      "residual": 1.8685271385709967e-09
+    },
+    {
+      "name": "HB nonlinear Onsager identity",
+      "passed": true
+    },
+    {
+      "name": "HB actual g0 rates",
+      "passed": true
+    },
+    {
+      "name": "HB exact quadratic-square generator identity numeric",
+      "passed": true
+    },
+    {
+      "name": "MET strictly positive tangent mobility",
+      "passed": true
+    },
+    {
+      "name": "MET equilibrium conductance symmetry",
+      "passed": true
+    },
+    {
+      "name": "MET source soft clock",
+      "passed": true
+    },
+    {
+      "name": "MET equilibrium D=2K",
+      "passed": true
+    },
+    {
+      "name": "MET projected variance=2m",
+      "passed": true
+    },
+    {
+      "name": "MET actual fast restricted spectrum",
+      "passed": true
+    },
+    {
+      "name": "MET derivative of actual drift vs -KHF",
+      "passed": true,
+      "residual": 2.9670100931689092e-08
+    },
+    {
+      "name": "MET nonlinear Onsager identity",
+      "passed": true
+    },
+    {
+      "name": "MET actual g0 rates",
+      "passed": true
+    },
+    {
+      "name": "MET exact quadratic-square generator identity numeric",
+      "passed": true
+    },
+    {
+      "name": "BAR strictly positive tangent mobility",
+      "passed": true
+    },
+    {
+      "name": "BAR equilibrium conductance symmetry",
+      "passed": true
+    },
+    {
+      "name": "BAR source soft clock",
+      "passed": true
+    },
+    {
+      "name": "BAR equilibrium D=2K",
+      "passed": true
+    },
+    {
+      "name": "BAR projected variance=2m",
+      "passed": true
+    },
+    {
+      "name": "BAR actual fast restricted spectrum",
+      "passed": true
+    },
+    {
+      "name": "BAR derivative of actual drift vs -KHF",
+      "passed": true,
+      "residual": 2.7942614194698123e-10
+    },
+    {
+      "name": "BAR nonlinear Onsager identity",
+      "passed": true
+    },
+    {
+      "name": "BAR actual g0 rates",
+      "passed": true
+    },
+    {
+      "name": "BAR exact quadratic-square generator identity numeric",
+      "passed": true
+    },
+    {
+      "name": "HB algebraic clock recovery numerical",
+      "passed": true
+    },
+    {
+      "name": "distinct clock hierarchy",
+      "passed": true
+    },
+    {
+      "name": "reject unmatched Barker normalization",
+      "passed": true
+    },
+    {
+      "name": "HB finite count detailed balance",
+      "passed": true
+    },
+    {
+      "name": "MET finite count detailed balance",
+      "passed": true
+    },
+    {
+      "name": "BAR finite count detailed balance",
+      "passed": true
+    },
+    {
+      "name": "uniform critical gain and positive fast gap",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "FIN_KINETIC_INVARIANTS_NEXT_CHAIN_20261014.md": "23d02b4b315fea32e152b69f64a1fa448b540558282e536c7d7adfce0ba9016b",
+    "fin_stochastic_fold_closure_review_20261014/MANIFEST.sha256": "99b02db241b8a38fca778b5ded5931668e89d725c2f80cb0830e341b76256fc9",
+    "fin_stochastic_fold_closure_review_20261014/STOPPED_LIMIT_COMPLETION.md": "942b89fd89342e0473447b45a0eb162eabde39bec14b93ba3f2cfc88b1885829",
+    "fin_kinetic_invariants_campaign_20261014/MANIFEST.sha256": "875d9093593cf6153b83f3a5b060ff9ab2d36ab859568633a7ae55c7d5f587c8",
+    "fin_kinetic_invariants_review_20261014/verify_intake.py": "5ca5e98cd5f59ed0574559c45fb1c6d92525463c4a88918b8d64b196daaae185"
+  },
+  "preexisting_guardrail": {
+    "description": "AGENTS.md before the KI append, including preserved dirty SF section",
+    "sha256": "aad8636e9953ad538db3ece550822db508eabf43556045fce11839d1ffc12887"
+  },
+  "benchmark": {
+    "url": "https://arxiv.org/html/0712.0790v1#S1.Thmtheorem2",
+    "read_scope": "update definition and full Theorem2 statement; not a FIN application",
+    "capture_sha256": "99bf7f34c07f2271d7b32e9cfbf426638ef768f44fcf2ea3eaa81782c319afda"
+  },
+  "replay": {
+    "directory": "/tmp/fin-ki-intake-r6kev3wq/campaign",
+    "source_flags": [
+      41,
+      41
+    ],
+    "logs": {
+      "verify_package.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"passed\": 41,\n  \"total\": 41,\n  \"all_pass\": true,\n  \"manifest_entries\": 72\n}\n",
+        "stderr": ""
+      },
+      "kinetic_analysis.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"g_fold\": 3.5156447168395917,\n  \"a_delta\": 5.551115123125783e-17,\n  \"b_delta\": 2.498001805406602e-16,\n  \"mobilities\": {\n    \"HB\": 3.5156447168395997,\n    \"MET\": 0.4607711724009463,\n    \"BAR\": 0.8694091205061667\n  },\n  \"log_DB_max\": 1.4210854715202004e-14\n}\n",
+        "stderr": ""
+      },
+      "local_regularities.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"max_cubic_scaled_residual\": 0.05340150770558559,\n  \"first_rows\": [\n    {\n      \"kinetic\": \"HB\",\n      \"x\": 0.002,\n      \"true_projected_drift\": -8.370273123368803e-07,\n      \"quadratic_prediction\": -8.366010790244883e-07,\n      \"absolute_residual\": 4.262333123920026e-10,\n      \"residual_over_absx3\": 0.05327916404900032\n    },\n    {\n      \"kinetic\": \"HB\",\n      \"x\": 0.0005,\n      \"true_projected_drift\": -5.229423385131794e-08,\n      \"quadratic_prediction\": -5.228756743903052e-08,\n      \"absolute_residual\": 6.666412287418132e-12,\n      \"residual_over_absx3\": 0.053331298299345055\n    },\n    {\n      \"kinetic\": \"HB\",\n      \"x\": -0.002,\n      \"true_projected_drift\": -8.361738669628436e-07,\n      \"quadratic_prediction\": -8.366010790244883e-07,\n      \"absolute_residual\": 4.2721206164468475e-10,\n      \"residual_over_absx3\": 0.05340150770558559\n    }\n  ]\n}\n",
+        "stderr": ""
+      },
+      "independent_verify.py": {
+        "exit_code": 0,
+        "stdout": "{\"passed\": 41, \"total\": 41, \"failed\": []}\n",
+        "stderr": ""
+      }
+    },
+    "mobility_max_drift": 3.1086244689504383e-15,
+    "byte_identical": {
+      "KI-002/DERIVED_SOFT_CLOCKS.json": false,
+      "KI-003/LOCAL_DRIFT_DIAGNOSTICS.json": false,
+      "INDEPENDENT_VERIFICATION.json": false
+    }
+  },
+  "source_manifest_after": {
+    "matched": 72,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "status": "PASS_SCOPED_KI_INTAKE_CHECKS"
+}

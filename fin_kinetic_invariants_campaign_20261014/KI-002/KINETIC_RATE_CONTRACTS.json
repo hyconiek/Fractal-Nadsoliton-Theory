@@ -1,0 +1,9 @@
+{
+  "HB": "r_ij=softmax_j((g/N)A(n-e_i))",
+  "MET": "r_ij=min(1,exp(h_j-h_i))/12",
+  "BAR": "r_ij=2/(12*(1+exp(-(h_j-h_i))))",
+  "domain": "i!=j; generator diagonal=-sum off diagonal; n_i factor",
+  "clock": "each copy g=0 Fourier nonconstant autocorrelation exp(-t)",
+  "source_conflict": "predecessor safe_seed used BAR prefactor 1/12, not this deliberately g0 matched K07 contract",
+  "finite_Gibbs_reversibility": "proved for constant diagonal symmetric A"
+}

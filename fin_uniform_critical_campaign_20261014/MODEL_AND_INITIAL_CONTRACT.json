@@ -1,0 +1,22 @@
+{
+  "model": "q12 rank7 exact-decimal FIN",
+  "microscopic_rates": {
+    "HB": "softmax_j(g*A*(p-e_i/N))",
+    "MET": "exp(min(0,h_j-h_i))/12",
+    "BAR": "(2/12)/(1+exp(-(h_j-h_i)))"
+  },
+  "gain_exact": "g_c = 12/lambda_6(A), g_N=g_c+lambda*N^(-1/2)",
+  "gain_nominal_binary64": 5.123427551398615,
+  "init": "iid per-label uniform on 0..11 independently, not Gibbs equilibrium",
+  "readout": "m=sum_j (-1)^j*n_j/N, Z_N(s)=N^(1/4)*m(N^(1/2)*s)",
+  "full_occ_fast": "P_fast=I-11^T/12-sigma*sigma^T/12",
+  "expected_process": "dZ=(chi*lambda*Z-Z^3/3)ds+sqrt(2)dB, Z0=0",
+  "stops": {
+    "soft": "|Z|>=R",
+    "fast": "||P_fast(p-u)||>=N^(-1/5)",
+    "time": "s<=S",
+    "R_S": "fixed finite"
+  },
+  "source_conditions": "accepted exact lambda6 unique-top and fast gap; exact cosine matrix model; this source archive has only nominal reconstruction",
+  "status": "analytical proof submitted for independent intake"
+}

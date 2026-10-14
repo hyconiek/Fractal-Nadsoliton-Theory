@@ -1,0 +1,9 @@
+# FIN — podsumowanie kampanii SF-001–SF-005
+
+Wykonano próbę zamknięcia najważniejszego brakującego mostu matematycznego między skończonym procesem skokowym FIN a dyfuzją kolektywną w oknie folda. Rezultatem jest **pełny analityczny dowód lokalnej zbieżności przy przygotowanych stanach i zatrzymaniu w ograniczonym przedziale**, oparty na wcześniej przyjętym certyfikacie dokładnego pierwiastka folda. Nie użyto nowych praw dynamiki, pól, pamięci ani zegara.
+
+Przestrzeń zajętości ma jedenaście wymiarów: jeden miękki, dziesięć stabilnych. Dla ustalonej normy i macierzy Lyapunova wynikającej z generatora energia szybkich odchyleń spełnia lokalną nierówność `L_N V ≤ -κ V + C(x^4 + |g_N-g_f|^2 + 1/N)`. Na rosnącym horyzoncie `N^(1/3) S` kontrola całkowa ma rząd `N^(-2/3)`, a dodatkowa tuba `N^(-1/4)` jest opuszczana przed zatrzymaniem miękkim z prawdopodobieństwem `O(N^(-1/6))`. Tych oszacowań nie należy mylić z certyfikowaną liczbowo granicą dla wybranego N.
+
+Po skalowaniu otrzymuje się lokalnie `dZ = -g_f(a λ+b Z²/2) ds+sqrt(2g_f)dB`; dalsze przeskalowanie daje `dY=(κ λ -Y²)dτ+dW`. Przy `λ=0`, `Y0=0`, granicach ±1, prawdopodobieństwo **ostatecznego** wyjścia górą mieści się w dokładnie wymiernie poświadczonym przedziale `[0.416855651698382283, 0.416855651698382284]`. Prawo czasu i strony wyjścia dla dowolnego skończonego horyzontu podano przez równania brzegowe/PDE i transformaty Laplace'a; nie wydrukowano fikcyjnych cyfr takiej dystrybucji bez certyfikatu solvera.
+
+Nie oznacza to dowodu wyjścia między globalnymi basenami, fizycznego czasu, cząstki ani teorii fundamentalnej. Kod waliduje lokalną arytmetykę, a nie mechanicznie cały dowód. Wcześniejszy certyfikat ścisłego folda nadal jest oddzielną, przejętą zależnością. Decyzja o dalszych zadaniach pozostaje po stronie architekta.

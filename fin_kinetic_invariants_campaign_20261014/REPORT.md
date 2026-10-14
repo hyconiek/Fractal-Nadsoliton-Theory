@@ -1,0 +1,3 @@
+# KI campaign report
+
+Tasks KI-001–KI-005 executed in bounded analytic/small-matrix scope. Three explicitly specified reversible kinetics of the same FIN Gibbs model have different generator-derived soft mobilities. Constrained thermodynamic fold coefficients match exactly, and the prepared local critical law canonically agrees across kinetics after one lawful time conversion. The KI-003 theorem argument includes MET's rate kink, the stopped energy estimates and the extra fourth-moment maximal bound necessary to carry **the same thermal readout**. See HANDOFF.md and task proof files; interpreted as a conditional mathematical theorem, not peer review or physical validation.

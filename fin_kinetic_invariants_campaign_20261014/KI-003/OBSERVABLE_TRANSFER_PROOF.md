@@ -1,0 +1,3 @@
+# Thermal-observable transfer is not a free coordinate change
+
+The kinetic left null ell_K differs substantially from heat-bath's thermal ell_HB for MET/BAR in the nominal finite calculation. The finite-N equality of soft coordinates is false. It is repaired for *rounded preparations* by the stopped fourth-moment estimate proved in KINETIC_CRITICAL_LIMIT.md. The exact difference is (ell_HB-ell_K) w plus a known O(N^-2/3) gain shift; sup||w||=o_P(N^-1/3) establishes N^(1/3)-scaled vanishing in probability. Same-observable exit times use the accepted joint stopped-hitting argument. The result is not claimed for merely second-moment-bounded arbitrary initial fast excursions without fourth-moment/tail assumptions.

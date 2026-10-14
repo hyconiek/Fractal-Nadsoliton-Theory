@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-14",
+  "baseline": "cf1bf9ae plus pre-existing SF intake changes",
+  "verdict": "ACCEPT_SCOPED_THREE_KINETIC_FOLD_INVARIANCE_AND_THERMAL_READOUT_TRANSFER",
+  "source_unchanged": true,
+  "claims": [
+    {
+      "id": "KI-I01",
+      "status": "ADMITTED_ANALYTIC_THERMODYNAMIC_MATCHING",
+      "statement": "The constrained occupation Hessian has one null/ten positive directions and a_F=a, b_F=b in the inherited exact r/v chart.",
+      "scope": "congruence/inertia, not ambient Euclidean eigenvalue equality; leading reduced coefficients only",
+      "dependencies": ["accepted exact fold/inertia", "A=XX^T", "interior entropy free energy"],
+      "evidence": ["../fin_kinetic_invariants_campaign_20261014/KI-001/THERMODYNAMIC_MATCHING.md", "verification.json"],
+      "level": "M"
+    },
+    {
+      "id": "KI-I02",
+      "status": "ADMITTED_EXACT_FINITE_N_REVERSIBILITY",
+      "statement": "The declared LOO HB, MET1/12 and BAR2/12 count rules preserve the same finite-N Gibbs law.",
+      "scope": "symmetric constant-diagonal A, parent normalization N and fixed E04 g0 clock; distinct controls, not sourced FIN laws",
+      "dependencies": ["actual count Gibbs ratio", "frozen microscopic rate definitions"],
+      "evidence": ["../fin_kinetic_invariants_campaign_20261014/KI-002/REVERSIBILITY_AND_MOBILITY.md", "verification.json"],
+      "level": "M"
+    },
+    {
+      "id": "KI-I03",
+      "status": "ADMITTED_ANALYTIC_MOBILITY_AND_LOCAL_FDT",
+      "statement": "Interior b=-K grad F; at equilibrium J=-K_f H_F, D_f=2K_f, and m_K=[r^T K_f,T^-1 r]^-1; HB recovers g_f.",
+      "scope": "positive normalized tangent mobility; D=2K asserted only at equilibrium; not arbitrary physical Einstein relation",
+      "dependencies": ["KI-I01", "KI-I02", "positive edge logarithmic mean"],
+      "evidence": ["INTAKE_20261014.md", "../fin_kinetic_invariants_campaign_20261014/KI-002/REVERSIBILITY_AND_MOBILITY.md"],
+      "level": "M"
+    },
+    {
+      "id": "KI-I04",
+      "status": "ADMITTED_LOCAL_ANALYTIC_KINETIC_AND_THERMAL_PATH_THEOREM",
+      "statement": "Prepared compact-stopped kinetic soft paths and the same thermal readout share the derived fold SDE for each of the three declared rules.",
+      "scope": "fixed/convergent rounded initial starts or explicitly convergent higher-moment mixtures; existential bounds; native thermal exit uses outer-radius transfer",
+      "dependencies": ["KI-I03", "MET Lipschitz force-factor estimate", "actual second/fourth generator energies", "admitted SF joint-clock absorption completion"],
+      "evidence": ["../fin_kinetic_invariants_campaign_20261014/KI-003/KINETIC_CRITICAL_LIMIT.md", "INTAKE_20261014.md"],
+      "level": "M conditional on inherited fold/backend; not formalized or peer reviewed"
+    },
+    {
+      "id": "KI-I05",
+      "status": "ADMITTED_NOMINAL_NUMERICAL_CLOCK_CONTRASTS",
+      "statement": "HB m~3.51564471684, MET m~0.460771172401 and BAR m~0.869409120506; fixed-g0-clock ratios differ.",
+      "scope": "binary64 diagnostics, not outward intervals; ratios depend on both interaction and declared kinetics",
+      "dependencies": ["KI-I03", "versioned numerical model", "frozen common clock"],
+      "evidence": ["verification.json"],
+      "level": "M numerical"
+    },
+    {
+      "id": "KI-I06",
+      "status": "ADMITTED_THREE_RULE_CANONICAL_NON_SPECIFICITY",
+      "statement": "Lawfully normalized fold SDE and lambda0/start0/boundaries+/-1 eventual upper-exit scalar are common to the three admitted lanes.",
+      "scope": "inherited rational exit certificate; not FIN-specific, all-kernel or arbitrary-kinetic universality, or empirical validation",
+      "dependencies": ["KI-I04", "transformed clock/readout/boundaries", "SF eventual-side corollary"],
+      "evidence": ["INTAKE_20261014.md", "../fin_kinetic_invariants_campaign_20261014/KI-004/SPECIFICITY_VERDICT.json"],
+      "level": "M"
+    },
+    {
+      "id": "KI-I07",
+      "status": "REUSED_SPECTRAL_RESULT_WITH_EXACT_RATIONAL_PROPAGATION",
+      "statement": "Known uniform critical gain 12/Lambda6 is enclosed by [5.12342755139859,5.12342755139864]; retained fast uniform rate is at least0.01860477465101.",
+      "scope": "known parity instability; not a new pitchfork, critical diffusion, recursive-bit autonomy or physical selector",
+      "dependencies": ["accepted rational spectral boxes", "rank7 uniform linearization", "reports131/137"],
+      "evidence": ["verification.json", "UF_DECISION.md"],
+      "level": "M reused/derived arithmetic"
+    },
+    {
+      "id": "KI-I08",
+      "status": "ARCHITECT_PLAN_ONLY",
+      "statement": "Investigate a microscopic quartic critical path law from an unbiased reference start, and reconcile its local long-time law with full Gibbs equilibrium.",
+      "scope": "UF unexecuted; new path target, not duplicate static pitchfork or a derived cosmological initialization",
+      "dependencies": ["UF-001 dedup/initial/spectral contract", "UF-002 dangerous fast-coupling cancellation", "UF-003 correct-horizon convergence", "UF-004 limit-order proof"],
+      "evidence": ["UF_DECISION.md", "../FIN_UNIFORM_CRITICAL_NEXT_CHAIN_20261014.md"],
+      "level": "M research target, not PP or EV"
+    }
+  ],
+  "unchanged_gates": [
+    "independent natural kernel/kinetic/gain/initial-state source", "physical clock/units/locality/conservation",
+    "calibration and empirical validation", "finite-N uniform errors and arbitrary preparation",
+    "global capacity/Gamma=B4 and unbounded residence-time moments", "failed recursive parity-bit lane",
+    "FIN-M0/task337/task335", "QW-2191/legacy roles", "QM/GR/SM/L_total/ToE"
+  ]
+}

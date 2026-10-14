@@ -1,0 +1,262 @@
+{
+  "date": "2026-10-14",
+  "baseline": "cf1bf9ae",
+  "source_manifest": {
+    "matched": 60,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "source_inputs": {
+    "matched": 6,
+    "mismatches": 0
+  },
+  "task_inputs": {
+    "SF-001": {
+      "matched": 4,
+      "mismatches": 0
+    },
+    "SF-002": {
+      "matched": 3,
+      "mismatches": 0
+    },
+    "SF-003": {
+      "matched": 3,
+      "mismatches": 0
+    },
+    "SF-004": {
+      "matched": 3,
+      "mismatches": 0
+    },
+    "SF-005": {
+      "matched": 3,
+      "mismatches": 0
+    }
+  },
+  "TH_review_manifest": {
+    "matched": 12,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "inherited_verification_input_hashes_unchanged": 13,
+  "attached_texts": {
+    "plan_byte_identical": false,
+    "TH_intake_byte_identical": false
+  },
+  "embedded_TH_archive": {
+    "matched": 81,
+    "unmatched": []
+  },
+  "exact_exit_certificate": {
+    "upper": [
+      "0.416855651698382283",
+      "0.416855651698382284"
+    ],
+    "lower": [
+      "0.583144348301617716",
+      "0.583144348301617717"
+    ],
+    "backend": "stdlib exact Fraction comparison",
+    "event": "eventual exit side of canonical diffusion, NOT exit by time 1"
+  },
+  "finite_jump_energy_diagnostics": [
+    {
+      "N": 1200,
+      "LV_direct": 0.00032803672259577903,
+      "LV_formula": 0.00032803672259577887,
+      "quadratic_jump_term": 0.00032911448326001917,
+      "scaled_soft_variance": 6.927398401679885,
+      "scope": "numerical identity, not a certified Lyapunov constant or limit rate"
+    },
+    {
+      "N": 2400,
+      "LV_direct": 0.00016525749547499838,
+      "LV_formula": 0.0001652574954749983,
+      "quadratic_jump_term": 0.00016545964619972181,
+      "scaled_soft_variance": 6.94510880572502,
+      "scope": "numerical identity, not a certified Lyapunov constant or limit rate"
+    }
+  ],
+  "numeric_chart": {
+    "g": 3.5156447168395917,
+    "P_eigen_minmax": [
+      0.4933788991221513,
+      0.8011105973493201
+    ],
+    "stable_max_real": -0.6257944252988574
+  },
+  "checks": [
+    {
+      "name": "attached plan normalized equality",
+      "passed": true
+    },
+    {
+      "name": "attached TH intake normalized equality",
+      "passed": true
+    },
+    {
+      "name": "actual fold certificate hash",
+      "passed": true
+    },
+    {
+      "name": "accepted fold inertia",
+      "passed": true
+    },
+    {
+      "name": "embedded TH archive members",
+      "passed": true,
+      "matched": 81,
+      "unmatched": []
+    },
+    {
+      "name": "versioned independent fold residual",
+      "passed": true
+    },
+    {
+      "name": "versioned fold vs source",
+      "passed": true
+    },
+    {
+      "name": "six retained positive directions",
+      "passed": true
+    },
+    {
+      "name": "right and left null normalization",
+      "passed": true
+    },
+    {
+      "name": "right null identity",
+      "passed": true
+    },
+    {
+      "name": "left null identity",
+      "passed": true
+    },
+    {
+      "name": "oblique projection",
+      "passed": true
+    },
+    {
+      "name": "fast basis normalized",
+      "passed": true
+    },
+    {
+      "name": "ten-mode stable restriction",
+      "passed": true
+    },
+    {
+      "name": "Kronecker Lyapunov residual",
+      "passed": true
+    },
+    {
+      "name": "positive derived Lyapunov form",
+      "passed": true
+    },
+    {
+      "name": "basis invariant P eigenvalues",
+      "passed": true
+    },
+    {
+      "name": "actual leading soft noise",
+      "passed": true
+    },
+    {
+      "name": "actual count preparation N1200",
+      "passed": true
+    },
+    {
+      "name": "quadratic generator formula N1200",
+      "passed": true
+    },
+    {
+      "name": "positive jump payment N1200",
+      "passed": true
+    },
+    {
+      "name": "actual count preparation N2400",
+      "passed": true
+    },
+    {
+      "name": "quadratic generator formula N2400",
+      "passed": true
+    },
+    {
+      "name": "positive jump payment N2400",
+      "passed": true
+    },
+    {
+      "name": "exact fraction exit certificate",
+      "passed": true
+    },
+    {
+      "name": "reject inward exit endpoint",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "fin_rank7_followup/certificates/R7P-031_simple_fold.json": "5537174281996415a20ea3dffce23c33258c51396b3850aedf4168d9280e352e",
+    "FIN_STOCHASTIC_FOLD_CLOSURE_NEXT_CHAIN_20261014.md": "73855229e2efdc278648c038fb5d8330c23597a47f7ecb6a826bc2d401d08fc1",
+    "fin_intrinsic_theory_review_20261014/INTAKE_20261014.md": "76f1cca9d3a2e9e9afccce9c87402c3872997c976b72ace538be08d4124fe95c",
+    "fin_intrinsic_theory_review_20261014/verification.json": "bea91265b6e818b0785e11523d01aaaeaf4723fda72e8d7b6ea61e99d09072ca",
+    "fin_stochastic_fold_closure_review_20261014/verify_intake.py": "06182ad1e9cc9de0dbc4bac6c4f3958e6269a9d2e0b3680d1f5f717d46360fa6",
+    "fin_stochastic_fold_closure_campaign_20261014/MANIFEST.sha256": "a37f2ee264684a5e7f2c8d8dcd5902d706d6371c14b5c1f9b6494cf4be812cc2"
+  },
+  "guardrail_baseline": {
+    "commit": "cf1bf9ae",
+    "AGENTS_sha256": "3ec08de94e3b36d07063a7f7123942f307420273fb0e3b0bc4ec02bcd418fdce"
+  },
+  "literature": {
+    "url": "https://arxiv.org/html/0712.1929v2",
+    "read_scope": "Theorem 2.1 and full Theorem 5.3 statement/proof",
+    "capture_sha256": "67869480352ff33d5720e9479e72a35bf8a09564d65263c19590bb10775bc1e3",
+    "application": "UI/joint-filtration martingale stability; deterministic-clock FCLT NOT directly applied to random stopped clock"
+  },
+  "replay": {
+    "directory": "/tmp/fin-sf-intake-ljijkrqz/campaign",
+    "source_checks": [
+      41,
+      41
+    ],
+    "logs": {
+      "verify_package.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"matching\": 60,\n  \"entries\": 60,\n  \"bad\": [],\n  \"unmanifested\": []\n}\n",
+        "stderr": ""
+      },
+      "check_fold_chart.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"fold_equation_residual\": 7.850901798644503e-17,\n  \"B_fast_max_real_eigenvalue\": -0.6257944252988579,\n  \"P_eigen_minmax\": [\n    0.4933788991221516,\n    0.8011105973493204\n  ],\n  \"norm_J_r\": 1.4068031855544776e-16,\n  \"norm_ell_J_on_tangent\": 2.8063224529153867e-15,\n  \"Lyapunov_residual\": 5.189554282603073e-15,\n  \"soft_noise_direct_minus_2g\": 2.6645352591003757e-15\n}\n",
+        "stderr": ""
+      },
+      "SF-004/first_passage_certificate.py": {
+        "exit_code": 0,
+        "stdout": "P upper 0.416855651698382283 0.416855651698382284 P lower ['0.583144348301617716', '0.583144348301617717']\n",
+        "stderr": ""
+      },
+      "SF-004/independent_first_passage_check.py": {
+        "exit_code": 0,
+        "stdout": "pupper 0.416855651698382283404511998161\n",
+        "stderr": ""
+      },
+      "independent_verify.py": {
+        "exit_code": 0,
+        "stdout": "CHECKS 41 / 41\n",
+        "stderr": ""
+      }
+    },
+    "source_check_tautology": "rate_is_one_per_copy is an unconditional True contractual flag, not an independent check",
+    "chart_fold_gain_drift": 0.0,
+    "byte_identical": {
+      "SF-001/NUMERICAL_CHART.json": false,
+      "SF-004/EXIT_SIDE_CERTIFICATE.json": true,
+      "SF-004/INDEPENDENT_EXIT_CHECK.json": true,
+      "INDEPENDENT_VERIFICATION.json": true
+    }
+  },
+  "source_manifest_after": {
+    "matched": 60,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "status": "PASS_SCOPED_ARITHMETIC_AND_REPLAY"
+}

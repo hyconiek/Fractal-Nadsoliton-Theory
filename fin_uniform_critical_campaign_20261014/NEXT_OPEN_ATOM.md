@@ -1,0 +1,3 @@
+# One bounded architect question (not an executed new campaign)
+
+Should the local critical diffusion theorem be independently audited against the exact source spectral/certificate object and the MET Lipschitz-selection bound before accepting it into the repo claim register? This is a mathematical peer/intake proof-audit obligation, not a request for another plot or a new initial-state/physical law. Regardless of that decision, the global time/N limit mismatch and symmetric sign no-selector should remain separate from global B4 mixing and physical-source questions. No automatic new campaign selected.

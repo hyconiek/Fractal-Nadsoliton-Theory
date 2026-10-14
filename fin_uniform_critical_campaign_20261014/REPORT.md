@@ -1,0 +1,3 @@
+# Execution report — UF-001–UF-005
+
+Five scoped theory tasks delivered; the primary result is submitted for independent mathematical intake, not asserted to have undergone it. Parent: q12 A7 and actual LOO HB, two separately labelled reversible controls. Gain and iid-uniform initial law are supplied. Analytical jump/martingale and fast-mode bounds are in the proof modules. Numerical reconstruction was bounded to 12×12 matrices, fixed perturbations and exact symbolic order estimates; no trajectory/N sweeps, source inventory or physical studies. Gap and Gibbs status are conditional on accepted predecessor input.
