@@ -1,0 +1,85 @@
+{
+  "execution_status": "INDEPENDENT_REPLAY",
+  "passed": true,
+  "number_checks": 14,
+  "checks": {
+    "independent_matrix_matches_source_Fourier": {
+      "passed": true,
+      "detail": 1.97758476261356e-15
+    },
+    "centering": {
+      "passed": true,
+      "detail": 4.440892098500626e-16
+    },
+    "rank_seven": {
+      "passed": true,
+      "detail": 7
+    },
+    "PSD": {
+      "passed": true,
+      "detail": -1.441488565048631e-15
+    },
+    "exact_4_to_3_enumeration": {
+      "passed": true,
+      "detail": 3.552713678800501e-15
+    },
+    "independent_third_contrast": {
+      "passed": true,
+      "detail": {
+        "calculated": 0.2712705845885486,
+        "reported": 0.2712705845885486
+      }
+    },
+    "contrast_nonzero": {
+      "passed": true,
+      "detail": 0.2712705845885486
+    },
+    "g0_constant": {
+      "passed": true,
+      "detail": 0.0
+    },
+    "independent_M0": {
+      "passed": true,
+      "detail": {
+        "calculated": 0.009952015225619877,
+        "reported": 0.009952015225619879
+      }
+    },
+    "off_diagonal_lumpability": {
+      "passed": true,
+      "detail": {
+        "j": 1,
+        "defect": 0.17191417444798465
+      }
+    },
+    "independent_direct_holdout": {
+      "passed": true,
+      "detail": {
+        "reference": 0.7794674990932114,
+        "reported": 0.7794674990932127
+      }
+    },
+    "predicted_difference_bounded": {
+      "passed": true,
+      "detail": {
+        "abs_discrepancy": 0.01749960006844964,
+        "model": "FIN_A7",
+        "nominal_bound": 0.05130199550483429,
+        "pair_trunc_prediction": 0.761967899024763,
+        "parent_direct_reference": 0.7794674990932127,
+        "passed_nominal_bound_plus_1e-10": true,
+        "validation_kind": "synthetic finite-model computational holdout"
+      }
+    },
+    "interval_bound_dominates_nominal": {
+      "passed": true,
+      "detail": "0.05130199550486165514201468836168008105861"
+    },
+    "input_rounding_control": {
+      "passed": true,
+      "detail": "1.79427020874074039359010566465266854506180183e-15"
+    }
+  },
+  "method": "independent direct circulant spectral construction; independent direct 4-state sum; independent CTMC local Lf and equilibrium M0; independent parent holdout enumeration; interval proof ledger sanity checks",
+  "source": "do not import producer function"
+}

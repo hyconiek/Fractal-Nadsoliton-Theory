@@ -1,0 +1,50 @@
+{
+  "arithmetic_status": "binary64 numerical; separate interval coefficient verification",
+  "assumptions": {
+    "gain": 5.145228719489142,
+    "kernel_parameters": {
+      "eta": "1.8",
+      "omega": "0.18575",
+      "phi": "0.1625"
+    },
+    "kinetics": "leave_one_out_heat_bath",
+    "observation": "first retained labelled spins, ordered",
+    "parent_dynamic_M": 3,
+    "parent_normalization_rule": "fixed M even after deletion",
+    "parent_static_M": 4,
+    "q": 12,
+    "rate_attempt_per_copy": 1,
+    "theta": 0
+  },
+  "dependencies": [
+    "public safe_seed.py",
+    "AGENTS.md",
+    "attached plan"
+  ],
+  "derived_objects": [
+    "A7 numeric reconstruction",
+    "matrix trace and symmetry"
+  ],
+  "discrepancies": [
+    "full Git checkout and commit timeline unavailable in execution container"
+  ],
+  "error_budget": {
+    "numerical_source_precision": "see interval_source_check.json"
+  },
+  "execution_status": "EXECUTED_WITH_SOURCE_LIMITATION",
+  "fitted_objects": [],
+  "input_hashes": {
+    "SOURCE_PLAN_20261014.md": "3c7d51ffa6a3df3715e985bffa873972605fbb75b29352a9b4d3675f6d494f71",
+    "run_campaign.py": "3dc2941c96fe2d3e20171174e50c9d76d313e1606f4e05e229e95b444e5f9390"
+  },
+  "model_id": "FIN_A7_safe_seed_reconstruction_20261014",
+  "next_action": "perform finite static elimination and dynamic checks",
+  "scientific_verdict": "FINITE_MODEL_CONTRACT_ONLY",
+  "source_remote_sha256": "UNAVAILABLE_WEB_ONLY",
+  "supplied_objects": [
+    "kernel tuple",
+    "rank7 Fourier construction",
+    "frozen gain",
+    "single-copy heat bath CTMC"
+  ]
+}

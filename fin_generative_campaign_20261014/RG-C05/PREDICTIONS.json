@@ -1,0 +1,46 @@
+{
+  "frozen_contract": {
+    "calibration": "no fitted parameters",
+    "controls": [
+      "FULL_POTTS_TRACE",
+      "FLAT_P7_TRACE"
+    ],
+    "gain": 5.145228719489142,
+    "held_out_reference": "independent direct 4-label sum, not the marginal_F3 routine",
+    "model": "FIN_A7",
+    "observable": "1{first retained label == third retained label}",
+    "prediction_source": "3-copy 2-body ANOVA truncation only",
+    "preparation": "stationary 4-copy Gibbs",
+    "status": "frozen before heldout reference evaluations in this execution script",
+    "tolerance_rule": "absolute discrepancy <= nominal pair TV bound + 1e-10 numerical slack"
+  },
+  "predictions_and_reference": [
+    {
+      "abs_discrepancy": 0.01749960006844964,
+      "model": "FIN_A7",
+      "nominal_bound": 0.05130199550483429,
+      "pair_trunc_prediction": 0.761967899024763,
+      "parent_direct_reference": 0.7794674990932127,
+      "passed_nominal_bound_plus_1e-10": true,
+      "validation_kind": "synthetic finite-model computational holdout"
+    },
+    {
+      "abs_discrepancy": 0.0174340615362385,
+      "model": "FULL_POTTS_TRACE",
+      "nominal_bound": 0.03438121280287546,
+      "pair_trunc_prediction": 0.8211768499729207,
+      "parent_direct_reference": 0.8386109115091592,
+      "passed_nominal_bound_plus_1e-10": true,
+      "validation_kind": "synthetic finite-model computational holdout"
+    },
+    {
+      "abs_discrepancy": 0.016957700291809208,
+      "model": "FLAT_P7_TRACE",
+      "nominal_bound": 0.04992263286489201,
+      "pair_trunc_prediction": 0.759012000253108,
+      "parent_direct_reference": 0.7759697005449172,
+      "passed_nominal_bound_plus_1e-10": true,
+      "validation_kind": "synthetic finite-model computational holdout"
+    }
+  ]
+}

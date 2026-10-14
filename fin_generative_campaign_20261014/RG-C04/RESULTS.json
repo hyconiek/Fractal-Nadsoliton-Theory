@@ -1,0 +1,72 @@
+{
+  "arithmetic_status": "finite double precision",
+  "assumptions": {
+    "gain": 5.145228719489142,
+    "kernel_parameters": {
+      "eta": "1.8",
+      "omega": "0.18575",
+      "phi": "0.1625"
+    },
+    "kinetics": "leave_one_out_heat_bath",
+    "observation": "first retained labelled spins, ordered",
+    "parent_dynamic_M": 3,
+    "parent_normalization_rule": "fixed M even after deletion",
+    "parent_static_M": 4,
+    "q": 12,
+    "rate_attempt_per_copy": 1,
+    "theta": 0
+  },
+  "dependencies": [
+    "RG-C02",
+    "RG-C03"
+  ],
+  "derived_objects": [
+    {
+      "equilibrium_memory_M0": 0.009952015225619879,
+      "generated_third_contrast": 0.2712705845885486,
+      "model": "FIN_A7",
+      "nonlumpability_max_rate_difference": 0.17191417444798462,
+      "pair_TV": 0.023358855088918717,
+      "pair_TV_bound": 0.05130199550483429,
+      "short_window_TV": 0.0015323234704094242
+    },
+    {
+      "equilibrium_memory_M0": 0.009331851031687401,
+      "generated_third_contrast": 0.16509489309047254,
+      "model": "FULL_POTTS_TRACE",
+      "nonlumpability_max_rate_difference": 0.33393054093071234,
+      "pair_TV": 0.023754270321241087,
+      "pair_TV_bound": 0.03438121280287546,
+      "short_window_TV": 0.010518337562188083
+    },
+    {
+      "equilibrium_memory_M0": 0.009912331237707257,
+      "generated_third_contrast": 0.27409521035763795,
+      "model": "FLAT_P7_TRACE",
+      "nonlumpability_max_rate_difference": 0.17655310094425927,
+      "pair_TV": 0.02263809365671369,
+      "pair_TV_bound": 0.04992263286489201,
+      "short_window_TV": 0.01188370166996264
+    }
+  ],
+  "discrepancies": [],
+  "error_budget": {
+    "source_matrix": "same model-class reconstruction"
+  },
+  "execution_status": "EXECUTED",
+  "fitted_objects": [],
+  "input_hashes": {
+    "RG-C01/MODEL_CONTRACT.json": "d7d2dfb5c56e6f48e6e9f991836cfb79c00a86e3df5737580930d082ce091c48",
+    "RG-C02/GENERATED_OPERATORS.json": "7b428893e5dca23a8f7c6e48c18bc47b60b302a378d4d0df022a5732e950fc1f",
+    "RG-C03/PROCESS_MAP.json": "55a6e9c4e397337f97751e8a362c85830906380efa693a72441f2e9fee4332f4",
+    "SOURCE_PLAN_20261014.md": "3c7d51ffa6a3df3715e985bffa873972605fbb75b29352a9b4d3675f6d494f71",
+    "run_campaign.py": "3dc2941c96fe2d3e20171174e50c9d76d313e1606f4e05e229e95b444e5f9390"
+  },
+  "model_id": "FIN_A7 / FULL_POTTS_TRACE / FLAT_P7_TRACE",
+  "next_action": "freeze computational holdout",
+  "scientific_verdict": "MODEL_CLASS_MECHANISM_NOT_UNIQUE_TO_FIN",
+  "source_remote_sha256": "UNAVAILABLE_WEB_ONLY",
+  "supplied_objects": [
+    "three trace-matched matrices, identical gain and kinetics"
+  ]
+}

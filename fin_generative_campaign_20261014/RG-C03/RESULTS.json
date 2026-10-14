@@ -1,0 +1,137 @@
+{
+  "arithmetic_status": "binary64 sparse CTMC and Krylov exponential",
+  "assumptions": {
+    "gain": 5.145228719489142,
+    "kernel_parameters": {
+      "eta": "1.8",
+      "omega": "0.18575",
+      "phi": "0.1625"
+    },
+    "kinetics": "leave_one_out_heat_bath",
+    "observation": "first retained labelled spins, ordered",
+    "parent_dynamic_M": 3,
+    "parent_normalization_rule": "fixed M even after deletion",
+    "parent_static_M": 4,
+    "q": 12,
+    "rate_attempt_per_copy": 1,
+    "theta": 0
+  },
+  "dependencies": [
+    "RG-C01"
+  ],
+  "derived_objects": {
+    "finite_window": [
+      {
+        "TV_exact_vs_equilibrium_generator": 0.0015323234704094242,
+        "TV_exact_vs_gibbs_sampler": 0.02001781822264187,
+        "TV_two_autonomous_generators": 0.018493325869057393,
+        "event00_exact": 0.950147812835951,
+        "event00_markov": 0.9486234914976454,
+        "t": 0.15
+      },
+      {
+        "TV_exact_vs_equilibrium_generator": 0.01188415894914788,
+        "TV_exact_vs_gibbs_sampler": 0.056949438443917144,
+        "TV_two_autonomous_generators": 0.04514129004604728,
+        "event00_exact": 0.8621927371011117,
+        "event00_markov": 0.8503804551262049,
+        "t": 0.5
+      },
+      {
+        "TV_exact_vs_equilibrium_generator": 0.030431010465497357,
+        "TV_exact_vs_gibbs_sampler": 0.09311378836332439,
+        "TV_two_autonomous_generators": 0.06292934303126343,
+        "event00_exact": 0.7747365388124482,
+        "event00_markov": 0.7445100035176726,
+        "t": 1.0
+      },
+      {
+        "TV_exact_vs_equilibrium_generator": 0.046903007606487114,
+        "TV_exact_vs_gibbs_sampler": 0.11758836192122983,
+        "TV_two_autonomous_generators": 0.07108312683222995,
+        "event00_exact": 0.7091489741579977,
+        "event00_markov": 0.6625587092659193,
+        "t": 1.5
+      }
+    ],
+    "generator_checks": {
+      "detailed_balance_abs": 1.951563910473908e-18,
+      "min_off_diagonal": 0.0009813366271937633,
+      "reversible_matrix_symmetry_abs": 8.326672684688674e-16,
+      "row_sum_abs": 1.863093013199091e-15,
+      "stationarity_abs": 2.5587171270657905e-17
+    },
+    "hidden_preparation_dependence": [
+      {
+        "TV_hidden_0_vs_hidden_1": 0.17088698855903184,
+        "TV_hidden_0_vs_stationary_markov": 0.01689202236357049,
+        "t": 0.15
+      },
+      {
+        "TV_hidden_0_vs_hidden_1": 0.3577781587744336,
+        "TV_hidden_0_vs_stationary_markov": 0.044900842097787164,
+        "t": 0.5
+      }
+    ],
+    "memory_quadratic_channel": {
+      "K_t": {
+        "0": 0.00995201522561988,
+        "0.2": 0.006939852332418268,
+        "0.5": 0.004073571530154,
+        "1.0": 0.0017147146994680286
+      },
+      "M0_coupled": 0.009952015225619879,
+      "M1_derivative": -0.018039981780484042,
+      "memory_initial_slip_nonstationary_prep": 0.12548137592899444,
+      "observable": "1{first_two_labels=(0,0)}",
+      "positivity_scope": "equilibrium reversible quadratic scalar channel",
+      "projection_orthogonality_error": 3.537209587733958e-18
+    },
+    "model_kinetics": "per-copy CTMC leave-one-out heat_bath at attempt rate 1",
+    "projection": {
+      "equilibrium_distribution_difference_av_vs_marg": 1.6696713456276768e-17,
+      "equilibrium_distribution_difference_gibbs_vs_marg": 1.214306433183765e-17,
+      "max_generator_row_difference": 1.332757942297243
+    },
+    "strong_lumpability_witness": {
+      "hidden_microstates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "j_witness": 1,
+      "maximum_single_visible_refresh_rate_difference": 0.17191417444798462,
+      "observed_state": [
+        0,
+        0
+      ],
+      "rates_hidden0": 0.000981336627193764,
+      "rates_hidden1": 0.1728955110751784
+    }
+  },
+  "discrepancies": [],
+  "error_budget": {
+    "simulation_residual": "independently assessed stationarity and detailed balance; no formal Krylov enclosure"
+  },
+  "execution_status": "EXECUTED",
+  "fitted_objects": [],
+  "input_hashes": {
+    "RG-C01/MODEL_CONTRACT.json": "d7d2dfb5c56e6f48e6e9f991836cfb79c00a86e3df5737580930d082ce091c48",
+    "SOURCE_PLAN_20261014.md": "3c7d51ffa6a3df3715e985bffa873972605fbb75b29352a9b4d3675f6d494f71",
+    "run_campaign.py": "3dc2941c96fe2d3e20171174e50c9d76d313e1606f4e05e229e95b444e5f9390"
+  },
+  "model_id": "FIN_A7_safe_seed_reconstruction_20261014",
+  "next_action": "countermodel comparison",
+  "scientific_verdict": "NUMERICAL_NONLUMPABILITY_AND_EXPLICIT_MEMORY_WITNESS",
+  "source_remote_sha256": "UNAVAILABLE_WEB_ONLY",
+  "supplied_objects": [
+    "per-copy unit-rate leave-one-out kinetics"
+  ]
+}
