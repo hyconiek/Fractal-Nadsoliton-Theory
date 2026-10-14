@@ -1,0 +1,19 @@
+{
+  "status": "INDEPENDENT_WORKDIR_REPLAY_SUCCEEDED",
+  "procedure": [
+    "Copy original campaign to fresh /tmp work directory",
+    "Run interval_inputs.py",
+    "Run train.py",
+    "Run memory_moments.py",
+    "Run freeze.py before opening holdout",
+    "Run verify_frozen.py",
+    "Run independent_verify.py"
+  ],
+  "pretest_LOCK_SHA256_original_and_clean_replay": "0bdae5c8674e8a0f5026f06ed4055d65ab4529cb811f2c24ee4af130a71e5f1e",
+  "posttest_VALIDATION_SHA256_original_and_clean_replay": "2956ea3555f519c6b1bc79776687b4d649829fb1fd60e9e10dd1cf0e79930ce0",
+  "full_laws_passed": 36,
+  "full_laws_total": 36,
+  "independent_verifier_checks_passed": 16,
+  "independent_verifier_checks_total": 16,
+  "limitations": "Byte-identical replay in the same installed numerical environment is not an independent physical experiment or formal proof of interval and IEEE arithmetic."
+}

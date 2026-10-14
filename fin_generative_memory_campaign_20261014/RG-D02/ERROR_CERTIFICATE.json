@@ -1,0 +1,27 @@
+{
+  "P_row_L1_error_bound_from_rate_enclosures": 1.2e-11,
+  "basis": "L=3(P-I), P stochastic; any reference finite-time probability is convex Poisson sum of stochastic iterates; tensor/matrix implementations crosschecked independently",
+  "comparator": "sparse P.T@row propagation vs independent tensor-contract product differ <=1e-12 on all heldout cases; checks embedded in RG-D05/VALIDATION.json",
+  "conditional_initial_probability_max_coordinate_error": 1e-12,
+  "conditional_rate_max_coordinate_error": 1e-12,
+  "cutoff": 65,
+  "execution_status": "CONDITIONALLY_BOUNDED_REFERENCE",
+  "float_matvec_allowance_TV": 1e-09,
+  "float_poisson_sum_and_libm_allowance_TV": 1e-09,
+  "floating_assumptions": [
+    "binary64 round-to-nearest and standard small relative error for +,-,*,/ and exponential computations",
+    "categorical rates computed by stable softmax are within the declared 1e-12 per-coordinate source interval, as independently checked against mpmath.iv",
+    "numpy positive 12-term reductions and 65-term sums accumulate within conservative 1e-9 TV budgets",
+    "the mpmath.iv interval engine correctly encloses exact-decimal kernel transendentals"
+  ],
+  "frozen_reference_allowance_TV": 1e-08,
+  "max_predeclared_t": 1.5,
+  "reference_total_TV_allowance": 1e-08,
+  "rigorous_exact_formula_poisson_tail_upper_at_z4p5": "2.83153110260728e-52",
+  "slack_in_reference_allowance": true,
+  "source_input_TV_error_bound_at_t_le_1p5": 3.3e-11,
+  "source_interval_status": "INTERVAL_ENCLOSED_CONDITIONAL_ON_MPMATH_IV",
+  "target_reference_TV": 1e-06,
+  "unpaid_gate": "no mechanically checked IEEE/libm proof or formal proof assistant; acceptance is conditional on stated arithmetic/runtime assumptions, not an unconditional bit-level theorem",
+  "z_max": 4.5
+}

@@ -1,0 +1,67 @@
+{
+  "frozen_bound_pretest": {
+    "FIN_A7": {
+      "all_frozen_probabilities_nonnegative_numerically": true,
+      "input_reference_plus_numerical_allowance_TV": 1e-08,
+      "max_model_TV_upper_formula": 1.0518431405546484e-06,
+      "max_total_nominal_TV_upper": 1.1618431405546484e-06,
+      "meets_0.01_prior_to_validation": true,
+      "min_frozen_probability": 2.2573499009537415e-06
+    },
+    "FLAT_P7_TRACE": {
+      "all_frozen_probabilities_nonnegative_numerically": true,
+      "input_reference_plus_numerical_allowance_TV": 1e-08,
+      "max_model_TV_upper_formula": 1.1470238197752582e-06,
+      "max_total_nominal_TV_upper": 1.257023819775258e-06,
+      "meets_0.01_prior_to_validation": true,
+      "min_frozen_probability": 2.2722731529831484e-06
+    },
+    "FULL_POTTS_TRACE": {
+      "all_frozen_probabilities_nonnegative_numerically": true,
+      "input_reference_plus_numerical_allowance_TV": 1e-08,
+      "max_model_TV_upper_formula": 6.220971919508478e-12,
+      "max_total_nominal_TV_upper": 1.100062209719195e-07,
+      "meets_0.01_prior_to_validation": true,
+      "min_frozen_probability": 2.4875990900196262e-05
+    }
+  },
+  "new_fitted_parameters": [],
+  "noninference": "finite-model computational validation only",
+  "protocol": {
+    "basis": "Q S^ell D_E S^k z_p and Q S^k z_p, fixed graded ordering; rank selected by linear algebra, not trajectory fitting",
+    "cap": 32,
+    "depth": 6,
+    "frozen_joint_test": {
+      "comparison_baseline": "stationary-conditional averaged 144-state Markov generator of the SAME three-copy parent",
+      "first_outcomes": [
+        "Y00",
+        "not_Y00"
+      ],
+      "parent": "q12 M3 exact-decimal FIN or same trace-matched countermodel g=5.145228719489142",
+      "postselection": "none; first complement retained",
+      "second_outcomes": "full 144 ordered Y",
+      "t1": 0.35,
+      "t2": 0.8,
+      "withheld_reference": "not accessed until verify_frozen.py runs"
+    },
+    "frozen_single_time_tests": [
+      0.35,
+      0.8
+    ],
+    "primary_TV_target": 0.01,
+    "primary_preparation_class": [
+      "conditional_00",
+      "delta_0",
+      "delta_1",
+      "delta_2"
+    ],
+    "readout": "first-stage event Y=(0,0) vs explicit complement; second-stage full ordered Y",
+    "reference_tolerance_TV": 1e-08,
+    "scope": "preparation-conditioned response ROM; coefficients derived on demand by the SAME FROZEN algorithm from parent S and stated p0, not a universal state-independent 27-pole memory kernel",
+    "selection": "channel_conditioned_Krylov_Galerkin",
+    "training_origin": "training only t=.15,.5,1,1.5 and two-time .15->.5, preparations conditional_00/delta0/delta1"
+  },
+  "selection_history": "baseline global 29 directions worked on training but did not bound unseen initial state; opted for one algorithmic preparation-conditioned channel-aware ROM, selected solely from training data / structure and declared before withheld reference",
+  "status": "FROZEN_BEFORE_HELDOUT_REFS",
+  "validation_abort_rule": "if any parent/countermodel selected test fails 0.01 or a frozen predicted probability is negative, retain failure; do not refit under this identifier"
+}

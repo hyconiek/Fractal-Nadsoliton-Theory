@@ -1,0 +1,13 @@
+# Memory construction and analytic bound
+
+The single-parent microscopic chain is reversible. Each per-copy conditional heat-bath operator is an L²(pi)-orthogonal projection `P_i`, so `L=Σ_i (P_i−I)` and `−3I ⪯ S ⪯ 0`. For resolved `U`, with `Q=I−UUᵀ`, set `A=UᵀSU`, `C=QSU`, `H=−QSQ|Ran Q`. It follows exactly that `UᵀS²U−A²=CᵀC`, and the hidden block satisfies `b'=Ca−Hb`. Elimination gives both `K(t)=Cᵀexp(−tH)C` and **preparation forcing** `Cᵀexp(−tH)b(0)`, not just the stationary kernel.
+
+The frozen predictor uses one deterministic *preparation- and observation-conditioned* Krylov/Galerkin construction: start from `z0=p0/sqrt(pi)` and fixed event projector `D_E` onto states with `Y=(0,0)`; generate `Q S^k z0` and `Q S^ell D_E S^k z0`, sorted by total degree, with twice-reorthogonalized Gram–Schmidt and fixed depth=6, cap=32. No poles, amplitudes, transition rates or probabilities are fitted against trajectories. It yields ≤27 hidden directions on selected FIN preparations, appended to the 144 resolved coordinates. The coefficients `T=VᵀSV`, `w0=Vᵀz0`, `readout=sqrt(piY)*w[:144]` are entirely source-derived. V depends algorithmically on the *declared preparation*, so T is **not** a single universal 171-state generator across all preparations. For each prepared response, T is symmetric negative semidefinite; there is no global CTMC-positivity theorem.
+
+For reference S and compressed T with spectra within [−3,0], the **shifted Taylor comparison** follows from factoring `exp(tS)=exp(−1.5t) exp[t(S+1.5I)]`. For any z,w=Vᵀz and truncation degree d,
+
+`||exp(tS)z−V exp(tT)w||₂ ≤ exp(−1.5t) Σ(k=0..d) t^k/k! ||(S+1.5I)^k z−V(T+1.5I)^k w||₂ + (||z||₂+||w||₂) Pr[Poisson(1.5t)>d]`.
+
+Probability TV after readout is ≤ half the displayed microscopic L² difference by weighted Cauchy–Schwarz. For binary first readout E/complement and full later Y, upper-bound the two branches by one first-stage error, a total filter-projection leakage `||(I−VVᵀ)D_E V w1||₂`, and half the two post-filter propagation errors. All finite sums and tails are saved in `RG-D04/MODEL_ERROR_ENVELOPES_PREOPEN.json`. These are conditional numerical source-model envelopes with separately declared arithmetic margin, not proof-assistant verified intervals.
+
+At each application of observation D_E the compressed state is explicitly reprojected `w_E=VᵀD_E Vw`; `w_not=w−w_E`. This accounts for measured-event filtering and the complement; it is not multiplication of two independently fitted marginal distributions. Positivity is checked for all 36 exported laws, but positive semidefiniteness of T alone is NOT a general Markov-positivity theorem.

@@ -1,0 +1,42 @@
+{
+  "arithmetic_status": "source-derived Galerkin + conditional bounds",
+  "assumptions": [
+    "supplied Fourier A7, exact decimal source tuple, M3 leave-one-out heat bath",
+    "source/FP arithmetic conditional on stated assumptions",
+    "fixed preparation and observation protocol",
+    "same preexisting gain for all"
+  ],
+  "dependencies": [
+    "D02/D03 training"
+  ],
+  "derived_objects": [
+    "FIN_A7",
+    "FLAT_P7_TRACE",
+    "FULL_POTTS_TRACE"
+  ],
+  "discrepancies": [],
+  "error_budget": {
+    "extra_arithmetic_TV": 1e-07,
+    "model_envelope": "see pretest frozen MODEL_ERROR_ENVELOPES_PREOPEN.json",
+    "reference_TV": 1e-08
+  },
+  "execution_status": "PREVALIDATION_LOCKED_THEN_VALIDATED",
+  "fitted_objects": [],
+  "input_hashes": {
+    "RG-D01/MODEL_CONTRACT.json": "3dae83d2e7a5d3b1e65e62477b9c81e0c7cfc0eeefcd02c5f1499b94b529cbe6",
+    "RG-D02/INPUT_ENCLOSURES.json": "09397b2497e3251cf7d72f89afc3b0771d91f96afd88cd21d40e4f8a85b99069",
+    "RG-D04/LOCK.json": "0bdae5c8674e8a0f5026f06ed4055d65ab4529cb811f2c24ee4af130a71e5f1e",
+    "bounds.py": "8b00061a41c2253d1a3eb18a8ef6a60cd84d3eddd0a2dfbff7a15815d06a42bb",
+    "model.py": "9338305b264c270ccdf3542a3a22a493f0f793327fbefe037619d3c62b17fbe2",
+    "source_context/FIN_GENERATIVE_MEMORY_NEXT_CHAIN_20261014.md": "493136a56067f9d63a573b27b96baf6ce45b73b60746ad583e00b84ce28110a5",
+    "source_context/INTAKE_20261014.md": "d99b19493f15b4b4b71ae2481ae666ab3ad1166de42097eddc1d5bfe9cbc5cd4"
+  },
+  "model_id": "FIN_A7_q12_M3_g5.145228719489142_and_trace_matched_controls",
+  "next_action": "D05 frozen validation",
+  "scientific_verdict": "HASHED_PREREGISTRATION_PASS",
+  "supplied_objects": [
+    "A7 formula and gain",
+    "three-copy exchangeable mean-field model",
+    "observation/readout contract"
+  ]
+}

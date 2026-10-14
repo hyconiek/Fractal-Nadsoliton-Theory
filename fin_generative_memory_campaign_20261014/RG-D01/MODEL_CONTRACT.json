@@ -1,0 +1,47 @@
+{
+  "L": "sum of three independent-rate-one leave-one-out categorical heat-bath refresh operators, self-refresh included in uniformization P",
+  "M": 3,
+  "S": "diag(sqrt(pi)) L diag(1/sqrt(pi))",
+  "U": "U[x,y]=sqrt(pi[x]/piY[y]) when Y(x)=y",
+  "W_kernel": {
+    "circle_constant": "mathematical pi",
+    "eta": "1.8",
+    "omega": "0.18575",
+    "phi": "0.1625"
+  },
+  "attempt_rate_per_label": 1,
+  "coarse_equilibrium_generator": "U^T S U mapped to probabilities with sqrt piY; not Gibbs-sampler replacement",
+  "coupling": "A7 Fourier modes 3,4,5,6, constant diagonal, supplied not independently sourced",
+  "diagnostics": {
+    "A_top_eigenvalue": 4.1157174124996996e-16,
+    "L_rowsum_inf": 1.1102230246251565e-15,
+    "P_rowsum_inf": 3.3306690738754696e-16,
+    "S_norm_upper_exact": 3.0,
+    "S_symmetry_inf": 6.661338147750939e-16,
+    "U_orthogonality_inf": 5.551115123125783e-16,
+    "min_P": 0.00032711220906458797,
+    "piY_mass": 0.9999999999999998,
+    "semigroup_defect_identity_inf": 4.461708780212348e-15,
+    "stationarity_inf": 3.211948935988307e-17
+  },
+  "g0": "all independent-refresh control; memory coupling zero",
+  "gain_exact_decimal": "5.145228719489142",
+  "memory_projection": "Q=I-UU^T, A=U^T S U, C=QSU, H=-QSQ restricted to Q",
+  "microstates": 1728,
+  "model_id": "FIN_A7_3copy_leave_one_out_q12_exact_decimal_target",
+  "notes": "A7 computed from published versioned formula, interval compared to exact-decimal target.",
+  "observable": "Y=(sigma1,sigma2) in order",
+  "observed_piY": "sum over hidden sigma3 of SAME three-copy pi",
+  "q": 12,
+  "source_repository_commit": "NO_CURRENT_VERIFIED_GIT_CHECKOUT",
+  "source_roles": {
+    "intake": "source_context/INTAKE_20261014.md",
+    "new_instruction": "source_context/FIN_GENERATIVE_MEMORY_NEXT_CHAIN_20261014.md",
+    "prior_C_campaign": "embedded unchanged archived ZIP",
+    "repository_AGENTS_and_review": "not included as byte-verified checkout; accepted through attached intake; available local previous archive as separate provenance"
+  },
+  "stationary_pi": "normalize exp((g/6) n^T A7 n), n counts of three labelled copies",
+  "uniformization": "L=3(P-I), P stochastic including self-refresh",
+  "visible_states": 144,
+  "zero_control_field": true
+}
