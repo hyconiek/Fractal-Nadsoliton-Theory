@@ -1,0 +1,115 @@
+{
+  "decision_requirements": {
+    "alpha": "finite decimal with 0<alpha<1",
+    "arithmetic": "mpmath.iv interval grid likelihoods plus exact-rational grid/Lipschitz payment; threshold-near cases return NUMERICAL_BOUND_OPEN",
+    "counts": "13 exact nonnegative integers summing exactly to n",
+    "models": [
+      "FIN_A7",
+      "FLAT_P7_TRACE"
+    ],
+    "n": "finite positive integer only",
+    "nonrejection_semantics": "not certified membership/compatibility",
+    "nuisance": "separate gain and detector sets allowed for each hypothesis"
+  },
+  "execution_status": "PASS",
+  "explicit_noncertifications": [
+    "iid sampling",
+    "calibration coverage",
+    "physical provenance",
+    "device symmetry",
+    "true gain",
+    "detector disturbance",
+    "natural A7 source",
+    "empirical validation"
+  ],
+  "input_modes": {
+    "calibration_interface_evidence": {
+      "empty_input": "reject",
+      "physical_q12_fields_required": true,
+      "quarantine_blocks_inference": true
+    },
+    "syntax_only": {
+      "inference_authorized": false,
+      "physical_q12_fields_may_be_MISSING": true
+    }
+  },
+  "process_requirements": {
+    "admitted_models": [
+      "FIN_A7",
+      "FULL_POTTS_TRACE",
+      "FLAT_P7_TRACE"
+    ],
+    "circulant": true,
+    "constant_diagonal": true,
+    "generator": "finite conservative generator, nonnegative off-diagonals",
+    "heat_bath_shortcut": "only if bound B agrees with reset law for the same A,g,pstat",
+    "initial_law": "12-state probability vector",
+    "instrument": "13x12 nonnegative column-stochastic",
+    "kinetics": [
+      "heat_bath",
+      "metropolis",
+      "barker"
+    ],
+    "q": 12,
+    "symmetric": true,
+    "zero_field": true
+  },
+  "record_requirements": {
+    "encoding": "UTF-8 CSV",
+    "exact_header": [
+      "record_id",
+      "dataset_role",
+      "trajectory_id",
+      "replicate_id",
+      "timestamp_utc",
+      "elapsed_s",
+      "device_tick",
+      "reset_id",
+      "phase_a_prepared",
+      "phase_b_prepared",
+      "absolute_a_read",
+      "absolute_b_read",
+      "outcome",
+      "validity_code",
+      "gain_command",
+      "kinetic_command",
+      "control_field",
+      "temperature_c",
+      "device_id",
+      "readout_id",
+      "compilation_hash",
+      "calibration_batch",
+      "latency_s",
+      "measurement_protocol_version"
+    ],
+    "identity": "nonblank record/trajectory/replicate/reset/device/readout/compilation/batch/protocol identifiers",
+    "invalids": "INVALID outcome retained and requires validity_code",
+    "mismatches": "absolute-label/output mismatch retained as warning, never overwritten",
+    "monotonicity": "elapsed_s, timestamp_utc, device_tick nondecreasing within each trajectory",
+    "numeric": "decimal, finite; elapsed_s and latency_s nonnegative",
+    "outcomes": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "INVALID"
+    ],
+    "role_separation": [
+      "reset_id must not cross calibration/validation",
+      "trajectory_id must not cross roles",
+      "replicate_id must not cross roles"
+    ],
+    "timestamp": "ISO-8601 UTC only"
+  },
+  "scientific_verdict": "TOOLING_HARDENED_NO_EVIDENCE_ADMISSION",
+  "task_id": "READY-001",
+  "version": "READY-001-v1"
+}

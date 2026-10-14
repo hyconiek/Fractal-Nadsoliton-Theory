@@ -1,0 +1,448 @@
+{
+  "failed": [],
+  "passed": 47,
+  "scope": "software/tooling checks only; no physical evidence, iid certification, or calibration coverage",
+  "status": "PASS",
+  "tests": [
+    {
+      "detail": {
+        "quarantine_reasons": [],
+        "reason": null,
+        "status": "PASS_SYNTAX_INTEGRITY_ONLY"
+      },
+      "name": "records_valid_single",
+      "pass": true
+    },
+    {
+      "detail": {
+        "inferential_use_allowed": false,
+        "reason": "EMPTY_EVIDENCE_INPUT",
+        "rows": 0,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_empty_bytes",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [],
+        "reason": "EMPTY_EVIDENCE_INPUT",
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_header_only",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "elapsed_s: nonfinite decimal"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_nan_elapsed",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "latency_s: nonfinite decimal"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_inf_latency",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "record_id: blank"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_blank_record_id",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "timestamp_utc: malformed ISO-8601"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_bad_timestamp",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "timestamp_utc: must be UTC"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_nonutc_timestamp",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "INVALID requires validity_code"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_invalid_missing_reason",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "duplicate record_id"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_duplicate_id",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "reset_id reused across dataset roles",
+            "reset_id reused across trajectories",
+            "reset_id reused across replicate_id values"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_reset_role_collision",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "trajectory_id reused across dataset roles"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_trajectory_role_collision",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "replicate_id reused across dataset roles"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_replicate_role_collision",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "elapsed_s decreases within trajectory"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_elapsed_decrease",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "timestamp_utc decreases within trajectory"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_timestamp_decrease",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "device_tick decreases within trajectory"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_tick_decrease",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "phase_a_prepared: not q12 label or MISSING"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_bad_q12",
+      "pass": true
+    },
+    {
+      "detail": {
+        "status": "PASS_SYNTAX_INTEGRITY_ONLY",
+        "warnings": [
+          {
+            "line": 2,
+            "record_id": "r1",
+            "warning": "noisy label/output mismatch preserved: pair difference 1, output 2"
+          }
+        ]
+      },
+      "name": "records_noisy_mismatch_preserved",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [
+          [
+            "absolute_a_read: required for calibration-interface evidence"
+          ]
+        ],
+        "reason": null,
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_missing_physical_measurement_fails",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [],
+        "reason": null,
+        "status": "PASS_SYNTAX_INTEGRITY_ONLY"
+      },
+      "name": "records_missing_measurement_syntax_only_passes",
+      "pass": true
+    },
+    {
+      "detail": {
+        "quarantine_reasons": [],
+        "reason": "SCHEMA_MISMATCH",
+        "status": "FAIL_CLOSED"
+      },
+      "name": "records_extra_column_rejected",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 2.636779683484747e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FIN_A7_heat_bath",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 8.881784197001252e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FIN_A7_metropolis",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 4.440892098500626e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FIN_A7_barker",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 2.498001805406602e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FULL_POTTS_TRACE_heat_bath",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 8.881784197001252e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FULL_POTTS_TRACE_metropolis",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 6.661338147750939e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FULL_POTTS_TRACE_barker",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 7.008282842946301e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FLAT_P7_TRACE_heat_bath",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 7.494005416219807e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FLAT_P7_TRACE_metropolis",
+      "pass": true
+    },
+    {
+      "detail": {
+        "rowsum": 7.771561172376096e-16,
+        "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+      },
+      "name": "process_valid_FLAT_P7_TRACE_barker",
+      "pass": true
+    },
+    {
+      "detail": [
+        "INVALID_INITIAL_LAW"
+      ],
+      "name": "process_negative_p0_rejected",
+      "pass": true
+    },
+    {
+      "detail": [
+        "INVALID_INSTRUMENT"
+      ],
+      "name": "process_nonstochastic_K_rejected",
+      "pass": true
+    },
+    {
+      "detail": [
+        "UNADMITTED_MODEL_ID"
+      ],
+      "name": "process_unadmitted_model_rejected",
+      "pass": true
+    },
+    {
+      "detail": [
+        "RESET_SHORTCUT_ONLY_HEAT_BATH",
+        "RESET_SHORTCUT_INCONSISTENT_WITH_BOUND_MODEL"
+      ],
+      "name": "process_reset_shortcut_wrong_kinetic_rejected",
+      "pass": true
+    },
+    {
+      "detail": "n: finite positive integer required",
+      "name": "decision_nan_n_rejected",
+      "pass": true
+    },
+    {
+      "detail": "n: finite positive integer required",
+      "name": "decision_inf_n_rejected",
+      "pass": true
+    },
+    {
+      "detail": "n: finite positive integer required",
+      "name": "decision_fractional_n_rejected",
+      "pass": true
+    },
+    {
+      "detail": "n: finite positive integer required",
+      "name": "decision_zero_n_rejected",
+      "pass": true
+    },
+    {
+      "detail": "counts[12]: exact nonnegative integer required",
+      "name": "decision_fractional_count_rejected",
+      "pass": true
+    },
+    {
+      "detail": "counts[12]: negative",
+      "name": "decision_negative_count_rejected",
+      "pass": true
+    },
+    {
+      "detail": "counts sum inconsistent with n",
+      "name": "decision_sum_mismatch_rejected",
+      "pass": true
+    },
+    {
+      "detail": "alpha must satisfy 0<alpha<1",
+      "name": "decision_alpha_zero_rejected",
+      "pass": true
+    },
+    {
+      "detail": "alpha must satisfy 0<alpha<1",
+      "name": "decision_alpha_one_rejected",
+      "pass": true
+    },
+    {
+      "detail": "alpha: nonfinite",
+      "name": "decision_alpha_nan_rejected",
+      "pass": true
+    },
+    {
+      "detail": {
+        "backend": "mpmath.iv",
+        "conditional_on_backend_correctness": true,
+        "lower": 0.0003970466642552404,
+        "upper": 0.0003970466642552405
+      },
+      "name": "decision_threshold_radius_below_rho_over_3",
+      "pass": true
+    },
+    {
+      "detail": {
+        "backend": "mpmath.iv",
+        "conditional_on_backend_correctness": true,
+        "lower": 0.00039704666918398575,
+        "upper": 0.00039704666918398586
+      },
+      "name": "decision_previous_n_minus_one_above_target",
+      "pass": true
+    },
+    {
+      "detail": {
+        "boundary": {
+          "FIN_A7": true,
+          "FLAT_P7_TRACE": true
+        },
+        "outcome": "NUMERICAL_BOUND_OPEN"
+      },
+      "name": "decision_numerical_boundary_can_fail_open",
+      "pass": true
+    }
+  ],
+  "total": 47
+}

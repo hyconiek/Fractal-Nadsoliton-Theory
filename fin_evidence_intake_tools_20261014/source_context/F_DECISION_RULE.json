@@ -1,0 +1,60 @@
+{
+  "alpha_calibration_budget": 0.025,
+  "alpha_total": 0.05,
+  "alpha_validation_budget": 0.025,
+  "calibration_uncertainty": "physical numerical values not provided; illustrative \u00b11%, .005 are NOT measured",
+  "conditional_model_set_gap_rho": 0.00119114,
+  "confidence_region": "{q: TV(q,p_emp)<=eps_n}; each hypothesis set H_X includes separately allowed gains and instruments, not silently shared nuisance; accept compatibility iff lower bound on inf_{q in H_X} TV(q,p_emp)<=eps",
+  "decisions": {
+    "FIN_ONLY": "flat model rejected, FIN not rejected",
+    "FLAT_ONLY": "FIN rejected, flat not rejected",
+    "INCONCLUSIVE": "neither rejected",
+    "NEITHER_MODEL_FITS": "both rejected"
+  },
+  "dependence": "independent experiment/reset required; measured ESS is not a theorem; otherwise calibrate mixing or use independent blocks",
+  "false_rejection_guarantee": "conditional on true distribution in declared H_X and iid n records: <= alpha_validation by finite-subset union bound",
+  "finite_alphabet_iid_rule": {
+    "alphabet_size": 13,
+    "epsilon": 0.00039704666666666666,
+    "n_independent_records_sufficient_Hoeffding_union": 40278676,
+    "proof": "TV(emp,p)=max over nontrivial proper event subsets S of [emp(S)-p(S)]; union of 2^k-2 one-sided Hoeffding exp(-2n eps^2).",
+    "rho": 0.00119114,
+    "validation_alpha": 0.025
+  },
+  "freeze_before_physical_validation": true,
+  "hierarchy": "primary first; secondary interpreted only if separately powered/error allocated; no selection by minimum observed p",
+  "primary": "FIN_A7_vs_FLAT_P7_TRACE_g3_stationary_13_outputs_with_INVALID",
+  "secondary": "FIN_A7_heat_bath_vs_metropolis_N2_two_time_13x13 - only after independent g0 clock and instrument calibration",
+  "single_event_comparator": {
+    "endpoint_samples_not_global_certificates": {
+      "FIN_A7": {
+        "center": 0.657257853970806,
+        "g2p97": 0.6549602717209998,
+        "g3p03": 0.6595665730848033
+      },
+      "FLAT_P7_TRACE": {
+        "center": 0.6454706623914268,
+        "g2p97": 0.6432001237412065,
+        "g3p03": 0.6477542301550397
+      }
+    },
+    "event_gap_lower_bound_after_gain_and_two_detector_0p005": 0.0,
+    "event_iid_hoeffding": "P(|sample_event - p_event| > eps) <= 2 exp(-2n eps^2); model-set separation not automatically established",
+    "fixed_one_event_robust_positive": "NOT_CERTIFIED_UNDER_CLASS",
+    "nominal_event_difference": 0.011787191579379241,
+    "rigorously_simple_gain_Lipschitz_TV_cap": {
+      "FIN_A7": 0.0148652498426505,
+      "FLAT_P7_TRACE": 0.014623708995439886
+    },
+    "subset_predeclared_nominal_argmax": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      10
+    ]
+  },
+  "status": "PROSPECTIVE_CONDITIONAL_STATISTICAL_DESIGN",
+  "type_II_wrong_unique_selection": "if calibrated set gap rho>2eps and concentration event holds, wrong alternative cannot be uniquely selected; otherwise no unconditional power"
+}

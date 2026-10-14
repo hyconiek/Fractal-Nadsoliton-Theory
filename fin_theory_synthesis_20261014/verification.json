@@ -1,0 +1,812 @@
+{
+  "date": "2026-10-14",
+  "baseline": "1b7cd447",
+  "source_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "GEN_narrative": "9562589dc473d8d1e511d0f07a997082b54108b12b8eb1956a1ffff16b0790ec",
+    "checker": "5f32949a070343577992127f141a029edefcb6cbafcdf2569c45885d3e375bf9",
+    "AGENTS.md": "e5b84b437dde02ce327ea61f1b7a1b83077a7ba54a30cfca77bfa4c4c9448c85"
+  },
+  "F_review_integrity": {
+    "files": 13,
+    "mismatches": 0
+  },
+  "F_source_integrity": {
+    "files": 70,
+    "mismatches": 0
+  },
+  "READY_integrity": {
+    "files": 54,
+    "mismatches": 0
+  },
+  "bounded_numeric_checks": [
+    {
+      "g": 1.0,
+      "Hamiltonian_reversal_error": 1.1102230246251565e-16,
+      "Hamilton_Jacobi_zero_error": 0.0,
+      "retained_gradient_error": 1.3877787807814457e-17,
+      "diffusion_min_eigenvalue_numeric": -8.324004530904823e-17
+    },
+    {
+      "g": 3.7,
+      "Hamiltonian_reversal_error": 0.0,
+      "Hamilton_Jacobi_zero_error": 2.220446049250313e-16,
+      "retained_gradient_error": 5.551115123125783e-17,
+      "diffusion_min_eigenvalue_numeric": 1.3180054045440327e-17
+    },
+    {
+      "g": 5.145228719489142,
+      "Hamiltonian_reversal_error": 1.1102230246251565e-16,
+      "Hamilton_Jacobi_zero_error": 0.0,
+      "retained_gradient_error": 2.8449465006019636e-16,
+      "diffusion_min_eigenvalue_numeric": -2.108192435645288e-18
+    }
+  ],
+  "exact_fibre_witness": {
+    "N": 120,
+    "n_plus": [
+      12,
+      11,
+      9,
+      8,
+      9,
+      11,
+      12,
+      11,
+      9,
+      8,
+      9,
+      11
+    ],
+    "n_minus": [
+      8,
+      9,
+      11,
+      12,
+      11,
+      9,
+      8,
+      9,
+      11,
+      12,
+      11,
+      9
+    ],
+    "mean_max_numeric_residual": 1.1796119636642288e-16,
+    "generator_square_difference_numeric": 0.0003192508711220977,
+    "predicted_numeric": 0.0003192508711220968,
+    "exact_formula": "Lambda5/(60*120)",
+    "gain": 0,
+    "coordinate": "retained cosine k5"
+  },
+  "moment_lift_rank_numeric": 12,
+  "GEN_index": {
+    "lines": 70865,
+    "heading_occurrences": 1514,
+    "distinct_base_heading_ids": 953,
+    "status": "narrative index, not number of proofs"
+  },
+  "scope": [
+    "proofs are separate analytic finite-model statements",
+    "full path LDP and critical stochastic limit are future tasks",
+    "no physical records/source/unit result"
+  ],
+  "READY_replay": {
+    "directory": "/tmp/fin-theory-refresh-fXxTkx0L/tools",
+    "unit": {
+      "failed": [],
+      "passed": 47,
+      "scope": "software/tooling checks only; no physical evidence, iid certification, or calibration coverage",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": {
+            "quarantine_reasons": [],
+            "reason": null,
+            "status": "PASS_SYNTAX_INTEGRITY_ONLY"
+          },
+          "name": "records_valid_single",
+          "pass": true
+        },
+        {
+          "detail": {
+            "inferential_use_allowed": false,
+            "reason": "EMPTY_EVIDENCE_INPUT",
+            "rows": 0,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_empty_bytes",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [],
+            "reason": "EMPTY_EVIDENCE_INPUT",
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_header_only",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "elapsed_s: nonfinite decimal"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_nan_elapsed",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "latency_s: nonfinite decimal"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_inf_latency",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "record_id: blank"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_blank_record_id",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "timestamp_utc: malformed ISO-8601"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_bad_timestamp",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "timestamp_utc: must be UTC"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_nonutc_timestamp",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "INVALID requires validity_code"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_invalid_missing_reason",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "duplicate record_id"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_duplicate_id",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "reset_id reused across dataset roles",
+                "reset_id reused across trajectories",
+                "reset_id reused across replicate_id values"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_reset_role_collision",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "trajectory_id reused across dataset roles"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_trajectory_role_collision",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "replicate_id reused across dataset roles"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_replicate_role_collision",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "elapsed_s decreases within trajectory"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_elapsed_decrease",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "timestamp_utc decreases within trajectory"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_timestamp_decrease",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "device_tick decreases within trajectory"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_tick_decrease",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "phase_a_prepared: not q12 label or MISSING"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_bad_q12",
+          "pass": true
+        },
+        {
+          "detail": {
+            "status": "PASS_SYNTAX_INTEGRITY_ONLY",
+            "warnings": [
+              {
+                "line": 2,
+                "record_id": "r1",
+                "warning": "noisy label/output mismatch preserved: pair difference 1, output 2"
+              }
+            ]
+          },
+          "name": "records_noisy_mismatch_preserved",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [
+              [
+                "absolute_a_read: required for calibration-interface evidence"
+              ]
+            ],
+            "reason": null,
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_missing_physical_measurement_fails",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [],
+            "reason": null,
+            "status": "PASS_SYNTAX_INTEGRITY_ONLY"
+          },
+          "name": "records_missing_measurement_syntax_only_passes",
+          "pass": true
+        },
+        {
+          "detail": {
+            "quarantine_reasons": [],
+            "reason": "SCHEMA_MISMATCH",
+            "status": "FAIL_CLOSED"
+          },
+          "name": "records_extra_column_rejected",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 2.636779683484747e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FIN_A7_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 8.881784197001252e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FIN_A7_metropolis",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 4.440892098500626e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FIN_A7_barker",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 2.498001805406602e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FULL_POTTS_TRACE_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 8.881784197001252e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FULL_POTTS_TRACE_metropolis",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 6.661338147750939e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FULL_POTTS_TRACE_barker",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 7.008282842946301e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FLAT_P7_TRACE_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 7.494005416219807e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FLAT_P7_TRACE_metropolis",
+          "pass": true
+        },
+        {
+          "detail": {
+            "rowsum": 7.771561172376096e-16,
+            "status": "PASS_SOFTWARE_CONTRACT_ONLY"
+          },
+          "name": "process_valid_FLAT_P7_TRACE_barker",
+          "pass": true
+        },
+        {
+          "detail": [
+            "INVALID_INITIAL_LAW"
+          ],
+          "name": "process_negative_p0_rejected",
+          "pass": true
+        },
+        {
+          "detail": [
+            "INVALID_INSTRUMENT"
+          ],
+          "name": "process_nonstochastic_K_rejected",
+          "pass": true
+        },
+        {
+          "detail": [
+            "UNADMITTED_MODEL_ID"
+          ],
+          "name": "process_unadmitted_model_rejected",
+          "pass": true
+        },
+        {
+          "detail": [
+            "RESET_SHORTCUT_ONLY_HEAT_BATH",
+            "RESET_SHORTCUT_INCONSISTENT_WITH_BOUND_MODEL"
+          ],
+          "name": "process_reset_shortcut_wrong_kinetic_rejected",
+          "pass": true
+        },
+        {
+          "detail": "n: finite positive integer required",
+          "name": "decision_nan_n_rejected",
+          "pass": true
+        },
+        {
+          "detail": "n: finite positive integer required",
+          "name": "decision_inf_n_rejected",
+          "pass": true
+        },
+        {
+          "detail": "n: finite positive integer required",
+          "name": "decision_fractional_n_rejected",
+          "pass": true
+        },
+        {
+          "detail": "n: finite positive integer required",
+          "name": "decision_zero_n_rejected",
+          "pass": true
+        },
+        {
+          "detail": "counts[12]: exact nonnegative integer required",
+          "name": "decision_fractional_count_rejected",
+          "pass": true
+        },
+        {
+          "detail": "counts[12]: negative",
+          "name": "decision_negative_count_rejected",
+          "pass": true
+        },
+        {
+          "detail": "counts sum inconsistent with n",
+          "name": "decision_sum_mismatch_rejected",
+          "pass": true
+        },
+        {
+          "detail": "alpha must satisfy 0<alpha<1",
+          "name": "decision_alpha_zero_rejected",
+          "pass": true
+        },
+        {
+          "detail": "alpha must satisfy 0<alpha<1",
+          "name": "decision_alpha_one_rejected",
+          "pass": true
+        },
+        {
+          "detail": "alpha: nonfinite",
+          "name": "decision_alpha_nan_rejected",
+          "pass": true
+        },
+        {
+          "detail": {
+            "backend": "mpmath.iv",
+            "conditional_on_backend_correctness": true,
+            "lower": 0.0003970466642552404,
+            "upper": 0.0003970466642552405
+          },
+          "name": "decision_threshold_radius_below_rho_over_3",
+          "pass": true
+        },
+        {
+          "detail": {
+            "backend": "mpmath.iv",
+            "conditional_on_backend_correctness": true,
+            "lower": 0.00039704666918398575,
+            "upper": 0.00039704666918398586
+          },
+          "name": "decision_previous_n_minus_one_above_target",
+          "pass": true
+        },
+        {
+          "detail": {
+            "boundary": {
+              "FIN_A7": true,
+              "FLAT_P7_TRACE": true
+            },
+            "outcome": "NUMERICAL_BOUND_OPEN"
+          },
+          "name": "decision_numerical_boundary_can_fail_open",
+          "pass": true
+        }
+      ],
+      "total": 47
+    },
+    "independent": {
+      "checks": [
+        {
+          "detail": "bfca89a3ac1d6f9bd5ae174eeacbd9cf365047fdde0715a1c714337526994e82",
+          "name": "hash_F_DATA_SCHEMA.json",
+          "pass": true
+        },
+        {
+          "detail": "88f66bdcd63a10f12a1a27875269350d3942804375425c044505f16f2af19edf",
+          "name": "hash_F_DECISION_RULE.json",
+          "pass": true
+        },
+        {
+          "detail": "46114cb1ae706c8a2aaa03182481cc6bdc665ddc09370d56ff1c0c324adf3a0a",
+          "name": "hash_F_INSTRUMENT_CONTRACT.json",
+          "pass": true
+        },
+        {
+          "detail": "494e610482221c63f23ff2af2a7d8448cc46461183c22589439c6860da3eab89",
+          "name": "hash_F_PROCESS_CONTRACT.json",
+          "pass": true
+        },
+        {
+          "detail": "84ec6923242559c58041e8d4bf3b703297c2e1c4a382683cc32b414207523d97",
+          "name": "hash_F_decision_rule.py",
+          "pass": true
+        },
+        {
+          "detail": "a8dda0dff3ed69d6b50dc385789755a11904c6f4d54b13c9ca5484300505d380",
+          "name": "hash_F_positive_process.py",
+          "pass": true
+        },
+        {
+          "detail": "311bc8bae12f4d945e8b16e0db360477dc8f68926b2a20d527edd07c0a9c3f32",
+          "name": "hash_F_source_model.py",
+          "pass": true
+        },
+        {
+          "detail": "91bdcef4ccabf77090ca042801852404e1b035a2bc8b8094720503ed1b9c25f1",
+          "name": "hash_F_validate_records.py",
+          "pass": true
+        },
+        {
+          "detail": [
+            47,
+            47
+          ],
+          "name": "unit_tests_status",
+          "pass": true
+        },
+        {
+          "detail": [],
+          "name": "unit_tests_all_pass",
+          "pass": true
+        },
+        {
+          "detail": "40278675.51074238496504367141450930293827074493329015490204487100350947464276609298388779717488120196",
+          "name": "threshold_40278676",
+          "pass": true
+        },
+        {
+          "detail": {
+            "eps": "0.0003970466666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667",
+            "r_n": "0.0003970466642552405093021975098230249798633147268627675696798046015157466318196596258110286045858740998",
+            "r_prev": "0.0003970466691839858291379153515854940495857566175057478600941781430771323216122231732097086933125891969"
+          },
+          "name": "threshold_minimality",
+          "pass": true
+        },
+        {
+          "detail": "373539330.7998892981501774254623313932096435657488715495962161082425202114258280582592583141759043334",
+          "name": "illustrative_threshold_373539331",
+          "pass": true
+        },
+        {
+          "detail": [
+            0,
+            " never iid/calibration/physical claims.\",\n  \"physical_provenance_certified\": false,\n  \"quarantine\": [],\n  \"roles_accepted\": {\n    \"calibration\": 1,\n    \"validation\": 0\n  },\n  \"rows_accepted\": 1,\n  \"rows_quarantined\": 0,\n  \"rows_total\": 1,\n  \"status\": \"PASS_SYNTAX_INTEGRITY_ONLY\",\n  \"warnings\": []\n}\n",
+            ""
+          ],
+          "name": "cli_valid_records_pass",
+          "pass": true
+        },
+        {
+          "detail": [
+            2,
+            "D\"\n      },\n      \"reason_codes\": [\n        \"elapsed_s: nonfinite decimal\"\n      ],\n      \"record_id\": \"r1\"\n    }\n  ],\n  \"roles_accepted\": {\n    \"calibration\": 0,\n    \"validation\": 0\n  },\n  \"rows_accepted\": 0,\n  \"rows_quarantined\": 1,\n  \"rows_total\": 1,\n  \"status\": \"FAIL_CLOSED\",\n  \"warnings\": []\n}\n",
+            ""
+          ],
+          "name": "cli_nan_records_fail_closed",
+          "pass": true
+        },
+        {
+          "detail": [
+            2,
+            "across trajectories\",\n        \"reset_id reused across replicate_id values\"\n      ],\n      \"record_id\": \"r2\"\n    }\n  ],\n  \"roles_accepted\": {\n    \"calibration\": 1,\n    \"validation\": 0\n  },\n  \"rows_accepted\": 1,\n  \"rows_quarantined\": 1,\n  \"rows_total\": 2,\n  \"status\": \"FAIL_CLOSED\",\n  \"warnings\": []\n}\n",
+            ""
+          ],
+          "name": "cli_role_collision_fail_closed",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FIN_A7_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FIN_A7_metropolis",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FIN_A7_barker",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FULL_POTTS_TRACE_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FULL_POTTS_TRACE_metropolis",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FULL_POTTS_TRACE_barker",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FLAT_P7_TRACE_heat_bath",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FLAT_P7_TRACE_metropolis",
+          "pass": true
+        },
+        {
+          "detail": 0,
+          "name": "process_cli_FLAT_P7_TRACE_barker",
+          "pass": true
+        },
+        {
+          "detail": [
+            2,
+            "{\n  \"status\": \"FAIL_CLOSED\",\n  \"error\": \"n: finite positive integer required\",\n  \"physical_evidence_certified\": false\n}\n"
+          ],
+          "name": "decision_cli_nan_n_fail_closed",
+          "pass": true
+        }
+      ],
+      "passed": 26,
+      "scope": "independent software arithmetic/replay checks only; no physical calibration/provenance certification",
+      "status": "PASS",
+      "total": 26
+    }
+  },
+  "literature_access_record": [
+    {
+      "id": "L01",
+      "primary_url": "https://arxiv.org/html/1502.05185v3",
+      "cache_sha256": "ad5001988f4779b674c4edc6e6ea259519a504ace8ec139558b1b088a1edf6b9",
+      "cache_lines": 1321,
+      "read_scope": "abstract, introduction, Theorem2.3 and Hamiltonian/Lagrangian conditions"
+    },
+    {
+      "id": "L02",
+      "primary_url": "https://link.springer.com/article/10.1007/s11118-014-9418-5",
+      "cache_sha256": "f147cb03acfe8c95b6aaa46697f6593c33566d959234d9221221a4d0077c8750",
+      "cache_lines": 386,
+      "read_scope": "publisher abstract and preprint metadata/abstract; full theorem application remains a task"
+    },
+    {
+      "id": "L03",
+      "primary_url": "https://arxiv.org/abs/1204.4503",
+      "cache_sha256": "56e42349ea8a32b7f6bb2d4d265caefb406ba6c0e46beab1003683a7a14ddded",
+      "cache_lines": 181,
+      "read_scope": "primary abstract and model/result scope"
+    },
+    {
+      "id": "L04",
+      "primary_url": "https://arxiv.org/abs/2502.20262",
+      "cache_sha256": "4db9fb6c128396206c57caeb75132ef9d2f3058ce4bd3d6b30e0e6920c8623e7",
+      "cache_lines": 174,
+      "read_scope": "primary abstract and hypotheses"
+    },
+    {
+      "id": "L05",
+      "primary_url": "https://arxiv.org/abs/2305.20083",
+      "cache_sha256": "20f796eef12fae4c8b49751d13bda7ecc377b68822e23e4711b199529e425a0d",
+      "cache_lines": 927,
+      "read_scope": "abstract and introduction; canonical arXiv dates used rather than a rendered TeX date"
+    },
+    {
+      "id": "L06",
+      "primary_url": "https://arxiv.org/abs/1102.5238",
+      "cache_sha256": "ed78dd401b33dbbe9beb6304c4b1512fd375854e8181e14a1e87b858f17d6355",
+      "cache_lines": 184,
+      "read_scope": "primary abstract and reversible finite-chain domain"
+    },
+    {
+      "id": "L07",
+      "primary_url": "https://projecteuclid.org/journals/annals-of-probability/volume-8/issue-4/Finite-Exchangeable-Sequences/10.1214/aop/1176994663.full",
+      "cache_sha256": "e366494c6944cbc64798d9aaea0fef0d7c1dc1fef44a28a76f64545506467121",
+      "cache_lines": 553,
+      "read_scope": "publisher abstract and bibliographic metadata"
+    },
+    {
+      "id": "L08",
+      "primary_url": "https://www.cambridge.org/core/journals/journal-of-applied-probability/article/solutions-of-ordinary-differential-equations-as-limits-of-pure-jump-markov-processes/E2C5068B4B6EFF00E2FC4948FF95B152",
+      "cache_sha256": "12db25912732c8a192ad84ab11f9bdc658dd5f597f46fc6d2c065f49b6bc2c04",
+      "cache_lines": 357,
+      "read_scope": "publisher extract and issue metadata"
+    },
+    {
+      "id": "L09",
+      "primary_url": "https://link.springer.com/article/10.1007/BF01010922",
+      "cache_sha256": "6f155dd91d892529eea8e3eafb008dfb40cfafa9615cdb9a60175e410d96f963",
+      "cache_lines": 379,
+      "read_scope": "publisher abstract/model description"
+    },
+    {
+      "id": "L10",
+      "primary_url": "https://projecteuclid.org/journals/annals-of-probability/volume-19/issue-4/Solutions-of-a-Stochastic-Differential-Equation-Forced-Onto-a-Manifold/10.1214/aop/1176990225.full",
+      "cache_sha256": "1d5124be7bd233dafd9d7ce5cd1d40420fd7ecc75270383701466d912af12799",
+      "cache_lines": 550,
+      "read_scope": "publisher abstract and hypotheses"
+    },
+    {
+      "id": "L11",
+      "primary_url": "https://arxiv.org/abs/1405.5157",
+      "cache_sha256": "9371cf16f8ee08e323cbc1482b2cf951b91b10d44688fd85952d52cc19b517b6",
+      "cache_lines": 187,
+      "read_scope": "primary abstract, assumptions and publication metadata"
+    },
+    {
+      "id": "L12",
+      "primary_url": "https://arxiv.org/abs/cond-mat/0311345",
+      "cache_sha256": "0fd6ca2ab65284c2a825d46a08dcd83adfa96ab8a47d3786cd5624696f478022",
+      "cache_lines": 169,
+      "read_scope": "primary abstract and construction scope"
+    },
+    {
+      "id": "L13",
+      "primary_url": "https://www.numdam.org/articles/10.24033/bsmf.1625/",
+      "cache_sha256": "3880ebb239e18b7ccd52d57e83a393ddeca18d74ec181c847ccadfb6dc137a93",
+      "cache_lines": 1538,
+      "read_scope": "primary bibliographic record and proximal-context identification; not full proof replay"
+    },
+    {
+      "id": "L14",
+      "primary_url": "https://arxiv.org/abs/2405.20276",
+      "cache_sha256": "e3428be7da8d3b11b02e1af5eb84a7d9a38e9308a880a82b66c8fa485f219b0d",
+      "cache_lines": 169,
+      "read_scope": "primary abstract and exact transience/partial-exchangeability scope"
+    },
+    {
+      "id": "L15",
+      "primary_url": "https://arxiv.org/abs/2008.06855",
+      "cache_sha256": "5319a7ddd5284e956b3e69797901cf6d643b417e8d11d0acfe42338ec992cc3e",
+      "cache_lines": 173,
+      "read_scope": "primary abstract and model scope"
+    }
+  ]
+}
