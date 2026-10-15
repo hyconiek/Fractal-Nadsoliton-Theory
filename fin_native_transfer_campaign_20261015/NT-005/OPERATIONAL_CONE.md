@@ -1,0 +1,9 @@
+# NT-005 — Actual operational class, no imported quantum instruments
+
+**Licensed given model:** a classical probability law on q12 trajectories with specified iid or equilibrium preparation, passive label/aggregate/path readouts and the mathematical expectation of bounded functionals. The usual reset/g0 controls are model operations with fixed classical transition laws. These suffice for classical finite-dimensional joint probability distributions of any finite collection of passive path observables.
+
+**Not licensed:** the ability to prepare arbitrary unit vectors of the reconstructed `L²` space, act with arbitrary bounded operators, implement complex interference phases, physically apply `exp(-it H)` rather than `exp(-t H)`, make incompatible settings, define spatial tensor factors or infer Born probabilities for a family of new devices. The Hilbert space itself is an exact mathematical representation, not a hardware/interface authorization.
+
+For passive readout functions `O_1,...,O_k` of one path, `(O_1,...,O_k)_* P` is a global joint probability distribution. Therefore compatible marginals in this fixed passive operational class have a global extension. This suffices to reject any claim that *these passive readouts alone* violate contextuality by a change of basis. It is not a theorem of generalized noncontextuality for every possible operational identification or intervention protocol.
+
+At `g=0`, the q12 single-slot uniform refresh chain obeys `L sigma=-sigma` for centered parity. In its stationary classical reset test, `E[sigma(0)sigma(t)]=exp(-t)`. Its formal transfer `H=-L` has the eigenvalue 1, so analytic `exp(-itH)` would instead provide the complex phase `exp(-it)`. The latter is an alternative formal continuation, not the same observed stochastic time-correlation for positive real t. This comparison exposes the missing physical-time/instrument premise without claiming a new physical quantum falsification.

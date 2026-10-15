@@ -1,0 +1,3 @@
+# Proposed ledger addition ONLY (not applied)
+
+`NT 2026-10-15 — submit for independent intake: exact stationary finite q12 reflected-count temporal RP/transfer, conditional strong lifted C_b slow-coordinate semigroup and positive resolvent using stationary MT/OBS two-time pairs at t and2t, and form-realized sextic critical 0+1 operator. Scientific scope is classical reversible stochastic transfer only, not physical quantum instrumentation, spatial composition, natural A7 source, energy/time/geometry or ToE. Strong core ≠ compact spectral/Mosco. Main dependency: verify exact current MT/OBS stationary proof and preserved branch inputs. No change to previously admitted claims or historical packaging.`

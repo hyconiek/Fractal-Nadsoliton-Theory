@@ -1,0 +1,3 @@
+# Native finite-N transfer operator
+
+Finite `D_N`: `T_D(t)=exp(t L_D)` on `L²(pi_D)`, `K_D=-sqrt(pi_D)L_D/sqrt(pi_D)` in ordinary Euclidean coordinates. Positive transfer: `exp(-t K_D)=sqrt(pi_D) T_D(t)/sqrt(pi_D)`. The transfer time `t` is the supplied model time; the critical-time semigroup uses `sqrt(N)*t` in the exponent. The ground vector is the positive square root of the local Gibbs probabilities, and the edge factorization is recorded in NT-001's cylinder proof. Neither counting-space H nor its eigenvalues are identified with a physical Hamiltonian or physical masses. Dynamic universality is not finite-N similarity under changes of A.

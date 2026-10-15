@@ -1,0 +1,3 @@
+# Resolvent/gap boundary
+
+Valid: fixed positive r and functions f in the bounded continuous lifting core. Valid: t fixed, including t=0; finite-time strong lifted norm limit. Not provided: r=0, sup_t error, commutation of N->∞ with t->∞, compact convergence of finite spectral structures, norm-resolvent convergence on an identified common Hilbert space, convergence of every finite-N eigenvalue or of the global Gibbs spectrum. For a stronger Kuwae–Shioya / Mosco label, first produce a full varying-Hilbert identification plus form liminf/recovery or the exact theorem's full strong-sections hypotheses. No such invocation is made in the current proof.

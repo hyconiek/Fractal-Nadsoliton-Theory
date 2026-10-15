@@ -1,0 +1,3 @@
+# NT-005 interpretation verdict: DERIVED_CLASSICAL_TRANSFER_THEORY
+
+Reflection positivity + symmetric semigroup + mathematical Hilbert quotient are established for the finite stationary reversible law. The interacting critical limit supports an effective Euclidean transfer operator under NT-002's stationary dependencies. No source supplies quantum preparations, phase-setting transformations, incompatible physical instruments, physical real-time Hamiltonian or spacetime tensor-product decomposition. Therefore the correct *operational* quantum verdict is `NOT_LICENSED_BY_CURRENT_FIN_OPERATIONS`, not an assertion that any future quantum bridge is impossible. The previously classical passive record remains representable on a joint probability space.

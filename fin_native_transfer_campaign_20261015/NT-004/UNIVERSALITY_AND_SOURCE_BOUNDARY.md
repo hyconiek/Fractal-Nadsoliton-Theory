@@ -1,0 +1,7 @@
+# NT-004 — Shared slow transfer versus distinctive fast modes
+
+The diagnostic A_control=A7+(1/100)(P3-P4) preserves (under the admitted KO family audit) centering, diagonal, rank, positive transverse gap, parity eigenvalue Lambda6, parity-line potential and identical microscopic per-slot heat-bath clock convention. Therefore g_c=12/Lambda6 and chi=Lambda6/12 are identical. For fixed lambda, the leading critical drift and invariant U_lambda are identical, as is `H_lambda` in the chosen time/feature units. At lambda=0 the operator has no remaining explicit numerical A7 coefficient after canonical normalization. This is **universality within the frozen comparator pair**, not proof across arbitrary kernels.
+
+The fast eigenvalues Lambda3 and Lambda4 change; the separately admitted KO/DKO fast snapshot/sign statistics can distinguish operators. Those earlier results are *reused*, not new calculations in NT. The finite full generator and its transfer spectrum generally remain kernel-specific, although the common slow limiting operator is not.
+
+Model-dependent: fast-mode relaxation rates, finite jump transition rates, broad full-space equilibrium. Class-preserved in this comparison: soft leading diffusion, local quartic law, H_lambda and bounded slow cylinders. Convention-dependent: choice of unit attempt rate, normalization of sigma and z, gain detuning parameter lambda, analytic-time rescaling. Nothing here derives natural selection of A7, rank7, label geometry or physical units.

@@ -1,0 +1,3 @@
+# Mosco/generalized-strong interface — NOT PROMOTED
+
+A core lifted semigroup limit is proved under stationary path hypotheses; it does not automatically specify a lift `J_N` for arbitrary L²(rho) *equivalence classes* because `z_N` takes atoms that are rho-null. A dense continuous core and its norm identifications are explicit, but an admissible varying-Hilbert identification scheme and all global-section requirements are not packaged as a full Kuwae–Shioya theorem application. Compactness, spectral gaps and global dynamic modes remain optional additional obligations. The core theorem and positive-r resolvent corollary are independent of this open upgrade.

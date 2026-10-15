@@ -1,0 +1,5 @@
+# NT w skrócie — wyniki naukowe
+
+W kampanii NT uzyskano kontrolowany opis **transferu w czasie**, który jest wyprowadzony z wcześniejszego modelu statystycznego FIN, a nie dodany jako nowe prawo natury. Pełna stacjonarna odwracalna historia FIN ma dodatniość odbiciową. Przy odpowiednich wcześniej przyjętych twierdzeniach o lokalnej równowadze i krytycznym procesie, semigrupa rzeczywistych układów po podniesieniu funkcji wolnego modu zbiega silnie w L² do semigrupy krytycznej dyfuzji. Operator krytyczny po transformacji stanu podstawowego to `-d²/dz²+z⁶/36-z²/2`, z bezzerową funkcją podstawową `exp(-z⁴/24)`.
+
+Ważna granica: są to **korelacje klasycznych trajektorii** i operator transferowy w czasie modelowym. Nie wyprowadzono fizycznej energii, mechaniki kwantowej, pola przestrzennego, propagacji ani grawitacji. Wynik wolnego modu jest wspólny także dla już znanego operatora kontrolnego; nie wybiera A7 jako prawa przyrody. Wynik silnej zbieżności pozostaje zależny od statusu wcześniejszych dowodów MT/OBS i wymaga niezależnego audytu. Nie uruchomiono nowych badań empirycznych.
