@@ -1,0 +1,19 @@
+{
+  "campaign": "SRN intake 20261015",
+  "verdict": "ACCEPT_SCOPED_NATIVE_COMMON_SCALE_INVARIANT_ANGULAR_CLASSIFIER_CONSISTENCY",
+  "claims": [
+    {"id": "SRN-I01", "level": "M", "status": "EXACT_IDENTITY", "claim": "Raw two-channel angular bit and its ties are invariant to common finite nonzero samplewise real gain.", "scope": "Known simultaneous f1/f3 maps on one predetermined block; not separate gains/offsets/noise/erasure."},
+    {"id": "SRN-I02", "level": "M", "status": "ANALYTICAL_IDEAL_LAW_WITH_CONDITIONAL_VALIDATED_SLOPE", "claim": "Gaussian angular mean has positive model slope d_ang and gap at least d_ang alpha/2 for0<alpha<=1/16.", "arithmetic": "Inherited rational spectral boxes, mpmath.iv and exact dyadic outward decimal rounding."},
+    {"id": "SRN-I03", "level": "M", "status": "ANALYTICAL_COMBINATORIAL_LEMMA", "claim": "Uniform native boundary anti-concentration C(eta+k^-1/2).", "scope": "Positive MT count cylinder,1<=k<=N/2, arbitrary shift; all ties retained."},
+    {"id": "SRN-I04", "level": "M", "status": "CONDITIONAL_ANALYTICAL_THEOREM", "claim": "Four-coordinate native L1 generator comparison and mollified corrector yield the raw-statistic concentration bound.", "scope": "Two frozen operators, stationary local comparison; no full-path Gaussian equivalence or Markov chart."},
+    {"id": "SRN-I05", "level": "M", "status": "CONDITIONAL_ANALYTICAL_ACHIEVABILITY", "claim": "Both unchanged iid-start parents' raw classifier errors tend to zero along the frozen exact-floor SRN sequence.", "scope": "N in12N, exact critical gain, common post-MT deterministic origin; asymptotic constants/N0 unknown."},
+    {"id": "SRN-I06", "level": "M", "status": "BOUNDED_CONDITIONAL_COROLLARY", "claim": "Normalized additive errors delta_N=o(alpha_N) and corrupted fraction r_N=o(alpha_N) suffice to preserve consistency.", "scope": "Licensed pointwise error envelope; sufficient not necessary, no actual detector asserted."},
+    {"id": "SRN-I07", "level": "PM", "status": "NOT_PHYSICALLY_LICENSED", "claim": "A7, gain, microscopic kinetics, clock, initialization, known feature assignment and common-gain instrument are supplied model/interface premises, not physical source results."},
+    {"id": "SRN-I08", "level": "PB/PP/EV", "status": "NOT_ESTABLISHED", "claim": "Natural kernel selection, apparatus validation, physical units/locality/conserved energy, particles/QM/GR/SM/ToE are not established."}
+  ],
+  "derived_objects": ["raw invariant", "native anti-concentration", "four-dimensional corrector bound", "native consistency", "conditional readout error corollary"],
+  "reused_objects": ["MT domain/moments/local mixing/exit", "KO matched operators", "NOC native comparison method", "DKO fast analysis law"],
+  "supplied_objects": ["q12 A7", "diagnostic comparator A7+.01(P3-P4)", "unit-clock LOO HB", "exact critical tuning", "iid initial ensemble", "readout and nuisance contract"],
+  "fitted_objects": [],
+  "not_proved": ["useful finite-N N0 or probability error", "native necessity/minimax or sign-only cost", "arbitrary channel gains/offsets/noise robustness", "all microscopic parity model-ID blindness", "new source or empirical evidence"]
+}

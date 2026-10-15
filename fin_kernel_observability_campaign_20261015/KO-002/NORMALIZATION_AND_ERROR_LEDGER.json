@@ -1,0 +1,21 @@
+{
+  "alpha": "1/2",
+  "features": [
+    "f1= sqrt(2) cos(2pi j/12)",
+    "f3=sqrt(2) cos(6pi j/12)",
+    "f4=sqrt(2) cos(8pi j/12)"
+  ],
+  "uniform_feature_covariance": "Identity_3",
+  "finite_conditional_covariance": "N(N-k)/(k(N-1)) Sigma_n",
+  "limit_private_covariance": "Identity_3",
+  "fast_full_precision": "12-g_c Lambda_r=12 gamma_r",
+  "full_mode_covariance": "Var(F_r)=12/(12 gamma_r)=1/gamma_r",
+  "null_r1": "Lambda1(A7)=0, gamma1=1, Var(V1)=2",
+  "p_to_u": "from MT local quartic/fast limit",
+  "sampling_independence": "asymptotic stable CLT, not finite-N independence",
+  "errors": [
+    "actual model vs Gibbs local-window TV o(1), no explicit rate",
+    "finite conditional hypergeom covariance correction O(1/N) if p fixed",
+    "population Sigma_n-I tends to0 in probability, no transferred unbounded moments"
+  ]
+}

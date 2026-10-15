@@ -1,0 +1,1 @@
+Read the analytical Markdown derivation, check SOURCE_INPUTS.sha256, run python independent_checks.py and python verify_package.py at package root. These scripts do not mechanically prove stochastic process limits.

@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-15",
+  "baseline": "380e9dc0 plus preserved LI intake/plan/AGENTS worktree",
+  "source_manifest": {
+    "matched": 61,
+    "mismatches": 0,
+    "uncovered": [],
+    "separately_hashed_exclusions": {
+      "PACKAGE_VERIFICATION.json": "d8719864c97c78bf9e30cb9c3625cfb3689b1ae9dde91041cdc6200d98e41a23"
+    }
+  },
+  "external_inputs": {
+    "matched_archives": {
+      "UF_ARCHIVE": "fin_critical_metastability_campaign_20261014/source_context/UF_PREDECESSOR.zip",
+      "MT_ARCHIVE": "fin_intrinsic_observation_campaign_20261015/source_context/FIN_MT_FULL_HANDOFF.zip"
+    },
+    "unavailable_original_bytes": [
+      "KO_PLAN_UPLOADED",
+      "LI_ARCHIVE",
+      "OBS_ARCHIVE",
+      "RI_ARCHIVE"
+    ],
+    "scope": "wrapper absence does not invalidate locally available producer/review files"
+  },
+  "stage_references": {
+    "KO-001": {
+      "matched_archive_references": 2,
+      "unavailable_original_references": 4
+    },
+    "KO-002": {
+      "matched_archive_references": 2,
+      "unavailable_original_references": 4
+    },
+    "KO-003": {
+      "matched_archive_references": 2,
+      "unavailable_original_references": 4
+    },
+    "KO-004": {
+      "matched_archive_references": 2,
+      "unavailable_original_references": 4
+    },
+    "KO-005": {
+      "matched_archive_references": 2,
+      "unavailable_original_references": 4
+    }
+  },
+  "actual_review_dependencies": {
+    "fin_parity_record_sufficiency_review_20261015": {
+      "matched": 15,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_hashed_exclusions": {},
+      "saved_inputs_unchanged": 13
+    },
+    "fin_critical_metastability_review_20261015": {
+      "matched": 15,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_hashed_exclusions": {},
+      "saved_inputs_unchanged": 6
+    },
+    "fin_intrinsic_observation_review_20261015": {
+      "matched": 15,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_hashed_exclusions": {},
+      "saved_inputs_unchanged": 10
+    }
+  },
+  "certificate": {
+    "date": "2026-10-15",
+    "status": "VALIDATED_IDEAL_LIMIT_EVENT_UNDER_INHERITED_INPUT_AND_IV_BACKEND",
+    "spectral_source": "fin_rank7_followup/inputs/fin_handoff_audit/results.json",
+    "spectral_sha256": "de10b6cf8db83d4b2ad16f6b9ce3ed980c676771883e5b859e717c85fc5e9981",
+    "method": "accepted rational spectral boxes; fresh interval DFT input binding;18 positive erf-series terms and geometric tail; exact dyadic-to-decimal outward rounding",
+    "probability_A7": [
+      "0.708441279664260128",
+      "0.708441279664275062"
+    ],
+    "probability_comparator": [
+      "0.711615925301407252",
+      "0.711615925301422447"
+    ],
+    "Bernoulli_TV_gap": [
+      "0.003174645637132190",
+      "0.003174645637162318"
+    ],
+    "equal_prior_single_event_risk": [
+      "0.498412677181418841",
+      "0.498412677181433905"
+    ],
+    "gamma3_A7": [
+      "0.162572836987292577",
+      "0.162572836987308268"
+    ],
+    "gamma3_comparator": [
+      "0.158303314027793712",
+      "0.158303314027809439"
+    ],
+    "same_transverse_maximum": "Lambda5",
+    "gamma5_lower_exact": "4357576906719/234218204114629",
+    "fast_Hessian_floor_exact": "8679/98750",
+    "lambda0_Hessian_floor_exact": "4458/49375",
+    "not_certified": [
+      "finite-N error or usable N0",
+      "physical readout calibration",
+      "all65 producer decimal endpoint digits",
+      "fast-time process theorem"
+    ]
+  },
+  "source_arithmetic_qualification": "Source lower-gap bookkeeping writes gamma4+.01 instead of gamma4+.01/Lambda6. Its minimum remains gamma5; new exact maximum-mode check pays the intended gap. Long source endpoint strings are not automatically outward public decimals.",
+  "replay": {
+    "directory": "/tmp/fin-ko-intake-zgkwp1pd/campaign",
+    "logs": {
+      "verify_package.py": {
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"PASS\",\n  \"manifest_file_count\": 61,\n  \"task_cards\": 5,\n  \"self_consistency_assertions_passed\": 38,\n  \"proof_scope\": \"synthetic finite/exact rational/interval calculations; not a mechanized limit theorem\"\n}\n",
+        "stderr": ""
+      },
+      "independent_verify.py": {
+        "exit_code": 0,
+        "stdout": "PASSED 38 checks\nlambda {3: 1.9614068619764455, 4: 2.1995688493332097, 5: 2.298606272079097, 6: 2.3421820411463004}\ng 5.123427551398614\np0 0.7084412796642692 pplus 0.7116159253014165 gap 0.0031746456371472874 risk 0.49841267718142634\n",
+        "stderr": ""
+      }
+    },
+    "source_assertions": 38,
+    "verification_byte_equal": false
+  },
+  "input_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "fin_kernel_observability_review_20261015/verify_intake.py": "b8c817af715cf93d19ec752335342eeafc04240770888dba190c440a6e655002",
+    "fin_kernel_observability_review_20261015/certify_event.py": "be53a88429e5b330040ebd0282b38c4696dad77425ca2f064319fb2b9e1d50c6",
+    "fin_kernel_observability_campaign_20261015/MANIFEST.sha256": "c92406076a27a1b286d35870daa4fa7c5a1bb492a374006ceb469022dd94f249",
+    "FIN_KERNEL_OBSERVABILITY_NEXT_CHAIN_20261015.md": "3388f5387ca39b3266bf6978ad45082071fcf10633d63b79d4b5b84ae0a26339",
+    "fin_parity_record_sufficiency_review_20261015/MANIFEST.sha256": "072d885084538be1bf9352059bb824428da423b641ecbd1fb55e3acf5e3f0f39",
+    "fin_critical_metastability_review_20261015/MANIFEST.sha256": "759ee62d3468d48f7c8bfa8d070bdfc7a9f82c85585005d11571b688bb9e1009",
+    "fin_intrinsic_observation_review_20261015/MANIFEST.sha256": "c8bea331cf247428a093f09debe943071ce2f41e69db8efb369043e38c88af43",
+    "fin_parity_record_sufficiency_review_20261015/INTAKE_20261015.md": "89e50d12680d38e46d9ec5adc74c156a6ffb890d9c68d9e08dd6ed5be30665fb",
+    "fin_parity_record_sufficiency_review_20261015/PROOF_COMPLETIONS.md": "0b7daa803c279fb9e963712ccd0efde08a8afb0091e30c831ca9b1906e5e24c5",
+    "fin_parity_record_sufficiency_review_20261015/KERNEL_FAMILY_SEED.md": "a59c090c0166cdba4abf4756ba413dab822ae714d9cf3fe9071877a501b8db0c",
+    "fin_parity_record_sufficiency_review_20261015/KERNEL_FAMILY_SEED.json": "a2041093db580d2340f618da65e646f03d3ffab5df8a52a973626e99df0f6925",
+    "fin_critical_metastability_review_20261015/PROOF_COMPLETIONS.md": "567b55c9507c54572a7c30bb35b7703e3d6ab936e7a2215e8769ae69948ea434",
+    "fin_intrinsic_observation_review_20261015/PROOF_COMPLETIONS_AND_CORRECTIONS.md": "0536b62ed12ea3cd554179098329b10e74afb71967ad0edea765ceffbb15d494"
+  },
+  "source_manifest_after": {
+    "matched": 61,
+    "mismatches": 0,
+    "uncovered": [],
+    "separately_hashed_exclusions": {
+      "PACKAGE_VERIFICATION.json": "d8719864c97c78bf9e30cb9c3625cfb3689b1ae9dde91041cdc6200d98e41a23"
+    }
+  },
+  "checks": [
+    {
+      "name": "source provenance agrees with its external-reference list",
+      "passed": true
+    },
+    {
+      "name": "formerly unavailable review/seed files now actually present",
+      "passed": true
+    },
+    {
+      "name": "KO004 genuinely deferred in source contract",
+      "passed": true
+    },
+    {
+      "name": "versioned operator versus matched comparator trace diagonal",
+      "passed": true
+    },
+    {
+      "name": "parity eigenvalue and simple top preserved",
+      "passed": true
+    },
+    {
+      "name": "exact-form parity-line field diagnostic -0.01",
+      "passed": true
+    },
+    {
+      "name": "exact-form parity-line field diagnostic 0",
+      "passed": true
+    },
+    {
+      "name": "exact-form parity-line field diagnostic 0.01",
+      "passed": true
+    },
+    {
+      "name": "exact repeated-label hypergeometric support/normalization",
+      "passed": true
+    },
+    {
+      "name": "exact finite population covariance with nonzero feature means",
+      "passed": true
+    },
+    {
+      "name": "A-null mode is not Laplacian mode1",
+      "passed": true
+    },
+    {
+      "name": "uniform feature variance and factor12",
+      "passed": true
+    },
+    {
+      "name": "positive-series event certificate and strict gap",
+      "passed": true
+    },
+    {
+      "name": "wrong primitive covariance normalization rejected",
+      "passed": true
+    },
+    {
+      "name": "all four producer event-number pairs consistent with reviewed coarse enclosures",
+      "passed": true
+    }
+  ],
+  "status": "PASS_SCOPED_KO_INTAKE_CHECKS"
+}

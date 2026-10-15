@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-15",
+  "baseline": "380e9dc0 plus preserved LI/KO/DKO/NOC worktree additions",
+  "source_manifest": {
+    "matched": 60,
+    "mismatches": 0,
+    "uncovered": [],
+    "separately_bound": {
+      "PACKAGE_VERIFICATION.json": "dc2af25c05d8bef2208a0ba67e3559411aa769f2d611727fde20da4a1d8b6b9c"
+    }
+  },
+  "external_inputs": {
+    "matched_originals": {},
+    "unavailable_originals": [
+      {
+        "path": "../Wklejony Markdown(20261015-164447).md",
+        "claimed_sha256": "464a9cd1c3080403b838bc952fbb26f1c7472fd4959a8cb182b157d78c45b3e9"
+      },
+      {
+        "path": "../FIN_NOC_001_NOC_005_ONLY_HANDOFF_20261015.zip",
+        "claimed_sha256": "741736e4de3275f7c463264c5a7f06605938eb0be0e983fcda04a133b95eb8a8"
+      },
+      {
+        "path": "../FIN_DKO_001_DKO_005_ONLY_HANDOFF_20261015.zip",
+        "claimed_sha256": "29bbc823c8ab0d96a6787d2b2ef8a9c004483dff81df79be76b3ac1fc5de22b2"
+      },
+      {
+        "path": "../FIN_KO_001_KO_005_ONLY_HANDOFF_20261015.zip",
+        "claimed_sha256": "402615d4ba548fd85206f544ace504f359adec7ff179d5c139112b888455020e"
+      },
+      {
+        "path": "../FIN_LI_001_LI_005_ONLY_HANDOFF_20261015.zip",
+        "claimed_sha256": "fbe3a3c0b7d93173c5c0bc9ac8a0c108753a1ab987183532835794d02695bf1f"
+      }
+    ]
+  },
+  "stage_reference_counts": {
+    "matched": 0,
+    "unavailable_original": 25
+  },
+  "actual_review_dependencies": {
+    "fin_native_observation_cost_review_20261015": {
+      "matched": 14,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_bound": {},
+      "saved_inputs_unchanged": 12
+    },
+    "fin_dynamic_kernel_observability_review_20261015": {
+      "matched": 14,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_bound": {},
+      "saved_inputs_unchanged": 10
+    },
+    "fin_kernel_observability_review_20261015": {
+      "matched": 14,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_bound": {},
+      "saved_inputs_unchanged": 14
+    },
+    "fin_critical_metastability_review_20261015": {
+      "matched": 15,
+      "mismatches": 0,
+      "uncovered": [],
+      "separately_bound": {},
+      "saved_inputs_unchanged": 6
+    }
+  },
+  "exact_conditioning_cases": 2213,
+  "generator_fixtures": [
+    {
+      "N": 24,
+      "k": 1,
+      "model": "A7",
+      "bracket": [
+        [
+          1.9767006924563866,
+          0.08099508635523779,
+          -0.28133947952672195,
+          0.05186007314305286
+        ],
+        [
+          0.08099508635523779,
+          2.2580653245495177,
+          0.05186007314305285,
+          -0.03672735296930412
+        ],
+        [
+          -0.28133947952672195,
+          0.05186007314305285,
+          1.8633434427567106,
+          -0.18738793260432499
+        ],
+        [
+          0.05186007314305286,
+          -0.03672735296930412,
+          -0.18738793260432499,
+          0.9441952981098439
+        ]
+      ],
+      "third": 9.353036751741973
+    },
+    {
+      "N": 24,
+      "k": 1,
+      "model": "control",
+      "bracket": [
+        [
+          1.976722257368716,
+          0.0810703928827694,
+          -0.28086986483979726,
+          0.05193079651257221
+        ],
+        [
+          0.0810703928827694,
+          2.258424172296218,
+          0.051930796512572194,
+          -0.03595970591927794
+        ],
+        [
+          -0.28086986483979726,
+          0.051930796512572194,
+          1.8635287328125736,
+          -0.18742884350422
+        ],
+        [
+          0.05193079651257221,
+          -0.03595970591927794,
+          -0.18742884350422,
+          0.9441891478923311
+        ]
+      ],
+      "third": 9.354444175309695
+    },
+    {
+      "N": 24,
+      "k": 8,
+      "model": "A7",
+      "bracket": [
+        [
+          2.0557622008644993,
+          -0.07488804891204605,
+          0.5355879840411343,
+          -0.1719388082295059
+        ],
+        [
+          -0.07488804891204605,
+          1.3272714987112109,
+          -0.1719388082295059,
+          0.25778973881197365
+        ],
+        [
+          0.5355879840411343,
+          -0.1719388082295059,
+          2.108699541761156,
+          0.13917522238290073
+        ],
+        [
+          -0.1719388082295059,
+          0.25778973881197365,
+          0.13917522238290073,
+          1.486152546614733
+        ]
+      ],
+      "third": 4.8513012104186455
+    },
+    {
+      "N": 24,
+      "k": 8,
+      "model": "control",
+      "bracket": [
+        [
+          2.0559466367963237,
+          -0.07482051688720202,
+          0.5343042706996057,
+          -0.17219862724912177
+        ],
+        [
+          -0.07482051688720202,
+          1.3274334456318173,
+          -0.1721986272491218,
+          0.25678392333670585
+        ],
+        [
+          0.5343042706996057,
+          -0.1721986272491218,
+          2.1085592651081955,
+          0.13934058438405528
+        ],
+        [
+          -0.17219862724912177,
+          0.25678392333670585,
+          0.13934058438405528,
+          1.4861545006419707
+        ]
+      ],
+      "third": 4.851186773590524
+    },
+    {
+      "N": 120,
+      "k": 12,
+      "model": "A7",
+      "bracket": [
+        [
+          1.9719195210320761,
+          -0.03010002922282614,
+          -0.11856433255918085,
+          -0.06531041502827387
+        ],
+        [
+          -0.03010002922282614,
+          1.6985798489434545,
+          -0.06531041502827387,
+          -0.271931632439451
+        ],
+        [
+          -0.11856433255918085,
+          -0.06531041502827387,
+          2.2129571605052734,
+          -0.00375026765780821
+        ],
+        [
+          -0.06531041502827387,
+          -0.271931632439451,
+          -0.00375026765780821,
+          1.9821739343476
+        ]
+      ],
+      "third": 3.5676909063554425
+    },
+    {
+      "N": 120,
+      "k": 12,
+      "model": "control",
+      "bracket": [
+        [
+          1.9719853217257486,
+          -0.03010516872712492,
+          -0.11824648193447265,
+          -0.0653841023980847
+        ],
+        [
+          -0.03010516872712492,
+          1.6986260675360803,
+          -0.0653841023980847,
+          -0.27183198281592624
+        ],
+        [
+          -0.11824648193447265,
+          -0.0653841023980847,
+          2.2128698860519154,
+          -0.0035699215290149076
+        ],
+        [
+          -0.0653841023980847,
+          -0.27183198281592624,
+          -0.0035699215290149076,
+          1.9825516309669147
+        ]
+      ],
+      "third": 3.568083646798244
+    },
+    {
+      "N": 120,
+      "k": 60,
+      "model": "A7",
+      "bracket": [
+        [
+          1.9332954076475155,
+          0.037794804158107376,
+          -0.07269921638725703,
+          0.0544904034454767
+        ],
+        [
+          0.037794804158107376,
+          0.9666477038237578,
+          0.054490403445476676,
+          -0.03634960819362853
+        ],
+        [
+          -0.07269921638725703,
+          0.054490403445476676,
+          1.7784477389529811,
+          0.053381121591821554
+        ],
+        [
+          0.0544904034454767,
+          -0.03634960819362853,
+          0.053381121591821554,
+          0.8892238694764906
+        ]
+      ],
+      "third": 1.5142578515467109
+    },
+    {
+      "N": 120,
+      "k": 60,
+      "model": "control",
+      "bracket": [
+        [
+          1.9332782410899079,
+          0.037791245969187676,
+          -0.07273871873607786,
+          0.05448170425980787
+        ],
+        [
+          0.037791245969187676,
+          0.9666391205449538,
+          0.054481704259807855,
+          -0.036369359368038943
+        ],
+        [
+          -0.07273871873607786,
+          0.054481704259807855,
+          1.7784939995003182,
+          0.05336511648596394
+        ],
+        [
+          0.05448170425980787,
+          -0.036369359368038943,
+          0.05336511648596394,
+          0.8892469997501591
+        ]
+      ],
+      "third": 1.5142782168679365
+    }
+  ],
+  "power_ledger": {
+    "martingale": "-5/32",
+    "generator_N": "-9/64",
+    "generator_k": "-49/128",
+    "smoothing": "-1/64",
+    "lattice": "-61/128"
+  },
+  "floor_fixtures": [
+    {
+      "N": 1200,
+      "k": 1074,
+      "M": 5,
+      "k_le_half": false
+    },
+    {
+      "N": 27670116110564327424,
+      "k": 13747684599615698275,
+      "M": 72527,
+      "k_le_half": true
+    }
+  ],
+  "ideal_certificate": {
+    "date": "2026-10-15",
+    "status": "VALIDATED_IDEAL_SLOPE_UNDER_INHERITED_SPECTRA_AND_IV_ASSUMPTIONS",
+    "spectral_path": "fin_rank7_followup/inputs/fin_handoff_audit/results.json",
+    "spectral_sha256": "de10b6cf8db83d4b2ad16f6b9ce3ed980c676771883e5b859e717c85fc5e9981",
+    "d_ang": [
+      "0.026403499619902495",
+      "0.026403499620096855"
+    ],
+    "uniform_alpha_interval": [
+      "0 (excluded)",
+      "1/16"
+    ],
+    "relative_gap_lower_factor": [
+      "0.742917322799599762",
+      "0.742917322799623192"
+    ],
+    "uniform_ideal_gap": "p_control(alpha)-p_A7(alpha)>=(d_ang/2)*alpha",
+    "rounding": "exact Fraction floor/ceiling of raw dyadic interval endpoints",
+    "not_certified": [
+      "native constants or usable N0",
+      "physical gain or detector",
+      "all source printed digits"
+    ]
+  },
+  "replay": {
+    "directory": "/tmp/fin-srn-intake-9wo11v6j/campaign",
+    "exit_code": 0,
+    "stdout": "PASS 535/535 bounded checks; nominal d_ang=0.0264034996200004076\n",
+    "stderr": "",
+    "source_checks": 535,
+    "numerical_output_byte_equal": false,
+    "numerical_changes": [
+      {
+        "path": "/finite_hypergeom_covariance/0/0",
+        "absolute_drift": 5.551115123125783e-16
+      },
+      {
+        "path": "/finite_hypergeom_covariance/0/1",
+        "absolute_drift": 3.844928223810064e-17
+      },
+      {
+        "path": "/finite_hypergeom_covariance/1/0",
+        "absolute_drift": 3.844928223810064e-17
+      },
+      {
+        "path": "/finite_hypergeom_covariance/1/1",
+        "absolute_drift": 1.6653345369377348e-15
+      }
+    ],
+    "maximum_absolute_drift": 1.6653345369377348e-15
+  },
+  "input_hashes": {
+    "fin_scale_robust_native_observation_review_20261015/verify_intake.py": "989746c7dc18990ab6b1924a5c0d4ac0c6bc6cf12af827aced97b22e05484154",
+    "fin_scale_robust_native_observation_review_20261015/certify_angular_gap.py": "03033482d0f38aac7fe6e9c5e5bde3a59a425ead7f9f58a678f81242871549c9",
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "fin_scale_robust_native_observation_campaign_20261015/MANIFEST.sha256": "be9f722c4d6ab1b51ad67dfbc888128b1c393129f2acd13a165102bbbdf8c7f3",
+    "FIN_SCALE_ROBUST_NATIVE_OBSERVATION_NEXT_CHAIN_20261015.md": "7f0ea139ef77faa2fda75876f4e555accc2a8ecb26bc1a194675c73937920a1c",
+    "fin_native_observation_cost_review_20261015/MANIFEST.sha256": "0b9577ff303367f41f5b6f020a1adbc9386d27aa7aec4e64b355c5e34af2b971",
+    "fin_dynamic_kernel_observability_review_20261015/MANIFEST.sha256": "e6392c0f04bfd541415e316192e0895f2cf47441e9164da8f5e9579daa2eef52",
+    "fin_kernel_observability_review_20261015/MANIFEST.sha256": "3c97e3fb451170e44a2c955f871ff6f7b94317d8712e9226d00f1ed6bc67d13d",
+    "fin_critical_metastability_review_20261015/MANIFEST.sha256": "759ee62d3468d48f7c8bfa8d070bdfc7a9f82c85585005d11571b688bb9e1009",
+    "fin_native_observation_cost_review_20261015/PROOF_COMPLETIONS.md": "7bf1590b9512bde61095b98c4db4d810a40110416676aca19f3f84e19e392532",
+    "fin_dynamic_kernel_observability_review_20261015/PROOF_COMPLETIONS.md": "db9a6617c6e10c979b6bc371ee2e02d37e898dcc66a9eaebdd4496ffa35546ae",
+    "fin_kernel_observability_review_20261015/PROOF_COMPLETIONS_AND_ARITHMETIC.md": "19d6bfc99245051908a1441212f555f0cfcc7a707339c81b98499f8db08b08e6",
+    "fin_critical_metastability_review_20261015/PROOF_COMPLETIONS.md": "567b55c9507c54572a7c30bb35b7703e3d6ab936e7a2215e8769ae69948ea434",
+    "fin_parity_record_sufficiency_review_20261015/KERNEL_FAMILY_SEED.json": "a2041093db580d2340f618da65e646f03d3ffab5df8a52a973626e99df0f6925"
+  },
+  "source_manifest_after": {
+    "matched": 60,
+    "mismatches": 0,
+    "uncovered": [],
+    "separately_bound": {
+      "PACKAGE_VERIFICATION.json": "dc2af25c05d8bef2208a0ba67e3559411aa769f2d611727fde20da4a1d8b6b9c"
+    }
+  },
+  "checks": [
+    {
+      "name": "source and five stage ledgers agree",
+      "passed": true
+    },
+    {
+      "name": "exact Fourier common-gain/tie fixtures in Q(sqrt3)",
+      "passed": true,
+      "subsets": 1156,
+      "exact_ties": 164
+    },
+    {
+      "name": "exact separate-gain and offset failures",
+      "passed": true
+    },
+    {
+      "name": "exact pair spacings with sqrt2 removed",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture0 k1",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture0 k3",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture0 k6",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture1 k1",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture1 k3",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture1 k6",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture2 k1",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture2 k3",
+      "passed": true
+    },
+    {
+      "name": "exact two-pair conditional support fixture2 k6",
+      "passed": true
+    },
+    {
+      "name": "exact finite maximum-atom grid",
+      "passed": true,
+      "cases": 1272,
+      "max_t_times_atom_squared": "27/8"
+    },
+    {
+      "name": "versioned null and fast feature binding",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N24 k1 A7",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N24 k1 control",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N24 k8 A7",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N24 k8 control",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N120 k12 A7",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N120 k12 control",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N120 k60 A7",
+      "passed": true
+    },
+    {
+      "name": "native four-dimensional slot brackets/drift N120 k60 control",
+      "passed": true
+    },
+    {
+      "name": "nonzero finite off-diagonal bracket retained",
+      "passed": true
+    },
+    {
+      "name": "all shrinking-bandwidth powers are negative",
+      "passed": true
+    },
+    {
+      "name": "exact integer-root floors N1200",
+      "passed": true
+    },
+    {
+      "name": "exact integer-root floors N27670116110564327424",
+      "passed": true
+    },
+    {
+      "name": "independent outward ideal slope certificate",
+      "passed": true
+    }
+  ],
+  "status": "PASS_SCOPED_SRN_INTAKE_CHECKS",
+  "not_tested": [
+    "all-N anti-concentration or generator estimates by enumeration",
+    "mechanized MT/SRN proofs",
+    "native numerical error or N0",
+    "physical instrument"
+  ]
+}

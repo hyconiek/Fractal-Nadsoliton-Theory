@@ -1,0 +1,10 @@
+{
+  "task":"NOC-002", "record_id":"NOC-F3-COS-UNIT-H1", "models":["A7", "A7+0.01(P3-P4)"],
+  "native_readout":"W_N(i)=sum_{a in B_N} f3(x_a(t_N+i))/sqrt(k_N)",
+  "bounded_test":"cos(W_N(i))", "grid":"i=0,...,M_N-1", "frequency":1,
+  "gamma_A7":"1-Lambda3/Lambda6", "gamma_control":"1-(Lambda3+0.01)/Lambda6",
+  "stationary_analysis_mean":"exp(-(1-alpha+alpha/gamma)/2)",
+  "mean_gap":"mu_A7-mu_control = d alpha + O(alpha^2), d=exp(-1/2)*(1/gamma_control-1/gamma_A7)/2 >0",
+  "next_use":"fixed-step Duhamel and martingale concentration on original reflected count process",
+  "not_claimed":["sign-only invariance","physical amplitude calibration","finite-N effective OU equality"]
+}

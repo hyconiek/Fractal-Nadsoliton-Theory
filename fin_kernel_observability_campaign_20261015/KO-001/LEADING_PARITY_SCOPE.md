@@ -1,0 +1,3 @@
+# KO-001 — leading parity blindness scope
+
+Both specified kernels have identical `g_c`, parity-line drift `tanh(m)−m`, its `−m³/3` coefficient, uniform qv 2 and local quartic starting law. On **fixed finite parity-record alphabets**, all limiting cell probabilities coincide if the incoming UF/MT/OBS claims and comparator local hypothesis audit are accepted. Equal-prior binary model discrimination risk then converges to 1/2. The LI theorem concerns predicting future sign under one model; by itself it does **not** prove full-parity information-theoretic blindness to which model was selected. That cross-model stronger property remains open.

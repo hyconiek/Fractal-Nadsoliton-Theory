@@ -1,0 +1,14 @@
+{
+  "task": "NOC-001", "model_ids": ["FIN-A7-q12-LOO-HB", "FIN-A7-plus-0.01-P3-minus-P4-q12-LOO-HB-control"],
+  "unchanged_model": "labelled q12 heat bath, per-slot rate 1, leave-one-out, denominator N, g=12/Lambda6",
+  "N": "multiples of 12", "block": "deterministic first k slots (or any predetermined subset)",
+  "native_counts": "b_j=#block state j; o_j=#outside state j; n=b+o",
+  "refresh_rates": "block b_i softmax_j((g/N) A(n-e_i)); outside o_i softmax_j((g/N)A(n-e_i))",
+  "reflect": "suppress precisely transitions for which new total n is outside inherited D_N",
+  "reflected_stationary_weight": "k!/prod(b_i!) (N-k)!/prod(o_i!) exp[g/(2N)n^T A n] 1_{n in D_N}",
+  "f3": "sqrt(2) cos(2*pi*3*j/12)", "alpha": "k/N", "F": "sum_i f3(i)n_i/sqrt(N)",
+  "W": "sum_i f3(i)b_i/sqrt(k)", "R": "W-sqrt(alpha)F", "chart": "Phi=(F,R)",
+  "conditional": "b|n is multivariate hypergeometric", "initial": "reflective pi_D via previous MT; actual iid uniform via conditional labelled coupling",
+  "errors": "stationary smooth generator bound C (N^-1/4 + k^-1/2 + N*pi_D(boundary)/sqrt(k)) with inherited MT moments",
+  "scope": "1<=k<=N/2, only stationary L1 smooth tests, not full-path limit"
+}

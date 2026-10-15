@@ -1,0 +1,3 @@
+# Proposed-only AGENTS addition — SRN intake pending
+
+Propose admitting, after independent review, a **conditional common-scale raw angular finite-parent discrimination theorem** for the frozen A7 and A7+.01(P3−P4) models and `k_N=floor(N^(63/64)), M_N=floor(N^(1/4))`, with raw per-time `1{|W3|>|W1|}` event, under inherited MT/KO/DKO/NOC assumptions. Include new native hypergeometric anti-concentration, 4D generator/mollification/Poisson bounds, and finite-parent event coupling. State explicitly that the only exact nuisance symmetry is a shared nonzero scalar per simultaneous channel pair and the result is not physical source/calibration/observer closure. No edit to actual AGENTS.md is authorized or performed.

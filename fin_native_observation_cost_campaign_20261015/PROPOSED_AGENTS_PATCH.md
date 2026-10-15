@@ -1,0 +1,3 @@
+# Proposed AGENTS.md note — DO NOT APPLY AUTOMATICALLY
+
+Under declared MT/KO/DKO local preparation assumptions for each frozen A7/control operator, NOC obtains a conditional **one-sided finite-N bounded cosine test consistency** at `k=floor(N^(15/16))`, `M=floor(N^(1/4))`, spacing1. The new proof uses native hypergeometric moments, a uniform-in-shrinking-block `C^3` generator estimate, an explicit discrete OU Poisson corrector, fixed-step Duhamel and dependent martingale concentration. It does **not** prove sign-only triangular observation cost, minimax necessity, a uniform growing-time process CLT or physical calibration. All predecessor and empirical/ontology gates persist. This is a proposed edit for an architect/intake, not an applied change.

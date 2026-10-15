@@ -1,0 +1,3 @@
+# Single next open atom, after NOC
+
+**NOC-RESOURCE-LOWER-BOUND (NOT EXECUTED).** Under the **actual finite-state** q12 LOO HB family, can every bounded classifier based on `M_N` prescribed partial-block grid snapshots be shown unable to discriminate when an appropriately defined `M_N (k_N/N)^2` tends to zero, with all finite-N slow-state, preparation, and dependent-sample errors controlled? This requires a native finite-N information/likelihood comparison and a specified observation class; the existing NOC *sufficient* cosine decision bound is not a necessity theorem. Do not automatically execute this question or re-label the earlier Gaussian resource result as its proof.

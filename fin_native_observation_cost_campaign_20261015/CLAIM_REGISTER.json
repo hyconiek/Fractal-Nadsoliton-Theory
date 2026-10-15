@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "NOC-001",
+    "claim": "stationary_native_generator",
+    "status": "conditional_analytical",
+    "precise_statement": "pi_D |(L_D-G) v(Phi)|<=C ||v||_C3_1 [N^-1/4+k^-1/2+N/sqrt(k)*pi_D(B)]",
+    "dependency": "MT local moments/domain"
+  },
+  {
+    "stage": "NOC-002",
+    "claim": "discrete_corrector",
+    "status": "analytic",
+    "precise_statement": "psi=sum_l(P_l g-mu); (I-P1)psi=g-mu; C3 derivative bounds uniform alpha",
+    "dependency": "fixed gamma>0"
+  },
+  {
+    "stage": "NOC-002",
+    "claim": "strict_cosine_mean_gap",
+    "status": "analytic",
+    "precise_statement": "mu_A7-mu_control=d alpha+O(alpha^2), d>0",
+    "dependency": "frozen operator pair"
+  },
+  {
+    "stage": "NOC-003",
+    "claim": "dependent_native_concentration",
+    "status": "conditional_analytical",
+    "precise_statement": "P_pi(|A_M-mu|>c alpha)<=C/(M alpha^2)+C eps/alpha",
+    "dependency": "NOC-001 and corrector"
+  },
+  {
+    "stage": "NOC-004",
+    "claim": "unchanged_parent_consistent_classifier",
+    "status": "conditional_analytical",
+    "precise_statement": "max_j P_parent_j(wrong)->0 along frozen floors",
+    "dependency": "inherited MT mixing/exit both models"
+  },
+  {
+    "stage": "NOC-005",
+    "claim": "finite_N_minimax_cost",
+    "status": "open",
+    "precise_statement": "No necessity/minimax result or sign-only transfer",
+    "dependency": "no task executed"
+  }
+]

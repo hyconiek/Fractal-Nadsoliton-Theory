@@ -1,0 +1,22 @@
+{
+  "q": 12,
+  "operator": {
+    "primary": "A7",
+    "control": "A7+.01(P3-P4)"
+  },
+  "refresh": "LOO HB rate one per slot",
+  "N": "N multiple of 12",
+  "alpha_primary": ".5",
+  "h_fast": 1,
+  "modes": [
+    1,
+    3,
+    4
+  ],
+  "features": "sqrt(2) cos(2 pi r j /12)",
+  "F": "sqrt(N) sum_j p_j f_r(j)",
+  "U": "sqrt(N)/k sum_block f_r -F",
+  "c_weight": "N/k-1 in block; -1 outside",
+  "zero_sign": 0,
+  "moment_reuse": "MT stationary local conditional Gibbs; KO joint snapshot CLT"
+}

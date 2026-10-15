@@ -1,0 +1,5 @@
+# KO-002 — joint snapshot theorem and dependency boundaries
+
+Let `X_N=(Z_N,F_1,N,F_3,N,F_4,N)` be the full population statistic at deterministic post-MT time with `X_N⇒(Z,F_1,F_3,F_4)` under admitted local-Gibbs MT. Conditional on the complete count n, the finite-population block error `U_N` satisfies stable convergence to `G∼N_3(0,I)`, because the finite label vectors are bounded, `n/N→u`, and the finite-sampling fraction tends to 1/2. Therefore `(X_N,U_N)⇒(Z,F_1,F_3,F_4,G)` with G independent of X and the F independent among distinct Fourier harmonics and from Z. The full population f_r normalization produces `Var F_r=1/gamma_r`. Hence `V=F+U` has independent Gaussian coordinates with `Var V_r=1+1/gamma_r` and Z independent. The result is an asymptotic **single snapshot**, not a fast-time path.
+
+The actual iid-start labelled model receives the weak limit by the incoming MT-labelled TV coupling for each model, provided KO-001 comparator local transfer is independently accepted. Nonbounded sample moments do not transfer by TV alone. See `EXACT_FAST_READOUT_KERNEL.md` for hypergeometric support and CLT argument.

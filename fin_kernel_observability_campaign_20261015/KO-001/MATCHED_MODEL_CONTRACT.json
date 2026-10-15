@@ -1,0 +1,41 @@
+{
+  "two_model_ids": [
+    "A7-primary",
+    "A7-plus-0.01-P3-minus-P4-control"
+  ],
+  "primary_law": "labelled q12 LOO heat bath; unit attempt rate; denominator N",
+  "N_sequence": "N positive multiples of 12",
+  "gain": "12/Lambda6",
+  "epsilon": [
+    "0",
+    "0.01"
+  ],
+  "kernel_difference": "epsilon(P3-P4)",
+  "unchanged": [
+    "trace",
+    "each diagonal entry",
+    "rank7",
+    "PSD",
+    "centered",
+    "D12 symmetry",
+    "top simple parity eigenvalue Lambda6",
+    "parity line free energy",
+    "critical soft drift and leading bracket"
+  ],
+  "changed": [
+    "Lambda3 + epsilon",
+    "Lambda4 - epsilon"
+  ],
+  "eigenvalues_nominal": {
+    "Lambda3": 1.9614068619764455,
+    "Lambda4": 2.19956884933321,
+    "Lambda5": 2.298606272079097,
+    "Lambda6": 2.3421820411463004
+  },
+  "premises": [
+    "post-MT local window for each model",
+    "quartic/fast Gibbs CLT as accepted",
+    "model-specific local analysis domain"
+  ],
+  "independent_cert": "root INDEPENDENT_VERIFICATION.json"
+}

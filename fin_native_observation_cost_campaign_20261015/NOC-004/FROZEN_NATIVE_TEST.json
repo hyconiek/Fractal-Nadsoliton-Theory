@@ -1,0 +1,17 @@
+{
+  "task":"NOC-004", "kind":"bounded smooth native two-model decision",
+  "models":{"0":"primary A7","1":"diagnostic A7+0.01(P3-P4)"},
+  "size_sequence":"N positive multiples of 12; k_N=floor(N^(15/16)); M_N=floor(N^(1/4)); alpha_N=k_N/N",
+  "domain_note":"k_N<=N/2 holds eventually (not for all small N); finite fixtures outside the eventual domain are not a claim of a finite-N theorem",
+  "block":"predetermined labelled slot set B_N of size k_N",
+  "observation_origin":"common deterministic t_N after both accepted MT local burn-ins; horizon t_N+M_N below inherited exponential exit window",
+  "spacing":1, "readout":"W_N(i)=sum_{a in B_N} sqrt(2)*cos(2*pi*3*x_a(t_N+i)/12)/sqrt(k_N)",
+  "statistic":"A_N=M_N^(-1)*sum_{i=0}^{M_N-1} cos(W_N(i))",
+  "mu_0":"exp(-[1-alpha_N+alpha_N/gamma_0]/2)",
+  "mu_1":"exp(-[1-alpha_N+alpha_N/gamma_1]/2)",
+  "threshold":"theta_N=(mu_0+mu_1)/2",
+  "rule":"predict control (1) if A_N < theta_N; otherwise predict A7 (0). Equality assigned to A7.",
+  "classifier_observations_only":["k_N block q12 labels at integer times 0 through M_N-1", "cos of their normalized f3 sum"],
+  "hidden_proof_only":["global F","private R","total counts n","latent operator index","stationary auxiliary state"],
+  "conclusion":"conditional P_error,N ->0 under inherited two-model MT local preparation/coupling and NOC native bounds"
+}

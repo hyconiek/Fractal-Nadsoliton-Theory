@@ -1,0 +1,149 @@
+{
+  "verification_type": "bounded analytic-algebraic and floating q12 generator checks",
+  "n_checks": 32,
+  "tests": [
+    "P3 rational idempotent",
+    "P4 rational idempotent",
+    "P3P4 rational orthogonality",
+    "P4P3 rational orthogonality",
+    "equal diagonal projector trace",
+    "no projector parity response",
+    "no projector uniform response",
+    "A epsilon parity eigen",
+    "A epsilon rank7",
+    "A epsilon same diagonal",
+    "A epsilon centered",
+    "f feature orthogonal uniform",
+    "f normalized covariance",
+    "strict transverse gaps",
+    "control decreases gamma3",
+    "control increases gamma4",
+    "Fdr uniform symmetry",
+    "Udr uniform symmetry",
+    "exact FU balanced block",
+    "exact UU=FF for alpha half at balanced condition",
+    "FF bracket near 2I",
+    "private drift close to -U actual LOO generator",
+    "private bracket near 2I nonuniform",
+    "gamma3 time sign model contrast",
+    "gamma4 response reversed",
+    "r1 clock mode",
+    "positive bounded signature",
+    "amplitude-units drop from sign formula",
+    "Gaussian KL strictly positive",
+    "Gaussian KL approx alpha squared",
+    "Gaussian covariance posdef",
+    "normalized null mode K(alpha)"
+  ],
+  "spectral": {
+    "Lambda3": "1.96140686197644570212063494677396151904294371",
+    "Lambda4": "2.19956884933321015048242494519976718434021492",
+    "Lambda5": "2.298606272079097200555239142880860820154803",
+    "Lambda6": "2.3421820411463005325374003681889455824253711"
+  },
+  "gamma": {
+    "3_A7": 0.16257283698729807,
+    "3_control": 0.1583033140277993,
+    "4_A7": 0.06088902967734011,
+    "4_control": 0.06515855263683912,
+    "1": 1
+  },
+  "frozen_alpha": 0.5,
+  "h": 1,
+  "snapshot_event": {
+    "p_A7": 0.786076982570207,
+    "p_control": 0.7884749677227849,
+    "p_difference": 0.0023979851525779416,
+    "equal_prior_risk": 0.49880100742371103
+  },
+  "sign_modes": {
+    "1": {
+      "p_A7": 0.6199160902124281,
+      "p_control": 0.6199160902124281
+    },
+    "3": {
+      "p_A7": 0.786076982570207,
+      "p_control": 0.7884749677227849
+    },
+    "4": {
+      "p_A7": 0.8624199990194619,
+      "p_control": 0.8579817781648382
+    }
+  },
+  "balanced_N120": {
+    "FF": [
+      [
+        1.9996295720645034,
+        3.2959746043559335e-17,
+        -7.563394355258879e-16
+      ],
+      [
+        3.2959746043559335e-17,
+        2.013714339149555,
+        -3.1317179752243796e-16
+      ],
+      [
+        -8.118505867571457e-16,
+        -3.201106914263452e-16,
+        2.015478386443779
+      ]
+    ],
+    "UU": [
+      [
+        1.9996295720645034,
+        3.2959746043559335e-17,
+        -7.563394355258879e-16
+      ],
+      [
+        3.2959746043559335e-17,
+        2.013714339149555,
+        -3.1317179752243796e-16
+      ],
+      [
+        -8.118505867571457e-16,
+        -3.201106914263452e-16,
+        2.015478386443779
+      ]
+    ],
+    "FU": [
+      [
+        -1.8041124150158794e-16,
+        -5.204170427930421e-18,
+        6.938893903907228e-18
+      ],
+      [
+        -5.204170427930421e-18,
+        2.7755575615628914e-17,
+        -1.9895109865109006e-17
+      ],
+      [
+        6.938893903907228e-18,
+        -1.2956215961201778e-17,
+        8.326672684688674e-17
+      ]
+    ]
+  },
+  "gaussian_resource_fixtures": [
+    {
+      "alpha": 0.02,
+      "M": 12,
+      "KL0_1": 3.724566969044243e-05
+    },
+    {
+      "alpha": 0.02,
+      "M": 24,
+      "KL0_1": 8.041277671704112e-05
+    },
+    {
+      "alpha": 0.01,
+      "M": 12,
+      "KL0_1": 1.2687821667873934e-05
+    },
+    {
+      "alpha": 0.01,
+      "M": 24,
+      "KL0_1": 2.88928035184628e-05
+    }
+  ],
+  "scope_warning": "Does not mechanically prove MT transfer, martingale FCLT, iid parent, or shrinking-alpha finite-N result."
+}

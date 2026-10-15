@@ -1,0 +1,22 @@
+{
+  "id": "SRN-RAW-ANGULAR-NATIVE-TRIANGULAR-V1",
+  "population": "N in 12 positive integers",
+  "block": "floor(N^(63/64)) fixed in advance",
+  "samples": "floor(N^(1/4))",
+  "times": "t_N+i, i=0..M-1",
+  "eta": "N^(-1/32), proof only, never observed",
+  "H": "1{|W3|>|W1|} (ties=0)",
+  "A": "mean(H_0,...,H_{M-1})",
+  "threshold": "0.5*(p_gamma0(k/N)+p_gammaPlus(k/N))",
+  "decision": "control iff A>threshold; primary otherwise",
+  "classifiers_use_hidden_proof_variables": false,
+  "scientific_status": "CONDITIONAL_NATIVE_RAW_COMMON_SCALE_INVARIANT_CONSISTENCY",
+  "not_covered": [
+    "independent gains",
+    "offsets",
+    "noise",
+    "erasure",
+    "optimum resource",
+    "physical calibration"
+  ]
+}

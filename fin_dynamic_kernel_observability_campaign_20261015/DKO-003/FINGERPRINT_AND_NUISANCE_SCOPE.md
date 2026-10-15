@@ -1,0 +1,5 @@
+# DKO-003 — What the temporal fingerprint distinguishes
+
+- **Shared:** Λ6, g_c, quartic critical soft process, the fixed-resolution one-tag parity law, one-slot microscopic attempt-clock convention, and the internal null harmonic r=1 (γ1=1). These are consequences of the *frozen* matched-family choices and conventions, not fundamental symmetry-only constants.
+- **Distinguishing:** γ3(A7)≠γ3(control); γ4 shifts oppositely. The sign correlation at fixed α and lag h is an injective function of γ when calibrated to the common null-mode q. The static contrast from KO used event |V3|>1 and required amplitude normalization; this bounded dynamic sign contrast cancels nonzero multiplicative gains but is not immune to offsets or sign errors.
+- **Meaning:** ideal model-ID contrast does not derive source A7, prove unique natural rank 7, establish a physical length or propagation speed, or show apparatus-level distinguishability. Statistical estimation requires repeated correlated records and a known observation convention; that distinct resource question is DKO-004.

@@ -1,0 +1,16 @@
+{
+  "models_gamma3": [
+    0.16257283698729807,
+    0.1583033140277993
+  ],
+  "fixed_h": 1,
+  "limit_order": [
+    "N->infinity at fixed alpha and fixed finite fast horizon",
+    "Gaussian-family alpha->0 and M->infinity"
+  ],
+  "W": "sqrt(alpha) V",
+  "K_ij": "alpha*exp(-gamma h |i-j|)/gamma +(1-alpha)*exp(-h |i-j|)",
+  "KL": "(1/2)[trace(K_b^-1 K_a-I)-logdet(K_b^-1 K_a)]",
+  "resource_theorem": "c M alpha^2 <= KL <= C M alpha^2 for alpha small; if M alpha^2->0 full amplitude ID impossible; if M alpha^2->infinity sign test successful",
+  "nonconclusion": "No joint shrinking-alpha_N / growing-fast-T_N theorem for finite-N FIN."
+}

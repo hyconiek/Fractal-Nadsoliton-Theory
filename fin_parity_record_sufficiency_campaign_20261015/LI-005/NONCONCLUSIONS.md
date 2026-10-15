@@ -1,0 +1,1 @@
+No new physical input, quantum/observer/irreversible-storage result, all-record sufficiency, source-selected A7, independently certified finite-N bound or accepted theorem beyond the stated mathematical scope.

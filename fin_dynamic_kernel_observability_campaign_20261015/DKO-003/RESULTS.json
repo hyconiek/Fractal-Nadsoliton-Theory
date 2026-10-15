@@ -1,0 +1,28 @@
+{
+  "task": "DKO-003",
+  "execution_status": "COMPLETED_ANALYTIC_PACKAGE",
+  "scientific_verdict": "BOUNDED_DYNAMIC_KERNEL_SIGN_CONTRAST",
+  "parent_model": "q12 labelled unit-clock leave-one-out heat bath at gc, primary A7",
+  "diagnostic_control": "A7+0.01(P3-P4)",
+  "readout": "preselected block q12 Fourier mean f1,f3,f4; alpha=0.5 for signature, fixed alpha in (0,1) for Gaussian cost benchmark",
+  "time_scope": "fixed fast model-time, observation at 0 and 1; time grows only later in Gaussian-family resource argument",
+  "initialization": "iid uniform initial, deterministic t_N after accepted MT relaxation with local/exit errors retained",
+  "objective": "Prove frozen two-time sign event and clock-unit/amplitude-gauge relation.",
+  "derived_objects": "Strict ideal difference in P(V3(0)V3(1)>0): control probability larger; gamma inversion from rho1 and rho3 is unique under shared clock and features.",
+  "supplied_objects": [
+    "A7",
+    "unit-attempt kinetics",
+    "critical gc",
+    "KO/MT stationary local window"
+  ],
+  "fitted_objects": [],
+  "arithmetic_status": "32 independent bounded assertions, not mechanical path theorem",
+  "error_budget": "Nominal decimals are working-precision, not certified outward intervals; one realization does not identify gamma.",
+  "dependencies": [
+    "accepted KO static intake",
+    "MT conditional Gibbs/coupling",
+    "source DKO plan",
+    "source manifest/hashes"
+  ],
+  "next_action": "Independent theorem intake; no physical promotion."
+}
