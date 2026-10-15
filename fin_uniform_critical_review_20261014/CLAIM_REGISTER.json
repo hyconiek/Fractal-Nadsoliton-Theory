@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-14",
+  "source_snapshot": "21a875c5",
+  "audit_start": "cf1bf9ae plus then-uncommitted SF/KI/UF files",
+  "verdict": "ACCEPT_SCOPED_IID_UNIFORM_CRITICAL_PATH_LIMIT_AND_NONCOMMUTING_OCCUPATION_LIMITS",
+  "source_unchanged": true,
+  "claims": [
+    {
+      "id": "UF-I01",
+      "status": "ADMITTED_REUSED_SPECTRAL_CONTRACT",
+      "statement": "Uniform g_c=12/Lambda6 has one null parity mode and ten strictly stable normalized occupation directions.",
+      "scope": "accepted exact spectral construction, not a new pitchfork or finite-N mixing gap",
+      "dependencies": ["accepted spectral enclosures", "rank7 Fourier construction"],
+      "evidence": ["../fin_uniform_critical_campaign_20261014/UF-001_UNIFORM_CONTRACT_AND_INITIAL_PROOF.md", "verification.json"],
+      "level": "M"
+    },
+    {
+      "id": "UF-I02",
+      "status": "ADMITTED_ANALYTIC_IID_INITIAL_MOMENTS",
+      "statement": "The stated iid-uniform initial ensemble has fast second/fourth moments O(N^-1)/O(N^-2) and N^(1/4)m_N(0)->0 in L2.",
+      "scope": "statistical initial-law premise, not Gibbs initialization, independence at later times or cosmological source",
+      "dependencies": ["iid bounded initial labels", "exact occupation projection"],
+      "evidence": ["INTAKE_20261014.md", "verification.json"],
+      "level": "M"
+    },
+    {
+      "id": "UF-I03",
+      "status": "ADMITTED_MICROSCOPIC_CHARACTERISTICS_AND_SELECTION",
+      "statement": "Actual LOO HB/MET/BAR have common critical cubic/noise coefficients, and shift-two force/mobility cancellation removes the dangerous linear fast term.",
+      "scope": "three supplied g0-matched rules; MET locally Lipschitz, not C3; no exact finite-N parity lumpability",
+      "dependencies": ["frozen microscopic rates", "C6 subgroup fixed-space decomposition", "positive logarithmic-mean mobility"],
+      "evidence": ["../fin_uniform_critical_campaign_20261014/UF-002_PARITY_COEFFICIENTS_AND_CONTROLS.md", "INTAKE_20261014.md"],
+      "level": "M"
+    },
+    {
+      "id": "UF-I04",
+      "status": "ADMITTED_ANALYTIC_FINITE_HORIZON_CRITICAL_PATH_LIMIT",
+      "statement": "At g_N=g_c+lambda N^-1/2 and iid-uniform start, N^(1/4)m_N(N^(1/2)s) converges to dZ=(chi lambda Z-Z^3/3)ds+sqrt(2)dB, Z0=0.",
+      "scope": "Skorokhod J1 for each finite horizon and fixed bounded lambda; three declared rules; exact spectrum/backend premises; not formalized or peer reviewed",
+      "dependencies": ["UF-I01", "UF-I02", "UF-I03", "actual energy and N^-1/5 tube control", "joint stopped-clock/UI identification", "nonexplosion localization"],
+      "evidence": ["../fin_uniform_critical_campaign_20261014/UF-003_CRITICAL_PROCESS_THEOREM_AND_ENERGY.md", "INTAKE_20261014.md"],
+      "level": "M conditional"
+    },
+    {
+      "id": "UF-I05",
+      "status": "ADMITTED_LIMITING_DIFFUSION_EQUILIBRIUM",
+      "statement": "The limiting diffusion has unique symmetric invariant density proportional to exp(chi lambda z^2/2-z^4/12), with the stated exact lambda0 Gamma moments.",
+      "scope": "limiting one-dimensional law, not full finite-N Gibbs or uniform-in-time convergence; no unique sign selector/Born rule",
+      "dependencies": ["UF-I04", "confining quartic potential and nondegenerate noise"],
+      "evidence": ["../fin_uniform_critical_campaign_20261014/UF-004_QUARTIC_VS_FULL_GIBBS.md", "verification.json"],
+      "level": "M"
+    },
+    {
+      "id": "UF-I06",
+      "status": "ADDED_EXACT_EQUILIBRIUM_EXCLUSION_BOUND",
+      "statement": "For every positive integer N and g in [5,6], pi_N,g(||p-u||_2<=1/10)<=min(1,(N+1)^12 exp(-11N/20)).",
+      "scope": "exact rational payments conditional on accepted spectra and supplied all-pairs Gibbs model; not a process TV, mixing, capacity or exit bound",
+      "dependencies": ["A00>5/4", "norm(A)<5/2", "log12<5/2", "exact one-colour type weight", "finite-type upper bound"],
+      "evidence": ["GIBBS_EXCLUSION_PROOF.md", "GIBBS_EXCLUSION_CERTIFICATE.json", "check_gibbs_certificate.py"],
+      "level": "M exact arithmetic with inherited input assumptions"
+    },
+    {
+      "id": "UF-I07",
+      "status": "ADMITTED_FULL_OCCUPATION_LIMIT_ORDER_DISCREPANCY",
+      "statement": "N first at fixed scaled horizons yields occupation near u; infinite time first gives Gibbs with exponentially vanishing mass in the specified ball.",
+      "scope": "named full-occupation event; no assumed scalar-parity discrepancy, unbounded moment interchange or finite-N escape timescale",
+      "dependencies": ["UF-I04", "UF-I06", "finite-N irreducibility and Gibbs stationarity"],
+      "evidence": ["INTAKE_20261014.md", "GIBBS_EXCLUSION_PROOF.md"],
+      "level": "M"
+    },
+    {
+      "id": "UF-I08",
+      "status": "ARCHITECT_PLAN_ONLY",
+      "statement": "Pay a finite-N local domain, iid-start trapping, conditional Gibbs scaling and a separate local-relaxation gate before claiming a metastable effective-law window.",
+      "scope": "MT unexecuted; reflection is an auxiliary comparison, not a new physical wall; no B4 or autonomous-bit promotion",
+      "dependencies": ["MT-001 domain/coverage", "MT-002 trapping", "MT-003 conditional law", "MT-004 actual local-relaxation proof"],
+      "evidence": ["MT_DECISION.md", "TRAPPING_PROOF_ROUTE.md", "../FIN_CRITICAL_METASTABILITY_NEXT_CHAIN_20261014.md"],
+      "level": "M research target, not PP/EV"
+    }
+  ],
+  "unpaid_gates": [
+    "long finite-N trapping and local relaxation window", "explicit dynamic finite-N TV and constants",
+    "matching global exit/capacity/Gamma=B4 and residence-time moments", "autonomous parity-bit/strict selector claims",
+    "natural kernel/kinetics/gain/initial-state source", "physical units/locality/conservation and calibration/EV",
+    "FIN-M0/task337/task335/legacy role transfer", "QM/GR/SM/L_total/ToE"
+  ]
+}

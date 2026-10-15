@@ -1,0 +1,16 @@
+{
+  "ID": "OBS_FIXED_K_TAGGED_TIME_INTEGRAL_V1",
+  "primary": "HB only",
+  "k": "fixed finite integer >=1",
+  "Y_N": "N^-1/4 integral_{t_N}^{t_N+sqrt N*s} m_B(t) dt",
+  "state": "Z_N=N^(1/4)m_N(t_N+sqrt N*s)",
+  "limit": "dZ=(chi*lambda*Z-Z^3/3)ds+sqrt(2)dB; dY=Z ds+sqrt(2/k)dW",
+  "initial": "Z(0)~rho_lambda stationary 1d; Y(0)=0",
+  "cross_noise": "B,W independent innovations",
+  "finite_N_error_terms": {
+    "endpoint": "<=4*N^-1/4",
+    "LOO_force_integral": "<=C*S*N^-3/4"
+  },
+  "evidence_level": "model theorem submission, conditional on inherited MT/UF",
+  "kinetic_controls": "MET/BAR open; do not apply HB private corrector"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "q12 A7, labelled unit-clock LOO HB",
+  "version": "OBS-C01-v1",
+  "gain": "g_N=g_c+lambda/sqrt(N), exact implicit g_c=12/Lambda6",
+  "N_scope": "N divisible by 12 as in inherited MT",
+  "generator": "sum_a sum_j softmax_j[(g_N/N)A(n-e_{xi_a})]*(f(xi^a->j)-f(xi))",
+  "slots": "fixed, predetermined without trajectory selection",
+  "parity": "sigma_j=(-1)^j",
+  "projection": "count generator from the actual labelled generator",
+  "initial": "iid uniform, then deterministic t_N after MT polynomial local mixing",
+  "observation_origin": "t_N>=t_loc(N); t_N+sqrt(N) S<= exp(c N) for fixed c<b and fixed S",
+  "exchangeability": "exact at each deterministic time; conditional count orbit uniform",
+  "orbit_lift_TV": "isometry from count TV to full labelled orbit-mixture TV",
+  "path_coupling": "same labelled semigroup after t_N; mismatch<=MT TV; reflect only outside-count edges",
+  "physical_source": "NO_NEW_SOURCE",
+  "measured_data": "NONE",
+  "fitted_objects": []
+}

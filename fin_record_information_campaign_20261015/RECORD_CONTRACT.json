@@ -1,0 +1,21 @@
+{
+  "version": "RI-001",
+  "primary_parent": "existing labelled q12 unit-attempt leave-one-out heat-bath, exact g_N and A7 source premise",
+  "exact_state": "(n,b_1,...,b_k) with n_i >= #{h: b_h=i}",
+  "tagged_rate": "for b_h=i, i!=j: R_ij(n) = softmax_j[(g_N/N) A(n-e_i)]",
+  "untagged_rate": "(n_i-c_i(b)) R_ij(n)",
+  "self_attempts": "zero off-diagonal generator contribution; attempt clock unchanged",
+  "record_ids": {
+    "TAG_PARITY_PATH_N": "entire parity jump history of frozen tags",
+    "TAG_Q12_PATH_N": "entire underlying label histories, strictly richer than parity",
+    "EXACT_INTEGRAL_PATH_N": "entire microscopic integral Y_N; for k=1 determines parity path via right derivative",
+    "QUANTIZED_TWO_INCREMENT_N": "frozen 2 increments, 3 bins each, 9 outcomes",
+    "CONTINUOUS_MESOSCOPIC_Y": "continuous diffusion-record path with independent Brownian driving noise"
+  },
+  "time_origin": "deterministic t_N after accepted MT burn-in; no post-selection; horizon 1 scaled",
+  "lambda": 0,
+  "k": 1,
+  "gain": "g_N=12/Lambda6+0/sqrt(N), exact implicit spectral input",
+  "N_scope": "large N multiple of 12 in accepted MT window",
+  "new_microscopic_law": false
+}

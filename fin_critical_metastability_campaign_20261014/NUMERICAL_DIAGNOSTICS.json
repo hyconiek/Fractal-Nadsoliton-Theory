@@ -1,0 +1,381 @@
+{
+  "title": "MT bounded numerical checks",
+  "status": "nominal binary64, no stochastic simulation or interval enclosure",
+  "q": 12,
+  "critical_gain_nominal": 5.123427551398615,
+  "chi_nominal": 0.1951818367621917,
+  "parity_eigenvalue_nominal": 2.3421820411463004,
+  "fast_gap_nominal": 0.018604774651024503,
+  "Hfast_lower_using_accepted_gap_and_gain_cap_nominal": 0.08804729713515183,
+  "domain": {
+    "epsilon": 0.01,
+    "fast_outer_radius": 0.0001,
+    "sublevel_h": 1e-10,
+    "boundary_b": 5e-11,
+    "allowed_gain_deviation_for_hessian": 0.001
+  },
+  "checks_passed": 57,
+  "checks_total": 57,
+  "checks": [
+    {
+      "name": "A PSD",
+      "pass": true,
+      "nominal_diagnostic": -3.875938398871651e-16
+    },
+    {
+      "name": "constant A diagonal",
+      "pass": true,
+      "nominal_diagnostic": 2.220446049250313e-16
+    },
+    {
+      "name": "unique parity top",
+      "pass": true,
+      "nominal_diagnostic": 0.018604774651024503
+    },
+    {
+      "name": "certified-input lower fast Hess at cylinder",
+      "pass": true,
+      "nominal_diagnostic": 0.08804729713515183
+    },
+    {
+      "name": "explicit h below both cylinder boundary lower bounds",
+      "pass": true,
+      "nominal_diagnostic": [
+        4.166666666666667e-10,
+        4e-10
+      ]
+    },
+    {
+      "name": "parity exact FE m=-0.01 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.7242457363224437e-09,
+        1.7242457913185989e-09
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.01 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": 1.6830944206635311e-15
+    },
+    {
+      "name": "parity exact FE m=-0.01 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": [
+        8.3336662040184e-10,
+        8.333666679034477e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.01 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": 1.6807475790674885e-15
+    },
+    {
+      "name": "parity exact FE m=-0.01 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": [
+        -5.751250043833098e-11,
+        -5.751245551170346e-11
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.01 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": 1.6830992009030055e-15
+    },
+    {
+      "name": "parity exact FE m=-0.005 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": [
+        2.748035882694583e-10,
+        2.7480363493419745e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.005 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": 1.7769054405006982e-15
+    },
+    {
+      "name": "parity exact FE m=-0.005 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": [
+        5.2083806177308364e-11,
+        5.208385408040966e-11
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.005 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": 1.7755639663386473e-15
+    },
+    {
+      "name": "parity exact FE m=-0.005 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": [
+        -1.7063597338729528e-10,
+        -1.7063592677337813e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=-0.005 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": 1.7769073163694767e-15
+    },
+    {
+      "name": "parity exact FE m=0.0 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.0986582014519773e-17,
+        0.0
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.0 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": 1.6770292792918357e-15
+    },
+    {
+      "name": "parity exact FE m=0.0 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.4456028966473393e-17,
+        0.0
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.0 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": 1.6770591604317308e-15
+    },
+    {
+      "name": "parity exact FE m=0.0 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": [
+        4.336808689942015e-18,
+        0.0
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.0 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": 1.677089041571626e-15
+    },
+    {
+      "name": "parity exact FE m=0.005 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": [
+        2.7480358847782843e-10,
+        2.7480363493419745e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.005 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": 1.7585435808997196e-15
+    },
+    {
+      "name": "parity exact FE m=0.005 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": [
+        5.208381883367466e-11,
+        5.208385408040966e-11
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.005 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": 1.757178004047018e-15
+    },
+    {
+      "name": "parity exact FE m=0.005 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": [
+        -1.706359815967386e-10,
+        -1.7063592677337813e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.005 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": 1.758542813488888e-15
+    },
+    {
+      "name": "parity exact FE m=0.01 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.7242457393582098e-09,
+        1.7242457913185989e-09
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.01 lambda=-1",
+      "pass": true,
+      "nominal_diagnostic": 1.719031292429946e-15
+    },
+    {
+      "name": "parity exact FE m=0.01 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": [
+        8.333666193786242e-10,
+        8.333666679034477e-10
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.01 lambda=0",
+      "pass": true,
+      "nominal_diagnostic": 1.716417896350658e-15
+    },
+    {
+      "name": "parity exact FE m=0.01 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": [
+        -5.7512498893342884e-11,
+        -5.751245551170346e-11
+      ]
+    },
+    {
+      "name": "fast stationary at parity m=0.01 lambda=1",
+      "pass": true,
+      "nominal_diagnostic": 1.7190247329823792e-15
+    },
+    {
+      "name": "HB finite-N detailed balance",
+      "pass": true,
+      "nominal_diagnostic": -6.608047442568932e-13
+    },
+    {
+      "name": "HB full off-diagonal rate upper 2N",
+      "pass": true,
+      "nominal_diagnostic": 2400
+    },
+    {
+      "name": "MET finite-N detailed balance",
+      "pass": true,
+      "nominal_diagnostic": -6.608047442568932e-13
+    },
+    {
+      "name": "MET full off-diagonal rate upper 2N",
+      "pass": true,
+      "nominal_diagnostic": 2400
+    },
+    {
+      "name": "BAR finite-N detailed balance",
+      "pass": true,
+      "nominal_diagnostic": -6.608047442568932e-13
+    },
+    {
+      "name": "BAR full off-diagonal rate upper 2N",
+      "pass": true,
+      "nominal_diagnostic": 2400
+    },
+    {
+      "name": "fast Hess sample 0",
+      "pass": true,
+      "nominal_diagnostic": 0.22170152393031575
+    },
+    {
+      "name": "coercivity sample 0",
+      "pass": true,
+      "nominal_diagnostic": [
+        2.1329935608509285e-08,
+        4.3558875580174044e-10
+      ]
+    },
+    {
+      "name": "fast Hess sample 1",
+      "pass": true,
+      "nominal_diagnostic": 0.22287003563364294
+    },
+    {
+      "name": "coercivity sample 1",
+      "pass": true,
+      "nominal_diagnostic": [
+        2.308720858583341e-09,
+        3.187633585951574e-11
+      ]
+    },
+    {
+      "name": "fast Hess sample 2",
+      "pass": true,
+      "nominal_diagnostic": 0.2227395973853986
+    },
+    {
+      "name": "coercivity sample 2",
+      "pass": true,
+      "nominal_diagnostic": [
+        9.781272069451759e-09,
+        2.9714299090169496e-10
+      ]
+    },
+    {
+      "name": "fast Hess sample 3",
+      "pass": true,
+      "nominal_diagnostic": 0.22304066048046647
+    },
+    {
+      "name": "coercivity sample 3",
+      "pass": true,
+      "nominal_diagnostic": [
+        7.012503700567645e-10,
+        3.1613297400399766e-11
+      ]
+    },
+    {
+      "name": "fast Hess sample 4",
+      "pass": true,
+      "nominal_diagnostic": 0.22260041780950587
+    },
+    {
+      "name": "coercivity sample 4",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.0781263317283583e-08,
+        1.6012405912835127e-10
+      ]
+    },
+    {
+      "name": "fast Hess sample 5",
+      "pass": true,
+      "nominal_diagnostic": 0.2230969218657749
+    },
+    {
+      "name": "coercivity sample 5",
+      "pass": true,
+      "nominal_diagnostic": [
+        4.541948148947182e-10,
+        3.0527990577960535e-11
+      ]
+    },
+    {
+      "name": "fast Hess sample 6",
+      "pass": true,
+      "nominal_diagnostic": 0.22268251239393572
+    },
+    {
+      "name": "coercivity sample 6",
+      "pass": true,
+      "nominal_diagnostic": [
+        1.9645580890243858e-08,
+        4.811916459834617e-10
+      ]
+    },
+    {
+      "name": "fast Hess sample 7",
+      "pass": true,
+      "nominal_diagnostic": 0.2226130147641088
+    },
+    {
+      "name": "coercivity sample 7",
+      "pass": true,
+      "nominal_diagnostic": [
+        2.4785488236450984e-08,
+        2.750403363947518e-10
+      ]
+    }
+  ],
+  "libraries": {
+    "numpy": "2.3.5"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "task": "MT-004",
+  "execution_status": "COMPLETED_AUTHOR_SUBMITTED",
+  "scientific_verdict": "POLYNOMIAL_LOCAL_MIXING_WINDOW_PROOF_SUBMITTED",
+  "supplied_objects": [
+    "q12 exact A7 kernel",
+    "g_c exact spectral root",
+    "LOO HB count generator",
+    "iid uniform initial law",
+    "fixed g0 MET/BAR controls",
+    "accepted relative gap gamma>0.0186"
+  ],
+  "derived_objects": [
+    "MT-004_REFLECTED_MIXING_WINDOW.md"
+  ],
+  "fitted_objects": [],
+  "proof_scope": {
+    "N": "sufficiently large multiples of 12",
+    "lambda": "bounded fixed interval",
+    "domain": "|m|<1/100, ||w||<1/10000, F<=1e-10",
+    "time": "model time up to exp(cN) c<5e-11"
+  },
+  "arithmetic_status": "analytic inequalities + exact Fraction geometry conditional on inherited spectral premise + binary64 diagnostics; no finite-N N0 or gap coefficient certified",
+  "input_dependencies": [
+    "MT-001_COERCIVITY_CONNECTIVITY.md",
+    "MT-002_IID_TRAPPING.md",
+    "MT-003_CONDITIONAL_GIBBS.md"
+  ],
+  "discrepancies": [],
+  "independent_review": "OPEN",
+  "next_action": "Independent MT discrete-path proof audit; architect decision after intake"
+}

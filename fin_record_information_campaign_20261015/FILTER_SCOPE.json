@@ -1,0 +1,15 @@
+{
+  "filter_equation": "dpi(f)=pi(Gf)ds+(k/2)*(pi(zf)-pi(z)pi(f))*(dY-pi(z)ds)",
+  "filter_id": "RI_LIMIT_KS_QUARTIC_STATIONARY",
+  "finite_N_filter_convergence": false,
+  "gain_lambda": 0,
+  "innovation": "sqrt(k/2)*(Y-int pi(z)ds) is Brownian in the observation filtration",
+  "k": 1,
+  "kalman_closure": false,
+  "moment_payment": "quartic stationary E exp(a Z^2)<infty all finite a; Jensen handles exp(a int Z^2) for finite S",
+  "observation_equation": "dY=z ds+sqrt(2/k)dW",
+  "physical_detector": false,
+  "scope": "limiting signal-observation diffusion, not finite N",
+  "signal_generator": "Gf=-z^3 fprime/3+fdoubleprime",
+  "uniqueness_scope": "Kallianpur-Striebel normalized admissible conditional-law solution"
+}

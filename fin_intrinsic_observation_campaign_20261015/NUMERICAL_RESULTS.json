@@ -1,0 +1,175 @@
+{
+  "scope": "numerical tests of exact finite formulas and illustrative limiting integrals; no physical records",
+  "q": 12,
+  "chi": 0.1951818367621917,
+  "gc_nominal": 5.123427551398615,
+  "exact_hypergeom_checks": [
+    {
+      "N": 12,
+      "M": 6,
+      "k": 4,
+      "support": [
+        0,
+        4
+      ],
+      "sum": 1.0,
+      "mean_error": 0.0,
+      "variance_error": 0.0
+    },
+    {
+      "N": 24,
+      "M": 14,
+      "k": 6,
+      "support": [
+        0,
+        6
+      ],
+      "sum": 1.0,
+      "mean_error": 0.0,
+      "variance_error": 0.0
+    },
+    {
+      "N": 120,
+      "M": 66,
+      "k": 12,
+      "support": [
+        0,
+        12
+      ],
+      "sum": 1.0,
+      "mean_error": 0.0,
+      "variance_error": 0.0
+    },
+    {
+      "N": 144,
+      "M": 66,
+      "k": 12,
+      "support": [
+        0,
+        12
+      ],
+      "sum": 1.0,
+      "mean_error": 0.0,
+      "variance_error": -4.440892098500626e-16
+    }
+  ],
+  "two_block_checks": [
+    {
+      "N": 12,
+      "M": 6,
+      "k1": 3,
+      "k2": 4,
+      "total": 1.0,
+      "cov_h": -0.27272727272727265,
+      "cov_error": 5.551115123125783e-17
+    },
+    {
+      "N": 24,
+      "M": 14,
+      "k1": 4,
+      "k2": 6,
+      "total": 1.0,
+      "cov_h": -0.2536231884057971,
+      "cov_error": 0.0
+    },
+    {
+      "N": 120,
+      "M": 66,
+      "k1": 12,
+      "k2": 11,
+      "total": 0.9999999999999999,
+      "cov_h": -0.27453781512605036,
+      "cov_error": 5.551115123125783e-17
+    }
+  ],
+  "labelled_generator_checks": [
+    {
+      "N": 12,
+      "k": 1,
+      "m": -0.5,
+      "mB": -1.0,
+      "v": -0.5,
+      "Lv": 0.5435138175527737,
+      "Lm": 0.058233956794664365,
+      "LmB": 0.6017477743474381,
+      "forcing": 0.043513817552773726,
+      "bracket_v": 1.1404344257147345,
+      "bracket_m": 0.13752146846900437,
+      "bracket_cross": -0.03723017274443135,
+      "ideal_stationary_private_bracket": 1.8333333333333333,
+      "count_projection_error": 3.469446951953614e-17,
+      "count_bracket_error": 2.7755575615628914e-17,
+      "forcing_times_N": 0.5221658106332847
+    },
+    {
+      "N": 24,
+      "k": 2,
+      "m": -0.08333333333333333,
+      "mB": 0.0,
+      "v": 0.08333333333333333,
+      "Lv": -0.08712648609454979,
+      "Lm": 0.02568398187081981,
+      "LmB": -0.06144250422372999,
+      "forcing": -0.003793152761216459,
+      "bracket_v": 0.9589861957697756,
+      "bracket_m": 0.08643808002034653,
+      "bracket_cross": 0.0008167315545964075,
+      "ideal_stationary_private_bracket": 0.9166666666666666,
+      "count_projection_error": 2.7755575615628914e-17,
+      "count_bracket_error": 0.0,
+      "forcing_times_N": -0.09103566626919501
+    },
+    {
+      "N": 120,
+      "k": 3,
+      "m": 0.08333333333333333,
+      "mB": 0.3333333333333333,
+      "v": 0.25,
+      "Lv": -0.25181495138471327,
+      "Lm": -0.001019828412292793,
+      "LmB": -0.2528347797970059,
+      "forcing": -0.0018149513847132703,
+      "bracket_v": 0.6377567941415364,
+      "bracket_m": 0.016689065565378126,
+      "bracket_cross": -0.0003451779712686853,
+      "ideal_stationary_private_bracket": 0.6499999999999999,
+      "count_projection_error": 7.37257477290143e-18,
+      "count_bracket_error": 0.0,
+      "forcing_times_N": -0.21779416616559244
+    },
+    {
+      "N": 120,
+      "k": 12,
+      "m": 0.2,
+      "mB": -0.3333333333333333,
+      "v": -0.5333333333333333,
+      "Lv": 0.537605154993251,
+      "Lm": -0.0047773695988951054,
+      "LmB": 0.5328277853943558,
+      "forcing": 0.004271821659917685,
+      "bracket_v": 0.15928216633288447,
+      "bracket_m": 0.016143666708084464,
+      "bracket_cross": 0.0017486457450155274,
+      "ideal_stationary_private_bracket": 0.15,
+      "count_projection_error": -4.423544863740858e-17,
+      "count_bracket_error": -6.938893903907228e-18,
+      "forcing_times_N": 0.5126185991901222
+    }
+  ],
+  "bounded_sign_risk_nominal": {
+    "distribution": "quartic lambda0",
+    "alpha": {
+      "0.25": 0.331759462062961,
+      "1.0": 0.21821718342839602,
+      "4.0": 0.11731473323071566
+    },
+    "risk_sign_tie": "zero in continuous limit",
+    "method": "scipy.quad + scipy.special.ndtr; NOT outward interval"
+  },
+  "critical_private_ou_increment_variance_alpha1_delta_modeltime1": 1.2642411176571153,
+  "integrated_fixed_tag_bracket_target": {
+    "1": 2.0,
+    "2": 1.0,
+    "3": 0.6666666666666666
+  }
+}

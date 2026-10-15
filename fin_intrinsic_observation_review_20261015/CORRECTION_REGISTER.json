@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-15",
+  "historical_source_modified": false,
+  "corrections": [
+    {
+      "id": "OBS-FIX-001",
+      "object": "source_context/MT_INTAKE_USER.md",
+      "finding": "The attachment is the MT research plan, not the accepted MT intake.",
+      "correction": "Bind the real local MT intake, proof completions and manifest. Do not attest historical executor access.",
+      "status": "LOCAL_DEPENDENCY_REPAIRED_HISTORICAL_ACCESS_UNATTESTED",
+      "evidence": "verification.json: provenance_discrepancy and input_hashes"
+    },
+    {
+      "id": "OBS-FIX-002",
+      "object": "observation_core.py:joint_hypergeom_pmf",
+      "finding": "Impossible first-block outcomes can raise ValueError instead of returning zero.",
+      "fixture": [12, 2, 4, 3, 3, 0],
+      "expected_exact_probability": "0",
+      "correction": "Separately versioned exact helper observation_kernels.py validates contracts and short-circuits zero first factors.",
+      "status": "CORRECTED_HELPER_TESTED_SOURCE_ARCHIVED"
+    },
+    {
+      "id": "OBS-FIX-003",
+      "object": "OBS-C02 large-block L2 / OBS-C03 lim Var wording",
+      "finding": "An unspecified iid-to-local TV error does not transfer unbounded scaled moments.",
+      "correction": "Admit large-block L2 only for the stationary local comparison, probability convergence for actual post-window iid starts, and the Gaussian increment-law variance rather than an unpaid finite-N variance limit.",
+      "status": "MOMENT_SCOPE_QUALIFIED_NO_EXTRA_UI_CLAIM"
+    },
+    {
+      "id": "OBS-FIX-004",
+      "object": "Interpretation of the integrated-record weak limit",
+      "finding": "Weak joint convergence alone does not imply posterior/filter, entropy, MI or statistical-experiment convergence.",
+      "correction": "Keep information sufficiency open; select a fixed finite-resolution predictive experiment and a separate likelihood-level gate.",
+      "status": "UNSUPPORTED_PROMOTION_PREVENTED"
+    }
+  ]
+}

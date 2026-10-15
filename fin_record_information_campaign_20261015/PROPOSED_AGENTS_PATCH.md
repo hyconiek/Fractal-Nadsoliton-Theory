@@ -1,0 +1,3 @@
+# Proposed, NOT applied, AGENTS entry
+
+RI-001–RI-005 (2026-10-15) submitted mathematical observation analysis: exact tagged/count quotient and record sigma-fields; fixed finite 9×3 sign prediction probabilities and risk converge under admitted OBS joint path theorem; strict qualitative prediction advantage; limiting nonlinear causal filter with quartic stationary moment payment; exact finite-N parity path likelihood; full-record equivalence remains OPEN as RI-LIKELIHOOD-UI. No certified numeric risk or finite-N rate, no posterior/MI/entropy convergence, no physical detector/source/time/geometry/QM/GR/ToE conclusions. RI package deliberately excludes all prior research archives.

@@ -1,0 +1,12 @@
+{
+  "model": "snapshot k fixed tags, population plus count M",
+  "formula": "comb(M,h)*comb(N-M,k-h)/comb(N,k)",
+  "support": "max(0,k-(N-M))<=h<=min(k,M)",
+  "block_parity_mean": "m_B=2h/k-1",
+  "mean": "m_N=2M/N-1",
+  "variance": "(1-m_N^2)*(N-k)/(k*(N-1))",
+  "two_disjoint_blocks": "first hypergeom × second hypergeom conditional on h1",
+  "cross_covariance": "Cov(m_B1,m_B2|m_N)=-(1-m_N^2)/(N-1)",
+  "tie_cases": "h=k/2 or M=N/2 recorded, not silently relabelled",
+  "self_report": "exact combinatorics, no independence at finite N"
+}

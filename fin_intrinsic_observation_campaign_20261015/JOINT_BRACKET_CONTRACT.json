@@ -1,0 +1,24 @@
+{
+  "full_generator": "frozen labelled LOO HB",
+  "v": "m_B-m_N",
+  "drift": "L v=-v+e_N, abs(e_N)<=C/N uniformly",
+  "c_a": "1_{a in B}/k-1/N",
+  "h_a": "2*(1-S_a*q_{xi_a})",
+  "q_i": "sum_j sigma_j softmax_j((g_N/N) A(n-e_i))",
+  "Gamma_m": "sum_a h_a/N^2",
+  "Gamma_v": "sum_a c_a^2 h_a",
+  "Gamma_m_v": "sum_a c_a h_a/N",
+  "scaled_limits": {
+    "Z": "2s",
+    "Y": "2s/k",
+    "cross": "0"
+  },
+  "jumps": {
+    "Z": "O(N^-3/4)",
+    "Y": "O(N^-1/4)"
+  },
+  "prior_critical_theorem": "UF actual-generator under MT random local equilibrium initial law",
+  "independence": "Brownian drivers independent from diagonal deterministic joint bracket; Z and Y not independent",
+  "finite_sample_interval_proof": "NONE",
+  "physical_instrument": "NONE"
+}

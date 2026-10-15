@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-15",
+  "baseline": "21a875c5 plus existing UF/MT/OBS worktree additions",
+  "source_manifest": {
+    "matched": 59,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "stage_inputs": {
+    "RI-001": {
+      "matched": 2,
+      "mismatches": 0
+    },
+    "RI-002": {
+      "matched": 2,
+      "mismatches": 0
+    },
+    "RI-003": {
+      "matched": 2,
+      "mismatches": 0
+    },
+    "RI-004": {
+      "matched": 2,
+      "mismatches": 0
+    },
+    "RI-005": {
+      "matched": 2,
+      "mismatches": 0
+    }
+  },
+  "OBS_review_manifest": {
+    "matched": 15,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "OBS_saved_inputs_unchanged": 10,
+  "declared_predecessor_bindings": {
+    "fin_intrinsic_observation_campaign_20261015/OBS-C01_LABELLED_TRANSFER.md": {
+      "sha256_match": true,
+      "size_match": true
+    },
+    "fin_intrinsic_observation_campaign_20261015/OBS-C02_SNAPSHOT_CHANNEL_THEOREM.md": {
+      "sha256_match": true,
+      "size_match": true
+    },
+    "fin_intrinsic_observation_campaign_20261015/OBS-C03_RAW_PATH_NO_GO.md": {
+      "sha256_match": true,
+      "size_match": true
+    },
+    "fin_intrinsic_observation_campaign_20261015/OBS-C04_INTEGRATED_RECORD_THEOREM.md": {
+      "sha256_match": true,
+      "size_match": true
+    }
+  },
+  "unavailable_historical_inputs": [
+    "executor AGENTS snapshot",
+    "uploaded RI plan original",
+    "OBS ZIP wrapper as an original mounted input"
+  ],
+  "custody_scope": "actual local reviews/plan are bound now; no remote access, old snapshot equality or historical timing attested",
+  "stored_grid_diagnostics": {
+    "COARSE": {
+      "risk": 0.413546810216493,
+      "unnormalized_total": 0.9999990926925947,
+      "sign_reversal_residual": 0.015352458992444522
+    },
+    "FINE": {
+      "risk": 0.4150831631875066,
+      "unnormalized_total": 0.9999985027018546,
+      "sign_reversal_residual": 1.0408340855860843e-15
+    },
+    "REFINED": {
+      "risk": 0.4155556055841356,
+      "unnormalized_total": 0.9999988882975832,
+      "sign_reversal_residual": 4.1494585545365226e-15
+    }
+  },
+  "generator_fixture": {
+    "N": 3,
+    "labelled_states": 1728,
+    "tag_count_states": 936,
+    "max_intertwining_residual": 2.220446049250313e-15,
+    "scope": "finite algebra diagnostic, not asymptotic critical data"
+  },
+  "likelihood_fixture": {
+    "N": 2,
+    "initial_branch_mass": 0.5000000000000001,
+    "zero_switch_probability": 0.4203975790183004,
+    "one_switch_probability": 0.07531120979538493,
+    "scope": "finite floating semigroup diagnostic; not a full-operation error certificate"
+  },
+  "feedback_KL_diagnostics": [
+    {
+      "N": 12,
+      "departure": 0,
+      "KL_point": 0.01676544812429046,
+      "range_squared_over8": 0.08951392874071466
+    },
+    {
+      "N": 12,
+      "departure": 1,
+      "KL_point": 0.021731819978579613,
+      "range_squared_over8": 0.08951392874071466
+    },
+    {
+      "N": 12,
+      "departure": 5,
+      "KL_point": 0.01977683647402475,
+      "range_squared_over8": 0.08951392874071466
+    },
+    {
+      "N": 120,
+      "departure": 0,
+      "KL_point": 0.00020586773853537412,
+      "range_squared_over8": 0.0008951392874071468
+    },
+    {
+      "N": 120,
+      "departure": 1,
+      "KL_point": 0.0002119774276846155,
+      "range_squared_over8": 0.0008951392874071468
+    },
+    {
+      "N": 120,
+      "departure": 5,
+      "KL_point": 0.00021038351168808315,
+      "range_squared_over8": 0.0008951392874071468
+    }
+  ],
+  "replay": {
+    "directory": "/tmp/fin-ri-intake-p0yu4my6/campaign",
+    "logs": {
+      "verify_package.py": {
+        "exit_code": 0,
+        "stdout": "MANIFEST PASS 59/59\n",
+        "stderr": ""
+      },
+      "independent_checks.py": {
+        "exit_code": 0,
+        "stdout": "checks 5626 passed 5626\n",
+        "stderr": ""
+      }
+    },
+    "source_flags": [
+      5626,
+      5626
+    ],
+    "grid_drift": {
+      "COARSE": {
+        "max_coordinate_difference": 1.6792123247455493e-15,
+        "risk": 0.4135468102164903
+      },
+      "FINE": {
+        "max_coordinate_difference": 2.7755575615628914e-17,
+        "risk": 0.4150831631875067
+      },
+      "REFINED": {
+        "max_coordinate_difference": 4.163336342344337e-17,
+        "risk": 0.4155556055841355
+      }
+    },
+    "independent_output_byte_equal": true
+  },
+  "input_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "fin_record_information_review_20261015/verify_intake.py": "9a0b51c264055e45eecb6882009d57728f6633fea493349efadb75a847190b0e",
+    "fin_record_information_campaign_20261015/MANIFEST.sha256": "702aae5752230bdc04bf1d33738611bc1e26b2595306e2974bfebd16ade6fe32",
+    "fin_intrinsic_observation_review_20261015/MANIFEST.sha256": "c8bea331cf247428a093f09debe943071ce2f41e69db8efb369043e38c88af43",
+    "fin_intrinsic_observation_review_20261015/PROOF_COMPLETIONS_AND_CORRECTIONS.md": "0536b62ed12ea3cd554179098329b10e74afb71967ad0edea765ceffbb15d494",
+    "FIN_RECORD_INFORMATION_NEXT_CHAIN_20261015.md": "b0eee7d9718d4826f23a98a83bafc875f29e3bd3a9a46b9ca5a8ecc7a3f93a01",
+    "fin_critical_metastability_review_20261015/PROOF_COMPLETIONS.md": "567b55c9507c54572a7c30bb35b7703e3d6ab936e7a2215e8769ae69948ea434"
+  },
+  "external_reference": {
+    "url": "https://arxiv.org/html/2606.09272v1",
+    "reading_scope": "sections5.3-5.5,6.1-6.2,8.1-8.2; uniqueness assumptions7.1 contrasted, not invoked for cubic drift",
+    "capture_sha256": "885ea4b6b721a708636798440351f1a8f68836c82ce3174d1d90df85c6c0380b"
+  },
+  "source_manifest_after": {
+    "matched": 59,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "checks": [
+    {
+      "name": "four declared OBS proof files locally bound",
+      "passed": true
+    },
+    {
+      "name": "fixed nine-record three-target contract",
+      "passed": true
+    },
+    {
+      "name": "COARSE stored grid finite normalization and risk arithmetic",
+      "passed": true
+    },
+    {
+      "name": "COARSE zero-target limiting-grid convention",
+      "passed": true
+    },
+    {
+      "name": "FINE stored grid finite normalization and risk arithmetic",
+      "passed": true
+    },
+    {
+      "name": "FINE zero-target limiting-grid convention",
+      "passed": true
+    },
+    {
+      "name": "REFINED stored grid finite normalization and risk arithmetic",
+      "passed": true
+    },
+    {
+      "name": "REFINED zero-target limiting-grid convention",
+      "passed": true
+    },
+    {
+      "name": "27 attached numerical cells are the REFINED grid, not certified bounds",
+      "passed": true
+    },
+    {
+      "name": "finite balanced-binary Bayes advantage identity",
+      "passed": true
+    },
+    {
+      "name": "actual q12 N3 tag-count generator intertwining",
+      "passed": true,
+      "labelled_states": 1728,
+      "quotient_states": 936,
+      "residual": 2.220446049250313e-15
+    },
+    {
+      "name": "actual N3 quotient rate and row sums",
+      "passed": true
+    },
+    {
+      "name": "killed blocks match independent uniformized visible-count laws",
+      "passed": true
+    },
+    {
+      "name": "conditional prior needs explicit initial-parity factor",
+      "passed": true
+    },
+    {
+      "name": "resetting killed diagonals incorrectly removes no-switch loss",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N12 old0",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N12 old1",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N12 old5",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N120 old0",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N120 old1",
+      "passed": true
+    },
+    {
+      "name": "tag-feedback categorical KL payment N120 old5",
+      "passed": true
+    },
+    {
+      "name": "COARSE replay numerical equivalence",
+      "passed": true
+    },
+    {
+      "name": "FINE replay numerical equivalence",
+      "passed": true
+    },
+    {
+      "name": "REFINED replay numerical equivalence",
+      "passed": true
+    }
+  ],
+  "status": "PASS_SCOPED_RI_INTAKE_CHECKS"
+}

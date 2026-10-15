@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-15",
+  "baseline": "21a875c5 plus preserved UF/MT working-tree additions",
+  "source_manifest": {
+    "matched": 69,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "source_inputs": {
+    "matched": 7,
+    "mismatches": 0
+  },
+  "stage_inputs": {
+    "OBS-C01": {
+      "matched": 8,
+      "mismatches": 0
+    },
+    "OBS-C02": {
+      "matched": 8,
+      "mismatches": 0
+    },
+    "OBS-C03": {
+      "matched": 8,
+      "mismatches": 0
+    },
+    "OBS-C04": {
+      "matched": 8,
+      "mismatches": 0
+    },
+    "OBS-C05": {
+      "matched": 8,
+      "mismatches": 0
+    }
+  },
+  "MT_review_manifest": {
+    "matched": 15,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "MT_scientific_inputs_unchanged": 6,
+  "provenance_discrepancy": {
+    "file": "source_context/MT_INTAKE_USER.md",
+    "actual_content": "format-transformed MT research plan, not the MT intake",
+    "actual_MT_intake_sha256": "ad16dac2ff755c3e8e915165b272ecf8ffa47303afd8322f9603effcf598c9ad",
+    "disposition": "inherited theorem paid by real local MT review and completions; no retroactive producer-access attestation"
+  },
+  "MT_archive": {
+    "matched": 56,
+    "mismatches": []
+  },
+  "actual_generator_fixtures": [
+    {
+      "N": 12,
+      "k": 1,
+      "drift": [
+        0.07088986693194366,
+        1.275371063272498
+      ],
+      "bracket": [
+        [
+          0.1744538736833789,
+          0.04992294801736121
+        ],
+        [
+          0.04992294801736121,
+          2.4182220906907808
+        ]
+      ],
+      "N_e": 1.3044527592699602
+    },
+    {
+      "N": 24,
+      "k": 2,
+      "drift": [
+        0.006941317623332482,
+        1.1282891618309931
+      ],
+      "bracket": [
+        [
+          0.08628112795563239,
+          0.008321411998894704
+        ],
+        [
+          0.008321411998894704,
+          1.0323065275009025
+        ]
+      ],
+      "N_e": 1.0789398839438213
+    },
+    {
+      "N": 120,
+      "k": 3,
+      "drift": [
+        -0.000278171860693575,
+        0.47047396718410545
+      ],
+      "bracket": [
+        [
+          0.016504291310543557,
+          0.0010491472588968266
+        ],
+        [
+          0.0010491472588968266,
+          0.6835349569492826
+        ]
+      ],
+      "N_e": 0.45687606209274256
+    },
+    {
+      "N": 120,
+      "k": 12,
+      "drift": [
+        -9.293268174964371e-05,
+        -0.08399032563934639
+      ],
+      "bracket": [
+        [
+          0.01668735111525503,
+          0.00011507884104158781
+        ],
+        [
+          0.00011507884104158781,
+          0.1511067907656273
+        ]
+      ],
+      "N_e": -0.07883907672156354
+    }
+  ],
+  "risk_point_diagnostics_not_certificates": {
+    "0.25": "0.3317594620629609355842527491660506127304",
+    "1.0": "0.2182171834283960289930475836264523108163",
+    "4.0": "0.1173147332307156330880176321653392040165"
+  },
+  "replay": {
+    "directory": "/tmp/fin-obs-intake-915ra19k/campaign",
+    "logs": {
+      "verify_package.py": {
+        "exit_code": 0,
+        "stdout": "{\"passed\": 132, \"total\": 132, \"all_pass\": true, \"purpose\": \"file-integrity/JSON validation, not proof of mathematical statements\"}\n",
+        "stderr": ""
+      },
+      "run_observation.py": {
+        "exit_code": 0,
+        "stdout": "wrote NUMERICAL_RESULTS.json; gc 5.123427551398615 risk alpha=1 0.218217183428396\n",
+        "stderr": ""
+      },
+      "independent_verify.py": {
+        "exit_code": 0,
+        "stdout": "checks 81 / 81 gc 5.1234275513986125 risk 0.21821718342839644\n",
+        "stderr": ""
+      }
+    },
+    "source_flags": [
+      81,
+      81
+    ],
+    "byte_equal": {
+      "NUMERICAL_RESULTS.json": false,
+      "INDEPENDENT_VERIFICATION.json": true
+    }
+  },
+  "source_helper_bug": {
+    "input": [
+      12,
+      2,
+      4,
+      3,
+      3,
+      0
+    ],
+    "expected_exact_probability": "0",
+    "historical_behavior": "raises ValueError instead of zero",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/tmp/fin-obs-intake-915ra19k/campaign/observation_core.py\", line 77, in joint_hypergeom_pmf\n    return hypergeom_pmf(N,M,k1,h1)*hypergeom_pmf(N-k1,M-h1,k2,h2)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/fin-obs-intake-915ra19k/campaign/observation_core.py\", line 59, in hypergeom_pmf\n    if not (0<=M<=N and 0<=k<=N):raise ValueError('range')\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: range\n",
+    "disposition": "source preserved; reviewed separate exact helper handles zero-support branch"
+  },
+  "input_hashes": {
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae",
+    "fin_intrinsic_observation_review_20261015/verify_intake.py": "dd6a62f2fa16ec092b2514f5efa2ad780800a553c210a3075083c251a0d8af72",
+    "fin_intrinsic_observation_review_20261015/observation_kernels.py": "c1e20be70c908f9cd3a8c4502e493974e5cb926c4d3cf7b3b89504bb3da3a990",
+    "fin_intrinsic_observation_campaign_20261015/MANIFEST.sha256": "f9810d7d7a4d805ad620676a4e8d4b28781e9dabdb1bd56a924449ce41cd0724",
+    "fin_critical_metastability_review_20261015/MANIFEST.sha256": "759ee62d3468d48f7c8bfa8d070bdfc7a9f82c85585005d11571b688bb9e1009",
+    "fin_critical_metastability_review_20261015/PROOF_COMPLETIONS.md": "567b55c9507c54572a7c30bb35b7703e3d6ab936e7a2215e8769ae69948ea434",
+    "FIN_INTRINSIC_OBSERVATION_NEXT_CHAIN_20261015.md": "54f613d74e9cf234f1ecb8a263e1ab4b7741fc7fcfce98afd95d2b9936237d60",
+    "fin_uniform_critical_review_20261014/INTAKE_20261014.md": "39c455fafac285ea46c93c2b7f675ffa720378dc2efc68aa55860982fc27da81",
+    "fin_uniform_critical_campaign_20261014/UF-003_CRITICAL_PROCESS_THEOREM_AND_ENERGY.md": "67214d0c2f5591deeb1ef44999a19386e2ebb37c5ca6bcd11a4e2645976b2f80",
+    "fin_stochastic_fold_closure_review_20261014/STOPPED_LIMIT_COMPLETION.md": "942b89fd89342e0473447b45a0eb162eabde39bec14b93ba3f2cfc88b1885829"
+  },
+  "primary_reference": {
+    "url": "https://arxiv.org/html/0712.1929v2",
+    "capture_sha256": "67869480352ff33d5720e9479e72a35bf8a09564d65263c19590bb10775bc1e3",
+    "reading_scope": "Theorem2.1(ii), Theorem5.3 and proof; characterization proof in5.1",
+    "Hajek": "not relied on as unread black-box theorem; direct bounded-draw martingale proof in review"
+  },
+  "source_manifest_after": {
+    "matched": 69,
+    "mismatches": 0,
+    "uncovered": []
+  },
+  "checks": [
+    {
+      "name": "FIN_INTRINSIC_OBSERVATION_NEXT_CHAIN_20261015.md normalized binding",
+      "passed": true,
+      "repo_sha256": "54f613d74e9cf234f1ecb8a263e1ab4b7741fc7fcfce98afd95d2b9936237d60",
+      "attached_sha256": "fd0e30963c7709a7e0498ff2380aef775c287932e4b1df6435df04e783d837bd",
+      "byte_equal": false
+    },
+    {
+      "name": "FIN_CRITICAL_METASTABILITY_NEXT_CHAIN_20261014.md normalized binding",
+      "passed": true,
+      "repo_sha256": "e58af388cd2ec95a52ba70733302b73cec44dacf2ccb1e05c0b6864b370e3f59",
+      "attached_sha256": "3bd84327ce332466e519b6fc0ee0628327244ec08b52a4982d15249d15acc9c8",
+      "byte_equal": false
+    },
+    {
+      "name": "mislabeled attachment not falsely accepted as MT intake",
+      "passed": true
+    },
+    {
+      "name": "MT archive members match actual predecessor",
+      "passed": true,
+      "members": 56
+    },
+    {
+      "name": "archived numerical core binding",
+      "passed": true
+    },
+    {
+      "name": "exact hypergeometric normalization mean and variance",
+      "passed": true,
+      "cases": 204
+    },
+    {
+      "name": "exact two-block allocation normalization support covariance",
+      "passed": true,
+      "cases": 52
+    },
+    {
+      "name": "new exact helper fails closed on invalid contracts",
+      "passed": true
+    },
+    {
+      "name": "versioned critical eigenvector and centered kernel",
+      "passed": true
+    },
+    {
+      "name": "critical numerical input binding",
+      "passed": true
+    },
+    {
+      "name": "actual tagged drift and all brackets N12 k1",
+      "passed": true
+    },
+    {
+      "name": "uniform LOO forcing and cross-payment N12 k1",
+      "passed": true
+    },
+    {
+      "name": "count drift bracket slot permutation N12 k1",
+      "passed": true
+    },
+    {
+      "name": "actual tagged drift and all brackets N24 k2",
+      "passed": true
+    },
+    {
+      "name": "uniform LOO forcing and cross-payment N24 k2",
+      "passed": true
+    },
+    {
+      "name": "count drift bracket slot permutation N24 k2",
+      "passed": true
+    },
+    {
+      "name": "actual tagged drift and all brackets N120 k3",
+      "passed": true
+    },
+    {
+      "name": "uniform LOO forcing and cross-payment N120 k3",
+      "passed": true
+    },
+    {
+      "name": "count drift bracket slot permutation N120 k3",
+      "passed": true
+    },
+    {
+      "name": "actual tagged drift and all brackets N120 k12",
+      "passed": true
+    },
+    {
+      "name": "uniform LOO forcing and cross-payment N120 k12",
+      "passed": true
+    },
+    {
+      "name": "count drift bracket slot permutation N120 k12",
+      "passed": true
+    },
+    {
+      "name": "uniform finite-jump noise diagnostic N120",
+      "passed": true
+    },
+    {
+      "name": "uniform finite-jump noise diagnostic N1200",
+      "passed": true
+    },
+    {
+      "name": "outside-primary swap diagnostic",
+      "passed": true
+    },
+    {
+      "name": "exact disjoint orbit TV isometry fixture",
+      "passed": true
+    },
+    {
+      "name": "independent mpmath quadrature of bounded sign risks",
+      "passed": true
+    },
+    {
+      "name": "OU limiting increment variance scalar",
+      "passed": true
+    },
+    {
+      "name": "source impossible-outcome bug reproduced and isolated",
+      "passed": true
+    }
+  ],
+  "status": "PASS_SCOPED_OBS_INTAKE_CHECKS"
+}
