@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-16",
+  "status": "bounded independent calculation, NOT proof of stochastic path theorem",
+  "inputs": {
+    "lambda3_nominal": "1.9614068619764455",
+    "lambda6_nominal": "2.3421820411463004",
+    "gamma3_derived_nominal": "0.16257283698729821697903774335048792500442807228265404125939107596"
+  },
+  "finite_jumps": {
+    "N": 12,
+    "block_slots": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "FF_f3": 1.9999999999999998,
+    "UU_f3": 1.9999999999999998,
+    "FU_f3": 0.9999999999999998,
+    "point": "mixed bracket nonzero statewise, only stationary averaged limit zero"
+  },
+  "working_precision": {
+    "kappa_1": {
+      "beta_s": "0.08488953507639211184459217068540714613247546275237521844477801674",
+      "beta_f": "1.9151104649236078881554078293145928538675245372476247815552219833",
+      "w_s": "0.95755523246180394407770391465729642693376226862381239077761099163",
+      "w_f": "0.04244476753819605592229608534270357306623773137618760922238900837",
+      "covariance_lags": [
+        "7.1510890658697787174452232952038434777164944526933374677429235317",
+        "5.816985341190273821322070299013866547468143792912464650145414901",
+        "5.1112920897043660672762814322143808607256575456684853787670265924",
+        "4.6163987467393192845856413594567487981886404343857588740915844701",
+        "4.2126240201366377403305441972769049543818283211582615633779076577"
+      ],
+      "rho_lags": [
+        "1.0",
+        "0.81344048264664713718086604974326729096018161358547747199769059208",
+        "0.71475715693420544805272314525590313602220057234870882620828895123",
+        "0.64555184591003720466256181108018248365433598014325216036579055922",
+        "0.58908845650410887983683841403432542664193237347839362063674781361"
+      ],
+      "filtered_H_normalized": "-0.00029406876701157967156478406135055356561938224962480127699252343411",
+      "lag1_sign_agreement": "0.80240806072242617962198344541922084807640673589899687618980314523"
+    },
+    "kappa_4": {
+      "beta_s": "0.13362964605055805899407136731125556111814222336694142322555509514",
+      "beta_f": "4.8663703539494419410059286326887444388818577766330585767744449049",
+      "w_s": "0.99388447567211228338764414141910779592640340842713990813662816163",
+      "w_f": "0.0061155243278877166123558585808922040735965915728600918633718383727",
+      "covariance_lags": [
+        "7.1510890658697787174452232952038434777164944526933374677429235317",
+        "5.7169315204055521065572324753322357552272242622798032996030277313",
+        "4.8150447765948054902331949433095956742819200539749445307907755733",
+        "4.144128637217456898158718316152531694960540014701850674108087023",
+        "3.6005125163229627562869644151129442502856844370319754492040339373"
+      ],
+      "rho_lags": [
+        "1.0",
+        "0.79944907240645706007533424571322420536868286256354852421060284673",
+        "0.67333027630374746928042681884992020698259029912226984491763202462",
+        "0.57951014160853712013499375548661875044295814562859503345017911307",
+        "0.50349149383514727214972122141288419010856259504406938206431228766"
+      ],
+      "filtered_H_normalized": "-0.0000041616270417453341357445036638666655194176377328358767518618170958",
+      "lag1_sign_agreement": "0.79487513778965778642145517339963059069391782254313985941092238773"
+    }
+  },
+  "interval_checks": {
+    "kappa_1": {
+      "assumed_gamma_bracket": [
+        "0.16257283698729",
+        "0.16257283698731"
+      ],
+      "interval_engine": "mpmath.iv dps=65",
+      "bound_via_iv_float_preview": [
+        -0.00029406876724457444,
+        -0.00029406876677858657
+      ],
+      "printed_interval": "[-0.0002940687672445744750050658083678723027867668286276297416258561370817102, -0.0002940687667785865923473965543145474497382543667292329334640110460879299]",
+      "certification_scope": "outward conditional interval only if gamma input bracket established by independent spectral source"
+    },
+    "kappa_4": {
+      "assumed_gamma_bracket": [
+        "0.16257283698729",
+        "0.16257283698731"
+      ],
+      "interval_engine": "mpmath.iv dps=65",
+      "bound_via_iv_float_preview": [
+        -4.161627213303464e-06,
+        -4.161626870187214e-06
+      ],
+      "printed_interval": "[-0.000004161627213303464836778533398743526996263616805375103230676637380423704, -0.000004161626870187214626182281819287394007700049902465012126080564117097608]",
+      "certification_scope": "outward conditional interval only if gamma input bracket established by independent spectral source"
+    }
+  },
+  "checks": [
+    {
+      "id": "exact-filtered-hankel-factor",
+      "pass": true,
+      "detail": "a*b*x*y*(-q + x)*(-q + y)*(x - y)**2"
+    },
+    {
+      "id": "one-pole-zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "ordinary-two-pole-curvature-positive",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "joint-lyapunov",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "global-F-drift-at-origin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "stationary-global-variance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "gamma-positive",
+      "pass": true,
+      "detail": "0.16257283698729821697903774335"
+    },
+    {
+      "id": "gamma-consistency-to-input",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k1-rates-order",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k1-positive-weights",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k1-weight-sum",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k1-filtered-hankel-sign",
+      "pass": true,
+      "detail": "-0.0002940687670115796715647841"
+    },
+    {
+      "id": "k1-independent-factor",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k1-sign-transform-roundtrip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k4-rates-order",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k4-positive-weights",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k4-weight-sum",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k4-filtered-hankel-sign",
+      "pass": true,
+      "detail": "-0.000004161627041745334135744504"
+    },
+    {
+      "id": "k4-independent-factor",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "k4-sign-transform-roundtrip",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "native-alpha-0.5-filtered-zero",
+      "pass": true,
+      "detail": "5.9347298410998742171707764184762232213881036460124656039248624943e-67"
+    },
+    {
+      "id": "native-positive-ordinary-Hankel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "native-alpha-1.0-filtered-zero",
+      "pass": true,
+      "detail": "1.0385777221924779880048858732333390637429181380521814806868509365e-66"
+    },
+    {
+      "id": "k1-outward-negative",
+      "pass": true,
+      "detail": "(-0.00029406876724457444, -0.00029406876677858657)"
+    },
+    {
+      "id": "k4-outward-negative",
+      "pass": true,
+      "detail": "(-4.161627213303464e-06, -4.161626870187214e-06)"
+    },
+    {
+      "id": "nonuniform-state-global-bracket",
+      "pass": true,
+      "detail": "1.9999999999999998"
+    },
+    {
+      "id": "nonuniform-state-private-bracket",
+      "pass": true,
+      "detail": "1.9999999999999998"
+    },
+    {
+      "id": "nonuniform-state-FU-nonzero",
+      "pass": true,
+      "detail": "0.9999999999999998"
+    },
+    {
+      "id": "labelled-null-parity-harmonic-orthogonality",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "feature-normalization-f3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "feature-normalization-f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "fixed-real-gain-sign-autocorr-1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "fixed-real-gain-sign-autocorr--4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "fixed-real-gain-sign-autocorr-0.13",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "null-reference-from-two-lags",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 35,
+  "total": 35
+}

@@ -1,0 +1,7 @@
+# MM-005 — VISIBLE_FEEDBACK_CONTRAST_IN_DECLARED_CLASS (conditional)
+
+The signed reference-filtered Gaussian-law functional is 0 for both native full/partial count observation controls and for every exact-native eta hidden reset lift, but negative for the two specified AUX-HB-OU-kappa stationary persistent-feedback diagnostics. The new fast-path argument derives the diagnostic limit from the existing mixed generator rather than reading it off from the static Gibbs measure or slow critical HM theorem. Its finite-model readout consequence follows conditionally by bounded path weak convergence with zero outcomes retained.
+
+**What it actually identifies:** within the fixed model family, block, feature maps, preparation, lag, null-reference clock and perfect readout contract, it detects a failure of the native partial-observation Gaussian mechanism. It does not recover a unique kappa from this one scalar statistic with unknown alpha; it does not identify any hidden physical medium or rule out broader coloured observation laws. The HM-005 exact eta lifts show genuine hidden-clock non-identifiability from *all count paths*. The primary FIN law is untouched.
+
+**Next specific physical prerequisite:** a separately licensed actual measurement/preparation/readout mapping including feature assignment, a valid null clock reference and bounded channel memory/errors. Without that, no empirical or natural mediator claim is activated. Return to architectural review; no further kappa, N, gain or time sweep.

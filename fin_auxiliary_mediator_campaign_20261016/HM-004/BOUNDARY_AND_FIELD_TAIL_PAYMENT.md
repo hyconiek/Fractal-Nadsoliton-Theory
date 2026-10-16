@@ -1,0 +1,3 @@
+# HM-004 boundary/field tail contract
+
+The field θ remains unbounded: its full conditional Gaussian law is included exactly; stationary conditional moments control |θ_perp|² and |h−m|^q. The reflected jump generator equals the unrestricted one off the one-step departure layer. At the layer, a count-parity drift magnitude ≤2 bounds the correction, hence in the scaled drift the contribution ≤2N^(3/4)π_D(B_D) on fixed times. The MT fixed local free-energy barrier should pay this; the relevant current review file was unavailable and the boundary condition is kept explicit in the theorem. This proof does NOT transfer to diagnostic iid starts or unreflected new-model paths without new trapping/coupling work.

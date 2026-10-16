@@ -1,0 +1,3 @@
+# HM-005 comparison of distinct auxiliaries
+
+(1) Ephemeral cavity ν_r+softmax: exactly reproduces single native LOO update; does not persist. (2) Reset lift: for each native count transition n→n′ redraw θ′∼ρ_n′, and optionally refresh θ∼ρ_n at arbitrary hidden rate η≥0. Joint Π_D reversible by native detailed balance; count process exactly native independent of η. (3) Persistent AUX-HB-OU-κ: same Π_D, but count projection has memory and different mobility. The alternatives show both *exact path nonidentifiability of hidden clock* (reset lifts) and *static nonidentifiability of kinetics* (persistent sampler). None selects a physical mediator.

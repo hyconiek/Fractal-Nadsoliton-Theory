@@ -1,0 +1,3039 @@
+arXiv is now an independent nonprofit!
+Learn more
+×
+Back to arXiv
+Why HTML?
+Report Issue
+Back to Abstract
+Download PDF
+References
+License: Assumed arXiv.org perpetual non-exclusive license
+arXiv:gr-qc/9406019v1 [gr-qc] 14 Jun 1994
+Von Neumann algebra automorphisms and time-thermodynamics relation in general covariant quantum theories
+A. Connes
+Institut des Hautes Etudes Scientifiques35 route de Chartres, 91440 Bures sur Yvette, France.
+C. Rovelli
+Physics Department, University of PittsburghPittsburgh, Pa 15260, USA,and Dipartimento di Fisica Universita’ di Trento, Italia.
+August 24, 2026
+
+Abstract
+
+We consider the cluster of problems raised by the relation between the notion of time, gravitational theory, quantum theory and thermodynamics; in particular, we address the problem of relating the ”timelessness” of the hypothetical fundamental general covariant quantum field theory with the ”evidence” of the flow of time. By using the algebraic formulation of quantum theory, we propose a unifying perspective on these problems, based on the hypothesis that in a generally covariant quantum theory the physical time-flow is not a universal property of the mechanical theory, but rather it is determined by the thermodynamical state of the system (”thermal time hypothesis”). We implement this hypothesis by using a key structural property of von Neumann algebras: the Tomita-Takesaki theorem, which allows to derive a time-flow, namely a one-parameter group of automorphisms of the observable algebra, from a generic thermal physical state. We study this time-flow, its classical limit, and we relate it to various characteristic theoretical facts, as the Unruh temperature and the Hawking radiation. We also point out the existence of a state-independent notion of ”time”, given by the canonical one-parameter subgroup of outer automorphisms provided by the Cocycle Radon-Nikodym theorem.
+
+1. Introduction
+
+The relations between time, gravity, thermodynamics and quantum theory form a cluster of unsolved problems and puzzling surprising theoretical facts. Among these there are the much debated ”issue of time” in quantum gravity [1, 2, 3], the lack of a statistical mechanics of general relativity [4], and the elusive thermal features of quantum field theory in curved spaces, which manifest themselves in phenomena as the Unruh temperature [5] or Hawking black hole radiation [6]. It is a common opinion that some of these facts may suggest the existence of a profound connection between general covariance, temperature and quantum field theory, which is not yet understood. In this work we discuss a unifying perspective on this cluster of problems.
+
+Our approach is based on a key structural property of von Neumann algebras. The links between some of the problems mentioned and central aspects of von Neumann algebras theory have already been noticed. A prime example is the relation between the KMS theory and the Tomita-Takesaki theorem [7]. Rudolf Haag describes this connection as “a beautiful example of ‘prestabilized harmony’ between physics and mathematics” ([7], pg. 216). Here, we push this relation between a deep mathematical theory and one of the most profound and unexplored areas of fundamental physics much further.
+
+The problem we consider is the following. The physical description of systems that are not generally covariant is based on three elementary physical notions: observables, states, and time flow. Observables and states determine the kinematics of the system, and the time flow (or the 1-parameter subgroups of the Poincare’ group) describes its dynamics. In quantum mechanics as well as in classical mechanics, two equivalent ways of describing the time flow are available: either as a flow in the state space (generalised Schrödinger picture), or as a one parameter group of automorphisms of the algebra of the observables (generalised Heisenberg picture). In classical Hamiltonian mechanics, for instance, the states are represented as points 
+𝑠
+ of a phase space 
+Γ
+, and observables as elements 
+𝑓
+ of the algebra 
+𝐴
+=
+𝐶
+∞
+​
+(
+Γ
+)
+ of smooth functions on 
+Γ
+. The hamiltonian, 
+𝐻
+, defines a flow 
+𝛼
+𝑡
+𝑆
+:
+Γ
+→
+Γ
+,
+ for every real 
+𝑡
+, on the phase space (generalised Schrödinger picture), and, consequently, a one parameter group of automorphism 
+OPEN
+(
+𝛼
+𝑡
+​
+𝑓
+)
+​
+(
+𝑠
+)
+=
+𝑓
+⁡
+(
+𝛼
+𝑡
+𝑆
+​
+𝑠
+)
+)
+ of the observable algebra 
+𝐴
+ (generalised Heisenberg picture).
+
+This picture is radically altered in general covariant theories (as general relativity [GR from now on], or any relativistic theory that incorporates the gravitational field, including, possibly, a background independent string theory). In a general covariant theory there is no preferred time flow, and the dynamics of the theory cannot be formulated in terms of an evolution in a single external time parameter. One can still recover weaker notions of physical time: in GR, for instance, on any given solution of the Einstein equations one can distinguish timelike from spacelike directions and define proper time along timelike world lines. This notion of time is weaker in the sense that the full dynamics of the theory cannot be formulated as evolution in such a time.1
+1
+Of course one should avoid the unfortunate and common confusion between a dynamical theory on a given curved geometry with the dynamical theory of the geometry, which is what full GR is about, and what we are concerned with here.
+ In particular, notice that this notion of time is state dependent.
+
+Furthermore, this weaker notion of time is lost as soon as one tries to include either thermodynamics or quantum mechanics into the physical picture, because, in the presence of thermal or quantum “superpositions” of geometries, the spacetime causal structure is lost. This embarrassing situation of not knowing “what is time” in the context of quantum gravity has generated the debated issue of time of quantum gravity. As emphasized in [4], the very same problem appears already at the level of the classical statistical mechanics of gravity, namely as soon as we take into account the thermal fluctuations of the gravitational field.2
+2
+The remark of the previous note applies here as well. Thermodynamics in the context of dynamical theories on a given curved geometry is well understood [8].
+ Thus, a basic open problem is to understand how the physical time flow that characterizes the world in which we live may emerge from the fundamental “timeless” general covariant quantum field theory [9].
+
+In this paper, we consider a radical solution to this problem. This is based on the idea that one can extend the notion of time flow to general covariant theories, but this flow depends on the thermal state of the system. More in detail, we will argue that the notion of time flow extends naturally to general covariant theories, provided that: i. We interpret the time flow as a 1- parameter group of automorphisms of the observable algebra (generalised Heisenberg picture); ii. We ascribe the temporal properties of the flow to thermodynamical causes, and therefore we tie the definition of time to thermodynamics; iii. We take seriously the idea that in a general covariant context the notion of time is not state-independent, as in non-relativistic physics, but rather depends on the state in which the system is.
+
+Let us illustrate here the core of this idea – a full account is given in sec. 3 below. Consider classical statistical mechanics. Let 
+𝜌
+ be a thermal state, namely a smooth positive (normalized) function on the phase space, which defines a statistical distribution in the sense of Gibbs [10]. In a conventional non-generally covariant theory, a hamiltonian 
+𝐻
+ is given and the equilibrium thermal states are Gibbs states 
+𝜌
+=
+𝑒
+​
+𝑥
+​
+𝑝
+​
+{
+−
+𝛽
+​
+𝐻
+}
+. Notice that the information on the time flow is coded into the Gibbs states as well as in the hamiltonian. Thus, the time flow 
+𝛼
+𝑡
+ can be recovered from the Gibbs state 
+𝜌
+ (up to a constant factor 
+𝛽
+, which we disregard for the moment). This fact suggests that in a thermal context it may be possible to ascribe the dynamical properties of the system to the thermal state, rather than to the hamiltonian: The Gibbs state determines a flow, and this flow is precisely the time flow.
+
+In a general covariant theory, in which no preferred dynamics and no preferred hamiltonian are given, a flow 
+𝛼
+𝑡
+𝜌
+, which we will call the thermal time of  
+𝜌
+, is determined by any  thermal state 
+𝜌
+. In this general case, one can postulate [4] that the thermal time 
+𝛼
+𝑡
+𝜌
+ defines the physical time.
+
+We obtain in this way a general state dependent definition of time flow in a general covariant context. If the system is not generally covariant and is in a Gibbs state, then this postulate reduces to the Hamilton equations, as we shall show. In the general case, on the other side, concrete examples show that the postulate leads to a surprisingly natural definition of time in a variety of instances [11]. In particular, the time flow determined by the cosmological background radiation thermal state in a (covariantly formulated) cosmological model turns out to be precisely the conventional Friedman-Robertson-Walker time [11]. In other words, we describe the universe we inhabit by means of a generally covariant theory without a preferred definition of time, but the actual thermal state that we detect around us and the physical flow that we denote as time are  linked by the postulate we have described.
+
+The fact that a state defines a one parameter family of automorphisms is a fundamental property of von Neumann algebras. The relation between a state 
+𝜔
+ over an algebra and a one parameter family of automorphisms 
+𝛼
+𝑡
+ of the algebra is the content of the Tomita-Takesaki theorem and is at the roots of von Neumann algebra classification, and therefore at the core of von Neumann algebra theory [12]. The link between a thermal state and a time flow described above can be seen as a special case of such a general relation. This observation opens the possibility of widely extending the application of the idea described above, and to relate this idea to powerful mathematical results on the one side, and to the thermal properties of accelerated states in quantum field theory on the other side:
+
+The observables of a quantum system form a 
+𝐶
+⋆
+-algebra. States are positive linear functionals over the algebra. In a non-generally covariant theory, the definition of the theory is completed by the hamiltonian, or, equivalently, by a representation of the Poincare’ group. In a generally covariant theory, on the other side, we have only the algebra of the gauge invariant observables and the states [3]. Given a state, the Tomita-Takesaki theorem provides us with a 1-parameter group of automorphisms 
+𝛼
+𝑡
+ of the weak closure of the algebra, the modular group. Thus, we may extend the thermal time postulate to the quantum theory, by assuming that
+
+• 
+
+the physical time is the modular flow of the thermal state.
+
+We obtain a state dependent definition of the physical time flow in the context of a generally covariant quantum  field theory. We will show in sec. 4 that the classical limit of the flow defined by the modular group is the flow considered above in the classical theory.
+
+One of the consequences of this assumption is that the puzzling thermal properties of quantum field theory in curved space, manifested in particular by the Unruh and the Hawking effects, appear in a completely new light. In fact, we shall show in sec. 4 that they can be directly traced to the postulate. A second consequence is more subtle. A key result in von Neumann algebras theory is the Cocycle Radon-Nikodym theorem [12], which implies that the modular flow up to inner automorphisms, is an intrinsic property of the algebra, independent from the states. In this subtle sense a von Neumann algebra is intrinsically a “dynamical” object. This result is at the core of the von Neumann algebra classification. By interpreting the modular flow as the physical time flow, this result assumes a deep physical significance: it is the intrinsic algebraic structure of the observable algebra that determines the allowed “time flows”. We describe these consequences of our postulate in sec. 4.
+
+The problem of constructing a consistent generally covariant quantum field theory, with a reasonable physical interpretation, represents the key problem of quantum gravity. The postulate we introduce here is a tentative step in this direction. It addresses the issue of connecting a generally covariant quantum structure with the observed physical time evolution. Moreover, it provides a unified perspective on a variety of open issues that space from the possibility of defining statistical mechanics of the gravitational field to the Unruh and Hawking effects. The aim of this paper aims is solely to introduce this postulate and to describe the main ideas and mathematical ingredients on which it is based. We leave an extensive analysis of its physical consequences to future work.
+
+In the following sections, we begin by recalling the mathematical results on which our discussion is based, and the present status of the problem of the selection of a physical time in GR (sec.2); we then discuss the main idea in detail (sec.3), and its main consequences (sec.4). Sec.5 overviews the general perspective that we are presenting.
+
+2. Preliminaries
+
+We begin by reviewing few essential fact from mathematics and from the physics of general covariant theories. In sect.2.1, we recall some central results on von Neumann algebras. Detailed introductions to this area of mathematics and proofs can be found for instance in refs.[7, 12, 13]. In sec.2.2, we discuss the notion of physical time in GR. For the reader familiar with the issue of time in gravity, sec.2.2 has the sole purpose of declaring our background conceptual assumptions. We have no presumption that the conceptual framework in terms of which we define the problem is the sole viable one.
+
+2.1 Modular automorphisms
+
+A concrete 
+𝐶
+⋆
+-algebra is a linear space 
+𝒜
+ of bounded linear operators on a Hilbert space 
+ℋ
+, closed under multiplication, adjoint conjugation (which we shall denote as ⋆), and closed in the operator-norm topology. A concrete von Neumann algebra is a 
+𝐶
+⋆
+-algebra closed in the weak topology. A positive operator 
+𝜔
+ with unit trace on the Hilbert space 
+𝐻
+ (in quantum mechanics: a density matrix, or a physical state) defines a normalized positive linear functional over 
+𝒜
+ via
+
+	
+𝜔
+⁡
+(
+𝐴
+)
+=
+𝑇
+​
+𝑟
+​
+[
+𝐴
+​
+𝜔
+]
+.
+		
+(1)
+
+for every 
+𝐴
+∈
+𝒜
+. If 
+𝜔
+ is (the projection operator on) a “pure state” 
+Ψ
+∈
+𝐻
+, namely if
+
+	
+𝜔
+=
+|
+Ψ
+⟩
+​
+⟨
+Ψ
+|
+		
+(2)
+
+(in Dirac notation) then eq.(1) can be written as the quantum mechanical expectation value relation
+
+	
+𝜔
+⁡
+(
+𝐴
+)
+=
+⟨
+Ψ
+|
+𝐴
+|
+Ψ
+⟩
+.
+		
+(3)
+
+An abstract 
+𝐶
+⋆
+-algebra, and an abstract von Neumann algebra (or 
+𝑊
+⋆
+-algebra), are given by a set on which addition, multiplication, adjoint conjugation, and a norm are defined, satisfying the same algebraic relations as their concrete counterparts [13]. A state 
+𝜔
+ over an abstract 
+𝐶
+⋆
+-algebra 
+𝒜
+ is a normalized positive linear functional over 
+𝒜
+.
+
+Given a state 
+𝜔
+ over an abstract 
+𝐶
+⋆
+-algebra 
+𝒜
+, the well known Gelfand-Naimark-Segal construction provides us with a Hilbert space 
+𝐻
+ with a preferred state 
+|
+Ψ
+0
+⟩
+, and a representation 
+𝜋
+ of 
+𝒜
+ as a concrete algebra of operators on 
+𝐻
+, such that
+
+	
+𝜔
+⁡
+(
+𝐴
+)
+=
+⟨
+Ψ
+0
+|
+𝜋
+⁡
+(
+𝐴
+)
+|
+Ψ
+0
+⟩
+.
+		
+(4)
+
+In the following, we denote 
+𝜋
+⁡
+(
+𝐴
+)
+ simply as 
+𝐴
+. Given 
+𝜔
+ and the corresponding GNS representation of 
+𝒜
+ in 
+𝐻
+, the set of all the states 
+𝜌
+ over 
+𝒜
+ that can be represented as
+
+	
+𝜌
+⁡
+(
+𝐴
+)
+=
+𝑇
+​
+𝑟
+​
+[
+𝐴
+​
+𝜌
+]
+		
+(5)
+
+where 
+𝜌
+ is a positive trace-class operator in 
+𝐻
+, is denoted as the folium determined by 
+𝜔
+. In the following, we shall consider an abstract 
+𝐶
+⋆
+-algebra 
+𝒜
+, and a preferred state 
+𝜔
+. A von Neumann algebra 
+ℛ
+ is then determined, as the closure of 
+𝒜
+ under the weak topology determined by the folium of 
+𝜔
+.
+
+We will be concerned with 1-parameter groups of automorphisms of a von Neumann algebra 
+ℛ
+. We denote the automorphisms by 
+𝛼
+𝑡
+:
+ℛ
+→
+ℛ
+, with 
+𝑡
+ real. Let us fix a concrete von Neumann algebra 
+ℛ
+ on a Hilbert space 
+𝐻
+, and a cyclic and separating vector 
+|
+Ψ
+⟩
+ in 
+𝐻
+. Consider the operator 
+𝑆
+ defined by
+
+	
+𝑆
+​
+𝐴
+​
+|
+Ψ
+⟩
+=
+𝐴
+⋆
+​
+|
+Ψ
+⟩
+.
+		
+(6)
+
+One can show that 
+𝑆
+ admits a polar decomposition
+
+	
+𝑆
+=
+𝐽
+​
+Δ
+1
+/
+2
+		
+(7)
+
+where 
+𝐽
+ is antiunitary, and 
+Δ
+ is a self-adjoint, positive operator. The Tomita-Takesaki theorem [14] states that the map 
+𝛼
+𝑡
+:
+ℛ
+→
+ℛ
+ defined by
+
+	
+𝛼
+𝑡
+​
+𝐴
+=
+Δ
+−
+𝑖
+​
+𝑡
+​
+𝐴
+​
+Δ
+𝑖
+​
+𝑡
+		
+(8)
+
+defines a 1-parameter group of automorphisms of the algebra 
+ℛ
+. This group is denoted the group of modular automorphisms, or the modular group, of the state 
+𝜔
+ on the algebra 
+ℛ
+ and will play a central role in the following.3
+3
+The modular group is usually defined with the opposite sign of 
+𝑡
+. We have reversed the sign convention in order to make contact with standard physics usage.
+
+Notice that the Tomita-Takesaki theorem applies also to an arbitrary faithful state 
+𝜔
+ over an abstract 
+𝐶
+⋆
+-algebra 
+𝒜
+, since 
+𝜔
+ defines a representation of 
+𝒜
+ via the GNS construction, and thus a von Neumann algebra with a preferred state.
+
+An automorphism 
+𝛼
+𝑖
+​
+𝑛
+​
+𝑛
+​
+𝑒
+​
+𝑟
+ of the algebra 
+ℛ
+ is called an inner automorphism if there is a unitary element 
+𝑈
+ in 
+ℛ
+ such that
+
+	
+𝛼
+𝑖
+​
+𝑛
+​
+𝑛
+​
+𝑒
+​
+𝑟
+​
+𝐴
+=
+𝑈
+⋆
+​
+𝐴
+​
+𝑈
+.
+		
+(9)
+
+Not all automorphisms are inner. We may consider the following equivalence relation in the family of all automorphism of 
+ℛ
+. Two automorphisms 
+𝛼
+′
+ and 
+𝛼
+′
+′
+ are equivalent when they are related by an inner automorphism 
+𝛼
+𝑖
+​
+𝑛
+​
+𝑛
+​
+𝑒
+​
+𝑟
+, namely 
+𝛼
+′
+′
+=
+𝛼
+𝑖
+​
+𝑛
+​
+𝑛
+​
+𝑒
+​
+𝑟
+𝛼
+′
+, or
+
+	
+𝛼
+′
+(
+𝐴
+)
+𝑈
+=
+𝑈
+𝛼
+′
+(
+𝐴
+)
+′
+,
+		
+(10)
+
+for every 
+𝐴
+ and some 
+𝑈
+ in 
+ℛ
+. We denote the resulting equivalence classes of automorphisms as outer automorphisms, and the space of the outer automorphisms of 
+ℛ
+ as Out(
+ℛ
+). In general, the modular group 
+𝛼
+𝑡
+ (8) is not a group of inner automorphisms. It follows that in general 
+𝛼
+𝑡
+ projects down to a non-trivial 1-parameter group in Out(
+ℛ
+), which we shall denote as 
+𝛼
+~
+𝑡
+. The Cocycle Radon-Nikodym [12] theorem states that two modular automorphisms defined by two states of a von Neumann algebra are inner-equivalent. It follows that all states of a von Neumann algebra determine the same  1-parameter group in Out(
+ℛ
+), namely 
+𝛼
+~
+𝑡
+ does not depend on 
+𝜔
+. In other words, a von Neumann algebra possesses a canonical  1-parameter group of outer automorphisms. This group plays a central role in the classification of the von Neumann algebras; in sec 5 we shall suggest a physical interpretation for this group.
+
+2.2 The problem of the choice of the physical time in general covariant theories
+
+Let us return to physics. There are several open difficulties connected with the treatment of the notion of time in general covariant quantum theories, and it is important to distinguish carefully between them.
+
+General covariant theories can be formulated in the lagrangian language in terms of evolution in a non-physical, fictitious coordinate time. The coordinate time (as well as the spatial coordinates) can in principle be discarded from the formulation of the theory without loss of physical content, because results of real gravitational experiments are always expressed in coordinate-free form. Let us generically denote the fields of the theory as 
+𝑓
+𝐴
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+,
+𝐴
+=
+1
+​
+…
+​
+𝑁
+. These include for instance metric field, matter fields, electromagnetic field, and so on, and are subject to equations of motion invariant under coordinate transformations. Given a solution of the equations of motion
+
+	
+𝑓
+𝐴
+=
+𝑓
+𝐴
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+,
+		
+(11)
+
+we cannot compare directly the quantities 
+𝑓
+𝐴
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+ with experimental data. Results of experiments, in fact, are expressed in terms of physical distances and physical time intervals, which are functions of the various fields (including of course the metric field) independent from the coordinates 
+𝑥
+→
+,
+𝑥
+𝑜
+. We have to compute coordinate independent quantities out of the quantities 
+𝑓
+𝐴
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+, and compare these with the experimental data.4
+4
+Cases of clamorous oversight of this interpretation rule are known, as an unfortunate determination of the Earth-Moon distance, in which a meaningless coordinate  distance survived in the literature for a while.
+
+The strategy employed in experimental gravitation, is to use concrete physical objects as clocks and as spatial references. Clocks and other reference system objects are concrete physical objects also in non generally covariant theories; what is new in general covariant theories is that these objects cannot be taken as independent from the dynamics of the system, as in non general-covariant physics. They must be components of the system itself.5
+5
+There is intrinsically no way of constructing a physical clock that is not affected by the gravitational field.
+ Let these ”reference system objects” be described by the variables 
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ in the theory. We are more concerned here with temporal determination than with space determination. Examples of physical clocks are: a laboratory clock (the rate of which depends by the local gravitational field), the pulsar’s pulses, or an arbitrary combination of solar system variables, these variables are employed as independent variables with respect to which the physical evolution of any other variable is described [15, 16]. In the theoretical analysis of an experiment, one typically first works in terms of an (arbitrary) coordinate system 
+𝑥
+→
+,
+𝑥
+𝑜
+, and then one compares a solution of the equations of motion, as (11) with the data in the following way. First we have to locally solve the coordinates 
+𝑥
+→
+,
+𝑥
+𝑜
+ with respect to quantities 
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ that represent the physical objects used as clocks and as spatial reference system
+
+	
+𝑓
+1
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+​
+…
+​
+𝑓
+4
+​
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+→
+𝑥
+→
+​
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+,
+𝑥
+𝑜
+​
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+		
+(12)
+
+and then express the rest of the remaining fields (
+𝑓
+𝑖
+𝑖
+=
+5
+​
+…
+​
+𝑁
+) as functions of 
+𝑓
+1
+​
+…
+​
+𝑓
+4
+
+	
+𝑓
+𝑖
+​
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+=
+𝑓
+𝑖
+​
+(
+𝑥
+→
+​
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+,
+𝑥
+𝑜
+​
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+)
+.
+		
+(13)
+
+If, for instance, 
+𝐹
+⁡
+(
+𝑥
+→
+,
+𝑡
+)
+ is a scalar, then for every quadruplet of numbers 
+𝑓
+1
+​
+…
+​
+𝑓
+4
+, the quantity 
+𝐹
+𝑓
+1
+​
+…
+​
+𝑓
+4
+=
+𝐹
+⁡
+(
+𝑓
+1
+,
+…
+,
+𝑓
+4
+)
+ can be compared with experimental data. This procedure is routinely performed in any analysis of experimental gravitational data – the physical time 
+𝑓
+4
+ representing quantities as the reading of the laboratory clock, the counting of a pulsar’s pulses, or an arbitrary combination of solar system observed astronomical variables.
+
+The role of the coordinates (and in particular of the time coordinate) can be clarified by means of a well known analogy. The coordinates have the same physical status as the arbitrary parameter 
+𝜏
+ that we use in order to give a manifestly Lorentz covariant description of the motion of a relativistic particle. The physical motion of a particle (non-relativistic as well as relativistic) is described by the three functions of one variable
+
+	
+𝑋
+→
+=
+𝑋
+→
+​
+(
+𝑡
+)
+,
+		
+(14)
+
+where 
+𝑋
+→
+ is the position in a coordinate system and 
+𝑡
+ the corresponding time. We can introduce an arbitrary parameter 
+𝜏
+ along the trajectory, and describe the motion (14) in the parametrized form
+
+	
+𝑋
+→
+	
+=
+	
+𝑋
+→
+​
+(
+𝜏
+)
+	
+	
+𝑡
+	
+=
+	
+𝑡
+⁡
+(
+𝜏
+)
+;
+		
+(15)
+
+the advantage of this description is that the dynamics can be formulated in manifestly Lorentz covariant form. In fact, we can put 
+𝑋
+𝜇
+​
+(
+𝜏
+)
+=
+(
+𝑋
+→
+​
+(
+𝜏
+)
+,
+𝑡
+⁡
+(
+𝜏
+)
+)
+, and show that 
+𝑋
+𝜇
+ satisfies the manifestly Lorentz covariant dynamics generated by the action 
+𝑆
+⁡
+[
+𝑋
+]
+=
+∫
+𝑑
+​
+𝜏
+​
+𝑋
+˙
+𝜇
+​
+𝑋
+˙
+𝜇
+. If we are given a solution of the equations of motion, we cannot compare directly the numbers 
+𝑋
+𝜇
+​
+(
+𝜏
+)
+=
+(
+𝑋
+→
+​
+(
+𝜏
+)
+,
+𝑡
+⁡
+(
+𝜏
+)
+)
+ with experimental observations. We should recover the physical motion (14) by ”deparametrising” (15), that is by picking the time variable
+
+	
+𝑡
+=
+𝑋
+𝑜
+		
+(16)
+
+out of the four variables 
+𝑥
+𝜇
+, solving 
+𝜏
+ with respect to the time variable 
+𝑡
+
+	
+𝑡
+⁡
+(
+𝜏
+)
+=
+𝑋
+𝑜
+​
+(
+𝜏
+)
+→
+𝜏
+⁡
+(
+𝑡
+)
+,
+		
+(17)
+
+and replacing 
+𝜏
+ with 
+𝑡
+ in the rest of the equations (15)
+
+	
+𝑋
+→
+​
+(
+𝑡
+)
+=
+𝑋
+→
+​
+(
+𝜏
+​
+(
+𝑡
+)
+)
+.
+		
+(18)
+
+This way of getting rid of the parameter 
+𝜏
+ is exactly the same as the way we get rid of the four coordinates in (12–13). Furthermore, the equations of motions generated by the action 
+𝑆
+⁡
+[
+𝑋
+]
+ are invariant under reparametrisation of 
+𝜏
+, as the generally covariant equations are invariant under reparametrisation of the four coordinates.
+
+Notice that 
+𝑡
+, as defined in (16), is not the only possible time variable. Any linear combination 
+𝑡
+′
+=
+Λ
+𝜇
+𝑜
+​
+𝑋
+𝜇
+, where 
+Λ
+ is a matrix in the Lorentz group, is another possible time variable. We know, of course, the physical meaning of this abundance of time variables: they represent the different physical times of different Lorentz observers in relative motion one with respect to the other. Given a choice of one of the Lorentz times, we can construct a conventional “non-parametrised” dynamical system with a hamiltonian that describes the evolution of the particle in that particular time variable.
+
+In the case of a general covariant theory, we also select one of the lagrangian variables as time and express the evolution of the system in such a time, say
+
+	
+𝑡
+=
+𝑓
+4
+		
+(19)
+
+in the example above. And we also have a large freedom in this choice. The variable selected is sometimes denoted internal time or physical time.
+
+Let us now illustrate how this strategy is implemented in the canonical formalisms. In the hamiltonian formalism, general covariance implies that the hamiltonian vanishes weakly. The most common way of constructing the canonical formulation of general relativity is by starting from an ADM spacelike surface, and identifying canonical variables as values of fields on this surface. While powerful, this approach is very unfortunate from the conceptual side, since it is based on the fully non-physical notion of a “surface” in spacetime. This procedure breaks explicit four-dimensional covariance, and thus it has lead to the popular wrong belief that the canonical formalism is intrinsically non-generally covariant. An alternative approach exists in the literature, and is based on the covariant interpretation of the phase space as the space of the solutions of the equations of motion. This approach is known in mechanics since the nineteen century, it shows that the canonical theory is as ”covariant” as the covariant theory, and avoids the interpretational problems raised by the ADM approach (see for instance ref. [17] and the various references there). Let 
+Γ
+𝑒
+​
+𝑥
+ be the space of solutions of the generally covariant equations of motion. On 
+Γ
+𝑒
+​
+𝑥
+, a degenerate symplectic structure is defined by the equations of motion themselves. The degenerate directions of this symplectic structure integrate in orbits. One can show that these orbits are the orbits of the 4-dimensional diffeomorphisms, and thus all solutions of the equation that are in the same orbit must be identified physically. The space of these orbits, 
+Γ
+, is a symplectic space: the physical phase space of the theory. One can show that 
+Γ
+ is isomorphic to the reduced ADM phase space, proving in this way that the reduced ADM phase space is a fully 4-dimensionally covariant object independent from the unphysical ADM hypersurface generally used for its construction.
+
+The quantities that can be compared with experimental data are the smooth functions on this space: these are, by construction, all the coordinate independent quantities that can be computed out of the solutions of the Einstein equations.
+
+For instance, for every quadruplet of numbers 
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ the quantity 
+𝐹
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ considered above is a function on 
+Γ
+, which expresses the value of the observable 
+𝐹
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ on the various solutions of the equations of motion. The quantity 
+𝐹
+𝑓
+1
+​
+…
+​
+𝑓
+4
+ is well defined on 
+Γ
+ because it is constant along the orbits in 
+Γ
+𝑒
+​
+𝑥
+, due to the fact that the coordinates 
+(
+𝑥
+→
+,
+𝑥
+𝑜
+)
+ have been solved away. From now on, we focus on the number that determines the time instant, say 
+𝑡
+=
+𝑓
+4
+. By (fixing 
+𝑓
+1
+​
+…
+​
+𝑓
+3
+ and) changing 
+𝑡
+ in 
+𝐹
+𝑓
+1
+​
+…
+​
+𝑓
+3
+,
+𝑡
+ , we obtain a one parameter family of observables 
+𝐹
+𝑡
+, expressing the evolution of this observable in the clock-time defined by 
+𝑓
+4
+. Note that we have defined 
+𝐹
+𝑡
+ as a function on 
+Γ
+ only implicitly: in general, writing this function explicitly is a difficult problem, which may amount to finding the general solution of the equations of motion. In the canonical formulation of a generally covariant theory, therefore, there is no hamiltonian defined on the phase space, but the phase space is a highly non-trivial object, and the smooth functions on the phase space, namely the generally covariant observables, contain dynamical information implicitly.
+
+Let us now consider the formal structure of a generally covariant quantum  theory. The set 
+𝐴
+=
+𝐶
+∞
+​
+(
+Γ
+)
+ of the real smooth functions on 
+Γ
+, namely of the physical observables, form an abelian multiplicative algebra. If we regard the dynamical system as the classical limit of a quantum system, then we must interpret the observables in 
+𝒜
+ as classical limits of non-commuting quantum observables. We assume that the ensemble of the quantum observables form a non-abelian 
+𝐶
+⋆
+-algebra, which we denote as 
+𝒜
+. Since 
+Γ
+ is a symplectic space, 
+𝐴
+ is a non-abelian algebra under the Poisson bracket operation. We can view this Poisson structure as the classical residue of the non-commuting quantum structure, and thus assume that the quantum algebra 
+𝒜
+ is a deformation of (a subalgebra of) the classical Poisson algebra. Since we are dealing with a generally covariant theory, no hamiltonian evolution or representation of the Poincare’ group are defined in 
+𝒜
+. A time evolution is only determined by the dependence of the observables on clock times. For instance, in the example above 
+𝐹
+𝑡
+ has an explicit dependence on 
+𝑡
+.
+
+In using the strategy described above for representing the physical time evolution in a generally covariant theory, however, we encounter two difficulties. The first difficulty is that in general relativity no selection of an internal time is known, which leads to a well defined fully non-parametrised dynamical system. Typically, in an arbitrary solution of the equations of motion, an arbitrary internal time, as 
+𝑡
+=
+𝑓
+4
+, does not grow monotonically everywhere, or equivalently, the inversion (12) can be performed only locally. In the classical context, we can simply choose a new clock when the first goes bad, but the difficulty becomes serious in the quantum context, for two reasons. First, because we would like to define the quantum operator on (at least a dense subset of) the entire Hilbert space, and we may have troubles in dealing with quantities that make sense on some states only. This is the mathematical counterpart of the physical fact that in a generic superposition of geometries a physical clock may stop and run backward on some of the geometries. Second, because the corresponding quantum evolution lacks unitarity, and the problem is open whether this fact jeopardizes the consistency of the interpretation of the quantum formalism. Indeed, this lack of unitarity of the evolution generated by an arbitrary internal time has frequently been indicated as a major interpretational problem of quantum gravity. On the other hand, it has also been argued (for instance in ref. [3]) that a consistent interpretation of the quantum formalism is still viable also in the general case in which a preferred unitary time evolution is lacking. In the present work, we do not  concern ourselves with this problem. We simply assume that a generally covariant quantum theory can be consistently defined.
+
+The second difficulty, and the one we address in this paper, is that of an embarrassment of riches. The problem is the following. If the formalism of the theory remains consistent under an essentially arbitrary choice of the evolution’s independent variable, then what do we mean by “the” time? Namely, what is it that characterizes a time variable as such? How do we relate the freedom of choosing any variable as the time variable, which a general covariant theory grants us, with our (essentially non-relativistic, unfortunately) intuition of a preferred, and, at least locally, unique parameter measuring the local time flow? Thus, the problem that we consider in this paper is: What is it that singles out a particular flow as the physical time?
+
+The elusive character of the notion of time and the difficulty of capturing its stratified meanings for purely mechanical theories are well known, and have been pointed out and extensively discussed in the literature, even in the more limited context of non-relativistic theories [1]. The discovery that the world is described by a general covariant theory makes this problem much more severe.
+
+3. The time flow is determined by the thermal state
+
+3.1 The modular group as time
+
+The hypothesis that we explore in this paper is that the notion of a preferred “flowing” time has no mechanical meaning at the quantum generally covariant level, but rather has thermodynamical origin. The idea that thermodynamics and the notion of a time flow are deeply intertwined is as old as thermodynamics itself, and we shall not elaborate on it here. To be clear, what we intend to ascribe to thermodynamics is not the versus  of the time flow. Rather, it is the time flow itself, namely the specification of which one is the independent variable that plays the physical role of time, in a fundamental general covariant theory.
+
+By thermodynamical notion we mean here a notion that makes sense on an ensemble, or, equivalently, on a single  system with many degrees of freedom, when we do not have access to its full microscopic state, but only to a number of macroscopic coarse-grained variables, and therefore we are forced to describe it in terms of the distribution 
+𝜌
+ of the microscopic states compatible with the macroscopic observations, in the sense of Gibbs [18]. Notice that in field theory we are always in such a thermodynamical context, because we cannot perform infinite measurements with infinite precision. The observation that a fundamental description of the state of a field system is always incomplete, and therefore intrinsically thermodynamical, in the sense above, is an important ingredient of the following discussion.
+
+In the context of a conventional non-generally covariant quantum field theory, thermal states are described by the KMS condition. Let us recall this formalism. Let 
+𝒜
+ be an algebra of quantum operators 
+𝐴
+; consider the 1-parameter family of automorphisms of 
+𝒜
+ defined by the time evolution
+
+	
+𝛾
+𝑡
+𝐴
+=
+𝑒
+𝑖
+​
+𝑡
+​
+𝐻
+/
+ℏ
+𝐴
+𝑒
+−
+𝑖
+𝑡
+𝐻
+/
+ℏ
+		
+(20)
+
+where 
+𝐻
+ is the hamiltonian. From now on we put 
+ℏ
+=
+1
+. We say that a state 
+𝜔
+ over 
+𝒜
+ is a Kubo-Martin-Schwinger (KMS) state (or satisfies the KMS condition) at inverse temperature 
+𝛽
+=
+1
+/
+𝑘
+𝑏
+​
+𝑇
+ (
+𝑘
+𝑏
+ is the Boltzmann constant and 
+𝑇
+ the absolute temperature), with respect to 
+𝛾
+𝑡
+, if the function
+
+	
+𝑓
+⁡
+(
+𝑡
+)
+=
+𝜔
+⁡
+(
+𝐵
+⁡
+(
+𝛾
+𝑡
+​
+𝐴
+)
+)
+		
+(21)
+
+is analytic in the strip
+
+	
+0
+<
+Im
+​
+𝑡
+<
+𝛽
+		
+(22)
+
+and
+
+	
+𝜔
+⁡
+(
+(
+𝛾
+𝑡
+​
+𝐴
+)
+​
+𝐵
+)
+=
+𝜔
+⁡
+(
+𝐵
+⁡
+(
+𝛾
+𝑡
++
+𝑖
+​
+𝛽
+​
+𝐴
+)
+)
+.
+		
+(23)
+
+Haag, Hugenholtz and Winnink [19] have shown that this KMS condition reduces to the well known Gibbs condition
+
+	
+𝜔
+=
+𝑁
+​
+𝑒
+−
+𝛽
+​
+𝐻
+		
+(24)
+
+in the case of systems with finite number of degrees of freedom, but can also be extended to systems with infinite degrees of freedom. They have then postulated that the KMS condition represents the correct physical extension of the Gibbs postulate (24) to infinite dimensional quantum systems.
+
+The connection between this formalism and the Tomita-Takesaki theorem is surprising. Any faithful state is a KMS state (with inverse temperature 
+𝛽
+=
+1
+) with respect to the modular automorphism 
+𝛼
+𝑡
+ it itself generates [14]. Therefore, in a non-generally covariant theory, an equilibrium state is a state whose modular automorphism group is the time translation group (where the time is measured in units of 
+ℏ
+/
+𝑘
+𝑏
+​
+𝑇
+). Thus, as we noticed in the introduction in the context of classical mechanics, an equilibrium quantum thermal state contains all the information on the dynamics which is contained in the hamiltonian (except for the constant factor 
+𝛽
+, which depends on the unit of time employed). If we take into account the fact that the universe around us is  in a state of non-zero temperature, this means that the information about the dynamics can be fully replaced by the information about the thermal state.
+
+To put it dramatically, we could say that if we knew the thermal state of the fields around us (and we knew the full kinematics, namely the specification of all the dynamical fields), we could then throw away the full Standard Model lagrangian without loss of information.
+
+Let us now return to generally covariant quantum theories. The theory is now given by an algebra 
+𝒜
+ of generally covariant physical operators, a set of states 
+𝜔
+, over 
+𝒜
+, and no additional dynamical information. When we consider a concrete physical system, as the physical fields that surround us, we can make a (relatively small) number of physical observation, and therefore determine a (generically impure) state 
+𝜔
+ in which the system is. Our problem is to understand the origin of the physical time flow, and our working hypothesis is that this origin is thermodynamical. The set of considerations above, and in particular the observation that in a generally covariant theory notions of time tend to be state dependent, lead us to make the following hypothesis.
+
+The physical time depends on the state. When the system is in a state 
+𝜔
+, the physical time is given by the modular group 
+𝛼
+𝑡
+ of 
+𝜔
+.
+
+The modular group of a state was defined in eq.(8) above. We call the time flow defined on the algebra of the observables by the modular group as the thermal time, and we denote the hypothesis above as the thermal time hypothesis.
+
+The fact that the time is determined by the state, and therefore the system is always in an equilibrium state with respect to the thermal time flow, does not imply that evolution is frozen, and we cannot detect any dynamical change. In a quantum system with an infinite number of degrees of freedom, what we generally measure is the effect of small perturbations around a thermal state. In conventional quantum field theory we can extract all the information in terms of vacuum expectation values of products of fields operators, namely by means of a single quantum state 
+|
+0
+⟩
+. This was emphasized by Wightman. For instance, if 
+𝜙
+ is a scalar field, the propagator (in a fixed space point 
+𝑥
+→
+) is given by
+
+	
+𝐹
+⁡
+(
+𝑡
+)
+=
+⟨
+0
+|
+𝜙
+⁡
+(
+𝑥
+→
+,
+𝑡
+)
+​
+𝜙
+​
+(
+𝑥
+→
+,
+0
+)
+|
+0
+⟩
+=
+𝜔
+𝑜
+​
+(
+𝛾
+𝑡
+​
+(
+𝜙
+⁡
+(
+𝑥
+→
+,
+0
+)
+)
+​
+𝜙
+​
+(
+𝑥
+→
+,
+0
+)
+)
+,
+		
+(25)
+
+where 
+𝜔
+𝑜
+ is the vacuum state over the field algebra, and 
+𝛾
+𝑡
+ is the time flow (20). Consider a generally covariant quantum field theory. Given the quantum algebra of observables 
+𝒜
+, and a quantum state 
+𝜔
+, the modular group of 
+𝜔
+ gives us a time flow 
+𝛼
+𝑡
+. Then, the theory describes physical evolution in the thermal time in terms of amplitudes of the form
+
+	
+𝐹
+𝐴
+,
+𝐵
+​
+(
+𝑡
+)
+=
+𝜔
+⁡
+(
+𝛼
+𝑡
+​
+(
+𝐵
+)
+​
+𝐴
+)
+		
+(26)
+
+where 
+𝐴
+ and 
+𝐵
+ are in 
+𝒜
+. Physically, this quantity is related to the amplitude for detecting a quantum excitation of 
+𝐵
+ if we prepare 
+𝐴
+ and we wait a time 
+𝑡
+ – “time” being the thermal time determined by the state of the system.
+
+In a general covariant situation, the thermal time is the only definition of time available. However, in a theory in which a geometrical definition of time independent from the thermal time can be given, for instance in a theory defined on a Minkowski manifold, we have the problem of relating geometrical time and thermal time. As we shall see in the examples of the following section, the Gibbs states are the states for which the two time flow are proportional. The constant of proportionality is the temperature. Thus, within the present scheme the temperature is interpreted as the ratio between thermal time and geometrical time, defined only when the second is meaningful.6
+6
+It has been suggested, for instance by Eddington [20], that any clock is necessarily a thermodynamical clock. It is tempting to speculate that in a fully quantum generally covariant context, namely in a Planck regime, the only kind of clock that may survive are quantum thermal clock, as for instance decay times, which naturally measure the thermal time.
+
+We believe that the support to the thermal time hypothesis comes from analyzing its consequences and the way this hypothesis brings disconnected parts of physics together. In the following section, we explore some of these consequences. We will summarize the arguments in support the thermal time hypothesis in the conclusion.
+
+4. Consequences of the hypothesis
+
+4.1 Non relativistic limit
+
+If we apply the thermal time hypothesis to a non-generally covariant system in thermal equilibrium, we recover immediately known physics. For simplicity, let us consider a system with a large, but finite number of degrees of freedom, as a quantum gas in a box.
+
+The quantum state is then given by the Gibbs density matrix
+
+	
+𝜔
+=
+𝑁
+​
+𝑒
+−
+𝛽
+​
+𝐻
+		
+(27)
+
+where 
+𝐻
+ is the hamiltonian, defined on an Hilbert space 
+ℋ
+, and
+
+	
+𝑁
+−
+1
+=
+tr
+⁡
+[
+𝑒
+−
+𝛽
+​
+𝐻
+]
+.
+		
+(28)
+
+The modular flow of 
+𝜔
+ is
+
+	
+𝛼
+𝑡
+​
+𝐴
+=
+𝑒
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑒
+−
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+,
+		
+(29)
+
+namely it is the time flow generated by the hamiltonian, with the time rescaled as 
+𝑡
+→
+𝛽
+​
+𝑡
+. This can be proven directly by checking the KMS condition between 
+𝜔
+ and 
+𝛼
+𝑡
+, and invoking the uniqueness of the KMS flow of a given state.
+
+Alternatively, one can also explicitely construct the modular flow from 
+𝜔
+, in terms of the operator 
+𝑆
+ as in eqs. (6,7,8). Let us briefly describe such construction, since it has the merit of displaying the physical meaning of the mathematical quantities appearing in the formulation of the Tomita-Takesaki theorem.
+
+The Tomita-Takesaki construction cannot be applied directly, because the state 
+𝜔
+ is not given by a vector of the Hilbert space. We have first to construct a new representation of the observables algebra in which 
+𝜔
+ is given by a vector 
+|
+0
+⟩
+, using the GNS construction. A shortcut for constructing this representation was suggested in ref.[19]: The set of the Hilbert-Shmidt density matrices on 
+ℋ
+, namely the operators 
+𝑘
+ such that
+
+	
+tr
+⁡
+[
+𝑘
+⋆
+​
+𝑘
+]
+<
+∞
+		
+(30)
+
+forms a Hilbert space, which we denote as 
+𝒦
+. We denote an operator 
+𝑘
+ in 
+ℋ
+ as 
+|
+𝑘
+⟩
+ when thought as a vector in 
+𝒦
+. We can construct a new representation of the quantum theory on (a subspace of) this Hilbert space 
+𝒦
+. This will be a (reducible) representation in which the thermal Gibbs state is given by a pure vector. The operator
+
+	
+𝑘
+𝑜
+=
+𝜔
+1
+/
+2
+		
+(31)
+
+is in 
+𝒦
+, and we denote it as 
+|
+𝑘
+𝑜
+⟩
+. The operator algebra of the quantum theory acts on 
+𝒦
+ as follows. If 
+𝐴
+ is a quantum operator defined in 
+ℋ
+, then we can write
+
+	
+𝐴
+​
+|
+𝑘
+⟩
+=
+|
+𝐴
+​
+𝑘
+⟩
+.
+		
+(32)
+
+Which is again in 
+𝒦
+. By taking 
+|
+𝑘
+𝑜
+⟩
+ as the cyclic state, and acting on it with all the 
+𝐴
+’s in the observables algebra we generate the new representation that we are searching. The state 
+|
+𝑘
+𝑜
+⟩
+ plays the role of a “vacuum state” in this representation, but we can either increase or decrease its energy, as must be for a thermal state.
+
+Note the peculiar way in which the time translations group 
+𝑈
+𝒦
+​
+(
+𝑡
+)
+ act on this representation. The state 
+|
+𝑘
+𝑜
+⟩
+ is of course time invariant
+
+	
+𝑈
+𝒦
+​
+(
+𝑡
+)
+​
+|
+𝑘
+𝑜
+⟩
+=
+|
+𝑘
+𝑜
+⟩
+.
+		
+(33)
+
+A generic state is of the form 
+|
+𝐴
+​
+𝑘
+𝑜
+⟩
+; its time translated is
+
+	
+𝑈
+𝒦
+​
+(
+𝑡
+)
+​
+|
+𝐴
+​
+𝑘
+𝑜
+⟩
+=
+|
+𝛾
+𝑡
+​
+(
+𝐴
+)
+​
+𝑘
+𝑜
+⟩
+=
+|
+𝑒
+𝑖
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑒
+−
+𝑖
+​
+𝑡
+​
+𝐻
+​
+𝑘
+𝑜
+⟩
+=
+|
+𝑒
+𝑖
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑘
+𝑜
+​
+𝑒
+−
+𝑖
+​
+𝑡
+​
+𝐻
+⟩
+.
+		
+(34)
+
+where we have used the time flow 
+𝛾
+𝑡
+ given by the (Heisenberg) equations of motion (20). Therefore we have in general
+
+	
+𝑈
+𝒦
+​
+(
+𝑡
+)
+​
+|
+𝑘
+⟩
+=
+|
+𝑒
+𝑖
+​
+𝑡
+​
+𝐻
+​
+𝑘
+​
+𝑒
+−
+𝑖
+​
+𝑡
+​
+𝐻
+⟩
+.
+		
+(35)
+
+The interest of the representation defined above is due to the fact that it still exists in the thermodynamical limit in which the number of degrees of freedom goes to infinity. In this limit, the expression (27) looses sense, since the total energy of an infinity extended thermal bath is infinite. However, the 
+𝒦
+ representation still exists, and includes all the physical states that are formed by finite excitations around (“over” and “below”!) the thermal state 
+|
+𝑘
+𝑜
+⟩
+. Here, we are interested in this representation as a tool for constructing the modular group, to which we now return.
+
+The modular group depends on the operator 
+𝑆
+, defined in eq.(7). Here we have
+
+	
+𝑆
+​
+𝐴
+​
+|
+𝑘
+𝑜
+⟩
+=
+𝐴
+⋆
+​
+|
+𝑘
+𝑜
+⟩
+=
+|
+𝐴
+⋆
+​
+𝑘
+𝑜
+⟩
+.
+		
+(36)
+
+or
+
+	
+𝑆
+𝐴
+𝑒
+−
+𝛽
+𝐻
+/
+2
+=
+𝐴
+⋆
+𝑒
+−
+𝛽
+𝐻
+/
+2
+,
+		
+(37)
+
+because
+
+	
+𝑘
+𝑜
+=
+𝜔
+1
+/
+2
+=
+𝑁
+1
+/
+2
+𝑒
+−
+𝛽
+𝐻
+/
+2
+.
+		
+(38)
+
+It is then easy to check that the polar decomposition 
+𝑆
+=
+𝐽
+​
+Δ
+1
+/
+2
+ is given by
+
+	
+𝐽
+​
+|
+𝑘
+⟩
+=
+|
+𝑘
+⋆
+⟩
+		
+(39)
+
+and
+
+	
+Δ
+1
+/
+2
+|
+𝑘
+⟩
+=
+|
+𝑒
+−
+𝛽
+/
+2
+𝐻
+𝑘
+𝑒
+𝛽
+/
+2
+​
+𝐻
+⟩
+.
+		
+(40)
+
+In fact we have
+
+	
+𝑆
+​
+𝐴
+​
+|
+𝑘
+𝑜
+⟩
+	
+=
+	
+𝐽
+Δ
+1
+/
+2
+|
+𝐴
+𝑁
+1
+/
+2
+𝑒
+−
+𝛽
+𝐻
+/
+2
+⟩
+		
+(41)
+
+		
+=
+	
+𝐽
+|
+𝑒
+−
+𝛽
+/
+2
+𝐻
+𝐴
+𝑁
+1
+/
+2
+𝑒
+−
+𝛽
+𝐻
+/
+2
+𝑒
+𝛽
+/
+2
+​
+𝐻
+⟩
+	
+		
+=
+	
+𝐽
+|
+𝑒
+−
+𝛽
+/
+2
+𝐻
+𝐴
+𝑁
+1
+/
+2
+⟩
+	
+		
+=
+	
+|
+𝑁
+1
+/
+2
+𝐴
+⋆
+𝑒
+−
+𝛽
+/
+2
+𝐻
+⟩
+	
+		
+=
+	
+𝐴
+⋆
+​
+|
+𝑘
+𝑜
+⟩
+.
+	
+
+The operator 
+𝐽
+ exchanges, in a sense, creation operators with annihilation operators around the thermal vacuum, and therefore contains the information about the splitting of the representation between the states with higher and lower energy than the thermal vacuum. The object that we are searching is the modular automorphism group 
+𝛼
+𝑡
+, which is given defined in eq.(8), as
+
+	
+𝛼
+𝑡
+​
+𝐴
+​
+|
+𝑘
+𝑜
+⟩
+	
+=
+	
+Δ
+−
+𝑖
+​
+𝑡
+​
+𝐴
+​
+Δ
+𝑖
+​
+𝑡
+​
+|
+𝑘
+𝑜
+⟩
+		
+(42)
+
+		
+=
+	
+Δ
+−
+𝑖
+​
+𝑡
+​
+𝐴
+​
+|
+𝑘
+𝑜
+⟩
+	
+		
+=
+	
+|
+𝑒
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑘
+𝑜
+​
+𝑒
+−
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+⟩
+	
+		
+=
+	
+|
+𝑒
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑒
+−
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+​
+𝑘
+𝑜
+⟩
+.
+	
+
+Namely
+
+	
+𝛼
+𝑡
+​
+𝐴
+=
+𝑒
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+​
+𝐴
+​
+𝑒
+−
+𝑖
+​
+𝛽
+​
+𝑡
+​
+𝐻
+.
+		
+(43)
+
+So that we may conclude that the modular group and the time evolution group are related by
+
+	
+𝛼
+𝑡
+=
+𝛾
+𝛽
+​
+𝑡
+.
+		
+(44)
+
+We have shown that the modular group of the Gibbs state is the time evolution flow, up to a constant rescaling 
+𝛽
+ of the unit of time. Thus, if we apply the thermal time postulate to the Gibbs state (27), we obtain a definition of physical time which is proportional to the standard non-relativistic time.
+
+We also note the following suggestive fact [11]. In a special relativistic system, a thermal state breaks Lorentz invariance. For instance, the average momentum of a gas at finite temperature defines a preferred Lorentz frame. In other words, a thermal bath is at rest in one Lorentz frame only. If we apply the postulate to such a state, we single out a preferred time, and it is easy to see that this time is the Lorentz time of the Lorentz frame in which the thermal bath is at rest.
+
+4.2 Classical limit
+
+Let us return to a fully general covariant system, and consider a state 
+𝜔
+, and an observable 
+𝐴
+. From the definition of the modular group we have
+
+	
+𝛼
+𝑡
+​
+𝐴
+=
+𝑒
+−
+𝑖
+​
+𝑡
+​
+𝑙
+​
+𝑛
+​
+Δ
+​
+𝐴
+​
+𝑒
+𝑖
+​
+𝑡
+​
+𝑙
+​
+𝑛
+​
+Δ
+,
+		
+(45)
+
+and therefore
+
+	
+𝐴
+˙
+≡
+𝑑
+𝑑
+​
+𝑡
+​
+𝛼
+𝑡
+​
+𝐴
+|
+𝑡
+=
+0
+=
+𝑖
+⁡
+[
+𝐴
+,
+𝑙
+​
+𝑛
+​
+Δ
+]
+.
+		
+(46)
+
+Note, from the previous subsection, that
+
+	
+[
+𝐴
+,
+Δ
+]
+=
+[
+𝐴
+,
+𝜔
+]
+.
+		
+(47)
+
+Let us now consider the classical limit of the theory. In this limit, if we replace observables, as well as density matrices, with functions on the phase space, then commutators are replaced by Poisson brackets. Let us denote the classical observable corresponding to the operator 
+𝐴
+ as 
+𝐴
+, and the classical density matrix that approximates the quantum density matrix 
+𝜔
+, by 
+𝑓
+ and 
+𝜔
+. The formal classical limit can be obtained by the standard replacement of commutators with Poisson brackets. We have then that in the classical limit the thermal time flow is defined by the equation
+
+	
+𝑑
+𝑑
+​
+𝑡
+​
+𝑓
+=
+{
+−
+ln
+⁡
+𝜌
+​
+𝑓
+}
+,
+		
+(48)
+
+namely
+
+	
+𝑑
+𝑑
+​
+𝑡
+​
+𝑓
+=
+{
+𝐻
+,
+𝑓
+}
+,
+		
+(49)
+
+where 
+𝐻
+ is defined as 
+𝐻
+=
+−
+ln
+⁡
+𝜌
+, or
+
+	
+𝜌
+=
+𝑒
+−
+𝐻
+.
+		
+(50)
+
+Thus we obtain the result that there is a classical hamiltonian 
+𝐻
+ that generates the Hamilton evolution, and that the state 
+𝜌
+ is related to this hamiltonian by the Gibbs relation. The Hamilton equations (49) and the Gibbs postulate (50), are both contained in the Tomita-Takesaki relation (8). In other words, Hamilton equations and Gibbs postulate can be derived from the thermal time hypothesis.
+
+These relations hold in general for a generally covariant theory; however, we recall that the Hamiltonian 
+𝐻
+ plays a quite different role than in a non-relativistic theory: it does not determine the Gibbs state, but, rather, it is determined by any thermal state.
+
+4.3 Rindler wedge, Unruh temperature and Hawking radiation
+
+Consider a free quantum field theory on Minkowski space, in its (zero temperature) vacuum state 
+|
+0
+⟩
+. Consider an observer 
+𝑂
+ that moves along a rectilinear and uniformly accelerated trajectory with acceleration 
+𝑎
+; say along the trajectory
+
+	
+𝑥
+𝑜
+​
+(
+𝑠
+)
+	
+=
+	
+𝑎
+−
+1
+​
+sinh
+⁡
+(
+𝑠
+)
+,
+	
+	
+𝑥
+1
+​
+(
+𝑠
+)
+	
+=
+	
+𝑎
+−
+1
+​
+cosh
+⁡
+(
+𝑠
+)
+,
+	
+	
+𝑥
+2
+=
+	
+𝑥
+3
+	
+=
+0
+.
+		
+(51)
+
+Because of the causal structure of Minkowski space, 
+𝑂
+ has only access to a subspace of Minkowski space, the Rindler wedge 
+𝑅
+, defined by
+
+	
+𝑥
+1
+>
+|
+𝑥
+𝑜
+|
+.
+		
+(52)
+
+Accordingly, he can only describe the system in terms of the algebra of observables 
+𝒜
+𝑅
+ which is the subalgebra of the full fields algebra 
+𝒜
+ of the quantum field theory, obtained by restricting the support of the fields to the Rindler wedge.
+
+The Rindler wedge is left invariant by the Lorentz boosts in the 
+𝑥
+1
+ direction. Let 
+𝑘
+1
+ be the generator of these boosts in the Lorentz group, and 
+𝐾
+1
+ be the generator of these boosts in the representation of the Poincare’ group defined on the Hilbert space of the theory. Clearly the 1-parameter group generated by 
+𝐾
+1
+ leaves 
+𝒜
+𝑅
+ invariant.
+
+The Lorentz transformation
+
+	
+Λ
+⁡
+(
+𝜏
+)
+=
+exp
+⁡
+{
+𝜏
+​
+𝑎
+​
+𝑘
+1
+}
+		
+(53)
+
+carries 
+𝑂
+ along its trajectory, 
+𝜏
+ being the proper time of 
+𝑂
+. This fact suggests that the unitary group of transformations
+
+	
+𝛾
+𝜏
+​
+𝐴
+=
+𝑒
+𝑖
+​
+𝜏
+​
+𝑎
+​
+𝐾
+1
+​
+𝐴
+​
+𝑒
+−
+𝑖
+​
+𝜏
+​
+𝑎
+​
+𝐾
+1
+		
+(54)
+
+can be interpreted as the physical time characteristic of the observer 
+𝑂
+. Let us approach the problem of the determination of the physical time from the point of view of the thermal time postulate.
+
+The restriction of the state 
+|
+0
+⟩
+ to the algebra 
+𝒜
+𝑅
+ is of course a state on 
+𝒜
+𝑅
+, and therefore it generates a modular group of automorphisms 
+𝛼
+𝑡
+ over 
+𝒜
+𝑅
+. Bisognano and Wichmann [21] have proven that the modular group of 
+|
+0
+⟩
+ over 
+𝒜
+𝑅
+ is precisely
+
+	
+𝛼
+𝑡
+=
+𝛽
+2
+​
+𝜋
+​
+𝑎
+−
+1
+​
+𝑡
+.
+		
+(55)
+
+Therefore, the thermal time of the system that the observer can reach is proportional to the time flow determined geometrically by its proper time.
+
+In this case we have two independent and compatible definitions of time flow in this system: the thermal time flow 
+𝛼
+𝑡
+ and the flow 
+𝛽
+𝜏
+ determined by the proper time. We have obtained
+
+	
+𝑡
+=
+2
+​
+𝜋
+𝑎
+​
+𝜏
+.
+		
+(56)
+
+We now interpret temperature as the ratio between the thermal time and the geometrical time, namely 
+𝑡
+=
+𝛽
+​
+𝜏
+. We obtain 
+𝛽
+=
+2
+​
+𝜋
+𝑎
+, namely
+
+	
+𝑇
+=
+1
+𝑘
+𝑏
+​
+𝛽
+=
+𝑎
+2
+​
+𝜋
+​
+𝑘
+𝑏
+,
+		
+(57)
+
+which is the Unruh temperature [5], or the temperature detected by a thermometer moving in 
+|
+0
+⟩
+ with acceleration 
+𝑎
+.
+
+An important aspect of this derivation of the time flow via the modular group 
+𝛼
+𝑡
+ of the algebra 
+𝒜
+𝑅
+ is given by the fact that the result depends only on the trajectory of the observer (which determines 
+𝐴
+𝑅
+), and does not require any a priori choice of coordinates on the Rindler Wedge.
+
+Following Unruh’s initial suggestion [5], this construction can be immediately generalised to the Schwarzschild solution – an observer at rest in the Schwarzschild coordinates undergoes a constant acceleration pointing away from the black hole – and the result allows one to derive the Hawking temperature [6]. We will not elaborate on this here.
+
+4.3 State independent notion of time: the canonical subgroup of 
+𝑂
+​
+𝑢
+​
+𝑡
+​
+𝐴
+
+Finally, let us point out an intriguing aspect of the definition of time that we have consider. As shown in section 2, while different states over a von Neumann algebra 
+ℛ
+ define distinct time flows, still it is possible to define a state–independent flow, in the following sense. In general, the modular flow is not an inner automorphism of the algebra, namely, there is no hamiltonian in 
+ℛ
+ that generates it. Due to the Cocycle Radon-Nikodym theorem, however, the difference between two modular flows is always an inner automorphism. Therefore, whatever state one starts with, the modular flow projects down to the same 1–parameter group of elements of the group of outer automorphisms 
+𝑂
+​
+𝑢
+​
+𝑡
+​
+𝐴
+. This flow is canonical: it depends only on the algebra itself. Von Neumann algebras, indeed, are classified by studying this canonical flow.
+
+In conventional field theories, where we are independently provided with a notion of time evolution, the only consequence of this observation is that we must be sure to choose the correct Type of von Neumann algebra to start with (Type III, as argued in [7], and elsewhere). However, in a generally covariant quantum context this observation provides us with the possibility of capturing a fully state independent (rather abstract) notion of time evolution. In fact, it is the algebra itself that determines the allowed time flows. In this abstract sense, a von Neumann algebra is intrinsically a “dynamical” object.
+
+Furthermore, as the Rindler example points out, the same state may give rise to different time flows when restricted to different subalgebras of the full observables algebra of the theory. Since in general a subalgebra of a von Neumann algebra is not isomorphic to the full algebra, the general features of the time evolution may change substantially by focussing on different observables subalgebras, that is by probing the theory in different regimes.7
+7
+It is tempting to suggest that different “phases” of a generally covariant quantum field theory, perhaps different “phases” in the history of the universe could be read as observations of different observable subalgebras on the same state, and that the general features of the flows can differ substantially from phase to phase, from a fundamental timelessness of the Planck–phase, to the present time flow. We do not know how this idea could be concretely implemented in a sensible theory.
+
+5. Conclusions
+
+The hypothesis that we have put forward in this paper is that physical time has a thermodynamical origin. In a quantum generally covariant context, the physical time is determined by the thermal state of the system, as its modular flow (8).
+
+The main indications in support this hypothesis are the following
+
+• 
+
+Non-relativistic limit. In the regime in which we may disregard the effect of the relativistic gravitational field, and thus the general covariance of the fundamental theory, physics is well described by small excitations of a quantum field theory around a thermal state 
+|
+𝜔
+⟩
+. Since 
+|
+𝜔
+⟩
+ is a KMS state of the conventional hamiltonian time evolution, it follows that the thermodynamical time defined by the modular flow of 
+|
+𝜔
+⟩
+ is precisely the physical time of non relativistic physics.
+
+• 
+
+Statistical mechanics of gravity. The statistical mechanics of full general relativity is a surprisingly unexplored area of theoretical physics [4]. In reference [4] it is shown that the classical limit of the thermal time hypothesis allows one to define a general covariant statistical theory, and thus a theoretical framework for the statistical mechanics of the gravitational field.
+
+• 
+
+Classical limit; Gibbs states. The Hamilton equations, and the Gibbs postulate follow immediately from the modular flow relation (8).
+
+• 
+
+Classical limit; Cosmology. We refer to [11], where it was shown that (the classical limit of) the thermodynamical time hypothesis implies that the thermal time defined by the cosmic background radiation is precisely the conventional Friedman-Robertson-Walker time.
+
+• 
+
+Unruh and Hawking effects. Certain puzzling aspects of the relation between quantum field theory, accelerated coordinates and thermodynamics, as the Unruh and Hawking effects, find a natural justification within the scheme presented here.
+
+• 
+
+Time–Thermodynamics relation. Finally, the intimate intertwining between the notion of time and thermodynamics has been explored from innumerable points of view [1], and need not be expanded upon in this context.
+
+The difficulties of finding a consistent interpretation of a general covariant quantum field theory are multi-fold. In this work, we have addressed one of these difficulties: the problem of relating the “timelessness” of the fundamental theory with the “evidence” of the flow of time. We have introduced a tentative ingredient for the solution of this problem, in the form of a general relation between the thermal state of a system and a 1-parameter group of automorphisms of the observables algebra, to be interpreted as a time flow.
+
+Since we have not provided a precise definition of “physical time”, besides its identification with the non-relativistic time and the Lorentz times in the non-(general) relativistic limit, we have deliberately left a certain amount of vagueness in the formulation of the thermal time hypothesis. In fact, in a quantum or thermal general covariant context, the problem is precisely to understand what do we want to mean by time, or whether there is a relevant structure that reduces to the non-relativistic time. The thermal time hypothesis is thus the suggestion of taking the modular flow as the relevant generalization of the non-relativistic time. This generalization allows us to embrace in a unitary perspective a large variety of puzzling aspects of general covariant physics.
+
+The consequences of this hypothesis can be explored in a variety of situations. For instance, as the restriction of the observables algebra to the Rindler wedge determines a time flow, similarly the restriction to a different fixed region of spacetime defines a corresponding time flow. It would be interesting to compute this flow, which, unlike the Rindler case, will not have any obvious geometrical interpretation, and study its physical interpretation.
+
+We leave a large number of issues open. It is not clear to us, for instance, whether one should consider all the states of a general covariant quantum system on the same ground, or whether some kind of maximal entropy mechanism able to select among states may make sense physically.
+
+In spite of this incompleteness, we find that the number of independent facts that are connected by the thermal time hypothesis suggests that this hypothesis could be an ingredient of the fundamental, still undiscovered, generally covariant quantum theory.
+
+We thank the Isaac Newton Institute, Cambridge, where this work was begun, for hospitality. This work was partially supported by the NSF grant PHY-9311465.
+
+References
+[1]
+It is impossible to refer to all the literature on the notion of time in physics. The following book is a collection of thousands references on this subject: S. L. Macey, Time: a bibliographic guide , Garland, New York, 1991.
+[2]
+An excellent discussion and general references can be found in C.J. Isham, “Prima facie questions in quantum gravity”, Imperial/TP/93-94/1.
+[3]
+C. Rovelli, in Conceptual Problems of Quantum Gravity ed. A. Ashtekar and J. Stachel, (Birkhauser,Boston,1991); Phys. Rev. D 42 (1991) 2638; 43 (1991) 442.
+[4]
+C. Rovelli, Class. and Quant. Grav. 10, 1549 (1993);
+[5]
+W.G. Unruh, Phys. Rev. D14, 870 (1976).
+[6]
+S.W. Hawking, Comm. Math. Phys. 43, 199 (1975).
+[7]
+R. Haag, Local Quantum Physics, Springer Verlag, Berlin 1992.
+[8]
+R.C. Tolman, Relativity, Thermodynamics, and Cosmology, Clarendon Press, Oxford, 1934.
+[9]
+A. Ashtekar, Lectures at Les Houches 1992 Summer School, to appear.
+[10]
+Gibbs, Elementary Principles in Statistical Mechanics, Yale University Press, 1902.
+[11]
+C. Rovelli, Class. and Quant. Grav. 10, 1567 (1993).
+[12]
+A. Connes, ”Une classification des facteurs de type III”, Ann. Sci. Ecole Normale Superieure 6, 133-252 (1973). A. Connes Non commutative geometry, Academic Press, to appear.
+[13]
+J. Diximier, Von Neumann algebras , North-Holland, Amsterdam 1981. J. Diximier, 
+𝐶
+⋆
+-algebras , North- Holland, Amsterdam 1982. O. Bratteli, D.W. Robinson, Operator algebras and quantum statistical mechanics , Springer-Verlag, New York 1979.
+[14]
+M. Takesaki, Tomita’s theory of modular Hilbert algebras and its applications , Springer-Verlag Berlin 1970.
+[15]
+A. Einstein, Über die spezielle und die allgemeine Relativitätstheorie , (Vieweg, Braunshweig, 1920); P. G. Bergmann, Helv. Phys. Acta Suppl. 4, 79 (1956); B.S. DeWitt in Gravitation: an introduction to recent research, ed. L. Witten (Wiley, New York 1962); J. Stachel, Einstein search for general covariance 1912-1915 in Einstein and the History of General Relativity eds. D.Howard and J. Stachel, Einstein studies, Volume 1, Birkhouser, Boston, 1989. B. S. DeWitt, in Gravitation, An Introduction to Current Research ed. L. Witten (Wiley, New York,1962).
+[16]
+C. Rovelli, Class. Quant. Grav. 8, 297 (1991), 317 (1991);
+[17]
+A. Ashtekar, L. Bombelli and O. Reula, In: Analysis, Geometry and Mechanics: 200 Years after Lagrange, eds. M. Francaviglia and D. Holm (North Holland, Amsterdam, 1993). C. Rovelli, An introduction to canonical Quantum Gravity. Lecture notes , 1992, Unpublished.
+[18]
+Gibbs, Elementary Principles in Statistical Mechanics, Yale University Press, 1902.
+[19]
+R. Haag, N.M. Hugenholtz, M. Winnik, Comm. Math. Phys. 5, 215 (1967).
+[20]
+A.S. Eddington, The nature of the physical world, MacMillan, New York, 1930, pg. 99-102.
+[21]
+J.J. Bisognano, E.H. Wichmann, J. Math. Phys. 16, 985 (1975); 17, 303 (1976).
+Experimental support, please view the build logs for errors. Generated by L A T E xml  .
+Instructions for reporting errors
+
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the methods listed below:
+
+Click the "Report Issue" button, located in the page header.
+
+Tip: You can select the relevant text first, to include it in your report.
+
+Our team has already identified the following issues. We appreciate your time reviewing and reporting rendering errors we may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability should not be a barrier to accessing research. Thank you for your continued support in championing open access for all.
+
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion, and welcome developer contributions.
+
+We gratefully acknowledge support from our major funders, member institutions, and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status
+(opens in new tab)
+Major funding support from

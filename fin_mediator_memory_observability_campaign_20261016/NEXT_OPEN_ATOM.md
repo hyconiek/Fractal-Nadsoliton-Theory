@@ -1,0 +1,3 @@
+# MM next atom — a physically licensed observation-memory and null-clock reference
+
+**Unpaid input:** concrete, independent source/preparation/readout evidence specifying the mapping from labelled FIN counts to simultaneous f1/f3 readouts, with a clock reference and an upper class for readout memory/error. The exact MM mathematical contrast is conditional on its ideal law; coloured instruments can mimic extra poles. Without a genuine typed input return OPEN_PHYSICAL_INTERFACE, not a new simulation or kappa sweep. Optional separate mathematical work: a prospectively frozen finite-data dependent-sign estimator with confidence/size bounds for one specified finite N and preparation, which would *not* by itself license physics.

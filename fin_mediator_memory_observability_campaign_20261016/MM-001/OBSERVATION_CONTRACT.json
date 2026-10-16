@@ -1,0 +1,49 @@
+{
+  "model_ids": [
+    "FIN_NATIVE_A7_LOO_HB",
+    "AUX_HB_OU_KAPPA_1",
+    "AUX_HB_OU_KAPPA_4",
+    "EXACT_NATIVE_ETA_RESET_LIFTS"
+  ],
+  "preparation": {
+    "diagnostic": "stationary reflected Pi_D,N=pi_D,N rho_n",
+    "native_stationary": "reflected pi_D,N",
+    "native_iid": "late iid-to-local coupling only if inherited MT admits it"
+  },
+  "readout": {
+    "fixed_block": "B_N chosen before observing labels",
+    "alpha": "k_N/N -> 1/2 (full alpha=1 separate negative control)",
+    "features": [
+      "f1(j)=sqrt(2)cos(2*pi*j/12)",
+      "f3(j)=sqrt(2)cos(6*pi*j/12)"
+    ],
+    "times": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "observed": "V_r,N=sqrt(N)/k_N sum_{a in B_N} f_r(x_a(t))",
+    "binary_projection": "sign in {-1,0,+1} including zero"
+  },
+  "nuisance": {
+    "allowed": "unknown fixed nonzero real gain separately for f1 and f3; one shared unit rescaling of clock",
+    "excluded": [
+      "offsets",
+      "time-varying sign flips",
+      "erasure",
+      "additive/coloured detector noise",
+      "unknown labels",
+      "resampled block",
+      "arbitrary calibration"
+    ]
+  },
+  "reference_rule": {
+    "rho_rj": "sin(pi*mean(sign(V_r(0))*sign(V_r(j)))/2)",
+    "q": "rho_null,2/rho_null,1 with nonzero guard and rho_null,3=rho_null,1*q^2 check",
+    "if_failed": "UNCLASSIFIED / REFERENCE_UNSUPPORTED"
+  },
+  "horizon": "fixed fast model time [0,4]; no growing M or shrinking alpha",
+  "status": "frozen before new MM certificate; existing supplied plan"
+}

@@ -1,0 +1,1 @@
+Run `OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 ../verify_hm.py` from this task folder. Read `../HM_THEOREM_PROOFS.md` for analytical hypotheses; the script does not verify martingale convergence or MT premises.
