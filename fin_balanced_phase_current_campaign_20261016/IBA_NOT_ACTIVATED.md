@@ -1,0 +1,1 @@
+The fixed carry has no proven full adjacent-fibre coupling, much less a full MT-domain generator; the rare-leak stationary Jensen argument is therefore **NOT_ACTIVATED**. Stationary phase predictions or limits alone cannot replace exact statewise rates. No iid preparation, natural activity, physical clock or detector evidence was derived.

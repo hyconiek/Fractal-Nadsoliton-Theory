@@ -1,0 +1,3 @@
+# Next strictly frozen open atom
+
+**Actual dense-subset weighted Hall for PC04 marginals.** After paying source custody, obtain either (i) a *uniform actual-q12* transport/capacity argument for `O'_l(T)≤I'_{l+1}(N_H(T))` for all whole-fibre sets T in the fixed adjacent critical band, including arbitrary overlap and E-correction, or (ii) an exact sequence of actual q12 count-level subsets violating that inequality for unbounded N. The singleton and at-most-four-overlap subclasses are closed conditionally. Do not substitute a further degree-only test or restart threshold tuning. If the carry is refuted, do not infer infeasibility of general H-supported flows. Full-D_N gluing and the IBA consequence are separate gates.

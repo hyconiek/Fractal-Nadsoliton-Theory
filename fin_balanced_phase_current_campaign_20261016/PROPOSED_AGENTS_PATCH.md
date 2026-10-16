@@ -1,0 +1,3 @@
+# Proposed guardrail — not applied
+
+PC-001/002 research has a conditional actual-H partial Hall lemma: on each fixed compact critical band and subject to original PC03/PC04 uniform phase-current fibre asymptotics, singleton sets outside MT departure E and nondeparture sets admitting nine safe successors with at most fourfold right overlap satisfy weighted Hall. This does not pay full PC-002, PC-003 or IBA; no full-domain flow was constructed. Preserve the frozen PC04 marginals and all E_N crossings. Source PC03/PC04 bytes were unavailable to the executor, so independent audit must check the inherited limit before accepting even this conditional partial lemma.

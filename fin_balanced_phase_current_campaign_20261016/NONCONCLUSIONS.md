@@ -1,0 +1,3 @@
+# Nonconclusions
+
+No weighted-Hall theorem for arbitrary subsets T of any whole actual q12 phase fibre; no growing-N actual violating T; no refutation of the frozen carry ansatz; no compact exact coupling; no full-domain flows, 5NW cap or kinetic counterexample to universal IBA. No late iid theorem, new FIN kinetic law, empirical records, physical source of A7/activity/clock/energy, spatial incidence, conserved physical energy, apparatus/calibration, QM/GR/SM/L_total/ToE, or ontology/selector/legacy-role changes. The source current-prefix input PC03/PC04 was not byte-verifiable in this environment; the partial theorem is conditional on the stated content and should be independently audited in the actual repo.
