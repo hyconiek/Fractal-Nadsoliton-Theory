@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-16",
+  "status": "PASS_BOUNDED_ACTIVITY_COVARIANCE_RESEARCH_CHECKS",
+  "implementation_sha256": "d3b131f55d9d50b73987ebcdf2f683080cc7f03e45bd15bc8eef6a1d5c963bb6",
+  "checks": [
+    {
+      "name": "exact wheel equilibrium stress on all seven affected nodes",
+      "passed": true
+    },
+    {
+      "name": "base exact Gibbs detailed balance",
+      "passed": true
+    },
+    {
+      "name": "positive drift-preserving reversible perturbation",
+      "passed": true
+    },
+    {
+      "name": "all pointwise coordinate drifts preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "all per-slot attempt caps paid",
+      "passed": true
+    },
+    {
+      "name": "pointwise covariance and centre holding rate genuinely change",
+      "passed": true
+    },
+    {
+      "name": "all nine invariant averaged covariance identities exact",
+      "passed": true
+    },
+    {
+      "name": "endpoint inverse recovers both distinct full generators exactly",
+      "passed": true,
+      "terminal_checks": 12
+    },
+    {
+      "name": "reflected disconnected fibre segments reconstructed without omitted exits",
+      "passed": true,
+      "terminal_checks": 14
+    },
+    {
+      "name": "exact g0 family reduction under vanishing amplitude",
+      "passed": true
+    },
+    {
+      "name": "incompatible terminal dataset retained as rejection",
+      "passed": true
+    },
+    {
+      "name": "terminal-compatible but negative conductance dataset rejected",
+      "passed": true
+    },
+    {
+      "name": "actual inverse API fails closed on both incompatible tensors",
+      "passed": true
+    },
+    {
+      "name": "exact inverse rejects malformed domains and forbidden edges",
+      "passed": true
+    },
+    {
+      "name": "D12 averaged stress counts and noncancellation",
+      "passed": true
+    },
+    {
+      "name": "D12 averaged stress annihilates every coordinate exactly",
+      "passed": true
+    },
+    {
+      "name": "exact q12 positive rates and labelled per-slot cap",
+      "passed": true
+    },
+    {
+      "name": "q12 centre activity and covariance values",
+      "passed": true
+    },
+    {
+      "name": "multiple-count-jump covariance inverse negative control",
+      "passed": true
+    },
+    {
+      "name": "same-parity activity changes without changing parity drift or bracket",
+      "passed": true
+    },
+    {
+      "name": "native A7 q12 N3 nonzero stress diagnostic",
+      "passed": true,
+      "drift_residual": 2.7755575615628914e-17,
+      "db_residual": 4.973799150320701e-14
+    },
+    {
+      "name": "native diagnostic per-slot margins remain positive",
+      "passed": true
+    }
+  ],
+  "count": 22,
+  "exact_q3": {
+    "N": 3,
+    "states": 10,
+    "stress_edges": 12,
+    "amplitude": "2/3",
+    "centre_variance_change": "1/162"
+  },
+  "exact_q12_uniform_fixture": {
+    "N": 3,
+    "states": 364,
+    "stress_states": 60,
+    "stress_edges": 132,
+    "amplitude": "1/16",
+    "scope": "nonzero algebraic perturbation at uniform law, NOT the g0-preserving family at g0 or the asymptotic MT domain"
+  },
+  "native_A7_diagnostic": {
+    "N": 3,
+    "gain": 3.0,
+    "arithmetic": "binary64 diagnostic, NOT interval proof",
+    "amplitude": 0.37695479074697125,
+    "drift_residual": 2.7755575615628914e-17,
+    "db_residual": 4.973799150320701e-14
+  },
+  "inputs": {
+    "AGENTS.md": "b144da475d26e437e2d357e83f48841076a92a8719a8dd6fe390e4e13192104f",
+    "FIN_RATE_ACTIVITY_SOURCE_NEXT_CHAIN_20261016.md": "ad077577b703867c46bd5967ba31e6468691e2c48def275afab681f742b450af",
+    "fin_rate_coupling_review_20261016/PROOF_AUDIT_AND_ADDITIONAL_CONTROLS.md": "22c7246d4ce2ccfcab99c28536b8cafb2e42a28fb3e6b8fe6a76bbea2b6a7e23",
+    "fin_rate_coupling_review_20261016/MANIFEST.sha256": "4a96d06256edf51a3208eb917bb46ea40beb349d9e1f44a2b4c314c946841961",
+    "fin_critical_metastability_review_20261015/INTAKE_20261015.md": "ad16dac2ff755c3e8e915165b272ecf8ffa47303afd8322f9603effcf598c9ad",
+    "fin_critical_metastability_review_20261015/PROOF_COMPLETIONS.md": "567b55c9507c54572a7c30bb35b7703e3d6ab936e7a2215e8769ae69948ea434",
+    "fin_critical_metastability_review_20261015/GEOMETRY_CERTIFICATE.json": "a2b31d31c033d80c3aeafb02ac2bc1bbb91c252f4b9fcb94cd4e12fcae47a04a",
+    "fin_uniform_critical_review_20261014/INTAKE_20261014.md": "39c455fafac285ea46c93c2b7f675ffa720378dc2efc68aa55860982fc27da81",
+    "fin_uniform_critical_campaign_20261014/UF-002_PARITY_COEFFICIENTS_AND_CONTROLS.md": "c652609e6300e20e7e5156071c8384f6010df4cd3c7be6009cbc91b58f0bd958",
+    "fin_uniform_critical_campaign_20261014/UF-003_CRITICAL_PROCESS_THEOREM_AND_ENERGY.md": "67214d0c2f5591deeb1ef44999a19386e2ebb37c5ca6bcd11a4e2645976b2f80",
+    "fin_intrinsic_observation_review_20261015/PROOF_COMPLETIONS_AND_CORRECTIONS.md": "0536b62ed12ea3cd554179098329b10e74afb71967ad0edea765ceffbb15d494",
+    "fin_rank7_followup/inputs/fin_handoff_audit/results.json": "de10b6cf8db83d4b2ad16f6b9ce3ed980c676771883e5b859e717c85fc5e9981",
+    "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py": "1f0d9d44e3c98d2f050872ba1766882b7d06a4505349810285170332a3d424ae"
+  },
+  "source_status": "No independent activity provider derived; AS-002/003 NOT_ACTIVATED; new intrinsic theorems only"
+}
