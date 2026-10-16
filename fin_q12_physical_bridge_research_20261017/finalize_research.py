@@ -15,7 +15,7 @@ def main():
     required=['Q12_SPECTATOR_ACTIVITY_OBSTRUCTION.md','THERMAL_RESET_RESOURCE_BOUNDARY.md',
         'LITERATURE_DATABASE.md','LITERATURE_REGISTER.json','BROWSER_READ_LOG.jsonl','browser_capture.py',
         'PHYSICS_GAPS_AND_SEARCH_PL.md','TOOL_ACCESS_STATUS.json','NONCONCLUSIONS.md','REPLAY.md',
-        'HANDOFF.md','verify_bridges.py','RESULTS.json','finalize_research.py']
+        'HANDOFF.md','verify_bridges.py','RESULTS.json','finalize_research.py','BROWSER_HEALTH_FINAL.json']
     assert all((HERE/n).is_file() for n in required)
     for path in HERE.glob('*.py'):ast.parse(path.read_text(),filename=str(path))
     for path in HERE.glob('*.json'):json.loads(path.read_text(),parse_constant=reject)
@@ -29,6 +29,7 @@ def main():
     log=[json.loads(line) for line in (HERE/'BROWSER_READ_LOG.jsonl').read_text().splitlines()]
     assert len(log)==3 and len({row['label'] for row in log})==3
     papers=json.loads((HERE/'LITERATURE_REGISTER.json').read_text())['works'];assert len(papers)==5
+    health=json.loads((HERE/'BROWSER_HEALTH_FINAL.json').read_text());assert health['healthy'] and health['browser_ready'] and health['require_existing_daemon']
     result={'date':'2026-10-17','status':'PASS_MECHANICAL_Q12_PHYSICAL_COMPATIBILITY_PACKAGE',
         'required_files':required,'bounded_controls':16,'actual_browser_captures':3,'annotated_primary_works':5,
         'PDF_hash_scope':'no original PDF byte hashes claimed','physical_source':'NOT_FOUND',

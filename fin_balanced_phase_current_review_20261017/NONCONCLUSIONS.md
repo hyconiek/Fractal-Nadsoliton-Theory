@@ -14,4 +14,6 @@ activity, initial law, clock/units, locality, conserved physical energy,
 apparatus/calibration/EV, QM/GR/SM/ToE or selector/legacy roles. The new
 zero-gap test has its restricted reservoir-class scope, and the reset bank
 is target-designed. Primary FIN and all unchanged gates remain intact.
-No new physical premise, experiment, spending, hardware, message or commit.
+No new physical premise, experiment, spending, hardware or message. The
+reviewer created no commit; the external integration commit is recorded
+in INTAKE_20261017.md, not attributed to this reviewer.

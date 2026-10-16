@@ -2,7 +2,9 @@
 
 Date: 2026-10-17. Review target corrected by the user to the previously
 untracked PC campaign; SC was already committed. Original source bytes
-and previous repository work remain unchanged. No commit was created here.
+and previous repository work remain unchanged. The reviewer created no
+commit; external commit `48add8fc` recorded the core package during intake.
+Later final-check metadata updates remain in the working tree.
 
 Read [the intake](INTAKE_20261017.md), [proof audit](PROOF_AUDIT.md),
 [orbit Hall tool](FINITE_ORBIT_HALL_REDUCTION.md), and
