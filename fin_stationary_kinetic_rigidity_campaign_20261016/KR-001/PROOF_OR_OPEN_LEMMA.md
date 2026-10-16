@@ -1,0 +1,3 @@
+# KR-001 — Model class and exact examples
+
+The invariant count law, full statewise parity drift condition, accepted native local estimates, total rate cap and NC are frozen in `MODEL_CLASS.json` and `ASSUMPTION_LEDGER.md`. `NON_HB_EXAMPLES.md` proves a non-native same-parity thinning member on the **actual q12/A7 reflected domain**. Stationary generator balance, independently proved in KR-002, is the same mean-noise identity described in the user-supplied covariance study. The original `THEOREMS.md` was not accessible for byte-level comparison; its content is not passed off as independently reviewed.

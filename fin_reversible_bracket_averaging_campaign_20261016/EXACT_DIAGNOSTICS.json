@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "check_count": 24,
+  "checks": [
+    {
+      "check": "baseline all six cycle edges positive",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "endpoint stress preserves full pointwise drift",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "endpoint retains positive/reversible rates on retained edges",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "pointwise Gamma changes at multiple states",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "stationary mean Gamma unchanged",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "stationary covariance identity",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact parity cut conductance at 0",
+      "result": "PASS",
+      "detail": {
+        "flux": "2/5"
+      }
+    },
+    {
+      "check": "exact parity cut conductance at 1",
+      "result": "PASS",
+      "detail": {
+        "flux": "1/5"
+      }
+    },
+    {
+      "check": "conditional Gamma rigidity level 0",
+      "result": "PASS",
+      "detail": {
+        "mean": "82/65"
+      }
+    },
+    {
+      "check": "conditional Gamma rigidity level 1",
+      "result": "PASS",
+      "detail": {
+        "mean": "123/115"
+      }
+    },
+    {
+      "check": "conditional Gamma rigidity level 2",
+      "result": "PASS",
+      "detail": {
+        "mean": "41/25"
+      }
+    },
+    {
+      "check": "endpoint components are closed",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "invariant projection is nonzero",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "invariant projection centred in global pi",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "coarse exact residue",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Poisson exact energy at tau=1/100",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Poisson exact energy at tau=1/1000",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Poisson exact energy at tau=1/10000",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Poisson energy diverges with declining positive edges",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "positive coarse residue",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Dirichlet projection for power=1",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Dirichlet projection for power=2",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Dirichlet projection for power=3",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Dirichlet projection for power=4",
+      "result": "PASS",
+      "detail": null
+    }
+  ],
+  "fixture": {
+    "type": "six-vertex-reversible-countercontrol_NOT_q12",
+    "pi": [
+      "2/41",
+      "3/41",
+      "5/41",
+      "7/41",
+      "11/41",
+      "13/41"
+    ],
+    "m": [
+      "0",
+      "1",
+      "2",
+      "1",
+      "0",
+      "1"
+    ],
+    "baseline_conductances": [
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10"
+    ],
+    "endpoint_conductances": [
+      "0",
+      "0",
+      "1/5",
+      "1/5",
+      "0",
+      "1/5"
+    ],
+    "stress_signs": [
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "baseline_G": [
+      "41/10",
+      "41/15",
+      "41/25",
+      "41/35",
+      "41/55",
+      "41/65"
+    ],
+    "endpoint_G": [
+      "41/10",
+      "0",
+      "41/25",
+      "82/35",
+      "41/55",
+      "41/65"
+    ],
+    "mean_G": "6/5",
+    "components": [
+      [
+        0,
+        5
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ],
+    "component_masses": [
+      "15/41",
+      "3/41",
+      "23/41"
+    ],
+    "invariant_residual_means": [
+      "-8/75",
+      "-6/5",
+      "26/115"
+    ],
+    "tau_poisson": [
+      {
+        "tau": "1/100",
+        "R_exact": "132401/159695",
+        "R_float": 0.8290866965152321,
+        "tau_R_float": 0.008290866965152322
+      },
+      {
+        "tau": "1/1000",
+        "R_exact": "14039021/1672595",
+        "R_float": 8.393556718751402,
+        "tau_R_float": 0.008393556718751402
+      },
+      {
+        "tau": "1/10000",
+        "R_exact": "1417137221/16801595",
+        "R_float": 84.34539821963331,
+        "tau_R_float": 0.008434539821963332
+      }
+    ],
+    "exact_leading_tauR": "1064/126075"
+  }
+}

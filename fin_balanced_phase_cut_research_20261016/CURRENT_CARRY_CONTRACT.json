@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-16",
+  "status": "DERIVED_EXACT_MARGINAL_OBJECT_COUPLING_NOT_CONSTRUCTED",
+  "parent": "actual q12 A7, exact gc, lambda0, N in12N, MT reflected D_N and count weights",
+  "support": "original H including interphase edges incident to actual E_N; not a new graph",
+  "analysis_band": "each fixed compact critical interval; next order freezes |z|<=1",
+  "source": "s_x=(N/2)W_x d_native_reflected(x), at every state",
+  "phase_current": "J_P,l=sum_(x in P,m<=m_l)s_x",
+  "initial_carry": "I_P,l(x)=J_P,l-1 W_x/W_P,l",
+  "departure_correction": {
+    "a_x": "[-s_x-I_P,l(x)]_+ on E_N intersect fibre",
+    "A_P,l": "sum a_x",
+    "I_prime_on_E": "I+a_x",
+    "I_prime_off_E": "I-A_P,l W_x/W_bulk",
+    "O_prime": "I_prime+s_x"
+  },
+  "proved_for_sufficiently_large_N_on_fixed_compact_bands": [
+    "nonnegative I_prime and O_prime",
+    "O_prime-I_prime=s statewise exactly",
+    "sum I_prime=J_P,l-1 and sum O_prime=J_P,l",
+    "I_prime<=2NW and O_prime<=3NW",
+    "correction L1<=2N W(E_N intersect fibre)",
+    "Gplus invariance"
+  ],
+  "next_missing_object": "nonnegative adjacent-full-fibre coupling on H with rows O_prime_l and columns I_prime_l+1",
+  "exact_feasibility_gate": "for every left-fibre subset T, O_prime_l(T)<=I_prime_l+1(N_H(T))",
+  "conditional_payoff": "internal-band statewise exact drift and total incident cap<=5NW",
+  "open": ["weighted Hall on actual adjacent fibres", "far-soft-level gluing", "complete actual generator", "IBA counterfamily"],
+  "limits": [
+    "prescribed phasewise carries are a sufficient ansatz, not necessary for every possible original flow",
+    "failure of within-phase-only coupling does not refute coupling on full H",
+    "compact-band success does not close all-N domain flow or temporal IBA",
+    "no physical source, hidden variable, controller or new primitive"
+  ]
+}

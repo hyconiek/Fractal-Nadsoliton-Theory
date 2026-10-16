@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "check_count": 20,
+  "flags": {
+    "toy_native_source": true,
+    "toy_sharp_relative_cap": true,
+    "toy_primal_at_optimal_cap": true,
+    "toy_below_cap_fails": true,
+    "toy_no_up_detour_for_each_forbidden": true,
+    "toy_phase_balance": true,
+    "toy_level_cuts": true,
+    "forbidden_only_obstruction": true,
+    "varying_relative_cap_N2": true,
+    "bounded_absolute_exit_N2": true,
+    "varying_relative_cap_N4": true,
+    "bounded_absolute_exit_N4": true,
+    "varying_relative_cap_N10": true,
+    "bounded_absolute_exit_N10": true,
+    "varying_relative_cap_N100": true,
+    "bounded_absolute_exit_N100": true,
+    "signed_repair_has_feasible_final_flow": true,
+    "additive_only_repair_is_impossible": true,
+    "signed_repair_decreases_one_native_edge": true,
+    "empty_zero_supply": true
+  },
+  "exact_fixtures": {
+    "four_vertex": {
+      "h": [
+        [
+          0,
+          2,
+          "1"
+        ],
+        [
+          2,
+          3,
+          "1"
+        ]
+      ],
+      "f": [
+        [
+          0,
+          1,
+          "1"
+        ],
+        [
+          1,
+          3,
+          "1"
+        ]
+      ],
+      "s": [
+        "2",
+        "0",
+        "0",
+        "-2"
+      ],
+      "K_star": "2",
+      "maximizing_cuts": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "constructive_flow": {
+        "0->2": "2",
+        "2->3": "2"
+      }
+    },
+    "negative": {
+      "H": [],
+      "native_deleted": [
+        [
+          0,
+          1,
+          "1"
+        ]
+      ],
+      "s": [
+        "1",
+        "-1"
+      ],
+      "K_star": "INFINITY",
+      "failed_cuts": [
+        {
+          "S": [
+            0
+          ],
+          "source": "1",
+          "out_native": "0"
+        }
+      ]
+    },
+    "eight_vertex_signed_repair": {
+      "h": [
+        [
+          1,
+          2,
+          "2"
+        ],
+        [
+          2,
+          4,
+          "2"
+        ],
+        [
+          4,
+          6,
+          "2"
+        ],
+        [
+          0,
+          3,
+          "1"
+        ],
+        [
+          3,
+          5,
+          "1"
+        ],
+        [
+          5,
+          7,
+          "1"
+        ]
+      ],
+      "f": [
+        [
+          0,
+          2,
+          "1"
+        ],
+        [
+          4,
+          7,
+          "1"
+        ]
+      ],
+      "s": [
+        "2",
+        "2",
+        "-1",
+        "0",
+        "1",
+        "0",
+        "-2",
+        "-2"
+      ],
+      "K_star": "2",
+      "constructive_flow": {
+        "1->2": "2",
+        "2->4": "1",
+        "4->6": "2",
+        "0->3": "2",
+        "3->5": "2",
+        "5->7": "2"
+      },
+      "additive_only_K_star": "INFINITY",
+      "additive_failed_cut": [
+        {
+          "S": [
+            4,
+            6
+          ],
+          "source": "1",
+          "out_native": "0"
+        }
+      ]
+    },
+    "nonnecessary_uniform_K": {
+      "K_star_N": "N+1",
+      "constructed_exit_upper_bound": "1+1/N <= 2 at each non-isolated vertex for weights W=1; artificial graded toy, not q12"
+    }
+  }
+}

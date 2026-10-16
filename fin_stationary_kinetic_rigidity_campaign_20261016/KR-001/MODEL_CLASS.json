@@ -1,0 +1,20 @@
+{
+  "id": "KR_Q12_STATIONARY_REFLECTED_EXACT_PARITY_DRIFT_NC",
+  "type": "conditional_intrinsic_statistical_model_class",
+  "q": 12,
+  "matrix": "frozen_A7",
+  "gain": "g_N=12/Lambda6+lambda/sqrt(N)",
+  "N": "multiples_of_12",
+  "invariant": "actual_reflected_MT_local_Gibbs_with_multinomial_count_multiplicity",
+  "state": "full_count_vector_n_in_D_N",
+  "support": "only_reflected_single_copy_label_replacements",
+  "stationarity": "exact_pi_D_N_start",
+  "reversibility": true,
+  "jump_rate_cap": "sup_n sum_y q_tilde(n,y) <= C N",
+  "drift_matching": "L_tilde_N m(n) = L_native_reflected_N m(n) for EVERY n in D_N",
+  "bracket": "G_N=N sum_y q_tilde(n,y)(m(y)-m(n))^2",
+  "sufficient_condition_NC": "E_pi |G_N-E_pi G_N| -> 0",
+  "not_assumed": ["Markovian_parity_projection", "fast_mixing", "spectral_gap", "known_pointwise_noise", "iid_diagnostic_preparation", "physical_clock"],
+  "non_HB_member": "same_parity_edge_thinning_eta=1/(1+g_N^2)",
+  "stronger_necessity_question": "OPEN: integrated bracket averaging without NC"
+}

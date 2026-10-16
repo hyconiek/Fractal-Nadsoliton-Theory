@@ -1,0 +1,3 @@
+# Next open atom — genuine q12 orbit weighted-cut inequality
+
+Prove `sup_{N in12N, N sufficiently large} Q_N<infinity` for the actual MT domain, the *frozen* phase predicate and *actual* departure-layer leaky graph, with exact Gibbs count multiplicities and full reflected LOO drift source. Alternatively construct genuine orbit-union cuts with `Q_N->infinity`, preserving exact N quantifiers, edge permissions and the nonrounded `g_c`. This is necessary and sufficient for the original uniform vertex-rate feasibility by the newly proved exact theorem, but remains unresolved. No further toy/spectral-digit scan or threshold change is authorized by this handoff.

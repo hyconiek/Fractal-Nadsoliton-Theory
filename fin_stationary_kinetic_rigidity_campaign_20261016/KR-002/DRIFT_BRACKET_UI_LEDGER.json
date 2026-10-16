@@ -1,0 +1,25 @@
+{
+  "slow_moments": "sup_N E|N^(1/4)m|^p<infinity for every fixed p, inherited MT-003",
+  "fast_moments": "sup_N E||sqrt(N)w||^p<infinity for every fixed p, inherited MT-003",
+  "drift_errors_L1": {
+    "fast_squared": "O(N^-1/4)",
+    "fast_soft_product": "O(N^-1/2)",
+    "soft_quartic": "O(N^-1/4)",
+    "gain_soft_squared": "O(N^-1/4)",
+    "gain_squared_soft": "O(N^-1/2)",
+    "native_LOO": "O(N^-1/4)",
+    "reflected_boundary": "O(N^(3/4)*pi_D(B_D))"
+  },
+  "weighted_drift_error": "E_pi[(1+|Z|)|e_N|] ->0",
+  "exact_stationary_identity": "E_pi Gtilde_N = E_pi Gnative_N -> 2",
+  "NC": "E_pi |G_N - E_pi G_N| ->0",
+  "integrated_bracket": "E sup_[0,S] |integral_0^t G_N ds - 2t| <= S NC + S |E G_N-2| ->0",
+  "jump_bound": "2 N^-3/4",
+  "third_jump_characteristic": "O(S N^-3/4)",
+  "bracket_cap": "0<=G_N<=4C",
+  "max_containment": "uniform E sup_[0,S] Z_N^2 via Ito, stationary moments, BDG and inward quartic drift",
+  "tightness": "Aldous localized increments plus containment and vanishing jumps",
+  "joint_filtration": "martingale and square martingale identities transferred with UI",
+  "limiting_law": "dZ=(chi*lambda*Z-Z^3/3)ds+sqrt(2)dB; Z0~rho_lambda",
+  "scientific_status": "CONDITIONAL_PROOF_UNDER_NC_AND_ADMITTED_MT_UF"
+}

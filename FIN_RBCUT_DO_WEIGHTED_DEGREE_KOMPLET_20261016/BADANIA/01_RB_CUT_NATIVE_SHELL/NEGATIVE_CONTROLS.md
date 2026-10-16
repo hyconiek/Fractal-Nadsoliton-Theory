@@ -1,0 +1,8 @@
+# Negative controls and limitations
+
+- **False shortcut: vanishing shell mass implies a positive cut.** Incorrect. The established inequality is `sum_L s>=-N Z^W pi(Shell)`, which permits a strictly negative source at each N. One may rescale the independent exact RB-002 rational failure (source=-9/10) by an arbitrarily small positive multiplier without changing its negative sign. This is only a *logical* counterexample to the shortcut, not an actual FIN counterexample.
+- **False shortcut: use native rates only on H and declare exact drift.** Incorrect. The deleted-edge flux produces a signed residual supported on the shell. L1 smallness does not imply statewise zero, particularly on the thin phase boundary.
+- **False shortcut: a shell bound automatically implies the critical IBA limit.** Incorrect. The physical model-time horizon is multiplied by `sqrt(N)` for the critical parity process. MT's qualitative `pi(Shell)->0` supplies no bound on `N^(3/2) pi(Shell)` or critical path disagreement.
+- **False shortcut: the finite RB toy implies a real q12 negative ideal.** Incorrect: it has a different graph, Gibbs potential, boundary and N quantifiers.
+- **False shortcut: if every ideal sign holds, the uniform cap follows.** Incorrect. The capacity-free transshipment theorem leaves the uniform `CN` vertex traffic constraint unpaid.
+- **False shortcut: any gaussian surrogate threshold is an admissible replacement for the exact A7/g_c criterion.** Incorrect. All production claims use exact `gamma_3`, `g_c`, `D_N`, inclusive ties, and the original heat-bath weights. The verification script checks only exact Fourier integers and abstract flow identities.

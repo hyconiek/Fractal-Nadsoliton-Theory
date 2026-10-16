@@ -1,0 +1,3 @@
+# NONCONCLUSIONS
+
+The local nine-direction fact is not a global flow or signed-cut theorem. Local legal edges can remain entirely inside an arbitrary cut. Shell stationary rarity is not a relative capacity estimate, and native deletion without exact drift matching is disallowed. The incoming compensation of shielded-tail weights remains open. No actual all-N generator or different-process/I BA counterexample is constructed. No finite example is offered as a q12 asymptotic witness. No new FIN/A7 microscopic physical source, units, spatial incidence, conserved physical energy, apparatus, experimental verification, quantum/gravity/SM/ToE gate has been paid. There is no change to inherited NC/IBA sufficient theorem or the separate physical activity-provider gate.

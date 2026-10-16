@@ -1,0 +1,19 @@
+{
+  "id": "BA_Q12_REFLECTED_PARITY_FLUX_CLASS",
+  "q": 12,
+  "N": "multiples of 12",
+  "generator": "reversible count CTMC on original MT D_N",
+  "stationary": "actual conditioned local Gibbs pi_D,N including multinomial weights",
+  "clock": "native model time; total exit rate <= C N with one sequence-uniform finite C",
+  "edges": "only count changes n->n-e_i+e_j retained in D_N",
+  "parity": "m(n)=sum(-1)^j n_j/N",
+  "parity_step": "delta=2/N; same-parity replacements have delta=0",
+  "statewise_drift": "L_tilde m(n)=L_native_reflected m(n) for every n in D_N",
+  "activity": "c_xy=pi(x)q_xy=c_yx >=0",
+  "fundamental_constraint": "sum_y c_xy*(m(y)-m(x))=pi(x)d_native(x)",
+  "components": "not assumed irreducible; may set some permitted conductances to zero",
+  "NC": "NOT assumed",
+  "fixed_horizon": "sqrt(N) * s",
+  "observable": "r=G-E_pi G, G=N Gamma(m,m)",
+  "category": "intrinsic diagnostic statistical-model class, not a newly adopted physical law"
+}
