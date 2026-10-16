@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-16",
+  "status": "PASS_SCOPED_RATE_COUPLING_DERIVATION",
+  "scientific_status": "DERIVED_CONDITIONAL_RATE_RELATION; KINETIC_SOURCE_OPEN",
+  "exact_algebra": {
+    "fixtures": 576,
+    "arithmetic": "Fraction",
+    "scope": "finite algebra fixtures; all-N identity is proved analytically"
+  },
+  "certificate": "CERTIFICATE.json",
+  "numerical_checks": {
+    "status": "BINARY64_DIAGNOSTICS_NOT_INTERVAL_PROOFS",
+    "records": [
+      {
+        "kinetics": "HB",
+        "spectator": 0,
+        "C3": 2.2007317250672815,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826145,
+        "max_error": 0.0
+      },
+      {
+        "kinetics": "HB",
+        "spectator": 7,
+        "C3": 2.2007317250672815,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826145,
+        "max_error": 0.0
+      },
+      {
+        "kinetics": "MET",
+        "spectator": 0,
+        "C3": 2.2007317250672815,
+        "C6": 2.840008756037028,
+        "ratio": 0.7749031478826146,
+        "max_error": 4.440892098500626e-16
+      },
+      {
+        "kinetics": "MET",
+        "spectator": 7,
+        "C3": 2.2007317250672815,
+        "C6": 2.840008756037028,
+        "ratio": 0.7749031478826146,
+        "max_error": 4.440892098500626e-16
+      },
+      {
+        "kinetics": "BAR",
+        "spectator": 0,
+        "C3": 2.2007317250672815,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826145,
+        "max_error": 0.0
+      },
+      {
+        "kinetics": "BAR",
+        "spectator": 7,
+        "C3": 2.200731725067281,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826143,
+        "max_error": 4.440892098500626e-16
+      },
+      {
+        "kinetics": "HB_THINNED",
+        "spectator": 0,
+        "C3": 2.200731725067281,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826143,
+        "max_error": 4.440892098500626e-16
+      },
+      {
+        "kinetics": "HB_THINNED",
+        "spectator": 7,
+        "C3": 2.2007317250672815,
+        "C6": 2.8400087560370286,
+        "ratio": 0.7749031478826145,
+        "max_error": 0.0
+      }
+    ],
+    "same_source_ratio_HB": 3.2450412030946563,
+    "same_source_ratio_thinned": 0.3245041203094656,
+    "same_source_ratio_change": 0.1,
+    "count_multiplicity_negative_control": {
+      "raw": 0.5519365051323506,
+      "corrected": 1.6505487938004604,
+      "target": 1.650548793800461,
+      "raw_bias_exact": "-log(3)"
+    },
+    "thinning_rule": "h(d,g)=1/(1+g^2) for internal label distance 3, otherwise 1; diagnostic countermodel only"
+  },
+  "KB_bridge_admission": false,
+  "new_microscopic_law_adopted": false,
+  "empirical_validation": false
+}
