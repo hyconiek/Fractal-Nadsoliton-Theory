@@ -1,0 +1,64 @@
+{
+  "task": "UE-002",
+  "scientific_scope": "CONDITIONAL_OPERATOR_CLASS_NOT_ACTUAL_FIN",
+  "operator": "-d_x^2 I + V_inf - B sech^2(kx)",
+  "hypotheses": [
+    "symmetric constant matrices A,B",
+    "k>0",
+    "H^2 self-adjoint domain over R",
+    "Phi=v tanh(kx)"
+  ],
+  "V_inf": "A+B",
+  "B": "2v^2 Y",
+  "positive_sufficient": "A positive semidefinite and V_inf positive semidefinite",
+  "scalar_PT_bound": {
+    "mu": "lambda_min(V_inf)",
+    "b": "max(0,lambda_max(B))",
+    "s": "(sqrt(1+4*b/k^2)-1)/2",
+    "infimum_lower_bound": "mu-k^2*s^2"
+  },
+  "negative_sufficient": "lambda_min(V_inf - 2B/3)<-k^2/3",
+  "exact_noncommuting_countercontrol": {
+    "V_inf": [
+      [
+        "1",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "B": [
+      [
+        "4",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "commutator": [
+      [
+        "0",
+        "-2"
+      ],
+      [
+        "2",
+        "0"
+      ]
+    ],
+    "far_eigenvalues": [
+      "1/2",
+      "3/2"
+    ],
+    "trial": "(sech(x),0)",
+    "trial_Q": "-8/3",
+    "trial_norm2": "2",
+    "trial_Rayleigh": "-4/3",
+    "synthetic": true
+  },
+  "actual_FIN_stability_verdict": "OPEN_UNBOUND_ARRAYS_AND_COMPLEX_BLOCKS",
+  "no_full_spectrum_campaign": true
+}

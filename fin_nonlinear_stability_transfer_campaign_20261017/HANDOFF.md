@@ -1,0 +1,13 @@
+# HANDOFF — FIN NS-001–NS-005 (2026-10-17)
+
+**Terminal disposition:** `PROVED_CONDITIONAL_FULL_FIELD_ORBITAL_STABILITY_AND_LOCAL_TRANSFER; SOURCE_MEMBERSHIP_OPEN`.
+
+One internally consistent theorem chain was executed and stopped. We explicitly used the existing single 1+1 action, with signed standard even Phi sextic extension and exact kink, 12 complex Psi modes (24 real), all velocities, real symmetric noncommuting kernel Ks, frozen signed coefficient region, modulation removing only the translational neutral direction, full relative energy and a local same-trajectory transfer witness. The sources of the nonlinear action and actual FIN coefficient membership are **not** inferred from a model theorem. No new law or parameter fit was introduced.
+
+**Main new result:** For every source-premised coefficient tuple in the checkable region with a stationary wall and `delta_Psi>0`, `delta_phi>0`, the full 25-real-field wave system enjoys global small-data orbital stability in affine H1xL2, provided the standard energy-class Cauchy and continuation hypotheses hold. If the existing quadratic Phi-Psi coupling Y is nonzero, there exist arbitrarily small nonzero Psi/velocity Cauchy data on one of those globally stable solutions giving `E_Phi'(0)<0`, `E_Psi'(0)>0`, and exactly conserved `E_total`; strict signs persist for a positive interval. This is not asymptotic emission/absorption.
+
+**Particular advancement:** In the signed sextic sector with `m²=lambda v²+g v⁴`, `K_g=v tanh(kx)/sqrt(1+theta sech²(kx))` solves the exact wall equation for either sufficiently small nonzero sign of g; bare tanh fails if g != 0. Explicit error bounds transport the old PT control to the full wall, without silently setting g=0 or assuming commuting arrays. The positive-parameter region is mathematically nonempty, not asserted to contain actual FIN coefficients.
+
+Read `REPORT.md`, `NS_CONTRACT.md`, `NS_SIGNED_SEXTIC_EXACT_WALL.md`, `NS_GAP_THEOREM.md`, `NS_ORBITAL_THEOREM.md`, `NS_TRANSFER_THEOREM.md`, `RESULTS.json`, `SOURCE_STATUS.md`, `NONCONCLUSIONS.md` and `REPLAY.md`. `REPLAY/verify.py` passed 31 exact bounded algebraic checks. `INPUTS.sha256` and `MANIFEST.sha256` preserve available source/input and export hashes.
+
+**Stop line:** no current QW/review bytes were physically available in this runtime despite the upstream access-binding assertion, so actual action tensors and parameter membership remain untested; no AGENTS/source file was changed or commit created. Strict source, physical role, units, empirical QM/GR/SM/L_total/ToE and DH/Hall remain separate/open. No further task implicitly activated.

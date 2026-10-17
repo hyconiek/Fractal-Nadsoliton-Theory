@@ -1,0 +1,59 @@
+{
+  "campaign": "UE-001",
+  "execution_date": "2026-10-17",
+  "disposition": "CONDITIONAL_COUPLED_FIELD_ONLY",
+  "source_revision": "NOT_VERIFIED_REMOTE_MAIN",
+  "actual_action_bytes_available": false,
+  "user_supplied_operator": "-d_x^2 I + M2 + K_s + 2 Y Phi_K^2",
+  "field_sectors": {
+    "legacy_full_reported": {
+      "Psi": "12 complex fields",
+      "Phi": "1 real field",
+      "configuration_real_dim_per_spatial_point": 25,
+      "canonical_first_order_phase_dim_per_spatial_point": 50,
+      "status": "USER_REPORTED_NOT_REPLAYED"
+    },
+    "QW_mechanical_reported": {
+      "configuration_dim": 13,
+      "canonical_first_order_phase_dim": 26,
+      "status": "USER_REPORTED_NOT_REPLAYED"
+    },
+    "complex_to_real_slice": {
+      "invariant_if": [
+        "action invariant under conjugation",
+        "real field and momenta/velocities initially in fixed locus",
+        "uniqueness for full Cauchy system"
+      ],
+      "verified_for_actual_action": false
+    }
+  },
+  "actual_coefficients": {
+    "K_s": null,
+    "M2": null,
+    "Y": null,
+    "quartic_tensor": null,
+    "sextic_tensor": null,
+    "mass_diagonal_convention": null,
+    "kinetic_signature": null,
+    "domain_and_BC": null,
+    "complete_potential": null
+  },
+  "nonlinear_coefficient_source": "UNPAID",
+  "kernel_split": {
+    "legacy": "alpha_geo cos(omega d+phi)/(1+beta_tors d)",
+    "strict": "cos(omega d+phi)/(1+beta d^eta)",
+    "strict_equals_legacy": "UNPROVED"
+  },
+  "conditional_test_hypotheses": [
+    "canonical positive spatial derivative kinetic form",
+    "real symmetric A=M2+K_s and Y",
+    "1+1 infinite spatial line",
+    "Phi_K=v tanh(k x), v,k>0",
+    "full action supports decaying finite-energy Cauchy data"
+  ],
+  "fixed_K_same_Hessian": "underdetermined nonlinear terms; adding degree>=3 vanishing jets changes evolution without changing Hessian",
+  "isolated_composition": "underdetermined by one-body equations alone",
+  "typed_new_source_map": null,
+  "fitted_objects": [],
+  "new_physical_premises": []
+}

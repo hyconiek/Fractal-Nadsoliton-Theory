@@ -1,0 +1,2921 @@
+{
+  "date": "2026-10-17",
+  "source_hashes": {
+    "AGENTS.md": "ffb62af2671f62aa582c688a90edd998e4a9621b29e35fd240e1863038c9e0d9",
+    "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex": "ec6808580c881ae3ec8dd2fbf8120e8cc372f41194d033225b556d22daad4ac4",
+    "fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md": "3e7c1223b803df3cbe94d75e2696d3519f8505e38cef4bd724be3dadfca84ca8",
+    "fundamental_action_reconstruction/K2_STRICT_GATE_KERNEL_DERIVATION_CHAIN_NOTE.md": "594eb02e820928328d81e0ba7c2540ca13286a3b1e27cd33d71f7ae1fce74129",
+    "fundamental_action_reconstruction/F2_STRICT_GATE_KERNEL_PROVENANCE_AND_FAR_INPUT_CLASSIFICATION_PACKET.md": "b17e90112b1d121e386ca5c6018c5fd9b9e54c38d2e02027002ce5c7ac85d406",
+    "fundamental_action_reconstruction/F3_CURRENT_FAR_FRONTIER_KERNEL_ARTIFACT_SENSITIVITY_CLASSIFICATION_PACKET.md": "720efbac212f01d152d7df4f962c26b2d4fd3bf1f18215338d67cd8c8b38090c",
+    "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md": "acdd07e5b59fc87b7c6457cf43dcafef2939165526265ac37d0c0a6cffaa2c65",
+    "SUMMARY_GROK.md": "6e87c0e889086ea4f32d365a488031f34f9964e9724b2f0366642a90110409d2",
+    "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md": "25eb5bf949381f9869a7e7fbb0bf1e10ebf7ccdbc704c6670a72be67fa0e21cd",
+    "fundamental_action_reconstruction/generated/p2685_s1635_strict_lagrangian_eom_reverse_closure_obstruction_matrix.md": "01bf0d4bcc25079c47ade624f016a7dd463c722fce1fb1ff79638129e9fff521",
+    "fundamental_action_reconstruction/generated/p2697_s1647_post_direct_route_state_map_no_new_live_frontier_reconciliation.md": "7754098d0dce257b66bb44cb051e8c015b56b46f81fd454aad3e585d791bf2d3",
+    "fundamental_action_reconstruction/generated/p3075_s2025_variational_source_obstruction_table.md": "eb6d65656537fe16f993af9b2d72d089bcac094cd121889644dfebc1e87ddbfe",
+    "QW_2163_L13_FULL_CANONICAL_ACTION_VARIATIONAL_GATE.py": "e0245ed2c553915258e6aa65feafa7e4b3bf463fd7da4f3fc3e86a5873743b27",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2163_l13_full_canonical_action_variational_gate.json": "a3833b5f17aa09c70da5fe9ae98c033fdf011836572b4ef9a97cd72fcb8dd58a",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L13_FULL_CANONICAL_ACTION_VARIATIONAL_QW2163.lean": "84be583ec0cc3dd2112afece4561580344f7dc837108322ebb4e3e040cff9d57",
+    "QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py": "5eeeee7bd6436a14fd064c97115dafa03dcbec9be5a642bdc3b96b384208e43b",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2165_l13_exhaustive_canonical_eom_gate.json": "47b9e2b058ed46d1ea9cefea1716f8a18f992cbda804c2771a64ada4a6a56349",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L13_EXHAUSTIVE_CANONICAL_EOM_QW2165.lean": "d9b7ae6fb1a2efbc0b57fd393375b9bc3b01b2183ceb84dfa97b14460ca1743d",
+    "QW_2166_L14_EXHAUSTIVE_CANONICAL_HESSIAN_GATE.py": "2d6a2dc28d75d0050c8674a146ee902a4d77bb7521efb39630f3e358d0fe4872",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2166_l14_exhaustive_canonical_hessian_gate.json": "632ff93d2d01003c19924841275e05afabe9eb4565ef9b9c27feb0e7522fc116",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L14_EXHAUSTIVE_CANONICAL_HESSIAN_QW2166.lean": "d9dcc7abc9975ba5dd4bf9c51bc3ee2eb3b67f40c99611efd2788885b8988bc2"
+  },
+  "AGENTS_full_ledger_header_index": [
+    {
+      "line": 12,
+      "heading": "## Kernel split / bridge-completion guardrail"
+    },
+    {
+      "line": 21,
+      "heading": "## Ontology guardrail"
+    },
+    {
+      "line": 28,
+      "heading": "## FAR continuation rule"
+    },
+    {
+      "line": 34,
+      "heading": "## Strategic priority guardrail"
+    },
+    {
+      "line": 39,
+      "heading": "## Selector guardrail"
+    },
+    {
+      "line": 45,
+      "heading": "## L5/L12 noncyclic guardrail"
+    },
+    {
+      "line": 52,
+      "heading": "## Agent execution note"
+    },
+    {
+      "line": 63,
+      "heading": "## Programs P454--P457 nested-dual/symmetry-obstruction/refined-cover guardrail (Release 10.41, 2026-08-01)"
+    },
+    {
+      "line": 72,
+      "heading": "## Programs P458/P459/P464 curvature/allocation/dual-refinement guardrail (Release 10.42, 2026-08-01)"
+    },
+    {
+      "line": 80,
+      "heading": "## Programs P465/P468/P469 strict-equality/support-ladder guardrail (Release 10.43, 2026-08-01)"
+    },
+    {
+      "line": 88,
+      "heading": "## Programs P471/P472/P473 exact-O167-attainment guardrail (Release 10.44, 2026-08-01)"
+    },
+    {
+      "line": 97,
+      "heading": "## Programs P474/P479/P483 optimal-face/parametric-tube guardrail (Release 10.45, 2026-08-01)"
+    },
+    {
+      "line": 106,
+      "heading": "## Programs P475/P480/P484 replay/elimination/phase-audit guardrail (Release 10.46, 2026-08-01)"
+    },
+    {
+      "line": 133,
+      "heading": "## Unlimited local P486/P485/P487/P475 execution guardrail (2026-08-02)"
+    },
+    {
+      "line": 159,
+      "heading": "## Stopped P486/P485/P487/P475 campaign guardrail (Release 10.47, 2026-08-02)"
+    },
+    {
+      "line": 176,
+      "heading": "## Colab/Kaggle exact-algebra transfer guardrail (2026-08-02)"
+    },
+    {
+      "line": 192,
+      "heading": "## Singular remote exact-algebra guardrail (2026-08-02)"
+    },
+    {
+      "line": 206,
+      "heading": "## Current state-map-first steering guardrail (P2681/S1631, 2026-06-13)"
+    },
+    {
+      "line": 215,
+      "heading": "## Current cycle-cut and reverse-closure steering guardrail (P2684/S1634, 2026-06-13)"
+    },
+    {
+      "line": 220,
+      "heading": "## Current strict Lagrangian/EOM reverse-closure guardrail (P2685/S1635, 2026-06-13)"
+    },
+    {
+      "line": 225,
+      "heading": "## Current shared-background component residual guardrail (P2686/S1636, 2026-06-13)"
+    },
+    {
+      "line": 230,
+      "heading": "## Current anisotropic source-class audit guardrail (P2687/S1637, 2026-06-13)"
+    },
+    {
+      "line": 235,
+      "heading": "## Current post-P2687 live-frontier reconciliation guardrail (P2688/S1638, 2026-06-13)"
+    },
+    {
+      "line": 240,
+      "heading": "## Current entropy UV-unit obligation guardrail (P2689/S1639, 2026-06-13)"
+    },
+    {
+      "line": 245,
+      "heading": "## Current boundary-phase sector provider guardrail (P2690/S1640, 2026-06-13)"
+    },
+    {
+      "line": 250,
+      "heading": "## Current alpha_geo amplitude source guardrail (P2691/S1641, 2026-06-13)"
+    },
+    {
+      "line": 255,
+      "heading": "## Current beta/Z_beta source guardrail (P2692/S1642, 2026-06-13)"
+    },
+    {
+      "line": 260,
+      "heading": "## Current post-P2680 non-selector source-inventory closure guardrail (P2693/S1643, 2026-06-13)"
+    },
+    {
+      "line": 265,
+      "heading": "## Current fresh broad state-map selection guardrail (P2694/S1644, 2026-06-13)"
+    },
+    {
+      "line": 270,
+      "heading": "## Current residual direct g-family matrix guardrail (P2695/S1645, 2026-06-13)"
+    },
+    {
+      "line": 276,
+      "heading": "## Current pair1 c1c1/s1s1 no-go guardrail (P2696/S1646, 2026-06-13)"
+    },
+    {
+      "line": 282,
+      "heading": "## Current post-direct-route no-new-live-frontier guardrail (P2697/S1647, 2026-06-13)"
+    },
+    {
+      "line": 288,
+      "heading": "## Current symmetry-breaking/direction reconciliation guardrail (P2698/S1648, 2026-06-13)"
+    },
+    {
+      "line": 294,
+      "heading": "## Current Z12 fractal-information selector-source no-go guardrail (P2699/S1649, 2026-06-13)"
+    },
+    {
+      "line": 300,
+      "heading": "## Current exhaustive Aut-invariant selector-functional no-go guardrail (P2700/S1650, 2026-06-13)"
+    },
+    {
+      "line": 306,
+      "heading": "## Current strict-sourced symmetry-breaking provider inventory guardrail (P2701/S1651, 2026-06-13)"
+    },
+    {
+      "line": 312,
+      "heading": "## Current selector circle explanation guardrail (P2702/S1652, 2026-06-13)"
+    },
+    {
+      "line": 318,
+      "heading": "## Current older-release selector evidence reconciliation guardrail (P2703/S1653, 2026-06-13)"
+    },
+    {
+      "line": 324,
+      "heading": "## Current P1343/P1348 provenance revalidation guardrail (P2704/S1654, 2026-06-13)"
+    },
+    {
+      "line": 330,
+      "heading": "## Current Release-9.3s pointer boundary-alignment guardrail (P2705/S1655, 2026-06-13)"
+    },
+    {
+      "line": 336,
+      "heading": "## Current damping-to-selector interface obstruction guardrail (P2706/S1656, 2026-06-13)"
+    },
+    {
+      "line": 342,
+      "heading": "## Current post-P2706 no-new-live-frontier guardrail (P2707/S1657, 2026-06-14)"
+    },
+    {
+      "line": 348,
+      "heading": "## Current Z12 boundary 1-cocycle selector-source obstruction guardrail (P2708/S1658, 2026-06-14)"
+    },
+    {
+      "line": 354,
+      "heading": "## Current release 8.1-9.3 breakthrough backscan guardrail (P2709/S1659, 2026-06-14)"
+    },
+    {
+      "line": 360,
+      "heading": "## Current Aut(Z12) anti-inversion character source guardrail (P2710/S1660, 2026-06-14)"
+    },
+    {
+      "line": 366,
+      "heading": "## Current inversion-odd character source-law sign-coupling guardrail (P2711/S1661, 2026-06-14)"
+    },
+    {
+      "line": 372,
+      "heading": "## Current post-P2711 selector/sign no-new-live-frontier guardrail (P2712/S1662, 2026-06-14)"
+    },
+    {
+      "line": 378,
+      "heading": "## Current post-P2712 new-typed-object intake gate guardrail (P2713/S1663, 2026-06-14)"
+    },
+    {
+      "line": 384,
+      "heading": "## Current Z12 orientation-torsor global-section guardrail (P2714/S1664, 2026-06-14)"
+    },
+    {
+      "line": 390,
+      "heading": "## Current Aut-equivariant scalar-source torsor no-go guardrail (P2715/S1665, 2026-06-14)"
+    },
+    {
+      "line": 396,
+      "heading": "## Current inversion-odd pseudoscalar source acceptance guardrail (P2716/S1666, 2026-06-14)"
+    },
+    {
+      "line": 402,
+      "heading": "## Current concrete pseudoscalar/chiral source matrix guardrail (P2717/S1667, 2026-06-14)"
+    },
+    {
+      "line": 408,
+      "heading": "## Current chiral-bispectrum signed formula torsor-coupling guardrail (P2718/S1668, 2026-06-14)"
+    },
+    {
+      "line": 414,
+      "heading": "## Current chiral-bispectrum phase-origin/source-localizer theorem guardrail (P2719/S1669, 2026-06-14)"
+    },
+    {
+      "line": 420,
+      "heading": "## Current chiral-bispectrum translation-orbit phase-origin localizer guardrail (P2720/S1670, 2026-06-14)"
+    },
+    {
+      "line": 426,
+      "heading": "## Current chiral-bispectrum sign-torsor coupling guardrail (P2721/S1671, 2026-06-14)"
+    },
+    {
+      "line": 432,
+      "heading": "## Current clock-phase polarity-selection source-law guardrail (P2722/S1672, 2026-06-14)"
+    },
+    {
+      "line": 438,
+      "heading": "## Current strict chiral/time-orientation source-law matrix guardrail (P2723/S1673, 2026-06-14)"
+    },
+    {
+      "line": 444,
+      "heading": "## Current post-P2723 commit-intake no-new-live-frontier guardrail (P2724/S1674, 2026-06-14)"
+    },
+    {
+      "line": 450,
+      "heading": "## Current chiral-bispectrum translation-flow signed-velocity no-go guardrail (P2725/S1675, 2026-06-14)"
+    },
+    {
+      "line": 456,
+      "heading": "## Current affine orientation-flow transition matrix guardrail (P2726/S1676, 2026-06-14)"
+    },
+    {
+      "line": 462,
+      "heading": "## Current orientation-transition law equivariance no-go guardrail (P2727/S1677, 2026-06-14)"
+    },
+    {
+      "line": 468,
+      "heading": "## Current Aut(Z12) source-orbit weighted invariant no-go guardrail (P2728/S1678, 2026-06-14)"
+    },
+    {
+      "line": 474,
+      "heading": "## Current time-arrow orientation-coupling audit guardrail (P2729/S1679, 2026-06-14)"
+    },
+    {
+      "line": 480,
+      "heading": "## Current time-arrow source-field equivariance no-go guardrail (P2730/S1680, 2026-06-14)"
+    },
+    {
+      "line": 486,
+      "heading": "## Current local time-arrow variational source-law no-go guardrail (P2731/S1681, 2026-06-14)"
+    },
+    {
+      "line": 492,
+      "heading": "## Current chiral-bispectrum time-arrow source-term coupling guardrail (P2732/S1682, 2026-06-14)"
+    },
+    {
+      "line": 498,
+      "heading": "## Current chiral tau-coupling spectral lambda-observability no-go guardrail (P2733/S1683, 2026-06-14)"
+    },
+    {
+      "line": 504,
+      "heading": "## Current lambda-orientation branch-square cocycle holonomy no-go guardrail (P2734/S1684, 2026-06-14)"
+    },
+    {
+      "line": 510,
+      "heading": "## Current branch-square non-exact flux polarity-object no-go guardrail (P2735/S1685, 2026-06-14)"
+    },
+    {
+      "line": 516,
+      "heading": "## Current post-P2735 content-grep no-new-frontier guardrail (P2736/S1686, 2026-06-14)"
+    },
+    {
+      "line": 522,
+      "heading": "## Current lay ToE-potential readiness guardrail (P2737/S1687, 2026-06-14)"
+    },
+    {
+      "line": 528,
+      "heading": "## Current sign-torsor Boolean source-law exhaustion guardrail (P2738/S1688, 2026-06-14)"
+    },
+    {
+      "line": 534,
+      "heading": "## Current sign-torsor quotient no-section guardrail (P2739/S1689, 2026-06-14)"
+    },
+    {
+      "line": 540,
+      "heading": "## Current Z12 source-triple chirality orbit no-go guardrail (P2740/S1690, 2026-06-14)"
+    },
+    {
+      "line": 546,
+      "heading": "## Current source-triple localizer fixed-point no-go guardrail (P2741/S1691, 2026-06-14)"
+    },
+    {
+      "line": 552,
+      "heading": "## Current source-triple affine-weighted signed aggregate no-go guardrail (P2742/S1692, 2026-06-14)"
+    },
+    {
+      "line": 558,
+      "heading": "## Current affine-frame transition character no-go guardrail (P2743/S1693, 2026-06-14)"
+    },
+    {
+      "line": 564,
+      "heading": "## Current Z12 cycle spectral-asymmetry no-go guardrail (P2744/S1694, 2026-06-14)"
+    },
+    {
+      "line": 570,
+      "heading": "## Current Z12 quadratic Gauss-phase signed observable guardrail (P2745/S1695, 2026-06-14)"
+    },
+    {
+      "line": 576,
+      "heading": "## Current Gauss-phase orbit selector/source-law no-go guardrail (P2746/S1696, 2026-06-14)"
+    },
+    {
+      "line": 582,
+      "heading": "## Current Z12 cubic phase orbit signed observable guardrail (P2747/S1697, 2026-06-14)"
+    },
+    {
+      "line": 588,
+      "heading": "## Current absence-of-selector self-synchronization no-go guardrail (P2748/S1698, 2026-06-14)"
+    },
+    {
+      "line": 594,
+      "heading": "## Current minimal inversion-odd source coupling-polarity guardrail (P2749/S1699, 2026-06-14)"
+    },
+    {
+      "line": 600,
+      "heading": "## Current concrete odd-source sign-value inventory no-go guardrail (P2750/S1700, 2026-06-15)"
+    },
+    {
+      "line": 606,
+      "heading": "## Current Z12 quartic phase orbit signed observable guardrail (P2751/S1701, 2026-06-15)"
+    },
+    {
+      "line": 612,
+      "heading": "## Current quartic phase negation-pairing selector no-go guardrail (P2752/S1702, 2026-06-15)"
+    },
+    {
+      "line": 618,
+      "heading": "## Current polynomial phase negation meta-obstruction guardrail (P2753/S1703, 2026-06-15)"
+    },
+    {
+      "line": 624,
+      "heading": "## Current Shannon entropy four-bit selector audit guardrail (P2754/S1704, 2026-06-15)"
+    },
+    {
+      "line": 630,
+      "heading": "## Current entropy-gradient current Aut-cancellation guardrail (P2755/S1705, 2026-06-15)"
+    },
+    {
+      "line": 636,
+      "heading": "## Current entropy pair-current basis Aut-cancellation guardrail (P2756/S1706, 2026-06-15)"
+    },
+    {
+      "line": 642,
+      "heading": "## Current entropy pair-current polarity-selector invariant no-go guardrail (P2757/S1707, 2026-06-15)"
+    },
+    {
+      "line": 648,
+      "heading": "## Current entropy triangle-circulation Aut-cancellation guardrail (P2758/S1708, 2026-06-15)"
+    },
+    {
+      "line": 654,
+      "heading": "## Current post-P2758 no-new-live-frontier reconciliation guardrail (P2759/S1709, 2026-06-15)"
+    },
+    {
+      "line": 660,
+      "heading": "## Current foundation-kernel-Lagrangian gap matrix guardrail (P2760/S1710, 2026-06-15)"
+    },
+    {
+      "line": 666,
+      "heading": "## Current kernel-moment physical-coupling provenance obstruction guardrail (P2761/S1711, 2026-06-15)"
+    },
+    {
+      "line": 672,
+      "heading": "## Current reference-cell action-density normalization obstruction guardrail (P2762/S1712, 2026-06-15)"
+    },
+    {
+      "line": 678,
+      "heading": "## Current moment-coupling sign-convention conditional obstruction guardrail (P2763/S1713, 2026-06-15)"
+    },
+    {
+      "line": 684,
+      "heading": "## Current field-curvature normalization compatibility obstruction guardrail (P2764/S1714, 2026-06-15)"
+    },
+    {
+      "line": 690,
+      "heading": "## Current nonproxy variational-insertion residual obstruction guardrail (P2765/S1715, 2026-06-15)"
+    },
+    {
+      "line": 696,
+      "heading": "## Current post-moment provenance-state reconciliation guardrail (P2766/S1716, 2026-06-15)"
+    },
+    {
+      "line": 702,
+      "heading": "## Current post-P2766 fresh broad state-map intake guardrail (P2767/S1717, 2026-06-15)"
+    },
+    {
+      "line": 708,
+      "heading": "## Current combined-normalization monomial-invariant no-go guardrail (P2768/S1718, 2026-06-15)"
+    },
+    {
+      "line": 714,
+      "heading": "## Current combined-normalization orbit-transitivity no-go guardrail (P2769/S1719, 2026-06-15)"
+    },
+    {
+      "line": 720,
+      "heading": "## Current kernel characteristic expressivity audit guardrail (P2770/S1720, 2026-06-15)"
+    },
+    {
+      "line": 726,
+      "heading": "## Current finite geometric self-coupling operator witness guardrail (P2771/S1721, 2026-06-15)"
+    },
+    {
+      "line": 732,
+      "heading": "## Current self-learning kernel update-law stationarity witness guardrail (P2772/S1722, 2026-06-15)"
+    },
+    {
+      "line": 738,
+      "heading": "## Current Shannon-entropy geometry-forcing obstruction guardrail (P2773/S1723, 2026-06-15)"
+    },
+    {
+      "line": 744,
+      "heading": "## Current entropy-plus-Laplacian-trace geometry degeneracy guardrail (P2774/S1724, 2026-06-15)"
+    },
+    {
+      "line": 750,
+      "heading": "## Current full-Laplacian-spectrum pair discriminator guardrail (P2775/S1725, 2026-06-15)"
+    },
+    {
+      "line": 756,
+      "heading": "## Current small-graph full-spectrum uniqueness audit guardrail (P2776/S1726, 2026-06-15)"
+    },
+    {
+      "line": 762,
+      "heading": "## Current symmetry-source selector/geometry audit guardrail (P2777/S1727, 2026-06-15)"
+    },
+    {
+      "line": 768,
+      "heading": "## Current max-symmetry 16-node geometry source audit guardrail (P2778/S1728, 2026-06-15)"
+    },
+    {
+      "line": 774,
+      "heading": "## Current 16-node circulant full-spectrum quotient audit guardrail (P2779/S1729, 2026-06-15)"
+    },
+    {
+      "line": 780,
+      "heading": "## Current non-circulant 16-node full-spectrum stress audit guardrail (P2780/S1730, 2026-06-15)"
+    },
+    {
+      "line": 786,
+      "heading": "## Current enumerated two-layer C8 full-spectrum collision audit guardrail (P2781/S1731, 2026-06-15)"
+    },
+    {
+      "line": 792,
+      "heading": "## Current bipartite regular enumerator scale obstruction guardrail (P2782/S1732, 2026-06-15)"
+    },
+    {
+      "line": 798,
+      "heading": "## Current seven-class quotient integrity guardrail (P2783/S1733, 2026-06-15)"
+    },
+    {
+      "line": 804,
+      "heading": "## Current seven-class multispectral robustness guardrail (P2784/S1734, 2026-06-15)"
+    },
+    {
+      "line": 810,
+      "heading": "## Current exact characteristic-polynomial certificate guardrail (P2785/S1735, 2026-06-16)"
+    },
+    {
+      "line": 816,
+      "heading": "## Current graph6 provenance and toolchain gate guardrail (P2786/S1736, 2026-06-16)"
+    },
+    {
+      "line": 822,
+      "heading": "## Current small canonical generator pipeline guardrail (P2787/S1737, 2026-06-16)"
+    },
+    {
+      "line": 828,
+      "heading": "## Current complement-duality exact spectral guardrail (P2788/S1738, 2026-06-16)"
+    },
+    {
+      "line": 834,
+      "heading": "## Current orbit-stabilizer exact quotient guardrail (P2789/S1739, 2026-06-16)"
+    },
+    {
+      "line": 840,
+      "heading": "## Current eighth 16-node witness no-exhaustion guardrail (P2790/S1740, 2026-06-16)"
+    },
+    {
+      "line": 846,
+      "heading": "## Current eight-class orbit lower-bound guardrail (P2791/S1741, 2026-06-16)"
+    },
+    {
+      "line": 852,
+      "heading": "## Current C16 two-jump circulant subclass guardrail (P2792/S1742, 2026-06-16)"
+    },
+    {
+      "line": 858,
+      "heading": "## Current Z2^4 four-generator Cayley subclass guardrail (P2793/S1743, 2026-06-16)"
+    },
+    {
+      "line": 864,
+      "heading": "## Current Z2^4 GL(4,2) transitivity guardrail (P2794/S1744, 2026-06-16)"
+    },
+    {
+      "line": 870,
+      "heading": "## Current post-subclass saturation guardrail (P2795/S1745, 2026-06-16)"
+    },
+    {
+      "line": 876,
+      "heading": "## Current full-generator artifact absence guardrail (P2796/S1746, 2026-06-16)"
+    },
+    {
+      "line": 882,
+      "heading": "## Current external full-count gap guardrail (P2797/S1747, 2026-06-16)"
+    },
+    {
+      "line": 888,
+      "heading": "## Current external girth>=4 subtarget guardrail (P2798/S1748, 2026-06-16)"
+    },
+    {
+      "line": 894,
+      "heading": "## Current local girth>=4 spectral-orbit guardrail (P2799/S1749, 2026-06-16)"
+    },
+    {
+      "line": 900,
+      "heading": "## Current girth>=4 shortcode import absence guardrail (P2800/S1750, 2026-06-16)"
+    },
+    {
+      "line": 906,
+      "heading": "## Current girth>=4 shortcode network fetch attempt guardrail (P2801/S1751, 2026-06-16)"
+    },
+    {
+      "line": 912,
+      "heading": "## Current girth>=4 fetch obstruction taxonomy guardrail (P2802/S1752, 2026-06-16)"
+    },
+    {
+      "line": 918,
+      "heading": "## Current Meringer SCD import/decode validation guardrail (P2803/S1753, 2026-06-16)"
+    },
+    {
+      "line": 924,
+      "heading": "## Current girth>=4 spectral/complement quotient guardrail (P2804/S1754, 2026-06-16)"
+    },
+    {
+      "line": 930,
+      "heading": "## Current girth>=4 spectral-collision isomorphism refinement guardrail (P2805/S1755, 2026-06-16)"
+    },
+    {
+      "line": 936,
+      "heading": "## Current girth>=4 record-label dataset guardrail (P2806/S1756, 2026-06-16)"
+    },
+    {
+      "line": 942,
+      "heading": "## Current pynauty canonical-label toolchain guardrail (P2807/S1757, 2026-06-16)"
+    },
+    {
+      "line": 948,
+      "heading": "## Current pynauty canonical digest guardrail (P2808/S1758, 2026-06-16)"
+    },
+    {
+      "line": 954,
+      "heading": "## Current canonical quotient no-source-law guardrail (P2809/S1759, 2026-06-16)"
+    },
+    {
+      "line": 960,
+      "heading": "## Current spectral-pair-only source obstruction guardrail (P2810/S1760, 2026-06-16)"
+    },
+    {
+      "line": 966,
+      "heading": "## Current local motif-refined source candidate guardrail (P2811/S1761, 2026-06-16)"
+    },
+    {
+      "line": 972,
+      "heading": "## Current two-WL refined collision guardrail (P2812/S1762, 2026-06-16)"
+    },
+    {
+      "line": 978,
+      "heading": "## Current three-WL carrier-separation guardrail (P2813/S1763, 2026-06-16)"
+    },
+    {
+      "line": 984,
+      "heading": "## Current exact automorphism-orbit residual guardrail (P2814/S1764, 2026-06-16)"
+    },
+    {
+      "line": 990,
+      "heading": "## Current edge-toggle response residual guardrail (P2815/S1765, 2026-06-16)"
+    },
+    {
+      "line": 996,
+      "heading": "## Current edge-toggle source-law coupling audit guardrail (P2816/S1766, 2026-06-16)"
+    },
+    {
+      "line": 1002,
+      "heading": "## Current structural observable source-law obstruction guardrail (P2817/S1767, 2026-06-16)"
+    },
+    {
+      "line": 1008,
+      "heading": "## Current local edge-toggle response energy guardrail (P2818/S1768, 2026-06-16)"
+    },
+    {
+      "line": 1014,
+      "heading": "## Current P2815-digest blocker-cut sample response guardrail (P2819/S1769, 2026-06-17)"
+    },
+    {
+      "line": 1020,
+      "heading": "## Current P2815-digest blocker-cut shard response guardrail (P2820/S1770, 2026-06-17)"
+    },
+    {
+      "line": 1026,
+      "heading": "## Current P2815-digest full largest-blocker-cut guardrail (P2821/S1771, 2026-06-17)"
+    },
+    {
+      "line": 1032,
+      "heading": "## Current P2815-digest top-two blocker-cuts guardrail (P2822/S1772, 2026-06-17)"
+    },
+    {
+      "line": 1038,
+      "heading": "## Current P2815-digest next-three blocker-cuts guardrail (P2823/S1773, 2026-06-17)"
+    },
+    {
+      "line": 1044,
+      "heading": "## Current P2815-digest ranks 6-10 blocker-cuts guardrail (P2824/S1774, 2026-06-17)"
+    },
+    {
+      "line": 1050,
+      "heading": "## Current P2815-digest ranks 11-20 blocker-cuts guardrail (P2825/S1775, 2026-06-17)"
+    },
+    {
+      "line": 1056,
+      "heading": "## Current P2815-digest ranks 21-40 blocker-cuts guardrail (P2826/S1776, 2026-06-17)"
+    },
+    {
+      "line": 1062,
+      "heading": "## Current P2815-digest ranks 41-80 blocker-cuts guardrail (P2827/S1777, 2026-06-17)"
+    },
+    {
+      "line": 1068,
+      "heading": "## Current P2815-digest ranks 81-160 blocker-cuts guardrail (P2828/S1778, 2026-06-17)"
+    },
+    {
+      "line": 1074,
+      "heading": "## Current P2815-digest ranks 161-272 blocker-cuts guardrail (P2829/S1779, 2026-06-17)"
+    },
+    {
+      "line": 1080,
+      "heading": "## Current P2815-digest full-carrier cached audit guardrail (P2830/S1780, 2026-06-17)"
+    },
+    {
+      "line": 1086,
+      "heading": "## Current P2815 digest source-law coupling obligation guardrail (P2831/S1781, 2026-06-17)"
+    },
+    {
+      "line": 1092,
+      "heading": "## Current common-neighbor cycle source formula guardrail (P2832/S1782, 2026-06-17)"
+    },
+    {
+      "line": 1098,
+      "heading": "## Current edge-toggle response polynomial guardrail (P2833/S1783, 2026-06-17)"
+    },
+    {
+      "line": 1104,
+      "heading": "## Current residual second-variation two-edge-toggle guardrail (P2834/S1784, 2026-06-17)"
+    },
+    {
+      "line": 1110,
+      "heading": "## Current combined finite separator theorem-obligation guardrail (P2835/S1785, 2026-06-17)"
+    },
+    {
+      "line": 1116,
+      "heading": "## Current units-normalization obligation guardrail (P2836/S1786, 2026-06-17)"
+    },
+    {
+      "line": 1122,
+      "heading": "## Current typed domain-codomain obligation guardrail (P2837/S1787, 2026-06-17)"
+    },
+    {
+      "line": 1128,
+      "heading": "## Current variational-derivative obstruction guardrail (P2838/S1788, 2026-06-17)"
+    },
+    {
+      "line": 1134,
+      "heading": "## Current graph-bit localization map obstruction guardrail (P2839/S1789, 2026-06-17)"
+    },
+    {
+      "line": 1140,
+      "heading": "## Current post graph-source state-map guardrail (P2840/S1790, 2026-06-17)"
+    },
+    {
+      "line": 1146,
+      "heading": "## Current post-P2840 broad state-map intake guardrail (P2841/S1791, 2026-06-17)"
+    },
+    {
+      "line": 1152,
+      "heading": "## Current exchangeable edge-pair measure guardrail (P2842/S1792, 2026-06-18)"
+    },
+    {
+      "line": 1158,
+      "heading": "## Current professorial SWOT closure-path guardrail (P2843/S1793, 2026-06-18)"
+    },
+    {
+      "line": 1165,
+      "heading": "## Current closure-gate prime-implicant guardrail (P2844/S1794, 2026-06-18)"
+    },
+    {
+      "line": 1172,
+      "heading": "## Current unit-bearing source/coupling dimensional obstruction guardrail (P2845/S1795, 2026-06-18)"
+    },
+    {
+      "line": 1179,
+      "heading": "## Current label-safe vertex localization/pullback guardrail (P2846/S1796, 2026-06-18)"
+    },
+    {
+      "line": 1186,
+      "heading": "## Current target-independent volume/unit source guardrail (P2847/S1797, 2026-06-18)"
+    },
+    {
+      "line": 1193,
+      "heading": "## Current coupling coefficient/unit source-law guardrail (P2848/S1798, 2026-06-18)"
+    },
+    {
+      "line": 1200,
+      "heading": "## Current damping/compression kernel bridge-atom guardrail (P2849/S1799, 2026-06-18)"
+    },
+    {
+      "line": 1207,
+      "heading": "## Current EML single-operator external impact guardrail (P2850/S1800, 2026-06-18)"
+    },
+    {
+      "line": 1214,
+      "heading": "## Current amplitude-normalization kernel bridge-atom guardrail (P2851/S1801, 2026-06-18)"
+    },
+    {
+      "line": 1221,
+      "heading": "## Current kernel bridge obligation reconciliation guardrail (P2852/S1802, 2026-06-18)"
+    },
+    {
+      "line": 1228,
+      "heading": "## Current phase/frequency bridge-source audit guardrail (P2853/S1803, 2026-06-18)"
+    },
+    {
+      "line": 1235,
+      "heading": "## Current post-P2853 professorial state-map guardrail (P2854/S1804, 2026-06-18)"
+    },
+    {
+      "line": 1242,
+      "heading": "## Current Z12 rational phase-lattice source candidate guardrail (P2855/S1805, 2026-06-18)"
+    },
+    {
+      "line": 1249,
+      "heading": "## Current prime-5 phase-unit extension ambiguity guardrail (P2856/S1806, 2026-06-18)"
+    },
+    {
+      "line": 1256,
+      "heading": "## Current observer-readout phase-source effect guardrail (P2857/S1807, 2026-06-18)"
+    },
+    {
+      "line": 1263,
+      "heading": "## Current phase-bit open-cell continuum guardrail (P2858/S1808, 2026-06-18)"
+    },
+    {
+      "line": 1270,
+      "heading": "## Current eta/beta profile-identifiability no-source guardrail (P2859/S1809, 2026-06-18)"
+    },
+    {
+      "line": 1277,
+      "heading": "## Current compression-tail multiplicative scale-law guardrail (P2860/S1810, 2026-06-18)"
+    },
+    {
+      "line": 1284,
+      "heading": "## Current log-scale affine variational eta-blind guardrail (P2861/S1811, 2026-06-18)"
+    },
+    {
+      "line": 1291,
+      "heading": "## Current log-scale Dirichlet boundary eta-recovery guardrail (P2862/S1812, 2026-06-18)"
+    },
+    {
+      "line": 1298,
+      "heading": "## Current Dirichlet boundary-datum source-class no-go guardrail (P2863/S1813, 2026-06-18)"
+    },
+    {
+      "line": 1305,
+      "heading": "## Current Aut(Z12)-invariant boundary localization no-go guardrail (P2864/S1814, 2026-06-18)"
+    },
+    {
+      "line": 1313,
+      "heading": "## Current singleton localizer/coefficient product-obligation guardrail (P2865/S1815, 2026-06-18)"
+    },
+    {
+      "line": 1320,
+      "heading": "## Current product-theorem candidate-pair no-source guardrail (P2866/S1816, 2026-06-18)"
+    },
+    {
+      "line": 1327,
+      "heading": "## Current coupled Z12-smooth weighted-log no-source guardrail (P2867/S1817, 2026-06-18)"
+    },
+    {
+      "line": 1334,
+      "heading": "## Current prime-5-extended Aut-invariant weighted-log no-go guardrail (P2868/S1818, 2026-06-18)"
+    },
+    {
+      "line": 1341,
+      "heading": "## Current Aut-character idempotent endpoint-localizer no-source guardrail (P2869/S1819, 2026-06-18)"
+    },
+    {
+      "line": 1348,
+      "heading": "## Current intrinsic character-projector selector no-go guardrail (P2870/S1820, 2026-06-18)"
+    },
+    {
+      "line": 1355,
+      "heading": "## Current exhaustive GL(2,2)-invariant projector-predicate no-go guardrail (P2871/S1821, 2026-06-18)"
+    },
+    {
+      "line": 1362,
+      "heading": "## Current cyclic-predecessor endpoint orientation no-source guardrail (P2872/S1822, 2026-06-18)"
+    },
+    {
+      "line": 1369,
+      "heading": "## Current exhaustive dihedral endpoint-predicate no-go guardrail (P2873/S1823, 2026-06-18)"
+    },
+    {
+      "line": 1376,
+      "heading": "## Current dihedral-character chiral endpoint-source no-go guardrail (P2874/S1824, 2026-06-18)"
+    },
+    {
+      "line": 1383,
+      "heading": "## Current D12 two-dimensional irrep endpoint-localization no-go guardrail (P2875/S1825, 2026-06-18)"
+    },
+    {
+      "line": 1390,
+      "heading": "## Current local circulant source-operator endpoint-11 no-go guardrail (P2876/S1826, 2026-06-18)"
+    },
+    {
+      "line": 1397,
+      "heading": "## Current pinned non-circulant defect origin-import no-go guardrail (P2877/S1827, 2026-06-18)"
+    },
+    {
+      "line": 1404,
+      "heading": "## Current D12-equivariant pinned-defect origin-law no-go guardrail (P2878/S1828, 2026-06-18)"
+    },
+    {
+      "line": 1411,
+      "heading": "## Current C12 chiral pinned-defect translation-origin no-go guardrail (P2879/S1829, 2026-06-18)"
+    },
+    {
+      "line": 1418,
+      "heading": "## Current origin-pinned 9/5 coefficient-import no-go guardrail (P2880/S1830, 2026-06-18)"
+    },
+    {
+      "line": 1425,
+      "heading": "## Current finite variational/unit-law 9/5 derivation no-go guardrail (P2881/S1831, 2026-06-18)"
+    },
+    {
+      "line": 1432,
+      "heading": "## Current Euler source-ratio 9/5 forcing no-go guardrail (P2882/S1832, 2026-06-18)"
+    },
+    {
+      "line": 1439,
+      "heading": "## Current dimensional/unit source inventory no-go guardrail (P2883/S1833, 2026-06-18)"
+    },
+    {
+      "line": 1446,
+      "heading": "## Current finite invariant-ratio 9:5 source-law no-go guardrail (P2884/S1834, 2026-06-18)"
+    },
+    {
+      "line": 1453,
+      "heading": "## Current invariant-quadratic action 9/5 selection no-go guardrail (P2885/S1835, 2026-06-18)"
+    },
+    {
+      "line": 1460,
+      "heading": "## Current external unit-measure/action-density inventory no-go guardrail (P2886/S1836, 2026-06-18)"
+    },
+    {
+      "line": 1467,
+      "heading": "## Current C12 unit-measure/localized-density 9/5 no-go guardrail (P2887/S1837, 2026-06-18)"
+    },
+    {
+      "line": 1474,
+      "heading": "## Current non-C12 origin-law/unit-coupling 9/5 no-go guardrail (P2888/S1838, 2026-06-18)"
+    },
+    {
+      "line": 1481,
+      "heading": "## Current translation-orbit source-law 9/5 no-go guardrail (P2889/S1839, 2026-06-19)"
+    },
+    {
+      "line": 1488,
+      "heading": "## Current Fourier phase-source law 9/5 no-go guardrail (P2890/S1840, 2026-06-19)"
+    },
+    {
+      "line": 1495,
+      "heading": "## Current strict phase/origin source artifact inventory guardrail (P2891/S1841, 2026-06-19)"
+    },
+    {
+      "line": 1502,
+      "heading": "## Current post-P2891 phase/origin state-map no-new-live-frontier guardrail (P2892/S1842, 2026-06-19)"
+    },
+    {
+      "line": 1509,
+      "heading": "## Current free-orbit section obstruction guardrail (P2893/S1843, 2026-06-19)"
+    },
+    {
+      "line": 1516,
+      "heading": "## Current translation-breaking source alphabet capacity guardrail (P2894/S1844, 2026-06-19)"
+    },
+    {
+      "line": 1523,
+      "heading": "## Current free-12-torsor basepoint/polarity guardrail (P2895/S1845, 2026-06-19)"
+    },
+    {
+      "line": 1530,
+      "heading": "## Current invariant scalar basepoint-law exhaustion guardrail (P2896/S1846, 2026-06-19)"
+    },
+    {
+      "line": 1537,
+      "heading": "## Current circulant relation basepoint obstruction guardrail (P2897/S1847, 2026-06-19)"
+    },
+    {
+      "line": 1544,
+      "heading": "## Current single-defect relation import-boundary guardrail (P2898/S1848, 2026-06-19)"
+    },
+    {
+      "line": 1551,
+      "heading": "## Current post-defect potential/readiness guardrail (P2899/S1849, 2026-06-19)"
+    },
+    {
+      "line": 1558,
+      "heading": "## Current defect-placement source-law inventory guardrail (P2900/S1850, 2026-06-19)"
+    },
+    {
+      "line": 1565,
+      "heading": "## Current explicit defect-placement source-law candidate guardrail (P2901/S1851, 2026-06-19)"
+    },
+    {
+      "line": 1572,
+      "heading": "## Current pointed signed defect variational template guardrail (P2902/S1852, 2026-06-19)"
+    },
+    {
+      "line": 1579,
+      "heading": "## Current internal pointed-axiom fixed-point obstruction guardrail (P2903/S1853, 2026-06-19)"
+    },
+    {
+      "line": 1586,
+      "heading": "## Current translation-breaking Dirac source candidate guardrail (P2904/S1854, 2026-06-19)"
+    },
+    {
+      "line": 1593,
+      "heading": "## Current Xi Dirac source provenance alternative guardrail (P2905/S1855, 2026-06-19)"
+    },
+    {
+      "line": 1600,
+      "heading": "## Current Xi strict asymmetry theorem acceptance obstruction guardrail (P2906/S1856, 2026-06-19)"
+    },
+    {
+      "line": 1607,
+      "heading": "## Current joint origin-sign source theorem candidate guardrail (P2907/S1857, 2026-06-19)"
+    },
+    {
+      "line": 1614,
+      "heading": "## Current joint source provenance alternative audit guardrail (P2908/S1858, 2026-06-19)"
+    },
+    {
+      "line": 1621,
+      "heading": "## Current post-joint-source no-new-live-frontier guardrail (P2909/S1859, 2026-06-19)"
+    },
+    {
+      "line": 1628,
+      "heading": "## Current unit-bearing coupling-token dimensional gate guardrail (P2910/S1860, 2026-06-19)"
+    },
+    {
+      "line": 1635,
+      "heading": "## Current Gamma localization/pullback skeleton guardrail (P2911/S1861, 2026-06-19)"
+    },
+    {
+      "line": 1642,
+      "heading": "## Current Gamma variational chain-rule skeleton guardrail (P2912/S1862, 2026-06-19)"
+    },
+    {
+      "line": 1649,
+      "heading": "## Current Gamma source-provenance obstruction guardrail (P2913/S1863, 2026-06-19)"
+    },
+    {
+      "line": 1656,
+      "heading": "## Current Gamma continuum-measure normalization obstruction guardrail (P2914/S1864, 2026-06-19)"
+    },
+    {
+      "line": 1663,
+      "heading": "## Current Gamma edge-quotient measure bridge candidate guardrail (P2915/S1865, 2026-06-19)"
+    },
+    {
+      "line": 1670,
+      "heading": "## Current translation-orbit quotient renormalization guardrail (P2916/S1866, 2026-06-19)"
+    },
+    {
+      "line": 1677,
+      "heading": "## Current displacement-quotient field-variable theorem guardrail (P2917/S1867, 2026-06-19)"
+    },
+    {
+      "line": 1684,
+      "heading": "## Current Gamma action-unit source-law obstruction guardrail (P2918/S1868, 2026-06-19)"
+    },
+    {
+      "line": 1691,
+      "heading": "## Current Gamma scale-orbit source-object intake guardrail (P2919/S1869, 2026-06-19)"
+    },
+    {
+      "line": 1699,
+      "heading": "## Current Gamma/Lambda no-new-live-frontier certificate guardrail (P2920/S1870, 2026-06-19)"
+    },
+    {
+      "line": 1707,
+      "heading": "## Current sigma_Gamma unlock verifier guardrail (P2921/S1871, 2026-06-19)"
+    },
+    {
+      "line": 1715,
+      "heading": "## Current P2601-to-sigma_Gamma interface guardrail (P2922/S1872, 2026-06-19)"
+    },
+    {
+      "line": 1722,
+      "heading": "## Current prime-log proportionality source matrix guardrail (P2923/S1873, 2026-06-19)"
+    },
+    {
+      "line": 1729,
+      "heading": "## Current slope/prime anchor obstruction guardrail (P2924/S1874, 2026-06-19)"
+    },
+    {
+      "line": 1737,
+      "heading": "## Current damping delta-source linear-system frontier guardrail (P2925/S1875, 2026-06-19)"
+    },
+    {
+      "line": 1744,
+      "heading": "## Current prime-log value source solution-space guardrail (P2926/S1876, 2026-06-19)"
+    },
+    {
+      "line": 1751,
+      "heading": "## Current strict damping beta/eta source-packet verifier guardrail (P2927/S1877, 2026-06-19)"
+    },
+    {
+      "line": 1758,
+      "heading": "## Current beta/eta coupling theorem obstruction guardrail (P2928/S1878, 2026-06-19)"
+    },
+    {
+      "line": 1765,
+      "heading": "## Current post-damping state-map no-new-live-frontier guardrail (P2929/S1879, 2026-06-19)"
+    },
+    {
+      "line": 1772,
+      "heading": "## Current Z12 residue prime-value source candidate guardrail (P2930/S1880, 2026-06-19)"
+    },
+    {
+      "line": 1779,
+      "heading": "## Current residue-affine prime-value source no-go guardrail (P2931/S1881, 2026-06-19)"
+    },
+    {
+      "line": 1786,
+      "heading": "## Current Aut(Z12)-invariant additive value-source no-go guardrail (P2932/S1882, 2026-06-19)"
+    },
+    {
+      "line": 1793,
+      "heading": "## Current Aut-breaking prime-coordinate source-space guardrail (P2933/S1883, 2026-06-19)"
+    },
+    {
+      "line": 1800,
+      "heading": "## Current Aut-breaking source-law acceptance verifier guardrail (P2934/S1884, 2026-06-19)"
+    },
+    {
+      "line": 1807,
+      "heading": "## Current strict Aut-breaking source-formula intake guardrail (P2935/S1885, 2026-06-19)"
+    },
+    {
+      "line": 1814,
+      "heading": "## Current source-formula obstruction hitting-set guardrail (P2936/S1886, 2026-06-19)"
+    },
+    {
+      "line": 1821,
+      "heading": "## Current Z12 multiplication-kernel prime-coordinate guardrail (P2937/S1887, 2026-06-19)"
+    },
+    {
+      "line": 1828,
+      "heading": "## Current unit-character-enriched prime-coordinate guardrail (P2938/S1888, 2026-06-19)"
+    },
+    {
+      "line": 1835,
+      "heading": "## Current P2938 carrier provenance-boundary guardrail (P2939/S1889, 2026-06-19)"
+    },
+    {
+      "line": 1842,
+      "heading": "## Current P2938 Aut-orbit selector-burden guardrail (P2940/S1890, 2026-06-19)"
+    },
+    {
+      "line": 1849,
+      "heading": "## Current P2938 extremal-selector polarity guardrail (P2941/S1891, 2026-06-19)"
+    },
+    {
+      "line": 1856,
+      "heading": "## Current extremal-selector value-order orientation guardrail (P2942/S1892, 2026-06-19)"
+    },
+    {
+      "line": 1863,
+      "heading": "## Current identity-grounded positive-cone orientation guardrail (P2943/S1893, 2026-06-19)"
+    },
+    {
+      "line": 1870,
+      "heading": "## Current partial-monoid identity-grounding guardrail (P2944/S1894, 2026-06-19)"
+    },
+    {
+      "line": 1877,
+      "heading": "## Current identity-positive-cone delta/eta ratio-candidate guardrail (P2945/S1895, 2026-06-19)"
+    },
+    {
+      "line": 1884,
+      "heading": "## Current delta/eta ratio strict-forcing obstruction guardrail (P2946/S1896, 2026-06-19)"
+    },
+    {
+      "line": 1891,
+      "heading": "## Current unbounded ratio non-forcing theorem guardrail (P2947/S1897, 2026-06-19)"
+    },
+    {
+      "line": 1898,
+      "heading": "## Current torsion-character ratio package skeleton guardrail (P2948/S1898, 2026-06-19)"
+    },
+    {
+      "line": 1905,
+      "heading": "## Current delta numerator semantics separation guardrail (P2949/S1899, 2026-06-19)"
+    },
+    {
+      "line": 1912,
+      "heading": "## Current exact package beta/eta scale-coupling guardrail (P2950/S1900, 2026-06-19)"
+    },
+    {
+      "line": 1919,
+      "heading": "## Current ratio-package strict-source normal-form guardrail (P2951/S1901, 2026-06-19)"
+    },
+    {
+      "line": 1926,
+      "heading": "## Current torsion-character aggregate weight-source guardrail (P2952/S1902, 2026-06-19)"
+    },
+    {
+      "line": 1933,
+      "heading": "## Current symbolic weight-family nonforcing guardrail (P2953/S1903, 2026-06-19)"
+    },
+    {
+      "line": 1940,
+      "heading": "## Current identity-deficit intensional role interface guardrail (P2954/S1904, 2026-06-19)"
+    },
+    {
+      "line": 1947,
+      "heading": "## Current P2601-to-delta-numerator source-map obstruction guardrail (P2955/S1905, 2026-06-20)"
+    },
+    {
+      "line": 1954,
+      "heading": "## Current ratio-package nonproxy variational coupling obstruction guardrail (P2956/S1906, 2026-06-20)"
+    },
+    {
+      "line": 1961,
+      "heading": "## Current positive beta-scale/unit source obstruction guardrail (P2957/S1907, 2026-06-20)"
+    },
+    {
+      "line": 1968,
+      "heading": "## Current P2938 strict provenance theorem-interface guardrail (P2958/S1908, 2026-06-20)"
+    },
+    {
+      "line": 1975,
+      "heading": "## Current P2938 U(12) aggregate localizer no-go guardrail (P2959/S1909, 2026-06-20)"
+    },
+    {
+      "line": 1982,
+      "heading": "## Current developmental ontology localizer-law intake guardrail (P2960/S1910, 2026-06-20)"
+    },
+    {
+      "line": 1989,
+      "heading": "## Current exchange-balanced scale quotient source-candidate guardrail (P2961/S1911, 2026-06-20)"
+    },
+    {
+      "line": 1996,
+      "heading": "## Current K/C exchange-symmetry source obstruction guardrail (P2962/S1912, 2026-06-20)"
+    },
+    {
+      "line": 2003,
+      "heading": "## Current typed mediator/functor no-go guardrail (P2963/S1913, 2026-06-20)"
+    },
+    {
+      "line": 2010,
+      "heading": "## Current unit-bearing nonproxy coupling reception no-go guardrail (P2964/S1914, 2026-06-20)"
+    },
+    {
+      "line": 2017,
+      "heading": "## Current primitive-mean scale/unit quotient candidate guardrail (P2965/S1915, 2026-06-20)"
+    },
+    {
+      "line": 2024,
+      "heading": "## Current physical unit law dimensional obstruction guardrail (P2966/S1916, 2026-06-20)"
+    },
+    {
+      "line": 2031,
+      "heading": "## Current dimension-field selector-source obstruction guardrail (P2967/S1917, 2026-06-20)"
+    },
+    {
+      "line": 2038,
+      "heading": "## Current coefficient source-law exponent-blind obstruction guardrail (P2968/S1918, 2026-06-20)"
+    },
+    {
+      "line": 2045,
+      "heading": "## Current strict unit U source candidate obstruction guardrail (P2969/S1919, 2026-06-20)"
+    },
+    {
+      "line": 2052,
+      "heading": "## Current nonconventional nonproxy k-installation obstruction guardrail (P2970/S1920, 2026-06-20)"
+    },
+    {
+      "line": 2059,
+      "heading": "## Current typed support-provenance incidence complex guardrail (P2971/S1921, 2026-06-20)"
+    },
+    {
+      "line": 2066,
+      "heading": "## Current incidence source-localizer obstruction guardrail (P2972/S1922, 2026-06-20)"
+    },
+    {
+      "line": 2073,
+      "heading": "## Current incidence unit-bearing action-density coupling obstruction guardrail (P2973/S1923, 2026-06-20)"
+    },
+    {
+      "line": 2080,
+      "heading": "## Current incidence nonproxy variational chain-rule obstruction guardrail (P2974/S1924, 2026-06-20)"
+    },
+    {
+      "line": 2087,
+      "heading": "## Current post-incidence fresh typed-object intake guardrail (P2975/S1925, 2026-06-20)"
+    },
+    {
+      "line": 2094,
+      "heading": "## Current Z12 nilradical-filtration source-candidate guardrail (P2976/S1926, 2026-06-20)"
+    },
+    {
+      "line": 2101,
+      "heading": "## Current nilradical strict-nadsoliton provenance obstruction guardrail (P2977/S1927, 2026-06-20)"
+    },
+    {
+      "line": 2108,
+      "heading": "## Current nilradical named source-atom coupling obstruction guardrail (P2978/S1928, 2026-06-20)"
+    },
+    {
+      "line": 2115,
+      "heading": "## Current nilradical action/variational installation obstruction guardrail (P2979/S1929, 2026-06-20)"
+    },
+    {
+      "line": 2122,
+      "heading": "## Current Z12 CRT idempotent-decomposition source-candidate guardrail (P2980/S1930, 2026-06-20)"
+    },
+    {
+      "line": 2129,
+      "heading": "## Current CRT idempotent strict-nadsoliton provenance obstruction guardrail (P2981/S1931, 2026-06-20)"
+    },
+    {
+      "line": 2136,
+      "heading": "## Current CRT idempotent nonpremise factor-semantics obstruction guardrail (P2982/S1932, 2026-06-20)"
+    },
+    {
+      "line": 2143,
+      "heading": "## Current CRT named source-atom coupling obstruction guardrail (P2983/S1933, 2026-06-20)"
+    },
+    {
+      "line": 2150,
+      "heading": "## Current CRT action/variational installation obstruction guardrail (P2984/S1934, 2026-06-20)"
+    },
+    {
+      "line": 2157,
+      "heading": "## Current Z12 Leibniz derivation source-candidate obstruction guardrail (P2985/S1935, 2026-06-20)"
+    },
+    {
+      "line": 2164,
+      "heading": "## Current Z12 annihilator-lattice source-candidate obstruction guardrail (P2986/S1936, 2026-06-20)"
+    },
+    {
+      "line": 2171,
+      "heading": "## Current annihilator-lattice strict provenance obstruction guardrail (P2987/S1937, 2026-06-20)"
+    },
+    {
+      "line": 2178,
+      "heading": "## Current annihilator-lattice nonpremise source-localizer obstruction guardrail (P2988/S1938, 2026-06-20)"
+    },
+    {
+      "line": 2185,
+      "heading": "## Current annihilator-lattice named source-atom coupling obstruction guardrail (P2989/S1939, 2026-06-20)"
+    },
+    {
+      "line": 2192,
+      "heading": "## Current annihilator-lattice action/variational installation obstruction guardrail (P2990/S1940, 2026-06-20)"
+    },
+    {
+      "line": 2199,
+      "heading": "## Current Z12 additive Fourier-character source-candidate obstruction guardrail (P2991/S1941, 2026-06-20)"
+    },
+    {
+      "line": 2206,
+      "heading": "## Current Fourier-character nonpremise frequency source-localizer obstruction guardrail (P2992/S1942, 2026-06-20)"
+    },
+    {
+      "line": 2214,
+      "heading": "## Current Fourier-character strict provenance obstruction guardrail (P2993/S1943, 2026-06-20)"
+    },
+    {
+      "line": 2222,
+      "heading": "## Current Fourier-character source-coupling theorem obstruction guardrail (P2994/S1944, 2026-06-20)"
+    },
+    {
+      "line": 2230,
+      "heading": "## Current Fourier-character action/variational installation obstruction guardrail (P2995/S1945, 2026-06-20)"
+    },
+    {
+      "line": 2237,
+      "heading": "## Current Z12 zero-divisor graph source-candidate obstruction guardrail (P2996/S1946, 2026-06-20)"
+    },
+    {
+      "line": 2244,
+      "heading": "## Current zero-divisor graph strict provenance obstruction guardrail (P2997/S1947, 2026-06-20)"
+    },
+    {
+      "line": 2251,
+      "heading": "## Current zero-divisor graph nonpremise vertex/edge localizer obstruction guardrail (P2998/S1948, 2026-06-20)"
+    },
+    {
+      "line": 2258,
+      "heading": "## Current zero-divisor graph named source-atom coupling obstruction guardrail (P2999/S1949, 2026-06-20)"
+    },
+    {
+      "line": 2266,
+      "heading": "## Current zero-divisor graph action/variational installation obstruction guardrail (P3000/S1950, 2026-06-20)"
+    },
+    {
+      "line": 2273,
+      "heading": "## Current Z12 square-map functional graph source-candidate obstruction guardrail (P3001/S1951, 2026-06-20)"
+    },
+    {
+      "line": 2280,
+      "heading": "## Current square-map strict provenance obstruction guardrail (P3002/S1952, 2026-06-20)"
+    },
+    {
+      "line": 2287,
+      "heading": "## Current square-map basin/attractor localizer obstruction guardrail (P3003/S1953, 2026-06-21)"
+    },
+    {
+      "line": 2294,
+      "heading": "## Current square-map named source-atom coupling obstruction guardrail (P3004/S1954, 2026-06-21)"
+    },
+    {
+      "line": 2301,
+      "heading": "## Current square-map action/variational installation obstruction guardrail (P3005/S1955, 2026-06-22)"
+    },
+    {
+      "line": 2308,
+      "heading": "## Current Z12 cube-map functional graph source-candidate obstruction guardrail (P3006/S1956, 2026-06-22)"
+    },
+    {
+      "line": 2315,
+      "heading": "## Current cube-map strict provenance obstruction guardrail (P3007/S1957, 2026-06-22)"
+    },
+    {
+      "line": 2322,
+      "heading": "## Current cube-map basin/fixed-sector localizer obstruction guardrail (P3008/S1958, 2026-06-22)"
+    },
+    {
+      "line": 2329,
+      "heading": "## Current cube-map named source-atom coupling obstruction guardrail (P3009/S1959, 2026-06-22)"
+    },
+    {
+      "line": 2336,
+      "heading": "## Current cube-map action/variational installation obstruction guardrail (P3010/S1960, 2026-06-22)"
+    },
+    {
+      "line": 2343,
+      "heading": "## Current ToE strict-kernel/selector role-separation guardrail (P3011/S1961, 2026-06-22)"
+    },
+    {
+      "line": 2350,
+      "heading": "## Current strict-kernel phase-gradient selector-source obstruction guardrail (P3012/S1962, 2026-06-22)"
+    },
+    {
+      "line": 2357,
+      "heading": "## Current observer-physics readout strict-kernel/selector guardrail (P3013/S1963, 2026-06-22)"
+    },
+    {
+      "line": 2364,
+      "heading": "## Current finite-difference time observable guardrail (P3014/S1964, 2026-06-22)"
+    },
+    {
+      "line": 2371,
+      "heading": "## Current orbit-quotient time observable functor guardrail (P3015/S1965, 2026-06-22)"
+    },
+    {
+      "line": 2378,
+      "heading": "## Current quotient clock-successor semigroup guardrail (P3016/S1966, 2026-06-22)"
+    },
+    {
+      "line": 2385,
+      "heading": "## Current formal time-observable action/EOM guardrail (P3017/S1967, 2026-06-22)"
+    },
+    {
+      "line": 2392,
+      "heading": "## Current lambda/action-unit normalization guardrail (P3018/S1968, 2026-06-22)"
+    },
+    {
+      "line": 2399,
+      "heading": "## Current observable-unit readout source guardrail (P3019/S1969, 2026-06-22)"
+    },
+    {
+      "line": 2406,
+      "heading": "## Current clock-unit theorem candidate guardrail (P3020/S1970, 2026-06-22)"
+    },
+    {
+      "line": 2413,
+      "heading": "## Current action-quantum/reference-cell source guardrail (P3021/S1971, 2026-06-22)"
+    },
+    {
+      "line": 2420,
+      "heading": "## Current T_K unit-atom reconciliation guardrail (P3022/S1972, 2026-06-22)"
+    },
+    {
+      "line": 2427,
+      "heading": "## Current kernel-dissipation time-order candidate guardrail (P3023/S1973, 2026-06-22)"
+    },
+    {
+      "line": 2434,
+      "heading": "## Current dissipation chart-selector source guardrail (P3024/S1974, 2026-06-22)"
+    },
+    {
+      "line": 2441,
+      "heading": "## Current dissipation physical tick/Hamiltonian unit guardrail (P3025/S1975, 2026-06-22)"
+    },
+    {
+      "line": 2448,
+      "heading": "## Current dissipation time-order no-new-live-frontier guardrail (P3026/S1976, 2026-06-22)"
+    },
+    {
+      "line": 2455,
+      "heading": "## Current dissipation external unit/source acceptance guardrail (P3027/S1977, 2026-06-22)"
+    },
+    {
+      "line": 2462,
+      "heading": "## Current information-to-classical transition foundation guardrail (P3028/S1978, 2026-06-22)"
+    },
+    {
+      "line": 2469,
+      "heading": "## Current matter spectral observable generator guardrail (P3029/S1979, 2026-06-22)"
+    },
+    {
+      "line": 2476,
+      "heading": "## Current matter spectral field-localizer guardrail (P3030/S1980, 2026-06-22)"
+    },
+    {
+      "line": 2483,
+      "heading": "## Current matter spectral mass/coupling provenance guardrail (P3031/S1981, 2026-06-22)"
+    },
+    {
+      "line": 2490,
+      "heading": "## Current matter spectral lane reconciliation guardrail (P3032/S1982, 2026-06-23)"
+    },
+    {
+      "line": 2497,
+      "heading": "## Current Z12 block coarse-graining classical-limit guardrail (P3033/S1983, 2026-06-23)"
+    },
+    {
+      "line": 2504,
+      "heading": "## Current Z12 finite-difference action/EOM unit guardrail (P3034/S1984, 2026-06-23)"
+    },
+    {
+      "line": 2511,
+      "heading": "## Current Z12 directional branch-selector source guardrail (P3035/S1985, 2026-06-23)"
+    },
+    {
+      "line": 2518,
+      "heading": "## Current external physical unit-source scale-orbit guardrail (P3036/S1986, 2026-06-23)"
+    },
+    {
+      "line": 2525,
+      "heading": "## Current selector-mechanism hint sheaf guardrail (P3037/S1987, 2026-06-23)"
+    },
+    {
+      "line": 2532,
+      "heading": "## Current integrated viscous-retarded-chiral selector candidate guardrail (P3038/S1988, 2026-06-23)"
+    },
+    {
+      "line": 2539,
+      "heading": "## Current chiral projector sign-localizer guardrail (P3039/S1989, 2026-06-23)"
+    },
+    {
+      "line": 2546,
+      "heading": "## Current retarded path-anisotropy source guardrail (P3040/S1990, 2026-06-23)"
+    },
+    {
+      "line": 2553,
+      "heading": "## Current integrated-density unit/readout coupling guardrail (P3041/S1991, 2026-06-23)"
+    },
+    {
+      "line": 2560,
+      "heading": "## Current integrated selector-candidate reconciliation guardrail (P3042/S1992, 2026-06-23)"
+    },
+    {
+      "line": 2567,
+      "heading": "## Current post-selector-candidate new-source intake guardrail (P3043/S1993, 2026-06-23)"
+    },
+    {
+      "line": 2574,
+      "heading": "## Current memory-lag commutator source-candidate guardrail (P3044/S1994, 2026-06-23)"
+    },
+    {
+      "line": 2581,
+      "heading": "## Current memory-lag localizer equivariance guardrail (P3045/S1995, 2026-06-23)"
+    },
+    {
+      "line": 2588,
+      "heading": "## Current memory-lag torsor coupling-polarity guardrail (P3046/S1996, 2026-06-23)"
+    },
+    {
+      "line": 2595,
+      "heading": "## Current memory-lag polarity source-law guardrail (P3047/S1997, 2026-06-23)"
+    },
+    {
+      "line": 2602,
+      "heading": "## Current memory phase-area odd-source candidate guardrail (P3048/S1998, 2026-06-23)"
+    },
+    {
+      "line": 2609,
+      "heading": "## Current memory phase-curve provenance obstruction guardrail (P3049/S1999, 2026-06-23)"
+    },
+    {
+      "line": 2616,
+      "heading": "## Current area-sign to P3046 coupling-polarity guardrail (P3050/S2000, 2026-06-23)"
+    },
+    {
+      "line": 2623,
+      "heading": "## Current phase-curve winding-index selector candidate guardrail (P3051/S2001, 2026-06-23)"
+    },
+    {
+      "line": 2630,
+      "heading": "## Current phase-curve winding stability-margin guardrail (P3052/S2002, 2026-06-23)"
+    },
+    {
+      "line": 2637,
+      "heading": "## Current receiver diagnostic sign-torsor source-theorem guardrail (P3053/S2003, 2026-06-23)"
+    },
+    {
+      "line": 2644,
+      "heading": "## Current non-receiver signed-source coupling intake guardrail (P3054/S2004, 2026-06-23)"
+    },
+    {
+      "line": 2651,
+      "heading": "## Current mechanism-agnostic selector clue sheaf guardrail (P3055/S2005, 2026-06-23)"
+    },
+    {
+      "line": 2658,
+      "heading": "## Current selector gluing-object normal-form guardrail (P3056/S2006, 2026-06-23)"
+    },
+    {
+      "line": 2665,
+      "heading": "## Current source-polarity carrier extension SAT guardrail (P3057/S2007, 2026-06-23)"
+    },
+    {
+      "line": 2672,
+      "heading": "## Current unique-polarity coupling constraint guardrail (P3058/S2008, 2026-06-23)"
+    },
+    {
+      "line": 2679,
+      "heading": "## Current polarity-odd source-law synthesis guardrail (P3059/S2009, 2026-06-23)"
+    },
+    {
+      "line": 2686,
+      "heading": "## Current coefficient-sign normalization impossibility guardrail (P3060/S2010, 2026-06-23)"
+    },
+    {
+      "line": 2693,
+      "heading": "## Current sign-odd source-value normalizer guardrail (P3061/S2011, 2026-06-23)"
+    },
+    {
+      "line": 2700,
+      "heading": "## Current sigma-selector source-law candidate audit guardrail (P3062/S2012, 2026-06-23)"
+    },
+    {
+      "line": 2707,
+      "heading": "## Current signed-source to `G_selector` coupling theorem guardrail (P3063/S2013, 2026-06-23)"
+    },
+    {
+      "line": 2714,
+      "heading": "## Current strict polarity-source theorem SAT guardrail (P3064/S2014, 2026-06-23)"
+    },
+    {
+      "line": 2721,
+      "heading": "## Current fundamental selector axiom boundary guardrail (P3065/S2015, 2026-06-24)"
+    },
+    {
+      "line": 2728,
+      "heading": "## Current sigma-conditioned standard-physics compatibility guardrail (P3066/S2016, 2026-06-24)"
+    },
+    {
+      "line": 2735,
+      "heading": "## Current sigma-conditioned light Lorentz proxy guardrail (P3067/S2017, 2026-06-24)"
+    },
+    {
+      "line": 2742,
+      "heading": "## Current strict spacetime embedding unit-metric obstruction guardrail (P3068/S2018, 2026-06-24)"
+    },
+    {
+      "line": 2749,
+      "heading": "## Current coordinate-pair source rank obstruction guardrail (P3069/S2019, 2026-06-24)"
+    },
+    {
+      "line": 2756,
+      "heading": "## Current canonical length/time unit-provider obstruction guardrail (P3070/S2020, 2026-06-24)"
+    },
+    {
+      "line": 2763,
+      "heading": "## Current sigma-invariant scalar conservation/scale-control guardrail (P3071/S2021, 2026-06-24)"
+    },
+    {
+      "line": 2770,
+      "heading": "## Current discrete continuity/Noether-current interface guardrail (P3072/S2022, 2026-06-24)"
+    },
+    {
+      "line": 2777,
+      "heading": "## Current bounded scale-flow operator guardrail (P3073/S2023, 2026-06-24)"
+    },
+    {
+      "line": 2784,
+      "heading": "## Current Lyapunov/entropy monotonicity guardrail (P3074/S2024, 2026-06-24)"
+    },
+    {
+      "line": 2791,
+      "heading": "## Current variational-source obstruction guardrail (P3075/S2025, 2026-06-24)"
+    },
+    {
+      "line": 2798,
+      "heading": "## Current Dirichlet spectral-dispersion guardrail (P3076/S2026, 2026-06-24)"
+    },
+    {
+      "line": 2805,
+      "heading": "## Current second-order lift obstruction guardrail (P3077/S2027, 2026-06-24)"
+    },
+    {
+      "line": 2812,
+      "heading": "## Current intrinsic momentum/symplectic-source audit guardrail (P3078/S2028, 2026-06-24)"
+    },
+    {
+      "line": 2819,
+      "heading": "## Current light-cone/causal-order compatibility guardrail (P3079/S2029, 2026-06-24)"
+    },
+    {
+      "line": 2826,
+      "heading": "## Current typed observable-interface guardrail (P3080/S2030, 2026-06-24)"
+    },
+    {
+      "line": 2833,
+      "heading": "## Current Dirichlet dimension/action-unit source guardrail (P3081/S2031, 2026-06-24)"
+    },
+    {
+      "line": 2840,
+      "heading": "## Current Z12 continuum-limit functor guardrail (P3082/S2032, 2026-06-24)"
+    },
+    {
+      "line": 2847,
+      "heading": "## Current Lorentz-signature obstruction/witness guardrail (P3083/S2033, 2026-06-25)"
+    },
+    {
+      "line": 2854,
+      "heading": "## Current gauge-representation obstruction/witness guardrail (P3084/S2034, 2026-06-25)"
+    },
+    {
+      "line": 2861,
+      "heading": "## Current conserved-current/Noether obstruction guardrail (P3085/S2035, 2026-06-25)"
+    },
+    {
+      "line": 2868,
+      "heading": "## Current empirical-readout/observable-calibration obstruction guardrail (P3086/S2036, 2026-06-25)"
+    },
+    {
+      "line": 2875,
+      "heading": "## Current thermodynamic/statistical-ensemble obstruction guardrail (P3087/S2037, 2026-06-25)"
+    },
+    {
+      "line": 2882,
+      "heading": "## Current spectral-to-Hamiltonian/time-evolution obstruction guardrail (P3088/S2038, 2026-06-25)"
+    },
+    {
+      "line": 2889,
+      "heading": "## Current spectral-observable/Born-rule readout obstruction guardrail (P3089/S2039, 2026-06-25)"
+    },
+    {
+      "line": 2896,
+      "heading": "## Current spectral-correlation/Green-function response obstruction guardrail (P3090/S2040, 2026-06-25)"
+    },
+    {
+      "line": 2903,
+      "heading": "## Current spectral-action/effective-action obstruction guardrail (P3091/S2041, 2026-06-25)"
+    },
+    {
+      "line": 2910,
+      "heading": "## Current renormalization/scale-flow effective-coupling obstruction guardrail (P3092/S2042, 2026-06-25)"
+    },
+    {
+      "line": 2917,
+      "heading": "## Current Ward-identity/symmetry-current effective-charge obstruction guardrail (P3093/S2043, 2026-06-25)"
+    },
+    {
+      "line": 2924,
+      "heading": "## Current stress-energy/metric-response obstruction guardrail (P3094/S2044, 2026-06-25)"
+    },
+    {
+      "line": 2931,
+      "heading": "## Current dispersion/propagating-mode observable obstruction guardrail (P3095/S2045, 2026-06-25)"
+    },
+    {
+      "line": 2938,
+      "heading": "## Current scattering/S-matrix asymptotic-state obstruction guardrail (P3096/S2046, 2026-06-25)"
+    },
+    {
+      "line": 2945,
+      "heading": "## Current thermodynamic-radiation/blackbody-spectrum obstruction guardrail (P3097/S2047, 2026-06-25)"
+    },
+    {
+      "line": 2952,
+      "heading": "## Current KMS/detailed-balance thermal-state obstruction guardrail (P3098/S2048, 2026-06-25)"
+    },
+    {
+      "line": 2959,
+      "heading": "## Current irreversibility/entropy-production thermalization obstruction guardrail (P3099/S2049, 2026-06-25)"
+    },
+    {
+      "line": 2966,
+      "heading": "## Current open-system bath/preparation source obstruction guardrail (P3100/S2050, 2026-06-25)"
+    },
+    {
+      "line": 2973,
+      "heading": "## Current detector/readout calibration obstruction guardrail (P3101/S2051, 2026-06-25)"
+    },
+    {
+      "line": 2980,
+      "heading": "## Current Born-rule/probability-measure empirical-readout obstruction guardrail (P3102/S2052, 2026-06-25)"
+    },
+    {
+      "line": 2987,
+      "heading": "## Current Hilbert-space/state-vector completion obstruction guardrail (P3103/S2053, 2026-06-25)"
+    },
+    {
+      "line": 2994,
+      "heading": "## Current spectral-triple/geometry-interface obstruction guardrail (P3104/S2054, 2026-06-25)"
+    },
+    {
+      "line": 3001,
+      "heading": "## Current alpha_geo entropy-to-unit map obstruction guardrail (P3105/S2055, 2026-06-25)"
+    },
+    {
+      "line": 3008,
+      "heading": "## Current Nadsoliton action-density normalization guardrail (P3106/S2056, 2026-06-25)"
+    },
+    {
+      "line": 3015,
+      "heading": "## Current Shannon-to-dimension functor/source-law guardrail (P3107/S2057, 2026-06-25)"
+    },
+    {
+      "line": 3022,
+      "heading": "## Current internal calibration-morphism candidate guardrail (P3108/S2058, 2026-06-26)"
+    },
+    {
+      "line": 3029,
+      "heading": "## Current alpha_geo scale-orbit quotient/source-law guardrail (P3109/S2059, 2026-06-26)"
+    },
+    {
+      "line": 3036,
+      "heading": "## Current alpha_geo dimension-comparison-standard guardrail (P3110/S2060, 2026-06-26)"
+    },
+    {
+      "line": 3043,
+      "heading": "## Current symplectic/action phase source-law guardrail (P3111/S2061, 2026-06-26)"
+    },
+    {
+      "line": 3050,
+      "heading": "## Current internal C_phi calibration-functional guardrail (P3112/S2062, 2026-06-26)"
+    },
+    {
+      "line": 3057,
+      "heading": "## Current U_action reference-carrier source-law guardrail (P3113/S2063, 2026-06-26)"
+    },
+    {
+      "line": 3064,
+      "heading": "## Current dimensional triad source-law guardrail (P3114/S2064, 2026-06-26)"
+    },
+    {
+      "line": 3071,
+      "heading": "## Current Sigma_dim scale-section theorem guardrail (P3115/S2065, 2026-06-26)"
+    },
+    {
+      "line": 3078,
+      "heading": "## Current K_dim dimension-source functor guardrail (P3116/S2066, 2026-06-26)"
+    },
+    {
+      "line": 3085,
+      "heading": "## Current Omega_dim dimension-character source guardrail (P3117/S2067, 2026-06-26)"
+    },
+    {
+      "line": 3092,
+      "heading": "## Current R_dim action-length-time relation guardrail (P3118/S2068, 2026-06-26)"
+    },
+    {
+      "line": 3099,
+      "heading": "## Current Xi_LT axis-source object guardrail (P3119/S2069, 2026-06-26)"
+    },
+    {
+      "line": 3106,
+      "heading": "## Current Tau_LT ordered-flow source guardrail (P3120/S2070, 2026-06-26)"
+    },
+    {
+      "line": 3113,
+      "heading": "## Current Kappa_cycle recurrence-cut source guardrail (P3121/S2071, 2026-06-26)"
+    },
+    {
+      "line": 3120,
+      "heading": "## Current Iota_irrev irreversible-defect source guardrail (P3122/S2072, 2026-06-26)"
+    },
+    {
+      "line": 3127,
+      "heading": "## Current Delta_asym asymmetric-transition source guardrail (P3123/S2073, 2026-06-26)"
+    },
+    {
+      "line": 3134,
+      "heading": "## Current Phi_Info phase-information gauge quotient guardrail (P3124/S2074, 2026-06-26)"
+    },
+    {
+      "line": 3141,
+      "heading": "## Current Lambda_origin phase-origin/source-localizer guardrail (P3125/S2075, 2026-06-26)"
+    },
+    {
+      "line": 3148,
+      "heading": "## Current Pi_point pointed-support source guardrail (P3126/S2076, 2026-06-27)"
+    },
+    {
+      "line": 3155,
+      "heading": "## Current Omega_tie orbit-tie-breaking invariant guardrail (P3127/S2077, 2026-06-27)"
+    },
+    {
+      "line": 3162,
+      "heading": "## Current Sigma_point pointed-orbit source-law guardrail (P3128/S2078, 2026-06-27)"
+    },
+    {
+      "line": 3169,
+      "heading": "## Current Gamma_SO sign-and-origin generator guardrail (P3129/S2079, 2026-07-06)"
+    },
+    {
+      "line": 3176,
+      "heading": "## Current Theta_TO translation-origin quotient guardrail (P3130/S2080, 2026-07-06)"
+    },
+    {
+      "line": 3183,
+      "heading": "## Current Epsilon_OT origin-torsion/twist guardrail (P3131/S2081, 2026-07-06)"
+    },
+    {
+      "line": 3190,
+      "heading": "## Current interlocked-helical support-local-section guardrail (P3132/S2082, 2026-07-12)"
+    },
+    {
+      "line": 3197,
+      "heading": "## Current legacy beta_tors helical-lock defect guardrail (P3133/S2083, 2026-07-12)"
+    },
+    {
+      "line": 3204,
+      "heading": "## Current explicit legacy phase/torsion D_HL candidate guardrail (P3134/S2084, 2026-07-12)"
+    },
+    {
+      "line": 3211,
+      "heading": "## Current D_HL joint origin/polarity selector-source matrix guardrail (P3135/S2085, 2026-07-12)"
+    },
+    {
+      "line": 3218,
+      "heading": "## Current Fourier-phase J_DHL candidate guardrail (P3136/S2086, 2026-07-12)"
+    },
+    {
+      "line": 3225,
+      "heading": "## Current Fourier-frame source law F_DHL guardrail (P3137/S2087, 2026-07-12)"
+    },
+    {
+      "line": 3232,
+      "heading": "## Current non-Fourier D_HL extremum joint-source guardrail (P3138/S2088, 2026-07-13)"
+    },
+    {
+      "line": 3239,
+      "heading": "## Current D_HL lane no-new-live-frontier reconciliation guardrail (P3139/S2089, 2026-07-13)"
+    },
+    {
+      "line": 3246,
+      "heading": "## Current axiom-augmented selector premise calculus guardrail (P3140/S2090, 2026-07-13)"
+    },
+    {
+      "line": 3253,
+      "heading": "## Current axiom selector potential downstream-readiness guardrail (P3141/S2091, 2026-07-13)"
+    },
+    {
+      "line": 3260,
+      "heading": "## Current axiom selector field-variational lift guardrail (P3142/S2092, 2026-07-13)"
+    },
+    {
+      "line": 3267,
+      "heading": "## Current V_lift weight/scale source audit guardrail (P3143/S2093, 2026-07-13)"
+    },
+    {
+      "line": 3274,
+      "heading": "## Current Upsilon_sel unit-measure obstruction guardrail (P3144/S2094, 2026-07-13)"
+    },
+    {
+      "line": 3281,
+      "heading": "## Current strict-kernel reverse SM/GR layout guardrail (P3145/S2095, 2026-07-13)"
+    },
+    {
+      "line": 3288,
+      "heading": "## Current axiom unit/action-measure bridge guardrail (P3146/S2096, 2026-07-13)"
+    },
+    {
+      "line": 3295,
+      "heading": "## Current axiom Lie/SM/GR fit readiness guardrail (P3147/S2097, 2026-07-13)"
+    },
+    {
+      "line": 3303,
+      "heading": "## Current SM representation-registry completion guardrail (P3148/S2098, 2026-07-13)"
+    },
+    {
+      "line": 3311,
+      "heading": "## Current BRST/L_total interface invariance guardrail (P3149/S2099, 2026-07-13)"
+    },
+    {
+      "line": 3318,
+      "heading": "## Current R_SM hypercharge-ray source-selection guardrail (P3150/S2100, 2026-07-13)"
+    },
+    {
+      "line": 3326,
+      "heading": "## Current R_SM representation-content source-selection guardrail (P3151/S2101, 2026-07-13)"
+    },
+    {
+      "line": 3334,
+      "heading": "## Current Y_SM charge-unit normalization guardrail (P3152/S2102, 2026-07-13)"
+    },
+    {
+      "line": 3342,
+      "heading": "## Current axiom GR/EH nonproxy coupling guardrail (P3153/S2103, 2026-07-13)"
+    },
+    {
+      "line": 3350,
+      "heading": "## Current axiom Higgs stress-energy candidate guardrail (P3154/S2104, 2026-07-13)"
+    },
+    {
+      "line": 3358,
+      "heading": "## Current Higgs VEV/state-source audit guardrail (P3155/S2105, 2026-07-13)"
+    },
+    {
+      "line": 3366,
+      "heading": "## Current alpha_geo to Higgs-coupling formula audit guardrail (P3156/S2106, 2026-07-13)"
+    },
+    {
+      "line": 3374,
+      "heading": "## Current Omega_dim mass-unit torsor audit guardrail (P3157/S2107, 2026-07-13)"
+    },
+    {
+      "line": 3381,
+      "heading": "## Current post-P3157 unit-source dependency guardrail (P3158/S2108, 2026-07-13)"
+    },
+    {
+      "line": 3388,
+      "heading": "## Current alpha_geo/pi phase compatibility guardrail (P3159/S2109, 2026-07-13)"
+    },
+    {
+      "line": 3395,
+      "heading": "## Current alpha_geo phase-locking no-root-of-unity guardrail (P3160/S2110, 2026-07-13)"
+    },
+    {
+      "line": 3402,
+      "heading": "## Current Omega_scale positive torsor source-law guardrail (P3161/S2111, 2026-07-13)"
+    },
+    {
+      "line": 3410,
+      "heading": "## Current S_plus scale-charged source datum guardrail (P3162/S2112, 2026-07-13)"
+    },
+    {
+      "line": 3418,
+      "heading": "## Current boundary-value speed-of-light matching guardrail (P3163/S2113, 2026-07-13)"
+    },
+    {
+      "line": 3426,
+      "heading": "## Current legacy Planck/fractal unit-source audit guardrail (P3164/S2114, 2026-07-13)"
+    },
+    {
+      "line": 3434,
+      "heading": "## Current Lambda_origin source-localizer audit guardrail (P3165/S2115, 2026-07-13)"
+    },
+    {
+      "line": 3442,
+      "heading": "## Current binary origin-datum exhaustive intake guardrail (P3166/S2116, 2026-07-13)"
+    },
+    {
+      "line": 3450,
+      "heading": "## Current S_plus monomial source exhaustion guardrail (P3167/S2117, 2026-07-14)"
+    },
+    {
+      "line": 3458,
+      "heading": "## Current post-P3167 no-strict-unit state-map guardrail (P3168/S2118, 2026-07-16)"
+    },
+    {
+      "line": 3466,
+      "heading": "## Current ternary origin-datum exhaustive audit guardrail (P3169/S2119, 2026-07-16)"
+    },
+    {
+      "line": 3474,
+      "heading": "## Current S_plus source-obligation hitting-set guardrail (P3170/S2120, 2026-07-16)"
+    },
+    {
+      "line": 3482,
+      "heading": "## Current Legacy* phase 4ln2-pi dual-dynamics analysis guardrail (P3171/S2121, 2026-07-20)"
+    },
+    {
+      "line": 3492,
+      "heading": "## Current Legacy* standalone operator-generator potential guardrail (P3172/S2122, 2026-07-20)"
+    },
+    {
+      "line": 3500,
+      "heading": "## Current Green response and fractal Schur-compression guardrail (Programs 51–60 / Release 10.6, 2026-07-27)"
+    },
+    {
+      "line": 3517,
+      "heading": "## Current post-Programs-51–60 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3524,
+      "heading": "## Current continuum and operational-interface guardrail (Programs 61–70 / Release 10.7, 2026-07-27)"
+    },
+    {
+      "line": 3540,
+      "heading": "## Current post-Programs-61–70 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3550,
+      "heading": "## Current Fourier-symbol and operational-bridge guardrail (Programs 71–80 / Release 10.8, 2026-07-27)"
+    },
+    {
+      "line": 3569,
+      "heading": "## Current post-Programs-71–80 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3582,
+      "heading": "## Current asymptotic spectral and operational-completion guardrail (Programs 81–90 / Release 10.9, 2026-07-27)"
+    },
+    {
+      "line": 3600,
+      "heading": "## Current post-Programs-81–90 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3614,
+      "heading": "## Current critical-scaling, nonlocal-continuum, and operational-completion guardrail (Programs 91–100 / Release 10.10, 2026-07-27)"
+    },
+    {
+      "line": 3629,
+      "heading": "## Current post-Programs-91–100 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3640,
+      "heading": "## Current fractional-limit, source-test, and operational-completion guardrail (Programs 101–112 / Release 10.11, 2026-07-27)"
+    },
+    {
+      "line": 3657,
+      "heading": "## Current post-Programs-101–112 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3668,
+      "heading": "## Current constructive-completion and fractional-operational guardrail (Programs 113–124 / Release 10.12, 2026-07-27)"
+    },
+    {
+      "line": 3687,
+      "heading": "## Current post-Programs-113–124 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3699,
+      "heading": "## Current trace-localizer and fractional-physics guardrail (Programs 125–137 / Release 10.13, 2026-07-27)"
+    },
+    {
+      "line": 3718,
+      "heading": "## Current post-Programs-125–137 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3729,
+      "heading": "## Current state-selection, detector, and bridge-architecture guardrail (Programs 138–150 / Release 10.14, 2026-07-27)"
+    },
+    {
+      "line": 3748,
+      "heading": "## Current post-Programs-138–150 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3760,
+      "heading": "## Current axiomatic-operational foundations guardrail (Programs 151–164 / Release 10.15, 2026-07-27)"
+    },
+    {
+      "line": 3859,
+      "heading": "## Current post-Programs-151–164 axiomatic research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3894,
+      "heading": "## Programs 165–177 axiom-falsification and measurement guardrail (Release 10.16, 2026-07-27)"
+    },
+    {
+      "line": 3962,
+      "heading": "## Current post-Programs-165–177 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 3997,
+      "heading": "## Programs 178–190 composition/process/scale guardrail (Release 10.17, 2026-07-27)"
+    },
+    {
+      "line": 4081,
+      "heading": "## Current post-Programs-178–190 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 4117,
+      "heading": "## Programs 191–203 reference/process/prediction guardrail (Release 10.18, 2026-07-27)"
+    },
+    {
+      "line": 4209,
+      "heading": "## Current post-Programs-191–203 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 4239,
+      "heading": "## Programs 204–216 categorical/catalytic/external guardrail (Release 10.19, 2026-07-27)"
+    },
+    {
+      "line": 4320,
+      "heading": "## Current post-Programs-204–216 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 4348,
+      "heading": "## Programs 217–229 operational-section/spectral-tomography guardrail (Release 10.20, 2026-07-27)"
+    },
+    {
+      "line": 4434,
+      "heading": "## Current post-Programs-217–229 research steering guardrail (2026-07-27)"
+    },
+    {
+      "line": 4462,
+      "heading": "## Programs 240–242 laboratory-transfer guardrail (Release 10.21, 2026-07-28)"
+    },
+    {
+      "line": 4491,
+      "heading": "## Z12 current audit and first puzzle-atlas guardrail (Release 10.22, 2026-07-28)"
+    },
+    {
+      "line": 4517,
+      "heading": "## Second-generation nadsoliton puzzle-atlas guardrail (Release 10.23, 2026-07-28)"
+    },
+    {
+      "line": 4563,
+      "heading": "## Programs 255–266 operator-memory/identifiability guardrail (Release 10.24, 2026-07-28)"
+    },
+    {
+      "line": 4635,
+      "heading": "## Post-Programs-255–266 research steering guardrail (2026-07-28)"
+    },
+    {
+      "line": 4660,
+      "heading": "## Programs-P267–P280 result guardrail (Release 10.25, 2026-07-28)"
+    },
+    {
+      "line": 4745,
+      "heading": "## Post-Programs-P267–P280 research steering guardrail (2026-07-28)"
+    },
+    {
+      "line": 4779,
+      "heading": "## Programs P281–P294 result guardrail (Release 10.26, 2026-07-29)"
+    },
+    {
+      "line": 4845,
+      "heading": "## Post-Programs-P281–P294 research steering guardrail (2026-07-29)"
+    },
+    {
+      "line": 4879,
+      "heading": "## Programs P295–P308 result guardrail (Release 10.27, 2026-07-30)"
+    },
+    {
+      "line": 4951,
+      "heading": "## Post-Programs-P295–P308 research steering guardrail (2026-07-30)"
+    },
+    {
+      "line": 4977,
+      "heading": "## Programs P309–P322 result guardrail (Release 10.28, 2026-07-30)"
+    },
+    {
+      "line": 5037,
+      "heading": "## Post-Programs-P309–P322 research steering guardrail (2026-07-30)"
+    },
+    {
+      "line": 5066,
+      "heading": "## Programs P323–P336 result guardrail (Release 10.29, 2026-07-30)"
+    },
+    {
+      "line": 5130,
+      "heading": "## Post-Programs-P323–P336 research steering guardrail (2026-07-30)"
+    },
+    {
+      "line": 5158,
+      "heading": "## Programs P337–P350 result guardrail (Release 10.30, 2026-07-30)"
+    },
+    {
+      "line": 5224,
+      "heading": "## Post-Programs-P337–P350 research steering guardrail (2026-07-30)"
+    },
+    {
+      "line": 5245,
+      "heading": "## Programs P351–P364 result guardrail (Release 10.31, 2026-07-31)"
+    },
+    {
+      "line": 5309,
+      "heading": "## Post-Programs-P351–P364 research steering guardrail (2026-07-31)"
+    },
+    {
+      "line": 5327,
+      "heading": "## Programs P365–P378 result guardrail (Release 10.32, 2026-07-31)"
+    },
+    {
+      "line": 5389,
+      "heading": "## Post-Programs-P365–P378 research steering guardrail (2026-07-31)"
+    },
+    {
+      "line": 5411,
+      "heading": "## Programs P379–P393 result guardrail (Release 10.33, 2026-07-31)"
+    },
+    {
+      "line": 5474,
+      "heading": "## Post-Programs-P379–P393 research steering guardrail (2026-07-31)"
+    },
+    {
+      "line": 5495,
+      "heading": "## Programs P394–P410 result guardrail (Release 10.34, 2026-07-31)"
+    },
+    {
+      "line": 5524,
+      "heading": "## Programs P411–P427 result guardrail (Release 10.35, 2026-07-31)"
+    },
+    {
+      "line": 5572,
+      "heading": "## Post-Programs-P411–P427 research steering guardrail (2026-07-31)"
+    },
+    {
+      "line": 5595,
+      "heading": "## Goal-mode durable baseline checkpoint guardrail (Checkpoint 000, 2026-08-01)"
+    },
+    {
+      "line": 5613,
+      "heading": "## Programs P428–P430 exact signed-moment closure guardrail (Release 10.36, 2026-08-01)"
+    },
+    {
+      "line": 5656,
+      "heading": "## Programs P435/P436/P440 operational-certificate guardrail (Release 10.37, 2026-08-01)"
+    },
+    {
+      "line": 5701,
+      "heading": "## Programs P445--P447 structural-closure guardrail (Release 10.38, 2026-08-01)"
+    },
+    {
+      "line": 5729,
+      "heading": "## Programs P448--P450 global-majorant/causal-echo/gauge guardrail (Release 10.39, 2026-08-01)"
+    },
+    {
+      "line": 5760,
+      "heading": "## Programs P451--P453 coherence/symmetry/canonical-gauge guardrail (Release 10.40, 2026-08-01)"
+    },
+    {
+      "line": 5799,
+      "heading": "## Programs P488--P496 low-compute nonlinear/time/memory/topology guardrail (Release 10.49, 2026-08-10)"
+    },
+    {
+      "line": 5853,
+      "heading": "## Programs P497--P506 localization/certification/identifiability guardrail (Release 10.50, 2026-08-10)"
+    },
+    {
+      "line": 5917,
+      "heading": "## Programs P507--P516 nonlinear-source/certified-localization/frequency-arithmetic guardrail (Release 10.51, 2026-08-10)"
+    },
+    {
+      "line": 5970,
+      "heading": "## Programs P517--P526 fourth-jet/stability/memory/frequency-torus guardrail (Release 10.52, 2026-08-10)"
+    },
+    {
+      "line": 6031,
+      "heading": "## Programs P527--P536 auxiliary-field/memory-realization/exact-replay guardrail (Release 10.53, 2026-08-10)"
+    },
+    {
+      "line": 6091,
+      "heading": "## Counterfactual FIN-as-ToE shadow-atlas guardrail (Release 10.54, 2026-08-10)"
+    },
+    {
+      "line": 6131,
+      "heading": "## Programs ST01--ST15 shadow-to-physics bridge guardrail (Release 10.55, 2026-08-10)"
+    },
+    {
+      "line": 6202,
+      "heading": "## Programs ST16--ST27 selector/refinement/dimensional-bridge guardrail (Release 10.56, 2026-08-10)"
+    },
+    {
+      "line": 6273,
+      "heading": "## Programs ST28--ST45 carrier-invariance/symmetry-breaking guardrail (Release 10.57, 2026-08-10)"
+    },
+    {
+      "line": 6349,
+      "heading": "## Programs ST46--ST57 projective-state/carrier-transfer/entropy guardrail (Release 10.58, 2026-08-10)"
+    },
+    {
+      "line": 6415,
+      "heading": "## Programs ST58--ST69 interval-closure/projective-source/thermodynamic-bridge guardrail (Release 10.59, 2026-08-11)"
+    },
+    {
+      "line": 6485,
+      "heading": "## Programs ST70--ST81 independent-replay/spin-cover/source-architecture guardrail (Release 10.60, 2026-08-11)"
+    },
+    {
+      "line": 6553,
+      "heading": "## Programs ST82--ST93 projection-fiber/passive-time guardrail (Release 10.61, 2026-08-11)"
+    },
+    {
+      "line": 6632,
+      "heading": "## Programs ST94--ST105 projection-uniqueness/recovery/falsification guardrail (Release 10.62, 2026-08-11)"
+    },
+    {
+      "line": 6705,
+      "heading": "## Programs ST106--ST117 projection-selection/interval/adversarial-lift guardrail (Release 10.63, 2026-08-11)"
+    },
+    {
+      "line": 6777,
+      "heading": "## Programs ST118--ST129 operational-equivalence/certified-design guardrail (Release 10.64, 2026-08-11)"
+    },
+    {
+      "line": 6849,
+      "heading": "## Programs ST130--ST141 strict-source/robust-recovery/typed-thermalization guardrail (Release 10.65, 2026-08-11)"
+    },
+    {
+      "line": 6909,
+      "heading": "## Programs ST142--ST153 natural-quotient/constrained-selection/bath-resource guardrail (Release 10.66, 2026-08-11)"
+    },
+    {
+      "line": 6976,
+      "heading": "## Programs ST154--ST165 interaction-algebra/minimal-anisotropy/operational-completion guardrail (Release 10.67, 2026-08-11)"
+    },
+    {
+      "line": 7053,
+      "heading": "## Programs ST166--ST177 carrier-invariant/uniform-fold/executable-boundary guardrail (Release 10.68, 2026-08-11)"
+    },
+    {
+      "line": 7134,
+      "heading": "## Programs ST178--ST189 layered-compression/validated-continuation guardrail (Release 10.69, 2026-08-11)"
+    },
+    {
+      "line": 7216,
+      "heading": "## Programs ST233--ST247 typed-second-operator/nonlinear-carrier/refinement-moduli guardrail (Release 10.73, 2026-08-12)"
+    },
+    {
+      "line": 7308,
+      "heading": "## Programs ST190--ST202 strict-generated-layer/selection/operational-limit guardrail (Release 10.70, 2026-08-11)"
+    },
+    {
+      "line": 7392,
+      "heading": "## Programs ST203--ST217 schedule-obstruction/fluctuation/diffusion-geometry guardrail (Release 10.71, 2026-08-11)"
+    },
+    {
+      "line": 7487,
+      "heading": "## Programs ST218--ST232 single-generator-obstruction/carrier-naturality/exact-refinement guardrail (Release 10.72, 2026-08-12)"
+    },
+    {
+      "line": 7583,
+      "heading": "## Current ST233--ST247 steering marker (Release 10.73, 2026-08-12)"
+    },
+    {
+      "line": 7589,
+      "heading": "## Programs ST248--ST262 preparation-source/affine-connection/log-Haar-refinement guardrail (Release 10.74, 2026-08-12)"
+    },
+    {
+      "line": 7671,
+      "heading": "## Programs ST263--ST277 spontaneous-phase/certified-selector/trace-class guardrail (Release 10.75, 2026-08-12)"
+    },
+    {
+      "line": 7752,
+      "heading": "## Programs ST278--ST292 entropy-anisotropy/adaptive-cover/near-Haar guardrail (Release 10.76, 2026-08-13)"
+    },
+    {
+      "line": 7827,
+      "heading": "## Programs ST293--ST307 active-feedback/global-localization/calibration-torsor guardrail (Release 10.77, 2026-08-14)"
+    },
+    {
+      "line": 7906,
+      "heading": "## Programs ST308--ST326 sourced-gain/certified-localization/operational-depth guardrail (Release 10.78, 2026-08-15)"
+    },
+    {
+      "line": 7993,
+      "heading": "## Programs ST327--ST341 certified-coexistence/mediator-rank/observer-depth guardrail (Release 10.79, 2026-08-16)"
+    },
+    {
+      "line": 8069,
+      "heading": "## Programs ST342--ST356 fold-event/symmetry-limit/twelve-state-depth guardrail (Release 10.80, 2026-08-17)"
+    },
+    {
+      "line": 8150,
+      "heading": "## Programs ST357--ST371 simple-fold/globality/observer-geometry guardrail (Release 10.81, 2026-08-13)"
+    },
+    {
+      "line": 8225,
+      "heading": "## Programs ST372--ST386 collision-envelope/invariant-basis/continuum-IR guardrail (Release 10.82, 2026-08-14)"
+    },
+    {
+      "line": 8290,
+      "heading": "## Programs ST387--ST401 global-orbit/invariant-quotient/robust-IR guardrail (Release 10.83, 2026-08-14)"
+    },
+    {
+      "line": 8367,
+      "heading": "## Programs ST402--ST416 independent-orbit/gain-persistence/invariant-relation/IR-face guardrail (Release 10.84, 2026-08-14)"
+    },
+    {
+      "line": 8444,
+      "heading": "## Programs ST417--ST431 gain-enclosure/singular-attachment/local-Morse guardrail (Release 10.85, 2026-08-14)"
+    },
+    {
+      "line": 8515,
+      "heading": "## Programs ST432--ST446 sector-exclusion/orbit-census/IR-degree guardrail (Release 10.86, 2026-08-14)"
+    },
+    {
+      "line": 8579,
+      "heading": "## Programs ST447--ST461 global-transition/exact-degree6/adaptive-IR guardrail (Release 10.87, 2026-08-14)"
+    },
+    {
+      "line": 8650,
+      "heading": "## FIN current-state compendium guardrail (Release 10.88, 2026-08-14)"
+    },
+    {
+      "line": 8684,
+      "heading": "## Programs ST462--ST551 symmetric-vacuum/blockwise-algebra/operational-duality guardrail (Release 10.89, 2026-08-29)"
+    },
+    {
+      "line": 8742,
+      "heading": "## Programs ST552--ST641 refinement-speed/causal-cone/two-clock guardrail (Release 10.90, 2026-08-30)"
+    },
+    {
+      "line": 8800,
+      "heading": "## Programs ST642--ST731 conditional-3+1/Maxwell/current-strict-no-go guardrail (Release 10.91, 2026-08-30)"
+    },
+    {
+      "line": 8848,
+      "heading": "## Programs ST732--ST821 current-strict declared-class total-no-go guardrail (Release 10.92, 2026-08-30)"
+    },
+    {
+      "line": 8891,
+      "heading": "## Programs ST822--ST911 recommended-path exhaustion/local-research-stop guardrail (Release 10.93, 2026-08-30)"
+    },
+    {
+      "line": 8921,
+      "heading": "## Programs ST912--ST1001 nadsoliton-annihilation/persistence guardrail (Release 10.94, 2026-08-30)"
+    },
+    {
+      "line": 8957,
+      "heading": "## Programs ST1002--ST1091 total-nadsoliton ontological-persistence guardrail (Release 10.95, 2026-08-30)"
+    },
+    {
+      "line": 8993,
+      "heading": "## Programs ST1092--ST1181 operator-to-total-state nonuniqueness guardrail (Release 10.96, 2026-08-30)"
+    },
+    {
+      "line": 9032,
+      "heading": "## Programs ST1182--ST1271 strategic three-package architecture guardrail (Release 10.97, 2026-08-30)"
+    },
+    {
+      "line": 9072,
+      "heading": "## Programs ST1272--ST1361 frozen-OA dual-dynamics discrimination guardrail (Release 10.98, 2026-08-31)"
+    },
+    {
+      "line": 9107,
+      "heading": "## Programs ST1362--ST1451 interval-certified OA inference guardrail (Release 10.99, 2026-08-31)"
+    },
+    {
+      "line": 9145,
+      "heading": "## Programs ST1452--ST1541 structured-uncertainty/calibration/refinement guardrail (Release 11.00, 2026-08-31)"
+    },
+    {
+      "line": 9183,
+      "heading": "## Programs ST1542--ST1631 noncirculant/continuum/fiber guardrail (Release 11.01, 2026-08-31)"
+    },
+    {
+      "line": 9219,
+      "heading": "## Programs ST1632--ST1721 Lindblad/kernel/KKT/q-clock guardrail (Release 11.02, 2026-08-31)"
+    },
+    {
+      "line": 9256,
+      "heading": "## Programs ST1722--ST1811 repository-wide kernel-to-Ltotal falsification guardrail (Release 11.03, 2026-08-31)"
+    },
+    {
+      "line": 9299,
+      "heading": "## Programs ST1812--ST1901 direct gauge-Dirichlet/topology guardrail (Release 11.04, 2026-09-01)"
+    },
+    {
+      "line": 9333,
+      "heading": "## Programs ST1902--ST1991 automorphism-natural cell-complex no-go guardrail (Release 11.05, 2026-09-01)"
+    },
+    {
+      "line": 9370,
+      "heading": "## Programs ST1992--ST2081 Hodge-energy/refinement classification guardrail (Release 11.06, 2026-09-01)"
+    },
+    {
+      "line": 9406,
+      "heading": "## Programs ST2082--ST2171 equivariant-d1/Hodge-spectrum guardrail (Release 11.07, 2026-09-01)"
+    },
+    {
+      "line": 9443,
+      "heading": "## Programs ST2172--ST2261 loop-product/hidden-synergy guardrail (Release 11.08, 2026-09-01)"
+    },
+    {
+      "line": 9491,
+      "heading": "## Programs ST2262--ST2351 composition/fractal-fixed-point guardrail (Release 11.09, 2026-09-01)"
+    },
+    {
+      "line": 9543,
+      "heading": "## Programs ST2352--ST2366 triangular-prism guardrail (2026-09-01)"
+    },
+    {
+      "line": 9576,
+      "heading": "## Programs ST2367--ST2441 triangular-prism completion guardrail (2026-09-01)"
+    },
+    {
+      "line": 9601,
+      "heading": "## Programs ST2442--ST2531 ternary-Gibbs/prism-RG guardrail (2026-09-01)"
+    },
+    {
+      "line": 9631,
+      "heading": "## Programs ST2532--ST2621 configuration-generator/dynamic-RG guardrail (2026-09-01)"
+    },
+    {
+      "line": 9656,
+      "heading": "## Programs ST2622--ST2711 general-kinetic/time-arrow guardrail (2026-09-01)"
+    },
+    {
+      "line": 9677,
+      "heading": "## Programs ST2712--ST2801 clock-source/moment-closure guardrail (2026-09-01)"
+    },
+    {
+      "line": 9699,
+      "heading": "## Programs ST2802--ST2891 five-axis operational-completion guardrail (2026-09-01)"
+    },
+    {
+      "line": 9718,
+      "heading": "## Programs ST2892--ST2981 exact-prism-RG/fixed-point guardrail (2026-09-01)"
+    },
+    {
+      "line": 9734,
+      "heading": "## Programs ST2982--ST3071 summable-refinement-hierarchy guardrail (2026-09-01)"
+    },
+    {
+      "line": 9751,
+      "heading": "## Programs ST3072--ST3161 dyadic-kernel-recurrence guardrail (2026-09-02)"
+    },
+    {
+      "line": 9772,
+      "heading": "## Programs ST3162--ST3251 layer-distance-embedding guardrail (2026-09-04)"
+    },
+    {
+      "line": 9796,
+      "heading": "## Programs ST3252--ST3341 Cantor-layer-geometry guardrail (2026-09-04)"
+    },
+    {
+      "line": 9817,
+      "heading": "## Programs ST3342--ST3431 Cantor-Dirichlet metric-energy guardrail (2026-09-04)"
+    },
+    {
+      "line": 9835,
+      "heading": "## Programs ST3432--ST3521 hierarchical-spectral-geometry guardrail (2026-09-04)"
+    },
+    {
+      "line": 9851,
+      "heading": "## Programs ST3522--ST3671 ten-round dimension-bridge guardrail (2026-09-04)"
+    },
+    {
+      "line": 9876,
+      "heading": "## Programs ST3672--ST3821 ten-round tail-continuation guardrail (2026-09-04)"
+    },
+    {
+      "line": 9899,
+      "heading": "## Programs ST3822--ST3896 five-round Hausdorff-moment guardrail (2026-09-04)"
+    },
+    {
+      "line": 9920,
+      "heading": "## Programs ST3897--ST4046 ten-round positive-local-tail guardrail (2026-09-04)"
+    },
+    {
+      "line": 9940,
+      "heading": "## Programs ST4047--ST4346 twenty-round tail-selection guardrail (2026-09-04)"
+    },
+    {
+      "line": 9966,
+      "heading": "## Programs ST4347--ST4646 twenty-round extension-quotient guardrail (2026-09-04)"
+    },
+    {
+      "line": 9988,
+      "heading": "## Programs ST4647--ST5396 fifty-round realization-fibration guardrail (2026-09-04)"
+    },
+    {
+      "line": 10025,
+      "heading": "## Programs ST5397--ST6896 hundred-round invariant-selection guardrail (2026-09-04)"
+    },
+    {
+      "line": 10055,
+      "heading": "## Programs ST6897--ST8396 hundred-round entropic-frenetic/FDT guardrail (2026-09-04)"
+    },
+    {
+      "line": 10083,
+      "heading": "## Programs ST8397--ST8546 logarithmic-mean mobility guardrail (2026-09-05)"
+    },
+    {
+      "line": 10107,
+      "heading": "## ST8547 entropy/refinement rigidity and correlation-defect audit (2026-09-05)"
+    },
+    {
+      "line": 10157,
+      "heading": "## ST8548 microscopic-current action and covariance audit (2026-09-06)"
+    },
+    {
+      "line": 10208,
+      "heading": "## ST8549--ST8578 thirty-step adaptive falsification campaign (2026-09-06)"
+    },
+    {
+      "line": 10266,
+      "heading": "## ST8579--ST8590 replication/activity-Gram/neural audit (2026-09-06)"
+    },
+    {
+      "line": 10323,
+      "heading": "## Active thirty-round goal: ST8591--ST8600 checkpoint (2026-09-07)"
+    },
+    {
+      "line": 10366,
+      "heading": "## Active goal checkpoint ST8601--ST8610: time and clock classes (2026-09-07)"
+    },
+    {
+      "line": 10415,
+      "heading": "## ST8611--ST8620 final thirty-round campaign synthesis (2026-09-07)"
+    },
+    {
+      "line": 10470,
+      "heading": "## New 30-round goal: ST8621--ST8630 projected-learning checkpoint (2026-09-08)"
+    },
+    {
+      "line": 10518,
+      "heading": "## ST8631--ST8640 covariance rank/minimizer geometry/adaptive duality (2026-09-08)"
+    },
+    {
+      "line": 10569,
+      "heading": "## ST8641--ST8650 completed projected-learning campaign (2026-09-09)"
+    },
+    {
+      "line": 10611,
+      "heading": "## ST8651/ST8652 operational-feedback discovery guardrail (2026-09-09)"
+    },
+    {
+      "line": 10658,
+      "heading": "## Quantum source/correlation/programming guardrail (2026-09-12)"
+    },
+    {
+      "line": 10707,
+      "heading": "## Hartree-equivalence and rank-free correlation floor guardrail (2026-09-12)"
+    },
+    {
+      "line": 10745,
+      "heading": "## Separable stationary source and necessary discord guardrail (2026-09-13)"
+    },
+    {
+      "line": 10793,
+      "heading": "## Discord robustness and stationary-channel identifiability guardrail (2026-09-13)"
+    },
+    {
+      "line": 10844,
+      "heading": "## Local pre/post-Discord handoff intake and rank-seven scope correction (2026-09-13)"
+    },
+    {
+      "line": 10908,
+      "heading": "## Consolidated R7P / FR223 intake and corrected replay guardrail (2026-09-19)"
+    },
+    {
+      "line": 10988,
+      "heading": "## R7N fixed-fixture phase exhaustion and partial Target-P guardrail (2026-09-20)"
+    },
+    {
+      "line": 11043,
+      "heading": "## R7O2 coupled-moment partial-cover integration guardrail (2026-09-20)"
+    },
+    {
+      "line": 11087,
+      "heading": "## R7O3 global Target-P acceptance guardrail (2026-09-22)"
+    },
+    {
+      "line": 11128,
+      "heading": "## MP7 mathematical-physics intake guardrail (2026-09-22)"
+    },
+    {
+      "line": 11136,
+      "heading": "## FIN PHY master-handoff intake guardrail (2026-09-23)"
+    },
+    {
+      "line": 11146,
+      "heading": "## FIN post-PHY research intake guardrail (2026-09-24)"
+    },
+    {
+      "line": 11155,
+      "heading": "## FIN missing-laws LAW/NL intake guardrail (2026-09-24)"
+    },
+    {
+      "line": 11165,
+      "heading": "## FIN missing-laws post-flat intake guardrail (2026-09-24)"
+    },
+    {
+      "line": 11174,
+      "heading": "## FIN missing-laws after-post-flat intake guardrail (2026-09-25)"
+    },
+    {
+      "line": 11184,
+      "heading": "## FIN missing-laws continuation intake guardrail (2026-09-25)"
+    },
+    {
+      "line": 11193,
+      "heading": "## FIN post-continuation full-handoff intake guardrail (2026-09-26)"
+    },
+    {
+      "line": 11204,
+      "heading": "## FIN post-after-continuation intake guardrail (2026-09-26)"
+    },
+    {
+      "line": 11215,
+      "heading": "## FIN research 131–255 scoped intake guardrail (2026-09-27)"
+    },
+    {
+      "line": 11225,
+      "heading": "## FIN post-255 operational-composition and hydrodynamic-memory guardrail (2026-09-27)"
+    },
+    {
+      "line": 11335,
+      "heading": "## FIN research 256–294 scoped intake guardrail (2026-09-27)"
+    },
+    {
+      "line": 11345,
+      "heading": "## FIN research 295–299 scoped intake guardrail (2026-09-27)"
+    },
+    {
+      "line": 11355,
+      "heading": "## FIN research 300–326 scoped intake guardrail (2026-09-28)"
+    },
+    {
+      "line": 11364,
+      "heading": "## FIN research 327–current scoped intake guardrail (2026-09-28)"
+    },
+    {
+      "line": 11373,
+      "heading": "## FIN-M0 relational-dynamics evidence qualification (2026-10-14)"
+    },
+    {
+      "line": 11379,
+      "heading": "## Proposed bounded relational-generative research chain (2026-10-14)"
+    },
+    {
+      "line": 11410,
+      "heading": "## Post-326 methodology reconciliation (2026-10-14)"
+    },
+    {
+      "line": 11420,
+      "heading": "## FIN generative RG-C01–RG-C06 intake guardrail (2026-10-14)"
+    },
+    {
+      "line": 11430,
+      "heading": "## FIN memory RG-D01–RG-D06 intake and hidden-refresh guardrail (2026-10-14)"
+    },
+    {
+      "line": 11441,
+      "heading": "## FIN operational RG-E01–RG-E06 intake and exact N2 gate (2026-10-14)"
+    },
+    {
+      "line": 11452,
+      "heading": "## FIN calibration RG-F01–RG-F06 conditional-statistics intake (2026-10-14)"
+    },
+    {
+      "line": 11463,
+      "heading": "## User-directed intrinsic-theory continuation after RG-F (2026-10-14)"
+    },
+    {
+      "line": 11474,
+      "heading": "## FIN intrinsic TH-001–TH-005 intake and TH-010 decision (2026-10-14)"
+    },
+    {
+      "line": 11486,
+      "heading": "## FIN stochastic-fold SF-001–SF-005 intake and kinetic-invariant steering (2026-10-14)"
+    },
+    {
+      "line": 11497,
+      "heading": "## FIN kinetic-invariants KI-001–KI-005 intake and symmetric-start steering (2026-10-14)"
+    },
+    {
+      "line": 11508,
+      "heading": "## FIN uniform-critical UF-001–UF-005 intake and finite-N local-regime steering (2026-10-14)"
+    },
+    {
+      "line": 11520,
+      "heading": "## FIN critical metastability MT-001–MT-005 intake and intrinsic-observation steering (2026-10-15)"
+    },
+    {
+      "line": 11531,
+      "heading": "## FIN intrinsic observation OBS-C01–OBS-C05 intake and record-information steering (2026-10-15)"
+    },
+    {
+      "line": 11543,
+      "heading": "## FIN record-information RI-001–RI-005 intake and parity-likelihood steering (2026-10-15)"
+    },
+    {
+      "line": 11555,
+      "heading": "## FIN parity-record LI-001–LI-005 intake and kernel-observability steering (2026-10-15)"
+    },
+    {
+      "line": 11567,
+      "heading": "## FIN kernel-observability KO-001–KO-005 intake and dynamic-sign steering (2026-10-15)"
+    },
+    {
+      "line": 11578,
+      "heading": "## FIN dynamic-observability DKO-001–DKO-005 intake and native-cost steering (2026-10-15)"
+    },
+    {
+      "line": 11590,
+      "heading": "## FIN native observation-cost NOC-001–NOC-005 intake and scale-robust steering (2026-10-15)"
+    },
+    {
+      "line": 11601,
+      "heading": "## FIN scale-robust native SRN-001–SRN-005 intake and bridge-activation steering (2026-10-15)"
+    },
+    {
+      "line": 11613,
+      "heading": "## FIN SRN revalidation and actual BR-001 input disposition (2026-10-15)"
+    },
+    {
+      "line": 11619,
+      "heading": "## FIN native transfer NT-001–NT-006 intake and auxiliary-mediator steering (2026-10-16)"
+    },
+    {
+      "line": 11631,
+      "heading": "## FIN auxiliary mediator HM-001–HM-005 intake and visible-memory steering (2026-10-16)"
+    },
+    {
+      "line": 11643,
+      "heading": "## FIN mediator-memory MM-001–MM-005 intake and post-MM bridge steering (2026-10-16)"
+    },
+    {
+      "line": 11654,
+      "heading": "## FIN rate-coupling derivation intake and activity-source boundary (2026-10-16)"
+    },
+    {
+      "line": 11664,
+      "heading": "## FIN stationary kinetic-rigidity KR-001–KR-004 intake and bracket-averaging frontier (2026-10-16)"
+    },
+    {
+      "line": 11674,
+      "heading": "## FIN reversible bracket-averaging BA-001–BA-004 intake and count-partition feasibility frontier (2026-10-16)"
+    },
+    {
+      "line": 11684,
+      "heading": "## FIN count-partition FP-001–FP-004 intake and rare-boundary flow frontier (2026-10-16)"
+    },
+    {
+      "line": 11695,
+      "heading": "## FIN combined RB / RBCUT intake and signed-interface cut frontier (2026-10-16)"
+    },
+    {
+      "line": 11707,
+      "heading": "## FIN SC intake and explicit balanced-phase current frontier (2026-10-17; work started 2026-10-16)"
+    },
+    {
+      "line": 11719,
+      "heading": "## FIN actual balanced-phase-current PC intake and physical compatibility boundary (2026-10-17)"
+    }
+  ],
+  "reading_scope": "named QW sources/reports, required six instruction notes, legacy action sections, current state-map/nonlinear/source boundaries; indexing does not reverify every historical programme",
+  "objective_sha256": "ecb1da0be0eef27f8a62d53d6171936e9fc27f38173d3e7868ffc37048e264f1",
+  "source_policy": "all originals and AGENTS bytepreserved",
+  "integration_bindings": {
+    "FIN_UNIFIED_EVOLUTION_SOURCE_AND_COMPOSITION_NEXT_CHAIN_20261017.md": "d299cd2ea42713a91845ae93bfecaff98f2ce5963103a2be4016789f74c18897",
+    "FIN_UNIFIED_EVOLUTION_AND_DH_INTEGRATION_20261017.md": "feda74d50dd67afc9d986c45b28fecf829f925a4fa8f25389d88f8aaee5dde5f",
+    "fin_dense_orbit_fibre_transport_review_20261017/MANIFEST.sha256": "e699500090891bd38a28e975717c1e08b467a2aa2d2b9bba3356d195ee76db30",
+    "fin_intermediate_clock_bridge_research_20261017/MANIFEST.sha256": "f9cf4ac2ef93ab4698bb012b85750a8612bea11ad6e8e3a8044cbbca07cf5e8b"
+  }
+}

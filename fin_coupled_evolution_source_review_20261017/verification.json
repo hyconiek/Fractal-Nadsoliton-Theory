@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-17",
+  "entry_HEAD": "dc51caba",
+  "status": "PASS_SCOPED_UE_INTAKE",
+  "source_manifest": {
+    "matched": 22,
+    "coverage": "COMPLETE",
+    "manifest_sha256": "8c8b59a31dcb5491c1d93d28f3f90bb2b58a1d1bec4ccd3203ce9897fd08d7b0"
+  },
+  "source_manifest_after": {
+    "matched": 22,
+    "coverage": "COMPLETE",
+    "manifest_sha256": "8c8b59a31dcb5491c1d93d28f3f90bb2b58a1d1bec4ccd3203ce9897fd08d7b0"
+  },
+  "original_local_references": {
+    "REPLAY/AGENTS_LIBRARY_SNAPSHOT_20261004.md": "edb66c6f544d2729c20f282d63fe3577fae7883d29bb18a2033973559415e4b4",
+    "REPLAY/verify.py": "f582292818e566a2e1a4e3d678f21d8417c49c7d766c803e21cfd5259a1a47f3",
+    "REPLAY/exact_controls.json": "f127707b60075d5bcb047473b8cd7f02d3536335ee4b9fa80120efc6412973d2"
+  },
+  "actual_predecessor_manifest": {
+    "matched": 22,
+    "coverage": "COMPLETE",
+    "manifest_sha256": "f28bc90aa8194f94c024f08f2a6a8b3970f24bbeb906bb5ddf90019fe2e7c240"
+  },
+  "replay": {
+    "temporary_directory": "/tmp/fin-ue-intake-59arykh9",
+    "returncode": 0,
+    "stdout": "PASS 11 exact analytical checks\nnoncommuting negative control: spectrum(Vinf)={1/2,3/2}, Rayleigh=-4/3\ninstantaneous diagnostic transfer: dEphi=-16*delta/15; dEpsi=+16*delta/15\ncoarse acceleration separation: 4 epsilon^2/sqrt(15)\nsame-field two-bump cross: sqrt(2*pi)*exp(-2*a^2)\n",
+    "stderr": "",
+    "byte_equal": false,
+    "changed_fields": {
+      "runtime": {
+        "incoming": {
+          "python": "3.13.5",
+          "sympy": "1.14.0",
+          "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+        },
+        "replayed": {
+          "python": "3.12.3",
+          "sympy": "1.12",
+          "platform": "Linux-7.2.11-x64v3-xanmod1-x86_64-with-glibc2.39"
+        }
+      }
+    },
+    "scope": "same-code synthetic replay, not independent proof; several source integral flags use assigned constants"
+  },
+  "checks": [
+    {
+      "name": "all22 original manifest entries have complete coverage",
+      "passed": true
+    },
+    {
+      "name": "three supplied local references match; two are producer replay files",
+      "passed": true
+    },
+    {
+      "name": "supplied library snapshot is not current AGENTS",
+      "passed": true,
+      "scope": "the reported Library date is not independently attested acquisition metadata"
+    },
+    {
+      "name": "predecessor source audit package remains intact",
+      "passed": true
+    },
+    {
+      "name": "actual local QW legacy and FAR scientific inputs agree with predecessor",
+      "passed": true
+    },
+    {
+      "name": "AGENTS current immutable baseline matches",
+      "passed": true
+    },
+    {
+      "name": "actual archived12real transverse Hessian matches operator",
+      "passed": true
+    },
+    {
+      "name": "actual Phi mixing vanishes at Psi0 with correct scalar Hessian",
+      "passed": true
+    },
+    {
+      "name": "displayed radial realkernel full24real transverse Hessian is two copies",
+      "passed": true,
+      "scope": "conditional radial realkernel action only; free coefficients not sourced"
+    },
+    {
+      "name": "radial action imaginary forces vanish on invariant real slice",
+      "passed": true
+    },
+    {
+      "name": "Hermitian imaginary mixing gives realimag coupling countercontrol",
+      "passed": true
+    },
+    {
+      "name": "scalar comparison bound paid by exact factor eigenfunction",
+      "passed": true
+    },
+    {
+      "name": "b0 endpoint formal constant is not an L2 groundstate",
+      "passed": true,
+      "scope": "constant has infinite norm on R; lower spectral edge still valid"
+    },
+    {
+      "name": "actual Phi background stationarity requires the declared coefficient map",
+      "passed": true
+    },
+    {
+      "name": "three sech trial integrals independently integrated",
+      "passed": true
+    },
+    {
+      "name": "noncommuting interpolation coefficients exact",
+      "passed": true,
+      "scope": "matrix identity entrywise; Loewner implication is analytical"
+    },
+    {
+      "name": "submitted negative trial is exactly minus4thirds",
+      "passed": true
+    },
+    {
+      "name": "different3x3 positivefar noncommuting negative control",
+      "passed": true
+    },
+    {
+      "name": "actual displayed PhiPsi force factors independently derived",
+      "passed": true
+    },
+    {
+      "name": "symbolic nonzero sourcecoupling transfer norms exact",
+      "passed": true
+    },
+    {
+      "name": "submitted synthetic transfer ratio and energies correct",
+      "passed": true
+    },
+    {
+      "name": "initial work cancels without new force",
+      "passed": true
+    },
+    {
+      "name": "single active initial Psi is not generically invariant",
+      "passed": true
+    },
+    {
+      "name": "samefield Gaussian cross energy exact",
+      "passed": true
+    },
+    {
+      "name": "kink example requires affine Sobolev space",
+      "passed": true,
+      "scope": "positive asymptotic square excludes L2; path differences and perturbations remain L2"
+    },
+    {
+      "name": "coarse acceleration mismatch norm exact",
+      "passed": true
+    },
+    {
+      "name": "Taylor interval and predictor halfdistance factors exact",
+      "passed": true,
+      "scope": "0<=th<=1 gives separation a*t\u00b2/4 and worst-case predictor a*t\u00b2/8"
+    },
+    {
+      "name": "source11 control labels replay semantically on temporary copy",
+      "passed": true
+    },
+    {
+      "name": "original campaign bytes and coverage preserved",
+      "passed": true
+    },
+    {
+      "name": "predecessor package and AGENTS unchanged",
+      "passed": true
+    }
+  ],
+  "input_hashes": {
+    "fin_coupled_evolution_source_review_20261017/verify_intake.py": "1af0294345d902e2ffbc5f388b4d4cc841bd1c2c68fef9e08b4e3bade6ecc398",
+    "fin_coupled_evolution_source_campaign_20261017/MANIFEST.sha256": "8c8b59a31dcb5491c1d93d28f3f90bb2b58a1d1bec4ccd3203ce9897fd08d7b0",
+    "fin_coupled_evolution_source_campaign_20261017/INPUTS.sha256": "1213f120a3670a6342283d932889d20239841fc2b0c0fb8062d5e49a6607dd79",
+    "AGENTS.md": "ffb62af2671f62aa582c688a90edd998e4a9621b29e35fd240e1863038c9e0d9",
+    "fin_unified_strict_evolution_audit_20261017/MANIFEST.sha256": "f28bc90aa8194f94c024f08f2a6a8b3970f24bbeb906bb5ddf90019fe2e7c240",
+    "fin_unified_strict_evolution_audit_20261017/verify_evolution.py": "e4eebf579fbc08a29708e37f280ad8a0b0d2759bb41c0769c731f6a2184db01a",
+    "FIN_UNIFIED_EVOLUTION_SOURCE_AND_COMPOSITION_NEXT_CHAIN_20261017.md": "d299cd2ea42713a91845ae93bfecaff98f2ce5963103a2be4016789f74c18897",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2166_l14_exhaustive_canonical_hessian_gate.json": "632ff93d2d01003c19924841275e05afabe9eb4565ef9b9c27feb0e7522fc116",
+    "fin_coupled_evolution_source_review_20261017/PROOF_AUDIT_AND_COMPLETIONS.md": "9920e79ff3f1d9dc1159b13174f131b67f35cef9ee778bcd83748bd8c2676f6f",
+    "TOE_FINAL_DOCUMENTATION_RELEASE_4_4_LEGACY_FULL.tex": "ec6808580c881ae3ec8dd2fbf8120e8cc372f41194d033225b556d22daad4ac4",
+    "fundamental_action_reconstruction/K1_LEGACY_ONTOLOGICAL_KERNEL_VS_STRICT_GATE_KERNEL_SPLIT_NOTE.md": "3e7c1223b803df3cbe94d75e2696d3519f8505e38cef4bd724be3dadfca84ca8",
+    "fundamental_action_reconstruction/K2_STRICT_GATE_KERNEL_DERIVATION_CHAIN_NOTE.md": "594eb02e820928328d81e0ba7c2540ca13286a3b1e27cd33d71f7ae1fce74129",
+    "fundamental_action_reconstruction/F2_STRICT_GATE_KERNEL_PROVENANCE_AND_FAR_INPUT_CLASSIFICATION_PACKET.md": "b17e90112b1d121e386ca5c6018c5fd9b9e54c38d2e02027002ce5c7ac85d406",
+    "fundamental_action_reconstruction/F3_CURRENT_FAR_FRONTIER_KERNEL_ARTIFACT_SENSITIVITY_CLASSIFICATION_PACKET.md": "720efbac212f01d152d7df4f962c26b2d4fd3bf1f18215338d67cd8c8b38090c",
+    "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md": "acdd07e5b59fc87b7c6457cf43dcafef2939165526265ac37d0c0a6cffaa2c65",
+    "SUMMARY_GROK.md": "6e87c0e889086ea4f32d365a488031f34f9964e9724b2f0366642a90110409d2",
+    "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md": "25eb5bf949381f9869a7e7fbb0bf1e10ebf7ccdbc704c6670a72be67fa0e21cd",
+    "fundamental_action_reconstruction/generated/p2685_s1635_strict_lagrangian_eom_reverse_closure_obstruction_matrix.md": "01bf0d4bcc25079c47ade624f016a7dd463c722fce1fb1ff79638129e9fff521",
+    "fundamental_action_reconstruction/generated/p2697_s1647_post_direct_route_state_map_no_new_live_frontier_reconciliation.md": "7754098d0dce257b66bb44cb051e8c015b56b46f81fd454aad3e585d791bf2d3",
+    "fundamental_action_reconstruction/generated/p3075_s2025_variational_source_obstruction_table.md": "eb6d65656537fe16f993af9b2d72d089bcac094cd121889644dfebc1e87ddbfe",
+    "QW_2163_L13_FULL_CANONICAL_ACTION_VARIATIONAL_GATE.py": "e0245ed2c553915258e6aa65feafa7e4b3bf463fd7da4f3fc3e86a5873743b27",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2163_l13_full_canonical_action_variational_gate.json": "a3833b5f17aa09c70da5fe9ae98c033fdf011836572b4ef9a97cd72fcb8dd58a",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L13_FULL_CANONICAL_ACTION_VARIATIONAL_QW2163.lean": "84be583ec0cc3dd2112afece4561580344f7dc837108322ebb4e3e040cff9d57",
+    "QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py": "5eeeee7bd6436a14fd064c97115dafa03dcbec9be5a642bdc3b96b384208e43b",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2165_l13_exhaustive_canonical_eom_gate.json": "47b9e2b058ed46d1ea9cefea1716f8a18f992cbda804c2771a64ada4a6a56349",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L13_EXHAUSTIVE_CANONICAL_EOM_QW2165.lean": "d9b7ae6fb1a2efbc0b57fd393375b9bc3b01b2183ceb84dfa97b14460ca1743d",
+    "QW_2166_L14_EXHAUSTIVE_CANONICAL_HESSIAN_GATE.py": "2d6a2dc28d75d0050c8674a146ee902a4d77bb7521efb39630f3e358d0fe4872",
+    "material_dowodowy/lean_fin_dowody/lean/FIN_L14_EXHAUSTIVE_CANONICAL_HESSIAN_QW2166.lean": "d9dcc7abc9975ba5dd4bf9c51bc3ee2eb3b67f40c99611efd2788885b8988bc2"
+  },
+  "strict_source": "STILL_UNDERDETERMINED",
+  "numeric_FIN_wall_verdict": "NOT_AVAILABLE",
+  "source_access_now": "actual local QW/audit/legacy sources bound today, not retrospective producer access",
+  "scope_correction": "affine kink background space and explicit Taylor regularity",
+  "symbolic_backend": "1.12",
+  "physical_validation": false
+}

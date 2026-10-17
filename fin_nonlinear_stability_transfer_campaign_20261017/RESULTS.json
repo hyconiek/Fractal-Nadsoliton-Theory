@@ -1,0 +1,77 @@
+{
+  "campaign": "FIN_NS_001_005_20261017",
+  "execution_status": "EXECUTED_SCOPED_CONDITIONAL_MATHEMATICS_STOPPED",
+  "scientific_verdict": "PROVED_CONDITIONAL_FULL_FIELD_ORBITAL_STABILITY_AND_LOCAL_TRANSFER_ON_EXPLICIT_NONEMPTY_REGION; ACTUAL_FIN_TUPLE_UNTESTED; STRICT_SOURCE_OPEN",
+  "tasks": {
+    "NS-001": {
+      "status": "CONDITIONAL_ACTION_INTERFACE_FROZEN",
+      "scope": "canonical 1+1 real phi +12 complex psi, signed scalar mass/sextic, exact wall, source boundary retained"
+    },
+    "NS-002": {
+      "status": "QUANTITATIVE_GAP_THEOREM_CONDITIONAL",
+      "region": "delta_Psi=mu-k^2*s^2-e_trans>0; delta_phi=3k^2-e_scalar>0; full Psi 24 real modes; noncommuting bound"
+    },
+    "NS-003": {
+      "status": "GLOBAL_ORBITAL_STABILITY_THEOREM_CONDITIONAL",
+      "range": "all t in R for sufficiently small full H1xL2 orbit data, assuming standard local wellposedness/continuation"
+    },
+    "NS-004": {
+      "status": "LOCAL_STRICT_TRANSFER_ON_SAME_ORBIT_THEOREM_CONDITIONAL",
+      "range": "0<t<=T_epsilon, some T_epsilon positive (can choose order epsilon under smooth uniform local estimates)"
+    },
+    "NS-005": {
+      "status": "STOPPED_WITH_SOURCE_AND_PHYSICAL_GATES_OPEN"
+    }
+  },
+  "exact_signed_sextic_wall": "K_g(x)=v*tanh(k*x)/sqrt(1+theta*sech(k*x)^2), theta=(g*v^2/3)/(lambda/2+2*g*v^2/3), k=v*sqrt(lambda/2+g*v^2)",
+  "region_signed_sextic": {
+    "positive_conditions": [
+      "lambda>0",
+      "v>0",
+      "C=lambda/2+2*g*v^2/3>0",
+      "C+D=lambda/2+g*v^2>0",
+      "abs(theta)<1",
+      "3*k^2>12*abs(g)*v^4+3*lambda*v^2*r_theta",
+      "mu-k^2*s^2>norm(B)*r_theta"
+    ],
+    "r_theta": "abs(theta)/(4*(1-abs(theta)))",
+    "mu": "lambda_min(A+B)",
+    "B": "2*v^2*Y",
+    "A": "M2+Ks",
+    "b": "max(0,lambda_max(B))",
+    "s": "(sqrt(1+4*b/k^2)-1)/2"
+  },
+  "full_reality": "phi 1 real+psi 24 real; 25 positions and 25 velocities; both 12-complex phase blocks retained",
+  "replay": {
+    "passed": 31,
+    "scope": "bounded exact symbolic/control tests not PDE proof or actual QW replay"
+  },
+  "supplied_objects": [
+    "user NS instruction",
+    "predecessor UE handoff zip",
+    "older Library AGENTS snapshot",
+    "operator L_perp and signed action formal interface"
+  ],
+  "derived_objects": [
+    "exact signed standard sextic kink",
+    "explicit noncommuting 24-mode spectral gap",
+    "scalar mod-translation gap",
+    "full relative energy coercivity",
+    "conditional all-time orbital estimate",
+    "same-solution positive-time diagnostic transfer"
+  ],
+  "fitted_objects": [],
+  "source_gates": {
+    "actual_QW_program_bytes_verified": false,
+    "actual_FIN_parameter_membership_verified": false,
+    "typed_nonlinear_action_map_sourced_from_nadsoliton": false,
+    "strict_source": "OPEN"
+  },
+  "nonconclusions": [
+    "no actual FIN-specific numerical/signed coefficient verdict",
+    "no general all-sign stability",
+    "no scattering/emission/absorption",
+    "no SI, QM, GR, SM, physical observables or ToE"
+  ],
+  "next_action": "STOP. Actual source-bound coefficient membership is a separate gate if independently activated; do not repeat closed inventories."
+}

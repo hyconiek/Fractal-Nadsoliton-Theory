@@ -1,0 +1,103 @@
+{
+  "execution_status": "EXECUTED_EXACT_ANALYTIC_CONTROLS_ONLY",
+  "strict_source_gate": "BLOCKED_UNAVAILABLE_ACTUAL_SOURCE_FILES",
+  "fin_actual_matrices_checked": false,
+  "fin_full_complex_action_checked": false,
+  "precision": "SymPy exact integers/rationals; symbolic integral identities",
+  "checks_passed": 11,
+  "checks": [
+    "noncommuting_commutator_exact",
+    "positive_far_vacuum_eigenvalues_exact",
+    "wall_core_indefinite_exact",
+    "negative_rayleigh_integrals_exact",
+    "negative_rayleigh_quotient_exact",
+    "matrix_analytic_trial_bound_exact",
+    "nonlinear_force_L2_exact",
+    "nonlinear_hidden_force_L2_exact",
+    "interaction_stationary_at_t0_exact",
+    "two_configuration_existing_cross_term_exact",
+    "coarse_acceleration_separation_exact"
+  ],
+  "operator_control": {
+    "V_inf": [
+      [
+        "1",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "B": [
+      [
+        "4",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "V_0": [
+      [
+        "-3",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "commutator": [
+      [
+        "0",
+        "-2"
+      ],
+      [
+        "2",
+        "0"
+      ]
+    ],
+    "far_vacuum_spectrum": [
+      "1/2",
+      "3/2"
+    ],
+    "trial_norm_squared": "2",
+    "trial_kinetic": "2/3",
+    "trial_attractive_integral": "4/3",
+    "negative_quadratic_form": "-8/3",
+    "negative_rayleigh_quotient": "-4/3",
+    "below_essential_threshold": true,
+    "actual_FIN_instability_claim": false
+  },
+  "transfer_control": {
+    "V_interaction": "phi^2 psi^2",
+    "F2": "16/15",
+    "G2": "8/5",
+    "Cauchy_velocity_ratio": "2/3",
+    "dE_phi_over_delta": "-16/15",
+    "dE_psi_over_delta": "16/15",
+    "dE_int_over_delta": "0",
+    "two_bump_interaction_cross": "sqrt(2*pi)*exp(-2*a^2)",
+    "actual_FIN_transfer_claim": false
+  },
+  "coarse_obstruction": {
+    "same_initial_coarse_state": true,
+    "different_initial_psi": "0 versus epsilon sech(x)",
+    "L2_acceleration_difference": "4*epsilon^2/sqrt(15)",
+    "autonomous_phi_projection": false
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "nonconclusions": [
+    "No input M2/Y diagonal/array verification",
+    "No complete noncommuting FIN spectrum",
+    "No strict nadsoliton sourcing",
+    "No physical mass/space-time/observable claim",
+    "No FIN-specific two-wall scattering, absorption or stability proof"
+  ]
+}

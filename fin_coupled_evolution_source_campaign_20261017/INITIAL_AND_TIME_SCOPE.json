@@ -1,0 +1,21 @@
+{
+  "task": "UE-003",
+  "test_kind": "local analytical Cauchy-data theorem",
+  "field_class": "canonical semilinear coupled wave PDE in 1+1 with pre-existing V=U+W+Vint",
+  "regularity": "smooth finite relative-energy data with vanishing boundary flux and local wellposedness",
+  "initial": "Phi0,Psi0 arbitrary compatible with F=dPhi Vint, G=gradPsi Vint in L2; A=||F||^2>0,B=||G||^2>0; Psi0 nonzero",
+  "initial_velocities": "Phi_t=delta*F; Psi_t=-delta*A/B*G; delta>0",
+  "time_range": "exists t0>0 by derivative continuity; no source-independent numerical t0 is asserted",
+  "transfer": "Ephi decreases and Epsi increases on (0,t0); interaction derivative zero at t=0",
+  "illustrative_control": {
+    "Phi0": "tanh(x)",
+    "Psi0": "sech(x)",
+    "Vint": "Phi^2*Psi^2",
+    "A": "16/15",
+    "B": "8/5",
+    "A_over_B": "2/3",
+    "local_time": "positive but unspecified"
+  },
+  "composition": "two profiles must satisfy same action and compatible total Cauchy boundary/topological class; no two-body term added",
+  "actual_FIN_validation": "NOT_DONE"
+}
