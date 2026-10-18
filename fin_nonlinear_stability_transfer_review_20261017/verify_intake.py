@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Independent bounded NS audit; original writers run only on temporary copies."""
 import argparse
+from datetime import date
 from fractions import Fraction as F
 import hashlib
 import importlib.util
@@ -23,7 +24,10 @@ def module(p,name):
     spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,required=True);ap.add_argument('--replay',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,required=True);ap.add_argument('--replay',action='store_true')
+    ap.add_argument('--verification-date',default='2026-10-19',help='Explicit audit date, not the historical source date')
+    args=ap.parse_args();date.fromisoformat(args.verification_date)
+    head=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip()
     helper=module(UE/'verify_intake.py','accepted_ue_hash_helper')
     checks=[]
     def ck(name,ok,**detail):
@@ -178,6 +182,7 @@ def main():
     inputs={str(p.relative_to(ROOT)):sha(p) for p in files}
     inputs.update(json.loads((AUDIT/'verification.json').read_text())['input_hashes'])
     result={'date':'2026-10-17','entry_HEAD':'dc51caba','status':'PASS_SCOPED_NS_INTAKE',
+            'verification_date':args.verification_date,'verification_HEAD':head,
             'source_manifest':before,'source_manifest_after':after,'original_references':refs,
             'actual_dependencies':dependencies,'input_hashes':inputs,'checks':checks,'signed_comparison_controls':signed,
             'replay':replay,'source_mapping':'gPhi=0 matches bound Phi polynomial; nonzero gPhi is comparison-only',

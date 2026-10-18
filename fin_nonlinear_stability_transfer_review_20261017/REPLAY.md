@@ -3,7 +3,7 @@
 From the repository root:
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python3 fin_nonlinear_stability_transfer_review_20261017/verify_intake.py --replay --output /tmp/fin-ns-intake-replay.json
+PYTHONDONTWRITEBYTECODE=1 python3 fin_nonlinear_stability_transfer_review_20261017/verify_intake.py --replay --verification-date 2026-10-19 --output /tmp/fin-ns-intake-replay.json
 PYTHONDONTWRITEBYTECODE=1 python3 fin_nonlinear_stability_transfer_review_20261017/finalize_review.py --check
 PYTHONDONTWRITEBYTECODE=1 python3 fin_coupled_evolution_source_review_20261017/finalize_review.py --check
 git diff --check
@@ -20,3 +20,5 @@ separately; no finite fixture proves them. The finalizer writes only this
 new review's own index/manifest in write mode; --check is read-only.
 Current source hashes must match. Missing original wrapper is not a mismatch
 and is not recreated as historical custody. No browser/physical experiment.
+The explicit verification date and actual Git HEAD are distinct from the
+source/review start date. Future revalidations should pass their own date.

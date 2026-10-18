@@ -2,6 +2,8 @@
 
 Data: 2026-10-17. Dowód analityczny i ograniczone kontrole, nie formalizacja,
 niezależna recenzja naukowa ani walidacja fizyczna.
+Końcowa weryfikacja i domknięcie pakietu: 2026-10-19, HEAD1f1adcac.
+Istniejący commit z materiałami wykonał użytkownik/inny proces, nie ta recenzja.
 
 ## Wynik
 

@@ -1,6 +1,8 @@
 # FIN: integracja NS i następny problem propagacji
 
 Data: 2026-10-17. Entry HEAD dc51caba; wcześniejsze zmiany zachowane.
+Domknięcie i końcowa weryfikacja: 2026-10-19 przy HEAD1f1adcac. Wcześniejszy
+commit z pakietami wykonano zewnętrznie; ta kontrola nie tworzy commitu.
 
 [Kampanię NS](fin_nonlinear_stability_transfer_campaign_20261017/HANDOFF.md)
 włączono poprzez [osobny intake](fin_nonlinear_stability_transfer_review_20261017/INTAKE_20261017.md),
