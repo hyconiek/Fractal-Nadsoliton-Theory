@@ -1,0 +1,15 @@
+{
+  "status": "OPEN_FLUX_DOMINATION",
+  "exact_current": "J=-phi_t*phi_x-Re sum(Psi_t_conj*Psi_x)",
+  "exact_local_balance": true,
+  "terms": {
+    "kink_interference": "order epsilon^2 exp(-2R) times scalar retarded signal (schematic upper estimate)",
+    "localized_transverse_bound_mode": "order epsilon^2 exp(-4R), oscillatory signed current",
+    "radiative_scalar_quadratic": "order epsilon^4 when retarded scalar continuum packet reaches window",
+    "initial_slip": "nonzero at t=0 due to bare kink + excited mode",
+    "nonlinear_remainder": "fixed-T estimates only; no certified epsilon-dependent margin"
+  },
+  "candidate_window_rule": "R_epsilon at least order log(1/epsilon), T_epsilon at least causal arrival, group-delay control additionally required",
+  "admissible_positivity_result": false,
+  "why": "Gamma is stationary spectral density, not finite-time signed canonical flux"
+}
