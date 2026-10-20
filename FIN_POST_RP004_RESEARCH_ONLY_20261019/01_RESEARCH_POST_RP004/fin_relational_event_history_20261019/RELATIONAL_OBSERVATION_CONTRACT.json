@@ -1,0 +1,20 @@
+{
+  "family": "12-state one-label D12-radial reversible CTMC (comparison model)",
+  "parent_premise": "Q=-A supplied; positive radial weights w1..w6; single-label state space Z12; not native N2 HB",
+  "observation_A": {
+    "name": "Six labelled actual-event Fourier correlations",
+    "clock": "Ordered true changes n, not model or physical seconds",
+    "observable": "m_k=E_pi[f_k(Y_1)f_k(Y_0)] (k=1..6)",
+    "reconstruction": "a=B^{-1}(1-m)=w/s",
+    "admissibility": ["all a_d>0", "2*(a1+...+a5)+a6=1"],
+    "unidentified": ["absolute activity s", "event durations", "physical time", "natural origin of Q and probes"]
+  },
+  "observation_B": {
+    "name": "Anonymous two-time return at all model lags and all event counts",
+    "observable": "R(t)=Pr_pi(X_t=X_0), R_jump(n)=Pr_pi(Y_n=Y_0)",
+    "theorem": "Does not identify the positive radial generator even up to vertex relabelling in the full model class",
+    "witness": "PAPER.md theorem E2, distinct cubic edge sum 11/24000 per vertex",
+    "not_covered": ["all multi-time equality partitions", "labelled displacements", "physical observer implementation", "native interacting N2"]
+  },
+  "ontological_status": "No new FIN postulate; intrinsic source remains OPEN_SOURCE"
+}

@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-19",
+  "status": "UNEXECUTED_RESEARCH_ARCHITECTURE",
+  "default_start": [
+    "ID-001"
+  ],
+  "strategy_documents": [
+    "FIN_RESEARCH_STRATEGY.md",
+    "FIN_PRIOR_RESEARCH_MAP.md",
+    "FIN_BLOCKERS_REGISTER.md",
+    "FIN_RESEARCH_EXECUTION_PLAN.md"
+  ],
+  "max_parallel_packets": 2,
+  "parallel_after_selection": [
+    [
+      "RP004-A",
+      "RP004-B"
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "ID-001",
+      "prompt": "research_tasks/01_ID001_ENTROPY_SOURCE_BOUND.md",
+      "priority": "P0",
+      "readiness": "READY",
+      "execution_status": "NOT_EXECUTED",
+      "dependencies": [],
+      "existing_inputs": [
+        "AGENTS.md",
+        "research_tasks/00_EXECUTION_RULES.md",
+        "fin_strategy_audit_20261019/INTRINSIC_EVOLUTION_ASSESSMENT.md",
+        "fin_strategy_audit_20261019/QW206_INSPECTION.json",
+        "fin_generative_operational_review_20261014/EXACT_N2_PROCESS_AND_SHARP_SEPARATION.md",
+        "fin_physical_bridge_campaign_01/PHYS-002/safe_seed.py",
+        "FIN_ST383_Asymptotic_Markov_Rate_Distortion_Bounds.json",
+        "FIN_ST372_ST386_Global_Collision_Envelope_Exact_Invariant_Bases_and_Continuum_IR_Report_EN.tex",
+        "fin_unified_strict_evolution_audit_20261017/AUTONOMOUS_COMPOSITION_THEOREM_OR_OBSTRUCTION.md",
+        "fin_kinetic_composition_research_20261016/THEORETICAL_RESULTS.md",
+        "FIN_Ten_Research_Programs_Monograph.md",
+        "fin_intermediate_clock_bridge_research_20261017/TRACE_CLOCK_AND_INSTRUMENT_THEOREM.md",
+        "fin_strategy_audit_20261019/references/lecomte_2007_sections_2_2_to_3_2.txt"
+      ],
+      "prerequisite_outputs": [],
+      "output_directory": "fin_intrinsic_entropy_source_bound_20261019",
+      "novelty_delta": "Native N2 resolution/error/source-entropy contract; ST383 Fano and the general exact-factor obstruction are reused.",
+      "requires_new_physical_axiom": false,
+      "cost_class": "S/M",
+      "stop_rule": "one stated route and at most one concrete repair, then scoped result/open lemma and architect return",
+      "duplicate_evidence": "fin_strategy_audit_20261019/FINAL_TASK_DUPLICATE_SEARCH.json"
+    },
+    {
+      "id": "RP004-A",
+      "prompt": "research_tasks/02_RP004_A_RETARDED_REFERENCE.md",
+      "priority": "P1",
+      "readiness": "READY_OPTIONAL",
+      "execution_status": "NOT_EXECUTED",
+      "dependencies": [],
+      "existing_inputs": [
+        "AGENTS.md",
+        "research_tasks/00_EXECUTION_RULES.md",
+        "research_tasks/RP004_SHARED_CONTRACT.json",
+        "FIN_RP004_RETARDED_FLUX_CONTINUATION_20261019.md",
+        "fin_coherent_mode_radiation_campaign_20261017/MODE_AND_FLUX_CONTRACT.json",
+        "fin_coherent_mode_radiation_campaign_20261017/ON_SHELL_CERTIFICATE_OR_FAILURE.md",
+        "fin_coherent_mode_radiation_campaign_20261017/OUTWARD_FLUX_THEOREM_OR_OPEN_LEMMA.md",
+        "fin_coherent_mode_radiation_campaign_20261017/PHASE_AND_INITIAL_SLIP_CONTROLS.md",
+        "fin_coherent_mode_radiation_review_20261019/PROOF_COMPLETIONS_AND_SCOPE.md",
+        "fin_coherent_mode_radiation_review_20261019/RETARDED_FLUX_PROOF_ROUTE.md"
+      ],
+      "prerequisite_outputs": [],
+      "output_directory": "fin_rp004_flux_continuation_20261019/RP004-A",
+      "novelty_delta": "Retarded moving-boundary finite-window lower term; no repeat of the paid Gamma computation.",
+      "requires_new_physical_axiom": false,
+      "cost_class": "M",
+      "stop_rule": "one stated route and at most one concrete repair, then scoped result/open lemma and architect return",
+      "duplicate_evidence": "fin_strategy_audit_20261019/FINAL_TASK_DUPLICATE_SEARCH.json"
+    },
+    {
+      "id": "RP004-B",
+      "prompt": "research_tasks/03_RP004_B_UNIFORM_REMAINDER.md",
+      "priority": "P1",
+      "readiness": "READY_OPTIONAL",
+      "execution_status": "NOT_EXECUTED",
+      "dependencies": [],
+      "existing_inputs": [
+        "AGENTS.md",
+        "research_tasks/00_EXECUTION_RULES.md",
+        "research_tasks/RP004_SHARED_CONTRACT.json",
+        "fin_coherent_mode_radiation_review_20261019/RETARDED_FLUX_PROOF_ROUTE.md",
+        "fin_coherent_mode_radiation_review_20261019/PROOF_COMPLETIONS_AND_SCOPE.md",
+        "fin_nonlinear_stability_transfer_review_20261017/PROOF_COMPLETIONS_AND_SCOPE.md",
+        "fin_nonlinear_stability_transfer_review_20261017/INTAKE_20261017.md",
+        "fin_coherent_mode_radiation_campaign_20261017/MODE_AND_FLUX_CONTRACT.json",
+        "fin_coherent_mode_radiation_campaign_20261017/ERROR_SCOPE.json",
+        "FIN_RP004_RETARDED_FLUX_CONTINUATION_20261019.md"
+      ],
+      "prerequisite_outputs": [],
+      "output_directory": "fin_rp004_flux_continuation_20261019/RP004-B",
+      "novelty_delta": "Uniform trace-admissible error on the existing candidate logarithmic window; NS and fixed-T bounds are reused.",
+      "requires_new_physical_axiom": false,
+      "cost_class": "M",
+      "stop_rule": "one stated route and at most one concrete repair, then scoped result/open lemma and architect return",
+      "duplicate_evidence": "fin_strategy_audit_20261019/FINAL_TASK_DUPLICATE_SEARCH.json"
+    },
+    {
+      "id": "RP004-C",
+      "prompt": "research_tasks/04_RP004_C_SIGNED_FLUX.md",
+      "priority": "P1",
+      "readiness": "WAITING_FOR_A_AND_B",
+      "execution_status": "NOT_EXECUTED",
+      "dependencies": [
+        "RP004-A",
+        "RP004-B"
+      ],
+      "existing_inputs": [
+        "AGENTS.md",
+        "research_tasks/00_EXECUTION_RULES.md",
+        "research_tasks/RP004_SHARED_CONTRACT.json",
+        "fin_coherent_mode_radiation_campaign_20261017/OUTWARD_FLUX_THEOREM_OR_OPEN_LEMMA.md",
+        "fin_coherent_mode_radiation_review_20261019/PROOF_COMPLETIONS_AND_SCOPE.md",
+        "fin_coherent_mode_radiation_review_20261019/RETARDED_FLUX_PROOF_ROUTE.md",
+        "fin_nonlinear_stability_transfer_review_20261017/PROOF_COMPLETIONS_AND_SCOPE.md"
+      ],
+      "prerequisite_outputs": [
+        "fin_rp004_flux_continuation_20261019/RP004-A/RETARDED_REFERENCE_BOUND_OR_OPEN_LEMMA.md",
+        "fin_rp004_flux_continuation_20261019/RP004-B/UNIFORM_REMAINDER_OR_FAILURE.md",
+        "fin_rp004_flux_continuation_20261019/RP004-A/REFERENCE_ERROR.json",
+        "fin_rp004_flux_continuation_20261019/RP004-A/NORMALIZATION_AND_RAY_CONTRACT.json",
+        "fin_rp004_flux_continuation_20261019/RP004-B/STRONG_NORM_AND_TIME_SCOPE.json",
+        "fin_rp004_flux_continuation_20261019/RP004-B/TRACE_ERROR_BUDGET.json"
+      ],
+      "output_directory": "fin_rp004_flux_continuation_20261019/RP004-C",
+      "novelty_delta": "Original nonlinear signed-flux domination using paid compatible A/B, including terminal RP004-D disposition.",
+      "requires_new_physical_axiom": false,
+      "cost_class": "M",
+      "stop_rule": "one stated route and at most one concrete repair, then scoped result/open lemma and architect return",
+      "duplicate_evidence": "fin_strategy_audit_20261019/FINAL_TASK_DUPLICATE_SEARCH.json"
+    },
+    {
+      "id": "MH-001",
+      "prompt": "research_tasks/90_MH001_MESOSCOPIC_HALL.md",
+      "priority": "P2",
+      "readiness": "OPTIONAL",
+      "execution_status": "NOT_EXECUTED",
+      "dependencies": [],
+      "existing_inputs": [
+        "AGENTS.md",
+        "research_tasks/00_EXECUTION_RULES.md",
+        "FIN_MESOSCOPIC_HALL_AND_INTERMEDIATE_SOURCE_NEXT_CHAIN_20261017.md",
+        "fin_dense_orbit_fibre_transport_review_20261017/CLUSTERED_COMPLEMENT_SEED.md",
+        "fin_dense_orbit_fibre_transport_review_20261017/PROOF_COMPLETIONS_AND_SCOPE.md",
+        "fin_dense_orbit_fibre_transport_campaign_20261017/DH-001/DENSE_COMPLEMENT_HALL_THEOREM.md",
+        "fin_balanced_phase_cut_research_20261016/COMPACT_PHASE_PREFIX_LOCAL_LIMIT.md",
+        "fin_balanced_phase_cut_research_20261016/EXACT_COMPACT_CURRENT_MARGINALS_AND_GLUING.md",
+        "fin_balanced_phase_current_campaign_20261016/MARGINAL_AND_SUPPORT_CONTRACT.json",
+        "fin_balanced_phase_current_review_20261017/INTAKE_20261017.md",
+        "fin_rbcut_weighted_degree_review_20261016/PROOF_AUDIT_AND_CORRECTIONS.md"
+      ],
+      "prerequisite_outputs": [],
+      "output_directory": "fin_mesoscopic_hall_20261019",
+      "novelty_delta": "Existing unexecuted growing-ball target: lattice-width SHELL and differenced ADJACENT; not another bounded-hole example.",
+      "requires_new_physical_axiom": false,
+      "cost_class": "M",
+      "stop_rule": "one stated route and at most one concrete repair, then scoped result/open lemma and architect return",
+      "duplicate_evidence": "fin_strategy_audit_20261019/FINAL_TASK_DUPLICATE_SEARCH.json"
+    }
+  ],
+  "no_automatic_source_or_physics_promotion": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "ANALYTICAL_BUDGET_NOT_NUMERIC_INTERVAL_CERTIFICATE",
+  "normalization": "inherited Jost dk/(2pi), both roots, Gamma=|M(q)|^2/(2q)",
+  "reference": {
+    "band": "T/6<|x|<T/3",
+    "first_derivative_error": "C T^-1/2 uniformly in band and a",
+    "band_energy": "[Omega^2 Gamma/(12q)]T+O(sqrt(T)+1)",
+    "gamma_lower": "125/73728",
+    "c0": "625/1548288",
+    "reference_flux_lower": "c0 T-C sqrt(T)-C-C T^2 exp(-2T/3)",
+    "usable_lower_for_T_ge_T0": "(c0/4)T",
+    "T0": "existential finite uniform threshold, not numerically bounded"
+  },
+  "nonlinear_remainders_H2_x_H1": {
+    "r": "C_r epsilon^3(1+t)^2",
+    "w": "C_w epsilon^4(1+t)^3",
+    "admissibility": "epsilon^2(1+T)^3<=K0, epsilon sufficiently small",
+    "constant_repair": "Fix C_r first, C_w second; then bootstrap constants and K0"
+  },
+  "all_current_errors_after_time_integration": [
+    {"term": "kink_reference_interference", "bound": "C epsilon^2 exp(-2R)(1+T)^2"},
+    {"term": "localized_bound_mode_current", "bound": "C epsilon^2 exp(-4R)(1+T)"},
+    {"term": "kink_w_and_bound_r_interference", "bound": "C epsilon^4 exp(-2R)(1+T)^4"},
+    {"term": "u_w_cross_and_r_r", "bound": "C epsilon^6(1+T)^5"},
+    {"term": "w_w", "bound": "C epsilon^8(1+T)^7"}
+  ],
+  "frozen_window": {"T": "12log(1/epsilon)", "R": "2log(1/epsilon)=T/6"},
+  "dominated_error": "C[epsilon^6(1+T)^5+epsilon^8(1+T)^7+epsilon^10(1+T)]",
+  "relative_error": "o(epsilon^4 T)",
+  "final_lower": "(625/12386304)epsilon^4 T",
+  "not_established": ["useful numeric epsilon_*", "all-time flux law", "physical power", "active kernel sensitivity", "natural source"]
+}

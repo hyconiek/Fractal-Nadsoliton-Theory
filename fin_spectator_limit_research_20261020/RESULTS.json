@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-20",
+  "source_model_id": "FIN-HYP-HIST-ME-001",
+  "derived_limit_id": "FIN-HYP-HIST-ME-001-SL-SQRT",
+  "status": "PASS_BOUNDED_SCALING_GENERATOR_GRID_AND_ACTIVITY_CONTROLS",
+  "bounded_checks": 54,
+  "checks": [
+    "uniform_source_rows_2",
+    "uniform_generator_diagonal_2",
+    "uniform_generator_error_2",
+    "uniform_scaling_squared_bound_2",
+    "uniform_source_rows_6",
+    "uniform_generator_diagonal_6",
+    "uniform_generator_error_6",
+    "uniform_scaling_squared_bound_6",
+    "uniform_source_rows_10",
+    "uniform_generator_diagonal_10",
+    "uniform_generator_error_10",
+    "uniform_scaling_squared_bound_10",
+    "nonuniform_root_4",
+    "nonuniform_scaling_bound_4_0",
+    "nonuniform_scaling_bound_4_1",
+    "nonuniform_generator_bound_4",
+    "nonuniform_one_step_grid_TV_bound_4",
+    "nonuniform_root_16",
+    "nonuniform_scaling_bound_16_0",
+    "nonuniform_scaling_bound_16_1",
+    "nonuniform_generator_bound_16",
+    "nonuniform_one_step_grid_TV_bound_16",
+    "nonuniform_root_64",
+    "nonuniform_scaling_bound_64_0",
+    "nonuniform_scaling_bound_64_1",
+    "nonuniform_generator_bound_64",
+    "nonuniform_one_step_grid_TV_bound_64",
+    "limit_reversibility_nonuniform",
+    "nonuniform_limit_activity_fixed",
+    "warp_order_and_endpoint",
+    "warp_displacement",
+    "warp_state_alignment",
+    "grid_nojump_common_mass_2",
+    "grid_nojump_common_mass_6",
+    "grid_nojump_common_mass_10",
+    "full_path_TV_above_3_5",
+    "initial_TV_paid_once",
+    "completion_normalized_reference_invariant",
+    "joint_gauge_finite_source_2",
+    "joint_gauge_finite_source_6",
+    "changing_only_K_changes_relative_activity",
+    "derived_three_state_conservative",
+    "derived_three_state_balance",
+    "retained_clock_free_reset_mismatch",
+    "actual_count_lumping_8",
+    "actual_count_lumping_5",
+    "actual_count_lumping_4",
+    "actual_count_lumping_2",
+    "actual_count_lumping_1",
+    "actual_count_lumping_0",
+    "count_activity_and_cavity_ratio",
+    "count_exact_invariant_measure",
+    "old_sources_unchanged",
+    "old_packages_unchanged"
+  ],
+  "nonuniform_root_certificates": [
+    {
+      "c": "4",
+      "flow_lower": "365662227702322253/5764607523034234880",
+      "flow_upper": "5850595643237156049/92233720368547758080",
+      "pi": [
+        "1/5",
+        "4/5"
+      ]
+    },
+    {
+      "c": "16",
+      "flow_lower": "1009865471905873231/46116860184273879040",
+      "flow_upper": "2019730943811746463/92233720368547758080",
+      "pi": [
+        "1/5",
+        "4/5"
+      ]
+    },
+    {
+      "c": "64",
+      "flow_lower": "278423236194397507/46116860184273879040",
+      "flow_upper": "111369294477759003/18446744073709551616",
+      "pi": [
+        "1/5",
+        "4/5"
+      ]
+    }
+  ],
+  "arithmetic": "exact Fraction with outward rational root/exp bounds; no binary64 theorem certificate",
+  "general_path_theorem": "analytical J1 time-warp coupling, not a simulation proof",
+  "full_path_TV_countercontrol": "two-state T=1 exact 1-exp(-1), bounded below by 3/5",
+  "grid_row_TV_constant": "3 A^2/c^2",
+  "J1_bad_probability_constant": "((7/2) A^2 T+2 A)/c plus initial TV",
+  "new_physical_postulate_or_clock": false,
+  "primary_completion": "D=I unchanged",
+  "conditional_activity_provider": "DERIVED_FROM_SUPPLIED_HYPOTHESIS_AND_COMPLETION",
+  "strict_F01": "OPEN_SOURCE",
+  "native_HB_adopted_or_repaired": false,
+  "source_inputs": {
+    "AGENTS.md": "39872b04bac9da08364586f9bbac6619dc570f3bc7c514ac8cd1b1a36f6db55e",
+    "research_tasks/00_EXECUTION_RULES.md": "60318c4bb063b5bd97a8718d7747e0bcdd19683304f74a2201be017aeadb8b20",
+    "fin_spectator_composition_research_20261020/NEXT_LIMIT_PROOF_ORDER.md": "04d8cd4953542572f7ae4b11638277bcd3052b0da09ca8ca89d78dd8e9919bdd",
+    "fin_spectator_composition_research_20261020/PROOF_OR_OPEN_LEMMA.md": "b1dd47a4b70bc0e51d5806ad17830e53a2e34d6cabeae444fe214d1c6f662392",
+    "fin_hyp_history_entropy_20261020/MODEL_CONTRACT.json": "42686c76ce6f65a23e08928b89869af6013bac73a16fabdd8a4b7844cf647c1f",
+    "fin_hyp_history_entropy_20261020/AUTHORIZATION_AND_MODEL.md": "aaae72780db2f6e0e8951a55f9b0c32b84ee8cdb16bde8fcf2fc871cf6c9d470",
+    "fin_hyp_history_entropy_review_20261020/PROOF_AUDIT_AND_DUAL.md": "dc128a39c4341fd9ae4e37ad39232d74455829d237d3b054a6205397b0b71d41",
+    "fin_reference_transport_research_20261020/PROOF_OR_OPEN_LEMMA.md": "d91a8904ab52c44be65241654b4c51cade912c2f5cd5b9ae4f52a3fdd192895e",
+    "fin_kinetic_invariants_campaign_20261014/KI-002/REVERSIBILITY_AND_MOBILITY.md": "665cea910c9bf4fb7b9ce1e27392abb2eb41bf630c52f4282d467017cff3e7db",
+    "fin_rank7_mathphysics_next/proofs/MP7-031_finite_N_variational_model.md": "3a2c74ab8d205d5bafd71551b159a59b4b93a306787bc486b9fbfa0222a29aec",
+    "FIN_ST2532_ST2621_Configuration_Generator_and_Dynamic_RG_Report_EN.md": "e2bb5230546392fb36a844d19fe0e850679f1761c60d2c4752270135b5f6f530",
+    "fin_reversible_source_transfer_research_20261020/SEARCH_RESULTS.json": "8edb37e337b09e6bf48075b6c342e58a6d67e35b47f1e67e31ccefc25a59bb64"
+  },
+  "protected_packages": {
+    "fin_spectator_composition_research_20261020": {
+      "entries": 14,
+      "manifest_sha256": "0a011802c1086669400981d186a5c0ef86ecac3c03e818b078e3bdb56452eefc"
+    },
+    "fin_reference_transport_research_20261020": {
+      "entries": 14,
+      "manifest_sha256": "231f725119a403fc0f5f8c9bbb9c7272acf9f0b025487b33e9a69394156d299d"
+    },
+    "fin_hyp_history_entropy_20261020": {
+      "entries": 17,
+      "manifest_sha256": "c1f5ec9689c4d96813bbb627d565a5409283d062aee93d4e9be84c4187152c8e"
+    },
+    "fin_hyp_history_entropy_review_20261020": {
+      "entries": 16,
+      "manifest_sha256": "c93b5b1c226d4bb8a482ad7cdc1c5cb5b63931d2df4f5ddeb51b93a64e53bfef"
+    }
+  },
+  "independent_peer_review": false,
+  "goal_objective": "badaj teori\u0119",
+  "goal_finished": false
+}

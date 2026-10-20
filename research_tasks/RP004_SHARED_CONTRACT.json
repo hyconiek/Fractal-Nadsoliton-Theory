@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "status": "FROZEN_RESEARCH_TARGET_NOT_A_FLUX_THEOREM",
+  "canonical_gate": "RP-004",
+  "source_family": "F_RP_20261019_PREDECLARED",
+  "model": "conditional supplied canonical classical 1+1 legacy action, prepared invariant species/parity sector",
+  "a_interval": ["-3/4", "-1/4"],
+  "g4_g6": "fixed finite signed source coefficients; constants may depend on declared finite bounds M4,M6, not fitted physical values",
+  "equations": [
+    "phi_tt-phi_xx+2phi(phi^2-1)+6phi psi^2=0",
+    "psi_tt-psi_xx+(a+6phi^2)psi+g4 psi^3+g6 psi^5=0"
+  ],
+  "initial_data": "phi=tanh x, phi_t=0, psi=epsilon*sqrt(3/4)*sech^2 x, psi_t=0",
+  "parity": "phi odd; psi real and even, inherited from actual action/data",
+  "linear": "L_phi=-d_x^2+4-6sech^2 x; L_a=L_phi+a+2; omega^2=a+2; Omega=2omega; S=(9/4)tanh x sech^4 x",
+  "reference": "u_tt+L_phi u=-S(1+cos Omega t), zero Cauchy data; v=sqrt(3/4)sech^2 x cos omega t",
+  "remainder": "r=psi-epsilon v; w=phi-tanh x-epsilon^2 u; zero independent remainder data",
+  "candidate_window": {"R_epsilon": "2 log(1/epsilon)", "T_epsilon": "12 log(1/epsilon)", "status": "NOT_LICENSED_UNTIL_ESTIMATES_PASS"},
+  "reference_ray": "R=T/6 with T -> infinity; a finite-time retarded estimate, not an eternal wave",
+  "norm_target": "H2 x H1 or another explicitly proved trace-admissible graph norm",
+  "exact_flux": "integral_0^T[-phi_t phi_x-psi_t psi_x](t,R)-[-phi_t phi_x-psi_t psi_x](t,-R) dt",
+  "forbidden_repairs": ["Phi6", "independent incoming radiation", "retuned sparse family", "new bath", "pinning controller", "post-subtracted adverse transient"],
+  "kernel_scope": "active e1 subspace is blind to spectator noncommuting K23; no actual strict-kernel fingerprint"
+}

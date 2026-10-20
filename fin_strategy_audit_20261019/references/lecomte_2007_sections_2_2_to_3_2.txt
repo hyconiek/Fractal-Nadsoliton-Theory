@@ -1,0 +1,248 @@
+56                                                Lecomte, Appert-Rolland and van Wijland
+
+
+However, Boltzmann’s entropy variations are related to h KS . Finally, we turn to a
+definition (1) of the dynamical partition function Z (s, t)
+
+                               
+                  Z (s, t) =                             (Prob{history})1−s .           (3)
+                                    histories from 0→t
+
+In practice the so-called thermodynamic limit t very large is understood. We have
+also substituted 1 − s for the canonical notation β which we keep for denoting an
+inverse temperature (the reason for introducing s in this way will become obvious
+when we shall express Z as a generating function). There is an alternative for-
+mulation for the dynamical partition function, which involves the local stretching
+factors (see e.g. Ref. 30 for a physical example). The intensive potential ψ+ (s) as-
+sociated to this partition function is the topological pressure (or Ruelle pressure),
+
+                                                   1
+                               ψ+ (s) = lim            ln Z (s, t)                      (4)
+                                              t→∞ t
+
+which can also be interpreted, (23) in information theoretic language, as the Rényi
+entropy over the set of histories. It is possible to recover h KS from the topo-
+                                             
+logical pressure, h KS = ψ+ (0) (or h KS = ψ+ (0) − γ for an open system, with
+γ = − ψ+ (0)), along with other quantities such as the topological entropy h top ,
+which measures the grows rate of the number of possible histories as time is in-
+creased, and is given by h top = ψ+ (1).
+
+
+2.2. Markov Chains
+      Given the definitions above, there is a natural way, as explained by
+Gaspard, (18,31) to extend the definitions of the dynamical partition function and
+of the KS entropy to discrete time Markov processes. Consider a Markov process
+governed by the discrete-time master equation for the probability P(C, t) to be in
+state C after n steps:
+
+                                
+     P(C, t + τ ) − P(C, t) =             [w(C  → C)P(C  , t) − w(C → C  )P(C, t)]   (5)
+                                C  =C
+
+where τ is the time step (and t = nτ is the elapsed time). We have denoted by
+w(C → C  ) the transition probability from configuration C to another configura-
+tion C  . The probability of a history C0 → . . . → Cn taking place between 0 and
+t = nτ reads
+
+
+           P(C0 → . . . → Cn ) = P(C0 , 0)w(C0 → C1 ) · · · w(Cn−1 → Cn )               (6)
+Thermodynamic Formalism for Systems with Markov Dynamics                            57
+
+
+Note that successive configurations Ck , Ck+1 can be equal in the previous relation.
+The corresponding probability of remaining in the same configuration C during a
+time step is
+
+                                                  
+                         w(C → C) = 1 −                     w(C → C  )             (7)
+                                                  C  =C
+
+By definition of the KS entropy we may directly write that
+
+                      1 
+       h KS = − lim            P(C0 → · · · → Cn ) ln P(C0 → · · · → Cn ).          (8)
+                 n→∞ nτ
+                        C ,..C 0     n
+
+
+It is easy to see (22) that the above expression reduces to
+
+                         1
+                 h KS = −        Pst (C)w(C → C  ) ln w(C → C  )
+                         τ C,C 
+                                                            
+                         1 
+                      =−          w(C → C  ) ln w(C → C  )                        (9)
+                         τ C                                 st
+
+where we have introduced the stationary measure Pst (C). Several explicit calcula-
+tions of this quantity can be found in Dorfman (19) or in Gaspard. (18)
+
+
+2.3. Taking the Continuous-Time Limit
+    We now wish to take the continuous-time limit of (9). We scale the transition
+probabilities between different configurations with the time step τ :
+
+
+                               w(C → C  ) = τ W (C → C  )                        (10)
+in such a way that the master Eq. (5) yields its continuous time analog when the
+limit τ → 0 is taken, namely
+
+                         
+          ∂t P(C, t) =             [W (C  → C)P(C  , t) − W (C → C  )P(C, t)]   (11)
+                         C  =C
+
+As done in Refs. 22, 23, the KS entropy defined in (9) can be expressed in terms
+of the transition rates W :
+                            
+                  h KS = −    Pst (C)W (C → C  ) ln(τ W (C → C  ))         (12)
+                             C,C 
+58                                                Lecomte, Appert-Rolland and van Wijland
+
+
+It is now clear that the limit τ → 0 in (12) does not exist, since the latter exhibits
+a ln τ divergence as τ → 0. Given that the transition rates W are dimensionful
+quantities, and given that apparently the only available time scale is τ , we cannot
+expect to get rid of τ without further thoughts. This means that even if we were
+tempted to retain in (12) only the finite contribution as τ → 0 as the meaningful
+KS entropy, we would need to find an appropriate time scale to render this piece
+well-defined (the argument of the logarithm must be dimensionless).
+      The one-dimensional lattice random walk perhaps constitutes the simplest
+example of a Markov chain: let p (resp. q, r ) denote the probability of hopping to
+the right (resp. to the left, not hopping), then we have that
+                                   1
+                         h KS = − [ p ln p + q ln q + r ln r ]                  (13)
+                                   τ
+It appears clearly that in the continuous-time limit, p and q become infinitesimally
+small, which produces an indefinite h KS . Since we have in mind describing as
+closely as possible dynamical systems, which evolve in continuous time, the goal
+we set ourselves is to find a consistent approach, intrinsically viable for Markov
+systems in continuous time.
+
+3. SYSTEMS WITH CONTINUOUS-TIME MARKOV DYNAMICS
+3.1. Histories and Dynamical Partition Function
+    We now consider a system with Markov dynamics, with transition rate
+W (C → C  ) from configuration C to configuration C  , in which the probability
+P(C, t) to be in state C evolves according to the following master equation,
+                                    ∂t P = WP                                       (14)
+where the evolution operator has the matrix elements
+                       W(C, C  ) = W (C  → C) − r (C)δC,C                        (15)
+and
+                                        
+                              r (C) =             W (C → C  )                      (16)
+                                        C  =C
+
+is the rate of escape from configuration C. In order to overcome the difficul-
+ties encountered in the previous section, an alternative is to consider histories
+C0 → · · · → C K in configuration space, in the spirit of the study by van Beijeren,
+Dorfman and collaborators (30,33) of the Lorentz gas and the Sinai billiard. To give
+(1) or (3) a consistent meaning for continuous time dynamics, we first interpret
+Prob[history] as the probability in the enumerable set of histories in configuration
+space. A history in configuration space is a sequence C0 → · · · → C K of suc-
+cessive configurations. An important difference between discrete and continuous
+Thermodynamic Formalism for Systems with Markov Dynamics                                    59
+
+
+time dynamics is that in the latter, the system stays in each state C for a random
+time lapse drawn from an exponential distribution of parameter r (C) as defined in
+(16), which is interpreted as the rate of escape from configuration C to any other
+                                                                                      
+configuration. Then the system hops to its next state C  with probability W (C→C
+                                                                             r (C  )
+                                                                                        )
+                                                                                          .
+Given the initial state C0 , the probability of the history C0 → · · · → C K is the
+product of each jump probability
+
+                                                      
+                                                      K −1
+                                                          W (Cn → Cn+1 )
+                        Prob{history} =                                                    (17)
+                                                      n=0
+                                                              r (Cn )
+
+
+where K is the number of changes in configuration space.
+     We argue that in the same way as (1) and (3) are averaged over the initial
+configuration when dealing with deterministic dynamical systems, we similarly
+have to average over all possible stochastic time sequences t0 , . . . , t K at which
+configuration changes occur (K is a fluctuating number). We know from general
+properties of a Markovian system (24) that the duration t = tn+1 − tn between
+configurations Cn and Cn+1 is distributed according to the probability density
+
+
+
+                              π (Cn , t) = r (Cn )e− t r (Cn )                             (18)
+
+Accordingly, if we take into account every possible history C0 → . . . → C K
+between t0 and t, the dynamical partition function writes
+
+                                   +∞   t
+                                   
+             Z (s, t|C0 , t0 ) =                             dt1 π (C0 , t1 − t0 ) · · ·
+                                   K =0 C1 ,...,C K     t0
+                                        t
+                                   ×              dt K π (C K −1 , t K − t K −1 )
+                                         t K −1
+                                                             K                1−s
+                                                               W (Cn−1 → Cn )
+                                   × e−(t−t K )r (C K )                                    (19)
+                                                              n=1
+                                                                        r (Cn−1 )
+
+
+where the last exponential factor e−(t−t K )r (C K ) is the probability not to leave state
+C K in the remaining interval between t K and t. We have assumed (Fig. 1) without
+loss of generality that the system starts from a fixed initial configuration C0 (we
+restrict our study for simplicity to systems which can take a finite number of
+energy states).
+60                                                    Lecomte, Appert-Rolland and van Wijland
+
+
+
+
+                                                           ...
+
+Fig. 1. One particular realization in time of a history C0 → · · · → C K of successive configurations.
+                     Between tk and tk+1 , the system stays in configuration Ck .
+
+
+3.2. Kolmogorov-Sinai Entropy
+     In the same spirit as for the dynamical partition function, we interpret the
+definition (1) for the Kolmogorov-Sinai entropy as
+                  +∞            t                              t
+                1 
+h KS = − lim                       dt1 π (C0 , t1 − t0 ) · · ·         dt K π (C K −1 , t K − t K −1 )
+          t→∞ t                 t0                              t K −1
+                  K =0C ,...,C1       K
+
+                 −(t−t K )r (C K )
+            ×e                       [Prob{history}] ln [Prob{history}]
+                                                                                                (20)
+where we assume that the definition does not depend on the initial configuration
+C0 . For simplicity, we consider only closed systems (except otherwise stated).
+Then we do recover the usual relation between h KS and Z (s, t), i.e.
+                                                  1 ∂ ln Z (s, t)
+                                     h KS = lim                       .                         (21)
+                                            t→∞ t        ∂s       s=0
+
+An a posteriori justification of (19) and (20) is that it yields a finite result, which
+does not depend on any external time scale nor on a particular choice of time
+units. In fact there is a natural—yet fluctuating—time-scale 1/r (C) for each state
+C which is occupied. Furthermore, as detailed below (see Sec. 3.7), the KS entropy
+which results from (19) is intimately related to the entropy flow (8) of continuous
+time Markov processes, exactly in the same way as was noted by Gaspard for
+discrete time stochastic dynamics. (22)
+      We should emphasize that the definitions that we put forward in our approach
+differ from those classically employed within the dynamical systems framework.
+The original Kolmogorov-Sinai entropy corresponding to the measure over histo-
+ries in time and in configuration space is infinite, (18) as the information needed
+to describe the continuously distributed time intervals between configuration
+changes is itself infinite. (34) As such, this point of view cannot be used to compare
+different Markov processes in continuous time. As explained above (Sec. 3.1), we
+instead preferred to focus on the information contained solely in the sequence of
+configurations, handling separately the averaging over time intervals. We exem-
+plify below in several examples that, in doing so, the original spirit and physical
+content of the Ruelle thermodynamic formalism is preserved.
+

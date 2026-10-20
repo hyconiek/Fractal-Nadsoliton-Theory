@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "campaign": "AH-001/002/003",
+  "carrier": "V=Z/12Z; single-label comparison Markov jump chain",
+  "radial_weights": "w_1,...,w_6>0",
+  "exit_rate": "s=2*sum(w_1..w_5)+w_6",
+  "jump_matrix": "J_ii=0; J_ij=w_dist(i,j)/s for i!=j",
+  "initial_law": "uniform on 12 states",
+  "observed": "first-appearance encoding of complete consecutive jump-state equality partition; Z_0=0",
+  "not_observed": ["physical time", "holding times", "raw vertex names", "distance or Fourier labels", "attempt marks", "other copies", "hardware readout"],
+  "AH001": "all finite-prefix distributions determine J up to simultaneous permutation",
+  "AH002_extra": ["J_ij>=a>0", "0<a<=1/11", "d_iso(J,K)>=delta>0", "0<eta<1"],
+  "AH002_length": "b=10a^2; m=ceil max(2/b,8/b^2 log(24/eta),384/(delta^2*b^2) log(528/eta)); L=2m+2",
+  "not_physical_source": true
+}

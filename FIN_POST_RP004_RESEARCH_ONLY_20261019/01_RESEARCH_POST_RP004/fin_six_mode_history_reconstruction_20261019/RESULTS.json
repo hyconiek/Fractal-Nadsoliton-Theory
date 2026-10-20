@@ -1,0 +1,221 @@
+{
+  "type": "STRICT_Z12_REVERSIBLE_CIRCULANT_HISTORY_IDENTIFIABILITY_CONDITIONAL",
+  "sympy_version": "1.14.0",
+  "numpy_version": "2.3.5",
+  "B": [
+    [
+      "2 - sqrt(3)",
+      "1",
+      "2",
+      "3",
+      "sqrt(3) + 2",
+      "2"
+    ],
+    [
+      "1",
+      "3",
+      "4",
+      "3",
+      "1",
+      "0"
+    ],
+    [
+      "2",
+      "4",
+      "2",
+      "0",
+      "2",
+      "2"
+    ],
+    [
+      "3",
+      "3",
+      "0",
+      "3",
+      "3",
+      "0"
+    ],
+    [
+      "sqrt(3) + 2",
+      "1",
+      "2",
+      "3",
+      "2 - sqrt(3)",
+      "2"
+    ],
+    [
+      "4",
+      "0",
+      "4",
+      "0",
+      "4",
+      "0"
+    ]
+  ],
+  "B_inverse": [
+    [
+      "-sqrt(3)/12",
+      "-1/12",
+      "0",
+      "1/12",
+      "sqrt(3)/12",
+      "1/12"
+    ],
+    [
+      "-1/12",
+      "1/12",
+      "1/6",
+      "1/12",
+      "-1/12",
+      "-1/12"
+    ],
+    [
+      "0",
+      "1/6",
+      "0",
+      "-1/6",
+      "0",
+      "1/12"
+    ],
+    [
+      "1/12",
+      "1/12",
+      "-1/6",
+      "1/12",
+      "1/12",
+      "-1/12"
+    ],
+    [
+      "sqrt(3)/12",
+      "-1/12",
+      "0",
+      "1/12",
+      "-sqrt(3)/12",
+      "1/12"
+    ],
+    [
+      "1/6",
+      "-1/6",
+      "1/6",
+      "-1/6",
+      "1/6",
+      "-1/12"
+    ]
+  ],
+  "det_exact": "-3456*sqrt(3)",
+  "rank": 6,
+  "source_strict_weights": [
+    0.46998567264502017,
+    0.19204355169010282,
+    0.09142861427792497,
+    0.0470291687456504,
+    0.02413122336363006,
+    0.011070817321442113
+  ],
+  "recovered_rates": [
+    0.7541211542070798,
+    1.5770495144276098,
+    1.961406861976446,
+    2.19956884933321,
+    2.298606272079097,
+    2.342182041146301
+  ],
+  "single_lag_correlation_checks": [
+    {
+      "lag": 0.15,
+      "values": [
+        0.893045119942129,
+        0.7893405514109597,
+        0.7451192328632934,
+        0.7189702296024806,
+        0.7083684289176438,
+        0.7037533733325753
+      ],
+      "recovered_max_abs_weight_error": 1.231653667943533e-15
+    },
+    {
+      "lag": 0.6,
+      "values": [
+        0.6360534409480058,
+        0.38820190202575405,
+        0.30825000608849723,
+        0.2672044162432044,
+        0.2517890202799236,
+        0.24529119463128154
+      ],
+      "recovered_max_abs_weight_error": 2.6020852139652106e-16
+    },
+    {
+      "lag": 1.5,
+      "values": [
+        0.3226517433761216,
+        0.09389536343825478,
+        0.05275428419460085,
+        0.03690702841951037,
+        0.03181207296945539,
+        0.02979921995800419
+      ],
+      "recovered_max_abs_weight_error": 3.036459972349803e-14
+    }
+  ],
+  "log_correlation_cone_H4": {
+    "criterion": "B_inverse @ (-log(C)) > 0 componentwise",
+    "counterexample_lambda": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "resulting_inadmissible_weights": [
+      "1/12 - sqrt(3)/6",
+      "-1/12",
+      "1/12",
+      "1/4",
+      "1/12 + sqrt(3)/6",
+      "5/12"
+    ],
+    "passes_strict_FIN": true,
+    "rejects_counterexample": true
+  },
+  "blind_five_mode_perturbation": {
+    "eta": 0.004,
+    "vector": [
+      -1.0,
+      1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      1.0
+    ],
+    "alternative_weights": [
+      0.46598567264502017,
+      0.19604355169010282,
+      0.08742861427792496,
+      0.0510291687456504,
+      0.02013122336363006,
+      0.015070817321442113
+    ],
+    "max_error_observed_five_lambda": 4.440892098500626e-16,
+    "sixth_rate_delta": -0.04800000000000004
+  },
+  "finite_noise_bound": {
+    "lag": 0.6,
+    "absolute_correlation_noise_max": 1e-05,
+    "weight_error_max": 3.160595919402681e-05,
+    "upper_bound": 6.228678803013849e-05,
+    "norm_Binv_inf": 0.9166666666666666
+  },
+  "controls": {
+    "exact_determinant": true,
+    "exact_inverse": true,
+    "five_mode_nullspace": true,
+    "time_correlation_matrix_exp": true,
+    "all_six_mode_identification": true,
+    "one_missing_mode_nonuniqueness": true,
+    "noise_stability_bound": true,
+    "six_correlation_cone_test": true,
+    "no_physical_source_claim": true
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS_SCOPED_APPEND_ONLY_INSTRUCTION_UPDATE",
+  "unreviewed_tail_bytes": 0,
+  "historical_prefix_sha256": "300f3864fde7843bd46f53840baebfc8190e3501c5d19de394a7266d3c1367e4",
+  "reviewed_update_sha256": "39872b04bac9da08364586f9bbac6619dc570f3bc7c514ac8cd1b1a36f6db55e",
+  "negative_controls": {
+    "old_byte": "REJECTED",
+    "new_byte": "REJECTED",
+    "truncation": "REJECTED"
+  },
+  "protected_packages": {
+    "fin_evolution_source_review_20261020": {
+      "files": 17,
+      "tree_sha256": "a8f0d5303cab7adaf68b4968aecfeb3c2cd8de53cf9b277ac6a92fc139bdcaeb",
+      "manifest_sha256": "f18bfcd96652a0387f5f9e25dc41d77e11a315e2ee8025ffbf62d83090fc67de"
+    },
+    "fin_evolution_source_research_20261020": {
+      "files": 16,
+      "tree_sha256": "1fd5b9e08747c9f2194948e797313665136c6bf8e7c78a93921e2d2406cb4bfe",
+      "manifest_sha256": "fe9a81f6675b6087c5dc71a6749b821ec45d1ea054696ba098f639492660c642"
+    },
+    "fin_complete_anonymous_history_review_20261020": {
+      "files": 16,
+      "tree_sha256": "2c09b2fdeb44f798b7184c8949c09ebaf3426d491406afd2ce65eb9297f35134",
+      "manifest_sha256": "354fee0c6a11e03626181258fedede6544023ab7807a3b0ea4c138d829a54ec5"
+    },
+    "fin_post_rp004_history_review_20261020": {
+      "files": 16,
+      "tree_sha256": "5ca9732f85446f4da3b3b4ae7a4a25d18dc6ceb0b1685b643e16007a05de8051",
+      "manifest_sha256": "5bad804468996450af5f1e25ea5ea1cee8634881981f24d63f3c53e5cd0d414d"
+    },
+    "fin_rp004_flux_review_20261019": {
+      "files": 20,
+      "tree_sha256": "ec0df7831607be5637aa941803501adb2ee2b780833e314da08d3b1e3446bb14",
+      "manifest_sha256": "14525169436918872b7aa188dcbb837c29dd1b0f934af6ac86e77a130a0c941b"
+    },
+    "fin_intrinsic_entropy_source_review_20261019": {
+      "files": 16,
+      "tree_sha256": "e375de81f74ddf845f3f14fa0e25bb1cf55023d0174228bba4fd75b8d890a55e",
+      "manifest_sha256": "2ea162dd4b3cc9812c95b95be210a481053ef414f18101e728579bb5e4c2d6e2"
+    },
+    "fin_strategy_audit_20261019": {
+      "files": 35,
+      "tree_sha256": "dd4f9d3e46e8c3d2e1d62a23f95df250835adc407d98815b914425edc66b6f98",
+      "manifest_sha256": "ab8a945cbf06430b12cbbe9eb57aa6d1f2ca1f1a0d58a8ee28f8b75fb48b0832"
+    }
+  },
+  "protected_manifest_entries": {
+    "fin_evolution_source_review_20261020": 16,
+    "fin_evolution_source_research_20261020": 15,
+    "fin_complete_anonymous_history_review_20261020": 15,
+    "fin_post_rp004_history_review_20261020": 15,
+    "fin_rp004_flux_review_20261019": 19,
+    "fin_intrinsic_entropy_source_review_20261019": 15,
+    "fin_strategy_audit_20261019": 47
+  },
+  "new_RS_package": {
+    "manifest_entries": 13,
+    "manifest_sha256": "51d8f154e269e2fa97b3bddcdffba82bca4b22127518bf648c17db8e8f503497"
+  },
+  "direct_live_old_checker": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_evolution_source_review_20261020/finalize_review.py\", line 110, in <module>\n    if __name__=='__main__': main()\n                             ^^^^^^\n  File \"/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison/fin_evolution_source_review_20261020/finalize_review.py\", line 57, in main\n    assert sha(ROOT/'AGENTS.md')==d['live_AGENTS_sha256']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "expected_status": "HISTORICAL_FULL_FILE_HASH_REJECTED; not a scientific failure or live PASS"
+  },
+  "RP_proofs_availability_binding_only": {
+    "fin_rp004_flux_review_20261019/MOVING_CONE_THEOREM.md": "f9d4556a7cc3042d95b155beb78654305e15f09abe824d40335eb82f79cd12d9",
+    "fin_rp004_flux_review_20261019/BOOTSTRAP_COMPLETION.md": "8b45f92feb4dfd393064738eff4f2b2eb58348eda37d6d03b4f72f72f8162ad1",
+    "fin_rp004_flux_review_20261019/OUTWARD_FLUX_THEOREM.md": "a56bb72d4059c003a291691d7957ce401bc0faa90d56986a2091c4fb84593503",
+    "fin_rp004_flux_review_20261019/COMPLETE_FLUX_BUDGET.json": "40d516fc6309c47a7dd02f74586689ecfac9e64e4b159583802451c18935d623"
+  },
+  "archived_context_only_replays": {
+    "fin_evolution_source_review_20261020": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_ES_INTAKE_AND_CONDITIONAL_CAUSAL_TRANSFER_PACKAGE\",\n  \"read_only\": true,\n  \"review_entries\": 16,\n  \"source_entries\": 15,\n  \"new_controls\": 83,\n  \"F01\": \"OPEN_SOURCE\"\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_evolution_source_research_20261020": {
+      "returncode": 0,
+      "stdout": "{\n  \"package\": \"PASS_BOUNDED_RESEARCH_PACKAGE_ONLY\",\n  \"entries\": 15,\n  \"controls\": 122,\n  \"F01\": \"OPEN_SOURCE_NOT_DERIVED\",\n  \"read_only\": true\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_complete_anonymous_history_review_20261020": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_SCOPED_AH_INTEGRATION_NOT_A_FORMAL_PROOF\",\n  \"read_only\": true,\n  \"review_entries\": 15,\n  \"source_entries\": 15,\n  \"bounded_controls\": 49,\n  \"input_bindings\": 80,\n  \"example_m\": 569231067,\n  \"example_L\": 1138462136,\n  \"source_law\": \"OPEN_SOURCE\",\n  \"RP004_audit_executed\": false\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_post_rp004_history_review_20261020": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_SCOPED_HISTORY_INTEGRATION\",\n  \"read_only\": true,\n  \"review_entries\": 15,\n  \"source_files\": 77,\n  \"bound_inputs\": 137,\n  \"bounded_controls\": 38,\n  \"source_law\": \"OPEN_SOURCE\",\n  \"AH_tasks_executed\": false\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_rp004_flux_review_20261019": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_NEW_REVIEW_PACKAGE_NOT_A_PDE_PROOF_CERTIFICATE\",\n  \"read_only\": true,\n  \"review_entries\": 19,\n  \"inputs\": 91,\n  \"source_matches\": 30,\n  \"source_absent\": [\n    \"finalize.py\"\n  ],\n  \"bounded_controls\": 26,\n  \"AGENTS_and_old_strategy_preserved\": true,\n  \"independent_review_done\": false\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_intrinsic_entropy_source_review_20261019": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS_SCOPED_ID001_INTEGRATION\",\n  \"read_only\": true,\n  \"review_entries\": 15,\n  \"source_entries\": 14,\n  \"architecture_entries\": 47,\n  \"intake_controls\": 23,\n  \"F01\": \"OPEN_SOURCE\",\n  \"new_campaigns_activated\": [],\n  \"later_instruction_bytes\": 0\n}\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    },
+    "fin_strategy_audit_20261019": {
+      "returncode": 0,
+      "stdout": "Bound source files: 87 PASS\n",
+      "stderr": "",
+      "scope": "ARCHIVED_CONTEXT_ONLY; historical AGENTS input, not live instructions or new science"
+    }
+  },
+  "F01_F03_F06": "OPEN_SOURCE",
+  "CSP001_003": "NOT_ACTIVATED",
+  "new_independent_RP_audit_executed": false,
+  "new_physical_law": false,
+  "commit_or_push": false
+}
