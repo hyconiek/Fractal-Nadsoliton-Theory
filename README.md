@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md) and the [actual quadratic modal-history report](fin_quadratic_modal_history_research_20261104/REPORT_EN.md). Together with BT, the latest estimate controls all bound-only even source components through critical time. The continuum-bearing residual trace and modal action errors remain open. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [localized-feedback result](fin_local_feedback_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). Localized feedback is absorbed on fixed critical windows; the extended continuum trace and modal action errors remain open. The physics pathway is a proposal, not empirical validation. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
