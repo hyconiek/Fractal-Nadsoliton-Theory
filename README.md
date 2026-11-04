@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [cubic-source and resonance report](fin_cubic_resonance_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). Higher-order histories are controlled; the actual cubic trace remains open. A separate far-field calculation identifies a generic self-resonant phase term, not a damping law. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [full-potential threshold-reference report](fin_distorted_threshold_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The exact potential adds an outgoing intermediate harmonic to the threshold reference; matching this to the actual finite-energy history remains open. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

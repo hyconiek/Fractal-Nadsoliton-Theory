@@ -23,15 +23,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [CS](fin_cubic_resonance_research_20261104/REPORT_EN.md) | Actual higher-order trace O(epsilon^3); explicit cubic gate; generically nonzero self-resonant coefficient in a far-field reference | Actual resonant cubic trace and modal action errors remain open |
 
+| [DT](fin_distorted_threshold_research_20261104/REPORT_EN.md) | Exact-potential threshold reference with bound projections; nonzero outgoing second-harmonic residual and direct cubic defect | Matching to finite-energy actual packet/history and cubic trace remains open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: derive a resonant decomposition and estimate for CS1's actual
-cubic history, with potential, projection, parity and cascades retained.
-The higher-order history is paid. The far-field phase calculation is a
-reference only, not an actual damping or scattering theorem. ML's whole
-local-continuum bound remains O(epsilon); all CD action errors remain open.
+Next: a finite-energy near-threshold packet/history estimate using DT's
+explicit outgoing subtraction, with width, momenta, time and projections
+retained. DT's non-L2 threshold calculation is a reference, not the actual
+prepared solution. ML's O(epsilon) whole local-continuum bound is unchanged;
+the O(epsilon^2) cubic trace and all CD action errors remain open.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
