@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [mixed local-energy result](fin_mixed_local_energy_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The whole local continuum now has an integrated O(epsilon) bound on fixed critical windows; the target O(epsilon^2) cubic trace and modal action errors remain open. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [cubic-source and resonance report](fin_cubic_resonance_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). Higher-order histories are controlled; the actual cubic trace remains open. A separate far-field calculation identifies a generic self-resonant phase term, not a damping law. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
