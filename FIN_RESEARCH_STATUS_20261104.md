@@ -11,12 +11,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 | [CR](fin_critical_resonant_defect_research_20261104/REPORT_EN.md) | Frozen secular coefficient, canonical identities and comparison criterion | Single-channel candidate provisional; actual defect unpaid |
 | [CT](fin_critical_cubic_trace_research_20261104/REPORT_EN.md) | Actual cubic-component trace integral O(epsilon), sharp for its forcing class | Desired trace/action budget not reached |
 
+| [BT](fin_bound_source_threshold_research_20261104/REPORT_EN.md) | Actual localized bound-source trace integral O(epsilon^2); internal threshold at w=4/3 and nonzero dressed reference coefficient | Quadratic cz history, continuum-bearing residual and action error remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: derive source-specific near-threshold cancellation for QP's actual
-cubic forcing, retaining q_loc separately and all three CD action channels.
+Next: control BT2's exact residual trace, retaining the quadratic cz history
+and continuum-bearing products, then all three CD modal action errors.
+BT documents a narrow phase correction to ET equation (8), preserving its
+historical bytes and qualitative growth conclusion.
 Do not infer critical damping from a frozen response or a verifier PASS.
 
 The user explicitly requested commit/push and English for all new research,
