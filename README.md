@@ -1,5 +1,7 @@
 # Fractal Information Nadsoliton (FIN)
 
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), the [critical resonant-defect report](fin_critical_resonant_defect_research_20261104/REPORT_EN.md), and the [critical cubic-trace report](fin_critical_cubic_trace_research_20261104/REPORT_EN.md). The latest component estimate is sharp for its forcing class; actual critical-time damping remains open. The historical release overview below retains its original scope.
+
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
 **DOI (Release 10.88 Compendium):** https://doi.org/10.5281/zenodo.17645737  
@@ -222,3 +224,4 @@ Fractal Information Nadsoliton (FIN) to bezwymiarowa, dyskretna teoria spektraln
 - **Ścisła Renormalizacja Pryzmatu (ST2892–ST2981):** Równanie \(m' = m \frac{1+r}{1+rm^2}\) dowodzi, że dla \(q \neq 0\) nie ma nietrywialnego punktu stałego; \(q > 0\) wzmacnia uporządkowanie, a \(q < 0\) tłumi je do zera.
 - **Sumowalne Hierarchie (ST2982–ST3071):** Krytyczny próg zbieżności wynosi \(\alpha > 1/3\) dla \(q_n = C n^{-\alpha}\).
 - **Transfer Wag w Refinacji Produktowej (ST3162–ST3251):** Refinacja \(A_{24} = A_{12} \otimes I_2 + I_{12} \otimes B_q\) splata dynamikę gruboziarnistą w podprzestrzeni parzysto-jednorodnej poprzez funktorowy transfer przewodności, a nie poprzez naiwne ponowne próbkowanie jądra na podwojonych odległościach.
+

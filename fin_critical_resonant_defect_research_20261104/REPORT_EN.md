@@ -6,8 +6,10 @@ Date: 2026-11-04. Source commit: `1dcba969e12fabbfd43695f800687f5c93076b75`.
 
 The current AGENTS routing was checked against newer execution records.
 The previously recommended RP004 full-input self-audit had already been
-performed. The executable frontier is ST's `NEXT_CRITICAL_GATE.md`, so
-neither the old audit nor the Gamma calculation was repeated.
+performed. CR selected ST's `NEXT_CRITICAL_GATE.md`, so neither the old
+audit nor the Gamma calculation was repeated. The subsequent continuation
+found the existing CD/VD packages and corrected the routing in
+`../FIN_RESEARCH_STATUS_20261104.md`. The initial lookup was not exhaustive.
 
 ## Results
 

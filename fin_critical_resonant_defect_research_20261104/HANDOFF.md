@@ -2,9 +2,10 @@
 
 Read REPORT_EN.md, PROOF_OR_OPEN_LEMMA.md and CLAIM_REGISTER.json.
 
-The latest executable predecessor is ST's NEXT_CRITICAL_GATE.md,
-not the older AGENTS next-action suggestion to repeat a full RP4 audit.
-This attempt follows the former, preserving all live guardrails.
+This attempt selected ST's NEXT_CRITICAL_GATE.md. The subsequent
+continuation found the existing CD/VD work and corrected the frontier;
+see ../FIN_RESEARCH_STATUS_20261104.md. Do not repeat those results or
+the older full RP4 audit.
 
 What was completed: CR1 frozen secular primitive with causal shape and
 continuum slip; CR3 exact CM susceptibility match; CR5 actual canonical
