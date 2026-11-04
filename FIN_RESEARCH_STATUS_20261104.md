@@ -25,15 +25,18 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [DT](fin_distorted_threshold_research_20261104/REPORT_EN.md) | Exact-potential threshold reference with bound projections; nonzero outgoing second-harmonic residual and direct cubic defect | Matching to finite-energy actual packet/history and cubic trace remains open |
 
+| [TP](fin_threshold_packet_research_20261104/REPORT_EN.md) | Exact-potential finite-energy linear packets; controlled envelope through t=O(R^2), explicit trace and local quadratic source | Retarded cascade tails and matching to actual nonlinear history remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: a finite-energy near-threshold packet/history estimate using DT's
-explicit outgoing subtraction, with width, momenta, time and projections
-retained. DT's non-L2 threshold calculation is a reference, not the actual
-prepared solution. ML's O(epsilon) whole local-continuum bound is unchanged;
-the O(epsilon^2) cubic trace and all CD action errors remain open.
+Next: a retarded quadratic-cascade estimate for TP's finite-energy packets,
+including spatial tails and DT's outgoing intermediate harmonic. TP pays
+the linear packet envelope and local source expansion, but its negative-
+weight source error cannot be fed into LE as positive-weight forcing.
+Matching to the actual nonlinear preparation remains separate; ML's
+O(epsilon) bound and the O(epsilon^2)/modal-action gates are unchanged.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
