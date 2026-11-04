@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md) and the [localized bound-source and threshold report](fin_bound_source_threshold_research_20261104/REPORT_EN.md). The latest result controls a localized source component through critical time and identifies an internal threshold resonance at w=4/3; the remaining trace and modal action estimates are open. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md) and the [actual quadratic modal-history report](fin_quadratic_modal_history_research_20261104/REPORT_EN.md). Together with BT, the latest estimate controls all bound-only even source components through critical time. The continuum-bearing residual trace and modal action errors remain open. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
