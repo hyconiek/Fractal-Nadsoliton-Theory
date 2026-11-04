@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [continuum-source normal-form result](fin_continuum_normal_form_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The latest reduction retains the exact phase projection and controls two additional trace components; two source histories and modal action errors remain open. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [mixed local-energy result](fin_mixed_local_energy_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The whole local continuum now has an integrated O(epsilon) bound on fixed critical windows; the target O(epsilon^2) cubic trace and modal action errors remain open. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

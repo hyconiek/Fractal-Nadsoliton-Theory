@@ -19,14 +19,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [CN](fin_continuum_normal_form_research_20261104/REPORT_EN.md) | Exact continuum-source normal form with correct phase projection; correction and localized cubic history meet O(epsilon^2) trace budget | Mixed estimate for localized quadratic operators and structured cubic trace remain open |
 
+| [ML](fin_mixed_local_energy_research_20261104/REPORT_EN.md) | Mixed operator estimate absorbs both localized feedback histories; whole local continuum and trace squared integrals O(epsilon) | Structured cubic trace still needs O(epsilon^2); modal action errors remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: prove the mixed negative-weight/global-input estimate for CN9's
-localized quadratic operators, and separately control its structured cubic
-history. CN retains the phase projection, bound forcing and initial data.
-All three CD modal action errors remain separate.
+Next: control CN9's explicit structured cubic-and-higher history. ML has
+paid the mixed estimate and combined localized-feedback absorption.
+The whole local continuum budget is now O(epsilon), still short of the
+O(epsilon^2) target. All three CD action errors remain separate.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
