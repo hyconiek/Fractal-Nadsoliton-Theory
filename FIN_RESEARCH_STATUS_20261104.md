@@ -31,16 +31,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [EF](fin_even_packet_feedback_research_20261105/REPORT_EN.md) | Full cubic continuous-response trace O(epsilon^2) for the single finite-packet comparison, including shape feedback | Superposition stability, actual nonlinear matching and modal action errors remain open |
 
+| [PS](fin_packet_superposition_research_20261105/REPORT_EN.md) | Common-scale coherent packet superpositions retain O(epsilon^2) cubic trace with l1 coefficient control and all cross terms; Lipschitz response estimate | Causal forced-history representation and actual nonlinear matching remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: establish stability of EF's packet-response estimate under quantified
-remainders/superpositions, including cubic cross terms, then justify a match
-to the actual generated continuum. EF closes the cubic trace budget only for
-the specified comparison family, with shape and continuum feedback retained.
-ML's O(epsilon) actual-continuum bound and the actual O(epsilon^2)/modal-action
-gates remain unchanged.
+Next: build a causal packet interface for the actual forced history, paying
+source-time coefficient norms and any non-packet remainder. PS controls
+superpositions of free comparison atoms, not the original zero-data forced
+trajectory. ML's O(epsilon) actual-continuum bound and the actual cubic
+O(epsilon^2)/modal-action gates remain unchanged.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its

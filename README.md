@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-05:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [even packet-feedback report](fin_even_packet_feedback_research_20261105/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The full cubic continuous-response trace meets O(epsilon^2) for the specified comparison packet. Stability under superposition and matching to the actual nonlinear solution remain open. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-05:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [packet-superposition report](fin_packet_superposition_research_20261105/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The cubic comparison bound now includes all cross terms for absolutely summable common-scale packet families, with quantified coefficient stability. Causal forced-history matching to the actual nonlinear solution remains open. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
