@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [finite-energy threshold-packet report](fin_threshold_packet_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The exact linear operator admits controlled packet envelopes on the critical width-time scale; nonlinear history matching remains open. These are comparison packets, not altered physical initial data. The historical release overview below retains its original scope.
+> **Research continuation — 2026-11-04:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [retarded packet-cascade report](fin_packet_cascade_research_20261104/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The finite-packet odd response is controlled with tails and initial transient retained; even feedback and matching to the actual nonlinear solution remain open. The historical release overview below retains its original scope.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
