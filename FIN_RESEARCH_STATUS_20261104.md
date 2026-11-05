@@ -29,15 +29,18 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [PC](fin_packet_cascade_research_20261104/REPORT_EN.md) | Full retarded odd packet response has integrated local phase bound uniform in width on S R^2; initial transient retained | Even feedback and matching to actual nonlinear preparation remain open |
 
+| [EF](fin_even_packet_feedback_research_20261105/REPORT_EN.md) | Full cubic continuous-response trace O(epsilon^2) for the single finite-packet comparison, including shape feedback | Superposition stability, actual nonlinear matching and modal action errors remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: estimate the even feedback of PC's retarded odd response into the
-finite packet history, with broad spatial products and the initial transient.
-PC has paid the full odd response bound without discarding packet tails.
-Matching to the actual nonlinear preparation remains separate; ML's
-O(epsilon) bound and the O(epsilon^2)/modal-action gates are unchanged.
+Next: establish stability of EF's packet-response estimate under quantified
+remainders/superpositions, including cubic cross terms, then justify a match
+to the actual generated continuum. EF closes the cubic trace budget only for
+the specified comparison family, with shape and continuum feedback retained.
+ML's O(epsilon) actual-continuum bound and the actual O(epsilon^2)/modal-action
+gates remain unchanged.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
