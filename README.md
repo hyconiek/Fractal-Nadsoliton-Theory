@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [critical trace report](fin_threshold_profile_research_20261107/REPORT_EN.md) conditionally closes the full cubic trace and whole local-continuum squared integral at O(epsilon^2), using spatially uniform low-frequency kernels. The next step is the actual three-channel modal-action error. Independent proof review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
+> Research continuation - 2026-11-07. The [modal-action report](fin_modal_action_remainder_research_20261107/REPORT_EN.md) derives actual three-channel action-work identities with an O(epsilon^3) remainder and explicit canonical corrections. The next step is the causal transfer from the actual radiation work to the reference dissipative coefficients. Independent proof review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

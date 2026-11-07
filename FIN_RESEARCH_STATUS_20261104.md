@@ -41,15 +41,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [TP2](fin_threshold_profile_research_20261107/REPORT_EN.md) | Conditional O(epsilon^2) closure of the full cubic trace and whole local-continuum squared integral via uniform spatial kernels | Actual three-channel correctors, mixed coercivity and little-o action error remain open. Independent review outstanding |
 
+| [MA](fin_modal_action_remainder_research_20261107/REPORT_EN.md) | Actual three-channel modal-action work identities with O(epsilon^3) nonleading remainder, physical action corrections and integrated envelope bounds | Causal transfer of leading work to reference action polynomials remains open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next construct the actual modal/continuum correctors in a specified chart,
-retain all three radiative channels and mixed terms, and estimate integrated
-action-work error as o(epsilon^2). TP2.10--TP2.11 conditionally close the
-critical trace/radiation budget. VD's separate action-error obligations
-require additional proof before a critical damping law can be admitted.
+Next estimate MA15 by constructing causal responses to the actual quadratic
+modal products and controlling their work-pairing difference from the whole
+continuum. MA9 pays the other action remainders at O(epsilon^3). MA14 gives
+integrated envelope bounds for this transfer. The leading radiation work
+still needs its o(epsilon^2) comparison with CD's dissipative polynomials.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
