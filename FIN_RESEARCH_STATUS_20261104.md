@@ -39,15 +39,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [CE](fin_cascade_endpoint_research_20261107/REPORT_EN.md) | Full actual cubic trace and whole local-continuum squared integral O(epsilon^2 [1+log(1/epsilon)]), with both threshold phase coordinates retained | Temporal threshold control, logarithmic-loss removal and modal-action estimates remain open |
 
+| [TP2](fin_threshold_profile_research_20261107/REPORT_EN.md) | Conditional O(epsilon^2) closure of the full cubic trace and whole local-continuum squared integral via uniform spatial kernels | Actual three-channel correctors, mixed coercivity and little-o action error remain open. Independent review outstanding |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next estimate the temporal modulation of CE8 along the actual prepared
-evolution and the low-frequency remainder. CE7 improves the whole local
-continuum to O(epsilon^2 [1+log(1/epsilon)]). Removing the logarithmic loss
-and proving the three-channel modal-action estimates require additional
-control of the actual history.
+Next construct the actual modal/continuum correctors in a specified chart,
+retain all three radiative channels and mixed terms, and estimate integrated
+action-work error as o(epsilon^2). TP2.10--TP2.11 conditionally close the
+critical trace/radiation budget. VD's separate action-error obligations
+require additional proof before a critical damping law can be admitted.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
