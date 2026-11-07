@@ -53,14 +53,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [PA](fin_causal_response_audit_20261107/REPORT_EN.md) | Audits LE/QH threshold propagation and RW causal tails; derives exact nonzero mixed threshold moment | Same-author conditional audit; next inspect CM canonical map and preparation |
 
+| [CA / PDE pilot](fin_canonical_audit_pde_pilot_20261107/REPORT_EN.md) | Final targeted CM audit; nine full nonlinear runs across amplitudes/resolutions; exact nonlinear-coefficient matching obstruction | AW conditional pending independent review; next numerical campaign and FIN derivation, not routine self-audits |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next audit CM's canonical map, energy-space remainder and physical
-preparation shifts used in MA. PA checks the propagation and causal-tail
-inputs without finding a blocking defect at its dependency boundary.
-Independent review of the full chain remains outstanding.
+Priority changed by the user on 2026-11-07: routine same-author audit
+chaining stops after the completed critical CM check. AW is retained as
+a conditional theorem requiring independent review. Next extend the direct
+PDE campaign across the parameter/threshold band and pursue the explicit
+nonlinear FIN-to-action matching problem. See [the executable next plan](fin_canonical_audit_pde_pilot_20261107/NEXT_RESEARCH.md).
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its

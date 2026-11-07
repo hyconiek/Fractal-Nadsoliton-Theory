@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [causal-response audit](fin_causal_response_audit_20261107/REPORT_EN.md) checks threshold propagation, quadratic carrier gaps and initial transients, including a nonzero exact mixed-profile threshold moment. No blocking defect was found at the stated dependency boundary. Independent review remains open; next audit the canonical map and preparation. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [conditional action-law report](fin_residual_action_work_research_20261107/REPORT_EN.md).
+> Research continuation - 2026-11-07. [CM audit and full nonlinear PDE pilot](fin_canonical_audit_pde_pilot_20261107/REPORT_EN.md): no substantive CM error found; routine self-audit chaining stops. Nine PDE runs test energy transfer and dominant damping across amplitudes and resolutions. AW remains conditional and requires independent review. Next expand numerical validation and derive the [FIN-to-action bridge](fin_canonical_audit_pde_pilot_20261107/FIN_BRIDGE_START.md). See the [revised research priorities](fin_canonical_audit_pde_pilot_20261107/NEXT_RESEARCH.md) and [research map](FIN_RESEARCH_STATUS_20261104.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
