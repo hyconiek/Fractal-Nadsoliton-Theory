@@ -1,0 +1,309 @@
+{
+  "scope": "Exact susceptibility work algebra, frequency inventory, finite tail bounds and provenance",
+  "sympy_version": "1.14.0",
+  "mean_I_work": "-18*amp_c**2*amp_z**2*d_x - 9*amp_z**4*d_a",
+  "mean_J_work": "-9*amp_c**4*d_b - 18*amp_c**2*amp_z**2*d_x",
+  "frequency_sets": {
+    "I": [
+      [
+        -4,
+        0
+      ],
+      [
+        -2,
+        -2
+      ],
+      [
+        -2,
+        0
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "J": [
+      [
+        -2,
+        -2
+      ],
+      [
+        -2,
+        0
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        0,
+        -4
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "tail_budgets": [
+    {
+      "epsilon": 0.125,
+      "initial_transient_L2_bound": 0.031923933295638314,
+      "history_L2_bound": 0.027586944329291208,
+      "work_bound_over_epsilon_squared": 0.4760870209994362,
+      "oscillatory_bound_over_epsilon_squared": 0.015625
+    },
+    {
+      "epsilon": 0.0625,
+      "initial_transient_L2_bound": 0.00920174882678176,
+      "history_L2_bound": 0.007339462666934277,
+      "work_bound_over_epsilon_squared": 0.2646593838994566,
+      "oscillatory_bound_over_epsilon_squared": 0.00390625
+    },
+    {
+      "epsilon": 0.03125,
+      "initial_transient_L2_bound": 0.0025712443493408716,
+      "history_L2_bound": 0.00189304328534938,
+      "work_bound_over_epsilon_squared": 0.14285720431008805,
+      "oscillatory_bound_over_epsilon_squared": 0.0009765625
+    },
+    {
+      "epsilon": 0.015625,
+      "initial_transient_L2_bound": 0.0007041250228696816,
+      "history_L2_bound": 0.00048071145647599056,
+      "work_bound_over_epsilon_squared": 0.07582953467812302,
+      "oscillatory_bound_over_epsilon_squared": 0.000244140625
+    },
+    {
+      "epsilon": 0.0078125,
+      "initial_transient_L2_bound": 0.00019013329510315528,
+      "history_L2_bound": 0.00012112036341705053,
+      "work_bound_over_epsilon_squared": 0.039840468290586344,
+      "oscillatory_bound_over_epsilon_squared": 6.103515625e-05
+    }
+  ],
+  "passed": 42,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "three-channel mean I work",
+      "pass": true
+    },
+    {
+      "name": "three-channel mean J work",
+      "pass": true
+    },
+    {
+      "name": "equal mixed action contributions",
+      "pass": true
+    },
+    {
+      "name": "closed and real responses have zero mean work",
+      "pass": true
+    },
+    {
+      "name": "reference energy-work normalization",
+      "pass": true
+    },
+    {
+      "name": "I frequency inventory",
+      "pass": true
+    },
+    {
+      "name": "J frequency inventory",
+      "pass": true
+    },
+    {
+      "name": "uniform frequency gap rational lower bound",
+      "pass": true
+    },
+    {
+      "name": "finite tail budget epsilon=1/8",
+      "pass": true
+    },
+    {
+      "name": "finite tail budget epsilon=1/16",
+      "pass": true
+    },
+    {
+      "name": "finite tail budget epsilon=1/32",
+      "pass": true
+    },
+    {
+      "name": "finite tail budget epsilon=1/64",
+      "pass": true
+    },
+    {
+      "name": "finite tail budget epsilon=1/128",
+      "pass": true
+    },
+    {
+      "name": "little-o comparison ratios decrease",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_two_mode_dissipation_research_20261021/THREE_CHANNEL_RESPONSE.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_threshold_defect_virial_research_20261021/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash AGENTS.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_subcritical_field_transfer_research_20261021/LINEAR_WEIGHTED_PROPAGATION.md",
+      "pass": true
+    },
+    {
+      "name": "source hash research_tasks/RP004_SHARED_CONTRACT.json",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_quadratic_localization_research_20261021/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_spatial_cascade_research_20261021/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_bound_source_threshold_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_quadratic_modal_history_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_local_feedback_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_critical_cubic_trace_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_continuum_normal_form_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_mixed_local_energy_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_cubic_resonance_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_even_continuum_threshold_research_20261021/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_distorted_threshold_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_threshold_packet_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_packet_cascade_research_20261104/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_even_packet_feedback_research_20261105/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_even_packet_feedback_research_20261105/feedback_preview.py",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_packet_superposition_research_20261105/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_forced_packet_interface_research_20261107/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_threshold_band_research_20261107/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_cascade_endpoint_research_20261107/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_threshold_profile_research_20261107/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_canonical_modal_state_map_20261021/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_threshold_defect_virial_research_20261021/NEXT_TRACE_AND_MODAL_GATE.md",
+      "pass": true
+    },
+    {
+      "name": "source hash fin_modal_action_remainder_research_20261107/PROOF_OR_OPEN_LEMMA.md",
+      "pass": true
+    }
+  ]
+}

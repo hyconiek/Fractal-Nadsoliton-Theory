@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [modal-action report](fin_modal_action_remainder_research_20261107/REPORT_EN.md) derives actual three-channel action-work identities with an O(epsilon^3) remainder and explicit canonical corrections. The next step is the causal transfer from the actual radiation work to the reference dissipative coefficients. Independent proof review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
+> Research continuation - 2026-11-07. The [radiative-work transfer report](fin_radiative_work_transfer_research_20261107/REPORT_EN.md) derives the three-channel dissipative polynomial from causal quadratic responses driven by actual modal histories, with an o(epsilon^2) error. The remaining task is the explicit work of the difference from the whole actual continuum. Independent proof review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

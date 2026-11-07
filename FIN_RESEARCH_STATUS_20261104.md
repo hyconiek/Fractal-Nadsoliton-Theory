@@ -43,15 +43,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [MA](fin_modal_action_remainder_research_20261107/REPORT_EN.md) | Actual three-channel modal-action work identities with O(epsilon^3) nonleading remainder, physical action corrections and integrated envelope bounds | Causal transfer of leading work to reference action polynomials remains open |
 
+| [RW](fin_radiative_work_transfer_research_20261107/REPORT_EN.md) | Causal quadratic responses driven by actual modal histories transfer to the three-channel action polynomial with o(epsilon^2) error | Explicit residual work D_I,D_J still needs a little-o estimate |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next estimate MA15 by constructing causal responses to the actual quadratic
-modal products and controlling their work-pairing difference from the whole
-continuum. MA9 pays the other action remainders at O(epsilon^3). MA14 gives
-integrated envelope bounds for this transfer. The leading radiation work
-still needs its o(epsilon^2) comparison with CD's dissipative polynomials.
+Next estimate the explicit residual work D_I,D_J in RW9 using the complete
+zero-data sources RW8. RW2 pays the quadratic-response transfer and RW10
+isolates the remaining actual action error. Its current absolute bound is
+O(epsilon^2), so a little-o improvement is required before damping follows.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
