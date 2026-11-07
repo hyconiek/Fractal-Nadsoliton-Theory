@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [threshold-band report](fin_threshold_band_research_20261107/REPORT_EN.md) improves the actual direct-cubic squared trace to O(epsilon^2 [1+log(1/epsilon)]) and gives a spectral budget for the full cubic source. The next step is endpoint control of the normal-form cascade and its combined threshold coefficient. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
+> Research continuation - 2026-11-07. The [cascade-endpoint report](fin_cascade_endpoint_research_20261107/REPORT_EN.md) extends O(epsilon^2 [1+log(1/epsilon)]) to the full actual cubic trace and whole local-continuum squared integral. The next step is temporal control of the combined threshold functional and its low-frequency remainder. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
