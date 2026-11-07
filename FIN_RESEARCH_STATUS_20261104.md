@@ -35,16 +35,17 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [FH](fin_forced_packet_interface_research_20261107/REPORT_EN.md) | Actual cubic output away from threshold has squared trace O(epsilon^2) for fixed cutoff. Causal packet hierarchy controlled by integrated coefficient mass | Actual low-frequency history and nonlinear packet matching remain open |
 
+| [TB](fin_threshold_band_research_20261107/REPORT_EN.md) | Actual direct-cubic squared trace O(epsilon^2 [1+log(1/epsilon)]), plus a core/dyadic spectral budget for the full source | Cascade endpoint estimates and removal of the logarithmic loss remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next estimate the complete actual CS1 output in dyadic bands between
-epsilon and a fixed small cutoff, then the threshold core. FH10 pays the
-fixed-distance output. FH1--FH5 give a causal packet interface with an
-explicit source-time coefficient condition, and FH8 quantifies the cost
-of whole-profile fits. The actual low-frequency and modal-action gates
-remain open.
+Next derive the full CS1 cascade endpoint estimates in the low-output
+Fourier norm and evaluate the combined threshold coefficient. TB9 improves
+the actual direct component, while TB4 states a sufficient whole-cubic
+criterion. The remaining logarithmic loss and three-channel modal-action
+errors require further control.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
