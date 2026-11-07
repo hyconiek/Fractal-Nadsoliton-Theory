@@ -47,14 +47,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [AW](fin_residual_action_work_research_20261107/REPORT_EN.md) | Residual work is O_S(epsilon^3[1+log(1/epsilon)]); conditional critical three-channel action approximation | Self-audited; focused dependency audit and independent review outstanding |
 
+| [AA](fin_action_law_audit_20261107/REPORT_EN.md) | Focused same-author audit accepts AW at its explicit dependency boundary; clarifies correction norm and tests operator order | Independent review and inherited upstream proofs remain open to audit |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next audit AW's conditional critical-window action law, tracing the exact
-odd/even normal-form ledger, spatial primitive bounds, physical projections
-and MA/TP2 inputs. AW pays RW's remaining residual work at little-o scale;
-its analytical dependency chain still requires independent review.
+Next audit the inherited VD/LF cumulative virial inequality and its
+weighted absorption in ML/CS, including boundary terms and dependence
+on fixed S. AA checks AW's immediate work argument and dependency order,
+without independently certifying the historical baseline theorems.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its

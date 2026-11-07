@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [residual-action-work report](fin_residual_action_work_research_20261107/REPORT_EN.md) gives a self-audited conditional three-channel action law for the supplied RP model on T=S epsilon^-2, with O_S(epsilon^3[1+log(1/epsilon)]) error. The next step is a focused proof audit of the full dependency chain; independent review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
+> Research continuation - 2026-11-07. The [focused action-law audit](fin_action_law_audit_20261107/REPORT_EN.md) checks the residual-work argument and accepts it at its stated dependency boundary, with a clarification of the correction norm. This is a same-author audit; independent review remains open. Next audit the inherited virial-to-local-energy estimate. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [conditional action-law report](fin_residual_action_work_research_20261107/REPORT_EN.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
