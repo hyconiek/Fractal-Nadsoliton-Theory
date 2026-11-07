@@ -1,4 +1,4 @@
-# Research continuation map — 2026-11-04
+# Research continuation map - updated 2026-11-07
 
 These are conditional results for the supplied canonical classical RP
 model. They do not derive a natural action, geometry, clock or photons.
@@ -33,15 +33,18 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [PS](fin_packet_superposition_research_20261105/REPORT_EN.md) | Common-scale coherent packet superpositions retain O(epsilon^2) cubic trace with l1 coefficient control and all cross terms; Lipschitz response estimate | Causal forced-history representation and actual nonlinear matching remain open |
 
+| [FH](fin_forced_packet_interface_research_20261107/REPORT_EN.md) | Actual cubic output away from threshold has squared trace O(epsilon^2) for fixed cutoff. Causal packet hierarchy controlled by integrated coefficient mass | Actual low-frequency history and nonlinear packet matching remain open |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next: build a causal packet interface for the actual forced history, paying
-source-time coefficient norms and any non-packet remainder. PS controls
-superpositions of free comparison atoms, not the original zero-data forced
-trajectory. ML's O(epsilon) actual-continuum bound and the actual cubic
-O(epsilon^2)/modal-action gates remain unchanged.
+Next estimate the complete actual CS1 output in dyadic bands between
+epsilon and a fixed small cutoff, then the threshold core. FH10 pays the
+fixed-distance output. FH1--FH5 give a causal packet interface with an
+explicit source-time coefficient condition, and FH8 quantifies the cost
+of whole-profile fits. The actual low-frequency and modal-action gates
+remain open.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its

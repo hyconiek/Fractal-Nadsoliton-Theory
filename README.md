@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> **Research continuation — 2026-11-05:** see the [current research map](FIN_RESEARCH_STATUS_20261104.md), [packet-superposition report](fin_packet_superposition_research_20261105/REPORT_EN.md), and [proposed route toward empirical physics](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md). The cubic comparison bound now includes all cross terms for absolutely summable common-scale packet families, with quantified coefficient stability. Causal forced-history matching to the actual nonlinear solution remains open. The historical release overview below retains its original scope.
+> Research continuation - 2026-11-07. The [forced-history report](fin_forced_packet_interface_research_20261107/REPORT_EN.md) controls the actual cubic output away from threshold and gives a causal packet estimate with an explicit source-time coefficient condition. The next step is the actual low-frequency cubic history. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
