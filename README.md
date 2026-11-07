@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [virial and absorption audit](fin_virial_absorption_audit_20261107/REPORT_EN.md) reconstructs the local-energy estimate with boundary terms, both phase sources and fixed-S constants retained. No blocking defect was found at the stated dependency boundary. Independent review remains open; next audit the modulated causal response estimates. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [conditional action-law report](fin_residual_action_work_research_20261107/REPORT_EN.md).
+> Research continuation - 2026-11-07. The [causal-response audit](fin_causal_response_audit_20261107/REPORT_EN.md) checks threshold propagation, quadratic carrier gaps and initial transients, including a nonzero exact mixed-profile threshold moment. No blocking defect was found at the stated dependency boundary. Independent review remains open; next audit the canonical map and preparation. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [conditional action-law report](fin_residual_action_work_research_20261107/REPORT_EN.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

@@ -51,14 +51,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [VA](fin_virial_absorption_audit_20261107/REPORT_EN.md) | Rederives VD/LF virial and ML/CS absorption with explicit endpoints and exp(2mu S) dependence | Same-author conditional audit; next inspect LE/QH causal response inputs |
 
+| [PA](fin_causal_response_audit_20261107/REPORT_EN.md) | Audits LE/QH threshold propagation and RW causal tails; derives exact nonzero mixed threshold moment | Same-author conditional audit; next inspect CM canonical map and preparation |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next audit LE/QH's even-channel propagation, threshold remainder and
-modulated causal tail estimates used in RW. VA rederives the virial and
-weighted absorption steps without finding a blocking defect, conditional
-on its explicit inherited inputs. Independent review remains outstanding.
+Next audit CM's canonical map, energy-space remainder and physical
+preparation shifts used in MA. PA checks the propagation and causal-tail
+inputs without finding a blocking defect at its dependency boundary.
+Independent review of the full chain remains outstanding.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
