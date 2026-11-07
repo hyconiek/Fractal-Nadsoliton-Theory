@@ -49,14 +49,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [AA](fin_action_law_audit_20261107/REPORT_EN.md) | Focused same-author audit accepts AW at its explicit dependency boundary; clarifies correction norm and tests operator order | Independent review and inherited upstream proofs remain open to audit |
 
+| [VA](fin_virial_absorption_audit_20261107/REPORT_EN.md) | Rederives VD/LF virial and ML/CS absorption with explicit endpoints and exp(2mu S) dependence | Same-author conditional audit; next inspect LE/QH causal response inputs |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next audit the inherited VD/LF cumulative virial inequality and its
-weighted absorption in ML/CS, including boundary terms and dependence
-on fixed S. AA checks AW's immediate work argument and dependency order,
-without independently certifying the historical baseline theorems.
+Next audit LE/QH's even-channel propagation, threshold remainder and
+modulated causal tail estimates used in RW. VA rederives the virial and
+weighted absorption steps without finding a blocking defect, conditional
+on its explicit inherited inputs. Independent review remains outstanding.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its
