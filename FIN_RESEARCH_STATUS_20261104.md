@@ -45,14 +45,16 @@ model. They do not derive a natural action, geometry, clock or photons.
 
 | [RW](fin_radiative_work_transfer_research_20261107/REPORT_EN.md) | Causal quadratic responses driven by actual modal histories transfer to the three-channel action polynomial with o(epsilon^2) error | Explicit residual work D_I,D_J still needs a little-o estimate |
 
+| [AW](fin_residual_action_work_research_20261107/REPORT_EN.md) | Residual work is O_S(epsilon^3[1+log(1/epsilon)]); conditional critical three-channel action approximation | Self-audited; focused dependency audit and independent review outstanding |
+
 The initial CR lookup missed the existing CD/VD packages. This map
 corrects the routing without rewriting their results. VD's
 NEXT_TRACE_AND_MODAL_GATE.md is the operative predecessor obligation.
 
-Next estimate the explicit residual work D_I,D_J in RW9 using the complete
-zero-data sources RW8. RW2 pays the quadratic-response transfer and RW10
-isolates the remaining actual action error. Its current absolute bound is
-O(epsilon^2), so a little-o improvement is required before damping follows.
+Next audit AW's conditional critical-window action law, tracing the exact
+odd/even normal-form ledger, spatial primitive bounds, physical projections
+and MA/TP2 inputs. AW pays RW's remaining residual work at little-o scale;
+its analytical dependency chain still requires independent review.
 See [the proposed physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md)
 for the distinct numerical, foundational and empirical bridges.
 BT documents a narrow phase correction to ET equation (8), preserving its

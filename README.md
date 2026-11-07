@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. The [radiative-work transfer report](fin_radiative_work_transfer_research_20261107/REPORT_EN.md) derives the three-channel dissipative polynomial from causal quadratic responses driven by actual modal histories, with an o(epsilon^2) error. The remaining task is the explicit work of the difference from the whole actual continuum. Independent proof review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
+> Research continuation - 2026-11-07. The [residual-action-work report](fin_residual_action_work_research_20261107/REPORT_EN.md) gives a self-audited conditional three-channel action law for the supplied RP model on T=S epsilon^-2, with O_S(epsilon^3[1+log(1/epsilon)]) error. The next step is a focused proof audit of the full dependency chain; independent review is outstanding. See the [research map](FIN_RESEARCH_STATUS_20261104.md) and [physics pathway](fin_local_feedback_research_20261104/PHYSICS_PATHWAY.md).
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
