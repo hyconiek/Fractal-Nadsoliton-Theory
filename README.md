@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-08. [Fourier replication and physical flux](fin_pde_spectral_flux_20261108/REPORT_EN.md): six nonlinear runs agree with finite differences within 0.0058% in the effective dominant damping coefficient. Fine-grid interior energy-flux residuals are below 2.2e-9 of initial energy. This is numerical support, not independent proof review or empirical FIN. Next identify the other channels using separately labelled two-mode preparations.
+> Research continuation - 2026-11-08. [Shape and mixed-channel PDE experiments](fin_pde_two_mode_20261108/REPORT_EN.md) test six auxiliary preparations outside the historical AW theorem. At epsilon=0.1, the shape coefficient is about 0.42% above theory and mixed estimates about 1.5% above; the latter discrepancy remains unresolved despite mesh stability. Next separate finite-amplitude, relative-phase and estimator effects. AW remains conditional and independent review is outstanding.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

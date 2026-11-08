@@ -83,3 +83,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Fourier and flux continuation
 
 [Six Fourier runs](fin_pde_spectral_flux_20261108/REPORT_EN.md) replicate the dominant damping at both endpoints and the threshold. Independent physical flux evaluation closes local energy balances at two radii. Next test separate two-mode preparations for k_b and k_x; the historical AW preparation and theorem scope remain unchanged. FIN nonlinear matching remains a separate open task.
+
+## Two-mode continuation
+
+[Six auxiliary shape/mixed runs](fin_pde_two_mode_20261108/REPORT_EN.md) probe k_b and k_x outside AW preparation. The mixed coefficient remains about 1.5% above theory at epsilon=0.1. Next smaller amplitudes, matched slow time, relative phase and action-integral quadrature controls; no retuning of theoretical coefficients.
