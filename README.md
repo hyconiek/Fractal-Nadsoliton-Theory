@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-08. The [30-run nonlinear PDE campaign](fin_pde_parameter_campaign_20261108/REPORT_EN.md) tests five parameter values, including the threshold, three amplitudes and two resolutions. The leading damping discrepancy at the smallest amplitude is about 0.215%-0.424%. Next replicate with a different discretization and an outgoing-flux budget. AW remains conditional pending independent review; no empirical FIN validation is claimed.
+> Research continuation - 2026-11-08. [Fourier replication and physical flux](fin_pde_spectral_flux_20261108/REPORT_EN.md): six nonlinear runs agree with finite differences within 0.0058% in the effective dominant damping coefficient. Fine-grid interior energy-flux residuals are below 2.2e-9 of initial energy. This is numerical support, not independent proof review or empirical FIN. Next identify the other channels using separately labelled two-mode preparations.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

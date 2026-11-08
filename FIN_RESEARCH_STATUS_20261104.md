@@ -79,3 +79,7 @@ AGENTS and its recorded hashes remain preserved.
 ## 2026-11-08 numerical continuation
 
 [Thirty full nonlinear PDE runs](fin_pde_parameter_campaign_20261108/REPORT_EN.md) now cover the proposed parameter/threshold grid. Next use a different discretization and an interior outgoing-flux balance. Independent review and the strict FIN derivation remain open. Routine self-audit chaining remains stopped.
+
+## Fourier and flux continuation
+
+[Six Fourier runs](fin_pde_spectral_flux_20261108/REPORT_EN.md) replicate the dominant damping at both endpoints and the threshold. Independent physical flux evaluation closes local energy balances at two radii. Next test separate two-mode preparations for k_b and k_x; the historical AW preparation and theorem scope remain unchanged. FIN nonlinear matching remains a separate open task.
