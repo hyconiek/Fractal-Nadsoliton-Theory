@@ -75,3 +75,7 @@ reports, code comments and commit descriptions. These instructions supersede
 historical no-publication clauses for this continuation, without changing
 scientific claims or authorizing experiments or external messages. Historical
 AGENTS and its recorded hashes remain preserved.
+
+## 2026-11-08 numerical continuation
+
+[Thirty full nonlinear PDE runs](fin_pde_parameter_campaign_20261108/REPORT_EN.md) now cover the proposed parameter/threshold grid. Next use a different discretization and an interior outgoing-flux balance. Independent review and the strict FIN derivation remain open. Routine self-audit chaining remains stopped.

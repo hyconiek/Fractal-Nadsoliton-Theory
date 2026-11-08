@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-07. [CM audit and full nonlinear PDE pilot](fin_canonical_audit_pde_pilot_20261107/REPORT_EN.md): no substantive CM error found; routine self-audit chaining stops. Nine PDE runs test energy transfer and dominant damping across amplitudes and resolutions. AW remains conditional and requires independent review. Next expand numerical validation and derive the [FIN-to-action bridge](fin_canonical_audit_pde_pilot_20261107/FIN_BRIDGE_START.md). See the [revised research priorities](fin_canonical_audit_pde_pilot_20261107/NEXT_RESEARCH.md) and [research map](FIN_RESEARCH_STATUS_20261104.md).
+> Research continuation - 2026-11-08. The [30-run nonlinear PDE campaign](fin_pde_parameter_campaign_20261108/REPORT_EN.md) tests five parameter values, including the threshold, three amplitudes and two resolutions. The leading damping discrepancy at the smallest amplitude is about 0.215%-0.424%. Next replicate with a different discretization and an outgoing-flux budget. AW remains conditional pending independent review; no empirical FIN validation is claimed.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
