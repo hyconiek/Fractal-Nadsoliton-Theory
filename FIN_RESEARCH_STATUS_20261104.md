@@ -107,3 +107,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Radiating-background transverse test - 2026-11-13
 
 [Report](fin_transverse_radiating_20261113/REPORT_EN.md): j=6 at w=1.5, epsilon=0.1, T=100 shows maximum seed-space energy gain 3.27012421. Static drift is below 2e-10; separate dt and dx refinement agree. This is finite-time amplification, not a proof of exponential instability. Next compare background phases and the smaller-gap w=1.25 case. All conditional FIN and AW boundaries remain unchanged.
+
+## Transverse phase/gap comparison - 2026-11-13
+
+[Results](fin_transverse_phase_gap_20261113/RESULTS.md): nine runs, two background phases, two w values and joint refinement. Gains 7.38-7.52 at w=1.25 and 3.27-3.40 at w=1.5. No saturation established at the smaller gap. Next extend the strongest preparation to T=200 with enlarged domain and overlap/refinement controls. No nonlinear or exponential-instability theorem, strict-source closure or AW extension.

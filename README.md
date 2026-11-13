@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Transverse radiating-background test](fin_transverse_radiating_20261113/REPORT_EN.md): the weakest omitted channel shows about 3.27-fold finite-time reference-energy amplification, stable under separate time and space refinement. Static positivity does not prevent this transfer. Exponential instability, nonlinear stability and strict coefficient sourcing remain unresolved.
+> Research continuation - 2026-11-13. [Transverse phase/gap campaign](fin_transverse_phase_gap_20261113/REPORT_EN.md) finds energy gains 7.38-7.52 at w=1.25 versus 3.27-3.40 at w=1.5 for two background phases. Joint refinement preserves the results. Lower-gap maxima occur at the observation endpoint; saturation and exponential instability remain unresolved. Next extend the strongest case in time with domain and overlap controls.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
