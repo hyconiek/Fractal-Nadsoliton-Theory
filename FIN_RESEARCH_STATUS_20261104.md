@@ -99,3 +99,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Concrete A11-to-RP state map - 2026-11-13
 
 [Bridge report](fin_core_state_map_bridge_20261113/REPORT_EN.md): exact necessary-and-sufficient polynomial tangency conditions for a fixed one-mode map; uniform-mode conditional embedding with g4_eff=c4/12 and g6_eff=c6/144; nonuniform cosine-mode cubic leakage norm squared 1/576. Twenty-two symbolic controls pass. This is not a strict source of the local coefficient families or wave kinetics. Next bounded test: omitted-mode stability about the embedded RP kink. No selector, units, legacy-role or ToE promotion.
+
+## Transverse static-kink test - 2026-11-13
+
+[Report](fin_transverse_kink_stability_20261113/REPORT_EN.md): exact factorization reduces every omitted channel to a scalar shift of a nonnegative operator. Frozen-kernel evaluation gives eleven positive channels for w in [1.25,1.75], minimum gap 0.098022788. Numerical eigenvalues are not interval-certified. Nonstationary and nonlinear stability remain open; next test the alternating j=6 perturbation on a radiating background. All strict-source and AW boundaries remain unchanged.
