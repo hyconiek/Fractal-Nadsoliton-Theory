@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Third-amplitude and refinement study](fin_mixed_third_amplitude_20261113/REPORT_EN.md) reduces the primary mixed-channel discrepancy to about 0.37-0.43% at epsilon=0.05. Joint space/time refinement changes estimates by at most 0.00033% of theory. Extrapolation remains assumption dependent; AW remains conditional pending independent review. Next priority: test one concrete strict-core nonlinear-response/state-map candidate for the FIN-to-field bridge.
+> Research continuation - 2026-11-13. [A11-to-RP state-map bridge](fin_core_state_map_bridge_20261113/REPORT_EN.md) supplies an exact conditional uniform-mode embedding and a nonlinear leakage counterexample for a nonuniform eigenmode. The local coefficients and wave kinetics remain added premises, not strict-kernel predictions. Next test transverse stability of the explicit embedding; AW and physical sourcing gates remain open in their prior scopes.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

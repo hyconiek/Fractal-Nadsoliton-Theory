@@ -95,3 +95,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Third amplitude and numerical refinement - 2026-11-13
 
 [Third-amplitude report](fin_mixed_third_amplitude_20261113/REPORT_EN.md): three new runs at epsilon=0.05 and T=400 yield primary mixed-coefficient discrepancies of about 0.37-0.43%. Joint dx/dt halving at phase zero changes estimates by at most 0.00033% of theory. Three-amplitude extrapolations depend on the assumed correction power; the asymptotic limit remains open. This completes the bounded numerical follow-up. Next priority is a concrete strict-core nonlinear-response/state-map bridge test, not another generic source inventory or same-author audit chain. AW and all physical sourcing gates retain their prior status.
+
+## Concrete A11-to-RP state map - 2026-11-13
+
+[Bridge report](fin_core_state_map_bridge_20261113/REPORT_EN.md): exact necessary-and-sufficient polynomial tangency conditions for a fixed one-mode map; uniform-mode conditional embedding with g4_eff=c4/12 and g6_eff=c6/144; nonuniform cosine-mode cubic leakage norm squared 1/576. Twenty-two symbolic controls pass. This is not a strict source of the local coefficient families or wave kinetics. Next bounded test: omitted-mode stability about the embedded RP kink. No selector, units, legacy-role or ToE promotion.
