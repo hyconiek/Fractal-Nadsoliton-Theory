@@ -91,3 +91,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Matched-time mixed-channel continuation - 2026-11-13
 
 [Scaling and phase report](fin_mixed_scaling_phase_20261113/REPORT_EN.md): four full-PDE runs reduce the primary discrepancy from about 1.5-1.7% at epsilon=0.1 to 0.8-1.0% at epsilon=0.075. Pure quadrature and regression-node sensitivity are separated. No zero-limit theorem, new AW preparation license, independent review or strict-FIN source is claimed. Next bounded numerical step: third amplitude and a smaller-amplitude mesh control before extrapolation. The strict-core nonlinear-response/state-map bridge remains open.
+
+## Third amplitude and numerical refinement - 2026-11-13
+
+[Third-amplitude report](fin_mixed_third_amplitude_20261113/REPORT_EN.md): three new runs at epsilon=0.05 and T=400 yield primary mixed-coefficient discrepancies of about 0.37-0.43%. Joint dx/dt halving at phase zero changes estimates by at most 0.00033% of theory. Three-amplitude extrapolations depend on the assumed correction power; the asymptotic limit remains open. This completes the bounded numerical follow-up. Next priority is a concrete strict-core nonlinear-response/state-map bridge test, not another generic source inventory or same-author audit chain. AW and all physical sourcing gates retain their prior status.

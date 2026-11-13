@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Mixed-channel scaling and phase experiments](fin_mixed_scaling_phase_20261113/REPORT_EN.md) compare two amplitudes at matched slow time. Primary mixed-coefficient discrepancies fall from about 1.5-1.7% to 0.8-1.0%; separated quadrature controls do not explain the residual. The zero-amplitude limit and smaller-amplitude mesh convergence remain open. AW stays conditional pending independent review; the strict-FIN dynamical bridge remains unsupplied.
+> Research continuation - 2026-11-13. [Third-amplitude and refinement study](fin_mixed_third_amplitude_20261113/REPORT_EN.md) reduces the primary mixed-channel discrepancy to about 0.37-0.43% at epsilon=0.05. Joint space/time refinement changes estimates by at most 0.00033% of theory. Extrapolation remains assumption dependent; AW remains conditional pending independent review. Next priority: test one concrete strict-core nonlinear-response/state-map candidate for the FIN-to-field bridge.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
