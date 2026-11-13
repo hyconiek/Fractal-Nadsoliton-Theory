@@ -103,3 +103,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Transverse static-kink test - 2026-11-13
 
 [Report](fin_transverse_kink_stability_20261113/REPORT_EN.md): exact factorization reduces every omitted channel to a scalar shift of a nonnegative operator. Frozen-kernel evaluation gives eleven positive channels for w in [1.25,1.75], minimum gap 0.098022788. Numerical eigenvalues are not interval-certified. Nonstationary and nonlinear stability remain open; next test the alternating j=6 perturbation on a radiating background. All strict-source and AW boundaries remain unchanged.
+
+## Radiating-background transverse test - 2026-11-13
+
+[Report](fin_transverse_radiating_20261113/REPORT_EN.md): j=6 at w=1.5, epsilon=0.1, T=100 shows maximum seed-space energy gain 3.27012421. Static drift is below 2e-10; separate dt and dx refinement agree. This is finite-time amplification, not a proof of exponential instability. Next compare background phases and the smaller-gap w=1.25 case. All conditional FIN and AW boundaries remain unchanged.

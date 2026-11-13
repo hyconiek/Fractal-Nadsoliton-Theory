@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Transverse kink stability](fin_transverse_kink_stability_20261113/REPORT_EN.md): the conditional uniform A11 embedding has eleven positive omitted-mode channels across w in [1.25,1.75], with minimum squared-frequency gap about 0.09802. This is static linear stability, not stability of radiating trajectories or a strict coefficient source. Next test finite-time transverse amplification on a radiating background.
+> Research continuation - 2026-11-13. [Transverse radiating-background test](fin_transverse_radiating_20261113/REPORT_EN.md): the weakest omitted channel shows about 3.27-fold finite-time reference-energy amplification, stable under separate time and space refinement. Static positivity does not prevent this transfer. Exponential instability, nonlinear stability and strict coefficient sourcing remain unresolved.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
