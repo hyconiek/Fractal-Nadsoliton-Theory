@@ -1,4 +1,4 @@
-# Research continuation map - updated 2026-11-07
+# Research continuation map - updated 2026-11-13
 
 These are conditional results for the supplied canonical classical RP
 model. They do not derive a natural action, geometry, clock or photons.
@@ -87,3 +87,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Two-mode continuation
 
 [Six auxiliary shape/mixed runs](fin_pde_two_mode_20261108/REPORT_EN.md) probe k_b and k_x outside AW preparation. The mixed coefficient remains about 1.5% above theory at epsilon=0.1. Next smaller amplitudes, matched slow time, relative phase and action-integral quadrature controls; no retuning of theoretical coefficients.
+
+## Matched-time mixed-channel continuation - 2026-11-13
+
+[Scaling and phase report](fin_mixed_scaling_phase_20261113/REPORT_EN.md): four full-PDE runs reduce the primary discrepancy from about 1.5-1.7% at epsilon=0.1 to 0.8-1.0% at epsilon=0.075. Pure quadrature and regression-node sensitivity are separated. No zero-limit theorem, new AW preparation license, independent review or strict-FIN source is claimed. Next bounded numerical step: third amplitude and a smaller-amplitude mesh control before extrapolation. The strict-core nonlinear-response/state-map bridge remains open.

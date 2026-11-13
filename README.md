@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-08. [Shape and mixed-channel PDE experiments](fin_pde_two_mode_20261108/REPORT_EN.md) test six auxiliary preparations outside the historical AW theorem. At epsilon=0.1, the shape coefficient is about 0.42% above theory and mixed estimates about 1.5% above; the latter discrepancy remains unresolved despite mesh stability. Next separate finite-amplitude, relative-phase and estimator effects. AW remains conditional and independent review is outstanding.
+> Research continuation - 2026-11-13. [Mixed-channel scaling and phase experiments](fin_mixed_scaling_phase_20261113/REPORT_EN.md) compare two amplitudes at matched slow time. Primary mixed-coefficient discrepancies fall from about 1.5-1.7% to 0.8-1.0%; separated quadrature controls do not explain the residual. The zero-amplitude limit and smaller-amplitude mesh convergence remain open. AW stays conditional pending independent review; the strict-FIN dynamical bridge remains unsupplied.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
