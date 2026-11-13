@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Extended transverse horizon](fin_transverse_horizon_20261113/REPORT_EN.md): energy gain peaks near 7.650 at t=116.5 and declines to 7.113 at T=200. Fixed seeds show the same growth/decline pattern; time refinement and enlarged-domain overlap agree. This is finite-window transient amplification, not global stability. Next resolve the signed perturbation-energy work budget.
+> Research continuation - 2026-11-13. [Signed transverse work budget](fin_transverse_work_budget_20261113/REPORT_EN.md) closes against measured reference-energy changes with fine residual below 1.8e-7 of initial energy. The kink-field contribution dominates both gain and subsequent decline. This remains a linear no-back-reaction calculation; next derive a consistent uniform-plus-alternating nonlinear reduction.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  

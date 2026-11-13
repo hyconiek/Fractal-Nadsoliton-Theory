@@ -115,3 +115,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Extended transverse horizon - 2026-11-13
 
 [Results](fin_transverse_horizon_20261113/RESULTS.md): the w=1.25, phase=pi/2 gain peaks at t=116.5 (7.650175) and declines to 7.113043 at T=200. Fixed seeds also grow then decline. Time refinement and enlarged-domain overlap pass; extended-horizon spatial refinement is not claimed. Next compute the signed energy-transfer budget instead of assuming exponential instability or asymptotic saturation. All strict-source and AW boundaries persist.
+
+## Signed perturbation work budget - 2026-11-13
+
+[Results](fin_transverse_work_budget_20261113/RESULTS.md): independent RK4-stage Phi/Psi work integrals reproduce measured fixed-seed reference-energy changes; refined maximum residual 1.72e-7. Phi work dominates both accumulated gain and the later negative increment. This is reference-norm attribution, not measured background energy loss. Next derive and verify the even/odd carrier reduction before finite-amplitude back-reaction tests. AW and strict physical-source gates remain unchanged.
