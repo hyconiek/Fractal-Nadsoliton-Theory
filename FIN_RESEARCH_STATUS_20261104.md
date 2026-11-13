@@ -111,3 +111,7 @@ AGENTS and its recorded hashes remain preserved.
 ## Transverse phase/gap comparison - 2026-11-13
 
 [Results](fin_transverse_phase_gap_20261113/RESULTS.md): nine runs, two background phases, two w values and joint refinement. Gains 7.38-7.52 at w=1.25 and 3.27-3.40 at w=1.5. No saturation established at the smaller gap. Next extend the strongest preparation to T=200 with enlarged domain and overlap/refinement controls. No nonlinear or exponential-instability theorem, strict-source closure or AW extension.
+
+## Extended transverse horizon - 2026-11-13
+
+[Results](fin_transverse_horizon_20261113/RESULTS.md): the w=1.25, phase=pi/2 gain peaks at t=116.5 (7.650175) and declines to 7.113043 at T=200. Fixed seeds also grow then decline. Time refinement and enlarged-domain overlap pass; extended-horizon spatial refinement is not claimed. Next compute the signed energy-transfer budget instead of assuming exponential instability or asymptotic saturation. All strict-source and AW boundaries persist.

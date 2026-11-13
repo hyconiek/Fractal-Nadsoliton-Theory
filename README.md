@@ -1,6 +1,6 @@
 # Fractal Information Nadsoliton (FIN)
 
-> Research continuation - 2026-11-13. [Transverse phase/gap campaign](fin_transverse_phase_gap_20261113/REPORT_EN.md) finds energy gains 7.38-7.52 at w=1.25 versus 3.27-3.40 at w=1.5 for two background phases. Joint refinement preserves the results. Lower-gap maxima occur at the observation endpoint; saturation and exponential instability remain unresolved. Next extend the strongest case in time with domain and overlap controls.
+> Research continuation - 2026-11-13. [Extended transverse horizon](fin_transverse_horizon_20261113/REPORT_EN.md): energy gain peaks near 7.650 at t=116.5 and declines to 7.113 at T=200. Fixed seeds show the same growth/decline pattern; time refinement and enlarged-domain overlap agree. This is finite-window transient amplification, not global stability. Next resolve the signed perturbation-energy work budget.
 
 **Author:** Krzysztof Żuchowski  
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
